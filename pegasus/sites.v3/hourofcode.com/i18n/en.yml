@@ -125,6 +125,7 @@
   call_to_action_try_activity: 'Try activity'
   call_to_action_explore_unit: 'Explore unit'
   call_to_action_explore_curriculum: 'Explore curriculum'
+  call_to_action_explore_curriculum_options: "Explore curriculum options"
   call_to_action_explore_modules: "Explore modules"
   call_to_action_explore_workshops: "Explore workshops"
   call_to_action_explore_course: "Explore course"
@@ -161,6 +162,9 @@
   call_to_action_watch_videos: "Watch videos"
   call_to_action_download_posters: "Download posters"
   call_to_action_contact_support: "Contact Code.org support"
+  call_to_action_pick_units: "Pick units"
+  call_to_action_focus_on_topic: "Focus on a topic"
+  call_to_action_teach_full_intro_course: "Teach a full intro course"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
@@ -211,6 +215,7 @@
   module_ages_7_18: "7-18"
   module_grade_3_8: "3-8"
   module_grade_6_12: "6-12"
+  module_grade_6_10: "6-10"
   module_grade_9_12: "9-12"
   module_grade_k_5_teachers: "K-5 Teachers"
   module_grade_6_10_teachers: "6-10 Teachers"
@@ -224,6 +229,7 @@
   module_duration_month: "Month"
   module_duration_quarter: "Quarter"
   module_duration_school_year: "School Year"
+  module_duration_month_semester_year: "Month, Semester, or Year"
   module_prerequisites_none: "None"
   module_prerequisites_maker_cp: "Access to a Circuit Playground"
   module_prerequisites_maker_microbit: "Access to a micro:bit"
@@ -251,6 +257,9 @@
   heading_build_apps: "Build apps"
   heading_widgets: "Widgets"
   heading_choice_levels: "Choice levels"
+  heading_year_long_intro_course: "Year-long introductory course"
+  heading_flexible_units: "Flexible units"
+  heading_collections: "Collections"
 
   professional_learning_section_subhead: "Get the support you need as you prepare to teach."
   professional_learning_section_desc_v1: "Compared with similarly-situated schools, [a school's participation in the Code.org Professional Learning program causes an estimated five-fold increase](%{url}) in the number of students that take, and earn qualifying scores on the AP Computer Science Principles exam. And teachers love it! Over 90% rank it the best professional development ever."
@@ -577,6 +586,22 @@
   csp_page_faq_answer_07_02: "For the 2020-21 school year the College Board has made some significant updates to the CS Principles framework and AP assessment to ensure that CS Principles remains relevant and aligned with equivalent university courses. CS education research continues to reveal new insights on how students learn about computing, and feedback from the thousands of classrooms now using our CS Principles curriculum has identified opportunities to further improve our courses, tools, and recommended pedagogy."
   csp_page_faq_answer_07_03: "The goal of the updates to our curriculum is to navigate these developments in a way that remains committed to our vision and values and supports the many teachers, schools, classrooms, and districts that are already a part of our broader CS Principles community. We remain deeply thankful for you joining us on this mission to make our collective vision a reality."
   csp_page_faq_answer_07_04: "For more information about our goals and approach to our courses, please see our [Curriculum Values](%{curriculum_url}) and our [Professional Learning alues](%{pl_url})."
+
+  csd_page_top_desc: "Students will be inspired as they build their own websites, apps, animations, games, and physical computing systems. Plus, with the addition of collections and standalone units, CS Discoveries is now Code.org's most flexible course, allowing each unit to be taught alone, combined into collections that focus on specific areas, or as a full year course."
+  csd_page_intro_heading: "Flexible curriculum to meet your needs"
+  csd_page_intro_list_01: "Flexible introductory curriculum"
+  csd_page_intro_list_02: "Breadth of topics"
+  csd_page_intro_list_03: "No prior experience needed"
+  csd_page_intro_list_04: "Build many different types of projects"
+  csd_page_intro_list_05: "Exciting and fun"
+  csd_page_curriculum_glance_topics: "Artificial Intelligence, Data, Web Design, Physical Computing, App Design, Games and Animations, Art and Design, Programming"
+  csd_page_curriculum_glance_devices: "Laptop, Chromebook"
+  csd_page_curriculum_glance_tools: "App Lab, Game Lab, AI Lab, Web Lab"
+  csd_page_curriculum_glance_professional_learning: "Facilitator-led Workshops, Self-paced Modules"
+  csd_page_curriculum_glance_professional_languages: "English"
+  csd_page_curriculum_glance_professional_accessibility_features: "Text-to-speech, Closed captioning, Immersive reader"
+  csd_page_pick_a_course_heading: "Picking the right CS Discoveries course for your classroom"
+  csd_page_pick_a_course_heading_02: "How do you want to pick the content?"
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
