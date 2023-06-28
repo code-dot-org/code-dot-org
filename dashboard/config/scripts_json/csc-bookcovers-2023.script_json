@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csc-bookcovers",
-    "serialized_at": "2023-06-26 22:46:03 UTC",
+    "serialized_at": "2023-06-27 23:20:19 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -77,9 +77,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this lesson, students will use the skills they learned in the first lesson to make an interactive book cover for a book of their choice. They will warm with a spiraled review of some of the coding blocks needed. Then students will be instructed to code a Sprite Lab project step by step that includes the title, author, main characters, setting and summary of a book. Next class, students will present their work to their classmates.",
+        "overview": "In this lesson, students will use the skills they learned in the first lesson to make an interactive book cover for a book of their choice. They will warm with a spiraled review of some of the coding blocks needed. Then students will be instructed to code a Sprite Lab project step by step that includes the title, author, main characters, setting and summary of a book. Next class, students will present their work to their classmates.\n\nNote that this is a project progression, meaning student code will follow them from one level to the next. Encourage students to press “Run” on each level to save their code before progressing to the next level.",
         "preparation": "- Play through the levels and review the lesson [slides](https://docs.google.com/document/d/1r7dnygat_SH_us1TWYil-Bx5ulROZ2PDbF-Njcz27RM/template/preview) .\n- It may be helpful to make your own book cover to share with students.\n- Be sure students have the activity guide they used to plan their digital book cover from the previous lesosn.",
-        "student_overview": "In this lesson, you will code your own digital book cover. First, you will select the background and characters. Then, you will program the characters to introduce themselves. And you'll finish by including the summary of the book when you press the up arrow. You can be very creative by drawing your own sprites, using some from the library or even uploading your own images. Next class, you will present your work."
+        "student_overview": "In this lesson, you will code your own digital book cover. First, you will select the background and characters. Then, you will program the characters to introduce themselves. And you'll finish by including the summary of the book when you press the up arrow. You can be very creative by drawing your own sprites, using some from the library or even uploading your own images. \n\nYou will follow the plan you designed last class. Follow the directions in each level carefully. In this project, your code will follow you from level to level. \nNext class, you will present your work."
       },
       "seeding_key": {
         "lesson.key": "Code Your Own Book Cover ",
@@ -570,7 +570,7 @@
       "key": "fbef10da-8ecd-48c2-94f4-ca48ef733774",
       "position": 8,
       "properties": {
-        "description": " class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Do This**: Review the vocabulary words: character, setting and summary. All of these will be important for students to understand in order to be able to complete the handout and plan their digital book cover. \n\n- **Background** - The visual behind the main things or people on the screen.\n- **Character** - A person, animal, being, creature or thing in a story.\n- **Setting** - The time and place (or when and where) of a story.\n- **Summary** - Telling the most important parts of a text, in your own words, in a much shorter way.\n- **Sprite** - A graphic on the screen with a location, size and appearance.\n\n\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Do This**: Review the vocabulary words: character, setting and summary. All of these will be important for students to understand in order to be able to complete the handout and plan their digital book cover. \n\n- **Background** - The visual behind the main things or people on the screen.\n- **Character** - A person, animal, being, creature or thing in a story.\n- **Setting** - The time and place (or when and where) of a story.\n- **Summary** - Telling the most important parts of a text, in your own words, in a much shorter way.\n- **Sprite** - A graphic on the screen with a location, size and appearance.\n\n\n\n\n",
         "duration": "1",
         "name": "Vocabulary"
       },
@@ -646,7 +646,7 @@
       "key": "07c1727e-6cd9-4e1d-8798-3b2a827d2a6c",
       "position": 6,
       "properties": {
-        "description": "**Do This**:  Pass out the Plan Your Own Book Cover handout. Students will select one book from the list they wrote during the warm up challenge. They will design an interactive book cover for this book. First, students will choose two characters and introduce them. Then they will write a one to two sentence summary of the book’s plot. \n\n",
+        "description": "**Do This**:  Pass out the Planning Guide handout. Students will select one book from the list they wrote during the warm-up challenge. They will design an interactive book cover for this book. First, students will choose two characters and introduce them. Then they will write a one to two-sentence summary of the book’s plot. \n\n",
         "progression_name": "Planning Your Book Cover"
       },
       "seeding_key": {
@@ -746,7 +746,7 @@
       "key": "51935ec3-611a-4310-8532-70addb3fb06f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Recall your plan” slide\n\n**Do This:** Have students find an elbow partner to quickly share about the digital book cover they will be coding today. \n\n**Discuss**: What is the title of the book you're coding a digital cover for? What are the two characters you'll include? What is the setting of the book you'll use for the cover? \n\n**Discussion Goal**: Students will be reminded of their previously made plan while also practicing academic vocabulary like title, characters, and setting. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Recall your plan” slide\n\n**Do This:** Make sure students have their Planning Guide handout from the previous lesson. Then, have students find an elbow partner to quickly share about the digital book cover they will be coding today. \n\n**Discuss**: What is the title of the book you're coding a digital cover for? What are the two characters you'll include? What is the setting of the book you'll use for the cover? \n\n**Discussion Goal**: Students will be reminded of their previously made plan while also practicing academic vocabulary like title, characters, and setting. ",
         "duration": "3",
         "name": "Recall ",
         "tips": [
@@ -778,7 +778,7 @@
       "key": "b367c44e-85d6-450e-8bce-1a1db1302e08",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Skill Building - Levels 1-9” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. The code they build will follow them to the next level so they can build their interactive book cover step by step."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Skill Building - Levels 1-9” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. The code they build will follow them to the next level so they can build their interactive book cover step by step. The level sequence is the same as lesson 1 so students will be familiar with the process. "
       },
       "seeding_key": {
         "activity_section.key": "b367c44e-85d6-450e-8bce-1a1db1302e08",
@@ -793,7 +793,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If the book is available in the classroom, encourage students to use it as a resource as they work."
+            "markdown": "If the book is available in the classroom, encourage students to use it as a resource as they work.\n\nStudent's code in this lesson carries over from level to level. If some code is deleted or students get confused, encourage them to return to earlier levels for instructions. Clicking on 'Version History' and then 'Start Over' will clear the workspace of all code so they can start fresh if needed. "
           }
         ]
       },
@@ -1769,7 +1769,7 @@
     },
     {
       "name": "Book Cover",
-      "url": "https://docs.google.com/document/d/11hnQkEHwwOD6Bo2_oKiE-CxyU5hXJNlMgV30cjaKVYQ/share/template",
+      "url": "https://docs.google.com/document/d/11hnQkEHwwOD6Bo2_oKiE-CxyU5hXJNlMgV30cjaKVYQ/template/preview",
       "key": "book_cover_1",
       "properties": {
         "audience": "Student",
@@ -1805,11 +1805,12 @@
       }
     },
     {
-      "name": "Create Your Own Book Cover",
-      "url": "https://docs.google.com/document/d/1XXBV-TNe9VYM6v6_jahr8mCuYqzPymRbxP7hn9waKF0/template/preview",
+      "name": "Planning Guide",
+      "url": "https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview",
       "key": "create_your_own_book_cover",
       "properties": {
         "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/download",
         "type": "Handout"
       },
       "seeding_key": {
@@ -1817,7 +1818,7 @@
       }
     },
     {
-      "name": "Create Your Own Book Cover [Key]",
+      "name": "Planning Guide [Key] Wonder",
       "url": "https://docs.google.com/document/d/1sinZLdMy8PLHJVKRwGt-mqhcADQtNq0bLYy4oZZwVpQ/template/preview",
       "key": "create_your_own_book_cover_key_",
       "properties": {
@@ -1826,6 +1827,45 @@
       },
       "seeding_key": {
         "resource.key": "create_your_own_book_cover_key_"
+      }
+    },
+    {
+      "name": "Planning Guide",
+      "url": "https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview",
+      "key": "planning_guide",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/download",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "planning_guide"
+      }
+    },
+    {
+      "name": "Planning Guide [Key] Esperanza Rising",
+      "url": "https://drive.google.com/file/d/1dpyir8Sh4EgrBT0C1i9M_O8lQkw7rREw/view",
+      "key": "planning_guide_key_esperanza_rising",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/file/d/1dpyir8Sh4EgrBT0C1i9M_O8lQkw7rREw/view",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "planning_guide_key_esperanza_rising"
+      }
+    },
+    {
+      "name": "Planning Guide [Key] Esperanza Rising",
+      "url": "https://drive.google.com/file/d/1dpyir8Sh4EgrBT0C1i9M_O8lQkw7rREw/view?usp=sharing",
+      "key": "planning_your_own_book_cover_-_answer_key",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/file/d/1dpyir8Sh4EgrBT0C1i9M_O8lQkw7rREw/view?usp=sharing",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "planning_your_own_book_cover_-_answer_key"
       }
     }
   ],
@@ -1840,6 +1880,18 @@
       "seeding_key": {
         "lesson.key": "Code Your Own Book Cover ",
         "resource.key": "book_cover_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Code Your Own Book Cover ",
+        "resource.key": "planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Code Your Own Book Cover ",
+        "resource.key": "planning_guide_key_esperanza_rising"
       }
     },
     {
@@ -1894,6 +1946,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "create_your_own_book_cover_key_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "planning_your_own_book_cover_-_answer_key"
       }
     }
   ],
