@@ -10,6 +10,7 @@ class JwtVerifier
   def verify_jwt
     verify_audience(@jwt)
     verify_expiration(@jwt)
+    verify_issued_time(@jwt)
     errors.empty?
   end
 
@@ -35,9 +36,18 @@ class JwtVerifier
   def verify_expiration(jwt)
     now = Time.zone.now
     if jwt.key? :exp
-      errors << "Expiration time of #{jwt[:exp]} before #{now.to_i}" unless Time.zone.at(jwt[:exp]) > Time.zone.now
+      errors << "Expiration time of #{jwt[:exp]} before #{now.to_i}" unless Time.zone.at(jwt[:exp]) > now
     else
       errors << 'Expiration time does not exist'
+    end
+  end
+
+  def verify_issued_time(jwt)
+    now = Time.zone.now
+    if jwt.key? :iat
+      errors << "Issued at time of #{jwt[:iat]} after #{now.to_i}" unless Time.zone.at(jwt[:iat]) < now
+    else
+      errors << 'Issued at time does not exist'
     end
   end
 

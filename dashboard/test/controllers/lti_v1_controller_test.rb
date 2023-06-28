@@ -22,7 +22,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     create_jwt(payload)
   end
 
-  def get_valid_payload(aud_is_array)
+  def get_valid_payload(aud_is_array=false)
     # an example redirect URI, any URI should work here.
     target_link_uri = CDO.studio_url('/', CDO.default_scheme)
     aud = if aud_is_array
@@ -32,9 +32,10 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
           end
     {
       aud: aud,
-      iss: @integration.issuer,
       azp: @integration.client_id,
       exp: 7.days.from_now.to_i,
+      iat: 1.day.ago.to_i,
+      iss: @integration.issuer,
       'https://purl.imsglobal.org/spec/lti/claim/target_link_uri': target_link_uri
     }
   end
@@ -107,34 +108,49 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'auth - given no client_id (aud) in jwt return unauthorized' do
-    payload = {data: 'test'}
+    payload = get_valid_payload
+    payload[:aud] = nil
     jwt = create_jwt(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt}
     assert_response :unauthorized
   end
 
   test 'auth - given no issuer id in jwt return unauthorized' do
-    jwt = create_jwt({aud: @integration.client_id})
+    payload = get_valid_payload
+    payload[:iss] = nil
+    jwt = create_jwt(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt}
     assert_response :unauthorized
   end
 
   test 'auth - given wrong client id in jwt return unauthorized' do
-    jwt = create_jwt({aud: ''})
+    payload = get_valid_payload
+    payload[:aud] = ''
+    jwt = create_jwt(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt}
     assert_response :unauthorized
   end
 
   test 'auth - audience does not match client_id with azp present - unauthorized' do
-    payload = {aud: [@integration.client_id], iss: @integration.issuer, azp: ''}
+    payload = get_valid_payload
+    payload[:azp] = ''
     jwt = create_jwt_and_stub(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt}
     assert_response :unauthorized
   end
 
   test 'auth - expiration time past return unauthorized' do
-    payload = {aud: @integration.client_id, iss: @integration.issuer, azp: @integration.client_id, exp: 3.days.ago.to_i}
+    payload = get_valid_payload
+    payload[:exp] = 3.days.ago.to_i
     jwt = create_jwt_and_stub(payload)
+    post '/lti/v1/authenticate', params: {id_token: jwt}
+    assert_response :unauthorized
+  end
+
+  test 'auth - error raised for issued at time in past' do
+    payload = get_valid_payload
+    payload[:iat] = 3.days.from_now.to_i
+    jwt = create_jwt(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt}
     assert_response :unauthorized
   end
