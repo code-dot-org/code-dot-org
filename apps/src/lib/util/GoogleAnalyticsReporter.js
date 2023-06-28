@@ -78,8 +78,17 @@ class GoogleAnalyticsReporter {
     if (this.isGoogleAnalytics4Enabled) {
       gtag('js', new Date());
       window.dataLayer = window.dataLayer || [];
-      gtag('config', this.googleAnalyticsGTag);
+      const {userAnalyticsDimensions = {}} = window;
+      this.initializeCustomDimensions(userAnalyticsDimensions);
+      gtag('config', this.googleAnalyticsGTag, userAnalyticsDimensions);
     }
+  }
+
+  initializeCustomDimensions(userAnalyticsDimensions) {
+    Object.entries(userAnalyticsDimensions).forEach(([dimension, value]) => {
+      this.setCustomDimension(dimension, value);
+    });
+    this.setCustomDimension('anonymizeIp', true);
   }
 
   addEventListener() {
