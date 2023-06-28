@@ -80,7 +80,7 @@ const optionsList = [
   {
     name: 'key',
     type: 'string',
-    description: 'Set a specific key.',
+    description: 'Set a specific key by name (i.e. "C", "C#", "D", etc)',
   },
 ];
 
