@@ -45,6 +45,8 @@ export interface LabState {
   // Whether the lab is ready for a reload.  This is used to manage the case where multiple loads
   // happen in a row, and we only want to reload the lab when we are done.
   labReadyForReload: boolean;
+  // Validation status for the current level. This is used by the progress system to determine
+  // what instructions to display and if the user has satisfied the validation conditions, if present.
   validationState: ValidationState;
 }
 

@@ -61,7 +61,7 @@ import {
 import {logError} from '../utils/MusicMetrics';
 import musicI18n from '../locale';
 import UpdateTimer from './UpdateTimer';
-import ValidatorProvider from './ValidatorProvider';
+import ValidatorProvider from '@cdo/apps/labs/progress/ValidatorProvider';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
