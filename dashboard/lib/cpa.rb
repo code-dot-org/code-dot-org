@@ -9,26 +9,26 @@ module Cpa
   # 1. Nothing - nil
   # 2. New User Accounts must be compliant - 'cpa_new_user_lockout'
   # 3. All User Accounts must be compliant - 'cpa_all_user_lockout'
-  # @param request [ActionDispatch::Request] the web request being processed
+  # @param current_request [ActionDispatch::Request] the web request being
+  # processed
   # The DateTime strings must be ISO 8601 formatted.
   # @param current_time [DateTime] The current time, this should only be set for
   # testing purposes.
   # @return [String, nil] A string representing the current phase of the
   # compliance. nil if no phase.
-  def self.cpa_experience(
-    request,
-    current_time: DateTime.now
-  )
+  def self.cpa_experience(current_request, current_time: DateTime.now)
+    # If there is no request being handled, there is no experience to show.
+    return nil unless current_request
     # schedule [Map] A map of the CPA phases to dates. Example:
     # {
     #   “new_user_lockout”: “2023-07-01T00:00:00Z”,
     #   “all_user_lockout”: “2024-07-01T00:00:00Z”
     # }
-    schedule = experiment_value('cpa_schedule', request)
+    schedule = experiment_value('cpa_schedule', current_request)
     # override [String] configuration overrides if we are manually testing the
     # experiences. This parameter will default to the query string parameter or
     # cookie 'cpa_experience'.
-    override = experiment_value('cpa_experience', request)
+    override = experiment_value('cpa_experience', current_request)
     # If we detect a configuration override, use that instead.
     return override if override
 
