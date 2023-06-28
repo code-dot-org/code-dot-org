@@ -15,7 +15,7 @@ import {
   LevelData,
   LevelProperties,
   ProjectManagerStorageType,
-  Source,
+  ProjectSources,
 } from './types';
 import LabRegistry from './LabRegistry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
@@ -35,7 +35,7 @@ interface LabState {
   // channel for the current project, or undefined if there is no current project.
   channel: Channel | undefined;
   // last saved source for the current project, or undefined if we have not loaded or saved yet.
-  source: Source | undefined;
+  sources: ProjectSources | undefined;
   // Level data for the current level
   levelData: LevelData | undefined;
   // Whether the lab is ready for a reload.  This is used to manage the case where multiple loads
@@ -47,7 +47,7 @@ const initialState: LabState = {
   isLoading: false,
   isPageError: false,
   channel: undefined,
-  source: undefined,
+  sources: undefined,
   levelData: undefined,
   labReadyForReload: false,
 };
@@ -89,16 +89,12 @@ export const setUpForLevel = createAsyncThunk(
     }
     LabRegistry.getInstance().setProjectManager(projectManager);
     // Load channel and source.
-    const projectResponse = await setUpAndLoadProject(
+    const {sources, channel} = await setUpAndLoadProject(
       projectManager,
       thunkAPI.dispatch
     );
-    if (!projectResponse.ok) {
-      return thunkAPI.rejectWithValue(projectResponse);
-    }
-    const {source, channel} = await projectResponse.json();
     setProjectAndLevelData(
-      {source, channel, levelData: levelProperties.levelData},
+      {sources, channel, levelData: levelProperties.levelData},
       thunkAPI.signal.aborted,
       thunkAPI.dispatch
     );
@@ -116,16 +112,12 @@ export const loadProject = createAsyncThunk(
       return thunkAPI.rejectWithValue('No project manager found.');
     }
     // Load channel and source.
-    const projectResponse = await setUpAndLoadProject(
+    const {sources, channel} = await setUpAndLoadProject(
       projectManager,
       thunkAPI.dispatch
     );
-    if (!projectResponse.ok) {
-      return thunkAPI.rejectWithValue(projectResponse);
-    }
-    const {source, channel} = await projectResponse.json();
     setProjectAndLevelData(
-      {source, channel},
+      {sources, channel},
       thunkAPI.signal.aborted,
       thunkAPI.dispatch
     );
@@ -145,8 +137,8 @@ const labSlice = createSlice({
     setChannel(state, action: PayloadAction<Channel>) {
       state.channel = action.payload;
     },
-    setSource(state, action: PayloadAction<Source>) {
-      state.source = action.payload;
+    setSources(state, action: PayloadAction<ProjectSources>) {
+      state.sources = action.payload;
     },
     setLevelData(state, action: PayloadAction<LevelData>) {
       state.levelData = action.payload;
@@ -200,7 +192,7 @@ async function setUpAndLoadProject(
   );
   projectManager.addSaveSuccessListener((channel, source) => {
     dispatch(setProjectUpdatedAt(channel.updatedAt));
-    dispatch(setSource(source));
+    dispatch(setSources(source));
     dispatch(setChannel(channel));
   });
   projectManager.addSaveNoopListener(channel => {
@@ -222,8 +214,8 @@ async function setUpAndLoadProject(
 // thunk dispatch method.
 function setProjectAndLevelData(
   data: {
-    source: Source;
     channel: Channel;
+    sources?: ProjectSources;
     levelData?: LevelData;
   },
   aborted: boolean,
@@ -233,12 +225,16 @@ function setProjectAndLevelData(
   if (aborted) {
     return;
   }
-  const {channel, source, levelData} = data;
+  const {channel, sources, levelData} = data;
   dispatch(setChannel(channel));
-  dispatch(setSource(source));
+
+  if (sources) {
+    dispatch(setSources(sources));
+  }
   if (levelData) {
     dispatch(setLevelData(levelData));
   }
+
   dispatch(setLabReadyForReload(true));
 }
 
@@ -255,7 +251,7 @@ export const {
   setIsLoading,
   setIsPageError,
   setChannel,
-  setSource,
+  setSources,
   setLevelData,
   setLabReadyForReload,
 } = labSlice.actions;
