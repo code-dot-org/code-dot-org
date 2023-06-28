@@ -9,7 +9,7 @@ import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
 // Returns whether we can safely navigate between the two given level apps
 // without reloading the whole page.
 export function canChangeLevelInPage(currentLevelApp, newLevelApp) {
-  const compatibleApps = ['music', 'standalone_video2'];
+  const compatibleApps = ['music', 'standalone_video'];
 
   return (
     compatibleApps.includes(currentLevelApp) &&

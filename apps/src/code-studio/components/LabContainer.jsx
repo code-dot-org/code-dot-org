@@ -58,7 +58,7 @@ const LabContainer = ({onError}) => {
           </div>
         </ProjectContainer>
 
-        {currentApp === 'standalone_video2' && <StandaloneVideo2 />}
+        {currentApp === 'standalone_video' && <StandaloneVideo2 />}
 
         <div
           id="fade-overlay"
