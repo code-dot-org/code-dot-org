@@ -29,12 +29,15 @@ export default function LockoutPanel(props) {
   // This will set the email to the current pending email and fire off the
   // form as though they had typed in the same email again.
   const resendPermissionEmail = event => {
-    // Don't submit the form... we will do that ourselves.
-    event.preventDefault();
-
     const field = document.getElementById('parent-email');
     field.value = props.pendingEmail;
-    this.submit();
+
+    const form = document.getElementById('lockout-panel-form');
+    form.submit();
+  };
+
+  const signOut = event => {
+    window.location.href = 'users/sign_out';
   };
 
   // Get the current locale.
@@ -58,6 +61,12 @@ export default function LockoutPanel(props) {
   });
   const pendingPromptParts = pendingPrompt.split('{pendingEmail}');
 
+  const tokenElement = document.querySelector('meta[name="csrf-token"]');
+  let csrfToken = '';
+  if (tokenElement) {
+    csrfToken = tokenElement.attributes['content'].value;
+  }
+
   return (
     <div style={styles.container} className="lockout-panel">
       {/* Header image: Depends of if permission request is sent. */}
@@ -78,7 +87,8 @@ export default function LockoutPanel(props) {
       </h2>
 
       {/* This form will post a permission request for the student.*/}
-      <form action={props.apiURL} method="post">
+      <form id="lockout-panel-form" action={props.apiURL} method="post">
+        <input type="hidden" value={csrfToken} name="authenticity_token" />
         {/* The top prompt, which depends on whether or not a request is pending. */}
         {props.pendingEmail && (
           <p>
@@ -124,9 +134,11 @@ export default function LockoutPanel(props) {
           {/* This is a floating 'link' that resends the pending email. */}
           {props.pendingEmail && (
             <Button
+              id="lockout-resend"
               styleAsText={true}
               style={styles.resendLink}
               text={i18n.sessionLockoutResendEmail()}
+              type="button"
               onClick={resendPermissionEmail}
             />
           )}
@@ -151,14 +163,15 @@ export default function LockoutPanel(props) {
                 onInput={onEmailUpdate}
                 onBlur={onEmailUpdate}
                 defaultValue={props.pendingEmail}
+                name="parent-email"
                 id="parent-email"
               />
 
               {/* Show a 'Last email sent' prompt when available. */}
               {props.pendingEmail && (
                 <p style={styles.lastEmail}>
-                  <em>
-                    Last email sent:{' '}
+                  <em id="lockout-last-email-date">
+                    {i18n.sessionLockoutLastEmailSent() + ' '}
                     {props.requestDate.toLocaleDateString(locale, {
                       ...dateOptions,
                       hour: 'numeric',
@@ -174,15 +187,19 @@ export default function LockoutPanel(props) {
         <div style={styles.buttons}>
           {/* A sign-out button. */}
           <Button
+            id="lockout-signout"
+            type="button"
             style={styles.button}
             text={i18n.signOutButton()}
             color={Button.ButtonColor.gray}
-            href="/users/sign_out"
+            onClick={signOut}
           />
 
           {/* The submit button. */}
           {/* An empty onClick will still submit the form. */}
           <Button
+            id="lockout-submit"
+            type="submit"
             style={styles.button}
             text={
               props.pendingEmail

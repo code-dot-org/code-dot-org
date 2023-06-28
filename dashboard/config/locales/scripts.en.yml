@@ -7974,6 +7974,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         csc-pilot-2022-timecapsule:
           lesson_groups: {}
           name: csc-pilot-2022-timecapsule
@@ -7982,6 +7983,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         csc-pilot-2022-starquilts:
           lesson_groups: {}
           name: csc-pilot-2022-starquilts
@@ -7990,6 +7992,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         csc-pilot-2022-fables:
           lesson_groups: {}
           name: csc-pilot-2022-fables
@@ -7998,6 +8001,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -10353,7 +10357,7 @@ en:
           title: Coding Interactive Maps (2023)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "##Suggested Pre-Work for this Module\n \n**Social Studies:** Students will discuss and code several different types of maps. To build a base understanding together you might consider reading one of these books about maps: [Maps by Aleksandra and Daniel Mizielinski](https://oladaniel.com/maps), [The Once Upon a Time Map Book by BG Hennessy](https://bghennessy.com/f/the-once-upon-a-time-map-book), or [City Atlas: Travel the World with 30 City Maps by Georgia Cherry](https://www.youtube.com/watch?v=LRy3daJLhtg).\n\nAdditionally, it may be beneficial to spend some time **building interactive maps with hands on materials in your classroom**: fill a bucket with colored strips of felt to represent roads, rivers, houses and more. Let students build and play in an imaginary town. Or after a shared experience (ie recess or field trip) create a topographical map using play-dough or salt dough.\n\n\n**Computer Science:** In this module students will be working a lot with sprites including changing the location and size of them and initiating behaviors. [CSFundamentals Course F Lesson 3](https://studio.code.org/s/coursef-2023/lessons/3) is a great introduction to two concepts at the heart of this all: sprites and behaviors.\n"
           student_description: ''
         blockchain-2023:
           lessons:

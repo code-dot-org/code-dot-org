@@ -1,10 +1,8 @@
 -# Can only be used on rebranded pages that use the
 -# "design-system-pegasus.scss" stylesheet.
 
-%h2.centered
-  =hoc_s(:resources_tabs_heading)
-%p.centered
-  =hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
+%h2=hoc_s(:resources_tabs_heading)
+%p=hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
 
 -# Shows tabs UI on desktop
 .resources-tabs.show-desktop
