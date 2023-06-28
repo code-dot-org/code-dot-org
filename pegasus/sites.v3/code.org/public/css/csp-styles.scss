@@ -40,3 +40,14 @@
     color: $neutral-dark;
   }
 }
+
+.csp-page-projects .image-wrapper {
+
+  img {
+    width: 30%;
+
+    &:first-child {
+      width: 27.5%;
+    }
+  }
+}

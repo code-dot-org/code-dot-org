@@ -52,10 +52,7 @@ theme: responsive_full_width
 %section
   .wrapper
     %h2=hoc_s(:heading_engaging_projects)
-    TBD
-    %div.centered{style: "margin-top: 2rem"}
-      %a.link-button.secondary{href: CDO.studio_url("/courses/csp-2023?viewAs=Instructor")}
-        =hoc_s(:call_to_action_explore_course)
+    = view :projects_csp_page
 
 %section.bg-neutral-light
   .wrapper

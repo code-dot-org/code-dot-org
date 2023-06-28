@@ -123,6 +123,11 @@ div.divider {
   border-radius: $border-radius;
 }
 
+// Add border to an element
+.has-border {
+  border: 1px solid $neutral_dark10;
+}
+
 // Add a thick box shadow to an element
 // See code.org/teach for an example
 .box-shadow-primary {

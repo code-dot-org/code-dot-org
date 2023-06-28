@@ -128,6 +128,9 @@
   call_to_action_explore_modules: "Explore modules"
   call_to_action_explore_workshops: "Explore workshops"
   call_to_action_explore_course: "Explore course"
+  call_to_action_explore_widgets: "Explore widgets"
+  call_to_action_explore_choice_level: "Explore example choice level"
+  call_to_action_try_app_lab: "Try App Lab"
   call_to_action_view_lesson_plan: 'View lesson plan'
   call_to_action_self_paced_pl: 'Start self-paced professional learning'
   call_to_action_apply_for_pl: 'Apply for Professional Learning'
@@ -245,6 +248,9 @@
   heading_faq: "Frequently asked questions"
   heading_curriculum_at_a_glance: "Curriculum at a glance"
   heading_engaging_projects: "Engaging projects and activities that inspire learning"
+  heading_build_apps: "Build apps"
+  heading_widgets: "Widgets"
+  heading_choice_levels: "Choice levels"
 
   professional_learning_section_subhead: "Get the support you need as you prepare to teach."
   professional_learning_section_desc_v1: "Compared with similarly-situated schools, [a school's participation in the Code.org Professional Learning program causes an estimated five-fold increase](%{url}) in the number of students that take, and earn qualifying scores on the AP Computer Science Principles exam. And teachers love it! Over 90% rank it the best professional development ever."
@@ -531,6 +537,9 @@
   csp_page_curriculum_glance_professional_languages: "English"
   csp_page_curriculum_glance_professional_accessibility_features: "Text-to-speech, Closed captioning, Immersive reader"
   csp_page_quote: "Can I just say I LOVE Code.org? It's my first year teaching AP CS Principles (actually 1st year it is offered at our school) - and both the kids and I are having a blast."
+  csp_page_projects_build_apps: "Using the JavaScript language, students learn about algorithms and program design as they create a series of real working, shareable apps with App Lab."
+  csp_page_projects_widgets: "Students get hands-on experience with concepts like binary and pixels, text compression, cryptography, encoding and transmitting data through computational widgets, which are directly integrated into the Code.org platform."
+  csp_page_projects_choice_levels: "Students are offered the choice between a variety of tasks that reinforce course objectives while allowing for differentiation and customization, meeting students where they are at and encouraging them to go further."
   csp_page_faq_question_01: "Is CS Principles mapped to standards?"
   csp_page_faq_answer_01: "CS Principles was written using the AP CS Principles Framework and prepares students for the AP CS Principles exam. The curriculum has also been aligned to the newly revised 2017 CSTA standards. [A summary of standards mappings can be found here](%{standards_url}). A google sheet version of the standards can be found at [CSP Standards 2021](%{csp_standards_2021_url})."
   csp_page_faq_question_02: "How much does it cost to teach CS Principles?"
