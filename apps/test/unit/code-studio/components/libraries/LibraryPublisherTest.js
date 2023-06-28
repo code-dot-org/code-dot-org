@@ -293,6 +293,25 @@ describe('LibraryPublisher', () => {
         console.warn.restore();
       });
 
+      it('sets error state if library contains PII', async () => {
+        publishSpy.callsArgWith(1, {
+          message: 'httpStatusCode: 400; status: error; error: Bad request',
+          cause: {pIIWords: ['123-456-7890']},
+        });
+        sinon.stub(console, 'warn');
+        wrapper.setState({
+          libraryDescription: description,
+          selectedFunctions: selectedFunctions,
+        });
+
+        await wrapper.instance().validateAndPublish();
+
+        expect(wrapper.state().publishState).to.equal(PublishState.PII_INPUT);
+        expect(wrapper.state().pIIWords).to.equal(['123-456-7890']);
+
+        console.warn.restore();
+      });
+
       it('calls onPublishSuccess when it succeeds', async () => {
         publishSpy.callsArg(2);
         wrapper.setState({
