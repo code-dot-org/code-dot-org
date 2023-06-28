@@ -1,9 +1,11 @@
 // Music Lab specific validations.
 
 import MusicPlayer from '../player/MusicPlayer';
-import ConditionsChecker, {KnownConditions} from './ConditionsChecker';
+import ConditionsChecker, {
+  KnownConditions,
+} from '@cdo/apps/labs/progress/ConditionsChecker';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
-import {Validator} from './ProgressManager';
+import {Validator} from '@cdo/apps/labs/progress/ProgressManager';
 
 const KnownConditions: KnownConditions = {
   PLAYED_ONE_SOUND: 'played_one_sound',
