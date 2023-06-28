@@ -55,7 +55,8 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "must provide a parent email to the request api" do
-    user = create(:young_student, :without_parental_permission)
+    user = create(:young_student, :without_parent_permission
+)
     sign_in user
 
     post '/policy_compliance/child_account_consent', params:
@@ -81,7 +82,8 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update user and send an email to the parent upon creating the request" do
-    user = create(:young_student, :without_parental_permission)
+    user = create(:young_student, :without_parent_permission
+)
     sign_in user
 
     assert_emails 1 do
@@ -127,7 +129,8 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "given a user already has sent a parental permission, should just redirect and not send email after the third time" do
-    user = create(:young_student, :without_parental_permission)
+    user = create(:young_student, :without_parent_permission
+)
     sign_in user
 
     assert_emails 3 do
@@ -142,7 +145,8 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "a user should not be able to send more than 3 unique parental request emails per day" do
-    user = create(:young_student, :without_parental_permission)
+    user = create(:young_student, :without_parent_permission
+)
     sign_in user
 
     assert_emails 3 do
@@ -177,7 +181,8 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "registration email should be given a fully qualified path to the token endpoint" do
-    user = create(:young_student, :without_parental_permission)
+    user = create(:young_student, :without_parent_permission
+)
     sign_in user
 
     post '/policy_compliance/child_account_consent', params:
