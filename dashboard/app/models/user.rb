@@ -555,6 +555,8 @@ class User < ApplicationRecord
 
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
+  before_save :remove_family_name, if: -> {DCDO.get('family-name-features', false) && sections_as_pl_participant.any?}
+
   before_validation :update_share_setting, unless: :under_13?
 
   def make_teachers_21
@@ -629,6 +631,12 @@ class User < ApplicationRecord
   # in migrated students' AuthenticationOptions.
   def remove_cleartext_emails
     authentication_options.with_deleted.update_all(email: '')
+  end
+
+  # Remove family name from properties.
+  # Record must be saved afterwards to persist to database.
+  def remove_family_name
+    self.family_name = nil
   end
 
   # Given a cleartext email finds the first user that has a matching email or hash.

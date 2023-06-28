@@ -4801,6 +4801,52 @@ class UserTest < ActiveSupport::TestCase
     DCDO.unstub(:get)
   end
 
+  test 'family name is removed from pl participants' do
+    user = create :user
+    family_name = 'TestFamilyName'
+    user.family_name = family_name
+
+    user.save!
+    user.reload
+
+    assert_equal(family_name, user.family_name)
+
+    pl_section = create :section, :teacher_participants, user_id: @teacher.id
+    Follower.create!(section_id: pl_section.id, student_user_id: user.id)
+
+    DCDO.stubs(:get).with('family-name-features', false).returns(true)
+
+    user.save!
+    user.reload
+
+    assert_nil(user.family_name)
+
+    DCDO.unstub(:get)
+  end
+
+  test 'family name is not removed from students' do
+    user = create :user
+    family_name = 'TestFamilyName'
+    user.family_name = family_name
+
+    user.save!
+    user.reload
+
+    assert_equal(family_name, user.family_name)
+
+    section = create :section, user_id: @teacher.id
+    Follower.create!(section_id: section.id, student_user_id: user.id)
+
+    DCDO.stubs(:get).with('family-name-features', false).returns(true)
+
+    user.save!
+    user.reload
+
+    assert_equal(family_name, user.family_name)
+
+    DCDO.unstub(:get)
+  end
+
   test 'school_info_school returns the school associated with the user' do
     school = create :school
     school_info = create :school_info, school: school
