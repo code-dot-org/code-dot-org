@@ -296,7 +296,7 @@ describe('LibraryPublisher', () => {
       it('sets error state if library contains PII', async () => {
         publishSpy.callsArgWith(1, {
           message: 'httpStatusCode: 400; status: error; error: Bad request',
-          cause: {profaneWords: ['123-456-7890']},
+          cause: {pIIWords: ['123-456-7890']},
         });
         sinon.stub(console, 'warn');
         wrapper.setState({
