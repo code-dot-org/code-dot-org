@@ -191,7 +191,7 @@ describe('CurriculumCatalogCard', () => {
     expect(container.querySelectorAll('i[class*=language]')).to.have.length(0);
   });
 
-  it('does not render translation icon when translation is not available in non-English locale', () => {
+  it('does not render translation icon if translation is not available', () => {
     const {container} = renderCurriculumCard({
       ...defaultProps,
       isEnglish: false,
@@ -203,28 +203,6 @@ describe('CurriculumCatalogCard', () => {
   });
 
   it('renders translation icon when translation is available in non-English locale', () => {
-    const {container} = renderCurriculumCard({
-      ...defaultProps,
-      isEnglish: false,
-      isTranslated: true,
-    });
-
-    expect(screen.queryByTitle(translationIconTitle)).to.be.null;
-    expect(container.querySelectorAll('i[class*=language]')).to.have.length(0);
-  });
-
-  it('renders translation icon when translation is available not in English locale', () => {
-    const {container} = renderCurriculumCard({
-      ...defaultProps,
-      isEnglish: false,
-      isTranslated: true,
-    });
-
-    expect(screen.queryByTitle(translationIconTitle)).to.be.null;
-    expect(container.querySelectorAll('i[class*=language]')).to.have.length(0);
-  });
-
-  it('renders translation icon when translation is available not in English locale', () => {
     const {container} = renderCurriculumCard({
       ...defaultProps,
       isEnglish: false,
