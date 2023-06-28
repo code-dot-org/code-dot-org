@@ -12,6 +12,7 @@ require 'digest/md5'
 require 'cdo/aws/metrics'
 require 'aws-sdk-ec2'
 require 'net/http'
+require 'socket'
 
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
@@ -51,8 +52,8 @@ end
 def log_runtime_metrics
   puts "logging test metrics"
 
-  metadata_endpoint = 'http://169.254.169.254/latest/meta-data/'
-  instance_id = Net::HTTP.get(URI.parse(metadata_endpoint + 'instance-id'))
+  # metadata_endpoint = 'http://169.254.169.254/latest/meta-data/'
+  # instance_id = Net::HTTP.get(URI.parse(metadata_endpoint + 'instance-id'))
 
   # ec2 = AWS::EC2.new
   # instance = ec2.instances[instance_id]
@@ -71,8 +72,11 @@ def log_runtime_metrics
   #     }
   #   ]
   # )
+
+  # ip = Socket.ip_address_list.detect{|intf| intf.ipv4_private?}
+  # puts "IP: " + ip.ip_address.to_s
   puts "Environment: " + CDO.rack_env.to_s
-  puts "instance id: " + instance_id
+  # puts "instance id: " + instance_id
   puts "logged test metrics"
 end
 
