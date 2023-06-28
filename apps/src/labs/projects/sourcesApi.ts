@@ -3,25 +3,33 @@
  * A source is the code of a project.
  */
 
-import {Source, SourceUpdateOptions} from '../types';
+import {ProjectSources, SourceUpdateOptions} from '../types';
 import {SOURCE_FILE} from '../constants';
+import HttpClient, {GetResponse} from '@cdo/apps/util/HttpClient';
+import {SourceResponseValidator} from '../responseValidators';
 const {stringifyQueryParams} = require('@cdo/apps/utils');
 
 const rootUrl = (channelId: string) =>
   `/v3/sources/${channelId}/${SOURCE_FILE}`;
 
-export async function get(channelId: string): Promise<Response> {
-  return fetch(rootUrl(channelId));
+export async function get(
+  channelId: string
+): Promise<GetResponse<ProjectSources>> {
+  return HttpClient.fetchJson<ProjectSources>(
+    rootUrl(channelId),
+    {},
+    SourceResponseValidator
+  );
 }
 
 export async function update(
   channelId: string,
-  source: Source,
+  sources: ProjectSources,
   options?: SourceUpdateOptions
 ): Promise<Response> {
   const url = rootUrl(channelId) + stringifyQueryParams(options);
   return fetch(url, {
     method: 'PUT',
-    body: JSON.stringify({source: JSON.stringify(source)}),
+    body: JSON.stringify(sources),
   });
 }
