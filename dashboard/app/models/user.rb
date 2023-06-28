@@ -136,6 +136,7 @@ class User < ApplicationRecord
     child_account_compliance_state_last_updated
     us_state
     country_code
+    family_name
   )
 
   attr_accessor(
@@ -1043,7 +1044,7 @@ class User < ApplicationRecord
 
       # Remove family name, in case it was set on the student account.
       if DCDO.get('family-name-features', false)
-        properties['family_name'] = nil
+        self.family_name = nil
         save!
       end
 
@@ -2056,7 +2057,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
-      family_name: DCDO.get('family-name-features', false) ? properties&.dig('family_name') : nil,
+      family_name: DCDO.get('family-name-features', false) ? family_name : nil,
       email: email,
       hashed_email: hashed_email,
       user_type: user_type,
