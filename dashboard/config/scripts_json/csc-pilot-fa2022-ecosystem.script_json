@@ -4,16 +4,27 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "c9cc9fa1-6684-4321-8e49-efeceb9d9a8d",
+          "notice": "Ecosystems Fall 2022 Pilot is being deprecated",
+          "details": "We are in the process of fully removing the Ecosystems Fall 2022 Pilot content and course from Code.org within the next 5-7 months, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Ecosystems Fall 2022 Pilot content will unfortunately not be addressed or fixed, as we work towards fully removing it. You can learn more about other course options here: ",
+          "link": "https://code.org/educate/csc",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "CS Connections Landing Page"
+        }
+      ],
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "csc-pilot-fa2022-ecosystem",
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csc-pilot-fa2022-ecosystem",
-    "serialized_at": "2023-02-08 23:22:32 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2023-06-27 22:25:32 UTC",
+    "published_state": "sunsetting",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
