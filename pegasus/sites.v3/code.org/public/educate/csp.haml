@@ -37,8 +37,7 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper
-    %h2=hoc_s(:heading_curriculum_at_a_glance)
-    TBD
+    = view :curriculum_glance_section, grades: hoc_s(:module_grade_9_12), level: hoc_s(:module_level_beginner), duration: hoc_s(:module_duration_school_year), topics: "Programming, Data, Art and Design, Games and Animation", devices: "Laptop, Chromebook, Tablet", tools: "App Lab", professional_learning: "Facilitator-led Workshops, Self-paced Modules", languages: "English", accessibility_features: "Text-to-speech, Closed captioning, Immersive reader"
 
 %section.quote.bg-neutral-dark
   .wrapper
