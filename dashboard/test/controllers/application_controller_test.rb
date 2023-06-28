@@ -2,9 +2,9 @@ require 'test_helper'
 
 class ApplicationControllerTest < ActionDispatch::IntegrationTest
   def setup
-    CPA.stubs(:cpa_experience).
+    Cpa.stubs(:cpa_experience).
       with(any_parameters).
-      returns(CPA::NEW_USER_LOCKOUT)
+      returns(Cpa::NEW_USER_LOCKOUT)
   end
 
   test "accounts needing permission should be locked out" do

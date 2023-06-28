@@ -1,7 +1,7 @@
 require_relative '../../shared/middleware/helpers/experiments'
 require 'date'
 # Support for the Colorado Privacy Act (CPA) compliance.
-module CPA
+module Cpa
   NEW_USER_LOCKOUT = 'cpa_new_user_lockout'
   ALL_USER_LOCKOUT = 'cpa_all_user_lockout'
 
@@ -34,16 +34,16 @@ module CPA
 
     # Verify the schedule is well defined.
     return nil unless schedule
-    return nil unless schedule[CPA::NEW_USER_LOCKOUT]
-    return nil unless schedule[CPA::ALL_USER_LOCKOUT]
+    return nil unless schedule[Cpa::NEW_USER_LOCKOUT]
+    return nil unless schedule[Cpa::ALL_USER_LOCKOUT]
 
     # Calculate the phase of the CPA compliance schedule.
-    new_user_lockout = DateTime.parse(schedule[CPA::NEW_USER_LOCKOUT])
-    all_user_lockout = DateTime.parse(schedule[CPA::ALL_USER_LOCKOUT])
+    new_user_lockout = DateTime.parse(schedule[Cpa::NEW_USER_LOCKOUT])
+    all_user_lockout = DateTime.parse(schedule[Cpa::ALL_USER_LOCKOUT])
     if current_time > all_user_lockout
-      CPA::ALL_USER_LOCKOUT
+      Cpa::ALL_USER_LOCKOUT
     elsif current_time > new_user_lockout
-      CPA::NEW_USER_LOCKOUT
+      Cpa::NEW_USER_LOCKOUT
     else
       nil
     end

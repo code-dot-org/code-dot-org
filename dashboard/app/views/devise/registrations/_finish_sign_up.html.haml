@@ -1,6 +1,6 @@
 - require '../shared/middleware/helpers/experiments'
 - SignUpTracking.log_load_finish_sign_up session, (@user.provider || 'email')
-- require 'cdo/cpa'
+- require 'cpa'
 - require 'geocoder'
 - location = Geocoder.search(request.ip).try(:first)
 - country_code = location&.country_code.to_s.upcase
@@ -100,7 +100,7 @@
       .span5
         = f.select :age, age_options, include_blank: true
 
-    - if CPA.cpa_experience(request)
+    - if Cpa.cpa_experience(request)
       .row#us-state-dropdown{style: "display: none;"}
         .span3.signup-field-label
           = f.label :us_state

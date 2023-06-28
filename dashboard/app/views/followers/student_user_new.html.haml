@@ -1,4 +1,4 @@
-- require 'cdo/cpa'
+- require 'cpa'
 - location = Geocoder.search(request.ip).try(:first)
 - country_code = location&.country_code.to_s.upcase
 - state_code = location&.state_code.to_s.upcase
@@ -80,7 +80,7 @@
                 = f.label :age, t('signup_form.age')
                 = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
               %br/
-              - if CPA.cpa_experience(request)
+              - if Cpa.cpa_experience(request)
                 .itemblock
                   = f.label :us_state, t('signup_form.us_state')
                   = f.select :us_state, us_state_options, selected: state_code,
