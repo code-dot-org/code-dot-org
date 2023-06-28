@@ -15,7 +15,7 @@ import {
   LevelData,
   LevelProperties,
   ProjectManagerStorageType,
-  Source,
+  ProjectSources,
 } from './types';
 import LabRegistry from './LabRegistry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
@@ -36,7 +36,7 @@ interface LabState {
   // channel for the current project, or undefined if there is no current project.
   channel: Channel | undefined;
   // last saved source for the current project, or undefined if we have not loaded or saved yet.
-  source: Source | undefined;
+  sources: ProjectSources | undefined;
   // Level data for the current level
   levelData: LevelData | undefined;
   // Whether the lab is ready for a reload.  This is used to manage the case where multiple loads
@@ -50,7 +50,7 @@ const initialState: LabState = {
   isLoading: false,
   isPageError: false,
   channel: undefined,
-  source: undefined,
+  sources: undefined,
   levelData: undefined,
   labReadyForReload: false,
   hideShareAndRemix: undefined,
@@ -103,16 +103,12 @@ export const setUpForLevel = createAsyncThunk(
     }
     LabRegistry.getInstance().setProjectManager(projectManager);
     // Load channel and source.
-    const projectResponse = await setUpAndLoadProject(
+    const {sources, channel} = await setUpAndLoadProject(
       projectManager,
       thunkAPI.dispatch
     );
-    if (!projectResponse.ok) {
-      return thunkAPI.rejectWithValue(projectResponse);
-    }
-    const {source, channel} = await projectResponse.json();
     setProjectAndLevelData(
-      {source, channel, levelProperties},
+      {sources, channel, levelProperties},
       thunkAPI.signal.aborted,
       thunkAPI.dispatch
     );
@@ -132,10 +128,10 @@ const labSlice = createSlice({
     setChannel(state, action: PayloadAction<Channel>) {
       state.channel = action.payload;
     },
-    setSource(state, action: PayloadAction<Source>) {
-      state.source = action.payload;
+    setSources(state, action: PayloadAction<ProjectSources | undefined>) {
+      state.sources = action.payload;
     },
-    setLevelData(state, action: PayloadAction<LevelData>) {
+    setLevelData(state, action: PayloadAction<LevelData | undefined>) {
       state.levelData = action.payload;
     },
     setLabReadyForReload(state, action: PayloadAction<boolean>) {
@@ -179,7 +175,7 @@ async function setUpAndLoadProject(
   );
   projectManager.addSaveSuccessListener((channel, source) => {
     dispatch(setProjectUpdatedAt(channel.updatedAt));
-    dispatch(setSource(source));
+    dispatch(setSources(source));
     dispatch(setChannel(channel));
   });
   projectManager.addSaveNoopListener(channel => {
@@ -201,9 +197,9 @@ async function setUpAndLoadProject(
 // thunk dispatch method.
 function setProjectAndLevelData(
   data: {
-    source: Source;
     channel: Channel;
     levelProperties: LevelProperties;
+    sources?: ProjectSources;
   },
   aborted: boolean,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
@@ -212,9 +208,9 @@ function setProjectAndLevelData(
   if (aborted) {
     return;
   }
-  const {channel, source, levelProperties} = data;
+  const {channel, sources, levelProperties} = data;
   dispatch(setChannel(channel));
-  dispatch(setSource(source));
+  dispatch(setSources(sources));
   if (levelProperties) {
     dispatch(setLevelData(levelProperties.levelData));
     // If hideShareAndRemix is not set, default to true.
@@ -244,7 +240,7 @@ export const {
   setIsLoading,
   setIsPageError,
   setChannel,
-  setSource,
+  setSources,
   setLevelData,
   setLabReadyForReload,
   setHideShareAndRemix,
