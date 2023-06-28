@@ -59,16 +59,18 @@ const initialState: LabState = {
 
 // Thunks
 
-// Set up the project manager for the given level and script,
+// Set up the lab properties and project manager for the given level (and optional script),
 // then load the project and store the channel and source in redux.
+// If we are given a channel id, we will use that to load the project, otherwise we will
+// get the channel id based on the level and script id.
 // If we get an aborted signal, we will exit early.
-export const setUpForLevel = createAsyncThunk(
-  'lab/setUpForLevel',
+export const setUpWithLevel = createAsyncThunk(
+  'lab/setUpWithLevel',
   async (
     payload: {
       levelId: number;
       scriptId?: number;
-      levelPropertiesPath: string;
+      levelPropertiesPath?: string;
       channelId?: string;
     },
     thunkAPI
@@ -80,10 +82,11 @@ export const setUpForLevel = createAsyncThunk(
     // saves from the existing project manager.
     await existingProjectManager?.cleanUp();
 
-    // Load level properties
-    const levelProperties = await loadLevelProperties(
-      payload.levelPropertiesPath
-    );
+    // Load level properties if we have a levelPropertiesPath.
+    let levelProperties: LevelProperties | undefined = undefined;
+    if (payload.levelPropertiesPath) {
+      levelProperties = await loadLevelProperties(payload.levelPropertiesPath);
+    }
 
     // Create a new project manager.
     const projectManager = payload.channelId
@@ -109,6 +112,40 @@ export const setUpForLevel = createAsyncThunk(
     );
     setProjectAndLevelData(
       {sources, channel, levelProperties},
+      thunkAPI.signal.aborted,
+      thunkAPI.dispatch
+    );
+  }
+);
+
+// Given a channel id as the payload, set up the lab for that channel id.
+// This consists of cleaning up the existing project manager (if applicable), then
+// creating a project manager and loading the project data.
+// This method is used for loading a lab that is not associated with a level
+// (e.g., /projectbeats).
+// If we get an aborted signal, we will exit early.
+export const setUpWithoutLevel = createAsyncThunk(
+  'lab/setUpWithoutLevel',
+  async (payload: string, thunkAPI) => {
+    // Check for an existing project manager and clean it up, if it exists.
+    const existingProjectManager =
+      LabRegistry.getInstance().getProjectManager();
+    // Save any usaved code and clear out any remaining enqueued
+    // saves from the existing project manager.
+    await existingProjectManager?.cleanUp();
+    // Create the new project manager.
+    const projectManager = ProjectManagerFactory.getProjectManager(
+      ProjectManagerStorageType.REMOTE,
+      payload
+    );
+    LabRegistry.getInstance().setProjectManager(projectManager);
+    // Load channel and source.
+    const {sources, channel} = await setUpAndLoadProject(
+      projectManager,
+      thunkAPI.dispatch
+    );
+    setProjectAndLevelData(
+      {sources, channel},
       thunkAPI.signal.aborted,
       thunkAPI.dispatch
     );
@@ -145,10 +182,10 @@ const labSlice = createSlice({
     },
   },
   extraReducers: builder => {
-    builder.addCase(setUpForLevel.fulfilled, state => {
+    builder.addCase(setUpWithLevel.fulfilled, state => {
       state.isLoading = false;
     });
-    builder.addCase(setUpForLevel.rejected, (state, action) => {
+    builder.addCase(setUpWithLevel.rejected, (state, action) => {
       // If the set up was aborted, that means another load got started
       // before we finished. Therefore we only set loading to false if the
       // action was not aborted.
@@ -156,7 +193,21 @@ const labSlice = createSlice({
         state.isLoading = false;
       }
     });
-    builder.addCase(setUpForLevel.pending, state => {
+    builder.addCase(setUpWithLevel.pending, state => {
+      state.isLoading = true;
+    });
+    builder.addCase(setUpWithoutLevel.fulfilled, state => {
+      state.isLoading = false;
+    });
+    builder.addCase(setUpWithoutLevel.rejected, (state, action) => {
+      // If the set up was aborted, that means another load got started
+      // before we finished. Therefore we only set loading to false if the
+      // action was not aborted.
+      if (!action.meta.aborted) {
+        state.isLoading = false;
+      }
+    });
+    builder.addCase(setUpWithoutLevel.pending, state => {
       state.isLoading = true;
     });
   },
@@ -198,8 +249,8 @@ async function setUpAndLoadProject(
 function setProjectAndLevelData(
   data: {
     channel: Channel;
-    levelProperties: LevelProperties;
     sources?: ProjectSources;
+    levelProperties?: LevelProperties;
   },
   aborted: boolean,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>

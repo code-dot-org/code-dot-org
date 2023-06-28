@@ -29,11 +29,3 @@ export function getStandaloneProjectId(): string | null {
 
   return null;
 }
-
-export function getProjectLevelId(): number | null {
-  const appOptions = getScriptData('appoptions') as PartialAppOptions;
-  if (appOptions.level?.isProjectLevel && appOptions.serverLevelId) {
-    return appOptions.serverLevelId;
-  }
-  return null;
-}
