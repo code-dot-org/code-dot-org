@@ -12,11 +12,12 @@ export class UnconnectedRetryProjectSaveDialog extends Component {
   static propTypes = {
     projectUpdatedStatus: PropTypes.oneOf(Object.values(statuses)),
     isOpen: PropTypes.bool,
+    onTryAgain: PropTypes.func.isRequired,
   };
 
   handleClick = () => {
     if (this.props.projectUpdatedStatus !== statuses.saving) {
-      dashboard.project.save();
+      this.props.onTryAgain();
     }
   };
 
