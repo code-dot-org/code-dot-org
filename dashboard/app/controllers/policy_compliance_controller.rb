@@ -20,7 +20,8 @@ class PolicyComplianceController < ApplicationController
     user = permission_request.user
     #Update User
     if user.child_account_compliance_state != User::ChildAccountCompliance::PERMISSION_GRANTED
-      user.update_child_account_compliance(User::ChildAccountCompliance::PERMISSION_GRANTED)
+      user.child_account_compliance_state = User::ChildAccountCompliance::PERMISSION_GRANTED
+      user.child_account_compliance_state_last_updated = DateTime.now
       user.save!
       parent_email = permission_request.parent_email
       ParentMailer.parent_permission_confirmation(parent_email).deliver_now
