@@ -6,14 +6,11 @@
 
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import ProjectManagerFactory from '@cdo/apps/labs/projects/ProjectManagerFactory';
-import {ProjectManagerStorageType} from '@cdo/apps/labs/types';
 import LabRegistry from '../LabRegistry';
 import {setUpForLevel} from '../labRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
-import ProjectManager from './ProjectManager';
 
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   children,
@@ -32,11 +29,6 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    console.log(
-      `in useEffect, currentLevelId: ${currentLevelId}, channelId: ${channelId}`
-    );
-    console.log('going to set up level');
-
     let levelPropertiesPathForDispatch = levelPropertiesPath;
     let levelId = currentLevelId ? parseInt(currentLevelId) : undefined;
     if (channelId) {
