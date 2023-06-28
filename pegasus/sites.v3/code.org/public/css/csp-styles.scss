@@ -61,8 +61,7 @@
     width: 30%;
 
     @media screen and (max-width: $width-sm) {
-      width: 100%;
-      margin-top: 2rem;
+      display: none;
     }
 
     img {
@@ -77,13 +76,19 @@
   }
 }
 
-.csp-page-projects .image-wrapper {
+.csp-page-projects {
 
-  img {
-    width: 30%;
+  .content-wrapper {
+    gap: 2rem;
+  }
 
-    &:first-child {
-      width: 27.5%;
+  .image-wrapper {
+    img {
+      width: 30%;
+
+      &:first-child {
+        width: 27.5%;
+      }
     }
   }
 }
