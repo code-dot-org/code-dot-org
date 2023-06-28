@@ -307,7 +307,7 @@ describe('LibraryPublisher', () => {
         await wrapper.instance().validateAndPublish();
 
         expect(wrapper.state().publishState).to.equal(PublishState.PII_INPUT);
-        expect(wrapper.state().pIIWords).to.equal(['123-456-7890']);
+        expect(wrapper.state().pIIWords).to.deep.equal(['123-456-7890']);
 
         console.warn.restore();
       });
