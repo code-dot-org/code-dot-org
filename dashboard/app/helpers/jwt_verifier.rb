@@ -22,8 +22,6 @@ class JwtVerifier
       errors << 'Audience must be a string or Array of strings.' unless aud_array.all?(String)
       if jwt.key? :azp
         verify_azp(aud, jwt[:azp])
-      else
-        errors << 'Audience does not match client_id' unless public_key_matches_one_of_client_ids(aud)
       end
     else
       errors << 'Audience does not exist'
@@ -32,7 +30,6 @@ class JwtVerifier
 
   def verify_azp(aud, azp)
     errors << 'Audience does not contain/match Authorized Party' unless azp_in_aud(aud, azp)
-    errors << 'Audience does not match client_id' unless public_key_matches_one_of_client_ids(aud)
   end
 
   def verify_expiration(jwt)
@@ -50,9 +47,5 @@ class JwtVerifier
     else
       aud == azp
     end
-  end
-
-  def public_key_matches_one_of_client_ids(aud)
-    LtiIntegration.exists?(client_id: aud)
   end
 end

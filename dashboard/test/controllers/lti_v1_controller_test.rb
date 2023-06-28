@@ -13,8 +13,14 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     JWT.encode(payload, @key)
   end
 
+  def create_jwt_and_stub(payload)
+    LtiV1Controller.any_instance.stubs(:get_decoded_jwt).returns payload
+    create_jwt(payload)
+  end
+
   def create_valid_jwt(aud_is_array)
-    target_link_uri = @integration.auth_redirect_url
+    # an example redirect URI, any URI should work here.
+    target_link_uri = CDO.studio_url('/', CDO.default_scheme)
     aud = if aud_is_array
             [@integration.client_id]
           else
@@ -27,8 +33,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       exp: 7.days.from_now.to_i,
       'https://purl.imsglobal.org/spec/lti/claim/target_link_uri': target_link_uri
     }
-    LtiV1Controller.any_instance.stubs(:get_decoded_jwt).returns payload
-    create_jwt(payload)
+    create_jwt_and_stub(payload)
   end
 
   test 'given no params, return unauthorized' do
@@ -107,19 +112,18 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :unauthorized
   end
 
-  test 'auth - given audience as non-String return unauthorized' do
-  end
-
-  test 'auth - audience does not contain azp return unauthorized' do
-  end
-
   test 'auth - audience does not match client_id with azp present - unauthorized' do
+    payload = {aud: [@integration.client_id], iss: @integration.issuer, azp: ''}
+    jwt = create_jwt_and_stub(payload)
+    post '/lti/v1/authenticate', params: {id_token: jwt}
+    assert_response :unauthorized
   end
 
   test 'auth - expiration time past return unauthorized' do
-  end
-
-  test 'auth - given audience not a client id return unauthorized' do
+    payload = {aud: @integration.client_id, iss: @integration.issuer, azp: @integration.client_id, exp: 3.days.ago.to_i}
+    jwt = create_jwt_and_stub(payload)
+    post '/lti/v1/authenticate', params: {id_token: jwt}
+    assert_response :unauthorized
   end
 
   test 'auth - given a valid jwt with the audience as an array, redirect to target_link_url' do
