@@ -137,10 +137,10 @@ const labSlice = createSlice({
     setChannel(state, action: PayloadAction<Channel>) {
       state.channel = action.payload;
     },
-    setSources(state, action: PayloadAction<ProjectSources>) {
+    setSources(state, action: PayloadAction<ProjectSources | undefined>) {
       state.sources = action.payload;
     },
-    setLevelData(state, action: PayloadAction<LevelData>) {
+    setLevelData(state, action: PayloadAction<LevelData | undefined>) {
       state.levelData = action.payload;
     },
     setLabReadyForReload(state, action: PayloadAction<boolean>) {
@@ -227,14 +227,8 @@ function setProjectAndLevelData(
   }
   const {channel, sources, levelData} = data;
   dispatch(setChannel(channel));
-
-  if (sources) {
-    dispatch(setSources(sources));
-  }
-  if (levelData) {
-    dispatch(setLevelData(levelData));
-  }
-
+  dispatch(setSources(sources));
+  dispatch(setLevelData(levelData));
   dispatch(setLabReadyForReload(true));
 }
 
