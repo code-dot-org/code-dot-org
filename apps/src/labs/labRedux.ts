@@ -60,7 +60,7 @@ const initialState: LabState = {
 export const setUpForLevel = createAsyncThunk(
   'lab/setUpForLevel',
   async (
-    payload: {levelId: number; scriptId: number; levelPropertiesPath: string},
+    payload: {levelId: number; scriptId?: number; levelPropertiesPath: string},
     thunkAPI
   ) => {
     // Check for an existing project manager and clean it up, if it exists.

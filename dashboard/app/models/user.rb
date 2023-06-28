@@ -136,6 +136,7 @@ class User < ApplicationRecord
     child_account_compliance_state_last_updated
     us_state
     country_code
+    family_name
   )
 
   attr_accessor(
@@ -1043,7 +1044,7 @@ class User < ApplicationRecord
 
       # Remove family name, in case it was set on the student account.
       if DCDO.get('family-name-features', false)
-        properties['family_name'] = nil
+        self.family_name = nil
         save!
       end
 
@@ -2056,7 +2057,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
-      family_name: DCDO.get('family-name-features', false) ? properties&.dig('family_name') : nil,
+      family_name: DCDO.get('family-name-features', false) ? family_name : nil,
       email: email,
       hashed_email: hashed_email,
       user_type: user_type,
@@ -2335,6 +2336,13 @@ class User < ApplicationRecord
   def update_share_setting
     self.sharing_disabled = false if sections_as_student.empty?
     return true
+  end
+
+  # Updates the child_account_compliance_state attribute to the given state.
+  # @param {String} new_state - A constant from User::ChildAccountCompliance
+  def update_child_account_compliance(new_state)
+    self.child_account_compliance_state = new_state
+    self.child_account_compliance_state_last_updated = DateTime.now.new_offset(0)
   end
 
   # When creating an account, we want to look for any channels that got created
@@ -2669,6 +2677,9 @@ class User < ApplicationRecord
 
   # Values for the `child_account_compliance_state` attribute
   module ChildAccountCompliance
+    # The student's account has been used to issue a request to a parent.
+    REQUEST_SENT = 's'.freeze
+
     # The student's account has been approved by their parent.
     PERMISSION_GRANTED = 'g'.freeze
   end

@@ -18,7 +18,7 @@ import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 import {baseUrl, loadLibrary} from '../utils/Loader';
-import ProgressManager from '../progress/ProgressManager';
+import ProgressManager from '@cdo/apps/labs/progress/ProgressManager';
 import MusicValidator from '../progress/MusicValidator';
 import Video from './Video';
 import {
@@ -62,6 +62,7 @@ import {
 } from '../../code-studio/projectRedux';
 import {logError} from '../utils/MusicMetrics';
 import musicI18n from '../locale';
+import {Key} from '../utils/Notes';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -128,7 +129,7 @@ class UnconnectedMusicView extends React.Component {
     const bpm = AppConfig.getValue('bpm');
     const key = AppConfig.getValue('key');
 
-    this.player = new MusicPlayer(bpm, key);
+    this.player = new MusicPlayer(bpm, key && Key[key.toUpperCase()]);
     this.analyticsReporter = new AnalyticsReporter();
     this.musicBlocklyWorkspace = new MusicBlocklyWorkspace();
     this.soundUploader = new SoundUploader(this.player);
