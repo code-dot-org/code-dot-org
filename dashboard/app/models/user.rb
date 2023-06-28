@@ -2337,6 +2337,13 @@ class User < ApplicationRecord
     return true
   end
 
+  # Updates the child_account_compliance_state attribute to the given state.
+  # @param {String} new_state - A constant from User::ChildAccountCompliance
+  def update_child_account_compliance(new_state)
+    self.child_account_compliance_state = new_state
+    self.child_account_compliance_state_last_updated = DateTime.now.new_offset(0)
+  end
+
   # When creating an account, we want to look for any channels that got created
   # for this user before they signed in, and if any of them are in our Applab HOC
   # course, we will create a UserScript entry so that they get a course card
@@ -2669,6 +2676,9 @@ class User < ApplicationRecord
 
   # Values for the `child_account_compliance_state` attribute
   module ChildAccountCompliance
+    # The student's account has been used to issue a request to a parent.
+    REQUEST_SENT = 's'.freeze
+
     # The student's account has been approved by their parent.
     PERMISSION_GRANTED = 'g'.freeze
   end
