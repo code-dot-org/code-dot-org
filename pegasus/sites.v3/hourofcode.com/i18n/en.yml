@@ -523,7 +523,6 @@
   teach_page_additional_materials_list_heading_03: "Classroom Posters"
   teach_page_additional_materials_list_desc_03: "Print these posters of diverse role models to hang in your school and inspire your students to try computer science."
 
-
   csp_page_top_desc: "Free year-long curriculum which introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. Can be taught as an introductory class and as an AP course."
   csp_page_intro_heading: "Free, AP® CSP endorsed, high school introductory course"
   csp_page_intro_list_01: "Culturally responsive pedagogy"
@@ -531,7 +530,7 @@
   csp_page_intro_list_03: "Explainer videos with diverse presenters"
   csp_page_intro_list_04: "Open-ended projects for more personalized learning"
   csp_page_curriculum_glance_topics: "Programming, Data, Art and Design, Games and Animation"
-  csp_page_curriculum_glance_devices: "Laptop, Chromebook, Tablet"
+  csp_page_curriculum_glance_devices: "Laptop, Chromebook"
   csp_page_curriculum_glance_tools: "App Lab"
   csp_page_curriculum_glance_professional_learning: "Facilitator-led Workshops, Self-paced Modules"
   csp_page_curriculum_glance_professional_languages: "English"
@@ -547,7 +546,6 @@
   csp_page_faq_question_03: "How/Where can I get professional development for CS Principles?"
   csp_page_faq_answer_03_01: "Our Professional Learning Program offers year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer forum support and follow-up workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever. [Click here to apply and learn more](%{pl_url})."
   csp_page_faq_answer_03_02: "Have questions about professional development? [Provide your contact information to a Regional Partner in your area](%{regional_partner_url})."
-  csp_page_faq_answer_03_03: "If you previously participated in the Code.org Professional Learning Program for CS Principles, your Regional Partner may be hosting a follow-up workshop to help support your transition to the new course. [Please contact your Regional Partner for more details](%{regional_partner_url})."
   csp_page_faq_question_04: "What is the recommended timing for teaching CS Principles?"
   csp_page_faq_answer_04_01: "We recommend that CS Principles be taught as a full year class, assuming that you meet with students daily or nearly daily for 45 or more minutes."
   csp_page_faq_answer_04_02: "It is possible to teach CS Principles on a semester block schedule, though we highly recommend this implementation only be used in the fall semester. Since the AP Performance Tasks are due in late April and require 20 dedicated hours of class time to complete, most schools find there is not enough time to complete the course on a block schedule in the spring."
