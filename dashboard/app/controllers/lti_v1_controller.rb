@@ -57,8 +57,12 @@ class LtiV1Controller < ApplicationController
     integration = LtiIntegration.find_by({client_id: extracted_client_id, issuer: extracted_issuer_id})
     return unauthorized_status unless integration
 
-    # verify the jwt via the integration's public keyset
-    decoded_jwt = get_decoded_jwt(integration, id_token)
+    begin
+      # verify the jwt via the integration's public keyset
+      decoded_jwt = get_decoded_jwt(integration, id_token)
+    rescue
+      return unauthorized_status
+    end
 
     jwt_verifier = JwtVerifier.new(decoded_jwt, integration)
 

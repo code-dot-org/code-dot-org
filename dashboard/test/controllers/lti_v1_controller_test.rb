@@ -13,12 +13,16 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     JWT.encode(payload, @key)
   end
 
-  def create_jwt_and_stub(payload)
-    LtiV1Controller.any_instance.stubs(:get_decoded_jwt).returns payload
+  def create_jwt_and_stub(payload, raises_error=false)
+    if raises_error
+      LtiV1Controller.any_instance.stubs(:get_decoded_jwt).raises JWT::DecodeError
+    else
+      LtiV1Controller.any_instance.stubs(:get_decoded_jwt).returns payload
+    end
     create_jwt(payload)
   end
 
-  def create_valid_jwt(aud_is_array)
+  def get_valid_payload(aud_is_array)
     # an example redirect URI, any URI should work here.
     target_link_uri = CDO.studio_url('/', CDO.default_scheme)
     aud = if aud_is_array
@@ -26,14 +30,23 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
           else
             @integration.client_id
           end
-    payload = {
+    {
       aud: aud,
       iss: @integration.issuer,
       azp: @integration.client_id,
       exp: 7.days.from_now.to_i,
       'https://purl.imsglobal.org/spec/lti/claim/target_link_uri': target_link_uri
     }
+  end
+
+  def create_valid_jwt(aud_is_array)
+    payload = get_valid_payload(aud_is_array)
     create_jwt_and_stub(payload)
+  end
+
+  def create_valid_jwt_raise_error
+    payload = get_valid_payload(false)
+    create_jwt_and_stub(payload, true)
   end
 
   test 'given no params, return unauthorized' do
@@ -122,6 +135,12 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'auth - expiration time past return unauthorized' do
     payload = {aud: @integration.client_id, iss: @integration.issuer, azp: @integration.client_id, exp: 3.days.ago.to_i}
     jwt = create_jwt_and_stub(payload)
+    post '/lti/v1/authenticate', params: {id_token: jwt}
+    assert_response :unauthorized
+  end
+
+  test 'auth - error raised in decoding jwt' do
+    jwt = create_valid_jwt_raise_error
     post '/lti/v1/authenticate', params: {id_token: jwt}
     assert_response :unauthorized
   end
