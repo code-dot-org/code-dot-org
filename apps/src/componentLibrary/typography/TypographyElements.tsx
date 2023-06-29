@@ -5,15 +5,39 @@ import {SemanticTag, VisualAppearance, TypographyElementProps} from './types';
 interface TypographyElementToGenerateTemplate {
   displayName: string;
   semanticTag: SemanticTag;
-  defaultVisualAppearance?: VisualAppearance;
+  defaultVisualAppearance: VisualAppearance;
 }
 const typographyElementsToGenerate: TypographyElementToGenerateTemplate[] = [
-  {displayName: 'Heading1', semanticTag: 'h1'},
-  {displayName: 'Heading2', semanticTag: 'h2'},
-  {displayName: 'Heading3', semanticTag: 'h3'},
-  {displayName: 'Heading4', semanticTag: 'h4'},
-  {displayName: 'Heading5', semanticTag: 'h5'},
-  {displayName: 'Heading6', semanticTag: 'h6'},
+  {
+    displayName: 'Heading1',
+    semanticTag: 'h1',
+    defaultVisualAppearance: 'heading-xxl',
+  },
+  {
+    displayName: 'Heading2',
+    semanticTag: 'h2',
+    defaultVisualAppearance: 'heading-xl',
+  },
+  {
+    displayName: 'Heading3',
+    semanticTag: 'h3',
+    defaultVisualAppearance: 'heading-lg',
+  },
+  {
+    displayName: 'Heading4',
+    semanticTag: 'h4',
+    defaultVisualAppearance: 'heading-md',
+  },
+  {
+    displayName: 'Heading5',
+    semanticTag: 'h5',
+    defaultVisualAppearance: 'heading-sm',
+  },
+  {
+    displayName: 'Heading6',
+    semanticTag: 'h6',
+    defaultVisualAppearance: 'heading-xs',
+  },
   {
     displayName: 'BodyOneText',
     semanticTag: 'p',
@@ -25,13 +49,61 @@ const typographyElementsToGenerate: TypographyElementToGenerateTemplate[] = [
     defaultVisualAppearance: 'body-two',
   },
   {
-    displayName: 'OverlineText',
+    displayName: 'BodyThreeText',
     semanticTag: 'p',
-    defaultVisualAppearance: 'overline',
+    defaultVisualAppearance: 'body-three',
   },
-  {displayName: 'EmText', semanticTag: 'em'},
-  {displayName: 'StrongText', semanticTag: 'strong'},
-  {displayName: 'Figcaption', semanticTag: 'figcaption'},
+  {
+    displayName: 'BodyFourText',
+    semanticTag: 'p',
+    defaultVisualAppearance: 'body-four',
+  },
+  {
+    displayName: 'OverlineOneText',
+    semanticTag: 'p',
+    defaultVisualAppearance: 'overline-one',
+  },
+  {
+    displayName: 'OverlineTwoText',
+    semanticTag: 'p',
+    defaultVisualAppearance: 'overline-two',
+  },
+  {
+    displayName: 'OverlineThreeText',
+    semanticTag: 'p',
+    defaultVisualAppearance: 'overline-three',
+  },
+  {displayName: 'EmText', semanticTag: 'em', defaultVisualAppearance: 'em'},
+  {
+    displayName: 'StrongText',
+    semanticTag: 'strong',
+    defaultVisualAppearance: 'strong',
+  },
+  {
+    displayName: 'Figcaption',
+    semanticTag: 'figcaption',
+    defaultVisualAppearance: 'figcaption',
+  },
+  {
+    displayName: 'LabelOneText',
+    semanticTag: 'label',
+    defaultVisualAppearance: 'label-one',
+  },
+  {
+    displayName: 'LabelTwoText',
+    semanticTag: 'label',
+    defaultVisualAppearance: 'label-two',
+  },
+  {
+    displayName: 'LabelThreeText',
+    semanticTag: 'label',
+    defaultVisualAppearance: 'label-three',
+  },
+  {
+    displayName: 'LabelFourText',
+    semanticTag: 'label',
+    defaultVisualAppearance: 'label-four',
+  },
 ];
 
 // Generates a set of components(Typography Elements) based on the data in typographyElementsToGenerate
@@ -71,8 +143,16 @@ export const {
   Heading6,
   BodyOneText,
   BodyTwoText,
-  OverlineText,
+  BodyThreeText,
+  BodyFourText,
+  OverlineOneText,
+  OverlineTwoText,
+  OverlineThreeText,
   EmText,
   StrongText,
   Figcaption,
+  LabelOneText,
+  LabelTwoText,
+  LabelThreeText,
+  LabelFourText,
 } = generateComponents(typographyElementsToGenerate);

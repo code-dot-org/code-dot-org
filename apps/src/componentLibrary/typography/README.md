@@ -102,7 +102,7 @@ import {Heading1, BodyOneText} from './../componentLibrary/typography';
 
 import Typography from './../componentLibrary/typography';
 
-<Typography semanticTag="h1">Some Heading1</Typography>
+<Typography semanticTag="h1" visualAppearance="heading-xxl">Some Heading1</Typography>
 <Typography semanticTag="p" visualAppearance="body-one">Some body text</Typography>
 
 

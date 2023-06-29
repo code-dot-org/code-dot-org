@@ -244,26 +244,19 @@ html {
 // ----------------------------------------
 
 // Headings
-h1,
 .heading-xxl { @include heading-xxl; }
-h2,
 .heading-xl { @include heading-xl; }
-h3,
 .heading-lg { @include heading-lg; }
-h4,
 .heading-md { @include heading-md; }
-h5,
 .heading-sm { @include heading-sm; }
-h6,
 .heading-xs { @include heading-xs; }
 
 // Paragraphs
 // Use on larger paragraphs
 .body-one { @include body-one; }
 // Use on default paragraphs
-p,
 .body-two { @include body-two; }
-// [TODO: Kelby pls approve] (?) Use on course block descriptions or anywhere
+// Use on course block descriptions or anywhere
 // else that needs smaller paragraph text
 .body-three { @include body-three; }
 // Use on smallest paragraph text
@@ -303,7 +296,6 @@ figcaption,
   @include label-one;
 }
 // (Default size)
-label,
 .label-two, {
   @include label-two;
 }

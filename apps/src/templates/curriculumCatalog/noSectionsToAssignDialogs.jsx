@@ -69,7 +69,7 @@ const NoSectionsToAssignBaseDialog = ({
 
   return (
     <AccessibleDialog onClose={onClose} className={style.dialogContainer}>
-      <Typography semanticTag="h3" tabIndex="0">
+      <Typography semanticTag="h3" visualAppearance="heading-lg" tabIndex="0">
         {headerText}
       </Typography>
       <hr />

@@ -11,7 +11,8 @@ type SemanticTag =
   | 'strong'
   | 'em'
   | 'figcaption'
-  | 'span';
+  | 'span'
+  | 'label';
 
 type VisualAppearance =
   | 'heading-xxl'
@@ -22,10 +23,18 @@ type VisualAppearance =
   | 'heading-xs'
   | 'body-one'
   | 'body-two'
-  | 'overline'
+  | 'body-three'
+  | 'body-four'
+  | 'overline-one'
+  | 'overline-two'
+  | 'overline-three'
   | 'strong'
   | 'em'
-  | 'figcaption';
+  | 'figcaption'
+  | 'label-one'
+  | 'label-two'
+  | 'label-three'
+  | 'label-four';
 
 interface TypographyElementProps {
   // Scss module classname to use for the typography element
