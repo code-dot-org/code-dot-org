@@ -24,7 +24,7 @@
 #  index_levels_on_name       (name)
 #
 
-class Aichat < Widget
+class Aichat < Level
   serialized_attrs %w(
     project_template_level_name
     start_sources
