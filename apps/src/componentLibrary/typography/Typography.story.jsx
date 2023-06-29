@@ -20,6 +20,7 @@ const Template = args => <Typography {...args} />;
 export const Heading1 = Template.bind({});
 Heading1.args = {
   semanticTag: 'h1',
+  visualAppearance: 'heading-xxl',
   children: 'This is a Typography Component. (H1)',
 };
 
@@ -33,6 +34,7 @@ Heading1asHeading3.args = {
 export const Heading2 = Template.bind({});
 Heading2.args = {
   semanticTag: 'h2',
+  visualAppearance: 'heading-xl',
   children: 'This is a Typography Component. (H2)',
 };
 
@@ -46,6 +48,7 @@ Heading2asBodyOne.args = {
 export const Heading3 = Template.bind({});
 Heading3.args = {
   semanticTag: 'h3',
+  visualAppearance: 'heading-lg',
   children: 'This is a Typography Component. (H3)',
 };
 
@@ -59,18 +62,21 @@ Heading3asHeading5.args = {
 export const Heading4 = Template.bind({});
 Heading4.args = {
   semanticTag: 'h4',
+  visualAppearance: 'heading-md',
   children: 'This is a Typography Component. (H4)',
 };
 
 export const Heading5 = Template.bind({});
 Heading5.args = {
   semanticTag: 'h5',
+  visualAppearance: 'heading-sm',
   children: 'This is a Typography Component. (H5)',
 };
 
 export const Heading6 = Template.bind({});
 Heading6.args = {
   semanticTag: 'h6',
+  visualAppearance: 'heading-xs',
   children: 'This is a Typography Component. (H6)',
 };
 
@@ -98,17 +104,20 @@ OverlineText.args = {
 export const StrongText = Template.bind({});
 StrongText.args = {
   semanticTag: 'strong',
+  visualAppearance: 'strong',
   children: 'This is a Typography Component. (strong)',
 };
 
 export const EmText = Template.bind({});
 EmText.args = {
   semanticTag: 'em',
+  visualAppearance: 'em',
   children: 'This is a Typography Component. (em)',
 };
 
 export const FigcaptionText = Template.bind({});
 FigcaptionText.args = {
   semanticTag: 'figcaption',
+  visualAppearance: 'figcaption',
   children: 'This is a Typography Component. (figcaption)',
 };
