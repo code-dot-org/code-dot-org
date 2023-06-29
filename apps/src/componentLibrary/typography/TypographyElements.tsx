@@ -84,26 +84,6 @@ const typographyElementsToGenerate: TypographyElementToGenerateTemplate[] = [
     semanticTag: 'figcaption',
     defaultVisualAppearance: 'figcaption',
   },
-  {
-    displayName: 'LabelOneText',
-    semanticTag: 'label',
-    defaultVisualAppearance: 'label-one',
-  },
-  {
-    displayName: 'LabelTwoText',
-    semanticTag: 'label',
-    defaultVisualAppearance: 'label-two',
-  },
-  {
-    displayName: 'LabelThreeText',
-    semanticTag: 'label',
-    defaultVisualAppearance: 'label-three',
-  },
-  {
-    displayName: 'LabelFourText',
-    semanticTag: 'label',
-    defaultVisualAppearance: 'label-four',
-  },
 ];
 
 // Generates a set of components(Typography Elements) based on the data in typographyElementsToGenerate
@@ -151,8 +131,4 @@ export const {
   EmText,
   StrongText,
   Figcaption,
-  LabelOneText,
-  LabelTwoText,
-  LabelThreeText,
-  LabelFourText,
 } = generateComponents(typographyElementsToGenerate);

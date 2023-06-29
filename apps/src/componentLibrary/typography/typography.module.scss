@@ -210,37 +210,6 @@ html {
   line-height: 1.64;
 }
 
-// Label text styles
-@mixin label-common {
-  color: $neutral-dark;
-  font: $gotham-bold, sans-serif;
-  margin: 0;
-}
-
-@mixin label-one {
-  @include label-common;
-  font-size: 1rem;
-  line-height: 1.48;
-}
-
-@mixin label-two {
-  @include label-common;
-  font-size: 0.875rem;
-  line-height: 1.54;
-}
-
-@mixin label-three {
-  @include label-common;
-  font-size: 0.75rem;
-  line-height: 1.64;
-}
-
-@mixin label-four {
-  @include label-common;
-  font-size: 0.625rem;
-  line-height: 1.8;
-}
-
 // ----------------------------------------
 
 // Headings
@@ -289,21 +258,3 @@ em strong,
 // Use on figcaption elements that accompany images or videos
 figcaption,
 .figcaption { @include figcaption; }
-
-// Label text
-// (Bigger size)
-.label-one, {
-  @include label-one;
-}
-// (Default size)
-.label-two, {
-  @include label-two;
-}
-// (Smaller size)
-.label-three, {
-  @include label-three;
-}
-// (Smallest size)
-.label-four, {
-  @include label-four;
-}
