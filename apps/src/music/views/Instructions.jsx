@@ -20,7 +20,7 @@ const Instructions = ({
   right,
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
-  const progressState = useSelector(state => state.music.currentProgressState);
+  const validationState = useSelector(state => state.lab.validationState);
   const currentPanel = currentLevelIndex;
 
   const getNextPanel = () => {
@@ -37,7 +37,7 @@ const Instructions = ({
     analyticsReporter.onInstructionsVisited(currentPanel + 1);
   }, [currentPanel, analyticsReporter]);
 
-  const hasNextPanel = progressState.satisfied ? !!getNextPanel() : false;
+  const hasNextPanel = validationState.satisfied ? !!getNextPanel() : false;
 
   return (
     <div
@@ -50,7 +50,7 @@ const Instructions = ({
       {progressionStep && (
         <InstructionsPanel
           panel={progressionStep}
-          message={progressState.message}
+          message={validationState.message}
           vertical={vertical}
           baseUrl={baseUrl}
           path={''}
