@@ -343,6 +343,8 @@ class ApplicationController < ActionController::Base
       locale_path,
       # Avoid an infinite redirect loop to the lockout page
       lockout_path,
+      # The locked out student needs access to the policy consent API's
+      policy_compliance_child_account_consent_path,
     ].include?(request.path)
 
     redirect_to lockout_path unless current_user.child_account_policy_compliant?
