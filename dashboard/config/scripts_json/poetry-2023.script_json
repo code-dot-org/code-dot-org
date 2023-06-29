@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2023-04-28 18:53:17 UTC",
+    "serialized_at": "2023-06-28 22:53:06 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -44,7 +44,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this CS and ELA integrated lesson for new coders, students will animate a poem with code to illustrate the mood of a poem. First, students will read and detect the mood of a famous poem. Then, they will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate new images in a poem.",
-        "preparation": "- Review and complete the **Animate a Poem** tutorial yourself\n- Determine in advance which levels might be challenging for students.\n- Some levels require sound to play. Hand out headphones ahead of time. \n\n#####Optional\n- [Optional] 2 sticky notes per student for the Assessment.\n- [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n",
+        "preparation": "- Review and complete the **Animate a Poem** tutorial yourself\n- Determine in advance which levels might be challenging for students.\n- Some levels require sound to play. Hand out headphones ahead of time. \n\n#####Optional\n- 2 sticky notes per student for the Assessment.\n- Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n",
         "purpose": "The purpose of this lesson is to teach students how to create poem art by using code to animate the mood of a poem. This provides an engaging and interactive learning experience that integrates language arts and computer science. By combining poetry analysis with coding, the lesson aims to help students develop a deeper understanding of the emotional impact of language and to express this impact through visual art.",
         "student_overview": "Poetry is making art with words. You will use code to add visual effects and images to animate a poem. "
       },
@@ -82,7 +82,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "In this CS and ELA integrated lesson, students will work on their computers to animate their poems with code. In lesson 1, students used a poem dropdown menu to choose the poem they wanted to animate. In this lesson, students will enter their own poems into the playspace and then use blocks of code to add backgrounds, effects, sounds, and sprites.",
-        "preparation": "- Play through the levels and review the lesson slides ahead of time to prepare for the coding and discussion sections of the lesson.\n- Make sure students have their Write Your Own Poem handout from last class.\n- Print one ***[Poem Checklist](https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview)** for each student.\n\n#####Optional\n- Consider the need for headphones if students plan to add sounds to their projects.\n- Create your own poem app as an example for students.\n\n",
+        "preparation": "- Play through the levels and review the lesson slides ahead of time to prepare for the coding and discussion sections of the lesson.\n- Make sure students have their Write Your Own Poem handout from last class.\n- Print one **[Poem Checklist](https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview?target=_blank)** for each student.\n\n#####Optional\n- Consider the need for headphones if students plan to add sounds to their projects.\n- Create your own poem app as an example for students.\n\n",
         "purpose": "Students will be able to personalize their poems by choosing what effects they want to add to their programs. They will curate their projects according to their own interests and personal experiences.\n",
         "student_overview": "Today, you will be able to personalize your poem by choosing what effects you want to add to your time capsule. "
       },
@@ -101,7 +101,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.",
-        "preparation": "- Prepare one computer per student.\n- Prepare one copy of the “Share Your App” handout per student.\n- Make sure students have a copy of their original poem handy for this lesson.  \n- Divide the class into pairs for the Poetry Pair-Share activity.\n- [Optional, especially for remote teaching] Determine whether you need to set up a digital document or shared online space to post each student’s app URL (see teacher template in “Links”). \n",
+        "preparation": "- Prepare one computer per student.\n- Prepare one copy of the ***[Share Your App](https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview)** handout per student.\n- Make sure students have a copy of their original poem handy for this lesson.  \n- Divide the class into pairs for the Poetry Pair-Share activity.\n\n#####Optional\n- Especially for remote teaching:  Determine whether you need to set up a digital document or shared online space to post each student’s app URL (see teacher template in “Links”). \n",
         "purpose": "Sharing their poem art projects with peers is an important aspect of the creative process. It allows students to receive feedback, collaborate with others, reflect on their own work, and celebrate their accomplishments. By sharing their work with others, students can grow and improve as creative thinkers and develop important communication and interpersonal skills.",
         "student_overview": "Share your new poem apps with your friends! "
       },
@@ -499,7 +499,7 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Two Sticky Note Share Out” slide\n\nPass out two sticky notes per student. ",
-        "duration": "4",
+        "duration": "5",
         "name": "(Optional) Assessment: Check For Understanding"
       },
       "seeding_key": {
@@ -511,7 +511,7 @@
       "key": "de9f9de3-8721-41e9-a96b-5ca3bb25041f",
       "position": 3,
       "properties": {
-        "description": "You have two sticky notes. On one, write one thing you learned about coding today. On the second, write one thing you learned about poetry today. \n\nLet’s share with the whole class by raising your hand to answer this question: What else do you hope you can learn about coding and computer science next? ",
+        "description": "You have two sticky notes. On one, write one thing you learned about coding today. On the second, write one thing you learned about poetry today. ",
         "remarks": true
       },
       "seeding_key": {
@@ -524,7 +524,7 @@
       "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Whiparound” slide\n\n**Discuss:** _What else do you hope to learn about coding and computer science?_",
-        "duration": "2",
+        "duration": "5",
         "name": "Whiparound"
       },
       "seeding_key": {
@@ -598,7 +598,9 @@
       "key": "6f6494f4-88eb-4f26-8063-c4a204ccf341",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show \"Coding with Poetry  Rubric\" slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show \"Coding with Poetry Rubric\" slide",
+        "duration": "3",
+        "name": "Review Rubric"
       },
       "seeding_key": {
         "activity_section.key": "6f6494f4-88eb-4f26-8063-c4a204ccf341",
@@ -628,7 +630,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**:  \"Plan Your Poem: Sentence Stems\" slide or \"Plan Your Poem: Topics\" slide\n",
-        "duration": "10",
+        "duration": "7",
         "name": "Brainstorming"
       },
       "seeding_key": {
@@ -715,7 +717,7 @@
       "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Own Poem” slide\n",
-        "duration": "20",
+        "duration": "15",
         "name": "Write Your Own Poem"
       },
       "seeding_key": {
@@ -727,7 +729,7 @@
       "key": "0bc81311-f866-41f7-b704-dc3dfa994528",
       "position": 11,
       "properties": {
-        "description": "Now it’s time for us to write our own poems. Use a couple of the ideas you brainstormed and write a poem that is between three and eight lines long. Use descriptive language to paint a picture in the reader’s mind.\n\nTake 10 minutes to write your poem. The timer starts now.",
+        "description": "Now it’s time for us to write our own poems. Use a couple of the ideas you brainstormed and write a poem that is between three and eight lines long. Use descriptive language to paint a picture in the reader’s mind.\n\nTake 15 minutes to write your poem. The timer starts now.",
         "remarks": true
       },
       "seeding_key": {
@@ -739,7 +741,7 @@
       "key": "3a652598-cf63-4947-a18d-e061b8ea0b78",
       "position": 12,
       "properties": {
-        "description": "**Do This**: Have students flip their handout to the last page. They will select a couple ideas from their brainstorming session to use for their poem. Students should come up with a title and about 8 lines of poem. Afterwards, students will begin thinking about how they will code their poem to bring it to life. They will consider the skills they learned in Lesson 1 and how they will apply them to their own short poem.\n\n**Circulate:** While students are writing their poems, circulate the room to see who might need extra help getting started. Here are some guiding questions to help a student who feels stuck:\n\n- Are any of these topics interesting to you?\n- Could you describe some of the things that come to mind when you think about the topic?\n\nEncourage a student who is stuck to write down all the words that come to mind. They can edit later.\n\n**Regroup:** Have students pause and make sure they give their poem a title before continuing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Example” slides \n\n**Do This:** Have students refer to the example poems written on their handout and in the slides if they are feeling stuck. "
+        "description": "**Do This**: Have students flip their handout to the last page. They will select a couple ideas from their brainstorming session to use for their poem. Students should come up with a title and about 8 lines of poem. Afterwards, students will begin thinking about how they will code their poem to bring it to life. They will consider the skills they learned in Lesson 1 and how they will apply them to their own short poem.\n\n**Circulate:** While students are writing their poems, circulate the room to see who might need extra help getting started. Here are some guiding prompts to help a student who feels stuck:\n\n- Choose one of the topics. Could you describe some of the things that come to mind when you think about the topic?\n\nOther prompts:\n- Tell me about a time you learned something the hard way.\n- Write an ode to something you love. \n- Write a poem from the perspective of your pet.\n\nEncourage a student who is stuck to write down all the words that come to mind. They can edit later.\n\n**Regroup:** Have students pause and make sure they give their poem a title before continuing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Example” slides \n\n**Do This:** Have students refer to the example poems written on their handout and in the slides if they are feeling stuck. "
       },
       "seeding_key": {
         "activity_section.key": "3a652598-cf63-4947-a18d-e061b8ea0b78",
@@ -750,7 +752,9 @@
       "key": "bf6156f8-6307-4af9-8f3a-53c3633a1002",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Bring Your Poem to Life” slides \n\n- _What **background** might go with your poem?_\n\n- _What **text effects** might go with your poem?_\n\n- _What **sounds** might go with your poem?_\n\n- _What **sprites** might go with your poem?_\n\n**Do This:** Give students 1-2 minutes to brainstorm the different visual and audio effects they might add to their poems. Encourage them to write down these effects next to the corresponding line of their poem."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Bring Your Poem to Life” slides \n\n- _What **background** might go with your poem?_\n\n- _What **text effects** might go with your poem?_\n\n- _What **sounds** might go with your poem?_\n\n- _What **sprites** might go with your poem?_\n\n**Do This:** Give students 5 minutes to brainstorm the different visual and audio effects they might add to their poems. Encourage them to write down these effects next to the corresponding line of their poem.",
+        "duration": "5",
+        "name": "Poem Effects"
       },
       "seeding_key": {
         "activity_section.key": "bf6156f8-6307-4af9-8f3a-53c3633a1002",
@@ -777,7 +781,7 @@
       "key": "2522adc1-9ff5-4d94-a789-85795f238c16",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Read your poem to a partner._ \n\n_Discuss the backgrounds, text effects, sounds, and sprites that you plan to use._\n\n**Discussion Goal:** For the next lesson, students should have a peer-reviewed short poem to use in their digital poem app. The goal of the discussion is to ensure that students have planned out the backgrounds, text effects, sounds, and sprites they plan to use in their code. Students may want to do small revisions after speaking with their partner.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** \n- _Read your poem to a partner._ \n- _Discuss the backgrounds, text effects, sounds, and sprites that you plan to use._\n- _Look back over the [rubric](https://docs.google.com/document/d/13CJlIIV2CFu9D6-oxAm99PZ6EqNnDUZwFZCEW9fSMaE/template/preview) to make sure your poem will meet all of the requirements._\n\n**Discussion Goal:** For the next lesson, students should have a peer-reviewed short poem to use in their digital poem app. The goal of the discussion is to ensure that students have planned out the backgrounds, text effects, sounds, and sprites they plan to use in their code. Students may want to do small revisions after speaking with their partner.",
         "duration": "10",
         "name": "Reflection"
       },
@@ -903,7 +907,7 @@
       "key": "d3503af6-3a1d-4a6d-b190-6b97bf23302a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n\n**Do This:** Ask for a volunteer to share their program with the class. Before the volunteer is asked to share why they chose particular effects or colors, ask the class:\n\n- _What effects did this coder add to match the poem they wrote?_\n- _How did these effects add to or change the feeling of the poem?_\n- _Did anything surprise you?_\n\n**Discussion Goal:** Ask students to make connections between certain words or phrases that convey a particular mood and the effects the programmer chose to add to the atmosphere of the poem. Discuss whether any effect, color choice, or sound was surprising to the class. Give the volunteer a chance to explain why they might have chosen one color/effect over another. Have a discussion about how art can be interpreted in many ways.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n\n**Do This:** Choose a volunteer to present their program to the class. After the student presents their poem, ask the class:\n\n- _What effects did this coder add to match the poem they wrote?_\n- _How did these effects add to or change the feeling of the poem?_\n- _Did anything surprise you?_\n\n**Discussion Goal:** Ask students to make connections between certain words or phrases that convey a particular mood and the effects the programmer chose to add to the atmosphere of the poem. Discuss whether any effect, color choice, or sound was surprising to the class. Give the volunteer a chance to explain why they might have chosen one color/effect over another. Have a discussion about how art can be interpreted in many ways.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Well done, coders!\" slide\n",
         "duration": "5",
         "name": "Reflection"
       },
@@ -916,7 +920,7 @@
       "key": "e273d1cc-0e4c-425b-944b-1d8c9644d003",
       "position": 2,
       "properties": {
-        "description": "Well done, coders!\n\nNext time, we’ll put the finishing touches on our poem apps present them to each other.\n",
+        "description": "Well done, coders!\n\nNext time, we’ll put the finishing touches on our poem apps and present them to each other.\n",
         "remarks": true
       },
       "seeding_key": {
@@ -940,7 +944,7 @@
       "key": "713a05d9-fdad-4eac-afc9-97eeff0a5197",
       "position": 2,
       "properties": {
-        "description": "Last class, we finished adding prompts, variables, and effects to our poem apps. Today, we’ll share our work with our classmates. First, play through your own app to make sure it works the way you expect. \n\nYou have 5 minutes to make any finishing touches to your app. Five minutes is enough time to make small changes or debug the code you wrote. Try to resist the urge to re-write large parts of your code. When the timer is up, wait for directions for the next step.\n\nI will start the timer now. \n",
+        "description": "Last class, we brought our own poems to life with code. Today, we’ll share our work with our classmates. First, play through your own app to make sure it works the way you expect. \n\nYou have 5 minutes to make any finishing touches to your app. Five minutes is enough time to make small changes or debug the code you wrote. Try to resist the urge to re-write large parts of your code. When the timer is up, wait for directions for the next step.\n\nI will start the timer now. \n",
         "remarks": true
       },
       "seeding_key": {
@@ -952,12 +956,12 @@
       "key": "870d6b26-f55f-4667-809d-cf9e4979df7c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Getting Ready” slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Set a 5-minute timer. Make sure students: \n- Go to Level 1 (this code carries over from Lesson 3, Level 1) \n- Click “Run” and play their app\n- Make any last-minute changes\n- Expand their playspace by clicking and dragging the three dots to the right of their playspace (see gif on slide) \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Getting Ready” slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Set a 5-minute timer or use the one provided on the \"Getting Ready\" slide. Make sure students: \n- Go to Level 1 (this code carries over from Lesson 3, Level 1) \n- Click “Run” and play their app\n- Make any last-minute changes\n- Expand their playspace by clicking and dragging the three dots to the right of their playspace (see gif on slide) \n",
         "progression_name": "Free Play",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**For remote teaching:** \nThis activity requires partner work. If students are not able to physically switch computers, you will need a shared document with links to each student’s project. Tell students a URL is a web address to a website; this URL will lead to a shareable version of your poem app. Direct students to click the “Share” button on the last level and post the link on your LMS or other shared space, like the “Student URL Sharing Document”. Students can keep adding more to their projects even after they have shared their project link."
+            "markdown": "**For remote teaching:** \nThis activity requires partner work. If students are not able to physically switch computers, you will need a shared document with links to each student’s project. Tell students a URL is a web address to a website; this URL will lead to a shareable version of your poem app. Direct students to click the “Share” button on the last level and post the link on your LMS or other shared space, like the “[Student URL Sharing Document](https://docs.google.com/document/d/1DNcBWminB8MmyLQC4fIWrLZ8uI9HR7d4W3HuuclIpB0/template/preview)”. Students can keep adding more to their projects even after they have shared their project link."
           }
         ]
       },
@@ -1061,7 +1065,7 @@
       "key": "6703dc75-a394-4e9c-8d1c-061fb3d53cf2",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the ”Test Your Partner’s App” slide.  \n\n**Do This:** Distribute one “Share Your App” handout per student. Read the “Modeling Constructive Feedback” prompts from the handout. Make sure students understand how to give respectful feedback to their classmates. \n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the ”Test Your Partner’s App” slide.  \n\n**Do This:** Distribute one “Share Your App” [handout](https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview) per student. Read the “Modeling Constructive Feedback” prompts from the handout. Make sure students understand how to give respectful feedback to their classmates. \n\n",
         "duration": "10",
         "name": "Poetry Pair-Share"
       },
@@ -1086,7 +1090,7 @@
       "key": "78bb242f-03a6-4b70-9013-41e95836f0b2",
       "position": 10,
       "properties": {
-        "description": "**Do This:** Divide the class into pairs. Have each student switch seats (or computers) with their partner, play through their partner’s app, write feedback, and share their feedback with their partner after they complete the handout. \n"
+        "description": "**Do This:** Set a timer for 10 minutes, or use the one on the \"Test Your Partner's App\" slide. Divide the class into pairs. Have each student switch seats (or computers) with their partner, play through their partner’s app, write feedback, and share their feedback with their partner after they complete the handout. \n"
       },
       "seeding_key": {
         "activity_section.key": "78bb242f-03a6-4b70-9013-41e95836f0b2",
@@ -1856,7 +1860,7 @@
       "url": "https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview",
       "key": "share_your_app_",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Handout"
       },
       "seeding_key": {
@@ -2236,7 +2240,7 @@
     {
       "key": "2dfe199c-6e82-4979-a24f-0b20d8b14f2f",
       "properties": {
-        "description": "Explain how visual effects, sounds and images enhance a viewer's experience of a poem"
+        "description": "Explain how visual effects, sounds and images enhance a viewer's experience of a poem."
       },
       "seeding_key": {
         "lesson.key": "Writing My Time Capsule Poem",
@@ -2276,7 +2280,7 @@
     {
       "key": "521bc123-9d0a-4588-9b39-a3cc94229a64",
       "properties": {
-        "description": "Plan and write their own poems"
+        "description": "Plan and write their own poems."
       },
       "seeding_key": {
         "lesson.key": "Writing My Time Capsule Poem",
@@ -2528,14 +2532,14 @@
       "seeding_key": {
         "lesson.key": "Writing My Time Capsule Poem",
         "framework.shortcode": "ccela",
-        "standard.shortcode": "11-12.RL.4"
+        "standard.shortcode": "3.L.5"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Writing My Time Capsule Poem",
         "framework.shortcode": "ccela",
-        "standard.shortcode": "3.L.5"
+        "standard.shortcode": "4.RL.4"
       }
     },
     {
