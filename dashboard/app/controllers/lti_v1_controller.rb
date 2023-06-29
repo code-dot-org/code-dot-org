@@ -106,10 +106,12 @@ class LtiV1Controller < ApplicationController
   end
 
   def write_cache(key, value)
+    # TODO: Add error handling
     CDO.shared_cache.write(key, value.to_json, expires_in: 1.minute)
   end
 
   def read_cache(key)
+    # TODO: Add error handling
     json_value = CDO.shared_cache.read(key)
     JSON.parse(json_value).symbolize_keys
   end

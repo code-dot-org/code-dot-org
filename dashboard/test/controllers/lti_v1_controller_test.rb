@@ -3,10 +3,15 @@ require 'jwt'
 require "test_helper"
 
 class LtiV1ControllerTest < ActionDispatch::IntegrationTest
-  setup_all do
+  setup do
     @integration = create :lti_integration
     # create an arbitrary key for testing JWTs
     @key = SecureRandom.alphanumeric 10
+    # create arbitary state and nonce values
+    @state = 'state'
+    @nonce = 'nonce'
+    # stub cache reads
+    LtiV1Controller.any_instance.stubs(:read_cache).returns({state: @state, nonce: @nonce})
   end
 
   def create_jwt(payload)
@@ -36,6 +41,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       exp: 7.days.from_now.to_i,
       iat: 1.day.ago.to_i,
       iss: @integration.issuer,
+      nonce: @nonce,
       'https://purl.imsglobal.org/spec/lti/claim/target_link_uri': target_link_uri
     }
   end
@@ -48,11 +54,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   def create_valid_jwt_raise_error
     payload = get_valid_payload(false)
     create_jwt_and_stub(payload, true)
-  end
-
-  def read_cache(key)
-    json_value = CDO.shared_cache.read(key)
-    JSON.parse(json_value).symbolize_keys
   end
 
   test 'login - given no params, return unauthorized' do
@@ -85,14 +86,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :redirect
   end
 
-  test 'login - given valid parameters, save nonce and state to cache' do
-    get '/lti/v1/login', params: {client_id: @integration.client_id, iss: @integration.issuer}
-    parsed_url = Rack::Utils.parse_query(URI(@response.redirect_url).query).symbolize_keys
-    cached_values = read_cache(parsed_url[:state])
-    assert_not_nil cached_values[:state]
-    assert_not_nil cached_values[:nonce]
-  end
-
   test 'login - given valid parameters, redirect URL should have valid auth request params' do
     login_hint = 'hint'
     get '/lti/v1/login', params: {client_id: @integration.client_id, iss: @integration.issuer, login_hint: login_hint}
@@ -116,7 +109,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     payload = get_valid_payload
     payload[:aud] = nil
     jwt = create_jwt(payload)
-    post '/lti/v1/authenticate', params: {id_token: jwt}
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :unauthorized
   end
 
@@ -124,7 +117,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     payload = get_valid_payload
     payload[:iss] = nil
     jwt = create_jwt(payload)
-    post '/lti/v1/authenticate', params: {id_token: jwt}
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :unauthorized
   end
 
@@ -132,7 +125,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     payload = get_valid_payload
     payload[:aud] = ''
     jwt = create_jwt(payload)
-    post '/lti/v1/authenticate', params: {id_token: jwt}
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :unauthorized
   end
 
@@ -140,7 +133,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     payload = get_valid_payload
     payload[:azp] = ''
     jwt = create_jwt_and_stub(payload)
-    post '/lti/v1/authenticate', params: {id_token: jwt}
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :unauthorized
   end
 
@@ -148,7 +141,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     payload = get_valid_payload
     payload[:exp] = 3.days.ago.to_i
     jwt = create_jwt_and_stub(payload)
-    post '/lti/v1/authenticate', params: {id_token: jwt}
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :unauthorized
   end
 
@@ -156,27 +149,27 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     payload = get_valid_payload
     payload[:iat] = 3.days.from_now.to_i
     jwt = create_jwt(payload)
-    post '/lti/v1/authenticate', params: {id_token: jwt}
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :unauthorized
   end
 
   test 'auth - error raised in decoding jwt' do
     jwt = create_valid_jwt_raise_error
-    post '/lti/v1/authenticate', params: {id_token: jwt}
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :unauthorized
   end
 
   test 'auth - given a valid jwt with the audience as an array, redirect to target_link_url' do
     aud_is_array = true
     jwt = create_valid_jwt(aud_is_array)
-    post '/lti/v1/authenticate', params: {id_token: jwt}
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :redirect
   end
 
   test 'auth - given a valid jwt, redirect to target_link_url' do
     aud_is_array = false
     jwt = create_valid_jwt(aud_is_array)
-    post '/lti/v1/authenticate', params: {id_token: jwt}
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :redirect
     # could confirm more things here
   end
