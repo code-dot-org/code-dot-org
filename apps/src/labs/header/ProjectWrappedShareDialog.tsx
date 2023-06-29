@@ -1,6 +1,6 @@
 /**
  * Wrapper around ShareDialog that plumbs in the necessary props for a project
- * using the Project Manager and the labs plumbing.
+ * using the Project Manager and the labs system.
  */
 import ShareDialog from '@cdo/apps/code-studio/components/ShareDialog';
 import React from 'react';
