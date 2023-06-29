@@ -37,6 +37,9 @@ const LabContainer = ({onError}) => {
       ).app
   );
 
+  const channelId =
+    currentApp === 'music' ? getStandaloneProjectId() : undefined;
+
   return (
     <ErrorBoundary fallback={<ErrorFallbackPage />} onError={onError}>
       <div
@@ -46,7 +49,7 @@ const LabContainer = ({onError}) => {
           isLabLoading && moduleStyles.labContainerLoading
         )}
       >
-        <ProjectContainer channelId={getStandaloneProjectId()}>
+        <ProjectContainer channelId={channelId}>
           <div
             style={{
               width: '100%',
@@ -56,10 +59,9 @@ const LabContainer = ({onError}) => {
           >
             <MusicView />
           </div>
+
+          {currentApp === 'standalone_video' && <StandaloneVideo2 />}
         </ProjectContainer>
-
-        {currentApp === 'standalone_video' && <StandaloneVideo2 />}
-
         <div
           id="fade-overlay"
           className={classNames(moduleStyles.solidBlock, overlayStyle)}
