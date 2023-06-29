@@ -6,10 +6,8 @@
 
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import ProjectManagerFactory from '@cdo/apps/labs/projects/ProjectManagerFactory';
-import {ProjectManagerStorageType} from '@cdo/apps/labs/types';
 import LabRegistry from '../LabRegistry';
-import {loadProject, setUpForLevel} from '../labRedux';
+import {setUpWithLevel, setUpWithoutLevel} from '../labRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
@@ -30,30 +28,27 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    // If we have a channel id, create a project manager with that channel id.
-    // Otherwise, dispatch an action which will create a
-    // project manager for the current level id and script.
-
     // The redux types are very complicated, so in order to re-use this variable
     // we are defining it as any.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let promise: any;
-    if (channelId) {
-      LabRegistry.getInstance().setProjectManager(
-        ProjectManagerFactory.getProjectManager(
-          ProjectManagerStorageType.REMOTE,
-          channelId
-        )
-      );
-      promise = dispatch(loadProject());
-    } else if (currentLevelId !== null) {
+    if (currentLevelId && levelPropertiesPath) {
+      // If we have a level id, set up the lab with that level. If we also have a channel id,
+      // we will load the project based on that channel id, otherwise we will look up a channel id
+      // for the level.
       promise = dispatch(
-        setUpForLevel({
+        setUpWithLevel({
           levelId: parseInt(currentLevelId),
           scriptId,
           levelPropertiesPath,
+          channelId,
         })
       );
+    } else if (channelId) {
+      // Otherwise, if we have a channel id, set up the lab using the channel id.
+      // This path should only be used for lab pages that don't have a level, such as
+      // /projectbeats.
+      promise = dispatch(setUpWithoutLevel(channelId));
     }
     return () => {
       // If we have an early return, we will abort the promise in progress.
