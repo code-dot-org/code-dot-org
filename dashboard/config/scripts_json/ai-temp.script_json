@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-06-23 00:03:31 UTC",
+    "serialized_at": "2023-06-28 18:49:59 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2561,7 +2561,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Citing our Sources:** The app is a very small version of [Botnik](https://botnik.org/), which uses a predictive text engine based on previous text from given tv shows, authors, video games, etc. This [video](https://www.youtube.com/watch?v=WypWvaCw3zs) provides more context around Botnik, starting around 1:20."
+            "markdown": "**Citing our Sources:** The app is a very small version of [Botnik](https://botnik.org/), which uses a predictive text engine based on previous text from given tv shows, authors, video games, etc. This [video](https://youtu.be/WypWvaCw3zs?t=80) provides more context around Botnik, starting around 1:20."
           }
         ]
       },
@@ -4082,6 +4082,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "LLM - Eliza"
+        ],
         "progression": "Eliza Widget"
       },
       "bonus": false,
@@ -4434,7 +4437,7 @@
     },
     {
       "name": "Generative LLM",
-      "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/copy",
+      "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
       "key": "generative_llm",
       "properties": {
         "audience": "Teacher",
