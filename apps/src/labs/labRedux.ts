@@ -28,8 +28,12 @@ import {
 import ProjectManager from './projects/ProjectManager';
 import HttpClient from '../util/HttpClient';
 import {convertStringToBoolean} from '../types/utils';
+import {
+  initialValidationState,
+  ValidationState,
+} from './progress/ProgressManager';
 
-interface LabState {
+export interface LabState {
   // If we are currently loading a lab.
   isLoading: boolean;
   isPageError: boolean;
@@ -44,6 +48,9 @@ interface LabState {
   labReadyForReload: boolean;
   hideShareAndRemix: boolean | undefined;
   isProjectLevel: boolean | undefined;
+  // Validation status for the current level. This is used by the progress system to determine
+  // what instructions to display and if the user has satisfied the validation conditions, if present.
+  validationState: ValidationState;
 }
 
 const initialState: LabState = {
@@ -55,6 +62,7 @@ const initialState: LabState = {
   labReadyForReload: false,
   hideShareAndRemix: undefined,
   isProjectLevel: undefined,
+  validationState: {...initialValidationState},
 };
 
 // Thunks
@@ -180,6 +188,9 @@ const labSlice = createSlice({
     setIsProjectLevel(state, action: PayloadAction<boolean>) {
       state.isProjectLevel = action.payload;
     },
+    setValidationState(state, action: PayloadAction<ValidationState>) {
+      state.validationState = {...action.payload};
+    },
   },
   extraReducers: builder => {
     builder.addCase(setUpWithLevel.fulfilled, state => {
@@ -296,6 +307,7 @@ export const {
   setLabReadyForReload,
   setHideShareAndRemix,
   setIsProjectLevel,
+  setValidationState,
 } = labSlice.actions;
 
 export default labSlice.reducer;
