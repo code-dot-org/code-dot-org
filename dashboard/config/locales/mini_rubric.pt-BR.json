@@ -82,6 +82,34 @@
           "rubric_performance_level_2": "Vários botões no protótipo são vinculados à tela apropriada.",
           "rubric_performance_level_3": "Há pelo menos um evento no protótipo que pode ser acionado para produzir algum tipo de resposta.",
           "rubric_performance_level_4": "Não há eventos no protótipo."
+        },
+        "CSD U2 Image assessment_2021": {
+          "rubric_key_concept": "Estruture o conteúdo em uma página web usando HTML (Adicionar uma imagem a uma página web). Dê devidamente os créditos a outras pessoas quando utilizar o trabalho delas."
+        },
+        "CSD U2 Image assessment_2022": {
+          "rubric_key_concept": "Estruture o conteúdo em uma página web usando HTML (Adicionar uma imagem a uma página web). Dê devidamente os créditos a outras pessoas quando utilizar o trabalho delas."
+        },
+        "CSD U2 adding pages_2021": {
+          "rubric_performance_level_2": "Há pelo menos um link funcionando de uma página HTML para outra\n",
+          "rubric_performance_level_4": "Nenhuma nova página foi criada e não há links\n"
+        },
+        "CSD U2 adding pages_2022": {
+          "rubric_performance_level_2": "Há pelo menos um link funcionando de uma página HTML para outra\n",
+          "rubric_performance_level_4": "Nenhuma nova página foi criada e não há links\n"
+        },
+        "CSD Web CSS Assessment_2021": {
+          "rubric_key_concept": "Crie uma folha de estilo e adicione seu link no HTML. A folha de estilo inclui uma regra que altera o elemento de parágrafo de uma página Web.",
+          "rubric_performance_level_1": "Os parágrafos têm uma nova cor e tamanho, e não há erros ou inconsistências no código HTML ou CSS.",
+          "rubric_performance_level_2": "Os parágrafos têm uma nova cor ou tamanho.",
+          "rubric_performance_level_3": "Os parágrafos possuem um conjunto de regras especial na folha de estilo e a propriedade cor ou tamanho está sendo usada, mas há erros suficientes para que o texto não mude de cor ou tamanho. Há um código HTML que tenta vincular a folha de estilo à página Web.",
+          "rubric_performance_level_4": "Não foi encontrado um conjunto de regras especial para parágrafos, ou as propriedades de cor ou tamanho não estão sendo usadas no conjunto de regras. O código que vincula a folha de estilo à página da Web não está presente."
+        },
+        "CSD Web CSS Assessment_2022": {
+          "rubric_key_concept": "Crie uma folha de estilo e adicione seu link no HTML. A folha de estilo inclui uma regra que altera o elemento de parágrafo de uma página Web.",
+          "rubric_performance_level_1": "Os parágrafos têm uma nova cor e tamanho, e não há erros ou inconsistências no código HTML ou CSS.",
+          "rubric_performance_level_2": "Os parágrafos têm uma nova cor ou tamanho.",
+          "rubric_performance_level_3": "Os parágrafos possuem um conjunto de regras especial na folha de estilo e a propriedade cor ou tamanho está sendo usada, mas há erros suficientes para que o texto não mude de cor ou tamanho. Há um código HTML que tenta vincular a folha de estilo à página Web.",
+          "rubric_performance_level_4": "Não foi encontrado um conjunto de regras especial para parágrafos, ou as propriedades de cor ou tamanho não estão sendo usadas no conjunto de regras. O código que vincula a folha de estilo à página da Web não está presente."
         }
       }
     }

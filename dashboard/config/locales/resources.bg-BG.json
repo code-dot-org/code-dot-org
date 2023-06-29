@@ -115,6 +115,9 @@
         "implementation_guide/coursef/2022": {
           "name": "Ръководство за използване"
         },
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Sprite Lab Документация"
+        },
         "teacher_forum/coursef/2022": {
           "name": "Учителски форум"
         },
@@ -163,6 +166,9 @@
         "implementation_guide/coursee/2022": {
           "name": "Ръководство за използване"
         },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Sprite Lab Документация"
+        },
         "teacher_forum/coursee/2022": {
           "name": "Учителски форум"
         },
@@ -183,6 +189,9 @@
         },
         "teacher_forum/courseb/2022": {
           "name": "Учителски форум"
+        },
+        "digital_trails_follow_the_digital_trail/courseb/2022": {
+          "type": "Видео Урок"
         },
         "move_it_move_it/courseb/2022": {
           "name": "Преместете го, преместете го"
@@ -248,6 +257,9 @@
         "turns_angles/express/2022": {
           "type": "Видео"
         },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Sprite Lab Документация"
+        },
         "sprites_in_action/express/2022": {
           "name": "Спрайтове в Действие"
         },
@@ -281,11 +293,34 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Видео"
         },
+        "common_core_and_ngss_guidance/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+        },
+        "cross-curricular_extension_activities/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
         "implementation_guide/coursea/2022": {
           "name": "Ръководство за използване"
         },
         "teacher_forum/coursea/2022": {
           "name": "Учителски форум"
+        },
+        "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+        },
+        "safety_in_my_online_neighborhood_my_online_neighborhood/coursea/2022": {
+          "name": "Безопасност в Моят Онлайн Квартал: Моят Онлайн Квартал",
+          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood",
+          "type": "Видео Урок"
+        },
+        "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2022": {
+          "name": "Безопасност в Моят Онлайн Квартал: Паузирайте и Помислете Малко",
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+        },
+        "safety_in_my_online_neighborhood_safety_it_rules_/coursea/2022": {
+          "name": "Безопасност в Моят Онлайн Квартал: Безопсността, Тя Управлява!",
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
+          "type": "Плакат за Поема"
         },
         "getting_started_-_creating_a_class_section/coursea/2022": {
           "type": "Видео"
@@ -297,23 +332,34 @@
           "name": "Wiggles-Go Noodle ( Шаващи Макарони) ",
           "type": "Видео"
         },
+        "feeling_faces_-_emotion_image/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
+        },
         "happy_map_cards/coursea/2022": {
-          "name": "Честитни Картички с Навигационни Карти"
+          "name": "Честитни Картички с Навигационни Карти",
+          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit"
         },
         "happy_map_cards_1/coursea/2022": {
-          "name": "Честитни Картички с Навигационни Карти"
+          "name": "Честитни Картички с Навигационни Карти",
+          "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
         },
         "happy_maps/coursea/2022": {
-          "name": "Щастливи карти"
+          "name": "Щастливи карти",
+          "url": "https://youtu.be/hrnhiKAQ1_k"
         },
         "wiggles_-_gonoodle/coursea/2022": {
           "type": "Видео"
         },
         "debugging_with_the_step_button/coursea/2022": {
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
           "type": "Видео"
         },
         "happy_map_cards_xl/coursea/2022": {
-          "name": "Честитни Картички Размер XL с Навигационни Карти"
+          "name": "Честитни Картички Размер XL с Навигационни Карти",
+          "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit"
+        },
+        "happy_map_game_pieces_bonus_pack/coursea/2022": {
+          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
         },
         "pair-programming/coursea/2022": {
           "name": "Програмиране по Двойки",
@@ -331,6 +377,12 @@
         },
         "the_big_event_2/coursea/2022": {
           "name": "Голямото събитие"
+        },
+        "artist_project_planning_guide/coursea/2022": {
+          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview"
+        },
+        "artist_project_planning_guide_1/coursea/2022": {
+          "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview"
         },
         "implementation_guide/coursec/2022": {
           "name": "Ръководство за използване"
@@ -389,6 +441,25 @@
         "teacher_forum/csd/2022": {
           "name": "Учителски форум"
         },
+        "ascii/csd/2022": {
+          "name": "ASCII",
+          "url": "https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit"
+        },
+        "ascii_challenges/csd/2022": {
+          "name": "ASCII Предизвикателства",
+          "url": "https://docs.google.com/document/d/1YN3r7hmuf_fFpOhnIMRDrUbEha7Ij8mP647X3FdrBz0/view"
+        },
+        "ascii_challenges_1/csd/2022": {
+          "name": "ASCII Предизвикателства",
+          "url": "https://docs.google.com/document/d/1HtbjV-HiNGAEH0FVSdipR6RIknT16YXc1SqGhM58eII/edit"
+        },
+        "ascii_text/csd/2022": {
+          "name": "ASCII Текст",
+          "url": "https://docs.google.com/document/d/1If85I7nDxl_3uBbGDoZg86zrwGuw1ShFVK8eaDOH0_A/view"
+        },
+        "ascii_and_binary_representation/csd/2022": {
+          "name": "ASCII и Двоично Представяне"
+        },
         "representing_images/csd/2022": {
           "name": "Представяне на Изображения"
         },
@@ -415,6 +486,9 @@
         },
         "waze_and_data/csd/2022": {
           "type": "Видео"
+        },
+        "problem_solving_with_big_data/csd/2022": {
+          "name": "Решаване ма Проблеми с Големи Данни"
         },
         "video_impact_on_society/csd/2022": {
           "type": "Видео"
@@ -444,6 +518,9 @@
           "name": "Алуминиеви Лодки",
           "url": "https://docs.google.com/document/d/1dY3N0DvsPLoPRgWOXcSwRKGxZGaiP2HI84QaalQcE7s/"
         },
+        "intro_to_problem_solving/csd/2022": {
+          "name": "Въведение в Решаването на Проблеми"
+        },
         "problem_solving_process_1/csd/2022": {
           "type": "Видео"
         },
@@ -452,6 +529,9 @@
         },
         "the_problem_solving_process_1/csd/2022": {
           "name": "Процеса за Решаване на Проблеми"
+        },
+        "exploring_problem_solving/csd/2022": {
+          "name": "Изследване на Решаването на Проблеми"
         },
         "what_is_a_computer/csd/2022": {
           "type": "Видео"
@@ -467,6 +547,9 @@
         },
         "apps_and_problem_solving_2/csd/2022": {
           "type": "Рубрика"
+        },
+        "project_-_propose_an_app/csd/2022": {
+          "name": "Проект - Предложете Приложение"
         },
         "drawing_in_game_lab_-_part_1/csd/2022": {
           "type": "Видео"
@@ -767,6 +850,9 @@
         },
         "student_rubric_-_interactive_art/csd/2022": {
           "type": "Рубрика"
+        },
+        "project_prototype_an_innovation/csd/2022": {
+          "name": "Проект: Прототипирайте Изобретение"
         },
         "prototype_an_innovation/csd/2022": {
           "type": "Рубрика"
@@ -1391,6 +1477,9 @@
         "implementation_guide/coursef/2021": {
           "name": "Ръководство за използване"
         },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Sprite Lab Документация"
+        },
         "teacher_forum_1/coursef/2021": {
           "name": "Учителски форум"
         },
@@ -1411,6 +1500,9 @@
         },
         "making_sprites/coursef/2021": {
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Sprite Lab Документация"
         },
         "sprites_in_action/coursef/2021": {
           "name": "Спрайтове в Действие",
@@ -1469,6 +1561,9 @@
         "teacher_forum_1/courseb/2021": {
           "name": "Учителски форум"
         },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "type": "Видео Урок"
+        },
         "mimi-activity/courseb/2021": {
           "name": "Преместете го, преместете го"
         },
@@ -1524,8 +1619,18 @@
         "2021_change_log/coursea/2021": {
           "name": "2021 Регистър на Промените"
         },
+        "common_core_and_ngss_guidance/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+        },
         "course_vocabulary/coursea/2021": {
-          "name": "Лексика на Курса "
+          "name": "Лексика на Курса ",
+          "url": "https://studio.code.org/s/coursea-2021/vocab"
+        },
+        "cross-curricular_extension_activities/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "csta_standards_mapping/coursea/2021": {
+          "url": "https://studio.code.org/s/coursea-2021/standards"
         },
         "curriculum_guide_1/coursea/2021": {
           "name": "Учебната Програма"
@@ -1542,6 +1647,26 @@
         "teacher_forum_1/coursea/2021": {
           "name": "Учителски форум"
         },
+        "virtual_lesson_modifications/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
+        },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": "Безопасност в Моят Онлайн Квартал: Моят Онлайн Квартал",
+          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood",
+          "type": "Видео Урок"
+        },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "Безопасност в Моят Онлайн Квартал: Паузирайте и Помислете Малко",
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "Безопасност в Моят Онлайн Квартал: Безопсността, Тя Управлява!",
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
+          "type": "Плакат за Поема"
+        },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "Видео"
         },
@@ -1553,22 +1678,33 @@
           "type": "Видео"
         },
         "activity-answer-happy-maps/coursea/2021": {
-          "name": "Честитни Картички с Навигационни Карти"
+          "name": "Честитни Картички с Навигационни Карти",
+          "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
+        },
+        "feeling_faces_-_emotion_image/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
         },
         "happy-map-cards/coursea/2021": {
-          "name": "Честитни Картички с Навигационни Карти"
+          "name": "Честитни Картички с Навигационни Карти",
+          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit"
         },
         "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Щастливи карти"
+          "name": "Щастливи карти",
+          "url": "https://youtu.be/hrnhiKAQ1_k"
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "type": "Видео"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
           "type": "Видео"
         },
         "happy-map-cards-xl/coursea/2021": {
-          "name": "Честитни Картички Размер XL с Навигационни Карти"
+          "name": "Честитни Картички Размер XL с Навигационни Карти",
+          "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit"
+        },
+        "happy-map-game-pieces-bonus-pack/coursea/2021": {
+          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
         },
         "pair-programming/coursea/2021": {
           "name": "Програмиране по Двойки",
@@ -1586,6 +1722,12 @@
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Голямото събитие"
+        },
+        "artist_project_planning_guide/coursea/2021": {
+          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview"
+        },
+        "artist_project_planning_guide_1/coursea/2021": {
+          "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview"
         },
         "implementation_guide/coursec/2021": {
           "name": "Ръководство за използване"
@@ -1725,6 +1867,12 @@
         "turns_angles/express/2021": {
           "type": "Видео"
         },
+        "sprite_lab_documentation/express/2021": {
+          "name": "Sprite Lab Документация"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "Sprite Lab Документация"
+        },
         "sprites_in_action/express/2021": {
           "name": "Спрайтове в Действие"
         },
@@ -1761,8 +1909,14 @@
         "implementation_guide/coursee/2021": {
           "name": "Ръководство за използване"
         },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Sprite Lab Документация"
+        },
         "teacher_forum_1/coursee/2021": {
           "name": "Учителски форум"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Sprite Lab Документация"
         },
         "common-sense-media-pause-think/coursee/2021": {
           "type": "Видео"
@@ -1924,6 +2078,22 @@
         "planning-your-innovation/csd/2021": {
           "type": "Проектен Пътеводител"
         },
+        "ascii-exemplar-2019/csd/2021": {
+          "name": "ASCII",
+          "url": "https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit"
+        },
+        "ascii-text/csd/2021": {
+          "name": "ASCII Текст",
+          "url": "https://docs.google.com/document/d/1If85I7nDxl_3uBbGDoZg86zrwGuw1ShFVK8eaDOH0_A/view"
+        },
+        "ascii-challenges/csd/2021": {
+          "name": "ASCII Предизвикателства",
+          "url": "https://docs.google.com/document/d/1YN3r7hmuf_fFpOhnIMRDrUbEha7Ij8mP647X3FdrBz0/view"
+        },
+        "ascii_challenges/csd/2021": {
+          "name": "ASCII Предизвикателства",
+          "url": "https://docs.google.com/document/d/1HtbjV-HiNGAEH0FVSdipR6RIknT16YXc1SqGhM58eII/edit"
+        },
         "how-computers-work-data-and-binary/csd/2021": {
           "type": "Видео"
         },
@@ -2059,6 +2229,17 @@
         },
         "make_your_own_game/csd/2021": {
           "type": "Рубрика"
+        },
+        "all_resources/csd/2021": {
+          "name": "Урок 1 Ресурси",
+          "url": "/s/csd1-2021/resources"
+        },
+        "all_standards/csd/2021": {
+          "name": "Урок 1 Стандарти"
+        },
+        "all_vocabulary/csd/2021": {
+          "name": "Урок 1 Лексика",
+          "url": "/s/csd1-2021/vocab"
         },
         "aluminum-boats-exemplar-2020/csd/2021": {
           "name": "Алуминиеви Лодки",
