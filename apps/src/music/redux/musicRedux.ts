@@ -1,6 +1,9 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
-import {initialProgressState, ProgressState} from '../progress/ProgressManager';
+import {
+  initialValidationState,
+  ValidationState,
+} from '@cdo/apps/labs/progress/ProgressManager';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -21,7 +24,7 @@ export const InstructionsPositions = {
   RIGHT: InstructionsPosition.RIGHT,
 };
 
-interface MusicState {
+export interface MusicState {
   /** If the song is currently playing */
   isPlaying: boolean;
   /** The current 1-based playhead position, scaled to measures */
@@ -42,13 +45,6 @@ interface MusicState {
   playbackEvents: PlaybackEvent[];
   /** The current last measure of the song */
   lastMeasure: number;
-  /** The number of levels in the current progression */
-  levelCount: number | undefined;
-  // TODO: Currently Music Lab is the only Lab that uses
-  // this progress system, but in the future, we may want to
-  // move this into a more generic, high-level, lab-agnostic
-  // reducer.
-  currentProgressState: ProgressState;
 }
 
 const initialState: MusicState = {
@@ -62,8 +58,6 @@ const initialState: MusicState = {
   isBeatPadShowing: true,
   playbackEvents: [],
   lastMeasure: 0,
-  levelCount: undefined,
-  currentProgressState: {...initialProgressState},
 };
 
 const musicSlice = createSlice({
@@ -136,9 +130,6 @@ const musicSlice = createSlice({
     toggleBeatPad: state => {
       state.isBeatPadShowing = !state.isBeatPadShowing;
     },
-    setCurrentProgressState: (state, action: PayloadAction<ProgressState>) => {
-      state.currentProgressState = {...action.payload};
-    },
     clearPlaybackEvents: state => {
       state.playbackEvents = [];
       state.lastMeasure = 0;
@@ -149,9 +140,6 @@ const musicSlice = createSlice({
     ) => {
       state.playbackEvents.push(...action.payload.events);
       state.lastMeasure = action.payload.lastMeasure;
-    },
-    setLevelCount: (state, action: PayloadAction<number>) => {
-      state.levelCount = action.payload;
     },
   },
 });
@@ -199,8 +187,6 @@ export const {
   showBeatPad,
   hideBeatPad,
   toggleBeatPad,
-  setCurrentProgressState,
   clearPlaybackEvents,
   addPlaybackEvents,
-  setLevelCount,
 } = musicSlice.actions;

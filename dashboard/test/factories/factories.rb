@@ -360,6 +360,36 @@ FactoryBot.define do
         email {''}
         hashed_email {nil}
       end
+
+      trait :in_colorado do
+        us_state {'CO'}
+        country_code {'US'}
+      end
+
+      trait :unknown_us_region do
+        us_state {'??'}
+        country_code {'US'}
+      end
+
+      trait :U13 do
+        birthday {Time.zone.today - 12.years}
+      end
+
+      trait :not_U13 do
+        birthday {Time.zone.today - 13.years}
+      end
+
+      trait :with_parent_permission do
+        child_account_compliance_state {User::ChildAccountCompliance::PERMISSION_GRANTED}
+        child_account_compliance_state_last_updated {DateTime.now}
+      end
+
+      trait :without_parent_permission do
+        child_account_compliance_state {nil}
+        child_account_compliance_state_last_updated {DateTime.now}
+      end
+
+      factory :locked_out_student, traits: [:U13, :in_colorado]
     end
 
     # We have some tests which want to create student accounts which don't have any authentication setup.
@@ -1708,7 +1738,19 @@ FactoryBot.define do
   end
 
   factory :parental_permission_request do
-    user {create :student}
+    user {create :young_student, :without_parent_permission}
     parent_email {"contact@example.domain"}
+    resends_sent {0}
+
+    trait :old do
+      after(:create) do |permission|
+        permission.created_at = permission.created_at - 2.days
+        permission.save
+      end
+    end
+
+    trait :granted do
+      user {create :young_student, :with_parent_permission}
+    end
   end
 end

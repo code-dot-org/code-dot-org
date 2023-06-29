@@ -119,9 +119,7 @@ theme: responsive_full_width
 
 %section.resources.bg-neutral-light.centered
   .wrapper
-    %h2=hoc_s(:teach_page_resources_heading)
-    %p=hoc_s(:teach_page_resources_desc)
-    -# RESOURCES TABS HERE
+    = view :resources_tabs
 
 %section.curriculum-offerings
   .wrapper

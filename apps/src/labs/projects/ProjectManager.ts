@@ -12,7 +12,8 @@
  */
 import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
-import {Channel, Source} from '../types';
+import {Channel, Project, ProjectSources, Source} from '../types';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 
 export default class ProjectManager {
   private readonly channelId: string;
@@ -22,15 +23,17 @@ export default class ProjectManager {
   private readonly saveInterval: number = 30 * 1000; // 30 seconds
   private saveInProgress = false;
   private saveQueued = false;
-  private saveSuccessListeners: ((channel: Channel, source: Source) => void)[] =
-    [];
+  private saveSuccessListeners: ((
+    channel: Channel,
+    sources: ProjectSources
+  ) => void)[] = [];
   private saveNoopListeners: ((channel?: Channel) => void)[] = [];
   private saveFailListeners: ((response: Response) => void)[] = [];
   private saveStartListeners: (() => void)[] = [];
   // The last source we saved or loaded, or undefined if we have not saved a source yet.
   private lastSource: string | undefined;
   // The next source to save, or undefined if we have no source to save.
-  private sourceToSave: Source | undefined;
+  private sourcesToSave: ProjectSources | undefined;
   // The last channel we saved or loaded, or undefined if we have not saved a channel yet.
   private lastChannel: Channel | undefined;
   // The next channel to save, or undefined if we have no channel to save.
@@ -41,43 +44,50 @@ export default class ProjectManager {
   // if it exists.
   private currentTimeoutId: number | undefined;
   private destroyed = false;
+  private reduceChannelUpdates: boolean;
+  private initialSaveComplete: boolean;
 
   constructor(
     sourcesStore: SourcesStore,
     channelsStore: ChannelsStore,
-    channelId: string
+    channelId: string,
+    reduceChannelUpdates: boolean
   ) {
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
     this.channelsStore = channelsStore;
+    this.reduceChannelUpdates = reduceChannelUpdates;
+    this.initialSaveComplete = false;
   }
 
   // Load the project from the sources and channels store.
-  async load(): Promise<Response> {
+  async load(): Promise<Project> {
     if (this.destroyed) {
-      return this.getNoopResponse();
+      throw new Error('Project Manager destroyed');
     }
-    const sourceResponse = await this.sourcesStore.load(this.channelId);
-    // If sourceResponse is not ok, we still want to load the channel. Source can
-    // return not found if the project is new.
-    let source = {};
-    if (sourceResponse.ok) {
-      source = await sourceResponse.json();
-      this.lastSource = JSON.stringify(source);
+    let sources: ProjectSources | undefined;
+    try {
+      sources = await this.sourcesStore.load(this.channelId);
+      this.lastSource = JSON.stringify(sources);
+    } catch (error) {
+      // If sourceResponse is a 404 (not found), we still want to load the channel.
+      // Source can return not found if the project is new. Throw if not a 404.
+      if (!(error as Error).message.includes('404')) {
+        this.logError('Error loading sources', error as Error);
+        throw error;
+      }
     }
 
-    const channelResponse = await this.channelsStore.load(this.channelId);
-    if (!channelResponse.ok) {
-      return channelResponse;
+    let channel: Channel;
+    try {
+      channel = await this.channelsStore.load(this.channelId);
+    } catch (error) {
+      this.logError('Error loading channel', error as Error);
+      throw error;
     }
 
-    this.lastChannel = await channelResponse.json();
-    const channelString = JSON.stringify(this.lastChannel);
-    const project = {source, channel: channelString};
-    const blob = new Blob([JSON.stringify(project)], {
-      type: 'application/json',
-    });
-    return new Response(blob);
+    this.lastChannel = channel;
+    return {sources, channel};
   }
 
   hasUnsavedChanges(): boolean {
@@ -93,29 +103,27 @@ export default class ProjectManager {
 
   // Save any enqueued unsaved changes, then destroy the project manager.
   async cleanUp() {
-    if (this.sourceToSave) {
-      await this.save(this.sourceToSave, true);
+    if (this.sourcesToSave) {
+      await this.save(this.sourcesToSave, true);
     }
     this.destroy();
   }
 
-  // TODO: Add functionality to reduce channel updates during
-  // HoC "emergency mode" (see 1182-1187 in project.js).
   /**
    * Enqueue a save to happen in the next saveInterval, unless a force save is requested.
    * If a save is already enqueued, update this.sourceToSave with the given source.
-   * @param source Source: the source to save
+   * @param sources Source: the source to save
    * @param forceSave boolean: if the save should happen immediately
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
-  async save(source: Source, forceSave = false) {
+  async save(sources: ProjectSources, forceSave = false) {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
       this.resetSaveState();
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    this.sourceToSave = source;
+    this.sourcesToSave = sources;
     return this.enqueueSaveOrSave(forceSave);
   }
 
@@ -134,7 +142,9 @@ export default class ProjectManager {
     return this.enqueueSaveOrSave(forceSave);
   }
 
-  addSaveSuccessListener(listener: (channel: Channel, source: Source) => void) {
+  addSaveSuccessListener(
+    listener: (channel: Channel, sources: ProjectSources) => void
+  ) {
     this.saveSuccessListeners.push(listener);
   }
 
@@ -150,9 +160,6 @@ export default class ProjectManager {
     this.saveStartListeners.push(listener);
   }
 
-  // TODO: Add rename function. Rename sets the name on the channel.
-  // https://codedotorg.atlassian.net/browse/SL-891
-
   /**
    * Helper function to save a project, called either after a timeout or directly by save().
    * On a save, we check if there are unsaved changes to the source or channel.
@@ -165,7 +172,7 @@ export default class ProjectManager {
    * otherwise it will contain failure or no-op information.
    */
   private async saveHelper(): Promise<Response> {
-    if (!this.sourceToSave || !this.lastChannel) {
+    if (!this.sourcesToSave || !this.lastChannel) {
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
     this.resetSaveState();
@@ -183,7 +190,7 @@ export default class ProjectManager {
     if (sourceChanged) {
       const sourceResponse = await this.sourcesStore.save(
         this.channelId,
-        this.sourceToSave
+        this.sourcesToSave
       );
       if (!sourceResponse.ok) {
         this.saveInProgress = false;
@@ -193,29 +200,40 @@ export default class ProjectManager {
         // Maybe add a more specific statusText to the response?
         return sourceResponse;
       }
-      this.lastSource = JSON.stringify(this.sourceToSave);
+      this.lastSource = JSON.stringify(this.sourcesToSave);
     }
 
-    // Always save the channel--either the channel has changed and/or the source changed.
-    // Even if only the source changed, we still update the channel to modify the last
-    // updated time.
-    this.channelToSave ||= this.lastChannel;
-    const channelResponse = await this.channelsStore.save(this.channelToSave);
-    if (!channelResponse.ok) {
-      this.saveInProgress = false;
-      this.executeSaveFailListeners(channelResponse);
+    // Normally, reduceChannelUpdates is false and we update the channel
+    // metadata every time source code is saved. When in emergency mode,
+    // reduceChannelUpdates is true for HoC levels and we only update
+    // channel metadata on the initial save to reduce write pressure on
+    // the database. The main user-visible effect of this is that the
+    // project's 'last saved' time shown in the UI may be inaccurate for
+    // all projects that were saved while emergency mode was active.
 
-      // TODO: Should we wrap this response in some way?
-      // Maybe add a more specific statusText to the response?
-      return channelResponse;
+    if (!this.reduceChannelUpdates || !this.initialSaveComplete) {
+      // As long as we are not in emergency mode, always save the channel,
+      // as either the channel has changed and/or the source changed.
+      // Even if only the source changed, we still update the channel to modify the last
+      // updated time.
+      this.channelToSave ||= this.lastChannel;
+      const channelResponse = await this.channelsStore.save(this.channelToSave);
+      if (!channelResponse.ok) {
+        this.saveInProgress = false;
+        this.executeSaveFailListeners(channelResponse);
+
+        // TODO: Should we wrap this response in some way?
+        // Maybe add a more specific statusText to the response?
+        return channelResponse;
+      }
+      const channelSaveResponse = await channelResponse.json();
+      this.lastChannel = channelSaveResponse as Channel;
     }
-
-    const channelSaveResponse = await channelResponse.json();
 
     this.saveInProgress = false;
-    this.lastChannel = channelSaveResponse as Channel;
     this.channelToSave = undefined;
-    this.executeSaveSuccessListeners(this.lastChannel, this.sourceToSave);
+    this.executeSaveSuccessListeners(this.lastChannel, this.sourcesToSave);
+    this.initialSaveComplete = true;
     return new Response();
   }
 
@@ -268,10 +286,10 @@ export default class ProjectManager {
   }
 
   private sourceChanged(): boolean {
-    if (!this.sourceToSave) {
+    if (!this.sourcesToSave) {
       return false;
     }
-    return this.lastSource !== JSON.stringify(this.sourceToSave);
+    return this.lastSource !== JSON.stringify(this.sourcesToSave);
   }
 
   private channelChanged(): boolean {
@@ -295,8 +313,11 @@ export default class ProjectManager {
   }
 
   // LISTENERS
-  private executeSaveSuccessListeners(channel: Channel, source: Source) {
-    this.saveSuccessListeners.forEach(listener => listener(channel, source));
+  private executeSaveSuccessListeners(
+    channel: Channel,
+    sources: ProjectSources
+  ) {
+    this.saveSuccessListeners.forEach(listener => listener(channel, sources));
   }
 
   private executeSaveNoopListeners(channel?: Channel) {
@@ -309,5 +330,13 @@ export default class ProjectManager {
 
   private executeSaveStartListeners() {
     this.saveStartListeners.forEach(listener => listener());
+  }
+
+  private logError(errorMessage: string, error: Error): void {
+    MetricsReporter.logError({
+      channelId: this.channelId,
+      errorMessage,
+      error: error.toString(),
+    });
   }
 }

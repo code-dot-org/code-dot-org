@@ -792,6 +792,8 @@ en:
         PL_CSD_EquityBlindSpotsvid: Bias & Responsibility
         how-ai-works-llms-full: How Chatbots and Large Language Models Work
         how-ai-works-creativity-full: Does AI Have Creativity and Imagination?
+        how-ai-works-llms-part1: Chatbots and Large Language Models Part 1
+        how-ai-works-llms-part2: Chatbots and Large Language Models Part 2
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

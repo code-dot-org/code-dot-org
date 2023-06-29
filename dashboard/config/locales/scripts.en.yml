@@ -7974,6 +7974,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         csc-pilot-2022-timecapsule:
           lesson_groups: {}
           name: csc-pilot-2022-timecapsule
@@ -7982,6 +7983,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         csc-pilot-2022-starquilts:
           lesson_groups: {}
           name: csc-pilot-2022-starquilts
@@ -7990,6 +7992,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         csc-pilot-2022-fables:
           lesson_groups: {}
           name: csc-pilot-2022-fables
@@ -7998,6 +8001,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          lessons: {}
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -10353,7 +10357,7 @@ en:
           title: Coding Interactive Maps (2023)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "##Suggested Pre-Work for this Module\n \n**Social Studies:** Students will discuss and code several different types of maps. To build a base understanding together you might consider reading one of these books about maps: [Maps by Aleksandra and Daniel Mizielinski](https://oladaniel.com/maps), [The Once Upon a Time Map Book by BG Hennessy](https://bghennessy.com/f/the-once-upon-a-time-map-book), or [City Atlas: Travel the World with 30 City Maps by Georgia Cherry](https://www.youtube.com/watch?v=LRy3daJLhtg).\n\nAdditionally, it may be beneficial to spend some time **building interactive maps with hands on materials in your classroom**: fill a bucket with colored strips of felt to represent roads, rivers, houses and more. Let students build and play in an imaginary town. Or after a shared experience (ie recess or field trip) create a topographical map using play-dough or salt dough.\n\n\n**Computer Science:** In this module students will be working a lot with sprites including changing the location and size of them and initiating behaviors. [CSFundamentals Course F Lesson 3](https://studio.code.org/s/coursef-2023/lessons/3) is a great introduction to two concepts at the heart of this all: sprites and behaviors.\n"
           student_description: ''
         blockchain-2023:
           lessons:
@@ -10525,7 +10529,7 @@ en:
           title: Coding Book Covers (2023)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "##Suggested Pre-Work for this Module\n \n**English Language Arts:** Building some familiarity with and background knowledge on book covers, the elements they all share (title, author, illustrations, etc) and design choices will help students focus. Here are two hands on activities to try in your classroom: \n- **Book sort**: Have groups of students organize books into genre piles, based only on the book cover. Students make inferences based on the book cover about what genre a book may fall under.\n- **Cover comparison**: show students multiple covers for the same book. Engage in a discussion about what is different in each cover and evaluation which version is best.\n\n\n**Computer Science:** In this module, students will learn the basics of coding using code.org's Sprite Lab. These activities may be supportive to engage in before starting the module:\n- Introduce students to the idea of **events** with this unplugged activity: [The Big Event](https://studio.code.org/s/course1/lessons/15/levels/1) (15-minute activity). The teacher will press buttons on a paper remote and students will react depending on which button is pressed. \n- [Making Sprites](https://studio.code.org/s/coursef-2023/lessons/3) (50 minutes) is a great self-paced introduction to the basics of coding with sprites.\n"
           student_description: ''
         pre-express-2023:
           lesson_groups:
