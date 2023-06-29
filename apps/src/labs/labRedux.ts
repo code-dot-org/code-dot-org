@@ -27,8 +27,12 @@ import {
 } from '../code-studio/projectRedux';
 import ProjectManager from './projects/ProjectManager';
 import HttpClient from '../util/HttpClient';
+import {
+  initialValidationState,
+  ValidationState,
+} from './progress/ProgressManager';
 
-interface LabState {
+export interface LabState {
   // If we are currently loading a lab.
   isLoading: boolean;
   isPageError: boolean;
@@ -41,6 +45,9 @@ interface LabState {
   // Whether the lab is ready for a reload.  This is used to manage the case where multiple loads
   // happen in a row, and we only want to reload the lab when we are done.
   labReadyForReload: boolean;
+  // Validation status for the current level. This is used by the progress system to determine
+  // what instructions to display and if the user has satisfied the validation conditions, if present.
+  validationState: ValidationState;
 }
 
 const initialState: LabState = {
@@ -50,10 +57,10 @@ const initialState: LabState = {
   sources: undefined,
   levelData: undefined,
   labReadyForReload: false,
+  validationState: {...initialValidationState},
 };
 
 // Thunks
-
 // Set up the project manager for the given level and script,
 // then load the project and store the channel and source in redux.
 // If we get an aborted signal, we will exit early.
@@ -145,6 +152,9 @@ const labSlice = createSlice({
     },
     setLabReadyForReload(state, action: PayloadAction<boolean>) {
       state.labReadyForReload = action.payload;
+    },
+    setValidationState(state, action: PayloadAction<ValidationState>) {
+      state.validationState = {...action.payload};
     },
   },
   extraReducers: builder => {
@@ -248,6 +258,7 @@ export const {
   setSources,
   setLevelData,
   setLabReadyForReload,
+  setValidationState,
 } = labSlice.actions;
 
 export default labSlice.reducer;
