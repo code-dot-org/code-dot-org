@@ -50,45 +50,50 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     create_jwt_and_stub(payload, true)
   end
 
-  test 'given no params, return unauthorized' do
+  def read_cache(key)
+    json_value = CDO.shared_cache.read(key)
+    JSON.parse(json_value).symbolize_keys
+  end
+
+  test 'login - given no params, return unauthorized' do
     get '/lti/v1/login', params: {}
     assert_response :unauthorized
   end
 
-  test 'given a client_id that doesn not exist, return unauthorized' do
+  test 'login - given a client_id that doesn not exist, return unauthorized' do
     get '/lti/v1/login', params: {client_id: '', iss: @integration.issuer}
     assert_response :unauthorized
   end
 
-  test 'given a platform_id that does not exist, return unauthorized' do
+  test 'login - given a platform_id that does not exist, return unauthorized' do
     get '/lti/v1/login/wrong-id', params: {}
     assert_response :unauthorized
   end
 
-  test 'given a valid client_id via GET, return redirect' do
+  test 'login - given a valid client_id via GET, return redirect' do
     get '/lti/v1/login', params: {client_id: @integration.client_id, iss: @integration.issuer}
     assert_response :redirect
   end
 
-  test 'given a valid client_id via POST, return redirect' do
+  test 'login - given a valid client_id via POST, return redirect' do
     post '/lti/v1/login', params: {client_id: @integration.client_id, iss: @integration.issuer}
     assert_response :redirect
   end
 
-  test 'given a valid platform_id, return redirect' do
+  test 'login - given a valid platform_id, return redirect' do
     get "/lti/v1/login/#{@integration.platform_id}", params: {}
     assert_response :redirect
   end
 
-  test 'given valid parameters, set cookies' do
+  test 'login - given valid parameters, save nonce and state to cache' do
     get '/lti/v1/login', params: {client_id: @integration.client_id, iss: @integration.issuer}
-    assert_not_nil cookies[:state]
-    assert_not_nil cookies[:nonce]
-    assert_equal cookies[:state].length, 10
-    assert_equal cookies[:nonce].length, 10
+    parsed_url = Rack::Utils.parse_query(URI(@response.redirect_url).query).symbolize_keys
+    cached_values = read_cache(parsed_url[:state])
+    assert_not_nil cached_values[:state]
+    assert_not_nil cached_values[:nonce]
   end
 
-  test 'given valid parameters, redirect URL should have valid auth request params' do
+  test 'login - given valid parameters, redirect URL should have valid auth request params' do
     login_hint = 'hint'
     get '/lti/v1/login', params: {client_id: @integration.client_id, iss: @integration.issuer, login_hint: login_hint}
     parsed_url = Rack::Utils.parse_query(URI(@response.redirect_url).query).symbolize_keys
