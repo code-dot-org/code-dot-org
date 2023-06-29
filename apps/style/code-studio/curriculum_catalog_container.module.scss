@@ -12,6 +12,31 @@
   }
 }
 
+.catalogLanguageFilterRow {
+  display: flex;
+  justify-content: space-between;
+  max-width: 60em;
+  margin: 1em auto;
+
+  p {
+    margin: 1em 0;
+  }
+
+  i {
+    margin: auto 0.25em;
+    font-size: 1.75em;
+  }
+
+  span {
+    font-size: 16px;
+  }
+}
+
+.catalogLanguageFilterRowNumAvailable {
+  display: flex;
+  flex: start;
+}
+
 button.catalogClearFiltersButton {
   font-size: 16px;
   margin-left: auto;
