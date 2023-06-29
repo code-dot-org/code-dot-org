@@ -2,10 +2,14 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import {useSelector} from 'react-redux';
 import Video from './Video';
 
 const StandaloneVideo2 = () => {
-  return <Video />;
+  const levelVideo = useSelector(state => state.lab.levelVideo);
+  console.log(levelVideo);
+
+  return <Video src={levelVideo?.src} />;
 };
 
 StandaloneVideo2.propTypes = {

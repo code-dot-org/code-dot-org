@@ -13,6 +13,7 @@ import {
 import {
   Channel,
   LevelData,
+  LevelVideo,
   LevelProperties,
   ProjectManagerStorageType,
   ProjectSources,
@@ -42,6 +43,8 @@ export interface LabState {
   sources: ProjectSources | undefined;
   // Level data for the current level
   levelData: LevelData | undefined;
+  // Video for the level;
+  levelVideo: LevelVideo | undefined;
   // Whether the lab is ready for a reload.  This is used to manage the case where multiple loads
   // happen in a row, and we only want to reload the lab when we are done.
   labReadyForReload: boolean;
@@ -56,6 +59,7 @@ const initialState: LabState = {
   channel: undefined,
   sources: undefined,
   levelData: undefined,
+  levelVideo: undefined,
   labReadyForReload: false,
   validationState: {...initialValidationState},
 };
@@ -101,7 +105,12 @@ export const setUpForLevel = createAsyncThunk(
       thunkAPI.dispatch
     );
     setProjectAndLevelData(
-      {sources, channel, levelData: levelProperties.levelData},
+      {
+        sources,
+        channel,
+        levelData: levelProperties.levelData,
+        levelVideo: levelProperties.video,
+      },
       thunkAPI.signal.aborted,
       thunkAPI.dispatch
     );
@@ -149,6 +158,9 @@ const labSlice = createSlice({
     },
     setLevelData(state, action: PayloadAction<LevelData | undefined>) {
       state.levelData = action.payload;
+    },
+    setLevelVideo(state, action: PayloadAction<LevelVideo | undefined>) {
+      state.levelVideo = action.payload;
     },
     setLabReadyForReload(state, action: PayloadAction<boolean>) {
       state.labReadyForReload = action.payload;
@@ -227,6 +239,7 @@ function setProjectAndLevelData(
     channel: Channel;
     sources?: ProjectSources;
     levelData?: LevelData;
+    levelVideo?: LevelVideo;
   },
   aborted: boolean,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
@@ -235,10 +248,11 @@ function setProjectAndLevelData(
   if (aborted) {
     return;
   }
-  const {channel, sources, levelData} = data;
+  const {channel, sources, levelData, levelVideo} = data;
   dispatch(setChannel(channel));
   dispatch(setSources(sources));
   dispatch(setLevelData(levelData));
+  dispatch(setLevelVideo(levelVideo));
   dispatch(setLabReadyForReload(true));
 }
 
@@ -257,6 +271,7 @@ export const {
   setChannel,
   setSources,
   setLevelData,
+  setLevelVideo,
   setLabReadyForReload,
   setValidationState,
 } = labSlice.actions;
