@@ -291,7 +291,7 @@ const styles = {
 export const UnconnectedDownloadReplayVideoButton = DownloadReplayVideoButton;
 
 export default connect(state => ({
-  appType: state.pageConstants.appType,
-  channelId: state.pageConstants.channelId,
+  appType: state.pageConstants && state.pageConstants.appType,
+  channelId: state.pageConstants && state.pageConstants.channelId,
   replayLog: state.shareDialog.replayLog,
 }))(DownloadReplayVideoButton);
