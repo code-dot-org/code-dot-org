@@ -5,8 +5,6 @@
       "name": "All",
       "imageSrc": "all.png",
       "path": "all-by-type",
-      "bpm": 80,
-      "key": "c#",
       "folders": [
         {
           "name": "Piano",
@@ -1289,57 +1287,6 @@
               "src": "piano_chords",
               "length": 4,
               "type": "lead"
-            },
-            {
-              "name": "Piano Sequenced",
-              "src": "piano_sequenced",
-              "length": 2,
-              "type": "lead",
-              "sequence": {
-                "instrument": "piano",
-                "events": [
-                  {
-                    "position": 1,
-                    "noteOffset": 9,
-                    "length": 1
-                  },
-                  {
-                    "position": 5,
-                    "noteOffset": 4,
-                    "length": 1
-                  },
-                  {
-                    "position": 9,
-                    "noteOffset": 11,
-                    "length": 1
-                  },
-                  {
-                    "position": 13,
-                    "noteOffset": 7,
-                    "length": 1
-                  },
-                  {
-                    "position": 17,
-                    "noteOffset": 9,
-                    "length": 1
-                  },
-                  {
-                    "position": 21,
-                    "noteOffset": 4,
-                    "length": 1
-                  },
-                  {
-                    "position": 25,
-                    "noteOffset": 6,
-                    "length": 1
-                  },
-                  {
-                    "position": 29,
-                    "noteOffset": 7,
-                    "length": 1
-                  }
-                ]
-              }
             }
           ]
         },
