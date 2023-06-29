@@ -40,11 +40,10 @@ const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
       />
       <i className={moduleStyles.radioIcon} />
       {label && (
-        //   TODO: [DES-296] Once new Typography is ready, implement different label sizes
         <Typography
           semanticTag="span"
           className={moduleStyles.radioButtonLabel}
-          visualAppearance="body-one"
+          visualAppearance="body-two"
         >
           {label}
         </Typography>
