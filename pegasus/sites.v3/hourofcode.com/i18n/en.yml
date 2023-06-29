@@ -578,6 +578,8 @@
   csp_page_faq_answer_07_03: "The goal of the updates to our curriculum is to navigate these developments in a way that remains committed to our vision and values and supports the many teachers, schools, classrooms, and districts that are already a part of our broader CS Principles community. We remain deeply thankful for you joining us on this mission to make our collective vision a reality."
   csp_page_faq_answer_07_04: "For more information about our goals and approach to our courses, please see our [Curriculum Values](%{curriculum_url}) and our [Professional Learning alues](%{pl_url})."
 
+  csc_page_top_desc: "Make connections between computer science (CS) and other subjects like math, language arts, science, and social studies."
+
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
   hoc_live_learn_title: 'Learn with Hour of Code Live'

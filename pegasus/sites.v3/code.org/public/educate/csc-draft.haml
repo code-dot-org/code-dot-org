@@ -1,0 +1,23 @@
+---
+title: Computer Science Connections
+theme: responsive_full_width
+---
+
+%link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
+%link{href: "/css/generated/csc-styles.css", rel: "stylesheet"}
+
+%section.hero-banner-basic.overlay
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper
+      %h1{style: "color: white"}
+        =hoc_s(:curriculum_name_csc)
+      %p{style: "color: white"}
+        =hoc_s(:csc_page_top_desc)
+      %a.link-button{href: "#"}
+        =hoc_s(:call_to_action_explore_modules)
+    %figure
+      %img{src: "/images/banners/banner-csc-octopus.png", alt: ""}
+    .clear
+
+
+= view :visit_partial_event_logger
