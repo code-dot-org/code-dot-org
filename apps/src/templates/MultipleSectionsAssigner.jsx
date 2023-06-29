@@ -24,6 +24,7 @@ const MultipleSectionsAssigner = ({
   isOnCoursePage,
   isStandAloneUnit,
   participantAudience,
+  onAssignSuccess,
   // Redux
   sections,
   unassignSection,
@@ -85,7 +86,7 @@ const MultipleSectionsAssigner = ({
       if (needsToBeAssigned) {
         if (isOnCoursePage) {
           const sectionId = currentSectionsAssigned[i].id;
-          assignToSection(
+          assignToSectionWithConfirmation(
             sectionId,
             courseId,
             courseOfferingId,
@@ -133,7 +134,7 @@ const MultipleSectionsAssigner = ({
   const unhideAndAssignUnit = section => {
     const sectionId = section.id;
     updateHiddenScript(sectionId, scriptId, false);
-    assignToSection(
+    assignToSectionWithConfirmation(
       sectionId,
       courseId,
       courseOfferingId,
@@ -145,13 +146,29 @@ const MultipleSectionsAssigner = ({
   // this is identical to unhideAndAssignUnit above but just has null as the scriptId
   const assignCourseWithoutUnit = section => {
     const sectionId = section.id;
-    assignToSection(
+    assignToSectionWithConfirmation(
       sectionId,
       courseId,
       courseOfferingId,
       courseVersionId,
       null
     );
+  };
+
+  const assignToSectionWithConfirmation = (
+    sectionId,
+    courseId,
+    courseOfferingId,
+    courseVersionId,
+    scriptId
+  ) => {
+    assignToSection(
+      sectionId,
+      courseId,
+      courseOfferingId,
+      courseVersionId,
+      scriptId
+    ).then(onAssignSuccess);
   };
 
   const isAssignableToSection = sectionParticipantType => {
@@ -225,6 +242,7 @@ MultipleSectionsAssigner.propTypes = {
   isOnCoursePage: PropTypes.bool,
   isStandAloneUnit: PropTypes.bool,
   participantAudience: PropTypes.string,
+  onAssignSuccess: PropTypes.func,
   // Redux
   sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
   unassignSection: PropTypes.func.isRequired,
