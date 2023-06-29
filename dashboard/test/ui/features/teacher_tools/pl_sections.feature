@@ -23,8 +23,9 @@ Feature: Professional learning Sections
     Then I wait to see "#sections-set-up-container"
     And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
     And I wait until element "button:contains(Professional Learning)" is visible
-    And I click selector "button:contains(Professional Learning)"
-    And I press the first "input[name='Teacher PL Course']" element
+    # TODO TEACH-592: Seed PL courses so we can test course assignment
+    # And I click selector "button:contains(Professional Learning)"
+    # And I press the first "input[name='Teacher PL Course']" element
     And I press the first "#uitest-save-section-changes" element
     And I wait until element "#classroom-sections" is visible
 
@@ -56,8 +57,6 @@ Feature: Professional learning Sections
     Then I wait to see "#sections-set-up-container"
     And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
     And I wait until element "button:contains(Professional Learning)" is visible
-    And I click selector "button:contains(Professional Learning)"
-    And I press the first "input[name='Teacher PL Course']" element
     And I press the first "#uitest-save-section-changes" element
     And I wait until element "#classroom-sections" is visible
 
@@ -89,8 +88,6 @@ Feature: Professional learning Sections
     Then I wait to see "#sections-set-up-container"
     And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
     And I wait until element "button:contains(Professional Learning)" is visible
-    And I click selector "button:contains(Professional Learning)"
-    And I press the first "input[name='Teacher PL Course']" element
     And I press the first "#uitest-save-section-changes" element
     And I wait until element "#classroom-sections" is visible
 
@@ -122,8 +119,6 @@ Feature: Professional learning Sections
     Then I wait to see "#sections-set-up-container"
     And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
     And I wait until element "button:contains(Professional Learning)" is visible
-    And I click selector "button:contains(Professional Learning)"
-    And I press the first "input[name='Teacher PL Course']" element
     And I press the first "#uitest-save-section-changes" element
     And I wait until element "#classroom-sections" is visible
 
