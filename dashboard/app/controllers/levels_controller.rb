@@ -443,7 +443,7 @@ class LevelsController < ApplicationController
       elsif @type_class == Music
         @game = Game.music
       elsif @type_class == Aichat
-        @game = Aichat.music
+        @game = Game.aichat
       end
       @level = @type_class.new
       render :edit

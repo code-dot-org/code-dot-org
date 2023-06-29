@@ -186,7 +186,7 @@ class Game < ApplicationRecord
   end
 
   def self.aichat
-    @@game_music ||= find_by_name('Aichat')
+    @@game_aichat ||= find_by_name('Aichat')
   end
 
   def unplugged?

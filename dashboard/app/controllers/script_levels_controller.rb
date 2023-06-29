@@ -522,6 +522,9 @@ class ScriptLevelsController < ApplicationController
       readonly_view_options
     end
 
+    puts "Level: #{@level}"
+    puts "Game: #{@game}"
+
     view_options(
       full_width: true,
       no_footer: @game&.no_footer?,
