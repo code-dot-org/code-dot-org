@@ -23,6 +23,8 @@ export interface ProjectSources {
   // Stringified source code. Some labs (ex. Javalab) store multiple files
   // as nested JSON which we'll need to support eventually.
   source: string;
+  // Optional lab-specific configuration for this project
+  labConfig?: {[key: string]: object};
   // Add other properties (animations, html, etc) as needed.
 }
 
