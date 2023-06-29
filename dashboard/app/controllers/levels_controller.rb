@@ -23,6 +23,7 @@ class LevelsController < ApplicationController
     Bounce,
     BubbleChoice,
     Calc,
+    Chat,
     ContractMatch,
     Craft,
     CurriculumReference,
@@ -441,6 +442,8 @@ class LevelsController < ApplicationController
         @game = Game.javalab
       elsif @type_class == Music
         @game = Game.music
+      elsif @type_class == Chat
+        @game = Chat.music
       end
       @level = @type_class.new
       render :edit

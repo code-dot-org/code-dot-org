@@ -47,6 +47,7 @@ const SILENCED = [
   'applab',
   'bounce',
   'calc',
+  'chat',
   'craft',
   'dance',
   'eval',

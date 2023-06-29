@@ -59,6 +59,7 @@ class Game < ApplicationRecord
   JAVALAB = 'javalab'.freeze
   POETRY = 'poetry'.freeze
   MUSIC = 'music'.freeze
+  CHAT = 'chat'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -184,6 +185,10 @@ class Game < ApplicationRecord
     @@game_music ||= find_by_name('Music')
   end
 
+  def self.chat
+    @@game_music ||= find_by_name('Chat')
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -230,7 +235,7 @@ class Game < ApplicationRecord
   end
 
   def uses_small_footer?
-    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB, JAVALAB].include? app
+    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB, JAVALAB, CHAT].include? app
   end
 
   def no_footer?
@@ -333,6 +338,7 @@ class Game < ApplicationRecord
     Javalab:javalab
     Poetry:poetry
     Music:music
+    Chat:chat
   )
 
   def self.setup

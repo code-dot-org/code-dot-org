@@ -78,6 +78,7 @@ describe('entry tests', () => {
     'applab',
     'bounce',
     'calc',
+    'chat',
     'craft',
     'dance',
     'eval',
