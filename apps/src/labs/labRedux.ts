@@ -27,7 +27,7 @@ import {
 } from '../code-studio/projectRedux';
 import ProjectManager from './projects/ProjectManager';
 import HttpClient from '../util/HttpClient';
-import {convertStringToBoolean} from '../types/utils';
+import {convertOptionalStringToBoolean} from '../types/utils';
 import {
   initialValidationState,
   ValidationState,
@@ -60,8 +60,8 @@ const initialState: LabState = {
   sources: undefined,
   levelData: undefined,
   labReadyForReload: false,
-  hideShareAndRemix: undefined,
-  isProjectLevel: undefined,
+  hideShareAndRemix: true,
+  isProjectLevel: false,
   validationState: {...initialValidationState},
 };
 
@@ -83,31 +83,31 @@ export const setUpWithLevel = createAsyncThunk(
     },
     thunkAPI
   ) => {
-    // Check for an existing project manager and clean it up, if it exists.
-    const existingProjectManager =
-      LabRegistry.getInstance().getProjectManager();
-    // Save any unsaved code and clear out any remaining enqueued
-    // saves from the existing project manager.
-    await existingProjectManager?.cleanUp();
+    await cleanUpProjectManager();
 
     // Load level properties if we have a levelPropertiesPath.
     const levelProperties = await loadLevelProperties(
       payload.levelPropertiesPath
     );
+    const isProjectLevel = convertOptionalStringToBoolean(
+      levelProperties.isProjectLevel,
+      false
+    );
 
     // Create a new project manager. If we have a channel id,
     // default to loading the project for that channel. Otherwise
     // create a project manager for the given level and script id.
-    const projectManager = payload.channelId
-      ? ProjectManagerFactory.getProjectManager(
-          ProjectManagerStorageType.REMOTE,
-          payload.channelId
-        )
-      : await ProjectManagerFactory.getProjectManagerForLevel(
-          ProjectManagerStorageType.REMOTE,
-          payload.levelId,
-          payload.scriptId
-        );
+    const projectManager =
+      payload.channelId && isProjectLevel
+        ? ProjectManagerFactory.getProjectManager(
+            ProjectManagerStorageType.REMOTE,
+            payload.channelId
+          )
+        : await ProjectManagerFactory.getProjectManagerForLevel(
+            ProjectManagerStorageType.REMOTE,
+            payload.levelId,
+            payload.scriptId
+          );
     // Only set the project manager and initiate load
     // if this request hasn't been cancelled.
     if (thunkAPI.signal.aborted) {
@@ -136,12 +136,7 @@ export const setUpWithLevel = createAsyncThunk(
 export const setUpWithoutLevel = createAsyncThunk(
   'lab/setUpWithoutLevel',
   async (payload: string, thunkAPI) => {
-    // Check for an existing project manager and clean it up, if it exists.
-    const existingProjectManager =
-      LabRegistry.getInstance().getProjectManager();
-    // Save any unsaved code and clear out any remaining enqueued
-    // saves from the existing project manager.
-    await existingProjectManager?.cleanUp();
+    await cleanUpProjectManager();
 
     // Create the new project manager.
     const projectManager = ProjectManagerFactory.getProjectManager(
@@ -278,16 +273,21 @@ function setProjectAndLevelData(
   dispatch(setSources(sources));
   if (levelProperties) {
     dispatch(setLevelData(levelProperties.levelData));
-    // If hideShareAndRemix is not set, default to true.
-    const hideShareAndRemix = levelProperties.hideShareAndRemix
-      ? convertStringToBoolean(levelProperties.hideShareAndRemix)
-      : true;
+    const hideShareAndRemix = convertOptionalStringToBoolean(
+      levelProperties.hideShareAndRemix,
+      /* defaultValue*/ true
+    );
     dispatch(setHideShareAndRemix(hideShareAndRemix));
-    // If isProjectLevel is not set, default to false.
-    const isProjectLevel = levelProperties.isProjectLevel
-      ? convertStringToBoolean(levelProperties.isProjectLevel)
-      : false;
+    const isProjectLevel = convertOptionalStringToBoolean(
+      levelProperties.isProjectLevel,
+      /* defaultValue*/ false
+    );
     dispatch(setIsProjectLevel(isProjectLevel));
+  } else {
+    // set default values to clear out any previous values
+    dispatch(setLevelData(undefined));
+    dispatch(setHideShareAndRemix(true));
+    dispatch(setIsProjectLevel(false));
   }
   dispatch(setLabReadyForReload(true));
 }
@@ -301,6 +301,14 @@ async function loadLevelProperties(
   return response.value;
 }
 
+async function cleanUpProjectManager() {
+  // Check for an existing project manager and clean it up, if it exists.
+  const existingProjectManager = LabRegistry.getInstance().getProjectManager();
+  // Save any unsaved code and clear out any remaining enqueued
+  // saves from the existing project manager.
+  await existingProjectManager?.cleanUp();
+}
+
 export const {
   setIsLoading,
   setIsPageError,
@@ -308,9 +316,10 @@ export const {
   setSources,
   setLevelData,
   setLabReadyForReload,
-  setHideShareAndRemix,
-  setIsProjectLevel,
   setValidationState,
 } = labSlice.actions;
+
+// These should not be set outside of the lab slice.
+const {setHideShareAndRemix, setIsProjectLevel} = labSlice.actions;
 
 export default labSlice.reducer;

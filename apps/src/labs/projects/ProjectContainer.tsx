@@ -76,7 +76,6 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
 interface ProjectContainerProps {
   children: React.ReactNode;
   channelId?: string;
-  projectLevelId?: number;
 }
 
 export default ProjectContainer;

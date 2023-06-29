@@ -22,9 +22,5 @@ interface PartialAppOptions {
  */
 export function getStandaloneProjectId(): string | null {
   const appOptions = getScriptData('appoptions') as PartialAppOptions;
-  if (appOptions.level?.isProjectLevel && appOptions.channel) {
-    return appOptions.channel;
-  }
-
-  return null;
+  return appOptions.channel;
 }
