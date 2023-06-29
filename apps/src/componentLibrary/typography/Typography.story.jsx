@@ -83,19 +83,19 @@ Heading6.args = {
 export const BodyOne = Template.bind({});
 BodyOne.args = {
   semanticTag: 'p',
-  visualAppearance: 'body-two',
-  children: 'This is a Typography Component. (p.body-two)',
+  visualAppearance: 'body-one',
+  children: 'This is a Typography Component. (p.body-one)',
 };
 
 export const BodyTwo = Template.bind({});
 BodyTwo.args = {
   semanticTag: 'p',
-  visualAppearance: 'body-three',
-  children: 'This is a Typography Component. (p.body-three)',
+  visualAppearance: 'body-two',
+  children: 'This is a Typography Component. (p.body-two)',
 };
 
-export const OverlineText = Template.bind({});
-OverlineText.args = {
+export const OverlineTwoText = Template.bind({});
+OverlineTwoText.args = {
   semanticTag: 'p',
   visualAppearance: 'overline-two',
   children: 'This is a Typography Component. (p.overline-two)',
