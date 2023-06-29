@@ -147,7 +147,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :unauthorized
   end
 
-  test 'auth - error raised for issued at time in past' do
+  test 'auth - error raised for issued at time in future' do
     payload = get_valid_payload
     payload[:iat] = 3.days.from_now.to_i
     jwt = create_jwt(payload)
