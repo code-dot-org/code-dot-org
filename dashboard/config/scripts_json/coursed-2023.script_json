@@ -10,11 +10,12 @@
       "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2023-06-21 16:28:33 UTC",
+    "serialized_at": "2023-06-28 15:17:32 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
