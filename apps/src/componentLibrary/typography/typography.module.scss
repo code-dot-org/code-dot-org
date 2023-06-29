@@ -241,46 +241,6 @@ html {
   line-height: 1.8;
 }
 
-// Button text styles
-@mixin button-common {
-  color: $neutral_dark;
-  font-family: $gotham-bold, sans-serif;
-}
-
-@mixin button-text-one {
-  @include button-common;
-  font-size: 1.25rem;
-  line-height: 1.4;
-}
-
-@mixin button-text-two {
-  @include button-common;
-  font-size: 1rem;
-  line-height: 1.48;
-}
-
-@mixin button-text-three {
-  @include button-common;
-  font-size: 0.875rem;
-  line-height: 1.54;
-}
-
-@mixin button-text-four {
-  @include button-common;
-  font-size: 0.75rem;
-  line-height: 1.64;
-}
-
-// Links text styles
-@mixin link-common {
-  color: $neutral_dark;
-  font-family: $gotham-bold, sans-serif;
-  text-decoration: underline;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
 // ----------------------------------------
 
 // Headings
@@ -299,23 +259,25 @@ h6,
 
 // Paragraphs
 // Use on larger paragraphs
-p.body-one,
 .body-one { @include body-one; }
 // Use on default paragraphs
 p,
-p.body-two,
 .body-two { @include body-two; }
 // [TODO: Kelby pls approve] (?) Use on course block descriptions or anywhere
 // else that needs smaller paragraph text
-p.body-three,
 .body-three { @include body-three; }
 // Use on smallest paragraph text
-p.body-four,
 .body-four { @include body-four; }
 
+// Overlines
 // Use on small uppercase labels or descriptions
-p.overline,
-.overline { @include overline-two; }
+// (Bigger size)
+.overline-one { @include overline-one; }
+// (Default size)
+.overline-two { @include overline-two; }
+// (Smaller size)
+.overline-three { @include overline-three; }
+
 // Use in paragraphs to bold text
 strong,
 .strong { @include strong; }
@@ -334,3 +296,22 @@ em strong,
 // Use on figcaption elements that accompany images or videos
 figcaption,
 .figcaption { @include figcaption; }
+
+// Label text
+// (Bigger size)
+.label-one, {
+  @include label-one;
+}
+// (Default size)
+label,
+.label-two, {
+  @include label-two;
+}
+// (Smaller size)
+.label-three, {
+  @include label-three;
+}
+// (Smallest size)
+.label-four, {
+  @include label-four;
+}
