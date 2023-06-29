@@ -59,6 +59,15 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     refute_redirect_to '/lockout'
   end
 
+  test "locked out account can access the policy consent routes" do
+    user = create(:locked_out_student)
+    sign_in user
+    get '/policy_compliance/child_account_consent'
+    refute_redirect_to '/lockout'
+    post '/policy_compliance/child_account_consent'
+    refute_redirect_to '/lockout'
+  end
+
   test "an anonymous user should not be redirected to the lockout page." do
     get '/'
     refute_redirect_to '/lockout'
