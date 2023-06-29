@@ -10,3 +10,5 @@ Here, we use a new block called the `if/else` block.  Look closely at the progra
 
 
 MARKDOWN
+
+allow_multiple_attempts true

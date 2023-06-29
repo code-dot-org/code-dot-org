@@ -72,6 +72,12 @@
       "name": "Circuit",
       "color": "#f78183",
       "position": 10
+    },
+    {
+      "key": "micro_bit",
+      "name": "micro:bit",
+      "color": "#f78183",
+      "position": 11
     }
   ]
 }

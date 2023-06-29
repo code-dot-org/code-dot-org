@@ -10,14 +10,16 @@
           "details": "Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
           "link": "https://studio.code.org/s/csp-post-survey-2018",
           "type": "bullhorn",
-          "visibility": "Student-only"
+          "visibility": "Student-only",
+          "key": "698cc615-d733-481d-9d90-a394c166cf3f"
         },
         {
           "notice": "CS Principles Post-Course Survey for Students Now Open!",
           "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
           "link": "https://studio.code.org/s/csp-post-survey-2018",
           "type": "bullhorn",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "842ff04f-274b-4d6b-91af-40990d026b24"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -32,7 +34,7 @@
     },
     "new_name": null,
     "family_name": "csp5",
-    "serialized_at": "2022-03-22 21:16:36 UTC",
+    "serialized_at": "2022-09-28 14:31:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

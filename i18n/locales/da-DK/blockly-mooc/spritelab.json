@@ -1,5 +1,4 @@
 {
-  "errorLoadingAnimation": "Det ser ud til, at vi har problemer med at loade din animation \"{animationName}\". Undersøg om du har en god internet forbindelse og prøv igen at loade siden. Hvis dette problem fortsætter, så kan det være fordi din animation er i stykker. Hvis dette er tilfældet må du slette animationen.",
   "outbreakChangeHealthy": "Prøv at ændre antallet af monster figure.",
   "outbreakChangeSize": "Prøv at indstille dine alle figure til en anden størrelse.",
   "outbreakClickHealthy": "Ingen sunde monstre havde masker på. Klik på figurerne efter at have trykket på *\"Kør\"* og sørg for at du har den rigtige kode:\n <xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sund\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sund maske\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>",

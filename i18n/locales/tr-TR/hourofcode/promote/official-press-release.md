@@ -4,7 +4,7 @@ title: Seçilmiş Yetkililer için Hour of Code Basın Notları
 
 {{ signup_button }}
 
-# Yetkililer için örnek basın açıklaması
+# Seçilmiş yetkililer için örnek basın açıklaması
 
 ### Hour of Code'a katılımla ilgili mesajınızı oluşturmanıza yardımcı olması için bu örnek basın bülteni dilini kullanın.
 
@@ -30,7 +30,7 @@ Topluluk, Bilgisayar Bilimi Eğitim Haftası'na katılarak bilgisayar bilimleri 
 "Örnek İlköğretim okulu, öğrencilerini bilgisayar bilimiyle tanıştırmak için okul çapında bir Hour of Code etkinliği düzenledi. Tüm sınıflardan 700'den fazla öğrenci en az bir kez Hour of Code etkinliği yaptı. Topluluktan bir düzine ebeveyn ve gönüllü de etkinlikte desteklerini esirgemeyerek bilgisayar biliminin neden öğrencilerin hayatlarında önemli olduğunu gösteren bu toplantı için çocukları bir araya getirdiler." <br />
 
 [**BAĞLAM İÇİN ÖRNEK METİN:**]  
-Bilgisayarlar her yerde, ancak artık 10 yıl öncesine kıyasla bilgisayar bilimini daha az okul öğretiyor. Kız çocuklarının ve beyaz olmayan öğrencilerin temsil edilme oranı ciddi derecede düşük. Bu durumu iyileştiriyor olmamız güzel haber. Hour of Code, tüm öğrencilerin yüksek kaliteli bilgisayar bilimleri eğitimine erişmesini sağlamaya yönelik bir kapıdır. <br />
+Bilgisayarlar her yerde, ancak artık 10 yıl öncesine kıyasla bilgisayar bilimini daha az okul öğretiyor. Kız çocuklarının ve beyaz olmayan öğrencilerin temsil edilme oranı ciddi derecede düşüktür. Bu durumu iyileştiriyor olmamız güzel haber. Hour of Code, tüm öğrencilerin yüksek kaliteli bilgisayar bilimleri eğitimine erişmesini sağlamaya yönelik bir kapıdır. <br />
 
 Dünya üzerinde 100 milyondan fazla öğrenci Hour of Code'u denedi bile. Hour of Code sayesinde bilgisayar bilimi, Google, MSN, Yahoo! ve Disney şirketlerinin ana sayfalarında yerini aldı. Başkan Obama, Shakira ve Ashton Kutcher, Hour of Code'u videolarıyla başlattılar. 100'den fazla ortak bu hareketi desteklemek için bir araya geldi. <br />
 

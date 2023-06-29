@@ -2,7 +2,7 @@
 title: Cara membimbing orang tua
 ---
 
-# How to do an Hour of Code with your child
+# Cara melakukan Hour of Code bersama anak Anda
 Mencoba Hour of Code merupakan cara yang simpel dan menyenangkan untuk mengenalkan ilmu komputer kepada anak Anda, mungkin untuk pertama kalinya. Ilmu komputer tidak hanya menjadi dasar untuk semua bidang studi, akan tetapi <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">studi terbaru menunjukkan bahwa</a>: anak-anak yang mempelajari ilmu komputer berprestasi lebih baik di mata pelajaran lain, mahir dalam menyelesaikan masalah, dan <font color="00adbc"><b>memiliki kemungkinan 17% untuk mendaftar di perguruan tinggi</b></font>.
 
 Anda dapat bergabung dengan puluhan juta siswa di seluruh dunia dalam event (acara) global ini. Bersama-sama, kita dapat menginspirasi anak-anak untuk belajar, mematahkan stereotip, dan membantu anak-anak menemukan minat baru. Dan yang paling utama, Anda telah memiliki semua yang diperlukan untuk membawa Hour of Code ke rumah Anda!

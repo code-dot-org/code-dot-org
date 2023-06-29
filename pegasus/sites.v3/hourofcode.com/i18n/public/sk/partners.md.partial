@@ -2,13 +2,13 @@
 title: Partneri
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+Hodinu kódu riadi kontrolný výbor Hodiny kódu.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[Kontrolný výbor]({{ urls/review_committee }}) sa skladá z 12 súčasných a bývalých pedagógov v skupinách úrovne K-12, ktorí hodnotia a odporúčajú aktivity pomocou rubriky zostavenej poradným výborom. Títo pedagógovia vyhodnocujú aktivity určené na samostatnú prácu žiakov a plány hodín pre učiteľov, ktoré dostávame od stoviek našich partnerov. Vyhodnocujú učebný prínos týchto aktivít, ich schopnosť zaujať účastníkov a potenciálnu schopnosť osloviť rôzne skupiny žiakov.
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Práca a oddanosť výboru prispeli k úspechu Hodiny Kódu a jej vízie ponúkať úvod do informatiky pre každého študenta.
 
-# Hlavní partneri a firemní podporovatelia
+# Hlavní partneri a podporujúce spoločnosti
 
 {{ partners/major_partners_corporate_supporters }}
 
@@ -26,7 +26,7 @@ The committee's work and dedication have contributed to the success of the Hour 
 
 * * *
 
-# Partneri infraštruktúry a nástrojov
+# Partneri infraštruktúry a nástrojov
 
 {{ partners/infrastructure_partners_tools }}
 

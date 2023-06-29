@@ -20,3 +20,4 @@ answer 'Summer Wrap-up: 3 days in-person'
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

@@ -1,6 +1,6 @@
 import {
   ALL_PARTNERS_OPTION,
-  UNMATCHED_PARTNER_OPTION
+  UNMATCHED_PARTNER_OPTION,
 } from './regional_partner_dropdown';
 
 const SET_REGIONAL_PARTNER_FILTER =
@@ -12,7 +12,7 @@ const SET_REGIONAL_PARTNERS = 'application_dashboard/SET_REGIONAL_PARTNERS';
 const initialState = {
   regionalPartnerFilter: null,
   regionalPartnerGroup: null,
-  regionalPartners: []
+  regionalPartners: [],
 };
 
 export default function reducer(state = initialState, action) {
@@ -24,19 +24,19 @@ export default function reducer(state = initialState, action) {
       );
       return {
         ...state,
-        regionalPartnerFilter: action.filter
+        regionalPartnerFilter: action.filter,
       };
 
     case SET_REGIONAL_PARTNER_GROUP:
       return {
         ...state,
-        regionalPartnerGroup: action.group
+        regionalPartnerGroup: action.group,
       };
 
     case SET_REGIONAL_PARTNERS:
       return {
         ...state,
-        regionalPartners: action.partners
+        regionalPartners: action.partners,
       };
 
     default:
@@ -46,17 +46,17 @@ export default function reducer(state = initialState, action) {
 
 export const setRegionalPartnerFilter = filter => ({
   type: SET_REGIONAL_PARTNER_FILTER,
-  filter
+  filter,
 });
 
 export const setRegionalPartnerGroup = group => ({
   type: SET_REGIONAL_PARTNER_GROUP,
-  group
+  group,
 });
 
 export const setRegionalPartners = partners => ({
   type: SET_REGIONAL_PARTNERS,
-  partners
+  partners,
 });
 
 export function getInitialRegionalPartnerFilter(
@@ -74,7 +74,7 @@ export function getInitialRegionalPartnerFilter(
     } else if (regionalPartners.length === 1) {
       regionalPartnerFilter = {
         label: regionalPartners[0].name,
-        value: regionalPartners[0].id
+        value: regionalPartners[0].id,
       };
     } else {
       regionalPartnerFilter = ALL_PARTNERS_OPTION;

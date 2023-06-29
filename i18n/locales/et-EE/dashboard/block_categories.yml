@@ -2,16 +2,40 @@ et:
   data:
     block_categories:
       Actions: Tegevused
+      Advanced: Täpsemad
+      Behaviors: Käitumised
+      'Behaviors ': 'Käitumised '
+      Boolean: Tõeväärtus
+      Brushes: Pintslid
+      Category: Kategooria
       Color: Värv
       Comment: Kommentaar
+      Comments: Kommentaarid
       Conditionals: Tingimuslaused
+      Dancers: Tantsijad
+      Default: Vaikimisi
+      Effects: Efektid
       Events: Sündmused
       Functions: Funktsioonid
       'Functions ': 'Funktsioonid '
+      Game/Score: Mäng/skoor
+      Games/Score: Mängud/skoorid
+      Groups: Rühmad
+      Input: Sisend
       Location: Asukoht
+      Locations: Asukohad
       Logic: Loogika
       Loops: Tsüklid
       Math: Matemaatika
+      Number: Number
+      Numbers: Numbrid
+      Picker: Koguja
+      Prebuilt: Eelehitatud
+      Properties: Omadused
+      Sprites: Spraidid
+      String: Sõne
       Text: Tekst
       Variables: Muutujad
       'Variables ': 'Muutujad '
+      'Variables  ': 'Muutujad  '
+      World: Maailm

@@ -21,11 +21,18 @@ module PDF
     )
   end
 
+  PDF_GENERATION_TIMEOUT = 15 * 60
+
   def self.invoke_generation_script(args, options={})
     script_path = "#{deploy_dir}/bin/generate-pdf"
-    cmd = (['node', script_path] + args).join(" ")
+    cmd = (['timeout', PDF_GENERATION_TIMEOUT.to_s, 'node', script_path] + args).join(" ")
     puts cmd if options[:verbose]
     @result = `#{cmd}`
+    if $?.exitstatus == 124
+      raise "pdf generation timed out after #{PDF_GENERATION_TIMEOUT} seconds. cmd: #{cmd}"
+    elsif $?.exitstatus != 0
+      raise "pdf generation failed with status #{$?.exitstatus}. cmd: #{cmd}"
+    end
     puts "  #{@result}" if options[:verbose]
   end
 end

@@ -40,7 +40,7 @@ Do you believe that learning computer science can open doors of opportunity for 
 ## Залучіть своїх колег до волонтерства
 Розкажіть своїм друзям та колегам про Годину коду. Thousands of teachers are  looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Попросіть свого роботодавця долучитися. [Send this email]({{ promote/sample_emails }}) to your manager or the CEO to get everyone on board.
 
-## How to prepare
+## Як підготуватися
 - [Pick out a video]({{ promote/videos }}) to show to help focus the class and get them excited to do an Hour of Code.
 - Check out the [Hour of Code Volunteer Toolkit](/files/hoc-volunteer-toolkit.pdf) which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
 - If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial]({{ urls/learn }}).
@@ -71,8 +71,8 @@ When you're hosting an Hour of Code event, follow the sample agenda below to hel
 - And, check back in a month: Is the teacher interested in offering a computer science course? Share [resources and professional learning opportunities to help them do this](https://code.org/yourschool).
 
 ## How you get selected as a technical volunteer of guest speaker
-- Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local).
-- Try to make your profile as complete as possible to increase the chance that a teacher will select you.
+- Вчителі шукатимуть волонтерів за допомогою нашої [карти волонтерів](http://code.org/volunteer/local).
+- Намагайтеся вказати у своєму профілі якомога більше даних, щоб підвищити ймовірність того, що вчитель вибере саме вас.
 - Вчитель зв'яжеться з вами через цю форму (вашу адресу електронної пошти не буде показано вчителеві ніколи). *If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.*
 
 ## ЧаПи волонтерства під час Години коду
@@ -83,7 +83,7 @@ When you're hosting an Hour of Code event, follow the sample agenda below to hel
 ### Скільки триває відвідування класу?
 An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
 
-### What age group is the Hour of Code activity appropriate for?
+### Для якої вікової групи підходять заняття «Години коду»?
 Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
 
 

@@ -1,14 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-09-19T22:54:22.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
     "embed": "false",
-    "start_blocks": "background(\"lightyellow\");\r\ntext(\"Change me and add another text block!\", 50, 200);",
+    "start_blocks": "background(\"lightyellow\");\r\n//1) Change the displayed text in the provided code.\r\ntext(\"Change me and add another text block!\", 50, 200);\r\n//2) Add another sentence in a different part of the screen.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -82,15 +78,19 @@
       "/courses/csd-2022/guides/drawing-shapes",
       "/courses/csd-2022/guides/shapes-and-parameters"
     ],
-    "long_instructions": "# Text\r\n\r\nYou can put text anywhere you'd like on the screen using `text`.  **Read the documentation by clicking on the block in the toolbox** to see how to change the size and color of your text.\r\n\r\n# Do This\r\n* Change the displayed text in the provided code.\r\n* Add a second `text` block to write in a different part of the screen.",
+    "long_instructions": "# Text\r\n\r\nYou can put text anywhere you'd like on the screen using the [`text`(#4dd0e1)](/docs/ide/gamelab/expressions/text) block.  **Read the documentation by clicking on the block in the toolbox** to see how to change the size and color of your text.\r\n\r\n# Do This\r\n1) Change the displayed text in the provided code.\r\n   - Replace the text in the [`text`(#4dd0e1)](/docs/ide/gamelab/expressions/text) block that says \"Change me and add another text block!\"\r\n2) Add another sentence in a different part of the screen.\r\n   - Add a second [`text`(#4dd0e1)](/docs/ide/gamelab/expressions/text) block and change the `x` and `y` location in the block.",
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-09-19T22:54:22.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:54:22.836+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites text_2022\\\"\"],\"cloned_from\":\"CSD U3 Sprites text_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:54:22.836+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites text_2022\\\"\"],\"cloned_from\":\"CSD U3 Sprites text_2022\"},{\"changed_at\":\"2023-01-11 00:13:12 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

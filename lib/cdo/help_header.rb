@@ -53,8 +53,17 @@ class HelpHeader
     if options[:level] && options[:level].game == Game.weblab
       entries << {
         title: I18n.t("#{loc_prefix}web_lab_documentation"),
-        url: "https://studio.code.org/docs/weblab/ol/",
+        url: "https://studio.code.org/docs/ide/weblab/",
         id: "weblab-docs"
+      }
+    end
+
+    if options[:level] && options[:level].game == Game.music
+      options[:request].path.starts_with?('/projectbeats')
+      entries << {
+        title: I18n.t("#{loc_prefix}project_beats_documentation"),
+        url: "https://studio.code.org/docs/ide/projectbeats/",
+        id: "musiclab-docs"
       }
     end
 

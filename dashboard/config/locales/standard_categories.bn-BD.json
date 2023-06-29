@@ -1,0 +1,17 @@
+{
+  "bn-BD": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "গণিতিক চিন্তা-ভাবনা"
+        },
+        "L": {
+          "description": "ভাষা"
+        },
+        "F": {
+          "description": "ফাংশনগুলি"
+        }
+      }
+    }
+  }
+}

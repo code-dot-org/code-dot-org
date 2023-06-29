@@ -486,43 +486,50 @@
             "name": "zıpla",
             "parameters": {
               "height": "Yükseklik",
-              "actor": "aktör"
+              "actor": "oyuncu"
             }
           }
         },
         "Course 4 Play Lab Params 4": {
           "do something": {
             "name": "bir şeyler yap"
+          },
+          "patrol": {
+            "name": "Devriye"
           }
         },
         "Course 4 Play Lab Params 5": {
           "patrol": {
             "parameters": {
-              "actor": "aktör"
-            }
+              "actor": "oyuncu"
+            },
+            "name": "Devriye"
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
             "parameters": {
-              "actor": "aktör"
-            }
+              "actor": "oyuncu"
+            },
+            "name": "Devriye"
           }
         },
         "Course 4 Play Lab Params 7": {
           "patrol": {
             "parameters": {
-              "actor": "aktör",
+              "actor": "oyuncu",
               "speed": "hız"
-            }
+            },
+            "name": "Devriye"
           }
         },
         "Course 4 Play Lab Params 8": {
           "patrol": {
             "parameters": {
-              "actor": "aktör",
+              "actor": "oyuncu",
               "speed": "hız"
-            }
+            },
+            "name": "Devriye"
           }
         },
         "Course 4 Play Lab Params 9": {
@@ -995,14 +1002,16 @@
             "name": "zıpla",
             "parameters": {
               "height": "Yükseklik",
-              "actor": "aktör"
-            }
+              "actor": "oyuncu"
+            },
+            "description": "yükseklik ve aktör parametreli zıplama fonksiyon bloğu"
           },
           "patrol": {
             "parameters": {
-              "actor": "aktör",
+              "actor": "oyuncu",
               "speed": "hız"
-            }
+            },
+            "name": "Devriye"
           }
         },
         "New Artist Project": {
@@ -1060,14 +1069,17 @@
             "name": "zıpla",
             "parameters": {
               "height": "Yükseklik",
-              "actor": "aktör"
-            }
+              "actor": "oyuncu"
+            },
+            "description": "yükseklik ve aktör parametreli zıplama fonksiyon bloğu"
           },
           "patrol": {
             "parameters": {
-              "actor": "aktör",
+              "actor": "oyuncu",
               "speed": "hız"
-            }
+            },
+            "name": "Devriye",
+            "description": "bir aktör ve hız parametresi olan bir devriye fonksiyonu"
           }
         },
         "Robot Doodle": {
@@ -3318,7 +3330,7 @@
         },
         "MC_HOC_2017_Ali": {
           "build short bridge": {
-            "name": "kısa köpru kur"
+            "name": "kısa köprü kur"
           },
           "build long bridge": {
             "name": "uzun köprü kur"
@@ -3326,7 +3338,7 @@
         },
         "MC_HOC_2017_Ali_2019": {
           "build short bridge": {
-            "name": "kısa köpru kur"
+            "name": "kısa köprü kur"
           },
           "build long bridge": {
             "name": "uzun köprü kur"
@@ -3334,7 +3346,7 @@
         },
         "MC_HOC_2017_Ali_2020": {
           "build short bridge": {
-            "name": "kısa köpru kur"
+            "name": "kısa köprü kur"
           },
           "build long bridge": {
             "name": "uzun köprü kur"
@@ -3788,7 +3800,7 @@
         },
         "MC_HOC_2017_Ali_2021": {
           "build short bridge": {
-            "name": "kısa köpru kur"
+            "name": "kısa köprü kur"
           },
           "build long bridge": {
             "name": "uzun köprü kur"
@@ -4392,7 +4404,7 @@
         },
         "MC_HOC_2017_Ali2022": {
           "build short bridge": {
-            "name": "kısa köpru kur"
+            "name": "kısa köprü kur"
           },
           "build long bridge": {
             "name": "uzun köprü kur"

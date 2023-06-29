@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-09-19T22:55:31.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -54,12 +50,20 @@
       "comment_Math": null,
       "comment_GameLab": null,
       "comment_Sprites": null,
-      "draw": null,
+      "strokeWeight": null,
       "x": null,
       "y": null,
+      "sprite.height": null,
+      "sprite.width": null,
       "rotation": null,
-      "World.frameRate": null,
-      "assign_x": null
+      "tint": null,
+      "alpha": null,
+      "arc": null,
+      "point": null,
+      "regularPolygon": null,
+      "shape": null,
+      "draw": null,
+      "World.frameRate": null
     },
     "disable_if_else_editing": "false",
     "show_debug_watch": "false",
@@ -69,7 +73,7 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "callout_json": "[]",
-    "long_instructions": "# Extend Your Scene\r\n\r\nThis is the sprite scene you made in the last lesson. You'll now be updating it a little bit to use the draw loop and sprite properties.\r\n\r\n<img src=\"https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29 PM.png\" style=\"float:right;height:100px\">\r\n\r\n# Do This\r\n\r\n* Add a draw loop to your program (you should only have one).\r\n* Use the lasso selector (click, hold and drag) to select the code that will be updated each time and place it inside your draw loop. Ctrl-Z will let you undo any mistakes you make.\r\n* Add code to your program that updates your sprites' `sprite.x`, `sprite.y`, or `sprite.rotation` properties so that they move. You'll need to update them with `randomNumber()`.\r\n",
+    "long_instructions": "# Extend Your Scene\r\n\r\nThis is the sprite scene you made in the last lesson. You will need to do a little updating to your program in order to use the draw loop to update your sprites' [`sprite.x`(#f78183)](/docs/ide/gamelab/expressions/x), [`sprite.y`(#f78183)](/docs/ide/gamelab/expressions/y), or [`sprite.rotation`(#f78183)](/docs/ide/gamelab/expressions/rotation) properties so that they move. You may also need to update them with [`randomNumber();`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber)sprite properties.\r\n\r\n\r\n<img src=\"https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29 PM.png\" style=\"float:right;height:100px\">\r\n\r\n# Do This\r\n\r\n1) Add a draw loop to your program (you should only have one).\r\n2) Use the lasso selector (click, hold and drag) to select the code that will be updated each time and place it inside your draw loop. Ctrl-Z will let you undo any mistakes you make.\r\n3) Add code to your program that will animate your sprites.\r\n",
     "project_template_level_name": "CSD U3 Sprites scene template_2023",
     "display_name": "Challenge: Extend Your Scene",
     "disable_procedure_autopopulate": "false",
@@ -77,13 +81,13 @@
     "parent_level_id": 20718,
     "name_suffix": "_2023",
     "reference_links": [
-      "/docs/csd-1718/draw_loop/index.html",
-      "/docs/csd-1718/sprites/index.html",
-      "/docs/csd-1718/animation_tab/index.html",
-      "/docs/csd-1718/variables_intro_csd/index.html",
-      "/docs/csd-1718/random_numbers_csd/index.html"
+      "/courses/csd-2022/guides/the-draw-loop",
+      "/courses/csd-2022/guides/sprites",
+      "/courses/csd-2022/guides/animation-tab",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/random-numbers"
     ],
-    "map_reference": "/docs/csd-1718/sprite_properties/index.html",
+    "map_reference": "/courses/csd-2022/guides/sprite-properties",
     "video_key": "csd_gamelab_drawloop",
     "show_type_hints": "false",
     "encrypted": "false",
@@ -96,11 +100,19 @@
     "thumbnail_url": "https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29 PM.png",
     "libraries_enabled": "false",
     "bubble_choice_description": "Use the draw loop to make your sprite from last lesson move.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "validation_enabled": "false"
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-09-19T22:55:31.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:55:31.229+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Draw Loop Plugged update your scene_2022\\\"\"],\"cloned_from\":\"CSD U3 Draw Loop Plugged update your scene_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:55:31.229+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Draw Loop Plugged update your scene_2022\\\"\"],\"cloned_from\":\"CSD U3 Draw Loop Plugged update your scene_2022\"},{\"changed_at\":\"2023-01-11 18:25:04 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

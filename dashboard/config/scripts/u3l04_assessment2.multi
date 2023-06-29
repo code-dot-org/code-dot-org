@@ -1,27 +1,21 @@
 name 'U3L04 Assessment2'
-encrypted '13iS0tQYAZE0ZqqMqZZPgZxjkaC3NIY//Vz2abSP7bpWfzBCQ8T1h9638KgE
-3iJMreXzc5tE6jLgwF5qdiQgKE4dRkw2hqmy84ykrAb9dvhSnUt7AzU50VeB
-U+K0WWVvImY1rEbXyRMjgaqqgk5V+3n8u4Q83t1lgcprBXGMMq2wkEvbohnq
-uCr6g+pmenw3f7gGONRYb7riHOCzFrR/k7qC4gG7llb3C2/OghCsKMK3skuk
-oWloAs1dbrtBOoQNQegKtxwwO85JaYA5SsE6YcUN+0QBcV78rocDJJMsYn7U
-FO/tpbPEisCxee22RH+vQxtQRF/KesawUr2xpDw5bhiUO38Iky58awVyYbUe
-4IvQIdPedWG54hsh+0BEZ6AzC3Ef7ga486Q3puJZT8MjbS2tptyuW8JJ4Txv
-WBxyh9AssU5tqYrtkoLEw0EbzV9pQaGPOT7wP2doQVQ0PlgPaex/WZ3QDr0l
-quLBhFL8+oC9tKaF4nmfjkauLBTjQKMfa3KGwRqVUO8iPYYTgrShD1lUnBc/
-+VlQ1n4GGyn5FDzKv+GY8fWB/iswEgAUa9Xu4MlUshonZNFIjAkWwvaf2uKx
-2rfhM1Jv3bMehPdshIyXeUQH9nzTPcgqqSyCO3t/OeAt87En3nc7i9ro9qW2
-Xdio7gkvZ1kPYTVxdZ6wnJ8ilQC05LBIMEOi7C0ibcPXaTs2WprkF/VVdVsT
-khsnNt2ceggETYtaqYvWB35o+ylboBJoh+7fZ/5nfZfTc5Wv+Dl/F0yjk/uw
-3BAA9VckrQRq2L+5Shhz6VxQ7vpVyGYE99Avvkgz5OaSx9s8lKlAmKixwErg
-W4MUd0QHACuw3h7PNiQMd9a21c50zQqsv+5+Qz221234+CYmFDgbZSgvMm+L
-hYpLMubwV3/xY5k0ZUPbggb2cb/mVADtksY5qASISXHEln2Z7JIbzfYtVcC5
-gs/F7JeDx+KBAew+6VdsSlJFvrAFdHJ6zjpzheUZ1HMtezL5SXwc+M9eG73R
-XIfAb784aPhoGD72yJZuviFzQsyAJHHbpwc+XIUScxsBNCqpnYPmEkkE8mn/
-c3i7jgzNjcmwSxQEvP7tps+vcYOhMorqGNOSNwF2WFJL4nKOYCoHrXFxREVh
-Tj9EJf/9SKGJEYcjyArVl8fCHvwHiOmxWSpFhHyAfQX4q3VZLVzit+IKyG1L
-6EdoC1kxZnrFlE3vFHKUiqRph8CPJ4mU3MYuPiVQImIx60gOx+cVw7engXug
-LfPwkBVQcwYcN9VPClxMgZHJo4F74mQHQ4eia7fKEYCWDSYMhZfdxTJjXkgZ
-UguODAElNKnXSntBRdEDl+faC6pXl7nJkPUIfHy4xHBOxjNqLuvoCkLFz9aA
-co/45B6v/feAhzDVLY8g60f0d/SjScj23Q29d1OIRdZPlae7eS8LAi9VDGs6
-7lanLlH1PHVCoT8JkXUirtzHkvuXh7v2
-'
+title 'Multiple Choice: Functions and Top-Down Design'
+
+question 'Which of the following statements about writing functions and Top-Down Design is NOT true?'
+wrong 'Writing functions helps manage complexity in a program.'
+wrong 'Top-Down Design leads to programs which feature multiple layers of abstraction.'
+right 'Two programmers solving the same problem using Top-Down Design should arrive at identical programs.' 
+wrong 'Top-Down Design relies upon identifying sub-problems of a larger problem.'
+wrong 'Top-Down Design assists in identifying the layers of functions that will be used to solve a programming problem.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Correct answer:
+
+* Two programmers solving the same problem using Top-Down Design should arrive at identical programs.
+	* Explanation: Often, there are multiple correct ways to arrive at a solution. Two programmers working separately on the same problem could come up with different ways to solve that problem, so their programs will also be different.
+MARKDOWN
+
+allow_multiple_attempts true

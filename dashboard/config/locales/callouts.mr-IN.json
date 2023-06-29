@@ -1893,6 +1893,73 @@
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "टूलबॉक्समधील ब्लॉक्स तुमच्या वर्कस्पेसमध्ये ड्रॅग करा."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "नवीन पार्श्वभूमी सेट करण्यासाठी या ब्लॉकचा वापर करा."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "नवीन पार्श्वभूमी सेट करण्यासाठी या ब्लॉकचा वापर करा."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "खालील वर्तनांपैकी एकासह हा ब्लॉक वापरा."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "खालील वर्तनांपैकी एकासह हा ब्लॉक वापरा."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "कोड रन करण्यासाठी येथे क्लिक करा."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "तुमच्या कार्यक्षेत्रात हा इव्हेंट ब्लॉक जोडा."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "तुमच्या कार्यक्षेत्रात हा इव्हेंट ब्लॉक जोडा."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "तुमच्या प्रोजेक्टमध्ये पोशाख जोडण्यासाठी येथे क्लिक करा."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "तुमच्या प्रोजेक्टमध्ये पोशाख जोडण्यासाठी येथे क्लिक करा."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "पिन"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "पिन"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "पिन"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "पिन"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "स्प्राईट्सला बोलण्यासाठी या ब्लॉकचा वापर करा.",
+          "hello_world_make_sprite": "स्प्राईट तयार करण्यासाठी या ब्लॉकचा वापर करा."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "स्प्राईट्सला बोलण्यासाठी या ब्लॉकचा वापर करा.",
+          "hello_world_make_sprite": "स्प्राईट तयार करण्यासाठी या ब्लॉकचा वापर करा."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "नवीन ब्लॉक!",
+          "hello_world_new_block": "नवीन ब्लॉक!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "नवीन ब्लॉक!",
+          "hello_world_new_block": "नवीन ब्लॉक!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "नवीन ब्लॉक!"
         }
       }
     }

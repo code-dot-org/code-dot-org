@@ -21,3 +21,5 @@ The most accurate description is that **People search for "dogs" more frequently
 
 All of the other responses inject some form of *rationale or reason* for why dogs are searched for more frequently than cats, rather than just describing what the data shows.  From this graph alone we have no idea why it's showing this way.
 MARKDOWN
+
+allow_multiple_attempts true

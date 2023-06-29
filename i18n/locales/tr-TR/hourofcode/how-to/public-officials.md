@@ -4,7 +4,7 @@ title: Kamu görevlileri için rehber
 
 {{ signup_button }}
 
-# Bütün okul çevresini bu işe nasıl dahil ederim
+# Bütün çevremi bu işe nasıl dahil ederim
 
 ### Bilgisayar bilimine sorumluluk geregi ulkeni, semtini, veya sehrini goster
 
@@ -12,7 +12,7 @@ title: Kamu görevlileri için rehber
 
 </br>
 
-## Senin Kode Saatinde resmi gorevli birini konuk ediyormusun?
+## Senin hour of Code 'una resmi gorevli birini konuk ediyormusun?
 
 Onların ziyaretini ve sizin etkinliğinizi harika hale getirmek için ihtiyacınız olan tüm bilgileri içeren [araç kitimizi görüntüleyin](/files/elected-official.pdf).
 
@@ -24,7 +24,7 @@ Soldan sağa: *Hour of Code'a katılan Arkansas, Kuzey Carolina ve Arizona valil
 
 ### 1. Tek sayfalık dokümanımızı okuyun
 
-[Bilgisayar bilimlerinin neden önemli olduğuna]({{ localized_files/hoc_one_pager }}) ve Kodlama Saati'ne destek vererek bu çabaya nasıl yardım edebileceğinize bakın.
+[Bilgisayar bilimlerinin neden önemli olduğuna]({{ localized_files/hoc_one_pager }}) ve Hour of Code'a destek vererek bu çabaya nasıl yardım edebileceğinize bakın.
 
 ### 2. Yerel okulları ve bölgeleri dahil edin
 

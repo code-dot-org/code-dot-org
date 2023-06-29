@@ -10,36 +10,36 @@ module.exports = {
       'functional_greater_than',
       {
         ARG1: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 2}),
-        ARG2: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 1})
+        ARG2: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 1}),
       },
       null
     ),
     requiredBlocks: '',
-    freePlay: false
+    freePlay: false,
   },
   tests: [
     {
       description: 'empty answer',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Eval.message,
           commonMsg.emptyTopLevelBlock({topLevelBlockName: 'evaluate'})
         );
         return true;
       },
-      xml: '<xml></xml>'
+      xml: '<xml></xml>',
     },
     {
       description: 'empty input',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Eval.message, commonMsg.emptyFunctionalBlock());
         return true;
       },
@@ -49,21 +49,21 @@ module.exports = {
           'functional_greater_than',
           {
             ARG1: blockUtils.mathBlockXml('functional_math_number', null, {
-              NUM: 2
-            })
+              NUM: 2,
+            }),
             // missing ARG2
           },
           null
         ) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'empty input in variable',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Eval.message,
           commonMsg.emptyBlockInVariable({name: 'my-image'})
@@ -110,15 +110,15 @@ module.exports = {
         '      </block>' +
         '    </functional_input>' +
         '  </block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'empty input in function',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(
           Eval.message,
           commonMsg.emptyBlockInFunction({name: 'red-circle'})
@@ -186,16 +186,16 @@ module.exports = {
         '      </block>' +
         '    </functional_input>' +
         '  </block>' +
-        '</xml>'
+        '</xml>',
     },
 
     {
       description: 'unnamed function',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTION_NAME
+        testResult: TestResults.EMPTY_FUNCTION_NAME,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Eval.message, commonMsg.unnamedFunction());
         return true;
       },
@@ -245,16 +245,16 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
 
     {
       description: 'unnamed variable',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTION_NAME
+        testResult: TestResults.EMPTY_FUNCTION_NAME,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Eval.message, commonMsg.unnamedFunction());
         return true;
       },
@@ -293,16 +293,16 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
 
     {
       description: 'unnamed function',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTION_NAME
+        testResult: TestResults.EMPTY_FUNCTION_NAME,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(Eval.message, commonMsg.unnamedFunction());
         return true;
       },
@@ -352,7 +352,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

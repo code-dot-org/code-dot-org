@@ -1,0 +1,74 @@
+{
+  "mt-MT": {
+    "data": {
+      "start_html": {
+        "CSD U1 storage friends_2021": {
+          "Back": "Lura"
+        },
+        "CSD U1 storage friends_2022": {
+          "Back": "Lura"
+        },
+        "CSD U1 storage outfit_2021": {
+          "green": "aħdar"
+        },
+        "CSD U1 storage outfit_2022": {
+          "green": "aħdar"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "red": "aħmar",
+          "green": "aħdar"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "green": "aħdar",
+          "blue": "Ikħal"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Aggorna"
+        },
+        "CSD U6 analog light": {
+          "Update": "Aggorna"
+        },
+        "CSD U6 analog light_2018": {
+          "Update": "Aggorna"
+        },
+        "CSD U6 analog light_2019": {
+          "Update": "Aggorna"
+        },
+        "CSD U6 analog light_2021": {
+          "Update": "Aggorna"
+        },
+        "CSD U6 arrays select predict": {
+          "first": "l'ewwel"
+        },
+        "CSD U6 arrays select predict_2018": {
+          "first": "l'ewwel"
+        },
+        "CSD U6 arrays select predict_2019": {
+          "first": "l'ewwel"
+        },
+        "CSD U6 arrays select predict_2021": {
+          "first": "l'ewwel"
+        },
+        "CSDU4 Functionality visible": {
+          "Show": "Uri"
+        },
+        "CSDU6 - UI and Inputs - getNumber": {
+          "+": "+"
+        },
+        "CSDU6 - UI and Inputs - setScreen": {
+          "Back": "Lura"
+        },
+        "ml-models in applab-choice intended warnings": {
+          "Back": "Lura"
+        },
+        "ml-models in applab-choice intended warnings_2022": {
+          "Back": "Lura"
+        }
+      }
+    }
+  }
+}

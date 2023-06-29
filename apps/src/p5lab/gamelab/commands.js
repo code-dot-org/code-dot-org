@@ -15,32 +15,32 @@ import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
 */
 let gamelabCommands = module.exports;
 
-gamelabCommands.getUserId = function() {
+gamelabCommands.getUserId = function () {
   if (!studioApp().labUserId) {
     throw new Error('User ID failed to load.');
   }
   return studioApp().labUserId;
 };
 
-gamelabCommands.getKeyValue = function(opts) {
+gamelabCommands.getKeyValue = function (opts) {
   var onSuccess = gamelabCommands.handleReadValue.bind(this, opts);
   var onError = opts.onError;
   studioApp().storage.getKeyValue(opts.key, onSuccess, onError);
 };
 
-gamelabCommands.handleReadValue = function(opts, value) {
+gamelabCommands.handleReadValue = function (opts, value) {
   if (opts.onSuccess) {
     opts.onSuccess.call(null, value);
   }
 };
 
-gamelabCommands.setKeyValue = function(opts) {
+gamelabCommands.setKeyValue = function (opts) {
   var onSuccess = gamelabCommands.handleSetKeyValue.bind(this, opts);
   var onError = opts.onError;
   studioApp().storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
-gamelabCommands.handleSetKeyValue = function(opts) {
+gamelabCommands.handleSetKeyValue = function (opts) {
   if (opts.onSuccess) {
     opts.onSuccess.call(null);
   }

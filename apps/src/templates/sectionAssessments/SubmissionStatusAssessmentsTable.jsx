@@ -17,7 +17,7 @@ const TABLE_COLUMN_WIDTHS = {
   numMultipleChoice: TABLE_WIDTH / 12,
   numMatchCorrect: TABLE_WIDTH / 12,
   numMatch: TABLE_WIDTH / 12,
-  submissionTimeStamp: TABLE_WIDTH / 3
+  submissionTimeStamp: TABLE_WIDTH / 3,
 };
 
 export const COLUMNS = {
@@ -26,7 +26,7 @@ export const COLUMNS = {
   NUM_MULTIPLE_CHOICE: 2,
   NUM_MATCH_CORRECT: 3,
   NUM_MATCH: 4,
-  SUBMISSION_TIMESTAMP: 5
+  SUBMISSION_TIMESTAMP: 5,
 };
 
 /**
@@ -40,16 +40,16 @@ export const COLUMNS = {
 class SubmissionStatusAssessmentsTable extends Component {
   static propTypes = {
     studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType),
-    localeCode: PropTypes.string
+    localeCode: PropTypes.string,
   };
 
   state = {
     sortingColumns: {
       [COLUMNS.NAME]: {
         direction: 'asc',
-        position: 0
-      }
-    }
+        position: 0,
+      },
+    },
   };
 
   getSortingColumns = () => {
@@ -64,10 +64,10 @@ class SubmissionStatusAssessmentsTable extends Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -132,20 +132,20 @@ class SubmissionStatusAssessmentsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.name}
-            }
+              ...{width: TABLE_COLUMN_WIDTHS.name},
+            },
           },
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [this.nameCellFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.studentNameColumn
-            }
-          }
-        }
+              ...styles.studentNameColumn,
+            },
+          },
+        },
       },
       {
         property: 'numMultipleChoiceCorrect',
@@ -154,13 +154,13 @@ class SubmissionStatusAssessmentsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.numMultipleChoiceCorrect}
-            }
-          }
+              ...{width: TABLE_COLUMN_WIDTHS.numMultipleChoiceCorrect},
+            },
+          },
         },
         cell: {
-          props: {style: tableLayoutStyles.cell}
-        }
+          props: {style: tableLayoutStyles.cell},
+        },
       },
       {
         property: 'numMultipleChoice',
@@ -169,13 +169,13 @@ class SubmissionStatusAssessmentsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.numMultipleChoice}
-            }
-          }
+              ...{width: TABLE_COLUMN_WIDTHS.numMultipleChoice},
+            },
+          },
         },
         cell: {
-          props: {style: tableLayoutStyles.cell}
-        }
+          props: {style: tableLayoutStyles.cell},
+        },
       },
       {
         property: 'numMatchCorrect',
@@ -184,13 +184,13 @@ class SubmissionStatusAssessmentsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.numMatchCorrect}
-            }
-          }
+              ...{width: TABLE_COLUMN_WIDTHS.numMatchCorrect},
+            },
+          },
         },
         cell: {
-          props: {style: tableLayoutStyles.cell}
-        }
+          props: {style: tableLayoutStyles.cell},
+        },
       },
       {
         property: 'numMatch',
@@ -199,13 +199,13 @@ class SubmissionStatusAssessmentsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.numMatch}
-            }
-          }
+              ...{width: TABLE_COLUMN_WIDTHS.numMatch},
+            },
+          },
         },
         cell: {
-          props: {style: tableLayoutStyles.cell}
-        }
+          props: {style: tableLayoutStyles.cell},
+        },
       },
       {
         property: 'submissionTimeStamp',
@@ -214,17 +214,17 @@ class SubmissionStatusAssessmentsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.timeStamp}
+              ...{width: TABLE_COLUMN_WIDTHS.timeStamp},
             },
-            id: 'timestampHeaderCell'
+            id: 'timestampHeaderCell',
           },
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [this.submissionTimestampColumnFormatter],
-          props: {style: tableLayoutStyles.cell}
-        }
-      }
+          props: {style: tableLayoutStyles.cell},
+        },
+      },
     ];
     return dataColumns;
   };
@@ -242,7 +242,7 @@ class SubmissionStatusAssessmentsTable extends Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(this.props.studentOverviewData);
 
     return (
@@ -264,23 +264,23 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   icon: {
     color: color.purple,
-    fontSize: 16
+    fontSize: 16,
   },
   text: {
-    marginRight: 5
+    marginRight: 5,
   },
   headerLabels: {
     color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
   },
   studentNameColumn: {
     color: color.teal,
-    fontFamily: '"Gotham 5r", sans-serif'
-  }
+    fontFamily: '"Gotham 5r", sans-serif',
+  },
 };
 
 export default SubmissionStatusAssessmentsTable;

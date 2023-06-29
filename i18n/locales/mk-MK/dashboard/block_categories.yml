@@ -2,9 +2,34 @@ mk:
   data:
     block_categories:
       Actions: Акции
+      Advanced: Напредно
+      Behaviors: Однесувања
+      'Behaviors ': 'Однесувања '
+      Boolean: Булова
+      Brushes: Четки
+      Comment: Коментар
+      Comments: Коментари
+      Dancers: Танчери
+      Default: Стандардно
+      Effects: Ефекти
+      'Functions ': 'Функции '
+      Game/Score: Игра/Резултат
+      Games/Score: Игри/Резултат
+      Groups: Групи
+      Input: Влез
+      Locations: Локации
       Logic: Логика
       Loops: Лупови
       Math: Математика
+      Number: Број
+      Numbers: Броеви
+      Picker: берач
+      Prebuilt: Преграден
+      Properties: Својства
+      Sprites: Сприти
+      String: Стринг
       Text: Текст
       Variables: Променливи
       'Variables ': 'Променливи '
+      'Variables  ': 'Променливи  '
+      World: Светот

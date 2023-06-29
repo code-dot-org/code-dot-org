@@ -13,7 +13,7 @@ class SmsControllerTest < ActionController::TestCase
     expected_twilio_options = {
       messaging_service_sid: 'fake_messaging_service_sid',
       to: 'xxxxxx',
-      body: "Check this out on Code Studio: http://test.host/c/#{level_source.id} (reply STOP to stop receiving this)"
+      body: "Check this out on Code Studio: http://test.host/c/#{level_source.id}?sms=true (reply STOP to stop receiving this)"
     }
 
     twilio_messages_mock = stub(:messages)
@@ -34,7 +34,7 @@ class SmsControllerTest < ActionController::TestCase
     expected_twilio_options = {
       messaging_service_sid: 'fake_messaging_service_sid',
       to: 'xxxxxx',
-      body: "Check this out on Code Studio: #{project_share_url} (reply STOP to stop receiving this)"
+      body: "Check this out on Code Studio: #{project_share_url}?sms=true (reply STOP to stop receiving this)"
     }
 
     twilio_messages_mock = stub(:messages)
@@ -44,26 +44,6 @@ class SmsControllerTest < ActionController::TestCase
     post :send_to_phone, params: {
       type: 'applab',
       channel_id: channel_id,
-      phone: 'xxxxxx'
-    }
-
-    assert_response :ok
-  end
-
-  test "send download url to phone succeeds when twilio succeeds" do
-    download_url = "http://test-studio.code.org/foo.apk"
-    expected_twilio_options = {
-      messaging_service_sid: 'fake_messaging_service_sid',
-      to: 'xxxxxx',
-      body: "Install this app created in Code Studio on your Android device: #{download_url} (reply STOP to stop receiving this)"
-    }
-
-    twilio_messages_mock = stub(:messages)
-    twilio_messages_mock.expects(:create).with(expected_twilio_options).returns(true)
-    Twilio::REST::Client.any_instance.stubs(:messages).returns(twilio_messages_mock)
-
-    post :send_download_url_to_phone, params: {
-      url: download_url,
       phone: 'xxxxxx'
     }
 

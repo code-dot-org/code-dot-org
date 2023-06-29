@@ -176,7 +176,7 @@
     "LOGIC_BOOLEAN_TOOLTIP": "Regresar sea «verdadero» o «falso».",
     "LOGIC_BOOLEAN_TRUE": "verdadero",
     "LOGIC_COMPARE_HELPURL": "http://es.wikipedia.org/wiki/Desigualdad_matemática",
-    "LOGIC_COMPARE_TOOLTIP_EQ": "Retorno verdad, si ambas entradas son iguales entre si.",
+    "LOGIC_COMPARE_TOOLTIP_EQ": "Devuelve verdadero si ambas entradas son iguales entre si.",
     "LOGIC_COMPARE_TOOLTIP_GT": "Devuelve es verdadero, si la primera entrada es mayor que la segunda.",
     "LOGIC_COMPARE_TOOLTIP_GTE": "Retorno verdad, si la primera entrada es mayor o igual a la segunda.",
     "LOGIC_COMPARE_TOOLTIP_LT": "Retorno verdad, si la primera entrada es menor que la segunda.",

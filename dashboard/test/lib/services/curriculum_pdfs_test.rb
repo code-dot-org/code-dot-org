@@ -7,6 +7,7 @@ module Services
 
     setup do
       PDF.stubs(:generate_from_url)
+      AWS::S3.unstub(:cached_exists_in_bucket?)
     end
 
     test 'get_pdfless_lessons will only include lessons not present in S3' do

@@ -9,7 +9,7 @@ When /^I press the settings cog$/ do
 end
 
 When /^I press the settings cog menu item "([^"]*)"$/ do |item_text|
-  menu_item_selector = ".settings-cog-menu:visible .pop-up-menu-item:contains(#{item_text})"
+  menu_item_selector = ".ui-test-settings-cog-menu:visible .ui-test-settings-cog-menu-item:contains(#{item_text})"
   steps %{
     Then I wait until element "#{menu_item_selector}" is visible
     And I click selector "#{menu_item_selector}"
@@ -19,13 +19,13 @@ end
 Then /^I open the Manage Assets dialog$/ do
   steps <<-STEPS
     Then I click selector ".settings-cog"
-    And I click selector ".pop-up-menu-item"
+    And I click selector ".ui-test-settings-cog-menu-item"
   STEPS
 end
 
 Then /^I open the Manage Libraries dialog$/ do
   steps <<-STEPS
     Then I click selector ".settings-cog"
-    And I click selector ".pop-up-menu-item:contains(Manage Libraries)"
+    And I click selector ".ui-test-settings-cog-menu-item:contains(Manage Libraries)"
   STEPS
 end

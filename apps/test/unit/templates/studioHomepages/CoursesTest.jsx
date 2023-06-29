@@ -11,7 +11,7 @@ const TEST_PROPS = {
   isTeacher: true,
   isSignedOut: true,
   studentsCount: '0',
-  modernElementaryCoursesAvailable: true
+  modernElementaryCoursesAvailable: true,
 };
 
 describe('Courses', () => {
@@ -39,9 +39,9 @@ describe('Courses', () => {
         const wrapper = mountCourses({isEnglish, isTeacher: false});
         assertComponentsInOrder(wrapper, [
           'SpecialAnnouncement',
-          'CourseBlocksStudentGradeBands',
+          'CourseBlocksWrapper',
           'CourseBlocksHoc',
-          'LocalClassActionBlock'
+          'LocalClassActionBlock',
         ]);
       });
 
@@ -49,10 +49,10 @@ describe('Courses', () => {
         const wrapper = mountCourses({isEnglish, isTeacher: true});
         assertComponentsInOrder(wrapper, [
           'CoursesTeacherEnglish',
-          'CourseBlocksTeacherGradeBands',
+          'CourseBlocksWrapper',
           'CourseBlocksHoc',
-          'CourseBlocksTools',
-          'AdministratorResourcesActionBlock'
+          'CourseBlocksWrapper',
+          'AdministratorResourcesActionBlock',
         ]);
       });
     });
@@ -68,7 +68,7 @@ describe('Courses', () => {
             const wrapper = mountCourses({
               isEnglish,
               isTeacher,
-              modernElementaryCoursesAvailable: true
+              modernElementaryCoursesAvailable: true,
             });
             assertComponentsInOrder(wrapper, [
               'ModernCsfCourses',
@@ -76,8 +76,8 @@ describe('Courses', () => {
               'SpecialAnnouncement',
               'CoursesAToF',
               'LegacyCSFNotification',
-              'CourseBlocksInternationalGradeBands',
-              'CourseBlocksTools'
+              'CourseBlocksWrapper',
+              'CourseBlocksWrapper',
             ]);
           });
 
@@ -85,15 +85,15 @@ describe('Courses', () => {
             const wrapper = mountCourses({
               isEnglish,
               isTeacher,
-              modernElementaryCoursesAvailable: false
+              modernElementaryCoursesAvailable: false,
             });
             assertComponentsInOrder(wrapper, [
               'AcceleratedAndUnplugged',
               'CourseBlocksHoc',
               'SpecialAnnouncement',
               'Courses1To4',
-              'CourseBlocksInternationalGradeBands',
-              'CourseBlocksTools'
+              'CourseBlocksWrapper',
+              'CourseBlocksWrapper',
             ]);
           });
         });

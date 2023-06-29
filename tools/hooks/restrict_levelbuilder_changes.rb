@@ -1,4 +1,4 @@
-require_relative 'hooks_utils.rb'
+require_relative 'hooks_utils'
 
 REPO_DIR = File.expand_path('../../../', __FILE__).freeze
 BLOCKS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/blocks', __FILE__).freeze
@@ -7,6 +7,7 @@ LIBRARIES_DIR = File.expand_path(REPO_DIR + '/dashboard/config/libraries', __FIL
 LEVELS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/scripts', __FILE__).freeze
 COURSES_DIR = File.expand_path(REPO_DIR + '/dashboard/config/courses', __FILE__).freeze
 COURSE_OFFERINGS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/course_offerings', __FILE__).freeze
+DATA_DOCS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/data_docs', __FILE__).freeze
 REFERENCE_GUIDES_DIR = File.expand_path(REPO_DIR + '/dashboard/config/reference_guides', __FILE__).freeze
 PROGRAMMING_CLASSES_DIR = File.expand_path(REPO_DIR + '/dashboard/config/programming_classes', __FILE__).freeze
 PROGRAMMING_ENVIRONMENTS_DIR = File.expand_path(REPO_DIR + '/dashboard/config/programming_environments', __FILE__).freeze
@@ -31,6 +32,6 @@ staged_files = HooksUtils.get_staged_files
 
 staged_files.each do |filename|
   raise "#{ERROR_MESSAGE}\nFile blocked: #{filename}" unless filename.start_with?(
-    BLOCKS_DIR, SHARED_FUNCTIONS_DIR, LIBRARIES_DIR, LEVELS_DIR, COURSES_DIR, COURSE_OFFERINGS_DIR, REFERENCE_GUIDES_DIR, PROGRAMMING_CLASSES_DIR, PROGRAMMING_ENVIRONMENTS_DIR, PROGRAMMING_EXPRESSIONS_DIR, VIDEO_THUMBNAILS_DIR, FOORM_DIR
+    BLOCKS_DIR, SHARED_FUNCTIONS_DIR, LIBRARIES_DIR, LEVELS_DIR, COURSES_DIR, COURSE_OFFERINGS_DIR, DATA_DOCS_DIR, REFERENCE_GUIDES_DIR, PROGRAMMING_CLASSES_DIR, PROGRAMMING_ENVIRONMENTS_DIR, PROGRAMMING_EXPRESSIONS_DIR, VIDEO_THUMBNAILS_DIR, FOORM_DIR
   ) || ALLOWED_FILES.include?(filename)
 end

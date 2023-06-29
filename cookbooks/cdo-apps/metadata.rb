@@ -4,17 +4,14 @@ maintainer_email 'will@code.org'
 license          'All rights reserved'
 description      'Installs/Configures cdo-apps'
 long_description File.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.2.515'
+version          '0.2.588'
 
 depends 'apt'
-depends 'build-essential'
-depends 'yarn'
 
 depends 'cdo-cloudwatch-agent'
 depends 'cdo-repository'
 depends 'cdo-secrets'
 depends 'cdo-postfix'
-depends 'cdo-varnish'
 depends 'cdo-mysql'
 depends 'cdo-ruby'
 depends 'sudo-user'

@@ -6,10 +6,55 @@
           "name": "Žaidimų laboratorija",
           "categories": {
             "game_lab": {
-              "name": "Žaidimų laboratorija"
+              "name": "Žaidimų laboratorija",
+              "expressions": {
+                "playSound": {
+                  "short_description": "Groja MP3 garso failą iš pasirinkto URL."
+                }
+              }
+            },
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Spalva"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Spalva"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Matematika"
+              "name": "Matematika",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Mažiausias grąžintas skaičius"
+                    },
+                    "max": {
+                      "description": "Didžiausias grąžintas skaičius"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Mažiausias grąžintas skaičius"
+                    },
+                    "max": {
+                      "description": "Didžiausias grąžintas skaičius"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "Kintamieji"
@@ -23,11 +68,74 @@
           "name": "App Lab",
           "description": "App Lab yra programavimo aplinka, su kuria galima sukurti paprastas programėles. Kurti galima su blokeliais arba su JavaScript, o po to ja pasidalinti su draugais.",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Komanda"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Groja MP3 garso failą iš pasirinkto URL."
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Komanda"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Komanda"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
-              "name": "Matematika"
+              "name": "Matematika",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Mažiausias grąžintas skaičius"
+                    },
+                    "max": {
+                      "description": "Didžiausias grąžintas skaičius"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Mažiausias grąžintas skaičius"
+                    },
+                    "max": {
+                      "description": "Didžiausias grąžintas skaičius"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Kintamieji"
+              "name": "Kintamieji",
+              "expressions": {
+                "addPair": {
+                  "return_value": "Nė vienas"
+                }
+              }
             },
             "functions": {
               "name": "Komandų kūrimas"

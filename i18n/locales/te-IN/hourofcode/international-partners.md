@@ -6,12 +6,10 @@ title: అంతర్జాతీయ భాగస్వాములను స�
 
 # అంతర్జాతీయ భాగస్వాములను సంప్రదించండి
 
-Code.org works with many organizations around the world to make the Hour of Code a truly international movement. Did you know that in 2017, 60% of all Hour of Code events occurred outside of the U.S.?
+అవర్ ఆఫ్ కోడ్ ని నిజంగా ఒక అంతర్జాతీయ ఉద్యమంగా చేయడానికి గాను Code.org ప్రపంచ వ్యాప్తంగా అనేక సంస్థలతో కలిసి పని చేస్తుంది. 2017 లో, అవర్ ఆఫ్ కోడ్ యొక్క అన్ని ఈవెంట్లలో 60% యు.ఎస్ బయటే జరిగాయని మీకు తెలుసా? If you're in one of the countries below, reach out to the listed partner and get connected with your local Hour of Code.
 
-You, too, can play a leading role to get more people in your country involved! If you're in one of the countries below, reach out to the listed partner and get connected with your local Hour of Code.
+*Don't see your country listed here?* [See how to become our international partner!](https://code.org/international/apply) <br /> <br />
 
-*Don't see your country listed here?* [Apply to become an Hour of Code International Partner](https://airtable.com/shreokz55rqubug8F)! <br /> <br />
+*ఇక్కడ జాబితా చేయబడిన దేశాలలో మీ దేశం కనిపించలేదా?* [ఒక అవర్ ఆఫ్ కోడ్ అంతర్జాతీయ భాగస్వామి కావడానికి దరఖాస్తు చేయండి](https://airtable.com/shreokz55rqubug8F)!
 
-{{ international_partners_table }}
-
-{{ signup_button }}
+{{ అంతర్జాతీయ_భాగస్వాముల_పట్టిక }}

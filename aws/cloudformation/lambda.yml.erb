@@ -252,7 +252,7 @@ Resources:
       FunctionName: FastSnapshotRestore
       Code: <%=lambda_zip 'fast_snapshot_restore.rb', 'cfn_response.rb' %>
       Handler: fast_snapshot_restore.handler
-      Runtime: ruby2.5
+      Runtime: ruby2.7
       MemorySize: 1024
       Timeout: 30
       Role: !GetAtt FastSnapshotRestoreRole.Arn

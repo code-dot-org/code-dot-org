@@ -13,7 +13,7 @@ class PersonalProjectsPublishedCell extends Component {
     isPublished: PropTypes.bool.isRequired,
     isPublishable: PropTypes.bool.isRequired,
     showPublishDialog: PropTypes.func.isRequired,
-    unpublishProject: PropTypes.func.isRequired
+    unpublishProject: PropTypes.func.isRequired,
   };
 
   onPublish = () => {
@@ -33,18 +33,16 @@ class PersonalProjectsPublishedCell extends Component {
       <div>
         {showPublishButton && (
           <Button
-            __useDeprecatedTag
             onClick={this.onPublish}
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.neutralDark}
             text={i18n.publish()}
             className="ui-personal-projects-publish-button"
           />
         )}
         {showUnpublishButton && (
           <Button
-            __useDeprecatedTag
             onClick={this.onUnpublish}
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.neutralDark}
             text={i18n.unpublish()}
             className="ui-personal-projects-unpublish-button"
           />
@@ -62,6 +60,6 @@ export default connect(
     },
     unpublishProject(projectId) {
       dispatch(unpublishProject(projectId));
-    }
+    },
   })
 )(PersonalProjectsPublishedCell);

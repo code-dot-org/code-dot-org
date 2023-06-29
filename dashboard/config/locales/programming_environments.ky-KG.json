@@ -9,10 +9,55 @@
           "name": "Оюн лабы",
           "categories": {
             "game_lab": {
-              "name": "Оюн лабы"
+              "name": "Оюн лабы",
+              "expressions": {
+                "playSound": {
+                  "short_description": "Берилген URL'деги MP3 үн файлын ойнотот."
+                }
+              }
+            },
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Түс"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Түс"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Математика"
+              "name": "Математика",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Минималдык сан кайтарылды"
+                    },
+                    "max": {
+                      "description": "Максималдык сан кайтарылды"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Минималдык сан кайтарылды"
+                    },
+                    "max": {
+                      "description": "Максималдык сан кайтарылды"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "Өзгөрмөлөр"
@@ -25,11 +70,74 @@
         "applab": {
           "name": "App Lab",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функция"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Берилген URL'деги MP3 үн файлын ойнотот."
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функция"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функция"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
-              "name": "Математика"
+              "name": "Математика",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Минималдык сан кайтарылды"
+                    },
+                    "max": {
+                      "description": "Максималдык сан кайтарылды"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Минималдык сан кайтарылды"
+                    },
+                    "max": {
+                      "description": "Максималдык сан кайтарылды"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
-              "name": "Өзгөрмөлөр"
+              "name": "Өзгөрмөлөр",
+              "expressions": {
+                "addPair": {
+                  "return_value": "Жок"
+                }
+              }
             },
             "functions": {
               "name": "Функциялар"

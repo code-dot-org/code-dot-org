@@ -29,7 +29,7 @@ class LessonsControllerTest < ActionController::TestCase
       has_lesson_plan: false,
     )
 
-    @script_title = 'Script Display Name'
+    @script_title = 'Unit Display Name'
     @lesson_name = 'Lesson Display Name'
 
     custom_i18n = {
@@ -511,7 +511,7 @@ class LessonsControllerTest < ActionController::TestCase
       post :update, params: {
         id: lesson.id,
         lesson: {name: lesson.name},
-        originalLessonData: JSON.generate({"name": "Not the name"})
+        originalLessonData: JSON.generate({name: "Not the name"})
       }
     end
 
@@ -1376,7 +1376,7 @@ class LessonsControllerTest < ActionController::TestCase
     destination_script = create :script, use_legacy_lesson_plans: true
     original_script = create :script, use_legacy_lesson_plans: false
     lesson = create :lesson, script: original_script
-    put :clone, params: {id: lesson.id, 'destinationUnitName': destination_script.name}
+    put :clone, params: {id: lesson.id, destinationUnitName: destination_script.name}
 
     assert_response :not_acceptable
     assert @response.body.include?('error')
@@ -1389,7 +1389,7 @@ class LessonsControllerTest < ActionController::TestCase
     destination_script = create :script, use_legacy_lesson_plans: false
     original_script = create :script, use_legacy_lesson_plans: true
     lesson = create :lesson, script: original_script
-    put :clone, params: {id: lesson.id, 'destinationUnitName': destination_script.name}
+    put :clone, params: {id: lesson.id, destinationUnitName: destination_script.name}
 
     assert_response :not_acceptable
     assert @response.body.include?('error')
@@ -1400,7 +1400,7 @@ class LessonsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     lesson = create :lesson
-    put :clone, params: {id: lesson.id, 'destinationUnitName': 'fake-script'}
+    put :clone, params: {id: lesson.id, destinationUnitName: 'fake-script'}
     assert_response :not_acceptable
     assert @response.body.include?('error')
   end
@@ -1416,7 +1416,7 @@ class LessonsControllerTest < ActionController::TestCase
     create :course_version, content_root: original_script, key: '2021'
     cloned_lesson = create :lesson, script: script
     Lesson.any_instance.stubs(:copy_to_unit).returns(cloned_lesson)
-    put :clone, params: {id: lesson.id, 'destinationUnitName': script.name}
+    put :clone, params: {id: lesson.id, destinationUnitName: script.name}
 
     assert_response 200
     assert @response.body.include?('editLessonUrl')
@@ -1434,7 +1434,7 @@ class LessonsControllerTest < ActionController::TestCase
     create :course_version, content_root: original_script, key: '2020'
     cloned_lesson = create :lesson, script: script
     Lesson.any_instance.stubs(:copy_to_unit).returns(cloned_lesson)
-    put :clone, params: {id: lesson.id, 'destinationUnitName': script.name}
+    put :clone, params: {id: lesson.id, destinationUnitName: script.name}
 
     assert_response 200
     assert @response.body.include?('editLessonUrl')

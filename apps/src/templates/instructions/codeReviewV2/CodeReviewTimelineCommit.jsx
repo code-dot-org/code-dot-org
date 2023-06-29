@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CodeReviewTimelineElement, {
-  codeReviewTimelineElementType
+  codeReviewTimelineElementType,
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import moment from 'moment';
 import javalabMsg from '@cdo/javalab/locale';
@@ -31,7 +31,7 @@ const CodeReviewTimelineCommit = ({commit, isLastElementInTimeline}) => {
 
 CodeReviewTimelineCommit.propTypes = {
   commit: commitShape,
-  isLastElementInTimeline: PropTypes.bool
+  isLastElementInTimeline: PropTypes.bool,
 };
 
 export default CodeReviewTimelineCommit;
@@ -39,14 +39,14 @@ export default CodeReviewTimelineCommit;
 const styles = {
   wrapper: {
     fontStyle: 'italic',
-    marginBottom: '10px'
+    marginBottom: '10px',
   },
   header: {
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
   },
   date: {
     fontSize: '12px',
     marginBottom: '10px',
-    lineHeight: '12px'
-  }
+    lineHeight: '12px',
+  },
 };

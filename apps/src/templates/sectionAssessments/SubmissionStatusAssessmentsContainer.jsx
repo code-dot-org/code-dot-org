@@ -4,11 +4,13 @@ import SubmissionStatusAssessmentsTable from './SubmissionStatusAssessmentsTable
 import {studentOverviewDataPropType} from './assessmentDataShapes';
 import {
   getStudentsMCandMatchSummaryForCurrentAssessment,
-  getExportableSubmissionStatusData
+  getExportableSubmissionStatusData,
 } from './sectionAssessmentsRedux';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {CSVLink} from 'react-csv';
+import moduleStyles from '@cdo/apps/templates/button.module.scss';
+import classNames from 'classnames';
 import Button from '../Button';
 
 export const studentExportableDataPropType = PropTypes.shape({
@@ -17,7 +19,7 @@ export const studentExportableDataPropType = PropTypes.shape({
   numMultipleChoice: PropTypes.number,
   numMatchCorrect: PropTypes.number,
   numMatch: PropTypes.number,
-  submissionTimestamp: PropTypes.instanceOf(Date).isRequired
+  submissionTimestamp: PropTypes.instanceOf(Date).isRequired,
 });
 
 const CSV_SUBMISSION_STATUS_HEADERS = [
@@ -26,7 +28,7 @@ const CSV_SUBMISSION_STATUS_HEADERS = [
   {label: i18n.numMultipleChoice(), key: 'numMultipleChoice'},
   {label: i18n.numMatchCorrect(), key: 'numMatchCorrect'},
   {label: i18n.numMatch(), key: 'numMatch'},
-  {label: i18n.submissionTimestamp(), key: 'submissionTimestamp'}
+  {label: i18n.submissionTimestamp(), key: 'submissionTimestamp'},
 ];
 
 class SubmissionStatusAssessmentsContainer extends Component {
@@ -35,26 +37,31 @@ class SubmissionStatusAssessmentsContainer extends Component {
     // from redux
     localeCode: PropTypes.string,
     studentExportableData: PropTypes.arrayOf(studentExportableDataPropType),
-    studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType)
+    studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType),
   };
 
   render() {
+    // These allow the CSVLink to be styled as a button
+    let className = classNames(
+      moduleStyles.main,
+      moduleStyles[Button.ButtonColor.gray],
+      moduleStyles['default']
+    );
+
     return (
       <div>
         <div style={styles.buttonContainer}>
           <h2>{i18n.studentOverviewTableHeader()}</h2>
           <CSVLink
+            role="button"
             filename="assessments-submission-status.csv"
             data={this.props.studentExportableData}
             headers={CSV_SUBMISSION_STATUS_HEADERS}
             onClick={this.props.onClickDownload}
+            style={styles.button}
+            className={className}
           >
-            <Button
-              __useDeprecatedTag
-              text={i18n.downloadCSV()}
-              onClick={() => {}}
-              color={Button.ButtonColor.gray}
-            />
+            {i18n.downloadCSV()}
           </CSVLink>
         </div>
         <SubmissionStatusAssessmentsTable
@@ -71,14 +78,20 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'flex-end'
-  }
+    alignItems: 'flex-end',
+  },
+  button: {
+    padding: '12px 24px',
+    lineHeight: '10px',
+    marginBottom: '5px',
+  },
 };
 
-export const UnconnectedSubmissionStatusAssessmentsContainer = SubmissionStatusAssessmentsContainer;
+export const UnconnectedSubmissionStatusAssessmentsContainer =
+  SubmissionStatusAssessmentsContainer;
 
 export default connect(state => ({
   localeCode: state.locales.localeCode,
   studentExportableData: getExportableSubmissionStatusData(state),
-  studentOverviewData: getStudentsMCandMatchSummaryForCurrentAssessment(state)
+  studentOverviewData: getStudentsMCandMatchSummaryForCurrentAssessment(state),
 }))(SubmissionStatusAssessmentsContainer);

@@ -54,5 +54,5 @@ export const commands = {
 
   whenPromptAnswered(variableName, callback) {
     this.registerPromptAnswerCallback(variableName, callback);
-  }
+  },
 };

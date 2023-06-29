@@ -1,5 +1,12 @@
 {
+  "catControl": "ఉచ్చులు",
+  "catMath": "మఠం",
+  "catProcedures": "విధులు",
+  "catTurtle": "చర్యలు",
+  "catVariables": "వేరియబుల్స్",
+  "catLogic": "లాజిక్",
   "heightParameter": "ఎత్తు",
+  "jump": "దూకి",
   "left": "ఎడమ",
   "right": "కుడి",
   "sizeParameter": "సైజు"

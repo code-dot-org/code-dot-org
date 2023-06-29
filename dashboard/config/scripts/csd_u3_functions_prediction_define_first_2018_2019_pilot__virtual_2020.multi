@@ -11,3 +11,5 @@ So far all your functions have been created at the bottom of your code. What do 
 
 Notice that the red square is drawn **before** its function is created while the green square is drawn **after** its function is created. Which of these do you think will be drawn?
 MARKDOWN
+
+allow_multiple_attempts true

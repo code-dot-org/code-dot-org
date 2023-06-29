@@ -49,10 +49,7 @@ describe('Code Review Groups Status Toggle', () => {
     const toggle = wrapper.find('ToggleSwitch');
     expect(toggle.prop('isToggledOn')).to.be.true;
     // expect to see enabled message
-    const enabledMessage = wrapper
-      .find('p')
-      .at(0)
-      .text();
+    const enabledMessage = wrapper.find('p').at(0).text();
     const expectedEnabledMessage =
       'Code review will be automatically disabled in 1 days. To reset this time, disable and re-enable code review.';
     expect(enabledMessage).to.equal(expectedEnabledMessage);

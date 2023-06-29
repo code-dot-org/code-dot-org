@@ -28,7 +28,7 @@ const NewReferenceGuideForm = props => {
   );
 };
 NewReferenceGuideForm.propTypes = {
-  baseUrl: PropTypes.string.isRequired
+  baseUrl: PropTypes.string.isRequired,
 };
 
 export default NewReferenceGuideForm;

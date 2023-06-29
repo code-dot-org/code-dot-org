@@ -1464,7 +1464,7 @@
           "sticker2": "أضف هذه في منتصف برنامجك."
         },
         "courseC_collector_prog1_2021": {
-          "courseC_collector_prog1_1": "هل ترى قطعاً برمجية جديدة في صندوق الأدوات؟ لا تقلق، سنريك كيفية استخدامها في دروس قادمة."
+          "courseC_collector_prog1_1": "هل ترى قطعاً برمجية جديدة في صندوق الأدوات؟ لا تقلق, سنريك كيفية استخدامها في دروس قادمة."
         },
         "courseC_collector_prog7_2021": {
           "courseC_collector_prog7_1": "يمكنك استخدام بعض من القطع البرمجية الموجودة في صندوق الأدوات في حال احتجت إليهم!"
@@ -1473,7 +1473,7 @@
           "courseC_harvester_loops1_callout1": "الرقم 4 في اليقطين يخبرك أن هناك أربع يقطينات يمكنك جمعها."
         },
         "courseC_maze_debugging5_2021": {
-          "courseC_maze_debugging5_1": "هذه القطع البرمجية مغلقة ولايمكن حذفها!"
+          "courseC_maze_debugging5_1": "هذه البلوكات مغلقة ولايمكن حذفها!"
         },
         "courseC_maze_debugging9_2021": {
           "courseC_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
@@ -2294,6 +2294,76 @@
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "استخدم هذه الكتلة لضبط خلفية جديدة."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "استخدم هذه الكتلة لضبط خلفية جديدة."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "استخدم هذه الكتلة مع أحد السلوكيات التالية."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "استخدم هذه الكتلة مع أحد السلوكيات التالية."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "انقر هنا لتشغيل الكود."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "أضف هذا الحدث إلى مساحة العمل الخاصة بك."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "أضف هذا الحدث إلى مساحة العمل الخاصة بك."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "انقر هنا لإضافة أزياء لمشروعك."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "انقر هنا لإضافة أزياء لمشروعك."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "تثبيت"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "تثبيت"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "تثبيت"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "تثبيت"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "استخدم هذه الكتلة لجعل الكائنات تتحدث.",
+          "hello_world_make_sprite": "استخدم هذه الكتلة لإنشاء كائن."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "استخدم هذه الكتلة لجعل الكائنات تتحدث.",
+          "hello_world_make_sprite": "استخدم هذه الكتلة لإنشاء كائن."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "قطعة برمجية جديدة!",
+          "hello_world_new_block": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "قطعة برمجية جديدة!",
+          "hello_world_new_block": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "انقر هنا أولاً!"
         }
       }
     }

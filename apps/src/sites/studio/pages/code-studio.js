@@ -36,12 +36,13 @@ window.Radium = require('radium');
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
 if ($.fn.modal) {
-  $.fn.modal.Constructor.prototype.enforceFocus = function() {};
+  $.fn.modal.Constructor.prototype.enforceFocus = function () {};
 }
 
 window.dashboard = window.dashboard || {};
 window.dashboard.clientState = require('@cdo/apps/code-studio/clientState');
-window.dashboard.createCallouts = require('@cdo/apps/code-studio/callouts').default;
+window.dashboard.createCallouts =
+  require('@cdo/apps/code-studio/callouts').default;
 window.dashboard.hashEmail = hashEmail;
 window.dashboard.levelCompletions = require('@cdo/apps/code-studio/levelCompletions');
 window.dashboard.popupWindow = require('@cdo/apps/code-studio/popup-window');
@@ -56,12 +57,12 @@ window.dashboard.project = require('@cdo/apps/code-studio/initApp/project');
 import {
   registerGetResult,
   registerLevel,
-  onAnswerChanged
+  onAnswerChanged,
 } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 window.dashboard.codeStudioLevels = {
   registerGetResult,
   registerLevel,
-  onAnswerChanged
+  onAnswerChanged,
 };
 
 // usages: _dialogHelper.js, frequency.js, text-compression.js, levelGroup.js, multi.js
@@ -80,7 +81,7 @@ window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch');
 // script error and a url, throw that so that we have the info in New Relic.
 var windowOnError = window.onerror;
 
-window.onerror = function(msg, url, ln) {
+window.onerror = function (msg, url, ln) {
   if (/^Script error/.test(msg) && url) {
     arguments[0] = 'Script Error: ' + url;
   }
@@ -91,18 +92,18 @@ window.onerror = function(msg, url, ln) {
 
 // Prevent escape from canceling page loads.
 var KEY_ESCAPE = 27;
-$(document).keydown(function(e) {
+$(document).keydown(function (e) {
   if (e.keyCode === KEY_ESCAPE) {
     e.stopPropagation();
     e.preventDefault();
   }
 });
 
-setTimeout(function() {
+setTimeout(function () {
   $('#codeApp .slow_load').show();
 }, 10000);
 
-$(document).ready(function() {
+$(document).ready(function () {
   if (document.querySelector(`script[data-gdpr]`)) {
     const gdprData = getScriptData('gdpr');
     if (gdprData.show_gdpr_dialog && gdprData.current_user_id) {

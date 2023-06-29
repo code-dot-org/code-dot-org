@@ -1,0 +1,141 @@
+@import 'color';
+
+#external {
+  clear: both;
+}
+
+#visualization {
+  overflow: hidden;
+}
+
+#visualizationColumn {
+  width: 400px;
+  float: left;
+}
+
+#below_viz_instructions {
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.right {
+  float: right;
+}
+
+#save_image {
+  margin: 3px 10px 5px 0;
+}
+
+#actual_size_label {
+  margin-top: 9px;
+}
+
+#actual_size {
+  margin: 0;
+}
+
+#pixel_format {
+  color: $white;
+  background: $black;
+  font: bold 14pt monospace;
+  padding: 1px 7px;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#pixel_format .r {
+  color: $red;
+}
+
+#pixel_format .g {
+  color: $highlight_green;
+}
+
+#pixel_format .b {
+  color: $default_blue;
+}
+
+#pixel_format .unknown {
+  color: $light_gray;
+}
+
+#pixel_data {
+  width: 100%;
+  height: 350px;
+  font-family: monospace;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+#file_format div {
+  padding: 3px 5px;
+  border: 1px solid $black;
+  max-width: 230px;
+  background: $white;
+}
+
+#file_format .byte {
+  border-bottom: 0;
+  width: 140px;
+}
+
+#image_controls {
+  margin-top: 10px;
+}
+
+#image_controls td {
+  white-space: nowrap;
+}
+
+#image_controls td:nth-child(2) {
+  padding: 0 5px;
+}
+
+#image_controls td:last-child {
+  width: 100%;
+}
+
+input[type=radio] {
+  margin: 0 3px;
+  vertical-align: baseline;
+}
+
+input[type=number] {
+  width: 50px;
+}
+
+input[type=range] {
+  width: 100%;
+}
+
+.label_group {
+  text-align: left;
+}
+
+.label_group label {
+  border: 1px solid $bootstrap_border_color;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+#file_format {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+#file_format p {
+  margin-bottom: 0;
+}
+
+#file_format #file_format_title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+#visualization {
+  margin-top: 6px;
+}

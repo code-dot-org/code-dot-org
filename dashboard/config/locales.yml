@@ -394,6 +394,11 @@
   native: "Slovenščina"
   webfonts: false
 
+"sm": "sm-WS"
+"sm-WS":
+  english: "Samoan"
+  native: "Sāmoa"
+
 "sq": "sq-AL"
 "sq-AL":
   english: "Albanian"

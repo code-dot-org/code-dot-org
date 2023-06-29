@@ -1,5 +1,5 @@
+// eslint-disable-next-line no-unused-vars
 function Odometer(config) {
-
   var DIGIT_HEIGHT = 32;
   var digits = [];
   var scrollingDigits = [];
@@ -14,11 +14,16 @@ function Odometer(config) {
   // Create DOM elements.
   var odometer = $("<div class='odometer'>");
   for (var i = 0; i < config.digits; i++) {
+    // prettier-ignore
     var digit = $("<div class='digit'><div class='digit-current'>0</div><div class='digit-next'>1</div></div>");
     digits.push(digit);
     odometer.append(digit);
   }
-  $(config.parent).addClass('odometerParent').append(odometer).append("<div class='odometerGradient'>");
+  $(config.parent)
+    .addClass("odometerParent")
+    .append(odometer)
+    // prettier-ignore
+    .append("<div class='odometerGradient'>");
 
   // Set the odometer to a specific value.
   this.set = function(value) {
@@ -33,11 +38,11 @@ function Odometer(config) {
       var current = value.toString(config.radix).toUpperCase();
       var next = (value + 1).toString(config.radix).toUpperCase();
       for (var i = 0; i < config.digits; i++) {
-        var currentText = current[i - (config.digits - current.length)] || ' ';
-        var nextText = next[i - (config.digits - next.length)] || ' ';
-        digits[i].find('.digit-current').text(currentText);
-        digits[i].find('.digit-next').text(nextText);
-        digits[i].css('top', 0);
+        var currentText = current[i - (config.digits - current.length)] || 0;
+        var nextText = next[i - (config.digits - next.length)] || 0;
+        digits[i].find(".digit-current").text(currentText);
+        digits[i].find(".digit-next").text(nextText);
+        digits[i].css("top", 0);
         if (currentText !== nextText) {
           scrollingDigits.push(i);
         }
@@ -53,16 +58,16 @@ function Odometer(config) {
     }
 
     // Always adjust the scroll of digits currently in transition.
-    scrollingDigits.forEach(function (n) {
-      digits[n].css('top', scrollAmount);
+    scrollingDigits.forEach(function(n) {
+      digits[n].css("top", scrollAmount);
     });
   };
 
   // Change the radix and update the odometer.
   this.changeRadix = function(newRadix) {
-    if (typeof newRadix === 'number' && newRadix >= 2 && newRadix <= 36) {
+    if (typeof newRadix === "number" && newRadix >= 2 && newRadix <= 36) {
       config.radix = newRadix;
-      last = null;  
+      last = null;
     }
   };
 

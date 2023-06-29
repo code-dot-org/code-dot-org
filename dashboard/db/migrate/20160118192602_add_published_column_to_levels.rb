@@ -2,7 +2,7 @@ class AddPublishedColumnToLevels < ActiveRecord::Migration[4.2]
   def up
     add_column :levels, :published, :boolean, default: 0
 
-    execute <<-SQL
+    execute <<-SQL.squish
       update levels set published = 1 where published is NULL
     SQL
 

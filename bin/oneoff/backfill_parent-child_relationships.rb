@@ -9,8 +9,8 @@ def main
     if level.contained_level_names.present?
       begin
         level.setup_contained_levels
-      rescue => e
-        puts e
+      rescue => exception
+        puts exception
       end
     end
 
@@ -20,8 +20,8 @@ def main
     if level.project_template_level_name.present?
       begin
         level.setup_project_template_level
-      rescue => e
-        puts e
+      rescue => exception
+        puts exception
       end
     end
     # rubocop:enable Style/Next

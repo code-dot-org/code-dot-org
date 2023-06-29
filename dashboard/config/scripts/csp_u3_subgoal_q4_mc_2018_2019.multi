@@ -37,3 +37,5 @@ In the case of this question we're using randomNumber in place of that value for
 `drawShape( randomNumber(25,75) );`
 
 MARKDOWN
+
+allow_multiple_attempts true

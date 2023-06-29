@@ -1,5 +1,3 @@
-/* global LEVEL_TYPE */
-
 var _ = require('lodash');
 
 /**
@@ -35,7 +33,7 @@ function filterFiles(files) {
 
 module.exports = {
   // Get all json files under directory path
-  getCollections: function() {
+  getCollections: function () {
     var context = require.context('../levelSolutions/', true, /.*\.js$/);
     var files = context.keys();
     var testCollections = [];
@@ -49,7 +47,7 @@ module.exports = {
   /**
    * Gets a cloned copy of a level given a testCollection/testData
    */
-  getLevelFromCollection: function(testCollection, testData, dataItem) {
+  getLevelFromCollection: function (testCollection, testData, dataItem) {
     var level;
 
     var data = dataItem();
@@ -61,7 +59,7 @@ module.exports = {
       level = _.cloneDeep(levels[testCollection.levelId]);
       level = {
         ...level,
-        ...(testData.levelDefinitionOverrides || {})
+        ...(testData.levelDefinitionOverrides || {}),
       };
     } else {
       if (
@@ -79,7 +77,7 @@ module.exports = {
     }
 
     return level;
-  }
+  },
 };
 
 function logError(msg) {

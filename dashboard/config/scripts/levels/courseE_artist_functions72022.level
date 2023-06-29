@@ -1,9 +1,5 @@
 <Artist>
   <config><![CDATA[{
-  "game_id": 23,
-  "created_at": "2022-01-06T19:49:01.000Z",
-  "level_num": "custom",
-  "user_id": 285,
   "properties": {
     "skin": "artist_zombie",
     "embed": "false",
@@ -46,12 +42,15 @@
     "show_type_hints": "false",
     "validation_enabled": "false",
     "enable_download_image": "false",
-    "preload_asset_list": null,
-    "contained_level_names": null
+    "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 23,
+  "created_at": "2022-01-06T19:49:01.000Z",
+  "user_id": 285,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:01.094+00:00\",\"changed\":[\"cloned from \\\"courseE_artist_functions7_2021\\\"\"],\"cloned_from\":\"courseE_artist_functions7_2021\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:49:01.094+00:00\",\"changed\":[\"cloned from \\\"courseE_artist_functions7_2021\\\"\"],\"cloned_from\":\"courseE_artist_functions7_2021\"},{\"changed_at\":\"2023-01-19 18:17:00 +0000\",\"changed\":[\"predraw_blocks\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "debugging": 4,
@@ -226,66 +225,66 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="jump_by_constant">
-              <title name="DIR">jumpBackward</title>
-              <title name="VALUE">50</title>
+              <field name="DIR">jumpBackward</field>
+              <field name="VALUE">50</field>
               <next>
                 <block type="draw_turn_by_constant">
-                  <title name="DIR">turnLeft</title>
-                  <title name="VALUE">90</title>
+                  <field name="DIR">turnLeft</field>
+                  <field name="VALUE">90</field>
                   <next>
                     <block type="jump_by_constant">
-                      <title name="DIR">jumpForward</title>
-                      <title name="VALUE">75</title>
+                      <field name="DIR">jumpForward</field>
+                      <field name="VALUE">75</field>
                       <next>
                         <block type="draw_turn_by_constant">
-                          <title name="DIR">turnRight</title>
-                          <title name="VALUE">90</title>
+                          <field name="DIR">turnRight</field>
+                          <field name="VALUE">90</field>
                           <next>
                             <block type="controls_repeat">
-                              <title name="TIMES">4</title>
+                              <field name="TIMES">4</field>
                               <statement name="DO">
                                 <block type="draw_move_by_constant">
-                                  <title name="DIR">moveForward</title>
-                                  <title name="VALUE">300</title>
+                                  <field name="DIR">moveForward</field>
+                                  <field name="VALUE">300</field>
                                   <next>
                                     <block type="draw_turn_by_constant">
-                                      <title name="DIR">turnRight</title>
-                                      <title name="VALUE">90</title>
+                                      <field name="DIR">turnRight</field>
+                                      <field name="VALUE">90</field>
                                     </block>
                                   </next>
                                 </block>
                               </statement>
                               <next>
                                 <block type="jump_by_constant">
-                                  <title name="DIR">jumpForward</title>
-                                  <title name="VALUE">115</title>
+                                  <field name="DIR">jumpForward</field>
+                                  <field name="VALUE">115</field>
                                   <next>
                                     <block type="draw_turn_by_constant">
-                                      <title name="DIR">turnLeft</title>
-                                      <title name="VALUE">90</title>
+                                      <field name="DIR">turnLeft</field>
+                                      <field name="VALUE">90</field>
                                       <next>
                                         <block type="jump_by_constant">
-                                          <title name="DIR">jumpBackward</title>
-                                          <title name="VALUE">300</title>
+                                          <field name="DIR">jumpBackward</field>
+                                          <field name="VALUE">300</field>
                                           <next>
                                             <block type="controls_repeat">
-                                              <title name="TIMES">2</title>
+                                              <field name="TIMES">2</field>
                                               <statement name="DO">
                                                 <block type="draw_move_by_constant">
-                                                  <title name="DIR">moveForward</title>
-                                                  <title name="VALUE">125</title>
+                                                  <field name="DIR">moveForward</field>
+                                                  <field name="VALUE">125</field>
                                                   <next>
                                                     <block type="draw_turn_by_constant">
-                                                      <title name="DIR">turnRight</title>
-                                                      <title name="VALUE">90</title>
+                                                      <field name="DIR">turnRight</field>
+                                                      <field name="VALUE">90</field>
                                                       <next>
                                                         <block type="draw_move_by_constant">
-                                                          <title name="DIR">moveForward</title>
-                                                          <title name="VALUE">70</title>
+                                                          <field name="DIR">moveForward</field>
+                                                          <field name="VALUE">70</field>
                                                           <next>
                                                             <block type="draw_turn_by_constant">
-                                                            <title name="DIR">turnRight</title>
-                                                            <title name="VALUE">90</title>
+                                                            <field name="DIR">turnRight</field>
+                                                            <field name="VALUE">90</field>
                                                             </block>
                                                           </next>
                                                         </block>
@@ -296,81 +295,81 @@
                                               </statement>
                                               <next>
                                                 <block type="jump_by_constant">
-                                                  <title name="DIR">jumpForward</title>
-                                                  <title name="VALUE">300</title>
+                                                  <field name="DIR">jumpForward</field>
+                                                  <field name="VALUE">300</field>
                                                   <next>
                                                     <block type="draw_turn_by_constant">
-                                                      <title name="DIR">turnRight</title>
-                                                      <title name="VALUE">90</title>
+                                                      <field name="DIR">turnRight</field>
+                                                      <field name="VALUE">90</field>
                                                       <next>
                                                         <block type="jump_by_constant">
-                                                          <title name="DIR">jumpBackward</title>
-                                                          <title name="VALUE">115</title>
+                                                          <field name="DIR">jumpBackward</field>
+                                                          <field name="VALUE">115</field>
                                                           <next>
-                                                            <block type="controls_for_counter" inline="true">
+                                                            <block type="controls_for_counter">
                                                             <value name="FROM">
                                                             <block type="math_number">
-                                                            <title name="NUM">300</title>
+                                                            <field name="NUM">300</field>
                                                             </block>
                                                             </value>
                                                             <value name="TO">
                                                             <block type="math_number">
-                                                            <title name="NUM">10</title>
+                                                            <field name="NUM">10</field>
                                                             </block>
                                                             </value>
                                                             <value name="BY">
                                                             <block type="math_number">
-                                                            <title name="NUM">10</title>
+                                                            <field name="NUM">10</field>
                                                             </block>
                                                             </value>
                                                             <statement name="DO">
-                                                            <block type="draw_move" inline="true">
-                                                            <title name="DIR">moveForward</title>
+                                                            <block type="draw_move">
+                                                            <field name="DIR">moveForward</field>
                                                             <value name="VALUE">
-                                                            <block type="math_arithmetic" inline="true">
-                                                            <title name="OP">MINUS</title>
+                                                            <block type="math_arithmetic">
+                                                            <field name="OP">MINUS</field>
                                                             <value name="A">
                                                             <block type="variables_get">
-                                                            <title name="VAR">counter</title>
+                                                            <field name="VAR">counter</field>
                                                             </block>
                                                             </value>
                                                             <value name="B">
                                                             <block type="math_number">
-                                                            <title name="NUM">0</title>
+                                                            <field name="NUM">0</field>
                                                             </block>
                                                             </value>
                                                             </block>
                                                             </value>
                                                             <next>
-                                                            <block type="draw_move" inline="true">
-                                                            <title name="DIR">moveBackward</title>
+                                                            <block type="draw_move">
+                                                            <field name="DIR">moveBackward</field>
                                                             <value name="VALUE">
-                                                            <block type="math_arithmetic" inline="true">
-                                                            <title name="OP">MINUS</title>
+                                                            <block type="math_arithmetic">
+                                                            <field name="OP">MINUS</field>
                                                             <value name="A">
                                                             <block type="variables_get">
-                                                            <title name="VAR">counter</title>
+                                                            <field name="VAR">counter</field>
                                                             </block>
                                                             </value>
                                                             <value name="B">
                                                             <block type="math_number">
-                                                            <title name="NUM">5</title>
+                                                            <field name="NUM">5</field>
                                                             </block>
                                                             </value>
                                                             </block>
                                                             </value>
                                                             <next>
                                                             <block type="draw_turn_by_constant">
-                                                            <title name="DIR">turnLeft</title>
-                                                            <title name="VALUE">90</title>
+                                                            <field name="DIR">turnLeft</field>
+                                                            <field name="VALUE">90</field>
                                                             <next>
                                                             <block type="draw_move_by_constant">
-                                                            <title name="DIR">moveForward</title>
-                                                            <title name="VALUE">2</title>
+                                                            <field name="DIR">moveForward</field>
+                                                            <field name="VALUE">2</field>
                                                             <next>
                                                             <block type="draw_turn_by_constant">
-                                                            <title name="DIR">turnRight</title>
-                                                            <title name="VALUE">90</title>
+                                                            <field name="DIR">turnRight</field>
+                                                            <field name="VALUE">90</field>
                                                             </block>
                                                             </next>
                                                             </block>

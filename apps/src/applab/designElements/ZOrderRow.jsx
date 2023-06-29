@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import applabMsg from '@cdo/applab/locale';
 import color from '../../util/color';
 import * as rowStyle from './rowStyle';
 import FontAwesome from '../../templates/FontAwesome';
@@ -7,7 +8,7 @@ import FontAwesome from '../../templates/FontAwesome';
 export default class ZOrderRow extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -27,26 +28,28 @@ export default class ZOrderRow extends React.Component {
       height: 42,
       marginLeft: 0,
       marginRight: 10,
-      backgroundColor: color.cyan
+      backgroundColor: color.cyan,
     };
 
     const squareButtonDisabled = {
       width: 42,
       height: 42,
       marginLeft: 0,
-      marginRight: 10
+      marginRight: 10,
     };
 
     return (
       <div style={rowStyle.container}>
-        <div style={rowStyle.description}>depth</div>
+        <div style={rowStyle.description}>
+          {applabMsg.designElementProperty_zOrder()}
+        </div>
         <div>
           <button
             type="button"
             style={isBackMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'toBack')}
             disabled={isBackMost}
-            title="Send to Back"
+            title={applabMsg.designElementProperty_zOrder_backButton()}
           >
             <FontAwesome icon="angle-double-left" />
           </button>
@@ -55,7 +58,7 @@ export default class ZOrderRow extends React.Component {
             style={isBackMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'backward')}
             disabled={isBackMost}
-            title="Send Backward"
+            title={applabMsg.designElementProperty_zOrder_backwardButton()}
           >
             <FontAwesome icon="angle-left" />
           </button>
@@ -64,7 +67,7 @@ export default class ZOrderRow extends React.Component {
             style={isFrontMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'forward')}
             disabled={isFrontMost}
-            title="Send Forward"
+            title={applabMsg.designElementProperty_zOrder_forwardButton()}
           >
             <FontAwesome icon="angle-right" />
           </button>
@@ -73,7 +76,7 @@ export default class ZOrderRow extends React.Component {
             style={isFrontMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'toFront')}
             disabled={isFrontMost}
-            title="Send to Front"
+            title={applabMsg.designElementProperty_zOrder_frontButton()}
           >
             <FontAwesome icon="angle-double-right" />
           </button>

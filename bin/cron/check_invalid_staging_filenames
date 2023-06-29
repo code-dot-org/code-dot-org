@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative "../../deployment"
+
+require 'cdo/chat_client'
+require 'cdo/developers_topic'
+require_relative '../../tools/hooks/hooks_utils'
+
+HooksUtils.get_unstaged_files.each do |filename|
+  next unless HooksUtils.prohibited?(filename)
+  msg = "INVALID FILENAME: #{filename}"
+  ChatClient.log("<@#{DevelopersTopic.dotd}> #{msg}", color: 'red')
+  ChatClient.message('content-editors', msg, color: 'red')
+end

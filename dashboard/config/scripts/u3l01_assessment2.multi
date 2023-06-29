@@ -10,3 +10,4 @@ right 'Serve with soup'
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

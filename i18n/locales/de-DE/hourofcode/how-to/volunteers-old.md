@@ -14,7 +14,7 @@ Lesen Sie sich einige Erfahrungsberichte von früheren Freiwilligen durch:
 
 - Das Beste an meiner Erfahrung war, dass die gesamte Klasse aus Frauen und farbigen Menschen bestand. Es ist ein gutes Vorzeichen für die Zukunft unserer Branche, wenn wir die Chance haben, diese jungen Menschen zu erreichen und zu begeistern
 - Ich fand es toll, junge Mädchen und Frauen für Technologie zu begeistern. Ich hatte das Gefühl, dass ich der nächsten Generation in meiner Gegend helfen konnte"
-- "Ich FAND ES TOLL zu sehen, wie begeistert die Kinder waren. Eine erstaunliche Erfahrung war, dass die LehrerInnen bemerkten, dass einige der SchülerInnen, die akademisch nicht herausragend waren, ungewöhnlich gut darin waren, wie ein Entwickler zu denken und anderen zu helfen - sie hatten einen Bereich für sich entdeckt, wo sie Selbstbewusstsein empfanden.
+- "MIR HAT GEFALLEN, wie begeistert die Kinder waren. Eine erstaunliche Erfahrung war, dass die LehrerInnen bemerkten, dass einige der SchülerInnen, die akademisch nicht herausragend waren, ungewöhnlich gut darin waren, wie ein Entwickler zu denken und anderen zu helfen - sie hatten einen Bereich für sich entdeckt, wo sie Selbstbewusstsein empfanden.
 
 ## Jeder kann als Freiwillige(r) helfen
 ### Freiwillige und ReferentInnen aus technischen Berufen:

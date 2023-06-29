@@ -26,7 +26,7 @@ puts puzzles(true)
 # count average number of puzzles completed
 def courses_1_2_3_puzzles(has_teacher)
   script_ids = %w(course1 course2 course3).map do |name|
-    Script.find_by_name(name).id
+    Unit.find_by_name(name).id
   end
   has_teacher = "#{has_teacher ? 'IN' : 'NOT IN'} (SELECT DISTINCT(student_user_id) FROM followers)"
   levels = UserLevel.

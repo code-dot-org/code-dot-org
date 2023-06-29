@@ -6,48 +6,48 @@ var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
 var assertTableSize = NetSimTestUtils.assertTableSize;
 var fakeShard = NetSimTestUtils.fakeShard;
 
-describe('NetSimEntity', function() {
-  it('default entityID is undefined', function() {
+describe('NetSimEntity', function () {
+  it('default entityID is undefined', function () {
     var entity = new NetSimEntity(undefined, undefined);
     assert.isUndefined(entity.entityID);
   });
 
-  it("doesn't implement getTable", function() {
+  it("doesn't implement getTable", function () {
     var entity = new NetSimEntity(undefined, undefined);
-    assert.throws(function() {
+    assert.throws(function () {
       entity.getTable();
     }, Error);
   });
 
-  it('buildRow method produces empty object', function() {
+  it('buildRow method produces empty object', function () {
     var entity = new NetSimEntity(undefined, undefined);
     assert.deepEqual(entity.buildRow(), {});
   });
 
-  it('disallows static creation on base type', function() {
-    assert.throws(function() {
-      NetSimEntity.create(NetSimEntity, undefined, function() {});
+  it('disallows static creation on base type', function () {
+    assert.throws(function () {
+      NetSimEntity.create(NetSimEntity, undefined, function () {});
     }, Error);
   });
 
-  it('disallows static fetch of base type', function() {
-    assert.throws(function() {
-      NetSimEntity.get(NetSimEntity, 1, undefined, function() {});
+  it('disallows static fetch of base type', function () {
+    assert.throws(function () {
+      NetSimEntity.get(NetSimEntity, 1, undefined, function () {});
     }, Error);
   });
 
-  describe('static create()', function() {
+  describe('static create()', function () {
     var testShard;
 
-    beforeEach(function() {
+    beforeEach(function () {
       testShard = fakeShard();
     });
 
-    it('creates and returns an entity fo the correct type', function() {
+    it('creates and returns an entity fo the correct type', function () {
       assertTableSize(testShard, 'nodeTable', 0);
 
       var entity;
-      NetSimEntity.create(NetSimClientNode, testShard, function(err, newNode) {
+      NetSimEntity.create(NetSimClientNode, testShard, function (err, newNode) {
         entity = newNode;
       });
       assert.isDefined(entity);
@@ -56,41 +56,45 @@ describe('NetSimEntity', function() {
     });
   });
 
-  describe('static get()', function() {
+  describe('static get()', function () {
     var testShard;
 
-    beforeEach(function() {
+    beforeEach(function () {
       testShard = fakeShard();
     });
 
-    it('returns null if entity is not found', function() {
+    it('returns null if entity is not found', function () {
       var entity;
-      NetSimEntity.get(NetSimClientNode, 15, testShard, function(
-        err,
-        foundEntity
-      ) {
-        entity = foundEntity;
-      });
+      NetSimEntity.get(
+        NetSimClientNode,
+        15,
+        testShard,
+        function (err, foundEntity) {
+          entity = foundEntity;
+        }
+      );
       assert.isNull(
         entity,
         'Should return null when entity not found, returned ' + entity
       );
     });
 
-    it('returns entity of correct type, if found', function() {
+    it('returns entity of correct type, if found', function () {
       var clientNodeID;
-      NetSimEntity.create(NetSimClientNode, testShard, function(err, newNode) {
+      NetSimEntity.create(NetSimClientNode, testShard, function (err, newNode) {
         clientNodeID = newNode.entityID;
       });
       assert.isDefined(clientNodeID, 'Expected a client node ID');
 
       var entity;
-      NetSimEntity.get(NetSimClientNode, clientNodeID, testShard, function(
-        err,
-        foundEntity
-      ) {
-        entity = foundEntity;
-      });
+      NetSimEntity.get(
+        NetSimClientNode,
+        clientNodeID,
+        testShard,
+        function (err, foundEntity) {
+          entity = foundEntity;
+        }
+      );
       assert.instanceOf(
         entity,
         NetSimClientNode,
@@ -100,35 +104,35 @@ describe('NetSimEntity', function() {
     });
   });
 
-  describe('static destroyEntities()', function() {
+  describe('static destroyEntities()', function () {
     var testShard;
 
-    beforeEach(function() {
+    beforeEach(function () {
       testShard = fakeShard();
     });
 
-    it('returns immediate success for empty message list', function() {
+    it('returns immediate success for empty message list', function () {
       var success = false;
-      NetSimEntity.destroyEntities([], function(err) {
+      NetSimEntity.destroyEntities([], function (err) {
         success = err === null;
       });
       assert(success, 'Called callback with null error');
     });
 
-    it('deletes all entities passed to it', function() {
-      NetSimEntity.create(NetSimClientNode, testShard, function() {});
-      NetSimEntity.create(NetSimClientNode, testShard, function() {});
-      NetSimEntity.create(NetSimClientNode, testShard, function() {});
+    it('deletes all entities passed to it', function () {
+      NetSimEntity.create(NetSimClientNode, testShard, function () {});
+      NetSimEntity.create(NetSimClientNode, testShard, function () {});
+      NetSimEntity.create(NetSimClientNode, testShard, function () {});
       assertTableSize(testShard, 'nodeTable', 3);
 
       testShard.nodeTable.refresh();
-      var nodes = testShard.nodeTable.readAll().map(function(row) {
+      var nodes = testShard.nodeTable.readAll().map(function (row) {
         return new NetSimClientNode(testShard, row);
       });
       assert.equal(nodes.length, 3);
       assert.instanceOf(nodes[0], NetSimClientNode);
 
-      NetSimEntity.destroyEntities(nodes, function() {});
+      NetSimEntity.destroyEntities(nodes, function () {});
       assertTableSize(testShard, 'nodeTable', 0);
     });
   });

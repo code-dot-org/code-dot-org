@@ -4,3 +4,5 @@ wrong 'The bird will end up one step short of the pig.', feedback: 'Incorrect. T
 right 'The bird will make it to the pig.', feedback: 'Correct!'
 wrong 'The bird will run into the TNT.', feedback: 'Incorrect. This code gets the bird perfectly to the pig.'
 wrong 'I don\'t know.', feedback: 'This code gets the bird perfectly to the pig.'
+
+allow_multiple_attempts false

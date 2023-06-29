@@ -355,6 +355,26 @@
         },
         "simcustom_-2022-2": {
           "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen"
         }
       }
     }

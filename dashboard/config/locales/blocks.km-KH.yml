@@ -253,6 +253,11 @@ km:
             '"space"': លំហ​អាកាស
             '"x"': x
             '"y"': y
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': បេះដូង
+            '"rain"': ភ្លៀង
       gamelab_atTime:
         options:
           UNIT:
@@ -664,3 +669,8 @@ km:
         text: រំកិល​ទៅមុខ
       craft_placeTorch:
         text: ដាក់ភ្លើងគប់
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': បេះដូង
+            '"rain"': ភ្លៀង

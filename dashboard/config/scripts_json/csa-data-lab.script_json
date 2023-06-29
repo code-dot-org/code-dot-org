@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": "csa-data-lab",
-    "serialized_at": "2022-09-15 20:17:42 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-09-27 14:46:12 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -616,6 +616,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L1-L1"
+        ],
         "progression": "File Types"
       },
       "bonus": false,
@@ -638,6 +641,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L1-L2"
+        ],
         "progression": "File Types"
       },
       "bonus": false,
@@ -660,6 +666,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L1-L3"
+        ],
         "progression": "Posing Questions"
       },
       "bonus": false,
@@ -682,6 +691,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L1-L4"
+        ],
         "progression": "Posing Questions"
       },
       "bonus": false,
@@ -704,6 +716,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L1-L5"
+        ],
         "progression": "Refining Your Questions"
       },
       "bonus": false,
@@ -726,6 +741,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L1-L6"
+        ],
         "progression": "Finding Data Sets"
       },
       "bonus": false,
@@ -748,6 +766,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L1-L7"
+        ],
         "progression": "Finding Data Sets"
       },
       "bonus": false,
@@ -770,6 +791,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L1-L8"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -792,6 +816,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L1-L9"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -814,6 +841,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L2-L1"
+        ],
         "progression": "Cereal Data Set"
       },
       "bonus": false,
@@ -836,6 +866,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L2-L2"
+        ],
         "progression": "Designing the Cereal Class"
       },
       "bonus": false,
@@ -858,6 +891,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L2-L3"
+        ],
         "progression": "Designing the Cereal Class"
       },
       "bonus": false,
@@ -880,6 +916,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L2-L4"
+        ],
         "progression": "Designing the Cereal Class"
       },
       "bonus": false,
@@ -902,6 +941,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L2-L5"
+        ],
         "progression": "Implementing the Cereal Class"
       },
       "bonus": false,
@@ -924,6 +966,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L2-L6"
+        ],
         "progression": "Implementing the Cereal Class"
       },
       "bonus": false,
@@ -946,6 +991,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L2-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -968,6 +1016,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L2-L8"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -990,6 +1041,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L2-L9"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1012,6 +1066,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L3-L1"
+        ],
         "progression": "Getting Started"
       },
       "bonus": false,
@@ -1034,6 +1091,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L3-L2"
+        ],
         "progression": "Getting Started"
       },
       "bonus": false,
@@ -1056,6 +1116,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L3-L3"
+        ],
         "progression": "Arrays and Lists of Objects"
       },
       "bonus": false,
@@ -1078,6 +1141,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L3-L4"
+        ],
         "progression": "Arrays and Lists of Objects"
       },
       "bonus": false,
@@ -1100,6 +1166,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L3-L5"
+        ],
         "progression": "Arrays and Lists of Objects"
       },
       "bonus": false,
@@ -1122,6 +1191,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L3-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1144,6 +1216,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L3-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1166,6 +1241,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L4-L1"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1188,6 +1266,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L4-L2"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1210,6 +1291,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L4-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1232,6 +1316,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L4-L4"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1254,6 +1341,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Data Lab L4-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,

@@ -31,7 +31,7 @@ class FollowersController < ApplicationController
     # Create boolean to confirm if a user already actively exists on a section roster
     is_existing_follower = !!Follower.find_by(section: @section, student_user: @user)
 
-    if current_user&.display_captcha? && !verify_recaptcha
+    if current_user&.display_join_section_captcha? && !verify_recaptcha
       flash[:alert] = I18n.t('follower.captcha_required')
       # Concatenate section code so user does not have to type section code again
       # Note that @section will always be defined due to validations in load_section
@@ -65,21 +65,24 @@ class FollowersController < ApplicationController
     render 'student_user_new', formats: [:html]
   end
 
-  private
-
-  def followers_params(user_type)
-    allowed_params = params[:user].permit([:name, :password, :gender, :age, :email, :hashed_email])
+  private def followers_params(user_type)
+    allowed_params = params[:user].permit([:name, :password, :gender,
+                                           :gender_student_input,
+                                           :gender_teacher_input, :age, :email,
+                                           :hashed_email,  :us_state,
+                                           :country_code]
+    )
     if user_type == User::TYPE_TEACHER
       allowed_params.merge(params[:user].permit([:school, :full_address]))
     end
     allowed_params
   end
 
-  def redirect_url
+  private def redirect_url
     params[:redirect] || root_path
   end
 
-  def load_section
+  private def load_section
     return if params[:section_code].blank?
 
     # Though downstream validations would raise an exception, we redirect to the admin directory to

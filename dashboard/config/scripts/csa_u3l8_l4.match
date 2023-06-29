@@ -14,3 +14,5 @@ answer 'the value that determines when to end a loop'
 
 question 'ArithmeticException'
 answer 'an error caused by dividing by zero'
+
+allow_multiple_attempts true

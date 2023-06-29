@@ -10,7 +10,8 @@
           "details": "the announcement",
           "link": "",
           "type": "bullhorn",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "522deba9-98c0-4e5e-9d33-f27c05fe8f97"
         }
       ],
       "is_migrated": true,
@@ -20,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:07:58 UTC",
+    "serialized_at": "2022-09-28 14:31:30 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "plc_reviewer",

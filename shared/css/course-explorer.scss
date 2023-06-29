@@ -176,7 +176,7 @@ $color_border_invisible: rgba(170, 170, 170, 0);
     position: absolute;
     pointer-events: none;
     border-color: $color_border_invisible;
-    border-bottom-color: $color_gallery_approx;
+    border-bottom-color: $white;
     border-width: 10px;
     margin-left: -10px;
   }

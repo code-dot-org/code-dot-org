@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'rack/test'
 
-require_relative '../../lib/state_abbr.rb'
+require_relative '../../lib/state_abbr'
 
 class StateAbbrTest < Minitest::Test
   def test_get_us_state_from_abbr_lowercase_symbol

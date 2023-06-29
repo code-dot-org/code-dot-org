@@ -12,7 +12,7 @@ import FacilitatorsList from './facilitators_list';
 import WorkshopManagement from './workshop_management';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {workshopShape} from '../types.js';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {shouldShowSurveyResults} from '../workshop_summary_utils';
 
 export default class WorkshopTable extends React.Component {
@@ -21,7 +21,7 @@ export default class WorkshopTable extends React.Component {
       limit: PropTypes.number,
       total_count: PropTypes.number,
       filters: PropTypes.object,
-      workshops: PropTypes.arrayOf(workshopShape)
+      workshops: PropTypes.arrayOf(workshopShape),
     }),
     onDelete: PropTypes.func,
     showSignupUrl: PropTypes.bool,
@@ -31,11 +31,11 @@ export default class WorkshopTable extends React.Component {
     moreUrl: PropTypes.string,
     onWorkshopsReceived: PropTypes.func,
     generateCaption: PropTypes.func,
-    onSort: PropTypes.func
+    onSort: PropTypes.func,
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   static defaultProps = {
@@ -43,7 +43,7 @@ export default class WorkshopTable extends React.Component {
     onDelete: null,
     showSignupUrl: false,
     showOrganizer: false,
-    showStatus: false
+    showStatus: false,
   };
 
   UNSAFE_componentWillMount() {
@@ -81,16 +81,16 @@ export default class WorkshopTable extends React.Component {
       sortingColumns: {
         [sortColumnIndex]: {
           direction,
-          position: 0
-        }
-      }
+          position: 0,
+        },
+      },
     };
   }
 
   constructColumns() {
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, {
       container: {whiteSpace: 'nowrap'},
-      default: {color: color.light_gray}
+      default: {color: color.light_gray},
     });
 
     let columns = [];
@@ -98,79 +98,79 @@ export default class WorkshopTable extends React.Component {
       {
         property: 'manage',
         header: {
-          label: 'Manage'
+          label: 'Manage',
         },
         cell: {
-          formatters: [this.formatManagement]
-        }
+          formatters: [this.formatManagement],
+        },
       },
       {
         property: 'date', // for sorting
         header: {
           label: 'Date and Time',
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
-          formatters: [this.formatSessions]
-        }
+          formatters: [this.formatSessions],
+        },
       },
       {
         property: 'location_name',
         header: {
           label: 'Location',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       },
       {
         property: 'on_map',
         header: {
           label: 'On Map',
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
-          formatters: [this.formatBoolean]
-        }
+          formatters: [this.formatBoolean],
+        },
       },
       {
         property: 'funded',
         header: {
           label: 'Funded',
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
-          formatters: [this.formatBoolean]
-        }
+          formatters: [this.formatBoolean],
+        },
       },
       {
         property: 'course',
         header: {
           label: 'Course',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       },
       {
         property: 'subject',
         header: {
           label: 'Subject',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       },
       {
         property: 'virtual',
         header: {
           label: 'Virtual',
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
-          formatters: [this.formatBoolean]
-        }
+          formatters: [this.formatBoolean],
+        },
       },
       {
         property: 'enrollments',
         header: {
           label: 'Signups',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       }
     );
 
@@ -178,11 +178,11 @@ export default class WorkshopTable extends React.Component {
       columns.push({
         property: 'organizer',
         header: {
-          label: 'Organizer'
+          label: 'Organizer',
         },
         cell: {
-          formatters: [this.formatOrganizer]
-        }
+          formatters: [this.formatOrganizer],
+        },
       });
     }
 
@@ -190,18 +190,18 @@ export default class WorkshopTable extends React.Component {
       {
         property: 'facilitators',
         header: {
-          label: 'Facilitators'
+          label: 'Facilitators',
         },
         cell: {
-          formatters: [this.formatFacilitators]
-        }
+          formatters: [this.formatFacilitators],
+        },
       },
       {
         property: 'regional_partner_name',
         header: {
           label: 'Regional Partner',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       }
     );
 
@@ -212,8 +212,8 @@ export default class WorkshopTable extends React.Component {
         property: 'state',
         header: {
           label: 'Status',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       });
     }
 
@@ -221,11 +221,11 @@ export default class WorkshopTable extends React.Component {
       columns.push({
         property: 'id',
         header: {
-          label: 'Signup Url'
+          label: 'Signup Url',
         },
         cell: {
-          formatters: [this.formatSignupUrl]
-        }
+          formatters: [this.formatSignupUrl],
+        },
       });
     }
 
@@ -241,15 +241,15 @@ export default class WorkshopTable extends React.Component {
       sortingOrder: {
         FIRST: 'asc',
         asc: 'desc',
-        desc: 'asc'
+        desc: 'asc',
       },
-      selectedColumn
+      selectedColumn,
     });
 
     const columnIndex = _.keys(sortingColumns)[0];
     const sortDescription = {
       property: this.columns[columnIndex].property,
-      direction: sortingColumns[columnIndex].direction
+      direction: sortingColumns[columnIndex].direction,
     };
 
     if (this.props.onSort) {
@@ -324,8 +324,8 @@ export default class WorkshopTable extends React.Component {
           state: row.state,
           date: row.sessions[0].start,
           canDelete: row.can_delete,
-          endDate: row.sessions[row.sessions.length - 1].end
-        }
+          endDate: row.sessions[row.sessions.length - 1].end,
+        },
       })
     );
 
@@ -333,7 +333,7 @@ export default class WorkshopTable extends React.Component {
     const sortedRows = sort.sorter({
       columns: this.columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(rows);
 
     return (
@@ -375,6 +375,6 @@ export default class WorkshopTable extends React.Component {
 
 const styles = {
   container: {
-    overflowX: 'auto'
-  }
+    overflowX: 'auto',
+  },
 };

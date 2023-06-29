@@ -23,11 +23,13 @@ class Services::CSTAEnrollment
   # @param city [String] School city, max 50 characters
   # @param state [String] School state, 2 characters
   # @param zip [String] School zip, 5 characters
+  # @param professional_role [String] Teacher's professional role
+  # @param grades_teaching [String] List of grades
   # @param privacy_permission [Boolean] Whether the teacher agreed to
   #        the CSTA privacy policy.
   def self.submit(first_name:, last_name:, email:, school_district_name:,
-    school_name:, street_1:, street_2:, city:, state:, zip:,
-    privacy_permission:)
+    school_name:, street_1:, street_2:, city:, state:, zip:, professional_role:,
+    grades_teaching:, privacy_permission:)
     return unless CDO.csta_jotform_api_key && CDO.csta_jotform_form_id
 
     raise Error.new('CSTA submission skipped: Privacy consent was not provided') unless privacy_permission
@@ -51,7 +53,9 @@ class Services::CSTAEnrollment
         "submission[17_city]" => city.titleize,
         "submission[17_state]" => get_us_state_abbr(state, true),
         "submission[17_zip]" => zip,
-        "submission[19]" => "Yes, I provide my consent."
+        "submission[19]" => "Yes, I provide my consent.",
+        "submission[25]" => professional_role,
+        "submission[22]" => grades_teaching
       }
     )
 

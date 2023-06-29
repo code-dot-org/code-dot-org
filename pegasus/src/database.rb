@@ -1,6 +1,6 @@
 require 'cdo/db'
 require 'cdo/geocoder'
-require 'cdo/properties'
+require_relative '../helpers/properties'
 require 'cdo/form'
 require 'securerandom'
 require 'active_support/core_ext/enumerable'
@@ -85,7 +85,7 @@ class Tutorials
   end
 
   def self.sort_by_popularity?(site, hoc_mode)
-    ("post-hoc" == hoc_mode) || (site == 'code.org' && [false, 'pre-hoc'].include?(hoc_mode))
+    (hoc_mode == "post-hoc") || (site == 'code.org' && [false, 'pre-hoc'].include?(hoc_mode))
   end
 end
 

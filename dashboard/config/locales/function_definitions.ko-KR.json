@@ -489,26 +489,26 @@
         },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
-            "name": "긴 경로 고치기"
+            "name": "긴 경로 수정하기"
           },
           "fix short path": {
-            "name": "짧은 길 고치기"
+            "name": "짧은 경로 수정하기"
           }
         },
         "MC_HOC_2017_10_RETRY_2019": {
           "fix long path": {
-            "name": "긴 경로 고치기"
+            "name": "긴 경로 수정하기"
           },
           "fix short path": {
-            "name": "짧은 길 고치기"
+            "name": "짧은 경로 수정하기"
           }
         },
         "MC_HOC_2017_10_RETRY_2020": {
           "fix long path": {
-            "name": "긴 경로 고치기"
+            "name": "긴 경로 수정하기"
           },
           "fix short path": {
-            "name": "짧은 길 고치기"
+            "name": "짧은 경로 수정하기"
           }
         },
         "MC_HOC_2017_Ali": {
@@ -2584,10 +2584,10 @@
         },
         "MC_HOC_2017_10_RETRY_2021": {
           "fix long path": {
-            "name": "긴 경로 고치기"
+            "name": "긴 경로 수정하기"
           },
           "fix short path": {
-            "name": "짧은 길 고치기"
+            "name": "짧은 경로 수정하기"
           }
         },
         "MC_HOC_2017_Ali_2021": {
@@ -4094,10 +4094,10 @@
         },
         "MC_HOC_2017_10_RETRY2022": {
           "fix long path": {
-            "name": "긴 경로 고치기"
+            "name": "긴 경로 수정하기"
           },
           "fix short path": {
-            "name": "짧은 길 고치기"
+            "name": "짧은 경로 수정하기"
           }
         },
         "MC_HOC_2017_Ali2022": {

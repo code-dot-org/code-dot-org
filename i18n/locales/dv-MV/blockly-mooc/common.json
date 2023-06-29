@@ -1,4 +1,5 @@
 {
+  "animationCategory_space": "ސްޕޭސް",
   "backToActivity": "އެކްޓިވިޓީއަށް އަނބުރާ ދިޔުމަށް",
   "bottomLeft": "ތިރިން ވާތް ފަރާތް",
   "bottomRight": "ތިރިން ކަނާތް ފަރާތް",
@@ -35,9 +36,9 @@
   "no": "ނޫން",
   "numBlocksUsedLabel": "ބްލޮކްތައް",
   "ok": "އޯކޭ",
+  "print": "ޕްރިންޓް",
   "projectTypeEvents": "އިވެންޓުތައް",
   "projects": "ޕްރޮޖެކްސް",
-  "print": "ޕްރިންޓް",
   "privacyPolicy": "ރައްކާތެރިކަމުގެ ޕޮލިސީ",
   "provideAge": "އުމުރު އެންޓަރ ކުރުމަށްފަހު ކުރިއަށް ދިޔުމަށް އޯކޭ ބަޓަނަށް ފިތާލާ.",
   "puzzleRatingQuestion": "މި ޕަޒްލް ކަމުދިޔަތަ؟",

@@ -22,14 +22,12 @@ export default class StudentHomepage extends Component {
     canViewAdvancedTools: PropTypes.bool,
     studentId: PropTypes.number.isRequired,
     isEnglish: PropTypes.bool.isRequired,
-    showVerifiedTeacherWarning: PropTypes.bool
+    showVerifiedTeacherWarning: PropTypes.bool,
   };
 
   componentDidMount() {
     // The component used here is implemented in legacy HAML/CSS rather than React.
-    $('#flashes')
-      .appendTo(ReactDOM.findDOMNode(this.refs.flashes))
-      .show();
+    $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   }
 
   render() {
@@ -39,7 +37,7 @@ export default class StudentHomepage extends Component {
       topCourse,
       hasFeedback,
       isEnglish,
-      showVerifiedTeacherWarning
+      showVerifiedTeacherWarning,
     } = this.props;
     const {canViewAdvancedTools, studentId} = this.props;
     // Verify background image works for both LTR and RTL languages.

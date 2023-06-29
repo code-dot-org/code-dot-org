@@ -36,7 +36,7 @@ export default class ChangeEmailController {
     userAge,
     userType,
     isPasswordRequired,
-    emailChangedCallback
+    emailChangedCallback,
   }) {
     this.form = form;
     this.displayedUserEmail = displayedUserEmail;
@@ -87,7 +87,7 @@ export default class ChangeEmailController {
     this.hideChangeEmailModal();
     this.displayedUserEmail.effect('highlight', {
       duration: 1500,
-      color: color.orange
+      color: color.orange,
     });
     this.emailChangedCallback(newEmail, hashEmail(newEmail));
   };
@@ -109,8 +109,8 @@ export default class ChangeEmailController {
               newEmail: validationErrors.email && validationErrors.email[0],
               currentPassword:
                 validationErrors.current_password &&
-                validationErrors.current_password[0]
-            }
+                validationErrors.current_password[0],
+            },
           };
         } else {
           error = new Error('Unexpected failure: ' + xhr.status);

@@ -1,5 +1,5 @@
 import SingleCheckbox from '@cdo/apps/code-studio/pd/form_components/SingleCheckbox';
-import {Checkbox} from 'react-bootstrap';
+import {Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
@@ -28,16 +28,10 @@ describe('SingleCheckbox', () => {
         />
       );
 
-    expect(
-      singleCheckBoxWithValue(true)
-        .find(Checkbox)
-        .prop('checked')
-    ).to.be.true;
-    expect(
-      singleCheckBoxWithValue(false)
-        .find(Checkbox)
-        .prop('checked')
-    ).to.be.false;
+    expect(singleCheckBoxWithValue(true).find(Checkbox).prop('checked')).to.be
+      .true;
+    expect(singleCheckBoxWithValue(false).find(Checkbox).prop('checked')).to.be
+      .false;
   });
 
   it('Calls supplied onChange function with the updated value', () => {

@@ -6,11 +6,12 @@ import {castValue} from './dataUtils';
 import dataStyles from './data-styles.module.scss';
 import classNames from 'classnames';
 import _ from 'lodash';
+import msg from '@cdo/locale';
 
 const INITIAL_STATE = {
   isAdding: false,
   // An object whose keys are column names and values are the raw user input.
-  newInput: {}
+  newInput: {},
 };
 
 class AddTableRow extends React.Component {
@@ -18,14 +19,14 @@ class AddTableRow extends React.Component {
     columnNames: PropTypes.array.isRequired,
     tableName: PropTypes.string.isRequired,
     showError: PropTypes.func.isRequired,
-    hideError: PropTypes.func.isRequired
+    hideError: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};
 
   handleChange(columnName, event) {
     const newInput = Object.assign({}, this.state.newInput, {
-      [columnName]: event.target.value
+      [columnName]: event.target.value,
     });
     this.setState({newInput});
   }
@@ -68,7 +69,7 @@ class AddTableRow extends React.Component {
               <input
                 className={dataStyles.input}
                 value={this.state.newInput[columnName] || ''}
-                placeholder="enter text"
+                placeholder={msg.enterText()}
                 onChange={event => this.handleChange(columnName, event)}
                 onKeyUp={this.handleKeyUp}
               />
@@ -82,9 +83,9 @@ class AddTableRow extends React.Component {
           <PendingButton
             isPending={this.state.isAdding}
             onClick={this.handleAdd}
-            pendingText="Adding..."
+            pendingText={msg.addingToTable()}
             className={classNames(dataStyles.button, dataStyles.buttonBlue)}
-            text="Add Row"
+            text={msg.addRowToTable()}
           />
         </td>
       </tr>

@@ -47,15 +47,15 @@
         "debugging/gumball/unversioned": {
           "word": "Отстраняване на грешки"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
         "condition/aquatic/unversioned": {
           "word": "Условие",
           "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
         },
         "conditionals/aquatic/unversioned": {
           "word": "Условия"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Отстраняване на грешки"
         },
         "loops/aquatic/unversioned": {
           "word": "Повторения"
@@ -74,6 +74,14 @@
         },
         "lossless_compression/text-compression/unversioned": {
           "definition": "алгоритъм за компресиране, който позволява данните да бъдат перфектно възстановени от копмресираните данни. Най-често използвани за компресиране на текст(т.е. .zip компресия)"
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "Код"
@@ -251,6 +259,18 @@
         "binary/coursec/2022": {
           "word": "Двоичен код"
         },
+        "ascii/csd/2022": {
+          "word": "ASCII",
+          "definition": "популярна система за представяне на текст двоичната система"
+        },
+        "binary_system/csd/2022": {
+          "word": "Двоична Система",
+          "definition": "начин за представяне на информация, използвайки само две опции"
+        },
+        "bit/csd/2022": {
+          "word": "Бит",
+          "definition": "едно парче двоична информация"
+        },
         "input/csd/2022": {
           "word": "Поле за въвеждане"
         },
@@ -292,17 +312,34 @@
           "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
         },
         "code/poem-art/unversioned": {
-          "word": "Код"
+          "word": "Код",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "user/coursef/2021": {
           "word": "Потребител",
           "definition": "Някой, който използва обект, включително софтуер и хардуер."
         },
-        "behavior/coursef/2021": {
-          "word": "Поведение"
-        },
         "algorithm/coursef/2021": {
           "word": "Алгоритъм"
+        },
+        "behavior/coursef/2021": {
+          "word": "Поведение"
         },
         "variable/coursef/2021": {
           "word": "Променлива"
@@ -470,6 +507,18 @@
         "usability/csd/2021": {
           "word": "Ползваемост",
           "definition": "Колко е лесно, ефективно, и удволетворяващо да използваш обект или устройство (включващо и софтуер) направен от друг човек."
+        },
+        "binary_system/csd/2021": {
+          "word": "Двоична Система",
+          "definition": "начин за представяне на информация, използвайки само две опции"
+        },
+        "ascii/csd/2021": {
+          "word": "ASCII",
+          "definition": "популярна система за представяне на текст двоичната система"
+        },
+        "bit/csd/2021": {
+          "word": "Бит",
+          "definition": "едно парче двоична информация"
         },
         "debugging/csd/2021": {
           "word": "Отстраняване на грешки"

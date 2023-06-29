@@ -414,6 +414,7 @@ sq-AL:
   homepage_banner_40k_teachers_link: Mëso më shumë
   homepage_slot_text_title_hoc: Ora e Kodimit
   homepage_slot_text_blurb_hoc: Çdokush mund të mësojë. Fillo sot
+  homepage_slot_text_blurb_hoc_2022: Eksploro, Luaj, Krijo!
   homepage_slot_text_link_hoc: Provo Orën e Kodimit
   homepage_slot_text_link_host: Organizo një Orë Kodim
   homepage_slot_text_link_hocserved: "# e dorëzuar"
@@ -438,6 +439,7 @@ sq-AL:
   homepage_slot_text_link_buy: Përfshihu
   homepage_slot_text_link_donate: Bëj një donacion
   homepage_slot_text_link_shop: Këmisha, kapele dhe më shumë
+  homepage_gallery_header: Utworzono ponad %{project_count} milionów projektów Code.org
   homepage_header_donors: Code.org falenderon të gjithë mbështetësit
   homepage_donors_seall: Shiko të gjitha
   homepage_donors_donate: Dhuro
@@ -624,6 +626,7 @@ sq-AL:
   volunteer_engineer_submission_distance_16: 10 milje
   volunteer_engineer_submission_distance_24: 15 milje
   volunteer_engineer_submission_distance_32: 20 milje
+  volunteer_engineer_submission_distance_80: 50 mil
   volunteer_engineer_submission_num_volunteers_5: 5 vullnetarë
   volunteer_engineer_submission_num_volunteers_10: 10 vullnetarë
   volunteer_engineer_submission_num_volunteers_25: 25 vullnetarë
@@ -1713,3 +1716,10 @@ sq-AL:
   ai_for_oceans_lesson_plan: plani mësimor
   ai_activity: Aktivizo
   ai_description: Përshkrimi
+  hoc2022_banner_title: Eksploro, Luaj, Krijo!
+  hoc2022_landing_page_explore_title: Eksploro
+  hoc2022_landing_page_explore_description: פתחו דלתות לעולמות חדשים עם מדעי המחשב!
+  hoc2022_landing_page_play_title: Luaj
+  hoc2022_landing_page_create_title: Krijo
+  try_an_activity: Provoni një aktivitet
+  see_more_activities: Shiko më shumë aktivitete

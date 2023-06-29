@@ -1,13 +1,9 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-09-19T22:20:15.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "hide_share_and_remix": "true",
-    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n</div>\r\n\r\n# Line Break\r\n\r\nIn some situations, like a poem or a list, you'll want to start a new line inside the same paragraph, like you might do in poetry. You can use the line break `<br>` tag for this.\r\n\r\n**Tip**: The `<br>` tag is useful for writing addresses or poems. It does not need a closing tag!\r\n\r\n**Note**: Use the `<br>` tag to enter line breaks, not to separate paragraphs. Always separate each paragraph with its own set of `<p>` and `</p>` tags!\r\n\r\n# Do This\r\n\r\n* Separate each line using `<br>` tags.",
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n</div>\r\n\r\n# Line Break\r\n\r\nIn some situations, like a poem or a list, you'll want to start a new line inside the same paragraph, like you might do in poetry. You can use the line break `<br>` tag for this.\r\n\r\n**Tip**: The `<br>` tag is useful for writing addresses or poems. It does not need a closing tag!\r\n\r\n**Note**: Use the `<br>` tag to enter line breaks, not to separate paragraphs. Always separate each paragraph with its own set of `<p>` and `</p>` tags!\r\n\r\n# Do This\r\n\r\n1) Separate each line using `<br>` tags.",
     "submittable": "false",
     "parent_level_id": 20958,
     "name_suffix": "_2023",
@@ -25,13 +21,20 @@
     "thumbnail_url": "https://images.code.org/a5886e61dac0133034f01502fa2d337a-image-1585675761262.png",
     "encrypted_examples": "94tNxM2G5wBdH1wayPDyWegSbgwKwYh2D6YzcwKki/BiVNe3VJ65m1PSS6Ci\n9XUIEN20/1WEUB21a7FvU/SPHg==\n",
     "reference_links": [
+      "/courses/csd-2022/guides/html-tags",
       "/courses/csd-2022/guides/headings-and-paragraphs",
-      "/courses/csd-2022/guides/html-tags"
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/debugging-html"
     ],
-    "map_reference": "/courses/csd-2022/guides/lists"
+    "map_reference": "/courses/csd-2022/guides/web-lab",
+    "validation_enabled": "false"
   },
+  "game_id": 58,
   "published": true,
+  "created_at": "2022-09-19T22:20:15.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:20:15.372+00:00\",\"changed\":[\"cloned from \\\"CSD Web Dev bubble choice br tag_2022\\\"\"],\"cloned_from\":\"CSD Web Dev bubble choice br tag_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:20:15.372+00:00\",\"changed\":[\"cloned from \\\"CSD Web Dev bubble choice br tag_2022\\\"\"],\"cloned_from\":\"CSD Web Dev bubble choice br tag_2022\"},{\"changed_at\":\"2023-02-17 23:31:11 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\",\"map_reference\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

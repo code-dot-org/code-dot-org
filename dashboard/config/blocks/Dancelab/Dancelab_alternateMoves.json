@@ -4,11 +4,7 @@
     "func": "alternateMoves",
     "inline": false,
     "blockText": "{GROUP} alternate every {N} measures \nbetween {MOVE1} and {MOVE2}",
-    "color": [
-      270,
-      ".7",
-      ".7"
-    ],
+    "style": "lab_blocks",
     "args": [
       {
         "name": "GROUP",

@@ -16,7 +16,7 @@ title: Ismertetők és hasznos statisztikák
 
 #### Hozd be a számítástechnikát az iskoládba. Kezdj a Kódolás órájával!
 
-A technológia változásával a bolygó minden iparágában a számítógépes ismeretek az alapvető készségek részévé váltak. De csak az iskolák felében folyik számítástechnikai oktatás! A jó hír az, hogy mi már dolgozunk a változáson. Aki hallott a tavalyi Kódolás órája eseményről, az tudhatja, hogy az történelmi jelentőséggel bírt. Csupán egy Kódolás órája elegendő volt ahhoz, hogy 100 millió diák fedezze fel, hogy a számítástechnika nem is olyan bonyolult, sőt roppant élvezetes.
+A technológia változásával a bolygó minden iparágában a számítógépes ismeretek az alapvető készségek részévé váltak. De csak az iskolák felében folyik számítástechnikai oktatás! A jó hír az, hogy mi már dolgozunk a változáson. If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
 A Kódolás órája egy órás bevezetés a számítástechnika világába, demisztifikálja a programozást, és bemutatja, hogy bárki megtanulhatja az alapokat. További hasznos információkat találsz a [http://HourOfCode.com](http://HourofCode.com) oldalon. Próbáld ki magad, vagy rendezz Kódolás óráját, mutasd meg másoknak is a számítástechnika világát!
 
@@ -30,7 +30,7 @@ Reméljük, ez felkelti majd a diákok érdeklődését a továbbtanulás iránt
 
 #### Miért fontos mindez?
 
-A technológia átformál minden iparágat a világon. 2015-ben 7 millió olyan üres állás volt Amerikában - beleértve a művészetet és a tervezési szakmákat - ahol előny jelentett volna a programozási ismeret. De az amerikai iskolák 49 %-ban nincs számítástechnikai oktatás. Ideje felzárkózni a 21. századhoz. Függetlenül attól, hogy a diákok milyen területen helyezkednek el felnőttként - orvostudomány, üzleti élet, politika vagy művészet -, a számítástechnika ismerete önbizalmat ad és versenyképessé teszi őket. <br /> <br />
+There are nearly 700,000 open computing jobs in the US, but only 80,000 computer science students graduated into the workforce last year. And, 47 percent of schools in the U.S. don't offer computer science. It’s time for us to catch up to the 21st century. Függetlenül attól, hogy a diákok milyen területen helyezkednek el felnőttként - orvostudomány, üzleti élet, politika vagy művészet -, a számítástechnika ismerete önbizalmat ad és versenyképessé teszi őket. <br /> <br />
 
 #### Egy idézet, amelyet az anyagokban felhasználhatsz
 

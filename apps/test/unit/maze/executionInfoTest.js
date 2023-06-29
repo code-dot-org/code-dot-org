@@ -1,8 +1,8 @@
 import {expect} from '../../util/reconfiguredChai';
 import ExecutionInfo from '@cdo/apps/maze/executionInfo';
 
-describe('ExecutionInfo tests', function() {
-  it('single action queue/dequeue', function() {
+describe('ExecutionInfo tests', function () {
+  it('single action queue/dequeue', function () {
     var executionInfo = new ExecutionInfo();
     executionInfo.queueAction('command1', 1);
     executionInfo.queueAction('command2', 2);
@@ -24,7 +24,7 @@ describe('ExecutionInfo tests', function() {
     expect(action.blockId).to.equal(2);
   });
 
-  it('multiple action steps: pull off one at a time', function() {
+  it('multiple action steps: pull off one at a time', function () {
     var executionInfo = new ExecutionInfo();
 
     executionInfo.collectActions();
@@ -54,7 +54,7 @@ describe('ExecutionInfo tests', function() {
     expect(actions[1].command).to.equal('step2Command2');
   });
 
-  it('multiple action steps: pull off all at once', function() {
+  it('multiple action steps: pull off all at once', function () {
     var executionInfo = new ExecutionInfo();
 
     executionInfo.collectActions();
@@ -81,7 +81,7 @@ describe('ExecutionInfo tests', function() {
     expect(actions[3].command).to.equal('step2Command2');
   });
 
-  it('termination', function() {
+  it('termination', function () {
     var executionInfo = new ExecutionInfo();
 
     executionInfo.queueAction('command1', 1);
@@ -91,7 +91,7 @@ describe('ExecutionInfo tests', function() {
     expect(executionInfo.terminationValue()).to.equal(Infinity);
   });
 
-  it('last step with finish action', function() {
+  it('last step with finish action', function () {
     var executionInfo = new ExecutionInfo();
 
     executionInfo.queueAction('command1', 1);
@@ -105,7 +105,7 @@ describe('ExecutionInfo tests', function() {
     expect(actions[1].command).to.equal('finish');
   });
 
-  it('last step without finish action', function() {
+  it('last step without finish action', function () {
     var executionInfo = new ExecutionInfo();
 
     executionInfo.queueAction('command1', 1);

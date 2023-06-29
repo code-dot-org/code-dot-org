@@ -6,16 +6,7 @@
   "content": "Creates a button on the screen displaying the *text* provided and referenced by the given *id* at default location (0,0).\n\nMany apps use buttons to allow the user to initiate some app action. An event handler must be created for each type of user interaction with the button using [`onEvent()`(#fff176)](/docs/applab/onEvent/) and the *id*.\n\n\n",
   "examples": [
     {
-      "name": "Example: Simple Turtle Control 2",
-      "description": "Move the turtle forward or backward depending on the button clicked.",
-      "code": "```\n// Move the turtle forward or backward depending on the button clicked.\r\nbutton(\"forward\", \"Move Forward\");\r\nbutton(\"backward\", \"Move Backward\");\r\nonEvent(\"forward\", \"click\", function(event) {\r\n  moveForward();\r\n});\r\n\r\nonEvent(\"backward\", \"click\", function(event) {\r\n  moveBackward();\r\n});\n```",
-      "app": "",
-      "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
-    },
-    {
-      "name": "",
+      "name": "Example: Click Me Button",
       "description": "",
       "code": "```\n// Create a \"Click Me\" button.\r\nbutton(\"id\", \"Click Me!\");\n```",
       "app": "",
@@ -27,6 +18,15 @@
       "name": "Example: Simple Turtle Control 1",
       "description": "Move the turtle forward on every click of the button.\n",
       "code": "```\n// Move the turtle forward on every click of the button.\nbutton(\"forward\", \"Move Forward\");\nonEvent(\"forward\", \"click\", function(event) {\n  moveForward();\n});\n```",
+      "app": "",
+      "image": null,
+      "app_display_type": "codeFromCodeField",
+      "embed_app_with_code_height": 310
+    },
+    {
+      "name": "Example: Simple Turtle Control 2",
+      "description": "Move the turtle forward or backward depending on the button clicked.",
+      "code": "```\n// Move the turtle forward or backward depending on the button clicked.\r\nbutton(\"forward\", \"Move Forward\");\r\nbutton(\"backward\", \"Move Backward\");\r\nonEvent(\"forward\", \"click\", function(event) {\r\n  moveForward();\r\n});\r\n\r\nonEvent(\"backward\", \"click\", function(event) {\r\n  moveBackward();\r\n});\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",

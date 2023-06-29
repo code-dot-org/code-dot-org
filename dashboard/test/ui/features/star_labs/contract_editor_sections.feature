@@ -1,4 +1,4 @@
-@as_student
+@as_student @no_phone
 Feature: Contract Editor section configuration and manipulation
 
 Background:

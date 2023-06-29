@@ -42,9 +42,9 @@ module Pd::Application
       assert_template :new
 
       @script_data = assigns(:script_data)
-      assert_equal application.id, JSON.parse(@script_data.dig(:props)).dig('applicationId')
-      assert_equal application.form_data, JSON.parse(@script_data.dig(:props)).dig('savedFormData')
-      assert_equal application.status, JSON.parse(@script_data.dig(:props)).dig('savedStatus')
+      assert_equal application.id, JSON.parse(@script_data[:props])['applicationId']
+      assert_equal application.form_data, JSON.parse(@script_data[:props])['savedFormData']
+      assert_equal application.status, JSON.parse(@script_data[:props])['savedStatus']
     end
 
     test 'teachers with a reopened application have an application id and saved form data' do
@@ -57,8 +57,8 @@ module Pd::Application
       assert_template :new
 
       @script_data = assigns(:script_data)
-      assert_equal application.id, JSON.parse(@script_data.dig(:props)).dig('applicationId')
-      assert_equal application.form_data, JSON.parse(@script_data.dig(:props)).dig('savedFormData')
+      assert_equal application.id, JSON.parse(@script_data[:props])['applicationId']
+      assert_equal application.form_data, JSON.parse(@script_data[:props])['savedFormData']
     end
 
     test 'teachers without an application have no id nor form data' do
@@ -68,8 +68,8 @@ module Pd::Application
       assert_template :new
 
       @script_data = assigns(:script_data)
-      assert_nil JSON.parse(@script_data.dig(:props)).dig('applicationId')
-      assert_nil JSON.parse(@script_data.dig(:props)).dig('savedFormData')
+      assert_nil JSON.parse(@script_data[:props])['applicationId']
+      assert_nil JSON.parse(@script_data[:props])['savedFormData']
     end
   end
 end

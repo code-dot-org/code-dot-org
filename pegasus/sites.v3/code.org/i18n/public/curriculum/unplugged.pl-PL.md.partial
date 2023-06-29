@@ -21,8 +21,8 @@ Lekcje bez komputera są szczególnie przydatne do budowania i utrzymywania śro
 <div style="clear: both;"></div>
 
 ***
-## Lekcje bez komputera w ramach kursu Podstawy informatyki 2021-22
-Następujące lekcje można znaleźć w <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">Podstawy informatyki 2021-22</a>. <br><br>
+## Lekcje bez dostępu do komputera w ramach kursu Podstawy informatyki 2022-23
+Poniższe lekcje można znaleźć w <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">Kurs Podstaw Informatyki 2022-23</a>. <br><br>
 
 <style>
 table, th, td {
@@ -103,29 +103,29 @@ Opierając się na początkowej aktywności „Moi Robotyczni Przyjaciele”, uc
      <td><a href="https://studio.code.org/s/coursed-2021/lessons/4">D.4 - Programowanie przekaźników<br></a><small>Te zajęcia rozpoczynają się krótką lekcją na temat debugowania i wytrwałości, a następnie szybko przechodzi w wyścig z czasem, gdy uczniowie dzielą się na zespoły i pracują razem, aby napisać program instrukcja po instrukcji.</td><td>Sekwencjonowanie</td><td >{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
        </tr>
    <tr>
-     <td><a href="https://studio.code.org/s/coursed-2021/lessons/12">D.12 – Warunki z kartami</a><br><small>Ta lekcja pokazuje, jak instrukcje warunkowe mogą być użyte do dostosowania programu do określonych informacji. Nie zawsze mamy wszystkie informacje, których potrzebujemy podczas pisania programu. Czasami będziesz chciał zrobić coś innego w jednej sytuacji niż w innej, nawet jeśli nie wiesz, jaka sytuacja będzie prawdziwa po uruchomieniu kodu. Tu właśnie wkraczają instrukcje warunkowe. Warunki umożliwiają komputerowi podjęcie decyzji na podstawie informacji, które są prawdziwe za każdym razem, gdy uruchamiany jest kod.+</td><td>Warunki</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+     <td><a href="https://studio.code.org/s/coursed-2021/lessons/12">D.12 – Warunki z kartami</a><br><small>Ta lekcja pokazuje, jak instrukcje warunkowe mogą być użyte do dostosowania programu do określonych informacji. Nie zawsze mamy wszystkie informacje, których potrzebujemy podczas pisania programu. Czasami będziesz chciał zrobić coś innego w jednej sytuacji niż w innej, nawet jeśli nie wiesz, jaka sytuacja będzie prawdziwa po uruchomieniu kodu. Tu właśnie wkraczają instrukcje warunkowe. Instrukcje warunkowe pozwalają komputerowi na podjęcie decyzji na podstawie informacji, które są prawdziwe za każdym razem, gdy Twój kod jest uruchamiany.+</td><td>Instrukcje warunkowe</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
-     </tr>
-          <tr>
-     <th rowspan="3" id="t05">Kurs E</th>
-     <td><a href="https://studio.code.org/s/coursee-2021/lessons/7">E.7 – Udostępnianie cyfrowe</a><br><i>*Przybory: smartfon lub tablet</i><br><small>Wypożyczona do Podstaw Informatyki przez zespół z Prawa autorskiego i kreatywności, ta lekcja ma pomóc uczniom zrozumieć wyzwania i korzyści płynące z poszanowania własności i praw autorskich, szczególnie w środowiskach cyfrowych. Należy zachęcać uczniów do poszanowania praw artystów jako ważnej części bycia etycznym obywatelem cyfrowym.</td><td>Cyfrowe obywatelstwo</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
-   </tr>
-   <tr>
-     <td><a href="https://studio.code.org/s/coursee-2021/lessons/11">E.11 - Pisanie piosenek</a><br><small>Jedną z najwspanialszych struktur w świecie informatyki jest funkcja. Funkcje (czasami nazywane procedurami) to miniprogramy, których możesz używać wielokrotnie w swoim większym programie. Ta lekcja pomoże uczniom intuicyjnie zrozumieć, dlaczego łączenie fragmentów kodu w funkcje może być tak pomocną praktyką.</td><td>Funkcje</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+  </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/17">E.17 – Projektowanie pod kątem ułatwień dostępu</a><br><small>Na tej lekcji uczniowie dowiedzą się o dostępności i wartości empatii poprzez burzę mózgów i projektowanie dostępnych rozwiązań dla hipotetycznych aplikacji.</td><td>Wpływ informatyki</td><td><img src="/images/e18.png" width ="90%"></td>
+    <th rowspan="3" id="t05">Kurs E</th>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Pisanie piosenek</a><br><small>Jedną z najwspanialszych struktur w świecie informatyki jest funkcja. Funkcje (czasami nazywane procedurami) to miniprogramy, których możesz używać wielokrotnie w swoim większym programie. Ta lekcja pomoże uczniom intuicyjnie zrozumieć, dlaczego łączenie fragmentów kodu w funkcje może być tak pomocną praktyką.</td><td>Funkcje</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - Projektowanie dostępności</a><br><small>Podczas tej lekcji uczniowie dowiedzą się o dostępności i wartości empatii poprzez burzę mózgów i projektowanie dostępnych rozwiązań dla hipotetycznych aplikacji.</td><td>Wpływ informatyki</td><td><img src="/images/e18.png" width="90%"></td>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - Udostępnianie cyfrowe</a><br><i>*Materiały: Smartfon lubor tablet</i><br><small>Ta lekcja, wypożyczona do kursy Podstaw Informatyki przez zespół z Prawa autorskiego i kreatywności, ma pomóc uczniom zrozumieć wyzwania i korzyści płynące z poszanowania własności i praw autorskich, szczególnie w środowiskach cyfrowych. Należy zachęcać uczniów do poszanowania praw artystów jako ważnej części bycia etycznym obywatelem cyfrowym.</td><td>Cyfrowe obywatelstwo</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
     </tr>
          <tr>
     <th rowspan="3" id="t06">Kurs F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2021/lessons/6">F.6 – Puste historie przestrzeni</a><br><i>*Przybory: 6 kopert (również: papier lub fiszki, złożone na pół)</i><br><small>Uczniowie wykorzystają historie do wypełniania pustych miejsc (podobne do Mad Libs®) jako kontekstu do zrozumienia, jak komputery i przechowują dane od użytkownika, a następnie używają ich później podczas uruchamiania programu.
+           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Historie o pustej przestrzeni</a><br><i>*Materiały: 6 kopert (również odpowiednie: papier lub karty indeksowe, złożone na pół)</i><br><small>Uczniowie wykorzystają historie do wypełniania pustych miejsc (podobne do Mad Libs®) jako kontekst do zrozumienia, jak komputery pobierają i przechowują dane wejściowe od użytkownika, a następnie wykorzystują je później podczas działania programu.
    </td><td>Zmienne</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>  
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - Zabawa w pętle</a><br><i>*Przybory: Kości (3 kości na grupę po 2–4 uczniów)</i><br><small>Wiemy, że pętle pozwalają nam robić rzeczy w kółko , ale teraz nauczymy się używać pętli, które mają wbudowane dodatkowe struktury. Te nowe struktury pozwolą uczniom tworzyć kod, który jest bardziej wydajny i dynamiczny.</td><td>Pętle "dla"</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - Zabawa w pętle</a><br><i>*Przybory: Kości (3 kości na grupę po 2–4 uczniów)</i><br><small>Wiemy, że pętle pozwalają nam robić rzeczy w kółko , ale teraz nauczymy się używać pętli, które mają wbudowane dodatkowe struktury. Te nowe struktury pozwolą uczniom tworzyć kod, który jest bardziej wydajny i dynamiczny.</td><td>Pętle dla</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/19">F.19 - Internet</a><br><small>Mimo że wiele osób korzysta z Internetu na co dzień, niewiele osób wie, jak on działa. Podczas tej lekcji uczniowie będą udawać, że przepływają przez Internet, cały czas ucząc się o połączeniach, adresach URL, adresach IP i DNS.</td><td>Dane</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - Internet</a><br><small>Mimo, że wiele osób korzysta z Internetu na co dzień, niewiele osób wie, jak on działa. Podczas tej lekcji uczniowie będą udawać, że przepływają przez Internet, cały czas ucząc się o połączeniach, adresach URL, adresach IP i DNS.</td><td>Dane</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
   </tr>
 </table>
 

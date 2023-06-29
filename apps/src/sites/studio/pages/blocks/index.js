@@ -6,11 +6,11 @@ import {installCustomBlocks} from '@cdo/apps/block_utils';
 import {customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {
   valueTypeTabShapeMap,
-  exampleSprites
+  exampleSprites,
 } from '@cdo/apps/p5lab/spritelab/constants';
 import {shrinkBlockSpaceContainer} from '@cdo/apps/templates/instructions/utils';
 import animationList, {
-  setInitialAnimationList
+  setInitialAnimationList,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 
@@ -26,10 +26,10 @@ function renderBlock(element) {
         name: name,
         pool: pool,
         category: 'Custom',
-        config: parsedConfig
-      }
+        config: parsedConfig,
+      },
     ],
-    customInputTypes
+    customInputTypes,
   });
   const blockName = Object.values(blocksInstalled)[0][0];
   const blocksDom = parseElement(`<block type='${blockName}' />`);
@@ -38,7 +38,7 @@ function renderBlock(element) {
     blocksDom,
     {
       noScrolling: true,
-      inline: false
+      inline: false,
     }
   );
   shrinkBlockSpaceContainer(blockSpace, true);
@@ -50,7 +50,7 @@ $(document).ready(() => {
   Blockly.assetUrl = assetUrl;
   Blockly.valueTypeTabShapeMap = valueTypeTabShapeMap(Blockly);
   Blockly.typeHints = true;
-  Blockly.Css.inject(document);
+  Blockly.cdoUtils.injectCss(document);
 
   const divs = document.getElementsByClassName('blockly-container');
   for (let i = 0; i < divs.length; i++) {

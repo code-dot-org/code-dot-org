@@ -1,0 +1,17 @@
+{
+  "sm-WS": {
+    "data": {
+      "reference_guides": {
+        "csd-2022/lists": {
+          "display_name": "Lisi"
+        },
+        "csd-2022/variables": {
+          "display_name": "Fuainumera lasi "
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Web Lab"
+        }
+      }
+    }
+  }
+}

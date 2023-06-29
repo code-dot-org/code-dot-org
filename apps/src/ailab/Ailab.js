@@ -6,13 +6,14 @@ import {getStore} from '../redux';
 import {setAssetPath} from '@code-dot-org/ml-playground/dist/assetPath';
 import {TestResults} from '@cdo/apps/constants';
 import ailabMsg from './locale';
+import mlPlaygroundMsg from './mlPlayground_locale';
 import $ from 'jquery';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 import {
   setDynamicInstructionsDefaults,
   setDynamicInstructionsKey,
-  setDynamicInstructionsOverlayDismissCallback
+  setDynamicInstructionsOverlayDismissCallback,
 } from '../redux/instructions';
 
 /**
@@ -25,22 +26,19 @@ const MOBILE_PORTRAIT_WIDTH = 900;
 
 function getInstructionsDefaults() {
   var instructions = {
-    selectDataset: 'Select the data set you would like to use.',
-    uploadedDataset: 'You just uploaded a dataset.',
-    selectedDataset: 'You just selected a dataset.',
-    dataDisplayLabel: 'Choose one column to predict.',
-    dataDisplayFeatures:
-      'Choose one or more columns as inputs to help make the prediction.',
-    selectedFeatureNumerical: 'You just selected a numerical feature.',
-    selectedFeatureCategorical: 'You just selected a categorical feature.',
-    trainModel: 'Your model is being trained.',
-    generateResults: 'Your model is being tested.',
-    results: 'Review the results.',
-    resultsDetails: 'Details of results are being shown.',
-    saveModel: 'Save the trained model for use in App Lab.',
-    modelSummary:
-      "You've successfully trained and saved your model. Review your model \
-      details and click Finish to use your trained model in App Lab."
+    selectDataset: ailabMsg.selectDataset(),
+    uploadedDataset: ailabMsg.uploadedDataset(),
+    selectedDataset: ailabMsg.selectedDataset(),
+    dataDisplayLabel: ailabMsg.dataDisplayLabel(),
+    dataDisplayFeatures: ailabMsg.dataDisplayFeatures(),
+    selectedFeatureNumerical: ailabMsg.selectedFeatureNumerical(),
+    selectedFeatureCategorical: ailabMsg.selectedFeatureCategorical(),
+    trainModel: ailabMsg.trainModel(),
+    generateResults: ailabMsg.generateResults(),
+    results: ailabMsg.results(),
+    resultsDetails: ailabMsg.resultsDetails(),
+    saveModel: ailabMsg.saveModel(),
+    modelSummary: ailabMsg.modelSummary(),
   };
 
   return instructions;
@@ -50,7 +48,7 @@ function getInstructionsDefaults() {
  * An instantiable Ailab class
  */
 
-const Ailab = function() {
+const Ailab = function () {
   this.skin = null;
   this.level = null;
 
@@ -61,14 +59,14 @@ const Ailab = function() {
 /**
  * Inject the studioApp singleton.
  */
-Ailab.prototype.injectStudioApp = function(studioApp) {
+Ailab.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
 };
 
 /**
  * Initialize this Ailab instance.  Called on page load.
  */
-Ailab.prototype.init = function(config) {
+Ailab.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error('Ailab requires a StudioApp');
   }
@@ -121,7 +119,7 @@ Ailab.prototype.init = function(config) {
     channelId: config.channel,
     noVisualization: true,
     visualizationInWorkspace: true,
-    isProjectLevel: !!config.level.isProjectLevel
+    isProjectLevel: !!config.level.isProjectLevel,
   });
 
   getStore().dispatch(
@@ -137,7 +135,7 @@ Ailab.prototype.init = function(config) {
 };
 
 // Called by the ailab app when it wants to go to the next level.
-Ailab.prototype.onContinue = function() {
+Ailab.prototype.onContinue = function () {
   const onReportComplete = result => {
     this.studioApp_.onContinue();
   };
@@ -150,15 +148,15 @@ Ailab.prototype.onContinue = function() {
     program: '',
     onComplete: result => {
       onReportComplete(result);
-    }
+    },
   });
 };
 
-Ailab.prototype.setInstructionsKey = function(instructionsKey, options) {
+Ailab.prototype.setInstructionsKey = function (instructionsKey, options) {
   getStore().dispatch(setDynamicInstructionsKey(instructionsKey, options));
 };
 
-Ailab.prototype.initMLActivities = function() {
+Ailab.prototype.initMLActivities = function () {
   const mode = this.level.mode ? JSON.parse(this.level.mode) : null;
   const onContinue = this.onContinue.bind(this);
   const setInstructionsKey = this.setInstructionsKey.bind(this);
@@ -169,7 +167,7 @@ Ailab.prototype.initMLActivities = function() {
         url: '/api/v1/ml_models/save',
         type: 'json',
         contentType: 'application/json;charset=UTF-8',
-        data: JSON.stringify(dataToSave)
+        data: JSON.stringify(dataToSave),
       })
         .then(response => {
           callback(response);
@@ -188,7 +186,7 @@ Ailab.prototype.initMLActivities = function() {
         study: 'ai-ml',
         study_group: 'ai-lab',
         event: eventName,
-        data_json: JSON.stringify(details)
+        data_json: JSON.stringify(details),
       },
       {includeUserId: true}
     );
@@ -198,7 +196,7 @@ Ailab.prototype.initMLActivities = function() {
 
   const {
     initAll,
-    instructionsDismissed
+    instructionsDismissed,
   } = require('@code-dot-org/ml-playground');
 
   // Set initial state for UI elements.
@@ -206,9 +204,9 @@ Ailab.prototype.initMLActivities = function() {
     mode,
     onContinue,
     setInstructionsKey,
-    i18n: ailabMsg,
+    i18n: mlPlaygroundMsg,
     saveTrainedModel,
-    logMetric
+    logMetric,
   });
 
   if (instructionsDismissed) {

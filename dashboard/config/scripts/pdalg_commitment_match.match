@@ -16,3 +16,4 @@ answer 'Blended Academic Year Development: 2 hours online, self-paced. 1 day (7 
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

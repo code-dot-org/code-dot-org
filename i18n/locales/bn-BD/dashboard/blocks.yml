@@ -143,6 +143,10 @@ bn:
             '"right"': ডানে
             '"space"': স্থান
             '"x"': এক্স
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': হরতন
       gamelab_atTime:
         options:
           UNIT:
@@ -418,3 +422,7 @@ bn:
         text: সামনে এগিয়ে যান
       craft_placeTorch:
         text: মশাল বসান
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': হরতন

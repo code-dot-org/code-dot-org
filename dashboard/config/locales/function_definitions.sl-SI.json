@@ -2412,6 +2412,66 @@
           "end game": {
             "name": "končaj igro"
           }
+        },
+        "K-1 Artist2 3": {
+          "draw roof": {
+            "name": "nariši streho"
+          }
+        },
+        "K-1 Artist2 4": {
+          "draw rectangle": {
+            "name": "nariši pravokotnik"
+          }
+        },
+        "K-1 Artist2 5": {
+          "draw rectangle": {
+            "name": "nariši pravokotnik"
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "preprosta rešitev"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "mogoča rešitev"
+          }
+        },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "preprosta rešitev"
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "mogoča rešitev"
+          }
+        },
+        "courseB_artist_loops_challenge22022": {
+          "potential solution": {
+            "name": "mogoča rešitev"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "mogoča rešitev"
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": "mogoča rešitev"
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": "mogoča rešitev"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "mogoča rešitev"
+          }
         }
       }
     }

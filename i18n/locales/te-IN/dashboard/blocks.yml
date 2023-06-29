@@ -2,6 +2,8 @@
 te:
   data:
     blocks:
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}చెప్పండి{TEXT1}"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -206,12 +208,6 @@ te:
           UNIT:
             '"measures"': మెజర్స్
             '"seconds"': సెకండ్లు
-      Dancelab_everySecondsRange:
-        text: 'ప్రతిదీ {N} {UNIT} నుండి {START} వరకు {STOP} '
-        options:
-          UNIT:
-            measures: మెజర్స్
-            seconds: సెకండ్లు
       Dancelab_everyVerseChorus:
         text: 'ప్రతి {UNIT} '
         options:
@@ -322,15 +318,21 @@ te:
             '"column"': కాలమ్
             '"x"': క్రిస్-క్రాస్
             '"plus"': క్రిస్-క్రాస్
+            '"spiral"': సర్పిలాకార
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
+            '"ALIEN"': గ్రహాంతర
             '"BEAR"': బేర్
+            '"CAT"': పిల్లి
+            '"DOG"': కుక్క
+            '"DUCK"': బాతు
             '"FROG"': ఫ్రాగ్
             '"MOOSE"': మూస్
             '"PINEAPPLE"': పైన్‌ఆపిల్
             '"ROBOT"': రోబో
             '"SHARK"': షార్క్
+            '"UNICORN"': యునికార్న్
           LOCATION:
             "{x: 200, y: 100}": టాప్
             "{x: 200, y: 300}": బాటమ్
@@ -342,12 +344,17 @@ te:
           {NAME} అని పిలువబడే {LOCATION} లో"
         options:
           COSTUME:
+            '"ALIEN"': గ్రహాంతర
             '"BEAR"': బేర్
+            '"CAT"': పిల్లి
+            '"DOG"': కుక్క
+            '"DUCK"': బాతు
             '"FROG"': ఫ్రాగ్
             '"MOOSE"': మూస్
             '"PINEAPPLE"': పైన్‌ఆపిల్
             '"ROBOT"': రోబో
             '"SHARK"': షార్క్
+            '"UNICORN"': యునికార్న్
           LOCATION:
             "{x: 200, y: 100}": టాప్
             "{x: 200, y: 300}": బాటమ్
@@ -419,6 +426,7 @@ te:
             '"column"': కాలమ్
             '"x"': క్రిస్-క్రాస్
             '"plus"': క్రిస్-క్రాస్
+            '"spiral"': సర్పిలాకార
       Dancelab_mixColors:
         text: మిక్స్ చేయండి {COLOR1} మరియు {COLOR2}
       Dancelab_nMeasures:
@@ -779,6 +787,8 @@ te:
             '"u"': u
             '"v"': v
             '"w"': w
+            '"x"': x
+            '"y"': 'y'
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -823,6 +833,8 @@ te:
             '"u"': u
             '"v"': v
             '"w"': w
+            '"x"': x
+            '"y"': 'y'
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -845,6 +857,33 @@ te:
         text: సెటప్
       Dancelab_whenSetup2:
         text: సెటప్
+      DansBlocks_getMicroscope:
+        text: సూక్ష్మదర్శిని {INPUT1}కలిగి ఉంది
+        options:
+          INPUT1:
+            '1': నిమ్మ రసం
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': బబ్బుల్స్
+            '"confetti"': కన్ఫెట్టీ
+            '"hearts"': హృదయాలను
+      DansBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': నిమ్మ రసం
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: "[SPRITE1COSTUME] తో [VAR1] కమ్యూనికేట్ చేయండి"
+      FunctionBlocks_makeManipulative2:
+        text: "{NUM} కొత్త {ANIMATION_NAME} స్ప్రిట్‌లు  {BEHAVIOR} తయారు చేయండి"
+      FunctionBlocks_representManipulative:
+        text: "{NUM} కొత్త {ANIMATION_NAME} స్ప్రిట్‌లకు [BEHAVIOR][2] ప్రాతినిధ్యం వహించండి"
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}చెప్పండి{TEXT1}"
       gamelab_atTime:
         options:
           UNIT:
@@ -855,7 +894,14 @@ te:
           PROPERTY:
             '"scale"': సైజు
             '"rotation"': రొటేషన్
+            '"x"': x స్థానం
+            '"y"': y స్థానం
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
+            '"speed"': వేగం
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': ఎప్పుడు
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
       gamelab_everyInterval:
@@ -868,8 +914,11 @@ te:
           PROPERTY:
             '"scale"': సైజు
             '"rotation"': రొటేషన్
+            '"x"': x స్థానం
+            '"y"': y స్థానం
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
             '"tint"': టింట్
+            '"speed"': వేగం
       gamelab_getTime:
         options:
           UNIT:
@@ -918,11 +967,15 @@ te:
             '"u"': u
             '"v"': v
             '"w"': w
+            '"x"': x
+            '"y"': 'y'
             '"z"': z
       gamelab_jumpTo:
         text: "{SPRITE} జంప్ చేయండి {LOCATION} కు"
       gamelab_keyPressed:
         options:
+          CONDITION:
+            '"when"': ఎప్పుడు
           KEY:
             '"up"': అప్
             '"down"': డౌన్
@@ -952,7 +1005,31 @@ te:
             '"u"': u
             '"v"': v
             '"w"': w
+            '"x"': x
+            '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: లేఔట్ {GROUP} ఒక {FORMAT} లాగా
+        options:
+          FORMAT:
+            '"border"': బార్డర్
+            '"circle"': సర్కిల్
+            '"grid"': గ్రిడ్
+            '"row"': రో
+            '"column"': కాలమ్
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': పేలవచ్చు
+            '"spiral"': సర్పిలాకార
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': బార్డర్
+            '"circle"': సర్కిల్
+            '"grid"': గ్రిడ్
+            '"row"': రో
+            '"column"': కాలమ్
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -972,14 +1049,66 @@ te:
       gamelab_playSoundOptions:
         options:
           SOUND:
+            "'sound://category_app/app_button_1.mp3'": బటన్
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": బబ్బుల్స్
             "'sound://category_animals/bear.mp3'": బేర్
+            "'sound://category_animals/cat.mp3'": పిల్లి
+            "'sound://category_animals/pig.mp3'": పంది
+            "'sound://category_animals/goat.mp3'": మేక
+            "'sound://category_animals/rooster.mp3'": రూస్టర్
+            "'sound://category_animals/elephant.mp3'": ఏనుగు
+            "'sound://category_animals/dolphin.mp3'": డాల్ఫిన్
+            "'sound://category_animals/chick.mp3'": కోడిపిల్ల
+            "'sound://category_animals/dog.mp3'": కుక్క
+            "'sound://category_animals/tiger.mp3'": పులి
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": హార్ప్
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": ఎంచుకోండి
+            "'sound://category_digital/jump_7.mp3'": దూకి
+      gamelab_playSoundOptionsSoccer:
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": ఎయిర్ హారన్
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": ప్రశంసలు
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": శ్లోకం
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": ఉల్లాసం
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": మత్తు
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": రెండు ఈలలు
+            "'sound://category_sports/One_Whistle_SFX.mp3'": ఈల
+      gamelab_playSoundOptionsSpace:
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": నలుపు రంధ్రం
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": బుల్లెట్ క్లస్టర్
+            "'sound://category_space/Carina_SFX.mp3'": కరీనా
+            "'sound://category_space/Cassiopeia_SFX.mp3'": కాసియోపియా
+            "'sound://category_space/Crab_nebula_SFX.mp3'": క్రాబ్ నెబ్యూలా
+            "'sound://category_space/Launch_SFX.mp3'": ప్రారంభం
+            "'sound://category_space/Lift_Off.mp3'": ఎత్తివేయండి
+            "'sound://category_space/Pillars_SFX.mp3'": స్తంభాలు
+            "'sound://category_space/Southern_ring_SFX.mp3'": దక్షిణ వలయం
+            "'sound://category_space/Supernova_SFX.mp3'": సూపర్‌నోవా
+            "'sound://category_space/Tycho_SFX.mp3'": టైకో
+      gamelab_repeatForever:
+        text: ఎప్పటికీ పునరావృతం
       gamelab_setBackground:
         text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
       gamelab_setBackgroundImage:
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': గుహలో
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': నగరం
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': కోర్టు
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': ఎడారి
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': గెలాక్సీ
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': గ్రిడ్
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': గడ్డి మైదానం
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ఇంద్రధనస్సు
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': రంగస్థల
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': నక్షత్రాలు
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': సబ్వే
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': భూగర్భ
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': నీటి అడుగున
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': శీతాకాలంలో
             undefined: ఏదీ కాదు
       gamelab_setProp:
         text: సెట్ చేయండి {SPRITE} {PROPERTY} ని {VAL} కు
@@ -987,7 +1116,10 @@ te:
           PROPERTY:
             '"scale"': సైజు
             '"rotation"': రొటేషన్
+            '"x"': x స్థానం
+            '"y"': y స్థానం
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
+            '"speed"': వేగం
       gamelab_setProp_dropdown:
         text: సెట్ చేయండి {SPRITE} {PROPERTY} ని {SIZE} కు
         options:
@@ -1007,6 +1139,10 @@ te:
             '5': normal
             '7': ఫాస్ట్
             '9': extra fast
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': ఎప్పుడు
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_turn:
@@ -1050,6 +1186,8 @@ te:
           PROPERTY:
             '"scale"': సైజు
             '"rotation"': రొటేషన్
+            '"x"': x స్థానం
+            '"y"': y స్థానం
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
       Mikelab_createNewSprite:
         options:
@@ -1063,12 +1201,16 @@ te:
           PROPERTY:
             '"scale"': సైజు
             '"rotation"': రొటేషన్
+            '"x"': x స్థానం
+            '"y"': y స్థానం
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
       Mikelab_groupChangePropBy:
         options:
           PROPERTY:
             '"scale"': సైజు
             '"rotation"': రొటేషన్
+            '"x"': x స్థానం
+            '"y"': y స్థానం
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
       Mikelab_groupCreateNewSprite:
         options:
@@ -1082,12 +1224,16 @@ te:
           PROPERTY:
             '"scale"': సైజు
             '"rotation"': రొటేషన్
+            '"x"': x స్థానం
+            '"y"': y స్థానం
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
       Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': సైజు
             '"rotation"': రొటేషన్
+            '"x"': x స్థానం
+            '"y"': y స్థానం
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
       Mikelab_hideFish:
         options:
@@ -1124,11 +1270,23 @@ te:
             MOVES.ClapHigh: చేప
       Mikelab_joinText:
         text: "{TEXT} {NEXT}"
+      Mikelab_repeatUntilComplete:
+        text: ఎప్పటికీ పునరావృతం
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': నగరం
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': గడ్డి మైదానం
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': రంగస్థల
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': సబ్వే
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': భూగర్భ
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': సైజు
             '"rotation"': రొటేషన్
+            '"x"': x స్థానం
+            '"y"': y స్థానం
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
       Mikelab_showScoreboard:
         options:
@@ -1144,25 +1302,99 @@ te:
             "{x: 300, y: 200}": కుడి
       Mikelab_whenKeyPressed:
         text: నొక్కినప్పుడు {KEY} కీ
+        options:
+          KEY:
+            '"up"': అప్ బాణం
+            '"down"': డౌన్ బాణం
+            '"left"': ఎడమ బాణం
+            '"right"': కుడి బాణం
+            '"a"': ఒక
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': అప్ బాణం
+            '"down"': డౌన్ బాణం
+            '"left"': ఎడమ బాణం
+            '"right"': కుడి బాణం
+            '"a"': ఒక
+            '"d"': D
       Mikelab_whenYesNoClicked:
         options:
           KEY:
             '"yes"': అవును
             '"no"': లేదు
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': అప్ బాణం
+            '"down"': డౌన్ బాణం
+            '"left"': ఎడమ బాణం
+            '"right"': కుడి బాణం
+      ParticlesBlocks_getMicroscope:
+        text: సూక్ష్మదర్శిని {INPUT1}కలిగి ఉంది
+        options:
+          INPUT1:
+            '1': నిమ్మ రసం
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': నిమ్మ రసం
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): ఘనపదార్థం
+            new Behavior(liquid, []): ద్రవము
+            new Behavior(wandering, []): వాయువు
+      ParticlesBlocks_statesOfMatter2:
+        text: "{COSTUME} నుండి {BEHAVIOR} ప్రవర్తనను ఏర్పరచండి"
+        options:
+          BEHAVIOR:
+            '"solid"': ఘన రేణువు
+            '"liquid"': ద్రవ రేణువు
+            '"gas"': వాయు రేణువు
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': ఘన రేణువు
+            '"liquid"': ద్రవ రేణువు
+            '"gas"': వాయు రేణువు
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': ఇటుక
+            '"fire"': అగ్ని
+            '"flowers"': పూలు
+            '"hearts"': హృదయాలను
             '"iceCream"': ఐస్ క్రీమ్
+            '"leaves"': పత్రాలు
+            '"rainbow"': ఇంద్రధనస్సు
+            '"stars"': నక్షత్రాలు
+            '"waves"': తరంగాలు
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': పేలవచ్చు
+            '"spiral"': సర్పిలాకార
       Poetry_playMusic:
         options:
           SOUND:
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': కామ్
             '"sound://category_nature/steady_campfire_loop.mp3"': క్యాంప్‌ఫైర్
             '"sound://category_nature/rain_loop.mp3"': డిజ్జల్
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': అటవీ
             '"sound://category_loops/faultering_desicion_loop1.mp3"': హంటెడ్
             '"sound://category_background/inside_plane.mp3"': హమ్
             '"sound://category_loops/red_flag_loop1.mp3"': మిషన్
+            '"sound://category_nature/summer_night_loop.mp3"': రాత్రి
+            '"sound://category_background/ocean_waves.mp3"': సముద్ర
+            '"sound://category_background/rainforest_ambient_sound.mp3"': వర్షారణ్యం
             '"sound://category_background/repitition.mp3"': రైడింగ్
+            '"sound://category_background/wavering_wind.mp3"': నిద్రిస్తున్న
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': స్లో
       Poetry_playSound:
         options:
@@ -1175,27 +1407,58 @@ te:
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': ఫెయిల్
             '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': ఫ్లట్టర్
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': జంప్
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': కాంతి
             '"sound://category_poof/puzzle_game_poof_04.mp3"': పూఫ్
             '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': స్కాన్
             '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': వైబ్రేంట్
             '"sound://category_achievements/peaceful_win_1.mp3"': విన్
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': విర్ల్
             '"sound://category_achievements/peaceful_win_6.mp3"': విండ్ చిమ్స్
+      Poetry_playSoundOptionsSpace:
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": నలుపు రంధ్రం
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": బుల్లెట్ క్లస్టర్
+            "'sound://category_space/Carina_SFX.mp3'": కరీనా
+            "'sound://category_space/Cassiopeia_SFX.mp3'": కాసియోపియా
+            "'sound://category_space/Crab_nebula_SFX.mp3'": క్రాబ్ నెబ్యూలా
+            "'sound://category_space/Launch_SFX.mp3'": ప్రారంభం
+            "'sound://category_space/Lift_Off.mp3'": ఎత్తివేయండి
+            "'sound://category_space/Pillars_SFX.mp3'": స్తంభాలు
+            "'sound://category_space/Southern_ring_SFX.mp3'": దక్షిణ వలయం
+            "'sound://category_space/Supernova_SFX.mp3'": సూపర్‌నోవా
+            "'sound://category_space/Tycho_SFX.mp3'": టైకో
       Poetry_setBackground:
         text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"bubbles"': బబ్బుల్స్
+            '"clouds"': మేఘావృతం
             '"confetti"': కన్ఫెట్టీ
+            '"hearts"': హృదయాలను
             '"space"': స్పేస్
             '"colors"': రంగులు
             '"stars"': స్టార్స్
+          PALETTE:
+            '"ocean"': సముద్ర
+            '"rainbow"': ఇంద్రధనస్సు
+            '"spring"': వసంత
+            '"winter"': శీతాకాలంలో
       Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"bubbles"': బబ్బుల్స్
             '"confetti"': కన్ఫెట్టీ
+            '"hearts"': హృదయాలను
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': ఈత
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': ఈత
       Poetry_whenLineShows:
         options:
           'N':
@@ -1210,6 +1473,11 @@ te:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       aalab_layoutSprites:
         options:
           FORMAT:
@@ -1236,3 +1504,32 @@ te:
             '"w"': w
             '"s"': s
             '"d"': d
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"dolphin"': డాల్ఫిన్
+            '"squid"': చేపలు పట్టే ఎర
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': బబ్బుల్స్
+            '"confetti"': కన్ఫెట్టీ
+            '"hearts"': హృదయాలను
+      storylab_setHeading:
+        text: శీర్షిక సమకూర్చండి {HEADING}
+      storylab_setSubheading:
+        text: ఉపశీర్షికను సమకూర్చండి {SUBHEADING}

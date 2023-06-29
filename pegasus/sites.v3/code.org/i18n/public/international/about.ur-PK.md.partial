@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Code.org کورسز کو دنیا بھر سے کروڑوں طلباء اور دس لاکھ اساتذہ استعمال کرتے ہیں۔.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## ہسٹری(تاریخ)
 
 2013 میں، Code.org کو جڑواں بھائیوں ہادی(Hadi) اور علی پارٹووی(Ali Partovi) نے ایک [کمپیوٹر سائنس کو فروغ دینے والی ویڈیو](https://www.youtube.com/watch?v=nKIu9yen5nc) کے ساتھ آغاز کیا تھا۔. یہ ویڈیو یوٹیوب پر ایک دن میں نمبر 1 بن گئی تھی، اور 15,000 اسکولوں نے مدد کے لیے ہم سے رابطہ کیا تھا۔. تب سے، ہم نے ایک عالمگیر تحریک کی معاونت کرنے والی ایک مکمل تنظیم بنانے کے لیے رضاکاروں کے ایک آزادانہ عملے سے وسعت حاصل کی ہے۔. ہم سمجھتے ہیں کہ کمپیوٹر سائنس کی معیاری تعلیم ہر بچے کے لیے دستیاب ہونی چاہیے، نہ کہ یہ صرف چند خوش نصیبوں کے لیے ہو۔.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## ہم کیا کرتے ہیں
 

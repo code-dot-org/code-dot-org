@@ -78,9 +78,9 @@ Si creas una actividad o tutorial diseñado para estudiantes con necesidades esp
 
 El objetivo de una Hora del Código es que los principiantes puedan tener un primer acercamiento a las ciencias de la computación o a la programación. El tono debería ser que:
 
-- Todos pueden aprender ciencias de la computación, independientemente de su edad, género o raza. 
+- Todos pueden aprender ciencias de la computación, independientemente de su edad, género o raza.
 - Las ciencias de la computación están conectadas a una amplia variedad de campos e intereses. ¡Todos deberían aprenderlas!
-- Anima a los estudiantes a crear algo único que puedan compartir con amigos o familiares, o en línea. 
+- Anima a los estudiantes a crear algo único que puedan compartir con amigos o familiares, o en línea.
 
 El objetivo de una Hora del Código es que los principiantes puedan tener un primer acercamiento a las ciencias de la computación o a la programación. El tono debería ser que: Por ejemplo, enseñar el diseño de la experiencia de usuario para crear aplicaciones que tengan sentido para una audiencia o causa específica. Desalentamos las actividades que se centran en la sintaxis de la programación en lugar de los conceptos. Por ejemplo, enumeraremos, pero no destacaremos, las actividades que enseñan HTML. Del mismo modo, desaconsejamos las lecciones de programación en bloque que se centran en establecer o cambiar las opciones de configuración en lugar de aprender a modelar un algoritmo o proceso.
 
@@ -122,7 +122,7 @@ Qué necesitas:
 
 #### Cosas adicionales que necesitarás cuando envíes planes de lecciones
 
-* Enlace a tu plan de estudios. Puede ser una página web, un enlace de Dropbox, Google Drive o un servicio similar. 
+* Enlace a tu plan de estudios. Puede ser una página web, un enlace de Dropbox, Google Drive o un servicio similar.
 * ¿Qué software y/o hardware necesitará el profesor para realizar su plan de estudios (Scratch? ¿Robots? ¿Ninguno?)
 
 #### Otras cosas que necesitarás cuando envíes actividades en línea
@@ -181,7 +181,7 @@ Si el comité de revisión califica la actividad como nula en calidad de producc
 Además, para ser incluidas en la lista, todas las actividades deben:
 
 - Ser apropiadas para un aula de escuela pública (no debe incluir armas, contenido explícito o maduro, contenido religioso, etc.)
-- No requerir registro 
+- No requerir registro
 - No requerir pago (a excepción de las actividades de robótica, que pueden requerir la compra de un robot o kit) Para actividades autodirigidas para nuevos docentes y estudiantes, el comité de revisión buscará si:
 
 En el caso de las actividades autodidácticas para nuevos docentes y estudiantes, el comité de revisión buscará si:
@@ -212,7 +212,7 @@ Puedes incluir el [Logotipo de la Hora del Código](https://hourofcode.com/us/pr
 
 - ¿En qué plataformas y navegadores funciona mejor el tutorial?
 - ¿Funciona en smartphones? ¿Y en tablets?
-- Organiza un evento local o pide a tus empleados que lo hagan en escuelas locales o grupos comunitarios. 
+- Organiza un evento local o pide a tus empleados que lo hagan en escuelas locales o grupos comunitarios.
 - ¿Existen aspectos a tener en cuenta a la hora de realizar la actividad en un aula? Por ejemplo, si hay videos, aconseja a los docentes a que los muestren en una pantalla proyectada para que toda la clase pueda verlos
 
 **Anima a los estudiantes a publicar en las redes sociales (donde sea apropiado) una vez que terminen.** Por ejemplo, "He completado una Hora del Código con ________ ¿Y tú? #HoraDelCódigo”, o “He completado una #HoraDelCódigo como parte de la #CSEdWeek.
@@ -231,15 +231,15 @@ Toda actividad enviada antes del 1ro de octubre recibirá una evaluación están
 
 ## Directrices de marca registrada
 
-**Incorpora comentarios al final de la actividad.** (Por ejemplo: “¡Completaste 10 niveles y aprendiste sobre bucles!) ¡Felicidades!”) We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+**Incorpora comentarios al final de la actividad.** (Por ejemplo: “¡Completaste 10 niveles y aprendiste sobre bucles!) ¡Felicidades!”) No queremos impedir este uso, pero queremos asegurarnos de que el uso está dentro de unos límites:
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. Utilizar "La Hora del Código" únicamente en relación con las actividades educativas no comerciales de la Educación Informática en el contexto de la campaña de La Hora del Código, y para ningún otro propósito.
+2. Cualquier referencia a la "Hora del Código" debe utilizarse de forma que no sugiera que es su propia marca, sino que hace referencia a la Hora del Código como movimiento de base. Un buen ejemplo: "Participa en la Hora del Código ® en ACMECorp.com". Un mal ejemplo: "Prueba Hour of Code de ACME Corp".
+3. Utiliza un superíndice "®" en los lugares más destacados en los que menciones "La Hora del Código", tanto en tu sitio web como en las descripciones de las aplicaciones.
+4. Incluye un texto en la página (o en el pie de página), incluyendo enlaces a los sitios web de La Hora del Código, CSEdWeek y Code.org, que revele lo siguiente: a. Hour of Code® y Hora del Código® son marcas registradas de Code.org; y b. “La '[Hora del Código](http://hourofcode.com/) ® es una iniciativa nacional de [Code.org](http://code.org/) para iniciar a millones de estudiantes en una hora de informática y programación".
+5. No utilices "La Hora del Código" en los nombres de las aplicaciones.
+6. No utilice "La Hora del Código" en relación con cualquier uso o propósito comercial (por ejemplo, colocando su actividad de La Hora del Código detrás de un muro de pago; promocionando otro servicio de pago como parte de su actividad de La Hora del Código; vendiendo mercancía de La Hora del Código).
+7. No utilice "La Hora del Código" en relación con ninguna actividad que requiera un inicio de sesión o la creación de una cuenta.
 
 [**Volver al principio**](#top)
 
@@ -275,4 +275,4 @@ Esto nos permitirá contar a los usuarios que hacen tu tutorial de la Hora del C
 
 [**Volver al principio**](#top)
 
-Nota: no es necesario hacer esto en aplicaciones que se instalan (aplicaciones para iOS/Android o aplicaciones que se instalan en equipos de escritorio)<!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+Nota: no es necesario hacer esto en aplicaciones que se instalan (aplicaciones para iOS/Android o aplicaciones que se instalan en equipos de escritorio)

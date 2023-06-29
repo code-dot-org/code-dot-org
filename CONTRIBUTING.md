@@ -31,7 +31,7 @@ Please test your changes before submitting them to us!
 
 ### Manual testing
 
-We support recent versions of Firefox, Chrome, Internet Explorer, Edge, iOS Safari and the Android browsers ([full list of supported browsers and versions](https://support.code.org/hc/en-us/articles/202591743)). Be sure to try your feature out in [IE9](docs/testing-ie9.md), iOS and Android if it's a risk. [Sauce Labs](https://saucelabs.com/manual) lets you run manual tests in these browsers remotely.
+We support recent versions of Firefox, Chrome, Edge, iOS Safari and the Android browsers ([full list of supported browsers and versions](https://support.code.org/hc/en-us/articles/202591743)). Be sure to try your feature out in iOS and Android if it's a risk. [Sauce Labs](https://saucelabs.com/manual) lets you run manual tests in these browsers remotely.
 
 ### Unit tests
 

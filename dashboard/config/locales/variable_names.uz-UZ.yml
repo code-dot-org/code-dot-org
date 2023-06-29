@@ -9,6 +9,7 @@ uz:
       age: yoshi
       answer: javob
       binary: binarli
+      birds: qushlar
       cats: mushuklar
       color: rang
       counter: counter (hisoblovchi)
@@ -29,6 +30,7 @@ uz:
       repeat: takrorlash
       right: o‘ng
       score: Hisob
+      shout: baqirish
       sides: tomonlar
       size: kattalik
       speed: tezlik

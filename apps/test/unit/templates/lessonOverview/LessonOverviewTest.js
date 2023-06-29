@@ -9,10 +9,13 @@ import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
-  fakeTeacherAnnouncement
+  fakeTeacherAnnouncement,
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
 import _ from 'lodash';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import sinon from 'sinon';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 describe('LessonOverview', () => {
   let defaultProps;
@@ -34,18 +37,18 @@ describe('LessonOverview', () => {
                   position: 1,
                   displayName: 'Lesson 1',
                   link: '/lessons/1',
-                  lockable: false
+                  lockable: false,
                 },
                 {
                   key: 'lesson-2',
                   position: 2,
                   displayName: 'Lesson 2',
                   link: '/lessons/2',
-                  lockable: false
-                }
-              ]
-            }
-          ]
+                  lockable: false,
+                },
+              ],
+            },
+          ],
         },
         id: 1,
         key: 'lesson-1',
@@ -63,8 +66,8 @@ describe('LessonOverview', () => {
               key: 'teacher-resource',
               name: 'Teacher Resource',
               url: 'fake.url',
-              type: 'Slides'
-            }
+              type: 'Slides',
+            },
           ],
           Student: [
             {
@@ -72,35 +75,35 @@ describe('LessonOverview', () => {
               name: 'Student Resource',
               url: 'fake.url',
               download_url: 'download.fake.url',
-              type: 'Activity Guide'
-            }
-          ]
+              type: 'Activity Guide',
+            },
+          ],
         },
         objectives: [{id: 1, description: 'what students will learn'}],
         vocabularies: [
           {
             key: 'Algorithm',
             word: 'Algorithm',
-            definition: 'A list of steps to finish a task.'
-          }
+            definition: 'A list of steps to finish a task.',
+          },
         ],
         programmingExpressions: [
           {
             name: 'playSound',
             syntax: 'playSound',
-            link: '/docs/applab/playSound'
-          }
+            link: '/docs/applab/playSound',
+          },
         ],
         standards: [],
         opportunityStandards: [],
-        courseVersionStandardsUrl: 'standards/url'
+        courseVersionStandardsUrl: 'standards/url',
       },
       activities: [],
       announcements: [],
       viewAs: ViewType.Instructor,
       isSignedIn: true,
       hasVerifiedResources: false,
-      isVerifiedInstructor: false
+      isVerifiedInstructor: false,
     };
   });
 
@@ -161,7 +164,7 @@ describe('LessonOverview', () => {
         {...defaultProps}
         announcements={[
           fakeTeacherAnnouncement,
-          fakeTeacherAndStudentAnnouncement
+          fakeTeacherAndStudentAnnouncement,
         ]}
       />
     );
@@ -242,12 +245,12 @@ describe('LessonOverview', () => {
         categoryDescription: "Earth's Place in the Universe",
         shortcode: '1-ESS1-1',
         description:
-          'Use observations of the sun, moon, and stars to describe patterns that can be predicted.'
-      }
+          'Use observations of the sun, moon, and stars to describe patterns that can be predicted.',
+      },
     ];
     const lesson = {
       ...defaultProps.lesson,
-      standards: standards
+      standards: standards,
     };
     const wrapper = shallow(
       <LessonOverview {...defaultProps} lesson={lesson} />
@@ -277,12 +280,12 @@ describe('LessonOverview', () => {
         categoryDescription: "Earth's Place in the Universe",
         shortcode: '1-ESS1-1',
         description:
-          'Use observations of the sun, moon, and stars to describe patterns that can be predicted.'
-      }
+          'Use observations of the sun, moon, and stars to describe patterns that can be predicted.',
+      },
     ];
     const lesson = {
       ...defaultProps.lesson,
-      opportunityStandards: standards
+      opportunityStandards: standards,
     };
     const wrapper = shallow(
       <LessonOverview {...defaultProps} lesson={lesson} />
@@ -298,23 +301,20 @@ describe('LessonOverview', () => {
     const lesson = {
       ...defaultProps.lesson,
       lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
-      scriptResourcesPdfUrl: '/link/to/script_resources.pdf'
+      scriptResourcesPdfUrl: '/link/to/script_resources.pdf',
     };
     const wrapper = shallow(
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper
-      .find(DropdownButton)
-      .first()
-      .props().children;
+    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
     expect(dropdownLinks.map(link => link.props.href)).to.eql([
       '/link/to/lesson_plan.pdf',
-      '/link/to/script_resources.pdf'
+      '/link/to/script_resources.pdf',
     ]);
     expect(dropdownLinks.map(link => link.props.children)).to.eql([
       'Print Lesson Plan',
-      'Print Handouts'
+      'Print Handouts',
     ]);
   });
 
@@ -322,75 +322,78 @@ describe('LessonOverview', () => {
     const lesson = {
       ...defaultProps.lesson,
       lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
-      scriptResourcesPdfUrl: null
+      scriptResourcesPdfUrl: null,
     };
     const wrapper = shallow(
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper
-      .find(DropdownButton)
-      .first()
-      .props().children;
+    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
     expect(dropdownLinks.map(link => link.props.href)).to.eql([
-      '/link/to/lesson_plan.pdf'
+      '/link/to/lesson_plan.pdf',
     ]);
     expect(dropdownLinks.map(link => link.props.children)).to.eql([
-      'Print Lesson Plan'
+      'Print Lesson Plan',
     ]);
   });
 
   it('does not render overview printing option in dropdown for pilot course', () => {
     const unit = {
       ...defaultProps.lesson.unit,
-      publishedState: PublishedState.pilot
+      publishedState: PublishedState.pilot,
     };
     const lesson = {
       ...defaultProps.lesson,
       unit: unit,
       lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
-      scriptResourcesPdfUrl: '/link/to/script_resources.pdf'
+      scriptResourcesPdfUrl: '/link/to/script_resources.pdf',
     };
     const wrapper = shallow(
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper
-      .find(DropdownButton)
-      .first()
-      .props().children;
+    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
     expect(dropdownLinks.map(link => link.props.href)).to.eql([
-      '/link/to/script_resources.pdf'
+      '/link/to/script_resources.pdf',
     ]);
     expect(dropdownLinks.map(link => link.props.children)).to.eql([
-      'Print Handouts'
+      'Print Handouts',
     ]);
   });
 
   it('does not render overview printing option in dropdown for in development course', () => {
     const unit = {
       ...defaultProps.lesson.unit,
-      publishedState: PublishedState.in_development
+      publishedState: PublishedState.in_development,
     };
     const lesson = {
       ...defaultProps.lesson,
       unit: unit,
       lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
-      scriptResourcesPdfUrl: '/link/to/script_resources.pdf'
+      scriptResourcesPdfUrl: '/link/to/script_resources.pdf',
     };
     const wrapper = shallow(
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
-    const dropdownLinks = wrapper
-      .find(DropdownButton)
-      .first()
-      .props().children;
+    const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
     expect(dropdownLinks.map(link => link.props.href)).to.eql([
-      '/link/to/script_resources.pdf'
+      '/link/to/script_resources.pdf',
     ]);
     expect(dropdownLinks.map(link => link.props.children)).to.eql([
-      'Print Handouts'
+      'Print Handouts',
     ]);
+  });
+
+  it('logs Amplitude event when rendered', () => {
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    shallow(<LessonOverview {...defaultProps} />);
+
+    expect(analyticsSpy).to.have.been.calledOnce;
+    assert.equal(
+      analyticsSpy.getCall(0).firstArg,
+      EVENTS.LESSON_OVERVIEW_PAGE_VISITED_EVENT
+    );
+    analyticsSpy.restore();
   });
 });

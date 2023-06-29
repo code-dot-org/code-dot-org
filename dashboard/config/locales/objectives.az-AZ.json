@@ -50,6 +50,9 @@
         "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
           "description": "Kompüter elmini və kodlaşdırmanı öyrənməyə davam etmək üçün gedəcəyiniz yerləri müəyyənləşdirin"
         },
+        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
+          "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
+        },
         "3e5eebcd-2140-4152-8654-410468108ab6": {
           "description": "\"Kodlaşdırma\" və \"kompüter elmini\" müəyyənləşdirin"
         },
@@ -136,6 +139,9 @@
         },
         "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
           "description": "Əvəzetmə şifrələrinin zəif tərəflərini və təhlükəsizlik qüsurlarını izah edin"
+        },
+        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
+          "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
         },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
           "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
@@ -274,6 +280,9 @@
         },
         "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
           "description": "İnsan qərəzinin maşın öyrənməsində necə rol oynaması ilə bağlı səbəb."
+        },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": ""
         },
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
@@ -803,14 +812,17 @@
         "ff942d9c-3b05-4664-9ef3-a8c5646eaf13": {
           "description": "Məsələnin müxtəlif həll yollarını müəyyənləşdirin."
         },
+        "730b8299-5c8e-416d-8d6f-e1aaadd69907": {
+          "description": "Kodu istifadə edərək ekrandakı mətni dəyişdirin"
+        },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Vaxt təyin edilmiş hadisələrə cavab verən proqramlar inkişaf etdirin."
+          "description": "Vaxt təyin edilmiş hadisələrə cavab verən proqramlar inkişaf etdirin.\n"
         },
         "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Şeirin əhval-ruhiyyəsinin dəyişməsini təsvir edin."
+          "description": "Şeirin əhval-ruhiyyəsinin dəyişməsini təsvir edin.\n"
         },
         "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Mətndə məcazi və hərfi dili vurğula"
+          "description": "Mətndə məcazi və hərfi dili vurğula\n"
         },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
           "description": "Tələbələr kompüter laboratoriyasına keçdikdə nə gözlənildiyini dərk edin."

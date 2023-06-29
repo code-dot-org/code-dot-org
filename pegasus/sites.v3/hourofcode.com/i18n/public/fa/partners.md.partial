@@ -2,37 +2,37 @@
 title: شرکا
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+Hour of code رو کمیته‌ی بررسی Hour of Code اداره میکنه
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[کمیته بررسی]({{ urls/review_committee }}) از 12 مربی کنونی و پیشین کلاسهای K-12 تشکیل شده که با کمک سیستم امتیازدهی که کمیته مشاوران ایجادش کرده فعالیت دانش‌آموزان رو ارزیابی کرده و نقطه نظراتش رو اعلام میکنه. این مربیان فعالیت‌های دانش آموز محور و برنامه های آموزشی معلم محور رو که توسط صدها نفر از شرکای همکار ارائه شده‌ن بررسی می‌کنن و ارزش آموزشی فعالیت‌ها، توانایی تعامل با دانش‌آموزان و درخواست‌های تجدیدنظر گروه‌های مختلف دانش آموزان رو ارزیابی می کنن.
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+کار و تعهد کمیته به موفقیت ساعت کدنویسی (Hour of Code) و ارائه‌ی مقدمه‌ای بر علوم کامپیوتر برای هر دانش‌آموز کمک کرده.
 
-# Major Partners and Corporate Supporters
+# شرکای اصلی و حاميان شرکتی
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# شرکای بین‌المللی
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# شرکای آموزشی و برنامه‌ریزان
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# همکاران و ابزارهای زیرساخت
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# ساير شركا
 
 {{ partners/additional_partners }}
 

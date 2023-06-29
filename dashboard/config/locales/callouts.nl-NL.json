@@ -1395,6 +1395,73 @@
         "coursee_helloworld_say": {
           "hello_world_say": "Gebruik dit blok om sprites te laten spreken.",
           "hello_world_make_sprite": "Gebruik dit blok om een sprite te creëren."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Gebruik dit blok om een nieuwe achtergrond in te stellen."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Gebruik dit blok om een nieuwe achtergrond in te stellen."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Gebruik dit blok met een van de onderstaande gedragingen."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Gebruik dit blok met een van de onderstaande gedragingen."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Klik hier om de code uit te voeren."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Nieuw blok!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Nieuw blok!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Voeg dit eventblok toe aan uw werkruimte."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Voeg dit eventblok toe aan uw werkruimte."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Klik hier om kostuums aan uw project toe te voegen."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Klik hier om kostuums aan uw project toe te voegen."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "pin"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "Gebruik dit blok om sprites te laten spreken.",
+          "hello_world_make_sprite": "Gebruik dit blok om een sprite te creëren."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "Gebruik dit blok om sprites te laten spreken.",
+          "hello_world_make_sprite": "Gebruik dit blok om een sprite te creëren."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Nieuw blok!",
+          "hello_world_new_block": "Nieuw blok!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Nieuw blok!",
+          "hello_world_new_block": "Nieuw blok!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Nieuw blok!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Nieuw blok!"
         }
       }
     }

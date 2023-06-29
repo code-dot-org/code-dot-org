@@ -3,13 +3,12 @@ import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
-import experiments from '@cdo/apps/util/experiments';
 import Firmata from 'firmata';
 import {
   createCircuitPlaygroundComponents,
   cleanupCircuitPlaygroundComponents,
   enableCircuitPlaygroundComponents,
-  componentConstructors
+  componentConstructors,
 } from './PlaygroundComponents';
 import {
   SONG_CHARGE,
@@ -17,16 +16,16 @@ import {
   SONG_ASCENDING,
   SONG_CONCLUSION,
   CP_COMMAND,
-  J5_CONSTANTS
+  J5_CONSTANTS,
 } from './PlaygroundConstants';
 import Led from './Led';
 import PlaygroundButton from './Button';
 import {
   detectBoardTypeFromPort,
   isWebSerialPort,
-  BOARD_TYPE
+  BOARD_TYPE,
 } from '../../util/boardUtils';
-import {isChromeOS, serialPortType} from '../../util/browserChecks';
+import {isChromeOS} from '../../util/browserChecks';
 import {SERIAL_BAUD} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
@@ -41,7 +40,7 @@ const pinMapping = {
   A4: 3,
   A5: 2,
   A6: 0,
-  A7: 1
+  A7: 1,
 };
 
 /**
@@ -108,13 +107,12 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   initializePlaygroundAndBoard(serialPort, name, resolve, reject) {
-    const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
-      serialPort
-    );
+    const playground =
+      CircuitPlaygroundBoard.makePlaygroundTransport(serialPort);
     const board = new five.Board({
       io: playground,
       repl: false,
-      debug: false
+      debug: false,
     });
     board.once('ready', () => {
       this.serialPort_ = serialPort;
@@ -124,9 +122,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       this.boardType_ = detectBoardTypeFromPort(this.port_);
       if (this.boardType_ === BOARD_TYPE.EXPRESS) {
         this.fiveBoard_.isExpressBoard = true;
-      }
-      if (experiments.isEnabled('detect-board')) {
-        this.detectFirmwareVersion(playground);
       }
       resolve();
     });
@@ -166,7 +161,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         this.prewiredComponents_ = {
           board: this.fiveBoard_,
           ...components,
-          ...J5_CONSTANTS
+          ...J5_CONSTANTS,
         };
       }
     );
@@ -251,9 +246,8 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       setTimeout(() => {
         // Close the serialport, cleaning it up properly so we can open it again
         // on the next run.
-        // Note: This doesn't seem to be necessary when using browser-serialport
-        // and the Chrome App connector, but it is required for native
-        // node serialport in the Code.org Maker App.
+        // Note: This is required for native
+        // Node SerialPort in the Code.org Maker App.
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
           this.serialPort_.close();
         }
@@ -271,7 +265,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   installOnInterpreter(jsInterpreter) {
     Object.keys(componentConstructors).forEach(key => {
       jsInterpreter.addCustomMarshalObject({
-        instance: componentConstructors[key]
+        instance: componentConstructors[key],
       });
       jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
     });
@@ -331,7 +325,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       {notes: SONG_CHARGE, tempo: 104},
       {notes: SONG_LEVEL_COMPLETE, tempo: 80},
       {notes: SONG_ASCENDING, tempo: 180},
-      {notes: SONG_CONCLUSION, tempo: 130}
+      {notes: SONG_CONCLUSION, tempo: 130},
     ]);
 
     return Promise.resolve()
@@ -341,7 +335,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   mappedPin(pin) {
-    return pinMapping.hasOwnProperty(pin) ? pinMapping[pin] : pin;
+    return Object.prototype.hasOwnProperty.call(pinMapping, pin)
+      ? pinMapping[pin]
+      : pin;
   }
 
   pinMode(pin, modeConstant) {
@@ -391,10 +387,8 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {SerialPort}
    */
   static openSerialPort(portName) {
-    const SerialPortType = serialPortType();
-
-    const port = new SerialPortType(portName, {
-      baudRate: SERIAL_BAUD
+    const port = new SerialPort(portName, {
+      baudRate: SERIAL_BAUD,
     });
 
     this.createPendingQueue(port);
@@ -407,7 +401,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {Promise<SerialPort>}
    */
   static openSerialPortWebSerial(port) {
-    return port.open().then(() => {
+    return port.openCPPort().then(() => {
       this.createPendingQueue(port);
       return port;
     });
@@ -430,14 +424,13 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
           return;
         }
         if (port.queue.length > 512) {
-          throw new Error(
-            'Send queue is full! More than 512 pending messages.'
-          );
+          // Send queue is full.  More than 512 pending messages.
+          return;
         }
 
         const toSend = port.queue.shift();
         sendPending = true;
-        oldWrite.call(port, toSend, 'binary', function() {
+        oldWrite.call(port, toSend, 'binary', function () {
           sendPending = false;
 
           if (port.queue.length !== 0) {
@@ -462,10 +455,10 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     // for this on every connection attempt.
     // Here we explicitly request a version as soon as the serialport is open
     // to speed up the connection process.
-    playground.on('open', function() {
+    playground.on('open', function () {
       // Requesting the version requires both of these calls. ¯\_(ツ)_/¯
-      playground.reportVersion(function() {});
-      playground.queryFirmware(function() {});
+      playground.reportVersion(function () {});
+      playground.queryFirmware(function () {});
     });
     return playground;
   }

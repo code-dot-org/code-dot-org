@@ -76,7 +76,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="Dancelab_whenSetup" movable="false">
+        <block type="Dancelab_whenSetup" deletable="false" movable="false">
           <statement name="DO">
             <block type="Dancelab_setBackgroundEffect">
               <title name="EFFECT">"disco"</title>

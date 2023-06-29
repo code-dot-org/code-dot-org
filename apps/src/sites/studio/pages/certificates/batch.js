@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import CertificateBatch from '@cdo/apps/templates/certificates/CertificateBatch';
 
-$(document).ready(function() {
+$(document).ready(function () {
   const certificateData = getScriptData('certificate');
   const {courseName, courseTitle, studentNames, imageUrl} = certificateData;
   ReactDOM.render(

@@ -4,13 +4,25 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "08e131bf-f5ec-41e0-995a-b75e41cd5bef",
+          "notice": "This module is intended is for training purposes only.  Submissions will not be evaluated by the lead review team and are not eligible for compensation.",
+          "details": "",
+          "link": "",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": ""
+        }
+      ],
       "is_migrated": true,
       "peer_reviews_to_complete": 6,
       "professional_learning_course": "2022 CS Discoveries Deeper Learning"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-30 20:06:31 UTC",
+    "serialized_at": "2022-11-28 19:39:08 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "plc_reviewer",

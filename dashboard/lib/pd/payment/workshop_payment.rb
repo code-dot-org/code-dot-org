@@ -20,7 +20,7 @@ module Pd::Payment
 
     # @return [Numeric] Sum of all payment parts.
     def total
-      amounts.values.reduce(0, :+)
+      amounts.values.sum
     end
   end
 end

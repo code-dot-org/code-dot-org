@@ -9,3 +9,5 @@ wrong 'Messages are broken into packets to improve reliability of the internet'
 teacher_markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

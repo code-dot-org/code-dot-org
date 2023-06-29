@@ -18,3 +18,5 @@ wrong 'Math.sqrt(myDouble);'
 wrong 'Math.abs(myDouble);'
 wrong 'Math.abs(Math.sqrt(myDouble));'
 wrong '-Math.sqrt(myDouble);'
+
+allow_multiple_attempts true

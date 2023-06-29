@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Debugimine"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Debugimine"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Tingimuslaused"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Debugimine"
         },
         "loops/aquatic/unversioned": {
           "word": "Tsüklid"
@@ -55,6 +55,14 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "Debugimine"
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "Kood"
@@ -74,14 +82,23 @@
         "conditionals/coursed/2022": {
           "word": "Tingimuslaused"
         },
+        "behavior/coursef/2022": {
+          "word": "Käitumine"
+        },
         "variable/coursef/2022": {
           "word": "Muutuja"
+        },
+        "input/coursef/2022": {
+          "word": "Sisend"
         },
         "internet/coursef/2022": {
           "word": "Internet"
         },
         "define/coursef/2022": {
           "word": "Määra"
+        },
+        "behavior/coursee/2022": {
+          "word": "Käitumine"
         },
         "function/coursee/2022": {
           "word": "Funktsioon"
@@ -103,6 +120,9 @@
         },
         "debugging/express/2022": {
           "word": "Debugimine"
+        },
+        "behavior/express/2022": {
+          "word": "Käitumine"
         },
         "conditionals/express/2022": {
           "word": "Tingimuslaused"
@@ -131,8 +151,14 @@
         "debugging/coursec/2022": {
           "word": "Debugimine"
         },
+        "data/coursec/2022": {
+          "word": "Andmed"
+        },
         "binary/coursec/2022": {
           "word": "Binaarne"
+        },
+        "input/csd/2022": {
+          "word": "Sisend"
         },
         "debugging/csd/2022": {
           "word": "Debugimine"
@@ -153,10 +179,33 @@
           "word": "Autoriõigus"
         },
         "code/poem-art/unversioned": {
-          "word": "Kood"
+          "word": "Kood",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "behavior/coursef/2021": {
+          "word": "Käitumine"
         },
         "variable/coursef/2021": {
           "word": "Muutuja"
+        },
+        "input/coursef/2021": {
+          "word": "Sisend"
         },
         "internet/coursef/2021": {
           "word": "Internet"
@@ -191,6 +240,9 @@
         "debugging/express/2021": {
           "word": "Debugimine"
         },
+        "behavior/express/2021": {
+          "word": "Käitumine"
+        },
         "conditionals/express/2021": {
           "word": "Tingimuslaused"
         },
@@ -208,6 +260,9 @@
         },
         "debugging/pre-express/2021": {
           "word": "Debugimine"
+        },
+        "behavior/coursee/2021": {
+          "word": "Käitumine"
         },
         "copyright/coursee/2021": {
           "word": "Autoriõigus"
@@ -235,6 +290,9 @@
         },
         "function/csd/2021": {
           "word": "Funktsioon"
+        },
+        "input/csd/2021": {
+          "word": "Sisend"
         },
         "copyright/csd/2021": {
           "word": "Autoriõigus"

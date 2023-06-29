@@ -9,7 +9,8 @@
           "notice": "This unit is being replaced....",
           "details": "As part of improving Performance Task prep, this unit has been split into separate units \"Explore PT Prep\" and \"Create PT Prep\" which can now be found in the pull down menu where you assign units to one of your sections.  Please go there and assign your section to the appropriate unit to see improved activities and resources.  The lesson plan for the Explore PT prep will link to the new lessons. Click the Learn More button to read about the changes and updates.",
           "link": "http://forum.code.org/t/curriculum-updates-2017-18/10762/52",
-          "type": "bullhorn"
+          "type": "bullhorn",
+          "key": "8730f9b7-64bd-4381-9e13-3128cc87c89a"
         }
       ],
       "has_verified_resources": true,
@@ -22,7 +23,7 @@
     },
     "new_name": null,
     "family_name": "csp-ap",
-    "serialized_at": "2022-04-08 15:40:43 UTC",
+    "serialized_at": "2022-09-28 14:31:23 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

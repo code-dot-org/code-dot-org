@@ -42,3 +42,5 @@ This code will work if the luggage is under 50 pounds because it will go into th
 
 It should check if the weight of the luggage is above 120 pounds before checking if it is above 50 pounds.
 MARKDOWN
+
+allow_multiple_attempts true

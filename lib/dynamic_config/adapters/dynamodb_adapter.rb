@@ -22,8 +22,8 @@ class DynamoDBAdapter
     return nil if resp.item.nil?
     begin
       value = Oj.load(resp.item['data-value'])
-    rescue => exc
-      Honeybadger.notify(exc)
+    rescue => exception
+      Honeybadger.notify(exception)
       value = nil
     end
     value
@@ -61,8 +61,8 @@ class DynamoDBAdapter
         key = item['data-key']
         begin
           value = Oj.load(item['data-value'])
-        rescue => exc
-          Honeybadger.notify(exc)
+        rescue => exception
+          Honeybadger.notify(exception)
           value = nil
         end
         result[key] = value

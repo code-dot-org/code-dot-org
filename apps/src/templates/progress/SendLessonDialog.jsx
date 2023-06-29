@@ -20,14 +20,14 @@ class SendLessonDialog extends Component {
     analyticsData: PropTypes.string,
 
     // redux provided
-    showGoogleButton: PropTypes.bool
+    showGoogleButton: PropTypes.bool,
   };
 
   constructor(props) {
     super(props);
     this.onCopyLink = this.onCopyLink.bind(this);
     this.state = {
-      showLinkCopied: false
+      showLinkCopied: false,
     };
   }
 
@@ -45,7 +45,7 @@ class SendLessonDialog extends Component {
         study: 'copy-lesson-link-button',
         study_group: 'v0',
         event: event,
-        data_json: this.props.analyticsData
+        data_json: this.props.analyticsData,
       },
       {includeUserId: true}
     );
@@ -126,14 +126,14 @@ const styles = {
     textAlign: 'left',
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   detailsLine: {
-    marginBottom: 32
+    marginBottom: 32,
   },
   row: {
     marginTop: 8,
-    marginBottom: 8
+    marginBottom: 8,
   },
   button: {
     width: 48,
@@ -146,20 +146,20 @@ const styles = {
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
     paddingLeft: 0,
-    paddingRight: 0
+    paddingRight: 0,
   },
   buttonIcon: {
     margin: 0,
-    fontSize: 24
+    fontSize: 24,
   },
   buttonLabel: {
-    paddingLeft: 16
-  }
+    paddingLeft: 16,
+  },
 };
 
 // Export unconnected dialog for unit testing
 export const UnconnectedSendLessonDialog = SendLessonDialog;
 
 export default connect(state => ({
-  showGoogleButton: canShowGoogleShareButton(state)
+  showGoogleButton: canShowGoogleShareButton(state),
 }))(SendLessonDialog);

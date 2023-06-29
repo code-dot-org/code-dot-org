@@ -2,37 +2,37 @@
 title: שותפים
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+שעת הקוד מונעת ע"י הועדה לסקירת שעת הקוד
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+￼וועדת הסקירה￼ מורכבת מ-12 מחנכי עבר ומחנכים בהווה משלל שכבות K-12, המעריכים וממליצים על פעילויות תוך שימוש בסולם שנקבע ע"י ועדה מייעצת. מחנכים אלו סוקרים פעילויות המונחות ע"י סטודנטים ומערכי שיעור מונחים ע"י מורים, הנשלחים ע"י מאות שותפי פעילות, המעריכים את הערכים החינוכיים של הפעילויות, את היכולת לקשור בין הלומדים ואת המשיכה הפוטנציאלית למגוון סטודנטים.
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+עבודת ומסירות הועדה תרמו להצלחת שעת הקוד וחזונה למתן מבוא למדעי המחשב לכל סטודנט.
 
-# Major Partners and Corporate Supporters
+# שותפים מרכזיים ותומכים תאגידיים
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# שותפים בינלאומיים
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# תוכנית הלימודים ושותפים להדרכה
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# שותפי וכלי תשתית
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# שותפים נוספים
 
 {{ partners/additional_partners }}
 

@@ -12,10 +12,48 @@
               "name": "Likovi"
             },
             "groups": {
-              "name": "Grupe"
+              "name": "Grupe",
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Boja"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Boja"
+                    }
+                  }
+                }
+              }
             },
             "math": {
-              "name": "Matematika"
+              "name": "Matematika",
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    },
+                    "max": {
+                      "description": "Vraća najveći broj"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    },
+                    "max": {
+                      "description": "Vraća najveći broj"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "Varijable"
@@ -28,8 +66,63 @@
         "applab": {
           "name": "Laboratorij aplikacija",
           "categories": {
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
-              "name": "Matematika"
+              "name": "Matematika",
+              "expressions": {
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    },
+                    "max": {
+                      "description": "Vraća najveći broj"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    },
+                    "max": {
+                      "description": "Vraća najveći broj"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
               "name": "Varijable"

@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2019-05-07T21:25:44.000Z",
-  "level_num": "custom",
-  "user_id": 13,
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
@@ -14,8 +10,13 @@
     "optional": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "placeholder": "As a reminder"
+    "placeholder": "As a reminder",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2019-05-07T21:25:44.000Z",
+  "user_id": 13,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2019-05-07 21:25:50 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2019-05-07 21:46:19 +0000\",\"changed\":[],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",

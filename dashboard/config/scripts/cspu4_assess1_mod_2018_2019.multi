@@ -28,3 +28,5 @@ For the question choices:
 
 Since 9 MOD 8 and 1 MOD 16 both have a remainder of 1, they compute to the same value.
 MARKDOWN
+
+allow_multiple_attempts true

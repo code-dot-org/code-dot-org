@@ -4,10 +4,10 @@ import {shallow} from 'enzyme';
 import {UnconnectedProgressLevelSet as ProgressLevelSet} from '@cdo/apps/templates/progress/ProgressLevelSet';
 import {
   fakeLevels,
-  fakeLevel
+  fakeLevel,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 
-describe('ProgressLevelSet', function() {
+describe('ProgressLevelSet', function () {
   it('has a pill and no bubbles for a single level', () => {
     const wrapper = shallow(
       <ProgressLevelSet
@@ -84,7 +84,7 @@ describe('ProgressLevelSet', function() {
         name={undefined}
         levels={[fakeLevel({isUnplugged: true})].map(level => ({
           ...level,
-          name: undefined
+          name: undefined,
         }))}
         disabled={false}
       />

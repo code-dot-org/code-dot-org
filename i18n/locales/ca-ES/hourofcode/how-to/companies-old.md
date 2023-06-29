@@ -5,7 +5,7 @@ title: How to host an Hour of Code - Companies
 {{ signup_button }}
 
 # Com portar l'Hora del Codi a la teva empresa
-### Find out how you and your employees can inspire students to try computer science!
+### Descobriu com vosaltres i els vostres empleats podeu inspirar els alumnes perquè s'endinsin en la informàtica
 
 ***
 

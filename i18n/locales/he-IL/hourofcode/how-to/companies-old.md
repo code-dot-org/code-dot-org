@@ -5,7 +5,7 @@ title: כיצד לבצע שעת תכנות - לחברות
 {{ signup_button }}
 
 # כיצד להביא את "שעה של קוד" לחברה שלך
-### Find out how you and your employees can inspire students to try computer science!
+### גלו כיצד אתם ועובדיכם יכולים לעורר השראה אצל תלמידים לנסות מדעי מחשב!
 
 ***
 

@@ -5,6 +5,7 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+/* eslint-disable no-restricted-imports */
 import {
   FormGroup,
   ControlLabel,
@@ -12,8 +13,9 @@ import {
   ButtonToolbar,
   Button,
   Panel,
-  Table
+  Table,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import parseJson from 'json-parse-better-errors';
 import color from '@cdo/apps/util/color';
 
@@ -22,13 +24,12 @@ export default class FormDataEdit extends React.Component {
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
       course_name: PropTypes.string,
-      application_type: PropTypes.oneOf(['Facilitator', 'Teacher']),
-      form_data: PropTypes.object.isRequired
-    }).isRequired
+      form_data: PropTypes.object.isRequired,
+    }).isRequired,
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   constructor(props) {
@@ -40,7 +41,7 @@ export default class FormDataEdit extends React.Component {
     return {
       formData: JSON.stringify(this.props.applicationData.form_data, null, 2),
       parseError: null,
-      saveErrors: null
+      saveErrors: null,
     };
   }
 
@@ -69,9 +70,9 @@ export default class FormDataEdit extends React.Component {
       dataType: 'json',
       data: JSON.stringify({
         application: {
-          form_data: parsedFormData
-        }
-      })
+          form_data: parsedFormData,
+        },
+      }),
     })
       .done(() => {
         this.setState({saveErrors: null});
@@ -107,7 +108,7 @@ export default class FormDataEdit extends React.Component {
             </tr>
             <tr>
               <td>Type: </td>
-              <td>{this.props.applicationData.application_type}</td>
+              <td>Teacher</td>
             </tr>
           </tbody>
         </Table>
@@ -161,6 +162,6 @@ export default class FormDataEdit extends React.Component {
 
 const styles = {
   error: {
-    color: color.red
-  }
+    color: color.red,
+  },
 };

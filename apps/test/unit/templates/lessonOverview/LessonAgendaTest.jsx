@@ -17,21 +17,21 @@ describe('LessonAgenda', () => {
               key: 'section-1',
               displayName: 'Making programs',
               duration: 20,
-              scriptLevels: []
+              scriptLevels: [],
             },
             {
               key: 'section-2',
               displayName: '',
               duration: 0,
-              scriptLevels: [{id: 10}]
+              scriptLevels: [{id: 10}],
             },
             {
               key: 'section-3',
               duration: 10,
               displayName: 'Non Programming Progression',
-              scriptLevels: []
-            }
-          ]
+              scriptLevels: [],
+            },
+          ],
         },
         {
           key: 'activity-2',
@@ -42,23 +42,23 @@ describe('LessonAgenda', () => {
               key: 'section-4',
               duration: 0,
               displayName: 'Section 4',
-              scriptLevels: [{id: 11}]
+              scriptLevels: [{id: 11}],
             },
             {
               key: 'section-5',
               duration: 0,
               displayName: '',
-              scriptLevels: []
+              scriptLevels: [],
             },
             {
               key: 'section-6',
               duration: 0,
               displayName: 'Section 6',
-              scriptLevels: []
-            }
-          ]
-        }
-      ]
+              scriptLevels: [],
+            },
+          ],
+        },
+      ],
     };
   });
 

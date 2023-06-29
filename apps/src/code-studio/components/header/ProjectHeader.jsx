@@ -1,5 +1,3 @@
-/* globals appOptions */
-
 import PropTypes from 'prop-types';
 import React from 'react';
 import EditableProjectName from './EditableProjectName';
@@ -9,7 +7,7 @@ import ProjectShare from './ProjectShare';
 
 export default class ProjectHeader extends React.Component {
   static propTypes = {
-    onChangedWidth: PropTypes.func
+    onChangedWidth: PropTypes.func,
   };
 
   render() {

@@ -8,13 +8,13 @@ title: Activity Guidelines
   }
 </style>
 
-# Guia per crear i enviar tutorials i lliçons de Hour of Code i la setmana Computer Science Education
+# Guia per crear i enviar tutorials i lliçons de Hour of Code™ i la Setmana de l'Educació en Ciències de la Computació
 
-Code.org allotja una varietat de videos, lliçons i activitats de la website Hour of Code. La llista actual es a [hourofcode.com/learn]({{ urls/learn }}).
+Code.org allotja una gran selecció de vídeos, lliçons i activitats a les pàgines web de Code.org i de l'Hora del Codi. Trobareu la llista actual a [hourofcode.com/learn]({{ urls/learn }}).
 
-Vols enviar el teu propi tutorial autoguiat, una lliçó dirigida, o una activitat de robòtica/maker on s'expliqui el principi informatic? Uneix-te a aquest moviment global i ajuda els participants de tot el món a començar amb una hora de codi o anar més enllà amb activitats amb multi- lliçons, d'un dia o d'una setmana.
+Voleu enviar el vostre propi tutorial autònom, una lliçó dirigida o una activitat de robòtica o amb Maker on s'expliqui un principi de la informàtica? Uniu-vos a aquest moviment global i ajudeu els participants de tot el món a començar amb una hora de codi o anar més enllà amb activitats que contenen diverses lliçons o que duren tot un dia o una setmana.
 
-Després de llegir les directrius, podeu enviar la vostra activitat a través de la nostra pàgina d'enviament d'activitats d'Hour of Code™. Podeu enviar una activitat en qualsevol moment, però la data límit per incloure-la en un any natural determinat és l'1 d'octubre. (Per exemple, les activitats rebudes després de l'1 d'octubre de 2022 no apareixeran a l'Hora del Codi de 2022.) Si teniu cap pregunta sobre l'enviament de l'activitat, poseu-vos en contacte amb nosaltres a support@code.org.
+**Després de llegir les directrius, podeu enviar la vostra activitat a través de la nostra [pàgina per trametre activitats de l'Hora del Codi](https://forms.gle/eeAt6kVuz3RKg5n18). Podeu enviar una activitat en qualsevol moment, però la data límit per incloure-la en un any natural és l'1 d'octubre. (Per exemple, les activitats rebudes després de l'1 d'octubre de 2022 no apareixeran a l'Hora del Codi de 2022).** Si teniu cap pregunta sobre l'enviament de l'activitat, poseu-vos en contacte amb nosaltres a support@code.org.
 
 A few tips:
 
@@ -78,9 +78,9 @@ If you create an activity or tutorial that is designed for special needs student
 
 The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
 
-- Anybody can learn computer science - regardless of age, gender, race, or ability/disability. 
+- Anybody can learn computer science - regardless of age, gender, race, or ability/disability.
 - Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online. 
+- Encourage students to create something unique that can be shared with parents/friends or online.
 
 The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
 
@@ -122,7 +122,7 @@ What you’ll need:
 
 #### Additional things you’ll need when submitting Lesson Plans
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
+* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service.
 * What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
 
 #### Additional things you’ll need when submitting Online Activities
@@ -181,7 +181,7 @@ If the review committee rates the activity a zero in production quality (due to 
 In addition, in order to be listed, all activities must:
 
 - Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up 
+- Require no sign up
 - Require no payment (exception for robotics activities these can require robot/kit purchase)
 
 For self-directed activities for new teachers and students the review committee will be looking for whether:
@@ -212,7 +212,7 @@ You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resour
 
 - What platforms and browsers does the tutorial work best on?
 - Does it work on smartphones? Tablets?
-- Do you recommend pair programming? 
+- Do you recommend pair programming?
 - Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
 
 **Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
@@ -275,4 +275,4 @@ Please promote your activity to your network! Direct them to your Hour of Code p
 
 [**Back to the top**](#top)
 
-{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+{{ signup_button }}

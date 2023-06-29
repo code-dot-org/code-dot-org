@@ -10,7 +10,7 @@ const schoolTypes = [
   i18n.schoolTypeCharter(),
   i18n.schoolTypePrivate(),
   i18n.schoolTypePublic(),
-  i18n.other()
+  i18n.other(),
 ];
 
 const singleLineLayoutStyles = {
@@ -21,32 +21,32 @@ const singleLineLayoutStyles = {
   fontSize: 13,
   fontFamily: '"Gotham 4r", sans-serif',
   color: '#333',
-  padding: 0
+  padding: 0,
 };
 
 const singleLineLabelStyles = {
   display: 'table',
   width: '100%',
   height: 42,
-  marginBottom: 0
+  marginBottom: 0,
 };
 
 const singleLineFieldStyles = {
   width: '100%',
-  height: 'auto'
+  height: 'auto',
 };
 
 const singleLineInputStyles = {
   height: 'auto',
   width: '100%',
   marginBottom: 0,
-  boxSizing: 'border-box'
+  boxSizing: 'border-box',
 };
 
 const singleLineDropdownStyles = {
   marginTop: 0,
   marginBottom: 0,
-  width: '100%'
+  width: '100%',
 };
 
 const OMIT_FIELD = '__omit_field__';
@@ -69,7 +69,7 @@ export default class SchoolNotFound extends Component {
     showRequiredIndicators: PropTypes.bool,
     schoolNameLabel: PropTypes.string,
     // Note: useLocationSearch enables the MapboxLocationSearchField component. See documentation for how to enable.
-    useLocationSearch: PropTypes.bool
+    useLocationSearch: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -82,8 +82,8 @@ export default class SchoolNotFound extends Component {
       schoolCity: 'school_city_s',
       schoolState: 'school_state_s',
       schoolZip: 'school_zip_s',
-      googleLocation: 'registration_location'
-    }
+      googleLocation: 'registration_location',
+    },
   };
 
   static OMIT_FIELD = OMIT_FIELD;
@@ -129,7 +129,7 @@ export default class SchoolNotFound extends Component {
     const {singleLineLayout, showRequiredIndicators} = this.props;
     const questionStyle = {
       ...styles.question,
-      ...(singleLineLayout && singleLineLayoutStyles)
+      ...(singleLineLayout && singleLineLayoutStyles),
     };
     return (
       <div style={questionStyle}>
@@ -146,15 +146,15 @@ export default class SchoolNotFound extends Component {
     const labelStyle = {...(singleLineLayout && singleLineLabelStyles)};
     const fieldStyle = {
       ...styles.field,
-      ...(singleLineLayout && singleLineFieldStyles)
+      ...(singleLineLayout && singleLineFieldStyles),
     };
     const inputStyle = {
       ...styles.input,
-      ...(singleLineLayout && singleLineInputStyles)
+      ...(singleLineLayout && singleLineInputStyles),
     };
     const dropdownStyle = {
       ...styles.schoolNotFoundDropdown,
-      ...(singleLineLayout && singleLineDropdownStyles)
+      ...(singleLineLayout && singleLineDropdownStyles),
     };
     const showError = this.props.showErrorMsg && !this.isValid();
     const errorDiv = (
@@ -260,21 +260,22 @@ export default class SchoolNotFound extends Component {
               </div>
             )}
         </div>
-        {this.props.schoolZip !== OMIT_FIELD && !this.props.useLocationSearch && (
-          <div style={fieldStyle}>
-            <label style={labelStyle}>
-              {this.renderLabel(i18n.schoolZip())}
-              <input
-                id="school_zipcode"
-                type="text"
-                name={this.props.fieldNames.schoolZip}
-                value={this.props.schoolZip}
-                onChange={this.handleChange.bind(this, 'schoolZip')}
-                style={inputStyle}
-              />
-            </label>
-          </div>
-        )}
+        {this.props.schoolZip !== OMIT_FIELD &&
+          !this.props.useLocationSearch && (
+            <div style={fieldStyle}>
+              <label style={labelStyle}>
+                {this.renderLabel(i18n.schoolZip())}
+                <input
+                  id="school_zipcode"
+                  type="text"
+                  name={this.props.fieldNames.schoolZip}
+                  value={this.props.schoolZip}
+                  onChange={this.handleChange.bind(this, 'schoolZip')}
+                  style={inputStyle}
+                />
+              </label>
+            </div>
+          )}
         {this.props.useLocationSearch && (
           <div style={fieldStyle}>
             <label style={labelStyle}>
@@ -291,7 +292,7 @@ export default class SchoolNotFound extends Component {
                   'place',
                   'postcode',
                   'locality',
-                  'neighborhood'
+                  'neighborhood',
                 ]}
               />
             </label>

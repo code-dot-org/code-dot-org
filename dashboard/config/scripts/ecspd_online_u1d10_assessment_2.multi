@@ -18,3 +18,4 @@ right 'Data mining is becoming so advanced it may one day be used to automatical
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

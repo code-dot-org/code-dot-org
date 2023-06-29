@@ -39,11 +39,11 @@ module Cdo
     end
 
     def shutdown
-      @task&.shutdown
+      @spawn_reporting_task&.shutdown
     end
 
     def spawn_reporting_task
-      @task ||= Concurrent::TimerTask.new(execution_interval: @interval, &method(:collect_metrics)).
+      @spawn_reporting_task ||= Concurrent::TimerTask.new(execution_interval: @interval, &method(:collect_metrics)).
         with_observer {|_, _, ex| Honeybadger.notify(ex) if ex}.
         execute
     end
@@ -68,7 +68,7 @@ module Cdo
       stats.merge! Raindrops::Linux.tcp_listener_stats(@tcp.uniq) if @tcp
       stats.merge! Raindrops::Linux.unix_listener_stats(@unix.uniq) if @unix
       stats = %i(active queued).map do |name|
-        [name, stats.values.map(&name).inject(:+)]
+        [name, stats.values.sum(&name)]
       end.to_h
       stats[:calling] = @stats.max_calling.tap {@stats.max_calling = 0}
       stats

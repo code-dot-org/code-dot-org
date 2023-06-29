@@ -26,3 +26,4 @@ Consider the following program which performs an operation on the given list.
 
 </pre>
 MARKDOWN
+allow_multiple_attempts true

@@ -14,7 +14,7 @@ const DEFAULT_PROPS = {
   hasAuthoredHints: true,
   smallStaticAvatar: 'small-avatar',
   failureAvatar: 'failure-avatar',
-  feedback: null
+  feedback: null,
 };
 
 const setUp = (overrideProps = {}) => {
@@ -38,7 +38,7 @@ describe('InstructionsCsfLeftCol', () => {
     const wrapper = setUp({
       hasAuthoredHints: true,
       hasUnseenHint: true,
-      requestHint: requestHintSpy
+      requestHint: requestHintSpy,
     });
     wrapper.find('.prompt-icon-cell').simulate('click');
     expect(requestHintSpy.calledOnce).to.be.true;
@@ -49,7 +49,7 @@ describe('InstructionsCsfLeftCol', () => {
     const wrapper = setUp({
       hasAuthoredHints: false,
       hasUnseenHint: true,
-      requestHint: requestHintSpy
+      requestHint: requestHintSpy,
     });
     wrapper.find('.prompt-icon-cell').simulate('click');
     expect(requestHintSpy.calledOnce).to.be.false;
@@ -59,7 +59,7 @@ describe('InstructionsCsfLeftCol', () => {
     const failureAvatarSrc = 'failure-avatar-src';
     const wrapper = setUp({
       failureAvatar: failureAvatarSrc,
-      feedback: {message: 'failure', isFailure: true}
+      feedback: {message: 'failure', isFailure: true},
     });
     expect(wrapper.find(PromptIcon).props().src).to.equal(failureAvatarSrc);
   });
@@ -68,14 +68,14 @@ describe('InstructionsCsfLeftCol', () => {
     const smallAvatarSrc = 'small-avatar-src';
     const wrapper = setUp({
       smallStaticAvatar: smallAvatarSrc,
-      feedback: {message: 'feedback', isFailure: false}
+      feedback: {message: 'feedback', isFailure: false},
     });
     expect(wrapper.find(PromptIcon).props().src).to.equal(smallAvatarSrc);
   });
 
   it('displays hint lightbulb when hasAuthoredHints', () => {
     const wrapper = setUp({
-      hasAuthoredHints: true
+      hasAuthoredHints: true,
     });
     expect(wrapper.find(HintDisplayLightbulb)).to.have.length(1);
   });

@@ -2,10 +2,10 @@
 title: 학부모들을 위한 활용 가이드
 ---
 
-# 아워오브코드를 자녀와 함께 하는 방법
+# 자녀와 함께 아워오브코드를 하는 방법
 아워오브코드는 자녀에게 맨 처음 컴퓨터 과학을 소개하는 간단하면서도 재미있는 방법입니다.  컴퓨터 과학은 모든 학문 분야의 기초일 뿐 만 아니라 <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">최근의 연구가 보여주듯</a>, 컴퓨터 과학을 공부하는 아동은 다른 과목에서도 좋은 성과를 나타내고 문제해결 능력이 뛰어나며<font color="00adbc"><b>대학에 진학할 가능성이 17% 더 높습니다.</b></font>.
 
-이 글로벌 이벤트에서 전 세계 수 천만 명의 학생들과 함께 할 수 있습니다. 함께 아이들에게 학습 동기를 부여하고, 고정 관념을 깨며, 아이들이 새로운 것을 발견하도록 도울 수 있습니다. 무엇보다도, 아워오브코드를 집에서 하는데 필요한 모든 것을 이미 갖추셨습니다!
+이 글로벌 이벤트에서 전 세계 수 천만 명의 학생들과 함께 할 수 있습니다. 함께 아이들에게 학습 동기를 부여하고, 고정 관념을 깨며, 아이들이 새로운 것을 발견하도록 도울 수 있습니다. Best of all, you already have everything you need to bring the Hour of Code into your home!
 
 [<img src="/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg" />]({{ urls/learn }})
 
@@ -20,7 +20,7 @@ title: 학부모들을 위한 활용 가이드
 
 [<img src="/images/fit-600/tutorials.png" />]({{ urls/learn }})
 
-인터넷에 연결된 컴퓨터로 할 수 있는<a href="https://hourofcode.com/us/learn">아워오브코드 활동</a>은 셀 수 없이 많습니다. 몇 가지 옵션을 미리 살펴볼 것을 권합니다. 그렇게 함으로써 자녀를 즐거워할 활동으로 안내할 수 있습니다.
+인터넷에 연결된 컴퓨터로 할 수 있는<a href="https://hourofcode.com/us/learn">아워오브코드 활동</a>은 셀 수 없이 많습니다. We encourage you to take a look at some of your options ahead of time so that you can help guide your child towards exercises they’ll enjoy.
 
 모든 활동이 문제 해결 및 비판적 사고를 재미와 창의성에 통합시키지만, 학생들이 좋아하는 것은 다음과 같습니다.
 
@@ -64,7 +64,7 @@ title: 학부모들을 위한 활용 가이드
 [<img src="/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg" />]({{ urls/learn }})
 
 <h3>집에 여아가 있습니까?</h3>
-자녀의 컴퓨터 과학에 대한 관심을 촉발시키기 위한<a href="https://code.org/girls">추천사항입니다</a>. **사전 팁**: 자녀에게 정말 잘 한다고 얘기해 줌으로써 시작할 수 있습니다!
+<a href="https://code.org/girls">Here are our recommendations</a> to help spark their interest in computer science. **사전 팁**: 자녀에게 정말 잘 한다고 얘기해 줌으로써 시작할 수 있습니다!
 
 <h3>함께 문제 풀기</h3>
 마지막으로 자녀가 어려워하면, 다음과 같이 대응해줘도 괜찮습니다:
@@ -81,10 +81,10 @@ title: 학부모들을 위한 활용 가이드
 
 - 자녀가 활동을 완료했을 때 상으로 줄  <a href="https://staging.code.org/certificates">아워오브코드 인증서</a>를 인쇄하세요.
 - <a href="https://staging.hourofcode.com/us/promote/resources#stickers">깜짝 선물로 스티커를</a> 집에서 프린트하거나 또는 <a href="https://store.code.org/">온라인으로 구매하세요 </a>.
-- 집에서 하는 아워오브코드의 사진과 동영상을 소셜 미디어에 공유하세요. 우리 역시 여러분의 성공을 강조할 수 있게 #HourOfCode 및 @codeorg을 사용하세요!
+- Share photos and videos of your at-home Hour of Code on social media. 우리 역시 여러분의 성공을 강조할 수 있게 #HourOfCode 및 @codeorg을 사용하세요!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-<h2>Hour of Code 이후에는 어떤 것들이 있나요?</h2>
+<h2>What comes after the Hour of Code?</h2>
 
 컴퓨터 과학은 아워오브코드로 끝나서는 안됩니다! 90%의 학부모들이 자녀가 컴퓨터 과학을 배우길 원하지만, 대부분의 학교에서는 아직 컴퓨터 과학을 가르치고 있지 않습니다. 저희 커리큘럼은 웹 기반이며 영원히 무료입니다. CS를 귀 자녀의 학교에 소개하는 <a href="https://code.org/yourschool">방법에 대해 알아보세요</a>.

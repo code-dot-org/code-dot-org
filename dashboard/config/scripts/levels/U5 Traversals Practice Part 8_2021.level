@@ -69,7 +69,7 @@
     "beginner_mode": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "long_instructions": "\r\n\r\nThis app lets users look up the [Air Quality Index](https://studio.code.org/docs/concepts/data-library/air-quality/) statistics from their state.\r\n\r\n# Do This\r\n\r\n* Read and run the code to understand how it works. Using the watcher could be a useful tool to see what's going on the background.\r\n* Add code to the program where the comments indicate to calculate the percent of each type of day from the selected state  when the user clicks the display button. Display each percent in the appropriate output label.\r\n* Test your program on a few different states to make sure it works.",
+    "long_instructions": "\r\n\r\nThis app lets users look up the [Air Quality Index](https://studio.code.org/data_docs/air-quality/) statistics from their state.\r\n\r\n# Do This\r\n\r\n* Read and run the code to understand how it works. Using the watcher could be a useful tool to see what's going on the background.\r\n* Add code to the program where the comments indicate to calculate the percent of each type of day from the selected state  when the user clicks the display button. Display each percent in the appropriate output label.\r\n* Test your program on a few different states to make sure it works.",
     "parent_level_id": 26166,
     "mini_rubric": "false",
     "encrypted": "false",

@@ -7,22 +7,24 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import javalabMsg from '@cdo/javalab/locale';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import JavalabEditorDialogManager, {
   DEFAULT_FILE_NAME,
-  JavalabEditorDialog,
-  UnconnectedJavalabEditorDialogManager
+  UnconnectedJavalabEditorDialogManager,
 } from '@cdo/apps/javalab/JavalabEditorDialogManager';
 import JavalabDialog from '@cdo/apps/javalab/JavalabDialog';
 import NameFileDialog from '@cdo/apps/javalab/NameFileDialog';
 import CommitDialog from '@cdo/apps/javalab/CommitDialog';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
-import javalab, {
-  setAllSourcesAndFileMetadata
-} from '@cdo/apps/javalab/javalabRedux';
+import javalabEditor, {
+  setAllSourcesAndFileMetadata,
+} from '@cdo/apps/javalab/redux/editorRedux';
+import javalab from '@cdo/apps/javalab/redux/javalabRedux';
+import javalabView from '@cdo/apps/javalab/redux/viewRedux';
+import {JavalabEditorDialog} from '@cdo/apps/javalab/types';
 
 describe('JavalabEditorDialogManager', () => {
   let defaultProps;
@@ -44,7 +46,7 @@ describe('JavalabEditorDialogManager', () => {
       editorOpenDialogName: null,
       closeEditorDialog: () => {},
       commitDialogFileNames: [],
-      displayTheme: DisplayTheme.DARK
+      displayTheme: DisplayTheme.DARK,
     };
   });
 
@@ -61,7 +63,7 @@ describe('JavalabEditorDialogManager', () => {
 
       const wrapper = createWrapper({
         filenameToDelete,
-        editorOpenDialogName: JavalabEditorDialog.DELETE_FILE
+        editorOpenDialogName: JavalabEditorDialog.DELETE_FILE,
       });
 
       const deleteFileDialog = wrapper.find(JavalabDialog).first();
@@ -74,7 +76,7 @@ describe('JavalabEditorDialogManager', () => {
       );
       expect(deleteProps.message).to.be.equal(
         javalabMsg.deleteFileConfirmation({
-          filename: filenameToDelete
+          filename: filenameToDelete,
         })
       );
       expect(deleteProps.confirmButtonText).to.be.equal(javalabMsg.delete());
@@ -95,7 +97,7 @@ describe('JavalabEditorDialogManager', () => {
         clearRenameFileError,
         filenameToRename,
         renameFileError,
-        editorOpenDialogName: JavalabEditorDialog.RENAME_FILE
+        editorOpenDialogName: JavalabEditorDialog.RENAME_FILE,
       });
 
       const renameFileDialog = wrapper.find(NameFileDialog).first();
@@ -127,7 +129,7 @@ describe('JavalabEditorDialogManager', () => {
         closeEditorDialog,
         clearNewFileError,
         newFileError,
-        editorOpenDialogName: JavalabEditorDialog.CREATE_FILE
+        editorOpenDialogName: JavalabEditorDialog.CREATE_FILE,
       });
 
       const createFileDialog = wrapper.find(NameFileDialog).at(1);
@@ -152,7 +154,7 @@ describe('JavalabEditorDialogManager', () => {
   describe('Commit Dialog', () => {
     beforeEach(() => {
       stubRedux();
-      registerReducers({javalab});
+      registerReducers({javalab, javalabEditor, javalabView});
     });
 
     afterEach(() => {
@@ -163,7 +165,7 @@ describe('JavalabEditorDialogManager', () => {
       const commitDialogFileNames = ['file1', 'file2'];
       const wrapper = createWrapper({
         commitDialogFileNames,
-        editorOpenDialogName: JavalabEditorDialog.COMMIT_FILES
+        editorOpenDialogName: JavalabEditorDialog.COMMIT_FILES,
       });
 
       const commitDialog = wrapper.find(CommitDialog).first();
@@ -183,7 +185,7 @@ describe('JavalabEditorDialogManager', () => {
         setAllSourcesAndFileMetadata({
           'visible.java': {text: '', isVisible: true, isValidation: false},
           'invisible.java': {text: '', isVisible: false, isValidation: false},
-          'validation.java': {text: '', isVisible: true, isValidation: true}
+          'validation.java': {text: '', isVisible: true, isValidation: true},
         })
       );
 
@@ -201,7 +203,7 @@ describe('JavalabEditorDialogManager', () => {
   describe('Version History Dialog', () => {
     it('Displays Version History Dialog if selected', () => {
       const wrapper = createWrapper({
-        editorOpenDialogName: JavalabEditorDialog.VERSION_HISTORY
+        editorOpenDialogName: JavalabEditorDialog.VERSION_HISTORY,
       });
 
       const versionHistoryDialog = wrapper

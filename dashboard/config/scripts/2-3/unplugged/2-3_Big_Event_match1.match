@@ -16,3 +16,5 @@ answer '/script_assets/k_1_images/unplugged_images/big_event_1_a3.png'
 
 question '/script_assets/k_1_images/unplugged_images/big_event_1_q4.png'
 answer '/script_assets/k_1_images/unplugged_images/big_event_1_a4.png'
+
+allow_multiple_attempts true

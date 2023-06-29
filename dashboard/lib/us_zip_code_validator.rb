@@ -4,7 +4,7 @@ require 'cdo/regexp'
 class UsZipCodeValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
     unless RegexpUtils.us_zip_code? value.to_s
-      record.errors[attribute] << (options[:message] || 'is invalid')
+      record.errors.add(attribute, options[:message] || 'is invalid')
     end
   end
 end

@@ -20,7 +20,7 @@ const DEFAULT_PROPS = {
   onSaved: () => {},
   accountRequiredForAttendance: false,
   enrollmentCount: 25,
-  scholarshipWorkshop: false
+  scholarshipWorkshop: false,
 };
 const FAKE_API_RESPONSE = {
   session: {
@@ -29,7 +29,7 @@ const FAKE_API_RESPONSE = {
     end: '2017-10-07T17:00:00.000Z',
     code: null,
     'show_link?': false,
-    attendance_count: 17
+    attendance_count: 17,
   },
   attendance: [
     {
@@ -41,7 +41,7 @@ const FAKE_API_RESPONSE = {
       verified_teacher_account: true,
       attended: true,
       cdo_scholarship: true,
-      other_scholarship: false
+      other_scholarship: false,
     },
     {
       first_name: 'Adele',
@@ -52,7 +52,7 @@ const FAKE_API_RESPONSE = {
       verified_teacher_account: true,
       attended: true,
       cdo_scholarship: false,
-      other_scholarship: true
+      other_scholarship: true,
     },
     {
       first_name: 'Grace',
@@ -63,9 +63,9 @@ const FAKE_API_RESPONSE = {
       verified_teacher_account: true,
       attended: true,
       cdo_scholarship: false,
-      other_scholarship: false
-    }
-  ]
+      other_scholarship: false,
+    },
+  ],
 };
 
 describe('SessionAttendance', () => {
@@ -79,7 +79,7 @@ describe('SessionAttendance', () => {
       [
         200,
         {'Content-Type': 'application/json'},
-        JSON.stringify(FAKE_API_RESPONSE)
+        JSON.stringify(FAKE_API_RESPONSE),
       ]
     );
   });

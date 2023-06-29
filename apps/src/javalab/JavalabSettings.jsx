@@ -12,8 +12,9 @@ import {DisplayTheme} from './DisplayTheme';
 import {
   decreaseEditorFontSize,
   increaseEditorFontSize,
-  setDisplayTheme
-} from './javalabRedux';
+  setDisplayTheme,
+} from './redux/viewRedux';
+import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 
 /**
  * Displays the settings options for JavaLab.
@@ -27,11 +28,11 @@ export class UnconnectedJavalabSettings extends Component {
     decreaseEditorFontSize: PropTypes.func.isRequired,
     canIncreaseFontSize: PropTypes.bool.isRequired,
     canDecreaseFontSize: PropTypes.bool.isRequired,
-    editorFontSize: PropTypes.number.isRequired
+    editorFontSize: PropTypes.number.isRequired,
   };
 
   state = {
-    dropdownOpen: false
+    dropdownOpen: false,
   };
 
   expandDropdown = () => {
@@ -95,7 +96,7 @@ export class UnconnectedJavalabSettings extends Component {
       decreaseEditorFontSize,
       canIncreaseFontSize,
       canDecreaseFontSize,
-      editorFontSize
+      editorFontSize,
     } = this.props;
 
     return (
@@ -130,8 +131,8 @@ export class UnconnectedJavalabSettings extends Component {
   renderDropdown = () => {
     return (
       <div className={classNames(style.settingsDropdown)}>
-        {this.renderSwitchThemeButton()}
         {this.renderFontSizeSelector()}
+        {this.renderSwitchThemeButton()}
       </div>
     );
   };
@@ -140,8 +141,10 @@ export class UnconnectedJavalabSettings extends Component {
     const {dropdownOpen} = this.state;
 
     return (
-      <div className={style.main}>
-        {dropdownOpen && this.renderDropdown()}
+      <CloseOnEscape
+        className={style.main}
+        handleClose={this.handleClickOutside}
+      >
         <JavalabButton
           icon={<FontAwesome icon="cog" />}
           text={msg.settings()}
@@ -152,21 +155,22 @@ export class UnconnectedJavalabSettings extends Component {
           onClick={this.toggleDropdown}
           isHorizontal
         />
-      </div>
+        {dropdownOpen && this.renderDropdown()}
+      </CloseOnEscape>
     );
   }
 }
 
 export default connect(
   state => ({
-    displayTheme: state.javalab.displayTheme,
-    canIncreaseFontSize: state.javalab.canIncreaseFontSize,
-    canDecreaseFontSize: state.javalab.canDecreaseFontSize,
-    editorFontSize: state.javalab.editorFontSize
+    displayTheme: state.javalabView.displayTheme,
+    canIncreaseFontSize: state.javalabView.canIncreaseFontSize,
+    canDecreaseFontSize: state.javalabView.canDecreaseFontSize,
+    editorFontSize: state.javalabView.editorFontSize,
   }),
   dispatch => ({
     setDisplayTheme: displayTheme => dispatch(setDisplayTheme(displayTheme)),
     increaseEditorFontSize: () => dispatch(increaseEditorFontSize()),
-    decreaseEditorFontSize: () => dispatch(decreaseEditorFontSize())
+    decreaseEditorFontSize: () => dispatch(decreaseEditorFontSize()),
   })
 )(onClickOutside(UnconnectedJavalabSettings));

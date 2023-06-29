@@ -8,20 +8,18 @@ title: Guida pratica all'Ora del Codice
 
 ### Unisciti al movimento e presenta ai tuoi alunni l'informatica con questi passaggi.
 
-Il pensiero computazionale aiuta a coltivare capacità di risoluzione dei problemi, logica e creatività. La tecnologia sta trasformando tutti i settore del pianeta. Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla. Iniziando presto, avranno le basi per il successo in qualsiasi percorso di carriera del 21° secolo.
+Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla.
 
-Provare un'Ora di Codice è un modo semplice e divertente per presentare l'informatica agli studenti, forse per la prima volta e si adatta perfettamente sia in classe che nel doposcuola. Se hai ancora domande, dai un'occhiata alla nostra [guida alla partecipazione]({{ localized_files/participation_guide }}).
+Provare un'Ora di Codice è un modo semplice e divertente per presentare l'informatica agli studenti, forse per la prima volta! Trova un'attività che sia ideale per il tuo contesto, che si svolga durante la lezione o dopo la scuola, virtualmente o di persona. Dai un'occhiata alla nostra [guida per la partecipazione, se hai altre domande]({{ localized_files/participation_guide }}) dopo aver verificato i passaggi elencati di seguito:
 
 - [Guarda il video illustrativo dell'Ora del Codice](#how-to-video)
 - [Esplora attività e esercitazioni](#explore-activities)
 - [Crea il tuo piano di lavoro giornaliero.](#create-your-plan)
 - [Promuovi la tua Ora del Codice](#promote-your-hour)
-- [Inizia vigorosamente la tua Ora del Codice](#how-to-start)
+- [Come iniziare alla grande la tua Ora del Codice](#how-to-start)
 - [Inizia a programmare](#code)
 - [Celebra i successi dei tuoi alunni](#celebrate)
 - [Altre risorse dell'Ora del Codice per gli insegnanti:](#other-resources)
-
-### Un'Ora del Codice può anche essere ospitata a distanza! Per iniziare, dai un'occhiata ai nostri [suggerimenti per ospitare un evento virtuale dell'Ora del Codice](https://hourofcode.com/us/how-to/virtual). 
 
 * * *
 
@@ -39,7 +37,7 @@ Ti forniamo un'ampia varietà di divertenti [esercitazioni guidate]({{ urls/lear
 
 Esplora le attività e decidi prima se scegliere uno specifico tutorial da assegnare a tutti i tuoi studenti o se lasciarli liberi di scegliere ognuno il proprio.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -58,7 +56,7 @@ Esplora le attività e decidi prima se scegliere uno specifico tutorial da asseg
 
 ### Scegli un giorno ed un'ora.
 
-Le persone di tutto il mondo partecipano alla celebrazione dell'Ora del Codice durante la Settimana dell'Educazione Tecnologica (dal 9 al 13 dicembre), quando i video e le attività più recenti vengono messi online. Puoi comunque far svolgere ai tuoi alunni un'Ora del Codice in qualsiasi giorno dell'anno!
+Le persone di tutto il mondo partecipano alla celebrazione dell'Ora del Codice durante la Settimana dell'Educazione Tecnologica (dal 5 all'11 dicembre), quando i video e le attività più recenti vengono messi online. Puoi comunque far svolgere ai tuoi alunni un'Ora del Codice in qualsiasi giorno dell'anno!
 
 * * *
 
@@ -74,11 +72,11 @@ Parla dell'Ora del Codice anche con gli altri docenti, che forse vorranno unirsi
 
 ### Registra il tuo evento così che i volontari ne vengano a conoscenza
 
-Registrando la tua "Ora del Codice", riceverai comunicazioni utilissime tramite email contenenti notizie e suggerimenti per programmare con successo questa attività. Tramite la registrazione, permetterai ai volontari della tua zona di venire a sapere che la tua scuola partecipa all'iniziativa. I volontari sono una grande risorsa: possono venire a parlare di computer alla tua classe o possono aiutare i tuoi studenti durante le attività dell'Ora del Codice.
+Registrando [la tua "Ora del Codice"](/#join), riceverai comunicazioni utilissime tramite email contenenti notizie e suggerimenti per programmare con successo questa attività. Tramite la registrazione, permetterai ai volontari della tua zona di venire a sapere che la tua scuola partecipa all'iniziativa. I volontari sono una grande risorsa: possono venire a parlare di computer alla tua classe o possono aiutare i tuoi studenti durante le attività dell'Ora del Codice.
 
 ### Emoziona e coinvolgi i tuoi studenti
 
-Prepara l'evento condividendo [i video ispiratori](/promote/resources) che mettono in risalto persone diverse e modi creativi in cui l'informatica può essere utilizzata. Oppure ordina poster stimolanti per la tua classe! Gli studenti partecipano con più entusiasmo a un argomento quando vedono persone che li incoraggiano.
+Prepara l'evento condividendo [i video ispiratori](/promote/resources) che mettono in risalto persone diverse e modi creativi in cui l'informatica può essere utilizzata. Oppure stampa poster stimolanti per la tua classe! Gli studenti partecipano con più entusiasmo a un argomento quando vedono persone che li incoraggiano.
 
 {{ promote_new_posters }}
 
@@ -88,7 +86,7 @@ Scopri di più su poster, video, adesivi e altri modi per [promuovere il tuo eve
 
 <a id="how-to-start"></a>
 
-## 5. Come iniziare vigorosamente la tua Ora del Codice
+## 5. Come iniziare alla grande la tua Ora del Codice
 
 Quando arrivi alla celebrazione della tua Ora del Codice, assicurati di iniziare il tuo evento con alcuni di questi strumenti e suggerimenti.
 
@@ -113,7 +111,7 @@ Non preoccuparti se sia tu che i tuoi studenti siete digiuni di informatica. Qui
 
 Guida gli studenti nell'attività
 
-- Scrivi il link dell'esercitazione sulla lavagna. Trova il collegamento elencato nelle[informazioni per il tutorial selezionato]({{ urls/learn }}) sotto il numero di partecipanti.
+- Scrivi il link dell'esercitazione sulla lavagna. Trova il collegamento elencato nelle [informazioni dell'attività selezionata]({{ urls/learn }}).
 
 Quando i partecipanti incontrano delle difficoltà, si può rispondere così:
 
@@ -140,7 +138,6 @@ Cosa fare se uno studente finisce prima?
 
 - [Stampa gli attestati]({{ urls/certificates }}) in inglese oppure <a href="https://www.programmailfuturo.it/come/attestati-personalizzati" target="_blank">la versione italiana di Programma il Futuro</a>.
 - Stampa gli adesivi ["Ho completato un'Ora del Codice!"]({{ urls/promote_stickers }}).
-- [Ordina T-shirt personalizzate](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) per i tuoi studenti (solo per gli USA).
 - Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #OradelCodice, #HourOfCode, @codeorg e @programmafuturo così anche noi possiamo condividere il tuo successo!
 
 * * *
@@ -154,6 +151,6 @@ Cosa fare se uno studente finisce prima?
 
 ### Cosa c'è dopo l'Ora del Codice?
 
-L'informatica non deve finire con l'Ora del Codice! Il nostro piano di studi è basato sul web e gratuito per sempre. [Scopri come](/beyond) per portare l'informatica nella tua scuola per i tuoi studenti.
+L'informatica non deve finire con l'Ora del Codice! [Scopri come](/beyond) portare l'informatica nella tua scuola per i tuoi studenti.
 
 {{ signup_button }}

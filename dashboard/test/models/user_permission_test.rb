@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserPermissionTest < ActiveSupport::TestCase
   test 'Log granting of levelbuilder permission to slack' do
-    levelbuilder = create :user
+    levelbuilder = create :teacher
     UserPermission.stubs(:should_log?).returns(true)
     ChatClient.
       expects(:message).
@@ -19,7 +19,7 @@ class UserPermissionTest < ActiveSupport::TestCase
   end
 
   test 'Does not log granting of authorized teacher permission to slack' do
-    authorized_teacher = create :user
+    authorized_teacher = create :teacher
     UserPermission.stubs(:should_log?).returns(true)
     ChatClient.expects(:message).never
 

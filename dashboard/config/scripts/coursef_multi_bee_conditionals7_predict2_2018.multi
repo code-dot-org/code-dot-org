@@ -7,3 +7,5 @@ wrong 'I don\'t know.', feedback: 'The `if at flower` block lets the bee get nec
 markdown <<MARKDOWN
 Sometimes a cloud covers a flower, sometimes it covers a honeycomb! Either way, there will only ever be **one** flower or **one** honeycomb under each cloud. 
 MARKDOWN
+
+allow_multiple_attempts false

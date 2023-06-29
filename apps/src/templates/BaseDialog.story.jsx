@@ -8,51 +8,40 @@ const EXAMPLE_DIALOG_BODY = (
   </div>
 );
 
-export default storybook => {
-  return storybook.storiesOf('Dialogs/BaseDialog', module).addStoryTable([
-    {
-      name: 'hiding the backdrop',
-      description: `This is useful for debugging/developing dialogs
-                        without having to constantly click to open it.`,
-      story: () => (
-        <BaseDialog hideBackdrop={true}>This is the dialog content!</BaseDialog>
-      )
-    },
-    {
-      name: 'click to open',
-      story: () => (
-        <ExampleDialogButton>
-          <BaseDialog>{EXAMPLE_DIALOG_BODY}</BaseDialog>
-        </ExampleDialogButton>
-      )
-    },
-    {
-      name: 'fullWidth',
-      story: () => (
-        <ExampleDialogButton>
-          <BaseDialog fullWidth>{EXAMPLE_DIALOG_BODY}</BaseDialog>
-        </ExampleDialogButton>
-      )
-    },
-    {
-      name: 'fixedWidth',
-      story: () => (
-        <ExampleDialogButton>
-          <BaseDialog useUpdatedStyles fixedWidth={300}>
-            {EXAMPLE_DIALOG_BODY}
-          </BaseDialog>
-        </ExampleDialogButton>
-      )
-    },
-    {
-      name: 'fixedHeight',
-      story: () => (
-        <ExampleDialogButton>
-          <BaseDialog useUpdatedStyles fixedHeight={400}>
-            {EXAMPLE_DIALOG_BODY}
-          </BaseDialog>
-        </ExampleDialogButton>
-      )
-    }
-  ]);
+// There isn't a clear abstraction for a template, so each is built separately
+export default {
+  title: 'BaseDialog',
+  component: BaseDialog,
 };
+
+export const HidingTheBackdrop = () => (
+  <BaseDialog hideBackdrop={true}>This is the dialog content!</BaseDialog>
+);
+
+export const ClickToOpen = () => (
+  <ExampleDialogButton>
+    <BaseDialog>{EXAMPLE_DIALOG_BODY}</BaseDialog>
+  </ExampleDialogButton>
+);
+
+export const FullWidth = () => (
+  <ExampleDialogButton>
+    <BaseDialog fullWidth>{EXAMPLE_DIALOG_BODY}</BaseDialog>
+  </ExampleDialogButton>
+);
+
+export const FixedWidth = () => (
+  <ExampleDialogButton>
+    <BaseDialog useUpdatedStyles fixedWidth={300}>
+      {EXAMPLE_DIALOG_BODY}
+    </BaseDialog>
+  </ExampleDialogButton>
+);
+
+export const FixedHeight = () => (
+  <ExampleDialogButton>
+    <BaseDialog useUpdatedStyles fixedHeight={400}>
+      {EXAMPLE_DIALOG_BODY}
+    </BaseDialog>
+  </ExampleDialogButton>
+);

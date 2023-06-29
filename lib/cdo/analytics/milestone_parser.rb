@@ -85,7 +85,7 @@ class MilestoneParser
     counts = logs.map do |log|
       (cache[log.key] = count_lines_of_code(log))['count']
     end
-    total = counts.reduce(:+)
+    total = counts.sum
     debug "Finished processing (#{(Time.now - start_time).round(2)}s), total count: #{total}"
     total
   end
@@ -140,9 +140,9 @@ class MilestoneParser
     FileUtils.rm path
     debug "Count: #{count}"
     response
-  rescue => e
-    debug "Error counting #{log.key}: #{e.message}"
-    {'count' => 0, 'error' => e.message}
+  rescue => exception
+    debug "Error counting #{log.key}: #{exception.message}"
+    {'count' => 0, 'error' => exception.message}
   end
 
   def stub_fetch(key, path, bytes)

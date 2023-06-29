@@ -5,7 +5,7 @@ import {UnconnectedSummaryProgressRow as SummaryProgressRow} from '@cdo/apps/tem
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   fakeLesson,
-  fakeLevels
+  fakeLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 
 const baseProps = {
@@ -15,7 +15,7 @@ const baseProps = {
   lessonIsHiddenForStudents: false,
   lessonIsLockedForUser: () => false,
   lessonIsLockedForAllStudents: () => false,
-  viewAs: ViewType.Instructor
+  viewAs: ViewType.Instructor,
 };
 
 const setUp = (overrideProps = {}) => {
@@ -34,7 +34,7 @@ describe('SummaryProgressRow', () => {
     it('will not render if the lesson is hidden for students', () => {
       const wrapper = setUp({
         viewAs: ViewType.Participant,
-        lessonIsHiddenForStudents: true
+        lessonIsHiddenForStudents: true,
       });
       assert.equal(wrapper.isEmptyRender(), true);
     });
@@ -43,31 +43,19 @@ describe('SummaryProgressRow', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
         viewAs: ViewType.Participant,
-        lessonIsLockedForUser: () => true
+        lessonIsLockedForUser: () => true,
       });
 
       assert.equal(wrapper.props().style.borderStyle, 'dashed');
-      assert.equal(
-        wrapper
-          .find('td')
-          .at(0)
-          .props().style.opacity,
-        0.6
-      );
-      assert.equal(
-        wrapper
-          .find('td')
-          .at(1)
-          .props().style.opacity,
-        0.6
-      );
+      assert.equal(wrapper.find('td').at(0).props().style.opacity, 0.6);
+      assert.equal(wrapper.find('td').at(1).props().style.opacity, 0.6);
     });
 
     it('disables bubbles when locked', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
         viewAs: ViewType.Participant,
-        lessonIsLockedForUser: () => true
+        lessonIsLockedForUser: () => true,
       });
 
       assert.strictEqual(
@@ -80,16 +68,10 @@ describe('SummaryProgressRow', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
         viewAs: ViewType.Participant,
-        lessonIsLockedForUser: () => true
+        lessonIsLockedForUser: () => true,
       });
 
-      assert.equal(
-        wrapper
-          .find('FontAwesome')
-          .at(0)
-          .props().icon,
-        'lock'
-      );
+      assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'lock');
     });
   });
 
@@ -98,7 +80,7 @@ describe('SummaryProgressRow', () => {
       const wrapper = setUp({
         lessonIsHiddenForStudents: true,
         lessonIsLockedForUser: () => false,
-        lessonIsLockedForAllStudents: () => false
+        lessonIsLockedForAllStudents: () => false,
       });
 
       assert.equal(wrapper.props().style.borderStyle, 'dashed');
@@ -108,31 +90,19 @@ describe('SummaryProgressRow', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
         lessonIsLockedForUser: () => false,
-        lessonIsLockedForAllStudents: () => true
+        lessonIsLockedForAllStudents: () => true,
       });
 
       assert.equal(wrapper.props().style.borderStyle, 'dashed');
-      assert.equal(
-        wrapper
-          .find('td')
-          .at(0)
-          .props().style.opacity,
-        undefined
-      );
-      assert.equal(
-        wrapper
-          .find('td')
-          .at(1)
-          .props().style.opacity,
-        undefined
-      );
+      assert.equal(wrapper.find('td').at(0).props().style.opacity, undefined);
+      assert.equal(wrapper.find('td').at(1).props().style.opacity, undefined);
     });
 
     it('does not disable bubbles when lockable lesson and unlocked for instructor', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
         lessonIsLockedForUser: () => false,
-        lessonIsLockedForAllStudents: () => true
+        lessonIsLockedForAllStudents: () => true,
       });
 
       assert.strictEqual(
@@ -145,7 +115,7 @@ describe('SummaryProgressRow', () => {
     it('disables bubbles when locked for instructor', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
-        lessonIsLockedForUser: () => true
+        lessonIsLockedForUser: () => true,
       });
 
       assert.strictEqual(
@@ -157,44 +127,29 @@ describe('SummaryProgressRow', () => {
     it('has a lock icon when lockable and locked for user', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
-        lessonIsLockedForUser: () => true
+        lessonIsLockedForUser: () => true,
       });
 
-      assert.equal(
-        wrapper
-          .find('FontAwesome')
-          .at(0)
-          .props().icon,
-        'lock'
-      );
+      assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'lock');
     });
 
     it('has a lock icon when lockable and locked for section', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
         lessonIsLockedForUser: () => true,
-        lessonIsLockedForAllStudents: () => true
+        lessonIsLockedForAllStudents: () => true,
       });
 
-      assert.equal(
-        wrapper
-          .find('FontAwesome')
-          .at(0)
-          .props().icon,
-        'lock'
-      );
+      assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'lock');
     });
 
     it('has an eye slash icon when hidden for participants', () => {
       const wrapper = setUp({
-        lessonIsHiddenForStudents: true
+        lessonIsHiddenForStudents: true,
       });
 
       assert.equal(
-        wrapper
-          .find('FontAwesome')
-          .first()
-          .props().icon,
+        wrapper.find('FontAwesome').first().props().icon,
         'eye-slash'
       );
     });
@@ -203,16 +158,10 @@ describe('SummaryProgressRow', () => {
       const wrapper = setUp({
         lessonIsLockedForUser: () => false,
         lessonIsLockedForAllStudents: () => false,
-        lesson: fakeLesson('Maze', 1, true)
+        lesson: fakeLesson('Maze', 1, true),
       });
 
-      assert.equal(
-        wrapper
-          .find('FontAwesome')
-          .at(0)
-          .props().icon,
-        'unlock'
-      );
+      assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'unlock');
     });
   });
 });

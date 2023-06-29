@@ -1,4 +1,4 @@
-require_relative '../deployment.rb'
+require_relative '../deployment'
 require 'cdo/erb'
 
 def i18n_dir(*paths)

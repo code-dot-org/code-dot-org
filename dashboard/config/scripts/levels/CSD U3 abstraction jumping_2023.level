@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-09-19T23:02:24.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -81,6 +77,7 @@
     "parent_level_id": 20836,
     "name_suffix": "_2023",
     "reference_links": [
+      "/courses/csd-2022/guides/problem-solving-process-programming",
       "/courses/csd-2022/guides/velocity-and-the-counter-pattern",
       "/courses/csd-2022/guides/velocity",
       "/courses/csd-2022/guides/the-draw-loop",
@@ -95,9 +92,13 @@
     "validation_enabled": "true",
     "preload_asset_list": null
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-09-19T23:02:24.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:02:24.028+00:00\",\"changed\":[\"cloned from \\\"CSD U3 abstraction jumping_2022\\\"\"],\"cloned_from\":\"CSD U3 abstraction jumping_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:02:24.028+00:00\",\"changed\":[\"cloned from \\\"CSD U3 abstraction jumping_2022\\\"\"],\"cloned_from\":\"CSD U3 abstraction jumping_2022\"},{\"changed_at\":\"2023-03-09 17:50:52 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

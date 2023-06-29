@@ -14,7 +14,7 @@ describe('SearchBox', () => {
       onSearchSelect: () => {},
       additionalQueryParams: {extraParam1: 1, extraParam2: 2},
       searchUrl: 'fakesearch',
-      constructOptions
+      constructOptions,
     };
   });
 

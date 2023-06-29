@@ -12,3 +12,5 @@ answer:
 
 - B. A message sent across the Internet can always be contained in a single packet.
 MARKDOWN
+
+allow_multiple_attempts true

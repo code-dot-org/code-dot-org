@@ -92,13 +92,16 @@
           "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd"
+          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd",
+          "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd"
+          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd",
+          "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd"
+          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd",
+          "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër"
         },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
@@ -147,7 +150,8 @@
           "snowflake_dropdown": "Përdor këtë listë për të krijuar flokë të ndryshme dëbore!"
         },
         "frozen line": {
-          "move_elsa_forward": "Lëviz një bllok \"Move Forward\" dhe vendose poshtë bllokut \"When Run\" për ta bërë Elsën të ecë përpara"
+          "move_elsa_forward": "Lëviz një bllok \"Move Forward\" dhe vendose poshtë bllokut \"When Run\" për ta bërë Elsën të ecë përpara",
+          "run": "Shtyp \"Run\" për të provuar programin tënd!"
         },
         "frozen perpendicular": {
           "turn_elsa": "Përdor bllokun \"turn\" për ta bërë Elsën të kthehet. Numri në listën drop down përcakton sa herë kthehet Elsa"
@@ -174,7 +178,8 @@
           "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd"
+          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd",
+          "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër"
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
@@ -192,7 +197,8 @@
           "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
         },
         "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd"
+          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd",
+          "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër"
         },
         "Overworld Place Wall2022": {
           "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
@@ -202,6 +208,477 @@
         },
         "Underground Iron2022": {
           "craft_what_is_iron": "Hidhe në erë këtë hekur!"
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "A u be ekrani ne ngjyre te gjelber? Nese po, shtypni 'Finish'. Nese jo, shtypni 'Reset', ndryshoni kodin, dhe shtypni 'Run' perseri."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Ju jeni tani në Modalitetin e Dizajnit."
+        },
+        "CourseD_Dance_2020_01": {
+          "dance_callout_01": "Zgjidhni llojin e vallezuesit këtu."
+        },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Zgjidhni llojin e vallezuesit këtu."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Zgjidhni llojin e vallezuesit këtu."
+        },
+        "CourseD_Dance_2020_02": {
+          "dance_callout_11_a": "Shtoni këtë bllok në programin tuaj.",
+          "arrow_buttons": "Shtypni butonat shigjetë për të kontrolluar vallezuesin tuaj."
+        },
+        "CourseD_Dance_2020_022022": {
+          "dance_callout_11_a": "Shtoni këtë bllok në programin tuaj.",
+          "arrow_buttons": "Shtypni butonat shigjetë për të kontrolluar vallezuesin tuaj."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Shtoni këtë bllok në programin tuaj.",
+          "arrow_buttons": "Shtypni butonat shigjetë për të kontrolluar vallezuesin tuaj."
+        },
+        "CourseD_Dance_2020_04": {
+          "dance_callout_02": "Shtoni këtë bllok në programin tuaj!"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Shtoni këtë bllok në programin tuaj!"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Shtoni këtë bllok në programin tuaj!"
+        },
+        "CourseD_Dance_2020_05": {
+          "dance_callout_05": "Shto një ngjarje të re në programin tuaj."
+        },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Shto një ngjarje të re në programin tuaj."
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Shto një ngjarje të re në programin tuaj."
+        },
+        "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Bllok i Ri!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Bllok i Ri!"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Bllok i Ri!"
+        },
+        "CourseD_Dance_2020_07": {
+          "setprop_hint": "Bllok i Ri!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Bllok i Ri!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Bllok i Ri!"
+        },
+        "CourseD_Dance_2020_09": {
+          "new_block_3": "Bllok i Ri!",
+          "new_block_4": "Bllok i Ri!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Bllok i Ri!",
+          "new_block_4": "Bllok i Ri!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Bllok i Ri!",
+          "new_block_4": "Bllok i Ri!"
+        },
+        "CourseD_Dance_Party_01": {
+          "dance_callout_01": "Shtoni këtë bllok në programin tuaj!"
+        },
+        "CourseD_Dance_Party_02": {
+          "dance_callout_02": "Shtoni këtë bllok në programin tuaj!"
+        },
+        "CourseD_Dance_Party_04": {
+          "dance_callout_04": "Shtoni këtë bllok në programin tuaj!"
+        },
+        "CourseD_Dance_Party_06": {
+          "dance_callout_06": "Shtoni vallezuesin tuaj te ri ketu."
+        },
+        "CourseD_Dance_Party_11": {
+          "dance_callout_11_a": "Bllok i Ri!",
+          "dance_callout_11_b": "Bllok i Ri!"
+        },
+        "CourseD_Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Shikoni këtu për blloqet “të gjitha rosat”"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Kliko këtu për të shtuar kostume në projektin tuaj."
+        },
+        "Dance_2019_01": {
+          "dance_callout_01": "Zgjidhni llojin e vallezuesit këtu."
+        },
+        "Dance_2019_02": {
+          "dance_callout_11_a": "Shtoni këtë bllok në programin tuaj.",
+          "arrow_buttons": "Shtypni butonat shigjetë për të kontrolluar vallezuesin tuaj."
+        },
+        "Dance_2019_04": {
+          "dance_callout_02": "Shtoni këtë bllok në programin tuaj!"
+        },
+        "Dance_2019_05": {
+          "dance_callout_05": "Shto një ngjarje të re në programin tuaj."
+        },
+        "Dance_2019_06": {
+          "dance_party_11_5_groups": "Bllok i Ri!"
+        },
+        "Dance_2019_07": {
+          "setprop_hint": "Bllok i Ri!"
+        },
+        "Dance_2019_09": {
+          "new_block_3": "Bllok i Ri!",
+          "new_block_4": "Bllok i Ri!"
+        },
+        "Dance_Party_01": {
+          "dance_callout_01": "Shtoni këtë bllok në programin tuaj!"
+        },
+        "Dance_Party_02": {
+          "dance_callout_02": "Shtoni këtë bllok në programin tuaj!"
+        },
+        "Dance_Party_04": {
+          "dance_callout_04": "Shtoni këtë bllok në programin tuaj!"
+        },
+        "Dance_Party_06": {
+          "dance_callout_06": "Shtoni vallezuesin tuaj te ri ketu."
+        },
+        "Dance_Party_11": {
+          "dance_callout_11_a": "Bllok i Ri!",
+          "dance_callout_11_b": "Bllok i Ri!"
+        },
+        "Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Shikoni këtu për blloqet “të gjitha rosat”"
+        },
+        "Function intro Ryan": {
+          "Function_intro_Ryan_1": "Ky udhëzim i vogël i tregon kompjuterit për të drejtuar copën BIG të kodit me të njëjtin emër në hapësirën e punës."
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "Ky udhëzim i vogël i tregon kompjuterit për të drejtuar copën BIG të kodit me të njëjtin emër në hapësirën e punës."
+        },
+        "Function intro Ryan_2019": {
+          "Function_intro_Ryan_1": "Ky udhëzim i vogël i tregon kompjuterit për të drejtuar copën BIG të kodit me të njëjtin emër në hapësirën e punës."
+        },
+        "Function intro Ryan_2020": {
+          "Function_intro_Ryan_1": "Ky udhëzim i vogël i tregon kompjuterit për të drejtuar copën BIG të kodit me të njëjtin emër në hapësirën e punës."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Ky udhëzim i vogël i tregon kompjuterit për të drejtuar copën BIG të kodit me të njëjtin emër në hapësirën e punës."
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "Kur të jeni gati, goditni “Run” për të provuar programin tuaj."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "Hit “Run” për të filluar lëvizjen."
+        },
+        "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_1": "Kjo është një lak `përsëritur`! Klikoni atë në hapësirën e punës dhe shtoni kodin që dëshironi të kaloni pa pushim."
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "Kjo është një lak `përsëritur`! Klikoni atë në hapësirën e punës dhe shtoni kodin që dëshironi të kaloni pa pushim."
+        },
+        "MC_HOC_2017_03_Cole_2019": {
+          "MC_HOC_2017_03_Cole_1": "Kjo është një lak `përsëritur`! Klikoni atë në hapësirën e punës dhe shtoni kodin që dëshironi të kaloni pa pushim."
+        },
+        "MC_HOC_2017_03_Cole_2020": {
+          "MC_HOC_2017_03_Cole_1": "Kjo është një lak `përsëritur`! Klikoni atë në hapësirën e punës dhe shtoni kodin që dëshironi të kaloni pa pushim."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Kjo është një lak `përsëritur`! Klikoni atë në hapësirën e punës dhe shtoni kodin që dëshironi të kaloni pa pushim."
+        },
+        "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!"
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!"
+        },
+        "MC_HOC_2017_04_Cole_2019": {
+          "MC_HOC_2017_04_Cole_a": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!"
+        },
+        "MC_HOC_2017_04_Cole_2020": {
+          "MC_HOC_2017_04_Cole_a": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!"
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!"
+        },
+        "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "Ju nuk mund të hedhni këto blloqe larg, por ju mund të editoni ato!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "Ju nuk mund të hedhni këto blloqe larg, por ju mund të editoni ato!"
+        },
+        "MC_HOC_2017_06_Cole_2019": {
+          "MC_HOC_2017_06_Cole_1": "Ju nuk mund të hedhni këto blloqe larg, por ju mund të editoni ato!"
+        },
+        "MC_HOC_2017_06_Cole_2020": {
+          "MC_HOC_2017_06_Cole_1": "Ju nuk mund të hedhni këto blloqe larg, por ju mund të editoni ato!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Ju nuk mund të hedhni këto blloqe larg, por ju mund të editoni ato!"
+        },
+        "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_1": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!  "
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!  "
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "MC_HOC_2017_08_RY_1": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!  "
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_1": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!  "
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!  "
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Kliko këtu për të shtuar kostume në projektin tuaj."
+        },
+        "courseE_aboutme_22022": {
+          "": "Kliko këtu për të shtuar kostume në projektin tuaj."
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "Shtoni kete event bllok ne vendin tuaj te punes. "
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "Kliko këtu për të shtuar kostume në projektin tuaj."
+        },
+        "coursee_helloworld_say": {
+          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. ",
+          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. "
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Përdoreni këtë bllok për të vendosur një sfond të ri."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Perdor kete bllok me nje nga sjelljet me poshte: "
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Kliko ketu per te ekzekutuar kodin. "
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Bllok i Ri!"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Shtoni kete event bllok ne vendin tuaj te punes. "
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Kliko këtu për të shtuar kostume në projektin tuaj."
+        },
+        "helloworld_animals_location": {
+          "pin": "Pin"
+        },
+        "helloworld_animals_multi": {
+          "pin": "Pin"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Përdoreni këtë bllok për të bërë sprites te flasin.",
+          "hello_world_make_sprite": "Përdoreni këtë bllok për të krijuar një sprite."
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Bllok i Ri!",
+          "hello_world_new_block": "Bllok i Ri!!!!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Bllok i Ri!"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Përdoreni këtë bllok për të vendosur një sfond të ri."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Perdor kete bllok me nje nga sjelljet me poshte: "
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Kliko ketu per te ekzekutuar kodin. "
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Bllok i Ri!"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Shtoni kete event bllok ne vendin tuaj te punes. "
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Kliko këtu për të shtuar kostume në projektin tuaj."
+        },
+        "helloworld_emoji_location": {
+          "pin": "Pin"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "Pin"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. ",
+          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. "
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Bllok i Ri!",
+          "hello_world_new_block": "Bllok i Ri!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Bllok i Ri!"
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Përdoreni këtë bllok për të vendosur një sfond të ri."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Përdoreni këtë bllok për të vendosur një sfond të ri."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Përdoreni këtë bllok për të vendosur një sfond të ri."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Perdor kete bllok me nje nga sjelljet me poshte: "
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Perdor kete bllok me nje nga sjelljet me poshte: "
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Perdor kete bllok me nje nga sjelljet me poshte: "
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Kliko ketu per te ekzekutuar kodin. "
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Kliko ketu per te ekzekutuar kodin. "
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Kliko këtu së pari!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Bllok i Ri!"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Bllok i Ri!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Bllok i Ri!"
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Shtoni kete event bllok ne vendin tuaj te punes. "
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Shtoni kete event bllok ne vendin tuaj te punes. "
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Shtoni kete event bllok ne vendin tuaj te punes. "
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Kliko këtu për të shtuar kostume në projektin tuaj."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Kliko këtu për të shtuar kostume në projektin tuaj."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Kliko këtu për të shtuar kostume në projektin tuaj."
+        },
+        "helloworld_food_location": {
+          "pin": "Pin"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "Pin"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "Pin"
+        },
+        "helloworld_food_multi": {
+          "pin": "Pin"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "Pin"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "Pin"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. ",
+          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. "
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. ",
+          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. "
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. ",
+          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. "
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Bllok i Ri!",
+          "hello_world_new_block": "Bllok i Ri!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Bllok i Ri!",
+          "hello_world_new_block": "Bllok i Ri!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Bllok i Ri!",
+          "hello_world_new_block": "Bllok i Ri!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Bllok i Ri!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Bllok i Ri!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Bllok i Ri!"
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Përdoreni këtë bllok për të vendosur një sfond të ri."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Perdor kete bllok me nje nga sjelljet me poshte: "
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Kliko ketu per te ekzekutuar kodin. "
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Bllok i Ri!"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Shtoni kete event bllok ne vendin tuaj te punes. "
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Kliko këtu për të shtuar kostume në projektin tuaj."
+        },
+        "helloworld_retro_location": {
+          "pin": "Pin"
+        },
+        "helloworld_retro_multi": {
+          "pin": "Pin"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. ",
+          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. "
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Bllok i Ri!",
+          "hello_world_new_block": "Bllok i Ri!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Bllok i Ri!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Bllok i Ri!"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "run_button": "Testoni animacionin tuaj me këtë buton. "
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Bllok i Ri!",
+          "poetry_foreground": "Bllok i Ri!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_new_block": "Bllok i Ri!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Bllok i Ri!",
+          "poetry_music": "Bllok i Ri!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Bllok i Ri!",
+          "poetry_sprite_stops": "Bllok i Ri!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Bllok i Ri!",
+          "poetry_remove_sprite": "Bllok i Ri!"
         }
       }
     }

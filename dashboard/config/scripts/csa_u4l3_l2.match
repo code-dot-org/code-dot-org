@@ -10,3 +10,4 @@ question 'evaluate'
 answer 'compute the simplified value'
 question 'concatenation'
 answer 'a combination of data and operators that evaluates to a single value'
+allow_multiple_attempts true

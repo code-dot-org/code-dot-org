@@ -55,3 +55,5 @@ It's important to not that swapping x to y and then y to x will not work.  It is
 <br>
 
 MARKDOWN
+
+allow_multiple_attempts true

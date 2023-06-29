@@ -1,3 +1,6 @@
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
+
 namespace :assets do
   def manifest
     app = Rails.application
@@ -6,12 +9,12 @@ namespace :assets do
   end
 
   # Record files already in manifest before current precompile run.
-  task record_manifest_files: :environment do
+  timed_task_with_logging record_manifest_files: :environment do
     @manifest_files = manifest.files
   end
 
   desc 'Synchronize newly-added assets to S3'
-  task sync: :record_manifest_files do
+  timed_task_with_logging sync: :record_manifest_files do
     m = manifest
 
     # Only compare digest to determine whether a path has changed.
@@ -44,7 +47,7 @@ Rerun `assets:precompile` to regenerate new assets and try again."
   end
 
   # Precompile application.js with js_compressor.
-  task precompile_application_js: :environment do
+  timed_task_with_logging precompile_application_js: :environment do
     Rails.application.config.assets.js_compressor = :uglifier
     manifest.compile('application.js')
   end

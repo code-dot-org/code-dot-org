@@ -6,18 +6,18 @@
   "content": "Creates a checkbox on the screen with the initial *checked* boolean value and referenced by the given *id* at default location (0,0).\n\n\nSome apps require the user to check a box if they agree with something, like an app privacy statement.",
   "examples": [
     {
-      "name": "Example: Checkbox Click Event",
-      "description": "Retrieve and display a checkbox value.",
-      "code": "```\n// Retrieve and display a checkbox value.\r\ncheckbox(\"agreeBox\", false);\r\ntextLabel(\"agreeLabel\",\"I agree to the above privacy statement.\",\"agreeBox\");\r\n\r\ntextLabel(\"response1\",\"Response: \");\r\ntextLabel(\"response2\",\"\");\r\nonEvent(\"agreeBox\", \"click\", function() {\r\n  setText(\"response2\",getChecked(\"agreeBox\"));\r\n});\n```",
+      "name": "Example: Privacy Statement",
+      "description": "",
+      "code": "```\n// Create a basic privacy statement checkbox.\r\ncheckbox(\"agreeBox\", false);\r\ntextLabel(\"agreeLabel\",\"I agree to the above privacy statement.\",\"agreeBox\");\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",
       "embed_app_with_code_height": 310
     },
     {
-      "name": "",
-      "description": "",
-      "code": "```\n// Create a basic privacy statement checkbox.\r\ncheckbox(\"agreeBox\", false);\r\ntextLabel(\"agreeLabel\",\"I agree to the above privacy statement.\",\"agreeBox\");\n```",
+      "name": "Example: Checkbox Click Event",
+      "description": "Retrieve and display a checkbox value.",
+      "code": "```\n// Retrieve and display a checkbox value.\ncheckbox(\"agreeBox\", false);\ntextLabel(\"agreeLabel\",\"I agree to the above privacy statement.\",\"agreeBox\");\n\ntextLabel(\"response1\",\"Response: \");\ntextLabel(\"response2\",\"\");\nonEvent(\"agreeBox\", \"click\", function() {\n  setText(\"response2\",getChecked(\"agreeBox\"));\n});\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",
@@ -37,6 +37,10 @@
       "required": true,
       "description": "Whether the checkbox is initially checked."
     }
+  ],
+  "parameters": [
+    "id",
+    "checked"
   ],
   "return_value": "No return value. Modifies screen only.",
   "short_description": "Creates a checkbox on the screen with the initial checked boolean value and referenced by the given id at default location (0,0).",

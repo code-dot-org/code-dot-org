@@ -47,11 +47,12 @@ class RegionalPartnersControllerTest < ActionController::TestCase
   test 'create regional partner creates regional partner' do
     sign_in @workshop_admin
     assert_creates RegionalPartner do
-      post :create, params: {regional_partner: {name: "Test Regional Partner"}}
+      post :create, params: {regional_partner: {name: "Test Regional Partner", is_active: true}}
     end
     regional_partner = RegionalPartner.last
     assert_redirected_to regional_partner
     assert_equal "Test Regional Partner", regional_partner.name
+    assert_equal true, regional_partner.is_active
   end
 
   test 'create regional partner with invalid fields does not create regional partner' do
@@ -61,12 +62,19 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     end
     assert_template :new
     assert_select '#error_explanation > ul > li', text: 'Phone number is invalid'
+    assert_select '#error_explanation > ul > li', text: 'Is active is required'
   end
 
   test 'update regional partner updates regional partner' do
     sign_in @workshop_admin
     patch :update, params: {id: @regional_partner.id, regional_partner: {name: 'Updated Name'}}
     assert_equal @regional_partner.reload.name, 'Updated Name'
+  end
+
+  test 'update regional partner active status updates regional partner' do
+    sign_in @workshop_admin
+    patch :update, params: {id: @regional_partner.id, regional_partner: {is_active: false}}
+    assert_equal @regional_partner.reload.is_active, false
   end
 
   # TODO: remove this test when workshop_organizer is deprecated

@@ -13,7 +13,7 @@ describe('ActivitiesEditor', () => {
       activities: sampleActivities,
       hasLessonPlan: true,
       allowMajorCurriculumChanges: true,
-      addActivity
+      addActivity,
     };
   });
 

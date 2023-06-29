@@ -78,9 +78,9 @@ Se crei un'attività o un tutorial progettato per studenti con bisogni speciali,
 
 L'obiettivo di un'Ora del Codice è quello di rendere accessibile ai principianti un primo assaggio di informatica o di programmazione. Il tono dovrebbe essere questo:
 
-- Chiunque può imparare l'informatica, indipendentemente da età, sesso, razza o capacità/disabilità. 
+- Chiunque può imparare l'informatica, indipendentemente da età, sesso, razza o capacità/disabilità.
 - L'informatica è connessa a un'ampia gamma di campi di interesse. Tutti dovrebbero impararla!
-- Incoraggia gli studenti a creare qualcosa di unico che possa essere condiviso con genitori/amici o online. 
+- Incoraggia gli studenti a creare qualcosa di unico che possa essere condiviso con genitori/amici o online.
 
 Le attività dovrebbero insegnare concetti di informatica tipo i cicli, le istruzioni condizionali, la crittografia o il funzionamento di Internet. Un'attività può anche insegnare come l'informatica si collega a occupazioni, eventi o storia del mondo reale. Ad esempio, insegnare la progettazione dell'esperienza utente per creare app significative per un pubblico o una causa. Sconsigliamo attività che si concentrano sulla sintassi della programmazione piuttosto che sui concetti. Ad esempio, elencheremo, ma non evidenzieremo, le attività che insegnano l'HTML. Allo stesso modo, scoraggiamo lezioni di programmazione a blocchi centrate sull'impostazione/modifica delle opzioni di configurazione piuttosto che sull'imparare a modellare un algoritmo o un processo.
 
@@ -122,7 +122,7 @@ Cosa ti serve:
 
 #### Altre cose di cui avrai bisogno per inviare i piani di lezione
 
-* Link al tuo piano della lezione. Può essere una pagina web, un collegamento a una casella personale, Google Drive o un servizio simile. 
+* Link al tuo piano della lezione. Può essere una pagina web, un collegamento a una casella personale, Google Drive o un servizio simile.
 * Di quale software e/o hardware il docente avrà bisogno per svolgere il tuo piano di lezione (Scratch? Robots? Nessuno?)
 
 #### Altre cose di cui avrai bisogno quando invii attività online
@@ -181,7 +181,7 @@ Se il comitato di revisione valuta l'attività a zero in termini di qualità del
 Inoltre, per essere elencate, tutte le attività devono:
 
 - Essere appropriato per un'aula di una scuola pubblica (niente armi, nessun contenuto esplicito/maturo, nessun contenuto religioso, ecc.)
-- Non richiedono l'iscrizione 
+- Non richiedono l'iscrizione
 - Non richiedono alcun pagamento (eccezione per le attività di robotica che possono richiedere l'acquisto di robot/kit) Per le attività autogestite per nuovi insegnanti e studenti, il comitato di revisione cercherà di vedere se:
 
 For self-directed activities for new teachers and students the review committee will be looking for whether:
@@ -212,7 +212,7 @@ Nota: queste sono le linee guida generali per fornire un commento. La revisione 
 
 - Su quali piattaforme e browser funziona meglio il tutorial?
 - Funziona sugli smartphone? Sui Tablet?
-- Si consiglia la programmazione in coppia? 
+- Si consiglia la programmazione in coppia?
 - Considerazioni per l'uso in una classe? Per esempio, se ci sono video, consiglia agli insegnanti di mostrare i video su uno schermo proiettato affinché l'intera classe possa vederli insieme
 
 Tutte le attività inviate per una revisione anticipata riceveranno un riscontro entro il 1 settembre. Forniremo anche un collegamento a un modulo che puoi utilizzare per spiegare modifiche specifiche apportate a un'attività in risposta ai commenti.
@@ -275,4 +275,4 @@ Questo ci consentirà di contare gli utenti che seguono il tuo tutorial sull'Ora
 
 [**Torna all'inizio**](#top)
 
-NOTA: questo non è importante per le app installabili (app iOS/Android o app installate sul desktop)<!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+NOTA: questo non è importante per le app installabili (app iOS/Android o app installate sul desktop)

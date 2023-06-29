@@ -47,7 +47,7 @@ export function clearTimeoutsBetweenTests() {
     return clearIntervalNative(id);
   };
 
-  afterEach(function() {
+  afterEach(function () {
     // Guard carefully here, because arrow functions can steal our test context
     // and prevent us from grabbing the test name.
     const testName = this && this.currentTest && this.currentTest.fullTitle();

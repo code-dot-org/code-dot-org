@@ -2,38 +2,38 @@
 title: భాగస్వాములు
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+అవర్ ఆఫ్ కోడ్ సమీక్షా కమిటీచే అవర్ ఆఫ్ కోడ్ నడపబడుతుంది
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+ఈ [సమీక్షా కమిటీ]({{ urls/review_committee }}), ఒక సలహా సంఘముచే నెలకొల్పబడిన నియమావళిని ఉపయోగించుకొని కార్యక్రమాలను అంచనా వేసి మరియు సిఫార్సు చేసే K-12 గ్రేడ్ బ్యాండ్స్ వ్యాప్తంగా 12 ప్రస్తుత మరియు మునుపటి విద్యావేత్తలను కలిగి ఉంటుంది. ఈ విద్యావేత్తలు, కార్యక్రమాల యొక్క విద్యా విలువను, అభ్యాసకులను నిమగ్నం చేసే సామర్థ్యము, మరియు విద్యార్థుల యొక్క వైవిధ్య కూర్పుకు సంభావ్య అప్పీలును మదింపు చేస్తూ, వందలాది యాక్టివిటీ భాగస్వాములచే సమర్పించబడిన విద్యార్థి-నాయకత్వ కార్యక్రమాలు మరియు టీచర్-ఆధారిత పాఠ్య ప్రణాళికలను సమీక్షిస్తారు.
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+కమిటీ యొక్క పని మరియు అంకిత భావము అవర్ ఆఫ్ కోడ్ మరియు ప్రతి విద్యార్థికీ కంప్యూటర్ సైన్సు యొక్క పరిచయమును అందజేసే దాని దార్శనికత యొక్క విజయానికి ఎంతగానో దోహదపడ్డాయి.
 
-# Major Partners and Corporate Supporters
+# ప్రధాన భాగస్వాములు మరియు కార్పొరేట్ మద్దతుదారులు
 
-{{ partners/major_partners_corporate_supporters }}
-
-* * *
-
-# International Partners
-
-{{ partners/international_partners }}
+{{ భాగస్వాములు/ప్రధాన_భాగస్వాములు_కార్పొరేట్_మద్దతుదారులు }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# అంతర్జాతీయ భాగస్వాములు
 
-{{ partners/curriculum_tutorial_partners }}
-
-* * *
-
-# Infrastructure Partners and Tools
-
-{{ partners/infrastructure_partners_tools }}
+{{ భాగస్వాములు/అంతర్జాతీయ_భాగస్వాములు }}
 
 * * *
 
-# Additional Partners
+# పాఠ్యాంశాలు మరియు బోధనా భాగస్వాములు
 
-{{ partners/additional_partners }}
+{{ భాగస్వాములు/పాఠ్యాంశాలు_బోధనా_భాగస్వాములు }}
 
-{{ signup_button }}
+* * *
+
+# మౌలికవసతుల భాగస్వాములు మరియు సాధనాలు
+
+{{ భాగస్వాములు/మౌలికవసతులు‌_భాగస్వాములు_ సాధనాలు }}
+
+* * *
+
+# అదనపు భాగస్వాములు
+
+{{ భాగస్వాములు/అదనపు_భాగస్వాములు }}
+
+{{ సైనప్_బటన్ }}

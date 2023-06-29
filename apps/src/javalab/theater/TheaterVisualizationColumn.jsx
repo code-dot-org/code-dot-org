@@ -1,31 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import classNames from 'classnames';
 import PreviewPaneHeader from '../PreviewPaneHeader';
-import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
-import {toggleVisualizationCollapsed} from '../javalabRedux';
+import {
+  VISUALIZATION_DIV_ID,
+  isResponsiveFromState,
+} from '@cdo/apps/templates/ProtectedVisualizationDiv';
+import {toggleVisualizationCollapsed} from '@cdo/apps/javalab/redux/viewRedux';
+import style from './theater-visualization-column.module.scss';
+import JavalabCrosshairOverlay, {
+  showOverlayFromState,
+} from '../JavalabCrosshairOverlay';
 
 class TheaterVisualizationColumn extends React.Component {
   static propTypes = {
     // populated by redux
     isReadOnlyWorkspace: PropTypes.bool,
     isCollapsed: PropTypes.bool,
-    toggleVisualizationCollapsed: PropTypes.func
+    responsive: PropTypes.bool,
+    showOverlay: PropTypes.bool,
+    toggleVisualizationCollapsed: PropTypes.func,
   };
 
   state = {
-    isFullscreen: false
+    isFullscreen: false,
   };
 
   render() {
     const {
       isReadOnlyWorkspace,
       isCollapsed,
-      toggleVisualizationCollapsed
+      responsive,
+      showOverlay,
+      toggleVisualizationCollapsed,
     } = this.props;
     const {isFullscreen} = this.state;
-
-    const opacity = isCollapsed ? 0 : 1;
 
     return (
       <div>
@@ -37,46 +47,57 @@ class TheaterVisualizationColumn extends React.Component {
           showPreviewTitle={false}
           toggleVisualizationCollapsed={toggleVisualizationCollapsed}
         />
-        <div style={{...styles.theaterPreviewBackground, opacity}}>
-          <ProtectedVisualizationDiv>
-            <div id="theater-container" style={styles.theater}>
-              <img id="theater" style={styles.theaterImage} />
+        <div
+          className={classNames(
+            style.previewBackground,
+            isCollapsed && style.collapsed
+          )}
+          style={styles.theaterPreviewBackground}
+        >
+          <div
+            id={VISUALIZATION_DIV_ID}
+            className={classNames(responsive && 'responsive')}
+          >
+            <div
+              id="theater-container"
+              className={classNames(
+                style.container,
+                showOverlay && style.overlay
+              )}
+            >
+              <img id="theater" className={style.image} />
               <audio id="theater-audio" preload="auto" />
             </div>
-          </ProtectedVisualizationDiv>
+            <JavalabCrosshairOverlay visible={showOverlay} />
+          </div>
         </div>
       </div>
     );
   }
 }
 
+// Note (madelynkasula 09/28/2022): Do not add to this styles object. Use theater-visualization-column.module.scss instead.
+// SCSS modules currently aren't able to load static assets (i.e., Theater.png below), so these styles will be removed
+// when that is fixed.
 const styles = {
-  theater: {
-    width: 800,
-    height: 800
-  },
-  theaterImage: {
-    // Start hidden so we can start the audio and gif at the same time.
-    visibility: 'hidden',
-    width: 800,
-    height: 800
-  },
   theaterPreviewBackground: {
     backgroundImage: 'url("/blockly/media/javalab/Theater.png")',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    backgroundPosition: 'top'
-  }
+    backgroundPosition: 'top',
+  },
 };
 
 export default connect(
   state => ({
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    isCollapsed: state.javalab.isVisualizationCollapsed
+    isCollapsed: state.javalabView.isVisualizationCollapsed,
+    responsive: isResponsiveFromState(state),
+    showOverlay: showOverlayFromState(state),
   }),
   dispatch => ({
     toggleVisualizationCollapsed() {
       dispatch(toggleVisualizationCollapsed());
-    }
+    },
   })
 )(TheaterVisualizationColumn);

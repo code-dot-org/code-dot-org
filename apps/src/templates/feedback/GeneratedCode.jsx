@@ -7,7 +7,7 @@ export default class GeneratedCode extends React.Component {
   static propTypes = {
     message: PropTypes.string.isRequired,
     code: PropTypes.string.isRequired,
-    style: PropTypes.object
+    style: PropTypes.object,
   };
 
   render() {

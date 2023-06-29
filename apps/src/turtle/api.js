@@ -7,28 +7,28 @@ import {randomValue} from '../utils';
  * NOTE: this.log is also modified in some cases externally (both accessed and
  * I think cleared).
  */
-var ArtistAPI = function() {
+var ArtistAPI = function () {
   this.log = [];
 };
 
 module.exports = ArtistAPI;
 
-ArtistAPI.prototype.random = function(values) {
+ArtistAPI.prototype.random = function (values) {
   return randomValue(values);
 };
 
-ArtistAPI.prototype.drawCircle = function(size, id) {
+ArtistAPI.prototype.drawCircle = function (size, id) {
   for (var i = 0; i < 36; i++) {
     this.moveForward(size, id);
     this.turnRight(10, id);
   }
 };
 
-ArtistAPI.prototype.drawSnowflake = function(type, id) {
+ArtistAPI.prototype.drawSnowflake = function (type, id) {
   var i, j, k;
 
   // mirors Blockly.JavaScript.colour_random.
-  var random_colour = function() {
+  var random_colour = function () {
     var colors = Blockly.FieldColour.COLOURS;
     return colors[Math.floor(Math.random() * colors.length)];
   };
@@ -40,7 +40,7 @@ ArtistAPI.prototype.drawSnowflake = function(type, id) {
       'spiral',
       'line',
       'parallelogram',
-      'square'
+      'square',
     ]);
   }
 
@@ -113,146 +113,146 @@ ArtistAPI.prototype.drawSnowflake = function(type, id) {
   }
 };
 
-ArtistAPI.prototype.moveForward = function(distance, id) {
+ArtistAPI.prototype.moveForward = function (distance, id) {
   this.log.push(['FD', distance, id]);
 };
 
-ArtistAPI.prototype.moveBackward = function(distance, id) {
+ArtistAPI.prototype.moveBackward = function (distance, id) {
   this.log.push(['FD', -distance, id]);
 };
 
-ArtistAPI.prototype.moveUp = function(distance, id) {
+ArtistAPI.prototype.moveUp = function (distance, id) {
   this.log.push(['MV', distance, 0, id]);
 };
 
-ArtistAPI.prototype.moveDown = function(distance, id) {
+ArtistAPI.prototype.moveDown = function (distance, id) {
   this.log.push(['MV', distance, 180, id]);
 };
 
-ArtistAPI.prototype.moveLeft = function(distance, id) {
+ArtistAPI.prototype.moveLeft = function (distance, id) {
   this.log.push(['MV', distance, 270, id]);
 };
 
-ArtistAPI.prototype.moveRight = function(distance, id) {
+ArtistAPI.prototype.moveRight = function (distance, id) {
   this.log.push(['MV', distance, 90, id]);
 };
 
-ArtistAPI.prototype.jumpTo = function(position, id) {
+ArtistAPI.prototype.jumpTo = function (position, id) {
   this.log.push(['JT', position, id]);
 };
 
-ArtistAPI.prototype.jumpToXY = function(x, y, id) {
+ArtistAPI.prototype.jumpToXY = function (x, y, id) {
   this.log.push(['JT', [x, y], id]);
 };
 
-ArtistAPI.prototype.moveUpRight = function(distance, id) {
+ArtistAPI.prototype.moveUpRight = function (distance, id) {
   this.log.push(['MD', distance, 45, id]);
 };
 
-ArtistAPI.prototype.moveDownRight = function(distance, id) {
+ArtistAPI.prototype.moveDownRight = function (distance, id) {
   this.log.push(['MD', distance, 135, id]);
 };
 
-ArtistAPI.prototype.moveDownLeft = function(distance, id) {
+ArtistAPI.prototype.moveDownLeft = function (distance, id) {
   this.log.push(['MD', distance, 225, id]);
 };
 
-ArtistAPI.prototype.moveUpLeft = function(distance, id) {
+ArtistAPI.prototype.moveUpLeft = function (distance, id) {
   this.log.push(['MD', distance, 315, id]);
 };
 
-ArtistAPI.prototype.jumpUp = function(distance, id) {
+ArtistAPI.prototype.jumpUp = function (distance, id) {
   this.log.push(['JD', distance, 0, id]);
 };
 
-ArtistAPI.prototype.jumpDown = function(distance, id) {
+ArtistAPI.prototype.jumpDown = function (distance, id) {
   this.log.push(['JD', distance, 180, id]);
 };
 
-ArtistAPI.prototype.jumpLeft = function(distance, id) {
+ArtistAPI.prototype.jumpLeft = function (distance, id) {
   this.log.push(['JD', distance, 270, id]);
 };
 
-ArtistAPI.prototype.jumpRight = function(distance, id) {
+ArtistAPI.prototype.jumpRight = function (distance, id) {
   this.log.push(['JD', distance, 90, id]);
 };
 
-ArtistAPI.prototype.jumpUpRight = function(distance, id) {
+ArtistAPI.prototype.jumpUpRight = function (distance, id) {
   this.log.push(['JD', distance, 45, id]);
 };
 
-ArtistAPI.prototype.jumpDownRight = function(distance, id) {
+ArtistAPI.prototype.jumpDownRight = function (distance, id) {
   this.log.push(['JD', distance, 135, id]);
 };
 
-ArtistAPI.prototype.jumpDownLeft = function(distance, id) {
+ArtistAPI.prototype.jumpDownLeft = function (distance, id) {
   this.log.push(['JD', distance, 225, id]);
 };
 
-ArtistAPI.prototype.jumpUpLeft = function(distance, id) {
+ArtistAPI.prototype.jumpUpLeft = function (distance, id) {
   this.log.push(['JD', distance, 315, id]);
 };
 
-ArtistAPI.prototype.jumpForward = function(distance, id) {
+ArtistAPI.prototype.jumpForward = function (distance, id) {
   this.log.push(['JF', distance, id]);
 };
 
-ArtistAPI.prototype.jumpBackward = function(distance, id) {
+ArtistAPI.prototype.jumpBackward = function (distance, id) {
   this.log.push(['JF', -distance, id]);
 };
 
-ArtistAPI.prototype.turnRight = function(angle, id) {
+ArtistAPI.prototype.turnRight = function (angle, id) {
   this.log.push(['RT', angle, id]);
 };
 
-ArtistAPI.prototype.turnLeft = function(angle, id) {
+ArtistAPI.prototype.turnLeft = function (angle, id) {
   this.log.push(['RT', -angle, id]);
 };
 
-ArtistAPI.prototype.pointTo = function(angle, id) {
+ArtistAPI.prototype.pointTo = function (angle, id) {
   this.log.push(['PT', angle, id]);
 };
 
-ArtistAPI.prototype.globalAlpha = function(alpha, id) {
+ArtistAPI.prototype.globalAlpha = function (alpha, id) {
   this.log.push(['GA', alpha, id]);
 };
 
-ArtistAPI.prototype.penUp = function(id) {
+ArtistAPI.prototype.penUp = function (id) {
   this.log.push(['PU', id]);
 };
 
-ArtistAPI.prototype.penDown = function(id) {
+ArtistAPI.prototype.penDown = function (id) {
   this.log.push(['PD', id]);
 };
 
-ArtistAPI.prototype.penWidth = function(width, id) {
+ArtistAPI.prototype.penWidth = function (width, id) {
   this.log.push(['PW', Math.max(width, 0), id]);
 };
 
-ArtistAPI.prototype.penColour = function(colour, id) {
+ArtistAPI.prototype.penColour = function (colour, id) {
   this.log.push(['PC', colour, id]);
 };
 
-ArtistAPI.prototype.penPattern = function(pattern, id) {
+ArtistAPI.prototype.penPattern = function (pattern, id) {
   this.log.push(['PS', pattern, id]);
 };
 
-ArtistAPI.prototype.hideTurtle = function(id) {
+ArtistAPI.prototype.hideTurtle = function (id) {
   this.log.push(['HT', id]);
 };
 
-ArtistAPI.prototype.showTurtle = function(id) {
+ArtistAPI.prototype.showTurtle = function (id) {
   this.log.push(['ST', id]);
 };
 
-ArtistAPI.prototype.drawShape = function(sticker, size, id) {
+ArtistAPI.prototype.drawShape = function (sticker, size, id) {
   this.log.push(['shape', sticker, size, id]);
 };
 
-ArtistAPI.prototype.drawSticker = function(sticker, size, id) {
+ArtistAPI.prototype.drawSticker = function (sticker, size, id) {
   this.log.push(['sticker', sticker, size, id]);
 };
 
-ArtistAPI.prototype.setArtist = function(artist, id) {
+ArtistAPI.prototype.setArtist = function (artist, id) {
   this.log.push(['setArtist', artist, id]);
 };

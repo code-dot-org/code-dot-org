@@ -110,7 +110,7 @@ module ProjectsList
         raise ArgumentError, 'Cannot specify published_before when requesting all project types' if published_before
         return include_featured(limit: limit)
       end
-      raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.keys.include?(project_group.to_sym)
+      raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
       fetch_published_project_types([project_group.to_sym], limit: limit, published_before: published_before)
     end
 
@@ -172,13 +172,13 @@ module ProjectsList
     #   where `version` corresponds to an S3 version of the library.
     # @return [Array<String>] The channel_ids of libraries that have been updated since the given version.
     def fetch_updated_library_channels(libraries)
-      project_ids = libraries.map do |library|
+      project_ids = libraries.filter_map do |library|
         _, id = storage_decrypt_channel_id(library['channel_id'])
         library['project_id'] = id
         id
       rescue
         nil
-      end.compact.uniq
+      end.uniq
 
       return [] if project_ids.nil_or_empty?
 
@@ -227,6 +227,7 @@ module ProjectsList
           state: 'active'
         ).
         exclude(published_at: nil).
+        exclude(abuse_score: 0...).
         order(Sequel.desc(:published_at)).limit(8).all.shuffle!
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end
@@ -332,7 +333,7 @@ module ProjectsList
             exclude(published_at: nil).
             order(Sequel.desc(:published_at)).
             limit(limit).
-            map {|project_and_user| get_published_project_and_user_data project_and_user}.compact
+            filter_map {|project_and_user| get_published_project_and_user_data project_and_user}
         end
       end
     end

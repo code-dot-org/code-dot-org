@@ -12,8 +12,8 @@ export class UnconnectedExpandableImagesWrapper extends React.Component {
     showImageDialog: PropTypes.func.isRequired,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node
-    ]).isRequired
+      PropTypes.node,
+    ]).isRequired,
   };
 
   componentDidMount() {
@@ -37,19 +37,16 @@ export class UnconnectedExpandableImagesWrapper extends React.Component {
   }
 }
 
-export const ExpandableImagesWrapper = connect(
-  null,
-  dispatch => ({
-    showImageDialog(imgUrl) {
-      dispatch(
-        openDialog({
-          imgOnly: true,
-          imgUrl
-        })
-      );
-    }
-  })
-)(UnconnectedExpandableImagesWrapper);
+export const ExpandableImagesWrapper = connect(null, dispatch => ({
+  showImageDialog(imgUrl) {
+    dispatch(
+      openDialog({
+        imgOnly: true,
+        imgUrl,
+      })
+    );
+  },
+}))(UnconnectedExpandableImagesWrapper);
 
 /**
  * A wrapper for our SafeMarkdown component which adds some extra
@@ -64,7 +61,8 @@ export default class EnhancedSafeMarkdown extends React.Component {
   static propTypes = {
     markdown: PropTypes.string.isRequired,
     openExternalLinksInNewTab: PropTypes.bool,
-    expandableImages: PropTypes.bool
+    expandableImages: PropTypes.bool,
+    className: PropTypes.string,
   };
 
   render() {
@@ -81,6 +79,7 @@ export default class EnhancedSafeMarkdown extends React.Component {
       <SafeMarkdown
         markdown={this.props.markdown}
         openExternalLinksInNewTab={this.props.openExternalLinksInNewTab}
+        className={this.props.className}
       />
     );
 

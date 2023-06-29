@@ -21,7 +21,7 @@ module InfraTestTopic
   #   topic (if one exists) or nil.
   def self.green_commit
     current_topic = Slack.get_topic('infra-test')
-    return nil unless current_topic =~ /:greenbeer:/
+    return nil unless /:greenbeer:/.match?(current_topic)
     current_topic[0..7]
   end
 
@@ -29,7 +29,8 @@ module InfraTestTopic
     timezone_name = 'US/Pacific'
 
     timezone = TZInfo::Timezone.get(timezone_name)
-    offset_in_hours = timezone.current_period.utc_total_offset_rational.numerator
+    offset_in_seconds = timezone.observed_utc_offset
+    offset_in_hours = offset_in_seconds / 3600
     offset = format '%+.2d:00', offset_in_hours
 
     Time.now.getlocal(offset)

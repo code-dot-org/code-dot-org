@@ -20,7 +20,7 @@ describe('HeightResizer', () => {
     const mouseDownEvent = mouseEvent({
       button: 0,
       pageY: 20,
-      cancelable: true
+      cancelable: true,
     });
     wrapper.instance().onMouseDown(mouseDownEvent);
 
@@ -32,7 +32,7 @@ describe('HeightResizer', () => {
     // Simulate mouseMove
     const mouseMoveEvent = mouseEvent({
       pageY: 30,
-      cancelable: true
+      cancelable: true,
     });
     wrapper.instance().onMouseMove(mouseMoveEvent);
 
@@ -45,7 +45,7 @@ describe('HeightResizer', () => {
     const mouseUpEvent = mouseEvent({
       button: 0,
       pageY: 40,
-      cancelable: true
+      cancelable: true,
     });
     wrapper.instance().onMouseUp(mouseUpEvent);
 
@@ -69,7 +69,7 @@ describe('HeightResizer', () => {
     const mouseDownEvent = mouseEvent({
       button: 1,
       pageY: 20,
-      cancelable: true
+      cancelable: true,
     });
     wrapper.instance().onMouseDown(mouseDownEvent);
 
@@ -92,7 +92,7 @@ describe('HeightResizer', () => {
 
     const mouseMoveEvent = mouseEvent({
       pageY: 30,
-      cancelable: true
+      cancelable: true,
     });
     wrapper.instance().onMouseMove(mouseMoveEvent);
 
@@ -108,6 +108,6 @@ function mouseEvent(props) {
   return {
     stopPropagation: sinon.spy(),
     preventDefault: sinon.spy(),
-    ...props
+    ...props,
   };
 }

@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2021-03-10T18:47:38.000Z",
-  "level_num": "custom",
-  "user_id": 838,
   "properties": {
     "encrypted": "false",
     "title": "CSP Basic Free Response",
@@ -15,8 +11,13 @@
     "peer_reviewable": "false",
     "optional": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2021-03-10T18:47:38.000Z",
+  "user_id": 838,
   "published": true
 }]]></config>
 </FreeResponse>

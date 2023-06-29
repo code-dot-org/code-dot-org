@@ -244,7 +244,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
       assert_response :success
     end
 
-    refute Pd::Attendance.where(session: @session, teacher: teacher).exists?
+    refute Pd::Attendance.exists?(session: @session, teacher: teacher)
   end
 
   test 'create delete and create restores the original record' do
@@ -275,8 +275,8 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
   end
 
   test 'create attendance by enrollment succeeds when an account is not required' do
-    # Admin courses do not require attendance
-    @workshop.update!(course: Pd::Workshop::COURSE_ADMIN, subject: nil)
+    # Admin/Counselor courses do not require attendance
+    @workshop.update!(course: Pd::Workshop::COURSE_ADMIN_COUNSELOR, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_WELCOME)
 
     sign_in @organizer
     enrollment = create :pd_enrollment, workshop: @workshop
@@ -302,7 +302,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
       assert_response :success
     end
 
-    refute Pd::Attendance.where(session: @session, enrollment: enrollment).exists?
+    refute Pd::Attendance.exists?(session: @session, enrollment: enrollment)
   end
 
   private

@@ -39,6 +39,6 @@ See our [event how to guide]({{ urls/how_to_events }}) for a sample run of show,
 ساعت کد تنها اولین گام در سفری برای کسب اطلاعات بیشتر در مورد چگونگی کارکرد فن آوری و نحوه ایجاد نرم افزارهای کاربردی است. برای ادامه این سفر:
 
 - دانش آموزان را به ادامه [یادگیری آنلاین](%= resolve_url('https://code.org/learn/beyond') %) تشویق کنید.
-- در یک کارگاه یک روزه ی حضوری، برای کمک و راهنمایی گرفتن از یک فرد مجرب در علوم کامپیوتر[شرکت کنید](%= resolve_url('https://code.org/professional-development-workshops') %).
+- [Learn more](https://code.org/administrators) about implementing a computer science pathway in your district.
 
 {{ signup_button }}

@@ -1273,8 +1273,9 @@ el-GR:
         title: Πολλαπλή Επιλογή
       K-1 Word Search Multi 3:
         answers:
-        - {}
-        - correct: true
+        - text: ΟΡΙΣΕ
+        - text: ΤΕΤΡΆΓΩΝΟ
+          correct: true
         - text: ΝΟΤΙΑ
         questions:
         - text: Ποια λέξη σχηματίζεται;
@@ -1353,6 +1354,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - feedback: Εσφαλμένο
         questions:
@@ -1361,6 +1363,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - feedback: Εσφαλμένο
         questions:
@@ -1369,6 +1372,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - feedback: Εσφαλμένο
         questions:
@@ -1377,82 +1381,103 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - feedback: Εσφαλμένο
         questions:
         - {}
       courseC_multi_artist_prog6_predict1:
         answers:
-        - {}
-        - {}
+        - text: Ο καλλιτέχνης θα σχεδιάσει ένα τρίγωνο με τρεις ίσες πλευρές.
+        - text: Ο καλλιτέχνης θα σχεδιάσει μια γραμμή.
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_artist_prog6_predict1_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Ο καλλιτέχνης θα σχεδιάσει ένα τρίγωνο με τρεις ίσες πλευρές.
+        - text: Ο καλλιτέχνης θα σχεδιάσει μια γραμμή.
+        - text: Ο καλλιτέχνης θα σχεδιάσει ένα τετράγωνο.
+          correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Ο καλλιτέχνης θα σχεδιάσει ένα τρίγωνο με τρεις ίσες πλευρές.
+        - text: Ο καλλιτέχνης θα σχεδιάσει μια γραμμή.
+        - text: Ο καλλιτέχνης θα σχεδιάσει ένα τετράγωνο.
+          correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Ο καλλιτέχνης θα σχεδιάσει ένα τρίγωνο με τρεις ίσες πλευρές.
+        - text: Ο καλλιτέχνης θα σχεδιάσει μια γραμμή.
+        - text: Ο καλλιτέχνης θα σχεδιάσει ένα τετράγωνο.
+          correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Σωστά!
         - text: '15'
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Πόσες κολοκύθες θα συλλέξει
+            ο αγρότης όταν κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Σωστά!
         - text: '15'
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Πόσες κολοκύθες θα συλλέξει
+            ο αγρότης όταν κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Σωστά!
         - text: '15'
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Πόσες κολοκύθες θα συλλέξει
+            ο αγρότης όταν κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Σωστά!
         - text: '15'
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Πόσες κολοκύθες θα συλλέξει
+            ο αγρότης όταν κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -1461,6 +1486,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -1469,55 +1495,81 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
+        - text: Ο Σκρατ θα φτάσει στο βελανίδι. Δεν υπάρχουν σφάλματα στον κώδικα.
+          feedback: Λάθος Πρώτα, ο Σκρατ στρίβει προς τη λάθος κατεύθυνση και μετά  δεν
+            προχωράει αρκετές φορές μπροστά για να φτάσει το βελανίδι.
+        - text: Ο Σκρατ δε θα φτάσει το βελανίδι επειδή στρίβει λάθος.
+          correct: true
         - correct: true
         - {}
         questions:
         - {}
       courseC_multi_maze_programming8_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Το πουλί θα σταματήσει ένα βήμα πριν φτάσει το γουρούνι.
+          feedback: Λάθος. Αυτός ο κώδικας οδηγεί το Angry Bird τέλεια στο γουρούνι.
+        - text: Το πουλί θα φτάσει στο γουρούνι.
+          correct: true
+          feedback: Σωστά!
+        - text: Το πουλί θα πέσει πάνω στο ΤΝΤ.
+          feedback: Λάθος. Αυτός ο κώδικας οδηγεί το Angry Bird τέλεια στο γουρούνι.
+        - feedback: Αυτός ο κώδικας οδηγεί τέλεια το Angry Bird στο γουρούνι.
         questions:
-        - {}
+        - text: Διαβάστε τον παρακάτω κώδικα πολύ προσεκτικά. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Το πουλί θα σταματήσει ένα βήμα πριν φτάσει το γουρούνι.
+          feedback: Λάθος. Αυτός ο κώδικας οδηγεί το Angry Bird τέλεια στο γουρούνι.
+        - text: Το πουλί θα φτάσει στο γουρούνι.
+          correct: true
+          feedback: Σωστά!
+        - text: Το πουλί θα πέσει πάνω στο ΤΝΤ.
+          feedback: Λάθος. Αυτός ο κώδικας οδηγεί το Angry Bird τέλεια στο γουρούνι.
+        - feedback: Αυτός ο κώδικας οδηγεί τέλεια το Angry Bird στο γουρούνι.
         questions:
-        - {}
+        - text: Διαβάστε τον παρακάτω κώδικα πολύ προσεκτικά. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Το πουλί θα σταματήσει ένα βήμα πριν φτάσει το γουρούνι.
+          feedback: Λάθος. Αυτός ο κώδικας οδηγεί το Angry Bird τέλεια στο γουρούνι.
+        - text: Το πουλί θα φτάσει στο γουρούνι.
+          correct: true
+          feedback: Σωστά!
+        - text: Το πουλί θα πέσει πάνω στο ΤΝΤ.
+          feedback: Λάθος. Αυτός ο κώδικας οδηγεί το Angry Bird τέλεια στο γουρούνι.
+        - feedback: Αυτός ο κώδικας οδηγεί τέλεια το Angry Bird στο γουρούνι.
         questions:
-        - {}
+        - text: Διαβάστε τον παρακάτω κώδικα πολύ προσεκτικά. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Το πουλί θα σταματήσει ένα βήμα πριν φτάσει το γουρούνι.
+          feedback: Λάθος. Αυτός ο κώδικας οδηγεί το Angry Bird τέλεια στο γουρούνι.
+        - text: Το πουλί θα φτάσει στο γουρούνι.
+          correct: true
+          feedback: Σωστά!
+        - text: Το πουλί θα πέσει πάνω στο ΤΝΤ.
+          feedback: Λάθος. Αυτός ο κώδικας οδηγεί το Angry Bird τέλεια στο γουρούνι.
+        - feedback: Αυτός ο κώδικας οδηγεί τέλεια το Angry Bird στο γουρούνι.
         questions:
-        - {}
+        - text: Διαβάστε τον παρακάτω κώδικα πολύ προσεκτικά. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_starWars_predict1:
         answers:
         - {}
         - {}
-        - correct: true
+        - text: Το BB-8 θα κινηθεί 5 φορές και θα πάρει όλα τα άχρηστα μέταλα
+          correct: true
+          feedback: Σωστά!
         - text: Δεν ξέρω.
         questions:
         - {}
@@ -1525,7 +1577,9 @@ el-GR:
         answers:
         - {}
         - {}
-        - correct: true
+        - text: Το BB-8 θα κινηθεί 5 φορές και θα πάρει όλα τα άχρηστα μέταλα
+          correct: true
+          feedback: Σωστά!
         - text: Δεν ξέρω.
         questions:
         - {}
@@ -1533,7 +1587,9 @@ el-GR:
         answers:
         - {}
         - {}
-        - correct: true
+        - text: Το BB-8 θα κινηθεί 5 φορές και θα πάρει όλα τα άχρηστα μέταλα
+          correct: true
+          feedback: Σωστά!
         - text: Δεν ξέρω.
         questions:
         - {}
@@ -1541,42 +1597,60 @@ el-GR:
         answers:
         - {}
         - {}
-        - correct: true
+        - text: Το BB-8 θα κινηθεί 5 φορές και θα πάρει όλα τα άχρηστα μέταλα
+          correct: true
+          feedback: Σωστά!
         - text: Δεν ξέρω.
         questions:
         - {}
       courseC_multi_starWars_predict2:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Το BB-8 θα μετακινηθεί πολυ μακριά στον πρώτο βρόχο.
+        - text: Το BB-8 δε θα μετακινηθεί αρκετά μακριά στον πρώτο βρόχο ώστε να πάρει
+            όλα τα μέταλλα.
+          correct: true
+          feedback: Σωστά!
+        - text: Το BB-8 θα συλλέξει όλα τα μέταλα χωρίς προβλήματα.
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_starWars_predict2_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Το BB-8 θα μετακινηθεί πολυ μακριά στον πρώτο βρόχο.
+        - text: Το BB-8 δε θα μετακινηθεί αρκετά μακριά στον πρώτο βρόχο ώστε να πάρει
+            όλα τα μέταλλα.
+          correct: true
+          feedback: Σωστά!
+        - text: Το BB-8 θα συλλέξει όλα τα μέταλα χωρίς προβλήματα.
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_starWars_predict2_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Το BB-8 θα μετακινηθεί πολυ μακριά στον πρώτο βρόχο.
+        - text: Το BB-8 δε θα μετακινηθεί αρκετά μακριά στον πρώτο βρόχο ώστε να πάρει
+            όλα τα μέταλλα.
+          correct: true
+          feedback: Σωστά!
+        - text: Το BB-8 θα συλλέξει όλα τα μέταλα χωρίς προβλήματα.
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Το BB-8 θα μετακινηθεί πολυ μακριά στον πρώτο βρόχο.
+        - text: Το BB-8 δε θα μετακινηθεί αρκετά μακριά στον πρώτο βρόχο ώστε να πάρει
+            όλα τα μέταλλα.
+          correct: true
+          feedback: Σωστά!
+        - text: Το BB-8 θα συλλέξει όλα τα μέταλα χωρίς προβλήματα.
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_external_binary1:
         markdown: "<h1>Ζωγράφισε με δυαδικό σύστημα!</h1>\n \n<h3>Το δυαδικό είναι
           ένα σύστημα αναπαράστασης πληροφορίας χρησιμοποιώντας μόνο δύο επιλογές.
@@ -1640,6 +1714,7 @@ el-GR:
         - text: Γ
         - text: Δ
           correct: true
+          feedback: Σωστά!
         markdown: |+
           <table>
           <tr>
@@ -1656,7 +1731,8 @@ el-GR:
           <br/>
 
         questions:
-        - {}
+        - text: Ρίξτε μια ματιά στον παρακάτω κώδικα. Ποια εικόνα θα δημιουργηθεί
+            οταν κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: Α
@@ -1664,6 +1740,7 @@ el-GR:
         - text: Γ
         - text: Δ
           correct: true
+          feedback: Σωστά!
         markdown: |+
           <table>
           <tr>
@@ -1680,7 +1757,8 @@ el-GR:
           <br/>
 
         questions:
-        - {}
+        - text: Ρίξτε μια ματιά στον παρακάτω κώδικα. Ποια εικόνα θα δημιουργηθεί
+            οταν κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: Α
@@ -1688,6 +1766,7 @@ el-GR:
         - text: Γ
         - text: Δ
           correct: true
+          feedback: Σωστά!
         markdown: |+
           <table>
           <tr>
@@ -1704,7 +1783,8 @@ el-GR:
           <br/>
 
         questions:
-        - {}
+        - text: Ρίξτε μια ματιά στον παρακάτω κώδικα. Ποια εικόνα θα δημιουργηθεί
+            οταν κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: Α
@@ -1712,6 +1792,7 @@ el-GR:
         - text: Γ
         - text: Δ
           correct: true
+          feedback: Σωστά!
         markdown: |+
           <table>
           <tr>
@@ -1728,11 +1809,13 @@ el-GR:
           <br/>
 
         questions:
-        - {}
+        - text: Ρίξτε μια ματιά στον παρακάτω κώδικα. Ποια εικόνα θα δημιουργηθεί
+            οταν κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: Α
           correct: true
+          feedback: Σωστά!
         - text: Β
         - text: Γ
         - {}
@@ -1742,6 +1825,7 @@ el-GR:
         answers:
         - text: Α
           correct: true
+          feedback: Σωστά!
         - text: Β
         - text: Γ
         - {}
@@ -1751,6 +1835,7 @@ el-GR:
         answers:
         - text: Α
           correct: true
+          feedback: Σωστά!
         - text: Β
         - text: Γ
         - {}
@@ -1760,6 +1845,7 @@ el-GR:
         answers:
         - text: Α
           correct: true
+          feedback: Σωστά!
         - text: Β
         - text: Γ
         - {}
@@ -1767,105 +1853,182 @@ el-GR:
         - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ, ό,τι κι αν γίνει.
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ μόνο αν υπάρχει ένα λουλούδι από κάτω.
+          correct: true
+          feedback: Σωστά!
+        - text: Η μέλισσα θα κινηθεί προς το σύννεφο και στη συνέχεια δε θα κάνει
+            τίποτα, , ό,τι κι αν γίνει.
         - {}
         questions:
-        - {}
+        - text: Το σύννεφο μπλοκάρει την θέα. Μπορεί να υπάρχει ένα λουλούδι κάτω
+            από αυτό το σύννεφο. Εάν υπάρχει ένα λουλούδι, η μέλισσα θα πρέπει να
+            συλλέξει νέκταρ. Αν δεν υπάρχει λουλούδι, η μέλισσα δεν πρέπει να κάνει
+            τίποτα. Ρίξτε μια καλή ματιά στον παρακάτω κώδικα. Τι νομίζετε ότι θα
+            συμβεί αφού κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ, ό,τι κι αν γίνει.
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ μόνο αν υπάρχει ένα λουλούδι από κάτω.
+          correct: true
+          feedback: Σωστά!
+        - text: Η μέλισσα θα κινηθεί προς το σύννεφο και στη συνέχεια δε θα κάνει
+            τίποτα, , ό,τι κι αν γίνει.
         - {}
         questions:
-        - {}
+        - text: Το σύννεφο μπλοκάρει την θέα. Μπορεί να υπάρχει ένα λουλούδι κάτω
+            από αυτό το σύννεφο. Εάν υπάρχει ένα λουλούδι, η μέλισσα θα πρέπει να
+            συλλέξει νέκταρ. Αν δεν υπάρχει λουλούδι, η μέλισσα δεν πρέπει να κάνει
+            τίποτα. Ρίξτε μια καλή ματιά στον παρακάτω κώδικα. Τι νομίζετε ότι θα
+            συμβεί αφού κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ, ό,τι κι αν γίνει.
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ μόνο αν υπάρχει ένα λουλούδι από κάτω.
+          correct: true
+          feedback: Σωστά!
+        - text: Η μέλισσα θα κινηθεί προς το σύννεφο και στη συνέχεια δε θα κάνει
+            τίποτα, , ό,τι κι αν γίνει.
         - {}
         questions:
-        - {}
+        - text: Το σύννεφο μπλοκάρει την θέα. Μπορεί να υπάρχει ένα λουλούδι κάτω
+            από αυτό το σύννεφο. Εάν υπάρχει ένα λουλούδι, η μέλισσα θα πρέπει να
+            συλλέξει νέκταρ. Αν δεν υπάρχει λουλούδι, η μέλισσα δεν πρέπει να κάνει
+            τίποτα. Ρίξτε μια καλή ματιά στον παρακάτω κώδικα. Τι νομίζετε ότι θα
+            συμβεί αφού κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ, ό,τι κι αν γίνει.
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ μόνο αν υπάρχει ένα λουλούδι από κάτω.
+          correct: true
+          feedback: Σωστά!
+        - text: Η μέλισσα θα κινηθεί προς το σύννεφο και στη συνέχεια δε θα κάνει
+            τίποτα, , ό,τι κι αν γίνει.
         - {}
         questions:
-        - {}
+        - text: Το σύννεφο μπλοκάρει την θέα. Μπορεί να υπάρχει ένα λουλούδι κάτω
+            από αυτό το σύννεφο. Εάν υπάρχει ένα λουλούδι, η μέλισσα θα πρέπει να
+            συλλέξει νέκταρ. Αν δεν υπάρχει λουλούδι, η μέλισσα δεν πρέπει να κάνει
+            τίποτα. Ρίξτε μια καλή ματιά στον παρακάτω κώδικα. Τι νομίζετε ότι θα
+            συμβεί αφού κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ, ό,τι κι αν γίνει.
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ μόνο αν υπάρχει ένα λουλούδι από κάτω.
+          correct: true
+          feedback: Σωστά!
+        - text: Η μέλισσα θα κινηθεί προς το σύννεφο και στη συνέχεια δε θα κάνει
+            τίποτα, , ό,τι κι αν γίνει.
         - {}
         questions:
-        - {}
+        - text: Το σύννεφο μπλοκάρει την θέα. Μπορεί να υπάρχει ένα λουλούδι κάτω
+            από αυτό το σύννεφο. Εάν υπάρχει ένα λουλούδι, η μέλισσα θα πρέπει να
+            συλλέξει νέκταρ. Αν δεν υπάρχει λουλούδι, η μέλισσα δεν πρέπει να κάνει
+            τίποτα. Ρίξτε μια καλή ματιά στον παρακάτω κώδικα. Τι νομίζετε ότι θα
+            συμβεί αφού κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
-        - {}
-        - {}
+          feedback: Σωστά!
+        - text: Η μέλισσα θα προσπαθήσει να πάρει νέκταρ τόσο από τα λουλούδια όσο
+            και από την κηρήθρα.
+        - text: Η μέλισσα θα προσπαθήσει να πάρει μέλι τόσο από τα λουλούδια όσο και
+            από την κηρήθρα.
         - {}
         questions:
-        - {}
+        - text: 'Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι πιστεύετε ότι θα συμβεί
+            αφού κάνετε κλικ στο "Εκτέλεση"; Θυμηθείτε: θα υπάρχει μόνο μια κηρήθρα
+            ή ένα λουλούδι πίσω από κάθε σύννεφο.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
-        - {}
-        - {}
+          feedback: Σωστά!
+        - text: Η μέλισσα θα προσπαθήσει να πάρει νέκταρ τόσο από τα λουλούδια όσο
+            και από την κηρήθρα.
+        - text: Η μέλισσα θα προσπαθήσει να πάρει μέλι τόσο από τα λουλούδια όσο και
+            από την κηρήθρα.
         - {}
         questions:
-        - {}
+        - text: 'Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι πιστεύετε ότι θα συμβεί
+            αφού κάνετε κλικ στο "Εκτέλεση"; Θυμηθείτε: θα υπάρχει μόνο μια κηρήθρα
+            ή ένα λουλούδι πίσω από κάθε σύννεφο.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: Η μέλισσα θα πάρει το νέκταρ από κάθε λουλούδι και θα φτιάξει μέλι
+            σε κάθε κηρήθρα.
+          correct: true
+          feedback: Σωστά!
+        - text: Η μέλισσα θα προσπαθήσει να πάρει νέκταρ τόσο από τα λουλούδια όσο
+            και από την κηρήθρα.
+        - text: Η μέλισσα θα προσπαθήσει να πάρει μέλι τόσο από τα λουλούδια όσο και
+            από την κηρήθρα.
         - {}
         questions:
-        - {}
+        - text: 'Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι πιστεύετε ότι θα συμβεί
+            αφού κάνετε κλικ στο "Εκτέλεση"; Θυμηθείτε: θα υπάρχει μόνο μια κηρήθρα
+            ή ένα λουλούδι πίσω από κάθε σύννεφο.'
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: Η μέλισσα θα πάρει το νέκταρ από κάθε λουλούδι και θα φτιάξει μέλι
+            σε κάθε κηρήθρα.
+          correct: true
+          feedback: Σωστά!
+        - text: Η μέλισσα θα προσπαθήσει να πάρει νέκταρ τόσο από τα λουλούδια όσο
+            και από την κηρήθρα.
+        - text: Η μέλισσα θα προσπαθήσει να πάρει μέλι τόσο από τα λουλούδια όσο και
+            από την κηρήθρα.
         - {}
         questions:
-        - {}
+        - text: 'Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι πιστεύετε ότι θα συμβεί
+            αφού κάνετε κλικ στο "Εκτέλεση"; Θυμηθείτε: θα υπάρχει μόνο μια κηρήθρα
+            ή ένα λουλούδι πίσω από κάθε σύννεφο.'
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - {}
-        - {}
-        - correct: true
+        - text: Η μέλισσα θα πάρει μόνο 2 μονάδες νέκταρ.
+        - text: Η μέλισσα θα πάρει όλο το νέκταρ.
+          correct: true
+          feedback: Σωστά!
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - {}
-        - {}
-        - correct: true
+        - text: Η μέλισσα θα πάρει μόνο 2 μονάδες νέκταρ.
+        - text: Η μέλισσα θα πάρει όλο το νέκταρ.
+          correct: true
+          feedback: Σωστά!
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
         - {}
-        - {}
-        - correct: true
+        - text: Η μέλισσα θα πάρει μόνο 2 μονάδες νέκταρ.
+        - text: Η μέλισσα θα πάρει όλο το νέκταρ.
+          correct: true
+          feedback: Σωστά!
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - {}
-        - {}
-        - correct: true
+        - text: Η μέλισσα θα πάρει μόνο 2 μονάδες νέκταρ.
+        - text: Η μέλισσα θα πάρει όλο το νέκταρ.
+          correct: true
+          feedback: Σωστά!
         - {}
         questions:
         - {}
@@ -1874,6 +2037,7 @@ el-GR:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Σωστά!
         - text: '12'
         - {}
         questions:
@@ -1883,6 +2047,7 @@ el-GR:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Σωστά!
         - text: '12'
         - {}
         questions:
@@ -1892,6 +2057,7 @@ el-GR:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Σωστά!
         - text: '12'
         - {}
         questions:
@@ -1901,6 +2067,7 @@ el-GR:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Σωστά!
         - text: '12'
         - {}
         questions:
@@ -1910,6 +2077,7 @@ el-GR:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
         - {}
@@ -1918,109 +2086,139 @@ el-GR:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_farmer_ramp13:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Τιποτα. Αυτός ο κώδικας θα αφήσει μόνο επίπεδο έδαφος.
+        - text: Αυτός ο κώδικας θα αφήσει το σωρό εντελώς ανέγγιχτο.
+          correct: true
+          feedback: Σωστά!
+        - text: Αυτός ο κώδικας θα αφήσει τις τρύπες εντελώς ανέγγιχτες.
         - {}
         questions:
-        - {}
+        - text: Ρίξτε μια καλή ματιά στον παρακάτω κώδικα. Τι θα συμβεί στο τέλος
+            αυτού του παζλ;
       courseD_multi_farmer_while10_predict2_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Τιποτα. Αυτός ο κώδικας θα αφήσει μόνο επίπεδο έδαφος.
+        - text: Αυτός ο κώδικας θα αφήσει το σωρό εντελώς ανέγγιχτο.
+          correct: true
+          feedback: Σωστά!
+        - text: Αυτός ο κώδικας θα αφήσει τις τρύπες εντελώς ανέγγιχτες.
         - {}
         questions:
-        - {}
+        - text: Ρίξτε μια καλή ματιά στον παρακάτω κώδικα. Τι θα συμβεί στο τέλος
+            αυτού του παζλ;
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Τιποτα. Αυτός ο κώδικας θα αφήσει μόνο επίπεδο έδαφος.
+        - text: Αυτός ο κώδικας θα αφήσει το σωρό εντελώς ανέγγιχτο.
+          correct: true
+          feedback: Σωστά!
+        - text: Αυτός ο κώδικας θα αφήσει τις τρύπες εντελώς ανέγγιχτες.
         - {}
         questions:
-        - {}
+        - text: Ρίξτε μια καλή ματιά στον παρακάτω κώδικα. Τι θα συμβεί στο τέλος
+            αυτού του παζλ;
       courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Τιποτα. Αυτός ο κώδικας θα αφήσει μόνο επίπεδο έδαφος.
+        - text: Αυτός ο κώδικας θα αφήσει το σωρό εντελώς ανέγγιχτο.
+          correct: true
+          feedback: Σωστά!
+        - text: Αυτός ο κώδικας θα αφήσει τις τρύπες εντελώς ανέγγιχτες.
         - {}
         questions:
-        - {}
+        - text: Ρίξτε μια καλή ματιά στον παρακάτω κώδικα. Τι θα συμβεί στο τέλος
+            αυτού του παζλ;
       courseD_multi_farmer_while4_predict1:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_farmer_while4_predict1_2018:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_maze_until10_predict2:
         answers:
         - correct: true
-        - {}
+          feedback: Σωστά!
+        - text: Το ζόμπι θα καταφέρει να φτάσει μέχρι το ηλιοτρόπιο.
         - {}
         - {}
         questions:
@@ -2028,7 +2226,8 @@ el-GR:
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
-        - {}
+          feedback: Σωστά!
+        - text: Το ζόμπι θα καταφέρει να φτάσει μέχρι το ηλιοτρόπιο.
         - {}
         - {}
         questions:
@@ -2036,7 +2235,8 @@ el-GR:
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
         - correct: true
-        - {}
+          feedback: Σωστά!
+        - text: Το ζόμπι θα καταφέρει να φτάσει μέχρι το ηλιοτρόπιο.
         - {}
         - {}
         questions:
@@ -2044,7 +2244,8 @@ el-GR:
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
         - correct: true
-        - {}
+          feedback: Σωστά!
+        - text: Το ζόμπι θα καταφέρει να φτάσει μέχρι το ηλιοτρόπιο.
         - {}
         - {}
         questions:
@@ -2052,39 +2253,52 @@ el-GR:
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
-        - correct: true
-        - {}
+        - text: Το πουλί θα φτάσει στο γουρούνι.
+          correct: true
+          feedback: Σωστά!
+        - text: Το πουλί θα κινηθεί προς τα μπροστά και θα πέσει πάνω στο ΤΝΤ.
         - {}
         questions:
-        - {}
+        - text: Ρίξτε μια ματιά στον παρακάτω κώδικα. Τι νομίζετε ότι θα συμβεί όταν
+            κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - {}
-        - correct: true
-        - {}
+        - text: Το πουλί θα φτάσει στο γουρούνι.
+          correct: true
+          feedback: Σωστά!
+        - text: Το πουλί θα κινηθεί προς τα μπροστά και θα πέσει πάνω στο ΤΝΤ.
         - {}
         questions:
-        - {}
+        - text: Ρίξτε μια ματιά στον παρακάτω κώδικα. Τι νομίζετε ότι θα συμβεί όταν
+            κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - {}
-        - correct: true
-        - {}
+        - text: Το πουλί θα φτάσει στο γουρούνι.
+          correct: true
+          feedback: Σωστά!
+        - text: Το πουλί θα κινηθεί προς τα μπροστά και θα πέσει πάνω στο ΤΝΤ.
         - {}
         questions:
-        - {}
+        - text: Ρίξτε μια ματιά στον παρακάτω κώδικα. Τι νομίζετε ότι θα συμβεί όταν
+            κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - {}
-        - correct: true
-        - {}
+        - text: Το πουλί θα φτάσει στο γουρούνι.
+          correct: true
+          feedback: Σωστά!
+        - text: Το πουλί θα κινηθεί προς τα μπροστά και θα πέσει πάνω στο ΤΝΤ.
         - {}
         questions:
-        - {}
+        - text: Ρίξτε μια ματιά στον παρακάτω κώδικα. Τι νομίζετε ότι θα συμβεί όταν
+            κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_scrat_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -2103,6 +2317,7 @@ el-GR:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
@@ -2110,6 +2325,7 @@ el-GR:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
         - {}
@@ -2118,6 +2334,7 @@ el-GR:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
         - {}
@@ -2126,6 +2343,7 @@ el-GR:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
         - {}
@@ -2173,6 +2391,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -2181,6 +2400,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -2189,6 +2409,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -2198,6 +2419,7 @@ el-GR:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
         - {}
@@ -2206,6 +2428,7 @@ el-GR:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
         - {}
@@ -2214,6 +2437,7 @@ el-GR:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
         - {}
@@ -2222,12 +2446,14 @@ el-GR:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
         answers:
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         - {}
@@ -2236,6 +2462,7 @@ el-GR:
       courseF_multi_artist_variables3a_predict1:
         answers:
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         - {}
@@ -2244,6 +2471,7 @@ el-GR:
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         - {}
@@ -2252,6 +2480,7 @@ el-GR:
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         - {}
@@ -2260,6 +2489,7 @@ el-GR:
       courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         - {}
@@ -2267,17 +2497,28 @@ el-GR:
         - {}
       courseF_multi_bee_conditionals1_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ, ό,τι κι αν γίνει.
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ μόνο αν υπάρχει ένα λουλούδι από κάτω.
+          correct: true
+          feedback: Σωστά!
+        - text: Η μέλισσα θα κινηθεί προς το σύννεφο και στη συνέχεια δε θα κάνει
+            τίποτα, , ό,τι κι αν γίνει.
         - {}
         questions:
         - {}
+        markdown: "Το σύννεφο μπλοκάρει την θέα. Μπορεί να υπάρχει ένα λουλούδι κάτω
+          από αυτό το σύννεφο. Εάν υπάρχει ένα λουλούδι, η μέλισσα θα πρέπει να συλλέξει
+          νέκταρ **φορά**. \n"
       courseF_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
-        - {}
-        - {}
+          feedback: Σωστά!
+        - text: Η μέλισσα θα προσπαθήσει να πάρει νέκταρ τόσο από τα λουλούδια όσο
+            και από την κηρήθρα.
+        - text: Η μέλισσα θα προσπαθήσει να πάρει μέλι τόσο από τα λουλούδια όσο και
+            από την κηρήθρα.
         - {}
         questions:
         - {}
@@ -2285,6 +2526,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -2293,6 +2535,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -2301,6 +2544,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -2309,6 +2553,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -2333,6 +2578,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -2341,6 +2587,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -2349,6 +2596,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -2357,6 +2605,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -2367,38 +2616,59 @@ el-GR:
         content1: περιγραφή εδώ
       csf_putting_a_stop_to_online_meanness:
         content1: περιγραφή εδώ
+        markdown: Σταματάμε την κακία! Τι πρέπει να κάνετε αν κάποιος σας συμπεριφέρεται
+          με κακία όσο είστε συνδεδεμένος στο διαδίκτυο;
       grade2_multi_collector_A_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Η Laurel θα συλλέξει 4 κομμάτια του θησαυρού χρησιμοποιώντας αυτόν
+            τον κωδικά.
+        - text: Η Laurel θα προσπαθήσει να συλλέξει θησαυρό από ένα μέρος που δεν
+            έχει και αυτό θα προκαλέσει ένα λάθος.
+          correct: true
+          feedback: Σωστά!
+        - text: Η Laurel θα μαζέψει όλο το θησαυρό.
         - {}
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Η Laurel θα συλλέξει 4 κομμάτια του θησαυρού χρησιμοποιώντας αυτόν
+            τον κωδικά.
+        - text: Η Laurel θα προσπαθήσει να συλλέξει θησαυρό από ένα μέρος που δεν
+            έχει και αυτό θα προκαλέσει ένα λάθος.
+          correct: true
+          feedback: Σωστά!
+        - text: Η Laurel θα μαζέψει όλο το θησαυρό.
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε αυτόν τον κώδικα προσεκτικά. Τι νομίζεις ότι θα συμβεί όταν
+            το πρόγραμμα τρέξει;
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Η Laurel θα συλλέξει 4 κομμάτια του θησαυρού χρησιμοποιώντας αυτόν
+            τον κωδικά.
+        - text: Η Laurel θα προσπαθήσει να συλλέξει θησαυρό από ένα μέρος που δεν
+            έχει και αυτό θα προκαλέσει ένα λάθος.
+          correct: true
+          feedback: Σωστά!
+        - text: Η Laurel θα μαζέψει όλο το θησαυρό.
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε αυτόν τον κώδικα προσεκτικά. Τι νομίζεις ότι θα συμβεί όταν
+            το πρόγραμμα τρέξει;
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Η Laurel θα συλλέξει 4 κομμάτια του θησαυρού χρησιμοποιώντας αυτόν
+            τον κωδικά.
+        - text: Η Laurel θα προσπαθήσει να συλλέξει θησαυρό από ένα μέρος που δεν
+            έχει και αυτό θα προκαλέσει ένα λάθος.
+          correct: true
+          feedback: Σωστά!
+        - text: Η Laurel θα μαζέψει όλο το θησαυρό.
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε αυτόν τον κώδικα προσεκτικά. Τι νομίζεις ότι θα συμβεί όταν
+            το πρόγραμμα τρέξει;
       outbreak_story:
         content1: περιγραφή εδώ
         markdown: |-
@@ -2586,58 +2856,78 @@ el-GR:
         content1: περιγραφή εδώ
       courseC_multi_artist_prog6_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Ο καλλιτέχνης θα σχεδιάσει ένα τρίγωνο με τρεις ίσες πλευρές.
+        - text: Ο καλλιτέχνης θα σχεδιάσει μια γραμμή.
+        - text: Ο καλλιτέχνης θα σχεδιάσει ένα τετράγωνο.
+          correct: true
+          feedback: Σωστά!
+        - text: Ο καλλιτέχνης θα σχεδιάσει ένα πεντάγωνο
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Σωστά!
         - text: '15'
         - text: '20'
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Πόσες κολοκύθες θα συλλέξει
+            ο αγρότης όταν κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - correct: true
+        - text: Ο Σκρατ θα φτάσει στο βελανίδι. Δεν υπάρχουν σφάλματα στον κώδικα.
+          feedback: Λάθος Πρώτα, ο Σκρατ στρίβει προς τη λάθος κατεύθυνση και μετά  δεν
+            προχωράει αρκετές φορές μπροστά για να φτάσει το βελανίδι.
+        - text: Ο Σκρατ δε θα φτάσει το βελανίδι επειδή στρίβει λάθος.
+          correct: true
         - correct: true
         - {}
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2021:
         answers:
-        - {}
-        - correct: true
+        - text: Το πουλί θα σταματήσει ένα βήμα πριν φτάσει το γουρούνι.
+          feedback: Λάθος. Αυτός ο κώδικας οδηγεί το Angry Bird τέλεια στο γουρούνι.
+        - text: Το πουλί θα φτάσει στο γουρούνι.
+          correct: true
           feedback: Σωστό!
-        - {}
-        - {}
+        - text: Το πουλί θα πέσει πάνω στο ΤΝΤ.
+          feedback: Λάθος. Αυτός ο κώδικας οδηγεί το Angry Bird τέλεια στο γουρούνι.
+        - text: Το πουλί θα πέσει στον τοίχο.
+          feedback: Λάθος. Αυτός ο κώδικας οδηγεί το Angry Bird τέλεια στο γουρούνι.
         questions:
-        - {}
+        - text: Διαβάστε τον παρακάτω κώδικα πολύ προσεκτικά. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_starWars_predict1_2021:
         answers:
         - {}
         - {}
-        - correct: true
+        - text: Το BB-8 θα κινηθεί 5 φορές και θα πάρει όλα τα άχρηστα μέταλα
+          correct: true
+          feedback: Σωστά!
         - {}
         questions:
         - {}
       courseC_multi_starWars_predict2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Το BB-8 θα μετακινηθεί πολυ μακριά στον πρώτο βρόχο.
+        - text: Το BB-8 δε θα μετακινηθεί αρκετά μακριά στον πρώτο βρόχο ώστε να πάρει
+            όλα τα μέταλλα.
+          correct: true
+          feedback: Σωστά!
+        - text: Το BB-8 θα συλλέξει όλα τα μέταλα χωρίς προβλήματα.
+        - text: Το BB-8 θα στρίψει προς τη λάθος κατεύθυνση μετά τον πρώτο βρόχο.
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
         - text: Α
           correct: true
+          feedback: Σωστά!
         - text: Β
         - text: Γ
         - {}
@@ -2645,34 +2935,62 @@ el-GR:
         - {}
       courseD_multi_bee_conditionals1_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ, ό,τι κι αν γίνει.
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ μόνο αν υπάρχει ένα λουλούδι από κάτω.
+          correct: true
+          feedback: Σωστά!
+        - text: Η μέλισσα θα κινηθεί προς το σύννεφο και στη συνέχεια δε θα κάνει
+            τίποτα, , ό,τι κι αν γίνει.
+        - text: 'Η μέλισσα δε θα φτάσει στο σύννεφο. '
         questions:
-        - {}
+        - text: Το σύννεφο μπλοκάρει την θέα. Μπορεί να υπάρχει ένα λουλούδι κάτω
+            από αυτό το σύννεφο. Εάν υπάρχει ένα λουλούδι, η μέλισσα θα πρέπει να
+            συλλέξει νέκταρ. Αν δεν υπάρχει λουλούδι, η μέλισσα δεν πρέπει να κάνει
+            τίποτα. Ρίξτε μια καλή ματιά στον παρακάτω κώδικα. Τι νομίζετε ότι θα
+            συμβεί αφού κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_bee_conditionals1_predict1_dani:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ, ό,τι κι αν γίνει.
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ μόνο αν υπάρχει ένα λουλούδι από κάτω.
+          correct: true
+          feedback: Σωστά!
+        - text: Η μέλισσα θα κινηθεί προς το σύννεφο και στη συνέχεια δε θα κάνει
+            τίποτα, , ό,τι κι αν γίνει.
         - {}
         questions:
-        - {}
+        - text: Το σύννεφο μπλοκάρει την θέα. Μπορεί να υπάρχει ένα λουλούδι κάτω
+            από αυτό το σύννεφο. Εάν υπάρχει ένα λουλούδι, η μέλισσα θα πρέπει να
+            συλλέξει νέκταρ. Αν δεν υπάρχει λουλούδι, η μέλισσα δεν πρέπει να κάνει
+            τίποτα. Ρίξτε μια καλή ματιά στον παρακάτω κώδικα. Τι νομίζετε ότι θα
+            συμβεί αφού κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Η μέλισσα θα πάρει το νέκταρ από κάθε λουλούδι και θα φτιάξει μέλι
+            σε κάθε κηρήθρα.
+          correct: true
+          feedback: Σωστά!
+        - text: Η μέλισσα θα προσπαθήσει να πάρει νέκταρ τόσο από τα λουλούδια όσο
+            και από την κηρήθρα.
+        - text: Η μέλισσα θα προσπαθήσει να πάρει μέλι τόσο από τα λουλούδια όσο και
+            από την κηρήθρα.
+        - text: Η μέλισσα θα προσπαθήσει να πάρει μέλι και νέκταρ τόσο από λουλούδια
+            όσο και από κηρήθρα.
         questions:
-        - {}
+        - text: 'Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι πιστεύετε ότι θα συμβεί
+            αφού κάνετε κλικ στο "Εκτέλεση"; Θυμηθείτε: θα υπάρχει μόνο μια κηρήθρα
+            ή ένα λουλούδι πίσω από κάθε σύννεφο.'
       courseD_multi_bee_nestedLoops2_predict1_2021:
         answers:
         - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Η μέλισσα θα πάρει μόνο 2 μονάδες νέκταρ.
+        - text: Η μέλισσα θα πάρει όλο το νέκταρ.
+          correct: true
+          feedback: Σωστά!
+        - text: Η μέλισσα θα γυρίσει προς τη λάθος κατεύθυνση.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2021:
@@ -2680,6 +2998,7 @@ el-GR:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Σωστά!
         - text: '10'
         - text: '12'
         questions:
@@ -2689,29 +3008,37 @@ el-GR:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_farmer_while10_predict2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Τιποτα. Αυτός ο κώδικας θα αφήσει μόνο επίπεδο έδαφος.
+        - text: Αυτός ο κώδικας θα αφήσει το σωρό εντελώς ανέγγιχτο.
+          correct: true
+          feedback: Σωστά!
+        - text: Αυτός ο κώδικας θα αφήσει τις τρύπες εντελώς ανέγγιχτες.
+        - text: Αυτός ο κώδικας θα αφήσει την τελευταία τρύπα ανέγγιχτη.
         questions:
-        - {}
+        - text: Ρίξτε μια καλή ματιά στον παρακάτω κώδικα. Τι θα συμβεί στο τέλος
+            αυτού του παζλ;
       courseD_multi_farmer_while4_predict1_2021:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_maze_until10_predict2_2021:
         answers:
         - correct: true
-        - {}
+          feedback: Σωστά!
+        - text: Το ζόμπι θα καταφέρει να φτάσει μέχρι το ηλιοτρόπιο.
         - {}
         - {}
         questions:
@@ -2719,16 +3046,20 @@ el-GR:
       courseD_multi_maze_until2_predict1_2021:
         answers:
         - {}
-        - correct: true
-        - {}
+        - text: Το πουλί θα φτάσει στο γουρούνι.
+          correct: true
+          feedback: Σωστά!
+        - text: Το πουλί θα κινηθεί προς τα μπροστά και θα πέσει πάνω στο ΤΝΤ.
         - {}
         questions:
-        - {}
+        - text: Ρίξτε μια ματιά στον παρακάτω κώδικα. Τι νομίζετε ότι θα συμβεί όταν
+            κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseE_multi_dance_events_predict1_2021:
         answers:
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
         - {}
@@ -2737,6 +3068,7 @@ el-GR:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
         - {}
@@ -2758,12 +3090,14 @@ el-GR:
         - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseF_events_predict_multi:
         answers:
         - {}
@@ -2784,6 +3118,7 @@ el-GR:
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         - {}
@@ -2793,6 +3128,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -2819,6 +3155,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -2829,14 +3166,22 @@ el-GR:
         content1: περιγραφή εδώ
       csf_putting_a_stop_to_online_meanness_2021:
         content1: περιγραφή εδώ
+        markdown: Σταματάμε την κακία! Τι πρέπει να κάνετε αν κάποιος σας συμπεριφέρεται
+          με κακία όσο είστε συνδεδεμένος στο διαδίκτυο;
       grade2_multi_collector_A_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Η Laurel θα συλλέξει 4 κομμάτια του θησαυρού χρησιμοποιώντας αυτόν
+            τον κωδικά.
+        - text: Η Laurel θα προσπαθήσει να συλλέξει θησαυρό από ένα μέρος που δεν
+            έχει και αυτό θα προκαλέσει ένα λάθος.
+          correct: true
+          feedback: Σωστά!
+        - text: Η Laurel θα μαζέψει όλο το θησαυρό.
+        - text: Η Laurel θα συλλέξει 1 κομμάτι του θησαυρού χρησιμοποιώντας αυτόν
+            τον κωδικά.
         questions:
-        - {}
+        - text: Κοιτάξτε αυτόν τον κώδικα προσεκτικά. Τι νομίζεις ότι θα συμβεί όταν
+            το πρόγραμμα τρέξει;
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -3068,6 +3413,9 @@ el-GR:
         - {}
         - {}
         - {}
+        content1: Μια ομάδα φτιάχνει μια εφαρμογή που θα βοηθήσει τους ανθρώπους να
+          αποφασίσουν τι ρούχα θα φορέσουν το πρωί. Συνδυάστε τέσσερα πράγματα που
+          κάνει η εφαρμογή με την είσοδο, την έξοδο, την αποθήκευση και την επεξεργασία.
       CSD U1 IOSP match_2021:
         answers:
         - {}
@@ -3079,6 +3427,9 @@ el-GR:
         - {}
         - {}
         - {}
+        content1: Μια ομάδα φτιάχνει μια εφαρμογή που θα βοηθήσει τους ανθρώπους να
+          αποφασίσουν τι ρούχα θα φορέσουν το πρωί. Συνδυάστε τέσσερα πράγματα που
+          κάνει η εφαρμογή με την είσοδο, την έξοδο, την αποθήκευση και την επεξεργασία.
       CSD U1 IOSP match_2022:
         answers:
         - {}
@@ -3090,6 +3441,9 @@ el-GR:
         - {}
         - {}
         - {}
+        content1: Μια ομάδα φτιάχνει μια εφαρμογή που θα βοηθήσει τους ανθρώπους να
+          αποφασίσουν τι ρούχα θα φορέσουν το πρωί. Συνδυάστε τέσσερα πράγματα που
+          κάνει η εφαρμογή με την είσοδο, την έξοδο, την αποθήκευση και την επεξεργασία.
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -3769,7 +4123,7 @@ el-GR:
         - text: πιγκουίνος
         - text: Βάτραχος
           correct: true
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -3779,7 +4133,7 @@ el-GR:
         - text: πιγκουίνος
         - text: Βάτραχος
           correct: true
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -3789,7 +4143,7 @@ el-GR:
         - text: πιγκουίνος
         - text: Βάτραχος
           correct: true
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -3799,7 +4153,7 @@ el-GR:
           correct: true
         - text: πιγκουίνος
         - text: Βάτραχος
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -3809,7 +4163,7 @@ el-GR:
           correct: true
         - text: πιγκουίνος
         - text: Βάτραχος
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -3819,7 +4173,7 @@ el-GR:
           correct: true
         - text: πιγκουίνος
         - text: Βάτραχος
-        - {}
+        - text: καμηλοπάρδαλη
         - {}
         questions:
         - {}
@@ -4920,7 +5274,7 @@ el-GR:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: Ανάπτυξη διαδικτύου
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true
@@ -8244,10 +8598,14 @@ el-GR:
         - {}
       csp-pre-survey-2017-q16_2022:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Συμφωνώ απόλυτα
+          correct: true
+        - text: Συμφωνώ
+          correct: true
+        - text: Συμφωνώ ελαφρώς
+          correct: true
+        - text: Τίποτα από τα δύο
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -8852,11 +9210,13 @@ el-GR:
       csp-pre-survey-2017-q3_2022:
         answers:
         - correct: true
+        - text: Συμφωνώ
+          correct: true
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
-        - correct: true
+        - text: Διαφωνώ
+          correct: true
         - correct: true
         questions:
         - {}
@@ -8918,7 +9278,8 @@ el-GR:
       csp-pre-survey-2017-q4_2022:
         answers:
         - correct: true
-        - correct: true
+        - text: Συμφωνώ
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -9060,6 +9421,55 @@ el-GR:
         - {}
       csp_unit_assessment_overview:
         content1: περιγραφή εδώ
+        teacher_markdown: "### ΠΡΟΣΟΧΗ: Τι είναι και τι δεν είναι αυτή η αξιολόγηση\n\n*
+          Αυτή η αξιολόγηση είναι **σχεδιασμένη ώστε να είναι του \"στυλ\" αξιολογήσεων
+          πολλαπλών επιλογών AP**.\n\n* Αυτό σημαίνει ότι οι ερωτήσεις **δεν αναφέρονται**
+          συγκεκριμένα σε μαθήματα που καλύπτονται πριν από αυτό το σημείο. Αντιθέτως,
+          οι ερωτήσεις σχετίζονται με τους υποκείμενους στόχους εκμάθησης AP στους
+          οποίους έχει γίνει αναφορά στη θεωρία.\n\n* **Σημαίνει ότι** οι μαθητές
+          ενδέχεται να χρειαστεί να κάνουν κάποιες δικές τους συναγωγές από αυτά που
+          έμαθαν για να απαντήσουν στις ερωτήσεις.\n\n* **Σημαίνει ότι** οι ερωτήσεις
+          μπορεί να είναι \"δύσκολες\", ειδικά για αυτούς που τις συναντούν πρώτη
+          φορά.\n\nΟπότε, γενικά, **ΧΡΗΣΙΜΟΠΟΙΕΙΤΕ ΤΗ ΜΕ ΠΡΟΣΟΧΗ**\n\n* Χρησιμοποιείτε
+          την κρίση σας για τη βαρύτητα που προσδίδετε σε αυτή την αξιολόγηση.\n\t*
+          Δεν χρειάζεται να χρησιμοποιείτε αυτή την αξιολόγηση για να βαθμολογήσετε
+          τους μαθητές, ή...\n    * Μπορείτε να βαθμολογήσετε τους μαθητές με διαφορετικό
+          τρόπο από το να τους εκχωρήσετε απλά το % των ορθών απαντήσεων.\n\n* Βεβαιωθείτε
+          ότι θα τη χρησιμοποιήσετε με τρόπο που θα διατηρηθεί το πνεύμα του μαθήματος
+          όσο αφορά στη διερεύνηση της γνώσης.\n\t* Εάν φοβάστε ότι οι μαθητές θα
+          αποκαρδιωθούν, τότε αλλάξτε το πλαίσιο της αξιολόγησης και προβάλετέ την
+          ως ευκαιρία διερεύνησης -- αφήστε τους μαθητές να δοκιμάσουν τις ερωτήσεις,
+          και μετά να αναζητήσουν μόνοι τους τις απαντήσεις και να αλλάξουν αυτά που
+          έκαναν λάθος, ή να αναπτύξουν τις δικές τους ερωτήσεις.\n\n\n---\n\n####
+          Συχνές ερωτήσεις -- Πώς προετοιμάζονται, χορηγούνται και αναθεωρούνται οι
+          αξιολογήσεις\n\nΔείτε το τρέχον **[Έγγραφο συχνών Ερωτήσεων εδώ](https://docs.google.com/document/d/1zEpD1PFt6ec2S8ourxuMH0HD6tiyRvqAGUKGDCOt-qs/edit#heading=h.kewgp6z8qdde)**
+          το οποίο:\n\n* περιέχει στιγμιότυπα οθόνης για το πώς γίνεται η προετοιμασία,
+          η χορήγηση και η αναθεώρηση αξιολογήσεων\n* εξετάζει συχνά θέματα / προβλήματα\n\n\n####
+          Σύντομη σύνοψη για το πώς να βλέπετε / αναθεωρείτε τις απαντήσεις των μαθητών\n\n1.
+          Μεταβείτε στον [Πίνακα Ελέγχου Καθηγητή](https://code.org/teacher-dashboard#/)
+          σας\n2. Επιλέξτε την ενότητα CS Principles\n3. Θα δείτε έναν αριθμό μωβ
+          ετικετών που περιλαμβάνουν Αποκρίσεις Κειμένου, Αξιολογήσεις κλπ.\n4. Κάντε
+          κλικ στο **Αξιολογήσεις / Ερωτηματολόγια**\n5. Στο πτυσσόμενο μενού επιλογής
+          μαθημάτων, **επιλέξτε την ενότητα στην οποία εμφανίστηκε αυτή η αξιολόγηση
+          (π.χ. Ενότητα 1: Το Διαδίκτυο)**\n6. Για όλους τους μαθητές που έχουν *υποβάλει*
+          την αξιολόγησή τους, θα δείτε δύο πίνακες:\n   * Ο πρώτος πίνακας είναι
+          μια συνοπτική προβολή που συνοψίζει το ποσοστό ορθών απαντήσεων από όλους
+          τους μαθητές που την υπέβαλαν, συμπεριλαμβανομένης της χρονοσφραγίδας κατά
+          την υποβολή τους\n   * Ο δεύτερος πίνακας είναι ένας αναλυτικός κατάλογος
+          της κάθε απάντησης σε κάθε ερώτηση που υποβλήθηκε από κάθε μαθητή\n\n    Πάνω
+          από τους δύο αυτούς πίνακες υπάρχει ένα κουμπί **Λήψης (ή εξαγωγής) ως csv**
+          που σας επιτρέπει να επεξεργαστείτε τις απαντήσεις σε ένα υπολογιστικό φύλλο
+          (συνιστάται).\n\n7. Εάν χρειαστεί να επιτρέψετε σε έναν μαθητή να ΑΝΑΙΡΕΣΕΙ
+          ΤΗΝ ΥΠΟΒΟΛΗ της εξέτασής του/της, ζητήστε τους να μεταβούν στην τελευταία
+          σελίδα της εξέτασης και να πατήσουν το \"Αναίρεση Υποβολής\" (Unsubmit).\n\n**ΣΗΜΕΙΩΣΗ
+          για την ΑΝΑΙΡΕΣΗ ΥΠΟΒΟΛΗΣ:** \n\nΘα πρέπει να κάνετε σαφείς κανόνες με τους
+          μαθητές σας σχετικά με την αναίρεση της υποβολής μιας εξέτασης. Οι μαθητές
+          μπορεί να πιστεύουν ότι αυτός είναι ένας καλός τρόπος για να αλλάξουν μια
+          απάντηση μετά την ολοκλήρωση της εξέτασης (δηλαδή, να εξαπατήσουν), αλλά
+          θα φαίνεται η χρονική σήμανση για το πότε ο μαθητής υπέβαλε την εξέταση.\n\nΠροτείνεται
+          να καθιερώσετε απλά ότι δεν θα εξετάσετε το ενδεχόμενο να διόρθωσης ή βαθμολόγησης
+          καμίας εξέτασης μετά από ένα συγκεκριμένο χρονικό σημείο. Εάν δεν υποβλήθηκε
+          πριν από την καθορισμένη προθεσμία, είναι σαν να μην τη λάβατε.\n"
       curriculum-how-challenging:
         answers:
         - correct: true
@@ -9620,12 +10030,18 @@ el-GR:
         - {}
       reasons-took-course:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Είχα φίλους που το έπαιρναν
+          correct: true
+        - text: Μου αρέσει πολύ ο δάσκαλος
+          correct: true
+        - text: Σκέφτηκα ότι θα είχε πλάκα.
+          correct: true
+        - text: Ήθελα να μάθω περισσότερα για την επιστήμη των υπολογιστών
+          correct: true
+        - text: Νόμιζα ότι θα ήταν εύκολο.
+          correct: true
+        - text: Σκέφτηκα ότι θα ήταν μια πρόκληση
+          correct: true
         - correct: true
         - correct: true
         - correct: true
@@ -9635,24 +10051,36 @@ el-GR:
         - {}
       reasons-took-course-csd_2021:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Είχα φίλους που το έπαιρναν
+          correct: true
+        - text: Μου αρέσει πολύ ο δάσκαλος
+          correct: true
+        - text: Σκέφτηκα ότι θα είχε πλάκα.
+          correct: true
+        - text: Ήθελα να μάθω περισσότερα για την επιστήμη των υπολογιστών
+          correct: true
+        - text: Νόμιζα ότι θα ήταν εύκολο.
+          correct: true
+        - text: Σκέφτηκα ότι θα ήταν μια πρόκληση
+          correct: true
         - correct: true
         - correct: true
         questions:
         - {}
       reasons-took-course-csd_2022:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Είχα φίλους που το έπαιρναν
+          correct: true
+        - text: Μου αρέσει πολύ ο δάσκαλος
+          correct: true
+        - text: Σκέφτηκα ότι θα είχε πλάκα.
+          correct: true
+        - text: Ήθελα να μάθω περισσότερα για την επιστήμη των υπολογιστών
+          correct: true
+        - text: Νόμιζα ότι θα ήταν εύκολο.
+          correct: true
+        - text: Σκέφτηκα ότι θα ήταν μια πρόκληση
+          correct: true
         - correct: true
         - correct: true
         questions:
@@ -9747,7 +10175,8 @@ el-GR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Θα είμαι πραγματικά σε θέση να είμαι ο εαυτός μου σε αυτό το μάθημα
+            της επιστήμης των υπολογιστών.
       will-be-myself-in-cs_2021:
         answers:
         - correct: true
@@ -9758,7 +10187,8 @@ el-GR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Θα είμαι πραγματικά σε θέση να είμαι ο εαυτός μου σε αυτό το μάθημα
+            της επιστήμης των υπολογιστών.
       will-be-myself-in-cs_2022:
         answers:
         - correct: true
@@ -9769,7 +10199,8 @@ el-GR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Θα είμαι πραγματικά σε θέση να είμαι ο εαυτός μου σε αυτό το μάθημα
+            της επιστήμης των υπολογιστών.
       worried-less-capable:
         answers:
         - correct: true
@@ -9780,7 +10211,8 @@ el-GR:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Ανησυχώ ότι οι άλλοι θα με θεωρήσουν λιγότερο ικανό στην επιστήμη
+            των υπολογιστών.
       worried-seen-incapable:
         answers:
         - correct: true
@@ -9894,57 +10326,79 @@ el-GR:
           πόλη.\n\n"
       courseC_multi_artist_prog6_predict12022:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Ο καλλιτέχνης θα σχεδιάσει ένα τρίγωνο με τρεις ίσες πλευρές.
+        - text: Ο καλλιτέχνης θα σχεδιάσει μια γραμμή.
+        - text: Ο καλλιτέχνης θα σχεδιάσει ένα τετράγωνο.
+          correct: true
+          feedback: Σωστά!
+        - text: Ο καλλιτέχνης θα σχεδιάσει ένα πεντάγωνο
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_harvester_loops11_predict12022:
         answers:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Σωστά!
         - text: '15'
         - text: '20'
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Πόσες κολοκύθες θα συλλέξει
+            ο αγρότης όταν κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
+        - text: Ο Σκρατ θα φτάσει στο βελανίδι. Δεν υπάρχουν σφάλματα στον κώδικα.
+          feedback: Λανθασμένο. Ο Σκρατ δεν θα φτάσει το βελανίδι επειδή στρίβει λάθος.
+        - text: Ο Σκρατ δε θα φτάσει το βελανίδι επειδή στρίβει λάθος.
+          correct: true
+          feedback: Σωστό! Ο Σκρατ γυρίζει προς τη λάθος κατεύθυνση και δεν θα φτάσει
+            στο βελανίδι.
+        - feedback: Λανθασμένο. Ο Σκρατ δεν θα φτάσει το βελανίδι επειδή στρίβει λάθος.
+        - feedback: Ο Σκρατ δε θα φτάσει το βελανίδι επειδή στρίβει λάθος.
         questions:
         - {}
       courseC_multi_maze_programming8_predict12022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Το πουλί θα σταματήσει ένα βήμα πριν φτάσει το γουρούνι.
+          feedback: Λάθος. Αυτός ο κώδικας οδηγεί το Angry Bird τέλεια στο γουρούνι.
+        - text: Το πουλί θα φτάσει στο γουρούνι.
+          correct: true
+          feedback: Σωστό!
+        - text: Το πουλί θα πέσει πάνω στο ΤΝΤ.
+          feedback: Λάθος. Αυτός ο κώδικας οδηγεί το Angry Bird τέλεια στο γουρούνι.
+        - text: Το πουλί θα πέσει στον τοίχο.
+          feedback: Λάθος. Αυτός ο κώδικας οδηγεί το Angry Bird τέλεια στο γουρούνι.
         questions:
-        - {}
+        - text: Διαβάστε τον παρακάτω κώδικα πολύ προσεκτικά. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_starWars_predict12022:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Το ΒΒ-8 δεν θα κινηθεί.
+        - text: Ο BB-8 θα κινηθεί μόνο ένα τετράγωνο.
+        - text: Το BB-8 θα κινηθεί 5 φορές και θα πάρει όλα τα άχρηστα μέταλα
+          correct: true
+          feedback: Σωστά!
+        - text: Το BB-8 θα μετακινηθεί μόνο 3 τετράγωνα.
         questions:
-        - {}
+        - text: Τι νομίζετε ότι θα συμβεί όταν κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseC_multi_starWars_predict22022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Το BB-8 θα μετακινηθεί πολυ μακριά στον πρώτο βρόχο.
+        - text: Το BB-8 δε θα μετακινηθεί αρκετά μακριά στον πρώτο βρόχο ώστε να πάρει
+            όλα τα μέταλλα.
+          correct: true
+          feedback: Σωστά!
+        - text: Το BB-8 θα συλλέξει όλα τα μέταλα χωρίς προβλήματα.
+        - text: Το BB-8 θα στρίψει προς τη λάθος κατεύθυνση μετά τον πρώτο βρόχο.
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_artist_nestedLoops9_predict12022:
         answers:
         - text: Α
           correct: true
+          feedback: Σωστά!
         - text: Β
         - text: Γ
         - {}
@@ -9952,26 +10406,45 @@ el-GR:
         - {}
       courseD_multi_bee_conditionals1_predict12022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ, ό,τι κι αν γίνει.
+        - text: Η μέλισσα θα μετακινηθεί προς το σύννεφο και θα προσπαθήσει να πάρει
+            νέκταρ μόνο αν υπάρχει ένα λουλούδι από κάτω.
+          correct: true
+          feedback: Σωστά!
+        - text: Η μέλισσα θα κινηθεί προς το σύννεφο και στη συνέχεια δε θα κάνει
+            τίποτα, , ό,τι κι αν γίνει.
+        - text: 'Η μέλισσα δε θα φτάσει στο σύννεφο. '
         questions:
-        - {}
+        - text: Το σύννεφο μπλοκάρει την θέα. Μπορεί να υπάρχει ένα λουλούδι κάτω
+            από αυτό το σύννεφο. Εάν υπάρχει ένα λουλούδι, η μέλισσα θα πρέπει να
+            συλλέξει νέκταρ. Αν δεν υπάρχει λουλούδι, η μέλισσα δεν πρέπει να κάνει
+            τίποτα. Ρίξτε μια καλή ματιά στον παρακάτω κώδικα. Τι νομίζετε ότι θα
+            συμβεί αφού κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_bee_conditionals7_predict22022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Η μέλισσα θα πάρει το νέκταρ από κάθε λουλούδι και θα φτιάξει μέλι
+            σε κάθε κηρήθρα.
+          correct: true
+          feedback: Σωστά!
+        - text: Η μέλισσα θα προσπαθήσει να πάρει νέκταρ τόσο από τα λουλούδια όσο
+            και από την κηρήθρα.
+        - text: Η μέλισσα θα προσπαθήσει να πάρει μέλι τόσο από τα λουλούδια όσο και
+            από την κηρήθρα.
+        - text: Η μέλισσα θα προσπαθήσει να πάρει μέλι και νέκταρ τόσο από λουλούδια
+            όσο και από κηρήθρα.
         questions:
-        - {}
+        - text: 'Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι πιστεύετε ότι θα συμβεί
+            αφού κάνετε κλικ στο "Εκτέλεση"; Θυμηθείτε: θα υπάρχει μόνο μια κηρήθρα
+            ή ένα λουλούδι πίσω από κάθε σύννεφο.'
       courseD_multi_bee_nestedLoops2_predict12022:
         answers:
         - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Η μέλισσα θα πάρει μόνο 2 μονάδες νέκταρ.
+        - text: Η μέλισσα θα πάρει όλο το νέκταρ.
+          correct: true
+          feedback: Σωστά!
+        - text: Η μέλισσα θα γυρίσει προς τη λάθος κατεύθυνση.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict22022:
@@ -9979,6 +10452,7 @@ el-GR:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Σωστά!
         - text: '10'
         - text: '12'
         questions:
@@ -9988,46 +10462,64 @@ el-GR:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί όταν κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_farmer_while10_predict22022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Τιποτα. Αυτός ο κώδικας θα αφήσει μόνο επίπεδο έδαφος.
+        - text: Αυτός ο κώδικας θα αφήσει το σωρό εντελώς ανέγγιχτο.
+          correct: true
+          feedback: Σωστά!
+        - text: Αυτός ο κώδικας θα αφήσει τις τρύπες εντελώς ανέγγιχτες.
+        - text: Αυτός ο κώδικας θα αφήσει την τελευταία τρύπα ανέγγιχτη.
         questions:
-        - {}
+        - text: Ρίξτε μια καλή ματιά στον παρακάτω κώδικα. Τι θα συμβεί στο τέλος
+            αυτού του παζλ;
       courseD_multi_farmer_while4_predict12022:
         answers:
-        - {}
-        - {}
+        - text: Τίποτα δεν θα συμβεί.
+        - text: Ο αγρότης δεν θα σταματήσει ποτέ να αφαιρεί χώμα.
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseD_multi_maze_until10_predict22022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Το ζόμπι θα περάσει από το σωστό μονοπάτι και θα καταλήξει να πηγαινοέρχεται
+            για πάντα.
+          correct: true
+          feedback: Σωστά!
+        - text: Το ζόμπι θα καταφέρει να φτάσει μέχρι το ηλιοτρόπιο.
+          feedback: Το ζόμπι θα περάσει από το σωστό μονοπάτι και θα καταλήξει να
+            πηγαινοέρχεται για πάντα.
+        - feedback: Το ζόμπι θα περάσει από το σωστό μονοπάτι και θα καταλήξει να
+            πηγαινοέρχεται για πάντα.
+        - feedback: Το ζόμπι θα περάσει από το σωστό μονοπάτι και θα καταλήξει να
+            πηγαινοέρχεται για πάντα.
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
         answers:
         - {}
-        - correct: true
-        - {}
+        - text: Το πουλί θα φτάσει στο γουρούνι.
+          correct: true
+          feedback: Σωστά!
+        - text: Το πουλί θα κινηθεί προς τα μπροστά και θα πέσει πάνω στο ΤΝΤ.
         - {}
         questions:
-        - {}
+        - text: Ρίξτε μια ματιά στον παρακάτω κώδικα. Τι νομίζετε ότι θα συμβεί όταν
+            κάνετε κλικ στο κουμπί «Εκτέλεση»;
       courseE_multi_farmer_functions11_predict2022:
         answers:
         - {}
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
         - {}
@@ -10041,12 +10533,14 @@ el-GR:
         - {}
       courseE_swim_fish_behavior_predict12022:
         answers:
-        - {}
+        - text: Τίποτα δε θα συμβεί.
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         questions:
-        - {}
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
       courseF_events_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - {}
@@ -10057,12 +10551,18 @@ el-GR:
         - {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Ο χαρακτήρας που κάνετε κλικ θα γίνει μεγαλύτερος.
+          correct: true
+          feedback: Σωστά! Ο χαρακτήρας που κάνετε κλικ θα γίνει μεγαλύτερος.
+        - text: Ο χαρακτήρας που κάνετε κλικ θα γίνει μεγαλύτερος.
+          feedback: Λάθος. Ο χαρακτήρας που κάνατε κλικ θα γίνει μεγαλύτερος.
+        - text: Όλοι οι χαρακτήρες θα γίνουν μεγαλύτεροι.
+          feedback: Λάθος. Ο χαρακτήρας που κάνατε κλικ θα γίνει μεγαλύτερος.
+        - text: Όλοι οι χαρακτήρες θα γίνουν μικρότεροι.
+          feedback: Λάθος. Ο χαρακτήρας που κάνατε κλικ θα γίνει μεγαλύτερος.
         questions:
-        - {}
+        - text: 'Κάντε μία πρόβλεψη: Αφού πατήσετε Εκτέλεση, τί θα συμβεί όταν κάνετε
+            κλικ σε έναν χαρακτήρα;'
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - {}
@@ -10075,6 +10575,7 @@ el-GR:
       courseF_multi_artist_variables3a_predict12022:
         answers:
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         - {}
@@ -10084,6 +10585,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -10098,20 +10600,40 @@ el-GR:
         - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Το λαγουδάκι θα πει "5".
+          correct: true
+          feedback: Σωστό! Ο αριθμός 5 αποθηκεύεται στη μεταβλητή και στη συνέχεια
+            χρησιμοποιείται ξανά όταν μιλάει ο χαρακτήρας.
+        - text: Το κουνελάκι θα πει ό, τι αριθμό πληκτρολογείται.
+          feedback: Λανθασμένο. Δεν υπάρχει προτροπή σε αυτό το πρόγραμμα. Ο αριθμός
+            ορίζεται απευθείας στον κώδικα.
+        - text: Το λαγουδάκι θα πει «μέτρησε».
+          feedback: Λανθασμένο. Το «count» είναι μια μεταβλητή. Όταν αυτό το μπλοκ
+            τρέχει, παίρνει τον αριθμό που είναι αποθηκευμένος. Το λαγουδάκι θα πει
+            "5".
+        - text: Τίποτα δε θα συμβεί, γιατί το «count» δεν είναι αριθμός.
+          feedback: Λανθασμένο. Ο αριθμός 5 αποθηκεύεται στη μεταβλητή και χρησιμοποιείται
+            όταν μιλάει ο χαρακτήρας.
         questions:
-        - {}
+        - text: 'Κάντε μια πρόβλεψη: Τι θα πει το λαγουδάκι;'
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Το πρόγραμμα θα εκτυπώσει όποιον αριθμό πληκτρολογηθεί.
+          feedback: Λανθασμένο. Ο αριθμός αποθηκεύεται στη μεταβλητή και χρησιμοποιείται
+            για τη δημιουργία χαρακτήρων καρότου.
+        - text: Το κουνελάκι θα πει ό, τι αριθμό πληκτρολογείται.
+          feedback: Λανθασμένο. Ο αριθμός αποθηκεύεται στη μεταβλητή και χρησιμοποιείται
+            για τη δημιουργία χαρακτήρων καρότου.
+        - text: Το πρόγραμμα θα κάνει τόσα πολλά νέα καρότα.
+          correct: true
+          feedback: Σωστό! Ο αριθμός των χαρακτήρων που γίνονται είναι ο αριθμός που
+            είναι αποθηκευμένος στη μεταβλητή.
+        - text: Τίποτα δε θα συμβεί, γιατί το «count» δεν είναι αριθμός.
+          feedback: Λανθασμένο. Ο αριθμός αποθηκεύεται στη μεταβλητή και χρησιμοποιείται
+            για τη δημιουργία χαρακτήρων καρότου.
         questions:
-        - {}
+        - text: 'Κάντε μια πρόβλεψη: Τι θα συμβεί μετά την πληκτρολόγηση ενός αριθμού
+            στην προτροπή;'
       courseF_variables_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - {}
@@ -10126,6 +10648,7 @@ el-GR:
         answers:
         - {}
         - correct: true
+          feedback: Σωστά!
         - {}
         - {}
         questions:
@@ -10136,11 +10659,502 @@ el-GR:
         content1: περιγραφή εδώ
       csf_putting_a_stop_to_online_meanness2022:
         content1: περιγραφή εδώ
+        markdown: Σταματάμε την κακία! Τι πρέπει να κάνετε αν κάποιος σας συμπεριφέρεται
+          με κακία όσο είστε συνδεδεμένος στο διαδίκτυο;
       grade2_multi_collector_A_predict12022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Η Laurel θα συλλέξει 4 κομμάτια του θησαυρού χρησιμοποιώντας αυτόν
+            τον κωδικά.
+        - text: Η Laurel θα προσπαθήσει να συλλέξει θησαυρό από ένα μέρος που δεν
+            έχει και αυτό θα προκαλέσει ένα λάθος.
+          correct: true
+          feedback: Σωστά!
+        - text: Η Laurel θα μαζέψει όλο το θησαυρό.
+        - text: Η Laurel θα συλλέξει 1 κομμάτι του θησαυρού χρησιμοποιώντας αυτόν
+            τον κωδικά.
+        questions:
+        - text: Κοιτάξτε αυτόν τον κώδικα προσεκτικά. Τι νομίζεις ότι θα συμβεί όταν
+            το πρόγραμμα τρέξει;
+      CSD Student End of Unit Survey - Unit 1_2022:
+        title: 'Ανακαλύψετε την Επιστήμη Υπολογιστών:  Έρευνα κατά το τέλος της ενότητας!'
+      CourseE_Lesson_11_Artist_Practice_2022:
+        description: Σπουδαία δουλειά μέχρι τώρα! Επιλέξτε την επόμενη δραστηριότητά
+          σας. Ολοκλήρωσε όσα περισσότερα μπορείς. Συνεχίστε την εξάσκηση με τους
+          εμφωλευμένους βρόχους και τον Καλλιτέχνη!
+      CourseE_Lesson_7_Artist_Practice_2022:
+        description: Σπουδαία δουλειά μέχρι τώρα! Επιλέξτε την επόμενη δραστηριότητά
+          σας. Ολοκλήρωσε όσα περισσότερα μπορείς. Συνεχίστε την εξάσκηση με τους
+          εμφωλευμένους βρόχους και τον Καλλιτέχνη!
+      GoingPlacesSafely-unplugged:
+        markdown: |
+          # Πηγαίνοντας σε μέρη με ασφάλεια
+
+          Το Διαδίκτυο είναι ένα ισχυρό, αλλά μερικές φορές επικίνδυνο μέρος. Μείνετε ασφαλείς κατά την πλοήγηση στο Internet!
+
+          <p align=center>
+      HappyMaps-Unplugged:
+        markdown: |
+          # Χαρούμενοι Χάρτες
+
+          Δημιουργήστε έναν αλγόριθμο για να μετακινήσετε ένα χαρακτήρα μέσα σε ένα λαβύρινθο.
+      HappyMaps-Unplugged2022:
+        markdown: |
+          # Χαρούμενοι Χάρτες
+
+          Δημιουργήστε έναν αλγόριθμο για να μετακινήσετε ένα χαρακτήρα μέσα σε ένα λαβύρινθο.
+      HappyMaps-Unplugged_2020:
+        markdown: |
+          # Χαρούμενοι Χάρτες
+
+          Δημιουργήστε έναν αλγόριθμο για να μετακινήσετε ένα χαρακτήρα μέσα σε ένα λαβύρινθο.
+      HappyMaps-Unplugged_2021:
+        markdown: |
+          # Χαρούμενοι Χάρτες
+
+          Δημιουργήστε έναν αλγόριθμο για να μετακινήσετε ένα χαρακτήρα μέσα σε ένα λαβύρινθο.
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
         questions:
         - {}
+      courseAB_EOC2022:
+        display_name: Έργο Λήξη Μαθήματος
+      courseAB_EOC_2021:
+        display_name: Έργο Λήξη Μαθήματος
+      courseB_EOC2022:
+        display_name: Έργο Λήξη Μαθήματος
+      courseB_EOC_2021:
+        display_name: Έργο Λήξη Μαθήματος
+      courseD_EOC2022:
+        display_name: Έργο Λήξη Μαθήματος
+        description: Έχετε φτάσει στο τελευταίο μάθημα του μαθήματος Δ! Επιλέξτε να
+          δημιουργήσετε ένα project.
+      courseD_EOC_2020:
+        display_name: Έργο Λήξη Μαθήματος
+        description: Έχετε φτάσει στο τελευταίο μάθημα του μαθήματος Δ! Επιλέξτε να
+          δημιουργήσετε ένα project.
+      courseD_EOC_2021:
+        display_name: Έργο Λήξη Μαθήματος
+        description: Έχετε φτάσει στο τελευταίο μάθημα του μαθήματος Δ! Επιλέξτε να
+          δημιουργήσετε ένα project.
+      courseE_EOC2022:
+        display_name: Έργο Λήξη Μαθήματος
+      courseE_EOC_2020:
+        display_name: Έργο Λήξη Μαθήματος
+      courseE_EOC_2021:
+        display_name: Έργο Λήξη Μαθήματος
+      courseE_EOC_examples2022:
+        display_name: Έργο Λήξη Μαθήματος
+      courseE_EOC_examples_2021:
+        display_name: Έργο Λήξη Μαθήματος
+      courseExpress_EOC_2020:
+        display_name: Έργο Λήξη Μαθήματος
+      courseF_EOC_2020:
+        display_name: Έργο Λήξη Μαθήματος
+      courseF_EOC_2021:
+        display_name: Έργο Λήξη Μαθήματος
+      courseF_EOC_examples2022_2022_pilot_-2022-2:
+        display_name: Έργο Λήξη Μαθήματος
+      courseF_EOC_examples_2021:
+        display_name: Έργο Λήξη Μαθήματος
+      courseF_EOC_samples2022:
+        display_name: Έργο Λήξη Μαθήματος
+        description: Είστε έτοιμοι να ξεκινήσετε την τελική σας εργασία. Πριν ξεκινήσετε,
+          αφιερώστε λίγο χρόνο εξετάζοντας τα παραδείγματά.
+      courseF_EOC_samples_2021:
+        display_name: Έργο Λήξη Μαθήματος
+        description: Είστε έτοιμοι να ξεκινήσετε την τελική σας εργασία. Πριν ξεκινήσετε,
+          αφιερώστε λίγο χρόνο εξετάζοντας τα παραδείγματά.
+      courseF_intro_apps2022_2022_pilot_-2022-2:
+        description: Όλα αυτά τα έργα δημιουργήθηκαν με το Εργαστήριο Χαρακτήρων.
+          Δοκίμασέ τα τώρα για να δείς τί είναι δυνατό. Με την ολοκλήρωση αυτού του
+          μαθήματος, θα είσαι σε θέση να δημιουργείς τα δικά σου έργα σαν αυτά...
+          και άλλα πολλά!
+      csf_digital_trails:
+        markdown: |
+          # Ακολουθήστε το Ψηφιακό Ίχνος
+
+          ## Τι πληροφορίες είναι εντάξει να έχετε στο ψηφιακό σας αποτύπωμα;
+      csf_digital_trails2022:
+        markdown: |
+          # Ακολουθήστε το Ψηφιακό Ίχνος
+
+          ## Τι πληροφορίες είναι εντάξει να έχετε στο ψηφιακό σας αποτύπωμα;
+      csf_digital_trails_2021:
+        markdown: |
+          # Ακολουθήστε το Ψηφιακό Ίχνος
+
+          ## Τι πληροφορίες είναι εντάξει να έχετε στο ψηφιακό σας αποτύπωμα;
+      express_EOC2022:
+        display_name: Έργο Λήξη Μαθήματος
+      express_EOC_2021:
+        display_name: Έργο Λήξη Μαθήματος
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Τίποτα δεν θα συμβεί.
+        - {}
+        - correct: true
+          feedback: Σωστά!
+        - {}
+        questions:
+        - text: Κοιτάξτε προσεκτικά τον παρακάτω κώδικα. Τι θα συμβεί αφού κάνετε
+            κλικ στο κουμπί «Εκτέλεση»;
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |
+          # Κινήσου, Κινήσου
+
+          Χρησιμοποιήστε ένα χάρτη και δώστε εντολές για να φτάσετε στο στόχο.
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        teacher_markdown: |
+          **Παρακαλούμε να ζητήσετε από τους μαθητές σας να συμπληρώσουν αυτό το ερωτηματολόγιο!!!**
+
+          * Μπορείτε να δείτε ανώνυμα αποτελέσματα της έρευνας στον πίνακα ελέγχου καθηγητή σας
+          * Τα αποτελέσματα είναι ζωτικής σημασίας για εμάς (code.org) για να είναι βιώσιμα τα μαθήματά μας και να κάνουμε βελτιώσεις.
+          * Θα υπάρξει επίσης ένα ερωτηματολόγιο για τους δασκάλους, όπου μπορείτε να δώσετε τα δικά σας στοιχεία, για το οποίο θα ειδοποιηθείτε μέσω email.
+
+          **Σημείωση:**
+
+          * Το κουμπί σε αυτή τη σελίδα κάνει ανακατεύθυνση στο [studio.code.org/s/csp-post-survey](https://studio.code.org/s/csp-post-survey)
+          * Εάν προτιμάτε, μπορείτε να ορίσετε το "Ερωτηματολόγιο για μαθητές μετά τα μαθήματα" ως το τρέχον κεφάλαιο για την ενότητα σας από το αναπτυσσόμενο μενού στον πίνακα ελέγχου καθηγητή.
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |
+          # Η Διαδικτυακή μου Γειτονιά
+
+          ## Πώς μπορείτε να πάτε σε μέρη με ασφάλεια στο διαδίκτυο;
+      OPD-K5 Outline:
+        markdown: |
+          # Ξεκινώντας > Επισκόπηση μαθήματος
+
+          Το μάθημα χωρίζεται σε ένδεκα στάδια και κάθε στάδιο αποτελείται από «επίπεδα» ή «παζλ». Ακολουθεί μια επισκόπηση του τι θα μάθετε εάν ολοκληρώσετε το μάθημα:
+
+          ## Στάδιο 1: Ξεκινώντας (10-30 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 1:
+
+          - Θα έχετε δει ξανά τις λεπτομέρειες του μαθήματος
+          - Θα έχετε κάνει πρακτική χρησιμοποιώντας το Code.org ως πλατφόρμα εκμάθησης
+          - Θα έχετε σχεδιάσει τη συμμετοχή σας σε αυτό το μάθημα
+
+          ## Στάδιο 2: Βασικά της Επιστήμης των Υπολογιστών (CSF) (10-30 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 2:
+
+          - Θα ορίζετε την επιστήμη των υπολογιστών και θα έχετε αναθεωρήσει το βασικό λεξιλόγιο
+          - Θα έχετε προσδιορίσει τα οφέλη της διδασκαλίας και της εκμάθησης της επιστήμης των υπολογιστών
+          - Θα διακρίνετε μεταξύ της "κωδικοποίησης" και της "επιστήμης υπολογιστών"
+          - Θα μπορείτε να εξηγήσετε τα πλεονεκτήματα του να ξεκινήσετε να κωδικοποιείτε χρησιμοποιώντας οπτικό προγραμματισμό
+
+          ## Στάδιο 3: Κοιτώντας Εμπρός (10 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 3:
+
+          - Θα προετοιμαστείτε να «κατακτήσετε τα βασικά» της επιστήμης των υπολογιστών αναθεωρώντας τι ακολουθεί στο μάθημα
+
+          ## Στάδιο 4: Κατακτώντας τα βασικά: Αλληλούχηση (10-30 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 4:
+
+          - Θα ορίζετε τις έννοιες "πρόγραμμα" και "αλγόριθμος"
+          - Θα χρησιμοποιείτε τη μηχανή οπτικού προγραμματισμού Code.org για να γράφετε απλά προγράμματα
+          - Θα σκέπτεστε την εφαρμογή στην τάξη
+
+          ## Στάδιο 5: Κατακτώντας τα βασικά: Βρόχοι (20-45 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 5:
+
+          - Θα ορίζετε τους «βρόχους» και θα εξηγείτε τη σημασία τους
+          - Θα έχετε εξασκηθεί στην κωδικοποίηση απλών βρόχων
+          - Θα σκέπτεστε την εφαρμογή στην τάξη
+
+          ## Στάδιο 6: Κατακτώντας τα βασικά: Συνθήκες (20-45 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 6:
+
+          - Θα ορίζετε τις «συνθήκες» και θα εξηγείτε τη σημασία τους
+          - Θα έχετε εξασκηθεί στην κωδικοποίηση απλών συνθηκών
+          - Θα σκέπτεστε την εφαρμογή στην τάξη
+
+          ## Στάδιο 7: Κατακτώντας τα βασικά: Λειτουργίες (20-45 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 7:
+
+          - Θα ορίζετε τις "λειτουργίες" και θα εξηγείτε τη σημασία τους
+          - Θα εξασκηθείτε στην κωδικοποίηση απλών λειτουργιών
+          - Θα σκέπτεστε την εφαρμογή στην τάξη
+
+          ## Στάδιο 8: Κατακτώντας τα βασικά: Συμβάντα (30-60 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 8:
+
+          - Θα ορίζετε τα "συμβάντα" και θα εξηγείτε τη σημασία τους
+          - Θα εξασκηθείτε στην κωδικοποίηση απλών συμβάντων
+          - Θα σκέπτεστε την εφαρμογή στην τάξη
+
+          ## Στάδιο 9: Καλύτερες πρακτικές για τη διδασκαλία της επιστήμης των υπολογιστών (30-60 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 9:
+
+          - Θα έχετε δει ξανά τις βέλτιστες πρακτικές για τη διδασκαλία της επιστήμης των υπολογιστών
+
+          ## Στάδιο 10: Σχεδιασμός (30-60 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 10:
+
+          - Θα έχετε εξερευνήσει πόρους του Code.org, συμπεριλαμβανομένου του πίνακα ελέγχου καθηγητών
+          - Θα σχεδιάζετε πώς μπορείτε να ενσωματώσετε την επιστήμη των υπολογιστών στην πρακτική σας
+
+          ##Στάδιο 11: Επόμενα βήματα (10-30 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 11:
+
+          - Θα σκέπτεστε τι μάθατε
+          - Θα σχεδιάζετε τα επόμενα βήματα που μπορείτε να κάνετε για να συνεχίσετε τη μάθησή σας
+          - Θα συνδεθείτε με μια παγκόσμια κοινότητα συναδέλφων εκπαιδευτικών που ενδιαφέρονται για την εκπαίδευση στην επιστήμη των υπολογιστών
+          - Μοιραστείτε αυτά που μάθατε και τα σχόλιά σας σχετικά με αυτό το μάθημα
+
+          > **Σημείωση**: Οι προτεινόμενες ώρες παρέχονται παραπάνω για να σας βοηθήσουν να προγραμματίσετε τη μάθησή σας. Λάβετε υπόψη ότι μπορεί να θέλετε να αφιερώσετε περισσότερο ή λιγότερο χρόνο σε κάποιο στάδιο, ανάλογα με τις προηγούμενες γνώσεις, το ενδιαφέρον και τις δυνατότητές σας. Να θυμάστε ότι εσείς ορίζετε το ρυθμό μάθησης σε αυτό το μάθημα, μπορείτε ανά πάσα στιγμή να εγκαταλείψετε το μάθημα και αργότερα να επιστρέψετε ή να επισκεφθείτε ξανά οποιοδήποτε στάδιο ή επίπεδο.
+      OPD-K5 Outline_dani:
+        markdown: |
+          # Ξεκινώντας > Επισκόπηση μαθήματος
+
+          Το μάθημα χωρίζεται σε ένδεκα στάδια και κάθε στάδιο αποτελείται από «επίπεδα» ή «παζλ». Ακολουθεί μια επισκόπηση του τι θα μάθετε εάν ολοκληρώσετε το μάθημα:
+
+          ## Στάδιο 1: Ξεκινώντας (10-30 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 1:
+
+          - Θα έχετε δει ξανά τις λεπτομέρειες του μαθήματος
+          - Θα έχετε κάνει πρακτική χρησιμοποιώντας το Code.org ως πλατφόρμα εκμάθησης
+          - Θα έχετε σχεδιάσει τη συμμετοχή σας σε αυτό το μάθημα
+
+          ## Στάδιο 2: Βασικά της Επιστήμης των Υπολογιστών (CSF) (10-30 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 2:
+
+          - Θα ορίζετε την επιστήμη των υπολογιστών και θα έχετε αναθεωρήσει το βασικό λεξιλόγιο
+          - Θα έχετε προσδιορίσει τα οφέλη της διδασκαλίας και της εκμάθησης της επιστήμης των υπολογιστών
+          - Θα διακρίνετε μεταξύ της "κωδικοποίησης" και της "επιστήμης υπολογιστών"
+          - Θα μπορείτε να εξηγήσετε τα πλεονεκτήματα του να ξεκινήσετε να κωδικοποιείτε χρησιμοποιώντας οπτικό προγραμματισμό
+
+          ## Στάδιο 3: Κοιτώντας Εμπρός (10 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 3:
+
+          - Θα προετοιμαστείτε να «κατακτήσετε τα βασικά» της επιστήμης των υπολογιστών αναθεωρώντας τι ακολουθεί στο μάθημα
+
+          ## Στάδιο 4: Κατακτώντας τα βασικά: Αλληλούχηση (10-30 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 4:
+
+          - Θα ορίζετε τις έννοιες "πρόγραμμα" και "αλγόριθμος"
+          - Θα χρησιμοποιείτε τη μηχανή οπτικού προγραμματισμού Code.org για να γράφετε απλά προγράμματα
+          - Θα σκέπτεστε την εφαρμογή στην τάξη
+
+          ## Στάδιο 5: Κατακτώντας τα βασικά: Βρόχοι (20-45 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 5:
+
+          - Θα ορίζετε τους «βρόχους» και θα εξηγείτε τη σημασία τους
+          - Θα έχετε εξασκηθεί στην κωδικοποίηση απλών βρόχων
+          - Θα σκέπτεστε την εφαρμογή στην τάξη
+
+          ## Στάδιο 6: Κατακτώντας τα βασικά: Συνθήκες (20-45 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 6:
+
+          - Θα ορίζετε τις «συνθήκες» και θα εξηγείτε τη σημασία τους
+          - Θα έχετε εξασκηθεί στην κωδικοποίηση απλών συνθηκών
+          - Θα σκέπτεστε την εφαρμογή στην τάξη
+
+          ## Στάδιο 7: Κατακτώντας τα βασικά: Λειτουργίες (20-45 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 7:
+
+          - Θα ορίζετε τις "λειτουργίες" και θα εξηγείτε τη σημασία τους
+          - Θα εξασκηθείτε στην κωδικοποίηση απλών λειτουργιών
+          - Θα σκέπτεστε την εφαρμογή στην τάξη
+
+          ## Στάδιο 8: Κατακτώντας τα βασικά: Συμβάντα (30-60 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 8:
+
+          - Θα ορίζετε τα "συμβάντα" και θα εξηγείτε τη σημασία τους
+          - Θα εξασκηθείτε στην κωδικοποίηση απλών συμβάντων
+          - Θα σκέπτεστε την εφαρμογή στην τάξη
+
+          ## Στάδιο 9: Καλύτερες πρακτικές για τη διδασκαλία της επιστήμης των υπολογιστών (30-60 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 9:
+
+          - Θα έχετε δει ξανά τις βέλτιστες πρακτικές για τη διδασκαλία της επιστήμης των υπολογιστών
+
+          ## Στάδιο 10: Σχεδιασμός (30-60 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 10:
+
+          - Θα έχετε εξερευνήσει πόρους του Code.org, συμπεριλαμβανομένου του πίνακα ελέγχου καθηγητών
+          - Θα σχεδιάζετε πώς μπορείτε να ενσωματώσετε την επιστήμη των υπολογιστών στην πρακτική σας
+
+          ##Στάδιο 11: Επόμενα βήματα (10-30 λεπτά)
+
+          Ολοκληρώνοντας το Στάδιο 11:
+
+          - Θα σκέπτεστε τι μάθατε
+          - Θα σχεδιάζετε τα επόμενα βήματα που μπορείτε να κάνετε για να συνεχίσετε τη μάθησή σας
+          - Θα συνδεθείτε με μια παγκόσμια κοινότητα συναδέλφων εκπαιδευτικών που ενδιαφέρονται για την εκπαίδευση στην επιστήμη των υπολογιστών
+          - Μοιραστείτε αυτά που μάθατε και τα σχόλιά σας σχετικά με αυτό το μάθημα
+
+          > **Σημείωση**: Οι προτεινόμενες ώρες παρέχονται παραπάνω για να σας βοηθήσουν να προγραμματίσετε τη μάθησή σας. Λάβετε υπόψη ότι μπορεί να θέλετε να αφιερώσετε περισσότερο ή λιγότερο χρόνο σε κάποιο στάδιο, ανάλογα με τις προηγούμενες γνώσεις, το ενδιαφέρον και τις δυνατότητές σας. Να θυμάστε ότι εσείς ορίζετε το ρυθμό μάθησης σε αυτό το μάθημα, μπορείτε ανά πάσα στιγμή να εγκαταλείψετε το μάθημα και αργότερα να επιστρέψετε ή να επισκεφθείτε ξανά οποιοδήποτε στάδιο ή επίπεδο.
+      OPD-K5 Stage9Go:
+        markdown: |
+          # Σχεδιασμός > Ανασκόπηση
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          Σε αυτό το στάδιο θα πρέπει:
+
+          - Να έχετε δει τον Πίνακα Ελέγχου Καθηγητή και άλλους πόρους στο Code.org
+          - Να έχετε σχεδιάσει για το πώς μπορεί να ενσωματώνατε την επιστήμη των υπολογιστών στην πρακτική σας
+
+          Στο Στάδιο 11, το τελικό μας στάδιο
+
+          - Θα σκεφτείτε τι μάθατε
+          - Θα σχεδιάσετε τα επόμενα βήματα που μπορείτε να κάνετε για να συνεχίσετε την εκμάθησή σας
+          - Θα συνδεθείτε με μια παγκόσμια κοινότητα συναδέλφων εκπαιδευτικών που ενδιαφέρονται για την εκπαίδευση στην επιστήμη των υπολογιστών
+      OPD-K5 Stage9Go_dani:
+        markdown: |
+          # Σχεδιασμός > Ανασκόπηση
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          Σε αυτό το στάδιο θα πρέπει:
+
+          - Να έχετε δει τον Πίνακα Ελέγχου Καθηγητή και άλλους πόρους στο Code.org
+          - Να έχετε σχεδιάσει για το πώς μπορεί να ενσωματώνατε την επιστήμη των υπολογιστών στην πρακτική σας
+
+          Στο Στάδιο 11, το τελικό μας στάδιο
+
+          - Θα σκεφτείτε τι μάθατε
+          - Θα σχεδιάσετε τα επόμενα βήματα που μπορείτε να κάνετε για να συνεχίσετε την εκμάθησή σας
+          - Θα συνδεθείτε με μια παγκόσμια κοινότητα συναδέλφων εκπαιδευτικών που ενδιαφέρονται για την εκπαίδευση στην επιστήμη των υπολογιστών
+      OPD-K5 Stage9Start:
+        markdown: "# Σχεδιασμός > Εξερεύνηση πόρων για καθηγητές\n\nΜέσα από τα Στάδια
+          4-8, ρίξατε μια ματιά σε μερικούς από τους \"unplugged\" και τους διαδικτυακούς
+          πόρους εκμάθησης που είναι διαθέσιμοι για το CS Fundamentals, καθώς ευθυγραμμίζονται
+          με τις έννοιες της επιστήμης των υπολογιστών που διδασκόσασταν. \n\nΤώρα
+          που έχετε κατανοήσει κάπως το πώς κωδικοποιούμε, καθώς και τον τρόπο διδασκαλίας
+          της επιστήμης των υπολογιστών, ήρθε η ώρα να ξεκινήσετε να σχεδιάζετε τη
+          διδασκαλία σας. Σε αυτό το στάδιο, θα περιηγηθούμε σε άλλες περιοχές της
+          πλατφόρμας Code.org και τον **[Πίνακα Ελέγχου Καθηγητή](http://studio.code.org/)**.
+          \n\nΟλοκληρώνοντας το Στάδιο 10:\n\n- Θα εξερευνείτε πόρους που είναι διαθέσιμοι
+          στους καθηγητές\n- Θα εξερευνείτε τον **[Πίνακα Ελέγχου Καθηγητή](http://studio.code.org/)**
+          του Code.org\n- Θα σχεδιάζετε το πώς μπορείτε να ενσωματώσετε την επιστήμη
+          των υπολογιστών στην πρακτική σας\n\n***\n\nΠαρακάτω υπάρχει ένα στιγμιότυπο
+          οθόνης από τον Πίνακα Ελέγχου του Καθηγητή. Θα χρειαστεί να συνδεθείτε στον
+          λογαριασμό καθηγητή σας στο Code.org για να τον δείτε -- όταν συνδεθείτε,
+          θα πρέπει να είναι η προεπιλεγμένη οθόνη που βλέπετε στην ιστοσελίδα Code.org.
+          Εάν δεν έχετε λογαριασμό καθηγητήμ μπορείτε να **[εγγραφείτε για λογαριασμό
+          εδώ](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
+      OPD-K5 Stage9Start_copy:
+        markdown: |
+          # Exploring Teacher Resources
+
+          Ήρθε η ώρα να αρχίσετε να σχεδιάζετε τα μαθήματά σας. Σε αυτό το στάδιο, θα περιηγηθούμε σε άλλες περιοχές της πλατφόρμας Code.org και στον **<a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">Πίνακα Ελέγχου Καθηγητή</a>**.
+
+          Παρακάτω βρίσκεται ένα στιγμιότυπο οθόνης από τον Πίνακα Ελέγχου του Καθηγητή. Θα χρειαστεί να συνδεθείτε στον λογαριασμό καθηγητή σας στο Code.org για να τον δείτε. Μόλις συνδεθείτε, θα πρέπει να είναι η προεπιλεγμένη οθόνη που βλέπετε στον ιστότοπο Code.org. Εάν δεν έχετε λογαριασμό καθηγητή, μπορείτε να **<a href="https://studio.code.org/users/sign_up" target="blank" rel="noopener noreferrer">εγγραφείτε εδώ για έναν</a>**.
+
+          <a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>
+      OPD-K5 Stage9Start_dani:
+        markdown: "# Σχεδιασμός > Εξερεύνηση Πόρων Καθηγητών\n\nΜέσα από τα Στάδια
+          4-8, ρίξατε μια ματιά σε μερικούς από τους διαδικτυακούς και μη πόρους εκμάθησης
+          που είναι διαθέσιμοι για το CS Fundamentals, καθώς ευθυγραμμίζονται με τις
+          έννοιες της επιστήμης των υπολογιστών που μαθαίνατε.\n\nΤώρα που έχετε κατανοήσει
+          λίγο τον τρόπο κωδικοποίησης, καθώς και τον τρόπο διδασκαλίας της επιστήμης
+          των υπολογιστών, ήρθε η ώρα να αρχίσετε να σχεδιάζετε τα δικά σας μαθήματα.
+          Σε αυτό το στάδιο, θα περιηγηθούμε σε άλλες περιοχές της πλατφόρμας Code.org
+          και τον **[Πίνακα Ελέγχου Καθηγητή](http://studio.code.org/)**. \n\nΟλοκληρώνοντας
+          το Στάδιο 10:\n\n- Θα έχετε εξερευνήσει πόρους που είναι διαθέσιμοι σε καθηγητές\n-
+          Θα έχετε εξερευνήσει τον **[Πίνακα Ελέγχου Καθηγητή](http://studio.code.org/)**
+          του Code.org\n- Θα σχεδιάζετε πώς μπρορείτε να ενσωματώσετε την επιστήμη
+          των υπολογιστών στην πρακτική σας\n\n***\n\nΠαρακάτω βρίσκεται ένα στιγμιότυπο
+          οθόνης από τον Πίνακα Ελέγχου του Καθηγητή. Θα χρειαστεί να συνδεθείτε στον
+          λογαριασμό καθηγητή σας στο Code.org για να τον δείτε. Μόλις συνδεθείτε,
+          θα πρέπει να είναι η προεπιλεγμένη οθόνη που βλέπετε στον ιστότοπο Code.org.
+          Εάν δεν έχετε λογαριασμό καθηγητή, μπορείτε να **[εγγραφείτε για έναν εδώ](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
+      csd-post-survey-2018-markdown-with-link-to-survey_v2:
+        teacher_markdown: "**Ζητήστε από τους μαθητές σας να συμπληρώσουν αυτό το
+          ερωτηματολόγιο!!!**\n\n* Τα αποτελέσματα είναι ζωτικής σημασίας για εμάς
+          (code.org) ώστε να διατηρήσουμε τα μαθήματά μας και να κάνουμε βελτιώσεις.\n*
+          Θα υπάρξει επίσης ερωτηματολόγιο για τους καθηγητές, όπου μπορείτε να κάνετε
+          τα δικά σας σχόλια, για το οποίο θα ειδοποιηθείτε μέσω email.Η έρευνα που
+          βρίσκεται στη δική της ενότητα του μαθήματος, και αυτή η σελίδα απλώς συνδέεται
+          με αυτήν\n**Για προβολή αποτελεσμάτων** -- το ερωτηματολόγιο μετά το μάθημα
+          είναι λίγο διαφορετικό. Το ερωτηματολόγιο βρίσκεται στη δική του ενότητα
+          του μαθήματος, και αυτή η σελίδα απλώς συνδέεται με αυτήν.\n\n* Για να δείτε
+          ανώνυμα αποτελέσματα του ερωτηματολογίου στον πίνακα ελέγχου του καθηγητή
+          σας, πρέπει (1) να κάνετε προβολή του ερωτηματολογίου / των αξιολογήσεων
+          και, στη συνέχεια, (2) να επιλέξετε την ενότητα ερωτηματολογίου μετά το
+          μάθημα ως ενότητα που θέλετε να προβάλετε.  \n\n* **Περισσότερες οδηγίες
+          για την προβολή των αποτελεσμάτων του ερωτηματολογίου μετά το μάθημα**:
+          [[google doc](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw)]
+          [[pdf](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw/export?format=pdf)]\n\n\n\n\n"
+      GraphPaperProgramming-Unplugged:
+        markdown: |
+          # Graph Paper Programming
+
+          Γράψτε αλγορίθμους που οι συμμαθητές σας μπορούν να χρησιμοποιήσουν για να σχεδιάσουν εικόνες.
+      GraphPaperProgramming-Unplugged2022:
+        markdown: |
+          # Graph Paper Programming
+
+          Γράψτε αλγορίθμους που οι συμμαθητές σας μπορούν να χρησιμοποιήσουν για να σχεδιάσουν εικόνες.
+      GraphPaperProgramming-Unplugged_2020:
+        markdown: |
+          # Graph Paper Programming
+
+          Γράψτε αλγορίθμους που οι συμμαθητές σας μπορούν να χρησιμοποιήσουν για να σχεδιάσουν εικόνες.
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |
+          # Graph Paper Programming
+
+          Γράψτε αλγορίθμους που οι συμμαθητές σας μπορούν να χρησιμοποιήσουν για να σχεδιάσουν εικόνες.
+      RelayProgramming-Unplugged:
+        markdown: |
+          # Προγραμματισμός Relay
+
+          Χωριστείτε σε ομάδες και συνεργαστείτε για να γράψετε προγράμματα που σχεδιάζουν εικόνες.
+      RelayProgramming-Unplugged2022:
+        markdown: |
+          # Προγραμματισμός Relay
+
+          Χωριστείτε σε ομάδες και συνεργαστείτε για να γράψετε προγράμματα που σχεδιάζουν εικόνες.
+      RelayProgramming-Unplugged_2020:
+        markdown: |
+          # Προγραμματισμός Relay
+
+          Χωριστείτε σε ομάδες και συνεργαστείτε για να γράψετε προγράμματα που σχεδιάζουν εικόνες.
+      RelayProgramming-Unplugged_2021:
+        markdown: |
+          # Προγραμματισμός Relay
+
+          Χωριστείτε σε ομάδες και συνεργαστείτε για να γράψετε προγράμματα που σχεδιάζουν εικόνες.
+      courseD_EOC_examples2022:
+        description: Είστε έτοιμοι να ξεκινήσετε την τελική σας εργασία. Πριν ξεκινήσετε,
+          αφιερώστε λίγο χρόνο εξετάζοντας τα παραδείγματά.
+        display_name: Παραδείγματα Έργων
+      courseD_EOC_examples_2021:
+        description: Είστε έτοιμοι να ξεκινήσετε την τελική σας εργασία. Πριν ξεκινήσετε,
+          αφιερώστε λίγο χρόνο εξετάζοντας τα παραδείγματά.
+        display_name: Παραδείγματα Έργων
+      express_EOC_examples2022:
+        description: Είστε έτοιμοι να ξεκινήσετε την τελική σας εργασία. Πριν ξεκινήσετε,
+          αφιερώστε λίγο χρόνο εξετάζοντας τα παραδείγματά.
+        display_name: Παραδείγματα Έργων
+      express_EOC_examples_2021:
+        description: Είστε έτοιμοι να ξεκινήσετε την τελική σας εργασία. Πριν ξεκινήσετε,
+          αφιερώστε λίγο χρόνο εξετάζοντας τα παραδείγματά.
+        display_name: Παραδείγματα Έργων

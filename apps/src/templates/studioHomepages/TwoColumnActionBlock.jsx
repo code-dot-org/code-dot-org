@@ -23,11 +23,12 @@ export class UnconnectedTwoColumnActionBlock extends Component {
         url: PropTypes.string.isRequired,
         text: PropTypes.string.isRequired,
         target: PropTypes.string,
-        id: PropTypes.string
+        id: PropTypes.string,
+        color: PropTypes.oneOf(Object.values(Button.ButtonColor)),
       })
     ),
     backgroundColor: PropTypes.string,
-    marginBottom: PropTypes.string
+    marginBottom: PropTypes.string,
   };
 
   render() {
@@ -43,19 +44,19 @@ export class UnconnectedTwoColumnActionBlock extends Component {
       description,
       buttons,
       backgroundColor,
-      marginBottom = '60px'
+      marginBottom = '60px',
     } = this.props;
     const float = isRtl ? 'right' : 'left';
     const width = responsiveSize === 'lg' ? '50%' : '100%';
 
     const textItemCustomBackgroundColor = {
       ...styles.textItem,
-      backgroundColor: backgroundColor || styles.textItem.backgroundColor
+      backgroundColor: backgroundColor || styles.textItem.backgroundColor,
     };
 
     return (
       <div id={id} style={styles.container}>
-        {heading && <div style={styles.heading}>{heading}</div>}
+        {heading && <h4 style={styles.heading}>{heading}</h4>}
         <div style={styles.container}>
           {responsiveSize === 'lg' && (
             <div style={{float, width}}>
@@ -83,7 +84,10 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                   <Button
                     __useDeprecatedTag
                     href={button.url}
-                    color={Button.ButtonColor.gray}
+                    color={
+                      button.color || Button.ButtonColor.brandSecondaryDefault
+                    }
+                    style={{marginBottom: 16}}
                     text={button.text}
                     target={button.target}
                     id={button.id}
@@ -103,12 +107,12 @@ export class UnconnectedTwoColumnActionBlock extends Component {
 
 export const TwoColumnActionBlock = connect(state => ({
   responsiveSize: state.responsive.responsiveSize,
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(UnconnectedTwoColumnActionBlock);
 
 export class LocalClassActionBlock extends Component {
   static propTypes = {
-    showHeading: PropTypes.bool.isRequired
+    showHeading: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -126,8 +130,8 @@ export class LocalClassActionBlock extends Component {
         buttons={[
           {
             url: pegasus('/learn/local'),
-            text: i18n.findLocalClassButton()
-          }
+            text: i18n.findLocalClassButton(),
+          },
         ]}
       />
     );
@@ -147,13 +151,14 @@ export class AdministratorResourcesActionBlock extends Component {
           {
             id: 'your_school_professional_learning',
             url: pegasus('/educate/professional-learning'),
-            text: i18n.yourSchoolProfessionalLearningProgramsButton()
+            text: i18n.yourSchoolProfessionalLearningProgramsButton(),
           },
           {
             id: 'your_school_administrators',
             url: pegasus('/administrators'),
-            text: i18n.yourSchoolAdminButton()
-          }
+            text: i18n.yourSchoolAdminButton(),
+            color: Button.ButtonColor.neutralDark,
+          },
         ]}
       />
     );
@@ -171,8 +176,8 @@ export class CscInfoActionBlock extends Component {
           {
             id: 'course_info_csc',
             url: pegasus('/educate/csc'),
-            text: i18n.learnMore()
-          }
+            text: i18n.learnMore(),
+          },
         ]}
       />
     );
@@ -182,11 +187,11 @@ export class CscInfoActionBlock extends Component {
 export class SpecialAnnouncementActionBlock extends Component {
   static propTypes = {
     announcement: shapes.specialAnnouncement,
-    marginBottom: PropTypes.string
+    marginBottom: PropTypes.string,
   };
 
   state = {
-    buttonList: this.createButtonList()
+    buttonList: this.createButtonList(),
   };
 
   createButtonList() {
@@ -197,7 +202,7 @@ export class SpecialAnnouncementActionBlock extends Component {
         ? announcement.buttonId
         : 'special-announcement-btn-1',
       url: announcement.buttonUrl,
-      text: announcement.buttonText
+      text: announcement.buttonText,
     });
     if (announcement.buttonUrl2 && announcement.buttonText2) {
       buttonList.push({
@@ -205,7 +210,7 @@ export class SpecialAnnouncementActionBlock extends Component {
           ? announcement.buttonId2
           : 'special-announcement-btn-2',
         url: announcement.buttonUrl2,
-        text: announcement.buttonText2
+        text: announcement.buttonText2,
       });
     }
     return buttonList;
@@ -231,16 +236,18 @@ const styles = {
     paddingRight: 5,
     paddingTop: 10,
     paddingBottom: 20,
+    marginBottom: 0,
     fontSize: 24,
     lineHeight: '26px',
     fontFamily: 'Gotham 4r',
-    color: color.charcoal
+    color: color.neutral_dark,
   },
   textItem: {
-    backgroundColor: color.teal,
+    border: `1px solid ${color.neutral_dark20}`,
+    backgroundColor: color.neutral_light,
     padding: 25,
     minHeight: 281,
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   },
   subHeading: {
     paddingRight: 0,
@@ -248,7 +255,7 @@ const styles = {
     fontSize: 27,
     lineHeight: 1.2,
     fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white
+    color: color.neutral_dark,
   },
   subHeadingSmallFont: {
     paddingRight: 0,
@@ -256,12 +263,13 @@ const styles = {
     fontSize: 25,
     lineHeight: 1.2,
     fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white
+    color: color.neutral_dark,
   },
   image: {
     width: 485,
     minHeight: 260,
-    height: 281
+    height: 279,
+    border: `1px solid ${color.neutral_dark20}`,
   },
   description: {
     paddingRight: 10,
@@ -269,13 +277,13 @@ const styles = {
     fontSize: 14,
     fontFamily: 'Gotham 4r',
     lineHeight: '22px',
-    color: color.white
+    color: color.neutral_dark,
   },
   clear: {
-    clear: 'both'
+    clear: 'both',
   },
   container: {
     width: '100%',
-    position: 'relative'
-  }
+    position: 'relative',
+  },
 };

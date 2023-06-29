@@ -17,8 +17,6 @@ unless rack_env?(:development)
     }
 end
 
-require 'gctools/oobgc/unicorn_middleware'
-use GC::OOB::UnicornMiddleware
 use Rack::ContentLength
 require 'rack/ssl-enforcer'
 use Rack::SslEnforcer,

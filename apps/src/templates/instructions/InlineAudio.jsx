@@ -4,36 +4,37 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 import trackEvent from '../../util/trackEvent';
-import color from '../../util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import moduleStyles from './inline-audio.module.scss';
+import classNames from 'classnames';
 
 // TODO (elijah): have these constants shared w/dashboard
 const VOICES = {
   en_us: {
     VOICE: 'sharon22k',
     SPEED: 180,
-    SHAPE: 100
+    SHAPE: 100,
   },
   es_es: {
     VOICE: 'ines22k',
     SPEED: 180,
-    SHAPE: 100
+    SHAPE: 100,
   },
   es_mx: {
     VOICE: 'rosa22k',
     SPEED: 180,
-    SHAPE: 100
+    SHAPE: 100,
   },
   it_it: {
     VOICE: 'vittorio22k',
     SPEED: 180,
-    SHAPE: 100
+    SHAPE: 100,
   },
   pt_br: {
     VOICE: 'marcia22k',
     SPEED: 180,
-    SHAPE: 100
-  }
+    SHAPE: 100,
+  },
 };
 
 const TTS_URL = 'https://tts.code.org';
@@ -49,7 +50,7 @@ const AUDIO_ENABLING_DOM_EVENTS = [
   'pointerup',
   'touchend',
   'keydown',
-  'keyup'
+  'keyup',
 ];
 
 class InlineAudio extends React.Component {
@@ -61,6 +62,11 @@ class InlineAudio extends React.Component {
     message: PropTypes.string,
     style: PropTypes.object,
     ttsAutoplayEnabled: PropTypes.bool,
+    isRoundedVolumeIcon: PropTypes.bool,
+    // TODO: [Phase 2] This is a switch for legacy styles needed to revert Javalab rebranding changes.
+    //  once we update Javalab to new styles we'll need to remove this prop and all of it's usage
+    //  more info here: https://github.com/code-dot-org/code-dot-org/pull/50924
+    isLegacyStyles: PropTypes.bool,
 
     // when we need to wait for DOM event to trigger audio autoplay
     // this is the element ID that we'll be listening to
@@ -70,16 +76,15 @@ class InlineAudio extends React.Component {
     // To Log TTS usage
     puzzleNumber: PropTypes.number,
     userId: PropTypes.number,
-    isOnCSFPuzzle: PropTypes.bool
+    isOnCSFPuzzle: PropTypes.bool,
   };
 
   state = {
     audio: undefined,
     playing: false,
     error: false,
-    hover: false,
     loaded: false,
-    autoplayed: false
+    autoplayed: false,
   };
 
   constructor(props) {
@@ -120,7 +125,7 @@ class InlineAudio extends React.Component {
       this.setState({
         audio: undefined,
         playing: false,
-        error: false
+        error: false,
       });
     }
   }
@@ -143,7 +148,7 @@ class InlineAudio extends React.Component {
     audio.addEventListener('ended', e => {
       this.setState({
         playing: false,
-        autoplayed: this.props.ttsAutoplayEnabled
+        autoplayed: this.props.ttsAutoplayEnabled,
       });
     });
 
@@ -152,7 +157,7 @@ class InlineAudio extends React.Component {
       trackEvent('InlineAudio', 'error', e.target.error.code);
       this.setState({
         playing: false,
-        error: true
+        error: true,
       });
     });
 
@@ -162,7 +167,7 @@ class InlineAudio extends React.Component {
   }
 
   isLocaleSupported() {
-    return VOICES.hasOwnProperty(this.props.locale);
+    return Object.prototype.hasOwnProperty.call(VOICES, this.props.locale);
   }
 
   getAudioSrc() {
@@ -194,8 +199,8 @@ class InlineAudio extends React.Component {
         userId: this.props.userId,
         puzzleNumber: this.props.puzzleNumber,
         src: this.props.src,
-        csfStyleInstructions: this.props.isOnCSFPuzzle
-      })
+        csfStyleInstructions: this.props.isOnCSFPuzzle,
+      }),
     });
   }
 
@@ -247,11 +252,9 @@ class InlineAudio extends React.Component {
     this.setState({playing: false});
   }
 
-  toggleHover = () => {
-    this.setState({hover: !this.state.hover});
-  };
-
   render() {
+    const {isRoundedVolumeIcon, isLegacyStyles} = this.props;
+
     if (
       this.props.textToSpeechEnabled &&
       !this.state.error &&
@@ -260,101 +263,60 @@ class InlineAudio extends React.Component {
       this.getAudioSrc()
     ) {
       return (
-        <div
-          className="inline-audio"
-          style={[styles.wrapper, this.props.style && this.props.style.wrapper]}
-          onMouseOver={this.toggleHover}
-          onMouseOut={this.toggleHover}
+        <button
+          className={classNames(
+            'inline-audio',
+            moduleStyles.inlineAudioButton,
+            isLegacyStyles && moduleStyles.inlineAudioButtonLegacy
+          )}
+          style={this.props.style && this.props.style.wrapper}
           onClick={this.toggleAudio}
+          type="button"
         >
           <div
-            style={[
-              styles.button,
-              styles.volumeButton,
-              this.props.style && this.props.style.button,
-              this.state.hover && styles.hover
-            ]}
+            style={[this.props.style && this.props.style.button]}
+            className={classNames(
+              moduleStyles.iconWrapper,
+              isRoundedVolumeIcon
+                ? moduleStyles.iconWrapperVolumeRounded
+                : moduleStyles.iconWrapperVolume
+            )}
             id="volume"
           >
             <i
-              className={'fa fa-volume-up'}
-              style={[
-                styles.buttonImg,
-                this.props.style && this.props.style.buttonImg
-              ]}
+              className={classNames(
+                'fa fa-volume-up',
+                moduleStyles.buttonImg,
+                moduleStyles.buttonImgVolume
+              )}
+              style={[this.props.style && this.props.style.buttonImg]}
             />
           </div>
           <div
-            className="playPause"
-            style={[
-              styles.button,
-              styles.playPauseButton,
-              this.props.style && this.props.style.button,
-              this.state.hover && styles.hover
-            ]}
+            className={classNames(
+              'playPause',
+              moduleStyles.iconWrapper,
+              moduleStyles.iconWrapperPlayPause
+            )}
+            style={[this.props.style && this.props.style.button]}
           >
             <i
-              className={this.state.playing ? 'fa fa-pause' : 'fa fa-play'}
-              style={[
-                styles.buttonImg,
-                this.props.style && this.props.style.buttonImg
-              ]}
+              className={classNames(
+                this.state.playing ? 'fa fa-pause' : 'fa fa-play',
+                moduleStyles.buttonImg
+              )}
+              style={[this.props.style && this.props.style.buttonImg]}
             />
           </div>
-        </div>
+        </button>
       );
     }
     return null;
   }
 }
 
-const styles = {
-  error: {
-    display: 'inline-block',
-    marginLeft: 10,
-    marginBottom: 0,
-    padding: '5px 10px'
-  },
-
-  wrapper: {
-    marginLeft: '3px',
-    marginRight: '3px',
-    display: 'flex'
-  },
-
-  button: {
-    cursor: 'pointer',
-    float: 'left',
-    backgroundColor: color.lightest_purple,
-    border: 'none',
-    outline: 'none',
-    width: 33,
-    boxSizing: 'border-box'
-  },
-
-  volumeButton: {
-    borderRadius: '4px 0px 0px 4px'
-  },
-
-  playPauseButton: {
-    borderRadius: '0px 4px 4px 0px'
-  },
-
-  buttonImg: {
-    opacity: 1,
-    float: 'left',
-    paddingRight: 8,
-    paddingLeft: 8,
-    color: '#4d575f'
-  },
-
-  hover: {
-    backgroundColor: color.cyan
-  }
-};
-
 InlineAudio.defaultProps = {
-  ttsAutoplayEnabled: false
+  ttsAutoplayEnabled: false,
 };
 
 export const StatelessInlineAudio = Radium(InlineAudio);
@@ -367,6 +329,6 @@ export default connect(function propsFromStore(state) {
     userId: state.pageConstants.userId,
     puzzleNumber: state.pageConstants.puzzleNumber,
     isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed,
-    ttsAutoplayEnabled: state.instructions.ttsAutoplayEnabledForLevel
+    ttsAutoplayEnabled: state.instructions.ttsAutoplayEnabledForLevel,
   };
 })(StatelessInlineAudio);

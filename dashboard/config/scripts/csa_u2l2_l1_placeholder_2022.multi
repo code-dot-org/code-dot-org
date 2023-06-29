@@ -18,3 +18,5 @@ c = 2 * a - 15 / b + c;
 
 What is the value of `c`(#e7e8ea) after this code segment is executed?
 MARKDOWN
+
+allow_multiple_attempts true

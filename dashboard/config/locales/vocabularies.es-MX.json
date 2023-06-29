@@ -20,10 +20,6 @@
           "word": "Depuración",
           "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
-        "program/minecraft/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
         "event/minecraft/unversioned": {
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
@@ -32,6 +28,10 @@
           "word": "Bucle",
           "definition": "la acción de hacer algo una y otra vez."
         },
+        "program/minecraft/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
         "code/hero/unversioned": {
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
@@ -39,13 +39,13 @@
           "word": "Depuración",
           "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
         },
-        "program/hero/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
         "function/hero/unversioned": {
           "word": "Función",
           "definition": "código que puedes llamar fácilmente una y otra vez."
+        },
+        "program/hero/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "code/poem-art/2021": {
           "word": "Código",
@@ -135,6 +135,9 @@
           "word": "Programa",
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
+        "code/dance/unversioned": {
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
+        },
         "event/dance/unversioned": {
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
@@ -143,19 +146,8 @@
           "word": "Programa",
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
-        "code/dance/unversioned": {
-          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
         "code/aquatic/unversioned": {
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Depuración",
-          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
-        },
-        "program/aquatic/unversioned": {
-          "word": "Programa",
-          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "condition/aquatic/unversioned": {
           "word": "Condición",
@@ -165,9 +157,17 @@
           "word": "Condicionales",
           "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
         },
+        "debugging/aquatic/unversioned": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
         "loops/aquatic/unversioned": {
           "word": "Bucles",
           "definition": "la acción de hacer algo una y otra vez."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "caesar_cipher_/hoc-encryption/unversioned": {
           "word": "Cifrado César ",
@@ -249,10 +249,6 @@
           "word": "Modelos y Simulaciones",
           "definition": "un programa que reproduce o imita las características clave de un suceso del mundo real para investigar su comportamiento sin el coste, el tiempo o el peligro de realizar un experimento en la vida real."
         },
-        "event/sports/unversioned": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
         "code/sports/unversioned": {
           "word": "Código",
           "definition": "(v) escribir código o escribir instrucciones para un ordenador."
@@ -260,6 +256,10 @@
         "debugging/sports/unversioned": {
           "word": "Depuración",
           "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "event/sports/unversioned": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
         },
         "program/sports/unversioned": {
           "word": "Programa",
@@ -276,16 +276,16 @@
           "word": "Programa",
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
-        "event/basketball/unversioned": {
-          "word": "Evento",
-          "definition": "una acción que hace que algo suceda."
-        },
         "code/basketball/unversioned": {
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/basketball/unversioned": {
           "word": "Depuración",
           "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "event/basketball/unversioned": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
         },
         "program/basketball/unversioned": {
           "word": "Programa",
@@ -397,7 +397,8 @@
           "definition": "Una lista de pasos para completar una tarea."
         },
         "behavior/coursef/2022": {
-          "word": "Comportamiento"
+          "word": "Comportamiento",
+          "definition": "Una acción en el Laboratorio Sprite que un sprite realiza continuamente hasta que se le dice que se detenga."
         },
         "program/coursef/2022": {
           "word": "Programa",
@@ -496,10 +497,20 @@
           "definition": "Hacer algo otra vez."
         },
         "function/coursee/2022": {
-          "word": "Función"
+          "word": "Función",
+          "definition": "Un fragmento de código que puedes llamar una y otra vez."
+        },
+        "call_a_function/coursee/2022": {
+          "word": "Llamar a una Función",
+          "definition": "Utilizar el nombre de la función para indicar al ordenador que ejecute el código escrito en la función."
+        },
+        "declare_a_function/coursee/2022": {
+          "word": "Declarar una Función",
+          "definition": "Rellena una función con código y dale un nombre."
         },
         "condition/coursee/2022": {
-          "word": "Condición"
+          "word": "Condición",
+          "definition": "Una sentencia que un programa comprueba para ver si es verdadera o falsa. Si es verdadera, se realiza una acción. En caso contrario, se ignora la acción."
         },
         "conditionals/coursee/2022": {
           "word": "Condicionales",
@@ -801,11 +812,16 @@
           "definition": "Poner los comandos en el orden correcto para que los computadores puedan leerlos."
         },
         "persistence/coursec/2022": {
-          "word": "Perseverancia"
+          "word": "Perseverancia",
+          "definition": "No te rindas."
         },
         "programming/coursec/2022": {
           "word": "Programación",
           "definition": "El arte de crear un programa"
+        },
+        "angle/coursec/2022": {
+          "word": "Ángulo",
+          "definition": "Punto de encuentro de dos lados de una figura, medido en grados."
         },
         "loop/coursec/2022": {
           "word": "Bucle",
@@ -820,7 +836,12 @@
           "definition": "una acción que hace que algo suceda."
         },
         "data/coursec/2022": {
-          "word": "Datos"
+          "word": "Datos",
+          "definition": "Una recopilación de información"
+        },
+        "graph/coursec/2022": {
+          "word": "Gráfico",
+          "definition": "Una imagen o un diagrama que representa datos o valores de forma organizada."
         },
         "binary/coursec/2022": {
           "word": "Binario",
@@ -892,7 +913,7 @@
         },
         "parameter/csd/2022": {
           "word": "Parámetro",
-          "definition": "Un parámetro es una pieza adicional de información que puedes pasar a una función para personalizarla para una necesidad especial."
+          "definition": "Información adicional introducida en un bloque para personalizar su funcionalidad"
         },
         "variable/csd/2022": {
           "word": "Variable",
@@ -1011,7 +1032,8 @@
           "definition": "Parte de un programa que añade funcionalidad para el usuario"
         },
         "innovation/csd/2022": {
-          "word": "Innovación"
+          "word": "Innovación",
+          "definition": "Una idea, dispositivo, producto, etc. nuevo o mejorado, o su desarrollo"
         },
         "circuit/csd/2022": {
           "word": "Circuito",
@@ -1093,6 +1115,10 @@
           "word": "Usuario",
           "definition": "Alguien que utiliza un objeto, incluido software y hardware."
         },
+        "algorithm/coursef/2021": {
+          "word": "Algoritmo",
+          "definition": "Una lista de pasos para completar una tarea."
+        },
         "behavior/coursef/2021": {
           "word": "Comportamiento",
           "definition": "Una acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
@@ -1100,10 +1126,6 @@
         "program/coursef/2021": {
           "word": "Programa",
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
-        },
-        "algorithm/coursef/2021": {
-          "word": "Algoritmo",
-          "definition": "Una lista de pasos para completar una tarea."
         },
         "event/coursef/2021": {
           "word": "Evento",
@@ -1145,9 +1167,21 @@
           "word": "DNS",
           "definition": "abreviación de Domain Name System (sistema de nombres de dominio). Este sistema traduce nombres de dominio como ejemplo.com a direcciones de IP, como 93.184.216.34."
         },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/Cable",
+          "definition": "Un método para enviar información a través de un cable de teléfono o de televisión."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "Cable de fibra óptica",
+          "definition": "Una conexión que usa la luz para transmitir información."
+        },
         "internet/coursef/2021": {
           "word": "Internet",
           "definition": "Un conjunto de computadores y servidores conectados unos con otros."
+        },
+        "ip_address/coursef/2021": {
+          "word": "Dirección IP",
+          "definition": "Un número asignado a cada aparato y dispositivo conectado a Internet."
         },
         "packets/coursef/2021": {
           "word": "Paquetes",
@@ -1160,18 +1194,6 @@
         "url/coursef/2021": {
           "word": "URL",
           "definition": "Una dirección fácil de recordar para referirse a una página web, como www.code.org."
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/Cable",
-          "definition": "Un método para enviar información a través de un cable de teléfono o de televisión."
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "Cable de fibra óptica",
-          "definition": "Una conexión que usa la luz para transmitir información."
-        },
-        "ip_address/coursef/2021": {
-          "word": "Dirección IP",
-          "definition": "Un número asignado a cada aparato y dispositivo conectado a Internet."
         },
         "wi_fi/coursef/2021": {
           "word": "Wi-Fi",
@@ -1209,6 +1231,10 @@
           "word": "Clic",
           "definition": "Presionar el botón del mouse"
         },
+        "double_click/courseb/2021": {
+          "word": "Doble clic",
+          "definition": "Presionar dos veces el botón del mouse, muy rápido"
+        },
         "drag/courseb/2021": {
           "word": "Arrastrar",
           "definition": "Hacer clic en el botón del mouse y mantenerlo presionado, mientras se mueve el puntero a una nueva posición"
@@ -1216,10 +1242,6 @@
         "drop/courseb/2021": {
           "word": "Caída",
           "definition": "Dejar de presionar el botón del mouse para “liberar” al objeto que está siendo arrastrado"
-        },
-        "double_click/courseb/2021": {
-          "word": "Doble clic",
-          "definition": "Presionar dos veces el botón del mouse, muy rápido"
         },
         "program/courseb/2021": {
           "word": "Programa",
@@ -1261,6 +1283,10 @@
           "word": "Clic",
           "definition": "Presionar el botón del mouse"
         },
+        "double_click/coursea/2021": {
+          "word": "Doble clic",
+          "definition": "Presionar dos veces el botón del mouse, muy rápido"
+        },
         "drag/coursea/2021": {
           "word": "Arrastrar",
           "definition": "Hacer clic en el botón del mouse y mantenerlo presionado, mientras se mueve el puntero a una nueva posición"
@@ -1268,10 +1294,6 @@
         "drop/coursea/2021": {
           "word": "Caída",
           "definition": "Dejar de presionar el botón del mouse para “liberar” al objeto que está siendo arrastrado"
-        },
-        "double_click/coursea/2021": {
-          "word": "Doble clic",
-          "definition": "Presionar dos veces el botón del mouse, muy rápido"
         },
         "bug/coursea/2021": {
           "word": "Bug (error)",
@@ -1471,13 +1493,13 @@
           "word": "Función",
           "definition": "código que puedes llamar fácilmente una y otra vez."
         },
-        "variable/express/2021": {
-          "word": "Variable",
-          "definition": "Una etiqueta para una porción de información en un programa."
-        },
         "prompt/express/2021": {
           "word": "mensaje",
           "definition": "Un mensaje en la pantalla del computador que espera la entrada del usuario."
+        },
+        "variable/express/2021": {
+          "word": "Variable",
+          "definition": "Una etiqueta para una porción de información en un programa."
         },
         "for_loop/express/2021": {
           "word": "Bucle desde",
@@ -1503,6 +1525,10 @@
           "word": "Clic",
           "definition": "Presionar el botón del mouse"
         },
+        "double_click/pre-express/2021": {
+          "word": "Doble clic",
+          "definition": "Presionar dos veces el botón del mouse, muy rápido"
+        },
         "drag/pre-express/2021": {
           "word": "Arrastrar",
           "definition": "Hacer clic en el botón del mouse y mantenerlo presionado, mientras se mueve el puntero a una nueva posición"
@@ -1510,10 +1536,6 @@
         "drop/pre-express/2021": {
           "word": "Caída",
           "definition": "Dejar de presionar el botón del mouse para “liberar” al objeto que está siendo arrastrado"
-        },
-        "double_click/pre-express/2021": {
-          "word": "Doble clic",
-          "definition": "Presionar dos veces el botón del mouse, muy rápido"
         },
         "algorithm/pre-express/2021": {
           "word": "Algoritmo",
@@ -1551,13 +1573,13 @@
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
         },
-        "behavior/coursee/2021": {
-          "word": "Comportamiento",
-          "definition": "Una acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
-        },
         "algorithm/coursee/2021": {
           "word": "algoritmo",
           "definition": "Una lista de pasos para finalizar una tarea"
+        },
+        "behavior/coursee/2021": {
+          "word": "Comportamiento",
+          "definition": "Una acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
         },
         "sprite/coursee/2021": {
           "word": "Sprite",
@@ -1676,7 +1698,7 @@
           "definition": "primer modelo de un producto que permite probar conjeturas antes de desarrollar una versión final."
         },
         "user_interface/csd/2021": {
-          "word": "Pantalla de Usuario",
+          "word": "Interfaces de Usuario",
           "definition": "elementos visuales de un programa que sirven para comunicarse con la aplicación o controlarla. En español, se usa comúnmente la abreviación en inglés UI."
         },
         "bug/csd/2021": {

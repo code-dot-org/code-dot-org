@@ -69,6 +69,6 @@ ADMIN_IDS.each do |admin_id|
     raise ActiveRecord::Rollback.new, "Intentional rollback" if DRY_RUN
     puts "Admin password updated - #{admin_id}"
   end
-rescue StandardError => error
-  puts "Error, admin password is not updated - #{admin_id} / #{error.message}"
+rescue StandardError => exception
+  puts "Error, admin password is not updated - #{admin_id} / #{exception}"
 end

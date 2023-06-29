@@ -25,8 +25,8 @@ class GSheetToCsv
       mtime = @file.mtime
       ctime = File.mtime(@csv_path) if File.file?(@csv_path)
       return mtime.to_s == ctime.to_s
-    rescue GoogleDrive::Error => e
-      ChatClient.log "<p>Error getting modified time for <b>#{@gsheet_path}<b> from Google Drive.</p><pre><code>#{e.message}</code></pre>", color: 'yellow'
+    rescue GoogleDrive::Error => exception
+      ChatClient.log "<p>Error getting modified time for <b>#{@gsheet_path}<b> from Google Drive.</p><pre><code>#{exception.message}</code></pre>", color: 'yellow'
       true # Assume the current thing is up to date.
     end
   end
@@ -47,9 +47,9 @@ class GSheetToCsv
 
     begin
       buf = @file.spreadsheet_csv
-    rescue GoogleDrive::Error => e
-      puts "Error on file: #{@gsheet_path}, #{e}"
-      throw e
+    rescue GoogleDrive::Error => exception
+      puts "Error on file: #{@gsheet_path}, #{exception}"
+      throw exception
     end
     CSV.open(@csv_path, 'wb') do |csv|
       columns = nil

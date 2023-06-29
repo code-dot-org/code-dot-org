@@ -12,7 +12,7 @@ import {
   removeGroup,
   setLessonGroup,
   reorderLesson,
-  updateLessonGroupField
+  updateLessonGroupField,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import LessonToken from '@cdo/apps/lib/levelbuilder/unit-editor/LessonToken';
 import {lessonGroupShape} from './shapes';
@@ -37,7 +37,7 @@ class LessonGroupCard extends Component {
     removeLesson: PropTypes.func.isRequired,
     setLessonGroup: PropTypes.func.isRequired,
     reorderLesson: PropTypes.func.isRequired,
-    updateLessonGroupField: PropTypes.func.isRequired
+    updateLessonGroupField: PropTypes.func.isRequired,
   };
 
   /**
@@ -52,7 +52,7 @@ class LessonGroupCard extends Component {
     dragHeight: null,
     initialClientY: null,
     newPosition: null,
-    startingPositions: null
+    startingPositions: null,
   };
 
   handleDragStart = (position, {clientY}) => {
@@ -69,7 +69,7 @@ class LessonGroupCard extends Component {
         dragHeight: this.metrics[position].height + tokenMargin,
         initialClientY: clientY,
         newPosition: position,
-        startingPositions
+        startingPositions,
       });
       window.addEventListener('selectstart', this.preventSelect);
       window.addEventListener('mousemove', this.handleDrag);
@@ -147,7 +147,7 @@ class LessonGroupCard extends Component {
     this.setState({
       draggedLessonPos: null,
       newPosition: null,
-      currentPositions: []
+      currentPositions: [],
     });
     window.removeEventListener('selectstart', this.preventSelect);
     window.removeEventListener('mousemove', this.handleDrag);
@@ -225,11 +225,8 @@ class LessonGroupCard extends Component {
   };
 
   render() {
-    const {
-      lessonGroup,
-      targetLessonGroupPos,
-      allowMajorCurriculumChanges
-    } = this.props;
+    const {lessonGroup, targetLessonGroupPos, allowMajorCurriculumChanges} =
+      this.props;
     const {draggedLessonPos} = this.state;
     const isTargetLessonGroup = targetLessonGroupPos === lessonGroup.position;
     return (
@@ -293,9 +290,8 @@ class LessonGroupCard extends Component {
           <LessonToken
             ref={lessonToken => {
               if (lessonToken) {
-                const metrics = ReactDOM.findDOMNode(
-                  lessonToken
-                ).getBoundingClientRect();
+                const metrics =
+                  ReactDOM.findDOMNode(lessonToken).getBoundingClientRect();
                 this.metrics[lesson.position] = metrics;
               }
             }}
@@ -359,7 +355,7 @@ class LessonGroupCard extends Component {
 
 const styles = {
   checkbox: {
-    margin: '0 0 0 7px'
+    margin: '0 0 0 7px',
   },
   lessonGroupCard: {
     fontSize: 18,
@@ -369,36 +365,36 @@ const styles = {
     borderColor: '#ccc',
     borderRadius: borderRadius,
     padding: 20,
-    margin: 10
+    margin: 10,
   },
   lessonGroupCardHeader: {
     color: '#5b6770',
     marginBottom: 15,
-    minHeight: 10
+    minHeight: 10,
   },
   bottomControls: {
-    height: 30
+    height: 30,
   },
   addButton: {
     fontSize: 14,
     background: '#eee',
     border: '1px solid #ddd',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    margin: '0 5px 0 0'
+    margin: '0 5px 0 0',
   },
   input: {
-    width: '100%'
+    width: '100%',
   },
   title: {
-    marginRight: 5
-  }
+    marginRight: 5,
+  },
 };
 
 styles.targetLessonGroupCard = {
   ...styles.lessonGroupCard,
   borderWidth: 5,
   borderColor: color.cyan,
-  padding: 16
+  padding: 16,
 };
 
 export const UnconnectedLessonGroupCard = LessonGroupCard;
@@ -412,6 +408,8 @@ export default connect(
     addLesson,
     setLessonGroup,
     reorderLesson,
-    updateLessonGroupField
-  }
+    updateLessonGroupField,
+  },
+  null,
+  {forwardRef: true}
 )(LessonGroupCard);

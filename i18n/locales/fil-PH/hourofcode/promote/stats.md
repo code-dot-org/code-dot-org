@@ -16,7 +16,7 @@ title: Mga Blurb at kapaki-pakinabang na Stats
 
 #### Dalhin ng computer science sa paaralan mo. Magsimula sa Hour of Code!
 
-Binabago ng teknolohiya ng bawat industriya sa planeta, naging bahagi ng isang komprehnsibong kakayahan ang kaalaman sa computing. Ngunit kalahati lang ng lahat ng paaralan ang nag-aalok ng computer science! Ang magandang balita ay, patungo tayo sa daan upang baguhin ito. Kung narinig mo na ng tungkol sa Hour of Code sa nakaraang taon, maaaring alam mo ng gumawa ito ng kasaysayan. 100 milyong mga mag-aaral na ngayon ang nakatuklas kung gaano kadaling gamitin at kasaya ang computer science sa pamamagitan ng paggawa ng isang Hour of Code.
+Binabago ng teknolohiya ng bawat industriya sa planeta, naging bahagi ng isang komprehnsibong kakayahan ang kaalaman sa computing. Ngunit kalahati lang ng lahat ng paaralan ang nag-aalok ng computer science! Ang magandang balita ay, patungo tayo sa daan upang baguhin ito. If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
 Isang oras na pagpapakilala sa computer science ang Hour of Code, dinisenyo upang gawing simple ang code at ipakita na pwedeng matutunan ng kahit sino ang pangunahing kaalaman. Matuto pa sa [http://HourOfCode.com](http://HourofCode.com), subukan ang isang oras sa sarili mo, o mag-host ng isang Hour of Code event upang ipakilala ang iba sa mundo ng computing!
 
@@ -30,7 +30,7 @@ Umaasa kaming magbibigay ito ng interes ng mga mag-aaral upang patuloy na matuto
 
 #### Bakit mahalaga ito?
 
-Binabago ng teknolohiya ang bawat industriya sa planeta. Sa 2015, 7 milyon ang magbubukas ng mga trabaho sa U.S.—kasama ang sining at disenyo—na pinahahalagahan ang kasanayan sa coding. Ngunit 49 porsiyento ng mga paaralan sa US ay hindi nag-aalok ng computer science. Panahon na nating huwag magpahuli sa ika-21 na siglo. Alam natin na kahit ano pa man ang gawin ng mga mag-aaral kapag malaki na sila, kahit mapunta man sila sa medisina, negosyo, pulitika, o sa sining, ang kaalaman nila kung paano bumuo ang teknolohiya ang magbibigay sa kanila ng tiwala sa sarili at ng kompetitibong kalamangan. <br /> <br />
+There are nearly 700,000 open computing jobs in the US, but only 80,000 computer science students graduated into the workforce last year. And, 47 percent of schools in the U.S. don't offer computer science. It’s time for us to catch up to the 21st century. Alam natin na kahit ano pa man ang gawin ng mga mag-aaral kapag malaki na sila, kahit mapunta man sila sa medisina, negosyo, pulitika, o sa sining, ang kaalaman nila kung paano bumuo ang teknolohiya ang magbibigay sa kanila ng tiwala sa sarili at ng kompetitibong kalamangan. <br /> <br />
 
 #### Isang pahayag na magagamit mo sa mga materyales
 

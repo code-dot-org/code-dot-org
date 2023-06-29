@@ -1,5 +1,4 @@
 require 'cdo/env'
-require 'cdo/properties'
 
 # The controller for reports of internal admin-only data.
 class AdminReportsController < ApplicationController
@@ -122,12 +121,10 @@ class AdminReportsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_script
-    @script = Script.get_from_cache(params[:script_id]) if params[:script_id]
+    @script = Unit.get_from_cache(params[:script_id]) if params[:script_id]
   end
 
-  private
-
-  def level_answers_csv
+  private def level_answers_csv
     send_data(
       CSV.generate do |csv|
         csv << @headers

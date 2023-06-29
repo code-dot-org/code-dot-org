@@ -313,6 +313,12 @@
           },
           "draw a house": {
             "name": "vẽ một căn nhà"
+          },
+          "sun": {
+            "name": "mặt trời"
+          },
+          "square": {
+            "name": "Quảng trường"
           }
         },
         "Geometric Sun_2018": {
@@ -321,6 +327,12 @@
           },
           "draw a house": {
             "name": "vẽ một căn nhà"
+          },
+          "sun": {
+            "name": "mặt trời"
+          },
+          "square": {
+            "name": "Quảng trường"
           }
         },
         "InspirationalArtwork": {

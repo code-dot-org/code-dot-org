@@ -16,3 +16,5 @@ answer "Public Key 5"
 markdown <<MARKDOWN
 Use the widget to match each private key to the correct public key!
 MARKDOWN
+
+allow_multiple_attempts true

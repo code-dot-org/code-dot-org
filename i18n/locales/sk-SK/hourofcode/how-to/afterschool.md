@@ -8,7 +8,7 @@ title: 'Hodina kódu: návod pre vedúcich mimoškolských aktivít'
 
 ### Pridajte sa k nám a oboznámte svojich žiakov s informatikou pomocou týchto krokov.
 
-Algoritmické myslenie pomáha rozvijať logiku, tvorivosť a schopnosť riešiť problémy. A technológie v súčasnosti menia všetky odvetvia na svete. Žiaci by sa dnes mali učiť, ako technológie vytvárať, nie len používať. Čím skôr začnú, tým rýchlejšie si vytvoria základy na to, aby dokázali uspieť v akejkoľvek profesii 21. storočia. 
+Algoritmické myslenie pomáha rozvijať logiku, tvorivosť a schopnosť riešiť problémy. A technológie v súčasnosti menia všetky odvetvia na svete. Žiaci by sa dnes mali učiť, ako technológie vytvárať, nielen používať. Čím skôr začnú, tým rýchlejšie si vytvoria základy na to, aby dokázali uspieť v akejkoľvek profesii 21. storočia. 
 
 Hodina kódu poskytuje jednoduchý a zábavný spôsob, ako žiakom priblížiť informatiku hoci aj od základov. Ak potrebujete pomoc, môžete sa skontaktovať s [miestnym dobrovoľníkom]({{ urls/volunteer_local }}), aby vám ju pomohol zorganizovať v rámci vašej mimoškolskej aktivity.
 

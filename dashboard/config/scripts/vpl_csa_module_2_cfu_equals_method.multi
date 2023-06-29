@@ -24,7 +24,7 @@ public class Flower{
   private boolean isPerenial;
   private boolean isDroughtResistent; 
 
-  public Flower(String flowerColor, boolean, flowerIsPerenial, boolean flowerIsDroughtResistent){
+  public Flower(String flowerColor, boolean flowerIsPerenial, boolean flowerIsDroughtResistent){
 
   Color = flowerColor;
   isPerennial = flowerIsPerennial;
@@ -63,3 +63,5 @@ Flower border = fill;
 Which of the following statements will return false?
  
 MARKDOWN
+
+allow_multiple_attempts true

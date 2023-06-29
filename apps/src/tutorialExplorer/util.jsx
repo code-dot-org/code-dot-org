@@ -77,7 +77,12 @@ export function getTagString(prefix, tagString) {
 
     'activity_type_online-tutorial': i18n.filterActivityTypeOnlineTutorial(),
     'activity_type_lesson-plan': i18n.filterActivityTypeLessonPlan(),
-    activity_type_robotics: i18n.filterActivityTypeRobotics()
+
+    accessibility_screenreader: i18n.filterAccessibilityScreenReader(),
+    accessibility_tts: i18n.filterAccessibilityTTS(),
+    accessibility_keyboard: i18n.filterAccessibilityKeyboard(),
+    accessibility_captions: i18n.filterAccessibilityCaptions(),
+    accessibility_highcontrast: i18n.filterAccessibilityHighContrast(),
   };
 
   return tagString
@@ -116,7 +121,7 @@ export function mobileCheck() {
   // user agent) while the second tests against just the first four characters in it.
 
   var check = false;
-  (function(a) {
+  (function (a) {
     if (
       /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino|android|ipad|playbook|silk/i.test(
         a

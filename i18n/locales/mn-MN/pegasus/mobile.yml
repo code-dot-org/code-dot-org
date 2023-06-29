@@ -357,6 +357,7 @@
   homepage_slot_text_link_buy: "Оролцох"
   homepage_slot_text_link_donate: "Хандивлах"
   homepage_slot_text_link_shop: "Футболка, малгай ба бусад"
+  homepage_slot_text_link_thebadguys: "Муу залуустай код"
   homepage_slot_text_link_administrators: "Сургуульд КШУ-ыг авчрах"
   homepage_gallery_header: "%{project_count} сая гаруй Code.org төсөл үүсгэгдсэн"
   homepage_header_donors: "Code.org дэмжигчдэдээ талархаж байна"
@@ -1684,3 +1685,4 @@
   ai_microsoft_thanks: "Хүүхэд бүр компьютерийн шинжлэх ухаан, 21-р зуунд амжилтанд хүрэх ур чадварыг олж авах боломжийг хангах зорилгоор бидний алсын хараа, эрхэм зорилгыг дэмжсэн Microsoft-д талархаж байна."
   ai_activity: "Үйл ажиллагаа"
   ai_description: "Тайлбар"
+  hoc2022_landing_page_create_title: "Үүсгэх"

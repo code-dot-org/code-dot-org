@@ -10,9 +10,9 @@ nav: how_to_nav
 
 ### Join the movement and introduce your students to computer science with these steps.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Students today should learn how to create technology, not just use it.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. សូមក្រឡេកមើល[ការណែនាំរបស់យើងខ្ញុំអំពីការចូលរួម ប្រសិនបើអ្នកនៅតែមានសំណួរ]({{ localized_files/participation_guide }}). 
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
 
 - [Watch the Hour of Code how-to video](#how-to-video)
 - [Explore activities and tutorials](#explore-activities)
@@ -22,8 +22,6 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 - [Get coding](#code)
 - [Celebrate your students' success](#celebrate)
 - [ធនធាន Hour of Code សម្រាប់អ្នកអប់រំ](#other-resources)
-
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -41,7 +39,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ស្វែងយល់ពីសកម្មភាពនិងធ្វើការសម្រេចចិត្តជាមុនប្រសិនបើអ្នកចង់ជ្រើសរើសការបង្រៀនតែមួយ សម្រាប់សិស្សទាំងអស់របស់អ្នក ឬទុកឱ្យកុមារម្នាក់ៗជ្រើសរើសដោយខ្លួនឯង។
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -60,7 +58,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ### ជ្រើសរើសថ្ងៃនិងម៉ោង
 
-មនុស្សនៅជុំវិញពិភពលោកចូលរួមអបអរ Hour of Code ក្នុងអំឡុងសប្តាហ៍អប់រំ CS(៩-១៣ ធ្នូ) នៅពេលការបង្រៀននិងសកម្មភាពចុងក្រោយត្រូវបានចេញផ្សាយ។ ប៉ុន្តែអ្នកអាចធ្វើ Hour of Code នៅថ្ងៃណាក៏បាន!
+People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. ប៉ុន្តែអ្នកអាចធ្វើ Hour of Code នៅថ្ងៃណាក៏បាន!
 
 * * *
 
@@ -76,11 +74,11 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ### ប្រាប់អ្នកស្ម័គ្រចិត្តអោយដឹងអោយចុះឈ្មោះជាមួយនឹងកម្មវិធីរបស់អ្នក
 
-នៅពេលអ្នក [ចុះឈ្មោះចូលកម្មវិធី Hour of Code](/), អ្នកនឹងទទួលបានអ៊ីម៉ែលទំនាក់ទំនង ដែលមានព័ត៌មាននិងជំនួយ ក្នុងការរៀបចំធ្វើកម្មវិធី Hour of Code។ វាក៏ជាវិធីដែលអ្នកអាចអោយអ្នកស្ម័គ្រចិត្តក្នុងស្រុកដឹងថាសាលារបស់អ្នកកំពុងចូលរួម។ អ្នកស្ម័គ្រចិត្តគឺជាធនធានដ៏សំខាន់មួយហើយអាចមកនិយាយទៅកាន់សិស្សថ្នាក់របស់អ្នកអំពីវិទ្យាសាស្ត្រកុំព្យូទ័រឬជួយសិស្សរបស់អ្នកជាមួយនឹងសកម្មភាពម៉ោងនៃកូដ។
+When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. វាក៏ជាវិធីដែលអ្នកអាចអោយអ្នកស្ម័គ្រចិត្តក្នុងស្រុកដឹងថាសាលារបស់អ្នកកំពុងចូលរួម។ អ្នកស្ម័គ្រចិត្តគឺជាធនធានដ៏សំខាន់មួយហើយអាចមកនិយាយទៅកាន់សិស្សថ្នាក់របស់អ្នកអំពីវិទ្យាសាស្ត្រកុំព្យូទ័រឬជួយសិស្សរបស់អ្នកជាមួយនឹងសកម្មភាពម៉ោងនៃកូដ។
 
 ### ធ្វើឱ្យសិស្សរបស់អ្នកសប្បាយរីករាយ
 
-ដឹកនាំកម្មវិធីដោយចែករំលែក [វីដេអូបំផុសគំនិត](/promote/resources) បង្ហាញពីមនុស្សចម្រុះគ្នានិងវិធីច្នៃប្រឌិតដែលវិទ្យាសាស្ត្រកុំព្យូទ័រអាចយកទៅប្រើបាន។ ឬបញ្ជាទិញផ្ទាំងរូបភាពបំផុសគំនិតសម្រាប់ថ្នាក់រៀនរបស់អ្នក! សិស្សសប្បាយរីករាយក្នុងការចូលរួមក្នុងមុខវិជ្ជាមួយនៅពេលពួកគេឃើញមនុស្សដែលមើលទៅដូចពួកគេ ហើយលើកទឹកចិត្តពួកគេ។
+ដឹកនាំកម្មវិធីដោយចែករំលែក [វីដេអូបំផុសគំនិត](/promote/resources) បង្ហាញពីមនុស្សចម្រុះគ្នានិងវិធីច្នៃប្រឌិតដែលវិទ្យាសាស្ត្រកុំព្យូទ័រអាចយកទៅប្រើបាន។ Or print inspirational posters for your classroom! សិស្សសប្បាយរីករាយក្នុងការចូលរួមក្នុងមុខវិជ្ជាមួយនៅពេលពួកគេឃើញមនុស្សដែលមើលទៅដូចពួកគេ ហើយលើកទឹកចិត្តពួកគេ។
 
 {{ promote_new_posters }}
 
@@ -115,7 +113,7 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 ដឹកនាំសិស្សទៅធ្វើសកម្មភាព
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 វាមិនអីទេក្នុងការឆ្លើយតបនៅពេលដែលសិស្សរបស់អ្នកជួបការលំបាក៖
 
@@ -142,7 +140,6 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 - [បោះពុម្ពវិញ្ញាបនបត្រ]({{ urls/certificates }}) អោយសិស្សរបស់អ្នក។ 
 - [បោះពុម្ពស្ទីឃ័រ "ខ្ញុំបានធ្វើ Hour of Code!"]({{ urls/promote_stickers }}) អោយសិស្សរបស់អ្នក។
-- [ទិញអាវយឺត](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) សំរាប់សាលារបស់អ្នក។
 - ចែករំលែករូបថតនិងវីដេអូនៃកម្មវិធី Hour of Code របស់អ្នកនៅលើប្រព័ន្ធផ្សព្វផ្សាយសង្គម។ ប្រើ #HourOfCode និង @codeorg ដើម្បីអោយយើងអាចបង្ហាញភាពជោគជ័យរបស់អ្នកផងដែរ!
 
 * * *
@@ -156,6 +153,6 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 ### What comes after the Hour of Code?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

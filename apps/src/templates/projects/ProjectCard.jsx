@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import PropTypes from 'prop-types';
 import React from 'react';
 import color from '../../util/color';
@@ -13,7 +14,7 @@ export default class ProjectCard extends React.Component {
     projectData: PropTypes.object.isRequired,
     currentGallery: PropTypes.oneOf(['personal', 'public']).isRequired,
     showFullThumbnail: PropTypes.bool,
-    isDetailView: PropTypes.bool
+    isDetailView: PropTypes.bool,
   };
 
   render() {
@@ -110,7 +111,7 @@ const styles = {
     border: '1px solid #bbbbbb',
     borderRadius: 2,
     width: 214,
-    backgroundColor: color.white
+    backgroundColor: color.neutral_light,
   },
   title: {
     paddingLeft: 15,
@@ -119,30 +120,31 @@ const styles = {
     paddingBottom: 5,
     fontSize: 16,
     fontFamily: '"Gotham 5r", sans-serif',
-    color: color.charcoal,
+    color: color.neutral_dark,
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
     height: 18,
-    boxSizing: 'content-box'
+    boxSizing: 'content-box',
   },
   titleLink: {
-    color: color.charcoal
+    color: color.neutral_dark,
+    textDecoration: 'none',
   },
   lastEdit: {
-    paddingLeft: 30,
+    paddingLeft: 15,
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 11,
     fontFamily: '"Gotham", sans-serif',
-    color: color.charcoal
+    color: color.neutral_dark,
   },
   ageRange: {
     paddingLeft: 10,
     paddingTop: 5,
     fontSize: 11,
     fontFamily: '"Gotham", sans-serif',
-    color: color.charcoal
+    color: color.neutral_dark,
   },
   firstInitial: {
     paddingTop: 5,
@@ -150,7 +152,7 @@ const styles = {
     paddingLeft: 15,
     paddingRight: 15,
     fontFamily: '"Gotham", sans-serif',
-    color: color.charcoal
+    color: color.neutral_dark,
   },
   thumbnail: {
     width: 214,
@@ -158,20 +160,20 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   fullThumbnail: {
-    height: 214
+    height: 214,
   },
   image: {
     flexShrink: 0,
     width: '100%',
-    weight: '100%'
+    weight: '100%',
   },
   bold: {
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
   },
   noTime: {
-    paddingBottom: 10
-  }
+    paddingBottom: 10,
+  },
 };

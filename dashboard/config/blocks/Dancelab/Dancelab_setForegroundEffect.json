@@ -1,11 +1,7 @@
 {
   "category": "World",
   "config": {
-    "color": [
-      240,
-      0.45,
-      0.65
-    ],
+    "style": "world_blocks",
     "func": "setForegroundEffect",
     "blockText": "set foreground effect {EFFECT}",
     "args": [

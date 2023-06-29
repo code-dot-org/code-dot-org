@@ -10,10 +10,7 @@ class Api::V1::Pd::FormsController < ::ApplicationController
     form_data_json = form_data_hash ? form_data_hash.to_unsafe_h.to_json.strip_utf8mb4 : {}.to_json
     form.form_data_hash = JSON.parse(form_data_json)
 
-    status = params[:status]
-    if status
-      @application.status = status
-    end
+    form.status = new_status if form.is_a? Pd::Application::TeacherApplication
 
     # Check for idempotence
     existing_form = form.check_idempotency

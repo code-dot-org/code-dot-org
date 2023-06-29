@@ -15,7 +15,7 @@ describe('LevelDetailsDialogTest', () => {
     defaultProps = {
       handleClose: handleCloseSpy,
       viewAs: ViewType.Instructor,
-      isRtl: false
+      isRtl: false,
     };
     loadVideoSpy = sinon.stub(LevelDetailsDialog.prototype, 'loadVideo');
   });
@@ -32,8 +32,8 @@ describe('LevelDetailsDialogTest', () => {
           url: 'level.url',
           level: {
             type: 'External',
-            markdown: 'Some markdown'
-          }
+            markdown: 'Some markdown',
+          },
         }}
       />
     );
@@ -53,8 +53,8 @@ describe('LevelDetailsDialogTest', () => {
           url: 'level.url',
           level: {
             type: 'External',
-            markdown: 'Some markdown'
-          }
+            markdown: 'Some markdown',
+          },
         }}
       />
     );
@@ -75,7 +75,7 @@ describe('LevelDetailsDialogTest', () => {
         scriptLevel={{
           url: 'level.url',
           level: {type: 'External', markdown: 'This is some text.'},
-          name: 'External Markdown Level'
+          name: 'External Markdown Level',
         }}
       />
     );
@@ -93,8 +93,8 @@ describe('LevelDetailsDialogTest', () => {
             type: 'External',
             markdown: 'This is some text.',
             teacherMarkdown: 'This is some teacher only text.',
-            videoOptions: {url: 'video.url'}
-          }
+            videoOptions: {url: 'video.url'},
+          },
         }}
       />
     );
@@ -102,10 +102,7 @@ describe('LevelDetailsDialogTest', () => {
     expect(wrapper.contains('This is some text.')).to.be.true;
     expect(wrapper.find('TeacherOnlyMarkdown').length).to.equal(1);
     expect(
-      wrapper
-        .find('TeacherOnlyMarkdown')
-        .first()
-        .props().content
+      wrapper.find('TeacherOnlyMarkdown').first().props().content
     ).to.equal('This is some teacher only text.');
   });
 
@@ -115,7 +112,7 @@ describe('LevelDetailsDialogTest', () => {
         {...defaultProps}
         scriptLevel={{
           url: 'level.url',
-          level: {type: 'LevelGroup'}
+          level: {type: 'LevelGroup'},
         }}
       />
     );
@@ -131,7 +128,7 @@ describe('LevelDetailsDialogTest', () => {
         {...defaultProps}
         scriptLevel={{
           url: 'level.url',
-          level: {type: 'Jigsaw'}
+          level: {type: 'Jigsaw'},
         }}
       />
     );
@@ -149,8 +146,8 @@ describe('LevelDetailsDialogTest', () => {
           url: 'level.url',
           level: {
             type: 'StandaloneVideo',
-            longInstructions: 'Some things to think about.'
-          }
+            longInstructions: 'Some things to think about.',
+          },
         }}
       />
     );
@@ -167,8 +164,8 @@ describe('LevelDetailsDialogTest', () => {
           level: {
             type: 'StandaloneVideo',
             longInstructions: 'Some things to think about.',
-            teacherMarkdown: 'Some things to teach about.'
-          }
+            teacherMarkdown: 'Some things to teach about.',
+          },
         }}
       />
     );
@@ -176,10 +173,7 @@ describe('LevelDetailsDialogTest', () => {
     expect(wrapper.contains('Some things to think about.')).to.be.true;
     expect(wrapper.find('TeacherOnlyMarkdown').length).to.equal(1);
     expect(
-      wrapper
-        .find('TeacherOnlyMarkdown')
-        .first()
-        .props().content
+      wrapper.find('TeacherOnlyMarkdown').first().props().content
     ).to.equal('Some things to teach about.');
   });
 
@@ -196,19 +190,19 @@ describe('LevelDetailsDialogTest', () => {
             {
               id: '1',
               status: 'not_tried',
-              name: 'sublevel1'
+              name: 'sublevel1',
             },
             {
               id: '2',
               status: 'not_tried',
-              name: 'sublevel2'
+              name: 'sublevel2',
             },
             {
               id: '3',
               status: 'not_tried',
-              name: 'sublevel3'
-            }
-          ]
+              name: 'sublevel3',
+            },
+          ],
         }}
       />
     );
@@ -228,7 +222,7 @@ describe('LevelDetailsDialogTest', () => {
           name: 'sublevel1',
           type: 'External',
           markdown: 'Markdown1',
-          display_name: 'Choice 1'
+          display_name: 'Choice 1',
         },
         {
           id: '2',
@@ -236,9 +230,9 @@ describe('LevelDetailsDialogTest', () => {
           name: 'sublevel2',
           type: 'External',
           markdown: 'Markdown1',
-          display_name: 'Choice 2'
-        }
-      ]
+          display_name: 'Choice 2',
+        },
+      ],
     };
     const wrapper = shallow(
       <LevelDetailsDialog {...defaultProps} scriptLevel={bubbleChoiceLevel} />
@@ -247,12 +241,9 @@ describe('LevelDetailsDialogTest', () => {
       .instance()
       .handleBubbleChoiceBubbleClick(bubbleChoiceLevel.sublevels[0]);
     expect(wrapper.find('SublevelCard').length).to.equal(0);
-    expect(
-      wrapper
-        .find('SafeMarkdown')
-        .first()
-        .props().markdown
-    ).to.equal('Markdown1');
+    expect(wrapper.find('SafeMarkdown').first().props().markdown).to.equal(
+      'Markdown1'
+    );
     expect(wrapper.find('h1').contains('Choice 1')).to.be.true;
   });
 
@@ -270,7 +261,7 @@ describe('LevelDetailsDialogTest', () => {
           type: 'Weblab',
           longInstructions: 'long instructions',
           display_name: 'Choice 1',
-          exampleSolutions: ['link/1']
+          exampleSolutions: ['link/1'],
         },
         {
           id: '2',
@@ -278,9 +269,9 @@ describe('LevelDetailsDialogTest', () => {
           name: 'sublevel2',
           type: 'External',
           markdown: 'Markdown1',
-          display_name: 'Choice 2'
-        }
-      ]
+          display_name: 'Choice 2',
+        },
+      ],
     };
     const wrapper = shallow(
       <LevelDetailsDialog {...defaultProps} scriptLevel={bubbleChoiceLevel} />
@@ -308,8 +299,8 @@ describe('LevelDetailsDialogTest', () => {
           level: {
             type: 'Weblab',
             id: 'level',
-            longInstructions: 'long instructions'
-          }
+            longInstructions: 'long instructions',
+          },
         }}
       />
     );
@@ -334,10 +325,10 @@ describe('LevelDetailsDialogTest', () => {
               {
                 name: 'contained-level',
                 type: 'FreeResponse',
-                longInstructions: 'long instructions'
-              }
-            ]
-          }
+                longInstructions: 'long instructions',
+              },
+            ],
+          },
         }}
       />
     );
@@ -356,35 +347,24 @@ describe('LevelDetailsDialogTest', () => {
             type: 'Multi',
             id: 'level',
             content: [
-              'Look at the code below and predict how the headings will be displayed.'
+              'Look at the code below and predict how the headings will be displayed.',
             ],
             questionText: 'Eggs, Bacon, Waffles',
-            teacherMarkdown: 'This is a multiple choice level.'
-          }
+            teacherMarkdown: 'This is a multiple choice level.',
+          },
         }}
       />
     );
     expect(wrapper.find('SafeMarkdown').length).to.equal(2);
-    expect(
-      wrapper
-        .find('SafeMarkdown')
-        .at(0)
-        .props().markdown
-    ).equal(
+    expect(wrapper.find('SafeMarkdown').at(0).props().markdown).equal(
       'Look at the code below and predict how the headings will be displayed.'
     );
-    expect(
-      wrapper
-        .find('SafeMarkdown')
-        .at(1)
-        .props().markdown
-    ).equal('Eggs, Bacon, Waffles');
+    expect(wrapper.find('SafeMarkdown').at(1).props().markdown).equal(
+      'Eggs, Bacon, Waffles'
+    );
     expect(wrapper.find('TeacherOnlyMarkdown').length).to.equal(1);
     expect(
-      wrapper
-        .find('TeacherOnlyMarkdown')
-        .first()
-        .props().content
+      wrapper.find('TeacherOnlyMarkdown').first().props().content
     ).to.equal('This is a multiple choice level.');
   });
 });

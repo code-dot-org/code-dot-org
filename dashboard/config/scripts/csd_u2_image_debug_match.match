@@ -19,3 +19,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Although this level can be used to assess student understanding of the syntax of the `<img>` tag, its main purpose is to make students aware of the most common types of bugs they may encounter when adding images to web pages.
 MARKDOWN
+
+allow_multiple_attempts true

@@ -29,7 +29,7 @@ class I18nSmartTranslateTest < Minitest::Test
     end
 
     # cannot accomodate strings that include all possible separators
-    all_test_string = test_strings.join('')
+    all_test_string = test_strings.join
     assert_nil Cdo::I18n::SmartTranslate.get_valid_separator all_test_string
   end
 
@@ -81,7 +81,7 @@ class I18nSmartTranslateTest < Minitest::Test
       "data" => {
         "some.keys" => {
           "with|a,variety" => {
-            "of-separators": "translation"
+            'of-separators': "translation"
           }
         }
       }
@@ -98,7 +98,7 @@ class I18nSmartTranslateTest < Minitest::Test
       "data" => {
         "some.keys" => {
           "with|all,of-the" => {
-            "separators_that we/support": "translation"
+            'separators_that we/support': "translation"
           }
         }
       }

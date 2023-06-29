@@ -7,3 +7,5 @@ right '3'
 wrong '4'
 wrong 'inifinite'
 
+
+allow_multiple_attempts false

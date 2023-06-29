@@ -118,10 +118,8 @@ class I18nStringUrlTracker
     end
   end
 
-  private
-
   # Records the log data to a buffer which will eventually be flushed
-  def add_to_buffer(normalized_key, url, source, string_key, scope, separator)
+  private def add_to_buffer(normalized_key, url, source, string_key, scope, separator)
     # make sure this is the only thread modifying @buffer
     @buffer.synchronize do
       # update the buffer size if we are adding any new data to it
@@ -190,7 +188,16 @@ class I18nStringUrlTracker
   # not interested in.
   def allowed(url)
     return false unless url
-    parsed_url = URI(url)
+
+    # It is possible that a translation happens before a page is rejected, and some URLs are
+    # not technically valid. For instance, a bogus project via a channel id with a bracket:
+    # "https://studio.code.org/projects/gamelab/ppcBSUtL9w4W2QOjLEsOpFClplmt4vhuAi8gVrS_6o0]"
+    # So, we need to just ignore any invalid URLs and not log the translation.
+    begin
+      parsed_url = URI(url)
+    rescue URI::InvalidURIError
+      return false
+    end
 
     # Include any non-studio.code.org URLs e.g. code.org, hourofcode.com, etc
     return true unless parsed_url.host&.match(/.*studio\.code\.org.*/)
@@ -208,6 +215,7 @@ class I18nStringUrlTracker
     SIMPLE_PATHS.each do |page|
       return true if parsed_url.path&.match(/^\/#{page}.*/)
     end
+
     # Otherwise this URL should not be recorded
     false
   end

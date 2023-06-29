@@ -3685,7 +3685,6 @@
         "courseD_artist_42022": "Přidej malý tvar na konec čáry!",
         "courseD_artist_52022": "Hraj si s vločkami!",
         "courseD_artist_62022": "Zkus změnit čáru dlouhou 150 pixelů na 6 krátkých čar dlouhých **25** pixelů s malými otočkami na konci.",
-        "courseD_artist_nestedLoops102022": "Použij kód pro čtverce z dřívějška, ale tentokrát jich nakresli jen sedm a umísti je do řady.",
         "courseD_artist_nestedLoops12022": "Začni tuhle fázi nakreslením trojúhelníku.\\\n(Každá strana je 100 pixelů dlouhá a k vytvoření správných úhlů je potřeba se pokaždé otočit o 120 stupňů.)",
         "courseD_artist_nestedLoops1a2022": "Teď trojúhelník zacykli, ať se 6krát zopakuje. ",
         "courseD_artist_nestedLoops22022": "Tentokrát vyřeš úlohu s co nejmenším možným počtem bloků.",
@@ -3946,7 +3945,29 @@
         "ramp_artist_loops72022": "Najdi v kódu opakující se vzor a zkrať kód tím, že v něm použiješ cyklus!",
         "ramp_artist_loops82022": "Najdi v kódu opakující se vzor a zkrať kód tím, že v něm použiješ cyklus.",
         "ramp_artist_loops92022": "Vyřeš tuto úlohu tak, že nakreslíš čtverec.",
-        "simcustom_-2022-2": "Pokuste se udělat nějaké změny v kostýmech sprajtů nebo v níže uvedeném kódu. "
+        "simcustom_-2022-2": "Pokuste se udělat nějaké změny v kostýmech sprajtů nebo v níže uvedeném kódu. ",
+        "helloworld_food_backgrounds_soccer-2022": "Naučme se měnit pozadí.",
+        "helloworld_food_backgrounds_space-2022": "Naučme se měnit pozadí.",
+        "helloworld_food_behaviors_soccer-2022": "Naučme se animovat sprajty pomocí chování.",
+        "helloworld_food_behaviors_space-2022": "Naučme se animovat sprajty pomocí chování.",
+        "helloworld_food_click_soccer-2022": "Co přiměje tyto sprajty mluvit?",
+        "helloworld_food_click_space-2022": "Co přiměje tyto sprajty mluvit?",
+        "helloworld_food_costumes_soccer-2022": "Učme se měnit vzhled sprajtů.",
+        "helloworld_food_costumes_space-2022": "Učme se měnit vzhled sprajtů.",
+        "helloworld_food_events_soccer-2022": "Pomocí události `když bude kliknuto` přimějte sprajt něco říci.",
+        "helloworld_food_events_space-2022": "Pomocí události `když bude kliknuto` přimějte sprajt něco říci.",
+        "helloworld_food_freeplay_soccer-2022": "Je čas vytvořit cokoli, co budete chtít!",
+        "helloworld_food_freeplay_space-2022": "Je čas vytvořit cokoli, co budete chtít!",
+        "helloworld_food_location_soccer-2022": "Dejte každému sprajtu jiné místo.",
+        "helloworld_food_location_space-2022": "Dejte každému sprajtu jiné místo.",
+        "helloworld_food_multi_soccer-2022": "Zajistěte, aby oba Vaše sprajty něco řekly.",
+        "helloworld_food_multi_space-2022": "Zajistěte, aby oba Vaše sprajty něco řekly.",
+        "helloworld_food_say_soccer-2022": "Pomocí bloku `říci` mě můžete přimět říci cokoli, co budete chtít!",
+        "helloworld_food_say_space-2022": "Pomocí bloku `říci` mě můžete přimět říci cokoli, co budete chtít!",
+        "helloworld_food_sizes_soccer-2022": "Učme se měnit velikost sprajtů.",
+        "helloworld_food_sizes_space-2022": "Učme se měnit velikost sprajtů.",
+        "helloworld_food_sounds_soccer-2022": "Naučme se přehrávat zvuky.",
+        "helloworld_food_sounds_space-2022": "Naučme se přehrávat zvuky."
       }
     }
   }

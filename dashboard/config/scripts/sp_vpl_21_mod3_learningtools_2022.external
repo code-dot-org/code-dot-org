@@ -3,9 +3,13 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Tools across the course
+# Tools Across The Course
 
-##### CS Discoveries introduces students to tools and programming languages that are accessible for beginners while offering more advanced students opportunities to create sophisticated projects. All of the tools below are integrated directly into the Code.org website, allowing teachers to have visibility into all student work and progress. 
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">CS Discoveries introduces students to tools and programming languages that are accessible for beginners while offering more advanced students opportunities to create sophisticated projects. All of the tools below are integrated directly into the Code.org website, allowing teachers to have visibility into all student work and progress. 
+</p>
+</div>
 
 <div style="clear:both"/>
 
@@ -35,7 +39,7 @@ markdown <<MARKDOWN
 
 <hr style="clear:both">
 
-<img src="https://images.code.org/428d87d286793d1ed345dc296a8d83dc-image-1626273062584.30.31 AM.png" alt="Screenshot of an interactive app in App Lab." style="float: left; height: 200px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/428d87d286793d1ed345dc296a8d83dc-image-1626273062584.30.31 AM.png" alt="Screenshot of an interactive app in App Lab." style="float: left; height: 200px; clear: both; margin: 20px 20px 20px 0;">
 
 ## App Lab
 
@@ -44,19 +48,11 @@ markdown <<MARKDOWN
 ##### **Units that use App Lab:** 
 
 ##### The Design Process 
+##### Creating Apps with Devices - Option A: Circuit Playground
+##### Creating Apps with Devices - Option B: micro:bit
 ##### AI and Machine Learning
 
-<hr style="clear:both">
-
-<img src="https://images.code.org/631528b335a0c775cb725c843d488fc0-image-1626274632076.56.42 AM.png" alt="Screenshot of an 'Emotion Machine' app in the Maker App." style="float: left; height: 195px; clear: both; margin: 0 20px 20px 0;">
-
-## Maker App
-
-Maker App is a downloadable program that connects App Lab to Adafruit's Circuit Playground, allowing students to easily program the Circuit Playground directly from App Lab. 
-
-##### **Units that use the Maker App:** 
-
-##### Physical Computing 
+_**Note:** Teachers should **not** teach both Creating Apps with Devices options as they are the same basic lessons. Instead, teachers should decide which version of this unit they wish to teach based on the device they would like to use._
 
 <hr style="clear:both">
 

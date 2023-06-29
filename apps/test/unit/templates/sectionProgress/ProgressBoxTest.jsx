@@ -10,17 +10,14 @@ const DEFAULT_PROPS = {
   imperfect: 0,
   perfect: 2,
   style: {},
-  lessonIsAllAssessment: false
+  lessonIsAllAssessment: false,
 };
 
 describe('ProgressBox', () => {
   it('renders progress bar as green when lessonIsAllAssessment prop is false', () => {
     const wrapper = shallow(<ProgressBox {...DEFAULT_PROPS} />);
     assert.equal(
-      wrapper
-        .find('.uitest-perfect-bar')
-        .first()
-        .props().style.backgroundColor,
+      wrapper.find('.uitest-perfect-bar').first().props().style.backgroundColor,
       color.level_perfect
     );
   });
@@ -30,10 +27,7 @@ describe('ProgressBox', () => {
       <ProgressBox {...DEFAULT_PROPS} lessonIsAllAssessment={true} />
     );
     assert.equal(
-      wrapper
-        .find('.uitest-perfect-bar')
-        .first()
-        .props().style.backgroundColor,
+      wrapper.find('.uitest-perfect-bar').first().props().style.backgroundColor,
       color.level_submitted
     );
   });

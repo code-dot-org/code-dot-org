@@ -77,14 +77,20 @@ class ActivitySectionTest < ActiveSupport::TestCase
   end
 
   test "summarize retrives translations" do
-    activity_section = create(:activity_section, name: "English name", description: "English description")
-    test_locale = :"te-ST"
+    activity_section = create(
+      :activity_section,
+      name: "English name",
+      description: "English description",
+      tips: [{"type" => "typeTip", "markdown" => "English tip"}]
+    )
+    test_locale = :'te-ST'
     custom_i18n = {
       "data" => {
         "activity_sections" => {
           activity_section.key => {
             "name" => "Translated name",
-            "description" => "Translated description"
+            "description" => "Translated description",
+            "tips" => ["Translated tip"]
           }
         }
       }
@@ -95,6 +101,7 @@ class ActivitySectionTest < ActiveSupport::TestCase
     I18n.locale = test_locale
     assert_equal("Translated name", activity_section.summarize[:name])
     assert_equal("Translated description", activity_section.summarize[:description])
+    assert_equal([{"type" => "typeTip", "markdown" => "Translated tip"}], activity_section.summarize[:tips])
     I18n.locale = I18n.default_locale
   end
 end

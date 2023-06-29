@@ -2,11 +2,11 @@
 title: Socios
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+La Hora del Código está dirigida por el Comité de Revisión de la Hora del Código.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+El [Comité de Revisión]({{ urls/review_committee }}) está compuesto por 12 educadores actuales y antiguos de todas las franjas de grado K-12 que evalúan y recomiendan actividades utilizando una rúbrica establecida por un comité asesor. Estos educadores revisan las actividades dirigidas por los estudiantes y los planes de lecciones dirigidas por los profesores que han sido enviados por cientos de socios de actividades, evaluando el valor educativo de las actividades, su capacidad para atraer a los estudiantes y su atractivo potencial para diversos grupos de estudiantes.
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+El trabajo y la dedicación del comité han contribuido al éxito de la Hora del Código y a su visión de ofrecer una introducción a la informática a todos los estudiantes.
 
 # Principales socios y patrocinadores corporativos
 

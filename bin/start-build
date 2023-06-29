@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../deployment.rb'
+require_relative '../deployment'
 require 'cdo/chat_client'
 
 # restarts the build on daemon servers by touching build-started,

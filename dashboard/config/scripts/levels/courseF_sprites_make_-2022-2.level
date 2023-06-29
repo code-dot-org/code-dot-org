@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-04-07T19:15:22.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -72,9 +68,13 @@
     "instructions_icon": "strawberry",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-04-07T19:15:22.000Z",
+  "user_id": 9,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-07T19:15:22.284+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_make_2022_pilot\\\"\"],\"cloned_from\":\"courseF_sprites_make_2022_pilot\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-07T19:15:22.284+00:00\",\"changed\":[\"cloned from \\\"courseF_sprites_make_2022_pilot\\\"\"],\"cloned_from\":\"courseF_sprites_make_2022_pilot\"},{\"changed_at\":\"2023-03-07 14:54:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1
   }
@@ -515,19 +515,24 @@
       <xml>
         <category name="World">
           <block type="gamelab_setBackgroundImageAs">
-            <title name="IMG">"grid_1"</title>
+            <field name="IMG">"grid_1"</field>
           </block>
           <block type="gamelab_setBackground">
             <value name="COLOR">
               <block type="colour_picker">
-                <title name="COLOUR">#3333ff</title>
+                <field name="COLOUR">#3333ff</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Sprites">
           <block type="gamelab_makeNewSpriteAnon">
-            <title name="ANIMATION_NAME">"face_strawberry_1"</title>
+            <field name="ANIMATION_NAME">"face_strawberry_1"</field>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker">
+                <field name="LOCATION">{"x":200,"y":200}</field>
+              </block>
+            </value>
           </block>
         </category>
       </xml>

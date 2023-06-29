@@ -11,27 +11,25 @@ social:
 
 <br /> කේත වේලාව ක්‍රියාත්මක වන්නේ {{ප්‍රචාරණ දිනය / සම්පූර්ණ} තුළ වන අතර නව නිබන්ධන සහ වෙනත් ආකර්ෂණීය යාවත්කාලීනයන් එළියට එන විට අපි ඒවා සම්බන්ධ කර ගනිමු. මේ අතර, ඔබට දැන් කුමක් කළ හැකිද?
 
-Hour of Code සංවිධායකයින්ට විශේෂ ස්තූතියක් ලෙස, මලාලා, ස්ටීවන් කරි, ෂකිරා සහ තවත් බොහෝ දේ ඇතුළත් නව පෝස්ටර් කට්ටලයක් ඇමේසන් වෙතින් 50% වට්ටමක් යටතේ ඇණවුම් කළ හැකිය. මේ වසරේ සෑම කට්ටලයකම පෝස්ටර් 6 ක් සහ "මම පැය කෝඩ් කළා" ස්ටිකර් ඇත. වට්ටම් සමඟ ඔබ ඒවා සෑදීමට අපගේ පිරිවැයට වඩා අඩු මුදලකට ලබා ගනී. සැපයුම් සීමිත බැවින් ඔබගේ පෝස්ටර් ඉක්මනින් ඇණවුම් කරන්න. ඔබ එක්සත් ජනපදයේ නොමැති නම්, ඔබට සියලු පෝස්ටර් බාගත කර මුද්‍රණය කළ හැකිය. . . . .
-
 ## 1. ඔබේ පාසලේ සහ ප්‍රජාව තුළ මෙය ප්‍රචලිත කරන්න
 
-ඔබ Hour of code සමඟ සම්බන්ධ විය. ඔබේ මිතුරන් සමගත් මෙය බෙදාගන්න #HourOfCode!
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-{{social_media_hoc}} අපගේ නියැදි ඊමේල් සමඟ සහභාගී වීමට අන් අයව දිරිමත් කරන්න. ඔබේ විදුහල්පති අමතා ඔබේ පාසලේ සෑම පන්ති කාමරයකටම ලියාපදිංචි වන්නැයි අභියෝග කරන්න. පිරිමි කණ්ඩායමක් / බාලදක්ෂ බාලදක්ෂ සමාජයක්, පල්ලියක්, විශ්ව විද්‍යාලයක්, ප්‍රවීණ කණ්ඩායමක්, කම්කරු සංගමයක් හෝ මිතුරන් කිහිප දෙනෙකු බඳවා ගන්න. නව කුසලතා ඉගෙන ගැනීමට ඔබ පාසලේ සිටිය යුතු නැත. Hour of Code සඳහා ඔබේ පාසලට පැමිණීමට ප්‍රාදේශීය දේශපාලනයෙකුට හෝ ප්‍රතිපත්ති සම්පාදකයෙකුට ආරාධනා කරන්න පැයක් ඉක්මවා ඔබේ ප්‍රදේශයේ පරිගණක විද්‍යාවට සහාය දැක්වීමට එය උදව් වේ.
+{{ social_media_hoc }} <br /> Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. නව කුසලතා ඉගෙන ගැනීමට ඔබ පාසලේ සිටිය යුතු නැත. Invite a local politician or policy maker to visit your school for the Hour of Code. පැයක් ඉක්මවා ඔබේ ප්‍රදේශයේ පරිගණක විද්‍යාවට සහාය දැක්වීමට එය උදව් වේ.
 
-ඔබේම සිදුවීමක් සඳහා මෙම පෝස්ටර්, බැනර්, ස්ටිකර්, වීඩියෝ සහ තවත් දේ භාවිතා කරන්න.
+Use these [posters, banners, stickers, videos and more]({{ promote/resources }}) for your own event.
 
 ## 2. ඔබේ වැඩසටහනට උදව් කිරීමට ස්වෙඡාසේවකයින් සොයන්න.
 
-පරිගණක විද්‍යාව සමඟ ඇති හැකියාව පිළිබඳ ඔබේ සිසුන්ට ආස්වාදයක් ලබා දීම සඳහා දුරස්ථව ඔබේ පන්ති කාමරයට හෝ වීඩියෝ කතාබස් වෙත පිවිසිය හැකි ස්වේච්ඡා සේවකයන් සඳහා අපගේ ස්වේච්ඡා සිතියම සොයන්න.
+[Search our volunteer map]({{ urls/volunteer_local }}) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. ඔබේ Hour of Code වැඩසටහන සැලසුම් කරන්න
 
-ඔබේ පන්ති කාමරය සඳහා පැය කේත ක්‍රියාකාරකම් තෝරන්න සහ මෙය කෙසේ මඟ පෙන්විය යුතුද යන්න සමාලෝචනය කරන්න.
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide]({{ urls/how_to_guide }}).
 
 ### 4. Stock up on swag
 
-Code.org ඇමේසන් වෙළඳසැල වෙත යාමෙන් ඔබේ වැඩසටහන පිළිබඳව සිසුන් උනන්දු කරවීමට උපකාරී වන ද්‍රව්‍ය ඇණවුම් කරන්න. පෝස්ටර් ඇණවුම් කරන්න (සහ අමතර 50% ක වට්ටමක් ලබා ගන්න), පැය කට්ටල කට්ටල, ස්ටිකර් සහ තවත් දේ! නමුත් ඉක්මන් කරන්න, සැපයුම් සීමිතයි.
+Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). Order posters, Hour of Code kits, stickers, and more! But hurry, supplies are limited.
 
 # Hour of Code වෙතින් ඔබ්බට යන්න
 

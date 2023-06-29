@@ -23,7 +23,7 @@ title: Basın için Malzemeler
 
 ### 1. Etkinliğinizi planlayın
 
-- Kodlama Saatini başlatmak için bir toplantı planlayın.
+- Hour of Code başlatmak için bir toplantı planlayın.
 - Ebeveynlere [bir mektup]({{ promote/sample_emails }}) yollayarak etkinliği duyurmalarını rica edin.
 - Yerel belediye başkanınıza, milletvekillerine, valiye veya saygın iş adamlarına, onları etkinliğinize davet etmek üzere [bir mektup]({{ promote/sample_emails }}) yollayın ve onlardan etkinliğinizde öğrencilerinizle konuşmalarını rica edin.
 - Grup aktiviteleri organize edin (çevrimdışı bir programlama aktivitesinin denemesi gibi), ya da öğrenciler tarafından yaratılmış ve yönetilmiş aktiviteleri yapın.
@@ -59,13 +59,13 @@ Teknoloji gezegendeki her sektörü dönüştürüyor. 2015'te, ABD'de kodlama b
 
 Bilgisayarlar heryerde, dünyada her endüstriyi değiştiriyor, ama okulların yarısından azı bilgisayar bilimlerini öğretiyor. Genç kadınların ve ötekileştirilen ırk ve etnik gruplardan olan öğrencilerin bilgisayar bilimi sınıflarında ve teknoloji endüstrisinde temsil edilme oranı ciddi ölçüde düşüktür. Bunu değiştirmeye çalışıyor olmamız iyi haber.
 
-Kod saat sayesinde, bilgisayar bilimi Google, Msn, Yahoo! ' nın ana sayfalarında yer almaktadır! 100'den fazla ortak, bu hareketi desteklemek için bir araya geldi. Dünyadaki tüm Apple mağazaları Kodlama Saatine ev sahipliği yaptı. Hatta Başkan Obama kampanya kapsamında ilk kod satırını yazdı.
+Hour of Code sayesinde, bilgisayar bilimi Google, Msn, Yahoo! ' nın ana sayfalarında yer almaktadır! 100'den fazla ortak, bu hareketi desteklemek için bir araya geldi. Dünyadaki tüm Apple mağazaları Hour of Code'a ev sahipliği yaptı. Hatta Başkan Obama kampanya kapsamında ilk kod satırını yazdı.
 
-[OKUL ADI] okulundaki [X sayısı] her öğrencinin tarihin en büyük öğrenme etkinliğine katılmasının nedeni budur: Bilgisayar Bilimleri Eğitimi Haftası Sırasında Kod Saati (3-9 Aralık).
+[OKUL ADI] okulundaki [X sayısı] her öğrencinin tarihin en büyük öğrenme etkinliğine katılmasının nedeni budur: Bilgisayar Bilimleri Eğitimi Haftası Sırasında Hour of Code (3-9 Aralık).
 
 Size başlangıç komitemize katılmanız için yazıyorum, böylece çocukların [DATE]'ta etkinliğe başlayışını da görebileceksiniz.
 
-Kar amacı gütmeyen Code.org ve 100 diğer ortak tarafından organize edilen Kodlama Saati, bugünün öğrenci neslinin 21. yüzyılın başarıya ulaştıracak becerilerini öğrenmeye hazır olduğunu belirten bir ifadedir. Lütfen bize katılın.
+Kar amacı gütmeyen Code.org ve 100 diğer ortak tarafından organize edilen Hour of Code, bugünün öğrenci neslinin 21. yüzyılın başarıya ulaştıracak becerilerini öğrenmeye hazır olduğunu belirten bir ifadedir. Lütfen bize katılın.
 
 İletişim: [ADINIZ], [TITLE], cep telefonu: (212) 555-5555 Tarih: [etkinliğinizin TARİH ve SAATİ] Yer: [ADRES ve YÖN TARİFİ]
 

@@ -13,3 +13,5 @@ Which of the following best describes the `boolean` expression shown below?
 a || !(b || c)
 ```
 MARKDOWN
+
+allow_multiple_attempts true

@@ -3,7 +3,7 @@ Then /^I load the last Minecraft HoC level$/ do
     {
       on: [
         RSpec::Expectations::ExpectationNotMetError,
-        Selenium::WebDriver::Error::TimeOutError
+        Selenium::WebDriver::Error::TimeoutError
       ],
       sleep: 10,
       tries: 3

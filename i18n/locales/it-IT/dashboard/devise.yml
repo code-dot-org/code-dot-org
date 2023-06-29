@@ -50,9 +50,6 @@ it:
       expired: "è scaduta, si prega di richiederne una nuova"
       not_found: "non trovato"
       not_locked: "non è stato bloccato"
-      not_saved:
-        one: "1 errore impedisce di salvare questo % {resource}:"
-        other: "%{count} errori impediscono di salvare questo % {resource}:"
     invitations:
       send_instructions: 'Un invito per posta elettronica è stata inviato a %{email}.'
       invitation_token_invalid: 'Il token di invito fornito non è valido!'

@@ -114,3 +114,5 @@ Dalla seconda alla quarta elementare usano un modello precostituito fornito dal 
 Dalla prima alla terza media usano una \[Support-Vector Machine\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Guardiamo ogni componente del pesce (come occhi, bocca, corpo) e assembliamo tutti i metadati per i componenti (come il numero di denti, la forma del corpo) in un vettore di numeri per ogni pesce. Usiamo questi vettori per istruire l'SVM. Sulla base dei dati di allenamento, l'SVM separa lo "spazio" di tutti i possibili pesci in due parti, che corrispondono alle classi a cui stiamo cercando di insegnare (come "blu" o "non blu").
 
 [[Back to top]](#top)
+
+{{ visit_partial_event_logger }}

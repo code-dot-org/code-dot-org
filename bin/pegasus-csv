@@ -11,7 +11,7 @@ class DB < ActiveRecord::Base
     host:     PegasusDbUri.host,
     username: PegasusDbUri.user,
     password: PegasusDbUri.password,
-    database: PegasusDbUri.path[1..-1],
+    database: PegasusDbUri.path[1..],
     strict:   true
   )
 end

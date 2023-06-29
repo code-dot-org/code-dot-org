@@ -8,10 +8,10 @@ export function loadVideos(forcePlayer) {
   } else {
     testImageAccess(
       'https://www.youtube-nocookie.com/favicon.ico?' + Math.random(),
-      function() {
+      function () {
         setupVideos('youtube');
       },
-      function() {
+      function () {
         setupVideos('fallback');
       }
     );
@@ -39,7 +39,7 @@ function setupVideos(player) {
     doc.body.appendChild(video);
   }
 
-  $('.insert_video_player').each(function() {
+  $('.insert_video_player').each(function () {
     const downloadPath = $(this).data('download-path');
 
     // Use fallback player if that's the preference.

@@ -520,7 +520,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     end
 
     assert original_peer_reviews == PeerReview.where(level_id: @level.id)
-    refute PeerReview.where(level_source_id: new_level_source.id).exists?
+    refute PeerReview.exists?(level_source_id: new_level_source.id)
   end
 
   private

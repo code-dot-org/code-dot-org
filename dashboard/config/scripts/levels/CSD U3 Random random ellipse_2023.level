@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-09-19T22:52:54.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -16,10 +12,10 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Random Numbers\r\n\r\nYou have a new block in the `Math` drawer called `randomNumber()`.  If you make your drawings with random numbers it will look a little bit different every time you run your program.  You can **learn about the block by hovering over it in the toolbox and choosing \"See examples\"**.\r\n\r\n![](https://images.code.org/d6c8db7bca962b69c289a223f63dcb08-image-1589486337822.png)\r\n\r\n# Do This\r\n\r\n* Run the program several times to see how it works.\r\n* Change the numbers inside `randomNumber` and run the code again a few times to see what changes.",
+    "long_instructions": "<img src=\"https://images.code.org/141d1787ef866d86b804b5d1e2492cfb-randomEllipse.gif\" style=\"float: right; width: 20%; margin-left: 10px; margin-right: 10px\" />\r\n\r\n# Random Numbers\r\n\r\nYou have a new block in the `Math`(#FFB74D) drawer called [`randomNumber()`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber). If you make your drawings with random numbers it will look a little bit different every time you run your program. Click on the block to read it's documentation and learn more about how it works\r\n\r\nRight now, the program only draws the ellipse on the right side of the screen. Let's update the code so the ellipse could appear anywhere horizontally on the screen.\r\n\r\n# Do This\r\n\r\n1) Change the numbers inside [`randomNumber()`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber) so the ellipse can appear anywhere horizontally on the screen\r\n\r\n**Run Your Code!** Make sure the ellipse appears on both the right and left side of the screen.",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "start_blocks": "background(\"tomato\");\r\n\r\nfill(\"orange\");\r\nellipse(randomNumber(0,400), 200, 50, 50);",
+    "start_blocks": "background(\"tomato\");\r\n\r\n//1) Change the codeso the ellipse can appear anywhere horizontally on the screen\r\nfill(\"orange\");\r\nellipse(randomNumber(200,400), 200, 50, 50);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -38,7 +34,7 @@
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "disable_if_else_editing": "false",
-    "free_play": "true",
+    "free_play": "false",
     "validation_enabled": "true",
     "text_mode_at_start": "false",
     "submittable": "false",
@@ -64,11 +60,18 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-09-19T22:52:54.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:54.964+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random random ellipse_2022\\\"\"],\"cloned_from\":\"CSD U3 Random random ellipse_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:54.964+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random random ellipse_2022\\\"\"],\"cloned_from\":\"CSD U3 Random random ellipse_2022\"},{\"changed_at\":\"2022-10-13 19:28:21 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"free_play\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-13 19:30:17 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

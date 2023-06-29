@@ -2306,6 +2306,76 @@
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "ブロックをドラックして、ツールボックスからワークスペースに持っていこう。"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "新しい背景を設定するには、このブロックを使います。"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "新しい背景を設定するには、このブロックを使います。"
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "下のビヘイビアの1つを含むこのブロックを使います。"
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "下のビヘイビアの1つを含むこのブロックを使います。"
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "コードを実行するには、ここをクリックします。"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "このイベントブロックをワークスペースに追加します。"
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "このイベントブロックをワークスペースに追加します。"
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。"
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "ピン"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "ピン"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "ピン"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "ピン"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。",
+          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。",
+          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "新しいブロック！",
+          "hello_world_new_block": "新しいブロック！"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "新しいブロック！",
+          "hello_world_new_block": "新しいブロック！"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "まずはここをクリック！"
         }
       }
     }

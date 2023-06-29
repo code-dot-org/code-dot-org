@@ -2782,6 +2782,76 @@
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "將工具箱中的積木拖到你的工作區。\n"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "使用這個積木來設置一個新背景。"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "使用這個積木來設置一個新背景。"
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "將此積木與下面的其中一個行為一起使用。"
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "將此積木與下面的其中一個行為一起使用。"
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "點擊這裡運行代碼。"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "新的程式積木！"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "新的程式積木！"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "將此事件積木添加到工作區。"
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "將此事件積木添加到工作區。"
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "點擊這裡為你的項目添加服裝。"
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "點擊這裡為你的項目添加服裝。"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "針腳"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "針腳"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "針腳"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "針腳"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "使用這個積木讓精靈圖說話。",
+          "hello_world_make_sprite": "使用這個積木創建精靈圖。"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "使用這個積木讓精靈圖說話。",
+          "hello_world_make_sprite": "使用這個積木創建精靈圖。"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "新的程式積木！",
+          "hello_world_new_block": "新的程式積木！"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "新的程式積木！",
+          "hello_world_new_block": "新的程式積木！"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "新的程式積木！"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "新的程式積木！"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "請先點擊這裡！"
         }
       }
     }

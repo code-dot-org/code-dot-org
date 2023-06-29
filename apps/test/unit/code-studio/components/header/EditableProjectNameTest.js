@@ -8,7 +8,7 @@ import {expect} from '../../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 import projectReducer, {
-  refreshProjectName
+  refreshProjectName,
 } from '@cdo/apps/code-studio/projectRedux';
 import EditableProjectName from '@cdo/apps/code-studio/components/header/EditableProjectName';
 
@@ -22,11 +22,11 @@ describe('EditableProjectName', () => {
           currentName = name;
           return Promise.resolve();
         },
-        getCurrentName: () => currentName
+        getCurrentName: () => currentName,
       },
       header: {
-        updateTimestamp: () => {}
-      }
+        updateTimestamp: () => {},
+      },
     });
   });
 

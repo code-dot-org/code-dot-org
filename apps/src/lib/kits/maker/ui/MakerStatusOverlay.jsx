@@ -10,7 +10,7 @@ import {
   isConnecting,
   hasConnectionError,
   getConnectionError,
-  useFakeBoardOnNextRun
+  useVirtualBoardOnNextRun,
 } from '../redux';
 import {UnsupportedBrowserError} from '../MakerError';
 import OverlayButton from './OverlayButton';
@@ -18,7 +18,7 @@ import OverlayButton from './OverlayButton';
 const overlayDimensionsPropTypes = {
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
-  scale: PropTypes.number
+  scale: PropTypes.number,
 };
 
 /**
@@ -33,8 +33,8 @@ export class UnconnectedMakerStatusOverlay extends Component {
     hasConnectionError: PropTypes.bool.isRequired,
     handleTryAgain: PropTypes.func.isRequired,
     handleDisableMaker: PropTypes.func.isRequired,
-    useFakeBoardOnNextRun: PropTypes.func.isRequired,
-    handleOpenSetupPage: PropTypes.func.isRequired
+    useVirtualBoardOnNextRun: PropTypes.func.isRequired,
+    handleOpenSetupPage: PropTypes.func.isRequired,
   };
 
   render() {
@@ -47,7 +47,7 @@ export class UnconnectedMakerStatusOverlay extends Component {
       hasConnectionError,
       handleTryAgain,
       handleDisableMaker,
-      handleOpenSetupPage
+      handleOpenSetupPage,
     } = this.props;
     const dimensions = {width, height, scale};
     if (isConnecting) {
@@ -65,7 +65,7 @@ export class UnconnectedMakerStatusOverlay extends Component {
         <BoardNotFound
           {...dimensions}
           handleTryAgain={handleTryAgain}
-          useFakeBoardOnNextRun={this.props.useFakeBoardOnNextRun}
+          useVirtualBoardOnNextRun={this.props.useVirtualBoardOnNextRun}
           handleOpenSetupPage={handleOpenSetupPage}
         />
       );
@@ -82,10 +82,10 @@ export default connect(
     hasConnectionError: hasConnectionError(state),
     handleOpenSetupPage: () => {
       window.open('/maker/setup', '_blank', 'noopener,noreferrer');
-    }
+    },
   }),
   {
-    useFakeBoardOnNextRun
+    useVirtualBoardOnNextRun,
   }
 )(UnconnectedMakerStatusOverlay);
 
@@ -101,35 +101,35 @@ const style = {
     flexDirection: 'column',
     alignItems: 'center',
     color: color.charcoal,
-    backgroundColor: color.lighter_gray
+    backgroundColor: color.lighter_gray,
   },
   padding: {
-    flex: '1 0 auto'
+    flex: '1 0 auto',
   },
   content: {
     flex: '0 0 auto',
     padding: '1em',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   icon: {
-    display: 'block'
+    display: 'block',
   },
   text: {
-    margin: '1em'
-  }
+    margin: '1em',
+  },
 };
 
 class Overlay extends Component {
   static propTypes = {
     ...overlayDimensionsPropTypes,
-    children: PropTypes.any
+    children: PropTypes.any,
   };
 
   render() {
     let rootStyle = {
       ...style.root,
       width: this.props.width,
-      height: this.props.height
+      height: this.props.height,
     };
 
     // If scale is undefined we are still letting media queries handle the
@@ -168,7 +168,7 @@ class UnsupportedBrowser extends Component {
   static propTypes = {
     ...overlayDimensionsPropTypes,
     handleDisableMaker: PropTypes.func.isRequired,
-    handleOpenSetupPage: PropTypes.func.isRequired
+    handleOpenSetupPage: PropTypes.func.isRequired,
   };
 
   render() {
@@ -203,12 +203,12 @@ class BoardNotFound extends Component {
   static propTypes = {
     ...overlayDimensionsPropTypes,
     handleTryAgain: PropTypes.func.isRequired,
-    useFakeBoardOnNextRun: PropTypes.func.isRequired,
-    handleOpenSetupPage: PropTypes.func.isRequired
+    useVirtualBoardOnNextRun: PropTypes.func.isRequired,
+    handleOpenSetupPage: PropTypes.func.isRequired,
   };
 
   handleRunWithoutBoard = () => {
-    this.props.useFakeBoardOnNextRun();
+    this.props.useVirtualBoardOnNextRun();
     this.props.handleTryAgain();
   };
 
@@ -250,13 +250,13 @@ function UniformWidth({children}) {
       style={{
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'center'
+        justifyContent: 'center',
       }}
     >
       <div
         style={{
           display: 'flex',
-          flexDirection: 'column'
+          flexDirection: 'column',
         }}
       >
         {children}
@@ -265,7 +265,7 @@ function UniformWidth({children}) {
   );
 }
 UniformWidth.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
 };
 
 /**
@@ -275,7 +275,7 @@ function Text({children}) {
   return <div style={style.text}>{children}</div>;
 }
 Text.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
 };
 
 /**
@@ -296,5 +296,5 @@ function Icon({icon, spin = false}) {
 }
 Icon.propTypes = {
   icon: PropTypes.string.isRequired,
-  spin: PropTypes.bool
+  spin: PropTypes.bool,
 };

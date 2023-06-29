@@ -339,7 +339,7 @@
     "TEXT_LENGTH_TITLE": "довжина %1",
     "TEXT_LENGTH_TOOLTIP": "Повертає число символів (включаючи пробіли) у даному тексті.",
     "TEXT_PRINT_HELPURL": "http://www.liv.ac.uk/HPC/HTMLF90Course/HTMLF90CourseNotesnode91.html",
-    "TEXT_PRINT_TITLE": "друк %1",
+    "TEXT_PRINT_TITLE": "друкувати %1",
     "TEXT_PRINT_TOOLTIP": "Надрукувати заданий текст, числа або інші символи.",
     "TEXT_PROMPT_HELPURL": "http://www.liv.ac.uk/HPC/HTMLF90Course/HTMLF90CourseNotesnode92.html",
     "TEXT_PROMPT_TOOLTIP_NUMBER": "Запитувати у користувача число.",

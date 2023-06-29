@@ -12,18 +12,18 @@ module.exports = {
       description: 'Expected solution.',
       editCode: true,
       xml: '',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // room to add tests here
 
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 100);
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'Fireball',
@@ -33,16 +33,16 @@ module.exports = {
         "throwProjectile(0, 8, 'red_fireball');" +
         "throwProjectile(0, 2, 'blue_fireball');" +
         "throwProjectile(0, 1, 'purple_fireball');",
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 1000);
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'Fireball collision',
@@ -55,12 +55,13 @@ module.exports = {
         "setSprite(1, 'witch');" +
         "throwProjectile(0, 2, 'blue_fireball');" +
         "onEvent('whenSpriteCollided-1-any_projectile', function() { vanish(1); });",
-      runBeforeClick: function(assert) {
-        tickWrapper.runOnAppTick(Studio, 5, function() {
+      runBeforeClick: function (assert) {
+        tickWrapper.runOnAppTick(Studio, 5, function () {
           assert(Studio.projectiles.length === 1);
           assert(Studio.projectiles[0].dir === Direction.EAST);
-          var proj = document.getElementById('studioanimation_clippath_20')
-            .nextSibling;
+          var proj = document.getElementById(
+            'studioanimation_clippath_20'
+          ).nextSibling;
           assert(
             proj
               .getAttribute('xlink:href')
@@ -76,7 +77,7 @@ module.exports = {
         });
         // our fireball should collide at tick 24, and vanish at tick 25, so by
         // tick 26 we should be finished
-        tickWrapper.runOnAppTick(Studio, 26, function() {
+        tickWrapper.runOnAppTick(Studio, 26, function () {
           assert(
             Studio.sprite[1].visible === false,
             'Second sprite has vanished'
@@ -86,8 +87,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

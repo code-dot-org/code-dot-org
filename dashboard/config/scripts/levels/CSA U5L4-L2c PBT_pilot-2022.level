@@ -1,9 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "game_id": 68,
-  "created_at": "2022-08-23T20:50:02.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -13,11 +9,13 @@
     "start_sources": {
       "MyTheater.java": {
         "text": "import org.code.theater.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n\n    String[][] gameImages = {{\"nintendogs.jpg\", \"mariokart.jpg\", \"brainage.jpg\"},\n                              {\"tetris.png\", \"wiisports.jpg\", \"wiiplay.jpg\"},\n                              {\"minecraft.png\", \"terraria.jpg\", \"elderscrolls.jpg\"},\n                              {\"injustice.jpg\", \"fifa18.jpg\", \"zelda.jpeg\"}};\n\n    GameScene myScene = new GameScene(gameImages);\n\n    // TO DO #2: Call the reverseGames() method.\n\n\n    myScene.createScene();\n\n    Theater.playScenes(myScene);\n    \n  }\n}",
-        "isVisible": true
+        "isVisible": true,
+        "tabOrder": 0
       },
       "GameScene.java": {
-        "text": "import org.code.theater.*;\n\n/*\n * Creates a scene displaying images of bestselling games\n */\npublic class GameScene extends Scene {\n\n  private String[][] gameImages;   // The 2D array of game images\n\n  /*\n   * Constructor to create a GameScene\n   * with the specified 2D array of game images\n   */\n  public GameScene(String[][] gameImages) {\n    this.gameImages = gameImages;\n  }\n\n  /*\n   * Reverses the gameImages array\n   */\n  public void reverseGames() {\n    // TO DO #1: Reverse each row in the gameImages array.\n\n    \n  }\n\n  /*\n   * Creates the scene by displaying the images for each game by year\n   */\n  public void createScene() {\n    for (int row = 0; row < gameImages.length; row++) {\n      for (int col = 0; col < gameImages[0].length; col++) {\n        int randX = (int)(Math.random() * 250);\n        int randY = (int)(Math.random() * 250);\n        \n        drawImage(gameImages[row][col], randX, randY, 100);\n        pause(0.3);\n      }\n\n      pause(0.5);\n      clear(\"white\");\n    }\n  }\n  \n}",
-        "isVisible": true
+        "text": "import org.code.theater.*;\n\n/*\n * Creates a scene displaying images of bestselling games\n */\npublic class GameScene extends Scene {\n\n  private String[][] gameImages;   // The 2D array of game images\n\n  /*\n   * Constructor to create a GameScene\n   * with the specified 2D array of game images\n   */\n  public GameScene(String[][] gameImages) {\n    this.gameImages = gameImages;\n  }\n\n  /*\n   * Returns the 2D array of game images\n   */\n  public String[][] getGames() {\n    return gameImages;\n  }\n\n  /*\n   * Reverses the gameImages array\n   */\n  public void reverseGames() {\n    // TO DO #1: Reverse each row in the gameImages array.\n\n    \n  }\n\n  /*\n   * Creates the scene by displaying the images for each game by year\n   */\n  public void createScene() {\n    for (int row = 0; row < gameImages.length; row++) {\n      for (int col = 0; col < gameImages[0].length; col++) {\n        int randX = (int)(Math.random() * 250);\n        int randY = (int)(Math.random() * 250);\n        \n        drawImage(gameImages[row][col], randX, randY, 100);\n        pause(0.3);\n      }\n\n      pause(0.5);\n      clear(\"white\");\n    }\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
       }
     },
     "starter_assets": {
@@ -36,7 +34,11 @@
     },
     "name_suffix": "_pilot-2022"
   },
+  "game_id": 68,
+  "created_at": "2022-08-23T20:50:02.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-08-23T20:50:02.322+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L2c PBT_2022\\\"\"],\"cloned_from\":\"CSA U5L4-L2c PBT_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-08-23T20:50:02.322+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L2c PBT_2022\\\"\"],\"cloned_from\":\"CSA U5L4-L2c PBT_2022\"},{\"changed_at\":\"2022-10-09 20:52:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 20:52:29 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-09 20:54:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

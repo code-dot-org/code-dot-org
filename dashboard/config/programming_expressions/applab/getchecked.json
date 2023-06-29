@@ -6,7 +6,7 @@
   "content": "Gets the state of a checkbox or radioButton.\n\n[`getChecked()`(#fff176)](/docs/applab/getChecked/) is used to check whether a user has checked a checkbox or radio button by using the element ID. Check boxes are used when the user is asked to check a box if they agree with something, like an app privacy statement. Radio buttons are used when the user is asked to choose one item from a predefined group of options.",
   "examples": [
     {
-      "name": "",
+      "name": "Example: Checkbox Click Event",
       "description": "",
       "code": "```\n// Retrieve and display a checkbox value.\r\ncheckbox(\"agreeBox\", false);\r\ntextLabel(\"agreeLabel\",\"I agree to the above privacy statement.\",\"agreeBox\");\r\n\r\ntextLabel(\"response1\",\"Response: \");\r\ntextLabel(\"response2\",\"\");\r\nonEvent(\"agreeBox\", \"click\", function() {\r\n  setText(\"response2\",getChecked(\"agreeBox\"));\r\n});\n```",
       "app": "",
@@ -31,6 +31,9 @@
       "required": true,
       "description": " The unique identifier for the screen element. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _."
     }
+  ],
+  "parameters": [
+    "id"
   ],
   "return_value": "Boolean true or false.",
   "short_description": "Gets the state of a checkbox or radioButton.",

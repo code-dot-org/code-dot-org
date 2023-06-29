@@ -26,4 +26,4 @@ results[:all] = today_sum + archive_sum # Append existing count.
 
 puts results.to_json
 
-File.open(FILE, "wb") {|f| f.write Marshal.dump(sum_cache)}
+File.binwrite(FILE, Marshal.dump(sum_cache))

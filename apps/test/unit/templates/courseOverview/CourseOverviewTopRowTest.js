@@ -11,22 +11,22 @@ const defaultProps = {
     {
       key: 'key1',
       name: 'Curriculum',
-      url: '/link/to/curriculum'
+      url: '/link/to/curriculum',
     },
     {
       key: 'key2',
       name: 'Professional Learning',
-      url: '/link/to/professional/learning'
+      url: '/link/to/professional/learning',
     },
     {
       key: 'key2',
       name: 'Teacher Forum',
-      url: 'https://forum.code.org/'
-    }
+      url: 'https://forum.code.org/',
+    },
   ],
   studentResources: [],
   showAssignButton: true,
-  isInstructor: true
+  isInstructor: true,
 };
 
 describe('CourseOverviewTopRow', () => {
@@ -80,18 +80,18 @@ describe('CourseOverviewTopRow', () => {
           {
             key: 'key1',
             name: 'Curriculum',
-            url: '/link/to/curriculum'
+            url: '/link/to/curriculum',
           },
           {
             key: 'key2',
             name: 'Professional Learning',
-            url: '/link/to/professional/learning'
+            url: '/link/to/professional/learning',
           },
           {
             key: 'key2',
             name: 'Teacher Forum',
-            url: 'https://forum.code.org/'
-          }
+            url: 'https://forum.code.org/',
+          },
         ]}
         isInstructor={false}
       />
@@ -107,18 +107,18 @@ describe('CourseOverviewTopRow', () => {
           {
             key: 'key1',
             name: 'Curriculum',
-            url: '/link/to/curriculum'
+            url: '/link/to/curriculum',
           },
           {
             key: 'key2',
             name: 'Professional Learning',
-            url: '/link/to/professional/learning'
+            url: '/link/to/professional/learning',
           },
           {
             key: 'key2',
             name: 'Teacher Forum',
-            url: 'https://forum.code.org/'
-          }
+            url: 'https://forum.code.org/',
+          },
         ]}
         isInstructor={false}
       />

@@ -8,7 +8,7 @@ import AttendancePanel from '@cdo/apps/code-studio/pd/workshop_dashboard/Attenda
 
 describe('AttendancePanel', () => {
   stubWindowDashboard({
-    CODE_ORG_URL: '//test.code.org'
+    CODE_ORG_URL: '//test.code.org',
   });
 
   it('renders', () => {
@@ -16,11 +16,11 @@ describe('AttendancePanel', () => {
       <AttendancePanel
         sessions={[
           Factory.build('session', {['show_link?']: true}),
-          Factory.build('session', {['show_link?']: false})
+          Factory.build('session', {['show_link?']: false}),
         ]}
       />,
       {
-        context: {router: {push: sinon.spy(), createHref: sinon.spy()}}
+        context: {router: {push: sinon.spy(), createHref: sinon.spy()}},
       }
     );
   });

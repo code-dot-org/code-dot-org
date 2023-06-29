@@ -3,7 +3,13 @@
   "name": "Subtract operator",
   "category": "Math",
   "category_key": "math",
-  "content": "[name]\n\n## Subtract operator\n\n[/name]\n\n[category]\n\nCategory: Math\n\n[/category]\n\n[description]\n\n[short_description]\n\nSubtracts two numbers.\n\n[/short_description]\n\nAll programming languages support the basic arithmetic operations of addition, subtraction, multiplication and division of numbers.\n\n[/description]\n\n### Examples\n____________________________________________________\n\n[example]\n\n```\n// Subtract two numbers.\nconsole.log(3-5);\nvar x=3;\nvar y=5;\nconsole.log(x-y);\n```\n\n[/example]\n\n____________________________________________________\n\n",
+  "content": "All programming languages support the basic arithmetic operations of addition, subtraction, multiplication and division of numbers.\n",
+  "examples": [
+    {
+      "name": "Example: Subtract two numbers",
+      "code": "```\n// Subtract two numbers.\nconsole.log(3-5);\nvar x=3;\nvar y=5;\nconsole.log(x-y);\n```"
+    }
+  ],
   "palette_params": [
     {
       "name": "Name",
@@ -13,7 +19,7 @@
     }
   ],
   "return_value": "The difference of two numbers.",
-  "short_description": "\nSubtract operator\nCategory: Math",
+  "short_description": "Subtracts two numbers.\n",
   "syntax": "value1 - value2",
   "tips": "- Operator precedence is the same as standard arithmetic - Expressions within a parentheses have the highest precedence, then multiplcation and division, then addition and subtraction."
 }

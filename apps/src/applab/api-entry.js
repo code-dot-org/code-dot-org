@@ -14,7 +14,7 @@ import loadApplab from '@cdo/apps/sites/studio/pages/init/loadApplab';
 import {
   getAppOptions,
   setAppOptions,
-  setupApp
+  setupApp,
 } from '@cdo/apps/code-studio/initApp/loadApp';
 import {getStore} from '@cdo/apps/redux';
 import {setIsRunning} from '@cdo/apps/redux/runState';
@@ -23,14 +23,14 @@ import * as shareWarnings from '../shareWarnings';
 import {navigateToHref} from '../utils';
 window.CDOSounds = Sounds.getSingleton();
 
-const noop = function() {};
+const noop = function () {};
 
 // TODO: remove the below monkey patches.
 window.Applab.JSInterpreter = {
-  getNearestUserCodeLine: function() {
+  getNearestUserCodeLine: function () {
     return 0;
   },
-  deinitialize: noop
+  deinitialize: noop,
 };
 studioApp().highlight = noop;
 Applab.render = noop;
@@ -71,17 +71,15 @@ function __start() {
   document.getElementsByTagName('head')[0].appendChild(script);
 }
 
-if (!config.nativeExport) {
-  document.addEventListener('DOMContentLoaded', () => {
-    if (config.exportUsesDataAPIs) {
-      shareWarnings.checkSharedAppWarnings({
-        channelId: config.channel,
-        hasDataAPIs: () => true,
-        onWarningsComplete: __start,
-        onTooYoung: () => navigateToHref('https://studio.code.org/too_young')
-      });
-    } else {
-      __start();
-    }
-  });
-}
+document.addEventListener('DOMContentLoaded', () => {
+  if (config.exportUsesDataAPIs) {
+    shareWarnings.checkSharedAppWarnings({
+      channelId: config.channel,
+      hasDataAPIs: () => true,
+      onWarningsComplete: __start,
+      onTooYoung: () => navigateToHref('https://studio.code.org/too_young'),
+    });
+  } else {
+    __start();
+  }
+});

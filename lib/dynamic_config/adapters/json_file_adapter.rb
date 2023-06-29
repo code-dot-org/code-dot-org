@@ -24,8 +24,8 @@ class JSONFileDatastoreAdapter
     load_from_file
     begin
       return Oj.load(@hash[key])
-    rescue => exc
-      Honeybadger.notify(exc)
+    rescue => exception
+      Honeybadger.notify(exception)
     end
     nil
   end
@@ -37,8 +37,8 @@ class JSONFileDatastoreAdapter
     @hash.each do |k, v|
       begin
         value = Oj.load(v)
-      rescue => exc
-        Honeybadger.notify(exc)
+      rescue => exception
+        Honeybadger.notify(exception)
         nil
       end
       ret[k] = value
@@ -60,9 +60,7 @@ class JSONFileDatastoreAdapter
   end
 
   def write_to_file
-    File.open(@file_path, "w") do |f|
-      f.write(JSON.dump(@hash))
-    end
+    File.write(@file_path, JSON.dump(@hash))
   end
 
   def clear

@@ -17,6 +17,14 @@
         "loops/aquatic/unversioned": {
           "word": "Ngā Koromeke"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Waehere"
         },
@@ -90,7 +98,24 @@
           "word": "Manatārua"
         },
         "code/poem-art/unversioned": {
-          "word": "Waehere"
+          "word": "Waehere",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "Taurangi"

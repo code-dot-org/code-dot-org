@@ -70,6 +70,6 @@ nameless_ids.each do |user_id|
   user.save!
 
   puts "success"
-rescue => e
-  puts "error - #{e}"
+rescue => exception
+  puts "error - #{exception}"
 end

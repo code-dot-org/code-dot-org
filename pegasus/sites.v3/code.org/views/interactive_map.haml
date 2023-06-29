@@ -1,6 +1,3 @@
-%script{src: "/js/raphael.js"}
-%script{src: "/js/extended_us_map.js"}
-
 - require 'state_abbr'
 
 - advocacy_variation ||= false
@@ -25,7 +22,7 @@
 #map-right.col-33
   #infobox
     %p.info
-      Computer science drives innovation throughout the US economy, but it remains marginalized throughout K-12 education.
+      Computer science drives innovation throughout the US economy, but it still isn't a core part of our education system.
 
     %strong= hs_access_count
     states have adopted a policy to give all high school students access to CS courses (and of those, only
@@ -58,101 +55,11 @@
       %a{href: "https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub", target: '_blank'} More info
 
 :javascript
-  var webServiceLocation = '/promote/state/';
+  var useUrl = #{ use_url };
+  var fillColor = "#{fill_color}";
+  var strokeColor = "#{stroke_color}";
+  var hoverColor = "#{hover_color}";
+  var clickColor = "#{click_color}";
 
-  $(document).ready(function() {
-    if (#{use_url}) {
-      // Check if the URL specifies a specific state. If so, load the state
-      if (window.location.pathname.replace("/promote", "") !== "") {
-        var state = window.location.pathname.replace("/promote/", "");
-        $.ajax({
-          url: webServiceLocation + state.toLowerCase(),
-          type: "get",
-        }).done(function(data) {
-          $("#infobox").html(data);
-        }).fail(function () {
-          if (window.history.replaceState) {
-            history.replaceState({}, "", "../promote");
-          }
-        });
-      }
-    }
-
-    $("#state-dropdown").change(
-        function(){
-
-          var abbr = $('#state-dropdown option:selected').val();
-          console.log(abbr)
-          if (abbr != '') {          // Load the selected state's information into the infobox
-            $.ajax({
-              url: webServiceLocation + abbr.toLowerCase(),
-              type: "get",
-            }).done(function(data) {
-              $("#infobox").html(data);
-            }).fail(function () {
-              if (#{use_url}) {
-                window.location = "/promote"
-              }
-            });
-          }
-        }
-      )
-
-    // Load the SVG into the #map div
-    $('#map').usmap({
-      click: function(event, data) {
-        if (#{use_url}) {
-          // Add data and URL to browser history when the user clicks a state
-          if (window.history.replaceState) {
-            if (window.history.replaceState) {
-              history.replaceState({state: data.name}, data.name, "../promote/" + data.name.toLowerCase());
-            }
-          }
-        }
-
-        // Load the clicked state's information into the infobox
-        $.ajax({
-          url: webServiceLocation + data.name.toLowerCase(),
-          type: "get",
-        }).done(function(data) {
-          $("#infobox").html(data);
-        }).fail(function () {
-          if (#{use_url}) {
-            window.location = "/promote"
-          }
-        });
-      },
-
-      // Map styling
-      stateHoverAnimation: 0,
-      stateStyles: {fill: "#{fill_color}", stroke: "#{stroke_color}"},
-      labelBackingStyles: {fill: "#{fill_color}", stroke: "#{stroke_color}"},
-      labelBackingHoverStyles: {fill: "#{hover_color}"},
-      stateHoverStyles: {fill: "#{hover_color}"},
-      stateClickStyles: {fill: "#{click_color}", persistent: false}
-    });
-
-    // "Click" the current state if page is loaded with state in URL.
-    if (#{use_url}) {
-      if (window.location.pathname.replace("/promote", "") !== "") {
-        $("#" + state.toUpperCase()).click();
-      }
-    }
-  });
-
-  // When the user uses the "back" button, load previous data into infobox and URL bar
-  window.onpopstate = function(event) {
-    if (#{use_url}) {
-      $.ajax({
-        url: webServiceLocation + event.state["state"].toLowerCase(),
-        type: "get",
-      }).done(function(data) {
-        $("#infobox").html(data);
-        $("#" + event.state["state"]).click();
-      }).fail(function () {
-        if (window.history.replaceState) {
-          history.replaceState({}, "", "../promote");
-        }
-      });
-    }
-  };
+%script{src: "/js/raphael.js"}
+%script{src: "/js/extended_us_map.js"}

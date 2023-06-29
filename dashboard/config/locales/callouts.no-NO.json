@@ -1592,6 +1592,26 @@
         },
         "courseD_maze_ramp32022": {
           "courseC_maze_programming3_2": "Du kan dra ekstra blokker tilbake til verktøykassa hvis du trenger å kaste dem."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Ny blokk!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Ny blokk!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Ny blokk!",
+          "hello_world_new_block": "Ny blokk!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Ny blokk!",
+          "hello_world_new_block": "Ny blokk!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Ny blokk!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Ny blokk!"
         }
       }
     }

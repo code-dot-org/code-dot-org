@@ -8,3 +8,4 @@ right 'A warning message will appear for the second button that that ID is alrea
 right 'The first button created with the ID will work, the other will not.'
 wrong 'The JavaScript API for MVC allows for duplicate IDs as long as the HTML is CSS compliant.'
 wrong 'Two buttons with same ID are linked during the running of the program; clicking one is just like clicking the other.'
+allow_multiple_attempts true

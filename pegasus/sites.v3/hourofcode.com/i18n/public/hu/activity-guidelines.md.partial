@@ -79,9 +79,9 @@ Ha olyan tevékenységet vagy oktatóanyagot hozol létre, amelyet speciális ig
 
 A Kódolás órájának célja, hogy közérthető módon mutassa be a számítástechnikát és a programozás világát mindazoknak, akik elsőként vágnak neki ennek az útnak. Fontosnak tartjuk kihangsúlyozni, hogy:
 
-- Bárki tanulhat számítástechnikát - kortól, nemtől és bőrszíntől függetlenül. 
+- Bárki tanulhat számítástechnikát - kortól, nemtől és bőrszíntől függetlenül.
 - A számítástechnika számos területhez és érdeklődési körhöz kapcsolódik. Mindenkinek érdemes lenne megismerkednie vele!
-- Bátorítsd te is diákjaidat, hogy hozzanak létre valami egyedit, amelyet megoszthatnak szüleikkel/barátaikkal, vagy közzétehetnek online. 
+- Bátorítsd te is diákjaidat, hogy hozzanak létre valami egyedit, amelyet megoszthatnak szüleikkel/barátaikkal, vagy közzétehetnek online.
 
 A Kódolás órájának célja, hogy közérthető módon mutassa be a számítástechnikát és a programozás világát mindazoknak, akik elsőként vágnak neki ennek az útnak. Fontosnak tartjuk kihangsúlyozni, hogy: Erre példa a felhasználói felületek tervezésének oktatása is, amely olyan alkalmazások készítésére irányul, amelyek fontos szerepet töltenek be a mindennapi ember életében. Nem támogatjuk viszont azokat a tevékenységeket, amelyek a koncepcióalkotás helyett a programozás mondattanának elsajátítsára koncentrálnak. Például bár közzéteszük, de nem reklámozzuk azokat a tevékenységeket, amelyek a HTML nyelvet oktatják. Hasonlóképpen elutasítjuk azokat a tanóraterveket, amelyek a konfigurációs beállításokra vagy azok megváltoztatására összpontosítanak, nem pedig az algoritmus vagy a folyamat modellezésére.
 
@@ -123,7 +123,7 @@ Amire szükséged lesz:
 
 #### További dolgok, amire szükséged van az órai tervek benyújtásakor
 
-* Link az óratervedhez. Ez lehet weboldal, dropbox link, google meghajtó vagy hasonló szolgáltatás. 
+* Link az óratervedhez. Ez lehet weboldal, dropbox link, google meghajtó vagy hasonló szolgáltatás.
 * Link az óratervedhez. Ez lehet weboldal, dropbox link, google meghajtó vagy hasonló szolgáltatás. Esetleg semmi?)
 
 #### További dolgok, amelyekre szükséged van online tevékenységek benyújtásakor
@@ -182,7 +182,7 @@ Amennyiben a felülvizsgálati bizottság a tevékenységet feltöltésre érdem
 Mindezeken túl minden tevékenységnek meg kell felelnie az alábbi feltételeknek ahhoz, hogy elfogadásra kerüljön:
 
 - Megfelelőnek kell lennie egy állami iskolai tanórán való megtartáshoz (fegyveres, erőszakos, szexuális és vallásos tartalom tilos)
-- Nincs szükség regisztrációra 
+- Nincs szükség regisztrációra
 - Nem igényel fizetést (kivétel a robotika tevékenységekhez, amelyek robot / kiegészítő vásárlást igényelhetnek) A felülvizsgálati bizottság az önálló munka során feldolgozandó tevékenységek esetében megvizsgálja, hogy:
 
 For self-directed activities for new teachers and students the review committee will be looking for whether:
@@ -213,7 +213,7 @@ You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resour
 
 - Mely platformon és böngészőn működik a legjobban az oktatóprogram?
 - Működik-e okostelefonokon? Tableten?
-- Szervezz Te egy rendezvény vagy kérd meg alkalmazottaidat, hogy segítsenek a rendezvények népszerűsítésében a helyi iskolákban, közösségi csoportokban. 
+- Szervezz Te egy rendezvény vagy kérd meg alkalmazottaidat, hogy segítsenek a rendezvények népszerűsítésében a helyi iskolákban, közösségi csoportokban.
 - Az osztályteremben történő használat szempontjai? Például, ha vannak videók, javasold a tanárokat, hogy mutassák meg a őket az egész osztálynak
 
 ** Ösztönözd a diákokat arra, hogy osszák meg munkájukat a közösségi médiában. ** Például: „Egyórás kódot csináltam ________-kel? #HourOfCode” vagy "#HourOfCode-ot csináltam a #CSEdWeek részeként.
@@ -276,4 +276,4 @@ Ez lehetővé teszi számunkra, hogy megszámoljuk azokat a felhasználókat, ak
 
 [**Vissza az elejére**](#top)
 
-MEGJEGYZÉS: a telepíthető alkalmazásokra (iOS / Android vagy asztali) ez nem vonatkozik<!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+MEGJEGYZÉS: a telepíthető alkalmazásokra (iOS / Android vagy asztali) ez nem vonatkozik

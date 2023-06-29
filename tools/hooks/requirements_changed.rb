@@ -9,7 +9,6 @@ REQUIREMENTS = {
   "package.json" => {cmd: "yarn"},
   "bower.json" => {cmd: "bower install"},
   "Gemfile" => {cmd: "bundle install"},
-  "Berksfile" => {cmd: "berks install"},
   "schema.rb" => {cmd: "bundle exec rake db:migrate", dir: ".."},
 }.freeze
 

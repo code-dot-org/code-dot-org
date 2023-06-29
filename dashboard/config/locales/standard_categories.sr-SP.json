@@ -1,0 +1,17 @@
+{
+  "sr-SP": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Компјутерско Размишљање"
+        },
+        "L": {
+          "description": "Језик"
+        },
+        "F": {
+          "description": "Функције"
+        }
+      }
+    }
+  }
+}

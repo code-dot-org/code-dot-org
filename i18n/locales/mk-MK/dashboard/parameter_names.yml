@@ -1,4 +1,11 @@
 mk:
   data:
     parameter_names:
+      "???": "???"
+      color: Боја
+      dir: реж
+      direction: Насока
       min: минимално
+      nectar units: нектар единици
+      numOctagons: Нумоктагони
+      theGuess: TheGuess

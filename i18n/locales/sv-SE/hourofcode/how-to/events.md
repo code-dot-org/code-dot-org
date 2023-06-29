@@ -35,23 +35,17 @@ Dela bilder på ditt evenemang på Facebook och Twitter och använd hashtaggen *
 
 * * *
 
-## Håll en Family Code Night med Hour of Code och bjud in föräldrar att delta
+## Example plan for a school assembly or event
 
-Överväg att vara värd för ett K-5-kvällsevenemang och bjud in föräldrar att gå med sina elever för en timmes datavetenskap. Det här är ett bra sätt att engagera det större samhället och uppmuntra föräldrars stöd för datavetenskap på din skola. Våra partners på Family Code Night har skapat ett allt-i-ett-evenemangspaket med planeringschecklista, presentatörens manus, inbjudningsmail, affischer, powerpoints och mer för att driva ditt eget evenemang. [Klicka här för att ladda ner Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-* * *
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-## Exempelplan för en skolsammankomst eller evenemang
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Event:** Startsammanträde för skolövergripande Computer Science Education Week
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-**Datum:** {{ campaign_date/start_short }} (starten av Computer Science Education Week)
-
-**Tid:** Under skoldagen. Evenemang mitt på morgonen föredras. Ungefär 1 timme.
-
-**Plats:** Skolan aulan (t.ex. teater, gym, cafeteria)
-
-## Program
+## Run of Show
 
 | Tid           | Aktivitet                                                                                                                     |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------- |

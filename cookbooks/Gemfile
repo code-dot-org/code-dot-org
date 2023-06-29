@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-ruby '>= 2.5', '< 2.7'
+ruby '2.7.5'
 
 gem 'berkshelf'
-gem 'chef', '15.2.20'
+gem 'chef', '17.6.18'
 gem 'chefspec'
 gem 'kitchen-inspec'
 
@@ -15,3 +15,5 @@ gem 'kitchen-ec2'
 
 # Provides `sftp` transport to test-kitchen for faster cookbook upload.
 gem 'kitchen-sync'
+
+gem 'json', '>= 2.3.0' # 2.3.0 resolved some Ruby 2.7 deprecation warnings

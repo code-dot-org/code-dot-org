@@ -18,28 +18,24 @@ import {getPathToApplication} from '@cdo/apps/code-studio/pd/application_dashboa
 export default class DetailView extends React.Component {
   static propTypes = {
     params: PropTypes.shape({
-      applicationId: PropTypes.string.isRequired
+      applicationId: PropTypes.string.isRequired,
     }).isRequired,
     route: PropTypes.shape({
-      viewType: PropTypes.oneOf(['teacher', 'facilitator']),
-      course: PropTypes.oneOf([...Object.values(CourseKeyMap), 'course_tbd'])
-    })
+      course: PropTypes.oneOf([...Object.values(CourseKeyMap), 'course_tbd']),
+    }),
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   handleApplicationLoaded = applicationData => {
     const {course, application_type} = applicationData;
     const applicationId = this.props.params.applicationId;
 
-    // Wrong course or application type? No problem. Redirect to the correct route.
+    // Wrong course? No problem. Redirect to the correct route.
     // Note this will re-query the API for application data
-    if (
-      course !== this.props.route.course ||
-      application_type.toLowerCase() !== this.props.route.viewType
-    ) {
+    if (course !== this.props.route.course) {
       this.context.router.replace(
         getPathToApplication(course, application_type, applicationId)
       );
@@ -49,7 +45,6 @@ export default class DetailView extends React.Component {
   renderApplication = ({applicationData, handleUpdate}) => (
     <DetailViewContents
       applicationId={this.props.params.applicationId}
-      viewType={this.props.route.viewType}
       applicationData={applicationData}
       onUpdate={handleUpdate}
     />

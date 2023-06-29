@@ -7,11 +7,11 @@ export const LabeledSingleCheckbox = props => {
   const defaults = useDefaultOptions(props.name, props.label);
   const passProps = {
     ...defaults,
-    ...props
+    ...props,
   };
   return <SingleCheckbox {...passProps} />;
 };
 LabeledSingleCheckbox.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };

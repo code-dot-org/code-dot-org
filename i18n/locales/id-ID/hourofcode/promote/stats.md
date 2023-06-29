@@ -16,7 +16,7 @@ title: Uraian singkat dan statistik yang berguna
 
 #### Hadirkan ilmu komputer di sekolah Anda. Mulailah dengan Hour of Code!
 
-Dengan teknologi yang terus mengubah setiap industri di planet ini, pengetahuan tentang komputasi telah menjadi bagian dari kumpulan keterampilan yang sempurna. Namun hanya separuh dari semua sekolah yang mengajarkan ilmu komputer! Kabar baiknya, kita berada di jalur yang tepat untuk mengubah hal tersebut! Jika Anda pernah mendengar tentang Hour of Code pada tahun lalu, Anda mungkin tahu bahwa program ini telah menciptakan sejarah. 100 juta siswa kini merasakan betapa mudah dan serunya ilmu komputer hanya dengan satu Jam Coding (Hour of Code).
+Dengan teknologi yang terus mengubah setiap industri di planet ini, pengetahuan tentang komputasi telah menjadi bagian dari kumpulan keterampilan yang sempurna. Namun hanya separuh dari semua sekolah yang mengajarkan ilmu komputer! Kabar baiknya, kita berada di jalur yang tepat untuk mengubah hal tersebut! If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
 Hour of Code merupakan pengantar satu jam tentang ilmu komputer, yang dirancang untuk mengungkap misteri kode dan menunjukkan bahwa semua orang dapat mempelajari dasar-dasarnya. Pelajari lebih lanjut di [http://HourOfCode.com](http://HourofCode.com), cobalah selama satu jam, atau gelar acara Hour of Code untuk mengenalkan dunia komputasi kepada orang lain!
 
@@ -30,7 +30,7 @@ Kami berharap hal ini akan memicu minat siswa untuk terus belajar. Penelitian ju
 
 #### Mengapa hal ini penting?
 
-Teknologi mengubah setiap industri di planet ini. Pada tahun 2015, 7 juta lowongan kerja yang dibuka di A.S. - termasuk seni dan desain - yang memprioritaskan keterampilan coding Namun 49 persen sekolah di A.S. tidak mengajarkan ilmu komputer. Sudah waktunya untuk mengikuti perkembangan abad ke-21. Kita tahu bahwa terlepas dari apapun yang dilakukan oleh siswa saat mereka dewasa, baik masuk ke bidang kedokteran, bisnis, politik, atau seni, mengetahui cara membangun teknologi akan memberi mereka kepercayaan diri dan keunggulan kompetitif. <br /> <br />
+There are nearly 700,000 open computing jobs in the US, but only 80,000 computer science students graduated into the workforce last year. And, 47 percent of schools in the U.S. don't offer computer science. It’s time for us to catch up to the 21st century. Kita tahu bahwa terlepas dari apapun yang dilakukan oleh siswa saat mereka dewasa, baik masuk ke bidang kedokteran, bisnis, politik, atau seni, mengetahui cara membangun teknologi akan memberi mereka kepercayaan diri dan keunggulan kompetitif. <br /> <br />
 
 #### Kutipan yang bisa Anda gunakan dalam materi
 

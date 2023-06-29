@@ -1,5 +1,5 @@
 ---
-title: Bilgisayar Bilimi Temelleri Geçiş Kursu
+title: Bilgisayar Bilimi Temelleri Geçiş Kılavuzu
 theme: responsive
 style_min: true
 ---
@@ -11,18 +11,18 @@ style_min: true
 * [Genel Bakış](#overview)
 * [Yeni Kursları Öğretme](#newcourses)
 * [Çember Zamanı Hikayeleri( Ders A ve B)](#circletime)
-* [Yapı İskelesi Dersi & Zorlu Bulmacalar ( Tüm Yaşlar)](#scaffolding)
-* [Bağlantısız Dersler için Köprüleme Aktiviteleri (Tüm Yaşlar)](#unplugged)
-* [Kurs Projeleri Bitiş ( Kurs E & F)](#endofcourse)
+* [Ders İskelesi &  Zorlu Bulmacalar (Her Yaştan)](#scaffolding)
+* [Bağlantısız Dersler İçin Köprü Kurma Etkinlikleri (Her Yaştan)](#unplugged)
+* [Kurs sonu projeleri (Kurslar E & F)](#endofcourse)
 * [Sonuç](#conclusion)
 * [SSS](#faq)
 
 <a id="overview"></a>
 
 ## Genel Bakış
-Bilgisayar bilimi eğitiminin doğası, orijinal Bilgisayar Bilimi Temelleri derslerinin oluşturulmasından bu yana çok ilerlemiştir. Temel olarak, 1-4 arası kurslar öğrencilerin temelleri anlaması için başlangıç noktası olarak tasarlandı, yaşı ne olursa olsun bu disipline giren herkes için.  Anaokulundan başlamak üzere çok daha fazla bölge, şehir ve ülke bilgisayar bilimlerini öğretmeye başladıkça, öğretmenler de orta okul ve lise öğrencileri için daha fazla içerik talep ediyorlar.
+Bilgisayar bilimi eğitiminin doğası, orijinal Bilgisayar Bilimi Temelleri derslerinin oluşturulmasından bu yana çok ilerlemiştir. Başlangıçta Kurs 1-4, disipline gelen öğrencinin yaşı ne olursa olsun temel bilgileri edinmek için bir başlangıç ​​noktası olarak tasarlandı.  Artık çok daha fazla ilçe, şehir ve eyalet Anaokulundan başlayarak bilgisayar bilimi kurslarını uyguladığına göre, öğretmenler ortaokula/ortaokula kadar öğrencileri görmek için daha fazla içerik istiyor.
 
-Bilgisayar Bilimi Temelleri Kursları A-F, bu soruna çözüm olarak hazırlanmıştır.  Sınıf bazında bir müfredatın oluşturulması, geriye dönüp materyalleri sunma şeklimizi yeniden düşünmemizi sağladı.  Ayrıca, bu görevde bizi destekleyen özel öğretmen topluluğundan gelen geri bildirimleri gönülden dahil etme şansı da sağladı. Ülkedeki en iyi ilkokul CS eğitimi uzmanlarından bazılarının yardımıyla tasarlanan Kurslar A-F, ekstra mesleki gelişim olmadan çalışacak kadar tanıdık olmalı, ancak geçmişteki derslerimizi tamamlamış öğrencilere sunacak kadar yeni olmalıdır.
+Bilgisayar Biliminin Temelleri [A-F Kursları](https://code.org/educate/curriculum/csf), bu soruna verdiğimiz yanıttır.  Sınıf bazında bir müfredatın oluşturulması, geriye dönüp materyalleri sunma şeklimizi yeniden düşünmemizi sağladı.  Ayrıca, bu görevde bizi destekleyen özel öğretmen topluluğundan gelen geri bildirimleri gönülden dahil etme şansı da sağladı. Ülkedeki en iyi ilkokul CS eğitimi uzmanlarından bazılarının yardımıyla tasarlanan Kurslar A-F, ekstra mesleki gelişim olmadan çalışacak kadar tanıdık olmalı, ancak geçmişteki derslerimizi tamamlamış öğrencilere sunacak kadar yeni olmalıdır.
 
 * Kurs A: Anaokulu
 * Kurs B: 1. Sınıf
@@ -58,7 +58,7 @@ Bazı kavramları, özellikle küçük öğrenciler için yalnızca aktiviteler 
 
 ### Sınıfınız için uygun hikayeyi okuyun
   - Hareket sırasında faydalı anlarda soru ve yorumlarla anladıklarını kontrol ettiğinizden emin olun.
-  - Sonrasında hikayeler hakkında tartışın. Öğrencilerini neler duymuş? Akıllarına takılan herhangi bir fikir var mı?
+  - Sonrasında hikayeler hakkında tartışın. Öğrenciler neler duymuş? Akıllarına takılan herhangi bir fikir var mı?
   - Öğrencilerin karakterlerle özdeşleşmelerini sağlamaya çalışın.  Hayatlarında yaptıkları, onlara hikayedeki karakterlerden birini hatırlatan bir şey var mı?
 
 ### Sonraki aktiviteye başlamadan önce öğrencilere hikayeyi hatırlatın.
@@ -74,7 +74,7 @@ Tüm sınıfınızı bir araya toplayamıyorsanız, Code.org, hikayeleri sınır
 
 <a id="scaffolding"></a>
 
-## Yapı İskelesi Dersi & Zorlu Bulmacalar ( Tüm Yaşlar)
+## Ders İskelesi &  Zorlu Bulmacalar (Her Yaştan)
 A-F kursları genel olarak önceki kurslarımıza göre daha az pekiştirilir.  Bu, özellikle hata ayıklamayı öğrenmedikleri sürece, öğrencilerin kodlarını mümkün olduğunca sık bir şekilde en baştan oluşturmalarını sağlamaya çalıştığımız anlamına gelir.  Bu tasarımın bir kısmı olarak, çevrimiçi derslerimizin çoğu, derse başlamak için basit bir bulmaca sunduğumuz ve ardından öğrencilerin arkasındaki fikri anlama şansı bulduğu noktaya kadar yeni bir kavramla yavaşça ilerleyeceğimiz bir eğilimi takip ediyor.  Sonrasında, öğrencilerin yeni ve karmaşık bir şekilde kavram hakkında düşünmelerini sağlamayı amaçlayan çetrefilli bir bulmacayı sunarız.
 
 Çetrefilli bulmacalar, Kurslar A-F'de yenidir.  Çetrefilli bulmacaların amacı, öğrencileri ısrar ve bağımsız düşünce pratiği yapabilecekleri yüksek bir çıtaya maruz bırakmaktır.  Çetrefilli bulmacalar kasten zordur ve yalnızca kavramı tam anlamıyla anlayan öğrencilerin makul bir zaman içerisinde geçeceği şekilde tasarlanır.  Bu, çok sayıda öğrencinin ilk seferinde karşılaştıkları zorluklarda başarılı olamayacağı anlamına gelir. Bu, hem öğrencinin hem de öğretmenin üstesinden gelmesi için belirli bir tutum gerektirir.
@@ -97,7 +97,7 @@ Bu alan için birkaç final notu:
 
 <a id="unplugged"></a>
 
-## Bağlantısız Dersler için Köprüleme Aktiviteleri (Tüm Yaşlar)
+## Bağlantısız Dersler İçin Köprü Kurma Etkinlikleri (Her Yaştan)
 Bağlantısız aktiviteler, günlük yaşamlarında önemli CS kavramlarını halihazırda nasıl kullandıklarını gösterme açısından bulundukları yerde öğrencilerle buluşur.  Öğrenciler döngüler ve koşullar gibi temel fikirleri belirledikten sonra, ilk çevrimiçi programlama için bunları kullanmaya çalışırken ortaya çıkabilecek zihinsel engelleri aşarlar.
 
 Bağlantısız deneyimler o kadar önemlidir ki onları bir adım daha ileri götürmeyi seçtik ve bağlantısız dersleri çevrimiçi benzerleri ile birleştiren aktiviteler yapmaya başladık.  Kurslar A-F'de şimdi ders planlarının, çevrimdışı alıştırmaları nasıl yapacağınıza ve dersleri aşağıdaki çevrimiçi bulmacalara nasıl çevireceğinize dair örnekler sunduğunu göreceksiniz.  Buna uygun olarak bunlara "Köprüleme Aktiviteleri" deriz
@@ -106,7 +106,7 @@ Bağlantısız deneyimler o kadar önemlidir ki onları bir adım daha ileri gö
 
 <a id="endofcourse"></a>
 
-## Kurs Projeleri Bitiş ( Kurs E & F)
+## Kurs sonu projeleri (Kurslar E & F)
 Daha büyük öğrenciler için Kurslar E & F'deki kurs projelerinin büyük ölçüde sonunu getirdik. Code.org uzunca bir süredir "projeler" oluşturma becerisi sağlamasına rağmen, öğrencilerin projelerini resmi bir bağlamda planlayıp yürütebilmeleri için çok ihtiyaç duyulan bakış açısını dahil edeceğini düşündük.
 
 Kurs projelerinin sonu nispeten basittir.  Dört ila beş haftalık bir süre boyunca öğrenciler proje fikirlerini gözden geçirecek, uygulamalarını planlayacak, programlarını kodlayacak, geri bildirime göre revize edecek (5. sınıf), ardından tamamladıkları çalışmaları sunacaklar.  Bu adımların her biri, yardımcı bir notun yanı sıra büyük resmi vurgulayan bir öğretmen ders planıyla yönlendirilir.
@@ -134,11 +134,10 @@ Bu genel bakışın aydınlatıcı olduğunu umuyoruz.  Bu değişiklik hakkınd
 
 ## SSS
 
-| Soru                                                                                                                                                | Cevap                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Yeni bir kurs dizisini başlatıyorsunuz-- bu Kurslar 1-4'ün geçtiği anlamına mı geliyor?**                                                         | Hayır. 20 Saatlik asıl kursumuz hala web sitemizde mevcut ve kullanımda olduğu için, öğrencilerin/çocukların ihtiyaç duyduğu deneyimi daha iyi temsil ettiğini düşünenler için Kurslar 1-4'ü hazırda bulundurmayı planlıyoruz.                                                                                                                                                                                                                                                                         |
-| **Kurslar A-F'yi kullanmaya ne zaman başlayabiliriz?**                                                                                              | Kurslar A-F halihazırda mevcut!                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| **En sevdiğim derslerden/bulmacalardan bazıları Kurslar A-F'de eksik!**                                                                             | Korkmana gerek yok! Kurslar 1-4'te veya Hızlandırılmış 20 Saatlik kursta hala onları bıraktığınız yerdeler.                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Bu bulmacalar çok daha zor görünüyor.  Benim küçük çocuklarım için aşırı zor olacağından korkuyorum.**                                            | Bu yeni kursların dayanağı, öğrencilerin düşünmesini, problem çözmesini ve ısrarcı olmak için pratik yapmasını sağlama isteğidir.  Bu şeylerin hiçbiri, bulmacaların tamamlanmasının aşırı kolay olduğu zaman gerekmez.  Bu nedenle bulmacaları daha da zorlaştırdık.  Bu becerileri geliştirmede sınıfınıza liderlik etme konusunda yardım için lütfen öğretmen kılavuzuna bakın.  Her zaman olduğu gibi, çevrimiçi bulmacalara atlamadan önce bağlantısız dersleri kullanmanın önemini küçümsemeyin. |
-| **Bazı bulmacalar yalnızca belirli sayıda spesifik bloğa izin verir.  Peki ya öğrencilerim döngüleri çözmeden çok önce bir şeyi kodlamak isterse?** | Spesifik blokları kısıtlayan birkaç bulmaca vardır. Bu yeni pekiştirme yöntemlerinden biridir.  Çalışma alanındaki parçaları fazla pekiştirmeden yön vermenin bir yoludur.  Bulmacaları çözmeden çok önce kodlamayı seven öğrenciler için (ve aslında tüm öğrenciler için her zaman) klavyenin yanında, her ne şekilde olursa olsun en doğal olarak gelen algoritmayı bulabilecekleri bir günlük veya karalama kağıdına sahip olmak yararlıdır.                                                        |
+| Soru                                                                                                                                                  | Cevap                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Yeni bir kurs dizisini başlatıyorsunuz-- bu Kurslar 1-4'ün geçtiği anlamına mı geliyor?**                                                           | Evet. 1-4 kursları artık modern standartları karşılamıyor. CS Fundamentals kursları A-F bu bilgisayar bilimi kavramlarını daha iyi öğretir. 1-4 Kurslarını kademeli olarak kaldıracağız. 2022-2023 öğretim yılının sonundan itibaren bu kurslara yapılan referansları kaldıracağız ancak sahip olduğunuz bağlantılar kalacaktır. Temmuz 2023'ten itibaren, kurslara artık sitemizde erişilemez.                                                                                                        |
+| **Kurslar A-F'yi kullanmaya ne zaman başlayabiliriz?**                                                                                                | Kurslar A-F halihazırda mevcut!                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Bu bulmacalar çok daha zor görünüyor.  Benim küçük çocuklarım için aşırı zor olacağından korkuyorum.**                                              | Bu yeni kursların dayanağı, öğrencilerin düşünmesini, problem çözmesini ve ısrarcı olmak için pratik yapmasını sağlama isteğidir.  Bu şeylerin hiçbiri, bulmacaların tamamlanmasının aşırı kolay olduğu zaman gerekmez.  Bu nedenle bulmacaları daha da zorlaştırdık.  Bu becerileri geliştirmede sınıfınıza liderlik etme konusunda yardım için lütfen öğretmen kılavuzuna bakın.  Her zaman olduğu gibi, çevrimiçi bulmacalara atlamadan önce bağlantısız dersleri kullanmanın önemini küçümsemeyin. |
+| **Bazı bulmacalar yalnızca belirli sayıda belirli bloğa izin verir.  Ya öğrencilerim döngüleri çözmeden önce bir şeyi uzun yoldan kodlamak isterse?** | Belirli blokları kısıtlayan birkaç bulmaca var. Bu yeni pekiştirme yöntemlerinden biridir.  Çalışma alanının kendisinde parçaları iskeleye bağlamadan yön vermenin bir yoludur.  Bulmacaları çözmeden çok önce kodlamayı seven öğrenciler için (ve aslında tüm öğrenciler için her zaman), klavyenin yanında algoritmayı her şekilde çözebilecekleri bir günlük veya karalama kağıdı bulundurmak yararlıdır. en doğal haliyle gelir.                                                                   |
 

@@ -20,9 +20,8 @@ theme: responsive
 <div style="clear: both;"></div>
 
 ***
-## 2021-22学年计算机科学基础知识不插电版课程
-
-<a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">2021-22学年计算机科学基础知识</a>课程如下所列。 <br><br>
+## 2022-23学年计算机科学基础离线课程
+以下课程可以在<a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">2022-23学年计算机科学基础</a>中找到。 <br><br>
 
 <style>
 table, th, td {
@@ -104,29 +103,29 @@ Building on the initial "My Robotic Friends" activity, students tackle larger an
     <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. 在编写程序时，我们并不总是万事俱备。 在不同的情况下，需要执行不同的操作，即使不清楚代码运行时哪种情况为“真”。 这就是条件语句用到的场合。 Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. 在编写程序时，我们并不总是万事俱备。 在不同的情况下，需要执行不同的操作，即使不清楚代码运行时哪种情况为“真”。 这就是条件语句用到的场合。 条件语句让计算机可以根据运行代码时为真的信息做出决策。+</td><td>条件语句</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
-    </tr>
-         <tr>
-    <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.7 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.11 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. 函数（有时称为过程）是可以在大型程序中反复使用的小型程序。 This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+    <th rowspan="3" id="t05">课程E</th>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Songwriting</a><br><small>计算机科学世界中最宏伟的结构之一是函数。 函数（有时称为过程）是可以在大型程序中反复使用的小型程序。 本课将帮助学生直观地理解为什么将代码块组合成函数是如此有帮助的做法。</td><td>函数</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+  </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.17 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - 为无障碍性设计</a><br><small>在本课中，学生将通过头脑风暴和为假设的应用程序设计无障碍解决方案来了解无障碍性和共情的价值。</td><td>计算的影响</td><td><img src="/images/e18.png" width="90%"></td>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - 数字共享</a><br><i>*用品：智能手机或平板电脑</i><br><small>本课由版权和创意部门的团队借给计算机科学基础，旨在帮助学生理解尊重所有权和版权的挑战和好处，特别是在数字环境中。 应鼓励学生尊重艺术家的权利，这是成为有道德的数字公民的重要组成部分。</td><td>数字公民</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
     </tr>
          <tr>
     <th rowspan="3" id="t06">Course F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Blank Space Stories</a><br><i>*Supplies: 6 envelopes(also suitable:paper or index cards,folded in half)</i><br><small>Students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs.
+           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -空白故事</a><br><i>*用品：6个信封（纸张或索引卡对折亦可）</i><br><small>学生将使用填空故事（类似于Mad Libs®）作为理解计算机如何从用户获取和存储输入，然后在程序运行时使用它。
    </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. 这些新的结构让学生可以创建更强大而动态的代码。</td><td>For循环</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.19 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. 在本节课中，学生们将假装在互联网上穿流，同时学习网络连接、URL、IP地址和DNS。</td><td>数据</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
+    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.19 - 互联网</a><br><small>尽管很多人每天都在使用互联网，但知道其工作原理的人并不是非常多。 在本节课中，学生们将假装在互联网上穿流，同时学习网络连接、URL、IP地址和DNS。</td><td>数据</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
 </table>
 
 <p style="clear:both"></p>

@@ -1,4 +1,9 @@
 my:
   data:
     parameter_names:
+      actor: ဇာတ်ကောင်
+      left: ဘယ်ဘက်သို့
       min: အနည်းဆုံး
+      points: ရမှတ်
+      size: အရွယ်အစား
+      speed: အရှိန်

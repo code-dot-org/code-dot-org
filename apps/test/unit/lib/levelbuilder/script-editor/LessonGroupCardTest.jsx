@@ -17,16 +17,16 @@ export const nonUserFacingGroup = {
       name: 'A',
       position: 1,
       key: 'lesson-1',
-      levels: []
+      levels: [],
     },
     {
       name: 'B',
       id: 101,
       position: 2,
       key: 'lesson-2',
-      levels: []
-    }
-  ]
+      levels: [],
+    },
+  ],
 };
 
 describe('LessonGroupCard', () => {
@@ -79,17 +79,17 @@ describe('LessonGroupCard', () => {
             name: 'A',
             position: 1,
             key: 'lesson-1',
-            levels: []
+            levels: [],
           },
           {
             name: 'B',
             id: 101,
             position: 2,
             key: 'lesson-2',
-            levels: []
-          }
-        ]
-      }
+            levels: [],
+          },
+        ],
+      },
     };
   });
 
@@ -105,16 +105,10 @@ describe('LessonGroupCard', () => {
     expect(wrapper.contains('Lesson Group Name:')).to.be.true;
 
     expect(
-      wrapper
-        .find('MarkdownEnabledTextarea')
-        .at(0)
-        .props().markdown
+      wrapper.find('MarkdownEnabledTextarea').at(0).props().markdown
     ).to.equal('Lesson group description');
     expect(
-      wrapper
-        .find('MarkdownEnabledTextarea')
-        .at(1)
-        .props().markdown
+      wrapper.find('MarkdownEnabledTextarea').at(1).props().markdown
     ).to.equal('Big questions');
   });
 

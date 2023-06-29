@@ -50,6 +50,12 @@
         "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
           "description": "Identifikovat místa, kam lze jít pokračovat ve studiu počítačových věd a programování"
         },
+        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
+          "description": "Vytvořte nové sprajty a přidělte jim kostýmy a místa."
+        },
+        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
+          "description": "Vytvořte pomocí sprajtů a událostí interaktivní animaci."
+        },
         "3e5eebcd-2140-4152-8654-410468108ab6": {
           "description": "Vymezit „programování“ a „počítačovou vědu“"
         },
@@ -142,6 +148,12 @@
         },
         "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
           "description": "Vysvětlete slabiny a bezpečnostní nedostatky substitučních šifer"
+        },
+        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
+          "description": "Vytvořte nové sprajty a přidělte jim kostýmy a místa."
+        },
+        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
+          "description": "Vytvořte pomocí sprajtů a událostí interaktivní animaci."
         },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
           "description": "Vytvořte pomocí sprajtů a událostí interaktivní animaci."
@@ -451,6 +463,9 @@
         },
         "04ae0169-fb41-46fb-bc74-dc22c70707f7": {
           "description": "Určete vztah mezi tím, jak je proměnná definována, uložena a načtena, když v programu stiskneme tlačítko „Spustit“."
+        },
+        "8805bb75-452c-4778-9cd2-6df020a13216": {
+          "description": "Deklarovat proměnnou"
         },
         "cc733f62-1646-49dc-b2b4-8b47a7c36fca": {
           "description": "Volejte proměnnou v programu opakovaně."
@@ -1273,6 +1288,9 @@
         },
         "8cbf109a-b450-420b-973a-db9efd47f61f": {
           "description": "Rozhodněte se, jaké výroky lze říkat online, a jaké ne."
+        },
+        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
+          "description": "Deklarovat proměnnou"
         },
         "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
           "description": "Přiřadit proměnné hodnotu"

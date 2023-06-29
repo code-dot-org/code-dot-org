@@ -1,7 +1,6 @@
 @no_mobile
 Feature: Pixelation levels
-  # Skip on IE due to blocked pop-ups
-  @no_ie @as_student
+  @as_student
   Scenario: Pixelation version 2 in black and white with no sliders
     Given I am on the 1st pixelation test level
     And pixelation data has text "0000 0011 0000 0010 0 1 0"
@@ -17,8 +16,7 @@ Feature: Pixelation levels
     And I save pixelation data and reload
     Then pixelation data has text "0000 0011 0000 0010 0 1 0 1 1 1 1 1"
 
-  # Skip on IE due to blocked pop-ups
-  @no_ie @as_student
+  @as_student
   Scenario: Pixelation version 3 in color with sliders
     Given I am on the 2nd pixelation test level
     And pixelation data has text "0000 0100 0000 0010 0000 0011 000 111 100 010 001 110"
@@ -34,8 +32,7 @@ Feature: Pixelation levels
     And I save pixelation data and reload
     Then pixelation data has text "0000 0100 0000 0010 0000 0011 000 111 100 010 001 110 111 000 111 000 01"
 
-  # Skip on IE due to blocked pop-ups
-  @no_ie @as_student
+  @as_student
   Scenario: Pixelation version 3 in color with sliders starting in hex mode
     Given I am on the 3rd pixelation test level
     And pixelation data has text "04 04 18 FF0000 00AAAA"

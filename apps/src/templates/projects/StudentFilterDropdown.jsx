@@ -11,7 +11,7 @@ class StudentFilterDropdown extends Component {
     onChangeStudent: PropTypes.func.isRequired,
     selectedStudent: PropTypes.string.isRequired,
     studentNames: PropTypes.array.isRequired,
-    style: PropTypes.object
+    style: PropTypes.object,
   };
 
   onChange(event) {
@@ -47,16 +47,16 @@ const styles = {
   filterWrapper: {
     display: 'inline-flex',
     alignItems: 'center',
-    fontSize: 14
+    fontSize: 14,
   },
   filterSelect: {
     margin: 0,
-    color: 'dimgray'
+    color: 'dimgray',
   },
   filterText: {
     color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif'
-  }
+    fontFamily: '"Gotham 5r", sans-serif',
+  },
 };
 
 export default Radium(StudentFilterDropdown);

@@ -14,3 +14,5 @@ wrong 'The app informs users of the total cost of their groceries.'
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

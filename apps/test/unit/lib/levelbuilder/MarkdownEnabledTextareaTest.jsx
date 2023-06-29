@@ -11,7 +11,7 @@ describe('MarkdownEnabledTextarea', () => {
     defaultProps = {
       markdown:
         '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
-      handleMarkdownChange
+      handleMarkdownChange,
     };
   });
 

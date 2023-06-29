@@ -10,7 +10,7 @@ import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/Co
 const ReviewNavigator = ({
   viewPeerList,
   loadPeers,
-  teacherAccountViewingAsParticipant
+  teacherAccountViewingAsParticipant,
 }) => {
   const [peers, setPeers] = useState([]);
   const [loadError, setLoadError] = useState(false);
@@ -60,20 +60,20 @@ const ReviewNavigator = ({
       return [
         <a key="loading" onClick={() => {}}>
           <Spinner size="medium" />
-        </a>
+        </a>,
       ];
     }
     if (loadError || !Array.isArray(peers)) {
       return [
         <a key="error" onClick={() => {}}>
           {javalabMsg.errorLoadingClassmates()}
-        </a>
+        </a>,
       ];
     } else if (peers.length === 0) {
       return [
         <a key="no-reviews" onClick={() => {}} className="code-review-no-peers">
           {javalabMsg.noOtherReviews()}
-        </a>
+        </a>,
       ];
     } else {
       return peers.map(peer => (
@@ -105,6 +105,7 @@ const ReviewNavigator = ({
       color={Button.ButtonColor.gray}
       icon={'caret-left'}
       size={Button.ButtonSize.default}
+      useDefaultLineHeight
       iconStyle={styles.backToProjectIcon}
       onClick={onClickBackToProject}
       style={styles.backToProjectButton}
@@ -115,24 +116,24 @@ const ReviewNavigator = ({
 ReviewNavigator.propTypes = {
   viewPeerList: PropTypes.bool,
   loadPeers: PropTypes.func,
-  teacherAccountViewingAsParticipant: PropTypes.bool
+  teacherAccountViewingAsParticipant: PropTypes.bool,
 };
 
 const styles = {
   container: {
-    display: 'flex'
+    display: 'flex',
   },
   backToProjectIcon: {
     // The back to project icon is styled to be the same size and placement
     // as the dropdown icon (see Dropdown.js)
     fontSize: 24,
     position: 'relative',
-    top: 3
+    top: 3,
   },
   backToProjectButton: {
     margin: 0,
-    paddingTop: 0
-  }
+    paddingTop: 0,
+  },
 };
 
 export default ReviewNavigator;

@@ -17,7 +17,7 @@ class Pd::WorkshopUserManagementController < ApplicationController
   # get /pd/workshop_user_management/facilitator_courses
   def facilitator_courses_form
     search_term = params[:search_term]
-    if search_term =~ /^\d+$/
+    if /^\d+$/.match?(search_term)
       @user = restricted_users.find_by(id: search_term)
     elsif search_term
       @user = restricted_users.find_by(hashed_email: restricted_users.hash_email(search_term))
@@ -46,9 +46,7 @@ class Pd::WorkshopUserManagementController < ApplicationController
     redirect_to action: "facilitator_courses_form", search_term: params[:user_id]
   end
 
-  private
-
-  def restricted_users
+  private def restricted_users
     User.select(RESTRICTED_USER_ATTRIBUTES_FOR_VIEW)
   end
 end

@@ -120,6 +120,7 @@ tg:
     online: онлайн
     view_course: Намоиш додани дарс
     trynow: 'Маълумоти бештар'
+  certificate_hour_of_code: "Соати рамз"
   gender:
     male: 'Мард'
     female: 'Зан'
@@ -173,5 +174,7 @@ tg:
         other: "Дигар"
       robotics:
         other: "Дигар"
+      workshop_course:
+        other: 'Дигар'
   cookie_banner:
     accept: 'Ман розӣ ҳастам'

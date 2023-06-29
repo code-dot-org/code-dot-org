@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2018-05-04T23:01:23.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Free response: Spot and Fix the Bug",
     "long_instructions": "Respond to the following questions about your investigation into the bug with the counting game. Feel free to go back and look at the game again (but do so in another tab or be sure to click \"Submit\" to save your work!):\n\n- From the user's perspective, what was the difference between the first version of the game and the one with the bug?\n- From looking at the code, what specifically was the difference between the two, and why is that an issue?\n- How did you fix the bug?\n",
@@ -11,8 +7,13 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 6778,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2018-05-04T23:01:23.000Z",
+  "user_id": 0,
   "published": true
 }]]></config>
 </FreeResponse>

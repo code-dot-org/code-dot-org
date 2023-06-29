@@ -1,5 +1,6 @@
 ---
 from: "Hadi Partovi (Code.org) <hadi_partovi@code.org>"
+reply-to: "Code.org <support@code.org>"
 subject: "Get ready for the Hour of Code"
 ---
   <% hourofcode = CDO.canonical_hostname('hourofcode.com') %>
@@ -28,7 +29,7 @@ Choose an [Hour of Code activity](https://<%= hourofcode %>/learn) for your clas
 Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). [Order posters](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) (and get an extra 50% off), Hour of Code kits, stickers, and more! But hurry, supplies are limited.   
 
 ### From an Hour of Code to years of computer science
-<% if form.data["hoc_event_country_s"] == 'US' %> An Hour of Code is just the beginning. Whether you’re an administrator, teacher, or advocate, we have [professional learning, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://<%= codedotorg %>/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support!
+<% if form.data["hoc_event_country_s"] == 'US' %> An Hour of Code is just the beginning. Whether you're an administrator, teacher, or advocate, we have [professional learning, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://<%= codedotorg %>/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support!
 
 If you find an Hour of Code activity you like, ask about going further. Most of the organizations offering activities have curriculum and professional learning available as well. To help you get started, we've highlighted [curriculum providers that can help you or your students go beyond an hour.](https://<%= hourofcode %>/beyond) <% else %> An Hour of Code is just the beginning. Most of the organizations offering Hour of Code lessons also have curriculum available to go further. To help you get started, we've highlighted a number of [curriculum providers that will help you or your students go beyond an hour.](https://<%= hourofcode %>/beyond)
 
@@ -40,7 +41,7 @@ Founder, Code.org<br />
 
 <hr/>
 <small>
-You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is [1501 4th Avenue, Suite 900, Seattle, WA 98101](https://maps.google.com/?q=1501+4th+Avenue,+Suite+900,+Seattle,+WA+98101&entry=gmail&source=g). Don't want these emails? [Unsubscribe](<%= local_assigns.fetch(:unsubscribe_link, "") %>).
+You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is [801 5th Avenue, Suite 2100, Seattle, WA 98104](https://maps.google.com/?q=1501+4th+Avenue,+Suite+900,+Seattle,+WA+98101&entry=gmail&source=g). Don't want these emails? [Unsubscribe](<%= local_assigns.fetch(:unsubscribe_link, "") %>).
 </small>
 
 ![](<%= local_assigns.fetch(:tracking_pixel, "") %>)

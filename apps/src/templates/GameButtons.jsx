@@ -26,13 +26,13 @@ export const RunButton = Radium(props => (
     style={props.style}
   >
     <div>{props.runButtonText || msg.runProgram()}</div>
-    <img src={blankImg} className="run26" />
+    <img src={blankImg} className="run26" alt="" />
   </button>
 ));
 RunButton.propTypes = {
   hidden: PropTypes.bool,
   style: PropTypes.object,
-  runButtonText: PropTypes.string
+  runButtonText: PropTypes.string,
 };
 RunButton.displayName = 'RunButton';
 
@@ -45,18 +45,18 @@ export const ResetButton = Radium(props => (
       'launch',
       'blocklyLaunch',
       props.hideText && 'hideText',
-      props.hidden && 'hide'
+      props.hidden && 'hide',
     ])}
     style={[commonStyles.hidden, props.style]}
   >
     <div>{!props.hideText && msg.resetProgram()}</div>
-    <img src={blankImg} className="reset26" />
+    <img src={blankImg} className="reset26" alt="" />
   </button>
 ));
 ResetButton.propTypes = {
   hidden: PropTypes.bool,
   style: PropTypes.object,
-  hideText: PropTypes.bool
+  hideText: PropTypes.bool,
 };
 ResetButton.displayName = 'ResetButton';
 
@@ -67,11 +67,15 @@ ResetButton.displayName = 'ResetButton';
 export const UnconnectedGameButtons = props => (
   <div>
     <ProtectedStatefulDiv id="gameButtons">
-      <RunButton
-        hidden={props.hideRunButton}
-        runButtonText={props.runButtonText}
-      />
-      <ResetButton hidden={props.hideResetButton} />
+      {!props.noRunResetButton && (
+        <>
+          <RunButton
+            hidden={props.hideRunButton}
+            runButtonText={props.runButtonText}
+          />
+          <ResetButton hidden={props.hideResetButton} />
+        </>
+      )}
       {
         ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
       }
@@ -92,7 +96,8 @@ UnconnectedGameButtons.propTypes = {
   showSkipButton: PropTypes.bool,
   widgetMode: PropTypes.bool,
   showFinishButton: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
+  noRunResetButton: PropTypes.bool,
 };
 UnconnectedGameButtons.displayName = 'GameButtons';
 
@@ -103,5 +108,5 @@ export default connect(state => ({
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
   nextLevelUrl: state.pageConstants.nextLevelUrl,
   showSkipButton: state.pageConstants.isChallengeLevel,
-  widgetMode: state.pageConstants.widgetMode
+  widgetMode: state.pageConstants.widgetMode,
 }))(UnconnectedGameButtons);

@@ -10,7 +10,7 @@ describe('MusicController', () => {
     hasOgg: false,
     name: 'win',
     isloaded: false,
-    group: 'mygroup'
+    group: 'mygroup',
   };
 
   let musicController, sound, sounds, sourceURL;
@@ -20,7 +20,7 @@ describe('MusicController', () => {
     sourceURL = winMp3;
     sounds.register({
       id: winMp3,
-      mp3: winMp3
+      mp3: winMp3,
     });
     sound = sounds.soundsById[sourceURL];
     sinon.spy(sound, 'play');

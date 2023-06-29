@@ -5,21 +5,23 @@ import {assert} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 
 const sampleAnnouncement = {
+  key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
   notice: 'This course has recently been updated!',
   details: 'See what changed and how it may affect your classroom.',
   link: 'https://support.code.org/hc/en-us/articles/115001931251',
   type: 'information',
-  visibility: 'Teacher-only'
+  visibility: 'Teacher-only',
 };
 
 const sampleAnnouncementWithDismissibleAndButtonText = {
+  key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
   notice: 'This course has recently been updated!',
   details: 'See what changed and how it may affect your classroom.',
   link: 'https://support.code.org/hc/en-us/articles/115001931251',
   type: 'information',
   visibility: 'Teacher-only',
   dismissible: false,
-  buttonText: 'Push the button'
+  buttonText: 'Push the button',
 };
 
 describe('Announcement', () => {
@@ -32,7 +34,7 @@ describe('Announcement', () => {
       inputStyle: {},
       index: 1,
       onRemove,
-      onChange
+      onChange,
     };
   });
 

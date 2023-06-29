@@ -12,12 +12,14 @@ What is printed as a result of the following code segment?
 
 ```
 ArrayList<Integer> zipCodes = new ArrayList<Integer>();
-zipcodes.add(22032);
-zipcodes.add(30351);
-zipcodes.add(24301);
-zipcodes.add(2, 7804);
-zipcodes.remove(2);
-zipcodes.remove(2);
-System.out.println(zipcodes);
+zipCodes.add(22032);
+zipCodes.add(30351);
+zipCodes.add(24301);
+zipCodes.add(2, 7804);
+zipCodes.remove(2);
+zipCodes.remove(2);
+System.out.println(zipCodes);
 ```
 MARKDOWN
+
+allow_multiple_attempts true

@@ -10,3 +10,5 @@ wrong '`Math.random(.75)`'
 markdown <<MARKDOWN
 Which of these statements is true 75% of the time?
 MARKDOWN
+
+allow_multiple_attempts true

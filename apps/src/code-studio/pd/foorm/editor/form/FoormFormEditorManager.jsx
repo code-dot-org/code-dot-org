@@ -9,7 +9,7 @@ import {
   setFormData,
   setHasJSONError,
   setHasLintError,
-  setLastSavedQuestions
+  setLastSavedQuestions,
 } from '../foormEditorRedux';
 import FoormFormSaveBar from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormSaveBar';
 import {getLatestVersionMap} from '../../foormHelpers';
@@ -37,14 +37,14 @@ class FoormFormEditorManager extends React.Component {
     setFormData: PropTypes.func,
     setHasJSONError: PropTypes.func,
     setHasLintError: PropTypes.func,
-    setLastSavedFormQuestions: PropTypes.func
+    setLastSavedFormQuestions: PropTypes.func,
   };
 
   state = {
     showCodeMirror: false,
     hasLoadError: false,
     forceRerenderKey: 0,
-    previewQuestions: null
+    previewQuestions: null,
   };
 
   // Callback for FoormLoadButtons
@@ -55,7 +55,7 @@ class FoormFormEditorManager extends React.Component {
 
       return {
         metadata: formNameAndVersion,
-        text: `${formName}, version ${formVersion}`
+        text: `${formName}, version ${formVersion}`,
       };
     });
   }
@@ -68,13 +68,13 @@ class FoormFormEditorManager extends React.Component {
     this.props.setSaveError(null);
     $.ajax({
       url: `/api/v1/pd/foorm/forms/${formId}`,
-      type: 'get'
+      type: 'get',
     })
       .done(result => {
         this.updateFormData(result);
         this.setState({
           showCodeMirror: true,
-          hasLoadError: false
+          hasLoadError: false,
         });
       })
       .fail(() => {
@@ -83,11 +83,11 @@ class FoormFormEditorManager extends React.Component {
           published: null,
           formName: null,
           formVersion: null,
-          formId: null
+          formId: null,
         });
         this.setState({
           showCodeMirror: true,
-          hasLoadError: true
+          hasLoadError: true,
         });
       });
   }
@@ -99,7 +99,7 @@ class FoormFormEditorManager extends React.Component {
       published: null,
       formName: null,
       formVersion: null,
-      formId: null
+      formId: null,
     });
   }
 
@@ -124,22 +124,22 @@ class FoormFormEditorManager extends React.Component {
       contentType: 'application/json',
       processData: false,
       data: JSON.stringify({
-        form_questions: this.props.questions
-      })
+        form_questions: this.props.questions,
+      }),
     })
       .done(result => {
         this.setState({
           forceRerenderKey: this.state.forceRerenderKey + 1,
           previewQuestions: result,
           libraryError: false,
-          libraryErrorMessage: null
+          libraryErrorMessage: null,
         });
       })
       .fail(result => {
         this.setState({
           libraryError: true,
           libraryErrorMessage:
-            (result.responseJSON && result.responseJSON.error) || 'unknown'
+            (result.responseJSON && result.responseJSON.error) || 'unknown',
         });
       });
   }
@@ -154,9 +154,7 @@ class FoormFormEditorManager extends React.Component {
     }
     if (this.state.libraryError) {
       errors.push(
-        `There is an error in the use of at least one library question. The error is: ${
-          this.state.libraryErrorMessage
-        }`
+        `There is an error in the use of at least one library question. The error is: ${this.state.libraryErrorMessage}`
       );
     }
 
@@ -168,9 +166,7 @@ class FoormFormEditorManager extends React.Component {
       this.props.formName && (
         <div>
           <h2 style={styles.surveyTitle}>
-            {`Form Name: ${this.props.formName}, version ${
-              this.props.formVersion
-            }`}
+            {`Form Name: ${this.props.formName}, version ${this.props.formVersion}`}
           </h2>
           <h3 style={styles.surveyState}>
             {`Form State: ${
@@ -245,15 +241,15 @@ class FoormFormEditorManager extends React.Component {
 
 const styles = {
   surveyTitle: {
-    marginBottom: 0
+    marginBottom: 0,
   },
   surveyState: {
-    marginTop: 0
+    marginTop: 0,
   },
   loadError: {
     fontWeight: 'bold',
-    padding: '1em'
-  }
+    padding: '1em',
+  },
 };
 
 export default connect(
@@ -263,7 +259,7 @@ export default connect(
     hasJSONError: state.foorm.hasJSONError,
     formName: state.foorm.formName,
     formVersion: state.foorm.formVersion,
-    isFormPublished: state.foorm.isFormPublished
+    isFormPublished: state.foorm.isFormPublished,
   }),
   dispatch => ({
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
@@ -272,6 +268,6 @@ export default connect(
     setHasJSONError: hasJSONError => dispatch(setHasJSONError(hasJSONError)),
     setHasLintError: hasLintError => dispatch(setHasLintError(hasLintError)),
     setLastSavedFormQuestions: formQuestions =>
-      dispatch(setLastSavedQuestions(formQuestions))
+      dispatch(setLastSavedQuestions(formQuestions)),
   })
 )(FoormFormEditorManager);

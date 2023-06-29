@@ -48,8 +48,8 @@ Bilgisayar bilimi, 21. yüzyılın tanımlayıcı alanıdır ama birçok okulda 
 
 Önceki gönüllülerin deneyimlerine göz atın:
 
-- “Gönüllülük deneyimimin en güzel kısmı, tüm sınıfın beyaz olmayanlar ve kadınlardan oluşmasıydı. O çocuklara ulaşma ve onları heyecanlandırma şansını elde etmek sektörümüzün geleceği için çok iyi olacak." 
-- "Özellikle teknoloji alanında genç kadınları teşvik etmiş olmak hoşuma gitti. Kendi bölgemde yeni nesle yardımcı oluyormuşum gibi hissettim." 
+- “Gönüllülük deneyimimin en güzel kısmı, tüm sınıfın beyaz olmayanlar ve kadınlardan oluşmasıydı. O çocuklara ulaşma ve onları heyecanlandırma şansını elde etmek sektörümüzün geleceği için çok iyi olacak."
+- "Özellikle teknoloji alanında genç kadınları teşvik etmiş olmak hoşuma gitti. Kendi bölgemde yeni nesle yardımcı oluyormuşum gibi hissettim."
 - “Çocukların ne kadar heyecanlandıklarını görmek çok GÜZELDİ. Harika olan şeylerden biri de şuydu: Öğretmenlerin gözlemlediğine göre, akademik olarak çok başarılı olmayan bazı öğrenciler, geliştirici gibi düşünme ve başkalarına yardım konusunda çok iyiydiler; bu da onlara kendilerine güvenebilecekleri bir alan açmak demekti.” 
 
 [<button>Gönüllü olmak için kaydol</button>]({{ urls/volunteer }})
@@ -92,16 +92,16 @@ Hour of Code etkinliğine ister uzaktan ister bizzat katılıyor olun, bu hazır
 
 Bir sınıfa gönüllü olduysanız aşağıdaki konuları öğretmeninizle önceden görüşün:
 
-- Etkinlikteki rolünüz. Teknoloji alanında çalışıyorsanız, kişisel deneyimlerinizi veya hikayenizi paylaşmanız istenebilir: Teknoloji alanında kariyer sahibi nasıl oldunuz? Bilgisayar bilimi sizin için neden önemli? İşinizin parçası olarak neler yapıyorsunuz ve bunlar teknoloji ile nasıl ilişkili? 
-- Bizzat katılacak bir gönüllü iseniz hem yerel hem de okul sağlık ve güvenlik kılavuzlarının son halini bildiğinizden emin olun. Geçerli usuller nedeniyle okula biraz erken gitmeniz gerekebilir. 
-- Sanal olarak mı, bizzat katılarak mı gönüllü olacaksınız? Bu, hangi zamanlarda ve hangi sıfatla bulunmanız gerektiği açısından önemlidir. 
-- Sanal ortamda gönüllü olduysanız kullanılacak en iyi video konferans platformunu belirlemek için öğretmenle çalışın ve etkinliğin test çalışmasını birlikte yapmayı deneyin. 
-- Öğretmenin etkinlik için önceden belirlediği Hour of Code etkinlikleri varsa bunları bilin ve bunlara önceden [göz atın](https://hourofcode.com/us/learn). 
+- Etkinlikteki rolünüz. Teknoloji alanında çalışıyorsanız, kişisel deneyimlerinizi veya hikayenizi paylaşmanız istenebilir: Teknoloji alanında kariyer sahibi nasıl oldunuz? Bilgisayar bilimi sizin için neden önemli? İşinizin parçası olarak neler yapıyorsunuz ve bunlar teknoloji ile nasıl ilişkili?
+- Bizzat katılacak bir gönüllü iseniz hem yerel hem de okul sağlık ve güvenlik kılavuzlarının son halini bildiğinizden emin olun. Geçerli usuller nedeniyle okula biraz erken gitmeniz gerekebilir.
+- Sanal olarak mı, bizzat katılarak mı gönüllü olacaksınız? Bu, hangi zamanlarda ve hangi sıfatla bulunmanız gerektiği açısından önemlidir.
+- Sanal ortamda gönüllü olduysanız kullanılacak en iyi video konferans platformunu belirlemek için öğretmenle çalışın ve etkinliğin test çalışmasını birlikte yapmayı deneyin.
+- Öğretmenin etkinlik için önceden belirlediği Hour of Code etkinlikleri varsa bunları bilin ve bunlara önceden [göz atın](https://hourofcode.com/us/learn).
 
 ### Katılımcılarınızı düşünün
 
-- Konuşacağınız öğrencileri ve ilgilerini çekebilecek şeyleri düşünün. Gönüllü olarak, bilgi işlemin her yerde olduğunu ve onların da bilgisayar bilimcisi olabileceklerini anlamalarına yardımcı olabilirsiniz. Yaşlarını, geçmişlerini ve cinsiyet kimliklerini düşünün ve ilgi alanlarına hitap edebilecek konulara hazırlıklı olun. [Genç kadınları](http://code.org/girls) katılmaya nasıl teşvik edebileceğiniz konusunda ek kılavuz bilgiler burada. 
-- Öğrencileri heyecanlandırın! Öğretmenle birlikte, sınıfın odaklanmasına yardımcı olabilecek ve Hour of Code için heyecan duymalarını sağlayabilecek [ilham verici bir video](https://hourofcode.com/us/promote/resources#videos) seçin. 
+- Konuşacağınız öğrencileri ve ilgilerini çekebilecek şeyleri düşünün. Gönüllü olarak, bilgi işlemin her yerde olduğunu ve onların da bilgisayar bilimcisi olabileceklerini anlamalarına yardımcı olabilirsiniz. Yaşlarını, geçmişlerini ve cinsiyet kimliklerini düşünün ve ilgi alanlarına hitap edebilecek konulara hazırlıklı olun. [Genç kadınları](http://code.org/girls) katılmaya nasıl teşvik edebileceğiniz konusunda ek kılavuz bilgiler burada.
+- Öğrencileri heyecanlandırın! Öğretmenle birlikte, sınıfın odaklanmasına yardımcı olabilecek ve Hour of Code için heyecan duymalarını sağlayabilecek [ilham verici bir video](https://hourofcode.com/us/promote/resources#videos) seçin.
 - Sanal ortamdan katılan bir gönüllü iseniz öğrencilerin ilgisini canlı tutmak için sunumunuzun bir parçası olarak birkaç slayt hazırlayabilirsiniz.
 
 Daha fazla kaynağa mı ihtiyacınız var? [Diğer ipuçlarına bakın](https://code.org/files/CSTT_Volunteers.pdf).
@@ -127,12 +127,11 @@ Okul veya öğretmenle birlikte, neyin en mantıklı olacağını tartışın. �
 #### Örnek Gündem:
 
 |Süre | Gündem Maddesi | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 dakika | [İlham verici bir video](https://hourofcode.com/us/promote/resources#videos) gösterin|  
-|5-10 dakika | Kendinizi tanıtın ve öğrencilerle ilgili daha fazla bilgi edinin: Nerede çalışıyorsunuz, ne iş yapıyorsunuz ve işiniz ile ilgili en çok neyi seviyorsunuz? Size ne veya kim ilham verdi? Bilgisayar bilimiyle nasıl ilgilenmeye başladınız? Bir rehberiniz var mıydı? Öğrencilere sorular sorun ve soru ve cevap için zaman ayırın. |  
-|30-60 dakika | Kodlayın! Etkinliğiniz yüz yüze ise, soruları yanıtlamak ve zor bulmacalarda öğrencilere rehberlik etmek iyi olur. Çözümü doğrudan vermek yerine, neden çözüme ulaşamadıklarına dair yanıtı kendileri bulabilmeleri için sorular sormayı deneyin ve birbirlerine soru sormaları için teşvik edin. Sanal ortamdan gönüllü oluyorsanız en iyi yaklaşımın ne olabileceğini anlamak için öğretmen ile birlikte çalışın. Öğrencilerin ne kadar ilerlediklerini görmek için oturumun sonunda geri dönmek daha mantıklı olabilir. | | |1-3 dakika | Herkese teşekkür edin ve ilham verici veda sözleri paylaşın. Şirket ürünlerinizden dağıtın ([çıkartmalar](#celebrate) harikadır)! | | <br />
+|5-10 dakika | Kendinizi tanıtın ve öğrencilerle ilgili daha fazla bilgi edinin: Nerede çalışıyorsunuz, ne iş yapıyorsunuz ve işiniz ile ilgili en çok neyi seviyorsunuz? Size ne veya kim ilham verdi? Bilgisayar bilimiyle nasıl ilgilenmeye başladınız? Bir rehberiniz var mıydı? Öğrencilere sorular sorun ve soru ve cevap için zaman ayırın. | |30-60 dakika | Kodlayın! Etkinliğiniz yüz yüze ise, soruları yanıtlamak ve zor bulmacalarda öğrencilere rehberlik etmek iyi olur. Çözümü doğrudan vermek yerine, neden çözüme ulaşamadıklarına dair yanıtı kendileri bulabilmeleri için sorular sormayı deneyin ve birbirlerine soru sormaları için teşvik edin. Sanal ortamdan gönüllü oluyorsanız en iyi yaklaşımın ne olabileceğini anlamak için öğretmen ile birlikte çalışın. Öğrencilerin ne kadar ilerlediklerini görmek için oturumun sonunda geri dönmek daha mantıklı olabilir. | | |1-3 dakika | Herkese teşekkür edin ve ilham verici veda sözleri paylaşın. Şirket ürünlerinizden dağıtın ([çıkartmalar](#celebrate) harikadır)! | | <br />
 
 #### Etkinliğinize eklenecek diğer fikirler
 
-- Teknolojinin hayatımıza etkisini tüm çevrelerden öğrencileri ilgilendirecek örneklerle açıklayın (teknolojiyle hayat kurtarmaktan, insanlara yardım etmekten, insanlarla iletişime geçmekten bahsedin). 
+- Teknolojinin hayatımıza etkisini tüm çevrelerden öğrencileri ilgilendirecek örneklerle açıklayın (teknolojiyle hayat kurtarmaktan, insanlara yardım etmekten, insanlarla iletişime geçmekten bahsedin).
 - Eğer bir teknoloji şirketiyseniz şirketinizin üzerinde çalıştığı eğlenceli ve yenilikçi ürünleri gösterin. Teknoloji şirketi değilseniz şirketinizin sorunları çözmek ve hedeflere ulaşmak için teknolojiyi kullanma yollarından söz edin.
 - Şirketinizdeki yazılım mühendislerini, bilgisayar bilimi öğrenmeye ve üzerinde çalıştıkları projelere nasıl karar verdiklerini anlatmaya davet edin.
 - Etkinliğinizi kolaylaştıracak veya yerel bir okulda gönüllü olarak çalışacak bir personel grubunuz varsa grubunuz için [özel tişörtler](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) sipariş vermeyi düşünün.
@@ -143,7 +142,7 @@ Okul veya öğretmenle birlikte, neyin en mantıklı olacağını tartışın. �
 
 #### Cihazlar:
 
-En iyi Kod-Saati deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayar gerekli değildir ve hiç bilgisayar olmadan bile Hour of Code yapabilirsiniz! Bağımsız aktiviteler için Sınıf Teknolojisi bölümünden "Bilgisayar veya cihaz olmasın"ı seçerek filtreleme yapabilirsiniz.
+En iyi Hour of Code deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayar gerekli değildir ve hiç bilgisayar olmadan bile Hour of Code yapabilirsiniz! Bağımsız aktiviteler için Sınıf Teknolojisi bölümünden "Bilgisayar veya cihaz olmasın"ı seçerek filtreleme yapabilirsiniz.
 
 - Aktiviteleri bilgisayar veya cihazlarda **deneyin**. Ses ve videoların tarayıcılarda düzgün bir şekilde çalıştıklarından emin olun.
 - **Yeterli cihazınız yok mu?** Eşli programlama kullanın. İki kişilik takımlar halinde çalışan öğrenciler birbirlerine yardımcı olurlar ve öğretmene daha az ihtiyaç duyarlar. Ayrıca bu yöntemle bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklardır.
@@ -160,7 +159,7 @@ Tüm yaş grupları ve deneyim düzeyleri için eğlenceli, öğrenci rehberli e
 
 <a href="https://hourofcode.com/us/learn">Aktiviteleri keşfedin</a> ve şuna önceden karar verin: Tüm misafirleriniz için tek bir öğretici materyal mi seçmek istiyorsunuz yoksa her çocuğun kendi dersini seçmesine izin mi vereceksiniz. **Tüm Hour of Code aktiviteleri**, çok az hazırlık süresi gerektirir ve katılımcıların kendi tempo ve yetenek seviyelerinde kendi kendilerine çalışmalarına izin verir.
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 Etkinliğiniz için belirli bir yol haritanız olduğunda, öğrencileri, bir okulu veya daha büyük bir topluluğu davet etmeye başlayabilirsiniz. Bölgenizde halihazırda ilişkinizin olduğu bir okulla başlamanızı ya da Hour of Code etkinlikleri [haritamıza göz gezdirmenizi](https://hourofcode.com/us/map) öneririz.
 
@@ -173,8 +172,8 @@ Etkinliğiniz için belirli bir yol haritanız olduğunda, öğrencileri, bir ok
 Öğrenciler veya konuklar Hour of Code'u tamamladıktan sonra, başarılarını kutlama zamanıdır. İşte etkinliğinizi daha da eğlenceli hale getirmek için bazı fikirler:
 
 - Katılımcılar ve öğrencilerin [sertifikalarını verin]({{ urls/certificates }}).
-- ["I did an Hour of Code!" çıkartmalarından bastırın]({{ promote/resources_stickers }}) veya [Code.org Amazon Mağazasında](https://code.org/shop) başka ödül ve promosyon ürünleri bulun. 
-- Kod Saati etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
+- ["I did an Hour of Code!" çıkartmalarından bastırın]({{ promote/resources_stickers }}) veya [Code.org Amazon Mağazasında](https://code.org/shop) başka ödül ve promosyon ürünleri bulun.
+- Hour of Code etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
 
 * * *
 
@@ -188,7 +187,7 @@ Yardım etmenin en iyi yollarından biri, Hour of Code'u duyurmak ve tanıtmakt�
 
 ### 1. Etkinliğinizi Kaydettirin
 
-Hour of Code etkinliğinizi kaydettirdiğinizde , başarılı bir Hour of Code düzenlemek için haberler ve ipuçları içeren yararlı e-postalar alacaksınız. Aynı zamanda, bölgenizdeki okullara veya velilere, onların yakınında bir etkinlik düzenlediğinizi de bu şekilde bildirirsiniz.
+[Hour of Code etkinliğinizi kaydettirdiğinizde](/#join), başarılı bir Kodlama Saati düzenlemek için haberler ve ipuçları içeren yararlı e-postalar alacaksınız. Aynı zamanda, bölgenizdeki okullara veya velilere, onların yakınında bir etkinlik düzenlediğinizi de bu şekilde bildirirsiniz.
 
 ### 2. Sosyal Medyada paylaşın
 
@@ -196,23 +195,23 @@ Sosyal medyada yayınlayacağınız ve çalışanlarınızla paylaşacağınız 
 
 #### Hour of Code genel duyurusu
 
-- Bilgisayar bilimi dünyamızı değiştiriyor. Öğrencilerin bir #HourOfCode ile başlayarak bu değişikliğin parçası olmalarına yardımcı olun. https://hourofcode.com/ 
-- Teknolojiyi kullanmakla kalmayın, nasıl yapıldığını da öğrenin. Birine #HourOfCode'a başlamasında yardımcı olun. https://hourofcode.com/ 
+- Bilgisayar bilimi dünyamızı değiştiriyor. Öğrencilerin bir #HourOfCode ile başlayarak bu değişikliğin parçası olmalarına yardımcı olun. https://hourofcode.com/
+- Teknolojiyi kullanmakla kalmayın, nasıl yapıldığını da öğrenin. Birine #HourOfCode'a başlamasında yardımcı olun. https://hourofcode.com/
 
 #### İstatistikler
 
-- ABD'deki okulların yalnızca %45'inde bilgisayar bilimi öğretildiğini biliyor muydunuz? Her öğrenciye bir #HourOfCode öğrenme fırsatını verin https://hourofcode.com/ 
-- ABD'de yazılım uzmanlarının yalnızca %26'sı kadın. #HourOfCode https://hourofcode.com/ ile daha fazla genç kadını bilgisayar bilimiyle tanıştırın 
-- ABD'deki bilgisayar bilimi işlerinin %67'si teknoloji sektöründe değil. #HourOfCode ile bilgisayar biliminin standart müfredata girmesine yardımcı olun https://hourofcode.com/ 
+- ABD'deki okulların yalnızca %53'ünde bilgisayar bilimi öğretildiğini biliyor muydunuz? Her öğrenciye bir #HourOfCode öğrenme fırsatını verin: https://hourofcode.com/
+- ABD'de yazılım uzmanlarının yalnızca %26'sı kadın. #HourOfCode https://hourofcode.com/ ile daha fazla genç kadını bilgisayar bilimiyle tanıştırın
+- ABD'deki bilgisayar bilimi işlerinin %67'si teknoloji sektöründe değil. #HourOfCode ile bilgisayar biliminin standart müfredata girmesine yardımcı olun https://hourofcode.com/
 
 #### Kendi paylaşımlarınızı oluşturun
 
-- Bir #HourOfCode ile [[hikayenizi yazın]. https://hourofcode.com/ 
-- #HourOfCode'u destekliyorum çünkü [[düşüncelerinizi yazın]. Bize katılın: https://hourofcode.com 
+- Bir #HourOfCode ile [[hikayenizi yazın]. https://hourofcode.com/
+- #HourOfCode'u destekliyorum çünkü [[düşüncelerinizi yazın]. Bize katılın: https://hourofcode.com
 
 #### [b]Mühendislere özel
 
-- İlk kod satırınız ile hayatınız değiştiyse yakınınızdaki öğrencilerin ilk #HourOfCode etkinliklerine katılmalarına yardım edin https://code.org/volunteer 
+- İlk kod satırınız ile hayatınız değiştiyse yakınınızdaki öğrencilerin ilk #HourOfCode etkinliklerine katılmalarına yardım edin https://code.org/volunteer
 - Kodlamayı biliyorsanız nasıl öğrendiniz? Yakınınızdaki bir öğrenciye ilk #HourOfCode etkinliği için ilham verin https://code.org/volunteer
 
 Posterler, videolar, çıkartmalar ve etkinliğinizi topluluğunuza tanıtmanın diğer yolları hakkında <a href="https://hourofcode.com/promote/resources#posters">daha fazla bilgi edinin</a>.
@@ -226,11 +225,11 @@ Posterler, videolar, çıkartmalar ve etkinliğinizi topluluğunuza tanıtmanın
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
 - [Code.org promosyonlarını](https://store.code.org/) (tüm gelirler, daha fazla öğrencinin bilgisayar bilimi eğitimine erişmesini desteklemekte kullanılacak) giyerek farkındalığı yayın.
-- [AmazonSmile](https://code.org/donate/amazonsmile)'dan alışveriş yaptığınızda Code.org'a yardımda bulunmayı seçin. 
+- [AmazonSmile](https://code.org/donate/amazonsmile)'dan alışveriş yaptığınızda Code.org'a yardımda bulunmayı seçin.
 - CEO'nuzdan, şirket geneline, bilgisayar biliminin önemini vurgulayan ve çalışanları, seslerini duyurabilmeleri için teşvik eden bir e-posta göndermesini rica edin.
 - [Bir bağış kampanyasında](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2) iş arkadaşlarınızla eğlenin.
-- Her öğrencinin, bilgisayar bilimini öğrenme fırsatına sahip olduğundan emin olmak için [bu dilekçeyi imzalayın](https://code.org/promote). 
-- Eğitim kaynaklarımızın ücretsiz ve herkesin erişimine açık olmaya devam edebilmesi için Code.org'a [bağışta bulunun](https://code.org/donate). 
+- Her öğrencinin, bilgisayar bilimini öğrenme fırsatına sahip olduğundan emin olmak için [bu dilekçeyi imzalayın](https://code.org/promote).
+- Eğitim kaynaklarımızın ücretsiz ve herkesin erişimine açık olmaya devam edebilmesi için Code.org'a [bağışta bulunun](https://code.org/donate).
 
 Code.org'u ve Hour of Code'u nasıl destekleyebileceğiniz ile ilgili daha fazla öneri için [Code.org/Help](https://code.org/help) adresini ziyaret edin
 

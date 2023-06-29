@@ -3,7 +3,8 @@ import $ from 'jquery';
 import {
   PROGRAM_CSD,
   PROGRAM_CSP,
-  PROGRAM_CSA
+  PROGRAM_CSA,
+  getProgramInfo,
 } from '../application/teacher/TeacherApplicationConstants';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {debounce} from 'lodash';
@@ -11,7 +12,7 @@ import {debounce} from 'lodash';
 const COURSE_NAMES = {
   [PROGRAM_CSD]: 'CS Discoveries',
   [PROGRAM_CSP]: 'CS Principles',
-  [PROGRAM_CSA]: 'Computer Science A'
+  [PROGRAM_CSA]: 'Computer Science A',
 };
 
 // constructs query params and fetches the data, returning a promise
@@ -19,11 +20,11 @@ const fetchRegionalPartner = ({
   program,
   schoolZipCode,
   schoolState,
-  school
+  school,
 }) => {
   const locationParams = {
     course: COURSE_NAMES[program],
-    subject: SubjectNames.SUBJECT_SUMMER_WORKSHOP
+    subject: SubjectNames.SUBJECT_SUMMER_WORKSHOP,
   };
   if (school === '-1') {
     locationParams.zip_code = schoolZipCode;
@@ -47,8 +48,10 @@ const fetchRegionalPartner = ({
 };
 
 // takes {program, school, schoolZipCode, schoolState}
-// returns undefined if loading or null if error, otherwise: {id, name, group, workshops, has_csf, pl_programs_offered}
+// returns undefined if loading or null if error,
+// otherwise, returns the partner with attributes defined in RegionalPartnerWorkshopsSerializer
 // if the request succeeds but regional partner is not found, the returned rp will have nil for all values
+// if the request succeeds but regional partner not offering program, the returned rp will have nil for all values
 // see regional_partner_workshops_serializer.rb
 export const useRegionalPartner = data => {
   const {program, schoolZipCode, schoolState, school} = data;
@@ -60,14 +63,14 @@ export const useRegionalPartner = data => {
   const [searchTerm, setSearchTerm] = useState(null);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const debouncedSetSearchTerm = useCallback(debounce(setSearchTerm, 500), [
-    setSearchTerm
+    setSearchTerm,
   ]);
   useEffect(() => {
     debouncedSetSearchTerm({
       program,
       schoolZipCode,
       schoolState,
-      school
+      school,
     });
   }, [program, schoolZipCode, schoolState, school, debouncedSetSearchTerm]);
 
@@ -84,7 +87,13 @@ export const useRegionalPartner = data => {
           setLoadingPartner(false);
           setLoadError(false);
           // the api returns an object with all fields set to null if not found
-          setPartner(partner.id === null ? null : partner);
+          // or if the partner is not offering the selected program
+          const partnerIsOfferingCourse = partner.pl_programs_offered?.includes(
+            getProgramInfo(program).shortName
+          );
+          setPartner(
+            partner.id === null || !partnerIsOfferingCourse ? null : partner
+          );
         }
       })
       .catch(() => {
@@ -96,7 +105,7 @@ export const useRegionalPartner = data => {
     return () => {
       cancelled = true;
     };
-  }, [searchTerm]);
+  }, [program, searchTerm]);
 
   return [loadingPartner ? undefined : partner, loadError];
 };

@@ -208,6 +208,7 @@ ms:
           tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai
           struktur tambahan terbina di dalam.
       SongwritingWithParameters:
+        title: Penulisan Lagu Dengan Parameter
         desc: 'Satu daripada struktur paling gemilang di dalam dunia sains komputer
           ialah fungsinya. Fungsi (kadang-kadang disebut sebagai prosedur) ialah atur
           cara mini yang anda boleh gunakan berulang kali di dalam atur cara anda
@@ -358,6 +359,7 @@ ms:
           seharian kita. Sebagai sebahagian daripada itu, pelajar akan mengenal pasti
           dan menulis algoritma untuk permainan perlumbaan dadu.
       courseE_unplugged_songwritingParameters:
+        title: Penulisan lagu dengan Parameter
         desc: Pelajar menggunakan konsep korus dalam lagu untuk belajar tentang menentukan
           dan memanggil fungsi.
       courseE_unplugged_internet:
@@ -391,6 +393,7 @@ ms:
           tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai
           struktur tambahan terbina di dalam.
       courseF_unplugged_songwritingParameters:
+        title: Penulisan Lagu Dengan Parameter
         desc: 'Satu daripada struktur paling gemilang di dalam dunia sains komputer
           ialah fungsinya. Fungsi (kadang-kadang disebut sebagai prosedur) ialah atur
           cara mini yang anda boleh gunakan berulang kali di dalam atur cara anda
@@ -467,6 +470,8 @@ ms:
         desc: Pelajar membuat gelang sebagai perwakilan binari huruf pertama nama
           mereka. Pelajar mengetahui bahawa data boleh diwakili dan disimpan dalam
           lebih daripada satu cara.
+      MoveItMoveIt_2018:
+        title: Pindahkan, Pindahkan
       courseB_unplugged_CnC_2018:
         title: Sangat Hebat untuk Mencipta dan Bermain dengan Adil
         desc: Dipinjamkan kepada Computer Science Fundamentals oleh pasukan di Copyright
@@ -593,6 +598,8 @@ ms:
       courseA_unplugged_loops_2019:
         title: Nirplag Gelung
         desc: Dalam pelajaran ini, anda akan belajar tentang gelung!
+      MoveItMoveIt_2019:
+        title: Pindahkan, Pindahkan
       DigitalFootprint_2019:
         title: Your Digital Footprint
         desc: Guru memperkenal kepada pelajar idea meletakkan maklumat tentang diri
