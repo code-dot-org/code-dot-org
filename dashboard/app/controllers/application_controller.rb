@@ -3,6 +3,7 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
+require 'cpa'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper
@@ -13,6 +14,8 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+
+  before_action :assert_child_account_policy
 
   # this is needed to avoid devise breaking on email param
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -321,6 +324,30 @@ class ApplicationController < ActionController::Base
       session.delete(:sign_up_type)
       session.delete(:sign_up_tracking_expiration)
     end
+  end
+
+  # Check that the user is compliant with the Child Account Policy. If they
+  # are not compliant, then we need to send them to the lockout page.
+  def assert_child_account_policy
+    # Check that the child account policy is currently enabled.
+    return unless ::Cpa.cpa_experience(request)
+
+    # Anonymous users are NOT affected by our Child Account Policy
+    return unless current_user
+
+    # URLs we should not redirect.
+    return if Set[
+      # Don't block any user from signing out
+      destroy_user_session_path,
+      # Don't block any user from changing the language
+      locale_path,
+      # Avoid an infinite redirect loop to the lockout page
+      lockout_path,
+      # The locked out student needs access to the policy consent API's
+      policy_compliance_child_account_consent_path,
+    ].include?(request.path)
+
+    redirect_to lockout_path unless current_user.child_account_policy_compliant?
   end
 
   private def pairing_still_enabled

@@ -79,15 +79,16 @@ class FollowerTest < ActiveSupport::TestCase
     DCDO.stubs(:get).with('family-name-features', false).returns(true)
 
     student = @follower.student_user
-    student.properties = {family_name: 'test'}
+    student.family_name = 'test'
     student.save!
+    student.reload
 
-    assert_equal 'test', student.properties['family_name']
+    assert_equal 'test', student.family_name
 
     @follower.destroy
     student.reload
 
-    assert_nil student.properties['family_name']
+    assert_nil student.family_name
 
     DCDO.unstub(:get)
   end
@@ -96,15 +97,16 @@ class FollowerTest < ActiveSupport::TestCase
     DCDO.stubs(:get).with('family-name-features', false).returns(false)
 
     student = @follower.student_user
-    student.properties = {family_name: 'test'}
+    student.family_name = 'test'
     student.save!
+    student.reload
 
-    assert_equal 'test', student.properties['family_name']
+    assert_equal 'test', student.family_name
 
     @follower.destroy
     student.reload
 
-    assert_equal 'test', student.properties['family_name']
+    assert_equal 'test', student.family_name
 
     DCDO.unstub(:get)
   end
@@ -113,17 +115,18 @@ class FollowerTest < ActiveSupport::TestCase
     DCDO.stubs(:get).with('family-name-features', false).returns(true)
 
     student = @follower.student_user
-    student.properties = {family_name: 'test'}
+    student.family_name = 'test'
     student.save!
+    student.reload
 
     create(:follower, student_user: student)
 
-    assert_equal 'test', student.properties['family_name']
+    assert_equal 'test', student.family_name
 
     @follower.destroy
     student.reload
 
-    assert_equal 'test', student.properties['family_name']
+    assert_equal 'test', student.family_name
 
     DCDO.unstub(:get)
   end
