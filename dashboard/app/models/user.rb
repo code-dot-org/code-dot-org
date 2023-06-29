@@ -136,6 +136,7 @@ class User < ApplicationRecord
     child_account_compliance_state_last_updated
     us_state
     country_code
+    family_name
   )
 
   attr_accessor(
@@ -1043,7 +1044,7 @@ class User < ApplicationRecord
 
       # Remove family name, in case it was set on the student account.
       if DCDO.get('family-name-features', false)
-        properties['family_name'] = nil
+        self.family_name = nil
         save!
       end
 
@@ -2056,7 +2057,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
-      family_name: DCDO.get('family-name-features', false) ? properties&.dig('family_name') : nil,
+      family_name: DCDO.get('family-name-features', false) ? family_name : nil,
       email: email,
       hashed_email: hashed_email,
       user_type: user_type,
@@ -2671,6 +2672,46 @@ class User < ApplicationRecord
     # Report an error if an invalid value was submitted (probably tampering).
     unless US_STATE_DROPDOWN_OPTIONS.include?(us_state)
       errors.add(:us_state, :invalid)
+    end
+  end
+
+  # Is this user compliant with our Child Account Policy(cap)?
+  # For students under-13, in Colorado, with a personal email login: we require
+  # parent permission before the student can start using their account.
+  def child_account_policy_compliant?
+    return true unless parent_permission_required?
+    child_account_compliance_state == ChildAccountCompliance::PERMISSION_GRANTED
+  end
+
+  # The individual US State child account policy configuration
+  # max_age: the oldest age of the child at which this policy applies.
+  CHILD_ACCOUNT_STATE_POLICY = {
+    'CO' => {
+      max_age: 12
+    }
+  }.freeze
+
+  # Check if parent permission is required for this account according to our
+  # Child Account Policy.
+  def parent_permission_required?
+    return false unless us_state
+    policy = CHILD_ACCOUNT_STATE_POLICY[us_state]
+    return false unless policy
+    return false unless age.to_i <= policy[:max_age].to_i
+    personal_account?
+  end
+
+  # Does the user login using credentials they personally control?
+  # For example, some accounts are created and owned by schools (Clever).
+  def personal_account?
+    return false if sponsored?
+    # List of credential types which we believe schools have ownership of.
+    school_owned_types = [AuthenticationOption::CLEVER]
+    # Does the user have an authentication method which is not controlled by
+    # their school? The presence of at least one authentication method which
+    # is owned by the student/parent means this is a "personal account".
+    authentication_options.any? do |option|
+      school_owned_types.exclude?(option.credential_type)
     end
   end
 

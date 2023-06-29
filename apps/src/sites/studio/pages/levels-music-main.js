@@ -6,6 +6,7 @@ import {getStore} from '@cdo/apps/redux';
 import LabContainer from '@cdo/apps/code-studio/components/LabContainer';
 import MusicLabView from '@cdo/apps/music/views/MusicView';
 import ProjectContainer from '@cdo/apps/labs/projects/ProjectContainer';
+import ProgressContainer from '@cdo/apps/labs/progress/ProgressContainer';
 import {logError} from '@cdo/apps/music/utils/MusicMetrics';
 import {getStandaloneProjectId} from '@cdo/apps/labs/projects/utils';
 
@@ -18,7 +19,9 @@ $(document).ready(function () {
         }
       >
         <ProjectContainer channelId={getStandaloneProjectId()}>
-          <MusicLabView />
+          <ProgressContainer appType={'music'}>
+            <MusicLabView />
+          </ProgressContainer>
         </ProjectContainer>
       </LabContainer>
     </Provider>,
