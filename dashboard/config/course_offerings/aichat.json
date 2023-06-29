@@ -1,6 +1,6 @@
 {
-  "key": "chat",
-  "display_name": "chat",
+  "key": "aichat",
+  "display_name": "aichat",
   "category": "other",
   "is_featured": false,
   "assignable": true,

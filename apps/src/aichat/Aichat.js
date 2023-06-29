@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ChatView from './ChatView';
+import AichatView from './AichatView';
 import {Provider} from 'react-redux';
 import {getStore} from '../redux';
 import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import {TestResults} from '@cdo/apps/constants';
-import chatMsg from './locale';
+import aichatMsg from './locale';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -21,7 +21,7 @@ const MOBILE_PORTRAIT_WIDTH = 600;
  * An instantiable Fish class
  */
 
-const Chat = function () {
+const Aichat = function () {
   this.skin = null;
   this.level = null;
 
@@ -32,16 +32,16 @@ const Chat = function () {
 /**
  * Inject the studioApp singleton.
  */
-Chat.prototype.injectStudioApp = function (studioApp) {
+Aichat.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
 };
 
 /**
  * Initialize this WebLab instance.  Called on page load.
  */
-Chat.prototype.init = function (config) {
+Aichat.prototype.init = function (config) {
   if (!this.studioApp_) {
-    throw new Error('Chat requires a StudioApp');
+    throw new Error('Aichat requires a StudioApp');
   }
 
   this.skin = config.skin;
@@ -88,20 +88,20 @@ Chat.prototype.init = function (config) {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <ChatView onMount={onMount} />
+      <AichatView onMount={onMount} />
     </Provider>,
     document.getElementById(config.containerId)
   );
 };
 
 // Called by the fish app when it wants to go to the next level.
-Chat.prototype.onContinue = function () {
+Aichat.prototype.onContinue = function () {
   const onReportComplete = result => {
     this.studioApp_.onContinue();
   };
 
   this.studioApp_.report({
-    app: 'chat',
+    app: 'aichat',
     level: this.level.id,
     result: true,
     testResult: TestResults.ALL_PASS,
@@ -112,7 +112,7 @@ Chat.prototype.onContinue = function () {
   });
 };
 
-Chat.prototype.initMLActivities = function () {
+Aichat.prototype.initMLActivities = function () {
   const {mode} = this.level;
   const onContinue = this.onContinue.bind(this);
 
@@ -132,8 +132,8 @@ Chat.prototype.initMLActivities = function () {
     onContinue,
     registerSound: this.studioApp_.registerAudio.bind(this.studioApp_),
     playSound: this.studioApp_.playAudio.bind(this.studioApp_),
-    i18n: chatMsg,
+    i18n: aichatMsg,
   });
 };
 
-export default Chat;
+export default Aichat;

@@ -74,11 +74,11 @@ describe('entry tests', () => {
 
   /** @const {string[]} */
   var ALL_APPS = [
+    'aichat',
     'ailab',
     'applab',
     'bounce',
     'calc',
-    'chat',
     'craft',
     'dance',
     'eval',

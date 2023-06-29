@@ -24,7 +24,7 @@
 #  index_levels_on_name       (name)
 #
 
-class Chat < Widget
+class Aichat < Widget
   serialized_attrs %w(
     project_template_level_name
     start_sources
@@ -37,7 +37,7 @@ class Chat < Widget
     create!(
       level_params.merge(
         user: params[:user],
-        game: Game.chat,
+        game: Game.aichat,
         level_num: 'custom',
         properties: {}
       )

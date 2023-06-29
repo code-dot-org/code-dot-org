@@ -772,7 +772,7 @@
     },
     {
       "key": "lesson-50",
-      "name": "Chat",
+      "name": "AI Chat",
       "absolute_position": 50,
       "lockable": false,
       "has_lesson_plan": true,
@@ -6144,13 +6144,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Chat Level 1"
+          "AI Chat Level 1"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Chat Level 1"
+          "AI Chat Level 1"
         ],
         "lesson.key": "lesson-50",
         "lesson_group.key": "",
@@ -6158,7 +6158,7 @@
         "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
       },
       "level_keys": [
-        "Chat Level 1"
+        "AI Chat Level 1"
       ]
     }
   ],
@@ -8367,7 +8367,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "Chat Level 1",
+        "level.key": "AI Chat Level 1",
         "script_level.level_keys": [
           "Chat Level 1"
         ],
