@@ -7,7 +7,6 @@ interface PartialAppOptions {
     isProjectLevel: boolean;
   };
   channel: string;
-  serverLevelId: number;
 }
 
 /**

@@ -78,7 +78,7 @@ export const setUpWithLevel = createAsyncThunk(
     payload: {
       levelId: number;
       scriptId?: number;
-      levelPropertiesPath?: string;
+      levelPropertiesPath: string;
       channelId?: string;
     },
     thunkAPI
@@ -86,17 +86,18 @@ export const setUpWithLevel = createAsyncThunk(
     // Check for an existing project manager and clean it up, if it exists.
     const existingProjectManager =
       LabRegistry.getInstance().getProjectManager();
-    // Save any usaved code and clear out any remaining enqueued
+    // Save any unsaved code and clear out any remaining enqueued
     // saves from the existing project manager.
     await existingProjectManager?.cleanUp();
 
     // Load level properties if we have a levelPropertiesPath.
-    let levelProperties: LevelProperties | undefined = undefined;
-    if (payload.levelPropertiesPath) {
-      levelProperties = await loadLevelProperties(payload.levelPropertiesPath);
-    }
+    const levelProperties = await loadLevelProperties(
+      payload.levelPropertiesPath
+    );
 
-    // Create a new project manager.
+    // Create a new project manager. If we have a channel id,
+    // default to loading the project for that channel. Otherwise
+    // create a project manager for the given level and script id.
     const projectManager = payload.channelId
       ? ProjectManagerFactory.getProjectManager(
           ProjectManagerStorageType.REMOTE,
@@ -138,15 +139,17 @@ export const setUpWithoutLevel = createAsyncThunk(
     // Check for an existing project manager and clean it up, if it exists.
     const existingProjectManager =
       LabRegistry.getInstance().getProjectManager();
-    // Save any usaved code and clear out any remaining enqueued
+    // Save any unsaved code and clear out any remaining enqueued
     // saves from the existing project manager.
     await existingProjectManager?.cleanUp();
+
     // Create the new project manager.
     const projectManager = ProjectManagerFactory.getProjectManager(
       ProjectManagerStorageType.REMOTE,
       payload
     );
     LabRegistry.getInstance().setProjectManager(projectManager);
+
     // Load channel and source.
     const {sources, channel} = await setUpAndLoadProject(
       projectManager,

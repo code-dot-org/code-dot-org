@@ -32,7 +32,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     // we are defining it as any.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let promise: any;
-    if (currentLevelId) {
+    if (currentLevelId && levelPropertiesPath) {
       // If we have a level id, set up the lab with that level. If we also have a channel id,
       // we will load the project based on that channel id, otherwise we will look up a channel id
       // for the level.
