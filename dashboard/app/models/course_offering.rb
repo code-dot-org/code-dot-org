@@ -245,6 +245,14 @@ class CourseOffering < ApplicationRecord
     DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| co_duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
   end
 
+  def translated?(locale_code = 'en-us')
+    locale_str = locale_code&.to_s
+    return true if locale_str&.start_with?('en')
+
+    latest_stable_version = any_version_is_unit? ? Unit.latest_stable_version(key, locale: locale_str) : UnitGroup.latest_stable_version(key, locale: locale_str)
+    !latest_stable_version.nil?
+  end
+
   def summarize_for_edit
     {
       key: key,
@@ -278,7 +286,8 @@ class CourseOffering < ApplicationRecord
       course_id: course_id,
       course_offering_id: id,
       script_id: script_id,
-      is_standalone_unit: standalone_unit?
+      is_standalone_unit: standalone_unit?,
+      is_translated: translated?(locale_code)
     }
   end
 
