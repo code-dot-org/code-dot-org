@@ -171,7 +171,7 @@ export default function SectionsSetUpContainer({
       : null;
 
     const computedGrades =
-      participantType === 'student' ? section.grade : ['pl'];
+      participantType === 'teacher' ? ['pl'] : section.grade;
 
     const section_data = {
       login_type: loginType,
