@@ -1,3 +1,7 @@
+/**
+ * Wrapper around ShareDialog that plumbs in the necessary props for a project
+ * using the Project Manager and the labs plumbing.
+ */
 import ShareDialog from '@cdo/apps/code-studio/components/ShareDialog';
 import React from 'react';
 import {useSelector} from 'react-redux';
@@ -20,21 +24,22 @@ const ProjectWrappedShareDialog: React.FunctionComponent<
   const isSignedIn: boolean = useSelector(
     (state: {
       currentUser: {signInState: 'Unknown' | 'SignedIn' | 'SignedOut'};
-    }) => getIsSignedIn(state)
+    }) => getIsSignedIn(state.currentUser)
   );
   const is13Plus = useSelector(
     (state: {currentUser: {under13: boolean}}) => !state.currentUser.under13
   );
+
   // We don't current support dance party projects in labs.
   const selectedSong = null;
   // TODO: support thumbnail url.
   const thumbnailUrl = null;
   // TODO: support abuse reporting.
   const exceedsAbuseThreshold = false;
-  const canPublish = false;
   // TODO: When we support publishing, we can use this logic to determine if we can publish
-  //const canPublish = isSignedIn && appType && AllPublishableProjectTypes.includes(appType);
-  // TODO: this should come from ProjectManager when we support publishing.
+  // const canPublish = isSignedIn && appType && AllPublishableProjectTypes.includes(appType);
+  const canPublish = false;
+  // TODO: this should come from labRedux once we support publishing.
   const isPublished = false;
   const canShareSocial = isSignedIn && is13Plus;
 

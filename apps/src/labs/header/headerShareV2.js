@@ -6,6 +6,10 @@ import {getStore} from '@cdo/apps/redux';
 import ProjectWrappedShareDialog from './ProjectWrappedShareDialog';
 import {showShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 
+/**
+ * Save, then show the share dialog for a project that uses the ProjectManager.
+ * @param {string} shareUrl - The URL of the project to share.
+ */
 export function shareProjectV2(shareUrl) {
   const projectManager = LabRegistry.getInstance().getProjectManager();
   if (!projectManager) {

@@ -117,7 +117,7 @@ export default class ProjectManager {
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
-  async save(sources?: ProjectSources, forceSave = false) {
+  async save(sources: ProjectSources, forceSave = false) {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
       this.resetSaveState();
