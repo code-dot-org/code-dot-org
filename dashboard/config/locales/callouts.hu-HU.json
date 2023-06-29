@@ -1526,6 +1526,12 @@
         "courseE_artist_functions_challenge2_2021": {
           "courseE_artist_functions_challenge2_callout1": "Folytasd ezt a programot úgy, hogy az aljához további kódokat adsz!",
           "courseE_artist_functions_challenge2_callout2": "Ha nem tetszik ez a minta, változtass rajta, amit csak akarsz!"
+        },
+        "course4_bee_fwp_challenge2": {
+          "courseF_bee_fwp_challenge2_callout1": "Ez a függvény jó működik a kukoricával, de mi a helyzet a többi zöldséggel?"
+        },
+        "courseF_bee_fwp_challenge2": {
+          "courseF_bee_fwp_challenge2_callout1": "Ez a függvény jó működik a kukoricával, de mi a helyzet a többi zöldséggel?"
         }
       }
     }

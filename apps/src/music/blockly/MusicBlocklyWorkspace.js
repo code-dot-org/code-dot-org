@@ -30,7 +30,6 @@ import FieldChord from './FieldChord';
 import {Renderers} from '@cdo/apps/blockly/constants';
 import musicI18n from '../locale';
 import {logError, logWarning} from '../utils/MusicMetrics';
-import LabRegistry from '@cdo/apps/labs/LabRegistry';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -385,16 +384,9 @@ export default class MusicBlocklyWorkspace {
     return 'musicLabSavedCode' + getBlockMode();
   }
 
-  // Load the workspace with the given code, and call save.
+  // Load the workspace with the given code.
   loadCode(code) {
     Blockly.serialization.workspaces.load(code, this.workspace);
-    this.saveCode();
-  }
-
-  saveCode(forceSave = false) {
-    LabRegistry.getInstance()
-      .getProjectManager()
-      .save(this.getCode(), forceSave);
   }
 
   callUserGeneratedCode(fn, args = []) {

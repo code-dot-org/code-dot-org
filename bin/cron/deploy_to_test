@@ -14,8 +14,8 @@ TOPIC_DTT_FAILED = 'no (robo-DTT failed)'.freeze
 ALWAYS_DTT = ARGV[0] && ARGV[0] == 'always_dtt'
 
 def main
-  unless ALWAYS_DTT
-    return unless DevelopersTopic.dtt?
+  if !ALWAYS_DTT && !DevelopersTopic.dtt?
+    return
   end
   return unless GitHub.behind?(base: 'staging', compare: 'test')
 

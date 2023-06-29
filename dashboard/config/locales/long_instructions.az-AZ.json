@@ -2007,7 +2007,7 @@
         "courseD_maze_ramp52022": "_\"Donuza çatmaq üçün bu yolu izləyin!\"_\nTNT dən yayının.",
         "courseD_maze_ramp5b2022": "\\*\\* Çağırış: \\*\\* Quşun donuz tapmasına kömək etmək üçün bu labirentdə gedin!",
         "courseD_maze_ramp5d2022": "Quşu donuza aparın.",
-        "courseE_artist_functions102022": "Bu dəfə tərəfləri 25 piksel olan 8 altıbucaqlı xətlərdən istifadə edin.\n\n-   Hər altıbucaqlı etmək üçün tərəfi 6 dəfə 60 dərəcə döndərərək təkrarlayın.\n-   Hər altıbucaqlı arasında 25 piksel keçin.\n-   Bir almaz çəkmək üçün 60 dərəcə və 120 dərəcə dönmə arasında növbə etməli olacaqsınız.",
+        "courseE_artist_functions102022": "Bu dəfə tərəfləri 25 piksel olan 8 altıbucaqlı xətlərdən istifadə edin.\n\n- Hər altıbucaqlı etmək üçün tərəfi 6 dəfə 60 dərəcə döndərərək təkrarlayın.\n- Hər altıbucaqlı arasında 25 piksel keçin.\n- Bir almaz çəkmək üçün 60 dərəcə və 120 dərəcə fırlanma arasında dəyişməli olacaqsınız.",
         "courseE_artist_functions22022": "Burada `kvadrat çəkmək` adlı funksiya var. Bu rəsmi tamamlamaq üçün ondan istifadə edin.\n\n* * *\n\nKvadratlar bir-birindən 75 piksel məsafədədir.",
         "courseE_artist_functions32022": "Bu ulduzu yaradacaq bir funksiya qurun.\n\n* * *\n\n-   Ulduzun hər qolunun uzunluğu 25 pikseldir\n-   8 qol almaq üçün 45 dərəcə dönmək lazımdır\n-   Eyni qolun üstündən irəli və geri getmək olar",
         "courseE_artist_functions52022": "Üç ulduz çəkmək dörd ulduz çəkməkdən nə vaxt çətindir? Siz də ayın üstündən tullanmalı olduğunuz zaman!\n\nBu tapmacanı bitirmək üçün yalnız bu üç ulduzu çəkin.\n\n* * *\n\n-   Birinci və ikinci ulduz arasındakı keçid **200** pikseldir\n-   İkinci və üçüncü arasında keçid **100** pikseldir",
@@ -2015,7 +2015,7 @@
         "courseE_artist_functions8a2022": "_\"Funksiyalar asandır!\"_\n\nBiz zərif bir şey yaratmağa hazırlaşırıq! Bu kvadrat üçün bir funksiya yaratmaqla başlayın.",
         "courseE_artist_functions8b2022": "_\"Zombinin başı gicəllənir.\"_\n\nBunu daha da asanlaşdırmaq üçün 'kvadratların xəttini çəkmək' funksiyanızın daxilindən \"kvadrat çəkmək\" funksiyasına zəng edin!\n\n* * *\n\n-   Kvadratlar bir-birindən _50_ piksel məsafədədir.",
         "courseE_artist_functions8c2022": "`kvadratların xəttini çək` funksiyasından istifadə edərək bu pilləli kvadratlar yığınını yaradan daha bir funksiya əlavə edin.",
-        "courseE_artist_functions92022": "**Çağırış:** Təqdim olunan məhdud bloklardan istifadə edərək bu şəkli yaradın.\n\n-   Hər üçbucağın **50 piksel** tərəfləri var\n-   Bir almaz çəkmək üçün **60 dərəcə və 120 dərəcə** dönmə arasında növbə etməlisiniz.",
+        "courseE_artist_functions92022": "**Çağırış:** Təqdim olunan məhdud bloklardan istifadə edərək bu şəkli yaradın.\n\n- Hər üçbucağın **50 piksel** tərəfləri var\n- Bir almaz çəkmək üçün **60 dərəcə və 120 dərəcə** dönmə arasında növbə etməlisiniz.",
         "courseE_farmer_functions10a12022": "**Çağırış:** Bu tapmacanı 19 və ya daha az blokda həll etmək üçün indiyə qədər öyrəndiyiniz hər şeydən istifadə edin!",
         "courseE_farmer_functions11_predict2022": "Hansı funksiyadan istifadə edəcəyinizi və hansının silinəcəyini anlayın, sonra bu tapmacanı həll edin!",
         "courseE_farmer_functions12022": "_\"Biz əvvəllər görüşmüşük? Mən biçinçiyəm!\"_\n\nBiçinçiyə balqabağa çatmağa və onu götürməyə kömək edin.",
@@ -2239,7 +2239,9 @@
         "courseD_iceage_loops6_2021": "Palıd qozasına çatmaq üçün bir dövr əlavə edə bilərsiniz?",
         "courseF_label_predict": "Təxmin edin! Kodu öyrənin.",
         "most-excited-for-in-this-class": "Bu sinifdə ən çox nəyə görə həyəcanlanırsınız?",
-        "most-excited-for-in-this-class_2022": "Bu sinifdə ən çox nəyə görə həyəcanlanırsınız?"
+        "most-excited-for-in-this-class_2022": "Bu sinifdə ən çox nəyə görə həyəcanlanırsınız?",
+        "courseC_artist_prog72022": "** Challenge: * * Bu pet adı ilə tag xüsusi forma var!\n\nBir kontur çəkmək üçün necə başa düşmək olar?\n(Uzun tərəf 150 pikseldir və qısa tərəflərdən hər biri 75 pikseldir.)",
+        "courseE_artist_functionsProj2022": "**İlham:** İstədiyiniz hər şeyi etmək üçün öyrəndiklərinizi istifadə edin!\n\nBu fırıldaq kimi bir şey edə bilərsinizmi?\n\n![genişlənə bilər](https://images.code.org/0d79058844e1f038971c303b20b0105f-image-1628782803453.png)"
       }
     }
   }

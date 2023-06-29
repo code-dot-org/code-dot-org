@@ -11,20 +11,21 @@ import {ProjectManagerStorageType} from '@cdo/apps/labs/types';
 import LabRegistry from '../LabRegistry';
 import {loadProject, setUpForLevel} from '../labRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   children,
   channelId,
 }) => {
   const currentLevelId = useSelector(
-    // TODO: Convert progress redux to typescript so this can be typed better
-    (state: {progress: {currentLevelId: string}}) =>
-      state.progress.currentLevelId
+    (state: {progress: ProgressState}) => state.progress.currentLevelId
   );
-  // TODO: Convert progress redux to typescript so this can be typed better
   const scriptId = useSelector(
-    (state: {progress: {scriptId: number}}) => state.progress.scriptId
+    (state: {progress: ProgressState}) => state.progress.scriptId || undefined
   );
+
+  const levelPropertiesPath = useSelector(getLevelPropertiesPath);
 
   const dispatch = useAppDispatch();
 
@@ -45,9 +46,13 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
         )
       );
       promise = dispatch(loadProject());
-    } else {
+    } else if (currentLevelId !== null) {
       promise = dispatch(
-        setUpForLevel({levelId: parseInt(currentLevelId), scriptId})
+        setUpForLevel({
+          levelId: parseInt(currentLevelId),
+          scriptId,
+          levelPropertiesPath,
+        })
       );
     }
     return () => {
@@ -55,7 +60,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       // An early return could happen if the level is changed mid-load.
       promise.abort();
     };
-  }, [channelId, currentLevelId, scriptId, dispatch]);
+  }, [channelId, currentLevelId, scriptId, levelPropertiesPath, dispatch]);
 
   useEffect(() => {
     window.addEventListener('beforeunload', event => {
