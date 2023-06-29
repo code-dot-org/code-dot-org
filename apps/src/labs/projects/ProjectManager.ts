@@ -12,7 +12,7 @@
  */
 import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
-import {Channel, Project, ProjectSources, Source} from '../types';
+import {Channel, Project, ProjectSources} from '../types';
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 
 export default class ProjectManager {
@@ -112,12 +112,12 @@ export default class ProjectManager {
   /**
    * Enqueue a save to happen in the next saveInterval, unless a force save is requested.
    * If a save is already enqueued, update this.sourceToSave with the given source.
-   * @param sources Source: the source to save
+   * @param sources ProjectSources: the source to save.
    * @param forceSave boolean: if the save should happen immediately
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
-  async save(sources: ProjectSources, forceSave = false) {
+  async save(sources?: ProjectSources, forceSave = false) {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
       this.resetSaveState();
@@ -125,6 +125,21 @@ export default class ProjectManager {
     }
     this.sourcesToSave = sources;
     return this.enqueueSaveOrSave(forceSave);
+  }
+
+  /**
+   * Try to force save with the last sourcesToSave, if it exists.
+   * This is used to flush out any remaining enqueued saves.
+   * @returns  a promise that resolves to a Response. If the save is successful, the response
+   * will be empty, otherwise it will contain failure information.
+   */
+  async flushSave() {
+    if (this.destroyed) {
+      // If we have already been destroyed, don't attempt to save.
+      this.resetSaveState();
+      return this.getNoopResponseAndSendSaveNoopEvent();
+    }
+    return this.enqueueSaveOrSave(true);
   }
 
   async rename(name: string, forceSave = false) {
@@ -140,6 +155,34 @@ export default class ProjectManager {
     }
     this.channelToSave.name = name;
     return this.enqueueSaveOrSave(forceSave);
+  }
+
+  /**
+   * Returns a share URL for the current project.
+   *
+   * Share URLs can vary by application environment and project type.  For most
+   * project types the share URL is the same as the project edit and view URLs,
+   * but has no action appended to the project's channel ID. Weblab is a special
+   * case right now, because it shares projects to codeprojects.org.
+   *
+   * This function depends on the document location to determine the current
+   * application environment.
+   *
+   * @returns {string} Fully-qualified share URL for the current project.
+   */
+  getShareUrl() {
+    if (!this.lastChannel || !this.lastChannel.projectType) {
+      return null;
+    }
+    const location = this.getLocation();
+    // This will not work for web lab, but we will likely not move web lab to use ProjectManager.
+    return (
+      location.origin +
+      '/projects/' +
+      this.lastChannel.projectType +
+      '/' +
+      this.channelId
+    );
   }
 
   addSaveSuccessListener(
@@ -338,5 +381,13 @@ export default class ProjectManager {
       errorMessage,
       error: error.toString(),
     });
+  }
+
+  // Helpers
+  /**
+   * This method exists to be mocked for unit tests.
+   */
+  getLocation() {
+    return document.location;
   }
 }
