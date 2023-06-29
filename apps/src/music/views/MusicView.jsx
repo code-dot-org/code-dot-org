@@ -63,6 +63,7 @@ import {
 import {logError} from '../utils/MusicMetrics';
 import musicI18n from '../locale';
 import {Key} from '../utils/Notes';
+import LabRegistry from '@cdo/apps/labs/LabRegistry';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -112,7 +113,7 @@ class UnconnectedMusicView extends React.Component {
     setProjectUpdatedError: PropTypes.func,
     setIsLoading: PropTypes.func,
     setIsPageError: PropTypes.func,
-    source: PropTypes.object,
+    sources: PropTypes.object,
     levelData: PropTypes.object,
     labReadyForReload: PropTypes.bool,
     setLabReadyForReload: PropTypes.func,
@@ -246,12 +247,12 @@ class UnconnectedMusicView extends React.Component {
     // If we just finished loading the lab, then we need to update the
     // sources and level data.
     if (!prevProps.labReadyForReload && this.props.labReadyForReload) {
-      if (this.getStartSources() || this.props.source) {
+      if (this.getStartSources() || this.props.sources) {
         let codeToLoad = this.getStartSources();
-        if (this.props.source?.source) {
-          codeToLoad = JSON.parse(this.props.source.source);
+        if (this.props.sources?.source) {
+          codeToLoad = JSON.parse(this.props.sources.source);
         }
-        this.musicBlocklyWorkspace.loadCode(codeToLoad);
+        this.loadCode(codeToLoad);
       }
 
       // Update components with level-specific data
@@ -345,7 +346,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   clearCode = () => {
-    this.musicBlocklyWorkspace.loadCode(this.getStartSources());
+    this.loadCode(this.getStartSources());
     this.setPlaying(false);
   };
 
@@ -401,7 +402,7 @@ class UnconnectedMusicView extends React.Component {
     }
 
     // This may no-op due to throttling.
-    this.musicBlocklyWorkspace.saveCode();
+    this.saveCode();
   };
 
   setPlaying = play => {
@@ -465,6 +466,23 @@ class UnconnectedMusicView extends React.Component {
     });
   };
 
+  saveCode = (forceSave = false) => {
+    const workspaceCode = this.musicBlocklyWorkspace.getCode();
+    const sourcesToSave = {
+      source: JSON.stringify(workspaceCode),
+      // TODO save library name to sources
+    };
+
+    LabRegistry.getInstance()
+      .getProjectManager()
+      .save(sourcesToSave, forceSave);
+  };
+
+  loadCode = code => {
+    this.musicBlocklyWorkspace.loadCode(code);
+    this.saveCode();
+  };
+
   playSong = () => {
     this.player.stopSong();
     this.playingTriggers = [];
@@ -472,7 +490,7 @@ class UnconnectedMusicView extends React.Component {
     this.compileSong();
 
     this.executeCompiledSong();
-    this.musicBlocklyWorkspace.saveCode(true);
+    this.saveCode(true);
 
     this.player.playSong(this.sequencer.getPlaybackEvents());
 
@@ -674,7 +692,7 @@ const MusicView = connect(
     isHeadersShowing: state.music.isHeadersShowing,
     currentScriptId: state.progress.scriptId,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
-    source: state.lab.source,
+    sources: state.lab.sources,
     levelData: state.lab.levelData,
     labReadyForReload: state.lab.labReadyForReload,
   }),

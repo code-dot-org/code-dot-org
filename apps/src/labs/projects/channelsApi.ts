@@ -3,12 +3,16 @@
  * metadata about a project.
  */
 
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {Channel} from '../types';
 
 const rootUrl = '/v3/channels';
 
-export async function get(channelId: string): Promise<Response> {
-  return fetch(`${rootUrl}/${channelId}`);
+export async function get(channelId: string): Promise<Channel> {
+  const {value} = await HttpClient.fetchJson<Channel>(
+    `${rootUrl}/${channelId}`
+  );
+  return value;
 }
 
 export async function update(channel: Channel): Promise<Response> {
