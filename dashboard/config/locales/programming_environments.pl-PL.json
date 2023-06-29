@@ -117,7 +117,7 @@
                   },
                   "return_value": "Logiczna prawda lub fałsz.",
                   "short_description": "Zwraca true, jeśli kamera jest aktywna, w przeciwnym razie zwraca false.",
-                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`(#fff176)](/docs/gamelab/draw/). "
+                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`](/docs/gamelab/draw/). "
                 },
                 "camera.mouseX": {
                   "return_value": "Współrzędna x myszy przetłumaczona na widok kamery.",
@@ -134,7 +134,7 @@
                     }
                   },
                   "short_description": "Dezaktywuje kamerę. ",
-                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`(#fff176)](/docs/gamelab/draw/). "
+                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`](/docs/gamelab/draw/). "
                 },
                 "camera.on": {
                   "examples": {
@@ -146,7 +146,7 @@
                       "description": "Połącz kamerę z ruchem głównego duszka i przewiń stacjonarne duszki."
                     }
                   },
-                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`(#fff176)](/docs/gamelab/draw/). "
+                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`](/docs/gamelab/draw/). "
                 },
                 "camera.x": {
                   "examples": {
@@ -161,7 +161,7 @@
                   },
                   "return_value": "Współrzędna x środka kamery.",
                   "short_description": "Położenie x kamery.",
-                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`(#fff176)](/docs/gamelab/drawSprites/) ."
+                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`](/docs/gamelab/drawSprites/) ."
                 },
                 "camera.y": {
                   "examples": {
@@ -176,7 +176,7 @@
                   },
                   "return_value": "Współrzędna y środka kamery.",
                   "short_description": "Pozycja y kamery.",
-                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`(#fff176)](/docs/gamelab/drawSprites/) ."
+                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`](/docs/gamelab/drawSprites/) ."
                 },
                 "camera.zoom": {
                   "examples": {
@@ -187,7 +187,7 @@
                   },
                   "return_value": "Współczynnik powiększenia aparatu.",
                   "short_description": "Współczynnik powiększenia aparatu.",
-                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`(#fff176)](/docs/gamelab/drawSprites/) ."
+                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`](/docs/gamelab/drawSprites/) ."
                 },
                 "comment_GameLab": {
                   "examples": {
@@ -1635,7 +1635,7 @@
                   },
                   "return_value": "Łańcuch zawierający zawartość elementu ekranu.",
                   "short_description": "Pobiera tekst z określonego elementu ekranu.",
-                  "tips": "-   [`getText ()`(#fff176)](/docs/applab/getText/) może również odczytać tekst na [`button ()`(#fff176)](/docs/applab/button/) lub [`textLabel ()`(#fff176)](/docs/applab/textLabel/)."
+                  "tips": "-   [`getText ()`](/docs/applab/getText/) może również odczytać tekst na [`button ()`](/docs/applab/button/) lub [`textLabel ()`](/docs/applab/textLabel/)."
                 },
                 "getXPosition": {
                   "examples": {
