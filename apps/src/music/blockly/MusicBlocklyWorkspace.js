@@ -36,27 +36,7 @@ import {logError, logWarning} from '../utils/MusicMetrics';
  * workspace view, execute code, and save/load projects.
  */
 export default class MusicBlocklyWorkspace {
-  constructor() {
-    this.codeHooks = {};
-    this.compiledEvents = null;
-    this.triggerIdToStartType = {};
-    this.lastExecutedEvents = null;
-  }
-
-  triggerIdToEvent = id => `triggeredAtButton-${id}`;
-
-  capitalizeFirst = str => str.replace(/^./, str => str.toUpperCase());
-
-  /**
-   * Initialize the Blockly workspace
-   * @param {*} container HTML element to inject the workspace into
-   * @param {*} onBlockSpaceChange callback fired when any block space change events occur
-   * @param {*} player reference to a {@link MusicPlayer}
-   * @param {*} toolboxAllowList optional object with allowed toolbox entries
-   */
-  init(container, onBlockSpaceChange, player, toolboxAllowList) {
-    this.container = container;
-
+  static setUp() {
     Blockly.Extensions.register(
       DYNAMIC_TRIGGER_EXTENSION,
       dynamicTriggerExtension
@@ -64,7 +44,7 @@ export default class MusicBlocklyWorkspace {
 
     Blockly.Extensions.register(
       DEFAULT_TRACK_NAME_EXTENSION,
-      getDefaultTrackNameExtension(player)
+      getDefaultTrackNameExtension()
     );
 
     Blockly.Extensions.registerMutator(PLAY_MULTI_MUTATOR, playMultiMutator);
@@ -82,19 +62,6 @@ export default class MusicBlocklyWorkspace {
     Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
     Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);
     Blockly.fieldRegistry.register(FIELD_CHORD_TYPE, FieldChord);
-
-    this.workspace = Blockly.inject(container, {
-      toolbox: getToolbox(toolboxAllowList),
-      grid: {spacing: 20, length: 0, colour: '#444', snap: true},
-      theme: CdoDarkTheme,
-      renderer: experiments.isEnabled('zelos')
-        ? Renderers.ZELOS
-        : Renderers.DEFAULT,
-      noFunctionBlockFrame: true,
-      zoom: {
-        startScale: experiments.isEnabled('zelos') ? 0.9 : 1,
-      },
-    });
 
     // Remove two default entries in the toolbox's Functions category that
     // we don't want.
@@ -116,10 +83,49 @@ export default class MusicBlocklyWorkspace {
     };
 
     Blockly.setInfiniteLoopTrap();
+  }
+
+  constructor() {
+    this.codeHooks = {};
+    this.compiledEvents = null;
+    this.triggerIdToStartType = {};
+    this.lastExecutedEvents = null;
+  }
+
+  triggerIdToEvent = id => `triggeredAtButton-${id}`;
+
+  capitalizeFirst = str => str.replace(/^./, str => str.toUpperCase());
+
+  /**
+   * Initialize the Blockly workspace
+   * @param {*} container HTML element to inject the workspace into
+   * @param {*} onBlockSpaceChange callback fired when any block space change events occur
+   * @param {*} player reference to a {@link MusicPlayer}
+   * @param {*} toolboxAllowList optional object with allowed toolbox entries
+   */
+  init(container, onBlockSpaceChange, player, toolboxAllowList) {
+    if (this.workspace) {
+      this.workspace.dispose();
+    }
+
+    this.container = container;
+
+    this.workspace = Blockly.inject(container, {
+      toolbox: getToolbox(toolboxAllowList),
+      grid: {spacing: 20, length: 0, colour: '#444', snap: true},
+      theme: CdoDarkTheme,
+      renderer: experiments.isEnabled('zelos')
+        ? Renderers.ZELOS
+        : Renderers.DEFAULT,
+      noFunctionBlockFrame: true,
+      zoom: {
+        startScale: experiments.isEnabled('zelos') ? 0.9 : 1,
+      },
+    });
 
     this.resizeBlockly();
 
-    Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
+    this.workspace.addChangeListener(onBlockSpaceChange);
 
     this.workspace.registerButtonCallback('createVariableHandler', button => {
       Blockly.Variables.createVariableButtonHandler(

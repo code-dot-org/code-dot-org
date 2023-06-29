@@ -154,6 +154,7 @@ class UnconnectedMusicView extends React.Component {
 
     // Music Lab currently does not support share and remix
     header.showHeaderForProjectBacked({showShareAndRemix: false});
+    MusicBlocklyWorkspace.setUp();
   }
 
   componentDidMount() {
@@ -237,6 +238,12 @@ class UnconnectedMusicView extends React.Component {
     // If we just finished loading the lab, then we need to update the
     // sources and level data.
     if (!prevProps.labReadyForReload && this.props.labReadyForReload) {
+      // test: re-init blockly workspace
+      this.musicBlocklyWorkspace.init(
+        document.getElementById('blockly-div'),
+        this.onBlockSpaceChange,
+        this.player
+      );
       if (this.getStartSources() || this.props.sources) {
         let codeToLoad = this.getStartSources();
         if (this.props.sources?.source) {
