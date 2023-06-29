@@ -84,6 +84,7 @@ export interface LevelProperties {
   isProjectLevel: boolean;
   hideAndShareRemix: boolean;
   levelData: LevelData;
+  video: LevelVideo;
 }
 
 // Generic level configuration data used by labs that don't require
@@ -92,6 +93,11 @@ export interface LevelData {
   text: string;
   validations: Validation[];
   startSources: Source;
+}
+
+export interface LevelVideo {
+  src: string;
+  download: string;
 }
 
 // Validation in the level.

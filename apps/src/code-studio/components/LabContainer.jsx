@@ -18,8 +18,9 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ErrorBoundary from './ErrorBoundary';
 import {levelsForLessonId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import MusicView from '@cdo/apps/music/views/MusicView';
-import StandaloneVideo2 from '@cdo/apps/standaloneVideo2/StandaloneVideo2';
 import ProjectContainer from '@cdo/apps/labs/projects/ProjectContainer';
+import ProgressContainer from '@cdo/apps/labs/progress/ProgressContainer';
+import StandaloneVideo2 from '@cdo/apps/standaloneVideo2/StandaloneVideo2';
 import {getStandaloneProjectId} from '@cdo/apps/labs/projects/utils';
 
 const LabContainer = ({onError}) => {
@@ -57,7 +58,9 @@ const LabContainer = ({onError}) => {
               visibility: currentApp !== 'music' && 'hidden',
             }}
           >
-            <MusicView />
+            <ProgressContainer appType={'music'}>
+              <MusicView />
+            </ProgressContainer>
           </div>
 
           {currentApp === 'standalone_video' && <StandaloneVideo2 />}
