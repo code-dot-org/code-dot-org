@@ -82,6 +82,8 @@ i.fa-fw {
 .flex-container {
   display: flex;
 
+  &.flex-direction-column { flex-direction: column; }
+  &.flex-direction-row { flex-direction: row; }
   &.justify-space-between { justify-content: space-between }
   &.justify-center { justify-content: center }
   &.justify-end { justify-content: end; }
@@ -1128,17 +1130,18 @@ section.quote {
   border: 1px solid $neutral_dark10;
   border-radius: $border-radius;
   margin-top: 2rem;
-  padding: 0.5rem;
+  padding: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @media screen and (max-width: $width-md) {
+    grid-template-columns: unset;
+    gap: 1rem;
+  }
 
   ul {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, auto);
-    gap: 1rem;
-
-    @media screen and (max-width: $width-md) {
-      grid-template-rows: unset;
-      grid-template-columns: unset;
-    }
+    margin: 0;
+    gap: 1.25rem;
 
     li {
       all: unset;
