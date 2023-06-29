@@ -142,7 +142,7 @@
           "name": "Προγραμματισμός Ρελέ"
         },
         "coursed-2022/Debugging with Laurel": {
-          "name": "Διώρθωση λαθών με την Laurel"
+          "name": "Διόρθωση λαθών με την Laurel"
         },
         "coursed-2022/Events in Bounce": {
           "name": "Γεγονότα  στο παιχνίδι αναπήδησης"
@@ -280,6 +280,9 @@
           "name": "Πάρτι Χορού",
           "purpose": "Αυτό το μάθημα εισάγει τις βασικές έννοιες της Πληροφορικής για την κωδικοποίηση και τον προγραμματισμό εκδηλώσεων (χρησιμοποιώντας μπλοκ)."
         },
+        "express-2022/Loops with Rey and BB-8": {
+          "name": "Βρόχοι με την Rey και το BB-8"
+        },
         "express-2022/Mini-Project: Sticker Art": {
           "name": "Μικρή Εργασία: Τέχνη με Αυτοκόλλητα"
         },
@@ -332,6 +335,9 @@
         },
         "coursec-2022/Creating Art with Code": {
           "name": "Δημιουργία τέχνης με κώδικα"
+        },
+        "coursec-2022/Loops with Rey and BB-8": {
+          "name": "Βρόχοι με την Rey και το BB-8"
         },
         "coursec-2022/Harvesting Crops with Loops": {
           "name": "Συγκομιδή καλλιεργειών με βρόχους",
@@ -486,7 +492,7 @@
           "name": "Προγραμματισμός Ρελέ"
         },
         "coursed-2018/Debugging in Collector": {
-          "name": "Διώρθωση λαθών με την Laurel"
+          "name": "Διόρθωση λαθών με την Laurel"
         },
         "coursed-2018/Events in Bounce": {
           "name": "Γεγονότα  στο παιχνίδι αναπήδησης"
@@ -553,6 +559,9 @@
         },
         "express-2018/Loops: Getting Loopy": {
           "name": "Εξερευνώντας τους βρόγχους"
+        },
+        "express-2018/Loops with Rey and BB-8": {
+          "name": "Βρόχοι με την Rey και το BB-8"
         },
         "express-2018/Concept Practice with Minecraft ": {
           "name": "Κοιτάζοντας μπροστά με το Minecraft"
@@ -646,6 +655,9 @@
         },
         "coursec-2018/Loops: Getting Loopy": {
           "name": "Εξερευνώντας τους βρόγχους"
+        },
+        "coursec-2018/Loops with Rey and BB-8": {
+          "name": "Βρόχοι με την Rey και το BB-8"
         },
         "coursec-2018/Loops in Harvester": {
           "name": "Συγκομιδή καλλιεργειών με βρόχους"
@@ -795,7 +807,7 @@
           "name": "Προγραμματισμός Ρελέ"
         },
         "coursed-2019/Debugging in Collector": {
-          "name": "Διώρθωση λαθών με την Laurel"
+          "name": "Διόρθωση λαθών με την Laurel"
         },
         "coursed-2019/Events in Bounce": {
           "name": "Γεγονότα  στο παιχνίδι αναπήδησης"
@@ -875,6 +887,9 @@
         "express-2019/Programming in Artist": {
           "name": "Δημιουργία τέχνης με κώδικα"
         },
+        "express-2019/Loops with Rey and BB-8": {
+          "name": "Βρόχοι με την Rey και το BB-8"
+        },
         "express-2019/Nested Loops in Bee": {
           "name": "Εμφωλευμένοι Βρόχοι στο λαβύρινθο"
         },
@@ -904,6 +919,9 @@
         },
         "coursec-2019/Binary Bracelets": {
           "name": "Δυαδικά Βραχιόλια"
+        },
+        "coursec-2019/Loops with Rey and BB-8": {
+          "name": "Βρόχοι με την Rey και το BB-8"
         },
         "coursec-2019/Loops in Harvester": {
           "name": "Συγκομιδή καλλιεργειών με βρόχους"
@@ -1039,6 +1057,9 @@
         },
         "coursec-2017/Real-life Algorithms: Paper Planes": {
           "name": "Αλγόριθμοι Πραγματικής ζωής: Χάρτινα Αεροπλανάκια"
+        },
+        "coursec-2017/Loops with Rey and BB-8": {
+          "name": "Βρόχοι με την Rey και το BB-8"
         },
         "coursec-2017/Loops in Artist": {
           "name": "Βρόχους στον καλλιτέχνη"
@@ -1275,7 +1296,7 @@
           "name": "Καλλιτέχνης: Ακολουθία"
         },
         "course2/Getting Loopy": {
-          "name": "Επαναλαμβανόμαστε"
+          "name": "Εξερευνώντας τους βρόγχους"
         },
         "course2/Maze: Loops": {
           "name": "Λαβύρινθος: Επαναλήψεις"
@@ -1416,7 +1437,7 @@
           "name": "Η μέλισσα της ορθογραφίας"
         },
         "course1/Getting Loopy": {
-          "name": "Επαναλαμβανόμαστε"
+          "name": "Εξερευνώντας τους βρόγχους"
         },
         "course1/Maze: Loops": {
           "name": "Λαβύρινθος: Επαναλήψεις"
@@ -1587,6 +1608,9 @@
         "coursec-2021/Programming in Artist": {
           "name": "Δημιουργία τέχνης με κώδικα"
         },
+        "coursec-2021/Loops with Rey and BB-8": {
+          "name": "Βρόχοι με την Rey και το BB-8"
+        },
         "coursec-2021/Loops in Harvester": {
           "name": "Συγκομιδή καλλιεργειών με βρόχους",
           "overview": "Οι μαθητές επαναλαμβάνουν νέες εντολες για να βοηθήσουν τον Θεριστή να συλλέξει πολλά λαχανικά που αναπτύσσονται σε μεγάλες παρτίδες σε αυτό το μάθημα **οικοδόμησης δεξιοτήτων**",
@@ -1625,7 +1649,7 @@
           "name": "Προγραμματισμός Ρελέ"
         },
         "coursed-2021/Debugging in Collector": {
-          "name": "Διώρθωση λαθών με την Laurel",
+          "name": "Διόρθωση λαθών με την Laurel",
           "preparation": "-   Παίξτε δια μέσου των παζλ για να βρείτε οποιεσδήποτε δυνητικές προβληματικές περιοχές για την τάξη σας.\n-   Βεβαιωθείτε ότι κάθε μαθητής έχει ένα ημερολόγιο σκέψεων."
         },
         "coursed-2021/Events in Bounce": {
@@ -1688,6 +1712,9 @@
         "express-2021/lesson-1": {
           "name": "Πάρτι Χορού",
           "purpose": "Αυτό το μάθημα εισάγει τις βασικές έννοιες της Πληροφορικής για την κωδικοποίηση και τον προγραμματισμό εκδηλώσεων (χρησιμοποιώντας μπλοκ)."
+        },
+        "express-2021/Loops with Rey and BB-8": {
+          "name": "Βρόχοι με την Rey και το BB-8"
         },
         "express-2021/Sticker Art with Loops": {
           "name": "Μικρή Εργασία: Τέχνη με Αυτοκόλλητα"
@@ -1858,6 +1885,9 @@
         "express-2020/Creating Art with Code": {
           "name": "Δημιουργία τέχνης με κώδικα"
         },
+        "express-2020/Loops with Rey and BB-8": {
+          "name": "Βρόχοι με την Rey και το BB-8"
+        },
         "express-2020/Nested Loops in Maze": {
           "name": "Εμφωλευμένοι Βρόχοι στο λαβύρινθο"
         },
@@ -1895,7 +1925,7 @@
           "name": "Προγραμματισμός Ρελέ"
         },
         "coursed-2020/Debugging in Collector": {
-          "name": "Διώρθωση λαθών με την Laurel"
+          "name": "Διόρθωση λαθών με την Laurel"
         },
         "coursed-2020/Events in Bounce": {
           "name": "Γεγονότα  στο παιχνίδι αναπήδησης"
@@ -1935,6 +1965,9 @@
         },
         "coursec-2020/Binary Bracelets": {
           "name": "Δυαδικά Βραχιόλια"
+        },
+        "coursec-2020/Loops with Rey and BB-8": {
+          "name": "Βρόχοι με την Rey και το BB-8"
         },
         "coursec-2020/Loops in Harvester": {
           "name": "Συγκομιδή καλλιεργειών με βρόχους"
