@@ -33,7 +33,10 @@ import {
 } from './progress/ProgressManager';
 
 export interface LabState {
-  // If we are currently loading a lab.
+  // If we are currently loading common data for a project or level. Should only be used internally
+  // by this Redux file.
+  isLoadingProjectOrLevel: boolean;
+  // If the lab is loading. Can be updated by lab-specific components.
   isLoading: boolean;
   isPageError: boolean;
   // channel for the current project, or undefined if there is no current project.
@@ -51,6 +54,7 @@ export interface LabState {
 }
 
 const initialState: LabState = {
+  isLoadingProjectOrLevel: false,
   isLoading: false,
   isPageError: false,
   channel: undefined,
@@ -131,6 +135,12 @@ export const loadProject = createAsyncThunk(
   }
 );
 
+// Selectors
+
+// If any load is currently in progress.
+export const isLabLoading = (state: {lab: LabState}) =>
+  state.lab.isLoadingProjectOrLevel || state.lab.isLoading;
+
 const labSlice = createSlice({
   name: 'lab',
   initialState,
@@ -159,32 +169,32 @@ const labSlice = createSlice({
   },
   extraReducers: builder => {
     builder.addCase(setUpForLevel.fulfilled, state => {
-      state.isLoading = false;
+      state.isLoadingProjectOrLevel = false;
     });
     builder.addCase(setUpForLevel.rejected, (state, action) => {
       // If the set up was aborted, that means another load got started
       // before we finished. Therefore we only set loading to false if the
       // action was not aborted.
       if (!action.meta.aborted) {
-        state.isLoading = false;
+        state.isLoadingProjectOrLevel = false;
       }
     });
     builder.addCase(setUpForLevel.pending, state => {
-      state.isLoading = true;
+      state.isLoadingProjectOrLevel = true;
     });
     builder.addCase(loadProject.fulfilled, state => {
-      state.isLoading = false;
+      state.isLoadingProjectOrLevel = false;
     });
     builder.addCase(loadProject.rejected, (state, action) => {
       // If the set up was aborted, that means another load got started
       // before we finished. Therefore we only set loading to false if the
       // action was not aborted.
       if (!action.meta.aborted) {
-        state.isLoading = false;
+        state.isLoadingProjectOrLevel = false;
       }
     });
     builder.addCase(loadProject.pending, state => {
-      state.isLoading = true;
+      state.isLoadingProjectOrLevel = true;
     });
   },
 });
