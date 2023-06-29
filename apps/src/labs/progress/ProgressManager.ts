@@ -12,28 +12,27 @@ export abstract class Validator {
   abstract clear(): void;
 }
 
-// The current progress state.
-export interface ProgressState {
+// The current progress validation state.
+export interface ValidationState {
   satisfied: boolean;
   message: string | null;
 }
 
-export const initialProgressState: ProgressState = {
+export const initialValidationState: ValidationState = {
   satisfied: false,
   message: null,
 };
 
 export default class ProgressManager {
   private levelData: LevelData | undefined;
-  private validator: Validator;
+  private validator: Validator | undefined;
   private onProgressChange: () => void;
-  private currentProgressState: ProgressState;
+  private currentValidationState: ValidationState;
 
-  constructor(validator: Validator, onProgressChange: () => void) {
+  constructor(onProgressChange: () => void) {
     this.levelData = undefined;
-    this.validator = validator;
     this.onProgressChange = onProgressChange;
-    this.currentProgressState = initialProgressState;
+    this.currentValidationState = initialValidationState;
   }
 
   /**
@@ -45,14 +44,18 @@ export default class ProgressManager {
     this.resetValidation();
   }
 
-  getCurrentState(): ProgressState {
-    return this.currentProgressState;
+  setValidator(validator: Validator) {
+    this.validator = validator;
+  }
+
+  getCurrentState(): ValidationState {
+    return this.currentValidationState;
   }
 
   updateProgress(): void {
     const validations = this.levelData?.validations;
 
-    if (!validations) {
+    if (!validations || !this.validator) {
       return;
     }
 
@@ -74,15 +77,15 @@ export default class ProgressManager {
         // Ask the lab-specific validator if this validation's
         // conditions are met.
         if (this.validator.conditionsMet(validation.conditions)) {
-          if (!this.currentProgressState.satisfied) {
-            this.currentProgressState.satisfied = validation.next;
-            this.currentProgressState.message = validation.message;
+          if (!this.currentValidationState.satisfied) {
+            this.currentValidationState.satisfied = validation.next;
+            this.currentValidationState.message = validation.message;
             this.onProgressChange();
           }
           return;
         }
       } else {
-        this.currentProgressState.message = validation.message;
+        this.currentValidationState.message = validation.message;
       }
     }
 
@@ -90,11 +93,13 @@ export default class ProgressManager {
   }
 
   private resetValidation() {
-    // Give the lab the chance to clear accumulated satisfied conditions.
-    this.validator.clear();
+    if (this.validator) {
+      // Give the lab the chance to clear accumulated satisfied conditions.
+      this.validator.clear();
+    }
 
-    this.currentProgressState.satisfied = false;
-    this.currentProgressState.message = null;
+    this.currentValidationState.satisfied = false;
+    this.currentValidationState.message = null;
 
     this.onProgressChange();
   }
