@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-starquilts",
-    "serialized_at": "2023-06-29 01:49:22 UTC",
+    "serialized_at": "2023-06-29 23:26:13 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -44,7 +44,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this Unplugged lesson, students will be introduced to Native American Star Quilts and their significance. Then, students will make a 6-pointed star shape on paper. One of the main goals is to discuss the patterns within the shape. These ideas will be key for the online coding portions of the activity later on. ",
-        "preparation": "- Review the lesson slides\n- Print copies of the worksheet for each student\n",
+        "preparation": "- Play through the levels and review the lesson slides \n- Decide on pacing between student work time and whole group instruction.\n* Consider these related extension options (link) to explore after the last lesson.\n\n\n#####Optional:\n- Review this <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">Helpful Hints</a>  slideshow. \n- Review this <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">teacher’s guide to debugging</a>  to be prepared to help students find and fix errors in their code. \n- Pair Programming - Decide if you want students to engage in pair programming. Watch this <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">video</a> and visit this <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">Support</a> page for more information about pair programming.\n",
         "purpose": "Today you will learn all about Star Quilts. Then you will use pencil, paper and colors to start designing your own 6-point star shape. Be on the lookout for patterns!",
         "unplugged": true
       },
@@ -63,7 +63,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "This skill-building lesson provides an opportunity for students to become familiar with the Artist Tool and to build important coding skills. Students learn how the stamping tool works, how to turn x degrees in an angle, and how to use loops. Students will create a simple star shape. By the end of the levels, students will manipulate angle measurements to see the effect on the number of points on the star. Computers allow for accuracy and precision in studying shapes and patterns because images are generated in a matter of seconds instead of relying on hand-drawn shapes.",
-        "preparation": "- Play through the levels and determine in advance which levels might be challenging for students.\n- Review the lesson slides.\n- [Optional] If your classroom has pattern blocks, place some at student desks.\n",
+        "preparation": "- Play through the levels and review the lesson slides \n- Decide on pacing between student work time and whole group instruction.\n- Consider exploring the recommended preparation activities before beginning ([link](https://studio.code.org/s/csc-starquilts-2023/lessons/2#activity-4365327)).\n\n\n#####Optional:\n- [Optional] Review this **[teacher’s guide to debugging](https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf)** to be prepared to help students find and fix errors in their code. \n- [Optional] **Pair Programming** - Decide if you want students to engage in pair programming. Watch this [video](https://youtu.be/sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information.\n- [Optional] If your classroom has pattern blocks, place some at student desks.\n",
         "purpose": "In this lesson you will be introduced to the Artist. You will program the Artist to create a star shape. It will be important to notice patterns in the shapes. \n\n"
       },
       "seeding_key": {
@@ -81,7 +81,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "In the final lesson for this activity, students are ready to build their own Star Quilt. Students will build one point of the star and then loop their code to end up with a 8 point traditional Star Quilt. Star Quilts are meant to be gifted so students can share their project with someone special.",
-        "preparation": "- Review the lesson slides.\n- Play through the levels and determine in advance which levels might be challenging for students.\n- Create your own Star Quilt as an example for students\n",
+        "preparation": "- Play through the levels and review the lesson slides \n- Decide on pacing between student work time and whole group instruction.\n* Consider these related extension options ([link](https://studio.code.org/s/csc-starquilts-2023/lessons/3#activity-4365328)) to explore after the last lesson.\n\n\n#####Optional:\n- Review this <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">teacher’s guide to debugging</a>  to be prepared to help students find and fix errors in their code. \n- Pair Programming - Decide if you want students to engage in pair programming. Watch this <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">video</a> and visit this <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">Support</a> page for more information about pair programming.\n",
         "purpose": "Today, we will build the code to create our very own star quilt. Remember, in Native American tradition, gifting star quilts on special occasions expresses love, honor, and respect for others. A digital star quilt is a modern version of this tradition that allows you to share your love and appreciation with others in a new and creative way. When we are done, make sure to share your star quilt with someone you love and appreciate.",
         "student_overview": "Today, we will build the code to create our very own star quilt. Remember, in Native American tradition, gifting star quilts on special occasions expresses love, honor, and respect for others. A digital star quilt is a modern version of this tradition that allows you to share your love and appreciation with others in a new and creative way. When we are done, make sure to share your star quilt with someone you love and appreciate."
       },
@@ -136,8 +136,34 @@
       }
     },
     {
-      "key": "0c2a6d6c-a0d9-4852-b81c-87db1783527d",
+      "key": "6d049733-d8a6-4426-b642-76a2604a7496",
+      "position": 4,
+      "properties": {
+        "name": "Extension Opportunities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6d049733-d8a6-4426-b642-76a2604a7496",
+        "lesson.key": "Native American Star Quilts (beta)",
+        "lesson_group.key": "",
+        "script.name": "csc-starquilts-2023"
+      }
+    },
+    {
+      "key": "eb3bde62-9ff7-4b66-b7d4-c55467aa91a8",
       "position": 1,
+      "properties": {
+        "name": "Recommended Preparation"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eb3bde62-9ff7-4b66-b7d4-c55467aa91a8",
+        "lesson.key": "Getting Started with The Artist (beta)",
+        "lesson_group.key": "",
+        "script.name": "csc-starquilts-2023"
+      }
+    },
+    {
+      "key": "0c2a6d6c-a0d9-4852-b81c-87db1783527d",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -151,7 +177,7 @@
     },
     {
       "key": "df49e5ca-d5fc-4a4d-8516-28d6d724518a",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -165,13 +191,26 @@
     },
     {
       "key": "70723c73-15c5-4d69-bcf8-7268daa9d114",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "70723c73-15c5-4d69-bcf8-7268daa9d114",
+        "lesson.key": "Getting Started with The Artist (beta)",
+        "lesson_group.key": "",
+        "script.name": "csc-starquilts-2023"
+      }
+    },
+    {
+      "key": "7dd26f40-44df-4d56-ac15-d061bd3e106c",
+      "position": 5,
+      "properties": {
+        "name": "Extension Opportunities "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7dd26f40-44df-4d56-ac15-d061bd3e106c",
         "lesson.key": "Getting Started with The Artist (beta)",
         "lesson_group.key": "",
         "script.name": "csc-starquilts-2023"
@@ -218,6 +257,19 @@
         "lesson_group.key": "",
         "script.name": "csc-starquilts-2023"
       }
+    },
+    {
+      "key": "7655956b-c78c-44a0-b76f-db4498c3a26d",
+      "position": 4,
+      "properties": {
+        "name": "Extension Opportunities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7655956b-c78c-44a0-b76f-db4498c3a26d",
+        "lesson.key": "Code Your Star Quilt (beta)",
+        "lesson_group.key": "",
+        "script.name": "csc-starquilts-2023"
+      }
     }
   ],
   "activity_sections": [
@@ -225,7 +277,7 @@
       "key": "71297bbc-092e-44ad-9666-1897bb75c7ab",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Star Quilt” video\n \n**Do This**: Watch the [Star Quilt Video](https://www.youtube.com/watch?v=Q210ko41yqo). Start the video at 1:30 seconds. Stop the video at 2:26 seconds.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Read” slide\n \n**Do This**: Read the article [“Under a Blanket of Stars”](https://drive.google.com/file/d/1MAcBYUArtNihyt5ZZlwFOraFLhRxZm7G/view). While you read, elaborate on any just-in-time vocabulary words that come up. You have the option to elaborate on rhombuses with the rhombus sort activity on slide 9.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What stands out to you about Star Quilts?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Star Quilt” video\n\n**Do This**: Watch the <a href=\"https://www.youtube.com/watch?v=Q210ko41yqo\" target=\"_blank\">Star Quilt Video</a> . Start the video at 1:30 seconds. Stop the video at 2:26 seconds.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Read” slide\n \n**Do This**: Read the article <a href=\"https://drive.google.com/file/d/1MAcBYUArtNihyt5ZZlwFOraFLhRxZm7G/view\" target=\"_blank\">“Under a Blanket of Stars”</a> \n. While you read, elaborate on any just-in-time vocabulary words that come up. You have the option to elaborate on rhombuses with the rhombus sort activity on slide 9.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What stands out to you about Star Quilts?_"
       },
       "seeding_key": {
         "activity_section.key": "71297bbc-092e-44ad-9666-1897bb75c7ab",
@@ -275,7 +327,7 @@
       "key": "bfdd0900-3e45-4697-83fa-d5c358a9d5f4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Task One” and \"Task Two\" slides\n\n**Do This**: Read the instructions out loud for the [worksheet](https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview). Then, hand out the worksheets and coloring utensils. Once students are starting to finish up, have students share their work with their partner. Students should explain the different patterns that they found to their partner."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Task One” and \"Task Two\" slides\n\n\n**Do This**: Read the instructions out loud for the **<a href=\"https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview\" target=\"_blank\">Star Quilts worksheet</a>**. Then, hand out the worksheets and coloring utensils. Once students are starting to finish up, have students share their work with their partner. Students should explain the different patterns that they found to their partner."
       },
       "seeding_key": {
         "activity_section.key": "bfdd0900-3e45-4697-83fa-d5c358a9d5f4",
@@ -349,6 +401,39 @@
       }
     },
     {
+      "key": "c327d492-7c32-44ad-bf3e-71a99877c5f6",
+      "position": 1,
+      "properties": {
+        "description": "This lesson is a great introduction to the Native American tradition of Star Quilts. Check out these children's books for more!",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "Further connections to Start Quilts and indigenous traditions:\n- <a href=\"https://www.amazon.com/Shota-Star-Quilt-Folk-Tales/dp/1840890231\" target=\"_blank\">Shota and the Star Quilt</a>: A picture book about the tradition of quilting and how traditions can change over time\n- <a href=\"https://www.amazon.com/Rainbow-Weaver-Tejedora-del-Arcoiris/dp/0892393742/ref=asc_df_0892393742/?tag=hyprod-20&linkCode=df0&hvadid=312089887152&hvpos=&hvnetw=g&hvrand=526653230527463008&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9033356&hvtargid=pla-522520885864&psc=1\" target=\"_blank\">Rainbow Weavers</a>: This picture book is about weaving, not quilting, but it could deepen students' understanding of how indigenous traditions evolve\n\n\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c327d492-7c32-44ad-bf3e-71a99877c5f6",
+        "lesson_activity.key": "6d049733-d8a6-4426-b642-76a2604a7496"
+      }
+    },
+    {
+      "key": "23dba13f-cdce-495e-8a58-a9ee7f7ac684",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs <a href=\"https://www.youtube.com/watch?v=kGAGkysDunw&t=1s\" target=\"_blank\">Types of Angles song</a>  (2:47 minutes) and <a href=\"https://www.youtube.com/watch?v=an1tG3upvow\" target=\"_blank\">Angles & Lines</a> (3:06 minutes). \n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n- <a href=\"https://www.mathsthroughstories.org/a-trapezoid-is-not-a-dinosaur.html\" target=\"_blank\">A Trapezoid is Not a Dinosaur</a> by Suzanne Morris\n- <a href=\"https://youngmathematicians.edc.org/picture_book/%EF%BB%BF%EF%BB%BFthe-greedy-triangle/\" target=\"_blank\">The Greedy Triangle</a> by Marilyn Burns\n- Any of these <a href=\"https://www.k-5mathteachingresources.com/geometry-read-aloud.html\" target=\"_blank\">Geometry Read Alouds</a>\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying <a href=\"https://studio.code.org/s/artist/lessons/1\" target=\"_blank\">Intro to Artist lesson</a> (50 minutes) for a basic introduction to the tool. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "23dba13f-cdce-495e-8a58-a9ee7f7ac684",
+        "lesson_activity.key": "eb3bde62-9ff7-4b66-b7d4-c55467aa91a8"
+      }
+    },
+    {
       "key": "cf56bf78-1cd2-4ddc-add6-30bae4b8bc92",
       "position": 1,
       "properties": {
@@ -413,7 +498,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "While circling the room, encourage students to:\n\n- **Take Their Time**: Staying on a level and tinkering with their code is highly encouraged. The instructions tell students generally what to do, but they should also feel free to try out their own ideas.\n- **Show off a completed level**: Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created.\n\nFor the times when a student feels stuck:\n- **Collaborate with Neighbors**: Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming. Watch [this video](https://youtu.be/vgkahOzFH2Q) and visit this [Support Page](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) for more information about pair programming.\n- **Read the Instructions**: The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n- <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> **Text to Speech:** Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level.\n- **Celebrate bugs**: Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program.\n"
+            "markdown": "While circling the room, encourage students to:\n\n- **Take Their Time**: Staying on a level and tinkering with their code is highly encouraged. The instructions tell students generally what to do, but they should also feel free to try out their own ideas.\n- **Show off a completed level**: Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created.\n\nFor the times when a student feels stuck:\n- **Collaborate with Neighbors**: Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming. Watch <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">this video</a> and visit this <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">Support Page</a> for more information about pair programming.\n\n- **Read the Instructions**: The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n- <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> **Text to Speech:** Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level.\n- **Celebrate bugs**: Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program.\n"
           }
         ]
       },
@@ -518,6 +603,23 @@
       "seeding_key": {
         "activity_section.key": "f715d46f-1e83-4ec7-bbb3-7e2fbbbff710",
         "lesson_activity.key": "70723c73-15c5-4d69-bcf8-7268daa9d114"
+      }
+    },
+    {
+      "key": "6fe7c8f8-ae9c-4cff-aab6-fde219786283",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of geometry and math. Here are a few options to continue learning more about the concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 3 in this module.\n",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Math Content:** \n- <a href=\"https://studio.code.org/s/coursec-2022/lessons/6\" target=\"_blank\">Angles with artist</a> \n- <a href=\"https://studio.code.org/s/coursed-2023/lessons/10\" target=\"_blank\">Drawing shapes with loops</a> \n\n**Computer Science Concepts:**\n- Loops with <a href=\"https://studio.code.org/s/coursec-2023/lessons/8\" target=\"_blank\">Rey and BB-8</a> \n- Create more designs by programming the Artist to <a href=\"https://studio.code.org/s/coursec-2023/lessons/10/levels/1\" target=\"_blank\">stamp other shapes</a> \n- Create snowflakes with <a href=\"https://studio.code.org/projects/frozen/eu4MSNDyBkKNZecVthfTQqvJgTOgtLvO0hcyj-l-H4o/edit\" target=\"_blank\">Anna from Frozen</a> \n\n\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6fe7c8f8-ae9c-4cff-aab6-fde219786283",
+        "lesson_activity.key": "7dd26f40-44df-4d56-ac15-d061bd3e106c"
       }
     },
     {
@@ -639,6 +741,23 @@
       "seeding_key": {
         "activity_section.key": "ee9a2e78-c32b-435f-997a-cbaf89aae5d2",
         "lesson_activity.key": "65dafa6f-639b-4180-adea-3aa8ac1faa8f"
+      }
+    },
+    {
+      "key": "95233e5f-8658-469c-bff0-218257c668e6",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of geometry and math. Here are a few options to continue learning more about the concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 3 in this module.\n\n",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Math Content:** \n- <a href=\"https://studio.code.org/s/coursec-2022/lessons/6\" target=\"_blank\">Angles with artist</a> \n- <a href=\"https://studio.code.org/s/coursed-2023/lessons/10\" target=\"_blank\">Drawing shapes with loops</a> \n\n**Computer Science Concepts:**\n- Loops with <a href=\"https://studio.code.org/s/coursec-2023/lessons/8\" target=\"_blank\">Rey and BB-8</a> \n- Create more designs by programming the Artist to <a href=\"https://studio.code.org/s/coursec-2023/lessons/10/levels/1\" target=\"_blank\">stamp other shapes</a> \n- Create snowflakes with <a href=\"https://studio.code.org/projects/frozen/eu4MSNDyBkKNZecVthfTQqvJgTOgtLvO0hcyj-l-H4o/edit\" target=\"_blank\">Anna from Frozen</a> \n\n\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "95233e5f-8658-469c-bff0-218257c668e6",
+        "lesson_activity.key": "7655956b-c78c-44a0-b76f-db4498c3a26d"
       }
     }
   ],
@@ -1351,6 +1470,45 @@
   ],
   "resources": [
     {
+      "name": "Helpful Hints",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+      "key": "helpful_hints",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/download",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints"
+      }
+    },
+    {
+      "name": "Helpful Hints",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+      "key": "helpful_hints_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/download",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_1"
+      }
+    },
+    {
+      "name": "Helpful Hints",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+      "key": "helpful_hints_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/download",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_2"
+      }
+    },
+    {
       "name": "Star Quilt Article",
       "url": "https://drive.google.com/file/d/1MAcBYUArtNihyt5ZZlwFOraFLhRxZm7G/view",
       "key": "star_quilt_article",
@@ -1428,6 +1586,12 @@
     {
       "seeding_key": {
         "lesson.key": "Code Your Star Quilt (beta)",
+        "resource.key": "helpful_hints_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Code Your Star Quilt (beta)",
         "resource.key": "star_quilts"
       }
     },
@@ -1440,6 +1604,12 @@
     {
       "seeding_key": {
         "lesson.key": "Getting Started with The Artist (beta)",
+        "resource.key": "helpful_hints_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Started with The Artist (beta)",
         "resource.key": "star_quilts"
       }
     },
@@ -1447,6 +1617,12 @@
       "seeding_key": {
         "lesson.key": "Getting Started with The Artist (beta)",
         "resource.key": "virtual_pattern_blocks_optional_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Native American Star Quilts (beta)",
+        "resource.key": "helpful_hints"
       }
     },
     {
