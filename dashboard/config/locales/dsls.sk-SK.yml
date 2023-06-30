@@ -4982,7 +4982,7 @@ sk-SK:
       CSD User Centered Design Post-Project Test:
         title: 'Záverečný test: Dizajn zameraný na používateľa'
       CSD Physical Computing Post-Project Test:
-        title: 'Záverečný test: Fyzické výpočty'
+        title: 'Programovanie s hardvérom: Záverečný test'
       CSD U2 L4 Overview:
         markdown: "# Prehľad\n\nLekcia pokračuje predstavením ako označiť nadpisy
           v   HTML.   Trieda skúša používanie nadpisových označení  na vytvorenie
@@ -6059,7 +6059,7 @@ sk-SK:
       CSD Interactive Animations and Games Post-Project Test_pilot_2021:
         title: 'Záverečný test: Interaktívne animácie a hry'
       CSD Physical Computing Post-Project Test_2021:
-        title: 'Záverečný test: Fyzické výpočty'
+        title: 'Programovanie s hardvérom: Záverečný test'
       CSD U1 Test_2021:
         title: 'Počítače a riešenie problémov: záverečný test'
       CSD U2 Image challenge_pilot_2021:
@@ -6588,7 +6588,7 @@ sk-SK:
       CSD Interactive Animations and Games Post-Project Test_pilot_2022:
         title: 'Záverečný test: Interaktívne animácie a hry'
       CSD Physical Computing Post-Project Test_2022:
-        title: 'Záverečný test: Fyzické výpočty'
+        title: 'Programovanie s hardvérom: Záverečný test'
       CSD U1 IOSP match:
         answers:
         - text: Stiahne z internetu predpoveď počasia
@@ -15463,7 +15463,7 @@ sk-SK:
         - correct: true
         - correct: true
         - correct: true
-        - text: Ostatné
+        - text: Iné
           correct: true
         - correct: true
         questions:
@@ -15474,7 +15474,7 @@ sk-SK:
         - correct: true
         - correct: true
         - correct: true
-        - text: Ostatné
+        - text: Iné
           correct: true
         - correct: true
         questions:
@@ -16348,7 +16348,7 @@ sk-SK:
         - correct: true
         - correct: true
         - correct: true
-        - text: Ostatné
+        - text: Iné
           correct: true
         - text: Nedostupné
           correct: true
@@ -16366,7 +16366,7 @@ sk-SK:
           correct: true
         - text: '12'
           correct: true
-        - text: Ostatné
+        - text: Iné
           correct: true
         questions:
         - {}
@@ -16376,7 +16376,7 @@ sk-SK:
           correct: true
         - text: Žena
           correct: true
-        - text: Ostatné
+        - text: Iné
           correct: true
         - text: Preferujem neodpovedať
           correct: true
@@ -16410,7 +16410,7 @@ sk-SK:
         - text: Biela
           correct: true
         - correct: true
-        - text: Ostatné
+        - text: Iné
           correct: true
         - text: Preferujem neodpovedať
           correct: true

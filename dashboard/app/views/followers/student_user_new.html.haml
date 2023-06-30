@@ -1,7 +1,6 @@
 - require 'cpa'
 - location = Geocoder.search(request.ip).try(:first)
 - country_code = location&.country_code.to_s.upcase
-- state_code = location&.state_code.to_s.upcase
 - us_ip = ['US', 'RD'].include?(country_code)
 - require '../shared/middleware/helpers/experiments'
 - content_for(:head) do
@@ -84,8 +83,7 @@
               - if us_ip && Cpa.cpa_experience(request)
                 .itemblock
                   = f.label :us_state, t('signup_form.us_state')
-                  = f.select :us_state, us_state_options, selected: state_code,
-                  include_blank: true
+                  = f.select :us_state, us_state_options, include_blank: true
                   = f.hidden_field :country_code, value: country_code
                 %br/
               - if experiment_value('gender', request)
