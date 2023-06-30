@@ -9,7 +9,8 @@
     "video_key": "oceans_machine_learning",
     "instructions_important": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "background": "music-black"
   },
   "published": true
 }]]></config>
