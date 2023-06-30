@@ -52,6 +52,7 @@ const LabContainer = ({onError}) => {
       >
         <ProjectContainer channelId={channelId}>
           <div
+            id="music-container"
             style={{
               width: '100%',
               height: '100%',

@@ -317,7 +317,9 @@ module LevelsHelper
 
     # TODO: Ues correct app for a lesson with music and standalone_video levels.
     @app_options =
-      if @level.is_a? Blockly
+      if true
+        {app: 'lablab'}
+      elsif @level.is_a? Blockly
         blockly_options
       elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab) || @level.is_a?(Javalab)
         non_blockly_puzzle_options
@@ -444,6 +446,7 @@ module LevelsHelper
   #  3. The disable_google_blockly DCDO flag, which contains an array of strings corresponding to model class names.
   #     This option will override #2 as an "emergency switch" to go back to CDO Blockly.
   def use_google_blockly
+    return true
     return true if view_options[:blocklyVersion]&.downcase == 'google'
     return false if view_options[:blocklyVersion]&.downcase == 'cdo'
     return false unless @level.uses_google_blockly?

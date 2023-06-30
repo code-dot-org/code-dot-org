@@ -203,6 +203,10 @@ class UnconnectedMusicView extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
+    if (!this.props.isActive) {
+      //return;
+    }
+
     this.musicBlocklyWorkspace.resizeBlockly();
 
     if (
