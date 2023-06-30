@@ -40,7 +40,7 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper
-    = view :curriculum_glance_section, grades: hoc_s(:module_grade_3_5), duration: hoc_s(:module_duration_week), level: hoc_s(:module_level_beginner), tools: hoc_s(:csc_page_curriculum_glance_tools), devices: hoc_s(:csc_page_curriculum_glance_devices), professional_learning: hoc_s(:csc_page_curriculum_glance_professional_learning), topics: hoc_s(:csc_page_curriculum_glance_topics), accessibility_features: hoc_s(:csc_page_curriculum_glance_professional_accessibility_features), languages: hoc_s(:csc_page_curriculum_glance_professional_languages)
+    = view :curriculum_glance_section, heading: hoc_s(:heading_curricula_at_a_glance), grades: hoc_s(:module_grade_3_5), duration: hoc_s(:module_duration_week), level: hoc_s(:module_level_beginner), tools: hoc_s(:csc_page_curriculum_glance_tools), devices: hoc_s(:csc_page_curriculum_glance_devices), professional_learning: hoc_s(:csc_page_curriculum_glance_professional_learning), topics: hoc_s(:csc_page_curriculum_glance_topics), accessibility_features: hoc_s(:csc_page_curriculum_glance_professional_accessibility_features), languages: hoc_s(:csc_page_curriculum_glance_professional_languages)
 
 %section.quote.bg-neutral-dark
   .wrapper
@@ -64,7 +64,7 @@ theme: responsive_full_width
           %img{src: "/images/csc-module-coding-w-poetry.png", alt: ""}
           %p=hoc_s(:module_desc_coding_w_poetry)
         .content-footer
-          %a.link-button{href: CDO.studio_url("/s/poetry-2021?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_w_poetry)}}
+          %a.link-button{href: CDO.studio_url("/s/poetry-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_module_coding_w_poetry)}}
             =hoc_s(:call_to_action_see_module_details)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
