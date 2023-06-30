@@ -73,8 +73,6 @@ import LabRegistry from '@cdo/apps/labs/LabRegistry';
  */
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
-    isActive: PropTypes.bool,
-
     progressLevelType: PropTypes.string,
     appConfig: PropTypes.object,
 
@@ -658,14 +656,6 @@ class UnconnectedMusicView extends React.Component {
 
 const MusicView = connect(
   state => ({
-    isActive:
-      getProgressLevelType(state) === ProgressLevelType.SCRIPT_LEVEL
-        ? levelsForLessonId(
-            state.progress,
-            state.progress.currentLessonId
-          ).find(level => level.isCurrentLevel).app === 'music'
-        : true,
-
     // The progress redux store tells us whether we are in a script level
     // or a single level.
     progressLevelType: getProgressLevelType(state),
