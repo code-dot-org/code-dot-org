@@ -446,7 +446,7 @@ class Blockly < Level
       level_prop['teacherMarkdown'] = nil
 
       # Set some values that Blockly expects on the root of its options string
-      level_prop.reject! {|_, value| value.nil?}
+      level_prop.compact!
     end
     options.freeze
   end
