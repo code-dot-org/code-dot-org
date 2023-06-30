@@ -3,14 +3,17 @@ require 'jwt'
 require "test_helper"
 
 class LtiV1ControllerTest < ActionDispatch::IntegrationTest
-  setup do
+  setup_all do
     @integration = create :lti_integration
     # create an arbitrary key for testing JWTs
     @key = SecureRandom.alphanumeric 10
     # create arbitary state and nonce values
     @state = 'state'
     @nonce = 'nonce'
-    # stub cache reads
+  end
+
+  setup do
+    # stub cache reads for each test
     LtiV1Controller.any_instance.stubs(:read_cache).returns({state: @state, nonce: @nonce})
   end
 
