@@ -10,7 +10,8 @@
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "background": "music-black"
+    "background": "music-black",
+    "video_full_width": true
   },
   "published": true
 }]]></config>

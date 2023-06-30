@@ -47,7 +47,7 @@ export interface LabState {
   sources: ProjectSources | undefined;
   // Level data for the current level
   levelData: LevelData | undefined;
-  // Video for the level;
+  // Video for the current level
   levelVideo: LevelVideo | undefined;
   // Whether the lab is ready for a reload.  This is used to manage the case where multiple loads
   // happen in a row, and we only want to reload the lab when we are done.

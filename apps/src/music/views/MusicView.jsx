@@ -150,7 +150,6 @@ class UnconnectedMusicView extends React.Component {
     }
 
     this.state = {
-      showingVideo: true,
       loadedLibrary: false,
       currentLibraryName: null,
     };
@@ -520,10 +519,6 @@ class UnconnectedMusicView extends React.Component {
       'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
       '_blank'
     );
-  };
-
-  onVideoClosed = () => {
-    this.setState({showingVideo: false});
   };
 
   renderInstructions(position) {
