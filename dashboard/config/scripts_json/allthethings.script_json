@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-28 00:36:31 UTC",
+    "serialized_at": "2023-06-30 03:26:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -763,6 +763,7 @@
       "has_lesson_plan": true,
       "relative_position": 46,
       "properties": {
+        "use_lab_container": true
       },
       "seeding_key": {
         "lesson.key": "lesson-49",
@@ -7628,7 +7629,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "4-5 Maze 2",
+        "level.key": "4-5 Maze 5",
         "script_level.level_keys": [
           "4-5 Maze 2",
           "4-5 Maze 5"
@@ -7641,7 +7642,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "4-5 Maze 5",
+        "level.key": "4-5 Maze 2",
         "script_level.level_keys": [
           "4-5 Maze 2",
           "4-5 Maze 5"
