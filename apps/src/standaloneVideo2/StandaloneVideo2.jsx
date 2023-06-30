@@ -7,7 +7,6 @@ import Video from './Video';
 
 const StandaloneVideo2 = () => {
   const levelVideo = useSelector(state => state.lab.levelVideo);
-  console.log(levelVideo);
 
   return <Video src={levelVideo?.src} />;
 };

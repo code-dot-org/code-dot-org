@@ -63,7 +63,6 @@ const SILENCED = [
   'spritelab',
   'studio',
   'turtle',
-  'standalone_video2',
   'weblab',
 
   // referenced from exported projects

@@ -55,7 +55,7 @@
       :javascript
         var appOptions = #{app_options.to_json};
       = render partial: 'levels/unplug', locals: {app: @game.app}
-    - elsif @level.is_a?(StandaloneVideo)
+    - elsif @script_level&.lesson&.use_lab_container?
       = render partial: 'levels/lablab'
     - elsif @level.is_a?(DSLDefined) || @level.is_a?(Widget) || @level.is_a?(FreeResponse) || @level.is_a?(StandaloneVideo) || @level.is_a?(ExternalLink) || @level.is_a?(CurriculumReference)
       :javascript
@@ -68,7 +68,7 @@
       - unless @level.is_a?(StandaloneVideo) || @level.properties['hide_reference_area']
         = render partial: 'levels/reference_area'
     - elsif @game.app == Game::MUSIC
-      = render partial: 'levels/lablab'
+      = render partial: 'levels/music'
     - else
       = render partial: 'levels/blockly'
 
