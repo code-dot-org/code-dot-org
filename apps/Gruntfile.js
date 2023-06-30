@@ -85,15 +85,16 @@ describe('entry tests', () => {
     'flappy',
     'javalab',
     'gamelab',
-    'spritelab',
     'jigsaw',
+    'lablab',
     'maze',
     'music',
     'netsim',
     'poetry',
+    'spritelab',
+    'standalone_video2',
     'studio',
     'turtle',
-    'standalone_video2',
     'weblab',
   ];
 
