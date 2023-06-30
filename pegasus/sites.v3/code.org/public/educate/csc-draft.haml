@@ -13,11 +13,71 @@ theme: responsive_full_width
         =hoc_s(:curriculum_name_csc)
       %p{style: "color: white"}
         =hoc_s(:csc_page_top_desc)
-      %a.link-button{href: "#"}
+      %a.link-button{href: "#csc-modules"}
         =hoc_s(:call_to_action_explore_modules)
     %figure
       %img{src: "/images/banners/banner-csc-octopus.png", alt: ""}
     .clear
 
+%section
+  .wrapper
+    %div.col-50{style: "margin: 0.5rem 0 1rem;"}
+      -# Waiting on link to new CSC video, using an image as a placeholder for now
+      -# =view :display_video_thumbnail, id: "intro_csp", video_code: "uQim0hBHco0", play_button: 'center', letterbox: 'false'
+      %img{src: "/images/csc-page-intro-teacher-student.png", alt: "", style: "width: 100%"}
+    .text-wrapper.col-45{style: "float: right;"}
+      %h2=hoc_s(:csc_page_intro_heading)
+      %ul
+        %li=hoc_s(:csc_page_intro_list_01)
+        %li=hoc_s(:csc_page_intro_list_02)
+        %li=hoc_s(:csc_page_intro_list_03)
+        %li=hoc_s(:csc_page_intro_list_04)
+        %li=hoc_s(:csc_page_intro_list_05)
+        %li=hoc_s(:csc_page_intro_list_06)
+      %a.link-button{href: "#pick-a-course"}
+        =hoc_s(:call_to_action_explore_modules)
+    .clear
+
+%section.bg-neutral-light
+  .wrapper
+    = view :curriculum_glance_section, grades: hoc_s(:module_grade_3_5), duration: hoc_s(:module_duration_week), level: hoc_s(:module_level_beginner), tools: hoc_s(:csc_page_curriculum_glance_tools), devices: hoc_s(:csc_page_curriculum_glance_devices), professional_learning: hoc_s(:csc_page_curriculum_glance_professional_learning), topics: hoc_s(:csc_page_curriculum_glance_topics), accessibility_features: hoc_s(:csc_page_curriculum_glance_professional_accessibility_features), languages: hoc_s(:csc_page_curriculum_glance_professional_languages)
+
+%section.quote.bg-neutral-dark
+  .wrapper
+    %div.quotes-wrapper
+      %p.quote-text.large
+        =hoc_s(:csc_page_quote)
+      %p.no-margin-bottom
+        -# Maria Sellers
+        -# %span •
+        =hoc_s(:teacher_label_csc)
+
+%section#csc-modules
+  .wrapper
+    %h2=hoc_s(:heading_find_a_module)
+    %p=hoc_s(:csc_page_find_a_module_desc)
+    .action-block__wrapper.action-block__wrapper--three-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_duration_month)
+          %h3=hoc_s(:curriculum_name_problem_solving_computing)
+          %img{src: "/images/csd-unit-problem-solving-computing.png", alt: ""}
+          %p=hoc_s(:curriculum_desc_problem_solving_computing)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/s/problem-solving-computing-2023?viewAs=Instructor"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_problem_solving_computing)}}
+            =hoc_s(:call_to_action_explore_unit)
+
+%section.bg-neutral-light
+  .wrapper
+    = view :resources_tabs
+
+%section.no-padding-bottom
+  .wrapper
+    %h2=hoc_s(:heading_faq)
+    = view :faq_csc
+
+%section
+  .wrapper
+    = view :support_and_questions_section
 
 = view :visit_partial_event_logger
