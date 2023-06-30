@@ -243,7 +243,7 @@
           "name": "funções"
         },
         "k5-onlinepd-2019/Variables": {
-          "name": "variáveis"
+          "name": "Variáveis"
         },
         "k5-onlinepd-2019/For Loops": {
           "name": "Laços para"
@@ -1233,19 +1233,24 @@
           "student_overview": "Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto."
         },
         "csd5-2022/Representation Matters": {
-          "name": "Representação Importa"
+          "name": "Representação Importa",
+          "student_overview": "**Pergunta do Dia: Como os dados afetam as decisões que tomamos diariamente?**\n\nNesta lição, você explorará o que são os dados e como eles são usados para solucionar problemas."
         },
         "csd5-2022/Patterns and Representation": {
-          "name": "Padrões e Representações"
+          "name": "Padrões e Representações",
+          "student_overview": "**Pergunta do Dia: Como podemos criar um sistema para representar informações?**\n\nNesta lição, você irá criar um sistema para representar informações trabalhando em grupo. O objetivo é criar um sistema que possa representar qualquer letra do alfabeto usando apenas um único conjunto de cartas."
         },
         "csd5-2022/ASCII and Binary Representation": {
-          "name": "ASCII e Representações Binárias"
+          "name": "ASCII e Representações Binárias",
+          "student_overview": "**Pergunta do Dia: Que sistema os computadores usam para representar letras e palavras?**\n\nNesta lição, você aprenderá sobre o sistema binário e o sistema ASCII utilizado para representar texto."
         },
         "csd5-2022/Representing Images": {
-          "name": "Representando Imagens"
+          "name": "Representando Imagens",
+          "student_overview": "**Pergunta do Dia: Que sistema os computadores usam para representar imagens?**\n\nNesta lição, você continuará explorando como é possível criar sistemas para representar informações usando o sistema binário, desta vez focando em imagens!"
         },
         "csd5-2022/Representing Numbers": {
-          "name": "Representando Números"
+          "name": "Representando Números",
+          "student_overview": "**Pergunta do Dia: Que sistema os computadores usam para representar números?**\n\nNesta lição, você aprenderá sobre o sistema de números binário utilizado pelos computadores!"
         },
         "csd5-2022/Combining Representations": {
           "name": "Combinando Representações"
@@ -1255,6 +1260,9 @@
         },
         "csd5-2022/Create a Representation": {
           "name": "Projeto - Criando uma Representação"
+        },
+        "csd5-2022/Problem Solving and Data": {
+          "name": "Resolução de Problemas com Dados"
         },
         "csd5-2022/Structuring Data": {
           "name": "Estruturação de dados"
@@ -1300,54 +1308,82 @@
         },
         "csd3-2022/Programming for Entertainment": {
           "name": "Programação para entretenimento",
-          "student_overview": "Aluno\n\\*\\*Pergunta do dia: Como a ciência da computação é usada no entretenimento? \\*\\*\n\nNesta lição, você explorará como a Ciência da Computação e, especificamente, a programação, desempenham um papel no entretenimento ou como um veículo para a autoexpressão."
+          "student_overview": "Aluno\n**Pergunta do dia: Como a ciência da computação é usada no entretenimento?**\n\nNesta lição, você explorará como a Ciência da Computação e, especificamente, a programação, desempenham um papel no entretenimento ou como um veículo para a autoexpressão."
         },
         "csd3-2022/Plotting Shapes": {
           "name": "Formas de plotagem",
-          "student_overview": "\\*\\*Pergunta do dia: Como podemos comunicar de forma clara como desenhar algo em uma tela? \\*\\*\n\nNesta lição, você explorará os desafios de comunicar instruções claras usando uma ferramenta do Laboratório de Jogos para desenhar formas em grade!"
+          "student_overview": "**Pergunta do dia: Como podemos comunicar de forma clara como desenhar algo em uma tela?**\n\nNesta lição, você explorará os desafios de comunicar instruções claras usando uma ferramenta do Laboratório de Jogos para desenhar formas em grade!"
         },
         "csd3-2022/Drawing in Game Lab": {
           "name": "Desenhando no Laboratório de Jogos",
-          "student_overview": "\\*\\*Pergunta do dia: Como podemos comunicar a um computador como desenhar formas na tela? \\*\\*\n\nNesta lição, você começará a usar o Laboratório de Jogos para posicionar formas na tela enquanto trabalha com os conceitos de sequenciamento e depuração. "
+          "student_overview": "**Pergunta do dia: Como podemos comunicar a um computador como desenhar formas na tela?**\n\nNesta lição, você começará a usar o Laboratório de Jogos para posicionar formas na tela enquanto trabalha com os conceitos de sequenciamento e depuração. "
         },
         "csd3-2022/Shapes and Parameters": {
-          "name": "Formas e Parâmetros"
+          "name": "Formas e Parâmetros",
+          "student_overview": "**Pergunta do dia: Como podemos usar parâmetros para dar instruções mais específicas ao computador?**\n\nNesta lição, você continuará trabalhando no Laboratório de Jogos e aumentando sua familiaridade com o desenho de formas na tela manipulando os “parâmetros” das formas que está usando para desenhar. "
         },
         "csd3-2022/Variables": {
-          "name": "variáveis"
+          "name": "Variáveis",
+          "student_overview": "**Pergunta do dia: Como podemos usar variáveis para armazenar informações em nossos programas?**\n\nNesta lição, você conhecerá as variáveis - um conceito importante em programação usado para armazenar valores em seus programas!"
         },
         "csd3-2022/Random Numbers": {
-          "name": "Números Aleatórios"
+          "name": "Números Aleatórios",
+          "student_overview": "**Pergunta do dia: Como podemos fazer com que nossos programas se comportem de maneira diferente a cada vez que são executados?**\n\nNesta lição, você aprenderá a usar o bloco randomNumber() para criar comportamentos em seus programas!"
         },
         "csd3-2022/Sprites": {
-          "name": "Sprite"
+          "name": "Sprite",
+          "student_overview": "**Pergunta do dia: Como podemos usar sprites para nos ajudar a acompanhar muitas informações em nossos programas?**\n\nHoje você aprenderá sobre sprites, que não só lhe mostrarão uma forma de acompanhar várias informações em seus programas, mas também permitirão que você crie imagens mais interessantes e divertidas!"
         },
         "csd3-2022/Sprite Properties": {
-          "name": "Propriedades do Sprite"
+          "name": "Propriedades do Sprite",
+          "student_overview": "**Pergunta do dia: Como podemos usar as propriedades do sprite para mudar sua aparência na tela?**\n\nNesta lição, você continuará trabalhando com sprites, usando suas propriedades para alterar sua aparência. "
         },
         "csd3-2022/Text": {
-          "name": "Texto"
+          "name": "Texto",
+          "student_overview": "**Pergunta do dia: Como podemos usar texto para melhorar nossas cenas e animações?**\n\nNesta lição, você aprenderá a usar os comandos de texto do Laboratório de Jogos para adicionar legendas às suas cenas. "
+        },
+        "csd3-2022/Mini-Project - Captioned Scenes": {
+          "name": "Mini-projeto - Cenas legendadas",
+          "student_overview": "**Pergunta do dia: Como podemos usar o Laboratório de Jogos para expressar nossa criatividade?**\n\nNesta lição, você terá a oportunidade de ser criativo usando o processo de solução de problemas para projetar e programar uma cena de sua escolha. "
         },
         "csd3-2022/The Draw Loop": {
-          "name": "O laço de desenho"
+          "name": "O laço de desenho",
+          "student_overview": "**Pergunta do dia: Como podemos animar nossas imagens no laboratório de Games?**\n\nNesta lição, você aprenderá a usar o laço de desenho com números aleatórios para criar suas primeiras animações simples. "
         },
         "csd3-2022/Sprite Movement": {
-          "name": "Movimento sprite"
+          "name": "Movimento de Sprite",
+          "student_overview": "**Pergunta do dia: Como podemos controlar o movimento dos sprites no Laboratório de Jogos?**\n\nNesta lição, você aprenderá como controlar o movimento do sprite usando o padrão de contador. "
+        },
+        "csd3-2022/Mini-Project - Animation": {
+          "name": "Mini-projeto - Animação",
+          "student_overview": "**Pergunta do dia: Como podemos combinar diferentes padrões de programação para criar uma animação completa?**\n\nNesta lição, você combinará todos os conceitos que aprendeu nas lições anteriores para criar sua primeira cena animada com seu próprio projeto!"
         },
         "csd3-2022/Conditionals": {
-          "name": "Condições"
+          "name": "Condições",
+          "student_overview": "**Pergunta do dia: Como os programas podem reagir às mudanças durante a execução?**\n\nNesta lição, você aprenderá sobre booleanos e condicionais, o que permitirá criar programas executados de forma diferente dependendo se uma condição é verdadeira. "
         },
         "csd3-2022/Keyboard Input": {
-          "name": "Entrada do teclado"
+          "name": "Entrada de Teclado",
+          "student_overview": "**Pergunta do dia: Como nossos programas podem reagir às informações do usuário?**\n\nNesta lição, você aprenderá a usar o bloco keyDown(), que permitirá que seus programas respondam à entrada do usuário. "
+        },
+        "csd3-2022/Mouse Input": {
+          "name": "Entrada de Mouse",
+          "student_overview": "**Pergunta do dia: Quais são as outras maneiras pelas quais o computador pode reagir à entrada do usuário?**\n\nNesta lição, você expandirá o que aprendeu sobre as declarações if e explorará as declarações if-else, bem como aprenderá como usar o mouse para obter informações do usuário que podem ser usadas em suas declarações condicionais. "
         },
         "csd3-2022/Project - Interactive Card": {
-          "name": "Projeto - Cartão Interativo"
+          "name": "Projeto - Cartão Interativo",
+          "student_overview": "**Pergunta do dia: Quais habilidades e práticas são importantes ao criar um programa interativo?**\n\nNesta lição, você planejará e desenvolverá um cartão comemorativo interativo usando todos os conceitos e técnicas de programação que você aprendeu até agora!"
         },
         "csd3-2022/Velocity": {
-          "name": "Velocidade"
+          "name": "Velocidade",
+          "student_overview": "**Pergunta do dia: Como as linguagens de programação podem ocultar padrões complicados para facilitar a programação?**\n\nNesta lição, você aprenderá como definir a velocidade de um sprite que usa o padrão do contador para mover seus sprites. "
         },
         "csd3-2022/Collision Detection": {
-          "name": "Detecção de Colisão"
+          "name": "Detecção de Colisão",
+          "student_overview": "**Pergunta do dia: Como a programação pode ajudar a simplificar problemas complicados?**\n\nNesta lição, você aprenderá sobre detecção de colisões explorando como um computador pode usar a matemática, a localização e o tamanho dos sprites para detectar se eles estão se tocando. "
+        },
+        "csd3-2022/Mini-Project - Side Scroller": {
+          "student_overview": "**Pergunta do dia: Como os novos tipos de detecção de colisão e movimentos de sprites podem ser usados para criar um jogo?**\n\nNesta lição, você usará o que aprendeu sobre detecção e velocidade de colisão para criar um jogo simples de rolagem lateral!"
         },
         "csd3-2022/Complex Sprite Movement": {
           "name": "Movimento complexo de Sprite"
@@ -1472,8 +1508,18 @@
         "csd6-2022/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa pós-curso da CS Discoveries"
         },
+        "csd7-2022/Introduction to Machine Learning": {
+          "name": "Introdução ao Aprendizado de Máquina",
+          "student_overview": "Aprenda os conceitos básicos do aprendizado de máquina ajudando o AI Bot a reconhecer peixes para limpar o oceano"
+        },
+        "csd7-2022/Types of Machine Learning": {
+          "name": "Tipos de Aprendizado de Máquina"
+        },
         "csd7-2022/Introduction to AI Lab": {
           "name": "Introdução ao AI Lab"
+        },
+        "csd7-2022/Importing Models in App Lab": {
+          "name": "Importando modelos no App Lab"
         },
         "csd7-2022/Numerical Data in AI Lab": {
           "name": "Dados numéricos no AI Lab"
@@ -2046,7 +2092,7 @@
           "name": "Formas e Randomização"
         },
         "csd3-2018/Variables": {
-          "name": "variáveis"
+          "name": "Variáveis"
         },
         "csd3-2018/Sprites": {
           "name": "Sprite"
@@ -2058,7 +2104,7 @@
           "name": "O padrão do contador desconectado"
         },
         "csd3-2018/Sprite Movement": {
-          "name": "Movimento sprite"
+          "name": "Movimento de Sprite"
         },
         "csd3-2018/Booleans Unplugged": {
           "name": "Booleanos off-line"
@@ -2067,7 +2113,7 @@
           "name": "Condições"
         },
         "csd3-2018/Keyboard Input": {
-          "name": "Entrada do teclado"
+          "name": "Entrada de Teclado"
         },
         "csd3-2018/Other Forms of Input": {
           "name": "Outras formas de entrada"
@@ -2751,7 +2797,7 @@
           "name": "Formas e Randomização"
         },
         "csd3-2019/Variables": {
-          "name": "variáveis"
+          "name": "Variáveis"
         },
         "csd3-2019/Sprites": {
           "name": "Sprite"
@@ -2763,7 +2809,7 @@
           "name": "O padrão do contador desconectado"
         },
         "csd3-2019/Sprite Movement": {
-          "name": "Movimento sprite"
+          "name": "Movimento de Sprite"
         },
         "csd3-2019/Booleans Unplugged": {
           "name": "Booleanos off-line"
@@ -2772,7 +2818,7 @@
           "name": "Condições"
         },
         "csd3-2019/Keyboard Input": {
-          "name": "Entrada do teclado"
+          "name": "Entrada de Teclado"
         },
         "csd3-2019/Other Forms of Input": {
           "name": "Outras formas de entrada"
@@ -3507,7 +3553,7 @@
           "name": "Formas e Randomização"
         },
         "csd3-2017/Variables": {
-          "name": "variáveis"
+          "name": "Variáveis"
         },
         "csd3-2017/Sprites": {
           "name": "Sprite"
@@ -3519,7 +3565,7 @@
           "name": "O padrão do contador desconectado"
         },
         "csd3-2017/Sprite Movement": {
-          "name": "Movimento sprite"
+          "name": "Movimento de Sprite"
         },
         "csd3-2017/Booleans Unplugged": {
           "name": "Booleanos off-line"
@@ -3528,7 +3574,7 @@
           "name": "Condições"
         },
         "csd3-2017/Keyboard Input": {
-          "name": "Entrada do teclado"
+          "name": "Entrada de Teclado"
         },
         "csd3-2017/Other Forms of Input": {
           "name": "Outras formas de entrada"
@@ -5153,8 +5199,17 @@
           "purpose": "Os alunos podem estar prontos para começar a construir seus projetos, mas esta lição ajudará a moldar suas ideias em planos. Essa estrutura manterá os sonhadores com os pés no chão e iluminará um caminho para aqueles que se sentem deixados no escuro. Ofereça aos alunos tempo suficiente para construir e revisar seus projetos. A tentativa e o erro inevitavelmente envolvidos nesta lição ensinarão a resolução de problemas e a persistência.",
           "student_overview": "Projetos desse tamanho levam tempo e muito planejamento. Encontre sua inspiração, desenvolva um plano e libere sua criatividade!"
         },
+        "csd7-2021/Introduction to Machine Learning": {
+          "name": "Introdução ao Aprendizado de Máquina"
+        },
+        "csd7-2021/Types of Machine Learning": {
+          "name": "Tipos de Aprendizado de Máquina"
+        },
         "csd7-2021/Introduction to AI Lab": {
           "name": "Introdução ao AI Lab"
+        },
+        "csd7-2021/Importing Models in App Lab": {
+          "name": "Importando modelos no App Lab"
         },
         "csd7-2021/Numerical Data in AI Lab": {
           "name": "Dados numéricos no AI Lab"
@@ -5300,54 +5355,82 @@
         },
         "csd3-2021/Programming for Entertainment": {
           "name": "Programação para entretenimento",
-          "student_overview": "Aluno\n\\*\\*Pergunta do dia: Como a ciência da computação é usada no entretenimento? \\*\\*\n\nNesta lição, você explorará como a Ciência da Computação e, especificamente, a programação, desempenham um papel no entretenimento ou como um veículo para a autoexpressão."
+          "student_overview": "Aluno\n**Pergunta do dia: Como a ciência da computação é usada no entretenimento?**\n\nNesta lição, você explorará como a Ciência da Computação e, especificamente, a programação, desempenham um papel no entretenimento ou como um veículo para a autoexpressão."
         },
         "csd3-2021/Plotting Shapes": {
           "name": "Formas de plotagem",
-          "student_overview": "\\*\\*Pergunta do dia: Como podemos comunicar de forma clara como desenhar algo em uma tela? \\*\\*\n\nNesta lição, você explorará os desafios de comunicar instruções claras usando uma ferramenta do Laboratório de Jogos para desenhar formas em grade!"
+          "student_overview": "**Pergunta do dia: Como podemos comunicar de forma clara como desenhar algo em uma tela?**\n\nNesta lição, você explorará os desafios de comunicar instruções claras usando uma ferramenta do Laboratório de Jogos para desenhar formas em grade!"
         },
         "csd3-2021/Drawing in Game Lab": {
           "name": "Desenhando no Laboratório de Jogos",
-          "student_overview": "\\*\\*Pergunta do dia: Como podemos comunicar a um computador como desenhar formas na tela? \\*\\*\n\nNesta lição, você começará a usar o Laboratório de Jogos para posicionar formas na tela enquanto trabalha com os conceitos de sequenciamento e depuração. "
+          "student_overview": "**Pergunta do dia: Como podemos comunicar a um computador como desenhar formas na tela?**\n\nNesta lição, você começará a usar o Laboratório de Jogos para posicionar formas na tela enquanto trabalha com os conceitos de sequenciamento e depuração. "
         },
         "csd3-2021/Shapes and Parameters": {
-          "name": "Formas e Parâmetros"
+          "name": "Formas e Parâmetros",
+          "student_overview": "**Pergunta do dia: Como podemos usar parâmetros para dar instruções mais específicas ao computador?**\n\nNesta lição, você continuará trabalhando no Laboratório de Jogos e aumentando sua familiaridade com o desenho de formas na tela manipulando os “parâmetros” das formas que está usando para desenhar. "
         },
         "csd3-2021/Variables": {
-          "name": "variáveis"
+          "name": "Variáveis",
+          "student_overview": "**Pergunta do dia: Como podemos usar variáveis para armazenar informações em nossos programas?**\n\nNesta lição, você conhecerá as variáveis - um conceito importante em programação usado para armazenar valores em seus programas!"
         },
         "csd3-2021/Random Numbers": {
-          "name": "Números Aleatórios"
+          "name": "Números Aleatórios",
+          "student_overview": "**Pergunta do dia: Como podemos fazer com que nossos programas se comportem de maneira diferente a cada vez que são executados?**\n\nNesta lição, você aprenderá a usar o bloco randomNumber() para criar comportamentos em seus programas!"
         },
         "csd3-2021/Sprites": {
-          "name": "Sprite"
+          "name": "Sprite",
+          "student_overview": "**Pergunta do dia: Como podemos usar sprites para nos ajudar a acompanhar muitas informações em nossos programas?**\n\nHoje você aprenderá sobre sprites, que não só lhe mostrarão uma forma de acompanhar várias informações em seus programas, mas também permitirão que você crie imagens mais interessantes e divertidas!"
         },
         "csd3-2021/Sprite Properties": {
-          "name": "Propriedades do Sprite"
+          "name": "Propriedades do Sprite",
+          "student_overview": "**Pergunta do dia: Como podemos usar as propriedades do sprite para mudar sua aparência na tela?**\n\nNesta lição, você continuará trabalhando com sprites, usando suas propriedades para alterar sua aparência. "
         },
         "csd3-2021/Text": {
-          "name": "Texto"
+          "name": "Texto",
+          "student_overview": "**Pergunta do dia: Como podemos usar texto para melhorar nossas cenas e animações?**\n\nNesta lição, você aprenderá a usar os comandos de texto do Laboratório de Jogos para adicionar legendas às suas cenas. "
+        },
+        "csd3-2021/Mini-Project: Captioned Scenes": {
+          "name": "Mini-projeto - Cenas legendadas",
+          "student_overview": "**Pergunta do dia: Como podemos usar o Laboratório de Jogos para expressar nossa criatividade?**\n\nNesta lição, você terá a oportunidade de ser criativo usando o processo de solução de problemas para projetar e programar uma cena de sua escolha. "
         },
         "csd3-2021/The Draw Loop": {
-          "name": "O laço de desenho"
+          "name": "O laço de desenho",
+          "student_overview": "**Pergunta do dia: Como podemos animar nossas imagens no laboratório de Games?**\n\nNesta lição, você aprenderá a usar o laço de desenho com números aleatórios para criar suas primeiras animações simples. "
         },
         "csd3-2021/Sprite Movement": {
-          "name": "Movimento sprite"
+          "name": "Movimento de Sprite",
+          "student_overview": "**Pergunta do dia: Como podemos controlar o movimento dos sprites no Laboratório de Jogos?**\n\nNesta lição, você aprenderá como controlar o movimento do sprite usando o padrão de contador. "
+        },
+        "csd3-2021/Mini-Project: Animation": {
+          "name": "Mini-projeto - Animação",
+          "student_overview": "**Pergunta do dia: Como podemos combinar diferentes padrões de programação para criar uma animação completa?**\n\nNesta lição, você combinará todos os conceitos que aprendeu nas lições anteriores para criar sua primeira cena animada com seu próprio projeto!"
         },
         "csd3-2021/Conditionals": {
-          "name": "Condições"
+          "name": "Condições",
+          "student_overview": "**Pergunta do dia: Como os programas podem reagir às mudanças durante a execução?**\n\nNesta lição, você aprenderá sobre booleanos e condicionais, o que permitirá criar programas executados de forma diferente dependendo se uma condição é verdadeira. "
         },
         "csd3-2021/Keyboard Input": {
-          "name": "Entrada do teclado"
+          "name": "Entrada de Teclado",
+          "student_overview": "**Pergunta do dia: Como nossos programas podem reagir às informações do usuário?**\n\nNesta lição, você aprenderá a usar o bloco keyDown(), que permitirá que seus programas respondam à entrada do usuário. "
+        },
+        "csd3-2021/Mouse Input": {
+          "name": "Entrada de Mouse",
+          "student_overview": "**Pergunta do dia: Quais são as outras maneiras pelas quais o computador pode reagir à entrada do usuário?**\n\nNesta lição, você expandirá o que aprendeu sobre as declarações if e explorará as declarações if-else, bem como aprenderá como usar o mouse para obter informações do usuário que podem ser usadas em suas declarações condicionais. "
         },
         "csd3-2021/Project - Interactive Card": {
-          "name": "Projeto - Cartão Interativo"
+          "name": "Projeto - Cartão Interativo",
+          "student_overview": "**Pergunta do dia: Quais habilidades e práticas são importantes ao criar um programa interativo?**\n\nNesta lição, você planejará e desenvolverá um cartão comemorativo interativo usando todos os conceitos e técnicas de programação que você aprendeu até agora!"
         },
         "csd3-2021/Velocity": {
-          "name": "Velocidade"
+          "name": "Velocidade",
+          "student_overview": "**Pergunta do dia: Como as linguagens de programação podem ocultar padrões complicados para facilitar a programação?**\n\nNesta lição, você aprenderá como definir a velocidade de um sprite que usa o padrão do contador para mover seus sprites. "
         },
         "csd3-2021/Collision Detection": {
-          "name": "Detecção de Colisão"
+          "name": "Detecção de Colisão",
+          "student_overview": "**Pergunta do dia: Como a programação pode ajudar a simplificar problemas complicados?**\n\nNesta lição, você aprenderá sobre detecção de colisões explorando como um computador pode usar a matemática, a localização e o tamanho dos sprites para detectar se eles estão se tocando. "
+        },
+        "csd3-2021/Mini-Project: Side Scroller": {
+          "student_overview": "**Pergunta do dia: Como os novos tipos de detecção de colisão e movimentos de sprites podem ser usados para criar um jogo?**\n\nNesta lição, você usará o que aprendeu sobre detecção e velocidade de colisão para criar um jogo simples de rolagem lateral!"
         },
         "csd3-2021/Complex Sprite Movement": {
           "name": "Movimento complexo de Sprite"

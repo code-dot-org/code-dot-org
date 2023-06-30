@@ -41,6 +41,15 @@ class JwtVerifier
     end
   end
 
+  def verify_issued_time(jwt)
+    now = Time.zone.now
+    if jwt.key? :iat
+      errors << "Issued at time of #{jwt[:iat]} after #{now.to_i}" unless Time.zone.at(jwt[:iat]) < now
+    else
+      errors << 'Issued at time does not exist'
+    end
+  end
+
   def azp_in_aud(aud, azp)
     if aud.is_a? Array
       aud.include? azp
