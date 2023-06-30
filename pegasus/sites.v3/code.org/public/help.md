@@ -39,7 +39,7 @@ Donate through your donor advised fund with Fidelity Charitable, Schwab Charitab
 
 
 ## Ask your school to teach computer science
-Encourage your local school to start teaching computer science. To make it easier, Code.org offers [courses for every grade level](https://code.org/teach) from kindergarten through high school at no cost. And, teachers can enroll in our [hands-on professional learning workshops](/educate/professional-learning) offered locally across the United States.
+Encourage your local school to start teaching computer science. To make it easier, Code.org offers [courses for every grade level](https://studio.code.org/catalog) from kindergarten through high school at no cost. And, teachers can enroll in our [hands-on professional learning workshops](/educate/professional-learning) offered locally across the United States.
 
 <a class="link-button" href="/promote/letter">Sample letter</a>&nbsp;&nbsp; <a class="link-button" href="/yourschool">Resources for schools</a>
 
@@ -53,7 +53,7 @@ Petition your state to allow computer science to count towards math or science h
 ## Teach an online course to your child, or in any classroom
 Code.org's online platform [Code Studio](https://code.org/teach) enables students to learn the basic concepts of computer science as early as kindergarten. You don't need any prior experience to get started - you can learn along with your children. If you do know some programming, try [App Lab](/educate/applab), a JavaScript programming environment for high school students to create apps.
 
-<a class="link-button" href="https://code.org/teach">Find a course</a>
+<a class="link-button" href="https://studio.code.org/catalog">Find a course</a>
 
 ## Buy a CODE hat or t-shirt
 Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too.
