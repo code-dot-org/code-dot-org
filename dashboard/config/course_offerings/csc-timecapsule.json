@@ -2,7 +2,7 @@
   "key": "csc-timecapsule",
   "display_name": "Coding a Time Capsule",
   "category": "csc",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": "Module",
   "marketing_initiative": "CSC",

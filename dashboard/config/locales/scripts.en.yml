@@ -10276,7 +10276,7 @@ en:
           title: Coding a Time Capsule (2023)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "##Suggested Pre-Work for this Module\n\n**Social Studies:** Read any of these [Multiple Perspectives Read Alouds](https://docs.google.com/document/d/1GU2wLxQ2xkoYGrjJU2mbngZEDxOX7bEWTlh4Ns1cnh8/template/preview) together as a class to enrich the discussion questions throughout the module, especially regarding the importance of having your voice in your own story, and what happens if certain things are included or left out. \n\n**ELA:** Read poetry together: Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. Make sure that all students are familiar with the structure of a poem before Lesson 2, in which students will write their own poems.\n\n**Computer Science:**  Students will be working with sprites and events in the module. We recommend beginning with [Hello World](https://studio.code.org/s/coursee-2023/lessons/4) (45 minutes) where students will gain a basic introduction to sprites and how to animate them with events. "
           student_description: ''
         vpl-csd7-ayw-pilot-2022:
           lessons:
@@ -10431,7 +10431,7 @@ en:
           title: Modeling Animal Adaptations (2023)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "##Suggested Pre-Work for this Module\n \n**Science:** Students will simulate several animal adaptations. To build familiarity with adaptations, we recommend this [Living Things Change Video](https://www.youtube.com/watch?v=xDSFlRunlrU&list=PLdG-lk1eEmZnq4ZO2CzERCv6jZkYIHCbR&index=4) (4:36 minutes). \n\n**Computer Science:** In this module students will be working a lot with sprites including changing the location and size of them and initiating behaviors. [CSF Making Sprites](https://studio.code.org/s/coursef-2023/lessons/3) is a great introduction to two concepts at the heart of this all: sprites and behaviors.\n"
           student_description: ''
         drafting:
           lessons: {}
@@ -10491,7 +10491,7 @@ en:
           title: Coding with Poetry (2023)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "##Suggested Pre-Work for this Module\n \n**English Language Arts:** To prepare for this module and create some shared understanding of poetry together we recommend starting by reading poetry together: Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. Make sure that all students are familiar with the structure of a poem before Lesson 2, in which students will write their own poems.\n\n**Computer Science:**  As a warm up to the tool students can add art and animation to a classic poem in this [Poem Art](https://studio.code.org/s/poem-art-2021/lessons/1) (55 minutes) Hour of Code activity!\n\nAdditionally, in this module students will use event blocks to program changes at important lines in the poem. To start building skills with events try [Build a Flappy Game](https://studio.code.org/s/coursec-2023/lessons/12) (60 minutes) . "
           student_description: ''
         poemmaker-2023:
           lessons: {}
@@ -10902,7 +10902,7 @@ en:
           title: Coding a Geometric Star Quilt (2023)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "##Suggested Pre-Work for this Module\n \n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song](https://www.youtube.com/watch?v=kGAGkysDunw&t=1s) (2:47 minutes) and [Angles & Lines](https://www.youtube.com/watch?v=an1tG3upvow) (3:06 minutes). \n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n- [A Trapezoid is Not a Dinosaur](https://www.mathsthroughstories.org/a-trapezoid-is-not-a-dinosaur.html) by Suzanne Morris \n- [The Greedy Triangle](https://youngmathematicians.edc.org/picture_book/%EF%BB%BF%EF%BB%BFthe-greedy-triangle/) by Marilyn Burns\n- Any of these [Geometry Read Alouds](https://www.k-5mathteachingresources.com/geometry-read-aloud.html)\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson](https://studio.code.org/s/artist/lessons/1) (50 minutes) for a basic introduction to the tool. \n\n"
           student_description: ''
         focus-on-creativity4-2023:
           lessons: {}
