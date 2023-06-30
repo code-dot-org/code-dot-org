@@ -83,16 +83,16 @@ export interface Level {
 
 export interface LevelProperties {
   // Not a complete list; add properties as needed.
-  isProjectLevel: boolean;
-  hideAndShareRemix: boolean;
+  isProjectLevel?: 'true' | 'false';
+  hideShareAndRemix?: 'true' | 'false';
   levelData: LevelData;
 }
 
 // Generic level configuration data used by labs that don't require
 // reloads between levels. Labs may define more specific fields.
 export interface LevelData {
-  text: string;
-  validations: Validation[];
+  text?: string;
+  validations?: Validation[];
   startSources: Source;
 }
 
