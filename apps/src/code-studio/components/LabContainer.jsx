@@ -22,12 +22,13 @@ import ProjectContainer from '@cdo/apps/labs/projects/ProjectContainer';
 import ProgressContainer from '@cdo/apps/labs/progress/ProgressContainer';
 import StandaloneVideo2 from '@cdo/apps/standaloneVideo2/StandaloneVideo2';
 import {getStandaloneProjectId} from '@cdo/apps/labs/projects/utils';
+import {isLabLoading} from '@cdo/apps/labs/labRedux';
 
 const LabContainer = ({onError}) => {
-  const isLabLoading = useSelector(state => state.lab.isLoading);
+  const isLoading = useSelector(isLabLoading);
   const isPageError = useSelector(state => state.lab.isPageError);
 
-  const overlayStyle = isLabLoading
+  const overlayStyle = isLoading
     ? moduleStyles.showingBlock
     : moduleStyles.fadeInBlock;
 
@@ -47,7 +48,7 @@ const LabContainer = ({onError}) => {
         id="lab-container"
         className={classNames(
           moduleStyles.labContainer,
-          isLabLoading && moduleStyles.labContainerLoading
+          isLoading && moduleStyles.labContainerLoading
         )}
       >
         <ProjectContainer channelId={channelId}>
@@ -70,7 +71,7 @@ const LabContainer = ({onError}) => {
           id="fade-overlay"
           className={classNames(moduleStyles.solidBlock, overlayStyle)}
         >
-          {isLabLoading && (
+          {isLoading && (
             <div className={moduleStyles.slowLoadContainer}>
               <div className={moduleStyles.spinnerContainer}>
                 <FontAwesome

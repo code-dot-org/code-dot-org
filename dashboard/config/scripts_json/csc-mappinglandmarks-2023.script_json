@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-mappinglandmarks",
-    "serialized_at": "2023-06-27 23:53:14 UTC",
+    "serialized_at": "2023-06-28 20:19:27 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -82,7 +82,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "In this lesson, students use their project plans from the previous class to create their interactive map. Students may be at varying stages of their plan.\n\nOnce students move to computers, they will follow a level progression that walks them through the process of setting a background, creating a tour guide, making it say “Welcome,” making it move, and adding at least 2 landmarks that trigger the tour guide to say something when touched. \n\nNote that this is a project progression, meaning student code will follow them from one level to the next. Encourage students to press “Run” on each level to save their code before progressing to the next level.\n\nThe lesson ends in a quick gallery walk in preparation of the next lesson, where students share their projects with the class. ",
-        "preparation": "- Review and complete the online tutorial yourself.\n- Prepare to return student handouts from the previous lesson. \n- Consider strategies of support for students that may not feel confident or ready to start their creative project. \n- Consider these related extensions options ([link](https://levelbuilder-studio.code.org/s/csc-mappinglandmarks-2023/lessons/3#activity-4335271))\n\n\n#####Optional:\n- [Optional] Code your own map as an exemplar for students\n- [Optional] Review this [Helpful Hints](https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview) slideshow. \n- [Optional] Review this [teacher’s guide to debugging](https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf) to be prepared to help students find and fix errors in their code. \n\n\n",
+        "preparation": "- Review and complete the online tutorial yourself.\n- Prepare to return planning guides from the previous lesson. \n- Consider strategies of support for students that may not feel confident or ready to start their creative project. \n- Consider these related extensions options ([link](https://levelbuilder-studio.code.org/s/csc-mappinglandmarks-2023/lessons/3#activity-4335271))\n\n\n#####Optional:\n- [Optional] Code your own map as an exemplar for students\n- [Optional] Review this [Helpful Hints](https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview) slideshow. \n- [Optional] Review this [teacher’s guide to debugging](https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf) to be prepared to help students find and fix errors in their code. \n\n\n",
         "purpose": "This lesson aims to provide a rich and engaging learning experience that combines computer science and geography and helps students develop a range of skills and competencies that are relevant in today's world. By coding their own tour guide app, students can explore a particular location's geographic features, cultural events, and historical sites. They can express their understanding and appreciation of this location through code and technology. The lesson also emphasizes the importance of planning, problem-solving, and self-expression in coding.",
         "student_overview": "Now it’s time to create your map with a tour guide who visits each landmark. You will follow the plan you designed last class. Follow the directions in each level carefully. In this project, your code will follow you from level to level. "
       },
@@ -101,7 +101,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "This is the final lesson in this module and is meant to celebrate all the hard work so far. Students will complete a personal reflection on their final project. Then, the whole class will present their project to their peers. Before the presentations begin, you will discuss tips for an effective presentation, including audience expectations.",
-        "preparation": "- Print a [Landmarks Map Reflection & Observation](https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview) handout for each student.\n- Consider these related extensions options ([link](https://levelbuilder-studio.code.org/s/csc-mappinglandmarks-2023/lessons/4#activity-4335272))",
+        "preparation": "- Print a [Landmarks Map Reflection & Observation](https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview) handout for each student.\n- Consider these related **extensions options ([link](https://levelbuilder-studio.code.org/s/csc-mappinglandmarks-2023/lessons/4#activity-4335272))**",
         "purpose": "This lesson allows students to share their tour guide app with their peers for feedback. This provides an opportunity for students to receive constructive criticism, reflect on their work, and make improvements to their projects. By sharing their app with their peers, students can receive feedback on their work and learn from the successes and challenges of their classmates.",
         "student_overview": "In this last lesson, you will have the chance to present your project to the rest of your class! First, you will take some time to reflect on your hard work in programming your digital landmark mark map. Then you will discuss some presentation tips and show off your hard work! "
       },
@@ -630,7 +630,7 @@
       "key": "08c3aee3-4bcb-4109-a638-e552fa4ea1d4",
       "position": 3,
       "properties": {
-        "description": "**Do This:** Before you give students their graphic organizer, instruct them to take a piece of paper for the next activity. Allow students to write their name and their map’s location on their paper. If students need help thinking of a map location, they can think-pair-share with their partners. "
+        "description": "**Do This:** Before you give students their planning guide, instruct them to take a piece of paper for the next activity. Allow students to write their name and their map’s location on their paper. If students need help thinking of a map location, they can think-pair-share with their partners. "
       },
       "seeding_key": {
         "activity_section.key": "08c3aee3-4bcb-4109-a638-e552fa4ea1d4",
@@ -735,7 +735,7 @@
       "key": "8d57510b-9d48-4ff4-b3fe-024c9e7d48cb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Project Planning\" Slide\n\n**Distribute:** Give each student a copy of the [Activity Guide](https://docs.google.com/document/d/1vRR0wk6Gma_uwKLAvXnHsB775bnWOaKtkJZQtKuzeWA/edit?usp=sharing). "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Project Planning\" Slide\n\n**Distribute:** Give each student a copy of the [Planning Guide](https://docs.google.com/document/d/1vRR0wk6Gma_uwKLAvXnHsB775bnWOaKtkJZQtKuzeWA/edit?usp=sharing). "
       },
       "seeding_key": {
         "activity_section.key": "8d57510b-9d48-4ff4-b3fe-024c9e7d48cb",
@@ -789,7 +789,7 @@
       "key": "6b737ed4-98bd-4ecf-a60d-b5aac23cd100",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Instruct students to flip to the last page of the activity guide and begin drawing their map and landmarks.  If students are struggling with drawing their ideas, remind them that these maps are meant to give them a starting place when choosing their project background and landmarks next class.",
+        "description": "**Do This:** Instruct students to flip to the last page of the planning guide and begin drawing their map and landmarks.  If students are struggling with drawing their ideas, remind them that these maps are meant to give them a starting place when choosing their project background and landmarks next class.",
         "progression_name": "Unplugged Activity"
       },
       "seeding_key": {
@@ -825,7 +825,7 @@
       "key": "75b373b0-403d-48ba-9d1b-2bb7157f9273",
       "position": 3,
       "properties": {
-        "description": "**Do This:** Have students pair up and present their activity guides to each other, as if they were a tour guide of their region. Have each partner give feedback and answer the questions on the board as time allows."
+        "description": "**Do This:** Have students pair up and present their planning guides to each other, as if they were a tour guide of their region. Have each partner give feedback and answer the questions on the board as time allows."
       },
       "seeding_key": {
         "activity_section.key": "75b373b0-403d-48ba-9d1b-2bb7157f9273",
@@ -877,7 +877,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This is a moment to check in to see how each student is feeling about their project. Here are suggestions for how to respond to students who: \n\n(1) give a thumbs up ... say \"great!\" and that you might tap them to check in with a classmate who might be feeling so-so or thumbs down. \n\n(2) give a thumb sideways ... talk to the person next to you. Chat about what's making you feel so-so about your project. What could make you feel good about starting your project? \n\n(3) give a thumbs down ... tell these students that you will check in with them once independent time starts.\n\nIf there are students feeling like they need significant support to get started, you may consider some pair programming and/or scaffolding the level of creativity of the project. To narrow the scope, you can provide some students with a new version of the planning [handout](https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/view) that you have filled out. By making some of the decisions about which costumes, starting location, and text to use, students will be able to move along with more focus. "
+            "markdown": "This is a moment to check in to see how each student is feeling about their project. Here are suggestions for how to respond to students who: \n\n(1) give a thumbs up ... say \"great!\" and that you might tap them to check in with a classmate who might be feeling so-so or thumbs down. \n\n(2) give a thumb sideways ... talk to the person next to you. Chat about what's making you feel so-so about your project. What could make you feel good about starting your project? \n\n(3) give a thumbs down ... tell these students that you will check in with them once independent time starts.\n\nIf there are students feeling like they need significant support to get started, you may consider some pair programming and/or scaffolding the level of creativity of the project. To narrow the scope, you can provide some students with a new version of the [planning guide](https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/view) that you have filled out. By making some of the decisions about which costumes, starting location, and text to use, students will be able to move along with more focus. "
           }
         ]
       },
@@ -890,7 +890,7 @@
       "key": "6f9028e9-b332-442e-aa41-bb849d96241a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Debugging Strategies\" Slide\n\n**Discuss:** What do we do if we have a bug or a challenge in our code?\n\n**Discussion Goal:** Discussing how to face challenges, normalizes the struggle students will encounter when working on a new, creative project. Students will create/review a list of strategies to try when they are feeling stuck."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Debugging Strategies\" Slide\n\n**Discuss:** What do we do if we have a bug or a challenge in our code?\n\n**Discussion Goal:** Discussing how to face challenges normalizes the struggle students will encounter when working on a new, creative project. Students will create/review a list of strategies to try when they are feeling stuck."
       },
       "seeding_key": {
         "activity_section.key": "6f9028e9-b332-442e-aa41-bb849d96241a",
@@ -913,7 +913,7 @@
       "key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Level 1-6\" Slide\n\n**Distribute:** Return student’s Mapmakers Planning handout if they were collected in the previous lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Level 1-6\" Slide\n\n**Distribute:** Return student’s Mapmakers Planning guide if they were collected in the previous lesson.",
         "duration": "10",
         "name": "Map Set Up",
         "progression_name": "Skill Building"
@@ -1941,7 +1941,7 @@
   ],
   "resources": [
     {
-      "name": "Activity Guide Planning",
+      "name": "Planning Guide [Key]",
       "url": "https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/template/preview",
       "key": "activity_guide_planning",
       "properties": {
@@ -1954,7 +1954,7 @@
       }
     },
     {
-      "name": "Activity Guide Planning",
+      "name": "Planning Guide",
       "url": "https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview",
       "key": "activity_guide_planning_1",
       "properties": {
@@ -1964,6 +1964,19 @@
       },
       "seeding_key": {
         "resource.key": "activity_guide_planning_1"
+      }
+    },
+    {
+      "name": "Books about Maps List",
+      "url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/template/preview",
+      "key": "books_about_maps_list",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/download",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "books_about_maps_list"
       }
     },
     {
@@ -2003,6 +2016,19 @@
       },
       "seeding_key": {
         "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "name": "List of books about maps",
+      "url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/template/preview",
+      "key": "list_of_books_about_maps",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/download",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "list_of_books_about_maps"
       }
     },
     {
@@ -2071,6 +2097,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project Share Out",
+        "resource.key": "books_about_maps_list"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
         "resource.key": "helpful_hints"
       }
     },
@@ -2096,6 +2128,12 @@
       "seeding_key": {
         "lesson.key": "US Landmarks",
         "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "US Landmarks",
+        "resource.key": "list_of_books_about_maps"
       }
     }
   ],
@@ -2260,7 +2298,7 @@
     {
       "key": "829ee795-fac0-4509-8b25-cd11f443e52e",
       "properties": {
-        "description": "Practice effective presentation strategies when showcasing the tour guide app to peers, including clear communication of implemented features, the purpose, and the significance of the project. "
+        "description": "Demonstrate an understanding of the power of using code to make a map interactive, engaging users and enhance geographic understanding. "
       },
       "seeding_key": {
         "lesson.key": "Project Share Out",
@@ -2278,9 +2316,19 @@
       }
     },
     {
+      "key": "98520886-dfc7-4343-a7ba-c32e0a8b043f",
+      "properties": {
+        "description": "Students will develop a written plan outlining the steps they will take to code their digital mapping landmarks project, including identifying key features, planning the layout, and describing the purpose of their map."
+      },
+      "seeding_key": {
+        "lesson.key": "Local Landmarks - Unplugged Project Planning",
+        "objective.key": "98520886-dfc7-4343-a7ba-c32e0a8b043f"
+      }
+    },
+    {
       "key": "ac701f5c-93be-48e3-b614-d5be26d5b11d",
       "properties": {
-        "description": "Reflect on the coding process of creating a digital map, highlighting successes, challenges, and lessons learned."
+        "description": "Engage in a personal reflection on the coding process of creating a digital map, highlighting successes, challenges, and lessons learned. "
       },
       "seeding_key": {
         "lesson.key": "Project Share Out",
@@ -2298,9 +2346,19 @@
       }
     },
     {
+      "key": "f5a42772-0ecb-42e3-825f-81dc236b9151",
+      "properties": {
+        "description": "Practice effective presentation strategies when showcasing the interactive map to peers, including clear communication of implemented features, the purpose, and the significance of the project. "
+      },
+      "seeding_key": {
+        "lesson.key": "Project Share Out",
+        "objective.key": "f5a42772-0ecb-42e3-825f-81dc236b9151"
+      }
+    },
+    {
       "key": "f625be86-4b66-4421-8a7c-f724fd230eb5",
       "properties": {
-        "description": "Incorporate text explanations within the interactive map to communicate the significance of landmarks."
+        "description": "Utilize coding skills to incorporate text explanations within the interactive map to communicate the significance of landmarks."
       },
       "seeding_key": {
         "lesson.key": "Local Landmarks - Coding Your Project",

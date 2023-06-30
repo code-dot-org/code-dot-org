@@ -151,6 +151,8 @@ class UnconnectedMusicView extends React.Component {
 
     this.state = {
       showingVideo: true,
+      loadedLibrary: false,
+      currentLibraryName: null,
     };
 
     // Music Lab currently does not support share and remix
@@ -171,42 +173,9 @@ class UnconnectedMusicView extends React.Component {
     window.addEventListener('beforeunload', event => {
       this.analyticsReporter.endSession();
     });
-
-    const promises = [];
-
-    // Load library data.
-    promises.push(loadLibrary());
-
-    Promise.all(promises)
-      .then(values => {
-        this.library = values[0];
-
-        if (getBlockMode() === BlockMode.SIMPLE2) {
-          this.sequencer = new Simple2Sequencer(this.library);
-        } else {
-          this.sequencer = new MusicPlayerStubSequencer();
-        }
-
-        Globals.setLibrary(this.library);
-        Globals.setPlayer(this.player);
-
-        this.musicBlocklyWorkspace.init(
-          document.getElementById('blockly-div'),
-          this.onBlockSpaceChange,
-          this.player
-        );
-        this.player.initialize(this.library);
-      })
-      .catch(error => {
-        this.onError(error);
-      });
   }
 
-  componentDidUpdate(prevProps) {
-    if (!this.props.isActive) {
-      //return;
-    }
-
+  async componentDidUpdate(prevProps) {
     this.musicBlocklyWorkspace.resizeBlockly();
 
     if (
@@ -243,6 +212,17 @@ class UnconnectedMusicView extends React.Component {
     // If we just finished loading the lab, then we need to update the
     // sources and level data.
     if (!prevProps.labReadyForReload && this.props.labReadyForReload) {
+      // Load and initialize the library and player if not done already.
+      // Read the library name first from level data, or from the project
+      // sources if not present on the level. If there is no library name
+      // specified on the level or sources, we will fallback to loading the
+      // default library.
+      let libraryName = this.props.levelData?.library;
+      if (!libraryName && this.props.sources?.labConfig?.music) {
+        libraryName = this.props.sources.labConfig.music.library;
+      }
+      await this.loadAndInitializePlayer(libraryName);
+
       if (this.getStartSources() || this.props.sources) {
         let codeToLoad = this.getStartSources();
         if (this.props.sources?.source) {
@@ -261,6 +241,46 @@ class UnconnectedMusicView extends React.Component {
       this.props.setLabReadyForReload(false);
     }
   }
+
+  // Load the library and initialize the music player, if not already loaded.
+  // Currently, we only load one library per progression.
+  loadAndInitializePlayer = async libraryName => {
+    if (this.state.loadedLibrary) {
+      return;
+    }
+
+    this.props.setIsLoading(true);
+
+    try {
+      this.library = await loadLibrary(libraryName);
+    } catch (error) {
+      this.onError(error);
+      return;
+    }
+
+    if (getBlockMode() === BlockMode.SIMPLE2) {
+      this.sequencer = new Simple2Sequencer(this.library);
+    } else {
+      this.sequencer = new MusicPlayerStubSequencer();
+    }
+
+    Globals.setLibrary(this.library);
+    Globals.setPlayer(this.player);
+
+    this.musicBlocklyWorkspace.init(
+      document.getElementById('blockly-div'),
+      this.onBlockSpaceChange,
+      this.player
+    );
+    this.player.initialize(this.library);
+
+    this.setState({
+      loadedLibrary: true,
+      currentLibraryName: libraryName,
+    });
+
+    this.props.setIsLoading(false);
+  };
 
   onError = error => {
     this.props.setIsPageError(true);
@@ -447,8 +467,16 @@ class UnconnectedMusicView extends React.Component {
     const workspaceCode = this.musicBlocklyWorkspace.getCode();
     const sourcesToSave = {
       source: JSON.stringify(workspaceCode),
-      // TODO save library name to sources
     };
+
+    // Save the current library to sources as part of labConfig if present
+    if (this.state.currentLibraryName) {
+      sourcesToSave.labConfig = {
+        music: {
+          library: this.state.currentLibraryName,
+        },
+      };
+    }
 
     LabRegistry.getInstance()
       .getProjectManager()
