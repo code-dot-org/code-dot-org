@@ -60,6 +60,7 @@ class LessonEditor extends Component {
       assessmentOpportunities:
         this.props.initialLessonData.assessmentOpportunities || '',
       unplugged: this.props.initialLessonData.unplugged,
+      useLabContainer: this.props.initialLessonData.useLabContainer,
       lockable: this.props.initialLessonData.lockable,
       hasLessonPlan: this.props.initialLessonData.hasLessonPlan,
       creativeCommonsLicense:
@@ -90,6 +91,7 @@ class LessonEditor extends Component {
         creativeCommonsLicense: this.state.creativeCommonsLicense,
         assessment: this.state.assessment,
         unplugged: this.state.unplugged,
+        useLabContainer: this.state.useLabContainer,
         overview: this.state.overview,
         studentOverview: this.state.studentOverview,
         assessmentOpportunities: this.state.assessmentOpportunities,
@@ -148,6 +150,7 @@ class LessonEditor extends Component {
       studentOverview,
       assessmentOpportunities,
       unplugged,
+      useLabContainer,
       lockable,
       hasLessonPlan,
       creativeCommonsLicense,
@@ -253,6 +256,20 @@ class LessonEditor extends Component {
               <p>
                 Check this box if the lesson does not require use of a device.
               </p>
+            </HelpTip>
+          </label>
+          <label>
+            Use Lab Container
+            <input
+              type="checkbox"
+              checked={useLabContainer}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({useLabContainer: !useLabContainer})
+              }
+            />
+            <HelpTip>
+              <p>Check this box if the lesson uses the Lab Container.</p>
             </HelpTip>
           </label>
           <label>

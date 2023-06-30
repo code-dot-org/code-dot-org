@@ -193,6 +193,7 @@ class LessonsController < ApplicationController
       :assessment_opportunities,
       :assessment,
       :unplugged,
+      :use_lab_container,
       :creative_commons_license,
       :lockable,
       :has_lesson_plan,
