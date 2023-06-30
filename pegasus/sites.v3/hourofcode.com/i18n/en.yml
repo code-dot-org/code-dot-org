@@ -288,7 +288,7 @@
   values_05: "We act with integrity and transparency"
   values_06: "We believe broad impact requires thinking big and acting holistically"
 
-  heading_professional_learning: "Professional Learning"
+  heading_professional_learning: "Professional learning that meets your needs"
   heading_additional_resources: "Additional resources"
   heading_support_and_questions: "Support and questions"
   heading_faq: "Frequently asked questions"
@@ -301,9 +301,8 @@
   heading_flexible_units: "Flexible units"
   heading_collections: "Collections"
 
-  professional_learning_section_subhead: "Get the support you need as you prepare to teach."
-  professional_learning_section_desc_v1: "Compared with similarly-situated schools, [a school's participation in the Code.org Professional Learning program causes an estimated five-fold increase](%{url}) in the number of students that take, and earn qualifying scores on the AP Computer Science Principles exam. And teachers love it! Over 90% rank it the best professional development ever."
-  professional_learning_section_block_facilitator_led_workshops: "Our highly supportive Professional Learning Program will bring you together with a group of teachers to learn from each other as well as expert facilitators as you take on the first year of teaching the free CS Principles curriculum to your students. In-person and virtual workshops starting this summer."
+  professional_learning_section_desc: "Get the support you need as you prepare to teach. Teachers love it, with over 90% ranking it the best professional development ever!"
+  professional_learning_section_block_facilitator_led_workshops: "Our highly supportive Professional Learning Program will bring you together with a group of teachers to learn from each other as well as expert facilitators as you take on the first year of teaching the free curriculum to your students. In-person and virtual workshops starting this summer."
 
   support_and_questions_section_subhead: "Still have questions? Reach out to us! We are here to help."
   support_and_questions_section_desc: "Our support team is here to answer any questions you may have about starting teaching with Code.org. You can also ask other teachers about their experience on our teacher forums."
@@ -642,7 +641,7 @@
   csd_page_curriculum_glance_professional_languages: "English"
   csd_page_curriculum_glance_professional_accessibility_features: "Text-to-speech, Closed captioning, Immersive reader"
   csd_page_pick_a_course_heading: "Picking the right CS Discoveries course for your classroom"
-  csd_page_pick_a_course_desc: "With the diverse set of options offered for CS Discoveries, there is a course for all different needs. Two good ways to choose which option is best for your classroom are based on how much time you have and how much you want to customize the topics."
+  csd_page_pick_a_course_desc: "With the diverse set of options offered for CS Discoveries, there is a course for all different needs."
   csd_page_pick_a_course_heading_02: "How do you want to pick the content?"
   csd_page_courses_year_desc: "Through 7 units students explore a wide variety of topics."
   csd_page_courses_year_action_block_desc: "An introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun. "

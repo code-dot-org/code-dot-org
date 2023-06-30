@@ -59,8 +59,7 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %h2=hoc_s(:heading_professional_learning)
-    = view :curriculum_pages_pl_section
+    = view :curriculum_pages_pl_section, modules_url: CDO.studio_url("/courses/self-paced-pl-csp-2022?no_redirect=true")
 
 = view :section_divider_line
 
