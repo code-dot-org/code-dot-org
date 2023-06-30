@@ -13,11 +13,26 @@ var audioIdUpto = 0;
 
 var audioSystem = null;
 
-export function InitSound(desiredSounds) {
+/**
+ *
+ * @param {*} desiredSounds A list of sounds to load into the audio system.
+ *  Each sound has a format:
+ *  {
+ *    path: string // relative file path to load,
+ *    restricted: boolean // if this sound is restricted (and should be
+ *        loaded from the restricted bucket)
+ *  }
+ * @param {*} options Optional audio system configuration.
+ *   {
+ *     delayTimeSeconds: number, // Delay time used in the delay effect
+ *     releaseTimeSeconds: number // Release time for fading out fixed-duration sounds
+ *   }
+ */
+export function InitSound(desiredSounds, options) {
   // regular web version.
   baseSoundUrl = 'https://curriculum.code.org/media/musiclab/';
   restrictedSoundUrlPath = '/restricted/musiclab/';
-  audioSystem = new WebAudio();
+  audioSystem = new WebAudio(options);
 
   LoadSounds(desiredSounds);
 }
@@ -80,12 +95,21 @@ export function PlaySound(
   when = 0,
   onStop = () => {},
   loop = false,
-  effects = false
+  effects = false,
+  duration = undefined
 ) {
   for (var i = 0; i < soundList.length; i++) {
     if (soundList[i].path === name) {
       // Always provide a groupTag.  If one wasn't provided, just use the sound name as the group name.
-      return PlaySoundByIndex(i, groupTag || name, when, loop, effects, onStop);
+      return PlaySoundByIndex(
+        i,
+        groupTag || name,
+        when,
+        loop,
+        effects,
+        onStop,
+        duration
+      );
     }
   }
 }
@@ -96,7 +120,8 @@ function PlaySoundByIndex(
   when,
   loop,
   effects,
-  onStop
+  onStop,
+  duration
 ) {
   if (!audioSoundBuffers[audioBufferIndex]) {
     return;
@@ -127,7 +152,8 @@ function PlaySoundByIndex(
       if (onStop) {
         onStop();
       }
-    }
+    },
+    duration
   );
 
   tagGroup.sources.push({source: source, id: audioIdUpto});

@@ -14,5 +14,7 @@
   "blockly_toolboxCategoryVariables": "Змінні",
   "feedback": "Зворотний зв'язок",
   "share": "Поділитися",
-  "startOver": "Почати знову"
+  "startOver": "Почати спочатку",
+  "panelHeaderInstructions": "Інструкції",
+  "panelHeaderWorkspace": "Робоча область: "
 }

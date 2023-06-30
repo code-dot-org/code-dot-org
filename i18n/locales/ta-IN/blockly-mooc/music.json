@@ -54,5 +54,7 @@
   "share": "பகிர்",
   "shareComingSoon": "பகிர்தல் கட்டுமானத்தின் கீழ் உள்ளது. விரைவில் மீண்டும் சரிபார்க்கவும்.",
   "startOver": "மீண்டும் துவங்கு",
-  "upload": "பதிவேற்றவும்"
+  "upload": "பதிவேற்றவும்",
+  "panelHeaderInstructions": "வழிமுறைகள்",
+  "panelHeaderWorkspace": "பணிவெளி: "
 }

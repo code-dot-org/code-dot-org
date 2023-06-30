@@ -3835,3 +3835,7 @@ az:
               display_name: Kurs layihələrinin sonu!
           description_audience: 'Yaşlar: 9-13'
           description_short: Kompüter Elmlərinin Əsasları üzrə bütün anlayışları öyrənin və öz sənətinizi, hekayənizi və ya oyununuzu yaradın.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Dərslər

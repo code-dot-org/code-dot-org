@@ -37,14 +37,14 @@ km:
           it with your finger to see if you can figure it out on\nyour first try."
         jigsaw_1: ចុចលើប្លុក
         jigsaw_2: អូសប្លុកទៅរកគោលដៅ
-        jigsaw_3: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_3: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
         jigsaw_4: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
-        jigsaw_5: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
-        jigsaw_6: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
-        jigsaw_7: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
-        jigsaw_8: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
-        jigsaw_9: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
-        jigsaw_10: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_5: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_6: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_7: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_8: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_9: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_10: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
         jigsaw_11: ដាក់ប្លុកទាំងនេះ តាមលំដាប់លំដោយលេខរៀង
         jigsaw_12: ដាក់ប្លុកទាំងនេះ តាមលំដាប់លំដោយលេខរៀង
         studio_c2_8: "Can you have Waddles (actor 1) say\n\"Ouch!\" and play a \"hit\"
@@ -83,10 +83,10 @@ km:
         C3_computational_thinking: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         C4_loops_zombie: រង្វិល​ជុំ
         C4_conditionals: លក្ខខណ្ឌ
-        CSF_a_b_artist_loops: ប្រតិបត្ដិដដែលៗជាមួយសិល្បះកូដប្លុក
-        CSF_collector_k1_blocks: 'មូលដ្ធានគ្រឹះ វិទ្យាសាស្រ្តកុំព្យូទ័រ : អ្នកប្រមូល'
-        CSF_collector_repeat_loops: អ្នកប្រមូល ធ្វើដដែលៗឡើងវិញ
-        CSF_collector_text_blocks: 'មូលដ្ធានគ្រឹះ វិទ្យាសាស្រ្តកុំព្យូទ័រ : អ្នកប្រមូល'
+        CSF_a_b_artist_loops: សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)
+        CSF_collector_k1_blocks: 'មូលដ្ធានគ្រឹះ វិទ្យាសាស្រ្តកុំព្យូទ័រ : អ្នកប្រមូលកំណប់'
+        CSF_collector_repeat_loops: ការប្រើប្រាស់កូដប្លុក ធ្វើឡើងវិញ​​ (loops)
+        CSF_collector_text_blocks: 'មូលដ្ធានគ្រឹះ វិទ្យាសាស្រ្តកុំព្យូទ័រ : អ្នកប្រមូលកំណប់'
         CSF_debugging_k1_blocks: ការបំបាត់កំហុស (Debugging)
         CSF_debugging_text_blocks: ការបំបាត់កំហុស (Debugging)
         CSF_maze_intro_k1_blocks: ការណែនាំអំពីកូដស្ទូឌីយោ (Code studio)
@@ -108,12 +108,14 @@ km:
         CSF_skinOverview_Harvester: អ្នកប្រមូលផល
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: ការធ្វើដដែលៗជាមួយ​ BB-8
         CSF_harvester_skinOverview_K-1: អ្នកប្រមូលផល
         CSF_scrat_loops_K1: ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក
         CSF_scrat_loops_CF: រង្វិលជុំក្នុងយុគសម័យទឹកកក
         CSF_loops_AB: រង្វិល​ជុំ
         hoc_dance_events: ព្រឹត្ដិការណ៍ - Dance Party
         hoc_dance_properties: លក្ខណៈសម្បត្តិ - Dance Party
+        CSF_SpriteLab_Intro_v2: សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍
         csd_debugging: ការបំបាត់កំហុស (Debugging)
         hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - Dance Party
         hoc_dance_properties_2019: លក្ខណៈសម្បត្តិ - Dance Party

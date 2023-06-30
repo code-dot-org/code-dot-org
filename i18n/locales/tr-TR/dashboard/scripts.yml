@@ -7002,3 +7002,7 @@ tr:
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
           description: Beşinci sınıftaki öğrenciler için Kurs F'yi oluşturduk. Kurs, kullanıcıların kullandıkları uygulamalarda nasıl seçim yaptıklarına bakarak başlar. Öğrenciler daha sonra kullanıcı için seçenekler de sunan çeşitli Sprite Lab uygulamaları yapmayı öğrenirler. Kursun sonraki derslerinde, öğrenciler çeşitli bağlamlardaki değişkenleri öğreneceklerdir. Öğrencilere bu kurs boyunca daha fazla özerklik ve daha fazla seçenek verilir. Kursun sonunda öğrenciler, arkadaşları ve aileleri ile paylaşmak üzere etkileşimli projeler oluşturmuş olacaklardır.
           student_description: Hareketli karakterler ve değişkenlerle kodlamayı öğrenin ve bilgisayar ve internetin toplumsal etkilerini tartışın. Bu kursun sonunda arkadaşlarınız ve ailenizle paylaşabileceğiniz bir proje tasarlayın ve oluşturun.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sınıflar

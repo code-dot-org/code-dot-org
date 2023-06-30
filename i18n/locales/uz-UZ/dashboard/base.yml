@@ -60,6 +60,7 @@ uz:
         reset_password_token: "Siz kirib o'tgan parolni qayta tiklash uchun havola"
         error:
           future: yaqin orada bo`la olmaydi
+        us_state: 'Davlat'
   beta: "beta"
   hello: "Salom Dunyo"
   welcome_back: "Qayta tashrifingiz bilan, %{name}"
@@ -200,6 +201,7 @@ uz:
     parent_account_checkbox: "Men farzandim nomidan ro'yxatdan o'tgan ota-ona/vasiyiman"
     parent_account_email_progress_permission: "Biz sizga elektron pochta orqali bolangizning taraqqiyoti va loyihalari to‘g‘risida, ularning kursi va kompyuter fanlari haqidagi yangiliklarni vaqti-vaqti bilan yuborib tursak bo‘ladimi?  [(Maxfiylik siyosatimizga qarang)](%{privacy_policy_url})"
     parent_account_email_label: "Ota-ona/Vasiy emaili"
+    us_state: 'Davlat'
   school_info:
     title: 'Maktab haqida ma''lumot (ixtiyoriy)'
     school_country: 'Maktab davlati'
@@ -1172,6 +1174,7 @@ uz:
         csf_express: 'CS Fundamentals  - Informatika asoslari (Pre-Express yoki Express)'
         csd: 'Kompyuter fanlari kashfiyotlari'
         csp: 'CS Principles -Informatika tamoyillari'
+        other: 'Boshqa'
         not_applicable: "Mavjud emas"
       email_opt_in:
         opt_in_yes: 'Ha'

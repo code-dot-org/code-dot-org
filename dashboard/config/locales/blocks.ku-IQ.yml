@@ -1546,6 +1546,8 @@ ku:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: چاپکردن {TEXT}
       storylab_setForegroundEffect2:
         options:
           EFFECT:

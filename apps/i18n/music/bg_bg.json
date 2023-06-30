@@ -18,5 +18,7 @@
   "feedback": "Обратна връзка",
   "share": "Сподели",
   "startOver": "Стартиране отначало",
-  "upload": "Качване"
+  "upload": "Качване",
+  "panelHeaderInstructions": "Инструкции",
+  "panelHeaderWorkspace": "Работна област: "
 }

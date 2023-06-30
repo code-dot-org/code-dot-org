@@ -25,13 +25,15 @@ export function convertXmlToJson(xml) {
 
   const stateToLoad = Blockly.serialization.workspaces.save(tempWorkspace);
 
-  // Create a map of ids (key) and block serializations (value).
-  const blockIdMap = stateToLoad.blocks.blocks.reduce(
-    (map, blockJson) => map.set(blockJson.id, blockJson),
-    new Map()
-  );
+  if (xmlBlocks.length && stateToLoad.blocks) {
+    // Create a map of ids (key) and block serializations (value).
+    const blockIdMap = stateToLoad.blocks.blocks.reduce(
+      (map, blockJson) => map.set(blockJson.id, blockJson),
+      new Map()
+    );
 
-  addPositionsToState(xmlBlocks, blockIdMap);
+    addPositionsToState(xmlBlocks, blockIdMap);
+  }
   tempWorkspace.dispose();
   return stateToLoad;
 }

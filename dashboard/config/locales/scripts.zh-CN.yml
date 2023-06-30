@@ -8603,3 +8603,9 @@ zh-CN:
             \-了解与更广泛的 CS 社区建立联系的机会。
 
             **建议时间**：70 分钟
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 班级
+            lessonGroup-5:
+              display_name: 二维数组

@@ -368,12 +368,12 @@ end
 # ]
 #
 def browser_features
-  ($browsers.product features_to_run).map do |browser, feature|
+  ($browsers.product features_to_run).filter_map do |browser, feature|
     arguments = cucumber_arguments_for_browser(browser, $options)
     scenario_count = ParallelTests::Cucumber::Scenarios.all([feature], test_options: arguments).length
     next if scenario_count.zero?
     [browser, feature]
-  end.compact
+  end
 end
 
 def test_type

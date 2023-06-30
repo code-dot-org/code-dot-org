@@ -1674,6 +1674,8 @@ se:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: čálit {TEXT}
       storylab_setForegroundEffect2:
         options:
           EFFECT:

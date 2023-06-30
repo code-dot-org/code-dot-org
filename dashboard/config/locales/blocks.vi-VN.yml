@@ -2566,6 +2566,8 @@ vi:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: hiển thị {TEXT}
       storylab_setForegroundEffect2:
         text: làm hiệu ứng {EFFECT}
         options:

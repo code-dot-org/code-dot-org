@@ -95,6 +95,9 @@
           "overview": "V učni uri \"postavljanja konteksta\" bodo učenci uporabljali nabor simbolov za izdelavo robota, ki bo zlagal lončke v različne vzorce. Učenci se bodo izmenjevali v vlogi robota, ki se bo odzval zgolj na algoritem, ki ga bodo določili sovrstniki.",
           "preparation": "– Pripravi kup 20 papirnatih lončkov za vsako skupino 2–3 učencev.\n– Prikažite simbole iz **\\*Preglednice simbolov**, iz katere bodo učenci črpali med uro.\n– (Opcijsko) Natisnite eno \\*_\\\\_Idejo postavitve lončkov\\* za vsako skupino."
         },
+        "coursec-2022/Programming with Angry Birds": {
+          "preparation": "-   Igrajte skozi uganke, da bi našli morebitna problematična področja za vaš razred.\n-   (Neobvezno) Izberite nekaj nalog, ki jih želite narediti kot skupina s svojim razredom. "
+        },
         "coursec-2022/Debugging in Maze": {
           "name": "Odpravljanje napak v labirintu"
         },
@@ -451,6 +454,12 @@
         "coursee-2017/Nested Loops": {
           "name": "Gnezdenje zank"
         },
+        "coursee-2017/Build a Play Lab Game": {
+          "name": "Zgradite igro v Play Labu"
+        },
+        "coursec-2017/Building a Foundation": {
+          "name": "Vztrajnost: Gradnja temeljev"
+        },
         "coursec-2017/Programming in Maze": {
           "name": "Programiranje v labirintu"
         },
@@ -478,6 +487,12 @@
         "coursec-2017/Events in Play Lab": {
           "name": "Dogodki v Play Lab"
         },
+        "coursec-2017/Screen Out the Mean": {
+          "name": "Digitalno državljanstvo: Ne bodite nesramni"
+        },
+        "coursec-2017/Binary Bracelets": {
+          "name": "Programiranje: Binarne slike"
+        },
         "courseb-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Življenjski algoritmi: Zasadi seme"
         },
@@ -490,8 +505,50 @@
         "courseb-2017/Events in Play Lab": {
           "name": "Dogodki v Play Lab"
         },
+        "coursed-2017/Algorithms: Graph Paper Programming": {
+          "name": "Programiranje: Programiranje na papirju"
+        },
         "coursed-2017/Nested Loops": {
           "name": "Gnezdenje zank"
+        },
+        "coursed-2017/Nested Loops in Artist": {
+          "name": "Vgnezdene zanke v Umetniku"
+        },
+        "coursed-2017/Nested Loops Project in Artist": {
+          "name": "Vgnezdene zanke v Ledenem kraljestvu"
+        },
+        "coursed-2017/Algorithms: Relay Programming": {
+          "name": "Odpravljanje napak: Programiranje releja"
+        },
+        "coursed-2017/Debugging in Collector": {
+          "name": "Odpravljanje napak v zbiralniku"
+        },
+        "coursed-2017/Conditionals with Cards": {
+          "name": "Pogojniki s kartami"
+        },
+        "coursed-2017/Conditionals in Bee": {
+          "name": "Pogojniki s čebelico"
+        },
+        "coursed-2017/Conditionals & Loops in Maze": {
+          "name": "Pogoji in zanke v labirintu"
+        },
+        "coursed-2017/Conditionals & Loops in Farmer": {
+          "name": "Pogoji in zanke v Harvester"
+        },
+        "coursed-2017/Digital Citizenship": {
+          "name": "Digitalno državljanstvo: Vadba digitalnega državljanstva"
+        },
+        "coursed-2017/Build a Play Lab Game": {
+          "name": "Zgradite igro v Play Labu"
+        },
+        "coursed-2017/Unplugged: Binary": {
+          "name": "Programiranje: Binarne slike"
+        },
+        "coursed-2017/Artist Binary": {
+          "name": "Binarni sistem v Umetniku"
+        },
+        "express-2017/Algorithms: Graph Paper Programming": {
+          "name": "Programiranje: Programiranje na papirju"
         },
         "express-2017/Introduction": {
           "name": "Uvod"
@@ -502,8 +559,20 @@
         "express-2017/Nested Loops": {
           "name": "Gnezdenje zank"
         },
+        "express-2017/Nested Loops Project in Frozen": {
+          "name": "Vgnezdene zanke v Ledenem kraljestvu"
+        },
+        "express-2017/Common Sense Education: Digital Citizenship": {
+          "name": "Digitalno državljanstvo: Vadba digitalnega državljanstva"
+        },
+        "express-2017/Common Sense Education: Screen Out the Mean": {
+          "name": "Digitalno državljanstvo: Ne bodite nesramni"
+        },
         "express-2017/Events: The Big Event": {
           "name": "Dogodki: Veliki dogodek"
+        },
+        "express-2017/Conditionals & Loops in Harvester": {
+          "name": "Pogoji in zanke v Harvester"
         },
         "csd3-2017/Variables": {
           "name": "Spremenljivke"

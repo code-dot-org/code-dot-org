@@ -7585,3 +7585,7 @@ ka:
           description_audience: 'ასაკი: 9-13'
           description_short: ვისწავლოთ ყველა ცნება კომპიუტერული მეცნიერების საფუძვლები
             და შექმნათ თქვენი საკუთარი ხელოვნება, ამბავი ან თამაში.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: კლასები

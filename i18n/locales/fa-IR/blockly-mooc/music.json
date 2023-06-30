@@ -56,5 +56,7 @@
   "feedback": "ﺑﺎﺯﺧﻮﺭﺩ",
   "share": "به اشتراک گذاری",
   "shareComingSoon": "به اشتراک گذاری در دست ساخت است. به زودی بررسی کنید",
-  "startOver": "دوباره شروع کنید"
+  "startOver": "دوباره شروع کنید",
+  "panelHeaderInstructions": "دستورالعمل ها",
+  "panelHeaderWorkspace": "محیط کار: "
 }

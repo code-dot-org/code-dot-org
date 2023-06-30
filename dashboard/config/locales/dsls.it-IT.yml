@@ -10510,132 +10510,195 @@ it-IT:
         title: Test Post-Progetto di Informatica Fisica
       CSD U1 IOSP match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Ottiene la previsione meteorologica del giorno da Internet
+        - text: Mostra un'immagine di un bel vestito all'utente.
+        - text: Mantiene un elenco di abiti disponibili e in che tipo di meteo sono
+            indossati
+        - text: Abbina le condizioni meteorologiche agli abiti adatti a tale condizione
         questions:
         - text: Input
         - text: Output
         - text: Memoria
         - text: Elaborazione
         title: Domanda n. 2
+        content1: Un team sta creando un'app che aiuterà le persone a decidere quali
+          abiti indossare alla mattina. Abbina quattro cose che l'app fa con input,
+          output, archiviazione ed elaborazione.
       CSD U1 IOSP match_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Ottiene la previsione meteorologica del giorno da Internet
+        - text: Mostra un'immagine di un bel vestito all'utente.
+        - text: Mantiene un elenco di abiti disponibili e in che tipo di meteo sono
+            indossati
+        - text: Abbina le condizioni meteorologiche agli abiti adatti a tale condizione
         questions:
         - text: Input
         - text: Output
         - text: Memoria
         - text: Elaborazione
         title: Domanda n. 2
+        content1: Un team sta creando un'app che aiuterà le persone a decidere quali
+          abiti indossare alla mattina. Abbina quattro cose che l'app fa con input,
+          output, archiviazione ed elaborazione.
       CSD U1 IOSP match_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Ottiene la previsione meteorologica del giorno da Internet
+        - text: Mostra un'immagine di un bel vestito all'utente.
+        - text: Mantiene un elenco di abiti disponibili e in che tipo di meteo sono
+            indossati
+        - text: Abbina le condizioni meteorologiche agli abiti adatti a tale condizione
         questions:
         - text: Input
         - text: Output
         - text: Memoria
         - text: Elaborazione
         title: Domanda n. 2
+        content1: Un team sta creando un'app che aiuterà le persone a decidere quali
+          abiti indossare alla mattina. Abbina quattro cose che l'app fa con input,
+          output, archiviazione ed elaborazione.
       CSD U1 Test PSP match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Decidere esattamente cosa vogliono dipingere, di cosa hanno bisogno
+            e chi svolgerà ogni parte.
+        - text: Discutere di cosa apprezzano del murale e come potrebbe essere migliorato.
+        - text: Dipingere il murale.
+        - text: Chiedere agli insegnanti di che tipo di murale necessitano e quanto
+            dev'essere grande
         questions:
         - text: Prepara
         - text: Rifletti
         - text: Prova
         - text: Definisci
         title: Domanda n. 2
+        content1: Cinque studenti stanno dipingendo un murale sul lato della loro
+          scuola. Abbina ciò che stanno facendo a un passaggio del Procedimento di
+          Risoluzione dei Problemi.
       CSD U1 Test PSP match_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Decidere esattamente cosa vogliono dipingere, di cosa hanno bisogno
+            e chi svolgerà ogni parte.
+        - text: Discutere di cosa apprezzano del murale e come potrebbe essere migliorato.
+        - text: Dipingere il murale.
+        - text: Chiedere agli insegnanti di che tipo di murale necessitano e quanto
+            dev'essere grande
         questions:
         - text: Prepara
         - text: Rifletti
         - text: Prova
         - text: Definisci
         title: Domanda n. 2
+        content1: Cinque studenti stanno dipingendo un murale sul lato della loro
+          scuola. Abbina ciò che stanno facendo a un passaggio del Procedimento di
+          Risoluzione dei Problemi.
       CSD U1 Test PSP match_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Decidere esattamente cosa vogliono dipingere, di cosa hanno bisogno
+            e chi svolgerà ogni parte.
+        - text: Discutere di cosa apprezzano del murale e come potrebbe essere migliorato.
+        - text: Dipingere il murale.
+        - text: Chiedere agli insegnanti di che tipo di murale necessitano e quanto
+            dev'essere grande
         questions:
         - text: Prepara
         - text: Rifletti
         - text: Prova
         - text: Definisci
         title: Domanda n. 2
+        content1: Cinque studenti stanno dipingendo un murale sul lato della loro
+          scuola. Abbina ciò che stanno facendo a un passaggio del Procedimento di
+          Risoluzione dei Problemi.
       CSD U1 Test define a computer:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Una macchina che lavora con le informazioni per aiutare le persone
+            a pensare agli incarichi
+          correct: true
+        - text: Una macchina con uno schermo e una tastiera
+        - text: Una macchina che può connettersi a Internet
+        - text: Una macchina che immette, emette, archivia ed elabora informazioni
+          correct: true
+        - text: Una macchina che utilizza l'elettricità (da un cavo o una batteria)
         questions:
-        - {}
+        - text: Quali DUE dei seguenti sono i migliori modi per definire un computer?
+            (Scegline DUE)
         title: Domanda n. 1
       CSD U1 Test define a computer_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Una macchina che lavora con le informazioni per aiutare le persone
+            a pensare agli incarichi
+          correct: true
+        - text: Una macchina con uno schermo e una tastiera
+        - text: Una macchina che può connettersi a Internet
+        - text: Una macchina che immette, emette, archivia ed elabora informazioni
+          correct: true
+        - text: Una macchina che utilizza l'elettricità (da un cavo o una batteria)
         questions:
-        - {}
+        - text: Quali DUE dei seguenti sono i migliori modi per definire un computer?
+            (Scegline DUE)
         title: Domanda n. 1
       CSD U1 Test define a computer_2022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Una macchina che lavora con le informazioni per aiutare le persone
+            a pensare agli incarichi
+          correct: true
+        - text: Una macchina con uno schermo e una tastiera
+        - text: Una macchina che può connettersi a Internet
+        - text: Una macchina che immette, emette, archivia ed elabora informazioni
+          correct: true
+        - text: Una macchina che utilizza l'elettricità (da un cavo o una batteria)
         questions:
-        - {}
+        - text: Quali DUE dei seguenti sono i migliori modi per definire un computer?
+            (Scegline DUE)
         title: Domanda n. 1
       CSD U1 Test define problem:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Coda per il pranzo, perché è chiaro come sapere che le persone aspettano
+            meno tempo, ma è più difficile sapere quale sarebbe lo spirito scolastico
+          correct: true
+        - text: Coda per il pranzo, perché è più facile creare regole sullo stare
+            in fila, che creare regole sullo spirito scolastico
+        - text: Spirito scolastico, perché puoi sempre averne di più, ma la coda per
+            il pranzo potrebbe già essere la più breve possibile
+        - text: Spirito scolastico, perché è migliore per gli studenti, mentre gli
+            adulti dovrebbero occuparsi della coda per il pranzo
         questions:
-        - {}
+        - text: Due classi desiderano migliorare la propria scuola. Una desidera abbreviare
+            la quantità di tempo che gli studenti attendono nella coda per il pranzo.
+            Un'altra desidera incrementare lo spirito scolastico. Quale problema è
+            definito meglio?
         title: Domanda n. 4
       CSD U1 Test define problem_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Coda per il pranzo, perché è chiaro come sapere che le persone aspettano
+            meno tempo, ma è più difficile sapere quale sarebbe lo spirito scolastico
+          correct: true
+        - text: Coda per il pranzo, perché è più facile creare regole sullo stare
+            in fila, che creare regole sullo spirito scolastico
+        - text: Spirito scolastico, perché puoi sempre averne di più, ma la coda per
+            il pranzo potrebbe già essere la più breve possibile
+        - text: Spirito scolastico, perché è migliore per gli studenti, mentre gli
+            adulti dovrebbero occuparsi della coda per il pranzo
         questions:
-        - {}
+        - text: Due classi desiderano migliorare la propria scuola. Una desidera abbreviare
+            la quantità di tempo che gli studenti attendono nella coda per il pranzo.
+            Un'altra desidera incrementare lo spirito scolastico. Quale problema è
+            definito meglio?
         title: Domanda n. 4
       CSD U1 Test define problem_2022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Coda per il pranzo, perché è chiaro come sapere che le persone aspettano
+            meno tempo, ma è più difficile sapere quale sarebbe lo spirito scolastico
+          correct: true
+        - text: Coda per il pranzo, perché è più facile creare regole sullo stare
+            in fila, che creare regole sullo spirito scolastico
+        - text: Spirito scolastico, perché puoi sempre averne di più, ma la coda per
+            il pranzo potrebbe già essere la più breve possibile
+        - text: Spirito scolastico, perché è migliore per gli studenti, mentre gli
+            adulti dovrebbero occuparsi della coda per il pranzo
         questions:
-        - {}
+        - text: Due classi desiderano migliorare la propria scuola. Una desidera abbreviare
+            la quantità di tempo che gli studenti attendono nella coda per il pranzo.
+            Un'altra desidera incrementare lo spirito scolastico. Quale problema è
+            definito meglio?
         title: Domanda n. 4
       CSD U1 Test_2022:
         title: Computer e Risoluzione di Problemi - Verifica finale
@@ -11769,7 +11832,10 @@ it-IT:
           correct: true
         - text: I, II e III
         questions:
-        - {}
+        - text: "Cosa deve sapere un programmatore creando un gestore di eventi?  \n&nbsp;&nbsp;&nbsp;I.
+            L'evento che innescherà la modifica  \n&nbsp;&nbsp;&nbsp;II. Quando nel
+            programma l'evento è innescato  \n&nbsp;&nbsp;&nbsp;III. Cosa dovrebbe
+            fare il programma quando l'evento è innescato"
       CSD U6 test events multi_2021:
         answers:
         - text: Solo I
@@ -18006,7 +18072,7 @@ it-IT:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Mi preoccupo perché non sono bravo in matematica.
       csp-post-survey-2017-q4:
         answers:
         - text: Sono del tutto d'accordo
@@ -18106,17 +18172,28 @@ it-IT:
           i nostri corsi.\n"
       csp-post-survey-who-encouraged-csp:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Un amico
+          correct: true
+        - text: Un genitore
+          correct: true
+        - text: Un altro membro della famiglia
+          correct: true
+        - text: Un insegnante
+          correct: true
+        - text: Un consulente
+          correct: true
+        - text: Un'altra persona a scuola (allenatore, preside, etc.)
+          correct: true
+        - text: Un'altra persona non elencata
+          correct: true
+        - text: Nessuno in particolare. Volevo soltanto seguirla.
+          correct: true
+        - text: Non ho scelto di seguire questo corso.
+          correct: true
         questions:
-        - {}
+        - text: L'incoraggiamento di qualcuno è stato un fattore nella tua scelta
+            di seguire questo corso? Se sì, chi è stato più influente per te? (scegline
+            fino a due)
       csp-post-survey-worry-seem-less-capable:
         answers:
         - text: Sono del tutto d'accordo
@@ -20055,12 +20132,20 @@ it-IT:
             e fare informatica rispetto ad altre.
       outside-school-cs:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Non ho mai svolto un'attività di informatica al di fuori della scuola
+          correct: true
+        - text: Un altro programma scolastico
+          correct: true
+        - text: Attività online in autonomia
+          correct: true
+        - text: Campo o programma estivo
+          correct: true
         questions:
-        - {}
+        - text: 'Qual è stata l''attività o il programma più recente di informatica
+            cui hai partecipato al di fuori delle ore scolastiche (come un programma
+            del doposcuola, online, o un campo o programma estivo)?
+
+'
       post-assessment survey q31-a-2017b:
         answers:
         - text: Sono del tutto d'accordo
@@ -20535,9 +20620,12 @@ it-IT:
           correct: true
         - text: Ho pensato che sarebbe stato impegnativo
           correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: La classe ha una buona reputazione nella mia scuola
+          correct: true
+        - text: Qualcuno mi ha incoraggiato a partecipare
+          correct: true
+        - text: È un prerequisito per un'altra classe di Informatica che voglio seguire
+          correct: true
         - text: È obbligatorio / ci sono stato inserito.
           correct: true
         - text: Altri motivi non elencati
@@ -20632,16 +20720,20 @@ it-IT:
         - text: Non lo so
           correct: true
         questions:
-        - {}
+        - text: Hai completato le lezioni di programmazione su Code.org (escluse Ore
+            di Codice)?
       taken-other-cs:
         answers:
         - text: 'No'
           correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Sì, un po' in un altro corso
+          correct: true
+        - text: Sì, un corso semestrale
+          correct: true
+        - text: Sì, un corso dell'intero anno
+          correct: true
         questions:
-        - {}
+        - text: Hai seguito altri corsi d'informatica a scuola?
       teacher_encourage:
         answers:
         - text: sì
@@ -20753,7 +20845,7 @@ it-IT:
         - text: Non sono affatto d'accordo
           correct: true
         questions:
-        - {}
+        - text: Mi preoccupo di esser visto dagli altri come meno capace in informatica.
       worried-seen-incapable:
         answers:
         - text: Sono del tutto d'accordo

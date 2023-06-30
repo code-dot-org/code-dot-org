@@ -6,12 +6,10 @@ title: Kontaktuj się z Międzynarodowymi Partnerami
 
 # Kontaktuj się z Międzynarodowymi Partnerami
 
-Code.org współpracuje z wieloma organizacjami na całym świecie, aby Godzina Kodowania stała się prawdziwie międzynarodowym ruchem. Czy wiesz, że w 2017 r. 60% wszystkich zdarzeń w ramach Godziny kodowania miało miejsce poza USA?
+Code.org współpracuje z wieloma organizacjami na całym świecie, aby Godzina Kodowania stała się prawdziwie międzynarodowym ruchem. Czy wiesz, że w 2017 r. 60% wszystkich zdarzeń w ramach Godziny kodowania miało miejsce poza USA? If you're in one of the countries below, reach out to the listed partner and get connected with your local Hour of Code.
 
-Ty również możesz odegrać wiodącą rolę w zaangażowaniu większej liczby osób w swoim kraju! Jeśli znajdujesz się w jednym z poniższych krajów, skontaktuj się z wymienionym partnerem i uzyskaj dostęp do lokalnej Godziny Kodowania.
+*Don't see your country listed here?* [See how to become our international partner!](https://code.org/international/apply) <br /> <br />
 
-* Nie widzisz tutaj swojego kraju? * [ Złóż wniosek, aby zostać międzynarodowym partnerem Godziny Kodowania ](https://goo.gl/forms/PZQEsqvet7yBE5ps2)! <br /> <br />
+* Nie widzisz tutaj swojego kraju? * [ Złóż wniosek, aby zostać międzynarodowym partnerem Godziny Kodowania ](https://goo.gl/forms/PZQEsqvet7yBE5ps2)!
 
 {{ international_partners_table }}
-
-{{ signup_button }}

@@ -44,6 +44,7 @@ th:
         reset_password_token: ลิงก์รีเซ็ตรหัสผ่านที่คุณได้ติดตาม
         error:
           future: ไม่สามารถทำได้ในอนาคต
+        us_state: รัฐ
   beta: เบต้า
   hello: สวัสดีชาวโลก
   welcome_back: ยินดีต้อนรับอีกครั้ง, % {name}
@@ -208,6 +209,7 @@ th:
     parent_account_email_progress_permission: เราสามารถส่งอีเมลถึงคุณเพื่ออัปเดตเป็นครั้งคราวเกี่ยวกับความคืบหน้าและโครงการของบุตรหลานของคุณ
       และการอัปเดตเกี่ยวกับหลักสูตรและวิทยาการคอมพิวเตอร์ของพวกเขาได้หรือไม่? [(ดูนโยบายความเป็นส่วนตัวของเรา)]%{privacy_policy_url}
     parent_account_email_label: อีเมลของผู้ปกครอง/ผู้พิทักษ์
+    us_state: รัฐ
   school_info:
     title: ข้อมูลโรงเรียน (ไม่บังคับ)
     school_country: ประเทศของโรงเรียน
@@ -1261,6 +1263,7 @@ th:
         csf_express: CS พื้นฐาน (Pre-Express หรือ Express)
         csd: การค้นพบด้านบริการลูกค้า
         csp: หลักการบริการลูกค้า
+        other: อาชีพอื่น ๆ
         not_applicable: ไม่สามารถใช้งานได้
       email_opt_in:
         opt_in_yes: ใช่

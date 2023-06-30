@@ -3631,3 +3631,7 @@ mn:
               display_name: Хувьсагчууд
           description_audience: 9-13 насныхан
           description_short: Компьютерийн шинжлэх ухааны суурь ойлголтуудын талаархи бүх ойлголтыг мэдэж, өөрийн урлагийн бүтээл, түүх, тоглоом зохиогоорой.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ангиуд

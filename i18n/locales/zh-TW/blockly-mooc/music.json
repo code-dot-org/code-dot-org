@@ -54,5 +54,7 @@
   "share": "分享",
   "shareComingSoon": "共享正在建設中。請稍後再回來查看。",
   "startOver": "重新開始",
-  "upload": "上傳"
+  "upload": "上傳",
+  "panelHeaderInstructions": "操作說明",
+  "panelHeaderWorkspace": "工作區："
 }

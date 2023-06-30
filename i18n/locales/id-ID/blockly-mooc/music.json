@@ -54,5 +54,7 @@
   "share": "Bagikan",
   "shareComingSoon": "Berbagi sedang dibangun. Segera periksa kembali.",
   "startOver": "Mulai kembali",
-  "upload": "Unggah"
+  "upload": "Unggah",
+  "panelHeaderInstructions": "instruksi",
+  "panelHeaderWorkspace": "Area kerja: "
 }

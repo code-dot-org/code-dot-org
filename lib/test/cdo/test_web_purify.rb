@@ -71,10 +71,10 @@ class WebPurifyTest < Minitest::Test
   end
 
   def test_find_potential_profanities_with_text_exceeding_maximum_length
-    err = assert_raises StandardError do
+    err = assert_raises WebPurify::TextTooLongError do
       WebPurify.find_potential_profanities(("a " * 60_000) + "a")
     end
-    assert_match "Profanity check failed: text is too long", err.message
+    assert_equal 120001, err.text_length
   end
 
   # Recording for this test was captured with an invalid API key

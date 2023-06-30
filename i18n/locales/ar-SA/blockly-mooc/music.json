@@ -54,5 +54,7 @@
   "share": "المشاركة",
   "shareComingSoon": "المشاركة قيد الإنشاء. تحقق مرة أخرى قريبًا.",
   "startOver": "البدء من جديد",
-  "upload": "تحميل"
+  "upload": "تحميل",
+  "panelHeaderInstructions": "التعليمات",
+  "panelHeaderWorkspace": "مساحة العمل: "
 }

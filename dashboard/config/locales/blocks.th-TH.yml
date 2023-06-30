@@ -2448,6 +2448,8 @@ th:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: พิมพ์ {TEXT}
       storylab_setForegroundEffect2:
         text: ใช้เอฟเฟกต์ {EFFECT}
         options:

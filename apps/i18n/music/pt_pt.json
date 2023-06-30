@@ -55,5 +55,7 @@
   "share": "Partilhar",
   "shareComingSoon": "O compartilhamento está em construção. Volte em breve.",
   "startOver": "Recomeçar",
-  "upload": "Fazer upload"
+  "upload": "Fazer upload",
+  "panelHeaderInstructions": "Instruções",
+  "panelHeaderWorkspace": "Área de trabalho: "
 }

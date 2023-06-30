@@ -1,7 +1,6 @@
 import React from 'react';
 import {render, screen, fireEvent} from '@testing-library/react';
 import {Provider} from 'react-redux';
-import {configureStore} from '@reduxjs/toolkit';
 import {assert, expect} from '../../../util/reconfiguredChai';
 import {
   setWindowLocation,
@@ -11,6 +10,12 @@ import responsive, {
   setResponsiveSize,
   ResponsiveSize,
 } from '@cdo/apps/code-studio/responsiveRedux';
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
 import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalog';
 import {
   allCurricula,
@@ -25,17 +30,29 @@ import {
   noGradesCurriculum,
   noPathCurriculum,
 } from './CurriculumCatalogTestHelper';
+import teacherSections, {
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sections} from '../studioHomepages/fakeSectionUtils';
 
 describe('CurriculumCatalog', () => {
-  const defaultProps = {curriculaData: allCurricula, isEnglish: false};
+  const defaultProps = {
+    curriculaData: allCurricula,
+    isEnglish: false,
+    languageNativeName: 'sampleLanguageNativeName',
+    isSignedOut: true,
+  };
   let store;
 
   let replacedLocation;
   let replaceStateOrig = window.history.replaceState;
 
   beforeEach(() => {
-    store = configureStore({reducer: {responsive}});
+    stubRedux();
+    registerReducers({responsive, teacherSections});
+    store = getStore();
     store.dispatch(setResponsiveSize(ResponsiveSize.lg));
+    store.dispatch(setSections(sections));
 
     replacedLocation = undefined;
     window.history.replaceState = (_, __, newLocation) => {
@@ -44,6 +61,7 @@ describe('CurriculumCatalog', () => {
   });
 
   afterEach(() => {
+    restoreRedux();
     resetWindowLocation();
     window.history.replaceState = replaceStateOrig;
   });
@@ -66,6 +84,25 @@ describe('CurriculumCatalog', () => {
     renderDefault();
 
     screen.getByText('Code.org courses, tutorials, and more', {exact: false});
+  });
+
+  it('does not render language filter row when in English locale', () => {
+    const props = {...defaultProps, isEnglish: true};
+    render(
+      <Provider store={store}>
+        <CurriculumCatalog {...props} />
+      </Provider>
+    );
+
+    expect(screen.queryByText('sampleLanguageNativeName')).to.be.null;
+  });
+
+  it('renders language filter row when not in English locale', () => {
+    renderDefault();
+
+    expect(
+      screen.getAllByText('sampleLanguageNativeName', {exact: false}).length
+    ).to.equal(2);
   });
 
   it('renders name of each curriculum with grade levels and path', () => {
@@ -276,7 +313,7 @@ describe('CurriculumCatalog', () => {
     });
   });
 
-  it('applying every filter only filters out courses that have null for one of the filtered properties', () => {
+  it('applying every curricula filter only filters out courses that have null for one of the filtered properties', () => {
     renderDefault();
 
     const numTotalCurriculumCards = screen.getAllByText('Learn more', {
@@ -284,10 +321,13 @@ describe('CurriculumCatalog', () => {
     }).length;
     expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
 
-    // Select all checkboxes
+    // Select all curricula checkboxes
     screen.getAllByRole('checkbox').forEach(checkbox => {
-      fireEvent.click(checkbox);
-      assert(checkbox.checked);
+      // Ignore filter for translation checkbox
+      if (checkbox.name !== 'filterTranslatedToggle') {
+        fireEvent.click(checkbox);
+        assert(checkbox.checked);
+      }
     });
 
     // With every filter applied

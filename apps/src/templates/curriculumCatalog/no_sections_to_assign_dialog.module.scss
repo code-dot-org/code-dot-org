@@ -1,0 +1,36 @@
+@import "color.scss";
+
+.dialogContainer {
+  height: 18rem;
+  display: flex;
+  flex-flow: column;
+
+  hr {
+    border: 1px solid $neutral_dark;
+    margin: 1rem 0;
+  }
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.lowerContainer {
+  margin-top: auto;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+
+  button,
+  a,
+  a:link,
+  a:visited {
+    margin: 0;
+    font-size: 1rem;
+    height: 2.5rem;
+    line-height: 2.25rem;
+  }
+}
+

@@ -59,5 +59,9 @@
   "share": "Udostępnij",
   "shareComingSoon": "Udostępnioanie jest w budowie. Sprawdź wkrótce.",
   "startOver": "Zacznij od nowa",
-  "upload": "Wgraj"
+  "upload": "Wgraj",
+  "panelHeaderInstructions": "Instrukcje",
+  "panelHeaderWorkspace": "Obszar roboczy: ",
+  "panelHeaderControls": "Sterowanie",
+  "panelHeaderTimeline": "Oś czasu"
 }

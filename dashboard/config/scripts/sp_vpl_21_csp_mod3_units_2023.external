@@ -57,23 +57,22 @@ Students expand the types of apps they can create as they learn how to store inf
 
 <div style="clear:both"/>
 
-<details><summary><strong>Unit 5: Lists, Loops and Traversals</strong></summary>
+<details><summary><strong>Unit 5: Data</strong></summary>
 
-<img src="https://images.code.org/9dc890aa14151806981be11aa58e265b-image-1638565468505.03.43 PM.png" alt="Image showing a flowchart with a loop included." width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/1c526e3961a964f2b754696ff6840328-image-1638565946070.12.18 PM.png" alt="Cross tab chart showing frequencies." width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
-Students learn to build apps that use and process lists of information. Like the previous unit, students learn the core concepts of lists, loops, and traversals through a series of Explore, Investigate, Practice, and Make (EIPM) lesson sequences. Later in the unit, students are introduced to tools that allow them to import tables of real-world data to help further power the types of apps they can make. At the conclusion of the unit, students complete a week-long project in which they must design an app around a goal of their choosing that uses one of these data sets.
+Students explore and visualize datasets from a wide variety of topics as they hunt for patterns and try to learn more about the world around them from the data. Once again, students work with datasets in App Lab but are now asked to make use of a data visualizer tool that assists students in finding data patterns. They learn how different types of visualizations can be used to better understand the patterns contained in datasets and how to use visualizations when investigating hypotheses. At the conclusion of the unit, students learn about the impacts of data analysis on the world around them and complete a final project in which they must uncover and present a data investigation they've completed independently.
 </details>
 
 <div style="clear:both"/>
 
 ### Semester Two
 
-<details><summary><strong>Unit 6: Algorithms</strong></summary>
+<details><summary><strong>Unit 6: Lists, Loops and Traversals</strong></summary>
 
-<img src="https://images.code.org/0fa910b9b3490d88fbda41948b9f33fe-image-1638565598367.06.21 PM.png" alt="Map of the United States with arrows showing distances between locations." width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/9dc890aa14151806981be11aa58e265b-image-1638565468505.03.43 PM.png" alt="Image showing a flowchart with a loop included." width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
-Students learn to design and analyze algorithms to understand how they work and why some algorithms are considered more efficient than others. This short unit is entirely unplugged, and features hands-on activities that help students get an intuitive sense of how quickly different algorithms run and the pros and cons of different algorithms. Later in the unit, students explore concepts like undecidable problems and parallel and distributed computing.
-
+Students learn to build apps that use and process lists of information. Like the previous unit, students learn the core concepts of lists, loops, and traversals through a series of Explore, Investigate, Practice, and Make (EIPM) lesson sequences. Later in the unit, students are introduced to tools that allow them to import tables of real-world data to help further power the types of apps they can make. At the conclusion of the unit, students complete a week-long project in which they must design an app around a goal of their choosing that uses one of these data sets.
 </details>
 
 <div style="clear:both"/>
@@ -87,25 +86,7 @@ Students learn how to design clean and reusable code that can be shared with a s
 
 <div style="clear:both"/>
 
-<details><summary><strong>Unit 8: Create Performance Task Prep</strong></summary>
-
-<img src="https://images.code.org/8febf9d9b153284a9f6239cfb5144332-image-1638565885439.jpeg" alt="Image of a screen with coding on it." width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
-
-In this unit, students practice and complete the Create Performance Task (PT), starting with a series of activities that ensure they understand the College Board requirements of the Create PT, which they have practiced throughout the year. Subsequently, students are given at least 12 class hours in which to complete the Create PT.
-</details>
-
-<div style="clear:both"/>
-
-<details><summary><strong>Unit 9: Data</strong></summary>
-
-<img src="https://images.code.org/1c526e3961a964f2b754696ff6840328-image-1638565946070.12.18 PM.png" alt="Cross tab chart showing frequencies." width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
-
-Students explore and visualize datasets from a wide variety of topics as they hunt for patterns and try to learn more about the world around them from the data. Once again, students work with datasets in App Lab but are now asked to make use of a data visualizer tool that assists students in finding data patterns. They learn how different types of visualizations can be used to better understand the patterns contained in datasets and how to use visualizations when investigating hypotheses. At the conclusion of the unit, students learn about the impacts of data analysis on the world around them and complete a final project in which they must uncover and present a data investigation they've completed independently.
-</details>
-
-<div style="clear:both"/>
-
-<details><summary><strong>Unit 10: Cybersecurity and Global Impact</strong></summary>
+<details><summary><strong>Unit 8: Cybersecurity and Global Impact</strong></summary>
 
 <img src="https://images.code.org/d473bf3b640faaf79123c5b9ece2b73b-image-1638566066717.jpeg" alt="Illustration of a person locking a folder to keep it secure." width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
@@ -114,5 +95,22 @@ Students research and debate current events at the intersection of data, public 
 
 <div style="clear:both"/>
 
-![]()
+<details><summary><strong>Unit 9: Create Performance Task Prep</strong></summary>
+
+<img src="https://images.code.org/8febf9d9b153284a9f6239cfb5144332-image-1638565885439.jpeg" alt="Image of a screen with coding on it." width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+
+In this unit, students practice and complete the Create Performance Task (PT), starting with a series of activities that ensure they understand the College Board requirements of the Create PT, which they have practiced throughout the year. Subsequently, students are given at least 12 class hours in which to complete the Create PT.
+</details>
+
+<div style="clear:both"/>
+
+<details><summary><strong>Unit 10: Algorithms</strong></summary>
+
+<img src="https://images.code.org/0fa910b9b3490d88fbda41948b9f33fe-image-1638565598367.06.21 PM.png" alt="Map of the United States with arrows showing distances between locations." width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+
+Students learn to design and analyze algorithms to understand how they work and why some algorithms are considered more efficient than others. This short unit is entirely unplugged, and features hands-on activities that help students get an intuitive sense of how quickly different algorithms run and the pros and cons of different algorithms. Later in the unit, students explore concepts like undecidable problems and parallel and distributed computing.
+
+</details>
+
+<div style="clear:both"/>
 MARKDOWN

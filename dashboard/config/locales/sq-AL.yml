@@ -51,6 +51,7 @@ sq:
           **%{email}**.
         error:
           future: nuk mund të jetë në të ardhmen
+        us_state: Shteti
   beta: beta
   hello: Pershendetje Botë
   welcome_back: Mirë se erdhët sërish, %{name}
@@ -174,6 +175,7 @@ sq:
     share_teacher_email_reg_partner_preference_no: Jo
     share_teacher_email_reg_partner_preference_required: Ju duhet të specifikoni preferencën
       e postës elektronike.
+    us_state: Shteti
   school_info:
     title: Informacione për shkollën (opsionale)
     school_country: Qyteti i shkollës
@@ -902,6 +904,8 @@ sq:
         other: Të tjera/ë
       robotics:
         kodable: Kodable
+        other: Të tjera/ë
+      workshop_course:
         other: Të tjera/ë
       email_opt_in:
         opt_in_yes: Po

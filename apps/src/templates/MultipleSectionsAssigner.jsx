@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import TeacherSectionOption from './TeacherSectionOption';
@@ -12,6 +11,7 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 
 const MultipleSectionsAssigner = ({
   courseId,
@@ -20,7 +20,7 @@ const MultipleSectionsAssigner = ({
   courseOfferingId,
   courseVersionId,
   scriptId,
-  reassignConfirm,
+  reassignConfirm = () => {},
   isOnCoursePage,
   isStandAloneUnit,
   participantAudience,
@@ -159,15 +159,18 @@ const MultipleSectionsAssigner = ({
   };
 
   return (
-    <BaseDialog isOpen={true} handleClose={onClose}>
-      <div style={styles.header} className="uitest-confirm-assignment-dialog">
+    <AccessibleDialog onClose={onClose}>
+      <div
+        tabIndex="0"
+        style={styles.header}
+        className="uitest-confirm-assignment-dialog"
+      >
         {i18n.chooseSectionsPrompt({assignmentName})}
       </div>
       <div style={styles.content}>{i18n.chooseSectionsDirections()}</div>
       <div style={styles.header} className="uitest-confirm-assignment-dialog">
         {i18n.yourSectionsList()}
       </div>
-      <hr />
       <div style={styles.grid}>
         {sections &&
           sections.map(
@@ -186,6 +189,7 @@ const MultipleSectionsAssigner = ({
               )
           )}
       </div>
+      <hr />
       <a
         style={styles.selectAllSectionsLabel}
         onClick={selectAllHandler}
@@ -193,7 +197,7 @@ const MultipleSectionsAssigner = ({
       >
         Select All
       </a>
-      <div style={{textAlign: 'right'}}>
+      <div style={styles.buttonContainer}>
         <Button
           text={i18n.dialogCancel()}
           onClick={onClose}
@@ -202,12 +206,11 @@ const MultipleSectionsAssigner = ({
         <Button
           id="confirm-assign"
           text={i18n.confirmAssignment()}
-          style={{marginLeft: 5}}
           onClick={reassignSections}
           color={Button.ButtonColor.orange}
         />
       </div>
-    </BaseDialog>
+    </AccessibleDialog>
   );
 };
 
@@ -235,6 +238,11 @@ const styles = {
     marginBottom: 5,
     fontWeight: 'bold',
   },
+  buttonContainer: {
+    display: 'flex',
+    gap: 5,
+    justifyContent: 'flex-end',
+  },
   content: {
     fontSize: 14,
     marginBottom: 10,
@@ -251,6 +259,7 @@ const styles = {
   grid: {
     display: 'grid',
     gridTemplateColumns: '33% 33% 34%',
+    marginBottom: 10,
   },
   functionSelector: {
     display: 'flex',
@@ -271,9 +280,6 @@ const styles = {
     fontSize: 16,
     cursor: 'pointer',
     color: color.link_color,
-    ':hover': {
-      color: color.link_color,
-    },
   },
 };
 

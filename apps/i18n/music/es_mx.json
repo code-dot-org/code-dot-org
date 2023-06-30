@@ -39,6 +39,8 @@
   "blockly_fieldRestOneMeasure": "1 compás",
   "blockly_fieldRestMeasures": "{num} compases",
   "blockly_fieldTriggerStartImmediately": "inmediatamente",
+  "blockly_fieldTriggerStartNextBeat": "en el siguiente ritmo",
+  "blockly_fieldTriggerStartNextMeasure": "en el siguiente compás",
   "blockly_functionNamePlaceholder": "mi función",
   "blockly_toolboxCategoryControl": "Control",
   "blockly_toolboxCategoryEffects": "Efectos",
@@ -59,5 +61,7 @@
   "share": "Compartir",
   "shareComingSoon": "El intercambio está en construcción. Vuelve pronto.",
   "startOver": "Volver a empezar",
-  "upload": "Subir"
+  "upload": "Subir",
+  "panelHeaderInstructions": "Instrucciones",
+  "panelHeaderWorkspace": "Espacio de trabajo: "
 }

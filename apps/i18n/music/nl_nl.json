@@ -14,5 +14,7 @@
   "feedback": "Feedback",
   "share": "Delen",
   "startOver": "Begin opnieuw",
-  "upload": "Uploaden"
+  "upload": "Uploaden",
+  "panelHeaderInstructions": "Instructies",
+  "panelHeaderWorkspace": "Werkplaats: "
 }

@@ -59,6 +59,7 @@ ta:
         reset_password_token: நீங்கள் பின்பற்றிய கடவுச்சொல்லை மீட்டமைக்கும் இணைப்பு
         error:
           future: எதிர்காலத்தில் இருக்க முடியாது
+        us_state: மாநிலம்
   beta: பீட்டா
   hello: ஹலோ உலகம்
   welcome_back: மீண்டும் வருக, %{name}
@@ -258,6 +259,7 @@ ta:
       பற்றிய புதுப்பிப்புகளுடன் நாங்கள் உங்களுக்கு மின்னஞ்சல் அனுப்பலாமா? [(See our
       privacy policy)](%{privacy_policy_url})
     parent_account_email_label: பெற்றோர் / பாதுகாவலர் மின்னஞ்சல்
+    us_state: மாநிலம்
   school_info:
     title: பள்ளி தகவல் (விரும்பினால்)
     school_country: பள்ளி நாடு
@@ -1531,6 +1533,7 @@ ta:
         csf_express: CS அடிப்படைகள்(Pre-Express or Express)
         csd: CS கண்டுபிடிப்புகள்
         csp: CS கோட்பாடுகள்
+        other: வேறு
         not_applicable: பொருந்தாது
       email_opt_in:
         opt_in_yes: ஆம்

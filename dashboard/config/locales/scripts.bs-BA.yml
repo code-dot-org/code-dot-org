@@ -1385,3 +1385,7 @@ bs:
               display_name: Digitalno Državljanstvo
             lessonGroup-4:
               display_name: Varijable
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Razredi
