@@ -1,10 +1,15 @@
 <Artist>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 23,
+  "created_at": "2023-03-22T21:49:49.000Z",
+  "level_num": "custom",
+  "user_id": 16,
   "properties": {
     "skin": "artist",
     "is_k1": "false",
     "skip_instructions_popup": "true",
-    "slider_speed": "0.9",
+    "slider_speed": "0.6",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -41,22 +46,17 @@
     "validation_enabled": "false",
     "enable_download_image": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Put the number `12` in the number field of the loop block. \\nChange the `turn right` block to 30 degrees.\\n\\n<xml><block type=\\\"controls_repeat_ext\\\"><value name=\\\"TIMES\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">12</field></block></value><statement name=\\\"DO\\\"><block type=\\\"rhombus_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusRed</field><value name=\\\"SIZE\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">35</field></block></value><next><block type=\\\"draw_turn\\\"><field name=\\\"DIR\\\">turnRight</field><value name=\\\"VALUE\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">30</field></block></value></block></next></block></statement></block></xml>\\n\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9869441c400d8263630051601781c959/csc-starquilts-12point-repeat_2023.mp3\"}]",
-    "long_instructions": "**Can you make a 12 point star?**\r\n<div style=\"float:right;padding:20px\">\r\n<img src=\"https://images.code.org/4552aa081b4bdee39efaabcf7356cf4f-image-1649479860235.50.55 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\r\n<p style=\"text-align: center\">\r\nexample\r\n</p>\r\n</div>\r\n\r\n- Modify the angle of the turn block to find the correct angle for a 12 points. \r\n- How many times should your loop repeat?\r\n\r\n",
+    "long_instructions": "**Can you make a 12 point star?**\r\n<div style=\"float:right;padding:20px\">\r\n<img src=\"https://images.code.org/4552aa081b4bdee39efaabcf7356cf4f-image-1649479860235.50.55 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\r\n<p style=\"text-align: center\">\r\nexample\r\n</p>\r\n</div>\r\n\r\n- Modify the angle of the turn block to find the correct angle for a 12 point star. \r\n- How many times should your loop repeat?\r\n\r\n",
     "name_suffix": "_2023",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/bf29014245b0becdefd223baf4e0ef9f=levelbuilder/218938.png",
+    "short_instructions": "Experiment with the angle in the turn block in your code to create a 12-point star.",
     "encrypted_examples": [
 
     ],
-    "short_instructions": "Experiment with the angle in the turn block in your code to create a 12-point star.",
     "preload_asset_list": null
   },
-  "game_id": 23,
-  "published": true,
-  "created_at": "2023-03-22T21:49:49.000Z",
-  "level_num": "custom",
-  "user_id": 16,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-22T21:49:49.136+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-12point-repeat_2022\\\"\"],\"cloned_from\":\"csc-starquilts-12point-repeat_2022\"},{\"changed_at\":\"2023-04-17 21:06:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-04-24 21:20:03 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-03 22:49:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-22T21:49:49.136+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-12point-repeat_2022\\\"\"],\"cloned_from\":\"csc-starquilts-12point-repeat_2022\"},{\"changed_at\":\"2023-04-17 21:06:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-04-24 21:20:03 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-03 22:49:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-29 01:38:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"slider_speed\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-29 01:47:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-29 01:47:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
