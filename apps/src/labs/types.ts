@@ -85,6 +85,7 @@ export interface LevelProperties {
   // Not a complete list; add properties as needed.
   isProjectLevel?: 'true' | 'false';
   hideShareAndRemix?: 'true' | 'false';
+  disableProjects?: 'true' | 'false';
   levelData: LevelData;
 }
 
