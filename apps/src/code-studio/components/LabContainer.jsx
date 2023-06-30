@@ -7,6 +7,7 @@
 // between "music" levels in the same lesson.
 //
 // It hides the level while loading, and plays a fade-in animation as the level appears.
+
 import PropTypes from 'prop-types';
 import React from 'react';
 import {useSelector} from 'react-redux';
@@ -76,9 +77,11 @@ export const ErrorUI = () => (
     </div>
   </div>
 );
+
 export const ErrorFallbackPage = () => (
   <div id="lab-container" className={moduleStyles.labContainer}>
     <ErrorUI />
   </div>
 );
+
 export default LabContainer;

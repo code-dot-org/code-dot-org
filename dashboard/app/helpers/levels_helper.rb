@@ -446,7 +446,7 @@ module LevelsHelper
   #  3. The disable_google_blockly DCDO flag, which contains an array of strings corresponding to model class names.
   #     This option will override #2 as an "emergency switch" to go back to CDO Blockly.
   def use_google_blockly
-    return true
+    return true if @script_level&.lesson&.use_lab_container
     return true if view_options[:blocklyVersion]&.downcase == 'google'
     return false if view_options[:blocklyVersion]&.downcase == 'cdo'
     return false unless @level.uses_google_blockly?
