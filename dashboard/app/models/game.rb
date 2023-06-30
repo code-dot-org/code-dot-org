@@ -230,7 +230,6 @@ class Game < ApplicationRecord
   end
 
   def uses_small_footer?
-    return true
     [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB, JAVALAB].include? app
   end
 

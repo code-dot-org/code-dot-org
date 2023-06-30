@@ -220,8 +220,7 @@ function checkEntryPoint(entryKey, entryPointPath, stats, options) {
                 chalk.underline(
                   siteConfig.entryPrefix + entryPointPatternMatch[2]
                 ) +
-                `!` +
-                entryKey
+                `!`
             );
             errors.push();
           }
