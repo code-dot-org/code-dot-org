@@ -195,7 +195,7 @@ const MultipleSectionsAssigner = ({
         onClick={selectAllHandler}
         className="select-all-sections"
       >
-        Select All
+        {i18n.selectAll()}
       </a>
       <div style={styles.buttonContainer}>
         <Button
