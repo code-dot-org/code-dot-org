@@ -50,7 +50,6 @@ const Video = ({src}) => {
               height="100%"
               style={{border: 'none'}}
               src={src}
-              /*src="https://www.youtube-nocookie.com/embed/ab2SBrfkKXU?rel=0"*/
               title=""
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen

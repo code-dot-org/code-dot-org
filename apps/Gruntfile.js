@@ -86,7 +86,7 @@ describe('entry tests', () => {
     'javalab',
     'gamelab',
     'jigsaw',
-    'lablab',
+    'lab2',
     'maze',
     'music',
     'netsim',
