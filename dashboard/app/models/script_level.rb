@@ -329,7 +329,8 @@ class ScriptLevel < ApplicationRecord
         freePlay: level.try(:free_play) == "true",
         bonus: bonus,
         display_as_unplugged: level.display_as_unplugged?,
-        app: level.game&.app
+        app: level.game&.app,
+        uses_lab_container: level.uses_lab_container?
       }
 
       if progression
