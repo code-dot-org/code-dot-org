@@ -5,7 +5,7 @@ import {LevelWithProgress} from '@cdo/apps/types/progressTypes';
 import {getStandaloneProjectId} from '@cdo/apps/labs/projects/utils';
 import ProjectContainer from '@cdo/apps/labs/projects/ProjectContainer';
 import ProgressContainer from '@cdo/apps/labs/progress/ProgressContainer';
-import StandaloneVideo2 from '@cdo/apps/standaloneVideo2/StandaloneVideo2';
+import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import MusicView from '@cdo/apps/music/views/MusicView';
 import {useSelector} from 'react-redux';
 
@@ -35,7 +35,7 @@ const Lab2: React.FunctionComponent = () => {
         </ProgressContainer>
       </div>
 
-      {currentApp === 'standalone_video' && <StandaloneVideo2 />}
+      {currentApp === 'standalone_video' && <StandaloneVideo />}
     </ProjectContainer>
   );
 };
