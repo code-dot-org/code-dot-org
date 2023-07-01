@@ -63,7 +63,6 @@ class Lesson < ApplicationRecord
     overview
     student_overview
     unplugged
-    use_lab_container
     creative_commons_license
     assessment
     purpose
@@ -296,7 +295,6 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
-        useLabContainer: use_lab_container,
         lessonEditPath: get_uncached_edit_path,
         lessonStartUrl: start_url
       }
@@ -417,7 +415,6 @@ class Lesson < ApplicationRecord
       assessmentOpportunities: assessment_opportunities,
       assessment: assessment,
       unplugged: unplugged,
-      useLabContainer: use_lab_container,
       lockable: lockable,
       hasLessonPlan: has_lesson_plan,
       creativeCommonsLicense: creative_commons_license,
