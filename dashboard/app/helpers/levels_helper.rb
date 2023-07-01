@@ -317,7 +317,7 @@ module LevelsHelper
 
     # TODO: Ues correct app for a lesson with music and standalone_video levels.
     @app_options =
-      if @game.uses_lab_container? || @level.uses_lab_container?
+      if @script_level && @level.uses_lab_container?
         {app: 'lab2'}
       elsif @level.is_a? Blockly
         blockly_options

@@ -258,10 +258,6 @@ class Game < ApplicationRecord
     [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY, MUSIC].include? app
   end
 
-  def uses_lab_container?
-    [MUSIC].include? app
-  end
-
   # Format: name:app:intro_video
   # Don't change the order of existing entries! Always append to the end of the list.
   # The list contains no longer used level types in order to maintain the order
