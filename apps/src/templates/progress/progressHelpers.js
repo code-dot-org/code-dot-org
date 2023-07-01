@@ -263,6 +263,7 @@ export const processedLevel = level => {
     url: level.url,
     name: level.name,
     app: level.app,
+    usesLabContainer: level.uses_lab_container,
     progression: level.progression,
     progressionDisplayName: level.progression_display_name,
     kind: level.kind,
