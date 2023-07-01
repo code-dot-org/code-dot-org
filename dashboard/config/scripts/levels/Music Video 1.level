@@ -11,7 +11,8 @@
     "skip_dialog": true,
     "skip_sound": true,
     "background": "music-black",
-    "video_full_width": true
+    "video_full_width": true,
+    "uses_lab_container": true
   },
   "published": true
 }]]></config>

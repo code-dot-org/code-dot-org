@@ -56,4 +56,8 @@ class Music < Blockly
   def uses_google_blockly?
     true
   end
+
+  def uses_lab_container?
+    true
+  end
 end
