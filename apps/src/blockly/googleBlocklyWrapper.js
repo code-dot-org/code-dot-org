@@ -11,6 +11,7 @@ import * as utils from '@cdo/apps/utils';
 import initializeCdoConstants from './addons/cdoConstants';
 import CdoFieldAngle from './addons/cdoFieldAngle';
 import CdoFieldButton from './addons/cdoFieldButton';
+import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
@@ -246,6 +247,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   // Code.org custom fields
   blocklyWrapper.FieldButton = CdoFieldButton;
+  blocklyWrapper.FieldToggle = CdoFieldToggle;
   blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
 
   blocklyWrapper.blockly_.registry.register(
