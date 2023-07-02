@@ -16,7 +16,7 @@ import styles from './video.module.scss';
 
 const StandaloneVideo = () => {
   const dispatch = useAppDispatch();
-  const levelVideo = useSelector(state => state.lab.levelVideo);
+  const levelVideo = useSelector(state => state.lab.levelData);
 
   return (
     <div id="standalone-video">

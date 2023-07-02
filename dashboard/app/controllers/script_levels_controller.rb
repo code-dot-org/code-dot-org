@@ -187,11 +187,12 @@ class ScriptLevelsController < ApplicationController
 
     @level = @script_level.level
 
-    @video = @level.specified_autoplay_video&.summarize(false)
+    @video = @level.specified_autoplay_video&.summarize(false)&.camelize_keys
 
-    @merged_properties = @level.properties.camelize_keys.merge({video: @video&.camelize_keys})
+    @properties = @level.properties.camelize_keys
+    @properties[:levelData] = @video if @video
 
-    render json: @merged_properties
+    render json: @properties
   end
 
   # Get a list of hidden lessons for the current users section
