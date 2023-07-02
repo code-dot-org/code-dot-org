@@ -160,7 +160,7 @@ const InstructionsPanel = ({
               onClick={() => onNextPanel()}
               className={moduleStyles.buttonNext}
             >
-              {musicI18n.next()}
+              {musicI18n.continue()}
             </button>
           )}
         </div>

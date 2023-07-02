@@ -92,6 +92,7 @@ describe('entry tests', () => {
     'netsim',
     'poetry',
     'spritelab',
+    'standaloneVideo',
     'studio',
     'turtle',
     'weblab',

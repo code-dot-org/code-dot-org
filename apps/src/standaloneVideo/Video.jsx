@@ -3,7 +3,10 @@ import React, {useRef, useLayoutEffect, useEffect, useState} from 'react';
 import styles from './video.module.scss';
 
 function useWindowSize() {
-  const [size, setSize] = useState([0, 0]);
+  const [size, setSize] = useState([
+    document.documentElement.clientWidth,
+    document.documentElement.clientHeight,
+  ]);
   useLayoutEffect(() => {
     function updateSize() {
       const width = document.documentElement.clientWidth;
@@ -20,16 +23,18 @@ function useWindowSize() {
 /**
  * Renders a simple modal video player.
  */
-const Video = ({src}) => {
+const Video = ({children, src}) => {
   const startTime = useRef(null);
 
   useEffect(() => {
     startTime.current = Date.now();
   }, []);
 
+  const childrenAreaHeight = 70;
+
   let [targetWidth, targetHeight] = useWindowSize();
   targetWidth -= 80;
-  targetHeight -= 100;
+  targetHeight -= 100 + childrenAreaHeight;
 
   let width, height;
   if (targetWidth / targetHeight > 16 / 9) {
@@ -57,11 +62,18 @@ const Video = ({src}) => {
           )}
         </div>
       </div>
+      <div
+        className={styles.childrenArea}
+        style={{width: width, height: childrenAreaHeight}}
+      >
+        {children}
+      </div>
     </div>
   );
 };
 
 Video.propTypes = {
+  children: PropTypes.node.isRequired,
   src: PropTypes.string,
 };
 

@@ -9,11 +9,27 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {useSelector} from 'react-redux';
 import Video from './Video';
+import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
+import standaloneVideoLocale from './locale';
+import styles from './video.module.scss';
 
 const StandaloneVideo = () => {
   const levelVideo = useSelector(state => state.lab.levelVideo);
 
-  return <Video src={levelVideo?.src} />;
+  return (
+    <div id="standalone-video">
+      <Video src={levelVideo?.src}>
+        <button
+          id="standalone-video-continue-button"
+          type="button"
+          onClick={() => navigateToNextLevel()}
+          className={styles.buttonNext}
+        >
+          {standaloneVideoLocale.continue()}
+        </button>
+      </Video>
+    </div>
+  );
 };
 
 StandaloneVideo.propTypes = {

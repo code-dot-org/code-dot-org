@@ -61,6 +61,7 @@ const SILENCED = [
   'netsim',
   'poetry',
   'spritelab',
+  'standaloneVideo',
   'studio',
   'turtle',
   'weblab',
