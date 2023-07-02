@@ -1136,14 +1136,18 @@ exports.createJsWrapperBlockCreator = function (
                 this.getSourceBlock().removeInput('flyout_input');
               }
             };
-            const icon = document.createElementNS(SVG_NS, 'tspan');
-            icon.style.fontFamily = 'FontAwesome';
-            icon.textContent = '\uf067'; // plus icon
-            icon.style.color = 'blue';
-            const flyoutToggleButton = new Blockly.FieldButton({
-              value: '',
+            const icon1 = document.createElementNS(SVG_NS, 'tspan');
+            icon1.style.fontFamily = 'FontAwesome';
+            icon1.textContent = '\uf067 '; // plus icon
+            icon1.style.color = 'blue';
+            const icon2 = document.createElementNS(SVG_NS, 'tspan');
+            icon2.style.fontFamily = 'FontAwesome';
+            icon2.textContent = '\uf068 '; // minus icon
+            icon2.style.color = 'blue';
+            const flyoutToggleButton = new Blockly.FieldToggle({
               onClick: toggleFlyout,
-              icon,
+              icon1,
+              icon2,
             });
             this.inputList[0].insertFieldAt(
               0,
