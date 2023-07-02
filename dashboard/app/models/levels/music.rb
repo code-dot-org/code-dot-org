@@ -60,4 +60,9 @@ class Music < Blockly
   def uses_lab_container?
     true
   end
+
+  def enable_scrolling?
+    # ensures we have the small footer
+    true
+  end
 end
