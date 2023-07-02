@@ -85,22 +85,25 @@ export interface LevelProperties {
   // Not a complete list; add properties as needed.
   isProjectLevel?: 'true' | 'false';
   hideShareAndRemix?: 'true' | 'false';
-  levelData: LevelData;
-  video: LevelVideo;
+  levelData: LevelData | LevelDataVideo;
 }
 
 // Generic level configuration data used by labs that don't require
 // reloads between levels. Labs may define more specific fields.
-export interface LevelData {
+export interface LevelDataLevel {
   text?: string;
   validations?: Validation[];
   startSources: Source;
 }
 
-export interface LevelVideo {
+// The level data for a standalone_video level that doesn't require
+// reloads between levels.
+interface LevelDataVideo {
   src: string;
   download: string;
 }
+
+export type LevelData = LevelDataLevel | LevelDataVideo;
 
 // Validation in the level.
 export interface Validation {
