@@ -8,12 +8,12 @@ import GoogleBlockly from 'blockly/core';
  * @param icon2 SVG <tspan> element - this is the icon that is displayed on the button after the first click.
  */
 export default class CdoFieldToggle extends GoogleBlockly.Field {
-  constructor({onClick, icon1, icon2}) {
+  constructor({onClick, icon1, icon2, displayIcon1}) {
     super();
     this.onClick = onClick;
     this.icon1 = icon1;
     this.icon2 = icon2;
-    this.displayIcon1 = true;
+    this.displayIcon1 = displayIcon1;
     this.SERIALIZABLE = true;
   }
 
@@ -29,7 +29,11 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
     super.initView();
     this.icon1.style.fill = this.getSourceBlock().style.colourPrimary;
     this.icon2.style.fill = this.getSourceBlock().style.colourPrimary;
-    this.textElement_.appendChild(this.icon1);
+    if (this.displayIcon1) {
+      this.textElement_.appendChild(this.icon1);
+    } else {
+      this.textElement_.appendChild(this.icon2);
+    }
   }
 
   getDisplayText_() {
