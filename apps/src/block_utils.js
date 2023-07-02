@@ -1148,7 +1148,9 @@ exports.createJsWrapperBlockCreator = function (
               onClick: toggleFlyout,
               icon1,
               icon2,
+              displayIcon1: true,
             });
+            // When displayIcon1 is true, flyout is closed. When false, flyout is open. (Information for serialization)
             this.inputList[0].insertFieldAt(
               0,
               flyoutToggleButton,
