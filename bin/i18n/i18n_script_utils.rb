@@ -7,6 +7,7 @@ require 'fileutils'
 require 'psych'
 
 I18N_SOURCE_DIR = "i18n/locales/source"
+I18N_SOURCE_ANIMATIONS_DIR = File.join(I18N_SOURCE_DIR, 'animations').freeze
 
 CROWDIN_PROJECTS = {
   codeorg: {
