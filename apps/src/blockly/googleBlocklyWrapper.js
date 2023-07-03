@@ -332,6 +332,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.navigationController = new NavigationController();
+  // Initialize plugin.
+  blocklyWrapper.navigationController.init();
 
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
@@ -603,8 +605,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     workspace.addChangeListener(onBlockClickDragDelete);
 
-    // Initialize plugin.
-    blocklyWrapper.navigationController.init();
     blocklyWrapper.navigationController.addWorkspace(workspace);
 
     if (!blocklyWrapper.isStartMode && !opt_options.isBlockEditMode) {
