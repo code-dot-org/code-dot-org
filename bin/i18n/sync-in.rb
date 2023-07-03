@@ -9,37 +9,71 @@ require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require 'fileutils'
 require 'json'
 require 'digest/md5'
+require 'cdo/aws/metrics'
+require 'aws-sdk-ec2'
+require 'net/http'
 
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 require_relative '../animation_assets/manifest_builder'
 
+I18N_METRICS_NAMESPACE = 'I18n'.freeze
+
 def sync_in
   puts "Sync in starting"
-  Services::I18n::CurriculumSyncUtils.sync_in
-  HocSyncUtils.sync_in
-  localize_level_and_project_content
-  localize_block_content
-  localize_animation_library
-  localize_shared_functions
-  localize_course_offerings
-  localize_standards
-  localize_docs
-  puts "Copying source files"
-  I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
-  localize_external_sources
-  localize_course_resources
-  redact_level_content
-  redact_block_content
-  redact_docs
-  redact_script_and_course_content
-  redact_labs_content
-  localize_markdown_content
+  log_runtime_metrics
+  # Services::I18n::CurriculumSyncUtils.sync_in
+  # HocSyncUtils.sync_in
+  # localize_level_and_project_content
+  # localize_block_content
+  # localize_animation_library
+  # localize_shared_functions
+  # localize_course_offerings
+  # localize_standards
+  # localize_docs
+  # puts "Copying source files"
+  # I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
+  # localize_external_sources
+  # localize_course_resources
+  # redact_level_content
+  # redact_block_content
+  # redact_docs
+  # redact_script_and_course_content
+  # redact_labs_content
+  # localize_markdown_content
   puts "Sync in completed successfully"
 rescue => exception
   puts "Sync in failed from the error: #{exception}"
   raise exception
+end
+
+def log_runtime_metrics
+  puts "logging test metrics"
+
+  metadata_endpoint = 'http://169.254.169.254/latest/meta-data/'
+  instance_id = Net::HTTP.get(URI.parse(metadata_endpoint + 'instance-id'))
+
+  # ec2 = AWS::EC2.new
+  # instance = ec2.instances[instance_id]
+  # Cdo::Metrics.push(
+  #   I18N_METRICS_NAMESPACE,
+  #   [
+  #     {
+  #       metric_name: :RuntimeTest,
+  #       dimensions: [
+  #         {name: "Environment", value: CDO.rack_env},
+  #         {name: "MethodName", value: "log_runtime_metrics"},
+  #         {name: "SyncStep", value: "in"},
+  #         {name: "InstanceId", value: Aws::EC2::Instance.instance_id}
+  #       ],
+  #       value: 1
+  #     }
+  #   ]
+  # )
+  puts "Environment: " + CDO.rack_env.to_s
+  puts "instance id: " + instance_id
+  puts "logged test metrics"
 end
 
 # Takes strings describing and naming Framework, StandardCategory, and Standard

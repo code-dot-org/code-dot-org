@@ -23,6 +23,8 @@ export interface ProjectSources {
   // Stringified source code. Some labs (ex. Javalab) store multiple files
   // as nested JSON which we'll need to support eventually.
   source: string;
+  // Optional lab-specific configuration for this project
+  labConfig?: {[key: string]: object};
   // Add other properties (animations, html, etc) as needed.
 }
 
@@ -81,16 +83,16 @@ export interface Level {
 
 export interface LevelProperties {
   // Not a complete list; add properties as needed.
-  isProjectLevel: boolean;
-  hideAndShareRemix: boolean;
+  isProjectLevel?: 'true' | 'false';
+  hideShareAndRemix?: 'true' | 'false';
   levelData: LevelData;
 }
 
 // Generic level configuration data used by labs that don't require
 // reloads between levels. Labs may define more specific fields.
 export interface LevelData {
-  text: string;
-  validations: Validation[];
+  text?: string;
+  validations?: Validation[];
   startSources: Source;
 }
 
