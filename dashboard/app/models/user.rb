@@ -2638,7 +2638,6 @@ class User < ApplicationRecord
   end
 
   US_STATE_DROPDOWN_OPTIONS = {
-    '??' => I18n.t('signup_form.us_state_dropdown_options.other'),
     'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
     'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
     'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',
@@ -2655,7 +2654,15 @@ class User < ApplicationRecord
     'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington',
     'DC' => 'Washington D.C.', 'WV' => 'West Virginia', 'WI' => 'Wisconsin',
     'WY' => 'Wyoming'
-  }
+  }.freeze
+
+  # Returns a Hash of US state codes to state names meant for use in dropdown
+  # selection inputs for User accounts.
+  # Includes a '??' state code for a location not listed.
+  def self.us_state_dropdown_options
+    {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
+      merge(US_STATE_DROPDOWN_OPTIONS)
+  end
 
   # Verifies that the serialized attribute "us_state" is a 2 character string
   # representing a US State or "??" which represents a "N/A" kind of response.
@@ -2670,7 +2677,7 @@ class User < ApplicationRecord
       return
     end
     # Report an error if an invalid value was submitted (probably tampering).
-    unless US_STATE_DROPDOWN_OPTIONS.include?(us_state)
+    unless User.us_state_dropdown_options.include?(us_state)
       errors.add(:us_state, :invalid)
     end
   end
