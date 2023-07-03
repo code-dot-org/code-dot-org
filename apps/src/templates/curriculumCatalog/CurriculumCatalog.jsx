@@ -14,7 +14,7 @@ import Button from '@cdo/apps/templates/Button';
 import {
   Heading5,
   Heading6,
-  BodyTwoText,
+  BodyOneText,
 } from '@cdo/apps/componentLibrary/typography';
 import CheckboxDropdown from '../CheckboxDropdown';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
@@ -292,9 +292,9 @@ const CurriculumCatalog = ({
           <Heading5 className={style.noResultsHeading}>
             {i18n.noCurriculumSearchResultsHeader()}
           </Heading5>
-          <BodyTwoText className={style.noResultsBody}>
+          <BodyOneText className={style.noResultsBody}>
             {i18n.noCurriculumSearchResultsBody()}
-          </BodyTwoText>
+          </BodyOneText>
         </div>
       );
     }

@@ -48,7 +48,8 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
       />
       <i className="fa fa-solid" />
       {label && (
-        <Typography semanticTag="span" visualAppearance="body-two">
+        //   TODO: [DES-296] Once new Typography is ready, implement different label sizes
+        <Typography semanticTag="span" visualAppearance="body-one">
           {label}
         </Typography>
       )}
