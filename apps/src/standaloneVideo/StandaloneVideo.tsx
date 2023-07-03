@@ -5,18 +5,30 @@
 // the LabContainer, they will use an older-style level implemented with a
 // HAML page and some non-React JS code.
 
-import PropTypes from 'prop-types';
 import React from 'react';
 import {useSelector} from 'react-redux';
-import Video from './Video';
-import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
-import standaloneVideoLocale from './locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import Video from './Video';
+import {
+  sendSuccessReport,
+  navigateToNextLevel,
+} from '@cdo/apps/code-studio/progressRedux';
+import {LabState} from '@cdo/apps/labs/labRedux';
+import {LevelDataVideo} from '@cdo/apps/labs/types';
+import standaloneVideoLocale from './locale';
 import styles from './video.module.scss';
 
-const StandaloneVideo = () => {
+const StandaloneVideo: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-  const levelVideo = useSelector(state => state.lab.levelData);
+  const levelVideo : LevelDataVideo = useSelector(
+    (state: {lab: LabState}) => state.lab.levelData
+  ) as LevelDataVideo;
+
+  const nextButtonPressed = () => {
+    const appType = 'standalone_video';
+    dispatch(sendSuccessReport(appType));
+    dispatch(navigateToNextLevel());
+  };
 
   return (
     <div id="standalone-video">
@@ -24,7 +36,7 @@ const StandaloneVideo = () => {
         <button
           id="standalone-video-continue-button"
           type="button"
-          onClick={() => dispatch(navigateToNextLevel())}
+          onClick={() => nextButtonPressed()}
           className={styles.buttonNext}
         >
           {standaloneVideoLocale.continue()}
@@ -32,10 +44,6 @@ const StandaloneVideo = () => {
       </Video>
     </div>
   );
-};
-
-StandaloneVideo.propTypes = {
-  onError: PropTypes.func,
 };
 
 export default StandaloneVideo;
