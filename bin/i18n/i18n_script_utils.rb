@@ -7,6 +7,10 @@ require 'fileutils'
 require 'psych'
 
 I18N_SOURCE_DIR = "i18n/locales/source"
+DASHBOARD_CONFIG_DIR = 'dashboard/config'.freeze
+DASHBOARD_I18N_DIR = File.join(DASHBOARD_CONFIG_DIR, 'locales').freeze
+DASHBOARD_BLOCKS_DIR = File.join(DASHBOARD_CONFIG_DIR, 'blocks').freeze
+I18N_SOURCE_DASHBOARD_DIR = File.join(I18N_SOURCE_DIR, 'dashboard').freeze
 
 CROWDIN_PROJECTS = {
   codeorg: {

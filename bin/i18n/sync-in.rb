@@ -15,6 +15,8 @@ require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 require_relative '../animation_assets/manifest_builder'
 
+Dir[File.expand_path('../resources/**/*.rb', __FILE__)].sort.each {|file| require file}
+
 module I18n
   module SyncIn
     def self.perform
@@ -22,7 +24,7 @@ module I18n
       Services::I18n::CurriculumSyncUtils.sync_in
       HocSyncUtils.sync_in
       localize_level_and_project_content
-      localize_block_content
+      I18n::Resources::Dashboard::Blocks.sync_in
       localize_animation_library
       localize_shared_functions
       localize_course_offerings
@@ -33,7 +35,6 @@ module I18n
       localize_external_sources
       localize_course_resources
       redact_level_content
-      redact_block_content
       redact_docs
       redact_script_and_course_content
       redact_labs_content
@@ -593,37 +594,6 @@ module I18n
       File.write(courses_source, I18nScriptUtils.to_crowdin_yaml(courses_yaml))
     end
 
-    # Pull in various fields for custom blocks from .json files and save them to
-    # blocks.en.yml.
-    def self.localize_block_content
-      puts "Preparing block content"
-
-      blocks = {}
-
-      Dir.glob('dashboard/config/blocks/**/*.json').sort.each do |file|
-        name = File.basename(file, '.*')
-        config = JSON.parse(File.read(file))['config']
-        blocks[name] = {
-          'text' => config['blockText'],
-        }
-
-        next unless config['args']
-
-        args_with_options = {}
-        config['args'].each do |arg|
-          next if !arg['options'] || arg['options'].empty?
-
-          options = args_with_options[arg['name']] = {}
-          arg['options'].each do |option_tuple|
-            options[option_tuple.last] = option_tuple.first
-          end
-        end
-        blocks[name]['options'] = args_with_options unless args_with_options.empty?
-      end
-
-      File.write("dashboard/config/locales/blocks.en.yml", I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"blocks" => blocks}}}))
-    end
-
     def self.localize_animation_library
       spritelab_animation_source_file = "#{I18N_SOURCE_DIR}/animations/spritelab_animation_library.json"
       FileUtils.mkdir_p(File.dirname(spritelab_animation_source_file))
@@ -737,16 +707,6 @@ module I18n
         FileUtils.cp(source_path, backup_path)
         RedactRestoreUtils.redact(source_path, source_path, ['link'])
       end
-    end
-
-    def self.redact_block_content
-      puts "Redacting block content"
-
-      source = File.join(I18N_SOURCE_DIR, "dashboard/blocks.yml")
-      backup = source.sub("source", "original")
-      FileUtils.mkdir_p(File.dirname(backup))
-      FileUtils.cp(source, backup)
-      RedactRestoreUtils.redact(source, source, ['blockfield'], 'txt')
     end
 
     def self.redact_script_and_course_content
