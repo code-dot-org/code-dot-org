@@ -141,7 +141,7 @@ class Javalab < Level
       end
 
       # Don't set nil values
-      level_prop.reject! {|_, value| value.nil?}
+      level_prop.compact!
     end
     options.freeze
   end
