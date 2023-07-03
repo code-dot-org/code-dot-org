@@ -88,15 +88,6 @@ class P5LabView extends React.Component {
     });
   }
 
-  shouldHideAnimationUpload() {
-    // Teachers should always be allowed to upload animations.
-    if (this.props.currentUserType === 'teacher') {
-      return false;
-    }
-
-    return this.props.isBlockly;
-  }
-
   // Users of non-Blockly labs should always be allowed to upload animations
   // with no restrictions. Teachers in blockly labs (ie. Sprite Lab) can upload with a warning.
   // When students upload animations in Blockly labs, we disable publish and remix for the project.
