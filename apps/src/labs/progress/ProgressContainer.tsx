@@ -8,7 +8,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import React, {useCallback, useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 import {LabState, setValidationState} from '../labRedux';
-import {LevelDataLevel} from '../types';
+import {ProjectLevelData} from '../types';
 
 interface ProgressContainerProps {
   children: React.ReactNode;
@@ -49,7 +49,7 @@ const ProgressContainer: React.FunctionComponent<ProgressContainerProps> = ({
 
   useEffect(() => {
     if (levelData) {
-      progressManager.current.onLevelChange(levelData as LevelDataLevel);
+      progressManager.current.onLevelChange(levelData as ProjectLevelData);
     }
   }, [levelData]);
 
