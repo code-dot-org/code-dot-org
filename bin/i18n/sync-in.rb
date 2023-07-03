@@ -11,6 +11,7 @@ require 'json'
 require 'digest/md5'
 require 'cdo/aws/metrics'
 require 'aws-sdk-ec2'
+
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
