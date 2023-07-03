@@ -14,15 +14,15 @@ import {
   navigateToNextLevel,
 } from '@cdo/apps/code-studio/progressRedux';
 import {LabState} from '@cdo/apps/labs/labRedux';
-import {LevelDataVideo} from '@cdo/apps/labs/types';
+import {VideoLevelData} from '@cdo/apps/labs/types';
 import standaloneVideoLocale from './locale';
 import styles from './video.module.scss';
 
 const StandaloneVideo: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-  const levelVideo : LevelDataVideo = useSelector(
+  const levelVideo: VideoLevelData = useSelector(
     (state: {lab: LabState}) => state.lab.levelData
-  ) as LevelDataVideo;
+  ) as VideoLevelData;
 
   const nextButtonPressed = () => {
     const appType = 'standalone_video';

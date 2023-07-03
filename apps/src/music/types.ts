@@ -4,7 +4,7 @@
 // so this approach is still being investigated. For now, this type
 // is an object whose keys are all functions which return strings,
 
-import {LevelDataLevel} from '../labs/types';
+import {ProjectLevelData} from '../labs/types';
 
 // matching what we expect for a locale object.
 export type MusicLocale = {
@@ -12,7 +12,7 @@ export type MusicLocale = {
 };
 
 // TODO: Use this interface when converting MusicView to TypeScript
-export interface MusicLevelData extends LevelDataLevel {
+export interface MusicLevelData extends ProjectLevelData {
   toolbox: {
     [key: string]: string;
   };
