@@ -1,7 +1,7 @@
 {
   "key": "csc-bookcovers",
   "display_name": "Coding Book Covers",
-  "category": "other",
+  "category": "csc",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
