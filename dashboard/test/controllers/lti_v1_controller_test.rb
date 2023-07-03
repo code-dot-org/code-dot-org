@@ -1,6 +1,6 @@
 require 'json'
 require 'jwt'
-require "test_helper"
+require 'test_helper'
 
 class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   setup_all do
@@ -87,6 +87,10 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'login - given a valid platform_id, return redirect' do
     get "/lti/v1/login/#{@integration.platform_id}", params: {}
     assert_response :redirect
+  end
+
+  test 'login - given a valid client_id, write_cache should be called' do
+    # TODO: Figure out how to test write_method was called inside login controller action
   end
 
   test 'login - given valid parameters, redirect URL should have valid auth request params' do
