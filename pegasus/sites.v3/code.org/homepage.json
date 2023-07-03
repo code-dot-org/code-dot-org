@@ -105,7 +105,7 @@
     "curriculum-launch-2023": {
       "dcdo": "curriculum-launch-hero-banner",
       "class": "curriculum-banner-hero homepage",
-      "desktopImage": "/images/banners/banner-bg-school-supplies-dark-teal.png",
+      "desktopImage": "/images/banners/banner-bg-school-supplies-dark-black.png",
       "actions": [
         {
           "type": "flex-container",
@@ -113,7 +113,7 @@
           "text_desc": "curriculum_launch_2023_desc",
           "button_link": "https://studio.code.org/catalog",
           "button_text": "front_join_us_learn_more",
-          "img_src": "/images/banners/banner-curriculum-catalog-illustration.png"
+          "img_src": "/images/banners/banner-curriculum-catalog-illustration-black.png"
         }
       ]
     }
