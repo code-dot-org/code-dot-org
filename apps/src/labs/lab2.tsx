@@ -17,11 +17,11 @@ const Lab2: React.FunctionComponent = () => {
       ).app
   );
 
-  const channelId: string | null =
-    currentApp === 'music' ? getStandaloneProjectId() : null;
+  const channelId: string | undefined =
+    currentApp === 'music' ? getStandaloneProjectId() : undefined;
 
   return (
-    <ProjectContainer channelId={channelId || undefined}>
+    <ProjectContainer channelId={channelId}>
       <div
         id="music-container"
         style={{
