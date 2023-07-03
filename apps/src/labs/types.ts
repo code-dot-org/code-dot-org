@@ -85,6 +85,11 @@ export interface LevelProperties {
   // Not a complete list; add properties as needed.
   isProjectLevel?: 'true' | 'false';
   hideShareAndRemix?: 'true' | 'false';
+  // TODO: Rework this field into an "enableProjects" or more complex list of
+  // "enabledFeatures" that is calculated on the back end. For now, since
+  // the only labs we support have projects enabled, it's easier to make this a
+  // disabled flag for specific exceptions.
+  disableProjects?: 'true' | 'false';
   levelData: LevelData;
 }
 

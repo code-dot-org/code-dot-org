@@ -28,4 +28,8 @@ export default class LabRegistry {
   public getProjectManager() {
     return this.projectManager;
   }
+
+  public clearProjectManager() {
+    this.projectManager = null;
+  }
 }
