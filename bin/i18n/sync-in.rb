@@ -11,7 +11,6 @@ require 'json'
 require 'digest/md5'
 require 'cdo/aws/metrics'
 require 'aws-sdk-ec2'
-require 'net/http'
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
@@ -46,12 +45,6 @@ end
 
 def log_runtime_metrics
   puts "logging test metrics"
-
-  metadata_endpoint = 'http://169.254.169.254/latest/meta-data/'
-  instance_id = Net::HTTP.get(URI.parse(metadata_endpoint + 'instance-id'))
-
-  # ec2 = AWS::EC2.new
-  # instance = ec2.instances[instance_id]
   # Cdo::Metrics.push(
   #   I18N_METRICS_NAMESPACE,
   #   [
@@ -68,7 +61,7 @@ def log_runtime_metrics
   #   ]
   # )
   puts "Environment: " + CDO.rack_env.to_s
-  puts "instance id: " + instance_id
+  puts "instance id: " + Aws::EC2::Instance.instance_values.to_s
   puts "logged test metrics"
 end
 
