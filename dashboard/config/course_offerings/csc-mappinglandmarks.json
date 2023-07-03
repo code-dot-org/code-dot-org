@@ -1,7 +1,7 @@
 {
   "key": "csc-mappinglandmarks",
   "display_name": "Coding Interactive Maps",
-  "category": "other",
+  "category": "csc",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Module",
