@@ -14,43 +14,44 @@
 
 %h2=hoc_s(:heading_curriculum_at_a_glance)
 
-.curriculum-glance
-  %ul.grid-container
+.curriculum-glance.grid-container
+  %ul.flex-container.flex-direction-column
     %li
       %i{class: "#{icon_user}"}
       %p
         %strong=hoc_s(:module_label_grades)
         #{grades}
     %li
-      %i{class: "#{icon_clock}"}
-      %p
-        %strong=hoc_s(:module_label_duration)
-        #{duration}
-    %li
       %i{class: "#{icon_arrow_up_wide_short}"}
       %p
         %strong=hoc_s(:module_label_level)
         #{level}
     %li
-      %i{class: "#{icon_screwdriver_wrench}"}
+      %i{class: "#{icon_clock}"}
       %p
-        %strong=hoc_s(:module_label_tools)
-        #{tools}
+        %strong=hoc_s(:module_label_duration)
+        #{duration}
     %li
       %i{class: "#{icon_desktop}"}
       %p
         %strong=hoc_s(:module_label_devices)
         #{devices}
     %li
-      %i{class: "#{icon_chalkboard_user}"}
-      %p
-        %strong=hoc_s(:module_label_professional_learning)
-        #{professional_learning}
-    %li
       %i{class: "#{icon_book}"}
       %p
         %strong=hoc_s(:module_label_topics)
         #{topics}
+  %ul.flex-container.flex-direction-column
+    %li
+      %i{class: "#{icon_screwdriver_wrench}"}
+      %p
+        %strong=hoc_s(:module_label_tools)
+        #{tools}
+    %li
+      %i{class: "#{icon_chalkboard_user}"}
+      %p
+        %strong=hoc_s(:module_label_professional_learning)
+        #{professional_learning}
     %li
       %i{class: "#{icon_universal_access}"}
       %p
@@ -61,3 +62,4 @@
       %p
         %strong=hoc_s(:module_label_languages)
         #{languages}
+
