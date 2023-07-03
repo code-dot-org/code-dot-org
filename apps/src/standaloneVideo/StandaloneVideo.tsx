@@ -5,21 +5,23 @@
 // the LabContainer, they will use an older-style level implemented with a
 // HAML page and some non-React JS code.
 
-import PropTypes from 'prop-types';
 import React from 'react';
 import {useSelector} from 'react-redux';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import Video from './Video';
 import {
   sendSuccessReport,
   navigateToNextLevel,
 } from '@cdo/apps/code-studio/progressRedux';
+import {LabState} from '@cdo/apps/labs/labRedux';
 import standaloneVideoLocale from './locale';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import styles from './video.module.scss';
 
-const StandaloneVideo = () => {
+const StandaloneVideo: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-  const levelVideo = useSelector(state => state.lab.levelVideo);
+  const levelVideo = useSelector(
+    (state: {lab: LabState}) => state.lab.levelVideo
+  );
 
   const nextButtonPressed = () => {
     const appType = 'standalone_video';
@@ -41,10 +43,6 @@ const StandaloneVideo = () => {
       </Video>
     </div>
   );
-};
-
-StandaloneVideo.propTypes = {
-  onError: PropTypes.func,
 };
 
 export default StandaloneVideo;
