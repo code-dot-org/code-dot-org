@@ -2722,6 +2722,20 @@ class User < ApplicationRecord
     end
   end
 
+  # Determine a student' state based on their teacher's state. Used for student
+  # accounts created prior to the addition of the us_state field in June 2023.
+  # For newer accounts, use the us_state field instead.
+  def get_us_state_from_teacher
+    return nil unless student?
+    return nil unless sections_as_student.any?
+
+    latest_teacher_id = sections_as_student.order("created_at DESC").first.user_id
+    teacher_schools = User.find(latest_teacher_id).user_school_infos
+    return nil unless teacher_schools.any?
+
+    SchoolInfo.find(teacher_schools.order("start_date DESC").first.school_info_id).state
+  end
+
   # Values for the `child_account_compliance_state` attribute
   module ChildAccountCompliance
     # The student's account has been used to issue a request to a parent.

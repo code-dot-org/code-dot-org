@@ -4925,4 +4925,51 @@ class UserTest < ActiveSupport::TestCase
     teacher = create :teacher
     assert_equal User.marketing_segment_data_keys.sort, teacher.marketing_segment_data.keys.map(&:to_s).sort
   end
+
+  test "finds student state by indirectly using school state" do
+    school_info = create :school_info, state: 'WA'
+    teacher = create :teacher, :with_school_info, school_info: school_info
+    section = create :section, user: teacher
+    student = create(:follower, section: section).student_user
+
+    assert_equal 'WA', student.get_us_state_from_teacher
+  end
+
+  test "returns nil when finding student state from teacher state when the student has no sections" do
+    student = create :student
+    assert_nil student.get_us_state_from_teacher
+  end
+
+  test "returns nil when finding student state from teacher state when teacher has no school" do
+    teacher = create :teacher
+    section = create :section, user: teacher
+    student = create(:follower, section: section).student_user
+
+    assert_nil student.get_us_state_from_teacher
+  end
+
+  test "when finding student state from teacher state, finds the most recent section" do
+    school_info = create :school_info, state: 'WA'
+    teacher = create :teacher, :with_school_info, school_info: school_info
+    school_info_old = create :school_info, state: 'CO'
+    teacher_old = create :teacher, :with_school_info, school_info: school_info_old
+
+    section = create :section, user: teacher
+    section_old = create :section, :old_section, user: teacher_old
+    student = create(:follower, section: section).student_user
+    create :follower, section: section_old, student_user: student
+
+    assert_equal 'WA', student.get_us_state_from_teacher
+  end
+
+  test "when finding student state from teacher state, finds the most recent school" do
+    school_info_old = create :school_info, state: 'CO'
+    school_info_new = create :school_info, state: 'WA'
+    teacher = create :teacher, :with_school_info, school_info: school_info_new
+    create :user_school_info, user: teacher, school_info: school_info_old, start_date: 1.year.ago
+    section = create :section, user: teacher
+    student = create(:follower, section: section).student_user
+
+    assert_equal 'WA', student.get_us_state_from_teacher
+  end
 end
