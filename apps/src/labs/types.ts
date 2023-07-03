@@ -98,7 +98,7 @@ export interface LevelDataLevel {
 
 // The level data for a standalone_video level that doesn't require
 // reloads between levels.
-interface LevelDataVideo {
+export interface LevelDataVideo {
   src: string;
   download: string;
 }

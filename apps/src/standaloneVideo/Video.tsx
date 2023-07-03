@@ -2,6 +2,11 @@ import PropTypes from 'prop-types';
 import React, {useRef, useLayoutEffect, useEffect, useState} from 'react';
 import styles from './video.module.scss';
 
+interface VideoProps {
+  children: React.ReactNode;
+  src: string | undefined;
+}
+
 function useWindowSize() {
   const [size, setSize] = useState([
     document.documentElement.clientWidth,
@@ -23,13 +28,8 @@ function useWindowSize() {
 /**
  * Renders a simple modal video player.
  */
-const Video = ({children, src}) => {
-  const startTime = useRef(null);
 
-  useEffect(() => {
-    startTime.current = Date.now();
-  }, []);
-
+const Video: React.FunctionComponent<VideoProps> = ({children, src}) => {
   const childrenAreaHeight = 70;
 
   let [targetWidth, targetHeight] = useWindowSize();
@@ -70,11 +70,6 @@ const Video = ({children, src}) => {
       </div>
     </div>
   );
-};
-
-Video.propTypes = {
-  children: PropTypes.node.isRequired,
-  src: PropTypes.string,
 };
 
 export default Video;
