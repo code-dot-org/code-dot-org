@@ -107,8 +107,7 @@ class P5LabVisualizationHeader extends React.Component {
                 <button
                   style={{
                     ...styles.buttonFocus,
-                    // All truncation if the visualize column is very small
-                    // or if translated strings are longer than English.
+                    // If the button text is wider than the available space, truncate it.
                     overflow: 'hidden',
                     textOverflow: 'ellipsis',
                     whiteSpace: 'nowrap',
