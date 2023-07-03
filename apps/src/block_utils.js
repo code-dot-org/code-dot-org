@@ -1173,6 +1173,41 @@ exports.createJsWrapperBlockCreator = function (
                 }
               );
             }
+
+            this.saveExtraState = function () {
+              return {
+                displayIcon1: flyoutToggleButton.displayIcon1,
+              };
+            };
+
+            this.loadExtraState = function (state) {
+              flyoutToggleButton.displayIcon1 = state['displayIcon1'];
+            };
+
+            this.mutationToDom = function () {
+              var container = Blockly.utils.xml.createElement('mutation');
+              container.setAttribute(
+                'defaultDisplayIcon',
+                flyoutToggleButton.displayIcon1
+              );
+              return container;
+            };
+            this.domToMutation = function (xmlElement) {
+              let displayIcon1 = xmlElement.getAttribute('defaultDisplayIcon');
+              if (displayIcon1 === 'true') {
+                displayIcon1 = true;
+              }
+              if (displayIcon1 === 'false') {
+                displayIcon1 = false;
+              }
+              flyoutToggleButton.displayIcon1 = displayIcon1;
+              if (!flyoutToggleButton.displayIcon1) {
+                console.log(
+                  flyoutToggleButton.displayIcon1,
+                  `not default icon for ${this.type}; should open flyout`
+                );
+              }
+            };
           } else {
             var toggle = new Blockly.FieldIcon('+');
             if (Blockly.cdoUtils.isWorkspaceReadOnly(this.blockSpace)) {
