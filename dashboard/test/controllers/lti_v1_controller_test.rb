@@ -90,7 +90,8 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'login - given a valid client_id, write_cache should be called' do
-    # TODO: Figure out how to test write_method was called inside login controller action
+    LtiV1Controller.any_instance.expects(:write_cache)
+    get '/lti/v1/login', params: {client_id: @integration.client_id, iss: @integration.issuer}
   end
 
   test 'login - given valid parameters, redirect URL should have valid auth request params' do
