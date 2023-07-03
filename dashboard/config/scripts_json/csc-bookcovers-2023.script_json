@@ -7,12 +7,13 @@
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "csc-bookcovers",
-    "serialized_at": "2023-06-28 20:56:22 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-06-30 15:48:41 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -43,7 +44,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this CS and ELA integrated lesson for new coders, students will learn to code a digital book cover. First, they will look at existing book covers and discuss what graphic design choices were made. Next, students will look at an digital book cover example before creating several of their own. Students will learn to select sprites to represent the characters in a book and to use events to make the characters speak. \n",
-        "preparation": "- Play through the levels and review the lesson [slides](https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview) \n- Decide on pacing between student work time and whole group instruction.\n- Consider exploring the recommended preparation activities before beginning ([link](https://studio.code.org/s/csc-bookcovers-2023/lessons/1#activity-4350298)).\n\n#####Optional:\n- [Optional] Review this **[teacher’s guide to debugging](https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf)** to be prepared to help students find and fix errors in their code. \n- [Optional] **Pair Programming** - Decide if you want students to engage in pair programming. Watch this [video](https://youtu.be/sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information.",
+        "preparation": "- Play through the levels and review the lesson <a href=\"https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview\" target=\"_blank\">slides</a>\n- Decide on pacing between student work time and whole group instruction.\n- Consider exploring the recommended preparation activities before beginning ([link](https://studio.code.org/s/csc-bookcovers-2023/lessons/1#activity-4350298)).\n\n#####Optional:\n- Review this <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">Helpful Hints</a>  slideshow. \n- Review this <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">teacher’s guide to debugging</a>  to be prepared to help students find and fix errors in their code. \n- Pair Programming - Decide if you want students to engage in pair programming. Watch this <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">video</a> and visit this <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">Support</a> page for more information about pair programming.\n- Custom Sprite Uploads - Though this will be introduced in later lessons, you can choose to teach students how to upload their own sprite costumes and backgrounds with this <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">video</a>.\n",
         "student_overview": "In this lesson, you will learn how to code a digital book cover. First, you will select the background and characters. Then, you will learn how to program the characters talk when clicked. By the end of the lesson, you will have coded several examples of interactive book covers."
       },
       "seeding_key": {
@@ -61,6 +62,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "In this **Unplugged** lesson, students will plan their own interactive book cover. Students will begin by brainstorming books they have enjoyed and select one to design a book cover for. Students should imagine they are recommending the book to someone else and piquing their interest in reading it. Students will introduce two main characters and write a summary of the story. Then they will receive feedback from a peer to ensure they are ready for the next lesson. In the Lesson 3, students will code their own interactive digital book cover.",
+        "preparation": "- Help each student select a book for their Book Covers project.\n- Print a ***<a href=\"https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview\t\n\" target=\"_blank\">Planning Guide</a>** handout for each student\n- Review ***<a href=\"https://docs.google.com/document/d/1sinZLdMy8PLHJVKRwGt-mqhcADQtNq0bLYy4oZZwVpQ/template/preview\" target=\"_blank\">Planning Guide - Teacher Key</a>**.\n\n\n\n\n",
         "purpose": "The purpose of this lesson is to engage fourth-grade students in a creative and interactive learning experience centered around designing their own interactive book cover. By reflecting on books they have enjoyed, students will have the opportunity to explore their personal reading preferences and select a book to create a captivating cover for. \n\nThrough this process, they will practice summarizing the story and introducing two main characters, honing their ability to effectively communicate key elements of a narrative. Furthermore, students will engage in a peer feedback activity to refine their work before progressing to the next lesson, where they will learn to code their own interactive digital book covers. \n\nThis lesson aims to foster students' creativity, storytelling skills, and technological literacy while encouraging a love for reading and sharing book recommendations.\n"
       },
       "seeding_key": {
@@ -78,7 +80,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "In this lesson, students will use the skills they learned in the first lesson to make an interactive book cover for a book of their choice. They will warm with a spiraled review of some of the coding blocks needed. Then students will be instructed to code a Sprite Lab project step by step that includes the title, author, main characters, setting and summary of a book. Next class, students will present their work to their classmates.\n\nNote that this is a project progression, meaning student code will follow them from one level to the next. Encourage students to press “Run” on each level to save their code before progressing to the next level.",
-        "preparation": "- Play through the levels and review the lesson [slides](https://docs.google.com/document/d/1r7dnygat_SH_us1TWYil-Bx5ulROZ2PDbF-Njcz27RM/template/preview) .\n- Decide on pacing between student work time and whole group instruction.\n- It may be helpful to make your own book cover to share with students.\n- Be sure students have the planning guide they used to plan their digital book cover in the previous lesson.\n- [Optional]  Familiarize yourself with how to upload custom sprite costumes and backgrounds with this [video](https://youtu.be/CHipUGfL_0M). ",
+        "preparation": "- Play through the levels and review the lesson <a href=\"https://docs.google.com/document/d/1r7dnygat_SH_us1TWYil-Bx5ulROZ2PDbF-Njcz27RM/template/preview\" target=\"_blank\">slides</a>.\n- Decide on pacing between student work time and whole group instruction.\n- It may be helpful to make your own book cover to share with students.\n- Be sure students have the planning guide they used to plan their digital book cover in the previous lesson.\n\n##### Optional\n- Familiarize yourself with how to upload custom sprite costumes and backgrounds with this <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">video</a>.",
         "student_overview": "In this lesson, you will code your own digital book cover. First, you will select the background and characters. Then, you will program the characters to introduce themselves. And you'll finish by including the summary of the book when you press the up arrow. You can be very creative by drawing your own sprites, using some from the library or even uploading your own images. \n\nYou will follow the plan you designed last class. Follow the directions in each level carefully. In this project, your code will follow you from level to level. \nNext class, you will present your work."
       },
       "seeding_key": {
@@ -96,7 +98,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "In this final lesson, students will share their book covers with one another in a gallery walk activity where they explore and play-test their classmates' book cover projects. They leave notes for each classmate, expressing their thoughts and feedback using provided sentence starters. Throughout the lesson, students actively participate in sharing, observing, reflecting, and discussing their book covers, fostering a deeper understanding of design choices and their impact on book selection. The lesson concludes with a wrap-up reflection exercise considering the saying \"don't judge a book by its cover\" in relation to their own and their classmates' interactive book covers. They discuss in small groups and then as a class, highlighting the role of book covers in conveying information and the uniqueness of individual designs.",
-        "preparation": "- Review and complete the online tutorial yourself.\n- Review slides and decide on pacing between student work time and whole group instruction.\n- Have student planning guides available from the previous lessons\n- Hand out a stack of Post It notes to each student \n- Consider these related extensions options ([link](studio.code.org/s/csc-bookcovers-2023/lessons/4#activity-4350299)) to explore after the last lesson\n",
+        "preparation": "- Review and complete the online tutorial yourself.\n- Review slides and decide on pacing between student work time and whole group instruction.\n- Have student planning guides available from the previous lessons\n- Hand out a stack of Post It notes to each student \n- Consider these related extensions options ([link](https://studio.code.org/s/csc-bookcovers-2023/lessons/4#activity-4350299)) to explore after the last lesson\n",
         "student_overview": "In this final lesson, you are going to share out your Book Cover with your classmates. You will have the chance to show off your work and test your classmates’ projects. At the end of class, you will have a discussion on what choices your classmates made in their Book Covers.\n"
       },
       "seeding_key": {
@@ -163,6 +165,19 @@
       }
     },
     {
+      "key": "7f71c16a-2df0-4157-a1ce-3f6d33a0fbb1",
+      "position": 5,
+      "properties": {
+        "name": "Extension Opportunities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7f71c16a-2df0-4157-a1ce-3f6d33a0fbb1",
+        "lesson.key": "Learn to Code a Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcovers-2023"
+      }
+    },
+    {
       "key": "7c5e6524-b963-4a87-855d-adff95087976",
       "position": 1,
       "properties": {
@@ -205,6 +220,19 @@
       }
     },
     {
+      "key": "5e8f830b-1775-4f99-96df-b273d625a45d",
+      "position": 4,
+      "properties": {
+        "name": "Extension Opportunities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5e8f830b-1775-4f99-96df-b273d625a45d",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcovers-2023"
+      }
+    },
+    {
       "key": "90169d11-4eb2-4bb4-9ae3-f9fc089103b6",
       "position": 1,
       "properties": {
@@ -241,6 +269,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "758a3a9c-9ded-4c16-9c35-7927bfccd305",
+        "lesson.key": "Code Your Own Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcovers-2023"
+      }
+    },
+    {
+      "key": "00de9a2c-76a5-4fa6-9828-09a42d3dd5d6",
+      "position": 4,
+      "properties": {
+        "name": "Extension Opportunities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "00de9a2c-76a5-4fa6-9828-09a42d3dd5d6",
         "lesson.key": "Code Your Own Book Cover ",
         "lesson_group.key": "",
         "script.name": "csc-bookcovers-2023"
@@ -339,7 +380,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If you would like, you are able to choose your own books instead of the ones provided on the slides. Before the lesson begins, gather a few books that your students are familiar with and some that they are unlikely to have read. Try to choose a diverse set of book covers for students to look at during the discussion. \n\nIf you are looking for ideas, refer to the [Book Guide](https://docs.google.com/document/d/1WINH28YY27b0u7JR5pDOosOsJAafzfIj9hnSvcYPHU8/template/preview) in the lesson resources. "
+            "markdown": "If you would like, you are able to choose your own books instead of the ones provided on the slides. Before the lesson begins, gather a few books that your students are familiar with and some that they are unlikely to have read. Try to choose a diverse set of book covers for students to look at during the discussion. \n\nIf you are looking for ideas, refer to the <a href=\"https://docs.google.com/document/d/1WINH28YY27b0u7JR5pDOosOsJAafzfIj9hnSvcYPHU8/template/preview\" target=\"_blank\">Book Guide</a> in the lesson resources. \n"
           }
         ]
       },
@@ -438,7 +479,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "In Levels 3-11, students will be following instructions and working at their own pace. Here are a few tips that should help students while they're working through the levels: \n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).  \n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n\n\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Stuck? Look for hints:** Each level includes a hint with advice for how to pass a level, including which blocks of code to try out. \n\n* **Take your time and experiment.** The instructions tell students generally what to do, but they should also feel free to try out their own ideas.\n"
+            "markdown": "In Levels 3-11, students will be following instructions and working at their own pace. Here are a few tips that should help students while they're working through the levels: \n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using <a href=\"https://youtu.be/vgkahOzFH2Q\" target=\"_blank\">pair programming</a>.\n\n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n\n\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Stuck? Look for hints:** Each level includes a hint with advice for how to pass a level, including which blocks of code to try out. \n\n* **Take your time and experiment.** The instructions tell students generally what to do, but they should also feel free to try out their own ideas.\n"
           }
         ]
       },
@@ -515,6 +556,23 @@
       "seeding_key": {
         "activity_section.key": "2b949034-3cb4-4ea7-96a7-3a82d284c7d1",
         "lesson_activity.key": "ea566846-efb2-47d6-84a1-3be0b30a467f"
+      }
+    },
+    {
+      "key": "8580731f-0cf9-4ed3-9d61-37cf0764cfd9",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of ELA. Here are a few options to continue learning more about the concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 4 in this module.",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Computer Science:** \n\n- **<a href=\"https://studio.code.org/s/coursed-2023/lessons/6\" target=\"_blank\">Events in Bounce</a>**: Students will continue applying their understanding of events by making a sports-based game. They learn to make their paddle move according to arrow keys, and make noises when objects collide. At the very end, they will customize their game to make it more unique! \n- **<a href=\"https://studio.code.org/s/poem-art-2021/lessons/1\" target=\"_blank\">Poem Art</a>**: Add art and animation to a classic poem in this Hour of Code activity!   \n\n**English Language Arts**:\n- Compare and contrast the experience of reading a story to listening to or viewing a video version of the text, including contrasting what they \"see\" and \"hear\" when reading the text to what they perceive when they listen or watch. \n- Compare books with their movie adaptations. \nHave students extend the idea of a book cover to other subject areas: create a book cover that encapsulates their math textbook, science textbook, history textbook, etc.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8580731f-0cf9-4ed3-9d61-37cf0764cfd9",
+        "lesson_activity.key": "7f71c16a-2df0-4157-a1ce-3f6d33a0fbb1"
       }
     },
     {
@@ -664,7 +722,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "In this lesson, you will be using the provided [rubric](https://docs.google.com/document/d/11hnQkEHwwOD6Bo2_oKiE-CxyU5hXJNlMgV30cjaKVYQ/template/preview) to assess your students' projects. Rubrics are valuable tools that bring consistency and clarity to the evaluation process. By outlining specific criteria and performance levels, rubrics ensure that all students are assessed fairly and objectively.\n\nWe encourage you to share the rubric with your students before they begin their projects. This helps them understand the expectations and work towards meeting the outlined criteria. Additionally, as you grade their work, refer to the rubric consistently, so that each aspect of the project is assessed based on the same set of standards. By adopting this approach, you promote fairness, provide meaningful feedback to students, and help them identify areas for growth and improvement.\n"
+            "markdown": "In this lesson, you will be using the provided <a href=\"https://docs.google.com/document/d/11hnQkEHwwOD6Bo2_oKiE-CxyU5hXJNlMgV30cjaKVYQ/template/preview\" target=\"_blank\">rubric</a> to assess your students' projects. Rubrics are valuable tools that bring consistency and clarity to the evaluation process. By outlining specific criteria and performance levels, rubrics ensure that all students are assessed fairly and objectively.\n\nWe encourage you to share the rubric with your students before they begin their projects. This helps them understand the expectations and work towards meeting the outlined criteria. Additionally, as you grade their work, refer to the rubric consistently, so that each aspect of the project is assessed based on the same set of standards. By adopting this approach, you promote fairness, provide meaningful feedback to students, and help them identify areas for growth and improvement.\n"
           }
         ]
       },
@@ -766,6 +824,23 @@
       }
     },
     {
+      "key": "35535f9b-4d88-42b0-8735-acaa0ba518b2",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of ELA. Here are a few options to continue learning more about the concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 4 in this module.",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Computer Science:** \n\n- **<a href=\"https://studio.code.org/s/coursed-2023/lessons/6\" target=\"_blank\">Events in Bounce</a>**: Students will continue applying their understanding of events by making a sports-based game. They learn to make their paddle move according to arrow keys, and make noises when objects collide. At the very end, they will customize their game to make it more unique! \n- **<a href=\"https://studio.code.org/s/poem-art-2021/lessons/1\" target=\"_blank\">Poem Art</a>**: Add art and animation to a classic poem in this Hour of Code activity!   \n\n**English Language Arts**:\n- Compare and contrast the experience of reading a story to listening to or viewing a video version of the text, including contrasting what they \"see\" and \"hear\" when reading the text to what they perceive when they listen or watch. \n- Compare books with their movie adaptations. \nHave students extend the idea of a book cover to other subject areas: create a book cover that encapsulates their math textbook, science textbook, history textbook, etc.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "35535f9b-4d88-42b0-8735-acaa0ba518b2",
+        "lesson_activity.key": "5e8f830b-1775-4f99-96df-b273d625a45d"
+      }
+    },
+    {
       "key": "6110d0ed-fb3b-4250-bab7-9a1b6a265e77",
       "position": 1,
       "properties": {
@@ -788,7 +863,7 @@
       "key": "51935ec3-611a-4310-8532-70addb3fb06f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Recall your plan” slide\n\n**Do This:** Make sure students have their Planning Guide handout from the previous lesson. Then, have students find an elbow partner to quickly share about the digital book cover they will be coding today. \n\n**Discuss**: What is the title of the book you're coding a digital cover for? What are the two characters you'll include? What is the setting of the book you'll use for the cover? \n\n**Discussion Goal**: Students will be reminded of their previously made plan while also practicing academic vocabulary like title, characters, and setting. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Recall your plan” slide\n\n**Do This:** Make sure students have their ***<a href= \"https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview\" target=\"_blank\">Planning Guide</a>** handout from the previous lesson. Then, have students find an elbow partner to quickly share about the digital book cover they will be coding today. \n\n**Discuss**: What is the title of the book you're coding a digital cover for? What are the two characters you'll include? What is the setting of the book you'll use for the cover? \n\n**Discussion Goal**: Students will be reminded of their previously made plan while also practicing academic vocabulary like title, characters, and setting. ",
         "duration": "3",
         "name": "Recall ",
         "tips": [
@@ -876,6 +951,23 @@
       }
     },
     {
+      "key": "eecb5526-a89e-4a3a-9c07-c95576c4d8e2",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of ELA. Here are a few options to continue learning more about the concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 4 in this module.",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Computer Science:** \n\n- **<a href=\"https://studio.code.org/s/coursed-2023/lessons/6\" target=\"_blank\">Events in Bounce</a>**: Students will continue applying their understanding of events by making a sports-based game. They learn to make their paddle move according to arrow keys, and make noises when objects collide. At the very end, they will customize their game to make it more unique! \n- **<a href=\"https://studio.code.org/s/poem-art-2021/lessons/1\" target=\"_blank\">Poem Art</a>**: Add art and animation to a classic poem in this Hour of Code activity!   \n\n**English Language Arts**:\n- Compare and contrast the experience of reading a story to listening to or viewing a video version of the text, including contrasting what they \"see\" and \"hear\" when reading the text to what they perceive when they listen or watch. \n- Compare books with their movie adaptations. \nHave students extend the idea of a book cover to other subject areas: create a book cover that encapsulates their math textbook, science textbook, history textbook, etc.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "eecb5526-a89e-4a3a-9c07-c95576c4d8e2",
+        "lesson_activity.key": "00de9a2c-76a5-4fa6-9828-09a42d3dd5d6"
+      }
+    },
+    {
       "key": "4c61716c-774e-4184-9ee0-45649989c530",
       "position": 1,
       "properties": {
@@ -918,7 +1010,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "There is an optional [Sticky Notes Handout](https://docs.google.com/document/d/1nG1d6-dVkodEuFod_7DqzKHWjp9wWZs60n_zYfxUCtU/template/preview) with sentence stems that you can print out and cut into slips for students to use during the Gallery Walk. This way students do not have to spend time writing out the sentence stems each time, and can devote more of their energy on experiencing the different projects."
+            "markdown": "There is an optional <a href=\"https://docs.google.com/document/d/1nG1d6-dVkodEuFod_7DqzKHWjp9wWZs60n_zYfxUCtU/template/preview\" target=\"_blank\">Sticky Notes Handout</a> with sentence stems that you can print out and cut into slips for students to use during the Gallery Walk. This way students do not have to spend time writing out the sentence stems each time, and can devote more of their energy on experiencing the different projects."
           }
         ]
       },
@@ -968,11 +1060,11 @@
       "key": "1ec13319-6b29-4ca6-839c-2e552e18aaef",
       "position": 1,
       "properties": {
-        "description": "This module is a great introduction to computer science through the lens of ELA. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 4 in this module.",
+        "description": "This module is a great introduction to computer science through the lens of ELA. Here are a few options to continue learning more about the concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 4 in this module.",
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "**Computer Science:** \n- **[Events in Bounce](https://studio.code.org/s/coursed-2023/lessons/6)** Students will continue applying their understanding of events by making a sports-based game. They learn to make their paddle move according to arrow keys, and make noises when objects collide. At the very end, they will customize their game to make it more unique! \n- **[Poem Art](https://studio.code.org/s/poem-art-2021/lessons/1)** Add art and animation to a classic poem in this Hour of Code activity!   \n\n**English Language Arts**:\n- Compare and contrast the experience of reading a story to listening to or viewing a video version of the text, including contrasting what they \"see\" and \"hear\" when reading the text to what they perceive when they listen or watch. \n- Compare books with their movie adaptations. \nHave students extend the idea of a book cover to other subject areas: create a book cover that encapsulates their math textbook, science textbook, history textbook, etc.\n"
+            "markdown": "**Computer Science:** \n\n- **<a href=\"https://studio.code.org/s/coursed-2023/lessons/6\" target=\"_blank\">Events in Bounce</a>**: Students will continue applying their understanding of events by making a sports-based game. They learn to make their paddle move according to arrow keys, and make noises when objects collide. At the very end, they will customize their game to make it more unique! \n- **<a href=\"https://studio.code.org/s/poem-art-2021/lessons/1\" target=\"_blank\">Poem Art</a>**: Add art and animation to a classic poem in this Hour of Code activity!   \n\n**English Language Arts**:\n- Compare and contrast the experience of reading a story to listening to or viewing a video version of the text, including contrasting what they \"see\" and \"hear\" when reading the text to what they perceive when they listen or watch. \n- Compare books with their movie adaptations. \nHave students extend the idea of a book cover to other subject areas: create a book cover that encapsulates their math textbook, science textbook, history textbook, etc.\n"
           }
         ]
       },
@@ -990,14 +1082,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CourseF_video_introSpriteLab_2023"
+          "csc_bookcovers_lesson1_video"
         ],
         "progression": "Video Introduction"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CourseF_video_introSpriteLab_2023"
+          "csc_bookcovers_lesson1_video"
         ],
         "lesson.key": "Learn to Code a Book Cover ",
         "lesson_group.key": "",
@@ -1005,7 +1097,7 @@
         "activity_section.key": "4f78bd1a-588c-4fae-946b-3612cae0bc03"
       },
       "level_keys": [
-        "CourseF_video_introSpriteLab_2023"
+        "csc_bookcovers_lesson1_video"
       ]
     },
     {
@@ -1537,9 +1629,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "CourseF_video_introSpriteLab_2023",
+        "level.key": "csc_bookcovers_lesson1_video",
         "script_level.level_keys": [
-          "CourseF_video_introSpriteLab_2023"
+          "csc_bookcovers_lesson1_video"
         ],
         "lesson.key": "Learn to Code a Book Cover ",
         "lesson_group.key": "",

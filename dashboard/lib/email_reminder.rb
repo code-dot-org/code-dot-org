@@ -111,10 +111,10 @@ class EmailReminder
 
   def build_summary
     formatted_duration = Time.at(Time.now.to_i - @start_time.to_i).utc.strftime("%H:%M:%S")
-    summary = "Sent #{@num_reminders_sent} permission reminder(s)"
+    summary = "\n Sent #{@num_reminders_sent} permission reminder(s)"
     summary += "\n Duration: #{formatted_duration}"
     if @dry_run
-      summary += "IMPORTANT: This was a dry run. No emails were sent."
+      summary += "\n *IMPORTANT: This was a dry run. No emails were sent.*"
     end
     summary
   end
@@ -126,8 +126,7 @@ class EmailReminder
 
   def prefixed(message)
     "*Parent Permission Email Reminders*" \
-    " <https://github.com/code-dot-org/code-dot-org/blob/production/dashboard
-/lib/email_reminder.rb|(source)>" \
+    " <https://github.com/code-dot-org/code-dot-org/blob/production/dashboard/lib/email_reminder.rb|(source)>" \
     "\n#{message}"
   end
 end

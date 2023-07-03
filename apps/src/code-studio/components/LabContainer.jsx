@@ -16,12 +16,13 @@ import moduleStyles from './LabContainer.module.scss';
 import i18n from '@cdo/locale';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ErrorBoundary from './ErrorBoundary';
+import {isLabLoading} from '@cdo/apps/labs/labRedux';
 
 const LabContainer = ({children, onError}) => {
-  const isLabLoading = useSelector(state => state.lab.isLoading);
+  const isLoading = useSelector(isLabLoading);
   const isPageError = useSelector(state => state.lab.isPageError);
 
-  const overlayStyle = isLabLoading
+  const overlayStyle = isLoading
     ? moduleStyles.showingBlock
     : moduleStyles.fadeInBlock;
 
@@ -31,7 +32,7 @@ const LabContainer = ({children, onError}) => {
         id="lab-container"
         className={classNames(
           moduleStyles.labContainer,
-          isLabLoading && moduleStyles.labContainerLoading
+          isLoading && moduleStyles.labContainerLoading
         )}
       >
         {children}
@@ -39,7 +40,7 @@ const LabContainer = ({children, onError}) => {
           id="fade-overlay"
           className={classNames(moduleStyles.solidBlock, overlayStyle)}
         >
-          {isLabLoading && (
+          {isLoading && (
             <div className={moduleStyles.slowLoadContainer}>
               <div className={moduleStyles.spinnerContainer}>
                 <FontAwesome
