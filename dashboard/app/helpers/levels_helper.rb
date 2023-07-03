@@ -315,10 +315,9 @@ module LevelsHelper
       end
     end
 
-    # TODO: Ues correct app for a lesson with music and standalone_video levels.
     @app_options =
       if @script_level && @level.uses_lab_container?
-        {app: 'lab2'}
+        {app: 'lab2', channel: view_options[:channel]}
       elsif @level.is_a? Blockly
         blockly_options
       elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab) || @level.is_a?(Javalab)
