@@ -1,4 +1,5 @@
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import {MetricDimension} from '@cdo/apps/lib/metrics/types';
 
 /**
  * Logging and reporting functions for Music Lab
@@ -22,6 +23,15 @@ export function logError(message: string | object | Error) {
   MetricsReporter.logError(decorateMessage(message));
 }
 
+export function reportLoadTime(metricName: string, loadTimeMs: number) {
+  MetricsReporter.publishMetric(
+    metricName,
+    loadTimeMs,
+    'Milliseconds',
+    getDimensions()
+  );
+}
+
 /**
  * Decorate log messages with common Music Lab fields
  */
@@ -36,4 +46,13 @@ function decorateMessage(message: string | object): object {
     ...message,
     lab: 'music',
   };
+}
+
+function getDimensions(): MetricDimension[] {
+  return [
+    {
+      name: 'Lab',
+      value: 'music',
+    },
+  ];
 }

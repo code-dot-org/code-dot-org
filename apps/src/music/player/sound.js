@@ -1,4 +1,5 @@
 import {fetchSignedCookies} from '@cdo/apps/utils';
+import {reportLoadTime} from '../utils/MusicMetrics';
 import WebAudio from './soundSub';
 
 var soundList = [];
@@ -51,21 +52,24 @@ export function GetCurrentAudioTime() {
 }
 
 async function LoadSounds(desiredSounds) {
+  const soundLoadStartTime = Date.now();
   soundList = desiredSounds;
 
   // If there are any restricted sounds in the manifest, we need to load
   // signed cookies.
-  let canLoadRestrictedContent;
+  let canLoadRestrictedContent = false;
   if (soundList.findIndex(sound => sound.restricted) >= 0) {
     try {
-      await fetchSignedCookies();
-      canLoadRestrictedContent = true;
+      const response = await fetchSignedCookies();
+      if (response.ok) {
+        canLoadRestrictedContent = true;
+      }
     } catch (error) {
       console.error('Error loading signed cookies: ' + error);
-      canLoadRestrictedContent = false;
     }
   }
 
+  let soundsToLoad = 0;
   for (let i = 0; i < soundList.length; i++) {
     const sound = soundList[i];
     const basePath = sound.restricted ? restrictedSoundUrlPath : baseSoundUrl;
@@ -74,11 +78,19 @@ async function LoadSounds(desiredSounds) {
       continue;
     }
 
+    soundsToLoad++;
     audioSystem.LoadSound(
       basePath + sound.path + '.mp3',
       function (id, buffer) {
         audioSoundBuffers[id] = buffer;
-      }.bind(this, i)
+      }.bind(this, i),
+      () => {
+        soundsToLoad--;
+        if (soundsToLoad === 0) {
+          const loadTimeMs = Date.now() - soundLoadStartTime;
+          reportLoadTime('SoundLibraryLoadTime', loadTimeMs);
+        }
+      }
     );
   }
 }
