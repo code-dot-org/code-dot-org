@@ -803,6 +803,13 @@ class Level < ApplicationRecord
     }
   end
 
+  def summarize_for_lab2_properties
+    video = specified_autoplay_video&.summarize(false)&.camelize_keys
+    properties_camelized = properties.camelize_keys
+    properties_camelized[:levelData] = video if video
+    properties_camelized
+  end
+
   def project_type
     return game&.app
   end

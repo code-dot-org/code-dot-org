@@ -187,12 +187,7 @@ class ScriptLevelsController < ApplicationController
 
     @level = @script_level.level
 
-    @video = @level.specified_autoplay_video&.summarize(false)&.camelize_keys
-
-    @properties = @level.properties.camelize_keys
-    @properties[:levelData] = @video if @video
-
-    render json: @properties
+    render json: @level.summarize_for_lab2_properties
   end
 
   # Get a list of hidden lessons for the current users section
