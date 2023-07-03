@@ -786,13 +786,15 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert response.body.include? 'non-workshop-admin cannot change CSP/CSA Summer Workshop virtual field within a month of it starting.'
   end
 
-  # test 'updating virtual field in CSP/CSA summer workshop within a month of starting as a ws-admin does not raise error' do
-  #   sign_in @workshop_admin
-  #   workshop = create :csp_summer_workshop, organizer: @organizer
+  test 'updating virtual field in CSP/CSA summer workshop within a month of starting as a ws-admin does not raise error' do
+    skip 'test is flaky at the beginning of the month due to time differences'
 
-  #   put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
-  #   assert_response :success
-  # end
+    sign_in @workshop_admin
+    workshop = create :csp_summer_workshop, organizer: @organizer
+
+    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
+    assert_response :success
+  end
 
   test 'updating virtual field in CSP/CSA summer workshop before a month of starting as a non-ws-admin does not raise error' do
     sign_in @organizer
@@ -808,21 +810,25 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_response :success
   end
 
-  # test 'updating virtual field in CSP/CSA non-summer workshop within a month of starting as a non-ws-admin does not raise error' do
-  #   sign_in @organizer
-  #   workshop = create :csp_academic_year_workshop, organizer: @organizer
+  test 'updating virtual field in CSP/CSA non-summer workshop within a month of starting as a non-ws-admin does not raise error' do
+    skip 'test is flaky at the beginning of the month due to time differences'
 
-  #   put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, funding_type: nil, virtual: true)}
-  #   assert_response :success
-  # end
+    sign_in @organizer
+    workshop = create :csp_academic_year_workshop, organizer: @organizer
 
-  # test 'updating virtual field in non-CSP/CSA summer workshop within a month of starting as a non-ws-admin does not raise error' do
-  #   sign_in @organizer
-  #   workshop = create :csd_summer_workshop, organizer: @organizer
+    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, funding_type: nil, virtual: true)}
+    assert_response :success
+  end
 
-  #   put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
-  #   assert_response :success
-  # end
+  test 'updating virtual field in non-CSP/CSA summer workshop within a month of starting as a non-ws-admin does not raise error' do
+    skip 'test is flaky at the beginning of the month due to time differences'
+
+    sign_in @organizer
+    workshop = create :csd_summer_workshop, organizer: @organizer
+
+    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
+    assert_response :success
+  end
 
   # Update sessions via embedded attributes
 
