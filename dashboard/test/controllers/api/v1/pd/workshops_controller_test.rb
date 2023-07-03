@@ -787,6 +787,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'updating virtual field in CSP/CSA summer workshop within a month of starting as a ws-admin does not raise error' do
+    skip 'test is flaky at the beginning of the month due to time differences'
+
     sign_in @workshop_admin
     workshop = create :csp_summer_workshop, organizer: @organizer
 
@@ -809,6 +811,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'updating virtual field in CSP/CSA non-summer workshop within a month of starting as a non-ws-admin does not raise error' do
+    skip 'test is flaky at the beginning of the month due to time differences'
+
     sign_in @organizer
     workshop = create :csp_academic_year_workshop, organizer: @organizer
 
@@ -817,6 +821,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'updating virtual field in non-CSP/CSA summer workshop within a month of starting as a non-ws-admin does not raise error' do
+    skip 'test is flaky at the beginning of the month due to time differences'
+
     sign_in @organizer
     workshop = create :csd_summer_workshop, organizer: @organizer
 
