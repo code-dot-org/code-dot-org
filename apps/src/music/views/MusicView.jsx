@@ -478,7 +478,7 @@ class UnconnectedMusicView extends React.Component {
 
     LabRegistry.getInstance()
       .getProjectManager()
-      .save(sourcesToSave, forceSave);
+      ?.save(sourcesToSave, forceSave);
   };
 
   loadCode = code => {
