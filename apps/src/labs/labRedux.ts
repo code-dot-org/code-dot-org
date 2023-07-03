@@ -13,7 +13,6 @@ import {
 import {
   Channel,
   LevelData,
-  LevelVideo,
   LevelProperties,
   ProjectManagerStorageType,
   ProjectSources,
@@ -47,8 +46,6 @@ export interface LabState {
   sources: ProjectSources | undefined;
   // Level data for the current level
   levelData: LevelData | undefined;
-  // Video for the current level
-  levelVideo: LevelVideo | undefined;
   // Whether the lab is ready for a reload.  This is used to manage the case where multiple loads
   // happen in a row, and we only want to reload the lab when we are done.
   labReadyForReload: boolean;
@@ -66,7 +63,6 @@ const initialState: LabState = {
   channel: undefined,
   sources: undefined,
   levelData: undefined,
-  levelVideo: undefined,
   labReadyForReload: false,
   hideShareAndRemix: true,
   isProjectLevel: false,
@@ -191,9 +187,6 @@ const labSlice = createSlice({
     setLevelData(state, action: PayloadAction<LevelData | undefined>) {
       state.levelData = action.payload;
     },
-    setLevelVideo(state, action: PayloadAction<LevelVideo | undefined>) {
-      state.levelVideo = action.payload;
-    },
     setLabReadyForReload(state, action: PayloadAction<boolean>) {
       state.labReadyForReload = action.payload;
     },
@@ -290,7 +283,6 @@ function setProjectAndLevelData(
   dispatch(setSources(sources));
   if (levelProperties) {
     dispatch(setLevelData(levelProperties.levelData));
-    dispatch(setLevelVideo(levelProperties.video));
     const hideShareAndRemix = convertOptionalStringToBoolean(
       levelProperties.hideShareAndRemix,
       /* defaultValue*/ true
@@ -333,7 +325,6 @@ export const {
   setChannel,
   setSources,
   setLevelData,
-  setLevelVideo,
   setLabReadyForReload,
   setValidationState,
 } = labSlice.actions;
