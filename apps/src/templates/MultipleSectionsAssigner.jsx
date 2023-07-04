@@ -201,13 +201,13 @@ const MultipleSectionsAssigner = ({
         <Button
           text={i18n.dialogCancel()}
           onClick={onClose}
-          color={Button.ButtonColor.gray}
+          color={Button.ButtonColor.neutralDark}
         />
         <Button
           id="confirm-assign"
           text={i18n.confirmAssignment()}
           onClick={reassignSections}
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
         />
       </div>
     </AccessibleDialog>
