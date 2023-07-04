@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-22 22:59:10 UTC",
+    "serialized_at": "2023-07-03 15:04:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -489,14 +489,42 @@
       }
     },
     {
-      "key": "d8d90c1f-ef23-4b03-bc33-0d11e4b6d68a",
+      "key": "e92f7125-2515-4fd8-ba23-3051fbe17141",
       "position": 1,
       "properties": {
-        "duration": 45,
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e92f7125-2515-4fd8-ba23-3051fbe17141",
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2023"
+      }
+    },
+    {
+      "key": "d8d90c1f-ef23-4b03-bc33-0d11e4b6d68a",
+      "position": 2,
+      "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "d8d90c1f-ef23-4b03-bc33-0d11e4b6d68a",
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2023"
+      }
+    },
+    {
+      "key": "31d90b68-d8ff-4735-adaf-6a6467487d94",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "31d90b68-d8ff-4735-adaf-6a6467487d94",
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_unit6_2020",
         "script.name": "csp6-2023"
@@ -1261,16 +1289,65 @@
       }
     },
     {
+      "key": "a651cd3e-779d-411b-851f-46ab75e83b37",
+      "position": 1,
+      "properties": {
+        "description": "Today we're going to have a chance to practice programming with a lot of the concepts and patterns we've explored over the last two lessons. I encourage you to go through these with a partner, but pay close attention to what each other is doing. You will be choosing one of three apps to help develop today. While the design of each of these apps is complete, it will be your job to use your knowledge of lists in order to make the apps function as intended.\n\nWhichever app you choose, please continue to choose that <strong>same </strong>app on each of the choice levels. There are a total of *five* levels for each app.\n\nIn our next lesson you're going to have to use a lot of these skills on an independent project, and these activities are good practice for what you'll find there! Alright, let's get to it!",
+        "name": "Quick Warm Up",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Move Quickly to the Activity:** There's a lot in the main activity of today's lesson. It is advisable to give students more time to get hands on with some code."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a651cd3e-779d-411b-851f-46ab75e83b37",
+        "lesson_activity.key": "e92f7125-2515-4fd8-ba23-3051fbe17141"
+      }
+    },
+    {
       "key": "daf25887-3b63-4b25-a294-0c75c6864830",
       "position": 1,
       "properties": {
-        "description": "TO ADD = Description / Instructions ",
-        "name": "App Development",
-        "progression_name": "App Development: Lists in Action!"
+        "description": "**Group:** It is recommended that students work in pairs for this lesson. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio, Lesson 3 Level 1. ",
+        "duration": "35",
+        "name": "Practice Time",
+        "progression_name": "App Development: Lists in Action!",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Optional Resource**: There is an activity guide available in the *Resources* section that contains all of the main tasks that students need to complete over the course of the five levels. The tasks and descriptions in this activity guide are identical to what is presented within the levels themselves. However, some students might benefit from this task list as they work on creating the practice app.  "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "daf25887-3b63-4b25-a294-0c75c6864830",
         "lesson_activity.key": "d8d90c1f-ef23-4b03-bc33-0d11e4b6d68a"
+      }
+    },
+    {
+      "key": "06650a30-26ab-4006-b412-6bc08cc2942f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of working with lists do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. "
+      },
+      "seeding_key": {
+        "activity_section.key": "06650a30-26ab-4006-b412-6bc08cc2942f",
+        "lesson_activity.key": "31d90b68-d8ff-4735-adaf-6a6467487d94"
+      }
+    },
+    {
+      "key": "b1a821fe-4375-4bc7-9619-7412a7fc4af9",
+      "position": 2,
+      "properties": {
+        "description": "Lists can be a little bit tricky, but I saw a lot of good progress today in nailing down this concept. We may have a  few lingering questions, but you also have a lot of resources available. Next time you'll have a chance to put all this together by programming an app that starts with \"the blank screen\"!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b1a821fe-4375-4bc7-9619-7412a7fc4af9",
+        "lesson_activity.key": "31d90b68-d8ff-4735-adaf-6a6467487d94"
       }
     },
     {
@@ -5562,6 +5639,42 @@
       }
     },
     {
+      "name": "Task List - Birds of a Feather",
+      "url": "https://docs.google.com/document/d/1z7F_v9xHjTRi1W4pqCubApva67OvyZGdNNxhO63wGRA/edit?usp=sharing",
+      "key": "task_list_-_birds_of_a_feather",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "task_list_-_birds_of_a_feather"
+      }
+    },
+    {
+      "name": "Task List - Emojimaker",
+      "url": "https://docs.google.com/document/d/1E2-XMORj9bRDP1vKTW-5jSxtcbx88pOc_3wtf63HqHI/edit?usp=sharing",
+      "key": "task_list_-_emojimaker",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "task_list_-_emojimaker"
+      }
+    },
+    {
+      "name": "Task List - Magic Nine Ball",
+      "url": "https://docs.google.com/document/d/1O93hVg3UJZ5kvxM_NMSKLEGTmqGSqsNrC5VIZcv05tU/edit?usp=sharing",
+      "key": "task_list_-_magic_nine_ball",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "task_list_-_magic_nine_ball"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -5730,6 +5843,24 @@
       "seeding_key": {
         "lesson.key": "Lists Practice",
         "resource.key": "csp_unit_6_-_lesson_3_-_lists_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Practice",
+        "resource.key": "task_list_-_birds_of_a_feather"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Practice",
+        "resource.key": "task_list_-_emojimaker"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Practice",
+        "resource.key": "task_list_-_magic_nine_ball"
       }
     },
     {
