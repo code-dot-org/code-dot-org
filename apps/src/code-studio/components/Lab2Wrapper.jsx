@@ -1,24 +1,22 @@
-// LabContainer
+// Lab2Wrapper
 //
-// This React component is used to contain a lab that doesn't need page reloads
-// between levels.
-//
-// For now, it's only used for the "music" app, and facilitates instant switching
-// between "music" levels in the same lesson.
-//
-// It hides the level while loading, and plays a fade-in animation as the level appears.
+// Lab2 uses this component to wrap the apps that it switches between.  This
+// component remains agnostic to the children that are passed into it, which
+// are the apps.  But this component provides a few useful things: an error
+// boundary; a fade-in between levels; a loading spinner when a level takes a
+// while to load; and a sad bee when things go wrong.
 
 import PropTypes from 'prop-types';
 import React from 'react';
 import {useSelector} from 'react-redux';
 import classNames from 'classnames';
-import moduleStyles from './LabContainer.module.scss';
+import moduleStyles from './Lab2Wrapper.module.scss';
 import i18n from '@cdo/locale';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ErrorBoundary from './ErrorBoundary';
 import {isLabLoading} from '@cdo/apps/labs/labRedux';
 
-const LabContainer = ({children, onError}) => {
+const Lab2Wrapper = ({children, onError}) => {
   const isLoading = useSelector(isLabLoading);
   const isPageError = useSelector(state => state.lab.isPageError);
 
@@ -61,7 +59,7 @@ const LabContainer = ({children, onError}) => {
   );
 };
 
-LabContainer.propTypes = {
+Lab2Wrapper.propTypes = {
   children: PropTypes.node.isRequired,
   onError: PropTypes.func.isRequired,
 };
@@ -84,4 +82,4 @@ export const ErrorFallbackPage = () => (
   </div>
 );
 
-export default LabContainer;
+export default Lab2Wrapper;
