@@ -182,6 +182,11 @@ export const setUpWithoutLevel = createAsyncThunk(
 export const isLabLoading = (state: {lab: LabState}) =>
   state.lab.isLoadingProjectOrLevel || state.lab.isLoading;
 
+// This may depend on more factors, such as share.
+export const isReadOnlyWorkspace = (state: {lab: LabState}) => {
+  return !state.lab.channel?.isOwner;
+};
+
 const labSlice = createSlice({
   name: 'lab',
   initialState,
