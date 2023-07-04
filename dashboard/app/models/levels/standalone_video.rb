@@ -31,7 +31,7 @@ class StandaloneVideo < Level
     video_rounded_corners
     video_full_width
     background
-    uses_lab_container
+    uses_lab2
   )
 
   before_validation do
@@ -60,8 +60,8 @@ class StandaloneVideo < Level
     video_full_width
   end
 
-  def uses_lab_container?
-    uses_lab_container
+  def uses_lab2?
+    uses_lab2
   end
 
   def self.create_from_level_builder(params, level_params)

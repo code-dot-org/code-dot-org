@@ -12,7 +12,7 @@
     "skip_sound": true,
     "background": "music-black",
     "video_full_width": true,
-    "uses_lab_container": true
+    "uses_lab2": true
   },
   "published": true
 }]]></config>

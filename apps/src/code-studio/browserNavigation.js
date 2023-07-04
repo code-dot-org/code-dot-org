@@ -9,7 +9,7 @@ import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
 // Returns whether we can safely navigate between the two given levels
 // without reloading the whole page.
 export function canChangeLevelInPage(currentLevel, newLevel) {
-  return currentLevel?.usesLabContainer && newLevel?.usesLabContainer;
+  return currentLevel?.usesLab2 && newLevel?.usesLab2;
 }
 
 // Called once on page load for a script-level only, this sets up a
