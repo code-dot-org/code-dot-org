@@ -611,7 +611,7 @@ class Level < ApplicationRecord
     false
   end
 
-  def uses_lab_container?
+  def uses_lab2?
     false
   end
 
