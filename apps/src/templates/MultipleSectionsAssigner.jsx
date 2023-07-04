@@ -5,13 +5,15 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import TeacherSectionOption from './TeacherSectionOption';
 import {
   assignToSection,
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+
+import {Heading3, Heading5} from '@cdo/apps/componentLibrary/typography';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 
 const MultipleSectionsAssigner = ({
   courseId,
@@ -165,31 +167,29 @@ const MultipleSectionsAssigner = ({
         style={styles.header}
         className="uitest-confirm-assignment-dialog"
       >
-        {i18n.chooseSectionsPrompt({assignmentName})}
+        <Heading3>{i18n.chooseSectionsPrompt({assignmentName})}</Heading3>
       </div>
       <div style={styles.content}>{i18n.chooseSectionsDirections()}</div>
       <div style={styles.header} className="uitest-confirm-assignment-dialog">
-        {i18n.yourSectionsList()}
+        <Heading5>{i18n.yourSectionsList()}</Heading5>
       </div>
       <div style={styles.grid}>
         {sections &&
           sections.map(
             section =>
               isAssignableToSection(section.participantType) && (
-                <TeacherSectionOption
+                <Checkbox
                   key={section.id}
-                  section={section}
-                  isChecked={
+                  checked={
                     !!currentSectionsAssigned.some(s => s.code === section.code)
                   }
-                  assignedSections={currentSectionsAssigned}
                   onChange={() => handleChangedCheckbox(section)} // this function should update the state of multiple section assigner
-                  editedValue={section.isAssigned}
+                  name={section.id}
+                  label={section.name}
                 />
               )
           )}
       </div>
-      <hr />
       <a
         style={styles.selectAllSectionsLabel}
         onClick={selectAllHandler}
@@ -197,6 +197,7 @@ const MultipleSectionsAssigner = ({
       >
         Select All
       </a>
+      <hr />
       <div style={styles.buttonContainer}>
         <Button
           text={i18n.dialogCancel()}
@@ -240,8 +241,7 @@ const styles = {
   },
   buttonContainer: {
     display: 'flex',
-    gap: 5,
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
   },
   content: {
     fontSize: 14,
@@ -279,7 +279,6 @@ const styles = {
     fontFamily: "'Gotham 5r', sans-serif",
     fontSize: 16,
     cursor: 'pointer',
-    color: color.link_color,
   },
 };
 
