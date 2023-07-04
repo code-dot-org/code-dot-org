@@ -37,7 +37,7 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper
-    = view :curriculum_glance_section, grades: hoc_s(:module_grade_6_10), duration: hoc_s(:module_duration_month_semester_year), level: hoc_s(:module_level_beginner), tools: hoc_s(:csd_page_curriculum_glance_tools), devices: hoc_s(:csd_page_curriculum_glance_devices), professional_learning: hoc_s(:csd_page_curriculum_glance_professional_learning), topics: hoc_s(:csd_page_curriculum_glance_topics), accessibility_features: hoc_s(:csd_page_curriculum_glance_professional_accessibility_features), languages: hoc_s(:csd_page_curriculum_glance_professional_languages)
+    = view :curriculum_glance_section, heading: hoc_s(:heading_curricula_at_a_glance), grades: hoc_s(:module_grade_6_10), duration: hoc_s(:module_duration_month_semester_year), level: hoc_s(:module_level_beginner), tools: hoc_s(:csd_page_curriculum_glance_tools), devices: hoc_s(:csd_page_curriculum_glance_devices), professional_learning: hoc_s(:csd_page_curriculum_glance_professional_learning), topics: hoc_s(:csd_page_curriculum_glance_topics), accessibility_features: hoc_s(:csd_page_curriculum_glance_professional_accessibility_features), languages: hoc_s(:csd_page_curriculum_glance_professional_languages)
 
 %section.quote.bg-neutral-dark
   .wrapper
@@ -216,8 +216,7 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %h2=hoc_s(:heading_professional_learning)
-    = view :curriculum_pages_pl_section
+    = view :curriculum_pages_pl_section, modules_url: CDO.studio_url("/courses/self-paced-pl-csd-2023")
 
 = view :section_divider_line
 
