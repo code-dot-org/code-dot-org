@@ -222,7 +222,7 @@ MultipleSectionsAssigner.propTypes = {
   courseVersionId: PropTypes.number,
   scriptId: PropTypes.number,
   reassignConfirm: PropTypes.func,
-  isAssigningCourse: PropTypes.bool,
+  isAssigningCourse: PropTypes.bool.isRequired,
   isStandAloneUnit: PropTypes.bool,
   participantAudience: PropTypes.string,
   // Redux
