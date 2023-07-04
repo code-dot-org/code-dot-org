@@ -1,6 +1,5 @@
-%p.heading-sm
-  =hoc_s(:professional_learning_section_subhead)
-%p=hoc_s(:professional_learning_section_desc_v1, markdown: :inline, locals: {url: "http://www.westcoastanalytics.com/uploads/6/9/6/7/69675515/wca_code_final_report_2018.pdf"})
+%h2=hoc_s(:heading_professional_learning)
+%p=hoc_s(:professional_learning_section_desc)
 .action-block__wrapper.action-block__wrapper--two-col
   .action-block.action-block--one-col.flex-space-between
     .content-wrapper
@@ -16,5 +15,5 @@
       %img{src: "/images/pl-self-paced-modules.png", alt: ""}
       %p=hoc_s(:self_paced_pl_modules_desc)
     .content-footer
-      %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csp-2022?no_redirect=true")}
+      %a.link-button{href: modules_url}
         =hoc_s(:call_to_action_explore_modules)

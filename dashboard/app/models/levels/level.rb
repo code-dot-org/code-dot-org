@@ -304,7 +304,7 @@ class Level < ApplicationRecord
 
   def filter_level_attributes(level_hash)
     %w(name id updated_at type solution_level_source_id ideal_level_source_id md5).each {|field| level_hash.delete field}
-    level_hash.reject! {|_, v| v.nil?}
+    level_hash.compact!
     level_hash
   end
 

@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.7.5'
+# Temporarily support both Ruby 2.7 and 3.0 until we've fully transitioned from
+# the former to the latter
+# TODO infra: pin us to ruby 3 once all persistent managed servers get updated
+ruby '>= 2.7', '< 3.1'
 
 # Ruby 2.7 no longer includes some libraries by default; install
 # the ones we need here
