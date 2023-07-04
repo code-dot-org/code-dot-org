@@ -85,9 +85,9 @@ USER ${USER}
 
 RUN mkdir -p "$(rbenv root)"/plugins && \
     git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build && \
-    rbenv install 2.7.5 && \
+    rbenv install 3.0.5 && \
     eval "$(rbenv init -)" && \
-    rbenv shell 2.7.5 && \
+    rbenv shell 3.0.5 && \
     rbenv rehash && \
     gem install bundler -v 2.3.22
 
