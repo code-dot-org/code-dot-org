@@ -763,7 +763,6 @@
       "has_lesson_plan": true,
       "relative_position": 46,
       "properties": {
-        "use_lab_container": true
       },
       "seeding_key": {
         "lesson.key": "lesson-49",
