@@ -1,9 +1,9 @@
 // StandaloneVideo
 //
 // This is a React client for a standalone_video level.  Note that this is
-// only used for levels that use the LabContainer.  For levels that don't use
-// the LabContainer, they will use an older-style level implemented with a
-// HAML page and some non-React JS code.
+// only used for levels that use Lab2.  For levels that don't use Lab2,
+// they will get an older-style level implemented with a HAML page and some
+// non-React JS code.
 
 import React from 'react';
 import {useSelector} from 'react-redux';
