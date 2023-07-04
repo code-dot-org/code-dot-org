@@ -9,11 +9,16 @@ require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require 'fileutils'
 require 'json'
 require 'digest/md5'
+require 'cdo/aws/metrics'
+require 'aws-sdk-ec2'
+require 'net/http'
 
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 require_relative '../animation_assets/manifest_builder'
+
+I18N_METRICS_NAMESPACE = 'I18n'.freeze
 
 def sync_in
   puts "Sync in starting"

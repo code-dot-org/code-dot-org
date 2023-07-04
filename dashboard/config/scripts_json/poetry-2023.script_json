@@ -8,12 +8,13 @@
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2023-06-28 22:53:06 UTC",
-    "published_state": "beta",
+    "serialized_at": "2023-06-30 15:47:48 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -44,7 +45,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this CS and ELA integrated lesson for new coders, students will animate a poem with code to illustrate the mood of a poem. First, students will read and detect the mood of a famous poem. Then, they will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate new images in a poem.",
-        "preparation": "- Review and complete the **Animate a Poem** tutorial yourself\n- Determine in advance which levels might be challenging for students.\n- Some levels require sound to play. Hand out headphones ahead of time. \n\n#####Optional\n- 2 sticky notes per student for the Assessment.\n- Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n",
+        "preparation": "- Play through the levels and review the lesson slides \n- Decide on pacing between student work time and whole group instruction.\n- Consider exploring the recommended preparation activities before beginning ([link](https://studio.code.org/s/poetry-2023/lessons/1#activity-4365332)).\n* Consider these related extension options ([link](https://levelbuilder-studio.code.org/s/poetry-2023/lessons/1#activity-43653330)) to explore after the last lesson.\n\n\n#####Optional:\n- [Optional] Review this **[teacher’s guide to debugging](https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf)** to be prepared to help students find and fix errors in their code. \n- [Optional] **Pair Programming** - Decide if you want students to engage in pair programming. Watch this [video](https://youtu.be/sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information.",
         "purpose": "The purpose of this lesson is to teach students how to create poem art by using code to animate the mood of a poem. This provides an engaging and interactive learning experience that integrates language arts and computer science. By combining poetry analysis with coding, the lesson aims to help students develop a deeper understanding of the emotional impact of language and to express this impact through visual art.",
         "student_overview": "Poetry is making art with words. You will use code to add visual effects and images to animate a poem. "
       },
@@ -63,7 +64,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "In this lesson, students will plan and write their own poem. Students will reflect on their life and personal experiences to select an important idea for a short poem that they can animate. In the next lesson, students will code their poems, so it is important that they have drafted a short poem.",
-        "preparation": "- Review the lesson slides.\n- Print one ***Write Your Own Poem Handout** for each student.\n",
+        "preparation": "- Review the lesson slides.\n- Print one **Write Your Own Poem Handout** (<a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\n\" target=\"_blank\">Sentence Stems</a> | <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\" target=\"_blank\">Topics</a>) for each student.\n* Consider these related extension options ([link](https://studio.code.org/s/poetry-2023/lessons/2#activity-43653340)) to explore after the last lesson.\n",
         "purpose": "By combining poetry writing with coding, the lesson aims to help students develop a deeper understanding of the creative process and to express their ideas and emotions through both language and technology. As students make decisions about word choice, they are encouraged to plan how to use their code creatively and meaningfully to create a visual representation of their poem's emotional impact. ",
         "student_overview": "Today you will write your own poem. As you plan, think about what topics are important to you. What do you want to share with readers?. Next class you will code your poem. Start thinking about what backgrounds, text effects, sounds, sprites and events you may use."
       },
@@ -82,7 +83,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "In this CS and ELA integrated lesson, students will work on their computers to animate their poems with code. In lesson 1, students used a poem dropdown menu to choose the poem they wanted to animate. In this lesson, students will enter their own poems into the playspace and then use blocks of code to add backgrounds, effects, sounds, and sprites.",
-        "preparation": "- Play through the levels and review the lesson slides ahead of time to prepare for the coding and discussion sections of the lesson.\n- Make sure students have their Write Your Own Poem handout from last class.\n- Print one **[Poem Checklist](https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview?target=_blank)** for each student.\n\n#####Optional\n- Consider the need for headphones if students plan to add sounds to their projects.\n- Create your own poem app as an example for students.\n\n",
+        "preparation": "- Play through the levels and review the lesson slides ahead of time to prepare for the coding and discussion sections of the lesson.\n- Make sure students have their Write Your Own Poem handout from last class.\n- Print one **<a href=\"https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview\" target=\"_blank\">Poem Checklist</a>** for each student.\n- Consider these related extension options ([link](https://studio.code.org/s/poetry-2023/lessons/3#activity-4365335)) to explore after the last lesson.\n\n####Optional\n- Consider the need for headphones if students plan to add sounds to their projects.\n- Create your own poem app as an example for students.\n\n",
         "purpose": "Students will be able to personalize their poems by choosing what effects they want to add to their programs. They will curate their projects according to their own interests and personal experiences.\n",
         "student_overview": "Today, you will be able to personalize your poem by choosing what effects you want to add to your time capsule. "
       },
@@ -101,7 +102,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.",
-        "preparation": "- Prepare one computer per student.\n- Prepare one copy of the ***[Share Your App](https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview)** handout per student.\n- Make sure students have a copy of their original poem handy for this lesson.  \n- Divide the class into pairs for the Poetry Pair-Share activity.\n\n#####Optional\n- Especially for remote teaching:  Determine whether you need to set up a digital document or shared online space to post each student’s app URL (see teacher template in “Links”). \n",
+        "preparation": "- Prepare one computer per student.\n- Prepare one copy of the **<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Share Your App</a>** handout per student.\n- Make sure students have a copy of their original poem handy for this lesson.  \n- Divide the class into pairs for the Poetry Pair-Share activity.\n* Consider these related extension options ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)) to explore after this lesson.\n\n#####Optional\n- Especially for remote teaching:  Determine whether you need to set up a digital document or shared online space to post each student’s app URL (see teacher template in “Links”). \n",
         "purpose": "Sharing their poem art projects with peers is an important aspect of the creative process. It allows students to receive feedback, collaborate with others, reflect on their own work, and celebrate their accomplishments. By sharing their work with others, students can grow and improve as creative thinkers and develop important communication and interpersonal skills.",
         "student_overview": "Share your new poem apps with your friends! "
       },
@@ -114,8 +115,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "7387ce3c-05c0-477a-a59c-d72b1e06f2a2",
+      "key": "281ef28f-2969-4c60-80a4-8bdad8662658",
       "position": 1,
+      "properties": {
+        "name": "Recommended Preparation"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "281ef28f-2969-4c60-80a4-8bdad8662658",
+        "lesson.key": "Poem Art",
+        "lesson_group.key": "",
+        "script.name": "poetry-2023"
+      }
+    },
+    {
+      "key": "7387ce3c-05c0-477a-a59c-d72b1e06f2a2",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm-Up"
@@ -129,7 +143,7 @@
     },
     {
       "key": "c54ef9e6-6b5a-481e-b77d-7e446171e8b0",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Main Activity"
@@ -143,13 +157,26 @@
     },
     {
       "key": "ce713f16-6392-4922-b661-50dbf0853e80",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap-Up"
       },
       "seeding_key": {
         "lesson_activity.key": "ce713f16-6392-4922-b661-50dbf0853e80",
+        "lesson.key": "Poem Art",
+        "lesson_group.key": "",
+        "script.name": "poetry-2023"
+      }
+    },
+    {
+      "key": "aad4dda1-507b-42a5-a62c-1aac5671cb91",
+      "position": 5,
+      "properties": {
+        "name": "Extension Opportunties"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aad4dda1-507b-42a5-a62c-1aac5671cb91",
         "lesson.key": "Poem Art",
         "lesson_group.key": "",
         "script.name": "poetry-2023"
@@ -198,6 +225,19 @@
       }
     },
     {
+      "key": "9484e482-4713-4747-84d0-fba065c7e4a1",
+      "position": 4,
+      "properties": {
+        "name": "Extension Opportunties"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9484e482-4713-4747-84d0-fba065c7e4a1",
+        "lesson.key": "Writing My Time Capsule Poem",
+        "lesson_group.key": "",
+        "script.name": "poetry-2023"
+      }
+    },
+    {
       "key": "1bf99ed8-87aa-4bc1-b29e-77d8836cbff5",
       "position": 1,
       "properties": {
@@ -234,6 +274,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "8dd85242-85ec-4172-8516-b3124c3ec790",
+        "lesson.key": "Coding My Time Capsule",
+        "lesson_group.key": "",
+        "script.name": "poetry-2023"
+      }
+    },
+    {
+      "key": "7934c32a-f4ba-48b1-8c92-903075552224",
+      "position": 4,
+      "properties": {
+        "name": "Extension Opportunties"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7934c32a-f4ba-48b1-8c92-903075552224",
         "lesson.key": "Coding My Time Capsule",
         "lesson_group.key": "",
         "script.name": "poetry-2023"
@@ -280,9 +333,38 @@
         "lesson_group.key": "",
         "script.name": "poetry-2023"
       }
+    },
+    {
+      "key": "e57a4ee9-956b-410e-8d3e-b321b0abe71c",
+      "position": 4,
+      "properties": {
+        "name": "Extension Opportunties"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e57a4ee9-956b-410e-8d3e-b321b0abe71c",
+        "lesson.key": "Poetry Circle",
+        "lesson_group.key": "",
+        "script.name": "poetry-2023"
+      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "4060fc38-c2a6-47ad-a35e-dd308ad03d85",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**English Language Arts:** To prepare for this module and create some shared understanding of poetry together we recommend starting by reading poetry together: Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. Make sure that all students are familiar with the structure of a poem before Lesson 2, in which students will write their own poems.\n\n**Computer Science:**  As a warm up to the tool students can add art and animation to a classic poem in this [Poem Art](https://studio.code.org/s/poem-art-2021/lessons/1) (55 minutes) Hour of Code activity!\n\nAdditionally, in this module students will use event blocks to program changes at important lines in the poem. To start building skills with events try [Build a Flappy Game](https://studio.code.org/s/coursec-2023/lessons/12) (60 minutes) . "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4060fc38-c2a6-47ad-a35e-dd308ad03d85",
+        "lesson_activity.key": "281ef28f-2969-4c60-80a4-8bdad8662658"
+      }
+    },
     {
       "key": "62511971-1d68-4159-9949-a2c4fdceab41",
       "position": 1,
@@ -347,7 +429,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Coding With Poetry [slides](https://docs.google.com/presentation/d/1k0VP9so-gmAHq9mSOTxiZ98pX7gNfN6TutBeoDa3pxY/template/preview) feature several poems. These poems are included in the level progression and students will be able to add their own code to animate them. Choose a couple in advance to read aloud as a class."
+            "markdown": "The Coding With Poetry <a href=\"https://docs.google.com/presentation/d/1k0VP9so-gmAHq9mSOTxiZ98pX7gNfN6TutBeoDa3pxY/template/preview\" target=\"_blank\">slides</a> feature several poems. These poems are included in the level progression and students will be able to add their own code to animate them. Choose a couple in advance to read aloud as a class.\n\n"
           }
         ]
       },
@@ -533,6 +615,33 @@
       }
     },
     {
+      "key": "ca01b961-e407-42c4-9abc-fb3990df39d3",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of science. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 3 in this module. "
+      },
+      "seeding_key": {
+        "activity_section.key": "ca01b961-e407-42c4-9abc-fb3990df39d3",
+        "lesson_activity.key": "aad4dda1-507b-42a5-a62c-1aac5671cb91"
+      }
+    },
+    {
+      "key": "3ffbf11a-4e50-40ff-b781-f003016c72c6",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "\n**ELA Content:**  \nRead a book to continue developing understanding of mood and figurative language:\n- <a href=\"https://www.amazon.com/My-Blue-Happy-Jessica-Young/dp/0763651257\" target=\"_blank\">\"My Blue is Happy\"</a> Picture book that explains how feelings can be associated with different colors and how different people might have different perspectives about the same color.\n-  <a href=\"https://www.amazon.com/s?k=feelings+in+color&crid=3CGPI36E1RPV8&sprefix=feelings+in+color%2Caps%2C667&ref=nb_sb_noss_1\" target=\"_blank\">\"Feelings in Color\"</a> is a book of poetry that is divided into color sections. Each color represents a feeling, and that section contains poems with a certain theme.\n-  <a href=\"https://www.amazon.com/Red-Sings-Treetops-Colors-Sidman/dp/0547014945/ref=sr_1_1?crid=H9ZK0W8DBKC5&keywords=red+sings+from+treetops&qid=1685390186&sprefix=red+sings+%2Caps%2C296&sr=8-1\" target=\"_blank\">\"Red Sings From Treetops\"</a> is a picture book by Joyce Sidman (an award-winning poet) that connects the colors of different seasons to our senses.\n\n\n**Computer Science Concepts:**  \n- To continue exploring events, students can  <a href=\"https://studio.code.org/s/coursed-2023/lessons/7\" target=\"_blank\">Build a Star Wars Game.</a> \n-  <a href=\"http://studio.code.org/s/csc-bookcovers-2023\" target=\"_blank\">CSC Book Covers</a> module also connects computer science to ELA standards. Students will code an interactive book cover focusing on characters and setting. \n-  <a href=\"http://studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">CSC Time Capsule </a>module uses poetry and computer science to connect to social studies. Students will code short poems that represent a specific moment in time, like a time capsule.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3ffbf11a-4e50-40ff-b781-f003016c72c6",
+        "lesson_activity.key": "aad4dda1-507b-42a5-a62c-1aac5671cb91"
+      }
+    },
+    {
       "key": "08a4766f-c941-4770-9bb4-019389604584",
       "position": 1,
       "properties": {
@@ -616,7 +725,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "In this lesson, you will be using the provided [rubric](https://docs.google.com/document/d/13CJlIIV2CFu9D6-oxAm99PZ6EqNnDUZwFZCEW9fSMaE/template/preview) to assess your students' projects. Rubrics are valuable tools that bring consistency and clarity to the evaluation process. By outlining specific criteria and performance levels, rubrics ensure that all students are assessed fairly and objectively. \n\nWe encourage you to share the rubric with your students before they begin their projects. This helps them understand the expectations and work towards meeting the outlined criteria. Additionally, as you grade their work, refer to the rubric consistently, so that each aspect of the project is assessed based on the same set of standards. By adopting this approach, you promote fairness, provide meaningful feedback to students, and help them identify areas for growth and improvement."
+            "markdown": "In this lesson, you will be using the provided <a href=\"https://docs.google.com/document/d/13CJlIIV2CFu9D6-oxAm99PZ6EqNnDUZwFZCEW9fSMaE/template/preview\" target=\"_blank\">rubric</a> to assess your students' projects. Rubrics are valuable tools that bring consistency and clarity to the evaluation process. By outlining specific criteria and performance levels, rubrics ensure that all students are assessed fairly and objectively. \n\nWe encourage you to share the rubric with your students before they begin their projects. This helps them understand the expectations and work towards meeting the outlined criteria. Additionally, as you grade their work, refer to the rubric consistently, so that each aspect of the project is assessed based on the same set of standards. By adopting this approach, you promote fairness, provide meaningful feedback to students, and help them identify areas for growth and improvement."
           }
         ]
       },
@@ -781,13 +890,40 @@
       "key": "2522adc1-9ff5-4d94-a789-85795f238c16",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** \n- _Read your poem to a partner._ \n- _Discuss the backgrounds, text effects, sounds, and sprites that you plan to use._\n- _Look back over the [rubric](https://docs.google.com/document/d/13CJlIIV2CFu9D6-oxAm99PZ6EqNnDUZwFZCEW9fSMaE/template/preview) to make sure your poem will meet all of the requirements._\n\n**Discussion Goal:** For the next lesson, students should have a peer-reviewed short poem to use in their digital poem app. The goal of the discussion is to ensure that students have planned out the backgrounds, text effects, sounds, and sprites they plan to use in their code. Students may want to do small revisions after speaking with their partner.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** \n- _Read your poem to a partner._ \n- _Discuss the backgrounds, text effects, sounds, and sprites that you plan to use._\n- _Look back over the_ <a href=\"https://docs.google.com/document/d/13CJlIIV2CFu9D6-oxAm99PZ6EqNnDUZwFZCEW9fSMaE/template/preview\" target=\"_blank\">rubric</a>\n _to make sure your poem will meet all of the requirements._\n\n\n**Discussion Goal:** For the next lesson, students should have a peer-reviewed short poem to use in their digital poem app. The goal of the discussion is to ensure that students have planned out the backgrounds, text effects, sounds, and sprites they plan to use in their code. Students may want to do small revisions after speaking with their partner.",
         "duration": "10",
         "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "2522adc1-9ff5-4d94-a789-85795f238c16",
         "lesson_activity.key": "48e777fe-4e61-4b4e-bfdd-d69fb9869eaa"
+      }
+    },
+    {
+      "key": "0b16d8e7-63c6-4878-b0ee-42865e00697e",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of poetry. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 4 in this module. "
+      },
+      "seeding_key": {
+        "activity_section.key": "0b16d8e7-63c6-4878-b0ee-42865e00697e",
+        "lesson_activity.key": "9484e482-4713-4747-84d0-fba065c7e4a1"
+      }
+    },
+    {
+      "key": "054b2bd3-82cc-4bf9-ba4e-bf62fe02f01d",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "\n**ELA Content:**  \nRead a book to continue developing understanding of mood and figurative language:\n- <a href=\"https://www.amazon.com/My-Blue-Happy-Jessica-Young/dp/0763651257\" target=\"_blank\">\"My Blue is Happy\"</a> Picture book that explains how feelings can be associated with different colors and how different people might have different perspectives about the same color.\n-  <a href=\"https://www.amazon.com/s?k=feelings+in+color&crid=3CGPI36E1RPV8&sprefix=feelings+in+color%2Caps%2C667&ref=nb_sb_noss_1\" target=\"_blank\">\"Feelings in Color\"</a> is a book of poetry that is divided into color sections. Each color represents a feeling, and that section contains poems with a certain theme.\n-  <a href=\"https://www.amazon.com/Red-Sings-Treetops-Colors-Sidman/dp/0547014945/ref=sr_1_1?crid=H9ZK0W8DBKC5&keywords=red+sings+from+treetops&qid=1685390186&sprefix=red+sings+%2Caps%2C296&sr=8-1\" target=\"_blank\">\"Red Sings From Treetops\"</a> is a picture book by Joyce Sidman (an award-winning poet) that connects the colors of different seasons to our senses.\n\n\n**Computer Science Concepts:**  \n- To continue exploring events, students can  <a href=\"https://studio.code.org/s/coursed-2023/lessons/7\" target=\"_blank\">Build a Star Wars Game.</a> \n-  <a href=\"http://studio.code.org/s/csc-bookcovers-2023\" target=\"_blank\">CSC Book Covers</a> module also connects computer science to ELA standards. Students will code an interactive book cover focusing on characters and setting. \n-  <a href=\"http://studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">CSC Time Capsule </a>module uses poetry and computer science to connect to social studies. Students will code short poems that represent a specific moment in time, like a time capsule.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "054b2bd3-82cc-4bf9-ba4e-bf62fe02f01d",
+        "lesson_activity.key": "9484e482-4713-4747-84d0-fba065c7e4a1"
       }
     },
     {
@@ -838,7 +974,7 @@
       "key": "dbc698a1-7ac4-4226-9347-749ad12885ac",
       "position": 2,
       "properties": {
-        "description": "Now it is time to start coding our poems. You are going to take the poem you wrote last class and code it as an app. As you add blocks to your program, refer to your completed handout to see which words or phrases you want to enhance with visual effects, imagery, and sound. If you need to remember how to add in specific blocks, go to the choice level in this lesson to refresh your skills.\n\nAs you work, make sure to reference your [Coding Your Poem Checklist](https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview) to make sure that your app meets all of the requirements.",
+        "description": "Now it is time to start coding our poems. You are going to take the poem you wrote last class and code it as an app. As you add blocks to your program, refer to your completed handout to see which words or phrases you want to enhance with visual effects, imagery, and sound. If you need to remember how to add in specific blocks, go to the choice level in this lesson to refresh your skills.\n\nAs you work, make sure to reference your <a href=\"https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview\" target=\"_blank\">Coding Your Poem Checklist</a> to make sure that your app meets all of the requirements.",
         "remarks": true
       },
       "seeding_key": {
@@ -850,7 +986,7 @@
       "key": "58facfa2-d6e2-48c8-8a9b-42e9e3e95730",
       "position": 3,
       "properties": {
-        "description": "**Do This**: Have students move to their computers and sign in. Students will now code their own poem. Students should use their ***Write Your Own Poem** handout ([Sentence Stems](https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview) or [Topics](https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview)) and ***Coding Your Poem [Checklist](https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview)** as a guide as they add in their text, backgrounds, effects, sounds, and events. They will use the skills they learned from the Lesson 1 tutorial to enhance their own poems.\n\nCirculate the room to support students. Encourage them to press “Run” each time they add a block and note if they need to add any other effects, sprites, or events to best match their poem.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Level 1 - Code My Poem” slide \n\n**Debugging tips**: \n\n**Level 1**: To type up their poems, students will need to click the \"Enter Your Own\" option in the poem dropdown menu. Students will fill in the text for their poem that they wrote last class. They will write in their title, their own name or nickname, and each line of their short poem. Have students watch the short [video](https://www.youtube.com/watch?v=oKPgbzdpTSA) explanation before beginning.\n\nGuiding questions to push students further:\n- I see that you added X to your code, what does that match within your poem?\n- I really like the way you wrote about X. What effect or sprite would match that image or feeling of the poem you wrote?\n\nGuiding questions for students who need help debugging:\n- Tell me what you want your program to do. Press “Run.”\n- What is it currently doing?\n- Where do you think the bug is in your code?\n\n",
+        "description": "**Do This**: Have students move to their computers and sign in. Students will now code their own poem. Students should use their ***Write Your Own Poem** handout (<a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\n\" target=\"_blank\">Sentence Stems</a> | <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\" target=\"_blank\">Topics</a>) and ***<a href=\"https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview\" target=\"_blank\">Coding Your Own Poem Checklist</a>** as a guide as they add in their text, backgrounds, effects, sounds, and events. They will use the skills they learned from the Lesson 1 tutorial to enhance their own poems.\n\nCirculate the room to support students. Encourage them to press “Run” each time they add a block and note if they need to add any other effects, sprites, or events to best match their poem.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Level 1 - Code My Poem” slide \n\n**Debugging tips**: \n\n**Level 1**: To type up their poems, students will need to click the \"Enter Your Own\" option in the poem dropdown menu. Students will fill in the text for their poem that they wrote last class. They will write in their title, their own name or nickname, and each line of their short poem. Have students watch the short <a href=\"https://www.youtube.com/watch?v=oKPgbzdpTSA\" target=\"_blank\">video</a> explanation before beginning.\n\nGuiding questions to push students further:\n- I see that you added X to your code, what does that match within your poem?\n- I really like the way you wrote about X. What effect or sprite would match that image or feeling of the poem you wrote?\n\nGuiding questions for students who need help debugging:\n- Tell me what you want your program to do. Press “Run.”\n- What is it currently doing?\n- Where do you think the bug is in your code?\n\n",
         "progression_name": "Code My Poem"
       },
       "seeding_key": {
@@ -929,6 +1065,33 @@
       }
     },
     {
+      "key": "30cd25ec-ad85-427d-abca-dff52d31f7d2",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of poetry. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 4 in this module. "
+      },
+      "seeding_key": {
+        "activity_section.key": "30cd25ec-ad85-427d-abca-dff52d31f7d2",
+        "lesson_activity.key": "7934c32a-f4ba-48b1-8c92-903075552224"
+      }
+    },
+    {
+      "key": "8176cab2-0a34-487c-9c38-86d7118c2b7f",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "\n**ELA Content:**  \nRead a book to continue developing understanding of mood and figurative language:\n- <a href=\"https://www.amazon.com/My-Blue-Happy-Jessica-Young/dp/0763651257\" target=\"_blank\">\"My Blue is Happy\"</a> Picture book that explains how feelings can be associated with different colors and how different people might have different perspectives about the same color.\n-  <a href=\"https://www.amazon.com/s?k=feelings+in+color&crid=3CGPI36E1RPV8&sprefix=feelings+in+color%2Caps%2C667&ref=nb_sb_noss_1\" target=\"_blank\">\"Feelings in Color\"</a> is a book of poetry that is divided into color sections. Each color represents a feeling, and that section contains poems with a certain theme.\n-  <a href=\"https://www.amazon.com/Red-Sings-Treetops-Colors-Sidman/dp/0547014945/ref=sr_1_1?crid=H9ZK0W8DBKC5&keywords=red+sings+from+treetops&qid=1685390186&sprefix=red+sings+%2Caps%2C296&sr=8-1\" target=\"_blank\">\"Red Sings From Treetops\"</a> is a picture book by Joyce Sidman (an award-winning poet) that connects the colors of different seasons to our senses.\n\n\n**Computer Science Concepts:**  \n- To continue exploring events, students can  <a href=\"https://studio.code.org/s/coursed-2023/lessons/7\" target=\"_blank\">Build a Star Wars Game.</a> \n-  <a href=\"http://studio.code.org/s/csc-bookcovers-2023\" target=\"_blank\">CSC Book Covers</a> module also connects computer science to ELA standards. Students will code an interactive book cover focusing on characters and setting. \n-  <a href=\"http://studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">CSC Time Capsule </a>module uses poetry and computer science to connect to social studies. Students will code short poems that represent a specific moment in time, like a time capsule.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8176cab2-0a34-487c-9c38-86d7118c2b7f",
+        "lesson_activity.key": "7934c32a-f4ba-48b1-8c92-903075552224"
+      }
+    },
+    {
       "key": "f5e7a9c3-7a9a-4db0-9a3e-495f67c98443",
       "position": 1,
       "properties": {
@@ -961,7 +1124,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**For remote teaching:** \nThis activity requires partner work. If students are not able to physically switch computers, you will need a shared document with links to each student’s project. Tell students a URL is a web address to a website; this URL will lead to a shareable version of your poem app. Direct students to click the “Share” button on the last level and post the link on your LMS or other shared space, like the “[Student URL Sharing Document](https://docs.google.com/document/d/1DNcBWminB8MmyLQC4fIWrLZ8uI9HR7d4W3HuuclIpB0/template/preview)”. Students can keep adding more to their projects even after they have shared their project link."
+            "markdown": "**For remote teaching:** \nThis activity requires partner work. If students are not able to physically switch computers, you will need a shared document with links to each student’s project. Tell students a URL is a web address to a website; this URL will lead to a shareable version of your poem app. Direct students to click the “Share” button on the last level and post the link on your LMS or other shared space, like the “<a href=\"https://docs.google.com/document/d/1DNcBWminB8MmyLQC4fIWrLZ8uI9HR7d4W3HuuclIpB0/template/preview\" target=\"_blank\">Student URL Sharing Document</a>”. Students can keep adding more to their projects even after they have shared their project link."
           }
         ]
       },
@@ -1035,7 +1198,7 @@
       "key": "2f6b0e78-8580-4da8-bf5f-f425eff9b958",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Example App” slide\n\n**Do This:** Open the example project [link](https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo) in another window. Keep a copy of the “Share Your App” handout nearby to show students how they should fill out their glow, grow, and question.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Example App” slide\n\n**Do This:** Open the example project ***<a href=\"https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo\" target=\"_blank\">link</a>** in another window. Keep a copy of the “Share Your App” handout nearby to show students how they should fill out their glow, grow, and question.\n\n\n",
         "progression_name": "Example"
       },
       "seeding_key": {
@@ -1065,7 +1228,7 @@
       "key": "6703dc75-a394-4e9c-8d1c-061fb3d53cf2",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the ”Test Your Partner’s App” slide.  \n\n**Do This:** Distribute one “Share Your App” [handout](https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview) per student. Read the “Modeling Constructive Feedback” prompts from the handout. Make sure students understand how to give respectful feedback to their classmates. \n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the ”Test Your Partner’s App” slide.  \n\n**Do This:** Distribute one ***<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Share Your App handout</a>** per student. Read the “Modeling Constructive Feedback” prompts from the handout. Make sure students understand how to give respectful feedback to their classmates. \n\n",
         "duration": "10",
         "name": "Poetry Pair-Share"
       },
@@ -1117,7 +1280,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "How to display student work from your Teacher Panel:\n\nIf you are signed in and your students are in your class section, you can navigate to Level 1, open your Teacher Panel, and find the student’s name to access their work. [Click here to learn more about the Teacher Panel](https://support.code.org/hc/en-us/articles/360047703872-How-do-I-view-a-student-s-code-on-an-individual-level-)."
+            "markdown": "How to display student work from your Teacher Panel:\n\nIf you are signed in and your students are in your class section, you can navigate to Level 1, open your Teacher Panel, and find the student’s name to access their work. <a href=\"https://support.code.org/hc/en-us/articles/360047703872-How-do-I-view-a-student-s-code-on-an-individual-level-\" target=\"_blank\">Click here to learn more about the Teacher Panel</a>."
           }
         ]
       },
@@ -1171,6 +1334,33 @@
       "seeding_key": {
         "activity_section.key": "031f9d52-aa34-4bce-bbd4-dcf00712d6aa",
         "lesson_activity.key": "bc06844e-05f4-4090-94f2-c46dece69e6f"
+      }
+    },
+    {
+      "key": "178accb4-abd2-426b-b492-35d076276c1c",
+      "position": 1,
+      "properties": {
+        "description": "This module is a great introduction to computer science through the lens of poetry. Here are a few options to continue learning more about the CS concepts introduced in this module. We recommend pursuing these extensions after completing Lesson 4 in this module. "
+      },
+      "seeding_key": {
+        "activity_section.key": "178accb4-abd2-426b-b492-35d076276c1c",
+        "lesson_activity.key": "e57a4ee9-956b-410e-8d3e-b321b0abe71c"
+      }
+    },
+    {
+      "key": "eeb26e7a-97c3-449c-8215-a88977a6e8f8",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "\n**ELA Content:**  \nRead a book to continue developing understanding of mood and figurative language:\n- <a href=\"https://www.amazon.com/My-Blue-Happy-Jessica-Young/dp/0763651257\" target=\"_blank\">\"My Blue is Happy\"</a> Picture book that explains how feelings can be associated with different colors and how different people might have different perspectives about the same color.\n-  <a href=\"https://www.amazon.com/s?k=feelings+in+color&crid=3CGPI36E1RPV8&sprefix=feelings+in+color%2Caps%2C667&ref=nb_sb_noss_1\" target=\"_blank\">\"Feelings in Color\"</a> is a book of poetry that is divided into color sections. Each color represents a feeling, and that section contains poems with a certain theme.\n-  <a href=\"https://www.amazon.com/Red-Sings-Treetops-Colors-Sidman/dp/0547014945/ref=sr_1_1?crid=H9ZK0W8DBKC5&keywords=red+sings+from+treetops&qid=1685390186&sprefix=red+sings+%2Caps%2C296&sr=8-1\" target=\"_blank\">\"Red Sings From Treetops\"</a> is a picture book by Joyce Sidman (an award-winning poet) that connects the colors of different seasons to our senses.\n\n\n**Computer Science Concepts:**  \n- To continue exploring events, students can  <a href=\"https://studio.code.org/s/coursed-2023/lessons/7\" target=\"_blank\">Build a Star Wars Game.</a> \n-  <a href=\"http://studio.code.org/s/csc-bookcovers-2023\" target=\"_blank\">CSC Book Covers</a> module also connects computer science to ELA standards. Students will code an interactive book cover focusing on characters and setting. \n-  <a href=\"http://studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">CSC Time Capsule </a>module uses poetry and computer science to connect to social studies. Students will code short poems that represent a specific moment in time, like a time capsule.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "eeb26e7a-97c3-449c-8215-a88977a6e8f8",
+        "lesson_activity.key": "e57a4ee9-956b-410e-8d3e-b321b0abe71c"
       }
     }
   ],
@@ -1760,6 +1950,19 @@
       }
     },
     {
+      "name": "Helpful Hints",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+      "key": "helpful_hints_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/download",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_1"
+      }
+    },
+    {
       "name": "Poem App Example",
       "url": " https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
       "key": "poem_app_example",
@@ -1952,6 +2155,12 @@
       "seeding_key": {
         "lesson.key": "Poem Art",
         "resource.key": "coding_with_poetry_lesson_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Poem Art",
+        "resource.key": "helpful_hints_1"
       }
     },
     {

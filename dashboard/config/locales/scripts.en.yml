@@ -33,6 +33,7 @@ en:
           description_audience: ''
           student_description: Create a story or make a game with Play Lab!
           name: playlab
+          lessons: {}
         artist:
           title: Artist
           description: Draw cool pictures and designs with the Artist!
@@ -41,6 +42,7 @@ en:
           student_description: Draw cool pictures and designs with the Artist!
           name: artist
           description_audience: ''
+          lessons: {}
         hourofcode:
           title: Classic Maze
           description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
@@ -49,6 +51,7 @@ en:
           lesson_groups: {}
           student_description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
           name: hourofcode
+          lessons: {}
         frozen:
           title: Code with Anna and Elsa
           description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
@@ -57,6 +60,7 @@ en:
           student_description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
           name: frozen
           description_audience: ''
+          lessons: {}
         course4:
           title: Course 4
           description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
@@ -97,6 +101,7 @@ en:
           student_description: Use Play Lab to create a story or game starring Disney Infinity characters.
           name: infinity
           description_audience: ''
+          lessons: {}
         algebrademo:
           title: Algebra Demo
           description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
@@ -155,6 +160,7 @@ en:
           lesson_groups: {}
           student_description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
           name: flappy
+          lessons: {}
         jigsaw:
           title: Jigsaw
           description: Try our Jigsaw tutorial.
@@ -644,6 +650,7 @@ en:
           lesson_groups: {}
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           name: starwars
+          lessons: {}
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code (Blockly)'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
@@ -652,6 +659,7 @@ en:
           lesson_groups: {}
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           name: starwarsblocks
+          lessons: {}
         mc:
           title: Minecraft Hour of Code
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
@@ -660,6 +668,7 @@ en:
           lesson_groups: {}
           student_description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
           name: mc
+          lessons: {}
         oceans:
           title: AI for Oceans
           description: Learn how AI and machine learning can be used to address world problems.
@@ -668,6 +677,7 @@ en:
           lesson_groups: {}
           student_description: Learn how AI and machine learning can be used to address world problems.
           name: oceans
+          lessons: {}
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description: Online Exploration of CSP Unit 3-- Lesson Challenges
@@ -1254,6 +1264,7 @@ en:
           lesson_groups: {}
           student_description: Program animals and other Minecraft creatures in your own version of Minecraft.
           name: minecraft
+          lessons: {}
         flappy-impact-study:
           title: Flappy Code with Survey
           description_audience: ''
@@ -1333,6 +1344,7 @@ en:
           lesson_groups: {}
           student_description: Mix and match across sports
           name: sports
+          lessons: {}
         2016_sciencePD-phase2b:
           title: ''
           description_audience: ''
@@ -2127,6 +2139,7 @@ en:
           lesson_groups: {}
           student_description: Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
           name: hero
+          lessons: {}
         applab-intro-staging:
           title: Intro to App Lab Staging
           description_audience: ''
@@ -2852,6 +2865,7 @@ en:
           lesson_groups: {}
           student_description: Minecraft is back with a brand new activity! Use your creativity and problem solving skills to explore and build underwater worlds with code.
           name: aquatic
+          lessons: {}
         sconyers:
           title: Tracey's Playground
           description_audience: ''
@@ -6775,6 +6789,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           name: poem-art-2021
+          lessons: {}
         poetry-2021:
           title: Coding with Poetry
           description: "This module is designed to ensure students have a shareable app by the end of each lesson, so each lesson is a potential stopping point. If your class finishes the entire 7-part module, students will write their own poems, investigate word choice, learn how to use prompts and variables, learn how to code conditional statements, and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s [CS Connections](https://www.code.org/educate/csc) curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n\n**First time teaching with Code.org?** To get started, watch these videos:\n* [Basic Features of Code.org](https://www.youtube.com/watch?v=lYZq1HVTAIY) \n* [Creating a Class Section](https://youtu.be/4Wugxc80fNU)\n* [The Student Experience](https://youtu.be/wzz3jJZoj20)\n* [Progress, Feedack, and Assessment](https://youtu.be/c0pGfCpd6MI)"
@@ -6792,6 +6807,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           name: hello-world-food-2021
+          lessons: {}
         hello-world-emoji-2021:
           title: 'Hello World: Emoji'
           description: ''
@@ -6800,6 +6816,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           name: hello-world-emoji-2021
+          lessons: {}
         hello-world-animals-2021:
           title: 'Hello World: Animals'
           description: ''
@@ -6808,6 +6825,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           name: hello-world-animals-2021
+          lessons: {}
         hello-world-retro-2021:
           title: 'Hello World: Retro'
           description: ''
@@ -6816,6 +6834,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           name: hello-world-retro-2021
+          lessons: {}
         spelling-bee-2021:
           title: Spelling With Bee
           description: ''
@@ -10276,7 +10295,7 @@ en:
           title: Coding a Time Capsule (2023)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "##Suggested Pre-Work for this Module\n\n**Social Studies:** Read any of these [Multiple Perspectives Read Alouds](https://docs.google.com/document/d/1GU2wLxQ2xkoYGrjJU2mbngZEDxOX7bEWTlh4Ns1cnh8/template/preview) together as a class to enrich the discussion questions throughout the module, especially regarding the importance of having your voice in your own story, and what happens if certain things are included or left out. \n\n**ELA:** Read poetry together: Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. Make sure that all students are familiar with the structure of a poem before Lesson 2, in which students will write their own poems.\n\n**Computer Science:**  Students will be working with sprites and events in the module. We recommend beginning with [Hello World](https://studio.code.org/s/coursee-2023/lessons/4) (45 minutes) where students will gain a basic introduction to sprites and how to animate them with events. "
           student_description: ''
         vpl-csd7-ayw-pilot-2022:
           lessons:
@@ -10402,8 +10421,8 @@ en:
           lesson_groups:
             lessonGroup-2:
               display_name: Teaching CS Connections
-          title: Teaching CS Connections for Facilitators Only
-          description: "## **This self-paced online module is intended only for facilitators.**\n\nThis professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\n* Get an overview of CS Connections.\n\n* Set up a plan to implement a CS Connections module.\n\n* Practice key concepts included in lessons.\n\n* Preview features and resources.\n\n* Consider strategies to create positive CS learning experiences.\n\n\n**Suggested Time:** 75 minutes"
+          title: 'Teaching CS Connections '
+          description: "This professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\n* Get an overview of CS Connections.\n\n* Set up a plan to implement a CS Connections module.\n\n* Practice key concepts included in lessons.\n\n* Preview features and resources.\n\n* Consider strategies to create positive CS learning experiences.\n\n\n**Suggested Time:** 75 minutes"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's CS Connections. \n\nGet an overview of CS Connections.\n\nSet up a plan to implement a CS Connections module.\n\nPractice key concepts included in lessons.\n\n* Preview features and resources.\n\n\nConsider strategies to create positive CS learning experiences.\n\n\n**Suggested Time:** 75 minutes"
           description_short: ''
           description_audience: ''
@@ -10431,7 +10450,7 @@ en:
           title: Modeling Animal Adaptations (2023)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "##Suggested Pre-Work for this Module\n \n**Science:** Students will simulate several animal adaptations. To build familiarity with adaptations, we recommend this [Living Things Change Video](https://www.youtube.com/watch?v=xDSFlRunlrU&list=PLdG-lk1eEmZnq4ZO2CzERCv6jZkYIHCbR&index=4) (4:36 minutes). \n\n**Computer Science:** In this module students will be working a lot with sprites including changing the location and size of them and initiating behaviors. [CSF Making Sprites](https://studio.code.org/s/coursef-2023/lessons/3) is a great introduction to two concepts at the heart of this all: sprites and behaviors.\n"
           student_description: ''
         drafting:
           lessons: {}
@@ -10491,7 +10510,7 @@ en:
           title: Coding with Poetry (2023)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "##Suggested Pre-Work for this Module\n \n**English Language Arts:** To prepare for this module and create some shared understanding of poetry together we recommend starting by reading poetry together: Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. Make sure that all students are familiar with the structure of a poem before Lesson 2, in which students will write their own poems.\n\n**Computer Science:**  As a warm up to the tool students can add art and animation to a classic poem in this [Poem Art](https://studio.code.org/s/poem-art-2021/lessons/1) (55 minutes) Hour of Code activity!\n\nAdditionally, in this module students will use event blocks to program changes at important lines in the poem. To start building skills with events try [Build a Flappy Game](https://studio.code.org/s/coursec-2023/lessons/12) (60 minutes) . "
           student_description: ''
         poemmaker-2023:
           lessons: {}
@@ -10902,7 +10921,7 @@ en:
           title: Coding a Geometric Star Quilt (2023)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "##Suggested Pre-Work for this Module\n \n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song](https://www.youtube.com/watch?v=kGAGkysDunw&t=1s) (2:47 minutes) and [Angles & Lines](https://www.youtube.com/watch?v=an1tG3upvow) (3:06 minutes). \n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n- [A Trapezoid is Not a Dinosaur](https://www.mathsthroughstories.org/a-trapezoid-is-not-a-dinosaur.html) by Suzanne Morris \n- [The Greedy Triangle](https://youngmathematicians.edc.org/picture_book/%EF%BB%BF%EF%BB%BFthe-greedy-triangle/) by Marilyn Burns\n- Any of these [Geometry Read Alouds](https://www.k-5mathteachingresources.com/geometry-read-aloud.html)\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson](https://studio.code.org/s/artist/lessons/1) (50 minutes) for a basic introduction to the tool. \n\n"
           student_description: ''
         focus-on-creativity4-2023:
           lessons: {}
@@ -11593,7 +11612,9 @@ en:
           student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the unit.\n\n**Suggested time:** 80 minutes"
         self-paced-pl-physical-computing2-2023:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparing to Teach Creating Apps for Devices with Circuit Playgrounds
           name: self-paced-pl-physical-computing2-2023
           title: Preparing to Teach Creating Apps for Devices
           description_audience: ''
@@ -12401,6 +12422,23 @@ en:
               display_name: 2D Arrays
           name: csa-frq-practice-2023
           title: CSA FRQ Practice 2023
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-frq-practice-pre2019:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Methods and Control Structures
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-4:
+              display_name: Arrays / ArrayLists
+            lessonGroup-5:
+              display_name: 2D Arrays
+          name: csa-frq-practice-pre2019
+          title: CSA FRQ Practice Pre-2019
           description_audience: ''
           description_short: ''
           description: ''
