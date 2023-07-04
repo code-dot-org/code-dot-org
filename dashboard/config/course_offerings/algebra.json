@@ -3,7 +3,7 @@
   "display_name": "Computer Science in Algebra",
   "category": "math",
   "is_featured": false,
-  "assignable": true,
+  "assignable": false,
   "curriculum_type": null,
   "marketing_initiative": null,
   "grade_levels": "6,7,8",
