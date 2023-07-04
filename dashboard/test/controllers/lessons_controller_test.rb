@@ -298,10 +298,10 @@ class LessonsControllerTest < ActionController::TestCase
       position: solo_lesson_in_script.relative_position
     }
     assert_response :ok
-    assert_include(@response.body, @script_title)
-    assert_include(@response.body, @lesson_name)
-    assert_include(@response.body, solo_lesson_in_script.overview)
-    assert_include(@response.body, script_lesson_path(solo_lesson_in_script.script, solo_lesson_in_script))
+    assert_includes(@response.body, @script_title)
+    assert_includes(@response.body, @lesson_name)
+    assert_includes(@response.body, solo_lesson_in_script.overview)
+    assert_includes(@response.body, script_lesson_path(solo_lesson_in_script.script, solo_lesson_in_script))
   end
 
   test 'show lesson when script has multiple lessons' do
@@ -310,11 +310,11 @@ class LessonsControllerTest < ActionController::TestCase
       position: @lesson.relative_position
     }
     assert_response :ok
-    assert_include(@response.body, @script_title)
-    assert_include(@response.body, @lesson.overview)
-    assert_include(@response.body, @script.link)
-    assert_include(@response.body, script_lesson_path(@lesson.script, @lesson))
-    refute_include(@response.body, script_lesson_path(@lesson2.script, @lesson2))
+    assert_includes(@response.body, @script_title)
+    assert_includes(@response.body, @lesson.overview)
+    assert_includes(@response.body, @script.link)
+    assert_includes(@response.body, script_lesson_path(@lesson.script, @lesson))
+    refute_includes(@response.body, script_lesson_path(@lesson2.script, @lesson2))
   end
 
   test 'show lesson with activities' do
@@ -854,9 +854,9 @@ class LessonsControllerTest < ActionController::TestCase
     put :update, params: new_update_params
     @lesson.reload
     assert_equal 2, @lesson.resources.count
-    assert_include(@lesson.resources, resource_to_keep)
-    assert_include(@lesson.resources, resource_to_add)
-    refute_include(@lesson.resources, resource_to_remove)
+    assert_includes(@lesson.resources, resource_to_keep)
+    assert_includes(@lesson.resources, resource_to_add)
+    refute_includes(@lesson.resources, resource_to_remove)
   end
 
   test 'update lesson by removing and adding vocabularies' do
@@ -873,9 +873,9 @@ class LessonsControllerTest < ActionController::TestCase
     @lesson.reload
 
     assert_equal 2, @lesson.vocabularies.count
-    assert_include(@lesson.vocabularies, vocab_to_keep)
-    assert_include(@lesson.vocabularies, vocab_to_add)
-    refute_include(@lesson.vocabularies, vocab_to_remove)
+    assert_includes(@lesson.vocabularies, vocab_to_keep)
+    assert_includes(@lesson.vocabularies, vocab_to_add)
+    refute_includes(@lesson.vocabularies, vocab_to_remove)
   end
 
   test 'update lesson by removing and adding programming expressions' do
@@ -890,9 +890,9 @@ class LessonsControllerTest < ActionController::TestCase
     @lesson.reload
 
     assert_equal 2, @lesson.programming_expressions.count
-    assert_include(@lesson.programming_expressions, expression_to_keep)
-    assert_include(@lesson.programming_expressions, expression_to_add)
-    refute_include(@lesson.programming_expressions, expression_to_remove)
+    assert_includes(@lesson.programming_expressions, expression_to_keep)
+    assert_includes(@lesson.programming_expressions, expression_to_add)
+    refute_includes(@lesson.programming_expressions, expression_to_remove)
   end
 
   test 'update lesson removing and adding standards' do
@@ -909,9 +909,9 @@ class LessonsControllerTest < ActionController::TestCase
     put :update, params: new_update_params
     @lesson.reload
     assert_equal 2, @lesson.standards.count
-    assert_include(@lesson.standards, standard_to_add)
-    assert_include(@lesson.standards, standard_to_keep)
-    refute_include(@lesson.standards, standard_to_remove)
+    assert_includes(@lesson.standards, standard_to_add)
+    assert_includes(@lesson.standards, standard_to_keep)
+    refute_includes(@lesson.standards, standard_to_remove)
   end
 
   test 'update lesson removing and adding opportunity standards' do
@@ -928,9 +928,9 @@ class LessonsControllerTest < ActionController::TestCase
     put :update, params: new_update_params
     @lesson.reload
     assert_equal 2, @lesson.opportunity_standards.count
-    assert_include(@lesson.opportunity_standards, standard_to_add)
-    assert_include(@lesson.opportunity_standards, standard_to_keep)
-    refute_include(@lesson.opportunity_standards, standard_to_remove)
+    assert_includes(@lesson.opportunity_standards, standard_to_add)
+    assert_includes(@lesson.opportunity_standards, standard_to_keep)
+    refute_includes(@lesson.opportunity_standards, standard_to_remove)
   end
 
   test 'lesson is not partially updated if any data is bad' do
@@ -1379,7 +1379,7 @@ class LessonsControllerTest < ActionController::TestCase
     put :clone, params: {id: lesson.id, destinationUnitName: destination_script.name}
 
     assert_response :not_acceptable
-    assert_include(@response.body, 'error')
+    assert_includes(@response.body, 'error')
   end
 
   test 'legacy lesson clone fails if origin course does not use code studio lessons' do
@@ -1392,7 +1392,7 @@ class LessonsControllerTest < ActionController::TestCase
     put :clone, params: {id: lesson.id, destinationUnitName: destination_script.name}
 
     assert_response :not_acceptable
-    assert_include(@response.body, 'error')
+    assert_includes(@response.body, 'error')
   end
 
   test 'lesson clone fails if script cannot be found' do
@@ -1402,7 +1402,7 @@ class LessonsControllerTest < ActionController::TestCase
     lesson = create :lesson
     put :clone, params: {id: lesson.id, destinationUnitName: 'fake-script'}
     assert_response :not_acceptable
-    assert_include(@response.body, 'error')
+    assert_includes(@response.body, 'error')
   end
 
   test 'lesson clone returns script and lesson urls if successful' do
@@ -1419,8 +1419,8 @@ class LessonsControllerTest < ActionController::TestCase
     put :clone, params: {id: lesson.id, destinationUnitName: script.name}
 
     assert_response 200
-    assert_include(@response.body, 'editLessonUrl')
-    assert_include(@response.body, 'editScriptUrl')
+    assert_includes(@response.body, 'editLessonUrl')
+    assert_includes(@response.body, 'editScriptUrl')
   end
 
   test 'lesson clone is successful between version years' do
@@ -1437,7 +1437,7 @@ class LessonsControllerTest < ActionController::TestCase
     put :clone, params: {id: lesson.id, destinationUnitName: script.name}
 
     assert_response 200
-    assert_include(@response.body, 'editLessonUrl')
-    assert_include(@response.body, 'editScriptUrl')
+    assert_includes(@response.body, 'editLessonUrl')
+    assert_includes(@response.body, 'editScriptUrl')
   end
 end

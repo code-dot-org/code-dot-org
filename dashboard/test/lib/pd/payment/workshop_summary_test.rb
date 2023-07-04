@@ -17,7 +17,7 @@ module Pd::Payment
 
     test 'attendance_url' do
       assert_not_nil @workshop_summary.attendance_url
-      assert_include(
+      assert_includes(
         @workshop_summary.attendance_url,
         "/pd/workshop_dashboard/workshops/#{@ended_workshop.id}/attendance/#{@ended_workshop.sessions.first.id}"
       )

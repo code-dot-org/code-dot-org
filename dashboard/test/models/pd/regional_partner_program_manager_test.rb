@@ -8,8 +8,8 @@ class Pd::RegionalPartnerProgramManagerTest < ActiveSupport::TestCase
     partner_workshop = create :workshop, organizer: partner_organizer
     non_partner_workshop = create :workshop, organizer: non_partner_organizer
 
-    assert_include(regional_partner_program_manager.pd_workshops_organized, partner_workshop)
-    refute_include(regional_partner_program_manager.pd_workshops_organized, non_partner_workshop)
+    assert_includes(regional_partner_program_manager.pd_workshops_organized, partner_workshop)
+    refute_includes(regional_partner_program_manager.pd_workshops_organized, non_partner_workshop)
   end
 
   test 'program manager permission with single partner' do

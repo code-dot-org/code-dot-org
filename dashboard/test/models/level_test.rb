@@ -76,7 +76,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_does_not_create(Level) do
       level2 = Level.create(@custom_maze_data)
       assert_not level2.valid?
-      assert_include(level2.errors, :name)
+      assert_includes(level2.errors, :name)
     end
   end
 
@@ -85,7 +85,7 @@ class LevelTest < ActiveSupport::TestCase
       name_upcase = @custom_maze_data[:name].upcase
       level2 = Level.create(@custom_maze_data.merge(name: name_upcase))
       assert_not level2.valid?
-      assert_include(level2.errors, :name)
+      assert_includes(level2.errors, :name)
     end
   end
 
@@ -101,7 +101,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_does_not_create(Level) do
       level = Level.create(@custom_maze_data.merge(name: 'bad <chars>'))
       assert_not level.valid?
-      assert_include(level.errors, :name)
+      assert_includes(level.errors, :name)
     end
   end
 
@@ -153,7 +153,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal(summary[:type], 'Maze')
     assert_equal(summary[:name], 'test_level')
     assert_equal(summary[:owner], 'Best Curriculum Writer')
-    assert_include(summary[:updated_at], "03/27/20 at") # The time is different locally than on drone
+    assert_includes(summary[:updated_at], "03/27/20 at") # The time is different locally than on drone
     assert_equal(summary[:url], "/levels/#{level.id}/edit")
   end
 
@@ -250,7 +250,7 @@ class LevelTest < ActiveSupport::TestCase
     level = create(:level)
     video = create(:video)
     level.update(properties: {video_key: video.key})
-    assert_include(level.related_videos, video)
+    assert_includes(level.related_videos, video)
   end
 
   test 'returns locale-specific video with related videos' do
@@ -587,10 +587,10 @@ class LevelTest < ActiveSupport::TestCase
 
     levels = Level.where_we_want_to_calculate_ideal_level_source
 
-    refute_include(levels, match_level)
-    refute_include(levels, level_with_ideal_level_source_already)
-    refute_include(levels, freeplay_artist)
-    assert_include(levels, regular_artist)
+    refute_includes(levels, match_level)
+    refute_includes(levels, level_with_ideal_level_source_already)
+    refute_includes(levels, freeplay_artist)
+    assert_includes(levels, regular_artist)
   end
 
   test 'calculate_ideal_level_source_id does nothing if no level sources' do

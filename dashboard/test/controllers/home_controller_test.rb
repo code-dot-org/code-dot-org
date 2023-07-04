@@ -315,9 +315,9 @@ class HomeControllerTest < ActionController::TestCase
     get :home
 
     cookie_header = @response.header['Set-Cookie']
-    assert_include(cookie_header, "teacher_account_age_in_years")
-    assert_include(cookie_header, "teacher_within_us")
-    assert_include(cookie_header, "teacher_has_attended_pd")
+    assert_includes(cookie_header, "teacher_account_age_in_years")
+    assert_includes(cookie_header, "teacher_within_us")
+    assert_includes(cookie_header, "teacher_has_attended_pd")
   end
 
   # This exception is actually annoying to handle because it never gets to

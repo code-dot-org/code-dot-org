@@ -381,8 +381,8 @@ class BubbleChoiceTest < ActiveSupport::TestCase
 
     sublevel1_parents = BubbleChoice.parent_levels(sublevel1.name)
     assert_equal 2, sublevel1_parents.length
-    assert_include(sublevel1_parents, parent1)
-    assert_include(sublevel1_parents, parent2)
+    assert_includes(sublevel1_parents, parent1)
+    assert_includes(sublevel1_parents, parent2)
 
     assert_equal [parent1], BubbleChoice.parent_levels(sublevel2.name)
 

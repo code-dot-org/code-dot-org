@@ -18,11 +18,11 @@ class ResourcesControllerTest < ActionController::TestCase
       post :create, params: {name: 'resource name', url: 'code.org', downloadUrl: 'download.url', type: 'Slides', audience: 'Teacher', courseVersionId: course_version.id}
       assert_response :success
     end
-    assert_include(@response.body, 'resource name')
-    assert_include(@response.body, 'code.org')
-    assert_include(@response.body, 'Slides')
-    assert_include(@response.body, 'Teacher')
-    assert_include(@response.body, 'download.url')
+    assert_includes(@response.body, 'resource name')
+    assert_includes(@response.body, 'code.org')
+    assert_includes(@response.body, 'Slides')
+    assert_includes(@response.body, 'Teacher')
+    assert_includes(@response.body, 'download.url')
   end
 
   test 'can update resource from params' do
@@ -34,8 +34,8 @@ class ResourcesControllerTest < ActionController::TestCase
 
     # Assert the response has both the new field with the right value
     # and an old unchanged field
-    assert_include(@response.body, 'new name')
-    assert_include(@response.body, 'Slides')
+    assert_includes(@response.body, 'new name')
+    assert_includes(@response.body, 'Slides')
 
     resource.reload
     assert_equal 'new name', resource.name
@@ -56,7 +56,7 @@ class ResourcesControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     post :create, params: {name: 'resource name', url: 'code.org', downloadUrl: 'download.url', type: 'Slides', audience: 'Teacher', courseVersionId: -1}
     assert_response 400
-    assert_include(@response.body, "course version not found")
+    assert_includes(@response.body, "course version not found")
   end
 
   class AuthTests < ActionController::TestCase

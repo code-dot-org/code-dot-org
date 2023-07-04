@@ -22,8 +22,8 @@ class ProgrammingExpressionAutocompleteTest < ActiveSupport::TestCase
     matches = ProgrammingExpressionAutocomplete.get_search_matches(1, 'play',  nil)
     assert_equal 2, matches[:programmingExpressions].length
     keys = matches[:programmingExpressions].map {|m| m[:key]}
-    assert_include(keys, 'playSound-1')
-    assert_include(keys, 'playSound-2')
+    assert_includes(keys, 'playSound-1')
+    assert_includes(keys, 'playSound-2')
   end
 
   test "restricts matches by programming environment" do
