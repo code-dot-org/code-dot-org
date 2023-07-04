@@ -13,6 +13,11 @@ require 'cdo/mysql_console_helper'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 
+# Set up a Mutex so tasks which run in parallel (eyes_ui and regular_ui, in
+# particular) can safely invoke Dir.chdir.
+# See https://coderscat.com/ruby-change-current-working-directory/ for more context
+M = Mutex.new
+
 namespace :test do
   desc 'Runs apps tests.'
   timed_task_with_logging :apps do
@@ -25,57 +30,61 @@ namespace :test do
   end
 
   timed_task_with_logging :regular_ui do
-    Dir.chdir(dashboard_dir('test/ui')) do
-      ChatClient.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_with_chat_logging(
-        'bundle', 'exec', './runner.rb',
-        '-d', CDO.site_host('studio.code.org'),
-        '-p', CDO.site_host('code.org'),
-        '--db', # Ensure features that require database access are run even if the server name isn't "test"
-        '--parallel', '120',
-        '--magic_retry',
-        '--with-status-page',
-        '--fail_fast',
-        '--priority 0'
-      )
-      if failed_browser_count == 0
-        message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
-        ChatClient.log message
-        ChatClient.message 'server operations', message, color: 'green'
-      else
-        message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
-        ChatClient.log message, color: 'red'
-        ChatClient.message 'server operations', message, color: 'red', notify: 1
-        raise "UI tests failed"
+    M.synchronize do
+      Dir.chdir(dashboard_dir('test/ui')) do
+        ChatClient.log 'Running <b>dashboard</b> UI tests...'
+        failed_browser_count = RakeUtils.system_with_chat_logging(
+          'bundle', 'exec', './runner.rb',
+          '-d', CDO.site_host('studio.code.org'),
+          '-p', CDO.site_host('code.org'),
+          '--db', # Ensure features that require database access are run even if the server name isn't "test"
+          '--parallel', '120',
+          '--magic_retry',
+          '--with-status-page',
+          '--fail_fast',
+          '--priority 0'
+        )
+        if failed_browser_count == 0
+          message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
+          ChatClient.log message
+          ChatClient.message 'server operations', message, color: 'green'
+        else
+          message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
+          ChatClient.log message, color: 'red'
+          ChatClient.message 'server operations', message, color: 'red', notify: 1
+          raise "UI tests failed"
+        end
       end
     end
   end
 
   timed_task_with_logging :eyes_ui do
-    Dir.chdir(dashboard_dir('test/ui')) do
-      ChatClient.log 'Running <b>dashboard</b> UI visual tests...'
-      eyes_features = `find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
-      failed_browser_count = RakeUtils.system_with_chat_logging(
-        'bundle', 'exec', './runner.rb',
-        '-c', 'Chrome,iPhone',
-        '-d', CDO.site_host('studio.code.org'),
-        '-p', CDO.site_host('code.org'),
-        '--db', # Ensure features that require database access are run even if the server name isn't "test"
-        '--eyes',
-        '--magic_retry',
-        '--with-status-page',
-        '-f', eyes_features.join(","),
-        '--parallel', (eyes_features.count * 2).to_s
-      )
-      if failed_browser_count == 0
-        message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
-        ChatClient.log message
-        ChatClient.message 'server operations', message, color: 'green'
-      else
-        message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
-        ChatClient.log message, color: 'red'
-        ChatClient.message 'server operations', message, color: 'red', notify: 1
-        raise "Eyes tests failed"
+    M.synchronize do
+      Dir.chdir(dashboard_dir('test/ui')) do
+        ChatClient.log 'Running <b>dashboard</b> UI visual tests...'
+        eyes_features = `find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
+        failed_browser_count = RakeUtils.system_with_chat_logging(
+          'bundle', 'exec', './runner.rb',
+          '-c', 'Chrome,iPhone',
+          '-d', CDO.site_host('studio.code.org'),
+          '-p', CDO.site_host('code.org'),
+          '--db', # Ensure features that require database access are run even if the server name isn't "test"
+          '--eyes',
+          '--magic_retry',
+          '--with-status-page',
+          '-f', eyes_features.join(","),
+          '--parallel', (eyes_features.count * 2).to_s
+        )
+        if failed_browser_count == 0
+          message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
+          ChatClient.log message
+          ChatClient.message 'server operations', message, color: 'green'
+        else
+          message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
+          ChatClient.log message, color: 'red'
+          ChatClient.message 'server operations', message, color: 'red', notify: 1
+          raise "Eyes tests failed"
+        end
       end
     end
   end
