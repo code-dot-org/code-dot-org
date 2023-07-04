@@ -399,17 +399,10 @@ export default class MusicBlocklyWorkspace {
   }
 
   updateToolbox(allowList) {
-    if (this.isReadOnly()) {
+    if (!this.workspace || this.workspace.options.readOnly) {
       return;
     }
     const toolbox = getToolbox(allowList);
     this.workspace.updateToolbox(toolbox);
-  }
-
-  isReadOnly() {
-    if (!this.workspace) {
-      return false;
-    }
-    return this.workspace.options.readOnly;
   }
 }
