@@ -1,5 +1,5 @@
-require_relative '../../translation_monitor/core_validator'
-require_relative '../test_helper'
+require_relative '../../test_helper'
+require_relative '../../../i18n/translation_monitor/core_validator'
 
 class CoreValidatorTest < Minitest::Test
   include CoreValidator
