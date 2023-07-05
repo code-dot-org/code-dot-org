@@ -40,7 +40,15 @@ function initPage() {
   const config = JSON.parse(script.dataset.scriptoverview);
 
   const {scriptData, plcBreadcrumb} = config;
+  console.log('scriptData', scriptData);
+  const courseOfferingId = scriptData.courseOfferingId;
+  console.log('courseOfferingId', courseOfferingId);
+  // Get course by courseOfferingId to know if assignable or not.
+  const courseAssignable = true;
+
   const store = getStore();
+  console.log('store', store);
+  console.log('store.getState()', store.getState());
 
   registerReducers({locales});
   store.dispatch(setLocaleCode(scriptData.locale_code));
@@ -117,6 +125,7 @@ function initPage() {
         redirectScriptUrl={scriptData.redirect_script_url}
         versions={scriptData.course_versions}
         courseName={scriptData.course_name}
+        courseAssignable={courseAssignable}
         showAssignButton={scriptData.show_assign_button}
         isProfessionalLearningCourse={scriptData.isPlCourse}
         userId={scriptData.user_id}

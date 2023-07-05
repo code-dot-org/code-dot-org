@@ -37,6 +37,7 @@ class UnitOverview extends React.Component {
     courseId: PropTypes.number,
     courseTitle: PropTypes.string,
     courseLink: PropTypes.string,
+    courseAssignable: PropTypes.bool,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
     studentResources: PropTypes.arrayOf(resourceShape),
@@ -129,6 +130,7 @@ class UnitOverview extends React.Component {
       isProfessionalLearningCourse,
       publishedState,
       participantAudience,
+      courseAssignable,
     } = this.props;
 
     const displayRedirectDialog =
@@ -203,6 +205,7 @@ class UnitOverview extends React.Component {
             courseLink={this.props.courseLink}
             publishedState={publishedState}
             participantAudience={participantAudience}
+            assignable={courseAssignable}
           />
         </div>
         <ProgressTable minimal={false} />
