@@ -168,6 +168,9 @@ const CurriculumCatalog = ({
   const [appliedFilters, setAppliedFilters] = useState(
     getInitialFilterStates()
   );
+  const [assignSuccessMessage, setAssignSuccessMessage] = useState('');
+  const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
+    useState(false);
 
   // Filters out any Curriculum Catalog Cards of courses that do not match the filter criteria.
   useEffect(() => {
@@ -231,6 +234,15 @@ const CurriculumCatalog = ({
     handleUpdateFilter(filterKey, []);
   };
 
+  const handleAssignSuccess = assignmentData => {
+    setAssignSuccessMessage(
+      i18n.successAssigningCurriculum({
+        curriculum: assignmentData.assignedTitle,
+      })
+    );
+    setShowAssignSuccessMessage(true);
+  };
+
   // Renders search results based on the applied filters (or shows the No matching curriculums
   // message if no results).
   const renderSearchResults = () => {
@@ -275,6 +287,7 @@ const CurriculumCatalog = ({
                   courseOfferingId={course_offering_id}
                   scriptId={script_id}
                   isStandAloneUnit={is_standalone_unit}
+                  onAssignSuccess={response => handleAssignSuccess(response)}
                   {...props}
                 />
               )
@@ -309,6 +322,20 @@ const CurriculumCatalog = ({
         backgroundUrl={CourseCatalogBannerBackground}
         imageUrl={CourseCatalogIllustration01}
       />
+      {showAssignSuccessMessage && (
+        <div className={style.assignSuccessMessageContainer}>
+          <BodyOneText className={style.assignSuccessMessage}>
+            {assignSuccessMessage}
+          </BodyOneText>
+          <button
+            aria-label="close success message"
+            onClick={() => setShowAssignSuccessMessage(false)}
+            type="button"
+          >
+            <strong>X</strong>
+          </button>
+        </div>
+      )}
       <div className={style.catalogFiltersContainer}>
         <Heading6 className={style.catalogFiltersRowLabel}>
           {i18n.filterBy()}
