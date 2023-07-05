@@ -267,7 +267,6 @@ class UnitOverviewTopRow extends React.Component {
               isStandAloneUnit={this.props.courseLink === null}
               participantAudience={participantAudience}
             />
-
             {unitAllowsHiddenLessons && (
               <BulkLessonVisibilityToggle lessons={unitCalendarLessons} />
             )}
