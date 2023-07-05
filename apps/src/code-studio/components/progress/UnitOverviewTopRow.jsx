@@ -49,7 +49,6 @@ class UnitOverviewTopRow extends React.Component {
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
     courseLink: PropTypes.string,
     participantAudience: PropTypes.string,
-    assignable: PropTypes.bool,
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -143,7 +142,6 @@ class UnitOverviewTopRow extends React.Component {
       isProfessionalLearningCourse,
       publishedState,
       participantAudience,
-      assignable,
     } = this.props;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
@@ -253,29 +251,28 @@ class UnitOverviewTopRow extends React.Component {
             />
           )}
         </div>
-        {!deeperLearningCourse &&
-          viewAs === ViewType.Instructor &&
-          assignable && (
-            <div style={styles.sectionContainer}>
-              <SectionAssigner
-                sections={sectionsForDropdown}
-                selectedSectionId={selectedSectionId}
-                assignmentName={unitTitle}
-                showAssignButton={showAssignButton}
-                courseId={currentCourseId}
-                courseOfferingId={courseOfferingId}
-                courseVersionId={courseVersionId}
-                scriptId={scriptId}
-                forceReload={true}
-                isOnCoursePage={false}
-                isStandAloneUnit={this.props.courseLink === null}
-                participantAudience={participantAudience}
-              />
-              {unitAllowsHiddenLessons && (
-                <BulkLessonVisibilityToggle lessons={unitCalendarLessons} />
-              )}
-            </div>
-          )}
+        {!deeperLearningCourse && viewAs === ViewType.Instructor && (
+          <div style={styles.sectionContainer}>
+            <SectionAssigner
+              sections={sectionsForDropdown}
+              selectedSectionId={selectedSectionId}
+              assignmentName={unitTitle}
+              showAssignButton={showAssignButton}
+              courseId={currentCourseId}
+              courseOfferingId={courseOfferingId}
+              courseVersionId={courseVersionId}
+              scriptId={scriptId}
+              forceReload={true}
+              isOnCoursePage={false}
+              isStandAloneUnit={this.props.courseLink === null}
+              participantAudience={participantAudience}
+            />
+
+            {unitAllowsHiddenLessons && (
+              <BulkLessonVisibilityToggle lessons={unitCalendarLessons} />
+            )}
+          </div>
+        )}
         <div style={isRtl ? styles.left : styles.right}>
           <span>
             <ProgressDetailToggle toggleStudyGroup="unit-overview" />

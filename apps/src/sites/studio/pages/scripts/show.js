@@ -44,7 +44,7 @@ function initPage() {
   const courseOfferingId = scriptData.courseOfferingId;
   console.log('courseOfferingId', courseOfferingId);
   // Get course by courseOfferingId to know if assignable or not.
-  const courseAssignable = true;
+  const showAssignButton = false;
 
   const store = getStore();
   console.log('store', store);
@@ -125,8 +125,7 @@ function initPage() {
         redirectScriptUrl={scriptData.redirect_script_url}
         versions={scriptData.course_versions}
         courseName={scriptData.course_name}
-        courseAssignable={courseAssignable}
-        showAssignButton={scriptData.show_assign_button}
+        showAssignButton={showAssignButton}
         isProfessionalLearningCourse={scriptData.isPlCourse}
         userId={scriptData.user_id}
         userType={scriptData.user_type}
