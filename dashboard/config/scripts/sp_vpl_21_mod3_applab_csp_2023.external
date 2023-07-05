@@ -5,7 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Tools across the course
 
-#### CS Principles introduces students to tools and programming languages that are accessible for beginners while offering more advanced students opportunities to create sophisticated projects. All of the tools in this module are integrated directly into the Code.org website, allowing teachers to have visibility into all student work and progress. 
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">CS Principles introduces students to tools and programming languages that are accessible for beginners while offering more advanced students opportunities to create sophisticated projects. All of the tools in this module are integrated directly into the Code.org website, allowing teachers to have visibility into all student work and progress. 
+</p>
+</div>
 
 <div style="clear:both"/>
 

@@ -44,6 +44,7 @@ import {
   currentLevelIndex,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {
+  isReadOnlyWorkspace,
   setIsLoading,
   setIsPageError,
   setLabReadyForReload,
@@ -116,6 +117,7 @@ class UnconnectedMusicView extends React.Component {
     labReadyForReload: PropTypes.bool,
     setLabReadyForReload: PropTypes.func,
     navigateToNextLevel: PropTypes.func,
+    isReadOnlyWorkspace: PropTypes.bool,
   };
 
   constructor(props) {
@@ -268,7 +270,8 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.init(
       document.getElementById('blockly-div'),
       this.onBlockSpaceChange,
-      this.player
+      this.player,
+      this.props.isReadOnlyWorkspace
     );
     this.player.initialize(this.library);
 
@@ -684,6 +687,7 @@ const MusicView = connect(
     sources: state.lab.sources,
     levelData: state.lab.levelData,
     labReadyForReload: state.lab.labReadyForReload,
+    isReadOnlyWorkspace: isReadOnlyWorkspace(state),
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
