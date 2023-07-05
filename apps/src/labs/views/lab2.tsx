@@ -72,34 +72,38 @@ const Lab2: React.FunctionComponent = () => {
     >
       <ProjectContainer channelId={channelId}>
         {currentLessonAppProperties.map(appProperty => {
-          if (appProperty.backgroundMode && appProperty.usesProgressManager) {
-            return (
-              <div
-                id={`lab2-${appProperty.name}`}
-                key={appProperty.name}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  visibility:
-                    currentAppName === appProperty.name ? 'visible' : 'hidden',
-                }}
-              >
-                <ProgressContainer appType={appProperty.name}>
+          return (
+            <ProgressContainer
+              key={appProperty.name}
+              appType={appProperty.name}
+            >
+              {appProperty.backgroundMode && (
+                <div
+                  id={`lab2-${appProperty.name}`}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    visibility:
+                      currentAppName === appProperty.name
+                        ? 'visible'
+                        : 'hidden',
+                  }}
+                >
                   {appProperty.node}
-                </ProgressContainer>
-              </div>
-            );
-          } else if (appProperty.name === currentAppName) {
-            return (
-              <div
-                id={`lab2-${appProperty.name}`}
-                key={appProperty.name}
-                style={{width: '100%', height: '100%'}}
-              >
-                {appProperty.node}
-              </div>
-            );
-          }
+                </div>
+              )}
+
+              {!appProperty.backgroundMode &&
+                appProperty.name === currentAppName && (
+                  <div
+                    id={`lab2-${appProperty.name}`}
+                    style={{width: '100%', height: '100%'}}
+                  >
+                    {appProperty.node}
+                  </div>
+                )}
+            </ProgressContainer>
+          );
         })}
       </ProjectContainer>
     </Lab2Wrapper>
