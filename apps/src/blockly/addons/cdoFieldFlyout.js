@@ -27,10 +27,10 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
   CURSOR = 'default';
 
   configure_(config) {
-    config &&
-      ((this.sizingBehavior_ = config.sizingBehavior),
-      (this.minWidth_ = config.minWidth),
-      (this.maxWidth_ = config.maxWidth));
+    if (config) {
+      this.minWidth_ = config.minWidth;
+      this.maxWidth_ = config.maxWidth;
+    }
   }
 
   initView() {
@@ -40,7 +40,6 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
       disabledPatternId: this.workspace_.options.disabledPatternId,
       parentWorkspace: this.workspace_,
       RTL: this.workspace_.RTL,
-      sizingBehavior: this.sizingBehavior_,
       minWidth: this.minWidth_,
       maxWidth: this.maxWidth_,
     });
