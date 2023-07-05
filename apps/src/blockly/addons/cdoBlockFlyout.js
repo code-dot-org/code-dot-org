@@ -1,10 +1,5 @@
 import GoogleBlockly from 'blockly/core';
 
-const SIZING_BEHAVIOR = {
-  FIT_PARENT: 'fitParent',
-  FIT_CONTENT: 'fitContent',
-};
-
 export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   constructor(workspaceOptions) {
     super(workspaceOptions);
@@ -12,16 +7,13 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     workspaceOptions.getMetrics = this.getMetrics_.bind(this);
     workspaceOptions.setMetrics = this.setMetrics_.bind(this);
     this.horizontalLayout_ = !0;
-    this.sizingBehavior_ =
-      workspaceOptions.sizingBehavior || this.sizingBehavior_;
     this.minWidth_ = workspaceOptions.minWidth || this.minWidth_;
     this.maxWidth_ = workspaceOptions.maxWidth || this.maxWidth_;
   }
 
   autoClose = false;
-  sizingBehavior_ = SIZING_BEHAVIOR.FIT_CONTENT;
   minWidth_ = 0;
-  maxWidth_ = 1e3;
+  maxWidth_ = 1000;
 
   getMetrics_() {
     if (!this.isVisible()) return null;
@@ -39,15 +31,8 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     let viewHeight = this.height_,
       viewWidth = this.width_ + 2 * this.MARGIN;
     let contentHeight;
-    if (this.sizingBehavior_ === SIZING_BEHAVIOR.FIT_CONTENT) {
-      contentHeight = viewHeight;
-      blockBoundingBox = viewWidth - 1;
-    } else
-      (contentHeight =
-        (blockBoundingBox.height + 2 * this.MARGIN) * this.workspace_.scale),
-        (blockBoundingBox =
-          (blockBoundingBox.width + this.GAP_X + 2 * this.MARGIN) *
-          this.workspace_.scale);
+    contentHeight = viewHeight;
+    blockBoundingBox = viewWidth - 1;
     return {
       viewHeight: viewHeight,
       viewWidth: viewWidth,
@@ -121,16 +106,18 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     this.width_ = 0;
     const topBlocks = this.workspace_.getTopBlocks(false);
     for (let i = 0, block; (block = topBlocks[i]); i++) {
-      var blockHW = block.getHeightWidth();
+      const blockHW = block.getHeightWidth();
       this.updateHeight_(blockHW.height);
       this.updateWidth_(blockHW.width);
       block.flyoutRect_ && this.moveRectToBlock_(block.flyoutRect_, block);
     }
-    this.width_ = Math.max(
-      this.width_,
-      this.sourceBlock_.getHeightWidth().width - 36
-    );
-    // this.height_ += 2 * this.MARGIN;
+    // We need to set the flyout width based on the block itself, excluding children.
+    // Using block.getHeightWidth() would include blocks connected to input and next
+    // connections, which could make the flyout wider than the block that contains it.
+    const topBlockWidth = this.sourceBlock_.svgGroup_
+      .querySelector('path')
+      .getBoundingClientRect().width;
+    this.width_ = Math.max(this.width_, topBlockWidth - 36);
     this.setBackgroundPath_(this.width_, this.height_);
     this.position();
   }
@@ -140,10 +127,6 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   }
 
   updateWidth_(newWidth) {
-    // this.sizingBehavior_ === SIZING_BEHAVIOR.FIT_CONTENT
-    //   ? ((this.width_ += newWidth.width), (this.width_ += this.GAP_X))
-    //   : 0 === this.width_ &&
-    //     (this.width_ = this.sourceBlock_.getHeightWidth().width - 36);
     this.width_ += newWidth + this.GAP_X;
   }
 
