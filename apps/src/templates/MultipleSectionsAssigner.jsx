@@ -21,7 +21,7 @@ const MultipleSectionsAssigner = ({
   courseVersionId,
   scriptId,
   reassignConfirm = () => {},
-  isOnCoursePage,
+  isAssigningCourse,
   isStandAloneUnit,
   participantAudience,
   // Redux
@@ -33,7 +33,7 @@ const MultipleSectionsAssigner = ({
   let initialSectionsAssigned = [];
 
   // check to see if this is coming from the UNIT landing page - if so add courses featuring this unit
-  if (!isOnCoursePage) {
+  if (!isAssigningCourse) {
     if (isStandAloneUnit) {
       for (let i = 0; i < sections.length; i++) {
         if (courseVersionId === sections[i].courseVersionId) {
@@ -47,7 +47,7 @@ const MultipleSectionsAssigner = ({
         }
       }
     }
-  } else if (isOnCoursePage) {
+  } else if (isAssigningCourse) {
     // checks to see if this is coming from the COURSE landing page
     for (let i = 0; i < sections.length; i++) {
       if (courseId === sections[i].courseId) {
@@ -83,7 +83,7 @@ const MultipleSectionsAssigner = ({
         s => s.code === currentSectionsAssigned[i].code
       );
       if (needsToBeAssigned) {
-        if (isOnCoursePage) {
+        if (isAssigningCourse) {
           const sectionId = currentSectionsAssigned[i].id;
           assignToSection(
             sectionId,
@@ -106,7 +106,7 @@ const MultipleSectionsAssigner = ({
 
       if (isSectionToBeRemoved) {
         // if on COURSE landing page or a STANDALONE UNIT, unassign entirely
-        isOnCoursePage || isStandAloneUnit
+        isAssigningCourse || isStandAloneUnit
           ? unassignSection(initialSectionsAssigned[i].id, '')
           : assignCourseWithoutUnit(initialSectionsAssigned[i]);
       }
@@ -195,7 +195,7 @@ const MultipleSectionsAssigner = ({
         onClick={selectAllHandler}
         className="select-all-sections"
       >
-        Select All
+        {i18n.selectAll()}
       </a>
       <div style={styles.buttonContainer}>
         <Button
@@ -222,7 +222,7 @@ MultipleSectionsAssigner.propTypes = {
   courseVersionId: PropTypes.number,
   scriptId: PropTypes.number,
   reassignConfirm: PropTypes.func,
-  isOnCoursePage: PropTypes.bool,
+  isAssigningCourse: PropTypes.bool.isRequired,
   isStandAloneUnit: PropTypes.bool,
   participantAudience: PropTypes.string,
   // Redux
