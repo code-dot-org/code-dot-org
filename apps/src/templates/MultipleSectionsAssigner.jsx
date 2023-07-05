@@ -169,7 +169,10 @@ const MultipleSectionsAssigner = ({
       >
         <Heading3>{i18n.chooseSectionsPrompt({assignmentName})}</Heading3>
       </div>
-      <div style={styles.content}>{i18n.chooseSectionsDirections()}</div>
+      <div style={styles.content}>
+        {/*TODO: add Body-two here*/}
+        {i18n.chooseSectionsDirections()}
+      </div>
       <div style={styles.header} className="uitest-confirm-assignment-dialog">
         <Heading5>{i18n.yourSectionsList()}</Heading5>
       </div>
@@ -233,6 +236,7 @@ MultipleSectionsAssigner.propTypes = {
   updateHiddenScript: PropTypes.func.isRequired,
 };
 
+// TODO: move to css file, clean up styles
 const styles = {
   header: {
     fontSize: 16,
