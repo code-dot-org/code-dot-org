@@ -29,7 +29,7 @@ const Lab2ShareDialog: React.FunctionComponent<Lab2ShareDialogProps> = ({
     (state: {currentUser: {under13: boolean}}) => !state.currentUser.under13
   );
 
-  // We don't current support dance party projects in labs.
+  // We don't currently support dance party projects in Lab2.
   const selectedSong = null;
   // TODO: support thumbnail url.
   const thumbnailUrl = null;

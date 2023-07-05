@@ -17,6 +17,13 @@ export default class LabRegistry {
     return LabRegistry._instance;
   }
 
+  public static hasEnabledProjects() {
+    return (
+      LabRegistry._instance !== undefined &&
+      LabRegistry._instance.projectManager !== null
+    );
+  }
+
   public static create() {
     LabRegistry._instance = new LabRegistry();
   }

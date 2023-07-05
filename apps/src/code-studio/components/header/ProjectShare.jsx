@@ -3,11 +3,11 @@ import i18n from '@cdo/locale';
 import {shareProject} from '../../headerShare';
 import {styles} from './EditableProjectName';
 import LabRegistry from '@cdo/apps/labs/LabRegistry';
-import {shareLab2Project} from '@cdo/apps/labs/header/headerShareV2';
+import {shareLab2Project} from '@cdo/apps/labs/header/lab2HeaderShare';
 
 export default class ProjectShare extends React.Component {
   shareProject = () => {
-    if (LabRegistry.getInstance().getProjectManager() !== null) {
+    if (LabRegistry.hasEnabledProjects()) {
       // If we are using Lab2, share using the project manager and
       // shareLab2Project.
       shareLab2Project(
