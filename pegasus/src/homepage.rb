@@ -244,7 +244,15 @@ class Homepage
           download_path: action["download_path"],
           facebook: action["facebook"],
           twitter: action["twitter"],
-          image_url: action["image_url"]
+          # The following is used with the
+          # `flex-container` entry type
+          image_url: action["image_url"],
+          text_h1: action["text_h1"],
+          text_desc: action["text_desc"],
+          button_link: action["button_link"],
+          studio_button_link: action["studio_button_link"],
+          button_text: action["button_text"],
+          img_src: action["img_src"]
         }
       end
     elsif hoc_mode == "actual-hoc"
@@ -444,7 +452,7 @@ class Homepage
           text: "homepage_slot_text_blurb_educators",
           color1: "0, 148, 202",
           color2: "89, 185, 220",
-          url: CDO.studio_url("/courses?view=teacher"),
+          url: CDO.code_org_url("/teach"),
           image: "/shared/images/courses/logo_tall_teacher2.jpg"
         },
         {

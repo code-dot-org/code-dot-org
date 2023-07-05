@@ -316,7 +316,7 @@ en:
             **Did You Know?**
             * Professional development is available to help you get started teaching CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Click here</a> to learn more about professional learning opportunities in your region.
 
-            * You can find the *Curriculum Guide*, *Course Vocab*, and other resources to help you implement this curriculum in the Teacher Resources menu below.
+            * You can find the *Syllabus*, *Course Vocab*, and other resources to help you implement this curriculum in the Teacher Resources menu below.
           version_title: "'23-'24"
         self-paced-pl-physical-computing-2022:
           title: Teaching Creating Apps with Devices (Circuit Playground)
@@ -541,3 +541,27 @@ en:
 
             ##### The content of these professional learning modules is organized in the suggested progression for teachers new to both Code.org and CS Principles. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about these professional learning modules before getting started.
           version_title: 22-23
+        self-paced-pl-aiml-2023:
+          title: 'Preparing to Teach AI and Machine Learning '
+          description_short: ''
+          description_student: |-
+            **You will:**
+
+            * Get an introduction to Creating Apps for Devices.
+            * Set up your Circuit Playground.
+            * Practice key concepts included in the unit.
+            * Preview end of chapter projects.
+            * Consider the role of the teacher in a computer science classroom.
+
+            **Suggested time:** 100 minutes
+          description_teacher: |-
+            **You will:**
+
+            * Get an introduction to Creating Apps for Devices.
+            * Set up your Circuit Playground.
+            * Practice key concepts included in the unit.
+            * Preview end of chapter projects.
+            * Consider the role of the teacher in a computer science classroom.
+
+            **Suggested time:** 100 minutes
+          version_title: ''
