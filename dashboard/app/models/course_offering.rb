@@ -313,9 +313,9 @@ class CourseOffering < ApplicationRecord
       device_compatibility: device_compatibility,
       description: description,
       self_paced_professional_learning: self_paced_professional_learning,
-      professional_learning_program: professional_learning_program,     
-      video: video,                            
-      published_date: published_date,                  
+      professional_learning_program: professional_learning_program,
+      video: video,
+      published_date: published_date,
     }
   end
 
