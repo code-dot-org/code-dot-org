@@ -6,7 +6,8 @@
 // allows level switching between those levels without a page reload.
 
 import React from 'react';
-import {useSelector} from 'react-redux';
+import {Provider, useSelector} from 'react-redux';
+import {getStore} from '@cdo/apps/redux';
 import {levelsForLessonId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 import {LevelWithProgress} from '@cdo/apps/types/progressTypes';
@@ -110,4 +111,12 @@ const Lab2: React.FunctionComponent = () => {
   );
 };
 
-export default Lab2;
+const Lab2WithProvider: React.FunctionComponent = () => {
+  return (
+    <Provider store={getStore()}>
+      <Lab2 />
+    </Provider>
+  );
+};
+
+export default Lab2WithProvider;
