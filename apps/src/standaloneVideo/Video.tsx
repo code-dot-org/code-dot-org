@@ -30,19 +30,32 @@ function useWindowSize() {
  */
 
 const Video: React.FunctionComponent<VideoProps> = ({children, src}) => {
+  // Leave a margin to the left and the right of the video, to the edges
+  // of the screen.
+  const horizontalMargin = 40;
+
+  // Leave a vertical margin above and below the video, to the edges of the
+  // screen.
+  const verticalMargin = 50;
+
+  // We need room below the video for the children passed in.  This area
+  // can contain things like a download link and a Continue button.
   const childrenAreaHeight = 70;
 
+  // The aspect ratio of the video.
+  const videoAspectRatio = 16 / 9;
+
   let [targetWidth, targetHeight] = useWindowSize();
-  targetWidth -= 80;
-  targetHeight -= 100 + childrenAreaHeight;
+  targetWidth -= horizontalMargin * 2;
+  targetHeight -= verticalMargin * 2 + childrenAreaHeight;
 
   let width, height;
-  if (targetWidth / targetHeight > 16 / 9) {
+  if (targetWidth / targetHeight > videoAspectRatio) {
     height = targetHeight;
-    width = (16 / 9) * height;
+    width = videoAspectRatio * height;
   } else {
     width = targetWidth;
-    height = (9 / 16) * width;
+    height = width / videoAspectRatio;
   }
 
   return (
