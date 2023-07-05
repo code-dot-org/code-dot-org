@@ -14,6 +14,7 @@ import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
 import {Channel, Project, ProjectSources} from '../types';
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import {currentLocation} from '@cdo/apps/utils';
 
 export default class ProjectManager {
   private readonly channelId: string;
@@ -174,7 +175,7 @@ export default class ProjectManager {
     if (!this.lastChannel || !this.lastChannel.projectType) {
       return null;
     }
-    const location = this.getLocation();
+    const location = currentLocation();
     // This will not work for web lab, but we will likely not move web lab to use ProjectManager.
     return (
       location.origin +
@@ -381,13 +382,5 @@ export default class ProjectManager {
       errorMessage,
       error: error.toString(),
     });
-  }
-
-  // Helpers
-  /**
-   * This method exists to be mocked for unit tests.
-   */
-  getLocation() {
-    return document.location;
   }
 }
