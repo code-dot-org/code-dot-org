@@ -94,7 +94,7 @@ class LtiV1Controller < ApplicationController
 
   private
 
-  @namespace = "lti_v1_controller"
+  NAMESPACE = "lti_v1_controller".freeze
 
   def unauthorized_status
     render(status: :unauthorized, json: {error: 'Unauthorized'})
@@ -109,12 +109,12 @@ class LtiV1Controller < ApplicationController
 
   def write_cache(key, value)
     # TODO: Add error handling
-    CDO.shared_cache.write("#{@namespace}/#{key}", value.to_json, expires_in: 1.minute)
+    CDO.shared_cache.write("#{NAMESPACE}/#{key}", value.to_json, expires_in: 1.minute)
   end
 
   def read_cache(key)
     # TODO: Add error handling
-    json_value = CDO.shared_cache.read("#{@namespace}/#{key}")
+    json_value = CDO.shared_cache.read("#{NAMESPACE}/#{key}")
     JSON.parse(json_value).symbolize_keys
   end
 
