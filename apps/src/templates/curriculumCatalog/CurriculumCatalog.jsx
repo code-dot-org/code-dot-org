@@ -338,12 +338,12 @@ const CurriculumCatalog = ({
       {!isEnglish && (
         <div className={style.catalogLanguageFilterRow}>
           <div className={style.catalogLanguageFilterRowNumAvailable}>
-            <BodyOneText>
+            <BodyTwoText>
               {i18n.numCurriculaAvailableInLanguage({
                 numCurricula: numFilteredTranslatedCurricula,
                 language: languageNativeName,
               })}
-            </BodyOneText>
+            </BodyTwoText>
             <FontAwesome
               icon="language"
               className="fa-solid"
