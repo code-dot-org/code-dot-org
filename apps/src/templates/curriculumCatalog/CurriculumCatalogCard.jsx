@@ -37,6 +37,7 @@ const CurriculumCatalogCard = ({
   subjects = [],
   topics = [],
   pathToCourse,
+  onAssignSuccess,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -65,6 +66,7 @@ const CurriculumCatalogCard = ({
     imageAltText={imageAltText}
     translationIconTitle={i18n.courseInYourLanguage()}
     pathToCourse={pathToCourse + '?viewAs=Instructor'}
+    onAssignSuccess={onAssignSuccess}
     {...props}
   />
 );
@@ -90,6 +92,7 @@ CurriculumCatalogCard.propTypes = {
   courseOfferingId: PropTypes.number,
   scriptId: PropTypes.number,
   isStandAloneUnit: PropTypes.bool,
+  onAssignSuccess: PropTypes.func,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -110,6 +113,7 @@ const CustomizableCurriculumCatalogCard = ({
   sectionsForDropdown = [],
   isTeacher,
   isSignedOut,
+  onAssignSuccess,
   courseId,
   ...props
 }) => {
@@ -129,6 +133,7 @@ const CustomizableCurriculumCatalogCard = ({
           onClose={() => setIsAssignDialogOpen(false)}
           sections={sectionsForDropdown}
           participantAudience="student"
+          onAssignSuccess={onAssignSuccess}
           isAssigningCourse={!!courseId}
           courseId={courseId}
           {...props}
@@ -236,6 +241,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
   isTeacher: PropTypes.bool,
   isSignedOut: PropTypes.bool.isRequired,
+  onAssignSuccess: PropTypes.func,
   // for screenreaders
   imageAltText: PropTypes.string,
   quickViewButtonDescription: PropTypes.string.isRequired,

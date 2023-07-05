@@ -2272,6 +2272,7 @@
   "submitYourProjectConfirm": "You cannot edit your project after submitting it, really submit?",
   "subtitle": "a visual programming environment",
   "success": "Success!",
+  "successAssigningCurriculum": "You have successfully assigned {curriculum} to your section(s).",
   "summaryAssessmentsOverview": "Multiple choice questions overview",
   "summaryView": "Summary View",
   "support": "Support",
