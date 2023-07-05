@@ -1,5 +1,4 @@
 import {fetchSignedCookies} from '@cdo/apps/utils';
-import {reportLoadTime} from '../utils/MusicMetrics';
 import WebAudio from './soundSub';
 
 var soundList = [];
@@ -27,6 +26,7 @@ var audioSystem = null;
  *   {
  *     delayTimeSeconds: number, // Delay time used in the delay effect
  *     releaseTimeSeconds: number // Release time for fading out fixed-duration sounds
+ *     reportSoundLibraryLoadTime: loadTimeMs: number => void // Optional callback to report sound library load time
  *   }
  */
 export function InitSound(desiredSounds, options) {
@@ -35,7 +35,7 @@ export function InitSound(desiredSounds, options) {
   restrictedSoundUrlPath = '/restricted/musiclab/';
   audioSystem = new WebAudio(options);
 
-  LoadSounds(desiredSounds);
+  LoadSounds(desiredSounds, options.reportSoundLibraryLoadTime);
 }
 
 export function LoadSoundFromBuffer(id, buffer) {
@@ -51,7 +51,7 @@ export function GetCurrentAudioTime() {
   return audioSystem?.getCurrentTime();
 }
 
-async function LoadSounds(desiredSounds) {
+async function LoadSounds(desiredSounds, reportSoundLibraryLoadTime) {
   const soundLoadStartTime = Date.now();
   soundList = desiredSounds;
 
@@ -88,7 +88,7 @@ async function LoadSounds(desiredSounds) {
         soundsToLoad--;
         if (soundsToLoad === 0) {
           const loadTimeMs = Date.now() - soundLoadStartTime;
-          reportLoadTime('SoundLibraryLoadTime', loadTimeMs);
+          reportSoundLibraryLoadTime(loadTimeMs);
         }
       }
     );

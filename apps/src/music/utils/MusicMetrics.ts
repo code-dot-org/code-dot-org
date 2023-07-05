@@ -23,13 +23,15 @@ export function logError(message: string | object | Error) {
   MetricsReporter.logError(decorateMessage(message));
 }
 
-export function reportLoadTime(metricName: string, loadTimeMs: number) {
-  MetricsReporter.publishMetric(
-    metricName,
-    loadTimeMs,
-    'Milliseconds',
-    getDimensions()
-  );
+export function reportLoadTime(
+  metricName: string,
+  loadTimeMs: number,
+  dimensions: MetricDimension[] = []
+) {
+  MetricsReporter.publishMetric(metricName, loadTimeMs, 'Milliseconds', [
+    ...dimensions,
+    ...getDimensions(),
+  ]);
 }
 
 /**
