@@ -65,8 +65,12 @@
               = I18n.t(entry[:text_h1])
             %p
               = I18n.t(entry[:text_desc])
-            %a.link-button{href: entry[:button_link]}
-              = I18n.t(entry[:button_text])
+            -if entry[:studio_button_link]
+              %a.link-button{href: CDO.studio_url(entry[:studio_button_link])}
+                = I18n.t(entry[:button_text])
+            - else
+              %a.link-button{href: entry[:button_link]}
+                = I18n.t(entry[:button_text])
           %figure
             %img{src: entry[:img_src], alt: ""}
   .clear{style: "clear: both"}

@@ -250,6 +250,7 @@ class Homepage
           text_h1: action["text_h1"],
           text_desc: action["text_desc"],
           button_link: action["button_link"],
+          studio_button_link: action["studio_button_link"],
           button_text: action["button_text"],
           img_src: action["img_src"]
         }
