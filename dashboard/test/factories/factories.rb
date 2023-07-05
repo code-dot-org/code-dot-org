@@ -573,12 +573,6 @@ FactoryBot.define do
       login_type {'email'}
       grades {['pl']}
     end
-
-    trait :old_section do
-      after :create do |section|
-        section.created_at {Time.now - 1.year}
-      end
-    end
   end
 
   factory :game do

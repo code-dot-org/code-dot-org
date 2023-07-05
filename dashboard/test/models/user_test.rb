@@ -4955,7 +4955,7 @@ class UserTest < ActiveSupport::TestCase
     teacher_old = create :teacher, :with_school_info, school_info: school_info_old
 
     section = create :section, user: teacher
-    section_old = create :section, :old_section, user: teacher_old
+    section_old = create :section, created_at: 1.year.ago, user: teacher_old
     student = create(:follower, section: section).student_user
     create :follower, section: section_old, student_user: student
 

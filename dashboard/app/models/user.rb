@@ -2729,11 +2729,11 @@ class User < ApplicationRecord
     return nil unless student?
     return nil unless sections_as_student.any?
 
-    latest_teacher_id = sections_as_student.order("created_at DESC").first.user_id
-    teacher_schools = User.find(latest_teacher_id).user_school_infos
-    return nil unless teacher_schools.any?
+    latest_teacher_id = sections_as_student.order(created_at: :desc).first.user_id
+    latest_teacher_school_info = UserSchoolInfo.where(user_id: latest_teacher_id).order(start_date: :desc).first
+    return nil unless latest_teacher_school_info
 
-    SchoolInfo.find(teacher_schools.order("start_date DESC").first.school_info_id).state
+    latest_teacher_school_info.school_info&.state
   end
 
   # Values for the `child_account_compliance_state` attribute
