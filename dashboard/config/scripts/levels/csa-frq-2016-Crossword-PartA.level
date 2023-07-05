@@ -17,6 +17,6 @@
     "hide_share_and_remix": "false",
     "csa_view_mode": "console"
   },
-  "audit_log": "[{\"changed_at\":\"2023-07-04 15:34:35 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-07-04 15:34:35 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-07-04 15:39:21 +0000\",\"changed\":[\"name\",\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-07-04 15:39:35 +0000\",\"changed\":[\"name\",\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
 }]]></config>
 </Javalab>
