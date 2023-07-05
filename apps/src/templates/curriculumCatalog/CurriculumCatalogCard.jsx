@@ -110,6 +110,7 @@ const CustomizableCurriculumCatalogCard = ({
   sectionsForDropdown = [],
   isTeacher,
   isSignedOut,
+  courseId,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -128,6 +129,8 @@ const CustomizableCurriculumCatalogCard = ({
           onClose={() => setIsAssignDialogOpen(false)}
           sections={sectionsForDropdown}
           participantAudience="student"
+          isAssigningCourse={!!courseId}
+          courseId={courseId}
           {...props}
         />
       );

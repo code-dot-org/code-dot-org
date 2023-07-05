@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 22:47:35 UTC",
+    "serialized_at": "2023-07-03 14:59:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2279,7 +2279,13 @@
       "position": 1,
       "properties": {
         "description": "**Group:** It is recommended that students work in pairs for this lesson. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio, Lesson 3 Level 1. ",
-        "name": "Practice Time"
+        "name": "Practice Time",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Optional Resource**: There is an activity guide available in the *Resources* section that contains all of the main tasks that students need to complete over the course of the four levels. The tasks and descriptions in this activity guide are identical to what is presented within the levels themselves. However, some students might benefit from this task list as they work on creating the practice app.  "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0951db4f-7749-426f-af1c-a2ebb71dee23",
@@ -6523,6 +6529,42 @@
       }
     },
     {
+      "name": "Task List - CodeFeed Quiz",
+      "url": "https://docs.google.com/document/d/16RtQlmxzgc1rLsKDBGVpDoEpIHQjfs5OYKlAzhhhLG0/edit?usp=sharing",
+      "key": "task_list_-_codefeed_quiz",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "task_list_-_codefeed_quiz"
+      }
+    },
+    {
+      "name": "Task List - Emoji Movie App",
+      "url": "https://docs.google.com/document/d/1A5G6VMMXN7AnwD-JTRMWi4NGNJrz9eFTqayWCpmR7Hc/edit?usp=sharing",
+      "key": "task_list_-_emoji_movie_app",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "task_list_-_emoji_movie_app"
+      }
+    },
+    {
+      "name": "Task List - Tic Tac Toe",
+      "url": "https://docs.google.com/document/d/1tJYFkPH3yRDP7xvlKX-S808mc1ILsge8nlq-UAomZSg/edit?usp=sharing",
+      "key": "task_list_-_tic_tac_toe",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "task_list_-_tic_tac_toe"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -6678,6 +6720,24 @@
       "seeding_key": {
         "lesson.key": "Conditionals Practice",
         "resource.key": "guide_to_practice_lessons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "resource.key": "task_list_-_codefeed_quiz"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "resource.key": "task_list_-_emoji_movie_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "resource.key": "task_list_-_tic_tac_toe"
       }
     },
     {

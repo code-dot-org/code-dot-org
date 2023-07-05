@@ -38,7 +38,6 @@ const EVENTS = {
   SUBMIT_RP_CONTACT_FORM_EVENT: 'Submit Regional Partner Contact Form',
 
   // Marketing site pages
-  TEACH_PAGE_VISITED_EVENT: 'Teach Page Visited',
   ADMIN_INTEREST_FORM_SUBMIT_EVENT: 'Administrator Interest Form Submitted',
 
   // Sections
