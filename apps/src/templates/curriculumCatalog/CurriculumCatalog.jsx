@@ -14,7 +14,7 @@ import Button from '@cdo/apps/templates/Button';
 import {
   Heading5,
   Heading6,
-  BodyOneText,
+  BodyTwoText,
 } from '@cdo/apps/componentLibrary/typography';
 import CheckboxDropdown from '../CheckboxDropdown';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
@@ -292,9 +292,9 @@ const CurriculumCatalog = ({
           <Heading5 className={style.noResultsHeading}>
             {i18n.noCurriculumSearchResultsHeader()}
           </Heading5>
-          <BodyOneText className={style.noResultsBody}>
+          <BodyTwoText className={style.noResultsBody}>
             {i18n.noCurriculumSearchResultsBody()}
-          </BodyOneText>
+          </BodyTwoText>
         </div>
       );
     }
@@ -338,12 +338,12 @@ const CurriculumCatalog = ({
       {!isEnglish && (
         <div className={style.catalogLanguageFilterRow}>
           <div className={style.catalogLanguageFilterRowNumAvailable}>
-            <BodyOneText>
+            <BodyTwoText>
               {i18n.numCurriculaAvailableInLanguage({
                 numCurricula: numFilteredTranslatedCurricula,
                 language: languageNativeName,
               })}
-            </BodyOneText>
+            </BodyTwoText>
             <FontAwesome
               icon="language"
               className="fa-solid"
