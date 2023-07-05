@@ -114,6 +114,7 @@ const CustomizableCurriculumCatalogCard = ({
   isTeacher,
   isSignedOut,
   onAssignSuccess,
+  courseId,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -133,6 +134,8 @@ const CustomizableCurriculumCatalogCard = ({
           sections={sectionsForDropdown}
           participantAudience="student"
           onAssignSuccess={onAssignSuccess}
+          isAssigningCourse={!!courseId}
+          courseId={courseId}
           {...props}
         />
       );
