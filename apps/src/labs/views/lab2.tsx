@@ -80,7 +80,8 @@ const Lab2: React.FunctionComponent = () => {
                 style={{
                   width: '100%',
                   height: '100%',
-                  visibility: currentAppName === 'music' ? 'visible' : 'hidden',
+                  visibility:
+                    currentAppName === appProperty.name ? 'visible' : 'hidden',
                 }}
               >
                 <ProgressContainer appType={appProperty.name}>
