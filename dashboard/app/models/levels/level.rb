@@ -812,6 +812,7 @@ class Level < ApplicationRecord
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
     properties_camelized[:levelData] = video if video
+    properties_camelized[:type] = type
     properties_camelized
   end
 
