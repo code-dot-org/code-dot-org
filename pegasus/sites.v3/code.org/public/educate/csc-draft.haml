@@ -22,9 +22,7 @@ theme: responsive_full_width
 %section
   .wrapper
     %div.col-50{style: "margin: 0.5rem 0 1rem;"}
-      -# Waiting on link to new CSC video, using an image as a placeholder for now
-      -# =view :display_video_thumbnail, id: "intro_csp", video_code: "uQim0hBHco0", play_button: 'center', letterbox: 'false'
-      %img{src: "/images/csc-page-intro-teacher-student.png", alt: "", style: "width: 100%; margin-bottom: 1rem"}
+      = view :display_video_thumbnail, id: "intro_csc", video_code: "GDcKJ1v2W1s", play_button: 'center', letterbox: 'false'
     .text-wrapper.col-45{style: "float: right;"}
       %h2=hoc_s(:csc_page_intro_heading)
       %ul
@@ -124,6 +122,21 @@ theme: responsive_full_width
 %section.bg-neutral-light
   .wrapper
     = view :resources_tabs
+
+%section
+  .wrapper
+    %h2=hoc_s(:heading_professional_learning)
+    %p=hoc_s(:professional_learning_section_desc_self_paced)
+    .action-block.action-block--two-col
+      %img{src: "/images/action-block-self-paced-pl.png", alt: "", class: "col-50"}
+      .text-wrapper.col-50
+        %h3.heading-sm
+          =hoc_s(:self_paced_pl_modules_heading)
+        %p=hoc_s(:self_paced_pl_modules_desc)
+        %a.link-button{href: CDO.studio_url("/s/self-paced-pl-csc-2023")}
+          =hoc_s(:call_to_action_start_modules)
+
+= view :section_divider_line
 
 %section.no-padding-bottom
   .wrapper

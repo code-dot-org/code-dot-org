@@ -169,6 +169,7 @@
   call_to_action_focus_on_topic: "Focus on a topic"
   call_to_action_teach_full_intro_course: "Teach a full intro course"
   call_to_action_see_module_details: "See module details"
+  call_to_action_start_modules: "Start modules"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
@@ -334,6 +335,9 @@
 
   professional_learning_section_desc: "Get the support you need as you prepare to teach. Teachers love it, with over 90% ranking it the best professional development ever!"
   professional_learning_section_block_facilitator_led_workshops: "Our highly supportive Professional Learning Program will bring you together with a group of teachers to learn from each other as well as expert facilitators as you take on the first year of teaching the free curriculum to your students. In-person and virtual workshops are starting this summer."
+
+  professional_learning_section_desc_self_paced: "Just in time support that allows you prepare to teach with confidence on your schedule."
+  professional_learning_section_desc_self_paced: "Just in time support that allows you prepare to teach with confidence on your schedule."
 
   support_and_questions_section_subhead: "Still have questions? Reach out to us! We are here to help."
   support_and_questions_section_desc: "Our support team is here to answer any questions you may have about starting teaching with Code.org. You can also ask other teachers about their experience on our teacher forums."
