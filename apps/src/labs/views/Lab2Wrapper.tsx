@@ -6,7 +6,6 @@
 // boundary; a fade-in between levels; a loading spinner when a level takes a
 // while to load; and a sad bee when things go wrong.
 
-import PropTypes from 'prop-types';
 import React from 'react';
 import {useSelector} from 'react-redux';
 import classNames from 'classnames';
@@ -14,13 +13,24 @@ import moduleStyles from './Lab2Wrapper.module.scss';
 import ErrorBoundary from '../ErrorBoundary';
 import {isLabLoading} from '../labRedux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import i18n from '@cdo/locale';
+import {LabState} from '@cdo/apps/labs/labRedux';
+const i18n = require('@cdo/locale');
 
-const Lab2Wrapper = ({children, onError}) => {
-  const isLoading = useSelector(isLabLoading);
-  const isPageError = useSelector(state => state.lab.isPageError);
+export interface Lab2WrapperProps {
+  children: React.ReactNode;
+  onError: (error: Error, componentStack: string) => void;
+}
 
-  const overlayStyle = isLoading
+const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({
+  children,
+  onError,
+}) => {
+  const isLoading: boolean = useSelector(isLabLoading);
+  const isPageError: boolean = useSelector(
+    (state: {lab: LabState}) => state.lab.isPageError
+  );
+
+  const overlayStyle: string = isLoading
     ? moduleStyles.showingBlock
     : moduleStyles.fadeInBlock;
 
@@ -42,6 +52,7 @@ const Lab2Wrapper = ({children, onError}) => {
             <div className={moduleStyles.slowLoadContainer}>
               <div className={moduleStyles.spinnerContainer}>
                 <FontAwesome
+                  title={undefined}
                   icon="spinner"
                   className={classNames('fa-pulse', 'fa-3x')}
                 />
@@ -57,11 +68,6 @@ const Lab2Wrapper = ({children, onError}) => {
       </div>
     </ErrorBoundary>
   );
-};
-
-Lab2Wrapper.propTypes = {
-  children: PropTypes.node.isRequired,
-  onError: PropTypes.func.isRequired,
 };
 
 export const ErrorUI = () => (
