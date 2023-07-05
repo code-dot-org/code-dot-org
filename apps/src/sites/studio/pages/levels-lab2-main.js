@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
-import Lab2 from '@cdo/apps/labs/lab2';
+import Lab2 from '@cdo/apps/labs/views/lab2';
 
 $(document).ready(function () {
   ReactDOM.render(

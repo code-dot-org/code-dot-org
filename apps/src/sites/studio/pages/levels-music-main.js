@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import {getStandaloneProjectId} from '@cdo/apps/labs/projects/utils';
-import Lab2Wrapper from '@cdo/apps/code-studio/components/Lab2Wrapper';
+import Lab2Wrapper from '@cdo/apps/labs/views/Lab2Wrapper';
 import ProjectContainer from '@cdo/apps/labs/projects/ProjectContainer';
 import ProgressContainer from '@cdo/apps/labs/progress/ProgressContainer';
 import MusicLabView from '@cdo/apps/music/views/MusicView';

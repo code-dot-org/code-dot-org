@@ -11,10 +11,10 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import classNames from 'classnames';
 import moduleStyles from './Lab2Wrapper.module.scss';
-import i18n from '@cdo/locale';
+import ErrorBoundary from '../ErrorBoundary';
+import {isLabLoading} from '../labRedux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ErrorBoundary from './ErrorBoundary';
-import {isLabLoading} from '@cdo/apps/labs/labRedux';
+import i18n from '@cdo/locale';
 
 const Lab2Wrapper = ({children, onError}) => {
   const isLoading = useSelector(isLabLoading);
