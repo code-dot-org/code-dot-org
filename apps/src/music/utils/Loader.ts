@@ -23,19 +23,22 @@ export const loadLibrary = async (
   if (AppConfig.getValue('local-library') === 'true') {
     const localLibraryFilename = 'music-library';
     const localLibrary = require(`@cdo/static/music/${localLibraryFilename}.json`);
-    return new MusicLibrary(localLibrary as LibraryJson);
+    return new MusicLibrary(
+      'local-' + localLibraryFilename,
+      localLibrary as LibraryJson
+    );
   } else {
     // URL param takes precendence over provided library name.
     const libraryParameter = AppConfig.getValue('library') || libraryName;
     const libraryFilename = libraryParameter
-      ? `music-library-${libraryParameter}.json`
-      : 'music-library.json';
+      ? `music-library-${libraryParameter}`
+      : 'music-library';
 
     const libraryJsonResponse = await HttpClient.fetchJson<LibraryJson>(
-      baseUrl + libraryFilename,
+      baseUrl + libraryFilename + '.json',
       {},
       LibraryValidator
     );
-    return new MusicLibrary(libraryJsonResponse.value);
+    return new MusicLibrary(libraryFilename, libraryJsonResponse.value);
   }
 };
