@@ -12,9 +12,9 @@ import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 import {LevelWithProgress} from '@cdo/apps/types/progressTypes';
 import {getStandaloneProjectId} from '@cdo/apps/labs/projects/utils';
 import {logError} from '@cdo/apps/music/utils/MusicMetrics';
-import Lab2Wrapper from '@cdo/apps/code-studio/components/Lab2Wrapper';
-import ProjectContainer from '@cdo/apps/labs/projects/ProjectContainer';
-import ProgressContainer from '@cdo/apps/labs/progress/ProgressContainer';
+import Lab2Wrapper from './Lab2Wrapper';
+import ProjectContainer from '../projects/ProjectContainer';
+import ProgressContainer from '../progress/ProgressContainer';
 import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import MusicView from '@cdo/apps/music/views/MusicView';
 
