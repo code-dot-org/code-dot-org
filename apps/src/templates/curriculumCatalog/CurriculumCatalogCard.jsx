@@ -136,6 +136,7 @@ const CustomizableCurriculumCatalogCard = ({
           onAssignSuccess={onAssignSuccess}
           isAssigningCourse={!!courseId}
           courseId={courseId}
+          sectionDirections={i18n.chooseSectionsDirectionsOnCatalog()}
           {...props}
         />
       );
