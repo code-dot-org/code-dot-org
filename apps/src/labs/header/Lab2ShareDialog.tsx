@@ -1,6 +1,3 @@
-/**
- * Wrapper around ShareDialog that plumbs in the necessary props for a Lab2 project.
- */
 import ShareDialog from '@cdo/apps/code-studio/components/ShareDialog';
 import React from 'react';
 import {useSelector} from 'react-redux';
@@ -8,6 +5,9 @@ import {LabState} from '../labRedux';
 import {isSignedIn as getIsSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import popupWindow from '@cdo/apps/code-studio/popup-window';
 
+/**
+ * Wrapper around ShareDialog that plumbs in the necessary props for a Lab2 project.
+ */
 const Lab2ShareDialog: React.FunctionComponent<Lab2ShareDialogProps> = ({
   shareUrl,
 }) => {
