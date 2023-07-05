@@ -162,13 +162,21 @@ const MultipleSectionsAssigner = ({
     courseVersionId,
     scriptId
   ) => {
-    assignToSection(
-      sectionId,
-      courseId,
-      courseOfferingId,
-      courseVersionId,
-      scriptId
-    ).then(onAssignSuccess);
+    onAssignSuccess
+      ? assignToSection(
+          sectionId,
+          courseId,
+          courseOfferingId,
+          courseVersionId,
+          scriptId
+        ).then(onAssignSuccess)
+      : assignToSection(
+          sectionId,
+          courseId,
+          courseOfferingId,
+          courseVersionId,
+          scriptId
+        );
   };
 
   const isAssignableToSection = sectionParticipantType => {
