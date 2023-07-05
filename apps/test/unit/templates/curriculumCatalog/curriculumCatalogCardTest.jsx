@@ -263,7 +263,7 @@ describe('CurriculumCatalogCard', () => {
     });
   });
 
-  it('clicking Assign button as a teacher with sections shows sections', () => {
+  it('clicking Assign button as a teacher with sections shows dialog with sections and catalog-specific text', () => {
     store.dispatch(setSections(sections));
     renderCurriculumCard({
       ...defaultProps,
@@ -282,6 +282,7 @@ describe('CurriculumCatalogCard', () => {
     );
     fireEvent.click(assignButton);
     sections.forEach(section => screen.getByText(section.name));
+    screen.getByText('The most recent recommended version', {exact: false});
   });
 
   it('clicking Assign button as a teacher without sections shows dialog to create section', () => {
