@@ -3,18 +3,18 @@ import i18n from '@cdo/locale';
 import {shareProject} from '../../headerShare';
 import {styles} from './EditableProjectName';
 import LabRegistry from '@cdo/apps/labs/LabRegistry';
-import {shareProjectV2} from '@cdo/apps/labs/header/headerShareV2';
+import {shareLab2Project} from '@cdo/apps/labs/header/headerShareV2';
 
 export default class ProjectShare extends React.Component {
   shareProject = () => {
     if (LabRegistry.getInstance().getProjectManager() !== null) {
-      // If we have a project manager, share using the project manager and
-      // shareProjectV2.
-      shareProjectV2(
+      // If we are using Lab2, share using the project manager and
+      // shareLab2Project.
+      shareLab2Project(
         LabRegistry.getInstance().getProjectManager().getShareUrl()
       );
     } else {
-      // Otherwise, we are using the legacy projects system, get the share url from that system
+      // Otherwise, we are using the legacy labs system, get the share url from that system
       // and share using shareProject.
       shareProject(dashboard.project.getShareUrl());
     }

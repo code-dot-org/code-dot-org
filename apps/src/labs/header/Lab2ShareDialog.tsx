@@ -1,6 +1,5 @@
 /**
- * Wrapper around ShareDialog that plumbs in the necessary props for a project
- * using the Project Manager and the labs system.
+ * Wrapper around ShareDialog that plumbs in the necessary props for a Lab2 project.
  */
 import ShareDialog from '@cdo/apps/code-studio/components/ShareDialog';
 import React from 'react';
@@ -9,9 +8,9 @@ import {LabState} from '../labRedux';
 import {isSignedIn as getIsSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import popupWindow from '@cdo/apps/code-studio/popup-window';
 
-const ProjectWrappedShareDialog: React.FunctionComponent<
-  ProjectWrappedShareDialogProps
-> = ({shareUrl}) => {
+const Lab2ShareDialog: React.FunctionComponent<Lab2ShareDialogProps> = ({
+  shareUrl,
+}) => {
   const isProjectLevel = useSelector(
     (state: {lab: LabState}) => state.lab.isProjectLevel
   );
@@ -67,8 +66,8 @@ const ProjectWrappedShareDialog: React.FunctionComponent<
   );
 };
 
-interface ProjectWrappedShareDialogProps {
+interface Lab2ShareDialogProps {
   shareUrl: string;
 }
 
-export default ProjectWrappedShareDialog;
+export default Lab2ShareDialog;
