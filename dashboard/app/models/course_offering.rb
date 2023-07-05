@@ -2,22 +2,27 @@
 #
 # Table name: course_offerings
 #
-#  id                   :integer          not null, primary key
-#  key                  :string(255)      not null
-#  display_name         :string(255)      not null
-#  created_at           :datetime         not null
-#  updated_at           :datetime         not null
-#  category             :string(255)      default("other"), not null
-#  is_featured          :boolean          default(FALSE), not null
-#  assignable           :boolean          default(TRUE), not null
-#  curriculum_type      :string(255)
-#  marketing_initiative :string(255)
-#  grade_levels         :string(255)
-#  header               :string(255)
-#  image                :string(255)
-#  cs_topic             :string(255)
-#  school_subject       :string(255)
-#  device_compatibility :string(255)
+#  id                               :integer          not null, primary key
+#  key                              :string(255)      not null
+#  display_name                     :string(255)      not null
+#  created_at                       :datetime         not null
+#  updated_at                       :datetime         not null
+#  category                         :string(255)      default("other"), not null
+#  is_featured                      :boolean          default(FALSE), not null
+#  assignable                       :boolean          default(TRUE), not null
+#  curriculum_type                  :string(255)
+#  marketing_initiative             :string(255)
+#  grade_levels                     :string(255)
+#  header                           :string(255)
+#  image                            :string(255)
+#  cs_topic                         :string(255)
+#  school_subject                   :string(255)
+#  device_compatibility             :string(255)
+#  description                      :string(255)
+#  self_paced_professional_learning :string(255)
+#  professional_learning_program    :string(255)
+#  video                            :string(255)
+#  published_date                   :datetime
 #
 # Indexes
 #
