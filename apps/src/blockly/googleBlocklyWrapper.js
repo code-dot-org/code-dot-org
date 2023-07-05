@@ -119,6 +119,14 @@ const BlocklyWrapper = function (blocklyInstance) {
   };
 };
 
+/**
+ * Note that this can only be called once per page load, as this initializes
+ * the navigation controller, and multiple calls to navigationController.init()
+ * will throw an error.
+ *
+ * If this needs to be called multiple times, call Blockly.navigationController.dispose()
+ * before calling this function again.
+ */
 function initializeBlocklyWrapper(blocklyInstance) {
   const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
 
