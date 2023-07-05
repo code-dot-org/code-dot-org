@@ -8,14 +8,13 @@ and project.js).
 - Any code or component in `/labs` should be generic enough to be shared between multiple labs.
 - Code should be written in typescript.
 - Code should use functional React components.
-- Loading a level should only require api calls, not server data.
+- When loading a lab as a ScriptLevel page, the lab part of the server-rendered page should not have any level- or user-specific data. That information should be loaded afterwards using asynchronous calls to server APIs. This allows the page to be cached independent of the user, and also allows the page to switch levels to other supported variants without a reload.
 
 ## Features of Lab2
 - Ability to switch between levels without page reload, if the levels are from a specific subset of labs.
-  Right now Music Lab and StandaloneVideo levels can be switched between.
 - A cleaner Project System, managed by ProjectManager.
 - Shared wrapper components to handle various lab behaviors:
-  - LabContainer: Manages showing and hiding a level based on load state
+  - LabContainer: Manages showing and hiding a level based on load state.
   - ProjectContainer: Manages loading project and level data for a level, and swapping that data out if
-    the level changes
+    the level changes.
 
