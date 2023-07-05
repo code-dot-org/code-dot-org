@@ -444,7 +444,7 @@ class Homepage
           text: "homepage_slot_text_blurb_educators",
           color1: "0, 148, 202",
           color2: "89, 185, 220",
-          url: CDO.studio_url("/courses?view=teacher"),
+          url: CDO.code_org_url("/teach"),
           image: "/shared/images/courses/logo_tall_teacher2.jpg"
         },
         {
