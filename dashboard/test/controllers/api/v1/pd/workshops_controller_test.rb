@@ -508,8 +508,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'setting virtual field as virtual when creating CSP/CSA summer workshop within a month of starting as a non-ws-admin raises error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
     sign_in @organizer
 
     post :create, params: {pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
@@ -518,8 +516,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'setting virtual field as virtual when creating CSP/CSA summer workshop within a month of starting as a ws-admin does not raise error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
     sign_in @workshop_admin
 
     post :create, params: {pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
@@ -527,8 +523,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'setting virtual field as virtual when creating CSP/CSA summer workshop before a month of starting as a non-ws-admin does not raise error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
     sign_in @organizer
     # Using '32.days' instead of '1.month' due to the inconsistency of the length of 'month' and it guarantees at least 1 month has passed.
     session_start = (tomorrow_at 9) + 32.days
@@ -539,8 +533,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'setting virtual field as virtual when creating CSP/CSA non-summer workshop within a month of starting as a non-ws-admin does not raise error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
     sign_in @organizer
 
     post :create, params: {pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, funding_type: nil, virtual: true)}
@@ -548,8 +540,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'setting virtual field as virtual when creating non-CSP/CSA summer workshop within a month of starting as a non-ws-admin does not raise error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
     sign_in @organizer
 
     post :create, params: {pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
@@ -788,8 +778,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'updating virtual field in CSP/CSA summer workshop within a month of starting as a non-ws-admin raises error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
     sign_in @organizer
     workshop = create :csp_summer_workshop, organizer: @organizer
 
@@ -809,8 +797,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'updating virtual field in CSP/CSA summer workshop before a month of starting as a non-ws-admin does not raise error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
     sign_in @organizer
 
     # Using '32.days' instead of '1.month' due to the inconsistency of the length of 'month' and it guarantees at least 1 month has passed.
