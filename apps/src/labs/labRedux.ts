@@ -97,6 +97,20 @@ export const setUpWithLevel = createAsyncThunk(
       levelProperties.isProjectLevel,
       false
     );
+    const disableProjects = convertOptionalStringToBoolean(
+      levelProperties.disableProjects,
+      false
+    );
+
+    if (disableProjects) {
+      // If projects are disabled on this level, we can skip loading projects data.
+      setProjectAndLevelData(
+        {levelProperties},
+        thunkAPI.signal.aborted,
+        thunkAPI.dispatch
+      );
+      return;
+    }
 
     // Create a new project manager. If we have a channel id,
     // default to loading the project for that channel. Otherwise
@@ -168,6 +182,11 @@ export const setUpWithoutLevel = createAsyncThunk(
 export const isLabLoading = (state: {lab: LabState}) =>
   state.lab.isLoadingProjectOrLevel || state.lab.isLoading;
 
+// This may depend on more factors, such as share.
+export const isReadOnlyWorkspace = (state: {lab: LabState}) => {
+  return !state.lab.channel?.isOwner;
+};
+
 const labSlice = createSlice({
   name: 'lab',
   initialState,
@@ -178,7 +197,7 @@ const labSlice = createSlice({
     setIsPageError(state, action: PayloadAction<boolean>) {
       state.isPageError = action.payload;
     },
-    setChannel(state, action: PayloadAction<Channel>) {
+    setChannel(state, action: PayloadAction<Channel | undefined>) {
       state.channel = action.payload;
     },
     setSources(state, action: PayloadAction<ProjectSources | undefined>) {
@@ -267,7 +286,7 @@ async function setUpAndLoadProject(
 // thunk dispatch method.
 function setProjectAndLevelData(
   data: {
-    channel: Channel;
+    channel?: Channel;
     sources?: ProjectSources;
     levelProperties?: LevelProperties;
   },
@@ -317,6 +336,7 @@ async function cleanUpProjectManager() {
   // Save any unsaved code and clear out any remaining enqueued
   // saves from the existing project manager.
   await existingProjectManager?.cleanUp();
+  LabRegistry.getInstance().clearProjectManager();
 }
 
 export const {

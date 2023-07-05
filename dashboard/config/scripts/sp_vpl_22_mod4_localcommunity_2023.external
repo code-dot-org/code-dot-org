@@ -5,7 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Connect with your local community
 
-##### Another way to make CS come alive for your students is to involve your local community. Not only does involving your community in your classroom enhance the student learning experience by adding relevance to the curriculum, it also raises awareness about CS education in the broader community.
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Another way to make CS come alive for your students is to involve your local community. Not only does involving your community in your classroom enhance the student learning experience by adding relevance to the curriculum, it also raises awareness about CS education in the broader community.
+</p></div>
 
 
 ## Ideas for connecting with your local community
