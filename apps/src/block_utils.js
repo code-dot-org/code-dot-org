@@ -1210,9 +1210,9 @@ exports.createJsWrapperBlockCreator = function (
               onClick: toggleFlyout,
               icon1,
               icon2,
-              displayIcon1: true,
+              useDefaultIcon: true,
             });
-            // When displayIcon1 is true, flyout is closed. When false, flyout is open. (Information for serialization)
+            // When useDefaultIcon is true, flyout is closed. When false, flyout is open. (Information for serialization)
             this.inputList[0].insertFieldAt(
               0,
               flyoutToggleButton,
@@ -1238,34 +1238,34 @@ exports.createJsWrapperBlockCreator = function (
 
             this.saveExtraState = function () {
               return {
-                displayIcon1: flyoutToggleButton.displayIcon1,
+                useDefaultIcon: flyoutToggleButton.useDefaultIcon,
               };
             };
 
             this.loadExtraState = function (state) {
-              flyoutToggleButton.displayIcon1 = state['displayIcon1'];
+              flyoutToggleButton.useDefaultIcon = state['useDefaultIcon'];
             };
 
             this.mutationToDom = function () {
               var container = Blockly.utils.xml.createElement('mutation');
               container.setAttribute(
-                'defaultDisplayIcon',
-                flyoutToggleButton.displayIcon1
+                'useDefaultIcon',
+                flyoutToggleButton.useDefaultIcon
               );
               return container;
             };
             this.domToMutation = function (xmlElement) {
-              let displayIcon1 = xmlElement.getAttribute('defaultDisplayIcon');
-              if (displayIcon1 === 'true') {
-                displayIcon1 = true;
+              let useDefaultIcon = xmlElement.getAttribute('useDefaultIcon');
+              if (useDefaultIcon === 'true') {
+                useDefaultIcon = true;
               }
-              if (displayIcon1 === 'false') {
-                displayIcon1 = false;
+              if (useDefaultIcon === 'false') {
+                useDefaultIcon = false;
               }
-              flyoutToggleButton.displayIcon1 = displayIcon1;
-              if (!flyoutToggleButton.displayIcon1) {
+              flyoutToggleButton.useDefaultIcon = useDefaultIcon;
+              if (!flyoutToggleButton.useDefaultIcon) {
                 console.log(
-                  flyoutToggleButton.displayIcon1,
+                  flyoutToggleButton.useDefaultIcon,
                   `not default icon for ${this.type}; should open flyout`
                 );
               }
