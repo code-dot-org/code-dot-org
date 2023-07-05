@@ -1,7 +1,7 @@
 @import "color", "font";
 
-/* This file is a adopted copy of shared/css/typography.scss
-  updating styles in this file will require a manual sync with the that file.
+/* This file is an adopted copy of shared/css/typography.scss.
+   Updating styles in this file will require a manual sync with the that file.
 */
 
 // TODO: [DSCO-64] (https://codedotorg.atlassian.net/browse/DSCO-64)
@@ -40,8 +40,8 @@ html {
 // ----------------------------------------
 
 // Sizes
-// Most of the typography elements has a set of different sizes (defined by "-one", "-two", "-three", "-four" prefixes).
-// (Not applicable to Headings and elements without those prefixes)
+// Most of the typography elements have a set of different sizes (defined by "-one", "-two", "-three", "-four" suffixes).
+// (Not applicable to Headings and elements without those suffixes)
 // Common rule for all of those sizes are following:
 // 1. "-one" is bigger size.
 // 2. "-two" is a DEFAULT size, used in most of cases.
@@ -56,8 +56,10 @@ html {
 // margin uses em
 // - sets the margin relative to the parent element rather than the root
 // example:
-// - 0.5rem = 8px margin >>> gets value from root 16px
-// - 0.5em = font-size / 2 >>> gets value from h1 3rem (48px) / 2 = 24px margin
+//  Imagine that we have h1 with font-size: 3rem (48px) and we want to set margin-bottom to it.
+//    - Setting margin-bottom to 0.5rem == 8px (html.font_size * 0.5) >>> rem is relative to root element (html tag) which is 16px
+//    - Setting margin-bottom to 0.5em == 24px (h1.font-size * 0.5) >>> em is relative to element itself or it's parent.
+//      Our h1 element has a font-size of 3rem (48px), so 0.5em will be equal to 48 * 0.5 = 24px margin-bottom.
 
 // Read more about rem vs em:
 // https://www.digitalocean.com/community/tutorials/css-rem-vs-em-units

@@ -28,7 +28,7 @@ RuntimeDirectoryPreserve=yes
 <%= @export_env ? @export_env.map{|k,v|"Environment=#{k}=#{v}"}.join("\n") : '' %>
 Environment=LANG=en_US.UTF-8
 
-ExecStart=/usr/bin/bundle exec puma -C <%= @src_file %> -e <%= @env %>
+ExecStart=/usr/local/bin/bundle exec puma -C <%= @src_file %> -e <%= @env %>
 Restart=always
 
 [Install]
