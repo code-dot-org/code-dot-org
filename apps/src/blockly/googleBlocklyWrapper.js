@@ -124,8 +124,8 @@ const BlocklyWrapper = function (blocklyInstance) {
  * the navigation controller, and multiple calls to navigationController.init()
  * will throw an error.
  *
- * If this needs to be called multiple times, call Blockly.navigationController.dispose()
- * before calling this function again.
+ * If this needs to be called multiple times (for example, in tests), call
+ * Blockly.navigationController.dispose() before calling this function again.
  */
 function initializeBlocklyWrapper(blocklyInstance) {
   const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
