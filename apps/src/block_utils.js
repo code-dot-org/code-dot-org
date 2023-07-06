@@ -1181,18 +1181,21 @@ exports.createJsWrapperBlockCreator = function (
         ) {
           if (Blockly.version === 'Google') {
             // Function to toggle the flyout visibility
+            const createFlyoutField = function (block) {
+              const flyoutField = new Blockly.FieldFlyout(_, {
+                flyoutKey: `flyout_${block.type}`,
+                sizingBehavior: 'fitContent',
+                name: 'FLYOUT',
+              });
+              block
+                .appendDummyInput('flyout_input')
+                .appendField(flyoutField, `flyout_${block.type}`);
+              return flyoutField;
+            };
             const toggleFlyout = function () {
               const block = this.getSourceBlock();
               if (!block.getInput('flyout_input')) {
-                const flyoutField = new Blockly.FieldFlyout(_, {
-                  flyoutKey: `flyout_${block.type}`,
-                  sizingBehavior: 'fitContent',
-                  name: 'FLYOUT',
-                });
-                block
-                  .appendDummyInput('flyout_input')
-                  .appendField(flyoutField, `flyout_${block.type}`);
-                // flyoutField.setVisible(true);
+                const flyoutField = createFlyoutField(block);
                 flyoutField.showEditor_();
                 flyoutField.render_();
               } else {
@@ -1212,6 +1215,7 @@ exports.createJsWrapperBlockCreator = function (
               icon1,
               icon2,
               useDefaultIcon: true,
+              callback: createFlyoutField,
             });
             // When useDefaultIcon is true, flyout is closed. When false, flyout is open. (Information for serialization)
             this.inputList[0].insertFieldAt(
@@ -1255,17 +1259,12 @@ exports.createJsWrapperBlockCreator = function (
               );
               return container;
             };
+
             this.domToMutation = function (xmlElement) {
               let useDefaultIcon =
                 // Coerce string to Boolean
                 xmlElement.getAttribute('useDefaultIcon') === 'true';
               flyoutToggleButton.useDefaultIcon = useDefaultIcon;
-              if (!flyoutToggleButton.useDefaultIcon) {
-                console.log(
-                  flyoutToggleButton.useDefaultIcon,
-                  `not default icon for ${this.type}; should open flyout`
-                );
-              }
             };
           }
         }
