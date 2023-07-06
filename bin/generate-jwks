@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'jwt'
+require 'json'
+
+optional_parameters = {use: 'sig', alg: 'RS256'}
+jwk = JWT::JWK.new(OpenSSL::PKey::RSA.new(2048), optional_parameters, kid_generator: ::JWT::JWK::Thumbprint)
+jwks_hash = JWT::JWK::Set.new(jwk).export
+
+p jwks_hash
