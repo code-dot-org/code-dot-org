@@ -1,4 +1,5 @@
 import GoogleBlockly from 'blockly/core';
+import Button from '@cdo/apps/templates/Button';
 
 /**
  * This is a customized field which the user clicks to toggle between two different states,
@@ -59,8 +60,12 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
    * @override
    */
   applyColour() {
-    const sourceBlock = this.getSourceBlock();
-    this.icon1.style.fill = sourceBlock.style.colourPrimary;
-    this.icon2.style.fill = sourceBlock.style.colourPrimary;
+    // this.getBorderRect().setAttribute('style', 'fill: #00c'); // 'blocklyIconShield' class fill color
+    this.getBorderRect().setAttribute(
+      'style',
+      'fill: ' + Button.ButtonColor.blue
+    );
+    this.icon1.style.fill = Button.ButtonColor.white;
+    this.icon2.style.fill = Button.ButtonColor.white;
   }
 }
