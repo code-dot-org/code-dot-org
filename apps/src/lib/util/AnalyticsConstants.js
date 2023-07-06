@@ -64,6 +64,7 @@ const EVENTS = {
   // Curriculum Catalog page
   CURRICULUM_CATALOG_VISITED_EVENT: 'Curriculum Catalog Visited',
   CURRICULUM_CATALOG_LEARN_MORE_CLICKED_EVENT: 'Learn More Clicked',
+  CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT: 'Assign Clicked',
 };
 
 export {EVENTS};

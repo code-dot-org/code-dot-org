@@ -133,6 +133,18 @@ const CustomizableCurriculumCatalogCard = ({
     window.location.href = pathToCourse;
   };
 
+  const handleClickAssign = () => {
+    setIsAssignDialogOpen(true);
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT,
+      {
+        curriculum_offering: courseDisplayName,
+        has_sections: (sectionsForDropdown.length > 0).toString(),
+        is_signed_in: !isSignedOut,
+      }
+    );
+  };
+
   const renderAssignDialog = () => {
     if (isSignedOut) {
       return (
@@ -222,9 +234,7 @@ const CustomizableCurriculumCatalogCard = ({
             <Button
               color={Button.ButtonColor.brandSecondaryDefault}
               type="button"
-              onClick={() => {
-                setIsAssignDialogOpen(true);
-              }}
+              onClick={handleClickAssign}
               aria-label={assignButtonDescription}
               text={assignButtonText}
             />
