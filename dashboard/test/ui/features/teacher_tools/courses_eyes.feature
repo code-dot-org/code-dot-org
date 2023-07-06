@@ -20,7 +20,7 @@ Scenario: Teacher courses
   And I wait to see ".headerlinks"
   And I see "#header-teacher-courses"
   And I press "header-teacher-courses"
-  And I wait to see "#hero"
+  And I wait to see "#curriculum-catalog-container"
   And I see no difference for "teacher courses page"
   And I close my eyes
 

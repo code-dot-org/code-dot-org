@@ -73,6 +73,7 @@ const CurriculumCatalogCard = ({
 
 CurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
+  courseDisplayNameWithYear: PropTypes.string.isRequired,
   duration: PropTypes.oneOf(Object.keys(translatedCourseOfferingDurations))
     .isRequired,
   gradesArray: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -99,6 +100,7 @@ const CustomizableCurriculumCatalogCard = ({
   assignButtonDescription,
   assignButtonText,
   courseDisplayName,
+  courseDisplayNameWithYear,
   duration,
   gradeRange,
   imageAltText,
@@ -129,13 +131,14 @@ const CustomizableCurriculumCatalogCard = ({
     } else if (isTeacher && sectionsForDropdown.length > 0) {
       return (
         <MultipleSectionsAssigner
-          assignmentName={courseDisplayName}
+          assignmentName={courseDisplayNameWithYear}
           onClose={() => setIsAssignDialogOpen(false)}
           sections={sectionsForDropdown}
           participantAudience="student"
           onAssignSuccess={onAssignSuccess}
           isAssigningCourse={!!courseId}
           courseId={courseId}
+          sectionDirections={i18n.chooseSectionsDirectionsOnCatalog()}
           {...props}
         />
       );
@@ -223,6 +226,7 @@ const CustomizableCurriculumCatalogCard = ({
 
 CustomizableCurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
+  courseDisplayNameWithYear: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
   gradeRange: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,

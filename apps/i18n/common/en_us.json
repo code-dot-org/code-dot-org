@@ -348,6 +348,7 @@
   "chooseSection": "Choose your section",
   "chooseSectionsPrompt": "Which section(s) do you want to assign \"{assignmentName}\" to?",
   "chooseSectionsDirections": "When you assign a curriculum to a section, that curriculum will be the first thing students see upon signing in. Changing the assigned curriculum will never affect students progress on other curriculum.",
+  "chooseSectionsDirectionsOnCatalog": "When you assign a curriculum to a section, that curriculum will be the first thing students see upon signing in. Changing the assigned curriculum will never affect students progress on other curriculum. Note: The most recent recommended version of the curriculum will be assigned to your section when you assign from the Curriculum Catalog.",
   "chooseTable": "Choose a table",
   "chromebook": "Chromebook",
   "className": "Class Name",
