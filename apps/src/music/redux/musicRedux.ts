@@ -3,7 +3,7 @@ import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {
   initialValidationState,
   ValidationState,
-} from '@cdo/apps/labs/progress/ProgressManager';
+} from '@cdo/apps/lab2/progress/ProgressManager';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 

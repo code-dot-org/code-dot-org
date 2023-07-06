@@ -3,10 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
-import {getStandaloneProjectId} from '@cdo/apps/labs/projects/utils';
-import Lab2Wrapper from '@cdo/apps/labs/views/Lab2Wrapper';
-import ProjectContainer from '@cdo/apps/labs/projects/ProjectContainer';
-import ProgressContainer from '@cdo/apps/labs/progress/ProgressContainer';
+import {getStandaloneProjectId} from '@cdo/apps/lab2/projects/utils';
+import Lab2Wrapper from '@cdo/apps/lab2/views/Lab2Wrapper';
+import ProjectContainer from '@cdo/apps/lab2/projects/ProjectContainer';
+import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
 import MusicLabView from '@cdo/apps/music/views/MusicView';
 import {logError} from '@cdo/apps/music/utils/MusicMetrics';
 

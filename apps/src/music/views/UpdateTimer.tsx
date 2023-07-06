@@ -1,4 +1,4 @@
-import {ProgressManagerContext} from '@cdo/apps/labs/progress/ProgressContainer';
+import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import React, {useCallback, useContext, useEffect, useRef} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import MusicPlayer from '../player/MusicPlayer';
