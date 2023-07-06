@@ -1,19 +1,19 @@
 import GoogleBlockly from 'blockly/core';
 import CdoBlockFlyout from './cdoBlockFlyout';
 
-/**
- * @param value The initial value of the field.
- *     Also accepts Field.SKIP_SETUP if you wish to skip setup (only used by
- * subclasses that want to handle configuration and setting the field value
- * after their own constructors have run).
- * @param opt_validator  A function that is called to validate changes to the
- *     field's value. Takes in a value & returns a validated value, or null to
- *     abort the change.
- * @param opt_config A map of options used to configure the field.
- *    Refer to the individual field's documentation for a list of properties
- * this parameter supports.
- */
 export default class CdoFieldFlyout extends GoogleBlockly.Field {
+  /**
+   * @param value The initial value of the field.
+   *     Also accepts Field.SKIP_SETUP if you wish to skip setup (only used by
+   * subclasses that want to handle configuration and setting the field value
+   * after their own constructors have run).
+   * @param {Function} opt_validator  A function that is called to validate changes to the
+   *     field's value. Takes in a value & returns a validated value, or null to
+   *     abort the change.
+   * @param {Object} opt_config A map of options used to configure the field.
+   *    Refer to the individual field's documentation for a list of properties
+   * this parameter supports.
+   */
   constructor(value, opt_config) {
     super(value);
     this.configure_(opt_config);
@@ -58,6 +58,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * done here, and should be triggered by getSize().
    */
   render_() {
+    this.showEditor_();
     const fieldGroupBBox = this.fieldGroup_.getBBox();
     if (this.flyout_.isVisible()) {
       this.size_ = new Blockly.utils.Size(

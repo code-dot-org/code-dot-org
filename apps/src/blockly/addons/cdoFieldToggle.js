@@ -1,19 +1,23 @@
 import GoogleBlockly from 'blockly/core';
 
-/**
- * This is a customized field which the user clicks to toggle between two different states,
- * for example, displaying or hiding the flyout.
- * @param onClick The function that handles the field's editor.
- * @param icon1 SVG <tspan> element - this is the icon that is initially displayed on the button.
- * @param icon2 SVG <tspan> element - this is the icon that is displayed on the button after the first click.
- */
 export default class CdoFieldToggle extends GoogleBlockly.Field {
-  constructor({onClick, icon1, icon2, useDefaultIcon}) {
+  /**
+   * This is a customized field which the user clicks to toggle between two different states,
+   * for example, displaying or hiding the flyout.
+   * @param {Object} options - The options for constructing the class.
+   * @param {Function} options.onClick - The function that handles the field's editor.
+   * @param {SVGElement} options.icon1 SVG <tspan> element - this is the icon that is initially displayed on the button.
+   * @param {SVGElement} options.icon2 SVG <tspan> element - this is the icon that is displayed on the button after the first click.
+   * @param {boolean} options.useDefaultIcon - Indicates which icon to use
+   * @param {Function} [options.callback] - A function to call if icon2 is used
+   */
+  constructor({onClick, icon1, icon2, useDefaultIcon, callback}) {
     super();
     this.onClick = onClick;
     this.icon1 = icon1;
     this.icon2 = icon2;
     this.useDefaultIcon = useDefaultIcon;
+    this.callback = callback;
     this.SERIALIZABLE = true;
   }
 
@@ -33,6 +37,8 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
       this.textElement_.appendChild(this.icon1);
     } else {
       this.textElement_.appendChild(this.icon2);
+      typeof this.callback === 'function' &&
+        this.callback(this.getSourceBlock());
     }
   }
 
