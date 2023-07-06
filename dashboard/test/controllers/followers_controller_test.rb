@@ -259,7 +259,7 @@ class FollowersControllerTest < ActionController::TestCase
   end
 
   test "student_register adds existing student to section if already signed in" do
-    refute @chris_section.students.include? @student
+    refute_includes(@chris_section.students, @student)
 
     sign_in @student
     assert_does_not_create(User) do
@@ -268,7 +268,7 @@ class FollowersControllerTest < ActionController::TestCase
 
     assert_redirected_to '/'
     @student.reload
-    assert @chris_section.students.include? @student
+    assert_includes(@chris_section.students, @student)
   end
 
   test "student_register prompts user to create an account if not signed in" do
@@ -363,7 +363,7 @@ class FollowersControllerTest < ActionController::TestCase
   end
 
   test "student_user_new increments join section attempts when signed in" do
-    refute @chris_section.students.include? @student
+    refute_includes(@chris_section.students, @student)
     sign_in @student
     section_join_attempts = @student.num_section_attempts
     assert_does_not_create(User) do
