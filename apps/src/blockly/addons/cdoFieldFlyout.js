@@ -71,6 +71,9 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
         fieldGroupBBox.height
       );
     }
+    // Blockly will skip rerendering fields unless we've notified
+    // the rendering system that it has changed.
+    this.isDirty_ = true;
   }
 
   setFlyoutVisible(isVisible) {
