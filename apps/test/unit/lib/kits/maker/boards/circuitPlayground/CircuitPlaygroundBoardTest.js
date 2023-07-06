@@ -59,7 +59,7 @@ describe('CircuitPlaygroundBoard', () => {
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
     circuitPlaygroundBoardSetup();
-    sinon.stub(CircuitPlaygroundBoard, 'openSerialPort').callsFake(() => {
+    sinon.stub(CircuitPlaygroundBoard, 'openWebSerial').callsFake(() => {
       return Promise.resolve();
     });
   });

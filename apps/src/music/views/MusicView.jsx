@@ -19,7 +19,6 @@ import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 import {baseUrl, loadLibrary} from '../utils/Loader';
 import MusicValidator from '../progress/MusicValidator';
-import Video from './Video';
 import {
   setIsPlaying,
   setCurrentPlayheadPosition,
@@ -45,6 +44,7 @@ import {
   currentLevelIndex,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {
+  isReadOnlyWorkspace,
   setIsLoading,
   setIsPageError,
   setLabReadyForReload,
@@ -117,6 +117,7 @@ class UnconnectedMusicView extends React.Component {
     labReadyForReload: PropTypes.bool,
     setLabReadyForReload: PropTypes.func,
     navigateToNextLevel: PropTypes.func,
+    isReadOnlyWorkspace: PropTypes.bool,
   };
 
   constructor(props) {
@@ -149,7 +150,6 @@ class UnconnectedMusicView extends React.Component {
     }
 
     this.state = {
-      showingVideo: true,
       loadedLibrary: false,
       currentLibraryName: null,
     };
@@ -176,6 +176,7 @@ class UnconnectedMusicView extends React.Component {
 
   async componentDidUpdate(prevProps) {
     this.musicBlocklyWorkspace.resizeBlockly();
+
     if (
       prevProps.userId !== this.props.userId ||
       prevProps.userType !== this.props.userType ||
@@ -207,6 +208,7 @@ class UnconnectedMusicView extends React.Component {
     ) {
       this.updateHighlightedBlocks();
     }
+
     // If we just finished loading the lab, then we need to update the
     // sources and level data.
     if (!prevProps.labReadyForReload && this.props.labReadyForReload) {
@@ -268,7 +270,8 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.init(
       document.getElementById('blockly-div'),
       this.onBlockSpaceChange,
-      this.player
+      this.player,
+      this.props.isReadOnlyWorkspace
     );
     this.player.initialize(this.library);
 
@@ -520,10 +523,6 @@ class UnconnectedMusicView extends React.Component {
     );
   };
 
-  onVideoClosed = () => {
-    this.setState({showingVideo: false});
-  };
-
   renderInstructions(position) {
     // For now, the instructions are intended for use with a
     // progression.  We might decide to make them agnostic at
@@ -599,9 +598,6 @@ class UnconnectedMusicView extends React.Component {
   }
 
   render() {
-    const showVideo =
-      AppConfig.getValue('show-video') !== 'false' && this.state.showingVideo;
-
     const {timelineAtTop, showInstructions, instructionsPosition} = this.props;
 
     return (
@@ -619,10 +615,6 @@ class UnconnectedMusicView extends React.Component {
           {showInstructions &&
             instructionsPosition === InstructionsPositions.TOP &&
             this.renderInstructions(InstructionsPositions.TOP)}
-
-          {showVideo && (
-            <Video id="initial-modal-0" onClose={this.onVideoClosed} />
-          )}
 
           {timelineAtTop && this.renderPlayArea(true)}
 
@@ -695,6 +687,7 @@ const MusicView = connect(
     sources: state.lab.sources,
     levelData: state.lab.levelData,
     labReadyForReload: state.lab.labReadyForReload,
+    isReadOnlyWorkspace: isReadOnlyWorkspace(state),
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
