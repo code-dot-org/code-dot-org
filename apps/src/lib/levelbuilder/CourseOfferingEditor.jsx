@@ -30,8 +30,6 @@ const translatedNoneOption = `(${i18n.none()})`;
 const useCourseOffering = initialCourseOffering => {
   const [courseOffering, setCourseOffering] = useState(initialCourseOffering);
   const updateCourseOffering = (key, value) => {
-    console.log('key, value', key, value);
-    console.log('courseOffering', courseOffering);
     setCourseOffering({...courseOffering, [key]: value});
   };
 
