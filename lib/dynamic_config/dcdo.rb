@@ -46,6 +46,7 @@ class DCDOBase < DynamicConfigBase
       'csa-skinny-banner': DCDO.get('csa-skinny-banner', false),
       'csta-form-extension': DCDO.get('csta-form-extension', false),
       'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
+      'curriculum-launch-hero-banner': DCDO.get('curriculum-launch-hero-banner', false),
     }
   end
 end
