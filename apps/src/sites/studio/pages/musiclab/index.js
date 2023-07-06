@@ -5,9 +5,9 @@ import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import MusicLabView from '@cdo/apps/music/views/MusicView';
 import ProjectContainer from '@cdo/apps/labs/projects/ProjectContainer';
-import ErrorBoundary from '@cdo/apps/code-studio/components/ErrorBoundary';
+import ErrorBoundary from '@cdo/apps/labs/ErrorBoundary';
 import {logError} from '@cdo/apps/music/utils/MusicMetrics';
-import {ErrorFallbackPage} from '@cdo/apps/code-studio/components/LabContainer';
+import {ErrorFallbackPage} from '@cdo/apps/labs/views/Lab2Wrapper';
 
 $(document).ready(function () {
   const channelId = document.querySelector('script[data-channelid]').dataset
