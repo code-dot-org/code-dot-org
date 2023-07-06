@@ -7,11 +7,12 @@
       "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-04 20:12:02 UTC",
+    "serialized_at": "2023-07-05 19:01:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -43,8 +44,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will:**\n\n* Get an introduction to artificial intelligence and machine learning.\n* Get a preview of the first week of the AI and Machine Learning unit content.\n\n**Suggested time:** 25 minutes",
-        "student_overview": "**You will:**\n\n* Get an introduction to artificial intelligence and machine learning.\n* Get a preview of the first week of the AI and Machine Learning unit content.\n\n**Suggested time:** 25 minutes"
+        "overview": "**You will:**\n\n* Get an introduction to artificial intelligence and machine learning.\n* Get a preview of the first week of the AI and Machine Learning unit content.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to artificial intelligence and machine learning.\n* Get a preview of the first week of the AI and Machine Learning unit content.\n\n**Suggested time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "Introduction to AI and machine learning",
@@ -60,8 +61,8 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "**You will:**\n\n* Train a machine learning model using AI Lab.\n\n**Suggested time:** 35 minutes",
-        "student_overview": "**You will:**\n\n* Train a machine learning model using AI Lab.\n\n**Suggested time:** 35 minutes"
+        "overview": "**You will:**\n\n* Train a machine learning model using AI Lab.\n\n**Suggested time:** 30 minutes",
+        "student_overview": "**You will:**\n\n* Train a machine learning model using AI Lab.\n\n**Suggested time:** 30 minutes"
       },
       "seeding_key": {
         "lesson.key": "Train a machine learning model",
@@ -77,8 +78,8 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "overview": "**You will:**\n\n* Engage with machine learning apps in App Lab.\n\n**Suggested time:** 20 minutes",
-        "student_overview": "**You will:**\n\n* Engage with machine learning apps in App Lab.\n\n**Suggested time:** 20 minutes"
+        "overview": "**You will:**\n\n* Engage with machine learning apps in App Lab.\n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Engage with machine learning apps in App Lab.\n\n**Suggested time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "Engage with machine learning apps",
@@ -94,8 +95,8 @@
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "overview": "**You will:**\n\n* Consider real-world implications of AI and machine learning.\n\n**Suggested time:** 20 minutes",
-        "student_overview": "**You will:**\n\n* Consider real-world implications of AI and machine learning.\n\n**Suggested time:** 20 minutes"
+        "overview": "**You will:**\n\n* Consider real-world implications of AI and machine learning.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Consider real-world implications of AI and machine learning.\n\n**Suggested time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "Consider real world implications",
@@ -111,8 +112,8 @@
       "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
-        "overview": "**You will:**\n\n* Explore end of chapter projects.\n* Make a plan for implementing the unit with your students.\n\n**Suggested time:** 20 minutes",
-        "student_overview": "**You will:**\n\n* Explore end of chapter projects.\n* Make a plan for implementing the unit with your students.\n\n**Suggested time:** 20 minutes"
+        "overview": "**You will:**\n\n* Explore end of chapter projects.\n* Make a plan for implementing the unit with your students.\n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Explore end of chapter projects.\n* Make a plan for implementing the unit with your students.\n\n**Suggested time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "Unit wrap up",
@@ -128,8 +129,8 @@
       "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
-        "overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the Creating Apps for Devices unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 25 minutes",
-        "student_overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the Creating Apps for Devices unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 25 minutes"
+        "overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the Creating Apps for Devices unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the Creating Apps for Devices unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "Teaching Creating Apps for Devices ",
@@ -1210,28 +1211,6 @@
     },
     {
       "chapter": 36,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Make a plan"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-CSD-21-mod5-WrapUp_-22_23"
-        ],
-        "lesson.key": "Unit wrap up",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-aiml2",
-        "activity_section.key": "0aaad79a-2062-448f-896e-4dba722bfd3d"
-      },
-      "level_keys": [
-        "SP-VPL-CSD-21-mod5-WrapUp_-22_23"
-      ]
-    },
-    {
-      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1253,7 +1232,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1275,7 +1254,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1297,7 +1276,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -1319,7 +1298,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1341,7 +1320,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -1363,7 +1342,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -1385,7 +1364,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -1407,7 +1386,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -1429,7 +1408,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 10,
       "activity_section_position": 6,
       "assessment": false,
@@ -1451,7 +1430,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 11,
       "activity_section_position": 7,
       "assessment": false,
@@ -1473,7 +1452,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 12,
       "activity_section_position": 8,
       "assessment": false,
@@ -1495,7 +1474,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -1517,7 +1496,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -1539,7 +1518,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -1561,7 +1540,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -1583,7 +1562,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -1605,7 +1584,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -2041,18 +2020,6 @@
         "level.key": "SP-VPL-21-CSD-mod5-MakeAPlan-AIML_-22_23",
         "script_level.level_keys": [
           "SP-VPL-21-CSD-mod5-MakeAPlan-AIML_-22_23"
-        ],
-        "lesson.key": "Unit wrap up",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-aiml2",
-        "activity_section.key": "0aaad79a-2062-448f-896e-4dba722bfd3d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "SP-VPL-CSD-21-mod5-WrapUp_-22_23",
-        "script_level.level_keys": [
-          "SP-VPL-CSD-21-mod5-WrapUp_-22_23"
         ],
         "lesson.key": "Unit wrap up",
         "lesson_group.key": "lessonGroup-2",

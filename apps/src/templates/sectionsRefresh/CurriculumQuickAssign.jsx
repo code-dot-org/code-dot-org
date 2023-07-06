@@ -12,7 +12,7 @@ import {
   CourseOfferingCurriculumTypes as curriculumTypes,
   ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {BodyOneText, Heading3} from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 
 export const MARKETING_AUDIENCE = {
   ELEMENTARY: 'elementary',
@@ -206,7 +206,7 @@ export default function CurriculumQuickAssign({
           onChange={toggleDecideLater}
         />
         <Heading3>{i18n.assignCurriculum()}</Heading3>
-        <BodyOneText>{i18n.useDropdownMessage()}</BodyOneText>
+        <BodyTwoText>{i18n.useDropdownMessage()}</BodyTwoText>
       </div>
       <CurriculumQuickAssignTopRow
         showPlOfferings={showPlOfferings}

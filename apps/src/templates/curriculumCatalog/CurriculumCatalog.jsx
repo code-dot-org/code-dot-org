@@ -14,7 +14,7 @@ import Button from '@cdo/apps/templates/Button';
 import {
   Heading5,
   Heading6,
-  BodyOneText,
+  BodyTwoText,
 } from '@cdo/apps/componentLibrary/typography';
 import CheckboxDropdown from '../CheckboxDropdown';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
@@ -259,6 +259,7 @@ const CurriculumCatalog = ({
                 key,
                 image,
                 display_name,
+                display_name_with_year,
                 grade_levels,
                 duration,
                 school_subject,
@@ -274,6 +275,7 @@ const CurriculumCatalog = ({
                 <CurriculumCatalogCard
                   key={key}
                   courseDisplayName={display_name}
+                  courseDisplayNameWithYear={display_name_with_year}
                   imageSrc={image || undefined}
                   duration={duration}
                   gradesArray={grade_levels.split(',')}
@@ -305,9 +307,9 @@ const CurriculumCatalog = ({
           <Heading5 className={style.noResultsHeading}>
             {i18n.noCurriculumSearchResultsHeader()}
           </Heading5>
-          <BodyOneText className={style.noResultsBody}>
+          <BodyTwoText className={style.noResultsBody}>
             {i18n.noCurriculumSearchResultsBody()}
-          </BodyOneText>
+          </BodyTwoText>
         </div>
       );
     }
@@ -324,9 +326,9 @@ const CurriculumCatalog = ({
       />
       {showAssignSuccessMessage && (
         <div className={style.assignSuccessMessageContainer}>
-          <BodyOneText className={style.assignSuccessMessage}>
+          <BodyTwoText className={style.assignSuccessMessage}>
             {assignSuccessMessage}
-          </BodyOneText>
+          </BodyTwoText>
           <button
             aria-label="close success message"
             onClick={() => setShowAssignSuccessMessage(false)}
@@ -365,12 +367,12 @@ const CurriculumCatalog = ({
       {!isEnglish && (
         <div className={style.catalogLanguageFilterRow}>
           <div className={style.catalogLanguageFilterRowNumAvailable}>
-            <BodyOneText>
+            <BodyTwoText>
               {i18n.numCurriculaAvailableInLanguage({
                 numCurricula: numFilteredTranslatedCurricula,
                 language: languageNativeName,
               })}
-            </BodyOneText>
+            </BodyTwoText>
             <FontAwesome
               icon="language"
               className="fa-solid"

@@ -109,6 +109,11 @@ class CourseOffering < ApplicationRecord
     latest_published_version(locale_code).content_root.link
   end
 
+  def display_name_with_year(locale_code = 'en-us')
+    return localized_display_name unless latest_published_version(locale_code)
+    latest_published_version(locale_code).content_root.localized_assignment_family_title
+  end
+
   def course_id
     return unless latest_published_version&.content_root_type == 'UnitGroup'
     latest_published_version.content_root.id
@@ -275,6 +280,7 @@ class CourseOffering < ApplicationRecord
     {
       key: key,
       display_name: display_name,
+      display_name_with_year: display_name_with_year(locale_code),
       grade_levels: grade_levels,
       duration: duration,
       image: image,

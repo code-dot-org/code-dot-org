@@ -10,7 +10,7 @@ import moduleStyles from './sections-refresh.module.scss';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {navigateToHref} from '@cdo/apps/utils';
 import {
-  BodyOneText,
+  BodyTwoText,
   Heading1,
   Heading3,
 } from '@cdo/apps/componentLibrary/typography';
@@ -241,14 +241,14 @@ export default function SectionsSetUpContainer({
         </Heading1>
         {isNewSection && (
           <>
-            <BodyOneText className={moduleStyles.noMarginBottomParagraph}>
+            <BodyTwoText className={moduleStyles.noMarginBottomParagraph}>
               {i18n.setUpClassSectionsSubheader()}
-            </BodyOneText>
-            <BodyOneText>
+            </BodyTwoText>
+            <BodyTwoText>
               <a onClick={onURLClick} className={moduleStyles.textPopUp}>
                 {i18n.setUpClassSectionsSubheaderLink()}
               </a>
-            </BodyOneText>
+            </BodyTwoText>
           </>
         )}
       </div>
