@@ -2,6 +2,7 @@ import {ResponseValidator} from '@cdo/apps/util/HttpClient';
 import {Key} from '../utils/Notes';
 
 export default class MusicLibrary {
+  name: string;
   groups: FolderGroup[];
   private allowedSounds: Sounds | null;
 
@@ -9,7 +10,8 @@ export default class MusicLibrary {
   private bpm: number | undefined;
   private key: Key | undefined;
 
-  constructor(libraryJson: LibraryJson) {
+  constructor(name: string, libraryJson: LibraryJson) {
+    this.name = name;
     this.groups = libraryJson.groups;
     this.allowedSounds = null;
 
