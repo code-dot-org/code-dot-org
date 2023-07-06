@@ -10,14 +10,25 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
    * @param {SVGElement} options.icon2 SVG <tspan> element - this is the icon that is displayed on the button after the first click.
    * @param {boolean} options.useDefaultIcon - Indicates which icon to use
    * @param {Function} [options.callback] - A function to call if icon2 is used
+   * @param {Object} [options.colorOverrides] - An optional set of colors to use instead of the sourceBlock's styles
+   * @param {string} [options.colorOverrides.icon] - An override for the color of the icons.
+   * @param {string} [options.colorOverrides.button] - An override for the toggle button color.
    */
-  constructor({onClick, icon1, icon2, useDefaultIcon, callback}) {
+  constructor({
+    onClick,
+    icon1,
+    icon2,
+    useDefaultIcon,
+    callback,
+    colorOverrides,
+  }) {
     super();
     this.onClick = onClick;
     this.icon1 = icon1;
     this.icon2 = icon2;
     this.useDefaultIcon = useDefaultIcon;
     this.callback = callback;
+    this.colorOverrides = colorOverrides;
     this.SERIALIZABLE = true;
   }
 
@@ -31,12 +42,12 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
    */
   initView() {
     super.initView();
-    this.icon1.style.fill = this.getSourceBlock().style.colourPrimary;
-    this.icon2.style.fill = this.getSourceBlock().style.colourPrimary;
     if (this.useDefaultIcon) {
       this.textElement_.appendChild(this.icon1);
     } else {
       this.textElement_.appendChild(this.icon2);
+      // If the field is not using the default icon, we might want an additional
+      // callback, such as opening a block flyout.
       typeof this.callback === 'function' &&
         this.callback(this.getSourceBlock());
     }
@@ -66,7 +77,17 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
    */
   applyColour() {
     const sourceBlock = this.getSourceBlock();
-    this.icon1.style.fill = sourceBlock.style.colourPrimary;
-    this.icon2.style.fill = sourceBlock.style.colourPrimary;
+    // If an override is not provided, use the block style to determine colors.
+    // Primary and secondary colors are used to provide contrast between
+    // the button and the icons.
+    this.icon1.style.fill =
+      this.colorOverrides?.icon || sourceBlock.style.colourPrimary;
+    this.icon2.style.fill =
+      this.colorOverrides?.icon || sourceBlock.style.colourPrimary;
+    this.getBorderRect().setAttribute(
+      'style',
+      'fill: ' + this.colorOverrides?.button ||
+        sourceBlock.style.colourSecondary
+    );
   }
 }
