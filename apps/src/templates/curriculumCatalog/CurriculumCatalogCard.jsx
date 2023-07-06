@@ -139,7 +139,7 @@ const CustomizableCurriculumCatalogCard = ({
       EVENTS.CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT,
       {
         curriculum_offering: courseDisplayNameWithYear,
-        has_sections: (sectionsForDropdown.length > 0).toString(),
+        has_sections: sectionsForDropdown.length > 0,
         is_signed_in: !isSignedOut,
       }
     );
