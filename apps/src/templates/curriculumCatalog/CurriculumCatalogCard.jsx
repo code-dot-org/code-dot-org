@@ -127,7 +127,7 @@ const CustomizableCurriculumCatalogCard = ({
     analyticsReporter.sendEvent(
       EVENTS.CURRICULUM_CATALOG_LEARN_MORE_CLICKED_EVENT,
       {
-        curriculum_offering: courseDisplayName,
+        curriculum_offering: courseDisplayNameWithYear,
       }
     );
     window.location.href = pathToCourse;
@@ -138,7 +138,7 @@ const CustomizableCurriculumCatalogCard = ({
     analyticsReporter.sendEvent(
       EVENTS.CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT,
       {
-        curriculum_offering: courseDisplayName,
+        curriculum_offering: courseDisplayNameWithYear,
         has_sections: (sectionsForDropdown.length > 0).toString(),
         is_signed_in: !isSignedOut,
       }
