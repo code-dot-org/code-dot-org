@@ -17,7 +17,7 @@ import {
   ProjectManagerStorageType,
   ProjectSources,
 } from './types';
-import LabRegistry from './lab2Registry';
+import Lab2Registry from './Lab2Registry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
 import {
   setProjectUpdatedAt,
@@ -131,7 +131,7 @@ export const setUpWithLevel = createAsyncThunk(
     if (thunkAPI.signal.aborted) {
       return;
     }
-    LabRegistry.getInstance().setProjectManager(projectManager);
+    Lab2Registry.getInstance().setProjectManager(projectManager);
     // Load channel and source.
     const {sources, channel} = await setUpAndLoadProject(
       projectManager,
@@ -161,7 +161,7 @@ export const setUpWithoutLevel = createAsyncThunk(
       ProjectManagerStorageType.REMOTE,
       payload
     );
-    LabRegistry.getInstance().setProjectManager(projectManager);
+    Lab2Registry.getInstance().setProjectManager(projectManager);
 
     // Load channel and source.
     const {sources, channel} = await setUpAndLoadProject(
@@ -332,11 +332,11 @@ async function loadLevelProperties(
 
 async function cleanUpProjectManager() {
   // Check for an existing project manager and clean it up, if it exists.
-  const existingProjectManager = LabRegistry.getInstance().getProjectManager();
+  const existingProjectManager = Lab2Registry.getInstance().getProjectManager();
   // Save any unsaved code and clear out any remaining enqueued
   // saves from the existing project manager.
   await existingProjectManager?.cleanUp();
-  LabRegistry.getInstance().clearProjectManager();
+  Lab2Registry.getInstance().clearProjectManager();
 }
 
 export const {

@@ -63,7 +63,7 @@ import musicI18n from '../locale';
 import UpdateTimer from './UpdateTimer';
 import ValidatorProvider from '@cdo/apps/lab2/progress/ValidatorProvider';
 import {Key} from '../utils/Notes';
-import LabRegistry from '@cdo/apps/lab2/lab2Registry';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -479,7 +479,7 @@ class UnconnectedMusicView extends React.Component {
       };
     }
 
-    LabRegistry.getInstance()
+    Lab2Registry.getInstance()
       .getProjectManager()
       ?.save(sourcesToSave, forceSave);
   };

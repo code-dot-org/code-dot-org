@@ -2,30 +2,30 @@
 
 import ProjectManager from './projects/ProjectManager';
 
-export default class LabRegistry {
+export default class Lab2Registry {
   projectManager: ProjectManager | null;
-  private static _instance: LabRegistry;
+  private static _instance: Lab2Registry;
 
   constructor() {
     this.projectManager = null;
   }
 
-  public static getInstance(): LabRegistry {
-    if (LabRegistry._instance === undefined) {
-      LabRegistry.create();
+  public static getInstance(): Lab2Registry {
+    if (Lab2Registry._instance === undefined) {
+      Lab2Registry.create();
     }
-    return LabRegistry._instance;
+    return Lab2Registry._instance;
   }
 
   public static hasEnabledProjects() {
     return (
-      LabRegistry._instance !== undefined &&
-      LabRegistry._instance.projectManager !== null
+      Lab2Registry._instance !== undefined &&
+      Lab2Registry._instance.projectManager !== null
     );
   }
 
   public static create() {
-    LabRegistry._instance = new LabRegistry();
+    Lab2Registry._instance = new Lab2Registry();
   }
 
   public setProjectManager(projectManager: ProjectManager) {
