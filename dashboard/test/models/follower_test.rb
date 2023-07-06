@@ -111,6 +111,24 @@ class FollowerTest < ActiveSupport::TestCase
     DCDO.unstub(:get)
   end
 
+  test 'cannot create a follower for a PL section and a user with a family name' do
+    DCDO.stubs(:get).with('family-name-features', false).returns(true)
+
+    teacher = create(:teacher)
+    pl_section = create :section, :teacher_participants, user_id: teacher.id
+
+    pl_participant = create(:user)
+    pl_participant.family_name = 'TestFamName'
+    pl_participant.save!
+
+    assert_raises(ActiveRecord::RecordInvalid) do
+      #create :follower, student_user
+      Follower.create!(section_id: pl_section.id, student_user_id: pl_participant.id)
+    end
+
+    DCDO.unstub(:get)
+  end
+
   test 'deleting one of many followers keeps the associated student family name' do
     DCDO.stubs(:get).with('family-name-features', false).returns(true)
 

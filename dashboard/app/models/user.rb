@@ -555,7 +555,12 @@ class User < ApplicationRecord
 
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
-  before_save :remove_family_name, if: -> {DCDO.get('family-name-features', false) && sections_as_pl_participant.any?}
+  validate :no_family_name_for_teachers, if: -> {DCDO.get('family-name-features', false)}
+  def no_family_name_for_teachers
+    if family_name && (teacher? || sections_as_pl_participant.any?)
+      errors.add(:family_name, "can't be set for teachers or PL participants")
+    end
+  end
 
   before_validation :update_share_setting, unless: :under_13?
 
@@ -631,12 +636,6 @@ class User < ApplicationRecord
   # in migrated students' AuthenticationOptions.
   def remove_cleartext_emails
     authentication_options.with_deleted.update_all(email: '')
-  end
-
-  # Remove family name from properties.
-  # Record must be saved afterwards to persist to database.
-  def remove_family_name
-    self.family_name = nil
   end
 
   # Given a cleartext email finds the first user that has a matching email or hash.
@@ -1035,6 +1034,12 @@ class User < ApplicationRecord
     return true if teacher? # No-op if user is already a teacher
     return false if email.blank?
 
+    # Remove family name, in case it was set on the student account.
+    # Must do this before updating user_type, to prevent validation failure.
+    if DCDO.get('family-name-features', false)
+      self.family_name = nil
+    end
+
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
     # teachers do not need another adult to have access to their account.
@@ -1049,12 +1054,6 @@ class User < ApplicationRecord
         new_attributes[:email] = email
       end
       update!(new_attributes)
-
-      # Remove family name, in case it was set on the student account.
-      if DCDO.get('family-name-features', false)
-        self.family_name = nil
-        save!
-      end
 
       self
     end

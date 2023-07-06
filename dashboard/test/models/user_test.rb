@@ -4801,48 +4801,32 @@ class UserTest < ActiveSupport::TestCase
     DCDO.unstub(:get)
   end
 
-  test 'family name is removed from pl participants' do
+  test 'family name is not allowed on pl participants' do
+    DCDO.stubs(:get).with('family-name-features', false).returns(true)
+
     user = create :user
     family_name = 'TestFamilyName'
-    user.family_name = family_name
-
-    user.save!
-    user.reload
-
-    assert_equal(family_name, user.family_name)
 
     pl_section = create :section, :teacher_participants, user_id: @teacher.id
     Follower.create!(section_id: pl_section.id, student_user_id: user.id)
 
-    DCDO.stubs(:get).with('family-name-features', false).returns(true)
+    assert(user.valid?)
 
-    user.save!
-    user.reload
+    user.family_name = family_name
 
-    assert_nil(user.family_name)
+    assert_not(user.valid?)
 
     DCDO.unstub(:get)
   end
 
-  test 'family name is not removed from students' do
-    user = create :user
+  test 'family name is not allowed on teachers' do
+    DCDO.stubs(:get).with('family-name-features', false).returns(true)
+
+    user = create :teacher
     family_name = 'TestFamilyName'
     user.family_name = family_name
 
-    user.save!
-    user.reload
-
-    assert_equal(family_name, user.family_name)
-
-    section = create :section, user_id: @teacher.id
-    Follower.create!(section_id: section.id, student_user_id: user.id)
-
-    DCDO.stubs(:get).with('family-name-features', false).returns(true)
-
-    user.save!
-    user.reload
-
-    assert_equal(family_name, user.family_name)
+    assert_not(user.valid?)
 
     DCDO.unstub(:get)
   end
