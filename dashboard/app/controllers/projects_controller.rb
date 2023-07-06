@@ -344,6 +344,9 @@ class ProjectsController < ApplicationController
       params[:channel_id] = params[:channel_id].tr(cipher, alphabet)
     end
 
+    redirect_for_lab2 = redirect_edit_view_for_lab2
+    return redirect_for_lab2 if redirect_for_lab2
+
     iframe_embed = params[:iframe_embed] == true
     iframe_embed_app_and_code = params[:iframe_embed_app_and_code] == true
     sharing = iframe_embed || params[:share] == true
@@ -542,6 +545,19 @@ class ProjectsController < ApplicationController
   # For certain actions, check a special permission before proceeding.
   private def authorize_load_project!
     authorize! :load_project, params[:key]
+  end
+
+  # Redirect to the correct view/edit page for Lab2 projects. If a project owner is on a /view
+  # page, redirect to /edit. If a non-owner is on an /edit page, redirect to /view.
+  # For legacy (non-Lab2) labs, this is handled on the front-end.
+  private def redirect_edit_view_for_lab2
+    return nil unless @level.uses_lab2?
+
+    project = Projects.new(get_storage_id).get(params[:channel_id])
+    is_owner = project[:isOwner]
+
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/edit" if is_owner && request.path.ends_with?('/view')
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if !is_owner && request.path.ends_with?('/edit')
   end
 
   # Automatically catch authorization exceptions on any methods in this controller
