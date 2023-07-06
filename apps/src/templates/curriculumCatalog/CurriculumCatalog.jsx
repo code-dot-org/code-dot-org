@@ -190,6 +190,15 @@ const CurriculumCatalog = ({
 
     setNumFilteredTranslatedCurricula(newNumFilteredTranslatedCurricula);
     setFilteredCurricula(newFilteredCurricula);
+
+    if (newNumFilteredTranslatedCurricula === 0) {
+      analyticsReporter.sendEvent(
+        EVENTS.CURRICULUM_CATALOG_NO_AVAILABLE_CURRICULA_EVENT,
+        {
+          filters_selected: JSON.stringify(appliedFilters),
+        }
+      );
+    }
   }, [curriculaData, appliedFilters]);
 
   // Handles updating the given filter and the URL parameters.

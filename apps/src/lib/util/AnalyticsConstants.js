@@ -69,6 +69,11 @@ const EVENTS = {
     'Sign In Or Create Account Clicked In Assign Dialog',
   CURRICULUM_CATALOG_ASSIGN_COMPLETED_EVENT:
     'Course Offering Assignment Completed',
+  CURRICULUM_CATALOG_DROPDOWN_FILTER_SELECTED_EVENT: 'Filter Selected',
+  CURRICULUM_CATALOG_TOGGLE_LANGUAGE_FILTER_EVENT:
+    'Show Only Translated Curriculums Toggled',
+  CURRICULUM_CATALOG_NO_AVAILABLE_CURRICULA_EVENT:
+    'No Available Curriculums Message Shown',
 };
 
 export {EVENTS};
