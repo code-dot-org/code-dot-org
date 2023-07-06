@@ -6,6 +6,7 @@ class AssignableCourseTests < ActiveSupport::TestCase
     @levelbuilder = create :levelbuilder
   end
 
+  #FAILING TEST
   test 'course_assignable? is true if item is launched' do
     launched_course = create(:script, published_state: 'stable')
     assert launched_course.course_assignable?(@teacher)
@@ -22,6 +23,7 @@ class AssignableCourseTests < ActiveSupport::TestCase
     refute pl_course.course_assignable?(@teacher)
   end
 
+  #FAILING TEST
   test 'course_assignable? is true if user has pilot access to item' do
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     pilot_course = create :script, pilot_experiment: 'my-experiment'
@@ -35,6 +37,7 @@ class AssignableCourseTests < ActiveSupport::TestCase
     refute pilot_course.course_assignable?(@teacher)
   end
 
+  #FAILING TEST
   test 'course_assignable? is true if user has editor experiment access' do
     partner_pilot_unit = create :script, pilot_experiment: 'my-experiment', editor_experiment: 'ed-experiment'
     partner = create :teacher, editor_experiment: 'ed-experiment'
@@ -48,6 +51,7 @@ class AssignableCourseTests < ActiveSupport::TestCase
     refute partner_pilot_unit.course_assignable?(@teacher)
   end
 
+  #FAILING TEST
   test 'course_assignable? if levelbuilder and item is in development' do
     in_development_course = create(:script, published_state: 'in_development')
     assert in_development_course.course_assignable?(@levelbuilder)
@@ -58,6 +62,7 @@ class AssignableCourseTests < ActiveSupport::TestCase
     refute in_development_course.course_assignable?(@teacher)
   end
 
+  #FAILING TEST
   test 'course_assignable? if levelbuilder and item is beta' do
     in_development_course = create(:script, published_state: 'beta')
     assert in_development_course.course_assignable?(@levelbuilder)
