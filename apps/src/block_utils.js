@@ -1182,20 +1182,21 @@ exports.createJsWrapperBlockCreator = function (
           if (Blockly.version === 'Google') {
             // Function to toggle the flyout visibility
             const toggleFlyout = function () {
-              if (!this.getSourceBlock().getInput('flyout_input')) {
+              const block = this.getSourceBlock();
+              if (!block.getInput('flyout_input')) {
                 const flyoutField = new Blockly.FieldFlyout(_, {
-                  flyoutKey: `flyout_${this.type}`,
+                  flyoutKey: `flyout_${block.type}`,
                   sizingBehavior: 'fitContent',
                   name: 'FLYOUT',
                 });
-                this.getSourceBlock()
+                block
                   .appendDummyInput('flyout_input')
-                  .appendField(flyoutField, `flyout_${this.type}`);
-                flyoutField.setVisible(true);
+                  .appendField(flyoutField, `flyout_${block.type}`);
+                // flyoutField.setVisible(true);
                 flyoutField.showEditor_();
                 flyoutField.render_();
               } else {
-                this.getSourceBlock().removeInput('flyout_input');
+                block.removeInput('flyout_input');
               }
             };
             const icon1 = document.createElementNS(SVG_NS, 'tspan');
@@ -1255,13 +1256,9 @@ exports.createJsWrapperBlockCreator = function (
               return container;
             };
             this.domToMutation = function (xmlElement) {
-              let useDefaultIcon = xmlElement.getAttribute('useDefaultIcon');
-              if (useDefaultIcon === 'true') {
-                useDefaultIcon = true;
-              }
-              if (useDefaultIcon === 'false') {
-                useDefaultIcon = false;
-              }
+              let useDefaultIcon =
+                // Coerce string to Boolean
+                xmlElement.getAttribute('useDefaultIcon') === 'true';
               flyoutToggleButton.useDefaultIcon = useDefaultIcon;
               if (!flyoutToggleButton.useDefaultIcon) {
                 console.log(

@@ -208,7 +208,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
 
   /**
    * Returns whether the provided block or bubble would be deleted if dropped on
-   * this area.
+   * this area. Mini-toolboxes should never be used to delete blocks.
    * The original method checks if the element is deletable and is always called
    * before onDragEnter/onDragOver/onDragExit.
    *
