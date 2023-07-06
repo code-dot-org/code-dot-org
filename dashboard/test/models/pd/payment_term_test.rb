@@ -22,7 +22,7 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
         Pd::PaymentTerm.for_workshop(workshop)
       end
 
-      assert error.message.include? "No payment terms were found for workshop #{workshop.inspect}"
+      assert_includes(error.message, "No payment terms were found for workshop #{workshop.inspect}")
     end
   end
 

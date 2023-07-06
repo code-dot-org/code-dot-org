@@ -119,6 +119,14 @@ const BlocklyWrapper = function (blocklyInstance) {
   };
 };
 
+/**
+ * Note that this can only be called once per page load, as this initializes
+ * the navigation controller, and multiple calls to navigationController.init()
+ * will throw an error.
+ *
+ * If this needs to be called multiple times (for example, in tests), call
+ * Blockly.navigationController.dispose() before calling this function again.
+ */
 function initializeBlocklyWrapper(blocklyInstance) {
   const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
 
@@ -332,6 +340,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.navigationController = new NavigationController();
+  // Initialize plugin.
+  blocklyWrapper.navigationController.init();
 
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
@@ -603,8 +613,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     workspace.addChangeListener(onBlockClickDragDelete);
 
-    // Initialize plugin.
-    blocklyWrapper.navigationController.init();
     blocklyWrapper.navigationController.addWorkspace(workspace);
 
     if (!blocklyWrapper.isStartMode && !opt_options.isBlockEditMode) {

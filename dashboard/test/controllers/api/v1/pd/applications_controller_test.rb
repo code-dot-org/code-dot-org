@@ -473,11 +473,11 @@ module Api::V1::Pd
 
       [:csp_which_grades, :csp_how_offer].each do |key|
         column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csp')[:teacher][key]
-        refute response_csv.first.include?(column)
+        refute_includes(response_csv.first, column)
       end
 
       column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csd')[:teacher][:csd_which_grades]
-      assert response_csv.first.include?(column)
+      assert_includes(response_csv.first, column)
     end
 
     test 'csv download for csp teacher returns expected columns' do
@@ -489,11 +489,11 @@ module Api::V1::Pd
 
       [:csp_which_grades, :csp_how_offer].each do |key|
         column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csp')[:teacher][key]
-        assert response_csv.first.include?(column)
+        assert_includes(response_csv.first, column)
       end
 
       column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csd')[:teacher][:csd_which_grades]
-      refute response_csv.first.include?(column)
+      refute_includes(response_csv.first, column)
     end
 
     test 'cohort view returns teacher applications of correct statuses' do
