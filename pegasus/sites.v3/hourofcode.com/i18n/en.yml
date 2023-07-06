@@ -343,6 +343,7 @@
   professional_learning_section_desc: "Get the support you need as you prepare to teach. Teachers love it, with over 90% ranking it the best professional development ever!"
   professional_learning_section_desc_self_paced: "Just in time support that allows you to prepare to teach with confidence on your schedule."
   professional_learning_section_block_facilitator_led_workshops: "Our highly supportive Professional Learning Program will bring you together with a group of teachers to learn from each other as well as expert facilitators as you take on the first year of teaching the free curriculum to your students. In-person and virtual workshops are starting this summer."
+  professional_learning_section_block_facilitator_led_workshops_csf: "Join local teachers for inspiring and hands-on support to implement computer science in your classroom. Our Regional Partners offer high-quality, one-day Code.org workshops for individual teachers or for schoolwide PD. Sign up for a professional development workshop near you!"
 
   support_and_questions_section_subhead: "Still have questions? Reach out to us! We are here to help."
   support_and_questions_section_desc: "Our support team is here to answer any questions you may have about starting teaching with Code.org. You can also ask other teachers about their experience on our teacher forums."
@@ -747,8 +748,8 @@
   csf_page_curriculum_glance_devices: "Laptop, Chromebook, Tablet"
   csf_page_curriculum_glance_tools: "Sprite Lab, Play Lab"
   csf_page_curriculum_glance_professional_learning: "Facilitator-led Workshops, Self-paced Modules"
-  csf_page_curriculum_glance_professional_languages: "Arabic, Bahasa Indonesian, Catalán, Chinese Simplified, Chinese Traditional, Czech, French, German, Hindi, Italian, Japanese, Korean, Kannada, Malay, Marathi, Mongolian, Polish, Portuguese-BR, Romanian, Russian, Slovak, Tagalog, Tamil, Thai, Turkish, Ukrainian, Spanish Latam, Urdu, Spanish-ES, Uzbek, Vietnamese"
-  csf_page_curriculum_glance_professional_accessibility_features: "Text-to-speech, Closed captioning, Immersive reader"
+  csf_page_curriculum_glance_languages: "Arabic, Bahasa Indonesian, Catalán, Chinese Simplified, Chinese Traditional, Czech, French, German, Hindi, Italian, Japanese, Korean, Kannada, Malay, Marathi, Mongolian, Polish, Portuguese-BR, Romanian, Russian, Slovak, Tagalog, Tamil, Thai, Turkish, Ukrainian, Spanish Latam, Urdu, Spanish-ES, Uzbek, Vietnamese"
+  csf_page_curriculum_glance_accessibility_features: "Text-to-speech, Closed captioning, Immersive reader"
   csf_page_faq_question_01: "Is CS Fundamentals mapped to standards?"
   csf_page_faq_answer_01_01: "CS Fundamentals was written using both the K-12 Framework for Computer Science and the CSTA standards as guidance. Currently, every lesson in CS Fundamentals contains mappings to the relevant CSTA standards. The summary of all CSTA mappings for each course can be found at:"
   csf_page_faq_answer_01_list_01: "[Course A Standards](%{course_a_url})"
