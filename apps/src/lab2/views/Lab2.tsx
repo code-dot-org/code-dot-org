@@ -54,15 +54,14 @@ const Lab2: React.FunctionComponent = () => {
   );
   let currentLessonAppProperties: AppProperties[];
   let currentAppName: string;
+
   if (currentLessonLevels) {
     currentAppName = currentLessonLevels.find(
       (level: LevelWithProgress) => level.isCurrentLevel
     ).app;
-
     const currentLessonAppNames: string[] = Array.from(
       new Set(currentLessonLevels.map((level: LevelWithProgress) => level.app))
     );
-
     currentLessonAppProperties = appsProperties.filter(appProperties =>
       currentLessonAppNames.includes(appProperties.name)
     );
