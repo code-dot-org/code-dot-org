@@ -243,11 +243,11 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  timed_task_with_logging :bin_i18n_ci do
+  timed_task_with_logging :bin_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
-    TestRunUtils.run_bin_i18n_tests
+    TestRunUtils.run_bin_tests
     ENV.delete 'TEST_ENV_NUMBER'
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
@@ -258,7 +258,7 @@ namespace :test do
     :dashboard_ci,
     :dashboard_legacy_ci,
     :lib_ci,
-    :bin_i18n_ci,
+    :bin_ci,
     :ui_live
   ]
 
@@ -287,9 +287,9 @@ namespace :test do
     TestRunUtils.run_lib_tests
   end
 
-  desc 'Runs bin/i18n tests.'
-  timed_task_with_logging :bin_i18n do
-    TestRunUtils.run_bin_i18n_tests
+  desc 'Runs bin tests.'
+  timed_task_with_logging :bin do
+    TestRunUtils.run_bin_tests
   end
 
   namespace :changed do
@@ -392,9 +392,9 @@ namespace :test do
     end
 
     desc 'Runs lib tests if lib might have changed from staging.'
-    timed_task_with_logging :bin_i18n do
-      run_tests_if_changed('bin_i18n', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'bin/i18n/**/*']) do
-        TestRunUtils.run_bin_i18n_tests
+    timed_task_with_logging :bin do
+      run_tests_if_changed('bin', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'bin/**/*']) do
+        TestRunUtils.run_bin_tests
       end
     end
 
@@ -406,7 +406,7 @@ namespace :test do
                  :pegasus,
                  :shared,
                  :lib,
-                 :bin_i18n]
+                 :bin]
 
     timed_task_with_logging all_but_apps: all_tasks.reject {|t| t == :apps}
 
@@ -415,7 +415,7 @@ namespace :test do
 
   timed_task_with_logging changed: ['changed:all']
 
-  timed_task_with_logging all: [:apps, :dashboard, :dashboard_legacy, :pegasus, :shared, :lib, :bin_i18n]
+  timed_task_with_logging all: [:apps, :dashboard, :dashboard_legacy, :pegasus, :shared, :lib, :bin]
 end
 timed_task_with_logging test: ['test:changed']
 
