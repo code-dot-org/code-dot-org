@@ -65,6 +65,8 @@ const EVENTS = {
   CURRICULUM_CATALOG_VISITED_EVENT: 'Curriculum Catalog Visited',
   CURRICULUM_CATALOG_LEARN_MORE_CLICKED_EVENT: 'Learn More Clicked',
   CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT: 'Assign Clicked',
+  CURRICULUM_CATALOG_SIGN_IN_CLICKED_IN_ASSIGN_DIALOG:
+    'Sign In Or Create Account Clicked In Assign Dialog',
   CURRICULUM_CATALOG_ASSIGN_COMPLETED_EVENT:
     'Course Offering Assignment Completed',
 };
