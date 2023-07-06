@@ -13,7 +13,6 @@
   &__by {
     display: flex;
     align-items: center;
-
   }
 
   &__list {
@@ -31,7 +30,6 @@
     font-size: 20px;
     margin-bottom: 30px;
   }
-
 
   @media (max-width: 1023px) {
     background-image: url(/images/ai/pl/webinar/hero--2.png);
@@ -65,6 +63,7 @@
 
 .partnership-ai {
   background: $neutral_light;
+
   &__content {
     display: flex;
     justify-content: center;
@@ -72,11 +71,13 @@
     flex-direction: column;
 
   }
+
   &__list {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
     img {
       margin: 0 26px
     }
