@@ -26,9 +26,11 @@ const MultipleSectionsAssigner = ({
   courseVersionId,
   scriptId,
   reassignConfirm = () => {},
-  isOnCoursePage,
+  isAssigningCourse,
   isStandAloneUnit,
   participantAudience,
+  onAssignSuccess,
+  sectionDirections = i18n.chooseSectionsDirections(),
   // Redux
   sections,
   unassignSection,
@@ -38,7 +40,7 @@ const MultipleSectionsAssigner = ({
   let initialSectionsAssigned = [];
 
   // check to see if this is coming from the UNIT landing page - if so add courses featuring this unit
-  if (!isOnCoursePage) {
+  if (!isAssigningCourse) {
     if (isStandAloneUnit) {
       for (let i = 0; i < sections.length; i++) {
         if (courseVersionId === sections[i].courseVersionId) {
@@ -52,7 +54,7 @@ const MultipleSectionsAssigner = ({
         }
       }
     }
-  } else if (isOnCoursePage) {
+  } else if (isAssigningCourse) {
     // checks to see if this is coming from the COURSE landing page
     for (let i = 0; i < sections.length; i++) {
       if (courseId === sections[i].courseId) {
@@ -88,9 +90,9 @@ const MultipleSectionsAssigner = ({
         s => s.code === currentSectionsAssigned[i].code
       );
       if (needsToBeAssigned) {
-        if (isOnCoursePage) {
+        if (isAssigningCourse) {
           const sectionId = currentSectionsAssigned[i].id;
-          assignToSection(
+          assignToSectionWithConfirmation(
             sectionId,
             courseId,
             courseOfferingId,
@@ -111,7 +113,7 @@ const MultipleSectionsAssigner = ({
 
       if (isSectionToBeRemoved) {
         // if on COURSE landing page or a STANDALONE UNIT, unassign entirely
-        isOnCoursePage || isStandAloneUnit
+        isAssigningCourse || isStandAloneUnit
           ? unassignSection(initialSectionsAssigned[i].id, '')
           : assignCourseWithoutUnit(initialSectionsAssigned[i]);
       }
@@ -138,7 +140,7 @@ const MultipleSectionsAssigner = ({
   const unhideAndAssignUnit = section => {
     const sectionId = section.id;
     updateHiddenScript(sectionId, scriptId, false);
-    assignToSection(
+    assignToSectionWithConfirmation(
       sectionId,
       courseId,
       courseOfferingId,
@@ -150,13 +152,37 @@ const MultipleSectionsAssigner = ({
   // this is identical to unhideAndAssignUnit above but just has null as the scriptId
   const assignCourseWithoutUnit = section => {
     const sectionId = section.id;
-    assignToSection(
+    assignToSectionWithConfirmation(
       sectionId,
       courseId,
       courseOfferingId,
       courseVersionId,
       null
     );
+  };
+
+  const assignToSectionWithConfirmation = (
+    sectionId,
+    courseId,
+    courseOfferingId,
+    courseVersionId,
+    scriptId
+  ) => {
+    onAssignSuccess
+      ? assignToSection(
+          sectionId,
+          courseId,
+          courseOfferingId,
+          courseVersionId,
+          scriptId
+        ).then(onAssignSuccess)
+      : assignToSection(
+          sectionId,
+          courseId,
+          courseOfferingId,
+          courseVersionId,
+          scriptId
+        );
   };
 
   const isAssignableToSection = sectionParticipantType => {
@@ -176,7 +202,7 @@ const MultipleSectionsAssigner = ({
       </div>
       <div className={moduleStyle.sectionsDirections}>
         {/*TODO: add Body-two here*/}
-        <p>{i18n.chooseSectionsDirections()}</p>
+        <p>{sectionDirections}</p>
       </div>
       <div
         className={classnames(
@@ -211,7 +237,7 @@ const MultipleSectionsAssigner = ({
           )}
           onClick={selectAllHandler}
         >
-          Select All
+          {i18n.selectAll()}
         </a>
       </div>
 
@@ -240,9 +266,11 @@ MultipleSectionsAssigner.propTypes = {
   courseVersionId: PropTypes.number,
   scriptId: PropTypes.number,
   reassignConfirm: PropTypes.func,
-  isOnCoursePage: PropTypes.bool,
+  isAssigningCourse: PropTypes.bool.isRequired,
   isStandAloneUnit: PropTypes.bool,
   participantAudience: PropTypes.string,
+  onAssignSuccess: PropTypes.func,
+  sectionDirections: PropTypes.string,
   // Redux
   sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
   unassignSection: PropTypes.func.isRequired,
