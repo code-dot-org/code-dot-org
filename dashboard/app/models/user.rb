@@ -2727,10 +2727,10 @@ class User < ApplicationRecord
   # For newer accounts, use the us_state field instead.
   def teacher_us_state
     return nil unless student?
-    return nil unless sections_as_student.any?
+    latest_student_section = sections_as_student.order(created_at: :desc).first
+    return nil unless latest_student_section
 
-    latest_teacher_id = sections_as_student.order(created_at: :desc).first.user_id
-    latest_teacher_school_info = UserSchoolInfo.where(user_id: latest_teacher_id).order(start_date: :desc).first
+    latest_teacher_school_info = UserSchoolInfo.where(user_id: latest_student_section.user_id).order(start_date: :desc).first
     return nil unless latest_teacher_school_info
 
     latest_teacher_school_info.school_info&.state

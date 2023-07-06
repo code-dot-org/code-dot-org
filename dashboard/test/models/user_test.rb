@@ -4932,12 +4932,12 @@ class UserTest < ActiveSupport::TestCase
     section = create :section, user: teacher
     student = create(:follower, section: section).student_user
 
-    assert_equal 'WA', student.get_us_state_from_teacher
+    assert_equal 'WA', student.teacher_us_state
   end
 
   test "returns nil when finding student state from teacher state when the student has no sections" do
     student = create :student
-    assert_nil student.get_us_state_from_teacher
+    assert_nil student.teacher_us_state
   end
 
   test "returns nil when finding student state from teacher state when teacher has no school" do
@@ -4945,7 +4945,7 @@ class UserTest < ActiveSupport::TestCase
     section = create :section, user: teacher
     student = create(:follower, section: section).student_user
 
-    assert_nil student.get_us_state_from_teacher
+    assert_nil student.teacher_us_state
   end
 
   test "when finding student state from teacher state, finds the most recent section" do
@@ -4959,7 +4959,7 @@ class UserTest < ActiveSupport::TestCase
     student = create(:follower, section: section).student_user
     create :follower, section: section_old, student_user: student
 
-    assert_equal 'WA', student.get_us_state_from_teacher
+    assert_equal 'WA', student.teacher_us_state
   end
 
   test "when finding student state from teacher state, finds the most recent school" do
@@ -4970,6 +4970,6 @@ class UserTest < ActiveSupport::TestCase
     section = create :section, user: teacher
     student = create(:follower, section: section).student_user
 
-    assert_equal 'WA', student.get_us_state_from_teacher
+    assert_equal 'WA', student.teacher_us_state
   end
 end
