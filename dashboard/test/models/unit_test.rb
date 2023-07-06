@@ -1148,9 +1148,9 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal 'foo-2018', course_versions.values[1][:name]
   end
 
-  #FAILING TEST
   test 'summarize includes show assign button' do
-    unit = create(:script, name: 'script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+    unit = create(:course_version, :with_unit).content_root
+    unit.update!(name: 'script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
     teacher = create(:teacher)
 
     # No user, show_assign_button set to false
