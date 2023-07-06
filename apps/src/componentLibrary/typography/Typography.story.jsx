@@ -14,8 +14,11 @@ const MultipleTemplate = (args = []) => (
     {args.components?.map(componentArg => (
       <Typography
         key={`${componentArg.semanticTag}-${componentArg.visualAppearance}`}
-        {...componentArg}
-      />
+        semanticTag={componentArg.semanticTag}
+        visualAppearance={componentArg.visualAppearance}
+      >
+        {componentArg.children}
+      </Typography>
     ))}
   </>
 );
