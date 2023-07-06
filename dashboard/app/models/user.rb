@@ -2725,7 +2725,7 @@ class User < ApplicationRecord
   # Determine a student' state based on their teacher's state. Used for student
   # accounts created prior to the addition of the us_state field in June 2023.
   # For newer accounts, use the us_state field instead.
-  def get_us_state_from_teacher
+  def teacher_us_state
     return nil unless student?
     return nil unless sections_as_student.any?
 
