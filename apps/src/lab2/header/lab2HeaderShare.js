@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import LabRegistry from '../LabRegistry';
+import LabRegistry from '../lab2Registry';
 import {getStore} from '@cdo/apps/redux';
-import Lab2ShareDialog from './Lab2ShareDialog';
+import Lab2ShareDialog from '../views/Lab2ShareDialog';
 import {showShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 
 const PROJECT_SHARE_DIALOG_ID = 'project-share-dialog';

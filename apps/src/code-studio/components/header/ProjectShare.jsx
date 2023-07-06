@@ -2,8 +2,8 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import {shareProject} from '../../headerShare';
 import {styles} from './EditableProjectName';
-import LabRegistry from '@cdo/apps/labs/LabRegistry';
-import {shareLab2Project} from '@cdo/apps/labs/header/lab2HeaderShare';
+import LabRegistry from '@cdo/apps/lab2/lab2Registry';
+import {shareLab2Project} from '@cdo/apps/lab2/header/lab2HeaderShare';
 
 export default class ProjectShare extends React.Component {
   shareProject = () => {

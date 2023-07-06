@@ -3,9 +3,9 @@
 import MusicPlayer from '../player/MusicPlayer';
 import ConditionsChecker, {
   KnownConditions,
-} from '@cdo/apps/labs/progress/ConditionsChecker';
+} from '@cdo/apps/lab2/progress/ConditionsChecker';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
-import {Validator} from '@cdo/apps/labs/progress/ProgressManager';
+import {Validator} from '@cdo/apps/lab2/progress/ProgressManager';
 
 const KnownConditions: KnownConditions = {
   PLAYED_ONE_SOUND: 'played_one_sound',

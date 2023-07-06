@@ -6,8 +6,8 @@
 
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import LabRegistry from '../LabRegistry';
-import {setUpWithLevel, setUpWithoutLevel} from '../labRedux';
+import LabRegistry from '../lab2Registry';
+import {setUpWithLevel, setUpWithoutLevel} from '../lab2Redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';

@@ -17,7 +17,7 @@ import {
   ProjectManagerStorageType,
   ProjectSources,
 } from './types';
-import LabRegistry from './LabRegistry';
+import LabRegistry from './lab2Registry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
 import {
   setProjectUpdatedAt,
