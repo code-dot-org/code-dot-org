@@ -46,8 +46,14 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
       this.textElement_.appendChild(this.icon1);
     } else {
       this.textElement_.appendChild(this.icon2);
-      // If the field is not using the default icon, we might want an additional
-      // callback, such as opening a block flyout.
+    }
+  }
+
+  setIcon(useDefaultIcon) {
+    this.useDefaultIcon = useDefaultIcon;
+    // If the field is not using the default icon, we might want an additional
+    // callback, such as opening a block flyout.
+    if (!this.useDefaultIcon) {
       typeof this.callback === 'function' &&
         this.callback(this.getSourceBlock());
     }
@@ -77,6 +83,7 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
    */
   applyColour() {
     const sourceBlock = this.getSourceBlock();
+    const borderRect = this.borderRect_;
     // If an override is not provided, use the block style to determine colors.
     // Primary and secondary colors are used to provide contrast between
     // the button and the icons.
@@ -84,10 +91,13 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
       this.colorOverrides?.icon || sourceBlock.style.colourPrimary;
     this.icon2.style.fill =
       this.colorOverrides?.icon || sourceBlock.style.colourPrimary;
-    this.getBorderRect().setAttribute(
-      'style',
-      'fill: ' + this.colorOverrides?.button ||
-        sourceBlock.style.colourSecondary
-    );
+    // applyColour is also called when creating insertion markers
+    if (borderRect) {
+      borderRect.setAttribute(
+        'style',
+        'fill: ' +
+          (this.colorOverrides?.button || sourceBlock.style.colourSecondary)
+      );
+    }
   }
 }

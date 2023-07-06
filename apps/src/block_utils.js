@@ -1211,7 +1211,7 @@ exports.createJsWrapperBlockCreator = function (
             icon2.textContent = '\uf068 '; // minus icon
             const colorOverrides = {
               icon: Button.ButtonColor.white,
-              rect: Button.ButtonColor.blue,
+              button: Button.ButtonColor.blue,
             };
             const flyoutToggleButton = new Blockly.FieldToggle({
               onClick: toggleFlyout,
@@ -1252,7 +1252,8 @@ exports.createJsWrapperBlockCreator = function (
             };
 
             this.loadExtraState = function (state) {
-              flyoutToggleButton.useDefaultIcon = state['useDefaultIcon'];
+              const useDefaultIcon = state['useDefaultIcon'];
+              flyoutToggleButton.setIcon(useDefaultIcon);
             };
 
             this.mutationToDom = function () {
@@ -1265,10 +1266,11 @@ exports.createJsWrapperBlockCreator = function (
             };
 
             this.domToMutation = function (xmlElement) {
-              let useDefaultIcon =
+              const useDefaultIcon =
                 // Coerce string to Boolean
                 xmlElement.getAttribute('useDefaultIcon') === 'true';
-              flyoutToggleButton.useDefaultIcon = useDefaultIcon;
+              flyoutToggleButton.setIcon(useDefaultIcon);
+              // flyoutToggleButton.useDefaultIcon = useDefaultIcon;
             };
           }
         }
