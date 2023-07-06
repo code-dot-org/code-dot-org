@@ -31,6 +31,7 @@ class StandaloneVideo < Level
     video_rounded_corners
     video_full_width
     background
+    uses_lab2
   )
 
   before_validation do
@@ -57,6 +58,10 @@ class StandaloneVideo < Level
   def enable_scrolling?
     # ensures we have the small footer when in "full width" mode
     video_full_width
+  end
+
+  def uses_lab2?
+    uses_lab2
   end
 
   def self.create_from_level_builder(params, level_params)

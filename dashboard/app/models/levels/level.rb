@@ -611,6 +611,10 @@ class Level < ApplicationRecord
     false
   end
 
+  def uses_lab2?
+    false
+  end
+
   # Create a copy of this level named new_name
   # @param [String] new_name
   # @param [String] editor_experiment
@@ -797,6 +801,19 @@ class Level < ApplicationRecord
       status: SharedConstants::LEVEL_STATUS.not_tried,
       thumbnailUrl: thumbnail_url
     }
+  end
+
+  # Summarize the properties for a lab2 level.
+  # Called by ScriptLevelsController.level_properties.
+  # These properties are usually just the serialized properties for
+  # the level, which usually include levelData.  If this level is a
+  # StandaloneVideo then we put its properties into levelData.
+  def summarize_for_lab2_properties
+    video = specified_autoplay_video&.summarize(false)&.camelize_keys
+    properties_camelized = properties.camelize_keys
+    properties_camelized[:levelData] = video if video
+    properties_camelized[:type] = type
+    properties_camelized
   end
 
   def project_type

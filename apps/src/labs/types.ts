@@ -93,13 +93,22 @@ export interface LevelProperties {
   levelData: LevelData;
 }
 
-// Generic level configuration data used by labs that don't require
+// Level configuration data used by project-backed labs that don't require
 // reloads between levels. Labs may define more specific fields.
-export interface LevelData {
+export interface ProjectLevelData {
   text?: string;
   validations?: Validation[];
   startSources: Source;
 }
+
+// The level data for a standalone_video level that doesn't require
+// reloads between levels.
+export interface VideoLevelData {
+  src: string;
+  download: string;
+}
+
+export type LevelData = ProjectLevelData | VideoLevelData;
 
 // Validation in the level.
 export interface Validation {

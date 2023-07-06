@@ -24,6 +24,8 @@ const MultipleSectionsAssigner = ({
   isAssigningCourse,
   isStandAloneUnit,
   participantAudience,
+  onAssignSuccess,
+  sectionDirections = i18n.chooseSectionsDirections(),
   // Redux
   sections,
   unassignSection,
@@ -85,7 +87,7 @@ const MultipleSectionsAssigner = ({
       if (needsToBeAssigned) {
         if (isAssigningCourse) {
           const sectionId = currentSectionsAssigned[i].id;
-          assignToSection(
+          assignToSectionWithConfirmation(
             sectionId,
             courseId,
             courseOfferingId,
@@ -133,7 +135,7 @@ const MultipleSectionsAssigner = ({
   const unhideAndAssignUnit = section => {
     const sectionId = section.id;
     updateHiddenScript(sectionId, scriptId, false);
-    assignToSection(
+    assignToSectionWithConfirmation(
       sectionId,
       courseId,
       courseOfferingId,
@@ -145,13 +147,37 @@ const MultipleSectionsAssigner = ({
   // this is identical to unhideAndAssignUnit above but just has null as the scriptId
   const assignCourseWithoutUnit = section => {
     const sectionId = section.id;
-    assignToSection(
+    assignToSectionWithConfirmation(
       sectionId,
       courseId,
       courseOfferingId,
       courseVersionId,
       null
     );
+  };
+
+  const assignToSectionWithConfirmation = (
+    sectionId,
+    courseId,
+    courseOfferingId,
+    courseVersionId,
+    scriptId
+  ) => {
+    onAssignSuccess
+      ? assignToSection(
+          sectionId,
+          courseId,
+          courseOfferingId,
+          courseVersionId,
+          scriptId
+        ).then(onAssignSuccess)
+      : assignToSection(
+          sectionId,
+          courseId,
+          courseOfferingId,
+          courseVersionId,
+          scriptId
+        );
   };
 
   const isAssignableToSection = sectionParticipantType => {
@@ -167,7 +193,7 @@ const MultipleSectionsAssigner = ({
       >
         {i18n.chooseSectionsPrompt({assignmentName})}
       </div>
-      <div style={styles.content}>{i18n.chooseSectionsDirections()}</div>
+      <div style={styles.content}>{sectionDirections}</div>
       <div style={styles.header} className="uitest-confirm-assignment-dialog">
         {i18n.yourSectionsList()}
       </div>
@@ -225,6 +251,8 @@ MultipleSectionsAssigner.propTypes = {
   isAssigningCourse: PropTypes.bool.isRequired,
   isStandAloneUnit: PropTypes.bool,
   participantAudience: PropTypes.string,
+  onAssignSuccess: PropTypes.func,
+  sectionDirections: PropTypes.string,
   // Redux
   sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
   unassignSection: PropTypes.func.isRequired,

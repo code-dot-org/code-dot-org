@@ -187,7 +187,7 @@ class ScriptLevelsController < ApplicationController
 
     @level = @script_level.level
 
-    render json: @level.properties.camelize_keys
+    render json: @level.summarize_for_lab2_properties
   end
 
   # Get a list of hidden lessons for the current users section

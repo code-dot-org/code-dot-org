@@ -1,28 +1,36 @@
-// LabContainer
+// Lab2Wrapper
 //
-// This React component is used to contain a lab that doesn't need page reloads
-// between levels.
-//
-// For now, it's only used for the "music" app, and facilitates instant switching
-// between "music" levels in the same lesson.
-//
-// It hides the level while loading, and plays a fade-in animation as the level appears.
+// Lab2 uses this component to wrap the apps that it switches between.  This
+// component remains agnostic to the children that are passed into it, which
+// are the apps.  But this component provides a few useful things: an error
+// boundary; a fade-in between levels; a loading spinner when a level takes a
+// while to load; and a sad bee when things go wrong.
 
-import PropTypes from 'prop-types';
 import React from 'react';
 import {useSelector} from 'react-redux';
 import classNames from 'classnames';
-import moduleStyles from './LabContainer.module.scss';
-import i18n from '@cdo/locale';
+import moduleStyles from './Lab2Wrapper.module.scss';
+import ErrorBoundary from '../ErrorBoundary';
+import {isLabLoading} from '../labRedux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ErrorBoundary from './ErrorBoundary';
-import {isLabLoading} from '@cdo/apps/labs/labRedux';
+import {LabState} from '@cdo/apps/labs/labRedux';
+const i18n = require('@cdo/locale');
 
-const LabContainer = ({children, onError}) => {
-  const isLoading = useSelector(isLabLoading);
-  const isPageError = useSelector(state => state.lab.isPageError);
+export interface Lab2WrapperProps {
+  children: React.ReactNode;
+  onError: (error: Error, componentStack: string) => void;
+}
 
-  const overlayStyle = isLoading
+const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({
+  children,
+  onError,
+}) => {
+  const isLoading: boolean = useSelector(isLabLoading);
+  const isPageError: boolean = useSelector(
+    (state: {lab: LabState}) => state.lab.isPageError
+  );
+
+  const overlayStyle: string = isLoading
     ? moduleStyles.showingBlock
     : moduleStyles.fadeInBlock;
 
@@ -44,6 +52,7 @@ const LabContainer = ({children, onError}) => {
             <div className={moduleStyles.slowLoadContainer}>
               <div className={moduleStyles.spinnerContainer}>
                 <FontAwesome
+                  title={undefined}
                   icon="spinner"
                   className={classNames('fa-pulse', 'fa-3x')}
                 />
@@ -59,11 +68,6 @@ const LabContainer = ({children, onError}) => {
       </div>
     </ErrorBoundary>
   );
-};
-
-LabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-  onError: PropTypes.func.isRequired,
 };
 
 export const ErrorUI = () => (
@@ -84,4 +88,4 @@ export const ErrorFallbackPage = () => (
   </div>
 );
 
-export default LabContainer;
+export default Lab2Wrapper;

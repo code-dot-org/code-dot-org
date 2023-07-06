@@ -14,7 +14,7 @@ import Button from '@cdo/apps/templates/Button';
 import {
   Heading5,
   Heading6,
-  BodyOneText,
+  BodyTwoText,
 } from '@cdo/apps/componentLibrary/typography';
 import CheckboxDropdown from '../CheckboxDropdown';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
@@ -168,6 +168,9 @@ const CurriculumCatalog = ({
   const [appliedFilters, setAppliedFilters] = useState(
     getInitialFilterStates()
   );
+  const [assignSuccessMessage, setAssignSuccessMessage] = useState('');
+  const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
+    useState(false);
 
   // Filters out any Curriculum Catalog Cards of courses that do not match the filter criteria.
   useEffect(() => {
@@ -231,6 +234,15 @@ const CurriculumCatalog = ({
     handleUpdateFilter(filterKey, []);
   };
 
+  const handleAssignSuccess = assignmentData => {
+    setAssignSuccessMessage(
+      i18n.successAssigningCurriculum({
+        curriculum: assignmentData.assignedTitle,
+      })
+    );
+    setShowAssignSuccessMessage(true);
+  };
+
   // Renders search results based on the applied filters (or shows the No matching curriculums
   // message if no results).
   const renderSearchResults = () => {
@@ -247,6 +259,7 @@ const CurriculumCatalog = ({
                 key,
                 image,
                 display_name,
+                display_name_with_year,
                 grade_levels,
                 duration,
                 school_subject,
@@ -262,6 +275,7 @@ const CurriculumCatalog = ({
                 <CurriculumCatalogCard
                   key={key}
                   courseDisplayName={display_name}
+                  courseDisplayNameWithYear={display_name_with_year}
                   imageSrc={image || undefined}
                   duration={duration}
                   gradesArray={grade_levels.split(',')}
@@ -275,6 +289,7 @@ const CurriculumCatalog = ({
                   courseOfferingId={course_offering_id}
                   scriptId={script_id}
                   isStandAloneUnit={is_standalone_unit}
+                  onAssignSuccess={response => handleAssignSuccess(response)}
                   {...props}
                 />
               )
@@ -292,9 +307,9 @@ const CurriculumCatalog = ({
           <Heading5 className={style.noResultsHeading}>
             {i18n.noCurriculumSearchResultsHeader()}
           </Heading5>
-          <BodyOneText className={style.noResultsBody}>
+          <BodyTwoText className={style.noResultsBody}>
             {i18n.noCurriculumSearchResultsBody()}
-          </BodyOneText>
+          </BodyTwoText>
         </div>
       );
     }
@@ -309,6 +324,20 @@ const CurriculumCatalog = ({
         backgroundUrl={CourseCatalogBannerBackground}
         imageUrl={CourseCatalogIllustration01}
       />
+      {showAssignSuccessMessage && (
+        <div className={style.assignSuccessMessageContainer}>
+          <BodyTwoText className={style.assignSuccessMessage}>
+            {assignSuccessMessage}
+          </BodyTwoText>
+          <button
+            aria-label="close success message"
+            onClick={() => setShowAssignSuccessMessage(false)}
+            type="button"
+          >
+            <strong>X</strong>
+          </button>
+        </div>
+      )}
       <div className={style.catalogFiltersContainer}>
         <Heading6 className={style.catalogFiltersRowLabel}>
           {i18n.filterBy()}
@@ -338,12 +367,12 @@ const CurriculumCatalog = ({
       {!isEnglish && (
         <div className={style.catalogLanguageFilterRow}>
           <div className={style.catalogLanguageFilterRowNumAvailable}>
-            <BodyOneText>
+            <BodyTwoText>
               {i18n.numCurriculaAvailableInLanguage({
                 numCurricula: numFilteredTranslatedCurricula,
                 language: languageNativeName,
               })}
-            </BodyOneText>
+            </BodyTwoText>
             <FontAwesome
               icon="language"
               className="fa-solid"
