@@ -147,7 +147,7 @@ class LessonProgress extends Component {
 
     const onBonusLevel = this.isOnBonusLevel();
 
-    const currentLevelApp = levels.find(level => level.isCurrentLevel)?.app;
+    const currentLevel = levels.find(level => level.isCurrentLevel);
 
     return (
       <div className="react_stage" style={styles.container}>
@@ -170,10 +170,7 @@ class LessonProgress extends Component {
               // that level without reloading the page, we use a click handler which
               // calls through to the progress redux store to change to that level
               // immediately.
-              const onBubbleClick = canChangeLevelInPage(
-                currentLevelApp,
-                level.app
-              )
+              const onBubbleClick = canChangeLevelInPage(currentLevel, level)
                 ? () => navigateToLevelId(level.id)
                 : undefined;
 

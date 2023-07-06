@@ -59,6 +59,7 @@ export interface Level {
   title: number;
   url: string;
   status?: string;
+  usesLab2: boolean;
 }
 
 export interface LevelWithProgress extends Level {
