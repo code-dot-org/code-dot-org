@@ -214,7 +214,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     e = assert_raises ActiveRecord::RecordInvalid do
       create :pd_enrollment, school_info: nil
     end
-    assert e.message.include? 'Validation failed: School info is required'
+    assert_includes(e.message, 'Validation failed: School info is required')
 
     enrollment = create :pd_enrollment
     refute enrollment.update(school_info: nil)
@@ -230,7 +230,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     e = assert_raises ActiveRecord::RecordInvalid do
       create :pd_enrollment, last_name: ''
     end
-    assert e.message.include? 'Validation failed: Last name is required'
+    assert_includes(e.message, 'Validation failed: Last name is required')
 
     enrollment = create :pd_enrollment
     refute enrollment.update(last_name: '')
@@ -556,7 +556,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   test 'school info country required on create' do
     enrollment = build :pd_enrollment, school_info: create(:school_info_without_country)
     refute enrollment.valid?
-    assert enrollment.errors.full_messages.include? 'School info must have a country'
+    assert_includes(enrollment.errors.full_messages, 'School info must have a country')
   end
 
   test 'old enrollments with no school info country are grandfathered in' do
