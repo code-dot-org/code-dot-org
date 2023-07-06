@@ -117,7 +117,7 @@ function initPage() {
         redirectScriptUrl={scriptData.redirect_script_url}
         versions={scriptData.course_versions}
         courseName={scriptData.course_name}
-        showAssignButton={scriptData.showAssignButton}
+        showAssignButton={scriptData.show_assign_button}
         isProfessionalLearningCourse={scriptData.isPlCourse}
         userId={scriptData.user_id}
         userType={scriptData.user_type}
