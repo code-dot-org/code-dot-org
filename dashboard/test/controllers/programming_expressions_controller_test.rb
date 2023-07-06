@@ -27,7 +27,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     refute_creates(ProgrammingExpression) do
       post :create, params: {key: 'expression_key', name: 'expression name', programming_environment_id: destroyed_programming_env_id}
     end
-    assert @response.body.include? "Valid programming environment is required"
+    assert_includes(@response.body, "Valid programming environment is required")
   end
 
   test 'can update programming expression from params' do
