@@ -11,9 +11,9 @@ import {useSelector} from 'react-redux';
 import classNames from 'classnames';
 import moduleStyles from './Lab2Wrapper.module.scss';
 import ErrorBoundary from '../ErrorBoundary';
-import {isLabLoading} from '../labRedux';
+import {isLabLoading} from '../lab2Redux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {LabState} from '@cdo/apps/labs/labRedux';
+import {LabState} from '@cdo/apps/lab2/lab2Redux';
 const i18n = require('@cdo/locale');
 
 export interface Lab2WrapperProps {
