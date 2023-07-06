@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-27 15:55:07 UTC",
+    "serialized_at": "2023-07-05 23:07:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -16707,7 +16707,7 @@
     },
     {
       "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/1sAILZnk26g21FluRhU0pWqVDOMBZVrNAko1mSVeuKHM/view",
+      "url": "https://docs.google.com/document/d/10XQ5HTNnp2OlJm0w3cF9urOGdPUDTbdK2I4VYadeomU/view",
       "key": "interactive_card",
       "properties": {
         "audience": "Student",
