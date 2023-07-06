@@ -6,7 +6,7 @@
 
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import LabRegistry from '../lab2Registry';
+import Lab2Registry from '../Lab2Registry';
 import {setUpWithLevel, setUpWithoutLevel} from '../lab2Redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelectors';
@@ -59,7 +59,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
 
   useEffect(() => {
     window.addEventListener('beforeunload', event => {
-      const projectManager = LabRegistry.getInstance().getProjectManager();
+      const projectManager = Lab2Registry.getInstance().getProjectManager();
       // Force a save before the page unloads, if there are unsaved changes.
       // If we need to force a save, prevent navigation so we can save first.
       if (projectManager?.hasUnsavedChanges()) {
