@@ -219,19 +219,19 @@ img.video_thumbnail {
     text-overflow: ellipsis;
   }
 
-  @media screen and (min-width: 1011px) {
+  @media screen and (min-width: 1031px) {
     .show_on_tablet {
       display: none;
     }
   }
 
-  @media screen and (max-width: 1010px) {
+  @media screen and (max-width: 1030px) {
     .hide_on_tablet {
       display: none;
     }
   }
 
-  @media screen and (max-width: 1120px) {
+  @media screen and (max-width: 1140px) {
     .create_menu {
       display: none !important;
     }
