@@ -232,6 +232,16 @@ const CurriculumCatalog = ({
     handleUpdateFilter(filterKey, Object.keys(filterTypes[filterKey].options));
   };
 
+  const handleToggleLanguageFilter = isToggled => {
+    handleUpdateFilter('translated', isToggled);
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_TOGGLE_LANGUAGE_FILTER_EVENT,
+      {
+        toggle_setting: isToggled,
+      }
+    );
+  };
+
   // Clears all filter selections.
   const handleClear = useCallback(() => {
     setAppliedFilters(getEmptyFilters());
@@ -404,7 +414,7 @@ const CurriculumCatalog = ({
             })}
             size="m"
             checked={appliedFilters['translated']}
-            onChange={e => handleUpdateFilter('translated', e.target.checked)}
+            onChange={e => handleToggleLanguageFilter(e.target.checked)}
           />
         </div>
       )}
