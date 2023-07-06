@@ -1,7 +1,7 @@
 // This file contains a generic ProgressManager which any lab can include,
 // if it wants to make progress without reloading the page.
 
-import {LevelData} from '@cdo/apps/labs/types';
+import {ProjectLevelData} from '@cdo/apps/labs/types';
 
 // Abstract class that validates a set of conditions. How
 // the validation works is up to the implementor.
@@ -24,7 +24,7 @@ export const initialValidationState: ValidationState = {
 };
 
 export default class ProgressManager {
-  private levelData: LevelData | undefined;
+  private levelData: ProjectLevelData | undefined;
   private validator: Validator | undefined;
   private onProgressChange: () => void;
   private currentValidationState: ValidationState;
@@ -39,7 +39,7 @@ export default class ProgressManager {
    * Update the ProgressManager with level data for a new level.
    * Resets validation status internally.
    */
-  onLevelChange(levelData: LevelData) {
+  onLevelChange(levelData: ProjectLevelData) {
     this.levelData = levelData;
     this.resetValidation();
   }
