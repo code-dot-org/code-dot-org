@@ -1,7 +1,7 @@
 // This file contains a generic ProgressManager which any lab can include,
 // if it wants to make progress without reloading the page.
 
-import {ProjectLevelData} from '@cdo/apps/labs/types';
+import {ProjectLevelData} from '@cdo/apps/lab2/types';
 
 // Abstract class that validates a set of conditions. How
 // the validation works is up to the implementor.
