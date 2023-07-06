@@ -324,9 +324,9 @@ const CurriculumCatalog = ({
       />
       {showAssignSuccessMessage && (
         <div className={style.assignSuccessMessageContainer}>
-          <BodyOneText className={style.assignSuccessMessage}>
+          <BodyTwoText className={style.assignSuccessMessage}>
             {assignSuccessMessage}
-          </BodyOneText>
+          </BodyTwoText>
           <button
             aria-label="close success message"
             onClick={() => setShowAssignSuccessMessage(false)}
