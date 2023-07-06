@@ -1,7 +1,7 @@
 @import 'color.scss';
 
 // We actually fade out the block to reveal the lab underneath.
-// We will do it over 1s.
+// We will do it over 1s, and then leave it invisible.
 @keyframes fade-out-block {
   0% {
     opacity: 1;
@@ -11,7 +11,7 @@
   }
 }
 
-// We will fade in the spinner container for 1s after a 2s delay.
+// We will fade in the spinner container for 1s after a 2s delay, then leave it showing.
 @keyframes fade-in-spinner-container {
   0% {
     opacity: 0;
@@ -24,7 +24,7 @@
   }
 }
 
-// We will fade in the spinner text for 1s after a 10s delay.
+// We will fade in the spinner text for 1s after a 10s delay, then leave it showing.
 @keyframes fade-in-spinner-text {
   0% {
     opacity: 0;
