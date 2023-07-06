@@ -1,4 +1,4 @@
-import {logWarning} from '../utils/MusicMetrics';
+import {logWarning, reportLoadTime} from '../utils/MusicMetrics';
 import {Effects} from './interfaces/Effects';
 import MusicLibrary from './MusicLibrary';
 
@@ -72,6 +72,11 @@ export default class SamplePlayer {
       releaseTimeSeconds: secondsPerBeat * RELEASE_DURATION_FACTOR,
       // Use a delay value of a half of a beat
       delayTimeSeconds: secondsPerBeat / 2,
+      reportSoundLibraryLoadTime: (loadTimeMs: number) => {
+        reportLoadTime('SoundLibraryLoadTime', loadTimeMs, [
+          {name: 'Library', value: library.name},
+        ]);
+      },
     });
 
     this.groupPath = library.groups[0].path;
