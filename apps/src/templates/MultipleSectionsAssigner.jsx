@@ -13,7 +13,11 @@ import {
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 
-import {Heading3, Heading5} from '@cdo/apps/componentLibrary/typography';
+import {
+  Heading3,
+  Heading5,
+  BodyTwoText,
+} from '@cdo/apps/componentLibrary/typography';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 
 import moduleStyle from './multiple-sections-assigner.module.scss';
@@ -201,8 +205,7 @@ const MultipleSectionsAssigner = ({
         <Heading3>{i18n.chooseSectionsPrompt({assignmentName})}</Heading3>
       </div>
       <div className={moduleStyle.sectionsDirections}>
-        {/*TODO: add Body-two here*/}
-        <p>{sectionDirections}</p>
+        <BodyTwoText>{sectionDirections}</BodyTwoText>
       </div>
       <div
         className={classnames(
