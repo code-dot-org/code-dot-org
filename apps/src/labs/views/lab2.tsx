@@ -22,7 +22,6 @@ import MusicView from '@cdo/apps/music/views/MusicView';
 interface AppProperties {
   name: string;
   usesChannel: boolean;
-  usesProgressManager: boolean;
   backgroundMode: boolean;
   node: React.ReactNode;
 }
@@ -31,14 +30,12 @@ const appsProperties: AppProperties[] = [
   {
     name: 'music',
     usesChannel: true,
-    usesProgressManager: true,
     backgroundMode: true,
     node: <MusicView />,
   },
   {
     name: 'standalone_video',
     usesChannel: false,
-    usesProgressManager: true,
     backgroundMode: false,
     node: <StandaloneVideo />,
   },
