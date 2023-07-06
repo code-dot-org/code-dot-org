@@ -122,8 +122,7 @@ class FollowerTest < ActiveSupport::TestCase
     pl_participant.save!
 
     assert_raises(ActiveRecord::RecordInvalid) do
-      #create :follower, student_user
-      Follower.create!(section_id: pl_section.id, student_user_id: pl_participant.id)
+      create :follower, section: pl_section, student_user: pl_participant
     end
 
     DCDO.unstub(:get)
