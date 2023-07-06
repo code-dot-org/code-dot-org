@@ -12,7 +12,10 @@ export default {
 const MultipleTemplate = (args = []) => (
   <>
     {args.components?.map(componentArg => (
-      <Typography key={componentArg.name} {...componentArg} />
+      <Typography
+        key={`${componentArg.semanticTag}-${componentArg.visualAppearance}`}
+        {...componentArg}
+      />
     ))}
   </>
 );
