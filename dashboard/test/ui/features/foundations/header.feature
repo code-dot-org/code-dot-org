@@ -23,7 +23,7 @@ Scenario: Student in English should see 2 header links
   Given I create a student named "Sally Student" and go home
   And I wait to see ".headerlinks"
   And I see "#header-student-courses"
-  And element "#header-student-courses" contains text "Course Catalog"
+  And element "#header-student-courses" contains text "Curriculum Catalog"
   And I see "#header-student-projects"
   And element "#header-student-projects" contains text "Projects"
 
@@ -33,7 +33,7 @@ Scenario: Teacher in English should see 5 header links
   And I see "#header-teacher-home"
   And element "#header-teacher-home" contains text "My Dashboard"
   And I see "#header-teacher-courses"
-  And element "#header-teacher-courses" contains text "Course Catalog"
+  And element "#header-teacher-courses" contains text "Curriculum Catalog"
   And I see "#header-teacher-projects"
   And element "#header-teacher-projects" contains text "Projects"
   And I see "#header-teacher-professional-learning"

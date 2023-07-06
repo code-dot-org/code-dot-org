@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-28 19:11:36 UTC",
+    "serialized_at": "2023-07-05 19:05:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -90,7 +90,7 @@
     },
     {
       "key": "lesson-6",
-      "name": "Unit 1: The Problem Solving Process in CS Dicoveries ",
+      "name": "Unit 1: The Problem Solving Process in CS Discoveries ",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,

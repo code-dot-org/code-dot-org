@@ -25,6 +25,7 @@ const MultipleSectionsAssigner = ({
   isStandAloneUnit,
   participantAudience,
   onAssignSuccess,
+  sectionDirections = i18n.chooseSectionsDirections(),
   // Redux
   sections,
   unassignSection,
@@ -192,7 +193,7 @@ const MultipleSectionsAssigner = ({
       >
         {i18n.chooseSectionsPrompt({assignmentName})}
       </div>
-      <div style={styles.content}>{i18n.chooseSectionsDirections()}</div>
+      <div style={styles.content}>{sectionDirections}</div>
       <div style={styles.header} className="uitest-confirm-assignment-dialog">
         {i18n.yourSectionsList()}
       </div>
@@ -251,6 +252,7 @@ MultipleSectionsAssigner.propTypes = {
   isStandAloneUnit: PropTypes.bool,
   participantAudience: PropTypes.string,
   onAssignSuccess: PropTypes.func,
+  sectionDirections: PropTypes.string,
   // Redux
   sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
   unassignSection: PropTypes.func.isRequired,
