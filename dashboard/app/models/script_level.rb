@@ -713,7 +713,7 @@ class ScriptLevel < ApplicationRecord
         when GamelabJr
           send("#{level.standalone_app_name_or_default}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         when Artist
-          artist_type = ['elsa', 'anna'].include?(level.skin) ? 'frozen' : 'artist'
+          artist_type = (level.skin == 'elsa' || level.skin == 'anna') ? 'frozen' : 'artist'
           send("#{artist_type}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         when Studio # playlab
           send("#{'playlab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)

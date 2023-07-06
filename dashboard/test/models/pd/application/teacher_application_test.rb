@@ -216,7 +216,15 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop multiple local workshops' do
-      workshops = (1..3).map {|i| create :workshop, num_sessions: 2, sessions_from: Time.zone.today + i, location_address: %w(tba TBA tba)[i - 1]}
+      addresses = %w(tba TBA tba)
+      workshops = (1..3).map do |i|
+        create(
+          :workshop,
+          num_sessions: 2,
+          sessions_from: Time.zone.today + i,
+          location_address: addresses[i - 1]
+        )
+      end
 
       application = create :pd_teacher_application, form_data_hash: (
       build(:pd_teacher_application_hash, :with_multiple_workshops,
