@@ -122,7 +122,7 @@ module Api::V1::Pd
       csf_workshop = create :csf_workshop,
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour
-      facilitator_id = csf_workshop.facilitators.pluck(:id).first
+      facilitator_id = csf_workshop.facilitators.pick(:id)
       create_list :csf_intro_post_workshop_submission, 1, :answers_low, pd_workshop_id: csf_workshop.id
       create_list :csf_intro_post_workshop_submission, 5, :answers_high, pd_workshop_id: csf_workshop.id
 
@@ -157,7 +157,7 @@ module Api::V1::Pd
       response = JSON.parse(@response.body, symbolize_names: true)
 
       overall_facilitator_rollup_facilitator = response[:workshop_rollups][:facilitator][:overall_facilitator]
-      csf_workshop_1_facilitator = csf_workshop_1.facilitators.pluck(:id).first.to_s.to_sym
+      csf_workshop_1_facilitator = csf_workshop_1.facilitators.pick(:id).to_s.to_sym
       assert_equal 5, overall_facilitator_rollup_facilitator[csf_workshop_1_facilitator][:response_count]
     end
 
