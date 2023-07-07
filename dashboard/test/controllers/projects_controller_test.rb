@@ -431,6 +431,7 @@ class ProjectsControllerTest < ActionController::TestCase
 
     get :show, params: {path: "/projects/music/#{channel_id}/view", key: 'music', channel_id: channel_id, readonly: true}
     assert_response :redirect
+    assert_redirected_to "/projects/music/#{channel_id}/edit"
   end
 
   test 'on lab2 levels navigating to /edit redirects to /view if user is not project owner' do
@@ -439,5 +440,6 @@ class ProjectsControllerTest < ActionController::TestCase
 
     get :edit, params: {path: "/projects/music/#{channel_id}/edit", key: 'music', channel_id: channel_id}
     assert_response :redirect
+    assert_redirected_to "/projects/music/#{channel_id}/view"
   end
 end
