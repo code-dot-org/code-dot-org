@@ -1149,7 +1149,8 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show assign button' do
-    unit = create(:script, name: 'script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+    unit = create(:course_version, :with_unit).content_root
+    unit.update!(name: 'script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
     teacher = create(:teacher)
 
     # No user, show_assign_button set to false
