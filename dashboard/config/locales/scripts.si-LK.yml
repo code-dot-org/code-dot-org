@@ -1602,3 +1602,7 @@ si:
               display_name: ඩිජිටල් පුරවැසිකම
             lessonGroup-4:
               display_name: විචල්‍යන්
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: දත්ත
