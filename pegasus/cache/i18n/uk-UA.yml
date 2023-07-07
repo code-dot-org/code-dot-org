@@ -689,7 +689,7 @@ uk-UA:
   volunteer_engineer_submission_field_company: Компанія (або університет)
   volunteer_engineer_submission_field_company_placeholder: Компанія (або університет)
   volunteer_engineer_submission_field_experience_level: Рівень досвіду
-  volunteer_engineer_submission_field_location: Місце знаходження
+  volunteer_engineer_submission_field_location: Розташування
   volunteer_engineer_submission_field_location_desc: Якщо ви вкажете свою точну адресу,
     ми не будемо її показувати, просто поставимо мітку на карті.
   volunteer_engineer_submission_field_location_placeholder: Поштовий індекс, місто
@@ -2311,6 +2311,7 @@ uk-UA:
   footer_donate: Підтримати
   footer_support: Довідка та спільнота
   footer_terms: Умови
+  ai_for_oceans: Штучний інтелект для океанів
   ai_for_oceans_lesson_plan: план уроку
   ai_in_partnership_with: У партнерстві з
   ai_microsoft_thanks: Ми дякуємо Microsoft за підтримку нашого бачення та місії щодо
