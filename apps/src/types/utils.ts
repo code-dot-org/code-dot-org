@@ -3,7 +3,7 @@
 // If undefined is passed in, then the provided defaultValue is returned.
 // Some of our server APIs will return strings rather than booleans.
 export function convertOptionalStringToBoolean(
-  value: 'true' | 'false' | true | false | undefined,
+  value: 'true' | 'false' | boolean | undefined,
   defaultValue: boolean
 ) {
   if (typeof value === 'boolean') {
