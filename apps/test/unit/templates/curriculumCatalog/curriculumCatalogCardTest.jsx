@@ -284,7 +284,7 @@ describe('CurriculumCatalogCard', () => {
     fireEvent.click(assignButton);
     sections.forEach(section => screen.getByText(section.name));
     screen.getByText('The most recent recommended version', {exact: false});
-    screen.getByRole('heading', defaultProps.courseDisplayNameWithYear);
+    screen.getByText(defaultProps.courseDisplayNameWithYear, {exact: false});
   });
 
   it('clicking Assign button as a teacher without sections shows dialog to create section', () => {
