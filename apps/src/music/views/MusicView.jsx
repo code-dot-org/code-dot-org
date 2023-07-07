@@ -48,7 +48,7 @@ import {
   setIsLoading,
   setIsPageError,
   setLabReadyForReload,
-} from '@cdo/apps/labs/labRedux';
+} from '@cdo/apps/lab2/lab2Redux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode} from '../constants';
@@ -61,9 +61,9 @@ import {
 import {logError} from '../utils/MusicMetrics';
 import musicI18n from '../locale';
 import UpdateTimer from './UpdateTimer';
-import ValidatorProvider from '@cdo/apps/labs/progress/ValidatorProvider';
+import ValidatorProvider from '@cdo/apps/lab2/progress/ValidatorProvider';
 import {Key} from '../utils/Notes';
-import LabRegistry from '@cdo/apps/labs/LabRegistry';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -479,7 +479,7 @@ class UnconnectedMusicView extends React.Component {
       };
     }
 
-    LabRegistry.getInstance()
+    Lab2Registry.getInstance()
       .getProjectManager()
       ?.save(sourcesToSave, forceSave);
   };

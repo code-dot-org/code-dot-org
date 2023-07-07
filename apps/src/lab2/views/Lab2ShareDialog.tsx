@@ -1,7 +1,7 @@
 import ShareDialog from '@cdo/apps/code-studio/components/ShareDialog';
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {LabState} from '../labRedux';
+import {LabState} from '../lab2Redux';
 import {isSignedIn as getIsSignedIn} from '@cdo/apps/templates/currentUserRedux';
 import popupWindow from '@cdo/apps/code-studio/popup-window';
 
