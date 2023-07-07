@@ -114,7 +114,7 @@ class CourseOffering < ApplicationRecord
     latest_published_version(locale_code).content_root.link
   end
 
-  def display_name_with_year(locale_code = 'en-us')
+  def display_name_with_latest_year(locale_code = 'en-us')
     return localized_display_name unless latest_published_version(locale_code)
     latest_published_version(locale_code).content_root.localized_assignment_family_title
   end
@@ -285,7 +285,7 @@ class CourseOffering < ApplicationRecord
     {
       key: key,
       display_name: display_name,
-      display_name_with_year: display_name_with_year(locale_code),
+      display_name_with_latest_year: display_name_with_latest_year(locale_code),
       grade_levels: grade_levels,
       duration: duration,
       image: image,
