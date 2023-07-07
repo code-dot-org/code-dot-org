@@ -1663,3 +1663,7 @@ sq:
               display_name: Shtetësi Dixhitale
             lessonGroup-4:
               display_name: variabla
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: të dhëna

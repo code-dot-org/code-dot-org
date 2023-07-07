@@ -1532,9 +1532,9 @@
         "CSD Counter Pattern Map": "Lo schema a contatore",
         "CSD Counter Pattern Map_2018": "Lo schema a contatore",
         "CSD Counter Pattern Map_2019": "Lo schema a contatore",
-        "CSD If Else Map": "Dichiarazioni se/altrimenti",
-        "CSD If Else Map_2018": "Dichiarazioni se/altrimenti",
-        "CSD If Else Map_2019": "Dichiarazioni se/altrimenti",
+        "CSD If Else Map": "Istruzioni condizionali Se/Altrimenti",
+        "CSD If Else Map_2018": "Istruzioni condizionali Se/Altrimenti",
+        "CSD If Else Map_2019": "Istruzioni condizionali Se/Altrimenti",
         "CSD U4 Design Elements Map": "Elementi della \"Modalità Interfaccia\"",
         "CSD U4 Design Elements Map_2018": "Elementi della \"Modalità Interfaccia\"",
         "CSD U4 Design Elements Map_2019": "Elementi della \"Modalità Interfaccia\"",
@@ -1585,7 +1585,11 @@
         "CSD U3 Complex Movement counter prediction gamelab_2022": "Velocità e Schema di Conteggio",
         "CSD U6 - Board Outputs - ChalF_2222": "App musicale",
         "courseD_artist_nestedLoops82022": "Esagoni",
-        "courseD_artist_nestedLoops92022": "Forme Fantasiose"
+        "courseD_artist_nestedLoops92022": "Forme Fantasiose",
+        "CSD U6 circuit logic video": "Circuiti e logica",
+        "CSD U6 circuit logic video_2018": "Circuiti e logica",
+        "CSD U6 circuit logic video_2019": "Circuiti e logica",
+        "CSD U6 circuit logic video_2021": "Circuiti e logica"
       }
     }
   }
