@@ -721,6 +721,11 @@ fr:
         csa_sorting_algorithms: 'CSA : Algorithmes de tri'
         star_quilts_intro_to_artist: 'Star Quilts : présentation de l''artiste'
         upload_sprites_backgrounds: Téléchargement de sprites et d'arrière-plans personnalisés
+        PL_CSD_EquityBlindSpotsvid: Biais & Responsabilité
+        how-ai-works-llms-full: Comment Marchent les Chatbots et les Grands Modèles de Langage
+        how-ai-works-creativity-full: L'IA a-t-elle de la Créativité et de l'Imagination?
+        how-ai-works-llms-part1: Chatbots et Grands Modèles de Langage Partie 1
+        how-ai-works-llms-part2: Chatbots et Grands Modèles de Langage Partie 2
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.
