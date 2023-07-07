@@ -53,6 +53,13 @@
         }
       }
     },
+    "bike_sharing": {
+      "fields": {
+        "Month": {
+          "id": "Mes"
+        }
+      }
+    },
     "poutine_toy": {
       "fields": {
         "mushrooms": {

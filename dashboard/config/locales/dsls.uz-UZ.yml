@@ -9715,7 +9715,7 @@ uz-UZ:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: Web dasturlash
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true

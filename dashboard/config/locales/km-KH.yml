@@ -305,7 +305,7 @@ km:
       finished_hoc: ខ្ញុំបានបញ្ចប់វគ្គ Hour of Code​​ របស់ខ្ញុំ។
       sign_in_to_save: ចូលទៅកាន់គណនីដើម្បីកត់ទុកនូវតំណើរការ
       my_dashboard: ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ
-      course_catalog: មុខវិជ្ជាដោយផ្នែក
+      course_catalog: កាតាឡុកវគ្គសិក្សា
       project_gallery: គម្រោង​
       sections: វគ្គ
       help_support: ជំនួយ និងការគាំទ្រ
@@ -363,7 +363,7 @@ km:
       basketball: កីឡាបាល់បោះ
       bounce: បាល់​លោត
       dance: Dance Party
-      gamelab: មន្ទីរពិសោធន៍ ល្បែង
+      gamelab: មន្ទីរពិសោធន៍ហ្គេម
       gamelab_jr: បន្ទប់ហ្គេម (beta)
       gumball: The Amazing World of Gumball
       iceage: Ice Age
@@ -372,7 +372,7 @@ km:
       minecraft_designer: ម៉ាញក្រាស់
       playlab_k1: បន្ទប់លេង (សម្រាប់អ្នកដែលទើបរៀនអាន)
       poetry: កំណាព្យ
-      spritelab: Sprite Lab
+      spritelab: 'មន្ទីរពិសោធន៍ Sprite '
       starwarsblocks: Star Wars (ប្លុក)
       starwarsblocks_hour: Star Wars (ប្លុក)
       loading: កំពុង​ដំណើរការ...
@@ -554,7 +554,7 @@ km:
       body: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ?
         សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
     gamelab:
-      title: មន្ទីរពិសោធន៍ ល្បែង
+      title: មន្ទីរពិសោធន៍ហ្គេម
     hero:
       title: ម៉ាញក្រាស់
       body: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌!
@@ -599,7 +599,7 @@ km:
     correct_title: ត្រឹម​ត្រូវ
     correct_body: នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។
   lesson_extras:
-    bonus_level: 'ល្បែងផ្គុំរូបន្ថែម '
+    bonus_level: កម្រិតបន្ថែម
   dialog:
     ok: យល់ព្រម
     startover_title: តើ​អ្នក​ពិត​ជា​ចង់​ចាប់ផ្ដើម​ឡើង​វិញ​មែនទេ?

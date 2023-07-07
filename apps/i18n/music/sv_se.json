@@ -18,5 +18,6 @@
   "startOver": "Börja om",
   "upload": "Ladda upp",
   "panelHeaderInstructions": "Instruktioner",
-  "panelHeaderWorkspace": "Arbetsyta: "
+  "panelHeaderWorkspace": "Arbetsyta: ",
+  "continue": "Fortsätt"
 }

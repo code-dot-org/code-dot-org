@@ -1312,7 +1312,9 @@ te:
             '"down"': డౌన్ బాణం
             '"left"': ఎడమ బాణం
             '"right"': కుడి బాణం
+            '"w"': డబ్ల్యు
             '"a"': ఒక
+            '"s"': ఎస్
             '"d"': D
       Mikelab_whenKeyReleased:
         options:
@@ -1321,7 +1323,9 @@ te:
             '"down"': డౌన్ బాణం
             '"left"': ఎడమ బాణం
             '"right"': కుడి బాణం
+            '"w"': డబ్ల్యు
             '"a"': ఒక
+            '"s"': ఎస్
             '"d"': D
       Mikelab_whenYesNoClicked:
         options:
@@ -1482,6 +1486,10 @@ te:
             '13': '13'
             '14': '14'
             '15': '15'
+      RyanLab_turnLeft:
+        text: ఎడమవైపు తిరగండి
+      RyanLab_turnRight:
+        text: కుడివైపు తిరగండి
       aalab_layoutSprites:
         options:
           FORMAT:

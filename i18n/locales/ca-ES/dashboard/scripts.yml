@@ -151,6 +151,7 @@ ca:
           description_short: Ensenyar Àlgebra a través de la Programació Funcional
           student_description: Ensenyar Àlgebra a través de la Programació Funcional
         text-compression:
+          title: Compressió de text
           description: Comprimeix text identificant patrons repetits.
           description_short: Comprimeix text identificant patrons repetits.
           student_description: Comprimeix text identificant patrons repetits.
@@ -7558,7 +7559,7 @@ ca:
             lessonGroup-2:
               display_name: Ensenyament d'Intel·ligència Artificial i Aprenentatge Automàtic
           name: auto-paced-pl-csd5-2023
-          title: Ensenyar I.A. i aprenentatge automàtic
+          title: Preparació per ensenyar IA i aprenentatge automàtic
           description: "Aquest mòdul d'aprenentatge professional està dissenyat per ajudar-vos a preparar-vos per ensenyar la unitat d'AI i Aprenentatge Automàtic de Code.org.  \n\n\\*\\*En aquest mòdul d'aprenentatge professional, vostè serà: \\*\\*\n\n-   Obtenir una introducció a la intel·ligència artificial i l'aprenentatge automàtic. \n-   Practicar conceptes clau inclosos en la unitat.\n-   Participa amb AI Lab i App Lab.\n-   Explorar projectes de final de capítol. \n-   Feu un pla d'implementació de la unitat amb els vostres alumnes.\n\n\\*\\* Temps suggerit: \\*\\* 120 minuts"
           student_description: "Aquest mòdul d'aprenentatge professional està dissenyat per ajudar-vos a preparar-vos per ensenyar la unitat d'AI i Aprenentatge Automàtic de Code.org.  \n\n\\*\\*En aquest mòdul d'aprenentatge professional, vostè serà: \\*\\*\n\n-   Obtenir una introducció a la intel·ligència artificial i l'aprenentatge automàtic. \n-   Practicar conceptes clau inclosos en la unitat.\n-   Participa amb AI Lab i App Lab.\n-   Explorar projectes de final de capítol. \n-   Feu un pla d'implementació de la unitat amb els vostres alumnes.\n\n\\*\\* Temps suggerit: \\*\\* 120 minuts"
         pl-csd-summer-day1:
@@ -7842,3 +7843,7 @@ ca:
             -   Obteniu informació sobre les oportunitats per connectar-vos amb la comunitat CS més àmplia.
 
             \*\* Temps suggerit: 70 minuts
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Dades
