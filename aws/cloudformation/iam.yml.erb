@@ -306,6 +306,7 @@ roles = {
     GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
     ManagedPolicyArns: [
       'arn:aws:iam::aws:policy/ReadOnlyAccess',
+      '!Ref DenySecretsPolicy'
     ]
   },
   EngineeringFullAccessRole: {
@@ -553,7 +554,29 @@ roles.each do |name, config| %>
               - s3:GetObjectVersionTagging
             Resource:
               - arn:aws:s3:::cdo-animation-library/*
-  
+
+  DenySecretsPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: DenySecretsPolicy
+      Path: /engineering/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Deny
+            Action: secretsmanager:GetSecretValue
+            Resource:
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:production/cdo/*
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:levelbuilder/cdo/*
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:test/cdo/*
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnCfnStack/*
+          - Effect: Allow
+            Action: secretsmanager:GetSecretValue
+            Resource:
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/*
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:adhoc/cdo/*
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnCfnStack/*
+
   ContributorSecretsPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
