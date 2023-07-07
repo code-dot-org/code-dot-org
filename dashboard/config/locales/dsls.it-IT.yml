@@ -13183,7 +13183,7 @@ it-IT:
         - text: Non sono sicuro di cosa si tratti
           correct: true
         questions:
-        - {}
+        - text: Sviluppo Web
       csd-post-survey-2019-I like cs:
         answers:
         - text: Sono del tutto d'accordo
@@ -22995,3 +22995,31 @@ it-IT:
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?
+      OPD-K5 CS Courses_dani:
+        markdown: "# Pianificazione > Guida introduttiva a Code.org\n\n\n## Fase 1:
+          Scegli un corso\nTutti i nostri corsi, dai pre-lettori ai liceali, sono
+          elencati nel no** [catalogo dei corsi] (https://studio.code.org/courses)
+          **. Per trovare le lezioni di Fondamenti CS con cui ti sei esercitato, vai
+          alla nostra ** [pagina elementare] (https://code.org/educate/curriculum/elementary-school)
+          ** e scorri verso il basso fino alla sezione «Corsi». Tutti i nostri corsi
+          sono disponibili gratuitamente. Parla con i colleghi della tua scuola per
+          determinare in che modo il curriculum del corso può essere integrato con
+          una varietà di materie.\n! [] (https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Passaggio 2: Configura la sezione della classe\nConfigura una sezione per
+          visualizzare i progressi dei tuoi studenti, stampare le schede di accesso
+          per i tuoi studenti, gestire i loro account e stampare i certificati che
+          possono portare a casa quando finiscono il corso. Clicca su questo link
+          per ** [guardare un breve video] (https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)
+          ** che dimostra come organizzare la tua prima lezione di informatica su
+          Code.org. Puoi trovare i passaggi anche in ** [questo articolo di supporto]
+          (https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)
+          **.\n! [] (https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Fase 3: Assegna il corso alla tua sezione\nClicca sul corso che stai insegnando:
+          dovresti vedere una schermata simile a quella qui sotto. Puoi quindi cliccare
+          su «Assegna corso» e assegnare quel corso a una delle tue sezioni. \n! []
+          (https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Fase 4: Inizia a insegnare! \nBasta una lezione per portare i concetti di
+          informatica nella tua classe. Una volta notato l'entusiasmo dei tuoi studenti
+          per il CS, vai oltre con i piani di lezione giornalieri per guidare i tuoi
+          studenti, le attività scollegate che puoi svolgere senza un computer e i
+          forum per connetterti con altri insegnanti."

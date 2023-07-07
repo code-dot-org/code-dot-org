@@ -17,6 +17,7 @@ const Template = args => (
 
 const defaultArgs = {
   courseDisplayName: 'Computer Science Principles',
+  courseDisplayNameWithYear: 'Computer Science Principles (22-23)',
   duration: 'school_year',
   gradesArray: ['1', '2', '3', '4'],
   topics: ['programming', 'artificial_intelligence', 'art_and_design'],

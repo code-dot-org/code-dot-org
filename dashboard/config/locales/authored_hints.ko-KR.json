@@ -9322,40 +9322,40 @@
           "courseB_starWars_prog9_c": "여기서 '반복' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml>루프가 도움이 될까요?"
         },
         "courseC19_playLab_EOC1_2021": {
-          "courseE_playLab_scaffold1_a": "`액터 1을 ??? 이미지에 설정` 블록은 액터를 무대에 추가할 때 사용할 수 있어요.",
-          "courseE_playLab_scaffold1_b": "`액터 설정` 블록을 `실행 시` 아래에 놓아 프로그램 시작 시 액터가 나오게 만드세요.",
+          "courseE_playLab_scaffold1_a": "`배우 1을 ??? 이미지에 설정` 블록은 배우를 무대에 추가할 때 사용할 수 있어요.",
+          "courseE_playLab_scaffold1_b": "`배우 설정` 블록을 `실행 시` 블록 아래에 놓아 프로그램 시작 시 배우가 나오게 만드세요.",
           "courseE_playLab_scaffold1_c": "`??? 배경 설정`을 사용하여 장면의 배경을 선택하세요."
         },
         "courseC19_playLab_EOC2_2021": {
-          "courseE_playLab_scaffold1_b": "`화살표일 때` 이벤트 블록이 네 개가 있고 각각 아래에 이동 방향이 있어야 합니다.",
+          "courseE_playLab_scaffold1_b": "`화살표일 때` 이벤트 블록 네 개가 있고 각각 아래에 이동 방향이 있어야 합니다.",
           "courseE_playLab_scaffold1_c": "모두 마쳤으면, 화살표 키로 주인공을 이동시킬 수 있어야 합니다!",
-          "playlab_up": "액터를 위로 이동하기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_down": "액터를 아래로 이동하기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_left": "액터를 왼쪽으로 이동하기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_right": "액터를 오른쪽으로 이동하기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> "
+          "playlab_up": "배우를 위로 이동시키기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_down": "배우를 아래로 이동시키기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "배우를 왼쪽으로 이동시키기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "배우를 오른쪽으로 이동시키기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> "
         },
         "courseC19_playLab_EOC4_2021": {
-          "courseE_playLab_scaffold4_a": "`포인트 점수`를 사용하여 1 포인트를 추가하고 `포인트 제거`는 점수를 차감합니다."
+          "courseE_playLab_scaffold4_a": "`점수 얻기`를 사용하여 점수를 얻고 `점수 제거`로 점수를 잃습니다."
         },
         "courseC_PlayLab_events1_2021": {
-          "courseC_PlayLab_events1_a": "이 블록을 '실행 시' 블록에 부착하세요:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events1_a": "이 블록을 '실행 시' 블록에 연결하세요:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events2_2021": {
-          "courseC_PlayLab_events2_a": "이러한 블록 중 두 개를 '실행 시' 블록에 부착하세요:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml> ",
+          "courseC_PlayLab_events2_a": "두 개의 블록을 '실행 시' 블록에 연결하세요:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml> ",
           "courseC_PlayLab_events2_b": "두 번째 `액터 __ 말하기` 블록 위 드롭다운 메뉴를 사용하여 말할 액터를 변경하세요."
         },
         "courseC_PlayLab_events3_2021": {
           "courseC_PlayLab_events3_a": "이 퍼즐을 풀려면 조르즈를 우측으로 약 25픽셀만 이동하면 됩니다.",
           "courseC_PlayLab_events3_b": "액터를 움직이게 할 것처럼 보이는 블록이 툴박스에 있습니까? ",
-          "courseC_PlayLab_events3_c": "이 블록을 '실행 시' 블록에 부착하세요:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+          "courseC_PlayLab_events3_c": "이 블록을 '실행 시' 블록에 연결하세요:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events4_2021": {
           "courseC_PlayLab_events4_b": "'실행' 버튼을 클릭할 때, 조르즈는 우측으로 **100** 픽셀 이동하여 고양이 올리브에게 다가 가야 합니다.",
-          "courseC_PlayLab_events4_a": "이 퍼즐을 풀기 위해 `액터 __ 말하기` 블록을 '액터가 터치할 때' 이벤트에 부착해야 합니다."
+          "courseC_PlayLab_events4_a": "이 퍼즐을 풀기 위해 `액터 __ 말하기` 블록을 '액터가 터치할 때' 이벤트에 연결해야 합니다."
         },
         "courseC_PlayLab_events5_2021": {
           "courseC_PlayLab_events5_a": "`액터 말하기` 블록 내 드롭다운 메뉴를 클릭하여 \"잘 지내요?\"라는 텍스트를 찾아야 합니다.",
-          "courseC_PlayLab_events5_b": "프로그램이 잘 되는지 확인하기 위해 프로그램 실행 시 옥타비아를 클릭하세요!"
+          "courseC_PlayLab_events5_b": "프로그램이 잘 실행되는지 확인하기 위해 프로그램 실행 시 옥타비아를 클릭하세요!"
         },
         "courseC_PlayLab_events6_2021": {
           "courseC_PlayLab_events6_a": "각각의 녹색 '화살표일 때' 블록에는 그 아래에 한 개의 액션이 있어야 합니다.",
@@ -9367,7 +9367,7 @@
           "courseC_PlayLab_events7_b": " '무한 반복' 루프는 다른 이벤트 블록과 연결시킬 필요가 없으며, 자체적으로 실행될 것입니다."
         },
         "courseC_PlayLab_events8_2021": {
-          "courseC_PlayLab_events8_a": "일이 맞게 벌어지게 만들기 위해, 블록을 '액터가 터치할 때' 블록에 연결해야 합니다.",
+          "courseC_PlayLab_events8_a": "상황에 맞게 실행되기 위해, 블록을 '액터가 터치할 때' 블록에 연결해야 합니다.",
           "courseC_PlayLab_events8_b": "툴박스 내 '액터 말하기'와 '소리 내기' 블록이 도움을 주어야 합니다."
         },
         "courseC_PlayLab_events9_2021": {
@@ -9508,13 +9508,13 @@
         },
         "courseC_flappy_events2_2021": {
           "courseC_flappy_events2_a": "추가할 때 필요한 블록은 '속도 설정'이라 부릅니다. ",
-          "courseC_flappy_events2_b": "`속도 설정` 블록을 `실행 시` 블록에 연결하여 이 퍼즐을 푸세요."
+          "courseC_flappy_events2_b": "`속도 설정` 블록을 `실행 시` 블록에 연결하세요."
         },
         "courseC_flappy_events3_2021": {
           "courseC_flappy_events3_a": "뭔가 맞게 되고 있지 않으면, 블록이 워크스페이스 내 맞는 이벤트에 연결되어 있는지 확인하세요. "
         },
         "courseC_flappy_events4_2021": {
-          "courseC_flappy_events4_a": "`게임 끝내기` 블록을 `장애물에 부딪칠 때`에 연결하여 이 퍼즐을 푸세요."
+          "courseC_flappy_events4_a": "이 퍼즐을 풀기 위해 `게임 끝내기` 블록을 `장애물에 부딪칠 때`에 연결하세요."
         },
         "courseC_flappy_events5_2021": {
           "courseC_flappy_events5_a": "이 레벨을 통과하기 위해 '1 포인트 점수 올리기' 블록을 사용해야 합니다."
@@ -9526,54 +9526,54 @@
           "courseC_flappy_events7_a": "`장면 설정` 블록을 사용하여 배경을 변경시킬 수 있습니다. "
         },
         "courseC_flappy_events8_2021": {
-          "courseC_flappy_events8_a": "이 레벨을 통과하기 위해 두 번째 '장면 설정' 블록을 '장애물 통과 시' 이벤트 하에서 연결해 보세요."
+          "courseC_flappy_events8_a": "이 레벨을 통과하기 위해 두 번째 '장면 설정' 블록을 '장애물 통과 시' 이벤트에 연결해 보세요."
         },
         "courseC_flappy_events9_2021": {
           "courseC_flappy_events9_a": "이 레벨을 통과하기 위해 '점수를 0으로 설정' 블록을 '장애물에 부딪칠 때' 이벤트에 연결하세요."
         },
         "courseC_harvester_loops1_2021": {
           "courseC_harvester_loops1_a": "일단 호박 쪽으로 이동하면, <xml><block type=\"harvester_pumpkin\"/></xml>을 사용하여 호박을 모읍니다.",
-          "courseC_harvester_loops1_b": "<xml><block type=\"harvester_pumpkin\"/></xml> 블록이 있는 루프를 사용하여 사각형에서 한 개 이상의 호박을 땄니다."
+          "courseC_harvester_loops1_b": "<xml><block type=\"harvester_pumpkin\"/></xml> 블록이 있는 반복문을 사용하여 사각형에서 한 개 이상의 호박을 땁니다."
         },
         "courseC_harvester_loops2_2021": {
           "courseC_harvester_loops2_a": "잘 안되면, 종이 위에 각 단계를 적어보고 반복되는 패턴을 찾아 보세요.",
-          "courseC_harvester_loops2_b": "'반복' 루프 한 개가 필요하고 그 다음  또 다른 루프가 필요할 것입니다.",
-          "courseC_harvester_loops2_c": "루프 한 개는 '앞으로 이동' 명령을 반복하고 다른 하나는 '호박 따기' 명령을 반복할 것입니다."
+          "courseC_harvester_loops2_b": "'반복' 블록 한 개가 필요하고 그 다음  또 다른 반복이 필요할 것입니다.",
+          "courseC_harvester_loops2_c": "반복문 한 개는 '앞으로 이동' 명령을 반복하고 다른 하나는 '호박 따기' 명령을 반복할 것입니다."
         },
         "courseC_harvester_loops3_2021": {
-          "courseC_harvester_loops3_a": "실수하는 것을 두려워하지 마세요! 퍼즐을 아직 풀지 못했더라도 블록을 추가하고 코드를 실행해 보세요.",
+          "courseC_harvester_loops3_a": "실수를 두려워하지 마세요! 퍼즐을 아직 풀지 못했더라도, 코드를 실행해 어떤 일이 일어나는지 확인하세요.",
           "courseC_harvester_loops3_b": "첫 번째 호박을 위해, 마지막 퍼즐과 매우 유사한 코드를 사용할 수 있습니다. 나중에 어느 길로 회전해야 합니까?",
-          "courseC_harvester_loops3_c": "코드를 단순화하길 원하면, 사실 상 한 루프를 다른 루프의 안에 넣을 수 있습니다! 이것은 **중첩 루프**라고 부릅니다."
+          "courseC_harvester_loops3_c": "코드를 단순화하길 원하다면, 사실상 반복문을 다른 반복문 안에 넣을 수 있습니다! 이것은 **이중 반복**라고 부릅니다."
         },
         "courseC_harvester_loops4_2021": {
-          "courseC_harvester_loops4_a": "새 '옥수수 따기' 블록을 사용하여 옥수수를 모으세요.",
-          "courseC_harvester_loops4_b": "코드 안에 복수의 반복 루프를 사용하여 일부는 옥수수를 따고 일부는 호박을 따는데 사용할 수 있습니다.",
-          "courseC_harvester_loops4_c": "코드를 단순화하길 원하면, 사실 상 한 루프를 다른 루프의 안에 넣을 수 있습니다! 이것은 **중첩 루프**라고 부릅니다."
+          "courseC_harvester_loops4_a": "옥수수를 모으기 위해 새 블록 '옥수수 따기' 블록을 사용하세요.",
+          "courseC_harvester_loops4_b": "코드 안에 여러 개의 반복문을 사용하여 일부는 옥수수를 따고 일부는 호박을 따는데 사용할 수 있습니다.",
+          "courseC_harvester_loops4_c": "코드를 단순화하길 원하다면, 사실상 반복문을 다른 반복문 안에 넣을 수 있습니다! 이것은 **이중 반복**라고 부릅니다."
         },
         "courseC_harvester_loops5_2021": {
           "courseC_harvester_loops5_a": "잘 안되면, 전체 프로그램을 그리고 그 다음 반복되는 패턴을 찾아 보세요.",
-          "courseC_harvester_loops5_b": "이 계단이 다른 퍼즐에서의 것과 낯이 익게 보이세요? 이동은 유사해야 하지만 길을 따라 가며 작물을 모아야 한다는 점을 기억하세요."
+          "courseC_harvester_loops5_b": "이 계단이 이전 퍼즐의 계단과 비슷해 보이나요? 이동은 유사해야 하지만 길을 따라 가며 작물을 모아야 한다는 점을 기억하세요."
         },
         "courseC_harvester_loops6_2021": {
-          "courseC_harvester_loops6_a": "한 개의 루프 안에는 복수의 블록을 넣을 수 있다는 점을 기억하세요.",
+          "courseC_harvester_loops6_a": "한 개의 반복문 안에는 여러 개의 반복문을 넣을 수 있다는 점을 기억하세요.",
           "courseC_harvester_loops6_b": "옥수수 열 끝에서 회전해야 하는 걸 잊지 마세요. "
         },
         "courseC_harvester_loops7_2021": {
           "courseC_harvester_loops7_a": "이 퍼즐은 두 가지 방식으로 풀 수 있으며, 먼저 옥수수 아니면 호박을 얻을 수 있습니다.",
-          "courseC_harvester_loops7_b": "이 퍼즐을 풀기 위해 복수의 '반복' 루프가 필요할 것입니다."
+          "courseC_harvester_loops7_b": "이 퍼즐을 풀기 위해 여러 개의 반복문이 필요할 것입니다."
         },
         "courseC_harvester_loops8_2021": {
-          "courseC_harvester_loops8_a": "이 계단이 이전 퍼즐에서의 것과 낯이 익게 보이세요? 이동은 유사해야 하지만 길을 따라 가며 작물을 모아야 한다는 점을 기억하세요.",
-          "courseC_harvester_loops8_b": "코드를 더 단순화하길 원하면, 사실 상 한 '반복' 루프를 다른 루프의 안에 넣을 수 있습니다! 이것은 **중첩 루프**라고 부릅니다."
+          "courseC_harvester_loops8_a": "이 계단이 이전 퍼즐의 계단과 비슷해 보이나요? 이동은 유사해야 하지만 길을 따라 가며 작물을 모아야 한다는 점을 기억하세요.",
+          "courseC_harvester_loops8_b": "코드를 단순화하길 원하다면, 사실상 반복문을 다른 반복문 안에 넣을 수 있습니다! 이것은 **이중 반복**라고 부릅니다."
         },
         "courseC_harvester_loops_challenge1a_2021": {
-          "courseC_harvester_loops_challenge1_a": "루프 없이는 너무 어려워요!",
-          "courseC_harvester_loops_challenge1_b": "필요한 만큼 많이 '앞으로 이동'과 '옥수수 따기'를 반복하고 그 다음, 각 코너에서 '우회전'을 할 수 있습니다.",
+          "courseC_harvester_loops_challenge1_a": "반복 없이는 너무 어렵습니다!",
+          "courseC_harvester_loops_challenge1_b": "필요한 만큼 '앞으로 이동'과 '옥수수 따기'를 반복하고, 각 코너에서 '오른쪽을 돌기'를 할 수 있습니다.",
           "courseC_harvester_loops_challenge1_c": "중간에 옥수수를 모으는 가장 좋은 방법은 또 다른 '반복' 블록 안에 있는 '반복' 블록을 사용하는 것입니다.\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml> "
         },
         "courseC_harvester_loops_challenge2_2021": {
-          "courseC_harvester_loops_challenge2_a": "이것을 푸는 한 가지 방법은 지그재그처럼 보입니다. 또 다른 방법은 나선형처럼 보입니다! 이와 같은 퍼즐을 푸는 방법은 다양하게 많이 있습니다. 끈기를 가지세요! ",
-          "courseC_harvester_loops_challenge2_b": "필요한 만큼 많이 '앞으로 이동'과 '상추 따기'를 반복하고 그 다음, 각 코너에서 '우회전'을 할 수 있습니다.",
+          "courseC_harvester_loops_challenge2_a": "이것을 해결하는 한 가지 방법은 지그재그처럼 보는 것입니다. 또 다른 방법은 나선형처럼 보는 것입니다! 이와 같은 퍼즐을 푸는 방법은 다양하게 많이 있습니다. 끈기를 가지세요! ",
+          "courseC_harvester_loops_challenge2_b": "필요한 만큼 '앞으로 이동'과 '옥수수 따기'를 반복하고, 각 코너에서 '오른쪽을 돌기'를 할 수 있습니다.",
           "courseC_harvester_loops_challenge2_c": "이 지그 재그 패턴은 퍼즐을 단지 20개의 블록으로 끝내기 위해 두 번 반복시킬 수 있습니다!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
           "courseC_harvester_loops_challenge2_d": "이 나선형 패턴은 단지 18개의 블록으로 코딩할 수 있습니다!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
         },
@@ -10132,11 +10132,11 @@
         },
         "courseD_maze_ramp1_2021": {
           "courseC_maze_programming1_a": "새가 돼지로 가지 않으면 세 개의 블록 모두 함께 완전하게 클릭되었는지 확인하고 그 다음, \"실행\"을 다시 클릭하세요.",
-          "courseC_maze_programming1_b": "실수하는 것을 두려워하지 마세요! 퍼즐을 아직 풀지 않았더라도 블록을 추가하고 코드를 실행하여 어떤 일이 벌어지는지 보세요."
+          "courseC_maze_programming1_b": "실수하는 것을 두려워하지 마세요! 퍼즐을 아직 풀지 않았더라도 블록을 추가하고 코드를 실행하여 어떤 일이 일어나는지 확인하세요"
         },
         "courseD_maze_ramp2_2021": {
           "courseC_maze_programming2_a": "'앞으로 이동' 블럭을 사용하기 위해서는 그 블럭을 툴박스에서 작업공간으로 드래그하여 '실행 시' 블록에 연결합니다.",
-          "courseC_maze_programming2_b": "세 개의 블록 모두 함께 클릭되어 '실행 시' 블록에 부착되었는지 확인하세요."
+          "courseC_maze_programming2_b": "세 개의 블록 모두 함께 클릭되어 '실행 시' 블록에 연결되었는지 확인하세요."
         },
         "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\n코드 중간에 있는 블록을 삭제하려면, 그 아래에 있는 블록 모두를 오른 쪽으로 드래그하여 그것들을 작업 공간에 잠시 놓아 둡니다.\n\n삭제하고자 하는 블록을 클릭하여 툴박스로 다시 드래그합니다.\n\n마지막으로 다른 블록을 그것들이 원래 있던 곳에 도로 놓습니다."
@@ -11434,10 +11434,10 @@
         },
         "courseC19_playLab_EOC22022": {
           "courseE_playLab_scaffold1_b": "`화살표일 때` 이벤트 블록이 네 개가 있고 각각 아래에 이동 방향이 있어야 합니다.",
-          "playlab_up": "액터를 위로 이동하기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_down": "액터를 아래로 이동하기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_left": "액터를 왼쪽으로 이동하기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_right": "액터를 오른쪽으로 이동하기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> ",
+          "playlab_up": "배우를 위로 이동시키기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_down": "배우를 아래로 이동시키기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "배우를 왼쪽으로 이동시키기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "배우를 오른쪽으로 이동시키기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> ",
           "courseE_playLab_scaffold1_c": "모두 마쳤으면, 화살표 키로 주인공을 이동시킬 수 있어야 합니다!"
         },
         "courseC19_playLab_EOC42022": {

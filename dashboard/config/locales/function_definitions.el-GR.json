@@ -2826,7 +2826,7 @@
         },
         "courseF_apps_collector": {
           "end game": {
-            "name": "τέλειωσε το παιχνίδι"
+            "name": "τέλος παιχνιδιού"
           }
         },
         "Artist Autorun Test": {
@@ -3145,12 +3145,12 @@
         },
         "courseF_apps_collector2022": {
           "end game": {
-            "name": "τέλειωσε το παιχνίδι"
+            "name": "τέλος παιχνιδιού"
           }
         },
         "courseF_apps_collector_-2022-2": {
           "end game": {
-            "name": "τέλειωσε το παιχνίδι"
+            "name": "τέλος παιχνιδιού"
           }
         }
       }

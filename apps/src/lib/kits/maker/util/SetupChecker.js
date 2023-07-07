@@ -1,11 +1,8 @@
 /** @file Stubbable core setup check behavior for the setup page. */
 import CircuitPlaygroundBoard from '../boards/circuitPlayground/CircuitPlaygroundBoard';
-import {findPortWithViableDevice} from '../portScanning';
-import {isCodeOrgBrowser} from './browserChecks';
 import {
   BOARD_TYPE,
   detectBoardTypeFromPort,
-  isWebSerialPort,
   shouldUseWebSerial,
 } from './boardUtils';
 import MicroBitBoard from '../boards/microBit/MicroBitBoard';
@@ -25,9 +22,7 @@ export default class SetupChecker {
    */
   detectSupportedBrowser() {
     return new Promise((resolve, reject) => {
-      if (isCodeOrgBrowser()) {
-        resolve();
-      } else if (shouldUseWebSerial()) {
+      if (shouldUseWebSerial()) {
         resolve();
       } else {
         reject(new Error('Not using a supported browser.'));
@@ -39,11 +34,7 @@ export default class SetupChecker {
    * @return {Promise}
    */
   detectBoardPluggedIn() {
-    if (!isWebSerialPort(this.port)) {
-      return findPortWithViableDevice().then(port => (this.port = port));
-    }
-
-    // In the Web Serial Experiment, user already selected port
+    // In Web Serial, user already selected port - function used in SetupChecklist.
     return Promise.resolve(this.port);
   }
 
