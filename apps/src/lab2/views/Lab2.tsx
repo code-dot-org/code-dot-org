@@ -11,13 +11,17 @@ import {getStore} from '@cdo/apps/redux';
 import {levelsForLessonId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 import {LevelWithProgress} from '@cdo/apps/types/progressTypes';
-import {getStandaloneProjectId} from '@cdo/apps/lab2/projects/utils';
+import {
+  getProjectType,
+  getStandaloneProjectId,
+} from '@cdo/apps/lab2/projects/utils';
 import {logError} from '@cdo/apps/music/utils/MusicMetrics';
 import Lab2Wrapper from './Lab2Wrapper';
 import ProjectContainer from '../projects/ProjectContainer';
 import ProgressContainer from '../progress/ProgressContainer';
 import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import MusicView from '@cdo/apps/music/views/MusicView';
+import {LabState} from '../lab2Redux';
 
 interface AppProperties {
   name: string;
@@ -45,15 +49,33 @@ const Lab2: React.FunctionComponent = () => {
   const currentLessonLevels = useSelector((state: {progress: ProgressState}) =>
     levelsForLessonId(state.progress, state.progress.currentLessonId)
   );
-  const currentAppName: string = currentLessonLevels.find(
-    (level: LevelWithProgress) => level.isCurrentLevel
-  ).app;
-  const currentLessonAppNames: string[] = Array.from(
-    new Set(currentLessonLevels.map((level: LevelWithProgress) => level.app))
+  const currentProjectType = useSelector(
+    (state: {lab: LabState}) => state.lab.currentProjectType
   );
-  const currentLessonAppProperties: AppProperties[] = appsProperties.filter(
-    appProperties => currentLessonAppNames.includes(appProperties.name)
-  );
+  let currentLessonAppProperties: AppProperties[];
+  let currentAppName: string;
+
+  if (currentLessonLevels) {
+    currentAppName = currentLessonLevels.find(
+      (level: LevelWithProgress) => level.isCurrentLevel
+    ).app;
+    const currentLessonAppNames: string[] = Array.from(
+      new Set(currentLessonLevels.map((level: LevelWithProgress) => level.app))
+    );
+    currentLessonAppProperties = appsProperties.filter(appProperties =>
+      currentLessonAppNames.includes(appProperties.name)
+    );
+  } else {
+    // If we don't have a lesson, we are either on a /project or /level page.
+    // The app type will either already be seeded in
+    // lab2Redux (from a remix action) or it will have been sent
+    // via the server (for a /project or /level page).
+    currentAppName = currentProjectType || getProjectType();
+    currentLessonAppProperties = appsProperties.filter(
+      appProperties => appProperties.name === currentAppName
+    );
+  }
+
   const currentAppProperties: AppProperties | undefined = appsProperties.find(
     appProperties => appProperties.name === currentAppName
   );
