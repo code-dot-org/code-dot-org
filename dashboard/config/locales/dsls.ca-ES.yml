@@ -11773,3 +11773,148 @@ ca-ES:
         questions:
         - text: Fixa't bé en el codi que hi ha a continuació. Què passarà quan facis
             clic a "Executar"?
+      OPD-K5 CS Courses:
+        markdown: "# Planificació > Com començar a Code.org\n\n\n## Pas 1: Trieu un
+          curs\nTots els nostres cursos -- des de prelectors fins a alumnes de secundària
+          -- estan llistats al nostre** [catàleg de cursos] (https://studio.code.org/courses)
+          **. Per trobar les lliçons de Fonaments CS amb què heu estat practicant,
+          aneu a la nostra ** [pàgina elemental] (https://code.org/educate/curriculum/elementary-school)
+          ** i desplaceu-vos cap avall fins a la secció “Cursos”. Tots els nostres
+          cursos estan disponibles sense cap cost. Xateja amb els companys de la teva
+          escola per determinar com es pot integrar el currículum del curs amb una
+          varietat d'assignatures.\n! [] (https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Pas 2: Configureu la secció de l'aula \nConfigureu una secció d'aula per
+          veure el progrés del vostre alumne, imprimiu targetes d'inici de sessió
+          per als vostres alumnes, gestioneu els seus comptes i imprimiu els certificats
+          que puguin portar a casa quan acabin el curs. Feu clic en aquest enllaç
+          a ** [veure un breu vídeo] (https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)
+          ** que demostra com configurar la vostra primera classe d'informàtica a
+          Code.org. També podeu trobar els passos a ** [aquest article de suport]
+          (https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)
+          **.\n! [] (https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Pas 3: Assigneu el curs a la vostra secció\nFeu clic al curs que esteu impartint
+          -- hauríeu de veure una pantalla que s'assembla a la de sota. A continuació,
+          podeu fer clic a “Assignar curs” i assignar aquest curs a una de les vostres
+          seccions. \n! [] (https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Pas 4: Comença a ensenyar! \nTot el que es necessita és una lliçó per portar
+          conceptes d'informàtica a l'aula. Una vegada que vegeu l'entusiasme dels
+          vostres alumnes per CS, aneu un pas més enllà amb plans de lliçons diàries
+          per guiar els vostres alumnes, activitats en desconnexió que podeu fer sense
+          un ordinador i fòrums per connectar amb altres professors.\n\n\n"
+      OPD-K5 CS Courses_copy:
+        markdown: "# Com començar a Code.org\n\n\n## Pas 1: Tria un curs\nTots els
+          nostres cursos, des de prelectors fins a alumnes de secundària, es troben
+          a la nostra llista **<a href=\"https://studio.code.org/courses\" target=\"blank\"
+          rel=\"noopener noreferrer\"> catàleg de cursos**. Tots els nostres cursos
+          estan disponibles sense cap cost. Xateja amb els companys de la teva escola
+          per determinar com es pot integrar el pla d'estudis del curs amb una varietat
+          d'assignatures.\n\n<table style=\"width:100%; border-style:none;\">\n   <tr>\n
+          \    <th style=\"background-color:#ff9900; text-align:center; border-style:none;
+          font-weight:bold;\"\"\">\n       <b>Curs A</b><br/>\n       <i>Llar d'infants</i>\n
+          \    </th>\n     <th style=\"background-color:#f1c232; text-align:center;
+          border-style:none;\"\"\">\n         Curs B<br/>\n         <i>1r grau</i>\n
+          \    </th>\n     <th style=\"background-color:#b8bf0d; text-align:center;
+          border-style:none;\"\"\">\n         Curs C<br/>\n         <i>2n grau</i>\n
+          \    </th>\n     <th style=\"background-color:#53bac2; text-align:center;
+          border-style:none;\"\"\">\n         Curs D<br/>\n         <i>3r grau</i>\n
+          \    </th>\n     <th style=\"background-color:#0094ca; text-align:center;
+          border-style:none;\"\"\">\n         Curs E<br/>\n         <i>4t grau</i>\n
+          \    </th>\n     <th style=\"background-color:#7664a0; text-align:center;
+          border-style:none;\"\"\">\n         Curs F<br/>\n         <i>5è grau</i>\n
+          \    </th>\n   </tr>\n   <tr>\n     <td style=\"background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;\"\">12 lliçons,
+          ~12 hores per completar</td>\n     <td style=\"background-color:#ffe599;
+          color:black; border-style:none; vertical-align: text-top;\"\">12 lliçons,
+          ~12 hores per completar</td>\n     <td style=\"background-color:#d2da0e;
+          color:black; border-style:none; vertical-align: text-top;\"\">18 lliçons,
+          ~18 hores per completar</td>\n     <td style=\"background-color:#68ebf5;
+          color:black; border-style:none; vertical-align: text-top;\"\">18 lliçons,
+          ~18 hores per completar</td>\n     <td style=\"background-color:#9ed7ed;
+          color:black; border-style:none; vertical-align: text-top;\"\">18 lliçons,
+          entre 18 i 20 hores per completar</td>\n     <td style=\"background-color:#c9c1e9;
+          color:black; border-style:none; vertical-align: text-top;\"\">18 lliçons,
+          entre 20 i 22 hores per completar</td>\n   </tr>\n   <tr>\n     <td colspan=\"6\"
+          style=\"text-align:center;width:96%;background-color:#d9d9d9;color:black;
+          border-style:none;\">Conceptes</td>\n   </tr>\n   <tr>\n     <td style=\"background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;\">\n       <ul
+          style=\"font-style:italic;\">\n         <li>Ciutadania digital</li>\n         <li>Seqüenciació</li>\n
+          \        <li>Bucles</li>\n         <li>Esdeveniments</li>\n       </ul>\n
+          \    </td>\n     <td style=\"background-color:#ffe599; color:black; border-style:none;
+          vertical-align: text-top;\">\n       <ul style=\"font-style:italic;\">\n
+          \        <li>Ciutadania digital</li>\n         <li>Seqüenciació</li>\n         <li>Bucles</li>\n
+          \        <li>Impactes de la informàtica</li>\n         <li>Esdeveniments</li>\n
+          \      </ul>\n     </td>\n     <td style=\"background-color:#d2da0e; color:black;
+          border-style:none; vertical-align: text-top;\">\n       <ul style=\"font-style:italic;\">\n
+          \        <li>Ciutadania digital</li>\n         <li>Seqüenciació</li>\n         <li>Binari</li>\n
+          \        <li>Bucles</li>\n         <li>Esdeveniments</li>\n         <li>Dades</li>\n
+          \      </ul>\n     </td>\n     <td style=\"background-color:#68ebf5; color:black;
+          border-style:none; vertical-align: text-top;\">\n       <ul style=\"font-style:italic;\">\n
+          \        <li>Seqüenciació</li>\n         <li>Esdeveniments</li>\n         <li>Bucles</li>\n
+          \        <li>Condicionals</li>\n         <li>Binari</li>\n         <li>Ciutadania
+          digital</li>\n       </ul>\n     </td>\n     <td style=\"background-color:#9ed7ed;
+          color:black; border-style:none; vertical-align: text-top;\">\n       <ul
+          style=\"font-style:italic;\">\n         <li>Sprites</li>\n         <li>Ciutadania
+          digital</li>\n         <li>Impactes de la informàtica</li>\n         <li>Bucles
+          imbricats</li>\n         <li>Funcions</li>\n       </ul>\n     </td>\n     <td
+          style=\"background-color:#c9c1e9; color:black; border-style:none; vertical-align:
+          text-top;\">\n       <ul style=\"font-style:italic;\">\n         <li>Variables</li>\n
+          \        <li>Dades</li>\n         <li>For Loops</li>\n         <li>Internet</li>\n
+          \        <li>Sprites</li>\n         <li>Ciutadania digital</li>\n         </ul>\n
+          \    </td>\n   <tr>\n   <td style=\"background-color:#f9cb9c\">\n      <a
+          href=\"https://studio.code.org/s/coursea\" target=\"_blank\" style='text-decoration:none'>\n
+          \        <button>Mostra el curs</button><br/>\n       </a>\n       <a href=\"https://curriculum.code.org/csf/coursea\"
+          target=\"_blank\" style='text-decoration:none'>\n           <button>Plans
+          de lliçons</button>\n       </a>\n     </td>\n     <td style=\"background-color:#ffe599\">\n
+          \    <a href=\"https://studio.code.org/s/courseb\" target=\"_blank\" style='text-decoration:none'>\n
+          \        <button>Mostra el curs</button><br/>\n       </a>\n       <a href=\"https://curriculum.code.org/csf/courseb\"
+          target=\"_blank\" style='text-decoration:none'>\n         <button>Plans
+          de lliçons</button>\n       </a>\n     </td>\n    <td style=\"background-color:#d2da0e\">\n
+          \    <a href=\"https://</a>\n     </td>\n      <td style=\"background-color:#c9c1e9\">\n
+          \    <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \        <button>Mostra el curs</button><br/>\n       </a>\n       <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n         <button>Plans
+          de lliçons</button>\n       </a>\n     </td>\n   </tr>\n</taula>\n<br/>\n\n\n***\n##
+          Pas 2: Configura la vostra secció d'aula\nConfigureu una secció d'aula per
+          veure el progrés del vostre alumnne, imprimir les targetes d'inici de sessió
+          dels vostres alumnes, gestionar els seus comptes i imprimir els certificats
+          que poden portar a casa quan acabin el curs. Feu clic a aquest enllaç per
+          **<a href=\"https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b\"
+          target=\"blank\" rel= \"noopener noreferrer\">mira un breu vídeo</a>** que
+          mostra com configurar la teva primera classe d'informàtica a Code.org. També
+          podeu trobar els passos a **<a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\"
+          target=\"blank\" rel=\" noopener noreferrer\">aquest article de suport</a>**.\n\n***\n##
+          Pas 3: Assigna el curs a la vostra secció\nFeu clic al curs que esteu impartint.
+          A continuació, podeu fer clic a \"Assigna curs\" i assignar aquest curs
+          a una de les vostres seccions.\n***\n## Pas 4: Comença a ensenyar!\nNomés
+          cal una lliçó per portar els conceptes informàtics a la vostra aula. Quan
+          veieu l'entusiasme dels vostres alumnes per CS, aneu més enllà amb els plans
+          diaris de lliçons per guiar els vostres alumnes, activitats desconnectades
+          que podeu fer sense un ordinador i fòrums per connectar-vos amb altres professors. "
+      OPD-K5 CS Courses_dani:
+        markdown: "# Planificació > Començar a Code.org\n\n\n## Pas 1: Trieu un curs\nTots
+          els nostres cursos, des de prelectors fins a estudiants de secundària, figuren
+          al nostre** [catàleg de cursos] (https://studio.code.org/courses) **. Per
+          trobar les lliçons de Fonaments CS amb què heu estat practicant, aneu a
+          la nostra ** [pàgina elemental] (https://code.org/educate/curriculum/elementary-school)
+          ** i desplaceu-vos cap avall fins a la secció “Cursos”. Tots els nostres
+          cursos estan disponibles sense cap cost. Xateja amb els companys de la teva
+          escola per determinar com es pot integrar el currículum del curs amb una
+          varietat d'assignatures.\n! [] (https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Pas 2: Configureu la secció\nde l'aula Configureu una secció d'aula per
+          veure el progrés del vostre estudiant, imprimiu targetes d'inici de sessió
+          per als vostres estudiants, gestioneu els seus comptes i imprimiu els certificats
+          que puguin portar a casa quan acabin el curs. Feu clic en aquest enllaç
+          a ** [veure un breu vídeo] (https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)
+          ** que demostra com configurar la vostra primera classe d'informàtica a
+          Code.org. També podeu trobar els passos a ** [aquest article de suport]
+          (https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)
+          **.\n! [] (https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Pas 3: Assigneu el curs a la vostra secció\nFeu clic al curs que esteu impartint
+          — hauríeu de veure una pantalla que s'assembla a la de sota. A continuació,
+          podeu fer clic a “Assignar curs” i assignar aquest curs a una de les vostres
+          seccions. \n! [] (https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Pas 4: Comença a ensenyar! \nTot el que es necessita és una lliçó per portar
+          conceptes d'informàtica a l'aula. Una vegada que vegi que els seus estudiants
+          entusiasme per CS, anar més enllà amb plans de lliçons diàries per guiar
+          els seus estudiants, activitats desconnectats que pot fer sense un ordinador,
+          i fòrums per connectar-se a altres professors.\n\n\n"
