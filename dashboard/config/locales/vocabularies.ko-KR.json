@@ -831,6 +831,9 @@
           "word": "2진",
           "definition": "단지 두 가지 옵션만을 사용하여 정보를 나타내는 방식."
         },
+        "computer/csd/2022": {
+          "word": "컴퓨터"
+        },
         "input/csd/2022": {
           "word": "입력"
         },
@@ -1565,6 +1568,9 @@
         },
         "function/csd/2021": {
           "word": "함수"
+        },
+        "computer/csd/2021": {
+          "word": "컴퓨터"
         },
         "input/csd/2021": {
           "word": "입력"
