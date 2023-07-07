@@ -595,6 +595,7 @@ Dashboard::Application.routes.draw do
 
     # LTI API endpoints
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
+    post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
 
     get '/notes/:key', to: 'notes#index'
 
@@ -1061,5 +1062,7 @@ Dashboard::Application.routes.draw do
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:
       'policy_compliance#child_account_consent'
+    post '/policy_compliance/child_account_consent/', to:
+      'policy_compliance#child_account_consent_request'
   end
 end

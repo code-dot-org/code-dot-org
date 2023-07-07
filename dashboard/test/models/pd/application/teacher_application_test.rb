@@ -314,26 +314,26 @@ module Pd::Application
       ['csp', 'csd'].each do |course|
         columns = TeacherApplication.columns_to_remove(course)
         columns.keys.each do |k|
-          columns[k].each {|c| refute c.to_s.include?(course)}
+          columns[k].each {|c| refute_includes(c.to_s, course)}
         end
       end
     end
 
     test 'csv_filtered_labels' do
       csv_filtered_labels_csd = TeacherApplication.csv_filtered_labels('csd')
-      assert csv_filtered_labels_csd[:teacher].include? :csd_which_grades
-      refute csv_filtered_labels_csd[:teacher].include? :csp_which_grades
-      refute csv_filtered_labels_csd[:teacher].include? :csa_which_grades
+      assert_includes(csv_filtered_labels_csd[:teacher], :csd_which_grades)
+      refute_includes(csv_filtered_labels_csd[:teacher], :csp_which_grades)
+      refute_includes(csv_filtered_labels_csd[:teacher], :csa_which_grades)
 
       csv_filtered_labels_csp = TeacherApplication.csv_filtered_labels('csp')
-      refute csv_filtered_labels_csp[:teacher].include? :csd_which_grades
-      assert csv_filtered_labels_csp[:teacher].include? :csp_which_grades
-      refute csv_filtered_labels_csp[:teacher].include? :csa_which_grades
+      refute_includes(csv_filtered_labels_csp[:teacher], :csd_which_grades)
+      assert_includes(csv_filtered_labels_csp[:teacher], :csp_which_grades)
+      refute_includes(csv_filtered_labels_csp[:teacher], :csa_which_grades)
 
       csv_filtered_labels_csa = TeacherApplication.csv_filtered_labels('csa')
-      refute csv_filtered_labels_csa[:teacher].include? :csd_which_grades
-      refute csv_filtered_labels_csa[:teacher].include? :csp_which_grades
-      assert csv_filtered_labels_csa[:teacher].include? :csa_which_grades
+      refute_includes(csv_filtered_labels_csa[:teacher], :csd_which_grades)
+      refute_includes(csv_filtered_labels_csa[:teacher], :csp_which_grades)
+      assert_includes(csv_filtered_labels_csa[:teacher], :csa_which_grades)
     end
 
     test 'csv_header' do
@@ -342,21 +342,21 @@ module Pd::Application
       csa_plan_offer_question = "To which grades does your school plan to offer CSA in the #{APPLICATION_CURRENT_YEAR} school year?"
 
       csv_header_csd = CSV.parse(TeacherApplication.csv_header('csd'))[0]
-      assert csv_header_csd.include? csd_plan_offer_question
-      refute csv_header_csd.include? csp_plan_offer_question
-      refute csv_header_csd.include? csa_plan_offer_question
+      assert_includes(csv_header_csd, csd_plan_offer_question)
+      refute_includes(csv_header_csd, csp_plan_offer_question)
+      refute_includes(csv_header_csd, csa_plan_offer_question)
       assert_equal 90, csv_header_csd.length
 
       csv_header_csp = CSV.parse(TeacherApplication.csv_header('csp'))[0]
-      refute csv_header_csp.include? csd_plan_offer_question
-      assert csv_header_csp.include? csp_plan_offer_question
-      refute csv_header_csp.include? csa_plan_offer_question
+      refute_includes(csv_header_csp, csd_plan_offer_question)
+      assert_includes(csv_header_csp, csp_plan_offer_question)
+      refute_includes(csv_header_csp, csa_plan_offer_question)
       assert_equal 92, csv_header_csp.length
 
       csv_header_csa = CSV.parse(TeacherApplication.csv_header('csa'))[0]
-      refute csv_header_csa.include? csd_plan_offer_question
-      refute csv_header_csd.include? csp_plan_offer_question
-      assert csv_header_csa.include? csa_plan_offer_question
+      refute_includes(csv_header_csa, csd_plan_offer_question)
+      refute_includes(csv_header_csd, csp_plan_offer_question)
+      assert_includes(csv_header_csa, csa_plan_offer_question)
       assert_equal 94, csv_header_csa.length
     end
 
@@ -400,21 +400,21 @@ module Pd::Application
       TeacherApplication::FILTERED_LABELS.clear
 
       filtered_labels_csd = TeacherApplication.filtered_labels('csd')
-      assert filtered_labels_csd.include? :csd_which_grades
-      refute filtered_labels_csd.include? :csp_which_grades
-      refute filtered_labels_csd.include? :csa_which_grades
+      assert_includes(filtered_labels_csd, :csd_which_grades)
+      refute_includes(filtered_labels_csd, :csp_which_grades)
+      refute_includes(filtered_labels_csd, :csa_which_grades)
       assert_equal ['csd'], TeacherApplication::FILTERED_LABELS.keys
 
       filtered_labels_csp = TeacherApplication.filtered_labels('csp')
-      refute filtered_labels_csp.include? :csd_which_grades
-      assert filtered_labels_csp.include? :csp_which_grades
-      refute filtered_labels_csp.include? :csa_which_grades
+      refute_includes(filtered_labels_csp, :csd_which_grades)
+      assert_includes(filtered_labels_csp, :csp_which_grades)
+      refute_includes(filtered_labels_csp, :csa_which_grades)
       assert_equal ['csd', 'csp'], TeacherApplication::FILTERED_LABELS.keys
 
       filtered_labels_csa = TeacherApplication.filtered_labels('csa')
-      refute filtered_labels_csa.include? :csd_which_grades
-      refute filtered_labels_csa.include? :csp_which_grades
-      assert filtered_labels_csa.include? :csa_which_grades
+      refute_includes(filtered_labels_csa, :csd_which_grades)
+      refute_includes(filtered_labels_csa, :csp_which_grades)
+      assert_includes(filtered_labels_csa, :csa_which_grades)
       assert_equal ['csd', 'csp', 'csa'], TeacherApplication::FILTERED_LABELS.keys
     end
 
@@ -821,7 +821,7 @@ module Pd::Application
       assert_equal 'Not required', application.reload.principal_approval_state
 
       create :pd_principal_approval_application, teacher_application: application, approved: 'Yes'
-      assert application.reload.principal_approval_state.include? 'Complete - Admin said Yes on'
+      assert_includes(application.reload.principal_approval_state, 'Complete - Admin said Yes on')
     end
 
     test 'scholarship criteria uses regional partner set fields when specified' do

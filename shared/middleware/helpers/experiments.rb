@@ -8,7 +8,10 @@
 # 1. URL Parameter - https://code.org?my_experiment=1
 # 2. Browser Cookie - document.cookie = 'my_experiment=1';
 # 3. DCDO config - DCDO.set('my_experiment', 1)
-def experiment_value(name, default = nil)
+# @param name [String] the name of the experiment.
+# @param request [ActionDispatch::Request] the web request being processed
+# @param default [Object] the value to return if no configuration is found.
+def experiment_value(name, request, default = nil)
   return request.params[name] if request.params[name].present?
   return request.cookies[name] if request.cookies[name].present?
   DCDO.get(name, default)
