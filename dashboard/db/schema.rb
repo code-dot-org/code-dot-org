@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_09_220913) do
+ActiveRecord::Schema.define(version: 2023_07_05_195726) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -409,6 +409,11 @@ ActiveRecord::Schema.define(version: 2023_06_09_220913) do
     t.string "cs_topic"
     t.string "school_subject"
     t.string "device_compatibility"
+    t.string "description"
+    t.string "self_paced_professional_learning"
+    t.string "professional_learning_program"
+    t.string "video"
+    t.datetime "published_date"
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
