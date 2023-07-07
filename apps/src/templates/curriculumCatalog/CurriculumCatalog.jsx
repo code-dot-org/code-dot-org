@@ -225,11 +225,26 @@ const CurriculumCatalog = ({
       updatedFilters = appliedFilters[filterKey].filter(item => item !== value);
     }
     handleUpdateFilter(filterKey, updatedFilters);
+
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_DROPDOWN_FILTER_SELECTED_EVENT,
+      {
+        filter_category: filterKey,
+        filter_name: value,
+      }
+    );
   };
 
   // Selects all options within the given filter.
   const handleSelectAllOfFilter = filterKey => {
     handleUpdateFilter(filterKey, Object.keys(filterTypes[filterKey].options));
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_DROPDOWN_FILTER_SELECTED_EVENT,
+      {
+        filter_category: filterKey,
+        filter_name: Object.keys(filterTypes[filterKey].options).toString(),
+      }
+    );
   };
 
   const handleToggleLanguageFilter = isToggled => {
