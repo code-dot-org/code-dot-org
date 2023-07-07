@@ -8,9 +8,6 @@ import {SkipContext} from '../interfaces/SkipContext';
 import {SoundEvent} from '../interfaces/SoundEvent';
 import MusicLibrary from '../MusicLibrary';
 import Sequencer from './Sequencer';
-import MusicValidator, {
-  ConditionNamesList,
-} from '../../progress/MusicValidator';
 
 interface SequenceFrame {
   measure: number;
@@ -52,10 +49,7 @@ export default class Simple2Sequencer extends Sequencer {
   private startMeasure: number;
   private inTrigger: boolean;
 
-  constructor(
-    private readonly library: MusicLibrary,
-    private readonly validator: MusicValidator
-  ) {
+  constructor(private readonly library: MusicLibrary) {
     super();
     this.sequenceStack = [];
     this.functionStack = [];
@@ -108,21 +102,13 @@ export default class Simple2Sequencer extends Sequencer {
   }
 
   // Beginning of a play_together block.
-  // The isBlock parameter is true when this is called by the play_together block.
-  playTogether(isBlock: boolean) {
+  playTogether() {
     const nextMeasure = this.getCurrentMeasure();
     this.sequenceStack.push({
       measure: nextMeasure,
       together: true,
       lastMeasures: [nextMeasure],
     });
-
-    if (isBlock) {
-      this.validator.setSatisfiedCondition(
-        ConditionNamesList.USED_BLOCK,
-        'play_together'
-      );
-    }
   }
 
   // End of an play_together block.
