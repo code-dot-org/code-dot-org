@@ -826,6 +826,9 @@
           "word": "Perduaan",
           "definition": "Cara mewakili maklumat dengan menggunakan hanya dua pilihan."
         },
+        "computer/csd/2022": {
+          "word": "Komputer"
+        },
         "input/csd/2022": {
           "word": "Input"
         },
@@ -1466,6 +1469,9 @@
         },
         "function/csd/2021": {
           "word": "Fungsi"
+        },
+        "computer/csd/2021": {
+          "word": "Komputer"
         },
         "input/csd/2021": {
           "word": "Input"
