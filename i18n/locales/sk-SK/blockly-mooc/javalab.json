@@ -150,12 +150,9 @@
   "teacherLabel": "učiteľ",
   "togglePeerReviewError": "Pri povoľovaní/zakazovaní vzájomného hodnotenia sa vyskytla chyba. Skús to znova.",
   "unauthorizedJavabuilderConnectionNotLoggedIn": "Ak chcete spustiť kód v Java Lab, musíte byť prihlásený. Prihláste sa a skúste to znova.",
-  "unauthorizedJavabuilderConnectionTeacher": "Ak chcete spustiť svoj kód v Java Lab, musíte sa stať „overeným“ alebo sa pripojiť k sekcii CSA vlastnenej overeným učiteľom. Podrobnosti o tom, ako sa stať overeným, nájdete v článku [tento článok] (https://support.code.org/hc/en-us/articles/115001550131).",
-  "unauthorizedJavabuilderConnectionStudent": "Ak chcete spustiť svoj kód v Java Lab, musíte byť priradení do sekcie CSA a váš učiteľ musí byť „overený“. Požiadajte svojho učiteľa o pomoc a skúste to znova. Váš učiteľ nájdete viac podrobností v [tento článok.] (https://support.code.org/hc/en-us/articles/115001550131)",
   "unknownError": "Ale nie! Na našej strane sa vyskytla chyba. Skús svoj program spustiť znova. Ak bude táto chyba pretrvávať, obráť sa na nás na adrese support@code.org. Nezabudni do svojej správy pridať aj identifikátor spojenia {connectionId}.\n{type}",
   "unsupportedMiniAppMessage": "Nesúlad typu úrovne: {miniAppType} projektov nie je podporovaných na úrovni, ktorá nie je{miniAppType} .",
   "userBlocked": "Spustili ste kód príliš mnohokrát a váš účet bol uzamknutý. Obráťte sa na support@code.org pre odomknutie vášho účtu.",
-  "userBlockedTemporary": "Dosiahli ste limit, koľkokrát môžete spustiť kód Java za 24 hodín. Staňte sa overeným učiteľom a získajte prístup k oveľa vyššej kvóte pre seba a svojich študentov.\nPrečítajte si viac o [ako sa stať overeným učiteľom] (https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher).\nNaučte sa [prečo je potrebné overenie učiteľa] (https://support.code.org/hc/en-us/articles/6104078305549-Teacher-Verification-and-CSA).\nAk sa domnievate, že táto správa je chybná, kontaktujte support@code.org.",
   "waitingForServer": "Čakanie na odpoveď...",
   "youHaveProjectsToReview": "Máte projekty na preskúmanie...",
   "yourPeer": "tvoj spolužiak"
