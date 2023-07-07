@@ -97,7 +97,10 @@ export const setUpWithLevel = createAsyncThunk(
       levelProperties.isProjectLevel,
       false
     );
-    const disableProjects = !!levelProperties.disableProjects;
+    const disableProjects = convertOptionalStringToBoolean(
+      levelProperties.disableProjects,
+      false
+    );
 
     if (disableProjects) {
       // If projects are disabled on this level, we can skip loading projects data.

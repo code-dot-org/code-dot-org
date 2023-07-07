@@ -1,11 +1,16 @@
 // Helper for converting a string boolean ('true' or 'false') to a boolean.
-// Many of our apis will return strings rather than booleans.
+// However, if an actual boolean is passed in, it's returned directly.
+// If undefined is passed in, then the provided defaultValue is returned.
+// Some of our server APIs will return strings rather than booleans.
 export function convertOptionalStringToBoolean(
-  str: 'true' | 'false' | undefined,
+  value: 'true' | 'false' | true | false | undefined,
   defaultValue: boolean
 ) {
-  if (!str) {
+  if (typeof value === 'boolean') {
+    return value;
+  } else if (!value) {
     return defaultValue;
+  } else {
+    return value === 'true';
   }
-  return str === 'true';
 }
