@@ -112,6 +112,9 @@ class FollowerTest < ActiveSupport::TestCase
   end
 
   test 'cannot create a follower for a PL section and a user with a family name' do
+    # Provide a default stub, so the CI doesn't get tripped up on random other
+    # DCDO calls when creating the follower.
+    DCDO.stubs(:get).returns(false)
     DCDO.stubs(:get).with('family-name-features', false).returns(true)
 
     teacher = create(:teacher)
