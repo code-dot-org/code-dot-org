@@ -18,7 +18,7 @@ import aichatMsg from './locale';
 const MOBILE_PORTRAIT_WIDTH = 600;
 
 /**
- * An instantiable Fish class
+ * An instantiable Aichat class
  */
 
 const Aichat = function () {
