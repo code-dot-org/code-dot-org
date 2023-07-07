@@ -54,7 +54,16 @@ section.pl-offerings {
     }
 
     .flex-container {
-      gap: 2rem;
+      gap: 1.5rem;
+      flex-direction: column;
+
+      &.self-paced-english {
+        gap: 1.3rem;
+
+        @media screen and (max-width: $width-md) {
+          gap: 0;
+        }
+      }
     }
 
     img {

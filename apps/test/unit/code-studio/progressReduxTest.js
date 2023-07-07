@@ -58,6 +58,7 @@ const lessonData = [
         display_as_unplugged: true,
         sublevels: [],
         app: 'maze',
+        uses_lab2: false,
       },
       {
         ids: ['323'],
@@ -73,6 +74,7 @@ const lessonData = [
         display_as_unplugged: false,
         sublevels: [],
         app: 'maze',
+        uses_lab2: false,
       },
       {
         ids: ['322'],
@@ -89,6 +91,7 @@ const lessonData = [
         display_as_unplugged: false,
         sublevels: [],
         app: 'maze',
+        uses_lab2: false,
       },
     ],
     lesson_plan_html_url:
@@ -124,6 +127,7 @@ const lessonData = [
         display_as_unplugged: false,
         sublevels: [],
         app: 'maze',
+        uses_lab2: false,
       },
       {
         ids: ['339'],
@@ -138,6 +142,7 @@ const lessonData = [
         display_as_unplugged: false,
         sublevels: [],
         app: 'maze',
+        uses_lab2: false,
       },
       {
         ids: ['341'],
@@ -152,6 +157,7 @@ const lessonData = [
         display_as_unplugged: false,
         sublevels: [],
         app: 'maze',
+        uses_lab2: false,
       },
     ],
     lesson_plan_html_url:
@@ -188,6 +194,7 @@ const lockableLessonData = [
         bonus: false,
         display_as_unplugged: true,
         sublevels: [],
+        uses_lab2: false,
       },
     ],
   },
@@ -595,6 +602,7 @@ describe('progressReduxTest', () => {
             sublevels: [],
             teacherFeedbackReviewState: null,
             app: 'maze',
+            usesLab2: false,
           },
           {
             id: '323',
@@ -617,6 +625,7 @@ describe('progressReduxTest', () => {
             sublevels: [],
             teacherFeedbackReviewState: null,
             app: 'maze',
+            usesLab2: false,
           },
           {
             id: '322',
@@ -639,6 +648,7 @@ describe('progressReduxTest', () => {
             sublevels: [],
             teacherFeedbackReviewState: null,
             app: 'maze',
+            usesLab2: false,
           },
         ],
         [
@@ -663,6 +673,7 @@ describe('progressReduxTest', () => {
             sublevels: [],
             teacherFeedbackReviewState: null,
             app: 'maze',
+            usesLab2: false,
           },
           {
             id: '339',
@@ -685,6 +696,7 @@ describe('progressReduxTest', () => {
             sublevels: [],
             teacherFeedbackReviewState: null,
             app: 'maze',
+            usesLab2: false,
           },
           {
             id: '341',
@@ -707,6 +719,7 @@ describe('progressReduxTest', () => {
             sublevels: [],
             teacherFeedbackReviewState: null,
             app: 'maze',
+            usesLab2: false,
           },
         ],
       ];

@@ -514,7 +514,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
     post :create, params: {pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
     assert_response :bad_request
-    assert response.body.include? 'non-workshop-admin cannot create a virtual CSP/CSA Summer Workshop within a month of it starting.'
+    assert_includes(response.body, 'non-workshop-admin cannot create a virtual CSP/CSA Summer Workshop within a month of it starting.')
   end
 
   test 'setting virtual field as virtual when creating CSP/CSA summer workshop within a month of starting as a ws-admin does not raise error' do
@@ -795,7 +795,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
     put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
     assert_response :bad_request
-    assert response.body.include? 'non-workshop-admin cannot change CSP/CSA Summer Workshop virtual field within a month of it starting.'
+    assert_includes(response.body, 'non-workshop-admin cannot change CSP/CSA Summer Workshop virtual field within a month of it starting.')
   end
 
   test 'updating virtual field in CSP/CSA summer workshop within a month of starting as a ws-admin does not raise error' do

@@ -17,7 +17,7 @@ interface PartialAppOptions {
  *
  * Note: We are trying to use app options as little as possible.
  */
-export function getStandaloneProjectId(): string | null {
+export function getStandaloneProjectId(): string | undefined {
   const appOptions = getScriptData('appoptions') as PartialAppOptions;
   return appOptions.channel;
 }
