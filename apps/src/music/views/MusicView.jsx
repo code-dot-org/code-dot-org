@@ -507,6 +507,10 @@ class UnconnectedMusicView extends React.Component {
   };
 
   stopSong = () => {
+    if (!this.props.isPlaying) {
+      return;
+    }
+
     this.player.stopSong();
     this.playingTriggers = [];
 
