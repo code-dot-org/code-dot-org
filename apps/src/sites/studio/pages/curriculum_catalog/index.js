@@ -9,8 +9,14 @@ import {setSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsR
 
 $(document).ready(function () {
   const catalogData = getScriptData('catalog');
-  const {curriculaData, isEnglish, sections, isSignedOut, isTeacher} =
-    catalogData;
+  const {
+    curriculaData,
+    isEnglish,
+    languageNativeName,
+    sections,
+    isSignedOut,
+    isTeacher,
+  } = catalogData;
 
   const store = getStore();
   sections && store.dispatch(setSections(sections));
@@ -20,6 +26,7 @@ $(document).ready(function () {
       <CurriculumCatalog
         curriculaData={curriculaData}
         isEnglish={isEnglish}
+        languageNativeName={languageNativeName}
         isSignedOut={isSignedOut}
         isTeacher={isTeacher}
       />

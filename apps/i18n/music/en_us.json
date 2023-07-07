@@ -65,5 +65,6 @@
   "panelHeaderInstructions": "Instructions",
   "panelHeaderWorkspace": "Workspace",
   "panelHeaderControls": "Controls",
-  "panelHeaderTimeline": "Timeline"
+  "panelHeaderTimeline": "Timeline",
+  "continue": "Continue"
 }

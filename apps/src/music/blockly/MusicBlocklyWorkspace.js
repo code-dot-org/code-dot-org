@@ -30,7 +30,6 @@ import FieldChord from './FieldChord';
 import {Renderers} from '@cdo/apps/blockly/constants';
 import musicI18n from '../locale';
 import {logError, logWarning} from '../utils/MusicMetrics';
-import LabRegistry from '@cdo/apps/labs/LabRegistry';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -53,9 +52,9 @@ export default class MusicBlocklyWorkspace {
    * @param {*} container HTML element to inject the workspace into
    * @param {*} onBlockSpaceChange callback fired when any block space change events occur
    * @param {*} player reference to a {@link MusicPlayer}
-   * @param {*} toolboxAllowList optional object with allowed toolbox entries
+   * @param {*} isReadOnlyWorkspace is the workspace readonly
    */
-  init(container, onBlockSpaceChange, player, toolboxAllowList) {
+  init(container, onBlockSpaceChange, player, isReadOnlyWorkspace) {
     this.container = container;
 
     Blockly.Extensions.register(
@@ -85,7 +84,7 @@ export default class MusicBlocklyWorkspace {
     Blockly.fieldRegistry.register(FIELD_CHORD_TYPE, FieldChord);
 
     this.workspace = Blockly.inject(container, {
-      toolbox: getToolbox(toolboxAllowList),
+      toolbox: getToolbox(),
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
       theme: CdoDarkTheme,
       renderer: experiments.isEnabled('zelos')
@@ -95,6 +94,7 @@ export default class MusicBlocklyWorkspace {
       zoom: {
         startScale: experiments.isEnabled('zelos') ? 0.9 : 1,
       },
+      readOnly: isReadOnlyWorkspace,
     });
 
     // Remove two default entries in the toolbox's Functions category that
@@ -385,16 +385,9 @@ export default class MusicBlocklyWorkspace {
     return 'musicLabSavedCode' + getBlockMode();
   }
 
-  // Load the workspace with the given code, and call save.
+  // Load the workspace with the given code.
   loadCode(code) {
     Blockly.serialization.workspaces.load(code, this.workspace);
-    this.saveCode();
-  }
-
-  saveCode(forceSave = false) {
-    LabRegistry.getInstance()
-      .getProjectManager()
-      .save(this.getCode(), forceSave);
   }
 
   callUserGeneratedCode(fn, args = []) {
@@ -406,6 +399,9 @@ export default class MusicBlocklyWorkspace {
   }
 
   updateToolbox(allowList) {
+    if (!this.workspace || this.workspace.options.readOnly) {
+      return;
+    }
     const toolbox = getToolbox(allowList);
     this.workspace.updateToolbox(toolbox);
   }

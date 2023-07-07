@@ -107,11 +107,21 @@ def create_user(name, url: '/users.json', code: 201, **user_opts)
   end
 end
 
-And(/^I create a (young )?student( who has never signed in)? named "([^"]*)"( and go home)?$/) do |young, new_account, name, home|
+And(/^I create a (young )?student( in Colorado)?( who has never signed in)? named "([^"]*)"( and go home)?$/) do |young, locked, new_account, name, home|
   age = young ? '10' : '16'
   sign_in_count = new_account ? 0 : 2
 
-  create_user(name, age: age, sign_in_count: sign_in_count)
+  user_opts = {
+    age: age,
+    sign_in_count: sign_in_count
+  }
+
+  if locked
+    user_opts[:country_code] = "US"
+    user_opts[:us_state] = "CO"
+  end
+
+  create_user(name, **user_opts)
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 

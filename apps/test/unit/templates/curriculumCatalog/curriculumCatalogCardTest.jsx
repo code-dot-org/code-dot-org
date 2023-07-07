@@ -55,6 +55,7 @@ describe('CurriculumCatalogCard', () => {
     store = getStore();
     defaultProps = {
       courseDisplayName: 'AI for Oceans',
+      courseDisplayNameWithYear: 'AI for Oceans (2022)',
       duration: 'quarter',
       gradesArray: ['4', '5', '6', '7', '8'],
       isEnglish: true,
@@ -184,16 +185,28 @@ describe('CurriculumCatalogCard', () => {
     expect(screen.queryByText('+')).to.be.null;
   });
 
-  it('does not render translation icon by default', () => {
+  it('does not render translation icon when in English locale', () => {
     const {container} = renderCurriculumCard();
 
     expect(screen.queryByTitle(translationIconTitle)).to.be.null;
     expect(container.querySelectorAll('i[class*=language]')).to.have.length(0);
   });
 
-  it('renders translation icon when translation is available', () => {
+  it('does not render translation icon if translation is not available', () => {
     const {container} = renderCurriculumCard({
       ...defaultProps,
+      isEnglish: false,
+      isTranslated: false,
+    });
+
+    expect(screen.queryByTitle(translationIconTitle)).to.be.null;
+    expect(container.querySelectorAll('i[class*=language]')).to.have.length(0);
+  });
+
+  it('renders translation icon when translation is available in non-English locale', () => {
+    const {container} = renderCurriculumCard({
+      ...defaultProps,
+      isEnglish: false,
       isTranslated: true,
     });
 
@@ -251,7 +264,7 @@ describe('CurriculumCatalogCard', () => {
     });
   });
 
-  it('clicking Assign button as a teacher with sections shows sections', () => {
+  it('clicking Assign button as a teacher with sections shows dialog with sections and catalog-specific text with year', () => {
     store.dispatch(setSections(sections));
     renderCurriculumCard({
       ...defaultProps,
@@ -270,6 +283,8 @@ describe('CurriculumCatalogCard', () => {
     );
     fireEvent.click(assignButton);
     sections.forEach(section => screen.getByText(section.name));
+    screen.getByText('The most recent recommended version', {exact: false});
+    screen.getByRole('heading', defaultProps.courseDisplayNameWithYear);
   });
 
   it('clicking Assign button as a teacher without sections shows dialog to create section', () => {

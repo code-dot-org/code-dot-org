@@ -1,12 +1,12 @@
 // Music Lab specific validations.
 
 import MusicPlayer from '../player/MusicPlayer';
+import {Condition} from '@cdo/apps/lab2/types';
 import ConditionsChecker, {
   ConditionNames,
-  Condition,
-} from './ConditionsChecker';
+} from '@cdo/apps/lab2/progress/ConditionsChecker';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
-import {Validator} from './ProgressManager';
+import {Validator} from '@cdo/apps/lab2/progress/ProgressManager';
 
 export const ConditionNamesList: ConditionNames = {
   PLAYED_SOUNDS_TOGETHER: 'played_sounds_together',

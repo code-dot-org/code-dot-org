@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.7.5'
+# Temporarily support both Ruby 2.7 and 3.0 until we've fully transitioned from
+# the former to the latter
+# TODO infra: pin us to ruby 3 once all persistent managed servers get updated
+ruby '>= 2.7', '< 3.1'
 
 # Ruby 2.7 no longer includes some libraries by default; install
 # the ones we need here
@@ -125,10 +128,10 @@ gem 'open_uri_redirections', require: false
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 
-# Ref: https://github.com/puma/puma/pull/1646
-gem 'puma', github: 'wjordan/puma', branch: 'debugging'
+gem 'puma', '~> 5.0'
 gem 'puma_worker_killer'
 gem 'raindrops'
+gem 'sd_notify' # required for Puma to support systemd's Type=notify
 
 gem 'chronic', '~> 0.10.2'
 
@@ -181,7 +184,7 @@ gem 'honeybadger', '>= 4.5.6' # error monitoring
 
 gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
-gem 'redcarpet', '~> 3.3.4'
+gem 'redcarpet', '~> 3.5.1'
 
 gem 'geocoder'
 
