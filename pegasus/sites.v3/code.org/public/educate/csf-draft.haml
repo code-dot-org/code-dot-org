@@ -16,12 +16,12 @@ theme: responsive_full_width
       %a.link-button{href: "#csf-courses"}
         =hoc_s(:call_to_action_explore_courses)
     %figure
-      %img{src: "/images/banners/banner-csp-phone-icon.png", alt: ""}
+      %img{src: "/images/banners/banner-csf-characters.png", alt: ""}
     .clear
 
 %section
   .wrapper
-    %div.col-50{style: "margin-bottom: 1rem;"}
+    %div.col-50{style: "margin: .5rem 0 1rem;"}
       = view :display_video_thumbnail, id: "intro_csf", video_code: "rNIM1fzJ8u0", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/curriculum_videos/curriculum_video_csf.mp4"
     .text-wrapper.col-45{style: "float: right;"}
       %h2=hoc_s(:csf_page_intro_heading)
