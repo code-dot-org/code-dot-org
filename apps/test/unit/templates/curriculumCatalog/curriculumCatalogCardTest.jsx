@@ -1,6 +1,5 @@
 import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
-import {within} from '@testing-library/dom';
 import {pull} from 'lodash';
 import {expect} from '../../../util/reconfiguredChai';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
