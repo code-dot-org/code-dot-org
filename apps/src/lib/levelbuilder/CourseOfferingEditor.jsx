@@ -148,6 +148,22 @@ export default function CourseOfferingEditor(props) {
         </HelpTip>
       </label>
       <label>
+        Description
+        <HelpTip>
+          <p>
+            Write a short description (1-2 sentences) to explain the course
+            offering.
+          </p>
+        </HelpTip>
+        <br />
+        <textarea
+          type="text"
+          value={courseOffering.description}
+          style={(styles.input, styles.descriptionInput)}
+          onChange={e => updateCourseOffering('description', e.target.value)}
+        />
+      </label>
+      <label>
         Featured In Category
         <HelpTip>
           <p>
@@ -355,12 +371,16 @@ CourseOfferingEditor.propTypes = {
     cs_topic: PropTypes.string,
     school_subject: PropTypes.string,
     device_compatibility: PropTypes.string,
+    description: PropTypes.string,
   }),
 };
 
 const styles = {
   checkbox: {
     margin: '0 0 0 7px',
+  },
+  descriptionInput: {
+    height: '75px',
   },
   input: {
     width: '100%',
