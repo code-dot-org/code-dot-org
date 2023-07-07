@@ -52,7 +52,7 @@ class Follower < ApplicationRecord
   validate :cannot_follow_yourself, unless: -> {deleted?}
   validate :teacher_must_be_teacher, unless: -> {deleted?}
   validate :student_cannot_be_admin
-  validate :pl_participant_cannot_have_family_name, if: proc {DCDO.get('family-name-features', false)}
+  validate :pl_participant_cannot_have_family_name
 
   validates_presence_of :student_user, unless: -> {deleted?}
   validates_presence_of :section, unless: -> {deleted?}

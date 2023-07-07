@@ -4802,8 +4802,6 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'family name is not allowed on pl participants' do
-    DCDO.stubs(:get).with('family-name-features', false).returns(true)
-
     user = create :user
     family_name = 'TestFamilyName'
 
@@ -4815,20 +4813,14 @@ class UserTest < ActiveSupport::TestCase
     user.family_name = family_name
 
     assert_not(user.valid?)
-
-    DCDO.unstub(:get)
   end
 
   test 'family name is not allowed on teachers' do
-    DCDO.stubs(:get).with('family-name-features', false).returns(true)
-
     user = create :teacher
     family_name = 'TestFamilyName'
     user.family_name = family_name
 
     assert_not(user.valid?)
-
-    DCDO.unstub(:get)
   end
 
   test 'school_info_school returns the school associated with the user' do
