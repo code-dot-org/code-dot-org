@@ -181,7 +181,7 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test 'send to phone' do
     get :edit, params: {key: 'playlab', channel_id: 'my_channel_id'}
-    assert @response.body.include? '"send_to_phone_url":"http://test.host/sms/send"'
+    assert_includes(@response.body, '"send_to_phone_url":"http://test.host/sms/send"')
   end
 
   test 'applab and gamelab edit gets redirected if under 13' do

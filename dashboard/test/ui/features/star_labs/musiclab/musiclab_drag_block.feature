@@ -3,8 +3,8 @@
 Feature: Music Lab block can be dragged
 
 Scenario: Dragging play sound block
-  Given I am on "http://studio.code.org/s/allthethings/lessons/46/levels/1?show-video=false"
-  Then I wait until I am on "http://studio.code.org/s/allthethings/lessons/46/levels/1?show-video=false"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/46/levels/2?show-video=false"
+  Then I wait until I am on "http://studio.code.org/s/allthethings/lessons/46/levels/2?show-video=false"
   And I rotate to landscape
 
   # Wait until we see the first category.

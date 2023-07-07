@@ -70,14 +70,26 @@ export default class SetupGuide extends React.Component {
       <div>
         {isCodeOrgBrowser() && (
           <Notification
-            type={NotificationType.warning}
-            notice={i18n.makerSetupDeprecationWarningAppTitle()}
-            details={i18n.makerSetupDeprecationWarningAppDetails()}
+            type={NotificationType.failure}
+            notice={i18n.makerAppDeprecationNoticeTitle()}
+            details={i18n.makerAppDeprecationNoticeDetails()}
             detailsLinkText={i18n.makerDeprecationNoticeLinkText()}
             detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
             dismissible
           />
         )}
+        {!isCodeOrgBrowser() &&
+          chromeVersion &&
+          chromeVersion < MIN_CHROME_VERSION && (
+            <Notification
+              type={NotificationType.warning}
+              notice={i18n.makerSetupDeprecationNoticeOldChromeTitle()}
+              details={i18n.makerSetupDeprecationNoticeOldChromeDetails()}
+              detailsLinkText={i18n.makerDeprecationNoticeLinkText()}
+              detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
+              dismissible
+            />
+          )}
         {!isCodeOrgBrowser() &&
           chromeVersion &&
           chromeVersion < MIN_CHROME_VERSION && (

@@ -79,6 +79,10 @@ class I18nSync
 
   private
 
+  def sync_in
+    I18n::SyncIn.perform
+  end
+
   def parse_options(args)
     options = {}
     opt_parser = OptionParser.new do |opts|

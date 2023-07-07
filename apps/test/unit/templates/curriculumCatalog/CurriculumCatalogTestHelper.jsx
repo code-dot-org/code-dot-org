@@ -2,6 +2,7 @@
 const makerCurriculum = {
   key: 'devices',
   display_name: 'Creating Apps for Devices',
+  display_name_with_year: 'Creating Apps for Devices (2022)',
   grade_levels: '6,7,8,9,10,11,12',
   image: 'devices.png',
   duration: 'week',
@@ -13,6 +14,7 @@ const makerCurriculum = {
 const countingCurriculum = {
   key: 'counting-csc',
   display_name: 'Computer Science Connections',
+  display_name_with_year: 'Computer Science Connections (2023)',
   grade_levels: '3,4,5',
   image: 'csc.png',
   duration: 'lesson',
@@ -26,6 +28,7 @@ const countingCurriculum = {
 const poemArtCurriculum = {
   key: 'poem-art',
   display_name: 'Poem Art',
+  display_name_with_year: 'Poem Art (2017)',
   grade_levels: '2,3,4,5,6,7,8,9,10,11,12',
   image: null,
   duration: 'lesson',
@@ -39,6 +42,7 @@ const poemArtCurriculum = {
 const danceUnpluggedCurriculum = {
   key: 'dance-unplugged',
   display_name: 'Hour of Code - Dance Party - Unplugged',
+  display_name_with_year: 'Hour of Code - Dance Party - Unplugged (2018)',
   grade_levels: '2,3,4,5,6,7,8',
   image: null,
   duration: 'lesson',
@@ -52,6 +56,7 @@ const danceUnpluggedCurriculum = {
 const course1Curriculum = {
   key: 'course1',
   display_name: 'Course 1',
+  display_name_with_year: 'Course 1 (2012)',
   grade_levels: 'K,1',
   image: null,
   duration: 'lesson',
@@ -65,6 +70,7 @@ const course1Curriculum = {
 const course2Curriculum = {
   key: 'course2',
   display_name: 'Course 2',
+  display_name_with_year: 'Course 2 (2012)',
   grade_levels: '2,3,4,5',
   image: 'course2.png',
   duration: 'lesson',
@@ -78,6 +84,7 @@ const course2Curriculum = {
 const course3Curriculum = {
   key: 'course3',
   display_name: 'Course 3',
+  display_name_with_year: 'Course 3 (2012)',
   grade_levels: '3,4,5',
   image: 'course3.png',
   duration: 'lesson',
@@ -91,6 +98,7 @@ const course3Curriculum = {
 const course4Curriculum = {
   key: 'course4',
   display_name: 'Course 4',
+  display_name_with_year: 'Course 4 (2012)',
   grade_levels: '4,5',
   image: 'course4.png',
   duration: 'lesson',
@@ -104,6 +112,7 @@ const course4Curriculum = {
 const noGradesCurriculum = {
   key: 'no-grades',
   display_name: 'No Grades',
+  display_name_with_year: 'No Grade (2012)',
   grade_levels: null,
   image: 'grades.png',
   duration: 'lesson',
@@ -117,6 +126,7 @@ const noGradesCurriculum = {
 const noPathCurriculum = {
   key: 'no-path',
   display_name: 'No Path',
+  display_name_with_year: 'No Path (2012)',
   grade_levels: 'K,1',
   image: 'grades.png',
   duration: 'month',
