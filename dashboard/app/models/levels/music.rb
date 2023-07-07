@@ -56,4 +56,13 @@ class Music < Blockly
   def uses_google_blockly?
     true
   end
+
+  def uses_lab2?
+    true
+  end
+
+  def enable_scrolling?
+    # ensures we have the small footer
+    true
+  end
 end

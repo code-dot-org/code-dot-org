@@ -320,7 +320,7 @@ Dashboard::Application.routes.draw do
         post 'clone'
         post 'update_start_code'
         post 'update_exemplar_code'
-        get 'level_data'
+        get 'level_properties'
       end
     end
 
@@ -472,9 +472,9 @@ Dashboard::Application.routes.draw do
             get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
             # /s/xxx/lessons/yyy/levels/zzz/sublevel/sss
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
-            # Get the level data via JSON.
-            # /s/xxx/lessons/yyy/levels/zzz/level_data
-            get 'level_data', to: 'script_levels#level_data'
+            # Get the level's properties via JSON.
+            # /s/xxx/lessons/yyy/levels/zzz/level_properties
+            get 'level_properties', to: 'script_levels#level_properties'
           end
         end
         resources :script_levels, only: [:show], path: "/levels", format: false do
@@ -595,6 +595,7 @@ Dashboard::Application.routes.draw do
 
     # LTI API endpoints
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
+    post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
 
     get '/notes/:key', to: 'notes#index'
 
@@ -1061,5 +1062,7 @@ Dashboard::Application.routes.draw do
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:
       'policy_compliance#child_account_consent'
+    post '/policy_compliance/child_account_consent/', to:
+      'policy_compliance#child_account_consent_request'
   end
 end

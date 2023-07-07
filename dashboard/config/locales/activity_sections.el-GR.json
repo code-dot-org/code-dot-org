@@ -805,7 +805,7 @@
           "name": "Εισαγωγή"
         },
         "c2a66127-5945-47ec-938a-f396824349a7": {
-          "name": "Διώρθωση λαθών με την Laurel"
+          "name": "Διόρθωση λαθών με την Laurel"
         },
         "bb78ee6d-4d05-4a4b-90e8-7c6cb6a099dd": {
           "progression_name": "Βίντεο: Αποσφαλμάτωση με το Κουμπί Βήμα"
@@ -1835,7 +1835,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "e81da78c-ac8a-4212-bbe4-07ba9cfebc9e": {
-          "progression_name": "Βίντεο: Κύβοι Επανάληψης Έως"
+          "progression_name": "Βίντεο: Επανάλαβε Έως μπλοκ"
         },
         "62f9f06c-c008-464b-b1fb-86e224ce1018": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
@@ -2450,6 +2450,7 @@
           "name": "Εισαγωγή"
         },
         "109dc08b-1106-4a0d-bc01-7dba9d3a40b2": {
+          "name": "Βρόχοι με την Rey και το BB-8",
           "progression_name": "Βίντεο: Προγραμματίζοντας με τον Ρέι και BB-8"
         },
         "a9ede4c3-8f00-479e-9a63-7d2c45e36469": {
@@ -3708,6 +3709,7 @@
           "name": "Εισαγωγή"
         },
         "fe682113-6220-4a20-b2a7-009bde3d8e27": {
+          "name": "Βρόχοι με την Rey και το BB-8",
           "progression_name": "Βίντεο: Προγραμματίζοντας με τον Ρέι και BB-8"
         },
         "336c18d5-0c32-44c2-b35c-a6f7eec5abff": {
@@ -4524,7 +4526,7 @@
           ]
         },
         "6b2ab9dc-4cdf-4797-a181-ac82354bd22f": {
-          "description": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+          "description": "![](https://curriculum.code.org/media/uploads/first-computer.jpg)"
         },
         "3db6f33d-50ad-4131-a34a-c9d0cf11c1ce": {
           "tips": [
@@ -7492,7 +7494,7 @@
           "progression_name": "Πρόκληση"
         },
         "21389587-1242-42b1-b1e5-723fc5ddc4b5": {
-          "description": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+          "description": "![](https://images.code.org/f5d91424ac0f0fda534a0fbdadaa5d6a-empty-chart.png)"
         },
         "b9330fe8-365a-492e-b155-48d1aa4b993e": {
           "tips": [
@@ -12530,6 +12532,7 @@
           "name": "Εισαγωγή"
         },
         "16139473-0792-46d6-b8f8-77c79ceead5c": {
+          "name": "Βρόχοι με την Rey και το BB-8",
           "progression_name": "Βίντεο: Προγραμματίζοντας με τον Ρέι και BB-8"
         },
         "aadcbed9-b15e-4fcb-b277-fd1c8156270e": {
@@ -12789,7 +12792,7 @@
           "name": "Εισαγωγή"
         },
         "2fb45914-1afa-4483-8fb0-e3e3503fa80b": {
-          "name": "Διώρθωση λαθών με την Laurel"
+          "name": "Διόρθωση λαθών με την Laurel"
         },
         "a3c8ba66-a991-45a4-a743-59b4a41ebb24": {
           "progression_name": "Βίντεο: Αποσφαλμάτωση με το Κουμπί Βήμα"
@@ -13394,6 +13397,7 @@
           "name": "Εισαγωγή"
         },
         "2bb620b7-6107-4b46-b717-117c20503ef0": {
+          "name": "Βρόχοι με την Rey και το BB-8",
           "progression_name": "Βίντεο: Προγραμματίζοντας με τον Ρέι και BB-8"
         },
         "0602dbde-3014-45cc-86b7-b36ec9ca04af": {
@@ -14473,7 +14477,7 @@
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
         },
         "c978158c-f26f-4fe2-ac61-4f383a2fe748": {
-          "progression_name": "Βίντεο: Κύβοι Επανάληψης Έως"
+          "progression_name": "Βίντεο: Επανάλαβε Έως μπλοκ"
         },
         "dec0ef7e-1dd7-4abb-a1f9-b4fc7b9e9643": {
           "progression_name": "Καλλιέργεια Δεξιοτήτων"
@@ -17573,7 +17577,7 @@
           ]
         },
         "4436ad56-59ce-4b60-8e8e-bd0c9f80626a": {
-          "description": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+          "description": "![](https://curriculum.code.org/media/uploads/first-computer.jpg)"
         },
         "c21034e8-cca8-4197-9819-081e4114ef36": {
           "tips": [

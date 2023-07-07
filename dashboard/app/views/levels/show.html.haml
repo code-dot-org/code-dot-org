@@ -55,6 +55,8 @@
       :javascript
         var appOptions = #{app_options.to_json};
       = render partial: 'levels/unplug', locals: {app: @game.app}
+    - elsif @script_level && @level.uses_lab2?
+      = render partial: 'levels/lab2'
     - elsif @level.is_a?(DSLDefined) || @level.is_a?(Widget) || @level.is_a?(FreeResponse) || @level.is_a?(StandaloneVideo) || @level.is_a?(ExternalLink) || @level.is_a?(CurriculumReference)
       :javascript
         var appOptions = #{app_options.to_json};

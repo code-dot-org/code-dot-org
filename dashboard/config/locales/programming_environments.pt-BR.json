@@ -172,7 +172,7 @@
               }
             },
             "variables": {
-              "name": "variáveis",
+              "name": "Variáveis",
               "expressions": {
                 "assign_x": {
                   "short_description": "Atribui um valor a uma variável declarada anteriormente."
@@ -685,7 +685,7 @@
               }
             },
             "variables": {
-              "name": "variáveis",
+              "name": "Variáveis",
               "expressions": {
                 "declareNoAssign_x": {
                   "short_description": "Declara uma variável com o nome fornecido."
