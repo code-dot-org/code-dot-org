@@ -205,7 +205,7 @@ export const levelsByLesson = ({
  */
 export const levelsForLessonId = (state, lessonId) => {
   const lesson = state.lessons?.find(lesson => lesson.id === lessonId);
-  return lesson.levels.map(level =>
+  return lesson?.levels.map(level =>
     levelWithProgress(state, level, lesson.lockable)
   );
 };
