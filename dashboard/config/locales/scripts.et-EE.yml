@@ -2042,3 +2042,7 @@ et:
               display_name: Spraidid
             lessonGroup-4:
               display_name: Muutujad
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Andmed

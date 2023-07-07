@@ -852,6 +852,9 @@
           "word": "Binarny",
           "definition": "Sposób przedstawiania informacji z użyciem tylko dwóch opcji."
         },
+        "computer/csd/2022": {
+          "word": "Komputer"
+        },
         "input/csd/2022": {
           "word": "Wejście"
         },
@@ -1535,6 +1538,9 @@
         },
         "function/csd/2021": {
           "word": "Funkcja"
+        },
+        "computer/csd/2021": {
+          "word": "Komputer"
         },
         "input/csd/2021": {
           "word": "Wejście"

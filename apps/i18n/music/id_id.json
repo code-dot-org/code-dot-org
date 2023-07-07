@@ -56,5 +56,6 @@
   "startOver": "Mulai kembali",
   "upload": "Unggah",
   "panelHeaderInstructions": "instruksi",
-  "panelHeaderWorkspace": "Area kerja: "
+  "panelHeaderWorkspace": "Area kerja: ",
+  "continue": "Lanjutkan"
 }

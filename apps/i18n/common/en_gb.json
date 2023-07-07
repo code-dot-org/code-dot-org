@@ -193,6 +193,7 @@
   "dropletBlock_return_signatureOverride": "return",
   "dropletBlock_stopSound_description": "Stops playing the sound file from the specified URL, or all sounds if no URL is given.",
   "dropletBlock_stopSound_param0_description": "The URL to a sound file. Can be an project asset name or external URL.",
+  "duplicate": "Duplicate",
   "edit": "editar",
   "editable": "Editabil",
   "email": "Email",

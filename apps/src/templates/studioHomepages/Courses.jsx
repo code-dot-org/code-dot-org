@@ -13,8 +13,6 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import styleConstants from '@cdo/apps/styleConstants';
 import shapes from './shapes';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import color from '../../util/color';
 
 class Courses extends Component {
@@ -50,7 +48,6 @@ class Courses extends Component {
         subHeadingText: i18n.coursesTeachHeroSubHeading(),
         buttonText: i18n.coursesTeachHeroButton(),
       };
-      analyticsReporter.sendEvent(EVENTS.TEACH_PAGE_VISITED_EVENT);
     }
 
     // We show a long version of the banner when you're signed out,

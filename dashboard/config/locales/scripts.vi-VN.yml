@@ -120,6 +120,8 @@ vi:
           name: vô cực
         netsim:
           title: bộ mô phỏng internet
+        pixelation:
+          title: Điểm ảnh
         20-hour:
           title: 20 giờ giới thiệu khóa học
           description: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học máy tính
@@ -440,16 +442,21 @@ vi:
         flappy-impact-study:
           title: Mã lệnh Flappy có bài khảo sát
         coursea-draft:
+          title: 'Nguyên tắc cơ bản của KHMT: Khóa học A'
           description_short: Giới thiệu môn khoa học máy tính cho trẻ mới biết đọc.
         courseb-draft:
+          title: 'Nguyên tắc cơ bản của KHMT: Khóa học B'
           description_short: Giới thiệu môn khoa học máy tính cho trẻ mới biết đọc.
         coursec-draft:
+          title: 'Nguyên tắc cơ bản của KHMT: Khóa học C'
           description_short: Tìm hiểu những kiến thức cơ bản về khoa học máy tính
             và sáng tạo tác phẩm, câu chuyện và game của riêng bạn.
         coursed-draft:
+          title: 'Nguyên tắc cơ bản của KHMT: Khóa học D'
           description_short: Tìm hiểu những kiến thức cơ bản về khoa học máy tính
             và sáng tạo tác phẩm, câu chuyện và game của riêng bạn.
         coursee-draft:
+          title: 'Nguyên tắc cơ bản của KHMT: Khóa học E'
           description_short: Tìm hiểu những kiến thức cơ bản về khoa học máy tính
             và sáng tạo tác phẩm, câu chuyện và game của riêng bạn.
           lesson_groups:
@@ -460,6 +467,7 @@ vi:
             extra_course_content:
               display_name: Nội dung khóa học bổ sung
         coursef-draft:
+          title: 'Nguyên tắc cơ bản của KHMT: Khóa học F'
           description_short: Tìm hiểu những kiến thức cơ bản về khoa học máy tính
             và sáng tạo tác phẩm, câu chuyện và game của riêng bạn.
           lesson_groups:
@@ -512,6 +520,8 @@ vi:
               display_name: Nội dung
             cspSurvey:
               display_name: Khảo sát
+        coursed-ramp:
+          title: 'Nguyên tắc cơ bản của KHMT: Khóa học D'
         coursee-ramp:
           title: coursee-ramp
         csd6-2017:
@@ -1193,6 +1203,7 @@ vi:
         frozen-2018-test:
           title: Kịch bản Frozen mới
         dance:
+          title: Bữa tiệc khiêu vũ (2018)
           description_short: Hợp tác với Katy Perry, Madonna, J. Balvin, Sia, Keith
             Urban, Ciara và 25 nghệ sĩ khác!
           description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ với bạn
@@ -2130,6 +2141,8 @@ vi:
         csd2-virtual:
           description_short: Tìm hiểu để xây dựng trang web riêng của bạn trong Kho
             Dữ liệu Web.
+        csp5-virtual:
+          title: Lập trình hướng sự kiện trong App Lab
         virtual-holding-place:
           lesson_groups:
             content:
@@ -2145,6 +2158,7 @@ vi:
             cspSurvey:
               display_name: Khảo sát
         csd3-virtual:
+          title: Bài giới thiệu tự học về Game Lab
           lesson_groups:
             csd3_1:
               display_name: Nội dung
@@ -2583,6 +2597,7 @@ vi:
             cspSurvey2020:
               display_name: Khảo sát
         aiml-2021:
+          title: Học phần về Trí tuệ nhân tạo và Máy học
           lesson_groups:
             lessonGroup-4:
               display_name: Khảo sát
@@ -2885,6 +2900,8 @@ vi:
         ai-ethics:
           title: Quy tắc đạo đức trí tuệ nhân tạo
           description_audience: lớp 6-12
+        dance-unplugged:
+          title: Giờ lập trình - Bữa tiệc khiêu vũ - Không dùng thiết bị điện tử
         csc-things:
           name: csc-things
           title: Kết nối KHMT Trút bỏ ý tưởng
@@ -3481,6 +3498,7 @@ vi:
           name: testtess2
         aiml-2022:
           name: aiml-2022
+          title: Học phần về Trí tuệ nhân tạo và Máy học
           description_short: Tìm hiểu về trí tuệ nhân tạo và máy học
         self-paced-pl-csd1-2022:
           lesson_groups:
@@ -3788,6 +3806,8 @@ vi:
           description_audience: Người biên soạn giáo trình
           description_short: Để cập nhật theo giai đoạn cho các bài học hoặc cấp độ
             giữa các phiên bản giáo trình
+        devices-2022:
+          title: Tạo ứng dụng bằng thiết bị (Circuit Playground)
         microbit-temp:
           lesson_groups:
             lessonGroup-2:
@@ -4202,6 +4222,7 @@ vi:
 
             **Thời gian đề xuất:** 50 phút
         self-paced-pl-csd5-2023:
+          title: 'Học phần 7: Chuẩn bị giảng dạy về AI và máy học'
           description: |-
             Học phần học tập chuyên môn này được thiết kế để giúp bạn chuẩn bị dạy bài học về AI và Máy học của Code.org.
 
@@ -4290,3 +4311,7 @@ vi:
             và game của riêng bạn.
         self-paced-pl-csp2-2023:
           title: 'Học phần 2: Điều hướng trên Code.org'
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Dữ liệu

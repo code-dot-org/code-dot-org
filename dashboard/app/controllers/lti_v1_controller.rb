@@ -25,6 +25,12 @@ class LtiV1Controller < ApplicationController
     lti_integration = LtiIntegration.find_by(query_params)
     return unauthorized_status unless lti_integration
 
+    state_and_nonce = create_state_and_nonce
+    # set cache key as state value, since we get this back in the final response
+    # from the LTI Platform, and can use it to query for these values in the
+    # authenticate controller action.
+    write_cache(state_and_nonce[:state], state_and_nonce)
+
     auth_redirect_url = URI(lti_integration[:auth_redirect_url])
     auth_redirect_url.query = {
       scope: 'openid',
@@ -33,45 +39,83 @@ class LtiV1Controller < ApplicationController
       redirect_uri: CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme),
       login_hint:  params[:login_hint],
       lti_message_hint: params[:lti_message_hint].to_s, # Required by Canvas
-      state: create_and_set_state,
+      state: state_and_nonce[:state],
       response_mode: 'form_post',
-      nonce: create_and_set_nonce,
+      nonce: state_and_nonce[:nonce],
       prompt: 'none',
     }.to_query
 
     redirect_to auth_redirect_url.to_s
   end
 
+  def authenticate
+    id_token = params[:id_token]
+    return unauthorized_status unless id_token
+    begin
+      decoded_jwt_no_auth = JSON::JWT.decode(id_token, :skip_verification)
+    rescue
+      return unauthorized_status
+    end
+    # client_id is the aud[ience] in the JWT
+    extracted_client_id = decoded_jwt_no_auth[:aud]
+    extracted_issuer_id = decoded_jwt_no_auth[:iss]
+
+    integration = LtiIntegration.find_by({client_id: extracted_client_id, issuer: extracted_issuer_id})
+    return unauthorized_status unless integration
+
+    # check state and nonce in response and id_token against cached values
+    cached_state_and_nonce = read_cache params[:state]
+    return unauthorized_status unless (params[:state] == cached_state_and_nonce[:state]) &&
+      (decoded_jwt_no_auth[:nonce] == cached_state_and_nonce[:nonce])
+
+    begin
+      # verify the jwt via the integration's public keyset
+      decoded_jwt = get_decoded_jwt(integration, id_token)
+    rescue
+      return unauthorized_status
+    end
+
+    jwt_verifier = JwtVerifier.new(decoded_jwt, integration)
+
+    if jwt_verifier.verify_jwt
+      target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
+      redirect_to target_link_uri
+    else
+      return unauthorized_status
+    end
+  end
+
+  def get_decoded_jwt(integration, id_token)
+    public_jwk_url = integration.jwks_url
+    response = JSON.parse(HTTParty.get(public_jwk_url).body)
+    jwk_set = JSON::JWK::Set.new response
+    JSON::JWT.decode(id_token, jwk_set)
+  end
+
   private
+
+  NAMESPACE = "lti_v1_controller".freeze
 
   def unauthorized_status
     render(status: :unauthorized, json: {error: 'Unauthorized'})
   end
 
-  def create_and_set_nonce
-    # generate nonce, this will be set as a cookie.
-    nonce = generate_random_string 10
-    # generate hashed nonce, this will be returned to the LTI Platform in the
-    # request params https://openid.net/specs/openid-connect-core-1_0.html#NonceNotes
-    hashed_nonce = Digest::SHA2.hexdigest nonce
-    set_cookie('nonce', nonce)
-
-    hashed_nonce
-  end
-
-  def create_and_set_state
+  def create_state_and_nonce
     state = generate_random_string 10
-    set_cookie('state', state)
+    nonce = Digest::SHA2.hexdigest(generate_random_string(10))
 
-    state
+    {state: state, nonce: nonce}
   end
 
-  def set_cookie(name, value)
-    cookies[:"#{name}"] = {
-      value: value,
-      httponly: true,
-      same_site: :strict,
-    }
+  def write_cache(key, value)
+    # TODO: Add error handling
+    CDO.shared_cache.write("#{NAMESPACE}/#{key}", value.to_json, expires_in: 1.minute)
+  end
+
+  def read_cache(key)
+    # TODO: Add error handling
+    json_value = CDO.shared_cache.read("#{NAMESPACE}/#{key}")
+    JSON.parse(json_value).symbolize_keys
   end
 
   def generate_random_string(length)

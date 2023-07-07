@@ -824,6 +824,9 @@
           "word": "Binário",
           "definition": "Forma de representar informações usando apenas duas opções."
         },
+        "computer/csd/2022": {
+          "word": "Computador"
+        },
         "input/csd/2022": {
           "word": "Entrada"
         },
@@ -1466,6 +1469,9 @@
         },
         "function/csd/2021": {
           "word": "Função"
+        },
+        "computer/csd/2021": {
+          "word": "Computador"
         },
         "input/csd/2021": {
           "word": "Entrada"

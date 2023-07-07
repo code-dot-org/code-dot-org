@@ -67,7 +67,7 @@ es-MX:
           student_description: Aprende programación funcional a través del álgebra.
           name: álgebra
         infinity:
-          title: Laboratorio de Juego Disney Infinity
+          title: 'Laboratorio de Juegos: Disney Infinity'
           description: Utiliza el laboratorio de juegos para crear una historia o un juego protagonizado por personajes de Disney Infinity.
           description_short: Utiliza el laboratorio de juegos para crear una historia o un juego protagonizado por personajes de Disney Infinity.
           student_description: Utiliza el laboratorio de juegos para crear una historia o un juego protagonizado por personajes de Disney Infinity.
@@ -471,13 +471,13 @@ es-MX:
           student_description: "¡Crea una historia o haz un juego con el laboratorio de juegos de Gumball!"
           name: gumball
         starwars:
-          title: 'La guerra de las galaxias: cómo construir una galaxia con código (JavaScript)'
+          title: 'La guerra de las galaxias: programa una galaxia (JavaScript)'
           description: Aprende a programar droides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
           description_short: Aprende a programar droides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
           student_description: Aprende a programar droides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
           name: starwars
         starwarsblocks:
-          title: 'Star Wars: Construyendo una Galaxia con código (Blockly)'
+          title: 'Guerra de las Galaxias: Programa una galaxia (Bloques)'
           description: Aprende a programar droides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
           description_short: Aprende a programar droides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
           student_description: Aprende a programar droides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
@@ -972,17 +972,17 @@ es-MX:
           description: "¿Quieres escribir tu propio juego en menos de 10 minutos? ¡Prueba nuestro tutorial de Flappy Code! Esta versión incluye encuestas previas y posteriores para ayudarnos a seguir mejorando la Hora del Código. Pide a tu clase que pase a la encuesta posterior 10 minutos antes de que termine la clase."
           student_description: "¿Quieres escribir tu propio juego en menos de 10 minutos? ¡Prueba nuestro tutorial de Flappy Code! Esta versión incluye encuestas previas y posteriores para ayudarnos a seguir mejorando la Hora del Código. Pide a tu clase que pase a la encuesta posterior 10 minutos antes de que termine la clase."
         coursea-draft:
-          title: 'Fundamentos de Informática: Curso A'
+          title: 'Fundamentos de Ciencias de la Computación: Curso A'
           description_short: Una introducción a las ciencias de la computación para lectores principiantes.
           description: "El curso A es para los primeros lectores. Los estudiantes crearán programas informáticos que les ayudarán a aprender a colaborar con otros, a desarrollar habilidades de resolución de problemas y a persistir en tareas difíciles. Al final de este curso, los estudiantes crearán su propio juego o historia personalizada que podrán compartir. \nRecomendado para el grado K."
           student_description: "El curso A es para los primeros lectores. Los estudiantes crearán programas informáticos que les ayudarán a aprender a colaborar con otros, a desarrollar habilidades de resolución de problemas y a persistir en tareas difíciles. Al final de este curso, los estudiantes crearán su propio juego o historia personalizada que podrán compartir. \nRecomendado para el grado K."
         courseb-draft:
-          title: 'Fundamentos de Informática: Curso B'
+          title: 'Fundamentos de Ciencias de la Computación: Curso B'
           description_short: Una introducción a las ciencias de la computación para lectores principiantes.
           description: El curso B es para los primeros lectores. Los estudiantes crearán programas informáticos que les ayudarán a aprender a colaborar con otros, a desarrollar habilidades de resolución de problemas y a persistir en tareas difíciles. Al final de este curso, los estudiantes crearán su propio juego o historia personalizada que podrán compartir. Recomendado para 1er grado.
           student_description: El curso B es para los primeros lectores. Los estudiantes crearán programas informáticos que les ayudarán a aprender a colaborar con otros, a desarrollar habilidades de resolución de problemas y a persistir en tareas difíciles. Al final de este curso, los estudiantes crearán su propio juego o historia personalizada que podrán compartir. Recomendado para 1er grado.
         coursec-draft:
-          title: 'Fundamentos de Informática: Curso C'
+          title: 'Fundamentos de Ciencias de la Computación: Curso C'
           description_short: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
           description: En este curso los estudiantes crearán programas para resolver problemas y desarrollarán juegos interactivos o historias que puedan compartir. Recomendado para 2º grado.
           student_description: En este curso los estudiantes crearán programas para resolver problemas y desarrollarán juegos interactivos o historias que puedan compartir. Recomendado para 2º grado.
@@ -992,7 +992,7 @@ es-MX:
           description: En este curso los estudiantes crearán programas para resolver problemas y desarrollarán juegos interactivos o historias que puedan compartir. Recomendado para 3er grado.
           student_description: En este curso los estudiantes crearán programas para resolver problemas y desarrollarán juegos interactivos o historias que puedan compartir. Recomendado para 3er grado.
         coursee-draft:
-          title: 'Fundamentos de Informática: Curso E'
+          title: 'Fundamentos de Ciencias de la Computación: Curso E'
           description_short: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
           description: En este curso los estudiantes crearán programas para resolver problemas y desarrollarán juegos interactivos o historias que puedan compartir. El curso culmina con un proyecto de varios días. Recomendado para 4º grado.
           lesson_groups:
@@ -1004,7 +1004,7 @@ es-MX:
               display_name: Contenido adicional del curso
           student_description: En este curso los estudiantes crearán programas para resolver problemas y desarrollarán juegos interactivos o historias que puedan compartir. El curso culmina con un proyecto de varios días. Recomendado para 4º grado.
         coursef-draft:
-          title: 'Fundamentos de Informática: Curso F'
+          title: 'Fundamentos de Ciencias de la Computación: Curso F'
           description_short: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
           description: En este curso los estudiantes crearán programas para resolver problemas y desarrollarán juegos interactivos o historias que puedan compartir. El curso culmina con un proyecto de varios días. Recomendado para 5º grado.
           lesson_groups:
@@ -2147,7 +2147,7 @@ es-MX:
         frozen-2018-test:
           title: Nuevo guión de Frozen
         dance:
-          title: Fiesta de baile
+          title: Fiesta de baile (remix 2018)
           description_short: "¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara y otros 25!"
           description: "¡Programa tu propio baile para compartirlo con tus amigos!"
           student_description: "¡Programa tu propio baile para compartirlo con tus amigos!"
@@ -5144,7 +5144,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-5:
               display_name: Proyecto de fin de curso
-          title: Curso A (2021)
+          title: Curso A (2022)
           description: 'El curso A ofrece un plan de estudios de ciencias de la computación para los lectores principiantes, incluidos los estudiantes de infantil. Los estudiantes aprenderán a programar utilizando comandos como bucles y eventos. Las lecciones de este curso también enseñan a los estudiantes a colaborar de forma significativa con otros, a investigar diferentes técnicas de resolución de problemas, a persistir ante tareas desafiantes y a aprender sobre la seguridad en Internet. '
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           description_short: Una introducción a las ciencias de la computación para prelectores.
@@ -5170,7 +5170,7 @@ es-MX:
               display_name: Bucles Para
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso Express (2021)
+          title: Curso Express (2022)
           description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           description_short: 'Una introducción a la ciencia de la computación: combina lo mejor de nuestro plan de estudios de primaria para estudiantes mayores.'
@@ -5251,7 +5251,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-6:
               display_name: Proyecto de fin de curso
-          title: Curso B (2021)
+          title: Curso B (2022)
           description: Hemos desarrollado el Curso B pensando en los alumnos de primer grado. Aunque los conceptos del Curso B son paralelos a los del Curso A, los alumnos aprenden actividades más sofisticadas y trabajan con una mayor variedad de rompecabezas. Los alumnos aprenderán los fundamentos de la programación, técnicas de colaboración, habilidades de investigación y pensamiento crítico, persistencia ante las dificultades y seguridad en Internet. Al final de este curso, los estudiantes crean juegos en el entorno de programación del Laboratorio de Juegos.
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           description_short: Una introducción a las ciencias de la computación para prelectores. Es similar al Curso A, pero con conceptos más avanzados.
@@ -5271,7 +5271,7 @@ es-MX:
               display_name: Datos
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso C (2021)
+          title: Curso C (2022)
           description: Desarrollamos el Curso C para estudiantes de segundo grado. Los estudiantes crearán programas con secuencias, bucles y eventos. Investigarán técnicas de resolución de problemas y desarrollarán estrategias para construir comunidades positivas tanto en línea como fuera de ella. Al final del curso, los alumnos crearán juegos interactivos que podrán compartir.
           student_description: Crea programas con secuencias, bucles y eventos. Traduce tus iniciales a código binario, investiga distintas técnicas de resolución de problemas y aprende cómo responder al ciberacoso. ¡Al final del curso podrás crear tu propio juego o historia para compartir!
           description_short: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
@@ -5348,7 +5348,7 @@ es-MX:
               display_name: Condicionales
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso D (2021)
+          title: Curso D (2022)
           description: 'Hemos creado el curso D para los alumnos de tercer grado.  El curso comienza con un repaso de los conceptos encontrados en cursos anteriores, incluyendo bucles y eventos. Después, los estudiantes desarrollarán su comprensión de los algoritmos, los bucles anidados, los bucles while, las condicionales y mucho más. '
           student_description: Aprende sobre bucles, condicionales y eventos. Más allá de la codificación, aprende sobre la ciudadanía digital.
           description_short: Aprende sobre sentencias condicionales y crea tu propio arte, historia o juego.
@@ -6578,7 +6578,7 @@ es-MX:
           description: "Los alumnos están motivados si se sienten conectados con el material que están estudiando. Una forma de hacer que el contenido de la informática sea relevante, significativo, relacionable y emocionante es incorporar conjuntos de datos del mundo real en las tareas de programación práctica.\n\nLos datos son valores. Los valores por sí mismos no son conocimiento, el conocimiento es lo que se obtiene del estudio de los datos. Este laboratorio está diseñado para animar a los alumnos a obtener conocimientos sobre un tema de su interés examinando un conjunto de datos disponibles libremente en la web. Para obtener conocimientos a partir de los datos en este laboratorio, los alumnos plantearán una pregunta, buscarán un conjunto de datos sobre ese tema y luego procesarán esos datos para determinar la respuesta a su pregunta.\n\n### Conexión con el Mundo Real\n\nSer capaz de acceder y procesar datos es una parte importante de muchas industrias. Ya sea para determinar la mejor asignación de recursos o para decidir qué nuevo producto crear, el análisis de datos es un componente necesario de esas conversaciones. Por suerte, existen herramientas que ayudan a leer y procesar datos, y este laboratorio presentará una de estas herramientas a los estudiantes y les pedirá que utilicen datos existentes del mundo real para responder a una pregunta de su propio interés."
           student_description: Los datos son valores. Los valores por sí mismos no son conocimiento, el conocimiento es lo que se obtiene al estudiar los datos. Este laboratorio está diseñado para animarte a obtener conocimientos sobre un tema de tu interés examinando un conjunto de datos de libre acceso en la web. Para obtener conocimientos a partir de los datos en este laboratorio, plantearás una pregunta, buscarás un conjunto de datos sobre ese tema y luego procesarás esos datos para determinar la respuesta a tu pregunta.
         hello-world-space-2022:
-          title: 'Hola Mundo: Espacio'
+          title: 'Hola Mundo: Espacio Exterior'
         hello-world-soccer-2022:
           title: 'Hola Mundo: Fútbol'
         csd1-2023:
@@ -6876,6 +6876,7 @@ es-MX:
               display_name: 'Capítulo 1: Entradas y Salidas'
             lessonGroup-4:
               display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+          title: Creación de aplicaciones con dispositivos (Circuit Playground)
           student_description: Esta unidad explora el papel de las plataformas de hardware en la informática y cómo los diferentes sensores pueden proporcionar una entrada y salida más eficaz que el tradicional teclado, ratón y monitor. Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit, desarrollarás programas que utilizan las mismas entradas y salidas de hardware que se ven en los dispositivos inteligentes, observando cómo un simple prototipo aproximado puede conducir a un producto terminado. La unidad concluye con un reto de diseño para utilizar el Circuit Playground como base para una innovación de su propio diseño.
         vpl-csd5-ayw-pilot-2022:
           lessons:
@@ -6945,7 +6946,7 @@ es-MX:
           lesson_groups:
             lessonGroup-2:
               display_name: Preparación para Enseñar la Unidad 1
-          title: Preparación para Enseñar la Unidad 1
+          title: 'Preparación para Enseñar la Unidad 1 '
           description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Para cada unidad en Descubrimientos de la Informática, tendrás la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
           student_description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Para cada unidad en Descubrimientos de la Informática, tendrás la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
         drafting:
@@ -7004,7 +7005,7 @@ es-MX:
               display_name: Bucles Para
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso Express (2021)
+          title: Curso Express (2022)
           description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           description_short: 'Una introducción a la ciencia de la computación: combina lo mejor de nuestro plan de estudios de primaria para estudiantes mayores.'
@@ -7021,7 +7022,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-5:
               display_name: Proyecto de fin de curso
-          title: Curso A (2021)
+          title: Curso A (2022)
           description: 'El curso A ofrece un plan de estudios de ciencias de la computación para los lectores principiantes, incluidos los estudiantes de infantil. Los estudiantes aprenderán a programar utilizando comandos como bucles y eventos. Las lecciones de este curso también enseñan a los estudiantes a colaborar de forma significativa con otros, a investigar diferentes técnicas de resolución de problemas, a persistir ante tareas desafiantes y a aprender sobre la seguridad en Internet. '
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           description_short: Una introducción a las ciencias de la computación para prelectores.
@@ -7040,7 +7041,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-6:
               display_name: Proyecto de fin de curso
-          title: Curso B (2021)
+          title: Curso B (2022)
           description: Hemos desarrollado el Curso B pensando en los alumnos de primer grado. Aunque los conceptos del Curso B son paralelos a los del Curso A, los alumnos aprenden actividades más sofisticadas y trabajan con una mayor variedad de rompecabezas. Los alumnos aprenderán los fundamentos de la programación, técnicas de colaboración, habilidades de investigación y pensamiento crítico, persistencia ante las dificultades y seguridad en Internet. Al final de este curso, los estudiantes crean juegos en el entorno de programación del Laboratorio de Juegos.
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           description_short: Una introducción a las ciencias de la computación para prelectores. Es similar al Curso A, pero con conceptos más avanzados.
@@ -7059,7 +7060,7 @@ es-MX:
               display_name: Datos
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso C (2021)
+          title: Curso C (2022)
           description: Desarrollamos el Curso C para estudiantes de segundo grado. Los estudiantes crearán programas con secuencias, bucles y eventos. Investigarán técnicas de resolución de problemas y desarrollarán estrategias para construir comunidades positivas tanto en línea como fuera de ella. Al final del curso, los alumnos crearán juegos interactivos que podrán compartir.
           student_description: Crea programas con secuencias, bucles y eventos. Traduce tus iniciales a código binario, investiga distintas técnicas de resolución de problemas y aprende cómo responder al ciberacoso. ¡Al final del curso podrás crear tu propio juego o historia para compartir!
           description_short: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
@@ -7078,7 +7079,7 @@ es-MX:
               display_name: Condicionales
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso D (2021)
+          title: Curso D (2022)
           description: 'Hemos creado el curso D para los alumnos de tercer grado.  El curso comienza con un repaso de los conceptos encontrados en cursos anteriores, incluyendo bucles y eventos. Después, los estudiantes desarrollarán su comprensión de los algoritmos, los bucles anidados, los bucles while, las condicionales y mucho más. '
           student_description: Aprende sobre bucles, condicionales y eventos. Más allá de la codificación, aprende sobre la ciudadanía digital.
           description_short: Aprende sobre sentencias condicionales y crea tu propio arte, historia o juego.
@@ -7490,7 +7491,7 @@ es-MX:
           lesson_groups:
             lessonGroup-2:
               display_name: Preparación para Enseñar la Unidad 1
-          title: Enseñanza de IA y aprendizaje automático
+          title: 'Módulo 7: Preparación para la Enseñanza de la Inteligencia Artificial y el Aprendizaje Automático'
           description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Durante cada unidad en Descubrimientos de las Ciencias de la Computación, tendrá la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
           student_description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Durante cada unidad en Descubrimientos de las Ciencias de la Computación, tendrá la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
         pl-csd-summer-day1:
@@ -7637,6 +7638,7 @@ es-MX:
               display_name: Datos y Simulaciones
             lessonGroup-6:
               display_name: Proyecto de fin de curso
+          title: Curso F (2023)
           description_audience: De 9 a 13 años
           description_short: Aprende todos los conceptos de Fundamentos de Ciencias de la Computación y crea tu propio arte, historia o juego.
           description: Hemos creado el curso F para alumnos de quinto curso. El curso comienza analizando cómo los usuarios eligen las aplicaciones que utilizan. A continuación, los alumnos aprenden a crear una serie de aplicaciones de Laboratorio de Sprite que también ofrecen opciones al usuario. En las últimas lecciones del curso, los estudiantes aprenderán sobre las variables en una serie de contextos. A lo largo de este curso, los estudiantes tienen mayor autonomía y más opciones. Al final del curso, los estudiantes habrán creado proyectos interactivos para compartir con sus amigos y familiares.
@@ -7667,6 +7669,39 @@ es-MX:
 
             **Tiempo sugerido**: 70 minutos
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Datos
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-3:
               display_name: Clases

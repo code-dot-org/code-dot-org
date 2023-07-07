@@ -5833,7 +5833,7 @@ fr-FR:
             immédiatement après le précédent bloc, de sorte que les deux comportements
             se produiront en même temps.
         questions:
-        - text: 'Lis le code, puis fais une prévision. '
+        - text: Lis le code, puis fais une prévision.
       courseF_labels_predict_multi:
         answers:
         - text: "« Une pizza, ça arrive tout de suite ! »"
@@ -5872,21 +5872,21 @@ fr-FR:
       courseF_multi_bee_for3_predict1_2021:
         answers:
         - text: 'L''abeille avancera et récoltera tout le nectar de chaque fleur. '
-          feedback: Incorrect. La boucle « pour » laissera l'abeille récolter la bonne
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
             quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
         - text: L'abeille avancera et récoltera tout le nectar de chaque fleur, sauf
             une.
           correct: true
           feedback: Correct !
         - text: 'L''abeille avancera et récoltera un nectar de chaque fleur. '
-          feedback: Incorrect. La boucle « pour » laissera l'abeille récolter la bonne
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
             quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
         - text: 'L''abeille avancera et récoltera un nectar des fleurs numéro 1 et
             4. '
-          feedback: Incorrect. La boucle « pour » laissera l'abeille récolter la bonne
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
             quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
-        markdown: Ah ! Utiliser des boucles « pour » rend ce casse-tête beaucoup plus
-          simple !
+        markdown: Ah ! L'utilisation de boucles « pour » rend ce casse-tête beaucoup
+          plus simple !
         questions:
         - text: Lis le code ci-dessous. Que va-t-il se passer quand tu cliques su
             « Démarrer » ?
@@ -5917,7 +5917,7 @@ fr-FR:
           correct: true
           feedback: 'Correct ! Ce que tu saisis est utilisé à la place du bloc nom. '
         - text: Le sprite changera de taille.
-          feedback: 'Incorrect. Le texte sera imprimé à l''écran. '
+          feedback: 'Incorrect. Le texte est imprimé sur l''écran. '
         - text: 'L''ordinateur posera une autre question. '
           feedback: 'Incorrect. Une seule question est posée, dès le début du programme. '
         questions:
@@ -5988,16 +5988,16 @@ fr-FR:
         - text: Laurel ramassera 4 pièces de trésor avec ce code.
           feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
             a pas et cela provoque une erreur.
-        - text: Laurel va essayer de ramasser du trésor là où il n'y en a pas, ce
-            qui va provoquer une erreur.
+        - text: Incorrect. Laurel va essayer de ramasser du trésor là où il n'y en
+            a pas, ce qui provoquera une erreur.
           correct: true
           feedback: Correct !
         - text: Laurel ramassera tout le trésor.
-          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
-            a pas et cela provoque une erreur.
+          feedback: Incorrect. Laurel va essayer de ramasser du trésor là où il n'y
+            en a pas, ce qui provoquera une erreur.
         - text: 'Laurel ramassera 1 pièce de trésor en utilisant ce code. '
-          feedback: Incorrect. Laurel essaie de ramasser des diamants où il n'y en
-            a pas et cela provoque une erreur.
+          feedback: Incorrect. Laurel va essayer de ramasser du trésor là où il n'y
+            en a pas, ce qui provoquera une erreur.
         questions:
         - text: Regarde attentivement ce code. Que penses-tu qu'il va se passer lorsqu'on
             exécute le programme ?
@@ -17021,3 +17021,29 @@ fr-FR:
         questions:
         - text: Regarde de près le code ci-dessous. Que va-t-il se passer lorsqu'on
             clique sur « Démarrer » ?
+      OPD-K5 CS Courses_dani:
+        markdown: "# Planification > Débuter avec Code.org\n\n\n## Étape 1 : Choisir
+          un cours\nTous nos cours - des plus jeunes aux plus âgés - sont répertoriés
+          dans notre **[catalogue de cours](https://studio.code.org/courses)**. Pour
+          retrouver les cours de CS Fundamentals que vous avez étudiés, rendez-vous
+          sur notre **[page de cours élémentaires](https://code.org/educate/curriculum/elementary-school)**
+          et faites défiler la page jusqu'à la section \" Cours \". Tous nos cours
+          sont gratuits. Discutez avec les collègues de votre école pour déterminer
+          comment le programme du cours peut être intégré à divers modules.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Étape 2 : Configurer votre section de classe\nConfigurez une section de
+          classe afin de pouvoir suivre les progrès de vos élèves, imprimez et distribuez
+          des cartes de connexion à vos élèves, gérez leurs comptes et attribuez-leur
+          des attestations qu'ils pourront rapporter à la maison lorsqu'ils auront
+          terminé le cours. Cliquez sur ce lien pour **[voir une brève vidéo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          qui montre comment configurer votre premier cours d'informatique sur Code.org.
+          Vous trouverez également les étapes à suivre dans **[cet article de support](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Étape 3 : Assigner le cours à votre section\nCliquez sur le cours que vous
+          dispensez. Un écran ressemblant à celui ci-dessous devrait s'afficher. Vous
+          devrez alors cliquer sur \"Assigner le cours\" et assigner ce cours à l'une
+          de vos sections. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Étape 4 : Commencez à enseigner ! \nUne seule leçon suffit pour introduire
+          les concepts de l'informatique dans votre classe. Dès que vous constatez
+          que vos élèves s'enthousiasment pour l'informatique, allez plus loin en
+          élaborant des plans de cours quotidiens pour guider vos élèves, en organisant
+          des activités débranchées à réaliser sans ordinateur et en participant à
+          des forums afin d'entrer en contact avec d'autres enseignants.\n"

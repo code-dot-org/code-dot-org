@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-06-23 00:03:31 UTC",
+    "serialized_at": "2023-06-30 00:11:49 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -529,6 +529,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "702f37ad-a042-436d-8348-72465b590b99",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "ai-temp"
+      }
+    },
+    {
+      "key": "d67ae464-b88b-4409-95a1-66d8bcfd9075",
+      "position": 6,
+      "properties": {
+        "name": "(Optional) GAN Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d67ae464-b88b-4409-95a1-66d8bcfd9075",
         "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "ai-temp"
@@ -2561,7 +2574,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Citing our Sources:** The app is a very small version of [Botnik](https://botnik.org/), which uses a predictive text engine based on previous text from given tv shows, authors, video games, etc. This [video](https://www.youtube.com/watch?v=WypWvaCw3zs) provides more context around Botnik, starting around 1:20."
+            "markdown": "**Citing our Sources:** The app is a very small version of [Botnik](https://botnik.org/), which uses a predictive text engine based on previous text from given tv shows, authors, video games, etc. This [video](https://youtu.be/WypWvaCw3zs?t=80) provides more context around Botnik, starting around 1:20."
           }
         ]
       },
@@ -2901,7 +2914,13 @@
       "key": "0b056501-6ae2-47e6-858e-5fe88e3fa78c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** \n\n1. Turn to a partner\n2. Count down from 5, and at the count of 1, both call out the name of an animal\n3. For 1 minute, each draw a mix of those 2 animals\n4. Compare your images -- what details are similar and what are different?\n5. Share your images with another partnership -- can they guess what the prompt was?"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** \n\n1. Turn to a partner\n2. Count down from 5, and at the count of 1, both call out the name of an animal\n3. For 1 minute, each draw a mix of those 2 animals\n4. Compare your images -- what details are similar and what are different?\n5. Share your images with another partnership -- can they guess what the prompt was?",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Gratitude:** The Code.org curriculum team is grateful to computer science teacher Terence Stone, who first introduced this idea with great enthusiasm and hilarity at a Code.org training several years ago."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0b056501-6ae2-47e6-858e-5fe88e3fa78c",
@@ -2912,6 +2931,7 @@
       "key": "632b00e2-3b77-46f7-9a8b-623adb362512",
       "position": 2,
       "properties": {
+        "description": "(Click the images below to see examples of what students may create)\n\n\n\n![expandable](https://images.code.org/2e623df5c80d005960735e1221b9d2ac-animal1.png)\n![expandable](https://images.code.org/9d6cd6433eea78aca2abcbf8da5b1c65-animal2.png)\n![expandable](https://images.code.org/4b214709df4ea8262b629e480bb22c15-animal3.png)"
       },
       "seeding_key": {
         "activity_section.key": "632b00e2-3b77-46f7-9a8b-623adb362512",
@@ -2930,18 +2950,8 @@
       }
     },
     {
-      "key": "7569bfda-fd32-487c-98e0-a14ec6d5fe1b",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7569bfda-fd32-487c-98e0-a14ec6d5fe1b",
-        "lesson_activity.key": "858c1d42-cfee-4e41-b117-1bbda21d3b0a"
-      }
-    },
-    {
       "key": "52b7e45b-f6d2-477e-83ad-1fc092ac86f0",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "You all just created animals that didn't exist before you drew them. Increasingly, AI can do this sort of thing as well! Does that mean it's creative? Through this lesson, we'll explore _how_ AI builds these new images, so we can answer this question\n",
         "remarks": true
@@ -2955,7 +2965,7 @@
       "key": "1c5b7350-d527-4f81-b502-b9b4a763424f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Hand out the [r video_and_vocabulary_guide_1/ai-temp/unversioned]\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the first part of the WIP update video link video. At key points throughout (described below) we will be pausing the video to give students a chance to synthesize their understanding.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Hand out the [r video_and_vocabulary_guide_1/ai-temp/unversioned]\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the [r how_ai_works_creativity_and_imagination/ai-temp/unversioned] video. At key points throughout (described below) we will be pausing the video to give students a chance to synthesize their understanding on the activity guide.",
         "duration": "20",
         "name": "Show the Video and discuss"
       },
@@ -2968,13 +2978,7 @@
       "key": "9ed050c0-ca3b-4f20-98a8-0bf01fbd26d9",
       "position": 2,
       "properties": {
-        "description": "| Video                                                                                                                                                                                           | Teacher                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |\n| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| <p>Pause video at 1:07 when it says \"And even create complete video sequences, with just a few words of instruction.\"![](https://images.code.org/02f1611a48d68c83a24d0e30f8793837-Screenshot 2023-06-05 170329.png)</p>                                                          | <p><strong><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** </strong> What are some examples of things that AI can generate?<br><br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** </strong> Looking for a quick answer to check for understanding of the video so far.</p><p>Students may come up with things that were mentioned in the video such as building video sequences, but any place where humans provide AI with a prompt and it creates something will work. You may wish to encourage students to come up with 1-2 of their own examples not already stated in the video.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |\n| <p>Pause video at 2:08 where it says \"At this point, the generative AI has learned to generate real-looking imagery.\"<br>![](https://images.code.org/64cacb59d2d1f46aa46de311c02607d4-Screenshot 2023-06-05 170943.png)</p>                                                          | <p><strong><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** </strong> How did Generative Adversarial Networks make realistic-seeming images?<br><br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** </strong> This is a quick check for understanding. Students should know that a Generative Adversarial Network is made out of 2 networks -- one that generates images and another that says if it thinks the image was real or generated. Eventually, the generator is able to fool the discriminator and the image seems real.<br><br> |\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The focus on this lesson should be on the diffusion model, not the GAN, but if you believe you will have extra time and would like to further understand this part of the video you can pause the video here and run an <a href=\"https://levelbuilder-studio.code.org/s/ai-temp/lessons/5#activity-section-13158830\">optional 10 minute GAN activity</a> described near the end of  this activity guide."
-          }
-        ]
+        "description": "| Video                                                                                                                                                                                           | Teacher                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |\n| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| _Pause video at 1:07 when it says \"And even create complete video sequences with just a few words of instruction.\"_![](https://images.code.org/02f1611a48d68c83a24d0e30f8793837-Screenshot 2023-06-05 170329.png)                                                          | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What are some examples of things that AI can generate?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Look for a quick answer to check for understanding of the video so far.</p><p>Students may mention examples from the video such as building video sequences, but any place where humans provide AI with a prompt and it creates something will work. As a class, consider coming up with 1-2 examples not already stated in the video.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |\n| _Pause video at 2:08 where it says \"At this point, the generative AI has learned to generate real-looking imagery.\"_<br>![](https://images.code.org/64cacb59d2d1f46aa46de311c02607d4-Screenshot 2023-06-05 170943.png)                                                          | <p><strong><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** </strong> How did Generative Adversarial Networks make realistic-seeming images?<br><br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** </strong> This is a quick check for understanding. Students should know that a Generative Adversarial Network is made out of 2 networks -- one that generates images and another that says if it thinks the image was real or generated. Eventually, the generator is able to fool the discriminator and the image seem real.<br><br> |\n| _Pause video at 2:50 when it says \"...the image loses all details and becomes pure noise.\"_![](https://images.code.org/a41cbaa32fe7bf02b41b5309fcef2568-Screenshot 2023-06-05 175605.png)</p>                                                     | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is happening in each version of the image?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a quick pause to allow students to synthesize what they are seeing. Students should note that the details in the images are getting slightly blurrier, but can still be seen. Eventually, the human eye can't see the details at all.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |\n| _Pause video at 3:42 when it says \"or to alter existing images.\"_<br>![](https://images.code.org/8bd8ee70bb8a8d6f530531153423d960-Screenshot 2023-06-05 180020.png)                                                                                                                       | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How does the diffusion process train computers to build new images with specific details?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a quick check for understanding. Students should know that diffusion models learn from slowly adding noise and then slowly subtracting noise from images, until the generator knows how to find details in noise.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |\n| _Pause video at 4:33 when it says: \"...so the legal questions here are not simple.\"_![](https://images.code.org/9b232f9f5240c8437f851f83d11ab96b-Screenshot 2023-06-05 180333.png)                      | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Personal opinion: who do you think should \"own\" the images that AI creates? <br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There is no one answer to this question; the idea is for students to truly think about the implications of image generation in AI. Depending on your preferences and class timing, this can be an involved discussion that takes several minutes. See the Teacher tip for additional ideas for how to facilitate this discussion.|\n| _Continue watching the video until it ends_ ![](https://images.code.org/73a09be0fbbae1200fa174efcb3b842f-screenshot1.png) | <p><strong><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** </strong> What can you imagine creating with  a diffusion model??<br><br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** </strong> Get students excited about what diffusion models can do. </p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |"
       },
       "seeding_key": {
         "activity_section.key": "9ed050c0-ca3b-4f20-98a8-0bf01fbd26d9",
@@ -2982,55 +2986,16 @@
       }
     },
     {
-      "key": "8ee6f6b2-9672-4fea-9d88-6703bc42d066",
+      "key": "681155e1-9ad5-4118-9306-52ac9f14041e",
       "position": 3,
       "properties": {
-        "description": "| Video                                                                                                                                                                                           | Teacher                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |\n| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| <p>Pause video at 2:16 when it says \"Now, this is great, but computer scientists have come up with something even better, called diffusion. \" (Note: This is only one sentence later than the previous pause point)<br>![](https://images.code.org/5c562921b61cf1aaf16ee22506bd41c8-Screenshot 2023-06-05 171432.png)<br></p>| <p><strong><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** </strong> In a physical context, what does diffusion mean?<br><br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** </strong>: This is a quick check for prior knowledge. <br>Diffusion involves two substances slowly mingling with each other<br><br><strong>Follow up: </strong> Do the substances always mix in exactly the same way?<br><strong>Discussion goal</strong> This connects physical diffusion to diffusion models. The way the substances interact with each other looks purely random. In diffusion models, noise is added randomly to the image as well. </p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |",
+        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the vocabulary from the video so students can check their vocabulary notetaker.\n\n* **GAN (Generative Adversarial Network)** - a way of using two competing AI models to generate something.\n* **Diffusion AI -** converting an image to noise, and training an AI to reverse the process.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "<strong>Optional Activity / discussion to build diffusion understanding:</strong><br>\nIn case students do not know what diffusion is, it may make sense to have a demonstration handy. You can have students use water and food coloring, or watch this <a href=\"https://www.youtube.com/watch?v=Peg1yaB2bsk\">video</a> showing diffusion of food coloring in water.<br>If you choose to do the demonstration with your students, you have a quick discussion at the end pointing out that the food coloring is somewhat randomly slowly distributing itself throughout the water. This is what will happen with noise being added to images in diffusion models. "
+            "markdown": "**Optional Activity:** The focus on this lesson should be on the diffusion model, not the GAN. But, if you believe you will have extra time and would like to further understand this version of image generation, you can run an [optional 10 minute GAN activity](#activity-activity-6) described near the end of this lesson plan.\n\n**Why Diffusion?** Students may wonder where the term \"diffusion\" comes from. If so, it may help to show a video of a physical diffusion process, such as food coloring dispersing in water (<a href=\"https://www.youtube.com/watch?v=Peg1yaB2bsk\">such as in this video</a>). If you show this video or a demonstration, point out that the food coloring is somewhat randomly slowly distributing itself throughout the water. This is what will happen with noise being added to images in diffusion models.\n\n**Who Owns the Image?** For this discussion, some possible answers are:\n- the people who designed the images the AI learned on\n- The programmer who created the tool\n- The person who wrote the prompt\n- none of the above\n\nIf you linger on this question during the video, consider using the <a href=\"https://www.cdc.gov/healthyyouth/evaluation/pdf/brief7.pdf\">Nominal Group Technique</a> and circulate, listening for students who are saying particularly interesting things to bring up with the whole group."
           }
         ]
-      },
-      "seeding_key": {
-        "activity_section.key": "8ee6f6b2-9672-4fea-9d88-6703bc42d066",
-        "lesson_activity.key": "c20eb6d3-fb11-40ac-bf6c-c93e20e63a9a"
-      }
-    },
-    {
-      "key": "e9329e38-4fc9-49bf-b06c-c018a642d891",
-      "position": 4,
-      "properties": {
-        "description": "| Video                                                                                                                                                                                           | Teacher                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |\n| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| <p>Pause video at 2:50 when it says \"If you repeat this gradually, 1,000 times, the image loses all details and becomes pure noise.\"<br>![](https://images.code.org/a41cbaa32fe7bf02b41b5309fcef2568-Screenshot 2023-06-05 175605.png)</p>                                                     | <p><strong><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** </strong> What is happening in each version of the image?<br><br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** </strong> This is a quick pause to allow students to synthesize what they are seeing. Students should note that the details in the images are getting slightly blurrier, but can still be seen. Eventually, the human eye can't see the details at all.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |\n| <p>Pause video at 3:42 when it says \"or to alter existing images.\"<br>![](https://images.code.org/8bd8ee70bb8a8d6f530531153423d960-Screenshot 2023-06-05 180020.png)</p>                                                                                                                       | <p><strong><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** </strong> How does the diffusion process train computers to build new images with specific details?<br><br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** </strong> This is a quick check for understanding. Students should know that Diffusion models learn from slowly adding noise and then slowly subtracting noise from images, until the generator knows how to find details in noise.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |\n| <p>Pause video at 4:33 when it says: \"Of course, when humans learn to create, they also study creations made by others, so the legal questions here are not simple.\"<br>![](https://images.code.org/9b232f9f5240c8437f851f83d11ab96b-Screenshot 2023-06-05 180333.png)</p>                      | <p><strong><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** </strong> Who should \"own\" the images that AI creates? <br><br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** </strong> There is no one answer to this question; the idea is for students to truly think about the implications of image generation in AI. This can be an involved discussion that takes several minutes. See the Teacher tip for ideas for how to deal with this discussion.<br>Some answers students may answer any of the following:<br><ol><li>the people who designed the images the AI learned on</li><li>The programmer who created the tool</li><li>The person who wrote the prompt</li><li>none of the above</li><li>Shared amongst different groups.<br></li></ol>                                                                 |",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If you'd like to remain the main moderator, it may also make sense to have the conversation around who owns diffusion model images using the <a href=\"https://www.theteachertoolkit.com/index.php/tool/four-corners\">Four corners discussion protocol</a> with each of the possible answers listed above as the different corners.</p> \n<p>If you'd rather have students discuss in small groups, try the <a href=\"https://www.cdc.gov/healthyyouth/evaluation/pdf/brief7.pdf\">Nominal Group Technique</a> and circulate, listening for students who are saying particularly interesting things to bring up with the whole group."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "e9329e38-4fc9-49bf-b06c-c018a642d891",
-        "lesson_activity.key": "c20eb6d3-fb11-40ac-bf6c-c93e20e63a9a"
-      }
-    },
-    {
-      "key": "327ef3e7-56ae-4195-aa6e-80cbd8b250d4",
-      "position": 5,
-      "properties": {
-        "description": "| Video                                                                                                                                                                                           | Teacher                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |\n| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| End of video                                                                                                                                                                                    | <p><strong><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** </strong> What can you imagine creating with  a diffusion model??<br><br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** </strong> Get students excited about what diffusion models can do. </p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |"
-      },
-      "seeding_key": {
-        "activity_section.key": "327ef3e7-56ae-4195-aa6e-80cbd8b250d4",
-        "lesson_activity.key": "c20eb6d3-fb11-40ac-bf6c-c93e20e63a9a"
-      }
-    },
-    {
-      "key": "681155e1-9ad5-4118-9306-52ac9f14041e",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** \n\n* **GAN (Generative Adversarial Network)** - a way of using two competing AI models to generate something.\n* **Diffusion AI -** converting an image to noise, and training an AI to reverse the process."
       },
       "seeding_key": {
         "activity_section.key": "681155e1-9ad5-4118-9306-52ac9f14041e",
@@ -3039,9 +3004,9 @@
     },
     {
       "key": "f961764a-5619-4bb5-a785-7c8aae9f10b7",
-      "position": 7,
+      "position": 4,
       "properties": {
-        "description": "There are lots of different ways to create noise in an image. For this activity, we'll explore what you can see in an image with different levels of noise.\\\n\\\nThen, we'll guess other people's images based on what we can see at different levels of noise.\n",
+        "description": "Today we're going to look closer at the diffusion process that is used by image-generating AI. This involves creating noise in an image. For this activity, we'll explore what you can see in an image with different levels of noise. Then, we'll guess other people's images based on what we can see at different levels of noise, just like an AI model does when it \"generates\" an image.",
         "duration": "15",
         "name": "Explore Diffusion",
         "remarks": true
@@ -3053,7 +3018,7 @@
     },
     {
       "key": "f5c3e7b0-e42a-4ff7-b0e7-abc95cfb1e51",
-      "position": 8,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -3063,7 +3028,7 @@
     },
     {
       "key": "7a9a0fca-8f87-4ee9-aaa6-78b6f37c9bd7",
-      "position": 9,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Hand out the \n[r noisy_image_widget_activity_guide/ai-temp/unversioned]"
       },
@@ -3074,7 +3039,7 @@
     },
     {
       "key": "5f0ab343-ca7a-4724-af18-1f39cf614e92",
-      "position": 10,
+      "position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -3084,9 +3049,10 @@
     },
     {
       "key": "d27a224d-01ee-4cc0-9516-44433636b71b",
-      "position": 11,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:** Show how to use the Noisy Image Widget."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:** Show how to use the Noisy Image Widget. Have the class fill out Part 1 of the activity guide as you demonstrate, asking them to describe what they can still see as you add more noise to the image.",
+        "progression_name": "Noisy Image Widget"
       },
       "seeding_key": {
         "activity_section.key": "d27a224d-01ee-4cc0-9516-44433636b71b",
@@ -3095,8 +3061,9 @@
     },
     {
       "key": "b36f5137-f501-4a76-96ac-3eb2daefbf5a",
-      "position": 12,
+      "position": 9,
       "properties": {
+        "description": "| Widget | Modeling Notes |\n|---|---|\n|![](https://images.code.org/69bfb4cb8895d8899faa8433367287b7-noisy widget.gif) | <ul><li>Demonstrate how to use the slider to add noise to an image. Point out the scale from 1 to 3000 for noise generation.</li><li>Show noise at different levels as shown in the activity guide, prompting the class to write what they can \"still recognize\" even with so much noise</li><li>Show how to add their own image via a URL. Consider having a URL ready, such as a school logo or class picture</li><li>Show how to repeat the noise generation process with a new image</li></ul> _Note: A full explanation of this widget is available in this  [r user_guide_noise_image_widget/ai-temp/unversioned]_ |"
       },
       "seeding_key": {
         "activity_section.key": "b36f5137-f501-4a76-96ac-3eb2daefbf5a",
@@ -3105,14 +3072,13 @@
     },
     {
       "key": "401de1bc-f480-4a70-b028-f1505fe8abe9",
-      "position": 13,
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into code studio and interact with the Noisy Image Widget\n",
-        "progression_name": "Noisy Image Widget",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into code studio and interact with the Noisy Image Widget, completing Parts 2-4 on the activity guide.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The noisy images can take a short while to load here (usually less than a minute, but nothing is happening for that time). We recommend you warn students this is the case, and give them something to be focusing on, for example, choosing the next image / numbers, sketching / describing the image on the back of their worksheets, or solving side puzzles for extra credit."
+            "markdown": "**Patience is a Virtue:** The noisy images can take a short while to load here (usually less than a minute, but nothing is happening for that time). We recommend you warn students this is the case, and give them something to be focusing on, for example, choosing the next image / numbers, sketching / describing the image on the back of their worksheets, or solving side puzzles for extra credit."
           }
         ]
       },
@@ -3123,7 +3089,7 @@
     },
     {
       "key": "0d39bf63-9392-46b1-ad15-e168404b0d8d",
-      "position": 14,
+      "position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -3133,9 +3099,9 @@
     },
     {
       "key": "0745f1d2-463f-4c38-9828-bf943c50cc37",
-      "position": 15,
+      "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Help student stay on task, guessing things about their images"
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Help student stay on task, guessing things about their images. Monitor them as they complete the activity guide and trade images with a partner. Make sure they are choosing school-appropriate images to share with neighbors."
       },
       "seeding_key": {
         "activity_section.key": "0745f1d2-463f-4c38-9828-bf943c50cc37",
@@ -3144,7 +3110,7 @@
     },
     {
       "key": "9eb3bd0e-0c70-41b4-b943-3d9b52384903",
-      "position": 16,
+      "position": 13,
       "properties": {
         "description": "**Regroup:** Have students regroup for a synthesis discussion"
       },
@@ -3155,9 +3121,9 @@
     },
     {
       "key": "4fbf57ca-c162-436a-aceb-860555809f06",
-      "position": 17,
+      "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  What did you notice during this activity?\\\n**Follow-up (if necessary)** Were you able to see details in the noisy images? Did you see more details once you knew the original image?"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  What did you notice during this activity?\n\n**Follow-up (if necessary):** Were you able to see details in the noisy images? Did you see more details once you knew the original image?"
       },
       "seeding_key": {
         "activity_section.key": "4fbf57ca-c162-436a-aceb-860555809f06",
@@ -3166,7 +3132,7 @@
     },
     {
       "key": "98a1b6db-62c8-4271-8ddf-52762f757e74",
-      "position": 18,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  This discussion helps students synthesize what they were learning, and connect it back to the video on diffusion models finding details."
       },
@@ -3177,103 +3143,11 @@
     },
     {
       "key": "95d16d5b-9864-4a56-8cb6-aead5436eeff",
-      "position": 19,
+      "position": 16,
       "properties": {
       },
       "seeding_key": {
         "activity_section.key": "95d16d5b-9864-4a56-8cb6-aead5436eeff",
-        "lesson_activity.key": "c20eb6d3-fb11-40ac-bf6c-c93e20e63a9a"
-      }
-    },
-    {
-      "key": "922a33c0-0c03-461b-9248-ab95eb9cd1a9",
-      "position": 20,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:** Pass out the [r optional_gan_game_activity_slides/ai-temp/unversioned]. Show students how to use the widget by playing one round of human guessing vs computer guessing. Feel free to use the [r optional_gan_slides/ai-temp/unversioned]. Be sure to be clear to students that they have no information initially, and they do not have to over-think initial guesses. They'll get things wrong and that's ok! In fact, it's part of the model of the activity -- GANs are wildly guessing too until they have more information.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** Students log into Code studio to explore a game where they act like generators.",
-        "duration": "10",
-        "name": "Optional GAN Activity",
-        "progression_name": "GAN Guess Widget",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The rule that has been hard-coded into this activity is \"must contain one red circle.\" Some students may figure this out before others. If this happens: <ul><li>You can have students who have completed the task to help ask other students leading questions to help them figure out the rule.</li><li>You can have groups of completed students come up with their own password rules and figure out each other's in groups. This may be useful fun for all students, if you have extra time.</li></ul>"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "922a33c0-0c03-461b-9248-ab95eb9cd1a9",
-        "lesson_activity.key": "c20eb6d3-fb11-40ac-bf6c-c93e20e63a9a"
-      }
-    },
-    {
-      "key": "9401df52-d341-48b3-8b21-8baae0e387c5",
-      "position": 21,
-      "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Help student stay on task, coming up with guesses with them. (Eventually Students should figure out that the rule is a password must have a red circle -- help students who are struggling figure this out by procedurally trying different shapes and colors with them."
-      },
-      "seeding_key": {
-        "activity_section.key": "9401df52-d341-48b3-8b21-8baae0e387c5",
-        "lesson_activity.key": "c20eb6d3-fb11-40ac-bf6c-c93e20e63a9a"
-      }
-    },
-    {
-      "key": "a5c8a995-0fe5-4a56-9125-86a7c00a7fd8",
-      "position": 22,
-      "properties": {
-        "description": "**Regroup:** Have students regroup for a synthesis discussion to help them further cement their understanding of generators and discriminators by connecting it to what they did in the activity."
-      },
-      "seeding_key": {
-        "activity_section.key": "a5c8a995-0fe5-4a56-9125-86a7c00a7fd8",
-        "lesson_activity.key": "c20eb6d3-fb11-40ac-bf6c-c93e20e63a9a"
-      }
-    },
-    {
-      "key": "2558d590-e8dc-444d-8f61-b79585a152b7",
-      "position": 23,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  When were you acting like a generator in this activity?"
-      },
-      "seeding_key": {
-        "activity_section.key": "2558d590-e8dc-444d-8f61-b79585a152b7",
-        "lesson_activity.key": "c20eb6d3-fb11-40ac-bf6c-c93e20e63a9a"
-      }
-    },
-    {
-      "key": "b2b0e2cd-dc39-4852-9a96-278222322f3d",
-      "position": 24,
-      "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  When students generated random passwords -- even when they weren't accepted -- they were acting like a generator. Generators generate random images that may or may not be accepted as real. "
-      },
-      "seeding_key": {
-        "activity_section.key": "b2b0e2cd-dc39-4852-9a96-278222322f3d",
-        "lesson_activity.key": "c20eb6d3-fb11-40ac-bf6c-c93e20e63a9a"
-      }
-    },
-    {
-      "key": "e2733893-5025-4731-bd49-d2367cb5c153",
-      "position": 25,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  When were you acting like a discriminator in this activity? ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "<strong>Common Misconception</strong>: Students will frequently assume that the computer telling them if their guess was correct or not was the computer acting as a discriminator. This is not true. Discriminators don't necessarily have the truth -- they are, like the students guessing if the computer's password will follow the rule or not, also making guesses. The computer providing the \"FOLLOWS\" or \"NOT\" feedback is acting more like the programmer that feeds the Discriminator labeled data to learn from. More information on labeled data exists in the machine learning video."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "e2733893-5025-4731-bd49-d2367cb5c153",
-        "lesson_activity.key": "c20eb6d3-fb11-40ac-bf6c-c93e20e63a9a"
-      }
-    },
-    {
-      "key": "8dafadbc-0da1-4ae4-91b6-1612572e562d",
-      "position": 26,
-      "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students acted like a discriminator when they guessed if the computer's generated password followed the rule or not. They didn't initially know, but got better as they got more data."
-      },
-      "seeding_key": {
-        "activity_section.key": "8dafadbc-0da1-4ae4-91b6-1612572e562d",
         "lesson_activity.key": "c20eb6d3-fb11-40ac-bf6c-c93e20e63a9a"
       }
     },
@@ -3322,6 +3196,108 @@
       }
     },
     {
+      "key": "617a2b62-f179-4c95-90b4-3e155b3a22b7",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:** Pass out the [r optional_gan_game_activity_slides/ai-temp/unversioned]. Show students how to use the widget by playing one round of human guessing vs computer guessing. Feel free to use the slides at the end of the slide deck as a guide. Be sure to be clear to students that they have no information initially, and they do not have to over-think initial guesses. They'll get things wrong and that's ok! In fact, it's part of the model of the activity -- GANs are wildly guessing too until they have more information.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** Students log into Code studio to explore a game where they act like generators.",
+        "duration": "10",
+        "name": "Optional GAN Activity",
+        "progression_name": "(Optional) GAN Guess Widget",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The rule that has been hard-coded into this activity is \"must contain one red circle.\" Some students may figure this out before others. If this happens: <ul><li>You can have students who have completed the task to help ask other students leading questions to help them figure out the rule.</li><li>You can have groups of completed students come up with their own password rules and figure out each other's in groups. This may be useful fun for all students, if you have extra time.</li></ul>"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "617a2b62-f179-4c95-90b4-3e155b3a22b7",
+        "lesson_activity.key": "d67ae464-b88b-4409-95a1-66d8bcfd9075"
+      }
+    },
+    {
+      "key": "ad58983e-4629-46e1-a996-57e51d365dbe",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Help student stay on task, coming up with guesses with them. (Eventually Students should figure out that the rule is a password must have a red circle -- help students who are struggling figure this out by procedurally trying different shapes and colors with them."
+      },
+      "seeding_key": {
+        "activity_section.key": "ad58983e-4629-46e1-a996-57e51d365dbe",
+        "lesson_activity.key": "d67ae464-b88b-4409-95a1-66d8bcfd9075"
+      }
+    },
+    {
+      "key": "b6e8bdf7-b7be-475b-a79f-8b35320921ce",
+      "position": 3,
+      "properties": {
+        "description": "**Regroup:** Have students regroup for a synthesis discussion to help them further cement their understanding of generators and discriminators by connecting it to what they did in the activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "b6e8bdf7-b7be-475b-a79f-8b35320921ce",
+        "lesson_activity.key": "d67ae464-b88b-4409-95a1-66d8bcfd9075"
+      }
+    },
+    {
+      "key": "87d4da6d-5d3d-46d0-a315-8e180b17d451",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  When were you acting like a generator in this activity?"
+      },
+      "seeding_key": {
+        "activity_section.key": "87d4da6d-5d3d-46d0-a315-8e180b17d451",
+        "lesson_activity.key": "d67ae464-b88b-4409-95a1-66d8bcfd9075"
+      }
+    },
+    {
+      "key": "ce259e31-aa89-40b7-be16-98d5799592b7",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  When students generated random passwords -- even when they weren't accepted -- they were acting like a generator. Generators generate random images that may or may not be accepted as real. "
+      },
+      "seeding_key": {
+        "activity_section.key": "ce259e31-aa89-40b7-be16-98d5799592b7",
+        "lesson_activity.key": "d67ae464-b88b-4409-95a1-66d8bcfd9075"
+      }
+    },
+    {
+      "key": "c653c41f-5576-4273-a37f-6f7f8e2928c0",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  When were you acting like a discriminator in this activity? ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "<strong>Common Misconception</strong>: Students will frequently assume that the computer telling them if their guess was correct or not was the computer acting as a discriminator. This is not true. Discriminators don't necessarily have the truth -- they are, like the students guessing if the computer's password will follow the rule or not, also making guesses. The computer providing the \"FOLLOWS\" or \"NOT\" feedback is acting more like the programmer that feeds the Discriminator labeled data to learn from. More information on labeled data exists in the machine learning video."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c653c41f-5576-4273-a37f-6f7f8e2928c0",
+        "lesson_activity.key": "d67ae464-b88b-4409-95a1-66d8bcfd9075"
+      }
+    },
+    {
+      "key": "bca43e83-ec11-49d9-a3ec-4c024ae87171",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students acted like a discriminator when they guessed if the computer's generated password followed the rule or not. They didn't initially know, but got better as they got more data."
+      },
+      "seeding_key": {
+        "activity_section.key": "bca43e83-ec11-49d9-a3ec-4c024ae87171",
+        "lesson_activity.key": "d67ae464-b88b-4409-95a1-66d8bcfd9075"
+      }
+    },
+    {
+      "key": "93f71418-3860-4850-8f58-1f6d8d0767a9",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "93f71418-3860-4850-8f58-1f6d8d0767a9",
+        "lesson_activity.key": "d67ae464-b88b-4409-95a1-66d8bcfd9075"
+      }
+    },
+    {
       "key": "725e89f2-111a-4648-9043-fe924991624d",
       "position": 1,
       "properties": {
@@ -3357,12 +3333,30 @@
       }
     },
     {
-      "key": "a4c0a171-63d3-4cb6-903a-694327b90cf6",
+      "key": "08ea6f16-90f2-447e-94e3-e03c48c6fa4a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students to use the widget to crop the images as if they were uploading them to a social media account. They can also upload their own images and crop them as well.\n\nPair students up for the discussion. Have them go through the images together and discuss their responses to the questions.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which images were challenging for you to decide how to crop? Which images did you and your partner crop the same? Which images did you and your partner crop differently?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to highlight the different experiences and perspectives everyone brings to deciding how to crop an image. Direct students to consider not only what they decided to keep in the picture, but also what they decided to crop out of the picture. What happens when we crop something out of a picture? It never gets seen by the audience. Look back at the photos you cropped. What or who got left out? You may choose to guide the class toward describing general characteristics of images that were challenging to crop.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and begin interacting with the Cropping Widget. Each student should interact with the widget on their own, but they will be discussing with a partner.",
         "duration": "10",
-        "name": "Cropping Widget"
+        "name": "Cropping Widget",
+        "progression_name": "Cropping Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "08ea6f16-90f2-447e-94e3-e03c48c6fa4a",
+        "lesson_activity.key": "047f12fd-1c43-475d-8395-211f58e1cdb0"
+      }
+    },
+    {
+      "key": "a4c0a171-63d3-4cb6-903a-694327b90cf6",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students to use the widget to crop the images as if they were uploading them to a social media account.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete this task. Ask probing questions as you notice students pause on certain images, asking what they're thinking or what they notice in the image, or what causes them to pause or be unsure.\n\n\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Intentionally Mischievous:** The first few images are pretty innocuous with how students may decide to crop images, but as the images continue, the decisions become harder and harder. Students may decide to prioritize faces or text or color or foreground vs background when cropping. But eventually, images will deliberately pit student patterns against each other and force some uncomfortable decisions when deciding what information is important (ie: belongs in the frame), and what information isn't (ie: can be cropped out).\n\n**Lean Into Discomfort:** Students may feel unsure how to crop certain images and may even feel slightly uncomfortable with a decision. This is okay and expected - the goal is to surface that even something as seemingly simple as \"cropping a photo\" can contain complex decisions. Emphasize that it's the *decision itself* - that the system is forcing them to decide in the first place - that creates this uncertainty, and not whatever they happen to decide with each individual picture."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a4c0a171-63d3-4cb6-903a-694327b90cf6",
@@ -3370,8 +3364,19 @@
       }
     },
     {
+      "key": "201940a8-e6ab-4437-a16d-0e8d3bce3ba1",
+      "position": 3,
+      "properties": {
+        "description": "**Regroup:** As you notice students reaching the end of the activity, pause the activity and regroup.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which images were challenging for you to decide how to crop? Which images did you and your partner crop the same? Which images did you and your partner crop differently?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to highlight the different experiences and perspectives everyone brings to deciding how to crop an image. Direct students to consider not only what they decided to keep in the picture, but also what they decided to crop out of the picture. What happens when we crop something out of a picture? It never gets seen by the audience. Look back at the photos you cropped. What or who got left out? You may choose to guide the class toward describing general characteristics of images that were challenging to crop."
+      },
+      "seeding_key": {
+        "activity_section.key": "201940a8-e6ab-4437-a16d-0e8d3bce3ba1",
+        "lesson_activity.key": "047f12fd-1c43-475d-8395-211f58e1cdb0"
+      }
+    },
+    {
       "key": "ebdc2bba-de92-41ac-8d5f-1fcd96fa60db",
-      "position": 2,
+      "position": 4,
       "properties": {
         "description": "Now imagine we recorded how everyone in this room cropped the images from this widget. We could use that information to train a model. This model could be used to crop other photos being uploaded to the social media site.",
         "remarks": true
@@ -3383,9 +3388,9 @@
     },
     {
       "key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add",
-      "position": 3,
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How might the cropping data from our classroom be biased? What are some ways we could address the biases in our data?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students see if this were indeed training a model, bias could arise from a few different places.\n* The limited set of pictures included in the app that are most likely not representative of the photos being shared on social media.\n* The bias of the students themselves. Are teenagers more likely to focus on certain things when cropping? Is this representative of the whole population of social media users?\n",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What patterns do you think might emerge from the data we collectively contribute to this model?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students generalize some of the patterns or \"rules\" they may have been using when cropping, such as:\n- emphasizing faces\n- emphasizing text\n- emphasizing things in light vs dark\n- emphasizing things in the foreground instead of background\n\nDepending on your level of comfort with the class, you could probe implicit biases with how the class may have been cropping, such as:\n- did the class tend to prefer the left-side of the screen or the right-side of the screen?\n- did the class tend to prefer younger faces, older faces, or faces their age?\n- did the class tend to prefer men or women or crops without people at all?\n\n",
         "progression_name": "Cropping Widget"
       },
       "seeding_key": {
@@ -3395,7 +3400,7 @@
     },
     {
       "key": "6dd5d56a-0764-4d4c-8040-e18c883af46a",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "It turns out that the issue of how to crop an image is something social media platforms have been working on for some time. We are going to watch a video that shows the issues that arose when Twitter used machine learning to train an algorithm to do this cropping. ",
         "duration": "20",
@@ -3409,9 +3414,9 @@
     },
     {
       "key": "b55dc5c1-d1f4-4f7d-bcd9-b0d05cb6dfd2",
-      "position": 5,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) Watch from 0:00-4:05 and 9:30-13:46."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video Part 1:**  Watch the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) from 0:00-4:05\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video Part 2:**  Watch the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) from 9:30-13:46\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the next slide, which shows a definition that to use in the following remark."
       },
       "seeding_key": {
         "activity_section.key": "b55dc5c1-d1f4-4f7d-bcd9-b0d05cb6dfd2",
@@ -3420,9 +3425,9 @@
     },
     {
       "key": "be3bcf60-246d-4bf8-aa86-459610d39838",
-      "position": 6,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In the video, the primary reporter Jos asks her two colleagues, “So do you think this machine is racist?” We might all have different definitions of the term racism, but for the purposes of this discussion we are going to use this definition of racism - prejudice, discrimination, or antagonism directed against a person or people on the basis of their membership in a particular racial or ethnic group, typically one that is a minority or marginalized.",
+        "description": " In the video, the primary reporter Jos asks her two colleagues, “So do you think this machine is racist?” We might all have different definitions of the term racism, but for the purposes of this discussion we are going to use this definition of racism - prejudice, discrimination, or antagonism directed against a person or people on the basis of their membership in a particular racial or ethnic group, typically one that is a minority or marginalized.",
         "remarks": true
       },
       "seeding_key": {
@@ -3432,13 +3437,13 @@
     },
     {
       "key": "19478526-9917-4d0c-a778-f556631e17c5",
-      "position": 7,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Using this definition of racism, what aspect(s) of racism did the Twitter cropping algorithm do: prejudice, discrimination, or antagonism?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to highlight the evidence brought up in the video both from the reporters and the tweets they mention from other users showing how the algorithm was biased or prejudiced towards lighter faces compared with darker faces. \n",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Using this definition of racism, what aspect(s) of racism did the Twitter cropping algorithm do: prejudice, discrimination, or antagonism?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should gravitate towards prejudice and discrimination, since one group is being given different treatment purely based on the color of their skin according to the twitter algorithm. Use this discussion to highlight the evidence brought up in the video both from the reporters and the tweets they mention from other users showing how the algorithm was biased or prejudiced towards lighter faces compared with darker faces. ",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This discussion is framed around the Twitter cropping algorithm and the evidence highlighted in the video. You may choose to open this discussion up to other examples based on your students’ experiences."
+            "markdown": "**Lived Experiences:** Students may bring in other examples from their own lives where technology has appeared biased or prejudiced against them based on their race or skin color, especially involving sensors and image recognition. Facial recognition in particular has a history of having racial biases against dark-skinned people, which may have impacted students in your classroom. Consider how you may want to validate the lived experiences of the students in your room while continuing to guide the conversation towards the solution-focused section of the lesson, where Twitter ultimately implemented a solution for this particular algorithm."
           }
         ]
       },
@@ -3449,9 +3454,9 @@
     },
     {
       "key": "4dcc8f6b-dfd5-4e6d-a1c9-74253261f166",
-      "position": 8,
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How was the Twitter cropping algorithm trained? According to the video, where is a potential source of bias when training similar cropping algorithms?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The most important thing for students to come away from this discussion with is the fact that the machine is not racist. The algorithm that the programmers wrote is biased towards lighter faces. Use this discussion to ensure students understand how the model used the saliency datasets discussed in the video and how some of those datasets were trained on photo libraries containing images that do not represent the population as a whole.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How was the Twitter cropping algorithm trained? According to the video, where is a potential source of bias when training similar cropping algorithms?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The most important thing for students to come away from this discussion with is the fact that the machine is not \"racist\", but it is biased towards lighter faces because of the datasets used to train it. Use this discussion to ensure students understand how the model used the saliency datasets discussed in the video and how some of those datasets were trained on photo libraries containing images that do not represent the population as a whole.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3466,7 +3471,7 @@
     },
     {
       "key": "7881d1dd-8ea4-4990-af26-2d6e340ea09b",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** If you were the CEO of Twitter and found evidence of this bias in your cropping algorithm, how would you respond? What steps would you take?\n\nYou may choose to have students share their responses if there is time, otherwise move to reading the article."
       },
@@ -3477,7 +3482,7 @@
     },
     {
       "key": "7ad67766-8487-49b9-a751-c1bff0708074",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "Now that you’ve had time to consider how you might respond, we are going to read about how this actually played out and Twitter’s response when presented with evidence of bias in their cropping algorithm.",
         "remarks": true
@@ -3489,7 +3494,7 @@
     },
     {
       "key": "1b31a5b3-03dd-40f8-bcd4-67eaa23acda6",
-      "position": 11,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students read the article [“Twitter says its image-cropping algorithm was biased, so it’s ditching it (CNN)”](https://drive.google.com/file/d/1D27tKtB6cE0qbVKh5mcJI7QOQld0Jc0B/view?usp=sharing). After they are finished reading they should mark up the text with the following:\n* **Highlight / Underline:** Any information in this article that you want to know more about\n* **At The End:** Write a 10-word summary of the article\n",
         "tips": [
@@ -3531,10 +3536,26 @@
       "position": 3,
       "properties": {
         "description": "The story of Twitter and its photo cropping algorithm shows how something that’s built with one intention, in this case to better highlight photos, can lead to unintended effects, in this case, bias of white faces over black faces, which can also have harmful impacts on society or culture.  And, this case provides an example of a software company that has taken actionable steps to address algorithmic bias by establishing this team (machine learning ethics, transparency, and accountability team) lead by Rumman Chowdry.\n\n",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Diving Deeper - Rumman Chowdhury:** Consider exploring the [CSEdWeek CS Heroes resources on Rumman Chowdhury](https://www.csedweek.org/cs-heroes/rumman-chowdhury) for additional activities, posters, and resources about Rumman, AI Ethics, and her work on bias in machine learning models."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fbd7a999-53ad-4436-a823-9af545f6053e",
+        "lesson_activity.key": "672b41e0-8b3b-44d7-a904-aa6b84585145"
+      }
+    },
+    {
+      "key": "b1133860-ee4c-444e-9825-bbdb6babf8ba",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b1133860-ee4c-444e-9825-bbdb6babf8ba",
         "lesson_activity.key": "672b41e0-8b3b-44d7-a904-aa6b84585145"
       }
     },
@@ -4082,6 +4103,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "LLM - Eliza"
+        ],
         "progression": "Eliza Widget"
       },
       "bonus": false,
@@ -4104,9 +4128,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Noisy Image Widget"
-        ],
         "progression": "Noisy Image Widget"
       },
       "bonus": false,
@@ -4117,7 +4138,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "ai-temp",
-        "activity_section.key": "401de1bc-f480-4a70-b028-f1505fe8abe9"
+        "activity_section.key": "d27a224d-01ee-4cc0-9516-44433636b71b"
       },
       "level_keys": [
         "Noisy Image Widget"
@@ -4129,10 +4150,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "GAN Guess Widget"
-        ],
-        "progression": "GAN Guess Widget"
+        "progression": "(Optional) GAN Guess Widget"
       },
       "bonus": false,
       "seeding_key": {
@@ -4142,7 +4160,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "ai-temp",
-        "activity_section.key": "922a33c0-0c03-461b-9248-ab95eb9cd1a9"
+        "activity_section.key": "617a2b62-f179-4c95-90b4-3e155b3a22b7"
       },
       "level_keys": [
         "GAN Guess Widget"
@@ -4154,9 +4172,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U9L5 Cropping Widget_introai"
-        ],
         "progression": "Cropping Widget"
       },
       "bonus": false,
@@ -4167,7 +4182,7 @@
         "lesson.key": "Algorithmic Bias",
         "lesson_group.key": "",
         "script.name": "ai-temp",
-        "activity_section.key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add"
+        "activity_section.key": "08ea6f16-90f2-447e-94e3-e03c48c6fa4a"
       },
       "level_keys": [
         "U9L5 Cropping Widget_introai"
@@ -4268,7 +4283,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "ai-temp",
-        "activity_section.key": "401de1bc-f480-4a70-b028-f1505fe8abe9"
+        "activity_section.key": "d27a224d-01ee-4cc0-9516-44433636b71b"
       }
     },
     {
@@ -4280,7 +4295,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "ai-temp",
-        "activity_section.key": "922a33c0-0c03-461b-9248-ab95eb9cd1a9"
+        "activity_section.key": "617a2b62-f179-4c95-90b4-3e155b3a22b7"
       }
     },
     {
@@ -4292,7 +4307,7 @@
         "lesson.key": "Algorithmic Bias",
         "lesson_group.key": "",
         "script.name": "ai-temp",
-        "activity_section.key": "b5e783c8-914b-4fd5-a1e1-200c1aaa5add"
+        "activity_section.key": "08ea6f16-90f2-447e-94e3-e03c48c6fa4a"
       }
     }
   ],
@@ -4397,11 +4412,10 @@
     },
     {
       "name": "Algorithmic Bias",
-      "url": "https://docs.google.com/presentation/d/1N_sFSTNrP2jpnQPdIAaIDPhQYroSiV5EYxSP3dZ-bHc/copy",
+      "url": "https://docs.google.com/presentation/d/1N_sFSTNrP2jpnQPdIAaIDPhQYroSiV5EYxSP3dZ-bHc/template/preview",
       "key": "csp_unit_5_-_lesson_8_-_algorithmic_bias",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1N_sFSTNrP2jpnQPdIAaIDPhQYroSiV5EYxSP3dZ-bHc/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -4422,7 +4436,7 @@
     },
     {
       "name": "Generative Images",
-      "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/copy",
+      "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/template/preview",
       "key": "generative_images",
       "properties": {
         "audience": "Teacher",
@@ -4434,7 +4448,7 @@
     },
     {
       "name": "Generative LLM",
-      "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/copy",
+      "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
       "key": "generative_llm",
       "properties": {
         "audience": "Teacher",
@@ -4468,6 +4482,19 @@
       },
       "seeding_key": {
         "resource.key": "how_ai_works_chatbots_and_large_language_models_part_2_"
+      }
+    },
+    {
+      "name": "How AI Works: Creativity and Imagination",
+      "url": "https://www.youtube.com/watch?v=gD1bEC9q54k",
+      "key": "how_ai_works_creativity_and_imagination",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/howaiworks_creativity_sm-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_ai_works_creativity_and_imagination"
       }
     },
     {
@@ -4669,6 +4696,7 @@
       "key": "noisy_image_widget_activity_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -4676,27 +4704,15 @@
       }
     },
     {
-      "name": "Optional GAN Game Activity Guide",
+      "name": "(Optional) GAN Game Activity Guide",
       "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit",
       "key": "optional_gan_game_activity_slides",
       "properties": {
-        "audience": "Student",
+        "audience": "Teacher",
         "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "optional_gan_game_activity_slides"
-      }
-    },
-    {
-      "name": "Optional GAN slides",
-      "url": "https://docs.google.com/presentation/d/1oYDiKQznrkjOIdj5N7-0w1rThusGdMRZR2aDmyw_xdc/edit#slide=id.g23a57cee646_0_80",
-      "key": "optional_gan_slides",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "optional_gan_slides"
       }
     },
     {
@@ -4749,6 +4765,18 @@
       }
     },
     {
+      "name": "User Guide: Noise Image Widget",
+      "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view",
+      "key": "user_guide_noise_image_widget",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "user_guide_noise_image_widget"
+      }
+    },
+    {
       "name": "Video and Vocabulary Guide",
       "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4",
       "key": "video_and_vocabulary_guide",
@@ -4766,6 +4794,7 @@
       "key": "video_and_vocabulary_guide_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -5078,6 +5107,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "resource.key": "how_ai_works_creativity_and_imagination"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "resource.key": "noisy_image_widget_activity_guide"
       }
     },
@@ -5090,7 +5125,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "resource.key": "optional_gan_slides"
+        "resource.key": "user_guide_noise_image_widget"
       }
     },
     {

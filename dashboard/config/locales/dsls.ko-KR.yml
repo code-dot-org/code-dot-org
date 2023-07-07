@@ -4093,86 +4093,88 @@ ko-KR:
           들어 갈 수 있습니다.\n\n![](https://images.code.org/35d6218f47f5b0b00975369dd9f5bea5-image-1573169909110.38.03
           PM.png)\n\n"
       OPD-K5 CS Courses_copy:
-        markdown: "# Code.org에서 시작하기\n\n\n## 단계 1: 과정 선택\n프리 리더부터 고등학생까지 우리의 과정 모두는
-          **<a href=\"https://studio.code.org/courses\" target=\"blank\">과정 카타로그</a>에
-          나열되어 있습니다**. 모든 과정은 무료로 제공됩니다.학교 동료 교사와 채팅하여 과정 커리큘럼을 다양한 과목에 통합시키는 방법을
-          결정하세요.\n\n<table style=\"width:100%; border-style:none;\">\n  <tr>\n    <th
-          style=\"background-color:#ff9900; text-align:center; border-style:none;
-          font-weight:bold;\"\"\">\n      <b>과정 A</b><br/>\n      <i>유치원</i>\n    </th>\n
-          \   <th style=\"background-color:#f1c232; text-align:center; border-style:none;\"\"\">\n
-          \       과정 B<br/>\n        <i>1학년</i>\n    </th>\n    <th style=\"background-color:#b8bf0d;
-          text-align:center; border-style:none;\"\"\">\n        과정 C<br/>\n        <i>2학년e</i>\n
-          \   </th>\n    <th style=\"background-color:#53bac2; text-align:center;
-          border-style:none;\"\"\">\n        과정 D<br/>\n        <i>3학년</i>\n    </th>\n
-          \   <th style=\"background-color:#0094ca; text-align:center; border-style:none;\"\"\">\n
-          \       과정 E<br/>\n        <i>4학년</i>\n    </th>\n    <th style=\"background-color:#7664a0;
-          text-align:center; border-style:none;\"\"\">\n        과정 F<br/>\n        <i>5학년</i>\n
-          \   </th>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c; color:black;
-          border-style:none; vertical-align: text-top;\"\">12개 레슨, 완료하는데 12시간 이상 걸림</td>\n
+        markdown: "# Code.org 시작하기\n\n\n## 1단계: 과정 선택\n미취학 아동부터 고등학생까지, 저희의 모든 과정이
+          **<a href=\"https://studio.code.org/courses\" target=\"blank\" rel=\"noopener
+          noreferrer\">수업 과정 카탈로그</a>**에 명시되어 있습니다. 저희가 제공하는 모든 수업 과정은 무료로 이용하실 수
+          있습니다. 해당 커리큘럼을 어떻게 다양한 주제에 통합할 수 있을지 동료분들과 논의해 보세요.\n\n<table style=\"width:100%;
+          border-style:none;\">\n  <tr>\n    <th style=\"background-color:#ff9900;
+          text-align:center; border-style:none; font-weight:bold;\"\"\">\n      <b>A
+          과정</b><br/>\n      <i>유치원</i>\n    </th>\n    <th style=\"background-color:#f1c232;
+          text-align:center; border-style:none;\"\"\">\n        B 과정<br/>\n        <i>1학년</i>\n
+          \   </th>\n    <th style=\"background-color:#b8bf0d; text-align:center;
+          border-style:none;\"\"\">\n        C 과정<br/>\n        <i>2학년</i>\n    </th>\n
+          \   <th style=\"background-color:#53bac2; text-align:center; border-style:none;\"\"\">\n
+          \       D 과정<br/>\n        <i>3학년</i>\n    </th>\n    <th style=\"background-color:#0094ca;
+          text-align:center; border-style:none;\"\"\">\n        E 과정<br/>\n        <i>4학년</i>\n
+          \   </th>\n    <th style=\"background-color:#7664a0; text-align:center;
+          border-style:none;\"\"\">\n        F 과정<br/>\n        <i>5학년</i>\n    </th>\n
+          \ </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c; color:black;
+          border-style:none; vertical-align: text-top;\"\">12개 레슨, 완료까지 약 ~12시간</td>\n
           \   <td style=\"background-color:#ffe599; color:black; border-style:none;
-          vertical-align: text-top;\"\">12개 레슨, 완료하는데 12시간 이상 걸림</td>\n    <td style=\"background-color:#d2da0e;
-          color:black; border-style:none; vertical-align: text-top;\"\">18개 레슨, 완료하는데
-          18시간 이상 걸림</td>\n    <td style=\"background-color:#68ebf5; color:black;
-          border-style:none; vertical-align: text-top;\"\">18개 레슨, 완료하는데 18시간 이상 걸림</td>\n
-          \   <td style=\"background-color:#9ed7ed; color:black; border-style:none;
-          vertical-align: text-top;\"\">18개 레슨, 완료하는데 18-20시간 걸림</td>\n    <td style=\"background-color:#c9c1e9;
-          color:black; border-style:none; vertical-align: text-top;\"\">18개 레슨, 완료하는데
-          20-22시간 걸림</td>\n  </tr>\n  <tr>\n    <td colspan=\"6\" style=\"text-align:center;width:96%;background-color:#d9d9d9;color:black;
+          vertical-align: text-top;\"\">12개 레슨, 완료까지 약 ~12시간</td>\n    <td style=\"background-color:#d2da0e;
+          color:black; border-style:none; vertical-align: text-top;\"\">18개 레슨, 완료까지
+          약 ~18시간</td>\n    <td style=\"background-color:#68ebf5; color:black; border-style:none;
+          vertical-align: text-top;\"\">18개 레슨, 완료까지 약 ~18시간</td>\n    <td style=\"background-color:#9ed7ed;
+          color:black; border-style:none; vertical-align: text-top;\"\">18개 레슨, 완료까지
+          약 ~18-20시간</td>\n    <td style=\"background-color:#c9c1e9; color:black;
+          border-style:none; vertical-align: text-top;\"\">18개 레슨, 완료까지 약 ~20-22시간</td>\n
+          \ </tr>\n  <tr>\n    <td colspan=\"6\" style=\"text-align:center;width:96%;background-color:#d9d9d9;color:black;
           border-style:none;\">개념</td>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c;
           color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
-          style=\"font-style:italic;\">\n        <li>디지털 시민의식</li>\n        <li>시퀸싱</li>\n
+          style=\"font-style:italic;\">\n        <li>디지털 시민 의식</li>\n        <li>시퀀싱</li>\n
           \       <li>루프</li>\n        <li>이벤트</li>\n      </ul>\n    </td>\n    <td
           style=\"background-color:#ffe599; color:black; border-style:none; vertical-align:
           text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>디지털
-          시민의식</li>\n        <li>시퀸싱\\\ng</li>\n        <li>루프</li>\n        <li>컴퓨팅의
+          시민 의식</li>\n        <li>시퀀싱</li>\n        <li>루프</li>\n        <li>컴퓨팅의
           영향</li>\n        <li>이벤트</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#d2da0e;
           color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
-          style=\"font-style:italic;\">\n        <li>디지털 시민의식</li>\n        <li>시퀸싱</li>\n
-          \       <li>바이너리</li>\n        <li>루프</li>\n        <li>이벤트</li>\n        <li>데이터</li>\n
+          style=\"font-style:italic;\">\n        <li>디지털 시민 의식</li>\n        <li>시퀀싱</li>\n
+          \       <li>2진법</li>\n        <li>루프</li>\n        <li>이벤트</li>\n        <li>데이터</li>\n
           \     </ul>\n    </td>\n    <td style=\"background-color:#68ebf5; color:black;
           border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
-          \       <li>시퀸싱</li>\n        <li>이벤트</li>\n        <li>루프</li>\n        <li>조건문</li>\n
-          \       <li>바이너리</li>\n        <li>디지털 시민의식</li>\n      </ul>\n    </td>\n
+          \       <li>시퀀싱</li>\n        <li>이벤트</li>\n        <li>루프</li>\n        <li>조건문</li>\n
+          \       <li>2진법</li>\n        <li>디지털 시민 의식</li>\n      </ul>\n    </td>\n
           \   <td style=\"background-color:#9ed7ed; color:black; border-style:none;
           vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
-          \       <li>스프라이트</li>\n        <li>디지털 시민의식</li>\n        <li>컴퓨팅의 영향</li>\n
+          \       <li>스프라이트</li>\n        <li>디지털 시민 의식</li>\n        <li>컴퓨팅의 영향</li>\n
           \       <li>중첩 루프</li>\n        <li>함수</li>\n      </ul>\n    </td>\n    <td
           style=\"background-color:#c9c1e9; color:black; border-style:none; vertical-align:
           text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>변수</li>\n
           \       <li>데이터</li>\n        <li>For 루프</li>\n        <li>인터넷</li>\n        <li>스프라이트</li>\n
-          \       <li>디지털 시민의식</li>\n        </ul>\n    </td>\n  <tr>\n  \t<td style=\"background-color:#f9cb9c\">\n
+          \       <li>디지털 시민 의식</li>\n        </ul>\n    </td>\n  <tr>\n  \t<td style=\"background-color:#f9cb9c\">\n
           \    <a href=\"https://studio.code.org/s/coursea\" target=\"_blank\" style='text-decoration:none'>\n
-          \       <button>과정 보기</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursea\"
-          target=\"_blank\" style='text-decoration:none'>\n          <button>레슨 플랜</button>\n
+          \       <button>수업 과정 보기</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursea\"
+          target=\"_blank\" style='text-decoration:none'>\n          <button>수업 계획</button>\n
           \     </a>\n    </td>\n    <td style=\"background-color:#ffe599\">\n    <a
           href=\"https://studio.code.org/s/courseb\" target=\"_blank\" style='text-decoration:none'>\n
-          \       <button>과정 보기</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/courseb\"
-          target=\"_blank\" style='text-decoration:none'>\n        <button>레슨 플랜</button>\n
+          \       <button>수업 과정 보기</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/courseb\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>수업 계획</button>\n
           \     </a>\n    </td>   \n   \t<td style=\"background-color:#d2da0e\">\n
           \   <a href=\"https://studio.code.org/s/coursec\" target=\"_blank\" style='text-decoration:none'>\n
-          \       <button>과정 보기</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursec\"
-          target=\"_blank\" style='text-decoration:none'>\n        <button>레슨 플랜</button>\n
+          \       <button>수업 과정 보기</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursec\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>수업 계획</button>\n
           \     </a>\n    </td>   \n    <td style=\"background-color:#68ebf5\">\n
           \   <a href=\"https://studio.code.org/s/coursed\" target=\"_blank\" style='text-decoration:none'>\n
-          \       <button>과정 보기</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursed\"
-          target=\"_blank\" style='text-decoration:none'>\n        <button>레슨 플랜</button>\n
+          \       <button>수업 과정 보기</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursed\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>수업 계획</button>\n
           \     </a>\n    </td>  \n    <td style=\"background-color:#9ed7ed\">\n    <a
           href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
-          \       <button>과정 보기</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
-          target=\"_blank\" style='text-decoration:none'>\n        <button>레슨 플랜</button>\n
+          \       <button>수업 과정 보기</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>수업 계획</button>\n
           \     </a>\n    </td>  \n     <td style=\"background-color:#c9c1e9\">\n
           \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
-          \       <button>과정 보기</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
-          target=\"_blank\" style='text-decoration:none'>\n        <button>레슨 플랜</button>\n
-          \     </a>\n    </td>  \n  </tr>\n</table>\n<br/>\n\n\n***\n## 단계 2: 교실
-          섹션 설정\n학생들의 진도를 보고 학생용 로그인 카드를 인쇄하며 그들의 계정을 관리하고 과정을 끝날 때 집으로 가져갈 인증서를 인쇄하기
-          위한 교실 섹션을 설정합니다. 이 링크를 클릭하여 Code.org에 처음 컴퓨터 과학 수업을 설정하는 방법을 보여주는 **<a href=\"https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b\"
-          target=\"blank\">짧은 동영상을 시청하세요</a>**  또한 단계는 **<a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\"
-          target=\"blank\">이 글에서</a>** 찾을 수 있습니다.\n\n***\n## 단계 3: 과정을 섹션에 배정\n가르치려는
-          과정을 클릭합니다. 그 다음, \"과정 배정\"을 클릭하고 그 과정을 여러분의 섹션 중 하나에 배정할 수 있습니다.\n***\n##
-          단계 4: 가르치기 시작! \n한 가지 레슨 만으로도 컴퓨터 과학 개념을 교실로 가져올 수 있습니다. 일단 학생들이 CS에 열정을
-          보이면, 일일 레슨 플랜으로 학생들을 컴퓨터 없이도 할 수 있는 언플러그드 활동과 다른 교사와 연결되기 위한 포럼으로 안내하며 더
-          나아갑니다.\n\n\n"
+          \       <button>수업 과정 보기</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>수업 계획</button>\n
+          \     </a>\n    </td>  \n  </tr>\n</table>\n<br/>\n\n\n***\n## 2단계: 수업 섹션
+          설정\n수업 섹션을 설정해 학생들의 진도를 보고, 학생용 로그인 카드를 인쇄하고, 학생용 계정을 관리하고, 학생이 과정을 마쳤을
+          때 집에 가져갈 수 있는 인증서를 인쇄할 수 있습니다. 다음 링크를 클릭해 **<a href=\"https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b\"
+          target=\"blank\" rel=\"noopener noreferrer\">짧은 영상을 시청하세요.</a>** Code.org에서
+          컴퓨터 과학 수업을 설정하는 방법을 알려드립니다. 또한 과정을 **<a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\"
+          target=\"blank\" rel=\"noopener noreferrer\">이 설명 글</a>**에서 보실 수 있습니다.\n\n***\n##
+          3단계: 섹션에 수업 과정 배정\n가르치고 있는 과정을 클릭합니다. 아래와 같은 화면이 보입니다. 그다음 '과정 배정'을 클릭해
+          섹션 중 하나에 해당 과정을 배정합니다. \n***\n## 4단계: 가르쳐 봅시다! \n컴퓨터 과학 개념을 학생들이 배울 수 있도록
+          첫 수업부터 시작해 보세요. 컴퓨터 과학에 대한 학생들의 열정이 느껴진다면 일일 수업 계획으로 학생들의 학습을 안내하고, 컴퓨터
+          없이도 가능한 언플러그드 활동을 하고, 포럼을 진행해 다른 교사들과도 의견을 나눠 보세요.\n\n\n"
       OPD-K5 CS Tips_copy:
         markdown: |+
           # 이 온라인 과정 탐색
@@ -5192,7 +5194,7 @@ ko-KR:
         markdown: |
           # 모눈종이 프로그래밍
 
-          그림을 그리기 위해 학급원이 사용할 수 있는 알고리즘을 작성하세요.
+          그림을 그리기 위해 친구들이 사용할 수 있는 알고리즘을 작성하세요.
       HappyMaps-Unplugged_2021:
         markdown: |
           # 해피 맵
@@ -5212,9 +5214,9 @@ ko-KR:
         markdown: |
           # 내 루피 로봇 친구
 
-          루프를 사용하여 프로그램을 더 짧게 만드세요!
+          반복을 사용하여 프로그램을 더 짧게 만드세요!
       MyRoboticFriends-Unplugged_2021:
-        markdown: "# 내 로봇 친구 \n\n친구를 위해 코딩을 작성하며 프로그램을 배워 보세요!"
+        markdown: "# 내 로봇 친구 \n\n친구를 위한 코딩을 작성하며 프로그램을 배워 보세요!"
       OPD-K5 Stage3aGo_dani:
         content1: 설명 입력
       RelayProgramming-Unplugged_2021:
@@ -5258,16 +5260,16 @@ ko-KR:
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - text: '4'
-          feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+          feedback: 틀렸습니다. 농부는 각각 3개 루프에서 4개씩 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
         - text: '12'
           correct: true
           feedback: 맞습니다!
         - text: '15'
-          feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+          feedback: 틀렸습니다. 농부는 각각 3개 루프에서 4개씩 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
         - text: '20'
-          feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+          feedback: 틀렸습니다. 농부는 각각 3개 루프에서 4개씩 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
         questions:
-        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭한 후 농부는 몇 개의 호박을 모으게 됩니까?
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭한 후 농부는 몇 개의 호박을 모았나요?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
         - text: 스크랫은 도토리에 도달할 것입니다. 코드에는 버그가 없습니다.
@@ -8066,7 +8068,7 @@ ko-KR:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: 웹 개발
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true
@@ -12959,7 +12961,7 @@ ko-KR:
         markdown: |
           # 빅 이벤트
 
-          컴퓨터 과학에서 이벤트는 컴퓨터가 모니터링하는 동작입니다. 이 레슨에서 여러분은 어느 버튼을 누르냐에 따라 다르게 반응할 것입니다.
+          컴퓨터 과학에서 이벤트는 컴퓨터가 수행하는 동작입니다. 이 레슨에서 여러분이 어느 버튼을 누르냐에 따라 다르게 반응할 것입니다.
       BinaryBracelets-Unplugged2022:
         markdown: |
           # 바이너리 팔찌
@@ -13149,7 +13151,7 @@ ko-KR:
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
       courseAB_EOC2022:
         description: 마지막 레슨에 도달했습니다! 만들 프로젝트를 선택하세요.
-        display_name: 과정말 프로젝트
+        display_name: 종합 프로젝트
       courseB_EOC2022:
         description: 마지막 레슨에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
@@ -13845,3 +13847,33 @@ ko-KR:
           feedback: 틀렸습니다. 회전초는 굴러가기 시작할 것입니다
         questions:
         - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질까요?
+      OPD-K5 CS Courses:
+        markdown: "# 기획 > Code.org 시작하기\n\n\n## 1단계: 과정 선택\n미취학 아동부터 고등학생까지, 저희의 모든
+          과정이 **[수업 과정 카탈로그](https://studio.code.org/courses)**에 명시되어 있습니다. 연습하셨던
+          CS 기초 수업을 찾으려면 **[초등학생 페이지](https://code.org/educate/curriculum/elementary-school)**로
+          가서 '수업 과정' 섹션으로 스크롤해 내려갑니다. 저희가 제공하는 모든 수업 과정은 무료로 이용하실 수 있습니다. 해당 커리큘럼을
+          어떻게 다양한 주제에 통합할 수 있을지 동료분들과 논의해 보세요.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          2단계: 수업 섹션 설정\n수업 섹션을 설정해 학생들의 진도를 보고, 학생용 로그인 카드를 인쇄하고, 학생용 계정을 관리하고, 학생이
+          과정을 마쳤을 때 집에 가져갈 수 있는 인증서를 인쇄할 수 있습니다. 다음 링크를 클릭해 **[짧은 영상을 시청하세요.](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          Code.org에서 첫 컴퓨터 과학 수업을 설정하는 방법을 알려드립니다. 또한 과정을 **[이 설명 글](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**에서
+          보실 수 있습니다.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          3단계: 섹션에 수업 과정 배정\n가르치고 있는 과정을 클릭합니다. 아래와 같은 화면이 보입니다. 그다음 '과정 배정'을 클릭해
+          섹션 중 하나에 해당 과정을 배정합니다. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          4단계: 가르쳐 봅시다! \n컴퓨터 과학 개념을 학생들이 배울 수 있도록 첫 수업부터 시작해 보세요. 컴퓨터 과학에 대한 학생들의
+          열정이 느껴진다면 일일 수업 계획으로 학생들의 학습을 안내하고, 컴퓨터 없이도 가능한 언플러그드 활동을 하고, 포럼을 진행해 다른
+          교사들과도 의견을 나눠 보세요."
+      OPD-K5 CS Courses_dani:
+        markdown: "# 기획 > Code.org 시작하기\n\n\n## 1단계: 과정 선택\n미취학 아동부터 고등학생까지, 저희의 모든
+          과정이 **[수업 과정 카탈로그](https://studio.code.org/courses)**에 명시되어 있습니다. 연습하셨던
+          CS 기초 수업을 찾으려면 **[초등학생 페이지](https://code.org/educate/curriculum/elementary-school)**로
+          가서 '수업 과정' 섹션으로 스크롤해 내려갑니다. 저희가 제공하는 모든 수업 과정은 무료로 이용하실 수 있습니다. 해당 커리큘럼을
+          어떻게 다양한 주제에 통합할 수 있을지 동료분들과 논의해 보세요.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          2단계: 수업 섹션 설정\n수업 섹션을 설정해 학생들의 진도를 보고, 학생용 로그인 카드를 인쇄하고, 학생용 계정을 관리하고, 학생이
+          과정을 마쳤을 때 집에 가져갈 수 있는 인증서를 인쇄할 수 있습니다. 다음 링크를 클릭해 **[짧은 영상을 시청하세요.](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          Code.org에서 첫 컴퓨터 과학 수업을 설정하는 방법을 알려드립니다. 또한 과정을 **[이 설명 글](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**에서
+          보실 수 있습니다.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          3단계: 섹션에 수업 과정 배정\n가르치고 있는 과정을 클릭합니다. 아래와 같은 화면이 보입니다. 그다음 '과정 배정'을 클릭해
+          섹션 중 하나에 해당 과정을 배정합니다. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          4단계: 가르쳐 봅시다! \n컴퓨터 과학 개념을 학생들이 배울 수 있도록 첫 수업부터 시작해 보세요. 컴퓨터 과학에 대한 학생들의
+          열정이 느껴진다면 일일 수업 계획으로 학생들의 학습을 안내하고, 컴퓨터 없이도 가능한 언플러그드 활동을 하고, 포럼을 진행해 다른
+          교사들과도 의견을 나눠 보세요."

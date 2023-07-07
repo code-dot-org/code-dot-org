@@ -94,7 +94,8 @@ export const getProgressLevelType = state => {
 
 /**
  * Returns the dashboard URL path to retrieve the level properties for a script
- * level (if we have lessons) or a level (if we don't have lessons).
+ * level (if we have lessons) or a level (if we don't have lessons). If we don't
+ * have a current level, this returns undefined.
  */
 export const getLevelPropertiesPath = state => {
   if (state.progress.lessons) {
@@ -108,9 +109,11 @@ export const getLevelPropertiesPath = state => {
         state.progress.currentLessonId
       ).findIndex(level => level.isCurrentLevel) + 1;
     return `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelNumber}/level_properties`;
-  } else {
+  } else if (state.progress.currentLevelId !== null) {
     const levelId = state.progress.currentLevelId;
     return `/levels/${levelId}/level_properties`;
+  } else {
+    return undefined;
   }
 };
 
@@ -202,7 +205,7 @@ export const levelsByLesson = ({
  */
 export const levelsForLessonId = (state, lessonId) => {
   const lesson = state.lessons?.find(lesson => lesson.id === lessonId);
-  return lesson.levels.map(level =>
+  return lesson?.levels.map(level =>
     levelWithProgress(state, level, lesson.lockable)
   );
 };

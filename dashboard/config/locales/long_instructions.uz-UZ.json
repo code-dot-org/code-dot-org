@@ -3204,7 +3204,11 @@
         "ramp_artist_loops82022": "**Qo‘shimcha topshiriq:** O‘xshashlikni qidiring va sikllardan foydalangan holda hozirgi kodni qisqartiring.",
         "ramp_artist_loops92022": "Bu boshqotirmani tomonlari 200 pikseldan iborat to‘rtburchak chizgan holda yeching.",
         "poetry_modal_function_editor": "Bu sheʼr darajasi boʻlib, unda avtomatik ravishda toʻldirilgan “PROTSEDURALAR” kategoriyasini oʻz ichiga oladi va modal funksiya muharriri yoʻq.",
-        "poetry_no_modal_function_editor": "Bu sheʼr darajasi boʻlib, unda avtomatik ravishda toʻldirilgan “PROTSEDURALAR” kategoriyasini oʻz ichiga oladi va modal funksiya muharriri yoʻq."
+        "poetry_no_modal_function_editor": "Bu sheʼr darajasi boʻlib, unda avtomatik ravishda toʻldirilgan “PROTSEDURALAR” kategoriyasini oʻz ichiga oladi va modal funksiya muharriri yoʻq.",
+        "courseC_artist_prog72022": "**Chellenj:** Bu uy hayvonining ism yorlig'i maxsus shakldir!\n\nKonturni qanday chizish kerakligini tushuna olasizmi?\\\n(Uzun tomoni 150 piksel, har bir qisqa tomoni esa 75 piksel.)",
+        "courseE_artist_functions102022": "Bu safar 25 pikselli 8 ta oltiburchak qatorlaridan foydalaning.\n\n-   Har bir oltiburchakni yasash uchun 60 gradusga burilib, 6 marta yon tomonni takrorlang.\n-   Har olti burchak orasida 25 pikseldan sakrab o'ting.\n-   Olmos chizish uchun siz 60 daraja va 120 daraja burilishlarni navbat bilan qilishingiz kerak bo'ladi.",
+        "courseE_artist_functions92022": "**Challenge:** Ushbu rasmni faqat taqdim etilgan bloklardan foydalangan holda yarating.\n\n-   Har bir uchburchakning tomonlari **50 piksel**\n-   Olmos chizish uchun sizga **60 daraja va 120 daraja** burilishlari kerak.",
+        "courseE_artist_functionsProj2022": "\\*\\* Ilhomlanish: \\*\\* O'zingiz xohlagan narsani qilish uchun o'rgangan narsangizdan foydalaning!\n\nSiz shunga o'xshash narsa yasay olasizmi?\n\n![expandable](https://images.code.org/0d79058844e1f038971c303b20b0105f-image-1628782803453.png)"
       }
     }
   }

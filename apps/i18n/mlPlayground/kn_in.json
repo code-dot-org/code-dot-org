@@ -45,6 +45,13 @@
         }
       }
     },
+    "bike_sharing": {
+      "fields": {
+        "Month": {
+          "id": "ತಿಂಗಳು"
+        }
+      }
+    },
     "poutine_toy": {
       "fields": {
         "mushrooms": {
@@ -185,6 +192,13 @@
         }
       }
     },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "ಆರ್ಟಿಸ್ಟ್"
+        }
+      }
+    },
     "safari_toy": {
       "fields": {
         "people": {
@@ -296,13 +310,6 @@
         },
         "Country": {
           "id": "ದೇಶ"
-        }
-      }
-    },
-    "songs": {
-      "fields": {
-        "Artist": {
-          "id": "ಆರ್ಟಿಸ್ಟ್"
         }
       }
     }

@@ -3915,7 +3915,7 @@
         "courseC_artist_prog42022": "_\"Och, nie! Starlin mimozemšťan práve ušiel! Pomôžme tejto astronautke!\"_\n\nDokonči Starlinu raketu, aby mohla dobehnúť svojho mimozemšťana.\\\n(Každá strana trojuholníka má 100 pixelov a vonkajší uhol 120 stupňov.)",
         "courseC_artist_prog52022": "_\"Možno by sme mali vyrobiť ceduľku pre každé z našich zvieratiek, ak by sa náhodou stratili!\"_\n\nDokonči túto ceduľku tak, že po jej obvode nakreslíš obĺžnik. \n(Dlhá strana má 200 pixelov a krátka strana má 100 pixelov)",
         "courseC_artist_prog62022": "_\"Teraz ceduľka pre Belle!\"_\n\nNakresli tento štvorec so stranou dlhou 200 pixelov.",
-        "courseC_artist_prog72022": "**Výzva:** Menovka tohto domáceho miláčika má špeciálny tvar!\n\nDokážeš prísť na to, ako nakresliť jej obrys?\n(Dlhá strana má 150 pixelov a krátke strany majú po 75 pixelov.)",
+        "courseC_artist_prog72022": "**Výzva:** Menovka tohto domáceho miláčika má špeciálny tvar!\n\nDokážeš prísť na to, ako nakresliť jej obrys?\\\n(Dlhá strana má 150 pixelov a krátke strany majú po 75 pixelov.)",
         "courseC_artist_prog82022": "Ešte jedna ceduľka. Toto je trojuholník pre Pi.\n(Každá strana má 150 pixelov)",
         "courseC_artist_prog_challenge12022": "Nakresli izbu pre každé zo zvierat. Existuje mnoho rôznych spôsobov ako vyriešiť túto úlohu, takže sa zabav! Každý štvorec má stranu dlhú 100 pixelov.",
         "courseC_artist_prog_challenge2a2022": "-   \"Pomôž mi dokresliť žlté čiary na túto cestu!\"\n\nTieto tri čiary majú dĺžku 150, 100 a 200 pixelov!",
@@ -5024,7 +5024,10 @@
         "poetry_modal_function_editor": "Toto je úroveň poézie, ktorá obsahuje automaticky vyplnenú kategóriu \"POSTUPY\" a používa editor modálnych funkcií.",
         "poetry_no_modal_function_editor": "Toto je úroveň poézie, ktorá obsahuje automaticky vyplnenú kategóriu \"POSTUPY\" a neobsahuje editor modálnych funkcií.",
         "CSD U3 Test parameter FR": "Bloky, ako napríklad „rect“ a „velocityX“, majú parametre, ktoré ti umožnia poskytnúť špecifické informácie o tom, čo dokážu.  Vyber si funkciu vo svojom programe, ktorá by sa dala vylepšiť pomocou parametra, a vysvetli, ako.",
-        "CSD U3 Test parameter FR_2021": "Bloky, ako napríklad „rect“ a „velocityX“, majú parametre, ktoré ti umožnia poskytnúť špecifické informácie o tom, čo dokážu.  Vyber si funkciu vo svojom programe, ktorá by sa dala vylepšiť pomocou parametra, a vysvetli, ako."
+        "CSD U3 Test parameter FR_2021": "Bloky, ako napríklad „rect“ a „velocityX“, majú parametre, ktoré ti umožnia poskytnúť špecifické informácie o tom, čo dokážu.  Vyber si funkciu vo svojom programe, ktorá by sa dala vylepšiť pomocou parametra, a vysvetli, ako.",
+        "courseE_artist_functions102022": "Tentokrát použi rady zložené z 8 šesťuholníkov so stranami dlhými 25 pixelov.\n\n-   Na vytvorenie šesťuholníka opakuj stranu 6-krát s pootočením o 60 stupňov.\n-   Medzi šesťuholníkmi skoč 25 pixelov .\n-   Na kresbu diamantu budeš potrebovať striedať uhly veľké 60 a 120 stupňov.",
+        "courseE_artist_functions92022": "**Výzva:** Vytvor tento obrázok len pomocou limitovaných dostupných blokov. \n\n-   Každý trojuholník má strany dlhé **50 pixelov:**  \n-   Na nakreslenie diamantu musíš striedať otočky veľké **60 stupňov a 120 stupňov**.",
+        "courseE_artist_functionsProj2022": "**Inšpirácia:** Využi všetky svoje vedomosti a vytvor, čo len chceš!  \n\nDokážeš nakresliť takúto ružicu?\n\n![expandable](https://images.code.org/0d79058844e1f038971c303b20b0105f-image-1628782803453.png)"
       }
     }
   }

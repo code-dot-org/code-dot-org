@@ -45,11 +45,11 @@ module Services
 
       script_names = Services::CurriculumPdfs.get_pdf_enabled_scripts.map(&:name)
 
-      refute script_names.include?(in_development.name)
-      refute script_names.include?(pilot.name)
-      assert script_names.include?(beta.name)
-      assert script_names.include?(preview.name)
-      assert script_names.include?(stable.name)
+      refute_includes(script_names, in_development.name)
+      refute_includes(script_names, pilot.name)
+      assert_includes(script_names, beta.name)
+      assert_includes(script_names, preview.name)
+      assert_includes(script_names, stable.name)
     end
 
     test 'will not generate a overview PDF when unit does not have lesson plans' do

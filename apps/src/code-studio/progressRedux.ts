@@ -31,7 +31,7 @@ import {updateBrowserForLevelNavigation} from './browserNavigation';
 import {TestResults} from '@cdo/apps/constants';
 import {nextLevelId} from './progressReduxSelectors';
 
-interface ProgressState {
+export interface ProgressState {
   currentLevelId: string | null;
   currentLessonId: number | undefined;
   deeperLearningCourse: boolean | null;

@@ -2130,17 +2130,22 @@
           "type": "Слайди"
         },
         "animation_tab/csd/2022": {
+          "name": "Вкладка \"Анімація\"",
+          "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
           "type": "Ресурс"
         },
         "introduction_to_sprites/csd/2022": {
+          "url": "https://youtu.be/aUHzpGt9nso",
           "type": "Відео"
         },
         "sprites/csd/2022": {
           "name": "Спрайти",
+          "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
           "type": "Ресурс"
         },
         "the_animation_tab/csd/2022": {
           "name": "Анімація",
+          "url": "https://youtu.be/DQPruYTJ0Fk",
           "type": "Відео"
         },
         "sprites_1/csd/2022": {
@@ -2148,6 +2153,7 @@
           "type": "Слайди"
         },
         "sprite_properties/csd/2022": {
+          "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
           "type": "Ресурс"
         },
         "sprite_properties_1/csd/2022": {
@@ -2173,6 +2179,7 @@
           "type": "Вказівки до діяльності"
         },
         "mini-project_-_captioned_scenes/csd/2022": {
+          "name": "Мініпроєкт - Сцени з субтитрами",
           "type": "Слайди"
         },
         "flipbook_example_-_by_marnic_bos/csd/2022": {
@@ -2257,13 +2264,16 @@
           "type": "Слайди"
         },
         "if-else_statements/csd/2022": {
+          "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
           "type": "Ресурс"
         },
         "if_else_statements/csd/2022": {
           "name": "Якщо/Інші Твердження",
+          "url": "https://youtu.be/6m6FFUJsOzo",
           "type": "Відео"
         },
         "mouse_input/csd/2022": {
+          "name": "Введення даних з миші",
           "type": "Слайди"
         },
         "extra_code_in_challenge_levels_1/csd/2022": {
@@ -2300,6 +2310,7 @@
           "type": "Рубрика"
         },
         "project_-_interactive_card/csd/2022": {
+          "name": "Проєкт - Інтерактивна картка",
           "type": "Слайди"
         },
         "velocity/csd/2022": {
@@ -2317,37 +2328,50 @@
           "type": "Слайди"
         },
         "collision_detection/csd/2022": {
+          "url": "https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/edit",
           "type": "Зразок"
         },
         "collision_detection_1/csd/2022": {
+          "url": "https://drive.google.com/file/d/1xPa35tY4P8GUXKSMp0F6OUTQjcDpMa6M/view?usp=sharing",
           "type": "Ресурс"
         },
         "collision_detection_version_a_/csd/2022": {
+          "name": "Виявлення зіткнення (Версія A)",
+          "url": "https://docs.google.com/document/d/18RKLr5ZwCX5OOpzpnQuekQMpas7JreTcQxL1TyCnv7o/",
           "type": "Вказівки до діяльності"
         },
         "collision_detection_version_b_/csd/2022": {
+          "name": "Виявлення зіткнення (Версія B)",
+          "url": "https://docs.google.com/document/d/1FquQ6g2xpWsJyXf1GFrBM33aL7mxn-htJpG8plRQ9MU/",
           "type": "Вказівки до діяльності"
         },
         "collision_detection_2/csd/2022": {
           "type": "Слайди"
         },
         "mini-project_guide_-_side_scroller/csd/2022": {
+          "name": "Інструкція до мініпроєкту - Сайд-скролер",
+          "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
           "type": "Зразок"
         },
         "side_scroller/csd/2022": {
           "name": "Прокрутка збоку",
+          "url": "https://docs.google.com/document/d/1BcPO2oaU-mX3h2YVLeZtX3gSWcqG1BwR6TLnGjQDWH4/edit",
           "type": "Рубрика"
         },
         "side_scroller_1/csd/2022": {
-          "name": "Прокрутка збоку"
+          "name": "Прокрутка збоку",
+          "url": "https://docs.google.com/document/d/1KyuWeeW72iSOm_NrJDvlsOKLcBqDjRXF1YfgzsF9F_8/edit"
         },
         "mini-project_-_side_scroller/csd/2022": {
+          "name": "Мініпроєкт - гра у стилі сайд-скролер",
           "type": "Слайди"
         },
         "velocity_and_the_counter_pattern/csd/2022": {
+          "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
           "type": "Ресурс"
         },
         "complex_sprite_movement/csd/2022": {
+          "name": "Складні переміщення спрайтів",
           "type": "Слайди"
         },
         "collisions/csd/2022": {
@@ -2355,51 +2379,87 @@
           "type": "Слайди"
         },
         "flyer_game/csd/2022": {
+          "url": "https://docs.google.com/document/d/1NWIeTvJCpHOauxVZGRdDCpsinbXb6Oo_erT5s-_INCY/edit",
           "type": "Рубрика"
         },
         "flyer_game_-_project_guide/csd/2022": {
+          "name": "Гра-літалка - Інструкція до проєкту",
+          "url": "https://docs.google.com/document/d/1dQ_JBSrcrt5MN5zqkghrxWg_YtP2rpn-jGOl0-EHdao/edit?usp=sharing",
           "type": "Зразок"
         },
+        "flyer_game_1/csd/2022": {
+          "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit"
+        },
         "mini-project_-_flyer_game/csd/2022": {
+          "name": "Мініпроєкт: гра \"Літун\"",
           "type": "Слайди"
         },
         "functions/csd/2022": {
           "name": "Функції",
+          "url": "https://youtu.be/3ZfqwCuDZaQ",
           "type": "Відео"
         },
         "functions_1/csd/2022": {
           "name": "Функції",
+          "url": "https://drive.google.com/file/d/1m4GATuAOfc3cL-kgb5Bmc4yciCNyxgVH/view?usp=sharing",
           "type": "Ресурс"
         },
         "functions_4/csd/2022": {
           "name": "Функції",
           "type": "Слайди"
         },
+        "defender_game/csd/2022": {
+          "name": "Гра \"Захисник\"",
+          "url": "https://docs.google.com/document/d/1vazgDOA8UtbbTfDLXC45DHVINs0LCKCOuJIc7tnFytY/edit"
+        },
         "the_game_design_process/csd/2022": {
+          "name": "Процес розробки ігор",
           "type": "Слайди"
         },
         "planning_your_platform_game/csd/2022": {
+          "name": "Планування гри-платформера",
+          "url": "https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit",
           "type": "Зразок"
         },
         "planning_your_platform_game_1/csd/2022": {
+          "name": "Планування гри-платформера",
+          "url": "https://docs.google.com/document/d/1JcjgqryqRKeyxieHrJlNlFQnSBybBjPIp3zolO3iJAE/edit",
           "type": "Вказівки до діяльності"
         },
         "using_the_game_design_process/csd/2022": {
+          "name": "Використання процесу розробки ігор",
           "type": "Слайди"
         },
         "make_your_own_game/csd/2022": {
+          "name": "Створіть власну гру ",
+          "url": "https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing",
           "type": "Зразок"
         },
         "make_your_own_game_-_sample_marked_rubrics/csd/2022": {
+          "name": "Створіть власну гру - приклади критеріїв оцінювання",
+          "url": "https://docs.google.com/document/d/1G3GfGkUQtzeYbawGwK5JAfj5WQD1SoqJYM5igMYmvm8/edit",
           "type": "Зразок"
         },
+        "make_your_own_game_-_student_checklist/csd/2022": {
+          "name": "Створіть власну гру - Контрольний список для учнів",
+          "url": "https://docs.google.com/document/d/1jb78pFMe-X5YOtTEXQY2yLJ97mdOLPFTP7fmb3g1Or8/edit"
+        },
+        "make_your_own_game_1/csd/2022": {
+          "name": "Створіть власну гру",
+          "url": "https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/edit?usp=sharing"
+        },
         "make_your_own_game_2/csd/2022": {
+          "name": "Створіть власну гру",
+          "url": "https://docs.google.com/document/d/1s2Q7SMhJCogVU5mht16UIzZLT-aAVz0gw5JRTuW9Vq0/edit",
           "type": "Рецензування"
         },
         "make_your_own_game_3/csd/2022": {
+          "name": "Створіть власну гру",
+          "url": "https://docs.google.com/document/d/1-gMdyPFGe5Z0kCmQ2sNgLAf8ivZ-edXYJBhsSjqprEg/edit",
           "type": "Рубрика"
         },
         "project_-_design_a_game/csd/2022": {
+          "name": "Проєкт - Розробка гри",
           "type": "Слайди"
         },
         "all_code/csd/2022": {
@@ -7285,20 +7345,26 @@
           "type": "Ресурс"
         },
         "introduction_to_sprites/csd/2021": {
+          "url": "https://youtu.be/aUHzpGt9nso",
           "type": "Відео"
         },
         "the_animation_tab/csd/2021": {
           "name": "Анімація",
+          "url": "https://youtu.be/DQPruYTJ0Fk",
           "type": "Відео"
         },
         "animation_tab/csd/2021": {
+          "name": "Вкладка \"Анімація\"",
+          "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
           "type": "Ресурс"
         },
         "sprites_1/csd/2021": {
           "name": "Спрайти",
+          "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
           "type": "Ресурс"
         },
         "sprite_properties/csd/2021": {
+          "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
           "type": "Ресурс"
         },
         "mini-project-captioned-scenes-2020/csd/2021": {
@@ -7381,10 +7447,12 @@
           "type": "Ресурс"
         },
         "if-else_statements_-_map_level_pdf_/csd/2021": {
+          "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
           "type": "Ресурс"
         },
         "if_else_statements/csd/2021": {
           "name": "Якщо/Інші Твердження",
+          "url": "https://youtu.be/6m6FFUJsOzo",
           "type": "Відео"
         },
         "interactive-card-exemplar-2020/csd/2021": {
@@ -7431,58 +7499,103 @@
           "type": "Ресурс"
         },
         "collision-detection-exemplar-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/edit",
           "type": "Зразок"
         },
         "collision_detection_version_b_/csd/2021": {
+          "name": "Виявлення зіткнення (Версія B)",
+          "url": "https://docs.google.com/document/d/1FquQ6g2xpWsJyXf1GFrBM33aL7mxn-htJpG8plRQ9MU/",
           "type": "Вказівки до діяльності"
         },
         "collision_detection_version_a_/csd/2021": {
+          "name": "Виявлення зіткнення (Версія A)",
+          "url": "https://docs.google.com/document/d/18RKLr5ZwCX5OOpzpnQuekQMpas7JreTcQxL1TyCnv7o/",
           "type": "Вказівки до діяльності"
         },
         "collision_detection/csd/2021": {
+          "url": "https://drive.google.com/file/d/1xPa35tY4P8GUXKSMp0F6OUTQjcDpMa6M/view?usp=sharing",
           "type": "Ресурс"
         },
         "mini-project-guide-side-scroller-exemplar-2020/csd/2021": {
+          "name": "Інструкція до мініпроєкту - Сайд-скролер",
+          "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
           "type": "Зразок"
         },
         "side-scroller-1/csd/2021": {
           "name": "Прокрутка збоку",
+          "url": "https://docs.google.com/document/d/1BcPO2oaU-mX3h2YVLeZtX3gSWcqG1BwR6TLnGjQDWH4/edit",
           "type": "Рубрика"
         },
         "side-scroller/csd/2021": {
-          "name": "Прокрутка збоку"
+          "name": "Прокрутка збоку",
+          "url": "https://docs.google.com/document/d/1KyuWeeW72iSOm_NrJDvlsOKLcBqDjRXF1YfgzsF9F_8/edit"
         },
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
           "type": "Ресурс"
         },
         "flyer-game-project-guide-exemplar/csd/2021": {
+          "name": "Гра-літалка - Інструкція до проєкту",
+          "url": "https://docs.google.com/document/d/1dQ_JBSrcrt5MN5zqkghrxWg_YtP2rpn-jGOl0-EHdao/edit?usp=sharing",
           "type": "Зразок"
         },
         "flyer-game-1/csd/2021": {
+          "url": "https://docs.google.com/document/d/1NWIeTvJCpHOauxVZGRdDCpsinbXb6Oo_erT5s-_INCY/edit",
           "type": "Рубрика"
+        },
+        "flyer-game/csd/2021": {
+          "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "Функції",
+          "url": "https://youtu.be/3ZfqwCuDZaQ",
           "type": "Відео"
         },
         "functions_1/csd/2021": {
           "name": "Функції",
+          "url": "https://drive.google.com/file/d/1m4GATuAOfc3cL-kgb5Bmc4yciCNyxgVH/view?usp=sharing",
           "type": "Ресурс"
         },
+        "project-guide-defender-game/csd/2021": {
+          "name": "Гра \"Захисник\"",
+          "url": "https://docs.google.com/document/d/1vazgDOA8UtbbTfDLXC45DHVINs0LCKCOuJIc7tnFytY/edit"
+        },
         "planning-your-platform-game-exemplar-2020/csd/2021": {
+          "name": "Планування гри-платформера",
+          "url": "https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit",
           "type": "Зразок"
         },
+        "platform-game-project-guide/csd/2021": {
+          "name": "Планування гри-платформера",
+          "url": "https://docs.google.com/document/d/1JcjgqryqRKeyxieHrJlNlFQnSBybBjPIp3zolO3iJAE/edit"
+        },
         "make-your-own-game-exemplar-2020/csd/2021": {
+          "name": "Створіть власну гру ",
+          "url": "https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing",
           "type": "Зразок"
         },
         "make-your-own-game-sample-marked-rubrics/csd/2021": {
+          "name": "Створіть власну гру - приклади критеріїв оцінювання",
+          "url": "https://docs.google.com/document/d/1G3GfGkUQtzeYbawGwK5JAfj5WQD1SoqJYM5igMYmvm8/edit",
           "type": "Зразок"
         },
+        "make-your-own-game/csd/2021": {
+          "name": "Створіть власну гру",
+          "url": "https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/edit?usp=sharing"
+        },
         "make-your-own-game-1-2-3/csd/2021": {
+          "name": "Створіть власну гру",
+          "url": "https://docs.google.com/document/d/1s2Q7SMhJCogVU5mht16UIzZLT-aAVz0gw5JRTuW9Vq0/edit",
           "type": "Рецензування"
         },
         "make_your_own_game/csd/2021": {
+          "name": "Створіть власну гру",
+          "url": "https://docs.google.com/document/d/1-gMdyPFGe5Z0kCmQ2sNgLAf8ivZ-edXYJBhsSjqprEg/edit",
           "type": "Рубрика"
+        },
+        "make_your_own_game_-_student_checklist/csd/2021": {
+          "name": "Створіть власну гру - Контрольний список для учнів",
+          "url": "https://docs.google.com/document/d/1jb78pFMe-X5YOtTEXQY2yLJ97mdOLPFTP7fmb3g1Or8/edit"
         },
         "all_resources/csd/2021": {
           "name": "Розділ 1 Ресурси",

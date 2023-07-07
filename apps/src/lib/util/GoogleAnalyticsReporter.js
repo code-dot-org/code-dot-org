@@ -36,9 +36,26 @@ class GoogleAnalyticsReporter {
     this.initializeGoogleAnalytics();
 
     this.addEventListener();
-
+    this.initializeTagManager(
+      window,
+      document,
+      'script',
+      'dataLayer',
+      'GTM-TZZBRK5'
+    );
     window.trackEvent = this.trackEvent;
     window.readCookie = this.readCookie;
+  }
+
+  initializeTagManager(w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+    const f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l !== 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
   }
 
   /**
@@ -78,8 +95,17 @@ class GoogleAnalyticsReporter {
     if (this.isGoogleAnalytics4Enabled) {
       gtag('js', new Date());
       window.dataLayer = window.dataLayer || [];
-      gtag('config', this.googleAnalyticsGTag);
+      const {userAnalyticsDimensions = {}} = window;
+      this.initializeCustomDimensions(userAnalyticsDimensions);
+      gtag('config', this.googleAnalyticsGTag, userAnalyticsDimensions);
     }
+  }
+
+  initializeCustomDimensions(userAnalyticsDimensions) {
+    Object.entries(userAnalyticsDimensions).forEach(([dimension, value]) => {
+      this.setCustomDimension(dimension, value);
+    });
+    this.setCustomDimension('anonymizeIp', true);
   }
 
   addEventListener() {
