@@ -1,5 +1,6 @@
 import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
+import {within} from '@testing-library/dom';
 import {pull} from 'lodash';
 import {expect} from '../../../util/reconfiguredChai';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
@@ -55,7 +56,7 @@ describe('CurriculumCatalogCard', () => {
     store = getStore();
     defaultProps = {
       courseDisplayName: 'AI for Oceans',
-      courseDisplayNameWithYear: 'AI for Oceans (2022)',
+      courseDisplayNameWithLatestYear: 'AI for Oceans (2022)',
       duration: 'quarter',
       gradesArray: ['4', '5', '6', '7', '8'],
       isEnglish: true,
@@ -283,8 +284,12 @@ describe('CurriculumCatalogCard', () => {
     );
     fireEvent.click(assignButton);
     sections.forEach(section => screen.getByText(section.name));
-    screen.getByText('The most recent recommended version', {exact: false});
-    screen.getByText(defaultProps.courseDisplayNameWithYear, {exact: false});
+    screen.getByText(defaultProps.courseDisplayNameWithLatestYear, {
+      exact: false,
+    });
+    screen.getByText('The most recent recommended version', {
+      exact: false,
+    });
   });
 
   it('clicking Assign button as a teacher without sections shows dialog to create section', () => {

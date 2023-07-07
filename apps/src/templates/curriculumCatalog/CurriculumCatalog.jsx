@@ -275,7 +275,9 @@ const CurriculumCatalog = ({
                 <CurriculumCatalogCard
                   key={key}
                   courseDisplayName={display_name}
-                  courseDisplayNameWithYear={display_name_with_latest_year}
+                  courseDisplayNameWithLatestYear={
+                    display_name_with_latest_year
+                  }
                   imageSrc={image || undefined}
                   duration={duration}
                   gradesArray={grade_levels.split(',')}
