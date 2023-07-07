@@ -45,7 +45,7 @@ const CheckboxDropdown = ({
             title={i18n.filterCheckIconTitle({filter_label: label})}
           />
         )}
-        <Typography semanticTag="span" visualAppearance="body-one">
+        <Typography semanticTag="span" visualAppearance="body-two">
           {label}
         </Typography>
         <FontAwesome id={'chevron-down-icon'} icon={'chevron-down'} />

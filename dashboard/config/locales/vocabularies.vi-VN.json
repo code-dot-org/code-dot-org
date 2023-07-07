@@ -826,6 +826,9 @@
           "word": "Nhị phân",
           "definition": "Một cách biểu diễn thông tin chỉ sử dụng hai tùy chọn."
         },
+        "computer/csd/2022": {
+          "word": "Máy tính"
+        },
         "input/csd/2022": {
           "word": "Đầu vào"
         },
@@ -1469,6 +1472,9 @@
         },
         "function/csd/2021": {
           "word": "Hàm"
+        },
+        "computer/csd/2021": {
+          "word": "Máy tính"
         },
         "input/csd/2021": {
           "word": "Đầu vào"

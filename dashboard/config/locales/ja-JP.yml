@@ -200,6 +200,8 @@ ja:
       (%{privacy_policy_url})
     parent_account_email_label: 親/保護者のメール
     us_state: 都道府県
+    us_state_dropdown_options:
+      other: ここに記載されていない場所に住んでいます
   school_info:
     title: 学校名(任意)
     school_country: 学校のある国
@@ -268,6 +270,9 @@ ja:
   parent_mailer:
     student_associated_subject: Code.org のログイン情報
     parent_email_added_subject: Code.org へようこそ!
+    parent_permission_request_subject: Code.orgへのアクセスには保護者の同意が必要です。
+    parent_permission_reminder_subject: 注意：お子様のCode.orgへのアクセスには保護者の同意が必要です。
+    parent_permission_confirmation_subject: お子様のCode.orgへのアクセスを承認していただき、ありがとうございます！
   teacher_mailer:
     new_teacher_subject: Code.org へようこそ!
     delete_teacher_subject: 'Code.org通知: アカウントが削除されました'
@@ -913,6 +918,8 @@ ja:
       ※投稿したあとで評価の再編集はできません。
     submit-complete-title: 評価を提出します。
     submit-complete-body: 評価の提出後は編集はできません。良いですか?
+  level_summary:
+    correct_answer: 正解
   match:
     wrong_title: うまく解決できていません。
     wrong_body: うまく解決できていません。もう一度やってみてください。
@@ -1193,17 +1200,33 @@ ja:
         not_listed: 希望の用語がリストにありません
         none: 答えたくない
       school_country:
+        australia: オーストラリア
         barbados: バルバドス
         belize: ベリーズ
+        brazil: ブラジル
         canada: カナダ
         chile: チリ
         colombia: コロンビア
+        dominican_republic: ドミニカ共和国
+        india: インド
+        indonesia: インドネシア
         israel: イスラエル
+        jamaica: ジャマイカ
+        kenya: ケニア
         malaysia: マレーシア
+        maldives: モルディブ
         mexico: メキシコ
+        mongolia: モンゴル
+        new_zealand: ニュージーランド
         paraguay: パラグアイ
+        portugal: ポルトガル
+        slovakia: スロバキア
+        south_korea: 韓国
+        spain: スペイン
         thailand: タイ
+        trinidad_and_tobago: トリニダード・トバゴ
         uzbekistan: ウズベキスタン
+        vietnam: ベトナム
       ages:
         ages_under_6: 6歳未満
         ages_7_8: 7-8歳

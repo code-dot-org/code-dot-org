@@ -1040,7 +1040,7 @@ uk:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
-        text: у {N} {UNIT}
+        text: через {N} {UNIT}
         options:
           UNIT:
             '"seconds"': секунди
@@ -1094,7 +1094,7 @@ uk:
       gamelab_destroy:
         text: видалити {THIS}
       gamelab_draggable:
-        text: будучи перетягуваним
+        text: при перетягуванні
       gamelab_edgesDisplace:
         text: краї блокують рух {SPRITE}
       gamelab_everyInterval:
@@ -1375,7 +1375,7 @@ uk:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): рух за стрілками
             new Behavior(driving_with_arrow_keys, []): рух за стрілками
-            draggable(): будучи перетягуваним
+            draggable(): при перетягуванні
       gamelab_pointInDirection:
         text: Точки {SPRITE} {DIRECTION}
         options:
@@ -1487,7 +1487,7 @@ uk:
       gamelab_showTitleScreen:
         text: Показати титульний екран {BREAK} Заголовок {TITLE} Текст {SUBTITLE}
       gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} натиснуто"
+        text: "{CONDITION} {SPRITE} клацнули"
         options:
           CONDITION:
             '"when"': коли

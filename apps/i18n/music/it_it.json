@@ -62,5 +62,6 @@
   "startOver": "Ripristina",
   "upload": "Carica",
   "panelHeaderInstructions": "Istruzioni",
-  "panelHeaderWorkspace": "Area di lavoro: "
+  "panelHeaderWorkspace": "Area di lavoro: ",
+  "continue": "Prosegui"
 }

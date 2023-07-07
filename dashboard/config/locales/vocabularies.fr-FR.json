@@ -822,6 +822,9 @@
           "word": "Binaire",
           "definition": "Une manière de représenter l'information qui n'utilise que deux options."
         },
+        "computer/csd/2022": {
+          "word": "Ordinateur"
+        },
         "input/csd/2022": {
           "word": "Entrée"
         },
@@ -1476,6 +1479,9 @@
         },
         "function/csd/2021": {
           "word": "Fonction"
+        },
+        "computer/csd/2021": {
+          "word": "Ordinateur"
         },
         "input/csd/2021": {
           "word": "Entrée"

@@ -845,6 +845,9 @@
           "word": "二进制",
           "definition": "一种只使用两个选项来表示信息的方法。"
         },
+        "computer/csd/2022": {
+          "word": "计算机"
+        },
         "input/csd/2022": {
           "word": "输入"
         },
@@ -1493,6 +1496,9 @@
         },
         "function/csd/2021": {
           "word": "函数"
+        },
+        "computer/csd/2021": {
+          "word": "计算机"
         },
         "input/csd/2021": {
           "word": "输入"
