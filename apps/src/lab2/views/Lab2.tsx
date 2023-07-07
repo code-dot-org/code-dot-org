@@ -11,7 +11,7 @@ import {getStore} from '@cdo/apps/redux';
 import {levelsForLessonId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 import {LevelWithProgress} from '@cdo/apps/types/progressTypes';
-import {getStandaloneProjectId} from '@cdo/apps/labs/projects/utils';
+import {getStandaloneProjectId} from '@cdo/apps/lab2/projects/utils';
 import {logError} from '@cdo/apps/music/utils/MusicMetrics';
 import Lab2Wrapper from './Lab2Wrapper';
 import ProjectContainer from '../projects/ProjectContainer';

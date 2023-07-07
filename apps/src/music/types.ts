@@ -4,7 +4,7 @@
 // so this approach is still being investigated. For now, this type
 // is an object whose keys are all functions which return strings,
 
-import {ProjectLevelData} from '../labs/types';
+import {ProjectLevelData} from '../lab2/types';
 
 // matching what we expect for a locale object.
 export type MusicLocale = {

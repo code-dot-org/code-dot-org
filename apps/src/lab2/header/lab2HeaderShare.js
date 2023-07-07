@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import LabRegistry from '../LabRegistry';
+import Lab2Registry from '../Lab2Registry';
 import {getStore} from '@cdo/apps/redux';
-import Lab2ShareDialog from './Lab2ShareDialog';
+import Lab2ShareDialog from '../views/Lab2ShareDialog';
 import {showShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 
 const PROJECT_SHARE_DIALOG_ID = 'project-share-dialog';
@@ -13,7 +13,7 @@ const PROJECT_SHARE_DIALOG_ID = 'project-share-dialog';
  * @param {string} shareUrl - The URL of the project to share.
  */
 export function shareLab2Project(shareUrl) {
-  const projectManager = LabRegistry.getInstance().getProjectManager();
+  const projectManager = Lab2Registry.getInstance().getProjectManager();
   if (!projectManager) {
     return null;
   }

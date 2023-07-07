@@ -52,7 +52,7 @@ namespace :test do
 
   timed_task_with_logging :eyes_ui do
     ChatClient.log 'Running <b>dashboard</b> UI visual tests...'
-    eyes_features = `find #{dashboard_dir('test/ui/features')} -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
+    eyes_features = `cd #{dashboard_dir('test/ui')} && find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
     failed_browser_count = RakeUtils.system_with_chat_logging(
       "cd #{dashboard_dir('test/ui')} &&",
       'bundle', 'exec', './runner.rb',
