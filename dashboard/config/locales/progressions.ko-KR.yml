@@ -166,7 +166,7 @@ ko:
       'Exploration: Rikki''s Poster': '탐구: 리키의 포스터'
       'Exploration: Sample Apps': '탐구: 샘플 앱'
       'Exploration: Sample Programs': '탐구: 샘플 프로그램'
-      'Exploration: Sample Project': '탐구: 샘플 프로젝트'
+      'Exploration: Sample Project': '탐구: 예제 프로젝트'
       Explore HTML: HTML 배우자
       Exploring CS in Entertainment: 엔터테인먼트에서 CS 탐구
       Exploring more CSS: CSS 추가 탐색
@@ -235,7 +235,7 @@ ko:
       LED Apps: LED 어플
       Layout with CSS: CSS 레이아웃
       Learning from Simulations: 시뮬레이션으로 학습
-      Lesson Extras: Lesson Extras
+      Lesson Extras: 추가 활동
       Level Overview: 레벨 개요
       Levels: 레벨
       Light Show: 라이트 쇼
@@ -273,7 +273,7 @@ ko:
       'Mini-Project: Swimming Fish (continued)': '미니 프로젝트: 수영하는 물고기 (계속하기)'
       'Mini-Project: User Input Programs': 챗봇 만들기
       'Mini-Project: Virtual Pet': '미니 프로젝트: 가상 애완동물'
-      'Mini-project: Chase Game': '미니 프로젝트: 따라잡기 게임'
+      'Mini-project: Chase Game': '미니 프로젝트: 체이스 게임'
       'Mini-project: Flappy Game': '미니 프로젝트: 플래피 게임'
       'Mini-project: Interactive Poster': '미니 프로젝트: 인터랙티브 포스터'
       'Mini-project: Jorge the Dog': '미니 프로젝트: 강아지 호르헤 '
@@ -387,7 +387,7 @@ ko:
       Shoe Recommender: 구두 추천
       Side Scroller: 사이드 스크롤러
       Simple Circuits: 단순 회로
-      Skill Building: 실력 향상
+      Skill Building: 실력 쌓기
       Skill-Building: 실력 향상
       Sliders: 슬라이더
       Smart Bike - Blinkers: 스마트 자전거 - 블링커
@@ -437,20 +437,20 @@ ko:
       Variables: 변수
       Velocity: 속도
       Velocity and the Counter Pattern: 속도 및 카운터 패턴
-      Video: 비디오
+      Video: 동영상
       Video - Encryption and Public Keys: 동영상 - 암호화 및 공개 키
       'Video - Maze Intro: Programming with Blocks': '동영상 - 미로 소개: 블록으로 프로그래밍'
-      'Video:  Debugging with the Step Button': '동영상: 스텝버튼으로 디버깅'
+      'Video:  Debugging with the Step Button': '동영상: 단계별로 디버깅'
       'Video:  Minecraft - The Agent': '동영상: 마인크래프트 - 에이전트'
       'Video:  Text  and Prompts': '동영상: 텍스트 및 프롬프트'
       'Video: "If/Else"': '동영상: "If/Else"'
       'Video: AI: What is Machine Learning?': '동영상: AI: 머신 러닝이란?'
       'Video: Amazon and Data': '동영상: 아마존과 데이터'
-      'Video: Artist Intro with JR Hildebrand': '동영상: 아티스트 인트로 JR 힐데브랜드'
+      'Video: Artist Intro with JR Hildebrand': '동영상: JR 힐데브란트와 함께하는 아티스트 소개'
       'Video: Artist Intro with JR Hildebrande': '동영상: 아티스트 인트로 JR 힐데브랜드'
       'Video: CS Matters': '동영상: CS 문제'
       'Video: Circuits and Logic': '동영상: 회로 및 로직'
-      'Video: Code Your Own Flappy Game': '동영상: 자신만의 플래피 게임을 만들어보세요.'
+      'Video: Code Your Own Flappy Game': '동영상: 나만의 플래피 게임 코드'
       'Video: Conditionals: If Statements': '동영상: 조건: If 문'
       'Video: Conditionals: If and If/Else Statements': '동영상: 조건: If 문 및 If/Else 문'
       'Video: Dance Party Events': '동영상: 댄스 파티 이벤트'
@@ -513,11 +513,11 @@ ko:
       'Video: Pair Programming ': '동영상: 페어 프로그래밍 '
       'Video: Problem Solving Process': '영상: 문제 해결 과정'
       'Video: Programming with Blocks': '동영상: 블록으로 프로그래밍'
-      'Video: Programming with Rey and BB-8': '동영상: 레이와 BB-8로 프로그래밍'
+      'Video: Programming with Rey and BB-8': '동영상: 레이와 BB-8이 함께하는 프로그래밍'
       'Video: Properties': '동영상: 속성'
       'Video: Publishing Your Website': '동영상: 웹사이트 출판'
       'Video: Repeat Blocks': '동영상: 반복 블록'
-      'Video: Repeat Blocks with BB-8': '동영상: 반복 블록과 BB-8'
+      'Video: Repeat Blocks with BB-8': '동영상: BB-8과 함께하는 반복 블록'
       'Video: Repeat Blocks with the Artist': '동영상: 반복 블록과 아티스트'
       'Video: Repeat Until Blocks': '동영상: Until 블록 반복'
       'Video: Repeat Until Statements': '동영상: Until 문 반복'
@@ -528,7 +528,7 @@ ko:
       'Video: The Artist in Code Studio': '동영상: 코드 스튜디오 아티스트'
       'Video: The Big Event - Unplugged Activity': '동영상: 빅 이벤트 - 언플러그드 활동'
       'Video: The Collector': '동영상: 수집가'
-      'Video: The Harvester': '동영상: 수확인'
+      'Video: The Harvester': '동영상: 수확하는 사람'
       'Video: Training Data & Bias': '동영상: 교육 데이터 및 편견'
       'Video: Training Data and Bias': '동영상: 교육 데이터 및 편견'
       'Video: Unplugged Variables in Envelopes': '동영상: 언플러그드 봉투 변수'

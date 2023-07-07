@@ -38,7 +38,7 @@
           "name": "លំដាប់"
         },
         "k5-onlinepd-2019/Loops": {
-          "name": "រង្វិល​ជុំ"
+          "name": "ប្រតិបត្តិដដែលៗ"
         },
         "k5-onlinepd-2019/Events": {
           "name": "ព្រឹត្តិការណ៍"
@@ -53,7 +53,7 @@
           "name": "អ​ថេរ"
         },
         "k5-onlinepd-2019/Sprite Lab": {
-          "name": "Sprite Lab"
+          "name": "មន្ទីរពិសោធន៍ Sprite "
         },
         "K5-OnlinePD/Computer Science Fundamentals": {
           "name": "មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ"
@@ -170,6 +170,9 @@
         "express-2022/Programming with Angry Birds": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
         },
+        "express-2022/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
+        },
         "express-2022/Swimming Fish in Sprite Lab": {
           "name": "ត្រីហែលទឹកនៅក្នុង មន្ទីរពិសោធន៍"
         },
@@ -210,6 +213,7 @@
           "student_overview": "ប៊ូសៗ នៅក្នុងល្បែងរូបផ្គុំនេះ សិស្សនឹងអាចអាចធ្វើការនាំផ្លូវឃ្មុំទៅកាន់ទឹកដេលមានរសជាតិផ្អែម ហើយនិងទឹកឃ្មុំ ដោយការប្រើប្រាស់ \"for loops\"! "
         },
         "express-2022/For Loops with Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ",
           "student_overview": "ត្រៀមខ្លួនរួចជាស្រេចដើម្បីស្នាដៃឯករបស់អ្នកបន្តទៀត។​ អ្នកនឹងប្រើ \"for​​ loops\" ដដែលៗ ដើម្បីបង្កើតជា រូបភាពJaw Dropping "
         },
         "express-2022/End of Course Project": {
@@ -288,6 +292,9 @@
         },
         "coursec-2022/Programming with Angry Birds": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+        },
+        "coursec-2022/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
         },
         "coursec-2022/Loops with Rey and BB-8": {
           "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
@@ -395,6 +402,9 @@
         "coursef-2018/Conditionals with Cards": {
           "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
         },
+        "coursef-2018/For Loops in Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ"
+        },
         "express-2018/Debugging in Maze": {
           "name": "ការបំបាត់កំហុសជាមួយ Scrat"
         },
@@ -409,6 +419,9 @@
         },
         "express-2018/Events: The Big Event": {
           "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "express-2018/For Loops in Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ"
         },
         "express-2018/Internet": {
           "name": "អ៊ីនធឺណិត"
@@ -430,6 +443,9 @@
         },
         "coursec-2018/Programming in Maze": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+        },
+        "coursec-2018/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
         },
         "coursec-2018/Loops with Rey and BB-8": {
           "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
@@ -539,6 +555,9 @@
         "coursed-2019/Dance Party": {
           "name": "Dance Party"
         },
+        "coursef-2019/For Loops in Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ"
+        },
         "coursef-2019/Internet": {
           "name": "អ៊ីនធឺណិត"
         },
@@ -566,6 +585,9 @@
         "express-2019/Until Loops in Maze": {
           "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
         },
+        "express-2019/For Loops in Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ"
+        },
         "express-2019/Learning Sprites with Sprite Lab": {
           "name": "ត្រីហែលទឹកនៅក្នុង មន្ទីរពិសោធន៍"
         },
@@ -574,6 +596,9 @@
         },
         "coursec-2019/Programming in Maze": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+        },
+        "coursec-2019/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
         },
         "coursec-2019/Loops with Rey and BB-8": {
           "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
@@ -739,6 +764,9 @@
         },
         "coursec-2017/Building a Foundation": {
           "name": "ការជម្នះ ៖ ការកសាងគ្រឹះ"
+        },
+        "coursec-2017/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
         },
         "coursec-2017/Loops with Rey and BB-8": {
           "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
@@ -927,7 +955,7 @@
           "name": "បន្ទប់វេប"
         },
         "allthethings/Sprite Lab": {
-          "name": "Sprite Lab"
+          "name": "មន្ទីរពិសោធន៍ Sprite "
         },
         "allthethings/lesson-48": {
           "name": "កំណាព្យ"
@@ -954,6 +982,7 @@
           "student_overview": "ប៊ូសៗ នៅក្នុងល្បែងរូបផ្គុំនេះ សិស្សនឹងអាចអាចធ្វើការនាំផ្លូវឃ្មុំទៅកាន់ទឹកដេលមានរសជាតិផ្អែម ហើយនិងទឹកឃ្មុំ ដោយការប្រើប្រាស់ \"for loops\"! "
         },
         "coursef-2021/For Loops in Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ",
           "student_overview": "ត្រៀមខ្លួនរួចជាស្រេចដើម្បីស្នាដៃឯករបស់អ្នកបន្តទៀត។​ អ្នកនឹងប្រើ \"for​​ loops\" ដដែលៗ ដើម្បីបង្កើតជា រូបភាពJaw Dropping "
         },
         "coursef-2021/Internet": {
@@ -1021,6 +1050,9 @@
         "coursec-2021/Programming in Maze": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
         },
+        "coursec-2021/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
+        },
         "coursec-2021/Loops with Rey and BB-8": {
           "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
         },
@@ -1081,6 +1113,9 @@
         "express-2021/Programming with Angry Birds": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
         },
+        "express-2021/Debugging with Scrat": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
+        },
         "express-2021/Swimming Fish in Sprite Lab": {
           "name": "ត្រីហែលទឹកនៅក្នុង មន្ទីរពិសោធន៍"
         },
@@ -1121,6 +1156,7 @@
           "student_overview": "ប៊ូសៗ នៅក្នុងល្បែងរូបផ្គុំនេះ សិស្សនឹងអាចអាចធ្វើការនាំផ្លូវឃ្មុំទៅកាន់ទឹកដេលមានរសជាតិផ្អែម ហើយនិងទឹកឃ្មុំ ដោយការប្រើប្រាស់ \"for loops\"! "
         },
         "express-2021/For Loops with Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ",
           "student_overview": "ត្រៀមខ្លួនរួចជាស្រេចដើម្បីស្នាដៃឯករបស់អ្នកបន្តទៀត។​ អ្នកនឹងប្រើ \"for​​ loops\" ដដែលៗ ដើម្បីបង្កើតជា រូបភាពJaw Dropping "
         },
         "express-2021/End of Course Project": {
@@ -1260,6 +1296,9 @@
         "express-2020/Until Loops in Maze": {
           "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
         },
+        "express-2020/For Loops with Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ"
+        },
         "express-2020/Swimming Fish in Sprite Lab": {
           "name": "ត្រីហែលទឹកនៅក្នុង មន្ទីរពិសោធន៍"
         },
@@ -1302,6 +1341,9 @@
         "coursec-2020/Programming in Maze": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
         },
+        "coursec-2020/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
+        },
         "coursec-2020/Loops with Rey and BB-8": {
           "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
         },
@@ -1340,6 +1382,9 @@
         },
         "coursef-2020/Internet": {
           "name": "អ៊ីនធឺណិត"
+        },
+        "coursef-2020/For Loops in Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ"
         },
         "coursef-2020/End of Course Project": {
           "name": "ចុងបញ្ចប់នៃគម្រោង"

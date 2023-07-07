@@ -1,34 +1,17 @@
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {BlockTypes} from './blockTypes';
-import {MUSIC_BLOCKS} from './musicBlocks';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import {getToolbox} from './toolbox';
-import FieldSounds from './FieldSounds';
-import FieldPattern from './FieldPattern';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
 import {
-  DEFAULT_TRACK_NAME_EXTENSION,
-  DOCS_BASE_URL,
-  DYNAMIC_TRIGGER_EXTENSION,
-  FIELD_CHORD_TYPE,
-  FIELD_PATTERN_TYPE,
-  FIELD_SOUNDS_TYPE,
   FIELD_TRIGGER_START_NAME,
-  PLAY_MULTI_MUTATOR,
   TriggerStart,
   TRIGGER_FIELD,
 } from './constants';
-import {
-  dynamicTriggerExtension,
-  getDefaultTrackNameExtension,
-  playMultiMutator,
-} from './extensions';
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
-import FieldChord from './FieldChord';
 import {Renderers} from '@cdo/apps/blockly/constants';
-import musicI18n from '../locale';
 import {logError, logWarning} from '../utils/MusicMetrics';
 
 /**
@@ -51,37 +34,14 @@ export default class MusicBlocklyWorkspace {
    * Initialize the Blockly workspace
    * @param {*} container HTML element to inject the workspace into
    * @param {*} onBlockSpaceChange callback fired when any block space change events occur
-   * @param {*} player reference to a {@link MusicPlayer}
    * @param {*} isReadOnlyWorkspace is the workspace readonly
    */
-  init(container, onBlockSpaceChange, player, isReadOnlyWorkspace) {
-    this.container = container;
-
-    Blockly.Extensions.register(
-      DYNAMIC_TRIGGER_EXTENSION,
-      dynamicTriggerExtension
-    );
-
-    Blockly.Extensions.register(
-      DEFAULT_TRACK_NAME_EXTENSION,
-      getDefaultTrackNameExtension(player)
-    );
-
-    Blockly.Extensions.registerMutator(PLAY_MULTI_MUTATOR, playMultiMutator);
-
-    for (let blockType of Object.keys(MUSIC_BLOCKS)) {
-      Blockly.Blocks[blockType] = {
-        init: function () {
-          this.jsonInit(MUSIC_BLOCKS[blockType].definition);
-        },
-      };
-
-      Blockly.JavaScript[blockType] = MUSIC_BLOCKS[blockType].generator;
+  init(container, onBlockSpaceChange, isReadOnlyWorkspace) {
+    if (this.workspace) {
+      this.workspace.dispose();
     }
 
-    Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
-    Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);
-    Blockly.fieldRegistry.register(FIELD_CHORD_TYPE, FieldChord);
+    this.container = container;
 
     this.workspace = Blockly.inject(container, {
       toolbox: getToolbox(),
@@ -97,30 +57,9 @@ export default class MusicBlocklyWorkspace {
       readOnly: isReadOnlyWorkspace,
     });
 
-    // Remove two default entries in the toolbox's Functions category that
-    // we don't want.
-    delete Blockly.Blocks.procedures_defreturn;
-    delete Blockly.Blocks.procedures_ifreturn;
-
-    // Rename the new function placeholder text for Music Lab specifically.
-    Blockly.Msg['PROCEDURES_DEFNORETURN_PROCEDURE'] =
-      musicI18n.blockly_functionNamePlaceholder();
-
-    // Wrap the create function block's init function in a function that
-    // sets the block's help URL to the appropriate entry in the Music Lab
-    // docs, and calls the original init function if present.
-    const functionBlock = Blockly.Blocks.procedures_defnoreturn;
-    functionBlock.initOriginal = functionBlock.init;
-    functionBlock.init = function () {
-      this.setHelpUrl(DOCS_BASE_URL + 'create_function');
-      this.initOriginal?.();
-    };
-
-    Blockly.setInfiniteLoopTrap();
-
     this.resizeBlockly();
 
-    Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
+    this.workspace.addChangeListener(onBlockSpaceChange);
 
     this.workspace.registerButtonCallback('createVariableHandler', button => {
       Blockly.Variables.createVariableButtonHandler(

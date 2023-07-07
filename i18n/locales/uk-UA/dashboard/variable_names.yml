@@ -4,7 +4,7 @@ uk:
       Blue: Синя
       Green: Зелена
       Red: Червона
-      actor: персонаж
+      actor: виконавець
       age: вік
       answer: відповідь
       binary: двійкова система
@@ -26,7 +26,7 @@ uk:
       random: випадковий
       repeat: повторити
       right: праворуч
-      score: рахунок
+      score: додати бал
       sides: сторони
       size: розмір
       speed: швидкість

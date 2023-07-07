@@ -816,6 +816,9 @@
           "word": "Binari",
           "definition": "Una manera de representar la informació utilitzant només dues opcions."
         },
+        "computer/csd/2022": {
+          "word": "Ordinador"
+        },
         "input/csd/2022": {
           "word": "Entrada"
         },
@@ -1458,6 +1461,9 @@
         },
         "function/csd/2021": {
           "word": "Funció"
+        },
+        "computer/csd/2021": {
+          "word": "Ordinador"
         },
         "input/csd/2021": {
           "word": "Entrada"

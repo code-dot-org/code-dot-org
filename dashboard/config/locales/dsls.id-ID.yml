@@ -13477,3 +13477,22 @@ id-ID:
           * Untuk melihat hasil survei yang dianonimkan pada dasbor guru, Anda harus (1) melihat survei/penilaian, lalu (2) memilih unit survei pasca kursus sebagai unit yang ingin Anda lihat.
 
           * **Petunjuk selengkapnya untuk melihat hasil survei pasca kursus**: [[google doc](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw)] [[pdf](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw/export?format=pdf)]
+      OPD-K5 CS Courses:
+        markdown: |-
+          # Perencanaan > Memulai di Code.org
+
+
+          ## Langkah 1: Pilih kursus
+          Semua kursus kami -- mulai dari pre-reader hingga sekolah menengah atas -- tercantum dalam **[katalog kursus](https://studio.code.org/courses)** kami. Untuk menemukan pelajaran CS Fundamentals yang telah Anda praktikkan, buka **[halaman dasar](https://code.org/educate/curriculum/elementary-school)** kami dan gulir ke bawah ke bagian "Kursus" . Semua kursus kami disediakan secara gratis. Bicarakanlah dengan kolega di sekolah Anda untuk menentukan cara mengintegrasikan kurikulum kursus dengan berbagai mata pelajaran.
+          ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)
+          ***
+          ## Langkah 2: Siapkan sesi kelas kelas Anda
+          Siapkan sesi kelas untuk melihat kemajuan siswa, mencetak kartu login untuk siswa, mengelola akun mereka, dan mencetak sertifikat yang dapat dibawa pulang setelah menyelesaikan kursus. Klik tautan ini untuk **[menonton video singkat](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)** yang menunjukkan cara menyiapkan kelas ilmu komputer pertama Anda di Code.org. Anda juga dapat menemukan langkah-langkahnya di **[artikel dukungan ini](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.
+          ![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)
+          ***
+          ## Langkah 3: Tetapkan kursus ke sesi Anda
+          Klik kursus yang Anda ajarkan -- Anda akan melihat layar seperti di bawah ini. Anda lalu dapat mengklik "Tetapkan Kursus" dan tetapkan kursus tersebut ke salah satu sesi Anda.
+          ![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)
+          ***
+          ## Langkah 4: Mulailah mengajar!
+          Hanya butuh satu pelajaran untuk membawa konsep ilmu komputer ke dalam kelas Anda. Setelah melihat antusiasme siswa Anda terhadap ilmu komputer, lanjutkan dengan rencana pelajaran harian untuk memandu siswa Anda, kegiatan yang dapat Anda lakukan tanpa komputer, dan forum untuk terhubung dengan guru-guru lainnya.

@@ -54,6 +54,11 @@
       }
     },
     "bike_sharing": {
+      "fields": {
+        "Month": {
+          "id": "Lună"
+        }
+      },
       "card": {
         "context": {
           "potentialMisuses": "[șir gol]"
