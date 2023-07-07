@@ -68,4 +68,8 @@ class Aichat < Level
     end
     options.freeze
   end
+
+  def uses_lab2?
+    true
+  end
 end
