@@ -48,7 +48,9 @@ theme: responsive_full_width
 
 %section#csf-courses
   .wrapper
-    %h2
+    %h2=hoc_s(:csf_page_courses_heading)
+    %p=hoc_s(:csf_page_courses_desc)
+    = view :csf_page_courses
 
 = view :section_divider_line
 
