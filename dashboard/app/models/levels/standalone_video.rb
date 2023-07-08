@@ -32,6 +32,7 @@ class StandaloneVideo < Level
     video_full_width
     background
     uses_lab2
+    disable_projects
   )
 
   before_validation do

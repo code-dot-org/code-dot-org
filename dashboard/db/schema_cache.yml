@@ -1570,6 +1570,46 @@ columns:
     default_function: 
     collation: utf8_unicode_ci
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: description
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: self_paced_professional_learning
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: professional_learning_program
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: video
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: published_date
+    sql_type_metadata: *4
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   course_scripts:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -12305,7 +12345,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20230609220913
+version: 20230705195726
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5
