@@ -1,12 +1,11 @@
 import getScriptData from '@cdo/apps/util/getScriptData';
+import {ProjectType} from '../types';
 
 // Partial definition of the App Options structure, only defining the
 // pieces we need in this component.
 interface PartialAppOptions {
-  level: {
-    isProjectLevel: boolean;
-  };
   channel: string;
+  projectType: ProjectType;
 }
 
 /**
@@ -20,4 +19,9 @@ interface PartialAppOptions {
 export function getStandaloneProjectId(): string | undefined {
   const appOptions = getScriptData('appoptions') as PartialAppOptions;
   return appOptions.channel;
+}
+
+export function getProjectType(): string {
+  const appOptions = getScriptData('appoptions') as PartialAppOptions;
+  return appOptions.projectType;
 }

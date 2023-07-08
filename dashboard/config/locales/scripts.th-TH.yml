@@ -78,6 +78,7 @@ th:
           student_description: A brief rampup of concepts for students who have not
             taken คอร์ส 2 and 3.
         infinity:
+          title: ดิสนีย์ อินฟินิตี้ เพลย์ แล็บ
           description: ใช้เพลย์แลปเพื่อแต่งเรื่องหรือเกมที่ชูตัวละครจาก Disney Infinity
           description_short: ใช้เพลย์แลปเพื่อแต่งเรื่องหรือเกมที่ชูตัวละครจาก Disney
             Infinity
@@ -86,6 +87,8 @@ th:
           name: ไม่จำกัด
         netsim:
           title: เครื่องจำลองอินเตอร์เน็ต
+        pixelation:
+          title: พิกเซลเลชัน
         20-hour:
           title: Accelerated Intro to CS คอร์ส
           description: This 20-hour คอร์ส covers the core computer science and programming
@@ -145,11 +148,15 @@ th:
           description_audience: อายุ 10-18 ปี
         iceage:
           name: ยุคน้ำแข็ง
+        gumball:
+          title: กัมบอล เพลย์ แล็บ
         starwars:
+          title: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด (JavaScript)'
           description: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
           description_short: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
           student_description: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
         starwarsblocks:
+          title: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด (Blockly)'
           description: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
           description_short: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
           student_description: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
@@ -247,6 +254,10 @@ th:
             required:
               display_name: ภาพรวม
         basketball:
+          title: เลือกทีมของคุณและสร้างเกมบาสเก็ตบอล
+          description_short: เลือกทีมของคุณและสร้างเกมบาสเก็ตบอล
+          description: เลือกทีมของคุณและสร้างเกมบาสเก็ตบอล
+          student_description: เลือกทีมของคุณและสร้างเกมบาสเก็ตบอล
           name: บาสเก็ตบอล
         csp2-support:
           lesson_groups:
@@ -258,16 +269,21 @@ th:
           description: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
           student_description: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
         coursea-draft:
+          title: 'ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์: หลักสูตร A'
           description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเริ่มอ่านออกเขียนได้
         courseb-draft:
+          title: 'ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์: หลักสูตร B'
           description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเริ่มอ่านออกเขียนได้
         coursec-draft:
+          title: 'ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์: หลักสูตร C'
           description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
             เรื่องราวและเกมของคุณเอง
         coursed-draft:
+          title: 'ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์: หลักสูตร D'
           description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
             เรื่องราวและเกมของคุณเอง
         coursee-draft:
+          title: 'ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์: หลักสูตร E'
           description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
             เรื่องราวและเกมของคุณเอง
           lesson_groups:
@@ -276,6 +292,7 @@ th:
             extra_course_content:
               display_name: เนื้อหาของหลักสูตรพิเศษ
         coursef-draft:
+          title: 'ความรู้พื้นฐานด้านบริการลูกค้า: หลักสูตร F'
           description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
             เรื่องราวและเกมของคุณเอง
           lesson_groups:
@@ -307,6 +324,8 @@ th:
           lesson_groups:
             cspSurvey:
               display_name: แบบสำรวจ
+        coursed-ramp:
+          title: 'ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์: หลักสูตร D'
         coursee-ramp:
           title: หลักสูตร E-เลื่อนชั้น
         csp-post-survey:
@@ -778,6 +797,7 @@ th:
         frozen-2018-test:
           title: สคริปต์โฟรเซ่นใหม่
         dance:
+          title: แดนซ์ปาร์ตี้ (2018)
           description_short: มีเพลงของศิลปินดังต่างๆ เช่น Katy Perry, Madonna, J.
             Balvin, Sia, Keith Urban, Ciara และคนอื่นๆ อีก 25 คน!
           description: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ ของคุณ!
@@ -1539,6 +1559,8 @@ th:
           lesson_groups:
             cspSurvey:
               display_name: แบบสำรวจ
+        csp5-virtual:
+          title: การเขียนโปรแกรมที่ขับเคลื่อนด้วยเหตุการณ์ใน App Lab
         virtual-holding-place:
           lesson_groups:
             csd3_2:
@@ -1547,6 +1569,8 @@ th:
           lesson_groups:
             cspSurvey:
               display_name: แบบสำรวจ
+        csd3-virtual:
+          title: บทนำด้วยตนเองเกี่ยวกับ Game Lab
         virustest:
           title: จำลองการระบาด
           description_short: 'ใช้แลปสไปรท์เพื่อสร้างการจำลองการระบาดของไวรัส '
@@ -1872,6 +1896,7 @@ th:
             cspSurvey2020:
               display_name: แบบสำรวจ
         aiml-2021:
+          title: AI และโมดูลการเรียนรู้ของเครื่อง
           lesson_groups:
             lessonGroup-4:
               display_name: แบบสำรวจ
@@ -2097,6 +2122,8 @@ th:
               display_name: ตัวอย่างและแหล่งข้อมูล
         tesstest921:
           name: testest921
+        hello-world-animals:
+          title: 'สวัสดีโลก: สัตว์'
         hello-world-retro:
           title: 'Hello World: เรโทร'
         hello-world-batman:
@@ -2104,6 +2131,8 @@ th:
         ai-ethics:
           title: จรรยาบรรณ AI ของเรา
           description_audience: เกรด 6-12
+        dance-unplugged:
+          title: ชั่วโมงแห่งรหัส - ปาร์ตี้เต้นรำ - อันปลั๊ก
         csc-things:
           name: เกี่ยวกับ CSC
           title: ข้อมูล CSC
@@ -2176,6 +2205,8 @@ th:
           title: ภาพปกบทกวี
         poetry-2021:
           title: การเข้ารหัสด้วยบทกวี
+        hello-world-animals-2021:
+          title: 'สวัสดีโลก: สัตว์'
         hello-world-retro-2021:
           title: 'Hello World: เรโทร'
         counting-csc-2021:
@@ -2534,6 +2565,8 @@ th:
             CS Discoveries เรียบร้อยแล้ว
           student_description: หน่วยการเรียนนี้ประกอบด้วยแบบสำรวจเมื่อชั้นเรียนของคุณเรียน
             CS Discoveries เสร็จแล้ว ผู้สอนจะบอกกับคุณว่าควรทำแบบสำรวจนี้เมื่อไหร่
+        aiml-2022:
+          title: AI และโมดูลการเรียนรู้ของเครื่อง
         self-paced-pl-csd1-2022:
           title: 'โมดูล 1: ยินดีต้อนรับ '
           description: "โมดูลนี้เป็นบทนำสั้น ๆ ทั้ง Code.org และหลักสูตรการเรียนรู้แบบมืออาชีพนี้
@@ -2723,6 +2756,8 @@ th:
         csp-playground:
           description_audience: ผู้เขียนหลักสูตร
           description_short: เพื่อจัดทำอัปเดตในบทเรียนหรือเลเวลระหว่างหลักสูตรแต่ละเวอร์ชัน
+        devices-2022:
+          title: การสร้างแอปด้วยอุปกรณ์ (Circuit Playground)
         microbit-temp:
           lesson_groups:
             lessonGroup-2:
@@ -3072,6 +3107,7 @@ th:
             การประเมินผลอย่างต่อเนื่อง และการส่งเสริมวัฒนธรรมของการรวม \n\n\\*\\*เวลาที่แนะนำ:
             \\*\\* 50 นาที"
         self-paced-pl-csd5-2023:
+          title: 'รูปแบบที่ 7: การเตรียมพร้อมในการสอนด้าน AI และ Machine Learning'
           description: "บทเรียนการเรียนรู้ระดับอาชีพนี้ได้รับการออกแบบมาเพื่อช่วยสร้างความพร้อมให้กับคุณเพื่อใช้ในการสอนบทเรียนเกี่ยวกับ
             AI และ Machine Learning ใน Code.org \n\n**ในบทเรียนการเรียนรู้ระดับอาชีพนี้
             คุณจะได้:**\n\n-   เรียนรู้เกี่ยวกับ AI และ Machine Learning เบื้องต้น\n-
@@ -3131,3 +3167,7 @@ th:
             ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
         self-paced-pl-csp2-2023:
           title: 'โมดูล 2: การนำทาง Code.org'
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: ข้อมูล

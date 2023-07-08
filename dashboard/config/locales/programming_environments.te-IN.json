@@ -78,6 +78,20 @@
                       "type": "స్ప్రైట్"
                     }
                   }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "రంగు"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "రంగు"
+                    }
+                  }
                 }
               }
             },
