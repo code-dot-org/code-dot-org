@@ -76,3 +76,19 @@
   font-size: 14px;
   padding: 0 8px;
 }
+
+.loadingProgress {
+  width: 100%;
+  height: 5px;
+  background-color: $neutral_dark80;
+  position: relative;
+  margin-top: auto;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .loadingProgressFill {
+    height: 5px;
+    background-color: $neutral_dark60;
+    position: absolute;
+  }
+}
