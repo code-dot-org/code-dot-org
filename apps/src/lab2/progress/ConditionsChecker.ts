@@ -3,6 +3,7 @@
 // skipped.  The accumulated satisfied conditions can be cleared at any time.
 
 import {Condition} from '../types';
+import _ from 'lodash';
 
 export interface ConditionNames {
   [key: string]: string;
@@ -31,9 +32,8 @@ export default class ConditionsChecker {
 
   // Determines whether we already know that a condition has been satisfied.
   private hasCondition(condition: Condition) {
-    return this.currentSatisfiedConditions.some(
-      currentSatisfiedCondition =>
-        JSON.stringify(currentSatisfiedCondition) === JSON.stringify(condition)
+    return this.currentSatisfiedConditions.some(currentSatisfiedCondition =>
+      _.isEqual(currentSatisfiedCondition, condition)
     );
   }
 
