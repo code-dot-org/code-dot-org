@@ -1731,13 +1731,13 @@
           "description": "Los patrones pueden surgir cuando los datos se transforman mediante programas."
         },
         "IOC-1.A.1": {
-          "description": "La confiabilidad del sistema es limitada. Los programadores deben esforzarse por maximizar la confiabilidad del sistema."
+          "description": "Las personas crean innovaciones informáticas."
         },
         "IOC-1.A.2": {
-          "description": "Al crear programas surgen problemas legales y de propiedad intelectual."
+          "description": "La forma en que las personas completan las tareas a menudo cambia para incorporar las nuevas innovaciones informáticas."
         },
         "IOC-1.A.3": {
-          "description": "La creación de programas tiene impactos en la sociedad, las economías y la cultura. Estos impactos pueden ser beneficiosos y/o dañinos."
+          "description": "No todos los efectos de una innovación informática se anticipan con antelación."
         },
         "IOC-1.A.4": {
           "description": "Un solo efecto puede ser visto como beneficioso y perjudicial por diferentes personas, o incluso por la misma persona. "
@@ -1746,10 +1746,10 @@
           "description": "Los avances en la informática han generado y aumentado la creatividad en otros campos, como la medicina, la ingeniería, las comunicaciones y las artes."
         },
         "IOC-1.B.1": {
-          "description": "Al utilizar la computadora, la privacidad personal está en riesgo. Los programadores deben intentar salvaguardar la privacidad personal"
+          "description": "Las innovaciones informáticas se pueden utilizar de formas que sus creadores no habían previsto originalmente: ● La World Wide Web estaba destinada originalmente a un intercambio rápido y fácil de información dentro de la comunidad científica. ● La publicidad dirigida se utiliza para ayudar a las empresas, pero puede utilizarse indebidamente tanto a nivel individual como agregado. ● El aprendizaje automático y la minería de datos han permitido la innovación en la medicina, los negocios y la ciencia, pero la información descubierta de esta manera también se ha utilizado para discriminar a grupos de personas."
         },
         "IOC-1.B.2": {
-          "description": "El uso de computadoras y la creación de programas tienen un impacto en la seguridad personal. Estos impactos pueden ser beneficiosos y/o dañinos."
+          "description": "Algunas de las formas en que se pueden utilizar las innovaciones informáticas pueden tener un impacto perjudicial en la sociedad, la economía o la cultura."
         },
         "IOC-1.B.3": {
           "description": "Los programadores responsables intentan considerar las formas no deseadas en que se pueden utilizar sus innovaciones informáticas y los posibles efectos beneficiosos y dañinos de estos nuevos usos."

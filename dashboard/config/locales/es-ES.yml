@@ -323,7 +323,7 @@ es:
       guiada, similar a un juego. ¡Aprende a programar con Bill Gates, Mark Zuckerberg,
       Angry Birds y Plantas vs. Zombis! :-) %{name}
 
-'
+      '
   parent_mailer:
     student_associated_subject: Información de inicio de sesión para Code.org
     parent_email_added_subject: "¡Bienvenido a Code.org!"

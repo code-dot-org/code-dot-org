@@ -1298,7 +1298,7 @@ es-ES:
           principal es que los alumnos conozcan los tipos de errores más comunes que
           pueden encontrar al añadir imágenes a las páginas web.
 
-'
+          '
       CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -8497,7 +8497,7 @@ es-ES:
         markdown: 'La nube bloquea la vista. Podría haber una flor debajo de esta
           nube. Si hay una flor, la abeja deberá recoger el néctar **una vez**.
 
-'
+          '
         questions:
         - text: La abeja no hará nada si no hay una flor. Observa el siguiente código
             con atención. ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?
@@ -8520,7 +8520,7 @@ es-ES:
         markdown: 'A veces la nube cubre una flor, ¡y a veces cubre un panal! De una
           u otra manera, solo habrá **una** flor o **un* panal debajo de cada nube.
 
-'
+          '
         questions:
         - text: Observa el siguiente código con atención. ¿Qué crees que sucederá
             cuando hagas clic en "Ejecutar"?
@@ -11008,7 +11008,7 @@ es-ES:
             ejecute el programa?
       CourseF_outbreak_story:
         content1: descripción aquí
-        markdown: "El Brote: Codifica tu Propia Simulación\n\n## ¡Bienvenido a Monster
+        markdown: "# El Brote: Codifica tu propia simulación\n\n## ¡Bienvenido a Monster
           Town!\nMonster Town solía ser un lugar feliz y saludable. A los monstruos
           de Monster Town les encantaba pasearse para visitar a sus amigos. \n\n<img
           src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -11023,9 +11023,9 @@ es-ES:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\">\n\nUn día, uno de los monstruos empezó a sentirse mal.
-          ¡El monstruo había cogido un **virus**! Un virus es un pequeño organismo
-          que puede hacerte enfermar. Los otros monstruos no se preocuparon demasiado.
-          Siguieron visitando a sus amigos.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          ¡El monstruo había cogido un **virus**! Un virus es un pequeño germen que
+          te puede enfermar. Los otros monstruos no se preocuparon demasiado. Siguieron
+          visitando a sus amigos.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -11050,7 +11050,7 @@ es-ES:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\">\n\nEl virus se extendió lentamente a otros monstruos
           que estaban cerca. Los monstruos sanos empezaron a preocuparse de que todos
-          pudieran enfermar. Los monstruos enfermos empezaron a preocuparse de que
+          fueran a enfermar. Los monstruos enfermos empezaron a preocuparse de que
           iban a contagiar el virus a todos los demás.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -11077,8 +11077,8 @@ es-ES:
           simulación es un modelo informático de un proceso o sistema. Aprende a codificar
           y a hacer predicciones sobre lo que les ocurrirá a los vecinos de Monster
           Town.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
-          style=\"float:right; width:15%\">\n\n* * ¿Con qué rapidez se propagará el
-          virus?\n\n* * ¿Se enfermará todo el mundo?\n\n* * ¿Cómo ayudarán las mascarillas?\n\n\nCuando
+          style=\"float:right; width:15%\">\n\n* ¿Con qué rapidez se propagará el
+          virus?\n\n* ¿Se enfermará todo el mundo?\n\n* ¿Cómo ayudarán las mascarillas?\n\n\nCuando
           hayas terminado, comparte tu simulación con los demás. Comparte tu mensaje
           sobre lo que crees que podemos hacer para ayudar a mantener a los demás
           sanos cuando un virus llega a la ciudad. \n"
@@ -12395,7 +12395,7 @@ es-ES:
           principal es que los alumnos conozcan los tipos de errores más comunes que
           pueden encontrar al añadir imágenes a las páginas web.
 
-'
+          '
       CSD U2 project guide_2018_2019_pilot_2021:
         content1: descripción aquí
         teacher_markdown: |-
@@ -13280,7 +13280,7 @@ es-ES:
         content1: Aquí hay algo de información.
         markdown: 'Prueba **markdown** _aquí_
 
-'
+          '
         title: Contenido Multi
       allthethings_external_displayed_as_unplugged:
         content1: descripción aquí
@@ -14127,7 +14127,7 @@ es-ES:
           principal es que los alumnos conozcan los tipos de errores más comunes que
           pueden encontrar al añadir imágenes a las páginas web.
 
-'
+          '
         markdown: |
           # Emparejando
 
@@ -14274,7 +14274,7 @@ es-ES:
         - text: 'Utilizar observadores para controlar los valores de las variables
             y las propiedades de los sprites
 
-'
+            '
         - text: Dar a las variables y funciones nombres que tengan sentido
           correct: true
         - text: Declarar variables fuera del bucle de dibujo, pero actualizarlas dentro
@@ -14293,7 +14293,7 @@ es-ES:
         - text: 'Utilizar observadores para controlar los valores de las variables
             y las propiedades de los sprites
 
-'
+            '
         - text: Dar a las variables y funciones nombres que tengan sentido
           correct: true
         - text: Declarar variables fuera del bucle de dibujo, pero actualizarlas dentro
@@ -14312,7 +14312,7 @@ es-ES:
         - text: 'Utilizar observadores para controlar los valores de las variables
             y las propiedades de los sprites
 
-'
+            '
         - text: Dar a las variables y funciones nombres que tengan sentido
           correct: true
         - text: Declarar variables fuera del bucle de dibujo, pero actualizarlas dentro
@@ -15476,7 +15476,7 @@ es-ES:
           con el lenguaje "natural" que se utiliza en el habla cotidiana.  Selecciona
           dos afirmaciones **verdaderas** sobre los lenguajes de programación:
 
-'
+          '
       PS U3 Q1-2:
         answers:
         - text: https://images.code.org/d2fb6af7fc9d8b79eefd9b66232eb1a8-image-1459374904942.png
@@ -26413,7 +26413,7 @@ es-ES:
         markdown: 'En primer lugar, tenemos algunas preguntas para ti sobre tu trabajo
           escolar en general.
 
-'
+          '
       pre-assessment survey heading2:
         markdown: "También queremos saber lo que piensas sobre la informática.  \n"
       pre-assessment survey heading3:
@@ -26445,7 +26445,7 @@ es-ES:
         content1: Aquí hay algo de información.
         markdown: 'Prueba **markdown** _aquí_
 
-'
+          '
         questions:
         - text: "¿Cuánto es 1 + 1?"
         title: Contenido Multi
@@ -26463,3 +26463,4 @@ es-ES:
         questions:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
             clic en "Ejecutar"?
+...

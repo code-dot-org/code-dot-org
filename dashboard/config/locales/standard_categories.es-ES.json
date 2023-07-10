@@ -96,7 +96,7 @@
           "description": "Los estudiantes demuestran un conocimiento sólido de conceptos, sistemas y operaciones de tecnología."
         },
         "IC": {
-          "description": "Hacer inferencias y justificar conclusiones"
+          "description": "Impactos de la computación"
         },
         "AAP-1": {
           "description": "Para encontrar soluciones específicas a problemas generalizables, los programadores representan y organizan los datos de múltiples maneras."
@@ -126,7 +126,7 @@
           "description": "Los programas se pueden utilizar para procesar datos, lo que permite a los usuarios descubrir información y crear nuevos conocimientos."
         },
         "IOC-1": {
-          "description": "Si bien los programas suelen estar diseñados para lograr un propósito específico, pueden tener consecuencias no deseadas."
+          "description": "Si bien las innovaciones informáticas suelen estar diseñadas para lograr un propósito específico, pueden tener consecuencias no deseadas."
         },
         "AAP-1.A": {
           "description": "Representa un valor con una variable."
@@ -300,10 +300,10 @@
           "description": "Explique cómo se pueden utilizar los programas para obtener información y conocimientos a partir de los datos."
         },
         "IOC-1.A": {
-          "description": "Explicar las implicaciones éticas y sociales de los sistemas informáticos"
+          "description": "Explique cómo un efecto de una innovación informática puede ser tanto beneficioso como perjudicial."
         },
         "IOC-1.B": {
-          "description": "Explique los riesgos para la privacidad derivados de la recopilación y el almacenamiento de datos personales en los sistemas informáticos."
+          "description": "Explique cómo una innovación informática puede tener un impacto más allá de su propósito previsto."
         },
         "IOC-1.C": {
           "description": "Describa los problemas que contribuyen a la brecha digital."
