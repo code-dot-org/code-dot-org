@@ -424,4 +424,22 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_response :success
     assert_not_nil @response.body['channel']
   end
+
+  test 'on lab2 levels navigating to /view redirects to /edit if user is project owner' do
+    channel_id = '12345'
+    Projects.any_instance.stubs(:get).returns({isOwner: true})
+
+    get :show, params: {path: "/projects/music/#{channel_id}/view", key: 'music', channel_id: channel_id, readonly: true}
+    assert_response :redirect
+    assert_redirected_to "/projects/music/#{channel_id}/edit"
+  end
+
+  test 'on lab2 levels navigating to /edit redirects to /view if user is not project owner' do
+    channel_id = '12345'
+    Projects.any_instance.stubs(:get).returns({isOwner: false})
+
+    get :edit, params: {path: "/projects/music/#{channel_id}/edit", key: 'music', channel_id: channel_id}
+    assert_response :redirect
+    assert_redirected_to "/projects/music/#{channel_id}/view"
+  end
 end
