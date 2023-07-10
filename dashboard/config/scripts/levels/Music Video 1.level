@@ -12,7 +12,8 @@
     "skip_sound": true,
     "background": "music-black",
     "video_full_width": true,
-    "uses_lab2": true
+    "uses_lab2": true,
+    "disable_projects": true
   },
   "published": true
 }]]></config>

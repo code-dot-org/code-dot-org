@@ -10,7 +10,6 @@ Scenario: Importing an Agent level from a share link
   # Create a new level source
   #
   Given I am on "http://studio.code.org/s/allthethings/lessons/25/levels/2"
-  And I rotate to landscape
   And I wait for the page to fully load
   And element "#runButton" is visible
 
@@ -26,7 +25,6 @@ Scenario: Importing an Agent level from a share link
   #
   When I am on "http://studio.code.org/projects/minecraft_codebuilder/"
   And I get redirected to "/projects/minecraft_codebuilder/([^\/]*?)/edit" via "dashboard"
-  And I rotate to landscape
   And I wait for the page to fully load
   And element "#runButton" is visible
 
@@ -43,7 +41,6 @@ Scenario: Importing an Agent level from a share link
   # Verify import succeeded
   #
   When I get redirected away from the current page
-  And I rotate to landscape
   And I wait for the page to fully load
   And element "#runButton" is visible
 
@@ -55,7 +52,6 @@ Scenario: Importing an Agent level from a project link
   #
   Given I am on "http://studio.code.org/projects/minecraft_hero/"
   And I get redirected to "/projects/minecraft_hero/([^\/]*?)/edit" via "dashboard"
-  And I rotate to landscape
   And I wait for the page to fully load
   And I press "x-close"
   And I close the instructions overlay if it exists
@@ -72,7 +68,6 @@ Scenario: Importing an Agent level from a project link
   #
   When I am on "http://studio.code.org/projects/minecraft_codebuilder/"
   And I get redirected to "/projects/minecraft_codebuilder/([^\/]*?)/edit" via "dashboard"
-  And I rotate to landscape
   And I wait for the page to fully load
   And element "#runButton" is visible
 
@@ -89,7 +84,6 @@ Scenario: Importing an Agent level from a project link
   # Verify import succeeded
   #
   When I get redirected away from the current page
-  And I rotate to landscape
   And I wait for the page to fully load
   And element "#runButton" is visible
 

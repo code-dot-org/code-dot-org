@@ -815,6 +815,7 @@ fa-IR:
   classicmaze_name: هزارتوی کلاسیک
   iceage_name: عصر یخبندان
   minecraft_name: ماینکرفت
+  text-compression_name: فشرده‌سازی متن
   applab_name: آزمایشگاه نرم افزار
   gamelab_name: کارگاه بازی سازی
   applab_gradelevel: سنین سیزده به بالا
@@ -1642,6 +1643,7 @@ fa-IR:
   footer_store: فروشگاه
   footer_support: پشتیبانی
   footer_terms: شرایط
+  ai_for_oceans: هوش مصنوعی برای اقیانوس‌ها
   ai_for_oceans_lesson_plan: طرح درس
   ai_activity: فعالیت
   ai_description: توضیحات
