@@ -40,7 +40,7 @@ export class LocalChannelsStore implements ChannelsStore {
   }
 
   redirectToRemix() {
-    // Do nothing
+    // Remix is not supported for local storage.
   }
 }
 

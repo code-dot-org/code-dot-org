@@ -367,7 +367,7 @@ export default class ProjectManager {
   private throwErrorIfDestroyed(actionName: string) {
     if (this.destroyed) {
       this.logAndThrowError(
-        `Tried to run ${actionName}, Project Manager destroyed`
+        `Tried to ${actionName}, but the Project Manager was destroyed.`
       );
     }
   }
