@@ -5,6 +5,9 @@ import {Meta, Story} from '@storybook/react';
 export default {
   title: 'DesignSystem/Checkbox Component',
   component: Checkbox,
+  options: {
+    order: ['Single Default Checkbox', '*'],
+  },
 } as Meta;
 
 //
@@ -22,8 +25,8 @@ const MultipleTemplate: Story<{components: CheckboxProps[]}> = args => (
   </>
 );
 
-export const SingleDefaultCheckbox = SingleTemplate.bind({});
-SingleDefaultCheckbox.args = {
+export const DefaultCheckbox = SingleTemplate.bind({});
+DefaultCheckbox.args = {
   name: 'controlled_checkbox',
   label: 'Checkbox Label',
   checked: false,
