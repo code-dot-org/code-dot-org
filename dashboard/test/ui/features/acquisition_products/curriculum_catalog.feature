@@ -5,13 +5,13 @@ Feature: Curriculum Catalog Page
     Given I am on "http://studio.code.org/catalog"
     And I open my eyes to test "Curriculum Catalog"
     Then I wait until element "#topic-dropdown" is visible
-    And I wait until element "h4:contains(AI and Machine Learning)" is visible
+    And I wait until element "h4:contains(AI for Oceans)" is visible
     And I see no difference for "Curriculum Catalog: All Offerings"
 
     Then I click selector "#topic-dropdown-button"
     And I wait until element "span:contains(Digital Literacy)" is visible
     Then I click selector "span:contains(Digital Literacy)"
-    And I wait until element "h4:contains(AI and Machine Learning)" is not visible
+    And I wait until element "h4:contains(AI for Oceans)" is not visible
     And I see no difference for "Curriculum Catalog: One Offering"
 
     Then I click selector "#grade-dropdown-button"
