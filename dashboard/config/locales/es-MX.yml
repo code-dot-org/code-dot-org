@@ -329,7 +329,7 @@ es-MX:
       juego, simple y guiada. ¡Aprende a programar con Bill Gates, Mark Zuckerberg,
       Angry Birds y Plantas vs. Zombies! :-) %{name}
 
-'
+      '
   parent_mailer:
     student_associated_subject: Información de inicio de sesión para Code.org
     parent_email_added_subject: "¡Bienvenido a Code.org!"
