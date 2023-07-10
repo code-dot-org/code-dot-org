@@ -180,7 +180,7 @@ ms-MY:
     dengan HTML & CSS. Anda boleh berkongsi apa sahaja yang anda buat, meneroka apa
     yang telah dibuat oleh orang lain dan belajar antara satu sama lain!
 
-'
+    '
   third_party_khan_btn_learn: Belajar CS dengan Khan Academy
   third_party_khan_btn_forum: Forum CS Akademi Khan
   third_party_appinv_desc: MIT App Inventor ialah alat pengaturcaraan berasaskan blok
@@ -1050,7 +1050,7 @@ ms-MY:
   dashboard_error_none_selected: 'Anda tidak memilih mana-mana pelajar untuk berpindah.
     Sila pilih sekurang-kurangnya seorang pelajar.
 
-'
+    '
   dashboard_error_other_section: Jika anda memindahkan pelajar antara bahagian anda
     sendiri, pilih bahagian anda daripada menu lungsur. Hanya pilih 'Bahagian Lain'
     untuk mengalihkan pelajar anda ke bahagian guru lain.
@@ -1092,7 +1092,7 @@ ms-MY:
     anda ingin membuat akaun untuk mereka, tukar jenis rahsia bahagian ini kepada
     <b>perkataan</b> atau <b>gambar</b>.
 
-'
+    '
   dashboard_students_print_page: Cetak halaman ini
   dashboard_students_signin_card: Lawati %{join_url} dan masukkan %{section_code}
   dashboard_students_url: URL

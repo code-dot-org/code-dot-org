@@ -231,7 +231,7 @@ az-AZ:
     İndi bizim ilə davam<a href=''http://studio.code.org''>digər kurslar</a>, və ya
     əlavə variantları baxın  <a href=''/learn/beyond''>Bir saatdan artıq öyrənin</a>.
 
-'
+    '
   get_a_certificate_message_after_markdown: Yükləmək və ya çap etmək üçün sertifikatı
     basın. İndi davam bizim [digər kurslar](http://studio.code.org), və ya [bir saatdan
     artıq öyrənmək](/öyrənmək/artıq) üçün əlavə variantları oldu.
@@ -845,7 +845,7 @@ az-AZ:
   dashboard_landing_useful_links: Digər faydalı linklər
   dashboard_landing_classroom_resources: 'Sinifiniz üçün mənbələr
 
-'
+    '
   dashboard_landing_office_hours: Şəxsən sual verin! Aylıq video ofis saatlarımızı
     ziyarət edin.
   dashboard_landing_print_certificates: Kursu bitirən tələbələrin sertifikatları çap
@@ -1152,7 +1152,7 @@ az-AZ:
   dashboard_sections_sign_in_unique: 'Unikal veb-səhifə "Tələbələri idarə et" nişanında
     verilmişdir
 
-'
+    '
   dashboard_sections_sign_in_main: http://code.org və "Daxil ol" klik edin
   dashboard_sections_password_account_creation: Tələbə tərəfindən yaradılmış mətn
     parolu
@@ -1826,7 +1826,7 @@ az-AZ:
     dostlarınızla paylaşırsınız! Bu fəaliyyətlər fərdlər və siniflərə rəhbərlik edən
     müəllimlər üçün uyğundur.
 
-'
+    '
   blockly_longdescription: Yavaş (və ya mövcud olmayan) internetə çıxışı olan kompüterlər
     var? Code.org dərsliklərinin xəbərçisi olan Blockly dərsliklərini endirin - tək
     3MB ZIP faylı istənilən kompüterə yükləmək və ya yaddaş çubuğundan istifadə etmək
@@ -2084,7 +2084,7 @@ az-AZ:
     dostlarınızla paylaşırsınız! Bu fəaliyyətlər fərdlər və siniflərə rəhbərlik edən
     müəllimlər üçün uyğundur.
 
-'
+    '
   touchdevelop_beyond_longdescription: TouchDevelop sizə iPad, iPhone, Android, PC,
     Mac, Windows Phone-da proqramlar yaratmağa imkan verir. Toxunma üçün əlverişli
     redaktorumuz hətta telefonunuzda və ya planşetinizdə kodlaşdırmanı əyləncəli edir!
@@ -2499,7 +2499,7 @@ az-AZ:
   hoc2018_dance_featured_student_creations_title: Seçilmiş tələbə yaradıcılıqları
   hoc2018_dance_videos_section_heading: 'ilhamlanmaq
 
-'
+    '
   hoc2018_dance_video_title_what_is_creativity: Yaradıcılıq nədir?
   hoc2018_dance_view_creativity_video_playlist: Yaradıcılıq nədir? Tam seriyaya baxın
     (5 dəq)
@@ -2728,7 +2728,7 @@ az-AZ:
   hoc2022_banner_description: 'Dünyanı öyrənin, xal qazan, hərəkəti dayandır - kompüter
     elmlərini öyrənməyi bir çox yolu var!
 
-'
+    '
   hoc2022_cta_primary: Yeniliklərə baxın
   hoc2022_cta_secondary: Daha çox fəaliyyət sınayın
   hoc2022_landing_page_explore_title: Araşdır

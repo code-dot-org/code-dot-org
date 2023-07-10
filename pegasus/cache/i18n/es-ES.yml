@@ -349,7 +349,7 @@ es-ES:
   stats_nina_markdown: '"Todos los días se obtuvieron los mismos resultados: 100%
     de compromiso". - Nina Nichols Peery, profesora
 
-'
+    '
   stats_student_markdown: '"Sabía que era una oportunidad única en la vida". - Mariana
     Alzate, alumna de 5º curso'
   stats_michael_markdown: '"Nunca, jamás, he visto a mis alumnos tan entusiasmados
@@ -2689,7 +2689,7 @@ es-ES:
   hoc2019_mc_mee_description2: 'Accede a recursos gratuitos que incluyen un plan de
     clases, vídeos, un plan de estudios de informática y formación para profesores.
 
-'
+    '
   hoc2019_mc_more_coding_resources: Más Recursos de Programación
   hoc2019_dance_previous_versions: "¿Buscas una versión anterior de la Fiesta de Baile?
     \ \nHaz clic aquí para empezar la [Parte 1](%{dance_2018_link}) y la [Parte 2](%{dance_extras_2018_link})

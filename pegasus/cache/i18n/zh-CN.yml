@@ -1833,7 +1833,7 @@ zh-CN:
     电机这里打开去年的[第一部分](%{dance_2018_link})和[第二部分](%{dance_extras_2018_link})。
   homepage_slot_text_title_at_home: '在家学习
 
-'
+    '
   homepage_slot_text_blurb_at_home: 这些资源使它变得容易
   homepage_slot_text_link_code_break: 观看代码小憩
   homepage_slot_text_link_do_hoc: 做一次“编程一小时”

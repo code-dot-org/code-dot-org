@@ -452,7 +452,7 @@ el-GR:
   homepage_action_text_learn: Έναρξη εκπαίδευσης
   homepage_action_text_signpetition: 'Υπογράψτε την συλλογή υπογραφών
 
-'
+    '
   homepage_action_text_wincelebritychat: Κερδίστε μια συνομιλία με μία διασημότητα
   homepage_signpetition_dropdown: Υπογράψτε την δική μας συλλογή υπογραφών &#x25BE;
   homepage_signpetition_dropdown_text: Συμφωνώ
@@ -615,7 +615,7 @@ el-GR:
   minecraft_store_camps: 'Στο Microsoft Store θα βρείτε Δωρεάν Camps Ναρκαλιευτή της
     Ώρας του Κώδικα
 
-'
+    '
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Εγγραφείτε</a>
     για την ελεύθερη ώρα Κωδικόυ Minecraft εργαστηρίο, σε καταστήματα της Microsoft
     σε Αυστραλία, Καναδά, Πουέρτο Ρίκο ή τις ΗΠΑ. Μάθετε πώς η κωδικοποίηση είναι

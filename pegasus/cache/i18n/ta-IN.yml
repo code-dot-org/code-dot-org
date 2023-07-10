@@ -270,7 +270,7 @@ ta-IN:
   leaderboards_for_hoc: ஹவர் ஆஃப் கோட்க்கான லீடர்போர்டுகள்.
   support_url: 'http://support.code.org/
 
-'
+    '
   country: நாடு
   city: நகரம்
   gender: பாலினம்
@@ -362,7 +362,7 @@ ta-IN:
   studiobar_title_nolink: Code.org இன் படிப்புகளை ஆராயுங்கள்
   studiobar_elementary_title: 'தொடக்கப் படிப்புகள்
 
-'
+    '
   studiobar_elementary_body: K&#8209;5க்கான எங்கள் மூன்று புதிய படிப்புகள்
   studiobar_dance_title: நடன விருந்து
   studiobar_dance_body: உங்கள் சொந்த நடன விருந்தை உருவாக்கி பகிரவும்
@@ -787,11 +787,11 @@ ta-IN:
   volunteer_engineer_submission_field_linkedin: LinkedIn சுயவிவரம்
   volunteer_engineer_submission_field_linkedin_placeholder: 'http://www.linkedin.com/in/your_name
 
-'
+    '
   volunteer_engineer_submission_field_facebook: Facebook சுயவிவரம்
   volunteer_engineer_submission_field_facebook_placeholder: 'https://www.facebook.com/your_name
 
-'
+    '
   volunteer_engineer_submission_field_description: விளக்கம்
   volunteer_engineer_submission_field_description_desc: உங்கள் கணினி அறிவியல் அனுபவம்
     அல்லது தொழில்நுட்ப பின்னணி மற்றும் உள்ளூர் ஆசிரியர்களுக்கான தன்னார்வலராக நீங்கள்
@@ -1051,7 +1051,7 @@ ta-IN:
   dashboard_sections_enter_code: 'பிரிவு குறியீட்டை உள்ளிடவும்:'
   dashboard_sections_code_placeholder: '6-character code (ABCDEF)
 
-'
+    '
   dashboard_sections_other_section: மற்ற ஆசரியர்
   dashboard_sections_both_sections: மாணவர்(கள்) இரண்டு பிரிவிலும் இருக்க விரும்புகிறீர்களா?
   dashboard_sections_yes_both: ஆம், இந்த தற்போதைய பிரிவு மற்றும் புதிய பிரிவில் இருக்க

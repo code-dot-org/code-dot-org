@@ -324,7 +324,7 @@ fr-FR:
   just_did_course_donor: 'Je viens de finir %{course}, venez voir ! Merci %{donor_twitter}
     de soutenir @codeorg
 
-'
+    '
   twitter_teach_cs: Pourquoi n’y a-t-il pas plus d’écoles qui enseignent l’informatique
     ? Nous pouvons y remédier. http://youtu.be/2DxWIxec6yo. Visitez http://code.org/
     pour en savoir plus.
@@ -2488,7 +2488,7 @@ fr-FR:
     invitons les élèves qui n''ont pas de matériel ou qui n''ont pas accès à Internet
     à partager ce paquet d''[unplugged Hour of Code activities] (https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
 
-'
+    '
   hoc_overview_view_teacher_guide: Voir le guide de l'enseignant
   hoc2018_creativity: créativité
   hoc2018_creativity_create: Créer
