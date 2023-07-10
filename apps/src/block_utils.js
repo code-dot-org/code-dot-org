@@ -1070,13 +1070,10 @@ exports.createJsWrapperBlockCreator = function (
         const showMiniToolbox =
           miniToolboxBlocks &&
           (!window.appOptions || window.appOptions.level.miniToolbox);
-
-        let flyoutToggleButton;
         if (showMiniToolbox) {
-          flyoutToggleButton =
-            Blockly.customBlocks.initializeMiniToolbox.bind(this)(
-              miniToolboxBlocks
-            );
+          Blockly.customBlocks.initializeMiniToolbox.bind(this)(
+            miniToolboxBlocks
+          );
         }
 
         // These blocks should not be loaded into a Google Blockly level.
@@ -1123,13 +1120,6 @@ exports.createJsWrapperBlockCreator = function (
         }
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);
         this.setInputsInline(inline);
-
-        if (showMiniToolbox) {
-          Blockly.customBlocks.initializeFlyoutToggle.bind(this)(
-            miniToolboxBlocks,
-            flyoutToggleButton
-          );
-        }
       },
     };
 
