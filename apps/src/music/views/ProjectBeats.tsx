@@ -3,6 +3,7 @@ import Lab2Wrapper from '@cdo/apps/lab2/views/Lab2Wrapper';
 import {getStore} from '@cdo/apps/redux';
 import React from 'react';
 import {Provider} from 'react-redux';
+import {logError} from '../utils/MusicMetrics';
 import MusicView from './MusicView';
 
 /**
@@ -15,7 +16,9 @@ const ProjectBeats: React.FunctionComponent<{channelId: string}> = ({
 }) => {
   return (
     <Provider store={getStore()}>
-      <Lab2Wrapper>
+      <Lab2Wrapper
+        onError={(error, componentStack) => logError({error, componentStack})}
+      >
         <ProjectContainer channelId={channelId}>
           <MusicView inIncubator={true} />
         </ProjectContainer>
