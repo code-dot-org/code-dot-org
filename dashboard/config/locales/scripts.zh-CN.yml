@@ -8293,6 +8293,7 @@ zh-CN:
             lessonGroup-2:
               display_name: 人工智能和机器学习教学
           name: self-paced-pl-csd5-2023
+          title: 模块7：准备人工智能和机器学习教学
           description: "这个专业学习模块旨在帮助您做好教学 Code.org 的人工智能和机器学习单元的准备。  \n\n**在这个专业学习模块中，你将：**\n\n\\-介绍人工智能和机器学习。
             \n\\-练习本单元中包含的关键概念。\n\\-参与 AI 实验室和应用程序实验室。\n\\-探索章节末尾的项目。 \n\\-与学生一起制定实施该单元的计划。\n\n**建议时间：**
             120 分钟"
@@ -8604,6 +8605,39 @@ zh-CN:
 
             **建议时间**：70 分钟
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 班级
+            lessonGroup-5:
+              display_name: 二维数组
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 班级
+            lessonGroup-5:
+              display_name: 二维数组
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 班级
+            lessonGroup-5:
+              display_name: 二维数组
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: 数据
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 班级
+            lessonGroup-5:
+              display_name: 二维数组
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 班级
+            lessonGroup-5:
+              display_name: 二维数组
+        csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-3:
               display_name: 班级

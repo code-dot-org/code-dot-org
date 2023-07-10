@@ -5689,6 +5689,7 @@ de:
             und für Code.org von entscheidender Bedeutung, um den Kurs weiterzuführen
             und zu verbessern. Vielen Dank für Ihre Zeit und Aufmerksamkeit.
         aiml-2021:
+          title: Modul KI und maschinelles Lernen
           lesson_groups:
             lessonGroup-4:
               display_name: Umfrage
@@ -6002,6 +6003,8 @@ de:
               display_name: Projekt
             lessonGroup-4:
               display_name: Demos und Ressourcen
+        hello-world-animals:
+          title: 'Hallo Welt: Tiere'
         hello-world-emoji:
           title: 'Hallo Welt: Emoji'
         hello-world-retro:
@@ -6021,6 +6024,8 @@ de:
         ai-ethics:
           title: Unser KI-Ethikkodex
           description_audience: 6.  bis 12. Klasse
+        dance-unplugged:
+          title: Hour of Code – Tanzparty – Offline
         csc-things:
           name: csc-things
           title: 'CSC Brain Dump '
@@ -6104,6 +6109,8 @@ de:
           title: Code ist Poesie
         hello-world-emoji-2021:
           title: 'Hallo Welt: Emoji'
+        hello-world-animals-2021:
+          title: 'Hallo Welt: Tiere'
         hello-world-retro-2021:
           title: 'Hallo Welt: Retro'
         explore-data-1-2021:
@@ -6703,6 +6710,7 @@ de:
           title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
         aiml-2022:
           name: aiml-2022
+          title: Modul KI und maschinelles Lernen
           description_short: Erfahren Sie mehr über künstliche Intelligenz und maschinelles
             Lernen
         self-paced-pl-csd1-2022:
@@ -7115,6 +7123,7 @@ de:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          title: Apps mit Geräten erstellen (Circuit Playground)
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -7808,7 +7817,7 @@ de:
             kontinuierlichen Bewertung und Förderung einer Kultur der Inklusion. \n\n\\*\\*Geschätzte
             Dauer: \\*\\* 50 Minuten"
         self-paced-pl-csd5-2023:
-          title: Unterrichten von KI und maschinellem Lernen
+          title: 'Modul 7: Vorbereitung auf den Unterricht KI und maschinelles Lernen'
           description: "In diesem professionellen Lernmodul bereiten Sie sich auf
             den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor.
             \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
@@ -7906,6 +7915,29 @@ de:
         self-paced-pl-csp2-2023:
           title: 'Modul 2: Navigieren in Code.org'
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klassen
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klassen
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klassen
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Daten
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klassen
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klassen
+        csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-3:
               display_name: Klassen

@@ -3353,7 +3353,8 @@
           "What Is The Weather Like?": "Jaka jest pogoda?",
           "What is the Temperature Outside?": "Jaka jest temperatura na zewnątrz?",
           "What time of day is it?": "Jaka jest pora dnia?",
-          "Predict!": "Przewidywać!"
+          "Predict!": "Przewidywać!",
+          "Driver Alert System": "System ostrzegania kierowcy"
         },
         "ml-use model card-example3A_2022": {
           "rain": "deszcz",
@@ -3373,7 +3374,8 @@
           "What Is The Weather Like?": "Jaka jest pogoda?",
           "What is the Temperature Outside?": "Jaka jest temperatura na zewnątrz?",
           "What time of day is it?": "Jaka jest pora dnia?",
-          "Predict!": "Przewidywać!"
+          "Predict!": "Przewidywać!",
+          "Driver Alert System": "System ostrzegania kierowcy"
         },
         "AppLab Intro 7 - Change Text 2": {
           "Make me bigger and blue!": "Uczyń mnie większym i niebieskim!"

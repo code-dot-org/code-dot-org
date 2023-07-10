@@ -6392,6 +6392,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Bem-vindo
+        self-paced-pl-csd5-2023:
+          title: 'Módulo 7: Preparação para ensinar IA e Aprendizagem Mecânica'
         pl-csd-summer-day1:
           lessons:
             lesson-3:
@@ -6473,6 +6475,39 @@ pt:
           description_short: Aprenda todos os conceitos Fundamentais da Ciência da
             Computação e crie sua própria arte, história ou jogo.
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Dados
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-3:
               display_name: Classes

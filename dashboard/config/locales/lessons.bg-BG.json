@@ -353,6 +353,9 @@
         "coursec-2022/End of Course Project": {
           "name": "Проект за Края на Курса"
         },
+        "csd5-2022/Patterns and Representation": {
+          "name": "Модели и Представяне"
+        },
         "csd5-2022/ASCII and Binary Representation": {
           "name": "ASCII и Двоично Представяне"
         },
@@ -813,6 +816,9 @@
         "csd6-2018/Project: Prototype an Innovation": {
           "name": "Проект: Прототипирайте Изобретение"
         },
+        "csd5-2018/Patterns and Representation": {
+          "name": "Модели и Представяне"
+        },
         "csd5-2018/ASCII and Binary Representation": {
           "name": "ASCII и Двоично Представяне"
         },
@@ -839,6 +845,9 @@
         },
         "csd4-2018/Analysis of Design": {
           "name": "Анализ на Дизайн"
+        },
+        "csd4-2018/User-Centered Design Micro Activity": {
+          "name": "Микро Дейност за Дизайн, Ориентирана около Потребителя"
         },
         "csd4-2018/Digital Design": {
           "name": "Дигитален Дизайн"
@@ -1116,11 +1125,17 @@
         "csd4-2019/Analysis of Design": {
           "name": "Анализ на Дизайн"
         },
+        "csd4-2019/User-Centered Design Micro Activity": {
+          "name": "Микро Дейност за Дизайн, Ориентирана около Потребителя"
+        },
         "csd4-2019/Digital Design": {
           "name": "Дигитален Дизайн"
         },
         "csd4-2019/Improving and Iterating": {
           "name": "Подобрение и Итерация"
+        },
+        "csd5-2019/Patterns and Representation": {
+          "name": "Модели и Представяне"
         },
         "csd5-2019/ASCII and Binary Representation": {
           "name": "ASCII и Двоично Представяне"
@@ -1278,6 +1293,9 @@
         "coursea-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Реални алгоритми: Засадете семената"
         },
+        "coursea-2017/Learn to Drag and Drop": {
+          "name": "Последователност с Плъзгане и Пускане"
+        },
         "coursea-2017/Programming: Happy Maps": {
           "name": "Програмиране: Щастливи Карти"
         },
@@ -1310,6 +1328,9 @@
         },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Реални алгоритми: Засадете семената"
+        },
+        "pre-express-2017/Learn to Drag and Drop": {
+          "name": "Последователност с Плъзгане и Пускане"
         },
         "pre-express-2017/Online Safety: Your Digital Footprint": {
           "name": "Цифров Гражданин: Моят Цифров Отпечатък"
@@ -1451,6 +1472,9 @@
         },
         "courseb-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Реални алгоритми: Засадете семената"
+        },
+        "courseb-2017/Learn to Drag and Drop": {
+          "name": "Последователност с Плъзгане и Пускане"
         },
         "courseb-2017/Your Digital Footprint": {
           "name": "Цифров Гражданин: Моят Цифров Отпечатък"
@@ -1707,6 +1731,9 @@
         "csd1-2017/Project - Propose an App": {
           "name": "Проект - Предложете Приложение"
         },
+        "csd5-2017/Patterns and Representation": {
+          "name": "Модели и Представяне"
+        },
         "csd5-2017/ASCII and Binary Representation": {
           "name": "ASCII и Двоично Представяне"
         },
@@ -1733,6 +1760,9 @@
         },
         "csd4-2017/Analysis of Design": {
           "name": "Анализ на Дизайн"
+        },
+        "csd4-2017/User-Centered Design Micro Activity": {
+          "name": "Микро Дейност за Дизайн, Ориентирана около Потребителя"
         },
         "csd4-2017/Digital Design": {
           "name": "Дигитален Дизайн"
@@ -2326,6 +2356,9 @@
         },
         "csd6-2021/Functions with Parameters": {
           "name": "Функции с параметри"
+        },
+        "csd5-2021/Patterns and Representation": {
+          "name": "Модели и Представяне"
         },
         "csd5-2021/ASCII and Binary Representation": {
           "name": "ASCII и Двоично Представяне"

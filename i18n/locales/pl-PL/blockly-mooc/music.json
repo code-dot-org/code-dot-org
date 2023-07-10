@@ -63,5 +63,6 @@
   "panelHeaderInstructions": "Instrukcje",
   "panelHeaderWorkspace": "Obszar roboczy: ",
   "panelHeaderControls": "Sterowanie",
-  "panelHeaderTimeline": "Oś czasu"
+  "panelHeaderTimeline": "Oś czasu",
+  "continue": "Kontynuuj"
 }
