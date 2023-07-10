@@ -5,15 +5,11 @@
 import {Condition} from '../types';
 import _ from 'lodash';
 
-export interface ConditionNames {
-  [key: string]: string;
-}
-
 export default class ConditionsChecker {
   private currentSatisfiedConditions: Condition[];
-  private conditionNames: ConditionNames;
+  private conditionNames: string[];
 
-  constructor(conditionNames: ConditionNames) {
+  constructor(conditionNames: string[]) {
     this.currentSatisfiedConditions = [];
     this.conditionNames = conditionNames;
   }
@@ -42,9 +38,7 @@ export default class ConditionsChecker {
   checkRequirementConditions(requiredConditions: Condition[]) {
     for (const requiredCondition of requiredConditions) {
       // If we don't yet support a condition, don't check against it for now.
-      if (
-        !Object.values(this.conditionNames).includes(requiredCondition.name)
-      ) {
+      if (!this.conditionNames.includes(requiredCondition.name)) {
         continue;
       }
 
