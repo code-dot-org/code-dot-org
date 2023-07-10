@@ -13,7 +13,7 @@ theme: responsive_full_width
         =hoc_s(:curriculum_name_csf)
       %p{style: "color: white"}
         =hoc_s(:csf_page_top_desc)
-      %a.link-button{href: "#csf-courses"}
+      %a.link-button{href: "#pick-a-course"}
         =hoc_s(:call_to_action_explore_courses)
     %figure
       %img{src: "/images/banners/banner-csf-characters.png", alt: ""}
@@ -30,13 +30,13 @@ theme: responsive_full_width
         %li=hoc_s(:csf_page_intro_list_02)
         %li=hoc_s(:csf_page_intro_list_03)
         %li=hoc_s(:csf_page_intro_list_04)
-      %a.link-button{href: "#csf-courses"}
+      %a.link-button{href: "#pick-a-course"}
         =hoc_s(:call_to_action_explore_courses)
     .clear
 
 %section.bg-neutral-light
   .wrapper
-    = view :curriculum_glance_section, heading: hoc_s(:heading_curriculum_at_a_glance), grades: hoc_s(:module_grade_k_5), duration: hoc_s(:module_duration_month_quarter), level: hoc_s(:module_level_beginner), tools: hoc_s(:csf_page_curriculum_glance_tools), devices: hoc_s(:csf_page_curriculum_glance_devices), professional_learning: hoc_s(:csf_page_curriculum_glance_professional_learning), topics: hoc_s(:csf_page_curriculum_glance_topics), accessibility_features: hoc_s(:csf_page_curriculum_glance_accessibility_features), languages: hoc_s(:csf_page_curriculum_glance_languages)
+    = view :curriculum_glance_section, heading: hoc_s(:heading_curricula_at_a_glance), grades: hoc_s(:module_grade_k_5), duration: hoc_s(:module_duration_month_quarter), level: hoc_s(:module_level_beginner), tools: hoc_s(:csf_page_curriculum_glance_tools), devices: hoc_s(:csf_page_curriculum_glance_devices), professional_learning: hoc_s(:csf_page_curriculum_glance_professional_learning), topics: hoc_s(:csf_page_curriculum_glance_topics), accessibility_features: hoc_s(:csf_page_curriculum_glance_accessibility_features), languages: hoc_s(:csf_page_curriculum_glance_languages)
 
 %section.quote.bg-neutral-dark
   .wrapper
@@ -46,7 +46,23 @@ theme: responsive_full_width
       %p.no-margin-bottom
         =hoc_s(:teacher_label_csf)
 
-%section#csf-courses
+%section#pick-a-course.bg-neutral-light
+  .wrapper
+    %h2=hoc_s(:csf_page_pick_a_course_heading)
+    %p=hoc_s(:csf_page_pick_a_course_desc)
+    %hr
+    %div.centered
+      %h3.heading-md
+        =hoc_s(:csf_page_pick_a_course_heading_02)
+      %div.flex-container.justify-center.wrap{style: "gap: 1rem"}
+        %a.link-button{href: "#csf-teacher-led"}
+          =hoc_s(:curriculum_name_csf_teacher_led)
+        %a.link-button{href: "#csf-self-paced"}
+          =hoc_s(:curriculum_name_csf_self_paced)
+        %a.link-button{href: "#csf-no-devices"}
+          =hoc_s(:curriculum_name_csf_no_device)
+
+%section#csf-teacher-led
   .wrapper
     %h2=hoc_s(:csf_page_courses_heading)
     %p=hoc_s(:csf_page_courses_desc)
@@ -54,7 +70,7 @@ theme: responsive_full_width
 
 = view :section_divider_line
 
-%section
+%section#csf-self-paced
   .wrapper
     %h2=hoc_s(:csf_page_courses_self_paced_heading)
     %p=hoc_s(:csf_page_courses_self_paced_desc)
@@ -62,7 +78,7 @@ theme: responsive_full_width
 
 = view :section_divider_line
 
-%section
+%section#csf-no-devices
   .wrapper
     %h2=hoc_s(:heading_no_devices)
     .action-block.action-block--two-col
