@@ -1,0 +1,154 @@
+---
+title: Learn about Artificial Intelligence (AI)
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/ai-pl-webinar-styles.css", rel: "stylesheet"}
+
+-# FontAwesome icons
+- icon_sparkles = "fa-solid fa-sparkles"
+- icon_lightbulb = "fa-solid fa-lightbulb"
+- icon_magnifying_glass = "fa-solid fa-magnifying-glass"
+- icon_book = "fa-solid fa-book"
+- icon_person_chalkboard = "fa-solid fa-person-chalkboard"
+- icon_video = "fa-solid fa-video"
+- icon_megaphone = "fa-solid fa-megaphone"
+
+%section.hero-banner-basic.hero-ai-pl-webinar{style: "display: block !important"}
+  .wrapper
+    .text-wrapper.col-60
+      %h1{style: "color: white"}=hoc_s(:ai_pl_webinar_hero_heading)
+      %p{style: "color: white"}=hoc_s(:ai_pl_webinar_hero_desc)
+      .hero-ai-pl-webinar__by
+        %span{style: "color: white"}=hoc_s(:ai_pl_webinar_hero_presented)
+        .hero-ai-pl-webinar__list
+          %img{src: "/images/ai/pl/webinar/code--w.png", height: "24px", alt: "CODE"}
+          %img{src: "/images/ai/pl/webinar/khan--w.png", height: "20px", alt: "Khan Academy"}
+          %img{src: "/images/ai/pl/webinar/iste--w.png", height: "18px", alt: "ISTE"}
+          %img{src: "/images/ai/pl/webinar/ets--w.png", height: "26px", alt: "ets"}
+
+
+%section.intro
+  .wrapper
+    %h2=hoc_s(:ai_pl_webinar_intro_heading)
+    %p=hoc_s(:ai_pl_webinar_intro_text)
+
+%section{id: "ai-curricula"}
+  .wrapper
+    %h2=hoc_s(:ai_pl_webinar_pro_learn_heading)
+    %p=hoc_s(:ai_pl_webinar_pro_learn_desc)
+    .action-block__wrapper.action-block__wrapper--two-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:ai_pl_webinar_pro_learn_grades_01)
+          %h3=hoc_s(:ai_pl_webinar_pro_learn_title_01)
+          %p=hoc_s(:ai_pl_webinar_pro_learn_desc_01)
+        .content-footer
+          %a{href: "https://code.zoom.us/webinar/register/8616874889915/WN_TGKpfOD8Rw-z5Q-D3ZiuLQ", class: "link-button", aria:{label: hoc_s(:ai_pl_webinar_pro_learn_btn_aria_label_01)}}
+            =hoc_s(:register)
+
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:ai_pl_webinar_pro_learn_grades_02)
+          %h3=hoc_s(:ai_pl_webinar_pro_learn_title_02)
+          %p=hoc_s(:ai_pl_webinar_pro_learn_desc_02)
+        .content-footer
+          %a{href: "https://code.zoom.us/webinar/register/4316874890876/WN_AzVve40zTCWHdPqDUJVC2g", class: "link-button", aria:{label: hoc_s(:ai_pl_webinar_pro_learn_title_02)}}
+            =hoc_s(:register)
+
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:ai_pl_webinar_pro_learn_grades_03)
+          %h3=hoc_s(:ai_pl_webinar_pro_learn_title_03)
+          %p=hoc_s(:ai_pl_webinar_pro_learn_desc_03)
+          %p=hoc_s(:ai_pl_webinar_pro_learn_desc_03_2)
+        .content-footer
+          %a{href: "https://code.zoom.us/webinar/register/8816874891625/WN_0zD4C916RZSBDVWPtemHkg ", class: "link-button", aria:{label: hoc_s(:ai_pl_webinar_pro_learn_btn_aria_label_03)}}
+            =hoc_s(:register)
+
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:ai_pl_webinar_pro_learn_grades_04)
+          %h3=hoc_s(:ai_pl_webinar_pro_learn_title_04)
+          %p=hoc_s(:ai_pl_webinar_pro_learn_desc_04)
+        .content-footer
+          %a{href: "https://code.zoom.us/webinar/register/6216874892698/WN_ZiHOYik1T7CtC_0LA6_I6g", class: "link-button", aria:{label: hoc_s(:ai_pl_webinar_pro_learn_btn_aria_label_04)}}
+            =hoc_s(:register)
+
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:ai_pl_webinar_pro_learn_grades_05)
+          %h3=hoc_s(:ai_pl_webinar_pro_learn_title_05)
+          %p=hoc_s(:ai_pl_webinar_pro_learn_desc_05)
+        .content-footer
+          %a{href: "https://code.zoom.us/webinar/register/5716874892887/WN_enC8CqfTT9ux_gQ2vAfUng", class: "link-button", aria:{label: hoc_s(:ai_pl_webinar_pro_learn_btn_aria_label_04)}}
+            =hoc_s(:register)
+
+= view :section_divider_line
+
+%section.newsletter-signup
+  .wrapper
+    %h2=hoc_s(:ai_pl_webinar_join_email_title)
+    %p=hoc_s(:ai_pl_webinar_pro_join_email_desc)
+    %iframe.col-50{:allowtransparency => "true", :frameborder => "0", :height => "500", :scrolling => "yes", :src => "http://go.pardot.com/l/153401/2023-01-10/pqf2sr", :style => "overflow:hidden; float: none", :type => "text/html", :width => "100%"}
+
+= view :visit_partial_event_logger
+
+
+= view :section_divider_line
+
+
+%section
+  .wrapper
+    %h2=hoc_s(:ai_pl_webinar_explore_title)
+    %p=hoc_s(:ai_pl_webinar_explore_desc)
+    .action-block__wrapper.action-block__wrapper--two-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:ai_pl_webinar_explore_title_1)
+          %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: ""}
+          %p=hoc_s(:ai_pl_webinar_explore__desc_1)
+        .content-footer
+          %a{href: "https://blog.khanacademy.org/teacher-khanmigo/?utm_source=code.org&utm_medium=referral&utm_campaign=code.orgwebinar", class: "link-button",  rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
+            =hoc_s(:ai_pl_webinar_explore__button_1)
+
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:ai_pl_webinar_explore_title_2)
+          %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: ""}
+          %p=hoc_s(:ai_pl_webinar_explore__desc_2)
+        .content-footer
+          %a{href: "https://www.iste.org/professional-development/iste-u/artificial-intelligence ", class: "link-button",  rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
+            =hoc_s(:ai_pl_webinar_explore__button_2)
+
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:ai_pl_webinar_explore_title_3)
+          %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: ""}
+          %p=hoc_s(:ai_pl_webinar_explore__desc_3)
+        .content-footer
+          %a{href: "https://code.org/ai#ai-curricula", class: "link-button",  rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
+            =hoc_s(:ai_pl_webinar_explore__button_3)
+
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:ai_pl_webinar_explore_title_4)
+          %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: ""}
+          %p=hoc_s(:ai_pl_webinar_explore__desc_4)
+        .content-footer
+          %a{href: "https://www.ets.org/research/ai-labs.html", class: "link-button",  rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
+            =hoc_s(:ai_pl_webinar_explore__button_4)
+
+
+
+
+%section.partnership-ai
+  .wrapper
+    .partnership-ai__content
+      %p=hoc_s(:ai_pl_webinar_partnership_between)
+      .partnership-ai__list
+        %img{src: "/images/ai/pl/webinar/code.svg", height: "50px", alt: "CODE"}
+        %img{src: "/images/ai/pl/webinar/khan.svg", height: "50px", alt: "Khan Academy"}
+        %img{src: "/images/ai/pl/webinar/iste.png", height: "38px", alt: "ISTE"}
+        %img{src: "/images/ai/pl/webinar/ets.png", height: "55px", alt: "ETS"}
