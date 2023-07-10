@@ -110,6 +110,13 @@
           "rubric_performance_level_2": "Os parágrafos têm uma nova cor ou tamanho.",
           "rubric_performance_level_3": "Os parágrafos possuem um conjunto de regras especial na folha de estilo e a propriedade cor ou tamanho está sendo usada, mas há erros suficientes para que o texto não mude de cor ou tamanho. Há um código HTML que tenta vincular a folha de estilo à página Web.",
           "rubric_performance_level_4": "Não foi encontrado um conjunto de regras especial para parágrafos, ou as propriedades de cor ou tamanho não estão sendo usadas no conjunto de regras. O código que vincula a folha de estilo à página da Web não está presente."
+        },
+        "CSD U6 - Board Inputs - A_2222": {
+          "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando o código",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
         }
       }
     }

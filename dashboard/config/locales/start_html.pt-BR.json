@@ -146,7 +146,8 @@
           "19": "19",
           "20": "20",
           "text": "texto",
-          "?": "?"
+          "?": "?",
+          "100": "100"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
@@ -170,7 +171,8 @@
           "19": "19",
           "20": "20",
           "text": "texto",
-          "?": "?"
+          "?": "?",
+          "100": "100"
         },
         "CSD U1 processing live_2021": {
           "walking": "caminhando",
@@ -380,31 +382,47 @@
           "0": "0"
         },
         "CSD U6 - Board Inputs - SB1_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Board Inputs - SB3_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "Feliz"
         },
         "CSD U6 - Board Outputs - P_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Click Me": "Clique aqui",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - SB1_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - SB2_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "change the light": "mude a luz",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "Peixe"
         },
         "CSD U6 - Board Outputs - Setup_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "North": "Norte",
@@ -413,13 +431,19 @@
           "West": "Oeste"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - SB2_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - SB3_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Médio"
@@ -545,60 +569,92 @@
           "B": "B"
         },
         "CSD U6 - Music - SB4_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
         "CSD U6 - Physical Input - ChalA_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - ChalB_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - ChalC_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - PA_2222": {
           "Score": "Placar",
           "0": "0"
         },
         "CSD U6 - Physical Input - PC_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - PD_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - SB1_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - ChalB_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - PB_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - PC_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - P_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - SB1_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - SB2.2_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - SB2_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Nome:"
@@ -631,7 +687,8 @@
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "Happy": "Feliz",
-          "?": "?"
+          "?": "?",
+          "Emotion Machine": "Máquina de Emoção"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "título"
@@ -649,7 +706,8 @@
           "right": "para direita"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
-          "name": "nome"
+          "name": "nome",
+          "Hello": "Olá"
         },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
@@ -704,16 +762,28 @@
           "on": "ligado"
         },
         "CSD U6 LED toggle": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "change the light": "mude a luz",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 LED toggle_2018": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "change the light": "mude a luz",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 LED toggle_2019": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "change the light": "mude a luz",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 LED toggle_2021": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "change the light": "mude a luz",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 Pedometer": {
           "0": "0"
@@ -728,16 +798,24 @@
           "0": "0"
         },
         "CSD U6 add LED button": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 add LED button_2018": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 add LED button_2019": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 add LED button_2021": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 analog light": {
           "Update": "Atualizar",
@@ -833,19 +911,23 @@
         },
         "CSD U6 emotion machine example": {
           "Happy": "Feliz",
-          "?": "?"
+          "?": "?",
+          "Emotion Machine": "Máquina de Emoção"
         },
         "CSD U6 emotion machine example_2018": {
           "Happy": "Feliz",
-          "?": "?"
+          "?": "?",
+          "Emotion Machine": "Máquina de Emoção"
         },
         "CSD U6 emotion machine example_2019": {
           "Happy": "Feliz",
-          "?": "?"
+          "?": "?",
+          "Emotion Machine": "Máquina de Emoção"
         },
         "CSD U6 emotion machine example_2021": {
           "Happy": "Feliz",
-          "?": "?"
+          "?": "?",
+          "Emotion Machine": "Máquina de Emoção"
         },
         "CSD U6 frequency": {
           "short": "curto",
@@ -1028,16 +1110,28 @@
           "0": "0"
         },
         "CSD U6 predict LED button": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Click Me": "Clique aqui",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 predict LED button_2018": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Click Me": "Clique aqui",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 predict LED button_2019": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Click Me": "Clique aqui",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 predict LED button_2021": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Click Me": "Clique aqui",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 sensor experiment embedded": {
           "text": "texto",
@@ -1100,16 +1194,28 @@
           "Game Over": "Fim de jogo"
         },
         "CSD U6 test LED": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 test LED_2018": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 test LED_2019": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSD U6 test LED_2021": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSDU4 Connecting Screens": {
           "Red": "Vermelho",
@@ -1235,19 +1341,34 @@
           "Back": "Voltar"
         },
         "CSDU6 Circuit Playground Test": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSDU6 Circuit Playground Test_2018": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSDU6 Circuit Playground Test_2019": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSDU6 Circuit Playground Test_2021": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSDU6 Circuit Playground Test_2222": {
-          "Success!": "Sucesso!"
+          "Success!": "Sucesso!",
+          "Plug in your Circuit Playground and click \"Run\"": "Conecte seu Circuit Playground e clique em “Executar (Run)”",
+          "Refresh this page and try again": "Atualize a página e tente novamente",
+          "Visit studio.code.org/maker/setup": "Visite studio.code.org/maker/setup"
         },
         "CSDU6 circuit playground piano": {
           "C": "C",
@@ -1868,6 +1989,23 @@
         },
         "CSD U6 analog sound_2021": {
           "value": "valor"
+        },
+        "CSD U6 - Board Outputs - P2_2222": {
+          "Low": "Baixo",
+          "Mid": "Médio",
+          "High": "Alto"
+        },
+        "CSD U6 - Board Outputs - PracB_2222": {
+          "Click the mouse to make it squeak!": "Clique com o mouse para fazer o barulho!"
+        },
+        "CSD U6 - Board Outputs - PracD_2222": {
+          "100": "100",
+          "200": "200",
+          "300": "300",
+          "400": "400",
+          "900": "900",
+          "800": "800",
+          "700": "700"
         }
       }
     }
