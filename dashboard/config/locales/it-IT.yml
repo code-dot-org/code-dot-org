@@ -344,7 +344,7 @@ it:
       remove: Sicuro di voler abbandonare questa classe?
     default_name: 'sezione senza nome
 
-'
+      '
     remove: "(elimina classe)"
     type:
       picture: Password Immagine
@@ -412,7 +412,7 @@ it:
       finished_hoc: Ho finito!
       sign_in_to_save: Accedi per salvare i progressi fatti
       my_dashboard: Controllo
-      course_catalog: Corsi
+      course_catalog: Catalogo Corsi
       project_gallery: Progetti
       sections: Classi
       help_support: Help and support
@@ -1645,7 +1645,7 @@ it:
     image_file_format_data_b: n = larghezza* altezza* bit per pixel
     image_width: 'Larghezza immagine
 
-'
+      '
     image_height: Altezza immagine
     bits_per_pixel_header: Bit per pixel
     binary: Binario

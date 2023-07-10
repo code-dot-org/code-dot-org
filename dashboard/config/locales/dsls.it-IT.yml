@@ -6770,7 +6770,7 @@ it-IT:
           questa nuvola. Se c''è un fiore, l''ape dovrebbe raccogliere il nettare
           **una volta**.
 
-'
+          '
         questions:
         - text: Se non c'è un fiore, l'ape non deve fare nulla. Dai un'occhiata al
             codice qui sotto. Cosa pensi che accadrà dopo aver cliccato su "Esegui"?
@@ -20145,7 +20145,7 @@ it-IT:
             cui hai partecipato al di fuori delle ore scolastiche (come un programma
             del doposcuola, online, o un campo o programma estivo)?
 
-'
+            '
       post-assessment survey q31-a-2017b:
         answers:
         - text: Sono del tutto d'accordo
@@ -23023,3 +23023,4 @@ it-IT:
           per il CS, vai oltre con i piani di lezione giornalieri per guidare i tuoi
           studenti, le attività scollegate che puoi svolgere senza un computer e i
           forum per connetterti con altri insegnanti."
+...
