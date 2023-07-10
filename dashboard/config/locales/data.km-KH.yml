@@ -67,19 +67,19 @@ km:
           the arrows until you score."
     video:
       name:
-        artist_intro: សិល្បះដោយប្រើកូដប្លុក
+        artist_intro: ការណែនាំពីវិចិត្រករ
         loop_until: ធ្វើឡើងវិញរហូតដល់ប្លុក
         function: អនុគមន៍
         Unplug2: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         Unplug5: អនុគមន៍
         Unplug6: លក្ខខណ្ឌ
         C1_bigevent_unplugged: ព្រឹត្តិការណ៍ធំ
-        C1_artist_intro: សិល្បះដោយប្រើកូដប្លុក
-        C2_artist_intro: សិល្បះដោយប្រើកូដប្លុក
+        C1_artist_intro: ការណែនាំពីវិចិត្រករ
+        C2_artist_intro: ការណែនាំពីវិចិត្រករ
         C2_conditionals_with_cards: លក្ខខណ្ឌ
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
-        C3_artist_intro: សិល្បះដោយប្រើកូដប្លុក
+        C3_artist_intro: ការណែនាំពីវិចិត្រករ
         C3_bounce: បាល់​លោត
         C3_computational_thinking: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         C4_loops_zombie: ប្រតិបត្តិដដែលៗ
@@ -117,6 +117,7 @@ km:
         hoc_dance_events: ព្រឹត្ដិការណ៍ - Dance Party
         hoc_dance_properties: លក្ខណៈសម្បត្តិ - Dance Party
         CSF_SpriteLab_Intro_v2: សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍
+        CSF_Spritelab_MakeSprite_v2: របៀបបង្កើតអាង (Sprite)
         csd_debugging: ការបំបាត់កំហុស (Debugging)
         hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - Dance Party
         hoc_dance_properties_2019: លក្ខណៈសម្បត្តិ - Dance Party

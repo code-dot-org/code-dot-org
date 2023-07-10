@@ -16,6 +16,9 @@
                 }
               }
             },
+            "sprites": {
+              "name": "អាង(Sprites)"
+            },
             "groups": {
               "name": "ក្រុម",
               "expressions": {
