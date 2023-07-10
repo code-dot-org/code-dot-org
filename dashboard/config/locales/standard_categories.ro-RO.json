@@ -84,7 +84,7 @@
           "description": "Sisteme de calcul"
         },
         "IC": {
-          "description": "Efectuarea de deducții și justificarea concluziilor"
+          "description": "Impactul computerelor"
         },
         "NI": {
           "description": "Rețele și Internet"
@@ -117,7 +117,7 @@
           "description": "Programele pot fi utilizate pentru procesarea datelor, ceea ce permite utilizatorilor să descopere informații și să creeze noi cunoștințe."
         },
         "IOC-1": {
-          "description": "În timp ce programele sunt de obicei concepute pentru a atinge un anumit scop, ele pot avea consecințe nedorite"
+          "description": "În timp ce inovațiile de calcul sunt de obicei concepute pentru a atinge un scop specific, acestea pot avea consecințe nedorite."
         },
         "AAP-1.A": {
           "description": "Reprezintă o valoare cu o variabilă."
@@ -285,10 +285,10 @@
           "description": "Explicați modul în care programele pot fi utilizate pentru a obține informații și cunoștințe din date."
         },
         "IOC-1.A": {
-          "description": "Explicați implicațiile etice și sociale ale sistemelor de calcul"
+          "description": "Explicați modul în care un efect al unei inovații de calcul poate fi atât benefic, cât și dăunător."
         },
         "IOC-1.B": {
-          "description": "Explicați riscurile la adresa vieții private cauzate de colectarea și stocarea datelor cu caracter personal pe sistemele informatice."
+          "description": "Explicați modul în care o inovație informatică poate avea un impact dincolo de scopul propus."
         },
         "IOC-1.C": {
           "description": "Descrieți problemele care contribuie la decalajul digital."

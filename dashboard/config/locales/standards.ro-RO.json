@@ -1563,13 +1563,13 @@
           "description": "Modelele pot apărea atunci când datele sunt transformate folosind programe."
         },
         "IOC-1.A.1": {
-          "description": "Fiabilitatea sistemului este limitată. Programatorii ar trebui să depună eforturi pentru a maximiza fiabilitatea sistemului."
+          "description": "Oamenii creează inovații de calcul."
         },
         "IOC-1.A.2": {
-          "description": "Problemele juridice și preocupările legate de proprietatea intelectuală apar atunci când se creează programe."
+          "description": "Modul în care oamenii își îndeplinesc sarcinile se schimbă adesea pentru a încorpora noi inovații de calcul."
         },
         "IOC-1.A.3": {
-          "description": "Crearea de programe are impact asupra societății, economiilor și culturii. Aceste efecte pot fi benefice și/sau dăunătoare."
+          "description": "Nu toate efectele unei inovații de calcul sunt anticipate în avans."
         },
         "IOC-1.A.4": {
           "description": "Un singur efect poate fi privit atât benefic, cât și dăunător de către persoane diferite sau chiar de aceeași persoană. "
@@ -1578,10 +1578,10 @@
           "description": "Progresele în calcul au generat și au sporit creativitatea în alte domenii, cum ar fi medicina, ingineria, comunicațiile și artele."
         },
         "IOC-1.B.1": {
-          "description": "Când utilizați computerul, confidențialitatea personală este în pericol. Programatorii ar trebui să încerce să protejeze confidențialitatea personală"
+          "description": "Inovațiile de calcul pot fi utilizate în moduri pe care creatorii lor nu le-au dorit inițial: ● World Wide Web a fost inițial destinat doar schimbului rapid și ușor de informații în cadrul comunității științifice. ● Publicitatea orientată este utilizată pentru a ajuta întreprinderile, dar poate fi utilizată în mod abuziv atât la nivel individual, cât și agregat. ● Învățarea automată și extragerea datelor au permis inovarea în medicină, afaceri și știință, dar informațiile descoperite în acest mod au fost folosite și pentru a discrimina grupurile de indivizi."
         },
         "IOC-1.B.2": {
-          "description": "Utilizarea computerului și crearea de programe au un impact asupra securității personale. Aceste efecte pot fi benefice și/sau dăunătoare."
+          "description": "Unele dintre modalitățile în care pot fi utilizate inovațiile de calcul pot avea un impact dăunător asupra societății, economiei sau culturii."
         },
         "IOC-1.B.3": {
           "description": "Programatorii responsabili încearcă să ia în considerare modalitățile neintenționate ale inovațiilor lor de calcul și potențialele efecte benefice și dăunătoare ale acestor noi utilizări."

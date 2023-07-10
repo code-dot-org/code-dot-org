@@ -3364,7 +3364,7 @@ ro-RO:
         markdown: 'Ah!  Folosirea buclelor `for` face ca acest puzzle să fie mult
           mai ușor!
 
-'
+          '
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - text: Albinuța se va deplasa înainte și va strânge tot nectarul din fiecare
@@ -3388,7 +3388,7 @@ ro-RO:
         markdown: 'Ah!  Folosirea buclelor `for` face ca acest puzzle să fie mult
           mai ușor!
 
-'
+          '
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - text: Albinuța se va deplasa înainte și va strânge tot nectarul din fiecare
@@ -3412,7 +3412,7 @@ ro-RO:
         markdown: 'Ah!  Folosirea buclelor `for` face ca acest puzzle să fie mult
           mai ușor!
 
-'
+          '
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
         - text: Albinuța se va deplasa înainte și va strânge tot nectarul din fiecare
@@ -3436,7 +3436,7 @@ ro-RO:
         markdown: 'Ah!  Folosirea buclelor `for` face ca acest puzzle să fie mult
           mai ușor!
 
-'
+          '
       courseF_multi_bee_fwp9_predict1:
         answers:
         - correct: true
@@ -3869,7 +3869,7 @@ ro-RO:
         description: Ați ajuns la sfârșitul cursului F! Selectați un proiect pe care
           doriți să-l creați.
       CourseF_outbreak_story:
-        content1: descriere aici
+        content1: descrierea aici
         markdown: "Epideme: Cod Propriu de Simulare\n\n## Bine Ai Venit în Orașul
           Monstrullui!\nOrașul Monstrului era, de obiceim un loc vesel și sănătos.
           Monștrii Orașului Monstrului iubeau să se plimbe și să își viziteze prietenii.
@@ -12721,7 +12721,7 @@ ro-RO:
         markdown: 'Ah!  Folosirea buclelor `for` face ca acest puzzle să fie mult
           mai ușor!
 
-'
+          '
         questions:
         - text: Citiți codul care urmează. Ce se va întâmpla atunci când veți face
             clic pe „Rulează”?
