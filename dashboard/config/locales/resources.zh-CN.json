@@ -429,9 +429,11 @@
           "type": "幻灯片"
         },
         "blank_space_stories/coursef/2022": {
+          "name": "空白空间故事",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "blank_space_stories_1/coursef/2022": {
+          "name": "空白空间故事",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
           "type": "答案要点"
         },
@@ -946,6 +948,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2022": {
+          "name": "文字和提示",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "幻灯片"
         },
@@ -3251,10 +3254,12 @@
           "type": "讲义"
         },
         "blank_space_stories/coursef/2021": {
+          "name": "空白空间故事",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
           "type": "答案要点"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "空白空间故事",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
         },
         "variables_blank_space_stories/coursef/2021": {
@@ -3263,6 +3268,7 @@
           "type": "幻灯片"
         },
         "text_and_prompts/coursef/2021": {
+          "name": "文字和提示",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "幻灯片"
         },
@@ -4432,6 +4438,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
+          "name": "文字和提示",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
           "type": "幻灯片"
         },
@@ -4559,6 +4566,7 @@
           "type": "资源"
         },
         "follow_the_algorithm/coursee/2021": {
+          "name": "遵循算法",
           "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview",
           "type": "幻灯片"
         },

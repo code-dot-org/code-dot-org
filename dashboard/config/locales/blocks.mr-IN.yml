@@ -2249,6 +2249,8 @@ mr:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: "{TEXT} प्रिंट करा"
       storylab_setForegroundEffect2:
         text: "{EFFECT} इफेक्ट करा"
         options:

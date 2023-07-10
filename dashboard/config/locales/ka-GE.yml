@@ -56,6 +56,7 @@ ka:
         reset_password_token: პაროლის გადატვირთვის ბმული, რომელსაც თქვენ მიჰყევით
         error:
           future: არ შეიძლება იყოს მომავალში
+        us_state: შტატი
   beta: ბეტა-ვერსია
   hello: ჰეი, სამყარო
   welcome_back: კარგია, რომ დაბრუნდით, %{name}
@@ -65,6 +66,7 @@ ka:
   unsubmit: ჩაბარების გაუქმება
   previous_page: წინა გვერდი
   next_page: შემდეგი გვერდი
+  next_level: შემდეგი დონე
   next_resource: შემდეგი რესურსი
   done_with_module: შესრულებულია ამ სასწავლო მოდულით
   cancel: გაუქმება
@@ -248,6 +250,7 @@ ka:
       კურსისა და კომპიუტერული მეცნიერების შესახებ? [(იხილეთ ჩვენი კონფიდენციალურობის
       პოლიტიკა)] (%{privacy_policy_url})
     parent_account_email_label: მშობლის/მეურვის ელფოსტა
+    us_state: შტატი
   school_info:
     title: სასკოლო ინფორმაცია (არასავალდებულო)
     school_country: სკოლის ქვეყანა
@@ -1474,6 +1477,7 @@ ka:
         csf_express: CS საფუძვლები (კითხვამდელი დაჩქარებული ან დაჩქარებული კურსი)
         csd: კომპიუტერული მეცნიერების აღმოჩენები
         csp: CS საფუძვლები
+        other: სხვა
         not_applicable: არ გამოიყენება
       email_opt_in:
         opt_in_yes: დიახ

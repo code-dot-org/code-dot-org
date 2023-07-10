@@ -90,7 +90,7 @@
   "cscAdaptationsMissingGiraffe": "Assegureu-vos que aparegui un sprite de girafa al principi de l'escena.",
   "cscAdaptationsMissingOctopus": "Assegureu-vos que aparegui un sprite de pop al principi de l'escena.",
   "cscAdaptationsMoveOctopusToPlant": "No us oblideu d'utilitzar les tecles de fletxa per moure el pop a tocar la planta de manera que canvia de disfressa per barrejar-se.",
-  "cscAdaptationsSeaweed": "Assegura't que el teu pop està canviant del mateix color que l'alga que toca",
+  "cscAdaptationsRightArrowKey": "Assegura't de prémer una tecla de fletxa després de fer clic a *\"Executar\"*. Pots fer clic als botons de color taronja que hi ha a sota de la zona de joc o prémer les fletxes del teclat.",
   "cscAdaptationsSetBackground": "Assegureu-vos d'establir un fons.",
   "cscAdaptationsSetBehavior": "Assegureu-vos d'establir el comportament de l'sprite després de configurar la mida del sprite.",
   "cscAdaptationsSetFastSpeed": "Assegureu-vos que configureu la velocitat del sprite del guepard a ràpid.",

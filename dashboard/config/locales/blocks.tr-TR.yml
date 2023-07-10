@@ -2780,6 +2780,8 @@ tr:
             '10': '10'
       storylab_clearHeadings:
         text: başlıkları temizle
+      storylab_printText:
+        text: "{TEXT} yazdır"
       storylab_setForegroundEffect2:
         text: "{EFFECT} efekti yap"
         options:

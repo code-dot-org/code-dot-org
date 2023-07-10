@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.7.5'
+# Temporarily support both Ruby 2.7 and 3.0 until we've fully transitioned from
+# the former to the latter
+# TODO infra: pin us to ruby 3 once all persistent managed servers get updated
+ruby '>= 2.7', '< 3.1'
 
 # Ruby 2.7 no longer includes some libraries by default; install
 # the ones we need here
@@ -19,7 +22,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '6.1.4.7'
+gem 'rails', '~> 6.1'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -106,10 +109,10 @@ group :development, :test do
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
-  gem 'selenium-webdriver', '3.141.0'
+  gem 'selenium-webdriver', '~> 4.0'
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
-  gem 'webdrivers', '~> 3.0'
+  gem 'webdrivers', '~> 5.2'
 
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
@@ -122,14 +125,13 @@ gem 'factory_bot_rails', '~> 6.2', group: [:development, :staging, :test, :adhoc
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false
 
-# Ref: https://github.com/tmm1/gctools/pull/17
-gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 
 gem 'puma', '~> 5.0'
 gem 'puma_worker_killer'
 gem 'raindrops'
+gem 'sd_notify' # required for Puma to support systemd's Type=notify
 
 gem 'chronic', '~> 0.10.2'
 
@@ -182,7 +184,7 @@ gem 'honeybadger', '>= 4.5.6' # error monitoring
 
 gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
-gem 'redcarpet', '~> 3.3.4'
+gem 'redcarpet', '~> 3.5.1'
 
 gem 'geocoder'
 
@@ -206,7 +208,10 @@ gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
 gem 'jwt' # single signon for zendesk
 
-gem 'twilio-ruby' # SMS API for send-to-phone feature
+# SMS API for send-to-phone feature; 6.0 includes some breaking changes which
+# we'll need to prepare for:
+# https://github.com/twilio/twilio-ruby/blob/6.0.0/UPGRADE.md#2023-05-03-5xx-to-6xx
+gem 'twilio-ruby', '< 6.0'
 
 gem 'sequel', '~> 5.29'
 gem 'user_agent_parser'

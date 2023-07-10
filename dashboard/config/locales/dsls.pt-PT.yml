@@ -5464,7 +5464,8 @@ pt-PT:
         - text: O artista desenhará um quadrado.
           correct: true
           feedback: Correto!
-        - {}
+        - text: O artista desenhará um pentágono
+          feedback: Incorreto. O artista desenha um quadrado.
         questions:
         - text: Olhe cuidadosamente para o código abaixo. O que acontecerá quando
             você clicar em "Executar"?
@@ -5487,12 +5488,23 @@ pt-PT:
             irá coletar após você apertar o "Executar"?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
+        - text: Scrat alcançará a bolota. Não há bugs no código.
+          feedback: Incorreto. Primeiro, Scrat vira na direção errada, depois Scrat
+            não avança o suficiente para alcançar a bolota.
+        - text: Scrat não alcançará a bolota porque ele vira para o lado errado.
+          correct: true
+          feedback: Correto! Primeiro, Scrat vira na direção errada, depois Scrat
+            não avança o suficiente para alcançar a bolota.
+        - text: O arranhão não alcançará a bolota porque não há blocos de “avançar”
+            suficientes.
+          correct: true
+          feedback: Correto! Primeiro, Scrat vira na direção errada, depois Scrat
+            não avança o suficiente para alcançar a bolota.
+        - text: Scrat não se moverá do primeiro bloco.
+          feedback: Há dois bugs nesse código. Primeiro, Scrat vira na direção errada,
+            depois Scrat não avança o suficiente para alcançar a bolota.
         questions:
-        - {}
+        - text: Procure erros nesse código. Scrat alcançará a bolota ou há algum problema?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - text: O pássaro vai acabar um passo antes do porco.
@@ -5502,7 +5514,8 @@ pt-PT:
           feedback: Correto!
         - text: O pássaro vai correr para o TNT.
           feedback: Incorreto. Este código leva o pássaro perfeitamente ao porco.
-        - feedback: Incorreto. Este código leva o pássaro perfeitamente ao porco.
+        - text: O pássaro vai correr contra a parede.
+          feedback: Incorreto. Este código leva o pássaro perfeitamente ao porco.
         questions:
         - text: Leia o código abaixo com muito cuidado. O que acontecerá quando você
             clicar em "Executar"?
@@ -5515,7 +5528,8 @@ pt-PT:
         - text: BB-8 irá se mover 5 vezes e pegará toda a sucata
           correct: true
           feedback: Correto!
-        - feedback: Incorreto. O bloco repetir irá mover BB-8 para frente 5 vezes.
+        - text: O BB-8 moverá apenas 3 espaços.
+          feedback: Incorreto. O bloco repetir irá mover BB-8 para frente 5 vezes.
         questions:
         - text: O que acha que vai acontecer quando você clicar em "Executar"?
       courseC_multi_starWars_predict2_2021:
@@ -5530,7 +5544,8 @@ pt-PT:
         - text: BB-8 irá coletar todos os pedaços de metal sem nenhum problema.
           feedback: Incorreto. O primeiro loop só permite que o BB-8 avance 2 espaços,
             quando precisa avançar 3 espaços.
-        - feedback: Incorreto. O primeiro loop só permite que o BB-8 avance 2 espaços,
+        - text: O BB-8 virará na direção errada após o primeiro loop.
+          feedback: Incorreto. O primeiro loop só permite que o BB-8 avance 2 espaços,
             quando precisa avançar 3 espaços.
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá quando você
@@ -5546,7 +5561,8 @@ pt-PT:
         - text: C
           feedback: Incorreta. O laço interno faz um pentágono, e o laço externo o
             repete 4 vezes em um círculo.
-        - feedback: Incorreta. O laço interno faz um pentágono, e o laço externo o
+        - text: Nenhuma das opções acima
+          feedback: Incorreta. O laço interno faz um pentágono, e o laço externo o
             repete 4 vezes em um círculo.
         questions:
         - text: Olhe com atenção o código abaixo. Qual desenho será feito quando você
@@ -5571,7 +5587,8 @@ pt-PT:
         - text: 'A abelha se moverá para a nuvem e não fará nada, não importa o quê. '
           feedback: Incorreta. O bloco 'if na flor' assegura que a abelha tentará
             obter néctar se houver uma flor embaixo da nuvem.
-        - feedback: Incorreto. O bloco 'se na flor' assegura que a abelha só tentará
+        - text: 'A abelha não alcançará a nuvem. '
+          feedback: Incorreto. O bloco 'se na flor' assegura que a abelha só tentará
             obter néctar se houver uma flor embaixo da nuvem.
         questions:
         - text: A nuvem está bloqueando a vista. Poderia haver uma flor sob esta nuvem.
@@ -5610,7 +5627,8 @@ pt-PT:
         - text: A abelha tentará obter mel de ambas as flores e do favo de mel.
           feedback: Incorreto. O bloco "se na flor" permite que a abelha pegue néctar
             em cada flor e faça mel em cada colmeia.
-        - feedback: Incorreto. O bloco "se na flor" permite que a abelha pegue néctar
+        - text: A abelha tentará obter mel e néctar das flores e do favo de mel.
+          feedback: Incorreto. O bloco "se na flor" permite que a abelha pegue néctar
             em cada flor e faça mel em cada colmeia.
         questions:
         - text: 'Observe atentamente o código abaixo. O que você acha que acontecerá
@@ -5627,7 +5645,8 @@ pt-PT:
         - text: A abelha coletará todo o nectar.
           correct: true
           feedback: Correto!
-        - feedback: Incorreto. A abelha faz o laço da ação em laço de avançar e coletar
+        - text: A abelha virará na direção errada.
+          feedback: Incorreto. A abelha faz o laço da ação em laço de avançar e coletar
             o néctar, permitindo que ele resolva o quebra-cabeça.
         questions:
         - text: Olhe atentamente para os laços aninhados abaixo. O que acontecerá
@@ -5664,7 +5683,8 @@ pt-PT:
         - text: A colheitadeira pegará todas as colheitas, exceto a abóbora.
           correct: true
           feedback: Correto!
-        - feedback: Incorreto. O código fará com que a agricultora faça repetidamente
+        - text: A colheitadeira só colherá a abóbora.
+          feedback: Incorreto. O código fará com que a agricultora faça repetidamente
             um padrão de degrau e colha o máximo possível de alface e milho que ela
             encontrar no caminho. Ela não irá colher a abóbora.
         questions:
@@ -5683,7 +5703,8 @@ pt-PT:
         - text: Este código deixará os buracos completamente intocados.
           feedback: Incorreto. O laço `enquanto` irá lidar com qualquer laço, mas
             não há código para remover a sujeira da pilha.
-        - feedback: Incorreto. Não há código para remover a sujeira da pilha.
+        - text: Esse código deixará o último buraco intocado.
+          feedback: Incorreto. Não há código para remover a sujeira da pilha.
         questions:
         - text: Dê uma boa olhada no código abaixo. O que será deixado no final deste
             enigma?
@@ -5699,7 +5720,8 @@ pt-PT:
             vai parar quando não houver pilha.
           correct: true
           feedback: Correto!
-        - feedback: Incorreto. O fazendeiro removerá a sujeira contanto que haja uma
+        - text: O agricultor removerá a sujeira apenas uma vez.
+          feedback: Incorreto. O fazendeiro removerá a sujeira contanto que haja uma
             pilha, depois vai parar quando não houver mais pilha
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá depois que você
@@ -5717,7 +5739,8 @@ pt-PT:
             círculos para sempre.
           feedback: Incorreto. O zombie irá andar no caminho correto e terminará indo
             e voltando eternamente.
-        - feedback: Neste código, o zombie irá andar no caminho correto e terminará
+        - text: O zumbi ficará preso no final do caminho a seguir.
+          feedback: Neste código, o zombie irá andar no caminho correto e terminará
             indo e voltando eternamente.
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá depois que você
@@ -5733,7 +5756,8 @@ pt-PT:
         - text: O pássaro vai avançar e correr em direção ao TNT.
           feedback: Incorreta. O código faz o pássaro avançar enquanto houver um caminho
             seguro, depois vira à esquerda. Continua fazendo isso até atingir o porco!
-        - feedback: "? Incorreto. O código faz a ave avançar enquanto há um caminho
+        - text: O pássaro vira para o lado errado.
+          feedback: "? Incorreto. O código faz a ave avançar enquanto há um caminho
             e depois virar à esquerda. Isso continua acontecendo até chegar ao porco!."
         questions:
         - text: Olhe mais de perto para o código abaixo. O que você acha que acontecerá
@@ -5741,12 +5765,20 @@ pt-PT:
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Nada acontecerá.
-        - {}
-        - correct: true
+          feedback: Incorreto. O alienígena começará a se mover para cima e para baixo
+            na tela.
+        - text: O alienígena começará a patrulhar da direita para a esquerda.
+          feedback: Incorreto. O alienígena começará a se mover para cima e para baixo
+            na tela.
+        - text: O alienígena começará a se mover para cima e para baixo na tela.
+          correct: true
           feedback: Correto!
-        - {}
+        - text: O alienígena desaparecerá da parte superior da tela.
+          feedback: Incorreto. O alienígena azul começará a se mover para cima e para
+            baixo na tela.
         questions:
-        - {}
+        - text: Veja atentamente o código abaixo. O que acontecerá depois que você
+            clicar no alienígena?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: O colheitadora irá pegar duas abóboras.
@@ -5798,30 +5830,48 @@ pt-PT:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Nada acontecerá.
-        - {}
-        - correct: true
+          feedback: Incorreto. A erva daninha começará a cair.
+        - text: A erva daninha flutuará até o topo da tela.
+          feedback: Incorreto. A erva daninha começará a cair.
+        - text: A erva daninha começará a cair.
+          correct: true
           feedback: Correto!
-        - {}
+        - text: A erva daninha piscará e desligará.
+          feedback: Incorreto. A erva daninha começará a cair.
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá depois que você
             clicar em "Executar"?
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: O sprite simplesmente girará para a direita.
+          feedback: Incorreto. O sprite também se moverá para o leste.
+        - text: O sprite simplesmente se moverá para o leste.
+          feedback: Incorreto. O sprite não parou de girar, então ele fará as duas
+            coisas simultaneamente.
+        - text: O sprite girará e se moverá ao mesmo tempo.
+          correct: true
+          feedback: Correto! Ambos os comportamentos acontecerão simultaneamente.
+        - text: O sprite girará primeiro e depois se moverá.
+          feedback: Incorreto. No Sprite Lab, os blocos conectados acontecem imediatamente
+            após cada um deles, portanto, os dois comportamentos ocorrerão simultaneamente.
         questions:
-        - {}
+        - text: Leia o código e faça uma previsão.
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "“Uma pizza está chegando!”"
+          feedback: Incorreto. Os rótulos das variáveis não coincidem.
+        - text: "“Uma refeição está chegando!”"
+          feedback: Incorreto. O rótulo de uma variável nunca é impresso.
+        - text: "“Uma comida chegando!”"
+          feedback: Incorreto. O rótulo de uma variável nunca é impresso.
+        - text: "“Um está chegando!”"
+          correct: true
+          feedback: Correto! Os rótulos das variáveis não coincidem.
+        - text: Nada será impresso.
+          feedback: Incorreto. O evento e o bloco de impressão ainda funcionarão.
         questions:
-        - {}
+        - text: Esse código pode parecer familiar, mas leia-o com atenção. O que será
+            impresso se o usuário digitar “pizza”?
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: O artista desenhará um triângulo com lados de 50 pixels.
@@ -5833,7 +5883,8 @@ pt-PT:
         - text: O artista desenhará três lados abertos com giros de 50 graus.
           feedback: Incorreto. A variável comprimento precisaria ser usada no bloco
             'virar' para isso acontecer.
-        - feedback: A variável `tamanho` está com o valor de 50 e está sendo utilizada
+        - text: O computador solicitará ao usuário um número.
+          feedback: A variável `tamanho` está com o valor de 50 e está sendo utilizada
             no bloco `avance`, para que o artista consiga desenhar um triângulo de
             50 pixels laterais.
         questions:
@@ -5852,7 +5903,8 @@ pt-PT:
         - text: 'A abelha irá se mover em frente e coletará um nectar de cada flor. '
           feedback: Incorreto. O laço de repetição "para" fará com que a abelha colete
             a quantidade correta de nectar, mas apenas chegará à 3 flores.
-        - feedback: Incorreto. O laço de repetição "para" fará com que a abelha colete
+        - text: 'A abelha avançará e coletará um néctar das flores número 1 e 4. '
+          feedback: Incorreto. O laço de repetição "para" fará com que a abelha colete
             a quantidade correta de nectar, mas apenas chegará à 3 flores.
         questions:
         - text: Leia o código abaixo. O que acontecerá quando você clicar em "Executar"?
@@ -5862,22 +5914,49 @@ pt-PT:
 
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ambos os aviões se moverão um espaço ao longo da grade e depois pararão.
+          feedback: Incorreto. Esses sprites têm “comportamentos” que continuam funcionando
+            até serem instruídos a parar.
+        - text: Ambos os aviões começarão a se mover e não pararão.
+          correct: true
+          feedback: Correto! Esses comportamentos fazem com que os aviões comecem
+            a se mover e continuem em movimento.
+        - text: Um avião se moverá primeiro e o outro se moverá depois.
+          feedback: Incorreto. Cada bloco de código no Sprite Lab é executado instantaneamente
+            após o próximo.
+        - text: Os aviões cairão.
+          feedback: Incorreto. Os aviões não estão posicionados de forma a fazê-los
+            se tocar.
         questions:
-        - {}
+        - text: Leia o código e faça uma previsão.
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: O programa imprimirá “Olá, nome!”
+          feedback: Incorreto. O bloco de nomes será substituído por tudo o que você
+            digitar.
+        - text: O programa o cumprimentará com o nome que você digitar.
+          correct: true
+          feedback: Correto! O que você digita é usado no lugar do bloco de nomes.
+        - text: O sprite mudará de tamanho.
+          feedback: Incorreto. O texto é impresso na tela.
+        - text: O computador fará outra pergunta.
+          feedback: Incorreto. Apenas uma pergunta é feita logo no início do programa.
         questions:
-        - {}
+        - text: 'Este programa permite que você responda a uma pergunta digitando
+            com o teclado. O bloco `imprimir` mostra o texto na tela. Faça uma previsão:
+            o que acontecerá depois de responder à pergunta?'
       courseF_variables_stop:
         content1: descrição aqui
+        markdown: "# Pare!\n\n## Tem certeza de que está pronto para seguir em frente?
+          \n\n\nNo próximo nível, você começará a escrever o código do seu projeto.
+          Isso funciona melhor se você já tiver um plano.\n\nSeu plano completo deve
+          incluir:\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* O tipo de projeto
+          que você está construindo. Por exemplo, um cartão comemorativo, um chatbot
+          ou uma história em branco.\n* Uma lista de perguntas que você fará ao usuário.\n*
+          O outro texto que você exibirá na tela.\n* Uma descrição ou desenho dos
+          sprites de que você precisará (e seus comportamentos).\n\nSe você não tem
+          certeza se está pronto para seguir em frente, consulte seu professor!\n"
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: O artista resolverá o quebra-cabeça corretamente.
@@ -5938,7 +6017,8 @@ pt-PT:
         - text: Laurel coletará todo o tesouro.
           feedback: Incorreta. Laurel tenta recolher o tesouro onde não há nenhum
             e isso causa um erro.
-        - feedback: Incorreta. Laurel tenta recolher o tesouro onde não há nenhum
+        - text: Laurel coletará 1 peça de tesouro usando este código.
+          feedback: Incorreta. Laurel tenta recolher o tesouro onde não há nenhum
             e isso causa um erro.
         questions:
         - text: Olhe para este código cuidadosamente. O que você acha que irá acontecer
@@ -10164,6 +10244,7 @@ pt-PT:
       courseD_EOC_2021:
         description: Você alcançou a última lição do Curso D! Escolha um projeto para
           criar.
+        display_name: Projeto de fim de curso
       courseD_external_binary1:
         markdown: "<h1>Desenhe com Binário</h1>\n \n<h3>Binário é uma forma de representar
           informação usando somente duas opções. Neste caso, <b>desligado</b> e <b>ligado</b>.\n<br/>\nAqui,
@@ -10225,8 +10306,10 @@ pt-PT:
         description: Você alcançou o final do Curso E! Escolha um projeto para criar.
       courseE_EOC_2021:
         description: Você alcançou o final do Curso E! Escolha um projeto para criar.
+        display_name: Projeto de fim de curso
       courseE_EOC_examples_2021:
         description: Você alcançou o final do Curso E! Escolha um projeto para criar.
+        display_name: Projeto de fim de curso
       courseE_project_exemplars_2019:
         content1: Teste a Página da Apostila de Markdown
         markdown: |+
@@ -10291,8 +10374,10 @@ pt-PT:
         description: Você alcançou o final do Curso F! Escolha um projeto para criar.
       courseF_EOC_2021:
         description: Você alcançou o final do Curso F! Escolha um projeto para criar.
+        display_name: Projeto de fim de curso
       courseF_EOC_examples_2021:
         description: Você alcançou o final do Curso F! Escolha um projeto para criar.
+        display_name: Projeto de fim de curso
       courseF_external_variableConstant:
         markdown: |+
           <h2>Mais sobre Variáveis</h2>
@@ -10342,6 +10427,11 @@ pt-PT:
           que é possível. Ao final deste curso, você conseguirá criar os seus próprios
           projetos como esses... e mais!
         display_name: Aplicativos Sprite Lab
+        teacher_markdown: |
+          # Visão geral do nível de escolha
+          Os níveis de escolha fornecem um menu de níveis adicionais para os alunos concluírem. Os alunos devem concluir pelo menos um dos subníveis aqui, mas podem concluir quantos quiserem (ou você).
+
+          As opções aqui levam os alunos a exemplos de aplicativos que eles podem explorar. Essa atividade deve ser coordenada com a planilha Exploring Apps, encontrada no [plano de aula] (.. /./).
       courseF_markdown_algorithms_end:
         content1: Teste a Página da Apostila de Markdown
         markdown: "# **Você acabou de aprender \"algoritmos\"!**  \n\n\n\n### **Um
@@ -10785,6 +10875,7 @@ pt-PT:
           ##Como você vai com segurança à lugares online?
       express_EOC_2021:
         description: Você alcançou o final do Curso E! Escolha um projeto para criar.
+        display_name: Projeto de fim de curso
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -11214,7 +11305,7 @@ pt-PT:
         - {}
         - {}
         - {}
-        - {}
+        - text: Nenhuma das opções acima
       CSD Games Properties multi predict_2022:
         answers:
         - {}
@@ -18320,7 +18411,8 @@ pt-PT:
         - text: O artista desenhará um quadrado.
           correct: true
           feedback: Certo!
-        - {}
+        - text: O artista desenhará um pentágono
+          feedback: Incorreto. O artista desenha um quadrado.
         questions:
         - text: Olhe cuidadosamente para o código abaixo. O que acontecerá quando
             você clicar em "Executar"?
@@ -18346,7 +18438,7 @@ pt-PT:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: Scrat não se moverá do primeiro bloco.
         questions:
         - {}
       courseC_multi_maze_programming8_predict12022:
@@ -18358,7 +18450,8 @@ pt-PT:
           feedback: Certo!
         - text: O pássaro vai correr para o TNT.
           feedback: Incorreto. Este código leva o pássaro perfeitamente ao porco.
-        - feedback: Incorreto. Este código leva o pássaro perfeitamente ao porco.
+        - text: O pássaro vai correr contra a parede.
+          feedback: Incorreto. Este código leva o pássaro perfeitamente ao porco.
         questions:
         - text: Leia o código abaixo com muito cuidado. O que acontecerá quando você
             clicar em "Executar"?
@@ -18371,7 +18464,8 @@ pt-PT:
         - text: BB-8 irá se mover 5 vezes e pegará toda a sucata
           correct: true
           feedback: Certo!
-        - feedback: Incorreto. O bloco repetir irá mover BB-8 para frente 5 vezes.
+        - text: O BB-8 moverá apenas 3 espaços.
+          feedback: Incorreto. O bloco repetir irá mover BB-8 para frente 5 vezes.
         questions:
         - text: O que acha que vai acontecer quando você clicar em "Executar"?
       courseC_multi_starWars_predict22022:
@@ -18386,7 +18480,8 @@ pt-PT:
         - text: BB-8 irá coletar todos os pedaços de metal sem nenhum problema.
           feedback: Incorreto. O primeiro loop só permite que o BB-8 avance 2 espaços,
             quando precisa avançar 3 espaços.
-        - feedback: Incorreto. O primeiro loop só permite que o BB-8 avance 2 espaços,
+        - text: O BB-8 virará na direção errada após o primeiro loop.
+          feedback: Incorreto. O primeiro loop só permite que o BB-8 avance 2 espaços,
             quando precisa avançar 3 espaços.
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá quando você
@@ -18405,7 +18500,8 @@ pt-PT:
         - text: C
           feedback: Incorreta. O laço interno faz um pentágono, e o laço externo o
             repete 4 vezes em um círculo.
-        - feedback: Incorreta. O laço interno faz um pentágono, e o laço externo o
+        - text: Nenhuma das opções acima
+          feedback: Incorreta. O laço interno faz um pentágono, e o laço externo o
             repete 4 vezes em um círculo.
         markdown: |+
           <table>
@@ -18430,7 +18526,8 @@ pt-PT:
         - text: 'A abelha se moverá para a nuvem e não fará nada, não importa o quê. '
           feedback: Incorreta. O bloco 'if na flor' assegura que a abelha tentará
             obter néctar se houver uma flor embaixo da nuvem.
-        - feedback: Incorreto. O bloco 'se na flor' assegura que a abelha só tentará
+        - text: 'A abelha não alcançará a nuvem. '
+          feedback: Incorreto. O bloco 'se na flor' assegura que a abelha só tentará
             obter néctar se houver uma flor embaixo da nuvem.
         questions:
         - text: A nuvem está bloqueando a vista. Poderia haver uma flor sob esta nuvem.
@@ -18448,7 +18545,8 @@ pt-PT:
         - text: A abelha tentará obter mel de ambas as flores e do favo de mel.
           feedback: Incorreto. O bloco "se na flor" permite que a abelha pegue néctar
             em cada flor e faça mel em cada colmeia.
-        - feedback: Incorreto. O bloco "se na flor" permite que a abelha pegue néctar
+        - text: A abelha tentará obter mel e néctar das flores e do favo de mel.
+          feedback: Incorreto. O bloco "se na flor" permite que a abelha pegue néctar
             em cada flor e faça mel em cada colmeia.
         questions:
         - text: 'Observe atentamente o código abaixo. O que você acha que acontecerá
@@ -18465,7 +18563,8 @@ pt-PT:
         - text: A abelha coletará todo o nectar.
           correct: true
           feedback: Certo!
-        - feedback: Incorreto. A abelha faz o laço da ação em laço de avançar e coletar
+        - text: A abelha virará na direção errada.
+          feedback: Incorreto. A abelha faz o laço da ação em laço de avançar e coletar
             o néctar, permitindo que ele resolva o quebra-cabeça.
         questions:
         - text: Olhe atentamente para os laços aninhados abaixo. O que acontecerá
@@ -18502,7 +18601,8 @@ pt-PT:
         - text: A colheitadeira pegará todas as colheitas, exceto a abóbora.
           correct: true
           feedback: Certo!
-        - feedback: Incorreto. O código fará com que a agricultora faça repetidamente
+        - text: A colheitadeira só colherá a abóbora.
+          feedback: Incorreto. O código fará com que a agricultora faça repetidamente
             um padrão de degrau e colha o máximo possível de alface e milho que ela
             encontrar no caminho. Ela não irá colher a abóbora.
         markdown: |
@@ -18521,7 +18621,8 @@ pt-PT:
         - text: Este código deixará os buracos completamente intocados.
           feedback: Incorreto. O laço `enquanto` irá lidar com qualquer laço, mas
             não há código para remover a sujeira da pilha.
-        - feedback: Incorreto. Não há código para remover a sujeira da pilha.
+        - text: Esse código deixará o último buraco intocado.
+          feedback: Incorreto. Não há código para remover a sujeira da pilha.
         questions:
         - text: Dê uma boa olhada no código abaixo. O que será deixado no final deste
             enigma?
@@ -18537,7 +18638,8 @@ pt-PT:
             vai parar quando não houver pilha.
           correct: true
           feedback: Certo!
-        - feedback: Incorreto. O fazendeiro removerá a sujeira contanto que haja uma
+        - text: O agricultor removerá a sujeira apenas uma vez.
+          feedback: Incorreto. O fazendeiro removerá a sujeira contanto que haja uma
             pilha, depois vai parar quando não houver mais pilha
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá depois que você
@@ -18549,7 +18651,7 @@ pt-PT:
         - text: O zumbi chegará até o girassol.
         - text: O zumbi vai virar à direita no primeiro caminho e ficar andando em
             círculos para sempre.
-        - {}
+        - text: O zumbi ficará preso no final do caminho a seguir.
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá depois que você
             clicar em "Executar"?
@@ -18564,7 +18666,8 @@ pt-PT:
         - text: O pássaro vai avançar e correr em direção ao TNT.
           feedback: Incorreta. O código faz o pássaro avançar enquanto houver um caminho
             seguro, depois vira à esquerda. Continua fazendo isso até atingir o porco!
-        - feedback: "? Incorreto. O código faz a ave avançar enquanto há um caminho
+        - text: O pássaro vira para o lado errado.
+          feedback: "? Incorreto. O código faz a ave avançar enquanto há um caminho
             e depois virar à esquerda. Isso continua acontecendo até chegar ao porco!."
         questions:
         - text: Olhe mais de perto para o código abaixo. O que você acha que acontecerá
@@ -18608,21 +18711,32 @@ pt-PT:
       courseE_swim_fish_behavior_predict12022:
         answers:
         - text: Nada acontecerá.
-        - {}
-        - correct: true
+          feedback: Incorreto. A erva daninha começará a cair.
+        - text: A erva daninha flutuará até o topo da tela.
+          feedback: Incorreto. A erva daninha começará a cair.
+        - text: A erva daninha começará a cair.
+          correct: true
           feedback: Certo!
-        - {}
+        - text: A erva daninha piscará e desligará.
+          feedback: Incorreto. A erva daninha começará a cair.
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá depois que você
             clicar em "Executar"?
       courseF_events_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: O sprite simplesmente girará para a direita.
+          feedback: Incorreto. O sprite também se moverá para o leste.
+        - text: O sprite simplesmente se moverá para o leste.
+          feedback: Incorreto. O sprite não parou de girar, então ele fará as duas
+            coisas simultaneamente.
+        - text: O sprite girará e se moverá ao mesmo tempo.
+          correct: true
+          feedback: Correto! Ambos os comportamentos acontecerão simultaneamente.
+        - text: O sprite girará primeiro e depois se moverá.
+          feedback: Incorreto. No Sprite Lab, os blocos conectados acontecem imediatamente
+            após cada um deles, portanto, os dois comportamentos ocorrerão simultaneamente.
         questions:
-        - {}
+        - text: Leia o código e faça uma previsão.
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
@@ -18635,13 +18749,20 @@ pt-PT:
         display_name: Aplicativos Sprite Lab
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "“Uma pizza está chegando!”"
+          feedback: Incorreto. Os rótulos das variáveis não coincidem.
+        - text: "“Uma refeição está chegando!”"
+          feedback: Incorreto. O rótulo de uma variável nunca é impresso.
+        - text: "“Uma comida chegando!”"
+          feedback: Incorreto. O rótulo de uma variável nunca é impresso.
+        - text: "“Um está chegando!”"
+          correct: true
+          feedback: Correto! Os rótulos das variáveis não coincidem.
+        - text: Nada será impresso.
+          feedback: Incorreto. O evento e o bloco de impressão ainda funcionarão.
         questions:
-        - {}
+        - text: Esse código pode parecer familiar, mas leia-o com atenção. O que será
+            impresso se o usuário digitar “pizza”?
       courseF_multi_artist_variables3a_predict12022:
         answers:
         - text: O artista desenhará um triângulo com lados de 50 pixels.
@@ -18653,7 +18774,8 @@ pt-PT:
         - text: O artista desenhará três lados abertos com giros de 50 graus.
           feedback: Incorreto. A variável comprimento precisaria ser usada no bloco
             'virar' para isso acontecer.
-        - feedback: A variável `tamanho` está com o valor de 50 e está sendo utilizada
+        - text: O computador solicitará ao usuário um número.
+          feedback: A variável `tamanho` está com o valor de 50 e está sendo utilizada
             no bloco `avance`, para que o artista consiga desenhar um triângulo de
             50 pixels laterais.
         questions:
@@ -18672,7 +18794,8 @@ pt-PT:
         - text: 'A abelha irá se mover em frente e coletará um nectar de cada flor. '
           feedback: Incorreto. O laço de repetição "para" fará com que a abelha colete
             a quantidade correta de nectar, mas apenas chegará à 3 flores.
-        - feedback: Incorreto. O laço de repetição "para" fará com que a abelha colete
+        - text: 'A abelha avançará e coletará um néctar das flores número 1 e 4. '
+          feedback: Incorreto. O laço de repetição "para" fará com que a abelha colete
             a quantidade correta de nectar, mas apenas chegará à 3 flores.
         markdown: |+
           Ah! O uso de laços de repetição `para` deixam esse desafio muito mais fácil!
@@ -18682,12 +18805,21 @@ pt-PT:
         - text: Leia o código abaixo. O que acontecerá quando você clicar em "Executar"?
       courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ambos os aviões se moverão um espaço ao longo da grade e depois pararão.
+          feedback: Incorreto. Esses sprites têm “comportamentos” que continuam funcionando
+            até serem instruídos a parar.
+        - text: Ambos os aviões começarão a se mover e não pararão.
+          correct: true
+          feedback: Correto! Esses comportamentos fazem com que os aviões comecem
+            a se mover e continuem em movimento.
+        - text: Um avião se moverá primeiro e o outro se moverá depois.
+          feedback: Incorreto. Cada bloco de código no Sprite Lab é executado instantaneamente
+            após o próximo.
+        - text: Os aviões cairão.
+          feedback: Incorreto. Os aviões não estão posicionados de forma a fazê-los
+            se tocar.
         questions:
-        - {}
+        - text: Leia o código e faça uma previsão.
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -18706,14 +18838,32 @@ pt-PT:
         - {}
       courseF_variables_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: O programa imprimirá “Olá, nome!”
+          feedback: Incorreto. O bloco de nomes será substituído por tudo o que você
+            digitar.
+        - text: O programa o cumprimentará com o nome que você digitar.
+          correct: true
+          feedback: Correto! O que você digita é usado no lugar do bloco de nomes.
+        - text: O sprite mudará de tamanho.
+          feedback: Incorreto. O texto é impresso na tela.
+        - text: O computador fará outra pergunta.
+          feedback: Incorreto. Apenas uma pergunta é feita logo no início do programa.
         questions:
-        - {}
+        - text: 'Este programa permite que você responda a uma pergunta digitando
+            com o teclado. O bloco `imprimir` mostra o texto na tela. Faça uma previsão:
+            o que acontecerá depois de responder à pergunta?'
       courseF_variables_stop2022_2022_pilot_-2022-2:
         content1: descrição aqui
+        markdown: "# Pare!\n\n## Tem certeza de que está pronto para seguir em frente?
+          \n\n\nNo próximo nível, você começará a escrever o código do seu projeto.
+          Isso funciona melhor se você já tiver um plano.\n\nSeu plano completo deve
+          incluir:\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* O tipo de projeto
+          que você está construindo. Por exemplo, um cartão comemorativo, um chatbot
+          ou uma história em branco.\n* Uma lista de perguntas que você fará ao usuário.\n*
+          O outro texto que você exibirá na tela.\n* Uma descrição ou desenho dos
+          sprites de que você precisará (e seus comportamentos).\n\nSe você não tem
+          certeza se está pronto para seguir em frente, consulte seu professor!\n"
       coursee_prediction_artistfunction22022:
         answers:
         - text: O artista resolverá o quebra-cabeça corretamente.
@@ -18786,8 +18936,176 @@ pt-PT:
         - text: Laurel coletará todo o tesouro.
           feedback: Incorreta. Laurel tenta recolher o tesouro onde não há nenhum
             e isso causa um erro.
-        - feedback: Incorreta. Laurel tenta recolher o tesouro onde não há nenhum
+        - text: Laurel coletará 1 peça de tesouro usando este código.
+          feedback: Incorreta. Laurel tenta recolher o tesouro onde não há nenhum
             e isso causa um erro.
         questions:
         - text: Olhe para este código cuidadosamente. O que você acha que irá acontecer
             quando este programa for executado?
+      CourseE_Artist_Practice_2022:
+        description: Ótimo trabalho até agora! Escolha sua próxima atividade. Complete
+          o máximo que puder. Continue praticando com loops e o artista!
+        display_name: Prática artística
+      CourseE_Lesson_11_Artist_Practice_2022:
+        display_name: Prática artística
+      CourseE_Lesson_7_Artist_Practice_2022:
+        display_name: Prática artística
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |
+          # Histórias de espaço em branco
+
+          Nesta lição, você aprenderá a usar e escrever histórias em espaço em branco. Assista a este vídeo para saber como isso se conecta à ciência da computação.
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: |
+          # Histórias de espaço em branco
+
+          Nesta lição, você aprenderá a usar e escrever histórias em espaço em branco. Assista a este vídeo para saber como isso se conecta à ciência da computação.
+      SimonSays-Unplugged_2021:
+        markdown: |
+          # Siga o algoritmo
+
+          Jogue um jogo e pense em quais comandos são necessários para obter o resultado certo.
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      courseAB_EOC2022:
+        description: Você chegou à última lição! Escolha um projeto para criar.
+      courseAB_EOC_2021:
+        description: Você chegou à última lição! Escolha um projeto para criar.
+        display_name: Projeto de fim de curso
+      courseB_EOC2022:
+        description: Você chegou à última lição! Escolha um projeto para criar.
+      courseB_EOC_2021:
+        description: Você chegou à última lição! Escolha um projeto para criar.
+        display_name: Projeto de fim de curso
+      courseD_EOC_examples2022:
+        description: Você está prestes a começar seu projeto final. Antes de começar,
+          passe algum tempo analisando os projetos de exemplo.
+        display_name: Exemplos de projetos
+      courseD_EOC_examples_2021:
+        description: Você está prestes a começar seu projeto final. Antes de começar,
+          passe algum tempo analisando os projetos de exemplo.
+        display_name: Exemplos de projetos
+      courseF_EOC_samples2022:
+        description: Você está prestes a começar seu projeto final. Antes de começar,
+          passe algum tempo analisando os projetos de exemplo.
+      courseF_EOC_samples_2021:
+        description: Você está prestes a começar seu projeto final. Antes de começar,
+          passe algum tempo analisando os projetos de exemplo.
+        display_name: Projeto de fim de curso
+      courseF_artist_practice:
+        description: Ótimo trabalho até agora! Escolha sua próxima atividade. Complete
+          o máximo que puder. Continue praticando com loops e o artista!
+        display_name: Prática artística
+      courseF_beeFor_practice:
+        description: Ótimo trabalho até agora! Escolha sua próxima atividade. Complete
+          o máximo que puder. Continue praticando com for loops and the bee!
+        display_name: A prática de abelhas
+      courseF_beeVar_practice:
+        description: Ótimo trabalho até agora! Escolha sua próxima atividade. Complete
+          o máximo que puder. Continue praticando com variáveis e com a abelha!
+        display_name: A prática de abelhas
+      courseF_bee_practice:
+        description: Ótimo trabalho até agora! Escolha sua próxima atividade. Complete
+          o máximo que puder. Continue praticando com loops e a abelha!
+        display_name: A prática de abelhas
+      courseF_collector_samples_2022_pilot_-2022-2:
+        display_name: Exploração - Exemplos de programas
+      courseF_events_freeplay:
+        description: Agora você pode usar o que aprendeu para tornar seu projeto ainda
+          melhor! Continue adicionando ao seu programa ou comece algo novo!
+        display_name: Eventos - Jogo grátis
+      courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: Agora você pode usar o que aprendeu para tornar seu projeto ainda
+          melhor! Continue adicionando ao seu programa ou comece algo novo!
+        display_name: Eventos - Jogo grátis
+      courseF_events_practice:
+        description: Ótimo trabalho até agora! Escolha sua próxima atividade. Complete
+          o máximo que puder. Continue praticando com os eventos!
+        display_name: Prática de eventos
+      courseF_events_practice2022_2022_pilot_-2022-2:
+        description: Ótimo trabalho até agora! Escolha sua próxima atividade. Complete
+          o máximo que puder. Continue praticando com os eventos!
+        display_name: Prática de eventos
+      courseF_sprites_freeplay:
+        description: É a sua vez de criar o que quiser! Que tipo de projeto você fará?
+        display_name: Sprites - Jogo grátis
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2:
+        description: É a sua vez de criar o que quiser! Que tipo de projeto você fará?
+        display_name: Sprites - Jogo grátis
+      courseF_sprites_practice:
+        description: Ótimo trabalho até agora! Escolha sua próxima atividade. Complete
+          o máximo que puder. Continue praticando com sprites e comportamentos!
+        display_name: Prática de Sprites
+      courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: Ótimo trabalho até agora! Escolha sua próxima atividade. Complete
+          o máximo que puder. Continue praticando com sprites e comportamentos!
+        display_name: Prática de Sprites
+      courseF_text_practice:
+        description: Ótimo trabalho até agora! Escolha sua próxima atividade. Complete
+          o máximo que puder. Continue praticando com textos e instruções!
+        display_name: Prática de texto e instruções
+      courseF_text_practice2022_2022_pilot_-2022-2:
+        description: Ótimo trabalho até agora! Escolha sua próxima atividade. Complete
+          o máximo que puder. Continue praticando com textos e instruções!
+        display_name: Prática de texto e instruções
+      courseF_variables_projects:
+        description: Você criará um cartão comemorativo, um chatbot ou uma história
+          em branco. Se você já concluiu a\ "Parte 1\” do seu projeto, vá para a\
+          "Parte 2\”.
+        display_name: Escolha um projeto
+        teacher_markdown: |
+          # Visão geral do nível de escolha
+          Os níveis de escolha fornecem um menu de níveis adicionais para os alunos concluírem. Os alunos devem concluir pelo menos um dos subníveis aqui, mas devem ser incentivados a concluir **dois** níveis para o mesmo projeto.
+
+          Os alunos podem precisar de instruções muito claras para entender como navegar pelas opções aqui. Para cada uma das opções de projeto, há dois subníveis aqui. Para começar, os alunos devem escolher um dos níveis marcados como “Parte 1". Quando terminarem esse nível, eles devem voltar aqui e selecionar “Parte 2" do projeto*mesmo*. O primeiro nível de cada escolha fornecerá feedback aos alunos à medida que eles reunirem os componentes básicos de seu projeto. O segundo nível é um “jogo gratuito” que visa permitir que os alunos façam as alterações que quiserem no código.
+      courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: Você criará um cartão comemorativo, um chatbot ou uma história
+          em branco. Se você já concluiu a\ "Parte 1\” do seu projeto, vá para a\
+          "Parte 2\”.
+        display_name: Escolha um projeto
+      courseF_variables_samples:
+        description: Você criará um cartão comemorativo, um chatbot ou uma história
+          em branco. Antes de começar, explore os exemplos de projetos abaixo para
+          ver o que você está interessado em criar. Pressione\ "Concluir\” quando
+          estiver pronto para começar a planejar seu próprio programa.
+        display_name: Exploração - Exemplos de programas
+        teacher_markdown: |
+          # Visão geral do nível de escolha
+          Os níveis de escolha fornecem um menu de níveis adicionais para os alunos concluírem. Os alunos devem concluir pelo menos um dos subníveis aqui, mas podem concluir quantos quiserem (ou você).
+
+          Os alunos devem examinar esses projetos cuidadosamente antes de decidir o que desejam criar. Você pode vê-los juntos em classe ou fazer com que os alunos explorem por conta própria.
+      courseF_variables_samples2022_2022_pilot_-2022-2:
+        description: Você criará um cartão comemorativo, um chatbot ou uma história
+          em branco. Antes de começar, explore os exemplos de projetos abaixo para
+          ver o que você está interessado em criar. Pressione\ "Concluir\” quando
+          estiver pronto para começar a planejar seu próprio programa.
+        display_name: Exploração - Exemplos de programas
+      express_EOC_examples2022:
+        description: Você está prestes a começar seu projeto final. Antes de começar,
+          passe algum tempo analisando os projetos de exemplo.
+        display_name: Exemplos de projetos
+      express_EOC_examples_2021:
+        description: Você está prestes a começar seu projeto final. Antes de começar,
+          passe algum tempo analisando os projetos de exemplo.
+        display_name: Exemplos de projetos
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Nada acontecerá.
+          feedback: Incorreto. A erva daninha começará a cair.
+        - text: A erva daninha flutuará até o topo da tela.
+          feedback: Incorreto. A erva daninha começará a cair.
+        - text: A erva daninha começará a cair.
+          correct: true
+          feedback: Certo!
+        - text: A erva daninha piscará e desligará.
+          feedback: Incorreto. A erva daninha começará a cair.
+        questions:
+        - text: Observe atentamente o código abaixo. O que acontecerá depois que você
+            clicar em "Executar"?

@@ -4,6 +4,8 @@ el:
       Actions: Ενέργειες
       Advanced: Για προχωρημένους
       Behaviors: Συμπεριφορές
+      'Behaviors ': 'Συμπεριφορές '
+      Boolean: Δυαδική τιμή
       Brushes: Πινέλα
       Category: Κατηγορία
       Color: Χρώμα
@@ -25,9 +27,13 @@ el:
       Logic: Λογική
       Loops: Βρόχοι
       Math: Μαθηματικά
+      Number: Αριθμός
       Numbers: Αριθμοί
+      Picker: Επιλογέας
+      Prebuilt: Προκατασκευασμένα
       Properties: Ιδιότητες
       Sprites: Χαρακτήρας
+      String: Συμβολοσειρά
       Text: κείμενο
       Variables: Μεταβλητές
       'Variables ': 'Μεταβλητές '

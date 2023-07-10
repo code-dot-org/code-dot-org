@@ -54,6 +54,11 @@
       }
     },
     "bike_sharing": {
+      "fields": {
+        "Month": {
+          "id": "Lună"
+        }
+      },
       "card": {
         "context": {
           "potentialMisuses": "[șir gol]"
@@ -295,6 +300,13 @@
       "card": {
         "context": {
           "potentialMisuses": "[șir gol]"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Acvatic"
         }
       }
     },

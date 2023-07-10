@@ -16998,3 +16998,52 @@ fr-FR:
       csf_digital_trails2022:
         markdown: "# Suis les Traces Numériques\n\n## Quelles informations est-il
           sûr d'avoir dans son empreinte numérique ? \n"
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Rien ne se passera.
+          feedback: Incorrect. Le virevoltant se mettra à rouler.
+        - text: Le virevoltant va voleter vers le haut de l'écran.
+          feedback: Incorrect. Le virevoltant se mettra à rouler.
+        - text: Le virevoltant se mettra à rouler.
+          correct: true
+          feedback: Correct !
+        - text: Le virevoltant va clignoter.
+          feedback: Incorrect. Le virevoltant se mettra à rouler.
+        questions:
+        - text: Regarde de près le code ci-dessous. Que va-t-il se passer lorsqu'on
+            clique sur « Démarrer » ?
+      OPD-K5 CS Courses_dani:
+        markdown: "# Planification > Débuter avec Code.org\n\n\n## Étape 1 : Choisir
+          un cours\nTous nos cours - des plus jeunes aux plus âgés - sont répertoriés
+          dans notre **[catalogue de cours](https://studio.code.org/courses)**. Pour
+          retrouver les cours de CS Fundamentals que vous avez étudiés, rendez-vous
+          sur notre **[page de cours élémentaires](https://code.org/educate/curriculum/elementary-school)**
+          et faites défiler la page jusqu'à la section \" Cours \". Tous nos cours
+          sont gratuits. Discutez avec les collègues de votre école pour déterminer
+          comment le programme du cours peut être intégré à divers modules.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Étape 2 : Configurer votre section de classe\nConfigurez une section de
+          classe afin de pouvoir suivre les progrès de vos élèves, imprimez et distribuez
+          des cartes de connexion à vos élèves, gérez leurs comptes et attribuez-leur
+          des attestations qu'ils pourront rapporter à la maison lorsqu'ils auront
+          terminé le cours. Cliquez sur ce lien pour **[voir une brève vidéo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          qui montre comment configurer votre premier cours d'informatique sur Code.org.
+          Vous trouverez également les étapes à suivre dans **[cet article de support](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Étape 3 : Assigner le cours à votre section\nCliquez sur le cours que vous
+          dispensez. Un écran ressemblant à celui ci-dessous devrait s'afficher. Vous
+          devrez alors cliquer sur \"Assigner le cours\" et assigner ce cours à l'une
+          de vos sections. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Étape 4 : Commencez à enseigner ! \nUne seule leçon suffit pour introduire
+          les concepts de l'informatique dans votre classe. Dès que vous constatez
+          que vos élèves s'enthousiasment pour l'informatique, allez plus loin en
+          élaborant des plans de cours quotidiens pour guider vos élèves, en organisant
+          des activités débranchées à réaliser sans ordinateur et en participant à
+          des forums afin d'entrer en contact avec d'autres enseignants.\n"

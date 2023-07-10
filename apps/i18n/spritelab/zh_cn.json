@@ -87,7 +87,7 @@
   "cscAdaptationsMoveOctopusToPlant": "别忘了使用箭头键移动你的章鱼来触摸植物，这样它就会换上服装来融入其中。",
   "cscAdaptationsNeedWhenClicked": "看来你添加了一个行为但是当 sprite 先点击</code> 个方块时忘记添加 <code style=\"color:black; background-color:#6AF36C\">了。确保在事件块之后添加行为块。",
   "cscAdaptationsNight": "当箭头按下</code> 方块时，确保在 <code style=\"color:black; background-color:#6AF36C\">下方添加夜间背景。",
-  "cscAdaptationsSeaweed": "确保你的章鱼变的颜色和它碰到的海藻一样",
+  "cscAdaptationsRightArrowKey": "确保按“运行”后按箭头键。你可以单击播放区域下的橙色按钮，也可以按键盘上的键。",
   "cscAdaptationsSetBackground": "确保设置背景。",
   "cscAdaptationsSetBehavior": "在设置精灵的大小之后，请务必设置精灵的行为。",
   "cscAdaptationsSetFastSpeed": "确保将猎豹精灵的速度设置为快速。",

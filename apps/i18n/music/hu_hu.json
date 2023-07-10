@@ -11,10 +11,13 @@
   "blockly_toolboxCategoryFunctions": "Függvények",
   "blockly_toolboxCategoryLogic": "Logika",
   "blockly_toolboxCategoryMath": "Matematika",
-  "blockly_toolboxCategoryPlay": "Lejátszás",
+  "blockly_toolboxCategoryPlay": "Hangok",
   "blockly_toolboxCategoryVariables": "változók",
   "feedback": "Visszajelzés",
   "share": "Megosztás",
   "startOver": "Újrakezdés",
-  "upload": "Feltöltés"
+  "upload": "Feltöltés",
+  "panelHeaderInstructions": "Utasítások",
+  "panelHeaderWorkspace": "Munkaterület: ",
+  "continue": "Tovább"
 }

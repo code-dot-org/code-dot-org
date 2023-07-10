@@ -16,6 +16,20 @@
             "game_lab": {
               "name": "Game Lab",
               "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "雪碧"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "雪碧"
+                    }
+                  }
+                },
                 "mouseWentDown": {
                   "examples": {
                     "Black and White": {
@@ -58,6 +72,27 @@
             "groups": {
               "name": "群組",
               "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "雪碧"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "雪碧"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "雪碧"
+                    }
+                  }
+                },
                 "setColorEach": {
                   "palette_params": {
                     "color": {

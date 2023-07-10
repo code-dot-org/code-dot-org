@@ -85,7 +85,7 @@
   "cscAdaptationsMissingGiraffe": "シーンの最初にキリンのスプライトが表示されていることを確認してください。",
   "cscAdaptationsMissingOctopus": "シーンの最初にタコのスプライトが表示されていることを確認してください。",
   "cscAdaptationsMoveOctopusToPlant": "矢印キーを使ってタコを動かして植物に触れるのを忘れないでください。そうすれば、タコは衣装を変えて溶け込みます。",
-  "cscAdaptationsSeaweed": "タコが触れる海藻と同じ色に変わっていることを確認してください",
+  "cscAdaptationsRightArrowKey": "*「実行（じっこう）」*を押した後、必ず矢印キーを押してください。プレイエリアの下にあるオレンジ色のボタンをクリックするか、キーボードのキーを押してください。",
   "cscAdaptationsSetBackground": "必ず背景を設定してください。",
   "cscAdaptationsSetBehavior": "スプライトのサイズを設定した後に、必ずスプライトの動作を設定してください。",
   "cscAdaptationsSetFastSpeed": "チータースプライトの速度を「高速」に設定してください。",

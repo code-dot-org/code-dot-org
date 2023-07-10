@@ -599,6 +599,18 @@
         "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
           "name": "Darajalar"
         },
+        "e708101d-3a86-4ff0-85a9-f5ec782683fe": {
+          "name": "Isitish: Pssst... Parol nima?"
+        },
+        "e285d097-bd01-4c40-a00c-068a9ace8e8d": {
+          "name": "Baholang: Uh-Oh! Agar... Keyin..."
+        },
+        "56a66744-0946-4350-9942-07e1ed1e0d85": {
+          "name": "Yarating: Parolingizni quvvatlang"
+        },
+        "f7bf636d-a952-4d38-9eea-a4c76532eb8e": {
+          "name": "O'chirib oling: Parol bo'yicha maslahatlar"
+        },
         "dd936731-be2e-45f8-ba99-0dff9935b299": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
@@ -643,6 +655,9 @@
         },
         "e982d792-ed3f-403f-8782-58d0e74eb342": {
           "name": "Qizdirish"
+        },
+        "4960fdd0-1478-40e5-af70-efab13ddd070": {
+          "name": "Ko'prik faoliyati - birini tanlang"
         },
         "f2cc2200-d1d2-4bb2-8b5c-84628e8c42c0": {
           "name": "Asosiy mashg‘ulot"
@@ -715,6 +730,9 @@
         },
         "b287fad2-713e-44c7-9f5a-969089dbbd93": {
           "name": "Wrap Up"
+        },
+        "91d98159-1f12-468b-acf3-5e44b885c44b": {
+          "name": "Iliq "
         },
         "e019b34b-4c36-4f63-9059-e7cdc4b6d36f": {
           "name": "Asosiy mashg‘ulot"
@@ -953,8 +971,32 @@
         "6683243e-d006-4ef6-9f65-a53b80a1ecf6": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "457f5ed8-0041-4bd5-b6e6-800291ae5cf5": {
+          "name": "Isitish: maxfiy super qahramon"
+        },
+        "0ead3881-08bc-4d6c-9fda-5bd889adbb5f": {
+          "name": "O'rganing: Upstander bo'lish"
+        },
+        "069f8d26-8e31-484a-9e8c-3d67add0197d": {
+          "name": "Yarating: Sizning raqamli fuqaroning super qahramoni"
+        },
+        "da7bb20b-3692-45ca-a939-6b44411eea77": {
+          "name": "O'chirib oling: kunni saqlang! Comic Strip"
+        },
         "02ff6b22-0825-41c1-9e77-721f5801fede": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "01746bcd-3c02-43f5-8a35-0a775acc2095": {
+          "name": "Issiqlik: turing, o'tiring"
+        },
+        "6114e1af-1c83-4f1f-add9-a97c2523b343": {
+          "name": "Tahlil qiling: Nima uchun odamlar baham ko'rishadi?"
+        },
+        "d1c5ae68-dd15-4aec-aff6-44d0ea484781": {
+          "name": "Tahlil qiling: xususiymi yoki shaxsiymi?"
+        },
+        "776101b2-57fc-4032-b1b3-1ec318adfbb2": {
+          "name": "O'ramoq: Chiptadan chiqish"
         },
         "74025568-d2f7-4ad1-8196-55a2955dd2f8": {
           "name": "Qo‘shimcha mashg‘ulotlar"
@@ -1153,6 +1195,9 @@
         },
         "133dbbe7-859c-4ce7-a0e4-34d1212dd07b": {
           "name": "O'yin: Hayvonlarning treklari"
+        },
+        "ac5b3240-5c06-438d-b651-7ba0caa67c28": {
+          "name": "Sharh: Ulashish uchun OK?"
         },
         "e0e795f5-7368-4341-ac98-2b68aa5a26a0": {
           "name": "Qamrab olish: To'xtash & O'ylash vaqti"
@@ -1916,6 +1961,18 @@
         "3b74dca1-328c-42e5-9360-af59a9eede29": {
           "name": "Wrap Up"
         },
+        "6496f3a3-d253-44df-9139-7b3870eee21f": {
+          "name": "O'rganing: Ma'nolik nima?"
+        },
+        "fd9e26a9-0627-4359-8a36-25bd9dc888c1": {
+          "name": "Bajarish: Onlayn va yuzma-yuz"
+        },
+        "5bcbf42e-64db-4405-a738-1d5ade6478dc": {
+          "name": "O'rganing: STOP ma'nosi"
+        },
+        "e5ba459e-982e-4b0f-a102-e300300f9d8a": {
+          "name": "O'chirib oling: pauza qiling va o'ylang lahzasi"
+        },
         "f32ea3e2-2c77-4d9e-81f2-f062dcc62831": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
@@ -1966,6 +2023,9 @@
         },
         "d3e694da-2437-407e-9478-53c69d99ba8d": {
           "name": "Qizdirish"
+        },
+        "ab929c69-85b7-485d-a8a9-2df1b53af578": {
+          "name": "Ko'prik faoliyati "
         },
         "d79fb8ee-956d-4630-b5bb-12a17ac01703": {
           "name": "Asosiy mashg‘ulot"
@@ -2095,6 +2155,9 @@
         },
         "f4b09758-1a3c-413b-b493-8e8f620af413": {
           "name": "Qizdirish"
+        },
+        "535c4220-cca3-4ae8-aac9-d594297d2b28": {
+          "name": "Asosiy faoliyat "
         },
         "72d182ad-5571-4ec0-8707-1ec0310f7ee7": {
           "name": "Wrap Up"
@@ -2804,6 +2867,9 @@
         "e11819a0-81a5-414c-b3fe-71e31ccfaaf7": {
           "name": "Qizdirish"
         },
+        "cb6bf053-345c-47af-a7b9-39a67a9c70fa": {
+          "name": "Vitrin"
+        },
         "554b4180-2899-4be8-a390-3e108705d899": {
           "name": "Qizdirish"
         },
@@ -3094,6 +3160,9 @@
         },
         "5c53e3df-2b36-46c8-9cce-d849e378f4e5": {
           "name": "Wrap Up"
+        },
+        "7b73b3f1-50b0-43a0-b986-6ca761f73d6f": {
+          "name": "Iliq "
         },
         "fb244265-6cd6-459d-bc88-e056d9902b8d": {
           "name": "Faoliyat"
@@ -6140,8 +6209,17 @@
         "4cd953ae-9546-4cdf-b6ea-860212b4875f": {
           "name": "Kursikulyar imkoniyatlar"
         },
+        "424b80fc-8e8d-4dbd-bed3-4890da24b145": {
+          "name": "Issiqlik: Xuddi shu so'z. Turli ma'no."
+        },
         "fdbc31b6-5f12-49c6-be6a-3183aec2bfa6": {
           "name": "Ko‘ring: So‘z kuchi"
+        },
+        "fbda7646-9395-471f-8749-694fd9cd30da": {
+          "name": "Tekshiring: Muammo nimada?"
+        },
+        "f747c55f-efbf-41df-809a-2f2620917e1f": {
+          "name": "O'ramoq: chiziqni kesib o'tish"
         },
         "86dafe20-4778-4665-94eb-cf837951259b": {
           "name": "Qo‘shimcha mashg‘ulotlar"
@@ -6314,6 +6392,18 @@
         "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
+        "be7f52b1-28fe-4ecf-b6dd-10b83614b5c5": {
+          "name": "Tomosha qiling: Raqamli yo'lni kuzatib boring"
+        },
+        "a9572124-af86-4d97-b4a8-929d761473af": {
+          "name": "Play: Hayvonlarning izlari"
+        },
+        "de382430-d529-490d-b4fd-a7f020c4802b": {
+          "name": "Sharh: Ulashish uchun OK?"
+        },
+        "f2a9c944-6d4b-4b02-aaef-23952d86702f": {
+          "name": "O'chirib oling: pauza qiling va o'ylang lahzasi"
+        },
         "add79bbe-c639-4e83-9191-993c430f08e9": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
@@ -6482,6 +6572,15 @@
         "4e1c7bf7-dd7f-40be-9bd7-4ffae08950a8": {
           "name": "Wrap Up"
         },
+        "09eb0525-dfae-44f2-831f-5c1f2ffee133": {
+          "name": "Tomosha qiling: Mening onlayn qo'shnim"
+        },
+        "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb": {
+          "name": "O'qing: Xavfsizlik, qoidalar!"
+        },
+        "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9": {
+          "name": "O'rganing: Internet dala sayohati"
+        },
         "df8b3513-c2f8-4db5-bb6b-93e60a3826d7": {
           "name": "To'xtatib turing va o'ylang"
         },
@@ -6641,6 +6740,18 @@
         "cccafe00-da31-43f0-93cb-a49d10d5be0a": {
           "name": "Wrap Up"
         },
+        "5feda2e8-7d86-483b-9e66-959252a75a9a": {
+          "name": "O'rganing: Ma'nolik nima?"
+        },
+        "78358409-25ec-4e4f-92d7-b69ff300191a": {
+          "name": "Bajarish: Onlayn va yuzma-yuz"
+        },
+        "6a765562-dff5-4ac9-9353-52dc1a3b0655": {
+          "name": "O'rganing: STOP ma'nosi"
+        },
+        "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
+          "name": "O'chirib oling: pauza qiling va o'ylang lahzasi"
+        },
         "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
@@ -6691,6 +6802,9 @@
         },
         "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
           "name": "Qizdirish"
+        },
+        "7085e9b6-059c-4118-8970-e38a5d4f5d01": {
+          "name": "Ko'prik faoliyati "
         },
         "e0fe20d3-be99-4212-83f8-21599085fcad": {
           "name": "Asosiy mashg‘ulot"
@@ -6821,6 +6935,9 @@
         "d0de2b60-38a6-42fb-8d87-e63dc5e8b590": {
           "name": "Qizdirish"
         },
+        "db2b05a4-6b86-4a5a-bc7c-bef62469a26e": {
+          "name": "Asosiy faoliyat "
+        },
         "e7277b3e-9177-451e-bef9-1e53d41b6131": {
           "name": "Wrap Up"
         },
@@ -6839,6 +6956,18 @@
         "90d3854b-a2c4-44ec-924a-f66d2087098c": {
           "name": "Wrap Up"
         },
+        "aebca980-e26c-4993-b001-dc20e492f04e": {
+          "name": "Isitish: Pssst... Parol nima?"
+        },
+        "139034de-1cee-48f9-abd8-40e8c15cd439": {
+          "name": "Baholang: Uh-Oh! Agar... Keyin..."
+        },
+        "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
+          "name": "Yarating: Parolingizni quvvatlang"
+        },
+        "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
+          "name": "O'chirib oling: Parol bo'yicha maslahatlar"
+        },
         "e735098e-abab-465e-949c-a7e92e771b84": {
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
@@ -6853,6 +6982,9 @@
         },
         "67be50b8-f120-4f1d-ad22-06b84dba994c": {
           "name": "Wrap Up"
+        },
+        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
+          "name": "Ixtiyoriy baholash"
         },
         "c401b0f4-97af-418d-b58b-a58493c7570c": {
           "name": "Qo‘shimcha mashg‘ulotlar"
@@ -6883,6 +7015,9 @@
         },
         "380a0a21-1ede-432e-bd0a-433c37514bba": {
           "name": "Qizdirish"
+        },
+        "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
+          "name": "Ko'prik faoliyati - birini tanlang"
         },
         "d05decb3-7f64-4886-8da0-088e7d73216d": {
           "name": "Asosiy mashg‘ulot"
@@ -6952,6 +7087,9 @@
         },
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Wrap Up"
+        },
+        "69460e12-7295-400a-8fc1-135a17d25118": {
+          "name": "Iliq "
         },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Asosiy mashg‘ulot"
@@ -7463,8 +7601,32 @@
         "e43d59a9-ac3a-460a-8344-1ae4a3ca26f8": {
           "name": "Wrap Up"
         },
+        "1a64d92c-82ce-45e6-a188-a7d88086efd8": {
+          "name": "Isitish: maxfiy super qahramon"
+        },
+        "f642093a-def9-467e-a8cc-8950b21d62c8": {
+          "name": "O'rganing: Upstander bo'lish"
+        },
+        "80d3bd1c-5d30-4abd-85d9-38e445a6068b": {
+          "name": "Yarating: Sizning raqamli fuqaroning super qahramoni"
+        },
+        "7d491d29-d496-450c-aece-a776f7fbd3d3": {
+          "name": "O'chirib oling: kunni saqlang! Comic Strip"
+        },
         "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
           "name": "Qo‘shimcha mashg‘ulotlar"
+        },
+        "14b61eaf-26c8-46d2-8538-06fe223a04c0": {
+          "name": "Issiqlik: turing, o'tiring"
+        },
+        "3d33781b-194e-4311-b493-e6cd3bf140ac": {
+          "name": "Tahlil qiling: Nima uchun odamlar baham ko'rishadi?"
+        },
+        "202398a5-6b48-4360-9ed8-10db2039b064": {
+          "name": "Tahlil qiling: xususiymi yoki shaxsiymi?"
+        },
+        "d7df338d-c42c-4fce-aa60-ec516fd2d48d": {
+          "name": "O'ramoq: Chiptadan chiqish"
         },
         "02429a22-ab18-4df6-9062-d88960fe9ae8": {
           "name": "Qo‘shimcha mashg‘ulotlar"
@@ -8116,6 +8278,9 @@
         },
         "c4a019fc-d25b-486f-adec-c33a5b86ba5d": {
           "name": "Wrap Up"
+        },
+        "1c6474e1-f1d7-4d13-94a0-2657589894ae": {
+          "name": "Iliq "
         },
         "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
           "name": "Faoliyat"
@@ -8836,6 +9001,9 @@
         },
         "5994929e-9d47-4037-9bf0-50728d56d31d": {
           "name": "Qizdirish"
+        },
+        "bb408703-11ec-4822-a86b-b8625a121f6f": {
+          "name": "Vitrin"
         },
         "1840d382-40db-43dd-b6cd-4f002ec7eb04": {
           "name": "Loyiha yakuniy testi"

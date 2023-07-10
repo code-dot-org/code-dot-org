@@ -78,7 +78,7 @@
   "cscAdaptationsMissingOctopus": "ודא שיש ספרייט תמנון להופיע בתחילת הסצנה.",
   "cscAdaptationsMoveOctopusToPlant": "אל תשכח להשתמש במקשי החצים כדי להזיז תמנון שלך לגעת הצמח כך שהוא משנה תחפושת להתמזג.",
   "cscAdaptationsNeedWhenClicked": "נראה שהוספת התנהגות אך שכחת להוסיף <code style=\"color:black; background-color:#6AF36C\">כאשר ספרייט לחץ על בלוק</code> תחילה. הקפד להוסיף את בלוק ההתנהגות לאחר חסימת האירוע.",
-  "cscAdaptationsSeaweed": "וודא שהתמנון שלך משנה את אותו צבע כמו האצות שהוא נוגע",
+  "cscAdaptationsRightArrowKey": "הקפד להקיש על מקש חץ לאחר לחיצה על *\"הפעלה\"*. אתה יכול ללחוץ על הכפתורים הכתומים מתחת לאזור ההפעלה או ללחוץ על המקשים במקלדת.",
   "cscAdaptationsSetBackground": "הקפד להגדיר רקע.",
   "cscAdaptationsSetBehavior": "הקפד להגדיר את ההתנהגות של ספרייט לאחר הגדרת הגודל של ספרייט.",
   "cscAdaptationsSetFastSpeed": "ודא שאתה מגדיר את מהירות ספרייט ברדלס לצום.",

@@ -38,6 +38,7 @@ pl:
       Binary Numbers: Liczby binarne
       Board Events: Zdarzenia na tablicy
       Board Input and Output: Wejście i Wyjście Płyty
+      Book Recommender App: Aplikacja polecająca książki
       Boolean Comparison: Porównanie Logiczne
       Build a Platform Jumper: Buduj Platformę Jumper
       Build a Screen: Zbuduj ekran
@@ -57,10 +58,12 @@ pl:
       Challenge Levels: Poziomy Wyzwań
       Challenges: Wyzwania
       Change: Zmień
+      Check Your Work: Sprawdź swoją pracę
       Checking for a Winner: Szukanie Zwycięzcy
       Choose Your Own Adventure: Wybierz własną przygodę
       Choosing Good IDs: Wybieranie dobrych identyfikatorów
       Code Your Own Flappy Game: Zakoduj Swoją Grę z Flappym
+      Code Your Page: Koduj swoją stronę
       Collector Game: Gra Kolekcjonerska
       Collision Detection: Wykrywanie kolizji
       Collisions: Kolizje
@@ -71,6 +74,7 @@ pl:
       Conditionals with Cards - Unplugged Activity: Instrukcje warunkowe z kartami - Aktywności bez komputera
       'Conditionals: If Statements': 'Instrukcje Warunkowe: instrukcja "jeśli"'
       'Conditionals: If and If/Else Statements': 'Instrukcje Warunkowe: instrukcja "jeśli/w przeciwnym razie"'
+      Control Your Player: Kontroluj swojego gracza
       Course E Artist Project: Kurs E Projekt Artysty
       Course E Sprite Lab Project: Kurs E - Projekt Sprite Lab
       'Course E: Play Lab Project': 'Kurs E: Projekt w Play Lab'
@@ -83,6 +87,9 @@ pl:
       Crack Random Substitution: Złam losowe podstawienie
       Crack a Caesar Cipher: Złam szyfr Cezara
       Create Your Own Animation: Utwórz własną animację
+      Create Your Sprites: Stwórz swoje duszki
+      Create a Background: Utwórz tło
+      Create a Google Form: Utwórz formularz Google
       Create a Story: Utwórz Opowieść
       Create your project: Utwórz swój projekt
       Customize: Dostosuj
@@ -99,7 +106,10 @@ pl:
       Designing for Accessibility: Projektowanie pod kątem dostępności
       Digital Sharing - Unplugged Activity: Udostępnianie cyfrowe — Aktywność bez komputera
       Dogger Example: Przykład łodzi rybackiej
+      Draw Your Background: Narysuj swoje tło
+      Draw a Background: Narysuj tło
       Drawing: Rysowanie
+      Driver Alert System: System ostrzegania kierowcy
       End of Course Projects: Koniec projektów w ramach kursu
       Escape Room Example: Przykład Escape Room
       Event Types: Typy zdarzeń
@@ -107,7 +117,10 @@ pl:
       Events and Linking Screens: Zdarzenia i Ekrany z linkami
       Events and Properties: Zdarzenia i Właściwości
       Example: Przykład
+      Example Animated Scene: Przykładowa animowana scena
       Example App Types: Przykład typów aplikacji
+      'Example App: Zoo Classification': 'Przykładowa aplikacja: Klasyfikacja zoo'
+      Example Apps: Przykładowe aplikacje
       Example Projects: Przykłady projektów
       Example projects: Przykłady projektów
       Exemplar Personal Websites: Przykładowe osobiste strony internetowe
@@ -124,6 +137,7 @@ pl:
       Exploring more CSS: Odkrywanie CSS
       Extra: Dodatkowe
       Extra Challenge: Dodatkowe wyzwania
+      'Extra Challenge: Sound Board': 'Dodatkowe wyzwanie: płyta dźwiękowa'
       Final Room Escape App: Finalna aplikacja Room Escape
       Find the Wizard: Znajdź czarodzieja
       Finish a Screen: Ukończ Ekran
@@ -213,6 +227,7 @@ pl:
       'Mini-Project: Royal Battle': 'Mini-projekt: Królewski pojedynek'
       "Mini-Project: Snowflake #1": "Mini-projekt: Płatek śniegu #1"
       "Mini-Project: Snowflake #2": "Mini-projekt: Płatek śniegu #2"
+      'Mini-Project: Sticker Art': 'Mini-projekt: Sticker Art'
       'Mini-Project: Swimming Fish': 'Mini-projekt: Pływająca ryba'
       'Mini-Project: Swimming Fish (continued)': 'Mini-projekt: Pływająca ryba (ciąg dalszy)'
       'Mini-Project: User Input Programs': 'Mini-projekt: Programy z danymi użytkownika'

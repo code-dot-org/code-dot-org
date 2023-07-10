@@ -12,5 +12,8 @@
   "blockly_toolboxCategoryMath": "Matematika",
   "blockly_toolboxCategoryVariables": "Spremenljivke",
   "share": "Deli",
-  "startOver": "Začni znova"
+  "startOver": "Začni znova",
+  "panelHeaderInstructions": "Navodila",
+  "panelHeaderWorkspace": "Delovni prostor: ",
+  "continue": "Nadaljuj"
 }

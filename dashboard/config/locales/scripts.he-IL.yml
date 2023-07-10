@@ -97,6 +97,7 @@ he:
           description_audience: גילאי 10-18
           student_description: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות
             בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
+          name: 20 שעות
         edit-code:
           title: עריכת קוד
           description: עריכת קוד
@@ -2367,3 +2368,7 @@ he:
               display_name: משתנים
             lessonGroup-6:
               display_name: פרויקט סיום קורס
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: נתונים

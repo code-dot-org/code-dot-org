@@ -89,7 +89,7 @@
   "cscAdaptationsMoveOctopusToPlant": "Nezabudnite použiť klávesy so šípkami pohybovať chobotnice dotknúť rastliny tak, že sa zmení kostým miešať.",
   "cscAdaptationsNeedWhenClicked": "Vyzerá to, že ste pridali správanie, ale zabudli ste pridať <code style=\"color:black; background-color:#6AF36C\">, keď sprite najprv klikol na</code> blok. Nezabudnite pridať blok správania po bloku udalosti.",
   "cscAdaptationsNight": "Nezabudnite pridať nočné pozadie pod <code style=\"color:black; background-color:#6AF36C\">, keď stlačíte šípku</code> blok.",
-  "cscAdaptationsSeaweed": "Uistite sa, že chobotnica mení rovnakú farbu ako morské riasy, ktoré sa dotýka",
+  "cscAdaptationsRightArrowKey": "Nezabudni po spustení programu stlačiť šípku. Môžeš klikať na oranžové tlačidlá pod hracou plochou alebo tlačiť tlačidlá na klávesnici.",
   "cscAdaptationsSetBackground": "Uistite sa, že ste nastavili pozadie.",
   "cscAdaptationsSetBehavior": "Uistite sa, že ste nastavili správanie sprite po nastavení veľkosti sprite.",
   "cscAdaptationsSetFastSpeed": "Uistite sa, že ste nastavili rýchlosť geparda sprite rýchlo.",

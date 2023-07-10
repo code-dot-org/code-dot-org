@@ -1467,6 +1467,8 @@ kn:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: "{TEXT} ಪ್ರಿಂಟ್"
       storylab_setForegroundEffect2:
         text: "{EFFECT} ಎಫೆಕ್ಟ್ ಮಾಡಿ"
         options:

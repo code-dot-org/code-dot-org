@@ -2119,6 +2119,8 @@ sv:
               display_name: Kapitel 1
             lessonGroup-4:
               display_name: Kapitel 2
+        ai-temp:
+          title: Hur AI fungerar
         self-paced-pl-csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2165,3 +2167,30 @@ sv:
               display_name: Digitalt medborgarskap
             lessonGroup-4:
               display_name: variabler
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasser
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasser
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasser
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Data
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasser
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasser
+        csa-frq-practice-pre2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasser

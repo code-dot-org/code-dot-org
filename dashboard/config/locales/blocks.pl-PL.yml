@@ -1647,7 +1647,7 @@ pl:
           narysuj tablicę wyników
           {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
       gamelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
@@ -2080,7 +2080,7 @@ pl:
           populacja:{SPRITE2N}
           {TOGGLE}wirus
       Mikelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
         options:
@@ -2601,6 +2601,8 @@ pl:
             new Behavior(wobbling, []): chybotanie
             new Behavior(wandering, []): wędrowanie
             new Behavior(patrolling, []): patrolowanie
+      adaptations_location_picker:
+        text: w:{LOCATION}
       adaptations_makeNumSpritesNear:
         text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       adaptations_spriteBirdSay:
@@ -2789,8 +2791,31 @@ pl:
             '8': '8'
             '9': '9'
             '10': '10'
+      ecosystems_location_picker:
+        text: w:{LOCATION}
+      ecosystems_makeNewSpriteBetween:
+        text: 'utwórz {N} nowe {GROUP} między lokalizacją x: {X} y: {Y}'
+      ecosystems_makeNumSpritesAtLocation:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki w {LOCATION_GENERATOR}
+      ecosystems_makeNumSpritesWithinRange:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki w {RANGE}
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Góra
+            "{x1:0, x2:400, y1:150, y2:250}": Środek
+            "{x1:0, x2:400, y1:0, y2:200}": Dół
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x max{X2}y min{Y1}y max{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        text: "{RANGE}"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Góra
+            "{x1:0, x2:400, y1:0, y2:200}": Dół
       storylab_clearHeadings:
         text: wyczyść nagłówki
+      storylab_printText:
+        text: drukuj {TEXT}
       storylab_setForegroundEffect2:
         text: wykonaj efekt {EFFECT}
         options:

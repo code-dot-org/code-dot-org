@@ -11,7 +11,9 @@
     "./src/javalab/**/*.js",
     "./src/lib/util/**/*.js",
     "./src/util/**/*.js*",
-    "./src/templates/**/*.js*"
+    "./src/templates/**/*.js*",
+    "./src/code-studio/pd/components/*.js*",
+    "./src/code-studio/*.js"
   ],
   "compilerOptions": {
     "jsx": "react",

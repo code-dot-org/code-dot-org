@@ -32,7 +32,7 @@
     "shoe_survey_toy": {
       "fields": {
         "weather": {
-          "id": "clima"
+          "id": "tiempo"
         },
         "day": {
           "id": "día"

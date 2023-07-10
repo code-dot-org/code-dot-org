@@ -54,6 +54,7 @@ import {ToolboxType, Themes, Renderers} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
+import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/google/index.js';
 
 const options = {
@@ -121,6 +122,14 @@ const BlocklyWrapper = function (blocklyInstance) {
   };
 };
 
+/**
+ * Note that this can only be called once per page load, as this initializes
+ * the navigation controller, and multiple calls to navigationController.init()
+ * will throw an error.
+ *
+ * If this needs to be called multiple times (for example, in tests), call
+ * Blockly.navigationController.dispose() before calling this function again.
+ */
 function initializeBlocklyWrapper(blocklyInstance) {
   const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
 
@@ -282,6 +291,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     CdoConnectionChecker,
     true /* opt_allowOverrides */
   );
+  blocklyWrapper.blockly_.serialization.registry.unregister('blocks');
+  blocklyWrapper.blockly_.serialization.registry.register(
+    'blocks',
+    new CdoBlockSerializer(),
+    true /* opt_allowOverrides */
+  );
 
   registerAllContextMenuItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
@@ -330,6 +345,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.navigationController = new NavigationController();
+  // Initialize plugin.
+  blocklyWrapper.navigationController.init();
 
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
@@ -582,6 +599,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       },
       renderer: opt_options.renderer || Renderers.DEFAULT,
       comments: false,
+      media: '/blockly/media/google_blockly',
     };
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
@@ -600,8 +618,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     workspace.addChangeListener(onBlockClickDragDelete);
 
-    // Initialize plugin.
-    blocklyWrapper.navigationController.init();
     blocklyWrapper.navigationController.addWorkspace(workspace);
 
     if (!blocklyWrapper.isStartMode && !opt_options.isBlockEditMode) {

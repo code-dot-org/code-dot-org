@@ -123,6 +123,7 @@ et:
           student_description: See 20-tunnine kursus käsitleb peamisi arvutiteaduse
             ja programmeerimise kontseptsioone kursustel 2-4. Kursus on mõeldud kasutamiseks
             vanuses 10-18 aastat. Tutvu kursustega 2-4 põhjalikuma kogemuse saamiseks!
+          name: 20 tunnine
         edit-code:
           title: Muuda koodi
           description: Muuda koodi
@@ -2041,3 +2042,7 @@ et:
               display_name: Spraidid
             lessonGroup-4:
               display_name: Muutujad
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Andmed

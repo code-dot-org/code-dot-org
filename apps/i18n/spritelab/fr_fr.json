@@ -86,7 +86,7 @@
   "cscAdaptationsMoveOctopusToPlant": "N'oubliez pas d'utiliser les touches fléchées pour déplacer votre poulpe afin qu'il touche la plante afin qu'il change de costume pour se fondre dans la masse.",
   "cscAdaptationsNeedWhenClicked": "Il semblerait que vous ayez ajouté un comportement mais que vous ayez oublié d'ajouter un <code style=\"color:black; background-color:#6AF36C\">lorsque le sprite a cliqué sur</code> bloc en premier. Assurez-vous d'ajouter le bloc de comportement après le bloc d'événements.",
   "cscAdaptationsNight": "Assurez-vous d'ajouter un arrière-plan nocturne sous le <code style=\"color:black; background-color:#6AF36C\">lorsque la flèche appuie sur</code> bloc.",
-  "cscAdaptationsSeaweed": "Assurez-vous que votre poulpe change de la même couleur que les algues qu'il touche",
+  "cscAdaptationsRightArrowKey": "Veuillez appuyer sur une touche de direction après avoir cliqué sur *\"Exécuter\"*. Vous pouvez cliquer sur les boutons orange situés sous la zone de jeu ou appuyer sur les touches de votre clavier.",
   "cscAdaptationsSetBackground": "Assurez-vous de définir un arrière-plan.",
   "cscAdaptationsSetBehavior": "Assurez-vous de définir le comportement du sprite après avoir défini sa taille.",
   "cscAdaptationsSetFastSpeed": "Assurez-vous de régler la vitesse du sprite guépard sur rapide.",

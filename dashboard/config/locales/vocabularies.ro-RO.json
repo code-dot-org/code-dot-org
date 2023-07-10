@@ -462,6 +462,7 @@
           "definition": "Un număr atribuit oricărui element care este conectat la internet."
         },
         "packets/coursef/2022": {
+          "word": "Pachete",
           "definition": "Mici fragmente de informații care au fost grupate cu grijă plecând de la fragmente mai mari de informații."
         },
         "servers/coursef/2022": {
@@ -839,6 +840,9 @@
           "word": "Binar",
           "definition": "Un mod de a reprezenta informațiile folosind doar două opțiuni."
         },
+        "computer/csd/2022": {
+          "word": "Computer"
+        },
         "input/csd/2022": {
           "word": "Intrare"
         },
@@ -985,6 +989,7 @@
           "definition": "Un număr atribuit oricărui element care este conectat la internet."
         },
         "packets/coursef/2021": {
+          "word": "Pachete",
           "definition": "Mici fragmente de informații care au fost grupate cu grijă plecând de la fragmente mai mari de informații."
         },
         "servers/coursef/2021": {
@@ -1475,6 +1480,9 @@
         },
         "function/csd/2021": {
           "word": "Funcţie"
+        },
+        "computer/csd/2021": {
+          "word": "Computer"
         },
         "input/csd/2021": {
           "word": "Intrare"

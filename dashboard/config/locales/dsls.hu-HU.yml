@@ -11712,3 +11712,24 @@ hu-HU:
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
       courseF_groups_practice_2022_pilot_-2022-2:
         display_name: Gyakorlás rengeteg sprite-tal
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - feedback: Helytelen. Az ördögszekér gördülni kezd.
+        - text: Az ördögszekér a képernyő tetején fog lebegni.
+          feedback: Helytelen. Az ördögszekér gördülni kezd.
+        - text: Az ördögszekér gördülni kezd.
+          correct: true
+          feedback: Helyes!
+        - text: Az ördögszekér villogni fog.
+          feedback: Helytelen. Az ördögszekér gördülni kezd.
+        questions:
+        - {}

@@ -53,6 +53,22 @@ label.typographyLabel {
   }
 }
 
+.splitButtonsContainer {
+  justify-content: flex-end;
+
+  button {
+    font-size: 16px;
+  }
+}
+
+.buttonLeft {
+  float: left;
+}
+
+.buttonRight {
+  float: right;
+}
+
 .buttonRow {
   position: relative;
   display: flex;

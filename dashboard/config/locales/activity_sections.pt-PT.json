@@ -1429,6 +1429,7 @@
           "description": "Da última vez, exploramos aplicativos e jogos criados com o Sprite Lab. Hoje vamos começar a escrever nosso próprio código para criar animações de sprite simples."
         },
         "a4ff84ba-5105-458a-a950-ca4fdbc3d23b": {
+          "name": "Fazendo Sprites",
           "tips": [
             " Nos quebra-cabeças de previsão, os alunos devem ler um programa fornecido e responder a uma pergunta sobre ele. A pergunta deve ser respondida antes que o aluno possa pressionar o botão “Executar”. Embora seja possível usar essas perguntas como uma forma de avaliação, lembre-se de que elas geralmente são colocadas no início de uma aula como uma forma de fazer com que os alunos questionem as coisas antes mesmo de serem formalmente mostradas como algo novo funciona. "
           ],
@@ -1519,6 +1520,9 @@
         },
         "a9d9d0a1-8f04-4fc0-8e1d-444f0ded3552": {
           "description": "\\*\\*Faça isso: \\*\\* Facilite a entrega e coleta dos envelopes marcados como “objeto”, “líquido” e “número”. Depois de coletados, mantenha os envelopes fechados e comece a ler a história. Somente quando você chegar a cada espaço em branco, abra o envelope e leia o valor armazenado."
+        },
+        "580f30a2-5998-427d-9399-f52a5426e91d": {
+          "name": "Jogos de festa"
         },
         "c173338f-588c-408f-a20a-9fff31d41a14": {
           "description": "Na atividade de hoje, você trabalhará com um grupo para criar sua própria história de espaço em branco. "
@@ -13773,6 +13777,7 @@
           "description": "Da última vez, exploramos aplicativos e jogos criados com o Sprite Lab. Hoje vamos começar a escrever nosso próprio código para criar animações de sprite simples."
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
+          "name": "Fazendo Sprites",
           "description": "#### Previsão (3 minutos)\n\n\\*\\*Faça isso: \\*\\* Peça aos alunos que leiam o código fornecido e façam uma previsão sobre o que acontecerá. Depois de pressionar “Executar”, dê tempo para que os alunos reflitam sobre qualquer coisa que achem interessante ou que os surpreenda.",
           "tips": [
             " Nos quebra-cabeças de previsão, os alunos devem ler um programa fornecido e responder a uma pergunta sobre ele. A pergunta deve ser respondida antes que o aluno possa pressionar o botão “Executar”. Embora seja possível usar essas perguntas como uma forma de avaliação, lembre-se de que elas geralmente são colocadas no início de uma aula como uma forma de fazer com que os alunos questionem as coisas antes mesmo de serem formalmente mostradas como algo novo funciona. "
@@ -13895,6 +13900,9 @@
         },
         "ffa7ea29-3325-4d95-8766-4411729f47d9": {
           "description": "\\*\\*Faça isso: \\*\\* Facilite a entrega e coleta dos envelopes marcados como “objeto”, “líquido” e “número”. Depois de coletados, mantenha os envelopes fechados e comece a ler a história. Somente quando você chegar a cada espaço em branco, abra o envelope e leia o valor armazenado."
+        },
+        "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
+          "name": "Jogos de festa"
         },
         "fefc9dd6-ed1d-411b-ae3e-75a95da347b9": {
           "name": "Crie sua própria história (20 minutos)",
@@ -16588,6 +16596,7 @@
           "description": "Da última vez, exploramos aplicativos e jogos criados com o Sprite Lab. Hoje vamos começar a escrever nosso próprio código para criar animações de sprite simples."
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
+          "name": "Fazendo Sprites",
           "description": "#### Previsão (3 minutos)\n\n\\*\\*Faça isso: \\*\\* Peça aos alunos que leiam o código fornecido e façam uma previsão sobre o que acontecerá. Depois de pressionar “Executar”, dê tempo para que os alunos reflitam sobre qualquer coisa que achem interessante ou que os surpreenda.",
           "tips": [
             " Nos quebra-cabeças de previsão, os alunos devem ler um programa fornecido e responder a uma pergunta sobre ele. A pergunta deve ser respondida antes que o aluno possa pressionar o botão “Executar”. Embora seja possível usar essas perguntas como uma forma de avaliação, lembre-se de que elas geralmente são colocadas no início de uma aula como uma forma de fazer com que os alunos questionem as coisas antes mesmo de serem formalmente mostradas como algo novo funciona. "

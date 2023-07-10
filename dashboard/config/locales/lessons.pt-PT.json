@@ -436,6 +436,7 @@
           "purpose": "A primeira lição é sobre deixar os alunos entusiasmados com o curso e conectar seus próprios interesses pessoais à ciência da computação. "
         },
         "coursef-2022/Making Sprites": {
+          "name": "Fazendo Sprites",
           "preparation": "Jogue pelos níveis e revise os slides da lição**\\\\ \\***.",
           "purpose": "Esta lição foi criada para apresentar aos alunos a programação no Sprite Lab. Os alunos começarão a compreender o modelo de programação dessa ferramenta e explorarão maneiras de usá-la para se expressar."
         },
@@ -694,6 +695,7 @@
           "student_overview": "Aprenda a criar e editar sprites."
         },
         "express-2022/Making Sprites": {
+          "name": "Fazendo Sprites",
           "preparation": "Jogue pelos níveis e revise os slides da lição**\\\\ \\***.",
           "purpose": "Esta lição foi criada para apresentar aos alunos a programação no Sprite Lab. Os alunos começarão a compreender o modelo de programação dessa ferramenta e explorarão maneiras de usá-la para se expressar."
         },
@@ -4079,6 +4081,7 @@
           "purpose": "A primeira lição é sobre deixar os alunos entusiasmados com o curso e conectar seus próprios interesses pessoais à ciência da computação. "
         },
         "coursef-2021/lesson-7": {
+          "name": "Fazendo Sprites",
           "preparation": "Jogue pelos níveis e revise os slides da lição**\\\\ \\***.",
           "purpose": "Esta lição foi criada para apresentar aos alunos a programação no Sprite Lab. Os alunos começarão a compreender o modelo de programação dessa ferramenta e explorarão maneiras de usá-la para se expressar."
         },
@@ -4598,6 +4601,7 @@
           "student_overview": "Aprenda a criar e editar sprites."
         },
         "express-2021/lesson-2": {
+          "name": "Fazendo Sprites",
           "preparation": "Jogue pelos níveis e revise os slides da lição**\\\\ \\***.",
           "purpose": "Esta lição foi criada para apresentar aos alunos a programação no Sprite Lab. Os alunos começarão a compreender o modelo de programação dessa ferramenta e explorarão maneiras de usá-la para se expressar."
         },

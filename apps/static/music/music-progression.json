@@ -16,7 +16,14 @@
           "next": "true"
         },
         {"message": "Please play a sound."}
-      ]
+      ],
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [{"id": "when-run-block", "type": "when_run_simple2", "x": 31, "y": 31}]
+        },
+        "variables": [{"name": "currentTime"}, {"name": "i"}]
+      }
     },
     {
       "text": "**Second**, please play three sounds at the same time.<p>Try now!<p/>",
@@ -43,10 +50,24 @@
           "message": "It's good that you played one sound, but you need to **play two more**."
         },
         {"message": "Please **play three sounds together**."}
-      ]
+      ],
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [{"type": "when_run_simple2", "x": 32, "y": 32}]
+        },
+        "variables": [{"name": "currentTime"}, {"name": "i"}]
+      }
     },
     {
-      "text": "Try everything!"
+      "text": "Try everything!",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [{"type": "when_run_simple2", "x": 33, "y": 33}]
+        },
+        "variables": [{"name": "currentTime"}, {"name": "i"}]
+      }
     }
   ]
 }

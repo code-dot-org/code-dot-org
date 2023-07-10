@@ -379,3 +379,7 @@ mk:
               display_name: Сприти
             lessonGroup-4:
               display_name: Променливи
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Податоци

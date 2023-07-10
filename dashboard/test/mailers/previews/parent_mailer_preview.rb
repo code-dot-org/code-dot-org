@@ -6,4 +6,16 @@ class ParentMailerPreview < ActionMailer::Preview
     student = build :student
     ParentMailer.parent_email_added_to_student_account('fake_email@fake.com', student)
   end
+
+  def parent_permission_request_preview
+    ParentMailer.parent_permission_request('parent@test.com', 'https://code.org/permission')
+  end
+
+  def parent_permission_reminder_preview
+    ParentMailer.parent_permission_reminder('parent@test.com', 'https://code.org/permission')
+  end
+
+  def parent_permission_confirmation_preview
+    ParentMailer.parent_permission_confirmation('parent@test.com')
+  end
 end

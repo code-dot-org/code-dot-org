@@ -172,7 +172,7 @@
               }
             },
             "variables": {
-              "name": "variáveis",
+              "name": "Variáveis",
               "expressions": {
                 "assign_x": {
                   "short_description": "Atribui um valor a uma variável declarada anteriormente."
@@ -217,6 +217,11 @@
                   "short_description": "Cria um botão na tela exibindo o texto fornecido e referenciado pelo id fornecido no local padrão (0,0)."
                 },
                 "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Encolher e crescer"
+                    }
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "Função"
@@ -680,7 +685,7 @@
               }
             },
             "variables": {
-              "name": "variáveis",
+              "name": "Variáveis",
               "expressions": {
                 "declareNoAssign_x": {
                   "short_description": "Declara uma variável com o nome fornecido."

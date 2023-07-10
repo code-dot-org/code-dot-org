@@ -89,7 +89,7 @@
   "cscAdaptationsMoveOctopusToPlant": "Nu uitaţi să utilizaţi tastele săgeată pentru a muta caracatiţă dumneavoastră pentru a atinge planta, astfel încât se schimbă costum pentru a amesteca în.",
   "cscAdaptationsNeedWhenClicked": "Se pare că ați adăugat un comportament, dar ați uitat să adăugați un <code style=\"color:black; background-color:#6AF36C\">când sprite a făcut clic pe</code> bloc mai întâi. Asigurați-vă că adăugați blocul de comportament după blocarea evenimentului.",
   "cscAdaptationsNight": "Asigurați-vă că adăugați un fundal pe timp de noapte sub <code style=\"color:black; background-color:#6AF36C\">când săgeata apăsată</code> bloc.",
-  "cscAdaptationsSeaweed": "Asigurați-vă că caracatița dvs. schimbă aceeași culoare ca algele pe care le atinge",
+  "cscAdaptationsRightArrowKey": "Asigură-te să apeși pe tasta săgeată după ce ai apăsat pe *„Rulează”*. Poți să faci clic pe butoanele portocalii din zona de joc sau să apeși tastele de pe tastatura ta.",
   "cscAdaptationsSetBackground": "Asigurați-vă că setați un fundal.",
   "cscAdaptationsSetBehavior": "Asigurați-vă că setați comportamentul sprite după setarea dimensiunea sprite lui.",
   "cscAdaptationsSetFastSpeed": "Asigurați-vă că setați viteza sprite ghepard la rapid.",

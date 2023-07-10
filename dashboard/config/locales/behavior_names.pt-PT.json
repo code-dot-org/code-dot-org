@@ -1638,7 +1638,8 @@
           "jittering2": "tremendo2",
           "patrolling2": "patrulhando2",
           "moving with arrow keys2": "movimentando com as teclas de setas2",
-          "driving with arrow keys2": "dirigindo com as teclas de setas2"
+          "driving with arrow keys2": "dirigindo com as teclas de setas2",
+          "flying west and looping": "voando para o oeste e fazendo um loop"
         },
         "courseF_apps_madlib": {
           "wandering": "vagando",
@@ -1746,7 +1747,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_choice_conflict2": {
           "patrolling": "patrulhando",
@@ -1761,7 +1763,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_choice_penguin": {
           "patrolling": "patrulhando",
@@ -1778,7 +1781,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_choice_pufferfish": {
           "patrolling": "patrulhando",
@@ -1795,7 +1799,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_conflict": {
           "patrolling": "patrulhando",
@@ -1811,7 +1816,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_freeplay_air": {
           "moving west and looping": "movendo-se para o Oeste em loop",
@@ -1924,7 +1930,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_practice_reorder": {
           "moving east": "movendo para o leste",
@@ -1943,7 +1950,8 @@
           "driving with arrow keys": "dirigindo com as teclas de setas",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_predict": {
           "mystery behavior": "comportamento misterioso",
@@ -1976,7 +1984,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_ship": {
           "patrolling": "patrulhando",
@@ -1993,7 +2002,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_stops": {
           "moving east": "movendo para o leste",
@@ -2009,7 +2019,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_time": {
           "patrolling": "patrulhando",
@@ -2026,7 +2037,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_extras_sim": {
           "wandering 2": "perambulando 2",
@@ -2322,7 +2334,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_text_choice_color": {
           "patrolling": "patrulhando",
@@ -2338,7 +2351,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_text_choice_conversation": {
           "wandering": "vagando",
@@ -2454,7 +2468,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_text_concat": {
           "patrolling": "patrulhando",
@@ -2470,7 +2485,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_text_events": {
           "patrolling": "patrulhando",
@@ -2486,7 +2502,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_text_print": {
           "patrolling": "patrulhando",
@@ -2502,7 +2519,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_text_prompts": {
           "patrolling": "patrulhando",
@@ -2518,7 +2536,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_text_review": {
           "patrolling": "patrulhando",
@@ -2534,7 +2553,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_variables_card": {
           "wandering": "vagando",
@@ -2739,7 +2759,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "helloworld_animals_sounds": {
           "wandering": "vagando",
@@ -2836,7 +2857,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "helloworld_emoji_sounds": {
           "wandering": "vagando",
@@ -2933,7 +2955,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "helloworld_food_sounds": {
           "wandering": "vagando",
@@ -3030,7 +3053,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "helloworld_retro_sounds": {
           "wandering": "vagando",
@@ -3629,7 +3653,8 @@
           "jittering2": "tremendo2",
           "patrolling2": "patrulhando2",
           "moving with arrow keys2": "movimentando com as teclas de setas2",
-          "driving with arrow keys2": "dirigindo com as teclas de setas2"
+          "driving with arrow keys2": "dirigindo com as teclas de setas2",
+          "flying west and looping": "voando para o oeste e fazendo um loop"
         },
         "courseF_apps_collector_-2022-2": {
           "wandering": "vagando",
@@ -3659,7 +3684,8 @@
           "jittering2": "tremendo2",
           "patrolling2": "patrulhando2",
           "moving with arrow keys2": "movimentando com as teclas de setas2",
-          "driving with arrow keys2": "dirigindo com as teclas de setas2"
+          "driving with arrow keys2": "dirigindo com as teclas de setas2",
+          "flying west and looping": "voando para o oeste e fazendo um loop"
         },
         "courseF_apps_madlib2022": {
           "wandering": "vagando",
@@ -3805,7 +3831,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_choice_conflict_-2022-2": {
           "patrolling": "patrulhando",
@@ -3821,7 +3848,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_choice_penguin_-2022-2": {
           "patrolling": "patrulhando",
@@ -3838,7 +3866,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_choice_pufferfish_-2022-2": {
           "patrolling": "patrulhando",
@@ -3855,7 +3884,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_conflict_-2022-2": {
           "patrolling": "patrulhando",
@@ -3871,7 +3901,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_freeplay_air_-2022-2": {
           "moving west and looping": "movendo-se para o Oeste em loop",
@@ -3984,7 +4015,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_practice_reorder_-2022-2": {
           "moving east": "movendo para o leste",
@@ -4003,7 +4035,8 @@
           "driving with arrow keys": "dirigindo com as teclas de setas",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_predict_-2022-2": {
           "mystery behavior": "comportamento misterioso",
@@ -4036,7 +4069,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_ship_-2022-2": {
           "patrolling": "patrulhando",
@@ -4053,7 +4087,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_events_stops_-2022-2": {
           "moving east": "movendo para o leste",
@@ -4086,7 +4121,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_label_predict_-2022-2": {
           "moving east": "movendo para o leste",
@@ -4361,7 +4397,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_text_choice_color_-2022-2": {
           "patrolling": "patrulhando",
@@ -4377,7 +4414,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_text_choice_conversation_-2022-2": {
           "wandering": "vagando",
@@ -4493,7 +4531,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_text_concat_-2022-2": {
           "patrolling": "patrulhando",
@@ -4509,7 +4548,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_text_events_-2022-2": {
           "patrolling": "patrulhando",
@@ -4525,7 +4565,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_text_print_-2022-2": {
           "patrolling": "patrulhando",
@@ -4541,7 +4582,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_text_prompts_-2022-2": {
           "patrolling": "patrulhando",
@@ -4557,7 +4599,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_text_review_-2022-2": {
           "patrolling": "patrulhando",
@@ -4573,7 +4616,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "courseF_variables_card_-2022-2": {
           "wandering": "vagando",
@@ -4719,7 +4763,8 @@
           "spinning left": "girando para a esquerda",
           "fluttering": "tremulando",
           "moving west and looping": "movendo-se para o Oeste em loop",
-          "moving east and looping": "movendo-se para o Leste em loop"
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving forward": "avançando"
         },
         "simcustom_-2022-2": {
           "wandering": "vagando",

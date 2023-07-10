@@ -11,5 +11,8 @@
   "blockly_toolboxCategoryMath": "Matematiikka",
   "blockly_toolboxCategoryVariables": "Muuttujat",
   "share": "Jaa",
-  "startOver": "Aloita alusta"
+  "startOver": "Aloita alusta",
+  "panelHeaderInstructions": "Ohjeet",
+  "panelHeaderWorkspace": "Työtila: ",
+  "continue": "Jatka"
 }

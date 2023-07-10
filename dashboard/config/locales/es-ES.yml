@@ -60,6 +60,7 @@ es:
         reset_password_token: El enlace para restablecer la contraseña que has seguido
         error:
           future: No puede ser en el futuro
+        us_state: Estado/provincia
   beta: beta
   hello: Hola mundo
   welcome_back: Bienvenido, %{name}
@@ -69,6 +70,7 @@ es:
   unsubmit: NO enviado
   previous_page: Página anterior
   next_page: Página siguiente
+  next_level: Siguiente nivel
   next_resource: Siguiente recurso
   done_with_module: Hecho con este Módulo de Aprendizaje
   cancel: Cancelar
@@ -235,7 +237,7 @@ es:
     email_preference_question: "¿Podemos enviarte actualizaciones de nuestros cursos,
       oportunidades en tu zona u otras noticias sobre ciencias de la computación por
       correo electrónico? (aproximadamente una vez al mes)"
-    email_preference_privacy: "(Vea nuestra politica de privacidad)"
+    email_preference_privacy: "(Consulta nuestra política de privacidad)"
     email_preference_yes: Sí
     email_preference_no: 'No'
     email_preference_required: Debes especificar una preferencia de correo electrónico.
@@ -252,6 +254,7 @@ es:
       sobre el rendimiento y los proyectos de su hijo? Tambien mandaremos informacion
       sobre los cursos de ciencias computacionales [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
     parent_account_email_label: Correo electrónico del padre o tutor
+    us_state: Estado/provincia
   school_info:
     title: Información de la escuela (opcional)
     school_country: País en el que está la escuela
@@ -1382,7 +1385,7 @@ es:
         math: Matemáticas
         science: Ciencia
         history: Historia / Estudios Sociales
-        la: Linguistica
+        la: Lengua y Literatura
         efl: Inglés como lengua extranjera
         music: Música
         art: Arte
@@ -1415,6 +1418,7 @@ es:
         csf_express: Fundamentos de Informática (Pre-Exprés o Exprés)
         csd: Descubrimientos de Ciencias de la Computación
         csp: Principios de Ciencias de la Computación
+        other: Otros
         not_applicable: No aplicable
       email_opt_in:
         opt_in_yes: Sí
@@ -1459,7 +1463,7 @@ es:
       hello_world: Hola Mundo
       sports: Deportes
       csf: Fundamentos de Ciencias de la Computación
-      csc: Conexiones a las Ciencias de la Computación
+      csc: Conexiones con la Informática
   cookie_banner:
     message: Si continúas navegando nuestro sitio web o haces clic en "Acepto", aceptas
       que se guarden las cookies en tu computadora o dispositivo.

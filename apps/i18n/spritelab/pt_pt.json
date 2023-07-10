@@ -89,7 +89,7 @@
   "cscAdaptationsMoveOctopusToPlant": "Não se esqueça de usar as teclas de seta para mover seu polvo para tocar na planta para que ele mude de roupa para se misturar.",
   "cscAdaptationsNeedWhenClicked": "Parece que você adicionou um comportamento, mas esqueceu de adicionar um <code style=\"color:black; background-color:#6AF36C\">quando o sprite clicou primeiro em</code> bloco. Certifique-se de adicionar o bloco de comportamento após o bloco de eventos.",
   "cscAdaptationsNight": "Certifique-se de adicionar um fundo noturno abaixo do <code style=\"color:black; background-color:#6AF36C\">quando a seta pressionou</code> bloco.",
-  "cscAdaptationsSeaweed": "Certifique-se de que seu polvo esteja mudando da mesma cor das algas marinhas que ele toca",
+  "cscAdaptationsRightArrowKey": "Sempre pressione uma tecla de seta depois de pressionar *\"Run\"*. Você pode clicar nos botões alaranjados sob a área de jogo ou pressionar as teclas no seu teclado.",
   "cscAdaptationsSetBackground": "Certifique-se de definir um plano de fundo.",
   "cscAdaptationsSetBehavior": "Certifique-se de definir o comportamento do sprite depois de definir o tamanho do sprite.",
   "cscAdaptationsSetFastSpeed": "Certifique-se de definir a velocidade do cheetah sprite como rápida.",

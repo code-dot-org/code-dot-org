@@ -95,6 +95,7 @@ tr:
           description_short: Bu 20 saatlik kurs, 2, 3 ve 4. derslerdeki temel bilgisayar bilimi ve programlama kavramlarını içerir.
           description_audience: 10 Yaş ve Üstü (Ders 3 sonrası)
           student_description: Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir.
+          name: 20 saat
         edit-code:
           title: Kodu Düzenle
           description: Kodu Düzenle
@@ -6226,6 +6227,7 @@ tr:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Bölüm 1: Donanım girdisi'
+          title: Cihazlarla Uygulama Oluşturma (Circuit Playground)
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -6833,6 +6835,8 @@ tr:
           lesson_groups:
             lessonGroup-3:
               display_name: Girdiler ve çıktılar
+        ai-temp:
+          title: Yapay Zeka Nasıl Çalışır?
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -6846,7 +6850,7 @@ tr:
             lessonGroup-2:
               display_name: Hoşgeldiniz
         self-paced-pl-csd5-2023:
-          title: Yapay zeka ve makine öğrenimini öğretmek
+          title: 'Modül 7: Yapay Zeka ve Makine Öğrenimini Öğretme Hazırlığı'
           description: |-
             Bu profesyonel öğrenim modülü, Code.org'un Yapay Zeka ve Makine Öğrenimi ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
 
@@ -6999,3 +7003,30 @@ tr:
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
           description: Beşinci sınıftaki öğrenciler için Kurs F'yi oluşturduk. Kurs, kullanıcıların kullandıkları uygulamalarda nasıl seçim yaptıklarına bakarak başlar. Öğrenciler daha sonra kullanıcı için seçenekler de sunan çeşitli Sprite Lab uygulamaları yapmayı öğrenirler. Kursun sonraki derslerinde, öğrenciler çeşitli bağlamlardaki değişkenleri öğreneceklerdir. Öğrencilere bu kurs boyunca daha fazla özerklik ve daha fazla seçenek verilir. Kursun sonunda öğrenciler, arkadaşları ve aileleri ile paylaşmak üzere etkileşimli projeler oluşturmuş olacaklardır.
           student_description: Hareketli karakterler ve değişkenlerle kodlamayı öğrenin ve bilgisayar ve internetin toplumsal etkilerini tartışın. Bu kursun sonunda arkadaşlarınız ve ailenizle paylaşabileceğiniz bir proje tasarlayın ve oluşturun.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sınıflar
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sınıflar
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sınıflar
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Veri
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sınıflar
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sınıflar
+        csa-frq-practice-pre2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sınıflar

@@ -2,12 +2,6 @@
   "hy-AM": {
     "data": {
       "course_offerings": {
-        "coursea": "Կուրս A",
-        "courseb": "Կուրս B",
-        "coursec": "Կուրս C",
-        "coursed": "Կուրս D",
-        "coursee": "Կուրս E",
-        "coursef": "Կուրս F",
         "csp": "AP® Computer Science Principles",
         "20-hour": "Accelerated Intro to CS Course",
         "flappy": "Flappy-ի կոդը",

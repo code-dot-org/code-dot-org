@@ -89,7 +89,7 @@
   "cscAdaptationsMoveOctopusToPlant": "Jangan lupa untuk menggunakan tombol panah untuk memindahkan gurita Anda untuk menyentuh tanaman sehingga perubahan kostum untuk berbaur.",
   "cscAdaptationsNeedWhenClicked": "Sepertinya Anda menambahkan perilaku tetapi lupa menambahkan <code style=\"color:black; background-color:#6AF36C\">ketika sprite mengklik</code> blok terlebih dahulu. Pastikan untuk menambahkan blok perilaku setelah blok acara.",
   "cscAdaptationsNight": "Pastikan untuk menambahkan latar belakang malam hari di bawah <code style=\"color:black; background-color:#6AF36C\">saat panah ditekan</code> blok.",
-  "cscAdaptationsSeaweed": "Pastikan gurita Anda berubah warna yang sama dengan rumput laut yang disentuhnya",
+  "cscAdaptationsRightArrowKey": "Pastikan untuk menekan tombol panah setelah menekan *\"Jalankan\"*. Kamu dapat mengklik tombol jingga di bawah area putar atau menekan tombol di keyboard.",
   "cscAdaptationsSetBackground": "Pastikan untuk mengatur latar belakang.",
   "cscAdaptationsSetBehavior": "Pastikan Anda mengatur perilaku sprite setelah mengatur ukuran sprite.",
   "cscAdaptationsSetFastSpeed": "Pastikan Anda mengatur kecepatan sprite cheetah menjadi cepat.",

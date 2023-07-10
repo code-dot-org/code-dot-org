@@ -2326,6 +2326,8 @@ ta:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: அச்சு {TEXT}
       storylab_setForegroundEffect2:
         text: விளைவு {EFFECT}செய்ய
         options:

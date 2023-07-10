@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 16:41:56 UTC",
+    "serialized_at": "2023-05-24 16:58:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1940,7 +1940,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Practicing Communication:** Some classes may need more support in communicating and collaborating effectively.  If appropriate, consider having your students brainstorm a list of \"sentence stems\" that they can use for respectful and effective communication before they break into pairs (\"Have you considered...\"  \"What about...\" \"I think the problem might be...\").  As students move through the lesson, be attentive to how students are working together - understanding the norms of pair programming is just as important as learning the new HTML code in this lesson!"
+            "markdown": "**Practicing Communication:** Some classes may need more support in communicating and collaborating effectively.  If appropriate, consider having your students brainstorm a list of \"sentence stems\" that they can use for respectful and effective communication before they break into pairs (\"Have you considered...\"  \"What about...\" \"I think the problem might be...\").  As students move through the lesson, be attentive to how students are working together - understanding the norms of pair programming is just as important as learning the new HTML code in this lesson!\n\nTo read more about pair programming, see the **[Guide to Teaching and Learning Strategies](https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view)**."
           }
         ]
       },

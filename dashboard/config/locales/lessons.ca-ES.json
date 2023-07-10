@@ -144,6 +144,9 @@
           "purpose": "Aquesta lliçó presenta els conceptes principals de la informàtica en relació amb la programació i la codificació, com ara la seqüenciació i els esdeveniments. La versió en JavaScript del tutorial també dona als alumnes l'oportunitat d'escriure codi amb el teclat.",
           "student_overview": "En aquesta lliçó, s'introdueix als alumnes de totes les edats a la programació i la informàtica en un entorn segur i d'acompanyament. Aquesta lliçó té dues versions."
         },
+        "text-compression/Text Compression": {
+          "name": "Compressió de text"
+        },
         "outbreak/Outbreak": {
           "overview": "Aquesta lliçó combina el **desenvolupament d'habilitats** relacionades amb els esdeveniments i un **miniprojecte** on podran crear la seva pròpia simulació per ordinador al Laboratori d'Sprites. Els alumnes analitzaran la simulació per entendre com de ràpid es pot propagar un virus i què es pot fer per frenar-lo. ",
           "preparation": "-   Repasseu els trencaclosques per trobar qualsevol punt que pugui presentar problemes a la classe.\n-   Assegureu-vos que cada alumne tingui el seu diari de reflexió.",
@@ -151,6 +154,7 @@
           "student_overview": "Ha arribat un virus a la Ciutat dels Monstres! Aprèn a crear un simulador de virus i ajuda els monstres a recuperar la salut."
         },
         "sports/Sports": {
+          "name": "Codi del seu propi joc d'esports",
           "overview": "En aquesta activitat en línia, els alumnes aprendran què són els esdeveniments i com els ordinadors els fan servir en programes com ara els videojocs. Mentre fan els trencaclosques, faran que el programa reaccioni als esdeveniments (com ara quan es premen les fletxes). Al final del trencaclosques, els alumnes tindran l'oportunitat de personalitzar el seu joc amb diferents velocitats i sons.",
           "student_overview": "Algun cop has pensat que t'agradaria jugar a videojocs a l'escola? Doncs en aquesta lliçó, en crearàs un!"
         },
@@ -1368,6 +1372,9 @@
         "coursef-2018/Learning Sprites with Sprite Lab": {
           "name": "Iniciació al Laboratori d'Sprites"
         },
+        "coursef-2018/The Design Process": {
+          "name": "El procés de disseny"
+        },
         "express-2018/Graph Paper Programming": {
           "name": "Programació de paper quadriculat"
         },
@@ -1437,6 +1444,9 @@
         "express-2018/Learning Sprites with Sprite Lab": {
           "name": "Iniciació al Laboratori d'Sprites"
         },
+        "express-2018/The Design Process": {
+          "name": "El procés de disseny"
+        },
         "express-2018/Binary Bracelets": {
           "name": "Polseres binàries"
         },
@@ -1502,6 +1512,9 @@
         },
         "coursee-2018/Learning Sprites with Sprite Lab": {
           "name": "Iniciació al Laboratori d'Sprites"
+        },
+        "coursee-2018/The Design Process": {
+          "name": "El procés de disseny"
         },
         "coursee-2018/Internet": {
           "name": "Internet"
@@ -2124,6 +2137,9 @@
         "coursef-2017/Introduction": {
           "name": "Introducció als trencaclosques en línia"
         },
+        "coursef-2017/The Design Process": {
+          "name": "El procés de disseny"
+        },
         "coursea-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Algorismes de la vida quotidiana: Planta una llavor"
         },
@@ -2159,6 +2175,9 @@
         },
         "coursee-2017/Build a Star Wars Game": {
           "name": "Fes un joc de La guerra de les galàxies"
+        },
+        "coursee-2017/The Design Process": {
+          "name": "El procés de disseny"
         },
         "coursec-2017/Debugging in Maze": {
           "name": "Depuració al laberint"
@@ -2219,6 +2238,9 @@
         },
         "express-2017/Until Loops in Maze": {
           "name": "Bucles \"until\" al laberint"
+        },
+        "express-2017/The Design Process": {
+          "name": "El procés de disseny"
         },
         "csd3-2017/Variables": {
           "name": "Variables"
@@ -2607,6 +2629,9 @@
         },
         "allthethings/Odometer": {
           "name": "odòmetre"
+        },
+        "allthethings/Text Compression": {
+          "name": "Compressió de text"
         },
         "allthethings/Pixelation": {
           "name": "pixelació"
@@ -4014,6 +4039,9 @@
         },
         "coursef-2020/Simulating Experiments": {
           "name": "Simulació d'experiments"
+        },
+        "coursef-2020/AI for Oceans": {
+          "name": "IA per Oceans"
         },
         "coursef-2020/Internet": {
           "name": "Internet"

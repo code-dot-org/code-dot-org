@@ -6541,7 +6541,7 @@ vi-VN:
           correct: true
         - correct: true
         questions:
-        - {}
+        - text: Phát triển web
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true
@@ -10681,6 +10681,49 @@ vi-VN:
         - {}
       csp_unit_assessment_overview:
         content1: mô tả ở đây
+        teacher_markdown: "### THẬN TRỌNG: Bản chất của bài đánh giá này\n\n* Bài
+          đánh giá này **được thiết kế theo “phong cách” của bài đánh giá trắc nghiệm
+          AP**.\n\n* Điều đó có nghĩa là các câu hỏi **không** hướng tới các bài học
+          đã dạy trước thời điểm này.  Thay vào đó, các câu hỏi liên quan đến các
+          mục tiêu học tập AP cơ bản đã được giải quyết về mặt lý thuyết.\n\n* Điều
+          đó **có nghĩa là** học sinh có thể cần thực hiện một số phép ngoại suy từ
+          những kiến thức đã học để trả lời các câu hỏi.\n\n* Điều đó **có nghĩa là**
+          các câu hỏi có thể “khó”, đặc biệt là khi tiếp xúc lần đầu.\n\nNhìn chung,
+          hãy **THẬN TRỌNG KHI SỬ DỤNG**\n\n* Hãy dùng khả năng phân tích của bạn
+          đối với những lợi ích đi kèm bài đánh giá này.\n\t* Bạn không cần sử dụng
+          bài đánh giá này để chấm điểm học sinh hoặc...\n* Bạn có thể chấm điểm học
+          sinh bằng phương pháp khác thay vì chỉ lấy % câu trả lời đúng.\n\n* Hãy
+          đảm bảo rằng cách sử dụng của bạn vẫn duy trì được tinh thần của lớp học
+          về mặt tìm hiểu kiến thức.\n\t* Nếu bạn lo rằng học sinh sẽ nản chí, hãy
+          soạn lại bài đánh giá này như một cơ hội để nghiên cứu – để học sinh thử
+          xem câu hỏi, sau đó nghiên cứu câu trả lời và thay đổi những phần làm sai
+          hoặc tự biên soạn bộ câu hỏi của riêng mình.\n\n\n---\n\n#### Câu hỏi thường
+          gặp – Cách chuẩn bị, quản lý và xem lại bài đánh giá\n\nVui lòng xem **[Tài
+          liệu câu hỏi thường gặp hiện tại của chúng tôi tại đây](https://docs.google.com/document/d/1zEpD1PFt6ec2S8ourxuMH0HD6tiyRvqAGUKGDCOt-qs/edit#heading=h.kewgp6z8qdde)**
+          với các nội dung như sau:\n\n* ảnh chụp màn hình cách chuẩn bị, quản lý
+          và xem lại bài đánh giá\n* giải quyết các sự cố/vấn đề thường gặp\n\n\n####
+          Tóm tắt nhanh về cách xem/đánh giá câu trả lời của học sinh\n\n1. Hãy truy
+          cập [Trang tổng quan dành cho giáo viên](https://code.org/teacher-dashboard#/)\n2.
+          Chọn nhóm đào tạo Nguyên tắc cơ bản của KHMT\n3. Bạn sẽ thấy một số tab
+          màu tím bao gồm Câu trả lời tự luận, Bài đánh giá, v.v.\n4. Nhấp chuột vào
+          **Bài đánh giá/Bài khảo sát**\n5. Từ trình đơn thả xuống của công cụ chọn
+          khóa học, **hãy chọn bài học có bài đánh giá này (VD: Bài 1: Internet)**\n6.
+          Đối với tất cả học sinh đã *nộp* bài đánh giá của mình, bạn sẽ thấy hai
+          bảng:\n* Bảng đầu tiên là chế độ xem tóm tắt thể hiện tỷ lệ phần trăm câu
+          trả lời đúng từ tất cả học sinh đã nộp bài, bao gồm cả mốc thời gian nộp
+          bài\n* Bảng thứ hai là danh sách tổng hợp từng câu trả lời cho mỗi câu hỏi
+          do từng học sinh gửi\n\nPhía trên cả hai bảng này là nút **Tải xuống (hoặc
+          xuất dữ liệu) dưới dạng CSV** - cho phép bạn xử lý câu trả lời trong bảng
+          tính (đề xuất).\n\n7. Nếu bạn cần cho phép học sinh THU HỒI bài kiểm tra
+          của mình, hãy hướng dẫn học sinh điều hướng đến trang cuối cùng của bài
+          kiểm tra và nhấn “Thu hồi”.\n\n**LƯU Ý về việc THU HỒI:**\n\nBạn nên đưa
+          ra các quy tắc rõ ràng với học sinh của mình về việc thu hồi bài kiểm tra.
+          Học sinh có thể nghĩ rằng đây là một cách hay để thay đổi câu trả lời sau
+          khi bài kiểm tra kết thúc (tức là gian lận), nhưng bạn sẽ thấy mốc thời
+          gian khi học sinh nộp bài kiểm tra.\n\nBạn nên quy định rằng mình sẽ không
+          chấm điểm hoặc xếp loại bài kiểm tra nộp sau một thời gian cụ thể.  Nếu
+          không nộp bài trước thời hạn quy định, hãy coi như bạn không nhận được bài
+          kiểm tra.\n"
       curriculum-how-challenging:
         answers:
         - correct: true
@@ -12246,3 +12289,317 @@ vi-VN:
         questions:
         - text: Hãy xem kỹ mã lệnh này. Bạn nghĩ điều gì sẽ xảy ra khi chạy chương
             trình?
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '2'
+          correct: true
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - text: Sẽ không có gì xảy ra.
+          feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
+        - text: Cỏ lăn sẽ nổi lên trên cùng của màn hình
+          feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
+        - text: Cỏ lăn sẽ bắt đầu lăn
+          correct: true
+          feedback: Chính xác!
+        - text: Cỏ lăn sẽ nhấp nháy.
+          feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
+        questions:
+        - text: Hãy xem kỹ mã lệnh bên dưới. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
+            vào nút “Run” (chạy)?
+      OPD-K5 Outline:
+        markdown: |
+          # Bắt đầu > Sơ lược khóa học
+
+          Khóa học được chia thành mười một giai đoạn và mỗi giai đoạn bao gồm các “cấp độ” hoặc “bài tập”. Sau đây là tổng quan về những nội dung bạn sẽ học nếu hoàn thành toàn bộ khóa học:
+
+          ## Giai đoạn 1: Bắt đầu (10-30 phút)
+
+          Khi hoàn thành Giai đoạn 1, bạn sẽ:
+
+          - Ôn tập chi tiết khóa học
+          - Thực hành sử dụng Code.org làm nền tảng học tập
+          - Lên kế hoạch tham gia khóa học này
+
+          ## Giai đoạn 2: Nguyên tắc cơ bản của Khoa học Máy tính (10-30 phút)
+
+          Khi hoàn thành Giai đoạn 2, bạn sẽ:
+
+          - Định nghĩa khoa học máy tính và xem các từ vựng chính
+          - Nêu lợi ích của việc dạy và học môn khoa học máy tính
+          - Phân biệt giữa “lập trình” và “khoa học máy tính”
+          - Giải thích lợi ích của việc bắt đầu lập trình bằng phương pháp lập trình trực quan
+
+          ## Giai đoạn 3: Lập kế hoạch (10 phút)
+
+          Khi hoàn thành Giai đoạn 3, bạn sẽ:
+
+          - Chuẩn bị để “nắm vững kiến thức cơ bản” về khoa học máy tính bằng cách xem nội dung sắp tới trong khóa học
+
+          ## Giai đoạn 4: Nắm vững kiến thức cơ bản: Trình tự (10-30 phút)
+
+          Khi hoàn thành Giai đoạn 4, bạn sẽ:
+
+          - Định nghĩa “chương trình” và “thuật toán”
+          - Sử dụng công cụ lập trình trực quan Code.org để viết các chương trình đơn giản
+          - Suy ngẫm về ứng dụng trong lớp học
+
+          ## Giai đoạn 5: Nắm vững kiến thức cơ bản: Vòng lặp (20-45 phút)
+
+          Khi hoàn thành Giai đoạn 5, bạn sẽ:
+
+          - Định nghĩa “vòng lặp” và giải thích tầm quan trọng của chúng
+          - Thực hành lập trình vòng lặp đơn giản
+          - Suy ngẫm về ứng dụng trong lớp học
+
+          ## Giai đoạn 6: Nắm vững kiến thức cơ bản: Lệnh điều kiện (20-45 phút)
+
+          Khi hoàn thành Giai đoạn 6, bạn sẽ:
+
+          - Định nghĩa “lệnh điều kiện” và giải thích tầm quan trọng của chúng
+          - Thực hành lập trình lệnh điều kiện đơn giản
+          - Suy ngẫm về ứng dụng trong lớp học
+
+          ## Giai đoạn 7: Nắm vững kiến thức cơ bản: Hàm (20-45 phút)
+
+          Khi hoàn thành Giai đoạn 7, bạn sẽ:
+
+          - Định nghĩa “hàm” và giải thích tầm quan trọng của chúng
+          - Thực hành lập trình hàm đơn giản
+          - Suy ngẫm về ứng dụng trong lớp học
+
+          ## Giai đoạn 8: Nắm vững kiến thức cơ bản: Sự kiện (30-60 phút)
+
+          Khi hoàn thành Giai đoạn 8, bạn sẽ:
+
+          - Định nghĩa “sự kiện” và giải thích tầm quan trọng của chúng
+          - Thực hành lập trình sự kiện đơn giản
+          - Suy ngẫm về ứng dụng trong lớp học
+
+          ## Giai đoạn 9: Các phương pháp tốt nhất để giảng dạy Khoa học Máy tính (30-60 phút)
+
+          Khi hoàn thành Giai đoạn 9, bạn sẽ:
+
+          - Xem các phương pháp hay nhất để giảng dạy khoa học máy tính
+
+          ## Giai đoạn 10: Lập kế hoạch (30-60 phút)
+
+          Khi hoàn thành Giai đoạn 10, bạn sẽ:
+
+          - Khám phá tài nguyên trên Code.org, bao gồm trang tổng quan dành cho giáo viên
+          - Lập kế hoạch cho phương pháp vận dụng khoa học máy tính vào thực tiễn
+
+          ## Giai đoạn 11: Các bước tiếp theo (10-30 phút)
+
+          Khi hoàn thành Giai đoạn 11, bạn sẽ:
+
+          - Suy ngẫm về quá trình học tập
+          - Lập kế hoạch cho các bước tiếp theo mà bạn có thể thực hiện để tiếp tục quá trình học tập của mình
+          - Kết nối với cộng đồng toàn cầu bao gồm các giáo viên quan tâm đến việc giảng dạy bộ môn khoa học máy tính
+          - Chia sẻ những điều bạn học được và phản hồi về khóa học này
+
+          > **Lưu ý**: Thời gian gợi ý nêu trên để giúp bạn lập kế hoạch học tập của mình. Vui lòng lưu ý rằng bạn có thể muốn dành nhiều hoặc ít thời gian hơn cho một giai đoạn nhất định, tùy vào lượng kiến thức, sở thích và năng lực trước đó của bạn. Hãy nhớ rằng khóa học này hoàn toàn là tự học; bạn luôn có thể rời khỏi khóa học và quay lại hoặc xem lại bất kỳ giai đoạn hoặc cấp độ nào vào bất kỳ lúc nào.
+      OPD-K5 Outline_dani:
+        markdown: |
+          # Bắt đầu > Sơ lược khóa học
+
+          Khóa học được chia thành mười một giai đoạn và mỗi giai đoạn bao gồm các “cấp độ” hoặc “bài tập”. Sau đây là tổng quan về những nội dung bạn sẽ học nếu hoàn thành toàn bộ khóa học:
+
+          ## Giai đoạn 1: Bắt đầu (10-30 phút)
+
+          Khi hoàn thành Giai đoạn 1, bạn sẽ:
+
+          - Ôn tập chi tiết khóa học
+          - Thực hành sử dụng Code.org làm nền tảng học tập
+          - Lên kế hoạch tham gia khóa học này
+
+          ## Giai đoạn 2: Nguyên tắc cơ bản của Khoa học Máy tính (10-30 phút)
+
+          Khi hoàn thành Giai đoạn 2, bạn sẽ:
+
+          - Định nghĩa khoa học máy tính và xem các từ vựng chính
+          - Nêu lợi ích của việc dạy và học môn khoa học máy tính
+          - Phân biệt giữa “lập trình” và “khoa học máy tính”
+          - Giải thích lợi ích của việc bắt đầu lập trình bằng phương pháp lập trình trực quan
+
+          ## Giai đoạn 3: Lập kế hoạch (10 phút)
+
+          Khi hoàn thành Giai đoạn 3, bạn sẽ:
+
+          - Chuẩn bị để “nắm vững kiến thức cơ bản” về khoa học máy tính bằng cách xem nội dung sắp tới trong khóa học
+
+          ## Giai đoạn 4: Nắm vững kiến thức cơ bản: Trình tự (10-30 phút)
+
+          Khi hoàn thành Giai đoạn 4, bạn sẽ:
+
+          - Định nghĩa “chương trình” và “thuật toán”
+          - Sử dụng công cụ lập trình trực quan Code.org để viết các chương trình đơn giản
+          - Suy ngẫm về ứng dụng trong lớp học
+
+          ## Giai đoạn 5: Nắm vững kiến thức cơ bản: Vòng lặp (20-45 phút)
+
+          Khi hoàn thành Giai đoạn 5, bạn sẽ:
+
+          - Định nghĩa “vòng lặp” và giải thích tầm quan trọng của chúng
+          - Thực hành lập trình vòng lặp đơn giản
+          - Suy ngẫm về ứng dụng trong lớp học
+
+          ## Giai đoạn 6: Nắm vững kiến thức cơ bản: Lệnh điều kiện (20-45 phút)
+
+          Khi hoàn thành Giai đoạn 6, bạn sẽ:
+
+          - Định nghĩa “lệnh điều kiện” và giải thích tầm quan trọng của chúng
+          - Thực hành lập trình lệnh điều kiện đơn giản
+          - Suy ngẫm về ứng dụng trong lớp học
+
+          ## Giai đoạn 7: Nắm vững kiến thức cơ bản: Hàm (20-45 phút)
+
+          Khi hoàn thành Giai đoạn 7, bạn sẽ:
+
+          - Định nghĩa “hàm” và giải thích tầm quan trọng của chúng
+          - Thực hành lập trình hàm đơn giản
+          - Suy ngẫm về ứng dụng trong lớp học
+
+          ## Giai đoạn 8: Nắm vững kiến thức cơ bản: Sự kiện (30-60 phút)
+
+          Khi hoàn thành Giai đoạn 8, bạn sẽ:
+
+          - Định nghĩa “sự kiện” và giải thích tầm quan trọng của chúng
+          - Thực hành lập trình sự kiện đơn giản
+          - Suy ngẫm về ứng dụng trong lớp học
+
+          ## Giai đoạn 9: Các phương pháp tốt nhất để giảng dạy Khoa học Máy tính (30-60 phút)
+
+          Khi hoàn thành Giai đoạn 9, bạn sẽ:
+
+          - Xem các phương pháp hay nhất để giảng dạy khoa học máy tính
+
+          ## Giai đoạn 10: Lập kế hoạch (30-60 phút)
+
+          Khi hoàn thành Giai đoạn 10, bạn sẽ:
+
+          - Khám phá tài nguyên trên Code.org, bao gồm trang tổng quan dành cho giáo viên
+          - Lập kế hoạch cho phương pháp vận dụng khoa học máy tính vào thực tiễn
+
+          ## Giai đoạn 11: Các bước tiếp theo (10-30 phút)
+
+          Khi hoàn thành Giai đoạn 11, bạn sẽ:
+
+          - Suy ngẫm về quá trình học tập
+          - Lập kế hoạch cho các bước tiếp theo mà bạn có thể thực hiện để tiếp tục quá trình học tập của mình
+          - Kết nối với cộng đồng toàn cầu bao gồm các giáo viên quan tâm đến việc giảng dạy bộ môn khoa học máy tính
+          - Chia sẻ những điều bạn học được và phản hồi về khóa học này
+
+          > **Lưu ý**: Thời gian gợi ý nêu trên để giúp bạn lập kế hoạch học tập của mình. Vui lòng lưu ý rằng bạn có thể muốn dành nhiều hoặc ít thời gian hơn cho một giai đoạn nhất định, tùy vào lượng kiến thức, sở thích và năng lực trước đó của bạn. Hãy nhớ rằng khóa học này hoàn toàn là tự học; bạn luôn có thể rời khỏi khóa học và quay lại hoặc xem lại bất kỳ giai đoạn hoặc cấp độ nào vào bất kỳ lúc nào.
+      OPD-K5 Stage9Go:
+        markdown: |
+          # Lập kế hoạch > Đánh giá
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          Trong giai đoạn này, bạn nên:
+
+          - Xem lại Trang tổng quan dành cho giáo viên và các tài nguyên khác trên Code.org
+          - Lập kế hoạch cho phương pháp vận dụng khoa học máy tính vào thực tiễn
+
+          Trong Giai đoạn 11, giai đoạn cuối cùng của chúng ta, bạn sẽ
+
+          - Suy ngẫm về quá trình học tập
+          - Lập kế hoạch cho các bước tiếp theo mà bạn có thể thực hiện để tiếp tục quá trình học tập của mình
+          - Kết nối với cộng đồng toàn cầu bao gồm các giáo viên quan tâm đến việc giảng dạy bộ môn khoa học máy tính
+      OPD-K5 Stage9Go_dani:
+        markdown: |
+          # Lập kế hoạch > Đánh giá
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          Trong giai đoạn này, bạn nên:
+
+          - Xem lại Trang tổng quan dành cho giáo viên và các tài nguyên khác trên Code.org
+          - Lập kế hoạch cho phương pháp vận dụng khoa học máy tính vào thực tiễn
+
+          Trong Giai đoạn 11, giai đoạn cuối cùng của chúng ta, bạn sẽ
+
+          - Suy ngẫm về quá trình học tập
+          - Lập kế hoạch cho các bước tiếp theo mà bạn có thể thực hiện để tiếp tục quá trình học tập của mình
+          - Kết nối với cộng đồng toàn cầu bao gồm các giáo viên quan tâm đến việc giảng dạy bộ môn khoa học máy tính
+      OPD-K5 Stage9Start:
+        markdown: |
+          # Lập kế hoạch > Khám phá tài nguyên dành cho giáo viên
+
+          Trong suốt Giai đoạn 4-8, bạn đã xem một số tài nguyên học tập trực tuyến và “không dùng thiết bị điện tử” có sẵn cho khóa học Nguyên tắc cơ bản của KHMT, vì chúng phù hợp với các khái niệm khoa học máy tính mà bạn đang học.
+
+          Bây giờ bạn đã có một số kiến thức về cách lập trình cũng như cách dạy môn khoa học máy tính, đã đến lúc bắt đầu lập kế hoạch giảng dạy. Trong giai đoạn này, chúng ta sẽ tìm hiểu các khu vực khác trên nền tảng Code.org và **[Trang tổng quan dành cho giáo viên](http://studio.code.org/)**.
+
+          Khi hoàn thành Giai đoạn 10, bạn sẽ:
+
+          - Khám phá các tài nguyên dành cho giáo viên
+          - Khám phá Code.org **[Trang tổng quan dành cho giáo viên](http://studio.code.org/)**
+          - Lập kế hoạch phương pháp vận dụng khoa học máy tính vào thực tiễn
+
+          ***
+
+          Sau đây là ảnh chụp màn hình của Trang tổng quan dành cho giáo viên. Bạn cần đăng nhập vào tài khoản giáo viên Code.org của mình để xem – sau khi đăng nhập, đây sẽ là màn hình mặc định mà bạn nhìn thấy trên trang web Code.org. Nếu chưa có tài khoản giáo viên, bạn có thể **[đăng ký tài khoản tại đây](https://studio.code.org/users/sign_up)**.
+
+          ![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)
+      OPD-K5 Stage9Start_copy:
+        markdown: |
+          # Khám phá tài nguyên dành cho giáo viên
+
+          Đã đến lúc bắt đầu lập kế hoạch cho bài hướng dẫn. Trong giai đoạn này, chúng ta sẽ tìm hiểu các khu vực khác trên nền tảng Code.org và **<a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">Trang tổng quan dành cho giáo viên</a>**.
+
+          Sau đây là ảnh chụp màn hình Trang tổng quan dành cho giáo viên. Bạn cần đăng nhập tài khoản giáo viên Code.org của mình để xem. Sau khi đăng nhập, đây sẽ là màn hình mặc định mà bạn thấy trên trang web Code.org. Nếu chưa có tài khoản giáo viên, bạn có thể **<a href="https://studio.code.org/users/sign_up" target="blank" rel="noopener noreferrer">đăng ký tài khoản tại đây</a>**.
+
+          <a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>
+      OPD-K5 Stage9Start_dani:
+        markdown: |
+          # Lập kế hoạch > Khám phá tài nguyên dành cho giáo viên
+
+          Trong suốt Giai đoạn 4-8, bạn đã xem một số tài nguyên học tập trực tuyến và “không dùng thiết bị điện tử” có sẵn cho khóa học Nguyên tắc cơ bản của KHMT, vì chúng phù hợp với các khái niệm khoa học máy tính mà bạn đang học.
+
+          Bây giờ bạn đã có một số kiến thức về cách lập trình cũng như cách dạy môn khoa học máy tính, đã đến lúc bắt đầu lập kế hoạch giảng dạy. Trong giai đoạn này, chúng ta sẽ tìm hiểu các khu vực khác trên nền tảng Code.org và **[Trang tổng quan dành cho giáo viên](http://studio.code.org/)**.
+
+          Khi hoàn thành Giai đoạn 10, bạn sẽ:
+
+          - Khám phá các tài nguyên dành cho giáo viên
+          - Khám phá Code.org **[Trang tổng quan dành cho giáo viên](http://studio.code.org/)**
+          - Lập kế hoạch phương pháp vận dụng khoa học máy tính vào thực tiễn
+
+          ***
+
+          Dưới đây là ảnh chụp màn hình của Trang tổng quan dành cho giáo viên. Bạn cần đăng nhập vào tài khoản giáo viên Code.org của mình để xem – sau khi đăng nhập, đây sẽ là màn hình mặc định mà bạn nhìn thấy trên trang web Code.org. Nếu chưa có tài khoản giáo viên, bạn có thể **[đăng ký tài khoản tại đây](https://studio.code.org/users/sign_up)**.
+
+          ![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        teacher_markdown: |
+          **Vui lòng yêu cầu học sinh hoàn thành bài khảo sát này!!!**
+
+          * Bạn có thể xem kết quả khảo sát ẩn danh trong trang tổng quan dành cho giáo viên
+          * Kết quả rất quan trọng đối với chúng tôi (code.org) để duy trì cũng như cải tiến các khóa học.
+          * Ngoài ra còn có một bài khảo sát dành cho giáo viên để bạn nêu ý kiến đóng góp của riêng mình. Bạn sẽ nhận được thông báo về bài khảo sát này qua email.
+
+          **Lưu ý:**
+
+          * Nút trên trang này chuyển hướng đến [studio.code.org/s/csp-post-survey](https://studio.code.org/s/csp-post-survey)
+          * Nếu muốn, bạn có thể đặt “Khảo sát sau khóa học của học sinh” làm bài học hiện tại cho nhóm đào tạo trên menu thả xuống trong Trang tổng quan dành cho giáo viên.
+      csd-post-survey-2018-markdown-with-link-to-survey_v2:
+        teacher_markdown: |+
+          **Vui lòng yêu cầu học sinh hoàn thành bài khảo sát này!!!**
+
+          * Kết quả rất quan trọng đối với chúng tôi (code.org) để duy trì cũng như cải tiến các khóa học.
+          * Ngoài ra còn có một bài khảo sát dành cho giáo viên để bạn nêu ý kiến đóng góp của riêng mình. Bạn sẽ nhận được thông báo về bài khảo sát này qua email.
+
+          **Xem kết quả** – bài khảo sát sau khóa học hơi khác một chút. Bài khảo sát nằm trong bài học riêng của khóa học và trang này chỉ liên kết đến bài khảo sát đó.
+
+          * Để xem kết quả khảo sát ẩn danh trong Trang tổng quan dành cho giáo viên, bạn cần (1) xem khảo sát/đánh giá, sau đó (2) chọn bài học khảo sát sau khóa học làm bài học bạn muốn xem.
+
+          * **Hướng dẫn khác để xem kết quả khảo sát sau khóa học**: [[google doc](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw)] [[pdf](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw/export?format=pdf)]
+
+
+
+

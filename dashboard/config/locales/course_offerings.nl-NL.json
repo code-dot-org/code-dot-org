@@ -2,13 +2,6 @@
   "nl-NL": {
     "data": {
       "course_offerings": {
-        "coursea": "Cursus A",
-        "courseb": "Cursus B",
-        "coursec": "Cursus C",
-        "coursed": "Cursus D",
-        "coursee": "Cursus E",
-        "coursef": "Cursus F",
-        "express": "Express-cursus",
         "csd": "Ontdekkingen in de informatica",
         "csp": "Basisprincipes uit de informatica",
         "csa": "Computer Wetenschap A",
@@ -34,7 +27,6 @@
         "outbreak": "Uitbraaksimulator",
         "pixelation": "Pixelachtig",
         "playlab": "Speel Lab",
-        "sports": "Codeer je eigen sportspel",
         "text-compression": "Tekstcompressie",
         "csa-self-paced-pl": "Navigeen door Code.org voor leraren van de CSA Pilot",
         "outbreak-csc": "Uitbraak",

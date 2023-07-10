@@ -9454,3 +9454,19 @@ ka-GE:
         - {}
         questions:
         - {}
+      Test Contained Retriable Multi:
+        answers:
+        - text: '0'
+        - {}
+        - text: '2'
+        - text: '4'
+        questions:
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}

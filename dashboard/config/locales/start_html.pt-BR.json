@@ -145,7 +145,8 @@
           "18": "18",
           "19": "19",
           "20": "20",
-          "text": "texto"
+          "text": "texto",
+          "?": "?"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
@@ -168,7 +169,8 @@
           "18": "18",
           "19": "19",
           "20": "20",
-          "text": "texto"
+          "text": "texto",
+          "?": "?"
         },
         "CSD U1 processing live_2021": {
           "walking": "caminhando",
@@ -628,7 +630,8 @@
           "white": "branco"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "Happy": "Feliz"
+          "Happy": "Feliz",
+          "?": "?"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "título"
@@ -829,16 +832,20 @@
           "Medium": "Médio"
         },
         "CSD U6 emotion machine example": {
-          "Happy": "Feliz"
+          "Happy": "Feliz",
+          "?": "?"
         },
         "CSD U6 emotion machine example_2018": {
-          "Happy": "Feliz"
+          "Happy": "Feliz",
+          "?": "?"
         },
         "CSD U6 emotion machine example_2019": {
-          "Happy": "Feliz"
+          "Happy": "Feliz",
+          "?": "?"
         },
         "CSD U6 emotion machine example_2021": {
-          "Happy": "Feliz"
+          "Happy": "Feliz",
+          "?": "?"
         },
         "CSD U6 frequency": {
           "short": "curto",

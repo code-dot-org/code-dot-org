@@ -9,10 +9,13 @@
   "blockly_toolboxCategoryFunctions": "Functies",
   "blockly_toolboxCategoryLogic": "Logica",
   "blockly_toolboxCategoryMath": "wiskundige",
-  "blockly_toolboxCategoryPlay": "Speel",
+  "blockly_toolboxCategoryPlay": "Geluiden",
   "blockly_toolboxCategoryVariables": "Variabelen",
   "feedback": "Feedback",
   "share": "Delen",
   "startOver": "Begin opnieuw",
-  "upload": "Uploaden"
+  "upload": "Uploaden",
+  "panelHeaderInstructions": "Instructies",
+  "panelHeaderWorkspace": "Werkplaats: ",
+  "continue": "Doorgaan"
 }

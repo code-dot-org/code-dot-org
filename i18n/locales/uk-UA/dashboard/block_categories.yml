@@ -4,7 +4,7 @@ uk:
       Actions: Дії
       Advanced: Розширені
       Behaviors: Поведінка
-      Brushes: Кисті
+      Brushes: Пензлі
       Category: Категорія
       Color: Колір
       Comment: Коментар
@@ -20,8 +20,8 @@ uk:
       Games/Score: Ігри / рахунок
       Groups: Групи
       Image: Зображення
-      Input: Ввід
-      Location: Місце знаходження
+      Input: Вхідні дані
+      Location: Розташування
       Locations: Розташування
       Logic: Логіка
       Loops: Цикли

@@ -55,6 +55,13 @@
         }
       }
     },
+    "bike_sharing": {
+      "fields": {
+        "Month": {
+          "id": "مہینہ"
+        }
+      }
+    },
     "poutine_toy": {
       "fields": {
         "mushrooms": {
@@ -212,6 +219,13 @@
         },
         "Star": {
           "id": "ستارہ"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "آرٹسٹ"
         }
       }
     },

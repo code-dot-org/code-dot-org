@@ -89,7 +89,7 @@
   "cscAdaptationsMoveOctopusToPlant": "Đừng quên sử dụng các phím mũi tên để di chuyển bạch tuộc của bạn để chạm vào nhà máy để nó thay đổi trang phục để pha trộn trong.",
   "cscAdaptationsNeedWhenClicked": "Có vẻ như bạn đã thêm một hành vi nhưng quên thêm một <code style=\"color:black; background-color:#6AF36C\">khi sprite nhấp vào</code> khối đầu tiên. Đảm bảo thêm khối hành vi sau khi khối sự kiện.",
   "cscAdaptationsNight": "Đảm bảo thêm nền ban đêm dưới <code style=\"color:black; background-color:#6AF36C\">khi mũi tên nhấn</code> khối.",
-  "cscAdaptationsSeaweed": "Hãy chắc chắn rằng bạch tuộc của bạn đang thay đổi màu sắc giống như rong biển mà nó chạm vào",
+  "cscAdaptationsRightArrowKey": "Hãy đảm bảo nhấn một phím mũi tên sau khi nhấn *“Run”* (chạy). Bạn có thể nhấp chuột vào các nút màu cam bên dưới khu vực chơi hoặc nhấn các phím trên bàn phím.",
   "cscAdaptationsSetBackground": "Hãy chắc chắn để thiết lập một nền.",
   "cscAdaptationsSetBehavior": "Đảm bảo rằng bạn đặt hành vi của sprite sau khi thiết lập kích thước của sprite.",
   "cscAdaptationsSetFastSpeed": "Hãy chắc chắn rằng bạn thiết lập tốc độ sprite cheetah để nhanh.",

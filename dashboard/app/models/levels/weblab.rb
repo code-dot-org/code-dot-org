@@ -51,7 +51,7 @@ class Weblab < Level
 
   # Return an 'appOptions' hash derived from the level contents
   def non_blockly_puzzle_level_options
-    options = Rails.cache.fetch("#{cache_key}/non_blockly_puzzle_level_options/v2") do
+    options = Rails.cache.fetch("#{cache_key}/#{I18n.locale}/non_blockly_puzzle_level_options/v2") do
       level_prop = {}
 
       properties.keys.each do |dashboard|
@@ -75,7 +75,7 @@ class Weblab < Level
       level_prop['teacherMarkdown'] = nil
 
       # Don't set nil values
-      level_prop.reject! {|_, value| value.nil?}
+      level_prop.compact!
     end
     options.freeze
   end
