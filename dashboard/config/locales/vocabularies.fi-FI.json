@@ -2,227 +2,40 @@
   "fi-FI": {
     "data": {
       "vocabularies": {
-        "debugging/minecraft/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/hero/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "function/hero/unversioned": {
-          "word": "Funktio"
-        },
-        "code/poem-art/2021": {
-          "word": "Koodi"
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "code/artist/unversioned": {
-          "word": "Koodi"
-        },
-        "debugging/artist/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "condition/aquatic/unversioned": {
-          "word": "Ehtolause"
-        },
-        "conditionals/aquatic/unversioned": {
-          "word": "Ehtolausekkeet"
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "loops/aquatic/unversioned": {
-          "word": "Silmukat"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/mc/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/sports/unversioned": {
-          "word": "Koodi"
-        },
-        "debugging/sports/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/basketball/unversioned": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/coursed/2022": {
-          "word": "Virheen etsintä"
-        },
-        "conditionals/coursed/2022": {
-          "word": "Ehtolausekkeet"
-        },
-        "condition/coursed/2022": {
-          "word": "Ehtolause"
-        },
-        "variable/coursef/2022": {
-          "word": "Muuttuja"
-        },
-        "input/coursef/2022": {
+        "input/csd/2021": {
           "word": "Syöte"
         },
-        "internet/coursef/2022": {
-          "word": "Internet"
-        },
-        "define/coursef/2022": {
-          "word": "Määritä"
-        },
-        "function/coursee/2022": {
-          "word": "Funktio"
-        },
-        "condition/coursee/2022": {
-          "word": "Ehtolause"
-        },
-        "conditionals/coursee/2022": {
-          "word": "Ehtolausekkeet"
-        },
-        "copyright/coursee/2022": {
+        "copyright/csd/2021": {
           "word": "Copyright"
         },
-        "define/coursee/2022": {
-          "word": "Määritä"
-        },
-        "debugging/courseb/2022": {
+        "debugging/csd/2021": {
           "word": "Virheen etsintä"
         },
-        "drop/courseb/2022": {
-          "word": "Pudota"
-        },
-        "debugging/express/2022": {
-          "word": "Virheen etsintä"
-        },
-        "condition/express/2022": {
-          "word": "Ehtolause"
-        },
-        "conditionals/express/2022": {
-          "word": "Ehtolausekkeet"
-        },
-        "function/express/2022": {
-          "word": "Funktio"
-        },
-        "variable/express/2022": {
+        "variable/csd/2021": {
           "word": "Muuttuja"
         },
-        "define/express/2022": {
-          "word": "Määritä"
-        },
-        "drop/pre-express/2022": {
-          "word": "Pudota"
-        },
-        "debugging/pre-express/2022": {
-          "word": "Virheen etsintä"
-        },
-        "debugging/coursea/2022": {
-          "word": "Virheen etsintä"
-        },
-        "drop/coursea/2022": {
-          "word": "Pudota"
-        },
-        "debugging/coursec/2022": {
-          "word": "Virheen etsintä"
-        },
-        "binary/coursec/2022": {
-          "word": "Binääri"
-        },
-        "input/csd/2022": {
-          "word": "Syöte"
-        },
-        "debugging/csd/2022": {
-          "word": "Virheen etsintä"
-        },
-        "variable/csd/2022": {
-          "word": "Muuttuja"
-        },
-        "condition/csd/2022": {
+        "condition/csd/2021": {
           "word": "Ehtolause"
         },
-        "conditionals/csd/2022": {
+        "conditionals/csd/2021": {
           "word": "Ehtolausekkeet"
         },
-        "abstraction/csd/2022": {
+        "abstraction/csd/2021": {
           "word": "Abstraktio"
         },
-        "function/csd/2022": {
+        "function/csd/2021": {
           "word": "Funktio"
-        },
-        "copyright/csd/2022": {
-          "word": "Copyright"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Koodi",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "variable/coursef/2021": {
-          "word": "Muuttuja"
-        },
-        "input/coursef/2021": {
-          "word": "Syöte"
-        },
-        "internet/coursef/2021": {
-          "word": "Internet"
-        },
-        "define/coursef/2021": {
-          "word": "Määritä"
-        },
-        "debugging/courseb/2021": {
-          "word": "Virheen etsintä"
-        },
-        "drop/courseb/2021": {
-          "word": "Pudota"
         },
         "debugging/coursea/2021": {
           "word": "Virheen etsintä"
         },
         "drop/coursea/2021": {
+          "word": "Pudota"
+        },
+        "debugging/courseb/2021": {
+          "word": "Virheen etsintä"
+        },
+        "drop/courseb/2021": {
           "word": "Pudota"
         },
         "debugging/coursec/2021": {
@@ -239,6 +52,33 @@
         },
         "condition/coursed/2021": {
           "word": "Ehtolause"
+        },
+        "copyright/coursee/2021": {
+          "word": "Copyright"
+        },
+        "function/coursee/2021": {
+          "word": "Funktio"
+        },
+        "condition/coursee/2021": {
+          "word": "Ehtolause"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Ehtolausekkeet"
+        },
+        "define/coursee/2021": {
+          "word": "Määritä"
+        },
+        "variable/coursef/2021": {
+          "word": "Muuttuja"
+        },
+        "input/coursef/2021": {
+          "word": "Syöte"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Määritä"
         },
         "debugging/express/2021": {
           "word": "Virheen etsintä"
@@ -264,44 +104,204 @@
         "debugging/pre-express/2021": {
           "word": "Virheen etsintä"
         },
-        "copyright/coursee/2021": {
-          "word": "Copyright"
-        },
-        "function/coursee/2021": {
-          "word": "Funktio"
-        },
-        "condition/coursee/2021": {
-          "word": "Ehtolause"
-        },
-        "conditionals/coursee/2021": {
-          "word": "Ehtolausekkeet"
-        },
-        "define/coursee/2021": {
-          "word": "Määritä"
-        },
-        "debugging/csd/2021": {
-          "word": "Virheen etsintä"
-        },
-        "variable/csd/2021": {
-          "word": "Muuttuja"
-        },
-        "condition/csd/2021": {
-          "word": "Ehtolause"
-        },
-        "conditionals/csd/2021": {
-          "word": "Ehtolausekkeet"
-        },
-        "abstraction/csd/2021": {
-          "word": "Abstraktio"
-        },
-        "function/csd/2021": {
-          "word": "Funktio"
-        },
-        "input/csd/2021": {
+        "input/csd/2022": {
           "word": "Syöte"
         },
-        "copyright/csd/2021": {
+        "copyright/csd/2022": {
           "word": "Copyright"
+        },
+        "debugging/csd/2022": {
+          "word": "Virheen etsintä"
+        },
+        "variable/csd/2022": {
+          "word": "Muuttuja"
+        },
+        "condition/csd/2022": {
+          "word": "Ehtolause"
+        },
+        "conditionals/csd/2022": {
+          "word": "Ehtolausekkeet"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstraktio"
+        },
+        "function/csd/2022": {
+          "word": "Funktio"
+        },
+        "debugging/coursea/2022": {
+          "word": "Virheen etsintä"
+        },
+        "drop/coursea/2022": {
+          "word": "Pudota"
+        },
+        "debugging/courseb/2022": {
+          "word": "Virheen etsintä"
+        },
+        "drop/courseb/2022": {
+          "word": "Pudota"
+        },
+        "debugging/coursec/2022": {
+          "word": "Virheen etsintä"
+        },
+        "binary/coursec/2022": {
+          "word": "Binääri"
+        },
+        "debugging/coursed/2022": {
+          "word": "Virheen etsintä"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Ehtolausekkeet"
+        },
+        "condition/coursed/2022": {
+          "word": "Ehtolause"
+        },
+        "function/coursee/2022": {
+          "word": "Funktio"
+        },
+        "condition/coursee/2022": {
+          "word": "Ehtolause"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Ehtolausekkeet"
+        },
+        "copyright/coursee/2022": {
+          "word": "Copyright"
+        },
+        "define/coursee/2022": {
+          "word": "Määritä"
+        },
+        "variable/coursef/2022": {
+          "word": "Muuttuja"
+        },
+        "input/coursef/2022": {
+          "word": "Syöte"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet"
+        },
+        "define/coursef/2022": {
+          "word": "Määritä"
+        },
+        "debugging/express/2022": {
+          "word": "Virheen etsintä"
+        },
+        "condition/express/2022": {
+          "word": "Ehtolause"
+        },
+        "conditionals/express/2022": {
+          "word": "Ehtolausekkeet"
+        },
+        "function/express/2022": {
+          "word": "Funktio"
+        },
+        "variable/express/2022": {
+          "word": "Muuttuja"
+        },
+        "define/express/2022": {
+          "word": "Määritä"
+        },
+        "drop/pre-express/2022": {
+          "word": "Pudota"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Virheen etsintä"
+        },
+        "condition/aquatic/unversioned": {
+          "word": "Ehtolause"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Ehtolausekkeet"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Silmukat"
+        },
+        "code/artist/unversioned": {
+          "word": "Koodi"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "function/hero/unversioned": {
+          "word": "Funktio"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "code/poem-art/2021": {
+          "word": "Koodi"
+        },
+        "code/sports/unversioned": {
+          "word": "Koodi"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Koodi",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         }
       }
     }
