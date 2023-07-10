@@ -40,7 +40,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     tagName =
       'flyoutClip' +
       Blockly.utils.idGenerator.genUid().replace(/([\(\)])/g, '');
-    var definitions = Blockly.utils.dom.createSvgElement(
+    let definitions = Blockly.utils.dom.createSvgElement(
       'defs',
       {},
       this.svgGroup_
@@ -85,7 +85,9 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
       const blockHW = block.getHeightWidth();
       this.updateHeight_(blockHW.height);
       this.updateWidth_(blockHW.width);
-      block.flyoutRect_ && this.moveRectToBlock_(block.flyoutRect_, block);
+      if (this.rectMap_.has(block)) {
+        this.moveRectToBlock_(this.rectMap_.get(block), block);
+      }
     }
     // We need to set the flyout width based on the block itself, excluding children.
     // Using block.getHeightWidth() would include blocks connected to input and next
@@ -130,57 +132,56 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @param height The height of the flyout, not including rounded corners.
    */
   setBackgroundPath_(width, height) {
-    var path = [
-      'M 0,' +
-        (this.toolboxPosition_ === Blockly.TOOLBOX_AT_TOP
-          ? 0
-          : this.CORNER_RADIUS),
-    ];
-    path.push(
-      'a',
-      this.CORNER_RADIUS,
-      this.CORNER_RADIUS,
-      0,
-      0,
-      1,
-      this.CORNER_RADIUS,
-      -this.CORNER_RADIUS
+    const svgPaths = GoogleBlockly.utils.svgPaths;
+    let path = svgPaths.moveTo(
+      this.RTL ? width : 0,
+      this.toolboxPosition_ === Blockly.TOOLBOX_AT_TOP ? 0 : this.CORNER_RADIUS
     );
-    path.push('h', width);
-    path.push(
-      'a',
-      this.CORNER_RADIUS,
-      this.CORNER_RADIUS,
-      0,
-      0,
-      1,
-      this.CORNER_RADIUS,
-      this.CORNER_RADIUS
-    );
-    path.push('v', height);
-    path.push(
-      'a',
-      this.CORNER_RADIUS,
-      this.CORNER_RADIUS,
-      0,
-      0,
-      1,
-      -this.CORNER_RADIUS,
-      this.CORNER_RADIUS
-    );
-    path.push('h', -1 * width);
-    path.push(
-      'a',
-      this.CORNER_RADIUS,
-      this.CORNER_RADIUS,
-      0,
-      0,
-      1,
-      -this.CORNER_RADIUS,
-      -this.CORNER_RADIUS
-    );
-    path.push('z');
-    path = path.join(' ');
+
+    path += svgPaths.curve('a', [
+      svgPaths.point(this.CORNER_RADIUS, this.CORNER_RADIUS),
+      this.RTL ? ' 0 0 0 ' : ' 0 0 1 ',
+      svgPaths.point(
+        this.RTL ? -this.CORNER_RADIUS : this.CORNER_RADIUS,
+        -this.CORNER_RADIUS
+      ),
+    ]);
+
+    path += svgPaths.lineOnAxis('h', this.RTL ? -width : width);
+
+    path += svgPaths.curve('a', [
+      svgPaths.point(this.CORNER_RADIUS, this.CORNER_RADIUS),
+      this.RTL ? ' 0 0 0 ' : ' 0 0 1 ',
+      svgPaths.point(
+        this.RTL ? -this.CORNER_RADIUS : this.CORNER_RADIUS,
+        this.CORNER_RADIUS
+      ),
+    ]);
+
+    path += svgPaths.lineOnAxis('v', height);
+
+    path += svgPaths.curve('a', [
+      svgPaths.point(this.CORNER_RADIUS, this.CORNER_RADIUS),
+      this.RTL ? ' 0 0 0 ' : ' 0 0 1 ',
+      svgPaths.point(
+        this.RTL ? this.CORNER_RADIUS : -this.CORNER_RADIUS,
+        this.CORNER_RADIUS
+      ),
+    ]);
+
+    path += svgPaths.lineOnAxis('h', this.RTL ? width : -width);
+
+    path += svgPaths.curve('a', [
+      svgPaths.point(this.CORNER_RADIUS, this.CORNER_RADIUS),
+      this.RTL ? ' 0 0 0 ' : ' 0 0 1 ',
+      svgPaths.point(
+        this.RTL ? this.CORNER_RADIUS : -this.CORNER_RADIUS,
+        -this.CORNER_RADIUS
+      ),
+    ]);
+
+    path += 'z';
+
     this.svgClipPath_.setAttribute('d', path);
     this.svgBackground_.setAttribute('d', path);
   }
