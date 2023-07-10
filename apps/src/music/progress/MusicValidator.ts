@@ -2,16 +2,17 @@
 
 import MusicPlayer from '../player/MusicPlayer';
 import {Condition} from '@cdo/apps/lab2/types';
-import ConditionsChecker, {
-  ConditionNames,
-} from '@cdo/apps/lab2/progress/ConditionsChecker';
+import ConditionsChecker from '@cdo/apps/lab2/progress/ConditionsChecker';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {Validator} from '@cdo/apps/lab2/progress/ProgressManager';
+
+export interface ConditionNames {
+  [key: string]: string;
+}
 
 export const ConditionNamesList: ConditionNames = {
   PLAYED_SOUNDS_TOGETHER: 'played_sounds_together',
   PLAYED_SOUND_TRIGGERED: 'played_sound_triggered',
-  USED_BLOCK: 'used_block',
 };
 
 export default class MusicValidator extends Validator {
@@ -20,7 +21,7 @@ export default class MusicValidator extends Validator {
     private readonly getPlaybackEvents: () => PlaybackEvent[],
     private readonly player: MusicPlayer,
     private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
-      ConditionNamesList
+      Object.values(ConditionNamesList)
     )
   ) {
     super();
