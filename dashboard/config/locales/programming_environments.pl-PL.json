@@ -1635,7 +1635,7 @@
                   },
                   "return_value": "Łańcuch zawierający zawartość elementu ekranu.",
                   "short_description": "Pobiera tekst z określonego elementu ekranu.",
-                  "tips": "-   [`getText ()`](/docs/applab/getText/) może również odczytać tekst na [`button ()`](/docs/applab/button/) lub [`textLabel ()`](/docs/applab/textLabel/)."
+                  "tips": "-   [`getText ()`(#fff176)](/docs/applab/getText/) może również odczytać tekst na [`button ()`(#fff176)](/docs/applab/button/) lub [`textLabel ()`(#fff176)](/docs/applab/textLabel/)."
                 },
                 "getXPosition": {
                   "examples": {
@@ -1804,7 +1804,8 @@
                       "type": "Łańcuch",
                       "description": "Właściwość do zmiany."
                     }
-                  }
+                  },
+                  "short_description": "Ustawia nową wartość właściwości dla wybranego elementu."
                 },
                 "setSize": {
                   "palette_params": {
@@ -2084,9 +2085,11 @@
                       "type": "liczba"
                     },
                     "blueValue": {
-                      "type": "liczba"
+                      "type": "liczba",
+                      "description": "Ilość koloru niebieskiego (wartość od 0 do 255) do ustawienia w pikselu."
                     }
-                  }
+                  },
+                  "short_description": "Ustawia ilość koloru niebieskiego (wartość od 0 do 255) w kolorze piksela znajdującego się na pozycji x i y w danym obrazie na wprowadzoną wartość blueValue."
                 },
                 "setFillColor": {
                   "palette_params": {
@@ -2107,9 +2110,11 @@
                       "type": "liczba"
                     },
                     "greenValue": {
-                      "type": "liczba"
+                      "type": "liczba",
+                      "description": "Ilość koloru zielonego (wartość od 0 do 255) do ustawienia w pikselu."
                     }
-                  }
+                  },
+                  "short_description": "Ustawia ilość koloru zielonego (wartość od 0 do 255) w kolorze piksela znajdującego się na pozycji x i y w danym obrazie na wprowadzoną wartość greenValue."
                 },
                 "setRGB": {
                   "palette_params": {
@@ -2123,13 +2128,16 @@
                       "type": "liczba"
                     },
                     "red": {
-                      "type": "liczba"
+                      "type": "liczba",
+                      "description": "Ilość koloru czerwonego (wartość od 0 do 255) do ustawienia w pikselu."
                     },
                     "green": {
-                      "type": "liczba"
+                      "type": "liczba",
+                      "description": "Ilość koloru zielonego (wartość od 0 do 255) do ustawienia w pikselu."
                     },
                     "blue": {
-                      "type": "liczba"
+                      "type": "liczba",
+                      "description": "Ilość koloru niebieskiego (wartość od 0 do 255) do ustawienia w pikselu."
                     },
                     "alpha": {
                       "type": "liczba"
@@ -2148,9 +2156,11 @@
                       "type": "liczba"
                     },
                     "redValue": {
-                      "type": "liczba"
+                      "type": "liczba",
+                      "description": "Ilość koloru czerwonego (wartość od 0 do 255) do ustawienia w pikselu."
                     }
-                  }
+                  },
+                  "short_description": "Ustawia ilość koloru czerwonego (wartość od 0 do 255) w kolorze piksela znajdującego się na pozycji x i y w danym obrazie na wprowadzoną wartość redValue."
                 },
                 "setStrokeColor": {
                   "palette_params": {
@@ -2348,15 +2358,21 @@
                     "Am I off the screen?": {
                       "name": "Czy jestem poza ekranem?"
                     }
-                  }
+                  },
+                  "short_description": "Zwraca aktualną współrzędną x żółwia w pikselach."
+                },
+                "getY": {
+                  "short_description": "Zwraca aktualną współrzędną y żółwia w pikselach."
                 },
                 "move": {
                   "palette_params": {
                     "x": {
-                      "type": "liczba"
+                      "type": "liczba",
+                      "description": "Liczba pikseli, o którą przesunąć żółwia w prawo."
                     },
                     "y": {
-                      "type": "liczba"
+                      "type": "liczba",
+                      "description": "Liczba pikseli, o którą przesunąć żółwia w dół."
                     }
                   }
                 },
@@ -2382,7 +2398,8 @@
                     "y": {
                       "type": "liczba"
                     }
-                  }
+                  },
+                  "short_description": "Przesuwa żółwia na konkretne (x,y) współrzędne na ekranie."
                 },
                 "penColor": {
                   "palette_params": {
@@ -2405,14 +2422,19 @@
                     "a": {
                       "type": "liczba"
                     }
-                  }
+                  },
+                  "short_description": "Używając wartości RGBA, ustawia kolor pióra używanego przez żółwia do rysowania linii i kropek."
+                },
+                "penUp": {
+                  "short_description": "Podnosi pióro, aby żółw nie rysował linii podczas ruchu."
                 },
                 "penWidth": {
                   "palette_params": {
                     "width": {
                       "type": "liczba"
                     }
-                  }
+                  },
+                  "short_description": "Ustawia szerokość linii w pikselach, którą żółw rysuje podczas ruchu."
                 },
                 "show": {
                   "short_description": "Sprawia, że żółw jest widoczny w obecnym miejscu."
