@@ -1,0 +1,85 @@
+// Custom styles for code.org/ai/pl/webinar
+// — supplemental to shared/css/design-system-pegasus.scss
+
+@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+
+.hero-ai-pl-webinar {
+  background-image: url(/images/ai/pl/webinar/hero--1.png), url(/images/ai/pl/webinar/hero--2.png);
+  background-position: left center, right center;
+  background-repeat: no-repeat, no-repeat;
+  background-color: #360161;
+  background-size: contain;
+
+  &__by {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-left: 32px;
+    flex-wrap: wrap;
+
+    img {
+      margin: 16px 32px 16px 0;
+    }
+  }
+
+  .text-wrapper p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 1023px) {
+    background-image: url(/images/ai/pl/webinar/hero--2.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 300px;
+    padding-bottom: 200px;
+
+  }
+  @media (max-width: 767px) {
+    &__by {
+      flex-direction: column;
+      align-items: flex-start;
+
+    }
+    &__list {
+      align-items: center;
+      margin-left: 0;
+      flex-wrap: wrap;
+
+      img {
+        margin: 12px 24px 12px 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.partnership-ai {
+  background: $neutral_light;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    img {
+      margin: 0 26px
+    }
+  }
+}
