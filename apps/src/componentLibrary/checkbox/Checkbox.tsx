@@ -8,7 +8,7 @@ export interface CheckboxProps {
   /** Checkbox checked state */
   checked: boolean;
   /** Checkbox onChange handler*/
-  onChange: (value: ChangeEvent<HTMLInputElement>) => void;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   /** The name attribute specifies the name of an input element.
    The name attribute is used to reference elements in a JavaScript,
    or to reference form data after a form is submitted.
