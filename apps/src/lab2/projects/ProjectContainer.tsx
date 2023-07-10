@@ -11,7 +11,6 @@ import {setUpWithLevel, setUpWithoutLevel} from '../lab2Redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
-import {showProjectBackedHeader} from '@cdo/apps/code-studio/headerRedux';
 
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   children,
@@ -51,7 +50,6 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       // /projectbeats.
       promise = dispatch(setUpWithoutLevel(channelId));
     }
-    dispatch(showProjectBackedHeader());
     return () => {
       // If we have an early return, we will abort the promise in progress.
       // An early return could happen if the level is changed mid-load.
