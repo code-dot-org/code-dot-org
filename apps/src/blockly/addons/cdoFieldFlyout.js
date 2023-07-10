@@ -4,12 +4,6 @@ import CdoBlockFlyout from './cdoBlockFlyout';
 export default class CdoFieldFlyout extends GoogleBlockly.Field {
   /**
    * @param value The initial value of the field.
-   *     Also accepts Field.SKIP_SETUP if you wish to skip setup (only used by
-   * subclasses that want to handle configuration and setting the field value
-   * after their own constructors have run).
-   * @param {Function} opt_validator  A function that is called to validate changes to the
-   *     field's value. Takes in a value & returns a validated value, or null to
-   *     abort the change.
    * @param {Object} opt_config A map of options used to configure the field.
    *    Refer to the individual field's documentation for a list of properties
    * this parameter supports.
@@ -19,6 +13,12 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     this.configure_(opt_config);
   }
 
+  /**
+   * Construct a FieldFlyout from a JSON arg object.
+   *
+   * @param {Object} options A JSON object with options.
+   * @returns {CdoFieldFlyout} The new field instance.
+   */
   static fromJson(options) {
     return new CdoFieldFlyout(options.flyoutKey, options);
   }
@@ -26,6 +26,11 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
   EDITABLE = false;
   CURSOR = 'default';
 
+  /**
+   * Process the configuration map passed to the field.
+   *
+   * @param {Object} [config] A map of options used to configure the field.
+   */
   configure_(config) {
     if (config) {
       this.minWidth_ = config.minWidth;
@@ -33,6 +38,9 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     }
   }
 
+  /**
+   * Create the block UI for this field.
+   */
   initView() {
     this.workspace_ = this.getSourceBlock().workspace;
     this.flyout_ = new CdoBlockFlyout({
@@ -47,10 +55,38 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     this.fieldGroup_.appendChild(this.flyout_.createDom('g'));
   }
 
+  /**
+   * This is the Blockly hook to create an editor for the field.
+   */
   showEditor_() {
     this.setFlyoutVisible(!this.isFlyoutVisible());
   }
 
+  /**
+   * Returns the height and width of the field.
+   *
+   * This should *in general* be the only place render_ gets called from.
+   *
+   * @returns {Blockly.utils.Size} Height and width.
+   */
+  getSize() {
+    if (!this.isVisible()) {
+      return new Blockly.utils.Size(0, 0);
+    }
+    // Normally, Blockly skips rendering fields unless we've notified the
+    // rendering system that they've changed (this.isDirty_), but in this
+    // case, we want to always re-render / resize the field so that it
+    // matches the width of the block.
+    this.render_();
+
+    if (this.visible_ && this.size_.width === 0) {
+      // If the field is not visible the width will be 0 as well, one of the
+      // problems with the old system.
+      this.render_();
+    }
+
+    return this.size_;
+  }
   /**
    * Used by getSize() to move/resize any DOM elements, and get the new size.
    *
@@ -71,20 +107,28 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
         fieldGroupBBox.height
       );
     }
-    // Blockly will skip rerendering fields unless we've notified
-    // the rendering system that it has changed.
-    this.isDirty_ = true;
   }
 
+  /**
+   * Show or hide the flyout, then re-render it.
+   *
+   * @param {boolean} isVisible Whether or not the flyout should be shown.
+   */
   setFlyoutVisible(isVisible) {
-    this.flyout_.targetWorkspace_ ||
-      (this.flyout_.init(this.workspace_), this.flyout_.svgGroup_);
+    if (!this.flyout_.targetWorkspace_) {
+      this.flyout_.init(this.workspace_);
+    }
     isVisible
       ? this.flyout_.show(`flyout_${this.sourceBlock_.type}`)
       : this.flyout_.hide();
     this.forceRerender();
   }
 
+  /**
+   * Is this field's flyout visible?
+   *
+   * @returns True if visible.
+   */
   isFlyoutVisible() {
     return this.flyout_.isVisible();
   }
