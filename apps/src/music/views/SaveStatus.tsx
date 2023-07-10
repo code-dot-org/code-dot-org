@@ -1,12 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
 import {useSelector} from 'react-redux';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import {projectUpdatedStatuses} from '@cdo/apps/code-studio/projectRedux';
 
 const commonI18n = require('@cdo/locale');
-const Spinner = require('@cdo/apps/code-studio/pd/components/spinner');
 const moduleStyles = require('./save-status.module.scss').default;
-const projectUpdatedStatuses =
-  require('@cdo/apps/code-studio/projectRedux').projectUpdatedStatuses;
 
 /**
  * Displays the project save status: a "Saving..." message with a spinner if saving,

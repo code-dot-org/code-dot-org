@@ -7,6 +7,7 @@
 #  parent_email   :string(255)      not null
 #  uuid           :string(36)       not null
 #  reminders_sent :integer          default(0), not null
+#  resends_sent   :integer          default(0), not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #
@@ -16,6 +17,9 @@
 #  index_parental_permission_requests_on_uuid     (uuid)
 #
 class ParentalPermissionRequest < ApplicationRecord
+  belongs_to :user
+  validates :parent_email, presence: true
+
   before_create :set_uuid
 
   def set_uuid

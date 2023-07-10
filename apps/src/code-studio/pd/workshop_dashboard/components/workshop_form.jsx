@@ -380,14 +380,16 @@ export class WorkshopForm extends React.Component {
     );
   }
 
-  // Returns whether today is within a month before the given session.
+  // Returns whether today is within a month before the given session (a month
+  // is represented as 30 days here for consistency and to align with behavior
+  // in workshop_controller.rb).
   sessionStartsWithinMonth = session => {
     const today = this.props.today;
     const workshopDate = new Date(session.date);
     const monthBeforeWorkshopDate = new Date(
       workshopDate.getFullYear(),
-      workshopDate.getMonth() - 1,
-      workshopDate.getDate()
+      workshopDate.getMonth(),
+      workshopDate.getDate() - 30
     );
     return monthBeforeWorkshopDate <= today && today <= workshopDate;
   };

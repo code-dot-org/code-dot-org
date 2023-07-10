@@ -35,6 +35,7 @@ export const PROJECT_TYPE_MAP = {
   dance: i18n.projectTypeDance(),
   spritelab: i18n.projectTypeSpriteLab(),
   javalab: i18n.projectTypeJavalab(),
+  music: i18n.projectTypeMusic(),
   poetry: i18n.projectTypePoetry(),
   poetry_hoc: i18n.projectTypePoetry(),
   thebadguys: i18n.projectTypeThebadguys(),

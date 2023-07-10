@@ -1,0 +1,21 @@
+name 'SP-VPL-21-mod4-Overview-Learning-CSP_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Learning CS Principles
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">An important role of the teacher in the CS Principles classroom is to support students in developing authentic CS practices as they learn new programming skills and build new CS content knowledge. 
+</p>
+</div>
+
+## You will:
+
+* ##### Learn about authentic CS practices that students will develop throughout the CS Principles course.
+
+### Let's keep learning! 
+
+
+MARKDOWN

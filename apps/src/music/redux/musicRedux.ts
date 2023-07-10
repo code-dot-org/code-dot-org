@@ -1,6 +1,9 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
-import {initialProgressState, ProgressState} from '../progress/ProgressManager';
+import {
+  initialValidationState,
+  ValidationState,
+} from '@cdo/apps/lab2/progress/ProgressManager';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -21,7 +24,7 @@ export const InstructionsPositions = {
   RIGHT: InstructionsPosition.RIGHT,
 };
 
-interface MusicState {
+export interface MusicState {
   /** If the song is currently playing */
   isPlaying: boolean;
   /** The current 1-based playhead position, scaled to measures */
@@ -34,19 +37,14 @@ interface MusicState {
   showInstructions: boolean;
   /** Where instructions should be placed (left, top, or right) */
   instructionsPosition: InstructionsPosition;
+  /** If the headers are showing */
+  isHeadersShowing: boolean;
   /** If the Control Pad (Beat Pad) is showing */
   isBeatPadShowing: boolean;
   /** The current list of playback events */
   playbackEvents: PlaybackEvent[];
   /** The current last measure of the song */
   lastMeasure: number;
-  /** The number of levels in the current progression */
-  levelCount: number | undefined;
-  // TODO: Currently Music Lab is the only Lab that uses
-  // this progress system, but in the future, we may want to
-  // move this into a more generic, high-level, lab-agnostic
-  // reducer.
-  currentProgressState: ProgressState;
 }
 
 const initialState: MusicState = {
@@ -56,11 +54,10 @@ const initialState: MusicState = {
   timelineAtTop: false,
   showInstructions: false,
   instructionsPosition: InstructionsPosition.LEFT,
-  isBeatPadShowing: false,
+  isHeadersShowing: true,
+  isBeatPadShowing: true,
   playbackEvents: [],
   lastMeasure: 0,
-  levelCount: undefined,
-  currentProgressState: {...initialProgressState},
 };
 
 const musicSlice = createSlice({
@@ -115,6 +112,15 @@ const musicSlice = createSlice({
           (positions.indexOf(state.instructionsPosition) + 1) % positions.length
         ];
     },
+    showHeaders: state => {
+      state.isHeadersShowing = true;
+    },
+    hideHeaders: state => {
+      state.isHeadersShowing = false;
+    },
+    toggleHeaders: state => {
+      state.isHeadersShowing = !state.isHeadersShowing;
+    },
     showBeatPad: state => {
       state.isBeatPadShowing = true;
     },
@@ -123,9 +129,6 @@ const musicSlice = createSlice({
     },
     toggleBeatPad: state => {
       state.isBeatPadShowing = !state.isBeatPadShowing;
-    },
-    setCurrentProgressState: (state, action: PayloadAction<ProgressState>) => {
-      state.currentProgressState = {...action.payload};
     },
     clearPlaybackEvents: state => {
       state.playbackEvents = [];
@@ -137,9 +140,6 @@ const musicSlice = createSlice({
     ) => {
       state.playbackEvents.push(...action.payload.events);
       state.lastMeasure = action.payload.lastMeasure;
-    },
-    setLevelCount: (state, action: PayloadAction<number>) => {
-      state.levelCount = action.payload;
     },
   },
 });
@@ -181,11 +181,12 @@ export const {
   setInstructionsPosition,
   toggleInstructions,
   advanceInstructionsPosition,
+  showHeaders,
+  hideHeaders,
+  toggleHeaders,
   showBeatPad,
   hideBeatPad,
   toggleBeatPad,
-  setCurrentProgressState,
   clearPlaybackEvents,
   addPlaybackEvents,
-  setLevelCount,
 } = musicSlice.actions;

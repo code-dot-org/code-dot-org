@@ -29,12 +29,6 @@ module ApplicationHelper
     "#{s} ago"
   end
 
-  def gender_options
-    Policies::Gender::OPTIONS.map do |key, value|
-      [(key ? t(key) : ''), value]
-    end
-  end
-
   def user_type_options
     User::USER_TYPE_OPTIONS.map do |user_type|
       [t("user_type.#{user_type}"), user_type]
@@ -44,6 +38,12 @@ module ApplicationHelper
   def age_options
     User::AGE_DROPDOWN_OPTIONS.map do |age|
       [age, age]
+    end
+  end
+
+  def us_state_options
+    User.us_state_dropdown_options.map do |code, name|
+      [name, code]
     end
   end
 

@@ -17,6 +17,7 @@ export const PRIMARY_SOUND_INPUT_NAME = 'primary_sound';
 export const FIELD_REST_DURATION_NAME = 'rest_duration';
 export const FIELD_EFFECTS_NAME = 'effects_name';
 export const FIELD_EFFECTS_VALUE = 'effects_value';
+export const FIELD_TRIGGER_START_NAME = 'trigger_start';
 
 // Types
 
@@ -46,3 +47,9 @@ export const MINUS_IMAGE =
 // Other
 
 export const DOCS_BASE_URL = '/docs/ide/projectbeats/expressions/';
+
+export const TriggerStart = {
+  IMMEDIATELY: 'immediately',
+  NEXT_BEAT: 'next_beat',
+  NEXT_MEASURE: 'next_measure',
+};

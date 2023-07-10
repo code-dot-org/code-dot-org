@@ -16,6 +16,7 @@ import ManageStudentsTable, {
 import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
 import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
 import ManageStudentNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
+import ManageStudentsGenderCell from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCell';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import manageStudents, {
   RowType,
@@ -182,6 +183,69 @@ describe('ManageStudentsTable', () => {
           }
         />
       );
+    });
+
+    describe('Gender field feature flag', () => {
+      before(() => {
+        window.GENDER_FEATURE_ENABLED = 'true';
+      });
+
+      after(() => {
+        window.GENDER_FEATURE_ENABLED = undefined;
+      });
+
+      it('does render the gender column if loginType is secret picture', () => {
+        const wrapper = mount(
+          <Provider store={getStore()}>
+            <ManageStudentsTable />
+          </Provider>
+        );
+        expect(wrapper.find(ManageStudentsGenderCell).exists()).to.be.true;
+      });
+
+      it('does render the gender column if loginType is secret word', () => {
+        const store = getStore();
+        store.dispatch(setLoginType(SectionLoginType.word));
+        const wrapper = mount(
+          <Provider store={store}>
+            <ManageStudentsTable />
+          </Provider>
+        );
+        expect(wrapper.find(ManageStudentsGenderCell).exists()).to.be.true;
+      });
+
+      it('does not render the gender column if loginType is email', () => {
+        const store = getStore();
+        store.dispatch(setLoginType(SectionLoginType.email));
+        const wrapper = mount(
+          <Provider store={store}>
+            <ManageStudentsTable />
+          </Provider>
+        );
+        expect(wrapper.find(ManageStudentsGenderCell).exists()).to.be.false;
+      });
+
+      it('does not render the gender column if loginType is Google', () => {
+        const store = getStore();
+        store.dispatch(setLoginType(SectionLoginType.google_classroom));
+        const wrapper = mount(
+          <Provider store={store}>
+            <ManageStudentsTable />
+          </Provider>
+        );
+        expect(wrapper.find(ManageStudentsGenderCell).exists()).to.be.false;
+      });
+
+      it('does not render the gender column if loginType is Clever', () => {
+        const store = getStore();
+        store.dispatch(setLoginType(SectionLoginType.clever));
+        const wrapper = mount(
+          <Provider store={store}>
+            <ManageStudentsTable />
+          </Provider>
+        );
+        expect(wrapper.find(ManageStudentsGenderCell).exists()).to.be.false;
+      });
     });
 
     it('renders an editable name field', async () => {

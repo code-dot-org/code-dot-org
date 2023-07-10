@@ -1383,7 +1383,9 @@ el-GR:
   coursee-2020_name: Μάθημα E (2020)
   coursef-2020_name: Μάθημα F (2020)
   coursed-2021_name: Μάθημα D (2021)
-  coursed-2022_name: Μάθημα D (2021)
+  coursea-2022_name: Μάθημα A (2022)
+  coursec-2022_name: Μάθημα C (2022)
+  coursed-2022_name: Μάθημα D (2022)
   express-2018_name: Εντατικό Μάθημα (2018)
   pre-express-2018_name: Εντατικό Μάθημα για νεαρούς αναγνώστες (2018)
   express-2019_name: Εντατικό Μάθημα (2019)
@@ -1411,7 +1413,7 @@ el-GR:
   flappy-impact-study_name: Κώδικας Flappy με Έρευνα
   hoc-encryption_name: Απλή Κρυπτογράφηση
   text-compression_name: Συμπίεση κειμένου
-  applab_name: App Lab
+  applab_name: Εργαστήριο εφαρμογών
   gamelab_name: Game Lab
   basketball_name: Φτιάξτε ένα παιχνίδι μπάσκετ
   sports_name: Κωδικοποιήστε το δικό σας αθλητικό παιχνίδι
@@ -2338,6 +2340,7 @@ el-GR:
     Παρακαλώ αναβαθμίστε το πρόγραμμα περιήγησης σας σε [ένα από τα υποστηριζόμενα
     προγράμματα μας περιήγησης] (%{supported_browsers_url}). Μπορείτε να δοκιμάσετε
     την προβολή της σελίδας, αλλά να περιμένετε η λειτουργικότητα της να είναι ελλιπής.
+  hourofcode_shortcode: κώδικας
   flappy_shortcode: Φτερούγισε
   header_home: Αρχική
   header_my_dashboard: Ο Πίνακας Ελέγχου Μου
@@ -2358,12 +2361,12 @@ el-GR:
   header_educate_requirements: Τεχνικές Απαιτήσεις
   header_educate_tools: Εργαλεία και Βίντεο
   header_about_us: Σχετικά με εμάς
-  header_about_leadership: Ηγεμονία
+  header_about_leadership: Ηγεσία
   header_about_donors: Δωρητές
   header_about_partners: Συνεργάτες
   header_about_team: Πλήρης Ομάδα
   header_about_news: Αίθουσα Ειδήσεων
-  header_about_evaluation: Αξιολογήσεις
+  header_about_evaluation: Αξιολόγηση
   header_about_jobs: Θέσεις εργασίας
   header_about_contact: Επικοινωνία
   header_about_faqs: Συχνές ερωτήσεις
@@ -2378,7 +2381,7 @@ el-GR:
   header_report_abuse: Αναφορά κατάχρησης
   header_legal: Απόρρητο & Νομικά
   header_legal_privacy: Πολιτική Απορρήτου
-  header_legal_tos: Όροι
+  header_legal_tos: Όροι παροχής υπηρεσιών
   header_tutorials: Οδηγοί εκμάθησης
   header_screen_reader_hamburger: Μενού
   header_screen_reader_help: Μενού Βοήθειας
@@ -2403,7 +2406,7 @@ el-GR:
   user_header_dance: Πάρτι Χορού
   user_header_spritelab: Sprite Lab
   user_header_minecraft: Minecraft
-  user_header_flappy: Πουλάκι
+  user_header_flappy: Flappy
   user_header_view_all: Όλα τα έργα...
   user_header_view_project_gallery: Προβολή βιβλιοθήκης έργου
   user_header_view_my_projects: Προβολή των έργων μου
@@ -2907,6 +2910,7 @@ el-GR:
     στο διάστημα
   hoc2022_landing_page_banner_alt_right: Ένα ρομπότ που ντριμπλάρει μια μπάλα ποδοσφαίρου
     στο διάστημα μπροστά από έναν πύραυλο που απογειώνεται
+  try_it_yourself: Δοκίμασέ το μόνος σου!
   hoc2022_nasa_banner_heading: Ελάτε μαζί με τη NASA για ένα ειδικό αφιέρωμα του Hour
     of Code για την επιστήμη των υπολογιστών στο διάστημα!
   hoc2022_nasa_banner_description: Πρεμιέρα στις 10 π.μ. ET, 5 Δεκεμβρίου στο κανάλι

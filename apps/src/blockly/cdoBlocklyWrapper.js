@@ -312,6 +312,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
         transformTextSetLabel
       );
     },
+    injectCss(document) {
+      return Blockly.Css.inject(document);
+    },
+    resizeSvg(blockSpace) {
+      return blockSpace.blockSpaceEditor.svgResize();
+    },
   };
   blocklyWrapper.customBlocks = customBlocks;
   return blocklyWrapper;

@@ -269,14 +269,14 @@ class ApiController < ApplicationController
       level_map = student.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
       student_levels = script_levels.map do |script_level|
-        user_levels = script_level.level_ids.map do |id|
+        user_levels = script_level.level_ids.filter_map do |id|
           contained_levels = Unit.cache_find_level(id).contained_levels
           if contained_levels.any?
             level_map[contained_levels.first.id]
           else
             level_map[id]
           end
-        end.compact
+        end
         user_levels_ids = user_levels.map(&:id)
         level_class = (best_activity_css_class user_levels).dup
         paired = (paired_user_level_ids & user_levels_ids).any?
@@ -567,7 +567,7 @@ class ApiController < ApplicationController
     data = section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
 
-      text_response_levels.map do |level_hash|
+      text_response_levels.filter_map do |level_hash|
         last_attempt = student.last_attempt_for_any(level_hash[:levels])
         response = last_attempt.try(:level_source).try(:data)
         next unless response
@@ -579,7 +579,7 @@ class ApiController < ApplicationController
           response: response,
           url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id)
         }
-      end.compact
+      end
     end.flatten
 
     render json: data
