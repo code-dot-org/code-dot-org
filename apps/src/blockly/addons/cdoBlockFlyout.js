@@ -58,6 +58,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
       definitions
     );
     this.svgGroup_.setAttribute('clip-path', 'url(#' + tagName + ')');
+    this.svgGroup_.classList.add('blockFieldFlyout');
     return this.svgGroup_;
   }
 
