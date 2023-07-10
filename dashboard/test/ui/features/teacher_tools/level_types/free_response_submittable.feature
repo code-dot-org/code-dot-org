@@ -4,8 +4,7 @@ Feature: Submittable free response
 
 Background:
   Given I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
-  Then I rotate to landscape
-  And I wait to see ".submitButton"
+  Then I wait to see ".submitButton"
   And element ".submitButton" is visible
 
 Scenario: Loading the level

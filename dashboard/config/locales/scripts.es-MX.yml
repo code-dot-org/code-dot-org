@@ -127,7 +127,7 @@ es-MX:
           student_description: Aprende programación funcional a través del álgebra.
           name: álgebra
         infinity:
-          title: Laboratorio de Juego Disney Infinity
+          title: 'Laboratorio de Juegos: Disney Infinity'
           description: Utiliza el laboratorio de juegos para crear una historia o
             un juego protagonizado por personajes de Disney Infinity.
           description_short: Utiliza el laboratorio de juegos para crear una historia
@@ -671,8 +671,7 @@ es-MX:
             de juegos de Gumball!"
           name: gumball
         starwars:
-          title: 'La guerra de las galaxias: cómo construir una galaxia con código
-            (JavaScript)'
+          title: 'La guerra de las galaxias: programa una galaxia (JavaScript)'
           description: Aprende a programar droides y crea tu propio juego Star Wars
             en una galaxia muy, muy lejana.
           description_short: Aprende a programar droides y crea tu propio juego Star
@@ -681,7 +680,7 @@ es-MX:
             Star Wars en una galaxia muy, muy lejana.
           name: starwars
         starwarsblocks:
-          title: 'Star Wars: Construyendo una Galaxia con código (Blockly)'
+          title: 'Guerra de las Galaxias: Programa una galaxia (Bloques)'
           description: Aprende a programar droides y crea tu propio juego Star Wars
             en una galaxia muy, muy lejana.
           description_short: Aprende a programar droides y crea tu propio juego Star
@@ -1407,7 +1406,7 @@ es-MX:
             Pide a tu clase que pase a la encuesta posterior 10 minutos antes de que
             termine la clase."
         coursea-draft:
-          title: 'Fundamentos de Informática: Curso A'
+          title: 'Fundamentos de Ciencias de la Computación: Curso A'
           description_short: Una introducción a las ciencias de la computación para
             lectores principiantes.
           description: "El curso A es para los primeros lectores. Los estudiantes
@@ -1423,7 +1422,7 @@ es-MX:
             propio juego o historia personalizada que podrán compartir. \nRecomendado
             para el grado K."
         courseb-draft:
-          title: 'Fundamentos de Informática: Curso B'
+          title: 'Fundamentos de Ciencias de la Computación: Curso B'
           description_short: Una introducción a las ciencias de la computación para
             lectores principiantes.
           description: El curso B es para los primeros lectores. Los estudiantes crearán
@@ -1439,7 +1438,7 @@ es-MX:
             propio juego o historia personalizada que podrán compartir. Recomendado
             para 1er grado.
         coursec-draft:
-          title: 'Fundamentos de Informática: Curso C'
+          title: 'Fundamentos de Ciencias de la Computación: Curso C'
           description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           description: En este curso los estudiantes crearán programas para resolver
@@ -1459,7 +1458,7 @@ es-MX:
             resolver problemas y desarrollarán juegos interactivos o historias que
             puedan compartir. Recomendado para 3er grado.
         coursee-draft:
-          title: 'Fundamentos de Informática: Curso E'
+          title: 'Fundamentos de Ciencias de la Computación: Curso E'
           description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           description: En este curso los estudiantes crearán programas para resolver
@@ -1477,7 +1476,7 @@ es-MX:
             puedan compartir. El curso culmina con un proyecto de varios días. Recomendado
             para 4º grado.
         coursef-draft:
-          title: 'Fundamentos de Informática: Curso F'
+          title: 'Fundamentos de Ciencias de la Computación: Curso F'
           description_short: Aprende los conceptos básicos de las Ciencias de la Computación
             y crea tu propio arte, historias y juegos.
           description: En este curso los estudiantes crearán programas para resolver
@@ -3586,7 +3585,7 @@ es-MX:
         frozen-2018-test:
           title: Nuevo guión de Frozen
         dance:
-          title: Fiesta de baile
+          title: Fiesta de baile (remix 2018)
           description_short: "¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
             Ciara y otros 25!"
           description: "¡Programa tu propio baile para compartirlo con tus amigos!"
@@ -8582,7 +8581,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-5:
               display_name: Proyecto de fin de curso
-          title: Curso A (2021)
+          title: Curso A (2022)
           description: 'El curso A ofrece un plan de estudios de ciencias de la computación
             para los lectores principiantes, incluidos los estudiantes de infantil.
             Los estudiantes aprenderán a programar utilizando comandos como bucles
@@ -8617,7 +8616,7 @@ es-MX:
               display_name: Bucles Para
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso Express (2021)
+          title: Curso Express (2022)
           description: Aprende los fundamentos de las ciencias de la computación y
             la seguridad en Internet. Al final del curso, crea tu propio juego o historia
             para compartir.
@@ -8756,7 +8755,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-6:
               display_name: Proyecto de fin de curso
-          title: Curso B (2021)
+          title: Curso B (2022)
           description: Hemos desarrollado el Curso B pensando en los alumnos de primer
             grado. Aunque los conceptos del Curso B son paralelos a los del Curso
             A, los alumnos aprenden actividades más sofisticadas y trabajan con una
@@ -8786,7 +8785,7 @@ es-MX:
               display_name: Datos
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso C (2021)
+          title: Curso C (2022)
           description: Desarrollamos el Curso C para estudiantes de segundo grado.
             Los estudiantes crearán programas con secuencias, bucles y eventos. Investigarán
             técnicas de resolución de problemas y desarrollarán estrategias para construir
@@ -8925,7 +8924,7 @@ es-MX:
               display_name: Condicionales
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso D (2021)
+          title: Curso D (2022)
           description: 'Hemos creado el curso D para los alumnos de tercer grado.  El
             curso comienza con un repaso de los conceptos encontrados en cursos anteriores,
             incluyendo bucles y eventos. Después, los estudiantes desarrollarán su
@@ -10736,7 +10735,7 @@ es-MX:
             plantearás una pregunta, buscarás un conjunto de datos sobre ese tema
             y luego procesarás esos datos para determinar la respuesta a tu pregunta.
         hello-world-space-2022:
-          title: 'Hola Mundo: Espacio'
+          title: 'Hola Mundo: Espacio Exterior'
         hello-world-soccer-2022:
           title: 'Hola Mundo: Fútbol'
         csd1-2023:
@@ -11195,6 +11194,7 @@ es-MX:
               display_name: 'Capítulo 1: Entradas y Salidas'
             lessonGroup-4:
               display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+          title: Creación de aplicaciones con dispositivos (Circuit Playground)
           student_description: Esta unidad explora el papel de las plataformas de
             hardware en la informática y cómo los diferentes sensores pueden proporcionar
             una entrada y salida más eficaz que el tradicional teclado, ratón y monitor.
@@ -11272,7 +11272,7 @@ es-MX:
           lesson_groups:
             lessonGroup-2:
               display_name: Preparación para Enseñar la Unidad 1
-          title: Preparación para Enseñar la Unidad 1
+          title: 'Preparación para Enseñar la Unidad 1 '
           description: "Este módulo está diseñado para ayudarte a preparar la enseñanza
             de unidades específicas dentro del curso Descubrimientos de la Informática.
             \ Empieza seleccionando la unidad que planeas enseñar primero. Puedes
@@ -11362,7 +11362,7 @@ es-MX:
               display_name: Bucles Para
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso Express (2021)
+          title: Curso Express (2022)
           description: Aprende los fundamentos de las ciencias de la computación y
             la seguridad en Internet. Al final del curso, crea tu propio juego o historia
             para compartir.
@@ -11384,7 +11384,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-5:
               display_name: Proyecto de fin de curso
-          title: Curso A (2021)
+          title: Curso A (2022)
           description: 'El curso A ofrece un plan de estudios de ciencias de la computación
             para los lectores principiantes, incluidos los estudiantes de infantil.
             Los estudiantes aprenderán a programar utilizando comandos como bucles
@@ -11412,7 +11412,7 @@ es-MX:
               display_name: Eventos
             lessonGroup-6:
               display_name: Proyecto de fin de curso
-          title: Curso B (2021)
+          title: Curso B (2022)
           description: Hemos desarrollado el Curso B pensando en los alumnos de primer
             grado. Aunque los conceptos del Curso B son paralelos a los del Curso
             A, los alumnos aprenden actividades más sofisticadas y trabajan con una
@@ -11441,7 +11441,7 @@ es-MX:
               display_name: Datos
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso C (2021)
+          title: Curso C (2022)
           description: Desarrollamos el Curso C para estudiantes de segundo grado.
             Los estudiantes crearán programas con secuencias, bucles y eventos. Investigarán
             técnicas de resolución de problemas y desarrollarán estrategias para construir
@@ -11468,7 +11468,7 @@ es-MX:
               display_name: Condicionales
             end_of_course_project:
               display_name: Proyecto de fin de curso
-          title: Curso D (2021)
+          title: Curso D (2022)
           description: 'Hemos creado el curso D para los alumnos de tercer grado.  El
             curso comienza con un repaso de los conceptos encontrados en cursos anteriores,
             incluyendo bucles y eventos. Después, los estudiantes desarrollarán su
@@ -12273,7 +12273,8 @@ es-MX:
           lesson_groups:
             lessonGroup-2:
               display_name: Preparación para Enseñar la Unidad 1
-          title: Enseñanza de IA y aprendizaje automático
+          title: 'Módulo 7: Preparación para la Enseñanza de la Inteligencia Artificial
+            y el Aprendizaje Automático'
           description: "Este módulo está diseñado para ayudarte a preparar la enseñanza
             de unidades específicas dentro del curso Descubrimientos de la Informática.
             \ Empieza seleccionando la unidad que planeas enseñar primero. Puedes
@@ -12470,6 +12471,7 @@ es-MX:
               display_name: Datos y Simulaciones
             lessonGroup-6:
               display_name: Proyecto de fin de curso
+          title: Curso F (2023)
           description_audience: De 9 a 13 años
           description_short: Aprende todos los conceptos de Fundamentos de Ciencias
             de la Computación y crea tu propio arte, historia o juego.
@@ -12511,6 +12513,39 @@ es-MX:
 
             **Tiempo sugerido**: 70 minutos
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Datos
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Clases
+            lessonGroup-5:
+              display_name: Arreglos 2D
+        csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-3:
               display_name: Clases

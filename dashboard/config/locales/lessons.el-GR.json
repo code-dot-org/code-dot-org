@@ -350,6 +350,12 @@
         "coursec-2022/The Big Event": {
           "name": "Το Μεγάλο Γεγονός"
         },
+        "coursec-2022/Build a Flappy Game": {
+          "name": "Δημιουργήστε ένα παιχνίδι με τον Flappy"
+        },
+        "coursec-2022/Mini-Project: Chase Game": {
+          "name": "Μικρή Εργασία: Παιχνίδι Κυνηγητού"
+        },
         "coursec-2022/Picturing Data": {
           "name": "Οπτικοποίηση Δεδομένων"
         },
@@ -578,6 +584,9 @@
         "express-2018/Events: The Big Event": {
           "name": "Το Μεγάλο Γεγονός"
         },
+        "express-2018/Build a Flappy Game": {
+          "name": "Δημιουργήστε ένα παιχνίδι με τον Flappy"
+        },
         "express-2018/Envelope Variables": {
           "name": "Μεταβλητές"
         },
@@ -664,6 +673,12 @@
         },
         "coursec-2018/Events: The Big Event": {
           "name": "Το Μεγάλο Γεγονός"
+        },
+        "coursec-2018/Build a Flappy Game": {
+          "name": "Δημιουργήστε ένα παιχνίδι με τον Flappy"
+        },
+        "coursec-2018/Events in Play Lab": {
+          "name": "Παιχνίδι Κυνηγητού με γεγονότα"
         },
         "coursec-2018/Looking Ahead": {
           "name": "Κοιτάζοντας μπροστά με το Minecraft"
@@ -932,6 +947,12 @@
         "coursec-2019/Events: The Big Event": {
           "name": "Το Μεγάλο Γεγονός"
         },
+        "coursec-2019/Build a Flappy Game": {
+          "name": "Δημιουργήστε ένα παιχνίδι με τον Flappy"
+        },
+        "coursec-2019/Events in Play Lab": {
+          "name": "Παιχνίδι Κυνηγητού με γεγονότα"
+        },
         "coursec-2019/Picturing Data": {
           "name": "Οπτικοποίηση Δεδομένων"
         },
@@ -1066,6 +1087,9 @@
         },
         "coursec-2017/Loops in Harvester": {
           "name": "Βρόχοι με τον Θεριστή"
+        },
+        "coursec-2017/Build a Flappy Game": {
+          "name": "Δημιουργήστε ένα παιχνίδι με τον Flappy"
         },
         "courseb-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Αλγόριθμοι πραγματικής ζωής: Φύτεψε έναν σπόρο"
@@ -1624,9 +1648,11 @@
           "name": "Το Μεγάλο Γεγονός"
         },
         "coursec-2021/Build a Flappy Game": {
+          "name": "Δημιουργήστε ένα παιχνίδι με τον Flappy",
           "preparation": "-   Παίξτε δια μέσου των παζλ για να βρείτε οποιεσδήποτε δυνητικές προβληματικές περιοχές για την τάξη σας.\n-   Βεβαιωθείτε ότι κάθε μαθητής έχει ένα ημερολόγιο σκέψεων."
         },
         "coursec-2021/Events in Play Lab": {
+          "name": "Μικρή Εργασία: Παιχνίδι Κυνηγητού",
           "preparation": "-   Παίξτε δια μέσου των παζλ για να βρείτε οποιεσδήποτε δυνητικές προβληματικές περιοχές για την τάξη σας.\n-   Βεβαιωθείτε ότι κάθε μαθητής έχει ένα ημερολόγιο σκέψεων."
         },
         "coursec-2021/Picturing Data": {
@@ -1977,6 +2003,12 @@
         },
         "coursec-2020/Events: The Big Event": {
           "name": "Το Μεγάλο Γεγονός"
+        },
+        "coursec-2020/Build a Flappy Game": {
+          "name": "Δημιουργήστε ένα παιχνίδι με τον Flappy"
+        },
+        "coursec-2020/Events in Play Lab": {
+          "name": "Παιχνίδι Κυνηγητού με γεγονότα"
         },
         "coursec-2020/Picturing Data": {
           "name": "Οπτικοποίηση Δεδομένων"
