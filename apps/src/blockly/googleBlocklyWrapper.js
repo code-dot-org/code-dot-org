@@ -53,6 +53,7 @@ import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
+import customBlocks from './customBlocks/googleBlockly/index.js';
 
 const options = {
   contextMenu: true,
@@ -666,6 +667,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
 
   blocklyWrapper.cdoUtils = cdoUtils;
+  blocklyWrapper.customBlocks = customBlocks;
 
   return blocklyWrapper;
 }
