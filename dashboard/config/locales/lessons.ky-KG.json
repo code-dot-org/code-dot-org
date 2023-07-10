@@ -2,130 +2,119 @@
   "ky-KG": {
     "data": {
       "lessons": {
-        "minecraft/Minecraft Hour of Code Designer": {
-          "name": "Код сааты, Minecraft дизайнери"
+        "csd2-2017/Lists": {
+          "name": "Тизмелер"
         },
-        "flappy/Flappy Code": {
-          "name": "Flappy Code"
-        },
-        "hourofcode/Maze": {
-          "name": "Лабиринт"
-        },
-        "frozen/Artist": {
-          "name": "Анна жана Элза менен код жазгыла"
-        },
-        "artist/Artist": {
-          "name": "Сүрөтчү"
-        },
-        "mc/Hour of Code 2015": {
-          "name": "Minecraft код сааты"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "name": "Disney Infinity оюн лабораториясы"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Код сааты 2013"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "Циклдер"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "Окуялар"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "Шартуулар"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "Функциялар"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "Өзгөрмөлөр"
         },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Код сааты 2017 чогултуучу"
-        },
-        "coursed-2022/Graph Paper Programming": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "coursed-2022/Relay Programming": {
-          "name": "Релени програмдоо"
-        },
-        "coursed-2022/Drawing Shapes with Loops": {
-          "name": "Циклдар менен формаларды тартуу"
-        },
-        "coursef-2022/The Internet": {
-          "name": "Интернет"
-        },
-        "coursee-2022/Fancy Shapes using Nested Loops": {
-          "name": "Салынган циклдар менен укмуштуу формалар"
-        },
-        "coursee-2022/Functions with Artist": {
-          "name": "Сүрөтчү менен функциялар",
-          "overview": "Окуучулар Code.org аркылуу функциялар менен таанышат. Функциялар менен Сүрөтчүдө сонун сүрөттөр тартабыз жана өзгөртөбүз. Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.",
-          "student_overview": "Функциялар менен татаал чийме чийүүнү жеңил кыл!"
-        },
-        "courseb-2022/Drawing Gardens with Loops": {
-          "name": "Циклдар менен бакчаларды тартуу"
-        },
-        "express-2022/Creating Art with Code": {
-          "name": "Код менен Сүрөт жаратуу"
-        },
-        "express-2022/Snowflakes with Anna and Elsa": {
-          "name": "Анна жана Элза менен карчалар"
-        },
-        "express-2022/Functions with Artist": {
-          "name": "Сүрөтчү менен функциялар",
-          "overview": "Окуучулар Code.org аркылуу функциялар менен таанышат. Функциялар менен Сүрөтчүдө сонун сүрөттөр тартабыз жана өзгөртөбүз. Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.",
-          "student_overview": "Функциялар менен татаал чийме чийүүнү жеңил кыл!"
-        },
-        "express-2022/Using Variables with the Artist": {
-          "overview": "Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн деңгээлиндеги өз чыгармасын жаратып, эмнелерди үйрөнгөнүн көрсөтүү мүмкүнчүлүгүн алышат."
-        },
-        "express-2022/For Loops with Artist": {
-          "name": "Сүрөтчү менен for циклдары",
-          "overview": "Бул сабакта окуучулар Сүрөтчү менен чогуу циклдарды улантышат. Окуучулар өзгөрмөлөр, циклдар жана for циклин айкалыштырып татаал дизайндарды жаратып, тапшырмаларды аткарышат. Аягында эркин оюн деңгээлиндеги өз чыгармасын жаратуу мүмкүнчүлүгүн алышат.",
-          "student_overview": "Кийинки мыкты чыгармаңарды жаратканга даяр болгула. Азыр `for` циклдарын колдонуп ооз ачырган сүрөттөрдү жаратабыз."
-        },
-        "pre-express-2022/Ocean Scene with Loops": {
-          "name": "Океан көрүнүшү циклдар менен",
-          "overview": "Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта, циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат."
-        },
-        "pre-express-2022/Drawing Gardens with Loops": {
-          "name": "Циклдар менен бакчаларды тартуу"
-        },
-        "coursea-2022/Ocean Scene with Loops": {
-          "name": "Океан көрүнүшү циклдар менен",
-          "overview": "Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта, циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат."
-        },
-        "coursec-2022/Creating Art with Code": {
-          "name": "Код менен Сүрөт жаратуу"
-        },
-        "csd3-2022/Variables": {
-          "name": "Өзгөрмөлөр"
-        },
-        "csd3-2022/Text": {
-          "name": "Тексттер"
-        },
-        "csd3-2022/Conditionals": {
+        "csd3-2017/Conditionals": {
           "name": "Шартуулар"
         },
-        "csd3-2022/Functions": {
+        "csd3-2017/Functions": {
           "name": "Функциялар"
         },
-        "csd6-2022/Functions": {
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Параметри бар функциялар"
+        },
+        "coursea-2017/Loops in Artist": {
+          "name": "Сүрөтчүдөгү циклдар"
+        },
+        "courseb-2017/Loops in Artist": {
+          "name": "Сүрөтчүдөгү циклдар"
+        },
+        "coursec-2017/Programming in Artist": {
+          "name": "Сүрөтчүдөгү програмдоо"
+        },
+        "coursec-2017/Loops in Artist": {
+          "name": "Сүрөтчүдөгү циклдар"
+        },
+        "coursed-2017/Nested Loops in Artist": {
+          "name": "Сүрөтчүдөгү салынган циклдар"
+        },
+        "coursed-2017/Nested Loops Project in Artist": {
+          "name": "Тоңгондогу салынган циклдар"
+        },
+        "coursed-2017/Artist Binary": {
+          "name": "Сүрөтчүдөгү бинардык"
+        },
+        "coursee-2017/Programming in Artist": {
+          "name": "Сүрөтчүдөгү програмдоо"
+        },
+        "coursee-2017/Loops in Artist": {
+          "name": "Сүрөтчүдөгү циклдар"
+        },
+        "coursee-2017/Nested Loops with Frozen": {
+          "name": "Тоңгондогу салынган циклдар"
+        },
+        "coursee-2017/Functions in Artist": {
+          "name": "Сүрөтчүдөгү функциялар"
+        },
+        "coursef-2017/Programming in Artist": {
+          "name": "Сүрөтчүдөгү програмдоо"
+        },
+        "coursef-2017/Loops in Artist": {
+          "name": "Сүрөтчүдөгү циклдар"
+        },
+        "coursef-2017/Nested Loops with Frozen": {
+          "name": "Тоңгондогу салынган циклдар"
+        },
+        "coursef-2017/Variables in Artist": {
+          "name": "Сүрөтчүдөгү өзгөрмөлөр"
+        },
+        "coursef-2017/For Loops in Artist": {
+          "name": "Сүрөтчүдөгү for циклдары"
+        },
+        "coursef-2017/Functions with Parameters in Artist": {
+          "name": "Сүрөтчүдөгү параметри бар функциялар"
+        },
+        "express-2017/Loops in Artist": {
+          "name": "Сүрөтчүдөгү циклдар"
+        },
+        "express-2017/Nested Loops Project in Frozen": {
+          "name": "Тоңгондогу салынган циклдар"
+        },
+        "express-2017/Variables in Artist": {
+          "name": "Сүрөтчүдөгү өзгөрмөлөр"
+        },
+        "express-2017/For Loops in Artist": {
+          "name": "Сүрөтчүдөгү for циклдары"
+        },
+        "express-2017/Functions with Parameters in Artist": {
+          "name": "Сүрөтчүдөгү параметри бар функциялар"
+        },
+        "pre-express-2017/Loops in Artist": {
+          "name": "Сүрөтчүдөгү циклдар"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Spelling Bee"
+        },
+        "csd2-2018/Lists": {
+          "name": "Тизмелер"
+        },
+        "csd3-2018/Variables": {
+          "name": "Өзгөрмөлөр"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Шартуулар"
+        },
+        "csd3-2018/Functions": {
           "name": "Функциялар"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "Параметри бар функциялар"
+        },
+        "coursea-2018/Loops in Artist": {
+          "name": "Океан көрүнүшү циклдар менен"
         },
         "courseb-2018/Loops in Artist": {
           "name": "Циклдар менен бакчаларды тартуу"
         },
-        "coursea-2018/Loops in Artist": {
-          "name": "Океан көрүнүшү циклдар менен"
+        "coursec-2018/Programming in Artist": {
+          "name": "Код менен Сүрөт жаратуу"
+        },
+        "coursec-2018/Loops in Artist": {
+          "name": "Чаптама өнөрү циклдар менен"
         },
         "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "Графикалык кагазды програмдоо"
@@ -144,6 +133,21 @@
         },
         "coursed-2018/Artist Binary": {
           "name": "Сүрөтчү менен бинардык сүрөттөр"
+        },
+        "coursee-2018/Programming in Artist": {
+          "name": "Код менен Сүрөт жаратуу"
+        },
+        "coursee-2018/Loops in Artist": {
+          "name": "Циклдар менен формаларды тартуу"
+        },
+        "coursee-2018/Nested Loops with Frozen": {
+          "name": "Тоңгондогу салынган циклдар"
+        },
+        "coursee-2018/Functions in Artist": {
+          "name": "Сүрөтчү менен функциялар"
+        },
+        "coursee-2018/Internet": {
+          "name": "Интернет"
         },
         "coursef-2018/Programming in Artist": {
           "name": "Код менен Сүрөт жаратуу"
@@ -196,53 +200,38 @@
         "express-2018/Internet": {
           "name": "Интернет"
         },
-        "coursee-2018/Programming in Artist": {
-          "name": "Код менен Сүрөт жаратуу"
-        },
-        "coursee-2018/Loops in Artist": {
-          "name": "Циклдар менен формаларды тартуу"
-        },
-        "coursee-2018/Nested Loops with Frozen": {
-          "name": "Тоңгондогу салынган циклдар"
-        },
-        "coursee-2018/Functions in Artist": {
-          "name": "Сүрөтчү менен функциялар"
-        },
-        "coursee-2018/Internet": {
-          "name": "Интернет"
-        },
-        "coursec-2018/Programming in Artist": {
-          "name": "Код менен Сүрөт жаратуу"
-        },
-        "coursec-2018/Loops in Artist": {
-          "name": "Чаптама өнөрү циклдар менен"
-        },
         "pre-express-2018/Loops in Artist": {
           "name": "Циклдар менен бакчаларды тартуу"
         },
         "pre-express-2018/Spelling Bee": {
           "name": "Spelling Bee"
         },
-        "csd3-2018/Variables": {
+        "csd2-2019/Lists": {
+          "name": "Тизмелер"
+        },
+        "csd3-2019/Variables": {
           "name": "Өзгөрмөлөр"
         },
-        "csd3-2018/Conditionals": {
+        "csd3-2019/Conditionals": {
           "name": "Шартуулар"
         },
-        "csd3-2018/Functions": {
+        "csd3-2019/Functions": {
           "name": "Функциялар"
         },
-        "csd6-2018/Functions with Parameters": {
+        "csd6-2019/Functions with Parameters": {
           "name": "Параметри бар функциялар"
-        },
-        "csd2-2018/Lists": {
-          "name": "Тизмелер"
         },
         "coursea-2019/Ocean Scene with Loops": {
           "name": "Океан көрүнүшү циклдар менен"
         },
         "courseb-2019/Loops in Artist": {
           "name": "Циклдар менен бакчаларды тартуу"
+        },
+        "coursec-2019/Programming in Artist": {
+          "name": "Код менен Сүрөт жаратуу"
+        },
+        "coursec-2019/Sticker Art with Loops": {
+          "name": "Чаптама өнөрү циклдар менен"
         },
         "coursed-2019/Algorithms: Graph Paper Programming": {
           "name": "Графикалык кагазды програмдоо"
@@ -256,6 +245,15 @@
         "coursed-2019/Artist Binary": {
           "name": "Сүрөтчү менен бинардык сүрөттөр"
         },
+        "coursee-2019/Nested Loops in Artist": {
+          "name": "Салынган циклдар менен укмуштуу формалар"
+        },
+        "coursee-2019/Nested Loops in Frozen": {
+          "name": "Тоңгондогу салынган циклдар"
+        },
+        "coursee-2019/Functions in Artist": {
+          "name": "Сүрөтчү менен функциялар"
+        },
         "coursef-2019/Variables as Constant in Artist": {
           "name": "Сүрөтчү менен өзгөрмөлөр"
         },
@@ -267,15 +265,6 @@
         },
         "coursef-2019/Internet": {
           "name": "Интернет"
-        },
-        "coursee-2019/Nested Loops in Artist": {
-          "name": "Салынган циклдар менен укмуштуу формалар"
-        },
-        "coursee-2019/Nested Loops in Frozen": {
-          "name": "Тоңгондогу салынган циклдар"
-        },
-        "coursee-2019/Functions in Artist": {
-          "name": "Сүрөтчү менен функциялар"
         },
         "express-2019/Programming in Artist": {
           "name": "Код менен Сүрөт жаратуу"
@@ -298,12 +287,6 @@
         "express-2019/For Loops in Artist": {
           "name": "Сүрөтчү менен for циклдары"
         },
-        "coursec-2019/Programming in Artist": {
-          "name": "Код менен Сүрөт жаратуу"
-        },
-        "coursec-2019/Sticker Art with Loops": {
-          "name": "Чаптама өнөрү циклдар менен"
-        },
         "pre-express-2019/Spelling Bee": {
           "name": "Spelling Bee"
         },
@@ -313,125 +296,275 @@
         "pre-express-2019/Loops in Artist": {
           "name": "Циклдар менен бакчаларды тартуу"
         },
-        "csd3-2019/Variables": {
+        "coursea-2020/Ocean Scene with Loops": {
+          "name": "Океан көрүнүшү циклдар менен"
+        },
+        "courseb-2020/Loops in Artist": {
+          "name": "Циклдар менен бакчаларды тартуу"
+        },
+        "coursec-2020/Programming in Artist": {
+          "name": "Код менен Сүрөт жаратуу"
+        },
+        "coursec-2020/Sticker Art with Loops": {
+          "name": "Чаптама өнөрү циклдар менен"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Релени програмдоо"
+        },
+        "coursed-2020/Loops in Artist": {
+          "name": "Циклдар менен формаларды тартуу"
+        },
+        "coursed-2020/Artist Binary": {
+          "name": "Сүрөтчү менен бинардык сүрөттөр"
+        },
+        "coursee-2020/Nested Loops in Artist": {
+          "name": "Салынган циклдар менен укмуштуу формалар"
+        },
+        "coursee-2020/Nested Loops in Frozen": {
+          "name": "Тоңгондогу салынган циклдар"
+        },
+        "coursee-2020/Functions in Artist": {
+          "name": "Сүрөтчү менен функциялар"
+        },
+        "coursef-2020/Variables as Constant in Artist": {
+          "name": "Сүрөтчү менен өзгөрмөлөр"
+        },
+        "coursef-2020/Variables that Change in Artist": {
+          "name": "Сүрөтчү менен өзгөрмөлөрдү өзгөртүү"
+        },
+        "coursef-2020/Internet": {
+          "name": "Интернет"
+        },
+        "coursef-2020/For Loops in Artist": {
+          "name": "Сүрөтчү менен for циклдары"
+        },
+        "express-2020/Creating Art with Code": {
+          "name": "Код менен Сүрөт жаратуу"
+        },
+        "express-2020/Sticker Art with Loops": {
+          "name": "Чаптама өнөрү циклдар менен"
+        },
+        "express-2020/Snowflakes with Anna and Elsa": {
+          "name": "Анна жана Элза менен карчалар"
+        },
+        "express-2020/Functions with Artist": {
+          "name": "Сүрөтчү менен функциялар"
+        },
+        "express-2020/Variables with Artist": {
+          "name": "Сүрөтчү менен өзгөрмөлөр"
+        },
+        "express-2020/Changing Variables with Artist": {
+          "name": "Сүрөтчү менен өзгөрмөлөрдү өзгөртүү"
+        },
+        "express-2020/For Loops with Artist": {
+          "name": "Сүрөтчү менен for циклдары"
+        },
+        "pre-express-2020/Ocean Scene with Loops": {
+          "name": "Океан көрүнүшү циклдар менен"
+        },
+        "pre-express-2020/Drawing Gardens with Loops": {
+          "name": "Циклдар менен бакчаларды тартуу"
+        },
+        "csd3-2021/Variables": {
           "name": "Өзгөрмөлөр"
         },
-        "csd3-2019/Conditionals": {
+        "csd3-2021/Text": {
+          "name": "Тексттер"
+        },
+        "csd3-2021/Conditionals": {
           "name": "Шартуулар"
         },
-        "csd3-2019/Functions": {
+        "csd3-2021/Functions": {
           "name": "Функциялар"
         },
-        "csd6-2019/Functions with Parameters": {
+        "csd6-2021/Functions with Parameters": {
           "name": "Параметри бар функциялар"
         },
-        "csd2-2019/Lists": {
-          "name": "Тизмелер"
+        "coursea-2021/Ocean Scene with Loops": {
+          "name": "Океан көрүнүшү циклдар менен",
+          "overview": "Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта, циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат."
         },
-        "coursef-2017/Programming in Artist": {
-          "name": "Сүрөтчүдөгү програмдоо"
+        "courseb-2021/Loops in Artist": {
+          "name": "Циклдар менен бакчаларды тартуу"
         },
-        "coursef-2017/Loops in Artist": {
-          "name": "Сүрөтчүдөгү циклдар"
+        "coursec-2021/Programming in Artist": {
+          "name": "Код менен Сүрөт жаратуу"
         },
-        "coursef-2017/Nested Loops with Frozen": {
-          "name": "Тоңгондогу салынган циклдар"
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Графикалык кагазды програмдоо"
         },
-        "coursef-2017/Variables in Artist": {
-          "name": "Сүрөтчүдөгү өзгөрмөлөр"
+        "coursed-2021/Relay Programming": {
+          "name": "Релени програмдоо"
         },
-        "coursef-2017/For Loops in Artist": {
-          "name": "Сүрөтчүдөгү for циклдары"
+        "coursed-2021/Loops in Artist": {
+          "name": "Циклдар менен формаларды тартуу"
         },
-        "coursef-2017/Functions with Parameters in Artist": {
-          "name": "Сүрөтчүдөгү параметри бар функциялар"
+        "coursee-2021/Nested Loops in Artist": {
+          "name": "Салынган циклдар менен укмуштуу формалар"
         },
-        "coursea-2017/Loops in Artist": {
-          "name": "Сүрөтчүдөгү циклдар"
+        "coursee-2021/Functions in Artist": {
+          "name": "Сүрөтчү менен функциялар",
+          "overview": "Окуучулар Code.org аркылуу функциялар менен таанышат. Функциялар менен Сүрөтчүдө сонун сүрөттөр тартабыз жана өзгөртөбүз. Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.",
+          "student_overview": "Функциялар менен татаал чийме чийүүнү жеңил кыл!"
         },
-        "pre-express-2017/Loops in Artist": {
-          "name": "Сүрөтчүдөгү циклдар"
+        "coursef-2021/Variables that Change in Artist": {
+          "overview": "Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн деңгээлиндеги өз чыгармасын жаратып, эмнелерди үйрөнгөнүн көрсөтүү мүмкүнчүлүгүн алышат."
         },
-        "pre-express-2017/Spelling Bee": {
-          "name": "Spelling Bee"
+        "coursef-2021/For Loops in Artist": {
+          "name": "Сүрөтчү менен for циклдары",
+          "overview": "Бул сабакта окуучулар Сүрөтчү менен чогуу циклдарды улантышат. Окуучулар өзгөрмөлөр, циклдар жана for циклин айкалыштырып татаал дизайндарды жаратып, тапшырмаларды аткарышат. Аягында эркин оюн деңгээлиндеги өз чыгармасын жаратуу мүмкүнчүлүгүн алышат.",
+          "student_overview": "Кийинки мыкты чыгармаңарды жаратканга даяр болгула. Азыр `for` циклдарын колдонуп ооз ачырган сүрөттөрдү жаратабыз."
         },
-        "coursee-2017/Programming in Artist": {
-          "name": "Сүрөтчүдөгү програмдоо"
+        "coursef-2021/Internet": {
+          "name": "Интернет"
         },
-        "coursee-2017/Loops in Artist": {
-          "name": "Сүрөтчүдөгү циклдар"
+        "express-2021/Creating Art with Code": {
+          "name": "Код менен Сүрөт жаратуу"
         },
-        "coursee-2017/Nested Loops with Frozen": {
-          "name": "Тоңгондогу салынган циклдар"
+        "express-2021/Snowflakes with Anna and Elsa": {
+          "name": "Анна жана Элза менен карчалар"
         },
-        "coursee-2017/Functions in Artist": {
-          "name": "Сүрөтчүдөгү функциялар"
+        "express-2021/Functions with Artist": {
+          "name": "Сүрөтчү менен функциялар",
+          "overview": "Окуучулар Code.org аркылуу функциялар менен таанышат. Функциялар менен Сүрөтчүдө сонун сүрөттөр тартабыз жана өзгөртөбүз. Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.",
+          "student_overview": "Функциялар менен татаал чийме чийүүнү жеңил кыл!"
         },
-        "coursec-2017/Programming in Artist": {
-          "name": "Сүрөтчүдөгү програмдоо"
+        "express-2021/Variables with Artist": {
+          "overview": "Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн деңгээлиндеги өз чыгармасын жаратып, эмнелерди үйрөнгөнүн көрсөтүү мүмкүнчүлүгүн алышат."
         },
-        "coursec-2017/Loops in Artist": {
-          "name": "Сүрөтчүдөгү циклдар"
+        "express-2021/For Loops with Artist": {
+          "name": "Сүрөтчү менен for циклдары",
+          "overview": "Бул сабакта окуучулар Сүрөтчү менен чогуу циклдарды улантышат. Окуучулар өзгөрмөлөр, циклдар жана for циклин айкалыштырып татаал дизайндарды жаратып, тапшырмаларды аткарышат. Аягында эркин оюн деңгээлиндеги өз чыгармасын жаратуу мүмкүнчүлүгүн алышат.",
+          "student_overview": "Кийинки мыкты чыгармаңарды жаратканга даяр болгула. Азыр `for` циклдарын колдонуп ооз ачырган сүрөттөрдү жаратабыз."
         },
-        "courseb-2017/Loops in Artist": {
-          "name": "Сүрөтчүдөгү циклдар"
+        "pre-express-2021/Ocean Scene with Loops": {
+          "name": "Океан көрүнүшү циклдар менен",
+          "overview": "Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта, циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат."
         },
-        "coursed-2017/Nested Loops in Artist": {
-          "name": "Сүрөтчүдөгү салынган циклдар"
+        "pre-express-2021/Drawing Gardens with Loops": {
+          "name": "Циклдар менен бакчаларды тартуу"
         },
-        "coursed-2017/Nested Loops Project in Artist": {
-          "name": "Тоңгондогу салынган циклдар"
-        },
-        "coursed-2017/Artist Binary": {
-          "name": "Сүрөтчүдөгү бинардык"
-        },
-        "express-2017/Loops in Artist": {
-          "name": "Сүрөтчүдөгү циклдар"
-        },
-        "express-2017/Nested Loops Project in Frozen": {
-          "name": "Тоңгондогу салынган циклдар"
-        },
-        "express-2017/Variables in Artist": {
-          "name": "Сүрөтчүдөгү өзгөрмөлөр"
-        },
-        "express-2017/For Loops in Artist": {
-          "name": "Сүрөтчүдөгү for циклдары"
-        },
-        "express-2017/Functions with Parameters in Artist": {
-          "name": "Сүрөтчүдөгү параметри бар функциялар"
-        },
-        "csd3-2017/Variables": {
+        "csd3-2022/Variables": {
           "name": "Өзгөрмөлөр"
         },
-        "csd3-2017/Conditionals": {
+        "csd3-2022/Text": {
+          "name": "Тексттер"
+        },
+        "csd3-2022/Conditionals": {
           "name": "Шартуулар"
         },
-        "csd3-2017/Functions": {
+        "csd3-2022/Functions": {
           "name": "Функциялар"
         },
-        "csd6-2017/Functions with Parameters_": {
-          "name": "Параметри бар функциялар"
+        "csd6-2022/Functions": {
+          "name": "Функциялар"
         },
-        "csd2-2017/Lists": {
-          "name": "Тизмелер"
+        "coursea-2022/Ocean Scene with Loops": {
+          "name": "Океан көрүнүшү циклдар менен",
+          "overview": "Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта, циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат."
         },
-        "course4/Artist": {
+        "courseb-2022/Drawing Gardens with Loops": {
+          "name": "Циклдар менен бакчаларды тартуу"
+        },
+        "coursec-2022/Creating Art with Code": {
+          "name": "Код менен Сүрөт жаратуу"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Релени програмдоо"
+        },
+        "coursed-2022/Drawing Shapes with Loops": {
+          "name": "Циклдар менен формаларды тартуу"
+        },
+        "coursee-2022/Fancy Shapes using Nested Loops": {
+          "name": "Салынган циклдар менен укмуштуу формалар"
+        },
+        "coursee-2022/Functions with Artist": {
+          "name": "Сүрөтчү менен функциялар",
+          "overview": "Окуучулар Code.org аркылуу функциялар менен таанышат. Функциялар менен Сүрөтчүдө сонун сүрөттөр тартабыз жана өзгөртөбүз. Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.",
+          "student_overview": "Функциялар менен татаал чийме чийүүнү жеңил кыл!"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Интернет"
+        },
+        "express-2022/Creating Art with Code": {
+          "name": "Код менен Сүрөт жаратуу"
+        },
+        "express-2022/Snowflakes with Anna and Elsa": {
+          "name": "Анна жана Элза менен карчалар"
+        },
+        "express-2022/Functions with Artist": {
+          "name": "Сүрөтчү менен функциялар",
+          "overview": "Окуучулар Code.org аркылуу функциялар менен таанышат. Функциялар менен Сүрөтчүдө сонун сүрөттөр тартабыз жана өзгөртөбүз. Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.",
+          "student_overview": "Функциялар менен татаал чийме чийүүнү жеңил кыл!"
+        },
+        "express-2022/Using Variables with the Artist": {
+          "overview": "Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн деңгээлиндеги өз чыгармасын жаратып, эмнелерди үйрөнгөнүн көрсөтүү мүмкүнчүлүгүн алышат."
+        },
+        "express-2022/For Loops with Artist": {
+          "name": "Сүрөтчү менен for циклдары",
+          "overview": "Бул сабакта окуучулар Сүрөтчү менен чогуу циклдарды улантышат. Окуучулар өзгөрмөлөр, циклдар жана for циклин айкалыштырып татаал дизайндарды жаратып, тапшырмаларды аткарышат. Аягында эркин оюн деңгээлиндеги өз чыгармасын жаратуу мүмкүнчүлүгүн алышат.",
+          "student_overview": "Кийинки мыкты чыгармаңарды жаратканга даяр болгула. Азыр `for` циклдарын колдонуп ооз ачырган сүрөттөрдү жаратабыз."
+        },
+        "pre-express-2022/Ocean Scene with Loops": {
+          "name": "Океан көрүнүшү циклдар менен",
+          "overview": "Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта, циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат."
+        },
+        "pre-express-2022/Drawing Gardens with Loops": {
+          "name": "Циклдар менен бакчаларды тартуу"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Код сааты 2013"
+        },
+        "artist/Artist": {
           "name": "Сүрөтчү"
         },
-        "course4/Artist: Variables": {
-          "name": "Сүрөтчү: өзгөрмөлөр"
+        "flappy/Flappy Code": {
+          "name": "Flappy Code"
         },
-        "course4/Artist: For Loops": {
-          "name": "Сүрөтчү: for циклдары"
+        "frozen/Artist": {
+          "name": "Анна жана Элза менен код жазгыла"
         },
-        "course4/Artist: Functions": {
-          "name": "Сүрөтчү: функциялар"
+        "hourofcode/Maze": {
+          "name": "Лабиринт"
         },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Сүрөтчү: параметри бар функциялар"
+        "infinity/Infinity": {
+          "name": "Disney Infinity оюн лабораториясы"
         },
-        "course4/Artist Binary": {
-          "name": "Сүрөтчү бинардык система"
+        "mc/Hour of Code 2015": {
+          "name": "Minecraft код сааты"
+        },
+        "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Код сааты, Minecraft дизайнери"
+        },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Код сааты 2017 чогултуучу"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Jigsaw"
+        },
+        "allthethings/Maze": {
+          "name": "Лабиринт"
+        },
+        "allthethings/Artist": {
+          "name": "Сүрөтчү"
+        },
+        "allthethings/Bounce": {
+          "name": "Bounce"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Компүтер илимине киришүү"
@@ -493,6 +626,36 @@
         "20-hour/Wrap-up": {
           "name": "Жыйынтыктоо"
         },
+        "course1/Maze: Sequence": {
+          "name": "Лабиринт: ирет"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Лабиринт: дебаггиң"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Аары: ирет"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Сүрөтчү: ирет"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Сүрөтчү: формалар"
+        },
+        "course1/Spelling Bee": {
+          "name": "Spelling Bee"
+        },
+        "course1/Maze: Loops": {
+          "name": "Лабиринт: циклдар"
+        },
+        "course1/Bee: Loops": {
+          "name": "Аары: циклдар"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Play Lab: окуя түзүү"
+        },
+        "course1/Artist: Loops": {
+          "name": "Сүрөтчү: циклдар"
+        },
         "course2/Graph Paper Programming": {
           "name": "Графикалык кагазды програмдоо"
         },
@@ -547,204 +710,26 @@
         "course3/Artist: Patterns": {
           "name": "Сүрөтчү: үлгүлөр"
         },
-        "course1/Maze: Sequence": {
-          "name": "Лабиринт: ирет"
+        "course4/Artist": {
+          "name": "Сүрөтчү"
         },
-        "course1/Maze: Debugging": {
-          "name": "Лабиринт: дебаггиң"
+        "course4/Artist: Variables": {
+          "name": "Сүрөтчү: өзгөрмөлөр"
         },
-        "course1/Bee: Sequence": {
-          "name": "Аары: ирет"
+        "course4/Artist: For Loops": {
+          "name": "Сүрөтчү: for циклдары"
         },
-        "course1/Artist: Sequence": {
-          "name": "Сүрөтчү: ирет"
+        "course4/Artist: Functions": {
+          "name": "Сүрөтчү: функциялар"
         },
-        "course1/Artist: Shapes": {
-          "name": "Сүрөтчү: формалар"
+        "course4/Artist: Functions with Parameters": {
+          "name": "Сүрөтчү: параметри бар функциялар"
         },
-        "course1/Spelling Bee": {
-          "name": "Spelling Bee"
-        },
-        "course1/Maze: Loops": {
-          "name": "Лабиринт: циклдар"
-        },
-        "course1/Bee: Loops": {
-          "name": "Аары: циклдар"
-        },
-        "course1/Studio: Create a Story": {
-          "name": "Play Lab: окуя түзүү"
-        },
-        "course1/Artist: Loops": {
-          "name": "Сүрөтчү: циклдар"
+        "course4/Artist Binary": {
+          "name": "Сүрөтчү бинардык система"
         },
         "jigsaw/Jigsaw": {
           "name": "Jigsaw"
-        },
-        "allthethings/Jigsaw": {
-          "name": "Jigsaw"
-        },
-        "allthethings/Maze": {
-          "name": "Лабиринт"
-        },
-        "allthethings/Artist": {
-          "name": "Сүрөтчү"
-        },
-        "allthethings/Bounce": {
-          "name": "Bounce"
-        },
-        "allthethings/Web Lab": {
-          "name": "Web Lab"
-        },
-        "coursef-2021/Variables that Change in Artist": {
-          "overview": "Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн деңгээлиндеги өз чыгармасын жаратып, эмнелерди үйрөнгөнүн көрсөтүү мүмкүнчүлүгүн алышат."
-        },
-        "coursef-2021/For Loops in Artist": {
-          "name": "Сүрөтчү менен for циклдары",
-          "overview": "Бул сабакта окуучулар Сүрөтчү менен чогуу циклдарды улантышат. Окуучулар өзгөрмөлөр, циклдар жана for циклин айкалыштырып татаал дизайндарды жаратып, тапшырмаларды аткарышат. Аягында эркин оюн деңгээлиндеги өз чыгармасын жаратуу мүмкүнчүлүгүн алышат.",
-          "student_overview": "Кийинки мыкты чыгармаңарды жаратканга даяр болгула. Азыр `for` циклдарын колдонуп ооз ачырган сүрөттөрдү жаратабыз."
-        },
-        "coursef-2021/Internet": {
-          "name": "Интернет"
-        },
-        "courseb-2021/Loops in Artist": {
-          "name": "Циклдар менен бакчаларды тартуу"
-        },
-        "coursea-2021/Ocean Scene with Loops": {
-          "name": "Океан көрүнүшү циклдар менен",
-          "overview": "Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта, циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат."
-        },
-        "coursec-2021/Programming in Artist": {
-          "name": "Код менен Сүрөт жаратуу"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "Релени програмдоо"
-        },
-        "coursed-2021/Loops in Artist": {
-          "name": "Циклдар менен формаларды тартуу"
-        },
-        "express-2021/Creating Art with Code": {
-          "name": "Код менен Сүрөт жаратуу"
-        },
-        "express-2021/Snowflakes with Anna and Elsa": {
-          "name": "Анна жана Элза менен карчалар"
-        },
-        "express-2021/Functions with Artist": {
-          "name": "Сүрөтчү менен функциялар",
-          "overview": "Окуучулар Code.org аркылуу функциялар менен таанышат. Функциялар менен Сүрөтчүдө сонун сүрөттөр тартабыз жана өзгөртөбүз. Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.",
-          "student_overview": "Функциялар менен татаал чийме чийүүнү жеңил кыл!"
-        },
-        "express-2021/Variables with Artist": {
-          "overview": "Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн деңгээлиндеги өз чыгармасын жаратып, эмнелерди үйрөнгөнүн көрсөтүү мүмкүнчүлүгүн алышат."
-        },
-        "express-2021/For Loops with Artist": {
-          "name": "Сүрөтчү менен for циклдары",
-          "overview": "Бул сабакта окуучулар Сүрөтчү менен чогуу циклдарды улантышат. Окуучулар өзгөрмөлөр, циклдар жана for циклин айкалыштырып татаал дизайндарды жаратып, тапшырмаларды аткарышат. Аягында эркин оюн деңгээлиндеги өз чыгармасын жаратуу мүмкүнчүлүгүн алышат.",
-          "student_overview": "Кийинки мыкты чыгармаңарды жаратканга даяр болгула. Азыр `for` циклдарын колдонуп ооз ачырган сүрөттөрдү жаратабыз."
-        },
-        "pre-express-2021/Ocean Scene with Loops": {
-          "name": "Океан көрүнүшү циклдар менен",
-          "overview": "Циклдарга кайтабыз, окуучулар жөнөкөй буйруктардын иретин цикл кылып сүрөт тартканды үйрөнүшөт. Мурунку берилген сабакта, циклдар лабиринтти аралап, казына жыйноо үчүн колдонулган. Бул жерде циклдар чиймелерди жаратат. Бул дэңгээлдин аягында окуучулар циклдарды колдонуп сүрөт тартуу мүмкүнчүлүгүнө ээ болушат."
-        },
-        "pre-express-2021/Drawing Gardens with Loops": {
-          "name": "Циклдар менен бакчаларды тартуу"
-        },
-        "coursee-2021/Nested Loops in Artist": {
-          "name": "Салынган циклдар менен укмуштуу формалар"
-        },
-        "coursee-2021/Functions in Artist": {
-          "name": "Сүрөтчү менен функциялар",
-          "overview": "Окуучулар Code.org аркылуу функциялар менен таанышат. Функциялар менен Сүрөтчүдө сонун сүрөттөр тартабыз жана өзгөртөбүз. Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.",
-          "student_overview": "Функциялар менен татаал чийме чийүүнү жеңил кыл!"
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "Параметри бар функциялар"
-        },
-        "csd3-2021/Variables": {
-          "name": "Өзгөрмөлөр"
-        },
-        "csd3-2021/Text": {
-          "name": "Тексттер"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "Шартуулар"
-        },
-        "csd3-2021/Functions": {
-          "name": "Функциялар"
-        },
-        "pre-express-2020/Ocean Scene with Loops": {
-          "name": "Океан көрүнүшү циклдар менен"
-        },
-        "pre-express-2020/Drawing Gardens with Loops": {
-          "name": "Циклдар менен бакчаларды тартуу"
-        },
-        "express-2020/Creating Art with Code": {
-          "name": "Код менен Сүрөт жаратуу"
-        },
-        "express-2020/Sticker Art with Loops": {
-          "name": "Чаптама өнөрү циклдар менен"
-        },
-        "express-2020/Snowflakes with Anna and Elsa": {
-          "name": "Анна жана Элза менен карчалар"
-        },
-        "express-2020/Functions with Artist": {
-          "name": "Сүрөтчү менен функциялар"
-        },
-        "express-2020/Variables with Artist": {
-          "name": "Сүрөтчү менен өзгөрмөлөр"
-        },
-        "express-2020/Changing Variables with Artist": {
-          "name": "Сүрөтчү менен өзгөрмөлөрдү өзгөртүү"
-        },
-        "express-2020/For Loops with Artist": {
-          "name": "Сүрөтчү менен for циклдары"
-        },
-        "courseb-2020/Loops in Artist": {
-          "name": "Циклдар менен бакчаларды тартуу"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "Релени програмдоо"
-        },
-        "coursed-2020/Loops in Artist": {
-          "name": "Циклдар менен формаларды тартуу"
-        },
-        "coursed-2020/Artist Binary": {
-          "name": "Сүрөтчү менен бинардык сүрөттөр"
-        },
-        "coursec-2020/Programming in Artist": {
-          "name": "Код менен Сүрөт жаратуу"
-        },
-        "coursec-2020/Sticker Art with Loops": {
-          "name": "Чаптама өнөрү циклдар менен"
-        },
-        "coursee-2020/Nested Loops in Artist": {
-          "name": "Салынган циклдар менен укмуштуу формалар"
-        },
-        "coursee-2020/Nested Loops in Frozen": {
-          "name": "Тоңгондогу салынган циклдар"
-        },
-        "coursee-2020/Functions in Artist": {
-          "name": "Сүрөтчү менен функциялар"
-        },
-        "coursea-2020/Ocean Scene with Loops": {
-          "name": "Океан көрүнүшү циклдар менен"
-        },
-        "coursef-2020/Variables as Constant in Artist": {
-          "name": "Сүрөтчү менен өзгөрмөлөр"
-        },
-        "coursef-2020/Variables that Change in Artist": {
-          "name": "Сүрөтчү менен өзгөрмөлөрдү өзгөртүү"
-        },
-        "coursef-2020/Internet": {
-          "name": "Интернет"
-        },
-        "coursef-2020/For Loops in Artist": {
-          "name": "Сүрөтчү менен for циклдары"
         }
       }
     }
