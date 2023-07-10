@@ -1070,6 +1070,7 @@ exports.createJsWrapperBlockCreator = function (
         const showMiniToolbox =
           miniToolboxBlocks &&
           (!window.appOptions || window.appOptions.level.miniToolbox);
+
         if (showMiniToolbox) {
           Blockly.customBlocks.initializeMiniToolbox.bind(this)(
             miniToolboxBlocks
