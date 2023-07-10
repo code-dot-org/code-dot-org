@@ -40,14 +40,13 @@ export interface LabState {
   isLoadingProjectOrLevel: boolean;
   // If the lab is loading. Can be updated by lab-specific components.
   isLoading: boolean;
-  // Error currently on the page, if present. If not undefined, isPageError should also be true.
+  // Error currently on the page, if present.
   pageError:
     | {
         errorMessage: string;
         error?: Error;
       }
     | undefined;
-  isPageError: boolean;
   // channel for the current project, or undefined if there is no current project.
   channel: Channel | undefined;
   // last saved source for the current project, or undefined if we have not loaded or saved yet.
@@ -69,7 +68,6 @@ const initialState: LabState = {
   isLoadingProjectOrLevel: false,
   isLoading: false,
   pageError: undefined,
-  isPageError: false,
   channel: undefined,
   sources: undefined,
   levelData: undefined,
@@ -198,6 +196,11 @@ export const isReadOnlyWorkspace = (state: {lab: LabState}) => {
   return !state.lab.channel?.isOwner;
 };
 
+// If there is an error present on the page.
+export const hasPageError = (state: {lab: LabState}) => {
+  return state.lab.pageError !== undefined;
+};
+
 const labSlice = createSlice({
   name: 'lab',
   initialState,
@@ -213,11 +216,9 @@ const labSlice = createSlice({
       }>
     ) {
       state.pageError = action.payload;
-      state.isPageError = true;
     },
     clearPageError(state) {
       state.pageError = undefined;
-      state.isPageError = false;
     },
     setChannel(state, action: PayloadAction<Channel | undefined>) {
       state.channel = action.payload;
@@ -261,7 +262,6 @@ const labSlice = createSlice({
           errorMessage: 'setUpWithLevel failed',
           error: action.error as Error,
         };
-        state.isPageError = true;
       }
     });
     builder.addCase(setUpWithLevel.pending, state => {
@@ -280,7 +280,6 @@ const labSlice = createSlice({
           errorMessage: 'setUpWithoutLevel failed',
           error: action.error as Error,
         };
-        state.isPageError = true;
       }
     });
     builder.addCase(setUpWithoutLevel.pending, state => {

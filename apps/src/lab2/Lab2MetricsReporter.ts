@@ -1,6 +1,9 @@
-import MetricsReporter from '../lib/metrics/MetricsReporter';
-import {MetricDimension} from '../lib/metrics/types';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import {MetricDimension} from '@cdo/apps/lib/metrics/types';
 
+/**
+ * Properties that this metric reporter will add to log payloads.
+ */
 interface ReportingProperties {
   channelId?: string;
   projectType?: string;
@@ -12,8 +15,14 @@ interface ReportingProperties {
  * Singleton metrics reporter for Lab2 labs.
  */
 class Lab2MetricsReporter {
+  // Common fields that are added to every log payload.
   private commonProperties: ReportingProperties = {};
 
+  /**
+   * Update common properties that will be added to log payloads.
+   * Provided properties will be merged with existing properties,
+   * so single properties can be updated without overwriting others.
+   */
   public updateProperties(properties: ReportingProperties) {
     this.commonProperties = {...this.commonProperties, ...properties};
   }
@@ -69,6 +78,9 @@ class Lab2MetricsReporter {
     };
   }
 
+  /**
+   * Get a list of common dimensions for every Lab metric event.
+   */
   private getCommonDimensions(): MetricDimension[] {
     const dimensions = [];
     if (this.commonProperties.projectType) {
