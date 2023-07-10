@@ -1,11 +1,14 @@
 import GoogleBlockly from 'blockly/core';
 
 export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
+  /**
+   * This is a customized flyout class that extends the HorizontalFlyout class.
+   * This flyout is intended to be place inside of a block's FieldFlyout.
+   *
+   * @param {Object} workspaceOptions - The options for constructing the class.
+   */
   constructor(workspaceOptions) {
     super(workspaceOptions);
-    // this.visible_ = false;
-    workspaceOptions.getMetrics = this.getMetrics_.bind(this);
-    workspaceOptions.setMetrics = this.setMetrics_.bind(this);
     this.horizontalLayout_ = !0;
     this.minWidth_ = workspaceOptions.minWidth || this.minWidth_;
     this.maxWidth_ = workspaceOptions.maxWidth || this.maxWidth_;
@@ -15,38 +18,10 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   minWidth_ = 0;
   maxWidth_ = 1000;
 
-  getMetrics_() {
-    if (!this.isVisible()) return null;
-    let blockBoundingBox;
-    try {
-      blockBoundingBox = this.workspace_.getCanvas().getBBox();
-    } catch (e) {
-      blockBoundingBox = {
-        height: 0,
-        y: 0,
-        width: 0,
-        x: 0,
-      };
-    }
-    let viewHeight = this.height_,
-      viewWidth = this.width_ + 2 * this.MARGIN;
-    let contentHeight;
-    contentHeight = viewHeight;
-    blockBoundingBox = viewWidth - 1;
-    return {
-      viewHeight: viewHeight,
-      viewWidth: viewWidth,
-      contentHeight: contentHeight,
-      contentWidth: blockBoundingBox,
-      viewTop: -this.workspace_.scrollY,
-      viewLeft: -this.workspace_.scrollX,
-      contentTop: 0,
-      contentLeft: 0,
-      absoluteTop: this.SCROLLBAR_PADDING,
-      absoluteLeft: this.SCROLLBAR_PADDING,
-    };
-  }
-
+  /**
+   * @returns True if this flyout may be scrolled with a scrollbar or
+   *     by dragging.
+   */
   isScrollable() {
     return false;
   }
@@ -122,15 +97,27 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     this.position();
   }
 
+  /** Update the flyout height based on the new block height.
+   *
+   * @param {number} newHeight - The new block height.
+   * @private
+   */
   updateHeight_(newHeight) {
     this.height_ = Math.max(this.height_, newHeight);
   }
-
+  /**
+   * Update the flyout width based on the new block width.
+   *
+   * @param {number} newWidth - The new block width.
+   * @private
+   */
   updateWidth_(newWidth) {
     this.width_ += newWidth + this.GAP_X;
   }
 
-  /** Move the flyout */
+  /**
+   * Position the flyout.
+   */
   position() {
     this.isVisible() && this.positionAt_(this.width_, this.height_, 0, 0);
   }

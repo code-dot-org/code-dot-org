@@ -4,13 +4,14 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
   /**
    * This is a customized field which the user clicks to toggle between two different states,
    * for example, displaying or hiding the flyout.
+   *
    * @param {Object} options - The options for constructing the class.
    * @param {Function} options.onClick - The function that handles the field's editor.
-   * @param {SVGElement} options.icon1 SVG <tspan> element - this is the icon that is initially displayed on the button.
-   * @param {SVGElement} options.icon2 SVG <tspan> element - this is the icon that is displayed on the button after the first click.
-   * @param {boolean} options.useDefaultIcon - Indicates which icon to use
-   * @param {Function} [options.callback] - A function to call if icon2 is used
-   * @param {Object} [options.colorOverrides] - An optional set of colors to use instead of the sourceBlock's styles
+   * @param {SVGElement} options.icon1 - SVG <tspan> element - this is the icon that is initially displayed on the button.
+   * @param {SVGElement} options.icon2 - SVG <tspan> element - this is the icon that is displayed on the button after the first click.
+   * @param {boolean} options.useDefaultIcon - Indicates which icon to use.
+   * @param {Function} [options.callback] - A function to call if icon2 is used.
+   * @param {Object} [options.colorOverrides] - An optional set of colors to use instead of the sourceBlock's styles.
    * @param {string} [options.colorOverrides.icon] - An override for the color of the icons.
    * @param {string} [options.colorOverrides.button] - An override for the toggle button color.
    */
@@ -32,6 +33,12 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
     this.SERIALIZABLE = true;
   }
 
+  /**
+   * Construct a CdoFieldToggle from a JSON arg object.
+   *
+   * @param {Object} options - A JSON object with options.
+   * @returns {CdoFieldToggle} The new field instance.
+   */
   static fromJson(options) {
     return new CdoFieldToggle(options);
   }
@@ -49,6 +56,11 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
     }
   }
 
+  /**
+   * Set the icon to be displayed on the button.
+   *
+   * @param {boolean} useDefaultIcon - Indicates whether to use the default icon.
+   */
   setIcon(useDefaultIcon) {
     this.useDefaultIcon = useDefaultIcon;
     // If the field is not using the default icon, we might want an additional
@@ -59,6 +71,12 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
     }
   }
 
+  /**
+   * Get the text from this field to display on the block. May differ from
+   * `getText` due to ellipsis, and other formatting.
+   *
+   * @returns Text to display.
+   */
   getDisplayText_() {
     return '';
   }
@@ -78,7 +96,9 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
   }
 
   /**
-   * Contrast background for button with source block
+   * Apply the color settings to the button and icons.
+   * Uses colors specified at construction or matches the current
+   * style of the block.
    * @override
    */
   applyColour() {
