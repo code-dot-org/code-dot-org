@@ -22,17 +22,12 @@ const MultipleTemplate: Story<{components: CheckboxProps[]}> = args => (
   </>
 );
 
-export const Default = SingleTemplate.bind({});
-Default.args = {
-  name: 'Controlled checkbox',
-  label: 'Controlled checkbox',
+export const SingleDefaultCheckbox = SingleTemplate.bind({});
+SingleDefaultCheckbox.args = {
+  name: 'controlled_checkbox',
+  label: 'Checkbox Label',
   checked: false,
-  onChange: e => {
-    const target = e.target;
-    console.log(e.target.value);
-    console.log(target.value);
-    return null;
-  },
+  onChange: () => null,
 };
 //
 export const GroupOfDefaultCheckboxes = MultipleTemplate.bind({});
