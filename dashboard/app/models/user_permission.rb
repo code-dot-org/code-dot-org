@@ -44,6 +44,9 @@ class UserPermission < ApplicationRecord
     PROGRAM_MANAGER = 'program_manager'.freeze,
     # Grants ability to be the instructor of any course no matter instructor_audience
     UNIVERSAL_INSTRUCTOR = 'universal_instructor'.freeze,
+    # Grants access to use of AI API
+    AI_API_ACCESS = 'ai_api_access'.freeze,
+
   ].freeze
 
   # Do not log the granting/removal of these permissions to slack

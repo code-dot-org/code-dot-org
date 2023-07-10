@@ -52,6 +52,11 @@ module UserPermissionGrantee
     end
   end
 
+  # Overrides generated permission helper, above.
+  def ai_api_access?
+    admin? || permission?(UserPermission::AI_API_ACCESS)
+  end
+
   # don't log changes to admin permission in development, test, and ad_hoc environments
   def self.should_log?
     return [:staging, :levelbuilder, :production].include? rack_env

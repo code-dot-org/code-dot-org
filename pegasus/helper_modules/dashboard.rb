@@ -14,6 +14,11 @@ module Dashboard
     !!db[:users][id: user_id, admin: true]
   end
 
+  def self.ai_api_access?(user_id)
+    user = User.get(user_id)
+    user && (user.admin? || user.permission?('ai_api_access'))
+  end
+
   class User
     # Wrap dashboard user row in this helper object.
     # You can use this, but it's preferred that clients call User.get(user_id).
