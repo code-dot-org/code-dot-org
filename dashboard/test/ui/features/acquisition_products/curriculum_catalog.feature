@@ -19,3 +19,4 @@ Feature: Curriculum Catalog Page
     Then I click selector "span:contains(Grade 12)"
     And I wait until element "h5:contains(No matching curricula)" is visible
     And I see no difference for "Curriculum Catalog: No Offerings"
+    And I close my eyes
