@@ -650,41 +650,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
         FUNCTION_BLOCK.init;
     }
 
-    Blockly.blockly_.defineBlocksWithJsonArray([
-      {
-        type: 'example_flyout',
-        message0: '%1',
-        args0: [
-          {
-            type: 'field_flyout',
-            name: 'FLYOUT',
-            flyoutKey: 'BLOCK_FLYOUT',
-            foldoutText: 'helper blocks',
-            sizingBehavior: 'fitContent',
-          },
-        ],
-        style: 'example_blocks',
-      },
-    ]);
-
-    Blockly.blockFlyoutCallback = function (workspace) {
-      console.log('blockFlyoutCallback');
-      return [
-        Blockly.Xml.textToDom('<block type="controls_if"/>'),
-        Blockly.Xml.textToDom(
-          '<block type="controls_if">' +
-            '  <next>' +
-            '    <block type="controls_if"/>' +
-            '  </next>' +
-            '</block>'
-        ),
-      ];
-    };
-
-    workspace.registerToolboxCategoryCallback(
-      'BLOCK_FLYOUT',
-      Blockly.blockFlyoutCallback
-    );
     return workspace;
   };
 
