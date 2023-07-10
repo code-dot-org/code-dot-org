@@ -54,6 +54,7 @@ import {ToolboxType, Themes, Renderers} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
+import customBlocks from './customBlocks/google/index.js';
 
 const options = {
   contextMenu: true,
@@ -689,6 +690,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
 
   blocklyWrapper.cdoUtils = cdoUtils;
+  blocklyWrapper.customBlocks = customBlocks;
 
   return blocklyWrapper;
 }

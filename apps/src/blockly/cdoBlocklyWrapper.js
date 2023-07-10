@@ -1,6 +1,7 @@
 import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import {CLAMPED_NUMBER_REGEX} from './constants';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
+import customBlocks from './customBlocks/cdo/index.js';
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -312,6 +313,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       );
     },
   };
+  blocklyWrapper.customBlocks = customBlocks;
   return blocklyWrapper;
 }
 
