@@ -13,6 +13,7 @@ import CdoFieldAngle from './addons/cdoFieldAngle';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
+import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import CdoFieldMultilineInput from './addons/cdoFieldMultilineInput';
 import CdoFieldNumber from './addons/cdoFieldNumber';
 import CdoFieldTextInput from './addons/cdoFieldTextInput';
@@ -21,7 +22,7 @@ import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
-import CdoRendererThrasos from './addons/cdoRendererThrasos';
+import {CdoRendererThrasos} from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './themes/cdoTheme';
 import CdoDarkTheme from './themes/cdoDark';
@@ -244,6 +245,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     ['field_number', 'FieldNumber', CdoFieldNumber],
     ['field_angle', 'FieldAngle', CdoFieldAngle],
     ['field_multilinetext', 'FieldMultilineInput', CdoFieldMultilineInput],
+    ['field_flyout', 'FieldFlyout', CdoFieldFlyout],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
