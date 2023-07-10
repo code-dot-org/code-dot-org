@@ -41,7 +41,9 @@ export interface MusicState {
   playbackEvents: PlaybackEvent[];
   /** The current last measure of the song */
   lastMeasure: number;
-  /** The current sound loading progress */
+  /** The current sound loading progress, from 0-1 inclusive, representing the
+   * number of sounds loaded out of the total number of sounds to load.
+   */
   soundLoadingProgress: number;
 }
 
