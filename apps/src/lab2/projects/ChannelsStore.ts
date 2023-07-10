@@ -13,6 +13,8 @@ export interface ChannelsStore {
   loadForLevel: (levelId: number, scriptId?: number) => Promise<Response>;
 
   save: (channel: Channel) => Promise<Response>;
+
+  redirectToRemix: (channel: Channel) => void;
 }
 
 // Note: We don't need to actually save a channel for local storage.
@@ -36,6 +38,10 @@ export class LocalChannelsStore implements ChannelsStore {
   save() {
     return Promise.resolve(new Response(''));
   }
+
+  redirectToRemix() {
+    // Do nothing
+  }
 }
 
 export class RemoteChannelsStore implements ChannelsStore {
@@ -52,5 +58,9 @@ export class RemoteChannelsStore implements ChannelsStore {
   save(channel: Channel) {
     channel = {...this.defaultChannel, ...channel};
     return channelsApi.update(channel);
+  }
+
+  redirectToRemix(channel: Channel) {
+    projectsApi.redirectToRemix(channel.id, channel.projectType);
   }
 }

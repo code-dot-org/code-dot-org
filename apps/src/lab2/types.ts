@@ -10,7 +10,7 @@ export interface Channel {
   id: string;
   name: string;
   isOwner: boolean;
-  projectType: ProjectType | null;
+  projectType: ProjectType;
   publishedAt: string;
   createdAt: string;
   updatedAt: string;
