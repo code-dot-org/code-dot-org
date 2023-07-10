@@ -11101,6 +11101,7 @@ ar:
             lessonGroup-2:
               display_name: تعليم الذكاء الاصطناعي والتعلم الآلي
           name: نظام التشغيل الذاتي (pl-csd5-2023)
+          title: 'الوحدة 7: التحضير لتدريس الذكاء الاصطناعي وتعلم الآلة'
           description: "تم تصميم وحدة التعلم الاحترافية هذه لمساعدتك على الاستعداد
             لتدريس وحدة الذكاء الاصطناعي والتعلم الآلي في Code.org.  \n\n\\*\\* في
             وحدة التعلم الاحترافية هذه، ستقوم بما يلي: \\*\\*\n\n-   احصل على مقدمة
@@ -11442,6 +11443,29 @@ ar:
 
             **الوقت المقترح**: 70 دقيقة
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: الفصول الدراسية
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: الفصول الدراسية
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: الفصول الدراسية
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: البيانات
+          lesson_groups:
+            lessonGroup-3:
+              display_name: الفصول الدراسية
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: الفصول الدراسية
+        csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-3:
               display_name: الفصول الدراسية

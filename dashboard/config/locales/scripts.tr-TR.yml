@@ -9510,6 +9510,7 @@ tr:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Bölüm 1: Donanım girdisi'
+          title: Cihazlarla Uygulama Oluşturma (Circuit Playground)
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -10362,7 +10363,7 @@ tr:
             lessonGroup-2:
               display_name: Hoşgeldiniz
         self-paced-pl-csd5-2023:
-          title: Yapay zeka ve makine öğrenimini öğretmek
+          title: 'Modül 7: Yapay Zeka ve Makine Öğrenimini Öğretme Hazırlığı'
           description: |-
             Bu profesyonel öğrenim modülü, Code.org'un Yapay Zeka ve Makine Öğrenimi ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
 
@@ -10527,6 +10528,29 @@ tr:
             arkadaşlarınız ve ailenizle paylaşabileceğiniz bir proje tasarlayın ve
             oluşturun.
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sınıflar
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sınıflar
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sınıflar
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Veri
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sınıflar
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sınıflar
+        csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-3:
               display_name: Sınıflar

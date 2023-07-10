@@ -47,7 +47,7 @@
   "blockly_toolboxCategoryPlay": "Sons",
   "blockly_toolboxCategorySimple": "Simples",
   "blockly_toolboxCategoryTracks": "Faixas",
-  "blockly_toolboxCategoryVariables": "variáveis",
+  "blockly_toolboxCategoryVariables": "Variáveis",
   "chordArpeggioUp": "Arpejo Up",
   "chordArpeggioDown": "Arpejo Down",
   "chordArpeggioRandom": "Arpejo aleatório",
@@ -58,5 +58,6 @@
   "startOver": "Começar do início",
   "upload": "Fazer upload",
   "panelHeaderInstructions": "Instruções",
-  "panelHeaderWorkspace": "Área de trabalho: "
+  "panelHeaderWorkspace": "Área de trabalho: ",
+  "continue": "Avançar"
 }

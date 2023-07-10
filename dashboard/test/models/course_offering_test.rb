@@ -513,14 +513,14 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
     filtered_course_offerings = CourseOffering.assignable_published_for_students_course_offerings
 
-    refute filtered_course_offerings.include?(none_co)
-    refute filtered_course_offerings.include?(assignable_co)
-    refute filtered_course_offerings.include?(published_co)
-    refute filtered_course_offerings.include?(for_student_co)
-    refute filtered_course_offerings.include?(assignable_published_co)
-    refute filtered_course_offerings.include?(assignable_for_student_co)
-    refute filtered_course_offerings.include?(published_for_student_co)
-    assert filtered_course_offerings.include?(all_co)
+    refute_includes(filtered_course_offerings, none_co)
+    refute_includes(filtered_course_offerings, assignable_co)
+    refute_includes(filtered_course_offerings, published_co)
+    refute_includes(filtered_course_offerings, for_student_co)
+    refute_includes(filtered_course_offerings, assignable_published_co)
+    refute_includes(filtered_course_offerings, assignable_for_student_co)
+    refute_includes(filtered_course_offerings, published_for_student_co)
+    assert_includes(filtered_course_offerings, all_co)
   end
 
   test 'can_be_assigned? is false if its an unassignable course' do
@@ -588,7 +588,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     ].sort
 
     assignable_course_offering_names = CourseOffering.assignable_course_offerings_info(@levelbuilder).values.map {|co| co[:display_name]}
-    expected_course_offering_names.each {|name| assert assignable_course_offering_names.include?(name)}
+    expected_course_offering_names.each {|name| assert_includes(assignable_course_offering_names, name)}
   end
 
   test 'get assignable course offerings for pilot teacher should return offerings where pilot teacher can be instructor' do
@@ -746,7 +746,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "can serialize and seed course offerings" do
-    course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'HOC', header: 'Popular Media', image: 'https://images.code.org/spritelab.JPG', cs_topic: 'Artificial Intelligence,Cybersecurity', school_subject: 'Math,Science', device_compatibility: "{'computer':'ideal','chromebook':'not_recommended','tablet':'incompatible','mobile':'incompatible','no_device':'incompatible'}"
+    course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'HOC', header: 'Popular Media', image: 'https://images.code.org/spritelab.JPG', cs_topic: 'Artificial Intelligence,Cybersecurity', school_subject: 'Math,Science', device_compatibility: "{'computer':'ideal','chromebook':'not_recommended','tablet':'incompatible','mobile':'incompatible','no_device':'incompatible'}", description: "An introductory course that empowers students to engage with computer science as a medium for creativity, communication, an problem solving.", self_paced_professional_learning: "Facilitator led workshops", professional_learning_program: "Facilitator led workshops", video: "https://youtu.be/T45kEEBzrT8", published_date: DateTime.new(2023, 7, 5, 4, 30)
     serialization = course_offering.serialize
     previous_course_offering = course_offering.freeze
     course_offering.destroy!

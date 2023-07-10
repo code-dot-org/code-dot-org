@@ -211,7 +211,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:student)
     get :show, params: {id: @pl_coursez_2017.name}
     assert_response :success
-    assert response.body.include? "You don&#39;t have access to this unit."
+    assert_includes(response.body, "You don&#39;t have access to this unit.")
   end
 
   test "show: redirect from older version to latest stable version in family for participant" do
@@ -1548,59 +1548,59 @@ class ScriptsControllerTest < ActionController::TestCase
     test_user_gets_response_for(:show, response: :success, user: :student,
       params: -> {{id: @pilot_unit.name}}, name: 'student cannot view pilot unit'
     ) do
-      assert response.body.include? no_access_msg
+      assert_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: :teacher,
                                 params: -> {{id: @pilot_pl_unit.name}}, name: 'participant user not in pilot section cannot view pilot unit'
     ) do
-      assert response.body.include? no_access_msg
+      assert_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: :teacher,
       params: -> {{id: @pilot_unit.name}},
       name: 'teacher without pilot access cannot view pilot unit'
     ) do
-      assert response.body.include? no_access_msg
+      assert_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: :facilitator,
                                 params: -> {{id: @pilot_pl_unit.name}},
                                 name: 'instructor without pilot access cannot view pilot unit'
     ) do
-      assert response.body.include? no_access_msg
+      assert_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
       params: -> {{id: @pilot_unit.name, section_id: @pilot_section.id}},
       name: 'pilot teacher can view pilot unit'
     ) do
-      refute response.body.include? no_access_msg
+      refute_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: -> {@pilot_instructor},
                                 params: -> {{id: @pilot_pl_unit.name, section_id: @pilot_pl_section.id}},
                                 name: 'pilot instructor can view pilot unit'
     ) do
-      refute response.body.include? no_access_msg
+      refute_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
       params: -> {{id: @pilot_unit.name}}, name: 'pilot student can view pilot unit'
     ) do
-      refute response.body.include? no_access_msg
+      refute_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: -> {@pilot_pl_participant},
                                 params: -> {{id: @pilot_pl_unit.name}}, name: 'pilot participant can view pilot unit'
     ) do
-      refute response.body.include? no_access_msg
+      refute_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
       params: -> {{id: @pilot_unit.name}}, name: 'levelbuilder can view pilot unit'
     ) do
-      refute response.body.include? no_access_msg
+      refute_includes(response.body, no_access_msg)
     end
   end
 
@@ -1618,20 +1618,20 @@ class ScriptsControllerTest < ActionController::TestCase
     test_user_gets_response_for(:show, response: :success, user: :student,
       params: -> {{id: @in_development_unit.name}}, name: 'student cannot view in-development unit'
     ) do
-      assert response.body.include? no_access_msg
+      assert_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: :teacher,
       params: -> {{id: @in_development_unit.name}},
       name: 'teacher cannot view in-development unit'
     ) do
-      assert response.body.include? no_access_msg
+      assert_includes(response.body, no_access_msg)
     end
 
     test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
       params: -> {{id: @in_development_unit.name}}, name: 'levelbuilder can view in-development unit'
     ) do
-      refute response.body.include? no_access_msg
+      refute_includes(response.body, no_access_msg)
     end
   end
 
@@ -1686,38 +1686,38 @@ class ScriptsControllerTest < ActionController::TestCase
   no_access_msg = "You don&#39;t have access to this unit."
 
   test_user_gets_response_for(:vocab, response: :success, user: :facilitator, params: -> {{id: @migrated_pl_unit.name}}, name: 'instructor can view vocab page for pl course') do
-    refute response.body.include? no_access_msg
+    refute_includes(response.body, no_access_msg)
   end
   test_user_gets_response_for(:vocab, response: :forbidden, user: :student, params: -> {{id: @migrated_pl_unit.name}}, name: 'student cant view vocab page for pl course')
   test_user_gets_response_for(:vocab, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view vocab page for student facing course') do
-    refute response.body.include? no_access_msg
+    refute_includes(response.body, no_access_msg)
   end
   test_user_gets_response_for :vocab, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
   test_user_gets_response_for(:resources, response: :success, user: :facilitator, params: -> {{id: @migrated_pl_unit.name}}, name: 'instructor can view resources page for pl course') do
-    refute response.body.include? no_access_msg
+    refute_includes(response.body, no_access_msg)
   end
   test_user_gets_response_for(:resources, response: :forbidden, user: :student, params: -> {{id: @migrated_pl_unit.name}}, name: 'student cant view resources page for pl course')
   test_user_gets_response_for(:resources, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view resources page for student facing course') do
-    refute response.body.include? no_access_msg
+    refute_includes(response.body, no_access_msg)
   end
   test_user_gets_response_for :resources, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
   test_user_gets_response_for(:standards, response: :success, user: :facilitator, params: -> {{id: @migrated_pl_unit.name}}, name: 'instructor can view standards page for pl course') do
-    refute response.body.include? no_access_msg
+    refute_includes(response.body, no_access_msg)
   end
   test_user_gets_response_for(:standards, response: :forbidden, user: :student, params: -> {{id: @migrated_pl_unit.name}}, name: 'student cant view standards page for pl course')
   test_user_gets_response_for(:standards, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view standards page for student facing course') do
-    refute response.body.include? no_access_msg
+    refute_includes(response.body, no_access_msg)
   end
   test_user_gets_response_for :standards, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 
   test_user_gets_response_for(:code, response: :success, user: :facilitator, params: -> {{id: @migrated_pl_unit.name}}, name: 'instructor can view code page for pl course') do
-    refute response.body.include? no_access_msg
+    refute_includes(response.body, no_access_msg)
   end
   test_user_gets_response_for(:code, response: :forbidden, user: :student, params: -> {{id: @migrated_pl_unit.name}}, name: 'student cant view code page for pl course')
   test_user_gets_response_for(:code, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}, name: 'teacher can view code page for student facing course') do
-    refute response.body.include? no_access_msg
+    refute_includes(response.body, no_access_msg)
   end
   test_user_gets_response_for :code, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_unit.name}}
 

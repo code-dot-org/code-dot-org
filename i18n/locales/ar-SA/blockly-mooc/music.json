@@ -56,5 +56,6 @@
   "startOver": "البدء من جديد",
   "upload": "تحميل",
   "panelHeaderInstructions": "التعليمات",
-  "panelHeaderWorkspace": "مساحة العمل: "
+  "panelHeaderWorkspace": "مساحة العمل: ",
+  "continue": "الاستمرار"
 }

@@ -4,6 +4,8 @@
     "ADD_COMMENT": "సందర్భ పట్టిక - ఎంపిక చేసుకున్న విభాగంలో వివరణాత్మక వ్యాఖను రాయండి.",
     "CANCEL": "రద్దు",
     "CONFIRM_CREATE_VARIABLE": "సృష్టించు",
+    "CONTROLS_IF_MSG_ELSE": "లేదంటే",
+    "CONTROLS_REPEAT_INPUT_DO": "చేయండి",
     "HELP": "సహాయం",
     "LISTS_CREATE_WITH_CONTAINER_TITLE_ADD": "జాబితా"
 }
