@@ -147,6 +147,14 @@ ro:
           description_short: Învățați concepte fundamentale ale științei calculatoarelor.
         csd-2023:
           title: Descoperiri în știința calculatoarelor
+        focus-on-creativity-2023:
+          title: Centrare pe Creativitate (Descoperirile Informaticii)
+        focus-on-data-2023:
+          title: Centrare pe Date (Descoperirile Informaticii)
+        focus-on-design-with-purpose-2023:
+          title: Centrare pe Desenarea cu un Scop (Descoperirile Informaticii)
+        focus-on-impact-in-society-2023:
+          title: Centrare pe Impactul în Societate (Descoperirile Informaticii)
     resources:
       curriculum/csd/2020:
         name: Curriculum

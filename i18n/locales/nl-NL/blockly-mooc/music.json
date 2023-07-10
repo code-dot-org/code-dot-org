@@ -16,5 +16,6 @@
   "startOver": "Begin opnieuw",
   "upload": "Uploaden",
   "panelHeaderInstructions": "Instructies",
-  "panelHeaderWorkspace": "Werkplaats: "
+  "panelHeaderWorkspace": "Werkplaats: ",
+  "continue": "Doorgaan"
 }

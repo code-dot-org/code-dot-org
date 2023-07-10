@@ -1104,13 +1104,20 @@ ru:
             курицы, овцы, криперов, зомби и других существ.
         flappy-impact-study:
           title: Гибкий Код с Исследованием
+        coursea-draft:
+          title: 'Основы информатики: курс A'
+        courseb-draft:
+          title: 'Основы информатики: курс B'
         coursec-draft:
+          title: 'Основы информатики: курс C'
           description_short: Изучите основы компьютерной науки и создавайте свои собственные
             произведения искусства, истории и игры.
         coursed-draft:
+          title: 'Основы информатики: курс D'
           description_short: Изучите основы компьютерной науки и создавайте свои собственные
             произведения искусства, истории и игры.
         coursee-draft:
+          title: 'Основы информатики: курс E'
           description_short: Изучите основы компьютерной науки и создавайте свои собственные
             произведения искусства, истории и игры.
           lesson_groups:
@@ -1121,6 +1128,7 @@ ru:
             extra_course_content:
               display_name: Дополнительный материал для курса
         coursef-draft:
+          title: 'Основы информатики: курс F'
           description_short: Изучите основы компьютерной науки и создавайте свои собственные
             произведения искусства, истории и игры.
           lesson_groups:
@@ -1209,6 +1217,8 @@ ru:
           description_audience: Учащиеся средних и старших классов
         applab-2hour:
           description_audience: Учащиеся средних и старших классов
+        coursed-ramp:
+          title: 'Основы информатики: курс D'
         csd6-2017:
           lesson_groups:
             csd6_1:
@@ -1950,6 +1960,7 @@ ru:
             content:
               display_name: Содержимое
         dance:
+          title: Танцевальная вечеринка (2018)
           description_short: Участвуют Кэти Перри, Мадонна, Джей Бальвин, Сиа, Кит
             Урбан, Кьяра и еще 25 звезд!
           description: Создавайте свой собственный танец и делитесь им с друзьями.
@@ -1971,6 +1982,7 @@ ru:
             csp_project:
               display_name: Проект
         dance-extras:
+          title: Танцуйте без остановки (2018)
           description: Дополнительные идеи проектов помогут тебе продолжить обучение
             после первого часа.
           student_description: Дополнительные идеи проектов помогут тебе продолжить
@@ -3015,6 +3027,8 @@ ru:
               display_name: 'Глава 1: Веб-контент и HTML'
             csd2_2:
               display_name: 'Глава 2: Дизайн и CSS'
+        csp5-virtual:
+          title: Событийно-управляемое программирование в «Лаборатории приложений»
         virtual-holding-place:
           lesson_groups:
             content:
@@ -3047,6 +3061,7 @@ ru:
             csp5_1:
               display_name: 'Глава 1: Программирование управляемое событиями'
         csd3-virtual:
+          title: Самостоятельное знакомство с игровой лабораторией
           lesson_groups:
             csd3_1:
               display_name: Содержимое
@@ -3465,6 +3480,7 @@ ru:
             cspSurvey2020:
               display_name: Опрос
         aiml-2021:
+          title: Модуль ИИ и машинного обучения
           lesson_groups:
             lessonGroup-4:
               display_name: Опрос
@@ -3720,6 +3736,8 @@ ru:
               display_name: Демонстрации и ресурсы
         tesstest921:
           name: tesstest921
+        hello-world-animals:
+          title: 'Привет, мир: животные'
         hello-world-retro:
           title: 'Привет, мир: Ретро'
         hello-world-batman:
@@ -3737,6 +3755,8 @@ ru:
         ai-ethics:
           title: Наш этический кодекс искусственного интеллекта
           description_audience: классы 6-12
+        dance-unplugged:
+          title: "«Час кода» — Танцевальная вечеринка — Автономное занятие"
         csc-things:
           name: csc-вещи
           title: 'Хранилище идей CSC '
@@ -3802,6 +3822,8 @@ ru:
           title: Поэтическое искусство
         poetry-2021:
           title: Программирование и поэзия
+        hello-world-animals-2021:
+          title: 'Привет, мир: животные'
         hello-world-retro-2021:
           title: 'Привет, мир: Ретро'
         explore-data-1-2021:
@@ -4311,6 +4333,8 @@ ru:
           student_description: В этом разделе содержится опрос, который должен проводиться
             после завершения блоков в CS Discoveries. Ваш преподаватель сообщит вам,
             когда будет необходимо принять участие в этом опросе.
+        aiml-2022:
+          title: Модуль ИИ и машинного обучения
         self-paced-pl-csd1-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4645,6 +4669,7 @@ ru:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Глава 2: Создание физических прототипов'
+          title: Создание приложений с помощью устройств (Circuit Playground)
         microbit-2022:
           lesson_groups:
             lessonGroup-4:
@@ -5138,7 +5163,8 @@ ru:
             оценке и продвижении культуры вовлечения. \n\n**Рекомендуемое время:**
             50 минут"
         self-paced-pl-csd5-2023:
-          title: Обучение ИИ и Машинному Обучению
+          title: 'Модуль 7: Подготовка к преподаванию по теме "Искусственный интеллект
+            и машинное обучение"'
           description: "Этот модуль профессионального обучения поможет вам приготовиться
             к преподаванию по разделу Code.org', посвященному ИИ и машинному обучению.
             \ \n\n**Что вы узнаете в этом модуле профессионального обучения:**\n\n-
@@ -5219,6 +5245,29 @@ ru:
         self-paced-pl-csp2-2023:
           title: 'Модуль 2: Навигация по инструментам Code.org'
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Двумерные массивы
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Двумерные массивы
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Двумерные массивы
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Данные
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Двумерные массивы
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Двумерные массивы
+        csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-5:
               display_name: Двумерные массивы

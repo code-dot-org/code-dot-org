@@ -19,6 +19,7 @@ import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
 import {baseUrl, loadLibrary} from '../utils/Loader';
 import MusicValidator from '../progress/MusicValidator';
+import Video from './Video';
 import {
   setIsPlaying,
   setCurrentPlayheadPosition,
@@ -48,7 +49,7 @@ import {
   setIsLoading,
   setIsPageError,
   setLabReadyForReload,
-} from '@cdo/apps/labs/labRedux';
+} from '@cdo/apps/lab2/lab2Redux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode} from '../constants';
@@ -61,9 +62,10 @@ import {
 import {logError} from '../utils/MusicMetrics';
 import musicI18n from '../locale';
 import UpdateTimer from './UpdateTimer';
-import ValidatorProvider from '@cdo/apps/labs/progress/ValidatorProvider';
+import ValidatorProvider from '@cdo/apps/lab2/progress/ValidatorProvider';
 import {Key} from '../utils/Notes';
-import LabRegistry from '@cdo/apps/labs/LabRegistry';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {setUpBlocklyForMusicLab} from '../blockly/setup';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -150,12 +152,14 @@ class UnconnectedMusicView extends React.Component {
     }
 
     this.state = {
+      showingVideo: !!this.props.inIncubator,
       loadedLibrary: false,
       currentLibraryName: null,
     };
 
     // Music Lab currently does not support share and remix
     header.showHeaderForProjectBacked({showShareAndRemix: false});
+    setUpBlocklyForMusicLab();
   }
 
   componentDidMount() {
@@ -270,7 +274,6 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.init(
       document.getElementById('blockly-div'),
       this.onBlockSpaceChange,
-      this.player,
       this.props.isReadOnlyWorkspace
     );
     this.player.initialize(this.library);
@@ -479,7 +482,7 @@ class UnconnectedMusicView extends React.Component {
       };
     }
 
-    LabRegistry.getInstance()
+    Lab2Registry.getInstance()
       .getProjectManager()
       ?.save(sourcesToSave, forceSave);
   };
@@ -506,6 +509,10 @@ class UnconnectedMusicView extends React.Component {
   };
 
   stopSong = () => {
+    if (!this.props.isPlaying) {
+      return;
+    }
+
     this.player.stopSong();
     this.playingTriggers = [];
 
@@ -521,6 +528,10 @@ class UnconnectedMusicView extends React.Component {
       'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
       '_blank'
     );
+  };
+
+  onVideoClosed = () => {
+    this.setState({showingVideo: false});
   };
 
   renderInstructions(position) {
@@ -598,6 +609,9 @@ class UnconnectedMusicView extends React.Component {
   }
 
   render() {
+    const showVideo =
+      AppConfig.getValue('show-video') !== 'false' && this.state.showingVideo;
+
     const {timelineAtTop, showInstructions, instructionsPosition} = this.props;
 
     return (
@@ -615,6 +629,10 @@ class UnconnectedMusicView extends React.Component {
           {showInstructions &&
             instructionsPosition === InstructionsPositions.TOP &&
             this.renderInstructions(InstructionsPositions.TOP)}
+
+          {showVideo && (
+            <Video id="initial-modal-0" onClose={this.onVideoClosed} />
+          )}
 
           {timelineAtTop && this.renderPlayArea(true)}
 
