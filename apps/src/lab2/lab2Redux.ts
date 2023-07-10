@@ -40,6 +40,13 @@ export interface LabState {
   isLoadingProjectOrLevel: boolean;
   // If the lab is loading. Can be updated by lab-specific components.
   isLoading: boolean;
+  // Error currently on the page, if present. If not undefined, isPageError should also be true.
+  pageError:
+    | {
+        errorMessage: string;
+        error?: Error;
+      }
+    | undefined;
   isPageError: boolean;
   // channel for the current project, or undefined if there is no current project.
   channel: Channel | undefined;
@@ -61,6 +68,7 @@ export interface LabState {
 const initialState: LabState = {
   isLoadingProjectOrLevel: false,
   isLoading: false,
+  pageError: undefined,
   isPageError: false,
   channel: undefined,
   sources: undefined,
@@ -197,8 +205,19 @@ const labSlice = createSlice({
     setIsLoading(state, action: PayloadAction<boolean>) {
       state.isLoading = action.payload;
     },
-    setIsPageError(state, action: PayloadAction<boolean>) {
-      state.isPageError = action.payload;
+    setPageError(
+      state,
+      action: PayloadAction<{
+        errorMessage: string;
+        error?: Error;
+      }>
+    ) {
+      state.pageError = action.payload;
+      state.isPageError = true;
+    },
+    clearPageError(state) {
+      state.pageError = undefined;
+      state.isPageError = false;
     },
     setChannel(state, action: PayloadAction<Channel | undefined>) {
       state.channel = action.payload;
@@ -238,6 +257,11 @@ const labSlice = createSlice({
       // action was not aborted.
       if (!action.meta.aborted) {
         state.isLoadingProjectOrLevel = false;
+        state.pageError = {
+          errorMessage: 'setUpWithLevel failed',
+          error: action.error as Error,
+        };
+        state.isPageError = true;
       }
     });
     builder.addCase(setUpWithLevel.pending, state => {
@@ -252,6 +276,11 @@ const labSlice = createSlice({
       // action was not aborted.
       if (!action.meta.aborted) {
         state.isLoadingProjectOrLevel = false;
+        state.pageError = {
+          errorMessage: 'setUpWithoutLevel failed',
+          error: action.error as Error,
+        };
+        state.isPageError = true;
       }
     });
     builder.addCase(setUpWithoutLevel.pending, state => {
@@ -350,7 +379,8 @@ async function cleanUpProjectManager() {
 
 export const {
   setIsLoading,
-  setIsPageError,
+  setPageError,
+  clearPageError,
   setChannel,
   setSources,
   setLevelData,

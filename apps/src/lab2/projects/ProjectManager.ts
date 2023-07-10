@@ -15,6 +15,7 @@ import {ChannelsStore} from './ChannelsStore';
 import {Channel, Project, ProjectSources} from '../types';
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {currentLocation} from '@cdo/apps/utils';
+import Lab2MetricsReporter from '../Lab2MetricsReporter';
 
 export default class ProjectManager {
   private readonly channelId: string;
@@ -74,7 +75,7 @@ export default class ProjectManager {
       // If sourceResponse is a 404 (not found), we still want to load the channel.
       // Source can return not found if the project is new. Throw if not a 404.
       if (!(error as Error).message.includes('404')) {
-        this.logError('Error loading sources', error as Error);
+        Lab2MetricsReporter.logError('Error loading sources', error as Error);
         throw error;
       }
     }
@@ -83,7 +84,7 @@ export default class ProjectManager {
     try {
       channel = await this.channelsStore.load(this.channelId);
     } catch (error) {
-      this.logError('Error loading channel', error as Error);
+      Lab2MetricsReporter.logError('Error loading channel', error as Error);
       throw error;
     }
 
@@ -277,7 +278,7 @@ export default class ProjectManager {
   private onSaveFail(errorMessage: string, error: Error) {
     this.saveInProgress = false;
     this.executeSaveFailListeners(error);
-    this.logError(errorMessage, error);
+    Lab2MetricsReporter.logError(errorMessage, error);
   }
 
   private canSave(forceSave: boolean): boolean {
@@ -373,13 +374,5 @@ export default class ProjectManager {
 
   private executeSaveStartListeners() {
     this.saveStartListeners.forEach(listener => listener());
-  }
-
-  private logError(errorMessage: string, error: Error): void {
-    MetricsReporter.logError({
-      channelId: this.channelId,
-      errorMessage,
-      error,
-    });
   }
 }
