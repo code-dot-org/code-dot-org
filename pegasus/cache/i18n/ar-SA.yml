@@ -883,7 +883,7 @@ ar-SA:
   dashboard_progress_furthest_level_attempted: حاول أبعد مستوى
   dashboard_progress_submitted: 'تم التقديم
 
-'
+    '
   dashboard_progress_view: 'عرض التقدم في:'
   dashboard_progress_student_in_script: معلومات التقدم لــِ %{student_name} في %{script_name}
   dashboard_progress_pair_programming: البرمجة الثنائية
@@ -2102,7 +2102,7 @@ ar-SA:
   sign_in_instruct_secret: اختر سرهم %{secret}.
   sign_in_instruct_button: 'انقر على زر "تسجيل الدخول".
 
-'
+    '
   sign_in_overview_cards: يمكن للطلاب أن يعثروا على هذه المعلومات، بما في ذلك سرهم
     %{secret} في بطاقة الدخول الواردة أدناه
   reset_student_password: إعادة إعداد كلمات سر الطالب

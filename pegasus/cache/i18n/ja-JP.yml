@@ -1253,7 +1253,7 @@ ja-JP:
   lightbot_shortdescription: プロシージャとループを使ってパズルを解いて Lightbot をプログラミングする
   thinkersmith_shortdescription: 'デバイスがないグループ用のアンプラグド（コンピュタを使わず学ぶ方法）のチュートリアル
 
-'
+    '
   condcards_shortdescription: カードを使ってアルゴリズムを学ぶ
   lightbotintl_shortdescription: コーディング概念を教えるゲーム
   codehs_shortdescription: 見た目も楽しいイントロでプログラミング、犬のカレルと一緒にコーディングを始めよう！
@@ -1265,10 +1265,10 @@ ja-JP:
   robomind_shortdescription: バーチャルロボットのためのコードを書く
   groklearning_shortdescription: 'メアリーと一緒に、学習プログラミング言語クォーラムを学ぶガイド付きツアーに参加する
 
-'
+    '
   quorum_shortdescription: 'メアリーと一緒に、プログラミング言語クォーラムを学ぶガイド付きツアーに参加する
 
-'
+    '
   codespark_shortdescription: フースは、プログラミングを学ぶ、子供向けの楽しいゲームです
   kodable_shortdescription: コンピュータプログラミングの概念を教えてくれる、楽しいiPadのゲーム
   tynkerapp_shortdescription: 楽しいコーディングのパズルでプログラミングを学ぶ
@@ -1813,7 +1813,7 @@ ja-JP:
   hoc2018_mc_teacher_guide: 教師用ガイドを表示
   hoc2018_mc_minecraft_education: 'マインクラフト エデュケーション
 
-'
+    '
   hoc2018_mc_continue_learning: マインクラフトで学習をつづける
   hoc2018_mc_go_to_mc_education: マインクラフト　エデュケーションへ
   hoc2018_mc_short_description: 創造力と問題解決スキルを発揮して、プログラムの力でお宝を探して水中の世界を探検しましょう。

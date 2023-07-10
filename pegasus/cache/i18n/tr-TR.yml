@@ -2185,7 +2185,7 @@ tr-TR:
   header_tutorials: Eğitmler
   header_screen_reader_hamburger: 'Menü
 
-'
+    '
   header_screen_reader_help: Yardım menüsü
   app_lab_documentation: Uygulama Laboratuvarı Belgelendirmesi
   app_lab_tutorials: Uygulama Laboratuvar Eğitimleri
@@ -2577,7 +2577,7 @@ tr-TR:
   footer_terms: Koşullar
   ai_for_oceans: 'Okyanuslar için Yapay Zeka
 
-'
+    '
   ai_for_oceans_lesson_plan: ders planı
   ai_for_oceans_tile_description: 'Yapay zekayı çöpleri algılaması için eğiterek okyanusları
     temizlemesine yardım edin! Eğitim verileri ve önyargı ile yapay zekanın dünya
