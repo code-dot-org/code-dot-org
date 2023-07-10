@@ -1,17 +1,26 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
-import color from '@cdo/apps/util/color';
+import classnames from 'classnames';
+
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import TeacherSectionOption from './TeacherSectionOption';
 import {
   assignToSection,
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+
+import {
+  Heading3,
+  Heading5,
+  BodyTwoText,
+} from '@cdo/apps/componentLibrary/typography';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox';
+
+import moduleStyle from './multiple-sections-assigner.module.scss';
 
 const MultipleSectionsAssigner = ({
   courseId,
@@ -188,52 +197,64 @@ const MultipleSectionsAssigner = ({
     <AccessibleDialog onClose={onClose}>
       <div
         tabIndex="0"
-        style={styles.header}
-        className="uitest-confirm-assignment-dialog"
+        className={classnames(
+          'uitest-confirm-assignment-dialog',
+          moduleStyle.modalHeader
+        )}
       >
-        {i18n.chooseSectionsPrompt({assignmentName})}
+        <Heading3>{i18n.chooseSectionsPrompt({assignmentName})}</Heading3>
       </div>
-      <div style={styles.content}>{sectionDirections}</div>
-      <div style={styles.header} className="uitest-confirm-assignment-dialog">
-        {i18n.yourSectionsList()}
+      <div className={moduleStyle.sectionsDirections}>
+        <BodyTwoText>{sectionDirections}</BodyTwoText>
       </div>
-      <div style={styles.grid}>
-        {sections &&
-          sections.map(
-            section =>
-              isAssignableToSection(section.participantType) && (
-                <TeacherSectionOption
-                  key={section.id}
-                  section={section}
-                  isChecked={
-                    !!currentSectionsAssigned.some(s => s.code === section.code)
-                  }
-                  assignedSections={currentSectionsAssigned}
-                  onChange={() => handleChangedCheckbox(section)} // this function should update the state of multiple section assigner
-                  editedValue={section.isAssigned}
-                />
-              )
+      <div
+        className={classnames(
+          'uitest-confirm-assignment-dialog',
+          moduleStyle.sectionList
+        )}
+      >
+        <Heading5>{i18n.yourSectionsList()}</Heading5>
+        <div className={moduleStyle.sectionListOptionsContainer}>
+          {sections &&
+            sections.map(
+              section =>
+                isAssignableToSection(section.participantType) && (
+                  <Checkbox
+                    key={section.id}
+                    checked={
+                      !!currentSectionsAssigned.some(
+                        s => s.code === section.code
+                      )
+                    }
+                    onChange={() => handleChangedCheckbox(section)} // this function should update the state of multiple section assigner
+                    name={section.id}
+                    label={section.name}
+                  />
+                )
+            )}
+        </div>
+        <a
+          className={classnames(
+            moduleStyle.selectAllOptions,
+            'select-all-sections'
           )}
+          onClick={selectAllHandler}
+        >
+          {i18n.selectAll()}
+        </a>
       </div>
-      <hr />
-      <a
-        style={styles.selectAllSectionsLabel}
-        onClick={selectAllHandler}
-        className="select-all-sections"
-      >
-        {i18n.selectAll()}
-      </a>
-      <div style={styles.buttonContainer}>
+
+      <div className={moduleStyle.buttonContainer}>
         <Button
           text={i18n.dialogCancel()}
           onClick={onClose}
-          color={Button.ButtonColor.gray}
+          color={Button.ButtonColor.neutralDark}
         />
         <Button
           id="confirm-assign"
           text={i18n.confirmAssignment()}
           onClick={reassignSections}
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
         />
       </div>
     </AccessibleDialog>
@@ -258,57 +279,6 @@ MultipleSectionsAssigner.propTypes = {
   unassignSection: PropTypes.func.isRequired,
   assignToSection: PropTypes.func.isRequired,
   updateHiddenScript: PropTypes.func.isRequired,
-};
-
-const styles = {
-  header: {
-    fontSize: 16,
-    marginBottom: 5,
-    fontWeight: 'bold',
-  },
-  buttonContainer: {
-    display: 'flex',
-    gap: 5,
-    justifyContent: 'flex-end',
-  },
-  content: {
-    fontSize: 14,
-    marginBottom: 10,
-    marginTop: 10,
-    paddingBottom: 20,
-    paddingTop: 20,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderLeftWidth: 0,
-    borderRightWidth: 0,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray,
-  },
-  grid: {
-    display: 'grid',
-    gridTemplateColumns: '33% 33% 34%',
-    marginBottom: 10,
-  },
-  functionSelector: {
-    display: 'flex',
-    alignItems: 'center',
-    margin: '10px 10px 10px 0',
-  },
-  largerCheckbox: {
-    width: 20,
-    height: 20,
-  },
-  selectAllFunctionsLabel: {
-    margin: 0,
-    fontSize: 20,
-    fontFamily: '"Gotham 5r", sans-serif',
-  },
-  selectAllSectionsLabel: {
-    fontFamily: "'Gotham 5r', sans-serif",
-    fontSize: 16,
-    cursor: 'pointer',
-    color: color.link_color,
-  },
 };
 
 export const UnconnectedMultipleSectionsAssigner = MultipleSectionsAssigner;

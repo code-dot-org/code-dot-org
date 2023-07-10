@@ -55,6 +55,11 @@
       }
     },
     "bike_sharing": {
+      "fields": {
+        "Month": {
+          "id": "Monat"
+        }
+      },
       "card": {
         "context": {
           "potentialMisuses": " "

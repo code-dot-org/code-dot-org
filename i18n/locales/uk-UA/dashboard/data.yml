@@ -51,7 +51,7 @@ uk:
         if: Блок Якщо
         if_else: Блок "якщо-то-інакше"
         loop_times: Блок "повторити ... разів"
-        loop_until: Блок „Повторити до“
+        loop_until: Блок „Повторювати до“
         loop_while: Блок "повторити поки"
         loop_for: Блок лічильника
         function: Функції
@@ -263,7 +263,7 @@ uk:
         farmer_intro: Вступ до фермера
         flappy_intro: Вступ до Пташка
         loop_times: Блок "повторити ... разів"
-        loop_until: Блок „Повторити до“
+        loop_until: Блок „Повторювати до“
         if: Блок Якщо
         if_else: Блок Якщо/інакше
         if_else_scrat: Блок Якщо/інакше
@@ -291,7 +291,7 @@ uk:
         C1_maze_intro_sequencing: 'Лабіринт: вступ у послідовність'
         C1_maze_debugging: 'Лабіринт: налагодження'
         C1_bee_level_intro: Рівень Бджілки - вступ
-        C1_artist_intro: Вступ до художника
+        C1_artist_intro: Представляємо Художника
         C1_spelling_bee_intro: Вступ до грамотної Бджілки
         C1_zuck_repeat_loop: Лабіринт - цикли
         C1_bee_loops: Бджола - цикли
@@ -362,8 +362,8 @@ uk:
         CSF_debugging_k1_blocks: Налагодження
         CSF_debugging_text_blocks: Налагодження
         CSF_EF_cs_matters: Вступ до інформатики
-        CSF_maze_intro_k1_blocks: Вступ до Студії коду
-        CSF_maze_intro_text_blocks: Вступ до Студії коду
+        CSF_maze_intro_k1_blocks: Представляємо Студію коду
+        CSF_maze_intro_text_blocks: Представляємо Студію коду
         CSF_my_robotic_friends: Мої друзі-роботи
         CSF_Power_of_Words: Сила Слів
         CSF_Super_Digital_Citizen: Супер цифровий громадянин
@@ -371,9 +371,9 @@ uk:
         CSF_unspotted_bugs: Баги
         CSF_zuck_loops_short: Повторення петель
         frozen_intro: Вступ до Години коду
-        frozen_loops: Вступ до циклів
-        frozen_functions: Вступ до функцій
-        playlab_intro: Вступ до Ігрової студії
+        frozen_loops: Представляємо цикли
+        frozen_functions: Представляємо функції
+        playlab_intro: Представляємо Ігрову студію
         playlab_events: Ігрова студія - події
         playlab_repeat_forever: Ігрова студія - Повторювати постійно
         tutorial_puzzle_challenge: Урок - Головоломка
@@ -392,12 +392,12 @@ uk:
         csd_external_waze_data: Чому так багато користувачів обманюють Waze?
         csd_gamelab_animation_tab: Анімація
         csd_gamelab_velocity: Швидкість
-        csd_weblab_intro_1: Основи у Веб лабораторії - частина 1
-        csd_weblab_intro_2: Основи у Веб лабораторії - частина 2
+        csd_weblab_intro_1: Представляємо Веб лабораторію - частина 1
+        csd_weblab_intro_2: Представляємо Веб лабораторію - частина 2
         csd_weblab_css_1: Основи CSS - частина 1
         csd_weblab_css_2: Основи CSS - частина 2
-        csd_weblab_intro_3: Основи у Веб лабораторії - частина 3
-        csp_applab_functions: Вступ до функцій
+        csd_weblab_intro_3: Представляємо Веб лабораторію - частина 3
+        csp_applab_functions: Представляємо функції
         csp_applab_functions_parameters: Функції з параметрами
         csp_applab_loops: Цикли
         csp_concept_rgb: Трохи про пікселі
@@ -501,7 +501,7 @@ uk:
         CSF_Spritelab_MakeSprite_CDEF: Як зробити Спрайт в Спрайт Лаб
         CDEF_Video_SpritesInAction: Спрайти в дії
         CSF_SpriteLab_SpritesInAction_CDEF: Спрайти в дії
-        CSF_StarWars_ProjectIntro: Вступ до проекту Зоряні Війни
+        CSF_StarWars_ProjectIntro: Представляємо проєкт Зоряні Війни
         mc_2018_intro: 'Minecraft: Підводна подорож - Вступ'
         MC_2018_loops: 'Minecraft: Підводна подорож - Повторити до'
         mc_2018_conditionals: 'Minecraft: Водний Вояж Умови'
@@ -546,13 +546,17 @@ uk:
         csf_follow_the_digital_trail: Йди за цифровим шляхом
         csf_private_and_personal_information: Приватна та особиста інформація
         csd_what_computers_are: Що таке комп’ютер?
-        playlab_2021: Вступ до Ігрової студії
-        playlab_2021_reader: Вступ до Ігрової студії
+        playlab_2021: Представляємо Ігрову студію
+        playlab_2021_reader: Представляємо Ігрову студію
         PL_CSD_TeacherTips_Debugging: Поради для вчителя - налагодження
+        csd_u6_circuit_playground: Фізичні обчислення
         csd_u6_input_output: Вхідні та вихідні дані
         PL_CS_Journeys_Overview: Інформатичні подорожі
         csp_applab_parameters: Функції з параметрами
         CS_Changing_Everything: Інформатика змінює все
+        csc_timecapsule_intro: Пишемо код для капсули часу
+        csc-starquilts-intro: Створюємо код для геометричної фігури зірки з окремих елементів
+        csc-ecosystems-intro: Імітація морської екосистеми
     callout:
       text:
         drag_blocks: Перетягни блок "рухатись" і прикріпи його під іншим блоком

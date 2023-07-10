@@ -29,7 +29,7 @@ export default class ProjectManager {
     sources: ProjectSources
   ) => void)[] = [];
   private saveNoopListeners: ((channel?: Channel) => void)[] = [];
-  private saveFailListeners: ((response: Response) => void)[] = [];
+  private saveFailListeners: ((error: Error) => void)[] = [];
   private saveStartListeners: (() => void)[] = [];
   // The last source we saved or loaded, or undefined if we have not saved a source yet.
   private lastSource: string | undefined;
@@ -196,7 +196,7 @@ export default class ProjectManager {
     this.saveNoopListeners.push(listener);
   }
 
-  addSaveFailListener(listener: (response: Response) => void) {
+  addSaveFailListener(listener: (error: Error) => void) {
     this.saveFailListeners.push(listener);
   }
 
@@ -212,12 +212,13 @@ export default class ProjectManager {
    * Only if the source save succeeds do we update the channel, as the
    * channel is metadata about the project and we don't want to save it unless the source
    * save succeeded.
-   * @returns a Response. If the save is successful, the response will be empty,
-   * otherwise it will contain failure or no-op information.
+   * @returns a Promise<void> that resolves when the save is complete or when the save fails.
+   * Listeners are notified of save status throughout the process.
    */
-  private async saveHelper(): Promise<Response> {
+  private async saveHelper(): Promise<void> {
     if (!this.sourcesToSave || !this.lastChannel) {
-      return this.getNoopResponseAndSendSaveNoopEvent();
+      this.executeSaveNoopListeners(this.lastChannel);
+      return;
     }
     this.resetSaveState();
     this.saveInProgress = true;
@@ -228,21 +229,16 @@ export default class ProjectManager {
     // If neither source nor channel has actually changed, no need to save again.
     if (!sourceChanged && !channelChanged) {
       this.saveInProgress = false;
-      return this.getNoopResponseAndSendSaveNoopEvent();
+      this.executeSaveNoopListeners(this.lastChannel);
+      return;
     }
     // Only save the source if it has changed.
     if (sourceChanged) {
-      const sourceResponse = await this.sourcesStore.save(
-        this.channelId,
-        this.sourcesToSave
-      );
-      if (!sourceResponse.ok) {
-        this.saveInProgress = false;
-        this.executeSaveFailListeners(sourceResponse);
-
-        // TODO: Should we wrap this response in some way?
-        // Maybe add a more specific statusText to the response?
-        return sourceResponse;
+      try {
+        await this.sourcesStore.save(this.channelId, this.sourcesToSave);
+      } catch (error) {
+        this.onSaveFail('Error saving sources', error as Error);
+        return;
       }
       this.lastSource = JSON.stringify(this.sourcesToSave);
     }
@@ -261,14 +257,12 @@ export default class ProjectManager {
       // Even if only the source changed, we still update the channel to modify the last
       // updated time.
       this.channelToSave ||= this.lastChannel;
-      const channelResponse = await this.channelsStore.save(this.channelToSave);
-      if (!channelResponse.ok) {
-        this.saveInProgress = false;
-        this.executeSaveFailListeners(channelResponse);
-
-        // TODO: Should we wrap this response in some way?
-        // Maybe add a more specific statusText to the response?
-        return channelResponse;
+      let channelResponse;
+      try {
+        channelResponse = await this.channelsStore.save(this.channelToSave);
+      } catch (error) {
+        this.onSaveFail('Error saving channel', error as Error);
+        return;
       }
       const channelSaveResponse = await channelResponse.json();
       this.lastChannel = channelSaveResponse as Channel;
@@ -278,7 +272,12 @@ export default class ProjectManager {
     this.channelToSave = undefined;
     this.executeSaveSuccessListeners(this.lastChannel, this.sourcesToSave);
     this.initialSaveComplete = true;
-    return new Response();
+  }
+
+  private onSaveFail(errorMessage: string, error: Error) {
+    this.saveInProgress = false;
+    this.executeSaveFailListeners(error);
+    this.logError(errorMessage, error);
   }
 
   private canSave(forceSave: boolean): boolean {
@@ -368,8 +367,8 @@ export default class ProjectManager {
     this.saveNoopListeners.forEach(listener => listener(channel));
   }
 
-  private executeSaveFailListeners(response: Response) {
-    this.saveFailListeners.forEach(listener => listener(response));
+  private executeSaveFailListeners(error: Error) {
+    this.saveFailListeners.forEach(listener => listener(error));
   }
 
   private executeSaveStartListeners() {
@@ -380,7 +379,7 @@ export default class ProjectManager {
     MetricsReporter.logError({
       channelId: this.channelId,
       errorMessage,
-      error: error.toString(),
+      error,
     });
   }
 }

@@ -14683,3 +14683,22 @@ tr-TR:
           feedback: Yanlış. Kuru ot yuvarlanmaya başlayacak
         questions:
         - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
+      OPD-K5 CS Courses:
+        markdown: |-
+          # Planlama > Code.org'a başlarken
+
+
+          ## 1. Adım: Bir kurs seçin
+          Okul öncesi çocuklardan lise öğrencilerine kadar tüm kurslarımız **[kurs kataloğumuzda](https://studio.code.org/courses)** listelenmiştir. Alıştırma yaptığınız CS Temel Düzey derslerini bulmak için **[ilköğretim sayfamıza](https://code.org/educate/curriculum/elementary-school)** gidin ve "Kurslar" bölümünü bulun. Tüm kurslarımız ücretsiz olarak sunulmaktadır. Kurs müfredatının çeşitli konularla nasıl bütünleştirilebileceğini öğrenmek için okulunuzdaki meslektaşlarınızla görüşün.
+          ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)
+          ***
+          ## 2. Adım: Sınıf bölümünüzü ayarlayın
+          Öğrencinizin ilerlemesini görüntülemek, öğrencileriniz için giriş kartlarını yazdırmak, hesaplarını yönetmek ve kursu bitirdiklerinde eve götürebilecekleri sertifikaları yazdırmak için bir sınıf bölümü oluşturun. Bu bağlantıya tıklayarak Code.org'da ilk bilgisayar bilimleri sınıfınızı nasıl oluşturacağınızı gösteren **[kısa bir video izleyin](https://code.hosted.panopto.com/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**. Adımları ayrıca **[bu destek makalesinde](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)** bulabilirsiniz.
+          ![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)
+          ***
+          ## 3. Adım: Kursu bölümünüze atayın
+          Öğrettiğiniz kursa tıklayarak girin; aşağıdakine benzeyen bir ekran görmelisiniz. Daha sonra "Kurs Ata"ya tıklayarak o kursu bölümlerinizden birine atayabilirsiniz.
+          ![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)
+          ***
+          ## 4. Adım: Öğretmeye başlayın
+          Bilgisayar bilimi kavramlarını sadece bir dersle sınıfınıza taşıyabilirsiniz. Öğrencilerinizin bilgisayar bilimlerine olan hevesini gördüğünüzde, öğrencilerinize rehberlik edecek günlük ders planları, bilgisayar olmadan yapabileceğiniz bilgisayarsız aktiviteler ve diğer öğretmenlerle bağlantı kurmak için forumlar ile daha da ileri gidin.

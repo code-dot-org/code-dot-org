@@ -840,6 +840,9 @@
           "word": "Binar",
           "definition": "Un mod de a reprezenta informațiile folosind doar două opțiuni."
         },
+        "computer/csd/2022": {
+          "word": "Computer"
+        },
         "input/csd/2022": {
           "word": "Intrare"
         },
@@ -1477,6 +1480,9 @@
         },
         "function/csd/2021": {
           "word": "Funcţie"
+        },
+        "computer/csd/2021": {
+          "word": "Computer"
         },
         "input/csd/2021": {
           "word": "Intrare"

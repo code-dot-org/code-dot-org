@@ -8388,6 +8388,7 @@ zh-TW:
             lessonGroup-2:
               display_name: 人工智慧與機器學習教學
           name: 自我步伐-正常
+          title: 模組7：準備人工智慧和機器學習教學
           description: "這個專業學習單元旨在幫助您準備教授 Code.org 的人工智慧和機器學習單元。  \n\n\\*\\* 在本專業學習模塊中，您將：\\*\\*\n\n\\-獲取人工智能和機器學習的介紹。
             \n\\-練習單元中包含的關鍵概念。\n\\-參與 AI 實驗室和應用實驗室。\n\\-探索章節項目的結束。 \n\\-制定與學生一起實施該單元的計劃。\n\n\\*\\*
             建議時間：\\*\\* 120 分鐘"
@@ -8692,6 +8693,39 @@ zh-TW:
 
             \*\* 建議時間 \*\*：70 分鐘
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 類別
+            lessonGroup-5:
+              display_name: 2維陣列
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 類別
+            lessonGroup-5:
+              display_name: 2維陣列
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 類別
+            lessonGroup-5:
+              display_name: 2維陣列
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: 數據
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 類別
+            lessonGroup-5:
+              display_name: 2維陣列
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 類別
+            lessonGroup-5:
+              display_name: 2維陣列
+        csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-3:
               display_name: 類別

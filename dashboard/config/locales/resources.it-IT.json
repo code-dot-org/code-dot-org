@@ -2350,12 +2350,12 @@
           "type": "Diapositive"
         },
         "if-else_statements/csd/2022": {
-          "name": "Dichiarazioni se/altrimenti",
+          "name": "Istruzioni condizionali Se/Altrimenti",
           "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
           "type": "Risorse"
         },
         "if_else_statements/csd/2022": {
-          "name": "Dichiarazioni Se/altrimenti",
+          "name": "Istruzioni condizionali Se/altrimenti",
           "url": "https://youtu.be/6m6FFUJsOzo",
           "type": "Video"
         },
@@ -3432,6 +3432,7 @@
           "type": "Guida alle attività"
         },
         "computing_innovations_research_areas/csd/2022": {
+          "name": "Aree di ricerca sulle innovazioni informatiche",
           "url": "https://docs.google.com/document/d/1X2wAnrEJLFhQeDWiBHbNyMk-D0KCff9T2Bl2LXQ9xbI/edit",
           "type": "Risorse"
         },
@@ -3446,6 +3447,7 @@
           "type": "Video"
         },
         "circuits_and_logic/csd/2022": {
+          "name": "Circuiti e logica",
           "url": "https://www.youtube.com/watch?v=3wy9EXKhbtU",
           "type": "Video"
         },
@@ -3525,18 +3527,22 @@
           "type": "Video"
         },
         "variables_and_if_statements/csd/2022": {
+          "name": "Variabili e istruzioni condizionali `if`",
           "url": "https://docs.google.com/presentation/d/1ZbvwtMitIOktO6DyXWBnzwPzmdX2j0uuiwXs7KogmF4/template/preview",
           "type": "Diapositive"
         },
         "exemplar_1_-_loose_papers_app/csd/2022": {
+          "name": "Esempio 1 - App carte sciolte",
           "url": "https://docs.google.com/document/d/1wPwZJNHnVE9rxORwh2hdYQz4JgOUnKLxwEo5gTruGC0/view",
           "type": "Modello"
         },
         "exemplar_2_-_cats_vs_dogs_app/csd/2022": {
+          "name": "Esempio 2 - App cani contro gatti",
           "url": "https://docs.google.com/document/d/1YwosNn1Apef3mMpn8eYP10rI0G8AEyX3sKrP-zTDDvQ/view",
           "type": "Modello"
         },
         "exemplar_3_-_bird_survey/csd/2022": {
+          "name": "Esempio 3 - Indagine sugli uccelli",
           "url": "https://docs.google.com/document/d/1jZE-PYVkKx8_gv7MAmzzP6vuOsX5XMDWohuz7ma7tB0/view",
           "type": "Modello"
         },
@@ -3546,10 +3552,12 @@
           "type": "Diapositive"
         },
         "project_guide_-_on-the-go_app/csd/2022": {
+          "name": "Guida al progetto - App recupero crediti",
           "url": "https://docs.google.com/document/d/1cWvcddxBCTku-YAtHWreeoIJVD8v1_8CwlydofZ_Dlo/view",
           "type": "Guida alle attività"
         },
         "rubric_-_on-the-go_app/csd/2022": {
+          "name": "Tabella di valutazione - App recupero crediti",
           "url": "https://docs.google.com/document/d/11wbS2tB6eOzkyY0Q-JFqpgR14XaY7wZBKhlRHrBBVQI/view",
           "type": "Criteri di valutazione"
         },
@@ -3564,6 +3572,7 @@
           "type": "Risorse"
         },
         "getting_screen_inputs/csd/2022": {
+          "name": "Ottenere input sullo schermo",
           "url": "https://docs.google.com/presentation/d/1DLjFJeLH1tPvdBU1d7dCSomA-U5D-TZSN9sOCHtrL2c/template/preview",
           "type": "Diapositive"
         },
@@ -3573,6 +3582,7 @@
           "type": "Risorse"
         },
         "combining_inputs_and_outputs/csd/2022": {
+          "name": "Combinazione di ingressi e uscite",
           "url": "https://docs.google.com/presentation/d/1f58TYu50EZKmVmQi8Qvtz1bm66gXicFBhdF0-Ct5u3k/template/preview",
           "type": "Diapositive"
         },
@@ -3710,6 +3720,7 @@
           "type": "Modello"
         },
         "mini-project_interactive_art/csd/2022": {
+          "name": "Mini-progetto: arte interattiva",
           "url": "https://docs.google.com/presentation/d/1fDzBxID3Zye50GJxANGDS10COe8LGzRHZH4xEpK1cfk/template/preview",
           "type": "Diapositive"
         },
@@ -3731,6 +3742,7 @@
           "type": "Risorse"
         },
         "physical_outputs_and_leds/csd/2022": {
+          "name": "Uscite fisiche e LED",
           "url": "https://docs.google.com/presentation/d/16AB6Hx-qVP6lDBDeA98o2FXuixHGC3Fe-H_Iai3p7Mc/template/preview",
           "type": "Diapositive"
         },
@@ -7847,12 +7859,12 @@
           "type": "Risorse"
         },
         "if-else_statements_-_map_level_pdf_/csd/2021": {
-          "name": "Dichiarazioni se/altrimenti",
+          "name": "Istruzioni condizionali Se/Altrimenti",
           "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
           "type": "Risorse"
         },
         "if_else_statements/csd/2021": {
-          "name": "Dichiarazioni Se/altrimenti",
+          "name": "Istruzioni condizionali Se/altrimenti",
           "url": "https://youtu.be/6m6FFUJsOzo",
           "type": "Video"
         },
