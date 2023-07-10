@@ -173,6 +173,7 @@
   call_to_action_teach_full_intro_course: "Teach a full intro course"
   call_to_action_see_module_details: "See module details"
   call_to_action_start_modules: "Start modules"
+  call_to_action_join_email: "Join the email list"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
@@ -439,6 +440,56 @@
   ai_resources_title_03: "AI for Teachers"
   ai_resources_desc_03: "Supports integration of Artificial Intelligence knowledge throughout K-12. Offer free professional development, webinars, conference presentations, and peer-to-peer learning opportunities."
   ai_resources_btn_aria_label_03: "Explore the AI for Teachers website"
+
+  ai_pl_webinar_hero_heading: "AI EmpowerED"
+  ai_pl_webinar_hero_desc: "Discover the transformative potential of artificial intelligence (AI) in education with our free online learning series for educators."
+  ai_pl_webinar_hero_presented: "Presented by"
+  ai_pl_webinar_intro_heading: "What is AI Empowered?"
+  ai_pl_webinar_intro_text: "Discover the groundbreaking world of Artificial Intelligence (AI) and its transformative potential in education with Code.org, Khan Academy, ISTE, and ETS comprehensive online learning series for teachers. Through engaging sessions, renowned experts, and practical workshops, we will demystify AI, explore responsible implementation, address bias, and showcase how AI-powered learning can revolutionize student outcomes. Join us on this journey of exploration and empowerment, and unlock the future of teaching with AI."
+  ai_pl_webinar_partnership_between: "A partnership between"
+
+  ai_pl_webinar_pro_learn_heading: "Sign up for professional learning webinars"
+  ai_pl_webinar_pro_learn_desc: "Attend every webinar or just the ones that meet your learning goals. Each webinar will be its own individual webinar with no requirements. A recording link will be provided after the session. All webinars will include closed captioning in multiple languages."
+
+  ai_pl_webinar_pro_learn_grades_01: "JULY 11, 1-2 PM PST"
+  ai_pl_webinar_pro_learn_title_01: "An Educator’s Guide to AI"
+  ai_pl_webinar_pro_learn_desc_01: "Gain a deep understanding of AI's potential to enhance student learning and prepare students for the AI-driven world."
+  ai_pl_webinar_pro_learn_grades_02: "JULY 19, 5-6 PM PST"
+  ai_pl_webinar_pro_learn_title_02: "An Educator’s Guide to AI"
+  ai_pl_webinar_pro_learn_desc_02: "Gain a deep understanding of AI's potential to enhance student learning and prepare students for the AI-driven world."
+  ai_pl_webinar_pro_learn_grades_03: "EARLY AUGUST, TIME TBD"
+  ai_pl_webinar_pro_learn_title_03: "Responsible Use of AI in Classrooms"
+  ai_pl_webinar_pro_learn_desc_03: "Speakers: Ethan and Lilach Mollick, University of Pennsylvania"
+  ai_pl_webinar_pro_learn_desc_03_2: "Learn best practices for AI integration, potential risks, and practical strategies to ensure the safety and privacy of students."
+  ai_pl_webinar_pro_learn_grades_04: "AUGUST 22, 5-6 PM PST"
+  ai_pl_webinar_pro_learn_title_04: "Guiding Conversations About Bias in AI"
+  ai_pl_webinar_pro_learn_desc_04: "Learn to facilitate critical and inclusive classroom discussions about the presence, impact, and ethical implications of bias in AI."
+  ai_pl_webinar_pro_learn_grades_05: "SEPTEMBER 6, 5-6 PM PST"
+  ai_pl_webinar_pro_learn_title_05: "Transforming Student Outcomes with AI"
+  ai_pl_webinar_pro_learn_desc_05: "Hear how AI can provide personalized learning experiences, foster student engagement, and drive academic success."
+
+  ai_pl_webinar_join_email_title: "Sign up for future AI updates"
+  ai_pl_webinar_pro_join_email_desc: "Be the first to hear about new AI opportunities from Code.org, Khan Academy, ISTE, and ETS."
+
+  ai_pl_webinar_explore_title: "Explore resources more AI resources"
+  ai_pl_webinar_explore_desc: "Each partner offers their own resources which support teachers in this new and growing field. Check them out below."
+
+  ai_pl_webinar_explore_tag_1: "EDUCATOR TOOL"
+  ai_pl_webinar_explore_title_1: "Khanmigo"
+  ai_pl_webinar_explore__desc_1: "Khan Academy’s AI-powered teaching aid allows teachers to stop spending time on prep tasks they don’t love, and focus on what they do love—teaching."
+  ai_pl_webinar_explore__button_1: "Try Khanmigo"
+  ai_pl_webinar_explore_tag_2: "EDUCATOR COURSE"
+  ai_pl_webinar_explore_title_2: "Artificial Intelligence Explorations for Educators"
+  ai_pl_webinar_explore__desc_2: "For six years, this 15-hour online course from ISTE has been guiding K-12 educators on the essentials of AI for teaching and learning. The course is offered three times per year and is fully asynchronous with the ongoing support of an expert instructor."
+  ai_pl_webinar_explore__button_2: "Start the course"
+  ai_pl_webinar_explore_tag_3: "CURRICULUM"
+  ai_pl_webinar_explore_title_3: "AI Curriculum"
+  ai_pl_webinar_explore__desc_3: "In Code.org’s AI curriculum for grades 3-12, students use fun activities to see how computers learn from data. The curriculum also invites students to investigate machine learning and data while reflecting on the ethical implications of AI."
+  ai_pl_webinar_explore__button_3: "Explore curricula"
+  ai_pl_webinar_explore_tag_4: "STUDENT TOOL"
+  ai_pl_webinar_explore_title_4: "ETS’s Criterion Interactive"
+  ai_pl_webinar_explore__desc_4: "This guided five-paragraph writing platform coaches learners through five critical phases of the writing process: Prepare/Plan, Write, Revise, Edit, Reflect. ETS personalizes the writing experience by leveraging cutting-edge scoring models and AI, assisting teachers in providing iterative feedback and formative assessment throughout the writing experience."
+  ai_pl_webinar_explore__button_4: "Explore tool"
 
   ai_vid_intro_caption: "Introducing How AI Works"
   ai_vid_chatbots_caption: "How Chatbots and Large Language Models Work"
@@ -1001,6 +1052,7 @@
   get_started: 'Start'
   beyond_an_hour: 'Beyond an Hour of Code'
   register_now: 'Register Now'
+  register: 'Register'
   share_on_facebook: 'Share on Facebook'
   share_on_twitter: 'Share on Twitter'
   promote_additional_resources: 'Additional resources coming soon!'
