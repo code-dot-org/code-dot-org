@@ -12,13 +12,12 @@ import {
   plCourses,
   topPlCourse,
   topCourse,
-  taughtSections,
+  joinedStorySections,
   joinedPlSections,
-  joinedSections,
 } from '../../../test/unit/templates/studioHomepages/homepagesTestData';
 
-const serverSections = taughtSections.map(serverSectionFromSection);
-const joinedServerSections = joinedSections.map(serverSectionFromSection);
+const serverSections = joinedStorySections.map(serverSectionFromSection);
+const joinedPlServerSections = joinedPlSections.map(serverSectionFromSection);
 
 const serverCourses = [
   {
@@ -78,10 +77,10 @@ CoursesNoSections.args = {
 
 export const NoCoursesSections = Template.bind({});
 NoCoursesSections.args = {
-  fakeServerArgs: {sections: joinedServerSections},
+  fakeServerArgs: {sections: serverSections},
   props: {
     courses: [],
-    joinedStudentSections: joinedSections,
+    joinedStudentSections: joinedStorySections,
     joinedPlSections: [],
   },
 };
@@ -95,7 +94,7 @@ CoursesSections.args = {
   props: {
     courses: courses,
     topCourse: topCourse,
-    joinedStudentSections: joinedSections,
+    joinedStudentSections: joinedStorySections,
     joinedPlSections: [],
   },
 };
@@ -104,14 +103,14 @@ export const StudentAndPLCoursesSectionsStudentSections = Template.bind({});
 StudentAndPLCoursesSectionsStudentSections.args = {
   fakeServerArgs: {
     courses: serverCourses,
-    sections: joinedServerSections,
+    sections: serverSections,
   },
   props: {
     courses: courses,
     topCourse: topCourse,
     plCourses: plCourses,
     topPlCourse: topPlCourse,
-    joinedStudentSections: joinedSections,
+    joinedStudentSections: joinedStorySections,
     joinedPlSections: [],
   },
 };
@@ -120,14 +119,14 @@ export const CoursesSectionsAndJoinedPLSections = Template.bind({});
 CoursesSectionsAndJoinedPLSections.args = {
   fakeServerArgs: {
     courses: serverCourses,
-    sections: [].concat(serverSections, joinedServerSections),
+    sections: [].concat(serverSections, joinedPlServerSections),
   },
   props: {
     courses: courses,
     topCourse: topCourse,
     plCourses: plCourses,
     topPlCourse: topPlCourse,
-    joinedStudentSections: joinedSections,
+    joinedStudentSections: joinedStorySections,
     joinedPlSections: joinedPlSections,
   },
 };

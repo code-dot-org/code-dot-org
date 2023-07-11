@@ -2350,12 +2350,12 @@
           "type": "Diapositive"
         },
         "if-else_statements/csd/2022": {
-          "name": "Dichiarazioni se/altrimenti",
+          "name": "Istruzioni condizionali Se/Altrimenti",
           "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
           "type": "Risorse"
         },
         "if_else_statements/csd/2022": {
-          "name": "Dichiarazioni Se/altrimenti",
+          "name": "Istruzioni condizionali Se/altrimenti",
           "url": "https://youtu.be/6m6FFUJsOzo",
           "type": "Video"
         },
@@ -2459,6 +2459,7 @@
           "type": "Diapositive"
         },
         "velocity_and_the_counter_pattern/csd/2022": {
+          "name": "Velocità e Schema di Conteggio",
           "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
           "type": "Risorse"
         },
@@ -3431,6 +3432,7 @@
           "type": "Guida alle attività"
         },
         "computing_innovations_research_areas/csd/2022": {
+          "name": "Aree di ricerca sulle innovazioni informatiche",
           "url": "https://docs.google.com/document/d/1X2wAnrEJLFhQeDWiBHbNyMk-D0KCff9T2Bl2LXQ9xbI/edit",
           "type": "Risorse"
         },
@@ -3445,6 +3447,7 @@
           "type": "Video"
         },
         "circuits_and_logic/csd/2022": {
+          "name": "Circuiti e logica",
           "url": "https://www.youtube.com/watch?v=3wy9EXKhbtU",
           "type": "Video"
         },
@@ -3524,18 +3527,22 @@
           "type": "Video"
         },
         "variables_and_if_statements/csd/2022": {
+          "name": "Variabili e istruzioni condizionali `if`",
           "url": "https://docs.google.com/presentation/d/1ZbvwtMitIOktO6DyXWBnzwPzmdX2j0uuiwXs7KogmF4/template/preview",
           "type": "Diapositive"
         },
         "exemplar_1_-_loose_papers_app/csd/2022": {
+          "name": "Esempio 1 - App carte sciolte",
           "url": "https://docs.google.com/document/d/1wPwZJNHnVE9rxORwh2hdYQz4JgOUnKLxwEo5gTruGC0/view",
           "type": "Modello"
         },
         "exemplar_2_-_cats_vs_dogs_app/csd/2022": {
+          "name": "Esempio 2 - App cani contro gatti",
           "url": "https://docs.google.com/document/d/1YwosNn1Apef3mMpn8eYP10rI0G8AEyX3sKrP-zTDDvQ/view",
           "type": "Modello"
         },
         "exemplar_3_-_bird_survey/csd/2022": {
+          "name": "Esempio 3 - Indagine sugli uccelli",
           "url": "https://docs.google.com/document/d/1jZE-PYVkKx8_gv7MAmzzP6vuOsX5XMDWohuz7ma7tB0/view",
           "type": "Modello"
         },
@@ -3545,10 +3552,12 @@
           "type": "Diapositive"
         },
         "project_guide_-_on-the-go_app/csd/2022": {
+          "name": "Guida al progetto - App recupero crediti",
           "url": "https://docs.google.com/document/d/1cWvcddxBCTku-YAtHWreeoIJVD8v1_8CwlydofZ_Dlo/view",
           "type": "Guida alle attività"
         },
         "rubric_-_on-the-go_app/csd/2022": {
+          "name": "Tabella di valutazione - App recupero crediti",
           "url": "https://docs.google.com/document/d/11wbS2tB6eOzkyY0Q-JFqpgR14XaY7wZBKhlRHrBBVQI/view",
           "type": "Criteri di valutazione"
         },
@@ -3563,6 +3572,7 @@
           "type": "Risorse"
         },
         "getting_screen_inputs/csd/2022": {
+          "name": "Ottenere input sullo schermo",
           "url": "https://docs.google.com/presentation/d/1DLjFJeLH1tPvdBU1d7dCSomA-U5D-TZSN9sOCHtrL2c/template/preview",
           "type": "Diapositive"
         },
@@ -3572,6 +3582,7 @@
           "type": "Risorse"
         },
         "combining_inputs_and_outputs/csd/2022": {
+          "name": "Combinazione di ingressi e uscite",
           "url": "https://docs.google.com/presentation/d/1f58TYu50EZKmVmQi8Qvtz1bm66gXicFBhdF0-Ct5u3k/template/preview",
           "type": "Diapositive"
         },
@@ -3709,6 +3720,7 @@
           "type": "Modello"
         },
         "mini-project_interactive_art/csd/2022": {
+          "name": "Mini-progetto: arte interattiva",
           "url": "https://docs.google.com/presentation/d/1fDzBxID3Zye50GJxANGDS10COe8LGzRHZH4xEpK1cfk/template/preview",
           "type": "Diapositive"
         },
@@ -3730,6 +3742,7 @@
           "type": "Risorse"
         },
         "physical_outputs_and_leds/csd/2022": {
+          "name": "Uscite fisiche e LED",
           "url": "https://docs.google.com/presentation/d/16AB6Hx-qVP6lDBDeA98o2FXuixHGC3Fe-H_Iai3p7Mc/template/preview",
           "type": "Diapositive"
         },
@@ -3747,6 +3760,7 @@
           "url": "https://docs.google.com/document/d/1a7kngoybDZ4ZF6UeGEXjbfXzMynnfCxgaqJcsdc3YRc/view"
         },
         "project_prototype_an_innovation/csd/2022": {
+          "name": "Progetto: Prototipare un'Innovazione",
           "url": "https://docs.google.com/presentation/d/1Jl-6hwZ12QDCCA0ut621BZVQERV73V-xgymPb5IE1Ws/template/preview",
           "type": "Diapositive"
         },
@@ -4161,430 +4175,568 @@
           "type": "Risorse"
         },
         "lesson_plans/courseb/2018": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-18/courseb/"
         },
         "standard_mappings/courseb/2018": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-18/courseb/standards/"
         },
         "teacher_forum/courseb/2018": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/courseb/2018": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-18/courseb/vocab/"
         },
         "lesson_plans/coursea/2018": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-18/coursea/"
         },
         "standard_mappings/coursea/2018": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-18/coursea/standards/"
         },
         "teacher_forum/coursea/2018": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "http://forum.code.org/c/csf"
         },
         "vocabulary/coursea/2018": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-18/coursea/vocab/"
         },
         "lesson_plans/coursed/2018": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-18/coursed/"
         },
         "standard_mappings/coursed/2018": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-18/coursed/standards/"
         },
         "teacher_forum/coursed/2018": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursed/2018": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-18/coursed/vocab/"
         },
         "lesson_plans/coursef/2018": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-18/coursef/"
         },
         "standard_mappings/coursef/2018": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-18/coursef/standards/"
         },
         "teacher_forum/coursef/2018": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursef/2018": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-18/coursef/vocab/"
         },
         "lesson_plans/express/2018": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-18/express/"
         },
         "standard_mappings/express/2018": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-18/express/standards/"
         },
         "teacher_forum/express/2018": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/express/2018": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-18/express/vocab/"
         },
         "lesson_plans/coursee/2018": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-18/coursee/"
         },
         "standard_mappings/coursee/2018": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-18/coursee/standards/"
         },
         "teacher_forum/coursee/2018": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursee/2018": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-18/coursee/vocab/"
         },
         "lesson_plans/coursec/2018": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-18/coursec/"
         },
         "standard_mappings/coursec/2018": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-18/coursec/standards/"
         },
         "teacher_forum/coursec/2018": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursec/2018": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-18/coursec/vocab/"
         },
         "code_introduced_1/csd/2018": {
-          "name": "Code introdotto"
+          "name": "Code introdotto",
+          "url": "https://curriculum.code.org/csd-18/unit3/code/"
         },
         "lesson_plans_2/csd/2018": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd-18/unit3/"
         },
         "standard_mappings_2/csd/2018": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd-18/unit3/standards/"
         },
         "teacher_forum_2/csd/2018": {
           "name": "Forum dell'insegnante",
           "url": "https://forum.code.org/c/csd3"
         },
         "vocabulary_2/csd/2018": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd-18/unit3/vocab/"
         },
         "code_introduced_3/csd/2018": {
-          "name": "Code introdotto"
+          "name": "Code introdotto",
+          "url": "https://curriculum.code.org/csd-18/unit6/code/"
         },
         "lesson_plans_5/csd/2018": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd-18/unit6/"
         },
         "standard_mappings_5/csd/2018": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd-18/unit6/standards/"
         },
         "teacher_forum_5/csd/2018": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csd6"
         },
         "vocabulary_5/csd/2018": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd-18/unit6/vocab/"
         },
         "lesson_plans_4/csd/2018": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd-18/unit5/"
         },
         "standard_mappings_4/csd/2018": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd-18/unit5/standards/"
         },
         "teacher_forum_4/csd/2018": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csd5"
         },
         "vocabulary_4/csd/2018": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd-18/unit5/vocab"
         },
         "code_introduced_2/csd/2018": {
-          "name": "Code introdotto"
+          "name": "Code introdotto",
+          "url": "https://curriculum.code.org/csd-18/unit4/code/"
         },
         "lesson_plans_3/csd/2018": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd-18/unit4/"
         },
         "standard_mappings_3/csd/2018": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd-18/unit4/standards/"
         },
         "teacher_forum_3/csd/2018": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csd4"
         },
         "vocabulary_3/csd/2018": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd-18/unit4/vocab/"
         },
         "code_introduced/csd/2018": {
-          "name": "Code introdotto"
+          "name": "Code introdotto",
+          "url": "https://curriculum.code.org/csd-18/unit2/code/"
         },
         "lesson_plans_1/csd/2018": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd-18/unit2/"
         },
         "standard_mappings_1/csd/2018": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd-18/unit2/standards/"
         },
         "teacher_forum_1/csd/2018": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csd2"
         },
         "vocabulary_1/csd/2018": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd-18/unit2/vocab/"
         },
         "lesson_plans/csd/2018": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd-18/unit1"
         },
         "standard_mappings/csd/2018": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd-18/unit1/standards/"
         },
         "teacher_forum/csd/2018": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csd1"
         },
         "vocabulary/csd/2018": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd-18/unit1/vocab/"
         },
         "curriculum_guide/coursea/2019": {
-          "name": "Guida Curriculum"
+          "name": "Guida Curriculum",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/coursea/2019": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-19/coursea/"
         },
         "standard_mappings/coursea/2019": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-19/coursea/standards/"
         },
         "teacher_forum/coursea/2019": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "http://forum.code.org/c/csf"
         },
         "vocabulary/coursea/2019": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-19/coursea/vocab/"
         },
         "curriculum_guide/courseb/2019": {
-          "name": "Guida Curriculum"
+          "name": "Guida Curriculum",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/courseb/2019": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-19/courseb/"
         },
         "standard_mappings/courseb/2019": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-19/courseb/standards/"
         },
         "teacher_forum/courseb/2019": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/courseb/2019": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-19/courseb/vocab/"
         },
         "curriculum_guide/coursed/2019": {
-          "name": "Guida Curriculum"
+          "name": "Guida Curriculum",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/coursed/2019": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-19/coursed/"
         },
         "standard_mappings/coursed/2019": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-19/coursed/standards/"
         },
         "teacher_forum/coursed/2019": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursed/2019": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-19/coursed/vocab/"
         },
         "curriculum_guide/coursef/2019": {
-          "name": "Guida Curriculum"
+          "name": "Guida Curriculum",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/coursef/2019": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-19/coursef/"
         },
         "standard_mappings/coursef/2019": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-19/coursef/standards/"
         },
         "teacher_forum/coursef/2019": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursef/2019": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-19/coursef/vocab/"
         },
         "curriculum_guide/coursee/2019": {
-          "name": "Guida Curriculum"
+          "name": "Guida Curriculum",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/coursee/2019": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-19/coursee/"
         },
         "standard_mappings/coursee/2019": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-19/coursee/standards/"
         },
         "teacher_forum/coursee/2019": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursee/2019": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-19/coursee/vocab/"
         },
         "lesson_plans/express/2019": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-19/express/"
         },
         "standard_mappings/express/2019": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-19/express/standards/"
         },
         "teacher_forum/express/2019": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/express/2019": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-19/express/vocab/"
         },
         "curriculum_guide/coursec/2019": {
-          "name": "Guida Curriculum"
+          "name": "Guida Curriculum",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         },
         "lesson_plans/coursec/2019": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-19/coursec/"
         },
         "standard_mappings/coursec/2019": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-19/coursec/standards/"
         },
         "teacher_forum/coursec/2019": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursec/2019": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-19/coursec/vocab/"
         },
         "teacher_forum/csd/2019": {
           "name": "Forum dell'insegnante",
           "url": "https://forum.code.org/c/csd"
         },
         "code_introduced_1/csd/2019": {
-          "name": "Code introdotto"
+          "name": "Code introdotto",
+          "url": "https://curriculum.code.org/csd-19/unit3/code/"
         },
         "lesson_plans_2/csd/2019": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd-19/unit3/"
         },
         "standard_mappings_2/csd/2019": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd-19/unit3/standards/"
         },
         "vocabulary_2/csd/2019": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd-19/unit3/vocab/"
         },
         "code_introduced_3/csd/2019": {
-          "name": "Code introdotto"
+          "name": "Code introdotto",
+          "url": "https://curriculum.code.org/csd-19/unit6/code/"
         },
         "lesson_plans_5/csd/2019": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd-19/unit6/"
         },
         "standard_mappings_5/csd/2019": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd-19/unit6/standards/"
         },
         "vocabulary_5/csd/2019": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd-19/unit6/vocab/"
         },
         "code_introduced_2/csd/2019": {
-          "name": "Code introdotto"
+          "name": "Code introdotto",
+          "url": "https://curriculum.code.org/csd-19/unit4/code/"
         },
         "lesson_plans_3/csd/2019": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd-19/unit4/"
         },
         "standard_mappings_3/csd/2019": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd-19/unit4/standards/"
         },
         "vocabulary_3/csd/2019": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd-19/unit4/vocab/"
         },
         "lesson_plans_4/csd/2019": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd-19/unit5/"
         },
         "standard_mappings_4/csd/2019": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd-19/unit5/standards/"
         },
         "vocabulary_4/csd/2019": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd-19/unit5/vocab"
         },
         "lesson_plans/csd/2019": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd-19/unit1"
         },
         "standard_mappings/csd/2019": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd-19/unit1/standards/"
         },
         "vocabulary/csd/2019": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd-19/unit1/vocab/"
         },
         "code_introduced/csd/2019": {
-          "name": "Code introdotto"
+          "name": "Code introdotto",
+          "url": "https://curriculum.code.org/csd-19/unit2/code/"
         },
         "lesson_plans_1/csd/2019": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd-19/unit2/"
         },
         "standard_mappings_1/csd/2019": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd-19/unit2/standards/"
         },
         "vocabulary_1/csd/2019": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd-19/unit2/vocab/"
         },
         "code_introduced_1/csd/2017": {
-          "name": "Code introdotto"
+          "name": "Code introdotto",
+          "url": "https://curriculum.code.org/csd/unit3/code/"
         },
         "lesson_plans_2/csd/2017": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd/unit3/"
         },
         "standard_mappings_2/csd/2017": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd/unit3/standards/"
         },
         "teacher_forum_2/csd/2017": {
           "name": "Forum dell'insegnante",
           "url": "https://forum.code.org/c/csd3"
         },
         "vocabulary_2/csd/2017": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd/unit3/vocab/"
         },
         "code_introduced_3/csd/2017": {
-          "name": "Code introdotto"
+          "name": "Code introdotto",
+          "url": "https://curriculum.code.org/csd/unit6/code/"
         },
         "lesson_plans_5/csd/2017": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd/unit6/"
         },
         "standard_mappings_5/csd/2017": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd/unit6/standards/"
         },
         "teacher_forum_5/csd/2017": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csd6"
         },
         "vocabulary_5/csd/2017": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd/unit6/vocab/"
         },
         "code_introduced/csd/2017": {
-          "name": "Code introdotto"
+          "name": "Code introdotto",
+          "url": "https://curriculum.code.org/csd/unit2/code/"
         },
         "lesson_plans_1/csd/2017": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd/unit2/"
         },
         "standard_mappings_1/csd/2017": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd/unit2/standards/"
         },
         "teacher_forum_1/csd/2017": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csd2"
         },
         "vocabulary_1/csd/2017": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd/unit2/vocab/"
         },
         "lesson_plans/csd/2017": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd/unit1"
         },
         "standard_mappings/csd/2017": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd/unit1/standards/"
         },
         "teacher_forum/csd/2017": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csd1"
         },
         "vocabulary/csd/2017": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd/unit1/vocab/"
         },
         "lesson_plans_4/csd/2017": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd/unit5/"
         },
         "standard_mappings_4/csd/2017": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd/unit5/standards/"
         },
         "teacher_forum_4/csd/2017": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csd5"
         },
         "vocabulary_4/csd/2017": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd/unit5/vocab"
         },
         "code_introduced_2/csd/2017": {
-          "name": "Code introdotto"
+          "name": "Code introdotto",
+          "url": "https://curriculum.code.org/csd/unit4/code/"
         },
         "lesson_plans_3/csd/2017": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csd/unit4/"
         },
         "standard_mappings_3/csd/2017": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csd/unit4/standards/"
         },
         "teacher_forum_3/csd/2017": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csd4"
         },
         "vocabulary_3/csd/2017": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csd/unit4/vocab/"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Elenco di poesie",
@@ -7707,12 +7859,12 @@
           "type": "Risorse"
         },
         "if-else_statements_-_map_level_pdf_/csd/2021": {
-          "name": "Dichiarazioni se/altrimenti",
+          "name": "Istruzioni condizionali Se/Altrimenti",
           "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
           "type": "Risorse"
         },
         "if_else_statements/csd/2021": {
-          "name": "Dichiarazioni Se/altrimenti",
+          "name": "Istruzioni condizionali Se/altrimenti",
           "url": "https://youtu.be/6m6FFUJsOzo",
           "type": "Video"
         },
@@ -7796,6 +7948,7 @@
           "type": "Guida al progetto"
         },
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "Velocità e Schema di Conteggio",
           "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
           "type": "Risorse"
         },
@@ -8441,118 +8594,156 @@
           "type": "Guida al progetto"
         },
         "lesson_plans/pre-express/2020": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-20/express/"
         },
         "standard_mappings/pre-express/2020": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-20/express/standards"
         },
         "teacher_forum/pre-express/2020": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/pre-express/2020": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-20/express/vocab/"
         },
         "lesson_plans/express/2020": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-20/express/"
         },
         "standard_mappings/express/2020": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-20/express/standards/"
         },
         "teacher_forum/express/2020": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/express/2020": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-20/express/vocab/"
         },
         "curriculum_guide/courseb/2020": {
-          "name": "Guida Curriculum"
+          "name": "Guida Curriculum",
+          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         },
         "lesson_plans/courseb/2020": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-20/courseb/"
         },
         "standard_mappings/courseb/2020": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-20/courseb/standards/"
         },
         "teacher_forum/courseb/2020": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/courseb/2020": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-20/courseb/vocab/"
         },
         "curriculum_guide/coursed/2020": {
-          "name": "Guida Curriculum"
+          "name": "Guida Curriculum",
+          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         },
         "lesson_plans/coursed/2020": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-20/coursed/"
         },
         "standard_mappings/coursed/2020": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-20/coursed/standards/"
         },
         "teacher_forum/coursed/2020": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursed/2020": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-20/coursed/vocab/"
         },
         "curriculum_guide/coursec/2020": {
-          "name": "Guida Curriculum"
+          "name": "Guida Curriculum",
+          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         },
         "lesson_plans/coursec/2020": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-20/coursec/"
         },
         "standard_mappings/coursec/2020": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-20/coursec/standards/"
         },
         "teacher_forum/coursec/2020": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursec/2020": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-20/coursec/vocab/"
         },
         "curriculum_guide/coursee/2020": {
-          "name": "Guida Curriculum"
+          "name": "Guida Curriculum",
+          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         },
         "lesson_plans/coursee/2020": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-20/coursee/"
         },
         "standard_mappings/coursee/2020": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-20/coursee/standards/"
         },
         "teacher_forum/coursee/2020": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursee/2020": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-20/coursee/vocab/"
         },
         "curriculum_guide/coursea/2020": {
-          "name": "Guida Curriculum"
+          "name": "Guida Curriculum",
+          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         },
         "lesson_plans/coursea/2020": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-20/coursea/"
         },
         "standard_mappings/coursea/2020": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-20/coursea/standards/"
         },
         "teacher_forum/coursea/2020": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "http://forum.code.org/c/csf"
         },
         "vocabulary/coursea/2020": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-20/coursea/vocab/"
         },
         "curriculum_guide/coursef/2020": {
-          "name": "Guida Curriculum"
+          "name": "Guida Curriculum",
+          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         },
         "lesson_plans/coursef/2020": {
-          "name": "Piano di lavoro delle lezioni"
+          "name": "Piano di lavoro delle lezioni",
+          "url": "https://curriculum.code.org/csf-20/coursef/"
         },
         "standard_mappings/coursef/2020": {
-          "name": "Funzioni Standard"
+          "name": "Funzioni Standard",
+          "url": "https://curriculum.code.org/csf-20/coursef/standards/"
         },
         "teacher_forum/coursef/2020": {
-          "name": "Forum dell'insegnante"
+          "name": "Forum dell'insegnante",
+          "url": "https://forum.code.org/c/csf"
         },
         "vocabulary/coursef/2020": {
-          "name": "Glossario"
+          "name": "Glossario",
+          "url": "https://curriculum.code.org/csf-20/coursef/vocab/"
         }
       }
     }

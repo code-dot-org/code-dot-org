@@ -2449,6 +2449,8 @@ ro:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: afişează {TEXT}
       storylab_setForegroundEffect2:
         text: realizează efectul {EFFECT}
         options:

@@ -9435,3 +9435,153 @@ te-IN:
         - {}
         questions:
         - {}
+      OPD-K5 CS Courses:
+        markdown: "# ప్రణాళిక చేయడం > Code.org పై మొదలుపెట్టుట\n\n\n## దశ 1: ఒక కోర్సును
+          ఎంచుకోండి\nమా కోర్సులు అన్నియునూ -- ప్రీ-రీడర్స్ నుండి హైస్కూల్ విద్యార్థుల
+          వరకూ -- మా **[course catalog](https://studio.code.org/courses)**లో జాబితా
+          చేయబడి ఉన్నాయి. మీరు అభ్యాసం చేస్తున్న CS ప్రాథమికాంశాలను కనుగొనడానికై,
+          మా **[elementary page](https://code.org/educate/curriculum/elementary-school)**
+          కు వెళ్ళండి మరియు \"కోర్సులు\" విభాగానికై దిగువకు స్క్రోల్ చేయండి. మా కోర్సులు
+          అన్నియునూ ఉచితంగా లభిస్తాయి. కోర్సు పాఠ్యాంశప్రణాళికను వివిధ సబ్జెక్టులతో
+          ఎలా సమీకృతపరచుకోవచ్చునో నిర్ధారించడానికై మీ స్కూల్ లోని సహచరులతో ముచ్చటించండి.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          దశ 2: మీ తరగతిగది విభాగాన్ని ఏర్పరచుకోండి\nమీ విద్యార్థుల పురోగతిని చూడడానికి
+          గాను ఒక తరగతి గది విభాగాన్ని ఏర్పరచుకోండి, మీ విద్యార్థుల కోసం లాగిన్ కార్డులను
+          ప్రింట్ చేయండి, వారి ఖాతాలను నిర్వహణ చేయండి, మరియు వారు కోర్సును పూర్తి
+          చేసినప్పుడు ఇంటికి తీసుకువెళ్ళగలిగే సర్టిఫికెట్లను ప్రింట్ చేయండి. ఈ లింక్
+          పైన క్లిక్ చేయండి **[ఒక సంక్షిప్త వీడియోను చూడండి](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          Code.org పై మీ మొదటి కంప్యూటర్ సైన్స్ తరగతిని ఎలా ఏర్పాటు చేసుకోవాలో అది
+          ప్రదర్శించి చూపుతుంది. మీరు **[ఈ మద్దతు వ్యాసము](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**లో
+          కూడా దశలను కనుగొనవచ్చు.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          దశ 3: మీ విభాగానికి కోర్సును కేటాయించండి\nమీరు బోధిస్తున్న కోర్సు లోనికి
+          క్లిక్ చేయండి-- మీరు ఈ దిగువలాగా కనిపించే ఒక స్క్రీన్ చూస్తారు. మీరు ఆ తర్వాత
+          \"కోర్సును కేటాయించు\" ను క్లిక్ చేయవచ్చు మరియు ఆ కోర్సును మీ విభాగాలలో
+          ఒకదానికి కేటాయించవచ్చు. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          దశ 4: బోధించడం ప్రారంభించండి! \nమీ తరగతిగది లోనికి కంప్యూటర్ సైన్స్ కాన్సెప్టులను
+          తీసుకునేది అంతా ఒక పాఠమే. ఒకసారి మీరు CS కొరకు మీ విద్యార్థుల ఉత్సాహాన్ని
+          చూశారంటే, మీ విద్యార్థులకు మార్గదర్శనం చేయడానికి, కంప్యూటర్ లేకుండానే మీరు
+          చేయగలిగిన ప్లగ్ చేయబడని కార్యక్రమాలు, ఇతర ఉపాధ్యాయులతో అనుసంధానం కావడానికి
+          వేదికలతో రోజువారీ పాఠ్యప్రణాళికలతో ముందుకు వెళ్ళండి.\n\n\n"
+      OPD-K5 CS Courses_copy:
+        markdown: "# Code.org పై మొదలుపెట్టుట\n\n\n## దశ 1: ఒక కోర్సును ఎంచుకోండి\nమా
+          కోర్సులు అన్నియునూ -- ప్రీ-రీడర్స్ నుండి హైస్కూల్ విద్యార్థుల వరకూ -- మా
+          **<a href=\"https://studio.code.org/courses\" target=\"blank\" rel=\"noopener
+          noreferrer\">course catalog</a>లో జాబితా చేయబడి ఉన్నాయి**. మా కోర్సులు అన్నియునూ
+          ఉచితంగా లభిస్తాయి. కోర్సు పాఠ్యాంశప్రణాళికను వివిధ సబ్జెక్టులతో ఎలా సమీకృతపరచుకోవచ్చునో
+          నిర్ధారించడానికై మీ స్కూల్ లోని సహచరులతో ముచ్చటించండి.\n\n<table style=\"width:100%;
+          border-style:none;\">\n  <tr>\n    <th style=\"background-color:#ff9900;
+          text-align:center; border-style:none; font-weight:bold;\"\"\">\n      <b>కోర్సు
+          A</b><br/>\n      <i>కిండర్‌గార్డెన్</i>\n    </th>\n    <th style=\"background-color:#f1c232;
+          text-align:center; border-style:none;\"\"\">\n        కోర్సు B<br/>\n        <i>1వ
+          గ్రేడ్</i>\n    </th>\n    <th style=\"background-color:#b8bf0d; text-align:center;
+          border-style:none;\"\"\">\n        కోర్సు C<br/>\n        <i>2వ గ్రేడ్</i>\n
+          \   </th>\n    <th style=\"background-color:#53bac2; text-align:center;
+          border-style:none;\"\"\">\n        కోర్సు D<br/>\n        <i>3వ గ్రేడ్</i>\n
+          \   </th>\n    <th style=\"background-color:#0094ca; text-align:center;
+          border-style:none;\"\"\">\n        కోర్సు E<br/>\n        <i>4వ గ్రేడ్</i>\n
+          \   </th>\n    <th style=\"background-color:#7664a0; text-align:center;
+          border-style:none;\"\"\">\n        కోర్సు F<br/>\n        <i>5వ గ్రేడ్</i>\n
+          \   </th>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c; color:black;
+          border-style:none; vertical-align: text-top;\"\">12 పాఠాలు, ~12 గంటలలో పూర్తి
+          చేయాలి</td>\n    <td style=\"background-color:#ffe599; color:black; border-style:none;
+          vertical-align: text-top;\"\">12 పాఠాలు, ~12 గంటలలో పూర్తి చేయాలి</td>\n
+          \   <td style=\"background-color:#d2da0e; color:black; border-style:none;
+          vertical-align: text-top;\"\">18 పాఠాలు, ~18 గంటలలో పూర్తి చేయాలి</td>\n
+          \   <td style=\"background-color:#68ebf5; color:black; border-style:none;
+          vertical-align: text-top;\"\">18 పాఠాలు, ~18 గంటలలో పూర్తి చేయాలి</td>\n
+          \   <td style=\"background-color:#9ed7ed; color:black; border-style:none;
+          vertical-align: text-top;\"\">18 పాఠాలు, ~18-20 గంటలలో పూర్తి చేయాలి</td>\n
+          \   <td style=\"background-color:#c9c1e9; color:black; border-style:none;
+          vertical-align: text-top;\"\">18 పాఠాలు, ~20-22 గంటలలో పూర్తి చేయాలి</td>\n
+          \ </tr>\n  <tr>\n    <td colspan=\"6\" style=\"text-align:center;width:96%;background-color:#d9d9d9;color:black;
+          border-style:none;\">కాన్సెప్టులు</td>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>డిజిటల్ పౌరసత్వం</li>\n        <li>వరుసక్రమం</li>\n
+          \       <li>లూప్‌లు</li>\n        <li>ఈవెంట్‌లు</li>\n      </ul>\n    </td>\n
+          \   <td style=\"background-color:#ffe599; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>డిజిటల్ పౌరసత్వం</li>\n        <li>వరుసక్రమం</li>\n        <li>లూప్‌లు</li>\n
+          \       <li>కంప్యూటింగ్ ప్రభావాలు</li>\n        <li>ఈవెంట్‌లు</li>\n      </ul>\n
+          \   </td>\n    <td style=\"background-color:#d2da0e; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>డిజిటల్ పౌరసత్వం</li>\n        <li>వరుసక్రమం</li>\n        <li>బైనరీ</li>\n
+          \       <li>లూప్‌లు</li>\n        <li>ఈవెంట్‌లు</li>\n        <li>డేటా</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#68ebf5; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>వరుసక్రమం</li>\n        <li>ఈవెంట్‌లు</li>\n        <li>లూప్‌లు</li>\n
+          \       <li>షరతులు</li>\n        <li>బైనరీ</li>\n        <li>డిజిటల్ పౌరసత్వం</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#9ed7ed; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>స్ప్రైట్‌లు</li>\n        <li>డిజిటల్ పౌరసత్వం</li>\n        <li>కంప్యూటింగ్
+          ప్రభావాలు</li>\n        <li>గూడు కట్టుకున్న లూప్‌లు</li>\n        <li>విధులు</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#c9c1e9; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>వేరియబుల్స్</li>\n        <li>డేటా</li>\n        <li>లూప్‌ల
+          కొరకు</li>\n        <li>ఇంటర్నెట్</li>\n        <li>స్ప్రైట్‌లు</li>\n        <li>డిజిటల్
+          పౌరసత్వం</li>\n        </ul>\n    </td>\n  <tr>\n  \t<td style=\"background-color:#f9cb9c\">\n
+          \    <a href=\"https://studio.code.org/s/coursea\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>కోర్సు చూడండి</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursea\"
+          target=\"_blank\" style='text-decoration:none'>\n          <button>పాఠ్య
+          ప్రణాళికలు</button>\n      </a>\n    </td>\n    <td style=\"background-color:#ffe599\">\n
+          \   <a href=\"https://studio.code.org/s/courseb\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>కోర్సు చూడండి</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/courseb\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>పాఠ్య ప్రణాళికలు</button>\n
+          \     </a>\n    </td>   \n   \t<td style=\"background-color:#d2da0e\">\n
+          \   <a href=\"https://studio.code.org/s/coursec\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>కోర్సు చూడండి</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursec\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>పాఠ్య ప్రణాళికలు</button>\n
+          \     </a>\n    </td>   \n    <td style=\"background-color:#68ebf5\">\n
+          \   <a href=\"https://studio.code.org/s/coursed\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>కోర్సు చూడండి</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursed\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>పాఠ్య ప్రణాళికలు</button>\n
+          \     </a>\n    </td>  \n    <td style=\"background-color:#9ed7ed\">\n    <a
+          href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>కోర్సు చూడండి</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>పాఠ్య ప్రణాళికలు</button>\n
+          \     </a>\n    </td>  \n     <td style=\"background-color:#c9c1e9\">\n
+          \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>కోర్సు చూడండి</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>పాఠ్య ప్రణాళికలు</button>\n
+          \     </a>\n    </td>  \n  </tr>\n</table>\n<br/>\n\n\n***\n## దశ 2: మీ
+          తరగతి గది విభాగాన్ని ఏర్పరచుకోండి\nమీ విద్యార్థుల పురోగతిని చూడడానికి గాను
+          ఒక తరగతి గది విభాగాన్ని ఏర్పరచుకోండి, మీ విద్యార్థుల కోసం లాగిన్ కార్డులను
+          ప్రింట్ చేయండి, వారి ఖాతాలను నిర్వహణ చేయండి, మరియు వారు కోర్సును పూర్తి
+          చేసినప్పుడు ఇంటికి తీసుకువెళ్ళగలిగే సర్టిఫికెట్లను ప్రింట్ చేయండి. ఈ లింక్
+          పైన క్లిక్ చేయండి **<a href=\"https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b\"
+          target=\"blank\" rel=\"noopener noreferrer\">watch a brief video</a>**Code.org
+          పై మీ మొదటి కంప్యూటర్ సైన్స్ తరగతిని ఎలా ఏర్పాటు చేసుకోవాలో అది ప్రదర్శించి
+          చూపుతుంది. మీరు **<a href=\"https://support.code.org/hc/en-us/articles/115000488132-ఒక-తరగతి
+          గది-విభాగాన్ని-ఏర్పరచుకొనుట\" target=\"blank\" rel=\"noopener noreferrer\">this
+          support article</a>లో కూడా దశలను కనుగొనవచ్చు**.\n\n***\n## దశ 3: మీ విభాగానికి
+          కోర్సును కేటాయించండి\nమీరు బోధిస్తున్న కోర్సు లోనికి క్లిక్ చేయండి. మీరు
+          ఆ తర్వాత \"కోర్సును కేటాయించు\" ను క్లిక్ చేయవచ్చు మరియు ఆ కోర్సును మీ విభాగాలలో
+          ఒకదానికి కేటాయించవచ్చు. \n***\n## దశ 4: బోధించడం ప్రారంభించండి! \nమీ తరగతిగది
+          లోనికి కంప్యూటర్ సైన్స్ కాన్సెప్టులను తీసుకునేది అంతా ఒక పాఠమే. ఒకసారి మీరు
+          CS కొరకు మీ విద్యార్థుల ఉత్సాహాన్ని చూశారంటే, మీ విద్యార్థులకు మార్గదర్శనం
+          చేయడానికి, కంప్యూటర్ లేకుండానే మీరు చేయగలిగిన ప్లగ్ చేయబడని కార్యక్రమాలు,
+          ఇతర ఉపాధ్యాయులతో అనుసంధానం కావడానికి వేదికలతో రోజువారీ పాఠ్యప్రణాళికలతో
+          ముందుకు వెళ్ళండి.\n\n\n"
+      OPD-K5 CS Courses_dani:
+        markdown: "# ప్రణాళిక చేసుకోవడం > Code.org పై మొదలుపెట్టుట\n\n\n## దశ 1: ఒక
+          కోర్సును ఎంచుకోండి\nమా కోర్సులు అన్నియునూ - ప్రీ-రీడర్స్ నుండి హైస్కూల్
+          విద్యార్థుల వరకూ - మా **[course catalog](https://studio.code.org/courses)**లో
+          జాబితా చేయబడి ఉన్నాయి. మీరు పాల్గొంటున్న CS ప్రాథమికాంశాలను కనుగొనడానికై,
+          మా **[elementary page](https://code.org/educate/curriculum/elementary-school)**
+          కి వెళ్ళండి మరియు \"కోర్సులు\" విభాగానికై దిగువకు స్క్రోల్ చేయండి. మా కోర్సులు
+          అన్నియునూ ఉచితంగా లభిస్తాయి. కోర్సు పాఠ్యాంశప్రణాళికను వివిధ సబ్జెక్టులతో
+          ఎలా సమీకృతపరచుకోవచ్చునో నిర్ధారించడానికై మీ స్కూల్ లోని సహచరులతో ముచ్చటించండి.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          దశ 2: మీ తరగతిగది విభాగాన్ని ఏర్పరచుకోండి\nమీ విద్యార్థుల కోసం లాగిన్ కార్డులను
+          ప్రింట్ చేయండి, వారి ఖాతాలను నిర్వహణ చేయండి, మరియు వారు కోర్సును పూర్తి
+          చేసినప్పుడు ఇంటికి తీసుకువెళ్ళగలిగే సర్టిఫికెట్లను ప్రింట్ చేయండి. ఈ లింక్
+          పైన క్లిక్ చేయండి **[ఒక క్లుప్త వీడియోను చూడండి](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          Code.org పై మీ మొదటి కంప్యూటర్ సైన్స్ తరగతిని ఎలా ఏర్పాటు చేసుకోవాలో అది
+          ప్రదర్శించి చూపుతుంది. మీరు **[this support article](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**లో
+          కూడా దశలను కనుగొనవచ్చు.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          దశ 3: మీ విభాగానికి కోర్సును కేటాయించండి\nమీరు బోధిస్తున్న కోర్సు లోనికి
+          క్లిక్ చేయండి – మీరు ఈ దిగువ కనిపించే లాంటి ఒక స్క్రీన్ చూస్తారు. మీరు ఆ
+          తర్వాత \"కోర్సును కేటాయించు\" ను క్లిక్ చేయవచ్చు మరియు ఆ కోర్సును మీ విభాగాలలో
+          ఒకదానికి కేటాయించవచ్చు. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          దశ 4: బోధించడం ప్రారంభించండి! \nమీ తరగతిగది లోనికి కంప్యూటర్ సైన్స్ కాన్సెప్టులను
+          తీసుకునేది అంతా ఒక పాఠమే. ఒకసారి మీరు CS కొరకు మీ విద్యార్థుల ఉత్సాహాన్ని
+          చూశారంటే, మీ విద్యార్థులకు మార్గదర్శనం చేయడానికి, కంప్యూటర్ లేకుండానే మీరు
+          చేయగలిగిన ప్లగ్ చేయబడని కార్యక్రమాలు, ఇతర ఉపాధ్యాయులతో అనుసంధానం కావడానికి
+          వేదికలతో రోజువారీ పాఠ్యప్రణాళికలతో ముందుకు వెళ్ళండి.\n\n"

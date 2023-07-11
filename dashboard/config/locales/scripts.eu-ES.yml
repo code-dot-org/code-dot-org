@@ -1194,3 +1194,7 @@ eu:
               display_name: Pertsonaiak
             lessonGroup-4:
               display_name: Aldagaiak
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Datu

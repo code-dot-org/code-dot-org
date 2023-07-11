@@ -56,5 +56,8 @@
   "share": "Bölüş",
   "shareComingSoon": "Paylaşım tikilir. Tezliklə yenidən yoxlayın.",
   "startOver": "Yenidən başla",
-  "upload": "Yüklə"
+  "upload": "Yüklə",
+  "panelHeaderInstructions": "Təlimatlar",
+  "panelHeaderWorkspace": "iş sahəsi: ",
+  "continue": "Davam et"
 }

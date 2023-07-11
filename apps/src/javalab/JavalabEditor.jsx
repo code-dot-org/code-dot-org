@@ -47,7 +47,7 @@ import JavalabEditorDialogManager from './JavalabEditorDialogManager';
 import {JavalabEditorDialog} from './types';
 import JavalabEditorHeader from './JavalabEditorHeader';
 import {java} from '@codemirror/lang-java';
-import CloseOnEscape from './components/CloseOnEscape';
+import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 
 // This is the height of the "editor" header and the file tabs combined
 const HEADER_OFFSET = 63;

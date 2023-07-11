@@ -2192,6 +2192,8 @@ uz:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: "{TEXT} yozish"
       storylab_setForegroundEffect2:
         options:
           EFFECT:

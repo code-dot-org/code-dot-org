@@ -60,6 +60,7 @@ de:
         reset_password_token: "Den Link zum Zurücksetzen des Passworts hast du befolgt"
         error:
           future: darf nicht in der Zukunft liegen
+        us_state: 'Bundesland'
   beta: "Beta"
   hello: "Hallo Welt"
   welcome_back: "Willkommen zurück, %{name}"
@@ -200,6 +201,7 @@ de:
     parent_account_checkbox: "Ich bin ein(e) Elternteil/Erziehungsberechtige(r) und melde mich im Namen meines Kindes an"
     parent_account_email_progress_permission: "Dürfen wir Sie gelegentlich per E-Mail über den Fortschritt und die Projekte Ihres Kindes sowie über den Kurs und den Informatikunterricht Ihres Kindes auf dem Laufenden halten? [(Bitte beachten Sie unsere Datenschutzerklärung)](%{privacy_policy_url})"
     parent_account_email_label: "Eltern/Vormund E-Mail"
+    us_state: 'Bundesland'
   school_info:
     title: 'Schulinformationen (optional)'
     school_country: 'Land der Schule'
@@ -1187,6 +1189,7 @@ de:
         csf_express: 'CS Grundlagen (Pre-Express oder Express)'
         csd: 'CS Entdeckungen'
         csp: 'Informatik Grundprinzipien'
+        other: 'Andere'
         not_applicable: "Nicht anwendbar"
       email_opt_in:
         opt_in_yes: 'Ja'

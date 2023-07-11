@@ -1,7 +1,7 @@
 {
   "key": "csc-adaptations",
   "display_name": "Modeling Animal Adaptations",
-  "category": "other",
+  "category": "csc",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Module",
@@ -11,5 +11,10 @@
   "image": "https://images.code.org/3ca4254a38c38a8da32fd74c62849f5e-CSCLanding_CyclesProject.png",
   "cs_topic": "programming",
   "school_subject": "science",
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "self_paced_professional_learning": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null
 }

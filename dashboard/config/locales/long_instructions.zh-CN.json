@@ -5727,7 +5727,8 @@
         "csd-pulse-check-survey-1-free-response U5Ch2": "你还有什么想让老师知道的吗？",
         "csd-pulse-check-survey-1-free-response U6Ch1": "你还有什么想让老师知道的吗？",
         "csd-pulse-check-survey-1-free-response U6Ch2": "你还有什么想让老师知道的吗？",
-        "ramp_artist_loops62022": "这个楼梯要大得多，但它的代码量与上一个谜题相同！\n\n修复此循环即可完成拼图。"
+        "ramp_artist_loops62022": "这个楼梯要大得多，但它的代码量与上一个谜题相同！\n\n修复此循环即可完成拼图。",
+        "PDK5 Strategies O": "教授_计算机科学_与教授数学或阅读等其他科目有什么不同吗？阅读下面的策略清单，评论你认为在教授计算机科学时会遇到的与其他科目的一些差异。\n\n[此工作表](http://code.org/curriculum/docs/k-5/ClassroomStrategies.pdf)也可在“教师面板”的“教学计划和资源”图块中找到。  \n\n![image](//code.org/images/strategiesforteachingcs.png)\n\n</br>"
       }
     }
   }

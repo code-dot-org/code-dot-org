@@ -1,0 +1,262 @@
+@import "color";
+
+.toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+
+  > span {
+    margin-bottom: 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  div {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    text-align: left;
+
+    input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+    }
+
+    .switch {
+      display: block;
+      overflow: hidden;
+      cursor: pointer;
+      border: 0;
+      border-radius: 20px;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+
+      i {
+        display: block;
+        height: 100%;
+        cursor: pointer;
+        background-color: $neutral_dark50;
+        border-radius: 100px;
+        width: 200%;
+        margin-left: -100%;
+        transition: margin 0.3s ease 0s;
+
+        &::before,
+        &::after {
+          display: block;
+          float: left;
+          width: 50%;
+          padding: 2px;
+          border: 2px solid transparent;
+          border-radius: 100px;
+          color: $neutral_white;
+          box-sizing: border-box;
+        }
+
+        // Checked styles
+        &::before {
+          content: "\f00c";
+          background-color: $light_primary_500;
+          padding-left: 4px;
+        }
+
+        // Unchecked styles
+        &::after {
+          content: "\f00d";
+          background-color: $light_gray_500;
+          text-align: right;
+          padding-right: 4px;
+        }
+      }
+
+      //Span is the circle (switch handle)
+      span {
+        display: block;
+        margin: 2px;
+        background: $neutral_white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 50%;
+        border: 0;
+        border-radius: 20px;
+        transition: all 0.2s ease 0s;
+      }
+    }
+
+    input[type="checkbox"]:checked + .switch {
+      i {
+        margin-left: 0;
+      }
+
+      span {
+        right: 0;
+        left: 50%;
+      }
+    }
+  }
+
+  // Hover styles
+  &:hover {
+    div {
+      .switch {
+        i {
+          &::before {
+            background-color: $light_primary_700;
+          }
+
+          &::after {
+            background-color: $light_gray_700;
+          }
+        }
+      }
+    }
+  }
+
+  // Focus styles
+  div input[type="checkbox"]:focus + .switch{
+    outline: 2px solid $light_primary_500;
+    outline-offset: 2px;
+  }
+
+  // Pressed styles
+  &:active div input[type="checkbox"]:not(:disabled) + .switch i,
+  div input[type="checkbox"]:active:not(:disabled) + .switch i {
+    &::before {
+      border-color: $light_primary_500;
+      background: $light_primary_700;
+    }
+
+    &::after {
+      border-color: $light_gray_500;
+      background: $light_gray_700;
+    }
+  }
+
+  // Disabled styles
+  &:has(input[type="checkbox"]:disabled) {
+    cursor: default;
+    > span {
+      color: $light_gray_200;
+    }
+    > div {
+      .switch, .switch i  {
+        cursor: not-allowed;
+        &::before, &::after {
+          background-color: $light_gray_200;
+        }
+      }
+    }
+  }
+}
+
+// RTL language support
+html[dir="rtl"] {
+  .toggle {
+    div {
+      input[type="checkbox"]:checked + .switch {
+        i {
+          margin-right: -100%;
+        }
+      }
+    }
+  }
+}
+
+// Toggle sizes
+.toggle-l {
+  div {
+    width: 56px;
+    height: 28px;
+
+    .switch {
+      i {
+        &::before,
+        &::after {
+          height: 28px;
+          line-height: 19px;
+          font-size: 19px;
+        }
+      }
+      span {
+        width: 24px;
+      }
+    }
+  }
+}
+
+.toggle-m {
+  div {
+    width: 48px;
+    height: 24px;
+
+    .switch {
+      i {
+        &::before,
+        &::after {
+          height: 24px;
+          line-height: 16px;
+          font-size: 16px;
+        }
+      }
+
+      span {
+        width: 20px;
+      }
+    }
+  }
+}
+
+.toggle-s {
+  div {
+    width: 44px;
+    height: 22px;
+
+    .switch {
+      i {
+        &::before,
+        &::after {
+          height: 22px;
+          line-height: 14px;
+          font-size: 14px;
+        }
+      }
+      span {
+        width: 18px;
+      }
+    }
+  }
+}
+.toggle-xs {
+  div {
+    width: 40px;
+    height: 20px;
+
+    .switch {
+      i {
+        &::before,
+        &::after {
+          height: 20px;
+          line-height: 13px;
+          font-size: 13px;
+        }
+      }
+      span {
+        width: 16px;
+      }
+    }
+  }
+}
+
+.toggle-right {
+  :nth-child(1) {
+    order: 2;
+  }
+  :nth-child(2) {
+    order: 1;
+  }
+}

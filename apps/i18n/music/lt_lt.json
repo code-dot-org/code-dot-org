@@ -11,5 +11,8 @@
   "blockly_toolboxCategoryMath": "Matematika",
   "blockly_toolboxCategoryVariables": "Kintamieji",
   "share": "Dalintis",
-  "startOver": "Pradėti iš naujo"
+  "startOver": "Pradėti iš naujo",
+  "panelHeaderInstructions": "Instrukcijos",
+  "panelHeaderWorkspace": "Darbo laukas: ",
+  "continue": "Tęsti"
 }

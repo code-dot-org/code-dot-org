@@ -71,6 +71,19 @@
         "courseb-2022/Move It, Move It": {
           "name": "Premakni se, premakni"
         },
+        "express-2022/Debugging in Maze": {
+          "name": "Odpravljanje napak v labirintu"
+        },
+        "express-2022/Collecting Treasure with Laurel": {
+          "name": "Zbiranje zaklada z Laurel"
+        },
+        "express-2022/Creating Art with Code": {
+          "name": "Ustvarjanje umetnosti s kodo"
+        },
+        "express-2022/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8",
+          "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! "
+        },
         "express-2022/Snowflakes with Anna and Elsa": {
           "purpose": "V tej seriji bodo učenci vadili gnezdene zanke, medtem ko bodo ustvarjali slike, ki jih bodo navdušeno delili.\n\nZačenši s peščico navodil se bodo učenci sami odločali, ko bodo ustvarjali modele za ponavljanje. Obračali jih bodo na različne načine in končali z umetnino, ki bo zares edinstvena. "
         },
@@ -78,11 +91,41 @@
           "name": "Veseli zemljevidi"
         },
         "coursec-2022/My Robotic Friends Jr": {
+          "name": "Moji robotski prijatelji Jr.",
           "overview": "V učni uri \"postavljanja konteksta\" bodo učenci uporabljali nabor simbolov za izdelavo robota, ki bo zlagal lončke v različne vzorce. Učenci se bodo izmenjevali v vlogi robota, ki se bo odzval zgolj na algoritem, ki ga bodo določili sovrstniki.",
           "preparation": "– Pripravi kup 20 papirnatih lončkov za vsako skupino 2–3 učencev.\n– Prikažite simbole iz **\\*Preglednice simbolov**, iz katere bodo učenci črpali med uro.\n– (Opcijsko) Natisnite eno \\*_\\\\_Idejo postavitve lončkov\\* za vsako skupino."
         },
+        "coursec-2022/Programming with Angry Birds": {
+          "preparation": "-   Igrajte skozi uganke, da bi našli morebitna problematična področja za vaš razred.\n-   (Neobvezno) Izberite nekaj nalog, ki jih želite narediti kot skupina s svojim razredom. "
+        },
+        "coursec-2022/Debugging in Maze": {
+          "name": "Odpravljanje napak v labirintu"
+        },
+        "coursec-2022/Collecting Treasure with Laurel": {
+          "name": "Zbiranje zaklada z Laurel",
+          "student_overview": "Napišite algoritme, ki pomagajo Laurel zbrati veliko draguljev!"
+        },
+        "coursec-2022/Creating Art with Code": {
+          "name": "Ustvarjanje umetnosti s kodo"
+        },
+        "coursec-2022/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8",
+          "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! "
+        },
+        "coursec-2022/Harvesting Crops with Loops": {
+          "name": "Obiranje pridelkov z zankami",
+          "student_overview": "Uporabimo zanke, da zberemo nekaj zelenjave!"
+        },
         "coursec-2022/The Big Event": {
-          "name": "Veliki dogodek"
+          "name": "Veliki dogodek",
+          "student_overview": "Igrajte zabavno igro, če želite izvedeti več o dogodkih. "
+        },
+        "coursec-2022/Build a Flappy Game": {
+          "name": "Zgradite igro Flappy"
+        },
+        "coursec-2022/Mini-Project: Chase Game": {
+          "name": "Mini-projekt: Igra lovljenja",
+          "student_overview": "Čas je, da postanete ustvarjalni in naredite igro v Play Lab!"
         },
         "csd3-2022/Variables": {
           "name": "Spremenljivke"
@@ -104,6 +147,9 @@
         },
         "courseb-2018/Move It, Move It": {
           "name": "Premakni se, premakni"
+        },
+        "courseb-2018/Programming: My Robotic Friends": {
+          "name": "Moji robotski prijatelji Jr."
         },
         "coursea-2018/Programming: Happy Maps": {
           "name": "Veseli zemljevidi"
@@ -132,6 +178,9 @@
         "coursef-2018/Building a Foundation": {
           "name": "Graditi temelje"
         },
+        "coursef-2018/Programming in Artist": {
+          "name": "Ustvarjanje umetnosti s kodo"
+        },
         "coursef-2018/Conditionals with Cards": {
           "name": "Pogojniki s kartami"
         },
@@ -147,6 +196,18 @@
         "express-2018/Relay Programming": {
           "name": "Relejsko programiranje"
         },
+        "express-2018/Programming in Collector": {
+          "name": "Zbiranje zaklada z Laurel"
+        },
+        "express-2018/Programming in Artist": {
+          "name": "Ustvarjanje umetnosti s kodo"
+        },
+        "express-2018/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8"
+        },
+        "express-2018/Loops in Artist": {
+          "name": "Nalepke z zankami"
+        },
         "express-2018/Conditionals with Cards": {
           "name": "Pogojniki s kartami"
         },
@@ -155,6 +216,9 @@
         },
         "express-2018/Events: The Big Event": {
           "name": "Veliki dogodek"
+        },
+        "express-2018/Build a Flappy Game": {
+          "name": "Zgradite igro Flappy"
         },
         "express-2018/Envelope Variables": {
           "name": "Spremeljivke v ovojnicah"
@@ -177,6 +241,9 @@
         "coursee-2018/Building a Foundation": {
           "name": "Graditi temelje"
         },
+        "coursee-2018/Programming in Artist": {
+          "name": "Ustvarjanje umetnosti s kodo"
+        },
         "coursee-2018/Conditionals with Cards": {
           "name": "Pogojniki s kartami"
         },
@@ -192,11 +259,41 @@
         "coursec-2018/Building a Foundation": {
           "name": "Graditi temelje"
         },
+        "coursec-2018/Debugging in Maze": {
+          "name": "Odpravljanje napak v labirintu"
+        },
+        "coursec-2018/Real-life Algorithms: Paper Planes": {
+          "name": "Papirnata letala"
+        },
+        "coursec-2018/Programming in Collector": {
+          "name": "Zbiranje zaklada z Laurel"
+        },
+        "coursec-2018/Programming in Artist": {
+          "name": "Ustvarjanje umetnosti s kodo"
+        },
+        "coursec-2018/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8"
+        },
+        "coursec-2018/Loops in Artist": {
+          "name": "Nalepke z zankami"
+        },
+        "coursec-2018/Loops in Harvester": {
+          "name": "Obiranje pridelkov z zankami"
+        },
         "coursec-2018/Events: The Big Event": {
           "name": "Veliki dogodek"
         },
+        "coursec-2018/Build a Flappy Game": {
+          "name": "Zgradite igro Flappy"
+        },
+        "coursec-2018/Events in Play Lab": {
+          "name": "Igra lovljenja z dogodki"
+        },
         "pre-express-2018/Move It, Move It": {
           "name": "Premakni se, premakni"
+        },
+        "pre-express-2018/Programming: My Robotic Friends": {
+          "name": "Moji robotski prijatelji Jr."
         },
         "pre-express-2018/Spelling Bee": {
           "name": "Čebelica črkuje besede"
@@ -258,8 +355,47 @@
         "coursee-2019/Functions: Songwriting": {
           "name": "Napiši pesem"
         },
+        "express-2019/Programming in Collector": {
+          "name": "Zbiranje zaklada z Laurel"
+        },
+        "express-2019/Programming in Artist": {
+          "name": "Ustvarjanje umetnosti s kodo"
+        },
+        "express-2019/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8"
+        },
+        "express-2019/Loops in Artist": {
+          "name": "Nalepke z zankami"
+        },
+        "coursec-2019/Programming: My Robotic Friends": {
+          "name": "Moji robotski prijatelji Jr."
+        },
+        "coursec-2019/Debugging in Maze": {
+          "name": "Odpravljanje napak v labirintu"
+        },
+        "coursec-2019/Programming in Collector": {
+          "name": "Zbiranje zaklada z Laurel"
+        },
+        "coursec-2019/Programming in Artist": {
+          "name": "Ustvarjanje umetnosti s kodo"
+        },
+        "coursec-2019/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8"
+        },
+        "coursec-2019/Loops in Harvester": {
+          "name": "Obiranje pridelkov z zankami"
+        },
+        "coursec-2019/Sticker Art with Loops": {
+          "name": "Nalepke z zankami"
+        },
         "coursec-2019/Events: The Big Event": {
           "name": "Veliki dogodek"
+        },
+        "coursec-2019/Build a Flappy Game": {
+          "name": "Zgradite igro Flappy"
+        },
+        "coursec-2019/Events in Play Lab": {
+          "name": "Igra lovljenja z dogodki"
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Čebelica črkuje besede"
@@ -288,8 +424,26 @@
         "coursea-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Življenjski algoritmi: Zasadi seme"
         },
+        "coursea-2017/Programming in Maze": {
+          "name": "Programiranje v labirintu"
+        },
+        "coursea-2017/Events: The Big Event": {
+          "name": "Dogodki: Veliki dogodek"
+        },
+        "coursea-2017/Events in Play Lab": {
+          "name": "Dogodki v Play Lab"
+        },
         "pre-express-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Življenjski algoritmi: Zasadi seme"
+        },
+        "pre-express-2017/Programming in Maze": {
+          "name": "Programiranje v labirintu"
+        },
+        "pre-express-2017/Events: The Big Event": {
+          "name": "Dogodki: Veliki dogodek"
+        },
+        "pre-express-2017/Events in Play Lab": {
+          "name": "Dogodki v Play Lab"
         },
         "pre-express-2017/Spelling Bee": {
           "name": "Čebelica črkuje besede"
@@ -300,14 +454,101 @@
         "coursee-2017/Nested Loops": {
           "name": "Gnezdenje zank"
         },
+        "coursee-2017/Build a Play Lab Game": {
+          "name": "Zgradite igro v Play Labu"
+        },
+        "coursec-2017/Building a Foundation": {
+          "name": "Vztrajnost: Gradnja temeljev"
+        },
+        "coursec-2017/Programming in Maze": {
+          "name": "Programiranje v labirintu"
+        },
+        "coursec-2017/Debugging in Maze": {
+          "name": "Odpravljanje napak v labirintu"
+        },
         "coursec-2017/Real-life Algorithms: Paper Planes": {
           "name": "Življenjski algoritmi: Papirnata letala"
+        },
+        "coursec-2017/Programming in Collector": {
+          "name": "Programiranje v zbiralcu"
+        },
+        "coursec-2017/Loops: Getting Loopy": {
+          "name": "Zanke: Getting Loopy"
+        },
+        "coursec-2017/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8"
+        },
+        "coursec-2017/Events: The Big Event": {
+          "name": "Dogodki: Veliki dogodek"
+        },
+        "coursec-2017/Build a Flappy Game": {
+          "name": "Zgradite igro Flappy"
+        },
+        "coursec-2017/Events in Play Lab": {
+          "name": "Dogodki v Play Lab"
+        },
+        "coursec-2017/Screen Out the Mean": {
+          "name": "Digitalno državljanstvo: Ne bodite nesramni"
+        },
+        "coursec-2017/Binary Bracelets": {
+          "name": "Programiranje: Binarne slike"
         },
         "courseb-2017/Real-life Algorithms: Plant a Seed": {
           "name": "Življenjski algoritmi: Zasadi seme"
         },
+        "courseb-2017/Programming in Maze": {
+          "name": "Programiranje v labirintu"
+        },
+        "courseb-2017/Events: The Big Event": {
+          "name": "Dogodki: Veliki dogodek"
+        },
+        "courseb-2017/Events in Play Lab": {
+          "name": "Dogodki v Play Lab"
+        },
+        "coursed-2017/Algorithms: Graph Paper Programming": {
+          "name": "Programiranje: Programiranje na papirju"
+        },
         "coursed-2017/Nested Loops": {
           "name": "Gnezdenje zank"
+        },
+        "coursed-2017/Nested Loops in Artist": {
+          "name": "Vgnezdene zanke v Umetniku"
+        },
+        "coursed-2017/Nested Loops Project in Artist": {
+          "name": "Vgnezdene zanke v Ledenem kraljestvu"
+        },
+        "coursed-2017/Algorithms: Relay Programming": {
+          "name": "Odpravljanje napak: Programiranje releja"
+        },
+        "coursed-2017/Debugging in Collector": {
+          "name": "Odpravljanje napak v zbiralniku"
+        },
+        "coursed-2017/Conditionals with Cards": {
+          "name": "Pogojniki s kartami"
+        },
+        "coursed-2017/Conditionals in Bee": {
+          "name": "Pogojniki s čebelico"
+        },
+        "coursed-2017/Conditionals & Loops in Maze": {
+          "name": "Pogoji in zanke v labirintu"
+        },
+        "coursed-2017/Conditionals & Loops in Farmer": {
+          "name": "Pogoji in zanke v Harvester"
+        },
+        "coursed-2017/Digital Citizenship": {
+          "name": "Digitalno državljanstvo: Vadba digitalnega državljanstva"
+        },
+        "coursed-2017/Build a Play Lab Game": {
+          "name": "Zgradite igro v Play Labu"
+        },
+        "coursed-2017/Unplugged: Binary": {
+          "name": "Programiranje: Binarne slike"
+        },
+        "coursed-2017/Artist Binary": {
+          "name": "Binarni sistem v Umetniku"
+        },
+        "express-2017/Algorithms: Graph Paper Programming": {
+          "name": "Programiranje: Programiranje na papirju"
         },
         "express-2017/Introduction": {
           "name": "Uvod"
@@ -317,6 +558,21 @@
         },
         "express-2017/Nested Loops": {
           "name": "Gnezdenje zank"
+        },
+        "express-2017/Nested Loops Project in Frozen": {
+          "name": "Vgnezdene zanke v Ledenem kraljestvu"
+        },
+        "express-2017/Common Sense Education: Digital Citizenship": {
+          "name": "Digitalno državljanstvo: Vadba digitalnega državljanstva"
+        },
+        "express-2017/Common Sense Education: Screen Out the Mean": {
+          "name": "Digitalno državljanstvo: Ne bodite nesramni"
+        },
+        "express-2017/Events: The Big Event": {
+          "name": "Dogodki: Veliki dogodek"
+        },
+        "express-2017/Conditionals & Loops in Harvester": {
+          "name": "Pogoji in zanke v Harvester"
         },
         "csd3-2017/Variables": {
           "name": "Spremenljivke"
@@ -639,8 +895,37 @@
         "coursea-2021/Programming: Happy Maps": {
           "name": "Veseli zemljevidi"
         },
+        "coursec-2021/Programming: My Robotic Friends": {
+          "name": "Moji robotski prijatelji Jr."
+        },
+        "coursec-2021/Debugging in Maze": {
+          "name": "Odpravljanje napak v labirintu"
+        },
+        "coursec-2021/Programming in Collector": {
+          "name": "Zbiranje zaklada z Laurel",
+          "student_overview": "Napišite algoritme, ki pomagajo Laurel zbrati veliko draguljev!"
+        },
+        "coursec-2021/Programming in Artist": {
+          "name": "Ustvarjanje umetnosti s kodo"
+        },
+        "coursec-2021/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8",
+          "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! "
+        },
+        "coursec-2021/Loops in Harvester": {
+          "name": "Obiranje pridelkov z zankami",
+          "student_overview": "Uporabimo zanke, da zberemo nekaj zelenjave!"
+        },
         "coursec-2021/Events: The Big Event": {
-          "name": "Veliki dogodek"
+          "name": "Veliki dogodek",
+          "student_overview": "Igrajte zabavno igro, če želite izvedeti več o dogodkih. "
+        },
+        "coursec-2021/Build a Flappy Game": {
+          "name": "Zgradite igro Flappy"
+        },
+        "coursec-2021/Events in Play Lab": {
+          "name": "Mini-projekt: Igra lovljenja",
+          "student_overview": "Čas je, da postanete ustvarjalni in naredite igro v Play Lab!"
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "name": "Obarvajmo kvadratke"
@@ -650,6 +935,19 @@
         },
         "coursed-2021/Conditionals with Cards": {
           "name": "Pogojniki s kartami"
+        },
+        "express-2021/Debugging with Scrat": {
+          "name": "Odpravljanje napak v labirintu"
+        },
+        "express-2021/Collecting Treasure with Laurel": {
+          "name": "Zbiranje zaklada z Laurel"
+        },
+        "express-2021/Creating Art with Code": {
+          "name": "Ustvarjanje umetnosti s kodo"
+        },
+        "express-2021/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8",
+          "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! "
         },
         "coursee-2021/Functions: Songwriting": {
           "name": "Napiši pesem"
@@ -672,6 +970,18 @@
         "csd3-2021/Functions": {
           "name": "Funkcije"
         },
+        "express-2020/Collecting Treasure with Laurel": {
+          "name": "Zbiranje zaklada z Laurel"
+        },
+        "express-2020/Creating Art with Code": {
+          "name": "Ustvarjanje umetnosti s kodo"
+        },
+        "express-2020/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8"
+        },
+        "express-2020/Sticker Art with Loops": {
+          "name": "Nalepke z zankami"
+        },
         "courseb-2020/Move It, Move It": {
           "name": "Premakni se, premakni"
         },
@@ -687,8 +997,35 @@
         "coursed-2020/Unplugged: Binary": {
           "name": "Binarne slike"
         },
+        "coursec-2020/Programming: My Robotic Friends": {
+          "name": "Moji robotski prijatelji Jr."
+        },
+        "coursec-2020/Debugging in Maze": {
+          "name": "Odpravljanje napak v labirintu"
+        },
+        "coursec-2020/Programming in Collector": {
+          "name": "Zbiranje zaklada z Laurel"
+        },
+        "coursec-2020/Programming in Artist": {
+          "name": "Ustvarjanje umetnosti s kodo"
+        },
+        "coursec-2020/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8"
+        },
+        "coursec-2020/Loops in Harvester": {
+          "name": "Obiranje pridelkov z zankami"
+        },
+        "coursec-2020/Sticker Art with Loops": {
+          "name": "Nalepke z zankami"
+        },
         "coursec-2020/Events: The Big Event": {
           "name": "Veliki dogodek"
+        },
+        "coursec-2020/Build a Flappy Game": {
+          "name": "Zgradite igro Flappy"
+        },
+        "coursec-2020/Events in Play Lab": {
+          "name": "Igra lovljenja z dogodki"
         },
         "coursee-2020/Functions: Songwriting": {
           "name": "Napiši pesem"

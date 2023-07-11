@@ -53,6 +53,8 @@ el:
         name: Όλα τα Πρότυπα
       all_standards_1/csd/2021:
         name: Όλα τα Πρότυπα
+      getting_started_with_csd/csd/2021:
+        name: Πρώτα βήματα με το CSD
       curriculum/csd/2018:
         name: Πρόγραμμα σπουδών
       teacher_forum_6/csd/2018:

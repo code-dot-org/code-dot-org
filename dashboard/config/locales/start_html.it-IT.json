@@ -724,7 +724,10 @@
           "Tangled": "Rapunzel",
           "What are you in the mood for?": "Quale genere ti ispira?",
           "Choose a Kids Movie: Great for Babysitters!": "Scegli un film per bambini: un babysitter perfetto!",
-          "Do you want an animated movie?": "Vuoi un film d'animazione?"
+          "Do you want an animated movie?": "Vuoi un film d'animazione?",
+          "Comedy": "Commedia",
+          "Musical": "Musical",
+          "Action": "Azione"
         },
         "CSD U1 storage movies_2022": {
           "Star Wars": "Guerre Stellari",
@@ -742,7 +745,10 @@
           "Tangled": "Rapunzel",
           "What are you in the mood for?": "Quale genere ti ispira?",
           "Choose a Kids Movie: Great for Babysitters!": "Scegli un film per bambini: un babysitter perfetto!",
-          "Do you want an animated movie?": "Vuoi un film d'animazione?"
+          "Do you want an animated movie?": "Vuoi un film d'animazione?",
+          "Comedy": "Commedia",
+          "Musical": "Musical",
+          "Action": "Azione"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "Cancella",
@@ -758,7 +764,8 @@
           "Winter": "Inverno",
           "What season is it?": "Che stagione è?",
           "Cloudy": "Nuvoloso",
-          "Generate Outfit!": "Genera abbigliamento!"
+          "Generate Outfit!": "Genera abbigliamento!",
+          "What is the weather like today?": "Com'è il meteo oggi?"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "Cancella",
@@ -774,7 +781,8 @@
           "Winter": "Inverno",
           "What season is it?": "Che stagione è?",
           "Cloudy": "Nuvoloso",
-          "Generate Outfit!": "Genera abbigliamento!"
+          "Generate Outfit!": "Genera abbigliamento!",
+          "What is the weather like today?": "Com'è il meteo oggi?"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -1221,7 +1229,9 @@
           "?": "?"
         },
         "CSD U6 - Screen Outputs - P_2222": {
-          "title": "titolo"
+          "title": "titolo",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "Ti sei sempre chiesto cosa dice il tuo gatto quando miagola nel cuore della notte. Finalmente puoi saperlo!",
+          "Button": "Pulsante"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
           "White": "Bianco",
@@ -1723,16 +1733,24 @@
           "low": "bassa"
         },
         "CSD U6 setProperty predict app": {
-          "title": "titolo"
+          "title": "titolo",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "Ti sei sempre chiesto cosa dice il tuo gatto quando miagola nel cuore della notte. Finalmente puoi saperlo!",
+          "Button": "Pulsante"
         },
         "CSD U6 setProperty predict app_2018": {
-          "title": "titolo"
+          "title": "titolo",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "Ti sei sempre chiesto cosa dice il tuo gatto quando miagola nel cuore della notte. Finalmente puoi saperlo!",
+          "Button": "Pulsante"
         },
         "CSD U6 setProperty predict app_2019": {
-          "title": "titolo"
+          "title": "titolo",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "Ti sei sempre chiesto cosa dice il tuo gatto quando miagola nel cuore della notte. Finalmente puoi saperlo!",
+          "Button": "Pulsante"
         },
         "CSD U6 setProperty predict app_2021": {
-          "title": "titolo"
+          "title": "titolo",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "Ti sei sempre chiesto cosa dice il tuo gatto quando miagola nel cuore della notte. Finalmente puoi saperlo!",
+          "Button": "Pulsante"
         },
         "CSD U6 slider intro": {
           "short": "brevemente",
@@ -2061,7 +2079,8 @@
           "B": "B"
         },
         "allthethings design mode elements": {
-          "text": "testo"
+          "text": "testo",
+          "Button": "Pulsante"
         },
         "csa widget test2": {
           "8": "8"
@@ -2540,7 +2559,8 @@
           "lime:": "lime:",
           "chili en polbo:": "peperoncino in polvere:",
           "coconut:": "cocco:",
-          "Raspado Recommender": "Suggeritore di Raspado"
+          "Raspado Recommender": "Suggeritore di Raspado",
+          "preference": "preferenza"
         },
         "ml-customize-raspado_2022": {
           "yes": "sì",
@@ -2552,7 +2572,8 @@
           "lime:": "lime:",
           "chili en polbo:": "peperoncino in polvere:",
           "coconut:": "cocco:",
-          "Raspado Recommender": "Suggeritore di Raspado"
+          "Raspado Recommender": "Suggeritore di Raspado",
+          "preference": "preferenza"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Prosegui",

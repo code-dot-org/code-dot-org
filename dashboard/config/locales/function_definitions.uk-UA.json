@@ -37,7 +37,7 @@
         },
         "2-3 Artist Debugging 10": {
           "draw square": {
-            "name": "намалюйте квадрат",
+            "name": "намалювати квадрат",
             "parameters": {
               "width": "ширина",
               "height": "висота"
@@ -125,7 +125,7 @@
         },
         "Course 4 Artist Functions challenge": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw a square 20": {
             "name": "намалювати квадрат 20"
@@ -170,7 +170,7 @@
         },
         "Course 4 Play Lab Params 1": {
           "jump": {
-            "name": "стрибок"
+            "name": "стрибнути"
           }
         },
         "Course 4 Play Lab Params 10": {
@@ -182,15 +182,15 @@
         },
         "Course 4 Play Lab Params 2": {
           "jump": {
-            "name": "стрибок"
+            "name": "стрибнути"
           }
         },
         "Course 4 Play Lab Params 3": {
           "jump": {
-            "name": "стрибок",
+            "name": "стрибнути",
             "parameters": {
               "height": "висота",
-              "actor": "персонаж"
+              "actor": "виконавець"
             }
           }
         },
@@ -205,7 +205,7 @@
         "Course 4 Play Lab Params 5": {
           "patrol": {
             "parameters": {
-              "actor": "персонаж"
+              "actor": "виконавець"
             },
             "name": "патрулювання"
           }
@@ -213,7 +213,7 @@
         "Course 4 Play Lab Params 6": {
           "patrol": {
             "parameters": {
-              "actor": "персонаж"
+              "actor": "виконавець"
             },
             "name": "патрулювання"
           }
@@ -221,7 +221,7 @@
         "Course 4 Play Lab Params 7": {
           "patrol": {
             "parameters": {
-              "actor": "персонаж",
+              "actor": "виконавець",
               "speed": "швидкість"
             },
             "name": "патрулювання"
@@ -230,7 +230,7 @@
         "Course 4 Play Lab Params 8": {
           "patrol": {
             "parameters": {
-              "actor": "персонаж",
+              "actor": "виконавець",
               "speed": "швидкість"
             },
             "name": "патрулювання"
@@ -263,7 +263,7 @@
         },
         "Course 4 SCF 1a": {
           "get nectar": {
-            "name": "взяти нектар",
+            "name": "зібрати нектар",
             "parameters": {
               "counter": "лічильник"
             }
@@ -464,7 +464,7 @@
             "name": "намалювати квадрат 20"
           },
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           }
         },
         "NEW Course 4 Artist Functions 12": {
@@ -472,7 +472,7 @@
             "name": "намалювати квадрат 20"
           },
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           }
         },
         "NEW Course 4 Artist Functions 13": {
@@ -480,12 +480,12 @@
             "name": "намалювати квадрат 20"
           },
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           }
         },
         "NEW Course 4 Artist Functions 14": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw a square 40": {
             "name": "намалювати квадрат 40"
@@ -732,16 +732,16 @@
         },
         "NEW Course 4 Play Lab Params 11": {
           "jump": {
-            "name": "стрибок",
+            "name": "стрибнути",
             "parameters": {
               "height": "висота",
-              "actor": "персонаж"
+              "actor": "виконавець"
             },
-            "description": "блок функції \"стрибок\" з параметрами висоти та персонажа"
+            "description": "блок функції \"стрибнути\" з параметрами висоти та персонажа"
           },
           "patrol": {
             "parameters": {
-              "actor": "персонаж",
+              "actor": "виконавець",
               "speed": "швидкість"
             },
             "name": "патрулювання"
@@ -807,16 +807,16 @@
         },
         "New Play Lab Project": {
           "jump": {
-            "name": "стрибок",
+            "name": "стрибнути",
             "parameters": {
               "height": "висота",
-              "actor": "персонаж"
+              "actor": "виконавець"
             },
-            "description": "блок функції \"стрибок\" з параметрами висоти та персонажа"
+            "description": "блок функції \"стрибнути\" з параметрами висоти та персонажа"
           },
           "patrol": {
             "parameters": {
-              "actor": "персонаж",
+              "actor": "виконавець",
               "speed": "швидкість"
             },
             "name": "патрулювання",
@@ -948,7 +948,7 @@
             "name": "намалювати квадрат"
           },
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           }
         },
         "courseE_artist_concept4_2018": {
@@ -956,7 +956,7 @@
             "name": "намалювати квадрат"
           },
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           }
         },
         "courseE_artist_concept_challenge1": {
@@ -1084,10 +1084,10 @@
             "name": "щось зробити"
           },
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           }
         },
         "courseE_artist_functions8_2018": {
@@ -1095,10 +1095,10 @@
             "name": "щось зробити"
           },
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           }
         },
         "courseE_artist_functions8_2019": {
@@ -1106,10 +1106,10 @@
             "name": "щось зробити"
           },
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           }
         },
         "courseE_artist_functions8_2020": {
@@ -1117,10 +1117,10 @@
             "name": "щось зробити"
           },
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           }
         },
         "courseE_artist_functions8a_2018": {
@@ -1149,10 +1149,10 @@
         },
         "courseE_artist_functions8b_2018": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           },
           "do something": {
             "name": "щось зробити"
@@ -1160,10 +1160,10 @@
         },
         "courseE_artist_functions8b_2019": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           },
           "do something": {
             "name": "щось зробити"
@@ -1171,10 +1171,10 @@
         },
         "courseE_artist_functions8b_2020": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           },
           "do something": {
             "name": "щось зробити"
@@ -1182,10 +1182,10 @@
         },
         "courseE_artist_functions8c_2018": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           },
           "do something": {
             "name": "щось зробити"
@@ -1193,10 +1193,10 @@
         },
         "courseE_artist_functions8c_2019": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           },
           "do something": {
             "name": "щось зробити"
@@ -1204,10 +1204,10 @@
         },
         "courseE_artist_functions8c_2020": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           },
           "do something": {
             "name": "щось зробити"
@@ -1247,26 +1247,26 @@
         },
         "courseE_artist_functionsProj_2018": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           }
         },
         "courseE_artist_functionsProj_2019": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           }
         },
         "courseE_artist_functionsProj_2020": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           }
         },
         "courseE_artist_functions_challenge1": {
@@ -1877,7 +1877,10 @@
             "name": "підібрати по шляху"
           },
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions10a1_2019": {
@@ -1885,7 +1888,10 @@
             "name": "підібрати по шляху"
           },
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions10a1_2020": {
@@ -1893,7 +1899,10 @@
             "name": "підібрати по шляху"
           },
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions11_predict_2018": {
@@ -1901,7 +1910,10 @@
             "name": "підібрати по шляху"
           },
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions11_predict_2019": {
@@ -1909,7 +1921,10 @@
             "name": "підібрати по шляху"
           },
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions11_predict_2020": {
@@ -1917,7 +1932,10 @@
             "name": "підібрати по шляху"
           },
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions13_2018": {
@@ -1937,17 +1955,26 @@
         },
         "courseE_farmer_functions2ba_2018": {
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions2ba_2019": {
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions2ba_2020": {
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions3c1_2018": {
@@ -1955,7 +1982,10 @@
             "name": "підібрати по шляху"
           },
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions3c1_2019": {
@@ -1963,7 +1993,10 @@
             "name": "підібрати по шляху"
           },
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions3c1_2020": {
@@ -1971,22 +2004,34 @@
             "name": "підібрати по шляху"
           },
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions3c_2018": {
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions3c_2019": {
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions3c_2020": {
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions7a1_2018": {
@@ -2299,7 +2344,7 @@
             "name": "намалювати полум'я"
           },
           "draw fire": {
-            "name": "намалювати пожежу"
+            "name": "намалювати вогонь"
           }
         },
         "courseC_data wizard_2021": {
@@ -2312,10 +2357,10 @@
             "name": "щось зробити"
           },
           "draw hexagon": {
-            "name": "намалюй шестикутник"
+            "name": "намалювати шестикутник"
           },
           "draw line of hexagons": {
-            "name": "намалюй лінію шестикутника"
+            "name": "намалювати лінію шестикутників"
           }
         },
         "courseE_artist_functions2_2021": {
@@ -2356,10 +2401,10 @@
             "name": "щось зробити"
           },
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           },
           "staggered squares": {
             "name": "квадрати, розташовані в шаховому порядку"
@@ -2375,10 +2420,10 @@
         },
         "courseE_artist_functions8b_2021": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           },
           "do something": {
             "name": "щось зробити"
@@ -2386,10 +2431,10 @@
         },
         "courseE_artist_functions8c_2021": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "малювати квадрат"
           },
           "do something": {
             "name": "щось зробити"
@@ -2406,21 +2451,21 @@
             "name": "намалювати трикутник"
           },
           "draw line of triangles": {
-            "name": "намалюй лінію трикутників"
+            "name": "намалювати лінію трикутників"
           }
         },
         "courseE_artist_functionsProj_2021": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           },
           "draw hexagon": {
-            "name": "намалюй шестикутник"
+            "name": "малювати шестикутник"
           },
           "draw line of hexagons": {
-            "name": "намалюй лінію шестикутника"
+            "name": "малювати лінію шестикутника"
           },
           "staggered squares": {
             "name": "квадрати, розташовані в шаховому порядку"
@@ -2468,13 +2513,13 @@
             "name": "підібрати по шляху"
           },
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
           },
           "check square for corn": {
-            "name": "перевір квадрат для кукурудзи"
+            "name": "перевірити, чи є кукурудза"
           },
           "pumpkin square": {
-            "name": "квадрат гарбуза"
+            "name": "ділянка гарбуза"
           }
         },
         "courseE_farmer_functions11_predict_2021": {
@@ -2482,16 +2527,16 @@
             "name": "підібрати по шляху"
           },
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
           },
           "pumpkin square": {
-            "name": "квадрат гарбуза"
+            "name": "ділянка гарбуза"
           },
           "check square for corn": {
-            "name": "перевір квадрат для кукурудзи"
+            "name": "перевірити, чи є кукурудза"
           },
           "get produce": {
-            "name": "отримай врожай"
+            "name": "зібрати врожай"
           }
         },
         "courseE_farmer_functions13_2021": {
@@ -2499,10 +2544,10 @@
             "name": "підібрати по шляху"
           },
           "check for corn": {
-            "name": "перевір кукурудзу"
+            "name": "перевірити, чи є кукурудза"
           },
           "corn rectangle": {
-            "name": "прямокутник кукурудзи"
+            "name": "ділянка кукурудзи"
           },
           "lettuce stairs": {
             "name": "сходи з салату"
@@ -2510,29 +2555,29 @@
         },
         "courseE_farmer_functions2ba_2021": {
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
           },
           "check square for corn": {
-            "name": "перевір квадрат для кукурудзи"
+            "name": "перевірити, чи є кукурудза"
           }
         },
         "courseE_farmer_functions3c1_2021": {
           "pick along path": {
-            "name": "підібрати по шляху"
+            "name": "збирати по шляху"
           },
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
           },
           "check square for corn": {
-            "name": "перевір квадрат для кукурудзи"
+            "name": "перевірити, чи є кукурудза"
           }
         },
         "courseE_farmer_functions3c_2021": {
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
           },
           "check square for corn": {
-            "name": "перевір квадрат для кукурудзи"
+            "name": "перевірити, чи є кукурудза"
           }
         },
         "courseE_farmer_functions7a1_2021": {
@@ -3451,10 +3496,10 @@
             "name": "щось зробити"
           },
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           }
         },
         "courseE_artist_functions8a2022": {
@@ -3467,10 +3512,10 @@
         },
         "courseE_artist_functions8b2022": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           },
           "do something": {
             "name": "щось зробити"
@@ -3478,10 +3523,10 @@
         },
         "courseE_artist_functions8c2022": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           },
           "do something": {
             "name": "щось зробити"
@@ -3497,10 +3542,10 @@
         },
         "courseE_artist_functionsProj2022": {
           "draw a line of squares": {
-            "name": "малювати лінію квадрату"
+            "name": "намалювати лінію квадратів"
           },
           "draw square": {
-            "name": "намалюйте квадрат"
+            "name": "намалювати квадрат"
           }
         },
         "courseE_artist_functions_challenge12022": {
@@ -3528,7 +3573,10 @@
             "name": "підібрати по шляху"
           },
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions11_predict2022": {
@@ -3536,7 +3584,10 @@
             "name": "підібрати по шляху"
           },
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions132022": {
@@ -3546,7 +3597,10 @@
         },
         "courseE_farmer_functions2ba2022": {
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions3c12022": {
@@ -3554,12 +3608,18 @@
             "name": "підібрати по шляху"
           },
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions3c2022": {
           "get all pumpkins": {
-            "name": "отримати всі гарбузи"
+            "name": "зібрати всі гарбузи"
+          },
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         },
         "courseE_farmer_functions7a12022": {
@@ -3594,17 +3654,17 @@
         },
         "courseE_artist_functions7_2021": {
           "draw a window": {
-            "name": "намалюй вікно"
+            "name": "намалювати вікно"
           }
         },
         "courseE_farmer_functions1a_2021": {
           "check square for corn": {
-            "name": "перевір квадрат для кукурудзи"
+            "name": "перевірити, чи є кукурудза"
           }
         },
         "courseE_farmer_functions2b_2021": {
           "check square for corn": {
-            "name": "перевір квадрат для кукурудзи"
+            "name": "перевірити, чи є кукурудза"
           }
         },
         "CourseF_app_computer": {
@@ -3625,6 +3685,46 @@
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "рухайся та отримуй нектар за допомогою лічильника"
+          }
+        },
+        "courseE_farmer_functions1a2022": {
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
+          }
+        },
+        "courseE_farmer_functions1a_2018": {
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
+          }
+        },
+        "courseE_farmer_functions1a_2019": {
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
+          }
+        },
+        "courseE_farmer_functions1a_2020": {
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
+          }
+        },
+        "courseE_farmer_functions2b2022": {
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
+          }
+        },
+        "courseE_farmer_functions2b_2018": {
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
+          }
+        },
+        "courseE_farmer_functions2b_2019": {
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
+          }
+        },
+        "courseE_farmer_functions2b_2020": {
+          "check square for corn": {
+            "name": "перевір, чи є кукурудза"
           }
         }
       }

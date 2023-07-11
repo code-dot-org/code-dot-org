@@ -10,5 +10,8 @@
   "blockly_toolboxCategoryMath": "Математика",
   "blockly_toolboxCategoryVariables": "Айнымалылар",
   "share": "Бөлісу",
-  "startOver": "Басынан бастау"
+  "startOver": "Басынан бастау",
+  "panelHeaderInstructions": "Нұсқаулар",
+  "panelHeaderWorkspace": "Жұмыс аумағы: ",
+  "continue": "Жалғастыру"
 }

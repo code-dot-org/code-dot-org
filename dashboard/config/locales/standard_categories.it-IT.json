@@ -727,6 +727,15 @@
         },
         "6": {
           "description": "Gli studenti dimostrano una solida comprensione dei concetti, dei sistemi e delle operazioni tecnologiche."
+        },
+        "CSN-1.E": {
+          "description": "Per i sistemi che tollerano gli errori, come Internet:\na. Descrivi i benefici della tolleranza degli errori\nb. Spiega come un dato sistema è tollerante agli errori\nc. Identifica le vulnerabilità di un sistema."
+        },
+        "D2.Geo": {
+          "description": "Geografia"
+        },
+        "D2.His": {
+          "description": "Storia"
         }
       }
     }

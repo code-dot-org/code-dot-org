@@ -1,5 +1,7 @@
 {
   "blockly_toolboxCategoryLogic": "Ngokulandelana",
   "blockly_toolboxCategoryMath": "Izibalo",
-  "startOver": "Qala phansi"
+  "startOver": "Qala phansi",
+  "panelHeaderWorkspace": "indawo yokusebenzela: ",
+  "continue": "Qhubeka"
 }

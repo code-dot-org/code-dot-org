@@ -12,5 +12,8 @@
   "blockly_toolboxCategoryVariables": "Variablar",
   "feedback": "Tilbakemelding",
   "share": "Del",
-  "startOver": "Start på nytt"
+  "startOver": "Start på nytt",
+  "panelHeaderInstructions": "Instruksjonar",
+  "panelHeaderWorkspace": "Arbeidsområde: ",
+  "continue": "Hald fram"
 }

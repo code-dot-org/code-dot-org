@@ -7564,6 +7564,11 @@ zh-CN:
 
 
 
+        teacher_markdown: "**请让您的学生完成此调查！**\n\n* 结果对我们（code.org）维持我们的课程并进行改进至关重要。\n*
+          还有一项教师调查，您可以在其中提供自己的意见，您会收到电子邮件通知。\n\n**查看结果** -- 课后调查略有不同。调查位于课程的单独单元中，此页面有链接。\n\n*
+          若要在您的教师面板中查看匿名调查结果，您需要 (1) 查看调查/评估，然后 (2) 选择课后调查单元作为您想查看的单元。  \n\n* **关于查看课后调查结果的更多说明**：[[google
+          doc](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw)]
+          [[pdf](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw/export?format=pdf)]\n\n\n\n\n"
       csd-post-survey-levelgroup-2018:
         title: 计算机科学发现课程 期末学生问卷
       csd-pre-survey-2017-levelgroup:
@@ -16096,6 +16101,17 @@ zh-CN:
         - {}
       csp_unit_assessment_overview:
         content1: 描述
+        teacher_markdown: "### 注意：这个评估是什么，不是什么\n\n* 此评估**被设计成AP选择题评估“风格”**。\n\n* 这意味着这些问题**并不是**专门针对此前的课程。相反，这些问题与理论上已经解决的基础AP学习目标有关。\n\n*
+          这**意味着**学生可能需要从他们所学的知识中做一些推断来回答问题。\n\n* 这**意味着**问题可能“很难”，尤其是对第一次接触的人来说。\n\n所以总的来说，请**谨慎使用**\n\n*
+          运用你的判断力来判断这个评估的利害关系。\n\t* 你不必用这个评估来给学生打分，或者\n    * 你可以用不同的方式给学生打分，而不是简单地取正确率。\n\n*
+          确保你使用的方式能够在知识调查方面保持课堂精神。\n\t* 如果你担心学生会气馁，那么也许可以将此评估重新定义为一个调查的机会，让学生尝试问题，然后去研究答案，改变他们出错的地方，或者开发他们自己的问题集。\n\n\n---\n\n####
+          常见问题 -- 如何准备、管理和审查评估\n\n请参阅我们的**[常见问题文档](https://docs.google.com/document/d/1zEpD1PFt6ec2S8ourxuMH0HD6tiyRvqAGUKGDCOt-qs/edit#heading=h.kewgp6z8qdde)**其中包含：\n\n*
+          关于如何准备、管理和审查评估的截图\n* 解决常见问题\n\n\n#### 如何查看/审查学生的答案的简短总结\n\n1. 前往[教师面板](https://code.org/teacher-dashboard#/)\n2.
+          选择你的计算机科学原则部分\n3. 你会看到一些紫色的标签，包括文本响应、评估等。\n4. 点击**评估/调查**\n5. 从课程选择器下拉菜单中，**选择该评估出现的单元（例如第1单元：互联网）**\n6.
+          对于所有*提交*评估的学生，你将看到两个表格：\n   * 第一个表格是汇总视图，汇总了所有提交的学生的正确率，包括他们提交的时间戳\n   *
+          第二个表格是每个学生提交的每个问题的答案的综合列表\n\n    在这两个表格的上方是一个下载（或导出）为csv的按钮 - 让你可以在电子表格中处理答案（推荐）。\n\n7.
+          如果你需要允许学生取消提交他们的测试，请引导学生导航到测试的最后一页并按“取消提交”。\n\n**取消提交说明：** \n\n你应该与学生明确规定取消提交的规则。学生可能会认为这是在测试结束后更改答案的好方法（即作弊），但你会看到学生提交测试的时间戳。
+          \ \n\n建议你明确表示，在某一特定时间之后，你不会考虑给任何测试打分或评分。如果没有在规定的截止日期之前提交，如同你没有收到。\n"
       curriculum-how-challenging:
         answers:
         - correct: true
@@ -17577,3 +17593,17 @@ zh-CN:
           feedback: 不正确。风滚草将开始翻滚
         questions:
         - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
+      OPD-K5 Stage9Start_copy:
+        markdown: |
+          # 探索教师资源
+
+          是时候开始计划教学了。在这个阶段，我们将浏览Code.org平台和**<a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">教师面板</a>**的其他区域。
+
+          教师面板的屏幕截图如下。您需要登录Code.org教师账户才能看到它。登录后，它应该是您在Code.org网站上看到的默认界面。如果您没有教师账户，可以**<a href="https://studio.code.org/users/sign_up" target="blank" rel="noopener noreferrer">在此处注册</a>**。
+
+          <a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>
+      OPD-K5 Stage9Start_dani:
+        markdown: "# 计划 > 探索教师资源\n\n通过第4-8阶段，了解了计算机科学基础可用的一些“线下” 和线上的学习资源，它们与当前学习的计算机科学概念一致。
+          \n\n现在已经对如何编码以及如何教授计算机科学有了一些了解，是时候开始规划教学了。在这个阶段，我们将浏览Code.org平台和**[教师面板](http://studio.code.org/)**的其他部分。
+          \n\n完成第10阶段后，可以：\n\n- 浏览教师的资源\n- 浏览Code.org**[教师面板](http://studio.code.org/)**\n-
+          计划如何将计算机科学集成到实践中\n\n***\n\n下面是教师面板的截图。需要登录Code.org的教师账户才能看见它 - 登录后会是教师账户的默认界面。如果没有教师账户，可以**[在此处免费注册](https://studio.code.org/users/sign_up)**。\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"

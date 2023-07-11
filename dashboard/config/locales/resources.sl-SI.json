@@ -176,6 +176,9 @@
         "the_big_event_2/coursec/2022": {
           "name": "Veliki dogodek"
         },
+        "the_big_event_course_c_/coursec/2022": {
+          "name": "Veliki dogodek (tečaj C)"
+        },
         "variables/csd/2022": {
           "name": "Spremenljivke"
         },
@@ -519,6 +522,9 @@
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "Veliki dogodek"
+        },
+        "the_big_event_course_c_/coursec/2021": {
+          "name": "Veliki dogodek (tečaj C)"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Veliki dogodek"

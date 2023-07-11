@@ -10608,9 +10608,9 @@
           "courseD_artist_functions8_c": "Cuối mỗi hàng hình vuông, người vẽ chỉ cần xoay 180 độ trước khi vẽ hàng hình vuông tiếp theo. Hãy đặt tất cả trong một vòng lặp lặp lại để chuẩn bị cho bài tập tiếp theo!"
         },
         "courseE_artist_functions92022": {
+          "courseD_artist_functions9_b": "Bức tranh này được tạo ra bằng cách vẽ một hàng tam giác 4 lần và xoay 60 hoặc 120 độ trước khi vẽ hàng tam giác tiếp theo.",
           "courseD_artist_functions9_e": "Bạn có thể phát hiện ra cả bốn vị trí có thể dùng `line of triangles` (hàng tam giác) trong hình này không?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
           "courseD_artist_functions9_a": "Bài tập này có thể chia thành ba phần:\n\n-   tạo hàm `draw a triangle` (vẽ tam giác)\n-   tạo hàm `draw a line of triangles` (vẽ một hàng tam giác)\n-   dùng hàm `draw a line of triangles` (vẽ một hàng tam giác) bốn lần để hoàn thành bức tranh",
-          "courseD_artist_functions9_b": "Bức tranh này được tạo ra bằng cách vẽ một hàng tam giác 4 lần và xoay 60 hoặc 120 độ trước khi vẽ hàng tam giác tiếp theo.",
           "courseD_artist_functions9_c": "Cách vẽ một hàng tam giác:\n\n-   lặp lại 4 lần\n    -   vẽ tam giác\n    -   nhảy về phía trước 50 điểm ảnh",
           "courseD_artist_functions9_d": "Cách vẽ hình thoi:\n\n-   lặp lại 2 lần\n    -   vẽ một hàng tam giác\n    -   xoay 60 độ\n    -   vẽ một hàng tam giác\n    -   xoay 120 độ"
         },

@@ -53,6 +53,7 @@ he:
         reset_password_token: הקישור לאיפוס הסיסמה שעקבת אחריו
         error:
           future: לא יכול להיות בעתיד
+        us_state: איזורי
   beta: בטא
   hello: הי עולם
   welcome_back: ברוך שובך, %{name}
@@ -182,6 +183,7 @@ he:
     share_teacher_email_reg_partner_preference_no: לא
     share_teacher_email_reg_partner_preference_required: עליך לציין העדפה של דואר
       אלקטרוני.
+    us_state: איזורי
   school_info:
     title: מידע על בית הספר (רשות)
     school_country: ארץ בית הספר
@@ -1115,6 +1117,8 @@ he:
         lego: LEGO Education
         microbit: מיקרוביט
         raspberry: Raspberry Pi
+        other: אחר
+      workshop_course:
         other: אחר
       email_opt_in:
         opt_in_yes: כן

@@ -12414,9 +12414,9 @@
           "courseD_artist_functions8_c": "在每一行正方形結束時，小藝術家只需要轉 180 度就可以畫出下一行正方形。  把整個事情重複迴圈，為下一個練習做好準備！"
         },
         "courseE_artist_functions92022": {
+          "courseD_artist_functions9_b": "繪製一排三角形 4 次，並且在繪製下一排三角形之前，旋轉 60 度或 120 度來完成繪圖。",
           "courseD_artist_functions9_e": "你能找到在此圖中可以使用`一行三角形`的所有四個位置嗎？\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
           "courseD_artist_functions9_a": "這個關卡可以分為三部分：\n\n-   使用`繪製三角形`函式\n-   使用`繪製一行三角形`函式\n-   使用`繪製一行三角形`函式四次來完成繪圖",
-          "courseD_artist_functions9_b": "繪製一排三角形 4 次，並且在繪製下一排三角形之前，旋轉 60 度或 120 度來完成繪圖。",
           "courseD_artist_functions9_c": "繪製一排三角形：\n\n-   重複 4 次   \n-   繪製三角形    \n-   向前跳躍 50 像素",
           "courseD_artist_functions9_d": "繪製菱形：\n\n-   重複 2 次    \n-   繪製一排三角形    \n-   旋轉 60 度    \n-   繪製一排三角形    \n-   旋轉 120 度"
         },

@@ -355,7 +355,7 @@ uz-UZ:
   studiobar_dance_body: O‘z Raqs Bazmingizni yarating va ulashing
   studiobar_hoc_title: Dasturlash soati
   studiobar_hoc_body: Jahldor qushchalar bilan dasturlashni o‘rganing
-  studiobar_flappy_title: Flappy o‘yinini yarating
+  studiobar_flappy_title: Flappy o‘yinini dasturlash
   studiobar_flappy_body: O‘z pirilloq quscha o‘yiningizni yaratib ulashing
   studiobar_teacher_title: O‘qituvchilar uchun tayyorlangan
   studiobar_teacher_body: Sinfingizga Dasturlash studiyasini tanishtiring
@@ -435,7 +435,7 @@ uz-UZ:
   homepage_slot_text_studio: Barcha mashg‘ulotlarimiz
   homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Xarid
-  homepage_slot_text_flappy: Flappy o‘yinini yarating
+  homepage_slot_text_flappy: Flappy o‘yinini dasturlash
   homepage_action_text_hoc: Har bir o‘quvchi uchun Dasturlash soati.
   homepage_action_text_num_served: "# kishi sinab ko‘rdi"
   homepage_action_text_join_us: Bizga qo'shiling

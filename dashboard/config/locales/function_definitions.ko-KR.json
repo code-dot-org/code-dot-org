@@ -2,11 +2,6 @@
   "ko-KR": {
     "data": {
       "function_definitions": {
-        "2-3 Artist 11": {
-          "x": {
-            "name": "x"
-          }
-        },
         "2-3 Artist 12": {
           "details": {
             "name": "세부 사항"
@@ -489,26 +484,26 @@
         },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
-            "name": "긴 경로 고치기"
+            "name": "긴 경로 수정하기"
           },
           "fix short path": {
-            "name": "짧은 길 고치기"
+            "name": "짧은 경로 수정하기"
           }
         },
         "MC_HOC_2017_10_RETRY_2019": {
           "fix long path": {
-            "name": "긴 경로 고치기"
+            "name": "긴 경로 수정하기"
           },
           "fix short path": {
-            "name": "짧은 길 고치기"
+            "name": "짧은 경로 수정하기"
           }
         },
         "MC_HOC_2017_10_RETRY_2020": {
           "fix long path": {
-            "name": "긴 경로 고치기"
+            "name": "긴 경로 수정하기"
           },
           "fix short path": {
-            "name": "짧은 길 고치기"
+            "name": "짧은 경로 수정하기"
           }
         },
         "MC_HOC_2017_Ali": {
@@ -981,9 +976,6 @@
         },
         "courseC_artist_prog3": {
           "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
             "name": "불꽃 그리기"
           },
           "draw fire": {
@@ -992,9 +984,6 @@
         },
         "courseC_artist_prog3_2018": {
           "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
             "name": "불꽃 그리기"
           },
           "draw fire": {
@@ -1003,9 +992,6 @@
         },
         "courseC_artist_prog3_2019": {
           "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
             "name": "불꽃 그리기"
           },
           "draw fire": {
@@ -1014,9 +1000,6 @@
         },
         "courseC_artist_prog3_2020": {
           "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
             "name": "불꽃 그리기"
           },
           "draw fire": {
@@ -2584,10 +2567,10 @@
         },
         "MC_HOC_2017_10_RETRY_2021": {
           "fix long path": {
-            "name": "긴 경로 고치기"
+            "name": "긴 경로 수정하기"
           },
           "fix short path": {
-            "name": "짧은 길 고치기"
+            "name": "짧은 경로 수정하기"
           }
         },
         "MC_HOC_2017_Ali_2021": {
@@ -2613,10 +2596,7 @@
         },
         "courseC_artist_prog3_2021": {
           "draw flame": {
-            "name": "불꽃 그리기",
-            "parameters": {
-              "x": "x"
-            }
+            "name": "불꽃 그리기"
           },
           "draw fire": {
             "name": "불 그리기"
@@ -4094,10 +4074,10 @@
         },
         "MC_HOC_2017_10_RETRY2022": {
           "fix long path": {
-            "name": "긴 경로 고치기"
+            "name": "긴 경로 수정하기"
           },
           "fix short path": {
-            "name": "짧은 길 고치기"
+            "name": "짧은 경로 수정하기"
           }
         },
         "MC_HOC_2017_Ali2022": {

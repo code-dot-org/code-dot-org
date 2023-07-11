@@ -72,6 +72,7 @@ body.oceans-blue {
 
 body.music-black {
   background-color: $dark_black;
+  overscroll-behavior: none;
 }
 
 h1 {
@@ -823,7 +824,7 @@ $small-footer-standard-width: 400px;
   height: 24px;
 }
 
-.oceans-blue .small-footer-base {
+.oceans-blue .small-footer-base, .music-black .small-footer-base {
   background-color: initial;
   border-top: initial;
 }
