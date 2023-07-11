@@ -81,6 +81,8 @@ const getInitialFilterStates = () => {
   Object.keys(urlParams).forEach(paramKey => {
     if (filterTypeKeys.includes(paramKey)) {
       filters[paramKey] = getValidParamValues(paramKey, urlParams[paramKey]);
+    } else if (paramKey === 'translated') {
+      filters['translated'] = urlParams[paramKey] === 'true';
     }
   });
   return filters;
@@ -196,7 +198,8 @@ const CurriculumCatalog = ({
     newFilters[filterKey] = values;
     setAppliedFilters(newFilters);
 
-    const valuesParam = values.length > 0 ? values : undefined;
+    const valuesParam =
+      values.length > 0 || filterKey === 'translated' ? values : undefined;
     updateQueryParam(filterKey, valuesParam, true);
   };
 
@@ -227,7 +230,10 @@ const CurriculumCatalog = ({
     Object.keys(filterTypes).forEach(filterKey =>
       updateQueryParam(filterKey, undefined, false)
     );
-  }, []);
+    if (!isEnglish) {
+      updateQueryParam('translated', undefined, false);
+    }
+  }, [isEnglish]);
 
   // Clears selections within the given filter.
   const handleClearAllOfFilter = filterKey => {
