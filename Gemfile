@@ -101,7 +101,6 @@ group :development, :test do
 
   gem 'fakeredis', require: false
   gem 'mocha', require: false
-  gem 'sqlite3'
   gem 'timecop'
 
   # For UI testing.
