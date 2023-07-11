@@ -5,11 +5,16 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Course",
-  "marketing_initiative": null,
-  "grade_levels": null,
+  "marketing_initiative": "CSF",
+  "grade_levels": "K,1,2,3,4,5,6",
   "header": "csf",
   "image": null,
   "cs_topic": null,
   "school_subject": null,
-  "device_compatibility": null
+  "device_compatibility": null,
+  "description": null,
+  "self_paced_professional_learning": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null
 }
