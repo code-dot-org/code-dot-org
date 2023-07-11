@@ -44,7 +44,7 @@ export function setUpBlocklyForMusicLab(defaultSound: string | undefined) {
   for (const blockType of Object.keys(typedMusicBlocks)) {
     const blockConfig = typedMusicBlocks[blockType] as BlockConfig;
 
-    // Patch up the default sound in case the library provides one.
+    // Patch up the default sound if the library provides one.
     if (
       blockType === BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2 &&
       defaultSound
