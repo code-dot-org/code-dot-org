@@ -16,7 +16,6 @@ import {
   LevelProperties,
   ProjectManagerStorageType,
   ProjectSources,
-  ProjectType,
 } from './types';
 import Lab2Registry from './Lab2Registry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
@@ -55,7 +54,6 @@ export interface LabState {
   // Validation status for the current level. This is used by the progress system to determine
   // what instructions to display and if the user has satisfied the validation conditions, if present.
   validationState: ValidationState;
-  currentProjectType: ProjectType | undefined;
 }
 
 const initialState: LabState = {
@@ -69,7 +67,6 @@ const initialState: LabState = {
   hideShareAndRemix: true,
   isProjectLevel: false,
   validationState: {...initialValidationState},
-  currentProjectType: undefined,
 };
 
 // Thunks
@@ -221,12 +218,6 @@ const labSlice = createSlice({
     setValidationState(state, action: PayloadAction<ValidationState>) {
       state.validationState = {...action.payload};
     },
-    setCurrentProjectType(
-      state,
-      action: PayloadAction<ProjectType | undefined>
-    ) {
-      state.currentProjectType = action.payload;
-    },
   },
   extraReducers: builder => {
     builder.addCase(setUpWithLevel.fulfilled, state => {
@@ -356,7 +347,6 @@ export const {
   setLevelData,
   setLabReadyForReload,
   setValidationState,
-  setCurrentProjectType,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.

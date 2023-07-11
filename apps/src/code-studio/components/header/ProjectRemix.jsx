@@ -5,6 +5,7 @@ import i18n from '@cdo/locale';
 import * as utils from '../../../utils';
 import {refreshProjectName} from '../../projectRedux';
 import {styles} from './EditableProjectName';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 class ProjectRemix extends React.Component {
   static propTypes = {
@@ -15,6 +16,14 @@ class ProjectRemix extends React.Component {
   };
 
   remixProject = () => {
+    if (Lab2Registry.hasEnabledProjects()) {
+      this.remixLab2Project();
+    } else {
+      this.remixLegacyProject();
+    }
+  };
+
+  remixLegacyProject = () => {
     if (
       dashboard.project.getCurrentId() &&
       dashboard.project.canServerSideRemix()
@@ -38,6 +47,10 @@ class ProjectRemix extends React.Component {
         .then(() => this.props.refreshProjectName())
         .catch(err => console.log(err));
     }
+  };
+
+  remixLab2Project = () => {
+    Lab2Registry.getInstance().getProjectManager()?.redirectToRemix();
   };
 
   render() {
