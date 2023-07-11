@@ -1,3 +1,5 @@
+// This file contains customizations to CDO Blockly Sprite Lab blocks.
+
 export const blocks = {
   // Called by block_utils when creating Sprite Lab blocks with mini-toolboxes.
   initializeMiniToolbox(miniToolboxBlocks) {
