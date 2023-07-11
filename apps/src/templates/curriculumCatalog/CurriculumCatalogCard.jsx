@@ -121,10 +121,6 @@ const CustomizableCurriculumCatalogCard = ({
   courseId,
   ...props
 }) => {
-  const pathToCourseFromCatalog = `${pathToCourse}${
-    pathToCourse.includes('?') ? '&' : '?'
-  }fromCatalog=true`;
-
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
 
   const handleClickAssign = () => {
@@ -221,7 +217,7 @@ const CustomizableCurriculumCatalogCard = ({
               __useDeprecatedTag
               color={Button.ButtonColor.neutralDark}
               type="button"
-              href={pathToCourseFromCatalog}
+              href={pathToCourse}
               aria-label={quickViewButtonDescription}
               text={quickViewButtonText}
             />
