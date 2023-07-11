@@ -23,6 +23,7 @@ export default class StudentHomepage extends Component {
     studentId: PropTypes.number.isRequired,
     isEnglish: PropTypes.bool.isRequired,
     showVerifiedTeacherWarning: PropTypes.bool,
+    showDeprecatedCalcAndEvalWarning: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -38,6 +39,7 @@ export default class StudentHomepage extends Component {
       hasFeedback,
       isEnglish,
       showVerifiedTeacherWarning,
+      showDeprecatedCalcAndEvalWarning,
     } = this.props;
     const {canViewAdvancedTools, studentId} = this.props;
     // Verify background image works for both LTR and RTL languages.
@@ -58,6 +60,16 @@ export default class StudentHomepage extends Component {
               type={NotificationType.failure}
               notice={i18n.studentAsVerifiedTeacherWarning()}
               details={i18n.studentAsVerifiedTeacherDetails()}
+              buttonText={i18n.learnMore()}
+              buttonLink="https://support.code.org/hc/en-us/articles/360023222371-How-can-I-change-my-account-type-from-student-to-teacher-or-vice-versa-"
+              dismissible={false}
+            />
+          )}
+          {showDeprecatedCalcAndEvalWarning && (
+            <Notification
+              type={NotificationType.warning}
+              notice={i18n.deprecatedCalcAndEvalWarning()}
+              details={i18n.deprecatedCalcAndEvalDetails()}
               buttonText={i18n.learnMore()}
               buttonLink="https://support.code.org/hc/en-us/articles/360023222371-How-can-I-change-my-account-type-from-student-to-teacher-or-vice-versa-"
               dismissible={false}
