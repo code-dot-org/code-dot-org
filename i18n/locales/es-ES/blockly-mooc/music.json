@@ -63,5 +63,7 @@
   "startOver": "Volver a empezar",
   "upload": "Subir",
   "panelHeaderInstructions": "Instrucciones",
-  "panelHeaderWorkspace": "Espacio de trabajo"
+  "panelHeaderWorkspace": "Espacio de trabajo",
+  "panelHeaderControls": "Controles",
+  "continue": "Continuar"
 }

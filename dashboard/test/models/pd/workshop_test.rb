@@ -93,7 +93,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     assert Pd::Workshop.exclude_summer.exclude? summer_workshop
     assert Pd::Workshop.exclude_summer.exclude? teachercon
-    assert Pd::Workshop.exclude_summer.include? @workshop
+    assert_includes(Pd::Workshop.exclude_summer, @workshop)
   end
 
   test 'managed_by' do
@@ -765,9 +765,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     e = assert_raises RuntimeError do
       Pd::Workshop.send_reminder_for_upcoming_in_days(1)
     end
-    assert e.message.include? 'Failed to send 1 day workshop reminders:'
-    assert e.message.include? 'teacher enrollment'
-    assert e.message.include? 'bad email'
+    assert_includes(e.message, 'Failed to send 1 day workshop reminders:')
+    assert_includes(e.message, 'teacher enrollment')
+    assert_includes(e.message, 'bad email')
   end
 
   test 'errors in organizer reminders in send_reminder_for_upcoming_in_days do not stop batch' do
@@ -785,9 +785,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     e = assert_raises RuntimeError do
       Pd::Workshop.send_reminder_for_upcoming_in_days(1)
     end
-    assert e.message.include? 'Failed to send 1 day workshop reminders:'
-    assert e.message.include? 'organizer workshop'
-    assert e.message.include? 'bad email'
+    assert_includes(e.message, 'Failed to send 1 day workshop reminders:')
+    assert_includes(e.message, 'organizer workshop')
+    assert_includes(e.message, 'bad email')
   end
 
   test 'errors in facilitator reminders in send_reminder_for_upcoming_in_days do not stop batch' do
@@ -804,9 +804,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     e = assert_raises RuntimeError do
       Pd::Workshop.send_reminder_for_upcoming_in_days(1)
     end
-    assert e.message.include? 'Failed to send 1 day workshop reminders:'
-    assert e.message.include? 'facilitator'
-    assert e.message.include? 'bad email'
+    assert_includes(e.message, 'Failed to send 1 day workshop reminders:')
+    assert_includes(e.message, 'facilitator')
+    assert_includes(e.message, 'bad email')
   end
 
   test 'facilitator reminders are skipped when the facilitator is also the organizer' do
@@ -1427,28 +1427,28 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     csf_workshop = create :workshop, course: COURSE_CSF
     potential_organizer_ids = csf_workshop.potential_organizers.ids
 
-    assert potential_organizer_ids.include? workshop_admin.id
-    assert potential_organizer_ids.include? program_manager.id
-    assert potential_organizer_ids.include? csf_facilitator.id
+    assert_includes(potential_organizer_ids, workshop_admin.id)
+    assert_includes(potential_organizer_ids, program_manager.id)
+    assert_includes(potential_organizer_ids, csf_facilitator.id)
     # don't include other types of facilitators
-    refute potential_organizer_ids.include? csd_facilitator.id
+    refute_includes(potential_organizer_ids, csd_facilitator.id)
 
     # non-csf workshop without regional partner has workshop admins and all program managers in list
     csd_workshop = create :workshop, course: COURSE_CSD
     potential_organizer_ids = csd_workshop.potential_organizers.ids
-    assert potential_organizer_ids.include? workshop_admin.id
-    assert potential_organizer_ids.include? program_manager.id
+    assert_includes(potential_organizer_ids, workshop_admin.id)
+    assert_includes(potential_organizer_ids, program_manager.id)
     # facilitators cannot be organizers for non-csf workshops
-    refute potential_organizer_ids.include? csd_facilitator.id
+    refute_includes(potential_organizer_ids, csd_facilitator.id)
 
     # non-csf workshop with a regional partner has only that regional partner's program managers, and all workshop admins
     workshop_partner = create :regional_partner
     workshop_partner_program_manager = create :program_manager, regional_partner: workshop_partner
     csd_workshop.regional_partner = workshop_partner
     potential_organizer_ids = csd_workshop.potential_organizers.ids
-    assert potential_organizer_ids.include? workshop_admin.id
-    assert potential_organizer_ids.include? workshop_partner_program_manager.id
-    refute potential_organizer_ids.include? program_manager.id
+    assert_includes(potential_organizer_ids, workshop_admin.id)
+    assert_includes(potential_organizer_ids, workshop_partner_program_manager.id)
+    refute_includes(potential_organizer_ids, program_manager.id)
   end
 
   test 'virtual workshops don\'t automatically suppress email' do

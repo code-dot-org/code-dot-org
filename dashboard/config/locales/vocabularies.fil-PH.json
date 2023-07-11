@@ -338,6 +338,7 @@
           "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
         "programming/coursed/2022": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "frustrated/coursed/2022": {
@@ -572,6 +573,7 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "programming/courseb/2022": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "persistence/courseb/2022": {
@@ -610,6 +612,7 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "programming/express/2022": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "behavior/express/2022": {
@@ -720,6 +723,7 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "programming/pre-express/2022": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "persistence/pre-express/2022": {
@@ -771,6 +775,7 @@
           "definition": "Bahagi ng program na hindi gumagana ng tama."
         },
         "programming/coursea/2022": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "loop/coursea/2022": {
@@ -809,6 +814,7 @@
           "definition": "Hindi pagsuko."
         },
         "programming/coursec/2022": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "angle/coursec/2022": {
@@ -838,6 +844,9 @@
         "binary/coursec/2022": {
           "word": "Binary",
           "definition": "Isang paraan ng pagkatawan ng impormasyon gamit lamang ang dalawang opsyon."
+        },
+        "computer/csd/2022": {
+          "word": "Computer"
         },
         "input/csd/2022": {
           "word": "Input"
@@ -1055,6 +1064,7 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "programming/courseb/2021": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "persistence/courseb/2021": {
@@ -1106,6 +1116,7 @@
           "definition": "Bahagi ng program na hindi gumagana ng tama."
         },
         "programming/coursea/2021": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "loop/coursea/2021": {
@@ -1140,6 +1151,7 @@
           "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command."
         },
         "programming/coursec/2021": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "loop/coursec/2021": {
@@ -1179,6 +1191,7 @@
           "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
         "programming/coursed/2021": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "frustrated/coursed/2021": {
@@ -1244,6 +1257,7 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "programming/express/2021": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "behavior/express/2021": {
@@ -1354,6 +1368,7 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "programming/pre-express/2021": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "persistence/pre-express/2021": {
@@ -1477,6 +1492,9 @@
         },
         "function/csd/2021": {
           "word": "Function"
+        },
+        "computer/csd/2021": {
+          "word": "Computer"
         },
         "input/csd/2021": {
           "word": "Input"

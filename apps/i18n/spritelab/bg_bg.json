@@ -8,6 +8,7 @@
   "addSpaces": "В отпечатаното съобщение липсват някои празни мяста. Можеш ли да измислиш къде да ги добавиш?",
   "addText": "Добави текст към екрана си с блок за отпечатване:\n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"/></block></value></block></xml>",
   "addTitleScreen": "Трябва да добавиш заглавен екран към твоя проект. ",
+  "addWhenTouchesEvent": "Трябва да имате `когато докосва` блок за някой от спрайтовете, който ще докосне. \n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"когато\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"съньо извънземно\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"розово извънземно\"</title></block></value></block></xml>",
   "addWhenTouchesEventToMakePetGrow": "Добави събитие блокче `когато се докосват` и направи твоят любимец да расте, когато яде.",
   "allBehaviors": "Увери се, че всички спрайтове имат поведение.",
   "answerPrompt": "Не забравяй да въведеш нещо в подканата си!",

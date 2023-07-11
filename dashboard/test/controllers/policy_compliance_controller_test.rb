@@ -197,6 +197,6 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
       controller: :policy_compliance,
       only_path: false,
     )
-    assert mail.body.to_s.include?(token_endpoint_url)
+    assert_includes(mail.body.to_s, token_endpoint_url)
   end
 end

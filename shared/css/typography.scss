@@ -1,5 +1,9 @@
 @import "color", "font", "barlow-semi-condensed-font";
 
+/* This file is an adopted copy of apps/src/componentLibrary/typography/typography.module.scss.
+   Updating styles in this file will require a manual sync with the that file.
+*/
+
 // This stylesheet can be imported to maintain typographic
 // consistency across Dashboard and Pegasus sites.
 
@@ -9,7 +13,7 @@
 // identical classes for potential use on other elements if needed.
 
 // ----------------------------------------
-// v 1.0.1
+// v 1.1.1
 // ----------------------------------------
 
 // Values

@@ -7,11 +7,12 @@
       "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-04 19:42:26 UTC",
+    "serialized_at": "2023-07-05 19:17:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
