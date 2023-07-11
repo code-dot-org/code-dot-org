@@ -1,21 +1,25 @@
+require 'cdo/shared_constants'
+
 class Policies::ChildAccount
   # Values for the `child_account_compliance_state` attribute
   module ComplianceState
     # The student's account has been used to issue a request to a parent.
-    LOCKED_OUT = 'l'.freeze
+    LOCKED_OUT = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.LOCKED_OUT
 
     # The student's account has been used to issue a request to a parent.
-    REQUEST_SENT = 's'.freeze
+    REQUEST_SENT = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.REQUEST_SENT
 
     # The student's account has been approved by their parent.
-    PERMISSION_GRANTED = 'g'.freeze
+    PERMISSION_GRANTED = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.PERMISSION_GRANTED
   end
 
   # The individual US State child account policy configuration
   # max_age: the oldest age of the child at which this policy applies.
+  # start_date: the date on which this policy first went into effect.
   STATE_POLICY = {
     'CO' => {
-      max_age: 12
+      max_age: 12,
+      start_date: Date.new(2023, 7, 1)
     }
   }.freeze
 
@@ -25,6 +29,12 @@ class Policies::ChildAccount
   def self.compliant?(user)
     return true unless parent_permission_required?(user)
     user.child_account_compliance_state == ComplianceState::PERMISSION_GRANTED
+  end
+
+  # Checks if a user is affected by a state policy but was created prior to the
+  # policy going into effect.
+  def self.grandfathered_user?(user)
+    parent_permission_required?(user) && user.created_at < STATE_POLICY[user.us_state][:start_date]
   end
 
   # Check if parent permission is required for this account according to our

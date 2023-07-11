@@ -137,4 +137,17 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       assert_equal last_updated, user.child_account_compliance_state_last_updated
     end
   end
+
+  class TeacherUsState < ActiveSupport::TestCase
+    test 'Sets the student\'s us_state based on their teacher\'s state' do
+      school_info = create :school_info, state: 'WA'
+      teacher = create :teacher, :with_school_info, school_info: school_info
+      section = create :section, user: teacher
+      student = create(:follower, section: section).student_user
+
+      Services::ChildAccount.teacher_us_state!(student)
+
+      assert_equal 'WA', student.reload.us_state
+    end
+  end
 end
