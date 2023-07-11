@@ -139,7 +139,7 @@
       "validations": [
         {
           "conditions": [
-            "played_one_sound"
+            {"name": "played_sounds_together", "value": 1}
           ],
           "message": "Next, we'll put these two parts together!",
           "next": "true"
