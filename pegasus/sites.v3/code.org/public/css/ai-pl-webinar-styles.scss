@@ -5,11 +5,11 @@
 
 .hero-ai-pl-webinar {
   background-image: url(/images/ai/pl/webinar/hero--1.png), url(/images/ai/pl/webinar/hero--2.png);
-  background-position: left center, right center;
+  background-position: left top, right bottom;
   background-repeat: no-repeat, no-repeat;
   background-color: #360161;
-  background-size: contain;
-
+  //background-size: contain;
+  background-size: 250px, 500px;
   &__by {
     display: flex;
     align-items: center;
@@ -32,7 +32,7 @@
   }
 
   @media (max-width: 1499px) {
-    background-position: calc(20vw - 350px) center, right center
+    background-position: calc(20vw - 350px) top, right bottom;
   }
 
   @media (max-width: 1279px) {
@@ -84,6 +84,15 @@
 
     img {
       margin: 0 26px
+    }
+
+  }
+
+  @media (max-width: 767px) {
+    &__list {
+      img {
+        margin: 0 26px 8px
+      }
     }
   }
 }
