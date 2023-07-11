@@ -6,4 +6,19 @@ theme: responsive_full_width
 %link{href: '/css/generated/design-system-pegasus.css', rel: 'stylesheet'}
 %link{href: "/css/generated/csa-styles.css", rel: "stylesheet"}
 
+%section.hero-banner-basic.overlay
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper
+      %h1{style: "color: white"}
+        =hoc_s(:curriculum_name_csd)
+      %p{style: "color: white"}
+        =hoc_s(:csd_page_top_desc)
+      %a.link-button{href: CDO.studio_url("/courses/csa-2023?viewAs=Instructor")}
+        =hoc_s(:call_to_action_explore_course)
+    %figure
+      %img{src: "/images/banners/banner-csa-student-code-paint.png", alt: ""}
+    .clear
+
+
+
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::CSA_CURRICULUM_PAGE_VISITED_EVENT
