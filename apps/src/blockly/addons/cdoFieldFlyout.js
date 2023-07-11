@@ -3,10 +3,11 @@ import CdoBlockFlyout from './cdoBlockFlyout';
 
 export default class CdoFieldFlyout extends GoogleBlockly.Field {
   /**
+   * This is a customized class that extends Blockly's Field class.
+   * This field depends on `CdoBlockFlyout`, which is used to create a flyout
+   * of blocks. We colloquially refer to this as a block's "mini-toolbox".
    * @param value The initial value of the field.
    * @param {Object} opt_config A map of options used to configure the field.
-   *    Refer to the individual field's documentation for a list of properties
-   * this parameter supports.
    */
   constructor(value, opt_config) {
     super(value);

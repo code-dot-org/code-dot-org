@@ -3,13 +3,13 @@ import GoogleBlockly from 'blockly/core';
 export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   /**
    * This is a customized flyout class that extends the HorizontalFlyout class.
-   * This flyout is intended to be place inside of a block's FieldFlyout.
+   * This flyout is intended to be placed inside of a block's FieldFlyout.
    *
    * @param {Object} workspaceOptions - The options for constructing the class.
    */
   constructor(workspaceOptions) {
     super(workspaceOptions);
-    this.horizontalLayout_ = !0;
+    this.horizontalLayout_ = true;
     this.minWidth_ = workspaceOptions.minWidth || this.minWidth_;
     this.maxWidth_ = workspaceOptions.maxWidth || this.maxWidth_;
   }
@@ -70,14 +70,17 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     this.height_ = 0;
     this.width_ = 0;
     const topBlocks = this.workspace_.getTopBlocks(false);
-    for (let i = 0, block; (block = topBlocks[i]); i++) {
+    topBlocks.forEach(block => {
       const blockHW = block.getHeightWidth();
       this.updateHeight_(blockHW.height);
       this.updateWidth_(blockHW.width);
+
       if (this.rectMap_.has(block)) {
-        this.moveRectToBlock_(this.rectMap_.get(block), block);
+        const rect = this.rectMap_.get(block);
+        this.moveRectToBlock_(rect, block);
       }
-    }
+    });
+
     // We need to set the flyout width based on the block itself, excluding children.
     // Using block.getHeightWidth() would include blocks connected to input and next
     // connections, which could make the flyout wider than the block that contains it.
