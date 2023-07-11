@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_05_195726) do
+ActiveRecord::Schema.define(version: 2023_07_10_184729) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -620,6 +620,25 @@ ActiveRecord::Schema.define(version: 2023_07_05_195726) do
     t.datetime "updated_at", null: false
     t.index ["script_id", "level_id"], name: "index_hint_view_requests_on_script_id_and_level_id"
     t.index ["user_id"], name: "index_hint_view_requests_on_user_id"
+  end
+
+  create_table "learning_goal_evidence_levels", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "learning_goal_id"
+    t.integer "understanding"
+    t.text "teacher_description"
+    t.text "ai_prompt"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "learning_goals", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "position"
+    t.integer "lesson_id"
+    t.integer "level_id"
+    t.string "learning_goal"
+    t.boolean "ai_enabled"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "lesson_activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
