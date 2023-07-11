@@ -7,10 +7,12 @@
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 import Lab2Registry from '../Lab2Registry';
-import {setUpWithLevel, setUpWithoutLevel} from '../lab2Redux';
+import {LabState, setUpWithLevel, setUpWithoutLevel} from '../lab2Redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
+import header from '@cdo/apps/code-studio/header';
+import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
 
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   children,
@@ -21,6 +23,19 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   );
   const scriptId = useSelector(
     (state: {progress: ProgressState}) => state.progress.scriptId || undefined
+  );
+
+  const isStandaloneProjectLevel = useSelector(
+    (state: {lab: LabState}) => state.lab.isProjectLevel
+  );
+  const hideShareAndRemix = useSelector(
+    (state: {lab: LabState}) => state.lab.hideShareAndRemix
+  );
+  const loadedChannelId = useSelector(
+    (state: {lab: LabState}) => state.lab.channel && state.lab.channel.id
+  );
+  const isOwnerOfChannel = useSelector(
+    (state: {lab: LabState}) => state.lab.channel && state.lab.channel.isOwner
   );
 
   const levelPropertiesPath = useSelector(getLevelPropertiesPath);
@@ -69,6 +84,34 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       }
     });
   }, []);
+
+  useEffect(() => {
+    // clear header when we have a change, then either load a new header or
+    // leave the header blank.
+    dispatch(clearHeader());
+    if (loadedChannelId) {
+      if (!isOwnerOfChannel) {
+        // non-owners see minimal header
+        header.showMinimalProjectHeader();
+      } else if (isStandaloneProjectLevel) {
+        // standalone projects see full header (includes rename option)
+        header.showProjectHeader();
+      } else if (!isStandaloneProjectLevel) {
+        // project backed levels see project backed header, which can
+        // conditionally show share and remix.
+        header.showHeaderForProjectBacked({
+          showShareAndRemix: !hideShareAndRemix,
+        });
+      }
+    } else {
+    }
+  }, [
+    hideShareAndRemix,
+    isStandaloneProjectLevel,
+    loadedChannelId,
+    isOwnerOfChannel,
+    dispatch,
+  ]);
 
   return <>{children}</>;
 };
