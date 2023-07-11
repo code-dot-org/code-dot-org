@@ -1063,18 +1063,18 @@ exports.createJsWrapperBlockCreator = function (
           this.setPreviousStatement(true);
         }
 
+        // Boolean constant to store when we show mini-toolbox.
         // Use window.appOptions, not global appOptions, because the levelbuilder
         // block page doesn't have appOptions, but we *do* want to show the mini-toolbox
-        // there
-        let flyoutToggleButton;
-        if (
+        // there.
+        const showMiniToolbox =
           miniToolboxBlocks &&
-          (!window.appOptions || window.appOptions.level.miniToolbox)
-        ) {
-          flyoutToggleButton =
-            Blockly.customBlocks.initializeMiniToolbox.bind(this)(
-              miniToolboxBlocks
-            );
+          (!window.appOptions || window.appOptions.level.miniToolbox);
+
+        if (showMiniToolbox) {
+          Blockly.customBlocks.initializeMiniToolbox.bind(this)(
+            miniToolboxBlocks
+          );
         }
 
         // These blocks should not be loaded into a Google Blockly level.
