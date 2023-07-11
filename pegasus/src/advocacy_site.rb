@@ -73,7 +73,7 @@ class AdvocacySite
           [
             {
               text_actual: "Our state policy agenda",
-              url: "/2023_ten_policy_ideas.pdf",
+              url: "/2023_making_cs_foundational.pdf",
               new_tab: true
             },
             {
