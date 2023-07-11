@@ -446,7 +446,7 @@ class Blockly < Level
       level_prop['teacherMarkdown'] = nil
 
       # Set some values that Blockly expects on the root of its options string
-      level_prop.reject! {|_, value| value.nil?}
+      level_prop.compact!
     end
     options.freeze
   end
@@ -570,9 +570,9 @@ class Blockly < Level
         return loc_val
       end
     else
-      val = [game.app, game.name].map do |name|
+      val = [game.app, game.name].filter_map do |name|
         I18n.t("data.level.instructions.#{name}_#{level_num}", default: nil)
-      end.compact.first
+      end.first
       return val unless val.nil?
     end
   end

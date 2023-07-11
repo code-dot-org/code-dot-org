@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T23:01:05.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -70,7 +75,7 @@
     "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "start_animations": "{\r\n    \"orderedKeys\": [\r\n        \"red_car\",\r\n        \"orange_cone\"\r\n    ],\r\n    \"propsByKey\": {\r\n        \"red_car\": {\r\n            \"name\": \"red_car\",\r\n            \"sourceUrl\": \"https://images.code.org/5f738da1a2b1ef8af124e4470e2babe7-image-1469742830481.png\",\r\n            \"frameSize\": {\r\n                \"x\": 50,\r\n                \"y\": 50\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        },\r\n        \"orange_cone\": {\r\n            \"name\": \"orange_cone\",\r\n            \"sourceUrl\": \"https://images.code.org/f22e6b1a636337820e53fb37a137b3d1-image-1469742992179.png\",\r\n            \"frameSize\": {\r\n                \"x\": 35,\r\n                \"y\": 35\r\n            },\r\n            \"frameCount\": 1,\r\n            \"frameDelay\": 2,\r\n            \"looping\": true\r\n        }\r\n    }\r\n}",
-    "long_instructions": "# Sprite Interactions\r\n\r\nIn the sample game, the obstacle (mushroom) rotated and the health decreased when the player (frog) touched it.  The score increased and the target (fly) moved back to the right of the screen when the player (frog) touched it.\r\n\r\n# Do This\r\n\r\n* Find the code comment `// SPRITE INTERACTIONS` and read the comments in that section.\r\n* Create a conditional that checks whether the player sprite is touching the obstacle sprite.\r\n  * If they are touching, decrease the health and change the obstacle sprite in some way.\r\n  * Run the program to test your code.\r\n* Create a conditional that checks whether the player sprite is touching the target sprite.\r\n  * If they are touching, increase the score and move the target back to the right of the screen.\r\n  * Run the program to test your code. \r\n  \r\n*You may want to use watchers to keep track of your score and health.*\r\n\r\n",
+    "long_instructions": "# Sprite Interactions\r\n\r\nIn the sample game, the obstacle (mushroom) rotated and the health decreased when the player (frog) touched it.  The score increased and the target (fly) moved back to the right of the screen when the player (frog) touched it.\r\n\r\n# Do This\r\n\r\n1) Find the code comment `// SPRITE INTERACTIONS` and read the comments in that section.\r\n* Create a conditional that checks whether the player sprite is touching the obstacle sprite.\r\n  * If they are touching, decrease the health and change the obstacle sprite in some way.\r\n  * Run the program to test your code.\r\n* Create a conditional that checks whether the player sprite is touching the target sprite.\r\n  * If they are touching, increase the score and move the target back to the right of the screen.\r\n  * Run the program to test your code. \r\n  \r\n*You may want to use watchers to keep track of your score and health.*\r\n\r\n",
     "pause_animations_by_default": "false",
     "palette_category_at_start": "control",
     "project_template_level_name": "CSD U3 abstraction sidescroll template_2023",
@@ -107,13 +112,8 @@
     "validation_enabled": "true",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T23:01:05.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:01:05.638+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collisions sidescroll2_2022\\\"\"],\"cloned_from\":\"CSD U3 collisions sidescroll2_2022\"},{\"changed_at\":\"2023-03-09 17:49:20 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-03 17:12:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:01:05.638+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collisions sidescroll2_2022\\\"\"],\"cloned_from\":\"CSD U3 collisions sidescroll2_2022\"},{\"changed_at\":\"2023-03-09 17:49:20 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-03 17:12:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-25 19:32:57 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

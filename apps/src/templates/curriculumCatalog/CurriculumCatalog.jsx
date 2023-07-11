@@ -1,20 +1,20 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import PropTypes from 'prop-types';
-
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
 import {queryParams, updateQueryParam} from '../../code-studio/utils';
 import HeaderBanner from '../HeaderBanner';
-import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
+import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-bg.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
 import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
-
+import Toggle from '../../componentLibrary/toggle/Toggle.tsx';
 import Button from '@cdo/apps/templates/Button';
 import {
   Heading5,
   Heading6,
-  BodyOneText,
+  BodyTwoText,
 } from '@cdo/apps/componentLibrary/typography';
 import CheckboxDropdown from '../CheckboxDropdown';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
@@ -54,7 +54,7 @@ const filterTypes = {
 };
 
 const getEmptyFilters = () => {
-  let filters = {};
+  let filters = {translated: false};
   Object.keys(filterTypes).forEach(filterKey => {
     filters[filterKey] = [];
   });
@@ -154,11 +154,23 @@ const filterByDevice = (curriculum, deviceFilters) => {
   return true;
 };
 
-const CurriculumCatalog = ({curriculaData, isEnglish}) => {
+const CurriculumCatalog = ({
+  curriculaData,
+  isEnglish,
+  languageNativeName,
+  ...props
+}) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
+  const [numFilteredTranslatedCurricula, setNumFilteredTranslatedCurricula] =
+    useState(
+      filteredCurricula.filter(curriculum => curriculum.is_translated).length
+    );
   const [appliedFilters, setAppliedFilters] = useState(
     getInitialFilterStates()
   );
+  const [assignSuccessMessage, setAssignSuccessMessage] = useState('');
+  const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
+    useState(false);
 
   // Filters out any Curriculum Catalog Cards of courses that do not match the filter criteria.
   useEffect(() => {
@@ -167,9 +179,14 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
         filterByGradeLevel(curriculum, appliedFilters['grade']) &&
         filterByDuration(curriculum, appliedFilters['duration']) &&
         filterByTopic(curriculum, appliedFilters['topic']) &&
-        filterByDevice(curriculum, appliedFilters['device'])
+        filterByDevice(curriculum, appliedFilters['device']) &&
+        (!appliedFilters['translated'] || curriculum.is_translated)
     );
+    const newNumFilteredTranslatedCurricula = newFilteredCurricula.filter(
+      curriculum => curriculum.is_translated
+    ).length;
 
+    setNumFilteredTranslatedCurricula(newNumFilteredTranslatedCurricula);
     setFilteredCurricula(newFilteredCurricula);
   }, [curriculaData, appliedFilters]);
 
@@ -217,6 +234,15 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     handleUpdateFilter(filterKey, []);
   };
 
+  const handleAssignSuccess = assignmentData => {
+    setAssignSuccessMessage(
+      i18n.successAssigningCurriculum({
+        curriculum: assignmentData.assignedTitle,
+      })
+    );
+    setShowAssignSuccessMessage(true);
+  };
+
   // Renders search results based on the applied filters (or shows the No matching curriculums
   // message if no results).
   const renderSearchResults = () => {
@@ -233,6 +259,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
                 key,
                 image,
                 display_name,
+                display_name_with_latest_year,
                 grade_levels,
                 duration,
                 school_subject,
@@ -243,16 +270,20 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
                 course_offering_id,
                 script_id,
                 is_standalone_unit,
+                is_translated,
               }) => (
                 <CurriculumCatalogCard
                   key={key}
                   courseDisplayName={display_name}
+                  courseDisplayNameWithLatestYear={
+                    display_name_with_latest_year
+                  }
                   imageSrc={image || undefined}
                   duration={duration}
                   gradesArray={grade_levels.split(',')}
                   subjects={school_subject?.split(',')}
                   topics={cs_topic?.split(',')}
-                  isTranslated={false} // TODO [MEG]: actually pass in this data
+                  isTranslated={is_translated}
                   isEnglish={isEnglish}
                   pathToCourse={course_version_path}
                   courseVersionId={course_version_id}
@@ -260,6 +291,8 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
                   courseOfferingId={course_offering_id}
                   scriptId={script_id}
                   isStandAloneUnit={is_standalone_unit}
+                  onAssignSuccess={response => handleAssignSuccess(response)}
+                  {...props}
                 />
               )
             )}
@@ -276,9 +309,9 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
           <Heading5 className={style.noResultsHeading}>
             {i18n.noCurriculumSearchResultsHeader()}
           </Heading5>
-          <BodyOneText className={style.noResultsBody}>
+          <BodyTwoText className={style.noResultsBody}>
             {i18n.noCurriculumSearchResultsBody()}
-          </BodyOneText>
+          </BodyTwoText>
         </div>
       );
     }
@@ -293,6 +326,20 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
         backgroundUrl={CourseCatalogBannerBackground}
         imageUrl={CourseCatalogIllustration01}
       />
+      {showAssignSuccessMessage && (
+        <div className={style.assignSuccessMessageContainer}>
+          <BodyTwoText className={style.assignSuccessMessage}>
+            {assignSuccessMessage}
+          </BodyTwoText>
+          <button
+            aria-label="close success message"
+            onClick={() => setShowAssignSuccessMessage(false)}
+            type="button"
+          >
+            <strong>X</strong>
+          </button>
+        </div>
+      )}
       <div className={style.catalogFiltersContainer}>
         <Heading6 className={style.catalogFiltersRowLabel}>
           {i18n.filterBy()}
@@ -319,6 +366,32 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
           color={Button.ButtonColor.brandSecondaryDefault}
         />
       </div>
+      {!isEnglish && (
+        <div className={style.catalogLanguageFilterRow}>
+          <div className={style.catalogLanguageFilterRowNumAvailable}>
+            <BodyTwoText>
+              {i18n.numCurriculaAvailableInLanguage({
+                numCurricula: numFilteredTranslatedCurricula,
+                language: languageNativeName,
+              })}
+            </BodyTwoText>
+            <FontAwesome
+              icon="language"
+              className="fa-solid"
+              title={i18n.courseInYourLanguage()}
+            />
+          </div>
+          <Toggle
+            name="filterTranslatedToggle"
+            label={i18n.onlyShowCurriculaInLanguage({
+              language: languageNativeName,
+            })}
+            size="m"
+            checked={appliedFilters['translated']}
+            onChange={e => handleUpdateFilter('translated', e.target.checked)}
+          />
+        </div>
+      )}
       <div className={style.catalogContentContainer}>
         {renderSearchResults()}
       </div>
@@ -329,6 +402,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
 CurriculumCatalog.propTypes = {
   curriculaData: PropTypes.arrayOf(curriculumDataShape),
   isEnglish: PropTypes.bool.isRequired,
+  languageNativeName: PropTypes.string.isRequired,
 };
 
 export default CurriculumCatalog;
