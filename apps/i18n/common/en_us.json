@@ -747,6 +747,8 @@
   "deleteUsedImage": "{name} is used in {value, plural, one {1 place} other {# places}} in this app. If you delete it, the image will not appear in any of those places. Are you sure you want to delete it?",
   "deleting": "Deleting",
   "deletingWithEllipsis": "Deleting...",
+  "deprecatedCalcAndEvalWarning": "Your projects are going away",
+  "deprecatedCalcAndEvalDetails": "Calc and Eval projects are going away.",
   "description": "Description",
   "designMode": "Design",
   "detailView": "Detail View",

@@ -129,6 +129,9 @@ function showHomepage() {
             showVerifiedTeacherWarning={
               homepageData.showStudentAsVerifiedTeacherWarning
             }
+            showDeprecatedCalcAndEvalWarning={
+              homepageData.showDeprecatedCalcAndEvalWarning
+            }
           />
         )}
       </div>
