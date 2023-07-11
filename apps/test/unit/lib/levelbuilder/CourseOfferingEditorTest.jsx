@@ -32,6 +32,10 @@ describe('CourseOfferingEditor', () => {
         cs_topic: 'art_and_design',
         school_subject: 'science,english_language_arts',
         device_compatibility: JSON.stringify(deviceCompatibilities),
+        description: 'An introductory course into computer science.',
+        self_paced_professional_learning: 'Teaching AI and Machine Learning',
+        professional_learning:
+          'https://code.org/educate/professional-learning/middle-high',
       },
     };
   });
@@ -70,6 +74,10 @@ describe('CourseOfferingEditor', () => {
         cs_topic: 'art_and_design',
         school_subject: 'science,english_language_arts',
         device_compatibility: JSON.stringify(deviceCompatibilities),
+        description: 'An introductory course into computer science.',
+        self_paced_professional_learning: 'Teaching AI and Machine Learning',
+        professional_learning:
+          'https://code.org/educate/professional-learning/middle-high',
       };
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
         200,
@@ -143,6 +151,10 @@ describe('CourseOfferingEditor', () => {
         cs_topic: 'art_and_design',
         school_subject: 'science,english_language_arts',
         device_compatibility: JSON.stringify(deviceCompatibilities),
+        description: 'An introductory course into computer science.',
+        self_paced_professional_learning: 'Teaching AI and Machine Learning',
+        professional_learning:
+          'https://code.org/educate/professional-learning/middle-high',
       };
 
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
