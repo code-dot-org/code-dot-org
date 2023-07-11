@@ -4801,6 +4801,28 @@ class UserTest < ActiveSupport::TestCase
     DCDO.unstub(:get)
   end
 
+  test 'family name is not allowed on pl participants' do
+    user = create :user
+    family_name = 'TestFamilyName'
+
+    pl_section = create :section, :teacher_participants, user_id: @teacher.id
+    Follower.create!(section_id: pl_section.id, student_user_id: user.id)
+
+    assert(user.valid?)
+
+    user.family_name = family_name
+
+    assert_not(user.valid?)
+  end
+
+  test 'family name is not allowed on teachers' do
+    user = create :teacher
+    family_name = 'TestFamilyName'
+    user.family_name = family_name
+
+    assert_not(user.valid?)
+  end
+
   test 'school_info_school returns the school associated with the user' do
     school = create :school
     school_info = create :school_info, school: school
