@@ -46,7 +46,15 @@
   }
 
   .text-wrapper {
-    width: 64%;
+    width: 58%;
+
+    a {
+      color: $neutral-white;
+
+      &:hover {
+        color: $neutral-dark10;
+      }
+    }
 
     @media screen and (max-width: $width-sm) {
       width: 100%;

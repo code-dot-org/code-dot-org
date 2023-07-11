@@ -240,6 +240,7 @@
   curriculum_name_csd: "Computer Science Discoveries"
   curriculum_name_csp: "Computer Science Principles"
   curriculum_name_csc: "Computer Science Connections"
+  curriculum_name_csa: "AP® Computer Science A"
   curriculum_name_csc_02: "Any CS Connections Module"
   curriculum_name_csa: "Computer Science A"
   curriculum_name_ai: "AI & Machine Learning"
@@ -817,6 +818,14 @@
   csf_page_faq_answer_05: "Each CSF course includes 13-17 lessons designed for 45-minute periods. We recommend all students move from lesson to lesson at a pace set by the teacher. There are many teacher-led project levels designed to be experienced in unison while the skill-building lessons can be completed by students at their own pace."
   csf_page_faq_question_06: "What materials do I need for CS Fundamentals?"
   csf_page_faq_answer_06: "Many lessons have handouts that guide students through activities. These resources can be printed or assigned digitally. Some lessons call for typical classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url})."
+
+  csa_page_top_desc: "Introduce students to software engineering and object-oriented design while they learn the Java programming language in this free curriculum for [AP® Computer Science A (AP® CSA)](%{csa_url})."
+  csa_page_intro_heading: "A new approach to AP® CSA"
+  csa_page_intro_list_01: "Culturally responsive pedagogy"
+  csa_page_intro_list_02: "Real-world problem investigation"
+  csa_page_intro_list_03: "Explainer videos with diverse presenters"
+  csa_page_intro_list_04: "Open-ended projects for more personalized learning"
+  csa_page_intro_list_05: "Student-friendly code review tool"
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
