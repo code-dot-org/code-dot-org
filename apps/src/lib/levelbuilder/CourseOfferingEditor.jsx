@@ -344,7 +344,47 @@ export default function CourseOfferingEditor(props) {
           </select>
         </label>
       ))}
-
+      <h3>Professional Learning</h3>
+      Self-Paced Professional Learning
+      <HelpTip>
+        <p>
+          Pick the self-paced course offering that supports teachers teaching
+          the course offering.
+        </p>
+      </HelpTip>
+      <select
+        value={courseOffering.self_paced_professional_learning}
+        style={styles.dropdown}
+        onChange={e =>
+          updateCourseOffering(
+            'self_paced_professional_learning',
+            e.target.value
+          )
+        }
+      >
+        <option value="">{translatedNoneOption}</option>
+        {Object.values(props.selfPacedPLCourseOfferings).map(co => (
+          <option key={co} value={co.display_name}>
+            {co.display_name}
+          </option>
+        ))}
+      </select>
+      <br />
+      Professional Learning Program
+      <HelpTip>
+        <p>
+          Link to page where they can go to learn more about the professional
+          learning program
+        </p>
+      </HelpTip>
+      <input
+        type="text"
+        value={courseOffering.professional_learning_program}
+        style={styles.input}
+        onChange={e =>
+          updateCourseOffering('professional_learning_program', e.target.value)
+        }
+      />
       <SaveBar
         handleSave={handleSave}
         error={error}
@@ -372,6 +412,13 @@ CourseOfferingEditor.propTypes = {
     school_subject: PropTypes.string,
     device_compatibility: PropTypes.string,
     description: PropTypes.string,
+    self_paced_professional_learning: PropTypes.string,
+    professional_learning_program: PropTypes.string,
+  }),
+  selfPacedPLCourseOfferings: PropTypes.shape({
+    key: PropTypes.string,
+    display_name: PropTypes.string,
+    course_version_path: PropTypes.string,
   }),
 };
 
@@ -380,6 +427,7 @@ const styles = {
     margin: '0 0 0 7px',
   },
   descriptionInput: {
+    width: '75%',
     height: '75px',
   },
   input: {

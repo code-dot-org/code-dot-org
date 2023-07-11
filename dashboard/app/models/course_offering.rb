@@ -189,6 +189,10 @@ class CourseOffering < ApplicationRecord
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
+  def self.professional_learning_and_self_paced_course_offerings
+    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.get_instruction_type == 'self_paced'}.map(&:summarize_for_self_paced_pl_dropdown)
+  end
+
   def self.single_unit_course_offerings_containing_units_info(unit_ids)
     single_unit_course_offerings_containing_units(unit_ids).map {|co| co.summarize_for_unit_selector(unit_ids)}
   end
@@ -301,6 +305,14 @@ class CourseOffering < ApplicationRecord
     }
   end
 
+  def summarize_for_self_paced_pl_dropdown(locale_code = 'en-us')
+    {
+      key: key,
+      display_name: display_name,
+      course_version_path: path_to_latest_published_version(locale_code)
+    }
+  end
+
   def serialize
     {
       key: key,
@@ -376,6 +388,10 @@ class CourseOffering < ApplicationRecord
 
   def get_participant_audience
     course_versions&.first&.content_root&.participant_audience
+  end
+
+  def get_instruction_type
+    course_versions&.first&.content_root&.instruction_type
   end
 
   def grade_levels_list
