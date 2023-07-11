@@ -105,12 +105,12 @@ module AWS
         loop do
           sleep 1
           change_set = cfn.describe_change_set(change_set_name: change_set_id)
-          break unless %w(CREATE_PENDING CREATE_IN_PROGRESS).include?(change_set.status)
+          break unless change_set.status == "CREATE_PENDING" || change_set.status == "CREATE_IN_PROGRESS"
         end
         change_set.changes.each do |change|
           c = change.resource_change
           str = "#{c.action} #{c.logical_resource_id} [#{c.resource_type}] #{c.scope.join(', ')}"
-          str += " Replacement: #{c.replacement}" if %w(True Conditional).include?(c.replacement)
+          str += " Replacement: #{c.replacement}" if c.replacement == "True" || c.replacement == "Conditional"
           str += " (#{c.details.map {|d| d.target.name}.join(', ')})" if c.details.any?
           log.info str unless options[:quiet]
         end
