@@ -109,7 +109,7 @@ uk:
       Headings in HTML: Заголовки в HTML
       Hello World: Привіт, світе
       How to Create a Simple Function: Як створити просту функцію
-      How to Make a Sprite: Як зробити спрайт
+      How to Make a Sprite: Як створити спрайт
       Hyperlinks: Гіперпосилання
       Ice Age Loops: Ice Age Петлі
       Images and Sounds: Зображення та звуки
@@ -268,6 +268,7 @@ uk:
       'Video: Nested Loops': 'Відео: Вкладені цикли'
       'Video: Nested Loops with the Bee': 'Відео: Вкладені цикли з Бджілкою'
       'Video: Outbreak Simulator: Introduction': 'Відео: Симулятор спалаху: Вступ'
+      'Video: Pair Programming ': 'Відео: Парне програмування '
       'Video: Problem Solving Process': 'Відео: Процес вирішення проблем'
       'Video: Programming with Blocks': 'Відео: програмування з блоками'
       'Video: Programming with Rey and BB-8': 'Відео: Програмування з Рей та BB-8'
@@ -277,11 +278,11 @@ uk:
       'Video: Repeat Until Statements': 'Відео: Команда "повторити до"'
       'Video: Sprites in Action': 'Відео: Спрайти в дії'
       'Video: Star Wars Project': 'Відео: Проект «Зоряні війни»'
-      'Video: Text and Prompts': 'Відео: Текст та текстові поля'
+      'Video: Text and Prompts': 'Відео: Текст та питання'
       'Video: The Artist in Code Studio': 'Відео: Художник у Студії коду'
       'Video: The Collector': 'Відео: Колекціонерка'
       'Video: The Harvester': 'Відео: Фермерка'
-      'Video: Unplugged Variables in Envelopes': 'Відео: Безмашинна вправа з порожніми клітинками'
+      'Video: Unplugged Variables in Envelopes': 'Відео: Безмашинна вправа з конвертами'
       'Video: Using the Repeat Block': 'Відео: Використання блоку повторення'
       'Video: Variables in Artist': 'Відео: Використання змінних з Художником'
       'Video: Warm Up': 'Відео: Розминка'

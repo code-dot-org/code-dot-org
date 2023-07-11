@@ -94,7 +94,7 @@ uk:
           але остерігайтеся пожирачів!
         maze_2_17: Блоки"якщо-інакше" перевіряють умову, потім роблять одну АБО іншу
           дію. Щоб направити мене до соняшника, використовуйте цей новий блок.
-        maze_2_18: Ще трохи практики використання блоку "якщо-або". Зможеш зробити
+        maze_2_18: Ще трохи практики використання блоку "якщо-інакше". Зможеш зробити
           усе правильно з першої спроби?
         maze_2_19: Можеш додати ще 3 блоки, щоб допомогти мені пройти складніший лабіринт?
           Якщо ти це зробиш правильно, я зможу проходити по довільному кривому шляху
@@ -150,9 +150,9 @@ uk:
           кілька разів)
         turtle_4_10: Ось рішення попередньої головоломки. Скільки разів потрібно повторити,
           щоб завершити рисунок?
-        turtle_4_11: Спробуйте змінити цифри у блоках "поворот" і "повторити" блоки,
-          щоб зробити різні візерунки. Або поекспериментуйте, змінюючи решту коду,
-          щоб намалювати все, що забажаєте.
+        turtle_4_11: Спробуй змінити цифри у блоках "повернути" і "повторити" блоки,
+          щоб зробити різні візерунки. Або поекспериментуй, змінюючи решту коду, щоб
+          намалювати все, що забажаєш.
         maze_karel_1_1: Привіт, я фермерка. Мені потрібна допомога, щоб вирівняти
           поля на моїй фермі і тим самим підготувати її для посадки. Пересунь мене
           на купу землі і вилучи її за допомогою блока "видалити".
@@ -535,7 +535,7 @@ uk:
         C1_happy_maps_unplugged: Щасливі карти
         C1_moveitmoveit_unplugged: Рухайся, рухайся
         C1_bigevent_unplugged: Велика подія
-        C1_getting_loopy: Економія на повторах
+        C1_getting_loopy: Зациклюємось
         C1_pair_programming: Парне програмування
         C1_maze_intro_sequencing: 'Лабіринт: вступ у послідовність'
         C1_maze_debugging: 'Лабіринт: налагодження'
@@ -589,7 +589,7 @@ uk:
         C4_variables_artist: Змінні - Художник
         C4_variables_playlab: Змінні - Ігрова студія
         C4_for_loops: Цикли For
-        C4_for_loops_bee: Цикли For
+        C4_for_loops_bee: Цикли "повторити для кожного"
         C4_for_loops_no_bee: Цикли For
         C4_math_artist: Програмування Художника з математикою
         C4_function_edit: Редагування функцій
@@ -732,7 +732,7 @@ uk:
         hint_videos_d_11_11_first: 'Підказка Відео: D.11.11 Перша'
         hint_videos_d_11_11_last: 'Підказка Відео: D.11.11 Остання'
         applab_intro_welcome: Апп Лаб - Початок Роботи
-        applab_intro_events: Апп Лаб - Зробити це Інтерактивним
+        applab_intro_events: Апп Лаб - Додай інтерактиву
         applab_intro_sounds: Апп Лаб - Зображення та Звуки
         applab_intro_designmode: Апп Лаб - Режим Дизайну
         applab_intro_share: Апп Лаб - Поділіться своїм Додатком
@@ -753,9 +753,9 @@ uk:
         csd_gamelab_conditional_statements: Умовні твердження
         csd_gamelab_if_else: Якщо/Інші Твердження
         CSF_SpriteLabIntro_CDEF: Це Спрайт Лаб
-        CSF_Spritelab_MakeSprite_CDEF: Як зробити Спрайт в Спрайт Лаб
-        CDEF_Video_SpritesInAction: Спрайти в дії
-        CSF_SpriteLab_SpritesInAction_CDEF: Спрайти в дії
+        CSF_Spritelab_MakeSprite_CDEF: Як створити спрайт у Спрайт Лабораторії
+        CDEF_Video_SpritesInAction: Спрайти в роботі
+        CSF_SpriteLab_SpritesInAction_CDEF: Спрайти в роботі
         CSF_StarWars_ProjectIntro: Представляємо проєкт Зоряні Війни
         mc_2018_intro: 'Minecraft: Підводна подорож - Вступ'
         MC_2018_loops: 'Minecraft: Підводна подорож - Повторити до'
@@ -787,8 +787,8 @@ uk:
         csd_problem_solving_process: Процес вирішення проблем
         CSF_Going_Places_Safely: Моє Інтернет-сусідство
         CSF_SpriteLab_Intro_v2: Представляємо Спрайт Лабораторію
-        CSF_Spritelab_MakeSprite_v2: Як зробити спрайт
-        CSF_SpriteLab_SpritesInAction_v2: Спрайти в дії
+        CSF_Spritelab_MakeSprite_v2: Як створити спрайт
+        CSF_SpriteLab_SpritesInAction_v2: Спрайти в роботі
         csd_debugging: Налагодження
         csd_applab_designmode_short: Режим дизайну Лабораторії додатків
         csp-pd-welcome: Ласкаво просимо до родини!
@@ -805,10 +805,11 @@ uk:
         csf_follow_the_digital_trail: Йди за цифровим шляхом
         csf_private_and_personal_information: Приватна та особиста інформація
         csd_what_computers_are: Що таке комп’ютер?
+        csf21pilot_prompts: 'Спрайт Лабораторія: Текст і питання'
         playlab_2021: Представляємо Ігрову студію
         playlab_2021_reader: Представляємо Ігрову студію
         PL_CSD_TeacherTips_Debugging: Поради для вчителя - налагодження
-        csd_u6_circuit_playground: Фізичні обчислення
+        csd_u6_circuit_playground: Фізична інформатика
         csd_u6_input_output: Вхідні та вихідні дані
         PL_CS_Journeys_Overview: Інформатичні подорожі
         csp_applab_parameters: Функції з параметрами
