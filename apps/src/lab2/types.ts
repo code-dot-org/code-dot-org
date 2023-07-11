@@ -108,7 +108,14 @@ export interface VideoLevelData {
   download: string;
 }
 
-export type LevelData = ProjectLevelData | VideoLevelData;
+// The level data for a standalone_video level that doesn't require
+// reloads between levels.
+export interface AichatLevelData {
+  src: string;
+  download: string;
+}
+
+export type LevelData = ProjectLevelData | VideoLevelData | AichatLevelData;
 
 // Validation in the level.
 export interface Validation {

@@ -69,6 +69,8 @@
         = render partial: 'levels/reference_area'
     - elsif @game.app == Game::MUSIC
       = render partial: 'levels/music'
+    - elsif @game.app == Game::AICHAT
+      = render partial: 'levels/aichat'
     - else
       = render partial: 'levels/blockly'
 

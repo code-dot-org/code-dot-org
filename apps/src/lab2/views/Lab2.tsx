@@ -16,6 +16,7 @@ import {logError} from '@cdo/apps/music/utils/MusicMetrics';
 import Lab2Wrapper from './Lab2Wrapper';
 import ProjectContainer from '../projects/ProjectContainer';
 import ProgressContainer from '../progress/ProgressContainer';
+import AichatView from '@cdo/apps/aichat/AichatView';
 import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import MusicView from '@cdo/apps/music/views/MusicView';
 
@@ -38,6 +39,12 @@ const appsProperties: AppProperties[] = [
     usesChannel: false,
     backgroundMode: false,
     node: <StandaloneVideo />,
+  },
+  {
+    name: 'aichat',
+    usesChannel: false,
+    backgroundMode: false,
+    node: <AichatView />,
   },
 ];
 
