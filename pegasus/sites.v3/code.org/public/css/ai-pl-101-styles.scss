@@ -4,7 +4,7 @@
 @import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
 
 .hero-ai-pl-webinar {
-  background-image: url(/images/ai/pl/webinar/hero--1.png), url(/images/ai/pl/webinar/hero--2.png);
+  background-image: url(/images/ai/pl/101/hero--1.png), url(/images/ai/pl/101/hero--2.png);
   background-position: left center, right center;
   background-repeat: no-repeat, no-repeat;
   background-color: #360161;
@@ -36,7 +36,7 @@
   }
 
   @media (max-width: 1279px) {
-    background-image: url(/images/ai/pl/webinar/hero--2.png);
+    background-image: url(/images/ai/pl/101/hero--2-m.png);
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 300px;
@@ -44,6 +44,7 @@
   }
 
   @media (max-width: 767px) {
+    background-position: bottom center;
     &__by {
       flex-direction: column;
       align-items: flex-start;
