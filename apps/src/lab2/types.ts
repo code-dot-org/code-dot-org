@@ -10,7 +10,7 @@ export interface Channel {
   id: string;
   name: string;
   isOwner: boolean;
-  projectType: ProjectType | null;
+  projectType: ProjectType;
   publishedAt: string;
   createdAt: string;
   updatedAt: string;
@@ -110,9 +110,15 @@ export interface VideoLevelData {
 
 export type LevelData = ProjectLevelData | VideoLevelData;
 
+// A validation condition.
+export interface Condition {
+  name: string;
+  value?: string | number;
+}
+
 // Validation in the level.
 export interface Validation {
-  conditions: string[];
+  conditions: Condition[];
   message: string;
   next: boolean;
 }
