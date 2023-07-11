@@ -11,5 +11,10 @@
   "image": "https://images.code.org/d7586abdba3bef9583270a10343b98d4-Blockchain.png",
   "cs_topic": "cybersecurity",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"not_recommended\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"not_recommended\"}",
+  "description": null,
+  "self_paced_professional_learning": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null
 }
