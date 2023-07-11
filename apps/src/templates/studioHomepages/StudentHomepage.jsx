@@ -54,22 +54,20 @@ export default class StudentHomepage extends Component {
         />
         <div className={'container main'}>
           <ProtectedStatefulDiv ref="flashes" />
+          {showDeprecatedCalcAndEvalWarning && (
+            <Notification
+              type={NotificationType.warning}
+              notice={i18n.deprecatedCalcAndEvalWarning()}
+              details={i18n.deprecatedCalcAndEvalDetails()}
+              dismissible={false}
+            />
+          )}
           {isEnglish && <SpecialAnnouncement isTeacher={false} />}
           {showVerifiedTeacherWarning && (
             <Notification
               type={NotificationType.failure}
               notice={i18n.studentAsVerifiedTeacherWarning()}
               details={i18n.studentAsVerifiedTeacherDetails()}
-              buttonText={i18n.learnMore()}
-              buttonLink="https://support.code.org/hc/en-us/articles/360023222371-How-can-I-change-my-account-type-from-student-to-teacher-or-vice-versa-"
-              dismissible={false}
-            />
-          )}
-          {showDeprecatedCalcAndEvalWarning && (
-            <Notification
-              type={NotificationType.warning}
-              notice={i18n.deprecatedCalcAndEvalWarning()}
-              details={i18n.deprecatedCalcAndEvalDetails()}
               buttonText={i18n.learnMore()}
               buttonLink="https://support.code.org/hc/en-us/articles/360023222371-How-can-I-change-my-account-type-from-student-to-teacher-or-vice-versa-"
               dismissible={false}
