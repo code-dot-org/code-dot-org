@@ -9,7 +9,7 @@ title: Guía práctica para voluntarios de la Hora del Código
 
 ***
 
-## ¿Por qué proponerse como voluntario?
+## ¿Por qué ser voluntario?
 Mira algunos testimonios de quienes ya fueron voluntarios:
 
 - “La mejor parte de mi experiencia fue que toda la clase eran mujeres y personas de color. Es un buen augurio para el futuro de nuestra industria tener la oportunidad de llegar y entusiasmar a estos niños".
