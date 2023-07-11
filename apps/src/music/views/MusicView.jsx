@@ -31,6 +31,7 @@ import {
   addPlaybackEvents,
   clearPlaybackEvents,
   getCurrentlyPlayingBlockIds,
+  setSoundLoadingProgress,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import {
@@ -45,10 +46,11 @@ import {
   currentLevelIndex,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {
+  isReadOnlyWorkspace,
   setIsLoading,
   setIsPageError,
   setLabReadyForReload,
-} from '@cdo/apps/labs/labRedux';
+} from '@cdo/apps/lab2/lab2Redux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode} from '../constants';
@@ -61,9 +63,10 @@ import {
 import {logError} from '../utils/MusicMetrics';
 import musicI18n from '../locale';
 import UpdateTimer from './UpdateTimer';
-import ValidatorProvider from '@cdo/apps/labs/progress/ValidatorProvider';
+import ValidatorProvider from '@cdo/apps/lab2/progress/ValidatorProvider';
 import {Key} from '../utils/Notes';
-import LabRegistry from '@cdo/apps/labs/LabRegistry';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {setUpBlocklyForMusicLab} from '../blockly/setup';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -117,6 +120,8 @@ class UnconnectedMusicView extends React.Component {
     labReadyForReload: PropTypes.bool,
     setLabReadyForReload: PropTypes.func,
     navigateToNextLevel: PropTypes.func,
+    isReadOnlyWorkspace: PropTypes.bool,
+    updateLoadProgress: PropTypes.func,
   };
 
   constructor(props) {
@@ -149,13 +154,14 @@ class UnconnectedMusicView extends React.Component {
     }
 
     this.state = {
-      showingVideo: true,
+      showingVideo: !!this.props.inIncubator,
       loadedLibrary: false,
       currentLibraryName: null,
     };
 
     // Music Lab currently does not support share and remix
     header.showHeaderForProjectBacked({showShareAndRemix: false});
+    setUpBlocklyForMusicLab();
   }
 
   componentDidMount() {
@@ -176,6 +182,7 @@ class UnconnectedMusicView extends React.Component {
 
   async componentDidUpdate(prevProps) {
     this.musicBlocklyWorkspace.resizeBlockly();
+
     if (
       prevProps.userId !== this.props.userId ||
       prevProps.userType !== this.props.userType ||
@@ -207,6 +214,7 @@ class UnconnectedMusicView extends React.Component {
     ) {
       this.updateHighlightedBlocks();
     }
+
     // If we just finished loading the lab, then we need to update the
     // sources and level data.
     if (!prevProps.labReadyForReload && this.props.labReadyForReload) {
@@ -268,9 +276,9 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.init(
       document.getElementById('blockly-div'),
       this.onBlockSpaceChange,
-      this.player
+      this.props.isReadOnlyWorkspace
     );
-    this.player.initialize(this.library);
+    this.player.initialize(this.library, this.props.updateLoadProgress);
 
     this.setState({
       loadedLibrary: true,
@@ -476,9 +484,9 @@ class UnconnectedMusicView extends React.Component {
       };
     }
 
-    LabRegistry.getInstance()
+    Lab2Registry.getInstance()
       .getProjectManager()
-      .save(sourcesToSave, forceSave);
+      ?.save(sourcesToSave, forceSave);
   };
 
   loadCode = code => {
@@ -503,6 +511,10 @@ class UnconnectedMusicView extends React.Component {
   };
 
   stopSong = () => {
+    if (!this.props.isPlaying) {
+      return;
+    }
+
     this.player.stopSong();
     this.playingTriggers = [];
 
@@ -695,6 +707,7 @@ const MusicView = connect(
     sources: state.lab.sources,
     levelData: state.lab.levelData,
     labReadyForReload: state.lab.labReadyForReload,
+    isReadOnlyWorkspace: isReadOnlyWorkspace(state),
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
@@ -719,6 +732,7 @@ const MusicView = connect(
     setLabReadyForReload: labReadyForReload =>
       dispatch(setLabReadyForReload(labReadyForReload)),
     navigateToNextLevel: () => dispatch(navigateToNextLevel()),
+    updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
   })
 )(UnconnectedMusicView);
 

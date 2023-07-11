@@ -202,6 +202,8 @@ fr:
     parent_account_email_progress_permission: "Pouvons-nous vous envoyer, par courriel, des mises à jour occasionnelles, sur les progrès et les projets de votre enfant, ainsi que des mises à jour sur ses cours et l’informatique ? [(Voir notre politique de confidentialité)] %{privacy_policy_url}"
     parent_account_email_label: "Adresse électronique du parent/tuteur "
     us_state: 'État'
+    us_state_dropdown_options:
+      other: "L'endroit où j'habite n'est pas listé"
   school_info:
     title: 'Informations de l’école (facultatif)'
     school_country: 'Pays de l’École'
@@ -270,6 +272,9 @@ fr:
   parent_mailer:
     student_associated_subject: 'Informations de connexion pour Code.org'
     parent_email_added_subject: 'Bienvenue sur Code.org!'
+    parent_permission_request_subject: "Consentement parental requis pour l'accès de votre enfant à Code.org"
+    parent_permission_reminder_subject: "Rappel, consentement parental requis pour l'accès de votre enfant à Code.org"
+    parent_permission_confirmation_subject: "Merci d'avoir approuvé l'accès de votre enfant à Code.org !"
   teacher_mailer:
     new_teacher_subject: 'Bienvenue sur Code.org!'
     delete_teacher_subject: 'Notification de Code.org : votre compte a été supprimé'
@@ -355,6 +360,7 @@ fr:
       sprite_lab_documentation: "Documentation sur le Labo des Sprites"
       sprite_lab_tutorials: "Tutoriels du Labo des Sprites"
       web_lab_documentation: "Documentation Web Lab"
+      project_beats_documentation: "Documentation du projet Beats"
       educate_overview: "Aperçu enseignant"
       educate_elementary: "École primaire"
       educate_middle: "Collège"
@@ -1135,17 +1141,33 @@ fr:
         not_listed: 'Terme préféré non listé'
         none: 'Préfère ne pas répondre'
       school_country:
+        australia: 'Australie'
         barbados: 'Barbade'
         belize: 'Belize'
+        brazil: 'Brézil'
         canada: 'Canada'
         chile: 'Chili'
         colombia: 'Colombie'
+        dominican_republic: 'République dominicaine'
+        india: 'Inde'
+        indonesia: 'Indonésie'
         israel: 'Israël'
+        jamaica: 'Jamaïque'
+        kenya: 'Kenya'
         malaysia: 'Malaisie'
+        maldives: 'Maldives'
         mexico: 'Mexique'
+        mongolia: 'Mongolie'
+        new_zealand: 'Nouvelle-Zélande'
         paraguay: 'Paraguay'
+        portugal: 'Portugal'
+        slovakia: 'Slovaquie'
+        south_korea: 'Corée du Sud'
+        spain: 'Espagne'
         thailand: 'Thaïlande'
+        trinidad_and_tobago: 'Trinité-et-Tobago'
         uzbekistan: 'Ouzbékistan'
+        vietnam: 'Viêt Nam'
       ages:
         ages_under_6: 'Moins de 6 ans'
         ages_7_8: '7-8 ans'

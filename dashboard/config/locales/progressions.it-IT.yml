@@ -106,6 +106,7 @@ it:
       Choose Your Own Adventure: Scegli La Tua Avventura
       Choosing Good IDs: Scegliere Buoni ID
       'Circuit Playground: Introduction': 'Circuito parco giochi: Introduzione'
+      Circuits and Logic: Circuiti e logica
       Club Datasets: Insieme di dati del club
       Code Prediction: Prevedere il programma
       Code Your Own Flappy Game: Programma il Tuo Gioco in Stile Flappy Bird
@@ -203,7 +204,7 @@ it:
       Extra: Supplementare
       Extra Challenge: Sfide extra
       'Extra Challenge: Sound Board': 'Sfida extra: suoni della scheda'
-      Field Collector App: App di Field Collector
+      Field Collector App: App di recupero crediti
       Final Room Escape App: App Finale dell'Escape Room
       Find the Wizard: Trova il Mago
       Finish a Screen: Termina una schermata
@@ -245,7 +246,7 @@ it:
       Human Device Interaction: Interazione Uomo Macchina
       Ice Age Loops: Cicli dell'Era Glaciale
       If Statements: Istruzioni condizionali
-      If-Else Statements: Dichiarazioni se/altrimenti
+      If-Else Statements: Istruzioni condizionali Se/Altrimenti
       Images and Sounds: Immagini e Suoni
       Images in HTML: Immagini in HTML
       Import Your Model: Importa il tuo modello
@@ -523,13 +524,13 @@ it:
       Video: Video
       Video - Encryption and Public Keys: 'Video: Crittografia e Chiavi Pubbliche'
       Video - Functions: 'Video: Funzioni'
-      Video - If Statements: 'Video: Istruzioni If'
+      Video - If Statements: Video - Istruzioni condizionali `If`
       Video - Introduction to Arrays: 'Video: Introduzione agli Insiemi'
       'Video - Maze Intro: Programming with Blocks': 'Video - Introduzione al labirinto:
         programmare con i blocchi'
       Video - Parameters: 'Video: Parametri'
-      Video - The Counter Pattern: 'Video: Lo Schema di Conteggio'
-      Video - Variables: 'Video: Variabili'
+      Video - The Counter Pattern: Video - Lo schema a contatore
+      Video - Variables: Video - Variabili
       'Video:  Debugging with the Step Button': Video - Correggere gli errori con
         il pulsante "Fai un passo"
       'Video:  Minecraft - The Agent': Video - Minecraft - L'agente

@@ -11,5 +11,10 @@
   "image": "https://images.code.org/c0bfe595fb60a8595467a06486c65d33-Hello World Animals Theme.png",
   "cs_topic": "art_and_design,games_and_animations,programming",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"ideal\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"ideal\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "self_paced_professional_learning": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null
 }

@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.7.5'
+# Temporarily support both Ruby 2.7 and 3.0 until we've fully transitioned from
+# the former to the latter
+# TODO infra: pin us to ruby 3 once all persistent managed servers get updated
+ruby '>= 2.7', '< 3.1'
 
 # Ruby 2.7 no longer includes some libraries by default; install
 # the ones we need here
@@ -10,6 +13,10 @@ gem 'thwait'
 # Ruby >= 2.7.7 targets a version of CGI with over-restrictive domain
 # validation; manually target a later version to pick up https://github.com/ruby/cgi/pull/29
 gem 'cgi', '~> 0.3.6'
+
+# Ruby 3.0 no longer provides sorted_set by default, so install it manually
+# see https://github.com/ruby/set/pull/2
+gem 'sorted_set'
 
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
@@ -181,7 +188,7 @@ gem 'honeybadger', '>= 4.5.6' # error monitoring
 
 gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
-gem 'redcarpet', '~> 3.3.4'
+gem 'redcarpet', '~> 3.5.1'
 
 gem 'geocoder'
 

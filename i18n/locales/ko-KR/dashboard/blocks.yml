@@ -923,7 +923,6 @@ ko:
             '"u"': u
             '"v"': v
             '"w"': w
-            '"x"': x
             '"y"': 'y'
             '"z"': z
             '"0"': '0'
@@ -969,7 +968,6 @@ ko:
             '"u"': u
             '"v"': v
             '"w"': w
-            '"x"': x
             '"y"': 'y'
             '"z"': z
             '"0"': '0'
@@ -1190,7 +1188,6 @@ ko:
             '"u"': u
             '"v"': v
             '"w"': w
-            '"x"': x
             '"y"': 'y'
             '"z"': z
       gamelab_isTouchingEdges:
@@ -1234,7 +1231,6 @@ ko:
             '"u"': u
             '"v"': v
             '"w"': w
-            '"x"': x
             '"y"': 'y'
             '"z"': z
       gamelab_layoutSprites:

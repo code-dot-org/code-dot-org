@@ -1,7 +1,5 @@
 /** @file Serialport scanning logic for Maker Toolkit */
 
-import {ConnectionFailedError} from './MakerError';
-import applabI18n from '@cdo/applab/locale';
 /**
  * @typedef {Object} SerialPortInfo
  * @property {string} comName (a port id) e.g. "COM3" or "/dev/ttyACM0"
@@ -24,83 +22,3 @@ export const MICROBIT_VID = 0x0d28;
 
 /** @const {string} The micro:bit product id */
 export const MICROBIT_PID = 0x0204;
-
-/**
- * Scan system serial ports for a device compatible with Maker Toolkit.
- * @returns {Promise.<string>} resolves to a serial port object for a viable
- *   device, or rejects if no such device can be found.
- */
-export function findPortWithViableDevice() {
-  return Promise.resolve()
-    .then(() => SerialPort.list())
-    .then(list => {
-      const bestOption = getPreferredPort(list);
-      if (bestOption) {
-        return bestOption;
-      } else {
-        return Promise.reject(
-          new ConnectionFailedError(
-            applabI18n.foundDevices({deviceList: JSON.stringify(list)})
-          )
-        );
-      }
-    });
-}
-
-/**
- * Given a collection of serial port configurations, pick the one that is
- * most likely to be compatible with maker toolkit.
- * @param {Array.<SerialPortInfo>} portList
- * @return {SerialPortInfo|undefined} the best option, if one is found
- */
-export function getPreferredPort(portList) {
-  // 1. Best case: Correct vid and pid
-  const adafruitCircuitPlayground = portList.find(
-    port =>
-      parseInt(port.vendorId, 16) === ADAFRUIT_VID &&
-      parseInt(port.productId, 16) === CIRCUIT_PLAYGROUND_PID
-  );
-  if (adafruitCircuitPlayground) {
-    return adafruitCircuitPlayground;
-  }
-
-  // 2. Next-best case: Circuit Playground Express
-  const adafruitExpress = portList.find(
-    port =>
-      parseInt(port.vendorId, 16) === ADAFRUIT_VID &&
-      parseInt(port.productId, 16) === CIRCUIT_PLAYGROUND_EXPRESS_PID
-  );
-  if (adafruitExpress) {
-    return adafruitExpress;
-  }
-
-  // 3. Next-best case: micro:bit
-  const microbit = portList.find(
-    port =>
-      parseInt(port.vendorId, 16) === MICROBIT_VID &&
-      parseInt(port.productId, 16) === MICROBIT_PID
-  );
-  if (microbit) {
-    return microbit;
-  }
-
-  // 4. Next best case: Some other Adafruit product that might also work
-  const otherAdafruit = portList.find(
-    port => parseInt(port.vendorId, 16) === ADAFRUIT_VID
-  );
-  if (otherAdafruit) {
-    return otherAdafruit;
-  }
-
-  // 5. Last-ditch effort: Anything with a probably-usable port name and
-  //    a valid vendor id and product id
-  const comNameRegex = /usb|acm|^com/i;
-  return portList.find(port => {
-    const {comName, vendorId, productId} = port;
-    return (
-      comNameRegex.test(comName) &&
-      parseInt(vendorId, 16) > 0 &&
-      parseInt(productId, 16) > 0
-    );
-  });
-}

@@ -67,7 +67,7 @@ WebAudio.prototype.getCurrentTime = function () {
   }
 };
 
-WebAudio.prototype.LoadSound = function (url, callback) {
+WebAudio.prototype.LoadSound = function (url, callback, onLoadFinished) {
   var request = new XMLHttpRequest();
   request.open('GET', url, true);
   request.responseType = 'arraybuffer';
@@ -79,13 +79,16 @@ WebAudio.prototype.LoadSound = function (url, callback) {
         request.response,
         function (buffer) {
           callback(buffer);
+          onLoadFinished();
         },
         function (e) {
           logError(e);
+          onLoadFinished();
         }
       );
     } catch (e) {
       logError(e);
+      onLoadFinished();
     }
   };
   request.send();

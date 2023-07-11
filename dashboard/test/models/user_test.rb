@@ -1501,7 +1501,7 @@ class UserTest < ActiveSupport::TestCase
     student = User.find(student.id)
     old_password = student.encrypted_password
 
-    assert mail.body.to_s.include?('Change my password')
+    assert_includes(mail.body.to_s, 'Change my password')
 
     assert mail.body.to_s =~ /reset_password_token=(.+)"/
     # HACK: Fix my syntax highlighting "
@@ -1558,7 +1558,7 @@ class UserTest < ActiveSupport::TestCase
     student = User.find(student.id)
     old_password = student.encrypted_password
 
-    assert mail.body.to_s.include?('Change my password')
+    assert_includes(mail.body.to_s, 'Change my password')
 
     assert mail.body.to_s =~ /reset_password_token=(.+)"/
     # HACK: Fix my syntax highlighting "
@@ -1587,7 +1587,7 @@ class UserTest < ActiveSupport::TestCase
     student = User.find(student.id)
     old_password = student.encrypted_password
 
-    assert mail.body.to_s.include?('Change password for')
+    assert_includes(mail.body.to_s, 'Change password for')
 
     assert mail.body.to_s =~ /reset_password_token=(.+)"/
     # HACK: Fix my syntax highlighting "
@@ -4249,8 +4249,8 @@ class UserTest < ActiveSupport::TestCase
         # Template backed levels share a channel, so when we find a channel for the
         # template, we create user_levels for every level that uses that template
         assert_equal 2, user.user_levels.length
-        assert user.user_levels.map(&:level_id).include?(template_backed_level1.id)
-        assert user.user_levels.map(&:level_id).include?(template_backed_level2.id)
+        assert_includes(user.user_levels.map(&:level_id), template_backed_level1.id)
+        assert_includes(user.user_levels.map(&:level_id), template_backed_level2.id)
       end
     end
 
@@ -4799,6 +4799,28 @@ class UserTest < ActiveSupport::TestCase
     assert_equal(family_name, user.summarize[:family_name])
 
     DCDO.unstub(:get)
+  end
+
+  test 'family name is not allowed on pl participants' do
+    user = create :user
+    family_name = 'TestFamilyName'
+
+    pl_section = create :section, :teacher_participants, user_id: @teacher.id
+    Follower.create!(section_id: pl_section.id, student_user_id: user.id)
+
+    assert(user.valid?)
+
+    user.family_name = family_name
+
+    assert_not(user.valid?)
+  end
+
+  test 'family name is not allowed on teachers' do
+    user = create :teacher
+    family_name = 'TestFamilyName'
+    user.family_name = family_name
+
+    assert_not(user.valid?)
   end
 
   test 'school_info_school returns the school associated with the user' do

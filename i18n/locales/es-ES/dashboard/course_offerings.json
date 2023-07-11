@@ -9,7 +9,7 @@
   "csp": "Principios de Informática",
   "csa": "AP®  Ciencias de la Computación  A\n\n",
   "ui-test-versioned-script": "script-prueba-ui-versionada",
-  "aiml": "Módulo de Inteligencia Artificial y Aprendizaje Automático",
+  "aiml": "Inteligencia Artificial y Aprendizaje Automático",
   "20-hour": "Curso acelerado de Introducción a la Informática",
   "flappy": "Código Flappy",
   "jigsaw": "Rompecabezas",
@@ -376,7 +376,15 @@
   "poemmaker": "poeta",
   "design-process": "El Proceso de Diseño",
   "web-development": "Desarrollo Web",
+  "focus-on-design-with-purpose": "Centrarse en el Diseño con Finalidad",
+  "focus-on-coding": "Centrarse en la Codificación",
+  "focus-on-hardware": "Centrarse en el Hardware",
+  "focus-on-impact-in-society": "Centrarse en el Impacto Social",
+  "focus-on-data": "Centrarse en los Datos",
+  "focus-on-creativity": "Centrarse en la Creatividad",
   "vpl-csd-summer-ci": "vpl-csd-verano-piloto-ci",
   "virtual-pl-csd-summer": "virtual-pl-csd-verano-2023",
-  "pl-csd-summer": "Taller de verano - Descubrimientos de Informática "
+  "pl-csd-summer": "Taller de verano - Descubrimientos de Informática ",
+  "self-paced-pl-csd": "autodidáctico-pl-csd-2021",
+  "self-paced-pl-aiml": "autodidáctico-pl-csd5"
 }
