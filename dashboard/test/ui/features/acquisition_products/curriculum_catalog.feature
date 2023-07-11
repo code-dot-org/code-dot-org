@@ -33,8 +33,8 @@ Feature: Curriculum Catalog Page
     And I get redirected to "/users/sign_in?user_return_to=/catalog" via "dashboard"
 
   Scenario: Signed-in student is redirected to help page when clicking Assign
-    Given I create a student named "Student Sam"
-    Then I am on "http://studio.code.org/catalog"
+    Given I am on "http://studio.code.org/catalog"
+    And I am a student
     And I wait until element "h4:contains(AI for Oceans)" is visible
 
     Then I click selector "[aria-label='Assign AI for Oceans to your classroom']"
