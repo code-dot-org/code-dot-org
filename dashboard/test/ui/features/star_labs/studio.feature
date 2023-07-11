@@ -3,7 +3,6 @@ Feature: Visiting a studio page
 @no_mobile
 Scenario: Using a studio dropdown
   Given I am on "http://studio.code.org/s/course1/lessons/16/levels/2"
-  And I rotate to landscape
   And I wait for the page to fully load
   And I dismiss the login reminder
   Then there's an SVG image "studio/dog_thumb.png"
@@ -21,7 +20,6 @@ Scenario: Using a studio dropdown
 
 Scenario: Resizing Sprites
   Given I am on "http://studio.code.org/s/allthethings/lessons/22/levels/1?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
 
   Then the 0th sprite image has height "100"

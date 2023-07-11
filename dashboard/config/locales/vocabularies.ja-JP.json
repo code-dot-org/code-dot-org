@@ -826,6 +826,9 @@
           "word": "２しんすう",
           "definition": "2つの選択肢だけを使って情報を表現する方法。"
         },
+        "computer/csd/2022": {
+          "word": "コンピュータ"
+        },
         "input/csd/2022": {
           "word": "入力"
         },
@@ -1472,6 +1475,9 @@
         },
         "function/csd/2021": {
           "word": "関数（かんすう）"
+        },
+        "computer/csd/2021": {
+          "word": "コンピュータ"
         },
         "input/csd/2021": {
           "word": "入力"

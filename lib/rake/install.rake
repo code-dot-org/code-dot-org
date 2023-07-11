@@ -66,12 +66,22 @@ namespace :install do
     end
   end
 
+  desc 'Install I18n libs'
+  timed_task_with_logging :i18n do
+    if RakeUtils.local_environment?
+      Dir.chdir(bin_dir('i18n')) do
+        RakeUtils.install_npm
+      end
+    end
+  end
+
   tasks = []
   tasks << :hooks if rack_env?(:development)
   tasks << :locals_yml if rack_env?(:development)
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
+  tasks << :i18n if CDO.build_i18n
   timed_task_with_logging all: tasks
 end
 desc 'Install all OS dependencies.'

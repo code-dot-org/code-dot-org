@@ -469,6 +469,7 @@ uk:
       playlab: Ігрова студія
       playlab_k1: Play Lab (попередній зчитувач)
       poetry: Поезія
+      poetry_hoc: Мистецтво віршування
       scratch: Scratch
       sports: Спорт
       spritelab: Спрайт Лабораторія
@@ -843,6 +844,8 @@ uk:
     minecraft2016:
       title: Майнкрафт
       body: Запрограмуй тварин та інших істот Майнкрафт у власній версії цієї гри.
+    poem-art:
+      title: Мистецтво віршування
     sports:
       title: Спорт
       body: Створи баскетбольну гру або поєднуй різні спортивні ігри.
@@ -1380,6 +1383,8 @@ uk:
       свою електронну пошту, щоб бути в курсі успіхів і проектів вашої дитини!"
     link_your_email: Прив'яжіть вашу ел. пошту
     not_now: Не зараз
+  behaviors:
+    this_sprite: цей спрайт
   code_org_logo_alt: Домашня сторінка Code.org
   teacher_feedback: Відгук викладача
   lesson_lock:

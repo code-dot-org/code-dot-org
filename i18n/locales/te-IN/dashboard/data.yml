@@ -703,6 +703,11 @@ te:
         csa_sorting_algorithms: 'CSA: సార్టింగ్ అల్గోరిథంలు'
         star_quilts_intro_to_artist: 'స్టార్ క్విల్ట్స్: ఆర్టిస్ట్కు పరిచయం'
         upload_sprites_backgrounds: కస్టమ్ స్ప్రిట్స్ మరియు నేపథ్యాలను అప్లోడ్ చేస్తోంది
+        PL_CSD_EquityBlindSpotsvid: పక్షపాతం మరియు బాధ్యత
+        how-ai-works-llms-full: చాట్‌బోట్‌లు మరియు పెద్ద భాషా నమూనాలు ఎలా పనిచేస్తాయి
+        how-ai-works-creativity-full: AI అనేది సృజనాత్మకత మరియు ఊహను కలిగి ఉన్నదా?
+        how-ai-works-llms-part1: చాట్‌బోట్‌లు మరియు పెద్ద భాషా నమూనాలు భాగం 1
+        how-ai-works-llms-part2: చాట్‌బోట్‌లు మరియు పెద్ద భాషా నమూనాలు భాగం 2
     callout:
       text:
         drag_blocks: '“తరలించు” బ్లాక్ను లాగండి మరియు ఇతర బ్లాక్ క్రింద స్నాప్ చేయండి'

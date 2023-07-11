@@ -1164,7 +1164,7 @@
           "randomly change the size of a sprite": "випадковим чином змінити розмір спрайту",
           "move a sprite across the screen, reversing direction if it touches the edges": "перемістити спрайт по екрану, змінюючи напрямок, якщо він торкається країв",
           "move a sprite if the user is pressing the arrow keys": "перемістити спрайт, якщо користувач натискає клавіші зі стрілками",
-          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Перемісти спрайт ліворуч по екрану. Якщо він виходить за межі лівої частини екрана, починає пересуватися до правої частини екрана.",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Перемісти спрайт ліворуч по екрану. Якщо він виходить за межі лівої частини екрана, він переходить до правої частини екрана.",
           "randomly move the sprite up or down": "довільно перемісти спрайт вгору або вниз"
         },
         "courseF_apps_collector2022": {
@@ -1180,7 +1180,7 @@
           "randomly change the size of a sprite": "випадковим чином змінити розмір спрайту",
           "move a sprite across the screen, reversing direction if it touches the edges": "перемістити спрайт по екрану, змінюючи напрямок, якщо він торкається країв",
           "move a sprite if the user is pressing the arrow keys": "перемістити спрайт, якщо користувач натискає клавіші зі стрілками",
-          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Перемісти спрайт ліворуч по екрану. Якщо він виходить за межі лівої частини екрана, починає пересуватися до правої частини екрана.",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Перемісти спрайт ліворуч по екрану. Якщо він виходить за межі лівої частини екрана, він переходить до правої частини екрана.",
           "randomly move the sprite up or down": "довільно перемісти спрайт вгору або вниз"
         },
         "courseF_apps_collector_-2022-2": {
@@ -1196,7 +1196,7 @@
           "randomly change the size of a sprite": "випадковим чином змінити розмір спрайту",
           "move a sprite across the screen, reversing direction if it touches the edges": "перемістити спрайт по екрану, змінюючи напрямок, якщо він торкається країв",
           "move a sprite if the user is pressing the arrow keys": "перемістити спрайт, якщо користувач натискає клавіші зі стрілками",
-          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Перемісти спрайт ліворуч по екрану. Якщо він виходить за межі лівої частини екрана, починає пересуватися до правої частини екрана.",
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Перемісти спрайт ліворуч по екрану. Якщо він виходить за межі лівої частини екрана, він переходить до правої частини екрана.",
           "randomly move the sprite up or down": "довільно перемісти спрайт вгору або вниз"
         },
         "courseF_apps_collector_drag_-2022-2": {

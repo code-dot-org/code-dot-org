@@ -19,7 +19,7 @@ km:
           student_description: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង
             10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
         step:
-          title: ជំហានបន្ទាប់
+          title: ជំហាន
         mc:
           title: Minecraft Hour of Code
           description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព
@@ -384,7 +384,7 @@ km:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
             end_of_course_project:
@@ -402,7 +402,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
             csf_functions:
@@ -423,20 +423,20 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         gamelab:
-          title: មន្ទីរពិសោធន៍ ល្បែង
+          title: មន្ទីរពិសោធន៍ហ្គេម
         coursea-2019:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
           lesson_groups:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         courseb-2019:
@@ -444,7 +444,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         pre-express-2019:
@@ -455,7 +455,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
           name: ព្រី-អុិចប្រេស-2019
@@ -502,7 +502,7 @@ km:
             csp_lists:
               display_name: បញ្ជី
             csp_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -540,7 +540,7 @@ km:
             csp_lists:
               display_name: បញ្ជី
             csp_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             required:
               display_name: ទិដ្ឋភាពទូទៅ
         fit2019-novice:
@@ -560,7 +560,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         dlp19-csd-mod-fit:
@@ -638,7 +638,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
             csf_events:
@@ -648,7 +648,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
             csf_events:
@@ -670,14 +670,14 @@ km:
             csp_lists:
               display_name: បញ្ជី
             csp_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
         coursea-2020:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
           lesson_groups:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         courseb-2020:
@@ -685,7 +685,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         coursec-2020:
@@ -693,7 +693,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             end_of_course_project:
@@ -705,7 +705,7 @@ km:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
             end_of_course_project:
@@ -731,7 +731,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
             csf_functions:
@@ -748,7 +748,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         2021drafting:
@@ -770,14 +770,14 @@ km:
             csp_lists:
               display_name: បញ្ជី
             csp_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
         coursea-2021:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
           lesson_groups:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             lessonGroup-5:
@@ -787,7 +787,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             lessonGroup-6:
@@ -797,7 +797,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             end_of_course_project:
@@ -810,7 +810,7 @@ km:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
             end_of_course_project:
@@ -840,7 +840,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
             csf_functions:
@@ -859,7 +859,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
         csf-2021-pilot:
@@ -899,7 +899,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             lessonGroup-5:
@@ -912,7 +912,7 @@ km:
             lessonGroup-9:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
             csf_functions:
@@ -936,13 +936,13 @@ km:
             csp_lists:
               display_name: បញ្ជី
             csp_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
         courseb-2022:
           lesson_groups:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             lessonGroup-6:
@@ -952,7 +952,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             end_of_course_project:
@@ -964,7 +964,7 @@ km:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
             end_of_course_project:
@@ -1009,7 +1009,7 @@ km:
         csa1-2023:
           lessons:
             lesson-6:
-              name: រង្វិល​ជុំ
+              name: ប្រតិបត្តិដដែលៗ
         csa2-2023:
           lessons:
             lesson-4:
@@ -1025,13 +1025,13 @@ km:
         csp5-2023:
           lesson_groups:
             csp_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
               display_name: បញ្ជី
             lessonGroup-3:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
         angelina-playground:
           lessons:
             lesson-5:
@@ -1041,7 +1041,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
@@ -1054,7 +1054,7 @@ km:
             lessonGroup-9:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
             csf_functions:
@@ -1070,7 +1070,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             lessonGroup-5:
@@ -1081,7 +1081,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             lessonGroup-6:
@@ -1091,7 +1091,7 @@ km:
             csf_sequencing:
               display_name: លំដាប់
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             end_of_course_project:
@@ -1103,7 +1103,7 @@ km:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
-              display_name: រង្វិល​ជុំ
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
             end_of_course_project:

@@ -65,7 +65,7 @@ sk:
         netsim:
           title: Simulátor Internetu
         20-hour:
-          title: Zrýchlený Úvod do Informatiky
+          title: Zrýchlený Úvod do Informatiky (zastaralý)
           description: Tento 20-hodinový kurz pokrýva základné koncepty informatiky a programovania obsiahnuté v kurzoch 2-4. Kurz je určený pre žiakov vo veku 10 - 18 rokov, ale určite pobaví študentov všetkých vekových kategórií!
           description_short: Tento 20-hodinový kurz pokrýva kľúčové informatické a programovacie koncepty z kurzov 2-4.
           description_audience: Vek 10-18
@@ -102,8 +102,21 @@ sk:
           description: Vyskúšaj si základy informatiky s postavami z Angry Birds a Plants vs. Zombies!
           description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
           student_description: Vyskúšaj si základy informatiky s postavami z Angry Birds a Plants vs. Zombies!
+        CodeStudioPuzzleChallenge:
+          description_short: Vyzvite sa!
+        Tutorial Video - Code Studio Puzzle Challenge:
+          description_short: Vyzvite sa!
         text-compression:
           title: Kompresia textu
+        Test Wednesday:
+          title: Skúšobná streda
+          description: Skúšobná streda
+          student_description: Skúšobná streda
+        Testing:
+          title: Testovanie
+          description: Testovanie
+          description_short: Testovanie
+          student_description: Testovanie
         allthethings:
           lessons:
             lesson-49:
@@ -231,6 +244,7 @@ sk:
             practice:
               display_name: Učiteľské cvičenia
         gradeKinder:
+          title: Predškoláci
           description_audience: Vek 5-18
         grade4:
           title: Ročníky 4
@@ -329,11 +343,18 @@ sk:
           description_short: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft.
           description: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft.
           student_description: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft.
+        coursea-draft:
+          title: 'Základy informatiky: Kurz A'
+        courseb-draft:
+          title: 'Základy informatiky: Kurz B'
         coursec-draft:
+          title: 'Základy informatiky: Kurz C'
           description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky, príbehy a hry.
         coursed-draft:
+          title: 'Základy informatiky: Kurz D'
           description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky, príbehy a hry.
         coursee-draft:
+          title: 'Základy informatiky: Kurz E'
           description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky, príbehy a hry.
           lesson_groups:
             content:
@@ -343,6 +364,7 @@ sk:
             extra_course_content:
               display_name: Doplnkové lekcie
         coursef-draft:
+          title: 'Základy informatiky: Kurz F'
           description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky, príbehy a hry.
           lesson_groups:
             content:
@@ -352,6 +374,7 @@ sk:
         classic-hoc-impact-study:
           description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
         hoc-impact-study:
+          title: Klasické bludisko s prieskumom
           description_short: Vyskúšaj si základy informatiky s mnohými zábavnými postavami!
         sports:
           title: Naprogramuj si vlastný zápas
@@ -409,6 +432,8 @@ sk:
               display_name: 'Kapitola 1: Prezentácia informácií'
             csd5_2:
               display_name: 'Kapitola 2: Riešenie problémov s dátami'
+        coursed-ramp:
+          title: 'Základy informatiky: Kurz D'
         csd6-2017:
           lesson_groups:
             csd6_1:
@@ -1015,6 +1040,7 @@ sk:
         frozen-2018-test:
           title: Nový Frozen Skript
         dance:
+          title: Tanečná párty (2018)
           description_short: Účinkujú Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, a 25 ďalších!
           description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
           student_description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
@@ -1066,7 +1092,7 @@ sk:
             end_of_course_project:
               display_name: Záverečný projekt
         dance-low:
-          title: Tanečná Párty (slabé pripojenie)
+          title: Tanečná Párty (pomalé pripojenie)
           description_short: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi! (Táto verzia je pre pomalé pripojenie)
         coursed-2019:
           title: Kurz D (2019)
@@ -1973,6 +1999,8 @@ sk:
               display_name: 'Kapitola 1: Obsah webu a HTML'
             csd2_2:
               display_name: 'Kapitola 2: Dizajn a CSS'
+        csp5-virtual:
+          title: Programovanie udalostí v App Labe
         virtual-holding-place:
           lesson_groups:
             content:
@@ -2002,6 +2030,7 @@ sk:
             csp5_1:
               display_name: 'Kapitola 1: Udalosťami riadené programovanie'
         csd3-virtual:
+          title: Úvod do Game Labu (vlastným tempom)
           lesson_groups:
             csd3_1:
               display_name: Obsah
@@ -2300,6 +2329,7 @@ sk:
             lessonGroup-7:
               display_name: Digitálne občianstvo
         express-2021:
+          title: Zrýchlený kurz (2021)
           description_audience: 'Vek: 9-18'
           lesson_groups:
             csf_warmup:
@@ -2440,6 +2470,7 @@ sk:
             cspSurvey2020:
               display_name: Dotazník
         aiml-2021:
+          title: Umelá inteligencia a strojové učenie
           lesson_groups:
             lessonGroup-2:
               display_name: Kapitola 1 – Ako funguje strojové učenie
@@ -2495,7 +2526,7 @@ sk:
             lessonGroup-4:
               display_name: Ukážky a zdroje informácií
         hello-world-draft:
-          title: '"Ahoj svet!"'
+          title: Ahoj svet!
         csa-self-paced-pl:
           title: Čo ponúka Code.org pre učiteľov pilotného projektu CSA
           description: |-
@@ -2561,7 +2592,7 @@ sk:
           student_description: Objavujeme informatiku L6 Playground. S otázkami sa obráťte na Dana Schneidera.
         hello-world-food:
           name: ahoj-svet-jedlo
-          title: Ahoj Svet
+          title: 'Ahoj svet: Jedlo'
         csa-u7-dev:
           lesson_groups:
             lessonGroup-2:
@@ -2571,13 +2602,13 @@ sk:
             lessonGroup-4:
               display_name: Ukážky a zdroje informácií
         hello-world-animals:
-          title: Ahoj Svet
+          title: 'Ahoj svet: Zvieratá'
         hello-world-emoji:
-          title: Ahoj Svet
+          title: 'Ahoj svet: Emoji'
         hello-world-retro:
-          title: Ahoj Svet
+          title: 'Ahoj svet: Retro'
         hello-world-batman:
-          title: Ahoj Svet
+          title: Ahoj svet
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -2662,13 +2693,13 @@ sk:
         poem-art-2021:
           title: Básnické umenie
         hello-world-food-2021:
-          title: Ahoj Svet
+          title: 'Ahoj svet: Jedlo'
         hello-world-emoji-2021:
-          title: Ahoj Svet
+          title: 'Ahoj svet: Emoji'
         hello-world-animals-2021:
-          title: Ahoj Svet
+          title: 'Ahoj svet: Zvieratá'
         hello-world-retro-2021:
-          title: Ahoj Svet
+          title: 'Ahoj svet: Retro'
         explore-data-1-2021:
           title: Vykreslenie údajov
         counting-csc-2021:
@@ -2750,6 +2781,7 @@ sk:
               display_name: Cykly "Pre"
             end_of_course_project:
               display_name: Záverečný projekt
+          title: Zrýchlený kurz (2022)
           description_audience: 'Vek: 9-18'
         csp1-2022:
           lesson_groups:
@@ -3103,27 +3135,27 @@ sk:
 
             **Odporúčaný čas:** 90 minút
         vpl-csd6-ci-pilot-2022:
-          title: 'Modul 6: Príprava na výučbu fyzickej informatiky'
+          title: Príprava na výučbu Programovania s hardvérom
           description: |-
-            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Fyzická informatika na Code.org.
+            Tento modul pre profesijný rozvoj učiteľov vám pomôže pripraviť sa na výučbu modulu Programovanie s hardvérom.
 
-            **V tomto odbornom vzdelávacom module:**
+            **V tomto kurze:**
 
-            -   získate základy fyzickej informatiky.
-            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
-            -   zapojíte sa do spolopráce s tvorcami aplikácie.
-            -   dozviete sa viac o projektoch na konci kapitoly.
+            -   Vám predstavíme Programovania s hardvérom.
+            -   Precvičíte si kľúčové pojmy zahrnuté v tomto module.
+            -   Vyskúšate si MakerApp.
+            -   Dozviete sa viac o projektoch na konci kapitoly.
 
             **Odporúčaný čas:** 90 minút
           student_description: |-
-            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Fyzická informatika na Code.org.
+            Tento modul pre profesijný rozvoj učiteľov vám pomôže pripraviť sa na výučbu modulu Programovanie s hardvérom.
 
-            **V tomto odbornom vzdelávacom module:**
+            **V tomto kurze:**
 
-            -   získate základy fyzickej informatiky.
-            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
-            -   zapojíte sa do spolopráce s tvorcami aplikácie.
-            -   dozviete sa viac o projektoch na konci kapitoly.
+            -   Vám predstavíme Programovania s hardvérom.
+            -   Precvičíte si kľúčové pojmy zahrnuté v tomto module.
+            -   Vyskúšate si MakerApp.
+            -   Dozviete sa viac o projektoch na konci kapitoly.
 
             **Odporúčaný čas:** 90 minút
         vpl-csd7-ci-pilot-2022:
@@ -3153,7 +3185,7 @@ sk:
 
             **Odporúčaný čas:** 120 minút
         hello-world-csc:
-          title: Ahoj Svet
+          title: Ahoj svet
         csd-playground:
           title: Ihrisko CSD
           description_audience: Autori osnov
@@ -3229,6 +3261,7 @@ sk:
               display_name: Kapitola 1 – Ako funguje strojové učenie
             lessonGroup-3:
               display_name: Kapitola 2 – Navrhujeme aplikáciu strojového učenia
+          title: Umelá inteligencia a strojové učenie
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -3347,9 +3380,9 @@ sk:
             lessonGroup-5:
               display_name: Alternatívne lekcie
         hello-world-space-2022:
-          title: 'Ahoj Svet: Vesmír'
+          title: 'Ahoj svet: Vesmír'
         hello-world-soccer-2022:
-          title: 'Ahoj Svet: Futbal'
+          title: 'Ahoj svet: Futbal'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3385,6 +3418,7 @@ sk:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+          title: "(Možnosť A) Aplikácie a hardvér - Circuit Playground ('23-'24)"
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3482,18 +3516,24 @@ sk:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+          title: Aplikácie a hardvér  (Circuit Playground)
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
               display_name: Vstupy a výstupy
             lessonGroup-4:
               display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+          title: Aplikácie a hardvér (micro:bit)
         microbit-temp:
           lesson_groups:
             lessonGroup-2:
               display_name: Úvod do App Labu
             lessonGroup-3:
               display_name: Vstupy a výstupy
+        self-paced-pl-csc-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vyučujeme CS Connections
         tess-testing-problem-solving-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3542,6 +3582,7 @@ sk:
               display_name: Cykly "Pre"
             end_of_course_project:
               display_name: Záverečný projekt
+          title: Zrýchlený kurz (2022)
           description_audience: 'Vek: 9-18'
         coursea-2023:
           lesson_groups:
@@ -3697,6 +3738,7 @@ sk:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+          title: Kapitola 4A - (Možnosť A) Aplikácie a hardvér - Circuit Playground ('23-'24)
         focus-on-hardware1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3714,6 +3756,7 @@ sk:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+          title: Kapitola 3a - (Možnosť A) Aplikácie a hardvér - Circuit Playground ('23-'24)
         focus-on-data1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3759,6 +3802,7 @@ sk:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+          title: Kapitola 4A - (Možnosť A) Aplikácie a hardvér - Circuit Playground ('23-'24)
         focus-on-coding1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3780,6 +3824,7 @@ sk:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+          title: Kapitola 4A - (Možnosť A) Aplikácie a hardvér - Circuit Playground ('23-'24)
         focus-on-impact-in-society1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3810,12 +3855,14 @@ sk:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+          title: Kapitola 6A - (Možnosť A) Aplikácie a hardvér - Circuit Playground ('23-'24)
         microbit-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: Vstupy a výstupy
             lessonGroup-5:
               display_name: Dotazník
+          title: Aplikácie a hardvér (micro:bit) ('23-'24)
         vpl-csd-ci-1:
           title: 'Modul 1: Príprava na výučbu riešenia problémov a výpočtovej techniky'
           description: |-
@@ -3970,28 +4017,36 @@ sk:
               display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
             lessonGroup-5:
               display_name: Dotazník
+          title: Aplikácie a hardvér - Circuit Playground ('23-'24)
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: Vstupy a výstupy
+          title: Kapitola 4B - (Možnosť B) Aplikácie a hardvér (micro:bit)
         focus-on-hardware3b-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: Vstupy a výstupy
+          title: Kapitola 3B - (Možnosť B) Aplikácie a hardvér (micro:bit)
         focus-on-design-with-purpose4b-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: Vstupy a výstupy
+          title: Kapitola 4B - (Možnosť B) Aplikácie a hardvér (micro:bit)
         ai-temp:
           title: Ako funguje umelá inteligencia
         focus-on-coding4b-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: Vstupy a výstupy
+          title: Kapitola 4B - Aplikácie a hardvér (micro:bit)
         csd6b-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: Vstupy a výstupy
+          title: Kapitola 6B - (Možnosť B) Aplikácie a hardvér (micro:bit)
+        self-paced-pl-csd5-2023:
+          title: 'Modul 7: Príprava na výučbu umelej inteligencie a strojového učenia'
         pl-csd-summer-day1:
           lessons:
             lesson-3:
@@ -4065,6 +4120,29 @@ sk:
           description_audience: Vek 9-13
           description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Triedy
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Triedy
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Triedy
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Dáta
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Triedy
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Triedy
+        csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-3:
               display_name: Triedy
