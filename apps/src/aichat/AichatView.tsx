@@ -1,9 +1,6 @@
 // AichatView
 //
-// This is a React client for an aichat level.  Note that this is
-// only used for levels that use Lab2.  For levels that don't use Lab2,
-// they will get an older-style level implemented with a HAML page and some
-// non-React JS code.
+// This is a React client for an aichat level.
 
 import React from 'react';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
