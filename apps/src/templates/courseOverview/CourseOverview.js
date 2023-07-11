@@ -9,7 +9,7 @@ import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import styleConstants from '@cdo/apps/styleConstants';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 import * as utils from '../../utils';
-import {queryParams} from '../../code-studio/utils';
+import {queryParams, updateQueryParam} from '../../code-studio/utils';
 import i18n from '@cdo/locale';
 import {
   onDismissRedirectDialog,
@@ -149,6 +149,16 @@ class CourseOverview extends Component {
       isSignedIn,
       participantAudience,
     } = this.props;
+
+    if (queryParams('fromCatalog') === 'true') {
+      analyticsReporter.sendEvent(
+        EVENTS.CURRICULUM_CATALOG_LEARN_MORE_CLICKED_EVENT,
+        {
+          curriculum_offering: title,
+        }
+      );
+      updateQueryParam('fromCatalog', undefined, false);
+    }
 
     const showNotification =
       viewAs === ViewType.Instructor &&

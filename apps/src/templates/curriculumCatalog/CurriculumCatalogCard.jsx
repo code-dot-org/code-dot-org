@@ -121,17 +121,11 @@ const CustomizableCurriculumCatalogCard = ({
   courseId,
   ...props
 }) => {
-  const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
+  const pathToCourseFromCatalog = `${pathToCourse}${
+    pathToCourse.includes('?') ? '&' : '?'
+  }fromCatalog=true`;
 
-  const handleClickLearnMore = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.CURRICULUM_CATALOG_LEARN_MORE_CLICKED_EVENT,
-      {
-        curriculum_offering: courseDisplayNameWithYear,
-      }
-    );
-    window.location.href = pathToCourse;
-  };
+  const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
 
   const handleClickAssign = () => {
     setIsAssignDialogOpen(true);
@@ -227,7 +221,7 @@ const CustomizableCurriculumCatalogCard = ({
               __useDeprecatedTag
               color={Button.ButtonColor.neutralDark}
               type="button"
-              onClick={handleClickLearnMore}
+              href={pathToCourseFromCatalog}
               aria-label={quickViewButtonDescription}
               text={quickViewButtonText}
             />

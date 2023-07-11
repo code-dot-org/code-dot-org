@@ -21,6 +21,9 @@ import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/Partic
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {pegasus, studio} from '../../../lib/util/urlHelpers';
+import {queryParams, updateQueryParam} from '../../utils';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 // Scripts that users will be warned are outdated and have been succeeded by others.
@@ -82,6 +85,16 @@ class UnitOverviewHeader extends Component {
 
   componentDidMount() {
     $('#lesson-heading-extras').appendTo(ReactDOM.findDOMNode(this.protected));
+
+    if (queryParams('fromCatalog') === 'true') {
+      analyticsReporter.sendEvent(
+        EVENTS.CURRICULUM_CATALOG_LEARN_MORE_CLICKED_EVENT,
+        {
+          curriculum_offering: this.props.unitTitle,
+        }
+      );
+      updateQueryParam('fromCatalog', undefined, false);
+    }
   }
 
   onChangeVersion = versionId => {
