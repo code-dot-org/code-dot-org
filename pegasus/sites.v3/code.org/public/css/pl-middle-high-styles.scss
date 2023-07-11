@@ -1,11 +1,38 @@
 // Custom styles for code.org/educate/professional-learning/middle-high
 // — supplemental to shared/css/design-system-pegasus.scss
 
-@import 'breakpoints';
+@import 'breakpoints', 'typography';
 
 // Banner image breakpoints
-.hero-banner-basic img {
-  @media (min-width: $width-md) and (max-width: 1214px) {
-    right: -10em;
+.hero-banner-basic {
+
+  p {
+    @media screen and (max-width: 1600px) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: $width-md) {
+      width: 80%;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
+    }
+  }
+
+  img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -3rem;
+    z-index: 0;
+
+    @media (min-width: $width-md) and (max-width: 1214px) {
+      right: -10rem;
+    }
+
+    @media screen and (max-width: $width-md) {
+      display: none;
+    }
   }
 }

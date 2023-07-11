@@ -1,15 +1,23 @@
-import {logWarning} from '../utils/MusicMetrics';
+import {logWarning, reportLoadTime} from '../utils/MusicMetrics';
 import {Effects} from './interfaces/Effects';
 import MusicLibrary from './MusicLibrary';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
 
+// Multiplied by the duration of a single beat to determine the length of
+// time to fade out a sound, if trimming to a specific duration. This results
+// in a duration slightly smaller than a 16th note (0.25 of a beat), and 16th
+// notes are the shortest possible notes, so the release duration should never
+// be longer than a sound.
+const RELEASE_DURATION_FACTOR = 0.2;
+
 export interface SampleEvent {
   offsetSeconds: number;
   sampleId: string;
   triggered: boolean;
   effects?: Effects;
+  lengthSeconds?: number;
 }
 
 interface PlayingSample {
@@ -38,20 +46,43 @@ export default class SamplePlayer {
     this.groupPath = '';
   }
 
-  initialize(library: MusicLibrary) {
+  initialize(
+    library: MusicLibrary,
+    bpm: number,
+    updateLoadProgress: (value: number) => void
+  ) {
     const soundList = library.groups
       .map(group => {
         return group.folders.map(folder => {
-          return folder.sounds.map(sound => {
-            return {
-              path: group.path + '/' + folder.path + '/' + sound.src,
-              restricted: sound.restricted,
-            };
-          });
+          return folder.sounds
+            .map(sound => {
+              // Skip loading sequenced sounds; these are generated at runtime
+              // and made up of individual instrument samples.
+              if (!sound.sequence) {
+                return {
+                  path: group.path + '/' + folder.path + '/' + sound.src,
+                  restricted: sound.restricted,
+                };
+              }
+            })
+            .filter(sound => sound !== undefined);
         });
       })
       .flat(2);
-    soundApi.InitSound(soundList);
+
+    const secondsPerBeat = 60 / bpm;
+    soundApi.InitSound(soundList, {
+      // Calculate release time using release duration factor
+      releaseTimeSeconds: secondsPerBeat * RELEASE_DURATION_FACTOR,
+      // Use a delay value of a half of a beat
+      delayTimeSeconds: secondsPerBeat / 2,
+      reportSoundLibraryLoadTime: (loadTimeMs: number) => {
+        reportLoadTime('SoundLibraryLoadTime', loadTimeMs, [
+          {name: 'Library', value: library.name},
+        ]);
+      },
+      updateLoadProgress: updateLoadProgress,
+    });
 
     this.groupPath = library.groups[0].path;
 
@@ -169,7 +200,8 @@ export default class SamplePlayer {
           eventStart,
           null,
           false,
-          sampleEvent.effects
+          sampleEvent.effects,
+          sampleEvent.lengthSeconds
         );
 
         this.playingSamples.push({

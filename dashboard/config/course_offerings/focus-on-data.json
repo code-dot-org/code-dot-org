@@ -1,6 +1,6 @@
 {
   "key": "focus-on-data",
-  "display_name": "Focus on Data",
+  "display_name": "Focus on Data (CS Discoveries)",
   "category": "other",
   "is_featured": false,
   "assignable": true,
@@ -11,5 +11,10 @@
   "image": "https://images.code.org/806f41ed8f7a1ef8fa4a1beb66ef0373-DataCollection.png",
   "cs_topic": "artificial_intelligence,data",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "self_paced_professional_learning": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null
 }

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import applabMsg from '@cdo/applab/locale';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ZOrderRow from './ZOrderRow';
@@ -21,37 +22,37 @@ class ChartProperties extends React.Component {
     return (
       <div id="propertyRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
         <PropertyRow
-          desc={'width (px)'}
+          desc={applabMsg.designElementProperty_widthPx()}
           isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
-          desc={'height (px)'}
+          desc={applabMsg.designElementProperty_heightPx()}
           isNumber={true}
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
-          desc={'x position (px)'}
+          desc={applabMsg.designElementProperty_xPositionPx()}
           isNumber={true}
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
-          desc={'y position (px)'}
+          desc={applabMsg.designElementProperty_yPositionPx()}
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
         <BooleanPropertyRow
-          desc={'hidden'}
+          desc={applabMsg.designElementProperty_hidden()}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')}
         />
@@ -101,29 +102,24 @@ class ChartEvents extends React.Component {
 
   render() {
     const element = this.props.element;
-    const drawChartName = 'drawChart';
-    const drawChartDesc = 'Draws the chart using data you provide.';
-    const drawChartFromRecordsName = 'drawChartFromRecords';
-    const drawChartFromRecordsDesc =
-      "Draws the chart using App Lab's table data storage.";
 
     return (
       <div id="eventRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
         <EventHeaderRow />
         <EventRow
-          name={drawChartName}
-          desc={drawChartDesc}
+          name={applabMsg.designElement_chart_drawEvent()}
+          desc={applabMsg.designElement_chart_drawEventDesc()}
           handleInsert={this.insertDrawChart}
         />
         <EventRow
-          name={drawChartFromRecordsName}
-          desc={drawChartFromRecordsDesc}
+          name={applabMsg.designElement_chart_drawFromRecordsEvent()}
+          desc={applabMsg.designElement_chart_drawFromRecordsEventDesc()}
           handleInsert={this.insertDrawChartFromRecords}
         />
       </div>

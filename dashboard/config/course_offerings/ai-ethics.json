@@ -1,6 +1,6 @@
 {
   "key": "ai-ethics",
-  "display_name": "AI Ethics Activity",
+  "display_name": "Our AI Code of Ethics",
   "category": "csc",
   "is_featured": false,
   "assignable": true,
@@ -10,6 +10,11 @@
   "header": "csc",
   "image": "https://images.code.org/d53341be09aa314f9d5e131f89829d7c-CSCLanding_AICodeofEthics.png",
   "cs_topic": "artificial_intelligence,data,programming",
-  "school_subject": "history",
-  "device_compatibility": "{\"computer\":\"incompatible\",\"chromebook\":\"incompatible\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"ideal\"}"
+  "school_subject": "",
+  "device_compatibility": "{\"computer\":\"incompatible\",\"chromebook\":\"incompatible\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"ideal\"}",
+  "description": null,
+  "self_paced_professional_learning": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null
 }

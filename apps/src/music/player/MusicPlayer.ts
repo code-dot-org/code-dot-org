@@ -2,18 +2,21 @@ import {ChordEvent, ChordEventValue} from './interfaces/ChordEvent';
 import {PatternEvent, PatternEventValue} from './interfaces/PatternEvent';
 import {PlaybackEvent} from './interfaces/PlaybackEvent';
 import {SoundEvent} from './interfaces/SoundEvent';
-import MusicLibrary, {SoundFolder} from './MusicLibrary';
+import MusicLibrary, {SampleSequence, SoundFolder} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
 import {logWarning} from '../utils/MusicMetrics';
+import {getTranposedNote, Key} from '../utils/Notes';
+import {Effects} from './interfaces/Effects';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
 const constants = require('../constants');
 
-// Default to 4/4 time
+// Default to 4/4 time, 120 BPM, C Major
 const BEATS_PER_MEASURE = 4;
 const DEFAULT_BPM = 120;
+const DEFAULT_KEY = Key.C;
 
 /**
  * Main music player component which maintains the list of playback events and
@@ -21,11 +24,13 @@ const DEFAULT_BPM = 120;
  */
 export default class MusicPlayer {
   private bpm: number;
+  private key: Key;
   private samplePlayer: SamplePlayer;
   private library: MusicLibrary | null;
 
-  constructor(bpm: number = DEFAULT_BPM) {
-    this.bpm = bpm;
+  constructor(bpm: number = DEFAULT_BPM, key: Key = DEFAULT_KEY) {
+    this.bpm = this.validateBpm(bpm);
+    this.key = this.validateKey(key);
     this.samplePlayer = new SamplePlayer();
     this.library = null;
   }
@@ -34,9 +39,23 @@ export default class MusicPlayer {
    * Initializes the MusicPlayer and {@link SamplePlayer} with the music library.
    * Playback cannot start until the player is initialized.
    */
-  initialize(library: MusicLibrary) {
+  initialize(
+    library: MusicLibrary,
+    updateLoadProgress: (value: number) => void
+  ) {
     this.library = library;
-    this.samplePlayer.initialize(library);
+
+    // Set key and BPM from library if present
+    const libraryBpm = library.getBPM();
+    if (libraryBpm) {
+      this.bpm = this.validateBpm(libraryBpm);
+    }
+    const libraryKey = library.getKey();
+    if (libraryKey) {
+      this.key = this.validateKey(libraryKey);
+    }
+
+    this.samplePlayer.initialize(library, this.bpm, updateLoadProgress);
   }
 
   /**
@@ -174,12 +193,32 @@ export default class MusicPlayer {
   }
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
+    if (this.library === null) {
+      logWarning('Music Player not initialized');
+      return [];
+    }
+
     if (event.skipContext?.skipSound) {
       return [];
     }
 
     if (event.type === 'sound') {
       const soundEvent = event as SoundEvent;
+      const soundData = this.library.getSoundForId(soundEvent.id);
+      if (!soundData) {
+        logWarning('No sound for ID: ' + soundEvent.id);
+        return [];
+      }
+
+      if (soundData.sequence) {
+        return this.getSamplesForSequence(
+          soundData.sequence,
+          event.when,
+          event.triggered,
+          event.effects
+        );
+      }
+
       return [
         {
           sampleId: soundEvent.id,
@@ -250,7 +289,6 @@ export default class MusicPlayer {
 
   private getSampleForNote(note: number, instrument: string): string | null {
     if (this.library === null) {
-      logWarning('Music Player not initialized');
       return null;
     }
 
@@ -269,5 +307,51 @@ export default class MusicPlayer {
     }
 
     return `${instrument}/${sound.src}`;
+  }
+
+  private getSamplesForSequence(
+    sequence: SampleSequence,
+    eventStart: number,
+    triggered: boolean,
+    effects?: Effects
+  ): SampleEvent[] {
+    const {instrument, events} = sequence;
+    const samples: SampleEvent[] = [];
+
+    events.forEach(event => {
+      const tranposedNote = getTranposedNote(this.key, event.noteOffset);
+      const sampleId = this.getSampleForNote(tranposedNote, instrument);
+      if (sampleId !== null) {
+        const eventWhen = eventStart + (event.position - 1) / 16;
+        const lengthSeconds = (event.length / 16) * this.secondsPerMeasure();
+        samples.push({
+          sampleId,
+          offsetSeconds: this.convertPlayheadPositionToSeconds(eventWhen),
+          lengthSeconds,
+          triggered,
+          effects,
+        });
+      }
+    });
+
+    return samples;
+  }
+
+  private validateBpm(bpm: number): number {
+    if (bpm < 1 || bpm > 500) {
+      console.warn('Invalid BPM. Defaulting to 120');
+      return DEFAULT_BPM;
+    }
+
+    return bpm;
+  }
+
+  private validateKey(key: number): Key {
+    if (Key[key] === undefined) {
+      console.warn('Invalid key. Defaulting to C');
+      return Key.C;
+    }
+
+    return key;
   }
 }

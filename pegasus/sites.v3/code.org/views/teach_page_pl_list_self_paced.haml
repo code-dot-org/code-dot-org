@@ -1,0 +1,23 @@
+%div.flex-container.align-content-baseline.wrap
+  %figure
+    %img{src: "/images/teach-page-pl-offerings-self-paced.png", alt: ""}
+  -# Align the buttons at the bottom of the sections for English.
+  -# Allow non-English buttons to flow with the preceding paragraph
+  -# due to a greater chance for varying paragraph heights.
+  - if request.language == "en"
+    .flex-container.flex-space-between.self-paced-english
+      .content-wrapper
+        %h3.heading-sm
+          =hoc_s(:teach_page_pl_offerings_list_heading_self_paced)
+        %p=hoc_s(:teach_page_pl_offerings_list_desc_self_paced)
+      .content-footer
+        %a.link-button{href: "/educate/professional-development-online"}
+          =hoc_s(:call_to_action_find_self_paced_modules)
+  - else
+    .content-wrapper
+      %h3.heading-sm
+        =hoc_s(:teach_page_pl_offerings_list_heading_self_paced)
+      %p=hoc_s(:teach_page_pl_offerings_list_desc_self_paced)
+      %a.link-button{href: "/educate/professional-development-online"}
+        =hoc_s(:call_to_action_find_self_paced_modules)
+

@@ -1,5 +1,6 @@
 require 'active_support/core_ext/numeric/time'
 require 'cdo/aws/s3'
+require 'cdo/web_purify'
 require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
@@ -416,14 +417,18 @@ class FilesApi < Sinatra::Base
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
       rescue StandardError => exception
-        return file_too_large(endpoint) if exception.message == "Profanity check failed: text is too long"
+        return file_too_large(endpoint) if exception.class == WebPurify::TextTooLongError
         details = exception.message.empty? ? nil : exception.message
         return json_bad_request(details)
       end
       # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
       # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
-      return bad_request if share_failure && share_failure[:type] != "address"
+      if share_failure && share_failure[:type] != "address"
+        details_key = share_failure.type == ShareFiltering::FailureType::PROFANITY ? "profaneWords" : "pIIWords"
+        details = {details_key => [share_failure.content]}
+        return json_bad_request(details)
+      end
     end
 
     # Don't allow project to be saved if it contains non-UTF-8 characters (causing error / project to not load when opened).

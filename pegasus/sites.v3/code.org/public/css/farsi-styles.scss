@@ -14,8 +14,8 @@
 
   p:last-child {
     border-top: 1px solid $neutral_dark20;
-    margin-bottom: 0.25em;
-    padding-top: 1em;
+    margin-bottom: 0.25rem;
+    padding-top: 1rem;
   }
 }
 
@@ -25,7 +25,7 @@
     margin-bottom: 0;
 
     @media screen and (max-width: $width-sm) {
-      margin-bottom: 1em;
+      margin-bottom: 1rem;
     }
   }
 }

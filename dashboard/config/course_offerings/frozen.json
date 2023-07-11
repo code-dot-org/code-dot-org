@@ -10,6 +10,11 @@
   "header": "popular_media",
   "image": "https://images.code.org/f88534ee3652b3c55610069622d36b76-Frozen Tutorial.png",
   "cs_topic": "art_and_design,programming",
-  "school_subject": "math",
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "school_subject": "",
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "self_paced_professional_learning": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null
 }
