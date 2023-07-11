@@ -45,6 +45,7 @@ zh-CN:
         reset_password_token: 重置密码链接
         error:
           future: 不能选择将来的时间
+        us_state: 省/直辖市/自治区
   beta: 测试版
   hello: 世界你好
   welcome_back: 欢迎回来，%{name}
@@ -189,6 +190,7 @@ zh-CN:
     parent_account_checkbox: 我是家长/监护人，代表我的孩子登录
     parent_account_email_progress_permission: 我们是否可以偶尔通过电子邮件向你发送关于你孩子进度和项目的最新信息，以及关于其课程和计算机科学的最新信息？[(参见我们的隐私政策)](%{privacy_policy_url})
     parent_account_email_label: 家长/监护人电子邮箱
+    us_state: 省/直辖市/自治区
   school_info:
     title: 学校信息（选填）
     school_country: 学校所在国家
@@ -1206,6 +1208,7 @@ zh-CN:
         csf_express: 计算机科学基础课程（预快速或快速）
         csd: 计算机科学发现
         csp: 计算机科学原理
+        other: 其他
         not_applicable: 不适用
       email_opt_in:
         opt_in_yes: 对

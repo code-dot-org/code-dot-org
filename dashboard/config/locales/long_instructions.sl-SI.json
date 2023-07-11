@@ -412,7 +412,6 @@
         "courseC_PlayLab_events7_2021": "Blok »ponovite večno« vam omogoča, da znova in znova zaženete kodo za vedno. Uporabite ta blok za premikanje Chomp Dino (igralec 2) gor in dol za 400 slikovnih pik za vedno.",
         "courseC_PlayLab_events8_2021": "Ali lahko imate Waddles (igralec 1), ki igra »hit« zvok in reče »Ouch!« če naleti na Chomp? \n\nKo končate, igrajte igro, da se to zgodi.",
         "courseC_PlayLab_events_challenge1_2021": "Uporabite nov blok, da se Waddles samodejno premakne nazaj na začetek, ko teče v dinozavra in ko doseže točko. To bo vaša igra bolj zahtevna in zabavna!\n\nIgrajte igro in premaknite Waddles s puščicami, dokler ne dosežete 5 ali več točk. Za dokončanje tega izziva je treba premakniti v položaj »srednjega levo' zaslona.",
-        "courseC_artist_prog72022": "\\*\\* Izziv: \\*\\* Ime tega hišnega ljubljenčka je posebna oblika!  \n\nAli lahko ugotovite, kako narisati oris? \\\n(Dolga stran je 150 slikovnih pik, vsaka od kratkih strani pa 75 slikovnih pik.)",
         "courseC_artist_prog7_2021": "\\*\\* Izziv: \\*\\* Ime tega hišnega ljubljenčka je posebna oblika!  \n\nAli lahko ugotovite, kako narisati oris? \\\n(Dolga stran je 150 slikovnih pik, vsaka od kratkih strani pa 75 slikovnih pik.)",
         "courseC_flappy_events10_2021": "Ustvarite svojo igrico o Plahutaču (Flappyju). Spremenite lahko videz in pravila. Ko končate, kliknite Končano, da lahko prijatelji preizkusijo igrico na svojih telefonih.",
         "courseC_flappy_events1_2021": "Pritrdite blok »zapluhtaj normalni znesek« na dogodek »ob kliku«, nato pritisnite »Zaženi«. Kliknite ali tapnite prostor za predvajanje, da premaknete Flappy na cilj.",
@@ -433,7 +432,10 @@
         "courseC_harvester_loops7_2021": "Zberite vse koruze in vse buče.",
         "courseC_harvester_loops8_2021": "\\*\\* Izziv: \\*\\* Zberite vse koruze in vse buče.\n\nTa izziv lahko dokončate na kakršen koli način, vendar bo trajalo veliko dela ali veliko razmišljanja!",
         "courseC_harvester_loops9_2021": "Zberite vse koruze in vse buče.",
-        "courseC_maze_debugging9_2021": "Uporabite bloke v orodjarni, da zgradite svoj program. Pripeljite Scrata na želod."
+        "courseC_maze_debugging9_2021": "Uporabite bloke v orodjarni, da zgradite svoj program. Pripeljite Scrata na želod.",
+        "courseC_flappy_events2_2021": "Dogodek `Ob zagonu` vam omogoča zagon kode takoj, ko se igra začne.\n\nPoskusite dodati blok, ki nastavi hitrost, ko pritisnete gumb \"Zaženi\".\n\n* * *\n\nIgrajte igro in za nadaljevanje zamahnite do cilja.",
+        "courseC_flappy_events4_2021": "Flappy bo letel kar skozi ovire, če ne dodaš kode, da se zaleti. Dodaj nov blok k \"ko zadane oviro\" bloku. Tvoja koda mora \"končaj igro\", ko se Flappy zaleti v prvi set cevi.",
+        "courseC_artist_prog72022": "\\*\\* Izziv: \\*\\* Ime tega hišnega ljubljenčka je posebna oblika!  \n\nAli lahko ugotovite, kako narisati oris? \\\n(Dolga stran je 150 slikovnih pik, vsaka od kratkih strani pa 75 slikovnih pik.)"
       }
     }
   }

@@ -2402,6 +2402,8 @@ ur:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: پرنٹ {TEXT}
       storylab_setForegroundEffect2:
         text: "{EFFECT} اثر لگائیں۔"
         options:

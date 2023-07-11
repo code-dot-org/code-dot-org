@@ -22,7 +22,6 @@ describe('AddSectionDialog', () => {
     handleCancel = sinon.spy();
     defaultProps = {
       isOpen: false,
-      userId: -1,
       section: {
         id: 1,
         name: '',
@@ -65,7 +64,6 @@ describe('AddSectionDialog', () => {
     expect(wrapper.find('Spinner').length).to.equal(1);
     expect(wrapper.find('LoginTypePicker').length).to.equal(0);
     expect(wrapper.find('ParticipantTypePicker').length).to.equal(0);
-    expect(wrapper.find('Connect(EditSectionForm)').length).to.equal(0);
   });
 
   it('if login type is set but audience has not shows audience picker', () => {
@@ -82,24 +80,6 @@ describe('AddSectionDialog', () => {
     expect(wrapper.find('Spinner').length).to.equal(0);
     expect(wrapper.find('LoginTypePicker').length).to.equal(0);
     expect(wrapper.find('ParticipantTypePicker').length).to.equal(1);
-    expect(wrapper.find('Connect(EditSectionForm)').length).to.equal(0);
-  });
-
-  it('once login type and audience are set EditSectionForm shows', () => {
-    let sectionWithLoginAndParticipantType = _.cloneDeep(defaultProps.section);
-    sectionWithLoginAndParticipantType.loginType = 'word';
-    sectionWithLoginAndParticipantType.participantType = 'student';
-
-    const wrapper = shallow(
-      <AddSectionDialog
-        {...defaultProps}
-        section={sectionWithLoginAndParticipantType}
-      />
-    );
-    expect(wrapper.find('Spinner').length).to.equal(0);
-    expect(wrapper.find('LoginTypePicker').length).to.equal(0);
-    expect(wrapper.find('ParticipantTypePicker').length).to.equal(0);
-    expect(wrapper.find('Connect(EditSectionForm)').length).to.equal(1);
   });
 
   describe('sectionSetupRefresh', () => {
@@ -118,7 +98,6 @@ describe('AddSectionDialog', () => {
       const wrapper = shallow(
         <AddSectionDialog
           {...defaultProps}
-          userId={90}
           section={newSection}
           availableParticipantTypes={['student', 'teacher', 'facilitator']}
         />
@@ -139,7 +118,6 @@ describe('AddSectionDialog', () => {
       const wrapper = shallow(
         <AddSectionDialog
           {...defaultProps}
-          userId={90}
           section={sectionWithParticipantType}
           availableParticipantTypes={['student', 'teacher', 'facilitator']}
         />

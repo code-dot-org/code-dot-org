@@ -47,7 +47,7 @@
   "blockly_toolboxCategoryPlay": "Sons",
   "blockly_toolboxCategorySimple": "Simples",
   "blockly_toolboxCategoryTracks": "Faixas",
-  "blockly_toolboxCategoryVariables": "variáveis",
+  "blockly_toolboxCategoryVariables": "Variáveis",
   "chordArpeggioUp": "Arpejo Up",
   "chordArpeggioDown": "Arpejo Down",
   "chordArpeggioRandom": "Arpejo aleatório",
@@ -56,5 +56,8 @@
   "share": "Compartilhar",
   "shareComingSoon": "O compartilhamento está em construção. Volte em breve.",
   "startOver": "Começar do início",
-  "upload": "Fazer upload"
+  "upload": "Fazer upload",
+  "panelHeaderInstructions": "Instruções",
+  "panelHeaderWorkspace": "Área de trabalho: ",
+  "continue": "Avançar"
 }

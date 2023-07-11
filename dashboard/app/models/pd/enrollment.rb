@@ -79,7 +79,6 @@ class Pd::Enrollment < ApplicationRecord
     attended_csf_intro_workshop
     csf_course_experience
     csf_courses_planned
-    csf_has_physical_curriculum_guide
     previous_courses
     replace_existing
     csf_intro_intent

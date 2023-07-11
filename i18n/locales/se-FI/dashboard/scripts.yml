@@ -1883,3 +1883,27 @@ se:
               display_name: Digitála Stáhtaborgárvuohta
             lessonGroup-3:
               display_name: Sprite:at
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klássat
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klássat
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klássat
+        csa-frq-practice-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klássat
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klássat
+        csa-frq-practice-pre2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klássat

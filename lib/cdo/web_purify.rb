@@ -19,6 +19,15 @@ module WebPurify
     'ja' => 'jp'
   }.freeze
 
+  class TextTooLongError < StandardError
+    attr_reader :text_length
+
+    def initialize(text_length)
+      @text_length = text_length
+      super
+    end
+  end
+
   # Note: If text has a string of text without whitespace longer than CHARACTER_LIMIT,
   # the entire substring will count as one long chunk and be given its own request to WebPurify.
   def self.split_text(text, max_chunk_length = CHARACTER_LIMIT)
@@ -52,7 +61,7 @@ module WebPurify
     # The request limit here happens to be the same as the simultaneous request limit for our WebPurify plan
     # The choice is arbitrary because requests are not currently parallelized, though they could be in the future
     if text.length > CHARACTER_LIMIT * REQUEST_LIMIT
-      raise StandardError.new("Profanity check failed: text is too long")
+      raise TextTooLongError.new(text.length)
     end
 
     # Convert language codes to a list of two character codes, comma separated.

@@ -134,8 +134,7 @@ export default class Simple2Sequencer extends Sequencer {
 
     const currentEffects = this.getCurrentEffects();
     if (currentEffects !== null) {
-      // Create a fresh effect context if there is one active
-      this.effectsStack.push({});
+      this.effectsStack.push({...currentEffects});
     }
   }
 
@@ -212,7 +211,7 @@ export default class Simple2Sequencer extends Sequencer {
     this.addNewEvent<SoundEvent>({
       id,
       type: 'sound',
-      length: this.getLengthForId(id),
+      length: soundData.length,
       soundType: soundData.type,
       blockId,
       ...this.getCommonEventFields(),
@@ -299,7 +298,6 @@ export default class Simple2Sequencer extends Sequencer {
 
     currentFunction.playbackEvents.push(event);
     this.updateMeasureForPlayByLength(event.length);
-    currentFunction.endMeasure = this.getCurrentMeasure();
   }
 
   // Internal helper to get the entry at the top of the stack, or null
@@ -394,11 +392,6 @@ export default class Simple2Sequencer extends Sequencer {
 
   private getUniqueInvocationId(): number {
     return this.uniqueInvocationIdUpTo++;
-  }
-
-  private getLengthForId(id: string): number {
-    const soundData = this.library.getSoundForId(id);
-    return soundData ? soundData.length : 0;
   }
 
   private resetStacks() {

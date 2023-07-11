@@ -16,5 +16,8 @@
   "feedback": "Feedback",
   "share": "Dela",
   "startOver": "Börja om",
-  "upload": "Ladda upp"
+  "upload": "Ladda upp",
+  "panelHeaderInstructions": "Instruktioner",
+  "panelHeaderWorkspace": "Arbetsyta: ",
+  "continue": "Fortsätt"
 }

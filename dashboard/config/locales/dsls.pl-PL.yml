@@ -14121,3 +14121,28 @@ pl-PL:
           feedback: Niepoprawnie. Roślina biegacz zacznie się toczyć.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
+      OPD-K5 CS Courses:
+        markdown: "# Planowanie > Pierwsze kroki na Code.org\n\n\n## Krok 1: Wybierz
+          kurs\nWszystkie nasze kursy - od wstępnych czytelników po licealistów -
+          są wymienione w naszym ** [katalog kursów] (https://studio.code.org/courses)
+          **. Aby znaleźć lekcje CS Fundamentals, z którymi ćwiczyłeś, przejdź do
+          naszego ** [strona podstawowa] (https://code.org/educate/curriculum/elementary-school)
+          ** i przewiń w dół do sekcji „Kursy”. Wszystkie nasze kursy są dostępne
+          bezpłatnie. Porozmawiaj z kolegami ze swojej szkoły, aby ustalić, w jaki
+          sposób program kursu można zintegrować z różnymi przedmiotami.\n! [] (https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Krok 2: Skonfiguruj sekcję w klasie\nSkonfiguruj sekcję w klasie, aby przeglądać
+          postępy ucznia, drukować karty logowania dla uczniów, zarządzać ich kontami
+          i drukować certyfikaty, które mogą przynieść do domu po ukończeniu kursu.
+          Kliknij ten link do ** [obejrzyj krótki film] (https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)
+          **, który pokazuje, jak skonfigurować pierwsze zajęcia z informatyki na
+          Code.org. Kroki można również znaleźć w ** [ten artykuł pomocy technicznej]
+          (https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)
+          **.\n! [] (https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Krok 3: Przypisz kurs do swojej sekcji\nKliknij kurs, którego uczysz - powinieneś
+          zobaczyć ekran, który wygląda jak ten poniżej. Następnie możesz kliknąć
+          „Przypisz kurs” i przypisać ten kurs do jednej z sekcji. \n! [] (https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Krok 4: Rozpocznij nauczanie! \nWystarczy jedna lekcja, aby wprowadzić koncepcje
+          informatyki do swojej klasy. Gdy zobaczysz entuzjazm uczniów do CS, idź
+          dalej z codziennymi planami lekcji, aby poprowadzić uczniów, odłączone zajęcia,
+          które możesz wykonywać bez komputera, i fora, aby połączyć się z innymi
+          nauczycielami.\n\n\n"

@@ -2599,6 +2599,8 @@ ja:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: 印刷 {TEXT}
       storylab_setForegroundEffect2:
         text: "{EFFECT} 前景エフェクトを実行する"
         options:

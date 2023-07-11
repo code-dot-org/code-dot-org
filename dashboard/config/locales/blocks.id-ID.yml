@@ -2543,6 +2543,8 @@ id:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: cetak {TEXT}
       storylab_setForegroundEffect2:
         text: lakukan efek {EFFECT}
         options:

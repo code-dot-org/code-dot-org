@@ -2632,6 +2632,8 @@ hi:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: प्रिंट करें {TEXT}
       storylab_setForegroundEffect2:
         text: "{EFFECT} आगे का इफेक्ट डालें"
         options:

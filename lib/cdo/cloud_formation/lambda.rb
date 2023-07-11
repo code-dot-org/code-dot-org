@@ -16,7 +16,7 @@ module Cdo::CloudFormation
     def js(filename, uglify: true, max: ZIPFILE_MAX)
       str =
         if uglify
-          RakeUtils.npm_install
+          RakeUtils.yarn_install
           `npx uglifyjs --compress --mangle -- #{filename}`
         else
           File.read(filename)
@@ -65,7 +65,7 @@ module Cdo::CloudFormation
     # Zip an array of JS files (along with the `node_modules` folder), and upload to S3.
     def js_zip(files)
       Dir.chdir(aws_dir('cloudformation')) do
-        RakeUtils.npm_install '--production'
+        RakeUtils.yarn_install '--production'
       end
       lambda_zip(*files, 'node_modules', key_prefix: 'lambdajs')
     end

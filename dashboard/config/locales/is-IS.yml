@@ -57,6 +57,7 @@ is:
         reset_password_token: Tengillinn sem þú hefur notað til að endurstilla lykilorðið
         error:
           future: má ekki vera í framtíð
+        us_state: Fylki
   beta: beta
   hello: Halló heimur
   welcome_back: Velkomin/n aftur, %{name}
@@ -235,6 +236,7 @@ is:
       með upplýsingum um framvindu og verkefni barns þíns, og upplýsingum um námskeiðið
       og tölvunarfræði? [(Sjá persónuverndarstefnu okkar)](%{privacy_policy_url})
     parent_account_email_label: Netfang foreldris/forráðamanns
+    us_state: Fylki
   school_info:
     title: Upplýsingar skóla (val)
     school_country: Land skóla
@@ -1316,6 +1318,7 @@ is:
         csf_express: Grunnatriði TF (Forstig Hraðferðar eða Hraðferð)
         csd: Uppgötvanir tölvunarfræði
         csp: Grunnhugtök tölvunarfræði
+        other: Annað
         not_applicable: Á ekki við
       email_opt_in:
         opt_in_yes: Já

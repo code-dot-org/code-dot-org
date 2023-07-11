@@ -48,7 +48,7 @@
                 "getSpeed": {
                   "examples": {
                     "Spiral": {
-                      "name": "Спіраль"
+                      "name": "спіраль"
                     }
                   }
                 }
@@ -160,7 +160,7 @@
                 "onEvent": {
                   "examples": {
                     "Shrink and Grow": {
-                      "name": "Зменшуйся та збільшуйся"
+                      "name": "Зменшення та збільшення"
                     }
                   },
                   "palette_params": {

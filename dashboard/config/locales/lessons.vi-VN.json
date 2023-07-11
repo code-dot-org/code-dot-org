@@ -82,6 +82,7 @@
           "student_overview": "Trong bài học này, học viên sẽ có được trải nghiệm làm quen với khoa học máy tính và lập trình game bằng khối mã lệnh cơ bản. Bài học này được thiết kế cho học viên ở cấp trung học cơ sở, độ tuổi 10-16, nhưng có thể điều chỉnh cho học sinh ở độ tuổi nhỏ hơn hoặc lớn hơn bằng các đề xuất phân hóa dưới đây."
         },
         "dance/Dance Party": {
+          "name": "Bữa tiệc khiêu vũ (2018)",
           "overview": "Trong bài học này, học viên ở mọi lứa tuổi được trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho học viên ở mọi độ tuổi, nhưng cần biết đọc. Hoạt động này cần có âm thanh làm công cụ và được thiết kế để phản hồi với âm nhạc.",
           "preparation": "### Một tuần trước Giờ lập trình\n\n-   Xem lại [Hướng dẫn Giờ lập trình dành cho giáo viên](http://hourofcode.com/resources/how-to/)và \\[Phương pháp hay nhất của các giáo viên thành công[1] để bắt đầu lập kế hoạch sự kiện Giờ lập trình.\n\n-   [Đăng ký sự kiện Giờ lập trình](http://hourofcode.com) nếu bạn muốn nhận hỗ trợ lớp học, poster giảm giá hoặc tham gia vào chương trình tặng quà robot (chỉ ở Hoa Kỳ).\n\n-   Tự xem lại và hoàn thành bài hướng dẫn trực tuyến: [Minecraft: Bữa tiệc khiêu vũ](https://studio.code.org/s/dance/lessons/1/levels/1)\n\n-   Nhớ kiểm tra trước khi yêu cầu học sinh làm. Hãy kiểm tra thiết bị công nghệ và quyết định xem bạn có cần khắc phục sự cố gì trước Giờ lập trình hay không.\n\n-   Xem lại giáo án bổ sung [“Bữa tiệc khiêu vũ lớn”](studio.code.org/s/dance-unplugged/lessons/1) để xác định xem bạn có nên dạy bài này trước Giờ lập trình hay không.\n    ### Một ngày trước Giờ lập trình\n\n-   Mỗi học sinh hoàn thành hoạt động sẽ nhận được một [chứng chỉ](http://code.org/certificates). Hãy in chứng chỉ cho mọi người để hoạt động này dễ dàng hơn vào cuối Giờ lập trình.\n\n-   (không bắt buộc) Hãy khuyên học sinh mang theo tai nghe để sử dụng trong hoạt động này.",
           "purpose": "Bài học này giới thiệu các khái niệm Khoa học Máy tính cốt lõi về mã hóa và lập trình sự kiện (sử dụng các khối).",
@@ -3450,6 +3451,9 @@
         },
         "allthethings/Text Compression": {
           "name": "Nén văn bản"
+        },
+        "allthethings/Pixelation": {
+          "name": "Điểm ảnh"
         },
         "allthethings/AppLab": {
           "name": "AppLab"

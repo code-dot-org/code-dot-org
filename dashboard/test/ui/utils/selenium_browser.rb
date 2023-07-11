@@ -32,8 +32,8 @@ module SeleniumBrowser
     end
   end
 
-  require 'selenium/webdriver/remote/http/persistent'
-  class Client < Selenium::WebDriver::Remote::Http::Persistent
+  require 'selenium/webdriver/remote/http/default'
+  class Client < Selenium::WebDriver::Remote::Http::Default
     # Replaces 'unexpected response' message with the actual parsed error from the JSON response, if provided.
     def create_response(code, body, content_type)
       super
@@ -44,10 +44,6 @@ module SeleniumBrowser
         raise exception, "Error #{msg[:code]}: #{error}", exception.backtrace
       end
       raise
-    end
-
-    def new_http_client
-      HttpClient.new name: 'webdriver'
     end
 
     def read_timeout=(timeout)

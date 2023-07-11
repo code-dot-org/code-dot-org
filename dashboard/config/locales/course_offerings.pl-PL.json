@@ -2,11 +2,19 @@
   "pl-PL": {
     "data": {
       "course_offerings": {
+        "coursea": "Podstawy CS: Kurs A",
+        "courseb": "Podstawy CS: Kurs B",
+        "coursec": "Podstawy CS: Kurs C",
+        "coursed": "Podstawy CS: Kurs D",
+        "coursee": "Podstawy CS: Kurs E",
+        "coursef": "Podstawy CS: Kurs F",
+        "express": "Podstawy CS: Kurs ekspresowy",
+        "pre-express": "Podstawy CS: Pre-reader Express",
         "csd": "Odkrycia Informatyczne",
         "csp": "Zasady informatyki",
         "csa": "Informatyka A",
         "ui-test-versioned-script": "ui-test-versioned-script",
-        "aiml": "Moduł AI i uczenia maszynowego",
+        "aiml": "AI i uczenie maszynowe",
         "20-hour": "Przyspieszone wprowadzenie do kursu informatyki",
         "flappy": "Kod Flappiego",
         "jigsaw": "Układanka",
@@ -16,6 +24,7 @@
         "applab-intro": "Wprowadzenie do App Lab",
         "aquatic": "Minecraft: Wodna podróż",
         "artist": "Artysta",
+        "basketball": "Wybierz swoją drużynę i stwórz mecz koszykówki",
         "code-break-younger": "Code Break dla młodszych uczniów",
         "code-break": "Code Break",
         "course1": "Kurs 1",
@@ -43,6 +52,7 @@
         "minecraft": "Minecraft w Godzinie Kodowania - Projektant",
         "oceans": "AI dla oceanów",
         "outbreak": "Symulator pandemii",
+        "pixelation": "Pikselacja",
         "playlab": "Lab Gier",
         "sb-pt-cont": "sb-pt-cont",
         "sb-pt-exp": "sb-pt-exp",
@@ -54,8 +64,11 @@
         "poster": "plakat",
         "csa-pilot-facilitator": "Facylitatorzy pilotażU CSA",
         "poembot-hoc": "poembot-hoc",
+        "ai-ethics": "Godzina kodowania - Etyka AI",
         "dance-unplugged": "Godzina Kodowania - Potańcówka - Bez komputera",
+        "explore-data-1": "Aktywność danych",
         "outbreak-csc": "Epidemia",
+        "spelling-bee": "Aktywność ortograficzna",
         "poem-art": "Sztuka poezji ",
         "poetry": "Informatyka i Poezja",
         "hello-world-animals": "Witaj świecie",
@@ -403,7 +416,18 @@
         "self-paced-pl-microbit": "self-paced-pl-microbit",
         "seesaw-adaptations": "seesaw-adaptations",
         "ey-ecosystems": "ey-ecosystems",
-        "self-paced-pl-csp": "self-paced-pl-csp"
+        "self-paced-pl-csp": "self-paced-pl-csp",
+        "musiclab": "musiclab",
+        "csa-software-engineering": "csa-software-engineering",
+        "csa-frq-practice": "csa-frq-practice",
+        "hoc-amazon-poc": "hoc-amazon-poc",
+        "csa-frq-practice-2023": "csa-frq-practice-2023",
+        "csa-frq-practice-2019": "csa-frq-practice-2019",
+        "bingo": "bingo",
+        "csa-frq-practice-2021": "csa-frq-practice-2021",
+        "csa-frq-practice-2022": "csa-frq-practice-2022",
+        "csa-frq-practice-pre2019": "csa-frq-practice-pre2019",
+        "self-paced-pl-aiml": "self-paced-pl-csd5"
       }
     }
   }

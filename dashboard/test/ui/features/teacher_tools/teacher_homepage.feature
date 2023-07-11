@@ -1,5 +1,7 @@
 @as_teacher
 @no_mobile
+@no_firefox
+@no_safari
 Feature: Using the teacher homepage sections feature
 
   Scenario: See a section creation dialog when logging for the first time
@@ -31,7 +33,6 @@ Feature: Using the teacher homepage sections feature
     When I create a new student section and go home
     Then the student section table should have 2 rows
 
-  @no_firefox @no_safari
   Scenario: Navigate to course and unit pages
     # No sections, ensure that levels load correctly after navigating from MiniView
     Given I am on "http://studio.code.org/s/csp2-2017/lessons/1/levels/1"

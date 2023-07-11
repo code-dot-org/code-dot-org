@@ -111,14 +111,14 @@ class S3Packaging
   def log_bundle_size
     stats = JSON.parse(File.read(@source_location + '/build/package/js/stats.json'))
     Metrics.write_batch_metric(
-      stats['assets'].map do |asset|
+      stats['assets'].filter_map do |asset|
         next nil unless asset['name'].end_with? '.js'
         {
           name: 'bundle_size',
           metadata: asset['name'],
           value: asset['size'],
         }
-      end.compact
+      end
     )
   rescue => exception
     # Just log and continue

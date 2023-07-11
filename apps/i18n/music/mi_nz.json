@@ -10,5 +10,8 @@
   "blockly_toolboxCategoryMath": "Pāngarau",
   "blockly_toolboxCategoryVariables": "Ngā Taurangi",
   "share": "Tiri",
-  "startOver": "Tīmata Anō"
+  "startOver": "Tīmata Anō",
+  "panelHeaderInstructions": "Ngā Tohutohu",
+  "panelHeaderWorkspace": "Papamahi: ",
+  "continue": "Haere tonu"
 }
