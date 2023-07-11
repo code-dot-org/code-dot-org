@@ -2,13 +2,16 @@
 // whether a set of conditions have all been satisfied.  Unknown conditions are
 // skipped.  The accumulated satisfied conditions can be cleared at any time.
 
-export default class ConditionsChecker {
-  private currentSatisfiedConditions: string[];
-  private knownConditions: KnownConditions;
+import {Condition} from '../types';
+import _ from 'lodash';
 
-  constructor(knownConditions: KnownConditions) {
+export default class ConditionsChecker {
+  private currentSatisfiedConditions: Condition[];
+  private conditionNames: string[];
+
+  constructor(conditionNames: string[]) {
     this.currentSatisfiedConditions = [];
-    this.knownConditions = knownConditions;
+    this.conditionNames = conditionNames;
   }
 
   // Reset the accumulated conditions.
@@ -17,21 +20,30 @@ export default class ConditionsChecker {
   }
 
   // Accumulate a satisfied condition.
-  addSatisfiedCondition(id: string) {
-    this.currentSatisfiedConditions.push(id);
+  addSatisfiedCondition(condition: Condition) {
+    if (!this.hasCondition(condition)) {
+      this.currentSatisfiedConditions.push(condition);
+    }
+  }
+
+  // Determines whether we already know that a condition has been satisfied.
+  private hasCondition(condition: Condition) {
+    return this.currentSatisfiedConditions.some(currentSatisfiedCondition =>
+      _.isEqual(currentSatisfiedCondition, condition)
+    );
   }
 
   // Check whether the current set of satisfied conditions satisfy the given
   // required conditions.
-  checkRequirementConditions(requiredConditions: string[]) {
+  checkRequirementConditions(requiredConditions: Condition[]) {
     for (const requiredCondition of requiredConditions) {
       // If we don't yet support a condition, don't check against it for now.
-      if (!Object.values(this.knownConditions).includes(requiredCondition)) {
+      if (!this.conditionNames.includes(requiredCondition.name)) {
         continue;
       }
 
       // Not satisfying a required condition is a fail.
-      if (!this.currentSatisfiedConditions.includes(requiredCondition)) {
+      if (!this.hasCondition(requiredCondition)) {
         return false;
       }
     }
@@ -39,8 +51,4 @@ export default class ConditionsChecker {
     // All conditions are satisfied.
     return true;
   }
-}
-
-export interface KnownConditions {
-  [key: string]: string;
 }
