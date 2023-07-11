@@ -23,7 +23,8 @@
       "name": "Example: Lemon Popsicle",
       "description": "Draw a lemon popsicle by changing the pen color and width, and by specifing how many pixels the turtle should move in the direction forwards and backwards.",
       "code": "```\n// Draw a lemon popsicle by changing the pen color and width\n// and by specifing how many pixels the turtle should move in the direction forwards and backwards.\npenColor(\"yellow\");\npenWidth(40);\nmoveForward(100);\npenWidth(5);\npenColor(\"brown\");\nmoveForward(-200);\n```",
-      "app": "https://images.code.org/0d47dda8effd331957863ddbee33820a-image-1445603074466.gif"
+      "app": "",
+      "image": "https://images.code.org/054373e6071c23b02c230a9ed8d90627-turtleLemon.gif"
     }
   ],
   "palette_params": [
