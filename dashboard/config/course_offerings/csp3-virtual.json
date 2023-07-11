@@ -11,5 +11,10 @@
   "image": "https://images.code.org/0773c123ffe9bda234589984c4eb3634-Turtle Programming.png",
   "cs_topic": "programming",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "self_paced_professional_learning": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null
 }

@@ -2,7 +2,6 @@ Feature: Dance Lab Age Filter
   Scenario: Song selector is visible and doesn't display pg13 songs for age < 13
     Given I create a young student named "Harry"
     And I am on "http://studio.code.org/s/allthethings/lessons/37/levels/1?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
@@ -18,7 +17,6 @@ Feature: Dance Lab Age Filter
   Scenario: Song selector is visible and displays all songs for age > 13 and teacher flag turns filter on
     Given I create a student named "Ron"
     And I am on "http://studio.code.org/s/allthethings/lessons/37/levels/1?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
@@ -41,7 +39,6 @@ Feature: Dance Lab Age Filter
 
   Scenario: Selecting <13 in age dialog turns filter on
     Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/1?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
@@ -57,7 +54,6 @@ Feature: Dance Lab Age Filter
 
   Scenario: Selecting 13 in age dialog turns filter off
     Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/1?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
@@ -71,7 +67,6 @@ Feature: Dance Lab Age Filter
 
     # session cookie should persist and no dialog should show up
     Then I am on "http://studio.code.org/s/dance/lessons/1/levels/9"
-    And I rotate to landscape
     And I wait for the page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
@@ -84,7 +79,6 @@ Feature: Dance Lab Age Filter
 
   Scenario: Song selector is hidden when initializing with teacher flag on and teacher flag stays on after level complete
     Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/1?noautoplay=true&songfilter=on"
-    And I rotate to landscape
     And I wait for the page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
@@ -114,7 +108,6 @@ Feature: Dance Lab Age Filter
 
   Scenario: Song selector is hidden when initializing with teacher flag on for signed in student
     Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/1?noautoplay=true&songfilter=on"
-    And I rotate to landscape
     And I wait for the page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"

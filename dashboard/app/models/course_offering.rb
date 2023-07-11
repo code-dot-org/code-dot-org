@@ -114,7 +114,7 @@ class CourseOffering < ApplicationRecord
     latest_published_version(locale_code).content_root.link
   end
 
-  def display_name_with_year(locale_code = 'en-us')
+  def display_name_with_latest_year(locale_code = 'en-us')
     return localized_display_name unless latest_published_version(locale_code)
     latest_published_version(locale_code).content_root.localized_assignment_family_title
   end
@@ -277,7 +277,12 @@ class CourseOffering < ApplicationRecord
       image: image,
       cs_topic: cs_topic,
       school_subject: school_subject,
-      device_compatibility: device_compatibility
+      device_compatibility: device_compatibility,
+      description: description,
+      self_paced_professional_learning: self_paced_professional_learning,
+      professional_learning_program: professional_learning_program,
+      video: video,
+      published_date: published_date,
     }
   end
 
@@ -285,7 +290,7 @@ class CourseOffering < ApplicationRecord
     {
       key: key,
       display_name: display_name,
-      display_name_with_year: display_name_with_year(locale_code),
+      display_name_with_latest_year: display_name_with_latest_year(locale_code),
       grade_levels: grade_levels,
       duration: duration,
       image: image,
@@ -316,7 +321,12 @@ class CourseOffering < ApplicationRecord
       image: image,
       cs_topic: cs_topic,
       school_subject: school_subject,
-      device_compatibility: device_compatibility
+      device_compatibility: device_compatibility,
+      description: description,
+      self_paced_professional_learning: self_paced_professional_learning,
+      professional_learning_program: professional_learning_program,
+      video: video,
+      published_date: published_date,
     }
   end
 
