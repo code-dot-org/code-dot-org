@@ -195,24 +195,13 @@ const MultipleSectionsAssigner = ({
 
   return (
     <AccessibleDialog onClose={onClose}>
-      <div
-        tabIndex="0"
-        className={classnames(
-          'uitest-confirm-assignment-dialog',
-          moduleStyle.modalHeader
-        )}
-      >
+      <div tabIndex="0" className={moduleStyle.modalHeader}>
         <Heading3>{i18n.chooseSectionsPrompt({assignmentName})}</Heading3>
       </div>
       <div className={moduleStyle.sectionsDirections}>
         <BodyTwoText>{sectionDirections}</BodyTwoText>
       </div>
-      <div
-        className={classnames(
-          'uitest-confirm-assignment-dialog',
-          moduleStyle.sectionList
-        )}
-      >
+      <div className={moduleStyle.sectionList}>
         <Heading5>{i18n.yourSectionsList()}</Heading5>
         <div className={moduleStyle.sectionListOptionsContainer}>
           {sections &&
