@@ -5,11 +5,11 @@
 
 .hero-ai-pl-webinar {
   background-image: url(/images/ai/pl/webinar/hero--1.png), url(/images/ai/pl/webinar/hero--2.png);
-  background-position: left top, right bottom;
+  background-position: left center, right center;
   background-repeat: no-repeat, no-repeat;
   background-color: #360161;
-  //background-size: contain;
-  background-size: 250px, 500px;
+  background-size: contain;
+
   &__by {
     display: flex;
     align-items: center;
@@ -32,7 +32,7 @@
   }
 
   @media (max-width: 1499px) {
-    background-position: calc(20vw - 350px) top, right bottom;
+    background-position: calc(20vw - 350px) center, right center
   }
 
   @media (max-width: 1279px) {
