@@ -341,6 +341,7 @@
   "chooseSection": "Elige una sección",
   "chooseSectionsPrompt": "¿A qué sección (es) desea asignar \"{assignmentName}\"?",
   "chooseSectionsDirections": "Cuando asignas un curriculum a una sección, este será lo primero que vean los estudiantes al iniciar sesión. Cambiar el curriculum asignado nunca afectará el progreso de los estudiantes en otro curriculum.",
+  "chooseSectionsDirectionsOnCatalog": "Cuando asignas un plan de estudios a una sección, ese plan de estudios será lo primero que vean los alumnos al iniciar sesión. Cambiar el plan de estudios asignado nunca afectará el progreso de los estudiantes en otro plan de estudios. Nota: La versión recomendada más reciente del plan de estudios se asignará a tu sección cuando asignes desde el Catálogo Curricular.",
   "chooseTable": "Escoge una tabla",
   "chromebook": "Chromebook",
   "className": "Nombre de la clase",
