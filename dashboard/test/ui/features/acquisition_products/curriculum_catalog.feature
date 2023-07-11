@@ -30,11 +30,11 @@ Feature: Curriculum Catalog Page
     Then I click selector "[aria-label='Assign AI for Oceans to your classroom']"
     And I wait until element "h3:contains(Sign in or create account to assign a curriculum)" is visible
     Then I click selector "a:contains(Sign in or create account)"
-    And I get redirected to "/users/sign_in?user_return_to=/catalog" via "dashboard"
+    And I wait until I am on "https://studio.code.org/users/sign_in?user_return_to=/catalog" via "nothing"
 
   Scenario: Signed-in student is redirected to help page when clicking Assign
+    Given I create a student named "Student Sam"
     Given I am on "http://studio.code.org/catalog"
-    And I am a student
     And I wait until element "h4:contains(AI for Oceans)" is visible
 
     Then I click selector "[aria-label='Assign AI for Oceans to your classroom']"
@@ -50,4 +50,4 @@ Feature: Curriculum Catalog Page
     Then I click selector "[aria-label='Assign AI for Oceans to your classroom']"
     And I wait until element "h3:contains(Create class section to assign a curriculum)" is visible
     Then I click selector "a:contains(Create Section)"
-    And I wait to see a modal containing text "Create a new section"
+    And I wait until element "h3:contains(Create a new section)" is visible
