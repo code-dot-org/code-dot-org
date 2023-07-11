@@ -25,6 +25,11 @@ export default class MusicLibrary {
     }
   }
 
+  getDefaultSound(): string | undefined {
+    const firstGroup: FolderGroup = this.groups[0];
+    return firstGroup?.defaultSound;
+  }
+
   getSoundForId(id: string): SoundData | null {
     const splitId = id.split('/');
     const path = splitId[0];
@@ -150,6 +155,7 @@ interface FolderGroup {
   path: string;
   bpm?: number;
   key?: string;
+  defaultSound?: string;
   folders: SoundFolder[];
 }
 
