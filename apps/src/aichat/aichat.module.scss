@@ -25,18 +25,6 @@
   flex-direction: column;
 }
 
-.inner {
-  margin: 0 auto;
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
-  position: relative;
-}
-
-.childrenArea {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .buttonNext {
   animation: fade-in-button 7s;
   font-size: 14px;

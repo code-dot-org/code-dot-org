@@ -1,75 +1,19 @@
-import PropTypes from 'prop-types';
-import React, {useRef, useLayoutEffect, useEffect, useState} from 'react';
+import React from 'react';
 import styles from './aichat.module.scss';
-
-interface AichatProps {
-  children: React.ReactNode;
-}
-
-function useWindowSize() {
-  const [size, setSize] = useState([
-    document.documentElement.clientWidth,
-    document.documentElement.clientHeight,
-  ]);
-  useLayoutEffect(() => {
-    function updateSize() {
-      const width = document.documentElement.clientWidth;
-      const height = document.documentElement.clientHeight;
-      setSize([width, height]);
-    }
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-  return size;
-}
 
 /**
  * Renders a simple AI chat.
  */
 
-const Aichat: React.FunctionComponent<AichatProps> = ({children}) => {
-  // Leave a margin to the left and the right of the video, to the edges
-  // of the screen.
-  const horizontalMargin = 40;
+interface AichatProps {
+  children: React.ReactNode;
+}
 
-  // Leave a vertical margin above and below the video, to the edges of the
-  // screen.
-  const verticalMargin = 50;
-
-  // We need room below the video for the children passed in.  This area
-  // can contain things like a download link and a Continue button.
-  const childrenAreaHeight = 70;
-
-  // The aspect ratio of the video.
-  const videoAspectRatio = 16 / 9;
-
-  let [targetWidth, targetHeight] = useWindowSize();
-  targetWidth -= horizontalMargin * 2;
-  targetHeight -= verticalMargin * 2 + childrenAreaHeight;
-
-  let width, height;
-  if (targetWidth / targetHeight > videoAspectRatio) {
-    height = targetHeight;
-    width = videoAspectRatio * height;
-  } else {
-    width = targetWidth;
-    height = width / videoAspectRatio;
-  }
-
-  return (
-    <div id="aichat-container" className={styles.container}>
-      <div className={styles.inner} style={{width, height}}>
-        <div>Hello world!</div>
-      </div>
-      <div
-        className={styles.childrenArea}
-        style={{width: width, height: childrenAreaHeight}}
-      >
-        {children}
-      </div>
-    </div>
-  );
-};
+const Aichat: React.FunctionComponent<AichatProps> = ({children}) => (
+  <div id="aichat-container" className={styles.container}>
+    <div>Hello world!</div>
+    {children}
+  </div>
+);
 
 export default Aichat;

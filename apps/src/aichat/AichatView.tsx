@@ -6,23 +6,17 @@
 // non-React JS code.
 
 import React from 'react';
-import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import Aichat from './Aichat';
 import {
   sendSuccessReport,
   navigateToNextLevel,
 } from '@cdo/apps/code-studio/progressRedux';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {AichatLevelData} from '@cdo/apps/lab2/types';
 import aichatLocale from './locale';
 import styles from './aichat.module.scss';
 
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-  // const levelVideo: AichatLevelData = useSelector(
-  //   (state: {lab: LabState}) => state.lab.levelData
-  // ) as AichatLevelData;
 
   const nextButtonPressed = () => {
     const appType = 'aichat';
@@ -32,7 +26,7 @@ const AichatView: React.FunctionComponent = () => {
 
   return (
     <div id="aichat">
-      <Aichat /*src={levelVideo?.src}*/>
+      <Aichat>
         <button
           id="aichat-continue-button"
           type="button"
