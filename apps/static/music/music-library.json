@@ -5,6 +5,7 @@
       "name": "All",
       "imageSrc": "all.png",
       "path": "all-by-type",
+      "defaultSound": "beats/disco_beat",
       "folders": [
         {
           "name": "Piano",
