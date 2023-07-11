@@ -63,17 +63,6 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   }
 
   /**
-   * Initializes the flyout.
-   *
-   * @param targetWorkspace The workspace in which to
-   *     create new blocks.
-   */
-  init(targetWorkspace) {
-    super.init(targetWorkspace);
-    this.targetWorkspace_ = targetWorkspace;
-  }
-
-  /**
    * Compute height of flyout.  Position mat under each block.
    * For RTL: Lay out the blocks right-aligned.
    */

@@ -115,7 +115,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @param {boolean} isVisible Whether or not the flyout should be shown.
    */
   setFlyoutVisible(isVisible) {
-    if (!this.flyout_.targetWorkspace_) {
+    if (!this.flyout_.targetWorkspace) {
       this.flyout_.init(this.workspace_);
     }
     isVisible
