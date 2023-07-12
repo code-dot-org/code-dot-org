@@ -51,7 +51,12 @@ class ProjectRemix extends React.Component {
   };
 
   remixLab2Project = () => {
-    Lab2Registry.getInstance().getProjectManager()?.redirectToRemix();
+    const projectManager = Lab2Registry.getInstance().getProjectManager();
+    if (projectManager) {
+      projectManager.flushSave().then(() => {
+        projectManager.redirectToRemix();
+      });
+    }
   };
 
   render() {

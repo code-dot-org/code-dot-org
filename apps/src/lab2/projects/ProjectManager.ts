@@ -331,7 +331,7 @@ export default class ProjectManager {
     } else {
       // if we can save immediately, initiate a save now. This is an async
       // request that we do not wait for.
-      this.saveHelper();
+      return this.saveHelper();
     }
   }
 
