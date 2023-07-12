@@ -1,7 +1,7 @@
 class OpenaiController < ApplicationController
   # POST /openai/chat_completion
   def chat_completion
-    return unless user.ai_chat_access?
+    return unless current_user.ai_chat_access?
     # Set up the API endpoint URL and request headers
     url = "https://api.openai.com/v1/chat/completions"
     headers = {
