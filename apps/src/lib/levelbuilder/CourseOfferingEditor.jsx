@@ -364,7 +364,7 @@ export default function CourseOfferingEditor(props) {
       >
         <option value="">{translatedNoneOption}</option>
         {Object.values(props.selfPacedPLCourseOfferings).map(co => (
-          <option key={co} value={co.display_name}>
+          <option key={co.key} value={co.display_name}>
             {co.display_name}
           </option>
         ))}
@@ -415,11 +415,13 @@ CourseOfferingEditor.propTypes = {
     self_paced_professional_learning: PropTypes.string,
     professional_learning_program: PropTypes.string,
   }),
-  selfPacedPLCourseOfferings: PropTypes.shape({
-    key: PropTypes.string,
-    display_name: PropTypes.string,
-    course_version_path: PropTypes.string,
-  }),
+  selfPacedPLCourseOfferings: PropTypes.arrayOf(
+    PropTypes.shape({
+      key: PropTypes.string,
+      display_name: PropTypes.string,
+      course_version_path: PropTypes.string,
+    })
+  ),
 };
 
 const styles = {
