@@ -13,4 +13,17 @@
 #  updated_at    :datetime         not null
 #
 class LearningGoal < ApplicationRecord
+  belongs_to :rubric
+  has_many :learning_goal_evidence_levels, dependent: :destroy
+
+  def serialize
+    {
+      key: key,
+      position: position,
+      learning_goal: learning_goal,
+      ai_enabled: ai_enabled,
+      tips: tips,
+      learning_goal_evidence_levels: learning_goal_evidence_levels.map(&:serialize)
+    }
+  end
 end

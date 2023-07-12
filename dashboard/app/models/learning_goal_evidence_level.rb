@@ -11,4 +11,13 @@
 #  updated_at          :datetime         not null
 #
 class LearningGoalEvidenceLevel < ApplicationRecord
+  belongs_to :learning_goal
+
+  def serialize
+    {
+      understanding: understanding,
+      teacher_description: teacher_description,
+      ai_prompt: ai_prompt
+    }
+  end
 end
