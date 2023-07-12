@@ -845,6 +845,9 @@
           "word": "二進制（Binary）",
           "definition": "僅使用兩個選項來表示資訊的方式。"
         },
+        "computer/csd/2022": {
+          "word": "計算機"
+        },
         "input/csd/2022": {
           "word": "輸入"
         },
@@ -1499,6 +1502,9 @@
         },
         "function/csd/2021": {
           "word": "函式"
+        },
+        "computer/csd/2021": {
+          "word": "計算機"
         },
         "input/csd/2021": {
           "word": "輸入"

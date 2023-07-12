@@ -4,7 +4,6 @@ Feature: Legacy Share Remix
 
   Background:
     Given I am on "http://studio.code.org/s/artist/lessons/1/levels/10?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     And element "#runButton" is visible
     And element "#resetButton" is hidden

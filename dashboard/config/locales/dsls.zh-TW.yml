@@ -14024,3 +14024,12 @@ zh-TW:
           若要在您的教師控制台中查看匿名調查結果，您需要 (1) 查看調查/評估，然後 (2) 選擇課後調查單元作為您想查看的單元。  \n\n* **關於查看課後調查結果的更多說明**：[[google
           doc](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw)]
           [[pdf](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw/export?format=pdf)]\n\n\n\n\n"
+      OPD-K5 CS Courses:
+        markdown: "# 計劃 > Code.org入門\n\n\n## 第 1 步：選擇課程\n所有的課程 -- 從學前班到高中 -- 都列在了
+          **[課程分類](https://studio.code.org/courses)**。要找到學習的計算機科學基礎課程，訪問 **[小學頁面](https://code.org/educate/curriculum/elementary-school)**
+          並滾動到 \"課程\" 章節。所有的課程都不需要付費。與學校的同事討論，以確定如何將課程與各種科目整合在一起。\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          第 2 步：設置課堂小組\n設置課堂小組來查看學生進度，為學生列印登入卡片，管理帳號，並在完成後列印出能帶回家的證書。點選連結 **[觀看簡短介紹](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**，展示了如何在
+          Code.org 設置第一個計算機科學班級。也可以在 **[支援文檔](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**
+          中找到這些步驟。\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          第 3 步：將課程分配給小組\n點擊正在教學的課程 -- 應該可看到下面這樣的頁面。點擊 \"分配課程\" 並將課程分配給某個小組。 \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          第 4 步：開始教學！ \n所需要的只是一堂將計算機科學概念帶入課堂的課程。一旦看到學生對計算機科學的熱情，就可以進一步制定每日課程計劃來指導學生，無需計算機即可進行的線下活動，以及與其他老師建立聯絡的論壇。"

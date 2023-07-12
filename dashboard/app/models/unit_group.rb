@@ -613,6 +613,12 @@ class UnitGroup < ApplicationRecord
     !!pilot_experiment
   end
 
+  # Wrapper function to help with assignable course logic
+  # @return [CourseVersion]
+  def get_course_version
+    course_version
+  end
+
   def has_pilot_experiment?(user)
     return false unless pilot_experiment
     SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)

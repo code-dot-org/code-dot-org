@@ -412,3 +412,7 @@ sm:
           lesson_groups:
             lessonGroup-4:
               display_name: Fuainumera lasi
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Faamaumauga

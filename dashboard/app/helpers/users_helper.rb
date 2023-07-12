@@ -439,8 +439,9 @@ module UsersHelper
   def percent_complete_total(unit, user = current_user)
     summary = summarize_user_progress(unit, user)
     levels = unit.script_levels.map(&:level)
+    complete_statuses = %w(perfect passed)
     completed = levels.count do |l|
-      sum = summary[:progress][l.id]; sum && %w(perfect passed).include?(sum[:status])
+      sum = summary[:progress][l.id]; sum && complete_statuses.include?(sum[:status])
     end
     (100.0 * completed / levels.count).round(2)
   end

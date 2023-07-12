@@ -12,11 +12,23 @@
         "hello-world-soccer-2022/Hello World: Food": {
           "name": "హలో వరల్డ్: సాకర్"
         },
+        "frozen/Artist": {
+          "name": "అన్నా మరియు ఎల్సాతో కోడ్"
+        },
         "artist/Artist": {
           "name": "కళాకారుడు"
         },
+        "gumball/Gumball Play Lab": {
+          "name": "గమ్‌బాల్ ప్లే ల్యాబ్"
+        },
+        "dance/Dance Party": {
+          "name": "డాన్స్ పార్టీ (2018)"
+        },
         "hello-world-space-2022/Hello World: Food": {
           "name": "హలో వరల్డ్: స్పేస్"
+        },
+        "hello-world-animals-2021/Hello World": {
+          "name": "హలో వరల్డ్: జంతువులు"
         },
         "starwars/Hour of Code 2015": {
           "name": "స్టార్ వార్స్: కోడ్తో గెలాక్సీని నిర్మించడం (జావాస్క్రిప్ట్)"
@@ -30,11 +42,23 @@
         "hello-world-retro-2021/Hello World": {
           "name": "హలో వరల్డ్: రెట్రో"
         },
+        "starwarsblocks/Hour of Code 2015": {
+          "name": "స్టార్ వార్స్: కోడ్ తో ఒక గెలాక్సీని నిర్మించడం (బ్లాక్‌లీ)"
+        },
+        "text-compression/Text Compression": {
+          "name": "వచనం కుదింపు "
+        },
         "outbreak/Outbreak": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
+        },
+        "sports/Sports": {
+          "name": "మీ స్వంత క్రీడల ఆటను కోడ్ చేయండి"
+        },
+        "infinity/Infinity": {
+          "name": "డిస్నీ ఇన్‌ఫినిటీ ప్లే ల్యాబ్"
         },
         "dance-2019/Dance Party": {
           "name": "డాన్స్ పార్టీ"
@@ -1879,6 +1903,12 @@
         },
         "allthethings/Bounce": {
           "name": "బౌన్స్"
+        },
+        "allthethings/Text Compression": {
+          "name": "వచనం కుదింపు "
+        },
+        "allthethings/Pixelation": {
+          "name": "పిక్సెలేషన్"
         },
         "allthethings/Minecraft": {
           "name": "మైన్ క్రాఫ్ట్"

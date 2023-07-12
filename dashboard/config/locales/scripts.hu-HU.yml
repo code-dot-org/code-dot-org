@@ -3548,3 +3548,7 @@ hu:
               display_name: Kurzus Projekt vége
           description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját,
             és hozzon létre saját művészetét, történetét vagy
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Adat

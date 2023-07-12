@@ -813,6 +813,7 @@ ca-ES:
   classicmaze_name: Laberint clàssic
   iceage_name: Edat de gel
   minecraft_name: Minecraft
+  text-compression_name: Compressió de text
   applab_name: Laboratori d'aplicacions
   gamelab_name: Laboratori de jocs
   applab_gradelevel: A partir de 13 anys
@@ -1764,6 +1765,7 @@ ca-ES:
   footer_store: Botiga
   footer_support: Suport
   footer_terms: Condicions
+  ai_for_oceans: IA per Oceans
   ai_for_oceans_lesson_plan: unitat didàctica/lliço
   ai_in_partnership_with: En associació amb
   ai_activity: Activitat
