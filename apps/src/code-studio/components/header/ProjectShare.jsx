@@ -29,7 +29,8 @@ export default class ProjectShare extends React.Component {
           styles.buttonSpacing,
           'project_share',
           'header_button',
-          'header_button_light no-mc'
+          'header_button_light',
+          'no-mc'
         )}
         onClick={this.shareProject}
       >
