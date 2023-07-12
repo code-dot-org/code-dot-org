@@ -1,7 +1,7 @@
 export const openaiCompletion = messages => {
   console.log('messages', messages);
   return $.ajax({
-    url: '/openai/chat_completion',
+    url: '/api/aichat',
     method: 'POST',
     data: JSON.stringify({messages}),
     contentType: 'application/json',
