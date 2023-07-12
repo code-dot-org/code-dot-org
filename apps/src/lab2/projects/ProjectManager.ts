@@ -13,7 +13,6 @@
 import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
 import {Channel, Project, ProjectSources} from '../types';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {currentLocation} from '@cdo/apps/utils';
 import Lab2MetricsReporter from '../Lab2MetricsReporter';
 
@@ -375,7 +374,7 @@ export default class ProjectManager {
 
   private logAndThrowError(errorMessage: string) {
     const error = new Error(errorMessage);
-    this.logError(errorMessage, error);
+    Lab2MetricsReporter.logError(errorMessage, error);
     throw error;
   }
 
