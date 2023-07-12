@@ -530,5 +530,22 @@ describe('CurriculumCatalog', () => {
       assert(!replacedLocation.includes('lesson'));
       assert(replacedLocation.includes('duration=week'));
     });
+
+    it('params update when translated toggle is flipped', () => {
+      renderWithUrlParams('');
+      const translatedToggle = screen.getByLabelText(
+        'Only show curricula available in sampleLanguageNativeName'
+      );
+
+      // Toggle "translated" on
+      fireEvent.click(translatedToggle);
+      assert(translatedToggle.checked);
+      assert(replacedLocation.includes('translated=true'));
+
+      // Toggle "translated" off
+      fireEvent.click(translatedToggle);
+      assert(!translatedToggle.checked);
+      assert(replacedLocation.includes('translated=false'));
+    });
   });
 });
