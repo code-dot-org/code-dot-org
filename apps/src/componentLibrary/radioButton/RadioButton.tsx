@@ -1,19 +1,33 @@
-import React, {memo} from 'react';
+import React, {memo, ChangeEvent} from 'react';
 import classnames from 'classnames';
 
 import Typography from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './radioButton.module.scss';
 
 export interface RadioButtonProps {
+  /** Radio Button checked state */
   checked: boolean;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  /** Radio Button onChange handler*/
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  /** The name attribute specifies the name of an input element.
+   The name attribute is used to reference elements in a JavaScript,
+   or to reference form data after a form is submitted.
+   Note: Only form elements with a name attribute will have their values passed when submitting a form. */
   name: string;
+  /** The value attribute specifies the value of an input element. */
   value: string;
+  /** Radio Button label */
   label?: string;
+  /** Is Radio Button disabled */
   disabled?: boolean;
+  /** Size of Radio Button */
   size?: 'xs' | 's' | 'm' | 'l';
 }
 
+/**
+ * Design System: Radio Button Component.
+ * Can be used to render a single Radio Button or as a part of bigger/more complex components (e.g. Radio Button Group).
+ */
 const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
   label,
   checked,
