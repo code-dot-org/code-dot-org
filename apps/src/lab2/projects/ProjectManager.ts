@@ -64,7 +64,7 @@ export default class ProjectManager {
   // Load the project from the sources and channels store.
   async load(): Promise<Project> {
     if (this.destroyed) {
-      throw new Error('Project Manager destroyed');
+      this.throwErrorIfDestroyed('load');
     }
     let sources: ProjectSources | undefined;
     try {
@@ -184,6 +184,15 @@ export default class ProjectManager {
       '/' +
       this.channelId
     );
+  }
+
+  redirectToRemix() {
+    this.throwErrorIfDestroyed('redirectToRemix');
+    if (!this.lastChannel || !this.lastChannel.projectType) {
+      this.logAndThrowError('Cannot remix without channel');
+      return;
+    }
+    this.channelsStore.redirectToRemix(this.lastChannel);
   }
 
   addSaveSuccessListener(
@@ -353,6 +362,20 @@ export default class ProjectManager {
       this.currentTimeoutId = undefined;
     }
     this.saveQueued = false;
+  }
+
+  private throwErrorIfDestroyed(actionName: string) {
+    if (this.destroyed) {
+      this.logAndThrowError(
+        `Tried to ${actionName}, but the Project Manager was destroyed.`
+      );
+    }
+  }
+
+  private logAndThrowError(errorMessage: string) {
+    const error = new Error(errorMessage);
+    this.logError(errorMessage, error);
+    throw error;
   }
 
   // LISTENERS

@@ -1,6 +1,8 @@
 @no_mobile
 Feature: Professional learning Sections
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Create new professional learning section as levelbuilder
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
@@ -19,15 +21,13 @@ Feature: Professional learning Sections
     And element ".uitest-facilitator-type" is visible
     When I select facilitator participant type
 
-    # New Section details
-    Then I wait to see "#sections-set-up-container"
-    And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
-    And I wait until element "button:contains(Professional Learning)" is visible
-    # TODO TEACH-592: Seed PL courses so we can test course assignment
-    # And I click selector "button:contains(Professional Learning)"
-    # And I press the first "input[name='Teacher PL Course']" element
-    And I press the first "#uitest-save-section-changes" element
-    And I wait until element "#classroom-sections" is visible
+    # Edit Section Form
+    Then I wait to see "#uitest-section-name"
+    And I press keys "My Section of Teachers" for element "#uitest-section-name"
+    Then I wait to see "#uitest-assignment-family"
+    When I select the "ui-test-teacher-pl-course" option in dropdown "uitest-assignment-family"
+    And I press the save button to create a new section
+    And I wait for the dialog to close using jQuery
 
     # Professional Learning Sections Table
     Then I should see the professional learning section table
@@ -35,6 +35,8 @@ Feature: Professional learning Sections
     And I wait until element "a:contains(My Section of Teachers)" is visible
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Create new professional learning section as universal instructor
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
@@ -53,12 +55,13 @@ Feature: Professional learning Sections
     And element ".uitest-facilitator-type" is visible
     When I select facilitator participant type
 
-    # New Section details
-    Then I wait to see "#sections-set-up-container"
-    And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
-    And I wait until element "button:contains(Professional Learning)" is visible
-    And I press the first "#uitest-save-section-changes" element
-    And I wait until element "#classroom-sections" is visible
+    # Edit Section Form
+    Then I wait to see "#uitest-section-name"
+    And I press keys "My Section of Teachers" for element "#uitest-section-name"
+    Then I wait to see "#uitest-assignment-family"
+    When I select the "ui-test-teacher-pl-course" option in dropdown "uitest-assignment-family"
+    And I press the save button to create a new section
+    And I wait for the dialog to close using jQuery
 
     # Professional Learning Sections Table
     Then I should see the professional learning section table
@@ -66,6 +69,8 @@ Feature: Professional learning Sections
     And I wait until element "a:contains(My Section of Teachers)" is visible
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Create new professional learning section as plc reviewer
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
@@ -84,12 +89,13 @@ Feature: Professional learning Sections
     And element ".uitest-facilitator-type" is visible
     When I select facilitator participant type
 
-    # New Section details
-    Then I wait to see "#sections-set-up-container"
-    And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
-    And I wait until element "button:contains(Professional Learning)" is visible
-    And I press the first "#uitest-save-section-changes" element
-    And I wait until element "#classroom-sections" is visible
+    # Edit Section Form
+    Then I wait to see "#uitest-section-name"
+    And I press keys "My Section of Teachers" for element "#uitest-section-name"
+    Then I wait to see "#uitest-assignment-family"
+    When I select the "ui-test-facilitator-pl-course" option in dropdown "uitest-assignment-family"
+    And I press the save button to create a new section
+    And I wait for the dialog to close using jQuery
 
     # Professional Learning Sections Table
     Then I should see the professional learning section table
@@ -97,6 +103,8 @@ Feature: Professional learning Sections
     And I wait until element "a:contains(My Section of Teachers)" is visible
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Create new professional learning section as facilitator
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
@@ -115,12 +123,13 @@ Feature: Professional learning Sections
     And element ".uitest-facilitator-type" is not visible
     When I select teacher participant type
 
-    # New Section details
-    Then I wait to see "#sections-set-up-container"
-    And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
-    And I wait until element "button:contains(Professional Learning)" is visible
-    And I press the first "#uitest-save-section-changes" element
-    And I wait until element "#classroom-sections" is visible
+    # Edit Section Form
+    Then I wait to see "#uitest-section-name"
+    And I press keys "My Section of Teachers" for element "#uitest-section-name"
+    Then I wait to see "#uitest-assignment-family"
+    When I select the "ui-test-teacher-pl-course" option in dropdown "uitest-assignment-family"
+    And I press the save button to create a new section
+    And I wait for the dialog to close using jQuery
 
     # Professional Learning Sections Table
     Then I should see the professional learning section table
@@ -128,6 +137,8 @@ Feature: Professional learning Sections
     And I wait until element "a:contains(My Section of Teachers)" is visible
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Teacher can not create professional learning section
     Given I create a teacher named "Teacher"
     And I sign in as "Teacher" and go home
@@ -138,7 +149,8 @@ Feature: Professional learning Sections
 
     # Participant Type Picker Does Not Show
     Then I should see the new section dialog
-    And element ".uitest-teacher-type" is not visible
+    Then I select email login
+    Then I wait to see "#uitest-section-name"
 
   Scenario: Teacher tries to join professional learning section for teachers
     Given I create an authorized teacher-associated student named "Sally"

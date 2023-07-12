@@ -1,3 +1,6 @@
+import {ProjectType} from '../types';
+import * as utils from '@cdo/apps/utils';
+
 const rootUrl = '/projects/';
 
 // Given a levelId and optionally a scriptId,
@@ -12,4 +15,11 @@ export async function getChannelForLevel(
   }
   requestString += `level/${levelId}`;
   return fetch(requestString);
+}
+
+export async function redirectToRemix(
+  channelId: string,
+  projectType: ProjectType
+) {
+  utils.navigateToHref(`${rootUrl}${projectType}/${channelId}/remix`);
 }

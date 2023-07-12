@@ -7,7 +7,7 @@ style_min: true
 # More Policy Resources
 
 ### Importance of computer science education policies
-  * [Our state policy agenda](https://code.org/files/Making_CS_Fundamental.pdf)
+  * [Our state policy agenda](/2023_making_cs_foundational.pdf)
   * [Outcomes of K-12 computer science policy in states](https://docs.google.com/document/d/1Kn60v-9hirBco42GeWTuUoGIqkn3UIHfL0KUvMyb3ZM/edit?usp=sharing)
   * [The big three priority policy levers](https://docs.google.com/document/d/1q8yH1_ANquzT0h5ayj-lKp5-rqI1McaAO82arklL4AQ/edit?usp=sharing)
   * [K-12 computer science and cybersecurity](https://docs.google.com/document/d/1iHNKnQkWSbahakoHUnBnjWu_d-d-Kcyp2aPk3LFSsqw/edit?usp=sharing)
