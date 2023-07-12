@@ -9,7 +9,10 @@ te:
           title: కళాకారుడు
         hourofcode:
           title: క్లాసిక్ మేజ్
+        frozen:
+          title: అన్నా మరియు ఎల్సాతో కోడ్
         infinity:
+          title: డిస్నీ ఇన్‌ఫినిటీ ప్లే ల్యాబ్
           description: డిస్నీ ఇన్ఫినిటీ పాత్రలు నటించిన కథ లేదా ఆటను సృష్టించడానికి
             ప్లే ల్యాబ్ ఉపయోగించండి.
           description_short: డిస్నీ ఇన్ఫినిటీ పాత్రలు నటించిన కథ లేదా ఆటను సృష్టించడానికి
@@ -18,6 +21,8 @@ te:
             ప్లే ల్యాబ్ ఉపయోగించండి.
         netsim:
           title: ఇంటర్నెట్ సిమ్యులేటర్
+        pixelation:
+          title: పిక్సెలేషన్
         20-hour:
           description: ఈ 20 గంటల కోర్సు కోర్సులలో కోర్ కంప్యూటర్ సైన్స్ మరియు ప్రోగ్రామింగ్
             భావనలను కవర్ చేస్తుంది 2-4. కోర్సు 10-18 సంవత్సరాల వయస్సు గల ఉపయోగం కోసం
@@ -40,16 +45,30 @@ te:
             Flappy కోడ్ ట్యుటోరియల్ని ప్రయత్నించండి!
         jigsaw:
           title: అడ్డదిడ్డంగా
+        step:
+          title: దశ
+        text-compression:
+          title: వచనం కుదింపు
         allthethings:
           lessons:
             lesson-49:
               name: సంగీతం
         cspunit4draft:
           description_short: డేటా
+        gumball:
+          title: గమ్‌బాల్ ప్లే ల్యాబ్
+        starwars:
+          title: 'స్టార్ వార్స్: కోడ్ తో ఒక గెలాక్సీని నిర్మించడం (జావాస్క్రిప్ట్)'
+        starwarsblocks:
+          title: 'స్టార్ వార్స్: కోడ్ తో ఒక గెలాక్సీని నిర్మించడం (బ్లాక్‌లీ)'
         mc:
           description_short: కోడ్ ద్వారా Minecraft ప్రపంచాన్ని అన్వేషించండి.
         oceans:
           title: AI ఫర్ ఓషన్స్
+        CSDU3-Draft:
+          description_short: ప్రోగ్రాము చేయడం
+        TEMP CSD Unit 3:
+          description_short: ప్రోగ్రాము చేయడం
         CSDU2-Draft:
           description_short: వెబ్ అభివృద్ధి
         CSDU5-Draft:
@@ -59,6 +78,10 @@ te:
         csp1-support:
           title: యూనిట్ 1 ఆన్‌లైన్ ప్రొఫెషనల్ లెర్నింగ్ కోర్సు
         basketball:
+          title: మీ బృందమును ఎంచుకోండి మరియు ఒక బాస్కెట్‌బాల్ ఆట చేయండి
+          description_short: మీ బృందమును ఎంచుకోండి మరియు ఒక బాస్కెట్‌బాల్ ఆట చేయండి
+          description: మీ బృందమును ఎంచుకోండి మరియు ఒక బాస్కెట్‌బాల్ ఆట చేయండి
+          student_description: మీ బృందమును ఎంచుకోండి మరియు ఒక బాస్కెట్‌బాల్ ఆట చేయండి
           name: బాస్కెట్బాల్
         minecraft:
           description_short: Minecraft యొక్క మీ స్వంత వెర్షన్లో ప్రోగ్రామ్ జంతువులు
@@ -67,8 +90,22 @@ te:
             ఇతర Minecraft జీవులు.
           student_description: Minecraft యొక్క మీ స్వంత వెర్షన్లో ప్రోగ్రామ్ జంతువులు
             మరియు ఇతర Minecraft జీవులు.
+        coursea-draft:
+          title: 'CS ప్రాథమిక పాఠాంశాలు: కోర్సు A'
+        courseb-draft:
+          title: 'CS ప్రాథమిక పాఠాంశాలు: కోర్సు B.'
+        coursec-draft:
+          title: 'CS ప్రాథమిక పాఠాంశాలు: కోర్సు C'
+        coursed-draft:
+          title: 'CS ప్రాథమిక పాఠాంశాలు: కోర్సు D'
+        coursee-draft:
+          title: 'CS ప్రాథమిక పాఠాంశాలు: కోర్సు E'
+        coursef-draft:
+          title: 'CS ప్రాథమిక పాఠాంశాలు: కోర్సు F'
         sports:
           name: క్రీడలు
+        coursed-ramp:
+          title: 'CS ప్రాథమిక పాఠాంశాలు: కోర్సు D'
         csd2-old:
           description_short: వెబ్ అభివృద్ధి
         coursea-2017:
@@ -111,6 +148,7 @@ te:
         pre-express-2018:
           assignment_family_title: ప్రీ-రీడర్ ఎక్స్‌ప్రెస్
         dance:
+          title: డాన్స్ పార్టీ (2018)
           name: డాన్స్
         aquatic:
           name: జలచర
@@ -122,6 +160,8 @@ te:
               display_name: షరతులు
             csp_functions:
               display_name: విధులు
+        dance-extras:
+          title: డ్యాన్స్ చేస్తూనే ఉండండి (2018)
         coursef-2019:
           lesson_groups:
             csf_variables:
@@ -417,6 +457,10 @@ te:
               display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+        csp5-virtual:
+          title: యాప్ ల్యాబ్‌లో ఈవెంట్‌చే-నడపబడే ప్రోగ్రామింగ్
+        csd3-virtual:
+          title: గేమ్ ల్యాబ్ కు స్వీయ ఒరవడి పరిచయము
         outbreak:
           title: ఔట్‌బ్రేక్ సిమ్యులేటర్
         2021drafting:
@@ -545,6 +589,8 @@ te:
               display_name: పరిచయం
             Introduction:
               display_name: పరిచయం
+        aiml-2021:
+          title: AI మరియు మెషీన్ లెర్నింగ్ మాడ్యూల్
         csd7-2021:
           title: AI మరియు మెషీన్ లెర్నింగ్
         self-paced-pl-csd1-2021:
@@ -675,11 +721,15 @@ te:
           lesson_groups:
             lessonGroup-2:
               display_name: పాఠాలు
+        hello-world-animals:
+          title: 'హలో వరల్డ్: జంతువులు'
         hello-world-retro:
           title: 'హలో వరల్డ్: రెట్రో'
         ai-ethics:
           title: మా నైతికతల యొక్క AI కోడ్
           description_audience: 6-12 తరగతులు
+        dance-unplugged:
+          title: అవర్ ఆఫ్ కోడ్ - డాన్స్ పార్టీ - అన్‌ప్లగ్ చేయబడింది
         poem-art:
           title: పద్య కళ
         csd-post-survey-2021:
@@ -707,6 +757,8 @@ te:
           title: పద్య కళ
         poetry-2021:
           title: కవిత్వముతో కోడింగ్
+        hello-world-animals-2021:
+          title: 'హలో వరల్డ్: జంతువులు'
         hello-world-retro-2021:
           title: 'హలో వరల్డ్: రెట్రో'
         2022drafting:
@@ -821,6 +873,8 @@ te:
             కేటాయించబడవచ్చు.
           student_description: ఈ యూనిట్‌లో CS అన్వేషణలను క్లాసు పూర్తి చేసినప్పుడు
             ఒక సర్వే ఉంది. ఈ సర్వే చేయడానికి సమయం వచ్చినప్పుడు మీ టీచర్ మీకు చెప్తారు.
+        aiml-2022:
+          title: AI మరియు మెషీన్ లెర్నింగ్ మాడ్యూల్
         self-paced-pl-csd1-2022:
           title: 'మోడ్యూల్ 1: సుస్వాగతం '
           description: "ఈ మోడ్యూల్ Code.org మరియు ఈ వృత్తినైపుణ్య అభ్యసనా కోర్సు రెండింటికీ
@@ -980,6 +1034,8 @@ te:
               display_name: ఉచ్చులు
         self-paced-pl-csa2-2023:
           title: 'మోడ్యూల్ 2: Code.org న్యావిగేట్ చేయుట'
+        devices-2022:
+          title: ఉపరికరణాలతో అనువర్తనాలను సృష్టించుట (సర్క్యూట్ ప్లేగ్రౌండ్)
         microbit-temp:
           lesson_groups:
             lessonGroup-2:
@@ -1178,3 +1234,7 @@ te:
               display_name: వేరియబుల్స్
         self-paced-pl-csp2-2023:
           title: 'మోడ్యూల్ 2: Code.org న్యావిగేట్ చేయుట'
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: డేటా

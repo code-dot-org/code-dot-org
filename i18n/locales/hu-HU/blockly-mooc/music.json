@@ -18,5 +18,6 @@
   "startOver": "Újrakezdés",
   "upload": "Feltöltés",
   "panelHeaderInstructions": "Utasítások",
-  "panelHeaderWorkspace": "Munkaterület: "
+  "panelHeaderWorkspace": "Munkaterület: ",
+  "continue": "Tovább"
 }

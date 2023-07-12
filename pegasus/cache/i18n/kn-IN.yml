@@ -9,6 +9,7 @@ kn-IN:
     ಬೆಂಬಲವನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ. ದಯವಿಟ್ಟು ಆಧುನಿಕ ಬ್ರೌಸರ್ಗೆ ಅಪ್ಗ್ರೇಡ್ ಮಾಡಿ.
   upgrade_ie_message_csedweek: CSEDweek.org ಶೀಘ್ರದಲ್ಲೇ ಇಂಟರ್ನೆಟ್ ಎಕ್ಸ್ಪ್ಲೋರರ್ 8, 9,
     ಮತ್ತು 10 ಗೆ ಬೆಂಬಲವನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ. ದಯವಿಟ್ಟು ಆಧುನಿಕ ಬ್ರೌಸರ್ಗೆ ಅಪ್ಗ್ರೇಡ್ ಮಾಡಿ.
+  upgrade_ie_link: ಹೆಚ್ಚಿನ ಮಾಹಿತಿ
   en: ಗಣಕ ಯಂತ್ರ ವಿಜ್ಞಾನ
   computer_science_edweek: ಗಣಕ ಯಂತ್ರ ವಿಜ್ಞಾನ ಶಿಕ್ಷಣ ವಾರ
   anybody_can_learn: ಯಾರಾದರೂ ಕಲಿಯಬಹುದು.
@@ -156,6 +157,10 @@ kn-IN:
   homepage_action_text_try_it: ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ
   homepage_action_text_girlvideo: ಹುಡುಗಿಯನ್ನು ಸ್ಫೂರ್ತಿಗೊಳಿಸಿ
   homepage_signpetition_dropdown_text: ನಾನು ಒಪ್ಪುತ್ತೇನೆ
+  homepage_banner_text_link: ಹೆಚ್ಚಿನ ಮಾಹಿತಿ
+  homepage_banner_privacy_link: ಹೆಚ್ಚಿನ ಮಾಹಿತಿ
+  homepage_banner_20k_teachers_link: ಹೆಚ್ಚಿನ ಮಾಹಿತಿ
+  homepage_banner_40k_teachers_link: ಹೆಚ್ಚಿನ ಮಾಹಿತಿ
   homepage_slot_text_title_hoc: ಅವರ್ ಆಫ್‌ ಕೋಡ್
   homepage_slot_text_blurb_hoc_2022: ಅನ್ವೇಷಿಸಿ, ಪ್ಲೇ ಮಾಡಿ, ರಚಿಸಿ!
   homepage_slot_text_link_hoc: ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ
@@ -168,6 +173,7 @@ kn-IN:
   homepage_slot_text_link_thebadguys: ಬ್ಯಾಡ್ ಗೈಸ್ ಜೊತೆ ಕೋಡ್
   homepage_gallery_header: "%{project_count} ಮಿಲಿಯನ್‌ಗೂ ಹೆಚ್ಚು Code.org ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು
     ರಚಿಸಲಾಗಿದೆ"
+  homepage_below_hero_announcement_link_text: ಹೆಚ್ಚಿನ ಮಾಹಿತಿ
   contact_form_topic_student: ನಾನು ವಿದ್ಯಾರ್ಥಿಯಾಗಿದ್ದೇನೆ
   contact_form_topic_parent: ನಾನು ಪೋಷಕ ಮನುಷ್ಯ
   contact_form_topic_teacher: ನಾನು ಶಿಕ್ಷಕ/ಶಿಕ್ಷಕನಾಗಿದ್ದೇನೆ
@@ -283,6 +289,7 @@ kn-IN:
   volunteer_engineer_submission_experience_software_professional: ಸಾಫ್ಟ್ವೇರ್ ಎಂಜಿನಿಯರ್
     ಅಥವಾ ತಾಂತ್ರಿಕ ತಜ್ಞ
   petition_age: ವಯಸ್ಸು
+  dashboard_announce_learn_more_button: ಹೆಚ್ಚಿನ ಮಾಹಿತಿ
   dashboard_landing_title: ಶಿಕ್ಷಕರ ಮುಖಪುಟ
   dashboard_landing_welcome: ಹೊಸ ಮತ್ತು ಸುಧಾರಿತ ಶಿಕ್ಷಕ ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಸ್ವಾಗತ.
   dashboard_landing_video: ಈ ವೀಡಿಯೊ ವೀಕ್ಷಿಸಿ
@@ -484,6 +491,7 @@ kn-IN:
   minecraft_name: ಮೈನ್‌ಕ್ರಾಫ್ಟ್
   starwarsblocks_name: ಸ್ಟಾರ್ ವಾರ್ಸ್‌ (ಬ್ಲಾಕ್‌ಗಳು)
   hoc-encryption_name: ಸರಳ ಎನ್‌ಕ್ರಿಪ್ಷನ್
+  text-compression_name: ಪಠ್ಯ ಕಂಪ್ರೆಶನ್
   applab_name: ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್
   gamelab_name: ಗೇಮ್ ಲ್ಯಾಬ್
   basketball_name: ಬಾಸ್ಕೆಟ್‌ಬಾಲ್‌ ಗೇಮ್‌ ಮಾಡಿ
@@ -828,6 +836,7 @@ kn-IN:
     ಇನ್ನಷ್ಟನ್ನು ತಿಳಿಯಿರಿ. ನಮ್ಮ ಬೇಸಿಗೆ ಕ್ಯಾಂಪ್‌ಗಳು, ಹೈಸ್ಕೂಲ್ ಸಿಎಸ್ ತರಗತಿಗಳು, ಸ್ಕಾಲರ್‌ಶಿಪ್‌ಗಳು
     ಮತ್ತು ಇಂಟರ್ನ್‌ಶಿಪ್‌ಗಳಲ್ಲಿ ತೊಡಗಿಸಿಕೊಳ್ಳುವುದು ಹೇಗೆ ಎಂಬ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ಮಾಹಿತಿಯನ್ನು
     ಕಂಡುಕೊಳ್ಳಿ.
+  hoc2018_dance_amazon_about_future_engineer_button: ಹೆಚ್ಚಿನ ಮಾಹಿತಿ
   hoc2018_dance_amazon_future_engineer_footer: "* ಈ ಟ್ಯುಟೋರಿಯಲ್ ಅನ್ನು ಬಳಸಿದ ಸಂಗೀತದ
     ಕಲಾಕಾರರು Code.org ಗೆ ತಮ್ಮ ಸಂಗೀತದ ಬಳಕೆಯ ಲೈಸೆನ್ಸಿಂಗ್‌ ಭಾಗವಾಗಿ ಅಮೆಜಾನ್‌ಗೆ ಪ್ರಾಯೋಜನೆ
     ಅಥವಾ ಶಿಫಾರಸನ್ನು ಮಾಡುತ್ತಿಲ್ಲ."

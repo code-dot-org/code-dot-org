@@ -439,7 +439,8 @@
           "courseD_farmer_while7_2018_PathAhead": "תצטרך להשתמש בבלוק \"כל עוד דרך לפניך\" כדי לפתור את החידה."
         },
         "courseD_maze_ramp3_2021": {
-          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
+          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם.",
+          "stone_block_2": "לא ניתן להפיל את הבלוקים האפורים."
         },
         "helloworld_animals_costumes": {
           "hello_world_new": "בלוק חדש!"
@@ -1041,6 +1042,9 @@
         },
         "helloworld_food_click_space-2022": {
           "hw_Run": "לחץ כאן ראשון!"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "לאחר שחיברתם את כל הבלוקים, הקישו על \"הרץ\" להתחיל את התוכנה שלכם."
         }
       }
     }

@@ -816,7 +816,7 @@ it:
         CSF_loops_AB: Cicli
         csd_gamelab_booleans: Espressioni Booleane
         csd_gamelab_conditional_statements: Istruzioni Condizionali
-        csd_gamelab_if_else: Dichiarazioni Se/altrimenti
+        csd_gamelab_if_else: Istruzioni condizionali Se/altrimenti
         CSF_SpriteLabIntro_CDEF: Questo è il Laboratorio dei personaggi
         CSF_Spritelab_MakeSprite_CDEF: Come creare un personaggio nel Laboratorio
           dei personaggi
@@ -961,7 +961,7 @@ it:
         poemart_events: L'arte della poesia - Eventi
         poemart_imagery: L'arte della poesia  - Metafore
         poemart_celebration: L'arte della poesia  - Celebrazione
-        csd_u6_variables_part2: Variabili - Il modello del contatore
+        csd_u6_variables_part2: Variabili - Lo schema a contatore
         csd_ml_ethics_ai: 'Etica e Intelligenza Artificiale '
         outbreak_intro: Simulatore di focolaio - Introduzione
         outbreak_events: Simulatore di focolaio - Eventi

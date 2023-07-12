@@ -61,5 +61,6 @@
   "startOver": "Начать заново",
   "upload": "Загрузить",
   "panelHeaderInstructions": "Инструкции",
-  "panelHeaderWorkspace": "Место сбора блоков"
+  "panelHeaderWorkspace": "Место сбора блоков",
+  "continue": "Продолжить"
 }

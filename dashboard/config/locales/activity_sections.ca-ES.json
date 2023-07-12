@@ -979,6 +979,9 @@
             null
           ]
         },
+        "9e4304e5-944c-4b21-88eb-708558b2b82f": {
+          "progression_name": "Compressió de text"
+        },
         "789f83b4-45b7-4145-9d8c-e2a2429efec2": {
           "progression_name": "Widget: Compressió de text"
         },
@@ -1037,6 +1040,9 @@
         },
         "821aeaeb-2dd7-4e84-a7e0-0cdfdaeaff28": {
           "description": "Demaneu als alumnes que vinguin a seure a prop vostre. Ara, digueu-los que es posin de peu!\nDigueu-los que el que acabeu de fer és declarar un esdeveniment i una acció. Quan els dieu que s’asseguin, és un esdeveniment. L’acció que respon a aquest esdeveniment és que tots s’han assegut. És el mateix que quan els heu dit que es posessin de peu. Els esdeveniments i les accions són fàcils d’identificar en la vida diària.\n\nAlguns esdeveniments i accions podrien ser:\n\n-   Tenir gana i menjar alguna cosa\n-   Donar-se un cop al peu i cridar “Ai!”\n-   Agafar la pilota en un partit de bàsquet i anotar!\n\nDemaneu a la classe que pensin un parell més d’esdeveniments. Digueu-los que crearan un joc en què hi haurà accions associades als esdeveniments que programin!"
+        },
+        "2123b1ad-42d8-4c2f-87f6-4300fe7dd741": {
+          "name": "Codi del seu propi joc d'esports"
         },
         "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
           "description": "Al final d'aquesta sèrie de trencaclosques, els alumnes podran fer que el seu joc sigui únic. Feu que els alumnes provin maneres noves de fer que el joc sigui més difícil. Per exemple, poden provar de jugar amb moltes pilotes alhora, o fer que cada vegada que la pilota reboti a la paret, apareguin més pilotes.\n\nSi un grup o alumne acaba abans de temps, poden provar de fer un altre tutorial a [code.org/learn](<>).",

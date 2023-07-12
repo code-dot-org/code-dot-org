@@ -937,6 +937,7 @@
   blockly_name: "ब्लॉकली"
   projguts_name: "रॉक, पेपर, सिझर्स"
   hourofcode_name: "क्लासिक मेझ"
+  playlab_name: "प्ले लॅब"
   infinity_name: "इन्फीनिटी प्ले लॅब"
   artist_name: "आर्टीस्ट"
   monstercoding_name: "मिस्ट्री आयलंड कोडिंग क्वेस्ट"
@@ -1528,6 +1529,7 @@
   user_header_create: 'बनवा '
   user_header_applab: 'अॅप लॅब'
   user_header_artist: 'आर्टीस्ट'
+  user_header_playlab: "प्ले लॅब"
   user_header_dance: "डांस पार्टी"
   user_header_spritelab: "स्प्राइट लॅब"
   user_header_minecraft: "माइनक्राफ्ट"

@@ -694,6 +694,7 @@ fa:
         csa_one_dimensional_arrays: 'CSA: آرایه‌های یک بعدی (1D)'
         csa_polymorphism: 'CSA: چند شکلی'
         csd_sprite_properties: ویژگی‌های اسپرایت
+        csc-starquilts-intro: کدنویسی لحاف ستاره‌ای هندسی
         csc-ecosystems-intro: ماژول اکوسیستمها
     callout:
       text:
