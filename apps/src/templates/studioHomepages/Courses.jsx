@@ -15,7 +15,6 @@ import color from '../../util/color';
 class Courses extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
-    isTeacher: PropTypes.bool.isRequired,
     isSignedOut: PropTypes.bool.isRequired,
     studentsCount: PropTypes.string.isRequired,
     modernElementaryCoursesAvailable: PropTypes.bool.isRequired,
@@ -46,12 +45,8 @@ class Courses extends Component {
   }
 
   render() {
-    const {
-      isEnglish,
-      isTeacher,
-      isSignedOut,
-      modernElementaryCoursesAvailable,
-    } = this.props;
+    const {isEnglish, isSignedOut, modernElementaryCoursesAvailable} =
+      this.props;
 
     const {headingText, subHeadingText, description, buttonText} =
       this.getHeroStrings();
@@ -86,7 +81,7 @@ class Courses extends Component {
             {/* English */}
             {isEnglish && (
               <div className={'announcements'}>
-                <SpecialAnnouncement isTeacher={isTeacher} />
+                <SpecialAnnouncement />
                 <CoursesStudentEnglish />
               </div>
             )}
@@ -94,7 +89,7 @@ class Courses extends Component {
             {/* Non-English */}
             {!isEnglish && (
               <CourseBlocksIntl
-                isTeacher={isTeacher}
+                isTeacher={false}
                 showModernElementaryCourses={modernElementaryCoursesAvailable}
               />
             )}
