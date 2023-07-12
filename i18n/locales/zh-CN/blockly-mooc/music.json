@@ -58,5 +58,6 @@
   "startOver": "重新开始",
   "upload": "上传",
   "panelHeaderInstructions": "说明",
-  "panelHeaderWorkspace": "工作区域"
+  "panelHeaderWorkspace": "工作区域",
+  "continue": "继续"
 }

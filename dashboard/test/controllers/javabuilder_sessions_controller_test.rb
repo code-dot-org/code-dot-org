@@ -228,7 +228,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     teachers_string = decoded_token[0]['verified_teachers']
     teachers = teachers_string.split(',')
     assert_equal 1, teachers.length
-    assert teachers.include?((verified_teacher_1.id).to_s)
+    assert_includes(teachers, (verified_teacher_1.id).to_s)
     # verified teacher 2 is not teaching the student csa
     refute teachers.include?((verified_teacher_2.id).to_s)
     refute teachers.include?((regular_teacher.id).to_s)

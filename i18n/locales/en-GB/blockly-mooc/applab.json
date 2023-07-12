@@ -6,6 +6,7 @@
   "catText": "Text",
   "catVariables": "Variables",
   "designWorkspaceHeader": "Workspace: ",
+  "designElementProperty_text": "text",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param4": "height",
   "dropletBlock_setRGB_param3": "red",

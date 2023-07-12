@@ -75,7 +75,7 @@ const CurriculumCatalogCard = ({
 
 CurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
-  courseDisplayNameWithYear: PropTypes.string.isRequired,
+  courseDisplayNameWithLatestYear: PropTypes.string.isRequired,
   duration: PropTypes.oneOf(Object.keys(translatedCourseOfferingDurations))
     .isRequired,
   gradesArray: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -102,7 +102,7 @@ const CustomizableCurriculumCatalogCard = ({
   assignButtonDescription,
   assignButtonText,
   courseDisplayName,
-  courseDisplayNameWithYear,
+  courseDisplayNameWithLatestYear,
   duration,
   gradeRange,
   imageAltText,
@@ -123,22 +123,12 @@ const CustomizableCurriculumCatalogCard = ({
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
 
-  const handleClickLearnMore = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.CURRICULUM_CATALOG_LEARN_MORE_CLICKED_EVENT,
-      {
-        curriculum_offering: courseDisplayNameWithYear,
-      }
-    );
-    window.location.href = pathToCourse;
-  };
-
   const handleClickAssign = () => {
     setIsAssignDialogOpen(true);
     analyticsReporter.sendEvent(
       EVENTS.CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT,
       {
-        curriculum_offering: courseDisplayNameWithYear,
+        curriculum_offering: courseDisplayNameWithLatestYear,
         has_sections: sectionsForDropdown.length > 0,
         is_signed_in: !isSignedOut,
       }
@@ -155,7 +145,7 @@ const CustomizableCurriculumCatalogCard = ({
     } else if (isTeacher && sectionsForDropdown.length > 0) {
       return (
         <MultipleSectionsAssigner
-          assignmentName={courseDisplayNameWithYear}
+          assignmentName={courseDisplayNameWithLatestYear}
           onClose={() => setIsAssignDialogOpen(false)}
           sections={sectionsForDropdown}
           participantAudience="student"
@@ -227,7 +217,7 @@ const CustomizableCurriculumCatalogCard = ({
               __useDeprecatedTag
               color={Button.ButtonColor.neutralDark}
               type="button"
-              onClick={handleClickLearnMore}
+              href={pathToCourse}
               aria-label={quickViewButtonDescription}
               text={quickViewButtonText}
             />
@@ -248,7 +238,7 @@ const CustomizableCurriculumCatalogCard = ({
 
 CustomizableCurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
-  courseDisplayNameWithYear: PropTypes.string.isRequired,
+  courseDisplayNameWithLatestYear: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
   gradeRange: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
