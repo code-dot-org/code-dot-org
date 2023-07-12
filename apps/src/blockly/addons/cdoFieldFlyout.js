@@ -6,8 +6,11 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * This is a customized class that extends Blockly's Field class.
    * This field depends on `CdoBlockFlyout`, which is used to create a flyout
    * of blocks. We colloquially refer to this as a block's "mini-toolbox".
-   * @param value The initial value of the field.
-   * @param {Object} opt_config A map of options used to configure the field.
+   *
+   * @param {string} value - The initial value of the field.
+   * @param {Object} [opt_config] - A map of options used to configure the field.
+   * @param {number} [opt_config.minWidth] - The minimum width of the field.
+   * @param {number} [opt_config.maxWidth] - The maximum width of the field.
    */
   constructor(value, opt_config) {
     super(value);
@@ -30,7 +33,9 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
   /**
    * Process the configuration map passed to the field.
    *
-   * @param {Object} [config] A map of options used to configure the field.
+   * @param {Object} [config] - A map of options used to configure the field.
+   * @param {number} [config.minWidth] - The minimum width of the field.
+   * @param {number} [config.maxWidth] - The maximum width of the field.
    */
   configure_(config) {
     if (config) {
