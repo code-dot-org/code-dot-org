@@ -8,7 +8,10 @@ function update(blockSpace, container, editor) {
     // catch and ignore all errors.
     var xml = Blockly.Xml.textToDom(editor.getValue());
     blockSpace.clear();
-    Blockly.cdoUtils.loadBlocksToWorkspace(blockSpace, xml);
+    Blockly.cdoUtils.loadBlocksToWorkspace(
+      blockSpace,
+      Blockly.Xml.domToText(xml)
+    );
   } catch (e) {
     return;
   }

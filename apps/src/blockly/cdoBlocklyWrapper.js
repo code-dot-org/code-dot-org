@@ -2,6 +2,7 @@ import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import {CLAMPED_NUMBER_REGEX} from './constants';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import customBlocks from './customBlocks/cdoBlockly/index.js';
+import {parseElement as parseXmlElement} from '../xml';
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -244,8 +245,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.Block.prototype.getTitleValue;
 
   blocklyWrapper.cdoUtils = {
-    loadBlocksToWorkspace(blockSpace, xml) {
-      return Blockly.Xml.domToBlockSpace(blockSpace, xml);
+    loadBlocksToWorkspace(blockSpace, source) {
+      Blockly.Xml.domToBlockSpace(blockSpace, parseXmlElement(source));
     },
     blockLimitExceeded: function (blockType) {
       const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;

@@ -167,7 +167,10 @@ function updateBlockPreview() {
   });
   const blocksDom = parseElement(`<block type="${blockName}" />`);
   Blockly.mainBlockSpace.clear();
-  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, blocksDom);
+  Blockly.cdoUtils.loadBlocksToWorkspace(
+    Blockly.mainBlockSpace,
+    Blockly.Xml.domToText(blocksDom)
+  );
   Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
 }
 
