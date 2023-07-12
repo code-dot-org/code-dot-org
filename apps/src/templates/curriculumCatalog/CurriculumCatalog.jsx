@@ -191,7 +191,7 @@ const CurriculumCatalog = ({
     setNumFilteredTranslatedCurricula(newNumFilteredTranslatedCurricula);
     setFilteredCurricula(newFilteredCurricula);
 
-    if (newNumFilteredTranslatedCurricula === 0) {
+    if (newFilteredCurricula.length === 0) {
       analyticsReporter.sendEvent(
         EVENTS.CURRICULUM_CATALOG_NO_AVAILABLE_CURRICULA_EVENT,
         {
