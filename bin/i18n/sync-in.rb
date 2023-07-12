@@ -398,10 +398,11 @@ module I18n
 
       if level.is_a? BubbleChoice
         i18n_strings["sublevels"] = {}
+        # Block categories, variables, and parameters are handled differently below and are generally covered by the script levels
+        ignored_types = %w[block_categories variable_names parameter_names]
         level.sublevels.map do |sublevel|
           i18n_strings["sublevels"][sublevel.name] = get_i18n_strings sublevel
-          # Block categories, variables, and parameters are handled differently below and are generally covered by the script levels
-          %w[block_categories variable_names parameter_names].each do |type|
+          ignored_types.each do |type|
             i18n_strings["sublevels"][sublevel.name].delete(type) if i18n_strings["sublevels"][sublevel.name].key? type
           end
         end

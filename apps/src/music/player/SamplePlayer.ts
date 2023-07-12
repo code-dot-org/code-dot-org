@@ -46,7 +46,11 @@ export default class SamplePlayer {
     this.groupPath = '';
   }
 
-  initialize(library: MusicLibrary, bpm: number) {
+  initialize(
+    library: MusicLibrary,
+    bpm: number,
+    updateLoadProgress: (value: number) => void
+  ) {
     const soundList = library.groups
       .map(group => {
         return group.folders.map(folder => {
@@ -77,6 +81,7 @@ export default class SamplePlayer {
           {name: 'Library', value: library.name},
         ]);
       },
+      updateLoadProgress: updateLoadProgress,
     });
 
     this.groupPath = library.groups[0].path;

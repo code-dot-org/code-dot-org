@@ -39,7 +39,10 @@ export default class MusicPlayer {
    * Initializes the MusicPlayer and {@link SamplePlayer} with the music library.
    * Playback cannot start until the player is initialized.
    */
-  initialize(library: MusicLibrary) {
+  initialize(
+    library: MusicLibrary,
+    updateLoadProgress: (value: number) => void
+  ) {
     this.library = library;
 
     // Set key and BPM from library if present
@@ -52,7 +55,7 @@ export default class MusicPlayer {
       this.key = this.validateKey(libraryKey);
     }
 
-    this.samplePlayer.initialize(library, this.bpm);
+    this.samplePlayer.initialize(library, this.bpm, updateLoadProgress);
   }
 
   /**
