@@ -1,19 +1,34 @@
-import React from 'react';
+import React, {ChangeEvent} from 'react';
 import classnames from 'classnames';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './toggle.module.scss';
 
 interface ToggleProps {
+  /** Toggle checked state */
   checked: boolean;
-  onChange: () => void;
+  /** Toggle onChange handler */
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  /** The name attribute specifies the name of an input element.
+   The name attribute is used to reference elements in a JavaScript,
+   or to reference form data after a form is submitted.
+   Note: Only form elements with a name attribute will have their values passed when submitting a form. */
   name: string;
+  /** The value attribute specifies the value of an input element. */
   value?: string;
+  /** Toggle label*/
   label?: string;
+  /** Is Toggle disabled */
   disabled?: boolean;
+  /** Toggle switch placement */
   position?: 'left' | 'right';
+  /** Size of Radio Button */
   size?: 'xs' | 's' | 'm' | 'l';
 }
 
+/**
+ * Design System: Toggle Component.
+ * Can be used to render a single Toggle compone or as a part of bigger/more complex components (e.g. some form, modal, etc).
+ */
 const Toggle: React.FunctionComponent<ToggleProps> = ({
   checked,
   onChange,
