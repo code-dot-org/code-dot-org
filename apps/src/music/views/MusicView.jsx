@@ -31,6 +31,7 @@ import {
   addPlaybackEvents,
   clearPlaybackEvents,
   getCurrentlyPlayingBlockIds,
+  setSoundLoadingProgress,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import {
@@ -120,6 +121,7 @@ class UnconnectedMusicView extends React.Component {
     setLabReadyForReload: PropTypes.func,
     navigateToNextLevel: PropTypes.func,
     isReadOnlyWorkspace: PropTypes.bool,
+    updateLoadProgress: PropTypes.func,
   };
 
   constructor(props) {
@@ -276,7 +278,7 @@ class UnconnectedMusicView extends React.Component {
       this.onBlockSpaceChange,
       this.props.isReadOnlyWorkspace
     );
-    this.player.initialize(this.library);
+    this.player.initialize(this.library, this.props.updateLoadProgress);
 
     this.setState({
       loadedLibrary: true,
@@ -730,6 +732,7 @@ const MusicView = connect(
     setLabReadyForReload: labReadyForReload =>
       dispatch(setLabReadyForReload(labReadyForReload)),
     navigateToNextLevel: () => dispatch(navigateToNextLevel()),
+    updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
   })
 )(UnconnectedMusicView);
 
