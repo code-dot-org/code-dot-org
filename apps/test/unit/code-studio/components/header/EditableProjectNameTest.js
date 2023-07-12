@@ -11,6 +11,7 @@ import projectReducer, {
   refreshProjectName,
 } from '@cdo/apps/code-studio/projectRedux';
 import EditableProjectName from '@cdo/apps/code-studio/components/header/EditableProjectName';
+import lab2Redux from '@cdo/apps/lab2/lab2Redux';
 
 describe('EditableProjectName', () => {
   let currentName;
@@ -35,7 +36,10 @@ describe('EditableProjectName', () => {
   });
 
   it('provides a "rename project" interface', async () => {
-    const store = createStore(combineReducers({project: projectReducer}));
+    const store = createStore(
+      combineReducers({project: projectReducer, lab: lab2Redux})
+    );
+
     store.dispatch(refreshProjectName());
     const wrapper = mount(
       <Provider store={store}>
