@@ -116,8 +116,8 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     assert_response :ok
 
     programming_environment.reload
-    assert programming_environment.categories.include?(category_to_keep)
-    refute programming_environment.categories.include?(category_to_destroy)
+    assert_includes(programming_environment.categories, category_to_keep)
+    refute_includes(programming_environment.categories, category_to_destroy)
     assert_equal 2, programming_environment.categories.count
     assert_equal ['brand new category', category_to_keep.name], programming_environment.categories.map(&:name)
   end

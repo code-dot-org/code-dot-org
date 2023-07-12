@@ -14,6 +14,8 @@ const CHECK_CAN_REPORT_INTERVAL_MINUTES = 30;
 const CHECK_CAN_REPORT_INTERVAL_MS =
   CHECK_CAN_REPORT_INTERVAL_MINUTES * 60 * 1000;
 const LOCAL_STORAGE_KEY_NAME = 'cdo-metrics-reporter-last-check-time';
+// A flag that can be toggled to send events regardless of environment
+const ALWAYS_SEND = false;
 
 /**
  * Reports logs and metrics, intended primarily for developer-facing
@@ -38,30 +40,33 @@ class MetricsReporter {
    * Publish an information log message. Can be a string or a structured object
    */
   logInfo(message: string | object) {
-    this.log('INFO', message);
-    if (isDevelopmentEnvironment()) {
-      console.log('[MetricsReporter] ' + JSON.stringify(message));
+    if (!this.shouldReport()) {
+      console.log(message);
+      return;
     }
+    this.log('INFO', message);
   }
 
   /**
    * Publish a warning log message. Can be a string or a structured object
    */
   logWarning(message: string | object) {
-    this.log('WARNING', message);
-    if (isDevelopmentEnvironment()) {
-      console.warn('[MetricsReporter] ' + JSON.stringify(message));
+    if (!this.shouldReport()) {
+      console.warn(message);
+      return;
     }
+    this.log('WARNING', message);
   }
 
   /**
    * Publish an error log message. Can be a string or a structured object
    */
   logError(message: string | object) {
-    this.log('SEVERE', message);
-    if (isDevelopmentEnvironment()) {
-      console.error('[MetricsReporter] ' + JSON.stringify(message));
+    if (!this.shouldReport()) {
+      console.error(message);
+      return;
     }
+    this.log('SEVERE', message);
   }
 
   /**
@@ -86,10 +91,11 @@ class MetricsReporter {
       unit,
       dimensions: dimensions.concat(this.getDeviceDimensions()),
     };
-    this.sendMetric(metric);
-    if (isDevelopmentEnvironment()) {
+    if (!this.shouldReport()) {
       console.info('[MetricsReporter] ' + JSON.stringify(metric));
+      return;
     }
+    this.sendMetric(metric);
   }
 
   private async log(level: LogLevel, message: string | object) {
@@ -184,6 +190,15 @@ class MetricsReporter {
       LOCAL_STORAGE_KEY_NAME,
       this.lastCheckCanReportTime.toString()
     );
+  }
+
+  /**
+   * Whether we should try to report metrics to the server.
+   * Always true if not on development. If on development,
+   * this is controlled by the ALWAYS_SEND flag.
+   */
+  private shouldReport(): boolean {
+    return ALWAYS_SEND || !isDevelopmentEnvironment();
   }
 }
 

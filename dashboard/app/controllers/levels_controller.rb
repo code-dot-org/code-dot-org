@@ -143,7 +143,7 @@ class LevelsController < ApplicationController
   # Get a JSON summary of a level's properties, used in modern labs that don't
   # reload the page between level views.
   def level_properties
-    render json: @level.properties.camelize_keys
+    render json: @level.summarize_for_lab2_properties
   end
 
   # GET /levels/1/edit

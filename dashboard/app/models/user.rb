@@ -136,6 +136,7 @@ class User < ApplicationRecord
     child_account_compliance_state_last_updated
     us_state
     country_code
+    family_name
   )
 
   attr_accessor(
@@ -553,6 +554,13 @@ class User < ApplicationRecord
     :fix_by_user_type
 
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
+
+  validate :no_family_name_for_teachers
+  def no_family_name_for_teachers
+    if family_name && (teacher? || sections_as_pl_participant.any?)
+      errors.add(:family_name, "can't be set for teachers or PL participants")
+    end
+  end
 
   before_validation :update_share_setting, unless: :under_13?
 
@@ -1026,6 +1034,12 @@ class User < ApplicationRecord
     return true if teacher? # No-op if user is already a teacher
     return false if email.blank?
 
+    # Remove family name, in case it was set on the student account.
+    # Must do this before updating user_type, to prevent validation failure.
+    if DCDO.get('family-name-features', false)
+      self.family_name = nil
+    end
+
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
     # teachers do not need another adult to have access to their account.
@@ -1040,12 +1054,6 @@ class User < ApplicationRecord
         new_attributes[:email] = email
       end
       update!(new_attributes)
-
-      # Remove family name, in case it was set on the student account.
-      if DCDO.get('family-name-features', false)
-        properties['family_name'] = nil
-        save!
-      end
 
       self
     end
@@ -2056,7 +2064,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
-      family_name: DCDO.get('family-name-features', false) ? properties&.dig('family_name') : nil,
+      family_name: DCDO.get('family-name-features', false) ? family_name : nil,
       email: email,
       hashed_email: hashed_email,
       user_type: user_type,
@@ -2335,6 +2343,13 @@ class User < ApplicationRecord
   def update_share_setting
     self.sharing_disabled = false if sections_as_student.empty?
     return true
+  end
+
+  # Updates the child_account_compliance_state attribute to the given state.
+  # @param {String} new_state - A constant from User::ChildAccountCompliance
+  def update_child_account_compliance(new_state)
+    self.child_account_compliance_state = new_state
+    self.child_account_compliance_state_last_updated = DateTime.now.new_offset(0)
   end
 
   # When creating an account, we want to look for any channels that got created
@@ -2630,7 +2645,6 @@ class User < ApplicationRecord
   end
 
   US_STATE_DROPDOWN_OPTIONS = {
-    '??' => I18n.t('signup_form.us_state_dropdown_options.other'),
     'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
     'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
     'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',
@@ -2647,7 +2661,15 @@ class User < ApplicationRecord
     'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington',
     'DC' => 'Washington D.C.', 'WV' => 'West Virginia', 'WI' => 'Wisconsin',
     'WY' => 'Wyoming'
-  }
+  }.freeze
+
+  # Returns a Hash of US state codes to state names meant for use in dropdown
+  # selection inputs for User accounts.
+  # Includes a '??' state code for a location not listed.
+  def self.us_state_dropdown_options
+    {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
+      merge(US_STATE_DROPDOWN_OPTIONS)
+  end
 
   # Verifies that the serialized attribute "us_state" is a 2 character string
   # representing a US State or "??" which represents a "N/A" kind of response.
@@ -2662,13 +2684,56 @@ class User < ApplicationRecord
       return
     end
     # Report an error if an invalid value was submitted (probably tampering).
-    unless US_STATE_DROPDOWN_OPTIONS.include?(us_state)
+    unless User.us_state_dropdown_options.include?(us_state)
       errors.add(:us_state, :invalid)
+    end
+  end
+
+  # Is this user compliant with our Child Account Policy(cap)?
+  # For students under-13, in Colorado, with a personal email login: we require
+  # parent permission before the student can start using their account.
+  def child_account_policy_compliant?
+    return true unless parent_permission_required?
+    child_account_compliance_state == ChildAccountCompliance::PERMISSION_GRANTED
+  end
+
+  # The individual US State child account policy configuration
+  # max_age: the oldest age of the child at which this policy applies.
+  CHILD_ACCOUNT_STATE_POLICY = {
+    'CO' => {
+      max_age: 12
+    }
+  }.freeze
+
+  # Check if parent permission is required for this account according to our
+  # Child Account Policy.
+  def parent_permission_required?
+    return false unless us_state
+    policy = CHILD_ACCOUNT_STATE_POLICY[us_state]
+    return false unless policy
+    return false unless age.to_i <= policy[:max_age].to_i
+    personal_account?
+  end
+
+  # Does the user login using credentials they personally control?
+  # For example, some accounts are created and owned by schools (Clever).
+  def personal_account?
+    return false if sponsored?
+    # List of credential types which we believe schools have ownership of.
+    school_owned_types = [AuthenticationOption::CLEVER]
+    # Does the user have an authentication method which is not controlled by
+    # their school? The presence of at least one authentication method which
+    # is owned by the student/parent means this is a "personal account".
+    authentication_options.any? do |option|
+      school_owned_types.exclude?(option.credential_type)
     end
   end
 
   # Values for the `child_account_compliance_state` attribute
   module ChildAccountCompliance
+    # The student's account has been used to issue a request to a parent.
+    REQUEST_SENT = 's'.freeze
+
     # The student's account has been approved by their parent.
     PERMISSION_GRANTED = 'g'.freeze
   end

@@ -65,13 +65,14 @@ module Pd::Application
     end
 
     def underrepresented_minority_percent
+      underrepresented_minority_groups = [
+        :black,
+        :hispanic,
+        :pacific_islander,
+        :american_indian
+      ]
       sanitized_form_data_hash.select do |k, _|
-        [
-          :black,
-          :hispanic,
-          :pacific_islander,
-          :american_indian
-        ].include? k
+        underrepresented_minority_groups.include? k
       end.values.sum(&:to_f)
     end
 

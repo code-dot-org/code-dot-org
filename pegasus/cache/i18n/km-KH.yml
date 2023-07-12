@@ -1205,7 +1205,7 @@ km-KH:
   starwarsblocks_name: Star Wars (ប្លុក)
   hoc-encryption_name: ការអ៉ីនគ្រីបធម្មតា
   applab_name: មន្ទីរពិសោធន៍កម្មវិធី​
-  gamelab_name: មន្ទីរពិសោធន៍ ល្បែង
+  gamelab_name: មន្ទីរពិសោធន៍ហ្គេម
   basketball_name: បង្កើតហ្គេមបោះបាល់
   applab_shortdescription_congrats: 'App Lab ជាកន្លែងសសរសេរប្រូក្រាម ដែលអាចឲ្យយើងបង្កើតកម្មវិធីសាមញ្ញបាន។
     រចនាកម្មវីធី សរសេរកូដបង្កើតកម្មវិធីដោយប្រើប្លុក ឬ ភាសា JavaScript និងអាចចែករំលែកកម្មវិធីអ្នកភ្លាមៗ។ '
@@ -1896,7 +1896,7 @@ km-KH:
   header_home: ទំព័រដើម
   header_my_dashboard: ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ
   header_courses: វគ្គ​សិក្សា
-  header_course_catalog: មុខវិជ្ជាដោយផ្នែក
+  header_course_catalog: កាតាឡុកវគ្គសិក្សា
   header_project_gallery: គម្រោង
   header_sections: វគ្គ
   header_professional_learning: ការរៀនដោយមានវិជ្ជាជីវ
@@ -1945,9 +1945,9 @@ km-KH:
   user_header_create: បង្កើត
   user_header_applab: App Lab
   user_header_artist: សិល្បករ
-  user_header_gamelab: មន្ទីរពិសោធន៍ ល្បែង
+  user_header_gamelab: មន្ទីរពិសោធន៍ហ្គេម
   user_header_dance: Dance Party
-  user_header_spritelab: Sprite Lab
+  user_header_spritelab: 'មន្ទីរពិសោធន៍ Sprite '
   user_header_minecraft: ម៉ាញក្រាស់
   user_header_view_all: មើលគម្រោងទាំងអស់
   user_header_view_project_gallery: មើលបណ្តុំនៃគម្រោង

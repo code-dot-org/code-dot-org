@@ -1,10 +1,15 @@
 <Artist>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 23,
+  "created_at": "2023-03-22T21:49:49.000Z",
+  "level_num": "custom",
+  "user_id": 16,
   "properties": {
     "skin": "artist",
     "is_k1": "false",
     "skip_instructions_popup": "true",
-    "slider_speed": "0.9",
+    "slider_speed": "0.6",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -47,13 +52,8 @@
     "short_instructions": "Experiment with colors, angles, and loops to draw your own awesome star shape!",
     "preload_asset_list": null
   },
-  "game_id": 23,
-  "published": true,
-  "created_at": "2023-03-22T21:49:49.000Z",
-  "level_num": "custom",
-  "user_id": 16,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-22T21:49:49.353+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-rhombus-freeplay_2022\\\"\"],\"cloned_from\":\"csc-starquilts-rhombus-freeplay_2022\"},{\"changed_at\":\"2023-04-17 21:26:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-03 22:50:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-22T21:49:49.353+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-rhombus-freeplay_2022\\\"\"],\"cloned_from\":\"csc-starquilts-rhombus-freeplay_2022\"},{\"changed_at\":\"2023-04-17 21:26:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-03 22:50:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-29 01:38:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"slider_speed\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

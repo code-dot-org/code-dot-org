@@ -1,6 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
-import {initialProgressState, ProgressState} from '../progress/ProgressManager';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -21,7 +20,7 @@ export const InstructionsPositions = {
   RIGHT: InstructionsPosition.RIGHT,
 };
 
-interface MusicState {
+export interface MusicState {
   /** If the song is currently playing */
   isPlaying: boolean;
   /** The current 1-based playhead position, scaled to measures */
@@ -42,11 +41,10 @@ interface MusicState {
   playbackEvents: PlaybackEvent[];
   /** The current last measure of the song */
   lastMeasure: number;
-  // TODO: Currently Music Lab is the only Lab that uses
-  // this progress system, but in the future, we may want to
-  // move this into a more generic, high-level, lab-agnostic
-  // reducer.
-  currentProgressState: ProgressState;
+  /** The current sound loading progress, from 0-1 inclusive, representing the
+   * number of sounds loaded out of the total number of sounds to load.
+   */
+  soundLoadingProgress: number;
 }
 
 const initialState: MusicState = {
@@ -60,7 +58,7 @@ const initialState: MusicState = {
   isBeatPadShowing: true,
   playbackEvents: [],
   lastMeasure: 0,
-  currentProgressState: {...initialProgressState},
+  soundLoadingProgress: 0,
 };
 
 const musicSlice = createSlice({
@@ -133,9 +131,6 @@ const musicSlice = createSlice({
     toggleBeatPad: state => {
       state.isBeatPadShowing = !state.isBeatPadShowing;
     },
-    setCurrentProgressState: (state, action: PayloadAction<ProgressState>) => {
-      state.currentProgressState = {...action.payload};
-    },
     clearPlaybackEvents: state => {
       state.playbackEvents = [];
       state.lastMeasure = 0;
@@ -146,6 +141,9 @@ const musicSlice = createSlice({
     ) => {
       state.playbackEvents.push(...action.payload.events);
       state.lastMeasure = action.payload.lastMeasure;
+    },
+    setSoundLoadingProgress: (state, action: PayloadAction<number>) => {
+      state.soundLoadingProgress = action.payload;
     },
   },
 });
@@ -193,7 +191,7 @@ export const {
   showBeatPad,
   hideBeatPad,
   toggleBeatPad,
-  setCurrentProgressState,
   clearPlaybackEvents,
   addPlaybackEvents,
+  setSoundLoadingProgress,
 } = musicSlice.actions;

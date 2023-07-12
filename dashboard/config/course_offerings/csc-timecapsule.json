@@ -2,7 +2,7 @@
   "key": "csc-timecapsule",
   "display_name": "Coding a Time Capsule",
   "category": "csc",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": "Module",
   "marketing_initiative": "CSC",
@@ -11,5 +11,10 @@
   "image": "https://images.code.org/0cbf50b3af1507b01292c7f63b7b5e0f-Time Cap.png",
   "cs_topic": "art_and_design,games_and_animations,programming",
   "school_subject": "english_language_arts,history",
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "self_paced_professional_learning": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null
 }

@@ -82,6 +82,8 @@ i.fa-fw {
 .flex-container {
   display: flex;
 
+  &.flex-direction-column { flex-direction: column; }
+  &.flex-direction-row { flex-direction: row; }
   &.justify-space-between { justify-content: space-between }
   &.justify-center { justify-content: center }
   &.justify-end { justify-content: end; }
@@ -121,6 +123,11 @@ div.divider {
 // Add rounded corners to an element
 .rounded-corners {
   border-radius: $border-radius;
+}
+
+// Add border to an element
+.has-border {
+  border: 1px solid $neutral_dark10;
 }
 
 // Add a thick box shadow to an element
@@ -919,8 +926,12 @@ form {
 // See code.org/teach for an example
 section.quote {
   background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
-  background-size: contain;
+  background-size: 15%;
   background-color: $neutral-dark;
+
+  @media screen and (max-width: $width-sm) {
+    background-size: 50%;
+  }
 
   p {
     font-size: 1.25rem;
@@ -929,6 +940,10 @@ section.quote {
 
     &.quote-text {
       font-size: 1.35rem;
+
+      &.large {
+        font-size: 1.5rem;
+      }
 
       &:before, &:after {
         font: var(--fa-font-solid);
@@ -1057,6 +1072,10 @@ section.quote {
     }
   }
 
+  div.content {
+    text-align: left;
+  }
+
   // Hides tab content
   div.content {
     display: none;
@@ -1099,6 +1118,47 @@ section.quote {
 
     h3 {
       display: none;
+    }
+  }
+}
+
+// Curriculum at a glance section
+// Works with curriculum_glance_section.haml partial
+// See code.org/educate/csp for an example
+.curriculum-glance {
+  background: $neutral-white;
+  border: 1px solid $neutral_dark10;
+  border-radius: $border-radius;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @media screen and (max-width: $width-md) {
+    grid-template-columns: unset;
+    gap: 1rem;
+  }
+
+  ul {
+    margin: 0;
+    gap: 1.25rem;
+
+    li {
+      all: unset;
+      font-size: 1rem;
+      margin: 0;
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+
+      &:before {
+        display: none;
+      }
+
+      p {
+        margin-bottom: 0;
+        width: 100%;
+      }
     }
   }
 }

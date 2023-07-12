@@ -6,7 +6,6 @@ Feature: Callouts
 
   Scenario Outline: Callouts having correct content and being dismissable via the target element
     Given I am on "<url>"
-    And I rotate to landscape
     And I wait for the page to fully load
     And callout "<callout_id>" is visible
     And callout "<callout_id>" has text: <text>
@@ -27,7 +26,6 @@ Feature: Callouts
   @no_mobile
   Scenario Outline: Callouts having correct content and being dismissable via the x-button
     Given I am on "<url>"
-    And I rotate to landscape
     And I wait for the page to fully load
     And I dismiss the login reminder
     And callout "<callout_id>" is visible
@@ -41,13 +39,11 @@ Feature: Callouts
 
   Scenario: Modal ordering
     Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/1?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     And callout "0" is visible
 
   Scenario: Closing using "x" button
     Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/1?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     And I dismiss the login reminder
     And element ".tooltip-x-close" is visible
@@ -61,11 +57,9 @@ Feature: Callouts
 
   Scenario: Only showing seen callouts once
     Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/1?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     And callout "0" exists
     Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/1?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     And callout "0" does not exist
 
@@ -73,7 +67,6 @@ Feature: Callouts
   @no_mobile
   Scenario: Opening the Show Code dialog
     Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/1?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     And I dismiss the login reminder
     When I press "show-code-header"

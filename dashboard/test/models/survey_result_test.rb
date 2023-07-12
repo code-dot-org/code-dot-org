@@ -3,10 +3,10 @@ require 'test_helper'
 class SurveyResultTest < ActiveSupport::TestCase
   test 'proper SurveyResult members' do
     assert SurveyResult::ETHNICITIES['asian'] == 'Asian'
-    assert SurveyResult::ALL_ATTRS.include? 'diversity_asian'
-    assert SurveyResult::ALL_ATTRS.include? 'diversity_farm'
-    assert SurveyResult::ALL_ATTRS.include? 'nps_value'
-    assert SurveyResult::ALL_ATTRS.include? 'nps_comment'
+    assert_includes(SurveyResult::ALL_ATTRS, 'diversity_asian')
+    assert_includes(SurveyResult::ALL_ATTRS, 'diversity_farm')
+    assert_includes(SurveyResult::ALL_ATTRS, 'nps_value')
+    assert_includes(SurveyResult::ALL_ATTRS, 'nps_comment')
   end
 
   test 'all attributes are labeled as free-response or non-free-response' do

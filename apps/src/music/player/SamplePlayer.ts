@@ -1,4 +1,4 @@
-import {logWarning} from '../utils/MusicMetrics';
+import {logWarning, reportLoadTime} from '../utils/MusicMetrics';
 import {Effects} from './interfaces/Effects';
 import MusicLibrary from './MusicLibrary';
 
@@ -46,7 +46,11 @@ export default class SamplePlayer {
     this.groupPath = '';
   }
 
-  initialize(library: MusicLibrary, bpm: number) {
+  initialize(
+    library: MusicLibrary,
+    bpm: number,
+    updateLoadProgress: (value: number) => void
+  ) {
     const soundList = library.groups
       .map(group => {
         return group.folders.map(folder => {
@@ -72,6 +76,12 @@ export default class SamplePlayer {
       releaseTimeSeconds: secondsPerBeat * RELEASE_DURATION_FACTOR,
       // Use a delay value of a half of a beat
       delayTimeSeconds: secondsPerBeat / 2,
+      reportSoundLibraryLoadTime: (loadTimeMs: number) => {
+        reportLoadTime('SoundLibraryLoadTime', loadTimeMs, [
+          {name: 'Library', value: library.name},
+        ]);
+      },
+      updateLoadProgress: updateLoadProgress,
     });
 
     this.groupPath = library.groups[0].path;
