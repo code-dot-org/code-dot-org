@@ -30,7 +30,7 @@ Feature: Curriculum Catalog Page
     Then I click selector "[aria-label='Assign AI for Oceans to your classroom']"
     And I wait until element "h3:contains(Sign in or create account to assign a curriculum)" is visible
     Then I click selector "a:contains(Sign in or create account)"
-    And I wait until I am on "https://studio.code.org/users/sign_in?user_return_to=/catalog" via "nothing"
+    And I wait until I am on "https://studio.code.org/users/sign_in?user_return_to=/catalog"
 
   Scenario: Signed-in student is redirected to help page when clicking Assign
     Given I create a student named "Student Sam"
