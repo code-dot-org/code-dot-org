@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
 # The list of tutorials. Note that relative order matters, e.g., it is important
 # that "starwarsblocks" proceeds "starwars" as the latter will match the regex

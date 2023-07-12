@@ -152,6 +152,13 @@ def restore_redacted_files
 
   puts "Restoring redacted files in #{locales.count} locales, parallelized between #{Parallel.processor_count / 2} processes"
 
+  # Prepare some collection literals
+  app_types_with_link = %w(applab gamelab weblab)
+  resource_and_vocab_paths = [
+    'i18n/locales/original/dashboard/scripts.yml',
+    'i18n/locales/original/dashboard/courses.yml'
+  ]
+
   Parallel.each(locales, in_processes: (Parallel.processor_count / 2)) do |prop|
     locale = prop[:locale_s]
     next if locale == 'en-US'
@@ -176,10 +183,7 @@ def restore_redacted_files
       else
         # Everything else is differentiated only by the plugins used
         plugins = []
-        if [
-          'i18n/locales/original/dashboard/scripts.yml',
-          'i18n/locales/original/dashboard/courses.yml'
-        ].include? original_path
+        if resource_and_vocab_paths.include? original_path
           plugins << 'resourceLink'
           plugins << 'vocabularyDefinition'
         elsif original_path.starts_with? "i18n/locales/original/curriculum_content"
@@ -188,7 +192,7 @@ def restore_redacted_files
           plugins << 'visualCodeBlock'
           plugins << 'link'
           plugins << 'resourceLink'
-        elsif %w(applab gamelab weblab).include?(File.basename(original_path, '.json'))
+        elsif app_types_with_link.include?(File.basename(original_path, '.json'))
           plugins << 'link'
         end
         RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
@@ -488,7 +492,7 @@ def distribute_translations(upload_manifests)
       relative_dir = File.dirname(relative_path)
       name = File.basename(loc_file, ".*")
       # TODO: Remove the ai.md exception when ai.md files are deleted from crowdin
-      next if %w[ai].include? name # ai.md file has been substituted by ai.haml
+      next if name == "ai" # ai.md file has been substituted by ai.haml
       destination = File.join(destination_dir, relative_dir, "#{name}.#{locale}.md.partial")
       FileUtils.mkdir_p(File.dirname(destination))
       FileUtils.mv(loc_file, destination)

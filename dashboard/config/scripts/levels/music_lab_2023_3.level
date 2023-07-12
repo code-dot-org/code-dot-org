@@ -21,7 +21,7 @@
       "validations": [
         {
           "conditions": [
-            "played_one_sound"
+            {"name": "played_sounds_together", "value": 1}
           ],
           "message": "Nice work, we're getting a groove going!",
           "next": "true"

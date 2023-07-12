@@ -15,9 +15,5 @@ export const SourceResponseValidator: ResponseValidator<
     throw new Error('Missing required field: blocks');
   }
 
-  if (blocklySource.variables === undefined) {
-    throw new Error('Missing required field: variables');
-  }
-
   return projectSources;
 };
