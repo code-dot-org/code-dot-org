@@ -80,7 +80,7 @@ describe('EditableProjectName', () => {
     renameSpy.restore();
   });
 
-  it('calls lab2 rename is lab2 projects are enabled', () => {
+  it('calls lab2 rename if lab2 projects are enabled', () => {
     const renameStub = sinon.stub().returns(Promise.resolve());
     const projectManagerStub = sinon.createStubInstance(ProjectManager, {
       rename: renameStub,
