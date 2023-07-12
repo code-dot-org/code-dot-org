@@ -115,6 +115,9 @@ function showHomepage() {
             hasFeedback={homepageData.hasFeedback}
             showIncubatorBanner={homepageData.showIncubatorBanner}
             currentUserId={homepageData.currentUserId}
+            showDeprecatedCalcAndEvalWarning={
+              homepageData.showDeprecatedCalcAndEvalWarning
+            }
           />
         )}
         {!isTeacher && (
