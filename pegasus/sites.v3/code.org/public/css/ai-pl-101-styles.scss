@@ -1,0 +1,149 @@
+// Custom styles for code.org/ai/pl/webinar
+// — supplemental to shared/css/design-system-pegasus.scss
+
+@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+
+.hero-ai-pl-webinar {
+  background-image: url(/images/ai/pl/101/hero--1.png), url(/images/ai/pl/101/hero--2.png);
+  background-position: left center, right center;
+  background-repeat: no-repeat, no-repeat;
+  background-color: #360161;
+  background-size: contain;
+  padding-bottom: 64px;
+
+
+  &__by {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-left: 32px;
+    flex-wrap: wrap;
+
+    img {
+      margin: 16px 32px 16px 0;
+    }
+  }
+
+  .text-wrapper p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  @media screen and(max-width: 1499px) {
+    background-position: calc(20vw - 350px) center, right center
+  }
+
+  @media screen and(max-width: 1279px) {
+    background-image: none;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    background-position: bottom center;
+    background-image: url(/images/ai/pl/101/hero--2-m.png);
+    background-size: 300px;
+    padding-bottom: 200px;
+
+    &__by {
+      flex-direction: column;
+      align-items: flex-start;
+
+    }
+    &__list {
+      align-items: center;
+      margin-left: 0;
+      flex-wrap: wrap;
+
+      img {
+        margin: 12px 24px 12px 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.partnership-ai {
+  background: $neutral_light;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    margin: 0 26px
+  }
+
+  @media screen and(max-width: 1279px) {
+    &__list {
+      justify-content: space-between;
+
+    }
+    &__logo {
+      height: 35px;
+      margin: 0;
+
+      &--iste {
+        height: 32px;
+      }
+
+      &--ets {
+        height: 30px;
+      }
+    }
+
+  }
+  @media screen and (max-width: $width-sm) {
+    &__list {
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+
+    }
+
+    &__logo {
+      margin: 20px;
+      height: 30px;
+
+      &--iste {
+        height: 22px;
+      }
+
+      &--ets {
+        height: 30px;
+      }
+    }
+  }
+}
+
+.action-block {
+  &--explore .overline {
+    text-transform: uppercase;
+  }
+}
+
+.partnership-ai + #clearboth + .desktop-feature {
+  display: none
+}
+
+@media screen and (max-width: $width-sm) {
+  .optanon-category-C0008 {
+    height: 550px;
+  }
+}
