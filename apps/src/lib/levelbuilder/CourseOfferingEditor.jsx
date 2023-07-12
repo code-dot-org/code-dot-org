@@ -417,6 +417,7 @@ CourseOfferingEditor.propTypes = {
   }),
   selfPacedPLCourseOfferings: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.number,
       key: PropTypes.string,
       display_name: PropTypes.string,
       course_version_path: PropTypes.string,
