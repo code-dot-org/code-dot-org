@@ -2234,7 +2234,11 @@ StudioApp.prototype.handleHideSource_ = function (options) {
 
         buttonRow.appendChild(openWorkspace);
 
-        if (['algebra_game', 'calc'].includes(appOptions?.level?.projectType)) {
+        if (
+          ['algebra_game', 'calc', 'eval'].includes(
+            appOptions?.level?.projectType
+          )
+        ) {
           const deprecationUrl =
             'https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses';
           ReactDOM.render(
