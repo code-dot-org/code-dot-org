@@ -30,6 +30,8 @@
   "connecting": "Свързване...",
   "console": "Конзола",
   "create": "Създай",
+  "created": "Създаден",
+  "createNewFile": "Създаване на нов файл",
   "delete": "Изтриване",
   "deleteFileConfirmation": "Сигурен ли си, че искаш да изтриеш {filename}?",
   "duplicateProjectFilenameError": "Името на файла {filename} вече се използва в този проект. Моля, избери друго име ",

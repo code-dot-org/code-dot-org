@@ -19,7 +19,7 @@ namespace :build do
       end
 
       ChatClient.log 'Installing <b>apps</b> dependencies...'
-      RakeUtils.npm_install
+      RakeUtils.yarn_install
 
       ChatClient.log 'Building <b>apps</b>...'
       npm_target = CDO.optimize_webpack_assets ? 'build:dist' : 'build'
@@ -32,7 +32,7 @@ namespace :build do
   timed_task_with_logging :tools do
     Dir.chdir(File.join(tools_dir, "scripts", "brokenLinkChecker")) do
       ChatClient.log 'Installing <b>broken link checker</b> dependencies...'
-      RakeUtils.npm_install
+      RakeUtils.yarn_install
     end
   end
 
@@ -147,11 +147,20 @@ namespace :build do
     end
   end
 
+  desc 'Builds i18n'
+  timed_task_with_logging :i18n do
+    Dir.chdir(bin_dir('i18n')) do
+      ChatClient.log 'Installing <b>i18n</b> dependencies...'
+      RakeUtils.npm_install
+    end
+  end
+
   tasks = []
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :tools if rack_env?(:staging)
+  tasks << :i18n if CDO.build_i18n
   timed_task_with_logging all: tasks
 end
 

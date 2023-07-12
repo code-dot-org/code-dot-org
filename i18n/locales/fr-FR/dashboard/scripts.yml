@@ -7699,6 +7699,7 @@ fr:
             lessonGroup-2:
               display_name: Enseigner l'intelligence artificielle et l'apprentissage automatique
           name: self-paced-pl-csd5-2023
+          title: 'Module 7 : Se préparer à enseigner l''IA et l''apprentissage automatique'
           description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner l'unité d'IA et d'apprentissage automatique de Code.org.  \n\n**Dans ce module de formation professionnelle, vous allez :**\n\n-   Découvrez l'intelligence artificielle et l'apprentissage automatique. \n-   Pratiquez les concepts clés inclus dans l'unité.\n-   Interagissez avec AI Lab et App Lab.\n-   Explorez les projets de fin de chapitre. \n-   Établissez un plan de mise en œuvre de l'unité avec vos élèves.\n\n**Durée suggérée :** 120 minutes"
           student_description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner l'unité d'IA et d'apprentissage automatique de Code.org.  \n\n**Dans ce module de formation professionnelle, vous allez :**\n\n-   Découvrez l'intelligence artificielle et l'apprentissage automatique. \n-   Pratiquez les concepts clés inclus dans l'unité.\n-   Interagissez avec AI Lab et App Lab.\n-   Explorez les projets de fin de chapitre. \n-   Établissez un plan de mise en œuvre de l'unité avec vos élèves.\n\n**Durée suggérée :** 120 minutes"
         pl-csd-summer-day1:
@@ -7994,6 +7995,39 @@ fr:
 
             **Durée suggérée** : 70 minutes
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Tableaux 2D
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Tableaux 2D
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Tableaux 2D
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Données
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Tableaux 2D
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Tableaux 2D
+        csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-3:
               display_name: Classes

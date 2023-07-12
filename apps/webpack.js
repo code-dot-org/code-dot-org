@@ -117,6 +117,12 @@ var baseConfig = {
         'music',
         'locale-do-not-import.js'
       ),
+      '@cdo/standaloneVideo/locale': path.resolve(
+        __dirname,
+        'src',
+        'standaloneVideo',
+        'locale-do-not-import.js'
+      ),
       '@cdo/poetry/locale': path.resolve(
         __dirname,
         'src',

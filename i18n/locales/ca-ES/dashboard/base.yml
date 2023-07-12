@@ -787,6 +787,7 @@ ca:
       title: "Star Wars"
       image_alt: 'L''R2-D2, la Leia, la Rey i el BB-8 en un desert.'
     text-compression:
+      title: "Compressió de text"
       body: "En aquesta lliçó, els alumnes faran servir el Widget de Compressió de Text per comprimir textos tot substituint patrons per símbols."
       image_alt: 'Text que es comprimeix per mitjà de la substitució de paraules senceres per un únic símbol.'
     weblab:

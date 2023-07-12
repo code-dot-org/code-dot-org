@@ -8,7 +8,6 @@ Scenario:
   Given I am a student
   And I open my eyes to test "embedded ninjacat"
   When I am on "http://studio.code.org/s/algebra/lessons/1/levels/2?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   Then element "#runButton" is visible
   And I see no difference for "level load"
@@ -24,7 +23,6 @@ Scenario:
   Given I am a student
   And I open my eyes to test "calc expression evaluation"
   When I am on "http://studio.code.org/s/algebra/lessons/2/levels/6?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   And I've initialized the workspace with the solution blocks
   Then I see no difference for "level load, closed dialog"
@@ -39,7 +37,6 @@ Scenario:
   Given I am a student
   And I open my eyes to test "calc variable"
   When I am on "http://studio.code.org/s/algebra/lessons/6/levels/4?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   And I press the first "#modalEditorClose > .blocklyText" element
   And I've initialized the workspace with the solution blocks

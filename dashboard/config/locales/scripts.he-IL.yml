@@ -2368,3 +2368,7 @@ he:
               display_name: משתנים
             lessonGroup-6:
               display_name: פרויקט סיום קורס
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: נתונים

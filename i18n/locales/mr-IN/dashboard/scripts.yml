@@ -12,6 +12,7 @@ mr:
           title: कोर्स 3
           description_audience: वय वर्षे 8-18
         playlab:
+          title: प्ले लॅब
           description: प्ले लॅबमध्ये एखादी गोष्ट किंवा गेम तयार करा!
           description_short: प्ले लॅबमध्ये एखादी गोष्ट किंवा गेम तयार करा!
           student_description: प्ले लॅबमध्ये एखादी गोष्ट किंवा गेम तयार करा!
@@ -38,10 +39,13 @@ mr:
         algebra:
           title: बीजगणित मध्ये संगणक शास्त्र
         infinity:
+          title: डिस्ने इन्फिनिटी प्ले लॅब
           description: डिस्ने इन्फिनिटीमधील पात्रे असलेली गोष्ट किंवा गेम तयार करण्यासाठी प्ले लॅब वापरा.
           description_short: डिस्ने इन्फिनिटीमधील पात्रे असलेली गोष्ट किंवा गेम तयार करण्यासाठी प्ले लॅब वापरा.
           student_description: डिस्ने इन्फिनिटीमधील पात्रे असलेली गोष्ट किंवा गेम तयार करण्यासाठी प्ले लॅब वापरा.
           name: इन्फीनिटी
+        pixelation:
+          title: पिक्सेलेशन
         20-hour:
           title: संगणक शास्त्राचा वेगवान परिचय
           description: या 20 तासांच्या अभ्यासक्रमात 2-4 अभ्यासक्रमांमधील मुख्य संगणक विज्ञान आणि प्रोग्रामिंग संकल्पना समाविष्ट आहेत. हा कोर्स 10-18 वयोगटातील वापरासाठी डिझाइन केला आहे. अधिक संपूर्ण अनुभवासाठी 2-4 अभ्यासक्रम पहा!
@@ -58,6 +62,7 @@ mr:
           description: 10 मिनिटांपेक्षा कमी वेळात तुमचा स्वत:चा गेम लिहायचाय? आमचे फ्लॅपी कोड ट्युटोरीयल करून बघा!
           student_description: 10 मिनिटांपेक्षा कमी वेळात तुमचा स्वत:चा गेम लिहायचाय? आमचे फ्लॅपी कोड ट्युटोरीयल करून बघा!
         jigsaw:
+          title: जिगसॉ
           name: जिगसॉ
         step:
           title: पायरी
@@ -84,6 +89,8 @@ mr:
           description_audience: वय वर्षे 10-18
         iceage:
           name: हिमयुग
+        gumball:
+          title: Gumball प्ले लॅब
         starwars:
           title: 'स्टार वॉर्स: कोड वापरून आकाशगंगा तयार करणे (जावास्क्रिप्ट)'
           description: ड्रॉईड्स प्रोग्रॅम करायला शिका आणि दूरवरच्या आकाशगंगेत तुमचा स्वत:चा स्टार वॉर्स गेम तयार करा.
@@ -160,6 +167,10 @@ mr:
             required:
               display_name: आढावा
         basketball:
+          title: तुमची टीम निवडा आणि बास्केटबॉल गेम तयार करा
+          description_short: तुमची टीम निवडा आणि बास्केटबॉल गेम तयार करा
+          description: तुमची टीम निवडा आणि बास्केटबॉल गेम तयार करा
+          student_description: तुमची टीम निवडा आणि बास्केटबॉल गेम तयार करा
           name: बास्केटबॉल
         csp2-support:
           lesson_groups:
@@ -172,14 +183,19 @@ mr:
         flappy-impact-study:
           title: सर्वेक्षणासह फ्लॅपी कोड
         coursea-draft:
+          title: 'CS फंडामेंटल्स: कोर्स A'
           description_short: नव-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
         courseb-draft:
+          title: 'CS फंडामेंटल्स: कोर्स B'
           description_short: नव-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
         coursec-draft:
+          title: 'CS फंडामेंटल्स: कोर्स C'
           description_short: संगणक शास्त्रातील मूलभूत गोष्टी शिका आणि तुमची स्वत:ची कला, गोष्टी आणिया गेम्स बनवा.
         coursed-draft:
+          title: 'CS फंडामेंटल्स: कोर्स D'
           description_short: संगणक शास्त्रातील मूलभूत गोष्टी शिका आणि तुमची स्वत:ची कला, गोष्टी आणिया गेम्स बनवा.
         coursee-draft:
+          title: 'CS फंडामेंटल्स: कोर्स E'
           description_short: संगणक शास्त्रातील मूलभूत गोष्टी शिका आणि तुमची स्वत:ची कला, गोष्टी आणिया गेम्स बनवा.
           lesson_groups:
             end_of_course_project:
@@ -187,6 +203,7 @@ mr:
             extra_course_content:
               display_name: अभ्यासक्रमातील अतिरिक्त सामग्री
         coursef-draft:
+          title: 'CS फंडामेंटल्स: कोर्स F'
           description_short: संगणक शास्त्रातील मूलभूत गोष्टी शिका आणि तुमची स्वत:ची कला, गोष्टी आणिया गेम्स बनवा.
           lesson_groups:
             end_of_course_project:
@@ -219,6 +236,8 @@ mr:
           lesson_groups:
             required:
               display_name: आढावा
+        coursed-ramp:
+          title: 'CS फंडामेंटल्स: कोर्स D'
         csd2-old:
           description_short: वेब डेव्हलपमेंट
         coursea-2017:
@@ -489,6 +508,7 @@ mr:
         frozen-2018-test:
           title: नवीन फ्रोझन संहिता
         dance:
+          title: डान्स पार्टी (2018)
           description: तुमच्या मित्रमैत्रिणींच्याबरोबर शेअर करण्यासाठी तुमच्या स्वत:च्या डान्स पार्टीचा कोड लिहा!
           student_description: तुमच्या मित्रमैत्रिणींच्याबरोबर शेअर करण्यासाठी तुमच्या स्वत:च्या डान्स पार्टीचा कोड लिहा!
           name: नृत्य
@@ -966,6 +986,10 @@ mr:
               display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
+        csp5-virtual:
+          title: अॅप लॅबमध्ये इव्हेंट-ड्रीव्हन प्रोग्रामिंग
+        csd3-virtual:
+          title: गेम लॅबचा सेल्फ-पेस्ड परिचय
         virustest:
           title: उद्रेकाचे सिम्युलेशन करणे
           description_short: विषाणूच्या उद्रेकाचे सिम्युलेशन करण्यासाठी स्प्राईट लॅब वापरा.
@@ -1157,6 +1181,8 @@ mr:
               display_name: आऊटब्रेक मोड्यूल
           name: आऊटब्रेक मोड्यूल
           title: आऊटब्रेक मोड्यूल\_व्हर्जन2
+        aiml-2021:
+          title: AI आणि मशीन लर्निंग मॉड्यूल
         csd7-2021:
           title: एआय आणि मशीन लर्निंग
         self-paced-pl-csd1-2021:
@@ -1318,6 +1344,8 @@ mr:
               display_name: प्रकल्प
             lessonGroup-4:
               display_name: डेमो आणि संसाधने
+        hello-world-animals:
+          title: 'हॅलो वर्ल्ड: प्राणी'
         hello-world-retro:
           title: 'हॅलो वर्ल्ड: रेट्रो'
         hello-world-batman:
@@ -1325,6 +1353,8 @@ mr:
         ai-ethics:
           title: आमची एआय आचारसंहिता
           description_audience: ग्रेड 6-12
+        dance-unplugged:
+          title: अवर ऑफ कोड - डान्स पार्टी - अनप्लग्ड
         csc-things:
           name: सीएससी (csc)-गोष्टी
           title: सीएससी (CSC) ब्रेन डंप
@@ -1381,6 +1411,8 @@ mr:
           title: कविता कला
         poetry-2021:
           title: कवितेसह कोडींग
+        hello-world-animals-2021:
+          title: 'हॅलो वर्ल्ड: प्राणी'
         hello-world-retro-2021:
           title: 'हॅलो वर्ल्ड: रेट्रो'
         explore-data-1-2021:
@@ -1746,6 +1778,7 @@ mr:
           name: testtess2
         aiml-2022:
           name: aiml-2022
+          title: AI आणि मशीन लर्निंग मॉड्यूल
           description_short: आर्टिफिशियल इंटेलिजन्स आणि मशीन लर्निंगबद्दल जाणून घ्या
         self-paced-pl-csd1-2022:
           title: 'मॉड्यूल 1: आपले स्वागत आहे'
@@ -1887,6 +1920,8 @@ mr:
         csp-playground:
           description_audience: अभ्यासक्रम लेखक
           description_short: अभ्यासक्रमाच्या आवृत्त्यांमधील धडे किंवा स्तरांवरील अपडेट्स स्टेज करण्यासाठी
+        devices-2022:
+          title: उपकरणांसह अॅप्स तयार करणे (सर्किट प्लेग्राउंड)
         microbit-temp:
           lesson_groups:
             lessonGroup-2:
@@ -2227,6 +2262,7 @@ mr:
 
             **सुचवलेला वेळ:** 50 मिनिटे
         self-paced-pl-csd5-2023:
+          title: 'मॉड्यूल 7: एआय (AI) आणि मशीन लर्निंग शिकवण्याची तयारी'
           description: "**सुचवलेला वेळ:** 120 मिनिटे"
           student_description: "**सुचवलेला वेळ:** 120 मिनिटे"
         pl-csd-summer-day2:
@@ -2268,3 +2304,7 @@ mr:
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
         self-paced-pl-csp2-2023:
           title: 'मॉड्यूल 2: Code.org नेव्हिगेट करणे'
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: डेटा

@@ -106,6 +106,9 @@
         },
         "Year": {
           "id": "Año"
+        },
+        "Month": {
+          "id": "Mes"
         }
       }
     },
@@ -269,6 +272,9 @@
         },
         "age": {
           "id": "edad"
+        },
+        "internet": {
+          "id": "internet"
         },
         "health": {
           "id": "salud"

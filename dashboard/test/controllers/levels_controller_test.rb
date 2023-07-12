@@ -83,7 +83,7 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
 
     body = JSON.parse(response.body)
-    assert_equal({"levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil}, body)
+    assert_equal({"levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze"}, body)
   end
 
   test "should get filtered levels with just page param" do
