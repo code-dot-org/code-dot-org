@@ -6,9 +6,9 @@ class OpenaiController < ApplicationController
     url = "https://api.openai.com/v1/chat/completions"
     headers = {
       "Content-Type" => "application/json",
-      "Authorization" => "Bearer #{CDO.openai_api_key}"
+      "Authorization" => "Bearer #{CDO.openai_chat_api_key}"
     }
-    headers["OpenAI-Organization"] = CDO.openai_org if CDO.openai_org
+    headers["OpenAI-Organization"] = CDO.openai_org
 
     body = JSON.parse(request.body.read)
     # Set up the API endpoint URL and request headers
