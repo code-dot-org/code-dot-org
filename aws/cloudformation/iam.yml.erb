@@ -576,7 +576,8 @@ roles.each do |name, config| %>
   MusicLabS3ReadWritePolicy:
     Type: 'AWS::IAM::ManagedPolicy'
     Properties:
-      PolicyName: 'MusicLabS3ReadWritePolicy'
+      ManagedPolicyName: 'MusicLabS3ReadWritePolicy'
+      Path: /engineering/
       PolicyDocument:
         Version: '2012-10-17'
         Statement:
