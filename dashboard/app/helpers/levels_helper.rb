@@ -320,7 +320,7 @@ module LevelsHelper
         {app: 'lab2', channel: view_options[:channel]}
       elsif @level.is_a? Blockly
         blockly_options
-      elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab) || @level.is_a?(Javalab) || @level.is_a?(Aichat)
+      elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab) || @level.is_a?(Javalab)
         non_blockly_puzzle_options
       elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
         question_options

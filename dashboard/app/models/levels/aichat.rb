@@ -45,31 +45,6 @@ class Aichat < Level
     )
   end
 
-  # Return an 'appOptions' hash derived from the level contents
-  def non_blockly_puzzle_level_options
-    options = Rails.cache.fetch("#{cache_key}/non_blockly_puzzle_level_options/v2") do
-      level_prop = {}
-
-      properties.keys.each do |dashboard|
-        apps_prop_name = dashboard.camelize(:lower)
-        # Select value from properties json
-        # Don't override existing valid (non-nil/empty) values
-        value = JSONValue.value(properties[dashboard].presence)
-        level_prop[apps_prop_name] = value unless value.nil? # make sure we convert false
-      end
-
-      level_prop['levelId'] = level_num
-
-      # We don't want this to be cached (as we only want it to be seen by authorized teachers), so
-      # set it to nil here and let other code put it in app_options
-      level_prop['teacherMarkdown'] = nil
-
-      # Don't set nil values
-      level_prop.reject! {|_, value| value.nil?}
-    end
-    options.freeze
-  end
-
   def uses_lab2?
     true
   end
