@@ -1,9 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
-import {
-  initialValidationState,
-  ValidationState,
-} from '@cdo/apps/lab2/progress/ProgressManager';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -45,6 +41,10 @@ export interface MusicState {
   playbackEvents: PlaybackEvent[];
   /** The current last measure of the song */
   lastMeasure: number;
+  /** The current sound loading progress, from 0-1 inclusive, representing the
+   * number of sounds loaded out of the total number of sounds to load.
+   */
+  soundLoadingProgress: number;
 }
 
 const initialState: MusicState = {
@@ -58,6 +58,7 @@ const initialState: MusicState = {
   isBeatPadShowing: true,
   playbackEvents: [],
   lastMeasure: 0,
+  soundLoadingProgress: 0,
 };
 
 const musicSlice = createSlice({
@@ -141,6 +142,9 @@ const musicSlice = createSlice({
       state.playbackEvents.push(...action.payload.events);
       state.lastMeasure = action.payload.lastMeasure;
     },
+    setSoundLoadingProgress: (state, action: PayloadAction<number>) => {
+      state.soundLoadingProgress = action.payload;
+    },
   },
 });
 
@@ -189,4 +193,5 @@ export const {
   toggleBeatPad,
   clearPlaybackEvents,
   addPlaybackEvents,
+  setSoundLoadingProgress,
 } = musicSlice.actions;

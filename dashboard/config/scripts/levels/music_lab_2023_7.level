@@ -43,7 +43,7 @@
       "validations": [
         {
           "conditions": [
-            "played_one_sound"
+            {"name": "played_sounds_together", "value": 1}
           ],
           "message": "Now you can play a song and add to it as it goes!",
           "next": "true"

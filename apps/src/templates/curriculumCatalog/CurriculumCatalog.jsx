@@ -26,6 +26,8 @@ import {
   translatedGradeLevels,
   gradeLevelsMap,
 } from '../teacherDashboard/CourseOfferingHelpers';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const filterTypes = {
   grade: {
@@ -241,6 +243,13 @@ const CurriculumCatalog = ({
       })
     );
     setShowAssignSuccessMessage(true);
+
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_ASSIGN_COMPLETED_EVENT,
+      {
+        curriculum_offering: assignmentData.assignedTitle,
+      }
+    );
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums

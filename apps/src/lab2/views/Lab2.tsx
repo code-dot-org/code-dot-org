@@ -21,7 +21,6 @@ import ProjectContainer from '../projects/ProjectContainer';
 import ProgressContainer from '../progress/ProgressContainer';
 import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import MusicView from '@cdo/apps/music/views/MusicView';
-import {LabState} from '../lab2Redux';
 
 interface AppProperties {
   name: string;
@@ -49,9 +48,6 @@ const Lab2: React.FunctionComponent = () => {
   const currentLessonLevels = useSelector((state: {progress: ProgressState}) =>
     levelsForLessonId(state.progress, state.progress.currentLessonId)
   );
-  const currentProjectType = useSelector(
-    (state: {lab: LabState}) => state.lab.currentProjectType
-  );
   let currentLessonAppProperties: AppProperties[];
   let currentAppName: string;
 
@@ -67,10 +63,8 @@ const Lab2: React.FunctionComponent = () => {
     );
   } else {
     // If we don't have a lesson, we are either on a /project or /level page.
-    // The app type will either already be seeded in
-    // lab2Redux (from a remix action) or it will have been sent
-    // via the server (for a /project or /level page).
-    currentAppName = currentProjectType || getProjectType();
+    // The app type will have been sent via the server.
+    currentAppName = getProjectType();
     currentLessonAppProperties = appsProperties.filter(
       appProperties => appProperties.name === currentAppName
     );
