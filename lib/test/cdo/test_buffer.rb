@@ -60,7 +60,7 @@ class BufferTest < Minitest::Test
 
   class StdoutBuffer < TestBuffer
     def flush(objects)
-      objects.each(&method(:puts))
+      objects.each {|object| puts(object)}
     end
   end
 
@@ -124,7 +124,7 @@ class BufferTest < Minitest::Test
     # Re-buffer objects endlessly.
     def flush(objects)
       super
-      objects.map(&method(:buffer))
+      objects.map {|object| buffer(object)}
     end
   end
 

@@ -37,7 +37,7 @@ module Cdo
     def required(*keys, fetch: false)
       keys = keys.map(&:to_s)
       @required += keys
-      keys.map(&method(:get)) if fetch
+      keys.map {|key| get(key)} if fetch
     end
 
     # Ensure all required secrets are fully loaded.

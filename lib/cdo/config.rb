@@ -64,13 +64,13 @@ module Cdo
     def load_configuration(*sources)
       raise RuntimeError, "can't modify frozen #{self.class}", caller(2) if @frozen
 
-      config = nil
+      configs = nil
       i = 8
       table = @table
-      while config != (config = render(*sources))
+      while configs != (configs = render(*sources))
         raise "Can't resolve config (circular dependency?)" if (i -= 1).zero?
         @table = table.dup
-        config.each(&method(:merge))
+        configs.each {|config| merge(config)}
       end
     end
 
