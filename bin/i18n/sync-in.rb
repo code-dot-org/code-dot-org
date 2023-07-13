@@ -13,7 +13,6 @@ require 'digest/md5'
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
-require_relative '../animation_assets/manifest_builder'
 
 Dir[File.expand_path('../resources/**/*.rb', __FILE__)].sort.each {|file| require file}
 
@@ -25,7 +24,7 @@ module I18n
       HocSyncUtils.sync_in
       localize_level_and_project_content
       localize_block_content
-      localize_animation_library
+      I18n::Resources::Apps::Animations.sync_in
       localize_shared_functions
       I18n::Resources::Dashboard::CourseOfferings.sync_in
       localize_standards
@@ -625,15 +624,6 @@ module I18n
       end
 
       File.write("dashboard/config/locales/blocks.en.yml", I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"blocks" => blocks}}}))
-    end
-
-    def self.localize_animation_library
-      spritelab_animation_source_file = "#{I18N_SOURCE_DIR}/animations/spritelab_animation_library.json"
-      FileUtils.mkdir_p(File.dirname(spritelab_animation_source_file))
-      File.open(spritelab_animation_source_file, "w") do |file|
-        animation_strings = ManifestBuilder.new({spritelab: true, quiet: true}).get_animation_strings
-        file.write(JSON.pretty_generate(animation_strings))
-      end
     end
 
     def self.localize_shared_functions
