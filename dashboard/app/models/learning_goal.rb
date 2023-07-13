@@ -12,5 +12,9 @@
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #
+# Indexes
+#
+#  index_learning_goals_on_rubric_id_and_key  (rubric_id,key) UNIQUE
+#
 class LearningGoal < ApplicationRecord
 end

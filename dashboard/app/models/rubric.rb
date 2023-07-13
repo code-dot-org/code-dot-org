@@ -8,5 +8,9 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
+#
+#  index_rubrics_on_lesson_id  (lesson_id) UNIQUE
+#
 class Rubric < ApplicationRecord
 end

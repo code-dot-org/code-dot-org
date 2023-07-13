@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_11_175151) do
+ActiveRecord::Schema.define(version: 2023_07_13_141627) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -644,6 +644,7 @@ ActiveRecord::Schema.define(version: 2023_07_11_175151) do
     t.text "ai_prompt"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["learning_goal_id", "understanding"], name: "index_learning_goal_evidence_levels_on_lg_id_and_understanding", unique: true
   end
 
   create_table "learning_goals", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -655,6 +656,7 @@ ActiveRecord::Schema.define(version: 2023_07_11_175151) do
     t.text "tips"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["rubric_id", "key"], name: "index_learning_goals_on_rubric_id_and_key", unique: true
   end
 
   create_table "lesson_activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -1621,6 +1623,7 @@ ActiveRecord::Schema.define(version: 2023_07_11_175151) do
     t.integer "level_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["lesson_id"], name: "index_rubrics_on_lesson_id", unique: true
   end
 
   create_table "school_districts", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
