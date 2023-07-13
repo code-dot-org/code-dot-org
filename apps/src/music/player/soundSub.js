@@ -1,4 +1,4 @@
-import {logError} from '../utils/MusicMetrics';
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import SoundEffects from './soundEffects';
 
 // audio
@@ -50,7 +50,10 @@ function WebAudio(options) {
   try {
     audioContext = createAudioContext(48000);
   } catch (e) {
-    logError('Web Audio API is not supported in this browser');
+    Lab2MetricsReporter.logError(
+      'Web Audio API is not supported in this browser',
+      e
+    );
     audioContext = null;
     return;
   }
@@ -82,12 +85,12 @@ WebAudio.prototype.LoadSound = function (url, callback, onLoadFinished) {
           onLoadFinished();
         },
         function (e) {
-          logError(e);
+          Lab2MetricsReporter.logError('Error decoding audio data', e);
           onLoadFinished();
         }
       );
     } catch (e) {
-      logError(e);
+      Lab2MetricsReporter.logError('Error decoding audio data', e);
       onLoadFinished();
     }
   };
@@ -106,7 +109,7 @@ WebAudio.prototype.LoadSoundFromBuffer = function (buffer, callback) {
       }
     );
   } catch (e) {
-    logError(e);
+    Lab2MetricsReporter.logError('Error loading sound from buffer', e);
   }
 };
 
