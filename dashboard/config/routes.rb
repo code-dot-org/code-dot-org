@@ -1059,7 +1059,7 @@ Dashboard::Application.routes.draw do
 
     get '/get_token', to: 'authenticity_token#get_token'
 
-    post '/api/aichat', to: 'api#aichat'
+    post '/openai/chat_completion', to: 'openapi#chat_completion'
 
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:
