@@ -33,88 +33,27 @@ describe('CourseOfferingEditor', () => {
         school_subject: 'science,english_language_arts',
         device_compatibility: JSON.stringify(deviceCompatibilities),
         description: 'An introductory course into computer science.',
-        self_paced_professional_learning: 'Teaching AI and Machine Learning',
         professional_learning:
           'https://code.org/educate/professional-learning/middle-high',
       },
       selfPacedPLCourseOfferings: [
         {
-          id: 24,
-          key: 'self-paced-pl-csd5',
-          display_name: 'Teaching AI and Machine Learning',
-          course_version_path: '/s/self-paced-pl-csd5-2022',
+          id: 1,
+          key: 'test-self-paced-pl-1',
+          display_name: 'Self Paced PL 1',
+          course_version_path: null,
         },
         {
           id: 53,
-          key: 'alltheselfpacedplthings',
-          display_name: 'All the Self Paced PL Things',
+          key: 'test-self-paced-pl-2',
+          display_name: 'Self Paced PL 2',
           course_version_path: null,
         },
         {
           id: 135,
-          key: 'self-paced-pl-physical-computing',
-          display_name: 'Teaching Creating Apps with Devices',
-          course_version_path: '/courses/self-paced-pl-physical-computing-2023',
-        },
-        {
-          id: 138,
-          key: 'self-paced-pl-microbit',
-          display_name: 'self-paced-pl-microbit',
-          course_version_path: '/courses/self-paced-pl-microbit-2023',
-        },
-        {
-          id: 194,
-          key: 'self-paced-pl-csa',
-          display_name: 'CSA Getting Started Modules',
-          course_version_path: '/courses/self-paced-pl-csa-2023',
-        },
-        {
-          id: 241,
-          key: 'self-paced-pl-csp-2021',
-          display_name: 'Teaching CS Principles',
-          course_version_path: '/courses/self-paced-pl-csp-2022',
-        },
-        {
-          id: 311,
-          key: 'self-paced-pl-csc',
-          display_name: 'Teaching CS Connections',
-          course_version_path: '/s/self-paced-pl-csc-2023',
-        },
-        {
-          id: 335,
-          key: 'self-paced-pl-csd6-2021',
-          display_name: 'self-paced-pl-csd6-2021',
+          key: 'test-self-paced-pl-3',
+          display_name: 'Self Paced PL 3',
           course_version_path: null,
-        },
-        {
-          id: 376,
-          key: 'self-paced-pl-csd',
-          display_name: 'Teaching CS Discoveries',
-          course_version_path: '/courses/self-paced-pl-csd-2023',
-        },
-        {
-          id: 386,
-          key: 'self-paced-pl-csd-2021',
-          display_name: 'Teaching CS Discoveries',
-          course_version_path: '/courses/self-paced-pl-csd-2022',
-        },
-        {
-          id: 404,
-          key: 'self-paced-pl-csp',
-          display_name: 'self-paced-pl-csp',
-          course_version_path: '/courses/self-paced-pl-csp-2023',
-        },
-        {
-          id: 423,
-          key: 'k5-onlinepd',
-          display_name: 'Teaching Computer Science Fundamentals',
-          course_version_path: '/s/k5-onlinepd-2023',
-        },
-        {
-          id: 441,
-          key: 'self-paced-pl-aiml',
-          display_name: 'Teaching AI and Machine Learning',
-          course_version_path: '/courses/self-paced-pl-aiml-2023',
         },
       ],
     };
@@ -155,7 +94,6 @@ describe('CourseOfferingEditor', () => {
         school_subject: 'science,english_language_arts',
         device_compatibility: JSON.stringify(deviceCompatibilities),
         description: 'An introductory course into computer science.',
-        self_paced_professional_learning: 'Teaching AI and Machine Learning',
         professional_learning:
           'https://code.org/educate/professional-learning/middle-high',
       };
@@ -232,7 +170,6 @@ describe('CourseOfferingEditor', () => {
         school_subject: 'science,english_language_arts',
         device_compatibility: JSON.stringify(deviceCompatibilities),
         description: 'An introductory course into computer science.',
-        self_paced_professional_learning: 'Teaching AI and Machine Learning',
         professional_learning:
           'https://code.org/educate/professional-learning/middle-high',
       };
