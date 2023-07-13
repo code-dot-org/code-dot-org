@@ -4,10 +4,8 @@ import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import {
   convertXmlToJson,
-  positionBlockXmlHelper,
   positionBlocksOnWorkspace,
 } from './cdoSerializationHelpers';
-import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Loads blocks to a workspace.
@@ -17,16 +15,11 @@ import experiments from '@cdo/apps/util/experiments';
  * @param {*} stateToLoad - modern workspace serialization, may not be present
  */
 export function loadBlocksToWorkspace(workspace, xml, stateToLoad) {
-  if (experiments.isEnabled(experiments.BLOCKLY_JSON)) {
-    if (!stateToLoad) {
-      stateToLoad = convertXmlToJson(xml);
-    }
-    Blockly.serialization.workspaces.load(stateToLoad, workspace);
-    positionBlocksOnWorkspace(workspace);
-  } else {
-    const cdoXmlBlocks = Blockly.Xml.domToBlockSpace(workspace, xml);
-    positionBlocksOnWorkspace(workspace, positionBlockXmlHelper, cdoXmlBlocks);
+  if (!stateToLoad) {
+    stateToLoad = convertXmlToJson(xml);
   }
+  Blockly.serialization.workspaces.load(stateToLoad, workspace);
+  positionBlocksOnWorkspace(workspace);
 }
 
 export function setHSV(block, h, s, v) {
