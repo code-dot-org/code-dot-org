@@ -25,7 +25,7 @@ module I18n
       localize_level_and_project_content
       localize_block_content
       I18n::Resources::Apps::Animations.sync_in
-      localize_shared_functions
+      I18n::Resources::Dashboard::SharedFunctions.sync_in
       I18n::Resources::Dashboard::CourseOfferings.sync_in
       localize_standards
       localize_docs
@@ -624,17 +624,6 @@ module I18n
       end
 
       File.write("dashboard/config/locales/blocks.en.yml", I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"blocks" => blocks}}}))
-    end
-
-    def self.localize_shared_functions
-      puts "Preparing shared functions"
-
-      shared_functions = SharedBlocklyFunction.where(level_type: 'GamelabJr').pluck(:name)
-      hash = {}
-      shared_functions.sort.each do |func|
-        hash[func] = func
-      end
-      File.write("i18n/locales/source/dashboard/shared_functions.yml", I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"shared_functions" => hash}}}))
     end
 
     def self.select_redactable(i18n_strings)
