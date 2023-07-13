@@ -22,13 +22,12 @@ class Rubric < ApplicationRecord
 
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
-    file_path = Rails.root.join("config/rubrics/#{lesson.script.name}/#{lesson.key}.json")
     object_to_serialize = serialize
-    dirname = File.dirname(file_path)
+    dirname = File.dirname(serialized_file_path)
     unless File.directory?(dirname)
       FileUtils.mkdir_p(dirname)
     end
-    File.write(file_path, JSON.pretty_generate(object_to_serialize))
+    File.write(serialized_file_path, JSON.pretty_generate(object_to_serialize))
   end
 
   def self.seed_all
@@ -54,24 +53,23 @@ class Rubric < ApplicationRecord
     raise "Level for rubric must be in the rubric's lesson" unless lesson.levels.any? {|l| l.name == level.name}
 
     rubric = Rubric.find_or_create_by!(lesson_id: lesson.id, level_id: level.id)
-    puts rubric.inspect
     properties['learning_goals'].each do |learning_goal_properties|
       learning_goal_properties.symbolize_keys!
-      puts learning_goal_properties.inspect
       learning_goal = LearningGoal.find_or_create_by!(rubric_id: rubric.id, key: learning_goal_properties[:key])
-      puts learning_goal.inspect
-      puts learning_goal_properties.except(:learning_goal_evidence_levels).inspect
       learning_goal.assign_attributes(learning_goal_properties.except(:learning_goal_evidence_levels))
       learning_goal.save! if learning_goal.changed?
 
       learning_goal_properties[:learning_goal_evidence_levels].each do |evidence_level_properties|
         evidence_level_properties.symbolize_keys!
         evidence_level = LearningGoalEvidenceLevel.find_or_create_by!(learning_goal_id: learning_goal.id, understanding: evidence_level_properties[:understanding])
-        puts evidence_level.inspect
         evidence_level.assign_attributes(evidence_level_properties)
         evidence_level.save! if evidence_level.changed?
       end
     end
     rubric
+  end
+
+  def serialized_file_path
+    Rails.root.join("config/rubrics/#{lesson.script.name}/#{lesson.key}.json")
   end
 end
