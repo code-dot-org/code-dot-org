@@ -23,52 +23,18 @@ module RakeUtils
     args.map(&:to_s).join(' ')
   end
 
-  def self.upgrade_service(id)
-    sudo 'service', id.to_s, 'upgrade' if OS.linux? && CDO.chef_managed
-  end
-
   def self.start_service(id)
-    sudo 'service', id.to_s, 'start' if OS.linux? && CDO.chef_managed
+    sudo 'systemctl', 'start', id.to_s if OS.linux? && CDO.chef_managed
   end
 
   def self.stop_service(id)
-    sudo 'service', id.to_s, 'stop' if OS.linux? && CDO.chef_managed
-  end
-
-  # We've been having problems with 'sudo service dashboard stop', where it
-  # gets hung waiting for the process to stop, but the signal never takes effect.
-  # This calls and retries stop-with-status, which will wait for a bit but
-  # return an error code if the service doesn't actually stop. It finishes with
-  # a call to the normal stop method, which will wait indefinitely, if the retries
-  # all fail - this allows us to manually go in and kill the process without needing
-  # to restart the build.
-  def self.stop_service_with_retry(id, retry_count)
-    if OS.linux? && CDO.chef_managed
-      success = false
-      (1..retry_count + 1).each do |i|
-        if sudo('service', id.to_s, 'stop-with-status')
-          success = true
-          ChatClient.log "Successfully stopped service #{id}"
-          break
-        end
-      rescue RuntimeError # sudo call raises a RuntimeError if it fails
-        ChatClient.log "Service #{id} failed to stop, retrying (attempt #{i})"
-        next
-      end
-      unless success
-        # Alert the relevant room that the service may be hung...
-        ChatClient.log "Could not stop #{id} after #{retry_count + 1} attempts"
-        # ...but we're trying one last time and going into a wait loop, so it can be stopped manually
-        ChatClient.log "Calling 'sudo service #{id} stop'. If #{id} does not stop shortly you will need to "\
-          "log into the server and manually stop the process. The build will resume automatically "\
-          "once the #{id} has stopped."
-        stop_service(id)
-      end
-    end
+    sudo 'systemctl', 'stop', id.to_s if OS.linux? && CDO.chef_managed
   end
 
   def self.restart_service(id)
-    sudo 'service', id.to_s, 'restart' if OS.linux? && CDO.chef_managed
+    return unless OS.linux? && CDO.chef_managed
+    sudo 'systemctl', 'daemon-reload'
+    sudo 'systemctl', 'restart', id.to_s
   end
 
   def self.system_(*args)
@@ -236,21 +202,26 @@ module RakeUtils
     RakeUtils.sudo 'npm', 'update', '--quiet', '-g', *args unless output.empty?
   end
 
-  def self.npm_install(*args)
-    frozen_lockfile = ENV['CI'] ? '--frozen-lockfile' : ''
+  def self.run_packages_with(command, *args)
     commands = []
+
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
-    commands += " yarn #{frozen_lockfile}".split
+    commands << command
     commands += args
+
     RakeUtils.system(*commands)
   end
 
+  def self.npm_install(*args)
+    run_packages_with('npm install', ENV['CI'] && '--frozen-lockfile', *args)
+  end
+
+  def self.yarn_install(*args)
+    run_packages_with('yarn', ENV['CI'] && '--frozen-lockfile', *args)
+  end
+
   def self.npm_rebuild(*args)
-    commands = []
-    commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
-    commands += " npm rebuild".split
-    commands += args
-    RakeUtils.system(*commands)
+    run_packages_with('npm rebuild', *args)
   end
 
   # Installs list of global npm packages if not already installed

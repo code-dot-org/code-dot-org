@@ -826,6 +826,9 @@
           "word": "Binärdatei",
           "definition": "Eine Art der Darstellung von Informationen mit nur zwei Optionen."
         },
+        "computer/csd/2022": {
+          "word": "Computer"
+        },
         "input/csd/2022": {
           "word": "Eingabe"
         },
@@ -1472,6 +1475,9 @@
         },
         "function/csd/2021": {
           "word": "Funktion"
+        },
+        "computer/csd/2021": {
+          "word": "Computer"
         },
         "input/csd/2021": {
           "word": "Eingabe"

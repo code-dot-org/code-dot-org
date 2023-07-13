@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-12 17:21:59 UTC",
+    "serialized_at": "2023-06-27 19:15:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -133,9 +133,9 @@
       "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** The teacher uses journaling for individual reflection and sensemaking along with discussion for group reflection and sensemaking.\n\n\n* **Potential Teaching Group Decisions:**\n  * Have participants respond to prompts using a journal\n  * Have participants add key vocabulary to their journal\n  * Facilitate discussion providing time for individual reflection before group sharing - the Think-Pair-Share strategy does not always need to include all three steps, but at a minimum it should include some individual think time\n\n\n**Objectives:**\n* Participants have reflected on the role of journaling and discussion as a metacognitive opportunity for students to make connections between the activities they are doing and the new knowledge and skills they are gaining\n* Participants can create and use a sprite.\n\n**Suggested Time:** 65 minutes\n\n<a href=\"url\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>",
+        "overview": "**Purpose:**\n* **Essential Practice:** The teacher uses journaling for individual reflection and sensemaking along with discussion for group reflection and sensemaking.\n\n\n* **Potential Teaching Group Decisions:**\n  * Have participants respond to prompts using a journal\n  * Have participants add key vocabulary to their journal\n  * Facilitate discussion providing time for individual reflection before group sharing - the Think-Pair-Share strategy does not always need to include all three steps, but at a minimum it should include some individual think time\n\n\n**Objectives:**\n* Participants have reflected on the role of journaling and discussion as a metacognitive opportunity for students to make connections between the activities they are doing and the new knowledge and skills they are gaining\n* Participants can create and use a sprite.\n\n**Suggested Time:** 65 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "student_overview": "**Question of the Day:**  How can we use sprites to help us keep track of lots of information in our programs?\n\nToday you will learn about sprites which will not only give you a way to keep track of various pieces of information in your programs, but will also allow you to create more interesting and fun images!\n\n<a href=\"url\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>"
+        "student_overview": "**Question of the Day:**  How can we use sprites to help us keep track of lots of information in our programs?\n\nToday you will learn about sprites which will not only give you a way to keep track of various pieces of information in your programs, but will also allow you to create more interesting and fun images!\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Link to lesson plan</a>"
       },
       "seeding_key": {
         "lesson.key": "Sprites",
@@ -1586,14 +1586,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSD U3 Sprites intro sprites_pl"
+          "CSD U3 Sprites intro sprites 2_pl"
         ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Sprites intro sprites_pl"
+          "CSD U3 Sprites intro sprites 2_pl"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
@@ -1601,7 +1601,7 @@
         "activity_section.key": "49ae8f1a-5380-4175-8cfc-4e7a9a1046ff"
       },
       "level_keys": [
-        "CSD U3 Sprites intro sprites_pl"
+        "CSD U3 Sprites intro sprites 2_pl"
       ]
     },
     {
@@ -2006,9 +2006,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Sprites intro sprites_pl",
+        "level.key": "CSD U3 Sprites intro sprites 2_pl",
         "script_level.level_keys": [
-          "CSD U3 Sprites intro sprites_pl"
+          "CSD U3 Sprites intro sprites 2_pl"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",

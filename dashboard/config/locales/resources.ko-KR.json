@@ -14,22 +14,22 @@
         "poem_art_celebration/poem-art/2021": {
           "name": "시 예술 4 - 기념",
           "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
-          "type": "비디오"
+          "type": "동영상"
         },
         "poem_art_events/poem-art/2021": {
           "name": "시 예술 2 - 이벤트",
           "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
-          "type": "비디오"
+          "type": "동영상"
         },
         "poem_art_imagery/poem-art/2021": {
           "name": "시 예술 3 - 이미지",
           "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
-          "type": "비디오"
+          "type": "동영상"
         },
         "poem_art_introduction/poem-art/2021": {
           "name": "시학 1 - 소개",
           "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
-          "type": "비디오"
+          "type": "동영상"
         },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "아티스트 소개",
@@ -53,7 +53,7 @@
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "name": "암호화 및 공개 키",
           "url": "https://youtu.be/ZghMPWGXexs",
-          "type": "비디오"
+          "type": "동영상"
         },
         "hocencryption/hoc-encryption/unversioned": {
           "name": "코드 스튜디오 상의 암호화 위젯",
@@ -80,7 +80,7 @@
         "video-text-compression/text-compression/unversioned": {
           "name": "동영상: Aloe Blacc로 텍스트 압축",
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
-          "type": "비디오"
+          "type": "동영상"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
           "name": "바운스 내 이벤트 - 어떻게 일어날까요?",
@@ -101,17 +101,17 @@
         "ai-ml/oceans/unversioned": {
           "name": "AI: 머신러닝",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
-          "type": "비디오"
+          "type": "동영상"
         },
         "ai-societal/oceans/unversioned": {
           "name": "AI: 사회에 미치는 영향",
           "url": "https://youtu.be/ng4c1g3COfs",
-          "type": "비디오"
+          "type": "동영상"
         },
         "ai-training/oceans/unversioned": {
           "name": "AI: 교육 데이터 및 편견",
           "url": "https://youtu.be/x2mRoFNm22g",
-          "type": "비디오"
+          "type": "동영상"
         },
         "common_core_and_ngss_guidance/coursed/2022": {
           "name": "커몬 코어 (Common Core) 및 NGSS 가이던스",
@@ -269,7 +269,7 @@
         "pause_and_think_online/coursed/2022": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "비디오"
+          "type": "동영상"
         },
         "open-ended_programming_levels_1/coursed/2022": {
           "name": "오픈 엔드 프로그래밍 레벨",
@@ -400,7 +400,7 @@
         "the_power_of_words_the_power_of_words/coursef/2022": {
           "name": "말의 힘: 말의 힘\t",
           "url": "https://www.commonsense.org/education/videos/the-power-of-words",
-          "type": "비디오"
+          "type": "동영상"
         },
         "the_power_of_words_words_can_hurt/coursef/2022": {
           "name": "말의 힘: 말로 상처를 줄 수 있습니다",
@@ -423,7 +423,7 @@
         "introducing_sprite_lab_1/coursef/2022": {
           "name": "스프라이트 랩 소개",
           "url": "https://youtu.be/yd-9xZ275dM",
-          "type": "비디오"
+          "type": "동영상"
         },
         "making_sprites/coursef/2022": {
           "name": "스프라이트 만들기",
@@ -466,17 +466,17 @@
         "ai_impact_on_society/coursef/2022": {
           "name": "AI: 사회에 미치는 영향",
           "url": "https://youtu.be/ng4c1g3COfs",
-          "type": "비디오"
+          "type": "동영상"
         },
         "ai_machine_learning/coursef/2022": {
           "name": "AI: 머신러닝",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
-          "type": "비디오"
+          "type": "동영상"
         },
         "ai_training_data_bias/coursef/2022": {
           "name": "AI: 교육 데이터 및 편견",
           "url": "https://youtu.be/x2mRoFNm22g",
-          "type": "비디오"
+          "type": "동영상"
         },
         "get-site-ip-com/coursef/2022": {
           "name": "get-site-ip-com",
@@ -606,7 +606,7 @@
         "pause_and_think_online/coursee/2022": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://youtu.be/X_duZ-1LApg",
-          "type": "비디오"
+          "type": "동영상"
         },
         "turns_angles/coursee/2022": {
           "name": "회전 및 각도",
@@ -656,7 +656,7 @@
         "digital_sharing_ethics_video_/coursee/2022": {
           "name": "디지털 공유 윤리 (동영상)",
           "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
-          "type": "비디오"
+          "type": "동영상"
         },
         "digital_sharing_lesson_plan/coursee/2022": {
           "name": "디지털 공유 레슨 플랜",
@@ -782,7 +782,7 @@
         "wiggles_-_gonoodle/courseb/2022": {
           "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
-          "type": "비디오"
+          "type": "동영상"
         },
         "compass_rose/courseb/2022": {
           "name": "컴퍼스 로즈",
@@ -807,7 +807,7 @@
         "unspotted_bugs/courseb/2022": {
           "name": "점이 없는 버그",
           "url": "https://youtu.be/rah3DYlp5nQ",
-          "type": "비디오"
+          "type": "동영상"
         },
         "getting_loopy/courseb/2022": {
           "name": "반복시키기",
@@ -837,7 +837,7 @@
         "pause_and_think_online/courseb/2022": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "비디오"
+          "type": "동영상"
         },
         "the_right_app_scenarios/courseb/2022": {
           "name": "알맞은 앱 시나리도 ",
@@ -889,7 +889,7 @@
         "pair_programming/express/2022": {
           "name": "페어 프로그래밍",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "비디오"
+          "type": "동영상"
         },
         "unplugged_blocks_courses_c-f_/express/2022": {
           "name": "언플러그드 블록 (과정 C-F)",
@@ -898,12 +898,12 @@
         "artist_introduction/express/2022": {
           "name": "아티스트 소개",
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
-          "type": "비디오"
+          "type": "동영상"
         },
         "turns_angles/express/2022": {
           "name": "회전 및 각도",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
-          "type": "비디오"
+          "type": "동영상"
         },
         "turns_angles_1/express/2022": {
           "name": "회전 및 각도",
@@ -927,7 +927,7 @@
         "pause_and_think_online/express/2022": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "비디오"
+          "type": "동영상"
         },
         "dance_party_project_guide/express/2022": {
           "name": "댄스 파티 프로젝트 가이드",
@@ -946,7 +946,7 @@
         "pair_programming_video/express/2022": {
           "name": "페어 프로그래밍 동영상",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "비디오"
+          "type": "동영상"
         },
         "unplugged_blocks_courses_c-f__1/express/2022": {
           "name": "언플러그드 블록 (과정 C-F)",
@@ -984,7 +984,7 @@
         "20_20_20_rule/pre-express/2022": {
           "name": "20/20/20 규칙",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
-          "type": "비디오"
+          "type": "동영상"
         },
         "feeling_faces/pre-express/2022": {
           "name": "감정 얼굴",
@@ -1004,12 +1004,12 @@
         "wiggles_-_go_noodle/pre-express/2022": {
           "name": "Wiggles - Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
-          "type": "비디오"
+          "type": "동영상"
         },
         "pause_and_think_online/pre-express/2022": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "비디오"
+          "type": "동영상"
         },
         "common_core_and_ngss_guidance/coursea/2022": {
           "name": "커몬 코어 (Common Core) 및 NGSS 가이던스",
@@ -1049,21 +1049,21 @@
           "name": "가상 레슨 수정"
         },
         "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
-          "name": "내 온라인 이웃에서 안전: 강의 슬라이드",
+          "name": "내 온라인 이웃에서의 안전: 강의 슬라이드",
           "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
         },
         "safety_in_my_online_neighborhood_my_online_neighborhood/coursea/2022": {
-          "name": "내 온라인 이웃에서 안전: 내 온라인 이웃",
+          "name": "내 온라인 이웃에서의 안전: 내 온라인 이웃",
           "url": "https://www.commonsense.org/education/videos/my-online-neighborhood",
           "type": "레슨 동영상"
         },
         "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2022": {
-          "name": "내 온라인 이웃에서 안전: 잠시 멈추고 생각하세요",
+          "name": "내 온라인 이웃에서의 안전: 잠시 멈추고 생각하세요",
           "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
           "type": "학생 유인물"
         },
         "safety_in_my_online_neighborhood_safety_it_rules_/coursea/2022": {
-          "name": "내 온라인 이웃에서 안전: 안전, 규칙!",
+          "name": "내 온라인 이웃에서의 안전: 안전, 규칙!",
           "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
           "type": "포스터"
         },
@@ -1075,7 +1075,7 @@
         "getting_started_-_creating_a_class_section/coursea/2022": {
           "name": "시작하기 - 클래스 섹션 만들기",
           "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
-          "type": "비디오"
+          "type": "동영상"
         },
         "pair_programming/coursea/2022": {
           "name": "페어 프로그래밍",
@@ -1085,7 +1085,7 @@
         "wiggles-go_noodle/coursea/2022": {
           "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
-          "type": "비디오"
+          "type": "동영상"
         },
         "feeling_faces_-_emotion_image/coursea/2022": {
           "name": "감정 얼굴- 이모션 이미지",
@@ -1120,12 +1120,12 @@
         "wiggles_-_gonoodle/coursea/2022": {
           "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
-          "type": "비디오"
+          "type": "동영상"
         },
         "debugging_with_the_step_button/coursea/2022": {
           "name": "스텝버튼으로 디버깅하기",
           "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
-          "type": "비디오"
+          "type": "동영상"
         },
         "feeling_faces_emotion_image/coursea/2022": {
           "name": "감정 얼굴- 이모션 이미지",
@@ -1155,7 +1155,7 @@
         "pair-programming/coursea/2022": {
           "name": "페어 프로그래밍",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "비디오"
+          "type": "동영상"
         },
         "csf_lesson_recommendations/coursea/2022": {
           "name": "CSF 레슨 권장 사항",
@@ -1165,7 +1165,7 @@
         "pause_and_think_online/coursea/2022": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "비디오"
+          "type": "동영상"
         },
         "the_big_event/coursea/2022": {
           "name": "큰 이벤트",
@@ -1300,7 +1300,7 @@
         "pair_programming/coursec/2022": {
           "name": "페어 프로그래밍",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "비디오"
+          "type": "동영상"
         },
         "unplugged_blocks_courses_c-f_/coursec/2022": {
           "name": "언플러그드 블록 (과정 C-F)",
@@ -1354,7 +1354,7 @@
         "pause_and_think_online/coursec/2022": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "비디오"
+          "type": "동영상"
         },
         "open-ended_programming_levels_1/coursec/2022": {
           "name": "오픈 엔드 프로그래밍 레벨",
@@ -1444,7 +1444,7 @@
           "type": "슬라이드"
         },
         "binary_and_data/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "representing_numbers/csd/2022": {
           "name": "숫자 표현"
@@ -1530,7 +1530,7 @@
           "type": "슬라이드"
         },
         "amazon_and_data/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "data_in_the_real_world/csd/2022": {
           "name": "실세상에서 데이터"
@@ -1539,10 +1539,10 @@
           "name": "실세상에서 데이터"
         },
         "netflix_and_data/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "waze_and_data/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "problem_solving_with_big_data/csd/2022": {
           "name": "빅 데이터로 문제 해결",
@@ -1550,16 +1550,16 @@
         },
         "video_impact_on_society/csd/2022": {
           "name": "동영상: 사회에 미치는 영향",
-          "type": "비디오"
+          "type": "동영상"
         },
         "video_machine_learning/csd/2022": {
           "name": "동영상: 머신러닝",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
-          "type": "비디오"
+          "type": "동영상"
         },
         "video_training_data_and_bias/csd/2022": {
           "name": "동영상: 교육 데이터 및 편견",
-          "type": "비디오"
+          "type": "동영상"
         },
         "data_and_machine_learning/csd/2022": {
           "name": "데이터 및 머신러닝",
@@ -1587,7 +1587,7 @@
         },
         "problem_solving_process_1/csd/2022": {
           "name": "문제 해결 프로세스",
-          "type": "비디오"
+          "type": "동영상"
         },
         "problem_solving_process_2/csd/2022": {
           "name": "문제 해결 프로세스"
@@ -1607,7 +1607,7 @@
           "type": "슬라이드"
         },
         "what_is_a_computer/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "what_is_a_computer_/csd/2022": {
           "name": "컴퓨터란?"
@@ -1629,7 +1629,7 @@
           "type": "슬라이드"
         },
         "what_do_computers_do/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "apps_with_storage_2/csd/2022": {
           "type": "슬라이드"
@@ -1679,10 +1679,10 @@
           "type": "슬라이드"
         },
         "drawing_in_game_lab_-_part_1/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "drawing_in_game_lab_-_part_2/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "drawing_shapes_1/csd/2022": {
           "type": "자료"
@@ -1698,7 +1698,7 @@
           "type": "슬라이드"
         },
         "introduction_to_variables/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "naming_variables/csd/2022": {
           "type": "자료"
@@ -1721,7 +1721,7 @@
           "type": "자료"
         },
         "introduction_to_sprites/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "sprites/csd/2022": {
           "name": "스프라이트",
@@ -1729,7 +1729,7 @@
         },
         "the_animation_tab/csd/2022": {
           "name": "애니메이션 탭",
-          "type": "비디오"
+          "type": "동영상"
         },
         "sprites_1/csd/2022": {
           "name": "스프라이트",
@@ -1755,10 +1755,10 @@
           "type": "슬라이드"
         },
         "flipbook_example_-_by_marnic_bos/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "introduction_to_the_draw_loop/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "the_draw_loop/csd/2022": {
           "type": "자료"
@@ -1768,7 +1768,7 @@
         },
         "sprite_movement/csd/2022": {
           "name": "스프라이트 이동",
-          "type": "비디오"
+          "type": "동영상"
         },
         "the_counter_pattern/csd/2022": {
           "type": "자료"
@@ -1786,14 +1786,14 @@
         },
         "boolean_expressions/csd/2022": {
           "name": "불 연산식",
-          "type": "비디오"
+          "type": "동영상"
         },
         "booleans_and_comparison_operators/csd/2022": {
           "type": "자료"
         },
         "conditional_statements/csd/2022": {
           "name": "조건문",
-          "type": "비디오"
+          "type": "동영상"
         },
         "if_statements/csd/2022": {
           "type": "자료"
@@ -1811,7 +1811,7 @@
         },
         "if_else_statements/csd/2022": {
           "name": "If/Else 조건문",
-          "type": "비디오"
+          "type": "동영상"
         },
         "mouse_input/csd/2022": {
           "name": "마우스 인풋",
@@ -1835,7 +1835,7 @@
         },
         "velocity/csd/2022": {
           "name": "속도",
-          "type": "비디오"
+          "type": "동영상"
         },
         "velocity_1/csd/2022": {
           "name": "속도",
@@ -1894,7 +1894,7 @@
         },
         "functions/csd/2022": {
           "name": "함수",
-          "type": "비디오"
+          "type": "동영상"
         },
         "functions_1/csd/2022": {
           "name": "함수",
@@ -1940,10 +1940,10 @@
           "type": "자료"
         },
         "intro_to_web_lab_part_2/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "video_intro_to_web_lab_part_1/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "intro_to_html/csd/2022": {
           "name": "HTML 소개",
@@ -1954,11 +1954,11 @@
         },
         "video_debugging/csd/2022": {
           "name": "동영상: 디버깅",
-          "type": "비디오"
+          "type": "동영상"
         },
         "video_pair_programming/csd/2022": {
           "name": "동영상: 페어 프로그래밍",
-          "type": "비디오"
+          "type": "동영상"
         },
         "headings/csd/2022": {
           "name": "제목",
@@ -1996,11 +1996,11 @@
         },
         "intro_to_css_-_part_1/csd/2022": {
           "name": "CSS(스타일시트) 소개 - 파트 1",
-          "type": "비디오"
+          "type": "동영상"
         },
         "intro_to_css_-_part_2/csd/2022": {
           "name": "CSS(스타일시트) 소개 - 파트 2",
-          "type": "비디오"
+          "type": "동영상"
         },
         "style_sheets/csd/2022": {
           "type": "자료"
@@ -2026,7 +2026,7 @@
           "type": "슬라이드"
         },
         "creative_commons_overview/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "intellectual_property/csd/2022": {
           "name": "지적 재산",
@@ -2072,7 +2072,7 @@
         },
         "publishing_your_website/csd/2022": {
           "name": "웹사이트 출판",
-          "type": "비디오"
+          "type": "동영상"
         },
         "project_-_personal_web_page/csd/2022": {
           "name": "프로젝트 - 퍼스널 웹 페이지",
@@ -2090,11 +2090,11 @@
         },
         "video_managing_disagreement/csd/2022": {
           "name": "동영상: 의견 충돌 관리",
-          "type": "비디오"
+          "type": "동영상"
         },
         "video_teamwork/csd/2022": {
           "name": "동영상: 팀워크",
-          "type": "비디오"
+          "type": "동영상"
         },
         "team_problem_solving/csd/2022": {
           "name": "팀 문제해결",
@@ -2102,7 +2102,7 @@
         },
         "video_how_search_works/csd/2022": {
           "name": "동영상: 검색 작동방법",
-          "type": "비디오"
+          "type": "동영상"
         },
         "sources_and_research/csd/2022": {
           "name": "소스 및 리서치",
@@ -2154,7 +2154,7 @@
           "type": "슬라이드"
         },
         "the_design_thinking_process/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "user_centered_design_-_define_and_prepare/csd/2022": {
           "type": "슬라이드"
@@ -2221,14 +2221,14 @@
           "type": "슬라이드"
         },
         "what_s_for_lunch_testing/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "prototype_testing/csd/2022": {
           "name": "프로토타입 테스팅 ",
           "type": "슬라이드"
         },
         "intro_to_design_mode/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "model_screen_design/csd/2022": {
           "type": "자료"
@@ -2247,7 +2247,7 @@
         },
         "events_in_app_lab_1/csd/2022": {
           "name": "앱 랩 내 이벤트 ",
-          "type": "비디오"
+          "type": "동영상"
         },
         "changing_screens/csd/2022": {
           "type": "자료"
@@ -2299,7 +2299,7 @@
         },
         "computer_science_is_changing_everything/csd/2022": {
           "name": "컴퓨터 과학은 모든 것을 바꾸고 있습니다.  ",
-          "type": "비디오"
+          "type": "동영상"
         },
         "computing_innovations_1/csd/2022": {
           "name": "컴퓨팅 혁신"
@@ -2311,10 +2311,10 @@
           "type": "슬라이드"
         },
         "the_internet_of_things/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "circuits_and_logic/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "circuit_playground/csd/2022": {
           "type": "자료"
@@ -2351,10 +2351,10 @@
           "type": "자료"
         },
         "if_statements_2/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "the_counter_pattern_1/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "the_counter_pattern_2/csd/2022": {
           "type": "자료"
@@ -2365,7 +2365,7 @@
         },
         "variables_2/csd/2022": {
           "name": "변수",
-          "type": "비디오"
+          "type": "동영상"
         },
         "variables_and_if_statements/csd/2022": {
           "type": "슬라이드"
@@ -2393,7 +2393,7 @@
           "type": "슬라이드"
         },
         "input_output_devices/csd/2022": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "peer_review_-_human_device_interaction/csd/2022": {
           "type": "자료"
@@ -2429,7 +2429,7 @@
         },
         "introduction_to_arrays/csd/2022": {
           "name": "배열 소개",
-          "type": "비디오"
+          "type": "동영상"
         },
         "making_music/csd/2022": {
           "type": "슬라이드"
@@ -2453,11 +2453,11 @@
         },
         "functions_3/csd/2022": {
           "name": "함수",
-          "type": "비디오"
+          "type": "동영상"
         },
         "functions_with_parameters/csd/2022": {
           "name": "함수(값 전달)",
-          "type": "비디오"
+          "type": "동영상"
         },
         "functions_5/csd/2022": {
           "name": "함수",
@@ -2494,7 +2494,7 @@
         "ai_what_is_machine_learning_/csd/2022": {
           "name": "AI: 머신 러닝이란?",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
-          "type": "비디오"
+          "type": "동영상"
         },
         "classifying_fish/csd/2022": {
           "name": "물고기 분류하기",
@@ -2535,7 +2535,7 @@
         "seeing_ai/csd/2022": {
           "name": "시잉 AI",
           "url": "https://www.youtube.com/watch?v=DybczED-GKE",
-          "type": "비디오"
+          "type": "동영상"
         },
         "_key_patterns_in_data/csd/2022": {
           "name": "[KEY] 데이터에서의 패턴",
@@ -2545,7 +2545,7 @@
         "finding_patterns_in_data/csd/2022": {
           "name": "데이터에서 패턴 찾기",
           "url": "https://www.youtube.com/watch?v=edFO0bdpoHY",
-          "type": "비디오"
+          "type": "동영상"
         },
         "patterns_in_data/csd/2022": {
           "name": "데이터에서의 패턴",
@@ -2598,7 +2598,7 @@
         "introduction_to_ai_lab_1/csd/2022": {
           "name": "AI 연구실 소개",
           "url": "https://www.youtube.com/watch?v=bGJ05vdI3xA",
-          "type": "비디오"
+          "type": "동영상"
         },
         "selecting_features/csd/2022": {
           "name": "특징 선택",
@@ -2612,7 +2612,7 @@
         "training_and_testing_in_ai_lab/csd/2022": {
           "name": "AI 랩 교육 및 테스팅",
           "url": "https://www.youtube.com/watch?v=HcCtdaiMWPQ",
-          "type": "비디오"
+          "type": "동영상"
         },
         "using_data_with_categorical_features/csd/2022": {
           "name": "범주형 특징이 있는 데이터 사용",
@@ -2632,7 +2632,7 @@
         "ai_training_data_bias/csd/2022": {
           "name": "AI: 교육 데이터 및 편견",
           "url": "https://youtu.be/x2mRoFNm22g",
-          "type": "비디오"
+          "type": "동영상"
         },
         "model_cards/csd/2022": {
           "name": "모델 카드",
@@ -2651,7 +2651,7 @@
         "model_cards_in_ai_lab/csd/2022": {
           "name": "AI 랩 모델 카드",
           "url": "https://www.youtube.com/watch?v=tz_ptkv0NxA",
-          "type": "비디오"
+          "type": "동영상"
         },
         "saving_models_in_ai_lab/csd/2022": {
           "name": "AI Lab에 모델 저장",
@@ -2670,7 +2670,7 @@
         "if-statements_in_app_lab/csd/2022": {
           "name": "App Lab의 If-문",
           "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU",
-          "type": "비디오"
+          "type": "동영상"
         },
         "model_cards_in_app_lab/csd/2022": {
           "name": "App Lab 모델 카드",
@@ -2719,7 +2719,7 @@
         },
         "numerical_data_in_ai_lab_2/csd/2022": {
           "url": "https://www.youtube.com/watch?v=a4JH1D_D7s4",
-          "type": "비디오"
+          "type": "동영상"
         },
         "using_data_with_numerical_features/csd/2022": {
           "name": "수치적 특징이 있는 데이터 사용",
@@ -2748,7 +2748,7 @@
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
           "name": "윤리 및 AI: 동등한 접속 및 알고리즘 편향",
           "url": "https://www.youtube.com/watch?v=tJQSyzBUAew",
-          "type": "비디오"
+          "type": "동영상"
         },
         "our_ai_code_of_ethics_template_/csd/2022": {
           "name": "AI 윤리강령 [Template]",
@@ -2803,12 +2803,12 @@
         "creating_a_survey_in_google_forms/csd/2022": {
           "name": "설문조사를 구글 양식으로 만들기",
           "url": "https://www.youtube.com/watch?v=Ot6eXUYb3P0",
-          "type": "비디오"
+          "type": "동영상"
         },
         "cleaning_survey_data/csd/2022": {
           "name": "설문조사 데이터 정리",
           "url": "https://www.youtube.com/watch?v=NBTYgU71Jgw",
-          "type": "비디오"
+          "type": "동영상"
         },
         "isaac_s_survey_data_-_student_resource/csd/2022": {
           "name": "Isaac의 설문조사 데이터 - 학생 리소스",
@@ -2826,7 +2826,7 @@
         "view_and_download_survey_data/csd/2022": {
           "name": "설문조사 데이터 보기 및 다운로드",
           "url": "https://www.youtube.com/watch?v=orn4dpcIiCk",
-          "type": "비디오"
+          "type": "동영상"
         },
         "troubleshooting_models/csd/2022": {
           "name": "문제 해결 모델",
@@ -3389,7 +3389,7 @@
         "introducing_sprite_lab_1/coursef/2021": {
           "name": "스프라이트 랩 소개",
           "url": "https://youtu.be/yd-9xZ275dM",
-          "type": "비디오"
+          "type": "동영상"
         },
         "making_sprites/coursef/2021": {
           "name": "스프라이트 만들기",
@@ -3424,7 +3424,7 @@
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "name": "말의 힘: 말의 힘\t",
           "url": "https://www.commonsense.org/education/videos/the-power-of-words",
-          "type": "비디오"
+          "type": "동영상"
         },
         "the_power_of_words_words_can_hurt/coursef/2021": {
           "name": "말의 힘: 말로 상처를 줄 수 있습니다",
@@ -3472,7 +3472,7 @@
         "pause_and_think_online/coursef/2021": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
-          "type": "비디오"
+          "type": "동영상"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "재미있는 반복",
@@ -3517,17 +3517,17 @@
         "ai-ml/coursef/2021": {
           "name": "AI: 머신러닝",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
-          "type": "비디오"
+          "type": "동영상"
         },
         "ai-societal/coursef/2021": {
           "name": "AI: 사회에 미치는 영향",
           "url": "https://youtu.be/ng4c1g3COfs",
-          "type": "비디오"
+          "type": "동영상"
         },
         "ai-training/coursef/2021": {
           "name": "AI: 교육 데이터 및 편견",
           "url": "https://youtu.be/x2mRoFNm22g",
-          "type": "비디오"
+          "type": "동영상"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "인터넷",
@@ -3699,7 +3699,7 @@
         "wiggles_-_gonoodle/courseb/2021": {
           "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
-          "type": "비디오"
+          "type": "동영상"
         },
         "compass-rose/courseb/2021": {
           "name": "컴퍼스 로즈",
@@ -3724,7 +3724,7 @@
         "unspotted_bugs/courseb/2021": {
           "name": "점이 없는 버그",
           "url": "https://youtu.be/rah3DYlp5nQ",
-          "type": "비디오"
+          "type": "동영상"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "반복시키기",
@@ -3754,7 +3754,7 @@
         "common-sense-media-pause-think/courseb/2021": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "비디오"
+          "type": "동영상"
         },
         "the-right-app-scenarios/courseb/2021": {
           "name": "알맞은 앱 시나리도 ",
@@ -3778,7 +3778,7 @@
         "unplugged-video-big-event/courseb/2021": {
           "name": "큰 이벤트",
           "url": "https://www.youtube.com/watch?v=XoApWo-IrI4",
-          "type": "비디오"
+          "type": "동영상"
         },
         "play_lab_project_planning_guide/courseb/2021": {
           "name": "플레이 랩 프로젝트 계획 가이드",
@@ -3872,7 +3872,7 @@
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "name": "시작하기 - 클래스 섹션 만들기",
           "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
-          "type": "비디오"
+          "type": "동영상"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "페어 프로그래밍",
@@ -3882,7 +3882,7 @@
         "wiggles-go_noodle/coursea/2021": {
           "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
-          "type": "비디오"
+          "type": "동영상"
         },
         "activity-answer-happy-maps/coursea/2021": {
           "name": "해피 맵 카드",
@@ -3922,12 +3922,12 @@
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
-          "type": "비디오"
+          "type": "동영상"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
           "name": "스텝버튼으로 디버깅하기",
           "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
-          "type": "비디오"
+          "type": "동영상"
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "감정 얼굴- 이모션 이미지",
@@ -3962,7 +3962,7 @@
         "pair-programming/coursea/2021": {
           "name": "페어 프로그래밍",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "비디오"
+          "type": "동영상"
         },
         "csf_lesson_recommendations/coursea/2021": {
           "name": "CSF 레슨 권장 사항",
@@ -3977,7 +3977,7 @@
         "common-sense-media-pause-think/coursea/2021": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "비디오"
+          "type": "동영상"
         },
         "csf_lesson_recommendations_1/coursea/2021": {
           "name": "CSF 레슨 권장 사항",
@@ -4149,7 +4149,7 @@
         "pair-programming-vid/coursec/2021": {
           "name": "페어 프로그래밍",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "비디오"
+          "type": "동영상"
         },
         "course-cf-blockly-blocks/coursec/2021": {
           "name": "언플러그드 블록 (과정 C-F)",
@@ -4204,7 +4204,7 @@
         "pause_and_think_online/coursec/2021": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "비디오"
+          "type": "동영상"
         },
         "open-ended_programming_levels_1/coursec/2021": {
           "name": "오픈 엔드 프로그래밍 레벨",
@@ -4428,7 +4428,7 @@
         "pause_and_think_online/coursed/2021": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "비디오"
+          "type": "동영상"
         },
         "open-ended_programming_levels_1/coursed/2021": {
           "name": "샘플 레벨 솔루션",
@@ -4462,7 +4462,7 @@
         "pause_and_think_online_1/coursed/2021": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "비디오"
+          "type": "동영상"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "조건선택 카드",
@@ -4526,7 +4526,7 @@
         "pair_programming/express/2021": {
           "name": "페어 프로그래밍",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "비디오"
+          "type": "동영상"
         },
         "unplugged_blocks_courses_c-f_/express/2021": {
           "name": "언플러그드 블록 (과정 C-F)",
@@ -4535,12 +4535,12 @@
         "artist_introduction/express/2021": {
           "name": "아티스트 소개",
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
-          "type": "비디오"
+          "type": "동영상"
         },
         "turns_angles/express/2021": {
           "name": "회전 및 각도",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
-          "type": "비디오"
+          "type": "동영상"
         },
         "turns_angles_1/express/2021": {
           "name": "회전 및 각도",
@@ -4574,7 +4574,7 @@
         "pause_and_think_online/express/2021": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "비디오"
+          "type": "동영상"
         },
         "dance-party-playlist/express/2021": {
           "name": "스포티파이 재생 목록(전 연령)",
@@ -4593,7 +4593,7 @@
         "pair_programming_video/express/2021": {
           "name": "페어 프로그래밍 동영상",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "비디오"
+          "type": "동영상"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
           "name": "언플러그드 블록 (과정 C-F)",
@@ -4657,7 +4657,7 @@
         "20_20_20_rule/pre-express/2021": {
           "name": "20/20/20 규칙",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
-          "type": "비디오"
+          "type": "동영상"
         },
         "class-section-video/pre-express/2021": {
           "name": "Code.org에서 학급 섹션 만드는 방법",
@@ -4677,12 +4677,12 @@
         "wiggles_-_go_noodle/pre-express/2021": {
           "name": "Wiggles - Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
-          "type": "비디오"
+          "type": "동영상"
         },
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "비디오"
+          "type": "동영상"
         },
         "2021_change_log/coursee/2021": {
           "name": "2021 변경 로그",
@@ -4798,7 +4798,7 @@
         "common-sense-media-pause-think/coursee/2021": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://youtu.be/X_duZ-1LApg",
-          "type": "비디오"
+          "type": "동영상"
         },
         "digital-sharing-lesson/coursee/2021": {
           "name": "디지털 공유 레슨 플랜",
@@ -4808,7 +4808,7 @@
         "digital-sharing-video/coursee/2021": {
           "name": "디지털 공유 윤리 (동영상)",
           "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
-          "type": "비디오"
+          "type": "동영상"
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "회전 및 각도",
@@ -4927,7 +4927,7 @@
         "ai_what_is_machine_learning_/csd/2021": {
           "name": "AI: 머신 러닝이란?",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
-          "type": "비디오"
+          "type": "동영상"
         },
         "types_of_machine_learning/csd/2021": {
           "name": "머신 러닝 유형",
@@ -4960,12 +4960,12 @@
         "seeing_ai/csd/2021": {
           "name": "시잉 AI",
           "url": "https://www.youtube.com/watch?v=DybczED-GKE",
-          "type": "비디오"
+          "type": "동영상"
         },
         "finding_patterns_in_data/csd/2021": {
           "name": "데이터에서 패턴 찾기",
           "url": "https://www.youtube.com/watch?v=yTsspi6AQag",
-          "type": "비디오"
+          "type": "동영상"
         },
         "patterns_in_data/csd/2021": {
           "name": "데이터에서의 패턴",
@@ -5015,7 +5015,7 @@
         "introduction_to_ai_lab_1/csd/2021": {
           "name": "AI Lab 소개",
           "url": "https://www.youtube.com/watch?v=bs3slynHTvc",
-          "type": "비디오"
+          "type": "동영상"
         },
         "training_a_model_in_ai_lab/csd/2021": {
           "name": "AI Lab에서 모델 교육",
@@ -5025,7 +5025,7 @@
         "training_and_testing_in_ai_lab/csd/2021": {
           "name": "AI Lab 교육 및 테스팅",
           "url": "https://www.youtube.com/watch?v=Pm70TO--ee4",
-          "type": "비디오"
+          "type": "동영상"
         },
         "_key_training_a_model_in_ai_lab/csd/2021": {
           "name": "[KEY] AI Lab에서 모델 교육",
@@ -5060,7 +5060,7 @@
         "ai_training_data_bias/csd/2021": {
           "name": "AI: 교육 데이터 및 편견",
           "url": "https://youtu.be/x2mRoFNm22g",
-          "type": "비디오"
+          "type": "동영상"
         },
         "model_cards/csd/2021": {
           "name": "모델 카드",
@@ -5075,7 +5075,7 @@
         "model_cards_in_ai_lab/csd/2021": {
           "name": "AI Lab 모델 카드",
           "url": "https://www.youtube.com/watch?v=_iAGDFmZhYI",
-          "type": "비디오"
+          "type": "동영상"
         },
         "saving_models_in_ai_lab/csd/2021": {
           "name": "AI Lab에 모델 저장",
@@ -5100,7 +5100,7 @@
         "if-statements_in_app_lab/csd/2021": {
           "name": "App Lab의 If-문",
           "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU",
-          "type": "비디오"
+          "type": "동영상"
         },
         "model_cards_in_app_lab/csd/2021": {
           "name": "App Lab 모델 카드",
@@ -5145,7 +5145,7 @@
         "numerical_data_in_ai_lab_2/csd/2021": {
           "name": "AI Lab의 수치 데이터",
           "url": "https://www.youtube.com/watch?v=Po4i_EtpDWI",
-          "type": "비디오"
+          "type": "동영상"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2021": {
           "name": "[KEY] - AI Lab의 수치 데이터",
@@ -5179,7 +5179,7 @@
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "name": "윤리 및 AI: 동등한 접속 및 알고리즘 편향",
           "url": "https://www.youtube.com/watch?v=tJQSyzBUAew",
-          "type": "비디오"
+          "type": "동영상"
         },
         "our_ai_code_of_ethics_template_/csd/2021": {
           "name": "AI 윤리강령 [Template]",
@@ -5247,12 +5247,12 @@
         "cleaning_survey_data/csd/2021": {
           "name": "설문조사 데이터 정리",
           "url": "https://www.youtube.com/watch?v=w8w-AosDcN8",
-          "type": "비디오"
+          "type": "동영상"
         },
         "view_and_download_survey_data/csd/2021": {
           "name": "설문조사 데이터 보기 및 다운로드",
           "url": "https://www.youtube.com/watch?v=J0Avopx7FpM",
-          "type": "비디오"
+          "type": "동영상"
         },
         "troubleshooting_models/csd/2021": {
           "name": "문제 해결 모델",
@@ -5316,7 +5316,7 @@
           "type": "슬라이드"
         },
         "the-design-thinking-process/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "user-interface-screens/csd/2021": {
           "type": "자료"
@@ -5348,13 +5348,13 @@
           "type": "자료"
         },
         "whats-for-lunch-testing/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "model-screen-design/csd/2021": {
           "type": "자료"
         },
         "intro_to_design_mode/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "design_mode_1/csd/2021": {
           "name": "디자인 모드",
@@ -5398,11 +5398,11 @@
           "name": "컴퓨팅 혁신"
         },
         "internet-of-things-video/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "innovation-video-1-1/csd/2021": {
           "name": "컴퓨터 과학은 모든 것을 바꾸고 있습니다.  ",
-          "type": "비디오"
+          "type": "동영상"
         },
         "csd_unit_6_-_physical_computing/csd/2021": {
           "type": "슬라이드"
@@ -5418,7 +5418,7 @@
         },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "컴퓨터 작동 방법: 하드웨어 및 소프트웨어",
-          "type": "비디오"
+          "type": "동영상"
         },
         "circuit_playground/csd/2021": {
           "type": "자료"
@@ -5438,7 +5438,7 @@
           "type": "자료"
         },
         "analog-digital-video/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "analog_sensors/csd/2021": {
           "type": "자료"
@@ -5467,7 +5467,7 @@
         },
         "introduction_to_arrays/csd/2021": {
           "name": "배열 소개",
-          "type": "비디오"
+          "type": "동영상"
         },
         "arrays/csd/2021": {
           "type": "자료"
@@ -5487,7 +5487,7 @@
         },
         "loops_in_app_lab/csd/2021": {
           "name": "반복을 위한",
-          "type": "비디오"
+          "type": "동영상"
         },
         "for_loops/csd/2021": {
           "name": "반복을 위한",
@@ -5505,7 +5505,7 @@
         },
         "circuits-logic-video/csd/2021": {
           "name": "컴퓨터 작동 방법: 회로 및 로직",
-          "type": "비디오"
+          "type": "동영상"
         },
         "physical-prototyping-project/csd/2021": {
           "type": "프로젝트 가이드"
@@ -5541,7 +5541,7 @@
           "type": "답안지"
         },
         "how-computers-work-data-and-binary/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "representing-numbers-exemplar-2019/csd/2021": {
           "name": "숫자 표현"
@@ -5595,13 +5595,13 @@
           "name": "데이터 결정 자동화"
         },
         "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "data-in-the-real-world-exemplar-2019/csd/2021": {
           "name": "실세상에서 데이터"
@@ -5611,16 +5611,16 @@
         },
         "video_impact_on_society/csd/2021": {
           "name": "동영상: 사회에 미치는 영향",
-          "type": "비디오"
+          "type": "동영상"
         },
         "video_machine_learning/csd/2021": {
           "name": "동영상: 머신러닝",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
-          "type": "비디오"
+          "type": "동영상"
         },
         "video_training_data_and_bias/csd/2021": {
           "name": "동영상: 교육 데이터 및 편견",
-          "type": "비디오"
+          "type": "동영상"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
           "type": "동료 검토"
@@ -5641,10 +5641,10 @@
           "type": "슬라이드"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "drawing_in_game_lab_-_part_2/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "drawing_shapes/csd/2021": {
           "type": "자료"
@@ -5656,7 +5656,7 @@
           "type": "자료"
         },
         "introduction-to-variables/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "naming_variables/csd/2021": {
           "type": "자료"
@@ -5669,11 +5669,11 @@
           "type": "자료"
         },
         "introduction_to_sprites/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "the_animation_tab/csd/2021": {
           "name": "애니메이션 탭",
-          "type": "비디오"
+          "type": "동영상"
         },
         "animation_tab/csd/2021": {
           "type": "자료"
@@ -5690,17 +5690,17 @@
           "type": "채점판"
         },
         "youtube-flipbook/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "introduction_to_the_draw_loop/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "the_draw_loop/csd/2021": {
           "type": "자료"
         },
         "animating-sprites/csd/2021": {
           "name": "스프라이트 이동",
-          "type": "비디오"
+          "type": "동영상"
         },
         "the_counter_pattern/csd/2021": {
           "type": "자료"
@@ -5710,11 +5710,11 @@
         },
         "boolean_expressions/csd/2021": {
           "name": "불 연산식",
-          "type": "비디오"
+          "type": "동영상"
         },
         "conditional_statements/csd/2021": {
           "name": "조건문",
-          "type": "비디오"
+          "type": "동영상"
         },
         "booleans_and_comparison_operators/csd/2021": {
           "type": "자료"
@@ -5727,7 +5727,7 @@
         },
         "if_else_statements/csd/2021": {
           "name": "If/Else 조건문",
-          "type": "비디오"
+          "type": "동영상"
         },
         "interactive-card-project-guide-2019/csd/2021": {
           "type": "프로젝트 가이드"
@@ -5743,7 +5743,7 @@
         },
         "velocity_1/csd/2021": {
           "name": "속도",
-          "type": "비디오"
+          "type": "동영상"
         },
         "velocity_2/csd/2021": {
           "name": "속도",
@@ -5778,7 +5778,7 @@
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "함수",
-          "type": "비디오"
+          "type": "동영상"
         },
         "functions_1/csd/2021": {
           "name": "함수",
@@ -5801,7 +5801,7 @@
         },
         "problem-solving-process-1/csd/2021": {
           "name": "문제 해결 프로세스",
-          "type": "비디오"
+          "type": "동영상"
         },
         "the-problem-solving-process/csd/2021": {
           "name": "문제 해결 과정"
@@ -5816,7 +5816,7 @@
           "name": "컴퓨터란?"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "input-and-output-2020/csd/2021": {
           "name": "인풋 및 아웃풋"
@@ -5825,7 +5825,7 @@
           "name": "인풋 및 아웃풋"
         },
         "what-do-computers-do/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "app-proposal-project/csd/2021": {
           "name": "앱과 문제해결"
@@ -5858,21 +5858,21 @@
           "type": "자료"
         },
         "intro_to_web_lab_part_2/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "video_intro_to_web_lab_part_1/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "video_pair_programming/csd/2021": {
           "name": "동영상: 페어 프로그래밍",
-          "type": "비디오"
+          "type": "동영상"
         },
         "headings_and_paragraphs/csd/2021": {
           "type": "자료"
         },
         "video_debugging/csd/2021": {
           "name": "동영상: 디버깅",
-          "type": "비디오"
+          "type": "동영상"
         },
         "html-web-page-1/csd/2021": {
           "type": "채점판"
@@ -5905,11 +5905,11 @@
         },
         "intro_to_css_-_part_1/csd/2021": {
           "name": "CSS(스타일시트) 소개 - 파트 1",
-          "type": "비디오"
+          "type": "동영상"
         },
         "intro_to_css_-_part_2/csd/2021": {
           "name": "CSS(스타일시트) 소개 - 파트 2",
-          "type": "비디오"
+          "type": "동영상"
         },
         "style_sheets/csd/2021": {
           "type": "자료"
@@ -5927,7 +5927,7 @@
           "type": "프로젝트 가이드"
         },
         "creative-commons-video/csd/2021": {
-          "type": "비디오"
+          "type": "동영상"
         },
         "creative_commons_search/csd/2021": {
           "type": "자료"
@@ -5949,7 +5949,7 @@
         },
         "publishing_your_website/csd/2021": {
           "name": "웹사이트 출판",
-          "type": "비디오"
+          "type": "동영상"
         },
         "personal_web_page_-_student_checklist/csd/2021": {
           "type": "자료"
@@ -5965,15 +5965,15 @@
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
           "name": "동영상: 의견 충돌 관리",
-          "type": "비디오"
+          "type": "동영상"
         },
         "how-teamwork-works/csd/2021": {
           "name": "동영상: 팀워크",
-          "type": "비디오"
+          "type": "동영상"
         },
         "how-search-works-video/csd/2021": {
           "name": "동영상: 검색 작동방법",
-          "type": "비디오"
+          "type": "동영상"
         },
         "classes/csd/2021": {
           "name": "클래스",

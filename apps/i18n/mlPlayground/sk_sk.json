@@ -1971,6 +1971,7 @@
           "description": "Dávam prednosť rýchlej hudbe"
         },
         "Dance": {
+          "id": "tancovať",
           "description": "Páči sa mi tanečná hudba"
         },
         "Folk": {
@@ -3200,6 +3201,7 @@
           "description": "Dávam prednosť rýchlej hudbe"
         },
         "Dance": {
+          "id": "tancovať",
           "description": "Páči sa mi tanečná hudba"
         },
         "Folk": {

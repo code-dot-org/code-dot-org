@@ -866,6 +866,9 @@
           "word": "İkili",
           "definition": "Yalnız iki seçenek kullanarak bilgileri temsil etmenin bir yolu."
         },
+        "computer/csd/2022": {
+          "word": "Bilgisayar"
+        },
         "input/csd/2022": {
           "word": "Girdi"
         },
@@ -1514,6 +1517,9 @@
         },
         "function/csd/2021": {
           "word": "Fonksiyon"
+        },
+        "computer/csd/2021": {
+          "word": "Bilgisayar"
         },
         "input/csd/2021": {
           "word": "Girdi"

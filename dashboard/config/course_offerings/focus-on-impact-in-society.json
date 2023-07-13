@@ -1,6 +1,6 @@
 {
   "key": "focus-on-impact-in-society",
-  "display_name": "Focus on Impact in Society",
+  "display_name": "Focus on Impact in Society (CS Discoveries)",
   "category": "other",
   "is_featured": false,
   "assignable": true,
@@ -11,5 +11,10 @@
   "image": "https://images.code.org/977b3b89b70b54d36f14c590c11ab9f9-Impact on Society.png",
   "cs_topic": "app_design,artificial_intelligence",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "self_paced_professional_learning": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null
 }

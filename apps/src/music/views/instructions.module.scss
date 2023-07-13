@@ -13,6 +13,7 @@
   font-size: 14px;
   line-height: 1.5;
   display: flex;
+  overflow: hidden;
 
   &.vertical {
     flex-direction: column;
@@ -81,51 +82,54 @@
     }
 
     .text {
-      flex: 1;
       overflow-y: auto;
       white-space: pre-wrap;
-
-      &.textVertical {
-        padding: 0 10px;
-        margin: 10px 0;
-      }
-
-      .message {
-        margin-top: 30px;
-        color: #ffa400;
-      }
-    }
-  }
-
-  .bottom {
-    text-align: right;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    align-content: center;
-
-    .progressText {
-      font-size: 12px;
-      margin: 0 10px;
-      color: $neutral_dark40;
+      flex: 1;
+      color:  $neutral_light;
     }
 
-    .button {
-      font-size: 13px;
-      padding: 4px 8px;
-      opacity: 0;
-      pointer-events: none;
+    .markdownText {
+      line-height: 0;
 
-      &.buttonActive {
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      &.buttonNext {
+      h1, h2 {
+        margin: 0 0 10px 0;
+        line-height: 1.2em;
         color: $neutral_light;
-        border-color: $brand_secondary_default;
+      }
+
+      ol {
+        line-height: 0
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      code {
+        color: $neutral_light;
+      }
+    }
+
+    .feedback {
+      .message {
+        margin-top: 10px;
+        color: #ffa400;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      .buttonNext {
+        font-size: 14px;
         background-color: $brand_secondary_default;
+        border-color: $brand_secondary_default;
+        color: white;
+        width: 100%;
+        padding: 5px 10px;
+        border-radius: 8px;
+        height: 38px;
+        margin: 10px 0 0 0;
       }
     }
   }

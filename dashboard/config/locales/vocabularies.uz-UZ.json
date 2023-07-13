@@ -822,6 +822,9 @@
           "word": "Binarli",
           "definition": "Faqat ikki xil qiymatdan foydalangan holda ma'lumotni tasvirlash usuli."
         },
+        "computer/csd/2022": {
+          "word": "Kompyuter"
+        },
         "input/csd/2022": {
           "word": "Kiritish"
         },
@@ -1470,6 +1473,9 @@
         },
         "function/csd/2021": {
           "word": "Funksiya"
+        },
+        "computer/csd/2021": {
+          "word": "Kompyuter"
         },
         "input/csd/2021": {
           "word": "Kiritish"

@@ -1473,7 +1473,7 @@
           "description": "Požiadavky programu sú potrebné na identifikáciu vhodných definovaných vstupov pre testovanie."
         },
         "CSN-1.A.1": {
-          "description": "Výpočtové zariadenie je fyzický artefakt, ktorý môže spustiť program. Niektoré príklady zahŕňajú počítače, tablety, servery, smerovače a inteligentné senzory. "
+          "description": "Počítač je fyzické zariadenie, na ktorom môžeme spustiť program. Príklady zahŕňajú počítače, tablety, servery, smerovače (routre) a inteligentné senzory. "
         },
         "CSN-1.A.2": {
           "description": "Výpočtový systém je skupina výpočtových zariadení a programov, ktoré spolupracujú na spoločný účel."

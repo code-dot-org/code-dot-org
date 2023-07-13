@@ -146,6 +146,8 @@ Resources:
             Action:
               - dynamodb:GetItem
             Resource: !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/dcdo_production"
+
+# TODO: Migrate to Engineering_FullAccess
   Developer:
     Type: AWS::IAM::Role
     Properties:
@@ -211,6 +213,8 @@ Resources:
       Tags:
         - Key: sqlworkbench-team
           Value: codedotorg
+
+# TODO: Migrate to REDTeam_Analyst
   DataAnalystRole:
     Type: AWS::IAM::Role
     Properties:
@@ -234,6 +238,156 @@ Resources:
       Tags:
         - Key: sqlworkbench-team
           Value: codedotorg
+
+# TODO: Migrate to Engineering_Contributor
+  ContributorRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: Contributor
+      Description: Google-federated AWS Role for contributors, granting minimal access for local development.
+      Path: /engineering/
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+            Action: sts:AssumeRoleWithSAML
+            Condition:
+              StringEquals:
+                SAML:aud: https://signin.aws.amazon.com/saml
+          - Effect: Allow
+            Principal: {Federated: accounts.google.com}
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+              ForAnyValue:StringEquals:
+                accounts.google.com:sub: !Ref ContributorGoogleIDs
+      ManagedPolicyArns:
+        - !Ref ContributorS3Policy
+        - !Ref ContributorSecretsPolicy
+      Tags:
+        - Key: sqlworkbench-team
+          Value: codedotorg
+
+# TODO: Migrate to Billing_ReadOnly
+  BillingRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: Billing
+      Description: Google-federated AWS Role for finance, granting limited access to the Billing console.
+      Path: /admin/
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+            Action: sts:AssumeRoleWithSAML
+            Condition:
+              StringEquals:
+                SAML:aud: https://signin.aws.amazon.com/saml
+          - Effect: Allow
+            Principal: {Federated: accounts.google.com}
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+              ForAnyValue:StringEquals:
+                accounts.google.com:sub: !Ref BillingGoogleIDs
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess
+
+# Console & CLI Roles
+
+<%
+roles = {
+  EngineeringReadOnlyRole: {
+    RoleName: 'Engineering_ReadOnly',
+    GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/ReadOnlyAccess',
+    ]
+  },
+  EngineeringFullAccessRole: {
+    RoleName: 'Engineering_FullAccess',
+    GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/PowerUserAccess',
+      'arn:aws:iam::aws:policy/IAMReadOnlyAccess',
+    ]
+  },
+  EngineeringContributorRole: {
+    RoleName: 'Engineering_Contributor',
+    GoogleIdsSSMParameter: 'ContributorGoogleIDs',
+    ManagedPolicyArns: [
+      '!Ref ContributorS3Policy',
+      '!Ref ContributorSecretsPolicy',
+    ]
+  },
+  EngineeringMusicLabContributorRole: {
+    RoleName: 'Engineering_MusicLabContributor',
+    ManagedPolicyArns: [
+      '!Ref MusicLabS3ReadWritePolicy',
+    ]
+  },
+  DataAnalyticsFullAccessRole: {
+    RoleName: 'DataAnalytics_FullAccess',
+    ManagedPolicyArns: [
+      '!Ref DataAnalystPolicy',
+      '!Ref DataAnalystDmsReadOnlyPolicy',
+      '!Ref DataAnalystRedshiftPolicy',
+      'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor',
+      'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess',
+    ]
+  },
+  BillingReadOnlyRole: {
+    RoleName: 'Billing_ReadOnly',
+    GoogleIdsSSMParameter: 'BillingGoogleIDs',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess',
+    ]
+  }
+}
+roles.each do |name, config| %>
+  <%= name %>:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: <%= config[:RoleName] %>
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+            Action: sts:AssumeRoleWithSAML
+            Condition:
+              StringEquals:
+                SAML:aud: https://signin.aws.amazon.com/saml
+          <%- if config[:GoogleIdsSSMParameter] -%>
+          - Effect: Allow
+            Principal: {Federated: accounts.google.com}
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+              ForAnyValue:StringEquals:
+                accounts.google.com:sub: !Ref <%= config[:GoogleIdsSSMParameter] %>
+          <%- end -%>
+      ManagedPolicyArns:
+        <%- config[:ManagedPolicyArns].each do |arn| -%>
+        - <%=arn%>
+        <%- end -%>
+      Policies:
+        - PolicyName: "DenyAdminLogs"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Deny
+                Action: logs:*
+                Resource: !Sub 'arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*'
+      Tags:
+        - Key: sqlworkbench-team
+          Value: codedotorg
+<%- end -%>
 
   DataAnalystPolicy:
     Type: AWS::IAM::ManagedPolicy
@@ -317,36 +471,6 @@ Resources:
               - 'redshift:ViewQueriesFromConsole'
               - 'events:ListRules'
             Resource: '*'
-
-  ContributorRole:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: Contributor
-      Description: Google-federated AWS Role for contributors, granting minimal access for local development.
-      Path: /engineering/
-      AssumeRolePolicyDocument:
-        Version: 2012-10-17
-        Statement:
-          - Effect: Allow
-            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
-            Action: sts:AssumeRoleWithSAML
-            Condition:
-              StringEquals:
-                SAML:aud: https://signin.aws.amazon.com/saml
-          - Effect: Allow
-            Principal: {Federated: accounts.google.com}
-            Action: sts:AssumeRoleWithWebIdentity
-            Condition:
-              StringEquals:
-                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
-              ForAnyValue:StringEquals:
-                accounts.google.com:sub: !Ref ContributorGoogleIDs
-      ManagedPolicyArns:
-        - !Ref ContributorS3Policy
-        - !Ref ContributorSecretsPolicy
-      Tags:
-        - Key: sqlworkbench-team
-          Value: codedotorg
 
   GoogleContributorIDs:
     Type: AWS::SSM::Parameter
@@ -449,31 +573,29 @@ Resources:
             Resource:
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/properties_encryption_key-KUJqKF
 
-  BillingRole:
-    Type: AWS::IAM::Role
+  MusicLabS3ReadWritePolicy:
+    Type: 'AWS::IAM::ManagedPolicy'
     Properties:
-      RoleName: Billing
-      Description: Google-federated AWS Role for finance, granting limited access to the Billing console.
-      Path: /admin/
-      AssumeRolePolicyDocument:
-        Version: 2012-10-17
+      ManagedPolicyName: 'MusicLabS3ReadWritePolicy'
+      Path: /engineering/
+      PolicyDocument:
+        Version: '2012-10-17'
         Statement:
-          - Effect: Allow
-            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
-            Action: sts:AssumeRoleWithSAML
-            Condition:
-              StringEquals:
-                SAML:aud: https://signin.aws.amazon.com/saml
-          - Effect: Allow
-            Principal: {Federated: accounts.google.com}
-            Action: sts:AssumeRoleWithWebIdentity
-            Condition:
-              StringEquals:
-                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
-              ForAnyValue:StringEquals:
-                accounts.google.com:sub: !Ref BillingGoogleIDs
-      ManagedPolicyArns:
-        - arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess
+          - Sid: 'S3BucketAccess'
+            Effect: 'Allow'
+            Action:
+              - 's3:ListBucket'
+              - 's3:GetBucketLocation'
+            Resource:
+              - 'arn:aws:s3:::cdo-curriculum'
+          - Sid: 'S3ReadWriteAccess'
+            Effect: 'Allow'
+            Action:
+              - 's3:PutObject'
+              - 's3:GetObject'
+              - 's3:DeleteObject'
+            Resource:
+              - 'arn:aws:s3:::cdo-curriculum/media/musiclab/*'
 
   GoogleBillingIDs:
     Type: AWS::SSM::Parameter

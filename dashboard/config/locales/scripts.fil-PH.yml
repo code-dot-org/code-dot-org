@@ -138,6 +138,8 @@ fil:
             laro na pinagbibidahan ng mga karakter sa Disney Infinity.
         netsim:
           title: Simulator ng Internet
+        pixelation:
+          title: Pixelation
         20-hour:
           title: Pinabilis na Panimulang Kurso sa CS na Kurso
           description: Ang kursong ito ay binubuo ng 20 oras upang ipakilala ang buod
@@ -231,6 +233,7 @@ fil:
           student_description: Maglikha ng kuwento o gumawa ng laro gamit ang Gumball
             na Play Lab!
         starwars:
+          title: 'Star Wars: Paglikha ng Galaksiya Gamit ang Code (Javascript)'
           description: Matutong mag-program ng mga droids, at lumikha ng sarili mong
             Star Wars na laro sa isang malayong malayo na kalawakan.
           description_short: Matutong mag-program ng mga droids, at lumikha ng sarili
@@ -238,6 +241,7 @@ fil:
           student_description: Matutong mag-program ng mga droids, at lumikha ng sarili
             mong Star Wars na laro sa isang malayong malayo na kalawakan.
         starwarsblocks:
+          title: 'Star Wars: Paglikha ng Galaksiya Gamit ang Code (Blockly)'
           description: Matutong mag-program ng mga droids, at lumikha ng sarili mong
             Star Wars na laro sa isang malayong malayo na kalawakan.
           description_short: Matutong mag-program ng mga droids, at lumikha ng sarili
@@ -309,6 +313,10 @@ fil:
               display_name: 'Kabanata 2: Programming gamit ang mga Data Structures'
             cspSurvey:
               display_name: Pagsisiyasat
+        CSDU3-Draft:
+          description_short: Pagprograma
+        TEMP CSD Unit 3:
+          description_short: Pagprograma
         CSF_Secret_Sample:
           description_audience: Mga edad na 8-18
         cspunit1-support:
@@ -463,12 +471,15 @@ fil:
         flappy-impact-study:
           title: Flappy Code na may Survey
         coursea-draft:
+          title: 'Mga Batayan sa CS: Kurso A'
           description_short: Isang panimula sa computer science para sa mga bagong
             mambabasa.
         courseb-draft:
+          title: 'Mga Batayan sa CS: Kurso B'
           description_short: Isang panimula sa computer science para sa mga bagong
             mambabasa.
         coursec-draft:
+          title: 'Mga Batayan sa CS: Kurso C'
           description_short: Alamin ang mga pangunahing alituntunin ng computer science
             at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
         coursed-draft:
@@ -476,12 +487,14 @@ fil:
           description_short: Alamin ang mga pangunahing alituntunin ng computer science
             at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
         coursee-draft:
+          title: 'Mga Batayan sa CS: Kurso E'
           description_short: Alamin ang mga pangunahing alituntunin ng computer science
             at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
           lesson_groups:
             extra_course_content:
               display_name: Ekstra na Nilalaman ng Kurso
         coursef-draft:
+          title: 'Mga Batayan sa CS: Kurso F'
           description_short: Alamin ang mga pangunahing alituntunin ng computer science
             at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
         classic-hoc-impact-study:
@@ -1698,6 +1711,7 @@ fil:
             required:
               display_name: Buod
         dance:
+          title: Dance Party (2018)
           description_short: Itinatampok sina Katy Perry, Madonna, J. Balvin, Sia,
             Keith Urban, Ciara, at dagdag pa na 25!
           name: sayaw
@@ -1715,6 +1729,7 @@ fil:
             csp_project:
               display_name: Proyekto
         dance-extras:
+          title: Patuloy Na Sumayaw (2018)
           description: Lumampas sa unang oras na may pinahabang ideya sa proyekto.
           student_description: Lumampas sa unang oras na may pinahabang ideya sa proyekto.
         coursef-2019:
@@ -2713,6 +2728,8 @@ fil:
               display_name: 'Kabanata 1: Web Content at HTML'
             csd2_2:
               display_name: 'Kabanata 2: Pag-iistilo at CSS'
+        csp5-virtual:
+          title: Programming na Batay sa Kaganapan sa App Lab
         virtual-holding-place:
           lesson_groups:
             csd3_2:
@@ -2736,6 +2753,7 @@ fil:
             csp5_1:
               display_name: 'Kabanata 1: Event-Driven na Programming'
         csd3-virtual:
+          title: Sariling Bilis na Introduksiyon sa Game Lab
           description_short: " Matutong mag-program ng mga animasyon, inter-aktib
             na sining, at mga laro sa Game Lab."
         virustest:
@@ -3166,6 +3184,7 @@ fil:
           description_short: Surbey Pagkatapos ng Kurso para sa mga Estudyante ng
             CSP
         aiml-2021:
+          title: AI at Machine Learning na Module
           lesson_groups:
             lessonGroup-4:
               display_name: Pagsisiyasat
@@ -3401,6 +3420,8 @@ fil:
               display_name: Proyekto
             lessonGroup-4:
               display_name: Mga Demo at Mapagkukunan
+        hello-world-animals:
+          title: 'Hello World: Mga Hayop'
         hello-world-retro:
           title: 'Hello World: Retro'
         hello-world-batman:
@@ -3408,6 +3429,8 @@ fil:
         ai-ethics:
           title: Ang aming Kodigo ng Etika sa AI.
           description_audience: baitang 6-12
+        dance-unplugged:
+          title: Hour of Code - Dance Party - Hindi Naka-plug
         csc-things:
           name: csc-things
           title: CSC Brain Dump
@@ -3466,6 +3489,8 @@ fil:
           title: Sining ng Tula
         poetry-2021:
           title: Coding gamit ang Tula
+        hello-world-animals-2021:
+          title: 'Hello World: Mga Hayop'
         hello-world-retro-2021:
           title: 'Hello World: Retro'
         explore-data-1-2021:
@@ -3771,6 +3796,7 @@ fil:
           name: testtess2
         aiml-2022:
           name: aiml-2022
+          title: AI at Machine Learning na Module
           description_short: Matuto tungkol sa Artificial Intelligence at Machine
             Learning
         self-paced-pl-csd1-2022:
@@ -4072,6 +4098,7 @@ fil:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Kabanata 2: Input ng Hardware'
+          title: Paglikha ng mga App gamit ang Mga Device (Circuit Playground)
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -4655,6 +4682,29 @@ fil:
         self-paced-pl-csp2-2023:
           title: 'Module 2: Pag-navigate sa Code.org'
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mga Klase
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mga Klase
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mga Klase
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Data
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mga Klase
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mga Klase
+        csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-3:
               display_name: Mga Klase

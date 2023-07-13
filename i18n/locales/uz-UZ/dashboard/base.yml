@@ -423,6 +423,7 @@ uz:
       playlab: 'Play Lab - O‘yin laboratoriyasi'
       playlab_k1: 'Play Lab (Maktabgacha)'
       poetry: 'She''riyat'
+      poetry_hoc: 'She''r San''ati'
       scratch: 'Scratch'
       sports: 'Sport'
       spritelab: 'Sprite Lab'
@@ -715,7 +716,7 @@ uz:
     express:
       image_alt: 'Plants vs Zombies zombi va Flappy Bird yonida turgan o''simlik.'
     flappy:
-      title: 'Flappy o‘yinini yarating'
+      title: 'Flappy o‘yinini dasturlash'
       body: 'O‘z o‘yiningizni 10 daqiqa ichida yaratishni xohlaysizmi? Flappy Code darsimizni sinab ko‘ring!'
       image_alt: 'Yashil quvurlar orasida uchayotgan sariq qush.'
     frozen:
@@ -774,6 +775,7 @@ uz:
     playlab:
       image_alt: 'Moviy mushuk, bema''ni it va tarixdan oldingi weasel tasvirlangan rasm kollaji.'
     poem-art:
+      title: 'She''r San''ati'
       body: 'O''zingizni ifoda eting! Animatsion she''rlar yaratish uchun koddan foydalaning.'
       image_alt: 'Sahnada ijro etayotgan hipster kalamar.'
     pre-express-2017:

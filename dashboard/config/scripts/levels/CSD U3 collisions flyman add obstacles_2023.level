@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T23:02:24.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -64,7 +69,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "long_instructions": "<img src=\"https://images.code.org/3d7349f8509b280e3607bbc83545f63c-image-1585728699723.gif\" style=\"float:right\">\r\n\r\n# Looping\r\n\r\nWhen the obstacles move off the screen, they should loop back to the other side, at a random position.\r\n\r\n# Do This\r\n\r\n* Find the code comment `// LOOPING`\r\n* Add a conditional that checks the horizontal obstacle's x property to see whether it has moved off the screen.\r\n* If it has moved off the screen...\r\n   * Reset its x property to \"loop\" it back to the other side of the screen\r\n   * Set its y property to a random number between 50 and 350.\r\n* Test your code to make sure the first obstacle loops.\r\n* Add a conditional that checks the vertical obstacle's y property to see whether it has moved off the screen.\r\n* If it has moved off the screen...\r\n  * Reset its y property to \"loop\" it back to the other side of the screen\r\n  * Set its x property to a random number between 50 and 350.\r\n",
+    "long_instructions": "<img src=\"https://images.code.org/3d7349f8509b280e3607bbc83545f63c-image-1585728699723.gif\" style=\"float:right\">\r\n\r\n# Looping\r\n\r\nWhen the obstacles move off the screen, they should loop back to the other side, at a random position.\r\n\r\n# Do This\r\n\r\n1. Find the code comment `// LOOPING`\r\n* Add a conditional that checks the horizontal obstacle's x property to see whether it has moved off the screen.\r\n* If it has moved off the screen...\r\n   * Reset its x property to \"loop\" it back to the other side of the screen\r\n   * Set its y property to a random number between 50 and 350.\r\n* Test your code to make sure the first obstacle loops.\r\n* Add a conditional that checks the vertical obstacle's y property to see whether it has moved off the screen.\r\n* If it has moved off the screen...\r\n  * Reset its y property to \"loop\" it back to the other side of the screen\r\n  * Set its x property to a random number between 50 and 350.\r\n",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
     "start_in_animation_tab": "false",
@@ -98,13 +103,8 @@
     "validation_enabled": "true",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T23:02:24.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:02:24.697+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collisions flyman add obstacles_2022\\\"\"],\"cloned_from\":\"CSD U3 collisions flyman add obstacles_2022\"},{\"changed_at\":\"2023-03-09 17:51:51 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:02:24.697+00:00\",\"changed\":[\"cloned from \\\"CSD U3 collisions flyman add obstacles_2022\\\"\"],\"cloned_from\":\"CSD U3 collisions flyman add obstacles_2022\"},{\"changed_at\":\"2023-03-09 17:51:51 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 17:38:49 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -9,7 +9,6 @@ import BootstrapButton from './BootstrapButton';
 import {connect} from 'react-redux';
 import RailsAuthenticityToken from '../../util/RailsAuthenticityToken';
 import {OAuthProviders} from '@cdo/apps/lib/ui/accounts/constants';
-import {isCodeOrgBrowser} from '@cdo/apps/lib/kits/maker/util/browserChecks';
 
 export const ENCRYPTED = `*** ${i18n.encrypted()} ***`;
 const authOptionPropType = PropTypes.shape({
@@ -227,9 +226,7 @@ class OauthConnection extends React.Component {
     // There are two causes for errors: disconnectDisabledStatus and logging in to
     // Google from the Maker App. Set the appropriate error text.
     let disconnectDisabledMessage;
-    if (isCodeOrgBrowser() && credentialType === OAuthProviders.google) {
-      disconnectDisabledMessage = i18n.manageLinkedAccounts_makerAuthError();
-    } else if (!!disconnectDisabledStatus) {
+    if (!!disconnectDisabledStatus) {
       disconnectDisabledMessage = this.getDisconnectDisabledTooltip();
     }
 

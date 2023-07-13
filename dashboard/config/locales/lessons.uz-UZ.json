@@ -13,8 +13,11 @@
         "hero/Minecraft Hour of Code": {
           "name": "Minecraft: Hero's Journey"
         },
+        "poem-art-2021/Poem Art": {
+          "name": "She'r San'ati"
+        },
         "flappy/Flappy Code": {
-          "name": "Flappy o‘yinini yarating",
+          "name": "Flappy o‘yinini dasturlash",
           "overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin.",
           "preparation": "### Sizning kod soatingizdan bir hafta oldin\n\n-   [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) va [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) bilan tanishib chiqing. Hour of Code tadbiri. \n-   [Register your Hour of Code event](http://hourofcode.com), agar siz qalbakilashtirish yoki sinfda yordam olishni istasangiz. \n    Onlayn qo'llanmani o'zingiz ko'rib chiqing va to'ldiring: [Flappy Game](https://studio.code.org/flappy/1) \n    O'quvchilaringizdan uni to'ldirishni so'rashdan oldin, avval sinovdan o'tkazganingizga ishonch hosil qiling. Texnologiyangizni tekshirib ko'ring va sizning Kodeks soatingizdan oldin biron bir muammo bilan shug'ullanishingiz kerakligi to'g'risida qaror qabul qiling. \n    ### Soatingizdan bir kun oldin Kod\n    'Kodlash', 'dasturlash' va 'disk sozlamasi' so'zlarini doskaga yozing yoki agar sizda mavjud bo'lsa, ularni so'z devoringizga qo'shing. \n    Faoliyatni yakunlagan har bir talaba sertifikat olishi kerak. Hour of Codeingiz oxirida oson bo‘lishi uchun har bir o‘quvchiga [Print one](http://code.org/certificates) oldindan chop qilib qo‘ying. ",
           "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi.",
@@ -64,6 +67,9 @@
         "hello-world-space-2022/Hello World: Food": {
           "name": "Salom Dunyo: Kosmik"
         },
+        "hello-world-animals-2021/Hello World": {
+          "name": "Salom dunyo: Hayvonlar"
+        },
         "starwars/Hour of Code 2015": {
           "name": "Yulduzlar Jangi: Kod bilan Galaktika qurish (JavaScript)",
           "purpose": "Ushbu darsda kodlash va dasturlashning asosiy CS tushunchalari, shu jumladan ketma-ketlik va hodisalar bilan tanishtirilgan. O'quv qo'llanmaning JavaScript versiyasi o'quvchilarga kod yozish tajribasini taqdim etadi."
@@ -98,6 +104,7 @@
           "student_overview": ""
         },
         "sports/Sports": {
+          "name": "O'z Sport O'yiningizni dasturlang ",
           "overview": "Bu onlayn mashg‘ulotda, talabalar hodisalar nima ekanligi va komputerlar ularni video o‘yinlar kabi dasturlarda qanday ishlatishi haqida o‘rganishadi. Talabalar hodisalarga (masalan, yo‘nalishli tugmalar bosilganda) javob qaytaradigan qilish uchun boshqotirmalar ustida ishlashadi. Boshqotirmaning oxirida, talabalarda o‘yinlarini turli xil tezlik va tovushlar bilan moslashtirish imkoniyati tug‘iladi.",
           "student_overview": "Maktabda biron marta video o‘ynashni orzu qilganmisiz? Bu darsda, siz shaxsan o‘zingiznikini yaratasiz!"
         },
@@ -3998,6 +4005,9 @@
         },
         "allthethings/Text Compression": {
           "name": "Matnni Zichlash"
+        },
+        "allthethings/Pixelation": {
+          "name": "Piksellash"
         },
         "allthethings/AppLab": {
           "name": "AppLab"

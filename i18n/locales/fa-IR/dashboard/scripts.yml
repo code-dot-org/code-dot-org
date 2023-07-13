@@ -70,6 +70,8 @@ fa:
           student_description: کلی پازل برای نشان دادن محیط و زبان برنامه نویسیِ استفاده شده در علوم کامپیوتر در جبرِ Code.org
         netsim:
           title: شبیه ساز اینترنت
+        pixelation:
+          title: پیکسل‌سازی
         20-hour:
           description: این دوره 20 ساعته به معرفی مفاهیم اساسی علوم کامپیوتر و برنامه نویسی می پردازد. این دوره برای استفاده در کلاس های درس K-8 (دوره ابتدایی تا پایان دوره راهنمایی)طراحی شده است، اما می تواند برای همه سنین دیگر نیز جالب باشد.
           description_audience: سنین 10 به بالا (پس از دوره 3)
@@ -102,6 +104,8 @@ fa:
           description: مبانی علوم کامپیوتر با شخصیت از گیاهان در مقابل زامبی و پرندگان عصبانی را امتحان کنید!
           description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های سرگرم کننده آزمایش کن!
           student_description: مبانی علوم کامپیوتر با شخصیت از گیاهان در مقابل زامبی و پرندگان عصبانی را امتحان کنید!
+        text-compression:
+          title: فشرده‌سازی متن
         algebraPD2a:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
@@ -153,10 +157,16 @@ fa:
           student_description: یک داستان یا یک بازی با آزمایشگاه عصر یخبندان بساز!
         gumball:
           title: آزمایشگاه بازی Gumball
+        starwars:
+          title: 'جنگ ستارگان: ساخت کهکشان با کد (جاوا اسکریپت) '
+        starwarsblocks:
+          title: 'جنگ ستارگان: ساخت کهکشان با کد (بلاکلی) '
         mc:
           description: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین کرافت
           description_short: یک جهان ماینکرفتی را از طریق کد کاوش کنید.
           student_description: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین کرافت
+        oceans:
+          title: هوش مصنوعی برای اقیانوس‌ها
         AlgebraA:
           description: یادگیری برنامه نویسی تابعی از طریق جبر
           description_short: یادگیری برنامه نویسی تابعی از طریق جبر
@@ -183,6 +193,8 @@ fa:
               display_name: بررسی اجمالی
         CSDU1-Draft:
           description_short: حل مسأله
+        CSDU2-Draft:
+          description_short: توسعه‌ وب
         CSDU5-Draft:
           description_short: داده‌ها
         CSF_Secret_Sample_Story:
@@ -224,6 +236,10 @@ fa:
             required:
               display_name: بررسی اجمالی
         basketball:
+          title: تیم خود را انتخاب کنید و یک بازی بسکتبال بسازید
+          description_short: تیم خود را انتخاب کنید و یک بازی بسکتبال بسازید
+          description: تیم خود را انتخاب کنید و یک بازی بسکتبال بسازید
+          student_description: تیم خود را انتخاب کنید و یک بازی بسکتبال بسازید
           name: بسکتبال
         csp2-support:
           lesson_groups:
@@ -233,11 +249,21 @@ fa:
           description_short: جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی ماینکرافت شما
           description: جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی ماینکرافت شما
           student_description: جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی ماینکرافت شما
+        coursea-draft:
+          title: 'مبانی علوم کامپیوتر: دوره‌ A'
+        courseb-draft:
+          title: 'مبانی علوم کامپیوتر: دوره‌ B'
+        coursec-draft:
+          title: 'مبانی علوم کامپیوتر: دوره‌ C'
+        coursed-draft:
+          title: 'مبانی علوم کامپیوتر: دوره‌ D'
         coursee-draft:
+          title: 'مبانی علوم کامپیوتر: دوره‌ E'
           lesson_groups:
             end_of_course_project:
               display_name: پایان پروژه دوره
         coursef-draft:
+          title: 'مبانی علوم کامپیوتر: دوره‌ F'
           lesson_groups:
             end_of_course_project:
               display_name: پایان پروژه دوره
@@ -263,6 +289,10 @@ fa:
           lesson_groups:
             required:
               display_name: بررسی اجمالی
+        coursed-ramp:
+          title: 'مبانی علوم کامپیوتر: دوره‌ D'
+        csd2-old:
+          description_short: توسعه‌ وب
         coursea-2017:
           description: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
           student_description: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
@@ -463,6 +493,7 @@ fa:
             required:
               display_name: بررسی اجمالی
         dance:
+          title: مهمانی رقص (2018)
           name: رقص
         aquatic:
           name: آبزی، آبی
@@ -476,6 +507,8 @@ fa:
               display_name: توابع
             csp_project:
               display_name: پروژه
+        dance-extras:
+          title: به رقص ادامه دهید (2018)
         coursef-2019:
           lesson_groups:
             csf_variables:
@@ -975,12 +1008,20 @@ fa:
             csf_events:
               display_name: رویدادها
           student_description: علوم کامپیوتر را با امتحان کردن دروس زیر با سرعت خودتان بیاموزید! یاد بگیرید که برنامه‌های کامپیوتری بسازید، مهارت‌های حل مسئله را پرورش دهید و چالش‌های سرگرم‌کننده‌ای را پشت سر بگذارید! بازی‌ها و پروژه‌های خلاقانه‌ای بسازید تا با دوستان، خانواده و معلمان به اشتراک بگذارید.
+        csp5-virtual:
+          title: برنامه‌نویسی رویدادمحور در آزمایشگاه برنامه
+        csd3-virtual:
+          title: مقدمه‌ خودآموز آزمایشگاه بازی
+        outbreak:
+          title: شبیه‌ساز شیوع
         2021drafting:
           lesson_groups:
             introduction:
               display_name: مقدمه
             lessonGroup-3:
               display_name: متغیرها
+            outbreak:
+              display_name: شبیه‌ساز شیوع
             debugging:
               display_name: اشکال‌زدایی
         csp4-2021:
@@ -1189,6 +1230,8 @@ fa:
               display_name: درس 4
             Lesson 5:
               display_name: درس 5
+        aiml-2021:
+          title: ماژول هوش مصنوعی و یادگیری ماشینی
         outbreak-module:
           title: شیوع
         csa-videos:
@@ -1227,6 +1270,12 @@ fa:
               display_name: دروس
             lessonGroup-3:
               display_name: پروژه
+        hello-world-animals:
+          title: 'سلام دنیا: حیوانات'
+        dance-unplugged:
+          title: ساعت کدنویسی - مجلس رقص - بدون دستگاه
+        poem-art:
+          title: هنر شعر
         spelling-bee:
           title: زنبور عسل هجی کن
         outbreak-csc:
@@ -1235,6 +1284,12 @@ fa:
           title: پرسشنامه پسادوره یافته های cs
         ai-ethics-2021:
           description_audience: رده سنی ۶-۱۲
+        poem-art-2021:
+          title: هنر شعر
+        poetry-2021:
+          title: کدنویسی با شاعری
+        hello-world-animals-2021:
+          title: 'سلام دنیا: حیوانات'
         explore-data-1-2021:
           title: به تصویر در آوردن داده ها
         2022drafting:
@@ -1418,6 +1473,8 @@ fa:
               name: معرفی اسپرایت ها
         csd-post-survey-2022:
           title: پرسشنامه پسادوره یافته های cs
+        aiml-2022:
+          title: ماژول هوش مصنوعی و یادگیری ماشینی
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -1493,12 +1550,16 @@ fa:
           lessons:
             lesson-5:
               name: ارزیابی
+        devices-2022:
+          title: ساختن برنامه با دستگاه‌ (زمین بازی مدار)
         drafting:
           name: پیشنویس
         tess-testing-problem-solving-2023:
           title: حل مسأله
         testing-focus-on-creativity1:
           title: حل مسأله
+        testing-focus-on-creativity2:
+          title: توسعه‌ وب
         pre-express-2023:
           lesson_groups:
             csf_sequencing:
@@ -1621,8 +1682,6 @@ fa:
           lesson_groups:
             lessonGroup-2:
               display_name: آموزش هوش مصنوعی و یادگیری ماشینی
-        self-paced-pl-csd5-2023:
-          title: آموزش هوش مصنوعی و یادگیری ماشینی
         pl-csd-summer-day1:
           lessons:
             lesson-3:
@@ -1669,3 +1728,7 @@ fa:
               display_name: داده ها و شبیه سازی ها
             lessonGroup-6:
               display_name: پایان پروژه دوره
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: داده‌ها
