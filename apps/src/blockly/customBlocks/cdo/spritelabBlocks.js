@@ -54,5 +54,5 @@ export const blocks = {
   },
   // All of the work to create the flyout is handled by initializeMiniToolbox
   // This is just needed by block_utils when using the Google Blockly Wrapper.
-  initializeFlyoutToggle() {},
+  appendMiniToolboxToggle() {},
 };
