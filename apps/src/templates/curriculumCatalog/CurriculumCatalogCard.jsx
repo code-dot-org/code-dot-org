@@ -27,6 +27,8 @@ import {
   SignInToAssignSectionsDialog,
   UpgradeAccountToAssignSectionsDialog,
 } from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const CurriculumCatalogCard = ({
   courseDisplayName,
@@ -121,6 +123,18 @@ const CustomizableCurriculumCatalogCard = ({
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
 
+  const handleClickAssign = () => {
+    setIsAssignDialogOpen(true);
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT,
+      {
+        curriculum_offering: courseDisplayNameWithLatestYear,
+        has_sections: sectionsForDropdown.length > 0,
+        is_signed_in: !isSignedOut,
+      }
+    );
+  };
+
   const renderAssignDialog = () => {
     if (isSignedOut) {
       return (
@@ -210,9 +224,7 @@ const CustomizableCurriculumCatalogCard = ({
             <Button
               color={Button.ButtonColor.brandSecondaryDefault}
               type="button"
-              onClick={() => {
-                setIsAssignDialogOpen(true);
-              }}
+              onClick={handleClickAssign}
               aria-label={assignButtonDescription}
               text={assignButtonText}
             />
