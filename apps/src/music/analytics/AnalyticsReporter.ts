@@ -6,9 +6,9 @@ import {
   setSessionId,
   flush,
 } from '@amplitude/analytics-browser';
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {isDevelopmentEnvironment} from '@cdo/apps/utils';
 import {Block} from 'blockly';
-import {logError} from '../utils/MusicMetrics';
 
 const BlockTypes = require('../blockly/blockTypes').BlockTypes;
 const FIELD_SOUNDS_NAME = require('../blockly/constants').FIELD_SOUNDS_NAME;
@@ -107,7 +107,7 @@ export default class AnalyticsReporter {
 
       // Log an error if this is not development. On development, this error is expected.
       if (!isDevelopmentEnvironment()) {
-        logError(message);
+        Lab2MetricsReporter.logError(message, error as Error);
       }
     }
   }
