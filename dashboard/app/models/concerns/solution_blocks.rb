@@ -38,7 +38,7 @@ module SolutionBlocks
     end
 
     # sanitize
-    solution_blocks.map!(&method(:strip_block))
+    solution_blocks.map! {|solution_block| strip_block(solution_block)}
 
     if create_for_toolbox
       # uniqueify and sort
