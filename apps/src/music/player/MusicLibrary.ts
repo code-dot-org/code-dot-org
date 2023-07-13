@@ -27,7 +27,13 @@ export default class MusicLibrary {
 
   getDefaultSound(): string | undefined {
     const firstGroup: FolderGroup = this.groups[0];
-    return firstGroup?.defaultSound;
+
+    // The fallback is the first non-instrument/kit folder's first sound.
+    const firstFolder = firstGroup?.folders.find(group => !group.type);
+    const firstSoundFullPath = `${firstFolder?.path}/${firstFolder?.sounds[0].src}`;
+
+    // Return the specified default sound or the fallback sound.
+    return firstGroup?.defaultSound || firstSoundFullPath;
   }
 
   getSoundForId(id: string): SoundData | null {
