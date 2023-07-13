@@ -9,7 +9,7 @@ class I18n::SyncInTest < Minitest::Test
     HocSyncUtils.expects(:sync_in).in_sequence(exec_seq)
     I18n::SyncIn.expects(:localize_level_and_project_content).in_sequence(exec_seq)
     I18n::SyncIn.expects(:localize_block_content).in_sequence(exec_seq)
-    I18n::SyncIn.expects(:localize_animation_library).in_sequence(exec_seq)
+    I18n::Resources::Apps::Animations.expects(:sync_in).in_sequence(exec_seq)
     I18n::SyncIn.expects(:localize_shared_functions).in_sequence(exec_seq)
     I18n::Resources::Dashboard::CourseOfferings.expects(:sync_in).in_sequence(exec_seq)
     I18n::SyncIn.expects(:localize_standards).in_sequence(exec_seq)
