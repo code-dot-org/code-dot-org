@@ -33,7 +33,6 @@ class OpenaiController < ApplicationController
       response = response_body['choices'][0]['message']
       render json: response
     else
-      puts(response)
       render json: {error: "Chat completion failed: #{response.to_json}"}, status: :bad_request
     end
   end
