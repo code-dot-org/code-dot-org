@@ -1032,6 +1032,7 @@
   "fallbackVideoClosedCaptioningDialogBody": "Please ask your IT department to allow access to https://www.youtube-nocookie.com/*, *.googlevideo.com/*, and *.ytimg.com/* in order to get closed captioning and translations.  Note that this version of YouTube will not collect any data from you other than what is required to play the video.",
   "fallbackVideoClosedCaptioningDialogBodyLink": "See IT requirements",
   "fallbackVideoClosedCaptioningDialogClose": "Close",
+  "familyNameForSorting": "Family name (for sorting)",
   "featureAgain": "Feature again",
   "featured": "Featured",
   "featuredProject": "Featured Project",

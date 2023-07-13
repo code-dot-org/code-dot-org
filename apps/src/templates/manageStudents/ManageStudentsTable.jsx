@@ -12,6 +12,7 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import ManageStudentsNameCell from './ManageStudentsNameCell';
+import ManageStudentsFamilyNameCell from './ManageStudentsFamilyNameCell';
 import ManageStudentsAgeCell from './ManageStudentsAgeCell';
 import ManageStudentsGenderCell from './ManageStudentsGenderCell';
 import ManageStudentsGenderCellLegacy from './ManageStudentsGenderCellLegacy';
@@ -71,6 +72,7 @@ const LOGIN_TYPES_WITH_GENDER_COLUMN = [
 export const studentSectionDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string,
+  familyName: PropTypes.string,
   username: PropTypes.string,
   email: PropTypes.string,
   age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -89,10 +91,11 @@ export const studentSectionDataPropType = PropTypes.shape({
 /** @enum {number} */
 export const COLUMNS = {
   NAME: 0,
-  AGE: 1,
-  GENDER: 2,
-  PASSWORD: 3,
-  ACTIONS: 4,
+  FAMILY_NAME: 1,
+  AGE: 2,
+  GENDER: 3,
+  PASSWORD: 4,
+  ACTIONS: 5,
 };
 
 class ManageStudentsTable extends Component {
@@ -325,6 +328,18 @@ class ManageStudentsTable extends Component {
     );
   }
 
+  familyNameFormatter(familyName, {rowData}) {
+    const editedValue = rowData.isEditing ? rowData.editingData.familyName : '';
+    return (
+      <ManageStudentsFamilyNameCell
+        id={rowData.id}
+        familyName={familyName}
+        isEditing={rowData.isEditing}
+        editedValue={editedValue}
+      />
+    );
+  }
+
   actionsFormatter(actions, {rowData}) {
     let disableSaving = rowData.isEditing
       ? rowData.editingData.name.length === 0
@@ -438,7 +453,11 @@ class ManageStudentsTable extends Component {
   getColumns(sortable) {
     const {loginType} = this.props;
 
-    const columns = [this.nameColumn(sortable), this.ageColumn(sortable)];
+    const columns = [
+      this.nameColumn(sortable),
+      this.familyNameColumn(sortable),
+      this.ageColumn(sortable),
+    ];
 
     if (
       !window.GENDER_FEATURE_ENABLED ||
@@ -475,6 +494,29 @@ class ManageStudentsTable extends Component {
       },
       cell: {
         formatters: [this.nameFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+          },
+        },
+      },
+    };
+  }
+
+  familyNameColumn(sortable) {
+    return {
+      property: 'familyName',
+      header: {
+        label: 'Family Name',
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+          },
+        },
+        transforms: [sortable],
+      },
+      cell: {
+        formatters: [this.familyNameFormatter],
         props: {
           style: {
             ...tableLayoutStyles.cell,

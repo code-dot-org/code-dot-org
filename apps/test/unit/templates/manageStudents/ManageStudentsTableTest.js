@@ -16,6 +16,7 @@ import ManageStudentsTable, {
 import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
 import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
 import ManageStudentNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
+import ManageStudentFamilyNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsFamilyNameCell';
 import ManageStudentsGenderCell from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCell';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import manageStudents, {
@@ -278,6 +279,39 @@ describe('ManageStudentsTable', () => {
 
       // Expect the input box value to have changed
       expect(nameInput().prop('value')).to.equal(fakeStudent.name + 'z');
+    });
+
+    it('renders an editable family name field', async () => {
+      const wrapper = mount(
+        <Provider store={getStore()}>
+          <ManageStudentsTable />
+        </Provider>
+      );
+      // Begin editing the student
+      // (Using redux directly to do this requires us to trigger a manual update)
+      getStore().dispatch(startEditingStudent(fakeStudent.id));
+      wrapper.update();
+
+      const manageStudentFamilyNameCell = () =>
+        wrapper
+          .find(ManageStudentFamilyNameCell)
+          .findWhere(w => w.prop('id') === fakeStudent.id)
+          .first();
+
+      // Check for a family name cell with expecting initial editing props
+      expect(manageStudentFamilyNameCell().exists()).to.be.true;
+      expect(manageStudentFamilyNameCell().prop('isEditing')).to.be.true;
+
+      // Find the family name input
+      const nameInput = () =>
+        manageStudentFamilyNameCell().find('input').first();
+      expect(nameInput().prop('value')).to.equal('');
+
+      // Simulate a family name change
+      nameInput().simulate('change', {target: {value: 'z'}});
+
+      // Expect the input box value to have changed
+      expect(nameInput().prop('value')).to.equal('z');
     });
 
     it('renders correctly if loginType is picture', () => {
