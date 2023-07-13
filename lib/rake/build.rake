@@ -98,8 +98,8 @@ namespace :build do
         end
 
         # if rack_env?(:staging)
-          # This step will only complete successfully if we succeed in
-          # generating all curriculum PDFs.
+        #  This step will only complete successfully if we succeed in
+        #  generating all curriculum PDFs.
         #  ChatClient.log "Generating missing pdfs..."
         #  RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
         # end
