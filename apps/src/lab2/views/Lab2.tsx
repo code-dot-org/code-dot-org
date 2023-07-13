@@ -10,7 +10,7 @@ import {getStandaloneProjectId} from '@cdo/apps/lab2/projects/utils';
 import Lab2Wrapper from './Lab2Wrapper';
 import ProjectContainer from '../projects/ProjectContainer';
 import MetricsAdapter from './MetricsAdapter';
-import LabRenderer from './LabRenderer';
+import LabViewsRenderer from './LabViewsRenderer';
 
 const Lab2: React.FunctionComponent = () => {
   return (
@@ -18,7 +18,7 @@ const Lab2: React.FunctionComponent = () => {
       <Lab2Wrapper>
         <MetricsAdapter />
         <ProjectContainer channelId={getStandaloneProjectId()}>
-          <LabRenderer />
+          <LabViewsRenderer />
         </ProjectContainer>
       </Lab2Wrapper>
     </Provider>

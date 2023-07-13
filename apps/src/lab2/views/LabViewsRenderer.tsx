@@ -35,7 +35,7 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
   },
 };
 
-const LabRenderer: React.FunctionComponent = () => {
+const LabViewsRenderer: React.FunctionComponent = () => {
   const currentAppName = useSelector(
     (state: {lab: LabState}) => state.lab.appName
   );
@@ -104,4 +104,4 @@ const VisibilityContainer: React.FunctionComponent<
   );
 };
 
-export default LabRenderer;
+export default LabViewsRenderer;
