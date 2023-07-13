@@ -813,6 +813,7 @@ class Level < ApplicationRecord
     properties_camelized = properties.camelize_keys
     properties_camelized[:levelData] = video if video
     properties_camelized[:type] = type
+    properties_camelized[:appName] = game&.app
     properties_camelized
   end
 
