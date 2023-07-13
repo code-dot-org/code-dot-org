@@ -1,3 +1,8 @@
+/**
+ * Configuration and management for rendering Lab views in Lab2, based on the
+ * currently active Lab (determined by the current app name). This
+ * helps facilitate level-switching between labs without page reloads.
+ */
 import MusicView from '@cdo/apps/music/views/MusicView';
 import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import React from 'react';
@@ -6,9 +11,18 @@ import {LabState} from '../lab2Redux';
 import ProgressContainer from '../progress/ProgressContainer';
 import {AppName} from '../types';
 
+// Configuration for how a Lab should be rendered
 interface AppProperties {
+  /** Whether this Lab uses projects (channels) */
   usesChannel: boolean;
+  /**
+   * Whether this lab should remain rendered in the background once mounted.
+   * If true, the lab will always be present in the tree, but will be hidden
+   * via visibility: hidden when not active. If false, the lab will only
+   * be rendered in the tree when active.
+   */
   backgroundMode: boolean;
+  /** React View for the Lab */
   node: React.ReactNode;
 }
 
@@ -33,6 +47,12 @@ const LabRenderer: React.FunctionComponent = () => {
   // TODO: Instead of rendering all known apps, render only visited apps.
   // This will require refactoring logic around the labReadyForReload flag.
   const appsToRender = Object.keys(appsProperties) as AppName[];
+
+  // Iterate through appsToRender and render Lab views for each. If
+  // backgroundMode is true, the Lab view will always be rendered, but
+  // visibility will be toggled based on whether the app is active. If
+  // backgroundMode is false, the Lab view will only be rendered when the
+  // app is active.
   return (
     <>
       {appsToRender.map(appName => {
