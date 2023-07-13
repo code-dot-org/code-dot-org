@@ -2,7 +2,7 @@ class OpenaiController < ApplicationController
   authorize_resource class: false
 
   OPENAI_CHAT_API_KEY = CDO.openai_chat_api_key
-  CODE_ORG_ID = CDO.openai_org
+  CODE_ORG_ID = CDO.openai_org_id
   TEMPERATURE = 0
   GPT_MODEL = 'gpt-3.5-turbo'
 
