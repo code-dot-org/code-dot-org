@@ -2,6 +2,7 @@ import _ from 'lodash';
 import {SVG_NS} from '@cdo/apps/constants';
 import Button from '@cdo/apps/templates/Button';
 
+const dummyInputType = 5;
 export const blocks = {
   initializeMiniToolbox() {
     // Function to toggle the flyout visibility
@@ -26,34 +27,33 @@ export const blocks = {
         block.removeInput('flyout_input');
       }
     };
-    const icon1 = document.createElementNS(SVG_NS, 'tspan');
-    icon1.style.fontFamily = 'FontAwesome';
-    icon1.textContent = '\uf067 '; // plus icon
-    const icon2 = document.createElementNS(SVG_NS, 'tspan');
-    icon2.style.fontFamily = 'FontAwesome';
-    icon2.textContent = '\uf068 '; // minus icon
+    const defaultIcon = document.createElementNS(SVG_NS, 'tspan');
+    defaultIcon.style.fontFamily = 'FontAwesome';
+    defaultIcon.textContent = '\uf067 '; // plus icon
+    const alternateIcon = document.createElementNS(SVG_NS, 'tspan');
+    alternateIcon.style.fontFamily = 'FontAwesome';
+    alternateIcon.textContent = '\uf068 '; // minus icon
     const colorOverrides = {
       icon: Button.ButtonColor.white,
       button: Button.ButtonColor.blue,
     };
     const flyoutToggleButton = new Blockly.FieldToggle({
       onClick: toggleFlyout,
-      icon1,
-      icon2,
+      defaultIcon,
+      alternateIcon,
       useDefaultIcon: true,
       callback: createFlyoutField,
       colorOverrides,
     });
     return flyoutToggleButton;
   },
-  initializeFlyoutToggle(miniToolboxBlocks, flyoutToggleButton) {
-    // When useDefaultIcon is true, flyout is closed. When false, flyout is open. (Information for serialization)
-    this.inputList[0].insertFieldAt(
-      0,
-      flyoutToggleButton,
-      `button_${this.type}`
-    );
-    if (this.inputList[this.inputList.length - 1].type !== 5) {
+  appendMiniToolboxToggle(miniToolboxBlocks, flyoutToggleButton) {
+    this.setInputsInline(true);
+    const firstInput = this.inputList[0];
+
+    firstInput.insertFieldAt(0, flyoutToggleButton, `button_${this.type}`);
+    const lastInput = this.inputList[this.inputList.length - 1];
+    if (lastInput.type !== dummyInputType) {
       this.appendDummyInput();
     }
     if (this.workspace.rendered) {

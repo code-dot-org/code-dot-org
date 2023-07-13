@@ -1130,7 +1130,7 @@ exports.createJsWrapperBlockCreator = function (
           miniToolboxBlocks &&
           (!window.appOptions || window.appOptions.level.miniToolbox)
         ) {
-          Blockly.customBlocks.initializeFlyoutToggle.bind(this)(
+          Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
             miniToolboxBlocks,
             flyoutToggleButton
           );
