@@ -46,7 +46,7 @@ steps:
 
   - name: unit-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:1.8.0
+    image: codedotorg/code-dot-org:remove-sqlite-dependency
     pull: always
     volumes:
       - name: rbenv
