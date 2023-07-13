@@ -54,8 +54,7 @@ function WebAudio(options) {
       'Web Audio API is not supported in this browser',
       e
     );
-    audioContext = null;
-    return;
+    throw e;
   }
 
   soundEffects = new SoundEffects(audioContext, delayTimeSeconds);
@@ -85,12 +84,18 @@ WebAudio.prototype.LoadSound = function (url, callback, onLoadFinished) {
           onLoadFinished();
         },
         function (e) {
-          Lab2MetricsReporter.logError('Error decoding audio data', e);
+          Lab2MetricsReporter.logError(
+            {name: 'Error decoding audio data', url: url},
+            e
+          );
           onLoadFinished();
         }
       );
     } catch (e) {
-      Lab2MetricsReporter.logError('Error decoding audio data', e);
+      Lab2MetricsReporter.logError(
+        {name: 'Error decoding audio data', url: url},
+        e
+      );
       onLoadFinished();
     }
   };
