@@ -16,7 +16,6 @@ import {
   LevelProperties,
   ProjectManagerStorageType,
   ProjectSources,
-  ProjectType,
 } from './types';
 import Lab2Registry from './Lab2Registry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
@@ -40,7 +39,13 @@ export interface LabState {
   isLoadingProjectOrLevel: boolean;
   // If the lab is loading. Can be updated by lab-specific components.
   isLoading: boolean;
-  isPageError: boolean;
+  // Error currently on the page, if present.
+  pageError:
+    | {
+        errorMessage: string;
+        error?: Error;
+      }
+    | undefined;
   // channel for the current project, or undefined if there is no current project.
   channel: Channel | undefined;
   // last saved source for the current project, or undefined if we have not loaded or saved yet.
@@ -55,13 +60,12 @@ export interface LabState {
   // Validation status for the current level. This is used by the progress system to determine
   // what instructions to display and if the user has satisfied the validation conditions, if present.
   validationState: ValidationState;
-  currentProjectType: ProjectType | undefined;
 }
 
 const initialState: LabState = {
   isLoadingProjectOrLevel: false,
   isLoading: false,
-  isPageError: false,
+  pageError: undefined,
   channel: undefined,
   sources: undefined,
   levelData: undefined,
@@ -69,7 +73,6 @@ const initialState: LabState = {
   hideShareAndRemix: true,
   isProjectLevel: false,
   validationState: {...initialValidationState},
-  currentProjectType: undefined,
 };
 
 // Thunks
@@ -190,6 +193,11 @@ export const isReadOnlyWorkspace = (state: {lab: LabState}) => {
   return !state.lab.channel?.isOwner;
 };
 
+// If there is an error present on the page.
+export const hasPageError = (state: {lab: LabState}) => {
+  return state.lab.pageError !== undefined;
+};
+
 const labSlice = createSlice({
   name: 'lab',
   initialState,
@@ -197,8 +205,17 @@ const labSlice = createSlice({
     setIsLoading(state, action: PayloadAction<boolean>) {
       state.isLoading = action.payload;
     },
-    setIsPageError(state, action: PayloadAction<boolean>) {
-      state.isPageError = action.payload;
+    setPageError(
+      state,
+      action: PayloadAction<{
+        errorMessage: string;
+        error?: Error;
+      }>
+    ) {
+      state.pageError = action.payload;
+    },
+    clearPageError(state) {
+      state.pageError = undefined;
     },
     setChannel(state, action: PayloadAction<Channel | undefined>) {
       state.channel = action.payload;
@@ -221,12 +238,6 @@ const labSlice = createSlice({
     setValidationState(state, action: PayloadAction<ValidationState>) {
       state.validationState = {...action.payload};
     },
-    setCurrentProjectType(
-      state,
-      action: PayloadAction<ProjectType | undefined>
-    ) {
-      state.currentProjectType = action.payload;
-    },
   },
   extraReducers: builder => {
     builder.addCase(setUpWithLevel.fulfilled, state => {
@@ -238,6 +249,10 @@ const labSlice = createSlice({
       // action was not aborted.
       if (!action.meta.aborted) {
         state.isLoadingProjectOrLevel = false;
+        state.pageError = {
+          errorMessage: 'setUpWithLevel failed',
+          error: action.error as Error,
+        };
       }
     });
     builder.addCase(setUpWithLevel.pending, state => {
@@ -252,6 +267,10 @@ const labSlice = createSlice({
       // action was not aborted.
       if (!action.meta.aborted) {
         state.isLoadingProjectOrLevel = false;
+        state.pageError = {
+          errorMessage: 'setUpWithoutLevel failed',
+          error: action.error as Error,
+        };
       }
     });
     builder.addCase(setUpWithoutLevel.pending, state => {
@@ -350,13 +369,13 @@ async function cleanUpProjectManager() {
 
 export const {
   setIsLoading,
-  setIsPageError,
+  setPageError,
+  clearPageError,
   setChannel,
   setSources,
   setLevelData,
   setLabReadyForReload,
   setValidationState,
-  setCurrentProjectType,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.

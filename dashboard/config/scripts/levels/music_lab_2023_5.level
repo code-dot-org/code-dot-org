@@ -183,7 +183,7 @@
       "validations": [
         {
           "conditions": [
-            "played_one_sound"
+            {"name": "played_sounds_together", "value": 1}
           ],
           "message": "Awesome - it's time to make a mix!",
           "next": "true"
