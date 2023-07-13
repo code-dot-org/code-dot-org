@@ -1,3 +1,7 @@
+/**
+ * Displays the current project name and a button to begin editing it.
+ * This should only be shown when the project name is not being edited.
+ */
 import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';

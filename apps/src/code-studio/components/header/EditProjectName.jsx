@@ -1,3 +1,6 @@
+/**
+ * Component for editing the name of a project.
+ */
 import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';

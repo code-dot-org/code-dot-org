@@ -1,3 +1,8 @@
+/**
+ * Header component to show the project name and allow editing.
+ * Supports projects in either lab2 or legacy lab mode.
+ */
+
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {refreshProjectName, ProjectState} from '../../projectRedux';
