@@ -61,7 +61,7 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
         disabled={disabled}
         onChange={onChange}
       />
-      <i className="fa fa-solid" />
+      <i className="fa-solid" />
       {label && (
         <Typography semanticTag="span" visualAppearance="body-two">
           {label}
