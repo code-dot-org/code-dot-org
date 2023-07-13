@@ -44,7 +44,7 @@ import {
   NOTIFICATION_ALERT_TYPE,
   START_BLOCKS,
 } from './constants';
-import {Renderers} from '@cdo/apps/blockly/constants';
+import {Renderers, stringIsXml} from '@cdo/apps/blockly/constants';
 import {assets as assetsApi} from './clientApi';
 import {
   configCircuitPlayground,
@@ -2714,9 +2714,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     startBlocks = config.level.lastAttempt || startBlocks;
   }
 
-  let isXml =
-    !Blockly.cdoUtils.checkStrIsXml ||
-    Blockly.cdoUtils.checkStrIsXml(startBlocks);
+  let isXml = stringIsXml(startBlocks);
 
   if (isXml) {
     // Only used in Calc/Eval, Craft, Maze, and Artist

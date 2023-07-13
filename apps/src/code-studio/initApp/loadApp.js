@@ -479,8 +479,8 @@ const sourceHandler = {
       let source;
       let appOptions = getAppOptions();
       if (window.Blockly && Blockly.mainBlockSpace) {
-        // If we're readOnly, source hasn't changed at all
         const getSourceAsJson = true;
+        // If we're readOnly, source hasn't changed at all
         source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
           ? currentLevelSource
           : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace, getSourceAsJson);

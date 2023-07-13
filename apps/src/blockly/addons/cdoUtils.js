@@ -1,4 +1,9 @@
-import {ToolboxType, CLAMPED_NUMBER_REGEX, DEFAULT_SOUND} from '../constants';
+import {
+  ToolboxType,
+  CLAMPED_NUMBER_REGEX,
+  DEFAULT_SOUND,
+  stringIsXml,
+} from '../constants';
 import cdoTheme from '../themes/cdoTheme';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
@@ -16,7 +21,7 @@ import {parseElement as parseXmlElement} from '../../xml';
  * @param {*} stateToLoad - modern workspace serialization, may not be present
  */
 export function loadBlocksToWorkspace(workspace, source) {
-  let isXml = checkStrIsXml(source);
+  let isXml = stringIsXml(source);
   let stateToLoad;
   if (isXml) {
     stateToLoad = convertXmlToJson(parseXmlElement(source));
@@ -26,10 +31,6 @@ export function loadBlocksToWorkspace(workspace, source) {
   }
   Blockly.serialization.workspaces.load(stateToLoad, workspace);
   positionBlocksOnWorkspace(workspace);
-}
-
-export function checkStrIsXml(str) {
-  return !str.length || str.charAt(0) === '<' ? true : false;
 }
 
 export function setHSV(block, h, s, v) {
