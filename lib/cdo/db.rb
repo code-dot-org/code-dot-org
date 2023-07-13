@@ -65,7 +65,7 @@ def sequel_connect(writer, reader, validation_frequency: nil, query_timeout: nil
 
   if multi_statements
     # Configure connection with the MULTI_STATEMENTS flag set that allows multiple statements in one database call.
-    db_options[:flags] = ::Mysql2::Client::MULTI_STATEMENTS
+    db_options[:flags] = Mysql2::Client::MULTI_STATEMENTS
   end
 
   if (reader_uri = URI(reader)) != URI(writer) &&

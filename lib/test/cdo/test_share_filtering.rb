@@ -6,10 +6,10 @@ class ShareFilteringTest < Minitest::Test
   # @param title_text [String] The text of the title of the program.
   # @return [String] A sample program.
   def generate_program(title_name, title_text)
-    '<xml><block type="when_run" deletable="false">'\
-      '<next><block type="studio_showTitleScreen">'\
-      "<title name=\"TITLE\">#{title_name}</title>"\
-      "<title name=\"TEXT\">#{title_text}</title>"\
+    '<xml><block type="when_run" deletable="false">' \
+      '<next><block type="studio_showTitleScreen">' \
+      "<title name=\"TITLE\">#{title_name}</title>" \
+      "<title name=\"TEXT\">#{title_text}</title>" \
       '</block></next></block></xml>'
   end
 
@@ -128,20 +128,20 @@ class ShareFilteringTest < Minitest::Test
   end
 
   def test_find_share_failure_for_non_playlab
-    program = '<xml><block type=\"controls_repeat\">'\
-      '<title name=\"TIMES\">4</title><statement name=\"DO\">'\
-      '<block type=\"draw_move_by_constant\">'\
-      '<title name=\"DIR\">moveForward</title>'\
-      '<title name=\"VALUE\">100</title><next>'\
-      '<block type=\"draw_turn_by_constant_restricted\">'\
-      '<title name=\"DIR\">turnRight</title>'\
-      '<title name=\"VALUE\">90</title></block></next></block></statement>'\
+    program = '<xml><block type=\"controls_repeat\">' \
+      '<title name=\"TIMES\">4</title><statement name=\"DO\">' \
+      '<block type=\"draw_move_by_constant\">' \
+      '<title name=\"DIR\">moveForward</title>' \
+      '<title name=\"VALUE\">100</title><next>' \
+      '<block type=\"draw_turn_by_constant_restricted\">' \
+      '<title name=\"DIR\">turnRight</title>' \
+      '<title name=\"VALUE\">90</title></block></next></block></statement>' \
       '</block></xml>'
     assert_nil ShareFiltering.find_share_failure(program, 'en')
   end
 
   def test_find_share_failure_for_playlab_without_user_text_indicators
-    program = '<xml><block type="when_run" deletable="false"><next>'\
+    program = '<xml><block type="when_run" deletable="false"><next>' \
       '<block type="studio_showTitleScreen"></block></next></block></xml>'
     assert_nil ShareFiltering.find_share_failure(program, 'en')
   end

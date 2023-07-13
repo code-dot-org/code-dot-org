@@ -221,7 +221,7 @@ FactoryBot.define do
           "pre-K"
         ],
         subjectsTaught: [
-          "English\/Language Arts"
+          "English/Language Arts"
         ]
       }.stringify_keys
     end
