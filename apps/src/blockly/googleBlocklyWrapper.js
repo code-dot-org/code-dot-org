@@ -14,7 +14,6 @@ import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
-import CdoFieldToggle from './addons/cdoFieldToggle';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldMultilineInput from './addons/cdoFieldMultilineInput';
 import CdoFieldNumber from './addons/cdoFieldNumber';

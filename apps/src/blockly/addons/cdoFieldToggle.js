@@ -53,7 +53,6 @@ export default class CdoFieldToggle extends GoogleBlockly.Field {
       this.textElement_.appendChild(this.defaultIcon);
     } else {
       this.textElement_.appendChild(this.alternateIcon);
-
     }
   }
 
