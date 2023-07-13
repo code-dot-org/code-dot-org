@@ -3,7 +3,7 @@
  * Supports projects in either lab2 or legacy lab mode.
  */
 
-import React, {useEffect, useState} from 'react';
+import React, {useLayoutEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {refreshProjectName, ProjectState} from '../../projectRedux';
 import EditProjectName from './EditProjectName';
@@ -23,7 +23,7 @@ const EditableProjectName: React.FunctionComponent<
   );
   const dispatch = useDispatch();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (onChangedWidth) {
       onChangedWidth();
     }

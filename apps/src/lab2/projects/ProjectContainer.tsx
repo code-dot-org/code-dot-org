@@ -94,14 +94,12 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     dispatch(clearHeader());
     // If there is no channel, we can't load a header.
     // TODO: Handle the case of viewing another user's project.
-    // Currently we aren't loading level data for those projects, so we don't
-    // know whether to show share/remix.
     if (loadedChannelId && isOwnerOfChannel) {
       if (isStandaloneProjectLevel) {
         // Standalone projects see project header (includes rename option).
         // Standalone projects always show share and remix.
         header.showProjectHeader();
-      } else if (!isStandaloneProjectLevel) {
+      } else {
         // Project backed levels see project backed header, which can
         // conditionally show share and remix.
         header.showHeaderForProjectBacked({
