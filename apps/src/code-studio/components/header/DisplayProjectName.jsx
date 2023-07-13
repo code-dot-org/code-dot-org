@@ -26,7 +26,8 @@ export default class DisplayProjectName extends React.Component {
             styles.buttonSpacing,
             'project_edit',
             'header_button',
-            'header_button_light no-mc'
+            'header_button_light',
+            'no-mc'
           )}
           onClick={this.props.beginEdit}
         >

@@ -47,6 +47,9 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     // we are defining it as any.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let promise: any;
+    // Before loading, clear the header so we don't accidentally show share and remix
+    // for a level that does not allow it.
+    dispatch(clearHeader());
     if (currentLevelId && levelPropertiesPath) {
       // If we have a level id, set up the lab with that level. If we also have a channel id,
       // we will load the project based on that channel id, otherwise we will look up a channel id
@@ -86,24 +89,25 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   }, []);
 
   useEffect(() => {
-    // clear header when we have a change, then either load a new header or
-    // leave the header blank.
+    // Ensure the header is cleared when we have a change,
+    // then possibly load a new header if the level has one.
     dispatch(clearHeader());
+    // If there is no channel, we can't load a header.
     if (loadedChannelId) {
       if (!isOwnerOfChannel) {
-        // non-owners see minimal header
+        // Non-owners see minimal header.
         header.showMinimalProjectHeader();
       } else if (isStandaloneProjectLevel) {
-        // standalone projects see full header (includes rename option)
+        // Standalone projects see project header (includes rename option).
+        // Standalone projects always show share and remix.
         header.showProjectHeader();
       } else if (!isStandaloneProjectLevel) {
-        // project backed levels see project backed header, which can
+        // Project backed levels see project backed header, which can
         // conditionally show share and remix.
         header.showHeaderForProjectBacked({
           showShareAndRemix: !hideShareAndRemix,
         });
       }
-    } else {
     }
   }, [
     hideShareAndRemix,
