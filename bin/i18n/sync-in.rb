@@ -15,6 +15,8 @@ require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 require_relative '../animation_assets/manifest_builder'
 
+Dir[File.expand_path('../resources/**/*.rb', __FILE__)].sort.each {|file| require file}
+
 module I18n
   module SyncIn
     def self.perform
@@ -25,7 +27,7 @@ module I18n
       localize_block_content
       localize_animation_library
       localize_shared_functions
-      localize_course_offerings
+      I18n::Resources::Dashboard::CourseOfferings.sync_in
       localize_standards
       localize_docs
       puts "Copying source files"
@@ -643,22 +645,6 @@ module I18n
         hash[func] = func
       end
       File.write("i18n/locales/source/dashboard/shared_functions.yml", I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"shared_functions" => hash}}}))
-    end
-
-    # Aggregate every CourseOffering record's `key` as the translation key, and
-    # each record's `display_name` as the translation string.
-    def self.localize_course_offerings
-      puts "Preparing course offerings"
-
-      hash = {}
-      CourseOffering.all.sort.each do |co|
-        hash[co.key] = co.display_name
-      end
-      write_dashboard_json('course_offerings', hash)
-    end
-
-    def self.write_dashboard_json(location, hash)
-      File.write(File.join(I18N_SOURCE_DIR, "dashboard/#{location}.json"), JSON.pretty_generate(hash))
     end
 
     def self.select_redactable(i18n_strings)
