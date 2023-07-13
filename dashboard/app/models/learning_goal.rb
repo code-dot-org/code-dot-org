@@ -13,4 +13,6 @@
 #  updated_at    :datetime         not null
 #
 class LearningGoal < ApplicationRecord
+  belongs_to :rubric
+  has_many :learning_goal_evidence_levels, dependent: :destroy
 end

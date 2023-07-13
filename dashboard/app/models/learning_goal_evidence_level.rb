@@ -11,4 +11,5 @@
 #  updated_at          :datetime         not null
 #
 class LearningGoalEvidenceLevel < ApplicationRecord
+  belongs_to :learning_goal
 end
