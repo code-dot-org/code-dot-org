@@ -284,7 +284,7 @@
   module_label_ages: "Ages:"
   module_label_grades: "Grades:"
   module_label_curriculum: "Curriculum:"
-  module_label_curriculum_pure: "Curriculum:"
+  module_label_curriculum_pure: "Curriculum"
   module_label_duration: "Duration:"
   module_label_prerequisites: "Prerequisites:"
   module_label_level: "Level:"
