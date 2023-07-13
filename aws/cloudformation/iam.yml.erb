@@ -324,6 +324,12 @@ roles = {
       '!Ref ContributorSecretsPolicy',
     ]
   },
+  EngineeringMusicLabContributorRole: {
+    RoleName: 'Engineering_MusicLabContributor',
+    ManagedPolicyArns: [
+      '!Ref MusicLabS3ReadWritePolicy',
+    ]
+  },
   DataAnalyticsFullAccessRole: {
     RoleName: 'DataAnalytics_FullAccess',
     ManagedPolicyArns: [
@@ -566,6 +572,30 @@ roles.each do |name, config| %>
             Action: secretsmanager:GetSecretValue
             Resource:
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/properties_encryption_key-KUJqKF
+
+  MusicLabS3ReadWritePolicy:
+    Type: 'AWS::IAM::ManagedPolicy'
+    Properties:
+      ManagedPolicyName: 'MusicLabS3ReadWritePolicy'
+      Path: /engineering/
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: 'S3BucketAccess'
+            Effect: 'Allow'
+            Action:
+              - 's3:ListBucket'
+              - 's3:GetBucketLocation'
+            Resource:
+              - 'arn:aws:s3:::cdo-curriculum'
+          - Sid: 'S3ReadWriteAccess'
+            Effect: 'Allow'
+            Action:
+              - 's3:PutObject'
+              - 's3:GetObject'
+              - 's3:DeleteObject'
+            Resource:
+              - 'arn:aws:s3:::cdo-curriculum/media/musiclab/*'
 
   GoogleBillingIDs:
     Type: AWS::SSM::Parameter
