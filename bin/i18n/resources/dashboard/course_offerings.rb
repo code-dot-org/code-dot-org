@@ -7,7 +7,7 @@ module I18n
   module Resources
     module Dashboard
       module CourseOfferings
-        SYNC_IN_FILE_PATH = CDO.dir(File.join(I18N_SOURCE_DIR, 'dashboard/course_offerings.json')).freeze
+        I18N_SOURCE_FILE_PATH = CDO.dir(File.join(I18N_SOURCE_DIR, 'dashboard/course_offerings.json')).freeze
 
         # Aggregate every CourseOffering record's `key` as the translation key, and
         # each record's `display_name` as the translation string.
@@ -23,7 +23,7 @@ module I18n
             course_offerings[co.key] = co.display_name
           end
 
-          File.write(SYNC_IN_FILE_PATH, JSON.pretty_generate(course_offerings))
+          File.write(I18N_SOURCE_FILE_PATH, JSON.pretty_generate(course_offerings))
         end
       end
     end
