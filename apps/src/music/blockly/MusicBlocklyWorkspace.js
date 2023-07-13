@@ -12,7 +12,7 @@ import {
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
 import {Renderers} from '@cdo/apps/blockly/constants';
-import {logError, logWarning} from '../utils/MusicMetrics';
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -226,7 +226,9 @@ export default class MusicBlocklyWorkspace {
    */
   executeCompiledSong(triggerEvents = []) {
     if (this.compiledEvents === null) {
-      logWarning('executeCompiledSong called before compileSong.');
+      Lab2MetricsReporter.logWarning(
+        'executeCompiledSong called before compileSong.'
+      );
       return;
     }
 
@@ -333,7 +335,7 @@ export default class MusicBlocklyWorkspace {
     try {
       fn.call(this, ...args);
     } catch (e) {
-      logError(e);
+      Lab2MetricsReporter.logError('Error running user generated code', e);
     }
   }
 
