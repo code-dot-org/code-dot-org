@@ -15,7 +15,6 @@ import {
 import FieldChord from './FieldChord';
 import FieldPattern from './FieldPattern';
 import FieldSounds from './FieldSounds';
-import {BlockTypes} from './blockTypes';
 import {MUSIC_BLOCKS} from './musicBlocks';
 import musicI18n from '../locale';
 import {BlockConfig} from './types';
@@ -25,7 +24,7 @@ import {BlockConfig} from './types';
  * only be called once per page load, as it configures the global
  * Blockly state.
  */
-export function setUpBlocklyForMusicLab(defaultSound: string | undefined) {
+export function setUpBlocklyForMusicLab() {
   Blockly.Extensions.register(
     DYNAMIC_TRIGGER_EXTENSION,
     dynamicTriggerExtension
@@ -43,15 +42,6 @@ export function setUpBlocklyForMusicLab(defaultSound: string | undefined) {
   const typedMusicBlocks = MUSIC_BLOCKS as {[key: string]: BlockConfig};
   for (const blockType of Object.keys(typedMusicBlocks)) {
     const blockConfig = typedMusicBlocks[blockType] as BlockConfig;
-
-    // Patch up the default sound if the library provides one.
-    if (
-      blockType === BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2 &&
-      defaultSound
-    ) {
-      blockConfig.definition.args0[0].currentValue = defaultSound;
-    }
-
     Blockly.Blocks[blockType] = {
       init: function () {
         this.jsonInit(blockConfig.definition);

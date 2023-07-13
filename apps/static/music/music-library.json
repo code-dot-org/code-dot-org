@@ -5,7 +5,7 @@
       "name": "All",
       "imageSrc": "all.png",
       "path": "all-by-type",
-      "defaultSound": "beats/disco_beat",
+      "defaultSound": "beats/groovy_alternate_beat",
       "folders": [
         {
           "name": "Piano",
