@@ -1,5 +1,6 @@
 import GoogleBlockly from 'blockly/core';
 
+const svgPaths = GoogleBlockly.utils.svgPaths;
 export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   /**
    * This is a customized flyout class that extends the HorizontalFlyout class.
@@ -12,6 +13,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     this.horizontalLayout_ = !0;
     this.minWidth_ = workspaceOptions.minWidth || this.minWidth_;
     this.maxWidth_ = workspaceOptions.maxWidth || this.maxWidth_;
+    this.flyoutBlockPadding = 18;
   }
 
   autoClose = false;
@@ -95,7 +97,8 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     const topBlockWidth = this.sourceBlock_.svgGroup_
       .querySelector('path')
       .getBoundingClientRect().width;
-    this.width_ = Math.max(this.width_, topBlockWidth - 36);
+    const blockWidthMinusPadding = topBlockWidth - this.flyoutBlockPadding * 2;
+    this.width_ = Math.max(this.width_, blockWidthMinusPadding);
     this.setBackgroundPath_(this.width_, this.height_);
     this.position();
   }
@@ -122,70 +125,59 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * Position the flyout.
    */
   position() {
-    this.isVisible() && this.positionAt_(this.width_, this.height_, 0, 0);
+    this.isVisible() &&
+      this.positionAt_(
+        this.width_,
+        this.height_,
+        this.RTL ? -this.flyoutBlockPadding : 0,
+        0
+      );
   }
 
   /**
    * Create and set the path for the visible boundaries of the flyout.
    *
-   * @param width The width of the flyout, not including the rounded corners.
-   * @param height The height of the flyout, not including rounded corners.
+   * @param {number} width The width of the flyout, not including the rounded corners.
+   * @param {number} height The height of the flyout, not including rounded corners.
    */
   setBackgroundPath_(width, height) {
-    const svgPaths = GoogleBlockly.utils.svgPaths;
-    let path = svgPaths.moveTo(
-      this.RTL ? width : 0,
-      this.toolboxPosition_ === Blockly.TOOLBOX_AT_TOP ? 0 : this.CORNER_RADIUS
-    );
-
-    path += svgPaths.curve('a', [
+    const path = [];
+    const cornerEndPositions = [
+      svgPaths.point(this.CORNER_RADIUS, -this.CORNER_RADIUS),
       svgPaths.point(this.CORNER_RADIUS, this.CORNER_RADIUS),
-      this.RTL ? ' 0 0 0 ' : ' 0 0 1 ',
-      svgPaths.point(
-        this.RTL ? -this.CORNER_RADIUS : this.CORNER_RADIUS,
-        -this.CORNER_RADIUS
-      ),
-    ]);
+      svgPaths.point(-this.CORNER_RADIUS, this.CORNER_RADIUS),
+      svgPaths.point(-this.CORNER_RADIUS, -this.CORNER_RADIUS),
+    ];
+    path.push(svgPaths.moveTo(0, this.CORNER_RADIUS));
 
-    path += svgPaths.lineOnAxis('h', this.RTL ? -width : width);
+    path.push(this.createCornerPath(cornerEndPositions[0]));
+    path.push(svgPaths.lineOnAxis('h', width));
+    path.push(this.createCornerPath(cornerEndPositions[1]));
+    path.push(svgPaths.lineOnAxis('v', height));
+    path.push(this.createCornerPath(cornerEndPositions[2]));
+    path.push(svgPaths.lineOnAxis('h', -width));
+    path.push(this.createCornerPath(cornerEndPositions[3]));
+    path.push('z');
 
-    path += svgPaths.curve('a', [
-      svgPaths.point(this.CORNER_RADIUS, this.CORNER_RADIUS),
-      this.RTL ? ' 0 0 0 ' : ' 0 0 1 ',
-      svgPaths.point(
-        this.RTL ? -this.CORNER_RADIUS : this.CORNER_RADIUS,
-        this.CORNER_RADIUS
-      ),
-    ]);
-
-    path += svgPaths.lineOnAxis('v', height);
-
-    path += svgPaths.curve('a', [
-      svgPaths.point(this.CORNER_RADIUS, this.CORNER_RADIUS),
-      this.RTL ? ' 0 0 0 ' : ' 0 0 1 ',
-      svgPaths.point(
-        this.RTL ? this.CORNER_RADIUS : -this.CORNER_RADIUS,
-        this.CORNER_RADIUS
-      ),
-    ]);
-
-    path += svgPaths.lineOnAxis('h', this.RTL ? width : -width);
-
-    path += svgPaths.curve('a', [
-      svgPaths.point(this.CORNER_RADIUS, this.CORNER_RADIUS),
-      this.RTL ? ' 0 0 0 ' : ' 0 0 1 ',
-      svgPaths.point(
-        this.RTL ? this.CORNER_RADIUS : -this.CORNER_RADIUS,
-        -this.CORNER_RADIUS
-      ),
-    ]);
-
-    path += 'z';
-
-    this.svgClipPath_.setAttribute('d', path);
-    this.svgBackground_.setAttribute('d', path);
+    this.svgClipPath_.setAttribute('d', path.join(''));
+    this.svgBackground_.setAttribute('d', path.join(''));
   }
 
+  /**
+   * Creates an SVG arc path command string based on the corner radius
+   * of the flyout background.
+   *
+   * @param {string} cornerEndPosition - The endpoint of the arc path.
+   *     It should be in the format 'dx,dy' representing the relative
+   *     coordinates from the current position, ex. (8,-8).
+   * @returns {string} The SVG arc path command string, ex. 'a 8 8 0,0,1 8,-8'
+   */
+  createCornerPath(cornerEndPosition) {
+    console.log(
+      svgPaths.arc('a', '0,0,1', this.CORNER_RADIUS, cornerEndPosition)
+    );
+    return svgPaths.arc('a', '0,0,1', this.CORNER_RADIUS, cornerEndPosition);
+  }
   /**
    * Attach this field to a block.
    *
