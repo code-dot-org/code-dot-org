@@ -13,8 +13,6 @@ import {AppName} from '../types';
 
 // Configuration for how a Lab should be rendered
 interface AppProperties {
-  /** Whether this Lab uses projects (channels) */
-  usesChannel: boolean;
   /**
    * Whether this lab should remain rendered in the background once mounted.
    * If true, the lab will always be present in the tree, but will be hidden
@@ -28,12 +26,10 @@ interface AppProperties {
 
 const appsProperties: {[appName in AppName]?: AppProperties} = {
   music: {
-    usesChannel: true,
     backgroundMode: true,
     node: <MusicView />,
   },
   standalone_video: {
-    usesChannel: false,
     backgroundMode: false,
     node: <StandaloneVideo />,
   },
