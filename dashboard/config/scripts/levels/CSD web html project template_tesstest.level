@@ -1,0 +1,21 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2023-07-12T18:01:21.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html>\\n  <head>\\n  </head>\\n  <body>\\n\\n\\n </body>\\n</html>\"\r\n    }\r\n  ]\r\n}",
+    "hide_share_and_remix": "false",
+    "parent_level_id": 23000,
+    "name_suffix": "_tesstest",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-07-12T18:01:21.218+00:00\",\"changed\":[\"cloned from \\\"CSD web html project template_2023\\\"\"],\"cloned_from\":\"CSD web html project template_2023\"}]"
+}]]></config>
+</Weblab>

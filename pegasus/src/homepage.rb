@@ -470,7 +470,7 @@ class Homepage
   end
 
   def self.get_video(request)
-    video = get_actions(request).find {|a| ["video", "video_thumbnail"].include? a[:type]}
+    video = get_actions(request).find {|a| a[:type] == "video" || a[:type] == "video_thumbnail"}
 
     if video
       {
@@ -512,7 +512,7 @@ class Homepage
       # celeb, stat, non-celeb, stat, celeb, stat, non-celeb, stat, celeb, stat,
       # etc.
       heroes.shuffle!
-      heroes_nonceleb = heroes.select {|hero| ["student", "teacher"].include? hero[:type]}
+      heroes_nonceleb = heroes.select {|hero| hero[:type] == "student" || hero[:type] == "teacher"}
       heroes_celeb = heroes.select {|hero| hero[:type] == "celeb"}
       heroes_stat = heroes.select {|hero| hero[:type] == "stat"}
       heroes_arranged =
