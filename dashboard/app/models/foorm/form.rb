@@ -81,9 +81,9 @@ class Foorm::Form < ApplicationRecord
     if write_to_file? && saved_changes?
       file_path = Rails.root.join("config/foorm/forms/#{name}.#{version}.json")
       file_directory = File.dirname(file_path)
-      unless Dir.exist?(file_directory)
-        FileUtils.mkdir_p(file_directory)
-      end
+
+      FileUtils.mkdir_p(file_directory)
+
       File.write(file_path, questions)
     end
   end
@@ -117,8 +117,8 @@ class Foorm::Form < ApplicationRecord
             question_name: element["name"]
           ).first
           unless library_question
-            raise InvalidFoormConfigurationError, "cannot find library item with library name #{element['library_name']},"\
-                                        " version: #{element['library_version']} and question name #{element['name']}."
+            raise InvalidFoormConfigurationError, "cannot find library item with library name #{element['library_name']}, " \
+                                        "version: #{element['library_version']} and question name #{element['name']}."
           end
           JSON.parse(library_question.question)
         else

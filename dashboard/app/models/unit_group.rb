@@ -542,8 +542,7 @@ class UnitGroup < ApplicationRecord
     user.
       user_scripts.
       where(script_id: unit_ids).
-      select(&:version_warning_dismissed).
-      any?
+      any?(&:version_warning_dismissed)
   end
 
   @@course_cache = nil
