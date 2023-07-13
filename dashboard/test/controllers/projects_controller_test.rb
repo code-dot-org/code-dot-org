@@ -474,7 +474,7 @@ class ProjectsControllerTest < ActionController::TestCase
     channel_id = '12345'
     Projects.any_instance.stubs(:get).returns({isOwner: false})
 
-    get :edit, params: {path: "/projects/music/#{channel_id}", key: 'music', channel_id: channel_id, iframe_embed: true}
+    get :edit, params: {path: "/projects/music/#{channel_id}/embed", key: 'music', channel_id: channel_id, iframe_embed: true}
     assert_response :redirect
     assert_redirected_to "/projects/music/#{channel_id}/view"
   end
