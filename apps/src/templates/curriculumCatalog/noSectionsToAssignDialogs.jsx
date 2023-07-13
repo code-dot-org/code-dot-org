@@ -5,6 +5,8 @@ import Button from '@cdo/apps/templates/Button';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import style from './no_sections_to_assign_dialog.module.scss';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const signInURL = `/users/sign_in?user_return_to=${location.pathname}`;
 const upgradeAccountArticleURL =
@@ -12,6 +14,12 @@ const upgradeAccountArticleURL =
 const setUpStudentSectionsURL =
   window.location.origin +
   '/home?openAddSectionDialog=true&participantType=student';
+const handleSignInOrCreateAccountClick = () => {
+  analyticsReporter.sendEvent(
+    EVENTS.CURRICULUM_CATALOG_SIGN_IN_CLICKED_IN_ASSIGN_DIALOG
+  );
+  window.location.href = signInURL;
+};
 
 export const SignInToAssignSectionsDialog = ({onClose}) => (
   <NoSectionsToAssignBaseDialog
@@ -19,7 +27,7 @@ export const SignInToAssignSectionsDialog = ({onClose}) => (
     helpText={i18n.signInToAssignHelpText()}
     onClose={onClose}
     buttonText={i18n.signInOrCreateAccount()}
-    href={signInURL}
+    onClick={handleSignInOrCreateAccountClick}
   />
 );
 
