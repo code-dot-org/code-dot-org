@@ -5,10 +5,10 @@
 
 .hero-ai-pl-webinar {
   background-image: url(/images/ai/pl/101/hero--1.png), url(/images/ai/pl/101/hero--2.png);
-  background-position: left center, right center;
+  background-position: left center, right bottom;
   background-repeat: no-repeat, no-repeat;
   background-color: #360161;
-  background-size: contain;
+  background-size: contain, 500px;
   padding-bottom: 64px;
 
 
@@ -34,10 +34,15 @@
   }
 
   @media screen and(max-width: 1499px) {
-    background-position: calc(20vw - 350px) center, right center
+    background-position: calc(20vw - 350px) center, right bottom
   }
 
   @media screen and(max-width: 1279px) {
+    background-size: contain, 370px;
+    background-position: calc(15vw - 350px) center, right bottom
+
+  }
+  @media screen and(max-width: $width-lg) {
     background-image: none;
   }
 
@@ -121,6 +126,10 @@
       margin: 20px;
       height: 30px;
 
+      &:last-child {
+        margin-right: auto;
+      }
+
       &--iste {
         height: 22px;
       }
@@ -142,8 +151,20 @@
   display: none
 }
 
+.newsletter-signup {
+  padding-bottom: calc(64px - 10px);
+
+  .wrapper {
+    padding-bottom: 0;
+  }
+}
+
+.intro {
+  padding-bottom: calc(64px - 10px);
+}
+
 @media screen and (max-width: $width-sm) {
   .optanon-category-C0008 {
-    height: 550px;
+    height: 530px;
   }
 }
