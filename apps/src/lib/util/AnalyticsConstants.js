@@ -60,6 +60,14 @@ const EVENTS = {
   MAKER_SETUP_PAGE_BOARD_TYPE_EVENT: 'Board Type On Maker Setup Page',
   MAKER_SETUP_PAGE_MB_VERSION_EVENT: 'Microbit Version',
   MAKER_SETUP_PAGE_MB_UPDATE_ERROR_EVENT: 'Microbit Software Update Error',
+
+  // Curriculum Catalog page
+  CURRICULUM_CATALOG_VISITED_EVENT: 'Curriculum Catalog Visited',
+  CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT: 'Assign Clicked',
+  CURRICULUM_CATALOG_SIGN_IN_CLICKED_IN_ASSIGN_DIALOG:
+    'Sign In Or Create Account Clicked In Assign Dialog',
+  CURRICULUM_CATALOG_ASSIGN_COMPLETED_EVENT:
+    'Course Offering Assignment Completed',
 };
 
 export {EVENTS};
