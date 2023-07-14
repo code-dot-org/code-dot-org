@@ -27,7 +27,7 @@ module I18n
       I18n::Resources::Apps::Animations.sync_in
       I18n::Resources::Dashboard::SharedFunctions.sync_in
       I18n::Resources::Dashboard::CourseOfferings.sync_in
-      localize_standards
+      I18n::Resources::Dashboard::Standards.sync_in
       localize_docs
       puts "Copying source files"
       I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
@@ -43,51 +43,6 @@ module I18n
     rescue => exception
       puts "Sync in failed from the error: #{exception}"
       raise exception
-    end
-
-    # Takes strings describing and naming Framework, StandardCategory, and Standard
-    # and places them in the source pool to be sent to crowdin.
-    def self.localize_standards
-      puts "Preparing standards content"
-      standards_content_path = File.join(I18N_SOURCE_DIR, "standards")
-
-      frameworks = {}
-
-      # Localize all frameworks.
-      Framework.all.each do |framework|
-        frameworks[framework.shortcode] = {
-          'name' => framework.name,
-          'categories' => {},
-          'standards' => {}
-        }
-      end
-
-      # Localize all categories.
-      StandardCategory.all.each do |category|
-        framework = category.framework
-
-        categories = frameworks[framework.shortcode]['categories']
-        categories[category.shortcode] = {
-          'description' => category.description
-        }
-      end
-
-      # Localize all standards.
-      Standard.all.each do |standard|
-        framework = standard.framework
-
-        standards = frameworks[framework.shortcode]['standards']
-        standards[standard.shortcode] = {
-          'description' => standard.description
-        }
-      end
-
-      FileUtils.mkdir_p(standards_content_path)
-
-      # Then, for each framework, generate a file for it.
-      frameworks.keys.each do |framework|
-        File.write(File.join(standards_content_path, "#{framework}.json"), JSON.pretty_generate(frameworks[framework]))
-      end
     end
 
     # This function localizes content in studio.code.org/docs
