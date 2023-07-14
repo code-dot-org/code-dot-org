@@ -281,7 +281,15 @@ class UnconnectedMusicView extends React.Component {
     Globals.setLibrary(this.library);
     Globals.setPlayer(this.player);
 
-    this.player.initialize(this.library, this.props.updateLoadProgress);
+    try {
+      this.player.initialize(this.library, this.props.updateLoadProgress);
+    } catch (error) {
+      this.props.setPageError({
+        errorMessage: 'Error initializing music player',
+        error,
+      });
+      return;
+    }
 
     this.setState({
       loadedLibrary: true,
