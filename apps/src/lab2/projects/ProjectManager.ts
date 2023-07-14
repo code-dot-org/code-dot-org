@@ -143,7 +143,15 @@ export default class ProjectManager {
     return this.enqueueSaveOrSave(true);
   }
 
-  async rename(name: string, forceSave = false) {
+  /**
+   * Rename the current project. Default to saving immediately.
+   * @param name new name for the project.
+   * @param forceSave Whether or not to save immediately. Default to true, because
+   * renames are done in response to a user action.
+   * @returns a promise that resolves to a Response. If the rename is successful, the response
+   * will be empty, otherwise it will contain failure information.
+   */
+  async rename(name: string, forceSave = true) {
     if (this.destroyed || !this.lastChannel) {
       // If we have already been destroyed or the channel does not exist,
       // don't attempt to rename.
@@ -323,7 +331,7 @@ export default class ProjectManager {
     } else {
       // if we can save immediately, initiate a save now. This is an async
       // request that we do not wait for.
-      this.saveHelper();
+      return this.saveHelper();
     }
   }
 
