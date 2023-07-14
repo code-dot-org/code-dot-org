@@ -45,6 +45,13 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def ai_chat_access
+    return unless (user = current_user)
+    user.permission = UserPermission::AI_CHAT_ACCESS
+    user.save!
+    head :ok
+  end
+
   def enroll_in_plc_course
     return unless (user = current_user)
     unit_group = UnitGroup.find_by(name: 'All The PLC Things')
