@@ -1050,8 +1050,11 @@
           "subTitle": "Code.org",
           "path": "beats",
           "imageSrc": "thumbnail.png",
-          "previewSrc": "beats_preview",
           "sounds": [
+            {
+              "src": "preview",
+              "preview": true
+            },
             {
               "name": "Groovy Beat",
               "src": "groovy_beat",

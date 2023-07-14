@@ -24,8 +24,9 @@ const FolderPanelRow = ({
   folder,
   onPreview,
 }) => {
-  const soundPath = folder.path + '/' + folder.previewSound;
-  const isPlayingPreview = playingPreview === soundPath;
+  const previewSound = folder.sounds.find(sound => sound.preview);
+  const soundPath = previewSound && folder.path + '/' + previewSound.src;
+  const isPlayingPreview = previewSound && playingPreview === soundPath;
   const imageSrc =
     folder.imageSrc &&
     `${baseAssetUrl}${libraryGroupPath}/${folder.path}/${folder.imageSrc}`;
@@ -41,21 +42,23 @@ const FolderPanelRow = ({
       </div>
       <div className={styles.folderRowRight}>
         <div className={styles.length}>&nbsp;</div>
-        <div className={styles.previewContainer}>
-          <FontAwesome
-            icon={'play-circle'}
-            className={classNames(
-              styles.preview,
-              isPlayingPreview && styles.previewPlaying
-            )}
-            onClick={e => {
-              if (!isPlayingPreview) {
-                onPreview(folder.path + '/' + folder.previewSrc);
-              }
-              e.stopPropagation();
-            }}
-          />
-        </div>
+        {previewSound && (
+          <div className={styles.previewContainer}>
+            <FontAwesome
+              icon={'play-circle'}
+              className={classNames(
+                styles.preview,
+                isPlayingPreview && styles.previewPlaying
+              )}
+              onClick={e => {
+                if (!isPlayingPreview) {
+                  onPreview(soundPath);
+                }
+                e.stopPropagation();
+              }}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
@@ -107,7 +110,7 @@ const SoundsPanelRow = ({
             )}
             onClick={e => {
               if (!isPlayingPreview) {
-                onPreview(folder.path + '/' + sound.src);
+                onPreview(soundPath);
               }
               e.stopPropagation();
             }}
@@ -161,7 +164,7 @@ const SoundsPanel = ({
               onPreview={onPreview}
             />
           );
-        } else {
+        } else if (!entry.sound.preview) {
           return (
             <SoundsPanelRow
               key={entryIndex}
