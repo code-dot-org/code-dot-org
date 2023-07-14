@@ -36,7 +36,7 @@
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "code_functions": {
       "draw": null,
@@ -119,7 +119,7 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:34.783+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - conditionals - first conditional_2022\\\"\"],\"cloned_from\":\"CSD U3 - conditionals - first conditional_2022\"},{\"changed_at\":\"2023-01-13 19:21:17 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-13 19:24:10 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-13 19:24:45 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-14 23:44:31 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 22:30:46 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:34.783+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - conditionals - first conditional_2022\\\"\"],\"cloned_from\":\"CSD U3 - conditionals - first conditional_2022\"},{\"changed_at\":\"2023-01-13 19:21:17 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-13 19:24:10 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-13 19:24:45 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-14 23:44:31 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 22:30:46 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-13 18:32:05 +0000\",\"changed\":[\"all_animations_single_frame\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

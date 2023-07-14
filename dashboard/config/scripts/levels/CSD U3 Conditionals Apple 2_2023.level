@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:57:36.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -31,7 +36,7 @@
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "palette_category_at_start": "variables",
     "code_functions": {
@@ -115,16 +120,11 @@
     "libraries_enabled": "false",
     "start_blocks": "var fruit = createSprite(200, 200);\r\nfruit.setAnimation(\"apple\");\r\nfruit.scale = 0.1;\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"white\");\r\n  \r\n  // Update Values\r\n  fruit.scale = fruit.scale + 0.01;\r\n  \r\n  //1) Add a conditional to the draw loop.\r\n  //2) Add code to the conditional statement that asks if the scale of the fruit greater than 2.\r\n  //3) Add code inside the conditional to change the fruit to a pear.\r\n\r\n\r\n\r\n\r\n  // Draw Animations\r\n  drawSprites();\r\n}\r\n",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"3038eefa-a6f4-47be-bf76-ec2c7b4017bd\",\r\n    \"29ff9499-f62a-4c7e-ae8d-97148fe7cb5a\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"3038eefa-a6f4-47be-bf76-ec2c7b4017bd\": {\r\n      \"name\": \"apple\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fmedia%3Fu%3Dhttps%253A%252F%252Fstudio.code.org%252Fapi%252Fv1%252Fanimation-library%252F_C2x10SnwauWvJRCQq.u2jEtcmNrPifb%252Fcategory_food%252Fapple.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_C2x10SnwauWvJRCQq.u2jEtcmNrPifb\"\r\n    },\r\n    \"29ff9499-f62a-4c7e-ae8d-97148fe7cb5a\": {\r\n      \"name\": \"pear\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fv3%2Fanimations%2FQRP2GoiPNjsGQjEvqW2xeLEFahq8A1oTfm1rx4jabm8%2F29ff9499-f62a-4c7e-ae8d-97148fe7cb5a.png%3Fversion%3DHaApU1UlBBYv2ndvoyt4vR1YnuXNsfqA\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"HaApU1UlBBYv2ndvoyt4vR1YnuXNsfqA\"\r\n    }\r\n  }\r\n}",
-    "preload_asset_list": null,
-    "video_key": "csd_gamelab_conditional_statements"
+    "video_key": "csd_gamelab_conditional_statements",
+    "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:57:36.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:36.597+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Conditionals Apple 2_2022\\\"\"],\"cloned_from\":\"CSD U3 Conditionals Apple 2_2022\"},{\"changed_at\":\"2023-01-13 19:28:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 00:13:42 +0000\",\"changed\":[\"project_template_level_name\",\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 00:14:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 00:15:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 00:18:22 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 00:38:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-14 23:43:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-14 23:44:08 +0000\",\"changed\":[\"never_autoplay_video\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:36.597+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Conditionals Apple 2_2022\\\"\"],\"cloned_from\":\"CSD U3 Conditionals Apple 2_2022\"},{\"changed_at\":\"2023-01-13 19:28:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 00:13:42 +0000\",\"changed\":[\"project_template_level_name\",\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 00:14:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 00:15:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 00:18:22 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 00:38:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-14 23:43:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-14 23:44:08 +0000\",\"changed\":[\"never_autoplay_video\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-13 18:32:35 +0000\",\"changed\":[\"all_animations_single_frame\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
