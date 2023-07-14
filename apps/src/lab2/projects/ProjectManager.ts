@@ -320,6 +320,7 @@ export default class ProjectManager {
       // We set forceReloading to true so the client can skip
       // showing the user a dialog before reload.
       this.forceReloading = true;
+      Lab2MetricsReporter.logWarning('Conflict on save, reloading page');
       reload();
     } else {
       // Otherwise, we log the error.
