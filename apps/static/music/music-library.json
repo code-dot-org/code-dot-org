@@ -1047,8 +1047,10 @@
         },
         {
           "name": "Beats",
+          "subTitle": "Code.org",
           "path": "beats",
           "imageSrc": "thumbnail.png",
+          "previewSrc": "beats_preview",
           "sounds": [
             {
               "name": "Groovy Beat",
@@ -1186,8 +1188,10 @@
         },
         {
           "name": "Bass",
+          "subTitle": "Code.org",
           "path": "bass",
           "imageSrc": "thumbnail.png",
+          "previewSrc": "bass_preview",
           "sounds": [
             {
               "name": "Funky Bass",
@@ -1241,8 +1245,10 @@
         },
         {
           "name": "Leads",
+          "subTitle": "Code.org",
           "path": "leads",
           "imageSrc": "thumbnail.png",
+          "previewSrc": "leads_preview",
           "sounds": [
             {
               "name": "Lucky Guitar",
@@ -1292,8 +1298,10 @@
         },
         {
           "name": "Effects",
+          "subTitle": "Code.org",
           "path": "effects",
           "imageSrc": "thumbnail.png",
+          "previewSrc": "effects_preview",
           "sounds": [
             {"name": "Swish", "src": "swish", "length": 2, "type": "fx"},
             {"name": "Brass", "src": "brass", "length": 0.25, "type": "fx"},
