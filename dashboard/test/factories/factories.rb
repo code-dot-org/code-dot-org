@@ -150,6 +150,12 @@ FactoryBot.define do
           project_validator.save
         end
       end
+      factory :ai_chat_access do
+        after(:create) do |ai_chat_access|
+          ai_chat_access.permission = UserPermission::AI_CHAT_ACCESS
+          ai_chat_access.save
+        end
+      end
       factory :authorized_teacher do
         after(:create) do |authorized_teacher|
           authorized_teacher.permission = UserPermission::AUTHORIZED_TEACHER
