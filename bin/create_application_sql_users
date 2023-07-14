@@ -1,0 +1,49 @@
+#!/usr/bin/env ruby
+
+require_relative '../deployment'
+require 'mysql2'
+
+client = Mysql2::Client.new(
+  host: CDO.db_endpoint_writer,
+  username: CDO.db_credential_admin['username'],
+  password: CDO.db_credential_admin['password'],
+  read_timeout: 300,
+  write_timeout: 300,
+  connect_timeout: 30
+)
+
+create_writer_sql_user = <<-SQL
+  CREATE USER '#{CDO.db_credential_writer['username']}'@'%'
+  IDENTIFIED WITH mysql_native_password
+  BY '#{client.escape(CDO.db_credential_writer['password'])}';
+SQL
+
+grant_writer_privileges = <<-SQL
+  GRANT
+    SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, RELOAD, PROCESS, REFERENCES, INDEX, ALTER, SHOW DATABASES,
+    CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, TRIGGER
+  ON *.*
+  TO '#{CDO.db_credential_writer['username']}'@'%';
+SQL
+
+create_reader_sql_user = <<-SQL
+  CREATE USER '#{CDO.db_credential_reader['username']}'@'%'
+  IDENTIFIED WITH mysql_native_password
+  BY '#{client.escape(CDO.db_credential_reader['password'])}';
+SQL
+
+grant_reader_privileges = <<-SQL
+  GRANT
+    SELECT
+  ON *.*
+  TO '#{CDO.db_credential_reader['username']}'@'%';
+SQL
+
+begin
+  client.query(create_writer_sql_user)
+  client.query(grant_writer_privileges)
+  client.query(create_reader_sql_user)
+  client.query(grant_reader_privileges)
+rescue StandardError => exception
+  puts exception.message
+end
