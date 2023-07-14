@@ -1,6 +1,6 @@
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
-interface ProjectReduxState {
+export interface ProjectState {
   showProjectUpdatedAt: boolean;
   projectUpdatedStatus: keyof typeof projectUpdatedStatuses;
   projectUpdatedAt: string | undefined;
@@ -31,7 +31,7 @@ export const workspaceAlertTypes = {
   notification: 'notification',
 } as const;
 
-const initialState: ProjectReduxState = {
+const initialState: ProjectState = {
   showProjectUpdatedAt: false,
   projectUpdatedStatus: projectUpdatedStatuses.default,
   projectUpdatedAt: undefined,
