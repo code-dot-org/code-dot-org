@@ -334,6 +334,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resources :rubrics, only: [:edit, :new], param: 'key'
+
     resources :course_offerings, only: [:edit, :update], param: 'key' do
       collection do
         get 'quick_assign_course_offerings'
