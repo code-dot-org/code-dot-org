@@ -871,7 +871,7 @@ GEM
     unf_ext (0.0.7.2)
     unicode-display_width (2.4.2)
     unicode_utils (1.4.0)
-    uri (0.12.1)
+    uri (0.12.2)
     user_agent_parser (2.3.0)
     uuid (2.3.9)
       macaddr (~> 1.0)
