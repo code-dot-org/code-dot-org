@@ -12,7 +12,9 @@ const MetricsAdapter: React.FunctionComponent = () => {
   const channelId = useSelector(
     (state: {lab: LabState}) => state.lab.channel?.id
   );
-  const appName = useSelector((state: {lab: LabState}) => state.lab.appName);
+  const projectType = useSelector(
+    (state: {lab: LabState}) => state.lab.channel?.projectType
+  );
   const currentLevelId = useSelector(
     (state: {progress: ProgressState}) =>
       state.progress.currentLevelId || undefined
@@ -39,8 +41,8 @@ const MetricsAdapter: React.FunctionComponent = () => {
   }, [channelId]);
 
   useEffect(() => {
-    Lab2MetricsReporter.updateProperties({appName});
-  }, [appName]);
+    Lab2MetricsReporter.updateProperties({projectType});
+  }, [projectType]);
 
   useEffect(() => {
     if (pageError) {

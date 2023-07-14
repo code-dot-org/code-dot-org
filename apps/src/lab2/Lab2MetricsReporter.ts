@@ -6,7 +6,7 @@ import {MetricDimension} from '@cdo/apps/lib/metrics/types';
  */
 interface ReportingProperties {
   channelId?: string;
-  appName?: string;
+  projectType?: string;
   currentLevelId?: string;
   scriptId?: number;
 }
@@ -83,10 +83,10 @@ class Lab2MetricsReporter {
    */
   private getCommonDimensions(): MetricDimension[] {
     const dimensions = [];
-    if (this.commonProperties.appName) {
+    if (this.commonProperties.projectType) {
       dimensions.push({
-        name: 'AppName',
-        value: this.commonProperties.appName,
+        name: 'ProjectType',
+        value: this.commonProperties.projectType,
       });
     }
     return dimensions;
