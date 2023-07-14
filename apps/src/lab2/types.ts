@@ -91,6 +91,7 @@ export interface LevelProperties {
   // disabled flag for specific exceptions.
   disableProjects?: 'true' | 'false';
   levelData: LevelData;
+  appName: AppName;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -171,7 +172,8 @@ export type AppName =
   | 'studio'
   | 'bounce'
   | 'poetry'
-  | 'spritelab';
+  | 'spritelab'
+  | 'standalone_video';
 
 export type StandaloneAppName =
   | 'spritelab'
