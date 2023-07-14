@@ -39,7 +39,7 @@ def sync_out(upload_manifests=false)
   I18nScriptUtils.with_synchronous_stdout do
     I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n_static_messages.rb"
   end
-  clean_up_sync_out(CROWDIN_PROJECTS)
+  clean_up_sync_out(CROWDIN_TEST_PROJECTS)
   puts "Sync out completed successfully"
 rescue => exception
   puts "Sync out failed from the error: #{exception}"
@@ -80,7 +80,7 @@ end
 #  "/dashboard/base.yml", "/blockly-mooc/maze.json",
 #  "/course_content/2018/coursea-2018.json", etc.
 def file_changed?(locale, file)
-  @change_datas ||= CROWDIN_PROJECTS.map do |_project_identifier, project_options|
+  @change_datas ||= CROWDIN_TEST_PROJECTS.map do |_project_identifier, project_options|
     unless File.exist?(project_options[:files_to_sync_out_json])
       raise <<~ERR
         File not found #{project_options[:files_to_sync_out_json]}.
@@ -242,20 +242,35 @@ def sanitize_file_and_write(loc_path, dest_path)
 end
 
 def sanitize_data_and_write(data, dest_path)
-  sanitize! data
+  sorted_data = sort_and_sanitize(data)
 
   dest_data =
     case File.extname(dest_path)
     when '.yaml', '.yml'
-      data.to_yaml
+      sorted_data.to_yaml
     when '.json'
-      JSON.pretty_generate(data)
+      JSON.pretty_generate(sorted_data)
     else
       raise "do not know how to serialize localization data to #{dest_path}"
     end
 
   FileUtils.mkdir_p(File.dirname(dest_path))
   File.write(dest_path, dest_data)
+end
+
+def sort_and_sanitize(hash)
+  hash.sort_by {|key, _| key}.each_with_object({}) do |(key, value), result|
+    if value.is_a? Hash
+      sorted_value = sort_and_sanitize(value)
+      result[key] = sorted_value unless sorted_value.nil? || sorted_value.empty?
+    elsif value.is_a? Array
+      result[key] = value.filter_map {|v| v.is_a?(Hash) ? sort_and_sanitize(v) : v}
+    elsif value.is_a? String
+      result[key] = value.gsub(/\\r/, "\r")
+    else
+      result[key] = value unless value.nil?
+    end
+  end
 end
 
 # Wraps hash in correct format to be loaded by our i18n backend.
@@ -378,6 +393,7 @@ def distribute_translations(upload_manifests)
     locale = prop[:locale_s]
     locale_dir = File.join("i18n/locales", locale)
     next if locale == 'en-US'
+    next unless %w[es-ES es-MX].include?(locale)
     next unless File.directory?(locale_dir)
 
     ### Dashboard
