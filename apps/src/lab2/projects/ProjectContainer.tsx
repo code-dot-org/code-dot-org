@@ -106,6 +106,12 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
           showShareAndRemix: !hideShareAndRemix,
         });
       }
+    } else if (
+      loadedChannelId &&
+      !isOwnerOfChannel &&
+      isStandaloneProjectLevel
+    ) {
+      header.showMinimalProjectHeader();
     }
   }, [
     hideShareAndRemix,
