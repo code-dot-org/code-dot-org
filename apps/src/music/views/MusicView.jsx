@@ -215,8 +215,8 @@ class UnconnectedMusicView extends React.Component {
     // If we just finished loading the lab, then we need to update the
     // sources and level data.
     if (!prevProps.labReadyForReload && this.props.labReadyForReload) {
-      // Only load if the current app is music.
-      if (this.props.appName === 'music') {
+      // Only load if the current app is music or we are on the Incubator page.
+      if (this.props.appName === 'music' || this.props.inIncubator) {
         // Load and initialize the library and player if not done already.
         // Read the library name first from level data, or from the project
         // sources if not present on the level. If there is no library name
