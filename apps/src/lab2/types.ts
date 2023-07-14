@@ -10,7 +10,7 @@ export interface Channel {
   id: string;
   name: string;
   isOwner: boolean;
-  projectType: ProjectType | null;
+  projectType: ProjectType;
   publishedAt: string;
   createdAt: string;
   updatedAt: string;
@@ -91,6 +91,7 @@ export interface LevelProperties {
   // disabled flag for specific exceptions.
   disableProjects?: 'true' | 'false';
   levelData: LevelData;
+  appName: AppName;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -110,9 +111,15 @@ export interface VideoLevelData {
 
 export type LevelData = ProjectLevelData | VideoLevelData;
 
+// A validation condition.
+export interface Condition {
+  name: string;
+  value?: string | number;
+}
+
 // Validation in the level.
 export interface Validation {
-  conditions: string[];
+  conditions: Condition[];
   message: string;
   next: boolean;
 }
@@ -165,7 +172,8 @@ export type AppName =
   | 'studio'
   | 'bounce'
   | 'poetry'
-  | 'spritelab';
+  | 'spritelab'
+  | 'standalone_video';
 
 export type StandaloneAppName =
   | 'spritelab'
