@@ -151,14 +151,14 @@ def parse_options
       end
       opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
         if p == 'localhost:3000'
-          print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n"\
+          print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n" \
                 "Try '-p localhost.code.org:3000' instead (this is the default when using '-l').\n"
         end
         options.pegasus_domain = p
       end
       opts.on("-d", "--dashboard Domain", String, "Specify an override domain for studio.code.org, e.g. localhost-studio.code.org:3000") do |d|
         if d == 'localhost:3000'
-          print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n"\
+          print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n" \
                 "Try '-d localhost-studio.code.org:3000' instead (this is the default when using '-l').\n"
         end
         options.dashboard_domain = d

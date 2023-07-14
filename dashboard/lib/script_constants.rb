@@ -325,7 +325,7 @@ module ScriptConstants
       ScriptConstants.unit_in_category?(:csd_2022, script) ||
       ScriptConstants.unit_in_category?(:twenty_hour, script) ||
       ScriptConstants.unit_in_category?(:hoc, script) ||
-      JIGSAW_NAME == script ||
+      script == JIGSAW_NAME ||
       ADDITIONAL_I18N_UNITS.include?(script)
   end
 end

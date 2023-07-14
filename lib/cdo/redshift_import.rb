@@ -87,8 +87,8 @@ class RedshiftImport
     constraint_column_ids_list = result[0]['constraint_column_ids']
 
     # Strip the curly braces off.
-    constraint_column_ids_list.slice!("\{")
-    constraint_column_ids_list.slice!("\}")
+    constraint_column_ids_list.slice!("{")
+    constraint_column_ids_list.slice!("}")
 
     # Get the names of the columns that a primary key is composed of.
     column_query = <<~SQL

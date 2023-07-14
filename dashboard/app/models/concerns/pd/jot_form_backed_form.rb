@@ -177,7 +177,7 @@ module Pd
           end
         end
 
-        CDO.log.info("#{imported} JotForm submissions imported in #{batches} #{'batch'.pluralize(batches)}. "\
+        CDO.log.info("#{imported} JotForm submissions imported in #{batches} #{'batch'.pluralize(batches)}. " \
           "All sync results: #{all_sync_results.inspect}"
         )
 
