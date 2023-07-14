@@ -23,6 +23,7 @@ export default class StudentHomepage extends Component {
     studentId: PropTypes.number.isRequired,
     isEnglish: PropTypes.bool.isRequired,
     showVerifiedTeacherWarning: PropTypes.bool,
+    showDeprecatedCalcAndEvalWarning: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -38,6 +39,7 @@ export default class StudentHomepage extends Component {
       hasFeedback,
       isEnglish,
       showVerifiedTeacherWarning,
+      showDeprecatedCalcAndEvalWarning,
     } = this.props;
     const {canViewAdvancedTools, studentId} = this.props;
     // Verify background image works for both LTR and RTL languages.
@@ -52,6 +54,14 @@ export default class StudentHomepage extends Component {
         />
         <div className={'container main'}>
           <ProtectedStatefulDiv ref="flashes" />
+          {showDeprecatedCalcAndEvalWarning && (
+            <Notification
+              type={NotificationType.warning}
+              notice={i18n.deprecatedCalcAndEvalWarning()}
+              details={i18n.deprecatedCalcAndEvalDetails()}
+              dismissible={false}
+            />
+          )}
           {isEnglish && <SpecialAnnouncement isTeacher={false} />}
           {showVerifiedTeacherWarning && (
             <Notification
