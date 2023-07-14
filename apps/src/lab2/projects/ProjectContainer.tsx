@@ -7,10 +7,12 @@
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 import Lab2Registry from '../Lab2Registry';
-import {setUpWithLevel, setUpWithoutLevel} from '../lab2Redux';
+import {LabState, setUpWithLevel, setUpWithoutLevel} from '../lab2Redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
+import header from '@cdo/apps/code-studio/header';
+import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
 
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   children,
@@ -23,6 +25,19 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     (state: {progress: ProgressState}) => state.progress.scriptId || undefined
   );
 
+  const isStandaloneProjectLevel = useSelector(
+    (state: {lab: LabState}) => state.lab.isProjectLevel
+  );
+  const hideShareAndRemix = useSelector(
+    (state: {lab: LabState}) => state.lab.hideShareAndRemix
+  );
+  const loadedChannelId = useSelector(
+    (state: {lab: LabState}) => state.lab.channel && state.lab.channel.id
+  );
+  const isOwnerOfChannel = useSelector(
+    (state: {lab: LabState}) => state.lab.channel && state.lab.channel.isOwner
+  );
+
   const levelPropertiesPath = useSelector(getLevelPropertiesPath);
 
   const dispatch = useAppDispatch();
@@ -32,6 +47,9 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     // we are defining it as any.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let promise: any;
+    // Before loading, clear the header so we don't accidentally show share and remix
+    // for a level that does not allow it.
+    dispatch(clearHeader());
     if (currentLevelId && levelPropertiesPath) {
       // If we have a level id, set up the lab with that level. If we also have a channel id,
       // we will load the project based on that channel id, otherwise we will look up a channel id
@@ -75,6 +93,33 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       }
     });
   }, []);
+
+  useEffect(() => {
+    // Ensure the header is cleared when we have a change,
+    // then possibly load a new header if the level has one.
+    dispatch(clearHeader());
+    // If there is no channel, we can't load a header.
+    // TODO: Handle the case of viewing another user's project.
+    if (loadedChannelId && isOwnerOfChannel) {
+      if (isStandaloneProjectLevel) {
+        // Standalone projects see project header (includes rename option).
+        // Standalone projects always show share and remix.
+        header.showProjectHeader();
+      } else {
+        // Project backed levels see project backed header, which can
+        // conditionally show share and remix.
+        header.showHeaderForProjectBacked({
+          showShareAndRemix: !hideShareAndRemix,
+        });
+      }
+    }
+  }, [
+    hideShareAndRemix,
+    isStandaloneProjectLevel,
+    loadedChannelId,
+    isOwnerOfChannel,
+    dispatch,
+  ]);
 
   return <>{children}</>;
 };

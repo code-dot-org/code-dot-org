@@ -54,7 +54,6 @@ import {
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode} from '../constants';
-import header from '../../code-studio/header';
 import {
   setProjectUpdatedAt,
   setProjectUpdatedError,
@@ -158,8 +157,6 @@ class UnconnectedMusicView extends React.Component {
       currentLibraryName: null,
     };
 
-    // Music Lab currently does not support share and remix
-    header.showHeaderForProjectBacked({showShareAndRemix: false});
     setUpBlocklyForMusicLab();
   }
 
@@ -277,7 +274,15 @@ class UnconnectedMusicView extends React.Component {
       this.onBlockSpaceChange,
       this.props.isReadOnlyWorkspace
     );
-    this.player.initialize(this.library, this.props.updateLoadProgress);
+    try {
+      this.player.initialize(this.library, this.props.updateLoadProgress);
+    } catch (error) {
+      this.props.setPageError({
+        errorMessage: 'Error initializing music player',
+        error,
+      });
+      return;
+    }
 
     this.setState({
       loadedLibrary: true,
