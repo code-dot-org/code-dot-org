@@ -54,7 +54,6 @@ import {
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode} from '../constants';
-import header from '../../code-studio/header';
 import {
   setProjectUpdatedAt,
   setProjectUpdatedError,
@@ -159,8 +158,6 @@ class UnconnectedMusicView extends React.Component {
       currentLibraryName: null,
     };
 
-    // Music Lab currently does not support share and remix
-    header.showHeaderForProjectBacked({showShareAndRemix: false});
     setUpBlocklyForMusicLab();
   }
 

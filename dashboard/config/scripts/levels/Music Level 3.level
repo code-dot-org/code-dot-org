@@ -4,6 +4,7 @@
     "encrypted": "false",
     "preload_asset_list": null,
     "background": "music-black",
+    "hide_share_and_remix": "false",
     "level_data": {
       "text": "Try everything!",
       "startSources": {
