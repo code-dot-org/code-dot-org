@@ -11,7 +11,6 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 import {
-  AppName,
   Channel,
   LevelData,
   LevelProperties,
@@ -61,7 +60,6 @@ export interface LabState {
   // Validation status for the current level. This is used by the progress system to determine
   // what instructions to display and if the user has satisfied the validation conditions, if present.
   validationState: ValidationState;
-  appName: AppName | undefined;
 }
 
 const initialState: LabState = {
@@ -75,7 +73,6 @@ const initialState: LabState = {
   hideShareAndRemix: true,
   isProjectLevel: false,
   validationState: {...initialValidationState},
-  appName: undefined,
 };
 
 // Thunks
@@ -241,9 +238,6 @@ const labSlice = createSlice({
     setValidationState(state, action: PayloadAction<ValidationState>) {
       state.validationState = {...action.payload};
     },
-    setAppName(state, action: PayloadAction<AppName | undefined>) {
-      state.appName = action.payload;
-    },
   },
   extraReducers: builder => {
     builder.addCase(setUpWithLevel.fulfilled, state => {
@@ -346,13 +340,11 @@ function setProjectAndLevelData(
       /* defaultValue*/ false
     );
     dispatch(setIsProjectLevel(isProjectLevel));
-    dispatch(setAppName(levelProperties.appName));
   } else {
     // set default values to clear out any previous values
     dispatch(setLevelData(undefined));
     dispatch(setHideShareAndRemix(true));
     dispatch(setIsProjectLevel(false));
-    dispatch(setAppName(undefined));
   }
   dispatch(setLabReadyForReload(true));
 }
@@ -379,18 +371,14 @@ export const {
   setIsLoading,
   setPageError,
   clearPageError,
+  setChannel,
+  setSources,
+  setLevelData,
   setLabReadyForReload,
   setValidationState,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.
-const {
-  setHideShareAndRemix,
-  setIsProjectLevel,
-  setAppName,
-  setChannel,
-  setSources,
-  setLevelData,
-} = labSlice.actions;
+const {setHideShareAndRemix, setIsProjectLevel} = labSlice.actions;
 
 export default labSlice.reducer;
