@@ -54,20 +54,6 @@
     float: right;
     width: 43px;
     margin-right: 15px;
-
-    .length {
-      display: inline-block;
-      font-size: 13px;
-      width: 15px;
-      margin-right: 10px;
-      color: $neutral_dark50;
-      text-align: right;
-    }
-
-    .previewContainer {
-      display: inline-block;
-      font-size: 16px;
-    }
   }
 }
 
@@ -80,41 +66,42 @@
   &Selected {
     background-color: $neutral_dark80;
   }
-}
 
-.soundRowLeft {
-  width: 15px;
-  margin: 0 6px 0 4px;
-  float: left;
-}
-
-.typeIcon {
-  width: 13px;
-}
-
-.soundRowMiddle {
-  width: calc(100% - 25px - 58px);
-  float: left;
-}
-
-.soundRowRight {
-  float: right;
-  width: 43px;
-  margin-right: 15px;
-
-  .length {
-    display: inline-block;
-    font-size: 13px;
+  &Left {
     width: 15px;
-    margin-right: 10px;
-    color: $neutral_dark50;
-    text-align: right;
+    margin: 0 6px 0 4px;
+    float: left;
+
+    .typeIcon {
+      width: 13px;
+    }
   }
 
-  .previewContainer {
-    display: inline-block;
-    font-size: 16px;
+  &Middle {
+    width: calc(100% - 25px - 58px);
+    float: left;
   }
+
+  &Right {
+    float: right;
+    width: 43px;
+    margin-right: 15px;
+
+  }
+}
+
+.length {
+  display: inline-block;
+  font-size: 13px;
+  width: 15px;
+  margin-right: 10px;
+  color: $neutral_dark50;
+  text-align: right;
+}
+
+.previewContainer {
+  display: inline-block;
+  font-size: 16px;
 }
 
 .preview {
