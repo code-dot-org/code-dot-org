@@ -203,6 +203,20 @@ export default class ProjectManager {
     this.channelsStore.redirectToRemix(this.lastChannel);
   }
 
+  /**
+   * Publish the current channel.
+   */
+  publish() {
+    this.publishHelper(true);
+  }
+
+  /**
+   * Unpublish the current channel.
+   */
+  unpublish() {
+    this.publishHelper(false);
+  }
+
   addSaveSuccessListener(
     listener: (channel: Channel, sources: ProjectSources) => void
   ) {
@@ -384,6 +398,28 @@ export default class ProjectManager {
     const error = new Error(errorMessage);
     Lab2MetricsReporter.logError(errorMessage, error);
     throw error;
+  }
+
+  /**
+   * Helper for publish and unpublish methods, since they are so similar.
+   * Either publishes or unpublishes lastChannel, depending on the publish parameter.
+   * If this ProjectManager has been destroyed, or we're missing a channel, this method
+   * will throw an error.
+   * @param publish true if we should publish, false is we should unpublish
+   * @returns a Promise that resolves when the publish/unpublish is complete
+   */
+  private async publishHelper(publish: boolean) {
+    const actionType = publish ? 'publish' : 'unpublish';
+    this.throwErrorIfDestroyed(actionType);
+    if (!this.lastChannel || !this.lastChannel.projectType) {
+      this.logAndThrowError(`Cannot ${actionType} without channel`);
+      return;
+    }
+    if (publish) {
+      return this.channelsStore.publish(this.lastChannel);
+    } else {
+      return this.channelsStore.unpublish(this.lastChannel);
+    }
   }
 
   // LISTENERS
