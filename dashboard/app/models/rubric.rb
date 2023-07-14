@@ -11,6 +11,7 @@
 # Indexes
 #
 #  index_rubrics_on_lesson_id  (lesson_id) UNIQUE
+#  index_rubrics_on_level_id   (level_id)
 #
 class Rubric < ApplicationRecord
 end

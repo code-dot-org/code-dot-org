@@ -1624,6 +1624,7 @@ ActiveRecord::Schema.define(version: 2023_07_13_141627) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["lesson_id"], name: "index_rubrics_on_lesson_id", unique: true
+    t.index ["level_id"], name: "index_rubrics_on_level_id"
   end
 
   create_table "school_districts", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
