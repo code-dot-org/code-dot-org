@@ -550,14 +550,17 @@ class ProjectsController < ApplicationController
   # Redirect to the correct view/edit page for Lab2 projects. If a project owner is on a /view
   # page, redirect to /edit. If a non-owner is on an /edit page, redirect to /view.
   # For legacy (non-Lab2) labs, this is handled on the front-end.
+  # We will also redirect away from share URLs to the correct view/edit page as Lab2 does not
+  # yet support separate share pages.
   private def redirect_edit_view_for_lab2
     return nil unless @level.uses_lab2?
 
     project = Projects.new(get_storage_id).get(params[:channel_id])
     is_owner = project[:isOwner]
+    sharing = params[:iframe_embed] == true || params[:share] == true
 
-    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/edit" if is_owner && request.path.ends_with?('/view')
-    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if !is_owner && request.path.ends_with?('/edit')
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/edit" if is_owner && (sharing || request.path.ends_with?('/view'))
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if !is_owner && (sharing || request.path.ends_with?('/edit'))
   end
 
   # Automatically catch authorization exceptions on any methods in this controller
