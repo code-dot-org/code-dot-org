@@ -15,6 +15,10 @@ export interface ChannelsStore {
   save: (channel: Channel) => Promise<Response>;
 
   redirectToRemix: (channel: Channel) => void;
+
+  publish: (channel: Channel) => Promise<Response>;
+
+  unpublish: (channel: Channel) => Promise<Response>;
 }
 
 // Note: We don't need to actually save a channel for local storage.
@@ -42,6 +46,16 @@ export class LocalChannelsStore implements ChannelsStore {
   redirectToRemix() {
     // Remix is not supported for local storage.
   }
+
+  publish() {
+    // Publishing is not supported for local storage.
+    return Promise.resolve(new Response(''));
+  }
+
+  unpublish() {
+    // Unpublishing is not supported for local storage.
+    return Promise.resolve(new Response(''));
+  }
 }
 
 export class RemoteChannelsStore implements ChannelsStore {
@@ -62,5 +76,13 @@ export class RemoteChannelsStore implements ChannelsStore {
 
   redirectToRemix(channel: Channel) {
     projectsApi.redirectToRemix(channel.id, channel.projectType);
+  }
+
+  publish(channel: Channel) {
+    return channelsApi.publish(channel);
+  }
+
+  unpublish(channel: Channel) {
+    return channelsApi.unpublish(channel);
   }
 }
