@@ -16,6 +16,7 @@ class MinimalProjectHeader extends React.Component {
   render() {
     const {inRestrictedShareMode, legacyProjectName, lab2ProjectName} =
       this.props;
+    // Only one of legacyProjectName and lab2ProjectName will be defined.
     const projectName = legacyProjectName || lab2ProjectName;
 
     return (

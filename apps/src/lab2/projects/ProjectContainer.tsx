@@ -93,7 +93,6 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     // then possibly load a new header if the level has one.
     dispatch(clearHeader());
     // If there is no channel, we can't load a header.
-    // TODO: Handle the case of viewing another user's project.
     if (loadedChannelId && isOwnerOfChannel) {
       if (isStandaloneProjectLevel) {
         // Standalone projects see project header (includes rename option).
@@ -111,6 +110,8 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       !isOwnerOfChannel &&
       isStandaloneProjectLevel
     ) {
+      // If we are viewing another user's project, and this is a standalone
+      // project, show the minimal project header (project name and remix button).
       header.showMinimalProjectHeader();
     }
   }, [
