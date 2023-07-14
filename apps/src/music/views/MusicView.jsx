@@ -48,8 +48,8 @@ import {
 import {
   isReadOnlyWorkspace,
   setIsLoading,
-  setIsPageError,
   setLabReadyForReload,
+  setPageError,
 } from '@cdo/apps/lab2/lab2Redux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
@@ -60,7 +60,6 @@ import {
   setProjectUpdatedError,
   setProjectUpdatedSaving,
 } from '../../code-studio/projectRedux';
-import {logError} from '../utils/MusicMetrics';
 import musicI18n from '../locale';
 import UpdateTimer from './UpdateTimer';
 import ValidatorProvider from '@cdo/apps/lab2/progress/ValidatorProvider';
@@ -114,7 +113,7 @@ class UnconnectedMusicView extends React.Component {
     setProjectUpdatedAt: PropTypes.func,
     setProjectUpdatedError: PropTypes.func,
     setIsLoading: PropTypes.func,
-    setIsPageError: PropTypes.func,
+    setPageError: PropTypes.func,
     sources: PropTypes.object,
     levelData: PropTypes.object,
     labReadyForReload: PropTypes.bool,
@@ -122,6 +121,7 @@ class UnconnectedMusicView extends React.Component {
     navigateToNextLevel: PropTypes.func,
     isReadOnlyWorkspace: PropTypes.bool,
     updateLoadProgress: PropTypes.func,
+    appName: PropTypes.string,
   };
 
   constructor(props) {
@@ -218,30 +218,41 @@ class UnconnectedMusicView extends React.Component {
     // If we just finished loading the lab, then we need to update the
     // sources and level data.
     if (!prevProps.labReadyForReload && this.props.labReadyForReload) {
-      // Load and initialize the library and player if not done already.
-      // Read the library name first from level data, or from the project
-      // sources if not present on the level. If there is no library name
-      // specified on the level or sources, we will fallback to loading the
-      // default library.
-      let libraryName = this.props.levelData?.library;
-      if (!libraryName && this.props.sources?.labConfig?.music) {
-        libraryName = this.props.sources.labConfig.music.library;
-      }
-      await this.loadAndInitializePlayer(libraryName);
-
-      if (this.getStartSources() || this.props.sources) {
-        let codeToLoad = this.getStartSources();
-        if (this.props.sources?.source) {
-          codeToLoad = JSON.parse(this.props.sources.source);
+      // Only load if the current app is music.
+      if (this.props.appName === 'music') {
+        // Load and initialize the library and player if not done already.
+        // Read the library name first from level data, or from the project
+        // sources if not present on the level. If there is no library name
+        // specified on the level or sources, we will fallback to loading the
+        // default library.
+        let libraryName = this.props.levelData?.library;
+        if (!libraryName && this.props.sources?.labConfig?.music) {
+          libraryName = this.props.sources.labConfig.music.library;
         }
-        this.loadCode(codeToLoad);
-      }
+        await this.loadAndInitializePlayer(libraryName);
 
-      // Update components with level-specific data
-      if (this.props.levelData) {
-        this.musicBlocklyWorkspace.updateToolbox(this.props.levelData.toolbox);
-        this.library.setAllowedSounds(this.props.levelData.sounds);
-        this.props.setShowInstructions(!!this.props.levelData.text);
+        this.musicBlocklyWorkspace.init(
+          document.getElementById('blockly-div'),
+          this.onBlockSpaceChange,
+          this.props.isReadOnlyWorkspace
+        );
+
+        if (this.getStartSources() || this.props.sources) {
+          let codeToLoad = this.getStartSources();
+          if (this.props.sources?.source) {
+            codeToLoad = JSON.parse(this.props.sources.source);
+          }
+          this.loadCode(codeToLoad);
+        }
+
+        // Update components with level-specific data
+        if (this.props.levelData) {
+          this.musicBlocklyWorkspace.updateToolbox(
+            this.props.levelData.toolbox
+          );
+          this.library.setAllowedSounds(this.props.levelData.sounds);
+          this.props.setShowInstructions(!!this.props.levelData.text);
+        }
       }
 
       this.props.setLabReadyForReload(false);
@@ -260,7 +271,7 @@ class UnconnectedMusicView extends React.Component {
     try {
       this.library = await loadLibrary(libraryName);
     } catch (error) {
-      this.onError(error);
+      this.props.setPageError({errorMessage: 'Error loading library', error});
       return;
     }
 
@@ -273,11 +284,6 @@ class UnconnectedMusicView extends React.Component {
     Globals.setLibrary(this.library);
     Globals.setPlayer(this.player);
 
-    this.musicBlocklyWorkspace.init(
-      document.getElementById('blockly-div'),
-      this.onBlockSpaceChange,
-      this.props.isReadOnlyWorkspace
-    );
     this.player.initialize(this.library, this.props.updateLoadProgress);
 
     this.setState({
@@ -286,11 +292,6 @@ class UnconnectedMusicView extends React.Component {
     });
 
     this.props.setIsLoading(false);
-  };
-
-  onError = error => {
-    this.props.setIsPageError(true);
-    logError(error);
   };
 
   // Returns whether we just have a single level.
@@ -708,6 +709,7 @@ const MusicView = connect(
     levelData: state.lab.levelData,
     labReadyForReload: state.lab.labReadyForReload,
     isReadOnlyWorkspace: isReadOnlyWorkspace(state),
+    appName: state.lab.appName,
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
@@ -728,7 +730,7 @@ const MusicView = connect(
     setProjectUpdatedAt: updatedAt => dispatch(setProjectUpdatedAt(updatedAt)),
     setProjectUpdatedError: () => dispatch(setProjectUpdatedError()),
     setIsLoading: isLoading => dispatch(setIsLoading(isLoading)),
-    setIsPageError: isPageError => dispatch(setIsPageError(isPageError)),
+    setPageError: pageError => dispatch(setPageError(pageError)),
     setLabReadyForReload: labReadyForReload =>
       dispatch(setLabReadyForReload(labReadyForReload)),
     navigateToNextLevel: () => dispatch(navigateToNextLevel()),
