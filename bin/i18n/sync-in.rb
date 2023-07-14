@@ -13,7 +13,8 @@ require 'digest/md5'
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
-require_relative '../animation_assets/manifest_builder'
+
+Dir[File.expand_path('../resources/**/*.rb', __FILE__)].sort.each {|file| require file}
 
 module I18n
   module SyncIn
@@ -23,9 +24,9 @@ module I18n
       HocSyncUtils.sync_in
       localize_level_and_project_content
       localize_block_content
-      localize_animation_library
-      localize_shared_functions
-      localize_course_offerings
+      I18n::Resources::Apps::Animations.sync_in
+      I18n::Resources::Dashboard::SharedFunctions.sync_in
+      I18n::Resources::Dashboard::CourseOfferings.sync_in
       localize_standards
       localize_docs
       puts "Copying source files"
@@ -398,10 +399,11 @@ module I18n
 
       if level.is_a? BubbleChoice
         i18n_strings["sublevels"] = {}
+        # Block categories, variables, and parameters are handled differently below and are generally covered by the script levels
+        ignored_types = %w[block_categories variable_names parameter_names]
         level.sublevels.map do |sublevel|
           i18n_strings["sublevels"][sublevel.name] = get_i18n_strings sublevel
-          # Block categories, variables, and parameters are handled differently below and are generally covered by the script levels
-          %w[block_categories variable_names parameter_names].each do |type|
+          ignored_types.each do |type|
             i18n_strings["sublevels"][sublevel.name].delete(type) if i18n_strings["sublevels"][sublevel.name].key? type
           end
         end
@@ -622,42 +624,6 @@ module I18n
       end
 
       File.write("dashboard/config/locales/blocks.en.yml", I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"blocks" => blocks}}}))
-    end
-
-    def self.localize_animation_library
-      spritelab_animation_source_file = "#{I18N_SOURCE_DIR}/animations/spritelab_animation_library.json"
-      FileUtils.mkdir_p(File.dirname(spritelab_animation_source_file))
-      File.open(spritelab_animation_source_file, "w") do |file|
-        animation_strings = ManifestBuilder.new({spritelab: true, quiet: true}).get_animation_strings
-        file.write(JSON.pretty_generate(animation_strings))
-      end
-    end
-
-    def self.localize_shared_functions
-      puts "Preparing shared functions"
-
-      shared_functions = SharedBlocklyFunction.where(level_type: 'GamelabJr').pluck(:name)
-      hash = {}
-      shared_functions.sort.each do |func|
-        hash[func] = func
-      end
-      File.write("i18n/locales/source/dashboard/shared_functions.yml", I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"shared_functions" => hash}}}))
-    end
-
-    # Aggregate every CourseOffering record's `key` as the translation key, and
-    # each record's `display_name` as the translation string.
-    def self.localize_course_offerings
-      puts "Preparing course offerings"
-
-      hash = {}
-      CourseOffering.all.sort.each do |co|
-        hash[co.key] = co.display_name
-      end
-      write_dashboard_json('course_offerings', hash)
-    end
-
-    def self.write_dashboard_json(location, hash)
-      File.write(File.join(I18N_SOURCE_DIR, "dashboard/#{location}.json"), JSON.pretty_generate(hash))
     end
 
     def self.select_redactable(i18n_strings)

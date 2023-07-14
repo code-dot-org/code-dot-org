@@ -45,7 +45,7 @@
               %tr{data:{browser: browser, feature: feature}}
                 %td= browser
                 %td
-                  %a{href: "https://github.com/code-dot-org/code-dot-org/blob/#{git_branch}/dashboard/test/ui/#{feature}", target: '_blank'}= feature.sub(/features\//, '')
+                  %a{href: "https://github.com/code-dot-org/code-dot-org/blob/#{git_branch}/dashboard/test/ui/#{feature}", target: '_blank'}= feature.sub(/.*features\//, '')
                 %td.status
                 %td.log-link
                 %td.rerun-command

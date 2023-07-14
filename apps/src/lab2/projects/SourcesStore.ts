@@ -4,6 +4,7 @@
  * A SourcesStore manages the loading and saving of sources to the appropriate location.
  */
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import Lab2MetricsReporter from '../Lab2MetricsReporter';
 import {ProjectSources} from '../types';
 import * as sourcesApi from './sourcesApi';
 const {getTabId} = require('@cdo/apps/utils');
@@ -60,12 +61,6 @@ export class RemoteSourcesStore implements SourcesStore {
       this.firstSaveTime = this.firstSaveTime || timestamp;
       this.currentVersionId = versionId;
     } else {
-      MetricsReporter.logError({
-        message: 'Error saving sources',
-        status: response.status,
-        statusText: response.statusText,
-        channelId,
-      });
       throw new Error(response.status + ' ' + response.statusText);
     }
 

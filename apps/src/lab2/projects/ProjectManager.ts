@@ -13,8 +13,8 @@
 import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
 import {Channel, Project, ProjectSources} from '../types';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {currentLocation} from '@cdo/apps/utils';
+import Lab2MetricsReporter from '../Lab2MetricsReporter';
 
 export default class ProjectManager {
   private readonly channelId: string;
@@ -64,7 +64,7 @@ export default class ProjectManager {
   // Load the project from the sources and channels store.
   async load(): Promise<Project> {
     if (this.destroyed) {
-      throw new Error('Project Manager destroyed');
+      this.throwErrorIfDestroyed('load');
     }
     let sources: ProjectSources | undefined;
     try {
@@ -74,7 +74,7 @@ export default class ProjectManager {
       // If sourceResponse is a 404 (not found), we still want to load the channel.
       // Source can return not found if the project is new. Throw if not a 404.
       if (!(error as Error).message.includes('404')) {
-        this.logError('Error loading sources', error as Error);
+        Lab2MetricsReporter.logError('Error loading sources', error as Error);
         throw error;
       }
     }
@@ -83,7 +83,7 @@ export default class ProjectManager {
     try {
       channel = await this.channelsStore.load(this.channelId);
     } catch (error) {
-      this.logError('Error loading channel', error as Error);
+      Lab2MetricsReporter.logError('Error loading channel', error as Error);
       throw error;
     }
 
@@ -186,6 +186,15 @@ export default class ProjectManager {
     );
   }
 
+  redirectToRemix() {
+    this.throwErrorIfDestroyed('redirectToRemix');
+    if (!this.lastChannel || !this.lastChannel.projectType) {
+      this.logAndThrowError('Cannot remix without channel');
+      return;
+    }
+    this.channelsStore.redirectToRemix(this.lastChannel);
+  }
+
   addSaveSuccessListener(
     listener: (channel: Channel, sources: ProjectSources) => void
   ) {
@@ -277,7 +286,7 @@ export default class ProjectManager {
   private onSaveFail(errorMessage: string, error: Error) {
     this.saveInProgress = false;
     this.executeSaveFailListeners(error);
-    this.logError(errorMessage, error);
+    Lab2MetricsReporter.logError(errorMessage, error);
   }
 
   private canSave(forceSave: boolean): boolean {
@@ -355,6 +364,20 @@ export default class ProjectManager {
     this.saveQueued = false;
   }
 
+  private throwErrorIfDestroyed(actionName: string) {
+    if (this.destroyed) {
+      this.logAndThrowError(
+        `Tried to ${actionName}, but the Project Manager was destroyed.`
+      );
+    }
+  }
+
+  private logAndThrowError(errorMessage: string) {
+    const error = new Error(errorMessage);
+    Lab2MetricsReporter.logError(errorMessage, error);
+    throw error;
+  }
+
   // LISTENERS
   private executeSaveSuccessListeners(
     channel: Channel,
@@ -373,13 +396,5 @@ export default class ProjectManager {
 
   private executeSaveStartListeners() {
     this.saveStartListeners.forEach(listener => listener());
-  }
-
-  private logError(errorMessage: string, error: Error): void {
-    MetricsReporter.logError({
-      channelId: this.channelId,
-      errorMessage,
-      error,
-    });
   }
 }

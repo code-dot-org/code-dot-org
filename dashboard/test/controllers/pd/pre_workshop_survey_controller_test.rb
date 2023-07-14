@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Pd::PreWorkshopSurveyControllerTest < ::ActionController::TestCase
+class Pd::PreWorkshopSurveyControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
   setup_all do
     @teacher = create :teacher

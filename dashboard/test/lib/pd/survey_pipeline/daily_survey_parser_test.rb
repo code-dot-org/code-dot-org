@@ -16,19 +16,19 @@ module Pd::SurveyPipeline
       day = 0
 
       @ws_survey_questions = create :pd_survey_question, form_id: @ws_form_id,
-        questions: '['\
-          '{"id": 1, "type": "number", "name": "overallRating", "text": "Overall rating"},'\
-          '{"id": 2, "type": "dropdown", "name": "selectOption", "text": "Select one of the options",'\
-          '"options": ["Option 1", "Option 2", "Option 3"]},'\
-          '{"id": 3, "type": "textarea", "name": "describe", "text": "Describe something"},'\
-          '{"id": 4, "type": "matrix", "name": "multiQuestions", "text": "Answer all sub questions",'\
-          '"options": ["Option 1", "Option 2", "Option 3"],'\
-          '"sub_questions": ["Sub question 1", "Sub question 2", "Sub question 3"]}'\
+        questions: '[' \
+          '{"id": 1, "type": "number", "name": "overallRating", "text": "Overall rating"},' \
+          '{"id": 2, "type": "dropdown", "name": "selectOption", "text": "Select one of the options",' \
+          '"options": ["Option 1", "Option 2", "Option 3"]},' \
+          '{"id": 3, "type": "textarea", "name": "describe", "text": "Describe something"},' \
+          '{"id": 4, "type": "matrix", "name": "multiQuestions", "text": "Answer all sub questions",' \
+          '"options": ["Option 1", "Option 2", "Option 3"],' \
+          '"sub_questions": ["Sub question 1", "Sub question 2", "Sub question 3"]}' \
         ']'
 
       @ws_submission = create :pd_workshop_daily_survey,
         form_id: @ws_form_id, pd_workshop: ws, user: teacher, day: day,
-        answers: '{"1":"5.0", "2":"Option 2", "3":"Like it", "4": '\
+        answers: '{"1":"5.0", "2":"Option 2", "3":"Like it", "4": ' \
           '{"Sub question 1": "Option 1", "Sub question 2": "Option 2", "Sub question 3": "Option 3"}}'
     end
 

@@ -26,6 +26,7 @@ var audioSystem = null;
  *   {
  *     delayTimeSeconds: number, // Delay time used in the delay effect
  *     releaseTimeSeconds: number // Release time for fading out fixed-duration sounds
+ *     updateLoadProgress: progress: number => void // Callback to report loading progress
  *     reportSoundLibraryLoadTime: loadTimeMs: number => void // Optional callback to report sound library load time
  *   }
  */
@@ -35,7 +36,11 @@ export function InitSound(desiredSounds, options) {
   restrictedSoundUrlPath = '/restricted/musiclab/';
   audioSystem = new WebAudio(options);
 
-  LoadSounds(desiredSounds, options.reportSoundLibraryLoadTime);
+  LoadSounds(
+    desiredSounds,
+    options.updateLoadProgress,
+    options.reportSoundLibraryLoadTime
+  );
 }
 
 export function LoadSoundFromBuffer(id, buffer) {
@@ -51,7 +56,11 @@ export function GetCurrentAudioTime() {
   return audioSystem?.getCurrentTime();
 }
 
-async function LoadSounds(desiredSounds, reportSoundLibraryLoadTime) {
+async function LoadSounds(
+  desiredSounds,
+  updateLoadProgress,
+  reportSoundLibraryLoadTime
+) {
   const soundLoadStartTime = Date.now();
   soundList = desiredSounds;
 
@@ -90,6 +99,9 @@ async function LoadSounds(desiredSounds, reportSoundLibraryLoadTime) {
           const loadTimeMs = Date.now() - soundLoadStartTime;
           reportSoundLibraryLoadTime(loadTimeMs);
         }
+        updateLoadProgress(
+          (soundList.length - soundsToLoad) / soundList.length
+        );
       }
     );
   }
