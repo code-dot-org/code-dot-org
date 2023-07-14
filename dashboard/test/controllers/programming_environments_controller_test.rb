@@ -159,8 +159,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
 
     programming_environment = create :programming_environment, name: 'test-environment'
 
-    File.expects(:exist?).returns(true).once
-    File.expects(:delete).once
+    FileUtils.expects(:rm_f).once
     delete :destroy, params: {
       name: programming_environment.name
     }
@@ -173,8 +172,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
 
     programming_environment = create :programming_environment, name: 'test-environment'
 
-    File.expects(:exist?).returns(true).once
-    File.expects(:delete).throws(StandardError).once
+    FileUtils.expects(:rm_f).throws(StandardError).once
     delete :destroy, params: {
       name: programming_environment.name
     }

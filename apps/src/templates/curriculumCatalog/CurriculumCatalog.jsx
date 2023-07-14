@@ -83,6 +83,8 @@ const getInitialFilterStates = () => {
   Object.keys(urlParams).forEach(paramKey => {
     if (filterTypeKeys.includes(paramKey)) {
       filters[paramKey] = getValidParamValues(paramKey, urlParams[paramKey]);
+    } else if (paramKey === 'translated') {
+      filters['translated'] = urlParams[paramKey] === 'true';
     }
   });
   return filters;
@@ -190,6 +192,15 @@ const CurriculumCatalog = ({
 
     setNumFilteredTranslatedCurricula(newNumFilteredTranslatedCurricula);
     setFilteredCurricula(newFilteredCurricula);
+
+    if (newFilteredCurricula.length === 0) {
+      analyticsReporter.sendEvent(
+        EVENTS.CURRICULUM_CATALOG_NO_AVAILABLE_CURRICULA_EVENT,
+        {
+          filters_selected: JSON.stringify(appliedFilters),
+        }
+      );
+    }
   }, [curriculaData, appliedFilters]);
 
   // Handles updating the given filter and the URL parameters.
@@ -198,7 +209,8 @@ const CurriculumCatalog = ({
     newFilters[filterKey] = values;
     setAppliedFilters(newFilters);
 
-    const valuesParam = values.length > 0 ? values : undefined;
+    const valuesParam =
+      values.length > 0 || filterKey === 'translated' ? values : undefined;
     updateQueryParam(filterKey, valuesParam, true);
   };
 
@@ -216,11 +228,36 @@ const CurriculumCatalog = ({
       updatedFilters = appliedFilters[filterKey].filter(item => item !== value);
     }
     handleUpdateFilter(filterKey, updatedFilters);
+
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_DROPDOWN_FILTER_SELECTED_EVENT,
+      {
+        filter_category: filterKey,
+        filter_name: value,
+      }
+    );
   };
 
   // Selects all options within the given filter.
   const handleSelectAllOfFilter = filterKey => {
     handleUpdateFilter(filterKey, Object.keys(filterTypes[filterKey].options));
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_DROPDOWN_FILTER_SELECTED_EVENT,
+      {
+        filter_category: filterKey,
+        filter_name: Object.keys(filterTypes[filterKey].options).toString(),
+      }
+    );
+  };
+
+  const handleToggleLanguageFilter = isToggled => {
+    handleUpdateFilter('translated', isToggled);
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_TOGGLE_LANGUAGE_FILTER_EVENT,
+      {
+        toggle_setting: isToggled,
+      }
+    );
   };
 
   // Clears all filter selections.
@@ -229,7 +266,10 @@ const CurriculumCatalog = ({
     Object.keys(filterTypes).forEach(filterKey =>
       updateQueryParam(filterKey, undefined, false)
     );
-  }, []);
+    if (!isEnglish) {
+      updateQueryParam('translated', undefined, false);
+    }
+  }, [isEnglish]);
 
   // Clears selections within the given filter.
   const handleClearAllOfFilter = filterKey => {
@@ -397,7 +437,7 @@ const CurriculumCatalog = ({
             })}
             size="m"
             checked={appliedFilters['translated']}
-            onChange={e => handleUpdateFilter('translated', e.target.checked)}
+            onChange={e => handleToggleLanguageFilter(e.target.checked)}
           />
         </div>
       )}
