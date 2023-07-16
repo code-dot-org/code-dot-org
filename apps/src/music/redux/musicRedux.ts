@@ -159,7 +159,11 @@ export const getCurrentlyPlayingBlockIds = (state: {
     const currentlyPlaying =
       currentPlayheadPosition !== 0 &&
       currentPlayheadPosition >= playbackEvent.when &&
-      currentPlayheadPosition < playbackEvent.when + playbackEvent.length;
+      currentPlayheadPosition < playbackEvent.when + playbackEvent.length &&
+      !(
+        playbackEvent.skipContext?.insideRandom &&
+        playbackEvent.skipContext?.skipSound
+      );
 
     if (currentlyPlaying) {
       playingBlockIds.push(playbackEvent.blockId);
