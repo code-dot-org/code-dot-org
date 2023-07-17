@@ -73,7 +73,7 @@ GROUP_FILTERS = {
 
 # Slack room -> username of a code.org email
 MONITORING_USERS = {
-  'programs_team' => ['alicia.modoor', 'andrea', 'becky', 'dana', 'danielle', 'dave.frye', 'kristyn', 'sam.morris']
+  'programs_team' => ['alicia.modoor', 'andrea', 'banks.spicer', 'becky', 'dana', 'danielle', 'dave.frye', 'kristyn', 'sam.morris']
 
 }
 
