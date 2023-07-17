@@ -80,7 +80,13 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       const projectManager = Lab2Registry.getInstance().getProjectManager();
       // Force a save before the page unloads, if there are unsaved changes.
       // If we need to force a save, prevent navigation so we can save first.
-      if (projectManager?.hasUnsavedChanges()) {
+      // We skip this if we are already force reloading, as that will occur when
+      // saving already encountered an issue.
+      if (
+        projectManager &&
+        !projectManager.isForceReloading() &&
+        projectManager.hasUnsavedChanges()
+      ) {
         projectManager.cleanUp();
         event.preventDefault();
         event.returnValue = '';
