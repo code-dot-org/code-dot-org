@@ -13,11 +13,11 @@ RUN sudo apt-get -y install rbenv \
     && git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 
 # Install Ruby and replace the system symbolic link.
-RUN rbenv install 2.7.5 \
+RUN rbenv install 3.0.5 \
     && echo -n '\n# rbenv init\neval "$(rbenv init -)"\n' >> ~/.bashrc \
-    && rbenv global 2.7.5 \
+    && rbenv global 3.0.5 \
     && sudo rm /usr/bin/ruby \
-    && sudo ln -s /home/vscode/versions/2.7.5/bin/ruby /usr/bin/ruby
+    && sudo ln -s /home/vscode/versions/3.0.5/bin/ruby /usr/bin/ruby
 
 # Install Node
 RUN sudo apt-get -y install nodejs npm \
@@ -47,4 +47,4 @@ ENV AWS_PROFILE=cdo
 RUN echo -n '\n# Chromium Binary\nexport CHROME_BIN=/usr/bin/chromium-browser\n' >> ~/.bashrc
 
 # Add Ruby binaries to path
-RUN echo -n '\n# Add Ruby binaries on path\nexport PATH=$PATH:/home/vscode/.rbenv/versions/2.7.5/bin\n' >> ~/.bashrc
+RUN echo -n '\n# Add Ruby binaries on path\nexport PATH=$PATH:/home/vscode/.rbenv/versions/3.0.5/bin\n' >> ~/.bashrc
