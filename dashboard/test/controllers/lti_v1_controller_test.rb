@@ -164,10 +164,11 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   test 'auth - LTI Resource Type wrong' do
     payload = get_valid_payload
-    payload['https://purl.imsglobal.org/spec/lti/claim/message_type'] = 'file'
+    payload[:'https://purl.imsglobal.org/spec/lti/claim/message_type'] = 'file'
+    LtiV1Controller.any_instance.stubs(:get_decoded_jwt).returns payload
     jwt = create_jwt(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
-    assert_response :unauthorized
+    assert_response :not_acceptable
   end
 
   test 'auth - error raised in decoding jwt' do

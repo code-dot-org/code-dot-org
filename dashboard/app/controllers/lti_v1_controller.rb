@@ -79,7 +79,7 @@ class LtiV1Controller < ApplicationController
 
     if jwt_verifier.verify_jwt
       message_type = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/message_type']
-      return unauthorized_status unless message_type == 'LtiResourceLinkRequest'
+      return error_status unless message_type == 'LtiResourceLinkRequest'
 
       target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
       redirect_to target_link_uri
@@ -101,6 +101,10 @@ class LtiV1Controller < ApplicationController
 
   def unauthorized_status
     render(status: :unauthorized, json: {error: 'Unauthorized'})
+  end
+
+  def error_status
+    render(status: :not_acceptable, json: {error: 'Only LtiResourceLink is supported right now'})
   end
 
   def create_state_and_nonce
