@@ -285,6 +285,7 @@ module ScriptConstants
     # next prefix based on constant mapping, then add the year to the recommended prefix.
     # Example: coursea-2019 becomes prefix: coursea, year: 2019.
     # coursea maps to courseb, so return courseb-2019.
+    applab_courses = %w(coursef express)
     CSF_COURSE_PATTERNS.each do |r|
       match_data = r.match(course_name)
       next unless match_data
@@ -292,7 +293,7 @@ module ScriptConstants
       prefix = match_data[1]
       year = match_data[2]
 
-      return "applab-intro" if %w(coursef express).include?(prefix)
+      return "applab-intro" if applab_courses.include?(prefix)
 
       prefix_mapping = {
         "coursea" => "courseb",
@@ -324,7 +325,7 @@ module ScriptConstants
       ScriptConstants.unit_in_category?(:csd_2022, script) ||
       ScriptConstants.unit_in_category?(:twenty_hour, script) ||
       ScriptConstants.unit_in_category?(:hoc, script) ||
-      JIGSAW_NAME == script ||
+      script == JIGSAW_NAME ||
       ADDITIONAL_I18N_UNITS.include?(script)
   end
 end

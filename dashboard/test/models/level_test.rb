@@ -695,8 +695,7 @@ class LevelTest < ActiveSupport::TestCase
 
     custom_i18n = {
       'data' => {
-        'callouts' => {
-        }
+        'callouts' => {}
       }
     }
 

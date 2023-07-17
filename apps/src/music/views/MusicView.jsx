@@ -48,19 +48,17 @@ import {
 import {
   isReadOnlyWorkspace,
   setIsLoading,
-  setIsPageError,
   setLabReadyForReload,
+  setPageError,
 } from '@cdo/apps/lab2/lab2Redux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode} from '../constants';
-import header from '../../code-studio/header';
 import {
   setProjectUpdatedAt,
   setProjectUpdatedError,
   setProjectUpdatedSaving,
 } from '../../code-studio/projectRedux';
-import {logError} from '../utils/MusicMetrics';
 import musicI18n from '../locale';
 import UpdateTimer from './UpdateTimer';
 import ValidatorProvider from '@cdo/apps/lab2/progress/ValidatorProvider';
@@ -114,7 +112,7 @@ class UnconnectedMusicView extends React.Component {
     setProjectUpdatedAt: PropTypes.func,
     setProjectUpdatedError: PropTypes.func,
     setIsLoading: PropTypes.func,
-    setIsPageError: PropTypes.func,
+    setPageError: PropTypes.func,
     sources: PropTypes.object,
     levelData: PropTypes.object,
     labReadyForReload: PropTypes.bool,
@@ -159,8 +157,6 @@ class UnconnectedMusicView extends React.Component {
       currentLibraryName: null,
     };
 
-    // Music Lab currently does not support share and remix
-    header.showHeaderForProjectBacked({showShareAndRemix: false});
     setUpBlocklyForMusicLab();
   }
 
@@ -260,7 +256,7 @@ class UnconnectedMusicView extends React.Component {
     try {
       this.library = await loadLibrary(libraryName);
     } catch (error) {
-      this.onError(error);
+      this.props.setPageError({errorMessage: 'Error loading library', error});
       return;
     }
 
@@ -278,7 +274,15 @@ class UnconnectedMusicView extends React.Component {
       this.onBlockSpaceChange,
       this.props.isReadOnlyWorkspace
     );
-    this.player.initialize(this.library, this.props.updateLoadProgress);
+    try {
+      this.player.initialize(this.library, this.props.updateLoadProgress);
+    } catch (error) {
+      this.props.setPageError({
+        errorMessage: 'Error initializing music player',
+        error,
+      });
+      return;
+    }
 
     this.setState({
       loadedLibrary: true,
@@ -286,11 +290,6 @@ class UnconnectedMusicView extends React.Component {
     });
 
     this.props.setIsLoading(false);
-  };
-
-  onError = error => {
-    this.props.setIsPageError(true);
-    logError(error);
   };
 
   // Returns whether we just have a single level.
@@ -728,7 +727,7 @@ const MusicView = connect(
     setProjectUpdatedAt: updatedAt => dispatch(setProjectUpdatedAt(updatedAt)),
     setProjectUpdatedError: () => dispatch(setProjectUpdatedError()),
     setIsLoading: isLoading => dispatch(setIsLoading(isLoading)),
-    setIsPageError: isPageError => dispatch(setIsPageError(isPageError)),
+    setPageError: pageError => dispatch(setPageError(pageError)),
     setLabReadyForReload: labReadyForReload =>
       dispatch(setLabReadyForReload(labReadyForReload)),
     navigateToNextLevel: () => dispatch(navigateToNextLevel()),

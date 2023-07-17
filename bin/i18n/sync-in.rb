@@ -13,7 +13,8 @@ require 'digest/md5'
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
-require_relative '../animation_assets/manifest_builder'
+
+Dir[File.expand_path('../resources/**/*.rb', __FILE__)].sort.each {|file| require file}
 
 module I18n
   module SyncIn
@@ -22,19 +23,17 @@ module I18n
       Services::I18n::CurriculumSyncUtils.sync_in
       HocSyncUtils.sync_in
       localize_level_and_project_content
-      localize_block_content
-      localize_animation_library
-      localize_shared_functions
-      localize_course_offerings
-      localize_standards
-      localize_docs
+      I18n::Resources::Dashboard::Blocks.sync_in
+      I18n::Resources::Apps::Animations.sync_in
+      I18n::Resources::Dashboard::SharedFunctions.sync_in
+      I18n::Resources::Dashboard::CourseOfferings.sync_in
+      I18n::Resources::Dashboard::Standards.sync_in
+      I18n::Resources::Dashboard::Docs.sync_in
       puts "Copying source files"
       I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
       localize_external_sources
       localize_course_resources
       redact_level_content
-      redact_block_content
-      redact_docs
       redact_script_and_course_content
       redact_labs_content
       localize_markdown_content
@@ -42,141 +41,6 @@ module I18n
     rescue => exception
       puts "Sync in failed from the error: #{exception}"
       raise exception
-    end
-
-    # Takes strings describing and naming Framework, StandardCategory, and Standard
-    # and places them in the source pool to be sent to crowdin.
-    def self.localize_standards
-      puts "Preparing standards content"
-      standards_content_path = File.join(I18N_SOURCE_DIR, "standards")
-
-      frameworks = {}
-
-      # Localize all frameworks.
-      Framework.all.each do |framework|
-        frameworks[framework.shortcode] = {
-          'name' => framework.name,
-          'categories' => {},
-          'standards' => {}
-        }
-      end
-
-      # Localize all categories.
-      StandardCategory.all.each do |category|
-        framework = category.framework
-
-        categories = frameworks[framework.shortcode]['categories']
-        categories[category.shortcode] = {
-          'description' => category.description
-        }
-      end
-
-      # Localize all standards.
-      Standard.all.each do |standard|
-        framework = standard.framework
-
-        standards = frameworks[framework.shortcode]['standards']
-        standards[standard.shortcode] = {
-          'description' => standard.description
-        }
-      end
-
-      FileUtils.mkdir_p(standards_content_path)
-
-      # Then, for each framework, generate a file for it.
-      frameworks.keys.each do |framework|
-        File.write(File.join(standards_content_path, "#{framework}.json"), JSON.pretty_generate(frameworks[framework]))
-      end
-    end
-
-    # This function localizes content in studio.code.org/docs
-    def self.localize_docs
-      puts "Preparing /docs content"
-
-      # TODO: Adding spritelab and Javalab to translation pipeline
-      # Currently supporting translations for applab, gamelab and weblab. NOT translating javalab and spritelab.
-      # Javalab documentations exists in a different table because it has a different structure, more align with java.
-      # Spritelab uses translatable block names, unlike JavaScript blocks.
-      localized_environments = %w(applab gamelab weblab)
-
-      ### Localize Programming Environments
-      # For each programming environment, name is used as key, title is used as name
-      ProgrammingEnvironment.all.sort.each do |env|
-        next unless localized_environments.include?(env.name)
-
-        # In the sync-in, each environment is store in an individual file.
-        # Files are merged during the sync-out in programming_environments.{locale}.json
-        docs_content_file = File.join(I18N_SOURCE_DIR, "docs", env.name + ".json")
-
-        programming_env_docs = {}
-        programming_env_docs[env.name] = {
-          'name' => env.properties["title"],
-          'description' => env.properties["description"],
-          'categories' => {},
-        }
-        ### Localize Categories for Navigation
-        # Programming environment has a method defined in the programming_environment model that returns the
-        # categories for navigation. The method is used to obtain the current categories existing in the database.
-        categories_data = programming_env_docs[env.name]["categories"]
-        env.categories_for_navigation.each do |category_for_navigation|
-          category_key = category_for_navigation[:key]
-          categories_data.store(
-            category_key, {
-              'name' => category_for_navigation[:name],
-            'expressions' => {}
-            }
-          )
-
-          ### localize Programming Expressions
-          # expression_docs.properties["syntax"] is not translated as it is the JavaScript expression syntax
-          expressions_data = categories_data[category_key]["expressions"]
-          category_for_navigation[:docs].each do |expression|
-            expression_key = expression[:key]
-            expression_docs = ProgrammingExpression.find_by_id(expression[:id])
-            expressions_data.store(
-              expression_key, {
-                'content' => expression_docs.properties["content"],
-              'examples' => ({} unless expression_docs.properties["examples"].nil?),
-              'palette_params' => ({} unless expression_docs.properties["palette_params"].nil?),
-              'return_value' => expression_docs.properties["return_value"],
-              'short_description' => expression_docs.properties["short_description"],
-              'tips' => expression_docs.properties["tips"]
-              }.compact
-            )
-
-            ### Localize Examples
-            # Programming expressions may have 0 or more examples.
-            # Only example["name"] and example["description"] are translated. example["code"] is NOT translated.
-            example_docs = expressions_data[expression_key]["examples"]
-            expression_docs.properties["examples"]&.each do |example|
-              unless example["name"].nil_or_empty? && example["description"].nil_or_empty?
-                example_docs.store(
-                  example["name"], {
-                    'name' => (example["name"] if example["name"]),
-                  'description' => (example["description"] if example["description"]),
-                  }.compact
-                )
-              end
-            end
-
-            ### localize Parameters
-            # Programming expresions may have 0 or more parameters.
-            # Parameter name (param["name"]) is not translated as it needs to match the JavaScript expression syntax.
-            param_docs = expressions_data[expression_key]["palette_params"]
-            expression_docs.properties["palette_params"]&.each do |param|
-              param_docs.store(
-                param["name"], {
-                  'type' => (param["type"] if param["type"]),
-                'description' => (param["description"] if param["description"])
-                }.compact
-              )
-            end
-          end
-        end
-        # Generate a file containing the string of each Programming Environment.
-        FileUtils.mkdir_p(File.dirname(docs_content_file))
-        File.write(docs_content_file, JSON.pretty_generate(programming_env_docs.compact))
-      end
     end
 
     # These files are synced in using the `bin/i18n-codeorg/in.sh` script.
@@ -398,10 +262,11 @@ module I18n
 
       if level.is_a? BubbleChoice
         i18n_strings["sublevels"] = {}
+        # Block categories, variables, and parameters are handled differently below and are generally covered by the script levels
+        ignored_types = %w[block_categories variable_names parameter_names]
         level.sublevels.map do |sublevel|
           i18n_strings["sublevels"][sublevel.name] = get_i18n_strings sublevel
-          # Block categories, variables, and parameters are handled differently below and are generally covered by the script levels
-          %w[block_categories variable_names parameter_names].each do |type|
+          ignored_types.each do |type|
             i18n_strings["sublevels"][sublevel.name].delete(type) if i18n_strings["sublevels"][sublevel.name].key? type
           end
         end
@@ -593,37 +458,6 @@ module I18n
       File.write(courses_source, I18nScriptUtils.to_crowdin_yaml(courses_yaml))
     end
 
-    # Pull in various fields for custom blocks from .json files and save them to
-    # blocks.en.yml.
-    def self.localize_block_content
-      puts "Preparing block content"
-
-      blocks = {}
-
-      Dir.glob('dashboard/config/blocks/**/*.json').sort.each do |file|
-        name = File.basename(file, '.*')
-        config = JSON.parse(File.read(file))['config']
-        blocks[name] = {
-          'text' => config['blockText'],
-        }
-
-        next unless config['args']
-
-        args_with_options = {}
-        config['args'].each do |arg|
-          next if !arg['options'] || arg['options'].empty?
-
-          options = args_with_options[arg['name']] = {}
-          arg['options'].each do |option_tuple|
-            options[option_tuple.last] = option_tuple.first
-          end
-        end
-        blocks[name]['options'] = args_with_options unless args_with_options.empty?
-      end
-
-      File.write("dashboard/config/locales/blocks.en.yml", I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"blocks" => blocks}}}))
-    end
-
     def self.localize_animation_library
       spritelab_animation_source_file = "#{I18N_SOURCE_DIR}/animations/spritelab_animation_library.json"
       FileUtils.mkdir_p(File.dirname(spritelab_animation_source_file))
@@ -631,33 +465,6 @@ module I18n
         animation_strings = ManifestBuilder.new({spritelab: true, quiet: true}).get_animation_strings
         file.write(JSON.pretty_generate(animation_strings))
       end
-    end
-
-    def self.localize_shared_functions
-      puts "Preparing shared functions"
-
-      shared_functions = SharedBlocklyFunction.where(level_type: 'GamelabJr').pluck(:name)
-      hash = {}
-      shared_functions.sort.each do |func|
-        hash[func] = func
-      end
-      File.write("i18n/locales/source/dashboard/shared_functions.yml", I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"shared_functions" => hash}}}))
-    end
-
-    # Aggregate every CourseOffering record's `key` as the translation key, and
-    # each record's `display_name` as the translation string.
-    def self.localize_course_offerings
-      puts "Preparing course offerings"
-
-      hash = {}
-      CourseOffering.all.sort.each do |co|
-        hash[co.key] = co.display_name
-      end
-      write_dashboard_json('course_offerings', hash)
-    end
-
-    def self.write_dashboard_json(location, hash)
-      File.write(File.join(I18N_SOURCE_DIR, "dashboard/#{location}.json"), JSON.pretty_generate(hash))
     end
 
     def self.select_redactable(i18n_strings)
@@ -703,17 +510,6 @@ module I18n
       File.write(source_path, JSON.pretty_generate(source_data.deep_merge(redacted_data)))
     end
 
-    def self.redact_docs
-      puts "Redacting /docs content"
-
-      Dir.glob(File.join(I18N_SOURCE_DIR, "docs", "*.json")).each do |source|
-        backup = source.sub("source", "original")
-        FileUtils.mkdir_p(File.dirname(backup))
-        FileUtils.cp(source, backup)
-        RedactRestoreUtils.redact(source, source, ['visualCodeBlock', 'link', 'resourceLink'])
-      end
-    end
-
     def self.redact_level_content
       puts "Redacting level content"
 
@@ -737,16 +533,6 @@ module I18n
         FileUtils.cp(source_path, backup_path)
         RedactRestoreUtils.redact(source_path, source_path, ['link'])
       end
-    end
-
-    def self.redact_block_content
-      puts "Redacting block content"
-
-      source = File.join(I18N_SOURCE_DIR, "dashboard/blocks.yml")
-      backup = source.sub("source", "original")
-      FileUtils.mkdir_p(File.dirname(backup))
-      FileUtils.cp(source, backup)
-      RedactRestoreUtils.redact(source, source, ['blockfield'], 'txt')
     end
 
     def self.redact_script_and_course_content

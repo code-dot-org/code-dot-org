@@ -77,7 +77,7 @@ def run_tests(options = {})
       if options[:quiet]
         puts "#{url} ... #{exception}"
       else
-        puts exception.to_s
+        puts exception
       end
       puts "#{url} ... #{exception}"
       next

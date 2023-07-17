@@ -54,7 +54,7 @@ class ChatClient
     yield if block_given?
     ChatClient.log "#{name} succeeded in #{RakeUtils.format_duration(Time.now - start_time)}"
   rescue
-    message = "<b>#{name}</b> failed in "\
+    message = "<b>#{name}</b> failed in " \
       "#{RakeUtils.format_duration(Time.now - start_time)}"
     ChatClient.log message, color: 'red', notify: 1
     ChatClient.message 'server operations', message, color: 'red', notify: 1

@@ -15,13 +15,13 @@ import {
   getProjectType,
   getStandaloneProjectId,
 } from '@cdo/apps/lab2/projects/utils';
-import {logError} from '@cdo/apps/music/utils/MusicMetrics';
 import Lab2Wrapper from './Lab2Wrapper';
 import ProjectContainer from '../projects/ProjectContainer';
 import ProgressContainer from '../progress/ProgressContainer';
 import AichatView from '@cdo/apps/aichat/AichatView';
 import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import MusicView from '@cdo/apps/music/views/MusicView';
+import MetricsAdapter from './MetricsAdapter';
 
 interface AppProperties {
   name: string;
@@ -86,11 +86,8 @@ const Lab2: React.FunctionComponent = () => {
     : undefined;
 
   return (
-    <Lab2Wrapper
-      onError={(error, componentStack) =>
-        logError({error: error.toString(), componentStack})
-      }
-    >
+    <Lab2Wrapper>
+      <MetricsAdapter />
       <ProjectContainer channelId={channelId}>
         {currentLessonAppProperties.map(appProperty => {
           return (
