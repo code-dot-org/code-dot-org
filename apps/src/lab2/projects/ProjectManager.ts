@@ -143,7 +143,15 @@ export default class ProjectManager {
     return this.enqueueSaveOrSave(true);
   }
 
-  async rename(name: string, forceSave = false) {
+  /**
+   * Rename the current project. Default to saving immediately.
+   * @param name new name for the project.
+   * @param forceSave Whether or not to save immediately. Default to true, because
+   * renames are done in response to a user action.
+   * @returns a promise that resolves to a Response. If the rename is successful, the response
+   * will be empty, otherwise it will contain failure information.
+   */
+  async rename(name: string, forceSave = true) {
     if (this.destroyed || !this.lastChannel) {
       // If we have already been destroyed or the channel does not exist,
       // don't attempt to rename.
@@ -193,6 +201,20 @@ export default class ProjectManager {
       return;
     }
     this.channelsStore.redirectToRemix(this.lastChannel);
+  }
+
+  /**
+   * Publish the current channel.
+   */
+  publish() {
+    this.publishHelper(true);
+  }
+
+  /**
+   * Unpublish the current channel.
+   */
+  unpublish() {
+    this.publishHelper(false);
   }
 
   addSaveSuccessListener(
@@ -323,7 +345,7 @@ export default class ProjectManager {
     } else {
       // if we can save immediately, initiate a save now. This is an async
       // request that we do not wait for.
-      this.saveHelper();
+      return this.saveHelper();
     }
   }
 
@@ -376,6 +398,28 @@ export default class ProjectManager {
     const error = new Error(errorMessage);
     Lab2MetricsReporter.logError(errorMessage, error);
     throw error;
+  }
+
+  /**
+   * Helper for publish and unpublish methods, since they are so similar.
+   * Either publishes or unpublishes lastChannel, depending on the publish parameter.
+   * If this ProjectManager has been destroyed, or we're missing a channel, this method
+   * will throw an error.
+   * @param publish true if we should publish, false is we should unpublish
+   * @returns a Promise that resolves when the publish/unpublish is complete
+   */
+  private async publishHelper(publish: boolean) {
+    const actionType = publish ? 'publish' : 'unpublish';
+    this.throwErrorIfDestroyed(actionType);
+    if (!this.lastChannel || !this.lastChannel.projectType) {
+      this.logAndThrowError(`Cannot ${actionType} without channel`);
+      return;
+    }
+    if (publish) {
+      return this.channelsStore.publish(this.lastChannel);
+    } else {
+      return this.channelsStore.unpublish(this.lastChannel);
+    }
   }
 
   // LISTENERS
