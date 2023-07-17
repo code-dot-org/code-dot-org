@@ -26,6 +26,8 @@ import {
   translatedGradeLevels,
   gradeLevelsMap,
 } from '../teacherDashboard/CourseOfferingHelpers';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const filterTypes = {
   grade: {
@@ -188,6 +190,15 @@ const CurriculumCatalog = ({
 
     setNumFilteredTranslatedCurricula(newNumFilteredTranslatedCurricula);
     setFilteredCurricula(newFilteredCurricula);
+
+    if (newFilteredCurricula.length === 0) {
+      analyticsReporter.sendEvent(
+        EVENTS.CURRICULUM_CATALOG_NO_AVAILABLE_CURRICULA_EVENT,
+        {
+          filters_selected: JSON.stringify(appliedFilters),
+        }
+      );
+    }
   }, [curriculaData, appliedFilters]);
 
   // Handles updating the given filter and the URL parameters.
@@ -214,11 +225,36 @@ const CurriculumCatalog = ({
       updatedFilters = appliedFilters[filterKey].filter(item => item !== value);
     }
     handleUpdateFilter(filterKey, updatedFilters);
+
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_DROPDOWN_FILTER_SELECTED_EVENT,
+      {
+        filter_category: filterKey,
+        filter_name: value,
+      }
+    );
   };
 
   // Selects all options within the given filter.
   const handleSelectAllOfFilter = filterKey => {
     handleUpdateFilter(filterKey, Object.keys(filterTypes[filterKey].options));
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_DROPDOWN_FILTER_SELECTED_EVENT,
+      {
+        filter_category: filterKey,
+        filter_name: Object.keys(filterTypes[filterKey].options).toString(),
+      }
+    );
+  };
+
+  const handleToggleLanguageFilter = isToggled => {
+    handleUpdateFilter('translated', isToggled);
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_TOGGLE_LANGUAGE_FILTER_EVENT,
+      {
+        toggle_setting: isToggled,
+      }
+    );
   };
 
   // Clears all filter selections.
@@ -241,6 +277,13 @@ const CurriculumCatalog = ({
       })
     );
     setShowAssignSuccessMessage(true);
+
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_ASSIGN_COMPLETED_EVENT,
+      {
+        curriculum_offering: assignmentData.assignedTitle,
+      }
+    );
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
@@ -388,7 +431,7 @@ const CurriculumCatalog = ({
             })}
             size="m"
             checked={appliedFilters['translated']}
-            onChange={e => handleUpdateFilter('translated', e.target.checked)}
+            onChange={e => handleToggleLanguageFilter(e.target.checked)}
           />
         </div>
       )}
