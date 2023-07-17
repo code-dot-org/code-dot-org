@@ -19,7 +19,7 @@ describe('ActivitiesEditor', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<ActivitiesEditor {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(2);
+    expect(wrapper.find('button').length).to.equal(1);
     expect(wrapper.find('ActivityCardAndPreview').length).to.equal(1);
 
     const hiddenInputs = wrapper.find('input[type="hidden"]');
@@ -30,7 +30,7 @@ describe('ActivitiesEditor', () => {
     const wrapper = shallow(
       <ActivitiesEditor {...defaultProps} hasLessonPlan={false} />
     );
-    expect(wrapper.find('button').length).to.equal(1);
+    expect(wrapper.find('button').length).to.equal(0);
     expect(wrapper.find('ActivityCardAndPreview').length).to.equal(1);
 
     const hiddenInputs = wrapper.find('input[type="hidden"]');
@@ -39,7 +39,7 @@ describe('ActivitiesEditor', () => {
 
   it('adds activity when activity button pressed', () => {
     const wrapper = shallow(<ActivitiesEditor {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(2);
+    expect(wrapper.find('button').length).to.equal(1);
 
     const button = wrapper.find('button').at(0);
     expect(button.text()).to.include('Activity');
