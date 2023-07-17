@@ -54,6 +54,7 @@ module Services
       # in a manner that will be stable across environments.
       sort_context = SeedContext.new(
         script: script,
+        lesson_groups: script.lesson_groups,
         lessons: script.lessons,
         resources: resources,
         frameworks: frameworks,
@@ -72,7 +73,7 @@ module Services
 
       objectives = script.lessons.map(&:objectives).flatten.sort_by(&:key)
 
-      rubrics = script.lessons.map(&:rubric).flatten
+      rubrics = script.lessons.filter_map(&:rubric).sort_by {|r| r.seeding_key(sort_context).to_json}
       learning_goals = rubrics.map(&:learning_goals).flatten.sort_by(&:key)
       learning_goal_evidence_levels = learning_goals.map(&:learning_goal_evidence_levels).flatten.sort_by(&:understanding)
 

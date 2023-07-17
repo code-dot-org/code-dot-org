@@ -1758,4 +1758,21 @@ FactoryBot.define do
       user {create :young_student, :with_parent_permission}
     end
   end
+
+  factory :rubric do
+    association :lesson
+  end
+
+  factory :learning_goal do
+    sequence(:key) {|n| "lg_#{n}"}
+    position {0}
+    learning_goal {"Test Learning Goal"}
+    ai_enabled {false}
+  end
+
+  factory :learning_goal_evidence_level do
+    association :learning_goal
+    understanding {0}
+    teacher_description {"Description for teacher"}
+  end
 end

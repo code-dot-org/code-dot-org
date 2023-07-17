@@ -90,7 +90,7 @@ module Services
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
       # (Dani) This will go back up by one when we turn the validation of families sharing course type back on
-      assert_queries(86) do
+      assert_queries(98) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -1223,6 +1223,11 @@ module Services
           s1.lessons.map(&:opportunity_standards).flatten,
           s2.lessons.map(&:opportunity_standards).flatten,
         )
+        assert_equal(s1.lessons.filter_map(&:rubric).count, s2.lessons.filter_map(&:rubric).count)
+        assert_learning_goals_equal(
+          s1.lessons.filter_map(&:rubric).map(&:learning_goals).flatten,
+          s2.lessons.filter_map(&:rubric).map(&:learning_goals).flatten
+        )
       end
     end
 
@@ -1296,6 +1301,15 @@ module Services
       end
     end
 
+    def assert_learning_goals_equal(learning_goals1, learning_goals2)
+      puts learning_goals1.map(&:key).inspect
+      puts learning_goals2.map(&:key).inspect
+      assert_equal learning_goals1.count, learning_goals2.count
+      learning_goals1.zip(learning_goals2).each do |lg1, lg2|
+        assert_attributes_equal(lg1, lg2, ['rubric_id'])
+      end
+    end
+
     def assert_attributes_equal(a, b, additional_excludes=[])
       excludes = ['id', 'created_at', 'updated_at'] + additional_excludes
       assert_equal a.attributes.except(*excludes), b.attributes.except(*excludes)
@@ -1315,7 +1329,10 @@ module Services
       num_programming_expressions_per_lesson: 2,
       num_objectives_per_lesson: 2,
       num_standards_per_lesson: 2,
-      with_unit_group: false
+      with_unit_group: false,
+      num_rubrics_per_lesson: 1,
+      num_learning_goals_per_rubric: 1,
+      num_learning_goal_evidence_levels_per_learning_goal: 2
     )
       # Avoid randomly generated characters at the start of the name prefix,
       # to help avoid flaky tests. The name_prefix gets used in various fields,
@@ -1432,6 +1449,17 @@ module Services
         (1..num_standards_per_lesson).each do |s|
           standard = create :standard, framework: @framework, shortcode: "#{lesson.name}-opportunity-standard-#{s}"
           LessonsOpportunityStandard.find_or_create_by!(standard: standard, lesson: lesson)
+        end
+
+        next if lesson.levels.empty?
+        (1..num_rubrics_per_lesson).each do |_r|
+          rubric = create :rubric, lesson: lesson, level: lesson.levels.first
+          (1..num_learning_goals_per_rubric).each do |lg|
+            learning_goal = create :learning_goal, rubric: rubric, key: "#{lesson.name}-learning-goal-#{lg}"
+            (1..num_learning_goal_evidence_levels_per_learning_goal).each do |lge|
+              create :learning_goal_evidence_level, learning_goal: learning_goal, understanding: lge
+            end
+          end
         end
       end
 

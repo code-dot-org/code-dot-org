@@ -23,7 +23,7 @@ class LearningGoal < ApplicationRecord
   def seeding_key(seed_context)
     my_rubric = seed_context.rubrics.find {|r| r.id == rubric_id}
     my_key = {
-      key: key
+      'learning_goal.key': key
     }
     rubric_seeding_key = my_rubric.seeding_key(seed_context)
     my_key.merge!(rubric_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
