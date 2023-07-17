@@ -26,7 +26,6 @@ export function loadBlocksToWorkspace(workspace, source) {
   if (isXml) {
     stateToLoad = convertXmlToJson(parseXmlElement(source));
   } else {
-    console.log(`source is json!`);
     stateToLoad = JSON.parse(source);
   }
   Blockly.serialization.workspaces.load(stateToLoad, workspace);
