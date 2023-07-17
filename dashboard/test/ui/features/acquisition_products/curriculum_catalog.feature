@@ -80,6 +80,7 @@ Feature: Curriculum Catalog Page
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is selected
     And I click selector "button:contains(Confirm section assignments)"
+    And element "p:contains(You have successfully assigned)" is visible
 
     # Confirm assignment
     Then I am on "http://studio.code.org"
@@ -111,6 +112,7 @@ Feature: Curriculum Catalog Page
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is not selected
     And I click selector "button:contains(Confirm section assignments)"
+    And element "p:contains(You have successfully assigned)" is not visible
 
     # Confirm unassign
     Then I am on "http://studio.code.org"
