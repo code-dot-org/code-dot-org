@@ -18,6 +18,8 @@
             {
               "id": "when-run-block",
               "type": "when_run_simple2",
+              "deletable": false,
+              "movable": false,
               "x": 34,
               "y": 34
             }
