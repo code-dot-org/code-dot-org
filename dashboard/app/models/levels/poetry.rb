@@ -106,6 +106,7 @@ class Poetry < GamelabJr
     )
   end
 
+  # EMILY-TEMP: The method we make return true when a lab is fully migrated to blockly.
   def uses_google_blockly?
     true
   end
