@@ -20,6 +20,7 @@ mkdir -p $loc_dir
 cp_in $orig_dir/en.yml $loc_dir/base.yml
 
 # Copy in needed files from dashboard
+cp_in $orig_dir/blocks.en.yml $loc_dir/blocks.yml
 cp_in $orig_dir/data.en.yml $loc_dir/data.yml
 cp_in $orig_dir/devise.en.yml $loc_dir/devise.yml
 cp_in $orig_dir/restricted.en.yml $loc_dir/restricted.yml
