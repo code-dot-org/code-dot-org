@@ -98,6 +98,20 @@ Given /^I am on "([^"]*)"$/ do |url|
   navigate_to replace_hostname(url)
 end
 
+And /^I take note of the current loaded page$/ do
+  # Remember this page
+  @current_page_body = @browser.find_element(:css, 'body')
+end
+
+Then /^I wait until I am on a different page than I noted before$/ do
+  # When we've seen a page before, look for a different page
+  if @current_page_body
+    wait_until do
+      @current_page_body != @browser.find_element(:css, 'body')
+    end
+  end
+end
+
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
   wait_until {!@browser.find_elements(selection_criteria).empty?}
