@@ -110,7 +110,6 @@ RUN apt-get install -y --no-install-recommends \
     jq \
     libicu-dev \
     libmagickwand-dev \
-    libsqlite3-dev \
     locales \
     moreutils \
     openssh-client \
