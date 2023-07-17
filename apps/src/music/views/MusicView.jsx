@@ -120,6 +120,7 @@ class UnconnectedMusicView extends React.Component {
     navigateToNextLevel: PropTypes.func,
     isReadOnlyWorkspace: PropTypes.bool,
     updateLoadProgress: PropTypes.func,
+    appName: PropTypes.string,
   };
 
   constructor(props) {
@@ -214,30 +215,41 @@ class UnconnectedMusicView extends React.Component {
     // If we just finished loading the lab, then we need to update the
     // sources and level data.
     if (!prevProps.labReadyForReload && this.props.labReadyForReload) {
-      // Load and initialize the library and player if not done already.
-      // Read the library name first from level data, or from the project
-      // sources if not present on the level. If there is no library name
-      // specified on the level or sources, we will fallback to loading the
-      // default library.
-      let libraryName = this.props.levelData?.library;
-      if (!libraryName && this.props.sources?.labConfig?.music) {
-        libraryName = this.props.sources.labConfig.music.library;
-      }
-      await this.loadAndInitializePlayer(libraryName);
-
-      if (this.getStartSources() || this.props.sources) {
-        let codeToLoad = this.getStartSources();
-        if (this.props.sources?.source) {
-          codeToLoad = JSON.parse(this.props.sources.source);
+      // Only load if the current app is music or we are on the Incubator page.
+      if (this.props.appName === 'music' || this.props.inIncubator) {
+        // Load and initialize the library and player if not done already.
+        // Read the library name first from level data, or from the project
+        // sources if not present on the level. If there is no library name
+        // specified on the level or sources, we will fallback to loading the
+        // default library.
+        let libraryName = this.props.levelData?.library;
+        if (!libraryName && this.props.sources?.labConfig?.music) {
+          libraryName = this.props.sources.labConfig.music.library;
         }
-        this.loadCode(codeToLoad);
-      }
+        await this.loadAndInitializePlayer(libraryName);
 
-      // Update components with level-specific data
-      if (this.props.levelData) {
-        this.musicBlocklyWorkspace.updateToolbox(this.props.levelData.toolbox);
-        this.library.setAllowedSounds(this.props.levelData.sounds);
-        this.props.setShowInstructions(!!this.props.levelData.text);
+        this.musicBlocklyWorkspace.init(
+          document.getElementById('blockly-div'),
+          this.onBlockSpaceChange,
+          this.props.isReadOnlyWorkspace
+        );
+
+        if (this.getStartSources() || this.props.sources) {
+          let codeToLoad = this.getStartSources();
+          if (this.props.sources?.source) {
+            codeToLoad = JSON.parse(this.props.sources.source);
+          }
+          this.loadCode(codeToLoad);
+        }
+
+        // Update components with level-specific data
+        if (this.props.levelData) {
+          this.musicBlocklyWorkspace.updateToolbox(
+            this.props.levelData.toolbox
+          );
+          this.library.setAllowedSounds(this.props.levelData.sounds);
+          this.props.setShowInstructions(!!this.props.levelData.text);
+        }
       }
 
       this.props.setLabReadyForReload(false);
@@ -269,11 +281,6 @@ class UnconnectedMusicView extends React.Component {
     Globals.setLibrary(this.library);
     Globals.setPlayer(this.player);
 
-    this.musicBlocklyWorkspace.init(
-      document.getElementById('blockly-div'),
-      this.onBlockSpaceChange,
-      this.props.isReadOnlyWorkspace
-    );
     try {
       this.player.initialize(this.library, this.props.updateLoadProgress);
     } catch (error) {
@@ -707,6 +714,7 @@ const MusicView = connect(
     levelData: state.lab.levelData,
     labReadyForReload: state.lab.labReadyForReload,
     isReadOnlyWorkspace: isReadOnlyWorkspace(state),
+    appName: state.lab.appName,
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
