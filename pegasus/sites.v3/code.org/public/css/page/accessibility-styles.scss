@@ -1,0 +1,37 @@
+// Custom styles for code.org/ai/pl/webinar
+// — supplemental to shared/css/design-system-pegasus.scss
+
+@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+
+.hero-banner-basic {
+  background-image: url("/images/accessibility/hero-bg.jpg");
+  background-size: cover;
+  background-color: #ccc;
+
+}
+
+section.why-teach-cs {
+
+  .grid-container {
+    margin-top: 5rem;
+    gap: 4rem;
+
+    @media screen and (min-width: $width-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flex-container {
+      gap: 2rem;
+    }
+
+    img {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+    }
+  }
+
+  p {
+    @include body-two;
+  }
+}
