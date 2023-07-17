@@ -47,4 +47,36 @@ theme: responsive_full_width
         -# %span •
         =hoc_s(:teacher_label_csa)
 
+%section
+  .wrapper
+    %h2=hoc_s(:heading_engaging_projects)
+
+%section.bg-neutral-light
+  .wrapper
+    = view :resources_tabs
+
+%section
+  .wrapper
+    %h2=hoc_s(:heading_professional_learning)
+    .action-block.action-block--two-col
+      %img{src: "/images/action-block-self-paced-pl.png", alt: "", class: "col-50"}
+      .text-wrapper.col-50
+        %h3.heading-sm
+          =hoc_s(:professional_learning_section_desc_short)
+        %p=hoc_s(:professional_learning_section_block_csa)
+        %p=hoc_s(:professional_learning_section_workshops_starting)
+        %a.link-button{href: "/apply"}
+          =hoc_s(:call_to_action_apply_for_pl)
+
+= view :section_divider_line
+
+%section.no-padding-bottom
+  .wrapper
+    %h2=hoc_s(:heading_faq)
+    = view :faq_csa
+
+%section
+  .wrapper
+    = view :support_and_questions_section
+
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::CSA_CURRICULUM_PAGE_VISITED_EVENT
