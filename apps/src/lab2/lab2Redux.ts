@@ -234,11 +234,13 @@ const labSlice = createSlice({
     onLevelChange(
       state,
       action: PayloadAction<{
+        channel?: Channel;
         appName?: AppName;
         levelData?: LevelData;
         initialSources?: ProjectSources;
       }>
     ) {
+      state.channel = action.payload.channel;
       state.appName = action.payload.appName;
       state.levelData = action.payload.levelData;
       state.initialSources = action.payload.initialSources;
@@ -330,7 +332,6 @@ function setProjectAndLevelData(
     return;
   }
   const {channel, initialSources, levelProperties} = data;
-  dispatch(setChannel(channel));
   if (levelProperties) {
     const hideShareAndRemix = convertOptionalStringToBoolean(
       levelProperties.hideShareAndRemix,
@@ -353,6 +354,7 @@ function setProjectAndLevelData(
     onLevelChange({
       appName: levelProperties?.appName,
       levelData: levelProperties?.levelData,
+      channel,
       initialSources,
     })
   );
