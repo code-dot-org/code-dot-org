@@ -15,6 +15,7 @@ import {ChannelsStore} from './ChannelsStore';
 import {Channel, Project, ProjectSources} from '../types';
 import {currentLocation} from '@cdo/apps/utils';
 import Lab2MetricsReporter from '../Lab2MetricsReporter';
+const {reload} = require('@cdo/apps/utils');
 
 export default class ProjectManager {
   private readonly channelId: string;
@@ -47,6 +48,7 @@ export default class ProjectManager {
   private destroyed = false;
   private reduceChannelUpdates: boolean;
   private initialSaveComplete: boolean;
+  private forceReloading: boolean;
 
   constructor(
     sourcesStore: SourcesStore,
@@ -59,6 +61,7 @@ export default class ProjectManager {
     this.channelsStore = channelsStore;
     this.reduceChannelUpdates = reduceChannelUpdates;
     this.initialSaveComplete = false;
+    this.forceReloading = false;
   }
 
   // Load the project from the sources and channels store.
@@ -143,7 +146,15 @@ export default class ProjectManager {
     return this.enqueueSaveOrSave(true);
   }
 
-  async rename(name: string, forceSave = false) {
+  /**
+   * Rename the current project. Default to saving immediately.
+   * @param name new name for the project.
+   * @param forceSave Whether or not to save immediately. Default to true, because
+   * renames are done in response to a user action.
+   * @returns a promise that resolves to a Response. If the rename is successful, the response
+   * will be empty, otherwise it will contain failure information.
+   */
+  async rename(name: string, forceSave = true) {
     if (this.destroyed || !this.lastChannel) {
       // If we have already been destroyed or the channel does not exist,
       // don't attempt to rename.
@@ -195,6 +206,20 @@ export default class ProjectManager {
     this.channelsStore.redirectToRemix(this.lastChannel);
   }
 
+  /**
+   * Publish the current channel.
+   */
+  publish() {
+    this.publishHelper(true);
+  }
+
+  /**
+   * Unpublish the current channel.
+   */
+  unpublish() {
+    this.publishHelper(false);
+  }
+
   addSaveSuccessListener(
     listener: (channel: Channel, sources: ProjectSources) => void
   ) {
@@ -211,6 +236,10 @@ export default class ProjectManager {
 
   addSaveStartListener(listener: () => void) {
     this.saveStartListeners.push(listener);
+  }
+
+  isForceReloading(): boolean {
+    return this.forceReloading;
   }
 
   /**
@@ -286,7 +315,17 @@ export default class ProjectManager {
   private onSaveFail(errorMessage: string, error: Error) {
     this.saveInProgress = false;
     this.executeSaveFailListeners(error);
-    Lab2MetricsReporter.logError(errorMessage, error);
+    if (error.message.includes('409')) {
+      // If this is a conflict, we need to reload the page.
+      // We set forceReloading to true so the client can skip
+      // showing the user a dialog before reload.
+      this.forceReloading = true;
+      Lab2MetricsReporter.logWarning('Conflict on save, reloading page');
+      reload();
+    } else {
+      // Otherwise, we log the error.
+      Lab2MetricsReporter.logError(errorMessage, error);
+    }
   }
 
   private canSave(forceSave: boolean): boolean {
@@ -323,7 +362,7 @@ export default class ProjectManager {
     } else {
       // if we can save immediately, initiate a save now. This is an async
       // request that we do not wait for.
-      this.saveHelper();
+      return this.saveHelper();
     }
   }
 
@@ -376,6 +415,28 @@ export default class ProjectManager {
     const error = new Error(errorMessage);
     Lab2MetricsReporter.logError(errorMessage, error);
     throw error;
+  }
+
+  /**
+   * Helper for publish and unpublish methods, since they are so similar.
+   * Either publishes or unpublishes lastChannel, depending on the publish parameter.
+   * If this ProjectManager has been destroyed, or we're missing a channel, this method
+   * will throw an error.
+   * @param publish true if we should publish, false is we should unpublish
+   * @returns a Promise that resolves when the publish/unpublish is complete
+   */
+  private async publishHelper(publish: boolean) {
+    const actionType = publish ? 'publish' : 'unpublish';
+    this.throwErrorIfDestroyed(actionType);
+    if (!this.lastChannel || !this.lastChannel.projectType) {
+      this.logAndThrowError(`Cannot ${actionType} without channel`);
+      return;
+    }
+    if (publish) {
+      return this.channelsStore.publish(this.lastChannel);
+    } else {
+      return this.channelsStore.unpublish(this.lastChannel);
+    }
   }
 
   // LISTENERS

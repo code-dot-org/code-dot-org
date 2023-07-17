@@ -22,7 +22,7 @@ end
 execute 'install AWS CLI' do
   cwd '/tmp/awscli/awscli-bundle'
   command '/usr/bin/python2.7 install -i /usr/local/aws -b /usr/local/bin/aws'
-  not_if {::File.exist?('/usr/local/bin/aws')}
+  not_if {File.exist?('/usr/local/bin/aws')}
 end
 
 # Configure AWS CLI after installation

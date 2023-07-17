@@ -173,7 +173,7 @@ class ChannelsApi < Sinatra::Base
 
     # Channels for project-backed levels are created without a project_type. The
     # type is then determined by client-side logic when the project is updated.
-    project_type = value.delete('projectType')
+    project_type = value["projectType"]
 
     begin
       value = Projects.new(get_storage_id).update(id, value, request.ip, locale: request.locale, project_type: project_type)

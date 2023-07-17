@@ -125,16 +125,16 @@ module Pd::Application
     def dynamic_required_fields(hash)
       [].tap do |required|
         if hash[:do_you_approve]
-          required.concat [
+          required.push(
             :first_name,
             :last_name,
             :email,
             :can_email_you,
             :confirm_principal
-          ]
+          )
 
           unless hash[:do_you_approve] == NO
-            required.concat [
+            required.push(
               :total_student_enrollment,
               :free_lunch_percent,
               :white,
@@ -148,7 +148,7 @@ module Pd::Application
               :replace_course,
               :understand_fee,
               :pay_fee
-            ]
+            )
           end
         end
       end

@@ -29,7 +29,7 @@ module Seeded
       CSV.parse(csv, col_sep: col_sep, headers: true).map do |row|
         hash = row.to_hash
         hash.keys.each {|key| hash[column_to_key[key]] = hash.delete(key) if column_to_key[key]}
-        hash.delete_if {|_, value| value.nil?}
+        hash.compact
         yield hash if block
         hash
       end
