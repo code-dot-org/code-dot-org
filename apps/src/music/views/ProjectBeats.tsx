@@ -32,9 +32,11 @@ export default ProjectBeats;
 // Defers loading MusicView until the channel has been loaded. This ensures
 // that all project data has been loaded before mounting MusicView.
 const DeferredMusicView: React.FunctionComponent = () => {
-  const channel = useSelector((state: {lab: LabState}) => state.lab.channel);
+  const channelLoaded = useSelector(
+    (state: {lab: LabState}) => !!state.lab.channel
+  );
 
-  if (!channel) {
+  if (!channelLoaded) {
     return null;
   }
 
