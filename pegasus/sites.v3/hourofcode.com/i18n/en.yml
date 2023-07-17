@@ -121,6 +121,7 @@
   teacher_label_csd: "CS Discoveries Teacher"
   teacher_label_csp: "CS Principles Teacher"
   teacher_label_csc: "CS Connections Teacher"
+  teacher_label_csa: "AP® Computer Science A Teacher"
 
   required_materials: "Required Materials:"
   optional_materials: "Optional Materials:"
@@ -315,6 +316,7 @@
   module_grade_6_10_teachers: "6-10 Teachers"
   module_grade_9_12_teachers: "9-12 Teachers"
   module_level_beginner: "Beginner"
+  module_level_intermediate: "Intermediate"
   module_duration_2_hrs: "2 hours"
   module_duration_3_hrs: "3 hours"
   module_duration_8_hrs: "8 hours"
@@ -826,6 +828,13 @@
   csa_page_intro_list_03: "Explainer videos with diverse presenters"
   csa_page_intro_list_04: "Open-ended projects for more personalized learning"
   csa_page_intro_list_05: "Student-friendly code review tool"
+  csa_page_curriculum_glance_topics: "Programming, Data, Art and Design, Games and Animation"
+  csa_page_curriculum_glance_devices: "Laptop, Chromebook"
+  csa_page_curriculum_glance_tools: "Java Lab"
+  csa_page_curriculum_glance_professional_learning: "Facilitator-led Workshops"
+  csa_page_curriculum_glance_languages: "English"
+  csa_page_curriculum_glance_accessibility_features: "Text-to-speech, Closed captioning, Immersive reader"
+  csa_page_quote: "I could tell last year how different and better this curriculum and resources were than anything else out there... but this year, these past few weeks preparing students for the exam have been some of my most fun teaching. And I'm hardly doing anything! Kids understand the material and are talking with each other at such a high level and it's a direct reflection of the lessons and activities throughout the year. Thank you, thank you."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
