@@ -1071,10 +1071,12 @@ exports.createJsWrapperBlockCreator = function (
           miniToolboxBlocks &&
           (!window.appOptions || window.appOptions.level.miniToolbox);
 
+        let flyoutToggleButton;
         if (showMiniToolbox) {
-          Blockly.customBlocks.initializeMiniToolbox.bind(this)(
-            miniToolboxBlocks
-          );
+          flyoutToggleButton =
+            Blockly.customBlocks.initializeMiniToolbox.bind(this)(
+              miniToolboxBlocks
+            );
         }
 
         // These blocks should not be loaded into a Google Blockly level.
@@ -1121,6 +1123,19 @@ exports.createJsWrapperBlockCreator = function (
         }
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);
         this.setInputsInline(inline);
+
+        // Use window.appOptions, not global appOptions, because the levelbuilder
+        // block page doesn't have appOptions, but we *do* want to show the mini-toolbox
+        // there
+        if (
+          miniToolboxBlocks &&
+          (!window.appOptions || window.appOptions.level.miniToolbox)
+        ) {
+          Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
+            miniToolboxBlocks,
+            flyoutToggleButton
+          );
+        }
       },
     };
 
