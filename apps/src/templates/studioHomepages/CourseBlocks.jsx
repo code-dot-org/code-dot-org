@@ -212,10 +212,6 @@ export class CourseBlocksIntl extends Component {
     showModernElementaryCourses: PropTypes.bool.isRequired,
   };
 
-  static defaultProps = {
-    isTeacher: false,
-  };
-
   componentDidMount() {
     $('.csf-courses-header')
       .appendTo(ReactDOM.findDOMNode(this.refs.csfCoursesHeader))
