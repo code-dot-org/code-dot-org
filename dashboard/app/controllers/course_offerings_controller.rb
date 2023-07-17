@@ -6,8 +6,9 @@ class CourseOfferingsController < ApplicationController
 
   def edit
     @course_offering = CourseOffering.find_by!(key: params[:key])
-    render :not_found unless @course_offering
     @self_paced_pl_course_offerings = CourseOffering.professional_learning_and_self_paced_course_offerings
+    @professional_learning_program_paths = CourseOffering::PROFESSIONAL_LEARNING_PROGRAM_PATHS
+    render :not_found unless @course_offering
   end
 
   def update

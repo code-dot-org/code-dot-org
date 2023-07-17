@@ -48,6 +48,11 @@ class CourseOffering < ApplicationRecord
   ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
   MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
   HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
+  PROFESSIONAL_LEARNING_PROGRAM_PATHS = {
+    workshops_k5: 'code.org/professional-development-workshops',
+    workshops_612: 'code.org/apply',
+  }
+  validates :professional_learning_program, acceptance: {accept: PROFESSIONAL_LEARNING_PROGRAM_PATHS.values, message: "must be one of the professional learning program path. Expected one of: #{PROFESSIONAL_LEARNING_PROGRAM_PATHS.values}. Got:  \"%{value}\"."}
 
   DURATION_LABEL_TO_MINUTES_CAP = {
     lesson: 90,
@@ -57,7 +62,6 @@ class CourseOffering < ApplicationRecord
     semester: 5000,
     school_year: 525600,
   }
-
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
   #

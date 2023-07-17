@@ -352,14 +352,22 @@ export default function CourseOfferingEditor(props) {
           learning program
         </p>
       </HelpTip>
-      <input
-        type="text"
+      <select
         value={courseOffering.professional_learning_program}
-        style={styles.input}
+        style={styles.dropdown}
         onChange={e =>
           updateCourseOffering('professional_learning_program', e.target.value)
         }
-      />
+      >
+        <option value="">{translatedNoneOption}</option>
+        {Object.entries(props.professionalLearningProgramPaths).map(
+          ([key, path]) => (
+            <option key={key} value={path}>
+              {`${key}: ${path}`}
+            </option>
+          )
+        )}
+      </select>
       <SaveBar
         handleSave={handleSave}
         error={error}
@@ -397,6 +405,7 @@ CourseOfferingEditor.propTypes = {
       course_version_path: PropTypes.string,
     })
   ),
+  professionalLearningProgramPaths: PropTypes.objectOf(PropTypes.string),
 };
 
 const styles = {

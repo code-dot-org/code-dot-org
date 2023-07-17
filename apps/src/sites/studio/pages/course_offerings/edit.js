@@ -15,15 +15,21 @@ function showCourseOfferingEditor() {
   const scriptSelfPacedData = document.querySelector(
     'script[data-self-paced-pl-course-offerings]'
   );
-
   const selfPacedPLCourseOfferings = JSON.parse(
     scriptSelfPacedData.dataset.selfPacedPlCourseOfferings
+  );
+  const scriptPlPaths = document.querySelector(
+    'script[data-professional-learning-program-paths]'
+  );
+  const professionalLearningProgramPaths = JSON.parse(
+    scriptPlPaths.dataset.professionalLearningProgramPaths
   );
 
   ReactDOM.render(
     <CourseOfferingEditor
       initialCourseOffering={courseOfferingEditorData}
       selfPacedPLCourseOfferings={selfPacedPLCourseOfferings}
+      professionalLearningProgramPaths={professionalLearningProgramPaths}
     />,
     document.getElementById('course_offering_editor')
   );
