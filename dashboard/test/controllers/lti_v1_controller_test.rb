@@ -45,7 +45,8 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       iat: 1.day.ago.to_i,
       iss: @integration.issuer,
       nonce: @nonce,
-      'https://purl.imsglobal.org/spec/lti/claim/target_link_uri': target_link_uri
+      'https://purl.imsglobal.org/spec/lti/claim/target_link_uri': target_link_uri,
+      'https://purl.imsglobal.org/spec/lti/claim/message_type': 'LtiResourceLinkRequest'
     }
   end
 
@@ -156,6 +157,14 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'auth - error raised for issued at time in future' do
     payload = get_valid_payload
     payload[:iat] = 3.days.from_now.to_i
+    jwt = create_jwt(payload)
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+    assert_response :unauthorized
+  end
+
+  test 'auth - LTI Resource Type wrong' do
+    payload = get_valid_payload
+    payload['https://purl.imsglobal.org/spec/lti/claim/message_type'] = 'file'
     jwt = create_jwt(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :unauthorized

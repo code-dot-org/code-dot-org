@@ -78,6 +78,9 @@ class LtiV1Controller < ApplicationController
     jwt_verifier = JwtVerifier.new(decoded_jwt, integration)
 
     if jwt_verifier.verify_jwt
+      message_type = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/message_type']
+      return unauthorized_status unless message_type == 'LtiResourceLinkRequest'
+
       target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
       redirect_to target_link_uri
     else
