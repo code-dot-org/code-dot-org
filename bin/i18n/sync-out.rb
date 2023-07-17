@@ -39,7 +39,7 @@ def sync_out(upload_manifests=false)
   I18nScriptUtils.with_synchronous_stdout do
     I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n_static_messages.rb"
   end
-  clean_up_sync_out(CROWDIN_TEST_PROJECTS)
+  clean_up_sync_out(CROWDIN_PROJECTS)
   puts "Sync out completed successfully"
 rescue => exception
   puts "Sync out failed from the error: #{exception}"
@@ -80,7 +80,7 @@ end
 #  "/dashboard/base.yml", "/blockly-mooc/maze.json",
 #  "/course_content/2018/coursea-2018.json", etc.
 def file_changed?(locale, file)
-  @change_datas ||= CROWDIN_TEST_PROJECTS.map do |_project_identifier, project_options|
+  @change_datas ||= CROWDIN_PROJECTS.map do |_project_identifier, project_options|
     unless File.exist?(project_options[:files_to_sync_out_json])
       raise <<~ERR
         File not found #{project_options[:files_to_sync_out_json]}.
@@ -393,7 +393,6 @@ def distribute_translations(upload_manifests)
     locale = prop[:locale_s]
     locale_dir = File.join("i18n/locales", locale)
     next if locale == 'en-US'
-    next unless %w[es-ES es-MX].include?(locale)
     next unless File.directory?(locale_dir)
 
     ### Dashboard
