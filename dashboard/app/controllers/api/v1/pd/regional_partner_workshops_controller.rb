@@ -1,4 +1,4 @@
-class Api::V1::Pd::RegionalPartnerWorkshopsController < ::ApplicationController
+class Api::V1::Pd::RegionalPartnerWorkshopsController < ApplicationController
   authorize_resource class: :regional_partner_workshops
   before_action :get_filtered_workshops
 

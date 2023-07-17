@@ -12,7 +12,9 @@ import initializeCdoConstants from './addons/cdoConstants';
 import CdoFieldAngle from './addons/cdoFieldAngle';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
+import CdoFieldToggle from './addons/cdoFieldToggle';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
+import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import CdoFieldMultilineInput from './addons/cdoFieldMultilineInput';
 import CdoFieldNumber from './addons/cdoFieldNumber';
 import CdoFieldTextInput from './addons/cdoFieldTextInput';
@@ -21,7 +23,7 @@ import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
-import CdoRendererThrasos from './addons/cdoRendererThrasos';
+import {CdoRendererThrasos} from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './themes/cdoTheme';
 import CdoDarkTheme from './themes/cdoDark';
@@ -53,6 +55,7 @@ import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
+import customBlocks from './customBlocks/googleBlockly/index.js';
 
 const options = {
   contextMenu: true,
@@ -119,6 +122,14 @@ const BlocklyWrapper = function (blocklyInstance) {
   };
 };
 
+/**
+ * Note that this can only be called once per page load, as this initializes
+ * the navigation controller, and multiple calls to navigationController.init()
+ * will throw an error.
+ *
+ * If this needs to be called multiple times (for example, in tests), call
+ * Blockly.navigationController.dispose() before calling this function again.
+ */
 function initializeBlocklyWrapper(blocklyInstance) {
   const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
 
@@ -236,6 +247,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     ['field_number', 'FieldNumber', CdoFieldNumber],
     ['field_angle', 'FieldAngle', CdoFieldAngle],
     ['field_multilinetext', 'FieldMultilineInput', CdoFieldMultilineInput],
+    ['field_flyout', 'FieldFlyout', CdoFieldFlyout],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -246,6 +258,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // Code.org custom fields
   blocklyWrapper.FieldButton = CdoFieldButton;
   blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
+  blocklyWrapper.FieldToggle = CdoFieldToggle;
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
@@ -332,6 +345,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.navigationController = new NavigationController();
+  // Initialize plugin.
+  blocklyWrapper.navigationController.init();
 
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
@@ -603,8 +618,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     workspace.addChangeListener(onBlockClickDragDelete);
 
-    // Initialize plugin.
-    blocklyWrapper.navigationController.init();
     blocklyWrapper.navigationController.addWorkspace(workspace);
 
     if (!blocklyWrapper.isStartMode && !opt_options.isBlockEditMode) {
@@ -658,6 +671,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
 
   blocklyWrapper.cdoUtils = cdoUtils;
+  blocklyWrapper.customBlocks = customBlocks;
 
   return blocklyWrapper;
 }

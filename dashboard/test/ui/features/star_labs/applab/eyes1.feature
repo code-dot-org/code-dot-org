@@ -21,7 +21,6 @@ Scenario: Design elements are visible in local and shared projects
 
 Scenario: App Lab UI elements from initial code and html
   When I open my eyes to test "App Lab UI Elements from initial code and html"
-  And I rotate to landscape
   # this level displays each ui element by generating it dynamically as well as
   # displaying design-mode-created elements.
   And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/9?noautoplay=true"

@@ -1,6 +1,6 @@
 // Common field definitions used across multiple music blocks
 
-import {DEFAULT_SOUND, DEFAULT_PATTERN, DEFAULT_CHORD} from '../constants';
+import {DEFAULT_PATTERN, DEFAULT_CHORD} from '../constants';
 import Globals from '../globals';
 import musicI18n from '../locale';
 import {
@@ -20,7 +20,7 @@ export const fieldSoundsDefinition = {
   playPreview: (id, onStop) => {
     Globals.getPlayer().previewSound(id, onStop);
   },
-  currentValue: DEFAULT_SOUND,
+  currentValue: null,
 };
 
 export const fieldPatternDefinition = {

@@ -304,7 +304,7 @@ class Level < ApplicationRecord
 
   def filter_level_attributes(level_hash)
     %w(name id updated_at type solution_level_source_id ideal_level_source_id md5).each {|field| level_hash.delete field}
-    level_hash.reject! {|_, v| v.nil?}
+    level_hash.compact!
     level_hash
   end
 
@@ -437,8 +437,8 @@ class Level < ApplicationRecord
 
   def reject_illegal_chars
     if name&.match /[^A-Za-z0-9 !"&'()+,\-.:=?_|]/
-      msg = "\"#{name}\" may only contain letters, numbers, spaces, "\
-      "and the following characters: !\"&'()+,\-.:=?_|"
+      msg = "\"#{name}\" may only contain letters, numbers, spaces, " \
+      "and the following characters: !\"&'()+,-.:=?_|"
       errors.add(:name, msg)
     end
   end
@@ -611,6 +611,10 @@ class Level < ApplicationRecord
     false
   end
 
+  def uses_lab2?
+    false
+  end
+
   # Create a copy of this level named new_name
   # @param [String] new_name
   # @param [String] editor_experiment
@@ -744,7 +748,7 @@ class Level < ApplicationRecord
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.
   def hint_prompt_enabled?
-    script_levels.map(&:script).select(&:hint_prompt_enabled?).any?
+    script_levels.map(&:script).any?(&:hint_prompt_enabled?)
   end
 
   # Define search filter fields
@@ -797,6 +801,20 @@ class Level < ApplicationRecord
       status: SharedConstants::LEVEL_STATUS.not_tried,
       thumbnailUrl: thumbnail_url
     }
+  end
+
+  # Summarize the properties for a lab2 level.
+  # Called by ScriptLevelsController.level_properties.
+  # These properties are usually just the serialized properties for
+  # the level, which usually include levelData.  If this level is a
+  # StandaloneVideo then we put its properties into levelData.
+  def summarize_for_lab2_properties
+    video = specified_autoplay_video&.summarize(false)&.camelize_keys
+    properties_camelized = properties.camelize_keys
+    properties_camelized[:levelData] = video if video
+    properties_camelized[:type] = type
+    properties_camelized[:appName] = game&.app
+    properties_camelized
   end
 
   def project_type

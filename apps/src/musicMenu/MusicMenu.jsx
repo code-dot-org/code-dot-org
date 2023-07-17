@@ -65,33 +65,22 @@ const optionsList = [
     ],
   },
   {
-    name: 'load-progression',
-    type: 'radio',
-    values: [
-      {value: 'false', description: "Don't load a progression."},
-      {value: 'true', description: 'Load a progression'},
-    ],
-  },
-  {
-    name: 'local-progression',
-    type: 'radio',
-    values: [
-      {value: 'false', description: 'Use online progression file.'},
-      {value: 'true', description: 'Use local progression file.'},
-    ],
-  },
-  {
-    name: 'progression',
-    type: 'string',
-    description: 'Use a specific progression file.',
-  },
-  {
     name: 'storage-type',
     type: 'radio',
     values: [
       {value: LOCAL_STORAGE, description: 'Save to local storage.'},
       {value: REMOTE_STORAGE, description: 'Save to remote storage (default).'},
     ],
+  },
+  {
+    name: 'BPM',
+    type: 'string',
+    description: 'Set a specific BPM',
+  },
+  {
+    name: 'key',
+    type: 'string',
+    description: 'Set a specific key by name (i.e. "C", "C#", "D", etc)',
   },
 ];
 

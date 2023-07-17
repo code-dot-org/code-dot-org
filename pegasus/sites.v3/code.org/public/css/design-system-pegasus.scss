@@ -40,6 +40,21 @@ section.bg-primary-light {
   }
 }
 
+// Show elements based on screen size
+.show-desktop {
+  display: block;
+  @media (max-width: $width-lg) {
+    display: none;
+  }
+}
+
+.show-tablet-and-mobile {
+  display: none;
+  @media (max-width: $width-lg) {
+    display: block;
+  }
+}
+
 // Centers a block-level element
 .centered { text-align: center !important; }
 
@@ -67,11 +82,16 @@ i.fa-fw {
 .flex-container {
   display: flex;
 
+  &.flex-direction-column { flex-direction: column; }
+  &.flex-direction-row { flex-direction: row; }
   &.justify-space-between { justify-content: space-between }
+  &.justify-center { justify-content: center }
   &.justify-end { justify-content: end; }
+  &.align-content-baseline { align-content: baseline; }
   &.align-items-center { align-items: center; }
   &.align-items-start { align-items: flex-start; }
   &.wrap { flex-wrap: wrap; }
+  &.wrap-reverse { flex-wrap: wrap-reverse; }
 }
 
 // Grid container
@@ -100,9 +120,26 @@ div.divider {
   }
 }
 
+// Add rounded corners to an element
+.rounded-corners {
+  border-radius: $border-radius;
+}
+
+// Add border to an element
+.has-border {
+  border: 1px solid $neutral_dark10;
+}
+
+// Add a thick box shadow to an element
+// See code.org/teach for an example
+.box-shadow-primary {
+  box-shadow: 8px 8px 0 $brand_primary_light;
+}
+
 // Lines (<hr>)
 hr {
   border-top: 1px solid $neutral_dark20;
+  margin: 3rem 0;
 
   &.dark {
     border-top: 1px solid $neutral_dark60;
@@ -869,10 +906,9 @@ form {
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 
     @media screen and (max-width: $width-md) {
-      font-size: 1.25rem;
       margin-bottom: 1rem;
     }
   }
@@ -883,6 +919,52 @@ form {
     @media screen and (max-width: $width-md) {
       margin-top: 3rem;
     }
+  }
+}
+
+// Individual quote section
+// See code.org/teach for an example
+section.quote {
+  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
+  background-size: 15%;
+  background-color: $neutral-dark;
+
+  @media screen and (max-width: $width-sm) {
+    background-size: 50%;
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: $neutral_white;
+    font-family: $barlowSemiCondensed-medium;
+
+    &.quote-text {
+      font-size: 1.35rem;
+
+      &.large {
+        font-size: 1.5rem;
+      }
+
+      &:before, &:after {
+        font: var(--fa-font-solid);
+        color: $brand_primary_default;
+      }
+
+      &::before {
+        content: "\f10d";
+        margin: 0 8px 0 0;
+      }
+
+      &::after {
+        content: "\f10e";
+        margin: 0 0 0 8px;
+      }
+    }
+  }
+
+  span {
+    color: $brand_accent_default;
+    margin: 0 2px;
   }
 }
 
@@ -917,11 +999,13 @@ form {
     padding: 0 !important;
     margin: 0 !important;
     width: 100%;
-
-    .video_caption_link {
-      @include figcaption;
-    }
   }
+}
+
+// Overrides styles on the
+// display_video_thumbnail partial
+.video_caption_link {
+  @include figcaption;
 }
 
 // Blog post callout
@@ -939,5 +1023,142 @@ form {
 
   .text-wrapper {
     width: 100%;
+  }
+}
+
+// Resources tabs section
+// Works with resources_tabs.haml partial
+// See code.org/teach for an example
+.resources-tabs{
+  margin-top: 2rem;
+  min-height: 408px;
+
+  nav {
+    border-bottom: 6px solid $brand_primary_default;
+    margin: 0 0 3rem;
+    align-items: end;
+
+    button.tab {
+      color: $neutral_dark;
+      background: $neutral_white;
+      border: 1px solid $neutral_dark20;
+      border-bottom: 0;
+      border-radius: 6px 6px 0 0;
+      padding: 0.75rem 0.25rem 0.7rem;
+      margin: 0;
+      width: 11.75rem;
+      cursor: pointer;
+      white-space: normal;
+      height: -webkit-fit-content;
+
+      &:hover {
+        background-color: $neutral_dark10;
+      }
+
+      // Selected tab's styles
+      &.active,
+      &.active:focus:not(:focus-visible) {
+        background-color: $brand_primary_default;
+        color: $neutral_white;
+        border-color: $brand_primary_default;
+      }
+
+      &:focus {
+        outline: unset;
+        border-color: $brand_primary_default;
+        background-color: $neutral_dark10;
+        color: $neutral_dark;
+      }
+    }
+  }
+
+  div.content {
+    text-align: left;
+  }
+
+  // Hides tab content
+  div.content {
+    display: none;
+
+    // Shows tab content
+    &.show {
+      display: initial;
+    }
+  }
+
+  .video_caption_link {
+    margin-bottom: 0;
+  }
+
+  &.show-tablet-and-mobile {
+    height: unset;
+
+    details {
+      padding-left: 0;
+      padding-right: 0;
+
+      summary {
+        @include heading-md;
+      }
+    }
+
+    .flex-container {
+      align-items: start;
+      flex-direction: row-reverse;
+      gap: 2rem;
+
+      @media screen and (max-width: $width-sm) {
+        flex-wrap: wrap-reverse;
+      }
+    }
+
+    figure {
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      display: none;
+    }
+  }
+}
+
+// Curriculum at a glance section
+// Works with curriculum_glance_section.haml partial
+// See code.org/educate/csp for an example
+.curriculum-glance {
+  background: $neutral-white;
+  border: 1px solid $neutral_dark10;
+  border-radius: $border-radius;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @media screen and (max-width: $width-md) {
+    grid-template-columns: unset;
+    gap: 1rem;
+  }
+
+  ul {
+    margin: 0;
+    gap: 1.25rem;
+
+    li {
+      all: unset;
+      font-size: 1rem;
+      margin: 0;
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+
+      &:before {
+        display: none;
+      }
+
+      p {
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
   }
 }

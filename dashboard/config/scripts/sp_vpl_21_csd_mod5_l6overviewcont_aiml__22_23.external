@@ -1,0 +1,67 @@
+name 'SP-VPL-21-CSD-mod5-L6overviewCont-AIML_-22_23'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 7: Introduction to AI Lab 
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">After students train their machine learning model to predict shapes based on features, they will move on to training machine learning a model to make food recommendations for a customer. As they did in the first model, they will be selecting features (food options) to predict a label (like or dislike). 
+</p></div>
+
+## Activity context
+
+##### You have been hired by a pizza restaurant to help figure out what customers like best! You collected a bunch of data about people’s preferences on various pizza toppings like pepperoni, peppers, anchovies, fried chicken, and others. You’re going to use this data to find patterns in the customer’s preferences! These patterns can help the pizza restaurant select new pizzas to add to their menu.
+
+## Cross-tab visualizations
+
+##### Now that students are familiar with AI Lab, the pizza dataset emphasizes the decision making process involved with training machine learning models. Students should be using cross-tab visualizations to make decisions about which features are useful for making recommendations, noticing when features have strong relationships and when features appear “random”. 
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">📊 Looking at categorical data</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:120px;">
+    <p>
+
+##### When you click on a column with categorical data, you can view more information in the panel on the right-side of AI Lab.
+
+<img src="https://images.code.org/a2a7d546cbf89c3b6debe1908853a8fb-image-1641664834970.png" style="float: right;  height: 400px; clear: both; margin-left:30px; margin-right:10px;">
+
+##### **1.** This is the name of the column that you selected.
+##### **2.** This is a description of the column you selected. It can tell you more information about the data in this column. If the data came from a survey, this will usually contain the question that was asked on the survey.
+##### **3.** A cross-tab chart shows how this column is related to the label you are trying to predict.
+##### **4.** A bar chart shows how many times a certain value appears in the chart.
+##### **5.** Press the "Add feature" button to use this column as one of the inputs in your machine learning model.
+
+</p></div></details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">📋 Reading cross-tab charts</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 30px;">
+    <p>
+
+##### In the cross-tab chart, look to see if the feature you picked has a strong relationship with your label. The coloring and percentages will help you out - the more that data is clustered around a particular value, the more helpful it will be to A.I. Bot in making its decision.
+
+
+
+<img src="https://images.code.org/9df24e0899b9f99c88bbed5e01138733-image-1641665238937.png" style="float: left; height: 175px; clear: both; margin: 0 20px 20px 0;">
+
+##### The chart to the left shows a strong relationship between the feature and the label. 90% of the people who said no to Italian dressing also said they disliked their salad, which is a pattern A.I. Bot can notice. Similarly, 89% of the people who said yes to Italian dressing also said they liked their salad.
+
+##### This means if A.I. Bot asks you "Did you have Italian dressing on your salad", it has a strong chance of predicting whether or not you liked your salad based on your answer.
+
+ 
+
+<img src="https://images.code.org/4c304acbc038a1d9fb7296465ecdc561-image-1641665247851.png" style="float: right; height: 175px; clear: both; margin: 0 20px 0 20px;">
+
+##### The chart to the right does not show a strong relationship between the feature and the label. The data shows that when people got chicken on their salad, around 50% of them disliked their salad and the other 50% liked their salad. This is basically the same as flipping a coin! This kind of relationship can confuse A.I. Bot, since none of the answers show a strong connection to each other.
+
+##### This means if A.I. Bot asks you "Did you have chicken on your salad?", the chances that it also predicts whether or not you like the salad is the same as flipping a coin.
+
+</p></div></details>
+
+## Let's continue practicing! 
+
+##### In the next level of this professional learning module, you will complete the pizza recommendation level from Lesson 6 of the AI and Machine Learning unit. While completing this level, use the cross-tab visualizations to help you select the features you use to train your model. 
+
+MARKDOWN

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-19 22:26:58 UTC",
+    "serialized_at": "2023-07-05 15:58:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -115,9 +115,9 @@
       "relative_position": 3,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** The teacher prompts for and facilitates collaboration for students in small groups and whole-class discussions.\n\n\n**Potential Teaching Group Decisions:**\n  * Encourage students to make their best guess for each meal recommendation possible using the data they have and a consensus among the group.\n  * Call out exemplar moments of collaboration among students.\n  * When facilitating a whole-class discussion, ask students how they came to an answer as a group using collaborative practices.\n  * Highlight that collaborating with others helps us to see the larger picture of a story, rather than just a narrow slice of it, like they encountered in the lesson.\n\n\n**Objectives:**\n* Participants engage in Unit 5 Lesson 1 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants discuss the importance of group work in the CS Discoveries curriculum.\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd5-2022/lessons/1\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> ",
+        "overview": "**Purpose:**\n* **Essential Practice:** The teacher prompts for and facilitates collaboration for students in small groups and whole-class discussions.\n\n\n**Potential Teaching Group Decisions:**\n  * Encourage students to make their best guess for each meal recommendation possible using the data they have and a consensus among the group.\n  * Call out exemplar moments of collaboration among students.\n  * When facilitating a whole-class discussion, ask students how they came to an answer as a group using collaborative practices.\n  * Highlight that collaborating with others helps us to see the larger picture of a story, rather than just a narrow slice of it, like they encountered in the lesson.\n\n\n**Objectives:**\n* Participants engage in Unit 5 Lesson 1 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants discuss the importance of group work in the CS Discoveries curriculum.\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd5-2023/lessons/1\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
         "preparation": "* Print copies of the Meals Data resource so that each group can get one of the four pages\n* Print one copy of the activity guide for each group\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
-        "student_overview": "**Question of the Day:** How does data affect decisions we make every day?\n\nIn this lesson, you will explore what data is and how it is used to solve problems. \n\n<a href=\"https://studio.code.org/s/csd5-2022/lessons/1\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> "
+        "student_overview": "**Question of the Day:** How does data affect decisions we make every day?\n\nIn this lesson, you will explore what data is and how it is used to solve problems. \n\n<a href=\"https://studio.code.org/s/csd5-2023/lessons/1\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> "
       },
       "seeding_key": {
         "lesson.key": "Representation Matters",
@@ -151,9 +151,9 @@
       "relative_position": 5,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** Discussion is an opportunity to hear multiple voices and bring different perspectives and experiences into the conversation.\n\n\n* **Potential Teaching Group Decisions:**\n  * Make an effort to bring multiple voices into class discussions\n  * Use the Think-Pair-Share strategy to facilitate discussion\n\n\n**Objectives:**\n* Participants engage in Unit 6 Lesson 2 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants brainstorm ways to lead an inclusive class discussion.\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd6-2022/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n",
+        "overview": "**Purpose:**\n* **Essential Practice:** Discussion is an opportunity to hear multiple voices and bring different perspectives and experiences into the conversation.\n\n\n* **Potential Teaching Group Decisions:**\n  * Make an effort to bring multiple voices into class discussions\n  * Use the Think-Pair-Share strategy to facilitate discussion\n\n\n**Objectives:**\n* Participants engage in Unit 6 Lesson 2 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants brainstorm ways to lead an inclusive class discussion.\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd6-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "student_overview": "**Question of the Day:** How can we design apps with devices based on the needs of a user?\n\nIn this lesson, you will explore how we can design apps with devices for different users and purposes\n\n<a href=\"https://studio.code.org/s/csd6-2022/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n"
+        "student_overview": "**Question of the Day:** How can we design apps with devices based on the needs of a user?\n\nIn this lesson, you will explore how we can design apps with devices for different users and purposes\n\n<a href=\"https://studio.code.org/s/csd6-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n"
       },
       "seeding_key": {
         "lesson.key": "Physical Designs",
@@ -247,9 +247,9 @@
           }
         ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** The teacher helps students manage multiple tabs and resources to keep thinking organized while learning new CS content.\n\n\n* **Potential Teaching Group Decisions:**\n  * Remind students often to refer back to and fill out Activity Guides as they are completing lesson activities.\n  * If the Activity Guide is being used virtually, remind students to switch tabs or view in split screen.\n  * If students have a question, prompt them to think of a resource they might use to answer the question before providing them with an answer.\n\n\n**Objectives:**\n* Participants engage in Unit 7 Lesson 2 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants share ideas for helping students manage multiple resources and tabs while engaging in a CS Discoveries lesson.\n\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd7-2022/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> ",
+        "overview": "**Purpose:**\n* **Essential Practice:** The teacher helps students manage multiple tabs and resources to keep thinking organized while learning new CS content.\n\n\n* **Potential Teaching Group Decisions:**\n  * Remind students often to refer back to and fill out Activity Guides as they are completing lesson activities.\n  * If the Activity Guide is being used virtually, remind students to switch tabs or view in split screen.\n  * If students have a question, prompt them to think of a resource they might use to answer the question before providing them with an answer.\n\n\n**Objectives:**\n* Participants engage in Unit 7 Lesson 2 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants share ideas for helping students manage multiple resources and tabs while engaging in a CS Discoveries lesson.\n\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd7-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
         "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?\n\n<a href=\"https://studio.code.org/s/csd7-2022/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> "
+        "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?\n\n<a href=\"https://studio.code.org/s/csd7-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> "
       },
       "seeding_key": {
         "lesson.key": "Introduction to Machine Learning",
@@ -1176,7 +1176,7 @@
       "key": "ef796afa-620e-4844-83d5-7e3fc98b94a1",
       "position": 2,
       "properties": {
-        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r app_design_for_users/csd/2023] activity guide to each student. \n\n",
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [r physical_designs/virtual-pl-csd-summer/2023] activity guide to each student. \n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1226,7 +1226,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Value Reasoning over Correctness:** Each user is designed with a particular template in mind, but students are encouraged to use their own reasoning and logic when recommending a template to users. It's okay for students to not make an \"obvious\" choice as long as they're thinking carefully about their reasoning and are able to justify their choices.\n\nThe animations and games are intentionally simple, to help set expectations about the animations and games that students will be creating over the course of the unit.\n"
+            "markdown": "**Value Reasoning over Correctness:** Each user is designed with a particular template in mind, but students are encouraged to use their own reasoning and logic when recommending a template to users. It's okay for students to not make an \"obvious\" choice as long as they're thinking carefully about their reasoning and are able to justify their choices.\n\nThe prototypes are intentionally simple, to help set expectations about the prototypes that students will be creating over the course of the unit.\n"
           }
         ]
       },
@@ -2636,6 +2636,18 @@
       }
     },
     {
+      "name": "[Exemplar] Physical Designs",
+      "url": "https://docs.google.com/document/d/1COKnyGNlEBpB8giiVDPGl-ubK1OEUU3fxYjNIhzpQT4/edit",
+      "key": "_exemplar_physical_designs",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_physical_designs"
+      }
+    },
+    {
       "name": "(Warm Up) Word Search",
       "url": "https://docs.google.com/document/d/14hKTZSrP7tnghpJhTLYJNEPeb1CinUaa0KtzRPADji4/edit",
       "key": "_warm_up_word_search",
@@ -2816,6 +2828,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to Machine Learning",
         "resource.key": "introduction_to_machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Physical Designs",
+        "resource.key": "_exemplar_physical_designs"
       }
     },
     {

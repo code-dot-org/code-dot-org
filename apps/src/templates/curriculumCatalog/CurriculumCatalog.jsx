@@ -1,20 +1,20 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import PropTypes from 'prop-types';
-
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
 import style from '../../../style/code-studio/curriculum_catalog_container.module.scss';
 import {queryParams, updateQueryParam} from '../../code-studio/utils';
 import HeaderBanner from '../HeaderBanner';
-import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-illustration-01.png';
+import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-bg.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
 import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
-
+import Toggle from '../../componentLibrary/toggle/Toggle.tsx';
 import Button from '@cdo/apps/templates/Button';
 import {
   Heading5,
   Heading6,
-  BodyOneText,
+  BodyTwoText,
 } from '@cdo/apps/componentLibrary/typography';
 import CheckboxDropdown from '../CheckboxDropdown';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
@@ -26,6 +26,8 @@ import {
   translatedGradeLevels,
   gradeLevelsMap,
 } from '../teacherDashboard/CourseOfferingHelpers';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const filterTypes = {
   grade: {
@@ -54,7 +56,7 @@ const filterTypes = {
 };
 
 const getEmptyFilters = () => {
-  let filters = {};
+  let filters = {translated: false};
   Object.keys(filterTypes).forEach(filterKey => {
     filters[filterKey] = [];
   });
@@ -81,6 +83,8 @@ const getInitialFilterStates = () => {
   Object.keys(urlParams).forEach(paramKey => {
     if (filterTypeKeys.includes(paramKey)) {
       filters[paramKey] = getValidParamValues(paramKey, urlParams[paramKey]);
+    } else if (paramKey === 'translated') {
+      filters['translated'] = urlParams[paramKey] === 'true';
     }
   });
   return filters;
@@ -154,11 +158,23 @@ const filterByDevice = (curriculum, deviceFilters) => {
   return true;
 };
 
-const CurriculumCatalog = ({curriculaData, isEnglish}) => {
+const CurriculumCatalog = ({
+  curriculaData,
+  isEnglish,
+  languageNativeName,
+  ...props
+}) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
+  const [numFilteredTranslatedCurricula, setNumFilteredTranslatedCurricula] =
+    useState(
+      filteredCurricula.filter(curriculum => curriculum.is_translated).length
+    );
   const [appliedFilters, setAppliedFilters] = useState(
     getInitialFilterStates()
   );
+  const [assignSuccessMessage, setAssignSuccessMessage] = useState('');
+  const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
+    useState(false);
 
   // Filters out any Curriculum Catalog Cards of courses that do not match the filter criteria.
   useEffect(() => {
@@ -167,10 +183,24 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
         filterByGradeLevel(curriculum, appliedFilters['grade']) &&
         filterByDuration(curriculum, appliedFilters['duration']) &&
         filterByTopic(curriculum, appliedFilters['topic']) &&
-        filterByDevice(curriculum, appliedFilters['device'])
+        filterByDevice(curriculum, appliedFilters['device']) &&
+        (!appliedFilters['translated'] || curriculum.is_translated)
     );
+    const newNumFilteredTranslatedCurricula = newFilteredCurricula.filter(
+      curriculum => curriculum.is_translated
+    ).length;
 
+    setNumFilteredTranslatedCurricula(newNumFilteredTranslatedCurricula);
     setFilteredCurricula(newFilteredCurricula);
+
+    if (newFilteredCurricula.length === 0) {
+      analyticsReporter.sendEvent(
+        EVENTS.CURRICULUM_CATALOG_NO_AVAILABLE_CURRICULA_EVENT,
+        {
+          filters_selected: JSON.stringify(appliedFilters),
+        }
+      );
+    }
   }, [curriculaData, appliedFilters]);
 
   // Handles updating the given filter and the URL parameters.
@@ -179,7 +209,8 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     newFilters[filterKey] = values;
     setAppliedFilters(newFilters);
 
-    const valuesParam = values.length > 0 ? values : undefined;
+    const valuesParam =
+      values.length > 0 || filterKey === 'translated' ? values : undefined;
     updateQueryParam(filterKey, valuesParam, true);
   };
 
@@ -197,11 +228,36 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
       updatedFilters = appliedFilters[filterKey].filter(item => item !== value);
     }
     handleUpdateFilter(filterKey, updatedFilters);
+
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_DROPDOWN_FILTER_SELECTED_EVENT,
+      {
+        filter_category: filterKey,
+        filter_name: value,
+      }
+    );
   };
 
   // Selects all options within the given filter.
   const handleSelectAllOfFilter = filterKey => {
     handleUpdateFilter(filterKey, Object.keys(filterTypes[filterKey].options));
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_DROPDOWN_FILTER_SELECTED_EVENT,
+      {
+        filter_category: filterKey,
+        filter_name: Object.keys(filterTypes[filterKey].options).toString(),
+      }
+    );
+  };
+
+  const handleToggleLanguageFilter = isToggled => {
+    handleUpdateFilter('translated', isToggled);
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_TOGGLE_LANGUAGE_FILTER_EVENT,
+      {
+        toggle_setting: isToggled,
+      }
+    );
   };
 
   // Clears all filter selections.
@@ -210,11 +266,30 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
     Object.keys(filterTypes).forEach(filterKey =>
       updateQueryParam(filterKey, undefined, false)
     );
-  }, []);
+    if (!isEnglish) {
+      updateQueryParam('translated', undefined, false);
+    }
+  }, [isEnglish]);
 
   // Clears selections within the given filter.
   const handleClearAllOfFilter = filterKey => {
     handleUpdateFilter(filterKey, []);
+  };
+
+  const handleAssignSuccess = assignmentData => {
+    setAssignSuccessMessage(
+      i18n.successAssigningCurriculum({
+        curriculum: assignmentData.assignedTitle,
+      })
+    );
+    setShowAssignSuccessMessage(true);
+
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_ASSIGN_COMPLETED_EVENT,
+      {
+        curriculum_offering: assignmentData.assignedTitle,
+      }
+    );
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
@@ -233,6 +308,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
                 key,
                 image,
                 display_name,
+                display_name_with_latest_year,
                 grade_levels,
                 duration,
                 school_subject,
@@ -243,16 +319,20 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
                 course_offering_id,
                 script_id,
                 is_standalone_unit,
+                is_translated,
               }) => (
                 <CurriculumCatalogCard
                   key={key}
                   courseDisplayName={display_name}
+                  courseDisplayNameWithLatestYear={
+                    display_name_with_latest_year
+                  }
                   imageSrc={image || undefined}
                   duration={duration}
                   gradesArray={grade_levels.split(',')}
                   subjects={school_subject?.split(',')}
                   topics={cs_topic?.split(',')}
-                  isTranslated={false} // TODO [MEG]: actually pass in this data
+                  isTranslated={is_translated}
                   isEnglish={isEnglish}
                   pathToCourse={course_version_path}
                   courseVersionId={course_version_id}
@@ -260,6 +340,8 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
                   courseOfferingId={course_offering_id}
                   scriptId={script_id}
                   isStandAloneUnit={is_standalone_unit}
+                  onAssignSuccess={response => handleAssignSuccess(response)}
+                  {...props}
                 />
               )
             )}
@@ -276,9 +358,9 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
           <Heading5 className={style.noResultsHeading}>
             {i18n.noCurriculumSearchResultsHeader()}
           </Heading5>
-          <BodyOneText className={style.noResultsBody}>
+          <BodyTwoText className={style.noResultsBody}>
             {i18n.noCurriculumSearchResultsBody()}
-          </BodyOneText>
+          </BodyTwoText>
         </div>
       );
     }
@@ -293,6 +375,20 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
         backgroundUrl={CourseCatalogBannerBackground}
         imageUrl={CourseCatalogIllustration01}
       />
+      {showAssignSuccessMessage && (
+        <div className={style.assignSuccessMessageContainer}>
+          <BodyTwoText className={style.assignSuccessMessage}>
+            {assignSuccessMessage}
+          </BodyTwoText>
+          <button
+            aria-label="close success message"
+            onClick={() => setShowAssignSuccessMessage(false)}
+            type="button"
+          >
+            <strong>X</strong>
+          </button>
+        </div>
+      )}
       <div className={style.catalogFiltersContainer}>
         <Heading6 className={style.catalogFiltersRowLabel}>
           {i18n.filterBy()}
@@ -319,6 +415,32 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
           color={Button.ButtonColor.brandSecondaryDefault}
         />
       </div>
+      {!isEnglish && (
+        <div className={style.catalogLanguageFilterRow}>
+          <div className={style.catalogLanguageFilterRowNumAvailable}>
+            <BodyTwoText>
+              {i18n.numCurriculaAvailableInLanguage({
+                numCurricula: numFilteredTranslatedCurricula,
+                language: languageNativeName,
+              })}
+            </BodyTwoText>
+            <FontAwesome
+              icon="language"
+              className="fa-solid"
+              title={i18n.courseInYourLanguage()}
+            />
+          </div>
+          <Toggle
+            name="filterTranslatedToggle"
+            label={i18n.onlyShowCurriculaInLanguage({
+              language: languageNativeName,
+            })}
+            size="m"
+            checked={appliedFilters['translated']}
+            onChange={e => handleToggleLanguageFilter(e.target.checked)}
+          />
+        </div>
+      )}
       <div className={style.catalogContentContainer}>
         {renderSearchResults()}
       </div>
@@ -329,6 +451,7 @@ const CurriculumCatalog = ({curriculaData, isEnglish}) => {
 CurriculumCatalog.propTypes = {
   curriculaData: PropTypes.arrayOf(curriculumDataShape),
   isEnglish: PropTypes.bool.isRequired,
+  languageNativeName: PropTypes.string.isRequired,
 };
 
 export default CurriculumCatalog;

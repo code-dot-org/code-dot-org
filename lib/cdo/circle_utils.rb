@@ -36,8 +36,7 @@ module CircleUtils
     # Only parse the commit message once
     @build_tags ||= circle_commit_message.
         scan(/(?<=\[)[\w\d\s]+(?=\])/).
-        map {|s| s.downcase.split.to_set}.
-        to_set
+        to_set {|s| s.downcase.split.to_set}
   end
 
   # In unit tests, we want to bypass the cache and recompute tags.

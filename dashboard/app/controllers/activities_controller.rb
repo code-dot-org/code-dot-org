@@ -1,6 +1,7 @@
 require 'cdo/activity_constants'
 require 'cdo/share_filtering'
 require 'cdo/firehose'
+require 'cdo/web_purify'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
@@ -54,7 +55,7 @@ class ActivitiesController < ApplicationController
       if @level.game.sharing_filtered?
         begin
           share_failure = ShareFiltering.find_share_failure(params[:program], locale)
-        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => exception
+        rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable => exception
           # If WebPurify or Geocoder fail, the program will be allowed, and we
           # retain the share_filtering_error to log it alongside the level_source
           # ID below.
@@ -157,7 +158,7 @@ class ActivitiesController < ApplicationController
       test_result: test_result,
       attempt: params[:attempt].to_i,
       lines: lines,
-      time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
+      time: params[:time].to_i.clamp(0, MAX_INT_MILESTONE),
       level_source_id: @level_source.try(:id)
     }
 
