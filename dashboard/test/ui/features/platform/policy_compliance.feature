@@ -48,7 +48,10 @@ Feature: Policy Compliance and Parental Permission
     Then element "#lockout-submit" is enabled
 
     # Ensure that we are now "pending"
+    And I take note of the current loaded page
     When I press "lockout-submit"
+    Then I wait until I am on a different page than I noted before
+
     Then I wait to see "#lockout-panel-form"
     And element "#permission-status" contains text "Pending"
 
