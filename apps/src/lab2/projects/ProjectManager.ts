@@ -15,6 +15,7 @@ import {ChannelsStore} from './ChannelsStore';
 import {Channel, Project, ProjectSources} from '../types';
 import {currentLocation} from '@cdo/apps/utils';
 import Lab2MetricsReporter from '../Lab2MetricsReporter';
+const {reload} = require('@cdo/apps/utils');
 
 export default class ProjectManager {
   private readonly channelId: string;
@@ -47,6 +48,7 @@ export default class ProjectManager {
   private destroyed = false;
   private reduceChannelUpdates: boolean;
   private initialSaveComplete: boolean;
+  private forceReloading: boolean;
 
   constructor(
     sourcesStore: SourcesStore,
@@ -59,6 +61,7 @@ export default class ProjectManager {
     this.channelsStore = channelsStore;
     this.reduceChannelUpdates = reduceChannelUpdates;
     this.initialSaveComplete = false;
+    this.forceReloading = false;
   }
 
   // Load the project from the sources and channels store.
@@ -235,6 +238,10 @@ export default class ProjectManager {
     this.saveStartListeners.push(listener);
   }
 
+  isForceReloading(): boolean {
+    return this.forceReloading;
+  }
+
   /**
    * Helper function to save a project, called either after a timeout or directly by save().
    * On a save, we check if there are unsaved changes to the source or channel.
@@ -308,7 +315,17 @@ export default class ProjectManager {
   private onSaveFail(errorMessage: string, error: Error) {
     this.saveInProgress = false;
     this.executeSaveFailListeners(error);
-    Lab2MetricsReporter.logError(errorMessage, error);
+    if (error.message.includes('409')) {
+      // If this is a conflict, we need to reload the page.
+      // We set forceReloading to true so the client can skip
+      // showing the user a dialog before reload.
+      this.forceReloading = true;
+      Lab2MetricsReporter.logWarning('Conflict on save, reloading page');
+      reload();
+    } else {
+      // Otherwise, we log the error.
+      Lab2MetricsReporter.logError(errorMessage, error);
+    }
   }
 
   private canSave(forceSave: boolean): boolean {
