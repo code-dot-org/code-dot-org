@@ -5,6 +5,7 @@
       "name": "All",
       "imageSrc": "all.png",
       "path": "all-by-type",
+      "defaultSound": "beats/groovy_alternate_beat",
       "folders": [
         {
           "name": "Piano",
