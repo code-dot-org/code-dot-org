@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::TestCase
+class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ActionController::TestCase
   freeze_time
 
   setup do
