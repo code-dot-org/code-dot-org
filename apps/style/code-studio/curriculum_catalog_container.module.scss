@@ -5,7 +5,8 @@
   align-items: baseline;
   gap: 16px;
   max-width: 60em;
-  margin: 1em auto;
+  margin: 0 auto;
+  padding: 1em 0;
 
   button {
     margin: 0;
@@ -16,7 +17,8 @@
   display: flex;
   justify-content: space-between;
   max-width: 60em;
-  margin: 1em auto;
+  margin: 0 auto;
+  padding: 0 0 1em 0;
 
   p {
     margin: 1em 0;
@@ -44,7 +46,7 @@ button.catalogClearFiltersButton {
 
 .catalogContentContainer {
   max-width: 60em;
-  margin: 1em auto;
+  margin: 0 auto 1em auto;
 }
 
 .catalogContentCards {
@@ -110,4 +112,5 @@ button.catalogClearFiltersButton {
   position: sticky;
   top: 0;
   background-color: white;
+  //padding: 1em 0;
 }
