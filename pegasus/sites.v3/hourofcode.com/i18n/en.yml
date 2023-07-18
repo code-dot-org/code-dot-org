@@ -184,7 +184,7 @@
   call_to_action_start_modules: "Start modules"
   call_to_action_see_course_details: "See course details"
   call_to_action_learn_about_approach: "Learn more about our approach"
-  call_to_action_try_java_lab: " Try Java Lab"
+  call_to_action_try_java_lab: "Try Java Lab"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
