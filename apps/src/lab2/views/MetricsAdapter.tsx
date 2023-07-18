@@ -44,7 +44,11 @@ const MetricsAdapter: React.FunctionComponent = () => {
 
   useEffect(() => {
     if (pageError) {
-      Lab2MetricsReporter.logError(pageError.errorMessage, pageError.error);
+      Lab2MetricsReporter.logError(
+        pageError.errorMessage,
+        pageError.error,
+        pageError.details
+      );
     }
   }, [pageError]);
 
