@@ -64,9 +64,8 @@ export function stringIsXml(str) {
       return true;
     } catch (e) {
       console.warn(`Source string ${str} is neither JSON nor XML.`);
-      // String is neither JSON or XML.
+      // String is neither JSON or XML. Default to XML if we can't parse.
       return true;
     }
   }
-  // return !str.length || str.charAt(0) === '<' ? true : false;
 }
