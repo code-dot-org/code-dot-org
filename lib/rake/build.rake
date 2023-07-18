@@ -25,6 +25,11 @@ namespace :build do
       npm_target = CDO.optimize_webpack_assets ? 'build:dist' : 'build'
       RakeUtils.system "npm run #{npm_target}"
       File.write(commit_hash, calculate_apps_commit_hash)
+
+      if rack_env?(:staging)
+        ChatClient.log 'Deploying <b>storybook</b>...'
+        RakeUtils.system 'npm run storybook:deploy'
+      end
     end
   end
 

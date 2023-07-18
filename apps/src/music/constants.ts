@@ -1,3 +1,5 @@
+export const baseAssetUrl = 'https://curriculum.code.org/media/musiclab/';
+
 export interface Trigger {
   id: string;
   dropdownLabel: string;
@@ -38,8 +40,6 @@ export const BlockMode = {
   SIMPLE2: 'Simple2',
   TRACKS: 'Tracks',
 };
-
-export const DEFAULT_SOUND = 'beats/groovy_beat';
 
 // For reference, events look like this:
 // events: [{src: 'sound_1', tick: 3}]
