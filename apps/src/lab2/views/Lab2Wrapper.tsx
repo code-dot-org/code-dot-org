@@ -32,10 +32,9 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     <ErrorBoundary
       fallback={<ErrorFallbackPage />}
       onError={(error, componentStack) =>
-        Lab2MetricsReporter.logError(
-          {name: 'Uncaught React Error', componentStack},
-          error
-        )
+        Lab2MetricsReporter.logError('Uncaught React Error', error, {
+          componentStack,
+        })
       }
     >
       <div
