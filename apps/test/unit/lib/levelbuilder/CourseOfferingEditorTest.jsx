@@ -33,8 +33,7 @@ describe('CourseOfferingEditor', () => {
         school_subject: 'science,english_language_arts',
         device_compatibility: JSON.stringify(deviceCompatibilities),
         description: 'An introductory course into computer science.',
-        professional_learning:
-          'https://code.org/educate/professional-learning/middle-high',
+        professional_learning: 'code.org/apply',
       },
       selfPacedPLCourseOfferings: [
         {
@@ -56,6 +55,10 @@ describe('CourseOfferingEditor', () => {
           course_version_path: null,
         },
       ],
+      professionalLearningProgramPaths: {
+        'K5 Workshops': 'code.org/professional-development-workshops',
+        '6-12 Workshops': 'code.org/apply',
+      },
     };
   });
 
@@ -94,8 +97,7 @@ describe('CourseOfferingEditor', () => {
         school_subject: 'science,english_language_arts',
         device_compatibility: JSON.stringify(deviceCompatibilities),
         description: 'An introductory course into computer science.',
-        professional_learning:
-          'https://code.org/educate/professional-learning/middle-high',
+        professional_learning: 'code.org/apply',
       };
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
         200,
@@ -170,8 +172,7 @@ describe('CourseOfferingEditor', () => {
         school_subject: 'science,english_language_arts',
         device_compatibility: JSON.stringify(deviceCompatibilities),
         description: 'An introductory course into computer science.',
-        professional_learning:
-          'https://code.org/educate/professional-learning/middle-high',
+        professional_learning: 'code.org/apply',
       };
 
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
