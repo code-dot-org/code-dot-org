@@ -8,11 +8,17 @@
         "csd-2022/accuracy-in-ai-lab": {
           "display_name": "Точність в AI Lab"
         },
+        "csd-2022/animation-tab": {
+          "display_name": "Вкладка \"Анімація\""
+        },
         "csd-2022/app-lab": {
           "display_name": "Програмна Лабораторія"
         },
         "csd-2022/applab-overview": {
           "display_name": "Огляд"
+        },
+        "csd-2022/body-styling": {
+          "display_name": "Стилізація основної конструкції"
         },
         "csd-2022/booleans-and-comparison-operators": {
           "display_name": "Булеві та оператори порівняння"
@@ -25,6 +31,9 @@
         },
         "csd-2022/color-lights": {
           "display_name": "Кольорове світло"
+        },
+        "csd-2022/creating-a-survey": {
+          "display_name": "Створення опитування"
         },
         "csd-2022/css": {
           "display_name": "CSS"

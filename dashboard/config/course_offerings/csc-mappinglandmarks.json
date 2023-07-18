@@ -1,7 +1,7 @@
 {
   "key": "csc-mappinglandmarks",
   "display_name": "Coding Interactive Maps",
-  "category": "other",
+  "category": "csc",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Module",
@@ -10,6 +10,11 @@
   "header": "csc",
   "image": "https://images.code.org/314477f20f998c553eb9476c8f7a72ea-Maps.png",
   "cs_topic": "art_and_design,app_design,games_and_animations,programming",
-  "school_subject": "english_language_arts,history",
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "school_subject": "history",
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "self_paced_professional_learning": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null
 }

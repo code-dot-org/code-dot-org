@@ -26,8 +26,8 @@ class LevelLoader
     # This is only expected to happen when LEVEL_NAME is set and the
     # filename is not found
     unless level_file_paths.count > 0
-      raise 'no matching level names found. '\
-        'please check level name for exact case and spelling. '\
+      raise 'no matching level names found. ' \
+        'please check level name for exact case and spelling. ' \
         'the level name is the level filename without the .level suffix.'
     end
 
@@ -66,9 +66,10 @@ class LevelLoader
 
       # activerecord-import (with MySQL, anyway) doesn't save associated
       # models, so we've got to do this manually.
+      immutable_lcd_columns = %i{id level_id created_at}
       changed_lcds = changed_levels.filter_map(&:level_concept_difficulty)
       lcd_update_columns = LevelConceptDifficulty.columns.map(&:name).map(&:to_sym).
-          reject {|column| %i{id level_id created_at}.include? column}
+        reject {|column| immutable_lcd_columns.include? column}
       LevelConceptDifficulty.import! changed_lcds, on_duplicate_key_update: lcd_update_columns
 
       # activerecord-import doesn't trigger before_save and before_create hooks
@@ -81,8 +82,9 @@ class LevelLoader
       end
 
       # Bulk-import changed levels.
+      immutable_level_columns = %i(id name created_at)
       update_columns = Level.columns.map(&:name).map(&:to_sym).
-        reject {|column| %i(id name created_at).include? column}
+        reject {|column| immutable_level_columns.include? column}
       Level.import! changed_levels, on_duplicate_key_update: update_columns
 
       # now we want to run some after_save callbacks, which didn't get run when

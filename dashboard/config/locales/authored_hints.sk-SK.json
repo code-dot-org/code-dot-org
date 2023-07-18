@@ -11189,9 +11189,9 @@
           "courseD_artist_functions8_c": "Na konci každého radu štvorcov, pred začatím nového radu, sa umelec potrebuje otočiť o 180 stupňov. Daj to celé do vnútra opakovacieho cyklu a priprav sa na ďalšie cvičenie!"
         },
         "courseE_artist_functions92022": {
+          "courseD_artist_functions9_b": "Táto kresba je vytvorená kresbou radu trojuholníkov 4-krát a pootočením buď o 60 alebo 120 stupňov ešte predtým, ako nakreslíš ďalší rad trojuholníkov.",
           "courseD_artist_functions9_e": "Môžeš nájsť všetky štyri miesta, kde pri kreslení môže byť použitý `rad trojuholníkov`?",
           "courseD_artist_functions9_a": "Táto úloha môže byť rozdelená na 3 časti:\n\n-   vytvor funkciu `nakresli trojuholník`\n-   vytvor funkciu `nakresli rad trojuholníkov`\n-   použi svoju funkciu  `nakresli rad trojuholníkov` 4-krát na dokončenie kresby",
-          "courseD_artist_functions9_b": "Táto kresba je vytvorená kresbou radu trojuholníkov 4-krát a pootočením buď o 60 alebo 120 stupňov ešte predtým, ako nakreslíš ďalší rad trojuholníkov.",
           "courseD_artist_functions9_c": "Nakresli rad trojuholníkov:\n\n-   opakuj 4-krát\n-   nakresli trojuholník\n-   skoč vpred o 50 pixelov",
           "courseD_artist_functions9_d": "Narkesli diamant:\n\n-   opakuj 2-krát\n-   nakresli rad trojuholníkov\n-   otoč o 60 stupňov\n-   nakresli rad trojuholníkov\n-   otoč o 120 stupňov"
         },

@@ -11,11 +11,9 @@ redshift_host: !Secret
 redshift_password: !Secret
 redshift_username: !Secret
 sinatra_session_secret: !Secret
-reporting_db_admin: !Secret
 
 <% unless name&.include?('console') %>
-# Production database was provisioned manually and has a different admin SQL username.
-db_admin:
+db_credential_admin:
 <% end %>
 
 newrelic_logging: true

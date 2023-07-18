@@ -134,7 +134,8 @@ module Cdo
     private def process_secrets!(config)
       return if config.nil?
       config.select {|_, v| v.is_a?(Secret)}.each do |key, secret|
-        # TODO: Update this to work correctly for Stack Secrets.
+        # The secret_prefix attribute is ignored by  StackSecrets. They use the stack_specific_secret_path method
+        # to compute the full AWS Secret name.
         secret.secret_prefix ||= env
         secret.secret_key ||= key
       end
@@ -154,7 +155,7 @@ module Cdo
             value.lookup(cdo_secrets)
           else
             # TODO: Do we need to modify this use case as well to get a stack specific secret?
-            CDO.log.info "This weird code path was used for CDO configuration setting: #{key} / value: #{value}"
+            CDO.log.info "This weird code path was used for CDO configuration setting: #{key}"
             value.to_s.gsub(SECRET_REGEX) {cdo_secrets.get!($1)}
           end
         end

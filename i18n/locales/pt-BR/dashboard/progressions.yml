@@ -2,10 +2,14 @@ pt:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" com a Abelha'
+      8-Bit Binary Number Widget: Widget de Número Binário de 8 bits
       AI Machine Learning - Video: Aprendizado de Máquina com IA - Vídeo
       'AI: Impact on Society - Video': 'IA: Impacto na sociedade - Vídeo'
       'AI: Training Data & Bias - Video': 'IA: Dados de treinamento e viés - Vídeo'
       Accelerometer Events: Eventos do Acelerômetro
+      Add Movement: Adicionar Movimento
+      Add Sprites: Adicionar Sprites
+      Add Text: Adicionar Texto
       Adding Images: Adicionando Imagens
       Adding Screens: Adicionando Telas
       Alien Defender: Defensor alienígena
@@ -30,13 +34,14 @@ pt:
       Begin planning your project: Comece planejando seu projeto
       Begin planning your project_2018: Comece planejando seu projeto_2018
       Binary Bracelets - Unplugged Activity: Pulseiras Binárias - Atividade offline
+      Binary Number Widget: Widget de Números Binários
       Binary Numbers: Números binários
       Binary and Data: Binário e Dados
       Board Events: Eventos de borda
       Board Input and Output: Entrada e Saída da Placa
       Boolean Comparison: Comparação Booleana
       Booleans and Comparison Operators: Operadores de comparação e valores booleanos
-      Build a Platform Jumper: Construa um Platform Jumper
+      Build a Platform Jumper: Crie um Jogo - Saltador Plataformas
       Build a Screen: Construir uma Tela
       Building a UI with Design Mode: Construindo uma Interface de Usuário com o Modo Design
       Building an App: Construir um App
@@ -63,6 +68,7 @@ pt:
       Change: Mudança
       Changing Screens: Mudando Telas
       Changing Sensor Scale: Alterando a escala do Sensor
+      Check-In Survey: Pesquisa de verificação
       Checking for a Winner: Verificando um Vencedor
       Choose Your Own Adventure: Escolha sua Aventura
       Choosing Good IDs: Escolhendo bons IDs
@@ -71,6 +77,7 @@ pt:
       'Circuit Playground: Introduction': 'Circuit Playground: LEDs'
       'Circuit Playground: LEDs': 'Circuit Playground: LEDs'
       Circuits and Logic: Circuitos e Lógica
+      Code Prediction: Previsão de código
       Code Your Own Flappy Game: Desenvolva seu próprio Flappy Game
       Collector Game: Jogo de Colecionador
       Collision Detection: Detecção de Colisão
@@ -83,6 +90,7 @@ pt:
       Conditionals with Cards - Unplugged Activity: Cláusulas Condicionais com Cartões - Atividade offline
       'Conditionals: If Statements': 'Condicionais: declarações "If"'
       'Conditionals: If and If/Else Statements': 'Condicionais: declarações "If" e "If/Else"'
+      Control Your Player: Controle seu Jogador
       Course E Artist Project: Curso e Projeto Artístico
       Course E Sprite Lab Project: Curso e Projeto de Laboratório de Sprite 
       'Course E: Play Lab Project': 'Curso E: Projeto Play Lab'
@@ -95,6 +103,8 @@ pt:
       Crack Random Substitution: Entendendo a Substituição Aleatória
       Crack a Caesar Cipher: Quebrando a Cifra de César
       Create Your Own Animation: Crie Sua Própria Animação
+      Create Your Sprites: Crie seus Sprites
+      Create a Background: Crie um Plano de Fundo
       Create a Story: Crie uma História
       Create your project: Crie seu projeto
       Creating Sprites: Fazendo Sprites
@@ -107,6 +117,7 @@ pt:
       Debugging with Watchers: Depurando com Observadores
       Debugging with the Step Button: Depuração com o Botão Step
       Demo - Bug Grab: Demo - Pegue o Bug
+      'Demo App: Interactive Card': 'Demonstração: Cartão Interativo'
       Demo Apps: Apps de Demonstração
       Design Mode: Modo de Design
       Design Mode Elements: Modo de Design de Elementos
@@ -117,17 +128,21 @@ pt:
       Designing for Accessibility: Projetando para Acessibilidade
       Digital Sharing - Unplugged Activity: Compartilhamento Digital - Atividade offline
       Dogger Example: Exemplo do Cachorrinho
+      Draw Your Background: Desenhe seu Plano de Fundo
+      Draw a Background: Desenhe um Plano de Fundo
       Drawing: Desenho
       Drawing Shapes: Desenhando Formas
       Editing Images: Editando Imagens
       Emotion Machine Example: Exemplo de Máquina de Emoção
       End of Course Projects: Projetos de conclusão de curso
+      End-Of-Unit Survey: Pesquisa de Fim de Unidade
       Escape Room Example: Exemplo de Sala de Escape
       Event Types: Tipos de Eventos
       Events: Eventos
       Events and Linking Screens: Eventos e Telas de Links
       Events and Properties: Eventos e Propriedades
       Example: Exemplo
+      Example Animated Scene: Exemplo de Cena Animada
       Example App Types: Exemplos de Tipos de App
       Example Projects: Projetos de exemplo
       Example projects: Projetos de Exemplo
@@ -196,7 +211,9 @@ pt:
       InspirationalArtwork: ArteInspiradora
       Interactive Card: Cartão Interativo
       Intro to Design Mode: Introdução ao Modo Design
+      Intro to Flyer Game: Introdução ao Jogo de Folhetos
       Intro to For Loops: Introdução para Laços "For"
+      Intro to Side Scrollers: Introdução as Rolagens Laterais
       Intro to Sprites: Introdução a Sprites
       Intro to Variables: Introdução a Variáveis
       Introducing Sprite Lab: Introdução ao Sprite Lab
@@ -206,7 +223,7 @@ pt:
       Iteration and Parameters: Iteração e Parâmetros
       Keep On Dancing!: Continue Dançando!
       Keeping Data Secret: Mantendo o segredo dos dados
-      Keyboard Input: Entrada do teclado
+      Keyboard Input: Entrada de Teclado
       LED Apps: Apps LED
       Layout Properties: Propriedades do Layout
       Layout with CSS: Layout com CSS
@@ -219,8 +236,11 @@ pt:
       Linking Screens: Telas de vinculação
       Lists: Listas
       Lists in HTML: Listas em HTML
+      Looping: Repetição
       Loops with the Artist: Laços com o Artista
+      Make Your Sprites: Faça seus Sprites
       Make a Prediction: Faça uma Predição
+      Make an Interactive Card: Faça um Cartão Interativo
       Make it Interactive: Tornando interativo
       Make it Your Own: Torne-o Seu
       Making Music: Fazendo Música
@@ -264,12 +284,16 @@ pt:
       Overview: Visão geral
       Pair Programming: Programação em duplas
       Picturing Data: Estruturação de dados
+      Plan Your Project: Planeje seu projeto
+      Plan Your Scene: Planeje sua Cena
       Plane Jumper: Saltador de avião
       Planning: Planejamento
-      Platform Jumper - Background and Variables: Platform Jumper - Histórico e Variáveis
-      Platform Jumper - Items: Platform Jumper - Itens
-      Platform Jumper - Platforms: Platform Jumper - Plataformas
-      Platform Jumper - Player: Platform Jumper - Jogador
+      Platform Jumper - Background and Variables: Saltador de Plataformas - Histórico e Variáveis
+      Platform Jumper - Items: Saltador de Plataformas - Itens
+      Platform Jumper - Platforms: Saltador de Plataformas - Plataformas
+      Platform Jumper - Player: Saltador de Plataformas - Jogador
+      Platform Jumper Review: Análise do Saltador de Plataformas
+      Player Controls: Controles do jogador
       Playing Notes: Jogando Notas
       Playing with Notes: Jogando com Notas
       Plotting Shapes in Game Lab: Plotando Formas no Jogo do Laboratório
@@ -288,10 +312,14 @@ pt:
       Properties: Propriedades
       Publishing Your Website: Publicando seu site
       Quarter Notes: Semínimas
+      Quick Check: Verificação Rápida
       RGB Exploration: Exploração RGB
       RGB Widget: Widget RGB
       Random Numbers: Números Aleatórios
       Reading Sensors: Sensores de Leitura
+      Recognizing Expressions: Reconhecendo expressões
+      Recognizing Fish: Reconhecendo peixes
+      Recognizing Fish Features: Reconhecendo as características dos peixes
       Reflection: Reflexão
       Repeat Blocks: Blocos de Repetição
       Repeat Blocks with BB-8: Blocos de Repetição com BB-8
@@ -302,6 +330,9 @@ pt:
       Responding to Board Events: Respondendo aos eventos da placa
       Responding to User Input: Respondendo a Entradas de Usuário
       Review: Revisar
+      Review Your Animated Scene: Revise sua Cena animada
+      Review Your Game: Revise seu Jogo
+      Review Your Scene: Revise sua Cena
       Revise Artist Project: Revisar Projeto Artista
       Revise Sprite Lab Project: Revisar o Projeto de Laboratório de Sprite
       Revisiting the Counter Pattern: Revisitando o Padrão do Contador
@@ -309,13 +340,16 @@ pt:
       Run a simulation: Executar uma Simulação
       Sample App: Aplicativo exemplo
       Sample Game: Jogo de Exemplo
-      Sample Platform Jumper Game: Amostra de Jogo de plataforma
+      Sample Games: Jogos de Exemplo
+      Sample Platform Jumper Game: Exemplo de Jogo - Saltador de Plataformas
       Sample Program: Programa de Exemplo
       Sample Programs: Programas de Exemplo
+      Scoring & Scoreboard: Pontuação e placar
       Screen Design: Design de Tela
       Sensor Events: Eventos de Sensor
       Sensor Experiment: Experimento com Sensor
       Sensors to Colors: Sensores para Cores
+      Set Up Sprites: Configurar Sprites
       Setting Properties: Propriedades de Configuração
       Shapes and Parameters: Formas e Parâmetros
       Shapes and the Draw Loop: Formas e o Laço de Desenho
@@ -330,7 +364,7 @@ pt:
       Sprite Interactions Review: Revisão de interações de Sprite
       Sprite Lab Example Project: Projeto de Exemplo do Laboratório de Sprite
       Sprite Lab Project: Projeto do Laboratório de Sprite
-      Sprite Movement: Movimento sprite
+      Sprite Movement: Movimento de Sprite
       Sprite Properties: Propriedades do Sprite
       Sprite Scenes: Cenas com Sprite
       Sprite Velocity: Velocidade de Sprite
@@ -363,7 +397,7 @@ pt:
       Using the LED: Usando o LED
       Using the Repeat Block: Usando o Bloco Repita
       Using the Switch: Usando o Switch
-      Variables: variáveis
+      Variables: Variáveis
       Velocity: Velocidade
       Velocity and the Counter Pattern: Velocidade e o Padrão Contador
       Velocity and the Counter Pattern Review: Revisão de Velocidade e o Padrão Contador
@@ -373,8 +407,8 @@ pt:
       'Video: CS Matters': 'Vídeo: Importância da Ciência da Computação'
       'Video: Conditional Statements': 'Vídeo: Declarações Condicionais'
       'Video: Conditionals': 'Vídeo: Condicionais'
-      'Video: Drawing in Game Lab - Part 1': 'Vídeo: Desenhando no Laboratório de Jogo - parte 1'
-      'Video: Drawing in Game Lab - Part 2': 'Vídeo: Desenho no laboratório de jogo - parte 2'
+      'Video: Drawing in Game Lab - Part 1': 'Vídeo: Desenhando no Laboratório de Jogos - Parte 1'
+      'Video: Drawing in Game Lab - Part 2': 'Vídeo: Desenhando no Laboratório de Jogos - Parte 2'
       'Video: For Loops': 'Vídeo: Laços Para'
       'Video: Functions': 'Vídeo: Funções'
       'Video: If/Else Statements': 'Vídeo: Condicionais'
@@ -384,7 +418,8 @@ pt:
       'Video: Intro to Web Lab - Part 2': 'Vídeo: Introdução ao Web Lab - Parte 2'
       'Video: Introduction to Arrays': 'Vídeo: Introdução a Matrizes'
       'Video: Introduction to Sprites': 'Vídeo: Introdução a Sprites'
-      'Video: Introduction to the Draw Loop': 'Vídeo: Introdução ao laço Draw'
+      'Video: Introduction to Variables': 'Vídeo: Introdução às variáveis'
+      'Video: Introduction to the Draw Loop': 'Vídeo: Introdução ao Laço de Desenho'
       'Video: Outbreak Simulator: Introduction': 'Video: Simulação de Vírus: Intro'
       'Video: Problem Solving Process': 'Vídeo: Processo de resolução de problemas'
       'Video: Sprite Movement': 'Vídeo: Movimento de Sprite'

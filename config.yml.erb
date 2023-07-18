@@ -315,6 +315,9 @@ discourse_sso_secret:
 
 ### Application configuration defaults
 
+# Installs bin/i18n dependencies
+build_i18n: true
+
 i18n_backend:
 cache:
 app_servers: {}
@@ -384,7 +387,7 @@ dashboard_secret_key_base: !Secret
 dashboard_host: 0.0.0.0
 dashboard_port: 3000
 dashboard_workers: 8
-dashboard_unicorn_name: dashboard
+dashboard_web_server_name: dashboard
 dashboard_sock:
 
 # Causes dashboard-server to run pegasus as middleware, starting both in a
@@ -396,7 +399,7 @@ override_pegasus:
 pegasus_host:
 pegasus_sock:
 pegasus_port: 3000
-pegasus_unicorn_name: pegasus
+pegasus_web_server_name: pegasus
 pegasus_workers: 8
 sinatra_session_secret:
 
@@ -443,7 +446,7 @@ stub_school_data: false
 
 disable_s3_image_uploads: false
 
-channels_api_secret: <%=poste_secret%>
+channels_api_secret: !Secret
 
 # Whether to prefix bundler commands with 'sudo'.
 # It may be useful to set this false when doing local development on Linux.
@@ -511,9 +514,10 @@ redshift_password:
 
 devinternal_db_writer: !Secret
 
+# Temporarily set in locals.yml until we determine whether we can create a Secret with this name (replacing a deleted one).
+db_cluster_id:
+
 # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
-db_cluster_id: !StackSecret
-db_writer_endpoint: !StackSecret
 db_endpoint_writer: !StackSecret
 db_endpoint_proxy_writer: !StackSecret
 db_endpoint_proxy_reader: !StackSecret
@@ -525,9 +529,7 @@ db_credential_admin: !StackSecret
 db_credential_writer: !StackSecret
 db_credential_reader: !StackSecret
 
-# Legacy database configuration settings contain a complete URI (username, password, servername, and database).
-db_admin: !Secret
-reporting_db_admin:
+# mysql:// URI (including credentials) to connect to ProxySQL administrative interface (which emulates a MySQL server)
 db_proxy_admin:
 
 db_writer: !Secret

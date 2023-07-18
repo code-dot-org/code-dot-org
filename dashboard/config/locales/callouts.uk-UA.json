@@ -552,7 +552,7 @@
           "new_block_4": "Новий блок!"
         },
         "CourseF_outbreak2": {
-          "minitoolbox": "Клацніть тут, щоб розгорнути блок.",
+          "minitoolbox": "Клацни тут, щоб розгорнути блок.",
           "pointerlocation": "Перетягніть блок суб'єкта сюди."
         },
         "CourseF_outbreak7": {
@@ -783,7 +783,7 @@
           "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
         },
         "courseC_PlayLab_events_challenge1_2021": {
-          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати виконавців у різні частини ігрового простору.\n"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_callout1": "Використовуйте цю команду, щоб перемістити бджолу назад."
@@ -1172,16 +1172,16 @@
           "courseB_playlab_events6_a": "Використовуй зелену стрілку розкривного списку для зміни напрямків."
         },
         "Fish Tank 3-validated_2021": {
-          "spritelab_comment": "Використовуйте цей блок для приміток для себе або викладача, як працює ваш код."
+          "spritelab_comment": "Використовуй цей блок для приміток про те, як працює твій код для себе або для вчителя."
         },
         "courseC_artist_prog2_2021": {
           "slider": "Тут ти можеш уповільнити свою програму."
         },
         "courseD_artist_nestedLoops1a_2021": {
-          "courseD_artist_nestedLoops1a_1": "Тобі не обов'язково використовувати кольори, щоб правильно виконати це завдання. Якщо ти хочеш, цей блок `випадкових кольорів` зробить це простіше простого!"
+          "courseD_artist_nestedLoops1a_1": "Тобі не обов'язково використовувати кольори, щоб правильно виконати це завдання. Якщо хочеш, використай блок `випадкових кольорів`, щоб зробити це простіше простого!"
         },
         "courseE_aboutme_2_2021": {
-          "": "Натисніть!"
+          "": "Клацни тут!"
         },
         "courseE_artist_functions2_2021": {
           "courseD_artist_functions2_1": "Якщо запустити цей зелений блок, запуститься увесь код у функції. Що має зробити художник після того, як намалює перший квадрат?"
@@ -1210,16 +1210,16 @@
           "courseE_farmer_functions1a_1": "Цей овоч невідомий.  Він змінюється кожного разу, коли ти запускаєш програму."
         },
         "Virtual Pet 2_-2022-2": {
-          "vp_costumes": "Натисни, щоб додати нові костюми до свого проєкту!"
+          "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
         },
         "Virtual Pet 2_2021": {
-          "vp_costumes": "Натисни, щоб додати нові костюми до свого проєкту!"
+          "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
         },
         "Virtual Pet 6_-2022-2": {
-          "vp_costumes": "Натисни, щоб додати нові костюми до свого проєкту!"
+          "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
         },
         "Virtual Pet 6_2021": {
-          "vp_costumes": "Натисни, щоб додати нові костюми до свого проєкту!"
+          "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
         },
         "courseA_EOC_playlab_animals": {
           "question_mark": "?"
@@ -1323,15 +1323,15 @@
           "": "На цих блоках немає чисел. Ти можеш використовувати стільки, скільки захочеш!"
         },
         "courseF_apps_aquarium": {
-          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_aquarium2022": {
-          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_aquarium_-2022-2": {
-          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_card": {
@@ -1344,27 +1344,27 @@
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_chatbot": {
-          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_chatbot2022": {
-          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_chatbot_-2022-2": {
-          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_collector": {
-          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_collector2022": {
-          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_collector_-2022-2": {
-          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_collector_drag_-2022-2": {
@@ -1389,15 +1389,15 @@
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_pet": {
-          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_pet2022": {
-          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_pet_-2022-2": {
-          "run_button": "Спочатку натисніть кнопку \"Запустити\"!",
+          "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_artist_for1_2021": {
@@ -1431,10 +1431,10 @@
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_events_choice_penguin": {
-          "whenToWhile": "Спробуй змінити \"коли\" на \"при\"."
+          "whenToWhile": "Спробуй змінити \"коли\" на \"поки\"."
         },
         "courseF_events_choice_penguin_-2022-2": {
-          "whenToWhile": "Спробуй змінити \"коли\" на \"при\"."
+          "whenToWhile": "Спробуй змінити \"коли\" на \"поки\"."
         },
         "courseF_events_conflict": {
           "stops_block": "Нові блоки тут!"
@@ -1458,34 +1458,34 @@
           "behaviors_edit": "Натисни, щоб побачити, як працює ця модель поведінки."
         },
         "courseF_events_time": {
-          "events_category": "Натисніть, щоб відкрити категорію Події."
+          "events_category": "Клацни тут, щоб відкрити категорію Події."
         },
         "courseF_events_time_-2022-2": {
-          "events_category": "Натисніть, щоб відкрити категорію Події."
+          "events_category": "Клацни тут, щоб відкрити категорію Події."
         },
         "courseF_label_predict": {
-          "variablesPredict": "Подивись уважно на код нижче цього пункту."
+          "variablesPredict": "Подивись уважно на код нижче."
         },
         "courseF_label_predict_-2022-2": {
-          "variablesPredict": "Подивись уважно на код нижче цього пункту."
+          "variablesPredict": "Подивись уважно на код нижче."
         },
         "courseF_sprites_behaviors": {
-          "behaviors_category": "Натисніть, щоб відкрити категорію Моделей поведінки."
+          "behaviors_category": "Клацни тут, щоб відкрити категорію моделей Поведінки."
         },
         "courseF_sprites_behaviors_-2022-2": {
-          "behaviors_category": "Натисніть, щоб відкрити категорію Моделей поведінки."
+          "behaviors_category": "Клацни тут, щоб відкрити категорію моделей Поведінки."
         },
         "courseF_sprites_make": {
-          "sprites_category": "Натисніть, щоб відкрити категорію Спрайтів."
+          "sprites_category": "Клацни тут, щоб відкрити категорію Спрайтів."
         },
         "courseF_sprites_make_-2022-2": {
-          "sprites_category": "Натисніть, щоб відкрити категорію Спрайтів."
+          "sprites_category": "Клацни тут, щоб відкрити категорію Спрайтів."
         },
         "courseF_sprites_positioning": {
-          "locations_category": "Натисніть, щоб відкрити категорію Місць розташування."
+          "locations_category": "Клацни тут, щоб відкрити категорію Розташування."
         },
         "courseF_sprites_positioning_-2022-2": {
-          "locations_category": "Натисніть, щоб відкрити категорію Місць розташування."
+          "locations_category": "Клацни тут, щоб відкрити категорію Розташування."
         },
         "courseF_sprites_properties": {
           "sprites_category2": "Шукай новий блок тут."
@@ -1526,10 +1526,10 @@
           "join_blocks": "Шукай нові блоки тут!"
         },
         "courseF_text_events": {
-          "events_category": "Натисніть, щоб відкрити категорію Події."
+          "events_category": "Клацни тут, щоб відкрити категорію Події."
         },
         "courseF_text_events_-2022-2": {
-          "events_category": "Натисніть, щоб відкрити категорію Події."
+          "events_category": "Клацни тут, щоб відкрити категорію Події."
         },
         "courseF_text_print": {
           "print_block": "Знайди блок друку тут!",
@@ -1546,13 +1546,13 @@
           "prompt_block": "Знайди блок підказки тут!"
         },
         "courseF_variables2_predict_-2022-2": {
-          "variablesPredict": "Подивись уважно на код нижче цього пункту."
+          "variablesPredict": "Подивись уважно на код нижче."
         },
         "courseF_variables_predict": {
-          "variablesPredict": "Подивись уважно на код нижче цього пункту."
+          "variablesPredict": "Подивись уважно на код нижче."
         },
         "courseF_variables_predict_-2022-2": {
-          "variablesPredict": "Подивись уважно на код нижче цього пункту."
+          "variablesPredict": "Подивись уважно на код нижче."
         },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Після з'єднання усіх блоків натисни \"Запустити\" щоб запустити програму."
@@ -1565,6 +1565,123 @@
         },
         "CSD U3 Random add_2022": {
           "CSD_U3_butterfly": "Уважно подивися на цей код."
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "CSD U6L9.7 - if-statement": "Додай команду умови тут"
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "U6L6.4 - If": "Додай команду умови тут"
+        },
+        "ml-customize apps-choice3": {
+          "CSD_AI_L10_predict": "Додай команду умови сюди"
+        },
+        "ml-customize apps-choice3_2022": {
+          "CSD_AI_L10_predict": "Додай команду умови сюди"
+        },
+        "ml-customize apps-choice5": {
+          "CSD_AI_L11_top": "Помісти блок над цим рядком"
+        },
+        "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "Помісти блок над цим рядком"
+        },
+        "ml-intro app lab-book recommender 5C-2021": {
+          "CSD_AI_L7_event": "Додай сюди блок 'відворитиЗвук'"
+        },
+        "ml-intro app lab-book recommender 5C_2022": {
+          "CSD_AI_L7_event": "Додай сюди блок 'відворитиЗвук'"
+        },
+        "ml-intro app lab-book recommender 5E-2021": {
+          "CSD_AI_L7_top": "Помісти блок над цим рядком"
+        },
+        "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "Помісти блок над цим рядком"
+        },
+        "ml-models in applab-screens-1-2021": {
+          "CSD_AI_L10_ifstatement": "Додай команду умови сюди"
+        },
+        "ml-models in applab-screens-1_2022": {
+          "CSD_AI_L10_ifstatement": "Додай команду умови сюди"
+        },
+        "ml-models in applab-screens-3-2021": {
+          "CSD_AI_L7_ifstatement": "Додай команду умови тут"
+        },
+        "ml-models in applab-screens-3_2022": {
+          "CSD_AI_L7_ifstatement": "Додай команду умови тут"
+        },
+        "ml-use model card-choice3": {
+          "CSD_AI_L10_predict": "Додай команду умови сюди"
+        },
+        "ml-use model card-choice3_2022": {
+          "CSD_AI_L10_predict": "Додай команду умови сюди"
+        },
+        "ml-use model card-choice5": {
+          "CSD_AI_L11_top": "Помісти блок над цим рядком"
+        },
+        "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "Помісти блок над цим рядком"
+        },
+        "ml-use model card-example3C-2021": {
+          "CSD_AI_L11_temp": "Це функція температури"
+        },
+        "ml-use model card-example3C_2022": {
+          "CSD_AI_L11_temp": "Це функція температури"
+        },
+        "ml-use model card-example3D-2021": {
+          "CSD_AI_L11_time": "Це функція \"Час доби\""
+        },
+        "ml-use model card-example3D_2022": {
+          "CSD_AI_L11_time": "Це функція \"Час доби\""
+        },
+        "ml-use model card-example3_EditB-2021": {
+          "CSD_AI_L11_cars": "Це ознака \"Кількість автомобілів\""
+        },
+        "ml-use model card-example3_EditB_2022": {
+          "CSD_AI_L11_cars": "Це ознака \"Кількість автомобілів\""
+        },
+        "ml-use model card-example3_EditC-2021": {
+          "CSD_AI_L11_weather": "Це функція \"Погода\""
+        },
+        "ml-use model card-example3_EditC_2022": {
+          "CSD_AI_L11_weather": "Це функція \"Погода\""
+        },
+        "courseC_maze_programming4": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseC_maze_programming42022": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseC_maze_programming4_2018": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseC_maze_programming4_2019": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseC_maze_programming4_2020": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_intro4_2019": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_intro4_2020": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_ramp4": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_ramp4_2018": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_ramp4_2019": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_ramp4_2020": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_scrat_ramp4": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
         }
       }
     }

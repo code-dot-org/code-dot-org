@@ -14,7 +14,10 @@ const FIELD_PADDING = 2;
  */
 class FieldSounds extends GoogleBlockly.Field {
   constructor(options) {
-    super(options.currentValue);
+    const currentValue =
+      options.currentValue || options.getLibrary().getDefaultSound();
+
+    super(currentValue);
 
     this.options = options;
     this.playingPreview = null;

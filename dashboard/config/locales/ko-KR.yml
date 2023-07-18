@@ -245,7 +245,7 @@ ko:
     remember: 아이디 기억하기
     submit: 로그인
   signin:
-    try_heading: 가입하지 않고 코딩을 해보시겠습니까?
+    try_heading: 로그인 없이 코딩을 시도해보고 싶나요?
     try_hoc: 1시간짜리 Hour of Code 해보기
     try_20hours: 20시간짜리 컴퓨터과학(CS, 정보과학) 소개 과정 해보기
   signinsection:
@@ -443,10 +443,10 @@ ko:
       minecraft_codebuilder: '마인크래프트: 코드 연결'
       minecraft_designer: 마인크래프트
       minecraft_hero: 마인크래프트 히어로
-      playlab: Play Lab
+      playlab: 플레이 랩
       playlab_k1: 플레이 랩 (프리 리더)
       poetry: 시
-      poetry_hoc: 시학
+      poetry_hoc: 나만의 시
       scratch: 스크래치
       sports: 스포츠
       spritelab: 스프라이트 연구소
@@ -626,7 +626,7 @@ ko:
       확장된 팀</a>, 비디오 캐스트 및 <a href="https://code.org/about/advisors"> 교육 고문</a> 들의
       지원에 감사 드립니다.
     help_from_html: 특히 이 자료를 만드는 데 도움을 준 구글, 마이크로 소프트, 페이스북, 트위터의 엔지니어들을 칭찬하고 싶습니다.
-    help_from_html_old: 구글, 마이크로 소프트, 페이스북, 트위터의 엔지니어들이 이 자료들을 만드는데 도움을 주었습니다.
+    help_from_html_old: 아마존, 구글, 마이크로소프트 기술자들이 이 자료를 만드는데 도움을 주었습니다.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br
       />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br
       />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice
@@ -647,7 +647,7 @@ ko:
       GNU LGPL 2.1</a> 아래에 라이센스를 사용 합니다.
     powered_by_aws: Amazon Web Services 및 “Powered by AWS” 로고는 Amazon.com, Inc. 또는
       미국 및/또는 다른 국가 내 그 계열회사의 상표입니다.
-    built_on_github: 마이크로소프트의 GitHub 위에 구축
+    built_on_github: 마이크로소프트의 GitHub에 구축
     google_copyright: "&copy; Google Inc. 허가에 의해 사용. 구글 클래스룸은 Google Inc.의 상표입니다."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org."
@@ -680,13 +680,13 @@ ko:
     direction: 시작 안내(학년 기준)
   video:
     tab: 소개 동영상.
-    notes: 영상 대본 보기
+    notes: 영상이 없다면? 대본 보기
     notes_coming_soon: 참고 동영상 준비중
     autoplay_option: 비디오 자동 실행
     download: 동영상 다운로드
-    show_notes: 참고 보기
+    show_notes: 노트 보기
     show_video: 동영상 보기
-    label: 비디오
+    label: 동영상
   compatibility:
     upgrade:
       unsupported_message: 브라우저가 지원되지 않습니다. [지원 되는 브라우저 중 하나](%{supported_browsers_url})로
@@ -782,7 +782,7 @@ ko:
       title: 마인크래프트
       body: Minecraft 게임을 만들어보세요. 자신만의 닭, 양, 크리퍼, 좀비 등을 만들어보세요.
     poem-art:
-      title: 시학
+      title: 나만의 시
       body: 자신을 표현해보세요! 코드를 사용해 움직이는 시를 만드세요.
     sports:
       title: 스포츠
@@ -890,7 +890,7 @@ ko:
     ok: 확인
     startover_title: 정말 다시 시작하겠습니까?
     startover_body: 퍼즐을 시작 상태로 되돌리고, 당신이 추가하거나 변경한 데이터를 모두 초기화 합니다.
-    startover_ok: 다시 시작하기
+    startover_ok: 다시 시작
     startover_cancel: 취소
   time:
     hour: 1 시간

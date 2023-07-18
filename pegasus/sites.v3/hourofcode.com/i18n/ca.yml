@@ -11,26 +11,26 @@ ca:
   campaign_date_full: 5-11 de desembre
   campaign_date_year: '2022'
   campaign_date_full_year: Del 5 a l'11 de desembre de 2022
-  nonus_campaign_date_start_short: Oct. 1
-  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_start_short: 1 Oct.
+  nonus_campaign_date_start_long: 1 d'octubre
   nonus_campaign_date_short: De l'1 d'octubre al 18 de desembre
   nonus_campaign_date_full: De l'1 d'octubre al 18 de desembre
   nonus_campaign_date_year: '2022'
   nonus_campaign_date_full_year: 1 d'octubre de 2022 - 18 de desembre de 2022
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
+  latam_campaign_date_start_short: 1 Oct.
+  latam_campaign_date_start_long: 1 d'octubre
   latam_campaign_date_short: De l'1 d'octubre al 18 de desembre
   latam_campaign_date_full: De l'1 d'octubre al 18 de desembre
   latam_campaign_date_year: '2022'
   latam_campaign_date_full_year: 1 d'octubre de 2022 - 18 de desembre de 2022
-  europe_campaign_date_start_short: Oct. 1
-  europe_campaign_date_start_long: October 1
+  europe_campaign_date_start_short: 1 Oct.
+  europe_campaign_date_start_long: 1 d'octubre
   europe_campaign_date_short: De l'1 d'octubre al 18 de desembre
   europe_campaign_date_full: De l'1 d'octubre al 18 de desembre
   europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: 1 d'octubre de 2022 - 18 de desembre de 2022
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
+  africa_campaign_date_start_short: 1 Oct.
+  africa_campaign_date_start_long: 1 d'octubre
   africa_campaign_date_short: De l'1 d'octubre al 18 de desembre
   africa_campaign_date_full: De l'1 d'octubre al 18 de desembre
   africa_campaign_date_year: '2022'
@@ -45,214 +45,428 @@ ca:
     jugar i crear amb nosaltres.
   social_hoc2022_dance: Amb Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
     música de “Encanto” de Disney i molt més!
-  social_hoc2023_dance: Featuring Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
-    Gomez, music from Disney's "Encanto," and more!
+  social_hoc2023_dance: Amb Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez,
+    música de “Encanto” de Disney i molt més!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
-  hoc2020_header: Learn today, build a brighter tomorrow.
-  hoc2020_header_with_line_break_markdown: |-
-    Learn today,
-
-    build a brighter tomorrow.
-  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
-    we want. #CSforGood'
-  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    today, build a brighter tomorrow.'
+  hoc2020_header: Apren avui, construeix un futur més prometedor.
+  hoc2020_header_with_line_break_markdown: "Apren avui, \n\nconstrueix un futur més
+    prometedor."
+  social_hoc2020_cs_important: 'CS és més important que mai. Construïm el futur que
+    volem. #CSforGood'
+  social_hoc2020_hoc_is_about_csforgood: 'La #HourOfCode és sobre #CSforGood. Apren
+    avui, construieix un futur més brillant.'
   social_hoc2020_global_movement: The Hour of Code is a global movement reaching tens
     of millions of students. One-hour tutorials are available in 45+ languages for
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
-  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
-  hoc2020_ai_header: Explore Artificial Intelligence
-  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
-    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
-    discuss ethics and AI, and more...
+  hoc2020_ai_subheader: S'acosta l'Hora de Codi 2020!
+  hoc2020_ai_header: Explora la Intel·ligència Artificial
+  hoc2020_ai_description: La IA i l'Aprenentatge Automàtic estan impactant el nostre
+    món sencer. Uniu-vos a nosaltres per explorar la IA en una nova sèrie de vídeo,
+    entreneu IA per a Oceans en més de 25 idiomes, parleu sobre l'ètica i la IA, i
+    més...
   hoc2019_header: Aprèn Ciéncies de la Computació. Canvia el món.
   hoc2019_header_line1_mobile: Aprèn Ciéncies de la Computació.
   hoc2019_header_line2_mobile: Canvia el món.
-  social_hoc2019_every_sudent: 'Every student has the potential to change the world.
-    Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
-    #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
-  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    computer science. Change the world.'
-  social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
-    science is foundational for every student to learn.
-  social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
-    Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
-  oceans_landing_title: AI for Oceans
-  oceans_landing_description: Learn about machine learning and ethical use of AI.
+  social_hoc2019_every_sudent: 'Cada alumne té el potencial de canviar el món. Ajudeu-los
+    a començar. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Apren ciències informàtiques. Canvia el
+    món. #CSforGood #HourOfCode'
+  social_hoc_is_coming: S'acosta l'Hora de Codi!
+  social_hoc2019_hoc_is_about_csforgood: 'La #HourOfCode és sobre #CSforGood. Apren
+    ciències informàtiques. Canvia el món.'
+  social_hoc2019_coming_dates: L'Hora del Codi arriba el 9-15 de desembre de 2019.
+    Les ciències informàtiques són un aprenentatge fonamental per a qualsevol alumne.
+  social_hoc2019_dance: Amb Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas
+    X, Jonas Brothers, Nicki Minaj, i 34 més!
+  social_hoc_anybody: 'Hora del Codi: Qualsevol por Aprendre'
+  oceans_landing_title: IA per Oceans
+  oceans_landing_description: Apreneu sobre aprenentatge automàtic i ús ètic d'IA.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: Available in 25+ languages | Grades 3+
-  oceans_landing_explanation: Computer science is about so much more than coding!
-    Learn about artificial intelligence (AI), machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Enjoy Code.org's first step in a new journey to teach more about AI. When you
-    use the AI for Oceans activity you are training real machine learning models.
-    <a href='#behind-the-scenes'>Learn more</a>.
-  oceans_landing_explanation_markdown: Computer science is about so much more than
-    coding! Learn about artificial intelligence (AI), machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
-    When you use the AI for Oceans activity you are training real machine learning
-    models. [Learn more](#behind-the-scenes).
-  oceans_landing_teacher_resources: Teacher Resources
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
-  oceans_landing_cs_for_good: CS for Good
-  oceans_landing_cs_for_good_desc: Resources to help students understand the role
-    computer science could play in creating a more equitable world.
-  oceans_landing_videos: Videos about AI and Machine Learning
-  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
-  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
-    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
-    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
-    14 million images hand-annotated with words such as "balloon" or "strawberry".
-    In order to customize this model with the labeled training data the student generates
-    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
-    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
-    list of annotations that are most likely to apply to it. Then, for a new image,
-    we feed it to MobileNet and compare its resulting list of annotations to those
-    from the training dataset. We classify the new image with the same label (such
-    as "fish" or "not fish") as the images from the training set with the most similar
-    results.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
-  oceans_behind_the_scenes_2_markdown: Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine)
-    (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble
-    all of the metadata for the components (such as number of teeth, body shape) into
-    a vector of numbers for each fish. We use these vectors to train the SVM. Based
-    on the training data, the SVM separates the "space" of all possible fish into
-    two parts, which correspond to the classes we are trying to learn (such as "blue"
-    or "not blue").
-  heading_additional_resources: Additional resources
-  grade_level_label_elementary: Elementary School
-  grade_level_label_middle: Middle School
-  grade_level_label_high: High School
-  call_to_action_learn_more: Learn more
-  call_to_action_watch_now: Watch now
-  call_to_action_try_activity: Try activity
-  call_to_action_explore_unit: Explore unit
-  call_to_action_explore_curriculum: Explore curriculum
-  call_to_action_explore_modules: Explore modules
-  call_to_action_view_lesson_plan: View lesson plan
-  call_to_action_self_paced_pl: Start self-paced professional learning
-  call_to_action_watch_panel: Watch panel
-  call_to_action_learn_about_challenge: Learn about challenge
-  call_to_action_explore_website: Explore website
-  call_to_action_read_more: Read more
-  call_to_action_donate_online: Donate online
-  call_to_action_get_updates: Get updates
-  call_to_action_special_announcement: See special announcement
-  call_to_action_start_pl: Start professional learning
-  call_to_action_contact_regional_partner: Contact your Regional Partner
-  call_to_action_join_csta: Join CSTA
-  call_to_action_support_farsi: Support Code.org in Farsi
-  aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
-  aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
-    professional learning program
-  aria_label_call_to_action_teaching_csd: Start the Teaching Computer Science Discoveries
-    professional learning program
-  aria_label_call_to_action_teaching_csp: Start the Teaching Computer Science Principles
-    professional learning program
-  aria_label_call_to_action_teaching_ai: Start the Teaching AI and Machine Learning
-    professional learning program
-  aria_label_call_to_action_teaching_maker_cp: Start the Teaching Creating Apps with
-    Devices (Circuit Playground) professional learning program
-  aria_label_call_to_action_teaching_maker_microbit: Start the Teaching Creating Apps
-    with Devices (micro:bit) professional learning program
-  aria_label_call_to_action_curriculum_csf: Explore the Computer Science Fundamentals
-    curriculum
-  aria_label_call_to_action_curriculum_csd: Explore the Computer Science Discoveries
-    curriculum
-  aria_label_call_to_action_curriculum_csp: Explore the Computer Science Principles
-    curriculum
-  aria_label_call_to_action_curriculum_ai: Explore the AI and Machine Learning curriculum
-  aria_label_call_to_action_curriculum_maker_cp: Explore the Creating Apps with Devices
-    (Circuit Playground) curriculum
-  aria_label_call_to_action_curriculum_maker_microbit: Explore the Creating Apps with
-    Devices (micro:bit) curriculum
-  video_title_professional_learning_program: Code.org's Professional Learning Program
-  curriculum_name_csf: Computer Science Fundamentals
-  curriculum_name_csf_02: Any CS Fundamentals (Course A-F)
-  curriculum_name_csd: Computer Science Discoveries
-  curriculum_name_csp: Computer Science Principles
-  curriculum_name_ai: AI and Machine Learning
-  curriculum_name_maker_cp: Creating Apps with Devices (Circuit Playground)
-  curriculum_name_maker_microbit: Creating Apps with Devices (micro:bit)
-  module_grade_k_5: K-5 Teachers
-  module_grade_6_10: 6-10 Teachers
-  module_grade_9_12: 9-12 Teachers
-  module_label_curriculum: 'Curriculum:'
-  module_label_duration: 'Duration:'
-  module_duration_2_hrs: 2 hours
-  module_duration_3_hrs: 3 hours
-  module_duration_8_hrs: 8 hours
-  module_duration_35_hrs: 35 hours
-  module_label_prerequisites: 'Prerequisites:'
-  module_prerequisites_none: None
-  module_prerequisites_maker_cp: Access to a Circuit Playground
-  module_prerequisites_maker_microbit: Access to a micro:bit
-  module_label_teaching_csf: Teaching Computer Science Fundamentals
-  module_label_teaching_csd: Teaching Computer Science Discoveries
-  module_label_teaching_csp: Teaching Computer Science Principles
-  module_label_teaching_ai: Teaching AI and Machine Learning
-  module_label_teaching_maker_cp: Teaching Creating Apps with Devices (Circuit Playground)
-  module_label_teaching_maker_microbit: Teaching Creating Apps with Devices (micro:bit)
-  values_01: We believe computer science is foundational for all students
-  values_02: We are committed to equity, access, and opportunity
-  values_03: We believe in the power of a collaborative education community
-  values_04: We are agile and responsive to feedback
-  values_05: We act with integrity and transparency
-  values_06: We believe broad impact requires thinking big and acting holistically
-  social_hoc2019_oceans_title: 'AI for Oceans #CSforGood'
-  social_hoc2019_oceans_desc: Learn about AI, machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Computer science is about so much more than coding! Enjoy Code.org's first step
-    in a new journey to teach more about AI throughout our curriculum.
+  oceans_landing_specs: Disponible en més de 25 idiomes | 3+ Graus
+  oceans_landing_explanation: La informàtica és molt més que codificar! Obteniu informació
+    sobre intel·ligència artificial (IA), l'aprenentatge automàtic, les dades d'entrenament
+    i el biaix, mentre exploreu qüestions ètiques i com es pot utilitzar la IA per
+    abordar els problemes mundials. Gaudiu del primer pas de Code.org en un nou viatge
+    per ensenyar més sobre la IA. Quan utilitzeu l'activitat AI for Oceans, esteu
+    entrenant models reals d'aprenentatge automàtic. <a href='#behind-the-scenes'>Més
+    informació</a>.
+  oceans_landing_explanation_markdown: La informàtica és molt més que codificar! Obteniu
+    informació sobre intel·ligència artificial (IA), l'aprenentatge automàtic, les
+    dades d'entrenament i el biaix, mentre exploreu qüestions ètiques i com es pot
+    utilitzar la IA per abordar els problemes mundials. Gaudiu del primer pas de Code.org
+    en un nou viatge per ensenyar més sobre la IA. Quan utilitzeu l'activitat AI for
+    Oceans, esteu entrenant models reals d'aprenentatge automàtic. [Més informació](#behind-the-scenes).
+  oceans_landing_teacher_resources: Recursos del professor
+  oceans_landing_teacher_resources_desc: Plans de lliçons i activitats per ajudar-vos
+    a ensenyar IA, aprenentatge automàtic, dades d'entrenament i biaix, mentre exploreu
+    problemes ètics.
+  oceans_landing_resource_button: Mostra els recursos
+  oceans_landing_cs_for_good: CS per Sempre
+  oceans_landing_cs_for_good_desc: Recursos per ajudar els alumnes a entendre el paper
+    que la informàtica podria tenir en la creació d'un món més equitatiu.
+  oceans_landing_videos: Vídeos sobre IA i Aprenentatge automàtic
+  oceans_behind_the_scenes: 'IA per Oceans: Entre bastidors'
+  oceans_behind_the_scenes_1: Els nivells 2-4 utilitzen un model preentrenat proporcionat
+    per <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/
+    blob/master/research/slim/nets/mobilenet_v1.md"> Projecte MobileNet </a>. Un model
+    de MobileNet és una <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">xarxa
+    neuronal convolucional</a> que s'ha entrenat a < a href="http://www.image-net.org/">ImageNet</a>,
+    un conjunt de dades de més de 14 milions d'imatges anotades a mà amb paraules
+    com "globus" o "maduixa". Per personalitzar aquest model amb les dades de formació
+    etiquetades que l'alumne genera en aquesta activitat, utilitzem una tècnica anomenada
+    <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer Learning</a>.
+    Cada imatge del conjunt de dades d'entrenament s'alimenta a MobileNet, com a píxels,
+    per obtenir una llista d'anotacions que és més probable que s'hi apliquen. A continuació,
+    per obtenir una imatge nova, l'alimentem a MobileNet i comparem la seva llista
+    d'anotacions resultant amb les del conjunt de dades d'entrenament. Classifiquem
+    la nova imatge amb la mateixa etiqueta (com ara "peix" o "no peix") que les imatges
+    del conjunt d'entrenament amb resultats més semblants.
+  oceans_behind_the_scenes_1_markdown: Els nivells 2-4 utilitzen un model preentrenat
+    proporcionat per [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/
+    nets/mobilenet_v1.md). Un model de MobileNet és una [xarxa neuronal convolucional](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    que s'ha entrenat a [ImageNet](http:// www.image-net.org/), un conjunt de dades
+    de més de 14 milions d'imatges anotades a mà amb paraules com "globus" o "maduixa".
+    Per personalitzar aquest model amb les dades de formació etiquetades que l'alumne
+    genera en aquesta activitat, utilitzem una tècnica anomenada [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
+    Cada imatge del conjunt de dades d'entrenament s'alimenta a MobileNet, com a píxels,
+    per obtenir una llista d'anotacions que és més probable que s'hi apliquen. A continuació,
+    per obtenir una imatge nova, l'alimentem a MobileNet i comparem la seva llista
+    d'anotacions resultant amb les del conjunt de dades d'entrenament. Classifiquem
+    la nova imatge amb la mateixa etiqueta (com ara "peix" o "no peix") que les imatges
+    del conjunt d'entrenament amb resultats més semblants.
+  oceans_behind_the_scenes_2: Els nivells 6-8 utilitzen una <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
+    Machine</a> (SVM). Observem cada component del peix (com ara els ulls, la boca,
+    el cos) i ajuntem totes les metadades dels components (com el nombre de dents,
+    la forma del cos) en un vector de números per a cada peix. Utilitzem aquests vectors
+    per entrenar el SVM. A partir de les dades d'entrenament, l'SVM separa l'"espai"
+    de tots els peixos possibles en dues parts, que corresponen a les classes que
+    estem intentant aprendre (com ara "blau" o "no blau").
+  oceans_behind_the_scenes_2_markdown: Els nivells 6-8 utilitzen una [Màquina de vectors
+    de suport] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Observem
+    cada component del peix (com ara els ulls, la boca, el cos) i ajuntem totes les
+    metadades dels components (com el nombre de dents, la forma del cos) en un vector
+    de números per a cada peix. Utilitzem aquests vectors per entrenar el SVM. A partir
+    de les dades d'entrenament, l'SVM separa l'"espai" de tots els peixos possibles
+    en dues parts, que corresponen a les classes que estem intentant aprendre (com
+    ara "blau" o "no blau").
+  social_hoc2019_oceans_title: 'IA per a Oceans #CSforGood'
+  social_hoc2019_oceans_desc: Obteniu informació sobre la IA, l'aprenentatge automàtic,
+    les dades d'entrenament i els biaixos, mentre exploreu els problemes ètics i com
+    es pot utilitzar la IA per abordar els problemes mundials. La informàtica és molt
+    més que codificar! Gaudeix del primer pas de Code.org en un nou viatge per ensenyar
+    més sobre la IA al llarg del nostre currículum.
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
-  social_maker_title: I'm a Maker!
-  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
-  social_blockchain_title: How Blockchain Works
-  social_blockchain_desc: Videos and lessons that explore what blockchain is and why
-    it's important.
-  social_ai_title: Learn about artificial intelligence (AI) | Code.org
-  social_ai_desc: Tools to help students and teachers bring AI into the classroom.
-  pl_superhero_title: Help students become superheroes!
-  pl_superhero_desc: Join our highly supportive Professional Learning Program for
-    middle and high school educators.
+  social_maker_title: Sóc un Creador!
+  social_maker_desc: Recursos informàtics físics i de creador de Code.org per als
+    cursos 6-12.
+  social_blockchain_title: Com funciona la Cadena de blocs
+  social_blockchain_desc: Els vídeos i les lliçons que exploren què és la cadena de
+    blocs i perquè és important.
+  social_ai_title: Apreneu sobre intel·ligència artificial (IA) | Code.org
+  social_ai_desc: Eines per ajudar els alumnes i professors a portar IA a l'aula.
+  pl_superhero_title: Ajudeu els alumnes a convertir-se en superherois!
+  pl_superhero_desc: Uniu-vos al nostre Programa d'Aprenentatge Professional altament
+    solidari per a educadors d'ESO i Batxillerat.
   teach_ai_homepage_banner_title: Inteligencia Artificial para todos
   teach_ai_homepage_banner_desc: Code.org Forma Part De TeachAI, dedicada a donar
     poder als educadors de tot el món perquè ensenyin AMB IA i SOBRE IA.
-  blockchain_hero_heading: How Blockchain Works
-  blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
-    our new video series and accompanying lessons!
-  blockchain_intro_heading: See how blockchain works
+  curriculum_launch_2023_title: Introducing incredible updates to our curriculum
+  curriculum_launch_2023_desc: Updates to CSC, CSP, CSD, and more — plus a new Curriculum
+    Catalog and redesigned Teach page to help you find it all!
+  grade_level_label_elementary: Escola primària
+  grade_level_label_middle: ESO
+  grade_level_label_high: Institut
+  teacher_label_csd: Professor CS Discoveries
+  teacher_label_csp: CS Principles Teacher
+  teacher_label_csc: CS Connections Teacher
+  required_materials: 'Required Materials:'
+  optional_materials: 'Optional Materials:'
+  call_to_action_learn_more: Learn more
+  call_to_action_watch_now: Veure ara
+  call_to_action_try_activity: Prova l'activitat
+  call_to_action_explore_unit: Explora la unitat
+  call_to_action_explore_curriculum: Explora currículum
+  call_to_action_explore_curriculum_options: Explore curriculum options
+  call_to_action_explore_modules: Explora mòduls
+  call_to_action_explore_workshops: Explora tallers
+  call_to_action_explore_course: Explore course
+  call_to_action_explore_full_course: Explore full course
+  call_to_action_explore_widgets: Explore widgets
+  call_to_action_explore_choice_level: Explore example choice level
+  call_to_action_explore_collection: Explore collection
+  call_to_action_try_app_lab: Try App Lab
+  call_to_action_view_lesson_plan: Veure unitat didàctica
+  call_to_action_self_paced_pl: Començar aprenentatge professional al teu ritme
+  call_to_action_apply_for_pl: Apply for Professional Learning
+  call_to_action_watch_panel: Panell de visió
+  call_to_action_learn_about_challenge: Obten més informació sobre el desafiament
+  call_to_action_explore_website: Explorar lloc web
+  call_to_action_read_more: Read more
+  call_to_action_donate_online: Dona en línia
+  call_to_action_get_updates: Obten actualitzacions
+  call_to_action_special_announcement: Veure anunci especial
+  call_to_action_start_pl: Començar aprenentate professional
+  call_to_action_contact_regional_partner: Posa't en contacte amb el Soci Regional
+  call_to_action_join_csta: Uneix-te a CSTA
+  call_to_action_support_farsi: Suport Code.org en Farsi
+  call_to_action_resources_lesson_plan: Explora un exemple d'una unitat didàctica
+  call_to_action_resources_videos: Explora tots els vídeos
+  call_to_action_resources_slides: Explora exemple de paquet de diapositives
+  call_to_action_resources_assessments: Explora una unitat didàctica d'avaluació
+  call_to_action_resources_tools: Prova les eines de programació
+  call_to_action_sign_up_free: Creeu un compte gratuïtament
+  call_to_action_explore_ai_resources: Explora recursos IA
+  call_to_action_explore_curriculum_catalog: 'Explora el Catàleg del Currículum '
+  call_to_action_see_full_curriculum_catalog: Visualitza el Catàleg del Currículum
+    complet
+  call_to_action_find_self_paced_modules: Troba mòduls a ritme personalitzat
+  call_to_action_join_teacher_forums: Uneix-te als fòrums de professorat
+  call_to_action_explore_teacher_forums: Explore teacher forums
+  call_to_action_explore_career_resources: Explora recursos de carrera
+  call_to_action_watch_videos: Mira vídeos
+  call_to_action_download_posters: Descarrega pòsters
+  call_to_action_contact_support: Contact Code.org support
+  call_to_action_pick_units: Pick units
+  call_to_action_focus_on_topic: Focus on a topic
+  call_to_action_teach_full_intro_course: Teach a full intro course
+  call_to_action_see_module_details: See module details
+  call_to_action_start_modules: Start modules
+  aria_label_call_to_action_afe: Sabeu més sobre Amazon Future Engineer
+  aria_label_call_to_action_teaching_csf: 'Comença el programa d''aprenentatge professional
+    d''''Ensenyament de Fonaments de Ciències Informàtiques '
+  aria_label_call_to_action_teaching_csd: Comença el programa d'aprenentatge professional
+    d''Ensenyament de Ciències Informàtiques Descobriments
+  aria_label_call_to_action_teaching_csp: Comença el programa d'aprenentatge professional
+    de Principis de Ciències Informàtiques
+  aria_label_call_to_action_teaching_csc: Comença el programa d'aprenentatge professional
+    d''Ensenyament de Connexions de Ciències Informàtiques
+  aria_label_call_to_action_teaching_ai: 'Comença el programa d''aprenentatge professional
+    d''''Ensenyament de IA i Aprenentatge Automàtic '
+  aria_label_call_to_action_teaching_maker_cp: 'Comença el programa d''aprenentatge
+    professional d''''Ensenyament de Creació d''apps amb Dispositius (Circuit Playground) '
+  aria_label_call_to_action_teaching_maker_microbit: Comença el programa d'aprenentatge
+    professional de Creació d'Apps amb Dispositius (micro:bit)
+  aria_label_call_to_action_curriculum_csf: Explora el currículum de Fonaments de
+    Ciències Informàtiques
+  aria_label_call_to_action_curriculum_csd: Explora el currículum de Descobriments
+    de Ciències Informàtiques
+  aria_label_call_to_action_curriculum_csp: Explora el currículum de Principis de
+    Ciències Informàtiques
+  aria_label_call_to_action_curriculum_csc: Explora el currículum de Connexions de
+    Ciències Informàtiques
+  aria_label_call_to_action_curriculum_ai: Explora el currículum de IA i Aprenentatge
+    Automàtic
+  aria_label_call_to_action_curriculum_maker_cp: Explora el currículum de Creació
+    d'Apps amb Dispositius  (Circuit Playground)
+  aria_label_call_to_action_curriculum_maker_microbit: Explora el currículum de Creació
+    d'Apps amb Dispositius (micro:bit)
+  aria_label_call_to_action_curriculum_creating_apps_with_devices: Explore the Creating
+    Apps with Devices unit
+  aria_label_call_to_action_curriculum_problem_solving_computing: Explore the Problem
+    Solving and Computing unit
+  aria_label_call_to_action_curriculum_web_development: Explore the Web Development
+    unit
+  aria_label_call_to_action_curriculum_interactive_animations_games: Explore the Interactive
+    Animations and Games unit
+  aria_label_call_to_action_curriculum_design_process: Explore the Design Process
+    unit
+  aria_label_call_to_action_curriculum_data_society: Explore the Data and Society
+    unit
+  aria_label_call_to_action_collection_hardware: Explore the Hardware collection
+  aria_label_call_to_action_collection_design_purpose: Explore the Design with Purpose
+    collection
+  aria_label_call_to_action_collection_impact_society: Explore the Impact in Society
+    collection
+  aria_label_call_to_action_collection_creativity: Explore the Creativity collection
+  aria_label_call_to_action_collection_coding: Explore the Coding collection
+  aria_label_call_to_action_collection_data: Explore the Data collection
+  aria_label_call_to_action_module_coding_w_poetry: See the Coding with Poetry module
+    details
+  aria_label_call_to_action_module_coding_time_capsule: See the Coding a Time Capsule
+    module details
+  aria_label_call_to_action_module_simulating_marine_ecosystem: See the Simulating
+    a Marine Ecosystem module details
+  aria_label_call_to_action_module_coding_geometric_star_quilt: See the Coding a Geometric
+    Star Quilt module details
+  aria_label_call_to_action_module_modeling_animal_adaptations: See the Modeling Animal
+    Adaptations module details
+  aria_label_call_to_action_module_coding_book_covers: See the Coding Book Covers
+    module details
+  aria_label_call_to_action_module_coding_interactive_maps: See the Coding Interactive
+    Maps module details
+  video_title_professional_learning_program: Programa d'Aprenentatge Professional
+    de Code.org
+  curriculum_name_csf: Fonaments de Ciències informàtiques
+  curriculum_name_csf_02: Qualsevol Fonaments CS (Cursos A-F)
+  curriculum_name_csf_a_f: Fonaments CS A-F
+  curriculum_name_csd: Descobriments Informàtics
+  curriculum_name_csp: Principis de la Informàtica
+  curriculum_name_csc: Connexions Informàtiques
+  curriculum_name_csc_02: Qualsevol Mòdul de Connexió CS
+  curriculum_name_csa: Ciències Informàtiques A
+  curriculum_name_ai: AI & Machine Learning
+  curriculum_name_maker_cp: Creació d'Apps amb Dispositius (Circuit Playground)
+  curriculum_name_maker_microbit: Crear Apps amb Devices (micro:bit)
+  curriculum_name_creating_apps_with_devices: Creating Apps with Devices
+  curriculum_name_poetry: Codificar amb Poetry
+  curriculum_name_dance_party: Dance Party
+  curriculum_name_problem_solving_computing: Problem Solving & Computing
+  curriculum_name_web_development: Web Development
+  curriculum_name_interactive_animations_games: Interactive Animations & Games
+  curriculum_name_design_process: The Design Process
+  curriculum_name_data_society: Data & Society
+  curriculum_desc_problem_solving_computing: Use a problem-solving process to tackle
+    puzzles, challenges, and real-world scenarios. Learn about computer input, output,
+    storage, and processing to aid in problem-solving.
+  curriculum_desc_web_development: Create and share content on web pages, exploring
+    the creative potential of the web. Develop critical consumption skills, problem-solving
+    abilities, and teamwork while programming.
+  curriculum_desc_interactive_animations_games: Create programmatic images, animations,
+    interactive art, and games. Gain familiarity with programming concepts and the
+    design process.
+  curriculum_desc_design_process: Focus on considering the societal impact of computing.
+    Through design challenges, students empathize with others' needs and develop solutions.
+  curriculum_desc_data_society: Emphasizes the role of data in problem-solving and
+    the assistance of computers in this process. Cover representation systems and
+    associated challenges. Discover how data collections aid problem-solving.
+  curriculum_desc_creating_apps_with_devices: Explore the role of physical devices
+    in computing. Develop programs that utilize hardware inputs and outputs. There
+    is a version of this unit for both the micro:bit and Circuit Playground.
+  collection_hardware: Focus on Hardware
+  collection_hardware_desc: Empowers students to use data and physical devices to
+    solve problems.
+  collection_design_purpose: Focus on Design with Purpose
+  collection_design_purpose_desc: Empowers students to think about the needs of users
+    while designing websites and apps for devices.
+  collection_impact_society: Focus on Impact in Society
+  collection_impact_society_desc: Empowers students to think about computer science
+    as a tool to solve problems while considering the broader social impacts.
+  collection_creativity: Focus on Creativity
+  collection_creativity_desc: Empowers students to be creative as they learn to create
+    websites, animations and games, and apps for devices.
+  collection_coding: Focus on Coding
+  collection_coding_desc: Empowers students to build their coding skills in web development,
+    games and animation, and creating apps for devices.
+  collection_data: Focus on Data
+  collection_data_desc: Empowers students to use data to solve problems.
+  module_label_ages: 'Edats:'
+  module_label_grades: 'Cursos:'
+  module_label_curriculum: 'Pla d''estudis:'
+  module_label_duration: 'Duració:'
+  module_label_prerequisites: 'Requeriments previs:'
+  module_label_level: 'Level:'
+  module_label_topics: 'Topics:'
+  module_label_devices: 'Dispositius:'
+  module_label_tools: 'Programming Tools:'
+  module_label_professional_learning: 'Professional Learning:'
+  module_label_languages: 'Languages Supported:'
+  module_label_accessibility_features: 'Accessibility:'
+  module_ages_5_10: 5-10
+  module_ages_11_18: 11-18
+  module_ages_7_18: 7-18
+  module_grade_3_5: 3-5
+  module_grade_3_8: 3-8
+  module_grade_6_12: 6-12
+  module_grade_6_10: 6-10
+  module_grade_9_12: 9-12
+  module_grade_k_5_teachers: Professor P-5
+  module_grade_6_10_teachers: Professors 6-10
+  module_grade_9_12_teachers: Professors 9-12
+  module_level_beginner: Beginner
+  module_duration_2_hrs: 2 hores
+  module_duration_3_hrs: 3 hores
+  module_duration_8_hrs: 8 hores
+  module_duration_35_hrs: 35 hores
+  module_duration_lesson: Lliçó
+  module_duration_week: Week
+  module_duration_month: Mes
+  module_duration_quarter: Trimestre
+  module_duration_semester: Semester
+  module_duration_school_year: Any Escolar
+  module_duration_month_semester_year: Month, Semester, or Year
+  module_prerequisites_none: None
+  module_prerequisites_maker_cp: Accés a Circuit Playground
+  module_prerequisites_maker_microbit: Accés a mirco:bit
+  module_label_teaching_csf: Ensenyament dels Fonaments de la Informàtica
+  module_label_teaching_csd: Ensenyament de Descobriments d'Informàtica
+  module_label_teaching_csp: Ensenyament de Principis de Ciències Informàtiques
+  module_label_teaching_csc: Ensenyament de Connexions de Ciències Informàtiques
+  module_label_teaching_ai: Ensenyar I.A. i Aprenentatge automàtic
+  module_label_teaching_maker_cp: Ensenyar Creació d'Apps amb Dispositius (Circuit
+    Playground)
+  module_label_teaching_maker_microbit: Ensenyament de Creació d'Apps amb Dispositius
+    (micro:bit)
+  module_subject_english_language_arts: English Language Arts
+  module_subject_social_studies: Social Studies
+  module_subject_science: Science
+  module_subject_math: Math
+  module_name_coding_w_poetry: Codificar amb Poetry
+  module_name_coding_time_capsule: Coding a Time Capsule
+  module_name_simulating_marine_ecosystem: Simulating a Marine Ecosystem
+  module_name_coding_geometric_star_quilt: Coding a Geometric Star Quilt
+  module_name_modeling_animal_adaptations: Modeling Animal Adaptations
+  module_name_coding_book_covers: Coding Book Covers
+  module_name_coding_interactive_maps: Coding Interactive Maps
+  module_desc_coding_w_poetry: Explore the intersection of coding and language arts
+    by creating interactive poems, illustrating the mood and tone with code.
+  module_desc_coding_time_capsule: Create a digital time capsule to capture and preserve
+    memories for the future.
+  module_desc_simulating_marine_ecosystem: Use coding to simulate a marine ecosystem,
+    exploring the interdependencies between different organisms and their environment.
+  module_desc_coding_geometric_star_quilt: Learn code to create geometric patterns
+    in stunning star quilts, blending mathematical concepts with creative expression.
+  module_desc_modeling_animal_adaptations: Use code to model animal adaptations, deepening
+    your understanding of how different species have evolved to survive in their environments.
+  module_desc_coding_book_covers: Use code to create an animated cover of a book,
+    using sprites and text to convey characters, setting, plot, and more.
+  module_desc_coding_interactive_maps: Use coding to develop a map that tells a story,
+    allowing you to explore geographic information in an engaging and interactive
+    way.
+  values_01: Creiem que les ciències informàtiques són fonamentals per a tots els
+    alumnes
+  values_02: Estem compromesos en l'equitat, accés i oportunitat
+  values_03: Creiem en el poder de l'educació col·laborativa comunitària
+  values_04: Som àgils i responem als comentaris
+  values_05: " Actuem amb integritat i transparència"
+  values_06: Creiem que l'impacte ampli requereix pensar en gran i actuar de forma
+    integral
+  heading_professional_learning: Professional learning that meets your needs
+  heading_additional_resources: Recursos addicionals
+  heading_support_and_questions: Support and questions
+  heading_faq: Frequently asked questions
+  heading_curriculum_at_a_glance: Curriculum at a glance
+  heading_curricula_at_a_glance: Curricula at a glance
+  heading_engaging_projects: Engaging projects and activities that inspire learning
+  heading_build_apps: Build apps
+  heading_widgets: Widgets
+  heading_choice_levels: Choice levels
+  heading_year_long_intro_course: Year-long introductory course
+  heading_flexible_units: Flexible units
+  heading_collections: Collections
+  heading_find_a_module: Find a module for your classroom
+  professional_learning_section_desc: Get the support you need as you prepare to teach.
+    Teachers love it, with over 90% ranking it the best professional development ever!
+  professional_learning_section_desc_self_paced: Just in time support that allows
+    you to prepare to teach with confidence on your schedule.
+  professional_learning_section_block_facilitator_led_workshops: Our highly supportive
+    Professional Learning Program will bring you together with a group of teachers
+    to learn from each other as well as expert facilitators as you take on the first
+    year of teaching the free curriculum to your students. In-person and virtual workshops
+    are starting this summer.
+  support_and_questions_section_subhead: Still have questions? Reach out to us! We
+    are here to help.
+  support_and_questions_section_desc: Our support team is here to answer any questions
+    you may have about starting teaching with Code.org. You can also ask other teachers
+    about their experience on our teacher forums.
+  blockchain_hero_heading: Com funciona la Cadena de blocs
+  blockchain_hero_desc: Submergeix-te en el món de la cadena de blocs amb "Com funciona
+    la Cadena de blocs", la nostra nova sèrie de vídeos i les lliçons que l'acompanyen!
+  blockchain_intro_heading: Mirar com funcionea cadena de blocs
   blockchain_intro_desc: The video series, made in partnership with Coinbase, features
     industry experts and aims to demystify this technology.
   blockchain_intro_list_heading: 'This series will:'
@@ -294,6 +508,13 @@ ca:
   teachai_launch_blog_desc_02: TeachAI té com a objectiu integrar l'educació EN IA
     als currículums de primària i secundària de tot el món mitjançant informes de
     notícies, recomanacions polítiques i oportunitats de participació pública.
+  ai_pl_callout_title: Uniu-vos a nosaltres per a AI EmpowerED!
+  ai_pl_callout_desc_01: Descobriu el potencial transformador de la intel·ligència
+    artificial (IA) a l'educació amb la nostra sèrie d'aprenentatge en línia gratuïta
+    per a educadors.
+  ai_pl_callout_desc_02: Inscriu-te a "Fireside Chat with Sal Khan and Hadi Partovi"
+    on els fundadors de Khan Academy i Code.org descobreixen com la IA generativa
+    pot convertir-se en el teu assistent docent més fiable.
   ai_hero_heading: Artificial intelligence isn't magic… It's just code!
   ai_hero_desc: Demystify artificial intelligence (AI) by learning how it's changing
     the ways we live, work, and learn.
@@ -331,7 +552,7 @@ ca:
   ai_curriculum_grades_02: 'Grade Levels: 5-12'
   ai_curriculum_duration_02: 'Duration: 1 hour'
   ai_curriculum_btn_aria_label_02: View the lesson plan for AI and Ethics
-  ai_curriculum_title_03: AI for Oceans
+  ai_curriculum_title_03: IA per Oceans
   ai_curriculum_desc_03: Help A.I. clean the oceans by training it to detect trash!
     Learn about training data and bias, and how AI can address world problems.
   ai_curriculum_grades_03: 'Grade Levels: 3-12'
@@ -358,7 +579,7 @@ ca:
     series of short videos will introduce you to how artificial intelligence works
     and why it matters. Then delve into issues like algorithmic bias and the ethics
     of AI decision-making.
-  ai_resources_heading: Additional resources
+  ai_resources_heading: Recursos addicionals
   ai_resources_desc: Interested in learning more about AI? Here are some additional
     resources that can help extend your students' learning.
   ai_resources_title_01: Ethics of AI Panel
@@ -481,8 +702,8 @@ ca:
     or CEOs of technology companies such as Uber, eBay, Intuit, and Dropbox, or inventing
     technologies such as LASIK surgery or JPEG compression, or in scientific, academic,
     or engineering roles around the globe.
-  farsi_page_global_desc_03: Finally, Code.org was founded by Iranian American Hadi
-    Partovi and has grown to become one of the largest education nonprofits globally.
+  farsi_page_global_desc_03: Finally, Code.org is led by Iranian American Hadi Partovi
+    and has grown to become one of the largest education nonprofits globally.
   farsi_timeline_heading: Our Projected Timeline
   farsi_timeline_stage_title_01: Stage 1
   farsi_timeline_stage_title_02: Stage 2
@@ -533,20 +754,20 @@ ca:
     student in every school has the opportunity to learn computer science.
   farsi_page_founders_heading: Our Founders' Story
   farsi_page_founders_slide_01: Born in Iran, Hadi and Ali Partovi grew up during
-    the Iran-Iraq war. Their neighborhood in Tehran was regularly bombed by Iraqi
-    fighter jets.
+    the Iran-Iraq war. Their neighborhood in Tehran was bombed by Iraqi fighter jets.
   farsi_page_founders_slide_02: When they were 9 years old, their father, a physics
-    professor, brought home a Commodore 64 computer. This computer was their escape
-    from their surroundings – they learned how to code and create apps, games, and
-    music.
+    professor, brought home a Commodore 64 computer from a trip abroad. This computer
+    was their escape from their surroundings – they learned how to code and create
+    apps, games, and music.
   farsi_page_founders_slide_03: They immigrated to the United States at age 11. Soon
     after they turned 15, they spent their summers working as software engineers to
     help pay their way through high school and college.
   farsi_page_founders_slide_04: Upon graduating from Harvard University with Masters
     degrees in computer science, Hadi and Ali pursued careers in technology.
-  farsi_page_founders_slide_05: They found success in the tech world and achieved
-    the “American dream.” They became prolific angel investors, backing Facebook,
-    Uber, Airbnb, and Dropbox, among others.
+  farsi_page_founders_slide_05: They attained success in the technology industry and
+    founded numerous tech businesses, accomplishing the American dream. Additionally,
+    they became prolific angel investors, backing companies such as Facebook, Uber,
+    Airbnb, and Dropbox, among others.
   farsi_page_founders_slide_06: In 2013, Hadi and Ali launched the education nonprofit
     Code.org, which Hadi continues to lead as CEO. Since its inception, Code.org has
     started a massive movement to teach computer science and coding to K-12 students
@@ -568,6 +789,408 @@ ca:
     and Code.org believes that this exemption will fully shield its funding, preparation,
     and distribution of the Farsi Translations and thus enable its Farsi Translations
     effort to proceed in full compliance with U.S. economic sanctions requirements.
+  resources_tabs_heading: Recursos que us donen suport en cada pas del camí
+  resources_tabs_desc: "[Registreu-vos per obtenir un compte de Code.org](%{sign_up_url})
+    per accedir a materials que us ajudaran a ensenyar informàtica amb confiança.
+    Code.org té amplis recursos dissenyats per donar suport als educadors, fins i
+    tot aquells que no tenen experiència docent prèvia en CS."
+  resources_tabs_tab_label_lesson_plans: Unitats didàctiques
+  resources_tabs_tab_label_videos: Vídeos
+  resources_tabs_tab_label_slides: Diapositives
+  resources_tabs_tab_label_assessments: Avaluacions
+  resources_tabs_tab_label_tools: Eines de programació
+  resources_tabs_lesson_plans_subhead: Obteniu orientació pas a pas, objectius d'aprenentatge
+    i estratègies d'avaluació per a un ensenyament eficaç.
+  resources_tabs_lesson_plans_desc: Els recursos útils inclouen diapositives, guies
+    d'activitats, rúbriques i molt més, tot organitzat en un sol lloc. Cada pla de
+    lliçó s'acompanya de consells per a la implementació a l'aula, idees de diferenciació
+    i activitats d'ampliació per atendre els estudiants de totes les capacitats.
+  resources_tabs_videos_heading: Vídeos instructius
+  resources_tabs_videos_subhead: Veure vistes generals fàcils d'entendre sobre ciències
+    informàtiques i conceptes de programació.
+  resources_tabs_videos_desc: 'Les sèries de vídeos Code.org estan dissenyades específicament
+    per donar suport a la teva aula i són atractives i divertides per veure.
+
+'
+  resources_tabs_slides_heading: Plataforma de diapositives
+  resources_tabs_slides_subhead: Oferim als educadors un marc organitzat, atractiu
+    visualment i pedagògicament raonable per entregar lliçons de ciències informàtiques.
+  resources_tabs_slides_desc: 'Les instruccions pas a pas, exemples i activitats interactives
+    de les plataformes de diapositives de Code.org que s''alineen amb els objectius
+    curriculars. '
+  resources_tabs_assessments_subhead: Els nostres currículums inclouen un sistema
+    exhastiu de recursos d'avaluació formatius i sumatoris
+  resources_tabs_assessments_desc: Aquests inclouen rúbriques, llistes de verificació,
+    mini-projectes, projectes de final de capítol, rúbriques orientades als alumnes,
+    projectes de mostra i proves posteriors al projecte, tot dissenyat per ajudar
+    els professors a mesurar el creixement dels alumnes, proporcionar comentaris i
+    avaluar la comprensió dels alumnes.
+  resources_tabs_tools_subhead: Els ambients de desenvolupament integrat (IDE) de
+    Code.org proporcionen als alumnes tots els nivells d'habilitats.
+  resources_tabs_tools_desc: Oferim una plataforma versàtil i fàcil d'utilitzar que
+    admet una varietat de paradigmes de programació. Això permet als alumnes fer una
+    transició perfecta de la codificació basada en blocs als llenguatges basats en
+    text i fomenta la creativitat i la innovació.
+  teach_page_top_heading: Possibilitats d'engegar i ensenyar ciències informàtiques
+  teach_page_top_desc_01: Aproximeu-vos al potencial sencer dels vostres alumnes amb
+    el curríulum gratuït de Ciències Informàtiques (CS) de Code.org
+  teach_page_top_desc_02: Uneix-te a la comunitat global de més de 2 milions d'educadors
+    que apoderen la propera generació d'innovadors, solucionadors de problemes i ciutadans
+    digitals! Code.org dóna suport als professors durant tot el camí amb aprenentatge
+    professional, currículums complets i suport quan ho necessiteu.
+  teach_page_why_teach_cs_heading: Perquè ensenyar ciències informàtiques amb Code.org?
+  teach_page_why_teach_cs_block_heading_01: 'Construieix habilitats fonamentals CS '
+  teach_page_why_teach_cs_block_desc_01: Igual que la lectura, l'escriptura o les
+    matemàtiques, les ciències informàtiques és fonamental per a altres activitats.
+    Ensenya la resolució de problemes i el pensament crític, i permet als alumnes
+    participar activament en una societat cada cop més digital.
+  teach_page_why_teach_cs_block_heading_02: Aprofitar recursos didàctics integrals
+  teach_page_why_teach_cs_block_desc_02: Les unitats didàctiques en profunditat i
+    les opcions d'aprenentatge professional flexibles garanteixen que els professors
+    amb antecedents diversos puguin ensenyar amb èxit les ciències informàtiques.
+  teach_page_why_teach_cs_block_heading_03: Desbloquegeu camins per a tots els alumnes
+  teach_page_why_teach_cs_block_desc_03: Les professions de les ciències informàtiques
+    són el sector més gran, de creixement més ràpid i millor pagat de tots els nous
+    salaris als EUA.
+  teach_page_why_teach_cs_block_heading_04: Enten un món canviat per la IA
+  teach_page_why_teach_cs_block_desc_04: Ensenyeu als alumnes com funciona la IA i
+    com utilitzar-la de manera segura. El nostre aprenentatge professional fomenta
+    la curiositat i la confiança amb aquesta tecnologia en evolució.
+  teach_page_why_teach_cs_heading_02: Comenceu a ensenyar ciències informàtiques amb
+    Code.org avui!
+  teach_page_quote: Quan utilitzeu el currículum de Code.org, ho teniu tot per a vosaltres.
+    Té les preguntes que heu de fer als vostres alumnes. Té les lliçons que necessiteu
+    ensenyar i us orienta sobre com fer-ho. Així que si entres sense cap experiència
+    en ciències informàtiques, el tens. Si teniu experiència amb la informàtica i
+    l'ensenyament anterior, us donarà una nova manera d'apropar-vos a com ensenyar
+    als vostres estudiants.
+  teach_page_free_curriculum_heading: Currículum gratuït, atractiu
+  teach_page_free_curriculum_desc: Volem que porteu les Ciències Informàtiques a la
+    vostra escola sense preocupar-vos pel cost. És per això que ens hem compromès
+    a què les nostres ofertes de currículum siguin gratuïtes per sempre!
+  teach_page_free_curriculum_list_heading_01: Currículum atractiu per a cada nivell
+  teach_page_free_curriculum_list_desc_01: Currículum gratuït, flexible i divertit
+    amb ofertes de més de 67 idiomes.
+  teach_page_free_curriculum_list_heading_02: Currículum adaptable i innovador
+  teach_page_free_curriculum_list_desc_02: Code.org ofereix des de currículums d'un
+    curs complet fins a activitats d'una sola unitat. A més, actualitzem els nostres
+    currículums anualment per donar suport a les millors pràctiques i àrees d'interès,
+    i crear noves ofertes que ensenyin temes actuals de demanda.
+  teach_page_free_curriculum_list_heading_03: Currículum estructurat formulat amb
+    estàndards nacionals
+  teach_page_free_curriculum_list_desc_03: Cada currículum s'assigna com a mínim a
+    un conjunt d'estàndards nacionals, com ara CSTA, Next Generation Science Standards
+    i Common Core.
+  teach_page_free_curriculum_heading_02: Explora la nostra oferta de currículum per
+    a diferents nivells.
+  teach_page_resources_heading: Recursos que us donen suport en cada pas del camí
+  teach_page_resources_desc: El registre d'un compte de Code.org us permet accedir
+    a materials que us ajudaran a ensenyar Ciències informàtiques amb confiança. Code.org
+    té amplis recursos dissenyats per donar suport als educadors, fins i tot aquells
+    que no tenen experiència docent prèvia en CS. Feu clic a les pestanyes per obtenir
+    més informació sobre els recursos.
+  teach_page_curriculum_heading: 'Oferta de currículums que agrada als nostres alumnes '
+  teach_page_curriculum_desc: Hi ha tantes ofertes increïbles per explorar. Aquí només
+    hi ha algunes de les nostres ofertes noves i populars.
+  teach_page_pl_offerings_english_header: Professional learning offerings that meet
+    your needs
+  teach_page_pl_offerings_intl_header: Explora ofertes d'aprenentatge professional
+  teach_page_pl_offerings_list_heading_self_paced: Mòduls en línia al teu ritme
+  teach_page_pl_offerings_list_desc_self_paced: Aquests mòduls us permeten participar
+    al vostre ritme i al vostre temps mentre us centreu en les àrees més importants
+    per a les vostres necessitats i context docent.
+  teach_page_pl_offerings_list_heading_workshops_facilitator_led: Facilitator-led
+    Workshops
+  teach_page_pl_offerings_list_heading_workshops: Tallers
+  teach_page_pl_offerings_list_desc_workshops_en: With our Regional Partners as hosts
+    and our Code.org facilitators as guides, our workshops around the country focus
+    on reflection, discussion, and growth-oriented learning.
+  teach_page_pl_offerings_list_desc_workshops_intl: Ens col·laborem amb organitzacions
+    d'arreu del món per ajudar a portar les ciències informàtiques a tots els alumnes.
+    Obteniu més informació sobre quines oportunitats d'aprenentatge professional poden
+    estar disponibles per als professors del vostre país.
+  teach_page_pl_offerings_list_heading_forums: Comunitat de professors
+  teach_page_pl_offerings_list_desc_forums: Un fòrum perquè els professors facin preguntes
+    i comparteixin bones pràctiques, pensaments, idees i inspiració. Uneix-te a una
+    comunitat d'educadors sorprenents que porten les ciències informàtiques a les
+    aules de tot el món!
+  teach_page_additional_materials_heading: Suports i materials addicionals
+  teach_page_additional_materials_desc: Més enllà del currículum i l'aprenentatge
+    professional, tenim molts materials per donar suport a la teva aula.
+  teach_page_additional_materials_list_heading_01: Formació professional
+  teach_page_additional_materials_list_desc_01: Recursos fàcils d'utilitzar dissenyats
+    per ajudar-vos a il·luminar connexions del món real i oferir als alumnes oportunitats
+    d'explorar diferents itineraris professionals.
+  teach_page_additional_materials_list_heading_02: Biblioteca de vídeos
+  teach_page_additional_materials_list_desc_02: 'Oferim una biblioteca creixent de
+    vídeos educatius per als educadors de tot el món, en línia o a les aules. El nostre
+    objectiu és amplificar els nostres esforços més enllà de l''abast del nostre propi
+    currículum. '
+  teach_page_additional_materials_list_heading_03: Pòsters d'aula
+  teach_page_additional_materials_list_desc_03: Imprimeix aquests pòsters de diversos
+    models per penjar a la teva escola i inspira els teus alumnes a provar les ciències
+    informàtiques.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
+  csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
+  csp_page_intro_list_01: Culturally responsive pedagogy
+  csp_page_intro_list_02: Real-world problem investigation
+  csp_page_intro_list_03: Explainer videos with diverse presenters
+  csp_page_intro_list_04: Open-ended projects for more personalized learning
+  csp_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
+    Animation
+  csp_page_curriculum_glance_devices: Laptop, Chromebook
+  csp_page_curriculum_glance_tools: App Lab
+  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
+    Modules
+  csp_page_curriculum_glance_professional_languages: Català
+  csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
+    Closed captioning, Immersive reader
+  csp_page_quote: Can I just say I LOVE Code.org? It's my first year teaching AP CS
+    Principles (actually 1st year it is offered at our school) - and both the kids
+    and I are having a blast.
+  csp_page_projects_build_apps: Using the JavaScript language, students learn about
+    algorithms and program design as they create a series of real working, shareable
+    apps with App Lab.
+  csp_page_projects_widgets: Students get hands-on experience with concepts like binary
+    and pixels, text compression, cryptography, encoding and transmitting data through
+    computational widgets, which are directly integrated into the Code.org platform.
+  csp_page_projects_choice_levels: Students are offered the choice between a variety
+    of tasks that reinforce course objectives while allowing for differentiation and
+    customization, meeting students where they are at and encouraging them to go further.
+  csp_page_faq_question_01: Is CS Principles mapped to standards?
+  csp_page_faq_answer_01: CS Principles was written using the AP CS Principles Framework
+    and prepares students for the AP CS Principles exam. The curriculum has also been
+    aligned to the newly revised 2017 CSTA standards. [A summary of standards mappings
+    can be found here](%{standards_url}). A google sheet version of the standards
+    can be found at [CSP Standards](%{csp_standards_url}).
+  csp_page_faq_question_02: How much does it cost to teach CS Principles?
+  csp_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
+    for anyone, anywhere, to teach!
+  csp_page_faq_question_03: How/Where can I get professional development for CS Principles?
+  csp_page_faq_answer_03_01: Our Professional Learning Program offers year-round support.
+    The program kicks off with a 5-day summer workshop where you'll have an opportunity
+    to work hands-on with the curriculum and meet other teachers from your area. Throughout
+    the year, we offer forum support and follow-up workshops. You don't need any prior
+    computer science experience to get started. And teachers love it! 90% rank it
+    the best professional development ever. [Click here to apply and learn more](%{pl_url}).
+  csp_page_faq_answer_03_02: Have questions about professional development? [Provide
+    your contact information to a Regional Partner in your area](%{regional_partner_url}).
+  csp_page_faq_question_04: What is the recommended timing for teaching CS Principles?
+  csp_page_faq_answer_04_01: We recommend that CS Principles be taught as a full year
+    class, assuming that you meet with students daily or nearly daily for 45 or more
+    minutes.
+  csp_page_faq_answer_04_02: It is possible to teach CS Principles on a semester block
+    schedule, though we highly recommend this implementation only be used in the fall
+    semester. Since the AP Performance Tasks are due in late April and require 20
+    dedicated hours of class time to complete, most schools find there is not enough
+    time to complete the course on a block schedule in the spring.
+  csp_page_faq_question_05: What materials do I need for CS Principles?
+  csp_page_faq_answer_05_01: CS Principles requires that students have access to computers
+    with a modern web browser. At this time, our courses are not optimized for tablets
+    or mobile devices. For more details, [check out Code.org's technology requirements](%{it_url}).
+  csp_page_faq_answer_05_02: 'Many lessons have handouts that are designed to guide
+    students through activities. While these handouts are not required, we highly
+    recommend their use. In addition to handouts, several lessons call for specific
+    items. You can find these listed below as well as our suggestions for alternatives:'
+  csp_page_faq_answer_05_02_list_01: 'Unit 1, Lesson 2: Assortment of craft materials
+    for constructing physical devices. Recommendations: cups, string/yarn, construction
+    paper, flashlights, slinkies, noise makers, markers, and glue, etc. Alternative:
+    none.'
+  csp_page_faq_answer_05_02_list_02: 'Unit 2, Lesson 2: String for table groups to
+    build a network connecting them. Alternative: Students draw their network but
+    don''t actually build it.'
+  csp_page_faq_answer_05_02_list_03: 'Unit 3, Lesson 5: A handful of LEGO® blocks
+    for every pair of students. Alternative: Sticky notes, construction paper.'
+  csp_page_faq_answer_05_02_list_04: 'Unit 4, Lessons 1 & 5: Plastic bags, sticky
+    notes, dry erase markers. Alternative: Envelopes.'
+  csp_page_faq_answer_05_02_list_05: 'Unit 5, Lesson 1: Plastic bags, gallon-sized
+    plastic bags, sticky notes, dry erase markers, tape. Alternative: Envelopes.'
+  csp_page_faq_answer_05_02_list_06: 'Unit 6, Lessons 2 & 3: Sticky notes. Alternative:
+    Scraps of paper.'
+  csp_page_faq_answer_05_02_list_07: 'Unit 6, Lesson 4: Decks of cards. Alternative:
+    Any item that could be combined into two categories (e.g. change with even / odd
+    year).'
+  csp_page_faq_answer_05_02_list_08: 'Unit 7, Lessons 1 & 5: Sticky notes, envelopes,
+    plastic bags, file folders. Alternative: Scraps of paper, folders made of a folded
+    sheet of paper, etc.'
+  csp_page_faq_answer_05_03: The following supplies are completely optional but will
+    be useful to have on hand for various lessons.
+  csp_page_faq_answer_05_03_list_01: Graph paper
+  csp_page_faq_answer_05_03_list_02: Chart paper
+  csp_page_faq_answer_05_03_list_03: Markers
+  csp_page_faq_answer_05_03_list_04: Post-it notes
+  csp_page_faq_question_06: How can I access answer keys?
+  csp_page_faq_answer_06_01: With an approved teacher account, you can find answer
+    keys in a blue "Teacher Only" panel that shows in the online lessons and activities.
+  csp_page_faq_answer_06_02: Teachers in our Professional Learning Program will automatically
+    be approved to view answer keys. If you need an approved teacher account, you
+    can apply for access to protected teacher-only materials (answer keys, etc) through
+    [this form](%{form_url}). Please keep in mind that it may take 3-5 business days
+    to verify your account.
+  csp_page_faq_question_07: How was the curriculum developed?
+  csp_page_faq_answer_07_01: Our CS Principles curriculum has always been designed
+    as part of a broader vision of supporting high quality, engaging, and equitable
+    computer science instruction in classrooms across the country. Our [Curriculum
+    Values](%{curriculum_url}) continue to guide us, and in particular our focus on
+    expanding access to those who historically have been denied opportunities to learn
+    about the exciting and impactful field of computing. While our vision and values
+    remain unchanged, the landscape of CS education is rapidly developing.
+  csp_page_faq_answer_07_02: For the 2020-21 school year the College Board has made
+    some significant updates to the CS Principles framework and AP assessment to ensure
+    that CS Principles remains relevant and aligned with equivalent university courses.
+    CS education research continues to reveal new insights on how students learn about
+    computing, and feedback from the thousands of classrooms now using our CS Principles
+    curriculum has identified opportunities to further improve our courses, tools,
+    and recommended pedagogy.
+  csp_page_faq_answer_07_03: The goal of the updates to our curriculum is to navigate
+    these developments in a way that remains committed to our vision and values and
+    supports the many teachers, schools, classrooms, and districts that are already
+    a part of our broader CS Principles community. We remain deeply thankful for you
+    joining us on this mission to make our collective vision a reality.
+  csp_page_faq_answer_07_04: For more information about our goals and approach to
+    our courses, please see our [Curriculum Values](%{curriculum_url}) and our [Professional
+    Learning Values](%{pl_url}).
+  csd_page_top_desc: Code.org's most flexible course, allowing each unit to be taught
+    alone, combined into collections that focus on specific areas, or as a full year
+    course. The free curriculum introduces students to building their own websites,
+    apps, animations, games, and physical computing systems.
+  csd_page_intro_heading: Flexible curriculum to meet your needs
+  csd_page_intro_list_01: Flexible introductory curriculum
+  csd_page_intro_list_02: Breadth of topics
+  csd_page_intro_list_03: No prior experience needed
+  csd_page_intro_list_04: Build many different types of projects
+  csd_page_intro_list_05: Exciting and fun
+  csd_page_quote: This curriculum is all inclusive, well organized, and student centered!
+    The incredible organization in the curriculum is what makes me use it year after
+    year.
+  csd_page_curriculum_glance_topics: Artificial Intelligence, Data, Web Design, Physical
+    Computing, App Design, Games and Animations, Art and Design, Programming
+  csd_page_curriculum_glance_devices: Laptop, Chromebook
+  csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
+  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
+    Modules
+  csd_page_curriculum_glance_professional_languages: Català
+  csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
+    Closed captioning, Immersive reader
+  csd_page_pick_a_course_heading: Picking the right CS Discoveries course for your
+    classroom
+  csd_page_pick_a_course_desc: With the diverse set of options offered for CS Discoveries,
+    there is a course for all different needs.
+  csd_page_pick_a_course_heading_02: How do you want to pick the content?
+  csd_page_courses_year_desc: Through 7 units students explore a wide variety of topics.
+  csd_page_courses_year_action_block_desc: 'An introductory computer science course
+    that empowers students to create authentic artifacts and engage with computer
+    science as a medium for creativity, communication, problem solving, and fun. '
+  csd_page_courses_flexible_units_desc: Each unit of CS Discoveries can be used on
+    its own with no prior experience required, which allows you to pick the exact
+    units that work for your classroom.
+  csd_page_courses_collections_desc: Dive deeper into one area with a set of units
+    focused on a specific topic.
+  csd_page_faq_question_01: Is CS Discoveries mapped to standards?
+  csd_page_faq_answer_01: CS Discoveries was written using both the K-12 Framework
+    for Computer Science and the 2017 CSTA standards as guidance. Currently, every
+    lesson in CS Discoveries contains mappings to the relevant 2017 CSTA standards.
+    [A summary of standards mappings can be found here](%{mappings_url}). A Google
+    Sheets version of the standards can be found at [CSD Standards](%{csd_standards_url}).
+  csd_page_faq_question_02: How/Where can I get professional development for this
+    course?
+  csd_page_faq_answer_02: Our Professional Learning Program offers year-round support.
+    The program kicks off with a five-day summer workshop where you'll have an opportunity
+    to work hands-on with the curriculum and meet other teachers from your area. Throughout
+    the year, we offer follow up workshops and forum support. You don't need any prior
+    computer science experience to get started. And teachers love it! 90% rank it
+    the best professional development ever. [Click here to apply and learn more](%{apply_url}).
+  csd_page_faq_question_03: I'm teaching CS Discoveries but have less than one semester
+    with my students. What would you recommend?
+  csd_page_faq_answer_03_01: Teachers who have a restricted schedule, unable to teach
+    all units of CS Discoveries over the course of a school year, can now easily assign
+    a specific set of CS Discoveries units based on what they want to focus on. These
+    collections are still the same exact units found in CS Discoveries, simply grouped
+    together based on our recommendations below to dive deep in a specific area of
+    CS Discoveries. Each collection is approximately one semester or slightly less
+    than one semester. [Click here to see our Collections options](%{collections_url}).
+  csd_page_faq_answer_03_02: For teachers who have an even more restricted schedule,
+    they have the ability to assign just one unit at a time from CS Discoveries without
+    assigning the entire course. We hope this helps support classrooms that teach
+    units of CS Discoveries embedded as part of larger courses or when teaching computer
+    science on a limited schedule. [Click here to see our flexible units](%).
+  csd_page_faq_question_04: What materials and supplies are required for CS Discoveries?
+  csd_page_faq_answer_04_01: One potential cost to consider when teaching this course
+    is printing. Many lessons have handouts that are designed to guide students through
+    activities. While it is not required that all of these handouts be printed, many
+    were designed to be printed and we highly recommend printing when possible.
+  csd_page_faq_answer_04_02: 'Beyond printing, some lessons call for typical classroom
+    supplies and manipulatives such as: Student journals, poster paper, markers/colored
+    pencils, scissors, scrap paper, glue or tape, post-it notes or index cards (or
+    similar sized scrap paper), and rulers or a straight edge of some kind.'
+  csd_page_faq_answer_04_03: 'In addition to those general course materials, the following
+    items are called for in specific units:'
+  csd_page_faq_answer_04_04: Problem Solving and Computing
+  csd_page_faq_answer_04_05: Aluminum foil, container for water, pennies (note that
+    pennies can be replaced with some other kind of weight of the same size). Alternate
+    activities are available if you do not have access to these supplies.
+  csd_page_faq_answer_04_06: Creating Apps with Devices (Option A and Option B)
+  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
+    out [code.org/maker/circuitplayground](%{url}) for more details.'
+  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
+    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_09: Maker supplies, such as empty tissue boxes or cardboard
+    rolls or scratch paper
+  csd_page_faq_answer_04_10: "*Note: The Creating Apps with Devices unit has two implementation
+    options - one for those using circuit playgrounds and one for those using micro:bit.
+    Teachers should not buy both sets of devices or teach both unit options as they
+    are equivalent and cover the same content."
+  csd_page_faq_question_06: How does CS Discoveries fit with the other Code.org courses?
+  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
+    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
+    While each of these courses is designed to be an age-appropriate entry point to
+    computer science, students with previous experience will find many new topics
+    to explore, and they will revisit familiar topics in novel and more challenging
+    contexts.
+  csc_page_top_desc: Make connections between computer science (CS) and other subjects
+    like math, language arts, science, and social studies.
+  csc_page_intro_heading: Teach CS while covering core subject standards
+  csc_page_intro_list_01: Incorporate CS into other subjects
+  csc_page_intro_list_02: Reinforce learning in other subjects
+  csc_page_intro_list_03: Meet core subject standards
+  csc_page_intro_list_04: Fun way to teach students about computer science
+  csc_page_intro_list_05: Open-ended projects for more personalized learning
+  csc_page_intro_list_06: Easy for any teacher with any background
+  csc_page_curriculum_glance_topics: Interdisciplinary
+  csc_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
+  csc_page_curriculum_glance_tools: Sprite Lab
+  csc_page_curriculum_glance_professional_learning: Self-paced Modules
+  csc_page_curriculum_glance_professional_languages: Català
+  csc_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
+    Closed captioning, Immersive reader
+  csc_page_quote: I loved the engagement [my students had with the module] and the
+    opportunities for choice and creativity. I loved hearing a student say, 'This
+    helped me see what we had been reading about in science.'
+  csc_page_find_a_module_desc: Our current CS Connections offerings are for 3rd to
+    5th grade classrooms and are designed to take 1 week of 45-minute lessons each
+    day.
+  csc_page_faq_question_01: Is CS Connections mapped to standards?
+  csc_page_faq_answer_01: Yes! CS Connections is mapped to the Common Core State Standards
+    (CCSS) for ELA and Math, the Next Generation Science Standards (NGSS), and the
+    Computer Science Teacher Association Standards (CSTA).
+  csc_page_faq_question_02: How much does it cost to teach CS Connections?
+  csc_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
+    for anyone, anywhere, to teach!
+  csc_page_faq_question_03: How/Where can I get professional development for CS Connections?
+  csc_page_faq_answer_03: We offer self-paced professional development for CS Connections.
+    Through reading, viewing videos, completing interactive puzzles, and reflecting
+    on your learning, you will develop your own understanding while preparing to teach
+    any of the CS Connections modules in your classroom. [Get started here](%{get_started_url}).
+  csc_page_faq_answer_03_coming_soon: Professional learning for CS Connections is
+    coming soon!
+  csc_page_faq_question_04: What is the recommended timing for teaching CS Connections?
+  csc_page_faq_answer_04: Each CS Connections module is designed to take a week.
+  csc_page_faq_question_05: What materials do I need for CS Connections?
+  csc_page_faq_answer_05: Ideally, each student will have their own computer and teachers
+    will have a projector to display the slideshow that corresponds with each lesson.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -581,7 +1204,7 @@ ca:
     of Code Live episodes.
   hoc_live_join_us: uneix-te'ns
   hoc_live_learn_more: Learn more
-  hoc_overview_oceans_tutorial_header: AI for Oceans
+  hoc_overview_oceans_tutorial_header: IA per Oceans
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
     be used to address world problems.
@@ -9202,7 +9825,7 @@ ca:
   tutorial_rpisensehat_name: Sense HAT data logger
   tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
-  tutorial_ai-oceans_name: AI for Oceans
+  tutorial_ai-oceans_name: IA per Oceans
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while

@@ -76,7 +76,7 @@ class LevelStarterAssetsController < ApplicationController
   #
 
   def summarize(file_obj, friendly_name, uuid_name)
-    if file_obj.nil? || file_obj.size.zero?
+    if file_obj.blank?
       nil
     else
       {

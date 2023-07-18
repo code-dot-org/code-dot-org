@@ -38,7 +38,7 @@
           "name": "លំដាប់"
         },
         "k5-onlinepd-2019/Loops": {
-          "name": "រង្វិល​ជុំ"
+          "name": "ប្រតិបត្តិដដែលៗ"
         },
         "k5-onlinepd-2019/Events": {
           "name": "ព្រឹត្តិការណ៍"
@@ -53,7 +53,7 @@
           "name": "អ​ថេរ"
         },
         "k5-onlinepd-2019/Sprite Lab": {
-          "name": "Sprite Lab"
+          "name": "មន្ទីរពិសោធន៍ Sprite "
         },
         "K5-OnlinePD/Computer Science Fundamentals": {
           "name": "មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ"
@@ -105,15 +105,22 @@
           "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
         },
         "coursed-2022/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង",
           "student_overview": "ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។"
         },
         "coursef-2022/The Power of Words": {
           "student_overview": "ការគំរាមកំហែង គឺមិនដែលត្រឹមត្រូវទេ។ មេរៀននេះ នឹងបង្រៀនអ្នកពីអ្វីដែលត្រឹមត្រូវ និងមិនត្រឹមត្រូវ ក្នុងការនិយាយអនឡាញ។"
         },
+        "coursef-2022/Introducing Sprite Lab": {
+          "name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍"
+        },
         "coursef-2022/The Internet": {
           "name": "អ៊ីនធឺណិត",
           "overview": "ទោះបីជាមនុស្សជាច្រើនប្រើអ៊ិនធឺរណែតជារៀងរាល់ថ្ងៃក៏ដោយក៏មិនមានមនុស្សជាច្រើនដែរដឹងថាវាដំណើរការយ៉ាងដូចម្តេច។ នៅក្នុងមេរៀននេះសិស្សនឹងរៀនអំពីបណ្ដាញ URLs អាសយដ្ឋាន IP និង DNS ។",
           "student_overview": "ធ្លាប់ឆ្ងល់ទេថាតើព័ត៌មានធ្វើដំណើរឆ្លងកាត់អ៊ីនធឺណិតយ៉ាងដូចម្តេច? វាមិនមែនជាវេទមន្តទេ! មេរៀននេះនឹងបង្រៀនអ្នកអំពីរបៀបដំណើរការអ៊ីនធឺណិត។"
+        },
+        "coursef-2022/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
         },
         "coursee-2022/Private and Personal Information": {
           "student_overview": "អ៊ីនធឺណិតផ្ដល់នូវភាពសប្បាយ និងរំភើបប៉ុន្ដែការរក្សាសុវត្ថិភាពនៅលើអ៊ីនធឺណិតក៏សំខាន់ដែរ។ មេរៀននេះបង្រៀនអ្នកពីភាពខុសគ្នារវាងព័ត៌មានដែលមានសុវត្ថិភាពក្នុងការចែករំលែកនិងព័ត៌មានឯកជន។"
@@ -135,6 +142,9 @@
         "coursee-2022/Functions with Harvester": {
           "student_overview": "អនុគមន៍នឹងជួយការងារជាច្រើននៅពេលអ្នកជួយ farmer ជាមួយនឹងការប្រមូលផលរបស់គាត់!"
         },
+        "coursee-2022/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
         "courseb-2022/Programming with Angry Birds": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
         },
@@ -154,8 +164,17 @@
           "overview": "នៅក្នុង **គម្រោងខ្នាតតូច** នេះ សិស្សនឹងមានឱកាសរៀនពីរបៀបប្រើប្រាស់ព្រឹត្តិការណ៍នៅក្នុង Play Lab និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀន ដើម្បីបង្កើតហ្គេមដែលមានចលនា។",
           "student_overview": "ប្រើព្រឹត្តិការណ៍ដើម្បីបង្កើតរឿង ឬបង្កើតហ្គេមដែលអាចលេងបាន។"
         },
+        "courseb-2022/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
         "express-2022/Programming with Angry Birds": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+        },
+        "express-2022/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
+        },
+        "express-2022/Swimming Fish in Sprite Lab": {
+          "name": "ត្រីហែលទឹកនៅក្នុង មន្ទីរពិសោធន៍"
         },
         "express-2022/Dance Party": {
           "name": "Dance Party"
@@ -194,9 +213,11 @@
           "student_overview": "ប៊ូសៗ នៅក្នុងល្បែងរូបផ្គុំនេះ សិស្សនឹងអាចអាចធ្វើការនាំផ្លូវឃ្មុំទៅកាន់ទឹកដេលមានរសជាតិផ្អែម ហើយនិងទឹកឃ្មុំ ដោយការប្រើប្រាស់ \"for loops\"! "
         },
         "express-2022/For Loops with Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ",
           "student_overview": "ត្រៀមខ្លួនរួចជាស្រេចដើម្បីស្នាដៃឯករបស់អ្នកបន្តទៀត។​ អ្នកនឹងប្រើ \"for​​ loops\" ដដែលៗ ដើម្បីបង្កើតជា រូបភាពJaw Dropping "
         },
         "express-2022/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង",
           "student_overview": "ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។"
         },
         "pre-express-2022/Learn to Drag and Drop": {
@@ -266,8 +287,14 @@
         "coursea-2022/Mini-Project: On the Move with Play Lab": {
           "overview": "នៅក្នុងសកម្មភាពតាមអ៊ិនធើណេតនេះនិស្សិតនឹងមានឱកាសរៀនពីរបៀបប្រើព្រឹត្តិការណ៍នានានៅក្នុង ផ្លេ លេប និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀនបង្កើតហ្គេមមានចលនា។  ដល់ពេលដែលត្រូវច្នៃប្រឌិតហើយបង្កើតរឿងនៅក្នុងបន្ទប់ពិសោធន៍!"
         },
+        "coursea-2022/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
         "coursec-2022/Programming with Angry Birds": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+        },
+        "coursec-2022/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
         },
         "coursec-2022/Loops with Rey and BB-8": {
           "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
@@ -276,6 +303,7 @@
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
         "coursec-2022/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង",
           "student_overview": "ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។"
         },
         "csd3-2022/Shapes and Parameters": {
@@ -374,6 +402,9 @@
         "coursef-2018/Conditionals with Cards": {
           "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
         },
+        "coursef-2018/For Loops in Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ"
+        },
         "express-2018/Debugging in Maze": {
           "name": "ការបំបាត់កំហុសជាមួយ Scrat"
         },
@@ -388,6 +419,9 @@
         },
         "express-2018/Events: The Big Event": {
           "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "express-2018/For Loops in Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ"
         },
         "express-2018/Internet": {
           "name": "អ៊ីនធឺណិត"
@@ -409,6 +443,9 @@
         },
         "coursec-2018/Programming in Maze": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+        },
+        "coursec-2018/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
         },
         "coursec-2018/Loops with Rey and BB-8": {
           "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
@@ -518,11 +555,20 @@
         "coursed-2019/Dance Party": {
           "name": "Dance Party"
         },
+        "coursef-2019/For Loops in Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ"
+        },
         "coursef-2019/Internet": {
           "name": "អ៊ីនធឺណិត"
         },
+        "coursef-2019/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
         "coursee-2019/Nested Loops in Frozen": {
           "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
+        },
+        "coursee-2019/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
         },
         "express-2019/Dance Party": {
           "name": "Dance Party"
@@ -539,14 +585,29 @@
         "express-2019/Until Loops in Maze": {
           "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
         },
+        "express-2019/For Loops in Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ"
+        },
+        "express-2019/Learning Sprites with Sprite Lab": {
+          "name": "ត្រីហែលទឹកនៅក្នុង មន្ទីរពិសោធន៍"
+        },
+        "express-2019/Build A Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
         "coursec-2019/Programming in Maze": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+        },
+        "coursec-2019/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
         },
         "coursec-2019/Loops with Rey and BB-8": {
           "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
         },
         "coursec-2019/Events: The Big Event": {
           "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "coursec-2019/End of Course Project: Create a Play Lab Game": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
         },
         "pre-express-2019/Learn to Drag and Drop": {
           "name": "រៀនអំពីការអូស និងទម្លាក់"
@@ -703,6 +764,9 @@
         },
         "coursec-2017/Building a Foundation": {
           "name": "ការជម្នះ ៖ ការកសាងគ្រឹះ"
+        },
+        "coursec-2017/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
         },
         "coursec-2017/Loops with Rey and BB-8": {
           "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
@@ -891,10 +955,13 @@
           "name": "បន្ទប់វេប"
         },
         "allthethings/Sprite Lab": {
-          "name": "Sprite Lab"
+          "name": "មន្ទីរពិសោធន៍ Sprite "
         },
         "allthethings/lesson-48": {
           "name": "កំណាព្យ"
+        },
+        "coursef-2021/lesson-6": {
+          "name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍"
         },
         "coursef-2021/lesson-2": {
           "student_overview": "ការគំរាមកំហែង គឺមិនដែលត្រឹមត្រូវទេ។ មេរៀននេះ នឹងបង្រៀនអ្នកពីអ្វីដែលត្រឹមត្រូវ និងមិនត្រឹមត្រូវ ក្នុងការនិយាយអនឡាញ។"
@@ -915,12 +982,16 @@
           "student_overview": "ប៊ូសៗ នៅក្នុងល្បែងរូបផ្គុំនេះ សិស្សនឹងអាចអាចធ្វើការនាំផ្លូវឃ្មុំទៅកាន់ទឹកដេលមានរសជាតិផ្អែម ហើយនិងទឹកឃ្មុំ ដោយការប្រើប្រាស់ \"for loops\"! "
         },
         "coursef-2021/For Loops in Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ",
           "student_overview": "ត្រៀមខ្លួនរួចជាស្រេចដើម្បីស្នាដៃឯករបស់អ្នកបន្តទៀត។​ អ្នកនឹងប្រើ \"for​​ loops\" ដដែលៗ ដើម្បីបង្កើតជា រូបភាពJaw Dropping "
         },
         "coursef-2021/Internet": {
           "name": "អ៊ីនធឺណិត",
           "overview": "ទោះបីជាមនុស្សជាច្រើនប្រើអ៊ិនធឺរណែតជារៀងរាល់ថ្ងៃក៏ដោយក៏មិនមានមនុស្សជាច្រើនដែរដឹងថាវាដំណើរការយ៉ាងដូចម្តេច។ នៅក្នុងមេរៀននេះសិស្សនឹងរៀនអំពីបណ្ដាញ URLs អាសយដ្ឋាន IP និង DNS ។",
           "student_overview": "ធ្លាប់ឆ្ងល់ទេថាតើព័ត៌មានធ្វើដំណើរឆ្លងកាត់អ៊ីនធឺណិតយ៉ាងដូចម្តេច? វាមិនមែនជាវេទមន្តទេ! មេរៀននេះនឹងបង្រៀនអ្នកអំពីរបៀបដំណើរការអ៊ីនធឺណិត។"
+        },
+        "coursef-2021/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
         },
         "courseb-2021/Programming in Maze": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
@@ -940,6 +1011,9 @@
         "courseb-2021/Events in Play Lab": {
           "overview": "នៅក្នុង **គម្រោងខ្នាតតូច** នេះ សិស្សនឹងមានឱកាសរៀនពីរបៀបប្រើប្រាស់ព្រឹត្តិការណ៍នៅក្នុង Play Lab និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀន ដើម្បីបង្កើតហ្គេមដែលមានចលនា។",
           "student_overview": "ប្រើព្រឹត្តិការណ៍ដើម្បីបង្កើតរឿង ឬបង្កើតហ្គេមដែលអាចលេងបាន។"
+        },
+        "courseb-2021/lesson-1": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
         },
         "coursea-2021/Learn to Drag and Drop": {
           "name": "រៀនអំពីការអូស និងទម្លាក់",
@@ -970,8 +1044,14 @@
         "coursea-2021/Events in Play Lab": {
           "overview": "នៅក្នុងសកម្មភាពតាមអ៊ិនធើណេតនេះនិស្សិតនឹងមានឱកាសរៀនពីរបៀបប្រើព្រឹត្តិការណ៍នានានៅក្នុង ផ្លេ លេប និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀនបង្កើតហ្គេមមានចលនា។  ដល់ពេលដែលត្រូវច្នៃប្រឌិតហើយបង្កើតរឿងនៅក្នុងបន្ទប់ពិសោធន៍!"
         },
+        "coursea-2021/lesson-1": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
         "coursec-2021/Programming in Maze": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+        },
+        "coursec-2021/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
         },
         "coursec-2021/Loops with Rey and BB-8": {
           "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
@@ -980,6 +1060,7 @@
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
         "coursec-2021/End of Course Project: Create a Play Lab Game": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង",
           "student_overview": "ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។"
         },
         "coursed-2021/Introduction to Online Puzzles": {
@@ -1026,10 +1107,17 @@
           "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
         },
         "coursed-2021/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង",
           "student_overview": "ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។"
         },
         "express-2021/Programming with Angry Birds": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+        },
+        "express-2021/Debugging with Scrat": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
+        },
+        "express-2021/Swimming Fish in Sprite Lab": {
+          "name": "ត្រីហែលទឹកនៅក្នុង មន្ទីរពិសោធន៍"
         },
         "express-2021/lesson-1": {
           "name": "Dance Party"
@@ -1068,9 +1156,11 @@
           "student_overview": "ប៊ូសៗ នៅក្នុងល្បែងរូបផ្គុំនេះ សិស្សនឹងអាចអាចធ្វើការនាំផ្លូវឃ្មុំទៅកាន់ទឹកដេលមានរសជាតិផ្អែម ហើយនិងទឹកឃ្មុំ ដោយការប្រើប្រាស់ \"for loops\"! "
         },
         "express-2021/For Loops with Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ",
           "student_overview": "ត្រៀមខ្លួនរួចជាស្រេចដើម្បីស្នាដៃឯករបស់អ្នកបន្តទៀត។​ អ្នកនឹងប្រើ \"for​​ loops\" ដដែលៗ ដើម្បីបង្កើតជា រូបភាពJaw Dropping "
         },
         "express-2021/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង",
           "student_overview": "ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។"
         },
         "pre-express-2021/Learn to Drag and Drop": {
@@ -1130,6 +1220,9 @@
         },
         "coursee-2021/Functions in Harvester": {
           "student_overview": "អនុគមន៍នឹងជួយការងារជាច្រើននៅពេលអ្នកជួយ farmer ជាមួយនឹងការប្រមូលផលរបស់គាត់!"
+        },
+        "coursee-2021/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
         },
         "csd6-2021/Designing Screens with Code": {
           "name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ"
@@ -1203,6 +1296,15 @@
         "express-2020/Until Loops in Maze": {
           "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
         },
+        "express-2020/For Loops with Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ"
+        },
+        "express-2020/Swimming Fish in Sprite Lab": {
+          "name": "ត្រីហែលទឹកនៅក្នុង មន្ទីរពិសោធន៍"
+        },
+        "express-2020/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
         "courseb-2020/Programming in Maze": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
         },
@@ -1233,8 +1335,14 @@
         "coursed-2020/Until Loops in Maze": {
           "name": "Until Loops នៅក្នុងផ្លូវខ្វាត់ខ្វែង"
         },
+        "coursed-2020/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
         "coursec-2020/Programming in Maze": {
           "name": "ការសរសេរកម្មវិធីជាមួយតួអង្គបក្សី"
+        },
+        "coursec-2020/Debugging in Maze": {
+          "name": "ការបំបាត់កំហុសនៅក្នុង Maze"
         },
         "coursec-2020/Loops with Rey and BB-8": {
           "name": "ការធ្វើដដែលៗជាមួយ Rey និង​ BB-8"
@@ -1242,8 +1350,14 @@
         "coursec-2020/Events: The Big Event": {
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
+        "coursec-2020/End of Course Project: Create a Play Lab Game": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
+        },
         "coursee-2020/Nested Loops in Frozen": {
           "name": "រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen"
+        },
+        "coursee-2020/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
         },
         "coursea-2020/Learn to Drag and Drop": {
           "name": "រៀនអំពីការអូស និងទម្លាក់"
@@ -1268,6 +1382,12 @@
         },
         "coursef-2020/Internet": {
           "name": "អ៊ីនធឺណិត"
+        },
+        "coursef-2020/For Loops in Artist": {
+          "name": "For loops ជាមួយវិចិត្រករ"
+        },
+        "coursef-2020/End of Course Project": {
+          "name": "ចុងបញ្ចប់នៃគម្រោង"
         }
       }
     }

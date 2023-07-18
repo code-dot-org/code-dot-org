@@ -12,7 +12,6 @@ import {allowAnimationMode, countAllowedModes} from './stateQueries';
 import PoemSelector from './poetry/PoemSelector';
 import * as utils from '../utils';
 import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Controls above the visualization header, including the code/animation toggle.
@@ -104,25 +103,22 @@ class P5LabVisualizationHeader extends React.Component {
                     : msg.animationMode()}
                 </button>
               )}
-              {allowAnimationMode &&
-                this.props.isBlockly &&
-                experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD) && (
-                  <button
-                    style={{
-                      ...styles.buttonFocus,
-                      // All truncation if the visualize column is very small
-                      // or if translated strings are longer than English.
-                      overflow: 'hidden',
-                      textOverflow: 'ellipsis',
-                      whiteSpace: 'nowrap',
-                    }}
-                    type="button"
-                    value={P5LabInterfaceMode.BACKGROUND}
-                    id="backgroundMode"
-                  >
-                    {msg.backgroundMode()}
-                  </button>
-                )}
+              {allowAnimationMode && this.props.isBlockly && (
+                <button
+                  style={{
+                    ...styles.buttonFocus,
+                    // If the button text is wider than the available space, truncate it.
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap',
+                  }}
+                  type="button"
+                  value={P5LabInterfaceMode.BACKGROUND}
+                  id="backgroundMode"
+                >
+                  {msg.backgroundMode()}
+                </button>
+              )}
             </ToggleGroup>
           </div>
         )}

@@ -42,7 +42,7 @@ module ApplicationHelper
   end
 
   def us_state_options
-    User::US_STATE_DROPDOWN_OPTIONS.map do |code, name|
+    User.us_state_dropdown_options.map do |code, name|
       [name, code]
     end
   end

@@ -90,6 +90,9 @@
             null
           ]
         },
+        "84d5098f-4108-42e8-bc45-4793ac42e81a": {
+          "name": "She'r San'ati"
+        },
         "49994950-2fc5-4779-abd5-2369a402a750": {
           "progression_name": "Malaka orttirish"
         },
@@ -117,7 +120,7 @@
           ]
         },
         "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
-          "name": "Flappy o‘yinini yarating"
+          "name": "Flappy o‘yinini dasturlash"
         },
         "47fe47af-9de3-4ba5-8193-1f489bef9544": {
           "tips": [
@@ -511,6 +514,9 @@
           "tips": [
             null
           ]
+        },
+        "2123b1ad-42d8-4c2f-87f6-4300fe7dd741": {
+          "name": "O'z Sport O'yiningizni dasturlang "
         },
         "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
           "tips": [
@@ -12241,7 +12247,7 @@
           "description": ""
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "",
+          "name": "She'r San'ati",
           "description": ""
         },
         "065eda67-268c-4f91-9caf-efb2c34493fe": {

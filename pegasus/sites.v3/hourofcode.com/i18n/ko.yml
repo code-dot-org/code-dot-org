@@ -122,86 +122,6 @@ ko:
     (SVM)을 사용합니다. 우리는 물고기의 각 요소 (눈, 입, 몸통)를 보고 구성요소의 메타데이터 (치아 수, 몸통 형태 등) 모두를 각 물고기
     별 숫자 벡터로 어셈블리합니다. 우리는 이러한 벡터를 SVM을 훈련시키는 데 사용합니다. 트레이닝 데이터에 기초하여, SVM은 모든 가능한
     물고기의 "공간"을 우리가 배우려고 하는 클래스 ("파란색" 또는 "파란색이 아닌")에 상응하는 두 개의 부분으로  분리합니다.
-  heading_additional_resources: Additional resources
-  grade_level_label_elementary: Elementary School
-  grade_level_label_middle: Middle School
-  grade_level_label_high: High School
-  call_to_action_learn_more: 더보기
-  call_to_action_watch_now: Watch now
-  call_to_action_try_activity: Try activity
-  call_to_action_explore_unit: Explore unit
-  call_to_action_explore_curriculum: Explore curriculum
-  call_to_action_explore_modules: Explore modules
-  call_to_action_view_lesson_plan: View lesson plan
-  call_to_action_self_paced_pl: Start self-paced professional learning
-  call_to_action_watch_panel: Watch panel
-  call_to_action_learn_about_challenge: Learn about challenge
-  call_to_action_explore_website: Explore website
-  call_to_action_read_more: 자세히 보기
-  call_to_action_donate_online: Donate online
-  call_to_action_get_updates: Get updates
-  call_to_action_special_announcement: See special announcement
-  call_to_action_start_pl: Start professional learning
-  call_to_action_contact_regional_partner: Contact your Regional Partner
-  call_to_action_join_csta: Join CSTA
-  call_to_action_support_farsi: Support Code.org in Farsi
-  aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
-  aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
-    professional learning program
-  aria_label_call_to_action_teaching_csd: Start the Teaching Computer Science Discoveries
-    professional learning program
-  aria_label_call_to_action_teaching_csp: Start the Teaching Computer Science Principles
-    professional learning program
-  aria_label_call_to_action_teaching_ai: Start the Teaching AI and Machine Learning
-    professional learning program
-  aria_label_call_to_action_teaching_maker_cp: Start the Teaching Creating Apps with
-    Devices (Circuit Playground) professional learning program
-  aria_label_call_to_action_teaching_maker_microbit: Start the Teaching Creating Apps
-    with Devices (micro:bit) professional learning program
-  aria_label_call_to_action_curriculum_csf: Explore the Computer Science Fundamentals
-    curriculum
-  aria_label_call_to_action_curriculum_csd: Explore the Computer Science Discoveries
-    curriculum
-  aria_label_call_to_action_curriculum_csp: Explore the Computer Science Principles
-    curriculum
-  aria_label_call_to_action_curriculum_ai: Explore the AI and Machine Learning curriculum
-  aria_label_call_to_action_curriculum_maker_cp: Explore the Creating Apps with Devices
-    (Circuit Playground) curriculum
-  aria_label_call_to_action_curriculum_maker_microbit: Explore the Creating Apps with
-    Devices (micro:bit) curriculum
-  video_title_professional_learning_program: Code.org's Professional Learning Program
-  curriculum_name_csf: Computer Science Fundamentals
-  curriculum_name_csf_02: Any CS Fundamentals (Course A-F)
-  curriculum_name_csd: Computer Science Discoveries
-  curriculum_name_csp: Computer Science Principles
-  curriculum_name_ai: AI 및 머신러닝
-  curriculum_name_maker_cp: Creating Apps with Devices (Circuit Playground)
-  curriculum_name_maker_microbit: Creating Apps with Devices (micro:bit)
-  module_grade_k_5: K-5 Teachers
-  module_grade_6_10: 6-10 Teachers
-  module_grade_9_12: 9-12 Teachers
-  module_label_curriculum: 'Curriculum:'
-  module_label_duration: 'Duration:'
-  module_duration_2_hrs: 2 hours
-  module_duration_3_hrs: 3 hours
-  module_duration_8_hrs: 8 hours
-  module_duration_35_hrs: 35 hours
-  module_label_prerequisites: 'Prerequisites:'
-  module_prerequisites_none: 없음
-  module_prerequisites_maker_cp: Access to a Circuit Playground
-  module_prerequisites_maker_microbit: Access to a micro:bit
-  module_label_teaching_csf: Teaching Computer Science Fundamentals
-  module_label_teaching_csd: Teaching Computer Science Discoveries
-  module_label_teaching_csp: Teaching Computer Science Principles
-  module_label_teaching_ai: Teaching AI and Machine Learning
-  module_label_teaching_maker_cp: Teaching Creating Apps with Devices (Circuit Playground)
-  module_label_teaching_maker_microbit: Teaching Creating Apps with Devices (micro:bit)
-  values_01: We believe computer science is foundational for all students
-  values_02: We are committed to equity, access, and opportunity
-  values_03: We believe in the power of a collaborative education community
-  values_04: We are agile and responsive to feedback
-  values_05: We act with integrity and transparency
-  values_06: We believe broad impact requires thinking big and acting holistically
   social_hoc2019_oceans_title: '바다환경을 위한 AI #CSforGood'
   social_hoc2019_oceans_desc: 인공지능 (AI)과 머신러닝, 트레이닝 데이터, 편견에 관해 배우는 한편 윤리 문제를 탐구하고
     AI로 세계적 문제를 어떻게 해결할지 알아보세요. 컴퓨터 과학은 코딩 그 이상의 것에 관한 학문입니다!  우리의 커리큘럼 전체에서 AI에 관한
@@ -222,6 +142,281 @@ ko:
   teach_ai_homepage_banner_title: 전 세계를 위한 AI 교육
   teach_ai_homepage_banner_desc: Code.org는 전 세계의 모든 교육자들이 AI를 어떻게 활용하는지, AI가 무엇인지
     가르칠 수 있도록 지원하는 TeachAI에 함께 합니다.
+  curriculum_launch_2023_title: Introducing incredible updates to our curriculum
+  curriculum_launch_2023_desc: Updates to CSC, CSP, CSD, and more — plus a new Curriculum
+    Catalog and redesigned Teach page to help you find it all!
+  grade_level_label_elementary: 초등학생
+  grade_level_label_middle: 중학생
+  grade_level_label_high: 고등학생
+  teacher_label_csd: CS Discoveries Teacher
+  teacher_label_csp: CS Principles Teacher
+  teacher_label_csc: CS Connections Teacher
+  required_materials: 'Required Materials:'
+  optional_materials: 'Optional Materials:'
+  call_to_action_learn_more: 더보기
+  call_to_action_watch_now: Watch now
+  call_to_action_try_activity: Try activity
+  call_to_action_explore_unit: Explore unit
+  call_to_action_explore_curriculum: 커리큘럼 알아보기
+  call_to_action_explore_curriculum_options: Explore curriculum options
+  call_to_action_explore_modules: Explore modules
+  call_to_action_explore_workshops: Explore workshops
+  call_to_action_explore_course: Explore course
+  call_to_action_explore_full_course: Explore full course
+  call_to_action_explore_widgets: Explore widgets
+  call_to_action_explore_choice_level: Explore example choice level
+  call_to_action_explore_collection: Explore collection
+  call_to_action_try_app_lab: Try App Lab
+  call_to_action_view_lesson_plan: View lesson plan
+  call_to_action_self_paced_pl: Start self-paced professional learning
+  call_to_action_apply_for_pl: Apply for Professional Learning
+  call_to_action_watch_panel: Watch panel
+  call_to_action_learn_about_challenge: Learn about challenge
+  call_to_action_explore_website: Explore website
+  call_to_action_read_more: 자세히 보기
+  call_to_action_donate_online: Donate online
+  call_to_action_get_updates: Get updates
+  call_to_action_special_announcement: See special announcement
+  call_to_action_start_pl: Start professional learning
+  call_to_action_contact_regional_partner: Contact your Regional Partner
+  call_to_action_join_csta: Join CSTA
+  call_to_action_support_farsi: Support Code.org in Farsi
+  call_to_action_resources_lesson_plan: 수업 계획 예시 보기
+  call_to_action_resources_videos: 모든 영상 보기
+  call_to_action_resources_slides: 슬라이드 덱 예시 보기
+  call_to_action_resources_assessments: 평가 수업 알아보기
+  call_to_action_resources_tools: 프로그래밍 툴 체험하기
+  call_to_action_sign_up_free: 무료 가입
+  call_to_action_explore_ai_resources: AI 리소스 알아보기
+  call_to_action_explore_curriculum_catalog: 커리큘럼 카탈로그 보기
+  call_to_action_see_full_curriculum_catalog: 커리큘럼 카탈로그 전체 보기
+  call_to_action_find_self_paced_modules: 자기 주도 모듈 찾기
+  call_to_action_join_teacher_forums: 교사 포럼 참여하기
+  call_to_action_explore_teacher_forums: Explore teacher forums
+  call_to_action_explore_career_resources: 커리어 리소스 알아보기
+  call_to_action_watch_videos: 영상 보기
+  call_to_action_download_posters: 포스터 다운로드
+  call_to_action_contact_support: Contact Code.org support
+  call_to_action_pick_units: Pick units
+  call_to_action_focus_on_topic: Focus on a topic
+  call_to_action_teach_full_intro_course: Teach a full intro course
+  call_to_action_see_module_details: See module details
+  call_to_action_start_modules: Start modules
+  aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
+  aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
+    professional learning program
+  aria_label_call_to_action_teaching_csd: Start the Teaching Computer Science Discoveries
+    professional learning program
+  aria_label_call_to_action_teaching_csp: Start the Teaching Computer Science Principles
+    professional learning program
+  aria_label_call_to_action_teaching_csc: 컴퓨터 과학 융합 수업 전문 학습 프로그램 시작하기
+  aria_label_call_to_action_teaching_ai: Start the Teaching AI and Machine Learning
+    professional learning program
+  aria_label_call_to_action_teaching_maker_cp: Start the Teaching Creating Apps with
+    Devices (Circuit Playground) professional learning program
+  aria_label_call_to_action_teaching_maker_microbit: Start the Teaching Creating Apps
+    with Devices (micro:bit) professional learning program
+  aria_label_call_to_action_curriculum_csf: 컴퓨터 과학 기초 커리큘럼 알아보기
+  aria_label_call_to_action_curriculum_csd: 컴퓨터 과학 입문 커리큘럼 알아보기
+  aria_label_call_to_action_curriculum_csp: 컴퓨터 과학 원리 커리큘럼 알아보기
+  aria_label_call_to_action_curriculum_csc: 컴퓨터 과학 융합 수업 커리큘럼 알아보기
+  aria_label_call_to_action_curriculum_ai: AI 및 머신 러닝 커리큘럼 알아보기
+  aria_label_call_to_action_curriculum_maker_cp: 디바이스로 앱 만들기(서킷 플레이그라운드) 커리큘럼 알아보기
+  aria_label_call_to_action_curriculum_maker_microbit: 디바이스로 앱 만들기(micro:bit) 커리큘럼
+    알아보기
+  aria_label_call_to_action_curriculum_creating_apps_with_devices: Explore the Creating
+    Apps with Devices unit
+  aria_label_call_to_action_curriculum_problem_solving_computing: Explore the Problem
+    Solving and Computing unit
+  aria_label_call_to_action_curriculum_web_development: Explore the Web Development
+    unit
+  aria_label_call_to_action_curriculum_interactive_animations_games: Explore the Interactive
+    Animations and Games unit
+  aria_label_call_to_action_curriculum_design_process: Explore the Design Process
+    unit
+  aria_label_call_to_action_curriculum_data_society: Explore the Data and Society
+    unit
+  aria_label_call_to_action_collection_hardware: Explore the Hardware collection
+  aria_label_call_to_action_collection_design_purpose: Explore the Design with Purpose
+    collection
+  aria_label_call_to_action_collection_impact_society: Explore the Impact in Society
+    collection
+  aria_label_call_to_action_collection_creativity: Explore the Creativity collection
+  aria_label_call_to_action_collection_coding: Explore the Coding collection
+  aria_label_call_to_action_collection_data: Explore the Data collection
+  aria_label_call_to_action_module_coding_w_poetry: See the Coding with Poetry module
+    details
+  aria_label_call_to_action_module_coding_time_capsule: See the Coding a Time Capsule
+    module details
+  aria_label_call_to_action_module_simulating_marine_ecosystem: See the Simulating
+    a Marine Ecosystem module details
+  aria_label_call_to_action_module_coding_geometric_star_quilt: See the Coding a Geometric
+    Star Quilt module details
+  aria_label_call_to_action_module_modeling_animal_adaptations: See the Modeling Animal
+    Adaptations module details
+  aria_label_call_to_action_module_coding_book_covers: See the Coding Book Covers
+    module details
+  aria_label_call_to_action_module_coding_interactive_maps: See the Coding Interactive
+    Maps module details
+  video_title_professional_learning_program: Code.org's Professional Learning Program
+  curriculum_name_csf: Computer Science Fundamentals
+  curriculum_name_csf_02: Any CS Fundamentals (Course A-F)
+  curriculum_name_csf_a_f: CS 기초 A-F
+  curriculum_name_csd: Computer Science Discoveries
+  curriculum_name_csp: Computer Science Principles
+  curriculum_name_csc: 컴퓨터 과학 융합 수업
+  curriculum_name_csc_02: Any CS Connections Module
+  curriculum_name_csa: Computer Science A
+  curriculum_name_ai: AI 및 머신러닝
+  curriculum_name_maker_cp: Creating Apps with Devices (Circuit Playground)
+  curriculum_name_maker_microbit: Creating Apps with Devices (micro:bit)
+  curriculum_name_creating_apps_with_devices: Creating Apps with Devices
+  curriculum_name_poetry: 시를 이용해 코딩하기
+  curriculum_name_dance_party: 댄스 파티
+  curriculum_name_problem_solving_computing: Problem Solving & Computing
+  curriculum_name_web_development: Web Development
+  curriculum_name_interactive_animations_games: Interactive Animations & Games
+  curriculum_name_design_process: The Design Process
+  curriculum_name_data_society: Data & Society
+  curriculum_desc_problem_solving_computing: Use a problem-solving process to tackle
+    puzzles, challenges, and real-world scenarios. Learn about computer input, output,
+    storage, and processing to aid in problem-solving.
+  curriculum_desc_web_development: Create and share content on web pages, exploring
+    the creative potential of the web. Develop critical consumption skills, problem-solving
+    abilities, and teamwork while programming.
+  curriculum_desc_interactive_animations_games: Create programmatic images, animations,
+    interactive art, and games. Gain familiarity with programming concepts and the
+    design process.
+  curriculum_desc_design_process: Focus on considering the societal impact of computing.
+    Through design challenges, students empathize with others' needs and develop solutions.
+  curriculum_desc_data_society: Emphasizes the role of data in problem-solving and
+    the assistance of computers in this process. Cover representation systems and
+    associated challenges. Discover how data collections aid problem-solving.
+  curriculum_desc_creating_apps_with_devices: Explore the role of physical devices
+    in computing. Develop programs that utilize hardware inputs and outputs. There
+    is a version of this unit for both the micro:bit and Circuit Playground.
+  collection_hardware: Focus on Hardware
+  collection_hardware_desc: Empowers students to use data and physical devices to
+    solve problems.
+  collection_design_purpose: Focus on Design with Purpose
+  collection_design_purpose_desc: Empowers students to think about the needs of users
+    while designing websites and apps for devices.
+  collection_impact_society: Focus on Impact in Society
+  collection_impact_society_desc: Empowers students to think about computer science
+    as a tool to solve problems while considering the broader social impacts.
+  collection_creativity: Focus on Creativity
+  collection_creativity_desc: Empowers students to be creative as they learn to create
+    websites, animations and games, and apps for devices.
+  collection_coding: Focus on Coding
+  collection_coding_desc: Empowers students to build their coding skills in web development,
+    games and animation, and creating apps for devices.
+  collection_data: Focus on Data
+  collection_data_desc: Empowers students to use data to solve problems.
+  module_label_ages: '나이:'
+  module_label_grades: '학년:'
+  module_label_curriculum: 'Curriculum:'
+  module_label_duration: 'Duration:'
+  module_label_prerequisites: 'Prerequisites:'
+  module_label_level: 'Level:'
+  module_label_topics: 'Topics:'
+  module_label_devices: '기기:'
+  module_label_tools: 'Programming Tools:'
+  module_label_professional_learning: 'Professional Learning:'
+  module_label_languages: 'Languages Supported:'
+  module_label_accessibility_features: 'Accessibility:'
+  module_ages_5_10: 5-10
+  module_ages_11_18: 11-18
+  module_ages_7_18: 7-18
+  module_grade_3_5: 3-5
+  module_grade_3_8: 3-8
+  module_grade_6_12: 6-12
+  module_grade_6_10: 6-10
+  module_grade_9_12: 9-12
+  module_grade_k_5_teachers: 유치원-초5 담당 교사
+  module_grade_6_10_teachers: 6-10세 담당 교사
+  module_grade_9_12_teachers: 9-12세 담당 교사
+  module_level_beginner: Beginner
+  module_duration_2_hrs: 2 hours
+  module_duration_3_hrs: 3 hours
+  module_duration_8_hrs: 8 hours
+  module_duration_35_hrs: 35 hours
+  module_duration_lesson: 수업
+  module_duration_week: Week
+  module_duration_month: 달
+  module_duration_quarter: 분기
+  module_duration_semester: Semester
+  module_duration_school_year: 학사 과정
+  module_duration_month_semester_year: Month, Semester, or Year
+  module_prerequisites_none: 없음
+  module_prerequisites_maker_cp: Access to a Circuit Playground
+  module_prerequisites_maker_microbit: Access to a micro:bit
+  module_label_teaching_csf: Teaching Computer Science Fundamentals
+  module_label_teaching_csd: Teaching Computer Science Discoveries
+  module_label_teaching_csp: Teaching Computer Science Principles
+  module_label_teaching_csc: 컴퓨터 과학 융합 수업 진행하기
+  module_label_teaching_ai: Teaching AI and Machine Learning
+  module_label_teaching_maker_cp: Teaching Creating Apps with Devices (Circuit Playground)
+  module_label_teaching_maker_microbit: Teaching Creating Apps with Devices (micro:bit)
+  module_subject_english_language_arts: English Language Arts
+  module_subject_social_studies: Social Studies
+  module_subject_science: Science
+  module_subject_math: Math
+  module_name_coding_w_poetry: 시를 이용해 코딩하기
+  module_name_coding_time_capsule: Coding a Time Capsule
+  module_name_simulating_marine_ecosystem: Simulating a Marine Ecosystem
+  module_name_coding_geometric_star_quilt: Coding a Geometric Star Quilt
+  module_name_modeling_animal_adaptations: Modeling Animal Adaptations
+  module_name_coding_book_covers: Coding Book Covers
+  module_name_coding_interactive_maps: Coding Interactive Maps
+  module_desc_coding_w_poetry: Explore the intersection of coding and language arts
+    by creating interactive poems, illustrating the mood and tone with code.
+  module_desc_coding_time_capsule: Create a digital time capsule to capture and preserve
+    memories for the future.
+  module_desc_simulating_marine_ecosystem: Use coding to simulate a marine ecosystem,
+    exploring the interdependencies between different organisms and their environment.
+  module_desc_coding_geometric_star_quilt: Learn code to create geometric patterns
+    in stunning star quilts, blending mathematical concepts with creative expression.
+  module_desc_modeling_animal_adaptations: Use code to model animal adaptations, deepening
+    your understanding of how different species have evolved to survive in their environments.
+  module_desc_coding_book_covers: Use code to create an animated cover of a book,
+    using sprites and text to convey characters, setting, plot, and more.
+  module_desc_coding_interactive_maps: Use coding to develop a map that tells a story,
+    allowing you to explore geographic information in an engaging and interactive
+    way.
+  values_01: We believe computer science is foundational for all students
+  values_02: We are committed to equity, access, and opportunity
+  values_03: We believe in the power of a collaborative education community
+  values_04: We are agile and responsive to feedback
+  values_05: We act with integrity and transparency
+  values_06: We believe broad impact requires thinking big and acting holistically
+  heading_professional_learning: Professional learning that meets your needs
+  heading_additional_resources: Additional resources
+  heading_support_and_questions: Support and questions
+  heading_faq: Frequently asked questions
+  heading_curriculum_at_a_glance: Curriculum at a glance
+  heading_curricula_at_a_glance: Curricula at a glance
+  heading_engaging_projects: Engaging projects and activities that inspire learning
+  heading_build_apps: Build apps
+  heading_widgets: Widgets
+  heading_choice_levels: Choice levels
+  heading_year_long_intro_course: Year-long introductory course
+  heading_flexible_units: Flexible units
+  heading_collections: Collections
+  heading_find_a_module: Find a module for your classroom
+  professional_learning_section_desc: Get the support you need as you prepare to teach.
+    Teachers love it, with over 90% ranking it the best professional development ever!
+  professional_learning_section_desc_self_paced: Just in time support that allows
+    you to prepare to teach with confidence on your schedule.
+  professional_learning_section_block_facilitator_led_workshops: Our highly supportive
+    Professional Learning Program will bring you together with a group of teachers
+    to learn from each other as well as expert facilitators as you take on the first
+    year of teaching the free curriculum to your students. In-person and virtual workshops
+    are starting this summer.
+  support_and_questions_section_subhead: Still have questions? Reach out to us! We
+    are here to help.
+  support_and_questions_section_desc: Our support team is here to answer any questions
+    you may have about starting teaching with Code.org. You can also ask other teachers
+    about their experience on our teacher forums.
   blockchain_hero_heading: How Blockchain Works
   blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
     our new video series and accompanying lessons!
@@ -266,6 +461,12 @@ ko:
   teachai_launch_blog_desc_02: TeachAI aims to integrate AI education into primary
     and secondary curricula around the world through new reports, policy recommendations,
     and public engagement opportunities.
+  ai_pl_callout_title: Join us for AI EmpowerED!
+  ai_pl_callout_desc_01: Discover the transformative potential of artificial intelligence
+    (AI) in education with our free online learning series for educators.
+  ai_pl_callout_desc_02: Sign up for "Fireside Chat with Sal Khan and Hadi Partovi"
+    where the founders of Khan Academy and Code.org discover how generative AI can
+    become your most reliable teaching assistant.
   ai_hero_heading: Artificial intelligence isn't magic… It's just code!
   ai_hero_desc: Demystify artificial intelligence (AI) by learning how it's changing
     the ways we live, work, and learn.
@@ -453,8 +654,8 @@ ko:
     or CEOs of technology companies such as Uber, eBay, Intuit, and Dropbox, or inventing
     technologies such as LASIK surgery or JPEG compression, or in scientific, academic,
     or engineering roles around the globe.
-  farsi_page_global_desc_03: Finally, Code.org was founded by Iranian American Hadi
-    Partovi and has grown to become one of the largest education nonprofits globally.
+  farsi_page_global_desc_03: Finally, Code.org is led by Iranian American Hadi Partovi
+    and has grown to become one of the largest education nonprofits globally.
   farsi_timeline_heading: Our Projected Timeline
   farsi_timeline_stage_title_01: Stage 1
   farsi_timeline_stage_title_02: Stage 2
@@ -505,20 +706,20 @@ ko:
     student in every school has the opportunity to learn computer science.
   farsi_page_founders_heading: Our Founders' Story
   farsi_page_founders_slide_01: Born in Iran, Hadi and Ali Partovi grew up during
-    the Iran-Iraq war. Their neighborhood in Tehran was regularly bombed by Iraqi
-    fighter jets.
+    the Iran-Iraq war. Their neighborhood in Tehran was bombed by Iraqi fighter jets.
   farsi_page_founders_slide_02: When they were 9 years old, their father, a physics
-    professor, brought home a Commodore 64 computer. This computer was their escape
-    from their surroundings – they learned how to code and create apps, games, and
-    music.
+    professor, brought home a Commodore 64 computer from a trip abroad. This computer
+    was their escape from their surroundings – they learned how to code and create
+    apps, games, and music.
   farsi_page_founders_slide_03: They immigrated to the United States at age 11. Soon
     after they turned 15, they spent their summers working as software engineers to
     help pay their way through high school and college.
   farsi_page_founders_slide_04: Upon graduating from Harvard University with Masters
     degrees in computer science, Hadi and Ali pursued careers in technology.
-  farsi_page_founders_slide_05: They found success in the tech world and achieved
-    the “American dream.” They became prolific angel investors, backing Facebook,
-    Uber, Airbnb, and Dropbox, among others.
+  farsi_page_founders_slide_05: They attained success in the technology industry and
+    founded numerous tech businesses, accomplishing the American dream. Additionally,
+    they became prolific angel investors, backing companies such as Facebook, Uber,
+    Airbnb, and Dropbox, among others.
   farsi_page_founders_slide_06: In 2013, Hadi and Ali launched the education nonprofit
     Code.org, which Hadi continues to lead as CEO. Since its inception, Code.org has
     started a massive movement to teach computer science and coding to K-12 students
@@ -540,6 +741,366 @@ ko:
     and Code.org believes that this exemption will fully shield its funding, preparation,
     and distribution of the Farsi Translations and thus enable its Farsi Translations
     effort to proceed in full compliance with U.S. economic sanctions requirements.
+  resources_tabs_heading: 단계별로 상세하게 지원하는 리소스
+  resources_tabs_desc: "[Code.org 계정을 만들면](%{sign_up_url}) 자신 있게 컴퓨터 과학을 가르치도록 도와줄
+    다양한 자료를 이용할 수 있습니다. Code.org는 컴퓨터 과학 수업 경험이 없는 교사들에게도 도움이 되도록 설계된 광범위한 리소스를 보유하고
+    있습니다. Code.org의 리소스에 관해 알아보려면 다음 탭을 클릭하세요."
+  resources_tabs_tab_label_lesson_plans: 수업 계획
+  resources_tabs_tab_label_videos: 비디오
+  resources_tabs_tab_label_slides: 슬라이드
+  resources_tabs_tab_label_assessments: 평가
+  resources_tabs_tab_label_tools: 프로그래밍 툴
+  resources_tabs_lesson_plans_subhead: Get step-by-step guidance, learning objectives,
+    and assessment strategies for effective teaching.
+  resources_tabs_lesson_plans_desc: 슬라이드 덱, 활동 가이드, 루브릭을 비롯한 유용한 리소스를 한데 정리했습니다. 서로
+    다른 능력을 갖춘 학생들을 위해 교실 학습 과정과 차별화 학습 아이디어, 연장 활동에 관한 팁을 수업 계획 각각에 제공합니다.
+  resources_tabs_videos_heading: 교육용 영상
+  resources_tabs_videos_subhead: 컴퓨터 과학과 프로그래밍 개념을 이해하기 쉽게 설명하는 개요 영상을 참고하세요.
+  resources_tabs_videos_desc: Code.org video series are designed specifically to support
+    your classroom and are engaging and fun to watch.
+  resources_tabs_slides_heading: Slide Decks
+  resources_tabs_slides_subhead: We offer educators an organized, visually engaging,
+    and pedagogically sound framework to deliver computer science lessons.
+  resources_tabs_slides_desc: Code.org slide decks provide step-by-step instructions,
+    examples, and interactive activities that align with curricular objectives.
+  resources_tabs_assessments_subhead: Our curricula includes a comprehensive system
+    of formative and summative assessment resources.
+  resources_tabs_assessments_desc: These include rubrics, checklists, mini-projects,
+    end-of-chapter projects, student-facing rubrics, sample projects, and post-project
+    tests — all designed to support teachers in measuring student growth, providing
+    feedback, and evaluating student understanding.
+  resources_tabs_tools_subhead: Code.org's integrated development environments (IDEs)
+    cater to students of all skill levels.
+  resources_tabs_tools_desc: We offer a versatile and user-friendly platform that
+    supports a variety of programming paradigms. This enables learners to seamlessly
+    transition from block-based coding to text-based languages, and fosters creativity
+    and innovation.
+  teach_page_top_heading: 컴퓨터 과학을 가르치고 가능성을 깨워보세요
+  teach_page_top_desc_01: Code.org의 무료 컴퓨터 과학(CS) 커리큘럼으로 학생들의 가능성을 한껏 열어보세요.
+  teach_page_top_desc_02: 다음 세대의 혁신가와 문제 해결자, 디지털 시민을 키워내는 교육자 2백만 명 이상이 모인 글로벌 커뮤니티에
+    참여하세요! Code.org는 전문적인 학습과 포괄적인 커리큘럼을 비롯한 전반적인 지원을  교사들에게 무료로 제공합니다.
+  teach_page_why_teach_cs_heading: 왜 Code.org로 컴퓨터 과학을 가르쳐야 할까요?
+  teach_page_why_teach_cs_block_heading_01: CS의 기초를 다질 수 있습니다
+  teach_page_why_teach_cs_block_desc_01: 읽기와 쓰기, 수학처럼 컴퓨터 과학 또한 다른 목표를 위한 기초가 됩니다.
+    컴퓨터 과학은 문제 해결 능력과 비판적 사고를 길러주며, 점차 디지털화하는 사회에 학생들이 능동적으로 참여하도록 돕습니다.
+  teach_page_why_teach_cs_block_heading_02: 포괄적인 교육 리소스를 활용할 수 있습니다
+  teach_page_why_teach_cs_block_desc_02: 심층 수업 계획과 유연하고 전문적인 학습 옵션 덕분에 다양한 배경의 교사들이
+    컴퓨터 과학을 성공적으로 가르칠 수 있습니다.
+  teach_page_why_teach_cs_block_heading_03: 모든 학생에게 길을 열어줍니다
+  teach_page_why_teach_cs_block_desc_03: 컴퓨팅 직군은 미국의 모든 신규 직군 중 가장 규모가 크고 성장 속도가 빠르며
+    보수가 높은 분야입니다.
+  teach_page_why_teach_cs_block_heading_04: AI로 달라진 세상을 이해할 수 있습니다
+  teach_page_why_teach_cs_block_desc_04: AI가 어떻게 기능하는지, 어떻게 하면 AI를 안전하게 활용할 수 있는지
+    가르칩니다. Code.org의 전문 학습은 발전하는 AI 기술로 호기심과 자신감을 북돋웁니다.
+  teach_page_why_teach_cs_heading_02: 오늘부터 Code.org와 함께 컴퓨터 과학 수업을 시작하세요!
+  teach_page_quote: Code.org의 커리큘럼을 활용하면 필요한 모든 것을 얻을 수 있습니다. 학생들에게 던질 질문도, 가르칠 수업
+    내용도, 수업을 진행할 방법도 찾아볼 수 있습니다. 따라서 컴퓨터 과학 관련 경험이 전혀 없어도 괜찮습니다. 컴퓨터 과학 관련 경험이나 컴퓨터
+    과학을 가르친 경험이 있더라도, 학생들을 가르칠 새로운 방법을 접하게 될 겁니다.
+  teach_page_free_curriculum_heading: 흥미로운 무료 커리큘럼
+  teach_page_free_curriculum_desc: Code.org는 모든 학교가 비용을 걱정하지 않고 컴퓨터 과학 수업을 도입할 수 있길
+    바랍니다. 그래서 앞으로도 계속 Code.org의 커리큘럼을 무료로 제공하고자 전념하고 있습니다!
+  teach_page_free_curriculum_list_heading_01: 모든 학년을 위한 흥미로운 커리큘럼
+  teach_page_free_curriculum_list_desc_01: 유연하고 재미있는 무료 커리큘럼이 67개 이상의 언어로 제공됩니다.
+  teach_page_free_curriculum_list_heading_02: 혁신적인 적응형 커리큘럼
+  teach_page_free_curriculum_list_desc_02: Code.org는 1년짜리 커리큘럼부터 한 개짜리 단원 활동까지 다양한
+    학습 자료를 제공합니다. 또한 커리큘럼을 매년 업데이트해 모범 사례 및 집중 영역을 지원하고, 현재 수요가 많은 주제를 다루는 새로운 자료를
+    개발합니다.
+  teach_page_free_curriculum_list_heading_03: 국가 표준에 부합하는 체계화된 커리큘럼
+  teach_page_free_curriculum_list_desc_03: 각각의 커리큘럼은 미국컴퓨터과학교사협회(CSTA), 차세대 과학 교육
+    표준(NGSS), 공통 핵심 기준(CCSS)을 포함해 적어도 한 개의 국가 표준에 부합합니다.
+  teach_page_free_curriculum_heading_02: '다양한 학년을 위한 커리큘럼을 알아보세요:'
+  teach_page_resources_heading: 각 단계를 세심하게 지원하는 리소스
+  teach_page_resources_desc: Code.org 계정을 만들면 자신 있게 컴퓨터 과학을 가르치도록 도와줄 다양한 자료를 이용할
+    수 있습니다. Code.org는 컴퓨터 과학 수업 경험이 없는 교사들에게도 도움이 되도록 설계된 광범위한 리소스를 보유하고 있습니다. Code.org의
+    리소스에 관해 알아보려면 다음 탭을 클릭하세요.
+  teach_page_curriculum_heading: 학생들이 좋아하는 커리큘럼
+  teach_page_curriculum_desc: 탐구할 만한 흥미로운 자료가 정말 많습니다. 새로운 인기 자료 몇 가지는 다음과 같습니다.
+  teach_page_pl_offerings_english_header: 필요에 부합하는 전문 학습 강좌
+  teach_page_pl_offerings_intl_header: 전문 학습 자료 알아보기
+  teach_page_pl_offerings_list_heading_self_paced: 자기 주도 온라인 모듈
+  teach_page_pl_offerings_list_desc_self_paced: 이 모듈은 자기만의 속도와 시간에 맞춰 학습에 참여하는 동시에
+    학습자의 필요 및 교육 상황에서 가장 중요한 영역에 집중하도록 돕습니다.
+  teach_page_pl_offerings_list_heading_workshops_facilitator_led: 협력자 주관 워크샵
+  teach_page_pl_offerings_list_heading_workshops: 워크숍
+  teach_page_pl_offerings_list_desc_workshops_en: 지역 파트너가 주최하며 Code.org가 안내자 역할을 맡는
+    전국 워크샵은 성찰과 토론, 성장 지향 학습에 초점을 맞춥니다.
+  teach_page_pl_offerings_list_desc_workshops_intl: Code.org는 모든 학생이 컴퓨터 과학을 접하도록
+    전 세계의 다양한 단체들과 협력하고 있습니다. 지금 살고 있는 나라의 교사들이 이용할 수 있는 전문 학습 기회를 더 자세히 알아보세요.
+  teach_page_pl_offerings_list_heading_forums: 교사 커뮤니티
+  teach_page_pl_offerings_list_desc_forums: 교사들이 모범 사례와 생각, 아이디어, 영감을 공유하고 질문을 던지는
+    포럼입니다. 전 세계 교실에서 컴퓨터 과학을 가르치는 멋진 교사들의 커뮤니티에 참여하세요!
+  teach_page_additional_materials_heading: 추가 지원 및 자료
+  teach_page_additional_materials_desc: 커리큘럼과 전문 학습 외에도 다양한 수업 지원 자료를 보유하고 있습니다.
+  teach_page_additional_materials_list_heading_01: 커리어 교육
+  teach_page_additional_materials_list_desc_01: 손쉽게 사용할 수 있는 리소스를 설계해 현실과 컴퓨터 과학의
+    연결점을 가르치도록 돕고 학생들에게 다양한 진로 모색의 기회를 제공합니다.
+  teach_page_additional_materials_list_heading_02: 영상 라이브러리
+  teach_page_additional_materials_list_desc_02: 온라인과 오프라인 교실을 막론하고 전 세계 교사들이 어디에서나
+    이용할 수 있는 교육 영상 라이브러리를 제공합니다. Code.org는 커리큘럼 제공을 넘어 보다 넓은 범위로 확장하며 노력을 쏟고자 합니다.
+  teach_page_additional_materials_list_heading_03: 교실 포스터
+  teach_page_additional_materials_list_desc_03: 다양한 롤모델의 포스터를 인쇄해 교실에 붙이고, 학생들이 컴퓨터
+    과학에 도전하도록 동기부여를 해주세요.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
+  csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
+  csp_page_intro_list_01: Culturally responsive pedagogy
+  csp_page_intro_list_02: Real-world problem investigation
+  csp_page_intro_list_03: Explainer videos with diverse presenters
+  csp_page_intro_list_04: Open-ended projects for more personalized learning
+  csp_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
+    Animation
+  csp_page_curriculum_glance_devices: Laptop, Chromebook
+  csp_page_curriculum_glance_tools: App Lab
+  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
+    Modules
+  csp_page_curriculum_glance_professional_languages: 영어
+  csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
+    Closed captioning, Immersive reader
+  csp_page_quote: Can I just say I LOVE Code.org? It's my first year teaching AP CS
+    Principles (actually 1st year it is offered at our school) - and both the kids
+    and I are having a blast.
+  csp_page_projects_build_apps: Using the JavaScript language, students learn about
+    algorithms and program design as they create a series of real working, shareable
+    apps with App Lab.
+  csp_page_projects_widgets: Students get hands-on experience with concepts like binary
+    and pixels, text compression, cryptography, encoding and transmitting data through
+    computational widgets, which are directly integrated into the Code.org platform.
+  csp_page_projects_choice_levels: Students are offered the choice between a variety
+    of tasks that reinforce course objectives while allowing for differentiation and
+    customization, meeting students where they are at and encouraging them to go further.
+  csp_page_faq_question_01: Is CS Principles mapped to standards?
+  csp_page_faq_answer_01: CS Principles was written using the AP CS Principles Framework
+    and prepares students for the AP CS Principles exam. The curriculum has also been
+    aligned to the newly revised 2017 CSTA standards. [A summary of standards mappings
+    can be found here](%{standards_url}). A google sheet version of the standards
+    can be found at [CSP Standards](%{csp_standards_url}).
+  csp_page_faq_question_02: How much does it cost to teach CS Principles?
+  csp_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
+    for anyone, anywhere, to teach!
+  csp_page_faq_question_03: How/Where can I get professional development for CS Principles?
+  csp_page_faq_answer_03_01: Our Professional Learning Program offers year-round support.
+    The program kicks off with a 5-day summer workshop where you'll have an opportunity
+    to work hands-on with the curriculum and meet other teachers from your area. Throughout
+    the year, we offer forum support and follow-up workshops. You don't need any prior
+    computer science experience to get started. And teachers love it! 90% rank it
+    the best professional development ever. [Click here to apply and learn more](%{pl_url}).
+  csp_page_faq_answer_03_02: Have questions about professional development? [Provide
+    your contact information to a Regional Partner in your area](%{regional_partner_url}).
+  csp_page_faq_question_04: What is the recommended timing for teaching CS Principles?
+  csp_page_faq_answer_04_01: We recommend that CS Principles be taught as a full year
+    class, assuming that you meet with students daily or nearly daily for 45 or more
+    minutes.
+  csp_page_faq_answer_04_02: It is possible to teach CS Principles on a semester block
+    schedule, though we highly recommend this implementation only be used in the fall
+    semester. Since the AP Performance Tasks are due in late April and require 20
+    dedicated hours of class time to complete, most schools find there is not enough
+    time to complete the course on a block schedule in the spring.
+  csp_page_faq_question_05: What materials do I need for CS Principles?
+  csp_page_faq_answer_05_01: CS Principles requires that students have access to computers
+    with a modern web browser. At this time, our courses are not optimized for tablets
+    or mobile devices. For more details, [check out Code.org's technology requirements](%{it_url}).
+  csp_page_faq_answer_05_02: 'Many lessons have handouts that are designed to guide
+    students through activities. While these handouts are not required, we highly
+    recommend their use. In addition to handouts, several lessons call for specific
+    items. You can find these listed below as well as our suggestions for alternatives:'
+  csp_page_faq_answer_05_02_list_01: 'Unit 1, Lesson 2: Assortment of craft materials
+    for constructing physical devices. Recommendations: cups, string/yarn, construction
+    paper, flashlights, slinkies, noise makers, markers, and glue, etc. Alternative:
+    none.'
+  csp_page_faq_answer_05_02_list_02: 'Unit 2, Lesson 2: String for table groups to
+    build a network connecting them. Alternative: Students draw their network but
+    don''t actually build it.'
+  csp_page_faq_answer_05_02_list_03: 'Unit 3, Lesson 5: A handful of LEGO® blocks
+    for every pair of students. Alternative: Sticky notes, construction paper.'
+  csp_page_faq_answer_05_02_list_04: 'Unit 4, Lessons 1 & 5: Plastic bags, sticky
+    notes, dry erase markers. Alternative: Envelopes.'
+  csp_page_faq_answer_05_02_list_05: 'Unit 5, Lesson 1: Plastic bags, gallon-sized
+    plastic bags, sticky notes, dry erase markers, tape. Alternative: Envelopes.'
+  csp_page_faq_answer_05_02_list_06: 'Unit 6, Lessons 2 & 3: Sticky notes. Alternative:
+    Scraps of paper.'
+  csp_page_faq_answer_05_02_list_07: 'Unit 6, Lesson 4: Decks of cards. Alternative:
+    Any item that could be combined into two categories (e.g. change with even / odd
+    year).'
+  csp_page_faq_answer_05_02_list_08: 'Unit 7, Lessons 1 & 5: Sticky notes, envelopes,
+    plastic bags, file folders. Alternative: Scraps of paper, folders made of a folded
+    sheet of paper, etc.'
+  csp_page_faq_answer_05_03: The following supplies are completely optional but will
+    be useful to have on hand for various lessons.
+  csp_page_faq_answer_05_03_list_01: Graph paper
+  csp_page_faq_answer_05_03_list_02: Chart paper
+  csp_page_faq_answer_05_03_list_03: Markers
+  csp_page_faq_answer_05_03_list_04: Post-it notes
+  csp_page_faq_question_06: How can I access answer keys?
+  csp_page_faq_answer_06_01: With an approved teacher account, you can find answer
+    keys in a blue "Teacher Only" panel that shows in the online lessons and activities.
+  csp_page_faq_answer_06_02: Teachers in our Professional Learning Program will automatically
+    be approved to view answer keys. If you need an approved teacher account, you
+    can apply for access to protected teacher-only materials (answer keys, etc) through
+    [this form](%{form_url}). Please keep in mind that it may take 3-5 business days
+    to verify your account.
+  csp_page_faq_question_07: How was the curriculum developed?
+  csp_page_faq_answer_07_01: Our CS Principles curriculum has always been designed
+    as part of a broader vision of supporting high quality, engaging, and equitable
+    computer science instruction in classrooms across the country. Our [Curriculum
+    Values](%{curriculum_url}) continue to guide us, and in particular our focus on
+    expanding access to those who historically have been denied opportunities to learn
+    about the exciting and impactful field of computing. While our vision and values
+    remain unchanged, the landscape of CS education is rapidly developing.
+  csp_page_faq_answer_07_02: For the 2020-21 school year the College Board has made
+    some significant updates to the CS Principles framework and AP assessment to ensure
+    that CS Principles remains relevant and aligned with equivalent university courses.
+    CS education research continues to reveal new insights on how students learn about
+    computing, and feedback from the thousands of classrooms now using our CS Principles
+    curriculum has identified opportunities to further improve our courses, tools,
+    and recommended pedagogy.
+  csp_page_faq_answer_07_03: The goal of the updates to our curriculum is to navigate
+    these developments in a way that remains committed to our vision and values and
+    supports the many teachers, schools, classrooms, and districts that are already
+    a part of our broader CS Principles community. We remain deeply thankful for you
+    joining us on this mission to make our collective vision a reality.
+  csp_page_faq_answer_07_04: For more information about our goals and approach to
+    our courses, please see our [Curriculum Values](%{curriculum_url}) and our [Professional
+    Learning Values](%{pl_url}).
+  csd_page_top_desc: Code.org's most flexible course, allowing each unit to be taught
+    alone, combined into collections that focus on specific areas, or as a full year
+    course. The free curriculum introduces students to building their own websites,
+    apps, animations, games, and physical computing systems.
+  csd_page_intro_heading: Flexible curriculum to meet your needs
+  csd_page_intro_list_01: Flexible introductory curriculum
+  csd_page_intro_list_02: Breadth of topics
+  csd_page_intro_list_03: No prior experience needed
+  csd_page_intro_list_04: Build many different types of projects
+  csd_page_intro_list_05: Exciting and fun
+  csd_page_quote: This curriculum is all inclusive, well organized, and student centered!
+    The incredible organization in the curriculum is what makes me use it year after
+    year.
+  csd_page_curriculum_glance_topics: Artificial Intelligence, Data, Web Design, Physical
+    Computing, App Design, Games and Animations, Art and Design, Programming
+  csd_page_curriculum_glance_devices: Laptop, Chromebook
+  csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
+  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
+    Modules
+  csd_page_curriculum_glance_professional_languages: 영어
+  csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
+    Closed captioning, Immersive reader
+  csd_page_pick_a_course_heading: Picking the right CS Discoveries course for your
+    classroom
+  csd_page_pick_a_course_desc: With the diverse set of options offered for CS Discoveries,
+    there is a course for all different needs.
+  csd_page_pick_a_course_heading_02: How do you want to pick the content?
+  csd_page_courses_year_desc: Through 7 units students explore a wide variety of topics.
+  csd_page_courses_year_action_block_desc: 'An introductory computer science course
+    that empowers students to create authentic artifacts and engage with computer
+    science as a medium for creativity, communication, problem solving, and fun. '
+  csd_page_courses_flexible_units_desc: Each unit of CS Discoveries can be used on
+    its own with no prior experience required, which allows you to pick the exact
+    units that work for your classroom.
+  csd_page_courses_collections_desc: Dive deeper into one area with a set of units
+    focused on a specific topic.
+  csd_page_faq_question_01: Is CS Discoveries mapped to standards?
+  csd_page_faq_answer_01: CS Discoveries was written using both the K-12 Framework
+    for Computer Science and the 2017 CSTA standards as guidance. Currently, every
+    lesson in CS Discoveries contains mappings to the relevant 2017 CSTA standards.
+    [A summary of standards mappings can be found here](%{mappings_url}). A Google
+    Sheets version of the standards can be found at [CSD Standards](%{csd_standards_url}).
+  csd_page_faq_question_02: How/Where can I get professional development for this
+    course?
+  csd_page_faq_answer_02: Our Professional Learning Program offers year-round support.
+    The program kicks off with a five-day summer workshop where you'll have an opportunity
+    to work hands-on with the curriculum and meet other teachers from your area. Throughout
+    the year, we offer follow up workshops and forum support. You don't need any prior
+    computer science experience to get started. And teachers love it! 90% rank it
+    the best professional development ever. [Click here to apply and learn more](%{apply_url}).
+  csd_page_faq_question_03: I'm teaching CS Discoveries but have less than one semester
+    with my students. What would you recommend?
+  csd_page_faq_answer_03_01: Teachers who have a restricted schedule, unable to teach
+    all units of CS Discoveries over the course of a school year, can now easily assign
+    a specific set of CS Discoveries units based on what they want to focus on. These
+    collections are still the same exact units found in CS Discoveries, simply grouped
+    together based on our recommendations below to dive deep in a specific area of
+    CS Discoveries. Each collection is approximately one semester or slightly less
+    than one semester. [Click here to see our Collections options](%{collections_url}).
+  csd_page_faq_answer_03_02: For teachers who have an even more restricted schedule,
+    they have the ability to assign just one unit at a time from CS Discoveries without
+    assigning the entire course. We hope this helps support classrooms that teach
+    units of CS Discoveries embedded as part of larger courses or when teaching computer
+    science on a limited schedule. [Click here to see our flexible units](%).
+  csd_page_faq_question_04: What materials and supplies are required for CS Discoveries?
+  csd_page_faq_answer_04_01: One potential cost to consider when teaching this course
+    is printing. Many lessons have handouts that are designed to guide students through
+    activities. While it is not required that all of these handouts be printed, many
+    were designed to be printed and we highly recommend printing when possible.
+  csd_page_faq_answer_04_02: 'Beyond printing, some lessons call for typical classroom
+    supplies and manipulatives such as: Student journals, poster paper, markers/colored
+    pencils, scissors, scrap paper, glue or tape, post-it notes or index cards (or
+    similar sized scrap paper), and rulers or a straight edge of some kind.'
+  csd_page_faq_answer_04_03: 'In addition to those general course materials, the following
+    items are called for in specific units:'
+  csd_page_faq_answer_04_04: Problem Solving and Computing
+  csd_page_faq_answer_04_05: Aluminum foil, container for water, pennies (note that
+    pennies can be replaced with some other kind of weight of the same size). Alternate
+    activities are available if you do not have access to these supplies.
+  csd_page_faq_answer_04_06: Creating Apps with Devices (Option A and Option B)
+  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
+    out [code.org/maker/circuitplayground](%{url}) for more details.'
+  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
+    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_09: Maker supplies, such as empty tissue boxes or cardboard
+    rolls or scratch paper
+  csd_page_faq_answer_04_10: "*Note: The Creating Apps with Devices unit has two implementation
+    options - one for those using circuit playgrounds and one for those using micro:bit.
+    Teachers should not buy both sets of devices or teach both unit options as they
+    are equivalent and cover the same content."
+  csd_page_faq_question_06: How does CS Discoveries fit with the other Code.org courses?
+  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
+    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
+    While each of these courses is designed to be an age-appropriate entry point to
+    computer science, students with previous experience will find many new topics
+    to explore, and they will revisit familiar topics in novel and more challenging
+    contexts.
+  csc_page_top_desc: Make connections between computer science (CS) and other subjects
+    like math, language arts, science, and social studies.
+  csc_page_intro_heading: Teach CS while covering core subject standards
+  csc_page_intro_list_01: Incorporate CS into other subjects
+  csc_page_intro_list_02: Reinforce learning in other subjects
+  csc_page_intro_list_03: Meet core subject standards
+  csc_page_intro_list_04: Fun way to teach students about computer science
+  csc_page_intro_list_05: Open-ended projects for more personalized learning
+  csc_page_intro_list_06: Easy for any teacher with any background
+  csc_page_curriculum_glance_topics: Interdisciplinary
+  csc_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
+  csc_page_curriculum_glance_tools: Sprite Lab
+  csc_page_curriculum_glance_professional_learning: Self-paced Modules
+  csc_page_curriculum_glance_professional_languages: 영어
+  csc_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
+    Closed captioning, Immersive reader
+  csc_page_quote: I loved the engagement [my students had with the module] and the
+    opportunities for choice and creativity. I loved hearing a student say, 'This
+    helped me see what we had been reading about in science.'
+  csc_page_find_a_module_desc: Our current CS Connections offerings are for 3rd to
+    5th grade classrooms and are designed to take 1 week of 45-minute lessons each
+    day.
+  csc_page_faq_question_01: Is CS Connections mapped to standards?
+  csc_page_faq_answer_01: Yes! CS Connections is mapped to the Common Core State Standards
+    (CCSS) for ELA and Math, the Next Generation Science Standards (NGSS), and the
+    Computer Science Teacher Association Standards (CSTA).
+  csc_page_faq_question_02: How much does it cost to teach CS Connections?
+  csc_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
+    for anyone, anywhere, to teach!
+  csc_page_faq_question_03: How/Where can I get professional development for CS Connections?
+  csc_page_faq_answer_03: We offer self-paced professional development for CS Connections.
+    Through reading, viewing videos, completing interactive puzzles, and reflecting
+    on your learning, you will develop your own understanding while preparing to teach
+    any of the CS Connections modules in your classroom. [Get started here](%{get_started_url}).
+  csc_page_faq_answer_03_coming_soon: Professional learning for CS Connections is
+    coming soon!
+  csc_page_faq_question_04: What is the recommended timing for teaching CS Connections?
+  csc_page_faq_answer_04: Each CS Connections module is designed to take a week.
+  csc_page_faq_question_05: What materials do I need for CS Connections?
+  csc_page_faq_answer_05: Ideally, each student will have their own computer and teachers
+    will have a projector to display the slideshow that corresponds with each lesson.
   hoc_live: 아워오브코드 라이브
   hoc_live_sign_up_title: 아워오브코드 라이브 가입
   hoc_live_learn_title: Learn with Hour of Code Live

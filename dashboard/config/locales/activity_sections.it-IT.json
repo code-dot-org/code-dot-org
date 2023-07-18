@@ -734,6 +734,9 @@
             null
           ]
         },
+        "2123b1ad-42d8-4c2f-87f6-4300fe7dd741": {
+          "name": "Programma il tuo Sport Game"
+        },
         "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
           "tips": [
             null
@@ -3022,7 +3025,7 @@
           ]
         },
         "d4383c28-10f6-4c46-857e-140c7194b29e": {
-          "description": "**Discussione**: prepara gli alunni all'attività di oggi ricordando il lavoro svolto in precedenza. \n\n-   Ricordate quando avete aiutato l'uccellino Angry Bird a trovare il maialino?\n    -   In quell'esercizio, sapevate in anticipo esattamente dove volevate far andare l'uccellino, quindi potevate creare un programma che lo pilotasse dall'inizio alla fine senza alcuna interruzione.\n    -   Nella maggior parte dei programmi reali non possiamo fare così, perché vogliamo avere la possibilità di gestire le esigenze dell'utente.\n        -   Supponiamo che voglia che un personaggio si muova solo quando il mio dito tocca lo schermo del telefono. Dovrei programmare il personaggio in modo che si muova solo quando metto il dito sullo schermo del telefono.\n        -   Mettere il dito sullo schermo diventerebbe quindi un \"evento\" che dice al personaggio di muoversi.\n\n**Di' questo:**: _Nelle lezioni precedenti, abbiamo creato degli algoritmi che ci hanno permesso di controllare un amico o un uccellino con diversi movimenti consecutivi. È stato divertente e utile, ma cosa succede quando non si sa in anticipo tutto ciò che si vuole che il nostro amico faccia? È qui che entrano in gioco gli eventi!_\n\n**Istruzioni**\n\n-   Proietta il **|\\*Telecomando degli eventi** sulla lavagna multimediale (LIM) della tua classe.\n\n ![](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n-   Decidi con la tua classe cosa fa ogni pulsante. Qualche consiglio:\n    -   Pulsante rosa → Dite “Wow!”\n    -   Pulsante azzurro → Dite “Sìì!”\n    -   Ghiera viola → Dite “Boom!”\n-   Falli esercitare toccando i pulsanti e facendo reagire la classe di conseguenza.\n-   Premi alcuni pulsanti in sequenza e chiedi agli alunni di tenere il passo con le loro reazioni.\n-   Fai sapere alla tua classe che ogni volta che premi un pulsante, è un \"evento\" che gli permette di sapere cosa ci si aspetta che loro facciano.\n-   Fai eseguire alla classe un'attività pianificata e poi interrompila nuovamente con i pulsanti. Un paio di suggerimenti:\n    -   contare fino a 10,\n    -   cantare “Nella vecchia fattoria”.\n-   Una volta che l'attività è avviata, premi i pulsanti ad intervalli casuali.\n-   Continua l'alternanza fino a quando non comprendono la differenza tra le azioni guidate da un piano e quelle guidate dagli eventi."
+          "description": "**Discussione**: prepara gli alunni all'attività di oggi ricordando il lavoro svolto in precedenza. \n\n-   Ricordate quando avete aiutato l'uccellino Angry Bird a trovare il maialino?\n    -   In quell'esercizio, sapevate in anticipo esattamente dove volevate far andare l'uccellino, quindi potevate creare un programma che lo pilotasse dall'inizio alla fine senza alcuna interruzione.\n    -   Nella maggior parte dei programmi reali non possiamo fare così, perché vogliamo avere la possibilità di gestire le esigenze dell'utente.\n        -   Supponiamo che voglia che un personaggio si muova solo quando il mio dito tocca lo schermo del telefono. Dovrei programmare il personaggio in modo che si muova solo quando metto il dito sullo schermo del telefono.\n        -   Mettere il dito sullo schermo diventerebbe quindi un \"evento\" che dice al personaggio di muoversi.\n\n**Di' questo:**: _Nelle lezioni precedenti, abbiamo creato degli algoritmi che ci hanno permesso di controllare un amico o un uccellino con diversi movimenti consecutivi. È stato divertente e utile, ma cosa succede quando non si sa in anticipo tutto ciò che si vuole che il nostro amico faccia? È qui che entrano in gioco gli eventi!_\n\n**Istruzioni**\n\n-   Proietta il **\\|\\*Telecomando degli eventi** sulla lavagna multimediale (LIM) della tua classe.\n\n ![](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n-   Decidi con la tua classe cosa fa ogni pulsante. Qualche consiglio:\n    -   Pulsante rosa → Dite “Wow!”\n    -   Pulsante azzurro → Dite “Sìì!”\n    -   Ghiera viola → Dite “Boom!”\n-   Falli esercitare toccando i pulsanti e facendo reagire la classe di conseguenza.\n-   Premi alcuni pulsanti in sequenza e chiedi agli alunni di tenere il passo con le loro reazioni.\n-   Fai sapere alla tua classe che ogni volta che premi un pulsante, è un \"evento\" che gli permette di sapere cosa ci si aspetta che loro facciano.\n-   Fai eseguire alla classe un'attività pianificata e poi interrompila nuovamente con i pulsanti. Un paio di suggerimenti:\n    -   contare fino a 10,\n    -   cantare “Nella vecchia fattoria”.\n-   Una volta che l'attività è avviata, premi i pulsanti ad intervalli casuali.\n-   Continua l'alternanza fino a quando non comprendono la differenza tra le azioni guidate da un piano e quelle guidate dagli eventi."
         },
         "8175f9ec-a37a-498f-93db-a30f384716cc": {
           "description": "### Tiriamo le somme\n\n**Discussione**: Considera i seguenti suggerimenti per chiedere agli alunni di riflettere su ciò che hanno imparato.\n\n-   Perché conviene imparare a gestire gli eventi in un programma?\n-   Quali altri tipi di eventi ti vengono in mente?\n\n#### Riflessione\n\n**Suggerimenti**\n\n-   Di cosa parlava la lezione di oggi?\n-   Disegna nell'angolo della pagina del tuo diario una faccina che mostri come ti sei sentito durante la lezione di oggi.\n-   Disegna un evento che oggi ha causato un'azione.\n-   Disegna un'azione causata da un evento accaduto oggi."
@@ -3799,7 +3802,7 @@
         },
         "a96ae178-a2f2-4d14-a5e6-622e33ead4ea": {
           "name": "Riflessione",
-          "description": "Far scrivere agli studenti quello che hanno imparato, il perché sia utile e quale sia il loro riscontro in proposito, può aiutare a consolidare le conoscenze acquisite oggi e costruire un foglio di appunti utile da guardare in futuro.\n\n**Suggerimenti:**\n\n-   Di che parlava la lezione di oggi?\n-   Che ne pensi della lezione di oggi?\n-   Come riesci a capire che le istruzioni condizionali sono utili nei programmi?\n-   Cosa succede se le persone hanno parlato solo in dichiarazioni \"se/altrimenti\"? Quali sarebbero i vantaggi e gli svantaggi in tal caso?"
+          "description": "Far scrivere agli alunni quello che hanno imparato, il perché sia utile e quale sia il loro riscontro in proposito, può aiutare a consolidare le conoscenze acquisite oggi e costruire un foglio di appunti utile da guardare in futuro.\n\n**Suggerimenti:**\n\n-   Di cosa parlava la lezione di oggi?\n-   Che ne pensi della lezione di oggi?\n-   Come riesci a capire che le istruzioni condizionali sono utili nei programmi?\n-   Cosa succede se le persone hanno parlato solo atraverso istruzioni condizionali \"se/altrimenti\"? Quali sarebbero i vantaggi e gli svantaggi in tal caso?"
         },
         "fbf95927-5c0c-4980-bbb6-7a4bc75da827": {
           "name": "Introduzione",
@@ -5583,6 +5586,9 @@
         "5f1c9827-a478-4cf6-98b2-8834ef534cff": {
           "name": "Riflessione"
         },
+        "eb02dfda-f51a-4c80-a975-a1adc3d44091": {
+          "name": "Preparazione per l'unità"
+        },
         "67a65590-fb9a-4752-91fa-f633f0ea41c9": {
           "description": "Oggi inizieremo a parlare dei dati e di come vengono utilizzati nell'informatica. Prima di iniziare, dedichiamo qualche minuto a pensare a cosa siano i dati."
         },
@@ -6005,7 +6011,7 @@
         },
         "436698db-a532-4140-a499-439275b977cf": {
           "tips": [
-            null
+            "\\*\\*Facilitazione dei progetti di gruppo: \\*\\* se gli studenti lavorano in coppia o in piccoli gruppi per completare i progetti, valuta la possibilità di mostrare questi due video alla classe:\n\n-   [Come funziona il lavoro di squadra](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Gestione dei disaccordi](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nA seconda degli obiettivi che ti prefiggi con questo progetto, considera la possibilità di far completare ai gruppi una [Guida per studenti alla pianificazione del gruppo](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), che rafforza il messaggio nel video"
           ]
         },
         "4465daca-68f4-43e3-b1f3-be0a5e9cd954": {
@@ -6288,7 +6294,7 @@
         },
         "3f9bd4ac-771a-469d-bc19-c1cf2d53f6d2": {
           "tips": [
-            null
+            "\\*\\*Facilitazione dei progetti di gruppo: \\*\\* se gli studenti lavorano in coppia o in piccoli gruppi per completare i progetti, valuta la possibilità di mostrare questi due video alla classe:\n\n-   [Come funziona il lavoro di squadra](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Gestione dei disaccordi](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nA seconda degli obiettivi che ti prefiggi con questo progetto, considera la possibilità di far completare ai gruppi una [Guida per studenti alla pianificazione del gruppo](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), che rafforza il messaggio nel video"
           ]
         },
         "9faf6871-9df9-4b23-8908-7457317068af": {
@@ -6312,7 +6318,7 @@
         },
         "849f06fe-e199-40d7-9d2d-a5a156fdc261": {
           "tips": [
-            null
+            "**Valutare la congruità dei progetti degli studenti:** gli studenti possono ideare progetti che vanno oltre le competenze che hanno attualmente o che richiederebbero più tempo del tempo assegnato per essere implementati. Invece di chiedere agli studenti di scegliere un progetto diverso, prova a chiedere agli studenti di immaginare una versione più ridotta della loro idea iniziale. Come analogia, se l'idea iniziale degli studenti è il passo \"Corri\", immagina una versione meno intensa che rappresenti come sarebbe il passo \"Cammina\". Se necessario, puoi anche continuare a tornare indietro fino a un passaggio di \"Vai molto lento\". \n\n**Scavando più a fondo:** questo è a volte indicato come \"Prodotto minimo funzionante\" (o MVP, da Minimal Viable Product): puoi saperne di più su questo processo e adattarlo alle tue strategie di progetto leggendo questo articolo: [Che senso ha il MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) di Henrik Kniberg"
           ]
         },
         "f7a8e4db-c326-4c02-8a8d-182c004f2395": {
@@ -6707,7 +6713,7 @@
         "f58f45ec-972c-4cfc-80d5-b3fb88621914": {
           "description": "## App di esempio\n\n**Transizione:** invia coppie a Code Studio.",
           "tips": [
-            null
+            "\\*\\*Opzioni di sintesi vocale: \\*\\* il pannello delle istruzioni include due opzioni che possono supportare la comprensione per gli studenti.\n\n-   **Sintesi vocale** che legge ad alta voce le istruzioni per gli studenti\n-   **Microsoft Immersive Reader** che apre un nuovo pannello per le istruzioni e fornisce i controlli per modificare la dimensione del testo, il contrasto o la traduzione in un'altra lingua.\n\n[Clicca qui per saperne di più su queste opzioni](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           ]
         },
         "63718979-8aa6-4a18-9058-b3d98348c21a": {
@@ -7462,6 +7468,9 @@
         "2cf56240-987f-4004-9a09-4f3ed7c1b6f1": {
           "description": "Ottimo lavoro e complimenti a tutti. Ora comprendiamo molto di più sul processo di risoluzione dei problemi. Questo sarà uno strumento incredibilmente utile che useremo ripetutamente nel corso dell'anno man mano che approfondiamo la comprensione del mondo dell'informatica."
         },
+        "f2627910-3a24-4b6e-9ce6-6d3bd485b695": {
+          "name": "Preparazione per l'unità"
+        },
         "097ed57b-58e8-49e2-9a50-07d4677e82cf": {
           "name": "Il problema dell'intrattenimento",
           "description": "\\*\\*Discussione: \\*\\* qual è la tua forma di intrattenimento preferita e quale problema risolve per te?"
@@ -7611,7 +7620,7 @@
         },
         "3639ace8-523d-473d-aa8c-f86d30d7bac4": {
           "tips": [
-            null
+            "\\*\\*Utilizzo delle risorse: \\*\\* di seguito puoi trovare consigli per l'utilizzo delle numerose risorse a cui gli studenti vengono introdotti nella lezione. Potresti prendere in considerazione la creazione di un «Grafico delle risorse» per tenere traccia di queste opzioni e aiutare gli studenti a essere autosufficienti man mano che avanzano di livello. \n\n-   \\*\\*Video: \\*\\* guardati in classe, ma gli studenti possono sempre riprenderli.\n-   \\*\\*Scheda aiuto e suggerimenti: \\*\\* questa scheda contiene tutti i video e le guide di riferimento pertinenti per un determinato livello.\n-   \\*\\*Guide di riferimento: \\*\\* contengono testo e diagrammi che spiegano il contenuto. Queste sono intese come utili risorse per gli studenti, non come letture in classe. Sono un buon posto dove andare per la revisione dopo aver appreso i contenuti o quando gli studenti rimangono bloccati nei livelli. Puoi decidere di stamparli e renderli disponibili per gli studenti man mano che superano i livelli.\n-   \\*\\*Documentazione ed esempi: \\*\\* passando il mouse su un blocco verrà mostrata una breve descrizione di ciò che fa il blocco. Facendo clic sul link «Vedi esempi» si aprirà la documentazione relativa a quel blocco. \n-   \\*\\*Istruzioni dell'esercizio: \\*\\* le istruzioni possono introdurre piccoli pezzi di nuovi contenuti. Ogni esercizio presenta una sezione «Fai questo» che spiega cosa dovrebbero fare gli studenti in quell'esercizio. Ponetevi subito l'aspettativa che sia importante leggere queste istruzioni, non solo la sezione «Esegui questa operazione»."
           ],
           "progression_name": "Introduzione a Sviluppo Giochi"
         },
@@ -7624,7 +7633,7 @@
         },
         "5e3a3411-6b46-44fc-aeeb-d8949db8bcfd": {
           "tips": [
-            null
+            "\\*\\*Opzioni di sintesi vocale: \\*\\* il pannello delle istruzioni include due opzioni che possono supportare la comprensione per gli studenti.\n\n-   **Sintesi vocale** che legge ad alta voce le istruzioni per gli studenti\n-   **Microsoft Immersive Reader** che apre un nuovo pannello per le istruzioni e fornisce i controlli per modificare la dimensione del testo, il contrasto o la traduzione in un'altra lingua.\n\n[Clicca qui per saperne di più su queste opzioni](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           ],
           "progression_name": "Utilizzo della griglia"
         },
@@ -7637,25 +7646,25 @@
         },
         "7ac34d77-29c1-48f2-83f9-2958ace257d6": {
           "tips": [
-            null
+            "**Semplificare gli esercizi di sviluppo delle abilità:**  gli esercizi di sviluppo delle abilità sono progettati per continuare a insegnare nuove abilità e blocchi attraverso l'esplorazione, tentativi ed errori e utilizzando esempi funzionanti dal codice preimpostato. Gli studenti stanno ancora acquisendo familiarità con i concetti della lezione e avranno bisogno di un forte supporto durante questi esercizi per acquisire sicurezza, eseguire il debugging del loro codice e consolidare la loro comprensione.\n\nPrendi in considerazione la possibilità che gli studenti completino  gli esercizi di sviluppo delle abilità in coppia utilizzando la **Programmazione in coppia**, che consente agli studenti di utilizzare un computer e scambiare tra l'essere un pilota o un navigatore. Questo processo è evidenziato in [questo video](https://www.youtube.com/watch?v=q7d_JtyCq1A), che puoi mostrare alla classe. Puoi fare in modo che gli studenti cambino ruolo in base a un timer o cambino ogni volta che completano un esercizio.\n\n**Scavando più a fondo:** per ulteriori suggerimenti sugli esercizi di programmazione, consulta la [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per facilitare gli esercizi di programmazione con gli studenti."
           ],
           "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "39e245a3-6023-4437-9b2d-be1302738dcf": {
           "tips": [
-            null
+            "**Semplificare gli esercizi di pratica:** gli esercizi di pratica sono progettati per consentire agli studenti di applicare le conoscenze degli esercizi precedenti e sviluppare fluidità nell'uso dei nuovi blocchi di codice per risolvere i problemi. Gli studenti possono scegliere quali esercizi di pratica desiderano completare e non è necessario che uno studente completi ogni esercizio di pratica prima di continuare.\n\nGli studenti tendono ad essere più coinvolti e rispondono meglio quando hanno una scelta autentica su come continuare il loro apprendimento. Consentire agli studenti di scegliere gli esercizi di pratica in base ai loro interessi e al livello di comfort e considerare di fornire opportunità agli studenti di dimostrare e spiegare le loro soluzioni agli esercizi di pratica che hanno scelto all'intera classe.\n\n**Scavando più a fondo:** per ulteriori suggerimenti sugli esercizi di programmazione, consulta la [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per semplificare gli esercizi di programmazione con gli studenti."
           ],
           "progression_name": "Applicazioni pratiche"
         },
         "598a2627-2915-46fd-849b-409a7702f66b": {
           "tips": [
-            null
+            "**Esercizi di valutazione facilitanti:** gli esercizi di valutazione contengono un singolo compito che richiede l'applicazione delle abilità e dei concetti del livello per poter essere risolto. Gli studenti dovrebbero completare questi esercizi individualmente e tu puoi usare il tuo giudizio su quanto aiuto esterno gli studenti dovrebbero avere. Gli esercizi di valutazione contengono anche una tabella di valutazione che può essere utilizzata per la valutazione formativa e un riquadro per fornire riscontri agli studenti - [clicca qui per saperne di più sull'uso delle tabelle di valutazione e sul riscontro agli studenti](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n**Scavare più a fondo:** per ulteriori suggerimenti sulla valutazione del lavoro degli studenti, consulta la [Guida alla valutazione](https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview)."
           ],
           "progression_name": "Valutazione"
         },
         "d9ef6c27-268b-4f69-83c3-19fb2d607d28": {
           "tips": [
-            null
+            "**Esercizi di sfida facilitanti:** gli esercizi di sfida sono concepiti come estensioni dei concetti e delle abilità che gli studenti apprendono durante una lezione. Gli esercizi di sfida tendono a concentrarsi su attività più aperte che gli studenti devono completare o opportunità di combinare insieme diverse abilità delle lezioni precedenti in un unico programma.\n\nGli esercizi di sfida **non** devono essere completati affinché gli studenti raggiungano gli obiettivi principali di una lezione. Al contrario, ogni attività in un esercizio di sfida ha lo scopo di integrare e arricchire gli obiettivi di apprendimento di una lezione, ma non è richiesta per le lezioni future. Gli studenti possono ancora dimostrare la padronanza degli obiettivi di una lezione senza completare nessuno degli esercizi di sfida.\n\n**Scavando più a fondo:** per ulteriori suggerimenti sugli esercizi di programmazione, consulta la [Guida agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e best practice per facilitare gli esercizi di programmazione con gli studenti."
           ],
           "progression_name": "Sfide"
         },
@@ -7686,12 +7695,12 @@
           "name": "Programmare con i parametri",
           "description": "**Forma i gruppi:** disponi in coppia gli studenti per l'attività di programmazione. \n\n**Transizione:** fai andare gli studenti su Code Studio.",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "8edada5b-86d6-4a42-ac50-b07edf4532b9": {
           "tips": [
-            null
+            "\\*\\*Normalizzazione degli errori e supporto al debugging: \\*\\* man mano che gli esercizi di programmazione diventano più complessi, gli studenti potrebbero ritrovarsi nel codice dei bug che devono risolvere. Se ciò accade frequentemente, questa può essere un'esperienza demoralizzante per gli studenti e può influire sulla loro percezione di sé delle loro capacità in classe. \n\nPer ovviare a ciò, consigliamo di normalizzare i bug e gli errori in quanto si tratta di una circostanza che accade a tutti: è solo una parte del processo. Puoi mostrare agli studenti il nostro [Video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s), che include diversi studenti che normalizzano gli errori e discutono delle strategie di debugging che gli studenti possono utilizzare. Inoltre, prendi in considerazione la possibilità di esporre la [Guida per gli studenti al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) a cui gli studenti possano fare riferimento in tutta l'unità e di avere [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) a disposizione degli studenti."
           ],
           "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
@@ -7737,7 +7746,7 @@
           "name": "Programmare con le variabili",
           "description": "**Transizione:** fai andare gli studenti su Code Studio.",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "d26059f8-ed8e-47d8-a1e4-00864675f48b": {
@@ -7803,7 +7812,7 @@
           "name": "Programmare immagini",
           "description": "**Transizione:** fai andare gli studenti su Code Studio",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "30726a72-deac-4fe2-b10e-fed405d0536c": {
@@ -7859,7 +7868,7 @@
           "name": "Introduzione ai personaggi",
           "description": "**Transizione:** fai andare gli studenti su Code Studio",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "11981557-3131-4ac6-acbc-71778988951f": {
@@ -7929,7 +7938,7 @@
         "a748f14d-ac72-4518-affc-f8afdbd5f545": {
           "description": "**Transizione:** fai andare gli studenti su Code Studio.",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "e2958d9a-e321-4132-8424-6103f6e7f76b": {
@@ -7971,7 +7980,7 @@
         "143eb56e-c445-4fde-a1f6-845371db821c": {
           "description": "**Transizione** fai andare gli studenti a Code Studio.",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "1248d040-dd08-49f6-b5ee-07852b579c56": {
@@ -8018,13 +8027,13 @@
         "773f3c7e-a2a9-4c2d-8a88-5050f38d0d1f": {
           "description": "\\*\\*Domanda del giorno: come possiamo usare Sviluppo Giochi per esprimere la nostra creatività? \\*\\*",
           "tips": [
-            null
+            "\\*\\*Facilitazione dei mini-progetti: \\*\\* i mini-progetti fungono da punti di controllo nei piani di studi e coprono il sottoinsieme di competenze che gli studenti hanno visto finora nell'unità. Sono progettati per 1-2 giorni di implementazione per verificare il livello di comprensione dei contenuti del corso da parte degli studenti fino ad ora. Potresti decidere di estendere questi progetti per sostenere o sfidare gli studenti, il che potrebbe consentirti di ripassare concetti difficili o sostenere gli studenti che potrebbero aver perso le lezioni e stanno cercando di recuperare il ritardo. Tuttavia, consigliamo di decidere in anticipo e di concordare con gli studenti quanto tempo hanno a disposizione per ogni progetto, altrimenti è facile che i progetti si trascinino a più giorni e che il lavoro degli studenti vada oltre l'ambito di questo progetto."
           ]
         },
         "576907fe-bf93-4136-b9cb-e36310bca046": {
           "description": "**Distribuzione:** (facoltativo) distribuisci copie della guida alle attività. Gli studenti possono utilizzare questo foglio per pianificare la scena che creeranno alla fine di questa lezione, ma la pianificazione può essere completata anche su fogli per appunti.\n\n**Transizione** fai andare gli studenti su Code Studio.",
           "tips": [
-            null
+            "\\*\\*Facilitazione dei progetti di gruppo: \\*\\* se gli studenti lavorano in coppia o in piccoli gruppi per completare i progetti, valuta la possibilità di mostrare questi due video alla classe:\n\n-   [Come funziona il lavoro di squadra](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Gestione dei disaccordi](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nA seconda degli obiettivi che ti prefiggi con questo progetto, considera la possibilità di far completare ai gruppi una [Guida per studenti alla pianificazione del gruppo](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), che rafforza il messaggio nel video"
           ]
         },
         "5c31da5c-733b-43cc-8b0c-912ffc8cd98f": {
@@ -8032,7 +8041,7 @@
         },
         "449a73b9-9e17-4a54-bbc6-8eacad2cfd30": {
           "tips": [
-            null
+            "**Strategie per il debugging:** mentre gli studenti progettano e implementano le proprie idee di progetto, potrebbero trovarsi con nuovi bug da districare e potresti ritrovarti a guardare un codice completamente sconosciuto mentre gli studenti cercano aiuto per risolvere i loro errori. Per semplificare l'esperienza di debugging, prendi in considerazione le seguenti strategie:\n\n-   Consulta la [Guida per l'insegnante al debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) per alcune domande e strategie comuni per aiutare gli studenti a eseguire il debugging del loro codice\n-   Far seguire agli studenti i passaggi della [Guida dello studente al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) e utilizzare i [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) come primo passo nel processo di debugging. Questo aiuta gli studenti a preparare e comunicare il loro problema prima di chiedere aiuto.\n-   Se gli studenti non l'hanno ancora visto, valuta la possibilità di mostrare il [video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s) alla classe per rafforzare le migliori prassi di debugging.\n\n**Scavare più a fondo:** valuta la possibilità di fornire agli studenti un oggetto con cui parlare come parte del processo di debugging. Questo a volte è noto come debugging di Rubber Duck: puoi saperne di più sul sito web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Crea uno sfondo"
         },
@@ -8092,7 +8101,7 @@
         },
         "aea2bc61-b817-404c-90e4-7fcadd60412a": {
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ],
           "progression_name": "Esplorazione"
         },
@@ -8148,7 +8157,7 @@
         "286a1590-1a6c-4029-91c1-9166ef1ff766": {
           "description": "**Transizione:** fai andare gli studenti su Code Studio.",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "d63180f7-6d8c-4704-a4d5-ea038e0ae74d": {
@@ -8202,12 +8211,12 @@
         "d4023790-1810-4ddd-a510-133df9586856": {
           "description": "**Domanda del giorno: come possiamo combinare diversi modelli di programmazione per creare un'animazione completa?**",
           "tips": [
-            null
+            "\\*\\*Facilitazione dei mini-progetti: \\*\\* i mini-progetti fungono da punti di controllo nei piani di studi e coprono il sottoinsieme di competenze che gli studenti hanno visto finora nell'unità. Sono progettati per 1-2 giorni di implementazione per verificare il livello di comprensione dei contenuti del corso da parte degli studenti fino ad ora. Potresti decidere di estendere questi progetti per sostenere o sfidare gli studenti, il che potrebbe consentirti di ripassare concetti difficili o sostenere gli studenti che potrebbero aver perso le lezioni e stanno cercando di recuperare il ritardo. Tuttavia, consigliamo di decidere in anticipo e di concordare con gli studenti quanto tempo hanno a disposizione per ogni progetto, altrimenti è facile che i progetti si trascinino a più giorni e che il lavoro degli studenti vada oltre l'ambito di questo progetto."
           ]
         },
         "539b36c9-fdb1-4f96-af81-fe2ceda35ba6": {
           "tips": [
-            null
+            "\\*\\*Facilitazione dei progetti di gruppo: \\*\\* se gli studenti lavorano in coppia o in piccoli gruppi per completare i progetti, valuta la possibilità di mostrare questi due video alla classe:\n\n-   [Come funziona il lavoro di squadra](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Gestione dei disaccordi](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nA seconda degli obiettivi che ti prefiggi con questo progetto, considera la possibilità di far completare ai gruppi una [Guida per studenti alla pianificazione del gruppo](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), che rafforza il messaggio nel video"
           ]
         },
         "a85e603b-4d97-46a4-9c91-de765391646f": {
@@ -8216,7 +8225,7 @@
         },
         "37116129-33c9-43a6-be07-a81b0bf2f8b5": {
           "tips": [
-            null
+            "**Valutare la congruità dei progetti degli studenti:** gli studenti possono ideare progetti che vanno oltre le competenze che hanno attualmente o che richiederebbero più tempo del tempo assegnato per essere implementati. Invece di chiedere agli studenti di scegliere un progetto diverso, prova a chiedere agli studenti di immaginare una versione più ridotta della loro idea iniziale. Come analogia, se l'idea iniziale degli studenti è il passo \"Corri\", immagina una versione meno intensa che rappresenti come sarebbe il passo \"Cammina\". Se necessario, puoi anche continuare a tornare indietro fino a un passaggio di \"Vai molto lento\". \n\n**Scavando più a fondo:** questo è a volte indicato come \"Prodotto minimo funzionante\" (o MVP, da Minimal Viable Product): puoi saperne di più su questo processo e adattarlo alle tue strategie di progetto leggendo questo articolo: [Che senso ha il MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) di Henrik Kniberg"
           ],
           "progression_name": "Pianifica la tua scena"
         },
@@ -8225,7 +8234,7 @@
         },
         "4d82a10e-f3f1-4e52-a97a-d0ec605c3a84": {
           "tips": [
-            null
+            "**Strategie per il debugging:** mentre gli studenti progettano e implementano le proprie idee di progetto, potrebbero trovarsi con nuovi bug da districare e potresti ritrovarti a guardare un codice completamente sconosciuto mentre gli studenti cercano aiuto per risolvere i loro errori. Per semplificare l'esperienza di debugging, prendi in considerazione le seguenti strategie:\n\n-   Consulta la [Guida per l'insegnante al debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) per alcune domande e strategie comuni per aiutare gli studenti a eseguire il debugging del loro codice\n-   Far seguire agli studenti i passaggi della [Guida dello studente al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) e utilizzare i [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) come primo passo nel processo di debugging. Questo aiuta gli studenti a preparare e comunicare il loro problema prima di chiedere aiuto.\n-   Se gli studenti non l'hanno ancora visto, valuta la possibilità di mostrare il [video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s) alla classe per rafforzare le migliori prassi di debugging.\n\n**Scavare più a fondo:** valuta la possibilità di fornire agli studenti un oggetto con cui parlare come parte del processo di debugging. Questo a volte è noto come debugging di Rubber Duck: puoi saperne di più sul sito web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Aggiungi personaggi"
         },
@@ -8284,7 +8293,7 @@
           "name": "Istruzioni condizionali",
           "description": "**Transizione:** fai andare gli studenti su Code Studio.",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "ed3cc380-cd93-4699-9f7c-878fd09f8b03": {
@@ -8349,7 +8358,7 @@
           "name": "Input da tastiera",
           "description": "**Transizione:** fai andare gli studenti su Code Studio",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "4975dfd3-be92-408b-9518-8a4cae7701a9": {
@@ -8393,7 +8402,7 @@
         "ac698d02-ec2a-44b9-bee2-9889a2b5317d": {
           "name": "Se/altrimenti (If/else) e altri input",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "1069a7b9-54f5-4414-bec3-3a7b86d799a1": {
@@ -8453,7 +8462,7 @@
         },
         "6fc9f0d1-23f2-45bf-879f-69b222793806": {
           "tips": [
-            null
+            "**Valutare la congruità dei progetti degli studenti:** gli studenti possono ideare progetti che vanno oltre le competenze che hanno attualmente o che richiederebbero più tempo del tempo assegnato per essere implementati. Invece di chiedere agli studenti di scegliere un progetto diverso, prova a chiedere agli studenti di immaginare una versione più ridotta della loro idea iniziale. Come analogia, se l'idea iniziale degli studenti è il passo \"Corri\", immagina una versione meno intensa che rappresenti come sarebbe il passo \"Cammina\". Se necessario, puoi anche continuare a tornare indietro fino a un passaggio di \"Vai molto lento\". \n\n**Scavando più a fondo:** questo è a volte indicato come \"Prodotto minimo funzionante\" (o MVP, da Minimal Viable Product): puoi saperne di più su questo processo e adattarlo alle tue strategie di progetto leggendo questo articolo: [Che senso ha il MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) di Henrik Kniberg"
           ]
         },
         "0320f16b-06ce-44af-b1bd-20794feb5a52": {
@@ -8470,7 +8479,7 @@
         },
         "4e0723c7-38ba-4d47-82fa-957aed03bab9": {
           "tips": [
-            null
+            "**Strategie per il debugging:** mentre gli studenti progettano e implementano le proprie idee di progetto, potrebbero trovarsi con nuovi bug da districare e potresti ritrovarti a guardare un codice completamente sconosciuto mentre gli studenti cercano aiuto per risolvere i loro errori. Per semplificare l'esperienza di debugging, prendi in considerazione le seguenti strategie:\n\n-   Consulta la [Guida per l'insegnante al debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) per alcune domande e strategie comuni per aiutare gli studenti a eseguire il debugging del loro codice\n-   Far seguire agli studenti i passaggi della [Guida dello studente al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) e utilizzare i [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) come primo passo nel processo di debugging. Questo aiuta gli studenti a preparare e comunicare il loro problema prima di chiedere aiuto.\n-   Se gli studenti non l'hanno ancora visto, valuta la possibilità di mostrare il [video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s) alla classe per rafforzare le migliori prassi di debugging.\n\n**Scavare più a fondo:** valuta la possibilità di fornire agli studenti un oggetto con cui parlare come parte del processo di debugging. Questo a volte è noto come debugging di Rubber Duck: puoi saperne di più sul sito web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Lavoro di progetto"
         },
@@ -8516,7 +8525,7 @@
         },
         "e16bcb96-aa05-4fb1-8ac9-d3908e077e9a": {
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "66c70a69-b26c-448c-bda8-2276640f676f": {
@@ -8644,13 +8653,13 @@
         "4d0e1b05-6764-45b5-85f0-d956e11f0704": {
           "description": "\\*\\*Domanda del giorno: come si possono usare i nuovi tipi di movimento dei personaggi e di rilevamento delle collisioni per creare un gioco? \\*\\*",
           "tips": [
-            null
+            "\\*\\*Facilitazione dei mini-progetti: \\*\\* i mini-progetti fungono da punti di controllo nei piani di studi e coprono il sottoinsieme di competenze che gli studenti hanno visto finora nell'unità. Sono progettati per 1-2 giorni di implementazione per verificare il livello di comprensione dei contenuti del corso da parte degli studenti fino ad ora. Potresti decidere di estendere questi progetti per sostenere o sfidare gli studenti, il che potrebbe consentirti di ripassare concetti difficili o sostenere gli studenti che potrebbero aver perso le lezioni e stanno cercando di recuperare il ritardo. Tuttavia, consigliamo di decidere in anticipo e di concordare con gli studenti quanto tempo hanno a disposizione per ogni progetto, altrimenti è facile che i progetti si trascinino a più giorni e che il lavoro degli studenti vada oltre l'ambito di questo progetto."
           ]
         },
         "847ce2b1-b2de-4932-af9c-ad5b8ca0499b": {
           "description": "\\*\\*Distribuzione: \\*\\* (facoltativo) distribuisci copie della guida alle attività. Gli studenti possono utilizzare questo foglio per pianificare il gioco a scorrimento laterale che creeranno alla fine di questa lezione, ma la pianificazione può essere completata anche su fogli per appunti.\n\n**Transizione** fai andare gli studenti su Code Studio.",
           "tips": [
-            null
+            "**Strategie per il debugging:** mentre gli studenti progettano e implementano le proprie idee di progetto, potrebbero trovarsi con nuovi bug da districare e potresti ritrovarti a guardare un codice completamente sconosciuto mentre gli studenti cercano aiuto per risolvere i loro errori. Per semplificare l'esperienza di debugging, prendi in considerazione le seguenti strategie:\n\n-   Consulta la [Guida per l'insegnante al debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) per alcune domande e strategie comuni per aiutare gli studenti a eseguire il debugging del loro codice\n-   Far seguire agli studenti i passaggi della [Guida dello studente al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) e utilizzare i [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) come primo passo nel processo di debugging. Questo aiuta gli studenti a preparare e comunicare il loro problema prima di chiedere aiuto.\n-   Se gli studenti non l'hanno ancora visto, valuta la possibilità di mostrare il [video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s) alla classe per rafforzare le migliori prassi di debugging.\n\n**Scavare più a fondo:** valuta la possibilità di fornire agli studenti un oggetto con cui parlare come parte del processo di debugging. Questo a volte è noto come debugging di Rubber Duck: puoi saperne di più sul sito web <https://rubberduckdebugging.com/>"
           ]
         },
         "1e49d8c1-a9ea-489d-ac88-fd9f334b8118": {
@@ -8698,7 +8707,7 @@
         "3f6d101f-bccb-4a4d-9b16-5db525802046": {
           "description": "**Transizione:** fai andare gli studenti su Code Studio.",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "5cb88190-4077-42c3-8202-97e9e6eaf470": {
@@ -8808,13 +8817,13 @@
         "19ffef2d-aa7f-40fd-bb4b-b075ac7306c4": {
           "description": "\\*\\*Domanda del giorno: come si possono usare i nuovi tipi di collisioni e movimenti di modellazione per creare un gioco? \\*\\*",
           "tips": [
-            null
+            "\\*\\*Facilitazione dei mini-progetti: \\*\\* i mini-progetti fungono da punti di controllo nei piani di studi e coprono il sottoinsieme di competenze che gli studenti hanno visto finora nell'unità. Sono progettati per 1-2 giorni di implementazione per verificare il livello di comprensione dei contenuti del corso da parte degli studenti fino ad ora. Potresti decidere di estendere questi progetti per sostenere o sfidare gli studenti, il che potrebbe consentirti di ripassare concetti difficili o sostenere gli studenti che potrebbero aver perso le lezioni e stanno cercando di recuperare il ritardo. Tuttavia, consigliamo di decidere in anticipo e di concordare con gli studenti quanto tempo hanno a disposizione per ogni progetto, altrimenti è facile che i progetti si trascinino a più giorni e che il lavoro degli studenti vada oltre l'ambito di questo progetto."
           ]
         },
         "1acd883d-261b-4c22-8a50-167d3ab9832f": {
           "description": "\\*\\*Distribuzione: \\*\\* (facoltativo) distribuisci copie della guida del progetto. Gli studenti possono utilizzare questo foglio per pianificare il gioco con personaggio volante che creeranno alla fine di questa lezione, ma la pianificazione può essere completata anche su fogli per appunti.\n\n**Transizione** fai andare gli studenti su Code Studio.",
           "tips": [
-            null
+            "**Strategie per il debugging:** mentre gli studenti progettano e implementano le proprie idee di progetto, potrebbero trovarsi con nuovi bug da districare e potresti ritrovarti a guardare un codice completamente sconosciuto mentre gli studenti cercano aiuto per risolvere i loro errori. Per semplificare l'esperienza di debugging, prendi in considerazione le seguenti strategie:\n\n-   Consulta la [Guida per l'insegnante al debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) per alcune domande e strategie comuni per aiutare gli studenti a eseguire il debugging del loro codice\n-   Far seguire agli studenti i passaggi della [Guida dello studente al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) e utilizzare i [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) come primo passo nel processo di debugging. Questo aiuta gli studenti a preparare e comunicare il loro problema prima di chiedere aiuto.\n-   Se gli studenti non l'hanno ancora visto, valuta la possibilità di mostrare il [video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s) alla classe per rafforzare le migliori prassi di debugging.\n\n**Scavare più a fondo:** valuta la possibilità di fornire agli studenti un oggetto con cui parlare come parte del processo di debugging. Questo a volte è noto come debugging di Rubber Duck: puoi saperne di più sul sito web <https://rubberduckdebugging.com/>"
           ]
         },
         "85a46b73-ffbc-44e4-b2aa-dd717a558478": {
@@ -9054,7 +9063,7 @@
         },
         "4cedbe11-f01d-4877-8772-99baae5c7d46": {
           "tips": [
-            null
+            "\\*\\*Facilitazione dei progetti di gruppo: \\*\\* se gli studenti lavorano in coppia o in piccoli gruppi per completare i progetti, valuta la possibilità di mostrare questi due video alla classe:\n\n-   [Come funziona il lavoro di squadra](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Gestione dei disaccordi](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nA seconda degli obiettivi che ti prefiggi con questo progetto, considera la possibilità di far completare ai gruppi una [Guida per studenti alla pianificazione del gruppo](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), che rafforza il messaggio nel video"
           ]
         },
         "cd32a6fd-953a-44c7-a55a-4c8bbdda4db2": {
@@ -9072,7 +9081,7 @@
           "name": "Preparazione - Completa la guida al progetto",
           "description": "**Girando tra i banchi:** una volta che gli studenti hanno discusso le loro idee per il progetto, devono completare la guida al progetto. Anche se questo dovrebbe essere un processo abbastanza familiare, incoraggia gli studenti a rendere ogni componente il più chiaro e dettagliato possibile. Pianificare in anticipo può aiutarli a identificare i problemi nel piano prima di dover apportare modifiche più significative al programma.",
           "tips": [
-            null
+            "**Valutare la congruità dei progetti degli studenti:** gli studenti possono ideare progetti che vanno oltre le competenze che hanno attualmente o che richiederebbero più tempo del tempo assegnato per essere implementati. Invece di chiedere agli studenti di scegliere un progetto diverso, prova a chiedere agli studenti di immaginare una versione più ridotta della loro idea iniziale. Come analogia, se l'idea iniziale degli studenti è il passo \"Corri\", immagina una versione meno intensa che rappresenti come sarebbe il passo \"Cammina\". Se necessario, puoi anche continuare a tornare indietro fino a un passaggio di \"Vai molto lento\". \n\n**Scavando più a fondo:** questo è a volte indicato come \"Prodotto minimo funzionante\" (o MVP, da Minimal Viable Product): puoi saperne di più su questo processo e adattarlo alle tue strategie di progetto leggendo questo articolo: [Che senso ha il MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) di Henrik Kniberg"
           ]
         },
         "244c4366-1d73-41c1-bdd4-f151ee576403": {
@@ -9084,7 +9093,7 @@
         },
         "0296c25a-c7e0-4f70-9254-e3742c469a84": {
           "tips": [
-            null
+            "**Strategie per il debugging:** mentre gli studenti progettano e implementano le proprie idee di progetto, potrebbero trovarsi con nuovi bug da districare e potresti ritrovarti a guardare un codice completamente sconosciuto mentre gli studenti cercano aiuto per risolvere i loro errori. Per semplificare l'esperienza di debugging, prendi in considerazione le seguenti strategie:\n\n-   Consulta la [Guida per l'insegnante al debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) per alcune domande e strategie comuni per aiutare gli studenti a eseguire il debugging del loro codice\n-   Far seguire agli studenti i passaggi della [Guida dello studente al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) e utilizzare i [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) come primo passo nel processo di debugging. Questo aiuta gli studenti a preparare e comunicare il loro problema prima di chiedere aiuto.\n-   Se gli studenti non l'hanno ancora visto, valuta la possibilità di mostrare il [video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s) alla classe per rafforzare le migliori prassi di debugging.\n\n**Scavare più a fondo:** valuta la possibilità di fornire agli studenti un oggetto con cui parlare come parte del processo di debugging. Questo a volte è noto come debugging di Rubber Duck: puoi saperne di più sul sito web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Progetto - Sfondo e variabili"
         },
@@ -9129,6 +9138,9 @@
             "Questo esercizio appare alla fine di ogni unità. **Chiedi ai tuoi studenti di completare questo sondaggio alla fine dell'ultima unità!** Gli studenti devono rispondere al sondaggio solo una volta alla fine del corso.\n\n-   I risultati sono fondamentali per noi (code.org) per sostenere i nostri corsi e apportare miglioramenti.\n-   Ci sarà anche un sondaggio tra gli insegnanti in cui potrai fornire il tuo contributo. Riceverai una notifica via e-mail sul sondaggio per gli insegnanti.\n\n**Istruzioni per sbloccare il sondaggio per studenti:**\\\\ \\[[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)]\\\\ \\[[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\nSe gli studenti fanno clic sul link e visualizzano un messaggio di errore relativo al blocco del sondaggio, segui i passaggi indicati nelle istruzioni precedenti per sbloccare il sondaggio per gli studenti."
           ],
           "progression_name": "Istruzioni per il sondaggio post-corso"
+        },
+        "9e251e38-16aa-4539-bed3-194074664e5b": {
+          "name": "Preparazione per l'unità"
         },
         "e62ce10c-b80c-4463-b585-1ba755d17ad9": {
           "name": "Diario",
@@ -9357,19 +9369,19 @@
         },
         "91162ef9-2afa-4ddc-b382-2d5bd220fdfb": {
           "tips": [
-            null
+            "**Semplificare gli esercizi di pratica:** gli esercizi di pratica sono progettati per consentire agli studenti di applicare le conoscenze degli esercizi precedenti e sviluppare fluidità nell'uso dei nuovi blocchi di codice per risolvere i problemi. Gli studenti possono scegliere quali esercizi di pratica desiderano completare e non è necessario che uno studente completi ogni esercizio di pratica prima di continuare.\n\nGli studenti tendono ad essere più coinvolti e rispondono meglio quando hanno una scelta autentica su come continuare il loro apprendimento. Consentire agli studenti di scegliere gli esercizi di pratica in base ai loro interessi e al livello di comfort e considerare di fornire opportunità agli studenti di dimostrare e spiegare le loro soluzioni agli esercizi di pratica che hanno scelto all'intera classe.\n\n**Scavando più a fondo:** per ulteriori suggerimenti sugli esercizi di programmazione, consulta la [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per semplificare gli esercizi di programmazione con gli studenti."
           ],
           "progression_name": "Applicazioni pratiche"
         },
         "20649a32-e25a-48d4-b642-5c62900f9a2b": {
           "tips": [
-            null
+            "**Esercizi di valutazione facilitanti:** gli esercizi di valutazione contengono un singolo compito che richiede l'applicazione delle abilità e dei concetti del livello per poter essere risolto. Gli studenti dovrebbero completare questi esercizi individualmente e tu puoi usare il tuo giudizio su quanto aiuto esterno gli studenti dovrebbero avere. Gli esercizi di valutazione contengono anche una tabella di valutazione che può essere utilizzata per la valutazione formativa e un riquadro per fornire riscontri agli studenti - [clicca qui per saperne di più sull'uso delle tabelle di valutazione e sul riscontro agli studenti](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n**Scavare più a fondo:** per ulteriori suggerimenti sulla valutazione del lavoro degli studenti, consulta la [Guida alla valutazione](https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview)."
           ],
           "progression_name": "Valutazione"
         },
         "6c97c37a-209b-4258-84ea-d3dbeecdd625": {
           "tips": [
-            null
+            "**Esercizi di sfida facilitanti:** gli esercizi di sfida sono concepiti come estensioni dei concetti e delle abilità che gli studenti apprendono durante una lezione. Gli esercizi di sfida tendono a concentrarsi su attività più aperte che gli studenti devono completare o opportunità di combinare insieme diverse abilità delle lezioni precedenti in un unico programma.\n\nGli esercizi di sfida **non** devono essere completati affinché gli studenti raggiungano gli obiettivi principali di una lezione. Al contrario, ogni attività in un esercizio di sfida ha lo scopo di integrare e arricchire gli obiettivi di apprendimento di una lezione, ma non è richiesta per le lezioni future. Gli studenti possono ancora dimostrare la padronanza degli obiettivi di una lezione senza completare nessuno degli esercizi di sfida.\n\n**Scavando più a fondo:** per ulteriori suggerimenti sugli esercizi di programmazione, consulta la [Guida agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e best practice per facilitare gli esercizi di programmazione con gli studenti."
           ],
           "progression_name": "Sfide"
         },
@@ -9399,7 +9411,7 @@
         "8600f333-fd3e-46ab-81ab-764018ab6813": {
           "description": "\\*\\*Domanda del giorno: come posso usare l'HTML per esprimere un valore personale? \\*\\*",
           "tips": [
-            null
+            "\\*\\*Facilitazione dei mini-progetti: \\*\\* i mini-progetti fungono da punti di controllo nei piani di studi e coprono il sottoinsieme di competenze che gli studenti hanno visto finora nell'unità. Sono progettati per 1-2 giorni di implementazione per verificare il livello di comprensione dei contenuti del corso da parte degli studenti fino ad ora. Potresti decidere di estendere questi progetti per sostenere o sfidare gli studenti, il che potrebbe consentirti di ripassare concetti difficili o sostenere gli studenti che potrebbero aver perso le lezioni e stanno cercando di recuperare il ritardo. Tuttavia, consigliamo di decidere in anticipo e di concordare con gli studenti quanto tempo hanno a disposizione per ogni progetto, altrimenti è facile che i progetti si trascinino a più giorni e che il lavoro degli studenti vada oltre l'ambito di questo progetto."
           ]
         },
         "32634985-c350-44e6-b1e7-de7dfd36da1d": {
@@ -9413,7 +9425,7 @@
           "name": "Fase 2: Preparazione - Progetta la tua pagina",
           "description": "Quando gli studenti rispondono a domande sulla progettazione della pagina, assicurati di distinguere tra il contenuto della pagina e il modo in cui il contenuto è organizzato o strutturato. Dopo aver completato i loro progetti, assicurati che siano in grado di identificare quali tag saranno necessari per i diversi testi sulle pagine web.",
           "tips": [
-            null
+            "**Valutare la congruità dei progetti degli studenti:** gli studenti possono ideare progetti che vanno oltre le competenze che hanno attualmente o che richiederebbero più tempo del tempo assegnato per essere implementati. Invece di chiedere agli studenti di scegliere un progetto diverso, prova a chiedere agli studenti di immaginare una versione più ridotta della loro idea iniziale. Come analogia, se l'idea iniziale degli studenti è il passo \"Corri\", immagina una versione meno intensa che rappresenti come sarebbe il passo \"Cammina\". Se necessario, puoi anche continuare a tornare indietro fino a un passaggio di \"Vai molto lento\". \n\n**Scavando più a fondo:** questo è a volte indicato come \"Prodotto minimo funzionante\" (o MVP, da Minimal Viable Product): puoi saperne di più su questo processo e adattarlo alle tue strategie di progetto leggendo questo articolo: [Che senso ha il MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) di Henrik Kniberg"
           ]
         },
         "0489a630-1b47-4074-a57e-b5dbe639246c": {
@@ -9428,7 +9440,7 @@
         },
         "4337c14f-b8d6-42b7-88c9-8bb6d6a68f15": {
           "tips": [
-            null
+            "**Strategie per il debugging:** mentre gli studenti progettano e implementano le proprie idee di progetto, potrebbero trovarsi con nuovi bug da districare e potresti ritrovarti a guardare un codice completamente sconosciuto mentre gli studenti cercano aiuto per risolvere i loro errori. Per semplificare l'esperienza di debugging, prendi in considerazione le seguenti strategie:\n\n-   Consulta la [Guida per l'insegnante al debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) per alcune domande e strategie comuni per aiutare gli studenti a eseguire il debugging del loro codice\n-   Far seguire agli studenti i passaggi della [Guida dello studente al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) e utilizzare i [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) come primo passo nel processo di debugging. Questo aiuta gli studenti a preparare e comunicare il loro problema prima di chiedere aiuto.\n-   Se gli studenti non l'hanno ancora visto, valuta la possibilità di mostrare il [video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s) alla classe per rafforzare le migliori prassi di debugging.\n\n**Scavare più a fondo:** valuta la possibilità di fornire agli studenti un oggetto con cui parlare come parte del processo di debugging. Questo a volte è noto come debugging di Rubber Duck: puoi saperne di più sul sito web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Programma la tua pagina"
         },
@@ -9532,7 +9544,7 @@
           "name": "Sviluppo Web: Introduzione ai CSS",
           "description": "\\*\\*Forma i gruppi: \\*\\* disponi a coppie gli studenti.\n\n\\*\\*Transizione: \\*\\* fai andare gli studenti su Code Studio.\n\nConsenti agli studenti di esplorare la pagina web di esempio in Code Studio.",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ],
           "progression_name": "Sito Web di esempio"
         },
@@ -9558,7 +9570,7 @@
         },
         "2f24bcd8-4cad-4f5e-8e48-e447e7f11643": {
           "tips": [
-            null
+            "\\*\\*Normalizzazione degli errori e supporto al debugging: \\*\\* man mano che gli esercizi di programmazione diventano più complessi, gli studenti potrebbero ritrovarsi nel codice dei bug che devono risolvere. Se ciò accade frequentemente, questa può essere un'esperienza demoralizzante per gli studenti e può influire sulla loro percezione di sé delle loro capacità in classe. \n\nPer ovviare a ciò, consigliamo di normalizzare i bug e gli errori in quanto si tratta di una circostanza che accade a tutti: è solo una parte del processo. Puoi mostrare agli studenti il nostro [Video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s), che include diversi studenti che normalizzano gli errori e discutono delle strategie di debugging che gli studenti possono utilizzare. Inoltre, prendi in considerazione la possibilità di esporre la [Guida per gli studenti al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) a cui gli studenti possano fare riferimento in tutta l'unità e di avere [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) a disposizione degli studenti."
           ],
           "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
@@ -9636,7 +9648,7 @@
           "name": "Fase 2: Preparazione - Progetta la tua pagina",
           "description": "Quando gli studenti rispondono a domande sul progetto della pagina, assicurati di distinguere tra il contenuto della pagina e il modo in cui il contenuto è strutturato. Dopo aver completato i progetti, assicuratevi che siano in grado di identificare quali proprietà CSS saranno necessarie per i diversi testi delle pagine web.",
           "tips": [
-            null
+            "**Valutare la congruità dei progetti degli studenti:** gli studenti possono ideare progetti che vanno oltre le competenze che hanno attualmente o che richiederebbero più tempo del tempo assegnato per essere implementati. Invece di chiedere agli studenti di scegliere un progetto diverso, prova a chiedere agli studenti di immaginare una versione più ridotta della loro idea iniziale. Come analogia, se l'idea iniziale degli studenti è il passo \"Corri\", immagina una versione meno intensa che rappresenti come sarebbe il passo \"Cammina\". Se necessario, puoi anche continuare a tornare indietro fino a un passaggio di \"Vai molto lento\". \n\n**Scavando più a fondo:** questo è a volte indicato come \"Prodotto minimo funzionante\" (o MVP, da Minimal Viable Product): puoi saperne di più su questo processo e adattarlo alle tue strategie di progetto leggendo questo articolo: [Che senso ha il MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) di Henrik Kniberg"
           ]
         },
         "ecd046db-4471-420d-86db-05ab23c4e4b4": {
@@ -9654,7 +9666,7 @@
         },
         "64552bfc-d25b-4850-921a-2bc32d6d450d": {
           "tips": [
-            null
+            "**Strategie per il debugging:** mentre gli studenti progettano e implementano le proprie idee di progetto, potrebbero trovarsi con nuovi bug da districare e potresti ritrovarti a guardare un codice completamente sconosciuto mentre gli studenti cercano aiuto per risolvere i loro errori. Per semplificare l'esperienza di debugging, prendi in considerazione le seguenti strategie:\n\n-   Consulta la [Guida per l'insegnante al debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) per alcune domande e strategie comuni per aiutare gli studenti a eseguire il debugging del loro codice\n-   Far seguire agli studenti i passaggi della [Guida dello studente al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) e utilizzare i [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) come primo passo nel processo di debugging. Questo aiuta gli studenti a preparare e comunicare il loro problema prima di chiedere aiuto.\n-   Se gli studenti non l'hanno ancora visto, valuta la possibilità di mostrare il [video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s) alla classe per rafforzare le migliori prassi di debugging.\n\n**Scavare più a fondo:** valuta la possibilità di fornire agli studenti un oggetto con cui parlare come parte del processo di debugging. Questo a volte è noto come debugging di Rubber Duck: puoi saperne di più sul sito web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Aggiungi contenuto e struttura alla tua pagina"
         },
@@ -9775,7 +9787,7 @@
           "description": "**Transizione**: fai andare gli studenti su Code Studio.",
           "tips": [
             "Quando gli studenti iniziano a utilizzare le immagini, potrebbero avere difficoltà a trovare la dimensione giusta per le loro pagine. Nelle due lezioni, gli studenti impareranno a ridimensionare le proprie immagini con i CSS. Per ora, gli studenti possono utilizzare un ridimensionatore di immagini online, come quello disponibile su <https://resizeimage.net/>, per ridimensionare le proprie immagini. In alternativa, possono usare l'attributo [\\`height\\`](/docs/weblab/height/) o [\\`width\\`](/docs/weblab/width/) all'interno del tag [\\`img\\`](/docs/weblab/img/) per ridimensionarlo man mano che la pagina viene caricata.",
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "314d9957-e9b4-45c0-9440-7462d749c5b3": {
@@ -9895,7 +9907,7 @@
           "name": "Sviluppo Web: elementi di stile con CSS",
           "description": "**Transizione:** fai andare gli studenti su Code Studio.",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "8eec073a-68eb-4b40-a842-51b58a4e1e2b": {
@@ -9993,7 +10005,7 @@
         },
         "523e9cfe-861d-487e-b922-43f06047aa06": {
           "tips": [
-            null
+            "**Strategie per il debugging:** mentre gli studenti progettano e implementano le proprie idee di progetto, potrebbero trovarsi con nuovi bug da districare e potresti ritrovarti a guardare un codice completamente sconosciuto mentre gli studenti cercano aiuto per risolvere i loro errori. Per semplificare l'esperienza di debugging, prendi in considerazione le seguenti strategie:\n\n-   Consulta la [Guida per l'insegnante al debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) per alcune domande e strategie comuni per aiutare gli studenti a eseguire il debugging del loro codice\n-   Far seguire agli studenti i passaggi della [Guida dello studente al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) e utilizzare i [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) come primo passo nel processo di debugging. Questo aiuta gli studenti a preparare e comunicare il loro problema prima di chiedere aiuto.\n-   Se gli studenti non l'hanno ancora visto, valuta la possibilità di mostrare il [video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s) alla classe per rafforzare le migliori prassi di debugging.\n\n**Scavare più a fondo:** valuta la possibilità di fornire agli studenti un oggetto con cui parlare come parte del processo di debugging. Questo a volte è noto come debugging di Rubber Duck: puoi saperne di più sul sito web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Progetto del Sito Web"
         },
@@ -10272,7 +10284,7 @@
           "name": "Classi",
           "description": "**Transizione:** fai andare gli studenti su Code Studio.",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "50267ce0-8ebd-4e17-ad3d-5e44db1604da": {
@@ -10378,7 +10390,7 @@
           "name": "Sviluppo Web",
           "description": "\\*\\*Forma i gruppi: \\*\\* dai modo agli studenti di continuare a coppie.\n\n\\*\\*Transizione: \\*\\* fai andare gli studenti a Code Studio.",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "a5a3020f-a679-4d10-8be2-2e66108f91c8": {
@@ -10434,7 +10446,7 @@
         },
         "3a14abd4-7d6f-4742-be18-b32c2faaf3b4": {
           "tips": [
-            null
+            "**Strategie per il debugging:** mentre gli studenti progettano e implementano le proprie idee di progetto, potrebbero trovarsi con nuovi bug da districare e potresti ritrovarti a guardare un codice completamente sconosciuto mentre gli studenti cercano aiuto per risolvere i loro errori. Per semplificare l'esperienza di debugging, prendi in considerazione le seguenti strategie:\n\n-   Consulta la [Guida per l'insegnante al debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) per alcune domande e strategie comuni per aiutare gli studenti a eseguire il debugging del loro codice\n-   Far seguire agli studenti i passaggi della [Guida dello studente al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) e utilizzare i [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) come primo passo nel processo di debugging. Questo aiuta gli studenti a preparare e comunicare il loro problema prima di chiedere aiuto.\n-   Se gli studenti non l'hanno ancora visto, valuta la possibilità di mostrare il [video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s) alla classe per rafforzare le migliori prassi di debugging.\n\n**Scavare più a fondo:** valuta la possibilità di fornire agli studenti un oggetto con cui parlare come parte del processo di debugging. Questo a volte è noto come debugging di Rubber Duck: puoi saperne di più sul sito web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Aggiungi contenuto e HTML"
         },
@@ -10508,6 +10520,9 @@
             "Questo esercizio appare alla fine di ogni unità. **Chiedi ai tuoi studenti di completare questo sondaggio alla fine dell'ultima unità!** Gli studenti devono rispondere al sondaggio solo una volta alla fine del corso.\n\n-   I risultati sono fondamentali per noi (code.org) per sostenere i nostri corsi e apportare miglioramenti.\n-   Ci sarà anche un sondaggio tra gli insegnanti in cui potrai fornire il tuo contributo. Riceverai una notifica via e-mail sul sondaggio per gli insegnanti.\n\n**Istruzioni per sbloccare il sondaggio per studenti:**\\\\ \\[[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)]\\\\ \\[[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\nSe gli studenti fanno clic sul link e visualizzano un messaggio di errore relativo al blocco del sondaggio, segui i passaggi indicati nelle istruzioni precedenti per sbloccare il sondaggio per gli studenti."
           ],
           "progression_name": "Istruzioni per il sondaggio post-corso"
+        },
+        "bc45ee61-2fd4-4754-89b2-4eca64872a39": {
+          "name": "Preparazione per l'unità"
         },
         "2c18236d-898f-423a-945f-b7580dfbb1eb": {
           "description": "**Mostra**  l'immagine del processo di risoluzione dei problemi, che ora include una sezione _Empatizza_ in fondo all'intero processo.\n\n#### Attività sul diario\n\n**Discussione:** abbiamo utilizzato questo processo di risoluzione dei problemi diverse volte durante questo corso. In questa unità, stiamo aggiungendo un nuovo elemento: **Empatizza**. Cosa significa empatizzare? In quale altro posto hai già sentito questo termine?"
@@ -11002,7 +11017,7 @@
         "eab2969e-cf85-4bb7-a74c-1c509d246353": {
           "description": "\\*\\*Preparazione: \\*\\* gli studenti dovrebbero riflettere sull'insieme minimo di funzionalità di cui la loro app avrebbe bisogno per soddisfare le esigenze degli utenti. Questo può essere completato come elenco puntato nella guida alle attività.",
           "tips": [
-            null
+            "**Valutare la congruità dei progetti degli studenti:** gli studenti possono ideare progetti che vanno oltre le competenze che hanno attualmente o che richiederebbero più tempo del tempo assegnato per essere implementati. Invece di chiedere agli studenti di scegliere un progetto diverso, prova a chiedere agli studenti di immaginare una versione più ridotta della loro idea iniziale. Come analogia, se l'idea iniziale degli studenti è il passo \"Corri\", immagina una versione meno intensa che rappresenti come sarebbe il passo \"Cammina\". Se necessario, puoi anche continuare a tornare indietro fino a un passaggio di \"Vai molto lento\". \n\n**Scavando più a fondo:** questo è a volte indicato come \"Prodotto minimo funzionante\" (o MVP, da Minimal Viable Product): puoi saperne di più su questo processo e adattarlo alle tue strategie di progetto leggendo questo articolo: [Che senso ha il MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) di Henrik Kniberg"
           ]
         },
         "1778a84d-41eb-4aaf-b0b6-c1fef83abc09": {
@@ -11441,13 +11456,13 @@
         },
         "0244527b-aac8-48c8-8c0f-02f3c490b4be": {
           "tips": [
-            null
+            "\\*\\*Opzioni di sintesi vocale: \\*\\* il pannello delle istruzioni include due opzioni che possono supportare la comprensione per gli studenti.\n\n-   **Sintesi vocale** che legge ad alta voce le istruzioni per gli studenti\n-   **Microsoft Immersive Reader** che apre un nuovo pannello per le istruzioni e fornisce i controlli per modificare la dimensione del testo, il contrasto o la traduzione in un'altra lingua.\n\n[Clicca qui per saperne di più su queste opzioni](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           ],
           "progression_name": "Costruire una Schermata"
         },
         "73c9926c-51c3-4b0f-969c-b4120379004b": {
           "tips": [
-            null
+            "\\*\\*Utilizzo delle risorse: \\*\\* di seguito puoi trovare consigli per l'utilizzo delle numerose risorse a cui gli studenti vengono introdotti nella lezione. Potresti prendere in considerazione la creazione di un «Grafico delle risorse» per tenere traccia di queste opzioni e aiutare gli studenti a essere autosufficienti man mano che avanzano di livello. \n\n-   \\*\\*Video: \\*\\* guardati in classe, ma gli studenti possono sempre riprenderli.\n-   \\*\\*Scheda aiuto e suggerimenti: \\*\\* questa scheda contiene tutti i video e le guide di riferimento pertinenti per un determinato livello.\n-   \\*\\*Guide di riferimento: \\*\\* contengono testo e diagrammi che spiegano il contenuto. Queste sono intese come utili risorse per gli studenti, non come letture in classe. Sono un buon posto dove andare per la revisione dopo aver appreso i contenuti o quando gli studenti rimangono bloccati nei livelli. Puoi decidere di stamparli e renderli disponibili per gli studenti man mano che superano i livelli.\n-   \\*\\*Documentazione ed esempi: \\*\\* passando il mouse su un blocco verrà mostrata una breve descrizione di ciò che fa il blocco. Facendo clic sul link «Vedi esempi» si aprirà la documentazione relativa a quel blocco. \n-   \\*\\*Istruzioni dell'esercizio: \\*\\* le istruzioni possono introdurre piccoli pezzi di nuovi contenuti. Ogni esercizio presenta una sezione «Fai questo» che spiega cosa dovrebbero fare gli studenti in quell'esercizio. Ponetevi subito l'aspettativa che sia importante leggere queste istruzioni, non solo la sezione «Esegui questa operazione»."
           ],
           "progression_name": "Termina una schermata"
         },
@@ -11564,7 +11579,7 @@
         },
         "18fa3b5b-05e0-44ed-bfb4-609b70d19e3d": {
           "tips": [
-            null
+            "\\*\\*Normalizzazione degli errori e supporto al debugging: \\*\\* man mano che gli esercizi di programmazione diventano più complessi, gli studenti potrebbero ritrovarsi nel codice dei bug che devono risolvere. Se ciò accade frequentemente, questa può essere un'esperienza demoralizzante per gli studenti e può influire sulla loro percezione di sé delle loro capacità in classe. \n\nPer ovviare a ciò, consigliamo di normalizzare i bug e gli errori in quanto si tratta di una circostanza che accade a tutti: è solo una parte del processo. Puoi mostrare agli studenti il nostro [Video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s), che include diversi studenti che normalizzano gli errori e discutono delle strategie di debugging che gli studenti possono utilizzare. Inoltre, prendi in considerazione la possibilità di esporre la [Guida per gli studenti al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) a cui gli studenti possano fare riferimento in tutta l'unità e di avere [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) a disposizione degli studenti."
           ],
           "progression_name": "Aggiungere Schermate"
         },
@@ -11918,117 +11933,165 @@
           ],
           "progression_name": "Istruzioni per il sondaggio post-corso"
         },
+        "c34e82c1-7915-4903-8b84-5bb8e0a93f89": {
+          "name": "Preparazione per l'unità",
+          "description": "**Iniziare con la risoluzione dei problemi:** consigliamo di insegnare le prime tre lezioni dell'[unità di risoluzione dei problemi e informatica](/s/csd1-2022), che introduce il processo di risoluzione dei problemi a cui si fa riferimento durante il corso. Queste lezioni includono anche un sondaggio iniziale che puoi somministrare agli studenti.\n\n**Introduzione a Code.org:** considera la possibilità di guardare la nostra serie di video [Introduzione a Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) per una panoramica su come navigare nei piani delle lezioni, configurare una sezione per la classe e altre importanti funzionalità del Codice. piattaforma org. Ogni video ha anche un articolo di supporto se preferisci leggere o stampare le istruzioni - [clicca qui per saperne di più](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Sviluppo professionale:** se sei interessato a insegnare questo corso, ti consigliamo di completare la risorsa liberamente accessibile [Modulo di sviluppo professionale autonomo di calcolo fisico](https://studio.code.org/courses/self-paced-pl-physical-computing-2022). Il modulo è progettato per essere completato in 2 ore. Non si presume alcuna precedente esperienza con la programmazione o il calcolo fisico.\n\n**Imposta una sezione \"Classe\":** puoi utilizzare una sezione \"Classe\" in Code.org per gestire i tuoi studenti, visualizzare i loro progressi e assegnare un piano di studi personalizzato - [fai clic qui per saperne di più](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nSe utilizzi un sistema di gestione dell'apprendimento, potrebbero essere necessari ulteriori passaggi per sincronizzare le tue classi con Code.org:\n\n-   [Clicca qui](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) per i passaggi per configurare le tue classi con Google Classroom\n-   [Clicca qui](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) per i passaggi per configurare le tue classi con Clever\n\n**Diventa un insegnante verificato:** i piani e gli esercizi delle lezioni hanno risorse aggiuntive e soluzioni per Insegnanti verificati, un processo rapido che verifica la tua posizione in un istituto scolastico. [Fai clic qui per completare un modulo](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) e dovresti avere accesso alle risorse verificate per gli insegnanti in ~1 giorno lavorativo. Gli insegnanti verificati hanno anche accesso alla sezione [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) dei forum.\n\n**Lasciati ispirare:** prendi in considerazione la possibilità di guardare la nostra [playlist di video Suggerimenti per gli insegnanti](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), con gli attuali insegnanti di \"Alla scoperta dell'informatica\".\n\n**Presentazione di Sviluppo App:** questa unità presuppone che gli studenti abbiano già familiarità con Sviluppo App. Se hai studenti che non hanno mai lavorato in Sviluppo App e in modalità di progettazione, prendi in considerazione l'idea di dedicare un po' di tempo in più alla lezione presentando agli studenti un numero sufficiente di Sviluppo App affinché abbiano successo in questa unità. Ad esempio, chiedendo agli studenti di completare l'[Tutorial Sviluppo App - L'ora del codice](https://studio.code.org/s/applab-intro/reset)"
+        },
+        "758cad5b-546e-4cb1-bdad-b0427a309361": {
+          "name": "Preparazione per la lezione",
+          "description": "Gli studenti effettueranno ricerche in Internet sulle innovazioni informatiche. Puoi fornire agli studenti copie della guida [Aree di ricerca sulle innovazioni informatiche](https://docs.google.com/document/d/1X2wAnrEJLFhQeDWiBHbNyMk-D0KCff9T2Bl2LXQ9xbI/edit) agli studenti come supporto alla loro ricerca. Non li abbiamo forniti direttamente agli studenti perché a volte questi siti sono bloccati da programmi di filtraggio distrettuali o l'ultima innovazione degna di nota potrebbe non essere appropriata per la scuola media. **Ti consigliamo vivamente di verificare ogni sito per contenuti inappropriati e di assicurarti che venga caricato sui computer della classe prima di condividerlo con gli studenti.**"
+        },
         "8d4203c0-de71-4a1d-a6cf-407352926263": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "**Discussione:** _quale può essere l'esempio di una volta in cui hai usato un computer che non aveva l'aspetto di un computer o non ti dava la sensazione di esserlo? Pensa ai dispositivi che potresti avere a casa o anche in tasca!_\n\n\\*\\*Obiettivo della discussione: \\*\\* incoraggia gli studenti a considerare i dispositivi informatici come parte delle loro esperienze quotidiane, ad esempio incorporati in un'auto o in un orologio o persino uno schermo tattile (touchscreen) che consente loro di ordinare cibo o bevande in un ristorante. Man mano che gli studenti condividono le risposte, potresti tenere traccia delle loro risposte nella parte anteriore dell'aula e incoraggiarli a proporre nuove idee."
+        },
+        "78d759ba-0ba6-4993-9f93-ac712d7c0e5a": {
+          "description": "I dispositivi informatici sono ovunque intorno a noi, incorporati nei veicoli o nelle nostre tasche o talvolta anche nei nostri vestiti! In questa unità impareremo come creare i nostri dispositivi informatici per risolvere i problemi del mondo che ci circonda."
         },
         "debe9954-34ec-44d2-96c4-69f46dc1bca8": {
-          "name": "Cerca l'ispirazione"
+          "name": "Cerca l'ispirazione",
+          "description": "**Video:** guarda [L'Internet delle Cose - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) o [L'informatica sta cambiando tutto - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY) con tutta la classe.\n\n\\*\\*Domanda del giorno: \\*\\* cos'è un'innovazione informatica?"
         },
         "3f192de3-812a-47fa-af1c-2df33b1c106d": {
-          "name": "Ricerca sull'innovazione"
+          "name": "Ricerca sull'innovazione",
+          "description": "\\*\\*Discussione: \\*\\* \\_che cos'è un'innovazione? Cosa significa per qualcosa essere innovativo? \\_\n\n**Obiettivo della discussione:** questa discussione dovrebbe essere rapida. L'obiettivo principale è che la classe raggiunga una comprensione comune di cosa significhi per qualcosa essere innovativo. Che non è sufficiente che un prodotto abbia un aspetto più elegante rispetto all'ultima versione, ma che innovazione significa fare davvero qualcosa di meglio di prima o fare cose che non sono _mai_ state fatte prima."
+        },
+        "141581a4-43ae-492a-8c65-e35a33702e51": {
+          "description": "\\*\\*Forma i gruppi: \\*\\* forma gruppi di 3-4 studenti\n\n**Distribuisci** copie della guida alle attività\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Ricerca sull'innovazione: \\*\\* presenta la panoramica tratta dalla guida alle attività o dalle diapositive a tutta la classe. Durante questa attività i gruppi di studenti ricercheranno le recenti innovazioni tecnologiche relative a un argomento scelto. Una volta identificate alcune innovazioni interessanti, ne sceglieranno una da analizzare più a fondo e riferire in merito alla classe. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Fai questo:** chiedi agli studenti di scegliere un argomento su cui concentrarsi e di contrassegnarlo nella loro guida alle attività.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ricerca sull'argomento:** presenta la sezione successiva della guida o delle diapositive alle attività in classe. Gli studenti utilizzeranno Internet per ricercare innovazioni informatiche nell'area prescelta.\n\n**Distribuisci** digitalmente copie del volantino \"Aree di ricerca delle innovazioni informatiche\".\n\n\\*\\*Fai questo: \\*\\* trova almeno due innovazioni informatiche relative all'argomento prescelto. Gli studenti possono utilizzare i siti web forniti o cercare in Internet altre fonti affidabili."
         },
         "bd03e02d-5bc6-4e57-a54a-11b04a5c66f6": {
           "tips": [
-            null
+            "**Ricerca da parte degli studenti**: l'obiettivo di questa ricerca è duplice:\n\n-   Innanzitutto, sviluppare una comprensione più profonda di un argomento scelto. In che modo la tecnologia informatica sta cambiando questo campo, quali sono alcuni dei problemi che le persone stanno cercando di risolvere con la tecnologia?\n-   In secondo luogo, identifica una manciata di dispositivi innovativi all'interno di questo argomento. Gli studenti dovrebbero concentrarsi sulla ricerca di dispositivi _hardware_ che potrebbero non sembrare computer, ma che eseguono funzioni informatiche utilizzando ingressi e uscite."
           ]
         },
+        "ff679a3e-70ed-4655-9fad-d049c973f10b": {
+          "name": "Una soluzione innovativa",
+          "description": "Una volta che i gruppi hanno selezionato uno specifico dispositivo innovativo, possono completare la seconda pagina di questa guida alle attività, che chiede loro di fare quanto segue:\n\n-   **Quale problema risolve? :** per alcuni argomenti questo può essere più chiaro (ad esempio i dispositivi sanitari hanno in genere un obiettivo molto specifico), ma per altri gli studenti potrebbero dover riflettere in modo più ampio su ciò che considerano problemi. I dispositivi indossabili più frivoli o le installazioni di arte digitale possono essere più interessati all'espressione personale che alla risoluzione di un problema specifico.\n-   **Cosa c'è di innovativo? :** incoraggia gli studenti a fare riferimento alla precedente discussione sull'innovazione per questo. Può anche essere utile fare un confronto con altri dispositivi trovati durante la fase di ricerca.\n-   **Come interagisci con esso? :** chiedi agli studenti di ripensare al modello del computer _(Ingressi, Uscite, Memoria, Elaborazione)_ introdotto molto tempo fa nell'Unità 1. L'obiettivo qui è identificare in modo specifico gli ingressi e le uscite forniti da un determinato dispositivo: più sono specifici, più facilmente gli studenti saranno in grado di collegare elementi del Circuit Playground a questi dispositivi.\n-   **Qual è l'impatto? :** incoraggia gli studenti a pensare alle persone colpite da questa innovazione. La maggior parte delle innovazioni sono state probabilmente progettate per migliorare la vita di qualcuno e gli studenti possono scrivere sull'impatto che ciò potrebbe avere sugli individui. Ma alcuni dispositivi possono avere conseguenze inaspettate o non intenzionali e gli studenti possono riflettere su come tali conseguenze potrebbero influire sugli individui."
+        },
         "44a7d11e-02bc-4522-b65e-35d4764cb060": {
-          "name": "Condividi"
+          "name": "Condividi",
+          "description": "Concedi un minuto a ogni gruppo per condividere le proprie scoperte. Consulta le attività di approfondimento per trovare modi alternativi di condivisione."
         },
         "f12fbcf7-5d63-4105-a269-f198663ecdfa": {
           "name": "Tenere un diario",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** mostra agli studenti il [Video su circuiti e logica](https://www.youtube.com/watch?v=3wy9EXKhbtU) nelle diapositive. Questo video prefigura ciò che gli studenti sperimenteranno nell'unità, utilizzando un circuito stampato per creare dispositivi per risolvere i problemi. Il momento finale del video - \"Cosa ti piacerebbe fare con tutti questi circuiti?\" - può essere utilizzato come seguito alla discussione del diario di riepilogo.",
           "tips": [
-            null
+            "**Limor Fried e Adafruit Industries:** Limor Fried è il fondatore e CEO di Adafruit Industries, che produce il Circuit Playground utilizzato in questa unità. Per gli studenti alla ricerca di modelli di riferimento che applichino l'informatica in modi creativi o imprenditoriali, prendi in considerazione la possibilità di condividere di più su Limor con i tuoi studenti durante l'unità come [questa intervista con Limor del 2021](https://codeorg.medium.com/5-questions-with-adafruits-limor-fried-f727dd4a8cd0)"
           ]
         },
         "2d9bcccb-deb9-43da-a8d7-c032efe392c2": {
           "description": "\\*\\*Diario: \\*\\* qual è stata la cosa più sorprendente, interessante o impressionante che hai trovato nella tua ricerca? Se potessi sviluppare un'innovazione tutta tua, quale sarebbe?"
         },
         "531dec3a-c36d-4a48-9aad-023569475cf7": {
-          "name": "Il cartellone dell'innovazione"
+          "name": "Il cartellone dell'innovazione",
+          "description": "Chiedi ai gruppi di creare un cartellone che condivida il dispositivo innovativo da loro ricercato. I cartlloni dovrebbero includere:\n\n-   Chi ha inventato il dispositivo\n-   Quale problema stavano cercando di risolvere\n-   Perché è unico o innovativo\n-   Come gli utenti interagiscono con esso (in particolare, quali input richiede e come fornisce output)\n\nConserva questi cartelloni in tutta l'unità affinché gli studenti possano fare riferimento quando iniziano a sviluppare i propri dispositivi informatici fisici."
         },
         "c54ed502-b1d2-4421-9f7d-3b27dd349d46": {
-          "name": "Siti web sull'innovazione"
+          "name": "Siti web sull'innovazione",
+          "description": "Invece di (o in aggiunta ai) tuoi cartelloni, chiedi agli studenti di sviluppare siti web in Sviluppo Web che includano gli stessi contenuti richiesti. Assicurati che gli studenti includano collegamenti ai loro siti web di origine."
         },
         "158db922-b97c-4498-9ebc-d6b3c9763f31": {
-          "name": "Esame della scheda"
+          "name": "Esame della scheda",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Distribuisci: \\*\\* \\*\\*Distribuisci \\*\\* una scheda e un cavo USB a ogni coppia di studenti. Fai sapere agli studenti che non devono ancora collegare le schede.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Discussione: \\*\\* chiedi alle coppie di dedicare un minuto a osservare la scheda, concentrandosi sui dettagli. Cosa pensi che faccia (o possa fare) questa scheda e perché?\n\n\\*\\*Condividi: \\*\\* chiedi ai gruppi di condividere i loro pensieri con l'intero gruppo, tenendo traccia delle idee alla lavagna. Spingi gli studenti a sostenere le loro idee con osservazioni tratte dall'osservazione della scheda, ma non preoccuparti di garantire la correttezza a questo punto. Man mano che gli studenti esaminano questa unità, possono ritoccare e perfezionare questo elenco."
+        },
+        "2260f606-628e-4b23-9620-0e30e9a4bce6": {
+          "description": "Questi dispositivi sono chiamati Circuit Playgrounds. In questa unità, impareremo come aggiungere codice per controllare questi dispositivi. Oggi ci concentreremo sulle **uscite** di questo dispositivo, ovvero le informazioni che un computer o un dispositivo fornisce agli utenti."
+        },
+        "9d915931-896f-44e4-b303-cdc424e94d00": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Glossario: \\*\\*\n\n-   **Uscite (Output)**: le informazioni che i computer forniscono a utenti, dispositivi o altri computer"
+        },
+        "ba08c8f5-a8be-476d-9be8-c0bc9745685b": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Domanda del giorno: \\*\\* quali uscite posso controllare nel circuit playground?"
         },
         "01ae9522-6c73-4653-beb4-2d7fcf1cbff9": {
+          "name": "Collegamento della scheda",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Transizione: \\*\\* Chiedi agli studenti di collegare le loro schede e di andare alla [pagina di configurazione di Maker Toolkit](//studio.code.org/maker/setup) per confermare che il software è stato configurato correttamente.",
           "tips": [
-            null
+            "\\*\\*Risoluzione dei problemi relativi alla bacheca: \\*\\* assicurati che tutti gli studenti siano in grado di configurare correttamente le proprie schede. Se hanno problemi, incoraggiali a collaborare con i colleghi per risolvere il problema con l'aiuto della pagina di configurazione. Gli studenti dovrebbero essere in grado di leggere la pagina e seguire le istruzioni da soli. In caso contrario, spiega loro il processo, ma incoraggiali a risolvere i problemi delle proprie schede nelle lezioni successive."
           ]
+        },
+        "60cc9b73-a9f5-4e7e-a285-976d896cf2d6": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Transizione: \\*\\* fai andare studenti su Code Studio"
         },
         "29b1832f-4872-46da-a270-a41592f155ae": {
           "tips": [
-            null
+            "\\*\\*Opzioni di sintesi vocale: \\*\\* il pannello delle istruzioni include due opzioni che possono supportare la comprensione per gli studenti.\n\n-   **Sintesi vocale** che legge ad alta voce le istruzioni per gli studenti\n-   **Microsoft Immersive Reader** che apre un nuovo pannello per le istruzioni e fornisce i controlli per modificare la dimensione del testo, il contrasto o la traduzione in un'altra lingua.\n\n[Clicca qui per saperne di più su queste opzioni](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
           ],
           "progression_name": "Configurazione"
         },
         "b7ad2587-c022-4e9e-8bcd-2e0d1b15e41f": {
           "tips": [
-            null,
+            "**Agevolare gli esercizi di previsione:** gli esercizi di previsione sono una grande opportunità per gli studenti di pensare in modo critico al codice e partecipare a discussioni in classe. Prendi in considerazione l'idea di chiedere agli studenti di pensare alla propria previsione e discuterne con un compagno prima di digitare la propria risposta. Una volta che hanno eseguito il programma, riunisci la classe per una discussione di gruppo per discutere in che modo le loro previsioni erano simili o diverse dal programma risultante. Usa questa come un'opportunità per affrontare eventuali idee sbagliate che gli studenti potrebbero aver avuto inizialmente sul codice.\n\n**Attenzione: le voci della previsione non possono essere eliminate!** Una volta inserita una risposta nella casella della previsione, non è possibile reimpostarla. Ciò può rendere difficile ripetere questo processo con più classi. Invece, ti consigliamo di inserire un testo fittizio come \"Discussione di classe\" ed eseguire il programma. In questo modo, la risposta non è \"viziata\" per le lezioni future. Tuttavia, ciò significa che dovrai tenere traccia delle previsioni separatamente, ad esempio su una lavagna o in un documento.\n\n**Scavando più a fondo:** per ulteriori suggerimenti sugli esercizi di programmazione, consulta la [Guida agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per facilitare gli esercizi di programmazione con gli studenti.",
             "Facendo clic sul pulsante sullo schermo, il codice accenderà un piccolo LED rosso vicino alla porta USB di Circuit Playground. È probabile che gli studenti si aspettino che sia una delle luci LED più grandi ad accendersi, per cui potrebbero non notare subito il LED rosso più piccolo."
           ],
           "progression_name": "Predict"
         },
         "8521baa9-94ef-4752-ad13-09bacfd132d6": {
           "tips": [
-            null
+            "**Semplificare gli esercizi di sviluppo delle abilità:**  gli esercizi di sviluppo delle abilità sono progettati per continuare a insegnare nuove abilità e blocchi attraverso l'esplorazione, tentativi ed errori e utilizzando esempi funzionanti dal codice preimpostato. Gli studenti stanno ancora acquisendo familiarità con i concetti della lezione e avranno bisogno di un forte supporto durante questi esercizi per acquisire sicurezza, eseguire il debugging del loro codice e consolidare la loro comprensione.\n\nPrendi in considerazione la possibilità che gli studenti completino  gli esercizi di sviluppo delle abilità in coppia utilizzando la **Programmazione in coppia**, che consente agli studenti di utilizzare un computer e scambiare tra l'essere un pilota o un navigatore. Questo processo è evidenziato in [questo video](https://www.youtube.com/watch?v=q7d_JtyCq1A), che puoi mostrare alla classe. Puoi fare in modo che gli studenti cambino ruolo in base a un timer o cambino ogni volta che completano un esercizio.\n\n**Scavando più a fondo:** per ulteriori suggerimenti sugli esercizi di programmazione, consulta la [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per facilitare gli esercizi di programmazione con gli studenti."
           ],
           "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "a184074d-7a79-46a5-892f-8aeff5829c19": {
           "tips": [
-            "Questo codice usa il cicalino di Circuit Playground per produrre un suono. Il primo numero nel blocco di frequenze controlla la nota del cicalino: numeri bassi producono note più basse e numeri alti producono suoni a frequenza più alta. Gli studenti esploreranno tali frequenze nei prossimi livelli"
+            "Questo codice usa il cicalino di Circuit Playground per produrre un suono. Il primo numero nel blocco di frequenze controlla la nota del cicalino: numeri bassi producono note più basse e numeri alti producono suoni a frequenza più alta. Gli studenti esploreranno tali frequenze nei prossimi esercizi"
           ],
           "progression_name": "Predict"
         },
         "010e456f-614d-48fe-a5bc-05ba548140ba": {
           "tips": [
-            null
+            "\\*\\*Utilizzo delle risorse: \\*\\* di seguito puoi trovare consigli per l'utilizzo delle numerose risorse a cui gli studenti vengono introdotti nella lezione. Potresti prendere in considerazione la creazione di un «Grafico delle risorse» per tenere traccia di queste opzioni e aiutare gli studenti a essere autosufficienti man mano che avanzano di livello. \n\n-   \\*\\*Video: \\*\\* guardati in classe, ma gli studenti possono sempre riprenderli.\n-   \\*\\*Scheda aiuto e suggerimenti: \\*\\* questa scheda contiene tutti i video e le guide di riferimento pertinenti per un determinato livello.\n-   \\*\\*Guide di riferimento: \\*\\* contengono testo e diagrammi che spiegano il contenuto. Queste sono intese come utili risorse per gli studenti, non come letture in classe. Sono un buon posto dove andare per la revisione dopo aver appreso i contenuti o quando gli studenti rimangono bloccati nei livelli. Puoi decidere di stamparli e renderli disponibili per gli studenti man mano che superano i livelli.\n-   \\*\\*Documentazione ed esempi: \\*\\* passando il mouse su un blocco verrà mostrata una breve descrizione di ciò che fa il blocco. Facendo clic sul link «Vedi esempi» si aprirà la documentazione relativa a quel blocco. \n-   \\*\\*Istruzioni dell'esercizio: \\*\\* le istruzioni possono introdurre piccoli pezzi di nuovi contenuti. Ogni esercizio presenta una sezione «Fai questo» che spiega cosa dovrebbero fare gli studenti in quell'esercizio. Ponetevi subito l'aspettativa che sia importante leggere queste istruzioni, non solo la sezione «Esegui questa operazione»."
           ],
           "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "e8a29551-e19b-47bd-9263-f1c1a08575ff": {
           "tips": [
-            null
+            "**Semplificare gli esercizi di pratica:** gli esercizi di pratica sono progettati per consentire agli studenti di applicare le conoscenze degli esercizi precedenti e sviluppare fluidità nell'uso dei nuovi blocchi di codice per risolvere i problemi. Gli studenti possono scegliere quali esercizi di pratica desiderano completare e non è necessario che uno studente completi ogni esercizio di pratica prima di continuare.\n\nGli studenti tendono ad essere più coinvolti e rispondono meglio quando hanno una scelta autentica su come continuare il loro apprendimento. Consentire agli studenti di scegliere gli esercizi di pratica in base ai loro interessi e al livello di comfort e considerare di fornire opportunità agli studenti di dimostrare e spiegare le loro soluzioni agli esercizi di pratica che hanno scelto all'intera classe.\n\n**Scavando più a fondo:** per ulteriori suggerimenti sugli esercizi di programmazione, consulta la [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per semplificare gli esercizi di programmazione con gli studenti."
           ],
           "progression_name": "Applicazioni pratiche"
         },
         "287099bd-5275-4c84-88bc-f7c5d93e99c8": {
           "tips": [
-            null
+            "**Esercizi di valutazione facilitanti:** gli esercizi di valutazione contengono un singolo compito che richiede l'applicazione delle abilità e dei concetti del livello per poter essere risolto. Gli studenti dovrebbero completare questi esercizi individualmente e tu puoi usare il tuo giudizio su quanto aiuto esterno gli studenti dovrebbero avere. Gli esercizi di valutazione contengono anche una tabella di valutazione che può essere utilizzata per la valutazione formativa e un riquadro per fornire riscontri agli studenti - [clicca qui per saperne di più sull'uso delle tabelle di valutazione e sul riscontro agli studenti](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n**Scavare più a fondo:** per ulteriori suggerimenti sulla valutazione del lavoro degli studenti, consulta la [Guida alla valutazione](https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview)."
           ],
           "progression_name": "Valutazione"
         },
         "6b3acaa2-c6c8-40b4-ad1c-f764207be9a2": {
           "tips": [
-            null
+            "**Esercizi di sfida facilitanti:** gli esercizi di sfida sono concepiti come estensioni dei concetti e delle abilità che gli studenti apprendono durante una lezione. Gli esercizi di sfida tendono a concentrarsi su attività più aperte che gli studenti devono completare o opportunità di combinare insieme diverse abilità delle lezioni precedenti in un unico programma.\n\nGli esercizi di sfida **non** devono essere completati affinché gli studenti raggiungano gli obiettivi principali di una lezione. Al contrario, ogni attività in un esercizio di sfida ha lo scopo di integrare e arricchire gli obiettivi di apprendimento di una lezione, ma non è richiesta per le lezioni future. Gli studenti possono ancora dimostrare la padronanza degli obiettivi di una lezione senza completare nessuno degli esercizi di sfida.\n\n**Scavando più a fondo:** per ulteriori suggerimenti sugli esercizi di programmazione, consulta la [Guida agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e best practice per facilitare gli esercizi di programmazione con gli studenti."
           ],
           "progression_name": "Sfida"
         },
         "979f2b9a-28af-4ca1-97ad-25518f118554": {
-          "name": "Cosa c'è in una scheda"
+          "name": "Cosa c'è in una scheda",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Diario di bordo: \\*\\* chiedi agli studenti di riflettere sulla loro introduzione al Circuit Playground. Cosa pensavano fosse alla prima osservazione? Come sono cambiate queste aspettative dopo la programmazione sulla scheda?"
         },
         "80e62e03-08c7-4553-8995-a653f347ae6c": {
-          "name": "Aggiornamento delle proprietà degli elementi dell'interfaccia utente"
+          "name": "Aggiornamento delle proprietà degli elementi dell'interfaccia utente",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Mostra** agli studenti questa immagine di esempio\n\n<img alt=\"\" src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/diamond.png\" style=\"max-width: 200px;\">"
+        },
+        "85c76988-52f8-4b49-aba7-1b42dcf9d133": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discussione:** _come spiegheresti a qualcun altro come ricreare questa schermata? Quali dettagli specifici ci sarebbe bisogno di sapere su ogni elemento di progettazione?_"
+        },
+        "d6856e5d-6a94-4fe4-b6ab-7e3a38046423": {
+          "description": "\\*\\*Obiettivo della discussione: \\*\\* l'obiettivo di questa discussione è indurre gli studenti a riflettere sulle _proprietà_ dei vari elementi di progettazione che, più avanti in questa lezione, impareranno a modificare con il codice. Gli studenti dovrebbero fare affidamento sulle loro esperienze precedenti con la Modalità interfaccia e, se necessario, puoi utilizzarla per ripassare Sviluppo App."
         },
         "9ae0e497-0968-45f0-aa40-82f5d1d01712": {
           "description": "**Transizione:** fai andare gli studenti su Code Studio",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "c77e40a7-1e58-48b3-a333-c458c9983ef8": {
           "tips": [
-            "Gli studenti hanno familiarità con la modalità Interfaccia per configurare l'interfaccia utente della loro app, ma questo livello introduce come modificare gli elementi di design con il codice. Gli studenti possono passare il mouse sugli elementi per visualizzare i propri ID e utilizzarli per formulare ipotesi. Quando premono Esegui, il codice verrà eseguito lentamente ed evidenzierà ogni riga durante l'esecuzione in modo che gli studenti possano vedere passo dopo passo cosa fa ciascuna riga. Questo può essere utile quando si discute della loro previsione e si associa il risultato a righe di codice specifiche.",
-            null
+            "Gli studenti hanno familiarità con la modalità Interfaccia per configurare l'interfaccia utente della loro app, ma questo esercizio introduce come modificare gli elementi di progettazione con il codice. Gli studenti possono passare il mouse sugli elementi per visualizzare i propri ID e utilizzarli per formulare ipotesi. Quando premono Esegui, il programma verrà eseguito lentamente ed evidenzierà ogni riga durante l'esecuzione in modo che gli studenti possano vedere passo dopo passo cosa fa ciascuna riga. Questo può essere utile quando si discute della loro previsione e si associa il risultato a righe di codice specifiche.",
+            "**Ripasso della Modalità interfaccia:** se gli studenti necessitano di una revisione della Modalità interfaccia e degli eventi in Sviluppo App, potresti mostrare agli studenti i seguenti video:\n\n-   [Introduzione alla Modalità interfaccia](https://youtu.be/jiX1dST2PCw)\n-   [Eventi in Sviluppo App](https://youtu.be/npa2r4t6y2A)\n\nCome risorsa continuativa per gli studenti, prendi in considerazione la possibilità di stampare o visualizzare le seguenti pagine della guida e dei suggerimenti per gli studenti:\n\n-   [Modalità Interfaccia](https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing)\n-   [Elementi della Modalità Interfaccia](https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing)\n-   [Risposta all'input dell'utente](https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view)\n-   [Modificare le schermate](https://drive.google.com/file/d/1d9yygBuMPaCOPP3fraA3oacuy_RD9iNB/view)"
           ],
           "progression_name": "Predict"
         },
         "a0549135-da45-4397-be95-1aad863b37d2": {
           "tips": [
-            null
+            "\\*\\*Normalizzazione degli errori e supporto al debugging: \\*\\* man mano che gli esercizi di programmazione diventano più complessi, gli studenti potrebbero ritrovarsi nel codice dei bug che devono risolvere. Se ciò accade frequentemente, questa può essere un'esperienza demoralizzante per gli studenti e può influire sulla loro percezione di sé delle loro capacità in classe. \n\nPer ovviare a ciò, consigliamo di normalizzare i bug e gli errori in quanto si tratta di una circostanza che accade a tutti: è solo una parte del processo. Puoi mostrare agli studenti il nostro [Video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s), che include diversi studenti che normalizzano gli errori e discutono delle strategie di debugging che gli studenti possono utilizzare. Inoltre, prendi in considerazione la possibilità di esporre la [Guida per gli studenti al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) a cui gli studenti possano fare riferimento in tutta l'unità e di avere [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) a disposizione degli studenti."
           ],
           "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
@@ -12044,18 +12107,34 @@
         "13854569-d199-4944-9138-df8a3280a762": {
           "progression_name": "Sfida"
         },
+        "28603b64-114b-4ff5-9a65-dde73bb48d23": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Discussione: \\*\\* _immagina di creare un'app e di dover rappresentare un «errore» per l'utente. Pensando alla lezione di oggi e a quella di ieri, come possiamo mostrare un «errore» all'utente sia sulla schermata sia sul Circuit Playground?_"
+        },
+        "ed01a263-90a0-4577-8ebc-07ecd7d82378": {
+          "description": "\\*\\*Condividi: \\*\\* chiedi agli studenti di condividere le proprie conclusioni prima con un compagno e successivamente con tutta la classe"
+        },
+        "24a76b75-3cc8-41d1-8e75-d61f881aecfc": {
+          "description": "\\*\\*Obiettivo della discussione: \\*\\* gli studenti dovrebbero fare una riflessione libera sulla varietà di opzioni che possono utilizzare per rappresentare agli utenti la presenza di un errore. Ad esempio:\n\n-   Modifica del colore rosso del testo o dello sfondo\n-   Far suonare il  Circuit Playground\n-   Accendere il LED rosso del Circuit Playground\n-   Modificareil testo sullo schermo per dire «Errore!»"
+        },
         "5d1b708b-4fde-4870-b927-291058ef8f1b": {
-          "name": "Esame della scheda: ingressi (input)"
+          "name": "Esame della scheda: ingressi (input)",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribuisci** una scheda e un cavo USB per ciascuna coppia di studenti. Fai sapere agli studenti che non devono ancora collegare le schede.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Discussione: \\*\\* chiedi alle coppie di passare un minuto a guardare al di là della scheda, concentrandosi sui potenziali dispositivi di input. In base a ciò che già sai di questa scheda, come pensi che potresti usarla per ottenere input?\n\n\\*\\*Condivisione: \\*\\* fai in modo che i gruppi condividano i loro pensieri con l'intero gruppo, tenendo traccia delle idee sulla scheda. Spingi gli studenti a sostenere le loro idee con prove derivanti dalla revisione della scheda, ma non preoccuparti di garantire la correttezza a questo punto.\n\n\\*\\*Obiettivo della discussione: \\*\\* gli studenti noteranno probabilmente i pulsanti sul parco giochi del circuito. Gli studenti possono anche notare il piccolo cursore al centro del parco giochi del circuito che si muove avanti e indietro. Se gli studenti non li affrontano, assicurati di parlarne. Gli studenti possono anche chiedere informazioni sui piccoli tamponi sull'anello esterno del parco giochi del circuito, oppure possono notare le icone occhio/orecchi/temperatura sull'area giochi del circuito per i diversi sensori. Entrambi questi sono tipi di input che verranno discussi nelle lezioni successive: se gli studenti ne parlano, riconoscili ma fai sapere agli studenti che li approfondiremo nelle lezioni future."
+        },
+        "a3a90c8a-c783-4d6d-bf0d-eac6a2777e62": {
+          "description": "Finora, abbiamo imparato a controllare l' **uscita** solo dal Circuit Playground. Oggi impareremo a usare gli **ingressi** del Circuit Playground, come i pulsanti e l'interruttore a levetta. Gli ingressi (input) sono il modo in cui il dispositivo ottiene le informazioni dall'utente."
+        },
+        "6549edf8-3599-427e-9e5e-2f4808400694": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Glossario: \\*\\*\n\n-   \\*\\*Ingressi (input): \\*\\* le informazioni che i computer ottengono da utenti, dispositivi o altri computer"
         },
         "d95e3c69-5b66-4c2c-a137-0fa48ecf0dfc": {
           "description": "**Transizione:** fai andare gli studenti su Code Studio",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "0570736b-7259-4187-8305-3dabf7ee65a8": {
           "tips": [
-            null
+            "Questo programma utilizza un evento per rilevare l'input dell'utente, ma attende un evento sul Circuit Playground anziché sullo schermo. Quando gli studenti eseguono il programma, non accadrà nulla finché non premeranno il pulsante sinistro nel Circuit Playground. Una volta fatto, il LED rosso si accenderà. Se le schede degli studenti non funzionano, [premi il pulsante Configurazione](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG) nell'app Maker o visita <https://studio.code.org/maker/setup> su un Chromebook."
           ],
           "progression_name": "Predict"
         },
@@ -12075,22 +12154,30 @@
           "progression_name": "Sfida"
         },
         "72e4fac8-226c-4ec8-a4f3-fa1395962cf8": {
-          "name": "Diario 3-2-1"
+          "name": "Diario 3-2-1",
+          "description": "1.  Quali sono i tre tipi di eventi della scheda che hai visto finora?\n2.  Descrivi due diverse situazioni e come avrebbero bisogno di due **diversi** eventi.\n3.  Qual è un altro evento che non hai ancora imparato, ma che pensi possa esistere?"
+        },
+        "a9f3574f-f70c-40fe-a8e0-42f71f5a7a2e": {
+          "description": "**Obiettivo della discussione:** gli studenti dovrebbero operare scelte consapevoli per quando un evento della scheda potrebbe essere preferibile rispetto a un altro. Potresti voler fare una breve discussione in classe prima o dopo questa discussion con il diario per evidenziare i vantaggi e gli svantaggi di ogni tipo di evento. "
+        },
+        "1021739d-d149-4dbb-896c-8a6fd1c3c674": {
+          "description": "**Distribuisci**  una scheda e un cavo USB per ciascuna coppia di studenti. Fai sapere agli studenti che non devono ancora collegare le schede."
         },
         "427d8899-405a-4266-af95-9af17e1fe006": {
+          "description": "\\*\\*Transizione a Code Studio: \\*\\* chiedi agli studenti di iniziare subito a usare Code Studio",
           "tips": [
-            null
+            "\\*\\*Iniziare subito: \\*\\* questa lezione è ricca di nuovi contenuti e include diversi video che aiutano a far conoscere agli studenti alcune nuove idee. Per concedere agli studenti tutto il tempo possibile per mettere in pratica questi nuovi concetti, consigliamo di passare direttamente a Code Studio e iniziare la lezione da lì."
           ]
         },
         "94238b4f-60fa-4645-8cd3-13120815edef": {
           "description": "**Transizione:** fai andare gli studenti su Code Studio",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "e9d45b03-0bff-41bc-9727-8e21f8f0256a": {
           "tips": [
-            null
+            "Gli studenti dovrebbero notare che i nomi nei blocchi di istruzione `var` sono ripetuti nel programma. Potrebbero immaginare che i numeri assegnati a questi nomi in alto verranno sostituiti più in basso nel codice. Anche se gli studenti non sono sicuri di come sarà lo schermo, potrebbero essere più sicuri che i rettangoli avranno tutti lo stesso aspetto perché hanno la stessa larghezza e altezza"
           ],
           "progression_name": "Predict"
         },
@@ -12099,31 +12186,31 @@
         },
         "a0f4ad44-579c-4404-8ba2-bcb19e459e0c": {
           "tips": [
-            null
+            "\\*\\*Opzioni per guardare i video: \\*\\* i video possono essere una buona opportunità per riunire in gruppo la classe e assicurarsi che tutti ricevano le stesse informazioni prima di procedere con la lezione. I video sono inclusi nella raccolta di diapositive degli insegnanti per essere guardati in classe, ma sono inclusi anche come esercizi individuali se gli studenti devono guardarli individualmente in un secondo momento. Consigliamo di guardare i video in classe quando possibile e di consentire agli studenti di discutere e sintetizzare gli argomenti con i compagni o con tutta la classe.\n\n\\*\\*Ripasso del video: \\*\\* dopo aver visto il video, valuta la possibilità di stampare o visualizzare la risorsa didattica corrispondente inclusa come PDF nelle risorse per gli studenti del piano della lezione. Questo può essere un utile spunto visivo per gli studenti mentre continuano a lavorare su esercizi che richiedono loro di applicare ciò che hanno appreso dal video, oppure può essere utilizzato in una discussione in classe per riassumere e chiarire il contenuto del video. Puoi anche ricordare agli studenti che queste risorse sono disponibili nella scheda \"Aiuto e suggerimenti per i singoli esercizi\"."
           ],
-          "progression_name": "Video: Variabili"
+          "progression_name": "Video - Variabili"
         },
         "c8cebe3f-35da-44ac-9cc6-29190c5b6544": {
           "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "64e9d8c1-f351-4dec-b424-f4c03bd5324a": {
           "tips": [
-            null
+            "\\*\\*Ripasso del video: \\*\\* dopo aver visto il video, valuta la possibilità di stampare o visualizzare la corrispondente risorsa didattica inclusa come PDF nelle risorse per gli studenti del piano della lezione. Questo può essere un utile spunto visivo per gli studenti mentre continuano a lavorare su esercizi che richiedono loro di applicare ciò che hanno appreso dal video, oppure può essere utilizzato in una discussione in classe per riassumere e chiarire il contenuto del video. Puoi anche ricordare agli studenti che queste risorse sono disponibili nella scheda \"Aiuto e suggerimenti per i singoli esercizi\"."
           ],
-          "progression_name": "Video: Lo Schema di Conteggio"
+          "progression_name": "Video - Lo schema a contatore"
         },
         "99737e58-9db8-43d5-8437-03794c232a9c": {
           "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
         "314cd764-1846-45e2-951b-1fc00d8b5aed": {
           "tips": [
-            null
+            "\\*\\*Ripasso del video: \\*\\* dopo aver visto il video, valuta la possibilità di stampare o visualizzare la corrispondente risorsa didattica inclusa come PDF nelle risorse per gli studenti del piano della lezione. Questo può essere un utile spunto visivo per gli studenti mentre continuano a lavorare su esercizi che richiedono loro di applicare ciò che hanno appreso dal video, oppure può essere utilizzato in una discussione in classe per riassumere e chiarire il contenuto del video. Puoi anche ricordare agli studenti che queste risorse sono disponibili nella scheda \"Aiuto e suggerimenti per i singoli esercizi\"."
           ],
-          "progression_name": "Video: Istruzioni If"
+          "progression_name": "Video - Istruzioni condizionali `If`"
         },
         "c9fa6f0e-80c5-4009-b74a-8bc73095ecbe": {
           "tips": [
-            null
+            "Gli studenti dovrebbero notare che entrambe le istruzioni condizionali if utilizzano il valore 315 e alcuni studenti potrebbero usare il cursore del mouse per passare con il mouse sull'app e notare che 315 è vicino all'orizzonte creato dalle colline e dagli alberi. Gli studenti dovrebbero anche notare che lo sfondo cambia tra due colori diversi: arancione e grigio. Collegando queste due osservazioni, gli studenti potrebbero prevedere che questo cambierà quando il «sole tramonterà» dietro l'orizzonte, cambiando colore tra il giorno (arancione) e la notte (grigio)."
           ],
           "progression_name": "Predict"
         },
@@ -12141,61 +12228,104 @@
         },
         "e027da7e-461e-4ad1-b60c-145a373dccb0": {
           "name": "Diario",
+          "description": "**Discussione:** \n\n1.  Qual è stato un momento di oggi in cui ti sei sentito di successo?\n2.  Qual è una domanda o un dubbio che hai ancora oggi?\n\nChiedi agli studenti di scrivere le loro risposte nel proprio diario. Possono anche condividere una delle loro risposte con te mentre alla fine della giornata, oppure puoi controllare i loro diari in un secondo momento.",
           "tips": [
-            null
+            "**Valutazione formativa:** in questa lezione gli studenti potrebbero smarrirsi o confondersi e non sentirsi a proprio agio a parlare, soprattutto se altri studenti della classe hanno già avuto esperienze con le variabili e le istruzioni condizionali `if`. Usa questa discussione per determinare se hai bisogno di parlare con gli studenti in una lezione successiva o ripassare un concetto di oggi. Ciò è particolarmente vero se gli studenti dispongono di diversi esercizi di esperienza con la programmazione prima di questa unità."
           ]
         },
         "72e7af03-6898-41fa-98c5-b6904a035199": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Discussione: \\*\\* \\_pensa a un momento in cui hai avuto bisogno di raccogliere dati per risolvere un problema o rispondere a una domanda o quando vengono raccolti dati su di te. Come sono stati raccolti quei dati? Cosa è successo a quei dati? \\_"
+        },
+        "cee762df-3912-4192-b551-523624095f28": {
+          "description": "\\*\\*Girando tra i banchi: \\*\\* auspicabilmente gli studenti penseranno ai modi in cui i loro telefoni o altri dispositivi raccolgono dati su di loro, come completare un sondaggio o controllare un contapassi o quando un'auto tiene traccia di quante miglia ha percorso qualcuno. Gli studenti possono anche pensare a situazioni in cui vengono raccolti dati su di loro, ad esempio quando vengono ripresi in video o quando usano una carta di credito."
+        },
+        "8c171e78-a740-46e7-8b03-fa5339eab7a1": {
+          "description": "\\*\\*Condividi: \\*\\* chiedi agli studenti di condividere le loro risposte con un compagno e poi di condividerle con tutta la classe"
+        },
+        "e4cfe184-e9df-425a-8a67-78e5317167c0": {
+          "description": "\\*\\*Obiettivo della discussione: \\*\\* mentre gli studenti condividono le risposte, evidenzia che di solito esiste un dispositivo che effettua la raccolta dei dati e quindi esiste un servizio separato che analizza o prende decisioni su tali dati. Ad esempio, un orologio può raccogliere dati sulla frequenza cardiaca e quindi un'app sul telefono indica quante calorie hai consumato. Oppure puoi rispondere a una domanda del sondaggio e poi vedere i dati di tutte le persone che hanno risposto alla stessa domanda."
+        },
+        "80e05042-31cc-44d9-8f63-c0d96be74743": {
+          "description": "Oggi completeremo un progetto in cui progettiamo un'app che utilizza il Circuit Playground per raccogliere dati e quindi utilizza un'app per prendere una decisione o fornire un consiglio basato su tali dati. "
         },
         "9c7a93a7-6a81-4360-9284-736ae07012e2": {
+          "description": "\\*\\*App di esempio: \\*\\* mostra agli studenti una o due delle app di esempio come modello di ciò che gli studenti possono creare. Questo può aiutare a stimolare le idee e fornire agli studenti un modello su cosa lavorare quando realizzano i propri dispositivi. Poiché gli studenti iniziano questo progetto abbozzando le loro idee su carta, consigliamo di non distribuire Circuit Playground e di far sperimentare direttamente gli studenti. Invece, può essere meglio fare una dimostrazione a tutta la classe e discutere insieme delle app.",
           "tips": [
-            null
+            "\\*\\*Esempi aggiuntivi: \\*\\* puoi decidere di estendere questi esempi a questioni rilevanti per la tua comunità locale: ad esempio, invece di esaminare gli uccelli, potrebbe essere più appropriato collegare questa app al rilevamento della vita marina o della fauna del deserto. Valuta se ci sono iniziative locali nella loro fase di «raccolta dati/sondaggio» che potrebbero essere un esempio anche per gli studenti\n\n\\*\\*Collegamento alla società civil: \\*\\* la raccolta di dati relativi a sondaggi o località per formulare una raccomandazione o creare una narrazione è una pratica comune tra i geografi che utilizzano il software Geographic Information Mapping (GIS). Ogni anno viene organizzato un concorso per studenti con [i vincitori dei concorsi precedenti, indicati qui](https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/contest/gallery/archive) : potresti decidere di mostrare agli studenti alcuni di questi progetti come esempi di come il prototipo che costruiranno potrebbe portare a un'applicazione più pratica"
           ]
+        },
+        "9be3201f-e2fd-45b2-9ffe-e7c291414cf0": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Domanda del giorno: \\*\\* come posso utilizzare eventi e variabili per realizzare un'app che raccoglie e analizza i dati?"
         },
         "1ae47ba4-9015-40e9-93fd-605c972cdf5d": {
           "tips": [
-            null
+            "\\*\\*Facilitazione dei mini-progetti: \\*\\* i mini-progetti fungono da punti di controllo nei piani di studi e coprono il sottoinsieme di competenze che gli studenti hanno visto finora nell'unità. Sono progettati per 1-2 giorni di implementazione per verificare il livello di comprensione dei contenuti del corso da parte degli studenti fino ad ora. Potresti decidere di estendere questi progetti per sostenere o sfidare gli studenti, il che potrebbe consentirti di ripassare concetti difficili o sostenere gli studenti che potrebbero aver perso le lezioni e stanno cercando di recuperare il ritardo. Tuttavia, consigliamo di decidere in anticipo e di concordare con gli studenti quanto tempo hanno a disposizione per ogni progetto, altrimenti è facile che i progetti si trascinino a più giorni e che il lavoro degli studenti vada oltre l'ambito di questo progetto."
           ]
         },
         "68996d30-3dce-47d9-86e1-678c8164023b": {
           "name": "Introduzione",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Distribuzione: \\*\\* (opzionale) distribuisci copie della guida al progetto. Gli studenti lo useranno per pianificare il loro progetto e includeranno elementi che possono essere utilizzati per la valutazione alla fine del progetto.",
           "tips": [
-            null
+            "\\*\\*Facilitazione dei progetti di gruppo: \\*\\* se gli studenti lavorano in coppia o in piccoli gruppi per completare i progetti, valuta la possibilità di mostrare questi due video alla classe:\n\n-   [Come funziona il lavoro di squadra](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Gestione dei disaccordi](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nA seconda degli obiettivi che ti prefiggi con questo progetto, considera la possibilità di far completare ai gruppi una [Guida per studenti alla pianificazione del gruppo](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), che rafforza il messaggio nel video"
           ]
         },
+        "e0ae7af5-a11e-4120-b28d-c1912c57a55b": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **DIapositive**: presenta una panoramica del progetto e dei passaggi che gli studenti intraprenderanno per completarlo. Sono disponibili diverse diapositive per aiutare a spiegare il progetto.\n\n\\*\\*(Opzionale) Riflessione in classe: \\*\\* prima di immergerti nei singoli progetti, prendi in considerazione la possibilità di condurre una riflessione libera in classe su come potrebbero essere alcuni progetti di esempio che soddisfano questi criteri. Puoi anche decidere di mostrare una o due delle app esemplari per ispirare la riflessione. Utilizzando queste idee, gli studenti potrebbero trovare più facile attingere a un'idea iniziale per il loro progetto"
+        },
         "d9a7fab9-6627-440f-b25d-e3449cf96b97": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Transizione: \\*\\* fai andare gli studenti su Code Studio.",
           "tips": [
-            null
+            "**Valutare la congruità dei progetti degli studenti:** gli studenti possono ideare progetti che vanno oltre le competenze che hanno attualmente o che richiederebbero più tempo del tempo assegnato per essere implementati. Invece di chiedere agli studenti di scegliere un progetto diverso, prova a chiedere agli studenti di immaginare una versione più ridotta della loro idea iniziale. Come analogia, se l'idea iniziale degli studenti è il passo \"Corri\", immagina una versione meno intensa che rappresenti come sarebbe il passo \"Cammina\". Se necessario, puoi anche continuare a tornare indietro fino a un passaggio di \"Vai molto lento\". \n\n**Scavando più a fondo:** questo è a volte indicato come \"Prodotto minimo funzionante\" (o MVP, da Minimal Viable Product): puoi saperne di più su questo processo e adattarlo alle tue strategie di progetto leggendo questo articolo: [Che senso ha il MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) di Henrik Kniberg"
           ]
         },
         "87d4f205-868c-44e3-9823-c97b03c967fd": {
           "name": "Code Studio",
           "tips": [
-            null
+            "\\*\\*Visualizzazione dei progetti di esempio: \\*\\* l'ultimo esercizio di questa sequenza include 3 progetti di esempio dell'esercizio nella sezione «Solo per insegnanti». Poiché questi progetti utilizzano Circuit Playground, devono essere eseguiti nell'app Maker su computer Windows e Mac. Se desideri vedere questi esempi funzionanti con un Circuit Playground, ti consigliamo di osservare questi esercizi e fare clic sui link all'interno dell'app Maker anziché visualizzarli dal programma della lezione."
           ],
-          "progression_name": "App di Field Collector"
+          "progression_name": "App di recupero crediti"
+        },
+        "3e9609bb-ec97-4cd3-8648-e8b04256ca92": {
+          "description": "**Strategie per il debugging:** mentre gli studenti progettano e implementano le proprie idee di progetto, potrebbero trovarsi con nuovi bug da districare e potresti ritrovarti a guardare un codice completamente sconosciuto mentre gli studenti cercano aiuto per risolvere i loro errori. Per semplificare l'esperienza di debugging, prendi in considerazione le seguenti strategie:\n\n-   Consulta la [Guida per l'insegnante al debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) per alcune domande e strategie comuni per aiutare gli studenti a eseguire il debugging del loro codice\n-   Far seguire agli studenti i passaggi della [Guida dello studente al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) e utilizzare i [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) come primo passo nel processo di debugging. Questo aiuta gli studenti a preparare e comunicare il loro problema prima di chiedere aiuto.\n-   Se gli studenti non l'hanno ancora visto, valuta la possibilità di mostrare il [video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s) alla classe per rafforzare le migliori prassi di debugging."
         },
         "cdba4023-5235-4505-8c9e-903e45be9ca4": {
+          "name": "(Opzionale) Passeggiata in galleria",
+          "description": "Consenti agli studenti di girare per la stanza e interagire con i dispositivi degli altri. Valorizza tutte le diverse idee che gli studenti sono stati in grado di implementare con lo stesso programma di base.",
           "tips": [
             "Puoi scegliere di formalizzare questo processo chiedendo a ogni studente di scrivere una qualità positiva di ogni progetto o chiedendo agli studenti di «disegnare nomi» per commentare il lavoro di un particolare compagno di classe."
           ]
         },
         "d517677e-a0c5-48b5-9198-340f9de4b197": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Discussione: \\*\\* _qual era per te la parte preferita dell'app che hai creato? Qual è qualcosa che vorresti avere il tempo di migliorare?_"
+        },
+        "27de5b22-659a-4bfb-98ca-d3638ef8c4d0": {
+          "description": "\\*\\*Obiettivo della discussione: \\*\\* puoi decidere di fare in modo che gli studenti condividano le loro risposte con un compagno, oppure puoi decidere di fare in modo che gli studenti le mantengano per sé. In ogni caso, l'obiettivo della richiesta è far riflettere gli studenti sulle app che hanno creato e dare un riconoscimento per ciò che è andato bene e riconoscere cosa potrebbe essere migliorato per la prossima volta."
         },
         "8b763a92-05ad-4784-a3e8-61025e642c98": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Discussione: \\*\\* _che cos'è un elenco o lista? Per cosa usi gli elenchi?_"
+        },
+        "757d2a1e-f422-4212-b95b-5c2b85bdbd7d": {
+          "description": "\\*\\*Condividi: \\*\\* una volta che gli studenti hanno avuto il tempo di scrivere i propri pensieri, invitali a condividerli con tutta la classe. Lavorate in classe per cercare di capire cos'è una lista. "
+        },
+        "20a640a3-4cd3-4ba1-aa5d-952802642099": {
+          "description": "\\*\\*Obiettivo della discussione: \\*\\* Sebbene i tipi di elenchi che gli studenti elaborano varino da classe a classe, le due caratteristiche principali degli elenchi che gli studenti devono comprendere sono che di solito sono composti da elementi dello stesso tipo (attività da completare, nomi di persone, titoli di canzoni, lista della spesa, ecc.) e che hanno un ordine. Alcuni tipi comuni di elenchi includono un elenco di cose da fare, la lista con cui fare l'appello degli studenti in una classe, una lista di canzoni o una lista della spesa."
+        },
+        "f2af651b-3bf1-464d-b07c-7cb6731d8f60": {
+          "description": "Gli elenchi sono utili anche nella programmazione quando vogliamo accedere allo stesso tipo di elemento in un determinato ordine. Ad esempio, i piccoli LED colorati disposti in un anello attorno al centro del campo di gioco del circuito possono essere rappresentati come un elenco di LED, con un LED iniziale e un LED finale. Oggi impareremo a programmare questi LED e useremo una lista per accedere a ogni singolo LED."
         },
         "4045ce4e-232d-49f8-b831-12073f3d9495": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Transizione: \\*\\* fai andare studenti su Code Studio",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "39019e91-9bb5-46f0-80c8-1b28ede42c68": {
           "tips": [
-            null,
-            null
+            "**Terminologia delle liste:** una lista in javascript è formalmente chiamata **matrice (array)**. Il blocco `colorLEDs[x]` utilizza una matrice per accedere a ciascun LED. Il numero all'interno delle [parentesi quadre] si chiama **indice**. Potremmo dire che `colorLEDs[0]` rappresenta il LED all'indice 0, o `colorLEDs[5]` rappresenta il LED all'indice 5.\n\nLe matrici vengono affrontate in modo più approfondito in una lezione successiva e gli studenti non devono avere una conoscenza approfondita delle matrici prima della fine di questa lezione. Come minimo, gli studenti dovrebbero capire che il \"primo\" LED inizia all'indice 0 e l'\"ultimo\" LED è all'indice 9.",
+            "Gli studenti potrebbero essere in grado di indovinare il comportamento del programma, ma potrebbero essersi leggermente sbagliati nel prevedere quali luci si accenderanno. Non c'è un orientamento chiaro nel Circuit Playground, ma gli studenti dovrebbero essere in grado di «lavorare a ritroso» per determinare a cosa sono collegate le luci. Gli studenti possono anche notare che le luci iniziano con 0, che è la «prima» luce sulla scheda."
           ],
           "progression_name": "Predict"
         },
@@ -12215,14 +12345,18 @@
           "progression_name": "Sfida"
         },
         "4e670dbd-c1a5-48fc-97ff-d0b68df91a5d": {
-          "name": "Diario"
+          "name": "Diario",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Richiesta: \\*\\* I _LED vengono utilizzati come output in molti dispositivi che utilizziamo ogni giorno. Prova a pensare ad almeno un dispositivo che utilizza un LED e descrivi come questo contribuisce a rendere il dispositivo più utilizzabile o comunica con l'utente._"
+        },
+        "efc3f505-0bd4-4c0c-9870-5fa903b413e9": {
+          "description": "\\*\\*Obiettivo della discussione: \\*\\* gli studenti dovrebbero stabilire collegamenti tra la lezione di oggi e i dispositivi che usano al di fuori della classe. Alcuni esempi possono includere:\n\n-   Una lavatrice o asciugatrice che si illumina per indicare quando i vestiti sono pronti\n-   Un dispositivo per carte di credito che utilizza LED di diversi colori per indicare l'elaborazione di una transazione\n-   Qualsiasi dispositivo che utilizza una luce rossa per indicare un errore\n-   Dispositivi che accendono un LED al buio per facilitare l'uso del dispositivo"
         },
         "462d84bc-26b0-4f62-ab6e-8d6385a9ed99": {
           "name": "Diario"
         },
         "57cb955d-f937-4b8c-990b-0ceeac0bd2a3": {
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "47cf28d0-a32f-46bb-89b5-c3488628a1fd": {
@@ -12253,8 +12387,9 @@
           "description": "![](https://images.code.org/f5d91424ac0f0fda534a0fbdadaa5d6a-empty-chart.png)"
         },
         "b9330fe8-365a-492e-b155-48d1aa4b993e": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Transizione: \\*\\* fai andare studenti su Code Studio",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "a43fd1ca-e808-415f-8b73-ecc0caf330e2": {
@@ -12289,12 +12424,12 @@
         "836b29e0-6e20-434b-a5b4-556abfb94d2b": {
           "name": "Presenta il progetto",
           "tips": [
-            null
+            "\\*\\*Facilitazione dei progetti di gruppo: \\*\\* se gli studenti lavorano in coppia o in piccoli gruppi per completare i progetti, valuta la possibilità di mostrare questi due video alla classe:\n\n-   [Come funziona il lavoro di squadra](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Gestione dei disaccordi](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nA seconda degli obiettivi che ti prefiggi con questo progetto, considera la possibilità di far completare ai gruppi una [Guida per studenti alla pianificazione del gruppo](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), che rafforza il messaggio nel video"
           ]
         },
         "e9b6aa89-e596-4ee6-bf0c-280d32403047": {
           "tips": [
-            null
+            "**Valutare la congruità dei progetti degli studenti:** gli studenti possono ideare progetti che vanno oltre le competenze che hanno attualmente o che richiederebbero più tempo del tempo assegnato per essere implementati. Invece di chiedere agli studenti di scegliere un progetto diverso, prova a chiedere agli studenti di immaginare una versione più ridotta della loro idea iniziale. Come analogia, se l'idea iniziale degli studenti è il passo \"Corri\", immagina una versione meno intensa che rappresenti come sarebbe il passo \"Cammina\". Se necessario, puoi anche continuare a tornare indietro fino a un passaggio di \"Vai molto lento\". \n\n**Scavando più a fondo:** questo è a volte indicato come \"Prodotto minimo funzionante\" (o MVP, da Minimal Viable Product): puoi saperne di più su questo processo e adattarlo alle tue strategie di progetto leggendo questo articolo: [Che senso ha il MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) di Henrik Kniberg"
           ]
         },
         "ecb1a1f9-d63d-4386-b991-bc3a954a2648": {
@@ -12321,9 +12456,12 @@
         },
         "7757e358-925f-460e-8204-919de76b3d9f": {
           "tips": [
-            null
+            "\\*\\*Visualizzazione dei progetti di esempio: \\*\\* l'ultimo esercizio di questa sequenza include 3 progetti di esempio dell'esercizio nella sezione «Solo per insegnanti». Poiché questi progetti utilizzano Circuit Playground, devono essere eseguiti nell'app Maker su computer Windows e Mac. Se desideri vedere questi esempi funzionanti con un Circuit Playground, ti consigliamo di osservare questi esercizi e fare clic sui link all'interno dell'app Maker anziché visualizzarli dal programma della lezione."
           ],
           "progression_name": "Interazione Uomo Macchina"
+        },
+        "1370ac6b-ceff-421e-b3b7-1b710bfcfb48": {
+          "description": "**Strategie per il debugging:** mentre gli studenti progettano e implementano le proprie idee di progetto, potrebbero trovarsi con nuovi bug da districare e potresti ritrovarti a guardare un codice completamente sconosciuto mentre gli studenti cercano aiuto per risolvere i loro errori. Per semplificare l'esperienza di debugging, prendi in considerazione le seguenti strategie:\n\n-   Consulta la [Guida per l'insegnante al debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) per alcune domande e strategie comuni per aiutare gli studenti a eseguire il debugging del loro codice\n-   Far seguire agli studenti i passaggi della [Guida dello studente al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) e utilizzare i [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) come primo passo nel processo di debugging. Questo aiuta gli studenti a preparare e comunicare il loro problema prima di chiedere aiuto.\n-   Se gli studenti non l'hanno ancora visto, valuta la possibilità di mostrare il [video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s) alla classe per rafforzare le migliori prassi di debugging.\n\n**Scavare più a fondo:** valuta la possibilità di fornire agli studenti un oggetto con cui parlare come parte del processo di debugging. Questo a volte è noto come debugging di Rubber Duck: puoi saperne di più sul sito web <https://rubberduckdebugging.com/>"
         },
         "2e59bfde-65a5-450d-9701-426f7353a617": {
           "name": "Conclusione"
@@ -12345,8 +12483,9 @@
           "progression_name": "Riflessione"
         },
         "b46cfe31-9b5e-4820-b368-fc8a4fa139a7": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Transizione: \\*\\* fai andare studenti su Code Studio",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "9c9c1c7f-db27-4c84-941c-4dd1e3b2ce3c": {
@@ -12380,8 +12519,9 @@
           "name": "Sensori ovunque"
         },
         "b8a6fe12-b039-4ae6-b8af-7ca83f2cf8f4": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Transizione: \\*\\* fai andare gli studenti su Code Studio.",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "8fbee503-556a-40cd-be06-2fe300b09ef5": {
@@ -12410,8 +12550,9 @@
         },
         "b29096d1-be92-43d1-b40d-48dc44779fcb": {
           "name": "Fare musica",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Transizione: \\*\\* fai andare gli studenti su Code Studio.",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "b7df2f8f-c61b-45b6-ad12-400fe0b5dc66": {
@@ -12434,7 +12575,7 @@
         },
         "11718267-5da6-4e25-9cf3-0782a3820c8d": {
           "tips": [
-            null
+            "\\*\\*Ripasso del video: \\*\\* dopo aver visto il video, valuta la possibilità di stampare o visualizzare la corrispondente risorsa didattica inclusa come PDF nelle risorse per gli studenti del piano della lezione. Questo può essere un utile spunto visivo per gli studenti mentre continuano a lavorare su esercizi che richiedono loro di applicare ciò che hanno appreso dal video, oppure può essere utilizzato in una discussione in classe per riassumere e chiarire il contenuto del video. Puoi anche ricordare agli studenti che queste risorse sono disponibili nella scheda \"Aiuto e suggerimenti per i singoli esercizi\"."
           ],
           "progression_name": "Video: Introduzione agli Insiemi"
         },
@@ -12458,12 +12599,13 @@
         },
         "db3d71d9-35eb-4f9d-bcde-2f799683ab8b": {
           "tips": [
-            null
+            "\\*\\*Iniziare subito: \\*\\* questa lezione è ricca di nuovi contenuti e include diversi video che aiutano a far conoscere agli studenti alcune nuove idee. Per concedere agli studenti tutto il tempo possibile per mettere in pratica questi nuovi concetti, consigliamo di passare direttamente a Code Studio e iniziare la lezione da lì."
           ]
         },
         "48fd15be-8f76-4d8e-9fa3-90bfc4b890eb": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Transizione: \\*\\* fai andare studenti su Code Studio",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "5c0e38f9-bfaf-4555-8051-d867140232fc": {
@@ -12474,7 +12616,7 @@
         },
         "0cb8acf6-d4c7-4cc8-b550-fa53b04303f9": {
           "tips": [
-            null
+            "\\*\\*Ripasso del video: \\*\\* dopo aver visto il video, valuta la possibilità di stampare o visualizzare la corrispondente risorsa didattica inclusa come PDF nelle risorse per gli studenti del piano della lezione. Questo può essere un utile spunto visivo per gli studenti mentre continuano a lavorare su esercizi che richiedono loro di applicare ciò che hanno appreso dal video, oppure può essere utilizzato in una discussione in classe per riassumere e chiarire il contenuto del video. Puoi anche ricordare agli studenti che queste risorse sono disponibili nella scheda \"Aiuto e suggerimenti per i singoli esercizi\"."
           ],
           "progression_name": "Video: Funzioni"
         },
@@ -12489,7 +12631,7 @@
         },
         "69fa3327-7be1-4285-859c-d2f87a36b550": {
           "tips": [
-            null
+            "\\*\\*Ripasso del video: \\*\\* dopo aver visto il video, valuta la possibilità di stampare o visualizzare la corrispondente risorsa didattica inclusa come PDF nelle risorse per gli studenti del piano della lezione. Questo può essere un utile spunto visivo per gli studenti mentre continuano a lavorare su esercizi che richiedono loro di applicare ciò che hanno appreso dal video, oppure può essere utilizzato in una discussione in classe per riassumere e chiarire il contenuto del video. Puoi anche ricordare agli studenti che queste risorse sono disponibili nella scheda \"Aiuto e suggerimenti per i singoli esercizi\"."
           ],
           "progression_name": "Video: Parametri"
         },
@@ -12523,32 +12665,39 @@
         },
         "e5f4b521-ba78-4410-9629-f6a72ecb4114": {
           "tips": [
-            null
+            "\\*\\*Facilitazione dei mini-progetti: \\*\\* i mini-progetti fungono da punti di controllo nei piani di studi e coprono il sottoinsieme di competenze che gli studenti hanno visto finora nell'unità. Sono progettati per 1-2 giorni di implementazione per verificare il livello di comprensione dei contenuti del corso da parte degli studenti fino ad ora. Potresti decidere di estendere questi progetti per sostenere o sfidare gli studenti, il che potrebbe consentirti di ripassare concetti difficili o sostenere gli studenti che potrebbero aver perso le lezioni e stanno cercando di recuperare il ritardo. Tuttavia, consigliamo di decidere in anticipo e di concordare con gli studenti quanto tempo hanno a disposizione per ogni progetto, altrimenti è facile che i progetti si trascinino a più giorni e che il lavoro degli studenti vada oltre l'ambito di questo progetto."
           ]
         },
         "13377864-9faa-4893-b0c2-262903a7710e": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Distribuzione: \\*\\* (opzionale) distribuisci copie della guida al progetto. Gli studenti lo useranno per pianificare il loro progetto e includeranno elementi che possono essere utilizzati per la valutazione alla fine del progetto.",
           "tips": [
-            null
+            "\\*\\*Facilitazione dei progetti di gruppo: \\*\\* se gli studenti lavorano in coppia o in piccoli gruppi per completare i progetti, valuta la possibilità di mostrare questi due video alla classe:\n\n-   [Come funziona il lavoro di squadra](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Gestione dei disaccordi](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nA seconda degli obiettivi che ti prefiggi con questo progetto, considera la possibilità di far completare ai gruppi una [Guida per studenti alla pianificazione del gruppo](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), che rafforza il messaggio nel video"
           ]
         },
         "228be993-4e4a-4861-a78b-056cd0055159": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Transizione: \\*\\* fai andare gli studenti su Code Studio.",
           "tips": [
-            null
+            "**Valutare la congruità dei progetti degli studenti:** gli studenti possono ideare progetti che vanno oltre le competenze che hanno attualmente o che richiederebbero più tempo del tempo assegnato per essere implementati. Invece di chiedere agli studenti di scegliere un progetto diverso, prova a chiedere agli studenti di immaginare una versione più ridotta della loro idea iniziale. Come analogia, se l'idea iniziale degli studenti è il passo \"Corri\", immagina una versione meno intensa che rappresenti come sarebbe il passo \"Cammina\". Se necessario, puoi anche continuare a tornare indietro fino a un passaggio di \"Vai molto lento\". \n\n**Scavando più a fondo:** questo è a volte indicato come \"Prodotto minimo funzionante\" (o MVP, da Minimal Viable Product): puoi saperne di più su questo processo e adattarlo alle tue strategie di progetto leggendo questo articolo: [Che senso ha il MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) di Henrik Kniberg"
           ]
         },
         "48b11d9f-9819-4e81-86c0-5d57b093334b": {
           "tips": [
-            null
+            "**Strategie per il debugging:** mentre gli studenti progettano e implementano le proprie idee di progetto, potrebbero trovarsi con nuovi bug da districare e potresti ritrovarti a guardare un codice completamente sconosciuto mentre gli studenti cercano aiuto per risolvere i loro errori. Per semplificare l'esperienza di debugging, prendi in considerazione le seguenti strategie:\n\n-   Consulta la [Guida per l'insegnante al debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) per alcune domande e strategie comuni per aiutare gli studenti a eseguire il debugging del loro codice\n-   Far seguire agli studenti i passaggi della [Guida dello studente al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) e utilizzare i [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) come primo passo nel processo di debugging. Questo aiuta gli studenti a preparare e comunicare il loro problema prima di chiedere aiuto.\n-   Se gli studenti non l'hanno ancora visto, valuta la possibilità di mostrare il [video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s) alla classe per rafforzare le migliori prassi di debugging.\n\n**Scavare più a fondo:** valuta la possibilità di fornire agli studenti un oggetto con cui parlare come parte del processo di debugging. Questo a volte è noto come debugging di Rubber Duck: puoi saperne di più sul sito web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Arte Interattiva"
         },
+        "59dd1975-4805-4f90-ac79-f35a47c4eed8": {
+          "name": "(Opzionale) Passeggiata in galleria",
+          "description": "Consenti agli studenti di girare per la stanza e interagire con i dispositivi degli altri. Valorizza tutte le diverse idee che gli studenti sono stati in grado di implementare con lo stesso programma di base."
+        },
         "04f9d7e1-c590-4d22-ab74-069209762be4": {
-          "name": "Riflessione"
+          "name": "Riflessione",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Discussione: \\*\\* _qual era per te la parte preferita dell'app che hai creato? Qual è qualcosa che vorresti avere il tempo di migliorare?_"
         },
         "c960fb55-e814-4e24-a9d4-07f5875c76f9": {
           "description": "**Transizione:** fai andare gli studenti su Code Studio",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "e64406a9-57fb-477d-bdc7-3921a12129cb": {
@@ -12578,7 +12727,7 @@
         "9cc97556-4746-41d2-aacd-4520dec3be96": {
           "description": "**Transizione:** fai andare gli studenti su Code Studio",
           "tips": [
-            null
+            "**Guida agli esercizi di programmazione:** ulteriori indicazioni per gli esercizi di programmazione sono fornite nella [Guida CSD agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Questo documento include strategie e buone pratiche per agevolare lo svolgimento degli esercizi di programmazione con gli studenti."
           ]
         },
         "1fc60f0f-8066-4a49-86d7-2f3dda01d427": {
@@ -12602,7 +12751,7 @@
         "b06fecf3-f666-4d47-97ed-0f43e2bd6781": {
           "name": "Ricontrolla la guida al progetto",
           "tips": [
-            null
+            "\\*\\*Facilitazione dei progetti di gruppo: \\*\\* se gli studenti lavorano in coppia o in piccoli gruppi per completare i progetti, valuta la possibilità di mostrare questi due video alla classe:\n\n-   [Come funziona il lavoro di squadra](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Gestione dei disaccordi](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nA seconda degli obiettivi che ti prefiggi con questo progetto, considera la possibilità di far completare ai gruppi una [Guida per studenti alla pianificazione del gruppo](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), che rafforza il messaggio nel video"
           ]
         },
         "d85819c8-89bd-4bb9-9be5-a76d07025949": {
@@ -12624,7 +12773,7 @@
         },
         "5be532a8-3a04-478b-8840-962b2c499894": {
           "tips": [
-            null
+            "**Strategie per il debugging:** mentre gli studenti progettano e implementano le proprie idee di progetto, potrebbero trovarsi con nuovi bug da districare e potresti ritrovarti a guardare un codice completamente sconosciuto mentre gli studenti cercano aiuto per risolvere i loro errori. Per semplificare l'esperienza di debugging, prendi in considerazione le seguenti strategie:\n\n-   Consulta la [Guida per l'insegnante al debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) per alcune domande e strategie comuni per aiutare gli studenti a eseguire il debugging del loro codice\n-   Far seguire agli studenti i passaggi della [Guida dello studente al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) e utilizzare i [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) come primo passo nel processo di debugging. Questo aiuta gli studenti a preparare e comunicare il loro problema prima di chiedere aiuto.\n-   Se gli studenti non l'hanno ancora visto, valuta la possibilità di mostrare il [video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s) alla classe per rafforzare le migliori prassi di debugging.\n\n**Scavare più a fondo:** valuta la possibilità di fornire agli studenti un oggetto con cui parlare come parte del processo di debugging. Questo a volte è noto come debugging di Rubber Duck: puoi saperne di più sul sito web <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Prototipare un'innovazione"
         },
@@ -12671,6 +12820,9 @@
             "Questo esercizio appare alla fine di ogni unità. **Chiedi ai tuoi studenti di completare questo sondaggio alla fine dell'ultima unità!** Gli studenti devono rispondere al sondaggio solo una volta alla fine del corso.\n\n-   I risultati sono fondamentali per noi (code.org) per sostenere i nostri corsi e apportare miglioramenti.\n-   Ci sarà anche un sondaggio tra gli insegnanti in cui potrai fornire il tuo contributo. Riceverai una notifica via e-mail sul sondaggio per gli insegnanti.\n\n**Istruzioni per sbloccare il sondaggio per studenti:**\\\\ \\[[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)]\\\\ \\[[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\nSe gli studenti fanno clic sul link e visualizzano un messaggio di errore relativo al blocco del sondaggio, segui i passaggi indicati nelle istruzioni precedenti per sbloccare il sondaggio per gli studenti."
           ],
           "progression_name": "Istruzioni per il sondaggio post-corso"
+        },
+        "aeada9ea-6aee-47f4-a0fc-2f9760dfa7a0": {
+          "name": "Preparazione per l'unità"
         },
         "35fce3fb-ed1f-48aa-af53-b3251a5bc7a4": {
           "name": "Diario",
@@ -13334,7 +13486,7 @@
         },
         "4b1c5fe5-6544-41f1-8b12-60761bb08d95": {
           "tips": [
-            null
+            "\\*\\*Utilizzo delle risorse: \\*\\* di seguito puoi trovare consigli per l'utilizzo delle numerose risorse a cui gli studenti vengono introdotti nella lezione. Potresti prendere in considerazione la creazione di un «Grafico delle risorse» per tenere traccia di queste opzioni e aiutare gli studenti a essere autosufficienti man mano che avanzano di livello. \n\n-   \\*\\*Video: \\*\\* guardati in classe, ma gli studenti possono sempre riprenderli.\n-   \\*\\*Scheda aiuto e suggerimenti: \\*\\* questa scheda contiene tutti i video e le guide di riferimento pertinenti per un determinato livello.\n-   \\*\\*Guide di riferimento: \\*\\* contengono testo e diagrammi che spiegano il contenuto. Queste sono intese come utili risorse per gli studenti, non come letture in classe. Sono un buon posto dove andare per la revisione dopo aver appreso i contenuti o quando gli studenti rimangono bloccati nei livelli. Puoi decidere di stamparli e renderli disponibili per gli studenti man mano che superano i livelli.\n-   \\*\\*Documentazione ed esempi: \\*\\* passando il mouse su un blocco verrà mostrata una breve descrizione di ciò che fa il blocco. Facendo clic sul link «Vedi esempi» si aprirà la documentazione relativa a quel blocco. \n-   \\*\\*Istruzioni dell'esercizio: \\*\\* le istruzioni possono introdurre piccoli pezzi di nuovi contenuti. Ogni esercizio presenta una sezione «Fai questo» che spiega cosa dovrebbero fare gli studenti in quell'esercizio. Ponetevi subito l'aspettativa che sia importante leggere queste istruzioni, non solo la sezione «Esegui questa operazione»."
           ],
           "progression_name": "Personalizza la tua app"
         },
@@ -13353,7 +13505,7 @@
         },
         "880bcfe8-398b-4a55-89f0-27c407322832": {
           "name": "Diario",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discussione:**\n\n1.  _Qual è stato un momento di oggi in cui ti sei sentito di successo?_\n\n2.  _Qual è una domanda o un punto di confusione che hai ancora oggi?_\n\nChiedi agli studenti di scrivere le loro risposte nel loro diario. Possono anche condividere una delle loro risposte con te mentre escono per la giornata, oppure puoi controllare i loro diari in un secondo momento.",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discussione:**\n\n1.  _Qual è stato un momento di oggi in cui hai avuto la sensazione di avere successo?_\n\n2.  _Qual è una domanda o un dubbio che hai ancora oggi?_\n\nChiedi agli studenti di scrivere le loro risposte nel loro diario. Possono anche condividere una delle loro risposte con te alla fine della giornata, oppure puoi controllare i loro diari in un secondo momento.",
           "tips": [
             "**Valutazione formativa:** in questa lezione gli studenti possono perdersi o confondersi e non sentirsi a proprio agio a parlare, soprattutto se altri studenti della classe hanno già avuto esperienze con Sviluppo App. Usa questa discussione per determinare se hai bisogno di parlare con gli studenti in una lezione successiva o ripassare un concetto di oggi. Ciò è particolarmente vero se gli studenti dispongono di diversi esercizi di esperienza con Sviluppo App prima di questa unità."
           ]
@@ -13606,7 +13758,7 @@
         },
         "6d9af5ce-913c-4c16-8a89-081c23545139": {
           "tips": [
-            null
+            "\\*\\*Normalizzazione degli errori e supporto al debugging: \\*\\* man mano che gli esercizi di programmazione diventano più complessi, gli studenti potrebbero ritrovarsi nel codice dei bug che devono risolvere. Se ciò accade frequentemente, questa può essere un'esperienza demoralizzante per gli studenti e può influire sulla loro percezione di sé delle loro capacità in classe. \n\nPer ovviare a ciò, consigliamo di normalizzare i bug e gli errori in quanto si tratta di una circostanza che accade a tutti: è solo una parte del processo. Puoi mostrare agli studenti il nostro [Video sul debugging](https://www.youtube.com/watch?v=auv10y-dN4s), che include diversi studenti che normalizzano gli errori e discutono delle strategie di debugging che gli studenti possono utilizzare. Inoltre, prendi in considerazione la possibilità di esporre la [Guida per gli studenti al debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) a cui gli studenti possano fare riferimento in tutta l'unità e di avere [Quaderni di reportistica per i bug](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) a disposizione degli studenti."
           ],
           "progression_name": "Aggiungere nuove schermate"
         },
@@ -14414,7 +14566,7 @@
           "name": "Attività",
           "description": "**Distribuisci:** agli studenti delle copie della [r design_an_ai_app_-_project_guide/csd/2022].\n\n**Panoramica:** leggere la panoramica del progetto con gli studenti e rispondere a qualsiasi domanda.",
           "tips": [
-            null
+            "\\*\\*Facilitazione dei progetti di gruppo: \\*\\* se gli studenti lavorano in coppia o in piccoli gruppi per completare i progetti, valuta la possibilità di mostrare questi due video alla classe:\n\n-   [Come funziona il lavoro di squadra](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Gestione dei disaccordi](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nA seconda degli obiettivi che ti prefiggi con questo progetto, considera la possibilità di far completare ai gruppi una [Guida per studenti alla pianificazione del gruppo](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), che rafforza il messaggio nel video"
           ]
         },
         "4d128db2-a3e5-4d49-bb69-5f2619848f34": {
@@ -14815,7 +14967,7 @@
           "progression_name": "Segui il Topo"
         },
         "5598ea09-433e-405f-81b7-4ea132b43c9d": {
-          "progression_name": "Dichiarazioni se/altrimenti"
+          "progression_name": "Istruzioni condizionali Se/Altrimenti"
         },
         "8c59555a-a199-4983-904f-af605d4d24f4": {
           "progression_name": "Input con If-Else"
@@ -15174,6 +15326,9 @@
         },
         "e54420ed-5a14-4b3c-837f-1b388f8f2e65": {
           "progression_name": "Panoramica della lezione"
+        },
+        "efa270cd-1ed8-4f99-966b-7550a3be5d91": {
+          "progression_name": "Circuiti e logica"
         },
         "47ed3fdd-9b7f-450b-a57b-55b9f745f9fb": {
           "progression_name": "Circuiti semplici"
@@ -16813,7 +16968,7 @@
           "progression_name": "Input con If-Else"
         },
         "b2a850a8-032a-492a-95ef-e0a6bba8cb1e": {
-          "progression_name": "Dichiarazioni se/altrimenti"
+          "progression_name": "Istruzioni condizionali Se/Altrimenti"
         },
         "7d9e8786-0628-4e8f-8aa9-a1bbf34703fb": {
           "progression_name": "Altri Input"
@@ -17181,6 +17336,9 @@
         },
         "1897e82b-84c2-4f33-80bb-23c9392fdb3a": {
           "progression_name": "Panoramica della lezione"
+        },
+        "036fd485-3cfc-42be-bdb3-b6f115d1825a": {
+          "progression_name": "Circuiti e logica"
         },
         "15628eef-e88e-4b09-817b-fe260bda88b3": {
           "progression_name": "Circuiti semplici"
@@ -17975,7 +18133,7 @@
           "progression_name": "Segui il Topo"
         },
         "ecb006e6-b739-4392-8d5d-2278b7ada266": {
-          "progression_name": "Dichiarazioni se/altrimenti"
+          "progression_name": "Istruzioni condizionali Se/Altrimenti"
         },
         "639ee94d-ffeb-4d6d-ab50-dc6ed0701855": {
           "progression_name": "Input con If-Else"
@@ -18355,6 +18513,9 @@
         },
         "2f8b307a-66ba-4d70-be75-f0cd1a1cceb0": {
           "progression_name": "Panoramica della lezione"
+        },
+        "aaeed8b4-6281-4a41-91da-2a7c4ecf3bb2": {
+          "progression_name": "Circuiti e logica"
         },
         "f3a7b31e-597e-444a-a788-ae800f63f177": {
           "progression_name": "Circuiti semplici"
@@ -20072,7 +20233,7 @@
           ]
         },
         "6a7ce69d-933a-4908-bf34-3bf5a9ac3c32": {
-          "description": "**Discussione**: prepara gli alunni all'attività di oggi ricordando il lavoro svolto in precedenza. \n\n-   Ricordate quando avete aiutato l'uccellino Angry Bird a trovare il maialino?\n    -   In quell'esercizio, sapevate in anticipo esattamente dove volevate far andare l'uccellino, quindi potevate creare un programma che lo pilotasse dall'inizio alla fine senza alcuna interruzione.\n    -   Nella maggior parte dei programmi reali non possiamo fare così, perché vogliamo avere la possibilità di gestire le esigenze dell'utente.\n        -   Supponiamo che voglia che un personaggio si muova solo quando il mio dito tocca lo schermo del telefono. Dovrei programmare il personaggio in modo che si muova solo quando metto il dito sullo schermo del telefono.\n        -   Mettere il dito sullo schermo diventerebbe quindi un \"evento\" che dice al personaggio di muoversi.\n\n**Di' questo:**: _Nelle lezioni precedenti, abbiamo creato degli algoritmi che ci hanno permesso di controllare un amico o un uccellino con diversi movimenti consecutivi. È stato divertente e utile, ma cosa succede quando non si sa in anticipo tutto ciò che si vuole che il nostro amico faccia? È qui che entrano in gioco gli eventi!_\n\n**Istruzioni**\n\n-   Proietta il **|\\*Telecomando degli eventi** sulla lavagna multimediale (LIM) della tua classe.\n\n ![](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n-   Decidi con la tua classe cosa fa ogni pulsante. Qualche consiglio:\n    -   Pulsante rosa → Dite “Wow!”\n    -   Pulsante azzurro → Dite “Sìì!”\n    -   Ghiera viola → Dite “Boom!”\n-   Falli esercitare toccando i pulsanti e facendo reagire la classe di conseguenza.\n-   Premi alcuni pulsanti in sequenza e chiedi agli alunni di tenere il passo con le loro reazioni.\n-   Fai sapere alla tua classe che ogni volta che premi un pulsante, è un \"evento\" che gli permette di sapere cosa ci si aspetta che loro facciano.\n-   Fai eseguire alla classe un'attività pianificata e poi interrompila nuovamente con i pulsanti. Un paio di suggerimenti:\n    -   contare fino a 10,\n    -   cantare “Nella vecchia fattoria”.\n-   Una volta che l'attività è avviata, premi i pulsanti ad intervalli casuali.\n-   Continua l'alternanza fino a quando non comprendono la differenza tra le azioni guidate da un piano e quelle guidate dagli eventi."
+          "description": "**Discussione**: prepara gli alunni all'attività di oggi ricordando il lavoro svolto in precedenza. \n\n-   Ricordate quando avete aiutato l'uccellino Angry Bird a trovare il maialino?\n    -   In quell'esercizio, sapevate in anticipo esattamente dove volevate far andare l'uccellino, quindi potevate creare un programma che lo pilotasse dall'inizio alla fine senza alcuna interruzione.\n    -   Nella maggior parte dei programmi reali non possiamo fare così, perché vogliamo avere la possibilità di gestire le esigenze dell'utente.\n        -   Supponiamo che voglia che un personaggio si muova solo quando il mio dito tocca lo schermo del telefono. Dovrei programmare il personaggio in modo che si muova solo quando metto il dito sullo schermo del telefono.\n        -   Mettere il dito sullo schermo diventerebbe quindi un \"evento\" che dice al personaggio di muoversi.\n\n**Di' questo:**: _Nelle lezioni precedenti, abbiamo creato degli algoritmi che ci hanno permesso di controllare un amico o un uccellino con diversi movimenti consecutivi. È stato divertente e utile, ma cosa succede quando non si sa in anticipo tutto ciò che si vuole che il nostro amico faccia? È qui che entrano in gioco gli eventi!_\n\n**Istruzioni**\n\n-   Proietta il **\\|\\*Telecomando degli eventi** sulla lavagna multimediale (LIM) della tua classe.\n\n ![](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n-   Decidi con la tua classe cosa fa ogni pulsante. Qualche consiglio:\n    -   Pulsante rosa → Dite “Wow!”\n    -   Pulsante azzurro → Dite “Sìì!”\n    -   Ghiera viola → Dite “Boom!”\n-   Falli esercitare toccando i pulsanti e facendo reagire la classe di conseguenza.\n-   Premi alcuni pulsanti in sequenza e chiedi agli alunni di tenere il passo con le loro reazioni.\n-   Fai sapere alla tua classe che ogni volta che premi un pulsante, è un \"evento\" che gli permette di sapere cosa ci si aspetta che loro facciano.\n-   Fai eseguire alla classe un'attività pianificata e poi interrompila nuovamente con i pulsanti. Un paio di suggerimenti:\n    -   contare fino a 10,\n    -   cantare “Nella vecchia fattoria”.\n-   Una volta che l'attività è avviata, premi i pulsanti ad intervalli casuali.\n-   Continua l'alternanza fino a quando non comprendono la differenza tra le azioni guidate da un piano e quelle guidate dagli eventi."
         },
         "add72914-74dd-4c9d-b018-93464cf14e3c": {
           "description": "### Tiriamo le somme\n\n**Discussione**: Considera i seguenti suggerimenti per chiedere agli alunni di riflettere su ciò che hanno imparato.\n\n-   Perché conviene imparare a gestire gli eventi in un programma?\n-   Quali altri tipi di eventi ti vengono in mente?\n\n#### Riflessione\n\n**Suggerimenti**\n\n-   Di cosa parlava la lezione di oggi?\n-   Disegna nell'angolo della pagina del tuo diario una faccina che mostri come ti sei sentito durante la lezione di oggi.\n-   Disegna un evento che oggi ha causato un'azione.\n-   Disegna un'azione causata da un evento accaduto oggi."
@@ -22612,7 +22773,7 @@
         },
         "294fb9eb-4bd1-497a-8326-562ddd2671bf": {
           "name": "Riflessione",
-          "description": "Far scrivere agli studenti quello che hanno imparato, il perché sia utile e quale sia il loro riscontro in proposito, può aiutare a consolidare le conoscenze acquisite oggi e costruire un foglio di appunti utile da guardare in futuro.\n\n**Suggerimenti:**\n\n-   Di che parlava la lezione di oggi?\n-   Che ne pensi della lezione di oggi?\n-   Come riesci a capire che le istruzioni condizionali sono utili nei programmi?\n-   Cosa succede se le persone hanno parlato solo in dichiarazioni \"se/altrimenti\"? Quali sarebbero i vantaggi e gli svantaggi in tal caso?"
+          "description": "Far scrivere agli alunni quello che hanno imparato, il perché sia utile e quale sia il loro riscontro in proposito, può aiutare a consolidare le conoscenze acquisite oggi e costruire un foglio di appunti utile da guardare in futuro.\n\n**Suggerimenti:**\n\n-   Di cosa parlava la lezione di oggi?\n-   Che ne pensi della lezione di oggi?\n-   Come riesci a capire che le istruzioni condizionali sono utili nei programmi?\n-   Cosa succede se le persone hanno parlato solo atraverso istruzioni condizionali \"se/altrimenti\"? Quali sarebbero i vantaggi e gli svantaggi in tal caso?"
         },
         "88c1c297-1627-45ec-9eb7-f6fffbe45240": {
           "name": "Introduzione",
@@ -24627,7 +24788,7 @@
         },
         "7cc32c19-2a9a-423f-a8b7-90a739cd379c": {
           "name": "Diario",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discussione:**\n\n1.  _Qual è stato un momento di oggi in cui ti sei sentito di successo?_\n\n2.  _Qual è una domanda o un punto di confusione che hai ancora oggi?_\n\nChiedi agli studenti di scrivere le loro risposte nel loro diario. Possono anche condividere una delle loro risposte con te mentre escono per la giornata, oppure puoi controllare i loro diari in un secondo momento.",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discussione:**\n\n1.  _Qual è stato un momento di oggi in cui hai avuto la sensazione di avere successo?_\n\n2.  _Qual è una domanda o un dubbio che hai ancora oggi?_\n\nChiedi agli studenti di scrivere le loro risposte nel loro diario. Possono anche condividere una delle loro risposte con te alla fine della giornata, oppure puoi controllare i loro diari in un secondo momento.",
           "tips": [
             "**Valutazione formativa:** in questa lezione gli studenti possono perdersi o confondersi e non sentirsi a proprio agio a parlare, soprattutto se altri studenti della classe hanno già avuto esperienze con Sviluppo App. Usa questa discussione per determinare se hai bisogno di parlare con gli studenti in una lezione successiva o ripassare un concetto di oggi. Ciò è particolarmente vero se gli studenti dispongono di diversi esercizi di esperienza con Sviluppo App prima di questa unità."
           ]

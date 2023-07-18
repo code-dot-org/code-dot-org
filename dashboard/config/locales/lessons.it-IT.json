@@ -144,6 +144,7 @@
           "student_overview": "In questa lezione, imparerai le basi di informatica, programmando nello Sprite Lab. Lo Sprite Lab è uno strumento utilizzabile per creare progetti fantasiosi e divertenti. Imparerai a creare e animare gli sprite e a renderli interattivi utilizzando gli eventi."
         },
         "starwarsblocks/Hour of Code 2015": {
+          "name": "Guerre Stellari: Costruisci una galassia con il codice (Blockly)",
           "purpose": "Questa lezione introduce i concetti fondamentali dell'informatica della codifica e della programmazione, inclusi il sequenziamento e gli eventi. La versione JavaScript del tutorial consente inoltre agli alunni di sperimentare la digitazione del codice.",
           "student_overview": "In questa lezione, gli studenti di tutte le età vivono un'esperienza introduttiva alla programmazione e all'informatica in un ambiente sicuro e supportivo. Questa lezione ha due versioni."
         },
@@ -161,6 +162,7 @@
           "student_overview": "Un virus è arrivato nella Città dei Mostri! Impara a creare un simulatore di virus e aiuta i mostri a guarire."
         },
         "sports/Sports": {
+          "name": "Programma il tuo Sport Game",
           "overview": "In questa attività online, gli studenti impareranno cosa sono gli Eventi e come i computer li usano in programmi come i videogiochi. Gli studenti creeranno dei programmi che reagiscono agli Eventi (come la pressione dei pulsanti freccia). Alla fine della lezione, gli studenti avranno la possibilità di personalizzare il proprio gioco modificando velocità e suoni.",
           "student_overview": "Ti piacerebbe poter giocare con dei videogiochi a scuola? In questa lezione potrai crearne uno tutto tuo!"
         },
@@ -1889,25 +1891,49 @@
         },
         "csd6-2022/Innovations in Computing": {
           "name": "Innovazioni nell'informatica",
+          "overview": "In questa lezione, gli studenti faranno alcune ricerche su alcune interessanti innovazioni nell'informatica. Questa lezione metterà gli studenti di fronte a una più ampia varietà di fattori di natura informatica (l'aspetto di un computer) e di fronte a degli ambiti che sono influenzati dall'informatica. Più avanti in questa unità gli studenti esamineranno i dispositivi che hanno incontrato in questa lezione mentre sviluppano i propri dispositivi informatici fisici.\n\n**Domanda del giorno:** cos'è un'innovazione informatica?",
+          "preparation": "-   Dai un'occhiata a  [L'Internet delle Cose - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) o [L'informatica sta cambiando tutto - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n-   Stampa una copia della guida alle attività per ogni studente\n-   Decidi come distribuire le \"Aree di ricerca sulle innovazioni informatiche\" e se desideri apportare modifiche al documento per aggiungere o rimuovere siti web.\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
           "student_overview": "In questa lezione, esplorerai un'ampia varietà di piattaforme informatiche nuove e innovative, ampliando al contempo la tua comprensione di cosa può essere un computer."
         },
         "csd6-2022/The Circuit Playground": {
           "name": "Il Circuit Playground",
+          "overview": "In questa lezione gli studenti hanno la prima opportunità di scrivere programmi che utilizzano Circuit Playground. Dopo aver prima ispezionato visivamente la scheda e aver ipotizzato le possibili funzionalità, gli studenti vanno online per imparare a scrivere applicazioni che controllano un LED e utilizzano un cicalino per emettere suoni. Combinando le schermate di Sviluppo App con i Circuit Playgrounds, gli studenti possono iniziare gradualmente a integrare elementi della scheda come dispositivo di uscita facendo affidamento su Sviluppo App  per l'input dell'utente.\n\n\\*\\*Domanda del giorno: \\*\\* quali uscite posso controllare nel Circuit Playground?",
+          "preparation": "-   Assicurati che i computer degli studenti siano dotati dei driver e del software necessari per connettersi al Circuit Playground ([qui tutti i dettagli](//studio.code.org/maker/setup))\n-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
           "student_overview": "In questa lezione conoscerai il Circuit Playground, la scheda integrata che verrà utilizzata nel resto di questa unità. "
         },
         "csd6-2022/Updating Screen Elements": {
-          "name": "Aggiornamento delle schermate"
+          "name": "Aggiornamento delle schermate",
+          "overview": "Gli studenti dovrebbero già avere familiarità con la programmazione in Sviluppo App, in particolare con la \"Modalità interfaccia\" per creare elementi sullo schermo e con i blocchi `onEvent` per creare eventi con clic sui pulsanti. Per ampliare il tipo di app che gli studenti possono creare e per incoraggiarli a pensare in un modo nuovo a come gli utenti interagiscono con le app, introduciamo i blocchi `setProperty()` e `setText()` che consentono agli utenti di modificare le proprietà e il contenuto di vari elementi dell'interfaccia utente. In questa lezione gli studenti esplorano come utilizzare gli eventi per aggiornare gli elementi sullo schermo\n\n\\*\\*Domanda del giorno: \\*\\* come si possono aggiornare gli elementi di progettazione di un'app?",
+          "preparation": "-   Per questa lezione  _non è necessario_ che gli studenti dispongano di Circuit Playgrounds e consigliamo anzi di svolgere la lezione senza dispositivi così da evitare distrazioni\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti"
         },
         "csd6-2022/Board Events": {
           "name": "Eventi della scheda",
+          "overview": "Questa lezione fa sì che gli studenti non considerino il Circuit Playground solo un dispositivo di output e introduce invece i pulsanti e gli interruttori a levetta come strumenti di input. A partire dai pulsanti e dall'interruttore hardware, gli studenti imparano a usare [\\`onboardEvent () \\`(#f78183)](/docs/applab/onBoardEvent/), analogamente a [\\`onEvent ()\\` (#fff176)](/docs/applab/onEvent/), per ricevere input dai loro Circuit Playgrounds.\n\n\\*\\*Domanda del giorno: \\*\\* come può l'utente interagire con il Circuit Playground per ricevere input?",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
           "student_overview": "In questa lezione imparerai come usare i pulsanti hardware e l'interruttore del Circuit Playground che forniranno l'input al Circuit Playground."
+        },
+        "csd6-2022/Variables and If Statements": {
+          "name": "Variabili e istruzioni condizionali `if`",
+          "overview": "In questa lezione, gli studenti vengono introdotti alle variabili, allo schema a contatore e alle istruzioni condizionali `if`. Gli studenti utilizzeranno questi concetti nel contesto della programmazione del Circuit Playground e della creazione di comportamenti di input/output più complessi, come il conteggio del numero di pressioni dei pulsanti prima che il circuito emetta un rumore. I concetti di questa lezione vengono utilizzati per creare app più complesse e soddisfacenti nelle lezioni future e gli studenti potrebbero dover fare riferimento ai video e agli esempi di questa lezione per continuare a padroneggiare questi concetti.\n\n\\*\\*Domanda del giorno: \\*\\* come posso creare programmi più complessi che tengono traccia delle informazioni e prendono decisioni?",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Impara a creare programmi più complessi che tengono traccia delle informazioni e prendono decisioni, utilizzando variabili e istruzioni condizionali `if`."
         },
         "csd6-2022/Mini-Project: On-The-Go App": {
           "name": "Mini-progetto: app di rilevamento sul campo",
-          "assessment_opportunities": "Usa i Criteri di valutazione del progetto allegati a questa lezione per valutare la padronanza degli obiettivi di apprendimento degli studenti."
+          "assessment_opportunities": "Usa i Criteri di valutazione del progetto allegati a questa lezione per valutare la padronanza degli obiettivi di apprendimento degli studenti.",
+          "overview": "In questo mini-progetto, gli studenti utilizzeranno il Circuit Playground per raccogliere dati, quindi utilizzeranno Sviluppo App per analizzare i dati raccolti. È simile alle app di ricerca sul campo o sondaggi di scienza partecipativa in cui una persona raccoglie dati su un dispositivo «sul campo», quindi torna in una posizione centrale per visualizzare e analizzare i dati (come la catalogazione delle specie in via di estinzione in natura). Gli studenti utilizzeranno variabili ed eventi per raccogliere dati dal Circuit Playground, quindi utilizzeranno le istruzioni condizionali `if` per prendere decisioni o fornire consigli in base ai dati raccolti.\n\n\\*\\*Domanda del giorno: \\*\\* come posso utilizzare eventi e variabili per creare un'app che raccoglie e analizza i dati?",
+          "preparation": "-   Consulta la guida e la griglia di valutazione del progetto per comprendere l'ambito del progetto.\n-   Esamina i progetti di esempio come modelli di ciò che gli studenti possono creare.\n-   (Facoltativo) Puoi decidere di mostrare uno di questi progetti agli studenti per stimolare le idee.\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-field-collector-app-physical-computing-lesson-6/36200) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti"
         },
         "csd6-2022/Color LEDs": {
-          "name": "LED a colori"
+          "name": "LED a colori",
+          "overview": "In questa lezione, gli studenti imparano a utilizzare i LED a 10 colori del Circuit Playground. Gli studenti controlleranno il colore e l'intensità di ciascun LED, quindi utilizzeranno ciò che hanno imparato per programmare i modelli di luce per creare uno spettacolo di luci nel loro Circuit Playground.\n\n\\*\\*Domanda del giorno: \\*\\* come si possono usare i LED colorati in un'app?",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti"
+        },
+        "csd6-2022/Getting Screen Inputs": {
+          "name": "Ottenere input sullo schermo"
+        },
+        "csd6-2022/Combining Inputs and Outputs": {
+          "name": "Combinazione di ingressi e uscite"
         },
         "csd6-2022/Project: Human Device Interaction": {
           "name": "Progetto: interazione uomo macchina"
@@ -1917,17 +1943,24 @@
         },
         "csd6-2022/Accelerometer": {
           "name": "Accelerometro",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
           "student_overview": "In questa lezione, esplorerai l'accelerometro e le sue funzionalità. "
         },
         "csd6-2022/Making Music": {
           "name": "Fare musica",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
           "student_overview": "In questa lezione, utilizzerai appieno la funzionalità del cicalino (buzzer) di Circuit Playground producendo suoni, note e canzoni. "
         },
         "csd6-2022/Functions": {
-          "name": "Funzioni"
+          "name": "Funzioni",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti"
         },
         "csd6-2022/Mini-Project: Interactive Art": {
+          "name": "Mini-progetto: arte interattiva",
           "assessment_opportunities": "Usa i Criteri di valutazione del progetto allegati a questa lezione per valutare la padronanza degli obiettivi di apprendimento degli studenti."
+        },
+        "csd6-2022/Physical Outputs and LEDs": {
+          "name": "Uscite fisiche e LED"
         },
         "csd6-2022/Physical Inputs and Buttons": {
           "name": "Ingressi fisici e pulsanti"
@@ -6083,7 +6116,7 @@
         "csd6-2021/Board Events": {
           "name": "Eventi della scheda",
           "assessment_opportunities": "1.  **Collegare un gestore di eventi a un ingresso hardware**\n\n    Code Studio: guarda la tabella alla casella 3.\n\n2.  **Scegliere l'evento appropriato per un determinato scenario**\n\n    Conclusione: gli studenti dovrebbero descrivere diversi scenari che sarebbero più appropriati per diversi eventi.",
-          "overview": "Questa lezione fa si' che gli studenti passino dal considerare il Circuit Playground come strettamente un dispositivo di output all'utilizzarlo come strumento sia per l'input che per l'output. Partendo dai pulsanti hardware e dallo switch, usando i pulsanti hardware e gli switch, gli studenti imparano a usare [\\`onboardEvent()\\`(#f78183)](/docs/applab/onBoardEvent/), analogamente a [\\`onEvent()\\`(#fff176)](/docs/applab/onEvent/), per trarre input dai loro Circuit Playgrounds.",
+          "overview": "Questa lezione fa si' che gli studenti passino dal considerare il Circuit Playground come strettamente un dispositivo di output all'utilizzarlo come strumento sia per l'input che per l'output. Partendo dai pulsanti hardware e dall'interruttore, usando i pulsanti hardware e gli interruttori, gli studenti imparano a usare [\\`onboardEvent()\\`(#f78183)](/docs/applab/onBoardEvent/), analogamente a [\\`onEvent()\\`(#fff176)](/docs/applab/onEvent/), per ricevere input dai loro Circuit Playgrounds.",
           "purpose": "Questa lezione segna il passaggio dall'uso della scheda esclusivamente come dispositivo di output all'utilizzo sia per l'input che per l'output. Il blocco [\\`onboardEvent()\\`(#f78183)](/docs/applab/onBoardEvent/) funziona in modo molto simile a [\\`onEvent()\\`(#fff176)](/docs/applab/onEvent/), con la differenza più significativa che il primo parametro è un oggetto della scheda (una variabile) mentre [\\`onEvent()\\`(#fff176)](/docs/applab/onEvent/) richiede un ID elemento dell'interfaccia utente (una stringa).",
           "student_overview": "In questa lezione imparerai come usare i pulsanti hardware e l'interruttore del Circuit Playground che forniranno l'input al Circuit Playground."
         },
