@@ -5,6 +5,8 @@ import Button from '@cdo/apps/templates/Button';
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 
 export const blocks = {
+  // Creates and returns a toggle button field. This field should be
+  // added to the block after other inputs have been created.
   initializeMiniToolbox() {
     // Function to toggle the flyout visibility
     const createFlyoutField = function (block) {
@@ -55,6 +57,7 @@ export const blocks = {
     return flyoutToggleButton;
   },
 
+  // Adds a toggle button field to a block. Requires other inputs to already exist.
   appendMiniToolboxToggle(miniToolboxBlocks, flyoutToggleButton) {
     this.setInputsInline(true);
 
