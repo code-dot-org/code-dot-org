@@ -160,7 +160,7 @@ describe('ProjectManager', () => {
     );
     await projectManager.load();
     await projectManager.rename('new name');
-    //assert.isTrue(sourcesStore.save.notCalled);
+    assert.isTrue(sourcesStore.save.notCalled);
     assert.isTrue(channelsStore.save.calledOnce);
   });
 });
