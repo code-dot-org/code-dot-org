@@ -4,7 +4,6 @@ import Button from '@cdo/apps/templates/Button';
 
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 
-const dummyInputType = 5;
 export const blocks = {
   initializeMiniToolbox() {
     // Function to toggle the flyout visibility
@@ -67,7 +66,7 @@ export const blocks = {
     // https://github.com/google/blockly-samples/tree/master/plugins/renderer-inline-row-separators
     const lastInput = this.inputList[this.inputList.length - 1];
     // Force add a dummy input at the end of the block, if needed.
-    if (lastInput.type !== dummyInputType) {
+    if (lastInput.type !== Blockly.inputTypes.DUMMY) {
       this.appendDummyInput();
     }
 
