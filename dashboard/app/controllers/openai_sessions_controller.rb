@@ -1,4 +1,4 @@
-class OpenaiController < ApplicationController
+class OpenaiSessionsController < ApplicationController
   authorize_resource class: false
 
   OPENAI_CHAT_API_KEY = CDO.openai_chat_api_key
@@ -6,8 +6,8 @@ class OpenaiController < ApplicationController
   TEMPERATURE = 0
   GPT_MODEL = 'gpt-3.5-turbo'
 
-  # POST /openapi/chat_completion
-  def openai_chat_completion
+  # POST /openai/chat_completion
+  def chat_completion
     # Set up the API endpoint URL and request headers
     url = "https://api.openai.com/v1/chat/completions"
     headers = {
