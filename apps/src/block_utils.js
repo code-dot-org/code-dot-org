@@ -1124,13 +1124,7 @@ exports.createJsWrapperBlockCreator = function (
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);
         this.setInputsInline(inline);
 
-        // Use window.appOptions, not global appOptions, because the levelbuilder
-        // block page doesn't have appOptions, but we *do* want to show the mini-toolbox
-        // there
-        if (
-          miniToolboxBlocks &&
-          (!window.appOptions || window.appOptions.level.miniToolbox)
-        ) {
+        if (showMiniToolbox) {
           Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
             miniToolboxBlocks,
             flyoutToggleButton
