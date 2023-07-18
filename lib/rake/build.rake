@@ -78,9 +78,9 @@ namespace :build do
         # Allow developers to skip the time-consuming step of seeding the dashboard DB.
         # Additionally allow skipping when running in CircleCI, as it will be seeded during `rake install`
         if (rack_env?(:development) || ENV['CI']) && CDO.skip_seed_all
-          ChatClient.log "Not seeding <b>dashboard</b> due to CDO.skip_seed_all...\n"\
-              "Until you manually run 'rake seed:all' or disable this flag, you won't\n"\
-              "see changes to: videos, concepts, levels, scripts, prize providers, \n "\
+          ChatClient.log "Not seeding <b>dashboard</b> due to CDO.skip_seed_all...\n" \
+              "Until you manually run 'rake seed:all' or disable this flag, you won't\n" \
+              "see changes to: videos, concepts, levels, scripts, prize providers, \n " \
               "callouts, hints, secret words, or secret pictures."
         else
           ChatClient.log 'Seeding <b>dashboard</b>...'
@@ -97,12 +97,12 @@ namespace :build do
           RakeUtils.git_push
         end
 
-        if rack_env?(:staging)
-          # This step will only complete successfully if we succeed in
-          # generating all curriculum PDFs.
-          ChatClient.log "Generating missing pdfs..."
-          RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
-        end
+        # if rack_env?(:staging)
+        #  This step will only complete successfully if we succeed in
+        #  generating all curriculum PDFs.
+        #  ChatClient.log "Generating missing pdfs..."
+        #  RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
+        # end
       end
 
       # Skip asset precompile in development.

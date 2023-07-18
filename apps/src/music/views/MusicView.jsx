@@ -54,7 +54,6 @@ import {
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode} from '../constants';
-import header from '../../code-studio/header';
 import {
   setProjectUpdatedAt,
   setProjectUpdatedError,
@@ -66,6 +65,7 @@ import ValidatorProvider from '@cdo/apps/lab2/progress/ValidatorProvider';
 import {Key} from '../utils/Notes';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
+import {isEqual} from 'lodash';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -114,13 +114,14 @@ class UnconnectedMusicView extends React.Component {
     setProjectUpdatedError: PropTypes.func,
     setIsLoading: PropTypes.func,
     setPageError: PropTypes.func,
-    sources: PropTypes.object,
+    initialSources: PropTypes.object,
     levelData: PropTypes.object,
     labReadyForReload: PropTypes.bool,
     setLabReadyForReload: PropTypes.func,
     navigateToNextLevel: PropTypes.func,
     isReadOnlyWorkspace: PropTypes.bool,
     updateLoadProgress: PropTypes.func,
+    appName: PropTypes.string,
   };
 
   constructor(props) {
@@ -158,8 +159,6 @@ class UnconnectedMusicView extends React.Component {
       currentLibraryName: null,
     };
 
-    // Music Lab currently does not support share and remix
-    header.showHeaderForProjectBacked({showShareAndRemix: false});
     setUpBlocklyForMusicLab();
   }
 
@@ -177,6 +176,10 @@ class UnconnectedMusicView extends React.Component {
     window.addEventListener('beforeunload', event => {
       this.analyticsReporter.endSession();
     });
+
+    if (this.props.appName === 'music' || this.props.inIncubator) {
+      this.onLevelLoad(this.props.levelData, this.props.initialSources);
+    }
   }
 
   async componentDidUpdate(prevProps) {
@@ -214,36 +217,45 @@ class UnconnectedMusicView extends React.Component {
       this.updateHighlightedBlocks();
     }
 
-    // If we just finished loading the lab, then we need to update the
-    // sources and level data.
-    if (!prevProps.labReadyForReload && this.props.labReadyForReload) {
-      // Load and initialize the library and player if not done already.
-      // Read the library name first from level data, or from the project
-      // sources if not present on the level. If there is no library name
-      // specified on the level or sources, we will fallback to loading the
-      // default library.
-      let libraryName = this.props.levelData?.library;
-      if (!libraryName && this.props.sources?.labConfig?.music) {
-        libraryName = this.props.sources.labConfig.music.library;
-      }
-      await this.loadAndInitializePlayer(libraryName);
+    // Update components with new level data and new initial sources when
+    // the level changes.
+    if (
+      (!isEqual(prevProps.levelData, this.props.levelData) ||
+        !isEqual(prevProps.initialSources, this.props.initialSources)) &&
+      (this.props.appName === 'music' || this.props.inIncubator)
+    ) {
+      this.onLevelLoad(this.props.levelData, this.props.initialSources);
+    }
+  }
 
-      if (this.getStartSources() || this.props.sources) {
-        let codeToLoad = this.getStartSources();
-        if (this.props.sources?.source) {
-          codeToLoad = JSON.parse(this.props.sources.source);
-        }
-        this.loadCode(codeToLoad);
-      }
+  async onLevelLoad(levelData, initialSources) {
+    // Load and initialize the library and player if not done already.
+    // Read the library name first from level data, or from the project
+    // sources if not present on the level. If there is no library name
+    // specified on the level or sources, we will fallback to loading the
+    // default library.
+    let libraryName = levelData?.library;
+    if (!libraryName && initialSources?.labConfig?.music) {
+      libraryName = initialSources.labConfig.music.library;
+    }
+    await this.loadAndInitializePlayer(libraryName);
 
-      // Update components with level-specific data
-      if (this.props.levelData) {
-        this.musicBlocklyWorkspace.updateToolbox(this.props.levelData.toolbox);
-        this.library.setAllowedSounds(this.props.levelData.sounds);
-        this.props.setShowInstructions(!!this.props.levelData.text);
-      }
+    this.musicBlocklyWorkspace.init(
+      document.getElementById('blockly-div'),
+      this.onBlockSpaceChange,
+      this.props.isReadOnlyWorkspace
+    );
 
-      this.props.setLabReadyForReload(false);
+    this.musicBlocklyWorkspace.updateToolbox(levelData?.toolbox);
+    this.library.setAllowedSounds(levelData?.sounds);
+    this.props.setShowInstructions(!!levelData?.text);
+
+    if (this.getStartSources() || initialSources) {
+      let codeToLoad = this.getStartSources();
+      if (initialSources?.source) {
+        codeToLoad = JSON.parse(initialSources.source);
+      }
+      this.loadCode(codeToLoad);
     }
   }
 
@@ -259,7 +271,11 @@ class UnconnectedMusicView extends React.Component {
     try {
       this.library = await loadLibrary(libraryName);
     } catch (error) {
-      this.props.setPageError({errorMessage: 'Error loading library', error});
+      this.props.setPageError({
+        errorMessage: 'Error loading library',
+        error,
+        details: {libraryName: libraryName || 'default'},
+      });
       return;
     }
 
@@ -272,12 +288,16 @@ class UnconnectedMusicView extends React.Component {
     Globals.setLibrary(this.library);
     Globals.setPlayer(this.player);
 
-    this.musicBlocklyWorkspace.init(
-      document.getElementById('blockly-div'),
-      this.onBlockSpaceChange,
-      this.props.isReadOnlyWorkspace
-    );
-    this.player.initialize(this.library, this.props.updateLoadProgress);
+    try {
+      this.player.initialize(this.library, this.props.updateLoadProgress);
+    } catch (error) {
+      this.props.setPageError({
+        errorMessage: 'Error initializing music player',
+        error,
+        details: {libraryName: libraryName || 'default'},
+      });
+      return;
+    }
 
     this.setState({
       loadedLibrary: true,
@@ -698,10 +718,11 @@ const MusicView = connect(
     isHeadersShowing: state.music.isHeadersShowing,
     currentScriptId: state.progress.scriptId,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
-    sources: state.lab.sources,
+    initialSources: state.lab.initialSources,
     levelData: state.lab.levelData,
     labReadyForReload: state.lab.labReadyForReload,
     isReadOnlyWorkspace: isReadOnlyWorkspace(state),
+    appName: state.lab.appName,
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),

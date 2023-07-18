@@ -1,0 +1,177 @@
+// Custom styles for code.org/ai/pl/webinar
+// — supplemental to shared/css/design-system-pegasus.scss
+
+@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+
+.hero-ai-pl-webinar {
+  background-image: url(/images/ai/pl/101/hero--1.png), url(/images/ai/pl/101/hero--2.png);
+  background-position: left center, right bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-color: #360161;
+  background-size: contain, 500px;
+  padding-bottom: 64px;
+
+
+  &__by {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-left: 32px;
+    flex-wrap: wrap;
+
+    img {
+      margin: 16px 32px 16px 0;
+    }
+  }
+
+  .text-wrapper p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  @media screen and(max-width: 1499px) {
+    background-position: calc(20vw - 350px) center, right bottom
+  }
+
+  @media screen and(max-width: 1279px) {
+    background-size: contain, 370px;
+    background-position: calc(15vw - 350px) center, right bottom
+
+  }
+  @media screen and(max-width: $width-lg) {
+    background-image: none;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    background-position: bottom center;
+    background-image: url(/images/ai/pl/101/hero--2-m.png);
+    background-size: 300px;
+    padding-bottom: 200px;
+
+    &__by {
+      flex-direction: column;
+      align-items: flex-start;
+
+    }
+    &__list {
+      align-items: center;
+      margin-left: 0;
+      flex-wrap: wrap;
+
+      img {
+        margin: 12px 24px 12px 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.partnership-ai {
+  background: $neutral_light;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    margin: 0 26px
+  }
+
+  @media screen and(max-width: 1279px) {
+    &__list {
+      justify-content: space-between;
+
+    }
+    &__logo {
+      height: 35px;
+      margin: 0;
+
+      &--iste {
+        height: 32px;
+      }
+
+      &--ets {
+        height: 30px;
+      }
+    }
+
+  }
+  @media screen and (max-width: $width-sm) {
+    &__list {
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+
+    }
+
+    &__logo {
+      margin: 20px;
+      height: 30px;
+
+      &:last-child {
+        margin-right: auto;
+      }
+
+      &--iste {
+        height: 24px;
+      }
+
+      &--ets {
+        height: 34px;
+      }
+    }
+  }
+}
+
+.action-block {
+  &--explore .overline {
+    text-transform: uppercase;
+  }
+}
+
+.partnership-ai + #clearboth + .desktop-feature {
+  display: none
+}
+
+.newsletter-signup {
+  padding-bottom: 0;
+
+  .wrapper {
+    padding-bottom: 0;
+  }
+}
+
+.signup-iframe {
+  margin: 0 auto;
+  max-width: 1005px;
+  padding-bottom: calc(64px - 50px);
+  @media screen and (max-width: $width-sm) {
+    &__iframe {
+      height: 550px;
+    }
+  }
+
+}
+
+.intro {
+  padding-bottom: calc(64px - 10px);
+}
+

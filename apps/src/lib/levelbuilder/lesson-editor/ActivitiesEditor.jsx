@@ -145,17 +145,27 @@ class ActivitiesEditor extends Component {
             allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         ))}
-        {this.props.hasLessonPlan && (
-          <button
-            onMouseDown={this.handleAddActivity}
-            className="btn add-activity"
-            style={styles.addActivity}
-            type="button"
+        <div>
+          {this.props.hasLessonPlan && (
+            <button
+              onMouseDown={this.handleAddActivity}
+              className="btn add-activity"
+              style={styles.addActivity}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Activity
+            </button>
+          )}
+          <a
+            className="btn add-rubric"
+            style={styles.addRubric}
+            href="https://levelbuilder-studio.code.org/rubrics/new"
           >
             <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Activity
-          </button>
-        )}
+            Add Rubric
+          </a>
+        </div>
         <input
           type="hidden"
           name="activities"
@@ -176,6 +186,14 @@ const styles = {
     background: color.cyan,
     border: `1px solid ${color.cyan}`,
     boxShadow: 'none',
+  },
+  addRubric: {
+    fontSize: 14,
+    color: 'white',
+    background: color.cyan,
+    border: `1px solid ${color.cyan}`,
+    boxShadow: 'none',
+    margin: `5px 5px 0px`,
   },
 };
 
