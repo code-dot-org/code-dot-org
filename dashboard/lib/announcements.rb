@@ -21,7 +21,7 @@ class Announcements
     return nil unless banner_id_for_page
 
     banner = banners[banner_id_for_page]
-    banner ? banner.merge({id: banner_id_for_page}) : nil
+    banner&.merge({id: banner_id_for_page})
   end
 
   def self.load_announcements

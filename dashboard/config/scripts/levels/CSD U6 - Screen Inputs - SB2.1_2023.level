@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:14:18.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Dropdowns\r\n\r\nYou can also use a dropdown to let the user interact with the screen. A dropdown lets you select from a list of options. You can use the [`getProperty()`(#fff176)](/docs/applab/getProperty/) block to get the `value` from the dropdown and use it in your app.\r\n\r\nThis app should let the user change the background color of the app, but it isn't finished.\r\n\r\n## Do This\r\n\r\n1) Get the value from the dropdown\r\n\t- Add a [`var x`(#BB77C7)](/docs/applab/declareAssign_x/) and [`getProperty()`(#fff176)](/docs/applab/getProperty/) block to get the `value` from the `colorDropdown` element\r\n2) Update the background color\r\n\t- Add a [`setProperty`(#fff176)](/docs/applab/setProperty/) block to update the background of the screen to the value from the dropdown\r\n\r\n::: details [**Show Me How**]\r\n<img src=\"https://images.code.org/d9ae7f5b99af8fbd5f5875d822b19124-image-1638223704356.png\" width=\"500px\" />\r\n:::\r\n\r\n**Run the program!** Change the background color, then click the update button to see the background change.",
+    "long_instructions": "# Dropdowns\r\n\r\nYou can also use a dropdown to let the user interact with the screen. A dropdown lets you select from a list of options. You can use the [`getProperty()`(#fff176)](/docs/applab/getProperty/) block to get the `value` from the dropdown and use it in your app.\r\n\r\nThis app should let the user change the background color of the app, but it isn't finished.\r\n\r\n## Do This\r\n\r\n1) Get the value from the dropdown\r\n\t- Add a [`var x`(#BB77C7)](/docs/applab/declareAssign_x/) and [`getProperty()`(#fff176)](/docs/applab/getProperty/) block to get the `value` from the `colorDropdown` element\r\n2) Update the background color\r\n\t- Add a [`setProperty`(#fff176)](/docs/applab/setProperty/) block to update the background of the screen to the value from the dropdown\r\n\r\n::: details [**Show Me How**]\r\n<img src=\"https://images.code.org/01e1b79a5f3074adf5de9b0e3c589491-image-1689634154944.gif\" width=\"600px\" />\r\n:::\r\n\r\n**Run the program!** Change the background color, then click the update button to see the background change.\r\n\r\n",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -44,7 +45,6 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20430,
     "name_suffix": "_2023",
@@ -66,9 +66,8 @@
     "project_template_level_name": "CSD U6 - Screen Inputs - SB2 template_2023",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:14:18.638+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - SB2.1_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - SB2.1_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:14:18.638+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - SB2.1_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - SB2.1_2022\"},{\"changed_at\":\"2023-07-17 22:49:52 +0000\",\"changed\":[\"long_instructions\",\"makerlab_enabled\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

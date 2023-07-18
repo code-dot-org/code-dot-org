@@ -87,7 +87,7 @@ class Block < ApplicationRecord
   end
 
   def delete_additional_files
-    File.delete js_path_was if File.exist? js_path_was
+    FileUtils.rm_f js_path_was
   end
 
   def js_path(old=false)
