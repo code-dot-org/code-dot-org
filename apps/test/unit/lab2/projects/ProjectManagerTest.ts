@@ -24,6 +24,13 @@ describe('ProjectManager', () => {
     updatedAt: 'fakeDate',
   };
 
+  const UPDATED_SOURCE = {
+    source: 'new source!',
+  };
+  const UPDATED_SOURCE_2 = {
+    source: 'new source2!',
+  };
+
   beforeEach(() => {
     sourcesStore = stubObject<RemoteSourcesStore>(new RemoteSourcesStore());
     sourcesStore.load.returns(Promise.resolve(FAKE_SOURCE));
@@ -61,10 +68,7 @@ describe('ProjectManager', () => {
       false
     );
     await projectManager.load();
-    const updatedSource = {
-      source: 'new source!',
-    };
-    await projectManager.save(updatedSource);
+    await projectManager.save(UPDATED_SOURCE);
     assert.isTrue(sourcesStore.save.calledOnce);
     assert.isTrue(channelsStore.save.calledOnce);
   });
@@ -90,15 +94,8 @@ describe('ProjectManager', () => {
       false
     );
     await projectManager.load();
-    const updatedSource = {
-      source: 'new source!',
-    };
-
-    const updatedSource2 = {
-      source: 'new source2!',
-    };
-    await projectManager.save(updatedSource);
-    await projectManager.save(updatedSource2);
+    await projectManager.save(UPDATED_SOURCE);
+    await projectManager.save(UPDATED_SOURCE_2);
     // We should only trigger a save once. The next save is enqueued
     // to happen in the next save interval.
     assert.isTrue(sourcesStore.save.calledOnce);
@@ -113,15 +110,8 @@ describe('ProjectManager', () => {
       false
     );
     await projectManager.load();
-    const updatedSource = {
-      source: 'new source!',
-    };
-
-    const updatedSource2 = {
-      source: 'new source2!',
-    };
-    await projectManager.save(updatedSource);
-    await projectManager.save(updatedSource2, true);
+    await projectManager.save(UPDATED_SOURCE);
+    await projectManager.save(UPDATED_SOURCE_2, true);
     // We should trigger a save twice; the first time is the initial save,
     // the second time because we forced a save.
     assert.isTrue(sourcesStore.save.calledTwice);
@@ -136,12 +126,8 @@ describe('ProjectManager', () => {
       false
     );
     await projectManager.load();
-    const updatedSource = {
-      source: 'new source!',
-    };
-
     projectManager.destroy();
-    await projectManager.save(updatedSource);
+    await projectManager.save(UPDATED_SOURCE);
 
     assert.isTrue(sourcesStore.save.notCalled);
     assert.isTrue(channelsStore.save.notCalled);
@@ -155,20 +141,26 @@ describe('ProjectManager', () => {
       true /* turn emergency mode on */
     );
     await projectManager.load();
-    const updatedSource = {
-      source: 'new source!',
-    };
-
-    const updatedSource2 = {
-      source: 'new source2!',
-    };
-    await projectManager.save(updatedSource);
+    await projectManager.save(UPDATED_SOURCE);
     // call second save with force save so that we save immediately
-    await projectManager.save(updatedSource2, true);
+    await projectManager.save(UPDATED_SOURCE_2, true);
 
     // We should trigger a source save twice, but a channel save once.
     // We only save the first channel update in emergency mode.
     assert.isTrue(sourcesStore.save.calledTwice);
+    assert.isTrue(channelsStore.save.calledOnce);
+  });
+
+  it('only triggers a channel save on rename', async () => {
+    const projectManager = new ProjectManager(
+      sourcesStore,
+      channelsStore,
+      FAKE_CHANNEL_ID,
+      false
+    );
+    await projectManager.load();
+    await projectManager.rename('new name');
+    //assert.isTrue(sourcesStore.save.notCalled);
     assert.isTrue(channelsStore.save.calledOnce);
   });
 });
