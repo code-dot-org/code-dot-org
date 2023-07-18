@@ -3,122 +3,103 @@ title: 'Accessibility'
 theme: responsive_full_width
 ---
 
-
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/accessibility-styles.css", rel: "stylesheet"}
 
-
 %section.hero-banner-basic.hero-banner-basic--accessibility
   .wrapper
-    %div.flex-container
-      %div.text-wrapper.col-66
-        %h1{style: "color: white"} Become a Maker
-        %p{style: "color: white"} Explore your creativity with physical computing.
-      %div.col-30.flex-container
+    .flex-container
+      .text-wrapper.col-50.flex-container.align-items-center
+        .hero-banner-basic__content
+          %h1{style: "color: white"}
+            =hoc_s(:accessibility_hero_heading)
+          %p{style: "color: white"}
+            =hoc_s(:accessibility_hero_desc)
+      .col-50.flex-container.justify-end
         %img{src: "/images/accessibility/hero-image.png", alt: ""}
     .clear
 
-%section.why-teach-cs.bg-neutral-light
+%section.accessibility-efforts.bg-neutral-light
   .wrapper
     %h2
-      =hoc_s(:teach_page_why_teach_cs_heading)
+      = hoc_s(:accessibility_efforts_title)
     %p
-      =hoc_s(:teach_page_why_teach_cs_heading)
-    %div.grid-container
-      %div.flex-container
-        %figure
-          %img{src: "/images/teach-page-why-cs-01.png", alt: ""}
-        .text-wrapper
-          %h3.heading-sm
-            =hoc_s(:teach_page_why_teach_cs_block_heading_01)
-          %p=hoc_s(:teach_page_why_teach_cs_block_desc_01)
-      %div.flex-container
-        %figure
-          %img{src: "/images/teach-page-why-cs-02.png", alt: ""}
-        .text-wrapper
-          %h3.heading-sm
-            =hoc_s(:teach_page_why_teach_cs_block_heading_02)
-          %p=hoc_s(:teach_page_why_teach_cs_block_desc_02)
-      %div.flex-container
-        %figure
-          %img{src: "/images/teach-page-why-cs-03.png", alt: ""}
-        .text-wrapper
-          %h3.heading-sm
-            =hoc_s(:teach_page_why_teach_cs_block_heading_03)
-          %p=hoc_s(:teach_page_why_teach_cs_block_desc_03)
-      %div.flex-container
-        %figure
-          %img{src: "/images/teach-page-why-cs-04.png", alt: ""}
-        .text-wrapper
-          %h3.heading-sm
-            =hoc_s(:teach_page_why_teach_cs_block_heading_04)
-          %p=hoc_s(:teach_page_why_teach_cs_block_desc_04)
-          %a{href: "/ai", target: "_blank", rel: "noopener noreferrer"}
-            =hoc_s(:call_to_action_explore_ai_resources)
+      = hoc_s(:accessibility_efforts_desc)
+    .grid-container
+      - item_count = 4
+      - item_count.times do |index|
+        .flex-container
+          %figure
+            %img{src: "/images/accessibility/efforts_#{index + 1}.png",  alt: hoc_s("accessibility_efforts_card_title_#{index + 1}")}
+          .text-wrapper
+            %h3.heading-sm
+              =hoc_s("accessibility_efforts_card_title_#{index + 1}")
+            %p
+              - if index == 1
+                = hoc_s(:accessibility_efforts_card_desc_2_a)
+                %a{href: "https://www.section508.gov/sell/vpat/", target: "_blank", rel: "noopener noreferrer"}
+                  = hoc_s(:accessibility_efforts_card_desc_2_b)
+                = hoc_s(:accessibility_efforts_card_desc_2_c)
+              - elsif index == 3
+                = hoc_s(:accessibility_efforts_card_desc_4_a)
+                %a{href: "https://www.w3.org/TR/WCAG20/", target: "_blank"}
+                  = hoc_s(:accessibility_efforts_card_desc_4_b)
+                = hoc_s(:accessibility_efforts_card_desc_4_c)
+              - else
+                = hoc_s("accessibility_efforts_card_desc_#{index + 1}")
 
-
-
-%section{id: "ai-pl"}
+%section.accessibility-explore
   .wrapper
-    %h2=hoc_s(:ai_pl_heading)
+    %h2=hoc_s(:accessibility_explore_title)
     .action-block.action-block--two-col
-      %img{src: "/images/ai/ai-professional-learning.png", alt: "", class: "col-50"}
+      %img{src: "/images/accessibility/explore.jpg", alt: hoc_s(:accessibility_explore_title), class: "col-50"}
       .text-wrapper.col-50
-        %h3.heading-sm=hoc_s(:ai_pl_subheading)
-        %ul{style: "margin-top: 1.5em;"}
-          %li=hoc_s(:ai_pl_list_01)
-          %li=hoc_s(:ai_pl_list_02)
-          %li=hoc_s(:ai_pl_list_03)
-          %li=hoc_s(:ai_pl_list_04)
-          %li=hoc_s(:ai_pl_list_05)
-        %a{href: CDO.studio_url("/courses/self-paced-pl-aiml-2023"), class: "link-button"}
-          =hoc_s(:call_to_action_self_paced_pl)
+        %p.heading-sm=hoc_s(:accessibility_explore_text)
+        %a{href: "https://support.code.org/hc/en-us/sections/15186591538957-Accessibility", class: "link-button", target: "_blank"}
+          =hoc_s(:accessibility_explore_button)
     .clear
 
-%section{id: "ai-curricula"}
+%section.bg-neutral-light.accessibility-help
   .wrapper
-    %h2=hoc_s(:ai_curricula_heading)
-    %p=hoc_s(:ai_curricula_desc)
+    %h2=hoc_s(:accessibility_help_us_title)
+    %p=hoc_s(:accessibility_help_us_text)
+    %a{href: "https://support.code.org/hc/en-us/sections/15186591538957-Accessibility", target: "_blank", class: "link-button"}
+      =hoc_s(:accessibility_help_us_button)
+
+
+%section.accessibility-commit
+  .wrapper
+    %h2=hoc_s(:accessibility_commit_title)
+    - commit_index = 4
+    - commit_index.times do |index|
+      %p=hoc_s("accessibility_commit_text_#{index + 1}")
+
+= view :section_divider_line
+
+- partner_index = 10
+
+- accessibility_partner_links = ["https://www.washington.edu/accesscomputing/accesscsforall","https://milnel2.github.io/blocks4alliOS/","https://codejumper.com/","https://www.csforall.org/projects_and_programs/accessibility-pledge/","https://www.deafkidscode.org/","https://www.apple.com/education/docs/everyone-can-code-curriculum-guide.pdf","https://www.khanacademy.org/","https://www.aph.org/product/snap-circuits-jr-access-pack/","https://sphero.com/products/sphero-bolt","https://quorumlanguage.com/lessons/code.html"]
+
+- accessibility_partner_tags = [hoc_s(:module_label_student_content_resources),hoc_s(:module_label_student_product),hoc_s(:module_label_student_product),hoc_s(:module_label_student_content_resources),hoc_s(:module_label_curriculum_pure),hoc_s(:module_label_student_product),hoc_s(:module_label_curriculum_pure),hoc_s(:module_label_student_product),hoc_s(:module_label_student_product),hoc_s(:module_label_curriculum_pure)]
+
+- accessibility_partner_levels = [": K-12", ": K-8", ": K-6",": K-12", ": K-12", ": K-12", ": K-12", ": K-6", ": K-12", ": K 9-12"]
+
+
+%section.accessibility-partner
+  .wrapper
+    %h2=hoc_s(:accessibility_partner_title)
+    %p=hoc_s(:accessibility_partner_desc)
     .action-block__wrapper.action-block__wrapper--three-col
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline=hoc_s(:ai_curriculum_grades_01)
-          %h3=hoc_s(:ai_curriculum_title_01)
-          %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: ""}
-          %p=hoc_s(:ai_curriculum_desc_01)
-          %p=hoc_s(:ai_curriculum_duration_01)
-        .content-footer
-          %a{href: CDO.studio_url("/s/aiml"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_01)}}
-            =hoc_s(:call_to_action_explore_unit)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline=hoc_s(:ai_curriculum_grades_02)
-          %h3=hoc_s(:ai_curriculum_title_02)
-          %img{src: "/images/ai/ai-curriclum-ethics.png", alt: ""}
-          %p=hoc_s(:ai_curriculum_desc_02)
-          %p=hoc_s(:ai_curriculum_duration_02)
-        .content-footer
-          %a{href: CDO.studio_url("/s/ai-ethics-2021/lessons/1"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_02)}}
-            =hoc_s(:call_to_action_view_lesson_plan)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline=hoc_s(:ai_curriculum_grades_03)
-          %h3=hoc_s(:ai_curriculum_title_03)
-          %img{src: "/images/ai/ai-curriclum-oceans.png", alt: ""}
-          %p=hoc_s(:ai_curriculum_desc_03)
-          %p=hoc_s(:ai_curriculum_duration_03)
-        .content-footer
-          %a{href: CDO.studio_url("/s/oceans"), class: "link-button", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_03)}}
-            =hoc_s(:call_to_action_try_activity)
-
-%section
-  %hr.dark
-  %div.centered
-    %h4=hoc_s(:teach_page_why_teach_cs_heading_02)
-    %a.link-button{href: CDO.studio_url("/catalog")}
-      =hoc_s(:call_to_action_explore_curriculum_catalog)
-
-%section.bg-neutral-light
-  .wrapper
-    %h2=hoc_s(:ai_carousel_heading)
-    .quotes-wrapper
+      - partner_index.times do |index|
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            %p.overline
+              =accessibility_partner_tags[index]
+            %h3=hoc_s("accessibility_card_title_#{index + 1}")
+            %p
+              =hoc_s(:grade_level)
+              =accessibility_partner_levels[index]
+            %p=hoc_s("accessibility_card_text_#{index + 1}")
+          .content-footer
+            %a.link-button{href: accessibility_partner_links[index], target: "_blank"}
+              = hoc_s(:call_to_action_learn_more)
