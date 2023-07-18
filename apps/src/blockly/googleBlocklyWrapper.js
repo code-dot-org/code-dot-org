@@ -23,7 +23,10 @@ import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
-import {CdoRendererThrasos} from './addons/cdoRendererThrasos';
+import {
+  CdoRendererThrasos,
+  CdoRendererThrasosIRS,
+} from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './themes/cdoTheme';
 import CdoDarkTheme from './themes/cdoDark';
@@ -277,6 +280,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.blockly_.registry.Type.RENDERER,
     Renderers.THRASOS,
     CdoRendererThrasos,
+    true /* opt_allowOverrides */
+  );
+  blocklyWrapper.blockly_.registry.register(
+    blocklyWrapper.blockly_.registry.Type.RENDERER,
+    Renderers.THRASOS_IRS,
+    CdoRendererThrasosIRS,
     true /* opt_allowOverrides */
   );
   blocklyWrapper.blockly_.registry.register(
