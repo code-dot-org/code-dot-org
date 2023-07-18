@@ -1,4 +1,4 @@
-Components Library (Design System components)
+Component Library (Design System components)
 =============================================
 This is a collection of Design System React components that are used across our apps.
 We store components in `src/componentLibrary` folder(the one where this README.md is located) for now,
@@ -8,7 +8,7 @@ but once we'll be ready - we'll be moving design system components to
 The main idea of Design system is that you'll use these components when you'll need to create a new page or update
 an existing one, and you'll be able to do it without a designer, because you'll have all the components you need
 in one place. In addition to that, we'll have one instance of base components meaning that once we'll want to update
-something across the project(e.g. change color scheme of button, or Typography styles), we'll only need to update this
+something across the project (e.g. change color scheme of button, or Typography styles), we'll only need to update this
 library instead of finding and updating all the exising implementation of needed functionality
 (e.g. buttons or typography)
 
