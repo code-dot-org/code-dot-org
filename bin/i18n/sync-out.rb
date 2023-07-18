@@ -266,7 +266,7 @@ def sort_and_sanitize(hash)
   hash.sort_by {|key, _| key}.each_with_object({}) do |(key, value), result|
     case value
     when Hash
-      result[key] = sort_and_sanitize(value) unless sorted_value.empty?
+      result[key] = sort_and_sanitize(value) unless value.empty?
     when Array
       result[key] = value.filter_map {|v| v.is_a?(Hash) ? sort_and_sanitize(v) : v}
     when String
