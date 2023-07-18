@@ -146,6 +146,7 @@ export interface SoundData {
   note?: number;
   restricted?: boolean;
   sequence?: SampleSequence;
+  preview?: boolean;
 }
 
 export interface SoundFolder {
