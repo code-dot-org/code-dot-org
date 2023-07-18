@@ -25,3 +25,15 @@ export async function update(channel: Channel): Promise<Response> {
     }
   );
 }
+
+export async function publish(channel: Channel): Promise<Response> {
+  return HttpClient.post(
+    `${rootUrl}/${channel.id}/publish/${channel.projectType}`,
+    '',
+    false
+  );
+}
+
+export async function unpublish(channel: Channel): Promise<Response> {
+  return HttpClient.post(`${rootUrl}/${channel.id}/unpublish`, '', false);
+}

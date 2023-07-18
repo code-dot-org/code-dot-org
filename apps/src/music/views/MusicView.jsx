@@ -54,7 +54,6 @@ import {
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {BlockMode} from '../constants';
-import header from '../../code-studio/header';
 import {
   setProjectUpdatedAt,
   setProjectUpdatedError,
@@ -159,8 +158,6 @@ class UnconnectedMusicView extends React.Component {
       currentLibraryName: null,
     };
 
-    // Music Lab currently does not support share and remix
-    header.showHeaderForProjectBacked({showShareAndRemix: false});
     setUpBlocklyForMusicLab();
   }
 
@@ -218,8 +215,8 @@ class UnconnectedMusicView extends React.Component {
     // If we just finished loading the lab, then we need to update the
     // sources and level data.
     if (!prevProps.labReadyForReload && this.props.labReadyForReload) {
-      // Only load if the current app is music.
-      if (this.props.appName === 'music') {
+      // Only load if the current app is music or we are on the Incubator page.
+      if (this.props.appName === 'music' || this.props.inIncubator) {
         // Load and initialize the library and player if not done already.
         // Read the library name first from level data, or from the project
         // sources if not present on the level. If there is no library name
@@ -284,7 +281,15 @@ class UnconnectedMusicView extends React.Component {
     Globals.setLibrary(this.library);
     Globals.setPlayer(this.player);
 
-    this.player.initialize(this.library, this.props.updateLoadProgress);
+    try {
+      this.player.initialize(this.library, this.props.updateLoadProgress);
+    } catch (error) {
+      this.props.setPageError({
+        errorMessage: 'Error initializing music player',
+        error,
+      });
+      return;
+    }
 
     this.setState({
       loadedLibrary: true,
