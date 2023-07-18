@@ -1,4 +1,5 @@
 class OpenaiSessionsController < ApplicationController
+  include OpenaiChatHelper
   authorize_resource class: false
 
   OPENAI_CHAT_API_KEY = CDO.openai_chat_api_key
@@ -9,14 +10,13 @@ class OpenaiSessionsController < ApplicationController
   # POST /openai/chat_completion
   def chat_completion
     # Set up the API endpoint URL and request headers
-    url = "https://api.openai.com/v1/chat/completions"
     headers = {
       "Content-Type" => "application/json",
-      "Authorization" => "Bearer #{OPENAI_CHAT_API_KEY}"
+      "Authorization" => "Bearer #{OPENAI_CHAT_API_KEY}",
+      "OpenAI-Organization" => CODE_ORG_ID
     }
-    headers["OpenAI-Organization"] = CODE_ORG_ID
-
     body = JSON.parse(request.body.read)
+
     # Set up the API endpoint URL and request headers
     data = {
       model: GPT_MODEL,
@@ -25,7 +25,7 @@ class OpenaiSessionsController < ApplicationController
     }
 
     # Send the request to the API endpoint
-    response = HTTParty.post(url, headers: headers, body: data.to_json)
+    response = OpenaiChatHelper.get_chat_completion_response(headers, data)
 
     # Parse the response JSON and return the completed text
     if response.code == 200
