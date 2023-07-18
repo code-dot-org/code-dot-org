@@ -268,7 +268,11 @@ class UnconnectedMusicView extends React.Component {
     try {
       this.library = await loadLibrary(libraryName);
     } catch (error) {
-      this.props.setPageError({errorMessage: 'Error loading library', error});
+      this.props.setPageError({
+        errorMessage: 'Error loading library',
+        error,
+        details: {libraryName: libraryName || 'default'},
+      });
       return;
     }
 
@@ -287,6 +291,7 @@ class UnconnectedMusicView extends React.Component {
       this.props.setPageError({
         errorMessage: 'Error initializing music player',
         error,
+        details: {libraryName: libraryName || 'default'},
       });
       return;
     }

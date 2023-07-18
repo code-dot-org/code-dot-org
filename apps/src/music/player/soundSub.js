@@ -84,18 +84,12 @@ WebAudio.prototype.LoadSound = function (url, callback, onLoadFinished) {
           onLoadFinished();
         },
         function (e) {
-          Lab2MetricsReporter.logError(
-            {name: 'Error decoding audio data', url: url},
-            e
-          );
+          Lab2MetricsReporter.logError('Error decoding audio data', e, {url});
           onLoadFinished();
         }
       );
     } catch (e) {
-      Lab2MetricsReporter.logError(
-        {name: 'Error decoding audio data', url: url},
-        e
-      );
+      Lab2MetricsReporter.logError('Error decoding audio data', e, {url});
       onLoadFinished();
     }
   };
