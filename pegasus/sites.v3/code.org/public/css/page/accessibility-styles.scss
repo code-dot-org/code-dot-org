@@ -7,10 +7,9 @@
   background-image: url("/images/accessibility/hero-bg.jpg");
   background-size: cover;
   background-color: #ccc;
-
 }
 
-section.why-teach-cs {
+section.accessibility-efforts {
 
   .grid-container {
     margin-top: 5rem;
@@ -33,5 +32,15 @@ section.why-teach-cs {
 
   p {
     @include body-two;
+  }
+}
+.hero-banner-basic {
+  &--accessibility {
+
+  }
+  @media screen and (max-width: $width-sm) {
+    .flex-container {
+      flex-direction: column;
+    }
   }
 }
