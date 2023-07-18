@@ -27,15 +27,14 @@ module I18n
       I18n::Resources::Apps::Animations.sync_in
       I18n::Resources::Dashboard::SharedFunctions.sync_in
       I18n::Resources::Dashboard::CourseOfferings.sync_in
-      localize_standards
-      localize_docs
+      I18n::Resources::Dashboard::Standards.sync_in
+      I18n::Resources::Dashboard::Docs.sync_in
       puts "Copying source files"
       I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
       localize_external_sources
       localize_course_resources
       redact_level_content
       redact_block_content
-      redact_docs
       redact_script_and_course_content
       redact_labs_content
       localize_markdown_content
@@ -43,141 +42,6 @@ module I18n
     rescue => exception
       puts "Sync in failed from the error: #{exception}"
       raise exception
-    end
-
-    # Takes strings describing and naming Framework, StandardCategory, and Standard
-    # and places them in the source pool to be sent to crowdin.
-    def self.localize_standards
-      puts "Preparing standards content"
-      standards_content_path = File.join(I18N_SOURCE_DIR, "standards")
-
-      frameworks = {}
-
-      # Localize all frameworks.
-      Framework.all.each do |framework|
-        frameworks[framework.shortcode] = {
-          'name' => framework.name,
-          'categories' => {},
-          'standards' => {}
-        }
-      end
-
-      # Localize all categories.
-      StandardCategory.all.each do |category|
-        framework = category.framework
-
-        categories = frameworks[framework.shortcode]['categories']
-        categories[category.shortcode] = {
-          'description' => category.description
-        }
-      end
-
-      # Localize all standards.
-      Standard.all.each do |standard|
-        framework = standard.framework
-
-        standards = frameworks[framework.shortcode]['standards']
-        standards[standard.shortcode] = {
-          'description' => standard.description
-        }
-      end
-
-      FileUtils.mkdir_p(standards_content_path)
-
-      # Then, for each framework, generate a file for it.
-      frameworks.keys.each do |framework|
-        File.write(File.join(standards_content_path, "#{framework}.json"), JSON.pretty_generate(frameworks[framework]))
-      end
-    end
-
-    # This function localizes content in studio.code.org/docs
-    def self.localize_docs
-      puts "Preparing /docs content"
-
-      # TODO: Adding spritelab and Javalab to translation pipeline
-      # Currently supporting translations for applab, gamelab and weblab. NOT translating javalab and spritelab.
-      # Javalab documentations exists in a different table because it has a different structure, more align with java.
-      # Spritelab uses translatable block names, unlike JavaScript blocks.
-      localized_environments = %w(applab gamelab weblab)
-
-      ### Localize Programming Environments
-      # For each programming environment, name is used as key, title is used as name
-      ProgrammingEnvironment.all.sort.each do |env|
-        next unless localized_environments.include?(env.name)
-
-        # In the sync-in, each environment is store in an individual file.
-        # Files are merged during the sync-out in programming_environments.{locale}.json
-        docs_content_file = File.join(I18N_SOURCE_DIR, "docs", env.name + ".json")
-
-        programming_env_docs = {}
-        programming_env_docs[env.name] = {
-          'name' => env.properties["title"],
-          'description' => env.properties["description"],
-          'categories' => {},
-        }
-        ### Localize Categories for Navigation
-        # Programming environment has a method defined in the programming_environment model that returns the
-        # categories for navigation. The method is used to obtain the current categories existing in the database.
-        categories_data = programming_env_docs[env.name]["categories"]
-        env.categories_for_navigation.each do |category_for_navigation|
-          category_key = category_for_navigation[:key]
-          categories_data.store(
-            category_key, {
-              'name' => category_for_navigation[:name],
-            'expressions' => {}
-            }
-          )
-
-          ### localize Programming Expressions
-          # expression_docs.properties["syntax"] is not translated as it is the JavaScript expression syntax
-          expressions_data = categories_data[category_key]["expressions"]
-          category_for_navigation[:docs].each do |expression|
-            expression_key = expression[:key]
-            expression_docs = ProgrammingExpression.find_by_id(expression[:id])
-            expressions_data.store(
-              expression_key, {
-                'content' => expression_docs.properties["content"],
-              'examples' => ({} unless expression_docs.properties["examples"].nil?),
-              'palette_params' => ({} unless expression_docs.properties["palette_params"].nil?),
-              'return_value' => expression_docs.properties["return_value"],
-              'short_description' => expression_docs.properties["short_description"],
-              'tips' => expression_docs.properties["tips"]
-              }.compact
-            )
-
-            ### Localize Examples
-            # Programming expressions may have 0 or more examples.
-            # Only example["name"] and example["description"] are translated. example["code"] is NOT translated.
-            example_docs = expressions_data[expression_key]["examples"]
-            expression_docs.properties["examples"]&.each do |example|
-              unless example["name"].nil_or_empty? && example["description"].nil_or_empty?
-                example_docs.store(
-                  example["name"], {
-                    'name' => (example["name"] if example["name"]),
-                  'description' => (example["description"] if example["description"]),
-                  }.compact
-                )
-              end
-            end
-
-            ### localize Parameters
-            # Programming expresions may have 0 or more parameters.
-            # Parameter name (param["name"]) is not translated as it needs to match the JavaScript expression syntax.
-            param_docs = expressions_data[expression_key]["palette_params"]
-            expression_docs.properties["palette_params"]&.each do |param|
-              param_docs.store(
-                param["name"], {
-                  'type' => (param["type"] if param["type"]),
-                'description' => (param["description"] if param["description"])
-                }.compact
-              )
-            end
-          end
-        end
-        # Generate a file containing the string of each Programming Environment.
-        FileUtils.mkdir_p(File.dirname(docs_content_file))
-        File.write(docs_content_file, JSON.pretty_generate(programming_env_docs.compact))
-      end
     end
 
     # These files are synced in using the `bin/i18n-codeorg/in.sh` script.
@@ -667,17 +531,6 @@ module I18n
       redacted_data = RedactRestoreUtils.redact_data(redactable_data, ['blockly'])
 
       File.write(source_path, JSON.pretty_generate(source_data.deep_merge(redacted_data)))
-    end
-
-    def self.redact_docs
-      puts "Redacting /docs content"
-
-      Dir.glob(File.join(I18N_SOURCE_DIR, "docs", "*.json")).each do |source|
-        backup = source.sub("source", "original")
-        FileUtils.mkdir_p(File.dirname(backup))
-        FileUtils.cp(source, backup)
-        RedactRestoreUtils.redact(source, source, ['visualCodeBlock', 'link', 'resourceLink'])
-      end
     end
 
     def self.redact_level_content
