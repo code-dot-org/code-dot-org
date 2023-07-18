@@ -214,7 +214,7 @@ Resources:
         - Key: sqlworkbench-team
           Value: codedotorg
 
-# TODO: Migrate to REDTeam_Analyst
+# TODO: Migrate to DataAnalytics_Analyst and _Engineer
   DataAnalystRole:
     Type: AWS::IAM::Role
     Properties:
@@ -330,6 +330,7 @@ roles = {
       '!Ref MusicLabS3ReadWritePolicy',
     ]
   },
+  # Delete this one after all users have migrated to DataAnalytics_Analyst
   DataAnalyticsFullAccessRole: {
     RoleName: 'DataAnalytics_FullAccess',
     ManagedPolicyArns: [
@@ -340,8 +341,31 @@ roles = {
       'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess',
     ]
   },
+  DataAnalytics_AnalystRole: {
+    RoleName: 'DataAnalytics_Analyst',
+    Description: 'Read/Write access for data analytics team members'
+    ManagedPolicyArns: [
+      '!Ref DataAnalystPolicy',
+      '!Ref DataAnalystDmsReadOnlyPolicy',
+      '!Ref DataAnalystRedshiftPolicy',
+      'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor',
+      'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess',
+    ]
+  },
+  DataAnalytics_EngineerRole: {
+    RoleName: 'DataAnalytics_Engineer',
+    Description: 'Elevated access for Data Analytics team members managing data infrastructure',
+    ManagedPolicyArns: [
+      '!Ref DataAnalystPolicy',
+      '!Ref DataAnalystDmsReadOnlyPolicy',
+      '!Ref DataAnalystRedshiftPolicy',
+      'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor',
+      'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess',
+    ]
+  }
   BillingReadOnlyRole: {
     RoleName: 'Billing_ReadOnly',
+    Description: 'Read only access to billing console'
     GoogleIdsSSMParameter: 'BillingGoogleIDs',
     ManagedPolicyArns: [
       'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess',
@@ -353,6 +377,7 @@ roles.each do |name, config| %>
     Type: AWS::IAM::Role
     Properties:
       RoleName: <%= config[:RoleName] %>
+      Description: <%= config[:Description] || 'AWS::NoValue' %>
       AssumeRolePolicyDocument:
         Version: 2012-10-17
         Statement:
