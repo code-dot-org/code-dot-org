@@ -1,9 +1,10 @@
+import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import ProjectContainer from '@cdo/apps/lab2/projects/ProjectContainer';
 import Lab2Wrapper from '@cdo/apps/lab2/views/Lab2Wrapper';
 import MetricsAdapter from '@cdo/apps/lab2/views/MetricsAdapter';
 import {getStore} from '@cdo/apps/redux';
 import React from 'react';
-import {Provider} from 'react-redux';
+import {Provider, useSelector} from 'react-redux';
 import MusicView from './MusicView';
 
 /**
@@ -19,7 +20,7 @@ const ProjectBeats: React.FunctionComponent<{channelId: string}> = ({
       <Lab2Wrapper>
         <MetricsAdapter />
         <ProjectContainer channelId={channelId}>
-          <MusicView inIncubator={true} />
+          <DeferredMusicView />
         </ProjectContainer>
       </Lab2Wrapper>
     </Provider>
@@ -27,3 +28,17 @@ const ProjectBeats: React.FunctionComponent<{channelId: string}> = ({
 };
 
 export default ProjectBeats;
+
+// Defers loading MusicView until the channel has been loaded. This ensures
+// that all project data has been loaded before mounting MusicView.
+const DeferredMusicView: React.FunctionComponent = () => {
+  const channelLoaded = useSelector(
+    (state: {lab: LabState}) => !!state.lab.channel
+  );
+
+  if (!channelLoaded) {
+    return null;
+  }
+
+  return <MusicView inIncubator={true} />;
+};
