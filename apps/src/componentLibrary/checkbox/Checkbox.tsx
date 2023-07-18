@@ -2,6 +2,7 @@ import React, {useRef, useEffect, ChangeEvent} from 'react';
 import classnames from 'classnames';
 
 import Typography from '@cdo/apps/componentLibrary/typography';
+import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
 import moduleStyles from './checkbox.module.scss';
 
 export interface CheckboxProps {
@@ -27,6 +28,14 @@ export interface CheckboxProps {
 }
 
 /**
+ * ### Production-ready Checklist:
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✘) has tests: test every prop, every state and every interaction that's js related;
+ * * (?) passes accessibility checks;
+ *
+ * ###  Status: ```Ready for dev```
+ *
  * Design System: Checkbox Component.
  * Can be used to render a checkbox or as a part of bigger/more complex components (e.g. Checkbox Dropdown).
  */
@@ -41,6 +50,7 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
   size = 'm',
 }) => {
   const checkboxRef = useRef<HTMLInputElement>(null);
+  const bodyTextSize = componentSizeToBodyTextSizeMap[size];
 
   useEffect(() => {
     if (checkboxRef?.current) {
@@ -63,7 +73,7 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
       />
       <i className="fa-solid" />
       {label && (
-        <Typography semanticTag="span" visualAppearance="body-two">
+        <Typography semanticTag="span" visualAppearance={bodyTextSize}>
           {label}
         </Typography>
       )}
