@@ -34,10 +34,8 @@ section.accessibility-efforts {
     @include body-two;
   }
 }
-.hero-banner-basic {
-  &--accessibility {
 
-  }
+.hero-banner-basic {
   @media screen and (max-width: $width-sm) {
     .flex-container {
       flex-direction: column;
