@@ -119,8 +119,9 @@ const javalabEditorSlice = createSlice({
             action.payload.sources,
             action.payload.isEditingStartSources
           );
+        const sources = _.cloneDeep(action.payload.sources);
         const updatedSources = updateAllSourceFileOrders(
-          action.payload.sources,
+          sources,
           fileMetadata,
           orderedTabKeys
         );
