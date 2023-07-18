@@ -1,4 +1,4 @@
-@use "color.scss";
+@use 'color.scss';
 
 .catalogFiltersContainer {
   display: flex;
@@ -104,4 +104,11 @@ button.catalogClearFiltersButton {
 .assignSuccessMessage {
   margin: 16px;
   color: color.$bootstrap_success_text;
+}
+
+.fixedFiltersTop {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 4px 0;
 }
