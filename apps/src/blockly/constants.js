@@ -30,8 +30,10 @@ export const Themes = {
 export const Renderers = {
   GERAS: 'cdo_renderer_geras',
   THRASOS: 'cdo_renderer_thrasos',
+  THRASOS_IRS: 'cdo_renderer_thrasos_irs',
   ZELOS: 'cdo_renderer_zelos',
-  DEFAULT: 'cdo_renderer_thrasos',
+  // The default renderer includes inline row separators.
+  DEFAULT: 'cdo_renderer_thrasos_irs',
 };
 
 // Used for custom field type ClampedNumber(,)
