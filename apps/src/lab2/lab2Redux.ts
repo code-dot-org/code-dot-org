@@ -45,6 +45,7 @@ export interface LabState {
     | {
         errorMessage: string;
         error?: Error;
+        details?: object;
       }
     | undefined;
   // channel for the current project, or undefined if there is no current project.
@@ -213,6 +214,7 @@ const labSlice = createSlice({
       action: PayloadAction<{
         errorMessage: string;
         error?: Error;
+        details?: object;
       }>
     ) {
       state.pageError = action.payload;
