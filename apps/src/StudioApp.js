@@ -44,7 +44,7 @@ import {
   NOTIFICATION_ALERT_TYPE,
   START_BLOCKS,
 } from './constants';
-import {Renderers} from '@cdo/apps/blockly/constants';
+import {Renderers, stringIsXml} from '@cdo/apps/blockly/constants';
 import {assets as assetsApi} from './clientApi';
 import {
   configCircuitPlayground,
@@ -1241,11 +1241,10 @@ StudioApp.prototype.initReadonly = function (options) {
 
 /**
  * Load the editor with blocks.
- * @param {string} blocksXml Text representation of blocks.
+ * @param {string} source Text representation of blocks (XML or JSON).
  */
-StudioApp.prototype.loadBlocks = function (blocksXml) {
-  var xml = parseXmlElement(blocksXml);
-  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, xml);
+StudioApp.prototype.loadBlocks = function (source) {
+  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
 };
 
 /**
@@ -2737,19 +2736,32 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   if (loadLastAttempt && config.levelGameName !== 'Jigsaw') {
     startBlocks = config.level.lastAttempt || startBlocks;
   }
-  if (config.forceInsertTopBlock) {
-    startBlocks = blockUtils.forceInsertTopBlock(
+
+  let isXml = stringIsXml(startBlocks);
+
+  if (isXml) {
+    // Only used in Calc/Eval, Craft, Maze, and Artist
+    if (config.forceInsertTopBlock) {
+      // Adds a 'when_run' or similar block to workspace, if there isn't one.
+      startBlocks = blockUtils.forceInsertTopBlock(
+        startBlocks,
+        config.forceInsertTopBlock
+      );
+    }
+    // Only used in Sprite Lab.
+    if (config.level.sharedFunctions) {
+      // TODO: Re-implement for JSON before migrating Sprite Lab
+      startBlocks = blockUtils.appendNewFunctions(
+        startBlocks,
+        config.level.sharedFunctions
+      );
+    }
+    // Not needed if source is JSON, as these blocks will already have positions.
+    startBlocks = this.arrangeBlockPosition(
       startBlocks,
-      config.forceInsertTopBlock
+      config.blockArrangement
     );
   }
-  if (config.level.sharedFunctions) {
-    startBlocks = blockUtils.appendNewFunctions(
-      startBlocks,
-      config.level.sharedFunctions
-    );
-  }
-  startBlocks = this.arrangeBlockPosition(startBlocks, config.blockArrangement);
   try {
     this.loadBlocks(startBlocks);
   } catch (e) {
