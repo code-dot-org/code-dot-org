@@ -1,0 +1,13 @@
+.not-found-page
+  .error-parent
+    .error-child
+      %img{src: '/shared/images/sad-bee-avatar.png', alt: 'A sad bee'}
+      %br
+      .error-message
+        %h1= I18n.t('course_deprecated.title')
+        = I18n.t('course_deprecated.description')
+        %br
+        %br
+        %a{href: '/'}
+          %button= I18n.t('course_deprecated.button')
+          // update href (a tag surrounding button invalid?

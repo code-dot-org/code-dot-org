@@ -1373,3 +1373,8 @@ en:
     binary: "Binary"
     hexadecimal: "Hexadecimal"
     pixel_format_header: "Pixel Format"
+  course_deprecated:
+    title: "This course has flown away!"
+    description: "This course is no longer supported by Code.org, but we have even better options available. Click the button below to see our list of recommendations."
+    button: "View alternative courses"
+
