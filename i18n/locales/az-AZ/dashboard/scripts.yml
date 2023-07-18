@@ -3753,7 +3753,6 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: 1 -ci hissənin tədrisinə hazırlıq
-          title: AI və Maşın Öyrənməsinin tədrisi
         pl-csd-summer-day1:
           lessons:
             lesson-3:
@@ -3836,6 +3835,29 @@ az:
           description_audience: 'Yaşlar: 9-13'
           description_short: Kompüter Elmlərinin Əsasları üzrə bütün anlayışları öyrənin və öz sənətinizi, hekayənizi və ya oyununuzu yaradın.
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Dərslər
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Dərslər
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Dərslər
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: məlumat
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Dərslər
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Dərslər
+        csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-3:
               display_name: Dərslər

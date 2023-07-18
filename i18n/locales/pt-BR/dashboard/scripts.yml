@@ -737,12 +737,16 @@ pt:
           title: 'Fundamentos de Ciência da Computação: Curso A'
           description_short: Uma introdução à ciência da computação para novos leitores.
         courseb-draft:
+          title: 'Fundamentos da CC: Curso B'
           description_short: Uma introdução à ciência da computação para novos leitores.
         coursec-draft:
+          title: 'Fundamentos da CC: Curso C'
           description_short: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
         coursed-draft:
+          title: 'Fundamentos da CC: Curso D'
           description_short: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
         coursee-draft:
+          title: 'Fundamentos da CC: Curso E'
           description_short: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
           lesson_groups:
             content:
@@ -752,6 +756,7 @@ pt:
             extra_course_content:
               display_name: Conteúdo do curso extra
         coursef-draft:
+          title: 'Fundamentos da CC: Curso F'
           description_short: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
           lesson_groups:
             content:
@@ -836,6 +841,8 @@ pt:
           description_audience: Alunos do ensino fundamental e médio
           description: Essa oficina foi desenvolvida para oferecer aos alunos uma introdução básica ao laboratório de aplicativos em 2 horas. Os alunos devem ser capazes de entrar com diferentes formações em ciência da computação e se divertir criando algo.
           student_description: Essa oficina foi desenvolvida para oferecer aos alunos uma introdução básica ao laboratório de aplicativos em 2 horas. Os alunos devem ser capazes de entrar com diferentes formações em ciência da computação e se divertir criando algo.
+        coursed-ramp:
+          title: 'Fundamentos da CC: Curso D'
         workshop-maker:
           title: Criador da oficina do conjunto de ferramentas
           description_audience: Professores que participam de um workshop presencial do Maker Toolkit
@@ -1830,7 +1837,7 @@ pt:
           title: CSP Parque Infantil
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -1851,7 +1858,7 @@ pt:
             ramp_up:
               display_name: Treinamento
             csf_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csf_data:
               display_name: Dados
             csf_for_loops:
@@ -1926,7 +1933,7 @@ pt:
             csf_functions:
               display_name: funções
             csf_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csf_for_loops:
               display_name: Laços para
             csf_sprites:
@@ -2103,7 +2110,7 @@ pt:
           title: CSP Unidade 4 Piloto - Variáveis, Condicionais e Funções
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2243,7 +2250,7 @@ pt:
           title: 'Unidade 1: Bits e Bytes'
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2254,7 +2261,7 @@ pt:
           title: 'Unidade 2: A internet'
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2267,7 +2274,7 @@ pt:
           title: 'Unidade 4: Variáveis, Condicionais e Funções'
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2291,7 +2298,7 @@ pt:
           title: 'Unidade 6: Algoritmos'
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2309,7 +2316,7 @@ pt:
           title: 'Unidade 8: Criar PT'
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2320,7 +2327,7 @@ pt:
           title: 'Unidade 9: Dados'
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2331,7 +2338,7 @@ pt:
           title: 'Unidade 10: Impacto Global'
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2595,7 +2602,7 @@ pt:
           title: 'Visualização do CSP: variáveis, condicionais e funções'
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2686,7 +2693,7 @@ pt:
           title: CSP Unidade 4 - Variáveis, condicionais e funções ('20 -'21)
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -2893,7 +2900,7 @@ pt:
             csf_digcit:
               display_name: Cidadania digital
             csf_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csf_data:
               display_name: Dados
             csf_for_loops:
@@ -2919,7 +2926,7 @@ pt:
             csf_functions:
               display_name: funções
             csf_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csf_for_loops:
               display_name: Laços para
             csf_sprites:
@@ -2998,6 +3005,8 @@ pt:
               display_name: 'Capítulo 1: Conteúdo Web e HTML'
             csd2_2:
               display_name: 'Capítulo 2: Estilo e CSS'
+        csp5-virtual:
+          title: Programação definida por eventos no Laboratório de Aplicativos
         virtual-holding-place:
           lesson_groups:
             content:
@@ -3030,6 +3039,7 @@ pt:
             csp5_1:
               display_name: 'Capítulo 1: Programação orientada a eventos'
         csd3-virtual:
+          title: Introdução ao Laboratório de Jogos no ritmo de cada aluno
           description_short: Programação
           lesson_groups:
             csd3_1:
@@ -3071,7 +3081,7 @@ pt:
             introduction:
               display_name: Introdução
             lessonGroup-3:
-              display_name: variáveis
+              display_name: Variáveis
             outbreak:
               display_name: Simulador de Epidemia
             debugging:
@@ -3151,7 +3161,7 @@ pt:
         csp4-2021:
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -3310,7 +3320,7 @@ pt:
             end_of_course_project:
               display_name: Projeto de Fim do Curso
             lessonGroup-8:
-              display_name: variáveis
+              display_name: Variáveis
             lessonGroup-9:
               display_name: remover
             lessonGroup-7:
@@ -3330,7 +3340,7 @@ pt:
             csf_functions:
               display_name: funções
             csf_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csf_for_loops:
               display_name: Laços para
             csf_sprites:
@@ -3356,11 +3366,11 @@ pt:
             outbreak:
               display_name: Simulação de Epidemia
             lessonGroup-3:
-              display_name: variáveis
+              display_name: Variáveis
             Sprites:
               display_name: Sprite
             variables:
-              display_name: variáveis
+              display_name: Variáveis
         csd4-preview-2021:
           description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
           description_short: "  Aprenda a criar um programa que atenda às necessidades de seus usuários."
@@ -3468,11 +3478,16 @@ pt:
           description: Bem-vindo à Pesquisa de Pós-Curso em Princípios da CC do Code.org. Esta pesquisa leva cerca de 15 minutos para ser concluída. Suas respostas são privadas e anônimas - seu professor pode ver resultados agregados anônimos para toda a turma. Os resultados são vitais para o seu professor e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo e consideração.
           student_description: Bem-vindo à Pesquisa de Pós-Curso em Princípios da CC do Code.org. Esta pesquisa leva cerca de 15 minutos para ser concluída. Suas respostas são privadas e anônimas - seu professor pode ver resultados agregados anônimos para toda a turma. Os resultados são vitais para o seu professor e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo e consideração.
         aiml-2021:
+          title: Módulo de I.A. e aprendizagem de máquina
           lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1 - Compreendendo o Aprendizado de Máquina
             lessonGroup-4:
               display_name: Questionário
         csd7-2021:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1 - Compreendendo o Aprendizado de Máquina
             lessonGroup-4:
               display_name: Questionário
           title: I.A. e Aprendizagem de máquina
@@ -3665,6 +3680,8 @@ pt:
               display_name: Demonstrações e recursos
         tesstest921:
           name: tesstest921
+        hello-world-animals:
+          title: 'Olá, mundo: Animais'
         hello-world-emoji:
           title: 'Olá, Mundo: Emoji'
         hello-world-retro:
@@ -3684,6 +3701,8 @@ pt:
         ai-ethics:
           title: Nosso Código de Ética em I.A.
           description_audience: 6ª à 12ª séries
+        dance-unplugged:
+          title: Hour of Code - Festa Dançante - Desconectado
         csc-things:
           name: coisas do CSC
           title: Descarga do cérebro do CSC
@@ -3760,6 +3779,8 @@ pt:
           title: Codificação com Poesia
         hello-world-emoji-2021:
           title: 'Olá, Mundo: Emoji'
+        hello-world-animals-2021:
+          title: 'Olá, mundo: Animais'
         hello-world-retro-2021:
           title: "\"Olá, mundo: Retrô"
         explore-data-1-2021:
@@ -3789,7 +3810,7 @@ pt:
             lessonGroup-2:
               display_name: Sprite
             lessonGroup-3:
-              display_name: variáveis
+              display_name: Variáveis
             lessonGroup-4:
               display_name: Projeto de Fim do Curso
         csd6-pilot-2022:
@@ -3844,7 +3865,7 @@ pt:
             csf_functions:
               display_name: funções
             csf_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csf_for_loops:
               display_name: Laços para
             end_of_course_project:
@@ -3869,7 +3890,7 @@ pt:
         csp4-2022:
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -3995,7 +4016,7 @@ pt:
             lessonGroup-7:
               display_name: Cidadania digital
             lessonGroup-8:
-              display_name: variáveis
+              display_name: Variáveis
             end_of_course_project:
               display_name: Projeto de Fim do Curso
           description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
@@ -4067,7 +4088,7 @@ pt:
             ramp_up:
               display_name: Sprite
             lessonGroup-8:
-              display_name: variáveis
+              display_name: Variáveis
             end_of_course_project:
               display_name: Projeto de Fim do Curso
           description_audience: 'Idades: 9-13'
@@ -4154,15 +4175,18 @@ pt:
           lesson_groups:
             cspSurvey:
               display_name: Questionário
+          title: Desenvolvimento Web ('22-'23)
+          student_description: Nesta unidade, você aprenderá como criar e compartilhar conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar com o mundo, você aprenderá como estruturar e estilizar suas páginas usando HTML e CSS. Você também praticará habilidades valiosas de programação como depuração, usar recursos e trabalho em equipe.
           description_short: " Aprenda a criar seu próprio site no Web Lab."
         csd3-2022:
           lesson_groups:
             csd3_1:
-              display_name: 'Capítulo 1: Imagens e Amimações'
+              display_name: 'Capítulo 1: Imagens e Animações'
             csd3_2:
               display_name: 'Capítulo 2: Construindo Jogos'
             cspSurvey:
               display_name: Questionário
+          title: Jogos e Animações interativas
           student_description: " Na Unidade 3, você aproveitará sua experiência de codificação ao programar animações, arte interativa e jogos no Laboratório de Jogos. A unidade começa com formas simples e cria jogos sofisticados baseados em sprites, usando os mesmos conceitos de programação e o processo de design que os cientistas da computação usam diariamente. No projeto final, você desenvolverá um programa interativo personalizado."
           description_short: Programação
         csd4-2022:
@@ -4183,12 +4207,17 @@ pt:
               display_name: 'Capítulo 2: Resolvendo problemas de dados'
             cspSurvey:
               display_name: Questionário
+          title: Dados e Sociedade ('22-'23)
           student_description: A unidade 5 trata da importância dos dados na solução de problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados ​​para representar informações em um computador e os desafios e as vantagens e desvantagens do uso deles. No segundo capítulo, você aprenderá como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. O capítulo conclui considerando como o processo de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
           description_short: Aprenda como as pessoas usam computadores para resolver problemas de dados.
         csd7-2022:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1 - Compreendendo o Aprendizado de Máquina
             lessonGroup-4:
               display_name: Questionário
+          title: Inteligência Artificial e Aprendizado de Máquina
+          student_description: Esta unidade é uma introdução prática ao desenvolvimento de modelos de aprendizado de máquina com dados tabulares. Você aprenderá como os computadores aprendem através dos dados e então desenvolverá seu próprio projeto de aprendizado de máquina através de dados reais. A unidade finaliza com o desenvolvimento de seu própio aplicativo de aprendizado de máquina para resolver um problema relevante para você.
         csd6-2022:
           lesson_groups:
             lessonGroup-3:
@@ -4202,6 +4231,11 @@ pt:
           student_description: Esta unidade contém uma pesquisa para quando e a sua aula de Descobertas CS e as unidades forem concluídas. O seu professor lhe dirá quando você deverá fazer essa pesquisa.
         csp-post-survey-2022:
           title: Pesquisa pós-curso de princípios do CS
+        aiml-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1 - Compreendendo o Aprendizado de Máquina
+          title: Módulo de I.A. e aprendizagem de máquina
         self-paced-pl-csd1-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4300,7 +4334,7 @@ pt:
         csa2-2023:
           lessons:
             lesson-4:
-              name: variáveis
+              name: Variáveis
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -4351,6 +4385,8 @@ pt:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+        csd2-2023:
+          student_description: Nesta unidade, você aprenderá como criar e compartilhar conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar com o mundo, você aprenderá como estruturar e estilizar suas páginas usando HTML e CSS. Você também praticará habilidades valiosas de programação como depuração, usar recursos e trabalho em equipe.
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4386,6 +4422,7 @@ pt:
               display_name: Capítulo 2
             lessonGroup-4:
               display_name: Introdução Laboratório de Aplicativos
+          student_description: Esta unidade é uma introdução prática ao desenvolvimento de modelos de aprendizado de máquina com dados tabulares. Você aprenderá como os computadores aprendem através dos dados e então desenvolverá seu próprio projeto de aprendizado de máquina através de dados reais. A unidade finaliza com o desenvolvimento de seu própio aplicativo de aprendizado de máquina para resolver um problema relevante para você.
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -4411,7 +4448,7 @@ pt:
         csp4-2023:
           lesson_groups:
             csp_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csp_conditionals:
               display_name: Condições
             csp_functions:
@@ -4484,6 +4521,7 @@ pt:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
+          title: Criação de aplicativos com dispositivos (Playground de Circuitos)
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -4533,7 +4571,7 @@ pt:
             csf_functions:
               display_name: funções
             csf_variables:
-              display_name: variáveis
+              display_name: Variáveis
             csf_for_loops:
               display_name: Laços para
             end_of_course_project:
@@ -4633,6 +4671,7 @@ pt:
           lesson_groups:
             lessonGroup-4:
               display_name: Questionário
+          student_description: Nesta unidade, você aprenderá como criar e compartilhar conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar com o mundo, você aprenderá como estruturar e estilizar suas páginas usando HTML e CSS. Você também praticará habilidades valiosas de programação como depuração, usar recursos e trabalho em equipe.
         interactive-games-animations-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4671,10 +4710,13 @@ pt:
               display_name: Capítulo 2
             lessonGroup-5:
               display_name: Questionário
+          student_description: Esta unidade é uma introdução prática ao desenvolvimento de modelos de aprendizado de máquina com dados tabulares. Você aprenderá como os computadores aprendem através dos dados e então desenvolverá seu próprio projeto de aprendizado de máquina através de dados reais. A unidade finaliza com o desenvolvimento de seu própio aplicativo de aprendizado de máquina para resolver um problema relevante para você.
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+        focus-on-creativity2-2023:
+          student_description: Nesta unidade, você aprenderá como criar e compartilhar conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar com o mundo, você aprenderá como estruturar e estilizar suas páginas usando HTML e CSS. Você também praticará habilidades valiosas de programação como depuração, usar recursos e trabalho em equipe.
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4732,10 +4774,13 @@ pt:
               display_name: Capítulo 1
             lessonGroup-4:
               display_name: Capítulo 2
+          student_description: Esta unidade é uma introdução prática ao desenvolvimento de modelos de aprendizado de máquina com dados tabulares. Você aprenderá como os computadores aprendem através dos dados e então desenvolverá seu próprio projeto de aprendizado de máquina através de dados reais. A unidade finaliza com o desenvolvimento de seu própio aplicativo de aprendizado de máquina para resolver um problema relevante para você.
         focus-on-design-with-purpose1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+        focus-on-design-with-purpose2-2023:
+          student_description: Nesta unidade, você aprenderá como criar e compartilhar conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar com o mundo, você aprenderá como estruturar e estilizar suas páginas usando HTML e CSS. Você também praticará habilidades valiosas de programação como depuração, usar recursos e trabalho em equipe.
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4752,6 +4797,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+        focus-on-coding2-2023:
+          student_description: Nesta unidade, você aprenderá como criar e compartilhar conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar com o mundo, você aprenderá como estruturar e estilizar suas páginas usando HTML e CSS. Você também praticará habilidades valiosas de programação como depuração, usar recursos e trabalho em equipe.
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4791,6 +4838,7 @@ pt:
               display_name: Introdução Laboratório de Aplicativos
             lessonGroup-4:
               display_name: Capítulo 2
+          student_description: Esta unidade é uma introdução prática ao desenvolvimento de modelos de aprendizado de máquina com dados tabulares. Você aprenderá como os computadores aprendem através dos dados e então desenvolverá seu próprio projeto de aprendizado de máquina através de dados reais. A unidade finaliza com o desenvolvimento de seu própio aplicativo de aprendizado de máquina para resolver um problema relevante para você.
         csd6a-2023:
           lesson_groups:
             lessonGroup-3:
@@ -4889,6 +4937,7 @@ pt:
           description: "Neste módulo, você verá uma introdução às práticas autênticas da SC em que os alunos estarão envolvidos durante o curso de Descobertas da SC. Essas práticas incluem a depuração, uso de recursos e programação em pares. Você também vai explorar a função do professor em uma das salas de aula de Descobertas da SC e elaborar um plano de como você dará seu apoio à aprendizagem estudantil enquanto lecionar o curso. \n\n**Você vai:**\n\n-   Considerar a função do professor em uma sala de aula de Descobertas da SC. \n-   Aprender sobre as práticas autênticas de SC que os alunos vão desenvolver durante o curso de Descobertas da SC. \n-   Elaborar um plano de como você pretende dar o seu apoio à aprendizagem estudantil, por meio da diferenciação, da avaliação contínua e das promoção de uma cultura de inclusão. \n\n**Tempo sugerido:** 50 minutos"
           student_description: "Neste módulo, você verá uma introdução às práticas autênticas da SC em que os alunos estarão envolvidos durante o curso de Descobertas da SC. Essas práticas incluem a depuração, uso de recursos e programação em pares. Você também vai explorar a função do professor em uma das salas de aula de Descobertas da SC e elaborar um plano de como você dará seu apoio à aprendizagem estudantil enquanto lecionar o curso. \n\n**Você vai:**\n\n-   Considerar a função do professor em uma sala de aula de Descobertas da SC. \n-   Aprender sobre as práticas autênticas de SC que os alunos vão desenvolver durante o curso de Descobertas da SC. \n-   Elaborar um plano de como você pretende dar o seu apoio à aprendizagem estudantil, por meio da diferenciação, da avaliação contínua e das promoção de uma cultura de inclusão. \n\n**Tempo sugerido:** 50 minutos"
         self-paced-pl-csd5-2023:
+          title: 'Módulo 7: Preparação para lecionar sobre IA e aprendizagem de máquina'
           description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar as unidades de I.A. e aprendizagem de máquina Code.org. \n\n**Neste módulo de aprendizagem profissional, você vai:**\n\n-   Ver uma introdução à inteligência artificial e à aprendizagem de máquina. \n-   Praticar os principais conceitos incluídos na unidade. \n-   Familiarizar-se com o Laboratório de I.A. e o Laboratório de aplicativos. \n-   Explorar projetos de fim de capítulo. \n-   Elaborar um plano para implementar a unidade com seus alunos. \n\n**Tempo sugerido:** 120 minutos"
           student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar as unidades de I.A. e aprendizagem de máquina Code.org. \n\n**Neste módulo de aprendizagem profissional, você vai:**\n\n-   Ver uma introdução à inteligência artificial e à aprendizagem de máquina. \n-   Praticar os principais conceitos incluídos na unidade. \n-   Familiarizar-se com o Laboratório de I.A. e o Laboratório de aplicativos. \n-   Explorar projetos de fim de capítulo. \n-   Elaborar um plano para implementar a unidade com seus alunos. \n\n**Tempo sugerido:** 120 minutos"
         pl-csd-summer-day1:
@@ -4967,7 +5016,7 @@ pt:
             lessonGroup-3:
               display_name: Sprite
             lessonGroup-4:
-              display_name: variáveis
+              display_name: Variáveis
             lessonGroup-6:
               display_name: Projeto de Fim do Curso
           description_audience: 'Idades: 9-13'
@@ -4975,6 +5024,39 @@ pt:
         self-paced-pl-csp2-2023:
           title: 'Módulo 2: Navegação no Code.org'
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Dados
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classes
+            lessonGroup-5:
+              display_name: Vetores 2D
+        csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-3:
               display_name: Classes

@@ -4513,8 +4513,8 @@ ro-RO:
             `move forward by`, iar artistul va desena un triunghi cu laturile de 50
             de pixeli.
         questions:
-        - text: Am setat variabila `length` la 50. Ce se va întâmpla atunci când veți
-            face clic pe „Rulează”?
+        - text: Variabila `length` este setată la 50 și este folosită în blocul `move
+            forward by`, iar artistul va desena un triunghi cu laturile de 50 de pixeli.
       courseF_multi_bee_for3_predict1_2021:
         answers:
         - text: Albinuța se va deplasa înainte și va strânge tot nectarul din fiecare
@@ -4539,10 +4539,8 @@ ro-RO:
         questions:
         - text: Citiți codul care urmează. Ce se va întâmpla atunci când veți face
             clic pe „Rulează”?
-        markdown: |+
-          Ah!  Folosirea buclelor `for` face ca acest puzzle să fie mult mai ușor!
-
-
+        markdown: Ah!  Folosirea buclelor `for` face ca acest puzzle să fie mult mai
+          ușor!
       courseF_sprites_predict_multi:
         answers:
         - text: Ambele avioane se vor deplasa un spațiu de-a lungul grilei, apoi se

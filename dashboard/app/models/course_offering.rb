@@ -2,22 +2,27 @@
 #
 # Table name: course_offerings
 #
-#  id                   :integer          not null, primary key
-#  key                  :string(255)      not null
-#  display_name         :string(255)      not null
-#  created_at           :datetime         not null
-#  updated_at           :datetime         not null
-#  category             :string(255)      default("other"), not null
-#  is_featured          :boolean          default(FALSE), not null
-#  assignable           :boolean          default(TRUE), not null
-#  curriculum_type      :string(255)
-#  marketing_initiative :string(255)
-#  grade_levels         :string(255)
-#  header               :string(255)
-#  image                :string(255)
-#  cs_topic             :string(255)
-#  school_subject       :string(255)
-#  device_compatibility :string(255)
+#  id                               :integer          not null, primary key
+#  key                              :string(255)      not null
+#  display_name                     :string(255)      not null
+#  created_at                       :datetime         not null
+#  updated_at                       :datetime         not null
+#  category                         :string(255)      default("other"), not null
+#  is_featured                      :boolean          default(FALSE), not null
+#  assignable                       :boolean          default(TRUE), not null
+#  curriculum_type                  :string(255)
+#  marketing_initiative             :string(255)
+#  grade_levels                     :string(255)
+#  header                           :string(255)
+#  image                            :string(255)
+#  cs_topic                         :string(255)
+#  school_subject                   :string(255)
+#  device_compatibility             :string(255)
+#  description                      :string(255)
+#  self_paced_professional_learning :string(255)
+#  professional_learning_program    :string(255)
+#  video                            :string(255)
+#  published_date                   :datetime
 #
 # Indexes
 #
@@ -87,15 +92,31 @@ class CourseOffering < ApplicationRecord
     offering
   end
 
-  def latest_published_version
+  # @param locale_code [String] User or request locale. Optional.
+  # @return [CourseVersion] Returns the latest stable version in a course family supported in the given locale.
+  #   If the locale is in English or the latest stable version is nil (either because previous versions are not
+  #   supported in given locale or because the only version(s) are in a 'preview' state), then return the latest
+  #   launched (a.k.a. published) version.
+  def latest_published_version(locale_code = 'en-us')
+    locale_str = locale_code&.to_s
+    unless locale_str&.start_with?('en')
+      latest_stable_version = any_version_is_unit? ? Unit.latest_stable_version(key, locale: locale_str) : UnitGroup.latest_stable_version(key, locale: locale_str)
+      return latest_stable_version.course_version unless latest_stable_version.nil?
+    end
+
     course_versions.select do |cv|
       cv.content_root.launched?
     end.max_by(&:version_year)
   end
 
-  def path_to_latest_published_version
-    return nil unless latest_published_version
-    latest_published_version.content_root.link
+  def path_to_latest_published_version(locale_code = 'en-us')
+    return nil unless latest_published_version(locale_code)
+    latest_published_version(locale_code).content_root.link
+  end
+
+  def display_name_with_latest_year(locale_code = 'en-us')
+    return localized_display_name unless latest_published_version(locale_code)
+    latest_published_version(locale_code).content_root.localized_assignment_family_title
   end
 
   def course_id
@@ -234,6 +255,14 @@ class CourseOffering < ApplicationRecord
     DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| co_duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
   end
 
+  def translated?(locale_code = 'en-us')
+    locale_str = locale_code&.to_s
+    return true if locale_str&.start_with?('en')
+
+    latest_stable_version = any_version_is_unit? ? Unit.latest_stable_version(key, locale: locale_str) : UnitGroup.latest_stable_version(key, locale: locale_str)
+    !latest_stable_version.nil?
+  end
+
   def summarize_for_edit
     {
       key: key,
@@ -248,26 +277,33 @@ class CourseOffering < ApplicationRecord
       image: image,
       cs_topic: cs_topic,
       school_subject: school_subject,
-      device_compatibility: device_compatibility
+      device_compatibility: device_compatibility,
+      description: description,
+      self_paced_professional_learning: self_paced_professional_learning,
+      professional_learning_program: professional_learning_program,
+      video: video,
+      published_date: published_date,
     }
   end
 
-  def summarize_for_catalog
+  def summarize_for_catalog(locale_code = 'en-us')
     {
       key: key,
       display_name: display_name,
+      display_name_with_latest_year: display_name_with_latest_year(locale_code),
       grade_levels: grade_levels,
       duration: duration,
       image: image,
       cs_topic: cs_topic,
       school_subject: school_subject,
       device_compatibility: device_compatibility,
-      course_version_path: path_to_latest_published_version,
-      course_version_id: latest_published_version&.id,
+      course_version_path: path_to_latest_published_version(locale_code),
+      course_version_id: latest_published_version(locale_code)&.id,
       course_id: course_id,
       course_offering_id: id,
       script_id: script_id,
-      is_standalone_unit: standalone_unit?
+      is_standalone_unit: standalone_unit?,
+      is_translated: translated?(locale_code)
     }
   end
 
@@ -285,7 +321,12 @@ class CourseOffering < ApplicationRecord
       image: image,
       cs_topic: cs_topic,
       school_subject: school_subject,
-      device_compatibility: device_compatibility
+      device_compatibility: device_compatibility,
+      description: description,
+      self_paced_professional_learning: self_paced_professional_learning,
+      professional_learning_program: professional_learning_program,
+      video: video,
+      published_date: published_date,
     }
   end
 

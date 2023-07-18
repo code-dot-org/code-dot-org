@@ -168,7 +168,7 @@ uk:
             '"x"': горизонтальне положення
             '"y"': вертикальне положення
       Dancelab_doMoveEachLR:
-        text: "{GROUP} виконує рух {MOVE} {DIR} один раз"
+        text: "{GROUP} виконують рух {MOVE} {DIR} один раз"
         options:
           GROUP:
             sprites: усі
@@ -1041,7 +1041,7 @@ uk:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
-        text: у {N} {UNIT}
+        text: через {N} {UNIT}
         options:
           UNIT:
             '"seconds"': секунди
@@ -1097,7 +1097,7 @@ uk:
       gamelab_destroy:
         text: видалити {THIS}
       gamelab_draggable:
-        text: будучи перетягуваним
+        text: при перетягуванні
       gamelab_edgesDisplace:
         text: краї блокують рух {SPRITE}
       gamelab_everyInterval:
@@ -1346,7 +1346,7 @@ uk:
             "'sound://category_animals/dolphin.mp3'": дельфін
             "'sound://category_animals/dog.mp3'": пес
             "'sound://category_animals/tiger.mp3'": тигр
-            "'sound://category_digital/jump_7.mp3'": стрибок
+            "'sound://category_digital/jump_7.mp3'": стрибнути
       gamelab_playSoundOptionsSoccer:
         text: грати звук {SOUND}
         options:
@@ -1379,7 +1379,7 @@ uk:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): рух за стрілками
             new Behavior(driving_with_arrow_keys, []): рух за стрілками
-            draggable(): будучи перетягуваним
+            draggable(): при перетягуванні
       gamelab_pointInDirection:
         text: Точки {SPRITE} {DIRECTION}
         options:
@@ -1495,7 +1495,7 @@ uk:
       gamelab_showTitleScreen:
         text: Показати титульний екран {BREAK} Заголовок {TITLE} Текст {SUBTITLE}
       gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} натиснуто"
+        text: "{CONDITION} {SPRITE} клацнули"
         options:
           CONDITION:
             '"when"': коли
@@ -1964,7 +1964,7 @@ uk:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': дзвоник
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': бульбашка
-            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': стрибок
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': стрибнути
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': світло
       Poetry_playSoundOptionsSpace:
         text: грати звук {SOUND}

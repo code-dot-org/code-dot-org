@@ -46,8 +46,8 @@ ta:
     ஆராயவும், விளையாடவும் மற்றும் உருவாக்கவும் வாருங்கள்.
   social_hoc2022_dance: பியோன்சே இடம்பெறும், ஹாரி ஸ்டைல்ஸ், லிஸ்ஸோ, லில் நாஸ் எக்ஸ்,
     செலினா கோம்ஸ், டிஸ்னியின் இருந்து இசை “Encanto,” மேலும்!
-  social_hoc2023_dance: Featuring Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas X, Selena
-    Gomez, music from Disney's "Encanto," and more!
+  social_hoc2023_dance: பியோன்ஸ், BTS, ஹாரி ஸ்டைல்கள், லிசோ, லில் நாஸ் எக்ஸ், செலினா
+    கோம்ஸ், டிஸ்னியின் "என்காண்டோ" இசை மற்றும் பலவற்றின் அம்சங்கள்!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: இன்று கற்றுக் கொள்ளுங்கள், நாளை பிரகாசமாக உருவாக்குங்கள்.
@@ -84,7 +84,7 @@ ta:
     கம்ப்யூட்டர் சயின்ஸ் ஒவ்வொரு மாணவரும் கற்றுக் கொள்வதற்கான அடிப்படை கல்வியாகும்.
   social_hoc2019_dance: கேட்டி பெர்ரி, ஜோனாஸ் பிரதர்ஸ், லில் நாஸ் எக்ஸ், பேனிக் அட்
     டிஸ்கோ, இன்னும் பலர் தோன்றுகிறார்கள்!
-  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
+  social_hoc_anybody: 'குறியீடு நேரம்: யார் வேண்டுமானாலும் கற்றுக்கொள்ளலாம்'
   oceans_landing_title: பெருங்கடல்களுக்கான AI
   oceans_landing_description: இயந்திர கற்றல் மற்றும் AI இன் நெறிமுறை பயன்பாடு பற்றி
     அறிக.
@@ -157,86 +157,6 @@ ta:
     சாத்தியமான அனைத்து மீன்களின் "இடத்தையும்" இரண்டு பகுதிகளாக பிரிக்கிறது, அவை நாம்
     கற்றுக்கொள்ள முயற்சிக்கும் வகுப்புகளுக்கு ("நீலம்" அல்லது "நீலம் அல்ல" போன்றவை)
     ஒத்திருக்கும்.
-  heading_additional_resources: Additional resources
-  grade_level_label_elementary: Elementary School
-  grade_level_label_middle: Middle School
-  grade_level_label_high: High School
-  call_to_action_learn_more: மேலும் அறிக
-  call_to_action_watch_now: Watch now
-  call_to_action_try_activity: Try activity
-  call_to_action_explore_unit: Explore unit
-  call_to_action_explore_curriculum: Explore curriculum
-  call_to_action_explore_modules: Explore modules
-  call_to_action_view_lesson_plan: View lesson plan
-  call_to_action_self_paced_pl: Start self-paced professional learning
-  call_to_action_watch_panel: Watch panel
-  call_to_action_learn_about_challenge: Learn about challenge
-  call_to_action_explore_website: Explore website
-  call_to_action_read_more: மேலும் வாசியுங்கள்
-  call_to_action_donate_online: Donate online
-  call_to_action_get_updates: Get updates
-  call_to_action_special_announcement: See special announcement
-  call_to_action_start_pl: Start professional learning
-  call_to_action_contact_regional_partner: Contact your Regional Partner
-  call_to_action_join_csta: Join CSTA
-  call_to_action_support_farsi: Support Code.org in Farsi
-  aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
-  aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
-    professional learning program
-  aria_label_call_to_action_teaching_csd: Start the Teaching Computer Science Discoveries
-    professional learning program
-  aria_label_call_to_action_teaching_csp: Start the Teaching Computer Science Principles
-    professional learning program
-  aria_label_call_to_action_teaching_ai: Start the Teaching AI and Machine Learning
-    professional learning program
-  aria_label_call_to_action_teaching_maker_cp: Start the Teaching Creating Apps with
-    Devices (Circuit Playground) professional learning program
-  aria_label_call_to_action_teaching_maker_microbit: Start the Teaching Creating Apps
-    with Devices (micro:bit) professional learning program
-  aria_label_call_to_action_curriculum_csf: Explore the Computer Science Fundamentals
-    curriculum
-  aria_label_call_to_action_curriculum_csd: Explore the Computer Science Discoveries
-    curriculum
-  aria_label_call_to_action_curriculum_csp: Explore the Computer Science Principles
-    curriculum
-  aria_label_call_to_action_curriculum_ai: Explore the AI and Machine Learning curriculum
-  aria_label_call_to_action_curriculum_maker_cp: Explore the Creating Apps with Devices
-    (Circuit Playground) curriculum
-  aria_label_call_to_action_curriculum_maker_microbit: Explore the Creating Apps with
-    Devices (micro:bit) curriculum
-  video_title_professional_learning_program: Code.org's Professional Learning Program
-  curriculum_name_csf: Computer Science Fundamentals
-  curriculum_name_csf_02: Any CS Fundamentals (Course A-F)
-  curriculum_name_csd: Computer Science Discoveries
-  curriculum_name_csp: Computer Science Principles
-  curriculum_name_ai: AI மற்றும் இயந்திர கற்றல்
-  curriculum_name_maker_cp: Creating Apps with Devices (Circuit Playground)
-  curriculum_name_maker_microbit: Creating Apps with Devices (micro:bit)
-  module_grade_k_5: K-5 Teachers
-  module_grade_6_10: 6-10 Teachers
-  module_grade_9_12: 9-12 Teachers
-  module_label_curriculum: 'Curriculum:'
-  module_label_duration: 'Duration:'
-  module_duration_2_hrs: 2 hours
-  module_duration_3_hrs: 3 hours
-  module_duration_8_hrs: 8 hours
-  module_duration_35_hrs: 35 hours
-  module_label_prerequisites: 'Prerequisites:'
-  module_prerequisites_none: எதுவும் இல்லை
-  module_prerequisites_maker_cp: Access to a Circuit Playground
-  module_prerequisites_maker_microbit: Access to a micro:bit
-  module_label_teaching_csf: Teaching Computer Science Fundamentals
-  module_label_teaching_csd: Teaching Computer Science Discoveries
-  module_label_teaching_csp: Teaching Computer Science Principles
-  module_label_teaching_ai: Teaching AI and Machine Learning
-  module_label_teaching_maker_cp: Teaching Creating Apps with Devices (Circuit Playground)
-  module_label_teaching_maker_microbit: Teaching Creating Apps with Devices (micro:bit)
-  values_01: We believe computer science is foundational for all students
-  values_02: We are committed to equity, access, and opportunity
-  values_03: We believe in the power of a collaborative education community
-  values_04: We are agile and responsive to feedback
-  values_05: We act with integrity and transparency
-  values_06: We believe broad impact requires thinking big and acting holistically
   social_hoc2019_oceans_title: 'பெருங்கடல்களுக்கான AI #CSforGood '
   social_hoc2019_oceans_desc: நெறிமுறை சிக்கல்களை ஆராயும்போது AI, இயந்திர கற்றல்,
     பயிற்சி தரவு மற்றும் சார்பு பற்றி அறியவும், உலக பிரச்சினைகளை தீர்க்க AI எவ்வாறு
@@ -246,212 +166,516 @@ ta:
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
-  social_maker_title: I'm a Maker!
-  social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
-  social_blockchain_title: How Blockchain Works
-  social_blockchain_desc: Videos and lessons that explore what blockchain is and why
-    it's important.
-  social_ai_title: Learn about artificial intelligence (AI) | Code.org
-  social_ai_desc: Tools to help students and teachers bring AI into the classroom.
-  pl_superhero_title: Help students become superheroes!
-  pl_superhero_desc: Join our highly supportive Professional Learning Program for
-    middle and high school educators.
+  social_maker_title: நான் ஒரு மேக்கர்!
+  social_maker_desc: '6-12 தரங்களுக்கான Code.org இயற்பியல் கணினி மற்றும் தயாரிப்பாளர்
+    ஆதாரங்கள். '
+  social_blockchain_title: பிளாக்செயின் எவ்வாறு செயல்படுகிறது
+  social_blockchain_desc: பிளாக்செயின் என்றால் என்ன, அது ஏன் முக்கியமானது என்பதை ஆராயும்
+    வீடியோக்கள் மற்றும் பாடங்கள்.
+  social_ai_title: செயற்கை நுண்ணறிவு (AI) பற்றி அறிக | Code.org
+  social_ai_desc: மாணவர்கள் மற்றும் ஆசிரியர்களுக்கு AIஐ வகுப்பறைக்குள் கொண்டு வர உதவும்
+    கருவிகள்.
+  pl_superhero_title: மாணவர்கள் சூப்பர் ஹீரோவாக மாற உதவுங்கள்!
+  pl_superhero_desc: நடுத்தர மற்றும் உயர்நிலைப் பள்ளிக் கல்வியாளர்களுக்கான எங்கள்
+    மிகவும் ஆதரவான தொழில்முறை கற்றல் திட்டத்தில் சேரவும்.
   teach_ai_homepage_banner_title: உலகிற்கு AI கல்வி
   teach_ai_homepage_banner_desc: Code.org டீச்சாயின் ஒரு பகுதியாகும், இது AI உடன்
     மற்றும் AI பற்றி கற்பிக்க எல்லா இடங்களிலும் கல்வியாளர்களுக்கு அதிகாரம் அளிக்க
     அர்ப்பணிக்கப்பட்டுள்ளது.
-  blockchain_hero_heading: How Blockchain Works
-  blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
-    our new video series and accompanying lessons!
-  blockchain_intro_heading: See how blockchain works
-  blockchain_intro_desc: The video series, made in partnership with Coinbase, features
-    industry experts and aims to demystify this technology.
-  blockchain_intro_list_heading: 'This series will:'
-  blockchain_intro_list_item_01: Explain what blockchain is
-  blockchain_intro_list_item_02: Explore why it's important
-  blockchain_intro_list_item_03: Unpack its societal impacts — both good and bad
-  blockchain_video_title_01: Introduction to Blockchain
-  blockchain_video_title_02: Why Blockchain
-  blockchain_video_title_03: Under the Hood
-  blockchain_video_title_04: Beyond Currencies
-  blockchain_video_title_05: Marketplace and Price
-  blockchain_video_title_06: Trustworthy or a Scam?
-  blockchain_video_title_07: Societal Impact
-  blockchain_lessons_heading: Blockchain lessons for your class
-  blockchain_lessons_desc: The first five lessons can be taught as part of a "How
-    Blockchain Works" series or can stand alone. The last lesson condenses the whole
-    series to a single day.
-  blockchain_resources_desc: Interested in learning more about blockchain? Here are
-    some additional resources that can help extend your students' learning.
-  blockchain_resources_01_heading: Coinbase Learn
-  blockchain_resources_01_desc: Crypto questions answered, beginner guides, practical
-    tips, and market updates for first-timers, experienced investors, and everyone
-    in between.
-  blockchain_resources_01_button_label: Visit the Coinbase Learn website
-  blockchain_resources_02_heading: Whiteboard Crypto
-  blockchain_resources_02_desc: Watch videos from Whiteboard Crypto's YouTube channel
-    to learn even more about blockchain technology.
-  blockchain_resources_02_button_label: Visit the Whiteboard Crypto YouTube channel
-  blockchain_resources_03_heading: Hour of Code Activity
-  blockchain_resources_03_desc: Try a crypto memory game created by Coinbase.
-  blockchain_resources_03_button_label: Try the Crypto Memory Game activity
+  curriculum_launch_2023_title: Introducing incredible updates to our curriculum
+  curriculum_launch_2023_desc: Updates to CSC, CSP, CSD, and more — plus a new Curriculum
+    Catalog and redesigned Teach page to help you find it all!
+  grade_level_label_elementary: 'தொடக்கப்பள்ளி '
+  grade_level_label_middle: நடுநிலை பள்ளி
+  grade_level_label_high: உயர்நிலை பள்ளி
+  teacher_label_csd: CS  கண்டுபிடிப்புகள் ஆசிரியர்
+  teacher_label_csp: CS Principles Teacher
+  teacher_label_csc: CS Connections Teacher
+  required_materials: 'Required Materials:'
+  optional_materials: 'Optional Materials:'
+  call_to_action_learn_more: மேலும் அறிக
+  call_to_action_watch_now: இப்பொழுது பார்
+  call_to_action_try_activity: செயல்பாட்டை முயற்சிக்கவும்
+  call_to_action_explore_unit: 'அலகை ஆராயுங்கள் '
+  call_to_action_explore_curriculum: பாடத்திட்டத்தை ஆராயுங்கள்
+  call_to_action_explore_curriculum_options: Explore curriculum options
+  call_to_action_explore_modules: தொகுதிகளை ஆராயுங்கள்
+  call_to_action_explore_workshops: 'பட்டறைகளை ஆராயுங்கள் '
+  call_to_action_explore_course: Explore course
+  call_to_action_explore_full_course: Explore full course
+  call_to_action_explore_widgets: Explore widgets
+  call_to_action_explore_choice_level: Explore example choice level
+  call_to_action_explore_collection: Explore collection
+  call_to_action_try_app_lab: Try App Lab
+  call_to_action_view_lesson_plan: பாடத் திட்டத்தைப் பார்க்கவும்
+  call_to_action_self_paced_pl: 'ய-வேக தொழில்முறை கற்றலைத் தொடங்குங்கள் '
+  call_to_action_apply_for_pl: Apply for Professional Learning
+  call_to_action_watch_panel: 'குழுவை பார்க்கவும் '
+  call_to_action_learn_about_challenge: 'சவால் பற்றி அறிக '
+  call_to_action_explore_website: இணையதளத்தை ஆராயுங்கள்
+  call_to_action_read_more: மேலும் வாசியுங்கள்
+  call_to_action_donate_online: ஆன்லைனில் நன்கொடை அளியுங்கள்
+  call_to_action_get_updates: 'புதுப்பிப்புகளைப் பெறுங்கள் '
+  call_to_action_special_announcement: 'சிறப்பு அறிவிப்பைப் பார்க்கவும் '
+  call_to_action_start_pl: 'தொழில்முறை கற்றலைத் தொடங்குங்கள் '
+  call_to_action_contact_regional_partner: உங்கள் பிராந்திய கூட்டாளரைத் தொடர்பு கொள்ளவும்
+  call_to_action_join_csta: 'CSTA இல் சேரவும் '
+  call_to_action_support_farsi: 'ஃபார்சியில் Code.org ஐ ஆதரிக்கவும் '
+  call_to_action_resources_lesson_plan: 'உதாரண பாடத் திட்டத்தை ஆராயுங்கள் '
+  call_to_action_resources_videos: 'அனைத்து வீடியோக்களையும் ஆராயுங்கள் '
+  call_to_action_resources_slides: 'எடுத்துக்காட்டு ஸ்லைடு டெக்கை ஆராயுங்கள் '
+  call_to_action_resources_assessments: 'ஒரு மதிப்பீட்டு பாடத்தை ஆராயுங்கள் '
+  call_to_action_resources_tools: 'நிரலாக்க கருவிகளை முயற்சிக்கவும் '
+  call_to_action_sign_up_free: இலவசமாக பதிவுசெய்
+  call_to_action_explore_ai_resources: 'AI வளங்களை ஆராயுங்கள் '
+  call_to_action_explore_curriculum_catalog: 'பாடத்திட்ட அட்டவணையை ஆராயுங்கள் '
+  call_to_action_see_full_curriculum_catalog: முழு பாடத்திட்ட அட்டவணையைப் பார்க்கவும்
+  call_to_action_find_self_paced_modules: சுய-வேக தொகுதிகளைக் கண்டறியவும்
+  call_to_action_join_teacher_forums: 'ஆசிரியர் மன்றங்களில் சேரவும் '
+  call_to_action_explore_teacher_forums: Explore teacher forums
+  call_to_action_explore_career_resources: 'ஆசிரியர் மன்றங்களில் சேரவும் '
+  call_to_action_watch_videos: 'வீடியோக்களை பார்க்கவும் '
+  call_to_action_download_posters: 'சுவரொட்டிகளைப் பதிவிறக்கவும் '
+  call_to_action_contact_support: Contact Code.org support
+  call_to_action_pick_units: Pick units
+  call_to_action_focus_on_topic: Focus on a topic
+  call_to_action_teach_full_intro_course: Teach a full intro course
+  call_to_action_see_module_details: See module details
+  call_to_action_start_modules: Start modules
+  aria_label_call_to_action_afe: அமேசான் எதிர்கால பொறியாளர் பற்றி மேலும் அறிக
+  aria_label_call_to_action_teaching_csf: கற்பித்தல் கணினி அறிவியல் அடிப்படைகள் தொழில்முறை
+    கற்றல் திட்டத்தைத் தொடங்கவும்
+  aria_label_call_to_action_teaching_csd: 'கற்பித்தல் கணினி அறிவியல் கண்டுபிடிப்புகள்
+    தொழில்முறை கற்றல் திட்டத்தைத் தொடங்கவும் '
+  aria_label_call_to_action_teaching_csp: கற்பித்தல் கணினி அறிவியல் கோட்பாடுகள் தொழில்முறை
+    கற்றல் திட்டத்தைத் தொடங்கவும்
+  aria_label_call_to_action_teaching_csc: கற்பித்தல் கணினி அறிவியல் கோட்பாடுகள் தொழில்முறை
+    கற்றல் திட்டத்தைத் தொடங்கவும்
+  aria_label_call_to_action_teaching_ai: 'கற்பித்தல் AI மற்றும் இயந்திர கற்றல் தொழில்முறை
+    கற்றல் திட்டத்தைத் தொடங்கவும் '
+  aria_label_call_to_action_teaching_maker_cp: சாதனங்கள் (சர்க்யூட் விளையாட்டு மைதானம்)
+    தொழில்முறை கற்றல் திட்டத்துடன் பயன்பாடுகளை உருவாக்க கற்பித்தலைத் தொடங்கவும்
+  aria_label_call_to_action_teaching_maker_microbit: சாதனங்கள் (மைக்ரோ:பிட்) தொழில்முறை
+    கற்றல் திட்டத்துடன் பயன்பாடுகளை உருவாக்க கற்பித்தலைத் தொடங்கவும்
+  aria_label_call_to_action_curriculum_csf: 'கணினி அறிவியல் அடிப்படைகள் பாடத்திட்டத்தை
+    ஆராயுங்கள் '
+  aria_label_call_to_action_curriculum_csd: கணினி அறிவியல் கண்டுபிடிப்புகள் பாடத்திட்டத்தை
+    ஆராயுங்கள்
+  aria_label_call_to_action_curriculum_csp: கணினி அறிவியல் கோட்பாடுகளின் பாடத்திட்டத்தை
+    ஆராயுங்கள்
+  aria_label_call_to_action_curriculum_csc: கணினி அறிவியல் கோட்பாடுகளின் பாடத்திட்டத்தை
+    ஆராயுங்கள்
+  aria_label_call_to_action_curriculum_ai: 'AI மற்றும் இயந்திர கற்றல் பாடத்திட்டத்தை
+    ஆராயுங்கள் '
+  aria_label_call_to_action_curriculum_maker_cp: சாதனங்கள் (சர்க்யூட் விளையாட்டு மைதானம்)
+    பாடத்திட்டத்துடன் பயன்பாடுகளை உருவாக்குவதை ஆராயுங்கள்
+  aria_label_call_to_action_curriculum_maker_microbit: சாதனங்கள் (மைக்ரோ:பிட்) பாடத்திட்டத்துடன்
+    பயன்பாடுகளை உருவாக்குவதை ஆராயுங்கள்
+  aria_label_call_to_action_curriculum_creating_apps_with_devices: Explore the Creating
+    Apps with Devices unit
+  aria_label_call_to_action_curriculum_problem_solving_computing: Explore the Problem
+    Solving and Computing unit
+  aria_label_call_to_action_curriculum_web_development: Explore the Web Development
+    unit
+  aria_label_call_to_action_curriculum_interactive_animations_games: Explore the Interactive
+    Animations and Games unit
+  aria_label_call_to_action_curriculum_design_process: Explore the Design Process
+    unit
+  aria_label_call_to_action_curriculum_data_society: Explore the Data and Society
+    unit
+  aria_label_call_to_action_collection_hardware: Explore the Hardware collection
+  aria_label_call_to_action_collection_design_purpose: Explore the Design with Purpose
+    collection
+  aria_label_call_to_action_collection_impact_society: Explore the Impact in Society
+    collection
+  aria_label_call_to_action_collection_creativity: Explore the Creativity collection
+  aria_label_call_to_action_collection_coding: Explore the Coding collection
+  aria_label_call_to_action_collection_data: Explore the Data collection
+  aria_label_call_to_action_module_coding_w_poetry: See the Coding with Poetry module
+    details
+  aria_label_call_to_action_module_coding_time_capsule: See the Coding a Time Capsule
+    module details
+  aria_label_call_to_action_module_simulating_marine_ecosystem: See the Simulating
+    a Marine Ecosystem module details
+  aria_label_call_to_action_module_coding_geometric_star_quilt: See the Coding a Geometric
+    Star Quilt module details
+  aria_label_call_to_action_module_modeling_animal_adaptations: See the Modeling Animal
+    Adaptations module details
+  aria_label_call_to_action_module_coding_book_covers: See the Coding Book Covers
+    module details
+  aria_label_call_to_action_module_coding_interactive_maps: See the Coding Interactive
+    Maps module details
+  video_title_professional_learning_program: 'Code.org இன் தொழில்முறை கற்றல் திட்டம் '
+  curriculum_name_csf: கணினி அறிவியல் அடிப்படைகள்
+  curriculum_name_csf_02: ஏதேனும் CS அடிப்படைகள் (படிப்பு A-F)
+  curriculum_name_csf_a_f: 'CS அடிப்படைகள் A-F '
+  curriculum_name_csd: கணினி அறிவியல் கண்டுபிடிப்புகள்
+  curriculum_name_csp: கணினி அறிவியல் கோட்பாடுகள்
+  curriculum_name_csc: கணினி அறிவியல் இணைப்புகள்
+  curriculum_name_csc_02: எந்த CS இணைப்புகள் தொகுதி
+  curriculum_name_csa: கணினி அறிவியல் A
+  curriculum_name_ai: AI மற்றும் இயந்திர கற்றல்
+  curriculum_name_maker_cp: சாதனங்களுடன் பயன்பாடுகளை உருவாக்குதல் (சர்க்யூட் விளையாட்டு
+    மைதானம்)
+  curriculum_name_maker_microbit: சாதனங்களுடன் பயன்பாடுகளை உருவாக்குதல் (micro:bit)
+  curriculum_name_creating_apps_with_devices: Creating Apps with Devices
+  curriculum_name_poetry: கவிதையுடன் குறியீட்டு முறை
+  curriculum_name_dance_party: நடன விருந்து
+  curriculum_name_problem_solving_computing: Problem Solving & Computing
+  curriculum_name_web_development: Web Development
+  curriculum_name_interactive_animations_games: Interactive Animations & Games
+  curriculum_name_design_process: The Design Process
+  curriculum_name_data_society: Data & Society
+  curriculum_desc_problem_solving_computing: Use a problem-solving process to tackle
+    puzzles, challenges, and real-world scenarios. Learn about computer input, output,
+    storage, and processing to aid in problem-solving.
+  curriculum_desc_web_development: Create and share content on web pages, exploring
+    the creative potential of the web. Develop critical consumption skills, problem-solving
+    abilities, and teamwork while programming.
+  curriculum_desc_interactive_animations_games: Create programmatic images, animations,
+    interactive art, and games. Gain familiarity with programming concepts and the
+    design process.
+  curriculum_desc_design_process: Focus on considering the societal impact of computing.
+    Through design challenges, students empathize with others' needs and develop solutions.
+  curriculum_desc_data_society: Emphasizes the role of data in problem-solving and
+    the assistance of computers in this process. Cover representation systems and
+    associated challenges. Discover how data collections aid problem-solving.
+  curriculum_desc_creating_apps_with_devices: Explore the role of physical devices
+    in computing. Develop programs that utilize hardware inputs and outputs. There
+    is a version of this unit for both the micro:bit and Circuit Playground.
+  collection_hardware: Focus on Hardware
+  collection_hardware_desc: Empowers students to use data and physical devices to
+    solve problems.
+  collection_design_purpose: Focus on Design with Purpose
+  collection_design_purpose_desc: Empowers students to think about the needs of users
+    while designing websites and apps for devices.
+  collection_impact_society: Focus on Impact in Society
+  collection_impact_society_desc: Empowers students to think about computer science
+    as a tool to solve problems while considering the broader social impacts.
+  collection_creativity: Focus on Creativity
+  collection_creativity_desc: Empowers students to be creative as they learn to create
+    websites, animations and games, and apps for devices.
+  collection_coding: Focus on Coding
+  collection_coding_desc: Empowers students to build their coding skills in web development,
+    games and animation, and creating apps for devices.
+  collection_data: Focus on Data
+  collection_data_desc: Empowers students to use data to solve problems.
+  module_label_ages: 'காலங்கள்:'
+  module_label_grades: 'தரங்கள்:'
+  module_label_curriculum: 'பாடத்திட்டம்:'
+  module_label_duration: 'காலம்: '
+  module_label_prerequisites: 'முன்நிபந்தனைகள்: '
+  module_label_level: 'Level:'
+  module_label_topics: 'Topics:'
+  module_label_devices: 'சாதனங்கள்:'
+  module_label_tools: 'Programming Tools:'
+  module_label_professional_learning: 'Professional Learning:'
+  module_label_languages: 'Languages Supported:'
+  module_label_accessibility_features: 'Accessibility:'
+  module_ages_5_10: 5-10
+  module_ages_11_18: 11-18
+  module_ages_7_18: '7-18 '
+  module_grade_3_5: 3-5
+  module_grade_3_8: 3-8
+  module_grade_6_12: 6-12
+  module_grade_6_10: 6-10
+  module_grade_9_12: 9-12
+  module_grade_k_5_teachers: 'K-5 ஆசிரியர்கள் '
+  module_grade_6_10_teachers: '6-10 ஆசிரியர்கள் '
+  module_grade_9_12_teachers: 9-12 ஆசிரியர்கள்
+  module_level_beginner: Beginner
+  module_duration_2_hrs: 2 மணிநேரம்
+  module_duration_3_hrs: 3 மணிநேரம்
+  module_duration_8_hrs: 8 மணிநேரம்
+  module_duration_35_hrs: 35 மணி நேரம்
+  module_duration_lesson: பாடம்
+  module_duration_week: Week
+  module_duration_month: மாதம்
+  module_duration_quarter: காலாண்டு
+  module_duration_semester: Semester
+  module_duration_school_year: 'பள்ளி ஆண்டு '
+  module_duration_month_semester_year: Month, Semester, or Year
+  module_prerequisites_none: எதுவும் இல்லை
+  module_prerequisites_maker_cp: 'சர்க்யூட் விளையாட்டு மைதானத்திற்கான அணுகல் '
+  module_prerequisites_maker_microbit: 'மைக்ரோ:பிட்டிற்கான அணுகல் '
+  module_label_teaching_csf: கணினி அறிவியல் அடிப்படைகளை கற்பித்தல்
+  module_label_teaching_csd: கணினி அறிவியல் கண்டுபிடிப்புகளை கற்பித்தல்
+  module_label_teaching_csp: 'கணினி அறிவியல் கோட்பாடுகளை கற்பித்தல் '
+  module_label_teaching_csc: கணினி அறிவியல் இணைப்புகளை கற்பித்தல்
+  module_label_teaching_ai: AI மற்றும் இயந்திர கற்றல் கற்பித்தல்
+  module_label_teaching_maker_cp: சாதனங்கள் (சர்க்யூட் விளையாட்டு மைதானம்) மூலம் பயன்பாடுகளை
+    உருவாக்குதல்
+  module_label_teaching_maker_microbit: சாதனங்கள் (மைக்ரோ:பிட்) மூலம் பயன்பாடுகளை
+    உருவாக்கக் கற்பித்தல்
+  module_subject_english_language_arts: English Language Arts
+  module_subject_social_studies: Social Studies
+  module_subject_science: Science
+  module_subject_math: Math
+  module_name_coding_w_poetry: கவிதையுடன் குறியீட்டு முறை
+  module_name_coding_time_capsule: Coding a Time Capsule
+  module_name_simulating_marine_ecosystem: Simulating a Marine Ecosystem
+  module_name_coding_geometric_star_quilt: Coding a Geometric Star Quilt
+  module_name_modeling_animal_adaptations: Modeling Animal Adaptations
+  module_name_coding_book_covers: Coding Book Covers
+  module_name_coding_interactive_maps: Coding Interactive Maps
+  module_desc_coding_w_poetry: Explore the intersection of coding and language arts
+    by creating interactive poems, illustrating the mood and tone with code.
+  module_desc_coding_time_capsule: Create a digital time capsule to capture and preserve
+    memories for the future.
+  module_desc_simulating_marine_ecosystem: Use coding to simulate a marine ecosystem,
+    exploring the interdependencies between different organisms and their environment.
+  module_desc_coding_geometric_star_quilt: Learn code to create geometric patterns
+    in stunning star quilts, blending mathematical concepts with creative expression.
+  module_desc_modeling_animal_adaptations: Use code to model animal adaptations, deepening
+    your understanding of how different species have evolved to survive in their environments.
+  module_desc_coding_book_covers: Use code to create an animated cover of a book,
+    using sprites and text to convey characters, setting, plot, and more.
+  module_desc_coding_interactive_maps: Use coding to develop a map that tells a story,
+    allowing you to explore geographic information in an engaging and interactive
+    way.
+  values_01: 'கணினி அறிவியல் அனைத்து மாணவர்களுக்கும் அடிப்படை என்று நாங்கள் நம்புகிறோம் '
+  values_02: சமபங்கு, அணுகல் மற்றும் வாய்ப்பு ஆகியவற்றிற்கு நாங்கள் கடமைப்பட்டுள்ளோம்
+  values_03: 'கூட்டு கல்வி சமூகத்தின் சக்தியை நாங்கள் நம்புகிறோம் '
+  values_04: நாங்கள் சுறுசுறுப்பானவர்கள் மற்றும் கருத்துகளுக்கு பதிலளிக்கக்கூடியவர்கள்
+  values_05: நாங்கள் நேர்மையுடனும் வெளிப்படைத்தன்மையுடனும் செயல்படுகிறோம்
+  values_06: பரந்த தாக்கத்திற்கு பெரிதாக சிந்தித்து முழுமையாக செயல்பட வேண்டும் என்று
+    நாங்கள் நம்புகிறோம்
+  heading_professional_learning: Professional learning that meets your needs
+  heading_additional_resources: கூடுதல் ஆதாரங்கள்
+  heading_support_and_questions: Support and questions
+  heading_faq: Frequently asked questions
+  heading_curriculum_at_a_glance: Curriculum at a glance
+  heading_curricula_at_a_glance: Curricula at a glance
+  heading_engaging_projects: Engaging projects and activities that inspire learning
+  heading_build_apps: Build apps
+  heading_widgets: Widgets
+  heading_choice_levels: Choice levels
+  heading_year_long_intro_course: Year-long introductory course
+  heading_flexible_units: Flexible units
+  heading_collections: Collections
+  heading_find_a_module: Find a module for your classroom
+  professional_learning_section_desc: Get the support you need as you prepare to teach.
+    Teachers love it, with over 90% ranking it the best professional development ever!
+  professional_learning_section_desc_self_paced: Just in time support that allows
+    you to prepare to teach with confidence on your schedule.
+  professional_learning_section_block_facilitator_led_workshops: Our highly supportive
+    Professional Learning Program will bring you together with a group of teachers
+    to learn from each other as well as expert facilitators as you take on the first
+    year of teaching the free curriculum to your students. In-person and virtual workshops
+    are starting this summer.
+  support_and_questions_section_subhead: Still have questions? Reach out to us! We
+    are here to help.
+  support_and_questions_section_desc: Our support team is here to answer any questions
+    you may have about starting teaching with Code.org. You can also ask other teachers
+    about their experience on our teacher forums.
+  blockchain_hero_heading: பிளாக்செயின் எவ்வாறு செயல்படுகிறது
+  blockchain_hero_desc: எங்களின் புதிய வீடியோ தொடர் மற்றும் அதனுடன் இணைந்த பாடங்களுடன்
+    "How Blockchain Works" மூலம் பிளாக்செயின் உலகில் முழுக்கு!
+  blockchain_intro_heading: பிளாக்செயின் எவ்வாறு செயல்படுகிறது என்பதைப் பாருங்கள்
+  blockchain_intro_desc: Coinbase உடன் இணைந்து உருவாக்கப்பட்ட இந்த வீடியோ தொடர், தொழில்
+    வல்லுனர்களைக் கொண்டுள்ளது மற்றும் இந்தத் தொழில்நுட்பத்தை நீக்குவதை நோக்கமாகக்
+    கொண்டுள்ளது.
+  blockchain_intro_list_heading: 'இந்தத் தொடர்:'
+  blockchain_intro_list_item_01: 'பிளாக்செயின் என்றால் என்ன என்பதை விளக்குங்கள் '
+  blockchain_intro_list_item_02: 'அது ஏன் முக்கியமானது என்பதை ஆராயுங்கள் '
+  blockchain_intro_list_item_03: 'அதன் சமூக தாக்கங்களை - நல்லது மற்றும் கெட்டது '
+  blockchain_video_title_01: "பிளாக்செயின் அறிமுகம்\n "
+  blockchain_video_title_02: ஏன் பிளாக்செயின்
+  blockchain_video_title_03: 'பேட்டைக்கு கீழ்
+
+'
+  blockchain_video_title_04: நாணயங்களுக்கு அப்பால்
+  blockchain_video_title_05: 'சந்தை மற்றும் விலை '
+  blockchain_video_title_06: 'நம்பகமானதா அல்லது மோசடியா? '
+  blockchain_video_title_07: 'சமூக தாக்கம் '
+  blockchain_lessons_heading: 'உங்கள் வகுப்பிற்கான பிளாக்செயின் பாடங்கள் '
+  blockchain_lessons_desc: 'முதல் ஐந்து பாடங்கள் "How Blockchain Works" தொடரின் ஒரு
+    பகுதியாக கற்பிக்கப்படலாம் அல்லது தனியாக நிற்கலாம். கடைசிப் பாடம் முழுத் தொடரையும்
+    ஒரே நாளில் சுருக்குகிறது. '
+  blockchain_resources_desc: பிளாக்செயின் பற்றி மேலும் அறிய ஆர்வமா? உங்கள் மாணவர்களின்
+    கற்றலை நீட்டிக்க உதவும் சில கூடுதல் ஆதாரங்கள் இங்கே உள்ளன.
+  blockchain_resources_01_heading: 'Coinbase கற்க '
+  blockchain_resources_01_desc: கிரிப்டோ கேள்விகளுக்கு பதிலளிக்கப்பட்டது, தொடக்க வழிகாட்டிகள்,
+    நடைமுறை உதவிக்குறிப்புகள் மற்றும் முதல் முறையாக வருபவர்கள், அனுபவம் வாய்ந்த முதலீட்டாளர்கள்
+    மற்றும் இடையில் உள்ள அனைவருக்கும் சந்தை புதுப்பிப்புகள்.
+  blockchain_resources_01_button_label: Coinbase Learn இணையதளத்தைப் பார்வையிடவும்
+  blockchain_resources_02_heading: 'ஒயிட்போர்டு கிரிப்டோ '
+  blockchain_resources_02_desc: பிளாக்செயின் தொழில்நுட்பத்தைப் பற்றி மேலும் அறிய,
+    Whiteboard Crypto இன் YouTube சேனலில் இருந்து வீடியோக்களைப் பார்க்கவும்.
+  blockchain_resources_02_button_label: Whiteboard Crypto YouTube சேனலைப் பார்வையிடவும்
+  blockchain_resources_03_heading: 'குறியீடு செயல்பாட்டின் நேரம் '
+  blockchain_resources_03_desc: Coinbase உருவாக்கிய கிரிப்டோ நினைவக விளையாட்டை முயற்சிக்கவும்.
+  blockchain_resources_03_button_label: 'கிரிப்டோ மெமரி கேம் செயல்பாட்டை முயற்சிக்கவும் '
   ai_2023_banner_title: உலகிற்கு AI கல்வி
-  ai_2023_banner_skinny_desc: See how we're planning to bring AI education to classrooms
-    everywhere.
-  teachai_launch_blog_title: Introducing TeachAI!
-  teachai_launch_blog_desc_01: Education, nonprofit, and tech leaders come together
-    to offer guidance on integrating AI safely into classrooms worldwide
-  teachai_launch_blog_desc_02: TeachAI aims to integrate AI education into primary
-    and secondary curricula around the world through new reports, policy recommendations,
-    and public engagement opportunities.
-  ai_hero_heading: Artificial intelligence isn't magic… It's just code!
-  ai_hero_desc: Demystify artificial intelligence (AI) by learning how it's changing
-    the ways we live, work, and learn.
-  ai_intro_heading: Why learn about AI?
-  ai_intro_video_title: Why AI Matters with Deb Raji
-  ai_intro_video_caption_link: Check out the full Intro to AI series
-  ai_intro_list_title_01: Foundational knowledge
-  ai_intro_list_desc_01: Spark students' interest in technology and help them understand
-    the world around them in a deeper way.
-  ai_intro_list_title_02: Creativity and innovation
-  ai_intro_list_desc_02: Inspire students to think creatively and innovate, as they
-    explore the potential applications of AI.
-  ai_intro_list_title_03: Problem solving and critical thinking
-  ai_intro_list_desc_03: Encourage students to develop essential skills as they learn
-    to design, build, and evaluate AI systems.
-  ai_why_heading: Why teach AI with Code.org?
-  ai_why_desc: All the resources you need in one place! Explore our curriculum offerings,
-    professional learning courses, and video series designed for you and your students.
-  ai_why_link_01: Explore AI curricula
-  ai_why_link_02: See professional learning options
-  ai_why_link_03: Watch AI videos
-  ai_curricula_heading: AI Curricula
-  ai_curricula_desc: Explore the different AI curriculum offerings which meet diverse
-    classroom needs.
+  ai_2023_banner_skinny_desc: எல்லா இடங்களிலும் உள்ள வகுப்பறைகளுக்கு AI கல்வியை எவ்வாறு
+    கொண்டு வர திட்டமிட்டுள்ளோம் என்பதைப் பாருங்கள்.
+  teachai_launch_blog_title: 'TeachAI ஐ அறிமுகப்படுத்துகிறோம்! '
+  teachai_launch_blog_desc_01: 'உலகெங்கிலும் உள்ள வகுப்பறைகளில் AI ஐ பாதுகாப்பாக ஒருங்கிணைப்பதற்கான
+    வழிகாட்டுதலை வழங்க கல்வி, இலாப நோக்கமற்ற மற்றும் தொழில்நுட்பத் தலைவர்கள் ஒன்றிணைகின்றனர். '
+  teachai_launch_blog_desc_02: TeachAI ஆனது புதிய அறிக்கைகள், கொள்கைப் பரிந்துரைகள்
+    மற்றும் பொது ஈடுபாட்டிற்கான வாய்ப்புகள் மூலம் AI கல்வியை உலகெங்கிலும் உள்ள முதன்மை
+    மற்றும் இரண்டாம் நிலை பாடத்திட்டங்களில் ஒருங்கிணைப்பதை நோக்கமாகக் கொண்டுள்ளது.
+  ai_pl_callout_title: 'AI அதிகாரமளிக்க எங்களுடன் சேருங்கள்! '
+  ai_pl_callout_desc_01: 'கல்வியாளர்களுக்கான எங்கள் இலவச ஆன்லைன் கற்றல் தொடர் மூலம்
+    கல்வியில் செயற்கை நுண்ணறிவின் (AI) மாற்றும் திறனைக் கண்டறியவும். '
+  ai_pl_callout_desc_02: '"சல் கான் மற்றும் ஹாடி பார்டோவியுடன் ஃபயர்சைட் அரட்டை" க்கு
+    பதிவு செய்யுங்கள், அங்கு கான் அகாடமி மற்றும் Code.org இன் நிறுவனர்கள், AI உங்கள்
+    மிகவும் நம்பகமான கற்பித்தல் உதவியாளராக எப்படி மாறும் என்பதைக் கண்டறியவும்.'
+  ai_hero_heading: செயற்கை நுண்ணறிவு மந்திரம் அல்ல... இது வெறும் குறியீடு!
+  ai_hero_desc: செயற்கை நுண்ணறிவு (AI) நாம் வாழும், வேலை செய்யும் மற்றும் கற்றுக்
+    கொள்ளும் முறைகளை எவ்வாறு மாற்றுகிறது என்பதை அறிந்துகொள்வதன் மூலம், அதை நீக்கவும்.
+  ai_intro_heading: AI பற்றி ஏன் கற்றுக்கொள்ள வேண்டும்?
+  ai_intro_video_title: டெப் ராஜியுடன் AI ஏன் முக்கியமானது
+  ai_intro_video_caption_link: AI தொடரின் முழு அறிமுகத்தைப் பார்க்கவும்
+  ai_intro_list_title_01: அடிப்படை அறிவு
+  ai_intro_list_desc_01: தொழில்நுட்பத்தில் மாணவர்களின் ஆர்வத்தைத் தூண்டி, அவர்களைச்
+    சுற்றியுள்ள உலகத்தை ஆழமாகப் புரிந்துகொள்ள உதவுங்கள்.
+  ai_intro_list_title_02: படைப்பாற்றல் மற்றும் புதுமை
+  ai_intro_list_desc_02: 'AI இன் சாத்தியமான பயன்பாடுகளை ஆராய்வதால், மாணவர்களை ஆக்கப்பூர்வமாக
+    சிந்திக்கவும் புதுமைப்படுத்தவும் ஊக்குவிக்கவும். '
+  ai_intro_list_title_03: சிக்கலைத் தீர்ப்பது மற்றும் விமர்சன சிந்தனை
+  ai_intro_list_desc_03: AI அமைப்புகளை வடிவமைக்கவும், உருவாக்கவும் மற்றும் மதிப்பீடு
+    செய்யவும் கற்றுக் கொள்ளும்போது, அத்தியாவசிய திறன்களை வளர்த்துக் கொள்ள மாணவர்களை
+    ஊக்குவிக்கவும்.
+  ai_why_heading: AI ஐ Code.org மூலம் ஏன் கற்பிக்க வேண்டும்?
+  ai_why_desc: உங்களுக்கு தேவையான அனைத்து வளங்களும் ஒரே இடத்தில்! உங்களுக்கும் உங்கள்
+    மாணவர்களுக்கும் வடிவமைக்கப்பட்ட எங்கள் பாடத்திட்ட சலுகைகள், தொழில்முறை கற்றல்
+    படிப்புகள் மற்றும் வீடியோ தொடர்களை ஆராயுங்கள்.
+  ai_why_link_01: AI பாடத்திட்டங்களை ஆராயுங்கள்
+  ai_why_link_02: 'தொழில்முறை கற்றல் விருப்பங்களைப் பார்க்கவும் '
+  ai_why_link_03: 'AI வீடியோக்களைப் பார்க்கவும் '
+  ai_curricula_heading: AI பாடத்திட்டம்
+  ai_curricula_desc: பல்வேறு வகுப்பறைத் தேவைகளைப் பூர்த்தி செய்யும் வெவ்வேறு AI பாடத்திட்ட
+    சலுகைகளை ஆராயுங்கள்.
   ai_curriculum_title_01: AI மற்றும் இயந்திர கற்றல்
-  ai_curriculum_desc_01: Explore how computers learn from data. Develop machine learning
-    projects around real-world data. Design a machine learning app to solve a personally
-    relevant problem.
-  ai_curriculum_grades_01: 'Grade Levels: 6-12'
-  ai_curriculum_duration_01: 'Duration: 20 hours'
-  ai_curriculum_btn_aria_label_01: Explore the AI and Machine Learning unit
-  ai_curriculum_title_02: AI and Ethics
-  ai_curriculum_desc_02: Reflect on the ethical implications of AI, then work together
-    to create an "AI Code of Ethics" resource for AI creators and legislators everywhere.
-  ai_curriculum_grades_02: 'Grade Levels: 5-12'
-  ai_curriculum_duration_02: 'Duration: 1 hour'
-  ai_curriculum_btn_aria_label_02: View the lesson plan for AI and Ethics
+  ai_curriculum_desc_01: தரவுகளிலிருந்து கணினிகள் எவ்வாறு கற்றுக்கொள்கின்றன என்பதை
+    ஆராயுங்கள். நிஜ உலகத் தரவைச் சுற்றி இயந்திர கற்றல் திட்டங்களை உருவாக்குங்கள்.
+    தனிப்பட்ட முறையில் தொடர்புடைய சிக்கலைத் தீர்க்க இயந்திர கற்றல் பயன்பாட்டை வடிவமைக்கவும்.
+  ai_curriculum_grades_01: 'கிரேடு நிலைகள்: 6-12'
+  ai_curriculum_duration_01: 'காலம்: 20 மணி நேரம் '
+  ai_curriculum_btn_aria_label_01: AI மற்றும் இயந்திர கற்றல் பிரிவை ஆராயுங்கள்
+  ai_curriculum_title_02: AI மற்றும் நெறிமுறைகள்
+  ai_curriculum_desc_02: AI இன் நெறிமுறை தாக்கங்களைப் பற்றி சிந்தித்து, எல்லா இடங்களிலும்
+    உள்ள AI படைப்பாளர்களுக்கும் சட்டமியற்றுபவர்களுக்கும் "AI நெறிமுறைக் குறியீடு"
+    வளத்தை உருவாக்க ஒன்றாக வேலை செய்யுங்கள்.
+  ai_curriculum_grades_02: 'கிரேடு நிலைகள்: 5-12'
+  ai_curriculum_duration_02: 'காலம்: 1 மணி நேரம்'
+  ai_curriculum_btn_aria_label_02: AI மற்றும் நெறிமுறைகளுக்கான பாடத் திட்டத்தைப் பார்க்கவும்
   ai_curriculum_title_03: பெருங்கடல்களுக்கான AI
-  ai_curriculum_desc_03: Help A.I. clean the oceans by training it to detect trash!
-    Learn about training data and bias, and how AI can address world problems.
-  ai_curriculum_grades_03: 'Grade Levels: 3-12'
-  ai_curriculum_duration_03: 'Duration: 1 hour'
-  ai_curriculum_btn_aria_label_03: Try the AI for Oceans activity
-  ai_carousel_heading: 'What teachers say about AI with Code.org:'
-  ai_carousel_quote_01: This lesson also gave my students the opportunity to see that
-    there is an element of opinion in classification systems. Later, when we started
-    to see how bias can end up in AI, I was able to pull them back and remind them
-    that the data used to train their models was based on choices.
-  ai_carousel_quote_02: My students learned that they don't have to just be consumers
-    when it comes to technological advances that they are experiencing on almost a
-    daily basis. They can actually be creators!
-  ai_pl_heading: Preparing to teach AI
-  ai_pl_subheading: Prepare to teach AI using our self-paced online module.
-  ai_pl_list_01: Get an introduction to artificial intelligence and machine learning.
-  ai_pl_list_02: Train a machine learning model using AI Lab.
-  ai_pl_list_03: Engage with machine learning apps.
-  ai_pl_list_04: Consider real-world implications of AI and machine learning.
-  ai_pl_list_05: Explore end of chapter projects.
-  ai_pl_duration: 'Duration: 2 hours'
-  ai_video_series_title: How AI Works
-  ai_video_series_desc: With an introduction by Microsoft CEO Satya Nadella, this
-    series of short videos will introduce you to how artificial intelligence works
-    and why it matters. Then delve into issues like algorithmic bias and the ethics
-    of AI decision-making.
-  ai_resources_heading: Additional resources
-  ai_resources_desc: Interested in learning more about AI? Here are some additional
-    resources that can help extend your students' learning.
-  ai_resources_title_01: Ethics of AI Panel
-  ai_resources_desc_01: Go deeper with some of our favorite AI experts! This panel
-    discussion touches on important issues like algorithmic bias and the future of
-    work.
-  ai_resources_btn_aria_label_01: Watch the Ethics of AI panel
-  ai_resources_title_02: Imagine Cup Junior
-  ai_resources_desc_02: This global AI for Good challenge introduces students to Microsoft's
-    AI for Good initiatives, empowering them to solve a problem in the world with
-    the power of AI.
-  ai_resources_btn_aria_label_02: Learn about the Imagine Cup Junior challenge
-  ai_resources_title_03: AI for Teachers
-  ai_resources_desc_03: Supports integration of Artificial Intelligence knowledge
-    throughout K-12. Offer free professional development, webinars, conference presentations,
-    and peer-to-peer learning opportunities.
-  ai_resources_btn_aria_label_03: Explore the AI for Teachers website
-  ai_vid_intro_caption: Introducing How AI Works
-  ai_vid_chatbots_caption: How Chatbots and Large Language Models Work
-  ai_vid_creativity_caption: Does AI Have Creativity and Imagination?
+  ai_curriculum_desc_03: உதவி ஏ.ஐ. குப்பைகளைக் கண்டறிய பயிற்சியளித்து கடல்களை சுத்தம்
+    செய்யுங்கள்! பயிற்சி தரவு மற்றும் பாரபட்சம் மற்றும் உலக பிரச்சனைகளை AI எவ்வாறு
+    தீர்க்க முடியும் என்பதைப் பற்றி அறிக.
+  ai_curriculum_grades_03: 'கிரேடு நிலைகள்: 3-12 '
+  ai_curriculum_duration_03: 'காலம்: 1 மணி நேரம்'
+  ai_curriculum_btn_aria_label_03: 'கடல் செயல்பாடுகளுக்கான AIஐ முயற்சிக்கவும் '
+  ai_carousel_heading: 'Code.org உடன் AI பற்றி ஆசிரியர்கள் என்ன சொல்கிறார்கள்: '
+  ai_carousel_quote_01: இந்தப் பாடம் எனது மாணவர்களுக்கு வகைப்பாடு முறைகளில் கருத்துக்
+    கூறு இருப்பதைக் காணும் வாய்ப்பையும் அளித்தது. பின்னர், AI இல் சார்பு எவ்வாறு முடிவடையும்
+    என்பதை நாங்கள் பார்க்கத் தொடங்கியபோது, அவற்றைப் பின்னுக்கு இழுத்து, அவர்களின்
+    மாதிரிகளைப் பயிற்றுவிக்கப் பயன்படுத்தப்படும் தரவு தேர்வுகளின் அடிப்படையில் அமைந்தது
+    என்பதை அவர்களுக்கு நினைவூட்ட முடிந்தது.
+  ai_carousel_quote_02: கிட்டத்தட்ட தினசரி அடிப்படையில் தாங்கள் அனுபவிக்கும் தொழில்நுட்ப
+    முன்னேற்றங்கள் வரும்போது தாங்கள் நுகர்வோராக இருக்க வேண்டியதில்லை என்பதை எனது மாணவர்கள்
+    அறிந்துகொண்டனர். அவர்கள் உண்மையில் படைப்பாளிகளாக இருக்கலாம்!
+  ai_pl_heading: 'AI கற்பிக்க தயாராகிறது '
+  ai_pl_subheading: 'எங்களின் சுய-வேக ஆன்லைன் தொகுதியைப் பயன்படுத்தி AI க்கு கற்பிக்க
+    தயாராகுங்கள். '
+  ai_pl_list_01: செயற்கை நுண்ணறிவு மற்றும் இயந்திர கற்றல் பற்றிய அறிமுகத்தைப் பெறுங்கள்.
+  ai_pl_list_02: AI ஆய்வகத்தைப் பயன்படுத்தி இயந்திர கற்றல் மாதிரியைப் பயிற்றுவிக்கவும்.
+  ai_pl_list_03: 'இயந்திர கற்றல் பயன்பாடுகளுடன் ஈடுபடுங்கள். '
+  ai_pl_list_04: 'AI மற்றும் இயந்திர கற்றலின் நிஜ உலக தாக்கங்களைக் கவனியுங்கள். '
+  ai_pl_list_05: 'அத்தியாயத் திட்டங்களின் முடிவை ஆராயுங்கள். '
+  ai_pl_duration: 'காலம்: 2 மணி நேரம்'
+  ai_video_series_title: AI எவ்வாறு செயல்படுகிறது
+  ai_video_series_desc: மைக்ரோசாப்ட் தலைமை நிர்வாக அதிகாரி சத்யா நாதெல்லாவின் அறிமுகத்துடன்,
+    செயற்கை நுண்ணறிவு எவ்வாறு செயல்படுகிறது மற்றும் அது ஏன் முக்கியமானது என்பதை இந்தத்
+    தொடர் சிறு வீடியோக்கள் உங்களுக்கு அறிமுகப்படுத்தும். அல்காரிதம் சார்பு மற்றும்
+    AI முடிவெடுக்கும் நெறிமுறைகள் போன்ற சிக்கல்களை ஆராயுங்கள்.
+  ai_resources_heading: கூடுதல் ஆதாரங்கள்
+  ai_resources_desc: AI பற்றி மேலும் அறிய ஆர்வமா? உங்கள் மாணவர்களின் கற்றலை நீட்டிக்க
+    உதவும் சில கூடுதல் ஆதாரங்கள் இங்கே உள்ளன.
+  ai_resources_title_01: 'AI பேனலின் நெறிமுறைகள் '
+  ai_resources_desc_01: எங்களுக்குப் பிடித்த சில AI நிபுணர்களுடன் ஆழமாகச் செல்லுங்கள்!
+    இந்த குழு விவாதம் அல்காரிதம் சார்பு மற்றும் பணியின் எதிர்காலம் போன்ற முக்கியமான
+    சிக்கல்களைத் தொடுகிறது.
+  ai_resources_btn_aria_label_01: 'AI பேனலின் நெறிமுறைகளைப் பாருங்கள் '
+  ai_resources_title_02: 'கோப்பை ஜூனியரை கற்பனை செய்து பாருங்கள் '
+  ai_resources_desc_02: இந்த உலகளாவிய AI for Good சவாலானது, மைக்ரோசாப்டின் AI ஃபார்
+    குட் முன்முயற்சிகளை மாணவர்களுக்கு அறிமுகப்படுத்துகிறது, AI இன் சக்தியுடன் உலகில்
+    உள்ள ஒரு சிக்கலைத் தீர்க்க அவர்களுக்கு அதிகாரம் அளிக்கிறது.
+  ai_resources_btn_aria_label_02: இமேஜின் கோப்பை ஜூனியர் சவால் பற்றி அறிக
+  ai_resources_title_03: 'ஆசிரியர்களுக்கான AI '
+  ai_resources_desc_03: 'K-12 முழுவதும் செயற்கை நுண்ணறிவு அறிவின் ஒருங்கிணைப்பை ஆதரிக்கிறது.
+    இலவச தொழில்முறை மேம்பாடு, வெபினார்கள், மாநாட்டு விளக்கக்காட்சிகள் மற்றும் பியர்-டு-பியர்
+    கற்றல் வாய்ப்புகளை வழங்குங்கள். '
+  ai_resources_btn_aria_label_03: 'ஆசிரியர்களுக்கான AI இணையதளத்தை ஆராயுங்கள் '
+  ai_vid_intro_caption: AI எவ்வாறு செயல்படுகிறது என்பதை அறிமுகப்படுத்துகிறோம்
+  ai_vid_chatbots_caption: 'சாட்போட்கள் மற்றும் பெரிய மொழி மாதிரிகள் எவ்வாறு செயல்படுகின்றன '
+  ai_vid_creativity_caption: 'AI க்கு படைப்பாற்றல் மற்றும் கற்பனை உள்ளதா? '
   ai_vid_mlintro_caption: இயந்திர கற்றல் என்றால் என்ன?
-  ai_vid_trainingdata_caption: Training Data & Bias
-  ai_vid_neuralnetworks_caption: Neural Networks
-  ai_vid_computervision_caption: Computer Vision
-  ai_vid_ethics1_caption: 'Ethics & AI: Equal Access and Algorithmic Bias'
-  ai_vid_ethics2_caption: 'Ethics & AI: Privacy and the Future of Work'
-  self_paced_pl_hero_heading: Self-Paced Professional Learning For Educators
-  self_paced_pl_hero_desc: Professional learning offerings to support teachers in
-    every stage of their computer science teaching journey.
-  self_paced_pl_intro_heading: Professional learning on your timeline
-  self_paced_pl_intro_desc: Code.org is pleased to offer self-paced modules for teachers.
-    These modules are available at no cost to any educator with a Code.org account
-    worldwide!
-  self_paced_pl_intro_list_title_01: Flexibility and Convenience
-  self_paced_pl_intro_list_desc_01: Engage with the material at your own pace and
-    on your own time.
-  self_paced_pl_intro_list_title_02: Personalized Learning Experience
-  self_paced_pl_intro_list_desc_02: Focus on the areas that are most important to
-    your needs and teaching context.
-  self_paced_pl_intro_list_title_03: Access to High-Quality Content
-  self_paced_pl_intro_list_desc_03: Get the latest best practices, research, and strategies
-    for teaching computer science effectively.
-  self_paced_pl_callout: Looking for facilitator-led professional learning options?
-  self_paced_pl_callout_link: Check out our in-person and virtual workshops.
-  self_paced_pl_modules_heading: Self-paced professional learning modules
-  self_paced_pl_modules_desc: Through reading, viewing videos, completing interactive
-    puzzles, and reflecting on your learning, you will develop your own understanding
-    while preparing to teach computer science in your classroom.
-  self_paced_pl_modules_list_heading: 'After completing one of these modules, participants
-    will:'
-  self_paced_pl_modules_list_01: Learn how to navigate the Code.org website and teacher
-    tools.
-  self_paced_pl_modules_list_02: Gain a high level understanding of the content, tools,
-    and pedagogy.
-  self_paced_pl_modules_list_03: Prepare to begin teaching the curriculum with your
-    students.
-  self_paced_pl_facilitator_heading: Want to take your learning further?
-  self_paced_pl_facilitator_subheading: Facilitator-led workshops
-  self_paced_pl_facilitator_desc: In addition to the above self-paced online modules,
-    facilitator-led professional learning workshops are available for teachers. Join
-    the more than 100,000 teachers who have participated in our workshops. More than
-    90% of attendees would recommend our program to other teachers.
-  self_paced_pl_facilitator_call_to_action: Explore facilitator-led professional learning
-  self_paced_pl_resources_heading: Additional resources for teachers
-  self_paced_pl_resources_title_01: Code.org Regional Partner
-  self_paced_pl_resources_desc_01: Connect with your Code.org Regional Partner to
-    learn what's going on in your region. Your local Code.org Regional Partner provides
-    facilitator-led workshops to teachers, and can help guide your school or district
-    on implementation, certification, funding, and more.
-  self_paced_pl_resources_title_02: Computer Science Teachers Association
-  self_paced_pl_resources_desc_02: Join the world's largest Computer Science department!
-    Connect with over 19,000 CS teachers from around the globe, find strength in your
-    local community, and get support from other CS teachers.
-  self_paced_pl_resources_title_03: Amazon Future Engineer
-  self_paced_pl_resources_desc_03: Code.org has partnered with Amazon Future Engineer
-    to offer teachers at underserved schools a growing number of resources and benefits
-    at no cost! Find out if your school is eligible.
+  ai_vid_trainingdata_caption: 'பயிற்சி தரவு மற்றும் சார்பு '
+  ai_vid_neuralnetworks_caption: 'நரம்பியல் வலையமைப்புகள் '
+  ai_vid_computervision_caption: 'கணினி பார்வை '
+  ai_vid_ethics1_caption: 'நெறிமுறைகள் & AI: சம அணுகல் மற்றும் அல்காரிதம் சார்பு '
+  ai_vid_ethics2_caption: 'நெறிமுறைகள் & AI: தனியுரிமை மற்றும் பணியின் எதிர்காலம் '
+  self_paced_pl_hero_heading: 'கல்வியாளர்களுக்கான சுய-வேக தொழில்முறை கற்றல் '
+  self_paced_pl_hero_desc: 'கணினி அறிவியல் கற்பித்தல் பயணத்தின் ஒவ்வொரு கட்டத்திலும்
+    ஆசிரியர்களுக்கு ஆதரவளிக்கும் தொழில்முறை கற்றல் சலுகைகள். '
+  self_paced_pl_intro_heading: 'உங்கள் காலவரிசையில் தொழில்முறை கற்றல் '
+  self_paced_pl_intro_desc: 'Code.org ஆசிரியர்களுக்கு சுய-வேக தொகுதிகளை வழங்குவதில்
+    மகிழ்ச்சி அடைகிறது. உலகெங்கிலும் உள்ள Code.org கணக்கைக் கொண்ட எந்தவொரு கல்வியாளருக்கும்
+    இந்த தொகுதிகள் எந்த கட்டணமும் இல்லாமல் கிடைக்கின்றன! '
+  self_paced_pl_intro_list_title_01: 'நெகிழ்வுத்தன்மை மற்றும் வசதி '
+  self_paced_pl_intro_list_desc_01: 'உங்கள் சொந்த வேகத்திலும் உங்கள் சொந்த நேரத்திலும்
+    உள்ளடக்கத்துடன் ஈடுபடுங்கள். '
+  self_paced_pl_intro_list_title_02: 'தனிப்பயனாக்கப்பட்ட கற்றல் அனுபவம் '
+  self_paced_pl_intro_list_desc_02: உங்கள் தேவைகள் மற்றும் கற்பித்தல் சூழலுக்கு மிக
+    முக்கியமான பகுதிகளில் கவனம் செலுத்துங்கள்.
+  self_paced_pl_intro_list_title_03: 'உயர்தர உள்ளடக்கத்திற்கான அணுகல் '
+  self_paced_pl_intro_list_desc_03: 'கணினி அறிவியலை திறம்பட கற்பிப்பதற்கான சமீபத்திய
+    சிறந்த நடைமுறைகள், ஆராய்ச்சி மற்றும் உத்திகளைப் பெறுங்கள். '
+  self_paced_pl_callout: எளிதாக்குபவர் தலைமையிலான தொழில்முறை கற்றல் விருப்பங்களைத்
+    தேடுகிறீர்களா?
+  self_paced_pl_callout_link: எங்கள் தனிப்பட்ட மற்றும் மெய்நிகர் பட்டறைகளைப் பார்க்கவும்.
+  self_paced_pl_modules_heading: சுய-வேக தொழில்முறை கற்றல் தொகுதிகள்
+  self_paced_pl_modules_desc: படிப்பதன் மூலம், வீடியோக்களைப் பார்ப்பதன் மூலம், ஊடாடும்
+    புதிர்களை முடிப்பதன் மூலம், உங்கள் கற்றலைப் பிரதிபலிப்பதன் மூலம், உங்கள் வகுப்பறையில்
+    கணினி அறிவியலைக் கற்பிக்கத் தயாராகும் போது உங்கள் சொந்த புரிதலை வளர்த்துக் கொள்வீர்கள்.
+  self_paced_pl_modules_list_heading: 'இந்த தொகுதிகளில் ஒன்றை முடித்த பிறகு, பங்கேற்பாளர்கள்: '
+  self_paced_pl_modules_list_01: Code.org இணையதளம் மற்றும் ஆசிரியர் கருவிகளை எவ்வாறு
+    வழிநடத்துவது என்பதை அறிக.
+  self_paced_pl_modules_list_02: உள்ளடக்கம், கருவிகள் மற்றும் கற்பித்தல் பற்றிய உயர்
+    மட்ட புரிதலைப் பெறுங்கள்.
+  self_paced_pl_modules_list_03: உங்கள் மாணவர்களுடன் பாடத்திட்டத்தை கற்பிக்கத் தயாராகுங்கள்.
+  self_paced_pl_facilitator_heading: உங்கள் கற்றலை மேலும் கொண்டு செல்ல வேண்டுமா?
+  self_paced_pl_facilitator_subheading: எளிதாக்குபவர் தலைமையிலான பட்டறைகள்
+  self_paced_pl_facilitator_desc: மேற்கூறிய சுய-வேக ஆன்லைன் மாட்யூல்களுடன் கூடுதலாக,
+    ஆசிரியர்களுக்கான வசதியாளர் தலைமையிலான தொழில்முறை கற்றல் பட்டறைகள் உள்ளன. எங்கள்
+    பட்டறைகளில் பங்கேற்ற 100,000 க்கும் மேற்பட்ட ஆசிரியர்களுடன் சேரவும். 90% க்கும்
+    அதிகமான பங்கேற்பாளர்கள் எங்கள் திட்டத்தை மற்ற ஆசிரியர்களுக்கு பரிந்துரைப்பார்கள்.
+  self_paced_pl_facilitator_call_to_action: எளிதாக்குபவர் தலைமையிலான தொழில்முறை கற்றலை
+    ஆராயுங்கள்
+  self_paced_pl_resources_heading: ஆசிரியர்களுக்கான கூடுதல் ஆதாரங்கள்
+  self_paced_pl_resources_title_01: Code.org பிராந்திய பங்குதாரர்
+  self_paced_pl_resources_desc_01: உங்கள் பகுதியில் என்ன நடக்கிறது என்பதை அறிய, உங்கள்
+    Code.org பிராந்திய கூட்டாளருடன் இணைக்கவும். உங்கள் உள்ளூர் Code.org பிராந்தியக்
+    கூட்டாளர், ஆசிரியர்களுக்கு, பயிற்சியாளர் தலைமையிலான பட்டறைகளை வழங்குகிறது, மேலும்
+    உங்கள் பள்ளி அல்லது மாவட்டத்தை செயல்படுத்துதல், சான்றிதழ் வழங்குதல், நிதியளித்தல்
+    மற்றும் பலவற்றில் வழிகாட்ட உதவலாம்.
+  self_paced_pl_resources_title_02: கணினி அறிவியல் ஆசிரியர்கள் சங்கம்
+  self_paced_pl_resources_desc_02: உலகின் மிகப்பெரிய கணினி அறிவியல் துறையில் சேருங்கள்!
+    உலகெங்கிலும் உள்ள 19,000 CS ஆசிரியர்களுடன் இணைந்திருங்கள், உங்கள் உள்ளூர் சமூகத்தில்
+    பலத்தைக் கண்டறியவும் மற்றும் பிற CS ஆசிரியர்களிடமிருந்து ஆதரவைப் பெறவும்.
+  self_paced_pl_resources_title_03: 'அமேசான் எதிர்கால பொறியாளர் '
+  self_paced_pl_resources_desc_03: Code.org, அமேசான் ஃபியூச்சர் இன்ஜினியர் உடன் கூட்டுசேர்ந்து,
+    பின்தங்கிய பள்ளிகளில் உள்ள ஆசிரியர்களுக்கு வளர்ந்து வரும் வளங்கள் மற்றும் பலன்களை
+    எந்தச் செலவும் இல்லாமல் வழங்குகிறது! உங்கள் பள்ளி தகுதியானதா என்பதைக் கண்டறியவும்.
   tenth_anniversary_homepage_blurb: " Code.org க்கு 10 வயதாகிறது "
   tenth_anniversary_homepage_link: 'நாங்கள் ஏற்படுத்திய தாக்கத்தைப் பாருங்கள். '
-  tenth_anniversary_top_heading: Code.org celebrates 10 years!
-  tenth_anniversary_top_desc: We're celebrating a decade of empowering students to
-    explore computer science.
-  tenth_anniversary_timeline_heading: A decade of milestones
+  tenth_anniversary_top_heading: Code.org 10 ஆண்டுகளைக் கொண்டாடுகிறது!
+  tenth_anniversary_top_desc: கணினி அறிவியலை ஆராய மாணவர்களை மேம்படுத்தும் ஒரு தசாப்தத்தை
+    நாங்கள் கொண்டாடுகிறோம்.
+  tenth_anniversary_timeline_heading: ஒரு தசாப்த கால மைல்கற்கள்
   tenth_anniversary_timeline_scroll: Scroll for more!
   tenth_anniversary_celebrate_heading: Celebrate with us
   tenth_anniversary_began_video_heading: See where it all began
@@ -491,8 +715,8 @@ ta:
     or CEOs of technology companies such as Uber, eBay, Intuit, and Dropbox, or inventing
     technologies such as LASIK surgery or JPEG compression, or in scientific, academic,
     or engineering roles around the globe.
-  farsi_page_global_desc_03: Finally, Code.org was founded by Iranian American Hadi
-    Partovi and has grown to become one of the largest education nonprofits globally.
+  farsi_page_global_desc_03: Finally, Code.org is led by Iranian American Hadi Partovi
+    and has grown to become one of the largest education nonprofits globally.
   farsi_timeline_heading: Our Projected Timeline
   farsi_timeline_stage_title_01: Stage 1
   farsi_timeline_stage_title_02: Stage 2
@@ -543,41 +767,450 @@ ta:
     student in every school has the opportunity to learn computer science.
   farsi_page_founders_heading: Our Founders' Story
   farsi_page_founders_slide_01: Born in Iran, Hadi and Ali Partovi grew up during
-    the Iran-Iraq war. Their neighborhood in Tehran was regularly bombed by Iraqi
-    fighter jets.
+    the Iran-Iraq war. Their neighborhood in Tehran was bombed by Iraqi fighter jets.
   farsi_page_founders_slide_02: When they were 9 years old, their father, a physics
-    professor, brought home a Commodore 64 computer. This computer was their escape
-    from their surroundings – they learned how to code and create apps, games, and
-    music.
+    professor, brought home a Commodore 64 computer from a trip abroad. This computer
+    was their escape from their surroundings – they learned how to code and create
+    apps, games, and music.
   farsi_page_founders_slide_03: They immigrated to the United States at age 11. Soon
     after they turned 15, they spent their summers working as software engineers to
     help pay their way through high school and college.
   farsi_page_founders_slide_04: Upon graduating from Harvard University with Masters
     degrees in computer science, Hadi and Ali pursued careers in technology.
-  farsi_page_founders_slide_05: They found success in the tech world and achieved
-    the “American dream.” They became prolific angel investors, backing Facebook,
-    Uber, Airbnb, and Dropbox, among others.
-  farsi_page_founders_slide_06: In 2013, Hadi and Ali launched the education nonprofit
-    Code.org, which Hadi continues to lead as CEO. Since its inception, Code.org has
-    started a massive movement to teach computer science and coding to K-12 students
-    globally. It is also the largest provider of computer  science curricula in the
-    world, with over 80 million student users in 180 countries.
-  farsi_page_support_heading: Your Support and Your Voice
-  farsi_page_support_heading_02: Thank you for your interest in Code.org in Farsi.
-  farsi_page_support_get_updates: "[Sign up](%{form_url}) to learn more about this
-    specific project and get updated on its staged release dates."
-  farsi_page_support_contact_us: If you'd like to support this initiative or learn
-    more, please [contact us](%{contact_link}) or donate below.
-  farsi_page_compliance_heading: Compliance In Support Of Farsi Translations
-  farsi_page_compliance_desc: As a U.S. nonprofit, Code.org is subject to laws regarding
-    sanctions with Iran. After consulting with U.S. legal counsel experienced in the
-    Iranian Sanctions and Translations Regulations (ITSR), Code.org believes that
-    it may fund, prepare, and distribute the Farsi Translations of CS Curriculum in
-    the United States and elsewhere around the world, including within Iran. The ITSR
-    provides an exemption for “information and informational materials” (the IIM Exemption)
-    and Code.org believes that this exemption will fully shield its funding, preparation,
-    and distribution of the Farsi Translations and thus enable its Farsi Translations
-    effort to proceed in full compliance with U.S. economic sanctions requirements.
+  farsi_page_founders_slide_05: அவர்கள் தொழில்நுட்பத் துறையில் வெற்றியை அடைந்தனர்
+    மற்றும் பல தொழில்நுட்ப வணிகங்களை நிறுவினர், அமெரிக்க கனவை நிறைவேற்றினர். கூடுதலாக,
+    அவர்கள் ஏராளமான ஏஞ்சல் முதலீட்டாளர்களாக ஆனார்கள், Facebook, Uber, Airbnb மற்றும்
+    Dropbox போன்ற நிறுவனங்களை ஆதரிக்கின்றனர்.
+  farsi_page_founders_slide_06: '2013 இல், ஹாடியும் அலியும் கல்வி இலாப நோக்கற்ற Code.org
+    ஐத் தொடங்கினர், இது ஹாடி தலைமை நிர்வாக அதிகாரியாகத் தொடர்கிறது. அதன் தொடக்கத்தில்
+    இருந்து, Code.org உலகளவில் K-12 மாணவர்களுக்கு கணினி அறிவியல் மற்றும் குறியீட்டு
+    முறையைக் கற்பிக்க ஒரு பெரிய இயக்கத்தைத் தொடங்கியுள்ளது. 180 நாடுகளில் 80 மில்லியனுக்கும்
+    அதிகமான மாணவர் பயனர்களைக் கொண்டு, உலகின் மிகப்பெரிய கணினி அறிவியல் பாடத்திட்டங்களை
+    வழங்கும் நிறுவனமாகவும் இது உள்ளது. '
+  farsi_page_support_heading: உங்கள் ஆதரவு மற்றும் உங்கள் குரல்
+  farsi_page_support_heading_02: 'பார்சியில் Code.org இல் உங்கள் ஆர்வத்திற்கு நன்றி. '
+  farsi_page_support_get_updates: "[பதிவு](%{form_url}) இந்தக் குறிப்பிட்ட திட்டத்தைப்
+    பற்றி மேலும் அறிந்துகொள்ளவும், அதன் ஸ்டேஜ் செய்யப்பட்ட வெளியீட்டுத் தேதிகளைப்
+    புதுப்பிக்கவும்."
+  farsi_page_support_contact_us: 'இந்த முயற்சியை ஆதரிக்க அல்லது மேலும் அறிய விரும்பினால்,
+    தயவுசெய்து [எங்களைத் தொடர்பு கொள்ளவும்](%{contact_link}) அல்லது கீழே நன்கொடை அளிக்கவும். '
+  farsi_page_compliance_heading: 'ஃபார்ஸி மொழிபெயர்ப்புகளின் ஆதரவில் இணக்கம் '
+  farsi_page_compliance_desc: அமெரிக்க இலாப நோக்கற்ற அமைப்பாக, Code.org ஈரானுடனான
+    தடைகள் தொடர்பான சட்டங்களுக்கு உட்பட்டது. ஈரானியத் தடைகள் மற்றும் மொழிபெயர்ப்பு
+    ஒழுங்குமுறைகளில் (ITSR) அனுபவம் வாய்ந்த அமெரிக்க சட்ட ஆலோசகருடன் கலந்தாலோசித்த
+    பிறகு, Code.org, அமெரிக்காவிலும் ஈரானுக்குள் உட்பட உலகின் பிற இடங்களிலும் CS பாடத்திட்டத்தின்
+    ஃபார்சி மொழிபெயர்ப்புகளுக்கு நிதியளித்து, தயாரித்து விநியோகிக்கலாம் என்று நம்புகிறது.
+    . ITSR ஆனது "தகவல் மற்றும் தகவல் பொருட்களுக்கு" (IIM விலக்கு) விலக்கு அளிக்கிறது
+    மற்றும் Code.org, இந்த விலக்கு, ஃபார்சி மொழிபெயர்ப்புகளின் நிதியுதவி, தயாரிப்பு
+    மற்றும் விநியோகத்தை முழுமையாக பாதுகாக்கும் என்று நம்புகிறது. அமெரிக்க பொருளாதார
+    தடைகள் தேவைகளுக்கு இணங்குதல்.
+  resources_tabs_heading: வழியின் ஒவ்வொரு அடியிலும் உங்களை ஆதரிக்கும் ஆதாரங்கள்
+  resources_tabs_desc: கணினி அறிவியலை நம்பிக்கையுடன் கற்பிக்க உதவும் உள்ளடக்கத்திற்கான
+    அணுகலைப் பெற [Cod.org கணக்கில் பதிவு செய்யவும்](%{sign_up_url}). Code.org கல்வியாளர்களுக்கு
+    ஆதரவாக வடிவமைக்கப்பட்ட விரிவான ஆதாரங்களைக் கொண்டுள்ளது, முன் CS கற்பித்தல் அனுபவம்
+    இல்லாதவர்களும் கூட.
+  resources_tabs_tab_label_lesson_plans: பாடத்திற்கான திட்டங்கள்
+  resources_tabs_tab_label_videos: காணொலிகள்
+  resources_tabs_tab_label_slides: 'ஸ்லைடுகள் '
+  resources_tabs_tab_label_assessments: மதிப்பீடு
+  resources_tabs_tab_label_tools: 'நிரலாக்க கருவிகள் '
+  resources_tabs_lesson_plans_subhead: 'பயனுள்ள கற்பித்தலுக்கான படிப்படியான வழிகாட்டுதல்,
+    கற்றல் நோக்கங்கள் மற்றும் மதிப்பீட்டு உத்திகளைப் பெறுங்கள். '
+  resources_tabs_lesson_plans_desc: உதவிகரமான ஆதாரங்களில் ஸ்லைடு தளங்கள், செயல்பாட்டு
+    வழிகாட்டிகள், ரூப்ரிக்ஸ் மற்றும் பல உள்ளன - அனைத்தும் ஒரே இடத்தில் ஒழுங்கமைக்கப்பட்டுள்ளன.
+    ஒவ்வொரு பாடத் திட்டமும் வகுப்பறைச் செயலாக்கம், வேறுபடுத்தும் யோசனைகள் மற்றும்
+    அனைத்து திறன்களைக் கொண்ட மாணவர்களைப் பூர்த்தி செய்வதற்கான நீட்டிப்பு நடவடிக்கைகளுக்கான
+    உதவிக்குறிப்புகளுடன் உள்ளது.
+  resources_tabs_videos_heading: அறிவுறுத்தல் வீடியோக்கள்
+  resources_tabs_videos_subhead: கணினி அறிவியல் மற்றும் நிரலாக்கக் கருத்துகளின் எளிதில்
+    புரிந்துகொள்ளக்கூடிய மேலோட்டங்களைப் பார்க்கவும்.
+  resources_tabs_videos_desc: Code.org வீடியோ தொடர்கள் உங்கள் வகுப்பறையை ஆதரிக்கும்
+    வகையில் வடிவமைக்கப்பட்டுள்ளன, மேலும் பார்ப்பதற்கு ஈர்க்கக்கூடியதாகவும் வேடிக்கையாகவும்
+    இருக்கும்.
+  resources_tabs_slides_heading: ஸ்லைடு அடுக்குகள்
+  resources_tabs_slides_subhead: 'கணினி அறிவியல் பாடங்களை வழங்க கல்வியாளர்களுக்கு
+    ஒழுங்கமைக்கப்பட்ட, பார்வைக்கு ஈடுபாடு மற்றும் கற்பித்தல் ரீதியாக சிறந்த கட்டமைப்பை
+    வழங்குகிறோம். '
+  resources_tabs_slides_desc: 'Code.org ஸ்லைடு தளங்கள் படிப்படியான வழிமுறைகள், எடுத்துக்காட்டுகள்
+    மற்றும் பாடத்திட்ட நோக்கங்களுடன் ஒத்துப்போகும் ஊடாடும் செயல்பாடுகளை வழங்குகின்றன. '
+  resources_tabs_assessments_subhead: எங்கள் பாடத்திட்டத்தில் விரிவான அமைப்பு மற்றும்
+    சுருக்க மதிப்பீட்டு வளங்கள் உள்ளன.
+  resources_tabs_assessments_desc: மாணவர்களின் வளர்ச்சியை அளவிடுதல், கருத்துக்களை
+    வழங்குதல் மற்றும் மாணவர்களின் புரிதலை மதிப்பீடு செய்தல் ஆகியவற்றில் ஆசிரியர்களுக்கு
+    ஆதரவாக வடிவமைக்கப்பட்டவை - இவை ரப்ரிக்ஸ், சரிபார்ப்பு பட்டியல்கள், சிறு திட்டங்கள்,
+    அத்தியாயத்தின் இறுதி திட்டங்கள், மாணவர் எதிர்கொள்ளும் ரூபிரிக்ஸ், மாதிரி திட்டங்கள்
+    மற்றும் பிந்தைய திட்ட சோதனைகள் ஆகியவை அடங்கும்.
+  resources_tabs_tools_subhead: Code.org ஒருங்கிணைந்த மேம்பாட்டு சூழல்கள் (IDEகள்)
+    அனைத்து திறன் நிலைகளையும் கொண்ட மாணவர்களைப் பூர்த்தி செய்கின்றன.
+  resources_tabs_tools_desc: பல்வேறு நிரலாக்க முன்னுதாரணங்களை ஆதரிக்கும் பல்துறை மற்றும்
+    பயனர் நட்பு தளத்தை நாங்கள் வழங்குகிறோம். இது, பிளாக் அடிப்படையிலான குறியீட்டு
+    முறையிலிருந்து உரை அடிப்படையிலான மொழிகளுக்கு தடையின்றி மாறுவதற்கு கற்பவர்களுக்கு
+    உதவுகிறது, மேலும் படைப்பாற்றல் மற்றும் புதுமைகளை வளர்க்கிறது.
+  teach_page_top_heading: 'கணினி அறிவியலைக் கற்றுக்கொடுங்கள் மற்றும் சாத்தியக்கூறுகளைத்
+    தூண்டவும் '
+  teach_page_top_desc_01: 'Code.org இன் இலவச கணினி அறிவியல் (CS) பாடத்திட்டத்தின்
+    மூலம் உங்கள் மாணவர்களின் முழு திறனையும் தட்டவும். '
+  teach_page_top_desc_02: '2 மில்லியனுக்கும் அதிகமான கல்வியாளர்களைக் கொண்ட உலகளாவிய
+    சமூகத்தில் சேருங்கள், அடுத்த தலைமுறை கண்டுபிடிப்பாளர்கள், சிக்கலைத் தீர்ப்பவர்கள்
+    மற்றும் டிஜிட்டல் குடிமக்கள் ஆகியோரை மேம்படுத்துங்கள்! Code.org ஆசிரியர்களுக்கு
+    தொழில்முறை கற்றல், விரிவான பாடத்திட்டங்கள் மற்றும் உங்களுக்குத் தேவைப்படும்போது
+    ஆதரவளிக்கிறது. '
+  teach_page_why_teach_cs_heading: Code.org உடன் கணினி அறிவியலை ஏன் கற்பிக்க வேண்டும்?
+  teach_page_why_teach_cs_block_heading_01: அடிப்படை CS திறன்களை உருவாக்குங்கள்
+  teach_page_why_teach_cs_block_desc_01: வாசிப்பு, எழுதுதல் அல்லது கணிதம் போன்றே,
+    கணினி அறிவியலும் பிற நோக்கங்களுக்கு அடித்தளமாக உள்ளது. இது சிக்கலைத் தீர்ப்பது
+    மற்றும் விமர்சன சிந்தனையைக் கற்பிக்கிறது, மேலும் டிஜிட்டல் சமூகத்தில் மாணவர்கள்
+    தீவிரமாக பங்கேற்க உதவுகிறது.
+  teach_page_why_teach_cs_block_heading_02: 'விரிவான கற்பித்தல் வளங்களைப் பயன்படுத்துங்கள் '
+  teach_page_why_teach_cs_block_desc_02: ஆழமான பாடத் திட்டங்கள் மற்றும் நெகிழ்வான
+    தொழில்முறை கற்றல் விருப்பங்கள் பல்வேறு பின்னணிகளைக் கொண்ட ஆசிரியர்கள் கணினி அறிவியலை
+    வெற்றிகரமாகக் கற்பிக்க முடியும் என்பதை உறுதி செய்கிறது.
+  teach_page_why_teach_cs_block_heading_03: அனைத்து மாணவர்களுக்கும் பாதைகளைத் திறக்கவும்
+  teach_page_why_teach_cs_block_desc_03: U.S. இல் உள்ள அனைத்து புதிய ஊதியங்களிலும்
+    கம்ப்யூட்டிங் தொழில்கள் மிகப்பெரிய, வேகமாக வளரும் மற்றும் சிறந்த ஊதியம் பெறும்
+    துறையாகும்.
+  teach_page_why_teach_cs_block_heading_04: AI ஆல் மாற்றப்பட்ட உலகத்தைப் புரிந்து
+    கொள்ளுங்கள்
+  teach_page_why_teach_cs_block_desc_04: AI எவ்வாறு செயல்படுகிறது மற்றும் அதை எவ்வாறு
+    பாதுகாப்பாகப் பயன்படுத்துவது என்பதை மாணவர்களுக்குக் கற்பிக்கவும். வளர்ந்து வரும்
+    இந்த தொழில்நுட்பத்தின் மூலம் எங்கள் தொழில்முறை கற்றல் ஆர்வத்தையும் நம்பிக்கையையும்
+    ஊக்குவிக்கிறது.
+  teach_page_why_teach_cs_heading_02: இன்றே Code.org மூலம் கணினி அறிவியலைக் கற்பிக்கத்
+    தொடங்குங்கள்!
+  teach_page_quote: நீங்கள் Code.org இன் பாடத்திட்டத்தைப் பயன்படுத்தும்போது, உங்களுக்கான
+    அனைத்தும் உங்களிடம் இருக்கும். உங்கள் மாணவர்களிடம் கேட்க வேண்டிய கேள்விகள் இதில்
+    உள்ளன. நீங்கள் கற்பிக்க வேண்டிய பாடங்கள் இதில் உள்ளன, மேலும் அதை எவ்வாறு செய்வது
+    என்பது குறித்த வழிகாட்டுதலை இது வழங்குகிறது. எனவே நீங்கள் கணினி அறிவியலில் எந்த
+    அனுபவமும் இல்லாமல் வந்தால், அது உங்களுக்கு இருக்கிறது. கணினி அறிவியலில் உங்களுக்கு
+    முன்பே கற்பித்தல் அனுபவம் இருந்தால், உங்கள் மாணவர்களுக்கு எவ்வாறு கற்பிக்க வேண்டும்
+    என்பதை அணுகுவதற்கான புதிய வழியை இது உங்களுக்கு வழங்கும்.
+  teach_page_free_curriculum_heading: 'இலவச, ஈர்க்கக்கூடிய பாடத்திட்டம் '
+  teach_page_free_curriculum_desc: செலவைப் பற்றி கவலைப்படாமல் உங்கள் பள்ளிக்கு கணினி
+    அறிவியலைக் கொண்டு வர வேண்டும் என்று நாங்கள் விரும்புகிறோம். அதனால்தான் எங்கள்
+    பாடத்திட்ட சலுகைகள் என்றென்றும் இலவசம் என்று நாங்கள் உறுதியளித்துள்ளோம்!
+  teach_page_free_curriculum_list_heading_01: ஒவ்வொரு தர நிலைக்கும் ஈடுபாடு கொண்ட
+    பாடத்திட்டம்
+  teach_page_free_curriculum_list_desc_01: 67 க்கும் மேற்பட்ட மொழிகளில் சலுகைகளுடன்
+    இலவச, நெகிழ்வான மற்றும் வேடிக்கையான பாடத்திட்டம்.
+  teach_page_free_curriculum_list_heading_02: மாற்றியமைக்கக்கூடிய, புதுமையான பாடத்திட்டம்
+  teach_page_free_curriculum_list_desc_02: Code.org ஆனது முழு ஆண்டு பாடத்திட்டங்கள்
+    முதல் ஒற்றை அலகு செயல்பாடுகள் வரை அனைத்தையும் வழங்குகிறது. மேலும், சிறந்த நடைமுறைகள்
+    மற்றும் கவனம் செலுத்தும் பகுதிகளை ஆதரிப்பதற்காக எங்கள் பாடத்திட்டங்களை ஆண்டுதோறும்
+    புதுப்பித்து, தற்போதைய தேவைக்கேற்ப தலைப்புகளை கற்பிக்கும் புதிய சலுகைகளை உருவாக்குகிறோம்.
+  teach_page_free_curriculum_list_heading_03: கட்டமைக்கப்பட்ட பாடத்திட்டம் தேசிய தரத்திற்கு
+    மாற்றப்பட்டது
+  teach_page_free_curriculum_list_desc_03: ஒவ்வொரு பாடத்திட்டமும் CSTA, அடுத்த தலைமுறை
+    அறிவியல் தரநிலைகள் மற்றும் பொதுவான கோர் உட்பட குறைந்தது ஒரு தேசிய தரநிலைகளுக்கு
+    வரைபடமாக்கப்பட்டுள்ளது.
+  teach_page_free_curriculum_heading_02: 'வெவ்வேறு தர நிலைகளுக்கான எங்கள் பாடத்திட்ட
+    சலுகைகளை ஆராயுங்கள்:'
+  teach_page_resources_heading: வழியின் ஒவ்வொரு அடியிலும் உங்களை ஆதரிக்கும் ஆதாரங்கள்
+  teach_page_resources_desc: Code.org கணக்கில் பதிவுசெய்தால், கணினி அறிவியலை நம்பிக்கையுடன்
+    கற்பிக்க உதவும் பொருட்களை அணுகலாம். Code.org கல்வியாளர்களுக்கு ஆதரவாக வடிவமைக்கப்பட்ட
+    விரிவான ஆதாரங்களைக் கொண்டுள்ளது, முன் CS கற்பித்தல் அனுபவம் இல்லாதவர்களும் கூட.
+    ஆதாரங்களைப் பற்றி மேலும் அறிய கிளிக் செய்யவும்.
+  teach_page_curriculum_heading: மாணவர்கள் விரும்பும் பாடத்திட்டங்கள்
+  teach_page_curriculum_desc: ஆராய்வதற்கு பல அற்புதமான சலுகைகள் உள்ளன. எங்களின் புதிய
+    மற்றும் பிரபலமான சலுகைகளில் சில இங்கே உள்ளன.
+  teach_page_pl_offerings_english_header: Professional learning offerings that meet
+    your needs
+  teach_page_pl_offerings_intl_header: தொழில்முறை கற்றல் சலுகைகளை ஆராயுங்கள்
+  teach_page_pl_offerings_list_heading_self_paced: சுய-வேக ஆன்லைன் தொகுதிகள்
+  teach_page_pl_offerings_list_desc_self_paced: இந்த தொகுதிகள் உங்கள் தேவைகள் மற்றும்
+    கற்பித்தல் சூழலுக்கு மிக முக்கியமான பகுதிகளில் கவனம் செலுத்தும் போது உங்கள் சொந்த
+    வேகத்திலும் உங்கள் நேரத்திலும் ஈடுபட உங்களை அனுமதிக்கின்றன.
+  teach_page_pl_offerings_list_heading_workshops_facilitator_led: Facilitator-led
+    Workshops
+  teach_page_pl_offerings_list_heading_workshops: பட்டறைகள்
+  teach_page_pl_offerings_list_desc_workshops_en: With our Regional Partners as hosts
+    and our Code.org facilitators as guides, our workshops around the country focus
+    on reflection, discussion, and growth-oriented learning.
+  teach_page_pl_offerings_list_desc_workshops_intl: அனைத்து மாணவர்களுக்கும் கணினி
+    அறிவியலைக் கொண்டு வருவதற்கு உலகெங்கிலும் உள்ள நிறுவனங்களுடன் நாங்கள் கூட்டு சேர்ந்துள்ளோம்.
+    உங்கள் நாட்டில் உள்ள ஆசிரியர்களுக்கு என்ன தொழில்முறை கற்றல் வாய்ப்புகள் கிடைக்கலாம்
+    என்பதைப் பற்றி மேலும் அறிக.
+  teach_page_pl_offerings_list_heading_forums: ஆசிரியர் சமூகம்
+  teach_page_pl_offerings_list_desc_forums: ஆசிரியர்கள் கேள்விகளைக் கேட்கவும் சிறந்த
+    நடைமுறைகள், எண்ணங்கள், யோசனைகள் மற்றும் உத்வேகத்தைப் பகிர்ந்து கொள்ளவும் ஒரு மன்றம்.
+    உலகெங்கிலும் உள்ள வகுப்பறைகளில் கணினி அறிவியலைக் கொண்டு வரும் அற்புதமான கல்வியாளர்களின்
+    சமூகத்தில் சேரவும்!
+  teach_page_additional_materials_heading: கூடுதல் ஆதரவுகள் மற்றும் பொருட்கள்
+  teach_page_additional_materials_desc: பாடத்திட்டம் மற்றும் தொழில்முறை கற்றலுக்கு
+    அப்பால் உங்கள் வகுப்பறையை ஆதரிக்க எங்களிடம் பல பொருட்கள் உள்ளன.
+  teach_page_additional_materials_list_heading_01: தொழில் கல்வி
+  teach_page_additional_materials_list_desc_01: நிஜ-உலக இணைப்புகளை ஒளிரச் செய்வதற்கும்,
+    வெவ்வேறு தொழில் வழிகளை ஆராய மாணவர்களுக்கு வாய்ப்புகளை வழங்குவதற்கும் எளிதாகப்
+    பயன்படுத்தக்கூடிய ஆதாரங்கள் வடிவமைக்கப்பட்டுள்ளன.
+  teach_page_additional_materials_list_heading_02: வீடியோ நூலகம்
+  teach_page_additional_materials_list_desc_02: உலகெங்கிலும் உள்ள கல்வியாளர்கள், ஆன்லைனில்
+    அல்லது வகுப்பறைகளில் பயன்படுத்த கல்வி சார்ந்த வீடியோக்களின் வளர்ந்து வரும் நூலகத்தை
+    நாங்கள் வழங்குகிறோம். எங்கள் சொந்த பாடத்திட்டத்தின் எல்லைக்கு அப்பால் எங்கள் முயற்சிகளை
+    விரிவுபடுத்துவதே எங்கள் குறிக்கோள்.
+  teach_page_additional_materials_list_heading_03: வகுப்பறை சுவரொட்டிகள்
+  teach_page_additional_materials_list_desc_03: உங்கள் பள்ளியில் தொங்கவிடப்பட்ட பல்வேறு
+    முன்மாதிரிகளின் இந்த சுவரொட்டிகளை அச்சிட்டு, உங்கள் மாணவர்களை கணினி அறிவியலை முயற்சி
+    செய்ய ஊக்குவிக்கவும்.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
+  csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
+  csp_page_intro_list_01: Culturally responsive pedagogy
+  csp_page_intro_list_02: Real-world problem investigation
+  csp_page_intro_list_03: Explainer videos with diverse presenters
+  csp_page_intro_list_04: Open-ended projects for more personalized learning
+  csp_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
+    Animation
+  csp_page_curriculum_glance_devices: Laptop, Chromebook
+  csp_page_curriculum_glance_tools: App Lab
+  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
+    Modules
+  csp_page_curriculum_glance_professional_languages: English
+  csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
+    Closed captioning, Immersive reader
+  csp_page_quote: Can I just say I LOVE Code.org? It's my first year teaching AP CS
+    Principles (actually 1st year it is offered at our school) - and both the kids
+    and I are having a blast.
+  csp_page_projects_build_apps: Using the JavaScript language, students learn about
+    algorithms and program design as they create a series of real working, shareable
+    apps with App Lab.
+  csp_page_projects_widgets: Students get hands-on experience with concepts like binary
+    and pixels, text compression, cryptography, encoding and transmitting data through
+    computational widgets, which are directly integrated into the Code.org platform.
+  csp_page_projects_choice_levels: Students are offered the choice between a variety
+    of tasks that reinforce course objectives while allowing for differentiation and
+    customization, meeting students where they are at and encouraging them to go further.
+  csp_page_faq_question_01: Is CS Principles mapped to standards?
+  csp_page_faq_answer_01: CS Principles was written using the AP CS Principles Framework
+    and prepares students for the AP CS Principles exam. The curriculum has also been
+    aligned to the newly revised 2017 CSTA standards. [A summary of standards mappings
+    can be found here](%{standards_url}). A google sheet version of the standards
+    can be found at [CSP Standards](%{csp_standards_url}).
+  csp_page_faq_question_02: How much does it cost to teach CS Principles?
+  csp_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
+    for anyone, anywhere, to teach!
+  csp_page_faq_question_03: How/Where can I get professional development for CS Principles?
+  csp_page_faq_answer_03_01: Our Professional Learning Program offers year-round support.
+    The program kicks off with a 5-day summer workshop where you'll have an opportunity
+    to work hands-on with the curriculum and meet other teachers from your area. Throughout
+    the year, we offer forum support and follow-up workshops. You don't need any prior
+    computer science experience to get started. And teachers love it! 90% rank it
+    the best professional development ever. [Click here to apply and learn more](%{pl_url}).
+  csp_page_faq_answer_03_02: Have questions about professional development? [Provide
+    your contact information to a Regional Partner in your area](%{regional_partner_url}).
+  csp_page_faq_question_04: What is the recommended timing for teaching CS Principles?
+  csp_page_faq_answer_04_01: We recommend that CS Principles be taught as a full year
+    class, assuming that you meet with students daily or nearly daily for 45 or more
+    minutes.
+  csp_page_faq_answer_04_02: It is possible to teach CS Principles on a semester block
+    schedule, though we highly recommend this implementation only be used in the fall
+    semester. Since the AP Performance Tasks are due in late April and require 20
+    dedicated hours of class time to complete, most schools find there is not enough
+    time to complete the course on a block schedule in the spring.
+  csp_page_faq_question_05: What materials do I need for CS Principles?
+  csp_page_faq_answer_05_01: CS Principles requires that students have access to computers
+    with a modern web browser. At this time, our courses are not optimized for tablets
+    or mobile devices. For more details, [check out Code.org's technology requirements](%{it_url}).
+  csp_page_faq_answer_05_02: 'Many lessons have handouts that are designed to guide
+    students through activities. While these handouts are not required, we highly
+    recommend their use. In addition to handouts, several lessons call for specific
+    items. You can find these listed below as well as our suggestions for alternatives:'
+  csp_page_faq_answer_05_02_list_01: 'Unit 1, Lesson 2: Assortment of craft materials
+    for constructing physical devices. Recommendations: cups, string/yarn, construction
+    paper, flashlights, slinkies, noise makers, markers, and glue, etc. Alternative:
+    none.'
+  csp_page_faq_answer_05_02_list_02: 'Unit 2, Lesson 2: String for table groups to
+    build a network connecting them. Alternative: Students draw their network but
+    don''t actually build it.'
+  csp_page_faq_answer_05_02_list_03: 'Unit 3, Lesson 5: A handful of LEGO® blocks
+    for every pair of students. Alternative: Sticky notes, construction paper.'
+  csp_page_faq_answer_05_02_list_04: 'Unit 4, Lessons 1 & 5: Plastic bags, sticky
+    notes, dry erase markers. Alternative: Envelopes.'
+  csp_page_faq_answer_05_02_list_05: 'Unit 5, Lesson 1: Plastic bags, gallon-sized
+    plastic bags, sticky notes, dry erase markers, tape. Alternative: Envelopes.'
+  csp_page_faq_answer_05_02_list_06: 'Unit 6, Lessons 2 & 3: Sticky notes. Alternative:
+    Scraps of paper.'
+  csp_page_faq_answer_05_02_list_07: 'Unit 6, Lesson 4: Decks of cards. Alternative:
+    Any item that could be combined into two categories (e.g. change with even / odd
+    year).'
+  csp_page_faq_answer_05_02_list_08: 'Unit 7, Lessons 1 & 5: Sticky notes, envelopes,
+    plastic bags, file folders. Alternative: Scraps of paper, folders made of a folded
+    sheet of paper, etc.'
+  csp_page_faq_answer_05_03: The following supplies are completely optional but will
+    be useful to have on hand for various lessons.
+  csp_page_faq_answer_05_03_list_01: Graph paper
+  csp_page_faq_answer_05_03_list_02: Chart paper
+  csp_page_faq_answer_05_03_list_03: Markers
+  csp_page_faq_answer_05_03_list_04: Post-it notes
+  csp_page_faq_question_06: How can I access answer keys?
+  csp_page_faq_answer_06_01: With an approved teacher account, you can find answer
+    keys in a blue "Teacher Only" panel that shows in the online lessons and activities.
+  csp_page_faq_answer_06_02: Teachers in our Professional Learning Program will automatically
+    be approved to view answer keys. If you need an approved teacher account, you
+    can apply for access to protected teacher-only materials (answer keys, etc) through
+    [this form](%{form_url}). Please keep in mind that it may take 3-5 business days
+    to verify your account.
+  csp_page_faq_question_07: How was the curriculum developed?
+  csp_page_faq_answer_07_01: Our CS Principles curriculum has always been designed
+    as part of a broader vision of supporting high quality, engaging, and equitable
+    computer science instruction in classrooms across the country. Our [Curriculum
+    Values](%{curriculum_url}) continue to guide us, and in particular our focus on
+    expanding access to those who historically have been denied opportunities to learn
+    about the exciting and impactful field of computing. While our vision and values
+    remain unchanged, the landscape of CS education is rapidly developing.
+  csp_page_faq_answer_07_02: For the 2020-21 school year the College Board has made
+    some significant updates to the CS Principles framework and AP assessment to ensure
+    that CS Principles remains relevant and aligned with equivalent university courses.
+    CS education research continues to reveal new insights on how students learn about
+    computing, and feedback from the thousands of classrooms now using our CS Principles
+    curriculum has identified opportunities to further improve our courses, tools,
+    and recommended pedagogy.
+  csp_page_faq_answer_07_03: The goal of the updates to our curriculum is to navigate
+    these developments in a way that remains committed to our vision and values and
+    supports the many teachers, schools, classrooms, and districts that are already
+    a part of our broader CS Principles community. We remain deeply thankful for you
+    joining us on this mission to make our collective vision a reality.
+  csp_page_faq_answer_07_04: For more information about our goals and approach to
+    our courses, please see our [Curriculum Values](%{curriculum_url}) and our [Professional
+    Learning Values](%{pl_url}).
+  csd_page_top_desc: Code.org's most flexible course, allowing each unit to be taught
+    alone, combined into collections that focus on specific areas, or as a full year
+    course. The free curriculum introduces students to building their own websites,
+    apps, animations, games, and physical computing systems.
+  csd_page_intro_heading: Flexible curriculum to meet your needs
+  csd_page_intro_list_01: Flexible introductory curriculum
+  csd_page_intro_list_02: Breadth of topics
+  csd_page_intro_list_03: No prior experience needed
+  csd_page_intro_list_04: Build many different types of projects
+  csd_page_intro_list_05: Exciting and fun
+  csd_page_quote: This curriculum is all inclusive, well organized, and student centered!
+    The incredible organization in the curriculum is what makes me use it year after
+    year.
+  csd_page_curriculum_glance_topics: Artificial Intelligence, Data, Web Design, Physical
+    Computing, App Design, Games and Animations, Art and Design, Programming
+  csd_page_curriculum_glance_devices: Laptop, Chromebook
+  csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
+  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
+    Modules
+  csd_page_curriculum_glance_professional_languages: English
+  csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
+    Closed captioning, Immersive reader
+  csd_page_pick_a_course_heading: Picking the right CS Discoveries course for your
+    classroom
+  csd_page_pick_a_course_desc: With the diverse set of options offered for CS Discoveries,
+    there is a course for all different needs.
+  csd_page_pick_a_course_heading_02: How do you want to pick the content?
+  csd_page_courses_year_desc: Through 7 units students explore a wide variety of topics.
+  csd_page_courses_year_action_block_desc: 'An introductory computer science course
+    that empowers students to create authentic artifacts and engage with computer
+    science as a medium for creativity, communication, problem solving, and fun. '
+  csd_page_courses_flexible_units_desc: Each unit of CS Discoveries can be used on
+    its own with no prior experience required, which allows you to pick the exact
+    units that work for your classroom.
+  csd_page_courses_collections_desc: Dive deeper into one area with a set of units
+    focused on a specific topic.
+  csd_page_faq_question_01: Is CS Discoveries mapped to standards?
+  csd_page_faq_answer_01: CS Discoveries was written using both the K-12 Framework
+    for Computer Science and the 2017 CSTA standards as guidance. Currently, every
+    lesson in CS Discoveries contains mappings to the relevant 2017 CSTA standards.
+    [A summary of standards mappings can be found here](%{mappings_url}). A Google
+    Sheets version of the standards can be found at [CSD Standards](%{csd_standards_url}).
+  csd_page_faq_question_02: How/Where can I get professional development for this
+    course?
+  csd_page_faq_answer_02: Our Professional Learning Program offers year-round support.
+    The program kicks off with a five-day summer workshop where you'll have an opportunity
+    to work hands-on with the curriculum and meet other teachers from your area. Throughout
+    the year, we offer follow up workshops and forum support. You don't need any prior
+    computer science experience to get started. And teachers love it! 90% rank it
+    the best professional development ever. [Click here to apply and learn more](%{apply_url}).
+  csd_page_faq_question_03: I'm teaching CS Discoveries but have less than one semester
+    with my students. What would you recommend?
+  csd_page_faq_answer_03_01: Teachers who have a restricted schedule, unable to teach
+    all units of CS Discoveries over the course of a school year, can now easily assign
+    a specific set of CS Discoveries units based on what they want to focus on. These
+    collections are still the same exact units found in CS Discoveries, simply grouped
+    together based on our recommendations below to dive deep in a specific area of
+    CS Discoveries. Each collection is approximately one semester or slightly less
+    than one semester. [Click here to see our Collections options](%{collections_url}).
+  csd_page_faq_answer_03_02: For teachers who have an even more restricted schedule,
+    they have the ability to assign just one unit at a time from CS Discoveries without
+    assigning the entire course. We hope this helps support classrooms that teach
+    units of CS Discoveries embedded as part of larger courses or when teaching computer
+    science on a limited schedule. [Click here to see our flexible units](%).
+  csd_page_faq_question_04: What materials and supplies are required for CS Discoveries?
+  csd_page_faq_answer_04_01: One potential cost to consider when teaching this course
+    is printing. Many lessons have handouts that are designed to guide students through
+    activities. While it is not required that all of these handouts be printed, many
+    were designed to be printed and we highly recommend printing when possible.
+  csd_page_faq_answer_04_02: 'Beyond printing, some lessons call for typical classroom
+    supplies and manipulatives such as: Student journals, poster paper, markers/colored
+    pencils, scissors, scrap paper, glue or tape, post-it notes or index cards (or
+    similar sized scrap paper), and rulers or a straight edge of some kind.'
+  csd_page_faq_answer_04_03: 'In addition to those general course materials, the following
+    items are called for in specific units:'
+  csd_page_faq_answer_04_04: Problem Solving and Computing
+  csd_page_faq_answer_04_05: Aluminum foil, container for water, pennies (note that
+    pennies can be replaced with some other kind of weight of the same size). Alternate
+    activities are available if you do not have access to these supplies.
+  csd_page_faq_answer_04_06: Creating Apps with Devices (Option A and Option B)
+  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
+    out [code.org/maker/circuitplayground](%{url}) for more details.'
+  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
+    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_09: Maker supplies, such as empty tissue boxes or cardboard
+    rolls or scratch paper
+  csd_page_faq_answer_04_10: "*Note: The Creating Apps with Devices unit has two implementation
+    options - one for those using circuit playgrounds and one for those using micro:bit.
+    Teachers should not buy both sets of devices or teach both unit options as they
+    are equivalent and cover the same content."
+  csd_page_faq_question_06: How does CS Discoveries fit with the other Code.org courses?
+  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
+    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
+    While each of these courses is designed to be an age-appropriate entry point to
+    computer science, students with previous experience will find many new topics
+    to explore, and they will revisit familiar topics in novel and more challenging
+    contexts.
+  csc_page_top_desc: Make connections between computer science (CS) and other subjects
+    like math, language arts, science, and social studies.
+  csc_page_intro_heading: Teach CS while covering core subject standards
+  csc_page_intro_list_01: Incorporate CS into other subjects
+  csc_page_intro_list_02: Reinforce learning in other subjects
+  csc_page_intro_list_03: Meet core subject standards
+  csc_page_intro_list_04: Fun way to teach students about computer science
+  csc_page_intro_list_05: Open-ended projects for more personalized learning
+  csc_page_intro_list_06: Easy for any teacher with any background
+  csc_page_curriculum_glance_topics: Interdisciplinary
+  csc_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
+  csc_page_curriculum_glance_tools: Sprite Lab
+  csc_page_curriculum_glance_professional_learning: Self-paced Modules
+  csc_page_curriculum_glance_professional_languages: English
+  csc_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
+    Closed captioning, Immersive reader
+  csc_page_quote: I loved the engagement [my students had with the module] and the
+    opportunities for choice and creativity. I loved hearing a student say, 'This
+    helped me see what we had been reading about in science.'
+  csc_page_find_a_module_desc: Our current CS Connections offerings are for 3rd to
+    5th grade classrooms and are designed to take 1 week of 45-minute lessons each
+    day.
+  csc_page_faq_question_01: Is CS Connections mapped to standards?
+  csc_page_faq_answer_01: Yes! CS Connections is mapped to the Common Core State Standards
+    (CCSS) for ELA and Math, the Next Generation Science Standards (NGSS), and the
+    Computer Science Teacher Association Standards (CSTA).
+  csc_page_faq_question_02: How much does it cost to teach CS Connections?
+  csc_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
+    for anyone, anywhere, to teach!
+  csc_page_faq_question_03: How/Where can I get professional development for CS Connections?
+  csc_page_faq_answer_03: We offer self-paced professional development for CS Connections.
+    Through reading, viewing videos, completing interactive puzzles, and reflecting
+    on your learning, you will develop your own understanding while preparing to teach
+    any of the CS Connections modules in your classroom. [Get started here](%{get_started_url}).
+  csc_page_faq_answer_03_coming_soon: Professional learning for CS Connections is
+    coming soon!
+  csc_page_faq_question_04: What is the recommended timing for teaching CS Connections?
+  csc_page_faq_answer_04: Each CS Connections module is designed to take a week.
+  csc_page_faq_question_05: What materials do I need for CS Connections?
+  csc_page_faq_answer_05: Ideally, each student will have their own computer and teachers
+    will have a projector to display the slideshow that corresponds with each lesson.
   hoc_live: கோட் லைவ் நேரம்
   hoc_live_sign_up_title: மணிநேர நேரத்திற்கு பதிவுபெறுக
   hoc_live_learn_title: மணிநேர குறியீட்டைக் கற்றுக்கொள்ளுங்கள்

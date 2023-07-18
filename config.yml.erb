@@ -315,6 +315,9 @@ discourse_sso_secret:
 
 ### Application configuration defaults
 
+# Installs bin/i18n dependencies
+build_i18n: true
+
 i18n_backend:
 cache:
 app_servers: {}
@@ -384,7 +387,7 @@ dashboard_secret_key_base: !Secret
 dashboard_host: 0.0.0.0
 dashboard_port: 3000
 dashboard_workers: 8
-dashboard_unicorn_name: dashboard
+dashboard_web_server_name: dashboard
 dashboard_sock:
 
 # Causes dashboard-server to run pegasus as middleware, starting both in a
@@ -396,7 +399,7 @@ override_pegasus:
 pegasus_host:
 pegasus_sock:
 pegasus_port: 3000
-pegasus_unicorn_name: pegasus
+pegasus_web_server_name: pegasus
 pegasus_workers: 8
 sinatra_session_secret:
 
@@ -443,7 +446,7 @@ stub_school_data: false
 
 disable_s3_image_uploads: false
 
-channels_api_secret: <%=poste_secret%>
+channels_api_secret: !Secret
 
 # Whether to prefix bundler commands with 'sudo'.
 # It may be useful to set this false when doing local development on Linux.
@@ -511,11 +514,9 @@ redshift_password:
 
 devinternal_db_writer: !Secret
 
-# Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
-db_cluster_id: !StackSecret
-db_proxy_reporting_endpoint: !StackSecret
-db_writer_endpoint: !StackSecret
-# FOLLOW ON: Transition from the above naming convention to the `db_endpoint_[type]` convention below.
+# Temporarily set in locals.yml until Stack Secrets are ready to deploy.
+db_cluster_id:
+
 db_endpoint_writer: PLACEHOLDER
 db_endpoint_proxy_writer: PLACEHOLDER
 db_endpoint_proxy_reader: PLACEHOLDER
@@ -523,13 +524,13 @@ db_endpoint_proxy_reporting: PLACEHOLDER
 
 # Database credentials (username & password) are stored in an AWS Secret in a JSON format required by RDS Proxy:
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy-setup.html#rds-proxy-secrets-arns
-db_credential_admin: !StackSecret
+db_credential_admin: {"username":"PLACEHOLDER", "password":"PLACEHOLDER"}
 db_admin_user: master
 db_admin_password: !Secret
-db_credential_writer: !StackSecret
+db_credential_writer: {"username":"PLACEHOLDER", "password":"PLACEHOLDER"}
 db_writer_user: application-writer
 db_writer_password: !Secret
-db_credential_reader: !StackSecret
+db_credential_reader: {"username":"PLACEHOLDER", "password":"PLACEHOLDER"}
 db_reader_user: readonly
 db_reader_password: !Secret
 

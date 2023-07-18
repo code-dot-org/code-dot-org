@@ -2,11 +2,6 @@
   "ko-KR": {
     "data": {
       "function_definitions": {
-        "2-3 Artist 11": {
-          "x": {
-            "name": "x"
-          }
-        },
         "2-3 Artist 12": {
           "details": {
             "name": "세부 사항"
@@ -981,9 +976,6 @@
         },
         "courseC_artist_prog3": {
           "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
             "name": "불꽃 그리기"
           },
           "draw fire": {
@@ -992,9 +984,6 @@
         },
         "courseC_artist_prog3_2018": {
           "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
             "name": "불꽃 그리기"
           },
           "draw fire": {
@@ -1003,9 +992,6 @@
         },
         "courseC_artist_prog3_2019": {
           "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
             "name": "불꽃 그리기"
           },
           "draw fire": {
@@ -1014,9 +1000,6 @@
         },
         "courseC_artist_prog3_2020": {
           "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
             "name": "불꽃 그리기"
           },
           "draw fire": {
@@ -2613,10 +2596,7 @@
         },
         "courseC_artist_prog3_2021": {
           "draw flame": {
-            "name": "불꽃 그리기",
-            "parameters": {
-              "x": "x"
-            }
+            "name": "불꽃 그리기"
           },
           "draw fire": {
             "name": "불 그리기"

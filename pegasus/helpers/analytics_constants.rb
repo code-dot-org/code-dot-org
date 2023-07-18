@@ -9,6 +9,7 @@ module AnalyticsConstants
     CSC_CURRICULUM_PAGE_VISITED_EVENT = 'CSC Curriculum Page Visited'.freeze,
     CSD_CURRICULUM_PAGE_VISITED_EVENT = 'CSD Curriculum Page Visited'.freeze,
     CSF_CURRICULUM_PAGE_VISITED_EVENT = 'CSF Curriculum Page Visited'.freeze,
+    CSF_UNPLUGGED_PAGE_VISITED_EVENT = 'CSF Unplugged Page Visited'.freeze,
     CSP_CURRICULUM_PAGE_VISITED_EVENT = 'CSP Curriculum Page Visited'.freeze,
     PHYSICAL_COMPUTING_PAGE_VISITED_EVENT = 'Physical Computing Page Visited'.freeze,
     ELEMENTARY_CURRICULUM_PAGE_VISITED_EVENT =
@@ -23,6 +24,8 @@ module AnalyticsConstants
       'Middle And High School Professional Learning Page Visited'.freeze,
     PICK_PL_PAGE_VISITED_EVENT = 'Pick Your Professional Learning Page Visited'.freeze,
     SELF_PACED_PL_PAGE_VISITED_EVENT = 'Self-Paced Professional Learning Page Visited'.freeze,
-    RP_LANDING_PAGE_VISITED_EVENT = 'Regional Partner Landing Page Visited'.freeze
+    RP_LANDING_PAGE_VISITED_EVENT = 'Regional Partner Landing Page Visited'.freeze,
+    TEACH_PAGE_VISITED_EVENT = 'Teach Page Visited'.freeze,
+    TEACHER_LOGIN_EVENT = 'Teacher Login'.freeze
   ].freeze
 end

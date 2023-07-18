@@ -317,6 +317,7 @@ it:
           student_description: Crea una storia oppure fai un gioco con il Laboratorio
             con Gumball!
         starwars:
+          title: 'Guerre Stellari: Costruisci una galassia con il codice (JavaScript)'
           description: Impara a programmare i droidi e crea la tua versione di Guerre
             Stellari, in una galassia lontana lontana...
           description_short: Impara a programmare i droidi e crea la tua versione
@@ -324,6 +325,7 @@ it:
           student_description: Impara a programmare i droidi e crea la tua versione
             di Guerre Stellari, in una galassia lontana lontana...
         starwarsblocks:
+          title: 'Guerre Stellari: Costruisci una galassia con il codice (Blockly)'
           description: Impara a programmare i droidi e crea la tua versione di Guerre
             Stellari, in una galassia lontana lontana...
           description_short: Impara a programmare i droidi e crea la tua versione
@@ -424,6 +426,8 @@ it:
               display_name: Pratiche d'insegnante
         CSDU1-Draft:
           description_short: Risoluzione dei Problemi
+        CSDU2-Draft:
+          description_short: Sviluppo Web
         CSDU5-Draft:
           description_short: Dati
         CSF_Secret_Sample_Story:
@@ -569,18 +573,23 @@ it:
         flappy-impact-study:
           title: Codice Flappy con sondaggio
         coursea-draft:
+          title: 'Fondamenti CS: Corso A'
           description_short: Un'introduzione all'informatica per bambini che stanno
             imparando a leggere.
         courseb-draft:
+          title: 'Fondamenti CS: Corso B'
           description_short: Un'introduzione all'informatica per bambini che stanno
             imparando a leggere.
         coursec-draft:
+          title: 'Fondamenti CS: Corso C'
           description_short: Impara le basi dell'informatica e crea disegni, storie
             animate o giochi interattivi.
         coursed-draft:
+          title: 'Fondamenti CS: Corso D'
           description_short: Impara le basi dell'informatica e crea disegni, storie
             animate o giochi interattivi.
         coursee-draft:
+          title: 'Fondamenti CS: Corso E'
           description_short: Impara le basi dell'informatica e crea disegni, storie
             animate o giochi interattivi.
           lesson_groups:
@@ -591,6 +600,7 @@ it:
             extra_course_content:
               display_name: Contenuti supplementari
         coursef-draft:
+          title: 'Fondamenti CS: Corso F'
           description_short: Impara le basi dell'informatica e crea disegni, storie
             animate o giochi interattivi.
           lesson_groups:
@@ -659,6 +669,8 @@ it:
               display_name: 'Capitolo 1: Rappresentazione dei dati'
             csd5_2:
               display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
+        coursed-ramp:
+          title: 'Fondamenti CS: Corso D'
         csd6-2017:
           lesson_groups:
             csd6_1:
@@ -699,6 +711,8 @@ it:
           lesson_groups:
             cspSurvey:
               display_name: Sondaggio
+        csd2-old:
+          description_short: Sviluppo Web
         coursea-2017:
           title: Corso A
           assignment_family_title: Corso A
@@ -777,7 +791,8 @@ it:
             2018, è la più aggiornata in italiano ==>'
           lesson_groups:
             csf_e_1:
-              display_name: Approfondimenti al Corso E (facoltativo)
+              display_name: Introduzione al Corso E (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_e_2:
               display_name: Contenuti del Corso E
             end_of_course_project:
@@ -803,7 +818,8 @@ it:
             scegli la versione 2018, è la più aggiornata in italiano ==>'
           lesson_groups:
             csf_f_1:
-              display_name: Approfondimenti al Corso F (facoltativo)
+              display_name: Introduzione al Corso F (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_f_2:
               display_name: Contenuti del Corso F
             end_of_course_project:
@@ -958,7 +974,8 @@ it:
         e-f-ramp:
           lesson_groups:
             csf_e_1:
-              display_name: Approfondimenti al Corso E (facoltativo)
+              display_name: Introduzione al Corso E (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_e_2:
               display_name: Contenuti del Corso E
             end_of_course_project:
@@ -980,7 +997,8 @@ it:
         new-e:
           lesson_groups:
             csf_e_1:
-              display_name: Approfondimenti al Corso E (facoltativo)
+              display_name: Introduzione al Corso E (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_e_2:
               display_name: Contenuti del Corso E
             end_of_course_project:
@@ -990,7 +1008,8 @@ it:
         new-f:
           lesson_groups:
             csf_f_1:
-              display_name: Approfondimenti al Corso F (facoltativo)
+              display_name: Introduzione al Corso F (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_f_2:
               display_name: Contenuti del Corso F
             end_of_course_project:
@@ -1037,7 +1056,8 @@ it:
         course-e-2018:
           lesson_groups:
             csf_e_1:
-              display_name: Approfondimenti al Corso E (facoltativo)
+              display_name: Introduzione al Corso E (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_e_2:
               display_name: Contenuti del Corso E
             end_of_course_project:
@@ -1047,7 +1067,8 @@ it:
         course-f-2018:
           lesson_groups:
             csf_f_1:
-              display_name: Approfondimenti al Corso F (facoltativo)
+              display_name: Introduzione al Corso F (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_f_2:
               display_name: Contenuti del Corso F
             end_of_course_project:
@@ -1212,7 +1233,8 @@ it:
           description_audience: Da 8 a 12 anni
           lesson_groups:
             csf_e_1:
-              display_name: Approfondimenti al Corso E (facoltativo)
+              display_name: Introduzione al Corso E (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_e_2:
               display_name: Contenuti del Corso E
             end_of_course_project:
@@ -1238,7 +1260,8 @@ it:
           description_audience: Da 9 a 13 anni
           lesson_groups:
             csf_f_1:
-              display_name: Approfondimenti al Corso F (facoltativo)
+              display_name: Introduzione al Corso F (facoltativo - per chi non ha
+                svolto i corsi precedenti)
             csf_f_2:
               display_name: Contenuti del Corso F
             end_of_course_project:
@@ -2746,6 +2769,8 @@ it:
               display_name: 'Capitolo 1: Contenuti Web e HTML'
             csd2_2:
               display_name: 'Capitolo 2: Styling e CSS'
+        csp5-virtual:
+          title: Programmazione guidata degli eventi in App Lab
         virtual-holding-place:
           lesson_groups:
             content:
@@ -2785,6 +2810,7 @@ it:
             csp5_1:
               display_name: 'Capitolo 1: Programmazione guidata dagli eventi'
         csd3-virtual:
+          title: Introduzione autodidattica a Game Lab
           description_short: Impara a programmare animazioni, arte interattiva e giochi
             in Sviluppo Giochi.
           lesson_groups:
@@ -3598,6 +3624,7 @@ it:
             cspSurvey2020:
               display_name: Sondaggio
         aiml-2021:
+          title: Modulo di AI e Machine Learning
           lesson_groups:
             lessonGroup-2:
               display_name: Capitolo 1 - Comprendere l'apprendimento automatico
@@ -4536,10 +4563,13 @@ it:
               display_name: Sondaggio
         csd6-2022:
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-3:
               display_name: 'Capitolo 2: costruire prototipi fisici'
             lessonGroup-4:
               display_name: Sondaggio
+          title: Informatica e dispositivi fisici ('22-'23)
         csd-post-survey-2022:
           title: Sondaggio Post-corso di Alla Scoperta dell'Informatica
           description: Questa unità contiene il sondaggio post-corso Alla scoperta
@@ -4555,6 +4585,7 @@ it:
             lessonGroup-3:
               display_name: Capitolo 2 - Progettazione di un'app di apprendimento
                 automatico
+          title: Modulo di AI e Machine Learning
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -4722,6 +4753,8 @@ it:
               display_name: 'Capitolo 2: Costruzione di Giochi'
         csd6-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-3:
               display_name: 'Capitolo 2: costruire prototipi fisici'
         csd7-2023:
@@ -4734,6 +4767,8 @@ it:
               display_name: Introduzione a Sviluppo App
         physcomp-temp:
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-3:
               display_name: 'Capitolo 2: costruire prototipi fisici'
         csc-function-machines-pilot:
@@ -4817,8 +4852,11 @@ it:
             tra le versioni del curriculum
         devices-2022:
           lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-4:
               display_name: 'Capitolo 2: costruire prototipi fisici'
+          title: Creazione di app con dispositivi (Circuit Playground)
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -4851,6 +4889,7 @@ it:
               display_name: 'Capitolo 1: Creazione di pagine Web'
             lessonGroup-4:
               display_name: 'Capitolo 2: Siti web multipagina'
+          title: Sviluppo Web
         pre-express-2023:
           lesson_groups:
             csf_sequencing:
@@ -5132,6 +5171,8 @@ it:
               display_name: 'Capitolo 2: Costruzione di Giochi'
         focus-on-creativity4a-2023:
           lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-4:
               display_name: 'Capitolo 2: costruire prototipi fisici'
         focus-on-hardware1-2023:
@@ -5157,6 +5198,8 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
         focus-on-hardware3a-2023:
           lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-4:
               display_name: 'Capitolo 2: costruire prototipi fisici'
         focus-on-data1-2023:
@@ -5217,6 +5260,8 @@ it:
               display_name: 'Capitolo 2: prototipazione di app'
         focus-on-design-with-purpose4a-2023:
           lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-4:
               display_name: 'Capitolo 2: costruire prototipi fisici'
         focus-on-coding1-2023:
@@ -5246,6 +5291,8 @@ it:
               display_name: 'Capitolo 2: Costruzione di Giochi'
         focus-on-coding4a-2023:
           lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-4:
               display_name: 'Capitolo 2: costruire prototipi fisici'
         focus-on-impact-in-society1-2023:
@@ -5283,6 +5330,8 @@ it:
               display_name: Capitolo 2
         csd6a-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-3:
               display_name: 'Capitolo 2: costruire prototipi fisici'
         microbit-2023:
@@ -5403,6 +5452,8 @@ it:
             120 minuti"
         devices-2023:
           lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-4:
               display_name: 'Capitolo 2: costruire prototipi fisici'
             lessonGroup-5:
@@ -5430,7 +5481,8 @@ it:
             lessonGroup-3:
               display_name: Ingressi e uscite
         self-paced-pl-csd5-2023:
-          title: Insegnare IA e Apprendimento Automatico
+          title: 'Modulo 7: preparazione all''insegnamento dell''intelligenza Artificiale
+            e dell''Apprendimento Automatico'
         pl-csd-summer-day1:
           lessons:
             lesson-3:
@@ -5520,6 +5572,29 @@ it:
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica
             e crea disegni, storie o giochi interattivi.
         csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classi
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classi
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classi
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Dati
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classi
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Classi
+        csa-frq-practice-pre2019:
           lesson_groups:
             lessonGroup-3:
               display_name: Classi

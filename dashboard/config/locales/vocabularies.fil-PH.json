@@ -338,7 +338,12 @@
           "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
         "programming/coursed/2022": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
+        },
+        "frustrated/coursed/2022": {
+          "word": "Nadidismaya",
+          "definition": "Nakaramdam ng inis o galit dahil ang isang bagay ay hindi ayon sa gusto mo."
         },
         "persistence/coursed/2022": {
           "word": "Pagtitiyaga",
@@ -355,13 +360,29 @@
           "word": "Repeat (Ulitin)",
           "definition": "Gumawa ng isang bagay muli."
         },
+        "command/coursed/2022": {
+          "word": "Command",
+          "definition": "Tagubilin sa computer. Maraming mga command ang pinagsama-samang bumubuo ng mga algorithm at mga program sa computer."
+        },
         "conditionals/coursed/2022": {
           "word": "Mga conditional",
           "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
+        "pseudocode/coursed/2022": {
+          "word": "pseudocode",
+          "definition": "Simpleng paglalarawan ng wika ng mga hakbang sa algorithm"
+        },
         "condition/coursed/2022": {
           "word": "Condition",
           "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
+        "while_loop/coursed/2022": {
+          "word": "Mga Habang na Loop",
+          "definition": "Loop na patuloy na umuulit habang ang kondisyon ay totoo."
+        },
+        "until/coursed/2022": {
+          "word": "Hanggang",
+          "definition": "Command na nagsasabi sa iyo na gawin ang isang bagay hanggang sa punto na ito ay magiging totoo."
         },
         "sprite/coursef/2022": {
           "word": "Sprite",
@@ -495,8 +516,13 @@
           "word": "Mga conditional",
           "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
+        "while_loop/coursee/2022": {
+          "word": "Mga Habang na Loop",
+          "definition": "Loop na patuloy na umuulit habang ang kondisyon ay totoo."
+        },
         "copyright/coursee/2022": {
-          "word": "Karapatang-ari"
+          "word": "Karapatang-ari",
+          "definition": "ang eksklusibong legal na karapatan na mag-print, mag-publish, magtanghal, magpepelikula, o magrekord ng materyal na pampanitikan, masining, o musikal, at pahintulutan ang iba na gawin ang pareho"
         },
         "define/coursee/2022": {
           "word": "magtakda",
@@ -547,6 +573,7 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "programming/courseb/2022": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "persistence/courseb/2022": {
@@ -577,11 +604,15 @@
           "word": "Pagdedebug",
           "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
+        "sequencing/express/2022": {
+          "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command."
+        },
         "program/express/2022": {
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "programming/express/2022": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "behavior/express/2022": {
@@ -596,6 +627,9 @@
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
+        "code/express/2022": {
+          "definition": "para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
         "loop/express/2022": {
           "word": "Loop",
           "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
@@ -603,6 +637,10 @@
         "repeat/express/2022": {
           "word": "Repeat (Ulitin)",
           "definition": "Gumawa ng isang bagay muli."
+        },
+        "command/express/2022": {
+          "word": "Command",
+          "definition": "Tagubilin sa computer. Maraming mga command ang pinagsama-samang bumubuo ng mga algorithm at mga program sa computer."
         },
         "condition/express/2022": {
           "word": "Condition",
@@ -612,11 +650,20 @@
           "word": "Mga conditional",
           "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
+        "while_loop/express/2022": {
+          "word": "Mga Habang na Loop",
+          "definition": "Loop na patuloy na umuulit habang ang kondisyon ay totoo."
+        },
+        "until/express/2022": {
+          "word": "Hanggang",
+          "definition": "Command na nagsasabi sa iyo na gawin ang isang bagay hanggang sa punto na ito ay magiging totoo."
+        },
         "function/express/2022": {
           "word": "Function",
           "definition": "Isang piraso ng code na madali mong magagamit nang paulit-ulit."
         },
         "prompt/express/2022": {
+          "word": "prompt",
           "definition": "Isang mensahe sa screen ng computer na naghihintay ng input mula sa user."
         },
         "variable/express/2022": {
@@ -676,6 +723,7 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "programming/pre-express/2022": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "persistence/pre-express/2022": {
@@ -727,6 +775,7 @@
           "definition": "Bahagi ng program na hindi gumagana ng tama."
         },
         "programming/coursea/2022": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "loop/coursea/2022": {
@@ -757,11 +806,15 @@
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
+        "sequencing/coursec/2022": {
+          "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command."
+        },
         "persistence/coursec/2022": {
           "word": "Pagtitiyaga",
           "definition": "Hindi pagsuko."
         },
         "programming/coursec/2022": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "angle/coursec/2022": {
@@ -789,7 +842,11 @@
           "definition": "Isang larawan o diagram na kumakatawan sa data o mga value sa organisadong paraan"
         },
         "binary/coursec/2022": {
-          "word": "Binary"
+          "word": "Binary",
+          "definition": "Isang paraan ng pagkatawan ng impormasyon gamit lamang ang dalawang opsyon."
+        },
+        "computer/csd/2022": {
+          "word": "Computer"
         },
         "input/csd/2022": {
           "word": "Input"
@@ -832,7 +889,8 @@
           "word": "Digital na Bakas"
         },
         "copyright/csd/2022": {
-          "word": "Karapatang-ari"
+          "word": "Karapatang-ari",
+          "definition": "ang eksklusibong legal na karapatan na mag-print, mag-publish, magtanghal, magpepelikula, o magrekord ng materyal na pampanitikan, masining, o musikal, at pahintulutan ang iba na gawin ang pareho"
         },
         "user/csd/2022": {
           "word": "User",
@@ -1006,6 +1064,7 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "programming/courseb/2021": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "persistence/courseb/2021": {
@@ -1057,6 +1116,7 @@
           "definition": "Bahagi ng program na hindi gumagana ng tama."
         },
         "programming/coursea/2021": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "loop/coursea/2021": {
@@ -1087,7 +1147,11 @@
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
+        "sequencing/coursec/2021": {
+          "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command."
+        },
         "programming/coursec/2021": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "loop/coursec/2021": {
@@ -1103,7 +1167,8 @@
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "binary/coursec/2021": {
-          "word": "Binary"
+          "word": "Binary",
+          "definition": "Isang paraan ng pagkatawan ng impormasyon gamit lamang ang dalawang opsyon."
         },
         "algorithm/coursed/2021": {
           "word": "Algorithm",
@@ -1126,7 +1191,12 @@
           "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
         },
         "programming/coursed/2021": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
+        },
+        "frustrated/coursed/2021": {
+          "word": "Nadidismaya",
+          "definition": "Nakaramdam ng inis o galit dahil ang isang bagay ay hindi ayon sa gusto mo."
         },
         "persistence/coursed/2021": {
           "word": "Pagtitiyaga",
@@ -1143,13 +1213,29 @@
           "word": "Repeat (Ulitin)",
           "definition": "Gumawa ng isang bagay muli."
         },
+        "command/coursed/2021": {
+          "word": "Command",
+          "definition": "Tagubilin sa computer. Maraming mga command ang pinagsama-samang bumubuo ng mga algorithm at mga program sa computer."
+        },
         "conditionals/coursed/2021": {
           "word": "Mga conditional",
           "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
+        "pseudocode/coursed/2021": {
+          "word": "pseudocode",
+          "definition": "Simpleng paglalarawan ng wika ng mga hakbang sa algorithm"
+        },
         "condition/coursed/2021": {
           "word": "Condition",
           "definition": "Isang bagay na sinusuri ng program upang makita kung ito ay totoo bago payagan ang isang aksiyon."
+        },
+        "while_loop/coursed/2021": {
+          "word": "Mga Habang na Loop",
+          "definition": "Loop na patuloy na umuulit habang ang kondisyon ay totoo."
+        },
+        "until/coursed/2021": {
+          "word": "Hanggang",
+          "definition": "Command na nagsasabi sa iyo na gawin ang isang bagay hanggang sa punto na ito ay magiging totoo."
         },
         "algorithm/express/2021": {
           "word": "Algorithm",
@@ -1163,11 +1249,15 @@
           "word": "Pagdedebug",
           "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
+        "sequencing/express/2021": {
+          "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command."
+        },
         "program/express/2021": {
           "word": "Program",
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "programming/express/2021": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "behavior/express/2021": {
@@ -1182,6 +1272,9 @@
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
+        "code/express/2021": {
+          "definition": "para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
+        },
         "loop/express/2021": {
           "word": "Loop",
           "definition": "Ang paggawa ng isang bagay nang paulit-ulit."
@@ -1189,6 +1282,10 @@
         "repeat/express/2021": {
           "word": "Repeat (Ulitin)",
           "definition": "Gumawa ng isang bagay muli."
+        },
+        "command/express/2021": {
+          "word": "Command",
+          "definition": "Tagubilin sa computer. Maraming mga command ang pinagsama-samang bumubuo ng mga algorithm at mga program sa computer."
         },
         "condition/express/2021": {
           "word": "Condition",
@@ -1198,11 +1295,20 @@
           "word": "Mga conditional",
           "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
         },
+        "while_loop/express/2021": {
+          "word": "Mga Habang na Loop",
+          "definition": "Loop na patuloy na umuulit habang ang kondisyon ay totoo."
+        },
+        "until/express/2021": {
+          "word": "Hanggang",
+          "definition": "Command na nagsasabi sa iyo na gawin ang isang bagay hanggang sa punto na ito ay magiging totoo."
+        },
         "function/express/2021": {
           "word": "Function",
           "definition": "Isang piraso ng code na madali mong magagamit nang paulit-ulit."
         },
         "prompt/express/2021": {
+          "word": "prompt",
           "definition": "Isang mensahe sa screen ng computer na naghihintay ng input mula sa user."
         },
         "variable/express/2021": {
@@ -1262,6 +1368,7 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "programming/pre-express/2021": {
+          "word": "Pagprograma",
           "definition": "Ang sining ng paglikha ng program."
         },
         "persistence/pre-express/2021": {
@@ -1280,6 +1387,10 @@
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
+        "algorithm/coursee/2021": {
+          "word": "algorithm",
+          "definition": "Listahan ng mga hakbang upang tapusin ang task"
+        },
         "behavior/coursee/2021": {
           "word": "Paggawi",
           "definition": "Isang aksiyon na patuloy na ginagawa ng sprite hanggang sa sabihing huminto ito."
@@ -1293,7 +1404,8 @@
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "copyright/coursee/2021": {
-          "word": "Karapatang-ari"
+          "word": "Karapatang-ari",
+          "definition": "ang eksklusibong legal na karapatan na mag-print, mag-publish, magtanghal, magpepelikula, o magrekord ng materyal na pampanitikan, masining, o musikal, at pahintulutan ang iba na gawin ang pareho"
         },
         "loop/coursee/2021": {
           "word": "Loop",
@@ -1314,6 +1426,10 @@
         "conditionals/coursee/2021": {
           "word": "Mga conditional",
           "definition": "Mga pahayag na tumatakbo lamang sa ilalim ng ilang mga condition."
+        },
+        "while_loop/coursee/2021": {
+          "word": "Mga Habang na Loop",
+          "definition": "Loop na patuloy na umuulit habang ang kondisyon ay totoo."
         },
         "define/coursee/2021": {
           "word": "magtakda",
@@ -1377,6 +1493,9 @@
         "function/csd/2021": {
           "word": "Function"
         },
+        "computer/csd/2021": {
+          "word": "Computer"
+        },
         "input/csd/2021": {
           "word": "Input"
         },
@@ -1387,7 +1506,8 @@
           "word": "Digital na Bakas"
         },
         "copyright/csd/2021": {
-          "word": "Karapatang-ari"
+          "word": "Karapatang-ari",
+          "definition": "ang eksklusibong legal na karapatan na mag-print, mag-publish, magtanghal, magpepelikula, o magrekord ng materyal na pampanitikan, masining, o musikal, at pahintulutan ang iba na gawin ang pareho"
         }
       }
     }

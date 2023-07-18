@@ -208,7 +208,7 @@ class ScriptLevel < ApplicationRecord
 
   # Returns the next valid progression level, or nil if no such level exists
   def next_progression_level(user=nil)
-    next_level ? next_level.or_next_progression_level(user) : nil
+    next_level&.or_next_progression_level(user)
   end
 
   # Returns the first level in the sequence starting with this one that is a
@@ -329,7 +329,8 @@ class ScriptLevel < ApplicationRecord
         freePlay: level.try(:free_play) == "true",
         bonus: bonus,
         display_as_unplugged: level.display_as_unplugged?,
-        app: level.game&.app
+        app: level.game&.app,
+        uses_lab2: level.uses_lab2?
       }
 
       if progression
@@ -713,7 +714,7 @@ class ScriptLevel < ApplicationRecord
         when GamelabJr
           send("#{level.standalone_app_name_or_default}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         when Artist
-          artist_type = ['elsa', 'anna'].include?(level.skin) ? 'frozen' : 'artist'
+          artist_type = (level.skin == 'elsa' || level.skin == 'anna') ? 'frozen' : 'artist'
           send("#{artist_type}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         when Studio # playlab
           send("#{'playlab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)

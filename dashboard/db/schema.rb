@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_30_215538) do
+ActiveRecord::Schema.define(version: 2023_07_11_175151) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -409,6 +409,11 @@ ActiveRecord::Schema.define(version: 2023_05_30_215538) do
     t.string "cs_topic"
     t.string "school_subject"
     t.string "device_compatibility"
+    t.string "description"
+    t.string "self_paced_professional_learning"
+    t.string "professional_learning_program"
+    t.string "video"
+    t.datetime "published_date"
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
@@ -615,6 +620,41 @@ ActiveRecord::Schema.define(version: 2023_05_30_215538) do
     t.datetime "updated_at", null: false
     t.index ["script_id", "level_id"], name: "index_hint_view_requests_on_script_id_and_level_id"
     t.index ["user_id"], name: "index_hint_view_requests_on_user_id"
+  end
+
+  create_table "learning_goal_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "teacher_id"
+    t.integer "unit_id"
+    t.integer "level_id"
+    t.integer "learning_goal_id"
+    t.boolean "ai_sourced"
+    t.date "prompt_version"
+    t.integer "understanding"
+    t.text "feedback"
+    t.text "context"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "learning_goal_evidence_levels", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "learning_goal_id"
+    t.integer "understanding"
+    t.text "teacher_description"
+    t.text "ai_prompt"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "learning_goals", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.string "key"
+    t.integer "position"
+    t.integer "rubric_id"
+    t.string "learning_goal"
+    t.boolean "ai_enabled"
+    t.text "tips"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "lesson_activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -831,6 +871,7 @@ ActiveRecord::Schema.define(version: 2023_05_30_215538) do
     t.integer "reminders_sent", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "resends_sent", default: 0, null: false
     t.index ["user_id"], name: "index_parental_permission_requests_on_user_id"
     t.index ["uuid"], name: "index_parental_permission_requests_on_uuid"
   end
@@ -1573,6 +1614,13 @@ ActiveRecord::Schema.define(version: 2023_05_30_215538) do
     t.integer "course_version_id", null: false
     t.index ["course_version_id", "key"], name: "index_resources_on_course_version_id_and_key", unique: true
     t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
+  end
+
+  create_table "rubrics", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "lesson_id"
+    t.integer "level_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "school_districts", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|

@@ -5,7 +5,7 @@ import * as color from '../../util/color';
 import cookies from 'js-cookie';
 import {
   Heading1,
-  BodyOneText,
+  BodyTwoText,
   EmText,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
@@ -26,14 +26,14 @@ function permissionGrantedMessage(date) {
       <Heading1 visualAppearance="heading-lg">
         {i18n.childAccountConsentValidHeader()}
       </Heading1>
-      <BodyOneText>
+      <BodyTwoText>
         <StrongText>{i18n.childAccountConsentValidPermission()} </StrongText>
         <span style={styles.grantDate}>{grantedDateString}</span>
-      </BodyOneText>
-      <BodyOneText>{i18n.childAccountConsentValidMessage()}</BodyOneText>
-      <BodyOneText>
+      </BodyTwoText>
+      <BodyTwoText>{i18n.childAccountConsentValidMessage()}</BodyTwoText>
+      <BodyTwoText>
         <EmText>{i18n.childAccountConsentEmailUnknown()}</EmText>
-      </BodyOneText>
+      </BodyTwoText>
     </div>
   );
 }
@@ -44,10 +44,10 @@ function expiredTokenMessage() {
       <Heading1 visualAppearance="heading-lg">
         {i18n.childAccountConsentExpiredHeader()}
       </Heading1>
-      <BodyOneText>{i18n.childAccountConsentExpiredMessage()}</BodyOneText>
-      <BodyOneText>
+      <BodyTwoText>{i18n.childAccountConsentExpiredMessage()}</BodyTwoText>
+      <BodyTwoText>
         <EmText>{i18n.childAccountConsentEmailUnknown()}</EmText>
-      </BodyOneText>
+      </BodyTwoText>
     </div>
   );
 }

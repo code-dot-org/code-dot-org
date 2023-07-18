@@ -46,6 +46,13 @@
         }
       }
     },
+    "bike_sharing": {
+      "fields": {
+        "Month": {
+          "id": "महिना "
+        }
+      }
+    },
     "poutine_toy": {
       "fields": {
         "mushrooms": {

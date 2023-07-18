@@ -1,20 +1,35 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef, useEffect, ChangeEvent} from 'react';
 import classnames from 'classnames';
 
 import Typography from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './checkbox.module.scss';
 
-interface CheckboxProps {
+export interface CheckboxProps {
+  /** Checkbox checked state */
   checked: boolean;
-  onChange: () => void;
+  /** Checkbox onChange handler*/
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  /** The name attribute specifies the name of an input element.
+   The name attribute is used to reference elements in a JavaScript,
+   or to reference form data after a form is submitted.
+   Note: Only form elements with a name attribute will have their values passed when submitting a form. */
   name: string;
+  /** The value attribute specifies the value of an input element. */
   value?: string;
+  /** Checkbox label */
   label?: string;
+  /** Is checkbox disabled */
   disabled?: boolean;
+  /** Is checkbox indeterminate */
   indeterminate?: boolean;
+  /** Size of checkbox */
   size?: 'xs' | 's' | 'm' | 'l';
 }
 
+/**
+ * Design System: Checkbox Component.
+ * Can be used to render a checkbox or as a part of bigger/more complex components (e.g. Checkbox Dropdown).
+ */
 const Checkbox: React.FunctionComponent<CheckboxProps> = ({
   label,
   checked,
@@ -48,8 +63,7 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
       />
       <i className="fa fa-solid" />
       {label && (
-        //   TODO: [DES-296] Once new Typography is ready, implement different label sizes
-        <Typography semanticTag="span" visualAppearance="body-one">
+        <Typography semanticTag="span" visualAppearance="body-two">
           {label}
         </Typography>
       )}

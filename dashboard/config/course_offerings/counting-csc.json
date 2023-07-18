@@ -10,6 +10,11 @@
   "header": "csc",
   "image": "https://images.code.org/050d4ebbfe7fb9a0d2a4e24486a1e9fe-Counting with Laurel.png",
   "cs_topic": "programming",
-  "school_subject": "math",
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "school_subject": "",
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "self_paced_professional_learning": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null
 }

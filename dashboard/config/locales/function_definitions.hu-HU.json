@@ -255,7 +255,7 @@
         },
         "4-5 Bee Debugging 8": {
           "get 5 nectar": {
-            "name": "gyűjts 5 nektárt"
+            "name": "get 5 nectar"
           }
         },
         "4-5 Bee Debugging 9": {
@@ -418,37 +418,44 @@
         },
         "Course 4 Bee Params 1": {
           "get 3 nectar": {
-            "name": "gyűjts 3 nektárt"
+            "name": "get 3 nectar"
           }
         },
         "Course 4 Bee Params 2": {
           "get 3 nectar": {
-            "name": "gyűjts 3 nektárt"
+            "name": "get 3 nectar"
           }
         },
         "Course 4 Bee Params 3": {
           "get 3 nectar": {
-            "name": "gyűjts 3 nektárt"
+            "name": "get 3 nectar"
           }
         },
         "Course 4 Bee Params 4": {
           "get 3 nectar": {
-            "name": "gyűjts 3 nektárt"
+            "name": "get 3 nectar"
           }
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "gyűjts 5 nektárt"
+            "name": "get 5 nectar"
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "gyűjts 5 nektárt"
+            "name": "get 5 nectar",
+            "parameters": {
+              "nectar units": "nectar"
+            }
           }
         },
         "Course 4 Bee Params 7": {
           "get many nectar": {
-            "name": "gyűjts sok nektárt"
+            "name": "gyűjts sok nektárt",
+            "description": "Gyűjtse össze a megadott számú nektárt mindkét irányban",
+            "parameters": {
+              "nectars": "nectar"
+            }
           }
         },
         "Course 4 Bee Params 8": {
@@ -456,7 +463,8 @@
             "name": "gyűjts nektárt készíts mézet",
             "parameters": {
               "honey": "méz"
-            }
+            },
+            "description": "Valamelyik irányba elmegy, hogy ott nektárt gyűjtsön vagy mézet készítsen."
           }
         },
         "Course 4 Play Lab Params 1": {
@@ -964,7 +972,8 @@
             "name": "rajzolj sokszöget",
             "parameters": {
               "length": "length"
-            }
+            },
+            "description": "rajzolj sokszöget sides és length paraméterrel"
           }
         },
         "NEW Course 4 Artist Params 12a": {
@@ -972,7 +981,8 @@
             "name": "rajzolj sokszöget",
             "parameters": {
               "length": "length"
-            }
+            },
+            "description": "rajzolj sokszöget sides és length paraméterrel"
           }
         },
         "NEW Course 4 Artist Params 13": {
@@ -986,8 +996,10 @@
         "NEW Course 4 Artist Params 14": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "length"
-            }
+              "length": "length",
+              "sides": "sides"
+            },
+            "name": "rajzolj spirált"
           }
         },
         "NEW Course 4 Artist Params 15": {
@@ -1391,14 +1403,16 @@
           "pick row": {
             "parameters": {
               "length": "length"
-            }
+            },
+            "name": "Aratás sorban"
           }
         },
         "course4_bee_fwp_challenge2": {
           "pick row": {
             "parameters": {
               "length": "length"
-            }
+            },
+            "name": "Aratás sorban"
           }
         },
         "courseA_artist_loops_challenge1": {
@@ -3116,7 +3130,8 @@
             "name": "rajzolj sokszöget",
             "parameters": {
               "length": "length"
-            }
+            },
+            "description": "rajzolj sokszöget sides és length paraméterrel"
           }
         },
         "courseF_artist_fwp5": {
@@ -3131,7 +3146,8 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "length"
-            }
+            },
+            "name": "rajzolj spirált"
           }
         },
         "courseF_artist_fwp7": {
@@ -3139,7 +3155,8 @@
             "parameters": {
               "length": "length",
               "min": "min"
-            }
+            },
+            "name": "rajzolj spirált"
           }
         },
         "courseF_artist_fwp8": {
@@ -3147,7 +3164,8 @@
             "parameters": {
               "length": "length",
               "min": "min"
-            }
+            },
+            "name": "rajzolj spirált"
           }
         },
         "courseF_artist_fwp9": {
@@ -3196,7 +3214,8 @@
             "parameters": {
               "length": "length",
               "min": "min"
-            }
+            },
+            "name": "rajzolj spirált"
           }
         },
         "courseF_artist_fwp_challenge1": {
@@ -3398,14 +3417,16 @@
           "pick row": {
             "parameters": {
               "length": "length"
-            }
+            },
+            "name": "Aratás sorban"
           }
         },
         "courseF_bee_fwp_challenge2": {
           "pick row": {
             "parameters": {
               "length": "length"
-            }
+            },
+            "name": "Aratás sorban"
           }
         },
         "courseF_bee_variables_1_2018": {
