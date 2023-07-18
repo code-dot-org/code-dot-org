@@ -9,19 +9,25 @@ class OpenaiSessionsController < ApplicationController
 
   # POST /openai/chat_completion
   def chat_completion
+    puts "chat_completion"
+    puts "#{request.body}"
+    puts "#{request.body.read}"
+    body = JSON.parse(request.body.read)
+    messages_to_send = body["messages"]
+
     # Set up the API endpoint URL and request headers
     headers = {
       "Content-Type" => "application/json",
       "Authorization" => "Bearer #{OPENAI_CHAT_API_KEY}",
       "OpenAI-Organization" => CODE_ORG_ID
     }
-    body = JSON.parse(request.body.read)
+    
 
     # Set up the API endpoint URL and request headers
     data = {
       model: GPT_MODEL,
       temperature: TEMPERATURE,
-      messages: body["messages"],
+      messages: message_to_send
     }
 
     # Send the request to the API endpoint
@@ -35,5 +41,14 @@ class OpenaiSessionsController < ApplicationController
     else
       render json: {error: "Chat completion failed: #{response.to_json}"}, status: :bad_request
     end
+  end
+
+  private def has_required_params?(params)
+    begin
+      params.require(params)
+    rescue ActionController::ParameterMissing
+      return false
+    end
+    true
   end
 end
