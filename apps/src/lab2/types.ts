@@ -159,6 +159,7 @@ export type ProjectType =
   | 'basketball';
 
 export type AppName =
+  | 'aichat'
   | 'applab'
   | 'calc'
   | 'dance'
