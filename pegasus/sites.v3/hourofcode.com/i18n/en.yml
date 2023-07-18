@@ -183,6 +183,8 @@
   call_to_action_see_module_details: "See module details"
   call_to_action_start_modules: "Start modules"
   call_to_action_see_course_details: "See course details"
+  call_to_action_learn_about_approach: "Learn more about our approach"
+  call_to_action_try_java_lab: " Try Java Lab"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
@@ -385,6 +387,8 @@
   heading_collections: "Collections"
   heading_find_a_module: "Find a module for your classroom"
   heading_no_devices: "No devices? We have you covered"
+  heading_java_lab: "Java Lab"
+  heading_objects_first: "Objects first"
 
   professional_learning_section_desc: "Get the support you need as you prepare to teach. Teachers love it, with over 90% ranking it the best professional development ever!"
   professional_learning_section_desc_short: "Get the support you need as you prepare to teach."
@@ -843,6 +847,8 @@
   csa_page_curriculum_glance_languages: "English"
   csa_page_curriculum_glance_accessibility_features: "Text-to-speech, Closed captioning, Immersive reader"
   csa_page_quote: "I could tell last year how different and better this curriculum and resources were than anything else out there... but this year, these past few weeks preparing students for the exam have been some of my most fun teaching. And I'm hardly doing anything! Kids understand the material and are talking with each other at such a high level and it's a direct reflection of the lessons and activities throughout the year. Thank you, thank you."
+  csa_page_projects_java_lab: "Java Lab is a programming environment where you can make Java programs using The Neighborhood, The Theater, or the console."
+  csa_page_projects_objects_first: "Students learn the fundamentals of object-oriented programming (OOP) first, giving them a foundation for the rest of the course while encouraging them to consider the overall design of their programs."
   csa_page_faq_question_01: "Is CSA mapped to standards?"
   csa_page_faq_answer_01: "Yes, Code.org's CSA curriculum is mapped to the College Board Course and Exam Description for AP® CSA."
   csa_page_faq_question_02: "How much does it cost to teach CSA?"
