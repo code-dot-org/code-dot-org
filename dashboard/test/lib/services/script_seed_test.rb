@@ -683,6 +683,46 @@ module Services
       assert_equal expected_descriptions, lesson.opportunity_standards.map(&:description)
     end
 
+    test 'seed updates learning goals' do
+      script = create_script_tree
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        rubric = script.lessons.first.rubric
+        rubric.learning_goals.first.update!(learning_goal: 'Updated Learning Goal')
+        rubric.learning_goals.create!(learning_goal: 'New Learning Goal', position: rubric.learning_goals.count + 1, key: "new-learning-goal-#{rubric.id}")
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Unit.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      rubric = script.lessons.first.rubric
+      assert_equal(
+        ['Updated Learning Goal', 'New Learning Goal'],
+        rubric.learning_goals.map(&:learning_goal)
+      )
+    end
+
+    test 'seed updates learning goal evidence level' do
+      script = create_script_tree
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        rubric = script.lessons.first.rubric
+        rubric.learning_goals.first.learning_goal_evidence_levels.first.update!(teacher_description: 'Updated Evidence Level')
+        rubric.learning_goals.first.learning_goal_evidence_levels.create!(teacher_description: 'New Evidence Level', understanding: 4)
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Unit.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      rubric = script.lessons.first.rubric
+      assert_equal(
+        ['Updated Evidence Level', 'Description for teacher', 'New Evidence Level'],
+        rubric.learning_goals.first.learning_goal_evidence_levels.map(&:teacher_description)
+      )
+    end
+
     test 'seed deletes lesson_groups' do
       script = create_script_tree(num_lesson_groups: 2)
       original_counts = get_counts
@@ -718,6 +758,9 @@ module Services
       expected_counts['Objective'] -= 4
       expected_counts['LessonsStandard'] -= 4
       expected_counts['LessonsOpportunityStandard'] -= 4
+      expected_counts['Rubric'] -= 2
+      expected_counts['LearningGoal'] -= 2
+      expected_counts['LearningGoalEvidenceLevel'] -= 4
       assert_equal expected_counts, get_counts
     end
 
@@ -753,6 +796,9 @@ module Services
       expected_counts['Objective'] -= 2
       expected_counts['LessonsStandard'] -= 2
       expected_counts['LessonsOpportunityStandard'] -= 2
+      expected_counts['Rubric'] -= 1
+      expected_counts['LearningGoal'] -= 1
+      expected_counts['LearningGoalEvidenceLevel'] -= 2
       assert_equal expected_counts, get_counts
     end
 
@@ -1082,6 +1128,47 @@ module Services
       assert_equal expected_counts, get_counts
     end
 
+    test 'seed deletes learning goal' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        rubric = script.lessons.first.rubric
+        assert_equal 1, rubric.learning_goals.count
+        rubric.learning_goals.first.delete
+        assert_equal 0, rubric.learning_goals.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Unit.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['LearningGoal'] -= 1
+      expected_counts['LearningGoalEvidenceLevel'] -= 2
+      assert_equal expected_counts, get_counts
+    end
+
+    test 'seed deletes learning goal evidence level' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        rubric = script.lessons.first.rubric
+        assert_equal 2, rubric.learning_goals.first.learning_goal_evidence_levels.count
+        rubric.learning_goals.first.learning_goal_evidence_levels.first.delete
+        assert_equal 1, rubric.learning_goals.first.learning_goal_evidence_levels.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Unit.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['LearningGoalEvidenceLevel'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
     test 'seed can only find standard if framework matches' do
       script = create_script_tree(num_lessons_per_group: 1)
       json = ScriptSeed.serialize_seeding_json(script)
@@ -1168,7 +1255,7 @@ module Services
       [
         Unit, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
         LevelsScriptLevel, Resource, LessonsResource, ScriptsResource, ScriptsStudentResource, Vocabulary, LessonsVocabulary,
-        LessonsProgrammingExpression, Objective, Standard, LessonsStandard, LessonsOpportunityStandard
+        LessonsProgrammingExpression, Objective, Standard, LessonsStandard, LessonsOpportunityStandard, Rubric, LearningGoal, LearningGoalEvidenceLevel
       ].map {|c| [c.name, c.count]}.to_h
     end
 
@@ -1302,11 +1389,16 @@ module Services
     end
 
     def assert_learning_goals_equal(learning_goals1, learning_goals2)
-      puts learning_goals1.map(&:key).inspect
-      puts learning_goals2.map(&:key).inspect
       assert_equal learning_goals1.count, learning_goals2.count
       learning_goals1.zip(learning_goals2).each do |lg1, lg2|
         assert_attributes_equal(lg1, lg2, ['rubric_id'])
+      end
+    end
+
+    def assert_learning_goal_evidence_levels_equal(learning_goal_evidence_levels1, learning_goal_evidence_levels2)
+      assert_equal learning_goal_evidence_levels1.count, learning_goal_evidence_levels2.count
+      learning_goals_evidence_levels1.zip(learning_goal_evidence_levels2).each do |lgel1, lgel2|
+        assert_attributes_equal(lgel1, lgel2, ['learning_goal_id'])
       end
     end
 
