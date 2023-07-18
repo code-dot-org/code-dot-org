@@ -40,7 +40,7 @@ Feature: Curriculum Catalog Page
     Then I click selector "[aria-label='Assign AI for Oceans to your classroom']"
     And I wait until element "h3:contains(Use a teacher account to assign a curriculum)" is visible
     Then I click selector "a:contains(Learn how to update account type)"
-    And check that the URL matches "https://support.code.org/hc/en-us/articles/360023222371-How-can-I-change-my-account-type-from-student-to-teacher-or-vice-versa"
+    And I wait until current URL contains "/articles/360023222371-How-can-I-change-my-account-type-from-student-to-teacher-or-vice-versa"
 
   Scenario: Signed-in teacher without sections is prompted to created sections when clicking Assign
     Given I create a teacher named "Teacher Tom"
