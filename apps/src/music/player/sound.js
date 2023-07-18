@@ -1,9 +1,8 @@
 import {fetchSignedCookies} from '@cdo/apps/utils';
 import WebAudio from './soundSub';
-
+import {baseAssetUrl} from '../constants';
 var soundList = [];
 
-var baseSoundUrl;
 var restrictedSoundUrlPath;
 
 var audioSoundBuffers = [];
@@ -32,7 +31,6 @@ var audioSystem = null;
  */
 export function InitSound(desiredSounds, options) {
   // regular web version.
-  baseSoundUrl = 'https://curriculum.code.org/media/musiclab/';
   restrictedSoundUrlPath = '/restricted/musiclab/';
   audioSystem = new WebAudio(options);
 
@@ -81,7 +79,7 @@ async function LoadSounds(
   let soundsToLoad = 0;
   for (let i = 0; i < soundList.length; i++) {
     const sound = soundList[i];
-    const basePath = sound.restricted ? restrictedSoundUrlPath : baseSoundUrl;
+    const basePath = sound.restricted ? restrictedSoundUrlPath : baseAssetUrl;
     if (sound.restricted && !canLoadRestrictedContent) {
       // Skip loading restricted songs if we can't load restricted content.
       continue;
