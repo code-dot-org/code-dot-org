@@ -19,10 +19,17 @@ export const getTabKey = index => `file-${index}`;
 
 /**
  * @typedef {Object} FileMetadataAndMore
- * @property {Object.<string, string>} fileMetadata mapping between tab keys and actual file names, {'file-0': 'ClassOne.java', 'file-1': 'ClassTwo.java', 'file-2': 'ClassThree.java'}
- * @property {Array} orderedTabKeys order to display files in editor, ['file-1', 'file-2', 'file-0']
+ * @property {Object.<string, string>} fileMetadata mapping between tab keys and actual file names
+ * @property {Array} orderedTabKeys order to display files in editor
  * @property {string} activeTabKey
- * @property {number} lastTabKeyIndex array index of last tab key, 2 if three files
+ * @property {number} lastTabKeyIndex array index of last tab key
+ * @example
+ * {
+ *   fileMetadata: {'file-0': 'ClassOne.java', 'file-1': 'ClassTwo.java', 'file-2': 'ClassThree.java'},
+ *   orderedTabKeys: ['file-1', 'file-2', 'file-0'],
+ *   activeTabKey: 'file-1',
+ *   lastTabKeyIndex: 2
+ * }
  */
 
 /**
