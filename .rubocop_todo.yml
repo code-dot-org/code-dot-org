@@ -103,11 +103,6 @@ Lint/MixedRegexpCaptureTypes:
 Lint/NoReturnInBeginEndBlocks:
   Enabled: false
 
-# Offense count: 2
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Lint/OrAssignmentToConstant:
-  Enabled: false
-
 # Offense count: 10
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: AllowedImplicitNamespaces.
