@@ -348,7 +348,7 @@ export default function CourseOfferingEditor(props) {
       Professional Learning Program
       <HelpTip>
         <p>
-          Link to page where they can go to learn more about the professional
+          Select a workshop where one can learn more about the professional
           learning program
         </p>
       </HelpTip>
@@ -363,7 +363,7 @@ export default function CourseOfferingEditor(props) {
         {Object.entries(props.professionalLearningProgramPaths).map(
           ([key, path]) => (
             <option key={key} value={path}>
-              {`${key}: ${path}`}
+              {key}
             </option>
           )
         )}
