@@ -2,7 +2,6 @@
 require_relative '../deployment'
 require_relative '../lib/cdo/mysql_console_helper'
 require 'uri'
-require 'json'
 
 raise 'please define CDO.db_endpoint_writer' unless CDO.db_endpoint_writer
 credentials = CDO.db_credential_reader

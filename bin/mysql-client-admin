@@ -2,7 +2,6 @@
 require_relative '../deployment'
 require_relative '../lib/cdo/mysql_console_helper'
 require 'uri'
-require 'json'
 
 raise 'please define CDO.db_credential_admin' unless CDO.db_credential_admin
 credentials = CDO.db_credential_admin
