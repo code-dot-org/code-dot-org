@@ -7968,9 +7968,6 @@
   tutorial_carnegieslime_string_detail_programming_languages: "Blocks"
   tutorial_nafbrand_string_detail_programming_languages: "Python"
 
-
-
-
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"
   school_name_error: "School name is required."
@@ -8021,8 +8018,6 @@
   team_page_full_team_alt_text: "Nearly 100 Code.org employees in matching blue and yellow t-shirts pose in a hotel conference room for the company's summer 2022 Codechella event."
   careers_page_code_pride_alt_text: "Two feminine-presenting employees smile while holding the ends of a Code.org-branded rainbow banner. Behind them, several people are wearing Code.org shirts and waving rainbow flags while walking alongside a multi-colored Volkswagen bug."
 
-  grade-level: "Grade Level"
-
   accessibility_hero_heading: "Accessibility at Code.org"
   accessibility_hero_desc: "We are dedicated to eliminating barriers that prevent the inclusion and full participation of students and educators with disabilities, ensuring that EVERY student has access to computer science."
   accessibility_efforts_title: "Our Efforts for 2023"
@@ -8050,38 +8045,26 @@
   accessibility_commit_text_2: "We're taking a holistic approach to support the learning needs of all students and working to close gaps in access to computer science education for students with disabilities."
   accessibility_commit_text_3: "We’re starting small, but will measure our progress and continuously iterate until we can address even the most complex accessibility challenges."
   accessibility_commit_text_4: "At Code.org, we're committed to continually improving the accessibility of our tools, and we're excited to take this important step towards greater equity, access, and opportunity for all students and educators."
-
   accessibility_partner_title: "Our Partners and Recommendations"
   accessibility_partner_desc: "We recommend the following resources for students and teachers who are looking for more accessible computer science content."
-
-
   accessibility_card_title_1: "AccessCSForAll"
   accessibility_card_text_1: "Resources for teachers to bring accessible computing to secondary schools and for high school students with disabilities to connect with mentors in the technology space."
-
   accessibility_card_title_2: "Blocks4All"
   accessibility_card_text_2: "A block-based programming environment for iPad that teaches basic programming concepts using the Dash robot. Accessible with VoiceOver, Switch Control, and Voice Control."
-
   accessibility_card_title_3: "Code Jumper"
   accessibility_card_text_3: "A physical coding aid/resource for students with visual impairments."
-
   accessibility_card_title_4: "CSForAll"
   accessibility_card_text_4: "An organization that coordinates projects and programs with different organizations across the United States."
-
   accessibility_card_title_5: "Deaf Kids Code"
   accessibility_card_text_5: "Promotes computer science and technology education to empower students who are deaf or hard of hearing."
-
   accessibility_card_title_6: "Everyone Can Code"
   accessibility_card_text_6: "A curriculum designed by Apple for Swift Playgrounds that provides VoiceOver (modified TTS) and adapted curriculum for students with accessibility needs."
-
   accessibility_card_title_7: "Khan Academy"
   accessibility_card_text_7: "A curriculum provider with various accommodations, including captions, transcripts, and the ability to reduce animation motion and hide visually dependent content. Hosts some Code.org curricula, plus additional computing curricula."
-
   accessibility_card_title_8: "Snap Circuits"
   accessibility_card_text_8: "An educational product that teaches electronics with solderless snap-together electronic components. Can include an access pack for students with visual impairments."
-
   accessibility_card_title_9: "Sphero"
   accessibility_card_text_9: "An interactive coding robotic ball and STEM education kit for students with intellectual disabilities. Needs to be paired with an appropriate application."
-
   accessibility_card_title_10: "Quorum "
   accessibility_card_text_10: "An adaptation of Code.org’s AP Computer Science Principles curriculum using Quorum, an evidence-based language originally designed to provide accessibility for blind or visually-impaired students."
 
