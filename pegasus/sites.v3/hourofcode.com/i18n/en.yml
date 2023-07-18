@@ -113,6 +113,11 @@
   curriculum_launch_2023_title: "Introducing incredible updates to our curriculum"
   curriculum_launch_2023_desc: "Updates to CSC, CSP, CSD, and more — plus a new Curriculum Catalog and redesigned Teach page to help you find it all!"
 
+  in_partnership_with: "In partnership with"
+
+  afe_partnership_logo_alt: "Amazon Future Engineer logo"
+  afe_partnership_thanks_desc: "Amazon Future Engineer is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. [Learn about our partnership](%{afe_url})."
+
   grade_level_label_elementary: "Elementary School"
   grade_level_label_middle: "Middle School"
   grade_level_label_high: "High School"

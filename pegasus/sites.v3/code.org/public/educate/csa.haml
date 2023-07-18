@@ -79,4 +79,10 @@ theme: responsive_full_width
   .wrapper
     = view :support_and_questions_section
 
+= view :section_divider_line
+
+%section
+  .wrapper
+    = view :afe_partnership_block
+
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::CSA_CURRICULUM_PAGE_VISITED_EVENT
