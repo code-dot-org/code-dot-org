@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-03 21:02:03 UTC",
+    "serialized_at": "2023-07-17 02:02:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1340,7 +1340,7 @@
       "key": "1f6d55ae-b277-4deb-b636-b2ea7d7d9db3",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the video [Data Visualizer in App Lab - Part 2](https://youtu.be/OjUEFHo3Yw0)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Give students access to [Exploring Two Columns](https://docs.google.com/document/d/12GkfXmELZiGPppfigSKRlgbPuizaYpXniW0lAFu8A08/edit), ideally in digital form.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the video [Data Visualizer in App Lab - Part 2](https://youtu.be/OjUEFHo3Yw0)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Give students access to [r exploring_two_columns/csp/2023], ideally in digital form.",
         "name": "Making Crosstab Charts",
         "tips": [
           {
@@ -1502,7 +1502,7 @@
       "key": "30756f7e-cc96-45aa-84ce-5513ac8aa588",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Give each pair a copy of the [Big, Open, and Crowdsourced Data](https://docs.google.com/document/d/11MgQaSrHA9FgQuXpasyEuO5zSDVLxiCZFU6uoz5Hy6A/edit)",
+        "description": "**Distribute:** Give each pair a copy of the [r big_open_and_crowdsourced_data/csp/2023]",
         "tips": [
           {
             "type": "teachingTip",
@@ -1579,7 +1579,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Alternatives to AI For Ocenas:** AI for Oceans was orginally developed as an Hour of Code activity that can be completed by students with any device available. We have modified it for its usage here. Depending on your classroom situation, you might opt to replace the activity with:\r\n\r\n* [Teachable Machines](https://teachablemachine.withgoogle.com/) - *Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone. Teachable Machine is flexible – use files or capture examples live. It’s respectful of the way you work. You can even choose to use it entirely on-device, without any webcam or microphone data leaving your computer.* \r\n\t* If your classrooms devices have cameras, Teachable Machines offers an engaging way to create training sets. Encourage students to teach the machine to represent rock, paper, or scissors with hand gestures. What are some possible ways for bias to enter in?\r\n\r\n\r\n* [Machine Learning for Kids](https://machinelearningforkids.co.uk/#!/about) - *This free tool introduces machine learning by providing hands-on experiences for training machine learning systems and building things with them. It provides an easy-to-use guided environment for training machine learning models to recognise text, numbers, images, or sounds.*\r\n\t* Machine Learning for Kids is a great option if your students want to work with text samples. Teach the machine to recognize words or passages that are happy or sad. Lots to play around with here! \r\n"
+            "markdown": "**Alternatives to AI For Ocenas:** AI for Oceans was orginally developed as an Hour of Code activity that can be completed by students with any device available. We have modified it for its usage here. Depending on your classroom situation, you might opt to replace the activity with:\n\n* [Teachable Machine](https://teachablemachine.withgoogle.com/) - *Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone. Teachable Machine is flexible – use files or capture examples live. It’s respectful of the way you work. You can even choose to use it entirely on-device, without any webcam or microphone data leaving your computer.* \n\t* If your classrooms devices have cameras, Teachable Machines offers an engaging way to create training sets. Encourage students to teach the machine to represent rock, paper, or scissors with hand gestures. What are some possible ways for bias to enter in?\n\n\n* [Machine Learning for Kids](https://machinelearningforkids.co.uk/#!/about) - *This free tool introduces machine learning by providing hands-on experiences for training machine learning systems and building things with them. It provides an easy-to-use guided environment for training machine learning models to recognise text, numbers, images, or sounds.*\n\t* Machine Learning for Kids is a great option if your students want to work with text samples. Teach the machine to recognize words or passages that are happy or sad. Lots to play around with here! \n"
           }
         ]
       },
