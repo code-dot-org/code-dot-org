@@ -260,12 +260,13 @@ end
 
 def sort_and_sanitize(hash)
   hash.sort_by {|key, _| key}.each_with_object({}) do |(key, value), result|
-    if value.is_a? Hash
+    case value
+    when Hash
       sorted_value = sort_and_sanitize(value)
       result[key] = sorted_value unless sorted_value.nil? || sorted_value.empty?
-    elsif value.is_a? Array
+    when Array
       result[key] = value.filter_map {|v| v.is_a?(Hash) ? sort_and_sanitize(v) : v}
-    elsif value.is_a? String
+    when String
       result[key] = value.gsub(/\\r/, "\r")
     else
       result[key] = value unless value.nil?
