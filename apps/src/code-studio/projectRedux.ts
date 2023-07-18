@@ -35,6 +35,8 @@ const initialState: ProjectState = {
   showProjectUpdatedAt: false,
   projectUpdatedStatus: projectUpdatedStatuses.default,
   projectUpdatedAt: undefined,
+  // This is the legacy project name. The lab2 project
+  // name is part of lab2Redux, in the channel.
   projectName: '',
   projectNameFailure: undefined,
   showTryAgainDialog: false,
