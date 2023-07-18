@@ -3,7 +3,7 @@ import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {RemoteSourcesStore} from '@cdo/apps/lab2/projects/SourcesStore';
 import {ProjectSources, Channel} from '@cdo/apps/lab2/types';
 import {expect, assert} from 'chai';
-import {stubObject, StubbedInstance} from 'ts-sinon';
+import sinon, {stubObject, StubbedInstance} from 'ts-sinon';
 
 describe('ProjectManager', () => {
   let sourcesStore: StubbedInstance<RemoteSourcesStore>;
@@ -149,6 +149,20 @@ describe('ProjectManager', () => {
     // We only save the first channel update in emergency mode.
     assert.isTrue(sourcesStore.save.calledTwice);
     assert.isTrue(channelsStore.save.calledOnce);
+  });
+
+  it('triggers save noop event if save called before load', async () => {
+    const projectManager = new ProjectManager(
+      sourcesStore,
+      channelsStore,
+      FAKE_CHANNEL_ID,
+      false
+    );
+
+    const noopListener = sinon.stub();
+    projectManager.addSaveNoopListener(noopListener);
+    projectManager.save(UPDATED_SOURCE);
+    assert.isTrue(noopListener.calledOnce);
   });
 
   it('only triggers a channel save on rename', async () => {
