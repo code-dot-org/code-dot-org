@@ -2,50 +2,194 @@
   "mn-MN": {
     "data": {
       "start_html": {
+        "AllTheThings Applab DesignModeDefault": {
+          "Enter The Passphrase": "",
+          "Login": ""
+        },
+        "AppLab Intro 7 - Change Text 2": {
+          "Make me bigger and blue!": ""
+        },
+        "AppLab Intro 7 - Full Text": {
+          "Make me blue!": "",
+          "Make me red!": "",
+          "Write code to change my text!": ""
+        },
+        "AppLab Intro 7 - onEvent intro": {
+          "Green-ify!": ""
+        },
+        "AppLab Intro 7 - onEvent twoButtons": {
+          "Flashlight App": "",
+          "Off": "",
+          "On": ""
+        },
+        "AppLab Intro 7 - playSound": {
+          "Animal Sound Board!!!": "",
+          "Horse!": "",
+          "Monkey!": "",
+          "Tiger!": "",
+          "You Choose!": ""
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "This or That?!": "",
+          "This!": "",
+          "You clicked this!": ""
+        },
+        "AppLab Intro 7 - thisOrThatPersonalize": {
+          "This or That?!": "",
+          "This!": "",
+          "You clicked this!": ""
+        },
+        "AppLab Intro 7 - thisOrThatSetScreen": {
+          "This or That?!": "",
+          "This!": "",
+          "You clicked this!": ""
+        },
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Тийм",
+          "1584 Maple St": "",
+          "Are you allergic to pet fur?": "",
+          "Click here to start!": "",
+          "Closest pet shop:": "",
+          "Crowd": "",
+          "Different": "",
+          "Do you like going outside?": "",
+          "Do you want to play with the pet?": "",
+          "Downtown Pets and More": "",
+          "Find it!": "",
+          "Get a bettafish!": "",
+          "Get a dog!": "",
+          "Get a goat!": "",
+          "Get a hamster!": "",
+          "Get a parrot!": "",
+          "Get a rat!": "",
+          "Get a scorpion!": "",
+          "Get a tarantula!": "",
+          "How cute should the pet be?": "",
+          "Medium Cute": "",
           "No": "Үгүй",
+          "Open Now!": "",
+          "Pet Chooser!": "",
+          "Should the pet be noisy?": "",
+          "Should your pet be cute or creepy?": "",
+          "The Ultimate": "",
+          "Very Cute": "",
+          "Would you rather go with the crowd or be different?": "",
+          "Yes": "Тийм",
+          "creepy": "",
           "cute": "өхөөрдөм"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Тийм",
+          "1584 Maple St": "",
+          "Are you allergic to pet fur?": "",
+          "Click here to start!": "",
+          "Closest pet shop:": "",
+          "Crowd": "",
+          "Different": "",
+          "Do you like going outside?": "",
+          "Do you want to play with the pet?": "",
+          "Downtown Pets and More": "",
+          "Find it!": "",
+          "Get a bettafish!": "",
+          "Get a dog!": "",
+          "Get a goat!": "",
+          "Get a hamster!": "",
+          "Get a parrot!": "",
+          "Get a rat!": "",
+          "Get a scorpion!": "",
+          "Get a tarantula!": "",
+          "How cute should the pet be?": "",
+          "Medium Cute": "",
           "No": "Үгүй",
+          "Open Now!": "",
+          "Pet Chooser!": "",
+          "Should the pet be noisy?": "",
+          "Should your pet be cute or creepy?": "",
+          "The Ultimate": "",
+          "Very Cute": "",
+          "Would you rather go with the crowd or be different?": "",
+          "Yes": "Тийм",
+          "creepy": "",
           "cute": "өхөөрдөм"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Тийм",
+          "Are you allergic to pet fur?": "",
+          "Click here to start!": "",
+          "Crowd": "",
+          "Different": "",
+          "Do you like going outside?": "",
+          "Do you want to play with the pet?": "",
+          "Get a bettafish!": "",
+          "Get a dog!": "",
+          "Get a goat!": "",
+          "Get a hamster!": "",
+          "Get a parrot!": "",
+          "Get a rat!": "",
+          "Get a scorpion!": "",
+          "Get a tarantula!": "",
+          "How cute should the pet be?": "",
+          "Medium Cute": "",
           "No": "Үгүй",
+          "Pet Chooser!": "",
+          "Should the pet be noisy?": "",
+          "Should your pet be cute or creepy?": "",
+          "The Ultimate": "",
+          "Very Cute": "",
+          "Would you rather go with the crowd or be different?": "",
+          "Yes": "Тийм",
+          "creepy": "",
           "cute": "өхөөрдөм"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Тийм",
+          "Are you allergic to pet fur?": "",
+          "Click here to start!": "",
+          "Crowd": "",
+          "Different": "",
+          "Do you like going outside?": "",
+          "Do you want to play with the pet?": "",
+          "Get a bettafish!": "",
+          "Get a dog!": "",
+          "Get a goat!": "",
+          "Get a hamster!": "",
+          "Get a parrot!": "",
+          "Get a rat!": "",
+          "Get a scorpion!": "",
+          "Get a tarantula!": "",
+          "How cute should the pet be?": "",
+          "Medium Cute": "",
           "No": "Үгүй",
+          "Pet Chooser!": "",
+          "Should the pet be noisy?": "",
+          "Should your pet be cute or creepy?": "",
+          "The Ultimate": "",
+          "Very Cute": "",
+          "Would you rather go with the crowd or be different?": "",
+          "Yes": "Тийм",
+          "creepy": "",
           "cute": "өхөөрдөм"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Нэр",
-          "Color": "Өнгө",
           "City": "Хот",
-          "text": "текст",
-          "Food": "Хоол хүнс"
+          "Color": "Өнгө",
+          "Emotion": "",
+          "Fill in the blanks to create a custom story!": "",
+          "Food": "Хоол хүнс",
+          "Make a Sci-Fi Story!": "",
+          "Make a Western Story!": "",
+          "Name": "Нэр",
+          "text": "текст"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Нэр",
-          "Color": "Өнгө",
           "City": "Хот",
-          "text": "текст",
-          "Food": "Хоол хүнс"
+          "Color": "Өнгө",
+          "Emotion": "",
+          "Fill in the blanks to create a custom story!": "",
+          "Food": "Хоол хүнс",
+          "Make a Sci-Fi Story!": "",
+          "Make a Western Story!": "",
+          "Name": "Нэр",
+          "text": "текст"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -56,18 +200,46 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "21": "",
+          "22": "",
+          "23": "",
+          "24": "",
+          "25": "",
+          "26": "",
+          "27": "",
+          "28": "",
+          "29": "",
+          "3": "3",
+          "30": "",
+          "31": "",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "April": "",
+          "August": "",
+          "Choose your Birthday!": "",
+          "December": "",
+          "February": "",
+          "Find out if it's your birthday!": "",
+          "It was already your birthday this year!!": "",
+          "It's not your birthday yet this year!": "",
+          "It's your birthday!": "",
+          "January": "",
+          "July": "",
+          "June": "",
+          "March": "",
+          "May": "",
+          "November": "",
+          "October": "",
+          "September": ""
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -78,29 +250,86 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "21": "",
+          "22": "",
+          "23": "",
+          "24": "",
+          "25": "",
+          "26": "",
+          "27": "",
+          "28": "",
+          "29": "",
+          "3": "3",
+          "30": "",
+          "31": "",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "April": "",
+          "August": "",
+          "Choose your Birthday!": "",
+          "December": "",
+          "February": "",
+          "Find out if it's your birthday!": "",
+          "It was already your birthday this year!!": "",
+          "It's not your birthday yet this year!": "",
+          "It's your birthday!": "",
+          "January": "",
+          "July": "",
+          "June": "",
+          "March": "",
+          "May": "",
+          "November": "",
+          "October": "",
+          "September": ""
+        },
+        "CSD U1 processing countries_2021": {
+          "32": "",
+          "How Many Countries...": "",
+          "are bigger than Alaska?": "",
+          "are decreasing population?": "",
+          "are land locked?": "",
+          "have more than a billion people?": "",
+          "have no land borders?": "",
+          "have sent people to space?": "",
+          "have won the World Cup?": ""
+        },
+        "CSD U1 processing countries_2022": {
+          "32": "",
+          "How Many Countries...": "",
+          "are bigger than Alaska?": "",
+          "are decreasing population?": "",
+          "are land locked?": "",
+          "have more than a billion people?": "",
+          "have no land borders?": "",
+          "have sent people to space?": "",
+          "have won the World Cup?": ""
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
+          "It's a tie!": "",
+          "Put one finger on the 's' key and the other on the 'k' key. Then click as fast as you can.": "",
+          "Which finger is the FASTEST?": "",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
+          "It's a tie!": "",
+          "Put one finger on the 's' key and the other on the 'k' key. Then click as fast as you can.": "",
+          "Which finger is the FASTEST?": "",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
+          "100": "",
           "11": "11",
           "12": "12",
           "13": "13",
@@ -110,20 +339,109 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "21": "",
+          "22": "",
+          "23": "",
+          "24": "",
+          "25": "",
+          "26": "",
+          "27": "",
+          "28": "",
+          "29": "",
+          "3": "3",
+          "30": "",
+          "31": "",
+          "32": "",
+          "33": "",
+          "34": "",
+          "35": "",
+          "36": "",
+          "37": "",
+          "38": "",
+          "39": "",
+          "4": "4",
+          "40": "",
+          "41": "",
+          "42": "",
+          "43": "",
+          "44": "",
+          "45": "",
+          "46": "",
+          "47": "",
+          "48": "",
+          "49": "",
+          "5": "5",
+          "50": "",
+          "51": "",
+          "52": "",
+          "53": "",
+          "54": "",
+          "55": "",
+          "56": "",
+          "57": "",
+          "58": "",
+          "59": "",
+          "6": "6",
+          "60": "",
+          "61": "",
+          "62": "",
+          "63": "",
+          "64": "",
+          "65": "",
+          "66": "",
+          "67": "",
+          "68": "",
+          "69": "",
+          "7": "7",
+          "70": "",
+          "71": "",
+          "72": "",
+          "73": "",
+          "74": "",
+          "75": "",
+          "76": "",
+          "77": "",
+          "78": "",
+          "79": "",
+          "8": "8",
+          "80": "",
+          "81": "",
+          "82": "",
+          "83": "",
+          "84": "",
+          "85": "",
+          "86": "",
+          "87": "",
+          "88": "",
+          "89": "",
+          "9": "9",
+          "90": "",
+          "91": "",
+          "92": "",
+          "93": "",
+          "94": "",
+          "95": "",
+          "96": "",
+          "97": "",
+          "98": "",
+          "99": "",
+          "?": "",
+          "Can you guess it?": "",
+          "I'm thinking of a number from 1 to 100.": "",
+          "No more tries!": "",
+          "The number was": "",
+          "You haven't guessed yet.": "",
+          "You only have 5 tries.": "",
+          "You won!": "",
+          "Your guess:": "",
           "text": "текст"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
+          "100": "",
           "11": "11",
           "12": "12",
           "13": "13",
@@ -133,37 +451,217 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "21": "",
+          "22": "",
+          "23": "",
+          "24": "",
+          "25": "",
+          "26": "",
+          "27": "",
+          "28": "",
+          "29": "",
+          "3": "3",
+          "30": "",
+          "31": "",
+          "32": "",
+          "33": "",
+          "34": "",
+          "35": "",
+          "36": "",
+          "37": "",
+          "38": "",
+          "39": "",
+          "4": "4",
+          "40": "",
+          "41": "",
+          "42": "",
+          "43": "",
+          "44": "",
+          "45": "",
+          "46": "",
+          "47": "",
+          "48": "",
+          "49": "",
+          "5": "5",
+          "50": "",
+          "51": "",
+          "52": "",
+          "53": "",
+          "54": "",
+          "55": "",
+          "56": "",
+          "57": "",
+          "58": "",
+          "59": "",
+          "6": "6",
+          "60": "",
+          "61": "",
+          "62": "",
+          "63": "",
+          "64": "",
+          "65": "",
+          "66": "",
+          "67": "",
+          "68": "",
+          "69": "",
+          "7": "7",
+          "70": "",
+          "71": "",
+          "72": "",
+          "73": "",
+          "74": "",
+          "75": "",
+          "76": "",
+          "77": "",
+          "78": "",
+          "79": "",
+          "8": "8",
+          "80": "",
+          "81": "",
+          "82": "",
+          "83": "",
+          "84": "",
+          "85": "",
+          "86": "",
+          "87": "",
+          "88": "",
+          "89": "",
+          "9": "9",
+          "90": "",
+          "91": "",
+          "92": "",
+          "93": "",
+          "94": "",
+          "95": "",
+          "96": "",
+          "97": "",
+          "98": "",
+          "99": "",
+          "?": "",
+          "Can you guess it?": "",
+          "I'm thinking of a number from 1 to 100.": "",
+          "No more tries!": "",
+          "The number was": "",
+          "You haven't guessed yet.": "",
+          "You only have 5 tries.": "",
+          "You won!": "",
+          "Your guess:": "",
           "text": "текст"
         },
         "CSD U1 processing live_2021": {
+          "Answer the questions for advice on where to live. ": "",
+          "How do you like to get around?": "",
+          "Next Question": "",
+          "Start!": "",
+          "What animals are you okay with?": "",
+          "What do you like to do for fun?": "",
+          "What food do you like?": "",
+          "Where should you live?": "",
+          "You should live in a big city.": "",
           "bear": "баавгай",
-          "walking": "алхаж",
-          "rat": "харх"
+          "biking": "",
+          "cookout with friends": "",
+          "coyote": "",
+          "delivery/takeout": "",
+          "drive": "",
+          "go camping": "",
+          "go to sports games": "",
+          "home cooked meals": "",
+          "my regular restaurants": "",
+          "public transit": "",
+          "racoon": "",
+          "rat": "харх",
+          "trying new restaurants": "",
+          "visit museums": "",
+          "walking": "алхаж"
         },
         "CSD U1 processing live_2022": {
+          "Answer the questions for advice on where to live. ": "",
+          "How do you like to get around?": "",
+          "Next Question": "",
+          "Start!": "",
+          "What animals are you okay with?": "",
+          "What do you like to do for fun?": "",
+          "What food do you like?": "",
+          "Where should you live?": "",
+          "You should live in a big city.": "",
           "bear": "баавгай",
-          "walking": "алхаж",
-          "rat": "харх"
+          "biking": "",
+          "cookout with friends": "",
+          "coyote": "",
+          "delivery/takeout": "",
+          "drive": "",
+          "go camping": "",
+          "go to sports games": "",
+          "home cooked meals": "",
+          "my regular restaurants": "",
+          "public transit": "",
+          "racoon": "",
+          "rat": "харх",
+          "trying new restaurants": "",
+          "visit museums": "",
+          "walking": "алхаж"
         },
         "CSD U1 processing npark_2021": {
+          "Acadia": "",
           "Correct!": "Зөв!",
-          "Sorry!": "Уучлаарай!"
+          "Death Valley": "",
+          "Denali": "",
+          "Grand Canyon": "",
+          "Great Smoky Mountains": "",
+          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "",
+          "National Park Quiz": "",
+          "Next Question": "",
+          "Olympic": "",
+          "Play Again": "",
+          "Redwood": "",
+          "Sequoia": "",
+          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "",
+          "Shenandoah": "",
+          "Sorry!": "Уучлаарай!",
+          "Start!": "",
+          "What was the first national park?": "",
+          "Which is the largest national park?": "",
+          "Which national park gets the most visitors?": "",
+          "Which national park has the largest tree in the world?": "",
+          "Wrangell-St. Elias": "",
+          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "",
+          "Yellowstone": "",
+          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "",
+          "Yosemite": ""
         },
         "CSD U1 processing npark_2022": {
+          "Acadia": "",
           "Correct!": "Зөв!",
-          "Sorry!": "Уучлаарай!"
+          "Death Valley": "",
+          "Denali": "",
+          "Grand Canyon": "",
+          "Great Smoky Mountains": "",
+          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "",
+          "National Park Quiz": "",
+          "Next Question": "",
+          "Olympic": "",
+          "Play Again": "",
+          "Redwood": "",
+          "Sequoia": "",
+          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "",
+          "Shenandoah": "",
+          "Sorry!": "Уучлаарай!",
+          "Start!": "",
+          "What was the first national park?": "",
+          "Which is the largest national park?": "",
+          "Which national park gets the most visitors?": "",
+          "Which national park has the largest tree in the world?": "",
+          "Wrangell-St. Elias": "",
+          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "",
+          "Yellowstone": "",
+          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "",
+          "Yosemite": ""
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -174,18 +672,84 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "1998": "",
+          "1999": "",
+          "2": "2",
+          "20": "20",
+          "2000": "",
+          "2001": "",
+          "2002": "",
+          "2003": "",
+          "2004": "",
+          "2005": "",
+          "2006": "",
+          "2007": "",
+          "2008": "",
+          "2009": "",
+          "2010": "",
+          "2011": "",
+          "2012": "",
+          "2013": "",
+          "2014": "",
+          "2015": "",
+          "21": "",
+          "22": "",
+          "23": "",
+          "24": "",
+          "25": "",
+          "26": "",
+          "27": "",
+          "28": "",
+          "29": "",
+          "3": "3",
+          "30": "",
+          "31": "",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "Anchee Min": "",
+          "April": "",
+          "August": "",
+          "December": "",
+          "Enter your Birthday!": "",
+          "February": "",
+          "Find a writer!": "",
+          "Friday": "",
+          "Gabriel Garcia Marquez": "",
+          "January": "",
+          "July": "",
+          "June": "",
+          "Khaled Hosseini": "",
+          "Langston Hughes": "",
+          "March": "",
+          "Margaret Atwood": "",
+          "May": "",
+          "Monday": "",
+          "N. Scott Momaday": "",
+          "November": "",
+          "October": "",
+          "Public Domain": "",
+          "Public Domain Image": "",
+          "Saturday": "",
+          "September": "",
+          "Sunday": "",
+          "Thursday": "",
+          "Toni Morrison": "",
+          "Tuesday": "",
+          "Wednesday": "",
+          "You were born on a": "",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "",
+          "image by Jose Lara, CC-BY-SA": "",
+          "image by Slowking4, GFDL 1.2": "",
+          "image by Vanwaffle, CC BY-SA 3.0": "",
+          "just like": "",
+          "public domain image": ""
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -196,176 +760,689 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "1998": "",
+          "1999": "",
+          "2": "2",
+          "20": "20",
+          "2000": "",
+          "2001": "",
+          "2002": "",
+          "2003": "",
+          "2004": "",
+          "2005": "",
+          "2006": "",
+          "2007": "",
+          "2008": "",
+          "2009": "",
+          "2010": "",
+          "2011": "",
+          "2012": "",
+          "2013": "",
+          "2014": "",
+          "2015": "",
+          "21": "",
+          "22": "",
+          "23": "",
+          "24": "",
+          "25": "",
+          "26": "",
+          "27": "",
+          "28": "",
+          "29": "",
+          "3": "3",
+          "30": "",
+          "31": "",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "Anchee Min": "",
+          "April": "",
+          "August": "",
+          "December": "",
+          "Enter your Birthday!": "",
+          "February": "",
+          "Find a writer!": "",
+          "Friday": "",
+          "Gabriel Garcia Marquez": "",
+          "January": "",
+          "July": "",
+          "June": "",
+          "Khaled Hosseini": "",
+          "Langston Hughes": "",
+          "March": "",
+          "Margaret Atwood": "",
+          "May": "",
+          "Monday": "",
+          "N. Scott Momaday": "",
+          "November": "",
+          "October": "",
+          "Public Domain": "",
+          "Public Domain Image": "",
+          "Saturday": "",
+          "September": "",
+          "Sunday": "",
+          "Thursday": "",
+          "Toni Morrison": "",
+          "Tuesday": "",
+          "Wednesday": "",
+          "You were born on a": "",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "",
+          "image by Jose Lara, CC-BY-SA": "",
+          "image by Slowking4, GFDL 1.2": "",
+          "image by Vanwaffle, CC BY-SA 3.0": "",
+          "just like": "",
+          "public domain image": ""
         },
         "CSD U1 storage friends_2021": {
-          "Back": "Буцах"
+          "Back": "Буцах",
+          "Find Friends": "",
+          "Friend Finder": "",
+          "Friend List": "",
+          "Friend Requests": "",
+          "Friends": ""
         },
         "CSD U1 storage friends_2022": {
-          "Back": "Буцах"
+          "Back": "Буцах",
+          "Find Friends": "",
+          "Friend Finder": "",
+          "Friend List": "",
+          "Friend Requests": "",
+          "Friends": ""
         },
         "CSD U1 storage movies_2021": {
-          "Star Wars": "Оддын дайн",
-          "Yes": "Тийм",
+          "-- Select a movie --": "",
+          "Action": "",
+          "Based on your preferences, we think you should watch:": "",
+          "Choose a Kids Movie: Great for Babysitters!": "",
+          "Comedy": "",
+          "Do you want an animated movie?": "",
+          "Harry Potter": "",
+          "Musical": "",
+          "My Neighbor Totoro": "",
           "No": "Үгүй",
+          "Select your favorite movie": "",
+          "Star Wars": "Оддын дайн",
+          "Tangled": "",
+          "The LEGO Movie": "",
+          "What Should I Watch?": "",
+          "What are you in the mood for?": "",
+          "Yes": "Тийм",
+          "You wanted to watch a:": "",
           "text": "текст"
         },
         "CSD U1 storage movies_2022": {
-          "Star Wars": "Оддын дайн",
-          "Yes": "Тийм",
+          "-- Select a movie --": "",
+          "Action": "",
+          "Based on your preferences, we think you should watch:": "",
+          "Choose a Kids Movie: Great for Babysitters!": "",
+          "Comedy": "",
+          "Do you want an animated movie?": "",
+          "Harry Potter": "",
+          "Musical": "",
+          "My Neighbor Totoro": "",
           "No": "Үгүй",
+          "Select your favorite movie": "",
+          "Star Wars": "Оддын дайн",
+          "Tangled": "",
+          "The LEGO Movie": "",
+          "What Should I Watch?": "",
+          "What are you in the mood for?": "",
+          "Yes": "Тийм",
+          "You wanted to watch a:": "",
           "text": "текст"
         },
         "CSD U1 storage outfit_2021": {
-          "green": "ногоон",
-          "black": "хар",
+          "Autumn": "",
           "Clear": "Тодорхой",
-          "white": "цагаан",
+          "Cloudy": "",
+          "Generate Outfit!": "",
+          "Outfit Picker": "",
+          "Rainy": "",
+          "Spring": "",
+          "Summer": "",
+          "Sunny": "",
+          "What is the weather like today?": "",
+          "What is your favorite color?": "",
+          "What season is it?": "",
+          "Winter": "",
+          "black": "хар",
+          "green": "ногоон",
           "pink": "ягаан",
-          "purple": "Нил ягаан"
+          "purple": "Нил ягаан",
+          "white": "цагаан"
         },
         "CSD U1 storage outfit_2022": {
-          "green": "ногоон",
-          "black": "хар",
+          "Autumn": "",
           "Clear": "Тодорхой",
-          "white": "цагаан",
+          "Cloudy": "",
+          "Generate Outfit!": "",
+          "Outfit Picker": "",
+          "Rainy": "",
+          "Spring": "",
+          "Summer": "",
+          "Sunny": "",
+          "What is the weather like today?": "",
+          "What is your favorite color?": "",
+          "What season is it?": "",
+          "Winter": "",
+          "black": "хар",
+          "green": "ногоон",
           "pink": "ягаан",
-          "purple": "Нил ягаан"
+          "purple": "Нил ягаан",
+          "white": "цагаан"
         },
         "CSD U2 RGB intro": {
           "1": "1",
           "2": "2",
           "3": "3",
           "4": "4",
-          "5": "5"
+          "5": "5",
+          "Click the Run button to start this app": "",
+          "blue: 128": "",
+          "green: 128": "",
+          "red: 128": ""
         },
         "CSD U2 RGB intro_2018": {
           "1": "1",
           "2": "2",
           "3": "3",
           "4": "4",
-          "5": "5"
+          "5": "5",
+          "Click the Run button to start this app": "",
+          "blue: 128": "",
+          "green: 128": "",
+          "red: 128": ""
         },
         "CSD U2 RGB intro_2019": {
           "1": "1",
           "2": "2",
           "3": "3",
           "4": "4",
-          "5": "5"
+          "5": "5",
+          "Click the Run button to start this app": "",
+          "blue: 128": "",
+          "green: 128": "",
+          "red: 128": ""
         },
         "CSD U2 RGB intro_2021": {
           "1": "1",
           "2": "2",
           "3": "3",
           "4": "4",
-          "5": "5"
+          "5": "5",
+          "blue: 128": "",
+          "green: 128": "",
+          "red: 128": ""
         },
         "CSD U2 RGB intro_2022": {
           "1": "1",
           "2": "2",
           "3": "3",
           "4": "4",
-          "5": "5"
+          "5": "5",
+          "blue: 128": "",
+          "green: 128": "",
+          "red: 128": ""
+        },
+        "CSD U2 RGB others": {
+          "blue: 255": "",
+          "green: 255": "",
+          "red: 255": ""
+        },
+        "CSD U2 RGB others_2018": {
+          "blue: 255": "",
+          "green: 255": "",
+          "red: 255": ""
+        },
+        "CSD U2 RGB others_2019": {
+          "blue: 255": "",
+          "green: 255": "",
+          "red: 255": ""
+        },
+        "CSD U2 RGB summer": {
+          "Summer Yellow": "",
+          "blue: 255": "",
+          "green: 255": "",
+          "red: 255": ""
+        },
+        "CSD U2 RGB summer_2018": {
+          "Summer Yellow": "",
+          "blue: 255": "",
+          "green: 255": "",
+          "red: 255": ""
+        },
+        "CSD U2 RGB summer_2019": {
+          "Summer Yellow": "",
+          "blue: 255": "",
+          "green: 255": "",
+          "red: 255": ""
+        },
+        "CSD U2 RGB winter": {
+          "Winter Blue": "",
+          "blue: 255": "",
+          "green: 255": "",
+          "red: 255": ""
+        },
+        "CSD U2 RGB winter_2018": {
+          "Winter Blue": "",
+          "blue: 255": "",
+          "green: 255": "",
+          "red: 255": ""
+        },
+        "CSD U2 RGB winter_2019": {
+          "Winter Blue": "",
+          "blue: 255": "",
+          "green: 255": "",
+          "red: 255": ""
+        },
+        "CSD U6 - Accelerometer - A_2222": {
+          "Click on an image below to learn more about each person": "",
+          "Pioneers in Electronics": ""
+        },
+        "CSD U6 - Accelerometer - ChalA_2222": {
+          "pitch:": "",
+          "roll:": ""
+        },
+        "CSD U6 - Accelerometer - ChalC_2222": {
+          "Wheels Are Aligned": ""
+        },
+        "CSD U6 - Accelerometer - PA_2222": {
+          "Game Over": "",
+          "Movement Meter:": "",
+          "Pass your board to the person next to you!": ""
         },
         "CSD U6 - Accelerometer - PB_2222": {
-          "0": "0"
+          "0": "0",
+          "Shake or tap your board to move the person to the finish line!": "",
+          "Steps Taken:": "",
+          "You Did It!": ""
         },
         "CSD U6 - Accelerometer - PD_2222": {
+          "Get to the checkered flag but don't hit the red ones!": "",
           "You did it!": "Та үүнийг хийлээ!"
         },
         "CSD U6 - Accelerometer - PF_2222": {
-          "0": "0"
+          "0": "0",
+          "Press the right button on the circuit playground to lock in your number!": "",
+          "Target Number": "",
+          "Tilt the board left and right to change your number. Try to get it as close to the target number as possible!Your NumberTarget Number00Press the right button on the circuit playground to lock in your number!": "",
+          "Try to get it as close to the target number as possible!": "",
+          "Your Number": ""
+        },
+        "CSD U6 - Accelerometer - P_2222": {
+          "pitch:": "",
+          "roll:": ""
+        },
+        "CSD U6 - Accelerometer - SB1_2222": {
+          "pitch:": "",
+          "roll:": ""
+        },
+        "CSD U6 - Accelerometer - SB3_2222": {
+          "????": ""
+        },
+        "CSD U6 - Board Inputs - A_2222": {
+          "Beware before you knock on the door!": "",
+          "Mood Descriptor": "",
+          "This app shows how I'm currently feeling.Beware before you knock on the door!": ""
+        },
+        "CSD U6 - Board Inputs - PracA_2222": {
+          "This is a Label": ""
         },
         "CSD U6 - Board Inputs - SB1_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Board Inputs - SB2_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Board Inputs - SB3_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
+        },
+        "CSD U6 - Board Inputs - SB4_2222": {
+          "Nothing to see here...": "",
+          "The Password is \"Sushi\"": ""
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "Decorate your Circuit Playground to look like your own personal monster, then use the buttons below to give it different emotions!": "",
+          "Happy": "",
+          "My Personal Monster": "",
+          "Nervous": "",
+          "Sleepy": ""
+        },
+        "CSD U6 - Board Outputs - P2_2222": {
+          "High": "",
+          "Low": "",
+          "Mid": ""
         },
         "CSD U6 - Board Outputs - P_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Click Me": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
+        },
+        "CSD U6 - Board Outputs - PracA_2222": {
+          "Off": "",
+          "On": ""
+        },
+        "CSD U6 - Board Outputs - PracB_2222": {
+          "Click the mouse to make it squeak!": ""
+        },
+        "CSD U6 - Board Outputs - PracC_2222": {
+          "Light Off": "",
+          "Light On": ""
+        },
+        "CSD U6 - Board Outputs - PracD_2222": {
+          "100": "",
+          "200": "",
+          "300": "",
+          "400": "",
+          "500": "",
+          "600": "",
+          "700": "",
+          "800": "",
+          "900": ""
+        },
+        "CSD U6 - Board Outputs - PracE_2222": {
+          "1 Second": "",
+          "100 Milliseconds": "",
+          "2 Seconds": "",
+          "4 Seconds": "",
+          "Half a Second": "",
+          "Quarter of a Second": ""
         },
         "CSD U6 - Board Outputs - SB1_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "OFF": "",
+          "ON": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Board Outputs - SB2_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": "",
+          "change the light": ""
+        },
+        "CSD U6 - Board Outputs - SB3_2222": {
+          "Long": "",
+          "Short": ""
+        },
+        "CSD U6 - Board Outputs - SB4_2222": {
+          "Cat": "",
+          "Dog": "",
+          "Fish": "",
+          "Lizard": "",
+          "Which type of animal makes the best pet?": ""
         },
         "CSD U6 - Board Outputs - Setup_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Connect your board to an LED, then plug it in and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
+        },
+        "CSD U6 - Color LEDs - A_2222": {
+          "Red Green Blue": ""
+        },
+        "CSD U6 - Color LEDs - CA_2222": {
+          "Toggle Next LED": ""
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
-          "North": "Хойд",
-          "South": "Өмнөд",
           "East": "Дорнод",
+          "North": "Хойд",
+          "Off": "",
+          "South": "Өмнөд",
           "West": "Өрнөд"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
+        },
+        "CSD U6 - Color LEDs - PracB_2222": {
+          "LED 0": "",
+          "LED 1": "",
+          "LED 2": "",
+          "LED 3": "",
+          "LED 4": "",
+          "LED 5": "",
+          "LED 6": "",
+          "LED 7": "",
+          "LED 8": "",
+          "LED 9": ""
+        },
+        "CSD U6 - Color LEDs - PracC_2222": {
+          "OFF": "",
+          "ON": ""
+        },
+        "CSD U6 - Color LEDs - PracD_2222": {
+          "Left": "",
+          "Right": ""
+        },
+        "CSD U6 - Color LEDs - SB1_2222": {
+          "Turn off bottom color LEDs": "",
+          "Turn on bottom color LEDs": ""
         },
         "CSD U6 - Color LEDs - SB2_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Color LEDs - SB3_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Color LEDs - SB4_2222": {
-          "Medium": "Дундаж"
+          "Bright": "",
+          "Dim": "",
+          "Medium": "Дундаж",
+          "Rainbow Lights!": ""
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "left": "зүүн",
-          "right": "баруун",
-          "red": "улаан",
+          "Activate Traffic Signal": "",
+          "Brightness:": "",
+          "Color:": "",
+          "Direction:": "",
+          "Traffic Control App": "",
+          "Use this app to control a traffic signal in the road so cars know to avoid construction. You can set the direction to guide traffic, along with the color and brightness of the lightsDirection:Color:Brightness:leftrightredyellowgreenpurple": "",
+          "You can set the direction to guide traffic, along with the color and brightness of the lights": "",
           "green": "ногоон",
-          "yellow": "шар",
-          "purple": "Нил ягаан"
+          "left": "зүүн",
+          "purple": "Нил ягаан",
+          "red": "улаан",
+          "right": "баруун",
+          "yellow": "шар"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "асах",
+          "Buzzer Controls": "",
+          "LED Controls": "",
+          "Press the left buttonto control the buzzer": "",
+          "Use the toggle switch to control the LED": "",
+          "blink": "",
           "fast": "хурдан",
-          "slow": "удаан",
+          "high": "",
+          "long": "урт",
+          "low": "",
+          "on": "асах",
+          "pulse": "",
           "short": "богино",
-          "long": "урт"
+          "slow": "удаан"
+        },
+        "CSD U6 - Combine Inputs - ChalA_2222": {
+          "(Add your mood here)": "",
+          "Choose your mood from the dropdown below and the LED ring will update to reflect it": "",
+          "Excited": "",
+          "Mood Ring": "",
+          "Relaxed": ""
+        },
+        "CSD U6 - Combine Inputs - ChalC_2222": {
+          "Check Answer!": "",
+          "Make sure to enter your answer in all lowercase!": "",
+          "Trivia Game!": "",
+          "[Enter your trivia question here!]": ""
+        },
+        "CSD U6 - Combine Inputs - ChalG_2222": {
+          "Blue": "",
+          "Green": "",
+          "Red": ""
+        },
+        "CSD U6 - Combine Inputs - P_2222": {
+          "Choose your LED style, then use the left and right buttons on your Circuit Playground to turn the LED off and on.": "",
+          "Off": "",
+          "blink": "",
+          "pulse": ""
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
+          "Choose which LEDs to turn on with the circuit playground, then click the left board button to turn those on.": "",
+          "LED Control": "",
           "left": "зүүн",
           "right": "баруун"
         },
+        "CSD U6 - Combine Inputs - PracB_2222": {
+          "Bedside Nightlight": "",
+          "Whether you are reading your favorite book or just want to keep the monsters away you can choose the light intensity that will light up your night just use the slider, which will update the lights. Turn the lights off with the right button": "",
+          "bright": "",
+          "dim": ""
+        },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "ногоон",
+          "Use the dropdown to change the color of the LEDs": "",
           "blue": "цэнхэр",
-          "yellow": "шар",
-          "orange": "улбар шар"
+          "green": "ногоон",
+          "orange": "улбар шар",
+          "yellow": "шар"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
+          " Use the settings menu below to customize how loud your alarm clock will sound when it goes off, then press the \"Test\" button to see and hear what it sounds like.": "",
+          "Beach Vacation Alarm Clock": "",
           "Test": "Test",
+          "loud": "",
           "quiet": "нам гүм"
         },
+        "CSD U6 - Combine Inputs - SB1_2222": {
+          "Choose your LED and buzzer styles, then use the left and right buttons on your Circuit Playground to turn the them on and off.": "",
+          "Off": "",
+          "blink": "",
+          "long buzz": "",
+          "pulse": "",
+          "short buzz": ""
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "богино",
-          "long": "урт"
+          "Buzzer Control": "",
+          "Choose the duration of the buzz with the slider, then click the left board button to turn it on.": "",
+          "long": "урт",
+          "short": "богино"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "богино",
-          "long": "урт"
+          "Chris- Short and Low": "",
+          "Front Door Buzzer Control": "",
+          "Mac the Dog- Long and High": "",
+          "Pat- Long and Low": "",
+          "Reggie- Short and HighPat- Long and LowChris- Short and LowMac the Dog- Long and High": "",
+          "Welcome to our home please set the buzzer to the frequency and durationof who you would like to answer the door. Once you are set use the left button to activate and the right person will meet you at the door.": "",
+          "high": "",
+          "long": "урт",
+          "low": "",
+          "short": "богино"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "богино",
-          "long": "урт"
+          "Choose the blink speed with the slider, which will update the lights. Turn the lights off with the right button.": "",
+          "LED Control": "",
+          "long": "урт",
+          "short": "богино"
+        },
+        "CSD U6 - Functions - P2C_2222": {
+          "Blue": "",
+          "Red": "",
+          "Yellow": ""
         },
         "CSD U6 - Functions - P_2222": {
-          "0": "0"
+          "0": "0",
+          "Current Happiness Value": "",
+          "Happiness Tracker": "",
+          "Press the buttons on your circuit playground to track how you're feeling. Based on your happiness value, the screen will change to reflect how you feel": ""
+        },
+        "CSD U6 - Functions - SB6_2222": {
+          "Click ona food to offer it to the aliens!": ""
         },
         "CSD U6 - Functions - SB7_2222": {
-          "0": "0"
+          "0": "0",
+          "Click An Alien To Increase Your Score!": "",
+          "Score:": ""
+        },
+        "CSD U6 - Functions - SB_2222": {
+          "Light Show!": ""
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "Every time you do a good deed or make a positive comment, press a button on your Circuit Playground to increase the size of the heart. Try to get your heart to fill the whole box with positivity!": "",
+          "Positive Attitude App": ""
+        },
+        "CSD U6 - If Variables - ChalA_2222": {
+          "Hey - what's the name of that Indian restaurant we went to last week?": "",
+          "Oh awesome! You should try their Saag Aloo": "",
+          "Oh yah? What's in that?": "",
+          "Saffron Indian - why?": "",
+          "Spinach and potatoes - it's yummy!": "",
+          "We want to go back. Their Naan was really good!": ""
+        },
+        "CSD U6 - If Variables - ChalB_2222": {
+          "Press the left and right buttons to raise and lower the water in the bath tub. If the water gets too close to the edge, the app will buzz to warn you!": ""
+        },
+        "CSD U6 - If Variables - ChalC_2222": {
+          "Blue Player Wins!": "",
+          "Emoji Race!": "",
+          "Press the left button to move the red emoji. Press the right button to move the blue emoji. Whoever reaches the bottom of the screen first is the winner!": "",
+          "Red Player Wins!": ""
         },
         "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0",
+          "Recommend": "",
+          "Use the buttons on the screen to enter your age. Then press the \"Recommend\" button to view a recommendation!": ""
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Нэр"
@@ -373,7 +1450,101 @@
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
         },
+        "CSD U6 - If Variables - SB7_2222": {
+          "psst... come closer...": ""
+        },
+        "CSD U6 - Music - A_2222": {
+          "Click the buttons below to change the emotion of the emoji. When you do, a song will play to match that emotion.HappySad": "",
+          "Happy": "",
+          "Musical Emojis": "",
+          "Sad": "",
+          "When you do, a song will play to match that emotion.": ""
+        },
+        "CSD U6 - Music - ChalB_2222": {
+          "Happy Birthday": "",
+          "My Song": ""
+        },
+        "CSD U6 - Music - ChalC_2222": {
+          "Alarm Clock Settings": "",
+          "Alert": "",
+          "Choose an alarm preference from the dropdown below": "",
+          "Test the Alarm": "",
+          "[Add your own style here]": ""
+        },
         "CSD U6 - Music - ChalD_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "Clear Song": "",
+          "D": "D",
+          "E": "З",
+          "F": "F",
+          "G": "G",
+          "Play Song!": ""
+        },
+        "CSD U6 - Music - P_2222": {
+          "261": "",
+          "329": "",
+          "392": "",
+          "493": "",
+          "B4": "",
+          "C4": "",
+          "E4": "",
+          "G4": ""
+        },
+        "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "A#": "",
+          "B": "B",
+          "C": "C",
+          "C#": "",
+          "D": "D",
+          "D#": "",
+          "E": "З",
+          "F": "F",
+          "F#": "",
+          "Frequency:": "",
+          "G": "G",
+          "G#": "",
+          "Note:": "Тэмдэглэл:"
+        },
+        "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "A#": "",
+          "B": "B",
+          "C": "C",
+          "C#": "",
+          "D": "D",
+          "D#": "",
+          "E": "З",
+          "F": "F",
+          "F#": "",
+          "G": "G",
+          "G#": ""
+        },
+        "CSD U6 - Music - SB2.1_2022": {
+          "Click the buttons from top to bottom to hear a song!": "",
+          "Note 1": "",
+          "Note 2": "",
+          "Note 3": "",
+          "Note 4": "",
+          "Note 5": "",
+          "Note 6": "",
+          "Note 7": "",
+          "Note 8": ""
+        },
+        "CSD U6 - Music - SB2.2_2022": {
+          "Click the buttons from top to bottom to hear a song!": "",
+          "Note 1": "",
+          "Note 2": "",
+          "Note 3": "",
+          "Note 4": "",
+          "Note 5": "",
+          "Note 6": "",
+          "Note 7": "",
+          "Note 8": ""
+        },
+        "CSD U6 - Music - SB2.5_2222": {
           "A": "A",
           "B": "B",
           "C": "C",
@@ -382,540 +1553,1868 @@
           "F": "F",
           "G": "G"
         },
-        "CSD U6 - Music - Piano_2222": {
-          "C": "C",
-          "D": "D",
-          "E": "З",
-          "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B",
-          "Note:": "Тэмдэглэл:"
-        },
-        "CSD U6 - Music - SB1_2222": {
-          "C": "C",
-          "D": "D",
-          "E": "З",
-          "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
-        },
-        "CSD U6 - Music - SB2.5_2222": {
-          "C": "C",
-          "D": "D",
-          "E": "З",
-          "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+        "CSD U6 - Music - SB2_2222": {
+          "C1": "",
+          "C2": "",
+          "C3": "",
+          "C4": "",
+          "C5": "",
+          "C6": "",
+          "C7": "",
+          "C8": "",
+          "Press each button to hear the note in that octave!": ""
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "A#": "",
+          "B": "B",
           "C": "C",
+          "C#": "",
           "D": "D",
+          "D#": "",
           "E": "З",
           "F": "F",
+          "F#": "",
           "G": "G",
-          "A": "A",
-          "B": "B"
+          "G#": ""
         },
         "CSD U6 - Music - SB4_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
+        },
+        "CSD U6 - Music - SB5_2222": {
+          "Press to Ring the Doorbell!": ""
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
-          "2": "2"
+          "2": "2",
+          "Escape Room!": "",
+          "Find the buttons hidden around the room. When you press a button, one of the digits will be revealed!": "",
+          "In order to escape, you need enter the correct 3-digit number!Find the buttons hidden around the room. When you press a button, one of the digits will be revealed!Once you've found all 3 digits, enter them in to escape the room!122You Won!": "",
+          "Once you've found all 3 digits, enter them in to escape the room!": "",
+          "You Won!": ""
         },
         "CSD U6 - Physical Input - ChalA_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Physical Input - ChalB_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Physical Input - ChalC_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "Оноо",
-          "0": "0"
+          "0": "0",
+          "Score": "Оноо"
         },
         "CSD U6 - Physical Input - PC_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Physical Input - PD_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Physical Input - SB1_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
+        },
+        "CSD U6 - Physical Output - A_2222": {
+          "Listen": "",
+          "Little Alien Friend": "",
+          "Sleep": "",
+          "Use this app to communicate with the Little Alien Friend toy!": "",
+          "Wake Up": ""
         },
         "CSD U6 - Physical Output - ChalA_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Physical Output - ChalB_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Physical Output - ChalC_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
+        },
+        "CSD U6 - Physical Output - PA_2222": {
+          "Blink": "",
+          "Off": "",
+          "On": ""
         },
         "CSD U6 - Physical Output - PB_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Physical Output - PC_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Physical Output - P_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Connect your board to an LED, then plug it in and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Physical Output - SB1_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Physical Output - SB2.2_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Physical Output - SB2_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Follow the instructions in this level, then plug in your board and press Run": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 - Screen Inputs - A_2222": {
-          "Name:": "Нэр:"
+          "Background:": "",
+          "Customize Your Theme": "",
+          "Font Size:": "",
+          "Name:": "Нэр:",
+          "Preview Theme": "",
+          "Your Name": ""
+        },
+        "CSD U6 - Screen Inputs - ChalA_2222": {
+          "Excitement Meter": "",
+          "Use the slide to represent your excitement! As you move the slider, the image will adjust to reflect your level of excitement": ""
+        },
+        "CSD U6 - Screen Inputs - ChalB_2222": {
+          "Blue": "",
+          "Green": "",
+          "Red": ""
+        },
+        "CSD U6 - Screen Inputs - ChalC_2222": {
+          "Option 1": "",
+          "Option 2": "",
+          "Pet Adoptions!": "",
+          "Use the dropdown below to see which pets are available for adoption": "",
+          "Visit our website to adopt a pet!": ""
+        },
+        "CSD U6 - Screen Inputs - ChalD_2222": {
+          "Enter words that will be used in a story on the next screens!": "",
+          "In design mode, replace this with the final part of your story!": "",
+          "In design mode, replace this with the first part of your story!": "",
+          "In design mode, replace this with the second part of your story!": "",
+          "Next Page": "",
+          "Part 1": "",
+          "Part 2": "",
+          "Part 3": "",
+          "Start The Story!": "",
+          "Story Generator!": ""
         },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "",
+          "Fav Color:": "",
+          "Green": "",
+          "How I feel about dogs:": "",
+          "Indigo": "",
+          "My favorite color is:": "",
+          "My name is: ": "",
           "Name:": "Нэр:",
-          "Save": "Хадгалах"
+          "On a scale from 1-3, how do you feel about dogs?": "",
+          "Orange": "",
+          "Profile Editor": "",
+          "Red": "",
+          "Save": "Хадгалах",
+          "Violet": "",
+          "Yellow": ""
+        },
+        "CSD U6 - Screen Inputs - PracA_2222": {
+          "Create!": "",
+          "Select Background": "",
+          "Select Pet": "",
+          "image://bathroom.png": "",
+          "image://bedroom.png": "",
+          "image://bunny.png": "",
+          "image://cat.png": "",
+          "image://dog.png": "",
+          "image://fireplace.png": "",
+          "image://kitchen.png": "",
+          "image://pig.png": ""
+        },
+        "CSD U6 - Screen Inputs - PracB_2222": {
+          "Create!": "",
+          "Digital Menu Creator": "",
+          "Price: $": "",
+          "Today's Special": ""
+        },
+        "CSD U6 - Screen Inputs - PracC_2222": {
+          "Click Here to Learn More About Where You Are From": "",
+          "Use the sliders to move the cursor to indicate where you're from!": "",
+          "Where Are You From?": "",
+          "X Position": "",
+          "Y Position": ""
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
-          "0": "0"
+          "0": "0",
+          "Check!": "",
+          "Choose the secret animal": "",
+          "Choose the secret number": "",
+          "Congratulations! You made it through all the trials!": "",
+          "Desert Iguana": "",
+          "Enter the Secret Code!": "",
+          "Mountain Ibex": "",
+          "Ocean Dolphin": "",
+          "Snow Owl": ""
         },
         "CSD U6 - Screen Inputs - SB1_2222": {
-          "Welcome": "Мэндчилгээ"
+          "82": "",
+          "Set Welcome Screen": "",
+          "Welcome": "Мэндчилгээ",
+          "You are in the": "",
+          "room of the house. The temperature is": ""
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "Update Background": "",
           "black": "хар",
           "white": "цагаан"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
+          "Update Background": "",
           "black": "хар",
           "white": "цагаан"
         },
+        "CSD U6 - Screen Inputs - SB3_2222": {
+          "Height:": "",
+          "Update!": "",
+          "Width:": ""
+        },
+        "CSD U6 - Screen Inputs - SB4_2222": {
+          "Height:": "",
+          "Update!": "",
+          "Width:": ""
+        },
+        "CSD U6 - Screen Inputs - SB5_2222": {
+          "Height:": "",
+          "Update!": "",
+          "Width:": ""
+        },
+        "CSD U6 - Screen Outputs - A_2222": {
+          "Hedy Lamarr was an inventor in the 1950swhose ideas laid the groundwork for WiFi, GPS, and Bluetooth used today": ""
+        },
+        "CSD U6 - Screen Outputs - ChalA_2222": {
+          "Alarm:": "",
+          "OFF": "",
+          "Stop Alarm": "",
+          "Trigger Alarm": ""
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "?": "",
+          "Emotion Machine": "",
+          "Happy": "",
+          "I'm feeling...": "",
+          "Meh": "",
+          "Sad": ""
+        },
+        "CSD U6 - Screen Outputs - ChalC_2222": {
+          "Example Button": "",
+          "Example Label": "",
+          "Example Theme": "",
+          "My Theme": ""
+        },
+        "CSD U6 - Screen Outputs - ChalD_2222": {
+          "About Me": "",
+          "Click a button to learn more about me": "",
+          "Favorite Animal": "",
+          "Favorite Class in School": "",
+          "Favorite Color": "",
+          "Favorite Food": ""
+        },
         "CSD U6 - Screen Outputs - P_2222": {
+          "Button": "",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "",
           "title": "гарчиг"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
+          "Blue": "",
+          "Green": "",
+          "Red": "",
           "White": "Цагаан"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "дээшээ",
           "down": "доошоо",
           "left": "зүүн",
-          "right": "баруун"
+          "right": "баруун",
+          "up": "дээшээ"
+        },
+        "CSD U6 - Screen Outputs - PracC_2222": {
+          "The App Is Not Running": ""
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
+          "Hello": "",
+          "Welcome To My App!": "",
           "name": "нэр"
         },
+        "CSD U6 - Screen Outputs - SB1_2222": {
+          "Welcome To My App!": ""
+        },
         "CSD U6 - Sensors - A_2222": {
-          "0": "0"
+          "0": "0",
+          "Light Value": "",
+          "Room Monitor": "",
+          "Sound Value": "",
+          "Temperature": ""
+        },
+        "CSD U6 - Sensors - ChalC_2222": {
+          "Volume Meter!": ""
+        },
+        "CSD U6 - Sensors - PA_2222": {
+          "Current Temperature in Fahrenheit and Celsius": ""
+        },
+        "CSD U6 - Sensors - PB_2222": {
+          "Blow On The Circuit Playground to Blow Out the Candles!": ""
         },
         "CSD U6 - Sensors - PC_2222": {
+          "The Theremin Is:": "",
           "off": "унтрах",
           "on": "асах"
         },
+        "CSD U6 - Sensors - PD_2222": {
+          "Volume Meter!": ""
+        },
         "CSD U6 - Sensors - P_2222": {
+          "Sensor 1": "",
+          "Sensor 2": "",
+          "Sensor 3": "",
+          "high": "",
+          "low": "",
           "text": "текст"
         },
+        "CSD U6 - Sensors - SB1_2222": {
+          "Sound Sensor Reading": "",
+          "value": "үнэ цэнэ"
+        },
         "CSD U6 - Sensors - SB2_2222": {
+          "Light Sensor Reading": "",
           "Update": "Шинэчлэх",
           "value": "үнэ цэнэ"
         },
+        "CSD U6 - Sensors - SB3_2222": {
+          "Sound Sensor Reading": "",
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "Sound Sensor Reading": "",
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "Temp Sensor Reading": "",
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 Catch the Mouse": {
+          "Click on the mouse!": ""
+        },
+        "CSD U6 Catch the Mouse_2018": {
+          "Click on the mouse!": ""
+        },
+        "CSD U6 Catch the Mouse_2019": {
+          "Click on the mouse!": ""
+        },
+        "CSD U6 Catch the Mouse_2021": {
+          "Click on the mouse!": ""
+        },
         "CSD U6 Driver pt 2": {
+          "Get to the checkered flag but don't hit the red ones!": "",
           "You did it!": "Та үүнийг хийлээ!"
         },
         "CSD U6 Driver pt 2_2018": {
+          "Get to the checkered flag but don't hit the red ones!": "",
           "You did it!": "Та үүнийг хийлээ!"
         },
         "CSD U6 Driver pt 2_2019": {
+          "Get to the checkered flag but don't hit the red ones!": "",
           "You did it!": "Та үүнийг хийлээ!"
         },
         "CSD U6 Driver pt 2_2021": {
+          "Get to the checkered flag but don't hit the red ones!": "",
           "You did it!": "Та үүнийг хийлээ!"
         },
         "CSD U6 Driver pt1": {
+          "Get to the checkered flag but don't hit the red ones!": "",
           "You did it!": "Та үүнийг хийлээ!"
         },
         "CSD U6 Driver pt1_2018": {
+          "Get to the checkered flag but don't hit the red ones!": "",
           "You did it!": "Та үүнийг хийлээ!"
         },
         "CSD U6 Driver pt1_2019": {
+          "Get to the checkered flag but don't hit the red ones!": "",
           "You did it!": "Та үүнийг хийлээ!"
         },
         "CSD U6 Driver pt1_2021": {
+          "Get to the checkered flag but don't hit the red ones!": "",
           "You did it!": "Та үүнийг хийлээ!"
         },
         "CSD U6 LED all": {
-          "on": "асах"
+          "blink": "",
+          "on": "асах",
+          "pulse": ""
         },
         "CSD U6 LED all_2018": {
-          "on": "асах"
+          "blink": "",
+          "on": "асах",
+          "pulse": ""
         },
         "CSD U6 LED all_2019": {
-          "on": "асах"
+          "blink": "",
+          "on": "асах",
+          "pulse": ""
         },
         "CSD U6 LED all_2021": {
-          "on": "асах"
+          "blink": "",
+          "on": "асах",
+          "pulse": ""
         },
         "CSD U6 LED toggle": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": "",
+          "change the light": ""
         },
         "CSD U6 LED toggle_2018": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": "",
+          "change the light": ""
         },
         "CSD U6 LED toggle_2019": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": "",
+          "change the light": ""
         },
         "CSD U6 LED toggle_2021": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": "",
+          "change the light": ""
         },
         "CSD U6 Pedometer": {
-          "0": "0"
+          "0": "0",
+          "Shake or tap your board to move the person to the finish line!": "",
+          "Steps Taken:": "",
+          "You Did It!": ""
         },
         "CSD U6 Pedometer_2018": {
-          "0": "0"
+          "0": "0",
+          "Shake or tap your board to move the person to the finish line!": "",
+          "Steps Taken:": "",
+          "You Did It!": ""
         },
         "CSD U6 Pedometer_2019": {
-          "0": "0"
+          "0": "0",
+          "Shake or tap your board to move the person to the finish line!": "",
+          "Steps Taken:": "",
+          "You Did It!": ""
         },
         "CSD U6 Pedometer_2021": {
-          "0": "0"
+          "0": "0",
+          "Shake or tap your board to move the person to the finish line!": "",
+          "Steps Taken:": "",
+          "You Did It!": ""
         },
         "CSD U6 add LED button": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "OFF": "",
+          "ON": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 add LED button_2018": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "OFF": "",
+          "ON": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 add LED button_2019": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "OFF": "",
+          "ON": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 add LED button_2021": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "OFF": "",
+          "ON": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
+        },
+        "CSD U6 analog change": {
+          "Temp Sensor Reading": "",
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog change_2018": {
+          "Temp Sensor Reading": "",
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog change_2019": {
+          "Temp Sensor Reading": "",
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog change_2021": {
+          "Temp Sensor Reading": "",
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog data": {
+          "Sound Sensor Reading": "",
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog data_2018": {
+          "Sound Sensor Reading": "",
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog data_2019": {
+          "Sound Sensor Reading": "",
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog data_2021": {
+          "Sound Sensor Reading": "",
+          "value": "үнэ цэнэ"
         },
         "CSD U6 analog light": {
+          "Light Sensor Reading": "",
           "Update": "Шинэчлэх",
           "value": "үнэ цэнэ"
         },
         "CSD U6 analog light_2018": {
+          "Light Sensor Reading": "",
           "Update": "Шинэчлэх",
           "value": "үнэ цэнэ"
         },
         "CSD U6 analog light_2019": {
+          "Light Sensor Reading": "",
           "Update": "Шинэчлэх",
           "value": "үнэ цэнэ"
         },
         "CSD U6 analog light_2021": {
+          "Light Sensor Reading": "",
           "Update": "Шинэчлэх",
           "value": "үнэ цэнэ"
         },
+        "CSD U6 analog sound": {
+          "Sound Sensor Reading": "",
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog sound_2018": {
+          "Sound Sensor Reading": "",
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog sound_2019": {
+          "Sound Sensor Reading": "",
+          "value": "үнэ цэнэ"
+        },
+        "CSD U6 analog sound_2021": {
+          "Sound Sensor Reading": "",
+          "value": "үнэ цэнэ"
+        },
         "CSD U6 array piano": {
+          "A": "A",
+          "A#": "",
+          "B": "B",
           "C": "C",
+          "C#": "",
           "D": "D",
+          "D#": "",
           "E": "З",
           "F": "F",
+          "F#": "",
           "G": "G",
-          "A": "A",
-          "B": "B"
+          "G#": ""
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "A#": "",
+          "B": "B",
           "C": "C",
+          "C#": "",
           "D": "D",
+          "D#": "",
           "E": "З",
           "F": "F",
+          "F#": "",
           "G": "G",
-          "A": "A",
-          "B": "B"
+          "G#": ""
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "A#": "",
+          "B": "B",
           "C": "C",
+          "C#": "",
           "D": "D",
+          "D#": "",
           "E": "З",
           "F": "F",
+          "F#": "",
           "G": "G",
-          "A": "A",
-          "B": "B"
+          "G#": ""
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "A#": "",
+          "B": "B",
           "C": "C",
+          "C#": "",
           "D": "D",
+          "D#": "",
           "E": "З",
           "F": "F",
+          "F#": "",
           "G": "G",
-          "A": "A",
-          "B": "B"
+          "G#": ""
+        },
+        "CSD U6 arrays select predict": {
+          "first": "",
+          "fourth": "",
+          "second": "",
+          "third": ""
+        },
+        "CSD U6 arrays select predict_2018": {
+          "first": "",
+          "fourth": "",
+          "second": "",
+          "third": ""
+        },
+        "CSD U6 arrays select predict_2019": {
+          "first": "",
+          "fourth": "",
+          "second": "",
+          "third": ""
+        },
+        "CSD U6 arrays select predict_2021": {
+          "first": "",
+          "fourth": "",
+          "second": "",
+          "third": ""
         },
         "CSD U6 change": {
-          "short": "богино",
-          "long": "урт"
+          "Choose the blink speed with the slider, then click the left board button to turn it on.  Turn it off with the right button.": "",
+          "LED Control": "",
+          "long": "урт",
+          "short": "богино"
         },
         "CSD U6 change_2018": {
-          "short": "богино",
-          "long": "урт"
+          "Choose the blink speed with the slider, then click the left board button to turn it on.  Turn it off with the right button.": "",
+          "LED Control": "",
+          "long": "урт",
+          "short": "богино"
         },
         "CSD U6 change_2019": {
-          "short": "богино",
-          "long": "урт"
+          "Choose the blink speed with the slider, then click the left board button to turn it on.  Turn it off with the right button.": "",
+          "LED Control": "",
+          "long": "урт",
+          "short": "богино"
         },
         "CSD U6 change_2021": {
-          "short": "богино",
-          "long": "урт"
+          "Choose the blink speed with the slider, then click the left board button to turn it on.  Turn it off with the right button.": "",
+          "LED Control": "",
+          "long": "урт",
+          "short": "богино"
+        },
+        "CSD U6 colorLED on": {
+          "Turn off bottom color LEDs": "",
+          "Turn on bottom color LEDs": ""
+        },
+        "CSD U6 colorLED on_2018": {
+          "Turn off bottom color LEDs": "",
+          "Turn on bottom color LEDs": ""
+        },
+        "CSD U6 colorLED on_2019": {
+          "Turn off bottom color LEDs": "",
+          "Turn on bottom color LEDs": ""
+        },
+        "CSD U6 colorLED on_2021": {
+          "Turn off bottom color LEDs": "",
+          "Turn on bottom color LEDs": ""
         },
         "CSD U6 colorLeds intensity": {
-          "Medium": "Дундаж"
+          "Bright": "",
+          "Dim": "",
+          "Medium": "Дундаж",
+          "Rainbow Lights!": ""
         },
         "CSD U6 colorLeds intensity_2018": {
-          "Medium": "Дундаж"
+          "Bright": "",
+          "Dim": "",
+          "Medium": "Дундаж",
+          "Rainbow Lights!": ""
         },
         "CSD U6 colorLeds intensity_2019": {
-          "Medium": "Дундаж"
+          "Bright": "",
+          "Dim": "",
+          "Medium": "Дундаж",
+          "Rainbow Lights!": ""
         },
         "CSD U6 colorLeds intensity_2021": {
-          "Medium": "Дундаж"
+          "Bright": "",
+          "Dim": "",
+          "Medium": "Дундаж",
+          "Rainbow Lights!": ""
+        },
+        "CSD U6 directional LEDs roll": {
+          "????": ""
+        },
+        "CSD U6 directional LEDs roll_2018": {
+          "????": ""
+        },
+        "CSD U6 directional LEDs roll_2019": {
+          "????": ""
+        },
+        "CSD U6 directional LEDs roll_2021": {
+          "????": ""
+        },
+        "CSD U6 emoji race demo": {
+          "Click your button as fast as you can to get your emoji to the bottomfirst. The left player controls the red emoji, right controls the blue.": "",
+          "Emoji Race": "",
+          "Play Again!": "",
+          "Play!": "",
+          "winner": "",
+          "wins!": ""
+        },
+        "CSD U6 emoji race demo_2018": {
+          "Click your button as fast as you can to get your emoji to the bottomfirst. The left player controls the red emoji, right controls the blue.": "",
+          "Emoji Race": "",
+          "Play Again!": "",
+          "Play!": "",
+          "winner": "",
+          "wins!": ""
+        },
+        "CSD U6 emoji race demo_2019": {
+          "Click your button as fast as you can to get your emoji to the bottomfirst. The left player controls the red emoji, right controls the blue.": "",
+          "Emoji Race": "",
+          "Play Again!": "",
+          "Play!": "",
+          "winner": "",
+          "wins!": ""
+        },
+        "CSD U6 emoji race demo_2021": {
+          "Click your button as fast as you can to get your emoji to the bottomfirst. The left player controls the red emoji, right controls the blue.": "",
+          "Emoji Race": "",
+          "Play Again!": "",
+          "Play!": "",
+          "winner": "",
+          "wins!": ""
+        },
+        "CSD U6 emotion machine example": {
+          "?": "",
+          "Emotion Machine": "",
+          "Happy": "",
+          "I'm feeling...": "",
+          "Meh": "",
+          "Sad": ""
+        },
+        "CSD U6 emotion machine example_2018": {
+          "?": "",
+          "Emotion Machine": "",
+          "Happy": "",
+          "I'm feeling...": "",
+          "Meh": "",
+          "Sad": ""
+        },
+        "CSD U6 emotion machine example_2019": {
+          "?": "",
+          "Emotion Machine": "",
+          "Happy": "",
+          "I'm feeling...": "",
+          "Meh": "",
+          "Sad": ""
+        },
+        "CSD U6 emotion machine example_2021": {
+          "?": "",
+          "Emotion Machine": "",
+          "Happy": "",
+          "I'm feeling...": "",
+          "Meh": "",
+          "Sad": ""
+        },
+        "CSD U6 for loop button array": {
+          "button1": "",
+          "button2": "",
+          "button3": ""
+        },
+        "CSD U6 for loop button array_2018": {
+          "button1": "",
+          "button2": "",
+          "button3": ""
+        },
+        "CSD U6 for loop button array_2019": {
+          "button1": "",
+          "button2": "",
+          "button3": ""
+        },
+        "CSD U6 for loop button array_2021": {
+          "button1": "",
+          "button2": "",
+          "button3": ""
+        },
+        "CSD U6 for loop click exit": {
+          "Toggle Next LED": ""
+        },
+        "CSD U6 for loop click exit_2018": {
+          "Toggle Next LED": ""
+        },
+        "CSD U6 for loop click exit_2019": {
+          "Toggle Next LED": ""
+        },
+        "CSD U6 for loop click exit_2021": {
+          "Toggle Next LED": ""
+        },
+        "CSD U6 for loop click predict": {
+          "Toggle Next LED": ""
+        },
+        "CSD U6 for loop click predict_2018": {
+          "Toggle Next LED": ""
+        },
+        "CSD U6 for loop click predict_2019": {
+          "Toggle Next LED": ""
+        },
+        "CSD U6 for loop click predict_2021": {
+          "Toggle Next LED": ""
+        },
+        "CSD U6 for loop images": {
+          "Thumbs Up!": ""
+        },
+        "CSD U6 for loop images_2018": {
+          "Thumbs Up!": ""
+        },
+        "CSD U6 for loop images_2019": {
+          "Thumbs Up!": ""
+        },
+        "CSD U6 for loop images_2021": {
+          "Thumbs Up!": ""
+        },
+        "CSD U6 for loop list.length": {
+          "button1": "",
+          "button2": "",
+          "button3": "",
+          "button4": "",
+          "button5": "",
+          "button6": ""
+        },
+        "CSD U6 for loop list.length_2018": {
+          "button1": "",
+          "button2": "",
+          "button3": "",
+          "button4": "",
+          "button5": "",
+          "button6": ""
+        },
+        "CSD U6 for loop list.length_2019": {
+          "button1": "",
+          "button2": "",
+          "button3": "",
+          "button4": "",
+          "button5": "",
+          "button6": ""
+        },
+        "CSD U6 for loop list.length_2021": {
+          "button1": "",
+          "button2": "",
+          "button3": "",
+          "button4": "",
+          "button5": "",
+          "button6": ""
         },
         "CSD U6 frequency": {
-          "short": "богино",
-          "long": "урт"
+          "Buzzer Control": "",
+          "Choose the duration and frequency of the buzz with the slider, then click the left board button to turn it on.": "",
+          "high": "",
+          "long": "урт",
+          "low": "",
+          "short": "богино"
         },
         "CSD U6 frequency_2018": {
-          "short": "богино",
-          "long": "урт"
+          "Buzzer Control": "",
+          "Choose the duration and frequency of the buzz with the slider, then click the left board button to turn it on.": "",
+          "high": "",
+          "long": "урт",
+          "low": "",
+          "short": "богино"
         },
         "CSD U6 frequency_2019": {
-          "short": "богино",
-          "long": "урт"
+          "Buzzer Control": "",
+          "Choose the duration and frequency of the buzz with the slider, then click the left board button to turn it on.": "",
+          "high": "",
+          "long": "урт",
+          "low": "",
+          "short": "богино"
         },
         "CSD U6 frequency_2021": {
-          "short": "богино",
-          "long": "урт"
+          "Buzzer Control": "",
+          "Choose the duration and frequency of the buzz with the slider, then click the left board button to turn it on.": "",
+          "high": "",
+          "long": "урт",
+          "low": "",
+          "short": "богино"
         },
         "CSD U6 get toggle": {
-          "short": "богино",
-          "long": "урт"
+          "Buzzer Control": "",
+          "LED Control": "",
+          "high": "",
+          "long": "урт",
+          "low": "",
+          "short": "богино"
         },
         "CSD U6 get toggle_2018": {
-          "short": "богино",
-          "long": "урт"
+          "Buzzer Control": "",
+          "LED Control": "",
+          "high": "",
+          "long": "урт",
+          "low": "",
+          "short": "богино"
         },
         "CSD U6 get toggle_2019": {
-          "short": "богино",
-          "long": "урт"
+          "Buzzer Control": "",
+          "LED Control": "",
+          "high": "",
+          "long": "урт",
+          "low": "",
+          "short": "богино"
         },
         "CSD U6 get toggle_2021": {
-          "short": "богино",
-          "long": "урт"
+          "Buzzer Control": "",
+          "LED Control": "",
+          "high": "",
+          "long": "урт",
+          "low": "",
+          "short": "богино"
         },
         "CSD U6 getProperty Demo": {
+          "Add me to the newsletter:": "",
+          "Am I on the newsletter?": "",
+          "Blue": "",
+          "Fav Color:": "",
+          "Green": "",
+          "Indigo": "",
+          "My favorite color is:": "",
+          "My name is: ": "",
           "Name:": "Нэр:",
-          "Save": "Хадгалах"
+          "Orange": "",
+          "Profile Editor": "",
+          "Red": "",
+          "Save": "Хадгалах",
+          "Violet": "",
+          "Yellow": ""
         },
         "CSD U6 getProperty Demo_2018": {
+          "Add me to the newsletter:": "",
+          "Am I on the newsletter?": "",
+          "Blue": "",
+          "Fav Color:": "",
+          "Green": "",
+          "Indigo": "",
+          "My favorite color is:": "",
+          "My name is: ": "",
           "Name:": "Нэр:",
-          "Save": "Хадгалах"
+          "Orange": "",
+          "Profile Editor": "",
+          "Red": "",
+          "Save": "Хадгалах",
+          "Violet": "",
+          "Yellow": ""
         },
         "CSD U6 getProperty Demo_2019": {
+          "Add me to the newsletter:": "",
+          "Am I on the newsletter?": "",
+          "Blue": "",
+          "Fav Color:": "",
+          "Green": "",
+          "Indigo": "",
+          "My favorite color is:": "",
+          "My name is: ": "",
           "Name:": "Нэр:",
-          "Save": "Хадгалах"
+          "Orange": "",
+          "Profile Editor": "",
+          "Red": "",
+          "Save": "Хадгалах",
+          "Violet": "",
+          "Yellow": ""
         },
         "CSD U6 getProperty Demo_2021": {
+          "Add me to the newsletter:": "",
+          "Am I on the newsletter?": "",
+          "Blue": "",
+          "Fav Color:": "",
+          "Green": "",
+          "Indigo": "",
+          "My favorite color is:": "",
+          "My name is: ": "",
           "Name:": "Нэр:",
-          "Save": "Хадгалах"
+          "Orange": "",
+          "Profile Editor": "",
+          "Red": "",
+          "Save": "Хадгалах",
+          "Violet": "",
+          "Yellow": ""
+        },
+        "CSD U6 getProperty board predict": {
+          "Choose your LED style, then use the left and right buttons on your Circuit Playground to turn the LED off and on.": "",
+          "blink": "",
+          "pulse": ""
+        },
+        "CSD U6 getProperty board predict_2018": {
+          "Choose your LED style, then use the left and right buttons on your Circuit Playground to turn the LED off and on.": "",
+          "blink": "",
+          "pulse": ""
+        },
+        "CSD U6 getProperty board predict_2019": {
+          "Choose your LED style, then use the left and right buttons on your Circuit Playground to turn the LED off and on.": "",
+          "blink": "",
+          "pulse": ""
+        },
+        "CSD U6 getProperty board predict_2021": {
+          "Choose your LED style, then use the left and right buttons on your Circuit Playground to turn the LED off and on.": "",
+          "blink": "",
+          "pulse": ""
+        },
+        "CSD U6 getProperty buzzer": {
+          "Choose your LED and buzzer styles, then use the left and right buttons on your Circuit Playground to turn the them on and off.": "",
+          "blink": "",
+          "long buzz": "",
+          "pulse": "",
+          "short buzz": ""
+        },
+        "CSD U6 getProperty buzzer_2018": {
+          "Choose your LED and buzzer styles, then use the left and right buttons on your Circuit Playground to turn the them on and off.": "",
+          "blink": "",
+          "long buzz": "",
+          "pulse": "",
+          "short buzz": ""
+        },
+        "CSD U6 getProperty buzzer_2019": {
+          "Choose your LED and buzzer styles, then use the left and right buttons on your Circuit Playground to turn the them on and off.": "",
+          "blink": "",
+          "long buzz": "",
+          "pulse": "",
+          "short buzz": ""
+        },
+        "CSD U6 getProperty buzzer_2021": {
+          "Choose your LED and buzzer styles, then use the left and right buttons on your Circuit Playground to turn the them on and off.": "",
+          "blink": "",
+          "long buzz": "",
+          "pulse": "",
+          "short buzz": ""
+        },
+        "CSD U6 getProperty dropdown": {
+          "CadetBlue": "",
+          "Chocolate": "",
+          "LawnGreen": "",
+          "Orchid": "",
+          "Set Color": "",
+          "Thistle": ""
+        },
+        "CSD U6 getProperty dropdown_2018": {
+          "CadetBlue": "",
+          "Chocolate": "",
+          "LawnGreen": "",
+          "Orchid": "",
+          "Set Color": "",
+          "Thistle": ""
+        },
+        "CSD U6 getProperty dropdown_2019": {
+          "CadetBlue": "",
+          "Chocolate": "",
+          "LawnGreen": "",
+          "Orchid": "",
+          "Set Color": "",
+          "Thistle": ""
+        },
+        "CSD U6 getProperty dropdown_2021": {
+          "CadetBlue": "",
+          "Chocolate": "",
+          "LawnGreen": "",
+          "Orchid": "",
+          "Set Color": "",
+          "Thistle": ""
         },
         "CSD U6 getProperty input": {
-          "Submit": "Илгээх"
+          "Submit": "Илгээх",
+          "What's your first name?": "",
+          "What's your friend's name?": ""
         },
         "CSD U6 getProperty input_2018": {
-          "Submit": "Илгээх"
+          "Submit": "Илгээх",
+          "What's your first name?": "",
+          "What's your friend's name?": ""
         },
         "CSD U6 getProperty input_2019": {
-          "Submit": "Илгээх"
+          "Submit": "Илгээх",
+          "What's your first name?": "",
+          "What's your friend's name?": ""
         },
         "CSD U6 getProperty input_2021": {
-          "Submit": "Илгээх"
+          "Submit": "Илгээх",
+          "What's your first name?": "",
+          "What's your friend's name?": ""
         },
         "CSD U6 getters debug": {
-          "slow": "удаан",
+          "Buzzer Controls": "",
+          "LED Controls": "",
+          "Press board buttons to turn buzzer on and off. ": "",
+          "Use the toggle switch to turn the LED on and off.": "",
+          "blink": "",
+          "constant": "",
           "fast": "хурдан",
+          "high": "",
+          "long": "урт",
+          "low": "",
+          "pulse": "",
           "short": "богино",
-          "long": "урт"
+          "slow": "удаан"
         },
         "CSD U6 getters debug_2018": {
+          "Buzzer Controls": "",
+          "LED Controls": "",
+          "Press board buttons to turn buzzer on and off. ": "",
+          "Use the toggle switch to turn the LED on and off.": "",
+          "blink": "",
+          "constant": "",
           "fast": "хурдан",
-          "slow": "удаан",
+          "high": "",
+          "long": "урт",
+          "low": "",
+          "pulse": "",
           "short": "богино",
-          "long": "урт"
+          "slow": "удаан"
         },
         "CSD U6 getters debug_2019": {
+          "Buzzer Controls": "",
+          "LED Controls": "",
+          "Press board buttons to turn buzzer on and off. ": "",
+          "Use the toggle switch to turn the LED on and off.": "",
+          "blink": "",
+          "constant": "",
           "fast": "хурдан",
-          "slow": "удаан",
+          "high": "",
+          "long": "урт",
+          "low": "",
+          "pulse": "",
           "short": "богино",
-          "long": "урт"
+          "slow": "удаан"
         },
         "CSD U6 getters debug_2021": {
+          "Buzzer Controls": "",
+          "LED Controls": "",
+          "Press board buttons to turn buzzer on and off. ": "",
+          "Use the toggle switch to turn the LED on and off.": "",
+          "blink": "",
+          "constant": "",
           "fast": "хурдан",
-          "slow": "удаан",
+          "high": "",
+          "long": "урт",
+          "low": "",
+          "pulse": "",
           "short": "богино",
-          "long": "урт"
+          "slow": "удаан"
         },
         "CSD U6 interval": {
-          "short": "богино",
-          "long": "урт"
+          "Choose the blink speed with the slider, then click the left board button to turn it on.  Turn it off with the right button.": "",
+          "LED Control": "",
+          "long": "урт",
+          "short": "богино"
         },
         "CSD U6 interval_2018": {
-          "short": "богино",
-          "long": "урт"
+          "Choose the blink speed with the slider, then click the left board button to turn it on.  Turn it off with the right button.": "",
+          "LED Control": "",
+          "long": "урт",
+          "short": "богино"
         },
         "CSD U6 interval_2019": {
-          "short": "богино",
-          "long": "урт"
+          "Choose the blink speed with the slider, then click the left board button to turn it on.  Turn it off with the right button.": "",
+          "LED Control": "",
+          "long": "урт",
+          "short": "богино"
         },
         "CSD U6 interval_2021": {
-          "short": "богино",
-          "long": "урт"
+          "Choose the blink speed with the slider, then click the left board button to turn it on.  Turn it off with the right button.": "",
+          "LED Control": "",
+          "long": "урт",
+          "short": "богино"
+        },
+        "CSD U6 investigate orientation": {
+          "pitch:": "",
+          "roll:": ""
+        },
+        "CSD U6 investigate orientation_2018": {
+          "pitch:": "",
+          "roll:": ""
+        },
+        "CSD U6 investigate orientation_2019": {
+          "pitch:": "",
+          "roll:": ""
+        },
+        "CSD U6 investigate orientation_2021": {
+          "pitch:": "",
+          "roll:": ""
+        },
+        "CSD U6 light pattern challenge_2018": {
+          "Design 1": "",
+          "Design 2": "",
+          "Design 3": "",
+          "Pick a Light Display!": ""
+        },
+        "CSD U6 light pattern challenge_2019": {
+          "Design 1": "",
+          "Design 2": "",
+          "Design 3": "",
+          "Pick a Light Display!": ""
+        },
+        "CSD U6 light pattern challenge_2021": {
+          "Design 1": "",
+          "Design 2": "",
+          "Design 3": "",
+          "Pick a Light Display!": ""
         },
         "CSD U6 light show": {
+          "blink": "",
+          "off": "унтрах",
           "on": "асах",
-          "off": "унтрах"
+          "pulse": ""
         },
         "CSD U6 light show_2018": {
+          "blink": "",
+          "off": "унтрах",
           "on": "асах",
-          "off": "унтрах"
+          "pulse": ""
         },
         "CSD U6 light show_2019": {
+          "blink": "",
+          "off": "унтрах",
           "on": "асах",
-          "off": "унтрах"
+          "pulse": ""
         },
         "CSD U6 light show_2021": {
+          "blink": "",
+          "off": "унтрах",
           "on": "асах",
-          "off": "унтрах"
+          "pulse": ""
+        },
+        "CSD U6 params create colors": {
+          "Blue": "",
+          "Red": "",
+          "Yellow": ""
+        },
+        "CSD U6 params create colors_2018": {
+          "Blue": "",
+          "Red": "",
+          "Yellow": ""
+        },
+        "CSD U6 params create colors_2019": {
+          "Blue": "",
+          "Red": "",
+          "Yellow": ""
+        },
+        "CSD U6 params create colors_2021": {
+          "Blue": "",
+          "Red": "",
+          "Yellow": ""
         },
         "CSD U6 params starchaser intro": {
-          "0": "0"
+          "0": "0",
+          "Score:": ""
         },
         "CSD U6 params starchaser intro_2018": {
-          "0": "0"
+          "0": "0",
+          "Score:": ""
         },
         "CSD U6 params starchaser intro_2019": {
-          "0": "0"
+          "0": "0",
+          "Score:": ""
         },
         "CSD U6 params starchaser intro_2021": {
-          "0": "0"
+          "0": "0",
+          "Score:": ""
         },
         "CSD U6 predict LED button": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Click Me": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 predict LED button_2018": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Click Me": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 predict LED button_2019": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Click Me": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 predict LED button_2021": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Click Me": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 sensor experiment embedded": {
+          "Sensor 1": "",
+          "Sensor 2": "",
+          "Sensor 3": "",
+          "high": "",
+          "low": "",
           "text": "текст"
         },
         "CSD U6 sensor experiment embedded_2018": {
+          "Sensor 1": "",
+          "Sensor 2": "",
+          "Sensor 3": "",
+          "high": "",
+          "low": "",
           "text": "текст"
         },
         "CSD U6 sensor experiment embedded_2019": {
+          "Sensor 1": "",
+          "Sensor 2": "",
+          "Sensor 3": "",
+          "high": "",
+          "low": "",
           "text": "текст"
         },
         "CSD U6 sensor experiment embedded_2021": {
+          "Sensor 1": "",
+          "Sensor 2": "",
+          "Sensor 3": "",
+          "high": "",
+          "low": "",
           "text": "текст"
         },
+        "CSD U6 setProperty Text": {
+          "your name here": ""
+        },
+        "CSD U6 setProperty Text_2018": {
+          "your name here": ""
+        },
+        "CSD U6 setProperty Text_2019": {
+          "your name here": ""
+        },
+        "CSD U6 setProperty Text_2021": {
+          "your name here": ""
+        },
+        "CSD U6 setProperty hidden": {
+          "Alarm:": "",
+          "OFF": "",
+          "Stop Alarm": "",
+          "Trigger Alarm": ""
+        },
+        "CSD U6 setProperty hidden 2": {
+          "Alarm:": "",
+          "OFF": "",
+          "Stop Alarm": "",
+          "Trigger Alarm": ""
+        },
+        "CSD U6 setProperty hidden 2_2018": {
+          "Alarm:": "",
+          "OFF": "",
+          "Stop Alarm": "",
+          "Trigger Alarm": ""
+        },
+        "CSD U6 setProperty hidden 2_2019": {
+          "Alarm:": "",
+          "OFF": "",
+          "Stop Alarm": "",
+          "Trigger Alarm": ""
+        },
+        "CSD U6 setProperty hidden 2_2021": {
+          "Alarm:": "",
+          "OFF": "",
+          "Stop Alarm": "",
+          "Trigger Alarm": ""
+        },
+        "CSD U6 setProperty hidden_2018": {
+          "Alarm:": "",
+          "OFF": "",
+          "Stop Alarm": "",
+          "Trigger Alarm": ""
+        },
+        "CSD U6 setProperty hidden_2019": {
+          "Alarm:": "",
+          "OFF": "",
+          "Stop Alarm": "",
+          "Trigger Alarm": ""
+        },
+        "CSD U6 setProperty hidden_2021": {
+          "Alarm:": "",
+          "OFF": "",
+          "Stop Alarm": "",
+          "Trigger Alarm": ""
+        },
         "CSD U6 setProperty predict app": {
+          "Button": "",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "",
           "title": "гарчиг"
         },
         "CSD U6 setProperty predict app_2018": {
+          "Button": "",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "",
           "title": "гарчиг"
         },
         "CSD U6 setProperty predict app_2019": {
+          "Button": "",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "",
           "title": "гарчиг"
         },
         "CSD U6 setProperty predict app_2021": {
+          "Button": "",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "",
           "title": "гарчиг"
         },
         "CSD U6 slider intro": {
-          "short": "богино",
-          "long": "урт"
+          "Buzzer Control": "",
+          "Choose the duration of the buzz with the slider, then click the left board button to turn it on.": "",
+          "long": "урт",
+          "short": "богино"
         },
         "CSD U6 slider intro_2018": {
-          "short": "богино",
-          "long": "урт"
+          "Buzzer Control": "",
+          "Choose the duration of the buzz with the slider, then click the left board button to turn it on.": "",
+          "long": "урт",
+          "short": "богино"
         },
         "CSD U6 slider intro_2019": {
-          "short": "богино",
-          "long": "урт"
+          "Buzzer Control": "",
+          "Choose the duration of the buzz with the slider, then click the left board button to turn it on.": "",
+          "long": "урт",
+          "short": "богино"
         },
         "CSD U6 slider intro_2021": {
-          "short": "богино",
-          "long": "урт"
+          "Buzzer Control": "",
+          "Choose the duration of the buzz with the slider, then click the left board button to turn it on.": "",
+          "long": "урт",
+          "short": "богино"
+        },
+        "CSD U6 stillness game predict code": {
+          "Game Over": "",
+          "Movement Meter:": "",
+          "Pass your board to the person next to you!": ""
+        },
+        "CSD U6 stillness game predict code_2018": {
+          "Game Over": "",
+          "Movement Meter:": "",
+          "Pass your board to the person next to you!": ""
+        },
+        "CSD U6 stillness game predict code_2019": {
+          "Game Over": "",
+          "Movement Meter:": "",
+          "Pass your board to the person next to you!": ""
+        },
+        "CSD U6 stillness game predict code_2021": {
+          "Game Over": "",
+          "Movement Meter:": "",
+          "Pass your board to the person next to you!": ""
         },
         "CSD U6 test LED": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Plug in your Circuit Playground and click \"Run\"": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 test LED_2018": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Plug in your Circuit Playground and click \"Run\"": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 test LED_2019": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Plug in your Circuit Playground and click \"Run\"": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSD U6 test LED_2021": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Plug in your Circuit Playground and click \"Run\"": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
+        },
+        "CSD U6 tugowar demo": {
+          "Each player clicks their button as quickly as possible to get the bug over to their side. First to grab the bug wins!": "",
+          "Grab the Bug": "",
+          "Player 2": "",
+          "Wins!": ""
+        },
+        "CSD U6 tugowar demo_2018": {
+          "Each player clicks their button as quickly as possible to get the bug over to their side. First to grab the bug wins!": "",
+          "Grab the Bug": "",
+          "Player 2": "",
+          "Wins!": ""
+        },
+        "CSD U6 tugowar demo_2019": {
+          "Each player clicks their button as quickly as possible to get the bug over to their side. First to grab the bug wins!": "",
+          "Grab the Bug": "",
+          "Player 2": "",
+          "Wins!": ""
+        },
+        "CSD U6 tugowar demo_2021": {
+          "Each player clicks their button as quickly as possible to get the bug over to their side. First to grab the bug wins!": "",
+          "Grab the Bug": "",
+          "Player 2": "",
+          "Wins!": ""
+        },
+        "CSDU4 - Design Mode - 17": {
+          "Click me!": "",
+          "I'm a button!": "",
+          "Red Button!": ""
+        },
+        "CSDU4 - Design Mode - 18": {
+          "Click the Bullseye!": "",
+          "LET'S PLAY BULLSEYE": ""
+        },
+        "CSDU4 Connecting Screens": {
+          "Blue": "",
+          "Green": "",
+          "Red": ""
+        },
+        "CSDU4 Connecting Screens Getting Back": {
+          "Blue": "",
+          "Green": "",
+          "Red": ""
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "Тухай",
           "About Us": "Бидний тухай",
+          "Add It": "",
+          "Another Thing": "",
+          "Are you sure you want to delete that item?": "",
+          "Back Home": "",
+          "Blue": "",
           "Cancel": "Цуцлах",
+          "CrowdSourcing": "",
+          "Dani": "",
+          "Delete It": "",
+          "Delete anItem": "",
+          "Don't Delete It": "",
+          "Don't Save": "",
+          "Elizabeth": "",
+          "Email me:": "",
+          "Email:": "",
+          "Fav. Color:": "",
+          "From the Crowd": "",
+          "GT": "",
+          "Green": "",
+          "How it Works": "",
+          "How it works": "",
+          "Indigo": "",
+          "Information about how to use this app": "",
+          "Josh": "",
           "Name:": "Нэр:",
-          "Yes": "Тийм",
           "No": "Үгүй",
-          "Save": "Хадгалах"
+          "One More Thing": "",
+          "Orange": "",
+          "Red": "",
+          "Save": "Хадгалах",
+          "Submit a Thing": "",
+          "Submitted Thing": "",
+          "The Crowd": "",
+          "The First Thing": "",
+          "The Last Thing": "",
+          "The Second Thing": "",
+          "Thing to Submit": "",
+          "This Other Thing": "",
+          "User": "",
+          "User Profile": "",
+          "Violet": "",
+          "Who we are and why we made this": "",
+          "Yellow": "",
+          "Yes": "Тийм"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Тухай",
           "About Us": "Бидний тухай",
+          "Add It": "",
+          "Another Thing": "",
+          "Are you sure you want to delete that item?": "",
+          "Back Home": "",
+          "Blue": "",
           "Cancel": "Цуцлах",
+          "CrowdSourcing": "",
+          "Dani": "",
+          "Delete It": "",
+          "Delete anItem": "",
+          "Don't Delete It": "",
+          "Don't Save": "",
+          "Elizabeth": "",
+          "Email me:": "",
+          "Email:": "",
+          "Fav. Color:": "",
+          "From the Crowd": "",
+          "GT": "",
+          "Green": "",
+          "How it Works": "",
+          "How it works": "",
+          "Indigo": "",
+          "Information about how to use this app": "",
+          "Josh": "",
           "Name:": "Нэр:",
-          "Yes": "Тийм",
           "No": "Үгүй",
-          "Save": "Хадгалах"
+          "One More Thing": "",
+          "Orange": "",
+          "Red": "",
+          "Save": "Хадгалах",
+          "Submit a Thing": "",
+          "Submitted Thing": "",
+          "The Crowd": "",
+          "The First Thing": "",
+          "The Last Thing": "",
+          "The Second Thing": "",
+          "Thing to Submit": "",
+          "This Other Thing": "",
+          "User": "",
+          "User Profile": "",
+          "Violet": "",
+          "Who we are and why we made this": "",
+          "Yellow": "",
+          "Yes": "Тийм"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Тухай",
           "About Us": "Бидний тухай",
+          "Add It": "",
+          "Another Thing": "",
+          "Are you sure you want to delete that item?": "",
+          "Back Home": "",
+          "Blue": "",
           "Cancel": "Цуцлах",
+          "CrowdSourcing": "",
+          "Dani": "",
+          "Delete It": "",
+          "Delete anItem": "",
+          "Don't Delete It": "",
+          "Don't Save": "",
+          "Elizabeth": "",
+          "Email me:": "",
+          "Email:": "",
+          "Fav. Color:": "",
+          "From the Crowd": "",
+          "GT": "",
+          "Green": "",
+          "How it Works": "",
+          "How it works": "",
+          "Indigo": "",
+          "Information about how to use this app": "",
+          "Josh": "",
           "Name:": "Нэр:",
-          "Yes": "Тийм",
           "No": "Үгүй",
-          "Save": "Хадгалах"
+          "One More Thing": "",
+          "Orange": "",
+          "Red": "",
+          "Save": "Хадгалах",
+          "Submit a Thing": "",
+          "Submitted Thing": "",
+          "The Crowd": "",
+          "The First Thing": "",
+          "The Last Thing": "",
+          "The Second Thing": "",
+          "Thing to Submit": "",
+          "This Other Thing": "",
+          "User": "",
+          "User Profile": "",
+          "Violet": "",
+          "Who we are and why we made this": "",
+          "Yellow": "",
+          "Yes": "Тийм"
         },
         "CSDU4 Decision App Demo": {
           "About": "Тухай",
-          "I don't know": "Би мэдэхгүй",
-          "When?": "Хэзээ?",
           "About Us": "Бидний тухай",
-          "Why?": "Яагаад?"
+          "Back Home": "",
+          "Based on your responses, you are a pretty neat person.": "",
+          "Because": "",
+          "Decision Maker": "",
+          "How it Works": "",
+          "How it works": "",
+          "I don't know": "Би мэдэхгүй",
+          "Information about how to use this app": "",
+          "Later": "",
+          "Make a Decision": "",
+          "Now-ish": "",
+          "That One": "",
+          "This One": "",
+          "When?": "Хэзээ?",
+          "Which One?": "",
+          "Who we are and why we made this": "",
+          "Why?": "Яагаад?",
+          "Your Results": ""
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Тухай",
-          "I don't know": "Би мэдэхгүй",
-          "When?": "Хэзээ?",
           "About Us": "Бидний тухай",
-          "Why?": "Яагаад?"
+          "Back Home": "",
+          "Based on your responses, you are a pretty neat person.": "",
+          "Because": "",
+          "Decision Maker": "",
+          "How it Works": "",
+          "How it works": "",
+          "I don't know": "Би мэдэхгүй",
+          "Information about how to use this app": "",
+          "Later": "",
+          "Make a Decision": "",
+          "Now-ish": "",
+          "That One": "",
+          "This One": "",
+          "When?": "Хэзээ?",
+          "Which One?": "",
+          "Who we are and why we made this": "",
+          "Why?": "Яагаад?",
+          "Your Results": ""
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Тухай",
-          "I don't know": "Би мэдэхгүй",
-          "When?": "Хэзээ?",
           "About Us": "Бидний тухай",
-          "Why?": "Яагаад?"
+          "Back Home": "",
+          "Based on your responses, you are a pretty neat person.": "",
+          "Because": "",
+          "Decision Maker": "",
+          "How it Works": "",
+          "How it works": "",
+          "I don't know": "Би мэдэхгүй",
+          "Information about how to use this app": "",
+          "Later": "",
+          "Make a Decision": "",
+          "Now-ish": "",
+          "That One": "",
+          "This One": "",
+          "When?": "Хэзээ?",
+          "Which One?": "",
+          "Who we are and why we made this": "",
+          "Why?": "Яагаад?",
+          "Your Results": ""
         },
         "CSDU4 Functionality visible": {
           "Hide": "Нуух",
@@ -924,195 +3423,638 @@
         "CSDU4 List App Demo": {
           "About": "Тухай",
           "About Us": "Бидний тухай",
+          "Add It": "",
+          "Add an Item": "",
+          "Another Thing": "",
+          "Are you sure you want to delete that item?": "",
+          "Back Home": "",
+          "Cancel": "Цуцлах",
+          "Delete It": "",
+          "Delete anItem": "",
+          "Don't Delete It": "",
           "Done": "Дууссан",
-          "Cancel": "Цуцлах"
+          "How it Works": "",
+          "How it works": "",
+          "Information about how to use this app": "",
+          "Item to Add": "",
+          "List Item": "",
+          "List Manager": "",
+          "One More Thing": "",
+          "The First Thing": "",
+          "The Last Thing": "",
+          "The Second Thing": "",
+          "This Other Thing": "",
+          "View List": "",
+          "Who we are and why we made this": "",
+          "Your List": ""
         },
         "CSDU4 List App Demo_2018": {
           "About": "Тухай",
           "About Us": "Бидний тухай",
+          "Add It": "",
+          "Add an Item": "",
+          "Another Thing": "",
+          "Are you sure you want to delete that item?": "",
+          "Back Home": "",
+          "Cancel": "Цуцлах",
+          "Delete It": "",
+          "Delete anItem": "",
+          "Don't Delete It": "",
           "Done": "Дууссан",
-          "Cancel": "Цуцлах"
+          "How it Works": "",
+          "How it works": "",
+          "Information about how to use this app": "",
+          "Item to Add": "",
+          "List Item": "",
+          "List Manager": "",
+          "One More Thing": "",
+          "The First Thing": "",
+          "The Last Thing": "",
+          "The Second Thing": "",
+          "This Other Thing": "",
+          "View List": "",
+          "Who we are and why we made this": "",
+          "Your List": ""
         },
         "CSDU4 List App Demo_2019": {
           "About": "Тухай",
           "About Us": "Бидний тухай",
+          "Add It": "",
+          "Add an Item": "",
+          "Another Thing": "",
+          "Are you sure you want to delete that item?": "",
+          "Back Home": "",
+          "Cancel": "Цуцлах",
+          "Delete It": "",
+          "Delete anItem": "",
+          "Don't Delete It": "",
           "Done": "Дууссан",
-          "Cancel": "Цуцлах"
+          "How it Works": "",
+          "How it works": "",
+          "Information about how to use this app": "",
+          "Item to Add": "",
+          "List Item": "",
+          "List Manager": "",
+          "One More Thing": "",
+          "The First Thing": "",
+          "The Last Thing": "",
+          "The Second Thing": "",
+          "This Other Thing": "",
+          "View List": "",
+          "Who we are and why we made this": "",
+          "Your List": ""
         },
         "CSDU4 Quiz App Demo": {
           "About": "Тухай",
-          "Submit": "Илгээх",
-          "When?": "Хэзээ?",
           "About Us": "Бидний тухай",
+          "Back Home": "",
+          "Based on your responses, you are a pretty neat person.": "",
+          "Because": "",
           "Correct!": "Зөв!",
-          "Why?": "Яагаад?"
+          "How it Works": "",
+          "How it works": "",
+          "I": "",
+          "Incorrect :(": "",
+          "Information about how to use this app": "",
+          "Later": "",
+          "Never": "",
+          "Next Question": "",
+          "No one": "",
+          "Now": "",
+          "Quiz Me": "",
+          "Said": "",
+          "So": "",
+          "Soon": "",
+          "Submit": "Илгээх",
+          "Take a Quiz": "",
+          "That one": "",
+          "The other one": "",
+          "This one": "",
+          "When?": "Хэзээ?",
+          "Which One?": "",
+          "Who we are and why we made this": "",
+          "Why?": "Яагаад?",
+          "Your Results": ""
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Тухай",
-          "Submit": "Илгээх",
-          "When?": "Хэзээ?",
           "About Us": "Бидний тухай",
+          "Back Home": "",
+          "Based on your responses, you are a pretty neat person.": "",
+          "Because": "",
           "Correct!": "Зөв!",
-          "Why?": "Яагаад?"
+          "How it Works": "",
+          "How it works": "",
+          "I": "",
+          "Incorrect :(": "",
+          "Information about how to use this app": "",
+          "Later": "",
+          "Never": "",
+          "Next Question": "",
+          "No one": "",
+          "Now": "",
+          "Quiz Me": "",
+          "Said": "",
+          "So": "",
+          "Soon": "",
+          "Submit": "Илгээх",
+          "Take a Quiz": "",
+          "That one": "",
+          "The other one": "",
+          "This one": "",
+          "When?": "Хэзээ?",
+          "Which One?": "",
+          "Who we are and why we made this": "",
+          "Why?": "Яагаад?",
+          "Your Results": ""
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Тухай",
-          "Submit": "Илгээх",
-          "When?": "Хэзээ?",
           "About Us": "Бидний тухай",
+          "Back Home": "",
+          "Based on your responses, you are a pretty neat person.": "",
+          "Because": "",
           "Correct!": "Зөв!",
-          "Why?": "Яагаад?"
+          "How it Works": "",
+          "How it works": "",
+          "I": "",
+          "Incorrect :(": "",
+          "Information about how to use this app": "",
+          "Later": "",
+          "Never": "",
+          "Next Question": "",
+          "No one": "",
+          "Now": "",
+          "Quiz Me": "",
+          "Said": "",
+          "So": "",
+          "Soon": "",
+          "Submit": "Илгээх",
+          "Take a Quiz": "",
+          "That one": "",
+          "The other one": "",
+          "This one": "",
+          "When?": "Хэзээ?",
+          "Which One?": "",
+          "Who we are and why we made this": "",
+          "Why?": "Яагаад?",
+          "Your Results": ""
+        },
+        "CSDU6 - UI and Inputs - get set with text input": {
+          "Output Area:": "",
+          "Type Here: ": ""
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
-          "=": "="
+          "=": "=",
+          "???": ""
+        },
+        "CSDU6 - UI and Inputs - getNumber practice": {
+          "????": "",
+          "Value:": ""
+        },
+        "CSDU6 - UI and Inputs - setProperty": {
+          "Click Me!": ""
+        },
+        "CSDU6 - UI and Inputs - setProperty first level": {
+          "How does setProperty work??": ""
         },
         "CSDU6 - UI and Inputs - setScreen": {
-          "Back": "Буцах"
+          "About Me": "",
+          "All About Me!": "",
+          "Back": "Буцах",
+          "I'm taking computer science class at school!": "",
+          "My Awesome App": ""
+        },
+        "CSDU6 - UI and Inputs - setText": {
+          "Alarm:": "",
+          "OFF": "",
+          "Stop Alarm": "",
+          "Trigger Alarm": ""
+        },
+        "CSDU6 - toggleswitch state setProp": {
+          "?????": ""
+        },
+        "CSDU6 - toggleswitch state setProp_2018": {
+          "?????": ""
+        },
+        "CSDU6 - toggleswitch state setProp_2019": {
+          "?????": ""
+        },
+        "CSDU6 - toggleswitch state setProp_2021": {
+          "?????": ""
         },
         "CSDU6 Circuit Playground Test": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Plug in your Circuit Playground and click \"Run\"": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSDU6 Circuit Playground Test_2018": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Plug in your Circuit Playground and click \"Run\"": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSDU6 Circuit Playground Test_2019": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Plug in your Circuit Playground and click \"Run\"": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSDU6 Circuit Playground Test_2021": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Plug in your Circuit Playground and click \"Run\"": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
         },
         "CSDU6 Circuit Playground Test_2222": {
-          "Success!": "Амжилт!"
+          "Board Not Detected!": "",
+          "Plug in your Circuit Playground and click \"Run\"": "",
+          "Plug the board into a different USB": "",
+          "Refresh this page and try again": "",
+          "Success!": "Амжилт!",
+          "Try the following:": "",
+          "Visit studio.code.org/maker/setup": ""
+        },
+        "CSDU6 array select days": {
+          "????????": "",
+          "Today Is: ": ""
+        },
+        "CSDU6 array select days_2018": {
+          "????????": "",
+          "Today Is: ": ""
+        },
+        "CSDU6 array select days_2019": {
+          "????????": "",
+          "Today Is: ": ""
+        },
+        "CSDU6 array select days_2021": {
+          "????????": "",
+          "Today Is: ": ""
         },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "A#": "",
+          "B": "B",
           "C": "C",
+          "C#": "",
           "D": "D",
+          "D#": "",
           "E": "З",
           "F": "F",
+          "F#": "",
           "G": "G",
-          "A": "A",
-          "B": "B"
+          "G#": ""
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "A#": "",
+          "B": "B",
           "C": "C",
+          "C#": "",
           "D": "D",
+          "D#": "",
           "E": "З",
           "F": "F",
+          "F#": "",
           "G": "G",
-          "A": "A",
-          "B": "B"
+          "G#": ""
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "A#": "",
+          "B": "B",
           "C": "C",
+          "C#": "",
           "D": "D",
+          "D#": "",
           "E": "З",
           "F": "F",
+          "F#": "",
           "G": "G",
-          "A": "A",
-          "B": "B"
+          "G#": ""
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "A#": "",
+          "B": "B",
           "C": "C",
+          "C#": "",
           "D": "D",
+          "D#": "",
           "E": "З",
           "F": "F",
+          "F#": "",
           "G": "G",
-          "A": "A",
-          "B": "B"
+          "G#": ""
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "A#": "",
+          "B": "B",
           "C": "C",
+          "C#": "",
           "D": "D",
+          "D#": "",
           "E": "З",
           "F": "F",
+          "F#": "",
           "G": "G",
-          "A": "A",
-          "B": "B"
+          "G#": ""
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "A#": "",
+          "B": "B",
           "C": "C",
+          "C#": "",
           "D": "D",
+          "D#": "",
           "E": "З",
           "F": "F",
+          "F#": "",
           "G": "G",
-          "A": "A",
-          "B": "B"
+          "G#": ""
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "A#": "",
+          "B": "B",
           "C": "C",
+          "C#": "",
           "D": "D",
+          "D#": "",
           "E": "З",
           "F": "F",
+          "F#": "",
           "G": "G",
-          "A": "A",
-          "B": "B"
+          "G#": ""
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "A#": "",
+          "B": "B",
           "C": "C",
+          "C#": "",
           "D": "D",
+          "D#": "",
           "E": "З",
           "F": "F",
+          "F#": "",
           "G": "G",
-          "A": "A",
-          "B": "B"
+          "G#": ""
+        },
+        "Escape Room Example": {
+          "1205": ""
+        },
+        "Final Room Escape App": {
+          "CODE": ""
+        },
+        "Room Escape Workshop - 1": {
+          "CODE": ""
+        },
+        "Room Escape Workshop - 10": {
+          "CODE": ""
+        },
+        "Room Escape Workshop - 10 - 2": {
+          "CODE": ""
+        },
+        "Room Escape Workshop - 3": {
+          "CODE": ""
+        },
+        "Room Escape Workshop - 3-2": {
+          "CODE": ""
+        },
+        "Room Escape Workshop - 4": {
+          "CODE": ""
+        },
+        "Room Escape Workshop - 5": {
+          "CODE": ""
+        },
+        "Room Escape Workshop - 7": {
+          "CODE": ""
+        },
+        "Room Escape Workshop - 8": {
+          "CODE": ""
+        },
+        "Room Escape Workshop - 9-2": {
+          "CODE": ""
         },
         "allthethings design mode elements": {
+          "Button": "",
+          "Option 1": "",
+          "Option 2": "",
+          "multiline text area initial contents ": "",
           "text": "текст"
         },
+        "allthethings_moviebot": {
+          "Ask me a question.": "",
+          "Movie Bot": ""
+        },
         "csa widget test2": {
-          "8": "8"
+          "32": "",
+          "8": "8",
+          "Benches": "",
+          "Blue House": "",
+          "Bodega": "",
+          "Categories": "",
+          "DEBUG CONSOLE": "",
+          "Food Truck": "",
+          "Landscape": "",
+          "Manual": "",
+          "Other Objects": "",
+          "Painter": "",
+          "Red House": "",
+          "Selected Paint Can Amount: 0": "",
+          "Sidewalk": "",
+          "Taxi": "",
+          "Wall": ""
         },
         "csd u5 recommender sample": {
-          "Start": "Эхлэх"
+          "Start": "Эхлэх",
+          "What is the best superpower?": "",
+          "What is your favorite food?": "",
+          "Where should you go on vacation?": "",
+          "Which animal do you like the best?": "",
+          "You should go to a big city!": "",
+          "You should go to a national park!": "",
+          "You should go to an amusement park!": "",
+          "You should go to the beach!": "",
+          "flying": "",
+          "invisibility": "",
+          "super strength": "",
+          "teleport": ""
         },
         "csd u5 recommender sample_2019": {
-          "Start": "Эхлэх"
+          "Start": "Эхлэх",
+          "What is the best superpower?": "",
+          "What is your favorite food?": "",
+          "Where should you go on vacation?": "",
+          "Which animal do you like the best?": "",
+          "You should go to a big city!": "",
+          "You should go to a national park!": "",
+          "You should go to an amusement park!": "",
+          "You should go to the beach!": "",
+          "flying": "",
+          "invisibility": "",
+          "super strength": "",
+          "teleport": ""
         },
         "csd u5 recommender sample_2021": {
-          "Start": "Эхлэх"
+          "Start": "Эхлэх",
+          "What is the best superpower?": "",
+          "What is your favorite food?": "",
+          "Where should you go on vacation?": "",
+          "Which animal do you like the best?": "",
+          "You should go to a big city!": "",
+          "You should go to a national park!": "",
+          "You should go to an amusement park!": "",
+          "You should go to the beach!": "",
+          "flying": "",
+          "invisibility": "",
+          "super strength": "",
+          "teleport": ""
         },
         "csd u5 recommender sample_2022": {
-          "Start": "Эхлэх"
+          "Start": "Эхлэх",
+          "What is the best superpower?": "",
+          "What is your favorite food?": "",
+          "Where should you go on vacation?": "",
+          "Which animal do you like the best?": "",
+          "You should go to a big city!": "",
+          "You should go to a national park!": "",
+          "You should go to an amusement park!": "",
+          "You should go to the beach!": "",
+          "flying": "",
+          "invisibility": "",
+          "super strength": "",
+          "teleport": ""
+        },
+        "csd-apps for good-1": {
+          "Briggs Avenue Community Garden": "",
+          "Do More Durham": "",
+          "Durham Central Park": "",
+          "Eno River Association": "",
+          "Get involved in Durham's garden spaces. You can grow your own food and contribute to Durham's healthy lifestyle. ": "",
+          "Like the outdoors? You can help clean up our parks or guide others on hikes. Whatever your interests, there's a way to get involved. ": "",
+          "Seeds": ""
+        },
+        "csd-apps for good-1_2022": {
+          "Briggs Avenue Community Garden": "",
+          "Do More Durham": "",
+          "Durham Central Park": "",
+          "Eno River Association": "",
+          "Get involved in Durham's garden spaces. You can grow your own food and contribute to Durham's healthy lifestyle. ": "",
+          "Like the outdoors? You can help clean up our parks or guide others on hikes. Whatever your interests, there's a way to get involved. ": "",
+          "Seeds": ""
         },
         "csd-apps for good-2": {
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "",
+          "Click on the timer": "",
+          "English": "",
+          "Home": "Эхлэл хуудас",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "",
           "Next": "Дараагийнх",
-          "Home": "Эхлэл хуудас"
+          "Spanish": "",
+          "Water Conservation Tips": ""
         },
         "csd-apps for good-2_2022": {
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "",
+          "Click on the timer": "",
+          "English": "",
+          "Home": "Эхлэл хуудас",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "",
           "Next": "Дараагийнх",
-          "Home": "Эхлэл хуудас"
+          "Spanish": "",
+          "Water Conservation Tips": ""
         },
         "csd-apps for good-3": {
           "1": "1",
           "2": "2",
           "3": "3",
-          "4": "4"
+          "4": "4",
+          "4-Square = 4 Times the Fun": "",
+          "???": "",
+          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "",
+          "How many players do you need to play 4-Square? Click to find out!": "",
+          "More Info": "",
+          "Start Again": "",
+          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": ""
         },
         "csd-apps for good-3_2022": {
           "1": "1",
           "2": "2",
           "3": "3",
-          "4": "4"
+          "4": "4",
+          "4-Square = 4 Times the Fun": "",
+          "???": "",
+          "Have you wanted to learn how to play the fun, social game of 4-square, but didn't know where to start? This is the app for you! ": "",
+          "How many players do you need to play 4-Square? Click to find out!": "",
+          "More Info": "",
+          "Start Again": "",
+          "To play 4-square, each player stands near one of the four marked boxes on the ground. The boxes are ordered from 1 to 4, with one being the \"top\" box. The player in the 1 box starts play by bouncing the ball in their square and then slapping or hitting the ball into another square. The ball must not touch the original players box again after the initial bounce. If the ball bounces in a player's square, they must then hit the ball into another square before the ball bounces again. They may only hit the ball once. But what if it hits the line, you might ask? There are many different rules on what to do if the ball hits the line - you must agree with your friends if the lines are in or out. If you hit the ball out of bounds or it bounces twice in your square you are out. Everyone moves to the next highest box available (the goal is to stay in the first box as long as possible). If you are out, you go to the back of the line and a new player takes the empty spot in box 4. ": ""
+        },
+        "csd-explore ui-1": {
+          "$15": "",
+          "Breakfast": "",
+          "Chinese": "",
+          "Dollars per person": "",
+          "Italian": "",
+          "Type of Restaurant": "",
+          "Where Should I Eat?": ""
+        },
+        "csd-explore ui-1_2022": {
+          "$15": "",
+          "Breakfast": "",
+          "Chinese": "",
+          "Dollars per person": "",
+          "Italian": "",
+          "Type of Restaurant": "",
+          "Where Should I Eat?": ""
         },
         "csd-explore ui-2": {
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "",
+          "Click on the timer": "",
+          "English": "",
+          "Home": "Эхлэл хуудас",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "",
           "Next": "Дараагийнх",
-          "Home": "Эхлэл хуудас"
+          "Spanish": "",
+          "Water Conservation Tips": ""
         },
         "csd-explore ui-2_2022": {
+          "Another way to conserve water is to take shorter showers. Try setting a timer to five minutes!": "",
+          "Choose the correct water bottle. Then click the faucet to fill. ": "",
+          "Click on the timer": "",
+          "English": "",
+          "Home": "Эхлэл хуудас",
+          "Instead of buying disposable water bottles, use a refillable bottle. One use water bottles fill our land fills and trap valuable water.": "",
+          "It's important that we all do our part to use less water. Click through this app for tips for conservation ideas. ": "",
           "Next": "Дараагийнх",
-          "Home": "Эхлэл хуудас"
+          "Spanish": "",
+          "Water Conservation Tips": ""
         },
         "csd-explore ui-3": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1123,18 +4065,46 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "21": "",
+          "22": "",
+          "23": "",
+          "24": "",
+          "25": "",
+          "26": "",
+          "27": "",
+          "28": "",
+          "29": "",
+          "3": "3",
+          "30": "",
+          "31": "",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "April": "",
+          "August": "",
+          "Choose your Birthday!": "",
+          "December": "",
+          "February": "",
+          "Find out if it's your birthday!": "",
+          "It was already your birthday this year!!": "",
+          "It's not your birthday yet this year!": "",
+          "It's your birthday!": "",
+          "January": "",
+          "July": "",
+          "June": "",
+          "March": "",
+          "May": "",
+          "November": "",
+          "October": "",
+          "September": ""
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1145,26 +4115,102 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "21": "",
+          "22": "",
+          "23": "",
+          "24": "",
+          "25": "",
+          "26": "",
+          "27": "",
+          "28": "",
+          "29": "",
+          "3": "3",
+          "30": "",
+          "31": "",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "April": "",
+          "August": "",
+          "Choose your Birthday!": "",
+          "December": "",
+          "February": "",
+          "Find out if it's your birthday!": "",
+          "It was already your birthday this year!!": "",
+          "It's not your birthday yet this year!": "",
+          "It's your birthday!": "",
+          "January": "",
+          "July": "",
+          "June": "",
+          "March": "",
+          "May": "",
+          "November": "",
+          "October": "",
+          "September": ""
         },
         "csd-explore ui-4": {
+          "Acadia": "",
           "Correct!": "Зөв!",
-          "Sorry!": "Уучлаарай!"
+          "Death Valley": "",
+          "Denali": "",
+          "Grand Canyon": "",
+          "Great Smoky Mountains": "",
+          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "",
+          "National Park Quiz": "",
+          "Next Question": "",
+          "Olympic": "",
+          "Play Again": "",
+          "Redwood": "",
+          "Sequoia": "",
+          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "",
+          "Shenandoah": "",
+          "Sorry!": "Уучлаарай!",
+          "Start!": "",
+          "What was the first national park?": "",
+          "Which is the largest national park?": "",
+          "Which national park gets the most visitors?": "",
+          "Which national park has the largest tree in the world?": "",
+          "Wrangell-St. Elias": "",
+          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "",
+          "Yellowstone": "",
+          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "",
+          "Yosemite": ""
         },
         "csd-explore ui-4_2022": {
+          "Acadia": "",
           "Correct!": "Зөв!",
-          "Sorry!": "Уучлаарай!"
+          "Death Valley": "",
+          "Denali": "",
+          "Grand Canyon": "",
+          "Great Smoky Mountains": "",
+          "Great Smoky Mountains is the most visited, with more than 11 million visitors every year.": "",
+          "National Park Quiz": "",
+          "Next Question": "",
+          "Olympic": "",
+          "Play Again": "",
+          "Redwood": "",
+          "Sequoia": "",
+          "Sequoia is home to the biggest tree in the world, the General Sherman Tree.": "",
+          "Shenandoah": "",
+          "Sorry!": "Уучлаарай!",
+          "Start!": "",
+          "What was the first national park?": "",
+          "Which is the largest national park?": "",
+          "Which national park gets the most visitors?": "",
+          "Which national park has the largest tree in the world?": "",
+          "Wrangell-St. Elias": "",
+          "Wrangell-St. Elias is the largest national park, even bigger than many countries!": "",
+          "Yellowstone": "",
+          "Yellowstone was the first National Park, created by President Ulysses S. Grant in 1872": "",
+          "Yosemite": ""
         },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1175,18 +4221,84 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "1998": "",
+          "1999": "",
+          "2": "2",
+          "20": "20",
+          "2000": "",
+          "2001": "",
+          "2002": "",
+          "2003": "",
+          "2004": "",
+          "2005": "",
+          "2006": "",
+          "2007": "",
+          "2008": "",
+          "2009": "",
+          "2010": "",
+          "2011": "",
+          "2012": "",
+          "2013": "",
+          "2014": "",
+          "2015": "",
+          "21": "",
+          "22": "",
+          "23": "",
+          "24": "",
+          "25": "",
+          "26": "",
+          "27": "",
+          "28": "",
+          "29": "",
+          "3": "3",
+          "30": "",
+          "31": "",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "Anchee Min": "",
+          "April": "",
+          "August": "",
+          "December": "",
+          "Enter your Birthday!": "",
+          "February": "",
+          "Find a writer!": "",
+          "Friday": "",
+          "Gabriel Garcia Marquez": "",
+          "January": "",
+          "July": "",
+          "June": "",
+          "Khaled Hosseini": "",
+          "Langston Hughes": "",
+          "March": "",
+          "Margaret Atwood": "",
+          "May": "",
+          "Monday": "",
+          "N. Scott Momaday": "",
+          "November": "",
+          "October": "",
+          "Public Domain": "",
+          "Public Domain Image": "",
+          "Saturday": "",
+          "September": "",
+          "Sunday": "",
+          "Thursday": "",
+          "Toni Morrison": "",
+          "Tuesday": "",
+          "Wednesday": "",
+          "You were born on a": "",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "",
+          "image by Jose Lara, CC-BY-SA": "",
+          "image by Slowking4, GFDL 1.2": "",
+          "image by Vanwaffle, CC BY-SA 3.0": "",
+          "just like": "",
+          "public domain image": ""
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1197,21 +4309,135 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "1998": "",
+          "1999": "",
+          "2": "2",
+          "20": "20",
+          "2000": "",
+          "2001": "",
+          "2002": "",
+          "2003": "",
+          "2004": "",
+          "2005": "",
+          "2006": "",
+          "2007": "",
+          "2008": "",
+          "2009": "",
+          "2010": "",
+          "2011": "",
+          "2012": "",
+          "2013": "",
+          "2014": "",
+          "2015": "",
+          "21": "",
+          "22": "",
+          "23": "",
+          "24": "",
+          "25": "",
+          "26": "",
+          "27": "",
+          "28": "",
+          "29": "",
+          "3": "3",
+          "30": "",
+          "31": "",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "Anchee Min": "",
+          "April": "",
+          "August": "",
+          "December": "",
+          "Enter your Birthday!": "",
+          "February": "",
+          "Find a writer!": "",
+          "Friday": "",
+          "Gabriel Garcia Marquez": "",
+          "January": "",
+          "July": "",
+          "June": "",
+          "Khaled Hosseini": "",
+          "Langston Hughes": "",
+          "March": "",
+          "Margaret Atwood": "",
+          "May": "",
+          "Monday": "",
+          "N. Scott Momaday": "",
+          "November": "",
+          "October": "",
+          "Public Domain": "",
+          "Public Domain Image": "",
+          "Saturday": "",
+          "September": "",
+          "Sunday": "",
+          "Thursday": "",
+          "Toni Morrison": "",
+          "Tuesday": "",
+          "Wednesday": "",
+          "You were born on a": "",
+          "image by John Mathew Smith, CC-BY-SA 2.0": "",
+          "image by Jose Lara, CC-BY-SA": "",
+          "image by Slowking4, GFDL 1.2": "",
+          "image by Vanwaffle, CC BY-SA 3.0": "",
+          "just like": "",
+          "public domain image": ""
         },
         "csd-explore ui-6": {
-          "Next": "Дараагийнх"
+          "Learning to Drive": "",
+          "Mad Libs!": "",
+          "Next": "Дараагийнх",
+          "Noun": "",
+          "Play again": "",
+          "Plural Noun": "",
+          "Song": "",
+          "Verb": ""
         },
         "csd-explore ui-6_2022": {
-          "Next": "Дараагийнх"
+          "Learning to Drive": "",
+          "Mad Libs!": "",
+          "Next": "Дараагийнх",
+          "Noun": "",
+          "Play again": "",
+          "Plural Noun": "",
+          "Song": "",
+          "Verb": ""
         },
         "ml-L2 supervised - green glass door-2021": {
           "Accepted": "Зөвшөөрсөн",
-          "Rejected": "Татгалзсан"
+          "Check Your Word": "",
+          "Decision:": "",
+          "Green Glass Door": "",
+          "I'm Ready To Try Myself!": "",
+          "In the next screen, a wise wizard will show us how to play the game": "",
+          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "",
+          "New Example Word": "",
+          "On this screen, the wizard can show you example words. See if you notice any patterns": "",
+          "Rejected": "Татгалзсан",
+          "See All Results": "",
+          "Some words are accepted and others are rejected": "",
+          "Start Playing": "",
+          "Then we'll get a chance to play and guess which words are accepted or rejected by the door": "",
+          "Word:": ""
         },
         "ml-L2 supervised - green glass door_2022": {
           "Accepted": "Зөвшөөрсөн",
-          "Rejected": "Татгалзсан"
+          "Check Your Word": "",
+          "Decision:": "",
+          "Green Glass Door": "",
+          "I'm Ready To Try Myself!": "",
+          "In the next screen, a wise wizard will show us how to play the game": "",
+          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "",
+          "New Example Word": "",
+          "On this screen, the wizard can show you example words. See if you notice any patterns": "",
+          "Rejected": "Татгалзсан",
+          "See All Results": "",
+          "Some words are accepted and others are rejected": "",
+          "Start Playing": "",
+          "Then we'll get a chance to play and guess which words are accepted or rejected by the door": "",
+          "Word:": ""
         },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "Дараагийнх"
@@ -1220,160 +4446,624 @@
           "Next": "Дараагийнх"
         },
         "ml-customize-raspado-2021": {
-          "yes": "тийм",
-          "no": "үгүй"
+          "Predict": "",
+          "Raspado Recommender": "",
+          "chili en polbo:": "",
+          "coconut:": "",
+          "lechera:": "",
+          "lime:": "",
+          "mango:": "",
+          "no": "үгүй",
+          "pecan:": "",
+          "preference": "",
+          "strawberry:": "",
+          "vanilla:": "",
+          "yes": "тийм"
         },
         "ml-customize-raspado_2022": {
-          "yes": "тийм",
-          "no": "үгүй"
+          "Predict": "",
+          "Raspado Recommender": "",
+          "chili en polbo:": "",
+          "coconut:": "",
+          "lechera:": "",
+          "lime:": "",
+          "mango:": "",
+          "no": "үгүй",
+          "pecan:": "",
+          "preference": "",
+          "strawberry:": "",
+          "vanilla:": "",
+          "yes": "тийм"
         },
         "ml-intro ai lab- fruit veggie widget": {
+          "According to the line you drew, your model thinks this food is a": "",
+          "Click in two places to draw a line!": "",
           "Continue": "Үргэлжлүүлэх",
-          "Loading...": "Ачааллаж байна..."
+          "Flip Colors": "",
+          "Fruit Accuracy:": "",
+          "Hover over a dot to see its name": "",
+          "Let's See What The Model Decides": "",
+          "Loading...": "Ачааллаж байна...",
+          "On a Scale from 1-10, how would you rate": "",
+          "Try Your Own Food!": "",
+          "Veggie Accuracy:": "",
+          "What is the nameof your food?": "",
+          "Your new food has been added to the graph as a gray square!": "",
+          "x Axis": "",
+          "y Axis": ""
         },
         "ml-intro ai lab- fruit veggie widget_2022": {
+          "According to the line you drew, your model thinks this food is a": "",
+          "Click in two places to draw a line!": "",
           "Continue": "Үргэлжлүүлэх",
-          "Loading...": "Ачааллаж байна..."
+          "Flip Colors": "",
+          "Fruit Accuracy:": "",
+          "Hover over a dot to see its name": "",
+          "Let's See What The Model Decides": "",
+          "Loading...": "Ачааллаж байна...",
+          "On a Scale from 1-10, how would you rate": "",
+          "Try Your Own Food!": "",
+          "Veggie Accuracy:": "",
+          "What is the nameof your food?": "",
+          "Your new food has been added to the graph as a gray square!": "",
+          "x Axis": "",
+          "y Axis": ""
+        },
+        "ml-intro app lab-book recommender demo-2021": {
+          "By Myself": "",
+          "Cat": "",
+          "Class Book Recommender": "",
+          "Dragon": "",
+          "How do you like to spendtime?": "",
+          "How would your friends describe you?": "",
+          "Independent": "",
+          "Indoors": "",
+          "Myterious": "",
+          "Outdoors": "",
+          "Predict": "",
+          "Silly": "",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "",
+          "Thoughtful": "",
+          "Walrus": "",
+          "Where do you like to spend time?": "",
+          "Which animal do you like the most?": "",
+          "With Friends": "",
+          "Wolf": ""
+        },
+        "ml-intro app lab-book recommender demo_2022": {
+          "By Myself": "",
+          "Cat": "",
+          "Class Book Recommender": "",
+          "Dragon": "",
+          "How do you like to spendtime?": "",
+          "How would your friends describe you?": "",
+          "Independent": "",
+          "Indoors": "",
+          "Myterious": "",
+          "Outdoors": "",
+          "Predict": "",
+          "Silly": "",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "",
+          "Thoughtful": "",
+          "Walrus": "",
+          "Where do you like to spend time?": "",
+          "Which animal do you like the most?": "",
+          "With Friends": "",
+          "Wolf": ""
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "Б",
+          "18-34": "",
+          "35-60": "",
           "A": "A",
-          "yes": "тийм",
+          "AIAN": "",
+          "Achy": "",
+          "Age?": "",
+          "Area of Pain?": "",
+          "BAM": "",
+          "Bleeding?": "",
+          "Dull": "",
+          "Gender?": "",
+          "Medical Priority": "",
+          "NHPI": "",
+          "Over 60": "",
+          "Pain Type": "",
+          "Please Sign In Below": "",
+          "Race?": "",
+          "Sharp": "",
+          "Shortness of Breath?": "",
+          "Sign In": "",
+          "Stabbing": "",
+          "Throbbing": "",
+          "Under 18": "",
+          "W": "Б",
+          "chest": "",
+          "female": "",
+          "head": "толгой",
+          "limb": "",
+          "male": "",
           "no": "үгүй",
-          "head": "толгой"
+          "nonbinary (identifies outside gender binary)": "",
+          "stomach": "",
+          "yes": "тийм"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "Б",
+          "18-34": "",
+          "35-60": "",
           "A": "A",
-          "yes": "тийм",
+          "AIAN": "",
+          "Achy": "",
+          "Age?": "",
+          "Area of Pain?": "",
+          "BAM": "",
+          "Bleeding?": "",
+          "Dull": "",
+          "Gender?": "",
+          "Medical Priority": "",
+          "NHPI": "",
+          "Over 60": "",
+          "Pain Type": "",
+          "Please Sign In Below": "",
+          "Race?": "",
+          "Sharp": "",
+          "Shortness of Breath?": "",
+          "Sign In": "",
+          "Stabbing": "",
+          "Throbbing": "",
+          "Under 18": "",
+          "W": "Б",
+          "chest": "",
+          "female": "",
+          "head": "толгой",
+          "limb": "",
+          "male": "",
           "no": "үгүй",
-          "head": "толгой"
+          "nonbinary (identifies outside gender binary)": "",
+          "stomach": "",
+          "yes": "тийм"
+        },
+        "ml-model cards-book recommender model card": {
+          "By Myself": "",
+          "Cat": "",
+          "Class Book Recommender": "",
+          "Dragon": "",
+          "How do you like to spendtime?": "",
+          "How would your friends describe you?": "",
+          "Independent": "",
+          "Indoors": "",
+          "Myterious": "",
+          "Outdoors": "",
+          "Predict": "",
+          "Silly": "",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "",
+          "Thoughtful": "",
+          "Walrus": "",
+          "Where do you like to spend time?": "",
+          "Which animal do you like the most?": "",
+          "With Friends": "",
+          "Wolf": ""
+        },
+        "ml-model cards-book recommender model card_2022": {
+          "By Myself": "",
+          "Cat": "",
+          "Class Book Recommender": "",
+          "Dragon": "",
+          "How do you like to spendtime?": "",
+          "How would your friends describe you?": "",
+          "Independent": "",
+          "Indoors": "",
+          "Myterious": "",
+          "Outdoors": "",
+          "Predict": "",
+          "Silly": "",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "",
+          "Thoughtful": "",
+          "Walrus": "",
+          "Where do you like to spend time?": "",
+          "Which animal do you like the most?": "",
+          "With Friends": "",
+          "Wolf": ""
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3",
+          "4+": "",
+          "Free Time": "",
+          "Not At All": "",
+          "Number of Pets?": "",
+          "Pet": "",
+          "Pet Recommendation: Dog!": "",
+          "Pet Recommendation: Fish!": "",
+          "Pet Recommendation: Iguana!": "",
+          "Pet Recommendation: Parakeet": "",
+          "Playful?": "",
+          "Predict": "",
+          "Sort Of": "",
+          "Temperature": "",
+          "Very": ""
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3",
+          "4+": "",
+          "Free Time": "",
+          "Not At All": "",
+          "Number of Pets?": "",
+          "Pet": "",
+          "Pet Recommendation: Dog!": "",
+          "Pet Recommendation: Fish!": "",
+          "Pet Recommendation: Iguana!": "",
+          "Pet Recommendation: Parakeet": "",
+          "Playful?": "",
+          "Predict": "",
+          "Sort Of": "",
+          "Temperature": "",
+          "Very": ""
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3",
+          "4+": "",
+          "Free Time": "",
+          "Not At All": "",
+          "Number of Pets?": "",
+          "Pet": "",
+          "Pet Recommendation: Dog!": "",
+          "Pet Recommendation: Fish!": "",
+          "Pet Recommendation: Iguana!": "",
+          "Pet Recommendation: Parakeet": "",
+          "Playful?": "",
+          "Predict": "",
+          "Sort Of": "",
+          "Temperature": "",
+          "Very": ""
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3",
+          "4+": "",
+          "Free Time": "",
+          "Not At All": "",
+          "Number of Pets?": "",
+          "Pet": "",
+          "Pet Recommendation: Dog!": "",
+          "Pet Recommendation: Fish!": "",
+          "Pet Recommendation: Iguana!": "",
+          "Pet Recommendation: Parakeet": "",
+          "Playful?": "",
+          "Predict": "",
+          "Sort Of": "",
+          "Temperature": "",
+          "Very": ""
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Back": "Буцах"
+          "2": "2",
+          "3": "3",
+          "4+": "",
+          "Back": "Буцах",
+          "Free Time": "",
+          "Intended Uses": "",
+          "Limitations and Warnings": "",
+          "More Information": "",
+          "Not At All": "",
+          "Number of Pets?": "",
+          "Pet": "",
+          "Pet Recommendation: Dog!": "",
+          "Pet Recommendation: Fish!": "",
+          "Pet Recommendation: Iguana!": "",
+          "Pet Recommendation: Parakeet": "",
+          "Playful?": "",
+          "Predict": "",
+          "Sort Of": "",
+          "Temperature": "",
+          "Very": ""
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Back": "Буцах"
+          "2": "2",
+          "3": "3",
+          "4+": "",
+          "Back": "Буцах",
+          "Free Time": "",
+          "Intended Uses": "",
+          "Limitations and Warnings": "",
+          "More Information": "",
+          "Not At All": "",
+          "Number of Pets?": "",
+          "Pet": "",
+          "Pet Recommendation: Dog!": "",
+          "Pet Recommendation: Fish!": "",
+          "Pet Recommendation: Iguana!": "",
+          "Pet Recommendation: Parakeet": "",
+          "Playful?": "",
+          "Predict": "",
+          "Sort Of": "",
+          "Temperature": "",
+          "Very": ""
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3",
+          "4+": "",
+          "Free Time": "",
+          "Not At All": "",
+          "Number of Pets?": "",
+          "Pet": "",
+          "Pet Recommendation: Dog!": "",
+          "Pet Recommendation: Fish!": "",
+          "Pet Recommendation: Iguana!": "",
+          "Pet Recommendation: Parakeet": "",
+          "Playful?": "",
+          "Predict": "",
+          "Sort Of": "",
+          "Temperature": "",
+          "Very": ""
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3",
+          "4+": "",
+          "Free Time": "",
+          "Not At All": "",
+          "Number of Pets?": "",
+          "Pet": "",
+          "Pet Recommendation: Dog!": "",
+          "Pet Recommendation: Fish!": "",
+          "Pet Recommendation: Iguana!": "",
+          "Pet Recommendation: Parakeet": "",
+          "Playful?": "",
+          "Predict": "",
+          "Sort Of": "",
+          "Temperature": "",
+          "Very": ""
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Тийм",
+          "AB": "",
+          "AQ": "",
+          "B": "B",
+          "H": "",
+          "It's A Mammal!": "",
+          "It's A Reptile!": "",
+          "It's a Bird!": "",
+          "It's a Bug!": "",
+          "It's a Crustacean!": "",
+          "It's a Fish!": "",
+          "It's an Amphibian!": "",
           "No": "Үгүй",
-          "B": "B"
+          "Predict": "",
+          "Yes": "Тийм"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Тийм",
+          "AB": "",
+          "AQ": "",
+          "B": "B",
+          "H": "",
+          "It's A Mammal!": "",
+          "It's A Reptile!": "",
+          "It's a Bird!": "",
+          "It's a Bug!": "",
+          "It's a Crustacean!": "",
+          "It's a Fish!": "",
+          "It's an Amphibian!": "",
           "No": "Үгүй",
-          "B": "B"
+          "Predict": "",
+          "Yes": "Тийм"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Тийм",
-          "No": "Үгүй"
+          "Animal Predictor!": "",
+          "Does it have a backbone?": "",
+          "Does it have hair?": "",
+          "Intended Uses": "",
+          "Is it airborne?": "",
+          "Is it aquatic?": "",
+          "It's A Mammal!": "",
+          "It's A Reptile!": "",
+          "It's a Bird!": "",
+          "It's a Bug!": "",
+          "It's a Crustacean!": "",
+          "It's a Fish!": "",
+          "It's an Amphibian!": "",
+          "Limitations": "",
+          "More Information": "",
+          "Next!": "",
+          "No": "Үгүй",
+          "Predict": "",
+          "This app can be used to identify the type of animal you see in the real world. This can be used in Zoos or Wildlife Sanctuaries to help educate people about the type of animals they are looking at.": "",
+          "This app was trained on a small set of animals and only animals that typically appear in a zoo. This app may not work well with more exotic animals.": "",
+          "This app will predict a type of animal based on four questions!": "",
+          "Yes": "Тийм"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Тийм",
-          "No": "Үгүй"
+          "Animal Predictor!": "",
+          "Does it have a backbone?": "",
+          "Does it have hair?": "",
+          "Intended Uses": "",
+          "Is it airborne?": "",
+          "Is it aquatic?": "",
+          "It's A Mammal!": "",
+          "It's A Reptile!": "",
+          "It's a Bird!": "",
+          "It's a Bug!": "",
+          "It's a Crustacean!": "",
+          "It's a Fish!": "",
+          "It's an Amphibian!": "",
+          "Limitations": "",
+          "More Information": "",
+          "Next!": "",
+          "No": "Үгүй",
+          "Predict": "",
+          "This app can be used to identify the type of animal you see in the real world. This can be used in Zoos or Wildlife Sanctuaries to help educate people about the type of animals they are looking at.": "",
+          "This app was trained on a small set of animals and only animals that typically appear in a zoo. This app may not work well with more exotic animals.": "",
+          "This app will predict a type of animal based on four questions!": "",
+          "Yes": "Тийм"
         },
         "ml-models-shoes decision tree-2021": {
-          "Sports": "Спортууд"
+          "Another Recommendation!": "",
+          "Casual": "",
+          "Choose An Option": "",
+          "Fancy": "",
+          "Improved Shoe Recommender": "",
+          "In Bed": "",
+          "Indoors": "",
+          "Is It Raining Outside?": "",
+          "No!": "",
+          "Outdoors": "",
+          "Recommend Shoes": "",
+          "Recommend Shoes!": "",
+          "Sports": "Спортууд",
+          "We Recommend...": "",
+          "What Kind Of Day is Today?": "",
+          "Where Are You Spending Your Day?": "",
+          "Yes!": ""
         },
         "ml-models-shoes decision tree_2022": {
-          "Sports": "Спортууд"
+          "Another Recommendation!": "",
+          "Casual": "",
+          "Choose An Option": "",
+          "Fancy": "",
+          "Improved Shoe Recommender": "",
+          "In Bed": "",
+          "Indoors": "",
+          "Is It Raining Outside?": "",
+          "No!": "",
+          "Outdoors": "",
+          "Recommend Shoes": "",
+          "Recommend Shoes!": "",
+          "Sports": "Спортууд",
+          "We Recommend...": "",
+          "What Kind Of Day is Today?": "",
+          "Where Are You Spending Your Day?": "",
+          "Yes!": ""
+        },
+        "ml-models-shoes points-2021": {
+          "Another Recommendation!": "",
+          "Casual": "",
+          "Do you care about people noticing your shoes?": "",
+          "Hard Work": "",
+          "How do you feel about socks?": "",
+          "In Bed": "",
+          "Indoors": "",
+          "Lazy": "",
+          "No Socks!": "",
+          "No!": "",
+          "Outside in Nature": "",
+          "Outside in a City": "",
+          "Professional": "",
+          "Rainy": "",
+          "Recommend Shoes!": "",
+          "Snowy": "",
+          "Sunny": "",
+          "Ultimate Shoe Recommender": "",
+          "We Recommend...": "",
+          "What is the weather like?": "",
+          "What is your day like?": "",
+          "Where will you spend most of your time?": "",
+          "Windy": "",
+          "Yes Socks!": "",
+          "Yes!": ""
+        },
+        "ml-models-shoes points_2022": {
+          "Another Recommendation!": "",
+          "Casual": "",
+          "Do you care about people noticing your shoes?": "",
+          "Hard Work": "",
+          "How do you feel about socks?": "",
+          "In Bed": "",
+          "Indoors": "",
+          "Lazy": "",
+          "No Socks!": "",
+          "No!": "",
+          "Outside in Nature": "",
+          "Outside in a City": "",
+          "Professional": "",
+          "Rainy": "",
+          "Recommend Shoes!": "",
+          "Snowy": "",
+          "Sunny": "",
+          "Ultimate Shoe Recommender": "",
+          "We Recommend...": "",
+          "What is the weather like?": "",
+          "What is your day like?": "",
+          "Where will you spend most of your time?": "",
+          "Windy": "",
+          "Yes Socks!": "",
+          "Yes!": ""
+        },
+        "ml-models-shoes random-2021": {
+          "Another Recommendation!": "",
+          "Recommend Shoes!": "",
+          "Shoe Recommender": "",
+          "We Recommend...": ""
+        },
+        "ml-models-shoes random_2022": {
+          "Another Recommendation!": "",
+          "Recommend Shoes!": "",
+          "Shoe Recommender": "",
+          "We Recommend...": ""
         },
         "ml-use model card-example3A-2021": {
+          "Alert": "",
+          "Cars:": "",
+          "Driver Alert System": "",
+          "Get Started": "",
+          "How Many Other Cars Are On The Road?": "",
+          "Note: Normally all of this data would be collected by sensors. For this test, you will need to enter the data yourself": "",
+          "Predict": "",
+          "Predict!": "",
+          "Temperature:": "",
+          "This app simulates a Car Alert System safety feature. It analyzes the road conditions and gives a rating on how safe it is to be driving right now.": "",
+          "This feature determines how many other cars are on the road using a proximity sensor. The more cars there are on the road, the more dangerous driving conditions can be.": "",
+          "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "",
+          "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "",
+          "This feature determines what the weather is like using an atmospheric sensor. Road conditions become more dangerous in snowy or foggy weather. Under certain conditions, the sun can also blind drivers and cause accidents": "",
+          "Time Of Day:": "",
+          "Weather:": "",
+          "What Is The Weather Like?": "",
+          "What is the Temperature Outside?": "",
+          "What time of day is it?": "",
+          "cloudy": "үүлэрхэг",
+          "daylight": "",
+          "dusk": "",
+          "foggy": "",
+          "night": "шөнө",
           "rain": "бороотой",
           "snow": "цас",
-          "cloudy": "үүлэрхэг",
-          "night": "шөнө"
+          "sunny": ""
         },
         "ml-use model card-example3A_2022": {
+          "Alert": "",
+          "Cars:": "",
+          "Driver Alert System": "",
+          "Get Started": "",
+          "How Many Other Cars Are On The Road?": "",
+          "Note: Normally all of this data would be collected by sensors. For this test, you will need to enter the data yourself": "",
+          "Predict": "",
+          "Predict!": "",
+          "Temperature:": "",
+          "This app simulates a Car Alert System safety feature. It analyzes the road conditions and gives a rating on how safe it is to be driving right now.": "",
+          "This feature determines how many other cars are on the road using a proximity sensor. The more cars there are on the road, the more dangerous driving conditions can be.": "",
+          "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "",
+          "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "",
+          "This feature determines what the weather is like using an atmospheric sensor. Road conditions become more dangerous in snowy or foggy weather. Under certain conditions, the sun can also blind drivers and cause accidents": "",
+          "Time Of Day:": "",
+          "Weather:": "",
+          "What Is The Weather Like?": "",
+          "What is the Temperature Outside?": "",
+          "What time of day is it?": "",
+          "cloudy": "үүлэрхэг",
+          "daylight": "",
+          "dusk": "",
+          "foggy": "",
+          "night": "шөнө",
           "rain": "бороотой",
           "snow": "цас",
-          "cloudy": "үүлэрхэг",
-          "night": "шөнө"
-        },
-        "CSD U6 - Sensors - SB1_2222": {
-          "value": "үнэ цэнэ"
-        },
-        "CSD U6 - Sensors - SB3_2222": {
-          "value": "үнэ цэнэ"
-        },
-        "CSD U6 - Sensors - SB4.1_2222": {
-          "value": "үнэ цэнэ"
-        },
-        "CSD U6 - Sensors - SB4_2222": {
-          "value": "үнэ цэнэ"
-        },
-        "CSD U6 analog change": {
-          "value": "үнэ цэнэ"
-        },
-        "CSD U6 analog change_2018": {
-          "value": "үнэ цэнэ"
-        },
-        "CSD U6 analog change_2019": {
-          "value": "үнэ цэнэ"
-        },
-        "CSD U6 analog change_2021": {
-          "value": "үнэ цэнэ"
-        },
-        "CSD U6 analog data": {
-          "value": "үнэ цэнэ"
-        },
-        "CSD U6 analog data_2018": {
-          "value": "үнэ цэнэ"
-        },
-        "CSD U6 analog data_2019": {
-          "value": "үнэ цэнэ"
-        },
-        "CSD U6 analog data_2021": {
-          "value": "үнэ цэнэ"
-        },
-        "CSD U6 analog sound": {
-          "value": "үнэ цэнэ"
-        },
-        "CSD U6 analog sound_2018": {
-          "value": "үнэ цэнэ"
-        },
-        "CSD U6 analog sound_2019": {
-          "value": "үнэ цэнэ"
-        },
-        "CSD U6 analog sound_2021": {
-          "value": "үнэ цэнэ"
+          "sunny": ""
         }
       }
     }
