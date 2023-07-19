@@ -11,7 +11,7 @@ export interface Channel {
   name: string;
   isOwner: boolean;
   projectType: ProjectType;
-  publishedAt: string;
+  publishedAt: string | null;
   createdAt: string;
   updatedAt: string;
 }
