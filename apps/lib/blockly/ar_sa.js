@@ -36,6 +36,7 @@ Blockly.Msg.CONTROLS_FLOW_STATEMENTS_TOOLTIP_CONTINUE = "تخط ِ ما تبقى
 Blockly.Msg.CONTROLS_FLOW_STATEMENTS_WARNING = "تحذير: يمكن استخدام هذه القطعة البرمجية داخل الحلقة فقط.";
 Blockly.Msg.CONTROLS_FOREACH_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#for_each\n";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST = "في قائمة";
+Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "لكل عنصر";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "لكل عنصر في قائمة ما، عين المتغير '%1' إلى هذا العنصر، ومن ثم نفذ بعض الأوامر.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
@@ -65,9 +66,9 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "كرّر حتى";
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "التكرار بينما";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "بينما القيمة \"خطأ\"، قم بتنفيذ بعض الأوامر.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "ما دامت القيمة \"صحيح\"، قم بتنفيذ بعض الأوامر.";
-Blockly.Msg.DEFINE_HEADER_DEFINITION = "تعريف";
 Blockly.Msg.DEFINE_FUNCTION_DEFINE = "عرّف";
 Blockly.Msg.DEFINE_FUNCTION_FOR_EXAMPLE = "قم بتعريف الوظيفة أدناه ثم حاول مرة أخرى.";
+Blockly.Msg.DEFINE_HEADER_DEFINITION = "تعريف";
 Blockly.Msg.DELETE = "حذف";
 Blockly.Msg.DELETE_BLOCK = "حذف القطعة البرمجية";
 Blockly.Msg.DELETE_PARAMETER = "حذف المعامل...";
@@ -82,23 +83,23 @@ Blockly.Msg.EXPAND_ALL = "إظهار القطع البرمجية";
 Blockly.Msg.EXPAND_BLOCK = "إظهار القطعة البرمجية";
 Blockly.Msg.EXPECTED = "نتيجة";
 Blockly.Msg.EXTERNAL_INPUTS = "مُدخلات خارجية";
-Blockly.Msg.FUNCTION_CREATE = "إنشاء وظيفة ";
-Blockly.Msg.FUNCTION_EDIT = "تعديل";
-Blockly.Msg.FUNCTION_NAME_LABEL = "اسم الوظيفة الخاصة بك:";
-Blockly.Msg.FUNCTION_DESCRIPTION_LABEL = "ماذل يفترض أن تفعل \"الوظيفة\" الخاصة بك؟";
-Blockly.Msg.FUNCTION_PARAMETERS_LABEL = "ما المعاملات التي تأخذها \"الوظيفة\" الخاصة بك؟";
-Blockly.Msg.FUNCTION_HEADER = "وظيفة ";
 Blockly.Msg.FUNCTIONAL_CREATE = "قطعة برمجية جديدة";
-Blockly.Msg.FUNCTIONAL_EDIT = "تعديل";
-Blockly.Msg.FUNCTIONAL_NAME_LABEL = "الاسم";
-Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "اختر نوع...";
 Blockly.Msg.FUNCTIONAL_DESCRIPTION_LABEL = "وصف";
 Blockly.Msg.FUNCTIONAL_DOMAIN_LABEL = "المجال";
+Blockly.Msg.FUNCTIONAL_EDIT = "تعديل";
+Blockly.Msg.FUNCTIONAL_NAME_LABEL = "الاسم";
 Blockly.Msg.FUNCTIONAL_PROCEDURE_DEFINE_TOOLTIP = "عرف دالة وظيفية";
 Blockly.Msg.FUNCTIONAL_RANGE_LABEL = "المدى";
+Blockly.Msg.FUNCTIONAL_TYPE_LABEL = "اختر نوع...";
 Blockly.Msg.FUNCTIONAL_VARIABLE_CREATE = "إنشاء متغير";
 Blockly.Msg.FUNCTIONAL_VARIABLE_HEADER = "متغير";
 Blockly.Msg.FUNCTIONAL_VARIABLE_TYPE = "نوع";
+Blockly.Msg.FUNCTION_CREATE = "إنشاء وظيفة ";
+Blockly.Msg.FUNCTION_DESCRIPTION_LABEL = "ماذل يفترض أن تفعل \"الوظيفة\" الخاصة بك؟";
+Blockly.Msg.FUNCTION_EDIT = "تعديل";
+Blockly.Msg.FUNCTION_HEADER = "وظيفة ";
+Blockly.Msg.FUNCTION_NAME_LABEL = "اسم الوظيفة الخاصة بك:";
+Blockly.Msg.FUNCTION_PARAMETERS_LABEL = "ما المعاملات التي تأخذها \"الوظيفة\" الخاصة بك؟";
 Blockly.Msg.HELP = "مساعدة";
 Blockly.Msg.INLINE_INPUTS = "مدخلات مضمّنة";
 Blockly.Msg.KEEP = "احتفظ";
@@ -118,6 +119,7 @@ Blockly.Msg.LISTS_GET_INDEX_GET_REMOVE = "الحصول على وإزالة";
 Blockly.Msg.LISTS_GET_INDEX_LAST = "الأخير";
 Blockly.Msg.LISTS_GET_INDEX_RANDOM = "عشوائي";
 Blockly.Msg.LISTS_GET_INDEX_REMOVE = "إزالة";
+Blockly.Msg.LISTS_GET_INDEX_TAIL = "";
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_FIRST = "إرجاع العنصر الأول في قائمة.";
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_FROM_END = "إرجاع العنصر في الموضع المحدد في قائمة.  #1 هو العنصر الأخير.";
 Blockly.Msg.LISTS_GET_INDEX_TOOLTIP_GET_FROM_START = "إرجاع العنصر في الموضع المحدد في قائمة.  #1 هو العنصر الأول.";
@@ -140,6 +142,7 @@ Blockly.Msg.LISTS_GET_SUBLIST_HELPURL = "https://code.google.com/p/blockly/wiki/
 Blockly.Msg.LISTS_GET_SUBLIST_START_FIRST = "الحصول على قائمة فرعية من الأول";
 Blockly.Msg.LISTS_GET_SUBLIST_START_FROM_END = "الحصول على قائمة فرعية من # من النهاية";
 Blockly.Msg.LISTS_GET_SUBLIST_START_FROM_START = "الحصول على قائمة فرعية من #";
+Blockly.Msg.LISTS_GET_SUBLIST_TAIL = "";
 Blockly.Msg.LISTS_GET_SUBLIST_TOOLTIP = "إنشاء نسخة من الجزء المحدد من القائمة.";
 Blockly.Msg.LISTS_INDEX_OF_FIRST = "البحث عن التواجد الأول للعنصر";
 Blockly.Msg.LISTS_INDEX_OF_HELPURL = "https://code.google.com/p/blockly/wiki/Lists#Getting_Items_from_a_List";
@@ -228,6 +231,7 @@ Blockly.Msg.MATH_MODULO_TOOLTIP = "إرجاع الباقي من قسمة الر�
 Blockly.Msg.MATH_MULTIPLICATION_SYMBOL = "×";
 Blockly.Msg.MATH_NUMBER_HELPURL = "http://en.wikipedia.org/wiki/Number";
 Blockly.Msg.MATH_NUMBER_TOOLTIP = "عدد ما.";
+Blockly.Msg.MATH_ONLIST_HELPURL = "";
 Blockly.Msg.MATH_ONLIST_OPERATOR_AVERAGE = "متوسط القائمة";
 Blockly.Msg.MATH_ONLIST_OPERATOR_MAX = "الحد الأقصى لقائمة";
 Blockly.Msg.MATH_ONLIST_OPERATOR_MEDIAN = "وسيط القائمة";
@@ -282,20 +286,24 @@ Blockly.Msg.MATH_TRIG_TOOLTIP_SIN = "إرجاع الجيب لدرجة (ليس ز
 Blockly.Msg.MATH_TRIG_TOOLTIP_TAN = "إرجاع الظل لدرجة (ليس زاوية نصف قطرية).";
 Blockly.Msg.NEW_VARIABLE = "متغير جديد...";
 Blockly.Msg.NEW_VARIABLE_TITLE = "اسم المتغير الجديد:";
+Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";
 Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "مع:";
+Blockly.Msg.PROCEDURES_CALLNORETURN_CALL = "";
 Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL = "http://en.wikipedia.org/wiki/Procedure_%28computer_science%29";
 Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP = "تشغيل الوظيفة '%1' تعريف-المستخدم.";
 Blockly.Msg.PROCEDURES_CALLRETURN_HELPURL = "http://en.wikipedia.org/wiki/Procedure_%28computer_science%29";
 Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP = "تشغيل الوظيفة '%1' تعريف-المستخدم واستخدام ناتجها.";
 Blockly.Msg.PROCEDURES_CREATE_DO = "إنشاء '%1'";
+Blockly.Msg.PROCEDURES_DEFNORETURN_DO = "";
 Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL = "http://en.wikipedia.org/wiki/Procedure_%28computer_science%29";
 Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE = "إفعل شيئاً";
 Blockly.Msg.PROCEDURES_DEFNORETURN_TITLE = "إلى";
 Blockly.Msg.PROCEDURES_DEFNORETURN_TOOLTIP = "إنشاء وظيفة بدون مخرجات.";
+Blockly.Msg.PROCEDURES_DEFRETURN_DO = "";
 Blockly.Msg.PROCEDURES_DEFRETURN_HELPURL = "http://en.wikipedia.org/wiki/Procedure_%28computer_science%29";
 Blockly.Msg.PROCEDURES_DEFRETURN_PROCEDURE = "القيام بشيء ما";
-Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = "إلى";
 Blockly.Msg.PROCEDURES_DEFRETURN_RETURN = "إرجاع";
+Blockly.Msg.PROCEDURES_DEFRETURN_TITLE = "إلى";
 Blockly.Msg.PROCEDURES_DEFRETURN_TOOLTIP = "إنشاء وظيفة مع مخرجات.";
 Blockly.Msg.PROCEDURES_DEF_DUPLICATE_WARNING = "تحذير: هذه الوظيفة تحتوي على معاملات مكررة.";
 Blockly.Msg.PROCEDURES_HIGHLIGHT_DEF = "تسليط الضوء على تعريف الوظيفة";
@@ -326,6 +334,7 @@ Blockly.Msg.TEXT_CHARAT_HELPURL = "https://code.google.com/p/blockly/wiki/Text#E
 Blockly.Msg.TEXT_CHARAT_INPUT_INTEXT = "في النص";
 Blockly.Msg.TEXT_CHARAT_LAST = "احصل على آخر حرف";
 Blockly.Msg.TEXT_CHARAT_RANDOM = "الحصول على حرف عشوائي";
+Blockly.Msg.TEXT_CHARAT_TAIL = "";
 Blockly.Msg.TEXT_CHARAT_TOOLTIP = "إرجاع الحرف في الموضع المحدد.";
 Blockly.Msg.TEXT_CREATE_JOIN_ITEM_TOOLTIP = "إضف عنصر إلى النص.";
 Blockly.Msg.TEXT_CREATE_JOIN_TITLE_JOIN = "انضمام";
@@ -338,11 +347,13 @@ Blockly.Msg.TEXT_GET_SUBSTRING_INPUT_IN_TEXT = "في النص";
 Blockly.Msg.TEXT_GET_SUBSTRING_START_FIRST = "الحصول على سلسلة فرعية من الحرف الأول";
 Blockly.Msg.TEXT_GET_SUBSTRING_START_FROM_END = "الحصول على سلسلة حروف فرعية من الحرف # من نهاية";
 Blockly.Msg.TEXT_GET_SUBSTRING_START_FROM_START = "الحصول على سلسلة حروف فرعية من الحرف #";
+Blockly.Msg.TEXT_GET_SUBSTRING_TAIL = "";
 Blockly.Msg.TEXT_GET_SUBSTRING_TOOLTIP = "إرجاع جزء محدّد من النص.";
 Blockly.Msg.TEXT_INDEXOF_HELPURL = "https://code.google.com/p/blockly/wiki/Text#Finding_text";
 Blockly.Msg.TEXT_INDEXOF_INPUT_INTEXT = "في النص";
 Blockly.Msg.TEXT_INDEXOF_OPERATOR_FIRST = "البحث عن أول وجود للنص";
 Blockly.Msg.TEXT_INDEXOF_OPERATOR_LAST = "البحث عن آخر وجود للنص";
+Blockly.Msg.TEXT_INDEXOF_TAIL = "";
 Blockly.Msg.TEXT_INDEXOF_TOOLTIP = "إرجاع مؤشر التواجد الأول/الأخير للنص الأول في النص الثاني.  إرجاع 0 إذا لم يتم العثور على النص.";
 Blockly.Msg.TEXT_ISEMPTY_HELPURL = "https://code.google.com/p/blockly/wiki/Text#Checking_for_empty_text";
 Blockly.Msg.TEXT_ISEMPTY_TITLE = "%1 فارغ";
@@ -373,6 +384,8 @@ Blockly.Msg.VARIABLE = "متغير";
 Blockly.Msg.VARIABLES_DEFAULT_NAME = "عنصر";
 Blockly.Msg.VARIABLES_GET_CREATE_SET = "إنشاء 'مجموعة %1'";
 Blockly.Msg.VARIABLES_GET_HELPURL = "http://code.google.com/p/blockly/wiki/Variables#Get";
+Blockly.Msg.VARIABLES_GET_TAIL = "";
+Blockly.Msg.VARIABLES_GET_TITLE = "";
 Blockly.Msg.VARIABLES_GET_TOOLTIP = "يرجع قيمة هذا المتغير.";
 Blockly.Msg.VARIABLES_SET_CREATE_GET = "إنشاء \"خذ %1\"";
 Blockly.Msg.VARIABLES_SET_HELPURL = "http://code.google.com/p/blockly/wiki/Variables#Set";
