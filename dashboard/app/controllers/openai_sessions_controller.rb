@@ -1,5 +1,5 @@
 class OpenaiSessionsController < ApplicationController
-include OpenaiChatHelper
+  include OpenaiChatHelper
   authorize_resource class: false
 
   OPENAI_CHAT_API_KEY = CDO.openai_chat_api_key
@@ -9,9 +9,7 @@ include OpenaiChatHelper
 
   # POST /openai/chat_completion
   def chat_completion
-    puts "chat_completion"
-    body = JSON.parse(request.body.read)
-    messages = body["messages"]
+    messages = params[:messages]
 
     # Set up the API endpoint URL and request headers
     headers = {
@@ -20,23 +18,13 @@ include OpenaiChatHelper
       "OpenAI-Organization" => CODE_ORG_ID
     }
 
-    # Set up the API endpoint URL and request headers
     data = {
       model: GPT_MODEL,
       temperature: TEMPERATURE,
       messages: messages
     }
 
-    # Send the request to the API endpoint
-    response = OpenaiChatHelper.get_chat_completion_response(headers, data)
-
-    # Parse the response JSON and return the completed text
-    if response.code == 200
-      response_body = JSON.parse(response.body)
-      response = response_body['choices'][0]['message']
-      render json: response
-    else
-      render json: {error: "Chat completion failed: #{response.to_json}"}, status: :bad_request
-    end
+    response = OpenaiChatHelper.request_chat_completion(headers, data)
+    OpenaiChatHelper.get_chat_completion_response_message(response)
   end
 end
