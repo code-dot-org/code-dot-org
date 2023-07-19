@@ -2,20 +2,188 @@
   "mr-IN": {
     "data": {
       "standard_categories": {
-        "DAT-1": {
-          "description": "संगणक डेटाचे प्रतिनिधित्व करण्याचा मार्ग वापरकर्त्यासाठी डेटाचा अर्थ लावण्याच्या आणि प्रदर्शित करण्याच्या मार्गापेक्षा वेगळा आहे. प्रोग्राम्सचा वापर डेटाचे प्रतिनिधित्वामध्ये अनुवाद करण्यासाठी केला जातो जो लोकांना अधिक सहजपणे समजतो."
+        "1": {
+          "description": "विद्यार्थी सर्जनशील विचारांचे प्रात्यक्षिक करतात, ज्ञान तयार करतात आणि तंत्रज्ञानाचा वापर करून नाविन्यपूर्ण उत्पादने आणि प्रक्रिया विकसित करतात."
         },
-        "IOC-2": {
-          "description": "संगणकीय नवकल्पनांच्या वापरामध्ये तुमची वैयक्तिक सुरक्षितता आणि ओळख धोक्यात येऊ शकते."
+        "2": {
+          "description": "विद्यार्थी डिजिटल मीडिया आणि वातावरणाचा वापर संवाद साधण्यासाठी आणि सहकार्याने कार्य करण्यासाठी करतात, दूर अंतरावर, वैयक्तिक शिक्षणाला पाठिंबा देण्यासाठी आणि इतरांच्या शिकण्यात योगदान देण्यासाठी."
         },
-        "DAT-1.D": {
-          "description": "एखाद्या विशिष्ट संदर्भात कोणता सर्वोत्तम आहे हे निर्धारित करण्यासाठी डेटा कम्प्रेशन अल्गोरिदमची तुलना करा."
+        "3": {
+          "description": ""
         },
-        "IOC-2.B": {
-          "description": "संगणकीय संसाधनांचे संरक्षण कसे केले जाऊ शकते आणि त्याचा गैरवापर कसा केला जाऊ शकतो हे स्पष्ट करा."
+        "3-A-i": {
+          "description": ""
+        },
+        "3-A-ii": {
+          "description": ""
+        },
+        "3-A-iii": {
+          "description": ""
+        },
+        "3-A-iv": {
+          "description": ""
+        },
+        "3-A-v": {
+          "description": ""
+        },
+        "3-A-vi": {
+          "description": ""
+        },
+        "3-B-i": {
+          "description": ""
+        },
+        "3-B-ii": {
+          "description": ""
+        },
+        "3-C-i": {
+          "description": ""
+        },
+        "3-C-ii": {
+          "description": ""
+        },
+        "3-C-iii": {
+          "description": ""
+        },
+        "4": {
+          "description": "विद्यार्थी संशोधनाची योजना आखण्यासाठी आणि आयोजित करण्यासाठी, प्रकल्प व्यवस्थापित करण्यासाठी, समस्या सोडवण्यासाठी आणि योग्य डिजिटल साधने आणि संसाधने वापरून माहितीपूर्ण निर्णय घेण्यासाठी गंभीर विचार कौशल्ये वापरतात."
+        },
+        "5": {
+          "description": ""
+        },
+        "6": {
+          "description": "विद्यार्थी तंत्रज्ञानाच्या संकल्पना, सिस्टीम आणि ऑपरेशन्सची चांगली समज दाखवतात."
+        },
+        "AAP-1": {
+          "description": ""
+        },
+        "AAP-1.A": {
+          "description": ""
+        },
+        "AAP-1.B": {
+          "description": ""
+        },
+        "AAP-1.C": {
+          "description": ""
+        },
+        "AAP-1.D": {
+          "description": ""
+        },
+        "AAP-2": {
+          "description": ""
+        },
+        "AAP-2.A": {
+          "description": ""
+        },
+        "AAP-2.B": {
+          "description": ""
+        },
+        "AAP-2.C": {
+          "description": ""
+        },
+        "AAP-2.D": {
+          "description": ""
+        },
+        "AAP-2.E": {
+          "description": ""
+        },
+        "AAP-2.F": {
+          "description": ""
+        },
+        "AAP-2.G": {
+          "description": ""
+        },
+        "AAP-2.H": {
+          "description": ""
+        },
+        "AAP-2.I": {
+          "description": ""
+        },
+        "AAP-2.J": {
+          "description": ""
+        },
+        "AAP-2.K": {
+          "description": ""
+        },
+        "AAP-2.L": {
+          "description": ""
+        },
+        "AAP-2.M": {
+          "description": ""
+        },
+        "AAP-2.N": {
+          "description": ""
+        },
+        "AAP-2.O": {
+          "description": ""
+        },
+        "AAP-2.P": {
+          "description": ""
+        },
+        "AAP-3": {
+          "description": ""
+        },
+        "AAP-3.A": {
+          "description": ""
+        },
+        "AAP-3.B": {
+          "description": ""
+        },
+        "AAP-3.C": {
+          "description": ""
+        },
+        "AAP-3.D": {
+          "description": ""
+        },
+        "AAP-3.E": {
+          "description": ""
+        },
+        "AAP-3.F": {
+          "description": ""
+        },
+        "AAP-4": {
+          "description": ""
+        },
+        "AAP-4.A": {
+          "description": ""
+        },
+        "AAP-4.B": {
+          "description": ""
+        },
+        "AP": {
+          "description": ""
+        },
+        "APR": {
+          "description": ""
+        },
+        "BF": {
+          "description": ""
+        },
+        "BI-1": {
+          "description": ""
+        },
+        "BI-2": {
+          "description": ""
+        },
+        "BI-3": {
+          "description": ""
+        },
+        "BI-4": {
+          "description": ""
+        },
+        "BI-5": {
+          "description": ""
+        },
+        "C": {
+          "description": "वर्तुळे"
+        },
+        "CC": {
+          "description": ""
         },
         "CD": {
           "description": "कॉम्प्युटर्स आणि संप्रेषण डिव्हायसेस"
+        },
+        "CED": {
+          "description": ""
         },
         "CI": {
           "description": "समुदाय, जागतिक आणि नैतिक परिणाम"
@@ -23,32 +191,416 @@
         "CL": {
           "description": "सहयोग"
         },
+        "CN": {
+          "description": ""
+        },
+        "CO": {
+          "description": ""
+        },
+        "CON-1": {
+          "description": ""
+        },
+        "CON-1.A": {
+          "description": ""
+        },
+        "CON-1.B": {
+          "description": ""
+        },
+        "CON-1.C": {
+          "description": ""
+        },
+        "CON-1.D": {
+          "description": ""
+        },
+        "CON-1.E": {
+          "description": ""
+        },
+        "CON-1.F": {
+          "description": ""
+        },
+        "CON-1.G": {
+          "description": ""
+        },
+        "CON-1.H": {
+          "description": ""
+        },
+        "CON-2": {
+          "description": ""
+        },
+        "CON-2.A": {
+          "description": ""
+        },
+        "CON-2.B": {
+          "description": ""
+        },
+        "CON-2.C": {
+          "description": ""
+        },
+        "CON-2.D": {
+          "description": ""
+        },
+        "CON-2.E": {
+          "description": ""
+        },
+        "CON-2.F": {
+          "description": ""
+        },
+        "CON-2.G": {
+          "description": ""
+        },
+        "CON-2.H": {
+          "description": ""
+        },
+        "CON-2.I": {
+          "description": ""
+        },
+        "CON-2.J": {
+          "description": ""
+        },
+        "CON-2.K": {
+          "description": ""
+        },
+        "CON-2.L": {
+          "description": ""
+        },
+        "CON-2.M": {
+          "description": ""
+        },
+        "CON-2.N": {
+          "description": ""
+        },
+        "CON-2.O": {
+          "description": ""
+        },
+        "CON-2.P": {
+          "description": ""
+        },
+        "CON-2.Q": {
+          "description": ""
+        },
+        "CP": {
+          "description": ""
+        },
         "CPP": {
           "description": "कॉम्प्युटिंगचा सराव आणि प्रोग्रॅमिंग"
+        },
+        "CRD-1": {
+          "description": ""
+        },
+        "CRD-1.A": {
+          "description": ""
+        },
+        "CRD-1.B": {
+          "description": ""
+        },
+        "CRD-1.C": {
+          "description": ""
+        },
+        "CRD-2": {
+          "description": ""
+        },
+        "CRD-2.A": {
+          "description": ""
+        },
+        "CRD-2.B": {
+          "description": ""
+        },
+        "CRD-2.C": {
+          "description": ""
+        },
+        "CRD-2.D": {
+          "description": ""
+        },
+        "CRD-2.E": {
+          "description": ""
+        },
+        "CRD-2.F": {
+          "description": ""
+        },
+        "CRD-2.G": {
+          "description": ""
+        },
+        "CRD-2.H": {
+          "description": ""
+        },
+        "CRD-2.I": {
+          "description": ""
+        },
+        "CRD-2.J": {
+          "description": ""
+        },
+        "CS": {
+          "description": ""
+        },
+        "CSN-1": {
+          "description": ""
+        },
+        "CSN-1.A": {
+          "description": ""
+        },
+        "CSN-1.B": {
+          "description": ""
+        },
+        "CSN-1.C": {
+          "description": ""
+        },
+        "CSN-1.D": {
+          "description": ""
+        },
+        "CSN-1.E": {
+          "description": ""
+        },
+        "CSN-2": {
+          "description": ""
+        },
+        "CSN-2.A": {
+          "description": ""
+        },
+        "CSN-2.B": {
+          "description": ""
+        },
+        "CSN-2.C": {
+          "description": ""
         },
         "CT": {
           "description": "कॉम्प्युटेशनल विचार  "
         },
-        "L": {
-          "description": "भाषा"
+        "D1": {
+          "description": ""
         },
-        "RI": {
-          "description": "माहिती वाचणे"
+        "D2.Civ": {
+          "description": ""
         },
-        "RL": {
-          "description": "वाचन साहित्य"
+        "D2.Eco": {
+          "description": ""
         },
-        "SL": {
-          "description": "बोलणे आणि ऐकणे"
+        "D2.Geo": {
+          "description": ""
         },
-        "W": {
-          "description": "लेखन"
+        "D2.His": {
+          "description": ""
         },
-        "C": {
-          "description": "वर्तुळे"
+        "D3.Claims": {
+          "description": ""
+        },
+        "D3.Sources": {
+          "description": ""
+        },
+        "D4.Action": {
+          "description": ""
+        },
+        "D4.Conclusions": {
+          "description": ""
+        },
+        "DA": {
+          "description": ""
+        },
+        "DAT-1": {
+          "description": "संगणक डेटाचे प्रतिनिधित्व करण्याचा मार्ग वापरकर्त्यासाठी डेटाचा अर्थ लावण्याच्या आणि प्रदर्शित करण्याच्या मार्गापेक्षा वेगळा आहे. प्रोग्राम्सचा वापर डेटाचे प्रतिनिधित्वामध्ये अनुवाद करण्यासाठी केला जातो जो लोकांना अधिक सहजपणे समजतो."
+        },
+        "DAT-1.A": {
+          "description": ""
+        },
+        "DAT-1.B": {
+          "description": ""
+        },
+        "DAT-1.C": {
+          "description": ""
+        },
+        "DAT-1.D": {
+          "description": "एखाद्या विशिष्ट संदर्भात कोणता सर्वोत्तम आहे हे निर्धारित करण्यासाठी डेटा कम्प्रेशन अल्गोरिदमची तुलना करा."
+        },
+        "DAT-2": {
+          "description": ""
+        },
+        "DAT-2.A": {
+          "description": ""
+        },
+        "DAT-2.B": {
+          "description": ""
+        },
+        "DAT-2.C": {
+          "description": ""
+        },
+        "DAT-2.D": {
+          "description": ""
+        },
+        "DAT-2.E": {
+          "description": ""
+        },
+        "EE": {
+          "description": ""
+        },
+        "ESS": {
+          "description": ""
+        },
+        "ESS1": {
+          "description": ""
+        },
+        "ESS2": {
+          "description": ""
+        },
+        "ESS3": {
+          "description": ""
+        },
+        "ETS": {
+          "description": ""
+        },
+        "ETS1": {
+          "description": ""
+        },
+        "F": {
+          "description": ""
         },
         "G": {
           "description": "भूमिती"
+        },
+        "GMD": {
+          "description": ""
+        },
+        "GPE": {
+          "description": ""
+        },
+        "IC": {
+          "description": ""
+        },
+        "ID": {
+          "description": ""
+        },
+        "IF": {
+          "description": ""
+        },
+        "IOC-1": {
+          "description": ""
+        },
+        "IOC-1.A": {
+          "description": ""
+        },
+        "IOC-1.B": {
+          "description": ""
+        },
+        "IOC-1.C": {
+          "description": ""
+        },
+        "IOC-1.D": {
+          "description": ""
+        },
+        "IOC-1.E": {
+          "description": ""
+        },
+        "IOC-1.F": {
+          "description": ""
+        },
+        "IOC-2": {
+          "description": "संगणकीय नवकल्पनांच्या वापरामध्ये तुमची वैयक्तिक सुरक्षितता आणि ओळख धोक्यात येऊ शकते."
+        },
+        "IOC-2.A": {
+          "description": ""
+        },
+        "IOC-2.B": {
+          "description": "संगणकीय संसाधनांचे संरक्षण कसे केले जाऊ शकते आणि त्याचा गैरवापर कसा केला जाऊ शकतो हे स्पष्ट करा."
+        },
+        "IOC-2.C": {
+          "description": ""
+        },
+        "L": {
+          "description": "भाषा"
+        },
+        "LE": {
+          "description": ""
+        },
+        "LS": {
+          "description": ""
+        },
+        "LS1": {
+          "description": ""
+        },
+        "LS2": {
+          "description": ""
+        },
+        "LS3": {
+          "description": ""
+        },
+        "LS4": {
+          "description": ""
+        },
+        "MD": {
+          "description": ""
+        },
+        "MG": {
+          "description": ""
+        },
+        "MOD-1": {
+          "description": ""
+        },
+        "MOD-1.A": {
+          "description": ""
+        },
+        "MOD-1.B": {
+          "description": ""
+        },
+        "MOD-1.C": {
+          "description": ""
+        },
+        "MOD-1.D": {
+          "description": ""
+        },
+        "MOD-1.E": {
+          "description": ""
+        },
+        "MOD-1.F": {
+          "description": ""
+        },
+        "MOD-1.G": {
+          "description": ""
+        },
+        "MOD-1.H": {
+          "description": ""
+        },
+        "MOD-2": {
+          "description": ""
+        },
+        "MOD-2.A": {
+          "description": ""
+        },
+        "MOD-2.B": {
+          "description": ""
+        },
+        "MOD-2.C": {
+          "description": ""
+        },
+        "MOD-2.D": {
+          "description": ""
+        },
+        "MOD-2.E": {
+          "description": ""
+        },
+        "MOD-2.F": {
+          "description": ""
+        },
+        "MOD-2.G": {
+          "description": ""
+        },
+        "MOD-2.H": {
+          "description": ""
+        },
+        "MOD-3": {
+          "description": ""
+        },
+        "MOD-3.A": {
+          "description": ""
+        },
+        "MOD-3.B": {
+          "description": ""
+        },
+        "MOD-3.C": {
+          "description": ""
+        },
+        "MOD-3.D": {
+          "description": ""
+        },
+        "MOD-3.E": {
+          "description": ""
         },
         "MP": {
           "description": "गणिती पद्धती"
@@ -56,20 +608,134 @@
         "NBT": {
           "description": "दहा पाया असलेल्या संख्या आणि क्रिया"
         },
+        "NF": {
+          "description": ""
+        },
+        "NI": {
+          "description": ""
+        },
+        "NS": {
+          "description": ""
+        },
         "OA": {
           "description": "क्रिया आणि बीजगणिती विचार"
         },
-        "1": {
-          "description": "विद्यार्थी सर्जनशील विचारांचे प्रात्यक्षिक करतात, ज्ञान तयार करतात आणि तंत्रज्ञानाचा वापर करून नाविन्यपूर्ण उत्पादने आणि प्रक्रिया विकसित करतात."
+        "PS": {
+          "description": ""
         },
-        "2": {
-          "description": "विद्यार्थी डिजिटल मीडिया आणि वातावरणाचा वापर संवाद साधण्यासाठी आणि सहकार्याने कार्य करण्यासाठी करतात, दूर अंतरावर, वैयक्तिक शिक्षणाला पाठिंबा देण्यासाठी आणि इतरांच्या शिकण्यात योगदान देण्यासाठी."
+        "PS1": {
+          "description": ""
         },
-        "4": {
-          "description": "विद्यार्थी संशोधनाची योजना आखण्यासाठी आणि आयोजित करण्यासाठी, प्रकल्प व्यवस्थापित करण्यासाठी, समस्या सोडवण्यासाठी आणि योग्य डिजिटल साधने आणि संसाधने वापरून माहितीपूर्ण निर्णय घेण्यासाठी गंभीर विचार कौशल्ये वापरतात."
+        "PS2": {
+          "description": ""
         },
-        "6": {
-          "description": "विद्यार्थी तंत्रज्ञानाच्या संकल्पना, सिस्टीम आणि ऑपरेशन्सची चांगली समज दाखवतात."
+        "PS3": {
+          "description": ""
+        },
+        "PS4": {
+          "description": ""
+        },
+        "Q": {
+          "description": ""
+        },
+        "REI": {
+          "description": ""
+        },
+        "RF": {
+          "description": ""
+        },
+        "RH": {
+          "description": ""
+        },
+        "RI": {
+          "description": "माहिती वाचणे"
+        },
+        "RL": {
+          "description": "वाचन साहित्य"
+        },
+        "RN": {
+          "description": ""
+        },
+        "RP": {
+          "description": ""
+        },
+        "RST": {
+          "description": ""
+        },
+        "SL": {
+          "description": "बोलणे आणि ऐकणे"
+        },
+        "SP": {
+          "description": ""
+        },
+        "SRT": {
+          "description": ""
+        },
+        "SSE": {
+          "description": ""
+        },
+        "TF": {
+          "description": ""
+        },
+        "VAR-1": {
+          "description": ""
+        },
+        "VAR-1.A": {
+          "description": ""
+        },
+        "VAR-1.B": {
+          "description": ""
+        },
+        "VAR-1.C": {
+          "description": ""
+        },
+        "VAR-1.D": {
+          "description": ""
+        },
+        "VAR-1.E": {
+          "description": ""
+        },
+        "VAR-1.F": {
+          "description": ""
+        },
+        "VAR-1.G": {
+          "description": ""
+        },
+        "VAR-1.H": {
+          "description": ""
+        },
+        "VAR-2": {
+          "description": ""
+        },
+        "VAR-2.A": {
+          "description": ""
+        },
+        "VAR-2.B": {
+          "description": ""
+        },
+        "VAR-2.C": {
+          "description": ""
+        },
+        "VAR-2.D": {
+          "description": ""
+        },
+        "VAR-2.E": {
+          "description": ""
+        },
+        "VAR-2.F": {
+          "description": ""
+        },
+        "VAR-2.G": {
+          "description": ""
+        },
+        "VM": {
+          "description": ""
+        },
+        "W": {
+          "description": "लेखन"
+        },
+        "WHST": {
+          "description": ""
         }
       }
     }
