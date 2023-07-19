@@ -107,6 +107,7 @@ class ManageStudentsTable extends Component {
     sectionId: PropTypes.number,
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
+    participantType: PropTypes.string,
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
     isSectionAssignedCSA: PropTypes.bool,
@@ -454,11 +455,14 @@ class ManageStudentsTable extends Component {
   getColumns(sortable) {
     const {loginType} = this.props;
 
-    const columns = [
-      this.nameColumn(sortable),
-      this.familyNameColumn(sortable),
-      this.ageColumn(sortable),
-    ];
+    const columns = [this.nameColumn(sortable)];
+
+    if (this.props.participantType === 'student') {
+      // Only in non-PL sections.
+      columns.push(this.familyNameColumn(sortable));
+    }
+
+    columns.push(this.ageColumn(sortable));
 
     if (
       !window.GENDER_FEATURE_ENABLED ||
@@ -1042,6 +1046,9 @@ export default connect(
     sectionId: state.teacherSections.selectedSectionId,
     sectionCode: sectionCode(state, state.teacherSections.selectedSectionId),
     sectionName: sectionName(state, state.teacherSections.selectedSectionId),
+    participantType:
+      state.teacherSections.sections[state.teacherSections.selectedSectionId]
+        .participantType,
     loginType: state.manageStudents.loginType,
     studentData: convertStudentDataToArray(state.manageStudents.studentData),
     isSectionAssignedCSA: selectedSection(state).isAssignedCSA,
