@@ -406,8 +406,11 @@ class LevelsController < ApplicationController
   end
 
   def new
+    puts "Hit the new action with params: #{params.inspect}"
     authorize! :create, Level
     if params.key? :type
+      puts "here is the type"
+      puts :type
       @type_class = LEVEL_CLASSES.find {|klass| klass.name == params[:type]}
       raise "Level type '#{params[:type]}' not permitted" unless @type_class
       if @type_class == Artist
@@ -443,11 +446,14 @@ class LevelsController < ApplicationController
       elsif @type_class == Music
         @game = Game.music
       elsif @type_class == Aichat
+        puts "looking for aichat"
         @game = Game.aichat
       end
       @level = @type_class.new
+      puts "level is #{@level}"
       render :edit
     else
+      puts "got to sort by"
       @levels = Naturally.sort_by(Level.where(user: current_user), :name)
     end
   end
