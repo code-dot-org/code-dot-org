@@ -273,6 +273,8 @@ sk:
     student_associated_subject: 'Prihlasovacie údaje pre Code.org'
     parent_email_added_subject: 'Vitajte na Code.org!'
     parent_permission_request_subject: "Súhlas rodičov potrebný na prístup vášho dieťaťa na Code.org"
+    parent_permission_reminder_subject: "Pripomenutie, súhlas rodičov potrebný na prístup vášho dieťaťa na Code.org"
+    parent_permission_confirmation_subject: "Ďakujeme, že ste schválili prístup vášho dieťaťa na Code.org!"
   teacher_mailer:
     new_teacher_subject: 'Vitajte na Code.org!'
     delete_teacher_subject: 'Správa z Code.org: Tvoj účet bol vymazaný'
