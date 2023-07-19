@@ -1,11 +1,11 @@
 class OpenaiSessionsController < ApplicationController
+include OpenaiChatHelper
   authorize_resource class: false
 
   OPENAI_CHAT_API_KEY = CDO.openai_chat_api_key
   CODE_ORG_ID = CDO.openai_org_id
   TEMPERATURE = 0
   GPT_MODEL = 'gpt-3.5-turbo'
-  OPEN_AI_URL = "https://api.openai.com/v1/chat/completions"
 
   # POST /openai/chat_completion
   def chat_completion
@@ -28,7 +28,7 @@ class OpenaiSessionsController < ApplicationController
     }
 
     # Send the request to the API endpoint
-    response = HTTParty.post(OPEN_AI_URL, headers: headers, body: data.to_json)
+    response = OpenaiChatHelper.get_chat_completion_response(headers, data)
 
     # Parse the response JSON and return the completed text
     if response.code == 200
