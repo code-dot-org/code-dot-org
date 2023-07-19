@@ -6,7 +6,7 @@ import RadioButton, {RadioButtonProps} from './RadioButton';
 // checked value will be calculated in RadioButtonsGroup component.
 type GroupedRadioButtonProps = Omit<RadioButtonProps, 'onChange' | 'checked'>;
 
-interface RadioButtonsGroupProps {
+export interface RadioButtonsGroupProps {
   /** Array of props for radio button to render */
   radioButtons: GroupedRadioButtonProps[];
   /** Custom/additional onChange handler */

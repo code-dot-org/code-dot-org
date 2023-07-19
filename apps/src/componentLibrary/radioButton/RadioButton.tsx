@@ -24,10 +24,6 @@ export interface RadioButtonProps {
   size?: 'xs' | 's' | 'm' | 'l';
 }
 
-/**
- * Design System: Radio Button Component.
- * Can be used to render a single Radio Button or as a part of bigger/more complex components (e.g. Radio Button Group).
- */
 const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
   label,
   checked,
@@ -66,4 +62,16 @@ const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
   );
 };
 
+/**
+ * ### Production-ready Checklist:
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✘) has tests: test every prop, every state and every interaction that's js related;
+ * * (?) passes accessibility checks;
+ *
+ * ###  Status: ```Ready for dev```
+ *
+ * Design System: Radio Button Component.
+ * Can be used to render a single Radio Button or as a part of bigger/more complex components (e.g. Radio Button Group).
+ */
 export default memo(RadioButton);
