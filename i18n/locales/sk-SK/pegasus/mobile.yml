@@ -1635,6 +1635,7 @@
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* je komplexný program pre deti a mladých ľudí z nízkopríjmových, alebo inak znevýhodnených skupín s cieľom inšpirovať, vzdelávať a trénovať ich od detstva až po dospelosť k tomu, aby nasledovali kariéru v počítačových vedách. <a href='%{amazon_future_engineer_link}' target='_blank'>Zistite viac</a>"
   hoc2018_dance_amazon_about_future_engineer_button: "Zistiť viac"
   hoc2018_dance_amazon_try_coding_this_summer_title: "Skúste toto leto kódovať"
+  hoc2018_dance_amazon_try_coding_this_summer_button: "Pripojte sa do kempu"
   hoc2018_dance_amazon_scholarship_programs_button: "Použiť teraz"
   hoc2018_dance_amazon_internships_button: "Nájsť stáž"
   hoc2018_dance_amazon_k8_programs_title: "Programy pre ZŠ"
@@ -1696,6 +1697,7 @@
   ai_quick_draw: "Rýchlo, kresliť!"
   ai_teachable_machine_description: "Trénujte počítač, aby rozpoznal svoje vlastné obrázky, zvuky a pózy."
   ai_google: "Experimenty AI so spoločnosťou Google"
+  ai_machine_learning_for_kids: "Strojové učenie pre deti"
   ai_ibm_machine_learning_for_kids: 'IBM: strojové učenie pre deti'
   ai_try_activity: "Vyskúšajte aktivitu"
   outbreak_tile_title: "Nákaza"
