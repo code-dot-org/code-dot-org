@@ -53,7 +53,7 @@ const Toggle: React.FunctionComponent<ToggleProps> = ({
           disabled={disabled}
         />
         <span className={moduleStyles.switch}>
-          <i className={classnames('fa', 'fa-solid')} />
+          <i className="fa-solid" />
           <span />
         </span>
       </div>
