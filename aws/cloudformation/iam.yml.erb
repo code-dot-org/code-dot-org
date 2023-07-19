@@ -147,6 +147,19 @@ Resources:
               - dynamodb:GetItem
             Resource: !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/dcdo_production"
 
+  # Policy to deny the ability to delete S3 buckets. Deletion must be performed by an Admin
+  DenyS3DeleteBucketPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: DenyS3Delete
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Deny
+            Action:
+              - s3:DeleteBucket
+            Resource: "arn:aws:s3:::cdo-*"
+
 # TODO: Migrate to Engineering_FullAccess
   Developer:
     Type: AWS::IAM::Role
@@ -209,7 +222,9 @@ Resources:
           - Effect: Deny
             Action: logs:*
             Resource: !Sub 'arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*'
-      ManagedPolicyArns: [!Ref DevPermissions]
+      ManagedPolicyArns:
+        - !Ref DevPermissions
+        - !Ref DenyS3DeleteBucketPolicy
       Tags:
         - Key: sqlworkbench-team
           Value: codedotorg
@@ -233,6 +248,7 @@ Resources:
         - !Ref DataAnalystPolicy
         - !Ref DataAnalystDmsReadOnlyPolicy
         - !Ref DataAnalystRedshiftPolicy
+        - !Ref DenyS3DeleteBucketPolicy
         - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor
         - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess
       Tags:
@@ -266,6 +282,7 @@ Resources:
       ManagedPolicyArns:
         - !Ref ContributorS3Policy
         - !Ref ContributorSecretsPolicy
+        - !Ref DenyS3DeleteBucketPolicy
       Tags:
         - Key: sqlworkbench-team
           Value: codedotorg
@@ -296,6 +313,7 @@ Resources:
                 accounts.google.com:sub: !Ref BillingGoogleIDs
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess
+        - !Ref DenyS3DeleteBucketPolicy
 
 # Console & CLI Roles
 
@@ -373,6 +391,7 @@ roles.each do |name, config| %>
                 accounts.google.com:sub: !Ref <%= config[:GoogleIdsSSMParameter] %>
           <%- end -%>
       ManagedPolicyArns:
+        - !Ref DenyS3DeleteBucketPolicy
         <%- config[:ManagedPolicyArns].each do |arn| -%>
         - <%=arn%>
         <%- end -%>
