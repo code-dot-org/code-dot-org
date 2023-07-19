@@ -68,19 +68,19 @@ pt:
         csd-2023:
           title: Descobertas da Ciência de Computação
     resources:
-      curriculum/csd/2020:
-        name: Currículo
-      teacher_forum/csd/2020:
-        name: Fórum do professor
       curriculum/csd/2017:
         name: Currículo
       teacher_forum_6/csd/2017:
+        name: Fórum do professor
+      curriculum/csd/2018:
+        name: Currículo
+      teacher_forum_6/csd/2018:
         name: Fórum do professor
       curriculum/csd/2019:
         name: Currículo
       teacher_forum/csd/2019:
         name: Fórum do professor
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: Currículo
-      teacher_forum_6/csd/2018:
+      teacher_forum/csd/2020:
         name: Fórum do professor
