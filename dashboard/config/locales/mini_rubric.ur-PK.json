@@ -2,9 +2,6 @@
   "ur-PK": {
     "data": {
       "mini_rubric": {
-        "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "اہم تصور"
-        },
         "CDU U6 Playground Sound Board_2019": {
           "rubric_key_concept": "arrays بنائیں اور ترمیم کریں، مختلف قسم کے جسمانی آلات کو کنٹرول کرنے کے لئے سافٹ ویئر تیار کریں.",
           "rubric_performance_level_1": "پروگرام کام کرتا ہے جیسا کہ بیان کیا گیا ہے، کم از کم چار بورڈ کے واقعات کے ساتھ ہر ایک نوٹوں کی ایک مختلف سیریز کو متحرک کرتا ہے. ",
@@ -33,10 +30,68 @@
           "rubric_performance_level_3": "سپرائٹس کا سائز تبدیل کر دیا گیا ہے، لیکن اب بھی دائرے کے اندر فٹ ہونے کے لئے بہت بڑے ہیں.",
           "rubric_performance_level_4": "کوڈ یا تو ایک ہی ہے یا تفویض غیر متعلقہ طریقوں میں تبدیل کر دیا گیا ہے."
         },
+        "CSD U2 HTML Adding Paragraphs pt 2_2019": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2021": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2022": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U2 Heading Test_2018": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U2 Heading Test_2019": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U2 Heading Test_2021": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U2 Heading Test_2022": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U2 Image Tag 2_2019": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
         "CSD U2 Image assessment_2021": {
           "rubric_key_concept": "HTML کا استعمال کرتے ہوئے ایک ویب صفحہ پر ڈھانچہ مواد (ایک ویب صفحہ پر ایک تصویر شامل کریں). ان کے کام کا استعمال کرتے وقت دوسروں کو درست طریقے سے منسوب کرتے ہیں.",
+          "rubric_performance_level_1": "",
           "rubric_performance_level_2": "تصویر مناسب طریقے سے دکھاتا ہے اور اس کے کاپی رائٹ لائسنس کی وضاحت کے مطابق استعمال کیا جا رہا ہے.",
-          "rubric_performance_level_3": "`img` ٹیگ استعمال کیا جاتا ہے اور تصویر کے لئے ایک ذریعہ پتہ فراہم کیا جاتا ہے، لیکن معمولی نحو کی غلطیاں یا غلط ہجے ہو سکتی ہیں جو تصویر کو مناسب طریقے سے دکھائے جانے سے روکتی ہیں. ہو سکتا ہے کہ تصویر ویب صفحہ پر قانونی استعمال کے لیے دستیاب نہ ہو۔"
+          "rubric_performance_level_3": "`img` ٹیگ استعمال کیا جاتا ہے اور تصویر کے لئے ایک ذریعہ پتہ فراہم کیا جاتا ہے، لیکن معمولی نحو کی غلطیاں یا غلط ہجے ہو سکتی ہیں جو تصویر کو مناسب طریقے سے دکھائے جانے سے روکتی ہیں. ہو سکتا ہے کہ تصویر ویب صفحہ پر قانونی استعمال کے لیے دستیاب نہ ہو۔",
+          "rubric_performance_level_4": ""
         },
         "CSD U2 Image assessment_2022": {
           "rubric_key_concept": "HTML کا استعمال کرتے ہوئے ایک ویب صفحہ پر ڈھانچہ مواد (ایک ویب صفحہ پر ایک تصویر شامل کریں). ان کے کام کا استعمال کرتے وقت دوسروں کو درست طریقے سے منسوب کرتے ہیں.",
@@ -45,28 +100,89 @@
           "rubric_performance_level_3": "`img` ٹیگ استعمال کیا جاتا ہے اور تصویر کے لئے ایک ذریعہ پتہ فراہم کیا جاتا ہے، لیکن معمولی نحو کی غلطیاں یا غلط ہجے ہو سکتی ہیں جو تصویر کو مناسب طریقے سے دکھائے جانے سے روکتی ہیں. ہو سکتا ہے کہ تصویر ویب صفحہ پر قانونی استعمال کے لیے دستیاب نہ ہو۔",
           "rubric_performance_level_4": "`img` ٹیگ استعمال نہیں کیا جاتا ہے یا تصویر کے لئے کوئی ذریعہ پتہ نہیں دیا گیا ہے."
         },
+        "CSD U2 add style_2019": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U2 add style_2021": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U2 add style_2022": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
         "CSD U2 adding pages_2021": {
           "rubric_key_concept": "ایک ڈیجیٹل آرٹفیکٹ بنانا، کثیر صفحہ سائٹ کے اندر منسلک\r\n",
           "rubric_performance_level_1": "ایک نیا صفحہ تخلیق کیا گیا ہے اور “.html” میں ختم ہونے والا منفرد اور وضاحتی نام دیا گیا ہے. index.html صفحہ سے نئے صفحے پر اور نئے صفحے سے index.html پر ایک لنک ہے",
           "rubric_performance_level_2": "ایک ایچ ٹی ایم ایل کے صفحے سے دوسرے\r\nمیں کم از کم ایک کام کرنے والا لنک ہے",
+          "rubric_performance_level_3": "",
           "rubric_performance_level_4": "کوئی نیا صفحہ تخلیق نہیں کیا گیا تھا اور کوئی لنکس نہیں ہیں\r\n"
         },
         "CSD U2 adding pages_2022": {
           "rubric_key_concept": "ایک ڈیجیٹل آرٹفیکٹ بنانا، کثیر صفحہ سائٹ کے اندر منسلک\r\n",
           "rubric_performance_level_1": "ایک نیا صفحہ تخلیق کیا گیا ہے اور “.html” میں ختم ہونے والا منفرد اور وضاحتی نام دیا گیا ہے. index.html صفحہ سے نئے صفحے پر اور نئے صفحے سے index.html پر ایک لنک ہے",
           "rubric_performance_level_2": "ایک ایچ ٹی ایم ایل کے صفحے سے دوسرے\r\nمیں کم از کم ایک کام کرنے والا لنک ہے",
+          "rubric_performance_level_3": "",
           "rubric_performance_level_4": "کوئی نیا صفحہ تخلیق نہیں کیا گیا تھا اور کوئی لنکس نہیں ہیں\r\n"
         },
         "CSD U2 classes haikus_2021": {
+          "rubric_key_concept": "",
           "rubric_performance_level_1": "کلاس اور قاعدہ سیٹ کو صحیح طریقے سے پیدا کیا جاتا ہے، منتخب ہائیکو کے تمام عناصر شامل ہیں، اور قاعدہ سیٹ میں کم از کم تین قواعد موجود ہیں.",
           "rubric_performance_level_2": "ایک کلاس اور قاعدہ سیٹ بنائے جاتے ہیں اور ویب سائٹ کے منتخب ہائیکو سیکشن میں زیادہ تر عناصر اس طبقے سے متاثر ہوتے ہیں، لیکن متن کے کچھ حصوں کے لیے چند معمولی غلطیاں ہوسکتی ہیں، یا قاعدہ سیٹ میں تین سے کم قواعد بھی ہو سکتے ہیں۔",
+          "rubric_performance_level_3": "",
           "rubric_performance_level_4": "کوئی کلاس یا قاعدہ سیٹ نہیں بنائے جاتے ہیں، یا کلاس میں کوئی ویب سائٹ عناصر نہیں ڈالے جاتے ہیں."
         },
         "CSD U2 classes haikus_2022": {
+          "rubric_key_concept": "",
           "rubric_performance_level_1": "کلاس اور قاعدہ سیٹ کو صحیح طریقے سے پیدا کیا جاتا ہے، منتخب ہائیکو کے تمام عناصر شامل ہیں، اور قاعدہ سیٹ میں کم از کم تین قواعد موجود ہیں.",
           "rubric_performance_level_2": "ایک کلاس اور قاعدہ سیٹ بنائے جاتے ہیں اور ویب سائٹ کے منتخب ہائیکو سیکشن میں زیادہ تر عناصر اس طبقے سے متاثر ہوتے ہیں، لیکن متن کے کچھ حصوں کے لیے چند معمولی غلطیاں ہوسکتی ہیں، یا قاعدہ سیٹ میں تین سے کم قواعد بھی ہو سکتے ہیں۔",
           "rubric_performance_level_3": "ایک کلاس اور قاعدہ سیٹ بنائے جاتے ہیں، اور کم از کم ویب سائٹ میں کچھ عناصر اس کلاس میں ہیں، لیکن وہاں بڑی غلطیاں ہوسکتی ہیں جو متن کو سٹائل ہونے سے روکتی ہیں.",
           "rubric_performance_level_4": "کوئی کلاس یا قاعدہ سیٹ نہیں بنائے جاتے ہیں، یا کلاس میں کوئی ویب سائٹ عناصر نہیں ڈالے جاتے ہیں."
+        },
+        "CSD U2 classes summer_2019": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U2 text style h3_2019": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U2 text style h3_2021": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U2 text style h3_2022": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U2 un_ordered lists": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
         },
         "CSD U3 Conditionals Apple 2_2018_2019": {
           "rubric_key_concept": "ایک پروگرام کے بہاؤ کو کنٹرول کرنے کے لئے مشروط استعمال کریں.",
@@ -201,7 +317,15 @@
           "rubric_performance_level_3": "انسداد پیٹرن نیلے اور سبز مچھلی کی ایکس پوزیشن کو کم کرنے کے لئے ڈرا لوپ کے اندر استعمال کیا جاتا ہے. مچھلی تمام اقدام سکرین بھر میں چھوڑ دیا، لیکن ضروری نہیں کہ ہدایت کی رفتار میں.",
           "rubric_performance_level_4": "کاؤنٹر پیٹرن ڈرا لوپ کے باہر استعمال کیا گیا ہے، یا بالکل نہیں."
         },
+        "CSD U3 Movement Your Own 2_2018": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
         "CSD U3 Random Debug Cloud_2018_2019": {
+          "rubric_key_concept": "",
           "rubric_performance_level_1": "پروگرام ڈرائنگ بالکل اسی طرح ظاہر ہوتا ہے جیسا کہ مثال میں ہوتا ہے.",
           "rubric_performance_level_2": "پروگرامیٹک ڈرائنگ تقریباً ویسی ہی ہے جو تصویر میں ہے اور کلاؤڈ کی چوڑائی اور اونچائی کو تبدیل کر دیا گیا ہے۔",
           "rubric_performance_level_3": "بادل کی اونچائی، چوڑائی یا پوزیشن کو تبدیل کر دیا گیا ہے، لیکن ہو سکتا ہے کہ یہ لمبا لمبا ہونے سے زیادہ وسیع نہ ہو یا اسے اسکرین پر کہیں اور منتقل کیا جا سکتا ہے۔",
@@ -256,6 +380,13 @@
           "rubric_performance_level_3": "کم از کم ایک سپرائٹ کینوس پر تیار کیا گیا ہے کہ ایک حرکت پذیری کے ساتھ پیدا کیا گیا ہے.",
           "rubric_performance_level_4": "کوئی sprites پیدا کیا گیا تھا یا حرکت پذیری کے بغیر پیدا کیا گیا تھا - ایک سرمئی مربع کی طرف سے دکھایا گیا ہے."
         },
+        "CSD U3 Sprites scene sprites_2019": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
         "CSD U3 Variables assessment_2021": {
           "rubric_key_concept": "معلومات کو ذخیرہ اور اپ ڈیٹ کرنے کے لئے متغیر استعمال کریں",
           "rubric_performance_level_1": "آنکھ کا سائز متغیر اس طرح استعمال کیا جاتا ہے کہ دونوں آنکھوں کا سائز ایک ہی ہے جیسا کہ آنکھوں کی طرف سے بیان کیا گیا ہے، جس میں کوئی دوسری غیر متوقع تبدیلی نہیں ہوتی۔ پروگرام نحو کی غلطیوں سے پاک ہے.",
@@ -272,7 +403,10 @@
         },
         "CSD U3 Variables random with assignment_2019": {
           "rubric_key_concept": "معلومات کو ذخیرہ اور اپ ڈیٹ کرنے کے لئے متغیر استعمال کریں",
-          "rubric_performance_level_3": "پروگرام میں کہیں بھی آنکھ کا سائز متغیر استعمال کیا گیا ہے، لیکن ایسا نہیں کہ یہ ہدایت کے مطابق چلتا ہے."
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "پروگرام میں کہیں بھی آنکھ کا سائز متغیر استعمال کیا گیا ہے، لیکن ایسا نہیں کہ یہ ہدایت کے مطابق چلتا ہے.",
+          "rubric_performance_level_4": ""
         },
         "CSD U3 abstraction decelerateY_2019": {
           "rubric_key_concept": "ایک محدد ہوائی جہاز پر ماڈل پیچیدہ تحریک",
@@ -296,7 +430,11 @@
           "rubric_performance_level_4": "راک کی سمتار میں کوئی تبدیلی نہیں ہے کیونکہ پروگرام چلایا جاتا ہے."
         },
         "CSD U3 abstraction velocityX control_2019": {
-          "rubric_key_concept": "ایک پروگرام کے بہاؤ کو کنٹرول کرنے کے لئے مشروط استعمال کریں; ایک محدد طیارے پر ماڈل دو جہتی تحریک."
+          "rubric_key_concept": "ایک پروگرام کے بہاؤ کو کنٹرول کرنے کے لئے مشروط استعمال کریں; ایک محدد طیارے پر ماڈل دو جہتی تحریک.",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
         },
         "CSD U3 abstraction velocityX control_2021": {
           "rubric_key_concept": "ایک پروگرام کے بہاؤ کو کنٹرول کرنے کے لئے مشروط استعمال کریں; ایک محدد طیارے پر ماڈل دو جہتی تحریک.",
@@ -313,7 +451,11 @@
           "rubric_performance_level_4": "مچھلی صرف دائیں سکرین بھر میں چلتا ہے، پھر غائب ہو جاتا ہے."
         },
         "CSD U3 collisions flyman make it your own_2019": {
-          "rubric_key_concept": "ایک محدد ہوائی جہاز پر ماڈل پیچیدہ تحریک."
+          "rubric_key_concept": "ایک محدد ہوائی جہاز پر ماڈل پیچیدہ تحریک.",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
         },
         "CSD U3 collisions horse_2019": {
           "rubric_key_concept": "سکرین عناصر کی پیچیدگی کو منظم کرنے کے لئے اشیاء (sprites) بنائیں اور ترمیم کریں. ",
@@ -377,6 +519,118 @@
           "rubric_performance_level_2": "پروجیکٹ گائیڈ عام طور پر نمونہ پروجیکٹ اور طالب علم کے منصوبے کے مطابق ہے، جس میں اہم افعال اور سپرائٹس شامل ہیں. کچھ غیر ہم آہنگی ہوسکتی ہے.",
           "rubric_performance_level_3": "پروجیکٹ گائیڈ پروگرام اور متعلقہ افعال اور sprites کی کچھ خصوصیات کا ذکر کرتا ہے، لیکن گائیڈ سے لاپتہ پروگرام کے بڑے حصے ہیں.",
           "rubric_performance_level_4": "پروجیکٹ گائیڈ نامکمل ہے یا پروگرام کی وضاحت کرنے کے لئے نہیں لگتا ہے."
+        },
+        "CSD U4 - Design Mode Project_2019": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U4 - Design Mode Project_2021": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U4 - Design Mode Project_2022": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U6 - Accelerometer - A_2222": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U6 - Board Inputs - A_2222": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U6 - Color LEDs - A_2222": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U6 - Functions - A_2222": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U6 - Music - A_2222": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U6 - Physical Output - A_2222": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U6 - Screen Inputs - A_2222": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSD U6 - Sensors - A_2222": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
         },
         "CSD U6 LED all_2019": {
           "rubric_key_concept": "مختلف قسم کے جسمانی آلات کو کنٹرول کرنے کے لئے سافٹ ویئر تیار کریں.",
@@ -462,13 +716,21 @@
           "rubric_performance_level_3": "“خوش” کے بٹن کے علاوہ کم از کم ایک بٹن کسی طرح سے کلک کرنے کا جواب دیتا ہے.",
           "rubric_performance_level_4": "“خوش” بٹن کے علاوہ کوئی بٹن کلک کرنے کا جواب نہیں دیتا."
         },
+        "CSD U6 for loop led color_2019": {
+          "rubric_key_concept": ""
+        },
+        "CSD U6 for loop led color_2021": {
+          "rubric_key_concept": ""
+        },
         "CSD U6 for loop led personalize_2019": {
+          "rubric_key_concept": "",
           "rubric_performance_level_1": "تمام پانچ بٹن کام کے طور پر loops کے لئے استعمال کرتے ہوئے بیان کیا ہے، اور loops کوئی غلطی یا غیر ضروری کوڈ کے ساتھ، ایک باہر نکلنے کی حالت کے طور پر صف کی لمبائی کا استعمال کرتے ہیں.",
           "rubric_performance_level_2": "پر اور آف بٹن loops کے لئے استعمال کرتے ہوئے بیان کے طور پر کام کرتے ہیں، اور کوڈ میں کوئی غلطی نہیں ہے.",
           "rubric_performance_level_3": "loops کے لئے ایل ای ڈی کو بند اور بند کرنے کے لئے استعمال کیا جاتا ہے، لیکن وہاں غلطیاں ہوسکتی ہیں جو بٹنوں کو کام کرنے سے کام کرتی ہیں.",
           "rubric_performance_level_4": "کوڈ میں loops کے لئے کوئی ہیں."
         },
         "CSD U6 for loop led personalize_2021": {
+          "rubric_key_concept": "",
           "rubric_performance_level_1": "تمام پانچ بٹن کام کے طور پر loops کے لئے استعمال کرتے ہوئے بیان کیا ہے، اور loops کوئی غلطی یا غیر ضروری کوڈ کے ساتھ، ایک باہر نکلنے کی حالت کے طور پر صف کی لمبائی کا استعمال کرتے ہیں.",
           "rubric_performance_level_2": "پر اور آف بٹن loops کے لئے استعمال کرتے ہوئے بیان کے طور پر کام کرتے ہیں، اور کوڈ میں کوئی غلطی نہیں ہے.",
           "rubric_performance_level_3": "loops کے لئے ایل ای ڈی کو بند اور بند کرنے کے لئے استعمال کیا جاتا ہے، لیکن وہاں غلطیاں ہوسکتی ہیں جو بٹنوں کو کام کرنے سے کام کرتی ہیں.",
@@ -654,6 +916,27 @@
           "rubric_performance_level_3": "ٹیکسٹ بلاک استعمال کیا جاتا ہے، لیکن متن اسکرین پر مکمل طور پر ظاہر نہیں ہوتا ہے.",
           "rubric_performance_level_4": "کوئی ٹیکسٹ بلاکس استعمال نہیں کیا جاتا ہے، یا اس میں اتنی غلطیاں شامل ہیں کہ پروگرام چل نہیں سکتا."
         },
+        "CSDU4 Project Events_2019": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSDU4 Project Events_2021": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "CSDU4 Project Events_2022": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
         "CSDU6 - LED toggle buttonL up_2019": {
           "rubric_key_concept": "ایک پروگرام تیار کریں جو مختلف قسم کے ہارڈ ویئر ان پٹ کا جواب دیتا ہے.",
           "rubric_performance_level_1": "یہ پروگرام کام کرتا ہے جیسا کہ بیان کیا گیا ہے، جب صارف نے بٹن کو دباؤ دیا اور صارف کو بٹن جاری کرتے وقت ایل ای ڈی کو تبدیل کر دیا. کوئی غیر ضروری کوڈ نہیں ہے.",
@@ -696,29 +979,96 @@
           "rubric_performance_level_3": "ایک نئی صف بنتی ہے، لیکن یہ یا تو کسی عنصر میں محفوظ نہیں ہے، یا یہ خالی ہے، لہذا یہ پروگرام جیسا کہ بیان کیا گیا ہے کام نہیں کر سکتا۔",
           "rubric_performance_level_4": "پروگرام میں کوئی arrays ہیں."
         },
+        "U4 Model Design 7_2019": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "U4 Model Design 7_2021": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "U4 Model Design 7_2022": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "U4 Model Program 5_2019": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "U4 Model Program 5_2021": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "U4 Model Program 5_2022": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "allthethings-mini-rubric": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "اہم تصور",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
+        "allthethings-mini-rubric-weblab": {
+          "rubric_key_concept": "",
+          "rubric_performance_level_1": "",
+          "rubric_performance_level_2": "",
+          "rubric_performance_level_3": "",
+          "rubric_performance_level_4": ""
+        },
         "ml-club app-review submit": {
           "rubric_key_concept": "ایک صارف دوست ایپ بنانا جو مشین لرننگ کا استعمال کرتا ہے",
           "rubric_performance_level_1": "ماڈل درآمد کیا گیا ہے اور اے پی پی صحیح طریقے سے کام کرتا ہے. اے پی پی ایک مرکزی خیال، موضوع ہے اور ہر ڈراپ ڈاؤن کے لئے فوری طور پر ایک سوال ہونے کے لئے ترمیم کیا گیا ہے. اے پی پی میں ایک خوش آمدید اسکرین اور ایک بٹن ہے جو صحیح طریقے سے اسکرینوں کو تبدیل کرتا ہے.",
           "rubric_performance_level_2": "ماڈل درآمد کیا گیا ہے اور اے پی پی صحیح طریقے سے کام کرتا ہے. اے پی پی ایک مرکزی خیال، موضوع ہے اور ڈراپ ڈاؤن کے لئے فوری طور پر ایک سوال ہونے کے لئے ترمیم کیا گیا ہے. تاہم، خوش آمدید اسکرین نامکمل ہے یا صحیح طریقے سے کام نہیں کرتا.",
-          "rubric_performance_level_3": "ماڈل درآمد کیا گیا ہے اور اے پی پی صحیح طریقے سے کام کرتا ہے، لیکن اسکرین پر ڈیزائن یا متن میں کوئی تبدیلی نہیں ہوئی ہے. کوئی خوش آمدید اسکرین نہیں ہے."
+          "rubric_performance_level_3": "ماڈل درآمد کیا گیا ہے اور اے پی پی صحیح طریقے سے کام کرتا ہے، لیکن اسکرین پر ڈیزائن یا متن میں کوئی تبدیلی نہیں ہوئی ہے. کوئی خوش آمدید اسکرین نہیں ہے.",
+          "rubric_performance_level_4": ""
         },
         "ml-club app-review submit_2022": {
           "rubric_key_concept": "ایک صارف دوست ایپ بنانا جو مشین لرننگ کا استعمال کرتا ہے",
           "rubric_performance_level_1": "ماڈل درآمد کیا گیا ہے اور اے پی پی صحیح طریقے سے کام کرتا ہے. اے پی پی ایک مرکزی خیال، موضوع ہے اور ہر ڈراپ ڈاؤن کے لئے فوری طور پر ایک سوال ہونے کے لئے ترمیم کیا گیا ہے. اے پی پی میں ایک خوش آمدید اسکرین اور ایک بٹن ہے جو صحیح طریقے سے اسکرینوں کو تبدیل کرتا ہے.",
           "rubric_performance_level_2": "ماڈل درآمد کیا گیا ہے اور اے پی پی صحیح طریقے سے کام کرتا ہے. اے پی پی ایک مرکزی خیال، موضوع ہے اور ڈراپ ڈاؤن کے لئے فوری طور پر ایک سوال ہونے کے لئے ترمیم کیا گیا ہے. تاہم، خوش آمدید اسکرین نامکمل ہے یا صحیح طریقے سے کام نہیں کرتا.",
-          "rubric_performance_level_3": "ماڈل درآمد کیا گیا ہے اور اے پی پی صحیح طریقے سے کام کرتا ہے، لیکن اسکرین پر ڈیزائن یا متن میں کوئی تبدیلی نہیں ہوئی ہے. کوئی خوش آمدید اسکرین نہیں ہے."
+          "rubric_performance_level_3": "ماڈل درآمد کیا گیا ہے اور اے پی پی صحیح طریقے سے کام کرتا ہے، لیکن اسکرین پر ڈیزائن یا متن میں کوئی تبدیلی نہیں ہوئی ہے. کوئی خوش آمدید اسکرین نہیں ہے.",
+          "rubric_performance_level_4": ""
         },
         "ml-intro app lab-book recommender 4-2021": {
           "rubric_key_concept": "ایک صارف دوست ایپ بنانا جو مشین لرننگ کا استعمال کرتا ہے",
           "rubric_performance_level_1": "ماڈل درآمد کیا گیا ہے اور اے پی پی صحیح طریقے سے کام کرتا ہے. اے پی پی ایک مرکزی خیال، موضوع ہے اور ہر ڈراپ ڈاؤن کے لئے فوری طور پر ایک سوال ہونے کے لئے ترمیم کیا گیا ہے. اے پی پی میں ایک خوش آمدید اسکرین اور ایک بٹن ہے جو صحیح طریقے سے اسکرینوں کو تبدیل کرتا ہے.",
           "rubric_performance_level_2": "ماڈل درآمد کیا گیا ہے اور اے پی پی صحیح طریقے سے کام کرتا ہے. اے پی پی ایک مرکزی خیال، موضوع ہے اور ڈراپ ڈاؤن کے لئے فوری طور پر ایک سوال ہونے کے لئے ترمیم کیا گیا ہے. تاہم، خوش آمدید اسکرین نامکمل ہے یا صحیح طریقے سے کام نہیں کرتا.",
-          "rubric_performance_level_3": "ماڈل درآمد کیا گیا ہے اور اے پی پی صحیح طریقے سے کام کرتا ہے، لیکن اسکرین پر ڈیزائن یا متن میں کوئی تبدیلی نہیں ہوئی ہے. کوئی خوش آمدید اسکرین نہیں ہے."
+          "rubric_performance_level_3": "ماڈل درآمد کیا گیا ہے اور اے پی پی صحیح طریقے سے کام کرتا ہے، لیکن اسکرین پر ڈیزائن یا متن میں کوئی تبدیلی نہیں ہوئی ہے. کوئی خوش آمدید اسکرین نہیں ہے.",
+          "rubric_performance_level_4": ""
         },
         "ml-intro app lab-book recommender 4_2022": {
           "rubric_key_concept": "ایک صارف دوست ایپ بنانا جو مشین لرننگ کا استعمال کرتا ہے",
           "rubric_performance_level_1": "ماڈل درآمد کیا گیا ہے اور اے پی پی صحیح طریقے سے کام کرتا ہے. اے پی پی ایک مرکزی خیال، موضوع ہے اور ہر ڈراپ ڈاؤن کے لئے فوری طور پر ایک سوال ہونے کے لئے ترمیم کیا گیا ہے. اے پی پی میں ایک خوش آمدید اسکرین اور ایک بٹن ہے جو صحیح طریقے سے اسکرینوں کو تبدیل کرتا ہے.",
           "rubric_performance_level_2": "ماڈل درآمد کیا گیا ہے اور اے پی پی صحیح طریقے سے کام کرتا ہے. اے پی پی ایک مرکزی خیال، موضوع ہے اور ڈراپ ڈاؤن کے لئے فوری طور پر ایک سوال ہونے کے لئے ترمیم کیا گیا ہے. تاہم، خوش آمدید اسکرین نامکمل ہے یا صحیح طریقے سے کام نہیں کرتا.",
-          "rubric_performance_level_3": "ماڈل درآمد کیا گیا ہے اور اے پی پی صحیح طریقے سے کام کرتا ہے، لیکن اسکرین پر ڈیزائن یا متن میں کوئی تبدیلی نہیں ہوئی ہے. کوئی خوش آمدید اسکرین نہیں ہے."
+          "rubric_performance_level_3": "ماڈل درآمد کیا گیا ہے اور اے پی پی صحیح طریقے سے کام کرتا ہے، لیکن اسکرین پر ڈیزائن یا متن میں کوئی تبدیلی نہیں ہوئی ہے. کوئی خوش آمدید اسکرین نہیں ہے.",
+          "rubric_performance_level_4": ""
         },
         "ml-models in applab-zoo assessment": {
           "rubric_key_concept": "ایپ کو اپ ڈیٹ کرنے کے لئے ماڈل کارڈ استعمال کریں، اور ایپ پر اسکرینوں کو تبدیل کرنے کے لئے if-بیانات کا استعمال کریں",
