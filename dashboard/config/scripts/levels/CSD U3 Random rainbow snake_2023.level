@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:52:56.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -14,7 +19,7 @@
     "long_instructions": "<img src=\"https://images.code.org/36342205a289fdb3ed71f3b7bf92b388-snake.gif\" style=\"float:right;height:150px\">\r\n\r\n# Rainbow Snake\r\n\r\nAlexis is working on a program to draw a rainbow snake that \"wiggles\" each time it's run. She's started the program, but needs help finishing!\r\n\r\n# Do This\r\n\r\n1) Run the program several times to see how the starter code works.\r\n2) Add at least three new different colored circles to your rainbow snake.\r\n3) Use [`randomNumber()`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber) to make the rest of the snake's body move up and down like the first three.",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "start_blocks": "background(\"skyBlue\");\r\n\r\nfill(\"red\");\r\nellipse(100, randomNumber(190,210), 50, 50);\r\n\r\nfill(\"orange\");\r\nellipse(140, randomNumber(190,210), 50, 50);\r\n\r\nfill(\"yellow\");\r\nellipse(180, randomNumber(190,210), 50, 50);",
+    "start_blocks": "//2) Add at least three new different colored circles to your rainbow snake.\r\n//3) Use randomNumber to make the rest of the snake's body move up and down like the first three.\r\n\r\nbackground(\"skyBlue\");\r\n\r\nfill(\"red\");\r\nellipse(100, randomNumber(190,210), 50, 50);\r\n\r\nfill(\"orange\");\r\nellipse(140, randomNumber(190,210), 50, 50);\r\n\r\nfill(\"yellow\");\r\nellipse(180, randomNumber(190,210), 50, 50);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -67,13 +72,8 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:52:56.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:56.560+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random rainbow snake_2022\\\"\"],\"cloned_from\":\"CSD U3 Random rainbow snake_2022\"},{\"changed_at\":\"2022-10-13 22:13:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"free_play\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-13 22:15:32 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-13 22:17:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"rubric_performance_level_1\",\"rubric_performance_level_2\",\"rubric_performance_level_3\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:56.560+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random rainbow snake_2022\\\"\"],\"cloned_from\":\"CSD U3 Random rainbow snake_2022\"},{\"changed_at\":\"2022-10-13 22:13:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"free_play\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-13 22:15:32 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-13 22:17:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"rubric_performance_level_1\",\"rubric_performance_level_2\",\"rubric_performance_level_3\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-07-18 16:21:02 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
