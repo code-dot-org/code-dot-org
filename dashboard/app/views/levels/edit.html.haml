@@ -1,12 +1,10 @@
 %h1= @page_title = @level.new_record? ? "New #{@level.class.to_s} level" : "Editing #{@level.name}"
 
-- puts "**** Reached edit.html.haml"
 - content_for(:head) do
   = stylesheet_link_tag 'css/levelbuilder', media: 'all'
   = stylesheet_link_tag 'jquery.handsontable.full', media: 'all'
   %script{src: webpack_asset_path('js/levelbuilder.js')}
   = javascript_include_tag 'jquery.handsontable.full'
-- puts "**** Continuing to render"
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
   = f.hidden_field :type, value: @type_class.to_s.presence || @level.type
 
