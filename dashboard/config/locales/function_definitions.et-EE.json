@@ -7,28 +7,121 @@
             "name": "x"
           }
         },
+        "2-3 Artist 12": {
+          "details": {
+            "name": ""
+          },
+          "draw eyebrow": {
+            "name": ""
+          },
+          "draw pupil": {
+            "name": ""
+          }
+        },
         "2-3 Artist 3.4": {
+          "draw a car": {
+            "name": ""
+          },
           "draw a circle": {
             "name": "joonista ring"
           }
         },
         "2-3 Artist 7": {
           "draw_rect": {
+            "name": "",
             "parameters": {
-              "width": "laius",
-              "height": "kõrgus"
+              "height": "kõrgus",
+              "width": "laius"
             }
           }
         },
         "2-3 Artist Debugging 10": {
-          "draw square": {
-            "parameters": {
-              "width": "laius",
-              "height": "kõrgus"
-            }
+          "draw R pad": {
+            "name": ""
+          },
+          "draw a button": {
+            "name": ""
           },
           "draw a circle": {
             "name": "joonista ring"
+          },
+          "draw cord": {
+            "name": ""
+          },
+          "draw square": {
+            "name": "",
+            "parameters": {
+              "height": "kõrgus",
+              "width": "laius"
+            }
+          },
+          "jump to controller top left": {
+            "name": ""
+          },
+          "jump to middle": {
+            "name": ""
+          }
+        },
+        "2-3 Artist Debugging 5": {
+          "draw a head": {
+            "name": ""
+          },
+          "draw body and arms": {
+            "name": "",
+            "parameters": {
+              "armlength": "",
+              "bodylength": ""
+            }
+          },
+          "draw left leg": {
+            "name": ""
+          },
+          "draw right leg": {
+            "name": ""
+          }
+        },
+        "2-3 Artist Debugging 6": {
+          "draw arms": {
+            "name": ""
+          },
+          "draw head": {
+            "name": ""
+          },
+          "draw left leg": {
+            "name": ""
+          },
+          "draw right leg": {
+            "name": ""
+          },
+          "draw sitting stick figure": {
+            "name": ""
+          },
+          "jump to neck": {
+            "name": ""
+          }
+        },
+        "2-3 Artist Debugging 7": {
+          "draw D": {
+            "name": ""
+          },
+          "draw E": {
+            "name": ""
+          },
+          "draw O": {
+            "name": ""
+          }
+        },
+        "2-3 Artist Functions 1": {
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "2-3 Artist Functions 10": {
+          "big gear": {
+            "name": ""
+          },
+          "small gear": {
+            "name": ""
           }
         },
         "2-3 Artist Functions 11": {
@@ -49,11 +142,17 @@
         "2-3 Artist Functions 2": {
           "draw a square": {
             "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
           }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
             "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
           }
         },
         "2-3 Artist Functions 4": {
@@ -64,6 +163,67 @@
         "2-3 Artist Functions 9": {
           "draw a snowflake": {
             "name": "joonista lumehelves"
+          }
+        },
+        "2-3 Artist Loops 2": {
+          "draw 3 hexagons": {
+            "name": ""
+          },
+          "draw 4 hexagons": {
+            "name": ""
+          },
+          "draw 5 hexagons": {
+            "name": ""
+          }
+        },
+        "2-3 Bee Functions 1": {
+          "get 2 nectar": {
+            "name": ""
+          }
+        },
+        "2-3 Bee Functions 10": {
+          "collect purple nectar": {
+            "name": ""
+          }
+        },
+        "2-3 Bee Functions 2": {
+          "get 5": {
+            "name": ""
+          }
+        },
+        "2-3 Bee Functions 4": {
+          "move and get nectar": {
+            "name": ""
+          }
+        },
+        "2-3 Bee Functions 5": {
+          "move and get 4": {
+            "name": ""
+          }
+        },
+        "2-3 Bee Functions 6": {
+          "move and get 4": {
+            "name": ""
+          }
+        },
+        "2-3 Bee Functions 8": {
+          "get 7 nectar make 7 honey": {
+            "name": ""
+          }
+        },
+        "2-3 Bee Functions 9": {
+          "get 7 make 7": {
+            "name": ""
+          }
+        },
+        "2-3 Bee Functions Assessment 1": {
+          "get 7": {
+            "name": ""
+          }
+        },
+        "2-3 Bee Functions Assessment 2": {
+          "move and get 3": {
+            "name": ""
           }
         },
         "4-5 Artist 3": {
@@ -77,24 +237,299 @@
           }
         },
         "4-5 Artist 7": {
+          "draw a car": {
+            "name": ""
+          },
           "draw a circle": {
             "name": "joonista ring"
+          },
+          "draw triangle": {
+            "name": ""
+          }
+        },
+        "4-5 Artist 8": {
+          "draw circle": {
+            "name": ""
+          },
+          "draw goal": {
+            "name": ""
+          }
+        },
+        "4-5 Bee Conditionals 7": {
+          "check purple flower": {
+            "name": ""
+          }
+        },
+        "4-5 Bee Conditionals 8": {
+          "check flower make honey": {
+            "name": ""
+          }
+        },
+        "4-5 Bee Conditionals Assessment 1": {
+          "get nectar or make honey": {
+            "name": ""
+          }
+        },
+        "4-5 Bee Debugging 7": {
+          "make 3 honey": {
+            "name": ""
+          }
+        },
+        "4-5 Bee Debugging 8": {
+          "get 5 nectar": {
+            "name": ""
+          }
+        },
+        "4-5 Bee Debugging 9": {
+          "make all honey": {
+            "name": ""
+          }
+        },
+        "Alien Defender": {
+          "game has been won": {
+            "name": ""
+          }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          }
+        },
+        "Choose Your Own Adventure": {
+          "starting path": {
+            "name": ""
+          },
+          "story": {
+            "name": ""
+          },
+          "witch ending": {
+            "name": ""
+          }
+        },
+        "Course 4 Artist Binary 1": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "Course 4 Artist Binary 2": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "Course 4 Artist Binary 3": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "Course 4 Artist Binary 4": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "Course 4 Artist Binary 5": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "Course 4 Artist Binary 6": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "Course 4 Artist Binary 7": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "Course 4 Artist Binary Free Play 2": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "Course 4 Artist Binary Free Play 2a": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "Course 4 Artist Binary Free Play 2b": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "Course 4 Artist Binary pre1": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "Course 4 Artist Functions Inspiration": {
+          "draw a square 20": {
+            "description": "",
+            "name": ""
+          }
+        },
+        "Course 4 Artist Functions challenge": {
+          "draw a line of squares": {
+            "description": "",
+            "name": ""
+          },
+          "draw a square 20": {
+            "description": "",
+            "name": ""
+          }
+        },
+        "Course 4 Bee Params 1": {
+          "get 3 nectar": {
+            "name": ""
+          }
+        },
+        "Course 4 Bee Params 2": {
+          "get 3 nectar": {
+            "name": ""
+          }
+        },
+        "Course 4 Bee Params 3": {
+          "get 3 nectar": {
+            "name": "",
+            "parameters": {
+              "direction": ""
+            }
+          }
+        },
+        "Course 4 Bee Params 4": {
+          "get 3 nectar": {
+            "name": "",
+            "parameters": {
+              "direction": ""
+            }
+          }
+        },
+        "Course 4 Bee Params 5": {
+          "get 5 nectar": {
+            "name": "",
+            "parameters": {
+              "direction": ""
+            }
+          }
+        },
+        "Course 4 Bee Params 6": {
+          "get 5 nectar": {
+            "name": "",
+            "parameters": {
+              "direction": "",
+              "nectar units": ""
+            }
+          }
+        },
+        "Course 4 Bee Params 7": {
+          "get many nectar": {
+            "description": "",
+            "name": "",
+            "parameters": {
+              "direction": "",
+              "nectars": ""
+            }
           }
         },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
+            "description": "",
+            "name": "",
             "parameters": {
-              "honey": "mesi"
+              "direction": "",
+              "honey": "mesi",
+              "nectars": ""
             }
           }
         },
         "Course 4 Play Lab Params 1": {
           "jump": {
+            "description": "",
             "name": "hüppa"
           }
         },
         "Course 4 Play Lab Params 10": {
+          "level_up": {
+            "description": "",
+            "name": ""
+          },
           "score_points": {
+            "description": "",
+            "name": "",
             "parameters": {
               "points": "punktid"
             }
@@ -102,25 +537,33 @@
         },
         "Course 4 Play Lab Params 2": {
           "jump": {
+            "description": "",
             "name": "hüppa"
           }
         },
         "Course 4 Play Lab Params 3": {
           "jump": {
+            "description": "",
             "name": "hüppa",
             "parameters": {
-              "height": "kõrgus",
-              "actor": "tegelane"
+              "actor": "tegelane",
+              "height": "kõrgus"
             }
           }
         },
         "Course 4 Play Lab Params 4": {
           "do something": {
             "name": "tee midagi"
+          },
+          "patrol": {
+            "description": "",
+            "name": ""
           }
         },
         "Course 4 Play Lab Params 5": {
           "patrol": {
+            "description": "",
+            "name": "",
             "parameters": {
               "actor": "tegelane"
             }
@@ -128,6 +571,8 @@
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
+            "description": "",
+            "name": "",
             "parameters": {
               "actor": "tegelane"
             }
@@ -135,6 +580,8 @@
         },
         "Course 4 Play Lab Params 7": {
           "patrol": {
+            "description": "",
+            "name": "",
             "parameters": {
               "actor": "tegelane",
               "speed": "kiirus"
@@ -143,6 +590,8 @@
         },
         "Course 4 Play Lab Params 8": {
           "patrol": {
+            "description": "",
+            "name": "",
             "parameters": {
               "actor": "tegelane",
               "speed": "kiirus"
@@ -151,6 +600,8 @@
         },
         "Course 4 Play Lab Params 9": {
           "score_points": {
+            "description": "",
+            "name": "",
             "parameters": {
               "points": "punktid"
             }
@@ -169,24 +620,202 @@
         "Course 4 SCF 1": {
           "draw a hexagon": {
             "name": "joonista kuusnurk"
+          },
+          "draw a line of hexagons": {
+            "name": ""
+          },
+          "draw a square 20": {
+            "description": "",
+            "name": ""
+          },
+          "shift down/backward": {
+            "name": ""
+          },
+          "shift down/forward": {
+            "name": ""
           }
         },
         "Course 4 SCF 1a": {
           "get nectar": {
             "name": "korja nektarit",
             "parameters": {
-              "counter": "loendur"
+              "counter": "loendur",
+              "dir": ""
             }
+          }
+        },
+        "Course 4 SCF 1b": {
+          "make honey up and over": {
+            "name": ""
+          }
+        },
+        "Course 4 SCF 2": {
+          "draw a square 20": {
+            "description": "",
+            "name": ""
+          },
+          "draw an octagon": {
+            "name": ""
+          },
+          "draw octagons": {
+            "name": "",
+            "parameters": {
+              "numOctagons": ""
+            }
+          },
+          "shift down": {
+            "name": ""
           }
         },
         "Course 4 SCF 3": {
           "do something": {
             "name": "tee midagi"
           },
+          "draw a square 20": {
+            "description": "",
+            "name": ""
+          },
           "draw an octagon": {
+            "name": "",
             "parameters": {
               "length": "pikkus"
             }
+          }
+        },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": ""
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": ""
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "LOGIC FLOWER": {
+            "name": ""
+          },
+          "LOGIC FLOWERS": {
+            "name": ""
+          },
+          "LOGIC FLOWERS2": {
+            "name": ""
+          },
+          "draw a circle": {
+            "description": "",
+            "name": "joonista ring",
+            "parameters": {
+              "radius": ""
+            }
+          },
+          "draw a house": {
+            "name": "joonista maja",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda",
+              "sides": ""
+            }
+          },
+          "draw a shape": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
+          "draw a star": {
+            "description": "",
+            "name": "joonista täht",
+            "parameters": {
+              "length": "pikkus",
+              "points": "punktid"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "small flower": {
+            "name": ""
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "LOGIC FLOWER": {
+            "name": ""
+          },
+          "LOGIC FLOWERS": {
+            "name": ""
+          },
+          "LOGIC FLOWERS2": {
+            "name": ""
+          },
+          "draw a circle": {
+            "description": "",
+            "name": "joonista ring",
+            "parameters": {
+              "radius": ""
+            }
+          },
+          "draw a house": {
+            "name": "joonista maja",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda",
+              "sides": ""
+            }
+          },
+          "draw a shape": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
+          "draw a star": {
+            "description": "",
+            "name": "joonista täht",
+            "parameters": {
+              "length": "pikkus",
+              "points": "punktid"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "small flower": {
+            "name": ""
           }
         },
         "Course E: Play Lab Project": {
@@ -194,1114 +823,62 @@
             "name": "tee midagi"
           }
         },
-        "Find the Wizard": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "FoodFight": {
-          "score_points": {
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a circle": {
+            "description": "",
+            "name": "joonista ring",
             "parameters": {
+              "radius": ""
+            }
+          },
+          "draw a house": {
+            "name": "joonista maja",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda",
+              "sides": ""
+            }
+          },
+          "draw a shape": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a star": {
+            "description": "",
+            "name": "joonista täht",
+            "parameters": {
+              "length": "pikkus",
               "points": "punktid"
             }
-          }
-        },
-        "Geometric Sun": {
-          "diamond": {
-            "name": "teemant"
-          },
-          "draw a house": {
-            "name": "joonista maja"
-          }
-        },
-        "Geometric Sun_2018": {
-          "diamond": {
-            "name": "teemant"
-          },
-          "draw a house": {
-            "name": "joonista maja"
-          }
-        },
-        "InspirationalArtwork": {
-          "n-sided shape": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a loop": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw spiral circle": {
-            "parameters": {
-              "size": "suurus"
-            }
-          }
-        },
-        "InspirationalArtwork_2018": {
-          "draw a loop": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw spiral circle": {
-            "parameters": {
-              "size": "suurus"
-            }
-          }
-        },
-        "NEW Course 4 Artist Functions 3": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "NEW Course 4 Artist Functions 4": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "NEW Course 4 Artist Functions 7": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "NEW Course 4 Artist Functions 8": {
-          "draw a triangle": {
-            "name": "joonista kolmnurk"
-          }
-        },
-        "NEW Course 4 Artist Functions 9": {
-          "draw a square": {
-            "name": "joonista ruut"
-          },
-          "draw a triangle": {
-            "name": "joonista kolmnurk"
-          }
-        },
-        "NEW Course 4 Artist Params 1": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "NEW Course 4 Artist Params 10": {
-          "do something": {
-            "name": "tee midagi"
-          },
-          "draw a hexagon": {
-            "name": "joonista kuusnurk",
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 11": {
-          "draw a polygon": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "do something": {
-            "name": "tee midagi",
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 12": {
-          "draw a polygon": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 12a": {
-          "draw a polygon": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 13": {
-          "draw a polygon": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 14": {
-          "draw a spiral edge": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 15": {
-          "draw a star": {
-            "name": "joonista täht",
-            "parameters": {
-              "points": "punktid",
-              "length": "pikkus"
-            }
-          },
-          "draw a circle": {
-            "name": "joonista ring"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "pikkus",
-              "repeat": "korda"
-            }
           },
           "draw a triangle": {
             "name": "joonista kolmnurk",
             "parameters": {
               "length": "pikkus"
             }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a house": {
-            "name": "joonista maja",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a square": {
-            "name": "joonista ruut",
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 2": {
-          "do something": {
-            "name": "tee midagi"
-          },
-          "draw a triangle": {
-            "name": "joonista kolmnurk",
-            "description": "joonista kolmnurk"
-          }
-        },
-        "NEW Course 4 Artist Params 3": {
-          "draw a triangle": {
-            "name": "joonista kolmnurk"
-          }
-        },
-        "NEW Course 4 Artist Params 4": {
-          "draw a triangle with length": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 5": {
-          "draw a pentagon": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 6": {
-          "draw a triangle": {
-            "name": "joonista kolmnurk",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a hexagon": {
-            "name": "joonista kuusnurk",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a square": {
-            "name": "joonista ruut",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a sqaure": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 7": {
-          "draw a triangle": {
-            "name": "joonista kolmnurk",
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 8": {
-          "draw a triangle with length": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "NEW Course 4 Artist Params 9": {
-          "draw a square": {
-            "name": "joonista ruut",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "NEW Course 4 Artist Params inspire": {
-          "draw a polygon": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "NEW Course 4 Play Lab Params 11": {
-          "jump": {
-            "name": "hüppa",
-            "parameters": {
-              "height": "kõrgus",
-              "actor": "tegelane"
-            }
-          },
-          "patrol": {
-            "parameters": {
-              "actor": "tegelane",
-              "speed": "kiirus"
-            }
-          }
-        },
-        "New Artist Project": {
-          "draw a star": {
-            "name": "joonista täht",
-            "parameters": {
-              "points": "punktid",
-              "length": "pikkus"
-            }
-          },
-          "draw a circle": {
-            "name": "joonista ring"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "pikkus",
-              "repeat": "korda"
-            }
-          },
-          "draw a triangle": {
-            "name": "joonista kolmnurk",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a house": {
-            "name": "joonista maja",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a square": {
-            "name": "joonista ruut",
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "New Play Lab Project": {
-          "jump": {
-            "name": "hüppa",
-            "parameters": {
-              "height": "kõrgus",
-              "actor": "tegelane"
-            }
-          },
-          "patrol": {
-            "parameters": {
-              "actor": "tegelane",
-              "speed": "kiirus"
-            }
-          }
-        },
-        "Standalone_Artist_7": {
-          "draw a flower": {
-            "name": "joonista lill"
-          }
-        },
-        "course3_artist_functions_challenge1": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "course3_artist_functions_challenge2": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "course3_bee_functions_challenge1": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "course3_bee_functions_challenge2": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "course4_artist_functions_challenge2": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "course4_artist_fwp_challenge1": {
-          "do something": {
-            "name": "tee midagi"
-          },
-          "draw background": {
-            "parameters": {
-              "color": "värv"
-            }
-          }
-        },
-        "course4_bee_fwp_challenge1": {
-          "pick row": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "course4_bee_fwp_challenge2": {
-          "pick row": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "courseC_artist_prog3": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            }
-          }
-        },
-        "courseC_artist_prog3_2018": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            }
-          }
-        },
-        "courseC_artist_prog3_2019": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            }
-          }
-        },
-        "courseC_artist_prog3_2020": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            }
-          }
-        },
-        "courseC_data wizard": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseC_data wizard_2020": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_concept1": {
-          "do something": {
-            "name": "tee midagi"
-          },
-          "draw a hexagon": {
-            "name": "joonista kuusnurk"
-          }
-        },
-        "courseE_artist_concept1_2018": {
-          "draw a hexagon": {
-            "name": "joonista kuusnurk"
-          }
-        },
-        "courseE_artist_concept4": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_concept4_2018": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_concept_challenge1": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_concept_challenge1_2018": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions10": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions10_2018": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions10_2019": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions10_2020": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions2": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_functions2_2018": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_functions2_2019": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_functions2_2020": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_functions2_copy": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_functions3_2018": {
-          "draw a star": {
-            "name": "joonista täht"
-          }
-        },
-        "courseE_artist_functions3_2019": {
-          "draw a star": {
-            "name": "joonista täht"
-          }
-        },
-        "courseE_artist_functions3_2020": {
-          "draw a star": {
-            "name": "joonista täht"
-          }
-        },
-        "courseE_artist_functions4": {
-          "draw a star": {
-            "name": "joonista täht"
-          }
-        },
-        "courseE_artist_functions4_copy": {
-          "draw a star": {
-            "name": "joonista täht"
-          }
-        },
-        "courseE_artist_functions5": {
-          "draw a star": {
-            "name": "joonista täht"
-          }
-        },
-        "courseE_artist_functions5_2018": {
-          "draw a star": {
-            "name": "joonista täht"
-          }
-        },
-        "courseE_artist_functions5_2019": {
-          "draw a star": {
-            "name": "joonista täht"
-          }
-        },
-        "courseE_artist_functions5_2020": {
-          "draw a star": {
-            "name": "joonista täht"
-          }
-        },
-        "courseE_artist_functions5_copy": {
-          "draw a star": {
-            "name": "joonista täht"
-          }
-        },
-        "courseE_artist_functions7": {
-          "draw a house": {
-            "name": "joonista maja"
-          }
-        },
-        "courseE_artist_functions7_2018": {
-          "draw a house": {
-            "name": "joonista maja"
-          }
-        },
-        "courseE_artist_functions7_2020": {
-          "draw a house": {
-            "name": "joonista maja"
-          }
-        },
-        "courseE_artist_functions8": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8_2018": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8_2019": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8_2020": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8a_2018": {
-          "draw a square": {
-            "name": "joonista ruut"
-          },
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8a_2019": {
-          "draw a square": {
-            "name": "joonista ruut"
-          },
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8a_2020": {
-          "draw a square": {
-            "name": "joonista ruut"
-          },
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8b_2018": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8b_2019": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8b_2020": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8c_2018": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8c_2019": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8c_2020": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions9": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions9_2018": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions9_2019": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions9_2020": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_challenge1": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_challenge1_2018": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_challenge1_2019": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_challenge1_2020": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_challenge2": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_challenge2_2018": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_challenge2_2019": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_challenge2_2020": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_predict1": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_functions_predict1_2018": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_functions_predict1_2019": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_functions_predict1_2020": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_functions_predict1_copy": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_functions_predict2": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_predict2_2018": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_predict2_2019": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_predict2_2020": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_bee_functions1": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_bee_functions_challenge1": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_bee_functions_challenge2": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_farmer_concept1": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_farmer_concept2": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_farmer_concept3": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_playLab_scaffold1": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_playLab_scaffold2": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_playLab_scaffold3": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_playLab_scaffold4": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseF_artist_fwp1": {
-          "draw a square": {
-            "name": "joonista ruut"
-          },
-          "checker": {
-            "parameters": {
-              "size": "suurus",
-              "color": "värv"
-            }
-          },
-          "do something": {
-            "name": "tee midagi"
-          },
-          "Make gingham": {
-            "parameters": {
-              "size": "suurus"
-            }
-          },
-          "black outline": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "courseF_artist_fwp2": {
-          "draw a square": {
-            "name": "joonista ruut",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "checker": {
-            "parameters": {
-              "size": "suurus",
-              "color": "värv"
-            }
-          },
-          "do something": {
-            "name": "tee midagi"
-          },
-          "Make gingham": {
-            "parameters": {
-              "size": "suurus"
-            }
-          },
-          "black outline": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "courseF_artist_fwp2_predict1": {
-          "draw a square": {
-            "name": "joonista ruut",
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "courseF_artist_fwp3": {
-          "draw a square": {
-            "name": "joonista ruut",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a square2": {
-            "parameters": {
-              "size": "suurus"
-            }
-          },
-          "filled square": {
-            "parameters": {
-              "size": "suurus",
-              "color": "värv"
-            }
-          },
-          "black outline": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "courseF_artist_fwp4": {
-          "draw a polygon": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "courseF_artist_fwp5": {
-          "draw a polygon": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "courseF_artist_fwp6": {
-          "draw a spiral edge": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "courseF_artist_fwp7": {
-          "draw a spiral edge": {
-            "parameters": {
-              "length": "pikkus",
-              "min": "min"
-            }
-          }
-        },
-        "courseF_artist_fwp8": {
-          "draw a spiral edge": {
-            "parameters": {
-              "length": "pikkus",
-              "min": "min"
-            }
-          }
-        },
-        "courseF_artist_fwp9": {
-          "draw a star": {
-            "name": "joonista täht",
-            "parameters": {
-              "points": "punktid",
-              "length": "pikkus"
-            }
-          },
-          "draw a circle": {
-            "name": "joonista ring"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "pikkus",
-              "repeat": "korda"
-            }
-          },
-          "draw a triangle": {
-            "name": "joonista kolmnurk",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a house": {
-            "name": "joonista maja",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a square": {
-            "name": "joonista ruut",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a spiral edge": {
-            "parameters": {
-              "length": "pikkus",
-              "min": "min"
-            }
-          }
-        },
-        "courseF_artist_fwp_challenge1": {
-          "do something": {
-            "name": "tee midagi"
-          },
-          "draw background": {
-            "parameters": {
-              "color": "värv"
-            }
-          }
-        },
-        "courseF_artist_fwp_challenge2": {
-          "do something": {
-            "name": "tee midagi"
-          },
-          "draw an octagon": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "courseF_bee_functions8a": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseF_bee_fwp4": {
-          "rowOfNectar": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "courseF_bee_fwp5": {
-          "rowOfNectar": {
-            "parameters": {
-              "width": "laius"
-            }
-          }
-        },
-        "courseF_bee_fwp6": {
-          "rowOfNectar": {
-            "parameters": {
-              "width": "laius"
-            }
-          }
-        },
-        "courseF_bee_fwp7": {
-          "rowOfNectarOrHoney": {
-            "parameters": {
-              "width": "laius"
-            }
-          }
-        },
-        "courseF_bee_fwp8": {
-          "rowOfNectarOrHoney": {
-            "parameters": {
-              "width": "laius"
-            }
-          }
-        },
-        "courseF_bee_fwp9_predict1": {
-          "rowOfNectarOrHoney": {
-            "parameters": {
-              "width": "laius"
-            }
-          }
-        },
-        "courseF_bee_fwp_challenge1": {
-          "pick row": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "courseF_bee_fwp_challenge2": {
-          "pick row": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "courseF_bee_variables_7_2018": {
-          "collect": {
-            "name": "kogu"
-          }
-        },
-        "courseF_bee_variables_7_2019": {
-          "collect": {
-            "name": "kogu"
-          }
-        },
-        "courseF_bee_variables_7_2020": {
-          "collect": {
-            "name": "kogu"
-          }
-        },
-        "courseF_bee_variables_8_2018": {
-          "collect": {
-            "name": "kogu"
-          }
-        },
-        "courseF_bee_variables_8_2019": {
-          "collect": {
-            "name": "kogu"
-          }
-        },
-        "courseF_bee_variables_8_2020": {
-          "collect": {
-            "name": "kogu"
           }
         },
         "CourseD_EOC_artist": {
-          "draw a star": {
-            "name": "joonista täht",
-            "parameters": {
-              "points": "punktid",
-              "length": "pikkus"
-            }
-          },
           "draw a circle": {
-            "name": "joonista ring"
-          },
-          "draw a pinwheel": {
+            "description": "",
+            "name": "joonista ring",
             "parameters": {
-              "length": "pikkus",
-              "repeat": "korda"
-            }
-          },
-          "draw a triangle": {
-            "name": "joonista kolmnurk",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "pikkus"
+              "radius": ""
             }
           },
           "draw a house": {
@@ -1310,767 +887,48 @@
               "length": "pikkus"
             }
           },
+          "draw a pinwheel": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda",
+              "sides": ""
+            }
+          },
+          "draw a shape": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
           "draw a square": {
             "name": "joonista ruut",
             "parameters": {
               "length": "pikkus"
             }
-          }
-        },
-        "Course F: Artist Project_Flowers_examples_2021": {
+          },
           "draw a star": {
+            "description": "",
             "name": "joonista täht",
             "parameters": {
-              "points": "punktid",
-              "length": "pikkus"
-            }
-          },
-          "draw a circle": {
-            "name": "joonista ring"
-          },
-          "draw a pinwheel": {
-            "parameters": {
               "length": "pikkus",
-              "repeat": "korda"
+              "points": "punktid"
             }
           },
           "draw a triangle": {
             "name": "joonista kolmnurk",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a house": {
-            "name": "joonista maja",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a square": {
-            "name": "joonista ruut",
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "courseC_artist_prog3_2021": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            }
-          }
-        },
-        "courseC_data wizard_2021": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseF_apps_collector": {
-          "end game": {
-            "name": "lõpeta mäng"
-          }
-        },
-        "Course E: Frozen Project_examples_2021": {
-          "draw a star": {
-            "name": "joonista täht",
-            "parameters": {
-              "points": "punktid",
-              "length": "pikkus"
-            }
-          },
-          "draw a circle": {
-            "name": "joonista ring"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "pikkus",
-              "repeat": "korda"
-            }
-          },
-          "draw a triangle": {
-            "name": "joonista kolmnurk",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a house": {
-            "name": "joonista maja",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a square": {
-            "name": "joonista ruut",
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "CourseD_EOC_artist_2021": {
-          "draw a star": {
-            "name": "joonista täht",
-            "parameters": {
-              "points": "punktid",
-              "length": "pikkus"
-            }
-          },
-          "draw a circle": {
-            "name": "joonista ring"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "pikkus",
-              "repeat": "korda"
-            }
-          },
-          "draw a triangle": {
-            "name": "joonista kolmnurk",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a house": {
-            "name": "joonista maja",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a square": {
-            "name": "joonista ruut",
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "CourseD_EOC_artist_example2021": {
-          "draw a star": {
-            "name": "joonista täht",
-            "parameters": {
-              "points": "punktid",
-              "length": "pikkus"
-            }
-          },
-          "draw a circle": {
-            "name": "joonista ring"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "pikkus",
-              "repeat": "korda"
-            }
-          },
-          "draw a triangle": {
-            "name": "joonista kolmnurk",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a house": {
-            "name": "joonista maja",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a square": {
-            "name": "joonista ruut",
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "courseE_artist_functions10_2021": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions2_2021": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_functions2_dani": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_functions3_2021": {
-          "draw a star": {
-            "name": "joonista täht"
-          }
-        },
-        "courseE_artist_functions4_dani": {
-          "draw a star": {
-            "name": "joonista täht"
-          }
-        },
-        "courseE_artist_functions5_2021": {
-          "draw a star": {
-            "name": "joonista täht"
-          }
-        },
-        "courseE_artist_functions5_dani": {
-          "draw a star": {
-            "name": "joonista täht"
-          }
-        },
-        "courseE_artist_functions8_2021": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8a_2021": {
-          "draw a square": {
-            "name": "joonista ruut"
-          },
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8b_2021": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8c_2021": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions9_2021": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_challenge1_2021": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_challenge2_2021": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_predict1_2021": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_functions_predict1_dani": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_functions_predict2_2021": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "Course 4 Artist Binary 1": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "Course 4 Artist Binary 2": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "Course 4 Artist Binary 3": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "Course 4 Artist Binary 4": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "Course 4 Artist Binary 5": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "Course 4 Artist Binary 6": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "Course 4 Artist Binary 7": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "Course 4 Artist Binary Free Play 2": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "Course 4 Artist Binary Free Play 2a": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "Course 4 Artist Binary Free Play 2b": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "Course 4 Artist Binary pre1": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "course4_artist_binary_challenge1": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "course4_artist_binary_challenge2": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary1": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary1_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary1_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary1_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary2": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary2_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary2_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary2_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary3": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary3_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary3_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary3_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary4": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary4_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary4_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary4_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary5": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary5_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary5_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary5_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary6": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary6_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary6_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary6_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary7": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary7_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary7_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary7_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary8": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary8_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary8_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary8_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary8_predict1": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary8_predict1_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary8_predict1_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary8_predict1_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binaryFP_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binaryFP_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binaryFP_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary_challenge1_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary_challenge1_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary_challenge1_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary_challenge2_2018": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary_challenge2_2019": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "courseD_artist_binary_challenge2_2020": {
-          "draw": {
-            "parameters": {
-              "binary": "binaarne"
-            }
-          }
-        },
-        "Artist Autorun Test": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "Auto Open Function Editor": {
-          "draw a shape": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          }
-        },
-        "Course E: Frozen Project_examples2022": {
-          "draw a star": {
-            "name": "joonista täht",
-            "parameters": {
-              "points": "punktid",
-              "length": "pikkus"
-            }
-          },
-          "draw a circle": {
-            "name": "joonista ring"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "pikkus",
-              "repeat": "korda"
-            }
-          },
-          "draw a triangle": {
-            "name": "joonista kolmnurk",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a house": {
-            "name": "joonista maja",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a square": {
-            "name": "joonista ruut",
             "parameters": {
               "length": "pikkus"
             }
           }
         },
         "CourseD_EOC_artist2022": {
-          "draw a star": {
-            "name": "joonista täht",
-            "parameters": {
-              "points": "punktid",
-              "length": "pikkus"
-            }
-          },
           "draw a circle": {
-            "name": "joonista ring"
-          },
-          "draw a pinwheel": {
+            "description": "",
+            "name": "joonista ring",
             "parameters": {
-              "length": "pikkus",
-              "repeat": "korda"
-            }
-          },
-          "draw a triangle": {
-            "name": "joonista kolmnurk",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "pikkus"
+              "radius": ""
             }
           },
           "draw a house": {
@@ -2079,39 +937,148 @@
               "length": "pikkus"
             }
           },
+          "draw a pinwheel": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda",
+              "sides": ""
+            }
+          },
+          "draw a shape": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
           "draw a square": {
             "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a star": {
+            "description": "",
+            "name": "joonista täht",
+            "parameters": {
+              "length": "pikkus",
+              "points": "punktid"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a circle": {
+            "description": "",
+            "name": "joonista ring",
+            "parameters": {
+              "radius": ""
+            }
+          },
+          "draw a house": {
+            "name": "joonista maja",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda",
+              "sides": ""
+            }
+          },
+          "draw a shape": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a star": {
+            "description": "",
+            "name": "joonista täht",
+            "parameters": {
+              "length": "pikkus",
+              "points": "punktid"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a circle": {
+            "description": "",
+            "name": "joonista ring",
+            "parameters": {
+              "radius": ""
+            }
+          },
+          "draw a house": {
+            "name": "joonista maja",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda",
+              "sides": ""
+            }
+          },
+          "draw a shape": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a star": {
+            "description": "",
+            "name": "joonista täht",
+            "parameters": {
+              "length": "pikkus",
+              "points": "punktid"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
             "parameters": {
               "length": "pikkus"
             }
           }
         },
         "CourseD_EOC_artist_example20212022": {
-          "draw a star": {
-            "name": "joonista täht",
-            "parameters": {
-              "points": "punktid",
-              "length": "pikkus"
-            }
-          },
           "draw a circle": {
-            "name": "joonista ring"
-          },
-          "draw a pinwheel": {
+            "description": "",
+            "name": "joonista ring",
             "parameters": {
-              "length": "pikkus",
-              "repeat": "korda"
-            }
-          },
-          "draw a triangle": {
-            "name": "joonista kolmnurk",
-            "parameters": {
-              "length": "pikkus"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "pikkus"
+              "radius": ""
             }
           },
           "draw a house": {
@@ -2120,101 +1087,76 @@
               "length": "pikkus"
             }
           },
+          "draw a pinwheel": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda",
+              "sides": ""
+            }
+          },
+          "draw a shape": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
           "draw a square": {
             "name": "joonista ruut",
             "parameters": {
               "length": "pikkus"
             }
-          }
-        },
-        "courseC_artist_prog32022": {
-          "draw flame": {
+          },
+          "draw a star": {
+            "description": "",
+            "name": "joonista täht",
             "parameters": {
-              "x": "x"
+              "length": "pikkus",
+              "points": "punktid"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
             }
           }
         },
-        "courseC_data wizard2022": {
-          "do something": {
-            "name": "tee midagi"
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": ""
           }
         },
-        "courseE_artist_functions102022": {
-          "do something": {
-            "name": "tee midagi"
+        "CourseF_app_computer2022": {
+          "reset game": {
+            "name": ""
           }
         },
-        "courseE_artist_functions22022": {
-          "draw a square": {
-            "name": "joonista ruut"
+        "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": ""
           }
         },
-        "courseE_artist_functions32022": {
-          "draw a star": {
-            "name": "joonista täht"
-          }
-        },
-        "courseE_artist_functions52022": {
-          "draw a star": {
-            "name": "joonista täht"
-          }
-        },
-        "courseE_artist_functions82022": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8a2022": {
-          "draw a square": {
-            "name": "joonista ruut"
+        "Find the Wizard": {
+          "check guess": {
+            "name": ""
           },
           "do something": {
             "name": "tee midagi"
           }
         },
-        "courseE_artist_functions8b2022": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions8c2022": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions92022": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_challenge12022": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_challenge22022": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseE_artist_functions_predict12022": {
-          "draw a square": {
-            "name": "joonista ruut"
-          }
-        },
-        "courseE_artist_functions_predict22022": {
-          "do something": {
-            "name": "tee midagi"
-          }
-        },
-        "courseF_apps_collector2022": {
-          "end game": {
-            "name": "lõpeta mäng"
-          }
-        },
-        "courseF_apps_collector_-2022-2": {
-          "end game": {
-            "name": "lõpeta mäng"
+        "FoodFight": {
+          "level_up": {
+            "description": "",
+            "name": ""
+          },
+          "score_points": {
+            "description": "",
+            "name": "",
+            "parameters": {
+              "points": "punktid"
+            }
           }
         },
         "Function intro Ryan": {
@@ -2240,6 +1182,147 @@
         "Function intro Ryan_2021": {
           "build bridge": {
             "name": "ehitage sild"
+          }
+        },
+        "Geometric Sun": {
+          "diamond": {
+            "name": "teemant"
+          },
+          "draw a door": {
+            "name": ""
+          },
+          "draw a house": {
+            "name": "joonista maja"
+          },
+          "draw grass": {
+            "name": ""
+          },
+          "draw windows": {
+            "name": ""
+          },
+          "rectangle": {
+            "description": "",
+            "name": ""
+          },
+          "square": {
+            "description": "",
+            "name": ""
+          },
+          "sun": {
+            "name": ""
+          },
+          "triangle": {
+            "name": ""
+          },
+          "window": {
+            "name": ""
+          }
+        },
+        "Geometric Sun_2018": {
+          "diamond": {
+            "name": "teemant"
+          },
+          "draw a door": {
+            "name": ""
+          },
+          "draw a house": {
+            "name": "joonista maja"
+          },
+          "draw grass": {
+            "name": ""
+          },
+          "draw windows": {
+            "name": ""
+          },
+          "rectangle": {
+            "description": "",
+            "name": ""
+          },
+          "square": {
+            "description": "",
+            "name": ""
+          },
+          "sun": {
+            "name": ""
+          },
+          "triangle": {
+            "name": ""
+          },
+          "window": {
+            "name": ""
+          }
+        },
+        "Guess The Number": {
+          "check guess": {
+            "name": "",
+            "parameters": {
+              "theGuess": ""
+            }
+          }
+        },
+        "InspirationalArtwork": {
+          "draw a loop": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
+          "draw spiral circle": {
+            "name": "",
+            "parameters": {
+              "size": "suurus"
+            }
+          },
+          "n-sided shape": {
+            "description": "",
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          }
+        },
+        "InspirationalArtwork_2018": {
+          "draw a loop": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
+          "draw spiral circle": {
+            "name": "",
+            "parameters": {
+              "size": "suurus"
+            }
+          },
+          "n-sided shape": {
+            "description": "",
+            "name": ""
+          }
+        },
+        "K-1 Artist2 3": {
+          "draw roof": {
+            "name": ""
+          }
+        },
+        "K-1 Artist2 4": {
+          "draw rectangle": {
+            "name": ""
+          }
+        },
+        "K-1 Artist2 5": {
+          "draw rectangle": {
+            "name": ""
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": ""
+          },
+          "function 2": {
+            "name": ""
           }
         },
         "MC_HOC_2017_07_Cole": {
@@ -2308,43 +1391,3495 @@
           }
         },
         "MC_HOC_2017_Ali": {
-          "build short bridge": {
-            "name": "ehitage lühike sild"
-          },
           "build long bridge": {
             "name": "ehitage pikk sild"
+          },
+          "build short bridge": {
+            "name": "ehitage lühike sild"
           }
         },
         "MC_HOC_2017_Ali2022": {
-          "build short bridge": {
-            "name": "ehitage lühike sild"
-          },
           "build long bridge": {
             "name": "ehitage pikk sild"
+          },
+          "build short bridge": {
+            "name": "ehitage lühike sild"
           }
         },
         "MC_HOC_2017_Ali_2019": {
-          "build short bridge": {
-            "name": "ehitage lühike sild"
-          },
           "build long bridge": {
             "name": "ehitage pikk sild"
+          },
+          "build short bridge": {
+            "name": "ehitage lühike sild"
           }
         },
         "MC_HOC_2017_Ali_2020": {
-          "build short bridge": {
-            "name": "ehitage lühike sild"
-          },
           "build long bridge": {
             "name": "ehitage pikk sild"
+          },
+          "build short bridge": {
+            "name": "ehitage lühike sild"
           }
         },
         "MC_HOC_2017_Ali_2021": {
-          "build short bridge": {
-            "name": "ehitage lühike sild"
-          },
           "build long bridge": {
             "name": "ehitage pikk sild"
+          },
+          "build short bridge": {
+            "name": "ehitage lühike sild"
+          }
+        },
+        "MC_HOC_2017_FP20x20": {
+          "function 1": {
+            "name": ""
+          },
+          "function 2": {
+            "name": ""
+          }
+        },
+        "MC_HOC_2017_FP20x202022": {
+          "function 1": {
+            "name": ""
+          },
+          "function 2": {
+            "name": ""
+          }
+        },
+        "MC_HOC_2017_FP20x20_2019": {
+          "function 1": {
+            "name": ""
+          },
+          "function 2": {
+            "name": ""
+          }
+        },
+        "MC_HOC_2017_FP20x20_2020": {
+          "function 1": {
+            "name": ""
+          },
+          "function 2": {
+            "name": ""
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": ""
+          },
+          "function 2": {
+            "name": ""
+          }
+        },
+        "NEW Course 4 Artist Functions 11": {
+          "draw a line of  squares": {
+            "description": "",
+            "name": ""
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw a square 20": {
+            "description": "",
+            "name": ""
+          }
+        },
+        "NEW Course 4 Artist Functions 12": {
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw a square 20": {
+            "description": "",
+            "name": ""
+          }
+        },
+        "NEW Course 4 Artist Functions 13": {
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw a square 20": {
+            "name": ""
+          }
+        },
+        "NEW Course 4 Artist Functions 14": {
+          "draw a line of squares": {
+            "description": "",
+            "name": ""
+          },
+          "draw a square 20": {
+            "description": "",
+            "name": ""
+          },
+          "draw a square 40": {
+            "description": "",
+            "name": ""
+          },
+          "empty function": {
+            "name": ""
+          }
+        },
+        "NEW Course 4 Artist Functions 3": {
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "NEW Course 4 Artist Functions 4": {
+          "draw a square": {
+            "description": "",
+            "name": "joonista ruut"
+          }
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "draw a triangle": {
+            "description": "",
+            "name": "joonista kolmnurk"
+          }
+        },
+        "NEW Course 4 Artist Functions 9": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk"
+          }
+        },
+        "NEW Course 4 Artist Params 1": {
+          "Draw a triangle": {
+            "name": ""
+          },
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "NEW Course 4 Artist Params 10": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a hexagon": {
+            "description": "",
+            "name": "joonista kuusnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 11": {
+          "do something": {
+            "name": "tee midagi",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
+          "draw a polygon": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12": {
+          "draw a polygon": {
+            "description": "",
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12a": {
+          "draw a polygon": {
+            "description": "",
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 13": {
+          "draw a polygon": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 14": {
+          "draw a spiral edge": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 15": {
+          "draw a circle": {
+            "description": "",
+            "name": "joonista ring",
+            "parameters": {
+              "radius": ""
+            }
+          },
+          "draw a house": {
+            "name": "joonista maja",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda",
+              "sides": ""
+            }
+          },
+          "draw a shape": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
+          "draw a star": {
+            "description": "",
+            "name": "joonista täht",
+            "parameters": {
+              "length": "pikkus",
+              "points": "punktid"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 2": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a triangle": {
+            "description": "joonista kolmnurk",
+            "name": "joonista kolmnurk"
+          }
+        },
+        "NEW Course 4 Artist Params 3": {
+          "draw a triangle": {
+            "description": "",
+            "name": "joonista kolmnurk"
+          }
+        },
+        "NEW Course 4 Artist Params 4": {
+          "draw a triangle with length": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 5": {
+          "draw a pentagon": {
+            "description": "",
+            "name": "",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 6": {
+          "draw a hexagon": {
+            "description": "",
+            "name": "joonista kuusnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a sqaure": {
+            "description": "",
+            "name": "",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a square": {
+            "description": "",
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 7": {
+          "draw a triangle": {
+            "description": "",
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 8": {
+          "draw a triangle with length": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 9": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params inspire": {
+          "draw a polygon": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          }
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "jump": {
+            "description": "",
+            "name": "hüppa",
+            "parameters": {
+              "actor": "tegelane",
+              "height": "kõrgus"
+            }
+          },
+          "patrol": {
+            "description": "",
+            "name": "",
+            "parameters": {
+              "actor": "tegelane",
+              "speed": "kiirus"
+            }
+          }
+        },
+        "New Artist Project": {
+          "draw a circle": {
+            "description": "",
+            "name": "joonista ring",
+            "parameters": {
+              "radius": ""
+            }
+          },
+          "draw a house": {
+            "name": "joonista maja",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda",
+              "sides": ""
+            }
+          },
+          "draw a shape": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a star": {
+            "description": "",
+            "name": "joonista täht",
+            "parameters": {
+              "length": "pikkus",
+              "points": "punktid"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": ""
+          },
+          "function 2": {
+            "name": ""
+          }
+        },
+        "New Play Lab Project": {
+          "jump": {
+            "description": "",
+            "name": "hüppa",
+            "parameters": {
+              "actor": "tegelane",
+              "height": "kõrgus"
+            }
+          },
+          "patrol": {
+            "description": "",
+            "name": "",
+            "parameters": {
+              "actor": "tegelane",
+              "speed": "kiirus"
+            }
+          }
+        },
+        "Robot Doodle": {
+          "25 pixel square": {
+            "name": ""
+          },
+          "draw eye": {
+            "name": ""
+          },
+          "draw head": {
+            "name": ""
+          }
+        },
+        "Robot Doodle_2018": {
+          "25 pixel square": {
+            "name": ""
+          },
+          "draw eye": {
+            "name": ""
+          },
+          "draw head": {
+            "name": ""
+          }
+        },
+        "Standalone_Artist_7": {
+          "draw a flower": {
+            "name": "joonista lill"
+          }
+        },
+        "Standalone_Artist_8": {
+          "draw a shape": {
+            "name": ""
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": ""
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": ""
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": ""
+          }
+        },
+        "course3_artist_functions_challenge1": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "my design": {
+            "name": ""
+          }
+        },
+        "course3_artist_functions_challenge2": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "my design": {
+            "name": ""
+          }
+        },
+        "course3_bee_functions_challenge1": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "get 3 nectar or honey": {
+            "name": ""
+          }
+        },
+        "course3_bee_functions_challenge2": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "move and collect": {
+            "name": ""
+          }
+        },
+        "course3_bee_functions_challenge3": {
+          "check nectar or honey": {
+            "name": ""
+          },
+          "row of nectar": {
+            "name": ""
+          },
+          "rowOfNectar": {
+            "name": ""
+          }
+        },
+        "course3_bee_functions_challenge4": {
+          "check nectar or honey": {
+            "name": ""
+          },
+          "move and check": {
+            "name": ""
+          },
+          "row of nectar": {
+            "name": ""
+          },
+          "rowOfNectar": {
+            "name": ""
+          }
+        },
+        "course3_playLab_challenge1": {
+          "keep playing": {
+            "name": ""
+          },
+          "lose game": {
+            "name": ""
+          },
+          "win game": {
+            "name": ""
+          }
+        },
+        "course4_artist_binary_challenge1": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "course4_artist_binary_challenge2": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "course4_artist_concept_challenge2": {
+          "draw pinwheel": {
+            "name": ""
+          }
+        },
+        "course4_artist_functions_challenge2": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "my design": {
+            "name": ""
+          }
+        },
+        "course4_artist_fwp_challenge1": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a polygon": {
+            "name": "",
+            "parameters": {
+              "sides": ""
+            }
+          },
+          "draw a square 20": {
+            "description": "",
+            "name": ""
+          },
+          "draw background": {
+            "name": "",
+            "parameters": {
+              "color": "värv"
+            }
+          }
+        },
+        "course4_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": ""
+          }
+        },
+        "course4_bee_fwp_challenge1": {
+          "pick row": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "course4_bee_fwp_challenge2": {
+          "pick row": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": ""
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": ""
+          }
+        },
+        "courseB_artist_loops_challenge22022": {
+          "potential solution": {
+            "name": ""
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": ""
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": ""
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": ""
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": ""
+          }
+        },
+        "courseC_artist_prog3": {
+          "draw fire": {
+            "name": ""
+          },
+          "draw flame": {
+            "name": "",
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2018": {
+          "draw fire": {
+            "name": ""
+          },
+          "draw flame": {
+            "name": "",
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2019": {
+          "draw fire": {
+            "name": ""
+          },
+          "draw flame": {
+            "name": "",
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2020": {
+          "draw fire": {
+            "name": ""
+          },
+          "draw flame": {
+            "name": "",
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw fire": {
+            "name": ""
+          },
+          "draw flame": {
+            "name": "",
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog4": {
+          "booster": {
+            "name": ""
+          }
+        },
+        "courseC_artist_prog42022": {
+          "booster": {
+            "name": ""
+          }
+        },
+        "courseC_artist_prog4_2018": {
+          "booster": {
+            "name": ""
+          }
+        },
+        "courseC_artist_prog4_2019": {
+          "booster": {
+            "name": ""
+          }
+        },
+        "courseC_artist_prog4_2020": {
+          "booster": {
+            "name": ""
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": ""
+          }
+        },
+        "courseC_data wizard": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseC_data wizard_2020": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseD_artist_binary1": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary1_2018": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary1_2019": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary1_2020": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary2": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary2_2018": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary2_2019": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary2_2020": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary3": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary3_2018": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary3_2019": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary3_2020": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary4": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary4_2018": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary4_2019": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary4_2020": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary5": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary5_2018": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary5_2019": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary5_2020": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary6": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary6_2018": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary6_2019": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary6_2020": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary7": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary7_2018": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary7_2019": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary7_2020": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary8": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary8_2018": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary8_2019": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary8_2020": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary8_predict1": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary8_predict1_2018": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary8_predict1_2019": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary8_predict1_2020": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binaryFP_2018": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binaryFP_2019": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binaryFP_2020": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary_challenge1_2018": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary_challenge1_2019": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary_challenge1_2020": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary_challenge2_2018": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary_challenge2_2019": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseD_artist_binary_challenge2_2020": {
+          "draw": {
+            "name": "",
+            "parameters": {
+              "binary": "binaarne"
+            }
+          },
+          "draw bit": {
+            "name": ""
+          }
+        },
+        "courseE_Dogger_2": {
+          "lose": {
+            "name": ""
+          },
+          "stop_everything": {
+            "name": ""
+          }
+        },
+        "courseE_artist_concept1": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a hexagon": {
+            "name": "joonista kuusnurk"
+          }
+        },
+        "courseE_artist_concept1_2018": {
+          "draw a hexagon": {
+            "name": "joonista kuusnurk"
+          }
+        },
+        "courseE_artist_concept4": {
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw a plane of squares": {
+            "name": ""
+          },
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "courseE_artist_concept4_2018": {
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw a plane of squares": {
+            "name": ""
+          },
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "courseE_artist_concept_challenge1": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_artist_concept_challenge1_2018": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_artist_concept_challenge2": {
+          "draw pinwheel": {
+            "name": ""
+          }
+        },
+        "courseE_artist_concept_challenge2_2018": {
+          "draw pinwheel": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions1": {
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions10": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw hexagon": {
+            "name": ""
+          },
+          "draw line of hexagons": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw hexagon": {
+            "name": ""
+          },
+          "draw line of hexagons": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions10_2018": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw hexagon": {
+            "name": ""
+          },
+          "draw line of hexagons": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions10_2019": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw hexagon": {
+            "name": ""
+          },
+          "draw line of hexagons": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions10_2020": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw hexagon": {
+            "name": ""
+          },
+          "draw line of hexagons": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw hexagon": {
+            "name": ""
+          },
+          "draw line of hexagons": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions1_copy": {
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions2": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions2_2018": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions2_2019": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions2_2020": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions2_copy": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions3_2018": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions3_2019": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions3_2020": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions4": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions4_copy": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions5": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions5_2018": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions5_2019": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions5_2020": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions5_copy": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions7": {
+          "draw a house": {
+            "name": "joonista maja"
+          },
+          "draw a window": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions72022": {
+          "draw a window": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions7_2018": {
+          "draw a house": {
+            "name": "joonista maja"
+          },
+          "draw a window": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions7_2019": {
+          "draw a window": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions7_2020": {
+          "draw a house": {
+            "name": "joonista maja"
+          },
+          "draw a window": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions8": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          },
+          "staggered squares": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions8_2018": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          },
+          "staggered squares": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions8_2019": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          },
+          "staggered squares": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions8_2020": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          },
+          "staggered squares": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          },
+          "staggered squares": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "courseE_artist_functions8a_2018": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "courseE_artist_functions8a_2019": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "courseE_artist_functions8a_2020": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions8b_2018": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions8b_2019": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions8b_2020": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          },
+          "staggered squares": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions8c_2018": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          },
+          "staggered squares": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions8c_2019": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          },
+          "staggered squares": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions8c_2020": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          },
+          "staggered squares": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          },
+          "staggered squares": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions9": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw line of triangles": {
+            "name": ""
+          },
+          "draw triangle": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw line of triangles": {
+            "name": ""
+          },
+          "draw triangle": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions9_2018": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw line of triangles": {
+            "name": ""
+          },
+          "draw triangle": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions9_2019": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw line of triangles": {
+            "name": ""
+          },
+          "draw triangle": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions9_2020": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw line of triangles": {
+            "name": ""
+          },
+          "draw triangle": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw line of triangles": {
+            "name": ""
+          },
+          "draw triangle": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functionsProj2022": {
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw hexagon": {
+            "name": ""
+          },
+          "draw line of hexagons": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          },
+          "staggered squares": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functionsProj_2018": {
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw hexagon": {
+            "name": ""
+          },
+          "draw line of hexagons": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          },
+          "staggered squares": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functionsProj_2019": {
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw hexagon": {
+            "name": ""
+          },
+          "draw line of hexagons": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          },
+          "staggered squares": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functionsProj_2020": {
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw hexagon": {
+            "name": ""
+          },
+          "draw line of hexagons": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          },
+          "staggered squares": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw a line of squares": {
+            "name": ""
+          },
+          "draw hexagon": {
+            "name": ""
+          },
+          "draw line of hexagons": {
+            "name": ""
+          },
+          "draw square": {
+            "name": ""
+          },
+          "staggered squares": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_challenge1": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "my design": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "my design": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "my design": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "my design": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "my design": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "my design": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_challenge2": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "my design": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "my design": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "my design": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "my design": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "my design": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "my design": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_predict1": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_predict1_2018": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_predict1_2019": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_predict1_2020": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_predict1_copy": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "draw ear stems": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_predict2": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw line of polygons": {
+            "name": ""
+          },
+          "draw polygon": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw line of polygons": {
+            "name": ""
+          },
+          "draw polygon": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_predict2_2018": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw line of polygons": {
+            "name": ""
+          },
+          "draw polygon": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_predict2_2019": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw line of polygons": {
+            "name": ""
+          },
+          "draw polygon": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_predict2_2020": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw line of polygons": {
+            "name": ""
+          },
+          "draw polygon": {
+            "name": ""
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw line of polygons": {
+            "name": ""
+          },
+          "draw polygon": {
+            "name": ""
+          }
+        },
+        "courseE_bee_concept4": {
+          "honey nectar": {
+            "name": ""
+          }
+        },
+        "courseE_bee_functions1": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_bee_functions10": {
+          "move and make honey": {
+            "name": ""
+          }
+        },
+        "courseE_bee_functions11_predict1": {
+          "move and make honey": {
+            "name": ""
+          }
+        },
+        "courseE_bee_functions2": {
+          "get 2 nectar": {
+            "name": ""
+          }
+        },
+        "courseE_bee_functions3": {
+          "get 5": {
+            "name": ""
+          }
+        },
+        "courseE_bee_functions4": {
+          "move and get nectar": {
+            "name": ""
+          }
+        },
+        "courseE_bee_functions5": {
+          "move and get 4": {
+            "name": ""
+          }
+        },
+        "courseE_bee_functions6": {
+          "get 7 nectar make 7 honey": {
+            "name": ""
+          }
+        },
+        "courseE_bee_functions7": {
+          "get 7 make 7": {
+            "name": ""
+          }
+        },
+        "courseE_bee_functions8": {
+          "collect all nectar": {
+            "name": ""
+          }
+        },
+        "courseE_bee_functions9": {
+          "get all nectar": {
+            "name": ""
+          }
+        },
+        "courseE_bee_functions_challenge1": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "get 3 nectar or honey": {
+            "name": ""
+          }
+        },
+        "courseE_bee_functions_challenge2": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "move and collect": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_concept1": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_farmer_concept2": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "get pumpkin": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_concept2_2018": {
+          "get pumpkin": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_concept3": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_farmer_functions10a12022": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          },
+          "pumpkin square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions10a1_2018": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          },
+          "pumpkin square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions10a1_2019": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          },
+          "pumpkin square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions10a1_2020": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          },
+          "pumpkin square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          },
+          "pumpkin square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions10b": {
+          "navigate": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions11_predict": {
+          "check and pick": {
+            "name": ""
+          },
+          "find pumpkin": {
+            "name": ""
+          },
+          "wander path": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions11_predict2022": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          },
+          "get produce": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          },
+          "pumpkin square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions11_predict_2018": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          },
+          "get produce": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          },
+          "pumpkin square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions11_predict_2019": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          },
+          "get produce": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          },
+          "pumpkin square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions11_predict_2020": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          },
+          "get produce": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          },
+          "pumpkin square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          },
+          "get produce": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          },
+          "pumpkin square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions132022": {
+          "check for corn": {
+            "name": ""
+          },
+          "corn rectangle": {
+            "name": ""
+          },
+          "lettuce stairs": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions13_2018": {
+          "check for corn": {
+            "name": ""
+          },
+          "corn rectangle": {
+            "name": ""
+          },
+          "lettuce stairs": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions13_2019": {
+          "check for corn": {
+            "name": ""
+          },
+          "corn rectangle": {
+            "name": ""
+          },
+          "lettuce stairs": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions13_2020": {
+          "check for corn": {
+            "name": ""
+          },
+          "corn rectangle": {
+            "name": ""
+          },
+          "lettuce stairs": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "check for corn": {
+            "name": ""
+          },
+          "corn rectangle": {
+            "name": ""
+          },
+          "lettuce stairs": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions1a2022": {
+          "check square for corn": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions1a_2018": {
+          "check square for corn": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions1a_2019": {
+          "check square for corn": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions1a_2020": {
+          "check square for corn": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions2b2022": {
+          "check square for corn": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions2b_2018": {
+          "check square for corn": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions2b_2019": {
+          "check square for corn": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions2b_2020": {
+          "check square for corn": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions2ba": {
+          "corn and pumpkin": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions2ba2022": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions2ba_2018": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions2ba_2019": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions2ba_2020": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions3c": {
+          "corn and pumpkin": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions3c12022": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions3c1_2018": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions3c1_2019": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions3c1_2020": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          },
+          "pick along path": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions3c2022": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions3c_2018": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions3c_2019": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions3c_2020": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": ""
+          },
+          "get all pumpkins": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions4b": {
+          "corn and pumpkin": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions5c": {
+          "corn and pumpkin": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions6c": {
+          "corn and pumpkin": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions7a12022": {
+          "garden square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions7a1_2018": {
+          "garden square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions7a1_2019": {
+          "garden square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions7a1_2020": {
+          "garden square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions8a12022": {
+          "garden square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions8a1_2018": {
+          "garden square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions8a1_2019": {
+          "garden square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions8a1_2020": {
+          "garden square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions8b": {
+          "navigate": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions9a12022": {
+          "garden square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions9a1_2018": {
+          "garden square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions9a1_2019": {
+          "garden square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions9a1_2020": {
+          "garden square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": ""
+          }
+        },
+        "courseE_farmer_functions9b": {
+          "navigate": {
+            "name": ""
+          }
+        },
+        "courseE_playLab_challenge1": {
+          "keep playing": {
+            "name": ""
+          },
+          "lose game": {
+            "name": ""
+          },
+          "win game": {
+            "name": ""
+          }
+        },
+        "courseE_playLab_scaffold1": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_playLab_scaffold2": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_playLab_scaffold3": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_playLab_scaffold4": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "lõpeta mäng"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "lõpeta mäng"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "lõpeta mäng"
+          }
+        },
+        "courseF_artist_fwp1": {
+          "Make gingham": {
+            "name": "",
+            "parameters": {
+              "size": "suurus"
+            }
+          },
+          "black outline": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "checker": {
+            "name": "",
+            "parameters": {
+              "color": "värv",
+              "size": "suurus"
+            }
+          },
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "courseF_artist_fwp2": {
+          "Make gingham": {
+            "name": "",
+            "parameters": {
+              "size": "suurus"
+            }
+          },
+          "black outline": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "checker": {
+            "name": "",
+            "parameters": {
+              "color": "värv",
+              "size": "suurus"
+            }
+          },
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a square": {
+            "description": "",
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "courseF_artist_fwp2_predict1": {
+          "draw a square": {
+            "description": "",
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "courseF_artist_fwp3": {
+          "black outline": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a square2": {
+            "name": "",
+            "parameters": {
+              "size": "suurus"
+            }
+          },
+          "filled square": {
+            "name": "",
+            "parameters": {
+              "color": "värv",
+              "size": "suurus"
+            }
+          }
+        },
+        "courseF_artist_fwp4": {
+          "draw a polygon": {
+            "description": "",
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          }
+        },
+        "courseF_artist_fwp5": {
+          "draw a polygon": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          }
+        },
+        "courseF_artist_fwp6": {
+          "draw a spiral edge": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          }
+        },
+        "courseF_artist_fwp7": {
+          "draw a spiral edge": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "min": "min",
+              "sides": ""
+            }
+          }
+        },
+        "courseF_artist_fwp8": {
+          "draw a spiral edge": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "min": "min",
+              "sides": ""
+            }
+          }
+        },
+        "courseF_artist_fwp9": {
+          "draw a circle": {
+            "description": "",
+            "name": "joonista ring",
+            "parameters": {
+              "radius": ""
+            }
+          },
+          "draw a house": {
+            "name": "joonista maja",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda",
+              "sides": ""
+            }
+          },
+          "draw a shape": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "sides": ""
+            }
+          },
+          "draw a spiral edge": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus",
+              "min": "min",
+              "sides": ""
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a star": {
+            "description": "",
+            "name": "joonista täht",
+            "parameters": {
+              "length": "pikkus",
+              "points": "punktid"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "courseF_artist_fwp_challenge1": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a polygon": {
+            "name": "",
+            "parameters": {
+              "sides": ""
+            }
+          },
+          "draw a square 20": {
+            "description": "",
+            "name": ""
+          },
+          "draw background": {
+            "name": "",
+            "parameters": {
+              "color": "värv"
+            }
+          }
+        },
+        "courseF_artist_fwp_challenge2": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a square 20": {
+            "description": "",
+            "name": ""
+          },
+          "draw an octagon": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "courseF_bee_conditionals2": {
+          "check nectar or honey": {
+            "name": ""
+          },
+          "move and check": {
+            "name": ""
+          }
+        },
+        "courseF_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": ""
+          }
+        },
+        "courseF_bee_for_challenge12022": {
+          "move and get nectar with counter": {
+            "name": ""
+          }
+        },
+        "courseF_bee_for_challenge1_2018": {
+          "move and get nectar with counter": {
+            "name": ""
+          }
+        },
+        "courseF_bee_for_challenge1_2019": {
+          "move and get nectar with counter": {
+            "name": ""
+          }
+        },
+        "courseF_bee_for_challenge1_2020": {
+          "move and get nectar with counter": {
+            "name": ""
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": ""
+          }
+        },
+        "courseF_bee_functions2": {
+          "get only nectar": {
+            "name": ""
+          }
+        },
+        "courseF_bee_functions3": {
+          "only make honey": {
+            "name": ""
+          }
+        },
+        "courseF_bee_functions3a": {
+          "check nectar or honey": {
+            "name": ""
+          }
+        },
+        "courseF_bee_functions4": {
+          "check nectar or honey": {
+            "name": ""
+          },
+          "move and check": {
+            "name": ""
+          }
+        },
+        "courseF_bee_functions5a": {
+          "check nectar or honey": {
+            "name": ""
+          },
+          "move and check": {
+            "name": ""
+          }
+        },
+        "courseF_bee_functions6": {
+          "get nectar make honey": {
+            "name": ""
+          }
+        },
+        "courseF_bee_functions7": {
+          "get nectar make honey": {
+            "name": ""
+          }
+        },
+        "courseF_bee_functions8a": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "get nectar make honey": {
+            "name": ""
+          }
+        },
+        "courseF_bee_functionsPre7": {
+          "get nectar make honey": {
+            "name": ""
+          }
+        },
+        "courseF_bee_functions_challenge1": {
+          "check nectar or honey": {
+            "name": ""
+          },
+          "row of nectar": {
+            "name": ""
+          },
+          "rowOfNectar": {
+            "name": ""
+          }
+        },
+        "courseF_bee_functions_challenge2": {
+          "check nectar or honey": {
+            "name": ""
+          },
+          "move and check": {
+            "name": ""
+          },
+          "rowOfNectar": {
+            "name": ""
+          }
+        },
+        "courseF_bee_fwp2": {
+          "rowOfNectar": {
+            "name": ""
+          }
+        },
+        "courseF_bee_fwp3": {
+          "rowOfNectar": {
+            "name": ""
+          }
+        },
+        "courseF_bee_fwp4": {
+          "rowOfNectar": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "courseF_bee_fwp5": {
+          "rowOfNectar": {
+            "name": "",
+            "parameters": {
+              "width": "laius"
+            }
+          }
+        },
+        "courseF_bee_fwp6": {
+          "rowOfNectar": {
+            "name": "",
+            "parameters": {
+              "width": "laius"
+            }
+          }
+        },
+        "courseF_bee_fwp7": {
+          "rowOfNectarOrHoney": {
+            "name": "",
+            "parameters": {
+              "width": "laius"
+            }
+          }
+        },
+        "courseF_bee_fwp8": {
+          "rowOfNectarOrHoney": {
+            "name": "",
+            "parameters": {
+              "width": "laius"
+            }
+          }
+        },
+        "courseF_bee_fwp9_predict1": {
+          "rowOfNectarOrHoney": {
+            "name": "",
+            "parameters": {
+              "width": "laius"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge1": {
+          "pick row": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge2": {
+          "pick row": {
+            "name": "",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "courseF_bee_variables_1_2018": {
+          "collect row": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_1_2019": {
+          "collect row": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_1_2020": {
+          "collect row": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_2_2018": {
+          "collect row": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_2_2019": {
+          "collect row": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_2_2020": {
+          "collect row": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_3_2018": {
+          "collect row": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_3_2019": {
+          "collect row": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_3_2020": {
+          "collect row": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_4_2018": {
+          "collect row": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_4_2019": {
+          "collect row": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_4_2020": {
+          "collect row": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_5_2018": {
+          "collect row": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_5_2019": {
+          "collect row": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_5_2020": {
+          "collect row": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_6_2018": {
+          "collect stairs": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_6_2019": {
+          "collect stairs": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_6_2020": {
+          "collect stairs": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_7_2018": {
+          "collect": {
+            "name": "kogu"
+          }
+        },
+        "courseF_bee_variables_7_2019": {
+          "collect": {
+            "name": "kogu"
+          }
+        },
+        "courseF_bee_variables_7_2020": {
+          "collect": {
+            "name": "kogu"
+          }
+        },
+        "courseF_bee_variables_8_2018": {
+          "collect": {
+            "name": "kogu"
+          },
+          "move and increment": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_8_2019": {
+          "collect": {
+            "name": "kogu"
+          },
+          "move and increment": {
+            "name": ""
+          }
+        },
+        "courseF_bee_variables_8_2020": {
+          "collect": {
+            "name": "kogu"
+          },
+          "move and increment": {
+            "name": ""
           }
         }
       }
