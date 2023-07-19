@@ -51,7 +51,7 @@ Si se espera que tu clase realice su actividad inmediatamente después del inici
 Echa un vistazo a continuación para obtener ideas sobre cómo celebrar tu Hora del Código virtual. Algunos pueden requerir que te prepares con anticipación, como la creación de <a href="https://code.org/certificates">certificados</a> de finalización para todos tus participantes. Una vez que encuentres un voluntario, asegúrate de programar una reunión con ellos con anticipación para discutir su papel en el evento, resolver los requisitos técnicos y establecer la logística de participar en línea.
 
 ### 4. Provisiones de celebración
-De manera similar a como comenzó el evento, ¡reúnete después para celebrar! Estas son algunas ideas para hacer que tu celebración virtual sea interactiva y especial:
+De manera similar a como comenzó el evento, ¡reúnete después para celebrar! Algunos pueden requerir que se prepare con anticipación, como la creación de <a href="https://studio.code.org/certificates/batch">certificados de finalización</a> para todos tus participantes.
 
 ---
 
