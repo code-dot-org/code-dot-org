@@ -19,6 +19,8 @@
         "DigitalCitizenship": "डिजीटल नागरिकता",
         "DigitalFootprint": "आपका डिजीटल फुटप्रिंट",
         "DigitalFootprint_2018": "आपका डिजीटल फुटप्रिंट",
+        "ECSPD your goals": "",
+        "ECSPD your goals_test": "",
         "EnvelopeVariables": "एनवलोप वेरिएब्लस",
         "EnvelopeVariables_2018": "अनुवाद मौजूद नहीं है: en-US.data.unplugged.EnvelopeVariables_2018.title",
         "ForLoopFun": "फॉर लूप फन",
@@ -35,12 +37,14 @@
         "MadGlibs": "मैड ग्लिब्स",
         "MoveIt": "इसे मूव करें, इसे मूव करें",
         "MoveItMoveIt_2018": "इसे मूव करें, इसे मूव करें",
+        "PDK5 Strategies O": "",
         "PaperPlanes": "वास्तविक-जीवन की कलन विधियां: कागज के जहाज",
         "PaperPlanes_2018": "वास्तविक-जीवन की कलन विधियां: कागज के जहाज",
         "PlantASeed": "वास्तविक-जीवन की कलन विधियां: पौधा उगाना",
         "PlantASeed_2018": "वास्तविक-जीवन की कलन विधियां: पौधा उगाना",
         "RelayProgramming": "रिले प्रोग्रामिंग",
         "RelayProgramming_2018": "रिले प्रोग्रामिंग",
+        "Sample Free Response": "",
         "SongwritingParameters": "गीत लेखन",
         "SongwritingParameters_2018": "अनुवाद मौजूद नहीं है: en-US.data.unplugged.SongwritingParameters_2018.title",
         "SongwritingWithParameters": "मापदंडों के साथ गीत लिखना",
@@ -53,16 +57,16 @@
         "courseB_unplugged_MRF": "अनप्लग्ड एक्टिविटी",
         "courseB_unplugged_MRF_2018": "मेरे रोबोटिक दोस्त",
         "courseB_unplugged_loopyMRF": "अनप्लग्ड एक्टिविटी",
+        "courseB_unplugged_loopyMRF_2018": "अनुवाद मौजूद नहीं है: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title",
         "courseC_Unplugged_ScreenOutTheMean": "अनप्लग्ड एक्टिविटी",
         "courseC_Unplugged_ScreenOutTheMean_2018": "अनप्लग्ड एक्टिविटी",
         "courseD_unplugged_digitalCitizenship": "अनप्लग्ड एक्टिविटी",
         "courseD_unplugged_digitalCitizenship_2018": "अनप्लग्ड एक्टिविटी",
         "courseE_unplugged_CnC_2018": "डिजीटल शेयरिंग",
         "courseE_unplugged_privateInformation": "व्यावहारिक ज्ञान शिक्षा: गोपनीय व निजी जानकारी ",
+        "courseE_unplugged_privateInformation_2018": "अनुवाद मौजूद नहीं है: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title",
         "courseF_unplugged_powerOfWords": "अनप्लग्ड एक्टिविटी",
-        "courseF_unplugged_powerOfWords_2018": "अनुवाद मौजूद नहीं है: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title",
-        "courseB_unplugged_loopyMRF_2018": "अनुवाद मौजूद नहीं है: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title",
-        "courseE_unplugged_privateInformation_2018": "अनुवाद मौजूद नहीं है: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title"
+        "courseF_unplugged_powerOfWords_2018": "अनुवाद मौजूद नहीं है: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
       }
     }
   }
