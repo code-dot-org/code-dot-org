@@ -9,10 +9,9 @@ module OpenaiChatHelper
     # Parse the response JSON and return the chat response message
     if response.code == 200
       response_body = JSON.parse(response.body)
-      response = response_body['choices'][0]['message']
-      render json: response
+      return response_body['choices'][0]['message']
     else
-      render json: {error: "Chat completion failed: #{response.to_json}"}, status: :bad_request
+      return {error: "Chat completion failed: #{response.to_json}"}, status: :bad_request
     end
   end
 end
