@@ -19,6 +19,8 @@
         "DigitalCitizenship": "數位公民",
         "DigitalFootprint": "你的數位足跡",
         "DigitalFootprint_2018": "你的數位足跡",
+        "ECSPD your goals": "",
+        "ECSPD your goals_test": "",
         "EnvelopeVariables": "信封變數",
         "EnvelopeVariables_2018": "翻譯不見了: en-US.data.unplugged.EnvelopeVariables_2018.title",
         "ForLoopFun": "有趣的計次迴圈",
@@ -35,12 +37,14 @@
         "MadGlibs": "Mad Glibs",
         "MoveIt": "移動它，移動它",
         "MoveItMoveIt_2018": "移動它，移動它",
+        "PDK5 Strategies O": "",
         "PaperPlanes": "生活中的演算法 - 紙飛機",
         "PaperPlanes_2018": "生活中的演算法 - 紙飛機",
         "PlantASeed": "生活中的演算法 - 植物種植",
         "PlantASeed_2018": "生活中的演算法 - 植物種植",
         "RelayProgramming": "接力編程",
         "RelayProgramming_2018": "接力編程",
+        "Sample Free Response": "",
         "SongwritingParameters": "歌曲創作",
         "SongwritingParameters_2018": "翻譯不見了: en-US.data.unplugged.SongwritingParameters_2018.title",
         "SongwritingWithParameters": "用參數寫歌",
@@ -53,15 +57,16 @@
         "courseB_unplugged_MRF": "不插電活動",
         "courseB_unplugged_MRF_2018": "我的機器人朋友",
         "courseB_unplugged_loopyMRF": "不插電活動",
+        "courseB_unplugged_loopyMRF_2018": "",
         "courseC_Unplugged_ScreenOutTheMean": "不插電活動",
         "courseC_Unplugged_ScreenOutTheMean_2018": "不插電活動",
         "courseD_unplugged_digitalCitizenship": "不插電活動",
         "courseD_unplugged_digitalCitizenship_2018": "不插電活動",
         "courseE_unplugged_CnC_2018": "數位分享",
         "courseE_unplugged_privateInformation": "常識教育：隱私與個人資訊",
+        "courseE_unplugged_privateInformation_2018": "遺漏翻譯：en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title",
         "courseF_unplugged_powerOfWords": "不插電活動",
-        "courseF_unplugged_powerOfWords_2018": "翻譯不見了: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title",
-        "courseE_unplugged_privateInformation_2018": "遺漏翻譯：en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title"
+        "courseF_unplugged_powerOfWords_2018": "翻譯不見了: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
       }
     }
   }
