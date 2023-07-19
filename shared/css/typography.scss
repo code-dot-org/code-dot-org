@@ -192,12 +192,18 @@
 // ----------------------------------------
 
 // Headings
-h1, .heading-xxl { @include heading-xxl; }
-h2, .heading-xl { @include heading-xl; }
-h3, .heading-lg { @include heading-lg; }
-h4, .heading-md { @include heading-md; }
-h5, .heading-sm { @include heading-sm; }
-h6, .heading-xs { @include heading-xs; }
+h1,
+.heading-xxl { @include heading-xxl; }
+h2,
+.heading-xl { @include heading-xl; }
+h3,
+.heading-lg { @include heading-lg; }
+h4,
+.heading-md { @include heading-md; }
+h5,
+.heading-sm { @include heading-sm; }
+h6,
+.heading-xs { @include heading-xs; }
 
 // Paragraphs
 // Use on larger paragraphs
