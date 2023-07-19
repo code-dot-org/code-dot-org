@@ -60,6 +60,27 @@ tr:
       unlocked: Hesabınızın kilidi başarı ile kaldırıldı. Lütfen devam etmek için
         giriş yapınız.
   errors:
+    invitations:
+      edit:
+        header: Şifreni belirle
+        submit_button: Şifremi belirle
+      invitation_removed: Davetin kaldırıldı.
+      invitation_token_invalid: Sağlanan davet işareti geçerli değil!
+      new:
+        header: Davetiye gönder
+        submit_button: Bir davetiye gönder
+      no_invitations_remaining: Davet kalmadı
+      send_instructions: "%{email} adresine davetiye epostası gönderildi."
+      updated: Şifreniz başarıyla değiştirildi. Şimdi giriş yaptınız.
+    mailer:
+      invitation_instructions:
+        accept: Daveti  kabul et
+        hello: Merhaba  %{email}
+        ignore: Davetiyeyi kabul etmek istemiyorsan, lütfen bu e-postayı yok say.
+          <br /> Aşağıdaki bağlantıya tıklamadan ve şifre oluşturmadan hesabın oluşturulmayacak.
+        someone_invited_you: Birisi seni %{url}, adresine davet etti, aşağıdaki bağlantıdan
+          kabul edebilirsin.
+        subject: Davetiye yönergeleri
     messages:
       already_confirmed: zaten onaylandı, lütfen giriş yapmayı dene
       confirmation_period_expired: "%{period} içinde onaylanması gerekliydi.Lütfen
@@ -67,24 +88,3 @@ tr:
       expired: süresi doldu, lütfen yeni bir tane iste
       not_found: bulunamadı
       not_locked: kilitli değil
-    invitations:
-      send_instructions: "%{email} adresine davetiye epostası gönderildi."
-      invitation_token_invalid: Sağlanan davet işareti geçerli değil!
-      updated: Şifreniz başarıyla değiştirildi. Şimdi giriş yaptınız.
-      no_invitations_remaining: Davet kalmadı
-      invitation_removed: Davetin kaldırıldı.
-      new:
-        header: Davetiye gönder
-        submit_button: Bir davetiye gönder
-      edit:
-        header: Şifreni belirle
-        submit_button: Şifremi belirle
-    mailer:
-      invitation_instructions:
-        subject: Davetiye yönergeleri
-        hello: Merhaba  %{email}
-        someone_invited_you: Birisi seni %{url}, adresine davet etti, aşağıdaki bağlantıdan
-          kabul edebilirsin.
-        accept: Daveti  kabul et
-        ignore: Davetiyeyi kabul etmek istemiyorsan, lütfen bu e-postayı yok say.
-          <br /> Aşağıdaki bağlantıya tıklamadan ve şifre oluşturmadan hesabın oluşturulmayacak.
