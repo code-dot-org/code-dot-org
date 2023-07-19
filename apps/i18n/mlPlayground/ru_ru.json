@@ -1,427 +1,3354 @@
 {
-  "navigateForward": "Продолжить",
-  "navigateBack": "Назад",
-  "tryAgain": "Попробуй еще раз",
-  "navigateDone": "Готово",
-  "saveProgress": "Сохранить",
-  "correctAnswer": "Верно",
-  "incorrectAnswer": "Неверные",
-  "modelCardPossibleValuesMinimum": "минимум",
-  "modelCardPossibleValuesMaximum": "максимум",
-  "columnInspectorDescription": "Описание",
-  "columnDetailsMinimumValue": "минимум",
   "columnDetailsMaximumValue": "максимум",
+  "columnDetailsMinimumValue": "минимум",
+  "columnInspectorDescription": "Описание",
+  "correctAnswer": "Верно",
   "dataCardLastUpdated": "Последнее обновление",
-  "predictButton": "Предсказать",
-  "uniqueOptionsWarningNotice": "Примечание",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
       "fields": {
-        "age": {
-          "id": "возраст"
+        "Diameter": {
+          "description": "Его диаметр в миллиметрах.",
+          "id": "Диаметр"
+        },
+        "Height": {
+          "description": "Высота моллюска в раковине в миллиметрах.",
+          "id": "Высота"
+        },
+        "Length": {
+          "description": "Его длина в самой длинной точке в миллиметрах.",
+          "id": "Длина"
+        },
+        "Rings": {
+          "description": "Возраст в годах.",
+          "id": "Сколько колец"
+        },
+        "Sex": {
+          "description": "Пол абалона: M (самец), F (самка) или I (личинка).",
+          "id": "Пол"
+        },
+        "Shell weight": {
+          "description": "Вес раковины после сушки в граммах.",
+          "id": "Вес раковины"
+        },
+        "Shucked weight": {
+          "description": "Вес моллюска со снятой раковиной в граммах.",
+          "id": "Вес без раковины"
+        },
+        "Viscera weight": {
+          "description": "Вес внутренних органов в граммах.",
+          "id": "Вес внутренних органов"
+        },
+        "Whole weight": {
+          "description": "Вес всего абалона в граммах.",
+          "id": "Полный вес"
         }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "погода"
-        },
-        "day": {
-          "id": "день"
-        },
-        "shoe": {
-          "id": "обувь"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "лук"
-        },
-        "avocado": {
-          "id": "авокадо"
-        },
-        "corn": {
-          "id": "кукуруза"
-        },
-        "beans": {
-          "id": "фасоль"
-        },
-        "lime": {
-          "id": "лайм"
-        }
-      }
+      },
+      "name": ""
     },
     "auto_mpg": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
       "fields": {
-        "mpg": {
-          "id": "mpg",
-          "description": "Миль на галлон."
-        },
-        "cylinders": {
-          "id": "цилиндры",
-          "description": "Количество цилиндров в двигателе."
-        },
-        "displacement": {
-          "id": "смещение",
-          "description": "Измерение объема цилиндра."
-        },
-        "horsepower": {
-          "id": "лошадиная сила",
-          "description": "Мощность автомобиля."
-        },
-        "weight": {
-          "description": "Вес автомобиля в фунтах."
-        },
         "acceleration": {
-          "id": "ускорение",
-          "description": "Ускорение автомобиля."
-        },
-        "model year": {
-          "id": "модельный год",
-          "description": "Год выпуска автомобиля."
+          "description": "Ускорение автомобиля.",
+          "id": "ускорение"
         },
         "car name": {
-          "id": "название автомобиля",
-          "description": "Название автомобиля: все уникальные значения."
+          "description": "Название автомобиля: все уникальные значения.",
+          "id": "название автомобиля"
+        },
+        "cylinders": {
+          "description": "Количество цилиндров в двигателе.",
+          "id": "цилиндры"
+        },
+        "displacement": {
+          "description": "Измерение объема цилиндра.",
+          "id": "смещение"
+        },
+        "horsepower": {
+          "description": "Мощность автомобиля.",
+          "id": "лошадиная сила"
+        },
+        "model year": {
+          "description": "Год выпуска автомобиля.",
+          "id": "модельный год"
+        },
+        "mpg": {
+          "description": "Миль на галлон.",
+          "id": "mpg"
+        },
+        "weight": {
+          "description": "Вес автомобиля в фунтах.",
+          "id": ""
         }
       }
+    },
+    "basketball_shots": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Away team alias": {
+          "description": "",
+          "id": ""
+        },
+        "Home team alias": {
+          "description": "",
+          "id": ""
+        },
+        "Inches from bottom sideline": {
+          "description": "",
+          "id": ""
+        },
+        "Inches from left baseline": {
+          "description": "",
+          "id": ""
+        },
+        "Jersey number": {
+          "description": "",
+          "id": ""
+        },
+        "Made or miss": {
+          "description": "",
+          "id": ""
+        },
+        "Time in seconds": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
     },
     "bike_sharing": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
       "fields": {
-        "index": {
-          "id": "индекс"
+        "Average \"Feels Like\" Temperature": {
+          "description": "",
+          "id": ""
+        },
+        "Average Temperature (Celsius)": {
+          "description": "",
+          "id": ""
+        },
+        "Date": {
+          "description": "",
+          "id": ""
+        },
+        "Day of Week": {
+          "description": "",
+          "id": ""
+        },
+        "Holiday": {
+          "description": "",
+          "id": ""
+        },
+        "Humidity (0 - 1)": {
+          "description": "",
+          "id": ""
         },
         "Month": {
+          "description": "",
           "id": "Месяц"
+        },
+        "Number of Casual Users": {
+          "description": "",
+          "id": ""
+        },
+        "Number of Registered Users": {
+          "description": "",
+          "id": ""
+        },
+        "Season": {
+          "description": "",
+          "id": ""
+        },
+        "Total Users": {
+          "description": "",
+          "id": ""
+        },
+        "Weather Description": {
+          "description": "",
+          "id": ""
+        },
+        "Wind Speed": {
+          "description": "",
+          "id": ""
+        },
+        "Workday": {
+          "description": "",
+          "id": ""
+        },
+        "Year": {
+          "description": "",
+          "id": ""
+        },
+        "index": {
+          "description": "",
+          "id": "индекс"
+        }
+      },
+      "name": ""
+    },
+    "billionaires": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Age": {
+          "description": "",
+          "id": "Возраст"
+        },
+        "Citizenship": {
+          "description": "",
+          "id": ""
+        },
+        "Company Founding Year": {
+          "description": "",
+          "id": ""
+        },
+        "Company Name": {
+          "description": "",
+          "id": ""
+        },
+        "Company Relationship": {
+          "description": "",
+          "id": ""
+        },
+        "Company Sector": {
+          "description": "",
+          "id": ""
+        },
+        "Company Type": {
+          "description": "",
+          "id": ""
+        },
+        "Country of Residence": {
+          "description": "",
+          "id": ""
+        },
+        "Gender": {
+          "description": "",
+          "id": "Пол"
+        },
+        "Net Worth In Billions": {
+          "description": "",
+          "id": ""
+        },
+        "Rank": {
+          "description": "",
+          "id": ""
+        },
+        "Region": {
+          "description": "",
+          "id": ""
+        },
+        "Type Of Wealth": {
+          "description": "",
+          "id": ""
+        },
+        "Wealth Category": {
+          "description": "",
+          "id": ""
+        },
+        "Wealth Industry": {
+          "description": "",
+          "id": ""
+        },
+        "Wealth Inherited": {
+          "description": "",
+          "id": ""
+        },
+        "Year": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "boba_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "banana": {
+          "description": "",
+          "id": "банан"
+        },
+        "crystal boba": {
+          "description": "",
+          "id": ""
+        },
+        "herbal": {
+          "description": "",
+          "id": ""
+        },
+        "lychee": {
+          "description": "",
+          "id": ""
+        },
+        "mango jelly": {
+          "description": "",
+          "id": ""
+        },
+        "preference": {
+          "description": "",
+          "id": ""
+        },
+        "red beans": {
+          "description": "",
+          "id": ""
+        },
+        "regular boba": {
+          "description": "",
+          "id": ""
+        },
+        "sea salt cream": {
+          "description": "",
+          "id": ""
+        },
+        "vanilla": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "car_evaluation": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Boot Size": {
+          "description": "",
+          "id": ""
+        },
+        "Buying Price": {
+          "description": "",
+          "id": ""
+        },
+        "Car Acceptability": {
+          "description": "",
+          "id": ""
+        },
+        "Maintenance Cost": {
+          "description": "",
+          "id": ""
+        },
+        "Number Of Doors": {
+          "description": "",
+          "id": ""
+        },
+        "Number of Passengers": {
+          "description": "",
+          "id": ""
+        },
+        "Safety Rating": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "census_part": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "age": {
+          "description": "",
+          "id": "возраст"
+        },
+        "capital gains": {
+          "description": "",
+          "id": ""
+        },
+        "capital losses": {
+          "description": "",
+          "id": ""
+        },
+        "education level": {
+          "description": "",
+          "id": ""
+        },
+        "estimated number of people represented": {
+          "description": "",
+          "id": ""
+        },
+        "gender": {
+          "description": "",
+          "id": ""
+        },
+        "hours of work per week": {
+          "description": "",
+          "id": ""
+        },
+        "income": {
+          "description": "",
+          "id": ""
+        },
+        "marital status": {
+          "description": "",
+          "id": ""
+        },
+        "native-country": {
+          "description": "",
+          "id": ""
+        },
+        "occupation": {
+          "description": "",
+          "id": ""
+        },
+        "race": {
+          "description": "",
+          "id": ""
+        },
+        "relationship": {
+          "description": "",
+          "id": ""
+        },
+        "type of employment": {
+          "description": "",
+          "id": ""
         }
       }
     },
-    "poutine_toy": {
+    "club_biased_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
       "fields": {
-        "mushrooms": {
-          "id": "грибы"
+        "activity": {
+          "description": "",
+          "id": ""
         },
-        "lobster": {
-          "id": "лобстер"
+        "club": {
+          "description": "",
+          "id": ""
         },
-        "bacon": {
-          "id": "бекон"
+        "element": {
+          "description": "",
+          "id": ""
         },
-        "cheese": {
-          "id": "сыр"
+        "free time": {
+          "description": "",
+          "id": ""
         },
-        "meat": {
-          "id": "мясо"
+        "make build": {
+          "description": "",
+          "id": ""
+        },
+        "meet people": {
+          "description": "",
+          "id": ""
+        },
+        "personality": {
+          "description": "",
+          "id": ""
+        },
+        "school minutes": {
+          "description": "",
+          "id": ""
         }
       }
     },
     "club_random_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
       "fields": {
+        "club": {
+          "description": "",
+          "id": ""
+        },
         "color": {
+          "description": "",
           "id": "цвет"
         },
+        "food": {
+          "description": "",
+          "id": "еда"
+        },
         "music": {
+          "description": "",
           "id": "музыка"
         },
-        "food": {
-          "id": "еда"
+        "read vs tv": {
+          "description": "",
+          "id": ""
+        }
+      }
+    },
+    "club_sparse_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "activity": {
+          "description": "",
+          "id": ""
+        },
+        "club": {
+          "description": "",
+          "id": ""
+        },
+        "element": {
+          "description": "",
+          "id": ""
+        },
+        "make build": {
+          "description": "",
+          "id": ""
+        },
+        "meet people": {
+          "description": "",
+          "id": ""
+        },
+        "personality": {
+          "description": "",
+          "id": ""
+        }
+      }
+    },
+    "club_specific_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "activity": {
+          "description": "",
+          "id": ""
+        },
+        "club": {
+          "description": "",
+          "id": ""
+        },
+        "favorite movie": {
+          "description": "",
+          "id": ""
+        },
+        "lunch food": {
+          "description": "",
+          "id": ""
+        },
+        "pet you own": {
+          "description": "",
+          "id": ""
+        }
+      }
+    },
+    "cookies_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "chocolate chips": {
+          "description": "",
+          "id": ""
+        },
+        "frosting": {
+          "description": "",
+          "id": ""
+        },
+        "ice cream on top": {
+          "description": "",
+          "id": ""
+        },
+        "m and ms": {
+          "description": "",
+          "id": ""
+        },
+        "oatmeal": {
+          "description": "",
+          "id": ""
+        },
+        "preference": {
+          "description": "",
+          "id": ""
+        },
+        "raisins": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "exoplanets": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Discovery year": {
+          "description": "",
+          "id": ""
+        },
+        "Mass in earths": {
+          "description": "",
+          "id": ""
+        },
+        "Number of planets": {
+          "description": "",
+          "id": ""
+        },
+        "Number of stars": {
+          "description": "",
+          "id": ""
+        },
+        "Orbit length in earth days": {
+          "description": "",
+          "id": ""
+        },
+        "Size in earths": {
+          "description": "",
+          "id": ""
+        },
+        "Star age in billions of years": {
+          "description": "",
+          "id": ""
+        },
+        "Star host name": {
+          "description": "",
+          "id": ""
+        },
+        "Star mass in suns": {
+          "description": "",
+          "id": ""
+        },
+        "Star size in suns": {
+          "description": "",
+          "id": ""
+        },
+        "Star temperature in kelvin": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "global_happiness_raw": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Country name": {
+          "description": "",
+          "id": ""
+        },
+        "Freedom to make life choices": {
+          "description": "",
+          "id": ""
+        },
+        "GDP per capita": {
+          "description": "",
+          "id": ""
+        },
+        "Generosity": {
+          "description": "",
+          "id": ""
+        },
+        "Healthy life expectancy at birth": {
+          "description": "",
+          "id": ""
+        },
+        "Life Ladder": {
+          "description": "",
+          "id": ""
+        },
+        "Negative affect": {
+          "description": "",
+          "id": ""
+        },
+        "Perceptions of corruption": {
+          "description": "",
+          "id": ""
+        },
+        "Positive affect": {
+          "description": "",
+          "id": ""
+        },
+        "Social support": {
+          "description": "",
+          "id": ""
+        },
+        "Year": {
+          "description": "",
+          "id": ""
+        }
+      }
+    },
+    "heart": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Age": {
+          "description": "",
+          "id": "Возраст"
+        },
+        "Chest Pain Type": {
+          "description": "",
+          "id": ""
+        },
+        "Cholesterol": {
+          "description": "",
+          "id": ""
+        },
+        "Diagnosis of Heart Disease": {
+          "description": "",
+          "id": ""
+        },
+        "Exercise Induced Angina": {
+          "description": "",
+          "id": ""
+        },
+        "Fasting Blood Sugar > 120mg/dl": {
+          "description": "",
+          "id": ""
+        },
+        "Maximum Heart Rate Achieved": {
+          "description": "",
+          "id": ""
+        },
+        "Number of Major Vessels Colored by Flourosopy": {
+          "description": "",
+          "id": ""
+        },
+        "Resting Blood Pressure": {
+          "description": "",
+          "id": ""
+        },
+        "Resting ECG Results": {
+          "description": "",
+          "id": ""
+        },
+        "ST Depression Induced By Exercise Relative To Rest": {
+          "description": "",
+          "id": ""
+        },
+        "Sex": {
+          "description": "",
+          "id": "Пол"
+        },
+        "Slope of Peak Exercise ST Segment": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "housing_data": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "% of buildings pre-1940": {
+          "description": "",
+          "id": ""
+        },
+        "Accessibility to highways": {
+          "description": "",
+          "id": ""
+        },
+        "Bounds Charles River?": {
+          "description": "",
+          "id": ""
+        },
+        "Distance to employment centers": {
+          "description": "",
+          "id": ""
+        },
+        "Lower status population": {
+          "description": "",
+          "id": ""
+        },
+        "Median home value": {
+          "description": "",
+          "id": ""
+        },
+        "Nitric Oxide Concentration (PPM)": {
+          "description": "",
+          "id": ""
+        },
+        "Per Capita Crime Rate": {
+          "description": "",
+          "id": ""
+        },
+        "Property tax": {
+          "description": "",
+          "id": ""
+        },
+        "Proportion of Residental Land Zoned for >25Kft": {
+          "description": "",
+          "id": ""
+        },
+        "Proportion of non-retail business acres": {
+          "description": "",
+          "id": ""
+        },
+        "Rooms per dwelling": {
+          "description": "",
+          "id": ""
+        },
+        "Student-teacher ratio": {
+          "description": "",
+          "id": ""
+        },
+        "Weighted black population": {
+          "description": "",
+          "id": ""
+        }
+      }
+    },
+    "icecream_toppings_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Cherry": {
+          "description": "",
+          "id": ""
+        },
+        "Hot Fudge": {
+          "description": "",
+          "id": ""
+        },
+        "Preference": {
+          "description": "",
+          "id": ""
+        },
+        "Sprinkles": {
+          "description": "",
+          "id": ""
+        },
+        "Waffle Cone": {
+          "description": "",
+          "id": ""
+        },
+        "Whipped Cream": {
+          "description": "",
+          "id": ""
         }
       }
     },
     "insurance_cost": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
       "fields": {
         "age": {
-          "id": "возраст"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Категория"
-        },
-        "Description": {
-          "id": "Описание"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "клубника"
-        },
-        "lime": {
-          "id": "лайм"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "стороны"
-        },
-        "size": {
-          "id": "размер"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "помидор"
-        },
-        "avocado": {
-          "id": "авокадо"
-        },
-        "chicken": {
-          "id": "курица"
-        },
-        "fruit": {
-          "id": "фрукт"
-        },
-        "beans": {
-          "id": "фасоль"
-        },
-        "cheese": {
-          "id": "сыр"
-        }
-      }
-    },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Возраст"
-        },
-        "Gender": {
-          "id": "Пол"
-        }
-      }
-    },
-    "student_alcohol_consumption": {
-      "fields": {
-        "school": {
-          "id": "школа"
-        },
-        "age": {
+          "description": "",
           "id": "возраст"
         },
-        "health": {
-          "id": "здоровье"
+        "bmi": {
+          "description": "",
+          "id": ""
+        },
+        "charges": {
+          "description": "",
+          "id": ""
+        },
+        "children": {
+          "description": "",
+          "id": ""
+        },
+        "region": {
+          "description": "",
+          "id": ""
+        },
+        "sex": {
+          "description": "",
+          "id": ""
+        },
+        "smoker": {
+          "description": "",
+          "id": ""
         }
       }
     },
-    "naan_toy": {
+    "jeans": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
       "fields": {
-        "chicken": {
-          "id": "курица"
+        "Brand": {
+          "description": "",
+          "id": ""
         },
-        "lamb": {
-          "id": "ягненок"
+        "Cotton contents": {
+          "description": "",
+          "id": ""
         },
-        "onion": {
-          "id": "лук"
+        "Front rivet height": {
+          "description": "",
+          "id": ""
         },
-        "cheese": {
-          "id": "сыр"
+        "Max height of back pocket": {
+          "description": "",
+          "id": ""
+        },
+        "Max height of front pocket": {
+          "description": "",
+          "id": ""
+        },
+        "Max width of back pocket": {
+          "description": "",
+          "id": ""
+        },
+        "Max width of front pocket": {
+          "description": "",
+          "id": ""
+        },
+        "Mens or womens": {
+          "description": "",
+          "id": ""
+        },
+        "Min height of back pocket": {
+          "description": "",
+          "id": ""
+        },
+        "Min height of front pocket": {
+          "description": "",
+          "id": ""
+        },
+        "Min width of back pocket": {
+          "description": "",
+          "id": ""
+        },
+        "Min width of front pocket": {
+          "description": "",
+          "id": ""
+        },
+        "Price in dollars": {
+          "description": "",
+          "id": ""
+        },
+        "Style": {
+          "description": "",
+          "id": ""
         }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "возраст"
-        }
-      }
+      },
+      "name": ""
     },
     "loneliness_interests": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
       "fields": {
+        "Active sport": {
+          "description": "",
+          "id": ""
+        },
+        "Adrenaline sports": {
+          "description": "",
+          "id": ""
+        },
+        "Art exhibitions": {
+          "description": "",
+          "id": ""
+        },
+        "Biology": {
+          "description": "",
+          "id": ""
+        },
+        "Cars": {
+          "description": "",
+          "id": ""
+        },
+        "Celebrities": {
+          "description": "",
+          "id": ""
+        },
+        "Chemistry": {
+          "description": "",
+          "id": ""
+        },
+        "Countryside, outdoors": {
+          "description": "",
+          "id": ""
+        },
+        "Dancing": {
+          "description": "",
+          "id": ""
+        },
+        "Economy Management": {
+          "description": "",
+          "id": ""
+        },
+        "Foreign languages": {
+          "description": "",
+          "id": ""
+        },
+        "Fun with friends": {
+          "description": "",
+          "id": ""
+        },
+        "Gardening": {
+          "description": "",
+          "id": ""
+        },
+        "Geography": {
+          "description": "",
+          "id": ""
+        },
+        "History": {
+          "description": "",
+          "id": ""
+        },
         "Internet": {
+          "description": "",
           "id": "интернет"
         },
+        "Law": {
+          "description": "",
+          "id": ""
+        },
+        "Loneliness": {
+          "description": "",
+          "id": ""
+        },
+        "Mathematics": {
+          "description": "",
+          "id": ""
+        },
+        "Medicine": {
+          "description": "",
+          "id": ""
+        },
+        "Musical instruments": {
+          "description": "",
+          "id": ""
+        },
+        "PC": {
+          "description": "",
+          "id": ""
+        },
+        "Passive sport": {
+          "description": "",
+          "id": ""
+        },
+        "Pets": {
+          "description": "",
+          "id": ""
+        },
+        "Physics": {
+          "description": "",
+          "id": ""
+        },
+        "Politics": {
+          "description": "",
+          "id": ""
+        },
+        "Psychology": {
+          "description": "",
+          "id": ""
+        },
+        "Reading": {
+          "description": "",
+          "id": ""
+        },
+        "Religion": {
+          "description": "",
+          "id": ""
+        },
+        "Science and technology": {
+          "description": "",
+          "id": ""
+        },
+        "Shopping": {
+          "description": "",
+          "id": ""
+        },
+        "Theatre": {
+          "description": "",
+          "id": ""
+        },
         "Writing": {
+          "description": "",
           "id": "Письмо"
         }
-      }
+      },
+      "name": ""
     },
-    "movies": {
+    "loneliness_movies": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
       "fields": {
-        "Score": {
-          "id": "Счет"
+        "Action": {
+          "description": "",
+          "id": ""
+        },
+        "Animated": {
+          "description": "",
+          "id": ""
+        },
+        "Comedy": {
+          "description": "",
+          "id": ""
+        },
+        "Documentary": {
+          "description": "",
+          "id": ""
+        },
+        "Fantasy/Fairy tales": {
+          "description": "",
+          "id": ""
+        },
+        "Horror": {
+          "description": "",
+          "id": ""
+        },
+        "Loneliness": {
+          "description": "",
+          "id": ""
+        },
+        "Movies": {
+          "description": "",
+          "id": ""
+        },
+        "Romantic": {
+          "description": "",
+          "id": ""
+        },
+        "Sci-fi": {
+          "description": "",
+          "id": ""
+        },
+        "Thriller": {
+          "description": "",
+          "id": ""
+        },
+        "War": {
+          "description": "",
+          "id": ""
+        },
+        "Western": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "loneliness_music": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Alternative": {
+          "description": "",
+          "id": ""
+        },
+        "Classical music": {
+          "description": "",
+          "id": ""
         },
         "Country": {
+          "description": "",
           "id": "Страна"
         },
+        "Dance": {
+          "description": "",
+          "id": "Танцуй"
+        },
+        "Folk": {
+          "description": "",
+          "id": ""
+        },
+        "Hiphop, Rap": {
+          "description": "",
+          "id": ""
+        },
+        "Latino": {
+          "description": "",
+          "id": ""
+        },
+        "Loneliness": {
+          "description": "",
+          "id": ""
+        },
+        "Metal or Hardrock": {
+          "description": "",
+          "id": ""
+        },
+        "Music": {
+          "description": "",
+          "id": "Музыка"
+        },
+        "Musical": {
+          "description": "",
+          "id": ""
+        },
+        "Opera": {
+          "description": "",
+          "id": ""
+        },
+        "Pop": {
+          "description": "",
+          "id": ""
+        },
+        "Punk": {
+          "description": "",
+          "id": ""
+        },
+        "Reggae, Ska": {
+          "description": "",
+          "id": ""
+        },
+        "Rock": {
+          "description": "",
+          "id": ""
+        },
+        "Rock n roll": {
+          "description": "",
+          "id": ""
+        },
+        "Slow songs or fast songs": {
+          "description": "",
+          "id": ""
+        },
+        "Swing, Jazz": {
+          "description": "",
+          "id": ""
+        },
+        "Techno, Trance": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "loneliness_personality": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Assertiveness": {
+          "description": "",
+          "id": ""
+        },
+        "Friends versus money": {
+          "description": "",
+          "id": ""
+        },
+        "Funniness": {
+          "description": "",
+          "id": ""
+        },
+        "Judgment calls": {
+          "description": "",
+          "id": ""
+        },
+        "Loneliness": {
+          "description": "",
+          "id": ""
+        },
+        "Number of friends": {
+          "description": "",
+          "id": ""
+        },
+        "Prioritising workload": {
+          "description": "",
+          "id": ""
+        },
+        "Reliability": {
+          "description": "",
+          "id": ""
+        },
+        "Socializing": {
+          "description": "",
+          "id": ""
+        },
+        "Waiting": {
+          "description": "",
+          "id": ""
+        },
+        "Workaholism": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "loneliness_phobias": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Ageing": {
+          "description": "",
+          "id": ""
+        },
+        "Dangerous dogs": {
+          "description": "",
+          "id": ""
+        },
+        "Darkness": {
+          "description": "",
+          "id": ""
+        },
+        "Fear of public speaking": {
+          "description": "",
+          "id": ""
+        },
+        "Flying": {
+          "description": "",
+          "id": ""
+        },
+        "Heights": {
+          "description": "",
+          "id": ""
+        },
+        "Loneliness": {
+          "description": "",
+          "id": ""
+        },
+        "Rats": {
+          "description": "",
+          "id": ""
+        },
+        "Snakes": {
+          "description": "",
+          "id": ""
+        },
+        "Spiders": {
+          "description": "",
+          "id": ""
+        },
+        "Storm": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "medical_priority": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "age": {
+          "description": "",
+          "id": "возраст"
+        },
+        "area_of_pain": {
+          "description": "",
+          "id": ""
+        },
+        "bleeding": {
+          "description": "",
+          "id": ""
+        },
+        "decision": {
+          "description": "",
+          "id": ""
+        },
+        "gender": {
+          "description": "",
+          "id": ""
+        },
+        "race": {
+          "description": "",
+          "id": ""
+        },
+        "shortness_of_breath": {
+          "description": "",
+          "id": ""
+        },
+        "weight": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "movies": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Budget": {
+          "description": "",
+          "id": ""
+        },
+        "Company": {
+          "description": "",
+          "id": ""
+        },
+        "Country": {
+          "description": "",
+          "id": "Страна"
+        },
+        "Director": {
+          "description": "",
+          "id": ""
+        },
+        "Genre": {
+          "description": "",
+          "id": ""
+        },
+        "Gross": {
+          "description": "",
+          "id": ""
+        },
         "Name": {
+          "description": "",
           "id": "Имя"
         },
+        "Rating": {
+          "description": "",
+          "id": ""
+        },
+        "Released": {
+          "description": "",
+          "id": ""
+        },
+        "Runtime": {
+          "description": "",
+          "id": ""
+        },
+        "Score": {
+          "description": "",
+          "id": "Счет"
+        },
         "Star": {
+          "description": "",
           "id": "Звезда"
+        },
+        "Votes": {
+          "description": "",
+          "id": ""
+        },
+        "Writer": {
+          "description": "",
+          "id": ""
+        },
+        "Year": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "naan_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "cheese": {
+          "description": "",
+          "id": "сыр"
+        },
+        "cherries": {
+          "description": "",
+          "id": ""
+        },
+        "chicken": {
+          "description": "",
+          "id": "курица"
+        },
+        "garlic": {
+          "description": "",
+          "id": ""
+        },
+        "lamb": {
+          "description": "",
+          "id": "ягненок"
+        },
+        "nuts": {
+          "description": "",
+          "id": ""
+        },
+        "onion": {
+          "description": "",
+          "id": "лук"
+        },
+        "potatoes": {
+          "description": "",
+          "id": ""
+        },
+        "preference": {
+          "description": "",
+          "id": ""
+        },
+        "shaved coconut": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "nutrition": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Ash": {
+          "description": "",
+          "id": ""
+        },
+        "Beta Carotene": {
+          "description": "",
+          "id": ""
+        },
+        "Carbohydrate": {
+          "description": "",
+          "id": ""
+        },
+        "Category": {
+          "description": "",
+          "id": "Категория"
+        },
+        "Cholesterol": {
+          "description": "",
+          "id": ""
+        },
+        "Description": {
+          "description": "",
+          "id": "Описание"
+        },
+        "Fat: Monosaturated Fat": {
+          "description": "",
+          "id": ""
+        },
+        "Fat: Polysaturated Fat": {
+          "description": "",
+          "id": ""
+        },
+        "Fat: Saturated Fat": {
+          "description": "",
+          "id": ""
+        },
+        "Fat: Total Lipid": {
+          "description": "",
+          "id": ""
+        },
+        "Fiber": {
+          "description": "",
+          "id": ""
+        },
+        "Kilocalories": {
+          "description": "",
+          "id": ""
+        },
+        "Lutein and Zeaxanthin": {
+          "description": "",
+          "id": ""
+        },
+        "Lycopene": {
+          "description": "",
+          "id": ""
+        },
+        "Major Minerals: Calcium": {
+          "description": "",
+          "id": ""
+        },
+        "Major Minerals: Copper": {
+          "description": "",
+          "id": ""
+        },
+        "Major Minerals: Iron": {
+          "description": "",
+          "id": ""
+        },
+        "Major Minerals: Magnesium": {
+          "description": "",
+          "id": ""
+        },
+        "Major Minerals: Phosphorus": {
+          "description": "",
+          "id": ""
+        },
+        "Major Minerals: Potassium": {
+          "description": "",
+          "id": ""
+        },
+        "Major Minerals: Sodium": {
+          "description": "",
+          "id": ""
+        },
+        "Major Minerals: Zinc": {
+          "description": "",
+          "id": ""
+        },
+        "Manganese": {
+          "description": "",
+          "id": ""
+        },
+        "Niacin": {
+          "description": "",
+          "id": ""
+        },
+        "Protein": {
+          "description": "",
+          "id": ""
+        },
+        "Retinol": {
+          "description": "",
+          "id": ""
+        },
+        "Riboflavin": {
+          "description": "",
+          "id": ""
+        },
+        "Selenium": {
+          "description": "",
+          "id": ""
+        },
+        "Sugar Total": {
+          "description": "",
+          "id": ""
+        },
+        "Thiamin": {
+          "description": "",
+          "id": ""
+        },
+        "Vitamins: Vitamin A - IU": {
+          "description": "",
+          "id": ""
+        },
+        "Vitamins: Vitamin A - RAE": {
+          "description": "",
+          "id": ""
+        },
+        "Vitamins: Vitamin B12": {
+          "description": "",
+          "id": ""
+        },
+        "Vitamins: Vitamin B6": {
+          "description": "",
+          "id": ""
+        },
+        "Vitamins: Vitamin C": {
+          "description": "",
+          "id": ""
+        },
+        "Vitamins: Vitamin E": {
+          "description": "",
+          "id": ""
+        },
+        "Vitamins: Vitamin K": {
+          "description": "",
+          "id": ""
+        },
+        "Water": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "pizza_toppings_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Anchovies": {
+          "description": "",
+          "id": ""
+        },
+        "Bacon": {
+          "description": "",
+          "id": ""
+        },
+        "Broccoli": {
+          "description": "",
+          "id": ""
+        },
+        "Extra Cheese": {
+          "description": "",
+          "id": ""
+        },
+        "Fried Chicken": {
+          "description": "",
+          "id": ""
+        },
+        "Ham": {
+          "description": "",
+          "id": ""
+        },
+        "Olives": {
+          "description": "",
+          "id": ""
+        },
+        "Pepperoni": {
+          "description": "",
+          "id": ""
+        },
+        "Peppers": {
+          "description": "",
+          "id": ""
+        },
+        "Preference": {
+          "description": "",
+          "id": ""
+        },
+        "Sausage": {
+          "description": "",
+          "id": ""
         }
       }
     },
-    "songs": {
+    "poke_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
       "fields": {
-        "Artist": {
-          "id": "Художник"
+        "avocado": {
+          "description": "",
+          "id": "авокадо"
+        },
+        "chili": {
+          "description": "",
+          "id": ""
+        },
+        "furikake": {
+          "description": "",
+          "id": ""
+        },
+        "ginger": {
+          "description": "",
+          "id": "имбирь"
+        },
+        "masago": {
+          "description": "",
+          "id": ""
+        },
+        "onion": {
+          "description": "",
+          "id": "лук"
+        },
+        "preference": {
+          "description": "",
+          "id": ""
+        },
+        "seaweed": {
+          "description": "",
+          "id": ""
+        },
+        "surimi": {
+          "description": "",
+          "id": ""
+        },
+        "wasabi": {
+          "description": "",
+          "id": ""
         }
-      }
+      },
+      "name": ""
+    },
+    "poutine_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "bacon": {
+          "description": "",
+          "id": "бекон"
+        },
+        "bell peppers": {
+          "description": "",
+          "id": ""
+        },
+        "cheese": {
+          "description": "",
+          "id": "сыр"
+        },
+        "gravy": {
+          "description": "",
+          "id": ""
+        },
+        "lobster": {
+          "description": "",
+          "id": "лобстер"
+        },
+        "meat": {
+          "description": "",
+          "id": "мясо"
+        },
+        "mushrooms": {
+          "description": "",
+          "id": "грибы"
+        },
+        "pork": {
+          "description": "",
+          "id": ""
+        },
+        "preference": {
+          "description": "",
+          "id": ""
+        },
+        "scallions": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "raspado_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "chili en polbo": {
+          "description": "",
+          "id": ""
+        },
+        "coconut": {
+          "description": "",
+          "id": ""
+        },
+        "lechera": {
+          "description": "",
+          "id": ""
+        },
+        "lime": {
+          "description": "",
+          "id": "лайм"
+        },
+        "mango": {
+          "description": "",
+          "id": ""
+        },
+        "pecan": {
+          "description": "",
+          "id": ""
+        },
+        "preference": {
+          "description": "",
+          "id": ""
+        },
+        "strawberry": {
+          "description": "",
+          "id": "клубника"
+        },
+        "vanilla": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
     },
     "safari_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
       "fields": {
+        "alligator": {
+          "description": "",
+          "id": "крокодил"
+        },
+        "antelope": {
+          "description": "",
+          "id": ""
+        },
+        "dayOfMonth": {
+          "description": "",
+          "id": ""
+        },
+        "elephant": {
+          "description": "",
+          "id": "слон"
+        },
+        "lions": {
+          "description": "",
+          "id": ""
+        },
+        "mosquitos": {
+          "description": "",
+          "id": ""
+        },
+        "overgrowthPercent": {
+          "description": "",
+          "id": ""
+        },
         "people": {
+          "description": "",
           "id": "люди"
         },
         "rhino": {
+          "description": "",
           "id": "носорог"
         },
-        "elephant": {
-          "id": "слон"
+        "temperature": {
+          "description": "",
+          "id": ""
         },
-        "alligator": {
-          "id": "крокодил"
+        "ticketRevenue": {
+          "description": "",
+          "id": ""
         },
         "trees": {
+          "description": "",
           "id": "деревья"
         }
       },
       "name": "Сафари"
     },
-    "abalone": {
-      "fields": {
-        "Sex": {
-          "id": "Пол",
-          "description": "Пол абалона: M (самец), F (самка) или I (личинка)."
+    "salad_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
         },
-        "Length": {
-          "id": "Длина",
-          "description": "Его длина в самой длинной точке в миллиметрах."
-        },
-        "Diameter": {
-          "id": "Диаметр",
-          "description": "Его диаметр в миллиметрах."
-        },
-        "Height": {
-          "id": "Высота",
-          "description": "Высота моллюска в раковине в миллиметрах."
-        },
-        "Whole weight": {
-          "id": "Полный вес",
-          "description": "Вес всего абалона в граммах."
-        },
-        "Shucked weight": {
-          "id": "Вес без раковины",
-          "description": "Вес моллюска со снятой раковиной в граммах."
-        },
-        "Viscera weight": {
-          "id": "Вес внутренних органов",
-          "description": "Вес внутренних органов в граммах."
-        },
-        "Shell weight": {
-          "id": "Вес раковины",
-          "description": "Вес раковины после сушки в граммах."
-        },
-        "Rings": {
-          "id": "Сколько колец",
-          "description": "Возраст в годах."
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Водный мир"
-        }
-      }
-    },
-    "poke_toy": {
+        "description": ""
+      },
       "fields": {
         "avocado": {
+          "description": "",
           "id": "авокадо"
         },
+        "beans": {
+          "description": "",
+          "id": "фасоль"
+        },
+        "cheese": {
+          "description": "",
+          "id": "сыр"
+        },
+        "chicken": {
+          "description": "",
+          "id": "курица"
+        },
+        "fruit": {
+          "description": "",
+          "id": "фрукт"
+        },
+        "italian dressing": {
+          "description": "",
+          "id": ""
+        },
+        "preference": {
+          "description": "",
+          "id": ""
+        },
+        "ranch": {
+          "description": "",
+          "id": ""
+        },
+        "seeds": {
+          "description": "",
+          "id": ""
+        },
+        "tomato": {
+          "description": "",
+          "id": "помидор"
+        }
+      },
+      "name": ""
+    },
+    "salsa_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "avocado": {
+          "description": "",
+          "id": "авокадо"
+        },
+        "beans": {
+          "description": "",
+          "id": "фасоль"
+        },
+        "cilantro": {
+          "description": "",
+          "id": ""
+        },
+        "corn": {
+          "description": "",
+          "id": "кукуруза"
+        },
+        "cumin": {
+          "description": "",
+          "id": ""
+        },
+        "garlic": {
+          "description": "",
+          "id": ""
+        },
+        "lime": {
+          "description": "",
+          "id": "лайм"
+        },
         "onion": {
+          "description": "",
           "id": "лук"
         },
-        "ginger": {
-          "id": "имбирь"
+        "preference": {
+          "description": "",
+          "id": ""
+        },
+        "vinegar": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "shapes_v1_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "background color": {
+          "description": "",
+          "id": ""
+        },
+        "border color": {
+          "description": "",
+          "id": ""
+        },
+        "fill color": {
+          "description": "",
+          "id": ""
+        },
+        "shape": {
+          "description": "",
+          "id": ""
+        },
+        "sides": {
+          "description": "",
+          "id": "стороны"
+        },
+        "size": {
+          "description": "",
+          "id": "размер"
+        }
+      },
+      "name": ""
+    },
+    "shapes_v2_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "background color": {
+          "description": "",
+          "id": ""
+        },
+        "border color": {
+          "description": "",
+          "id": ""
+        },
+        "equal angles": {
+          "description": "",
+          "id": ""
+        },
+        "equal sides": {
+          "description": "",
+          "id": ""
+        },
+        "fill color": {
+          "description": "",
+          "id": ""
+        },
+        "has corners": {
+          "description": "",
+          "id": ""
+        },
+        "shape": {
+          "description": "",
+          "id": ""
+        },
+        "sides": {
+          "description": "",
+          "id": "стороны"
+        },
+        "size": {
+          "description": "",
+          "id": "размер"
+        },
+        "symmetry": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "shoe_survey_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "day": {
+          "description": "",
+          "id": "день"
+        },
+        "notice shoes": {
+          "description": "",
+          "id": ""
+        },
+        "shoe": {
+          "description": "",
+          "id": "обувь"
+        },
+        "socks": {
+          "description": "",
+          "id": ""
+        },
+        "spend time": {
+          "description": "",
+          "id": ""
+        },
+        "weather": {
+          "description": "",
+          "id": "погода"
+        }
+      },
+      "name": ""
+    },
+    "songs": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Artist": {
+          "description": "",
+          "id": "Художник"
+        },
+        "Billboard rank peak": {
+          "description": "",
+          "id": ""
+        },
+        "Duration in seconds": {
+          "description": "",
+          "id": ""
+        },
+        "Genre": {
+          "description": "",
+          "id": ""
+        },
+        "Loudness score": {
+          "description": "",
+          "id": ""
+        },
+        "Tempo in beats per minute": {
+          "description": "",
+          "id": ""
+        },
+        "Title": {
+          "description": "",
+          "id": ""
+        },
+        "Weeks on the Billboard Top 100": {
+          "description": "",
+          "id": ""
+        },
+        "Year": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "student_alcohol_consumption": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "G1": {
+          "description": "",
+          "id": ""
+        },
+        "G2": {
+          "description": "",
+          "id": ""
+        },
+        "G3": {
+          "description": "",
+          "id": ""
+        },
+        "absences": {
+          "description": "",
+          "id": ""
+        },
+        "activities": {
+          "description": "",
+          "id": ""
+        },
+        "address": {
+          "description": "",
+          "id": ""
+        },
+        "age": {
+          "description": "",
+          "id": "возраст"
+        },
+        "daily alcohol": {
+          "description": "",
+          "id": ""
+        },
+        "failures": {
+          "description": "",
+          "id": ""
+        },
+        "family relationships": {
+          "description": "",
+          "id": ""
+        },
+        "family size": {
+          "description": "",
+          "id": ""
+        },
+        "family support": {
+          "description": "",
+          "id": ""
+        },
+        "father's education": {
+          "description": "",
+          "id": ""
+        },
+        "father's job": {
+          "description": "",
+          "id": ""
+        },
+        "freetime": {
+          "description": "",
+          "id": ""
+        },
+        "go out": {
+          "description": "",
+          "id": ""
+        },
+        "guardian": {
+          "description": "",
+          "id": ""
+        },
+        "health": {
+          "description": "",
+          "id": "здоровье"
+        },
+        "higher": {
+          "description": "",
+          "id": ""
+        },
+        "internet": {
+          "description": "",
+          "id": ""
+        },
+        "mother's education": {
+          "description": "",
+          "id": ""
+        },
+        "mother's job": {
+          "description": "",
+          "id": ""
+        },
+        "nursery": {
+          "description": "",
+          "id": ""
+        },
+        "paid": {
+          "description": "",
+          "id": ""
+        },
+        "parent cohabitation status": {
+          "description": "",
+          "id": ""
+        },
+        "reason": {
+          "description": "",
+          "id": ""
+        },
+        "romantic": {
+          "description": "",
+          "id": ""
+        },
+        "school": {
+          "description": "",
+          "id": "школа"
+        },
+        "school support": {
+          "description": "",
+          "id": ""
+        },
+        "sex": {
+          "description": "",
+          "id": ""
+        },
+        "studytime": {
+          "description": "",
+          "id": ""
+        },
+        "traveltime": {
+          "description": "",
+          "id": ""
+        },
+        "weekend alcohol": {
+          "description": "",
+          "id": ""
         }
       }
     },
     "student_survey": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
       "fields": {
-        "Music": {
-          "id": "Музыка"
-        },
-        "Dance": {
-          "id": "Танцуй"
-        },
-        "Country": {
-          "id": "Страна"
-        },
-        "Internet": {
-          "id": "интернет"
-        },
-        "Writing": {
-          "id": "Письмо"
-        },
         "Achievements": {
+          "description": "",
           "id": "Достижения"
         },
-        "Age": {
-          "id": "Возраст",
-          "description": "Возраст"
+        "Action": {
+          "description": "",
+          "id": ""
         },
-        "Height": {
-          "id": "Высота",
-          "description": "Высота"
+        "Active sport": {
+          "description": "",
+          "id": ""
         },
-        "Gender": {
-          "id": "Пол",
-          "description": "Пол"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "банан"
-        }
-      }
-    },
-    "heart": {
-      "fields": {
+        "Adrenaline sports": {
+          "description": "",
+          "id": ""
+        },
         "Age": {
+          "description": "Возраст",
           "id": "Возраст"
         },
-        "Sex": {
-          "id": "Пол"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "стороны"
+        "Ageing": {
+          "description": "",
+          "id": ""
         },
-        "size": {
-          "id": "размер"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Music": {
-          "id": "Музыка"
+        "Alcohol": {
+          "description": "",
+          "id": ""
         },
-        "Dance": {
-          "id": "Танцуй"
+        "Alternative": {
+          "description": "",
+          "id": ""
+        },
+        "Animated": {
+          "description": "",
+          "id": ""
+        },
+        "Appearence and gestures": {
+          "description": "",
+          "id": ""
+        },
+        "Art exhibitions": {
+          "description": "",
+          "id": ""
+        },
+        "Assertiveness": {
+          "description": "",
+          "id": ""
+        },
+        "Biology": {
+          "description": "",
+          "id": ""
+        },
+        "Borrowed stuff": {
+          "description": "",
+          "id": ""
+        },
+        "Branded clothing": {
+          "description": "",
+          "id": ""
+        },
+        "Cars": {
+          "description": "",
+          "id": ""
+        },
+        "Celebrities": {
+          "description": "",
+          "id": ""
+        },
+        "Changing the past": {
+          "description": "",
+          "id": ""
+        },
+        "Charity": {
+          "description": "",
+          "id": ""
+        },
+        "Cheating in school": {
+          "description": "",
+          "id": ""
+        },
+        "Chemistry": {
+          "description": "",
+          "id": ""
+        },
+        "Children": {
+          "description": "",
+          "id": ""
+        },
+        "Classical music": {
+          "description": "",
+          "id": ""
+        },
+        "Comedy": {
+          "description": "",
+          "id": ""
+        },
+        "Compassion to animals": {
+          "description": "",
+          "id": ""
         },
         "Country": {
+          "description": "",
           "id": "Страна"
+        },
+        "Countryside, outdoors": {
+          "description": "",
+          "id": ""
+        },
+        "Criminal damage": {
+          "description": "",
+          "id": ""
+        },
+        "Daily events": {
+          "description": "",
+          "id": ""
+        },
+        "Dance": {
+          "description": "",
+          "id": "Танцуй"
+        },
+        "Dancing": {
+          "description": "",
+          "id": ""
+        },
+        "Dangerous dogs": {
+          "description": "",
+          "id": ""
+        },
+        "Darkness": {
+          "description": "",
+          "id": ""
+        },
+        "Decision making": {
+          "description": "",
+          "id": ""
+        },
+        "Documentary": {
+          "description": "",
+          "id": ""
+        },
+        "Dreams": {
+          "description": "",
+          "id": ""
+        },
+        "Eating to survive": {
+          "description": "",
+          "id": ""
+        },
+        "Economy Management": {
+          "description": "",
+          "id": ""
+        },
+        "Education": {
+          "description": "",
+          "id": ""
+        },
+        "Elections": {
+          "description": "",
+          "id": ""
+        },
+        "Empathy": {
+          "description": "",
+          "id": ""
+        },
+        "Energy levels": {
+          "description": "",
+          "id": ""
+        },
+        "Entertainment spending": {
+          "description": "",
+          "id": ""
+        },
+        "Fake": {
+          "description": "",
+          "id": ""
+        },
+        "Fantasy/Fairy tales": {
+          "description": "",
+          "id": ""
+        },
+        "Fear of public speaking": {
+          "description": "",
+          "id": ""
+        },
+        "Final judgement": {
+          "description": "",
+          "id": ""
+        },
+        "Finances": {
+          "description": "",
+          "id": ""
+        },
+        "Finding lost valuables": {
+          "description": "",
+          "id": ""
+        },
+        "Flying": {
+          "description": "",
+          "id": ""
+        },
+        "Folk": {
+          "description": "",
+          "id": ""
+        },
+        "Foreign languages": {
+          "description": "",
+          "id": ""
+        },
+        "Friends versus money": {
+          "description": "",
+          "id": ""
+        },
+        "Fun with friends": {
+          "description": "",
+          "id": ""
+        },
+        "Funniness": {
+          "description": "",
+          "id": ""
+        },
+        "Gardening": {
+          "description": "",
+          "id": ""
+        },
+        "Gender": {
+          "description": "Пол",
+          "id": "Пол"
+        },
+        "Geography": {
+          "description": "",
+          "id": ""
+        },
+        "Getting angry": {
+          "description": "",
+          "id": ""
+        },
+        "Getting up": {
+          "description": "",
+          "id": ""
+        },
+        "Giving": {
+          "description": "",
+          "id": ""
+        },
+        "God": {
+          "description": "",
+          "id": ""
+        },
+        "Happiness in life": {
+          "description": "",
+          "id": ""
+        },
+        "Health": {
+          "description": "",
+          "id": ""
+        },
+        "Healthy eating": {
+          "description": "",
+          "id": ""
+        },
+        "Height": {
+          "description": "Высота",
+          "id": "Высота"
+        },
+        "Heights": {
+          "description": "",
+          "id": ""
+        },
+        "Hiphop, Rap": {
+          "description": "",
+          "id": ""
+        },
+        "History": {
+          "description": "",
+          "id": ""
+        },
+        "Horror": {
+          "description": "",
+          "id": ""
+        },
+        "House - block of flats": {
+          "description": "",
+          "id": ""
+        },
+        "Hypochondria": {
+          "description": "",
+          "id": ""
+        },
+        "Interests or hobbies": {
+          "description": "",
+          "id": ""
+        },
+        "Internet": {
+          "description": "",
+          "id": "интернет"
+        },
+        "Internet usage": {
+          "description": "",
+          "id": ""
+        },
+        "Judgment calls": {
+          "description": "",
+          "id": ""
+        },
+        "Keeping promises": {
+          "description": "",
+          "id": ""
+        },
+        "Knowing the right people": {
+          "description": "",
+          "id": ""
+        },
+        "Latino": {
+          "description": "",
+          "id": ""
+        },
+        "Law": {
+          "description": "",
+          "id": ""
+        },
+        "Left - right handed": {
+          "description": "",
+          "id": ""
+        },
+        "Life struggles": {
+          "description": "",
+          "id": ""
+        },
+        "Loneliness": {
+          "description": "",
+          "id": ""
+        },
+        "Loss of interest": {
+          "description": "",
+          "id": ""
+        },
+        "Lying": {
+          "description": "",
+          "id": ""
+        },
+        "Mathematics": {
+          "description": "",
+          "id": ""
+        },
+        "Medicine": {
+          "description": "",
+          "id": ""
+        },
+        "Metal or Hardrock": {
+          "description": "",
+          "id": ""
+        },
+        "Mood swings": {
+          "description": "",
+          "id": ""
+        },
+        "Movies": {
+          "description": "",
+          "id": ""
+        },
+        "Music": {
+          "description": "",
+          "id": "Музыка"
+        },
+        "Musical": {
+          "description": "",
+          "id": ""
+        },
+        "Musical instruments": {
+          "description": "",
+          "id": ""
+        },
+        "New environment": {
+          "description": "",
+          "id": ""
+        },
+        "Number of friends": {
+          "description": "",
+          "id": ""
+        },
+        "Number of siblings": {
+          "description": "",
+          "id": ""
+        },
+        "Only child": {
+          "description": "",
+          "id": ""
+        },
+        "Opera": {
+          "description": "",
+          "id": ""
+        },
+        "PC": {
+          "description": "",
+          "id": ""
+        },
+        "Parents' advice": {
+          "description": "",
+          "id": ""
+        },
+        "Passive sport": {
+          "description": "",
+          "id": ""
+        },
+        "Personality": {
+          "description": "",
+          "id": ""
+        },
+        "Pets": {
+          "description": "",
+          "id": ""
+        },
+        "Physics": {
+          "description": "",
+          "id": ""
+        },
+        "Politics": {
+          "description": "",
+          "id": ""
+        },
+        "Pop": {
+          "description": "",
+          "id": ""
+        },
+        "Prioritising workload": {
+          "description": "",
+          "id": ""
+        },
+        "Psychology": {
+          "description": "",
+          "id": ""
+        },
+        "Public speaking": {
+          "description": "",
+          "id": ""
+        },
+        "Punctuality": {
+          "description": "",
+          "id": ""
+        },
+        "Punk": {
+          "description": "",
+          "id": ""
+        },
+        "Questionnaires or polls": {
+          "description": "",
+          "id": ""
+        },
+        "Rats": {
+          "description": "",
+          "id": ""
+        },
+        "Reading": {
+          "description": "",
+          "id": ""
+        },
+        "Reggae, Ska": {
+          "description": "",
+          "id": ""
+        },
+        "Reliability": {
+          "description": "",
+          "id": ""
+        },
+        "Religion": {
+          "description": "",
+          "id": ""
+        },
+        "Responding to a serious letter": {
+          "description": "",
+          "id": ""
+        },
+        "Rock": {
+          "description": "",
+          "id": ""
+        },
+        "Rock n roll": {
+          "description": "",
+          "id": ""
+        },
+        "Romantic": {
+          "description": "",
+          "id": ""
+        },
+        "Sci-fi": {
+          "description": "",
+          "id": ""
+        },
+        "Science and technology": {
+          "description": "",
+          "id": ""
+        },
+        "Self-criticism": {
+          "description": "",
+          "id": ""
+        },
+        "Shopping": {
+          "description": "",
+          "id": ""
+        },
+        "Shopping centres": {
+          "description": "",
+          "id": ""
+        },
+        "Slow songs or fast songs": {
+          "description": "",
+          "id": ""
+        },
+        "Small - big dogs": {
+          "description": "",
+          "id": ""
+        },
+        "Smoking": {
+          "description": "",
+          "id": ""
+        },
+        "Snakes": {
+          "description": "",
+          "id": ""
+        },
+        "Socializing": {
+          "description": "",
+          "id": ""
+        },
+        "Spending on gadgets": {
+          "description": "",
+          "id": ""
+        },
+        "Spending on healthy eating": {
+          "description": "",
+          "id": ""
+        },
+        "Spending on looks": {
+          "description": "",
+          "id": ""
+        },
+        "Spiders": {
+          "description": "",
+          "id": ""
+        },
+        "Storm": {
+          "description": "",
+          "id": ""
+        },
+        "Swing, Jazz": {
+          "description": "",
+          "id": ""
+        },
+        "Techno, Trance": {
+          "description": "",
+          "id": ""
+        },
+        "Theatre": {
+          "description": "",
+          "id": ""
+        },
+        "Thinking ahead": {
+          "description": "",
+          "id": ""
+        },
+        "Thriller": {
+          "description": "",
+          "id": ""
+        },
+        "Unpopularity": {
+          "description": "",
+          "id": ""
+        },
+        "Village - town": {
+          "description": "",
+          "id": ""
+        },
+        "Waiting": {
+          "description": "",
+          "id": ""
+        },
+        "War": {
+          "description": "",
+          "id": ""
+        },
+        "Weight": {
+          "description": "",
+          "id": ""
+        },
+        "Western": {
+          "description": "",
+          "id": ""
+        },
+        "Workaholism": {
+          "description": "",
+          "id": ""
+        },
+        "Writing": {
+          "description": "",
+          "id": "Письмо"
+        },
+        "Writing notes": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "taco_toppings_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Cheese": {
+          "description": "",
+          "id": ""
+        },
+        "Chicken": {
+          "description": "",
+          "id": ""
+        },
+        "Ground Beef": {
+          "description": "",
+          "id": ""
+        },
+        "Hot Sauce": {
+          "description": "",
+          "id": ""
+        },
+        "Preference": {
+          "description": "",
+          "id": ""
+        },
+        "Sour Cream": {
+          "description": "",
+          "id": ""
         }
       }
+    },
+    "thanksgiving": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Apple cobbler": {
+          "description": "",
+          "id": ""
+        },
+        "Apple pie": {
+          "description": "",
+          "id": ""
+        },
+        "Blondies": {
+          "description": "",
+          "id": ""
+        },
+        "Brownies": {
+          "description": "",
+          "id": ""
+        },
+        "Brussel sprouts": {
+          "description": "",
+          "id": ""
+        },
+        "Buttermilk pie": {
+          "description": "",
+          "id": ""
+        },
+        "Carrot cake": {
+          "description": "",
+          "id": ""
+        },
+        "Carrots": {
+          "description": "",
+          "id": ""
+        },
+        "Cauliflower": {
+          "description": "",
+          "id": ""
+        },
+        "Cheesecake": {
+          "description": "",
+          "id": ""
+        },
+        "Cherry pie": {
+          "description": "",
+          "id": ""
+        },
+        "Chocolate pie": {
+          "description": "",
+          "id": ""
+        },
+        "Coconut cream pie": {
+          "description": "",
+          "id": ""
+        },
+        "Cookies": {
+          "description": "",
+          "id": ""
+        },
+        "Corn": {
+          "description": "",
+          "id": ""
+        },
+        "Cornbread": {
+          "description": "",
+          "id": ""
+        },
+        "Cranberry sauce": {
+          "description": "",
+          "id": ""
+        },
+        "Fruit salad": {
+          "description": "",
+          "id": ""
+        },
+        "Fudge": {
+          "description": "",
+          "id": ""
+        },
+        "Gravy": {
+          "description": "",
+          "id": ""
+        },
+        "Green beans/green bean casserole": {
+          "description": "",
+          "id": ""
+        },
+        "Ice cream": {
+          "description": "",
+          "id": ""
+        },
+        "Key lime pie": {
+          "description": "",
+          "id": ""
+        },
+        "Mac and cheese": {
+          "description": "",
+          "id": ""
+        },
+        "Main dish": {
+          "description": "",
+          "id": ""
+        },
+        "Main dish cooking method": {
+          "description": "",
+          "id": ""
+        },
+        "Mashed potatoes": {
+          "description": "",
+          "id": ""
+        },
+        "Peach cobbler": {
+          "description": "",
+          "id": ""
+        },
+        "Peach pie": {
+          "description": "",
+          "id": ""
+        },
+        "Pecan pie": {
+          "description": "",
+          "id": ""
+        },
+        "Pumpkin pie": {
+          "description": "",
+          "id": ""
+        },
+        "Rolls/biscuits": {
+          "description": "",
+          "id": ""
+        },
+        "Squash": {
+          "description": "",
+          "id": ""
+        },
+        "Stuffing base": {
+          "description": "",
+          "id": ""
+        },
+        "Sweet potato pie": {
+          "description": "",
+          "id": ""
+        },
+        "US region": {
+          "description": "",
+          "id": ""
+        },
+        "Vegetable salad": {
+          "description": "",
+          "id": ""
+        },
+        "Yams/sweet potato casserole": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
+    },
+    "zoo": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Airborne": {
+          "description": "",
+          "id": ""
+        },
+        "Animal Name": {
+          "description": "",
+          "id": ""
+        },
+        "Aquatic": {
+          "description": "",
+          "id": "Водный мир"
+        },
+        "Backbone": {
+          "description": "",
+          "id": ""
+        },
+        "Breathes": {
+          "description": "",
+          "id": ""
+        },
+        "Catsize": {
+          "description": "",
+          "id": ""
+        },
+        "Class": {
+          "description": "",
+          "id": ""
+        },
+        "Domestic": {
+          "description": "",
+          "id": ""
+        },
+        "Eggs": {
+          "description": "",
+          "id": ""
+        },
+        "Feathers": {
+          "description": "",
+          "id": ""
+        },
+        "Fins": {
+          "description": "",
+          "id": ""
+        },
+        "Hair": {
+          "description": "",
+          "id": ""
+        },
+        "Legs": {
+          "description": "",
+          "id": ""
+        },
+        "Milk": {
+          "description": "",
+          "id": ""
+        },
+        "Predator": {
+          "description": "",
+          "id": ""
+        },
+        "Tail": {
+          "description": "",
+          "id": ""
+        },
+        "Toothed": {
+          "description": "",
+          "id": ""
+        },
+        "Venomous": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": ""
     }
-  }
+  },
+  "incorrectAnswer": "Неверные",
+  "modelCardPossibleValuesMaximum": "максимум",
+  "modelCardPossibleValuesMinimum": "минимум",
+  "navigateBack": "Назад",
+  "navigateDone": "Готово",
+  "navigateForward": "Продолжить",
+  "predictButton": "Предсказать",
+  "saveProgress": "Сохранить",
+  "tryAgain": "Попробуй еще раз",
+  "uniqueOptionsWarningNotice": "Примечание"
 }

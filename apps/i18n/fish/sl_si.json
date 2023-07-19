@@ -1,9 +1,9 @@
 {
-  "continue": "Nadaljuj",
   "areYouSure": "Si prepričan/a?",
   "cancel": "Prekliči",
-  "yes": "Da",
+  "continue": "Nadaljuj",
+  "finish": "Končaj",
   "no": "Ne",
   "run": "Zaženi",
-  "finish": "Končaj"
+  "yes": "Da"
 }

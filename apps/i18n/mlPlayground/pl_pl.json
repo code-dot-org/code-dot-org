@@ -1,1612 +1,3425 @@
 {
-  "trainModelButtonText": "Pociąg",
-  "navigateForward": "Kontynuuj",
-  "navigateBack": "Wstecz",
-  "tryAgain": "Spróbuj ponownie",
-  "navigateDone": "Koniec",
-  "saveProgress": "Zapisz",
-  "correctAnswer": "Poprawnie",
-  "incorrectAnswer": "Nieprawidłowe",
-  "potentialUsesLabel": "Zamierzone użycie",
-  "potentialUsesDescription": "Opisz problem, który Twoim zdaniem ten model może pomóc rozwiązać, lub jedną potencjalną aplikację, którą ktoś mógłby stworzyć z tym modelem.",
-  "potentialUsesPlaceholder": "Napisz krótki opis.",
-  "potentialMisusesLabel": "Ograniczenia i ostrzeżenia",
-  "potentialMisusesDescription": "Opisz wszelkie ograniczenia w sposobie tworzenia tego modelu lub w jaki sposób powinien być używany. Możesz powiedzieć takie rzeczy jak „Unikaj używania tego modelu do...” lub „Uważaj na...”.\nWażne pytania do rozważenia to:",
-  "potentialMisusesDescriptionRepresent": "Czy dane reprezentują wszystkich możliwych użytkowników i scenariusze?",
-  "potentialMisusesDescriptionEnough": "Czy zebrałeś wystarczającą ilość danych, aby mieć pewność co do dokładności modelu?",
-  "potentialMisusesDescriptionSituations": "Czy są sytuacje, w których ten model zdecydowanie nie powinien być używany?",
-  "potentialMisusesPlaceholder": "Napisz krótki opis.",
-  "modelNameLabel": "Nazwa modelu",
-  "datasetDescriptionLabel": "Informacje o danych",
-  "datasetDescriptionPlaceholder": "W jaki sposób zbierano dane? Kto je zebrał? Kiedy zostały zebrane?",
-  "saveModelColumnCountLabel": "Opisy kolumn",
-  "saveModelFieldRequired": "wymagane",
-  "saveModelColumnTypeLabel": "marka",
-  "saveModelColumnTypeFeature": "funkcja",
-  "modelCardAccuracy": "Dokładność",
-  "modelCardIntendedUse": "Zamierzone użycie",
-  "modelCardLimitations": "Ograniczenia i ostrzeżenia",
-  "modelCardDatasetDetails": "Informacje o danych",
-  "modelCardDatasetDetailsSize": "Rozmiar zestawu danych",
-  "modelCardDatasetDetailsSizeCount": "{rowCount} wierszy",
-  "modelCardFeaturesAndLabel": "Funkcje i etykieta",
-  "modelCardPossibleValues": "Możliwe wartości",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "max",
-  "dataDisplayRowCount": "Istnieje {rowCount} wierszy danych.",
-  "dataDisplayRowCountTruncated": "Istnieje {rowCount} wierszy danych. (Wyświetlanie pierwszych {rowLimit} wierszy)",
+  "addFeatureButton": "Dodaj funkcję",
+  "aiBotAltText": "Bot A.I. ",
+  "aiBotBeamAltText": "Wiązka światłą skanera bota A.I.",
+  "aiBotBodyAltText": "Ciało bota A.I.",
+  "aiBotHeadAltText": "Głowa bota A.I.",
+  "animationDescriptionsHeader": "Opis animacji",
+  "animationDescriptionsTesting": "Bot A.I. skanuje przychodzące wiersze nieoznakowanych danych ze zbioru danych testowych. Gdy każdy wiersz przesuwa się pod wiązką światłą bota A.I., dokonuje on prognozy, dodając wartość do oznaczonej kolumny.",
+  "animationDescriptionsTraining": "Oznaczone wiersze ze zbioru danych treningowych trafiają do otwartej głowy bota A.I.",
+  "columnDetailsInformation": "Informacje o kolumnach",
+  "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnDetailsNumericalTypeError": "Kolumny numeryczne nie mogą zawierać łańcuchów.",
+  "columnDetailsTooManyLabels": "W tej kolumnie znaleziono {labelCount} wartości. Wykres jest wyświetlany tylko wtedy, gdy jest {maxLabelCount} lub mniej.",
+  "columnDetailsValueRange": "zakres",
   "columnInspectorDataType": "Typ danych",
   "columnInspectorDescription": "Opis",
-  "columnDetailsInformation": "Informacje o kolumnach",
-  "columnDetailsNumericalTypeError": "Kolumny numeryczne nie mogą zawierać łańcuchów.",
-  "columnDetailsMinimumValue": "min",
-  "columnDetailsMaximumValue": "max",
-  "columnDetailsValueRange": "zakres",
-  "columnDetailsTooManyLabels": "W tej kolumnie znaleziono {labelCount} wartości. Wykres jest wyświetlany tylko wtedy, gdy jest {maxLabelCount} lub mniej.",
-  "selectLabelButton": "Wybierz etykietę",
-  "scatterPlotLabel": "Informacje o związku",
-  "addFeatureButton": "Dodaj funkcję",
-  "columnType_numerical": "numeryczny",
   "columnType_categorical": "kategoryczny",
-  "selectDatasetUploadFileButton": "Prześlij {fileType}",
-  "selectDatasetErrorTooFewRows": "Psześlij {fileType} z co najmniej {count} wierszami.",
-  "selectDatasetErrorTooFewColumns": "Prześlij {fileType} z co najmniej {count} kolumnami.",
-  "dataCardWarningLargeDataset": "Ostrzeżenie: Zbiór danych z więcej niż {rowCount} wierszach spowolni działanie użytkownika.",
-  "dataCardRemovedRows": "{rowCount} {rowCount, plural, one {wiersz} few {wiersze} many {wiersze} other {wiersze}} usunięte, ponieważ {rowCount, plural, one {} few {} many {} other {}} zawierały puste komórki.",
-  "dataCardDefaultHeader": "Szczegóły",
-  "dataCardSource": "Źródło",
-  "dataCardRowCount": "Wiersze danych",
-  "dataCardLastUpdated": "Ostatnia aktualizacja",
-  "dataCardPotentialUses": "Potencjalne zastosowania",
-  "dataCardPotentialMisuses": "Potencjalne nadużycia",
-  "saveStatus_success": "Twój model został uratowany!",
-  "saveStatus_failure": "Wystąpił błąd. Twój model nie został zachowany. Proszę, spróbuj ponownie.",
-  "saveStatus_piiProfanity": "Twój model nie mógł zostać zapisany, ponieważ zawiera wulgaryzmy lub dane osobowe (np. e-mail, adres, numer telefonu).",
-  "aiBotAltText": "Bot A.I. ",
-  "aiBotHeadAltText": "Głowa bota A.I.",
-  "aiBotBodyAltText": "Ciało bota A.I.",
-  "aiBotBeamAltText": "Wiązka światłą skanera bota A.I.",
-  "animationDescriptionsHeader": "Opis animacji",
-  "animationDescriptionsTraining": "Oznaczone wiersze ze zbioru danych treningowych trafiają do otwartej głowy bota A.I.",
-  "animationDescriptionsTesting": "Bot A.I. skanuje przychodzące wiersze nieoznakowanych danych ze zbioru danych testowych. Gdy każdy wiersz przesuwa się pod wiązką światłą bota A.I., dokonuje on prognozy, dodając wartość do oznaczonej kolumny.",
-  "generateResultsHeader": "Testowanie modelu",
-  "resultsHeader": "Wynik",
-  "resultsAccuracy": "Dokładność",
-  "resultsDetailsButton": "Szczegóły",
-  "resultsPreviousResults": "Poprzednie wyniki",
-  "resultsTableActualValueHeader": "Rzeczywisty",
-  "resultsTablePredictedValueHeader": "Prognozy A.I.",
-  "resultsTablePredictionRange": "Prognozy wynoszą +/- {percentage}% zakresu",
-  "predictHeader": "Wypróbuj to!",
-  "predictAIBotPredicts": "A.I. przewiduje",
-  "predictPlaceholder": "min. {minimum}, maks. {maximum}",
+  "columnType_numerical": "numeryczny",
+  "correctAnswer": "Poprawnie",
   "crossTabRelationshipHeader": "Informacje o związku",
   "crossTabTooMuchData": "Aktualnie wybrane dane są zbyt duże, aby można było je wyświetlić w tabeli.",
-  "uniqueOptionsWarningNotice": "Uwaga",
-  "uniqueOptionsWarningMessage": "Kolumn kategorii z więcej niż {valueCount} unikalnymi wartościami nie można wybrać jako etykiety ani funkcji.",
-  "predictionStatement": "Przewiduj {output} na podstawie {inputs}",
+  "dataCardDefaultHeader": "Szczegóły",
+  "dataCardLastUpdated": "Ostatnia aktualizacja",
+  "dataCardPotentialMisuses": "Potencjalne nadużycia",
+  "dataCardPotentialUses": "Potencjalne zastosowania",
+  "dataCardRemovedRows": "{rowCount} {rowCount, plural, one {wiersz} few {wiersze} many {wiersze} other {wiersze}} usunięte, ponieważ {rowCount, plural, one {} few {} many {} other {}} zawierały puste komórki.",
+  "dataCardRowCount": "Wiersze danych",
+  "dataCardSource": "Źródło",
+  "dataCardWarningLargeDataset": "Ostrzeżenie: Zbiór danych z więcej niż {rowCount} wierszach spowolni działanie użytkownika.",
+  "dataDisplayRowCount": "Istnieje {rowCount} wierszy danych.",
+  "dataDisplayRowCountTruncated": "Istnieje {rowCount} wierszy danych. (Wyświetlanie pierwszych {rowLimit} wierszy)",
+  "datasetDescriptionLabel": "Informacje o danych",
+  "datasetDescriptionPlaceholder": "W jaki sposób zbierano dane? Kto je zebrał? Kiedy zostały zebrane?",
   "datasets": {
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "wiek",
-          "description": "Przedziały wiekowe pacjenta."
-        },
-        "gender": {
-          "id": "płeć",
-          "description": "Płeć pacjenta."
-        },
-        "race": {
-          "id": "rasa",
-          "description": "Informacje rasowe o pacjencie."
-        },
-        "bleeding": {
-          "id": "krwawienie",
-          "description": "Czy pacjent krwawił, czy nie."
-        },
-        "shortness_of_breath": {
-          "id": "shortness_of_breath",
-          "description": "Czy pacjent miał duszność."
-        },
-        "weight": {
-          "id": "waga",
-          "description": "Zakresy wagowe dla pacjenta."
-        },
-        "area_of_pain": {
-          "id": "area_of_pain",
-          "description": "Gdzie znajdował się ból."
-        },
-        "decision": {
-          "id": "decyzja",
-          "description": "Jak szybko pacjent otrzymał leczenie."
-        }
-      },
-      "card": {
-        "description": "Dane zebrane przez szpital na temat wszystkich pacjentów, którzy trafili na izbę przyjęć w ciągu jednego miesiąca."
-      },
-      "name": "Priorytet medyczny"
-    },
-    "exoplanets": {
-      "fields": {
-        "Number of stars": {
-          "id": "Liczba gwiazd"
-        },
-        "Number of planets": {
-          "id": "Liczba planet"
-        },
-        "Star age in billions of years": {
-          "id": "Wiek gwiazd w miliardach lat"
-        }
-      },
-      "card": {
-        "description": "Ten zbiór danych to lista egzoplanet, które są planetami krążącymi wokół innych gwiazd. Dzięki tym danym można oszacować rozmiar egzoplanety, a także inne cechy.",
-        "context": {
-          "potentialUses": "Oszacuj rozmiar lub masę egzoplanety na podstawie rozmiaru, wieku lub innych aspektów gwiazdy, na których krąży.",
-          "potentialMisuses": "Próbuje zgadnąć, czy na planecie może istnieć życie."
-        }
-      },
-      "name": "Egzoplanety"
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "spend time": {
-          "id": "spędzać czas"
-        },
-        "weather": {
-          "id": "pogoda"
-        },
-        "socks": {
-          "id": "skarpety"
-        },
-        "day": {
-          "id": "dzień"
-        },
-        "notice shoes": {
-          "description": "Obchodzi cię, czy ludzie zauważą Twoje buty?"
-        },
-        "shoe": {
-          "id": "but",
-          "description": "Jakie buty zamierzasz dziś założyć?"
-        }
-      },
-      "card": {
-        "description": "Ankieta na temat Twoich preferencji, aby pomóc polecić, jakie buty powinieneś nosić.",
-        "context": {
-          "potentialUses": "Poleć parę butów na podstawie osobistych pytań.",
-          "potentialMisuses": "Cokolwiek innego niż zamierzone zastosowania."
-        }
-      },
-      "name": "Ankieta dotycząca butów"
-    },
-    "salsa_toy": {
-      "fields": {
-        "cilantro": {
-          "id": "kolendra",
-          "description": "Czy salsa zawiera kolendrę?"
-        },
-        "onion": {
-          "id": "cebula",
-          "description": "Czy salsa zawiera cebulę?"
-        },
-        "cumin": {
-          "id": "kminek",
-          "description": "Czy salsa zawiera kminek?"
-        },
-        "vinegar": {
-          "id": "ocet",
-          "description": "Czy salsa zawiera ocet?"
-        },
-        "avocado": {
-          "id": "awokado",
-          "description": "Czy salsa zawiera awokado?"
-        },
-        "corn": {
-          "id": "kukurydza",
-          "description": "Czy salsa zawiera kukurydzę?"
-        },
-        "beans": {
-          "id": "fasolki",
-          "description": "Czy salsa zawiera fasolę?"
-        },
-        "garlic": {
-          "id": "czosnek",
-          "description": "Czy salsa zawiera czosnek?"
-        },
-        "lime": {
-          "id": "limonka",
-          "description": "Czy salsa zawiera limonkę?"
-        },
-        "preference": {
-          "id": "preferencje",
-          "description": "Lubisz czy nie lubisz salsy?"
-        }
-      },
-      "card": {
-        "description": "Ankieta przeprowadzona wśród klientów sklepu taco na temat tego, czy lubią określone kombinacje salsy.",
-        "context": {
-          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj salsy powinien zamówić nowy klient.",
-          "potentialMisuses": "Cokolwiek innego niż zalecenia dotyczące salsy."
-        }
-      },
-      "name": "Salsa"
-    },
-    "auto_mpg": {
-      "fields": {
-        "weight": {
-          "id": "waga"
-        }
-      }
-    },
-    "bike_sharing": {
-      "fields": {
-        "index": {
-          "id": "indeks"
-        },
-        "Date": {
-          "id": "Data",
-          "description": "Data wykonania zapisów."
-        },
-        "Season": {
-          "id": "Sezon",
-          "description": "Pora roku: wiosna, lato, zima lub jesień."
-        },
-        "Year": {
-          "id": "Rok",
-          "description": "Rok (2011 lub 2012)."
-        },
-        "Month": {
-          "id": "Miesiąc",
-          "description": "Miesiąc: 1 (styczeń) do 12 (grudzień)."
-        },
-        "Holiday": {
-          "id": "Wakacje",
-          "description": "Niezależnie od tego, czy dzień jest świętem."
-        },
-        "Day of Week": {
-          "id": "Dzień Tygodnia",
-          "description": "Dzień tygodnia: 0 (niedziela) do 6 (sobota)."
-        },
-        "Workday": {
-          "id": "Dzień roboczy",
-          "description": "Niezależnie od tego, czy jest to dzień pracy, czy nie."
-        },
-        "Weather Description": {
-          "id": "Opis pogody",
-          "description": "Opis pogody w ciągu dnia, od kilku chmur po lekki śnieg lub deszcz."
-        },
-        "Average Temperature (Celsius)": {
-          "id": "Średnia temperatura (Celsjusza)"
-        },
-        "Humidity (0 - 1)": {
-          "id": "Wilgotność (0 - 1)",
-          "description": "Wilgotność, znormalizowana do 0 (0% wilgotności) do 1 (100% wilgotności)."
-        },
-        "Wind Speed": {
-          "id": "Prędkość wiatru",
-          "description": "Prędkość wiatru."
-        },
-        "Number of Casual Users": {
-          "id": "Liczba przypadkowych użytkowników",
-          "description": "Liczba użytkowników bez konta."
-        },
-        "Number of Registered Users": {
-          "id": "Liczba zarejestrowanych użytkowników",
-          "description": "Liczba użytkowników posiadających konto."
-        },
-        "Total Users": {
-          "id": "Całkowita liczba użytkowników",
-          "description": "Całkowita liczba użytkowników."
-        }
-      },
-      "name": "Udostępnianie rowerów"
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "grzyby"
-        },
-        "lobster": {
-          "id": "lobster"
-        },
-        "bacon": {
-          "id": "boczek"
-        },
-        "cheese": {
-          "id": "ser"
-        },
-        "meat": {
-          "id": "mięso"
-        },
-        "preference": {
-          "id": "preferencje"
-        }
-      },
-      "card": {
-        "description": "Ankieta przeprowadzona wśród klientów restauracji na temat tego, czy lubią pewne kombinacje poutine.",
-        "context": {
-          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj poutine powinien zamówić nowy klient.",
-          "potentialMisuses": "Cokolwiek innego niż zalecenia."
-        }
-      },
-      "name": "Poutine"
-    },
-    "loneliness_phobias": {
-      "fields": {
-        "Loneliness": {
-          "id": "Samotność",
-          "description": "Czuję się samotny w życiu."
-        },
-        "Flying": {
-          "id": "Latanie",
-          "description": "Boję się latania"
-        },
-        "Storm": {
-          "id": "Sztorm",
-          "description": "Boję się sztormów"
-        },
-        "Darkness": {
-          "id": "Ciemność",
-          "description": "Boję się ciemności"
-        },
-        "Heights": {
-          "id": "Wysokości",
-          "description": "Boję się wysokości"
-        },
-        "Spiders": {
-          "id": "Pająki",
-          "description": "Boję się pająków"
-        },
-        "Snakes": {
-          "id": "Węże",
-          "description": "Boję się węży"
-        },
-        "Rats": {
-          "id": "Szczury",
-          "description": "Boję się szczurów"
-        },
-        "Ageing": {
-          "id": "Starzenie się",
-          "description": "Boję się starzenia"
-        },
-        "Dangerous dogs": {
-          "id": "Groźne psy",
-          "description": "Boję się groźnych psów"
-        },
-        "Fear of public speaking": {
-          "id": "Strach przed wystąpieniami publicznymi",
-          "description": "Obawiam się wystąpień publicznych"
-        }
-      },
-      "card": {
-        "description": "Zbiór danych odpowiedzi ankietowych zebranych przez słowackich studentów w wieku 18-21 lat w FSEV UK. Większość odpowiedzi to rankingi na skali od 1 do 5. Na przykład „Ranga od 1 (zdecydowanie się nie zgadzam) do 5 (zdecydowanie się zgadzam): Często uczę się lub pracuję nawet w wolnym czasie”. Jest to podzbiór większego zbioru danych, który skupia się tylko na muzyce.",
-        "context": {
-          "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
-        }
-      },
-      "name": "Ankieta studencka - Fobie"
-    },
-    "cookies_toy": {
-      "fields": {
-        "preference": {
-          "id": "preferencje"
-        }
-      },
-      "card": {
-        "description": "Ankieta przeprowadzona wśród klientów sklepu z ciasteczkami na temat tego, czy lubią określone kombinacje ciasteczek.",
-        "context": {
-          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj ciasteczek powinien kupić nowy klient."
-        }
-      },
-      "name": "Ciasteczka"
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "kolor"
-        },
-        "music": {
-          "id": "muzyka"
-        },
-        "food": {
-          "id": "jedzenie"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "wiek",
-          "description": "wiek głównego beneficjenta."
-        },
-        "sex": {
-          "id": "płeć",
-          "description": "płeć wykonawcy ubezpieczenia: kobieta, mężczyzna."
-        },
-        "bmi": {
-          "id": "bmi",
-          "description": "Wskaźnik masy ciała."
-        },
-        "children": {
-          "id": "dzieci",
-          "description": "Liczba dzieci objętych ubezpieczeniem zdrowotnym."
-        },
-        "smoker": {
-          "id": "palacz",
-          "description": "Czy dana osoba pali, czy nie."
-        },
-        "region": {
-          "id": "region"
-        },
-        "charges": {
-          "id": "opłaty",
-          "description": "Indywidualne koszty leczenia rozliczane przez ubezpieczenie zdrowotne."
-        }
-      },
-      "card": {
-        "description": "Koszty ubezpieczenia wraz z czynnikami takimi, jak liczba dzieci, lokalizacja, palacz/niepalący, wiek, seks, BMI.",
-        "context": {
-          "potentialUses": "Może być używany do przewidywania, czy ktoś jest palaczem na podstawie innych informacji ubezpieczeniowych"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Kategoria",
-          "description": "Ogólna kategoria żywności, do której a rzecz."
-        },
-        "Description": {
-          "id": "Opis",
-          "description": "Pełny opis rzeczy."
-        },
-        "Ash": {
-          "id": "Popiół",
-          "description": "Zawartość popiołu reprezentuje całkowitą zawartość minerałów w żywności. Mierzone w gramach (g)."
-        },
-        "Beta Carotene": {
-          "id": "Beta karoten",
-          "description": "Rodzaj cząsteczki lipidów, mierzonej w miligramach (mg)."
-        },
-        "Carbohydrate": {
-          "id": "Węglowodany"
-        },
-        "Cholesterol": {
-          "id": "Cholesterol"
-        },
-        "Fiber": {
-          "id": "Błonnik"
-        },
-        "Kilocalories": {
-          "id": "Kilokalorie"
-        },
-        "Lutein and Zeaxanthin": {
-          "id": "Luteina i zeaksantyna"
-        },
-        "Lycopene": {
-          "id": "Likopen"
-        },
-        "Manganese": {
-          "id": "Mangan"
-        },
-        "Niacin": {
-          "id": "Niacyna"
-        },
-        "Protein": {
-          "id": "Białko"
-        },
-        "Retinol": {
-          "id": "Retinol"
-        },
-        "Riboflavin": {
-          "id": "Ryboflawina"
-        },
-        "Selenium": {
-          "id": "Selen"
-        },
-        "Sugar Total": {
-          "id": "Cukier całkowity"
-        },
-        "Thiamin": {
-          "id": "Tiamina"
-        },
-        "Water": {
-          "id": "Woda"
-        },
-        "Fat: Monosaturated Fat": {
-          "id": "Tłuszcz: Tłuszcz monosaturowany"
-        },
-        "Fat: Polysaturated Fat": {
-          "id": "Tłuszcz: tłuszcz wielonasycony"
-        },
-        "Fat: Saturated Fat": {
-          "id": "Tłuszcz: Tłuszcz nasycony"
-        },
-        "Fat: Total Lipid": {
-          "id": "Tłuszcz: całkowity lipid"
-        },
-        "Major Minerals: Calcium": {
-          "id": "Główne minerały: wapń"
-        },
-        "Major Minerals: Copper": {
-          "id": "Główne minerały: miedź"
-        },
-        "Major Minerals: Iron": {
-          "id": "Główne minerały: żelazo"
-        },
-        "Major Minerals: Magnesium": {
-          "id": "Główne minerały: magnez"
-        },
-        "Major Minerals: Phosphorus": {
-          "id": "Główne minerały: fosfor"
-        },
-        "Major Minerals: Potassium": {
-          "id": "Główne minerały: Potas"
-        },
-        "Major Minerals: Sodium": {
-          "id": "Główne minerały: Sód"
-        },
-        "Major Minerals: Zinc": {
-          "id": "Główne minerały: cynk"
-        },
-        "Vitamins: Vitamin A - IU": {
-          "id": "Witaminy: Witamina A - IU"
-        },
-        "Vitamins: Vitamin A - RAE": {
-          "id": "Witaminy: Witamina A - RAE"
-        },
-        "Vitamins: Vitamin B12": {
-          "id": "Witaminy: Witamina B12"
-        },
-        "Vitamins: Vitamin B6": {
-          "id": "Witaminy: Witamina B6"
-        },
-        "Vitamins: Vitamin C": {
-          "id": "Witaminy: witamina C"
-        },
-        "Vitamins: Vitamin E": {
-          "id": "Witaminy: witamina E"
-        },
-        "Vitamins: Vitamin K": {
-          "id": "Witaminy: witamina K"
-        }
-      },
-      "card": {
-        "context": {
-          "potentialUses": "Na przykład określ, ile kalorii ma żywność na podstawie zawartości składników odżywczych."
-        }
-      },
-      "name": "Odżywianie"
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "truskawka"
-        },
-        "lime": {
-          "id": "limonka"
-        },
-        "preference": {
-          "id": "preferencje"
-        }
-      },
-      "card": {
-        "description": "Ankieta przeprowadzona wśród klientów sklepu raspado na temat tego, czy lubią pewne kombinacje raspado.",
-        "context": {
-          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj raspado powinien zamówić nowy klient.",
-          "potentialMisuses": "Cokolwiek innego niż zalecenia."
-        }
-      },
-      "name": "Raspado"
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "boki"
-        },
-        "symmetry": {
-          "id": "symetria"
-        },
-        "equal sides": {
-          "id": "równe boki"
-        },
-        "equal angles": {
-          "id": "równe kąty",
-          "description": "Czy kształt ma wszystkie równe kąty?"
-        },
-        "has corners": {
-          "id": "ma narożniki",
-          "description": "Czy kształt ma rogi?"
-        },
-        "size": {
-          "id": "rozmiar"
-        }
-      },
-      "name": "Kształty V2"
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "pomidor"
-        },
-        "avocado": {
-          "id": "awokado"
-        },
-        "chicken": {
-          "id": "kurczak"
-        },
-        "fruit": {
-          "id": "owoc"
-        },
-        "beans": {
-          "id": "fasolki"
-        },
-        "cheese": {
-          "id": "ser"
-        },
-        "preference": {
-          "id": "preferencje"
-        }
-      },
-      "card": {
-        "description": "Ankieta przeorowadzona wśród klientów restauracji na temat tego, czy lubią określone kombinacje sałatek.",
-        "context": {
-          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj sałaty powinien zamówić nowy klient.",
-          "potentialMisuses": "Cokolwiek innego niż zalecenia."
-        }
-      },
-      "name": "Sałatka"
-    },
-    "billionaires": {
-      "fields": {
-        "Rank": {
-          "id": "Pozycja"
-        },
-        "Year": {
-          "id": "Rok",
-          "description": "Rok rankingów (1996, 2001 lub 2014)."
-        },
-        "Company Founding Year": {
-          "id": "Rok założenia firmy",
-          "description": "Rok, w którym powstała ich firma."
-        },
-        "Company Name": {
-          "id": "Nazwa firmy",
-          "description": "Nazwa ich firmy."
-        },
-        "Company Relationship": {
-          "description": "Ich związek z firmą: np. „założyciel”, „CEO”, „prezes”)."
-        },
-        "Company Sector": {
-          "id": "Sektor Firmy",
-          "description": "Sektor, w którym znajduje się ich firma, np. „Finanse” lub „Oprogramowanie”."
-        },
-        "Company Type": {
-          "id": "Rodzaj firmy",
-          "description": "Rodzaj firmy: czy była to nowa, sprywatyzowana firma, czy firma przejęta."
-        },
-        "Age": {
-          "id": "Wiek",
-          "description": "Ich wiek."
-        },
-        "Gender": {
-          "id": "Płeć",
-          "description": "Ich płeć"
-        },
-        "Citizenship": {
-          "id": "Obywatelstwo",
-          "description": "Kraj, w którym są oficjalnym obywatelem."
-        },
-        "Country of Residence": {
-          "id": "Kraj zamieszkania",
-          "description": "Kraj, w którym mieszkają."
-        },
-        "Region": {
-          "id": "Region"
-        },
-        "Type Of Wealth": {
-          "id": "Rodzaj bogactwa"
-        }
-      },
-      "card": {
-        "context": {
-          "potentialUses": "Przewiduj rodzaj bogactwa miliardera na podstawie innych funkcji."
-        }
-      },
-      "name": "Miliarderzy"
-    },
-    "student_alcohol_consumption": {
-      "fields": {
-        "school": {
-          "id": "szkoła"
-        },
-        "sex": {
-          "id": "płeć",
-          "description": "Płeć ucznia (binarna)."
-        },
-        "age": {
-          "id": "wiek",
-          "description": "Wiek ucznia."
-        },
-        "address": {
-          "id": "adres"
-        },
-        "health": {
-          "id": "zdrowie"
-        }
-      }
-    },
-    "icecream_toppings_toy": {
-      "card": {
-        "description": "Ankieta przeprowadzona wśród klientów sklepu z lodarni na temat tego, czy lubią określone kombinacje lodów.",
-        "context": {
-          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj lodów powinien kupić nowy klient."
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "kurczak"
-        },
-        "lamb": {
-          "id": "owieczka"
-        },
-        "onion": {
-          "id": "cebula"
-        },
-        "garlic": {
-          "id": "czosnek"
-        },
-        "cheese": {
-          "id": "ser"
-        },
-        "preference": {
-          "id": "preferencje"
-        }
-      },
-      "card": {
-        "description": "Ankieta przeprowadzona wśród klientów indyjskiej restauracji na temat tego, czy lubią pewne kombinacje naan.",
-        "context": {
-          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj naan powinien zamówić nowy klient.",
-          "potentialMisuses": "Cokolwiek innego niż zalecenia."
-        }
-      },
-      "name": "Naan"
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "wiek"
-        },
-        "race": {
-          "id": "rasa"
-        },
-        "gender": {
-          "id": "płeć"
-        }
-      },
-      "card": {
-        "description": "Dane ze spisu powszechnego w USA z 1994 r., z danymi dotyczącymi dochodów, danych osobowych i pracy. Służą do przewidywania, czy dochód danej osoby przekracza 50 000 USD.",
-        "context": {
-          "potentialUses": "Przewiduj, czy dochód danej osoby przekracza, czy nie przekracza 50 000 USD na podstawie poziomu wykształcenia i wieku. Przedstaw nierówności dochodowe rasowe i płciowe.",
-          "potentialMisuses": "Wykorzystanie tego do czegoś takiego jak ustalenie, czy udzielić komuś pożyczki, może być głęboko niesprawiedliwe."
-        }
-      }
-    },
-    "loneliness_movies": {
-      "fields": {
-        "Loneliness": {
-          "id": "Samotność",
-          "description": "Czuję się samotny w życiu."
-        },
-        "Movies": {
-          "id": "Filmy",
-          "description": "Lubię oglądać filmy"
-        },
-        "Horror": {
-          "id": "Horror",
-          "description": "Lubię horrory"
-        },
-        "Thriller": {
-          "id": "Dreszczowiec",
-          "description": "Lubię dreszczowce"
-        },
-        "Comedy": {
-          "id": "Komedia",
-          "description": "Lubię filmy komediowe"
-        },
-        "Romantic": {
-          "id": "Romantyczny",
-          "description": "Lubię romantyczne filmy"
-        },
-        "Sci-fi": {
-          "id": "Sci-Fi",
-          "description": "Lubię filmy science fiction"
-        },
-        "War": {
-          "id": "Wojna",
-          "description": "Lubię filmy wojenne"
-        },
-        "Fantasy/Fairy tales": {
-          "id": "Fantasy/Bajki",
-          "description": "Lubię filmy Fantasy/Bajki"
-        },
-        "Animated": {
-          "id": "Animowane",
-          "description": "Lubię filmy animowane"
-        },
-        "Documentary": {
-          "id": "Dokumentalny",
-          "description": "Lubię filmy dokumentalne"
-        },
-        "Western": {
-          "id": "Western",
-          "description": "Lubię westerny"
-        },
-        "Action": {
-          "id": "Akcja",
-          "description": "Lubię filmy akcji"
-        }
-      },
-      "card": {
-        "context": {
-          "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
-        }
-      },
-      "name": "Ankieta studencka - Filmy"
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Loneliness": {
-          "id": "Samotność",
-          "description": "Czuję się samotny w życiu."
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Writing": {
-          "id": "Pisanie"
-        }
-      },
-      "card": {
-        "context": {
-          "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
-        }
-      },
-      "name": "Ankieta studencka - Osobiste zainteresowania"
-    },
-    "movies": {
-      "fields": {
-        "Score": {
-          "id": "Wynik"
-        },
-        "Country": {
-          "id": "Kraj"
-        },
-        "Director": {
-          "id": "Dyrektor",
-          "description": "Reżyser filmu."
-        },
-        "Genre": {
-          "description": "Gatunek filmu."
-        },
-        "Name": {
-          "id": "Imię/Nazwisko",
-          "description": "Nazwa filmu."
-        },
-        "Released": {
-          "description": "Miesiąc, w którym został wydany."
-        },
-        "Star": {
-          "id": "Star",
-          "description": "Główny aktor lub aktorka."
-        },
-        "Votes": {
-          "id": "Głosy"
-        },
-        "Writer": {
-          "id": "Pisarz"
-        },
-        "Year": {
-          "id": "Rok",
-          "description": "Rok, w którym został wydany."
-        }
-      },
-      "card": {
-        "description": "Zbiór danych o filmach wytworzonych w latach 1986-2016, z numerami kasowymi, ocenami, wynikami IMDB i innymi.",
-        "context": {
-          "potentialUses": "Na przykład, określ kasę filmu według jego budżetu lub gatunku."
-        }
-      },
-      "name": "Statystyki Filmów"
-    },
-    "songs": {
-      "fields": {
-        "Artist": {
-          "id": "Artysta"
-        },
-        "Year": {
-          "id": "Rok"
-        }
-      },
-      "name": "Najlepsze piosenki"
-    },
-    "safari_toy": {
-      "fields": {
-        "people": {
-          "id": "osoby"
-        },
-        "rhino": {
-          "id": "nosorożec "
-        },
-        "elephant": {
-          "id": "słoń"
-        },
-        "alligator": {
-          "id": "alligator"
-        },
-        "trees": {
-          "id": "drzewa"
-        }
-      },
-      "card": {
-        "description": "Dane zebrane z „African Safari Tours”, firmy oferującej wycieczki po równinach Serengeti w Afryce.",
-        "context": {
-          "potentialUses": "Może służyć do określenia najlepszego czasu na safari, aby upewnić się, że zobaczysz jak najwięcej dzikiej przyrody.",
-          "potentialMisuses": "Śledzone są tylko niektóre rodzaje zwierząt, więc unikaj wyciągania pochopnych wniosków na temat zwierząt, które nie są częścią tego zestawu (jak zebry czy hipopotamy)."
-        }
-      },
-      "name": "Safari"
-    },
     "abalone": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": "Określ wiek uchowca."
+        },
+        "description": ""
+      },
       "fields": {
-        "Sex": {
-          "id": "Płeć"
-        },
-        "Length": {
-          "id": "Długość"
-        },
         "Diameter": {
-          "id": "Średnica",
-          "description": "Jego średnica w milimetrach."
+          "description": "Jego średnica w milimetrach.",
+          "id": "Średnica"
         },
         "Height": {
+          "description": "",
           "id": "Wysokość"
         },
-        "Shell weight": {
-          "id": "Masa skorupy",
-          "description": "Masa skorupy po wysuszeniu, w gramach."
+        "Length": {
+          "description": "",
+          "id": "Długość"
         },
         "Rings": {
-          "id": "Pierścienie",
-          "description": "Wiek w latach."
-        }
-      },
-      "card": {
-        "context": {
-          "potentialUses": "Określ wiek uchowca."
+          "description": "Wiek w latach.",
+          "id": "Pierścienie"
+        },
+        "Sex": {
+          "description": "",
+          "id": "Płeć"
+        },
+        "Shell weight": {
+          "description": "Masa skorupy po wysuszeniu, w gramach.",
+          "id": "Masa skorupy"
+        },
+        "Shucked weight": {
+          "description": "",
+          "id": ""
+        },
+        "Viscera weight": {
+          "description": "",
+          "id": ""
+        },
+        "Whole weight": {
+          "description": "",
+          "id": ""
         }
       },
       "name": "Uchowiec"
     },
+    "auto_mpg": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "acceleration": {
+          "description": "",
+          "id": ""
+        },
+        "car name": {
+          "description": "",
+          "id": ""
+        },
+        "cylinders": {
+          "description": "",
+          "id": ""
+        },
+        "displacement": {
+          "description": "",
+          "id": ""
+        },
+        "horsepower": {
+          "description": "",
+          "id": ""
+        },
+        "model year": {
+          "description": "",
+          "id": ""
+        },
+        "mpg": {
+          "description": "",
+          "id": ""
+        },
+        "weight": {
+          "description": "",
+          "id": "waga"
+        }
+      }
+    },
     "basketball_shots": {
       "card": {
-        "description": "Ten zbiór danych zawiera każdą próbę 3-punktową podjętą podczas turnieju NCAA 2017. Dzięki tym danym można przewidzieć, czy strzał został wykonany, czy pominięty.",
         "context": {
+          "potentialMisuses": "",
           "potentialUses": "Przewiduj, czy 3-punktowy strzał został wykonany, czy pominięty."
+        },
+        "description": "Ten zbiór danych zawiera każdą próbę 3-punktową podjętą podczas turnieju NCAA 2017. Dzięki tym danym można przewidzieć, czy strzał został wykonany, czy pominięty."
+      },
+      "fields": {
+        "Away team alias": {
+          "description": "",
+          "id": ""
+        },
+        "Home team alias": {
+          "description": "",
+          "id": ""
+        },
+        "Inches from bottom sideline": {
+          "description": "",
+          "id": ""
+        },
+        "Inches from left baseline": {
+          "description": "",
+          "id": ""
+        },
+        "Jersey number": {
+          "description": "",
+          "id": ""
+        },
+        "Made or miss": {
+          "description": "",
+          "id": ""
+        },
+        "Time in seconds": {
+          "description": "",
+          "id": ""
         }
       },
       "name": "Próby 3-punktowe NCAA"
     },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Wodny"
-        }
-      },
+    "bike_sharing": {
       "card": {
         "context": {
-          "potentialUses": "Jest tu wiele potencjalnych etykiet, ale jednym łatwym dochodzeniem na początek jest próba znalezienia cech, które zwykle odnoszą się do jadowitego zwierzęcia.",
-          "potentialMisuses": "Jest to zbiór danych tylko 100 zwierząt, więc może być wiele zwierząt, które nie są odzwierciedlone w danych. Weź to z przymrużeniem oka!"
-        }
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
       },
-      "name": "Zoo"
-    },
-    "poke_toy": {
       "fields": {
-        "avocado": {
-          "id": "awokado"
+        "Average \"Feels Like\" Temperature": {
+          "description": "",
+          "id": ""
         },
-        "onion": {
-          "id": "cebula"
+        "Average Temperature (Celsius)": {
+          "description": "",
+          "id": "Średnia temperatura (Celsjusza)"
         },
-        "masago": {
-          "id": "masago"
+        "Date": {
+          "description": "Data wykonania zapisów.",
+          "id": "Data"
         },
-        "wasabi": {
-          "id": "wasabi"
+        "Day of Week": {
+          "description": "Dzień tygodnia: 0 (niedziela) do 6 (sobota).",
+          "id": "Dzień Tygodnia"
         },
-        "ginger": {
-          "id": "imbir"
+        "Holiday": {
+          "description": "Niezależnie od tego, czy dzień jest świętem.",
+          "id": "Wakacje"
         },
-        "seaweed": {
-          "id": "wodorost",
-          "description": "Czy w worku wmieszane są wodorosty?"
+        "Humidity (0 - 1)": {
+          "description": "Wilgotność, znormalizowana do 0 (0% wilgotności) do 1 (100% wilgotności).",
+          "id": "Wilgotność (0 - 1)"
         },
-        "furikake": {
-          "id": "furikake"
+        "Month": {
+          "description": "Miesiąc: 1 (styczeń) do 12 (grudzień).",
+          "id": "Miesiąc"
         },
-        "surimi": {
-          "id": "surimi"
+        "Number of Casual Users": {
+          "description": "Liczba użytkowników bez konta.",
+          "id": "Liczba przypadkowych użytkowników"
         },
-        "chili": {
-          "id": "chili"
+        "Number of Registered Users": {
+          "description": "Liczba użytkowników posiadających konto.",
+          "id": "Liczba zarejestrowanych użytkowników"
         },
-        "preference": {
-          "id": "preferencje"
+        "Season": {
+          "description": "Pora roku: wiosna, lato, zima lub jesień.",
+          "id": "Sezon"
+        },
+        "Total Users": {
+          "description": "Całkowita liczba użytkowników.",
+          "id": "Całkowita liczba użytkowników"
+        },
+        "Weather Description": {
+          "description": "Opis pogody w ciągu dnia, od kilku chmur po lekki śnieg lub deszcz.",
+          "id": "Opis pogody"
+        },
+        "Wind Speed": {
+          "description": "Prędkość wiatru.",
+          "id": "Prędkość wiatru"
+        },
+        "Workday": {
+          "description": "Niezależnie od tego, czy jest to dzień pracy, czy nie.",
+          "id": "Dzień roboczy"
+        },
+        "Year": {
+          "description": "Rok (2011 lub 2012).",
+          "id": "Rok"
+        },
+        "index": {
+          "description": "",
+          "id": "indeks"
         }
       },
+      "name": "Udostępnianie rowerów"
+    },
+    "billionaires": {
       "card": {
-        "description": "Badanie klientów w sklepie poke, czy lubią pewne kombinacje poke.",
         "context": {
-          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj poke powinien kupić nowy klient.",
-          "potentialMisuses": "Cokolwiek innego niż zalecenia."
-        }
+          "potentialMisuses": "",
+          "potentialUses": "Przewiduj rodzaj bogactwa miliardera na podstawie innych funkcji."
+        },
+        "description": ""
       },
-      "name": "Poke"
-    },
-    "student_survey": {
       "fields": {
-        "Music": {
-          "id": "Muzyka",
-          "description": "Lubię słuchać muzyki"
-        },
-        "Slow songs or fast songs": {
-          "id": "Powolne piosenki lub szybkie piosenki",
-          "description": "Wolę szybką muzykę"
-        },
-        "Dance": {
-          "id": "Taniec",
-          "description": "Lubię muzykę taneczną"
-        },
-        "Folk": {
-          "id": "Folk",
-          "description": "Lubię muzykę ludową"
-        },
-        "Country": {
-          "id": "Kraj",
-          "description": "Lubię muzykę country"
-        },
-        "Classical music": {
-          "id": "Muzyka klasyczna",
-          "description": "Lubię muzykę klasyczną"
-        },
-        "Musical": {
-          "id": "Musical",
-          "description": "Lubię muzykę musicalową"
-        },
-        "Pop": {
-          "id": "Pop",
-          "description": "Lubię muzykę pop"
-        },
-        "Rock": {
-          "id": "Rock",
-          "description": "Lubię muzykę rockową"
-        },
-        "Metal or Hardrock": {
-          "id": "Metal lub Hardrock",
-          "description": "Lubię muzykę Metal lub Hardrock"
-        },
-        "Punk": {
-          "id": "Punk",
-          "description": "Lubię muzykę punkową"
-        },
-        "Hiphop, Rap": {
-          "id": "Hiphop, Rap",
-          "description": "Lubię muzykę hiphop lub rap"
-        },
-        "Reggae, Ska": {
-          "id": "Reggae, Ska",
-          "description": "Lubię muzykę Reggae lub Ska"
-        },
-        "Swing, Jazz": {
-          "id": "Swing, Jazz",
-          "description": "Lubię muzykę Swing lub Jazz"
-        },
-        "Rock n roll": {
-          "id": "Rock n roll",
-          "description": "Lubię muzykę rock n roll"
-        },
-        "Alternative": {
-          "id": "Alternatywa",
-          "description": "Lubię muzykę alternatywną"
-        },
-        "Latino": {
-          "id": "Latynoski",
-          "description": "Lubię muzykę latynoską"
-        },
-        "Techno, Trance": {
-          "id": "Techno, Trance",
-          "description": "Lubię muzykę Techno lub Trance"
-        },
-        "Opera": {
-          "id": "Opera",
-          "description": "Lubię muzykę operową"
-        },
-        "Movies": {
-          "id": "Filmy",
-          "description": "Lubię oglądać filmy"
-        },
-        "Horror": {
-          "id": "Horror",
-          "description": "Lubię horrory"
-        },
-        "Thriller": {
-          "id": "Dreszczowiec",
-          "description": "Lubię dreszczowce"
-        },
-        "Comedy": {
-          "id": "Komedia",
-          "description": "Lubię filmy komediowe"
-        },
-        "Romantic": {
-          "id": "Romantyczny",
-          "description": "Lubię romantyczne filmy"
-        },
-        "Sci-fi": {
-          "id": "Sci-Fi",
-          "description": "Lubię filmy science fiction"
-        },
-        "War": {
-          "id": "Wojna",
-          "description": "Lubię filmy wojenne"
-        },
-        "Fantasy/Fairy tales": {
-          "id": "Fantasy/Bajki",
-          "description": "Lubię filmy Fantasy/Bajki"
-        },
-        "Animated": {
-          "id": "Animowane",
-          "description": "Lubię filmy animowane"
-        },
-        "Documentary": {
-          "id": "Dokumentalny",
-          "description": "Lubię filmy dokumentalne"
-        },
-        "Western": {
-          "id": "Western",
-          "description": "Lubię westerny"
-        },
-        "Action": {
-          "id": "Akcja",
-          "description": "Lubię filmy akcji"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Writing": {
-          "id": "Pisanie"
-        },
-        "Flying": {
-          "id": "Latanie",
-          "description": "Boję się latania"
-        },
-        "Storm": {
-          "id": "Sztorm",
-          "description": "Boję się sztormów"
-        },
-        "Darkness": {
-          "id": "Ciemność",
-          "description": "Boję się ciemności"
-        },
-        "Heights": {
-          "id": "Wysokości",
-          "description": "Boję się wysokości"
-        },
-        "Spiders": {
-          "id": "Pająki",
-          "description": "Boję się pająków"
-        },
-        "Snakes": {
-          "id": "Węże",
-          "description": "Boję się węży"
-        },
-        "Rats": {
-          "id": "Szczury",
-          "description": "Boję się szczurów"
-        },
-        "Ageing": {
-          "id": "Starzenie się",
-          "description": "Boję się starzenia"
-        },
-        "Dangerous dogs": {
-          "id": "Groźne psy",
-          "description": "Boję się groźnych psów"
-        },
-        "Fear of public speaking": {
-          "id": "Strach przed wystąpieniami publicznymi",
-          "description": "Obawiam się wystąpień publicznych"
-        },
-        "Empathy": {
-          "id": "Empatia"
-        },
-        "Loneliness": {
-          "id": "Samotność",
-          "description": "Czuję się samotny w życiu."
-        },
-        "Achievements": {
-          "id": "Osiągnięcia"
-        },
         "Age": {
-          "id": "Wiek",
-          "description": "Wiek"
+          "description": "Ich wiek.",
+          "id": "Wiek"
         },
-        "Height": {
-          "id": "Wysokość",
-          "description": "Wysokość"
+        "Citizenship": {
+          "description": "Kraj, w którym są oficjalnym obywatelem.",
+          "id": "Obywatelstwo"
+        },
+        "Company Founding Year": {
+          "description": "Rok, w którym powstała ich firma.",
+          "id": "Rok założenia firmy"
+        },
+        "Company Name": {
+          "description": "Nazwa ich firmy.",
+          "id": "Nazwa firmy"
+        },
+        "Company Relationship": {
+          "description": "Ich związek z firmą: np. „założyciel”, „CEO”, „prezes”).",
+          "id": ""
+        },
+        "Company Sector": {
+          "description": "Sektor, w którym znajduje się ich firma, np. „Finanse” lub „Oprogramowanie”.",
+          "id": "Sektor Firmy"
+        },
+        "Company Type": {
+          "description": "Rodzaj firmy: czy była to nowa, sprywatyzowana firma, czy firma przejęta.",
+          "id": "Rodzaj firmy"
+        },
+        "Country of Residence": {
+          "description": "Kraj, w którym mieszkają.",
+          "id": "Kraj zamieszkania"
         },
         "Gender": {
-          "id": "Płeć",
-          "description": "Płeć"
+          "description": "Ich płeć",
+          "id": "Płeć"
+        },
+        "Net Worth In Billions": {
+          "description": "",
+          "id": ""
+        },
+        "Rank": {
+          "description": "",
+          "id": "Pozycja"
+        },
+        "Region": {
+          "description": "",
+          "id": "Region"
+        },
+        "Type Of Wealth": {
+          "description": "",
+          "id": "Rodzaj bogactwa"
+        },
+        "Wealth Category": {
+          "description": "",
+          "id": ""
+        },
+        "Wealth Industry": {
+          "description": "",
+          "id": ""
+        },
+        "Wealth Inherited": {
+          "description": "",
+          "id": ""
+        },
+        "Year": {
+          "description": "Rok rankingów (1996, 2001 lub 2014).",
+          "id": "Rok"
         }
       },
-      "name": "Ankieta dotycząca stylu życia uczniów"
+      "name": "Miliarderzy"
     },
     "boba_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Wszystko inne niż zalecana herbata bąbelkowa.",
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj herbaty bbelkowej powinien zamówić nowy klient."
+        },
+        "description": "Ankieta przeprowadzona wśród klientów kawiarni z herbatą bąbelkową na temat tego, czy lubią pewne kombinacje herbaty bąbelkowej."
+      },
       "fields": {
         "banana": {
+          "description": "",
           "id": "banan"
         },
+        "crystal boba": {
+          "description": "",
+          "id": ""
+        },
+        "herbal": {
+          "description": "",
+          "id": ""
+        },
+        "lychee": {
+          "description": "",
+          "id": ""
+        },
+        "mango jelly": {
+          "description": "",
+          "id": ""
+        },
         "preference": {
+          "description": "",
           "id": "preferencje"
-        }
-      },
-      "card": {
-        "description": "Ankieta przeprowadzona wśród klientów kawiarni z herbatą bąbelkową na temat tego, czy lubią pewne kombinacje herbaty bąbelkowej.",
-        "context": {
-          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj herbaty bbelkowej powinien zamówić nowy klient.",
-          "potentialMisuses": "Wszystko inne niż zalecana herbata bąbelkowa."
+        },
+        "red beans": {
+          "description": "",
+          "id": ""
+        },
+        "regular boba": {
+          "description": "",
+          "id": ""
+        },
+        "sea salt cream": {
+          "description": "",
+          "id": ""
+        },
+        "vanilla": {
+          "description": "",
+          "id": ""
         }
       },
       "name": "herbata bąbelkowa"
     },
-    "global_happiness_raw": {
+    "car_evaluation": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
       "fields": {
+        "Boot Size": {
+          "description": "",
+          "id": ""
+        },
+        "Buying Price": {
+          "description": "",
+          "id": ""
+        },
+        "Car Acceptability": {
+          "description": "",
+          "id": ""
+        },
+        "Maintenance Cost": {
+          "description": "",
+          "id": ""
+        },
+        "Number Of Doors": {
+          "description": "",
+          "id": ""
+        },
+        "Number of Passengers": {
+          "description": "",
+          "id": ""
+        },
+        "Safety Rating": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": "Ocena samochodu"
+    },
+    "census_part": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Wykorzystanie tego do czegoś takiego jak ustalenie, czy udzielić komuś pożyczki, może być głęboko niesprawiedliwe.",
+          "potentialUses": "Przewiduj, czy dochód danej osoby przekracza, czy nie przekracza 50 000 USD na podstawie poziomu wykształcenia i wieku. Przedstaw nierówności dochodowe rasowe i płciowe."
+        },
+        "description": "Dane ze spisu powszechnego w USA z 1994 r., z danymi dotyczącymi dochodów, danych osobowych i pracy. Służą do przewidywania, czy dochód danej osoby przekracza 50 000 USD."
+      },
+      "fields": {
+        "age": {
+          "description": "",
+          "id": "wiek"
+        },
+        "capital gains": {
+          "description": "",
+          "id": ""
+        },
+        "capital losses": {
+          "description": "",
+          "id": ""
+        },
+        "education level": {
+          "description": "",
+          "id": ""
+        },
+        "estimated number of people represented": {
+          "description": "",
+          "id": ""
+        },
+        "gender": {
+          "description": "",
+          "id": "płeć"
+        },
+        "hours of work per week": {
+          "description": "",
+          "id": ""
+        },
+        "income": {
+          "description": "",
+          "id": ""
+        },
+        "marital status": {
+          "description": "",
+          "id": ""
+        },
+        "native-country": {
+          "description": "",
+          "id": ""
+        },
+        "occupation": {
+          "description": "",
+          "id": ""
+        },
+        "race": {
+          "description": "",
+          "id": "rasa"
+        },
+        "relationship": {
+          "description": "",
+          "id": ""
+        },
+        "type of employment": {
+          "description": "",
+          "id": ""
+        }
+      }
+    },
+    "club_biased_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "activity": {
+          "description": "",
+          "id": ""
+        },
+        "club": {
+          "description": "",
+          "id": ""
+        },
+        "element": {
+          "description": "",
+          "id": ""
+        },
+        "free time": {
+          "description": "",
+          "id": ""
+        },
+        "make build": {
+          "description": "",
+          "id": ""
+        },
+        "meet people": {
+          "description": "",
+          "id": ""
+        },
+        "personality": {
+          "description": "",
+          "id": ""
+        },
+        "school minutes": {
+          "description": "",
+          "id": ""
+        }
+      }
+    },
+    "club_random_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "club": {
+          "description": "",
+          "id": ""
+        },
+        "color": {
+          "description": "",
+          "id": "kolor"
+        },
+        "food": {
+          "description": "",
+          "id": "jedzenie"
+        },
+        "music": {
+          "description": "",
+          "id": "muzyka"
+        },
+        "read vs tv": {
+          "description": "",
+          "id": ""
+        }
+      }
+    },
+    "club_sparse_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "activity": {
+          "description": "",
+          "id": ""
+        },
+        "club": {
+          "description": "",
+          "id": ""
+        },
+        "element": {
+          "description": "",
+          "id": ""
+        },
+        "make build": {
+          "description": "",
+          "id": ""
+        },
+        "meet people": {
+          "description": "",
+          "id": ""
+        },
+        "personality": {
+          "description": "",
+          "id": ""
+        }
+      }
+    },
+    "club_specific_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "activity": {
+          "description": "",
+          "id": ""
+        },
+        "club": {
+          "description": "",
+          "id": ""
+        },
+        "favorite movie": {
+          "description": "",
+          "id": ""
+        },
+        "lunch food": {
+          "description": "",
+          "id": ""
+        },
+        "pet you own": {
+          "description": "",
+          "id": ""
+        }
+      }
+    },
+    "cookies_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj ciasteczek powinien kupić nowy klient."
+        },
+        "description": "Ankieta przeprowadzona wśród klientów sklepu z ciasteczkami na temat tego, czy lubią określone kombinacje ciasteczek."
+      },
+      "fields": {
+        "chocolate chips": {
+          "description": "",
+          "id": ""
+        },
+        "frosting": {
+          "description": "",
+          "id": ""
+        },
+        "ice cream on top": {
+          "description": "",
+          "id": ""
+        },
+        "m and ms": {
+          "description": "",
+          "id": ""
+        },
+        "oatmeal": {
+          "description": "",
+          "id": ""
+        },
+        "preference": {
+          "description": "",
+          "id": "preferencje"
+        },
+        "raisins": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": "Ciasteczka"
+    },
+    "exoplanets": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Próbuje zgadnąć, czy na planecie może istnieć życie.",
+          "potentialUses": "Oszacuj rozmiar lub masę egzoplanety na podstawie rozmiaru, wieku lub innych aspektów gwiazdy, na których krąży."
+        },
+        "description": "Ten zbiór danych to lista egzoplanet, które są planetami krążącymi wokół innych gwiazd. Dzięki tym danym można oszacować rozmiar egzoplanety, a także inne cechy."
+      },
+      "fields": {
+        "Discovery year": {
+          "description": "",
+          "id": ""
+        },
+        "Mass in earths": {
+          "description": "",
+          "id": ""
+        },
+        "Number of planets": {
+          "description": "",
+          "id": "Liczba planet"
+        },
+        "Number of stars": {
+          "description": "",
+          "id": "Liczba gwiazd"
+        },
+        "Orbit length in earth days": {
+          "description": "",
+          "id": ""
+        },
+        "Size in earths": {
+          "description": "",
+          "id": ""
+        },
+        "Star age in billions of years": {
+          "description": "",
+          "id": "Wiek gwiazd w miliardach lat"
+        },
+        "Star host name": {
+          "description": "",
+          "id": ""
+        },
+        "Star mass in suns": {
+          "description": "",
+          "id": ""
+        },
+        "Star size in suns": {
+          "description": "",
+          "id": ""
+        },
+        "Star temperature in kelvin": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": "Egzoplanety"
+    },
+    "global_happiness_raw": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Country name": {
+          "description": "",
+          "id": ""
+        },
+        "Freedom to make life choices": {
+          "description": "",
+          "id": ""
+        },
+        "GDP per capita": {
+          "description": "",
+          "id": ""
+        },
+        "Generosity": {
+          "description": "",
+          "id": ""
+        },
+        "Healthy life expectancy at birth": {
+          "description": "",
+          "id": ""
+        },
+        "Life Ladder": {
+          "description": "",
+          "id": ""
+        },
+        "Negative affect": {
+          "description": "",
+          "id": ""
+        },
+        "Perceptions of corruption": {
+          "description": "",
+          "id": ""
+        },
+        "Positive affect": {
+          "description": "",
+          "id": ""
+        },
+        "Social support": {
+          "description": "",
+          "id": ""
+        },
         "Year": {
+          "description": "",
           "id": "Rok"
         }
       }
     },
     "heart": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
       "fields": {
         "Age": {
+          "description": "",
           "id": "Wiek"
         },
-        "Sex": {
-          "id": "Płeć"
+        "Chest Pain Type": {
+          "description": "",
+          "id": ""
         },
         "Cholesterol": {
+          "description": "",
           "id": "Cholesterol"
+        },
+        "Diagnosis of Heart Disease": {
+          "description": "",
+          "id": ""
+        },
+        "Exercise Induced Angina": {
+          "description": "",
+          "id": ""
+        },
+        "Fasting Blood Sugar > 120mg/dl": {
+          "description": "",
+          "id": ""
+        },
+        "Maximum Heart Rate Achieved": {
+          "description": "",
+          "id": ""
+        },
+        "Number of Major Vessels Colored by Flourosopy": {
+          "description": "",
+          "id": ""
+        },
+        "Resting Blood Pressure": {
+          "description": "",
+          "id": ""
+        },
+        "Resting ECG Results": {
+          "description": "",
+          "id": ""
+        },
+        "ST Depression Induced By Exercise Relative To Rest": {
+          "description": "",
+          "id": ""
+        },
+        "Sex": {
+          "description": "",
+          "id": "Płeć"
+        },
+        "Slope of Peak Exercise ST Segment": {
+          "description": "",
+          "id": ""
         }
       },
       "name": "Kondycja serca"
     },
-    "shapes_v1_toy": {
+    "housing_data": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
       "fields": {
+        "% of buildings pre-1940": {
+          "description": "",
+          "id": ""
+        },
+        "Accessibility to highways": {
+          "description": "",
+          "id": ""
+        },
+        "Bounds Charles River?": {
+          "description": "",
+          "id": ""
+        },
+        "Distance to employment centers": {
+          "description": "",
+          "id": ""
+        },
+        "Lower status population": {
+          "description": "",
+          "id": ""
+        },
+        "Median home value": {
+          "description": "",
+          "id": ""
+        },
+        "Nitric Oxide Concentration (PPM)": {
+          "description": "",
+          "id": ""
+        },
+        "Per Capita Crime Rate": {
+          "description": "",
+          "id": ""
+        },
+        "Property tax": {
+          "description": "",
+          "id": ""
+        },
+        "Proportion of Residental Land Zoned for >25Kft": {
+          "description": "",
+          "id": ""
+        },
+        "Proportion of non-retail business acres": {
+          "description": "",
+          "id": ""
+        },
+        "Rooms per dwelling": {
+          "description": "",
+          "id": ""
+        },
+        "Student-teacher ratio": {
+          "description": "",
+          "id": ""
+        },
+        "Weighted black population": {
+          "description": "",
+          "id": ""
+        }
+      }
+    },
+    "icecream_toppings_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj lodów powinien kupić nowy klient."
+        },
+        "description": "Ankieta przeprowadzona wśród klientów sklepu z lodarni na temat tego, czy lubią określone kombinacje lodów."
+      },
+      "fields": {
+        "Cherry": {
+          "description": "",
+          "id": ""
+        },
+        "Hot Fudge": {
+          "description": "",
+          "id": ""
+        },
+        "Preference": {
+          "description": "",
+          "id": ""
+        },
+        "Sprinkles": {
+          "description": "",
+          "id": ""
+        },
+        "Waffle Cone": {
+          "description": "",
+          "id": ""
+        },
+        "Whipped Cream": {
+          "description": "",
+          "id": ""
+        }
+      }
+    },
+    "insurance_cost": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": "Może być używany do przewidywania, czy ktoś jest palaczem na podstawie innych informacji ubezpieczeniowych"
+        },
+        "description": "Koszty ubezpieczenia wraz z czynnikami takimi, jak liczba dzieci, lokalizacja, palacz/niepalący, wiek, seks, BMI."
+      },
+      "fields": {
+        "age": {
+          "description": "wiek głównego beneficjenta.",
+          "id": "wiek"
+        },
+        "bmi": {
+          "description": "Wskaźnik masy ciała.",
+          "id": "bmi"
+        },
+        "charges": {
+          "description": "Indywidualne koszty leczenia rozliczane przez ubezpieczenie zdrowotne.",
+          "id": "opłaty"
+        },
+        "children": {
+          "description": "Liczba dzieci objętych ubezpieczeniem zdrowotnym.",
+          "id": "dzieci"
+        },
+        "region": {
+          "description": "",
+          "id": "region"
+        },
+        "sex": {
+          "description": "płeć wykonawcy ubezpieczenia: kobieta, mężczyzna.",
+          "id": "płeć"
+        },
+        "smoker": {
+          "description": "Czy dana osoba pali, czy nie.",
+          "id": "palacz"
+        }
+      }
+    },
+    "jeans": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Brand": {
+          "description": "",
+          "id": ""
+        },
+        "Cotton contents": {
+          "description": "",
+          "id": ""
+        },
+        "Front rivet height": {
+          "description": "",
+          "id": ""
+        },
+        "Max height of back pocket": {
+          "description": "",
+          "id": ""
+        },
+        "Max height of front pocket": {
+          "description": "",
+          "id": ""
+        },
+        "Max width of back pocket": {
+          "description": "",
+          "id": ""
+        },
+        "Max width of front pocket": {
+          "description": "",
+          "id": ""
+        },
+        "Mens or womens": {
+          "description": "",
+          "id": ""
+        },
+        "Min height of back pocket": {
+          "description": "",
+          "id": ""
+        },
+        "Min height of front pocket": {
+          "description": "",
+          "id": ""
+        },
+        "Min width of back pocket": {
+          "description": "",
+          "id": ""
+        },
+        "Min width of front pocket": {
+          "description": "",
+          "id": ""
+        },
+        "Price in dollars": {
+          "description": "",
+          "id": ""
+        },
+        "Style": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": "Pomiary dżinsów"
+    },
+    "loneliness_interests": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
+        },
+        "description": ""
+      },
+      "fields": {
+        "Active sport": {
+          "description": "",
+          "id": ""
+        },
+        "Adrenaline sports": {
+          "description": "",
+          "id": ""
+        },
+        "Art exhibitions": {
+          "description": "",
+          "id": ""
+        },
+        "Biology": {
+          "description": "",
+          "id": ""
+        },
+        "Cars": {
+          "description": "",
+          "id": ""
+        },
+        "Celebrities": {
+          "description": "",
+          "id": ""
+        },
+        "Chemistry": {
+          "description": "",
+          "id": ""
+        },
+        "Countryside, outdoors": {
+          "description": "",
+          "id": ""
+        },
+        "Dancing": {
+          "description": "",
+          "id": ""
+        },
+        "Economy Management": {
+          "description": "",
+          "id": ""
+        },
+        "Foreign languages": {
+          "description": "",
+          "id": ""
+        },
+        "Fun with friends": {
+          "description": "",
+          "id": ""
+        },
+        "Gardening": {
+          "description": "",
+          "id": ""
+        },
+        "Geography": {
+          "description": "",
+          "id": ""
+        },
+        "History": {
+          "description": "",
+          "id": ""
+        },
+        "Internet": {
+          "description": "",
+          "id": "Internet"
+        },
+        "Law": {
+          "description": "",
+          "id": ""
+        },
+        "Loneliness": {
+          "description": "Czuję się samotny w życiu.",
+          "id": "Samotność"
+        },
+        "Mathematics": {
+          "description": "",
+          "id": ""
+        },
+        "Medicine": {
+          "description": "",
+          "id": ""
+        },
+        "Musical instruments": {
+          "description": "",
+          "id": ""
+        },
+        "PC": {
+          "description": "",
+          "id": ""
+        },
+        "Passive sport": {
+          "description": "",
+          "id": ""
+        },
+        "Pets": {
+          "description": "",
+          "id": ""
+        },
+        "Physics": {
+          "description": "",
+          "id": ""
+        },
+        "Politics": {
+          "description": "",
+          "id": ""
+        },
+        "Psychology": {
+          "description": "",
+          "id": ""
+        },
+        "Reading": {
+          "description": "",
+          "id": ""
+        },
+        "Religion": {
+          "description": "",
+          "id": ""
+        },
+        "Science and technology": {
+          "description": "",
+          "id": ""
+        },
+        "Shopping": {
+          "description": "",
+          "id": ""
+        },
+        "Theatre": {
+          "description": "",
+          "id": ""
+        },
+        "Writing": {
+          "description": "",
+          "id": "Pisanie"
+        }
+      },
+      "name": "Ankieta studencka - Osobiste zainteresowania"
+    },
+    "loneliness_movies": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
+        },
+        "description": ""
+      },
+      "fields": {
+        "Action": {
+          "description": "Lubię filmy akcji",
+          "id": "Akcja"
+        },
+        "Animated": {
+          "description": "Lubię filmy animowane",
+          "id": "Animowane"
+        },
+        "Comedy": {
+          "description": "Lubię filmy komediowe",
+          "id": "Komedia"
+        },
+        "Documentary": {
+          "description": "Lubię filmy dokumentalne",
+          "id": "Dokumentalny"
+        },
+        "Fantasy/Fairy tales": {
+          "description": "Lubię filmy Fantasy/Bajki",
+          "id": "Fantasy/Bajki"
+        },
+        "Horror": {
+          "description": "Lubię horrory",
+          "id": "Horror"
+        },
+        "Loneliness": {
+          "description": "Czuję się samotny w życiu.",
+          "id": "Samotność"
+        },
+        "Movies": {
+          "description": "Lubię oglądać filmy",
+          "id": "Filmy"
+        },
+        "Romantic": {
+          "description": "Lubię romantyczne filmy",
+          "id": "Romantyczny"
+        },
+        "Sci-fi": {
+          "description": "Lubię filmy science fiction",
+          "id": "Sci-Fi"
+        },
+        "Thriller": {
+          "description": "Lubię dreszczowce",
+          "id": "Dreszczowiec"
+        },
+        "War": {
+          "description": "Lubię filmy wojenne",
+          "id": "Wojna"
+        },
+        "Western": {
+          "description": "Lubię westerny",
+          "id": "Western"
+        }
+      },
+      "name": "Ankieta studencka - Filmy"
+    },
+    "loneliness_music": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
+        },
+        "description": "Zbiór danych odpowiedzi ankietowych zebranych przez słowackich studentów w wieku 18-21 lat w FSEV UK. Większość odpowiedzi to rankingi na skali od 1 do 5. Na przykład „Ranga od 1 (zdecydowanie się nie zgadzam) do 5 (zdecydowanie się zgadzam): Często uczę się lub pracuję nawet w wolnym czasie”. Jest to podzbiór większego zbioru danych, który skupia się tylko na muzyce."
+      },
+      "fields": {
+        "Alternative": {
+          "description": "Lubię muzykę alternatywną",
+          "id": "Alternatywa"
+        },
+        "Classical music": {
+          "description": "Lubię muzykę klasyczną",
+          "id": "Muzyka klasyczna"
+        },
+        "Country": {
+          "description": "Lubię muzykę country",
+          "id": "Kraj"
+        },
+        "Dance": {
+          "description": "Lubię muzykę taneczną",
+          "id": "Taniec"
+        },
+        "Folk": {
+          "description": "Lubię muzykę ludową",
+          "id": "Folk"
+        },
+        "Hiphop, Rap": {
+          "description": "Lubię muzykę hiphop lub rap",
+          "id": "Hiphop, Rap"
+        },
+        "Latino": {
+          "description": "Lubię muzykę latynoską",
+          "id": "Latynoski"
+        },
+        "Loneliness": {
+          "description": "Czuję się samotny w życiu.",
+          "id": "Samotność"
+        },
+        "Metal or Hardrock": {
+          "description": "Lubię muzykę Metal lub Hardrock",
+          "id": "Metal lub Hardrock"
+        },
+        "Music": {
+          "description": "Lubię słuchać muzyki",
+          "id": "Muzyka"
+        },
+        "Musical": {
+          "description": "Lubię muzykę musicalową",
+          "id": "Musical"
+        },
+        "Opera": {
+          "description": "Lubię muzykę operową",
+          "id": "Opera"
+        },
+        "Pop": {
+          "description": "Lubię muzykę pop",
+          "id": "Pop"
+        },
+        "Punk": {
+          "description": "Lubię muzykę punkową",
+          "id": "Punk"
+        },
+        "Reggae, Ska": {
+          "description": "Lubię muzykę Reggae lub Ska",
+          "id": "Reggae, Ska"
+        },
+        "Rock": {
+          "description": "Lubię muzykę rockową",
+          "id": "Rock"
+        },
+        "Rock n roll": {
+          "description": "Lubię muzykę rock n roll",
+          "id": "Rock n roll"
+        },
+        "Slow songs or fast songs": {
+          "description": "Wolę szybką muzykę",
+          "id": "Powolne piosenki lub szybkie piosenki"
+        },
+        "Swing, Jazz": {
+          "description": "Lubię muzykę Swing lub Jazz",
+          "id": "Swing, Jazz"
+        },
+        "Techno, Trance": {
+          "description": "Lubię muzykę Techno lub Trance",
+          "id": "Techno, Trance"
+        }
+      },
+      "name": "Ankieta studencka - Muzyka"
+    },
+    "loneliness_personality": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
+        },
+        "description": "Zbiór danych odpowiedzi ankietowych zebranych przez słowackich studentów w wieku 18-21 lat w FSEV UK. Większość odpowiedzi to rankingi na skali od 1 do 5. Na przykład „Ranga od 1 (zdecydowanie się nie zgadzam) do 5 (zdecydowanie się zgadzam): Często uczę się lub pracuję nawet w wolnym czasie”. Jest to podzbiór większego zbioru danych, który koncentruje się tylko na stwierdzeniach osobowości."
+      },
+      "fields": {
+        "Assertiveness": {
+          "description": "",
+          "id": ""
+        },
+        "Friends versus money": {
+          "description": "",
+          "id": ""
+        },
+        "Funniness": {
+          "description": "",
+          "id": ""
+        },
+        "Judgment calls": {
+          "description": "",
+          "id": ""
+        },
+        "Loneliness": {
+          "description": "Czuję się samotny w życiu.",
+          "id": "Samotność"
+        },
+        "Number of friends": {
+          "description": "",
+          "id": ""
+        },
+        "Prioritising workload": {
+          "description": "",
+          "id": ""
+        },
+        "Reliability": {
+          "description": "",
+          "id": ""
+        },
+        "Socializing": {
+          "description": "",
+          "id": ""
+        },
+        "Waiting": {
+          "description": "",
+          "id": ""
+        },
+        "Workaholism": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": "Ankieta uczniowska - Osobowość"
+    },
+    "loneliness_phobias": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
+        },
+        "description": "Zbiór danych odpowiedzi ankietowych zebranych przez słowackich studentów w wieku 18-21 lat w FSEV UK. Większość odpowiedzi to rankingi na skali od 1 do 5. Na przykład „Ranga od 1 (zdecydowanie się nie zgadzam) do 5 (zdecydowanie się zgadzam): Często uczę się lub pracuję nawet w wolnym czasie”. Jest to podzbiór większego zbioru danych, który skupia się tylko na muzyce."
+      },
+      "fields": {
+        "Ageing": {
+          "description": "Boję się starzenia",
+          "id": "Starzenie się"
+        },
+        "Dangerous dogs": {
+          "description": "Boję się groźnych psów",
+          "id": "Groźne psy"
+        },
+        "Darkness": {
+          "description": "Boję się ciemności",
+          "id": "Ciemność"
+        },
+        "Fear of public speaking": {
+          "description": "Obawiam się wystąpień publicznych",
+          "id": "Strach przed wystąpieniami publicznymi"
+        },
+        "Flying": {
+          "description": "Boję się latania",
+          "id": "Latanie"
+        },
+        "Heights": {
+          "description": "Boję się wysokości",
+          "id": "Wysokości"
+        },
+        "Loneliness": {
+          "description": "Czuję się samotny w życiu.",
+          "id": "Samotność"
+        },
+        "Rats": {
+          "description": "Boję się szczurów",
+          "id": "Szczury"
+        },
+        "Snakes": {
+          "description": "Boję się węży",
+          "id": "Węże"
+        },
+        "Spiders": {
+          "description": "Boję się pająków",
+          "id": "Pająki"
+        },
+        "Storm": {
+          "description": "Boję się sztormów",
+          "id": "Sztorm"
+        }
+      },
+      "name": "Ankieta studencka - Fobie"
+    },
+    "medical_priority": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": "Dane zebrane przez szpital na temat wszystkich pacjentów, którzy trafili na izbę przyjęć w ciągu jednego miesiąca."
+      },
+      "fields": {
+        "age": {
+          "description": "Przedziały wiekowe pacjenta.",
+          "id": "wiek"
+        },
+        "area_of_pain": {
+          "description": "Gdzie znajdował się ból.",
+          "id": "area_of_pain"
+        },
+        "bleeding": {
+          "description": "Czy pacjent krwawił, czy nie.",
+          "id": "krwawienie"
+        },
+        "decision": {
+          "description": "Jak szybko pacjent otrzymał leczenie.",
+          "id": "decyzja"
+        },
+        "gender": {
+          "description": "Płeć pacjenta.",
+          "id": "płeć"
+        },
+        "race": {
+          "description": "Informacje rasowe o pacjencie.",
+          "id": "rasa"
+        },
+        "shortness_of_breath": {
+          "description": "Czy pacjent miał duszność.",
+          "id": "shortness_of_breath"
+        },
+        "weight": {
+          "description": "Zakresy wagowe dla pacjenta.",
+          "id": "waga"
+        }
+      },
+      "name": "Priorytet medyczny"
+    },
+    "movies": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": "Na przykład, określ kasę filmu według jego budżetu lub gatunku."
+        },
+        "description": "Zbiór danych o filmach wytworzonych w latach 1986-2016, z numerami kasowymi, ocenami, wynikami IMDB i innymi."
+      },
+      "fields": {
+        "Budget": {
+          "description": "",
+          "id": ""
+        },
+        "Company": {
+          "description": "",
+          "id": ""
+        },
+        "Country": {
+          "description": "",
+          "id": "Kraj"
+        },
+        "Director": {
+          "description": "Reżyser filmu.",
+          "id": "Dyrektor"
+        },
+        "Genre": {
+          "description": "Gatunek filmu.",
+          "id": ""
+        },
+        "Gross": {
+          "description": "",
+          "id": ""
+        },
+        "Name": {
+          "description": "Nazwa filmu.",
+          "id": "Imię/Nazwisko"
+        },
+        "Rating": {
+          "description": "",
+          "id": ""
+        },
+        "Released": {
+          "description": "Miesiąc, w którym został wydany.",
+          "id": ""
+        },
+        "Runtime": {
+          "description": "",
+          "id": ""
+        },
+        "Score": {
+          "description": "",
+          "id": "Wynik"
+        },
+        "Star": {
+          "description": "Główny aktor lub aktorka.",
+          "id": "Star"
+        },
+        "Votes": {
+          "description": "",
+          "id": "Głosy"
+        },
+        "Writer": {
+          "description": "",
+          "id": "Pisarz"
+        },
+        "Year": {
+          "description": "Rok, w którym został wydany.",
+          "id": "Rok"
+        }
+      },
+      "name": "Statystyki Filmów"
+    },
+    "naan_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Cokolwiek innego niż zalecenia.",
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj naan powinien zamówić nowy klient."
+        },
+        "description": "Ankieta przeprowadzona wśród klientów indyjskiej restauracji na temat tego, czy lubią pewne kombinacje naan."
+      },
+      "fields": {
+        "cheese": {
+          "description": "",
+          "id": "ser"
+        },
+        "cherries": {
+          "description": "",
+          "id": ""
+        },
+        "chicken": {
+          "description": "",
+          "id": "kurczak"
+        },
+        "garlic": {
+          "description": "",
+          "id": "czosnek"
+        },
+        "lamb": {
+          "description": "",
+          "id": "owieczka"
+        },
+        "nuts": {
+          "description": "",
+          "id": ""
+        },
+        "onion": {
+          "description": "",
+          "id": "cebula"
+        },
+        "potatoes": {
+          "description": "",
+          "id": ""
+        },
+        "preference": {
+          "description": "",
+          "id": "preferencje"
+        },
+        "shaved coconut": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": "Naan"
+    },
+    "nutrition": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": "Na przykład określ, ile kalorii ma żywność na podstawie zawartości składników odżywczych."
+        },
+        "description": ""
+      },
+      "fields": {
+        "Ash": {
+          "description": "Zawartość popiołu reprezentuje całkowitą zawartość minerałów w żywności. Mierzone w gramach (g).",
+          "id": "Popiół"
+        },
+        "Beta Carotene": {
+          "description": "Rodzaj cząsteczki lipidów, mierzonej w miligramach (mg).",
+          "id": "Beta karoten"
+        },
+        "Carbohydrate": {
+          "description": "",
+          "id": "Węglowodany"
+        },
+        "Category": {
+          "description": "Ogólna kategoria żywności, do której a rzecz.",
+          "id": "Kategoria"
+        },
+        "Cholesterol": {
+          "description": "",
+          "id": "Cholesterol"
+        },
+        "Description": {
+          "description": "Pełny opis rzeczy.",
+          "id": "Opis"
+        },
+        "Fat: Monosaturated Fat": {
+          "description": "",
+          "id": "Tłuszcz: Tłuszcz monosaturowany"
+        },
+        "Fat: Polysaturated Fat": {
+          "description": "",
+          "id": "Tłuszcz: tłuszcz wielonasycony"
+        },
+        "Fat: Saturated Fat": {
+          "description": "",
+          "id": "Tłuszcz: Tłuszcz nasycony"
+        },
+        "Fat: Total Lipid": {
+          "description": "",
+          "id": "Tłuszcz: całkowity lipid"
+        },
+        "Fiber": {
+          "description": "",
+          "id": "Błonnik"
+        },
+        "Kilocalories": {
+          "description": "",
+          "id": "Kilokalorie"
+        },
+        "Lutein and Zeaxanthin": {
+          "description": "",
+          "id": "Luteina i zeaksantyna"
+        },
+        "Lycopene": {
+          "description": "",
+          "id": "Likopen"
+        },
+        "Major Minerals: Calcium": {
+          "description": "",
+          "id": "Główne minerały: wapń"
+        },
+        "Major Minerals: Copper": {
+          "description": "",
+          "id": "Główne minerały: miedź"
+        },
+        "Major Minerals: Iron": {
+          "description": "",
+          "id": "Główne minerały: żelazo"
+        },
+        "Major Minerals: Magnesium": {
+          "description": "",
+          "id": "Główne minerały: magnez"
+        },
+        "Major Minerals: Phosphorus": {
+          "description": "",
+          "id": "Główne minerały: fosfor"
+        },
+        "Major Minerals: Potassium": {
+          "description": "",
+          "id": "Główne minerały: Potas"
+        },
+        "Major Minerals: Sodium": {
+          "description": "",
+          "id": "Główne minerały: Sód"
+        },
+        "Major Minerals: Zinc": {
+          "description": "",
+          "id": "Główne minerały: cynk"
+        },
+        "Manganese": {
+          "description": "",
+          "id": "Mangan"
+        },
+        "Niacin": {
+          "description": "",
+          "id": "Niacyna"
+        },
+        "Protein": {
+          "description": "",
+          "id": "Białko"
+        },
+        "Retinol": {
+          "description": "",
+          "id": "Retinol"
+        },
+        "Riboflavin": {
+          "description": "",
+          "id": "Ryboflawina"
+        },
+        "Selenium": {
+          "description": "",
+          "id": "Selen"
+        },
+        "Sugar Total": {
+          "description": "",
+          "id": "Cukier całkowity"
+        },
+        "Thiamin": {
+          "description": "",
+          "id": "Tiamina"
+        },
+        "Vitamins: Vitamin A - IU": {
+          "description": "",
+          "id": "Witaminy: Witamina A - IU"
+        },
+        "Vitamins: Vitamin A - RAE": {
+          "description": "",
+          "id": "Witaminy: Witamina A - RAE"
+        },
+        "Vitamins: Vitamin B12": {
+          "description": "",
+          "id": "Witaminy: Witamina B12"
+        },
+        "Vitamins: Vitamin B6": {
+          "description": "",
+          "id": "Witaminy: Witamina B6"
+        },
+        "Vitamins: Vitamin C": {
+          "description": "",
+          "id": "Witaminy: witamina C"
+        },
+        "Vitamins: Vitamin E": {
+          "description": "",
+          "id": "Witaminy: witamina E"
+        },
+        "Vitamins: Vitamin K": {
+          "description": "",
+          "id": "Witaminy: witamina K"
+        },
+        "Water": {
+          "description": "",
+          "id": "Woda"
+        }
+      },
+      "name": "Odżywianie"
+    },
+    "pizza_toppings_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Cokolwiek innego niż rekomendacje pizzy.",
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj pizzy powinien kupić nowy klient."
+        },
+        "description": ""
+      },
+      "fields": {
+        "Anchovies": {
+          "description": "",
+          "id": ""
+        },
+        "Bacon": {
+          "description": "",
+          "id": ""
+        },
+        "Broccoli": {
+          "description": "",
+          "id": ""
+        },
+        "Extra Cheese": {
+          "description": "",
+          "id": ""
+        },
+        "Fried Chicken": {
+          "description": "",
+          "id": ""
+        },
+        "Ham": {
+          "description": "",
+          "id": ""
+        },
+        "Olives": {
+          "description": "",
+          "id": ""
+        },
+        "Pepperoni": {
+          "description": "",
+          "id": ""
+        },
+        "Peppers": {
+          "description": "",
+          "id": ""
+        },
+        "Preference": {
+          "description": "",
+          "id": ""
+        },
+        "Sausage": {
+          "description": "",
+          "id": ""
+        }
+      }
+    },
+    "poke_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Cokolwiek innego niż zalecenia.",
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj poke powinien kupić nowy klient."
+        },
+        "description": "Badanie klientów w sklepie poke, czy lubią pewne kombinacje poke."
+      },
+      "fields": {
+        "avocado": {
+          "description": "",
+          "id": "awokado"
+        },
+        "chili": {
+          "description": "",
+          "id": "chili"
+        },
+        "furikake": {
+          "description": "",
+          "id": "furikake"
+        },
+        "ginger": {
+          "description": "",
+          "id": "imbir"
+        },
+        "masago": {
+          "description": "",
+          "id": "masago"
+        },
+        "onion": {
+          "description": "",
+          "id": "cebula"
+        },
+        "preference": {
+          "description": "",
+          "id": "preferencje"
+        },
+        "seaweed": {
+          "description": "Czy w worku wmieszane są wodorosty?",
+          "id": "wodorost"
+        },
+        "surimi": {
+          "description": "",
+          "id": "surimi"
+        },
+        "wasabi": {
+          "description": "",
+          "id": "wasabi"
+        }
+      },
+      "name": "Poke"
+    },
+    "poutine_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Cokolwiek innego niż zalecenia.",
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj poutine powinien zamówić nowy klient."
+        },
+        "description": "Ankieta przeprowadzona wśród klientów restauracji na temat tego, czy lubią pewne kombinacje poutine."
+      },
+      "fields": {
+        "bacon": {
+          "description": "",
+          "id": "boczek"
+        },
+        "bell peppers": {
+          "description": "",
+          "id": ""
+        },
+        "cheese": {
+          "description": "",
+          "id": "ser"
+        },
+        "gravy": {
+          "description": "",
+          "id": ""
+        },
+        "lobster": {
+          "description": "",
+          "id": "lobster"
+        },
+        "meat": {
+          "description": "",
+          "id": "mięso"
+        },
+        "mushrooms": {
+          "description": "",
+          "id": "grzyby"
+        },
+        "pork": {
+          "description": "",
+          "id": ""
+        },
+        "preference": {
+          "description": "",
+          "id": "preferencje"
+        },
+        "scallions": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": "Poutine"
+    },
+    "raspado_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Cokolwiek innego niż zalecenia.",
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj raspado powinien zamówić nowy klient."
+        },
+        "description": "Ankieta przeprowadzona wśród klientów sklepu raspado na temat tego, czy lubią pewne kombinacje raspado."
+      },
+      "fields": {
+        "chili en polbo": {
+          "description": "",
+          "id": ""
+        },
+        "coconut": {
+          "description": "",
+          "id": ""
+        },
+        "lechera": {
+          "description": "",
+          "id": ""
+        },
+        "lime": {
+          "description": "",
+          "id": "limonka"
+        },
+        "mango": {
+          "description": "",
+          "id": ""
+        },
+        "pecan": {
+          "description": "",
+          "id": ""
+        },
+        "preference": {
+          "description": "",
+          "id": "preferencje"
+        },
+        "strawberry": {
+          "description": "",
+          "id": "truskawka"
+        },
+        "vanilla": {
+          "description": "",
+          "id": ""
+        }
+      },
+      "name": "Raspado"
+    },
+    "safari_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Śledzone są tylko niektóre rodzaje zwierząt, więc unikaj wyciągania pochopnych wniosków na temat zwierząt, które nie są częścią tego zestawu (jak zebry czy hipopotamy).",
+          "potentialUses": "Może służyć do określenia najlepszego czasu na safari, aby upewnić się, że zobaczysz jak najwięcej dzikiej przyrody."
+        },
+        "description": "Dane zebrane z „African Safari Tours”, firmy oferującej wycieczki po równinach Serengeti w Afryce."
+      },
+      "fields": {
+        "alligator": {
+          "description": "",
+          "id": "alligator"
+        },
+        "antelope": {
+          "description": "",
+          "id": ""
+        },
+        "dayOfMonth": {
+          "description": "",
+          "id": ""
+        },
+        "elephant": {
+          "description": "",
+          "id": "słoń"
+        },
+        "lions": {
+          "description": "",
+          "id": ""
+        },
+        "mosquitos": {
+          "description": "",
+          "id": ""
+        },
+        "overgrowthPercent": {
+          "description": "",
+          "id": ""
+        },
+        "people": {
+          "description": "",
+          "id": "osoby"
+        },
+        "rhino": {
+          "description": "",
+          "id": "nosorożec "
+        },
+        "temperature": {
+          "description": "",
+          "id": ""
+        },
+        "ticketRevenue": {
+          "description": "",
+          "id": ""
+        },
+        "trees": {
+          "description": "",
+          "id": "drzewa"
+        }
+      },
+      "name": "Safari"
+    },
+    "salad_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Cokolwiek innego niż zalecenia.",
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj sałaty powinien zamówić nowy klient."
+        },
+        "description": "Ankieta przeorowadzona wśród klientów restauracji na temat tego, czy lubią określone kombinacje sałatek."
+      },
+      "fields": {
+        "avocado": {
+          "description": "",
+          "id": "awokado"
+        },
+        "beans": {
+          "description": "",
+          "id": "fasolki"
+        },
+        "cheese": {
+          "description": "",
+          "id": "ser"
+        },
+        "chicken": {
+          "description": "",
+          "id": "kurczak"
+        },
+        "fruit": {
+          "description": "",
+          "id": "owoc"
+        },
+        "italian dressing": {
+          "description": "",
+          "id": ""
+        },
+        "preference": {
+          "description": "",
+          "id": "preferencje"
+        },
+        "ranch": {
+          "description": "",
+          "id": ""
+        },
+        "seeds": {
+          "description": "",
+          "id": ""
+        },
+        "tomato": {
+          "description": "",
+          "id": "pomidor"
+        }
+      },
+      "name": "Sałatka"
+    },
+    "salsa_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Cokolwiek innego niż zalecenia dotyczące salsy.",
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj salsy powinien zamówić nowy klient."
+        },
+        "description": "Ankieta przeprowadzona wśród klientów sklepu taco na temat tego, czy lubią określone kombinacje salsy."
+      },
+      "fields": {
+        "avocado": {
+          "description": "Czy salsa zawiera awokado?",
+          "id": "awokado"
+        },
+        "beans": {
+          "description": "Czy salsa zawiera fasolę?",
+          "id": "fasolki"
+        },
+        "cilantro": {
+          "description": "Czy salsa zawiera kolendrę?",
+          "id": "kolendra"
+        },
+        "corn": {
+          "description": "Czy salsa zawiera kukurydzę?",
+          "id": "kukurydza"
+        },
+        "cumin": {
+          "description": "Czy salsa zawiera kminek?",
+          "id": "kminek"
+        },
+        "garlic": {
+          "description": "Czy salsa zawiera czosnek?",
+          "id": "czosnek"
+        },
+        "lime": {
+          "description": "Czy salsa zawiera limonkę?",
+          "id": "limonka"
+        },
+        "onion": {
+          "description": "Czy salsa zawiera cebulę?",
+          "id": "cebula"
+        },
+        "preference": {
+          "description": "Lubisz czy nie lubisz salsy?",
+          "id": "preferencje"
+        },
+        "vinegar": {
+          "description": "Czy salsa zawiera ocet?",
+          "id": "ocet"
+        }
+      },
+      "name": "Salsa"
+    },
+    "shapes_v1_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "background color": {
+          "description": "",
+          "id": ""
+        },
+        "border color": {
+          "description": "",
+          "id": ""
+        },
+        "fill color": {
+          "description": "",
+          "id": ""
+        },
+        "shape": {
+          "description": "",
+          "id": ""
+        },
         "sides": {
+          "description": "",
           "id": "boki"
         },
         "size": {
+          "description": "",
           "id": "rozmiar"
         }
       },
       "name": "Kształty V1"
     },
-    "pizza_toppings_toy": {
+    "shapes_v2_toy": {
       "card": {
         "context": {
-          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj pizzy powinien kupić nowy klient.",
-          "potentialMisuses": "Cokolwiek innego niż rekomendacje pizzy."
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "background color": {
+          "description": "",
+          "id": ""
+        },
+        "border color": {
+          "description": "",
+          "id": ""
+        },
+        "equal angles": {
+          "description": "Czy kształt ma wszystkie równe kąty?",
+          "id": "równe kąty"
+        },
+        "equal sides": {
+          "description": "",
+          "id": "równe boki"
+        },
+        "fill color": {
+          "description": "",
+          "id": ""
+        },
+        "has corners": {
+          "description": "Czy kształt ma rogi?",
+          "id": "ma narożniki"
+        },
+        "shape": {
+          "description": "",
+          "id": ""
+        },
+        "sides": {
+          "description": "",
+          "id": "boki"
+        },
+        "size": {
+          "description": "",
+          "id": "rozmiar"
+        },
+        "symmetry": {
+          "description": "",
+          "id": "symetria"
+        }
+      },
+      "name": "Kształty V2"
+    },
+    "shoe_survey_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Cokolwiek innego niż zamierzone zastosowania.",
+          "potentialUses": "Poleć parę butów na podstawie osobistych pytań."
+        },
+        "description": "Ankieta na temat Twoich preferencji, aby pomóc polecić, jakie buty powinieneś nosić."
+      },
+      "fields": {
+        "day": {
+          "description": "",
+          "id": "dzień"
+        },
+        "notice shoes": {
+          "description": "Obchodzi cię, czy ludzie zauważą Twoje buty?",
+          "id": ""
+        },
+        "shoe": {
+          "description": "Jakie buty zamierzasz dziś założyć?",
+          "id": "but"
+        },
+        "socks": {
+          "description": "",
+          "id": "skarpety"
+        },
+        "spend time": {
+          "description": "",
+          "id": "spędzać czas"
+        },
+        "weather": {
+          "description": "",
+          "id": "pogoda"
+        }
+      },
+      "name": "Ankieta dotycząca butów"
+    },
+    "songs": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Artist": {
+          "description": "",
+          "id": "Artysta"
+        },
+        "Billboard rank peak": {
+          "description": "",
+          "id": ""
+        },
+        "Duration in seconds": {
+          "description": "",
+          "id": ""
+        },
+        "Genre": {
+          "description": "",
+          "id": ""
+        },
+        "Loudness score": {
+          "description": "",
+          "id": ""
+        },
+        "Tempo in beats per minute": {
+          "description": "",
+          "id": ""
+        },
+        "Title": {
+          "description": "",
+          "id": ""
+        },
+        "Weeks on the Billboard Top 100": {
+          "description": "",
+          "id": ""
+        },
+        "Year": {
+          "description": "",
+          "id": "Rok"
+        }
+      },
+      "name": "Najlepsze piosenki"
+    },
+    "student_alcohol_consumption": {
+      "card": {
+        "context": {
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "G1": {
+          "description": "",
+          "id": ""
+        },
+        "G2": {
+          "description": "",
+          "id": ""
+        },
+        "G3": {
+          "description": "",
+          "id": ""
+        },
+        "absences": {
+          "description": "",
+          "id": ""
+        },
+        "activities": {
+          "description": "",
+          "id": ""
+        },
+        "address": {
+          "description": "",
+          "id": "adres"
+        },
+        "age": {
+          "description": "Wiek ucznia.",
+          "id": "wiek"
+        },
+        "daily alcohol": {
+          "description": "",
+          "id": ""
+        },
+        "failures": {
+          "description": "",
+          "id": ""
+        },
+        "family relationships": {
+          "description": "",
+          "id": ""
+        },
+        "family size": {
+          "description": "",
+          "id": ""
+        },
+        "family support": {
+          "description": "",
+          "id": ""
+        },
+        "father's education": {
+          "description": "",
+          "id": ""
+        },
+        "father's job": {
+          "description": "",
+          "id": ""
+        },
+        "freetime": {
+          "description": "",
+          "id": ""
+        },
+        "go out": {
+          "description": "",
+          "id": ""
+        },
+        "guardian": {
+          "description": "",
+          "id": ""
+        },
+        "health": {
+          "description": "",
+          "id": "zdrowie"
+        },
+        "higher": {
+          "description": "",
+          "id": ""
+        },
+        "internet": {
+          "description": "",
+          "id": ""
+        },
+        "mother's education": {
+          "description": "",
+          "id": ""
+        },
+        "mother's job": {
+          "description": "",
+          "id": ""
+        },
+        "nursery": {
+          "description": "",
+          "id": ""
+        },
+        "paid": {
+          "description": "",
+          "id": ""
+        },
+        "parent cohabitation status": {
+          "description": "",
+          "id": ""
+        },
+        "reason": {
+          "description": "",
+          "id": ""
+        },
+        "romantic": {
+          "description": "",
+          "id": ""
+        },
+        "school": {
+          "description": "",
+          "id": "szkoła"
+        },
+        "school support": {
+          "description": "",
+          "id": ""
+        },
+        "sex": {
+          "description": "Płeć ucznia (binarna).",
+          "id": "płeć"
+        },
+        "studytime": {
+          "description": "",
+          "id": ""
+        },
+        "traveltime": {
+          "description": "",
+          "id": ""
+        },
+        "weekend alcohol": {
+          "description": "",
+          "id": ""
         }
       }
     },
-    "car_evaluation": {
-      "name": "Ocena samochodu"
-    },
-    "loneliness_personality": {
-      "fields": {
-        "Loneliness": {
-          "id": "Samotność",
-          "description": "Czuję się samotny w życiu."
-        }
-      },
+    "student_survey": {
       "card": {
-        "description": "Zbiór danych odpowiedzi ankietowych zebranych przez słowackich studentów w wieku 18-21 lat w FSEV UK. Większość odpowiedzi to rankingi na skali od 1 do 5. Na przykład „Ranga od 1 (zdecydowanie się nie zgadzam) do 5 (zdecydowanie się zgadzam): Często uczę się lub pracuję nawet w wolnym czasie”. Jest to podzbiór większego zbioru danych, który koncentruje się tylko na stwierdzeniach osobowości.",
         "context": {
-          "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
+          "potentialMisuses": "",
+          "potentialUses": ""
+        },
+        "description": ""
+      },
+      "fields": {
+        "Achievements": {
+          "description": "",
+          "id": "Osiągnięcia"
+        },
+        "Action": {
+          "description": "Lubię filmy akcji",
+          "id": "Akcja"
+        },
+        "Active sport": {
+          "description": "",
+          "id": ""
+        },
+        "Adrenaline sports": {
+          "description": "",
+          "id": ""
+        },
+        "Age": {
+          "description": "Wiek",
+          "id": "Wiek"
+        },
+        "Ageing": {
+          "description": "Boję się starzenia",
+          "id": "Starzenie się"
+        },
+        "Alcohol": {
+          "description": "",
+          "id": ""
+        },
+        "Alternative": {
+          "description": "Lubię muzykę alternatywną",
+          "id": "Alternatywa"
+        },
+        "Animated": {
+          "description": "Lubię filmy animowane",
+          "id": "Animowane"
+        },
+        "Appearence and gestures": {
+          "description": "",
+          "id": ""
+        },
+        "Art exhibitions": {
+          "description": "",
+          "id": ""
+        },
+        "Assertiveness": {
+          "description": "",
+          "id": ""
+        },
+        "Biology": {
+          "description": "",
+          "id": ""
+        },
+        "Borrowed stuff": {
+          "description": "",
+          "id": ""
+        },
+        "Branded clothing": {
+          "description": "",
+          "id": ""
+        },
+        "Cars": {
+          "description": "",
+          "id": ""
+        },
+        "Celebrities": {
+          "description": "",
+          "id": ""
+        },
+        "Changing the past": {
+          "description": "",
+          "id": ""
+        },
+        "Charity": {
+          "description": "",
+          "id": ""
+        },
+        "Cheating in school": {
+          "description": "",
+          "id": ""
+        },
+        "Chemistry": {
+          "description": "",
+          "id": ""
+        },
+        "Children": {
+          "description": "",
+          "id": ""
+        },
+        "Classical music": {
+          "description": "Lubię muzykę klasyczną",
+          "id": "Muzyka klasyczna"
+        },
+        "Comedy": {
+          "description": "Lubię filmy komediowe",
+          "id": "Komedia"
+        },
+        "Compassion to animals": {
+          "description": "",
+          "id": ""
+        },
+        "Country": {
+          "description": "Lubię muzykę country",
+          "id": "Kraj"
+        },
+        "Countryside, outdoors": {
+          "description": "",
+          "id": ""
+        },
+        "Criminal damage": {
+          "description": "",
+          "id": ""
+        },
+        "Daily events": {
+          "description": "",
+          "id": ""
+        },
+        "Dance": {
+          "description": "Lubię muzykę taneczną",
+          "id": "Taniec"
+        },
+        "Dancing": {
+          "description": "",
+          "id": ""
+        },
+        "Dangerous dogs": {
+          "description": "Boję się groźnych psów",
+          "id": "Groźne psy"
+        },
+        "Darkness": {
+          "description": "Boję się ciemności",
+          "id": "Ciemność"
+        },
+        "Decision making": {
+          "description": "",
+          "id": ""
+        },
+        "Documentary": {
+          "description": "Lubię filmy dokumentalne",
+          "id": "Dokumentalny"
+        },
+        "Dreams": {
+          "description": "",
+          "id": ""
+        },
+        "Eating to survive": {
+          "description": "",
+          "id": ""
+        },
+        "Economy Management": {
+          "description": "",
+          "id": ""
+        },
+        "Education": {
+          "description": "",
+          "id": ""
+        },
+        "Elections": {
+          "description": "",
+          "id": ""
+        },
+        "Empathy": {
+          "description": "",
+          "id": "Empatia"
+        },
+        "Energy levels": {
+          "description": "",
+          "id": ""
+        },
+        "Entertainment spending": {
+          "description": "",
+          "id": ""
+        },
+        "Fake": {
+          "description": "",
+          "id": ""
+        },
+        "Fantasy/Fairy tales": {
+          "description": "Lubię filmy Fantasy/Bajki",
+          "id": "Fantasy/Bajki"
+        },
+        "Fear of public speaking": {
+          "description": "Obawiam się wystąpień publicznych",
+          "id": "Strach przed wystąpieniami publicznymi"
+        },
+        "Final judgement": {
+          "description": "",
+          "id": ""
+        },
+        "Finances": {
+          "description": "",
+          "id": ""
+        },
+        "Finding lost valuables": {
+          "description": "",
+          "id": ""
+        },
+        "Flying": {
+          "description": "Boję się latania",
+          "id": "Latanie"
+        },
+        "Folk": {
+          "description": "Lubię muzykę ludową",
+          "id": "Folk"
+        },
+        "Foreign languages": {
+          "description": "",
+          "id": ""
+        },
+        "Friends versus money": {
+          "description": "",
+          "id": ""
+        },
+        "Fun with friends": {
+          "description": "",
+          "id": ""
+        },
+        "Funniness": {
+          "description": "",
+          "id": ""
+        },
+        "Gardening": {
+          "description": "",
+          "id": ""
+        },
+        "Gender": {
+          "description": "Płeć",
+          "id": "Płeć"
+        },
+        "Geography": {
+          "description": "",
+          "id": ""
+        },
+        "Getting angry": {
+          "description": "",
+          "id": ""
+        },
+        "Getting up": {
+          "description": "",
+          "id": ""
+        },
+        "Giving": {
+          "description": "",
+          "id": ""
+        },
+        "God": {
+          "description": "",
+          "id": ""
+        },
+        "Happiness in life": {
+          "description": "",
+          "id": ""
+        },
+        "Health": {
+          "description": "",
+          "id": ""
+        },
+        "Healthy eating": {
+          "description": "",
+          "id": ""
+        },
+        "Height": {
+          "description": "Wysokość",
+          "id": "Wysokość"
+        },
+        "Heights": {
+          "description": "Boję się wysokości",
+          "id": "Wysokości"
+        },
+        "Hiphop, Rap": {
+          "description": "Lubię muzykę hiphop lub rap",
+          "id": "Hiphop, Rap"
+        },
+        "History": {
+          "description": "",
+          "id": ""
+        },
+        "Horror": {
+          "description": "Lubię horrory",
+          "id": "Horror"
+        },
+        "House - block of flats": {
+          "description": "",
+          "id": ""
+        },
+        "Hypochondria": {
+          "description": "",
+          "id": ""
+        },
+        "Interests or hobbies": {
+          "description": "",
+          "id": ""
+        },
+        "Internet": {
+          "description": "",
+          "id": "Internet"
+        },
+        "Internet usage": {
+          "description": "",
+          "id": ""
+        },
+        "Judgment calls": {
+          "description": "",
+          "id": ""
+        },
+        "Keeping promises": {
+          "description": "",
+          "id": ""
+        },
+        "Knowing the right people": {
+          "description": "",
+          "id": ""
+        },
+        "Latino": {
+          "description": "Lubię muzykę latynoską",
+          "id": "Latynoski"
+        },
+        "Law": {
+          "description": "",
+          "id": ""
+        },
+        "Left - right handed": {
+          "description": "",
+          "id": ""
+        },
+        "Life struggles": {
+          "description": "",
+          "id": ""
+        },
+        "Loneliness": {
+          "description": "Czuję się samotny w życiu.",
+          "id": "Samotność"
+        },
+        "Loss of interest": {
+          "description": "",
+          "id": ""
+        },
+        "Lying": {
+          "description": "",
+          "id": ""
+        },
+        "Mathematics": {
+          "description": "",
+          "id": ""
+        },
+        "Medicine": {
+          "description": "",
+          "id": ""
+        },
+        "Metal or Hardrock": {
+          "description": "Lubię muzykę Metal lub Hardrock",
+          "id": "Metal lub Hardrock"
+        },
+        "Mood swings": {
+          "description": "",
+          "id": ""
+        },
+        "Movies": {
+          "description": "Lubię oglądać filmy",
+          "id": "Filmy"
+        },
+        "Music": {
+          "description": "Lubię słuchać muzyki",
+          "id": "Muzyka"
+        },
+        "Musical": {
+          "description": "Lubię muzykę musicalową",
+          "id": "Musical"
+        },
+        "Musical instruments": {
+          "description": "",
+          "id": ""
+        },
+        "New environment": {
+          "description": "",
+          "id": ""
+        },
+        "Number of friends": {
+          "description": "",
+          "id": ""
+        },
+        "Number of siblings": {
+          "description": "",
+          "id": ""
+        },
+        "Only child": {
+          "description": "",
+          "id": ""
+        },
+        "Opera": {
+          "description": "Lubię muzykę operową",
+          "id": "Opera"
+        },
+        "PC": {
+          "description": "",
+          "id": ""
+        },
+        "Parents' advice": {
+          "description": "",
+          "id": ""
+        },
+        "Passive sport": {
+          "description": "",
+          "id": ""
+        },
+        "Personality": {
+          "description": "",
+          "id": ""
+        },
+        "Pets": {
+          "description": "",
+          "id": ""
+        },
+        "Physics": {
+          "description": "",
+          "id": ""
+        },
+        "Politics": {
+          "description": "",
+          "id": ""
+        },
+        "Pop": {
+          "description": "Lubię muzykę pop",
+          "id": "Pop"
+        },
+        "Prioritising workload": {
+          "description": "",
+          "id": ""
+        },
+        "Psychology": {
+          "description": "",
+          "id": ""
+        },
+        "Public speaking": {
+          "description": "",
+          "id": ""
+        },
+        "Punctuality": {
+          "description": "",
+          "id": ""
+        },
+        "Punk": {
+          "description": "Lubię muzykę punkową",
+          "id": "Punk"
+        },
+        "Questionnaires or polls": {
+          "description": "",
+          "id": ""
+        },
+        "Rats": {
+          "description": "Boję się szczurów",
+          "id": "Szczury"
+        },
+        "Reading": {
+          "description": "",
+          "id": ""
+        },
+        "Reggae, Ska": {
+          "description": "Lubię muzykę Reggae lub Ska",
+          "id": "Reggae, Ska"
+        },
+        "Reliability": {
+          "description": "",
+          "id": ""
+        },
+        "Religion": {
+          "description": "",
+          "id": ""
+        },
+        "Responding to a serious letter": {
+          "description": "",
+          "id": ""
+        },
+        "Rock": {
+          "description": "Lubię muzykę rockową",
+          "id": "Rock"
+        },
+        "Rock n roll": {
+          "description": "Lubię muzykę rock n roll",
+          "id": "Rock n roll"
+        },
+        "Romantic": {
+          "description": "Lubię romantyczne filmy",
+          "id": "Romantyczny"
+        },
+        "Sci-fi": {
+          "description": "Lubię filmy science fiction",
+          "id": "Sci-Fi"
+        },
+        "Science and technology": {
+          "description": "",
+          "id": ""
+        },
+        "Self-criticism": {
+          "description": "",
+          "id": ""
+        },
+        "Shopping": {
+          "description": "",
+          "id": ""
+        },
+        "Shopping centres": {
+          "description": "",
+          "id": ""
+        },
+        "Slow songs or fast songs": {
+          "description": "Wolę szybką muzykę",
+          "id": "Powolne piosenki lub szybkie piosenki"
+        },
+        "Small - big dogs": {
+          "description": "",
+          "id": ""
+        },
+        "Smoking": {
+          "description": "",
+          "id": ""
+        },
+        "Snakes": {
+          "description": "Boję się węży",
+          "id": "Węże"
+        },
+        "Socializing": {
+          "description": "",
+          "id": ""
+        },
+        "Spending on gadgets": {
+          "description": "",
+          "id": ""
+        },
+        "Spending on healthy eating": {
+          "description": "",
+          "id": ""
+        },
+        "Spending on looks": {
+          "description": "",
+          "id": ""
+        },
+        "Spiders": {
+          "description": "Boję się pająków",
+          "id": "Pająki"
+        },
+        "Storm": {
+          "description": "Boję się sztormów",
+          "id": "Sztorm"
+        },
+        "Swing, Jazz": {
+          "description": "Lubię muzykę Swing lub Jazz",
+          "id": "Swing, Jazz"
+        },
+        "Techno, Trance": {
+          "description": "Lubię muzykę Techno lub Trance",
+          "id": "Techno, Trance"
+        },
+        "Theatre": {
+          "description": "",
+          "id": ""
+        },
+        "Thinking ahead": {
+          "description": "",
+          "id": ""
+        },
+        "Thriller": {
+          "description": "Lubię dreszczowce",
+          "id": "Dreszczowiec"
+        },
+        "Unpopularity": {
+          "description": "",
+          "id": ""
+        },
+        "Village - town": {
+          "description": "",
+          "id": ""
+        },
+        "Waiting": {
+          "description": "",
+          "id": ""
+        },
+        "War": {
+          "description": "Lubię filmy wojenne",
+          "id": "Wojna"
+        },
+        "Weight": {
+          "description": "",
+          "id": ""
+        },
+        "Western": {
+          "description": "Lubię westerny",
+          "id": "Western"
+        },
+        "Workaholism": {
+          "description": "",
+          "id": ""
+        },
+        "Writing": {
+          "description": "",
+          "id": "Pisanie"
+        },
+        "Writing notes": {
+          "description": "",
+          "id": ""
         }
       },
-      "name": "Ankieta uczniowska - Osobowość"
+      "name": "Ankieta dotycząca stylu życia uczniów"
+    },
+    "taco_toppings_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Cokolwiek innego niż rekomendacje taco.",
+          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj taco powinien kupić nowy klient."
+        },
+        "description": "Ankieta przeprowadzona wśród klientów sklepu z taco na temat tego, czy lubią określone kombinacje taco."
+      },
+      "fields": {
+        "Cheese": {
+          "description": "",
+          "id": "Ser"
+        },
+        "Chicken": {
+          "description": "",
+          "id": "Kurczak"
+        },
+        "Ground Beef": {
+          "description": "",
+          "id": ""
+        },
+        "Hot Sauce": {
+          "description": "",
+          "id": "Gorący sos"
+        },
+        "Preference": {
+          "description": "",
+          "id": ""
+        },
+        "Sour Cream": {
+          "description": "",
+          "id": "Śmietana"
+        }
+      }
     },
     "thanksgiving": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Próbuję odgadnąć, z jakiego regionu ktoś pochodzi, tylko na podstawie pokarmów, jakie je w Święto Dziękczynienia.",
+          "potentialUses": "Przewiduj, czy ktoś będzie miał konkretne jedzenie na Święto Dziękczynienia, w oparciu o region kraju, z którego pochodzą."
+        },
+        "description": "Ankieta przeprowadzona przez FiveThrityEight, pytająca ludzi w całych Stanach Zjednoczonych, jakie potrawy mają na obiad w Święto Dziękczynienia."
+      },
       "fields": {
-        "Main dish": {
-          "id": "Danie główne",
-          "description": "Danie główne podawane do posiłku. Najprawdopodobniej indyk."
-        },
-        "Main dish cooking method": {
-          "id": "Metoda przyrządzania dania głównego",
-          "description": "Jak przyrządzono danie główne, m.in. pieczone, grilowane, smażone."
-        },
-        "Stuffing base": {
-          "id": "Podstawa farszu",
-          "description": "Jeśli podano farsz, jaki był jego główny składnik, lub żaden, jeśli nie podano farszu."
-        },
-        "Cranberry sauce": {
-          "id": "Sos żurawinowy",
-          "description": "Rodzaj podawanego sosu żurawinowego."
-        },
-        "Gravy": {
-          "id": "Sos",
-          "description": "Czy do posiłku podawano sos, czy nie."
-        },
-        "Brussel sprouts": {
-          "id": "Brukselka",
-          "description": "Niezależnie od tego, czy do posiłku podawano brukselkę."
-        },
-        "Carrots": {
-          "id": "Marchewki",
-          "description": "Niezależnie od tego, czy do posiłku podawano marchewkę."
-        },
-        "Cauliflower": {
-          "id": "Kalafior",
-          "description": "Niezależnie od tego, czy do posiłku podawano kalafior."
-        },
-        "Corn": {
-          "id": "Kukurydza",
-          "description": "Niezależnie od tego, czy do posiłku podawano kukurydzę."
-        },
-        "Cornbread": {
-          "id": "Chleb kukurydziany",
-          "description": "Niezależnie od tego, czy do posiłku podawano chleb kukurydziany."
-        },
-        "Fruit salad": {
-          "id": "Sałatka owocowa",
-          "description": "Niezależnie od tego, czy do posiłku podawano sałatkę owocową."
-        },
-        "Green beans/green bean casserole": {
-          "id": "Zielona fasola/zapiekanka z zielonej fasoli",
-          "description": "Niezależnie od tego, czy do posiłku podawano danie z zieloną fasolką."
-        },
-        "Mac and cheese": {
-          "id": "Mac i ser",
-          "description": "Niezależnie od tego, czy do posiłku podawano mac i ser."
-        },
-        "Mashed potatoes": {
-          "id": "Puree ziemniaczane",
-          "description": "Niezależnie od tego, czy do posiłku podawano puree ziemniaczane."
-        },
-        "Rolls/biscuits": {
-          "id": "Rułki/herbatniki",
-          "description": "Niezależnie od tego, czy do posiłku podawano bułki lub herbatniki."
-        },
-        "Squash": {
-          "id": "Squash",
-          "description": "Niezależnie od tego, czy do posiłku podawano squash."
-        },
-        "Vegetable salad": {
-          "id": "Sałatka warzywna",
-          "description": "Niezależnie od tego, czy do posiłku podawano sałatkę warzywną."
-        },
-        "Yams/sweet potato casserole": {
-          "id": "YAMS/zapiekanka ze słodkich ziemniaków",
-          "description": "Niezależnie od tego, czy do posiłku podawano YAMS/zapiekankę ze słodkich ziemniaków."
+        "Apple cobbler": {
+          "description": "Niezależnie od tego, czy cobbler jabłkowy był podawany jako deser.",
+          "id": "Cobbler jabłkowy"
         },
         "Apple pie": {
-          "id": "Szarlotka",
-          "description": "Niezależnie od tego, czy jabłecznik był podawany jako deser."
-        },
-        "Buttermilk pie": {
-          "id": "Ciasto maślankowe",
-          "description": "Niezależnie od tego, czy ciasto maślankowe było podawane jako deser."
-        },
-        "Cherry pie": {
-          "id": "Ciasto wiśniowe",
-          "description": "Niezależnie od tego, czy ciasto wiśniowe było podawane jako deser."
-        },
-        "Chocolate pie": {
-          "id": "Ciasto czekoladowe",
-          "description": "Niezależnie od tego, czy ciasto czekoladowe było podawane jako deser."
-        },
-        "Coconut cream pie": {
-          "id": "Ciasto z kremem kokosowym",
-          "description": "Niezależnie od tego, czy ciasto z kremem kokosowym było podawane jako deser."
-        },
-        "Key lime pie": {
-          "id": "Ciasto limonkowe",
-          "description": "Niezależnie od tego, czy ciasto z limonką było podawane jako deser."
-        },
-        "Peach pie": {
-          "id": "Ciasto brzoskwiniowe",
-          "description": "Niezależnie od tego, czy brzoskwiniowe ciasto było podawane jako deser."
-        },
-        "Pecan pie": {
-          "id": "Placek pekanowy",
-          "description": "Niezależnie od tego, czy pikanowe ciasto było podawane jako deser."
-        },
-        "Pumpkin pie": {
-          "id": "Ciasto z dyni",
-          "description": "Niezależnie od tego, czy dyniowe ciasto było podawane jako deser."
-        },
-        "Sweet potato pie": {
-          "id": "Ciasto ze słodkich ziemniaków",
-          "description": "Niezależnie od tego, czy ciasto ze słodkich ziemniaków było podawane jako deser."
-        },
-        "Apple cobbler": {
-          "id": "Cobbler jabłkowy",
-          "description": "Niezależnie od tego, czy cobbler jabłkowy był podawany jako deser."
+          "description": "Niezależnie od tego, czy jabłecznik był podawany jako deser.",
+          "id": "Szarlotka"
         },
         "Blondies": {
-          "description": "Niezależnie od tego, czy ciasteczka były podawane jako deser."
+          "description": "Niezależnie od tego, czy ciasteczka były podawane jako deser.",
+          "id": ""
         },
         "Brownies": {
-          "id": "Ciasteczka",
-          "description": "Niezależnie od tego, czy ciasteczka były podawane jako deser."
+          "description": "Niezależnie od tego, czy ciasteczka były podawane jako deser.",
+          "id": "Ciasteczka"
+        },
+        "Brussel sprouts": {
+          "description": "Niezależnie od tego, czy do posiłku podawano brukselkę.",
+          "id": "Brukselka"
+        },
+        "Buttermilk pie": {
+          "description": "Niezależnie od tego, czy ciasto maślankowe było podawane jako deser.",
+          "id": "Ciasto maślankowe"
         },
         "Carrot cake": {
-          "id": "Ciasto marchewkowe",
-          "description": "Niezależnie od tego, czy ciasto marchewkowe było podawane jako deser."
+          "description": "Niezależnie od tego, czy ciasto marchewkowe było podawane jako deser.",
+          "id": "Ciasto marchewkowe"
+        },
+        "Carrots": {
+          "description": "Niezależnie od tego, czy do posiłku podawano marchewkę.",
+          "id": "Marchewki"
+        },
+        "Cauliflower": {
+          "description": "Niezależnie od tego, czy do posiłku podawano kalafior.",
+          "id": "Kalafior"
         },
         "Cheesecake": {
-          "id": "Sernik",
-          "description": "Niezależnie od tego, czy ciasto wiśniowe było podawane jako deser."
+          "description": "Niezależnie od tego, czy ciasto wiśniowe było podawane jako deser.",
+          "id": "Sernik"
+        },
+        "Cherry pie": {
+          "description": "Niezależnie od tego, czy ciasto wiśniowe było podawane jako deser.",
+          "id": "Ciasto wiśniowe"
+        },
+        "Chocolate pie": {
+          "description": "Niezależnie od tego, czy ciasto czekoladowe było podawane jako deser.",
+          "id": "Ciasto czekoladowe"
+        },
+        "Coconut cream pie": {
+          "description": "Niezależnie od tego, czy ciasto z kremem kokosowym było podawane jako deser.",
+          "id": "Ciasto z kremem kokosowym"
         },
         "Cookies": {
-          "id": "Ciasteczka",
-          "description": "Niezależnie od tego, czy ciasteczka były podawane jako deser."
+          "description": "Niezależnie od tego, czy ciasteczka były podawane jako deser.",
+          "id": "Ciasteczka"
+        },
+        "Corn": {
+          "description": "Niezależnie od tego, czy do posiłku podawano kukurydzę.",
+          "id": "Kukurydza"
+        },
+        "Cornbread": {
+          "description": "Niezależnie od tego, czy do posiłku podawano chleb kukurydziany.",
+          "id": "Chleb kukurydziany"
+        },
+        "Cranberry sauce": {
+          "description": "Rodzaj podawanego sosu żurawinowego.",
+          "id": "Sos żurawinowy"
+        },
+        "Fruit salad": {
+          "description": "Niezależnie od tego, czy do posiłku podawano sałatkę owocową.",
+          "id": "Sałatka owocowa"
         },
         "Fudge": {
-          "id": "Krówka",
-          "description": "Niezależnie od tego, czy krówki były podawane jako deser."
+          "description": "Niezależnie od tego, czy krówki były podawane jako deser.",
+          "id": "Krówka"
+        },
+        "Gravy": {
+          "description": "Czy do posiłku podawano sos, czy nie.",
+          "id": "Sos"
+        },
+        "Green beans/green bean casserole": {
+          "description": "Niezależnie od tego, czy do posiłku podawano danie z zieloną fasolką.",
+          "id": "Zielona fasola/zapiekanka z zielonej fasoli"
         },
         "Ice cream": {
-          "id": "Lody",
-          "description": "Niezależnie od tego, czy lody były podawane jako deser."
+          "description": "Niezależnie od tego, czy lody były podawane jako deser.",
+          "id": "Lody"
+        },
+        "Key lime pie": {
+          "description": "Niezależnie od tego, czy ciasto z limonką było podawane jako deser.",
+          "id": "Ciasto limonkowe"
+        },
+        "Mac and cheese": {
+          "description": "Niezależnie od tego, czy do posiłku podawano mac i ser.",
+          "id": "Mac i ser"
+        },
+        "Main dish": {
+          "description": "Danie główne podawane do posiłku. Najprawdopodobniej indyk.",
+          "id": "Danie główne"
+        },
+        "Main dish cooking method": {
+          "description": "Jak przyrządzono danie główne, m.in. pieczone, grilowane, smażone.",
+          "id": "Metoda przyrządzania dania głównego"
+        },
+        "Mashed potatoes": {
+          "description": "Niezależnie od tego, czy do posiłku podawano puree ziemniaczane.",
+          "id": "Puree ziemniaczane"
         },
         "Peach cobbler": {
-          "id": "Ciasto brzoskwiniowe",
-          "description": "Niezależnie od tego, czy brzoskwiniowe ciasto było podawane jako deser."
+          "description": "Niezależnie od tego, czy brzoskwiniowe ciasto było podawane jako deser.",
+          "id": "Ciasto brzoskwiniowe"
+        },
+        "Peach pie": {
+          "description": "Niezależnie od tego, czy brzoskwiniowe ciasto było podawane jako deser.",
+          "id": "Ciasto brzoskwiniowe"
+        },
+        "Pecan pie": {
+          "description": "Niezależnie od tego, czy pikanowe ciasto było podawane jako deser.",
+          "id": "Placek pekanowy"
+        },
+        "Pumpkin pie": {
+          "description": "Niezależnie od tego, czy dyniowe ciasto było podawane jako deser.",
+          "id": "Ciasto z dyni"
+        },
+        "Rolls/biscuits": {
+          "description": "Niezależnie od tego, czy do posiłku podawano bułki lub herbatniki.",
+          "id": "Rułki/herbatniki"
+        },
+        "Squash": {
+          "description": "Niezależnie od tego, czy do posiłku podawano squash.",
+          "id": "Squash"
+        },
+        "Stuffing base": {
+          "description": "Jeśli podano farsz, jaki był jego główny składnik, lub żaden, jeśli nie podano farszu.",
+          "id": "Podstawa farszu"
+        },
+        "Sweet potato pie": {
+          "description": "Niezależnie od tego, czy ciasto ze słodkich ziemniaków było podawane jako deser.",
+          "id": "Ciasto ze słodkich ziemniaków"
         },
         "US region": {
-          "id": "Region US",
-          "description": "Część kraju, z której pochodził uczestnik."
-        }
-      },
-      "card": {
-        "description": "Ankieta przeprowadzona przez FiveThrityEight, pytająca ludzi w całych Stanach Zjednoczonych, jakie potrawy mają na obiad w Święto Dziękczynienia.",
-        "context": {
-          "potentialUses": "Przewiduj, czy ktoś będzie miał konkretne jedzenie na Święto Dziękczynienia, w oparciu o region kraju, z którego pochodzą.",
-          "potentialMisuses": "Próbuję odgadnąć, z jakiego regionu ktoś pochodzi, tylko na podstawie pokarmów, jakie je w Święto Dziękczynienia."
+          "description": "Część kraju, z której pochodził uczestnik.",
+          "id": "Region US"
+        },
+        "Vegetable salad": {
+          "description": "Niezależnie od tego, czy do posiłku podawano sałatkę warzywną.",
+          "id": "Sałatka warzywna"
+        },
+        "Yams/sweet potato casserole": {
+          "description": "Niezależnie od tego, czy do posiłku podawano YAMS/zapiekankę ze słodkich ziemniaków.",
+          "id": "YAMS/zapiekanka ze słodkich ziemniaków"
         }
       },
       "name": "Regionalne badanie żywności na Święto Dziękczynienia"
     },
-    "jeans": {
-      "name": "Pomiary dżinsów"
-    },
-    "taco_toppings_toy": {
-      "fields": {
-        "Chicken": {
-          "id": "Kurczak"
-        },
-        "Hot Sauce": {
-          "id": "Gorący sos"
-        },
-        "Sour Cream": {
-          "id": "Śmietana"
-        },
-        "Cheese": {
-          "id": "Ser"
-        }
-      },
+    "zoo": {
       "card": {
-        "description": "Ankieta przeprowadzona wśród klientów sklepu z taco na temat tego, czy lubią określone kombinacje taco.",
         "context": {
-          "potentialUses": "Pomóż w rekomendowaniu, jaki rodzaj taco powinien kupić nowy klient.",
-          "potentialMisuses": "Cokolwiek innego niż rekomendacje taco."
-        }
-      }
-    },
-    "loneliness_music": {
+          "potentialMisuses": "Jest to zbiór danych tylko 100 zwierząt, więc może być wiele zwierząt, które nie są odzwierciedlone w danych. Weź to z przymrużeniem oka!",
+          "potentialUses": "Jest tu wiele potencjalnych etykiet, ale jednym łatwym dochodzeniem na początek jest próba znalezienia cech, które zwykle odnoszą się do jadowitego zwierzęcia."
+        },
+        "description": ""
+      },
       "fields": {
-        "Loneliness": {
-          "id": "Samotność",
-          "description": "Czuję się samotny w życiu."
+        "Airborne": {
+          "description": "",
+          "id": ""
         },
-        "Music": {
-          "id": "Muzyka",
-          "description": "Lubię słuchać muzyki"
+        "Animal Name": {
+          "description": "",
+          "id": ""
         },
-        "Slow songs or fast songs": {
-          "id": "Powolne piosenki lub szybkie piosenki",
-          "description": "Wolę szybką muzykę"
+        "Aquatic": {
+          "description": "",
+          "id": "Wodny"
         },
-        "Dance": {
-          "id": "Taniec",
-          "description": "Lubię muzykę taneczną"
+        "Backbone": {
+          "description": "",
+          "id": ""
         },
-        "Folk": {
-          "id": "Folk",
-          "description": "Lubię muzykę ludową"
+        "Breathes": {
+          "description": "",
+          "id": ""
         },
-        "Country": {
-          "id": "Kraj",
-          "description": "Lubię muzykę country"
+        "Catsize": {
+          "description": "",
+          "id": ""
         },
-        "Classical music": {
-          "id": "Muzyka klasyczna",
-          "description": "Lubię muzykę klasyczną"
+        "Class": {
+          "description": "",
+          "id": ""
         },
-        "Musical": {
-          "id": "Musical",
-          "description": "Lubię muzykę musicalową"
+        "Domestic": {
+          "description": "",
+          "id": ""
         },
-        "Pop": {
-          "id": "Pop",
-          "description": "Lubię muzykę pop"
+        "Eggs": {
+          "description": "",
+          "id": ""
         },
-        "Rock": {
-          "id": "Rock",
-          "description": "Lubię muzykę rockową"
+        "Feathers": {
+          "description": "",
+          "id": ""
         },
-        "Metal or Hardrock": {
-          "id": "Metal lub Hardrock",
-          "description": "Lubię muzykę Metal lub Hardrock"
+        "Fins": {
+          "description": "",
+          "id": ""
         },
-        "Punk": {
-          "id": "Punk",
-          "description": "Lubię muzykę punkową"
+        "Hair": {
+          "description": "",
+          "id": ""
         },
-        "Hiphop, Rap": {
-          "id": "Hiphop, Rap",
-          "description": "Lubię muzykę hiphop lub rap"
+        "Legs": {
+          "description": "",
+          "id": ""
         },
-        "Reggae, Ska": {
-          "id": "Reggae, Ska",
-          "description": "Lubię muzykę Reggae lub Ska"
+        "Milk": {
+          "description": "",
+          "id": ""
         },
-        "Swing, Jazz": {
-          "id": "Swing, Jazz",
-          "description": "Lubię muzykę Swing lub Jazz"
+        "Predator": {
+          "description": "",
+          "id": ""
         },
-        "Rock n roll": {
-          "id": "Rock n roll",
-          "description": "Lubię muzykę rock n roll"
+        "Tail": {
+          "description": "",
+          "id": ""
         },
-        "Alternative": {
-          "id": "Alternatywa",
-          "description": "Lubię muzykę alternatywną"
+        "Toothed": {
+          "description": "",
+          "id": ""
         },
-        "Latino": {
-          "id": "Latynoski",
-          "description": "Lubię muzykę latynoską"
-        },
-        "Techno, Trance": {
-          "id": "Techno, Trance",
-          "description": "Lubię muzykę Techno lub Trance"
-        },
-        "Opera": {
-          "id": "Opera",
-          "description": "Lubię muzykę operową"
+        "Venomous": {
+          "description": "",
+          "id": ""
         }
       },
-      "card": {
-        "description": "Zbiór danych odpowiedzi ankietowych zebranych przez słowackich studentów w wieku 18-21 lat w FSEV UK. Większość odpowiedzi to rankingi na skali od 1 do 5. Na przykład „Ranga od 1 (zdecydowanie się nie zgadzam) do 5 (zdecydowanie się zgadzam): Często uczę się lub pracuję nawet w wolnym czasie”. Jest to podzbiór większego zbioru danych, który skupia się tylko na muzyce.",
-        "context": {
-          "potentialUses": "Na przykład, przewidzieć czyjeś cechy osobowości na podstawie innych cech."
-        }
-      },
-      "name": "Ankieta studencka - Muzyka"
+      "name": "Zoo"
     }
-  }
+  },
+  "generateResultsHeader": "Testowanie modelu",
+  "incorrectAnswer": "Nieprawidłowe",
+  "modelCardAccuracy": "Dokładność",
+  "modelCardDatasetDetails": "Informacje o danych",
+  "modelCardDatasetDetailsSize": "Rozmiar zestawu danych",
+  "modelCardDatasetDetailsSizeCount": "{rowCount} wierszy",
+  "modelCardFeaturesAndLabel": "Funkcje i etykieta",
+  "modelCardIntendedUse": "Zamierzone użycie",
+  "modelCardLimitations": "Ograniczenia i ostrzeżenia",
+  "modelCardPossibleValues": "Możliwe wartości",
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "modelNameLabel": "Nazwa modelu",
+  "navigateBack": "Wstecz",
+  "navigateDone": "Koniec",
+  "navigateForward": "Kontynuuj",
+  "potentialMisusesDescription": "Opisz wszelkie ograniczenia w sposobie tworzenia tego modelu lub w jaki sposób powinien być używany. Możesz powiedzieć takie rzeczy jak „Unikaj używania tego modelu do...” lub „Uważaj na...”.\nWażne pytania do rozważenia to:",
+  "potentialMisusesDescriptionEnough": "Czy zebrałeś wystarczającą ilość danych, aby mieć pewność co do dokładności modelu?",
+  "potentialMisusesDescriptionRepresent": "Czy dane reprezentują wszystkich możliwych użytkowników i scenariusze?",
+  "potentialMisusesDescriptionSituations": "Czy są sytuacje, w których ten model zdecydowanie nie powinien być używany?",
+  "potentialMisusesLabel": "Ograniczenia i ostrzeżenia",
+  "potentialMisusesPlaceholder": "Napisz krótki opis.",
+  "potentialUsesDescription": "Opisz problem, który Twoim zdaniem ten model może pomóc rozwiązać, lub jedną potencjalną aplikację, którą ktoś mógłby stworzyć z tym modelem.",
+  "potentialUsesLabel": "Zamierzone użycie",
+  "potentialUsesPlaceholder": "Napisz krótki opis.",
+  "predictAIBotPredicts": "A.I. przewiduje",
+  "predictHeader": "Wypróbuj to!",
+  "predictPlaceholder": "min. {minimum}, maks. {maximum}",
+  "predictionStatement": "Przewiduj {output} na podstawie {inputs}",
+  "resultsAccuracy": "Dokładność",
+  "resultsDetailsButton": "Szczegóły",
+  "resultsHeader": "Wynik",
+  "resultsPreviousResults": "Poprzednie wyniki",
+  "resultsTableActualValueHeader": "Rzeczywisty",
+  "resultsTablePredictedValueHeader": "Prognozy A.I.",
+  "resultsTablePredictionRange": "Prognozy wynoszą +/- {percentage}% zakresu",
+  "saveModelColumnCountLabel": "Opisy kolumn",
+  "saveModelColumnTypeFeature": "funkcja",
+  "saveModelColumnTypeLabel": "marka",
+  "saveModelFieldRequired": "wymagane",
+  "saveProgress": "Zapisz",
+  "saveStatus_failure": "Wystąpił błąd. Twój model nie został zachowany. Proszę, spróbuj ponownie.",
+  "saveStatus_piiProfanity": "Twój model nie mógł zostać zapisany, ponieważ zawiera wulgaryzmy lub dane osobowe (np. e-mail, adres, numer telefonu).",
+  "saveStatus_success": "Twój model został uratowany!",
+  "scatterPlotLabel": "Informacje o związku",
+  "selectDatasetErrorTooFewColumns": "Prześlij {fileType} z co najmniej {count} kolumnami.",
+  "selectDatasetErrorTooFewRows": "Psześlij {fileType} z co najmniej {count} wierszami.",
+  "selectDatasetUploadFileButton": "Prześlij {fileType}",
+  "selectLabelButton": "Wybierz etykietę",
+  "trainModelButtonText": "Pociąg",
+  "tryAgain": "Spróbuj ponownie",
+  "uniqueOptionsWarningMessage": "Kolumn kategorii z więcej niż {valueCount} unikalnymi wartościami nie można wybrać jako etykiety ani funkcji.",
+  "uniqueOptionsWarningNotice": "Uwaga"
 }

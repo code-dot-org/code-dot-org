@@ -7,7 +7,6 @@
   "catProcedures": "Föll",
   "catText": "texti",
   "catVariables": "Breytur",
-  "designWorkspaceHeader": "Vinnusvæði: ",
   "designElementEvent_input": "Inntak",
   "designElementProperty_fitImage_none": "ekkert",
   "designElementProperty_image": "mynd",
@@ -19,6 +18,7 @@
   "designElementProperty_zOrder": "dýpt",
   "designElementTheme_classic": "Klassískt",
   "designElementTheme_default": "Sjálfgefið",
+  "designWorkspaceHeader": "Vinnusvæði: ",
   "dropletBlock_console.log_param0": "skilaboð",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param2": "y",
@@ -37,7 +37,7 @@
   "nextLevel": "Til hamingju! Þú hefur klárað þessa þraut.",
   "no": "Nei",
   "numBlocksNeeded": "Þessa þraut er hægt að leysa með %1 kubbum.",
-  "repeatForever": "endurtaka endalaust",
   "repeatDo": "gera",
+  "repeatForever": "endurtaka endalaust",
   "yes": "Já"
 }

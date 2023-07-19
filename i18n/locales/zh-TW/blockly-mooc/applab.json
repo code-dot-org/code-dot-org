@@ -435,7 +435,6 @@
   "redetect": "重新偵測",
   "reinfFeedbackMsg": "你說完了嗎？借助 App Lab，您可以控制自己的控制權-由您來檢查您的工作並決定何時完成。",
   "repeatForever": "重複無限次",
-  "repeatDo": "",
   "repeatForeverTooltip": "應用程式執行時，重複執行此區塊中的動作。",
   "shareApplabTwitter": "查看我製作的應用程序。我用 @codeorg 自己寫的",
   "shareApplabTwitterDonor": "查看我製作的應用程序。（感謝 {donor} 支持 @codeorg）",
