@@ -2,35 +2,35 @@
   "fr-FR": {
     "data": {
       "frameworks": {
-        "csta": {
-          "name": "Normes informatiques CSTA K-12 (2017)"
-        },
-        "csp2021": {
-          "name": "Cadre conceptuel du CSP"
+        "ai4k12-2021": {
+          "name": "Directives nationales AI4K12 2021"
         },
         "c3ss": {
           "name": "C3 Normes d'études sociales"
         },
-        "csta2011": {
-          "name": "Normes informatiques CSTA K-12 (2011)"
-        },
         "ccela": {
           "name": "Normes de base communes pour les arts de la langue anglaise"
-        },
-        "ngss": {
-          "name": "Normes scientifiques de nouvelle génération"
-        },
-        "csa": {
-          "name": "Cadre conceptuel du CSA"
         },
         "ccmath": {
           "name": "Normes mathématiques de base communes"
         },
-        "ai4k12-2021": {
-          "name": "Directives nationales AI4K12 2021"
+        "csa": {
+          "name": "Cadre conceptuel du CSA"
+        },
+        "csp2021": {
+          "name": "Cadre conceptuel du CSP"
+        },
+        "csta": {
+          "name": "Normes informatiques CSTA K-12 (2017)"
+        },
+        "csta2011": {
+          "name": "Normes informatiques CSTA K-12 (2011)"
         },
         "iste": {
           "name": "Normes ISTE pour les étudiants"
+        },
+        "ngss": {
+          "name": "Normes scientifiques de nouvelle génération"
         }
       }
     }
