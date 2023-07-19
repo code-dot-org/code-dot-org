@@ -13,31 +13,31 @@ require 'digest/md5'
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
-
+require_relative './sync/metrics'
 Dir[File.expand_path('../resources/**/*.rb', __FILE__)].sort.each {|file| require file}
 
 module I18n
   module SyncIn
     def self.perform
       puts "Sync in starting"
-      Services::I18n::CurriculumSyncUtils.sync_in
-      HocSyncUtils.sync_in
-      localize_level_and_project_content
-      I18n::Resources::Dashboard::Blocks.sync_in
-      I18n::Resources::Apps::Animations.sync_in
-      I18n::Resources::Dashboard::SharedFunctions.sync_in
-      I18n::Resources::Dashboard::CourseOfferings.sync_in
-      I18n::Resources::Dashboard::Standards.sync_in
-      I18n::Resources::Dashboard::Docs.sync_in
-      puts "Copying source files"
-      I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
-      localize_external_sources
-      localize_course_resources
-      redact_level_content
-      redact_script_and_course_content
-      redact_labs_content
-      localize_markdown_content
-      puts "Sync in completed successfully"
+      I18n::Sync::Metrics.runtime('CurriculumSyncUtils') {Services::I18n::CurriculumSyncUtils.sync_in}
+      I18n::Sync::Metrics.runtime('HocSyncUtils') {HocSyncUtils.sync_in}
+      I18n::Sync::Metrics.runtime('localize_level_and_project_content') {localize_level_and_project_content}
+      I18n::Sync::Metrics.runtime('Blocks') {I18n::Resources::Dashboard::Blocks.sync_in}
+      I18n::Sync::Metrics.runtime('Animations') {I18n::Resources::Apps::Animations.sync_in}
+      I18n::Sync::Metrics.runtime('SharedFunctions') {I18n::Resources::Dashboard::SharedFunctions.sync_in}
+      I18n::Sync::Metrics.runtime('CourseOfferings') {I18n::Resources::Dashboard::CourseOfferings.sync_in}
+      I18n::Sync::Metrics.runtime('Standards') {I18n::Resources::Dashboard::Standards.sync_in}
+      I18n::Sync::Metrics.runtime('Docs') {I18n::Resources::Dashboard::Docs.sync_in}
+      # puts "Copying source files"
+      I18n::Sync::Metrics.runtime('source_files') {I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"}
+      I18n::Sync::Metrics.runtime('localize_external_sources') {localize_external_sources}
+      I18n::Sync::Metrics.runtime('localize_course_resources') {localize_course_resources}
+      I18n::Sync::Metrics.runtime('redact_level_content') {redact_level_content}
+      I18n::Sync::Metrics.runtime('redact_script_and_course_content') {redact_script_and_course_content}
+      I18n::Sync::Metrics.runtime('redact_labs_content') {redact_labs_content}
+      I18n::Sync::Metrics.runtime('localize_markdown_content') {localize_markdown_content}
+      # puts "Sync in completed successfully"
     rescue => exception
       puts "Sync in failed from the error: #{exception}"
       raise exception
