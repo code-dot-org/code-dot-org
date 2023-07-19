@@ -4170,6 +4170,10 @@ pt:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
             csd1_2:
               display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+            csd1_3:
+              display_name: Lições Extras
+          title: Resolução de Problemas e Computação
+          student_description: A resolução de problemas e a computação é uma forma altamente interativa e colaborativa de adentrar o campo da ciência da computação, como delimitado pela busca mais ampla da resolução de problemas. Você vai praticar a utilização de um processo de resolução e problemas para encarar uma série de jogos, desafios, e de cenários baseados no mundo real. Em seguida, você aprender como os computadores operam a entrada e a saída de dados, como eles armazenam e processam as informações que ajudam os humanos a resolverem problemas. A unidade termina com um projeto, no qual você vai criar uma aplicação que vai lhe ajudar a resolver um problema à sua escolha.
           description_short: "  Aprenda como os humanos trabalham com computadores para resolver problemas."
         csd2-2022:
           lesson_groups:
