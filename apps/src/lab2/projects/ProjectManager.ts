@@ -49,12 +49,14 @@ export default class ProjectManager {
   private reduceChannelUpdates: boolean;
   private initialSaveComplete: boolean;
   private forceReloading: boolean;
+  private userId: string;
 
   constructor(
     sourcesStore: SourcesStore,
     channelsStore: ChannelsStore,
     channelId: string,
-    reduceChannelUpdates: boolean
+    reduceChannelUpdates: boolean,
+    userId: string
   ) {
     this.channelId = channelId;
     this.sourcesStore = sourcesStore;
@@ -62,6 +64,7 @@ export default class ProjectManager {
     this.reduceChannelUpdates = reduceChannelUpdates;
     this.initialSaveComplete = false;
     this.forceReloading = false;
+    this.userId = userId;
   }
 
   // Load the project from the sources and channels store.
@@ -193,7 +196,9 @@ export default class ProjectManager {
       '/projects/' +
       this.lastChannel.projectType +
       '/' +
-      this.channelId
+      this.channelId +
+      '/' +
+      this.userId
     );
   }
 

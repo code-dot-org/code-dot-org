@@ -21,6 +21,9 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   const currentLevelId = useSelector(
     (state: {progress: ProgressState}) => state.progress.currentLevelId
   );
+  const userId = useSelector(
+    (state: {progress: ProgressState}) => state.progress.userId || ''
+  );
   const scriptId = useSelector(
     (state: {progress: ProgressState}) => state.progress.scriptId || undefined
   );
@@ -57,6 +60,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       promise = dispatch(
         setUpWithLevel({
           levelId: parseInt(currentLevelId),
+          userId,
           scriptId,
           levelPropertiesPath,
           channelId,
@@ -73,7 +77,14 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       // An early return could happen if the level is changed mid-load.
       promise.abort();
     };
-  }, [channelId, currentLevelId, scriptId, levelPropertiesPath, dispatch]);
+  }, [
+    channelId,
+    currentLevelId,
+    scriptId,
+    levelPropertiesPath,
+    userId,
+    dispatch,
+  ]);
 
   useEffect(() => {
     window.addEventListener('beforeunload', event => {
