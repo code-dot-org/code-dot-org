@@ -1,9 +1,9 @@
-import React, {ChangeEvent} from 'react';
+import React, {ChangeEvent, memo} from 'react';
 import classnames from 'classnames';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './toggle.module.scss';
 
-interface ToggleProps {
+export interface ToggleProps {
   /** Toggle checked state */
   checked: boolean;
   /** Toggle onChange handler */
@@ -25,10 +25,6 @@ interface ToggleProps {
   size?: 'xs' | 's' | 'm' | 'l';
 }
 
-/**
- * Design System: Toggle Component.
- * Can be used to render a single Toggle compone or as a part of bigger/more complex components (e.g. some form, modal, etc).
- */
 const Toggle: React.FunctionComponent<ToggleProps> = ({
   checked,
   onChange,
@@ -71,4 +67,16 @@ const Toggle: React.FunctionComponent<ToggleProps> = ({
   );
 };
 
-export default Toggle;
+/**
+ * ## Production-ready Checklist:
+ *  * (✔) implementation of component approved by design team;
+ *  * (✔) has storybook, covered with stories and documentation;
+ *  * (✘) has tests: test every prop, every state and every interaction that's js related;
+ *  * (?) passes accessibility checks;
+ *
+ * ###  Status: ```Ready for dev```
+ *
+ * Design System: Toggle Component.
+ * Can be used to render a single Toggle component or as a part of bigger/more complex components (e.g. some form, modal, etc).
+ */
+export default memo(Toggle);
