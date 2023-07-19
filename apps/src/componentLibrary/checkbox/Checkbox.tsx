@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, ChangeEvent} from 'react';
+import React, {useRef, useEffect, memo, ChangeEvent} from 'react';
 import classnames from 'classnames';
 
 import Typography from '@cdo/apps/componentLibrary/typography';
@@ -26,19 +26,6 @@ export interface CheckboxProps {
   /** Size of checkbox */
   size?: 'xs' | 's' | 'm' | 'l';
 }
-
-/**
- * ### Production-ready Checklist:
- * * (✔) implementation of component approved by design team;
- * * (✔) has storybook, covered with stories and documentation;
- * * (✘) has tests: test every prop, every state and every interaction that's js related;
- * * (?) passes accessibility checks;
- *
- * ###  Status: ```Ready for dev```
- *
- * Design System: Checkbox Component.
- * Can be used to render a checkbox or as a part of bigger/more complex components (e.g. Checkbox Dropdown).
- */
 const Checkbox: React.FunctionComponent<CheckboxProps> = ({
   label,
   checked,
@@ -81,4 +68,16 @@ const Checkbox: React.FunctionComponent<CheckboxProps> = ({
   );
 };
 
-export default Checkbox;
+/**
+ * ### Production-ready Checklist:
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✘) has tests: test every prop, every state and every interaction that's js related;
+ * * (?) passes accessibility checks;
+ *
+ * ###  Status: ```Ready for dev```
+ *
+ * Design System: Checkbox Component.
+ * Can be used to render a checkbox or as a part of bigger/more complex components (e.g. Checkbox Dropdown).
+ */
+export default memo(Checkbox);
