@@ -1,12 +1,14 @@
 uk:
   data:
     progressions:
+      '"If/Else" with the Bee': '"Якщо/Інакше" з Бджілкою'
       Accelerometer Events: Події акселерометра
       Adding Images: Додавання зображень
       Adding Screens: Додавання екранів
       Alien Defender: Чужорідний захисник
       Analog Sensors: Аналогові датчики
       Animate Your Scene: Анімація вашої сцени
+      App Lab Intro - Video: Вступ до лабораторії додатків - відео
       Artist Intro with JR Hildebrand: Художник Вступ з JR Хільдебранд
       Artist Intro with JR Hildebrande: Художник Вступ з JR Хільдебранде
       Artist Project: Проект Художника
@@ -18,6 +20,7 @@ uk:
       Bass, Mid, and Treble: Баси, середні та високі частоти
       Be a Super Digital Citizen: Стань суперцифровим громадянином
       Begin planning your project_2018: Починаємо планувати проєкт
+      Binary Bracelets - Unplugged Activity: Двійкові браслети - Безмашинна вправа
       Binary Numbers: Двійкові Числа
       Board Input and Output: Вхід і вивід дошки
       Boolean Comparison: Логічне порівняння
@@ -51,7 +54,12 @@ uk:
       Combining Projects: Об'єднання проектів
       'Conditionals: If Statements': 'Умовні умови: Якщо заяви'
       Course E Artist Project: Курс E Виконавець проекту
+      'Course E: Play Lab Project': 'Курс E: Проєкт Ігрової Студії'
       Course F Artist Project: Курс F Виконавчий проект
+      'Course F: Artist Project': 'Курс F: Проєкт Художника'
+      'Course F: Artist Project - Revise': 'Курс F: Проєкт Художника - Перегляд'
+      'Course F: Play Lab Project': 'Курс F: Проєкт Ігрової Студії'
+      'Course F: Play Lab Project - Revise': 'Курс F: Проєкт Ігрової Студії - Перегляд'
       Create Your Own Animation: Створіть власну анімацію
       Create a Story: Створити історію
       Create your project: Створити власний проєкт
@@ -109,7 +117,7 @@ uk:
       Headings in HTML: Заголовки в HTML
       Hello World: Привіт, світе
       How to Create a Simple Function: Як створити просту функцію
-      How to Make a Sprite: Як зробити спрайт
+      How to Make a Sprite: Як створити спрайт
       Hyperlinks: Гіперпосилання
       Ice Age Loops: Ice Age Петлі
       Images and Sounds: Зображення та звуки
@@ -145,6 +153,7 @@ uk:
       Making Sounds: Створення звуків
       'Maze Intro: Programming with Blocks': 'Лабіринт вступу: програмування з блоками'
       Measures: Такти
+      'Minecraft: Hero''s Journey': 'Minecraft: Подорож героя'
       'Mini-Project: About Me': 'Міні-проект: Про мене'
       'Mini-Project: Alien Dance Moves': 'Міні-проект: Чужорідні танцювальні ходи'
       'Mini-Project: Alien Dance Party': 'Міні-проект: Інопланетна танцювальна вечірка'
@@ -220,6 +229,7 @@ uk:
       Star Chaser: Зірка Chaser
       Text Compression: Стиснення тексту
       The Animation Tab: Анімація
+      The Big Event - Unplugged Activity: Велика подія - Безмашинна вправа
       The Collector: Колекціонер
       The Counter Pattern: Лічильник шаблону
       The Harvester: Фермерка
@@ -232,14 +242,28 @@ uk:
       Variables: Змінні
       Velocity: Швидкість
       Video: Відео
+      Video - Encryption and Public Keys: Відео - Шифрування та публічні ключі
+      Video - Functions: Відео - Функції
+      Video - If Statements: Відео - Команди умови
+      Video - Introduction to Arrays: 'Відео: Вступ до масивів'
+      'Video - Maze Intro: Programming with Blocks': 'Відео: Вступ до Лабіринту - програмування блоками'
+      Video - Parameters: Відео - Параметри
+      Video - The Counter Pattern: Відео - Закономірність лічильника
+      Video - Variables: Відео - Змінні
       'Video:  Debugging with the Step Button': 'Відео: Налагодження з кнопкою Крок'
       'Video:  Minecraft - The Agent': 'Відео: Майнкрафт - Агент'
+      'Video:  Text  and Prompts': 'Відео: Текст та питання'
       'Video: "If/Else"': 'Відео: «Якщо/Інакше»'
       'Video: Artist Intro with JR Hildebrand': 'Відео: Знайомство з Художником із JR Гільдебрандом'
       'Video: Artist Intro with JR Hildebrande': 'Відео: Знайомство з Художником із JR Гільдербрандом'
       'Video: Code Your Own Flappy Game': 'Відео: Створюємо власну гру в Пурха'
       'Video: Conditionals: If Statements': 'Відео: Розгалуження: Команда умови'
       'Video: Conditionals: If and If/Else Statements': 'Відео: Розгалуження: Команда умови Якщо та Якщо/Інакше'
+      'Video: Dance Party Events': 'Відео: Події танцювальної вечірки'
+      'Video: Dance Party Measures': 'Відео: Такти танцювальної вечірки'
+      'Video: Dance Party Party On!': 'Відео: Танцювальна вечірка триває!'
+      'Video: Dance Party Properties': 'Відео: Властивості танцювальної вечірки'
+      'Video: Dance Party Warm Up': 'Відео: Розминка танцювальної вечірки'
       'Video: De-bugging with the Step Button': 'Відео: Налагодження з кнопкою Крок'
       'Video: Debugging with the Step Button': 'Відео: Налагодження з кнопкою Крок'
       'Video: Events': 'Відео: Події'
@@ -254,6 +278,7 @@ uk:
       'Video: Introduction to Play Lab': 'Відео: Вступ до Ігрової студії'
       'Video: Loops in Artist': 'Відео: Цикли з Художником'
       'Video: Loops with the Artist': 'Відео: Цикли з Художником'
+      'Video: Maze Intro - Programming with Blocks': 'Відео: Вступ до Лабіринту - програмування блоками'
       'Video: Maze Intro - Programming with Blocks ': 'Відео: Вступ до Лабіринту - програмування блоками '
       'Video: Maze Intro: Programming with Blocks': 'Відео: Вступ до Лабіринту - програмування блоками'
       'Video: Measures': 'Відео: Такти'
@@ -267,25 +292,37 @@ uk:
       'Video: Minecraft: Voyage Aquatic Repeat Until': 'Відео: Minecraft: Підводна подорож - Повторити до'
       'Video: Nested Loops': 'Відео: Вкладені цикли'
       'Video: Nested Loops with the Bee': 'Відео: Вкладені цикли з Бджілкою'
+      'Video: Outbreak Simulator: Events': 'Відео: Симулятор спалаху: Вступ'
+      'Video: Outbreak Simulator: Free Play': 'Відео: Симулятор спалаху: Вільна гра'
       'Video: Outbreak Simulator: Introduction': 'Відео: Симулятор спалаху: Вступ'
+      'Video: Outbreak Simulator: Thinking Like a Scientist': 'Відео: Симулятор спалаху: мислимо як вчені'
+      'Video: Pair Programming': 'Відео: Парне програмування'
+      'Video: Pair Programming ': 'Відео: Парне програмування '
       'Video: Problem Solving Process': 'Відео: Процес вирішення проблем'
       'Video: Programming with Blocks': 'Відео: програмування з блоками'
       'Video: Programming with Rey and BB-8': 'Відео: Програмування з Рей та BB-8'
       'Video: Properties': 'Відео: Властивості'
+      'Video: Repeat Blocks': 'Відео: Блоки повторення'
       'Video: Repeat Blocks with BB-8': 'Відео: Блоки повторення з BB-8'
+      'Video: Repeat Blocks with the Artist': 'Відео: Блоки повторення з Художником'
       'Video: Repeat Until Blocks': 'Відео: Блоки "повторити до"'
       'Video: Repeat Until Statements': 'Відео: Команда "повторити до"'
       'Video: Sprites in Action': 'Відео: Спрайти в дії'
       'Video: Star Wars Project': 'Відео: Проект «Зоряні війни»'
-      'Video: Text and Prompts': 'Відео: Текст та текстові поля'
+      'Video: Teamwork': 'Відео: Командна робота'
+      'Video: Text and Prompts': 'Відео: Текст та питання'
       'Video: The Artist in Code Studio': 'Відео: Художник у Студії коду'
+      'Video: The Big Event - Unplugged Activity': 'Відео: Велика подія - Безмашинна вправа'
       'Video: The Collector': 'Відео: Колекціонерка'
       'Video: The Harvester': 'Відео: Фермерка'
-      'Video: Unplugged Variables in Envelopes': 'Відео: Безмашинна вправа з порожніми клітинками'
+      'Video: Training Data & Bias': 'Відео: Навчальні дані та упередженість'
+      'Video: Training Data and Bias': 'Відео: Навчальні дані та упередженість'
+      'Video: Unplugged Variables in Envelopes': 'Відео: Безмашинна вправа з конвертами'
       'Video: Using the Repeat Block': 'Відео: Використання блоку повторення'
       'Video: Variables in Artist': 'Відео: Використання змінних з Художником'
       'Video: Warm Up': 'Відео: Розминка'
       'Video: What Makes a Computer, a Computer?': 'Відео: Що робить комп''ютер комп''ютером?'
+      'Video: What is Machine Learning?': 'Відео: Що таке машинне навчання?'
       'Video: While Loops with the Farmer': 'Відео: Цикли "поки" з Фермеркою'
       'Video: Wrap-up': 'Відео: Завершення'
       Warm Up: Розминка
