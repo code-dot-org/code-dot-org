@@ -19,12 +19,14 @@ theme: responsive_full_width
         %img{src: "/images/accessibility/hero-image.png", alt: ""}
     .clear
 
+
 %section.accessibility-efforts.bg-neutral-light
   .wrapper
-    %h2
-      = hoc_s(:accessibility_efforts_title)
-    %p
-      = hoc_s(:accessibility_efforts_desc)
+    .text-wrapper
+      %h2
+        = hoc_s(:accessibility_efforts_title)
+      %p.body-two
+        = hoc_s(:accessibility_efforts_desc)
     .grid-container
       - item_count = 4
       - item_count.times do |index|
@@ -36,17 +38,13 @@ theme: responsive_full_width
               =hoc_s("accessibility_efforts_card_title_#{index + 1}")
             %p
               - if index == 1
-                = hoc_s(:accessibility_efforts_card_desc_2_a)
-                %a{href: "https://www.section508.gov/sell/vpat/", target: "_blank", rel: "noopener noreferrer"}
-                  = hoc_s(:accessibility_efforts_card_desc_2_b)
-                = hoc_s(:accessibility_efforts_card_desc_2_c)
+                =hoc_s(:accessibility_efforts_card_desc_2, markdown: :inline, locals: {voluntary_url: "https://www.section508.gov/sell/vpat/"})
               - elsif index == 3
-                = hoc_s(:accessibility_efforts_card_desc_4_a)
-                %a{href: "https://www.w3.org/TR/WCAG20/", target: "_blank"}
-                  = hoc_s(:accessibility_efforts_card_desc_4_b)
-                = hoc_s(:accessibility_efforts_card_desc_4_c)
+                =hoc_s(:accessibility_efforts_card_desc_4, markdown: :inline, locals: {wcag_url: "https://www.w3.org/TR/WCAG20/"})
               - else
                 = hoc_s("accessibility_efforts_card_desc_#{index + 1}")
+
+
 
 %section.accessibility-explore
   .wrapper
@@ -55,23 +53,25 @@ theme: responsive_full_width
       %img{src: "/images/accessibility/explore.jpg", alt: hoc_s(:accessibility_explore_title), class: "col-50"}
       .text-wrapper.col-50
         %p.heading-sm=hoc_s(:accessibility_explore_text)
-        %a{href: "https://support.code.org/hc/en-us/sections/15186591538957-Accessibility", class: "link-button", target: "_blank"}
+        %a{href: "https://support.code.org/hc/en-us/sections/15186591538957-Accessibility", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s("accessibility_explore_title")}}
           =hoc_s(:accessibility_explore_button)
     .clear
 
 %section.bg-neutral-light.accessibility-help
   .wrapper
-    %h2=hoc_s(:accessibility_help_us_title)
-    %p=hoc_s(:accessibility_help_us_text)
-    %a{href: "https://support.code.org/hc/en-us/sections/15186591538957-Accessibility", target: "_blank", class: "link-button"}
-      =hoc_s(:accessibility_help_us_button)
+    .text-wrapper
+      %h2=hoc_s(:accessibility_help_us_title)
+      %p=hoc_s(:accessibility_help_us_text)
+      %a{href: "https://support.code.org/hc/en-us/sections/15186591538957-Accessibility", target: "_blank", class: "link-button", rel: "noopener noreferrer", aria:{label: hoc_s("accessibility_help_us_title")}}
+        =hoc_s(:accessibility_help_us_button)
 
 %section.accessibility-commit
   .wrapper
-    %h2=hoc_s(:accessibility_commit_title)
-    - commit_index = 4
-    - commit_index.times do |index|
-      %p=hoc_s("accessibility_commit_text_#{index + 1}")
+    .text-wrapper
+      %h2=hoc_s(:accessibility_commit_title)
+      - commit_index = 4
+      - commit_index.times do |index|
+        %p=hoc_s("accessibility_commit_text_#{index + 1}")
 
 = view :section_divider_line
 
@@ -82,8 +82,9 @@ theme: responsive_full_width
 
 %section.accessibility-partner
   .wrapper
-    %h2=hoc_s(:accessibility_partner_title)
-    %p=hoc_s(:accessibility_partner_desc)
+    .text-wrapper
+      %h2=hoc_s(:accessibility_partner_title)
+      %p=hoc_s(:accessibility_partner_desc)
     .action-block__wrapper.action-block__wrapper--three-col
       - partner_index.times do |index|
         .action-block.action-block--one-col.flex-space-between
@@ -96,5 +97,5 @@ theme: responsive_full_width
               =accessibility_partner_levels[index]
             %p=hoc_s("accessibility_card_text_#{index + 1}")
           .content-footer
-            %a.link-button{href: accessibility_partner_links[index], target: "_blank"}
+            %a.link-button{href: accessibility_partner_links[index], target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s("accessibility_card_title_#{index + 1}")}}
               = hoc_s(:call_to_action_learn_more)
