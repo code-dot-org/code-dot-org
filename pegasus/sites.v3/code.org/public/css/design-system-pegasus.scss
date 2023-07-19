@@ -258,7 +258,10 @@ a.link-button {
 // Unordered lists
 ul {
   margin: 1rem;
-  @include body-three;
+
+  li p {
+    @include body-three;
+  }
 
   // Lists that use icons next to content
   &.icon-bullet-list {
@@ -1159,6 +1162,7 @@ section.quote {
       }
 
       p {
+        @include body-two;
         margin-bottom: 0;
         width: 100%;
       }
