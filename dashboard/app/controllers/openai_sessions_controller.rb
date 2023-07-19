@@ -9,6 +9,10 @@ class OpenaiSessionsController < ApplicationController
 
   # POST /openai/chat_completion
   def chat_completion
+    unless has_required_messages_param?
+      return render status: :bad_request, json: {}
+    end
+
     messages = params[:messages]
 
     # Set up the API endpoint URL and request headers
@@ -26,5 +30,15 @@ class OpenaiSessionsController < ApplicationController
 
     response = OpenaiChatHelper.request_chat_completion(headers, data)
     render json: OpenaiChatHelper.get_chat_completion_response_message(response)
+  end
+
+  private def has_required_messages_param?
+    begin
+      params.require([:messages])
+    rescue ActionController::ParameterMissing
+      return false
+    end
+
+    true
   end
 end
