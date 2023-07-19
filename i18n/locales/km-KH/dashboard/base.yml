@@ -464,6 +464,7 @@ km:
     thank_you: '<a href="https://code.org/about/partners">'
     help_from_html: 'យើងចង់ទទួលស្គាល់ជាពិសេសវិស្វករ មកពី Amazon, Google និង Microsoft ដែលបានជួយបង្កើតអ្វីទាំងនេះ។'
     help_from_html_old: 'វិស្វករមកពីក្រុមហ៊ុន Amazon, Google, and Microsoft បានជួយបង្កើតឯកសារនេះឡើង។'
+    art_from_html_old: 'Minecraft&#8482; &ចម្លង; %{current_year} Microsoft ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ សង្គ្រាមផ្កាយ&#8482; &ចម្លង; %{current_year} Disney និង Lucasfilm ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ បង្កក&#8482; &ចម្លង; %{current_year} Disney ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ យុគសម័យទឹកកក&#8482; &ចម្លង; %{current_year} 20th Century Fox។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ Angry Birds&#8482; &ចម្លង; 2009-%{current_year} Rovio Entertainment Ltd. រក្សាសិទ្ធិគ្រប់យ៉ាង។ រុក្ខជាតិទល់នឹង Zombies&#8482; &ចម្លង; %{current_year} Electronic Arts Inc. រក្សាសិទ្ធិគ្រប់យ៉ាង។ DreamWorks មនុស្សអាក្រក់ &copy; %{current_year} DreamWorks Animation LLC ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។'
     powered_by_aws: 'Amazon Web Services ដែល “Powered by AWS” គឺជាពាណិជ្ជសញ្ញារបស់ Amazon.com, Inc. ឬសាខារបស់ខ្លួន នៅសហរដ្ឋអាមេរិក និង ប្រទេសផ្សេងទៀត។'
     built_on_github: 'បង្កើតឡើងលើ GitHub ដោយ Microsoft'
     copyright: 'រក្សាសិទ្ធ'
