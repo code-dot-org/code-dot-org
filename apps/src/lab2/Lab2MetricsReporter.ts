@@ -35,10 +35,11 @@ class Lab2MetricsReporter {
     MetricsReporter.logWarning(this.decorateMessage(message));
   }
 
-  public logError(errorMessage: string | object, error?: Error) {
+  public logError(errorMessage: string, error?: Error, details?: object) {
     const message = {
       errorMessage,
       error: error?.stack || error?.message,
+      details,
     };
     MetricsReporter.logError(this.decorateMessage(message));
   }
