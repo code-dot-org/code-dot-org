@@ -268,9 +268,9 @@ def sort_and_sanitize(hash)
     when Hash
       result[key] = sort_and_sanitize(value) unless value.empty?
     when Array
-      result[key] = value.filter_map {|v| v.is_a?(Hash) ? sort_and_sanitize(v) : v}
+      result[key] = value.filter_map {|v| v.is_a?(Hash) ? sort_and_sanitize(v) : v} unless value.empty?
     when String
-      result[key] = value.gsub(/\\r/, "\r")
+      result[key] = value.gsub(/\\r/, "\r") unless value.empty?
     else
       result[key] = value unless value.nil?
     end
