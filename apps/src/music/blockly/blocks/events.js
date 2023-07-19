@@ -1,6 +1,6 @@
 import {BlockTypes} from '../blockTypes';
-import {TRIGGER_FIELD} from '../constants';
 import musicI18n from '../../locale';
+import {fieldTriggerDefinition} from '../fields';
 
 export const whenRun = {
   definition: {
@@ -21,10 +21,7 @@ export const triggeredAt = {
     style: 'event_blocks',
     message0: musicI18n.blockly_blockTriggeredAt({trigger: '%1', time: '%2'}),
     args0: [
-      {
-        type: 'input_dummy',
-        name: TRIGGER_FIELD,
-      },
+      fieldTriggerDefinition,
       {
         type: 'field_variable',
         name: 'var',
@@ -34,7 +31,6 @@ export const triggeredAt = {
     inputsInline: true,
     nextStatement: null,
     tooltip: musicI18n.blockly_blockTriggeredAtTooltip(),
-    extensions: ['dynamic_trigger_extension'],
   },
   generator: ctx => {
     const varName = Blockly.JavaScript.nameDB_.getName(
@@ -51,17 +47,11 @@ export const triggeredAtSimple = {
   definition: {
     type: BlockTypes.TRIGGERED_AT_SIMPLE,
     message0: musicI18n.blockly_blockTriggered({trigger: '%1'}),
-    args0: [
-      {
-        type: 'input_dummy',
-        name: TRIGGER_FIELD,
-      },
-    ],
+    args0: [fieldTriggerDefinition],
     inputsInline: true,
     nextStatement: null,
     style: 'event_blocks',
     tooltip: musicI18n.blockly_blockTriggeredTooltip(),
-    extensions: ['dynamic_trigger_extension'],
   },
   generator: ctx => {
     const varName = Blockly.JavaScript.nameDB_.getDistinctName(

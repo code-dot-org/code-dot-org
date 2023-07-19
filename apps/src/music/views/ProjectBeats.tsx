@@ -19,7 +19,7 @@ const ProjectBeats: React.FunctionComponent<{channelId: string}> = ({
     <Provider store={getStore()}>
       <Lab2Wrapper>
         <MetricsAdapter />
-        <ProjectContainer channelId={channelId}>
+        <ProjectContainer channelId={channelId} appName={'music'}>
           <DeferredMusicView />
         </ProjectContainer>
       </Lab2Wrapper>
