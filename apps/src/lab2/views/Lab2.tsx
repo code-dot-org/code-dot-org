@@ -9,7 +9,6 @@ import {getStore} from '@cdo/apps/redux';
 import {getStandaloneProjectId} from '@cdo/apps/lab2/projects/utils';
 import Lab2Wrapper from './Lab2Wrapper';
 import ProjectContainer from '../projects/ProjectContainer';
-
 import MetricsAdapter from './MetricsAdapter';
 import LabViewsRenderer from './LabViewsRenderer';
 
