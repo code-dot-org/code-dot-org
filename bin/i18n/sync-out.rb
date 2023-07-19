@@ -270,7 +270,7 @@ def sort_and_sanitize(hash)
     when Array
       result[key] = value.filter_map {|v| v.is_a?(Hash) ? sort_and_sanitize(v) : v}
     when String
-      result[key] = value.gsub(/\\r/, "\r")
+      result[key] = value.gsub(/\\r/, "\r") unless value.empty?
     else
       result[key] = value unless value.nil?
     end
