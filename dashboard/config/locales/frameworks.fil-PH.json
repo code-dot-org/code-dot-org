@@ -2,11 +2,35 @@
   "fil-PH": {
     "data": {
       "frameworks": {
+        "ai4k12-2021": {
+          "name": ""
+        },
+        "c3ss": {
+          "name": ""
+        },
         "ccela": {
           "name": "Common Core Mga Pamantayan sa Sining ng Wikang Ingles"
         },
         "ccmath": {
           "name": "Common Core Math Standards"
+        },
+        "csa": {
+          "name": ""
+        },
+        "csp2021": {
+          "name": ""
+        },
+        "csta": {
+          "name": ""
+        },
+        "csta2011": {
+          "name": ""
+        },
+        "iste": {
+          "name": ""
+        },
+        "ngss": {
+          "name": ""
         }
       }
     }

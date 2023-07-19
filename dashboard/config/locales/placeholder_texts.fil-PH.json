@@ -2,338 +2,66 @@
   "fil-PH": {
     "data": {
       "placeholder_texts": {
-        "CourseE_hoops": {
-          "498cd895eb5a102c5aeb977e2b928dee": "Maraming salamat!"
-        },
-        "courseE_Dogger_2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Panalo ka!"
-        },
-        "courseE_aboutme_3": {
-          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
-        },
-        "courseE_aboutme_3_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
-        },
-        "courseE_aboutme_4": {
-          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
-        },
-        "courseE_aboutme_4_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
-        },
-        "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
-        },
-        "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
-        },
-        "courseF_playlab_variables2b": {
-          "48d6215903dff56238e52e8891380c8f": "asul",
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseF_playlab_variables5c": {
-          "bda9643ac6601722a28f238714274da4": "pula",
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseF_project_1": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Panalo ka!",
-          "498cd895eb5a102c5aeb977e2b928dee": "Maraming salamat!"
-        },
         "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito",
+          "3b3d1f8225a16aac3f372c3062d8b194": "",
+          "66363f1551b4fdb85c85222c629013b2": "",
+          "66ca156974a9909af6aea88ad5cb915b": ""
         },
         "Choose Your Own Adventure": {
+          "09c9b4915a77a37699140b52b86e4cad": "",
           "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+          "24a124016e7eec7a8fef5bc228541533": "",
+          "2cef5d66c57efe3994c85f4e1f312849": "",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito",
+          "5282c58be05cdecc1308241480b66276": "",
+          "6d411b45e39818da535ba9f8a2cf58e2": "",
+          "710ba29e2eed73bc74a520631d0ab520": "",
+          "7222972741bf95c7d2bf97d1a104fbf0": "",
+          "73af7ec7b0065fb5eb15d6c0ca695ed3": "",
+          "90a2bd046bc816f7d42c33d2a3b347d3": "",
+          "9360086c2f9d62ba563c6fcbfbd9b402": "",
+          "ba57bb6df12b81e80f79eef5b1ca8fc7": "",
+          "c332bf82ea63d21d1d1b701a07ab9afd": "",
+          "c499da20fd7c64b89860a41b61d2dd88": "",
+          "c7323ea29d98d5cad8e0828f3f52ef0c": "",
+          "eb2a8486370211626bbcd04634b73593": "",
+          "ede6020b3ffeeff2339ffbccaa0969df": "",
+          "fe724bc07d1e8b57e53ebfd03c0ec4f5": ""
+        },
+        "Course 4 Play Lab Params 10": {
+          "013405bba4219ed238e87658786699b6": "",
+          "46e888cc716ac8ec6fad01e85eb7c37c": ""
+        },
+        "Course 4 Play Lab Vars 1": {
+          "c469f9393f38213de6fcffa9fe48008d": ""
+        },
+        "Course 4 Play Lab Vars 2": {
+          "c469f9393f38213de6fcffa9fe48008d": ""
+        },
+        "Course 4 Play Lab Vars 6": {
+          "38ef4db866aae5cb50ce847a505b95d1": "",
+          "f2906a454b9ee96245db295d124807f9": ""
+        },
+        "Course 4 Play Lab Vars 7": {
+          "38ef4db866aae5cb50ce847a505b95d1": "",
+          "f2906a454b9ee96245db295d124807f9": ""
         },
         "Course 4 Playlab For Loop Freeplay": {
           "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
           "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
         },
+        "Course 4 Playlab For Loops 6b": {
+          "710ba29e2eed73bc74a520631d0ab520": ""
+        },
         "Course E: Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
           "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
         },
-        "Find the Wizard": {
-          "0b895ef4c917e50663bc2a7327cbee3d": "Nakita mo ako!",
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "FoodFight": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "Guess The Number": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "NEW Course 4 Play Lab Params 11": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "OPD-K5-projects-2": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "OPD-K5-projects-3": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "OPD-K5-projects-4": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "OPD-K5-projects-5": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "course4_playlab_variables_challenge1": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC19_playLab_EOC1": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC19_playLab_EOC1_2020": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC19_playLab_EOC2": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC19_playLab_EOC2_2020": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC19_playLab_EOC3": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC19_playLab_EOC3_2020": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC19_playLab_EOC4": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC19_playLab_EOC4_2020": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC_PlayLab_eventsFP": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC_PlayLab_eventsFP_2018": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC_PlayLab_eventsFP_2019": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC_PlayLab_eventsFP_2020": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseD_playLab_condFP": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseE_playLab_scaffold1": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseE_playLab_scaffold2": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseE_playLab_scaffold3": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseE_playLab_scaffold4": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseF_playlab_variables1a": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseF_playlab_variables3b_josh": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseF_playlab_variables4b": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseF_playlab_variables4c_predictive1": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseF_playlab_variables6c": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseF_playlab_variables7b": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseF_playlab_variables7c": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseF_playlab_variables8c": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseF_playlab_variables_challenge1": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "iceage_free_play": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC19_playLab_EOC1_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC19_playLab_EOC2_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC19_playLab_EOC3_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC19_playLab_EOC4_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC_PlayLab_eventsFP_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseE_aboutme_3_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
-        },
-        "courseE_aboutme_4_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
-        },
-        "courseE_aboutme_5_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hoy!"
-        },
-        "courseF_apps_aquarium": {
-          "83e4a96aed96436c621b9809e258b309": "isda",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "iba",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "nilalang",
-          "f655df68ec33643278de7e69794e8d76": "Virtual na Aquarium",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Ano ang idadagdag mo?",
-          "0d3e73168beb875063ea0f0302fe32bd": "Aling isda?",
-          "caaf8264ca397dba2d35ef902bbbd953": "Anong nilalang?",
-          "78574118d153534fd0925a2f5ca25e79": "Anong bagay?"
-        },
-        "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Panalo ka!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " mga segundo",
-          "490082498449bd20ff0199737dfa4916": "Pumili ng uri ng laro:",
-          "41f2b2212de0105c2a942ebb4a44e449": "Ang Great Collector Game!"
-        },
-        "New Play Lab Project": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "CourseF_outbreak8": {
-          "fac94901e68fc1dea6e749c012e3efc0": "I-click ang mga tiyanak upang bigyan sila ng mga mask.",
-          "968c8b54671ab303d48320f86937c40b": "Nakakatulong ang mga mask na mapabagal ang pagkalat ng mga virus!"
-        },
-        "CourseF_outbreak8_-2022-2": {
-          "fac94901e68fc1dea6e749c012e3efc0": "I-click ang mga tiyanak upang bigyan sila ng mga mask.",
-          "968c8b54671ab303d48320f86937c40b": "Nakakatulong ang mga mask na mapabagal ang pagkalat ng mga virus!"
-        },
-        "courseC19_playLab_EOC12022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC19_playLab_EOC22022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC19_playLab_EOC32022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC19_playLab_EOC42022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseC_PlayLab_eventsFP2022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
-          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
-        },
-        "courseE_aboutme_32022": {
-          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
-        },
-        "courseE_aboutme_42022": {
-          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
-        },
-        "courseE_aboutme_52022": {
-          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
-        },
-        "courseF_apps_aquarium2022": {
-          "83e4a96aed96436c621b9809e258b309": "isda",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "nilalang",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "iba",
-          "f655df68ec33643278de7e69794e8d76": "Virtual na Aquarium",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Ano ang idadagdag mo?",
-          "0d3e73168beb875063ea0f0302fe32bd": "Aling isda?",
-          "caaf8264ca397dba2d35ef902bbbd953": "Anong nilalang?",
-          "78574118d153534fd0925a2f5ca25e79": "Anong bagay?"
-        },
-        "courseF_apps_aquarium_-2022-2": {
-          "83e4a96aed96436c621b9809e258b309": "isda",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "nilalang",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "iba",
-          "f655df68ec33643278de7e69794e8d76": "Virtual na Aquarium",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Ano ang idadagdag mo?",
-          "0d3e73168beb875063ea0f0302fe32bd": "Aling isda?",
-          "caaf8264ca397dba2d35ef902bbbd953": "Anong nilalang?",
-          "78574118d153534fd0925a2f5ca25e79": "Anong bagay?"
-        },
-        "courseF_apps_collector2022": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Panalo ka!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " mga segundo",
-          "490082498449bd20ff0199737dfa4916": "Pumili ng uri ng laro:",
-          "41f2b2212de0105c2a942ebb4a44e449": "Ang Great Collector Game!"
-        },
-        "courseF_apps_collector_-2022-2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Panalo ka!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " mga segundo",
-          "490082498449bd20ff0199737dfa4916": "Pumili ng uri ng laro:",
-          "41f2b2212de0105c2a942ebb4a44e449": "Ang Great Collector Game!"
-        },
-        "coursee_helloworld_freeplay": {
-          "6cd3556deb0da54bca060b4c39479839": "Kamusta, mundo!"
-        },
-        "helloworld_animals_freeplay": {
-          "6cd3556deb0da54bca060b4c39479839": "Kamusta, mundo!"
-        },
-        "helloworld_emoji_freeplay": {
-          "6cd3556deb0da54bca060b4c39479839": "Kamusta, mundo!"
-        },
-        "helloworld_food_freeplay": {
-          "6cd3556deb0da54bca060b4c39479839": "Kamusta, mundo!"
-        },
-        "helloworld_retro_freeplay": {
-          "6cd3556deb0da54bca060b4c39479839": "Kamusta, mundo!"
+        "CourseE_hoops": {
+          "40d7755b0c04b15ca69f0f8d8c510f91": "",
+          "498cd895eb5a102c5aeb977e2b928dee": "Maraming salamat!"
         },
         "CourseF_Project_SpriteLab_2021": {
           "6e41661ddc1edd50b00b7c607cdcec1a": "pagpipilian 1",
@@ -361,164 +89,691 @@
           "c3787b1ed128fdeec3ad638c8ba547d3": "pagpipilian 3"
         },
         "CourseF_Project_SpriteLab_examples_2021": {
-          "8e7d34ed67fe4ec0910cefee2f5059cd": "Sky Dancer",
-          "78d989e01047ba7043a38650d695abaa": "Piliin ang Manlalaro",
           "6e41661ddc1edd50b00b7c607cdcec1a": "pagpipilian 1",
+          "78d989e01047ba7043a38650d695abaa": "Piliin ang Manlalaro",
           "7fec9998c3e5a11f435dc6f2f8e399db": "pagpipilian 2",
+          "8e7d34ed67fe4ec0910cefee2f5059cd": "Sky Dancer",
           "c3787b1ed128fdeec3ad638c8ba547d3": "pagpipilian 3"
         },
+        "CourseF_outbreak8": {
+          "968c8b54671ab303d48320f86937c40b": "Nakakatulong ang mga mask na mapabagal ang pagkalat ng mga virus!",
+          "fac94901e68fc1dea6e749c012e3efc0": "I-click ang mga tiyanak upang bigyan sila ng mga mask."
+        },
+        "CourseF_outbreak8_-2022-2": {
+          "968c8b54671ab303d48320f86937c40b": "Nakakatulong ang mga mask na mapabagal ang pagkalat ng mga virus!",
+          "fac94901e68fc1dea6e749c012e3efc0": "I-click ang mga tiyanak upang bigyan sila ng mga mask."
+        },
+        "Find the Wizard": {
+          "0464d226582401370945003bc8850990": "",
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "0b895ef4c917e50663bc2a7327cbee3d": "Nakita mo ako!",
+          "0ceb38a3de45bf070e96e6657474f47d": "",
+          "22b45b2cf2d4a2a3d7b3faa522013b26": "",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito",
+          "3c5a6a6bfff469fd4c779912331f1049": "",
+          "74e3efe12b17fe00c01147733fad486d": "",
+          "765366ef0f68387ed2a6ca3a8d24182d": "",
+          "cd4c7f8fdf063e832de1604e34dd4531": ""
+        },
+        "FoodFight": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito",
+          "62f1b3a41b5eef66a4b2382bb2ab24f4": "",
+          "cc2ecba4e56986752892c0e68c8e32e0": ""
+        },
+        "Guess The Number": {
+          "015c8ae47c8964d793ddc123b7ba6b81": "",
+          "01bab55de9d3319f27c5213b4661c79f": "",
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "214e809e9d24f40cc42fa2f04f59a1cf": "",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito",
+          "56582da5c99c1bb46ab5dcda003f8c27": "",
+          "5c95950acb6c51d88cc8869eb31f2bdf": "",
+          "781b7711244d030e4ed6e1bfa883364e": "",
+          "919ba81fa27a3f187b7f51f1382c022f": ""
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "OPD-K5-projects-2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "OPD-K5-projects-3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "OPD-K5-projects-4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "OPD-K5-projects-5": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "OPD-K5-projects-6": {
+          "3e11a2dc6edb909c47778bed75a81769": "",
+          "5cec903c4d41c49412a70a94d54999ee": ""
+        },
+        "OPD-K5-projects-7": {
+          "3e11a2dc6edb909c47778bed75a81769": "",
+          "5cec903c4d41c49412a70a94d54999ee": ""
+        },
+        "Virtual Pet 1_2019": {
+          "22661453237feb87f1b00dd17bc39666": "",
+          "4ac000226dd5bc7fc14ecde063245731": ""
+        },
+        "Virtual Pet 1_2020": {
+          "22661453237feb87f1b00dd17bc39666": "",
+          "4ac000226dd5bc7fc14ecde063245731": ""
+        },
+        "course3_playLab_challenge1": {
+          "3e11a2dc6edb909c47778bed75a81769": "",
+          "5cec903c4d41c49412a70a94d54999ee": ""
+        },
+        "course4_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito",
+          "3986de660e6560710c546cb2f22c12f3": "",
+          "40f4f24106dde9234f43bf30465647e0": "",
+          "812febf38bfe564d348136e1b9e71bcd": "",
+          "8292c7cbebf598e875ccd0c008958922": "",
+          "b8bc42495234cdcdcd3ed49dad120a84": ""
+        },
+        "courseC19_playLab_EOC1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC19_playLab_EOC12022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC19_playLab_EOC2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC19_playLab_EOC22022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC19_playLab_EOC3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC19_playLab_EOC32022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC19_playLab_EOC4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC19_playLab_EOC42022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC19_playLab_EOC4_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC19_playLab_EOC5": {
+          "3e11a2dc6edb909c47778bed75a81769": "",
+          "5cec903c4d41c49412a70a94d54999ee": ""
+        },
+        "courseC19_playLab_EOC52022": {
+          "3e11a2dc6edb909c47778bed75a81769": "",
+          "5cec903c4d41c49412a70a94d54999ee": ""
+        },
+        "courseC19_playLab_EOC5_2020": {
+          "3e11a2dc6edb909c47778bed75a81769": "",
+          "5cec903c4d41c49412a70a94d54999ee": ""
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text dito",
+          "5cec903c4d41c49412a70a94d54999ee": "Maaari kang sumulat ng isang bagay."
+        },
+        "courseC19_playLab_EOC6": {
+          "3e11a2dc6edb909c47778bed75a81769": "",
+          "5cec903c4d41c49412a70a94d54999ee": ""
+        },
+        "courseC19_playLab_EOC62022": {
+          "3e11a2dc6edb909c47778bed75a81769": "",
+          "5cec903c4d41c49412a70a94d54999ee": ""
+        },
+        "courseC19_playLab_EOC6_2020": {
+          "3e11a2dc6edb909c47778bed75a81769": "",
+          "5cec903c4d41c49412a70a94d54999ee": ""
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text dito",
+          "5cec903c4d41c49412a70a94d54999ee": "Maaari kang sumulat ng isang bagay."
+        },
+        "courseC19_playLab_sample12022": {
+          "3e11a2dc6edb909c47778bed75a81769": "",
+          "5cec903c4d41c49412a70a94d54999ee": ""
+        },
+        "courseC19_playLab_sample1_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text dito",
+          "5cec903c4d41c49412a70a94d54999ee": "Maaari kang sumulat ng isang bagay."
+        },
         "courseC19_playLab_sample22022": {
-          "83db90f8846d091d3532256816f105d9": "Si Neila ito.",
           "0192cdc04916ec27aa11738bb6e48d6e": "Sinisikap ni Neila na protektahan ang kanyang tahanan mula sa spacebot.",
-          "df8312187449c70820d7c58229a6b17e": "Tinatakot ng spacebot ang iba pang mga nilalang.",
-          "c084e152431f9116b9fdb3f7d465f13d": "Gusto ni Neila na tulungan ang spacebot na matutong maging mabait.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Ang ibang mga nilalang ay hindi na natatakot!",
+          "3e11a2dc6edb909c47778bed75a81769": "",
+          "5cec903c4d41c49412a70a94d54999ee": "",
+          "83db90f8846d091d3532256816f105d9": "Si Neila ito.",
           "b2f02bf648ce32c4362afe1578d41f70": "Gumana ito! Ipinakita ni Neila sa spacebot ang kapangyarihan ng kabaitan.",
-          "2a28483f9f4f9ee44cec653a445d4c82": "Ang ibang mga nilalang ay hindi na natatakot!"
+          "c084e152431f9116b9fdb3f7d465f13d": "Gusto ni Neila na tulungan ang spacebot na matutong maging mabait.",
+          "df8312187449c70820d7c58229a6b17e": "Tinatakot ng spacebot ang iba pang mga nilalang."
         },
         "courseC19_playLab_sample2_2021": {
-          "83db90f8846d091d3532256816f105d9": "Si Neila ito.",
           "0192cdc04916ec27aa11738bb6e48d6e": "Sinisikap ni Neila na protektahan ang kanyang tahanan mula sa spacebot.",
-          "df8312187449c70820d7c58229a6b17e": "Tinatakot ng spacebot ang iba pang mga nilalang.",
-          "c084e152431f9116b9fdb3f7d465f13d": "Gusto ni Neila na tulungan ang spacebot na matutong maging mabait.",
-          "b2f02bf648ce32c4362afe1578d41f70": "Gumana ito! Ipinakita ni Neila sa spacebot ang kapangyarihan ng kabaitan.",
           "2a28483f9f4f9ee44cec653a445d4c82": "Ang ibang mga nilalang ay hindi na natatakot!",
+          "3e11a2dc6edb909c47778bed75a81769": "Text dito",
           "5cec903c4d41c49412a70a94d54999ee": "Maaari kang sumulat ng isang bagay.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text dito"
+          "83db90f8846d091d3532256816f105d9": "Si Neila ito.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Gumana ito! Ipinakita ni Neila sa spacebot ang kapangyarihan ng kabaitan.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Gusto ni Neila na tulungan ang spacebot na matutong maging mabait.",
+          "df8312187449c70820d7c58229a6b17e": "Tinatakot ng spacebot ang iba pang mga nilalang."
+        },
+        "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC_PlayLab_eventsFP2022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC_PlayLab_eventsFP_2018": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC_PlayLab_eventsFP_2019": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC_PlayLab_eventsFP_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseC_data wizard": {
+          "1c64ef29c853587fbe94f69f05272b79": "",
+          "22f6f6821f4d6d0a08653935b466ac2f": "",
+          "27944770529dd15319a983bee8951560": "",
+          "336ad881e37e713ba0325500a8fa1f00": "",
+          "4b23c908b939eaf7918e07142b9e05e0": "",
+          "5b402e6ea05e847a076e03ad74420c45": "",
+          "71fc859f3abd22273bad5d0d8eda2173": "",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "",
+          "81a2909a24e4ca3b582ab9ee539c080c": "",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "",
+          "f62038e77820419cd978f7b722da560a": ""
+        },
+        "courseC_data wizard2022": {
+          "1c64ef29c853587fbe94f69f05272b79": "",
+          "22f6f6821f4d6d0a08653935b466ac2f": "",
+          "27944770529dd15319a983bee8951560": "",
+          "336ad881e37e713ba0325500a8fa1f00": "",
+          "4b23c908b939eaf7918e07142b9e05e0": "",
+          "5b402e6ea05e847a076e03ad74420c45": "",
+          "71fc859f3abd22273bad5d0d8eda2173": "",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "",
+          "81a2909a24e4ca3b582ab9ee539c080c": "",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "",
+          "f62038e77820419cd978f7b722da560a": ""
+        },
+        "courseC_data wizard_2020": {
+          "1c64ef29c853587fbe94f69f05272b79": "",
+          "22f6f6821f4d6d0a08653935b466ac2f": "",
+          "27944770529dd15319a983bee8951560": "",
+          "336ad881e37e713ba0325500a8fa1f00": "",
+          "4b23c908b939eaf7918e07142b9e05e0": "",
+          "5b402e6ea05e847a076e03ad74420c45": "",
+          "71fc859f3abd22273bad5d0d8eda2173": "",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "",
+          "81a2909a24e4ca3b582ab9ee539c080c": "",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "",
+          "f62038e77820419cd978f7b722da560a": ""
+        },
+        "courseC_data wizard_2021": {
+          "1c64ef29c853587fbe94f69f05272b79": "Isang ibon!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " mga pusa!",
+          "27944770529dd15319a983bee8951560": "Isang pusa!",
+          "336ad881e37e713ba0325500a8fa1f00": " mga aso!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Isang dragon!",
+          "5b402e6ea05e847a076e03ad74420c45": " mga ibon!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Bilangin ang lahat ng mga hayop!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " mga dragon!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Bilangin ang mga Alaga",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Isang aso!",
+          "f62038e77820419cd978f7b722da560a": "Ilan ang lalabas?"
+        },
+        "courseD_playLab_condFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseE_Dogger_2": {
+          "8437002ea42b64a5fd68abfb2ab8dae0": "",
+          "c865bfd8e0c78020ace8e1376d3cc9ad": "",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Panalo ka!"
+        },
+        "courseE_aboutme_1": {
+          "1c6636ce086fef9305c6e3d25e37d5b2": "",
+          "41a18649f969a00ec0b2feba20db997f": "",
+          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "",
+          "6f97975a0bda0c9219915161149cbb26": "",
+          "756afb811df2eb3ec88a9e98f3dcaa8d": "",
+          "810896b14fc6615f0c76628b9b6a727e": "",
+          "a50ec512bdd98483a7cdcd88cbe11933": "",
+          "b63151482630edd1589a9ac24d107c49": "",
+          "fce3b93eaa64a8869c47ba25daa8887f": ""
+        },
+        "courseE_aboutme_1_2020": {
+          "1c6636ce086fef9305c6e3d25e37d5b2": "",
+          "41a18649f969a00ec0b2feba20db997f": "",
+          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "",
+          "6f97975a0bda0c9219915161149cbb26": "",
+          "756afb811df2eb3ec88a9e98f3dcaa8d": "",
+          "810896b14fc6615f0c76628b9b6a727e": "",
+          "a50ec512bdd98483a7cdcd88cbe11933": "",
+          "b63151482630edd1589a9ac24d107c49": "",
+          "fce3b93eaa64a8869c47ba25daa8887f": ""
+        },
+        "courseE_aboutme_1_2021": {
+          "31ba97bb501bb1f5b448221be09bad32": "Corgi ko yan, Lollipop! Dapat turuan ko siya kung paano mag-code!",
+          "6f97975a0bda0c9219915161149cbb26": "Computer ko yan! Naka-code ako dito sa LAHAT ng oras!",
+          "810896b14fc6615f0c76628b9b6a727e": "Yan ang matalik kong kaibigan na si Thuy! Ang galing niya talaga sa isport!",
+          "8e985f60f328934accd78e7649584840": "Ice cream ang paborito kong treat!",
+          "b63151482630edd1589a9ac24d107c49": "Ako yan! Rikki! Gusto kong mag-code, mag-hangout kasama si Thuy, at kumain ng ice cream!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
+        },
+        "courseE_aboutme_32022": {
+          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
+        },
+        "courseE_aboutme_42022": {
+          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
+        },
+        "courseE_aboutme_5": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "",
+          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
+        },
+        "courseE_aboutme_52022": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "",
+          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
+        },
+        "courseE_aboutme_5_2020": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "",
+          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
+        },
+        "courseE_aboutme_5_2021": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hoy!",
+          "ed076287532e86365e841e92bfc50d8c": "Mabuhay!"
+        },
+        "courseE_playLab_challenge1": {
+          "3e11a2dc6edb909c47778bed75a81769": "",
+          "5cec903c4d41c49412a70a94d54999ee": ""
+        },
+        "courseE_playLab_scaffold1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseE_playLab_scaffold2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseE_playLab_scaffold3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseE_playLab_scaffold4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseE_playLab_scaffold5": {
+          "3e11a2dc6edb909c47778bed75a81769": "",
+          "5cec903c4d41c49412a70a94d54999ee": ""
+        },
+        "courseE_playLab_scaffold6": {
+          "2d3cdcfdd4061212e4d4930a183dad2d": "",
+          "af142a90df4becc2aa7ae0d3acb3cc90": ""
+        },
+        "courseF_apps_aquarium": {
+          "0d3e73168beb875063ea0f0302fe32bd": "Aling isda?",
+          "78574118d153534fd0925a2f5ca25e79": "Anong bagay?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "iba",
+          "83e4a96aed96436c621b9809e258b309": "isda",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "nilalang",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Ano ang idadagdag mo?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Anong nilalang?",
+          "f655df68ec33643278de7e69794e8d76": "Virtual na Aquarium"
+        },
+        "courseF_apps_aquarium2022": {
+          "0d3e73168beb875063ea0f0302fe32bd": "Aling isda?",
+          "78574118d153534fd0925a2f5ca25e79": "Anong bagay?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "iba",
+          "83e4a96aed96436c621b9809e258b309": "isda",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "nilalang",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Ano ang idadagdag mo?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Anong nilalang?",
+          "f655df68ec33643278de7e69794e8d76": "Virtual na Aquarium"
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "0d3e73168beb875063ea0f0302fe32bd": "Aling isda?",
+          "78574118d153534fd0925a2f5ca25e79": "Anong bagay?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "iba",
+          "83e4a96aed96436c621b9809e258b309": "isda",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "nilalang",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Ano ang idadagdag mo?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Anong nilalang?",
+          "f655df68ec33643278de7e69794e8d76": "Virtual na Aquarium"
         },
         "courseF_apps_card": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sino ang may kaarawan?",
           "d1210f945885351b13feb9bbb868aeef": "Ilang taon na sila?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sino ang may kaarawan?"
         },
         "courseF_apps_card2022": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sino ang may kaarawan?",
           "d1210f945885351b13feb9bbb868aeef": "Ilang taon na sila?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sino ang may kaarawan?"
         },
         "courseF_apps_card_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sino ang may kaarawan?",
           "d1210f945885351b13feb9bbb868aeef": "Ilang taon na sila?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sino ang may kaarawan?"
         },
         "courseF_apps_chatbot": {
-          "a72e7c5c68af0546e963e510297f5233": "Hello, ako si X-9! Anong pangalan mo?",
-          "f0e5da70d264f312a1658d51c130b101": "Ilagay ang pangalan mo:",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Ilang taon ka na?",
           "05584ab56b744b51cd8c4a6e8b3a08ee": "Ilagay ang edad mo:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Ilang taon ka na?",
+          "1f258d88a70309efc1435ef5daa277a0": "Salamat sa pakikipag-chat sa akin ngayon!",
           "605f302ebc9f7fbacba60b15f551a633": "Ano ang paborito mong kulay?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Ilagay ang paborito mong kulay:",
+          "a72e7c5c68af0546e963e510297f5233": "Hello, ako si X-9! Anong pangalan mo?",
           "ae096fbf24d913754b01a1601672bf62": " din!",
-          "1f258d88a70309efc1435ef5daa277a0": "Salamat sa pakikipag-chat sa akin ngayon!"
+          "f0e5da70d264f312a1658d51c130b101": "Ilagay ang pangalan mo:"
         },
         "courseF_apps_chatbot2022": {
-          "a72e7c5c68af0546e963e510297f5233": "Hello, ako si X-9! Anong pangalan mo?",
-          "f0e5da70d264f312a1658d51c130b101": "Ilagay ang pangalan mo:",
           "05584ab56b744b51cd8c4a6e8b3a08ee": "Ilagay ang edad mo:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "",
+          "1f258d88a70309efc1435ef5daa277a0": "Salamat sa pakikipag-chat sa akin ngayon!",
           "605f302ebc9f7fbacba60b15f551a633": "Ano ang paborito mong kulay?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Ilagay ang paborito mong kulay:",
-          "1f258d88a70309efc1435ef5daa277a0": "Salamat sa pakikipag-chat sa akin ngayon!"
+          "a72e7c5c68af0546e963e510297f5233": "Hello, ako si X-9! Anong pangalan mo?",
+          "ae096fbf24d913754b01a1601672bf62": "",
+          "f0e5da70d264f312a1658d51c130b101": "Ilagay ang pangalan mo:"
         },
         "courseF_apps_chatbot_-2022-2": {
-          "a72e7c5c68af0546e963e510297f5233": "Hello, ako si X-9! Anong pangalan mo?",
-          "f0e5da70d264f312a1658d51c130b101": "Ilagay ang pangalan mo:",
           "05584ab56b744b51cd8c4a6e8b3a08ee": "Ilagay ang edad mo:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "",
+          "1f258d88a70309efc1435ef5daa277a0": "Salamat sa pakikipag-chat sa akin ngayon!",
           "605f302ebc9f7fbacba60b15f551a633": "Ano ang paborito mong kulay?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Ilagay ang paborito mong kulay:",
-          "1f258d88a70309efc1435ef5daa277a0": "Salamat sa pakikipag-chat sa akin ngayon!"
+          "a72e7c5c68af0546e963e510297f5233": "Hello, ako si X-9! Anong pangalan mo?",
+          "ae096fbf24d913754b01a1601672bf62": "",
+          "f0e5da70d264f312a1658d51c130b101": "Ilagay ang pangalan mo:"
+        },
+        "courseF_apps_collector": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " mga segundo",
+          "41f2b2212de0105c2a942ebb4a44e449": "Ang Great Collector Game!",
+          "490082498449bd20ff0199737dfa4916": "Pumili ng uri ng laro:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Panalo ka!"
+        },
+        "courseF_apps_collector2022": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " mga segundo",
+          "41f2b2212de0105c2a942ebb4a44e449": "Ang Great Collector Game!",
+          "490082498449bd20ff0199737dfa4916": "Pumili ng uri ng laro:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Panalo ka!"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " mga segundo",
+          "41f2b2212de0105c2a942ebb4a44e449": "Ang Great Collector Game!",
+          "490082498449bd20ff0199737dfa4916": "Pumili ng uri ng laro:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Panalo ka!"
         },
         "courseF_apps_madlib": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Mga Laro sa Parti",
-          "bf08dd3d1961874f13e77c936aad27e5": "Isang Kuwentong Blank Space",
-          "514b8d5320196898a9ced3efe0d4c802": "Maglagay ng pang-uri:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Magpasok ng bagay:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Maglagay ng bahagi ng katawan:",
-          "e522ee28f39133b45497637539ff429b": "Maglagay ng numero:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " mga laro.",
+          "514b8d5320196898a9ced3efe0d4c802": "Maglagay ng pang-uri:",
           "5306eed2fd2c43fe033efd6016c0c38b": "-legged na karera!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " mga laro.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Magpasok ng bagay:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Isang Kuwentong Blank Space",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko",
+          "e522ee28f39133b45497637539ff429b": "Maglagay ng numero:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Mga Laro sa Parti"
         },
         "courseF_apps_madlib2022": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Mga Laro sa Parti",
-          "bf08dd3d1961874f13e77c936aad27e5": "Isang Kuwentong Blank Space",
-          "514b8d5320196898a9ced3efe0d4c802": "Maglagay ng pang-uri:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Magpasok ng bagay:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Maglagay ng bahagi ng katawan:",
-          "e522ee28f39133b45497637539ff429b": "Maglagay ng numero:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " mga laro.",
+          "514b8d5320196898a9ced3efe0d4c802": "Maglagay ng pang-uri:",
           "5306eed2fd2c43fe033efd6016c0c38b": "-legged na karera!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " mga laro.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Magpasok ng bagay:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Isang Kuwentong Blank Space",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko",
+          "e522ee28f39133b45497637539ff429b": "Maglagay ng numero:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Mga Laro sa Parti"
         },
         "courseF_apps_madlib_-2022-2": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Mga Laro sa Parti",
-          "bf08dd3d1961874f13e77c936aad27e5": "Isang Kuwentong Blank Space",
-          "514b8d5320196898a9ced3efe0d4c802": "Maglagay ng pang-uri:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Magpasok ng bagay:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Maglagay ng bahagi ng katawan:",
-          "e522ee28f39133b45497637539ff429b": "Maglagay ng numero:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " mga laro.",
+          "514b8d5320196898a9ced3efe0d4c802": "Maglagay ng pang-uri:",
           "5306eed2fd2c43fe033efd6016c0c38b": "-legged na karera!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " mga laro.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Magpasok ng bagay:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Isang Kuwentong Blank Space",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko",
+          "e522ee28f39133b45497637539ff429b": "Maglagay ng numero:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Mga Laro sa Parti"
         },
         "courseF_editable_card": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sino ang may kaarawan?",
           "d1210f945885351b13feb9bbb868aeef": "Ilang taon na sila?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sino ang may kaarawan?"
         },
         "courseF_editable_card_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sino ang may kaarawan?",
           "d1210f945885351b13feb9bbb868aeef": "Ilang taon na sila?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sino ang may kaarawan?"
         },
         "courseF_editable_chatbot": {
-          "a72e7c5c68af0546e963e510297f5233": "Hello, ako si X-9! Anong pangalan mo?",
-          "f0e5da70d264f312a1658d51c130b101": "Ilagay ang pangalan mo:",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Ilang taon ka na?",
           "05584ab56b744b51cd8c4a6e8b3a08ee": "Ilagay ang edad mo:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " mga taong gulang din!",
-          "605f302ebc9f7fbacba60b15f551a633": "Ano ang paborito mong kulay?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Ilagay ang paborito mong kulay:",
-          "ae096fbf24d913754b01a1601672bf62": " din!",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Ilang taon ka na?",
           "1f258d88a70309efc1435ef5daa277a0": "Salamat sa pakikipag-chat sa akin ngayon!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
+          "605f302ebc9f7fbacba60b15f551a633": "Ano ang paborito mong kulay?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " mga taong gulang din!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Ilagay ang paborito mong kulay:",
+          "a72e7c5c68af0546e963e510297f5233": "Hello, ako si X-9! Anong pangalan mo?",
+          "ae096fbf24d913754b01a1601672bf62": " din!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko",
+          "f0e5da70d264f312a1658d51c130b101": "Ilagay ang pangalan mo:"
         },
         "courseF_editable_chatbot_-2022-2": {
-          "a72e7c5c68af0546e963e510297f5233": "Hello, ako si X-9! Anong pangalan mo?",
-          "f0e5da70d264f312a1658d51c130b101": "Ilagay ang pangalan mo:",
           "05584ab56b744b51cd8c4a6e8b3a08ee": "Ilagay ang edad mo:",
-          "605f302ebc9f7fbacba60b15f551a633": "Ano ang paborito mong kulay?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Ilagay ang paborito mong kulay:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "",
           "1f258d88a70309efc1435ef5daa277a0": "Salamat sa pakikipag-chat sa akin ngayon!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
+          "605f302ebc9f7fbacba60b15f551a633": "Ano ang paborito mong kulay?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Ilagay ang paborito mong kulay:",
+          "a72e7c5c68af0546e963e510297f5233": "Hello, ako si X-9! Anong pangalan mo?",
+          "ae096fbf24d913754b01a1601672bf62": "",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko",
+          "f0e5da70d264f312a1658d51c130b101": "Ilagay ang pangalan mo:"
         },
         "courseF_editable_madlib": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Mga Laro sa Parti",
-          "bf08dd3d1961874f13e77c936aad27e5": "Isang Kuwentong Blank Space",
-          "514b8d5320196898a9ced3efe0d4c802": "Maglagay ng pang-uri:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Magpasok ng bagay:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Maglagay ng bahagi ng katawan:",
-          "e522ee28f39133b45497637539ff429b": "Maglagay ng numero:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " mga laro.",
+          "514b8d5320196898a9ced3efe0d4c802": "Maglagay ng pang-uri:",
           "5306eed2fd2c43fe033efd6016c0c38b": "-legged na karera!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " mga laro.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Magpasok ng bagay:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Isang Kuwentong Blank Space",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko",
+          "e522ee28f39133b45497637539ff429b": "Maglagay ng numero:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Mga Laro sa Parti"
         },
         "courseF_editable_madlib_-2022-2": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Mga Laro sa Parti",
-          "bf08dd3d1961874f13e77c936aad27e5": "Isang Kuwentong Blank Space",
-          "514b8d5320196898a9ced3efe0d4c802": "Maglagay ng pang-uri:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Magpasok ng bagay:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Maglagay ng bahagi ng katawan:",
-          "e522ee28f39133b45497637539ff429b": "Maglagay ng numero:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " mga laro.",
+          "514b8d5320196898a9ced3efe0d4c802": "Maglagay ng pang-uri:",
           "5306eed2fd2c43fe033efd6016c0c38b": "-legged na karera!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " mga laro.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Magpasok ng bagay:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Isang Kuwentong Blank Space",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko",
+          "e522ee28f39133b45497637539ff429b": "Maglagay ng numero:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Mga Laro sa Parti"
+        },
+        "courseF_extras_sim": {
+          "a2e534e7e893bd7ddb5d2047ed29dc8e": ""
         },
         "courseF_label_predict": {
-          "f15045cb7e57652546d4a0b2c695356f": "Ano ang kakainin mo?",
-          "937dc37c06cc5d89a7096eb048b73590": " paparating na!"
+          "937dc37c06cc5d89a7096eb048b73590": " paparating na!",
+          "f15045cb7e57652546d4a0b2c695356f": "Ano ang kakainin mo?"
         },
         "courseF_label_predict_-2022-2": {
-          "f15045cb7e57652546d4a0b2c695356f": "Ano ang kakainin mo?",
-          "937dc37c06cc5d89a7096eb048b73590": " paparating na!"
+          "937dc37c06cc5d89a7096eb048b73590": " paparating na!",
+          "f15045cb7e57652546d4a0b2c695356f": "Ano ang kakainin mo?"
+        },
+        "courseF_playlab_variables1a": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito",
+          "97a97de7add5e8dcd9f70a407d56968e": "",
+          "ea904c9d18bd602705f598372988aaa8": ""
+        },
+        "courseF_playlab_variables2b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito",
+          "48d6215903dff56238e52e8891380c8f": "asul",
+          "810f7026db2f96c4e654f4664e44be04": "",
+          "f59f10539890569d3b1deb0e4352ab84": ""
+        },
+        "courseF_playlab_variables3b_josh": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito",
+          "662722f1029078dad7a3683c64d8b922": "",
+          "88789b154a4ffbbd84108b0c80f8c464": "",
+          "ae096fbf24d913754b01a1601672bf62": ""
+        },
+        "courseF_playlab_variables4b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "",
+          "16e30dcbd70ec5a152eedded32c69476": "",
+          "2e1749915d40abd8f43fc2b9dd13649c": "",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito",
+          "ecb2903fb054395baf72ea1da127be32": "",
+          "ed4b32d6c8e019829b6f9f2ddb6b7dd2": ""
+        },
+        "courseF_playlab_variables4c_predictive1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito",
+          "d065635d5fffcb3739555ae93006081c": "",
+          "f6429fe0f1a76611670df7e1234af936": ""
+        },
+        "courseF_playlab_variables5c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "1df9f02f4866a1996ba55a14b80e4125": "",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito",
+          "b92274a5b4513e80f4bd6a8136581578": "",
+          "bda9643ac6601722a28f238714274da4": "pula",
+          "c30c9d9f51c03a6d42d66cea54206abd": "",
+          "f54929e86cc7510907895070d8b05979": "",
+          "ff800dc7251afead2cdf9c569ff5c9bc": ""
+        },
+        "courseF_playlab_variables6c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "105837607f006777512dc5b09322ea4f": "",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseF_playlab_variables7b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
+        },
+        "courseF_playlab_variables7c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "105837607f006777512dc5b09322ea4f": "",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito",
+          "c216de13cd615c884ff2cc5894324e17": ""
+        },
+        "courseF_playlab_variables8c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "105837607f006777512dc5b09322ea4f": "",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito",
+          "8460ae10541cf8ded22a4e899ddfc0bb": "",
+          "8622f69e8cf70458a82fc22d8e46372f": "",
+          "bec312aa7dbfb0c284d221d2aa8e9ffd": "",
+          "c216de13cd615c884ff2cc5894324e17": "",
+          "cd0d7bbbbb604e524bfc25effa78095d": ""
+        },
+        "courseF_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito",
+          "3986de660e6560710c546cb2f22c12f3": "",
+          "40f4f24106dde9234f43bf30465647e0": "",
+          "812febf38bfe564d348136e1b9e71bcd": "",
+          "8292c7cbebf598e875ccd0c008958922": "",
+          "b8bc42495234cdcdcd3ed49dad120a84": ""
+        },
+        "courseF_playlab_variables_challenge2": {
+          "6b90c9823ff75e6a78aa63b392e7315a": ""
+        },
+        "courseF_project_1": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Maraming salamat!",
+          "6b90c9823ff75e6a78aa63b392e7315a": "",
+          "cbada13e4c1e0a4ce8a6778941fb48de": "",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Panalo ka!"
         },
         "courseF_text_answer": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
@@ -539,13 +794,13 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
         },
         "courseF_text_choice_events": {
-          "c529a06c3f8518b63ff6dfac482b335c": "Pangalanan ang planetang ito:",
           "44506356d48394cd903b579df9de9117": ", makalupa!",
+          "c529a06c3f8518b63ff6dfac482b335c": "Pangalanan ang planetang ito:",
           "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
         },
         "courseF_text_choice_events_-2022-2": {
-          "c529a06c3f8518b63ff6dfac482b335c": "Pangalanan ang planetang ito:",
           "44506356d48394cd903b579df9de9117": ", makalupa!",
+          "c529a06c3f8518b63ff6dfac482b335c": "Pangalanan ang planetang ito:",
           "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
         },
         "courseF_text_choice_freeplay": {
@@ -563,12 +818,12 @@
           "5bd698afd23bccde289bb0b4aa72a518": "Pangalanan ang robot."
         },
         "courseF_text_choice_multiprompt": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sino ang may kaarawan?",
-          "d1210f945885351b13feb9bbb868aeef": "Ilang taon na sila?"
+          "d1210f945885351b13feb9bbb868aeef": "Ilang taon na sila?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sino ang may kaarawan?"
         },
         "courseF_text_choice_multiprompt_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sino ang may kaarawan?",
-          "d1210f945885351b13feb9bbb868aeef": "Ilang taon na sila?"
+          "d1210f945885351b13feb9bbb868aeef": "Ilang taon na sila?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sino ang may kaarawan?"
         },
         "courseF_text_choice_title": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
@@ -577,16 +832,20 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
         },
         "courseF_text_concat": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko",
+          "f6429fe0f1a76611670df7e1234af936": ""
         },
         "courseF_text_concat_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko",
+          "f6429fe0f1a76611670df7e1234af936": ""
         },
         "courseF_text_prompts": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko",
+          "f6429fe0f1a76611670df7e1234af936": ""
         },
         "courseF_text_prompts_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko",
+          "f6429fe0f1a76611670df7e1234af936": ""
         },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
@@ -632,40 +891,30 @@
           "50d489a15105b987ec6d4410900c95dd": "Maglagay ng pandiwa:",
           "e243ac4e74cc5a76adbecf3b4daa1906": "ang tanong ko"
         },
-        "courseC19_playLab_EOC5_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Maaari kang sumulat ng isang bagay.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text dito"
-        },
-        "courseC19_playLab_EOC6_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Maaari kang sumulat ng isang bagay.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text dito"
-        },
-        "courseC19_playLab_sample1_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Maaari kang sumulat ng isang bagay.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text dito"
-        },
-        "courseC_data wizard_2021": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Isang aso!",
-          "336ad881e37e713ba0325500a8fa1f00": " mga aso!",
-          "27944770529dd15319a983bee8951560": "Isang pusa!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " mga pusa!",
-          "1c64ef29c853587fbe94f69f05272b79": "Isang ibon!",
-          "5b402e6ea05e847a076e03ad74420c45": " mga ibon!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Isang dragon!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " mga dragon!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Bilangin ang lahat ng mga hayop!",
-          "f62038e77820419cd978f7b722da560a": "Ilan ang lalabas?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Bilangin ang mga Alaga"
-        },
-        "courseE_aboutme_1_2021": {
-          "b63151482630edd1589a9ac24d107c49": "Ako yan! Rikki! Gusto kong mag-code, mag-hangout kasama si Thuy, at kumain ng ice cream!",
-          "810896b14fc6615f0c76628b9b6a727e": "Yan ang matalik kong kaibigan na si Thuy! Ang galing niya talaga sa isport!",
-          "8e985f60f328934accd78e7649584840": "Ice cream ang paborito kong treat!",
-          "31ba97bb501bb1f5b448221be09bad32": "Corgi ko yan, Lollipop! Dapat turuan ko siya kung paano mag-code!",
-          "6f97975a0bda0c9219915161149cbb26": "Computer ko yan! Naka-code ako dito sa LAHAT ng oras!"
-        },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "Anong pangalan mo?"
+        },
+        "courseF_variables_predict_-2022-2": {
+          "f6429fe0f1a76611670df7e1234af936": ""
+        },
+        "coursee_helloworld_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Kamusta, mundo!"
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Kamusta, mundo!"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Kamusta, mundo!"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Kamusta, mundo!"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Kamusta, mundo!"
+        },
+        "iceage_free_play": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "i-type ang text dito",
+          "30fcc1693fa8402931d13ac3a5f396fd": "i-type ang title dito"
         }
       }
     }
