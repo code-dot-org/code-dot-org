@@ -152,7 +152,7 @@ export const setUpWithLevel = createAsyncThunk(
   }
 );
 
-// Given a channel id as the payload, set up the lab for that channel id.
+// Given a channel id and app name as the payload, set up the lab for that channel id.
 // This consists of cleaning up the existing project manager (if applicable), then
 // creating a project manager and loading the project data.
 // This method is used for loading a lab that is not associated with a level
@@ -160,13 +160,13 @@ export const setUpWithLevel = createAsyncThunk(
 // If we get an aborted signal, we will exit early.
 export const setUpWithoutLevel = createAsyncThunk(
   'lab/setUpWithoutLevel',
-  async (payload: string, thunkAPI) => {
+  async (payload: {channelId: string; appName: AppName}, thunkAPI) => {
     await cleanUpProjectManager();
 
     // Create the new project manager.
     const projectManager = ProjectManagerFactory.getProjectManager(
       ProjectManagerStorageType.REMOTE,
-      payload
+      payload.channelId
     );
     Lab2Registry.getInstance().setProjectManager(projectManager);
 
@@ -176,7 +176,11 @@ export const setUpWithoutLevel = createAsyncThunk(
       thunkAPI.dispatch
     );
     setProjectAndLevelData(
-      {initialSources: sources, channel},
+      {
+        initialSources: sources,
+        channel,
+        levelProperties: {appName: payload.appName},
+      },
       thunkAPI.signal.aborted,
       thunkAPI.dispatch
     );

@@ -90,7 +90,7 @@ export interface LevelProperties {
   // the only labs we support have projects enabled, it's easier to make this a
   // disabled flag for specific exceptions.
   disableProjects?: 'true' | 'false';
-  levelData: LevelData;
+  levelData?: LevelData;
   appName: AppName;
 }
 
