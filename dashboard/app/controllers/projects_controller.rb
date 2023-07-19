@@ -293,7 +293,7 @@ class ProjectsController < ApplicationController
     )
   end
 
-  # GET /projects(/script/:script_id)/level/:level_id
+  # GET /projects(/script/:script_id)/level/:level_id/:user_id
   # Given a level_id and the current user (or signed out user), get the existing project
   # or create a new project for that level and user. If a script_id is provided, get or
   # create the project for that level, script and user
@@ -305,7 +305,11 @@ class ProjectsController < ApplicationController
     return render(status: :forbidden, json: {error: error_message}) if error_message
     # get_storage_id works for signed out users as well, it uses the cookie to determine
     # the storage id.
-    user_storage_id = get_storage_id
+    if (params[:user_id])
+      user_storage_id = get_storage_ids_by_user_ids(params[:user_id])[params[:user_id].to_i]
+    else
+      user_storage_id = get_storage_id
+    end
     # Find the channel for the user and level if it exists, or create a new one.
     channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, script_id, {hidden: true})
     script_name = !script_id.nil? && Unit.find(script_id)&.name

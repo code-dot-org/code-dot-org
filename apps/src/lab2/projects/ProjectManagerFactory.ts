@@ -18,13 +18,15 @@ export default class ProjectManagerFactory {
    */
   static getProjectManager(
     projectManagerStorageType: ProjectManagerStorageType,
-    projectId: string
+    projectId: string,
+    userId: string
   ): ProjectManager {
     return new ProjectManager(
       this.getSourcesStore(projectManagerStorageType),
       this.getChannelsStore(projectManagerStorageType),
       projectId,
-      false // reduceChannelUpdates will only be true for a project in a script.
+      false, // reduceChannelUpdates will only be true for a project in a script.
+      userId
     );
   }
 
@@ -39,13 +41,18 @@ export default class ProjectManagerFactory {
    */
   static async getProjectManagerForLevel(
     projectManagerStorageType: ProjectManagerStorageType,
+    userId: string,
     levelId: number,
     scriptId?: number
   ): Promise<ProjectManager> {
     const channelsStore = this.getChannelsStore(projectManagerStorageType);
     let channelId: string | undefined = undefined;
     let reduceChannelUpdates = false;
-    const response = await channelsStore.loadForLevel(levelId, scriptId);
+    const response = await channelsStore.loadForLevel(
+      levelId,
+      scriptId,
+      userId
+    );
     if (response.ok) {
       const responseBody = await response.json();
       if (responseBody && responseBody.channel) {
@@ -60,7 +67,8 @@ export default class ProjectManagerFactory {
       this.getSourcesStore(projectManagerStorageType),
       channelsStore,
       channelId,
-      reduceChannelUpdates
+      reduceChannelUpdates,
+      userId
     );
   }
 

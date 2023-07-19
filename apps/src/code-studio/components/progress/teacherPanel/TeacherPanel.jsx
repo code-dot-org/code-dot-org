@@ -23,7 +23,10 @@ import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teach
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
+import {
+  queryUserProgress,
+  setUserId,
+} from '@cdo/apps/code-studio/progressRedux';
 import {hasLockableLessons} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {reload} from '@cdo/apps/utils';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
@@ -125,7 +128,7 @@ class TeacherPanel extends React.Component {
 
   onSelectUser = (id, selectType) => {
     this.logToFirehose('select_student', {select_type: selectType});
-    const isAsync = this.props.pageType === pageTypes.scriptOverview;
+    const isAsync = true || this.props.pageType === pageTypes.scriptOverview;
     this.props.selectUser(id, isAsync);
   };
 
@@ -342,7 +345,13 @@ export default connect(
     selectUser: (userId, isAsync = false) => {
       updateQueryParam('user_id', userId);
       updateQueryParam('version');
-      isAsync ? dispatch(queryUserProgress(userId)) : reload();
+      if (isAsync) {
+        dispatch(queryUserProgress(userId));
+        dispatch(setUserId(userId));
+      } else {
+        reload();
+      }
+      //isAsync ? dispatch(queryUserProgress(userId)) : reload();
     },
     setStudentsForCurrentSection: (sectionId, students) => {
       dispatch(setStudentsForCurrentSection(sectionId, students));
