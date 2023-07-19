@@ -19,6 +19,8 @@
         "DigitalCitizenship": "Kewarganegaraaan Digital",
         "DigitalFootprint": "Digital Footprint Anda",
         "DigitalFootprint_2018": "Digital Footprint Anda",
+        "ECSPD your goals": "",
+        "ECSPD your goals_test": "",
         "EnvelopeVariables": "Sampul Variabel",
         "EnvelopeVariables_2018": "terjemahan tidak ada: en-US.data.unplugged.EnvelopeVariables_2018.title",
         "ForLoopFun": "Untuk Loop Fun",
@@ -35,12 +37,14 @@
         "MadGlibs": "Mad Glibs",
         "MoveIt": "Pindahkan, pindahkan",
         "MoveItMoveIt_2018": "Gerakkan itu, Gerakkan itu",
+        "PDK5 Strategies O": "",
         "PaperPlanes": "Algoritma kehidupan nyata: Pesawat Kertas",
         "PaperPlanes_2018": "Algoritma kehidupan nyata: Pesawat Kertas",
         "PlantASeed": "Algoritma kehidupan nyata: Tanam sebuah Bibit",
         "PlantASeed_2018": "Algoritma kehidupan nyata: Tanam sebuah Bibit",
         "RelayProgramming": "Pemrograman bergiliran",
         "RelayProgramming_2018": "Pemrograman bergiliran",
+        "Sample Free Response": "",
         "SongwritingParameters": "Menulis lagu",
         "SongwritingParameters_2018": "terjemahan tidak ada: en-US.data.unplugged.SongwritingParameters_2018.title",
         "SongwritingWithParameters": "Menulis Lagu Dengan Parameter",
@@ -60,9 +64,9 @@
         "courseD_unplugged_digitalCitizenship_2018": "Aktivitas Offline",
         "courseE_unplugged_CnC_2018": "Berbagi Secara Digital",
         "courseE_unplugged_privateInformation": "Pendidikan Akal Sehat: Privasi dan Informasi Pribadi ",
+        "courseE_unplugged_privateInformation_2018": "terjemahan tidak ada: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title",
         "courseF_unplugged_powerOfWords": "Aktivitas Offline",
-        "courseF_unplugged_powerOfWords_2018": "terjemahan tidak ada: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title",
-        "courseE_unplugged_privateInformation_2018": "terjemahan tidak ada: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title"
+        "courseF_unplugged_powerOfWords_2018": "terjemahan tidak ada: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
       }
     }
   }
