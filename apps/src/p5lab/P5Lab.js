@@ -907,7 +907,6 @@ export default class P5Lab {
     } else {
       let textBlocks;
       if (Blockly.version === 'Google') {
-        // We're using Google Blockly, report the program as JSON
         textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
       } else {
         // We're using CDO Blockly, report the program as xml

@@ -150,7 +150,7 @@ teacher_user_ids = Users.where(user_type: 'teacher').pluck(:id)
     end
 
     # Convert the user_id and level counts from strings to integers.
-    (0..50).each do |index|
+    51.times do |index|
       line[index] = line[index].to_i
     end
 

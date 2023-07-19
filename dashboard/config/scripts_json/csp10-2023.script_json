@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 22:45:51 UTC",
+    "serialized_at": "2023-07-18 20:56:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -546,8 +546,19 @@
       }
     },
     {
-      "key": "6ae6a452-8f1a-44e5-a1a7-8c5d0b7b7f02",
+      "key": "5b269566-314d-407d-a23e-c09f5b47187e",
       "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student a copy of the Unit 10 Journal ([Digital](https://docs.google.com/presentation/d/154-pse0dsVK436ktT_HMZ4951vsIn8BK4Jg3sMrqoy0/edit?usp=drive_link)/[Interactive Notebook](https://docs.google.com/presentation/d/1NNgv5tK3Dgs6H5jA5hf9F0W3vuybvI6B7qXTxiv6Y5I/edit?usp=drive_link)) or have students set up this unit's section in their CSP journals."
+      },
+      "seeding_key": {
+        "activity_section.key": "5b269566-314d-407d-a23e-c09f5b47187e",
+        "lesson_activity.key": "31b080f9-f1bc-430e-9402-0ae48caba0e3"
+      }
+    },
+    {
+      "key": "6ae6a452-8f1a-44e5-a1a7-8c5d0b7b7f02",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What makes two pieces of code “the same”? Could there ever be two pieces of code that you consider to be “the same” even if they aren’t identical?*\n\n**Discussion Goal:** This is an optional discussion. If you are able to move directly to the main activity you should do so. This discussion should get students thinking about the themes of the lesson. \n\nThere are no \"wrong answers\" here though you should expect answers that focus on the fact that often there's lots of ways to write code that does the same thing.\n   \n\n"
       },
@@ -558,7 +569,7 @@
     },
     {
       "key": "68e907d8-d3a9-4c40-9426-84274c1bb414",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room."
       },
@@ -1836,6 +1847,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Algorithms Q1"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -1858,6 +1872,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Algorithms Q2"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2520,24 +2537,24 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csp10-2022/resources",
-      "key": "all_resources_9",
+      "url": "/s/csp10-2023/resources",
+      "key": "all_resources_19",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_9"
+        "resource.key": "all_resources_19"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp10-2022/standards",
-      "key": "all_standards_9",
+      "url": "/s/csp10-2023/standards",
+      "key": "all_standards_19",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_9"
+        "resource.key": "all_standards_19"
       }
     },
     {
@@ -2554,11 +2571,9 @@
     },
     {
       "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
       "key": "course_vocabulary",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
@@ -2664,6 +2679,54 @@
       }
     },
     {
+      "name": "Unit 10 Journal (Digital)",
+      "url": "https://docs.google.com/presentation/d/154-pse0dsVK436ktT_HMZ4951vsIn8BK4Jg3sMrqoy0/edit?usp=drive_link",
+      "key": "unit_10_journal_digital_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_10_journal_digital_"
+      }
+    },
+    {
+      "name": "Unit 10 Journal (Digital)",
+      "url": "https://docs.google.com/presentation/d/154-pse0dsVK436ktT_HMZ4951vsIn8BK4Jg3sMrqoy0/edit?usp=drive_link",
+      "key": "unit_10_journal_digital__1",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_10_journal_digital__1"
+      }
+    },
+    {
+      "name": "Unit 10 Journal (Interactive Notebook)",
+      "url": "https://docs.google.com/presentation/d/1NNgv5tK3Dgs6H5jA5hf9F0W3vuybvI6B7qXTxiv6Y5I/edit?usp=drive_link",
+      "key": "unit_10_journal_interactive_notebook_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_10_journal_interactive_notebook_"
+      }
+    },
+    {
+      "name": "Unit 10 Journal (Interactive Notebook)",
+      "url": "https://docs.google.com/presentation/d/1NNgv5tK3Dgs6H5jA5hf9F0W3vuybvI6B7qXTxiv6Y5I/edit?usp=drive_link",
+      "key": "unit_10_journal_interactive_notebook__1",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_10_journal_interactive_notebook__1"
+      }
+    },
+    {
       "name": "Unreasonable Time",
       "url": "https://docs.google.com/document/d/13VSFGtFwbJT73aYr4VnNJrsbnbyZBTDiSImVkqJGc5w/edit?usp=sharing",
       "key": "unreasonable_time",
@@ -2700,6 +2763,18 @@
       "seeding_key": {
         "lesson.key": "Algorithms Solve Problems",
         "resource.key": "algorithms_solve_problems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "resource.key": "unit_10_journal_digital__1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "resource.key": "unit_10_journal_interactive_notebook__1"
       }
     },
     {
@@ -2754,13 +2829,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_9",
+        "resource.key": "all_resources_19",
         "script.name": "csp10-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_9",
+        "resource.key": "all_standards_19",
         "script.name": "csp10-2023"
       }
     },
@@ -2785,6 +2860,18 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp10-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_10_journal_digital_",
+        "script.name": "csp10-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_10_journal_interactive_notebook_",
         "script.name": "csp10-2023"
       }
     }

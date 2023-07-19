@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-20 21:57:49 UTC",
+    "serialized_at": "2023-07-18 20:52:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -557,7 +557,7 @@
       "key": "066b93eb-b6ca-4229-9738-c3e09a104b77",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student a copy of the [Unit 2 Journal](\thttps://docs.google.com/presentation/d/1NtMSIh3MvntilZoShxE5VhXdxS6Aqfo3SxGIdrbc_Cs/edit?usp=share_link) or have students set up a new section in their CSP journals.",
+        "description": "**Distribute:** Give each student a copy of the Unit 2 Journal ([Digital](https://docs.google.com/presentation/d/1NtMSIh3MvntilZoShxE5VhXdxS6Aqfo3SxGIdrbc_Cs/edit?usp=share_link\t\n)/[Interactive Notebook](https://docs.google.com/presentation/d/1K-07DfJX10UdwaW07KAjLeOlJJ5VZhPjsfQ2RWTWMbw/edit?usp=drive_link\t\n)) or have students set up this unit's section in their CSP journals.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3047,24 +3047,24 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp2-2022/resources",
-      "key": "all_resources_1",
+      "url": "/s/csp2-2023/resources",
+      "key": "all_resources_13",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_1"
+        "resource.key": "all_resources_13"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp2-2022/standards",
-      "key": "all_standards_1",
+      "url": "/s/csp2-2023/standards",
+      "key": "all_standards_13",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_1"
+        "resource.key": "all_standards_13"
       }
     },
     {
@@ -3093,11 +3093,9 @@
     },
     {
       "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
       "key": "course_vocabulary",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
@@ -3426,7 +3424,7 @@
       }
     },
     {
-      "name": "Unit 2 Journal",
+      "name": "Unit 2 Journal - Digital",
       "url": "https://docs.google.com/presentation/d/1NtMSIh3MvntilZoShxE5VhXdxS6Aqfo3SxGIdrbc_Cs/edit?usp=share_link",
       "key": "unit_2_journal",
       "properties": {
@@ -3435,6 +3433,30 @@
       },
       "seeding_key": {
         "resource.key": "unit_2_journal"
+      }
+    },
+    {
+      "name": "Unit 2 Journal - Example",
+      "url": "https://docs.google.com/presentation/d/1PtznQoPehn41MPOofC3DtMbV0yQ05e35SlrfgKIbJcA/edit?usp=drive_link",
+      "key": "unit_2_journal_-_example",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_journal_-_example"
+      }
+    },
+    {
+      "name": "Unit 2 Journal - Interactive Notebook",
+      "url": "https://docs.google.com/presentation/d/1K-07DfJX10UdwaW07KAjLeOlJJ5VZhPjsfQ2RWTWMbw/edit?usp=drive_link",
+      "key": "unit_2_journal_-_interactive_notebook",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_journal_-_interactive_notebook"
       }
     },
     {
@@ -3599,6 +3621,18 @@
     {
       "seeding_key": {
         "lesson.key": "Welcome to the Internet",
+        "resource.key": "unit_2_journal_-_example"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to the Internet",
+        "resource.key": "unit_2_journal_-_interactive_notebook"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to the Internet",
         "resource.key": "welcome_to_the_internet"
       }
     },
@@ -3612,13 +3646,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_1",
+        "resource.key": "all_resources_13",
         "script.name": "csp2-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_1",
+        "resource.key": "all_standards_13",
         "script.name": "csp2-2023"
       }
     },
@@ -3673,6 +3707,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_2_journal",
+        "script.name": "csp2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_journal_-_interactive_notebook",
         "script.name": "csp2-2023"
       }
     }
