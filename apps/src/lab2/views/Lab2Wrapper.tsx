@@ -11,31 +11,32 @@ import {useSelector} from 'react-redux';
 import classNames from 'classnames';
 import moduleStyles from './Lab2Wrapper.module.scss';
 import ErrorBoundary from '../ErrorBoundary';
-import {isLabLoading} from '../lab2Redux';
+import {isLabLoading, hasPageError} from '../lab2Redux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import Lab2MetricsReporter from '../Lab2MetricsReporter';
 const i18n = require('@cdo/locale');
 
 export interface Lab2WrapperProps {
   children: React.ReactNode;
-  onError: (error: Error, componentStack: string) => void;
 }
 
-const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({
-  children,
-  onError,
-}) => {
+const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   const isLoading: boolean = useSelector(isLabLoading);
-  const isPageError: boolean = useSelector(
-    (state: {lab: LabState}) => state.lab.isPageError
-  );
+  const isPageError: boolean = useSelector(hasPageError);
 
   const overlayStyle: string = isLoading
     ? moduleStyles.showingBlock
     : moduleStyles.fadeInBlock;
 
   return (
-    <ErrorBoundary fallback={<ErrorFallbackPage />} onError={onError}>
+    <ErrorBoundary
+      fallback={<ErrorFallbackPage />}
+      onError={(error, componentStack) =>
+        Lab2MetricsReporter.logError('Uncaught React Error', error, {
+          componentStack,
+        })
+      }
+    >
       <div
         id="lab-container"
         className={classNames(

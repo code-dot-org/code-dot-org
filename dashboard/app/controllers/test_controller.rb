@@ -72,6 +72,12 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def create_student_section_with_name
+    return unless (user = current_user)
+    Section.create!(name: params[:section_name], user: user, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    head :ok
+  end
+
   def assign_course_and_unit_as_student
     return unless (user = current_user)
     script = Unit.find_by_name(params.require(:script_name))

@@ -158,7 +158,7 @@ class ActivitiesController < ApplicationController
       test_result: test_result,
       attempt: params[:attempt].to_i,
       lines: lines,
-      time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
+      time: params[:time].to_i.clamp(0, MAX_INT_MILESTONE),
       level_source_id: @level_source.try(:id)
     }
 
