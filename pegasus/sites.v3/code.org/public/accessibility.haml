@@ -19,7 +19,6 @@ theme: responsive_full_width
         %img{src: "/images/accessibility/hero-image.png", alt: ""}
     .clear
 
-
 %section.accessibility-efforts.bg-neutral-light
   .wrapper
     .text-wrapper
@@ -43,8 +42,6 @@ theme: responsive_full_width
                 =hoc_s(:accessibility_efforts_card_desc_4, markdown: :inline, locals: {wcag_url: "https://www.w3.org/TR/WCAG20/"})
               - else
                 = hoc_s("accessibility_efforts_card_desc_#{index + 1}")
-
-
 
 %section.accessibility-explore
   .wrapper
