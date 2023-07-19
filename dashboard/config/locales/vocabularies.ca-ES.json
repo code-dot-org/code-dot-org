@@ -2,999 +2,109 @@
   "ca-ES": {
     "data": {
       "vocabularies": {
-        "code/dance-extras/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "event/dance-extras/unversioned": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "program/dance-extras/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/minecraft/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/minecraft/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "event/minecraft/unversioned": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "loop/minecraft/unversioned": {
-          "word": "Bucle",
-          "definition": "L'acció de fer alguna cosa una vegada i una altra."
-        },
-        "program/minecraft/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/hero/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/hero/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "function/hero/unversioned": {
-          "word": "Funció",
-          "definition": "Un fragment de codi que es pot cridar fàcilment una vegada i una altra."
-        },
-        "program/hero/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/poem-art/2021": {
-          "word": "Codi",
-          "definition": "Escriure instruccions per a un ordinador."
-        },
-        "event/poem-art/2021": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "line/poem-art/2021": {
-          "word": "Línia",
-          "definition": "(poesia) - La subdivisió d'un poema disposada en una fila que acaba al marge dret. "
-        },
-        "mood/poem-art/2021": {
-          "word": "Estat d'ànim",
-          "definition": "L'expressió d'un sentiment, ambient o emoció a través de les arts visuals o escrites."
-        },
-        "program/poem-art/2021": {
-          "word": "Programa",
-          "definition": "Una sèrie de passos que s'han codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/flappy/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/flappy/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/hourofcode/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/hourofcode/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/frozen/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/frozen/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/iceage/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/iceage/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/artist/unversioned": {
-          "word": "Codi",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/artist/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/artist/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/gumball/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/gumball/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/dance/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "event/dance/unversioned": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "program/dance/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/aquatic/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "condition/aquatic/unversioned": {
-          "word": "Condició",
-          "definition": "Allò que comprova el programa per veure si és vertader, abans de permetre una acció."
-        },
-        "conditionals/aquatic/unversioned": {
-          "word": "Condicionals",
-          "definition": "Sentències que només funcionen si es donen unes condicions determinades."
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "loops/aquatic/unversioned": {
-          "word": "Bucles",
-          "definition": "L'acció de fer alguna cosa una vegada i una altra."
-        },
-        "program/aquatic/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/starwars/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/starwars/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/mc/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/mc/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/mc/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/playlab/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/playlab/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "event/outbreak/unversioned": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "Models i simulacions",
-          "definition": "Programes que repliquen o imiten característiques clau d'un esdeveniment del món real per tal d'investigar com es comporta sense el cost, el temps o el perill que implica executar un experiment a la vida real."
-        },
-        "code/sports/unversioned": {
-          "word": "Codi"
-        },
-        "debugging/sports/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "event/sports/unversioned": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "program/sports/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/infinity/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/infinity/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/basketball/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "debugging/basketball/unversioned": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "event/basketball/unversioned": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "program/basketball/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "code/dance-2019/unversioned": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "event/dance-2019/unversioned": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "program/dance-2019/unversioned": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "machine_learning/oceans/unversioned": {
-          "word": "Aprenentatge automàtic",
-          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
-        },
-        "algorithm/coursed/2022": {
-          "word": "Algorisme",
-          "definition": "Llista de passos necessaris per fer una tasca."
-        },
-        "program/coursed/2022": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "bug/coursed/2022": {
-          "word": "Bug / error",
-          "definition": "Una part del programa que no funciona correctament."
-        },
-        "debugging/coursed/2022": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "loop/coursed/2022": {
-          "word": "Bucle",
-          "definition": "L'acció de fer alguna cosa una vegada i una altra."
-        },
-        "programming/coursed/2022": {
-          "word": "Programació",
-          "definition": "L'art de crear un programa."
-        },
-        "frustrated/coursed/2022": {
-          "word": "Frustrat",
-          "definition": "Sentir-se irritat o enfadat perquè alguna cosa no va com voldries."
-        },
-        "persistence/coursed/2022": {
-          "word": "Persistència",
-          "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
-        },
-        "event/coursed/2022": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "code/coursed/2022": {
-          "word": "Codificar o programar",
-          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
-        },
-        "repeat/coursed/2022": {
-          "word": "Repetir",
-          "definition": "Tornar a fer alguna cosa."
-        },
-        "command/coursed/2022": {
-          "word": "Ordre",
-          "definition": "Una instrucció per a l'ordinador. Els algorismes i els programes informàtics es componen de tot un seguit d'ordres juntes."
-        },
-        "conditionals/coursed/2022": {
-          "word": "Condicionals",
-          "definition": "Sentències que només funcionen si es donen unes condicions determinades."
-        },
-        "pseudocode/coursed/2022": {
-          "word": "pseudocodi",
-          "definition": "Un descripció en llenguatge planer dels passos d'un algorisme"
-        },
-        "condition/coursed/2022": {
-          "word": "Condició",
-          "definition": "Allò que comprova el programa per veure si és vertader, abans de permetre una acció."
-        },
-        "while_loop/coursed/2022": {
-          "word": "Bucle \"while\" (mentre)",
-          "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
-        },
-        "until/coursed/2022": {
-          "word": "Until",
-          "definition": "Una ordre que diu que facis alguna cosa només fins al moment en què alguna cosa passa a ser vertadera."
-        },
-        "sprite/coursef/2022": {
-          "word": "Sprite",
-          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
-        },
-        "user/coursef/2022": {
-          "word": "Usuari",
-          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
-        },
-        "algorithm/coursef/2022": {
-          "word": "Algorisme",
-          "definition": "Llista de passos necessaris per fer una tasca."
-        },
-        "behavior/coursef/2022": {
-          "word": "Comportament"
-        },
-        "program/coursef/2022": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "event/coursef/2022": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "variable/coursef/2022": {
-          "word": "Variable",
-          "definition": "L'etiqueta d'un fragment d'informació que es fa servir en un programa."
-        },
-        "prompt/coursef/2022": {
-          "word": "Indicador o pregunta",
-          "definition": "Un missatge que apareix a la pantalla de l'ordinador i que espera que l'usuari hi introdueixi informació."
-        },
-        "input/coursef/2022": {
-          "word": "Entrada",
-          "definition": "La informació que els ordinadors obtenen dels usuaris."
-        },
-        "models_and_simulations/coursef/2022": {
-          "word": "Models i simulacions",
-          "definition": "Programes que repliquen o imiten característiques clau d'un esdeveniment del món real per tal d'investigar com es comporta sense el cost, el temps o el perill que implica executar un experiment a la vida real."
-        },
-        "machine_learning/coursef/2022": {
-          "word": "Aprenentatge automàtic",
-          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
-        },
-        "dns/coursef/2022": {
-          "word": "DNS",
-          "definition": "acrònim que significa Sistema de Noms de Domini, un sistema que tradueix els noms dels dominis (com ara exemple.com) a adreces IP (com ara 93.184.216.34)"
-        },
-        "dsl_cable/coursef/2022": {
-          "word": "DSL/Cable",
-          "definition": "Mètode per enviar informació a través de cables telefònics o de televisió."
-        },
-        "fiber_optic_cable/coursef/2022": {
-          "word": "Cable de fibra òptica",
-          "definition": "Una connexió que fa servir la llum per transmetre informació"
-        },
-        "internet/coursef/2022": {
-          "word": "Internet",
-          "definition": "Un grup d'ordinadors i servidors que estan connectats entre si."
-        },
-        "ip_address/coursef/2022": {
-          "word": "Adreça IP",
-          "definition": "Un número assignat a qualsevol element connectat a internet."
-        },
-        "packets/coursef/2022": {
-          "word": "Paquets",
-          "definition": "Trossos petits d'informació que s'han format a partir de trossos d'informació més grans."
-        },
-        "servers/coursef/2022": {
-          "word": "Servidors",
-          "definition": "Ordinadors que existeixen només per proporcionar coses als altres."
-        },
-        "url/coursef/2022": {
-          "word": "URL",
-          "definition": "Una adreça fàcil de recordar per cridar una pàgina web (com ara www.code.org)."
-        },
-        "wi_fi/coursef/2022": {
-          "word": "Wifi",
-          "definition": "Un mètode sense fil per enviar informació mitjançant ones de ràdio."
-        },
-        "define/coursef/2022": {
-          "word": "Defineix",
-          "definition": "Plantejar els detalls dels problemes que intentes resoldre"
-        },
-        "prepare/coursef/2022": {
-          "word": "Preparar-se",
-          "definition": "Investigar, planificar i adquirir els materials necessaris per a l'activitat que estàs a punt de fer"
-        },
-        "reflect/coursef/2022": {
-          "word": "Reflexionar",
-          "definition": "Pensar detingudament en alguna cosa amb la intenció de millorar els resultats futurs"
-        },
-        "try/coursef/2022": {
-          "word": "Provar",
-          "definition": "Intentar fer alguna cosa"
-        },
-        "behavior/coursee/2022": {
-          "word": "Comportament",
-          "definition": "Una acció que un sprite fa sense parar fins que se li diu que pari."
-        },
-        "sprite/coursee/2022": {
-          "word": "Sprite",
-          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
-        },
-        "loop/coursee/2022": {
-          "word": "Bucle",
-          "definition": "L'acció de fer alguna cosa una vegada i una altra."
-        },
-        "repeat/coursee/2022": {
-          "word": "Repetir",
-          "definition": "Tornar a fer alguna cosa."
-        },
-        "function/coursee/2022": {
-          "word": "Funció"
-        },
-        "condition/coursee/2022": {
-          "word": "Condició"
-        },
-        "conditionals/coursee/2022": {
-          "word": "Condicionals",
-          "definition": "Sentències que només funcionen si es donen unes condicions determinades."
-        },
-        "while_loop/coursee/2022": {
-          "word": "Bucle \"while\" (mentre)",
-          "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
-        },
-        "copyright/coursee/2022": {
-          "word": "Copyright",
-          "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
-        },
-        "define/coursee/2022": {
-          "word": "Defineix",
-          "definition": "Plantejar els detalls dels problemes que intentes resoldre"
-        },
-        "prepare/coursee/2022": {
-          "word": "Preparar-se",
-          "definition": "Investigar, planificar i adquirir els materials necessaris per a l'activitat que estàs a punt de fer"
-        },
-        "reflect/coursee/2022": {
-          "word": "Reflexionar",
-          "definition": "Pensar detingudament en alguna cosa amb la intenció de millorar els resultats futurs"
-        },
-        "try/coursee/2022": {
-          "word": "Provar",
-          "definition": "Intentar fer alguna cosa"
-        },
-        "algorithm/courseb/2022": {
-          "word": "Algorisme",
-          "definition": "Llista de passos necessaris per fer una tasca."
-        },
-        "bug/courseb/2022": {
-          "word": "Bug / error",
-          "definition": "Una part del programa que no funciona correctament."
-        },
-        "debugging/courseb/2022": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "click/courseb/2022": {
-          "word": "Fer clic",
-          "definition": "Prémer el botó del ratolí"
-        },
-        "double_click/courseb/2022": {
-          "word": "Fer doble clic",
-          "definition": "Prémer el botó del ratolí dues vegades molt ràpidament"
-        },
-        "drag/courseb/2022": {
-          "word": "Arrossegar",
-          "definition": "Fer clic al botó del ratolí i mantenir-lo premut mentre mous el punter del ratolí cap a un altre lloc"
-        },
-        "drop/courseb/2022": {
-          "word": "Deixar anar",
-          "definition": "Deixar de prémer el botó del ratolí per \"deixar anar\" l'objecte que estàs arrossegant"
-        },
-        "program/courseb/2022": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "programming/courseb/2022": {
-          "word": "Programació",
-          "definition": "L'art de crear un programa."
-        },
-        "persistence/courseb/2022": {
-          "word": "Persistència",
-          "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
-        },
-        "loop/courseb/2022": {
-          "word": "Bucle",
-          "definition": "L'acció de fer alguna cosa una vegada i una altra."
-        },
-        "repeat/courseb/2022": {
-          "word": "Repetir",
-          "definition": "Tornar a fer alguna cosa."
-        },
-        "event/courseb/2022": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "algorithm/express/2022": {
-          "word": "Algorisme",
-          "definition": "Llista de passos necessaris per fer una tasca."
-        },
-        "bug/express/2022": {
-          "word": "Bug / error",
-          "definition": "Una part del programa que no funciona correctament."
-        },
-        "debugging/express/2022": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "sequencing/express/2022": {
-          "word": "Seqüenciació",
-          "definition": "Col·locar les ordres en l'ordre correcte per tal que els ordinadors les puguin llegir."
-        },
-        "program/express/2022": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "programming/express/2022": {
-          "word": "Programació",
-          "definition": "L'art de crear un programa."
-        },
-        "behavior/express/2022": {
-          "word": "Comportament",
-          "definition": "Una acció que un sprite fa sense parar fins que se li diu que pari."
-        },
-        "sprite/express/2022": {
-          "word": "Sprite",
-          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
-        },
-        "event/express/2022": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "code/express/2022": {
-          "word": "Codificar o programar",
-          "definition": "escriure un codi, o les instruccions que ha de seguir l'ordinador."
-        },
-        "loop/express/2022": {
-          "word": "Bucle",
-          "definition": "L'acció de fer alguna cosa una vegada i una altra."
-        },
-        "repeat/express/2022": {
-          "word": "Repetir",
-          "definition": "Tornar a fer alguna cosa."
-        },
-        "command/express/2022": {
-          "word": "Ordre",
-          "definition": "Una instrucció per a l'ordinador. Els algorismes i els programes informàtics es componen de tot un seguit d'ordres juntes."
-        },
-        "condition/express/2022": {
-          "word": "Condició",
-          "definition": "Allò que comprova el programa per veure si és vertader, abans de permetre una acció."
-        },
-        "conditionals/express/2022": {
-          "word": "Condicionals",
-          "definition": "Sentències que només funcionen si es donen unes condicions determinades."
-        },
-        "while_loop/express/2022": {
-          "word": "Bucle \"while\" (mentre)",
-          "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
-        },
-        "until/express/2022": {
-          "word": "Until",
-          "definition": "Una ordre que diu que facis alguna cosa només fins al moment en què alguna cosa passa a ser vertadera."
-        },
-        "function/express/2022": {
-          "word": "Funció",
-          "definition": "Un fragment de codi que es pot cridar fàcilment una vegada i una altra."
-        },
-        "prompt/express/2022": {
-          "word": "Indicador o pregunta",
-          "definition": "Un missatge que apareix a la pantalla de l'ordinador i que espera que l'usuari hi introdueixi informació."
-        },
-        "variable/express/2022": {
-          "word": "Variable",
-          "definition": "L'etiqueta d'un fragment d'informació que es fa servir en un programa."
-        },
-        "for_loop/express/2022": {
-          "word": "Bucle \"for\"",
-          "definition": "Bucles que tenen un inici, un final i un increment predeterminats (interval de pas)."
-        },
-        "define/express/2022": {
-          "word": "Defineix",
-          "definition": "Plantejar els detalls dels problemes que intentes resoldre"
-        },
-        "prepare/express/2022": {
-          "word": "Preparar-se",
-          "definition": "Investigar, planificar i adquirir els materials necessaris per a l'activitat que estàs a punt de fer"
-        },
-        "reflect/express/2022": {
-          "word": "Reflexionar",
-          "definition": "Pensar detingudament en alguna cosa amb la intenció de millorar els resultats futurs"
-        },
-        "try/express/2022": {
-          "word": "Provar",
-          "definition": "Intentar fer alguna cosa"
-        },
-        "click/pre-express/2022": {
-          "word": "Fer clic",
-          "definition": "Prémer el botó del ratolí"
-        },
-        "double_click/pre-express/2022": {
-          "word": "Fer doble clic",
-          "definition": "Prémer el botó del ratolí dues vegades molt ràpidament"
-        },
-        "drag/pre-express/2022": {
-          "word": "Arrossegar",
-          "definition": "Fer clic al botó del ratolí i mantenir-lo premut mentre mous el punter del ratolí cap a un altre lloc"
-        },
-        "drop/pre-express/2022": {
-          "word": "Deixar anar",
-          "definition": "Deixar de prémer el botó del ratolí per \"deixar anar\" l'objecte que estàs arrossegant"
-        },
-        "algorithm/pre-express/2022": {
-          "word": "Algorisme",
-          "definition": "Llista de passos necessaris per fer una tasca."
-        },
-        "bug/pre-express/2022": {
-          "word": "Bug / error",
-          "definition": "Una part del programa que no funciona correctament."
-        },
-        "debugging/pre-express/2022": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/pre-express/2022": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "programming/pre-express/2022": {
-          "word": "Programació",
-          "definition": "L'art de crear un programa."
-        },
-        "persistence/pre-express/2022": {
-          "word": "Persistència",
-          "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
-        },
-        "loop/pre-express/2022": {
-          "word": "Bucle",
-          "definition": "L'acció de fer alguna cosa una vegada i una altra."
-        },
-        "repeat/pre-express/2022": {
-          "word": "Repetir",
-          "definition": "Tornar a fer alguna cosa."
-        },
-        "event/pre-express/2022": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "algorithm/coursea/2022": {
-          "word": "Algorisme",
-          "definition": "Llista de passos necessaris per fer una tasca."
-        },
-        "debugging/coursea/2022": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/coursea/2022": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "click/coursea/2022": {
-          "word": "Fer clic",
-          "definition": "Prémer el botó del ratolí"
-        },
-        "double_click/coursea/2022": {
-          "word": "Fer doble clic",
-          "definition": "Prémer el botó del ratolí dues vegades molt ràpidament"
-        },
-        "drag/coursea/2022": {
-          "word": "Arrossegar",
-          "definition": "Fer clic al botó del ratolí i mantenir-lo premut mentre mous el punter del ratolí cap a un altre lloc"
-        },
-        "drop/coursea/2022": {
-          "word": "Deixar anar",
-          "definition": "Deixar de prémer el botó del ratolí per \"deixar anar\" l'objecte que estàs arrossegant"
-        },
-        "bug/coursea/2022": {
-          "word": "Bug / error",
-          "definition": "Una part del programa que no funciona correctament."
-        },
-        "programming/coursea/2022": {
-          "word": "Programació",
-          "definition": "L'art de crear un programa."
-        },
-        "loop/coursea/2022": {
-          "word": "Bucle",
-          "definition": "L'acció de fer alguna cosa una vegada i una altra."
-        },
-        "repeat/coursea/2022": {
-          "word": "Repetir",
-          "definition": "Tornar a fer alguna cosa."
-        },
-        "event/coursea/2022": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "algorithm/coursec/2022": {
-          "word": "Algorisme",
-          "definition": "Llista de passos necessaris per fer una tasca."
-        },
-        "bug/coursec/2022": {
-          "word": "Bug / error",
-          "definition": "Una part del programa que no funciona correctament."
-        },
-        "debugging/coursec/2022": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/coursec/2022": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "sequencing/coursec/2022": {
-          "word": "Seqüenciació",
-          "definition": "Col·locar les ordres en l'ordre correcte per tal que els ordinadors les puguin llegir."
-        },
-        "persistence/coursec/2022": {
-          "word": "Persistència"
-        },
-        "programming/coursec/2022": {
-          "word": "Programació",
-          "definition": "L'art de crear un programa."
-        },
-        "loop/coursec/2022": {
-          "word": "Bucle",
-          "definition": "L'acció de fer alguna cosa una vegada i una altra."
-        },
-        "repeat/coursec/2022": {
-          "word": "Repetir",
-          "definition": "Tornar a fer alguna cosa."
-        },
-        "event/coursec/2022": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "data/coursec/2022": {
-          "word": "Dades"
-        },
-        "binary/coursec/2022": {
-          "word": "Binari",
-          "definition": "Una manera de representar la informació utilitzant només dues opcions."
-        },
-        "computer/csd/2022": {
+        "computer/csd/2021": {
           "word": "Ordinador"
         },
-        "input/csd/2022": {
+        "input/csd/2021": {
           "word": "Entrada"
         },
-        "bug/csd/2022": {
-          "word": "Bug / error",
-          "definition": "Una part del programa que no funciona correctament."
-        },
-        "debugging/csd/2022": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/csd/2022": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "variable/csd/2022": {
-          "word": "Variable",
-          "definition": "L'etiqueta d'un fragment d'informació que es fa servir en un programa."
-        },
-        "sprite/csd/2022": {
-          "word": "Sprite"
-        },
-        "condition/csd/2022": {
-          "word": "Condició"
-        },
-        "conditionals/csd/2022": {
-          "word": "Condicionals"
-        },
-        "abstraction/csd/2022": {
-          "word": "Abstracció"
-        },
-        "function/csd/2022": {
-          "word": "Funció"
-        },
-        "copyright/csd/2022": {
+        "copyright/csd/2021": {
           "word": "Copyright",
           "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
         },
-        "user/csd/2022": {
-          "word": "Usuari",
-          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
+        "bug/csd/2021": {
+          "word": "Bug / error",
+          "definition": "Una part del programa que no funciona correctament."
         },
-        "user_interface/csd/2022": {
-          "word": "Interfície d'usuari"
+        "debugging/csd/2021": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
         },
-        "machine_learning/csd/2022": {
-          "word": "Aprenentatge automàtic",
-          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Codi",
-          "definition": "Escriure instruccions per a un ordinador."
-        },
-        "event/poem-art/unversioned": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "program/poem-art/unversioned": {
-          "word": "Programa",
-          "definition": "Una sèrie de passos que s'han codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Estat d'ànim",
-          "definition": "L'expressió d'un sentiment, ambient o emoció a través de les arts visuals o escrites."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Línia",
-          "definition": "(poesia) - La subdivisió d'un poema disposada en una fila que acaba al marge dret. "
-        },
-        "sprite/coursef/2021": {
-          "word": "Sprite",
-          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
-        },
-        "user/coursef/2021": {
-          "word": "Usuari",
-          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
-        },
-        "algorithm/coursef/2021": {
-          "word": "Algorisme",
-          "definition": "Llista de passos necessaris per fer una tasca."
-        },
-        "behavior/coursef/2021": {
-          "word": "Comportament",
-          "definition": "Una acció que un sprite fa sense parar fins que se li diu que pari."
-        },
-        "program/coursef/2021": {
+        "program/csd/2021": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
-        "event/coursef/2021": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "variable/coursef/2021": {
+        "variable/csd/2021": {
           "word": "Variable",
           "definition": "L'etiqueta d'un fragment d'informació que es fa servir en un programa."
         },
-        "prompt/coursef/2021": {
-          "word": "Indicador o pregunta",
-          "definition": "Un missatge que apareix a la pantalla de l'ordinador i que espera que l'usuari hi introdueixi informació."
+        "sprite/csd/2021": {
+          "word": "Sprite"
         },
-        "input/coursef/2021": {
-          "word": "Entrada",
-          "definition": "La informació que els ordinadors obtenen dels usuaris."
+        "condition/csd/2021": {
+          "word": "Condició"
         },
-        "loop/coursef/2021": {
-          "word": "Bucle",
-          "definition": "L'acció de fer alguna cosa una vegada i una altra."
+        "conditionals/csd/2021": {
+          "word": "Condicionals"
         },
-        "repeat/coursef/2021": {
-          "word": "Repetir",
-          "definition": "Tornar a fer alguna cosa."
+        "abstraction/csd/2021": {
+          "word": "Abstracció"
         },
-        "for_loop/coursef/2021": {
+        "function/csd/2021": {
+          "word": "Funció"
+        },
+        "user/csd/2021": {
+          "word": "Usuari",
+          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
+        },
+        "user_interface/csd/2021": {
+          "word": "Interfície d'usuari"
+        },
+        "for_loop/csd/2021": {
           "word": "Bucle \"for\"",
           "definition": "Bucles que tenen un inici, un final i un increment predeterminats (interval de pas)."
         },
-        "models_and_simulations/coursef/2021": {
-          "word": "Models i simulacions",
-          "definition": "Programes que repliquen o imiten característiques clau d'un esdeveniment del món real per tal d'investigar com es comporta sense el cost, el temps o el perill que implica executar un experiment a la vida real."
-        },
-        "machine_learning/coursef/2021": {
+        "machine_learning/csd/2021": {
           "word": "Aprenentatge automàtic",
           "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
         },
-        "dns/coursef/2021": {
-          "word": "DNS",
-          "definition": "acrònim que significa Sistema de Noms de Domini, un sistema que tradueix els noms dels dominis (com ara exemple.com) a adreces IP (com ara 93.184.216.34)"
+        "algorithm/coursea/2021": {
+          "word": "Algorisme",
+          "definition": "Llista de passos necessaris per fer una tasca."
         },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/Cable",
-          "definition": "Mètode per enviar informació a través de cables telefònics o de televisió."
+        "debugging/coursea/2021": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
         },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "Cable de fibra òptica",
-          "definition": "Una connexió que fa servir la llum per transmetre informació"
+        "program/coursea/2021": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
-        "internet/coursef/2021": {
-          "word": "Internet",
-          "definition": "Un grup d'ordinadors i servidors que estan connectats entre si."
+        "click/coursea/2021": {
+          "word": "Fer clic",
+          "definition": "Prémer el botó del ratolí"
         },
-        "ip_address/coursef/2021": {
-          "word": "Adreça IP",
-          "definition": "Un número assignat a qualsevol element connectat a internet."
+        "double_click/coursea/2021": {
+          "word": "Fer doble clic",
+          "definition": "Prémer el botó del ratolí dues vegades molt ràpidament"
         },
-        "packets/coursef/2021": {
-          "word": "Paquets",
-          "definition": "Trossos petits d'informació que s'han format a partir de trossos d'informació més grans."
+        "drag/coursea/2021": {
+          "word": "Arrossegar",
+          "definition": "Fer clic al botó del ratolí i mantenir-lo premut mentre mous el punter del ratolí cap a un altre lloc"
         },
-        "servers/coursef/2021": {
-          "word": "Servidors",
-          "definition": "Ordinadors que existeixen només per proporcionar coses als altres."
+        "drop/coursea/2021": {
+          "word": "Deixar anar",
+          "definition": "Deixar de prémer el botó del ratolí per \"deixar anar\" l'objecte que estàs arrossegant"
         },
-        "url/coursef/2021": {
-          "word": "URL",
-          "definition": "Una adreça fàcil de recordar per cridar una pàgina web (com ara www.code.org)."
+        "bug/coursea/2021": {
+          "word": "Bug / error",
+          "definition": "Una part del programa que no funciona correctament."
         },
-        "wi_fi/coursef/2021": {
-          "word": "Wifi",
-          "definition": "Un mètode sense fil per enviar informació mitjançant ones de ràdio."
+        "programming/coursea/2021": {
+          "word": "Programació",
+          "definition": "L'art de crear un programa."
         },
-        "define/coursef/2021": {
-          "word": "Definir",
-          "definition": "Plantejar els detalls dels problemes que intentes resoldre"
+        "loop/coursea/2021": {
+          "word": "Bucle",
+          "definition": "L'acció de fer alguna cosa una vegada i una altra."
         },
-        "prepare/coursef/2021": {
-          "word": "Preparar-se",
-          "definition": "Investigar, planificar i adquirir els materials necessaris per a l'activitat que estàs a punt de fer"
+        "repeat/coursea/2021": {
+          "word": "Repetir",
+          "definition": "Tornar a fer alguna cosa."
         },
-        "reflect/coursef/2021": {
-          "word": "Reflexionar",
-          "definition": "Pensar detingudament en alguna cosa amb la intenció de millorar els resultats futurs"
-        },
-        "try/coursef/2021": {
-          "word": "Provar",
-          "definition": "Intentar fer alguna cosa"
+        "event/coursea/2021": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
         },
         "algorithm/courseb/2021": {
           "word": "Algorisme",
@@ -1045,54 +155,6 @@
           "definition": "Tornar a fer alguna cosa."
         },
         "event/courseb/2021": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "algorithm/coursea/2021": {
-          "word": "Algorisme",
-          "definition": "Llista de passos necessaris per fer una tasca."
-        },
-        "debugging/coursea/2021": {
-          "word": "Depuració",
-          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
-        },
-        "program/coursea/2021": {
-          "word": "Programa",
-          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "click/coursea/2021": {
-          "word": "Fer clic",
-          "definition": "Prémer el botó del ratolí"
-        },
-        "double_click/coursea/2021": {
-          "word": "Fer doble clic",
-          "definition": "Prémer el botó del ratolí dues vegades molt ràpidament"
-        },
-        "drag/coursea/2021": {
-          "word": "Arrossegar",
-          "definition": "Fer clic al botó del ratolí i mantenir-lo premut mentre mous el punter del ratolí cap a un altre lloc"
-        },
-        "drop/coursea/2021": {
-          "word": "Deixar anar",
-          "definition": "Deixar de prémer el botó del ratolí per \"deixar anar\" l'objecte que estàs arrossegant"
-        },
-        "bug/coursea/2021": {
-          "word": "Bug / error",
-          "definition": "Una part del programa que no funciona correctament."
-        },
-        "programming/coursea/2021": {
-          "word": "Programació",
-          "definition": "L'art de crear un programa."
-        },
-        "loop/coursea/2021": {
-          "word": "Bucle",
-          "definition": "L'acció de fer alguna cosa una vegada i una altra."
-        },
-        "repeat/coursea/2021": {
-          "word": "Repetir",
-          "definition": "Tornar a fer alguna cosa."
-        },
-        "event/coursea/2021": {
           "word": "Esdeveniment",
           "definition": "Una acció que fa que passi alguna cosa."
         },
@@ -1203,6 +265,174 @@
         "until/coursed/2021": {
           "word": "Until",
           "definition": "Una ordre que diu que facis alguna cosa només fins al moment en què alguna cosa passa a ser vertadera."
+        },
+        "algorithm/coursee/2021": {
+          "word": "algorisme",
+          "definition": "Llista de passos necessaris per fer una tasca"
+        },
+        "behavior/coursee/2021": {
+          "word": "Comportament",
+          "definition": "Una acció que un sprite fa sense parar fins que se li diu que pari."
+        },
+        "sprite/coursee/2021": {
+          "word": "Sprite",
+          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
+        },
+        "event/coursee/2021": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "copyright/coursee/2021": {
+          "word": "Copyright",
+          "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
+        },
+        "loop/coursee/2021": {
+          "word": "Bucle",
+          "definition": "L'acció de fer alguna cosa una vegada i una altra."
+        },
+        "repeat/coursee/2021": {
+          "word": "Repetir",
+          "definition": "Tornar a fer alguna cosa."
+        },
+        "function/coursee/2021": {
+          "word": "Funció",
+          "definition": "Un fragment de codi que es pot cridar fàcilment una vegada i una altra."
+        },
+        "condition/coursee/2021": {
+          "word": "Condició",
+          "definition": "Allò que comprova el programa per veure si és vertader, abans de permetre una acció."
+        },
+        "conditionals/coursee/2021": {
+          "word": "Condicionals",
+          "definition": "Sentències que només funcionen si es donen unes condicions determinades."
+        },
+        "while_loop/coursee/2021": {
+          "word": "Bucle \"while\" (mentre)",
+          "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
+        },
+        "define/coursee/2021": {
+          "word": "Defineix",
+          "definition": "Plantejar els detalls dels problemes que intentes resoldre"
+        },
+        "prepare/coursee/2021": {
+          "word": "Preparar-se",
+          "definition": "Investigar, planificar i adquirir els materials necessaris per a l'activitat que estàs a punt de fer"
+        },
+        "reflect/coursee/2021": {
+          "word": "Reflexionar",
+          "definition": "Pensar detingudament en alguna cosa amb la intenció de millorar els resultats futurs"
+        },
+        "try/coursee/2021": {
+          "word": "Provar",
+          "definition": "Intentar fer alguna cosa"
+        },
+        "sprite/coursef/2021": {
+          "word": "Sprite",
+          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
+        },
+        "user/coursef/2021": {
+          "word": "Usuari",
+          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
+        },
+        "algorithm/coursef/2021": {
+          "word": "Algorisme",
+          "definition": "Llista de passos necessaris per fer una tasca."
+        },
+        "behavior/coursef/2021": {
+          "word": "Comportament",
+          "definition": "Una acció que un sprite fa sense parar fins que se li diu que pari."
+        },
+        "program/coursef/2021": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "event/coursef/2021": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "variable/coursef/2021": {
+          "word": "Variable",
+          "definition": "L'etiqueta d'un fragment d'informació que es fa servir en un programa."
+        },
+        "prompt/coursef/2021": {
+          "word": "Indicador o pregunta",
+          "definition": "Un missatge que apareix a la pantalla de l'ordinador i que espera que l'usuari hi introdueixi informació."
+        },
+        "input/coursef/2021": {
+          "word": "Entrada",
+          "definition": "La informació que els ordinadors obtenen dels usuaris."
+        },
+        "loop/coursef/2021": {
+          "word": "Bucle",
+          "definition": "L'acció de fer alguna cosa una vegada i una altra."
+        },
+        "repeat/coursef/2021": {
+          "word": "Repetir",
+          "definition": "Tornar a fer alguna cosa."
+        },
+        "for_loop/coursef/2021": {
+          "word": "Bucle \"for\"",
+          "definition": "Bucles que tenen un inici, un final i un increment predeterminats (interval de pas)."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "Models i simulacions",
+          "definition": "Programes que repliquen o imiten característiques clau d'un esdeveniment del món real per tal d'investigar com es comporta sense el cost, el temps o el perill que implica executar un experiment a la vida real."
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Aprenentatge automàtic",
+          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
+        },
+        "dns/coursef/2021": {
+          "word": "DNS",
+          "definition": "acrònim que significa Sistema de Noms de Domini, un sistema que tradueix els noms dels dominis (com ara exemple.com) a adreces IP (com ara 93.184.216.34)"
+        },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/Cable",
+          "definition": "Mètode per enviar informació a través de cables telefònics o de televisió."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "Cable de fibra òptica",
+          "definition": "Una connexió que fa servir la llum per transmetre informació"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet",
+          "definition": "Un grup d'ordinadors i servidors que estan connectats entre si."
+        },
+        "ip_address/coursef/2021": {
+          "word": "Adreça IP",
+          "definition": "Un número assignat a qualsevol element connectat a internet."
+        },
+        "packets/coursef/2021": {
+          "word": "Paquets",
+          "definition": "Trossos petits d'informació que s'han format a partir de trossos d'informació més grans."
+        },
+        "servers/coursef/2021": {
+          "word": "Servidors",
+          "definition": "Ordinadors que existeixen només per proporcionar coses als altres."
+        },
+        "url/coursef/2021": {
+          "word": "URL",
+          "definition": "Una adreça fàcil de recordar per cridar una pàgina web (com ara www.code.org)."
+        },
+        "wi_fi/coursef/2021": {
+          "word": "Wifi",
+          "definition": "Un mètode sense fil per enviar informació mitjançant ones de ràdio."
+        },
+        "define/coursef/2021": {
+          "word": "Definir",
+          "definition": "Plantejar els detalls dels problemes que intentes resoldre"
+        },
+        "prepare/coursef/2021": {
+          "word": "Preparar-se",
+          "definition": "Investigar, planificar i adquirir els materials necessaris per a l'activitat que estàs a punt de fer"
+        },
+        "reflect/coursef/2021": {
+          "word": "Reflexionar",
+          "definition": "Pensar detingudament en alguna cosa amb la intenció de millorar els resultats futurs"
+        },
+        "try/coursef/2021": {
+          "word": "Provar",
+          "definition": "Intentar fer alguna cosa"
         },
         "algorithm/express/2021": {
           "word": "Algorisme",
@@ -1356,121 +586,891 @@
           "word": "Esdeveniment",
           "definition": "Una acció que fa que passi alguna cosa."
         },
-        "algorithm/coursee/2021": {
-          "word": "algorisme",
-          "definition": "Llista de passos necessaris per fer una tasca"
+        "computer/csd/2022": {
+          "word": "Ordinador"
         },
-        "behavior/coursee/2021": {
-          "word": "Comportament",
-          "definition": "Una acció que un sprite fa sense parar fins que se li diu que pari."
+        "input/csd/2022": {
+          "word": "Entrada"
         },
-        "sprite/coursee/2021": {
-          "word": "Sprite",
-          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
-        },
-        "event/coursee/2021": {
-          "word": "Esdeveniment",
-          "definition": "Una acció que fa que passi alguna cosa."
-        },
-        "copyright/coursee/2021": {
+        "copyright/csd/2022": {
           "word": "Copyright",
           "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
         },
-        "loop/coursee/2021": {
-          "word": "Bucle",
-          "definition": "L'acció de fer alguna cosa una vegada i una altra."
-        },
-        "repeat/coursee/2021": {
-          "word": "Repetir",
-          "definition": "Tornar a fer alguna cosa."
-        },
-        "function/coursee/2021": {
-          "word": "Funció",
-          "definition": "Un fragment de codi que es pot cridar fàcilment una vegada i una altra."
-        },
-        "condition/coursee/2021": {
-          "word": "Condició",
-          "definition": "Allò que comprova el programa per veure si és vertader, abans de permetre una acció."
-        },
-        "conditionals/coursee/2021": {
-          "word": "Condicionals",
-          "definition": "Sentències que només funcionen si es donen unes condicions determinades."
-        },
-        "while_loop/coursee/2021": {
-          "word": "Bucle \"while\" (mentre)",
-          "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
-        },
-        "define/coursee/2021": {
-          "word": "Defineix",
-          "definition": "Plantejar els detalls dels problemes que intentes resoldre"
-        },
-        "prepare/coursee/2021": {
-          "word": "Preparar-se",
-          "definition": "Investigar, planificar i adquirir els materials necessaris per a l'activitat que estàs a punt de fer"
-        },
-        "reflect/coursee/2021": {
-          "word": "Reflexionar",
-          "definition": "Pensar detingudament en alguna cosa amb la intenció de millorar els resultats futurs"
-        },
-        "try/coursee/2021": {
-          "word": "Provar",
-          "definition": "Intentar fer alguna cosa"
-        },
-        "machine_learning/csd/2021": {
-          "word": "Aprenentatge automàtic",
-          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
-        },
-        "user/csd/2021": {
-          "word": "Usuari",
-          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
-        },
-        "user_interface/csd/2021": {
-          "word": "Interfície d'usuari"
-        },
-        "bug/csd/2021": {
+        "bug/csd/2022": {
           "word": "Bug / error",
           "definition": "Una part del programa que no funciona correctament."
         },
-        "for_loop/csd/2021": {
-          "word": "Bucle \"for\"",
-          "definition": "Bucles que tenen un inici, un final i un increment predeterminats (interval de pas)."
-        },
-        "debugging/csd/2021": {
+        "debugging/csd/2022": {
           "word": "Depuració",
           "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
         },
-        "program/csd/2021": {
+        "program/csd/2022": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
-        "variable/csd/2021": {
+        "variable/csd/2022": {
           "word": "Variable",
           "definition": "L'etiqueta d'un fragment d'informació que es fa servir en un programa."
         },
-        "sprite/csd/2021": {
+        "sprite/csd/2022": {
           "word": "Sprite"
         },
-        "condition/csd/2021": {
+        "condition/csd/2022": {
           "word": "Condició"
         },
-        "conditionals/csd/2021": {
+        "conditionals/csd/2022": {
           "word": "Condicionals"
         },
-        "abstraction/csd/2021": {
+        "abstraction/csd/2022": {
           "word": "Abstracció"
         },
-        "function/csd/2021": {
+        "function/csd/2022": {
           "word": "Funció"
         },
-        "computer/csd/2021": {
-          "word": "Ordinador"
+        "user/csd/2022": {
+          "word": "Usuari",
+          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
         },
-        "input/csd/2021": {
-          "word": "Entrada"
+        "user_interface/csd/2022": {
+          "word": "Interfície d'usuari"
         },
-        "copyright/csd/2021": {
+        "machine_learning/csd/2022": {
+          "word": "Aprenentatge automàtic",
+          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
+        },
+        "algorithm/coursea/2022": {
+          "word": "Algorisme",
+          "definition": "Llista de passos necessaris per fer una tasca."
+        },
+        "debugging/coursea/2022": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "program/coursea/2022": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "click/coursea/2022": {
+          "word": "Fer clic",
+          "definition": "Prémer el botó del ratolí"
+        },
+        "double_click/coursea/2022": {
+          "word": "Fer doble clic",
+          "definition": "Prémer el botó del ratolí dues vegades molt ràpidament"
+        },
+        "drag/coursea/2022": {
+          "word": "Arrossegar",
+          "definition": "Fer clic al botó del ratolí i mantenir-lo premut mentre mous el punter del ratolí cap a un altre lloc"
+        },
+        "drop/coursea/2022": {
+          "word": "Deixar anar",
+          "definition": "Deixar de prémer el botó del ratolí per \"deixar anar\" l'objecte que estàs arrossegant"
+        },
+        "bug/coursea/2022": {
+          "word": "Bug / error",
+          "definition": "Una part del programa que no funciona correctament."
+        },
+        "programming/coursea/2022": {
+          "word": "Programació",
+          "definition": "L'art de crear un programa."
+        },
+        "loop/coursea/2022": {
+          "word": "Bucle",
+          "definition": "L'acció de fer alguna cosa una vegada i una altra."
+        },
+        "repeat/coursea/2022": {
+          "word": "Repetir",
+          "definition": "Tornar a fer alguna cosa."
+        },
+        "event/coursea/2022": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "algorithm/courseb/2022": {
+          "word": "Algorisme",
+          "definition": "Llista de passos necessaris per fer una tasca."
+        },
+        "bug/courseb/2022": {
+          "word": "Bug / error",
+          "definition": "Una part del programa que no funciona correctament."
+        },
+        "debugging/courseb/2022": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "click/courseb/2022": {
+          "word": "Fer clic",
+          "definition": "Prémer el botó del ratolí"
+        },
+        "double_click/courseb/2022": {
+          "word": "Fer doble clic",
+          "definition": "Prémer el botó del ratolí dues vegades molt ràpidament"
+        },
+        "drag/courseb/2022": {
+          "word": "Arrossegar",
+          "definition": "Fer clic al botó del ratolí i mantenir-lo premut mentre mous el punter del ratolí cap a un altre lloc"
+        },
+        "drop/courseb/2022": {
+          "word": "Deixar anar",
+          "definition": "Deixar de prémer el botó del ratolí per \"deixar anar\" l'objecte que estàs arrossegant"
+        },
+        "program/courseb/2022": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "programming/courseb/2022": {
+          "word": "Programació",
+          "definition": "L'art de crear un programa."
+        },
+        "persistence/courseb/2022": {
+          "word": "Persistència",
+          "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
+        },
+        "loop/courseb/2022": {
+          "word": "Bucle",
+          "definition": "L'acció de fer alguna cosa una vegada i una altra."
+        },
+        "repeat/courseb/2022": {
+          "word": "Repetir",
+          "definition": "Tornar a fer alguna cosa."
+        },
+        "event/courseb/2022": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "algorithm/coursec/2022": {
+          "word": "Algorisme",
+          "definition": "Llista de passos necessaris per fer una tasca."
+        },
+        "bug/coursec/2022": {
+          "word": "Bug / error",
+          "definition": "Una part del programa que no funciona correctament."
+        },
+        "debugging/coursec/2022": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "program/coursec/2022": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "sequencing/coursec/2022": {
+          "word": "Seqüenciació",
+          "definition": "Col·locar les ordres en l'ordre correcte per tal que els ordinadors les puguin llegir."
+        },
+        "persistence/coursec/2022": {
+          "word": "Persistència"
+        },
+        "programming/coursec/2022": {
+          "word": "Programació",
+          "definition": "L'art de crear un programa."
+        },
+        "loop/coursec/2022": {
+          "word": "Bucle",
+          "definition": "L'acció de fer alguna cosa una vegada i una altra."
+        },
+        "repeat/coursec/2022": {
+          "word": "Repetir",
+          "definition": "Tornar a fer alguna cosa."
+        },
+        "event/coursec/2022": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "data/coursec/2022": {
+          "word": "Dades"
+        },
+        "binary/coursec/2022": {
+          "word": "Binari",
+          "definition": "Una manera de representar la informació utilitzant només dues opcions."
+        },
+        "algorithm/coursed/2022": {
+          "word": "Algorisme",
+          "definition": "Llista de passos necessaris per fer una tasca."
+        },
+        "program/coursed/2022": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "bug/coursed/2022": {
+          "word": "Bug / error",
+          "definition": "Una part del programa que no funciona correctament."
+        },
+        "debugging/coursed/2022": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "loop/coursed/2022": {
+          "word": "Bucle",
+          "definition": "L'acció de fer alguna cosa una vegada i una altra."
+        },
+        "programming/coursed/2022": {
+          "word": "Programació",
+          "definition": "L'art de crear un programa."
+        },
+        "frustrated/coursed/2022": {
+          "word": "Frustrat",
+          "definition": "Sentir-se irritat o enfadat perquè alguna cosa no va com voldries."
+        },
+        "persistence/coursed/2022": {
+          "word": "Persistència",
+          "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
+        },
+        "event/coursed/2022": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "code/coursed/2022": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "repeat/coursed/2022": {
+          "word": "Repetir",
+          "definition": "Tornar a fer alguna cosa."
+        },
+        "command/coursed/2022": {
+          "word": "Ordre",
+          "definition": "Una instrucció per a l'ordinador. Els algorismes i els programes informàtics es componen de tot un seguit d'ordres juntes."
+        },
+        "conditionals/coursed/2022": {
+          "word": "Condicionals",
+          "definition": "Sentències que només funcionen si es donen unes condicions determinades."
+        },
+        "pseudocode/coursed/2022": {
+          "word": "pseudocodi",
+          "definition": "Un descripció en llenguatge planer dels passos d'un algorisme"
+        },
+        "condition/coursed/2022": {
+          "word": "Condició",
+          "definition": "Allò que comprova el programa per veure si és vertader, abans de permetre una acció."
+        },
+        "while_loop/coursed/2022": {
+          "word": "Bucle \"while\" (mentre)",
+          "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
+        },
+        "until/coursed/2022": {
+          "word": "Until",
+          "definition": "Una ordre que diu que facis alguna cosa només fins al moment en què alguna cosa passa a ser vertadera."
+        },
+        "behavior/coursee/2022": {
+          "word": "Comportament",
+          "definition": "Una acció que un sprite fa sense parar fins que se li diu que pari."
+        },
+        "sprite/coursee/2022": {
+          "word": "Sprite",
+          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
+        },
+        "loop/coursee/2022": {
+          "word": "Bucle",
+          "definition": "L'acció de fer alguna cosa una vegada i una altra."
+        },
+        "repeat/coursee/2022": {
+          "word": "Repetir",
+          "definition": "Tornar a fer alguna cosa."
+        },
+        "function/coursee/2022": {
+          "word": "Funció"
+        },
+        "condition/coursee/2022": {
+          "word": "Condició"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Condicionals",
+          "definition": "Sentències que només funcionen si es donen unes condicions determinades."
+        },
+        "while_loop/coursee/2022": {
+          "word": "Bucle \"while\" (mentre)",
+          "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
+        },
+        "copyright/coursee/2022": {
           "word": "Copyright",
           "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
+        },
+        "define/coursee/2022": {
+          "word": "Defineix",
+          "definition": "Plantejar els detalls dels problemes que intentes resoldre"
+        },
+        "prepare/coursee/2022": {
+          "word": "Preparar-se",
+          "definition": "Investigar, planificar i adquirir els materials necessaris per a l'activitat que estàs a punt de fer"
+        },
+        "reflect/coursee/2022": {
+          "word": "Reflexionar",
+          "definition": "Pensar detingudament en alguna cosa amb la intenció de millorar els resultats futurs"
+        },
+        "try/coursee/2022": {
+          "word": "Provar",
+          "definition": "Intentar fer alguna cosa"
+        },
+        "sprite/coursef/2022": {
+          "word": "Sprite",
+          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
+        },
+        "user/coursef/2022": {
+          "word": "Usuari",
+          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
+        },
+        "algorithm/coursef/2022": {
+          "word": "Algorisme",
+          "definition": "Llista de passos necessaris per fer una tasca."
+        },
+        "behavior/coursef/2022": {
+          "word": "Comportament"
+        },
+        "program/coursef/2022": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "event/coursef/2022": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "variable/coursef/2022": {
+          "word": "Variable",
+          "definition": "L'etiqueta d'un fragment d'informació que es fa servir en un programa."
+        },
+        "prompt/coursef/2022": {
+          "word": "Indicador o pregunta",
+          "definition": "Un missatge que apareix a la pantalla de l'ordinador i que espera que l'usuari hi introdueixi informació."
+        },
+        "input/coursef/2022": {
+          "word": "Entrada",
+          "definition": "La informació que els ordinadors obtenen dels usuaris."
+        },
+        "models_and_simulations/coursef/2022": {
+          "word": "Models i simulacions",
+          "definition": "Programes que repliquen o imiten característiques clau d'un esdeveniment del món real per tal d'investigar com es comporta sense el cost, el temps o el perill que implica executar un experiment a la vida real."
+        },
+        "machine_learning/coursef/2022": {
+          "word": "Aprenentatge automàtic",
+          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
+        },
+        "dns/coursef/2022": {
+          "word": "DNS",
+          "definition": "acrònim que significa Sistema de Noms de Domini, un sistema que tradueix els noms dels dominis (com ara exemple.com) a adreces IP (com ara 93.184.216.34)"
+        },
+        "dsl_cable/coursef/2022": {
+          "word": "DSL/Cable",
+          "definition": "Mètode per enviar informació a través de cables telefònics o de televisió."
+        },
+        "fiber_optic_cable/coursef/2022": {
+          "word": "Cable de fibra òptica",
+          "definition": "Una connexió que fa servir la llum per transmetre informació"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet",
+          "definition": "Un grup d'ordinadors i servidors que estan connectats entre si."
+        },
+        "ip_address/coursef/2022": {
+          "word": "Adreça IP",
+          "definition": "Un número assignat a qualsevol element connectat a internet."
+        },
+        "packets/coursef/2022": {
+          "word": "Paquets",
+          "definition": "Trossos petits d'informació que s'han format a partir de trossos d'informació més grans."
+        },
+        "servers/coursef/2022": {
+          "word": "Servidors",
+          "definition": "Ordinadors que existeixen només per proporcionar coses als altres."
+        },
+        "url/coursef/2022": {
+          "word": "URL",
+          "definition": "Una adreça fàcil de recordar per cridar una pàgina web (com ara www.code.org)."
+        },
+        "wi_fi/coursef/2022": {
+          "word": "Wifi",
+          "definition": "Un mètode sense fil per enviar informació mitjançant ones de ràdio."
+        },
+        "define/coursef/2022": {
+          "word": "Defineix",
+          "definition": "Plantejar els detalls dels problemes que intentes resoldre"
+        },
+        "prepare/coursef/2022": {
+          "word": "Preparar-se",
+          "definition": "Investigar, planificar i adquirir els materials necessaris per a l'activitat que estàs a punt de fer"
+        },
+        "reflect/coursef/2022": {
+          "word": "Reflexionar",
+          "definition": "Pensar detingudament en alguna cosa amb la intenció de millorar els resultats futurs"
+        },
+        "try/coursef/2022": {
+          "word": "Provar",
+          "definition": "Intentar fer alguna cosa"
+        },
+        "algorithm/express/2022": {
+          "word": "Algorisme",
+          "definition": "Llista de passos necessaris per fer una tasca."
+        },
+        "bug/express/2022": {
+          "word": "Bug / error",
+          "definition": "Una part del programa que no funciona correctament."
+        },
+        "debugging/express/2022": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "sequencing/express/2022": {
+          "word": "Seqüenciació",
+          "definition": "Col·locar les ordres en l'ordre correcte per tal que els ordinadors les puguin llegir."
+        },
+        "program/express/2022": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "programming/express/2022": {
+          "word": "Programació",
+          "definition": "L'art de crear un programa."
+        },
+        "behavior/express/2022": {
+          "word": "Comportament",
+          "definition": "Una acció que un sprite fa sense parar fins que se li diu que pari."
+        },
+        "sprite/express/2022": {
+          "word": "Sprite",
+          "definition": "Un gràfic a la pantalla amb ubicació, mida i aparença."
+        },
+        "event/express/2022": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "code/express/2022": {
+          "word": "Codificar o programar",
+          "definition": "escriure un codi, o les instruccions que ha de seguir l'ordinador."
+        },
+        "loop/express/2022": {
+          "word": "Bucle",
+          "definition": "L'acció de fer alguna cosa una vegada i una altra."
+        },
+        "repeat/express/2022": {
+          "word": "Repetir",
+          "definition": "Tornar a fer alguna cosa."
+        },
+        "command/express/2022": {
+          "word": "Ordre",
+          "definition": "Una instrucció per a l'ordinador. Els algorismes i els programes informàtics es componen de tot un seguit d'ordres juntes."
+        },
+        "condition/express/2022": {
+          "word": "Condició",
+          "definition": "Allò que comprova el programa per veure si és vertader, abans de permetre una acció."
+        },
+        "conditionals/express/2022": {
+          "word": "Condicionals",
+          "definition": "Sentències que només funcionen si es donen unes condicions determinades."
+        },
+        "while_loop/express/2022": {
+          "word": "Bucle \"while\" (mentre)",
+          "definition": "Un bucle que es repeteix sense parar mentre una condició és certa."
+        },
+        "until/express/2022": {
+          "word": "Until",
+          "definition": "Una ordre que diu que facis alguna cosa només fins al moment en què alguna cosa passa a ser vertadera."
+        },
+        "function/express/2022": {
+          "word": "Funció",
+          "definition": "Un fragment de codi que es pot cridar fàcilment una vegada i una altra."
+        },
+        "prompt/express/2022": {
+          "word": "Indicador o pregunta",
+          "definition": "Un missatge que apareix a la pantalla de l'ordinador i que espera que l'usuari hi introdueixi informació."
+        },
+        "variable/express/2022": {
+          "word": "Variable",
+          "definition": "L'etiqueta d'un fragment d'informació que es fa servir en un programa."
+        },
+        "for_loop/express/2022": {
+          "word": "Bucle \"for\"",
+          "definition": "Bucles que tenen un inici, un final i un increment predeterminats (interval de pas)."
+        },
+        "define/express/2022": {
+          "word": "Defineix",
+          "definition": "Plantejar els detalls dels problemes que intentes resoldre"
+        },
+        "prepare/express/2022": {
+          "word": "Preparar-se",
+          "definition": "Investigar, planificar i adquirir els materials necessaris per a l'activitat que estàs a punt de fer"
+        },
+        "reflect/express/2022": {
+          "word": "Reflexionar",
+          "definition": "Pensar detingudament en alguna cosa amb la intenció de millorar els resultats futurs"
+        },
+        "try/express/2022": {
+          "word": "Provar",
+          "definition": "Intentar fer alguna cosa"
+        },
+        "click/pre-express/2022": {
+          "word": "Fer clic",
+          "definition": "Prémer el botó del ratolí"
+        },
+        "double_click/pre-express/2022": {
+          "word": "Fer doble clic",
+          "definition": "Prémer el botó del ratolí dues vegades molt ràpidament"
+        },
+        "drag/pre-express/2022": {
+          "word": "Arrossegar",
+          "definition": "Fer clic al botó del ratolí i mantenir-lo premut mentre mous el punter del ratolí cap a un altre lloc"
+        },
+        "drop/pre-express/2022": {
+          "word": "Deixar anar",
+          "definition": "Deixar de prémer el botó del ratolí per \"deixar anar\" l'objecte que estàs arrossegant"
+        },
+        "algorithm/pre-express/2022": {
+          "word": "Algorisme",
+          "definition": "Llista de passos necessaris per fer una tasca."
+        },
+        "bug/pre-express/2022": {
+          "word": "Bug / error",
+          "definition": "Una part del programa que no funciona correctament."
+        },
+        "debugging/pre-express/2022": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "program/pre-express/2022": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "programming/pre-express/2022": {
+          "word": "Programació",
+          "definition": "L'art de crear un programa."
+        },
+        "persistence/pre-express/2022": {
+          "word": "Persistència",
+          "definition": "Intentar alguna cosa una vegada i una altra, fins i tot quan és molt difícil."
+        },
+        "loop/pre-express/2022": {
+          "word": "Bucle",
+          "definition": "L'acció de fer alguna cosa una vegada i una altra."
+        },
+        "repeat/pre-express/2022": {
+          "word": "Repetir",
+          "definition": "Tornar a fer alguna cosa."
+        },
+        "event/pre-express/2022": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "code/aquatic/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "condition/aquatic/unversioned": {
+          "word": "Condició",
+          "definition": "Allò que comprova el programa per veure si és vertader, abans de permetre una acció."
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Condicionals",
+          "definition": "Sentències que només funcionen si es donen unes condicions determinades."
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Bucles",
+          "definition": "L'acció de fer alguna cosa una vegada i una altra."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/artist/unversioned": {
+          "word": "Codi",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "debugging/artist/unversioned": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "program/artist/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/basketball/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "event/basketball/unversioned": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "program/basketball/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/dance-2019/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/dance-extras/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "event/dance-extras/unversioned": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/dance/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "event/dance/unversioned": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "program/dance/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/flappy/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "program/flappy/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/frozen/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "program/frozen/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/gumball/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "program/gumball/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/hero/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "debugging/hero/unversioned": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "function/hero/unversioned": {
+          "word": "Funció",
+          "definition": "Un fragment de codi que es pot cridar fàcilment una vegada i una altra."
+        },
+        "program/hero/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/hourofcode/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/iceage/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "program/iceage/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/infinity/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "program/infinity/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/mc/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "debugging/mc/unversioned": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "program/mc/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/minecraft/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "event/minecraft/unversioned": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Bucle",
+          "definition": "L'acció de fer alguna cosa una vegada i una altra."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Aprenentatge automàtic",
+          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Models i simulacions",
+          "definition": "Programes que repliquen o imiten característiques clau d'un esdeveniment del món real per tal d'investigar com es comporta sense el cost, el temps o el perill que implica executar un experiment a la vida real."
+        },
+        "code/playlab/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "program/playlab/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/poem-art/2021": {
+          "word": "Codi",
+          "definition": "Escriure instruccions per a un ordinador."
+        },
+        "event/poem-art/2021": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "line/poem-art/2021": {
+          "word": "Línia",
+          "definition": "(poesia) - La subdivisió d'un poema disposada en una fila que acaba al marge dret. "
+        },
+        "mood/poem-art/2021": {
+          "word": "Estat d'ànim",
+          "definition": "L'expressió d'un sentiment, ambient o emoció a través de les arts visuals o escrites."
+        },
+        "program/poem-art/2021": {
+          "word": "Programa",
+          "definition": "Una sèrie de passos que s'han codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/sports/unversioned": {
+          "word": "Codi"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "event/sports/unversioned": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "program/sports/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/starwars/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "program/starwars/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/starwarsblocks/unversioned": {
+          "word": "Codificar o programar",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/poem-art/unversioned": {
+          "word": "Codi",
+          "definition": "Escriure instruccions per a un ordinador."
+        },
+        "event/poem-art/unversioned": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Programa",
+          "definition": "Una sèrie de passos que s'han codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "mood/poem-art/unversioned": {
+          "word": "Estat d'ànim",
+          "definition": "L'expressió d'un sentiment, ambient o emoció a través de les arts visuals o escrites."
+        },
+        "line/poem-art/unversioned": {
+          "word": "Línia",
+          "definition": "(poesia) - La subdivisió d'un poema disposada en una fila que acaba al marge dret. "
         }
       }
     }
