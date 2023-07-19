@@ -1,2 +1,8762 @@
 {
+  "lt-LT": {
+    "data": {
+      "standards": {
+        "1-ESS1-1": {
+          "description": ""
+        },
+        "1-ESS1-2": {
+          "description": ""
+        },
+        "1-LS1-1": {
+          "description": ""
+        },
+        "1-LS1-2": {
+          "description": ""
+        },
+        "1-LS3-1": {
+          "description": ""
+        },
+        "1-PS4-1": {
+          "description": ""
+        },
+        "1-PS4-2": {
+          "description": ""
+        },
+        "1-PS4-3": {
+          "description": ""
+        },
+        "1-PS4-4": {
+          "description": ""
+        },
+        "1.G.1": {
+          "description": ""
+        },
+        "1.G.2": {
+          "description": ""
+        },
+        "1.G.3": {
+          "description": ""
+        },
+        "1.L.1": {
+          "description": ""
+        },
+        "1.L.1.a": {
+          "description": ""
+        },
+        "1.L.1.b": {
+          "description": ""
+        },
+        "1.L.1.c": {
+          "description": ""
+        },
+        "1.L.1.d": {
+          "description": ""
+        },
+        "1.L.1.e": {
+          "description": ""
+        },
+        "1.L.1.f": {
+          "description": ""
+        },
+        "1.L.1.g": {
+          "description": ""
+        },
+        "1.L.1.h": {
+          "description": ""
+        },
+        "1.L.1.i": {
+          "description": ""
+        },
+        "1.L.1.j": {
+          "description": ""
+        },
+        "1.L.2": {
+          "description": ""
+        },
+        "1.L.2.a": {
+          "description": ""
+        },
+        "1.L.2.b": {
+          "description": ""
+        },
+        "1.L.2.c": {
+          "description": ""
+        },
+        "1.L.2.d": {
+          "description": ""
+        },
+        "1.L.2.e": {
+          "description": ""
+        },
+        "1.L.3": {
+          "description": ""
+        },
+        "1.L.4": {
+          "description": ""
+        },
+        "1.L.4.a": {
+          "description": ""
+        },
+        "1.L.4.b": {
+          "description": ""
+        },
+        "1.L.4.c": {
+          "description": ""
+        },
+        "1.L.5": {
+          "description": ""
+        },
+        "1.L.5.a": {
+          "description": ""
+        },
+        "1.L.5.b": {
+          "description": ""
+        },
+        "1.L.5.c": {
+          "description": ""
+        },
+        "1.L.5.d": {
+          "description": ""
+        },
+        "1.L.6": {
+          "description": ""
+        },
+        "1.MD.1": {
+          "description": ""
+        },
+        "1.MD.2": {
+          "description": ""
+        },
+        "1.MD.3": {
+          "description": ""
+        },
+        "1.MD.4": {
+          "description": ""
+        },
+        "1.NBT.1": {
+          "description": ""
+        },
+        "1.NBT.2": {
+          "description": ""
+        },
+        "1.NBT.2.a": {
+          "description": ""
+        },
+        "1.NBT.2.b": {
+          "description": ""
+        },
+        "1.NBT.2.c": {
+          "description": ""
+        },
+        "1.NBT.3": {
+          "description": ""
+        },
+        "1.NBT.4": {
+          "description": ""
+        },
+        "1.NBT.5": {
+          "description": ""
+        },
+        "1.NBT.6": {
+          "description": ""
+        },
+        "1.OA.1": {
+          "description": ""
+        },
+        "1.OA.2": {
+          "description": ""
+        },
+        "1.OA.3": {
+          "description": ""
+        },
+        "1.OA.4": {
+          "description": ""
+        },
+        "1.OA.5": {
+          "description": ""
+        },
+        "1.OA.6": {
+          "description": ""
+        },
+        "1.OA.7": {
+          "description": ""
+        },
+        "1.OA.8": {
+          "description": ""
+        },
+        "1.RF.1": {
+          "description": ""
+        },
+        "1.RF.1.a": {
+          "description": ""
+        },
+        "1.RF.2": {
+          "description": ""
+        },
+        "1.RF.2.a": {
+          "description": ""
+        },
+        "1.RF.2.b": {
+          "description": ""
+        },
+        "1.RF.2.c": {
+          "description": ""
+        },
+        "1.RF.2.d": {
+          "description": ""
+        },
+        "1.RF.3": {
+          "description": ""
+        },
+        "1.RF.3.a": {
+          "description": ""
+        },
+        "1.RF.3.b": {
+          "description": ""
+        },
+        "1.RF.3.c": {
+          "description": ""
+        },
+        "1.RF.3.d": {
+          "description": ""
+        },
+        "1.RF.3.e": {
+          "description": ""
+        },
+        "1.RF.3.f": {
+          "description": ""
+        },
+        "1.RF.3.g": {
+          "description": ""
+        },
+        "1.RF.4": {
+          "description": ""
+        },
+        "1.RF.4.a": {
+          "description": ""
+        },
+        "1.RF.4.b": {
+          "description": ""
+        },
+        "1.RF.4.c": {
+          "description": ""
+        },
+        "1.RI.1": {
+          "description": ""
+        },
+        "1.RI.10": {
+          "description": ""
+        },
+        "1.RI.2": {
+          "description": ""
+        },
+        "1.RI.3": {
+          "description": ""
+        },
+        "1.RI.4": {
+          "description": ""
+        },
+        "1.RI.5": {
+          "description": ""
+        },
+        "1.RI.6": {
+          "description": ""
+        },
+        "1.RI.7": {
+          "description": ""
+        },
+        "1.RI.8": {
+          "description": ""
+        },
+        "1.RI.9": {
+          "description": ""
+        },
+        "1.RL.1": {
+          "description": ""
+        },
+        "1.RL.10": {
+          "description": ""
+        },
+        "1.RL.2": {
+          "description": ""
+        },
+        "1.RL.3": {
+          "description": ""
+        },
+        "1.RL.4": {
+          "description": ""
+        },
+        "1.RL.5": {
+          "description": ""
+        },
+        "1.RL.6": {
+          "description": ""
+        },
+        "1.RL.7": {
+          "description": ""
+        },
+        "1.RL.8": {
+          "description": ""
+        },
+        "1.RL.9": {
+          "description": ""
+        },
+        "1.SL.1": {
+          "description": ""
+        },
+        "1.SL.1.a": {
+          "description": ""
+        },
+        "1.SL.1.b": {
+          "description": ""
+        },
+        "1.SL.1.c": {
+          "description": ""
+        },
+        "1.SL.2": {
+          "description": ""
+        },
+        "1.SL.3": {
+          "description": ""
+        },
+        "1.SL.4": {
+          "description": ""
+        },
+        "1.SL.5": {
+          "description": ""
+        },
+        "1.SL.6": {
+          "description": ""
+        },
+        "1.W.1": {
+          "description": ""
+        },
+        "1.W.10": {
+          "description": ""
+        },
+        "1.W.2": {
+          "description": ""
+        },
+        "1.W.3": {
+          "description": ""
+        },
+        "1.W.4": {
+          "description": ""
+        },
+        "1.W.5": {
+          "description": ""
+        },
+        "1.W.6": {
+          "description": ""
+        },
+        "1.W.7": {
+          "description": ""
+        },
+        "1.W.8": {
+          "description": ""
+        },
+        "1.W.9": {
+          "description": ""
+        },
+        "1.a": {
+          "description": ""
+        },
+        "1.b": {
+          "description": ""
+        },
+        "1.c": {
+          "description": ""
+        },
+        "1.d": {
+          "description": ""
+        },
+        "11-12.L.1": {
+          "description": ""
+        },
+        "11-12.L.1.a": {
+          "description": ""
+        },
+        "11-12.L.1.b": {
+          "description": ""
+        },
+        "11-12.L.2": {
+          "description": ""
+        },
+        "11-12.L.2.a": {
+          "description": ""
+        },
+        "11-12.L.2.b": {
+          "description": ""
+        },
+        "11-12.L.3": {
+          "description": ""
+        },
+        "11-12.L.3.a": {
+          "description": ""
+        },
+        "11-12.L.4": {
+          "description": ""
+        },
+        "11-12.L.4.a": {
+          "description": ""
+        },
+        "11-12.L.4.b": {
+          "description": ""
+        },
+        "11-12.L.4.c": {
+          "description": ""
+        },
+        "11-12.L.4.d": {
+          "description": ""
+        },
+        "11-12.L.5": {
+          "description": ""
+        },
+        "11-12.L.5.a": {
+          "description": ""
+        },
+        "11-12.L.5.b": {
+          "description": ""
+        },
+        "11-12.L.6": {
+          "description": ""
+        },
+        "11-12.RH.1": {
+          "description": ""
+        },
+        "11-12.RH.10": {
+          "description": ""
+        },
+        "11-12.RH.2": {
+          "description": ""
+        },
+        "11-12.RH.3": {
+          "description": ""
+        },
+        "11-12.RH.4": {
+          "description": ""
+        },
+        "11-12.RH.5": {
+          "description": ""
+        },
+        "11-12.RH.6": {
+          "description": ""
+        },
+        "11-12.RH.7": {
+          "description": ""
+        },
+        "11-12.RH.8": {
+          "description": ""
+        },
+        "11-12.RH.9": {
+          "description": ""
+        },
+        "11-12.RI.1": {
+          "description": ""
+        },
+        "11-12.RI.10": {
+          "description": ""
+        },
+        "11-12.RI.2": {
+          "description": ""
+        },
+        "11-12.RI.3": {
+          "description": ""
+        },
+        "11-12.RI.4": {
+          "description": ""
+        },
+        "11-12.RI.5": {
+          "description": ""
+        },
+        "11-12.RI.6": {
+          "description": ""
+        },
+        "11-12.RI.7": {
+          "description": ""
+        },
+        "11-12.RI.8": {
+          "description": ""
+        },
+        "11-12.RI.9": {
+          "description": ""
+        },
+        "11-12.RL.1": {
+          "description": ""
+        },
+        "11-12.RL.10": {
+          "description": ""
+        },
+        "11-12.RL.2": {
+          "description": ""
+        },
+        "11-12.RL.3": {
+          "description": ""
+        },
+        "11-12.RL.4": {
+          "description": ""
+        },
+        "11-12.RL.5": {
+          "description": ""
+        },
+        "11-12.RL.6": {
+          "description": ""
+        },
+        "11-12.RL.7": {
+          "description": ""
+        },
+        "11-12.RL.8": {
+          "description": ""
+        },
+        "11-12.RL.9": {
+          "description": ""
+        },
+        "11-12.RST.1": {
+          "description": ""
+        },
+        "11-12.RST.10": {
+          "description": ""
+        },
+        "11-12.RST.2": {
+          "description": ""
+        },
+        "11-12.RST.3": {
+          "description": ""
+        },
+        "11-12.RST.4": {
+          "description": ""
+        },
+        "11-12.RST.5": {
+          "description": ""
+        },
+        "11-12.RST.6": {
+          "description": ""
+        },
+        "11-12.RST.7": {
+          "description": ""
+        },
+        "11-12.RST.8": {
+          "description": ""
+        },
+        "11-12.RST.9": {
+          "description": ""
+        },
+        "11-12.SL.1": {
+          "description": ""
+        },
+        "11-12.SL.1.a": {
+          "description": ""
+        },
+        "11-12.SL.1.b": {
+          "description": ""
+        },
+        "11-12.SL.1.c": {
+          "description": ""
+        },
+        "11-12.SL.1.d": {
+          "description": ""
+        },
+        "11-12.SL.2": {
+          "description": ""
+        },
+        "11-12.SL.3": {
+          "description": ""
+        },
+        "11-12.SL.4": {
+          "description": ""
+        },
+        "11-12.SL.5": {
+          "description": ""
+        },
+        "11-12.SL.6": {
+          "description": ""
+        },
+        "11-12.W.1": {
+          "description": ""
+        },
+        "11-12.W.1.a": {
+          "description": ""
+        },
+        "11-12.W.1.b": {
+          "description": ""
+        },
+        "11-12.W.1.c": {
+          "description": ""
+        },
+        "11-12.W.1.d": {
+          "description": ""
+        },
+        "11-12.W.1.e": {
+          "description": ""
+        },
+        "11-12.W.10": {
+          "description": ""
+        },
+        "11-12.W.2": {
+          "description": ""
+        },
+        "11-12.W.2.a": {
+          "description": ""
+        },
+        "11-12.W.2.b": {
+          "description": ""
+        },
+        "11-12.W.2.c": {
+          "description": ""
+        },
+        "11-12.W.2.d": {
+          "description": ""
+        },
+        "11-12.W.2.e": {
+          "description": ""
+        },
+        "11-12.W.2.f": {
+          "description": ""
+        },
+        "11-12.W.3": {
+          "description": ""
+        },
+        "11-12.W.3.a": {
+          "description": ""
+        },
+        "11-12.W.3.b": {
+          "description": ""
+        },
+        "11-12.W.3.c": {
+          "description": ""
+        },
+        "11-12.W.3.d": {
+          "description": ""
+        },
+        "11-12.W.3.e": {
+          "description": ""
+        },
+        "11-12.W.4": {
+          "description": ""
+        },
+        "11-12.W.5": {
+          "description": ""
+        },
+        "11-12.W.6": {
+          "description": ""
+        },
+        "11-12.W.7": {
+          "description": ""
+        },
+        "11-12.W.8": {
+          "description": ""
+        },
+        "11-12.W.9": {
+          "description": ""
+        },
+        "11-12.W.9.a": {
+          "description": ""
+        },
+        "11-12.W.9.b": {
+          "description": ""
+        },
+        "11-12.WHST.1": {
+          "description": ""
+        },
+        "11-12.WHST.1.a": {
+          "description": ""
+        },
+        "11-12.WHST.1.b": {
+          "description": ""
+        },
+        "11-12.WHST.1.c": {
+          "description": ""
+        },
+        "11-12.WHST.1.d": {
+          "description": ""
+        },
+        "11-12.WHST.1.e": {
+          "description": ""
+        },
+        "11-12.WHST.10": {
+          "description": ""
+        },
+        "11-12.WHST.2": {
+          "description": ""
+        },
+        "11-12.WHST.2.a": {
+          "description": ""
+        },
+        "11-12.WHST.2.b": {
+          "description": ""
+        },
+        "11-12.WHST.2.c": {
+          "description": ""
+        },
+        "11-12.WHST.2.d": {
+          "description": ""
+        },
+        "11-12.WHST.2.e": {
+          "description": ""
+        },
+        "11-12.WHST.3": {
+          "description": ""
+        },
+        "11-12.WHST.4": {
+          "description": ""
+        },
+        "11-12.WHST.5": {
+          "description": ""
+        },
+        "11-12.WHST.6": {
+          "description": ""
+        },
+        "11-12.WHST.7": {
+          "description": ""
+        },
+        "11-12.WHST.8": {
+          "description": ""
+        },
+        "11-12.WHST.9": {
+          "description": ""
+        },
+        "1A-AP-08": {
+          "description": ""
+        },
+        "1A-AP-09": {
+          "description": ""
+        },
+        "1A-AP-10": {
+          "description": ""
+        },
+        "1A-AP-11": {
+          "description": ""
+        },
+        "1A-AP-12": {
+          "description": ""
+        },
+        "1A-AP-13": {
+          "description": ""
+        },
+        "1A-AP-14": {
+          "description": ""
+        },
+        "1A-AP-15": {
+          "description": ""
+        },
+        "1A-CS-01": {
+          "description": ""
+        },
+        "1A-CS-02": {
+          "description": ""
+        },
+        "1A-CS-03": {
+          "description": ""
+        },
+        "1A-DA-05": {
+          "description": ""
+        },
+        "1A-DA-06": {
+          "description": ""
+        },
+        "1A-DA-07": {
+          "description": ""
+        },
+        "1A-IC-16": {
+          "description": ""
+        },
+        "1A-IC-17": {
+          "description": ""
+        },
+        "1A-IC-18": {
+          "description": ""
+        },
+        "1A-NI-04": {
+          "description": ""
+        },
+        "1B-AP-08": {
+          "description": ""
+        },
+        "1B-AP-09": {
+          "description": ""
+        },
+        "1B-AP-10": {
+          "description": ""
+        },
+        "1B-AP-11": {
+          "description": ""
+        },
+        "1B-AP-12": {
+          "description": ""
+        },
+        "1B-AP-13": {
+          "description": ""
+        },
+        "1B-AP-14": {
+          "description": ""
+        },
+        "1B-AP-15": {
+          "description": ""
+        },
+        "1B-AP-16": {
+          "description": ""
+        },
+        "1B-AP-17": {
+          "description": ""
+        },
+        "1B-CS-01": {
+          "description": ""
+        },
+        "1B-CS-02": {
+          "description": ""
+        },
+        "1B-CS-03": {
+          "description": ""
+        },
+        "1B-DA-06": {
+          "description": ""
+        },
+        "1B-DA-07": {
+          "description": ""
+        },
+        "1B-IC-18": {
+          "description": ""
+        },
+        "1B-IC-19": {
+          "description": ""
+        },
+        "1B-IC-20": {
+          "description": ""
+        },
+        "1B-IC-21": {
+          "description": ""
+        },
+        "1B-NI-04": {
+          "description": ""
+        },
+        "1B-NI-05": {
+          "description": ""
+        },
+        "2-AP-10": {
+          "description": ""
+        },
+        "2-AP-11": {
+          "description": ""
+        },
+        "2-AP-12": {
+          "description": ""
+        },
+        "2-AP-13": {
+          "description": ""
+        },
+        "2-AP-14": {
+          "description": ""
+        },
+        "2-AP-15": {
+          "description": ""
+        },
+        "2-AP-16": {
+          "description": ""
+        },
+        "2-AP-17": {
+          "description": ""
+        },
+        "2-AP-18": {
+          "description": ""
+        },
+        "2-AP-19": {
+          "description": ""
+        },
+        "2-CS-01": {
+          "description": ""
+        },
+        "2-CS-02": {
+          "description": ""
+        },
+        "2-CS-03": {
+          "description": ""
+        },
+        "2-DA-07": {
+          "description": ""
+        },
+        "2-DA-08": {
+          "description": ""
+        },
+        "2-DA-09": {
+          "description": ""
+        },
+        "2-ESS1-1": {
+          "description": ""
+        },
+        "2-ESS2-1": {
+          "description": ""
+        },
+        "2-ESS2-2": {
+          "description": ""
+        },
+        "2-ESS2-3": {
+          "description": ""
+        },
+        "2-IC-20": {
+          "description": ""
+        },
+        "2-IC-21": {
+          "description": ""
+        },
+        "2-IC-22": {
+          "description": ""
+        },
+        "2-IC-23": {
+          "description": ""
+        },
+        "2-LS2-1": {
+          "description": ""
+        },
+        "2-LS2-2": {
+          "description": ""
+        },
+        "2-LS4-1": {
+          "description": ""
+        },
+        "2-NI-04": {
+          "description": ""
+        },
+        "2-NI-05": {
+          "description": ""
+        },
+        "2-NI-06": {
+          "description": ""
+        },
+        "2-PS1-1": {
+          "description": ""
+        },
+        "2-PS1-2": {
+          "description": ""
+        },
+        "2-PS1-3": {
+          "description": ""
+        },
+        "2-PS1-4": {
+          "description": ""
+        },
+        "2.G.1": {
+          "description": ""
+        },
+        "2.G.2": {
+          "description": ""
+        },
+        "2.G.3": {
+          "description": ""
+        },
+        "2.L.1": {
+          "description": ""
+        },
+        "2.L.1.a": {
+          "description": ""
+        },
+        "2.L.1.b": {
+          "description": ""
+        },
+        "2.L.1.c": {
+          "description": ""
+        },
+        "2.L.1.d": {
+          "description": ""
+        },
+        "2.L.1.e": {
+          "description": ""
+        },
+        "2.L.1.f": {
+          "description": ""
+        },
+        "2.L.2": {
+          "description": ""
+        },
+        "2.L.2.a": {
+          "description": ""
+        },
+        "2.L.2.b": {
+          "description": ""
+        },
+        "2.L.2.c": {
+          "description": ""
+        },
+        "2.L.2.d": {
+          "description": ""
+        },
+        "2.L.2.e": {
+          "description": ""
+        },
+        "2.L.3": {
+          "description": ""
+        },
+        "2.L.3.a": {
+          "description": ""
+        },
+        "2.L.4": {
+          "description": ""
+        },
+        "2.L.4.a": {
+          "description": ""
+        },
+        "2.L.4.b": {
+          "description": ""
+        },
+        "2.L.4.c": {
+          "description": ""
+        },
+        "2.L.4.d": {
+          "description": ""
+        },
+        "2.L.4.e": {
+          "description": ""
+        },
+        "2.L.5": {
+          "description": ""
+        },
+        "2.L.5.a": {
+          "description": ""
+        },
+        "2.L.5.b": {
+          "description": ""
+        },
+        "2.L.6": {
+          "description": ""
+        },
+        "2.MD.1": {
+          "description": ""
+        },
+        "2.MD.10": {
+          "description": ""
+        },
+        "2.MD.2": {
+          "description": ""
+        },
+        "2.MD.3": {
+          "description": ""
+        },
+        "2.MD.4": {
+          "description": ""
+        },
+        "2.MD.5": {
+          "description": ""
+        },
+        "2.MD.6": {
+          "description": ""
+        },
+        "2.MD.7": {
+          "description": ""
+        },
+        "2.MD.8": {
+          "description": ""
+        },
+        "2.MD.9": {
+          "description": ""
+        },
+        "2.NBT.1": {
+          "description": ""
+        },
+        "2.NBT.1.a": {
+          "description": ""
+        },
+        "2.NBT.1.b": {
+          "description": ""
+        },
+        "2.NBT.2": {
+          "description": ""
+        },
+        "2.NBT.3": {
+          "description": ""
+        },
+        "2.NBT.4": {
+          "description": ""
+        },
+        "2.NBT.5": {
+          "description": ""
+        },
+        "2.NBT.6": {
+          "description": ""
+        },
+        "2.NBT.7": {
+          "description": ""
+        },
+        "2.NBT.8": {
+          "description": ""
+        },
+        "2.NBT.9": {
+          "description": ""
+        },
+        "2.OA.1": {
+          "description": ""
+        },
+        "2.OA.2": {
+          "description": ""
+        },
+        "2.OA.3": {
+          "description": ""
+        },
+        "2.OA.4": {
+          "description": ""
+        },
+        "2.RF.3": {
+          "description": ""
+        },
+        "2.RF.3.a": {
+          "description": ""
+        },
+        "2.RF.3.b": {
+          "description": ""
+        },
+        "2.RF.3.c": {
+          "description": ""
+        },
+        "2.RF.3.d": {
+          "description": ""
+        },
+        "2.RF.3.e": {
+          "description": ""
+        },
+        "2.RF.3.f": {
+          "description": ""
+        },
+        "2.RF.4": {
+          "description": ""
+        },
+        "2.RF.4.a": {
+          "description": ""
+        },
+        "2.RF.4.b": {
+          "description": ""
+        },
+        "2.RF.4.c": {
+          "description": ""
+        },
+        "2.RI.1": {
+          "description": ""
+        },
+        "2.RI.10": {
+          "description": ""
+        },
+        "2.RI.2": {
+          "description": ""
+        },
+        "2.RI.3": {
+          "description": ""
+        },
+        "2.RI.4": {
+          "description": ""
+        },
+        "2.RI.5": {
+          "description": ""
+        },
+        "2.RI.6": {
+          "description": ""
+        },
+        "2.RI.7": {
+          "description": ""
+        },
+        "2.RI.8": {
+          "description": ""
+        },
+        "2.RI.9": {
+          "description": ""
+        },
+        "2.RL.1": {
+          "description": ""
+        },
+        "2.RL.10": {
+          "description": ""
+        },
+        "2.RL.2": {
+          "description": ""
+        },
+        "2.RL.3": {
+          "description": ""
+        },
+        "2.RL.4": {
+          "description": ""
+        },
+        "2.RL.5": {
+          "description": ""
+        },
+        "2.RL.6": {
+          "description": ""
+        },
+        "2.RL.7": {
+          "description": ""
+        },
+        "2.RL.8": {
+          "description": ""
+        },
+        "2.RL.9": {
+          "description": ""
+        },
+        "2.SL.1": {
+          "description": ""
+        },
+        "2.SL.1.a": {
+          "description": ""
+        },
+        "2.SL.1.b": {
+          "description": ""
+        },
+        "2.SL.1.c": {
+          "description": ""
+        },
+        "2.SL.2": {
+          "description": ""
+        },
+        "2.SL.3": {
+          "description": ""
+        },
+        "2.SL.4": {
+          "description": ""
+        },
+        "2.SL.5": {
+          "description": ""
+        },
+        "2.SL.6": {
+          "description": ""
+        },
+        "2.W.1": {
+          "description": ""
+        },
+        "2.W.10": {
+          "description": ""
+        },
+        "2.W.2": {
+          "description": ""
+        },
+        "2.W.3": {
+          "description": ""
+        },
+        "2.W.4": {
+          "description": ""
+        },
+        "2.W.5": {
+          "description": ""
+        },
+        "2.W.6": {
+          "description": ""
+        },
+        "2.W.7": {
+          "description": ""
+        },
+        "2.W.8": {
+          "description": ""
+        },
+        "2.W.9": {
+          "description": ""
+        },
+        "2.a": {
+          "description": ""
+        },
+        "2.b": {
+          "description": ""
+        },
+        "2.c": {
+          "description": ""
+        },
+        "2.d": {
+          "description": ""
+        },
+        "3-5-ETS1-1": {
+          "description": ""
+        },
+        "3-5-ETS1-2": {
+          "description": ""
+        },
+        "3-5-ETS1-3": {
+          "description": ""
+        },
+        "3-A-i.3-5": {
+          "description": ""
+        },
+        "3-A-i.6-8": {
+          "description": ""
+        },
+        "3-A-i.9-12": {
+          "description": ""
+        },
+        "3-A-i.K-2": {
+          "description": ""
+        },
+        "3-A-ii.3-5": {
+          "description": ""
+        },
+        "3-A-ii.6-8": {
+          "description": ""
+        },
+        "3-A-ii.9-12": {
+          "description": ""
+        },
+        "3-A-ii.K-2": {
+          "description": ""
+        },
+        "3-A-iii.3-5": {
+          "description": ""
+        },
+        "3-A-iii.6-8": {
+          "description": ""
+        },
+        "3-A-iii.K-2": {
+          "description": ""
+        },
+        "3-A-iv.3-5": {
+          "description": ""
+        },
+        "3-A-iv.6-8": {
+          "description": ""
+        },
+        "3-A-iv.9-12": {
+          "description": ""
+        },
+        "3-A-v.3-5": {
+          "description": ""
+        },
+        "3-A-v.6-8": {
+          "description": ""
+        },
+        "3-A-v.9-12": {
+          "description": ""
+        },
+        "3-A-vi.3-5": {
+          "description": ""
+        },
+        "3-A-vi.6-8": {
+          "description": ""
+        },
+        "3-A-vi.9-12": {
+          "description": ""
+        },
+        "3-B-i.3-5": {
+          "description": ""
+        },
+        "3-B-i.6-8": {
+          "description": ""
+        },
+        "3-B-i.9-12": {
+          "description": ""
+        },
+        "3-B-ii.3-5": {
+          "description": ""
+        },
+        "3-B-ii.6-8": {
+          "description": ""
+        },
+        "3-B-ii.9-12": {
+          "description": ""
+        },
+        "3-C-i.3-5": {
+          "description": ""
+        },
+        "3-C-i.6-8": {
+          "description": ""
+        },
+        "3-C-i.9-12": {
+          "description": ""
+        },
+        "3-C-i.K-2": {
+          "description": ""
+        },
+        "3-C-ii.3-5": {
+          "description": ""
+        },
+        "3-C-ii.6-8": {
+          "description": ""
+        },
+        "3-C-ii.9-12": {
+          "description": ""
+        },
+        "3-C-iii.3-5": {
+          "description": ""
+        },
+        "3-C-iii.6-8": {
+          "description": ""
+        },
+        "3-C-iii.9-12": {
+          "description": ""
+        },
+        "3-C-iii.K-2": {
+          "description": ""
+        },
+        "3-ESS2-1": {
+          "description": ""
+        },
+        "3-ESS2-2": {
+          "description": ""
+        },
+        "3-ESS3-1": {
+          "description": ""
+        },
+        "3-LS1-1": {
+          "description": ""
+        },
+        "3-LS2-1": {
+          "description": ""
+        },
+        "3-LS3-1": {
+          "description": ""
+        },
+        "3-LS3-2": {
+          "description": ""
+        },
+        "3-LS4-1": {
+          "description": ""
+        },
+        "3-LS4-2": {
+          "description": ""
+        },
+        "3-LS4-3": {
+          "description": ""
+        },
+        "3-LS4-4": {
+          "description": ""
+        },
+        "3-PS2-1": {
+          "description": ""
+        },
+        "3-PS2-2": {
+          "description": ""
+        },
+        "3-PS2-3": {
+          "description": ""
+        },
+        "3-PS2-4": {
+          "description": ""
+        },
+        "3.G.1": {
+          "description": ""
+        },
+        "3.G.2": {
+          "description": ""
+        },
+        "3.L.1": {
+          "description": ""
+        },
+        "3.L.1.a": {
+          "description": ""
+        },
+        "3.L.1.b": {
+          "description": ""
+        },
+        "3.L.1.c": {
+          "description": ""
+        },
+        "3.L.1.d": {
+          "description": ""
+        },
+        "3.L.1.e": {
+          "description": ""
+        },
+        "3.L.1.f": {
+          "description": ""
+        },
+        "3.L.1.g": {
+          "description": ""
+        },
+        "3.L.1.h": {
+          "description": ""
+        },
+        "3.L.1.i": {
+          "description": ""
+        },
+        "3.L.2": {
+          "description": ""
+        },
+        "3.L.2.a": {
+          "description": ""
+        },
+        "3.L.2.b": {
+          "description": ""
+        },
+        "3.L.2.c": {
+          "description": ""
+        },
+        "3.L.2.d": {
+          "description": ""
+        },
+        "3.L.2.e": {
+          "description": ""
+        },
+        "3.L.2.f": {
+          "description": ""
+        },
+        "3.L.2.g": {
+          "description": ""
+        },
+        "3.L.3": {
+          "description": ""
+        },
+        "3.L.3.a": {
+          "description": ""
+        },
+        "3.L.3.b": {
+          "description": ""
+        },
+        "3.L.4": {
+          "description": ""
+        },
+        "3.L.4.a": {
+          "description": ""
+        },
+        "3.L.4.b": {
+          "description": ""
+        },
+        "3.L.4.c": {
+          "description": ""
+        },
+        "3.L.4.d": {
+          "description": ""
+        },
+        "3.L.5": {
+          "description": ""
+        },
+        "3.L.5.a": {
+          "description": ""
+        },
+        "3.L.5.b": {
+          "description": ""
+        },
+        "3.L.5.c": {
+          "description": ""
+        },
+        "3.L.6": {
+          "description": ""
+        },
+        "3.MD.1": {
+          "description": ""
+        },
+        "3.MD.2": {
+          "description": ""
+        },
+        "3.MD.3": {
+          "description": ""
+        },
+        "3.MD.4": {
+          "description": ""
+        },
+        "3.MD.5": {
+          "description": ""
+        },
+        "3.MD.5.a": {
+          "description": ""
+        },
+        "3.MD.5.b": {
+          "description": ""
+        },
+        "3.MD.6": {
+          "description": ""
+        },
+        "3.MD.7": {
+          "description": ""
+        },
+        "3.MD.7.a": {
+          "description": ""
+        },
+        "3.MD.7.b": {
+          "description": ""
+        },
+        "3.MD.7.c": {
+          "description": ""
+        },
+        "3.MD.7.d": {
+          "description": ""
+        },
+        "3.MD.8": {
+          "description": ""
+        },
+        "3.NBT.1": {
+          "description": ""
+        },
+        "3.NBT.2": {
+          "description": ""
+        },
+        "3.NBT.3": {
+          "description": ""
+        },
+        "3.NF.1": {
+          "description": ""
+        },
+        "3.NF.2": {
+          "description": ""
+        },
+        "3.NF.2.a": {
+          "description": ""
+        },
+        "3.NF.2.b": {
+          "description": ""
+        },
+        "3.NF.3": {
+          "description": ""
+        },
+        "3.NF.3.a": {
+          "description": ""
+        },
+        "3.NF.3.b": {
+          "description": ""
+        },
+        "3.NF.3.c": {
+          "description": ""
+        },
+        "3.NF.3.d": {
+          "description": ""
+        },
+        "3.OA.1": {
+          "description": ""
+        },
+        "3.OA.2": {
+          "description": ""
+        },
+        "3.OA.3": {
+          "description": ""
+        },
+        "3.OA.4": {
+          "description": ""
+        },
+        "3.OA.5": {
+          "description": ""
+        },
+        "3.OA.6": {
+          "description": ""
+        },
+        "3.OA.7": {
+          "description": ""
+        },
+        "3.OA.8": {
+          "description": ""
+        },
+        "3.OA.9": {
+          "description": ""
+        },
+        "3.RF.3": {
+          "description": ""
+        },
+        "3.RF.3.a": {
+          "description": ""
+        },
+        "3.RF.3.b": {
+          "description": ""
+        },
+        "3.RF.3.c": {
+          "description": ""
+        },
+        "3.RF.3.d": {
+          "description": ""
+        },
+        "3.RF.4": {
+          "description": ""
+        },
+        "3.RF.4.a": {
+          "description": ""
+        },
+        "3.RF.4.b": {
+          "description": ""
+        },
+        "3.RF.4.c": {
+          "description": ""
+        },
+        "3.RI.1": {
+          "description": ""
+        },
+        "3.RI.10": {
+          "description": ""
+        },
+        "3.RI.2": {
+          "description": ""
+        },
+        "3.RI.3": {
+          "description": ""
+        },
+        "3.RI.4": {
+          "description": ""
+        },
+        "3.RI.5": {
+          "description": ""
+        },
+        "3.RI.6": {
+          "description": ""
+        },
+        "3.RI.7": {
+          "description": ""
+        },
+        "3.RI.8": {
+          "description": ""
+        },
+        "3.RI.9": {
+          "description": ""
+        },
+        "3.RL.1": {
+          "description": ""
+        },
+        "3.RL.10": {
+          "description": ""
+        },
+        "3.RL.2": {
+          "description": ""
+        },
+        "3.RL.3": {
+          "description": ""
+        },
+        "3.RL.4": {
+          "description": ""
+        },
+        "3.RL.5": {
+          "description": ""
+        },
+        "3.RL.6": {
+          "description": ""
+        },
+        "3.RL.7": {
+          "description": ""
+        },
+        "3.RL.8": {
+          "description": ""
+        },
+        "3.RL.9": {
+          "description": ""
+        },
+        "3.SL.1": {
+          "description": ""
+        },
+        "3.SL.1.a": {
+          "description": ""
+        },
+        "3.SL.1.b": {
+          "description": ""
+        },
+        "3.SL.1.c": {
+          "description": ""
+        },
+        "3.SL.1.d": {
+          "description": ""
+        },
+        "3.SL.2": {
+          "description": ""
+        },
+        "3.SL.3": {
+          "description": ""
+        },
+        "3.SL.4": {
+          "description": ""
+        },
+        "3.SL.5": {
+          "description": ""
+        },
+        "3.SL.6": {
+          "description": ""
+        },
+        "3.W.1": {
+          "description": ""
+        },
+        "3.W.1.a": {
+          "description": ""
+        },
+        "3.W.1.b": {
+          "description": ""
+        },
+        "3.W.1.c": {
+          "description": ""
+        },
+        "3.W.1.d": {
+          "description": ""
+        },
+        "3.W.10": {
+          "description": ""
+        },
+        "3.W.2": {
+          "description": ""
+        },
+        "3.W.2.a": {
+          "description": ""
+        },
+        "3.W.2.b": {
+          "description": ""
+        },
+        "3.W.2.c": {
+          "description": ""
+        },
+        "3.W.2.d": {
+          "description": ""
+        },
+        "3.W.3": {
+          "description": ""
+        },
+        "3.W.3.a": {
+          "description": ""
+        },
+        "3.W.3.b": {
+          "description": ""
+        },
+        "3.W.3.c": {
+          "description": ""
+        },
+        "3.W.3.d": {
+          "description": ""
+        },
+        "3.W.4": {
+          "description": ""
+        },
+        "3.W.5": {
+          "description": ""
+        },
+        "3.W.6": {
+          "description": ""
+        },
+        "3.W.7": {
+          "description": ""
+        },
+        "3.W.8": {
+          "description": ""
+        },
+        "3.W.9": {
+          "description": ""
+        },
+        "3.a": {
+          "description": ""
+        },
+        "3.b": {
+          "description": ""
+        },
+        "3.c": {
+          "description": ""
+        },
+        "3.d": {
+          "description": ""
+        },
+        "3A-AP-13": {
+          "description": ""
+        },
+        "3A-AP-14": {
+          "description": ""
+        },
+        "3A-AP-15": {
+          "description": ""
+        },
+        "3A-AP-16": {
+          "description": ""
+        },
+        "3A-AP-17": {
+          "description": ""
+        },
+        "3A-AP-18": {
+          "description": ""
+        },
+        "3A-AP-19": {
+          "description": ""
+        },
+        "3A-AP-20": {
+          "description": ""
+        },
+        "3A-AP-21": {
+          "description": ""
+        },
+        "3A-AP-22": {
+          "description": ""
+        },
+        "3A-AP-23": {
+          "description": ""
+        },
+        "3A-CS-01": {
+          "description": ""
+        },
+        "3A-CS-02": {
+          "description": ""
+        },
+        "3A-CS-03": {
+          "description": ""
+        },
+        "3A-DA-09": {
+          "description": ""
+        },
+        "3A-DA-10": {
+          "description": ""
+        },
+        "3A-DA-11": {
+          "description": ""
+        },
+        "3A-DA-12": {
+          "description": ""
+        },
+        "3A-IC-24": {
+          "description": ""
+        },
+        "3A-IC-25": {
+          "description": ""
+        },
+        "3A-IC-26": {
+          "description": ""
+        },
+        "3A-IC-27": {
+          "description": ""
+        },
+        "3A-IC-28": {
+          "description": ""
+        },
+        "3A-IC-29": {
+          "description": ""
+        },
+        "3A-IC-30": {
+          "description": ""
+        },
+        "3A-NI-04": {
+          "description": ""
+        },
+        "3A-NI-05": {
+          "description": ""
+        },
+        "3A-NI-06": {
+          "description": ""
+        },
+        "3A-NI-07": {
+          "description": ""
+        },
+        "3A-NI-08": {
+          "description": ""
+        },
+        "3B-AP-08": {
+          "description": ""
+        },
+        "3B-AP-09": {
+          "description": ""
+        },
+        "3B-AP-10": {
+          "description": ""
+        },
+        "3B-AP-11": {
+          "description": ""
+        },
+        "3B-AP-12": {
+          "description": ""
+        },
+        "3B-AP-13": {
+          "description": ""
+        },
+        "3B-AP-14": {
+          "description": ""
+        },
+        "3B-AP-15": {
+          "description": ""
+        },
+        "3B-AP-16": {
+          "description": ""
+        },
+        "3B-AP-17": {
+          "description": ""
+        },
+        "3B-AP-18": {
+          "description": ""
+        },
+        "3B-AP-19": {
+          "description": ""
+        },
+        "3B-AP-20": {
+          "description": ""
+        },
+        "3B-AP-21": {
+          "description": ""
+        },
+        "3B-AP-22": {
+          "description": ""
+        },
+        "3B-AP-23": {
+          "description": ""
+        },
+        "3B-AP-24": {
+          "description": ""
+        },
+        "3B-CS-01": {
+          "description": ""
+        },
+        "3B-CS-02": {
+          "description": ""
+        },
+        "3B-DA-05": {
+          "description": ""
+        },
+        "3B-DA-06": {
+          "description": ""
+        },
+        "3B-DA-07": {
+          "description": ""
+        },
+        "3B-IC-25": {
+          "description": ""
+        },
+        "3B-IC-26": {
+          "description": ""
+        },
+        "3B-IC-27": {
+          "description": ""
+        },
+        "3B-IC-28": {
+          "description": ""
+        },
+        "3B-NI-03": {
+          "description": ""
+        },
+        "3B-NI-04": {
+          "description": ""
+        },
+        "4-ESS1-1": {
+          "description": ""
+        },
+        "4-ESS2-1": {
+          "description": ""
+        },
+        "4-ESS2-2": {
+          "description": ""
+        },
+        "4-ESS3-1": {
+          "description": ""
+        },
+        "4-ESS3-2": {
+          "description": ""
+        },
+        "4-LS1-1": {
+          "description": ""
+        },
+        "4-LS1-2": {
+          "description": ""
+        },
+        "4-PS3-1": {
+          "description": ""
+        },
+        "4-PS3-2": {
+          "description": ""
+        },
+        "4-PS3-3": {
+          "description": ""
+        },
+        "4-PS3-4": {
+          "description": ""
+        },
+        "4-PS4-1": {
+          "description": ""
+        },
+        "4-PS4-2": {
+          "description": ""
+        },
+        "4-PS4-3": {
+          "description": ""
+        },
+        "4.G.1": {
+          "description": ""
+        },
+        "4.G.2": {
+          "description": ""
+        },
+        "4.G.3": {
+          "description": ""
+        },
+        "4.L.1": {
+          "description": ""
+        },
+        "4.L.1.a": {
+          "description": ""
+        },
+        "4.L.1.b": {
+          "description": ""
+        },
+        "4.L.1.c": {
+          "description": ""
+        },
+        "4.L.1.d": {
+          "description": ""
+        },
+        "4.L.1.e": {
+          "description": ""
+        },
+        "4.L.1.f": {
+          "description": ""
+        },
+        "4.L.1.g": {
+          "description": ""
+        },
+        "4.L.2": {
+          "description": ""
+        },
+        "4.L.2.a": {
+          "description": ""
+        },
+        "4.L.2.b": {
+          "description": ""
+        },
+        "4.L.2.c": {
+          "description": ""
+        },
+        "4.L.2.d": {
+          "description": ""
+        },
+        "4.L.3": {
+          "description": ""
+        },
+        "4.L.3.a": {
+          "description": ""
+        },
+        "4.L.3.b": {
+          "description": ""
+        },
+        "4.L.3.c": {
+          "description": ""
+        },
+        "4.L.4": {
+          "description": ""
+        },
+        "4.L.4.a": {
+          "description": ""
+        },
+        "4.L.4.b": {
+          "description": ""
+        },
+        "4.L.4.c": {
+          "description": ""
+        },
+        "4.L.5": {
+          "description": ""
+        },
+        "4.L.5.a": {
+          "description": ""
+        },
+        "4.L.5.b": {
+          "description": ""
+        },
+        "4.L.5.c": {
+          "description": ""
+        },
+        "4.L.6": {
+          "description": ""
+        },
+        "4.MD.1": {
+          "description": ""
+        },
+        "4.MD.2": {
+          "description": ""
+        },
+        "4.MD.3": {
+          "description": ""
+        },
+        "4.MD.4": {
+          "description": ""
+        },
+        "4.MD.5": {
+          "description": ""
+        },
+        "4.MD.5.a": {
+          "description": ""
+        },
+        "4.MD.5.b": {
+          "description": ""
+        },
+        "4.MD.6": {
+          "description": ""
+        },
+        "4.MD.7": {
+          "description": ""
+        },
+        "4.NBT.1": {
+          "description": ""
+        },
+        "4.NBT.2": {
+          "description": ""
+        },
+        "4.NBT.3": {
+          "description": ""
+        },
+        "4.NBT.4": {
+          "description": ""
+        },
+        "4.NBT.5": {
+          "description": ""
+        },
+        "4.NBT.6": {
+          "description": ""
+        },
+        "4.NF.1": {
+          "description": ""
+        },
+        "4.NF.2": {
+          "description": ""
+        },
+        "4.NF.3": {
+          "description": ""
+        },
+        "4.NF.3.a": {
+          "description": ""
+        },
+        "4.NF.3.b": {
+          "description": ""
+        },
+        "4.NF.3.c": {
+          "description": ""
+        },
+        "4.NF.3.d": {
+          "description": ""
+        },
+        "4.NF.4": {
+          "description": ""
+        },
+        "4.NF.4.a": {
+          "description": ""
+        },
+        "4.NF.4.b": {
+          "description": ""
+        },
+        "4.NF.4.c": {
+          "description": ""
+        },
+        "4.NF.5": {
+          "description": ""
+        },
+        "4.NF.6": {
+          "description": ""
+        },
+        "4.NF.7": {
+          "description": ""
+        },
+        "4.OA.1": {
+          "description": ""
+        },
+        "4.OA.2": {
+          "description": ""
+        },
+        "4.OA.3": {
+          "description": ""
+        },
+        "4.OA.4": {
+          "description": ""
+        },
+        "4.OA.5": {
+          "description": ""
+        },
+        "4.RF.3": {
+          "description": ""
+        },
+        "4.RF.3.a": {
+          "description": ""
+        },
+        "4.RF.4": {
+          "description": ""
+        },
+        "4.RF.4.a": {
+          "description": ""
+        },
+        "4.RF.4.b": {
+          "description": ""
+        },
+        "4.RF.4.c": {
+          "description": ""
+        },
+        "4.RI.1": {
+          "description": ""
+        },
+        "4.RI.10": {
+          "description": ""
+        },
+        "4.RI.2": {
+          "description": ""
+        },
+        "4.RI.3": {
+          "description": ""
+        },
+        "4.RI.4": {
+          "description": ""
+        },
+        "4.RI.5": {
+          "description": ""
+        },
+        "4.RI.6": {
+          "description": ""
+        },
+        "4.RI.7": {
+          "description": ""
+        },
+        "4.RI.8": {
+          "description": ""
+        },
+        "4.RI.9": {
+          "description": ""
+        },
+        "4.RL.1": {
+          "description": ""
+        },
+        "4.RL.10": {
+          "description": ""
+        },
+        "4.RL.2": {
+          "description": ""
+        },
+        "4.RL.3": {
+          "description": ""
+        },
+        "4.RL.4": {
+          "description": ""
+        },
+        "4.RL.5": {
+          "description": ""
+        },
+        "4.RL.6": {
+          "description": ""
+        },
+        "4.RL.7": {
+          "description": ""
+        },
+        "4.RL.8": {
+          "description": ""
+        },
+        "4.RL.9": {
+          "description": ""
+        },
+        "4.SL.1": {
+          "description": ""
+        },
+        "4.SL.1.a": {
+          "description": ""
+        },
+        "4.SL.1.b": {
+          "description": ""
+        },
+        "4.SL.1.c": {
+          "description": ""
+        },
+        "4.SL.1.d": {
+          "description": ""
+        },
+        "4.SL.2": {
+          "description": ""
+        },
+        "4.SL.3": {
+          "description": ""
+        },
+        "4.SL.4": {
+          "description": ""
+        },
+        "4.SL.5": {
+          "description": ""
+        },
+        "4.SL.6": {
+          "description": ""
+        },
+        "4.W.1": {
+          "description": ""
+        },
+        "4.W.1.a": {
+          "description": ""
+        },
+        "4.W.1.b": {
+          "description": ""
+        },
+        "4.W.1.c": {
+          "description": ""
+        },
+        "4.W.1.d": {
+          "description": ""
+        },
+        "4.W.10": {
+          "description": ""
+        },
+        "4.W.2": {
+          "description": ""
+        },
+        "4.W.2.a": {
+          "description": ""
+        },
+        "4.W.2.b": {
+          "description": ""
+        },
+        "4.W.2.c": {
+          "description": ""
+        },
+        "4.W.2.d": {
+          "description": ""
+        },
+        "4.W.2.e": {
+          "description": ""
+        },
+        "4.W.3": {
+          "description": ""
+        },
+        "4.W.3.a": {
+          "description": ""
+        },
+        "4.W.3.b": {
+          "description": ""
+        },
+        "4.W.3.c": {
+          "description": ""
+        },
+        "4.W.3.d": {
+          "description": ""
+        },
+        "4.W.3.e": {
+          "description": ""
+        },
+        "4.W.4": {
+          "description": ""
+        },
+        "4.W.5": {
+          "description": ""
+        },
+        "4.W.6": {
+          "description": ""
+        },
+        "4.W.7": {
+          "description": ""
+        },
+        "4.W.8": {
+          "description": ""
+        },
+        "4.W.9": {
+          "description": ""
+        },
+        "4.W.9.a": {
+          "description": ""
+        },
+        "4.W.9.b": {
+          "description": ""
+        },
+        "4.a": {
+          "description": ""
+        },
+        "4.b": {
+          "description": ""
+        },
+        "4.c": {
+          "description": ""
+        },
+        "4.d": {
+          "description": ""
+        },
+        "5-ESS1-1": {
+          "description": ""
+        },
+        "5-ESS1-2": {
+          "description": ""
+        },
+        "5-ESS2-1": {
+          "description": ""
+        },
+        "5-ESS2-2": {
+          "description": ""
+        },
+        "5-ESS3-1": {
+          "description": ""
+        },
+        "5-LS1-1": {
+          "description": ""
+        },
+        "5-LS2-1": {
+          "description": ""
+        },
+        "5-PS1-1": {
+          "description": ""
+        },
+        "5-PS1-2": {
+          "description": ""
+        },
+        "5-PS1-3": {
+          "description": ""
+        },
+        "5-PS1-4": {
+          "description": ""
+        },
+        "5-PS2-1": {
+          "description": ""
+        },
+        "5-PS3-1": {
+          "description": ""
+        },
+        "5.G.1": {
+          "description": ""
+        },
+        "5.G.2": {
+          "description": ""
+        },
+        "5.G.3": {
+          "description": ""
+        },
+        "5.G.4": {
+          "description": ""
+        },
+        "5.L.1": {
+          "description": ""
+        },
+        "5.L.2": {
+          "description": ""
+        },
+        "5.L.3": {
+          "description": ""
+        },
+        "5.L.3.a": {
+          "description": ""
+        },
+        "5.L.3.b": {
+          "description": ""
+        },
+        "5.L.4": {
+          "description": ""
+        },
+        "5.L.4.a": {
+          "description": ""
+        },
+        "5.L.4.b": {
+          "description": ""
+        },
+        "5.L.4.c": {
+          "description": ""
+        },
+        "5.L.5": {
+          "description": ""
+        },
+        "5.L.5.a": {
+          "description": ""
+        },
+        "5.L.5.b": {
+          "description": ""
+        },
+        "5.L.5.c": {
+          "description": ""
+        },
+        "5.L.6": {
+          "description": ""
+        },
+        "5.MD.1": {
+          "description": ""
+        },
+        "5.MD.2": {
+          "description": ""
+        },
+        "5.MD.3": {
+          "description": ""
+        },
+        "5.MD.3.a": {
+          "description": ""
+        },
+        "5.MD.3.b": {
+          "description": ""
+        },
+        "5.MD.4": {
+          "description": ""
+        },
+        "5.MD.5": {
+          "description": ""
+        },
+        "5.MD.5.a": {
+          "description": ""
+        },
+        "5.MD.5.b": {
+          "description": ""
+        },
+        "5.MD.5.c": {
+          "description": ""
+        },
+        "5.NBT.1": {
+          "description": ""
+        },
+        "5.NBT.2": {
+          "description": ""
+        },
+        "5.NBT.3": {
+          "description": ""
+        },
+        "5.NBT.3.a": {
+          "description": ""
+        },
+        "5.NBT.3.b": {
+          "description": ""
+        },
+        "5.NBT.4": {
+          "description": ""
+        },
+        "5.NBT.5": {
+          "description": ""
+        },
+        "5.NBT.6": {
+          "description": ""
+        },
+        "5.NBT.7": {
+          "description": ""
+        },
+        "5.NF.1": {
+          "description": ""
+        },
+        "5.NF.2": {
+          "description": ""
+        },
+        "5.NF.3": {
+          "description": ""
+        },
+        "5.NF.4": {
+          "description": ""
+        },
+        "5.NF.4.a": {
+          "description": ""
+        },
+        "5.NF.4.b": {
+          "description": ""
+        },
+        "5.NF.5": {
+          "description": ""
+        },
+        "5.NF.5.a": {
+          "description": ""
+        },
+        "5.NF.5.b": {
+          "description": ""
+        },
+        "5.NF.6": {
+          "description": ""
+        },
+        "5.NF.7": {
+          "description": ""
+        },
+        "5.NF.7.a": {
+          "description": ""
+        },
+        "5.NF.7.b": {
+          "description": ""
+        },
+        "5.NF.7.c": {
+          "description": ""
+        },
+        "5.OA.1": {
+          "description": ""
+        },
+        "5.OA.2": {
+          "description": ""
+        },
+        "5.OA.3": {
+          "description": ""
+        },
+        "5.RF.3": {
+          "description": ""
+        },
+        "5.RF.3.a": {
+          "description": ""
+        },
+        "5.RF.4": {
+          "description": ""
+        },
+        "5.RF.4.a": {
+          "description": ""
+        },
+        "5.RF.4.b": {
+          "description": ""
+        },
+        "5.RF.4.c": {
+          "description": ""
+        },
+        "5.RI.1": {
+          "description": ""
+        },
+        "5.RI.10": {
+          "description": ""
+        },
+        "5.RI.2": {
+          "description": ""
+        },
+        "5.RI.3": {
+          "description": ""
+        },
+        "5.RI.4": {
+          "description": ""
+        },
+        "5.RI.5": {
+          "description": ""
+        },
+        "5.RI.6": {
+          "description": ""
+        },
+        "5.RI.7": {
+          "description": ""
+        },
+        "5.RI.8": {
+          "description": ""
+        },
+        "5.RI.9": {
+          "description": ""
+        },
+        "5.RL.1": {
+          "description": ""
+        },
+        "5.RL.10": {
+          "description": ""
+        },
+        "5.RL.2": {
+          "description": ""
+        },
+        "5.RL.3": {
+          "description": ""
+        },
+        "5.RL.4": {
+          "description": ""
+        },
+        "5.RL.5": {
+          "description": ""
+        },
+        "5.RL.6": {
+          "description": ""
+        },
+        "5.RL.7": {
+          "description": ""
+        },
+        "5.RL.8": {
+          "description": ""
+        },
+        "5.RL.9": {
+          "description": ""
+        },
+        "5.SL.1": {
+          "description": ""
+        },
+        "5.SL.1.a": {
+          "description": ""
+        },
+        "5.SL.1.b": {
+          "description": ""
+        },
+        "5.SL.1.c": {
+          "description": ""
+        },
+        "5.SL.1.d": {
+          "description": ""
+        },
+        "5.SL.2": {
+          "description": ""
+        },
+        "5.SL.3": {
+          "description": ""
+        },
+        "5.SL.4": {
+          "description": ""
+        },
+        "5.SL.5": {
+          "description": ""
+        },
+        "5.SL.6": {
+          "description": ""
+        },
+        "5.W.1": {
+          "description": ""
+        },
+        "5.W.1.a": {
+          "description": ""
+        },
+        "5.W.1.b": {
+          "description": ""
+        },
+        "5.W.1.c": {
+          "description": ""
+        },
+        "5.W.1.d": {
+          "description": ""
+        },
+        "5.W.10": {
+          "description": ""
+        },
+        "5.W.2": {
+          "description": ""
+        },
+        "5.W.2.a": {
+          "description": ""
+        },
+        "5.W.2.b": {
+          "description": ""
+        },
+        "5.W.2.c": {
+          "description": ""
+        },
+        "5.W.2.d": {
+          "description": ""
+        },
+        "5.W.2.e": {
+          "description": ""
+        },
+        "5.W.3": {
+          "description": ""
+        },
+        "5.W.3.a": {
+          "description": ""
+        },
+        "5.W.3.b": {
+          "description": ""
+        },
+        "5.W.3.c": {
+          "description": ""
+        },
+        "5.W.3.d": {
+          "description": ""
+        },
+        "5.W.3.e": {
+          "description": ""
+        },
+        "5.W.4": {
+          "description": ""
+        },
+        "5.W.5": {
+          "description": ""
+        },
+        "5.W.6": {
+          "description": ""
+        },
+        "5.W.7": {
+          "description": ""
+        },
+        "5.W.8": {
+          "description": ""
+        },
+        "5.W.9": {
+          "description": ""
+        },
+        "5.W.9.a": {
+          "description": ""
+        },
+        "5.W.9.b": {
+          "description": ""
+        },
+        "5.a": {
+          "description": ""
+        },
+        "5.b": {
+          "description": ""
+        },
+        "5.c": {
+          "description": ""
+        },
+        "5.d": {
+          "description": ""
+        },
+        "6-8.RH.1": {
+          "description": ""
+        },
+        "6-8.RH.10": {
+          "description": ""
+        },
+        "6-8.RH.2": {
+          "description": ""
+        },
+        "6-8.RH.3": {
+          "description": ""
+        },
+        "6-8.RH.4": {
+          "description": ""
+        },
+        "6-8.RH.5": {
+          "description": ""
+        },
+        "6-8.RH.6": {
+          "description": ""
+        },
+        "6-8.RH.7": {
+          "description": ""
+        },
+        "6-8.RH.8": {
+          "description": ""
+        },
+        "6-8.RH.9": {
+          "description": ""
+        },
+        "6-8.RST.1": {
+          "description": ""
+        },
+        "6-8.RST.10": {
+          "description": ""
+        },
+        "6-8.RST.2": {
+          "description": ""
+        },
+        "6-8.RST.3": {
+          "description": ""
+        },
+        "6-8.RST.4": {
+          "description": ""
+        },
+        "6-8.RST.5": {
+          "description": ""
+        },
+        "6-8.RST.6": {
+          "description": ""
+        },
+        "6-8.RST.7": {
+          "description": ""
+        },
+        "6-8.RST.8": {
+          "description": ""
+        },
+        "6-8.RST.9": {
+          "description": ""
+        },
+        "6-8.WHST.1": {
+          "description": ""
+        },
+        "6-8.WHST.1.a": {
+          "description": ""
+        },
+        "6-8.WHST.1.b": {
+          "description": ""
+        },
+        "6-8.WHST.1.c": {
+          "description": ""
+        },
+        "6-8.WHST.1.d": {
+          "description": ""
+        },
+        "6-8.WHST.1.e": {
+          "description": ""
+        },
+        "6-8.WHST.10": {
+          "description": ""
+        },
+        "6-8.WHST.2": {
+          "description": ""
+        },
+        "6-8.WHST.2.a": {
+          "description": ""
+        },
+        "6-8.WHST.2.b": {
+          "description": ""
+        },
+        "6-8.WHST.2.c": {
+          "description": ""
+        },
+        "6-8.WHST.2.d": {
+          "description": ""
+        },
+        "6-8.WHST.2.e": {
+          "description": ""
+        },
+        "6-8.WHST.2.f": {
+          "description": ""
+        },
+        "6-8.WHST.3": {
+          "description": ""
+        },
+        "6-8.WHST.4": {
+          "description": ""
+        },
+        "6-8.WHST.5": {
+          "description": ""
+        },
+        "6-8.WHST.6": {
+          "description": ""
+        },
+        "6-8.WHST.7": {
+          "description": ""
+        },
+        "6-8.WHST.8": {
+          "description": ""
+        },
+        "6-8.WHST.9": {
+          "description": ""
+        },
+        "6.EE.1": {
+          "description": ""
+        },
+        "6.EE.2": {
+          "description": ""
+        },
+        "6.EE.2.a": {
+          "description": ""
+        },
+        "6.EE.2.b": {
+          "description": ""
+        },
+        "6.EE.2.c": {
+          "description": ""
+        },
+        "6.EE.3": {
+          "description": ""
+        },
+        "6.EE.4": {
+          "description": ""
+        },
+        "6.EE.5": {
+          "description": ""
+        },
+        "6.EE.6": {
+          "description": ""
+        },
+        "6.EE.7": {
+          "description": ""
+        },
+        "6.EE.8": {
+          "description": ""
+        },
+        "6.EE.9": {
+          "description": ""
+        },
+        "6.G.1": {
+          "description": ""
+        },
+        "6.G.2": {
+          "description": ""
+        },
+        "6.G.3": {
+          "description": ""
+        },
+        "6.G.4": {
+          "description": ""
+        },
+        "6.L.1": {
+          "description": ""
+        },
+        "6.L.2": {
+          "description": ""
+        },
+        "6.L.3": {
+          "description": ""
+        },
+        "6.L.4": {
+          "description": ""
+        },
+        "6.L.5": {
+          "description": ""
+        },
+        "6.L.6": {
+          "description": ""
+        },
+        "6.NS.1": {
+          "description": ""
+        },
+        "6.NS.2": {
+          "description": ""
+        },
+        "6.NS.3": {
+          "description": ""
+        },
+        "6.NS.4": {
+          "description": ""
+        },
+        "6.NS.5": {
+          "description": ""
+        },
+        "6.NS.6": {
+          "description": ""
+        },
+        "6.NS.6.a": {
+          "description": ""
+        },
+        "6.NS.6.b": {
+          "description": ""
+        },
+        "6.NS.6.c": {
+          "description": ""
+        },
+        "6.NS.7": {
+          "description": ""
+        },
+        "6.NS.7.a": {
+          "description": ""
+        },
+        "6.NS.7.b": {
+          "description": ""
+        },
+        "6.NS.7.c": {
+          "description": ""
+        },
+        "6.NS.7.d": {
+          "description": ""
+        },
+        "6.NS.8": {
+          "description": ""
+        },
+        "6.RI.1": {
+          "description": ""
+        },
+        "6.RI.10": {
+          "description": ""
+        },
+        "6.RI.2": {
+          "description": ""
+        },
+        "6.RI.3": {
+          "description": ""
+        },
+        "6.RI.4": {
+          "description": ""
+        },
+        "6.RI.5": {
+          "description": ""
+        },
+        "6.RI.6": {
+          "description": ""
+        },
+        "6.RI.7": {
+          "description": ""
+        },
+        "6.RI.8": {
+          "description": ""
+        },
+        "6.RI.9": {
+          "description": ""
+        },
+        "6.RL.1": {
+          "description": ""
+        },
+        "6.RL.10": {
+          "description": ""
+        },
+        "6.RL.2": {
+          "description": ""
+        },
+        "6.RL.3": {
+          "description": ""
+        },
+        "6.RL.4": {
+          "description": ""
+        },
+        "6.RL.5": {
+          "description": ""
+        },
+        "6.RL.6": {
+          "description": ""
+        },
+        "6.RL.7": {
+          "description": ""
+        },
+        "6.RL.8": {
+          "description": ""
+        },
+        "6.RL.9": {
+          "description": ""
+        },
+        "6.RP.1": {
+          "description": ""
+        },
+        "6.RP.2": {
+          "description": ""
+        },
+        "6.RP.3": {
+          "description": ""
+        },
+        "6.RP.3.a": {
+          "description": ""
+        },
+        "6.RP.3.b": {
+          "description": ""
+        },
+        "6.RP.3.c": {
+          "description": ""
+        },
+        "6.RP.3.d": {
+          "description": ""
+        },
+        "6.SL.1": {
+          "description": ""
+        },
+        "6.SL.1.a": {
+          "description": ""
+        },
+        "6.SL.1.b": {
+          "description": ""
+        },
+        "6.SL.1.c": {
+          "description": ""
+        },
+        "6.SL.1.d": {
+          "description": ""
+        },
+        "6.SL.2": {
+          "description": ""
+        },
+        "6.SL.3": {
+          "description": ""
+        },
+        "6.SL.4": {
+          "description": ""
+        },
+        "6.SL.5": {
+          "description": ""
+        },
+        "6.SL.6": {
+          "description": ""
+        },
+        "6.SP.1": {
+          "description": ""
+        },
+        "6.SP.2": {
+          "description": ""
+        },
+        "6.SP.3": {
+          "description": ""
+        },
+        "6.SP.4": {
+          "description": ""
+        },
+        "6.SP.5": {
+          "description": ""
+        },
+        "6.SP.5.a": {
+          "description": ""
+        },
+        "6.SP.5.b": {
+          "description": ""
+        },
+        "6.SP.5.c": {
+          "description": ""
+        },
+        "6.SP.5.d": {
+          "description": ""
+        },
+        "6.W.1": {
+          "description": ""
+        },
+        "6.W.1.a": {
+          "description": ""
+        },
+        "6.W.1.b": {
+          "description": ""
+        },
+        "6.W.1.c": {
+          "description": ""
+        },
+        "6.W.1.d": {
+          "description": ""
+        },
+        "6.W.1.e": {
+          "description": ""
+        },
+        "6.W.10": {
+          "description": ""
+        },
+        "6.W.2": {
+          "description": ""
+        },
+        "6.W.2.a": {
+          "description": ""
+        },
+        "6.W.2.b": {
+          "description": ""
+        },
+        "6.W.2.c": {
+          "description": ""
+        },
+        "6.W.2.d": {
+          "description": ""
+        },
+        "6.W.2.e": {
+          "description": ""
+        },
+        "6.W.2.f": {
+          "description": ""
+        },
+        "6.W.3": {
+          "description": ""
+        },
+        "6.W.3.a": {
+          "description": ""
+        },
+        "6.W.3.b": {
+          "description": ""
+        },
+        "6.W.3.c": {
+          "description": ""
+        },
+        "6.W.3.d": {
+          "description": ""
+        },
+        "6.W.3.e": {
+          "description": ""
+        },
+        "6.W.4": {
+          "description": ""
+        },
+        "6.W.5": {
+          "description": ""
+        },
+        "6.W.6": {
+          "description": ""
+        },
+        "6.W.7": {
+          "description": ""
+        },
+        "6.W.8": {
+          "description": ""
+        },
+        "6.W.9": {
+          "description": ""
+        },
+        "6.W.9.a": {
+          "description": ""
+        },
+        "6.W.9.b": {
+          "description": ""
+        },
+        "6.a": {
+          "description": ""
+        },
+        "6.b": {
+          "description": ""
+        },
+        "6.c": {
+          "description": ""
+        },
+        "6.d": {
+          "description": ""
+        },
+        "7.EE.1": {
+          "description": ""
+        },
+        "7.EE.2": {
+          "description": ""
+        },
+        "7.EE.3": {
+          "description": ""
+        },
+        "7.EE.4": {
+          "description": ""
+        },
+        "7.EE.4.a": {
+          "description": ""
+        },
+        "7.EE.4.b": {
+          "description": ""
+        },
+        "7.G.1": {
+          "description": ""
+        },
+        "7.G.2": {
+          "description": ""
+        },
+        "7.G.3": {
+          "description": ""
+        },
+        "7.G.4": {
+          "description": ""
+        },
+        "7.G.5": {
+          "description": ""
+        },
+        "7.G.6": {
+          "description": ""
+        },
+        "7.L.1": {
+          "description": ""
+        },
+        "7.L.1.a": {
+          "description": ""
+        },
+        "7.L.1.b": {
+          "description": ""
+        },
+        "7.L.1.c": {
+          "description": ""
+        },
+        "7.L.2": {
+          "description": ""
+        },
+        "7.L.2.a": {
+          "description": ""
+        },
+        "7.L.2.b": {
+          "description": ""
+        },
+        "7.L.3": {
+          "description": ""
+        },
+        "7.L.3.a": {
+          "description": ""
+        },
+        "7.L.4": {
+          "description": ""
+        },
+        "7.L.4.a": {
+          "description": ""
+        },
+        "7.L.4.b": {
+          "description": ""
+        },
+        "7.L.4.c": {
+          "description": ""
+        },
+        "7.L.4.d": {
+          "description": ""
+        },
+        "7.L.5": {
+          "description": ""
+        },
+        "7.L.5.a": {
+          "description": ""
+        },
+        "7.L.5.b": {
+          "description": ""
+        },
+        "7.L.5.c": {
+          "description": ""
+        },
+        "7.L.6": {
+          "description": ""
+        },
+        "7.NS.1": {
+          "description": ""
+        },
+        "7.NS.1.a": {
+          "description": ""
+        },
+        "7.NS.1.b": {
+          "description": ""
+        },
+        "7.NS.1.c": {
+          "description": ""
+        },
+        "7.NS.1.d": {
+          "description": ""
+        },
+        "7.NS.2": {
+          "description": ""
+        },
+        "7.NS.2.a": {
+          "description": ""
+        },
+        "7.NS.2.b": {
+          "description": ""
+        },
+        "7.NS.2.c": {
+          "description": ""
+        },
+        "7.NS.2.d": {
+          "description": ""
+        },
+        "7.NS.3": {
+          "description": ""
+        },
+        "7.RI.1": {
+          "description": ""
+        },
+        "7.RI.10": {
+          "description": ""
+        },
+        "7.RI.2": {
+          "description": ""
+        },
+        "7.RI.3": {
+          "description": ""
+        },
+        "7.RI.4": {
+          "description": ""
+        },
+        "7.RI.5": {
+          "description": ""
+        },
+        "7.RI.6": {
+          "description": ""
+        },
+        "7.RI.7": {
+          "description": ""
+        },
+        "7.RI.8": {
+          "description": ""
+        },
+        "7.RI.9": {
+          "description": ""
+        },
+        "7.RL.1": {
+          "description": ""
+        },
+        "7.RL.10": {
+          "description": ""
+        },
+        "7.RL.2": {
+          "description": ""
+        },
+        "7.RL.3": {
+          "description": ""
+        },
+        "7.RL.4": {
+          "description": ""
+        },
+        "7.RL.5": {
+          "description": ""
+        },
+        "7.RL.6": {
+          "description": ""
+        },
+        "7.RL.7": {
+          "description": ""
+        },
+        "7.RL.8": {
+          "description": ""
+        },
+        "7.RL.9": {
+          "description": ""
+        },
+        "7.RP.1": {
+          "description": ""
+        },
+        "7.RP.2": {
+          "description": ""
+        },
+        "7.RP.2.a": {
+          "description": ""
+        },
+        "7.RP.2.b": {
+          "description": ""
+        },
+        "7.RP.2.c": {
+          "description": ""
+        },
+        "7.RP.2.d": {
+          "description": ""
+        },
+        "7.RP.3": {
+          "description": ""
+        },
+        "7.SL.1": {
+          "description": ""
+        },
+        "7.SL.1.a": {
+          "description": ""
+        },
+        "7.SL.1.b": {
+          "description": ""
+        },
+        "7.SL.1.c": {
+          "description": ""
+        },
+        "7.SL.1.d": {
+          "description": ""
+        },
+        "7.SL.2": {
+          "description": ""
+        },
+        "7.SL.3": {
+          "description": ""
+        },
+        "7.SL.4": {
+          "description": ""
+        },
+        "7.SL.5": {
+          "description": ""
+        },
+        "7.SL.6": {
+          "description": ""
+        },
+        "7.SP.1": {
+          "description": ""
+        },
+        "7.SP.2": {
+          "description": ""
+        },
+        "7.SP.3": {
+          "description": ""
+        },
+        "7.SP.4": {
+          "description": ""
+        },
+        "7.SP.5": {
+          "description": ""
+        },
+        "7.SP.6": {
+          "description": ""
+        },
+        "7.SP.7": {
+          "description": ""
+        },
+        "7.SP.7.a": {
+          "description": ""
+        },
+        "7.SP.7.b": {
+          "description": ""
+        },
+        "7.SP.8": {
+          "description": ""
+        },
+        "7.SP.8.a": {
+          "description": ""
+        },
+        "7.SP.8.b": {
+          "description": ""
+        },
+        "7.SP.8.c": {
+          "description": ""
+        },
+        "7.W.1": {
+          "description": ""
+        },
+        "7.W.1.a": {
+          "description": ""
+        },
+        "7.W.1.b": {
+          "description": ""
+        },
+        "7.W.1.c": {
+          "description": ""
+        },
+        "7.W.1.d": {
+          "description": ""
+        },
+        "7.W.1.e": {
+          "description": ""
+        },
+        "7.W.10": {
+          "description": ""
+        },
+        "7.W.2": {
+          "description": ""
+        },
+        "7.W.2.a": {
+          "description": ""
+        },
+        "7.W.2.b": {
+          "description": ""
+        },
+        "7.W.2.c": {
+          "description": ""
+        },
+        "7.W.2.d": {
+          "description": ""
+        },
+        "7.W.2.e": {
+          "description": ""
+        },
+        "7.W.2.f": {
+          "description": ""
+        },
+        "7.W.3": {
+          "description": ""
+        },
+        "7.W.3.a": {
+          "description": ""
+        },
+        "7.W.3.b": {
+          "description": ""
+        },
+        "7.W.3.c": {
+          "description": ""
+        },
+        "7.W.3.d": {
+          "description": ""
+        },
+        "7.W.3.e": {
+          "description": ""
+        },
+        "7.W.4": {
+          "description": ""
+        },
+        "7.W.5": {
+          "description": ""
+        },
+        "7.W.6": {
+          "description": ""
+        },
+        "7.W.7": {
+          "description": ""
+        },
+        "7.W.8": {
+          "description": ""
+        },
+        "7.W.9": {
+          "description": ""
+        },
+        "7.W.9.a": {
+          "description": ""
+        },
+        "7.W.9.b": {
+          "description": ""
+        },
+        "8.EE.1": {
+          "description": ""
+        },
+        "8.EE.2": {
+          "description": ""
+        },
+        "8.EE.3": {
+          "description": ""
+        },
+        "8.EE.4": {
+          "description": ""
+        },
+        "8.EE.5": {
+          "description": ""
+        },
+        "8.EE.6": {
+          "description": ""
+        },
+        "8.EE.7": {
+          "description": ""
+        },
+        "8.EE.7.a": {
+          "description": ""
+        },
+        "8.EE.7.b": {
+          "description": ""
+        },
+        "8.EE.8": {
+          "description": ""
+        },
+        "8.EE.8.a": {
+          "description": ""
+        },
+        "8.EE.8.b": {
+          "description": ""
+        },
+        "8.EE.8.c": {
+          "description": ""
+        },
+        "8.F.1": {
+          "description": ""
+        },
+        "8.F.2": {
+          "description": ""
+        },
+        "8.F.3": {
+          "description": ""
+        },
+        "8.F.4": {
+          "description": ""
+        },
+        "8.F.5": {
+          "description": ""
+        },
+        "8.G.1": {
+          "description": ""
+        },
+        "8.G.1.a": {
+          "description": ""
+        },
+        "8.G.1.b": {
+          "description": ""
+        },
+        "8.G.1.c": {
+          "description": ""
+        },
+        "8.G.2": {
+          "description": ""
+        },
+        "8.G.3": {
+          "description": ""
+        },
+        "8.G.4": {
+          "description": ""
+        },
+        "8.G.5": {
+          "description": ""
+        },
+        "8.G.6": {
+          "description": ""
+        },
+        "8.G.7": {
+          "description": ""
+        },
+        "8.G.8": {
+          "description": ""
+        },
+        "8.G.9": {
+          "description": ""
+        },
+        "8.L.1": {
+          "description": ""
+        },
+        "8.L.1.a": {
+          "description": ""
+        },
+        "8.L.1.b": {
+          "description": ""
+        },
+        "8.L.1.c": {
+          "description": ""
+        },
+        "8.L.1.d": {
+          "description": ""
+        },
+        "8.L.2": {
+          "description": ""
+        },
+        "8.L.2.a": {
+          "description": ""
+        },
+        "8.L.2.b": {
+          "description": ""
+        },
+        "8.L.2.c": {
+          "description": ""
+        },
+        "8.L.3": {
+          "description": ""
+        },
+        "8.L.3.a": {
+          "description": ""
+        },
+        "8.L.4": {
+          "description": ""
+        },
+        "8.L.4.a": {
+          "description": ""
+        },
+        "8.L.4.b": {
+          "description": ""
+        },
+        "8.L.4.c": {
+          "description": ""
+        },
+        "8.L.4.d": {
+          "description": ""
+        },
+        "8.L.5": {
+          "description": ""
+        },
+        "8.L.5.a": {
+          "description": ""
+        },
+        "8.L.5.b": {
+          "description": ""
+        },
+        "8.L.5.c": {
+          "description": ""
+        },
+        "8.L.6": {
+          "description": ""
+        },
+        "8.NS.1": {
+          "description": ""
+        },
+        "8.NS.2": {
+          "description": ""
+        },
+        "8.RI.1": {
+          "description": ""
+        },
+        "8.RI.10": {
+          "description": ""
+        },
+        "8.RI.2": {
+          "description": ""
+        },
+        "8.RI.3": {
+          "description": ""
+        },
+        "8.RI.4": {
+          "description": ""
+        },
+        "8.RI.5": {
+          "description": ""
+        },
+        "8.RI.6": {
+          "description": ""
+        },
+        "8.RI.7": {
+          "description": ""
+        },
+        "8.RI.8": {
+          "description": ""
+        },
+        "8.RI.9": {
+          "description": ""
+        },
+        "8.RL.1": {
+          "description": ""
+        },
+        "8.RL.10": {
+          "description": ""
+        },
+        "8.RL.2": {
+          "description": ""
+        },
+        "8.RL.3": {
+          "description": ""
+        },
+        "8.RL.4": {
+          "description": ""
+        },
+        "8.RL.5": {
+          "description": ""
+        },
+        "8.RL.6": {
+          "description": ""
+        },
+        "8.RL.7": {
+          "description": ""
+        },
+        "8.RL.8": {
+          "description": ""
+        },
+        "8.RL.9": {
+          "description": ""
+        },
+        "8.SL.1": {
+          "description": ""
+        },
+        "8.SL.1.a": {
+          "description": ""
+        },
+        "8.SL.1.b": {
+          "description": ""
+        },
+        "8.SL.1.c": {
+          "description": ""
+        },
+        "8.SL.1.d": {
+          "description": ""
+        },
+        "8.SL.2": {
+          "description": ""
+        },
+        "8.SL.3": {
+          "description": ""
+        },
+        "8.SL.4": {
+          "description": ""
+        },
+        "8.SL.5": {
+          "description": ""
+        },
+        "8.SL.6": {
+          "description": ""
+        },
+        "8.SP.1": {
+          "description": ""
+        },
+        "8.SP.2": {
+          "description": ""
+        },
+        "8.SP.3": {
+          "description": ""
+        },
+        "8.SP.4": {
+          "description": ""
+        },
+        "8.W.1": {
+          "description": ""
+        },
+        "8.W.1.a": {
+          "description": ""
+        },
+        "8.W.1.b": {
+          "description": ""
+        },
+        "8.W.1.c": {
+          "description": ""
+        },
+        "8.W.1.d": {
+          "description": ""
+        },
+        "8.W.1.e": {
+          "description": ""
+        },
+        "8.W.10": {
+          "description": ""
+        },
+        "8.W.2": {
+          "description": ""
+        },
+        "8.W.2.a": {
+          "description": ""
+        },
+        "8.W.2.b": {
+          "description": ""
+        },
+        "8.W.2.c": {
+          "description": ""
+        },
+        "8.W.2.d": {
+          "description": ""
+        },
+        "8.W.2.e": {
+          "description": ""
+        },
+        "8.W.2.f": {
+          "description": ""
+        },
+        "8.W.3": {
+          "description": ""
+        },
+        "8.W.3.a": {
+          "description": ""
+        },
+        "8.W.3.b": {
+          "description": ""
+        },
+        "8.W.3.c": {
+          "description": ""
+        },
+        "8.W.3.d": {
+          "description": ""
+        },
+        "8.W.3.e": {
+          "description": ""
+        },
+        "8.W.4": {
+          "description": ""
+        },
+        "8.W.5": {
+          "description": ""
+        },
+        "8.W.6": {
+          "description": ""
+        },
+        "8.W.7": {
+          "description": ""
+        },
+        "8.W.8": {
+          "description": ""
+        },
+        "8.W.9": {
+          "description": ""
+        },
+        "8.W.9.a": {
+          "description": ""
+        },
+        "8.W.9.b": {
+          "description": ""
+        },
+        "9-10.L.1": {
+          "description": ""
+        },
+        "9-10.L.1.a": {
+          "description": ""
+        },
+        "9-10.L.1.b": {
+          "description": ""
+        },
+        "9-10.L.2": {
+          "description": ""
+        },
+        "9-10.L.2.a": {
+          "description": ""
+        },
+        "9-10.L.2.b": {
+          "description": ""
+        },
+        "9-10.L.2.c": {
+          "description": ""
+        },
+        "9-10.L.3": {
+          "description": ""
+        },
+        "9-10.L.3.a": {
+          "description": ""
+        },
+        "9-10.L.4": {
+          "description": ""
+        },
+        "9-10.L.4.a": {
+          "description": ""
+        },
+        "9-10.L.4.b": {
+          "description": ""
+        },
+        "9-10.L.4.c": {
+          "description": ""
+        },
+        "9-10.L.4.d": {
+          "description": ""
+        },
+        "9-10.L.5": {
+          "description": ""
+        },
+        "9-10.L.5.a": {
+          "description": ""
+        },
+        "9-10.L.5.b": {
+          "description": ""
+        },
+        "9-10.L.6": {
+          "description": ""
+        },
+        "9-10.RH.1": {
+          "description": ""
+        },
+        "9-10.RH.10": {
+          "description": ""
+        },
+        "9-10.RH.2": {
+          "description": ""
+        },
+        "9-10.RH.3": {
+          "description": ""
+        },
+        "9-10.RH.4": {
+          "description": ""
+        },
+        "9-10.RH.5": {
+          "description": ""
+        },
+        "9-10.RH.6": {
+          "description": ""
+        },
+        "9-10.RH.7": {
+          "description": ""
+        },
+        "9-10.RH.8": {
+          "description": ""
+        },
+        "9-10.RH.9": {
+          "description": ""
+        },
+        "9-10.RI.1": {
+          "description": ""
+        },
+        "9-10.RI.10": {
+          "description": ""
+        },
+        "9-10.RI.2": {
+          "description": ""
+        },
+        "9-10.RI.3": {
+          "description": ""
+        },
+        "9-10.RI.4": {
+          "description": ""
+        },
+        "9-10.RI.5": {
+          "description": ""
+        },
+        "9-10.RI.6": {
+          "description": ""
+        },
+        "9-10.RI.7": {
+          "description": ""
+        },
+        "9-10.RI.8": {
+          "description": ""
+        },
+        "9-10.RI.9": {
+          "description": ""
+        },
+        "9-10.RL.1": {
+          "description": ""
+        },
+        "9-10.RL.10": {
+          "description": ""
+        },
+        "9-10.RL.2": {
+          "description": ""
+        },
+        "9-10.RL.3": {
+          "description": ""
+        },
+        "9-10.RL.4": {
+          "description": ""
+        },
+        "9-10.RL.5": {
+          "description": ""
+        },
+        "9-10.RL.6": {
+          "description": ""
+        },
+        "9-10.RL.7": {
+          "description": ""
+        },
+        "9-10.RL.8": {
+          "description": ""
+        },
+        "9-10.RL.9": {
+          "description": ""
+        },
+        "9-10.RST.1": {
+          "description": ""
+        },
+        "9-10.RST.10": {
+          "description": ""
+        },
+        "9-10.RST.2": {
+          "description": ""
+        },
+        "9-10.RST.3": {
+          "description": ""
+        },
+        "9-10.RST.4": {
+          "description": ""
+        },
+        "9-10.RST.5": {
+          "description": ""
+        },
+        "9-10.RST.6": {
+          "description": ""
+        },
+        "9-10.RST.7": {
+          "description": ""
+        },
+        "9-10.RST.8": {
+          "description": ""
+        },
+        "9-10.RST.9": {
+          "description": ""
+        },
+        "9-10.SL.1": {
+          "description": ""
+        },
+        "9-10.SL.1.a": {
+          "description": ""
+        },
+        "9-10.SL.1.b": {
+          "description": ""
+        },
+        "9-10.SL.1.c": {
+          "description": ""
+        },
+        "9-10.SL.1.d": {
+          "description": ""
+        },
+        "9-10.SL.2": {
+          "description": ""
+        },
+        "9-10.SL.3": {
+          "description": ""
+        },
+        "9-10.SL.4": {
+          "description": ""
+        },
+        "9-10.SL.5": {
+          "description": ""
+        },
+        "9-10.SL.6": {
+          "description": ""
+        },
+        "9-10.W.1": {
+          "description": ""
+        },
+        "9-10.W.1.a": {
+          "description": ""
+        },
+        "9-10.W.1.b": {
+          "description": ""
+        },
+        "9-10.W.1.c": {
+          "description": ""
+        },
+        "9-10.W.1.d": {
+          "description": ""
+        },
+        "9-10.W.1.e": {
+          "description": ""
+        },
+        "9-10.W.10": {
+          "description": ""
+        },
+        "9-10.W.2": {
+          "description": ""
+        },
+        "9-10.W.2.a": {
+          "description": ""
+        },
+        "9-10.W.2.b": {
+          "description": ""
+        },
+        "9-10.W.2.c": {
+          "description": ""
+        },
+        "9-10.W.2.d": {
+          "description": ""
+        },
+        "9-10.W.2.e": {
+          "description": ""
+        },
+        "9-10.W.2.f": {
+          "description": ""
+        },
+        "9-10.W.3": {
+          "description": ""
+        },
+        "9-10.W.3.a": {
+          "description": ""
+        },
+        "9-10.W.3.b": {
+          "description": ""
+        },
+        "9-10.W.3.c": {
+          "description": ""
+        },
+        "9-10.W.3.d": {
+          "description": ""
+        },
+        "9-10.W.3.e": {
+          "description": ""
+        },
+        "9-10.W.4": {
+          "description": ""
+        },
+        "9-10.W.5": {
+          "description": ""
+        },
+        "9-10.W.6": {
+          "description": ""
+        },
+        "9-10.W.7": {
+          "description": ""
+        },
+        "9-10.W.8": {
+          "description": ""
+        },
+        "9-10.W.9": {
+          "description": ""
+        },
+        "9-10.W.9.a": {
+          "description": ""
+        },
+        "9-10.W.9.b": {
+          "description": ""
+        },
+        "9-10.WHST.1": {
+          "description": ""
+        },
+        "9-10.WHST.1.a": {
+          "description": ""
+        },
+        "9-10.WHST.1.b": {
+          "description": ""
+        },
+        "9-10.WHST.1.c": {
+          "description": ""
+        },
+        "9-10.WHST.1.d": {
+          "description": ""
+        },
+        "9-10.WHST.1.e": {
+          "description": ""
+        },
+        "9-10.WHST.10": {
+          "description": ""
+        },
+        "9-10.WHST.2": {
+          "description": ""
+        },
+        "9-10.WHST.2.a": {
+          "description": ""
+        },
+        "9-10.WHST.2.b": {
+          "description": ""
+        },
+        "9-10.WHST.2.c": {
+          "description": ""
+        },
+        "9-10.WHST.2.d": {
+          "description": ""
+        },
+        "9-10.WHST.2.e": {
+          "description": ""
+        },
+        "9-10.WHST.2.f": {
+          "description": ""
+        },
+        "9-10.WHST.3": {
+          "description": ""
+        },
+        "9-10.WHST.4": {
+          "description": ""
+        },
+        "9-10.WHST.5": {
+          "description": ""
+        },
+        "9-10.WHST.6": {
+          "description": ""
+        },
+        "9-10.WHST.7": {
+          "description": ""
+        },
+        "9-10.WHST.8": {
+          "description": ""
+        },
+        "9-10.WHST.9": {
+          "description": ""
+        },
+        "A.APR.1": {
+          "description": ""
+        },
+        "A.APR.2": {
+          "description": ""
+        },
+        "A.APR.3": {
+          "description": ""
+        },
+        "A.APR.4": {
+          "description": ""
+        },
+        "A.APR.5": {
+          "description": ""
+        },
+        "A.APR.6": {
+          "description": ""
+        },
+        "A.APR.7": {
+          "description": ""
+        },
+        "A.CED.1": {
+          "description": ""
+        },
+        "A.CED.2": {
+          "description": ""
+        },
+        "A.CED.3": {
+          "description": ""
+        },
+        "A.CED.4": {
+          "description": ""
+        },
+        "A.REI.1": {
+          "description": ""
+        },
+        "A.REI.10": {
+          "description": ""
+        },
+        "A.REI.11": {
+          "description": ""
+        },
+        "A.REI.12": {
+          "description": ""
+        },
+        "A.REI.2": {
+          "description": ""
+        },
+        "A.REI.3": {
+          "description": ""
+        },
+        "A.REI.4": {
+          "description": ""
+        },
+        "A.REI.4.a": {
+          "description": ""
+        },
+        "A.REI.4.b": {
+          "description": ""
+        },
+        "A.REI.5": {
+          "description": ""
+        },
+        "A.REI.6": {
+          "description": ""
+        },
+        "A.REI.7": {
+          "description": ""
+        },
+        "A.REI.8": {
+          "description": ""
+        },
+        "A.REI.9": {
+          "description": ""
+        },
+        "A.SSE.1": {
+          "description": ""
+        },
+        "A.SSE.1.a": {
+          "description": ""
+        },
+        "A.SSE.1.b": {
+          "description": ""
+        },
+        "A.SSE.2": {
+          "description": ""
+        },
+        "A.SSE.3": {
+          "description": ""
+        },
+        "A.SSE.3.a": {
+          "description": ""
+        },
+        "A.SSE.3.b": {
+          "description": ""
+        },
+        "A.SSE.3.c": {
+          "description": ""
+        },
+        "A.SSE.4": {
+          "description": ""
+        },
+        "AAP-1.A.1": {
+          "description": ""
+        },
+        "AAP-1.A.2": {
+          "description": ""
+        },
+        "AAP-1.A.3": {
+          "description": ""
+        },
+        "AAP-1.A.4": {
+          "description": ""
+        },
+        "AAP-1.B.1": {
+          "description": ""
+        },
+        "AAP-1.B.2": {
+          "description": ""
+        },
+        "AAP-1.B.3": {
+          "description": ""
+        },
+        "AAP-1.C.1": {
+          "description": ""
+        },
+        "AAP-1.C.2": {
+          "description": ""
+        },
+        "AAP-1.C.3": {
+          "description": ""
+        },
+        "AAP-1.C.4": {
+          "description": ""
+        },
+        "AAP-1.D.1": {
+          "description": ""
+        },
+        "AAP-1.D.2": {
+          "description": ""
+        },
+        "AAP-1.D.3": {
+          "description": ""
+        },
+        "AAP-1.D.4": {
+          "description": ""
+        },
+        "AAP-1.D.5": {
+          "description": ""
+        },
+        "AAP-1.D.6": {
+          "description": ""
+        },
+        "AAP-1.D.7": {
+          "description": ""
+        },
+        "AAP-1.D.8": {
+          "description": ""
+        },
+        "AAP-2.A.1": {
+          "description": ""
+        },
+        "AAP-2.A.2": {
+          "description": ""
+        },
+        "AAP-2.A.3": {
+          "description": ""
+        },
+        "AAP-2.A.4": {
+          "description": ""
+        },
+        "AAP-2.B.1": {
+          "description": ""
+        },
+        "AAP-2.B.2": {
+          "description": ""
+        },
+        "AAP-2.B.3": {
+          "description": ""
+        },
+        "AAP-2.B.4": {
+          "description": ""
+        },
+        "AAP-2.B.5": {
+          "description": ""
+        },
+        "AAP-2.B.6": {
+          "description": ""
+        },
+        "AAP-2.B.7": {
+          "description": ""
+        },
+        "AAP-2.C.1": {
+          "description": ""
+        },
+        "AAP-2.C.2": {
+          "description": ""
+        },
+        "AAP-2.C.3": {
+          "description": ""
+        },
+        "AAP-2.C.4": {
+          "description": ""
+        },
+        "AAP-2.D.1": {
+          "description": ""
+        },
+        "AAP-2.D.2": {
+          "description": ""
+        },
+        "AAP-2.E.1": {
+          "description": ""
+        },
+        "AAP-2.E.2": {
+          "description": ""
+        },
+        "AAP-2.F.1": {
+          "description": ""
+        },
+        "AAP-2.F.2": {
+          "description": ""
+        },
+        "AAP-2.F.3": {
+          "description": ""
+        },
+        "AAP-2.F.4": {
+          "description": ""
+        },
+        "AAP-2.F.5": {
+          "description": ""
+        },
+        "AAP-2.G.1": {
+          "description": ""
+        },
+        "AAP-2.H.1": {
+          "description": ""
+        },
+        "AAP-2.H.2": {
+          "description": ""
+        },
+        "AAP-2.H.3": {
+          "description": ""
+        },
+        "AAP-2.I.1": {
+          "description": ""
+        },
+        "AAP-2.I.2": {
+          "description": ""
+        },
+        "AAP-2.J": {
+          "description": ""
+        },
+        "AAP-2.J.1": {
+          "description": ""
+        },
+        "AAP-2.K.1": {
+          "description": ""
+        },
+        "AAP-2.K.2": {
+          "description": ""
+        },
+        "AAP-2.K.3": {
+          "description": ""
+        },
+        "AAP-2.K.4": {
+          "description": ""
+        },
+        "AAP-2.K.5": {
+          "description": ""
+        },
+        "AAP-2.L.1": {
+          "description": ""
+        },
+        "AAP-2.L.2": {
+          "description": ""
+        },
+        "AAP-2.L.3": {
+          "description": ""
+        },
+        "AAP-2.L.4": {
+          "description": ""
+        },
+        "AAP-2.L.5": {
+          "description": ""
+        },
+        "AAP-2.M.1": {
+          "description": ""
+        },
+        "AAP-2.M.2": {
+          "description": ""
+        },
+        "AAP-2.M.3": {
+          "description": ""
+        },
+        "AAP-2.N.1": {
+          "description": ""
+        },
+        "AAP-2.N.2": {
+          "description": ""
+        },
+        "AAP-2.O.1": {
+          "description": ""
+        },
+        "AAP-2.O.2": {
+          "description": ""
+        },
+        "AAP-2.O.3": {
+          "description": ""
+        },
+        "AAP-2.O.4": {
+          "description": ""
+        },
+        "AAP-2.O.5": {
+          "description": ""
+        },
+        "AAP-2.P.1": {
+          "description": ""
+        },
+        "AAP-2.P.2": {
+          "description": ""
+        },
+        "AAP-2.P.3": {
+          "description": ""
+        },
+        "AAP-3.A.1": {
+          "description": ""
+        },
+        "AAP-3.A.2": {
+          "description": ""
+        },
+        "AAP-3.A.3": {
+          "description": ""
+        },
+        "AAP-3.A.4": {
+          "description": ""
+        },
+        "AAP-3.A.5": {
+          "description": ""
+        },
+        "AAP-3.A.6": {
+          "description": ""
+        },
+        "AAP-3.A.7": {
+          "description": ""
+        },
+        "AAP-3.A.8": {
+          "description": ""
+        },
+        "AAP-3.A.9": {
+          "description": ""
+        },
+        "AAP-3.B.1": {
+          "description": ""
+        },
+        "AAP-3.B.2": {
+          "description": ""
+        },
+        "AAP-3.B.3": {
+          "description": ""
+        },
+        "AAP-3.B.4": {
+          "description": ""
+        },
+        "AAP-3.B.5": {
+          "description": ""
+        },
+        "AAP-3.B.6": {
+          "description": ""
+        },
+        "AAP-3.B.7": {
+          "description": ""
+        },
+        "AAP-3.C.1": {
+          "description": ""
+        },
+        "AAP-3.C.2": {
+          "description": ""
+        },
+        "AAP-3.D.1": {
+          "description": ""
+        },
+        "AAP-3.D.2": {
+          "description": ""
+        },
+        "AAP-3.D.3": {
+          "description": ""
+        },
+        "AAP-3.D.4": {
+          "description": ""
+        },
+        "AAP-3.D.5": {
+          "description": ""
+        },
+        "AAP-3.E.1": {
+          "description": ""
+        },
+        "AAP-3.E.2": {
+          "description": ""
+        },
+        "AAP-3.F.1": {
+          "description": ""
+        },
+        "AAP-3.F.2": {
+          "description": ""
+        },
+        "AAP-3.F.3": {
+          "description": ""
+        },
+        "AAP-3.F.4": {
+          "description": ""
+        },
+        "AAP-3.F.5": {
+          "description": ""
+        },
+        "AAP-3.F.6": {
+          "description": ""
+        },
+        "AAP-3.F.7": {
+          "description": ""
+        },
+        "AAP-3.F.8": {
+          "description": ""
+        },
+        "AAP-4.A.1": {
+          "description": ""
+        },
+        "AAP-4.A.2": {
+          "description": ""
+        },
+        "AAP-4.A.3": {
+          "description": ""
+        },
+        "AAP-4.A.4": {
+          "description": ""
+        },
+        "AAP-4.A.5": {
+          "description": ""
+        },
+        "AAP-4.A.6": {
+          "description": ""
+        },
+        "AAP-4.A.7": {
+          "description": ""
+        },
+        "AAP-4.A.8": {
+          "description": ""
+        },
+        "AAP-4.A.9": {
+          "description": ""
+        },
+        "AAP-4.B.1": {
+          "description": ""
+        },
+        "AAP-4.B.2": {
+          "description": ""
+        },
+        "AAP-4.B.3": {
+          "description": ""
+        },
+        "CD.L1:3-01": {
+          "description": ""
+        },
+        "CD.L1:6-01": {
+          "description": ""
+        },
+        "CD.L1:6-02": {
+          "description": ""
+        },
+        "CD.L1:6-03": {
+          "description": ""
+        },
+        "CD.L1:6-04": {
+          "description": ""
+        },
+        "CD.L1:6-05": {
+          "description": ""
+        },
+        "CD.L1:6-06": {
+          "description": ""
+        },
+        "CD.L2:1": {
+          "description": ""
+        },
+        "CD.L2:2": {
+          "description": ""
+        },
+        "CD.L2:3": {
+          "description": ""
+        },
+        "CD.L2:4": {
+          "description": ""
+        },
+        "CD.L2:5": {
+          "description": ""
+        },
+        "CD.L2:6": {
+          "description": ""
+        },
+        "CD.L2:7": {
+          "description": ""
+        },
+        "CD.L2:8": {
+          "description": ""
+        },
+        "CD.L3A:1": {
+          "description": ""
+        },
+        "CD.L3A:10": {
+          "description": ""
+        },
+        "CD.L3A:2": {
+          "description": ""
+        },
+        "CD.L3A:3": {
+          "description": ""
+        },
+        "CD.L3A:4": {
+          "description": ""
+        },
+        "CD.L3A:5": {
+          "description": ""
+        },
+        "CD.L3A:6": {
+          "description": ""
+        },
+        "CD.L3A:7": {
+          "description": ""
+        },
+        "CD.L3A:8": {
+          "description": ""
+        },
+        "CD.L3A:9": {
+          "description": ""
+        },
+        "CD.L3B:1": {
+          "description": ""
+        },
+        "CD.L3B:2": {
+          "description": ""
+        },
+        "CD.L3B:3": {
+          "description": ""
+        },
+        "CD.L3B:4": {
+          "description": ""
+        },
+        "CD.L3B:5": {
+          "description": ""
+        },
+        "CI.L1:3-01": {
+          "description": ""
+        },
+        "CI.L1:3-02": {
+          "description": ""
+        },
+        "CI.L1:6-01": {
+          "description": ""
+        },
+        "CI.L1:6-02": {
+          "description": ""
+        },
+        "CI.L1:6-03": {
+          "description": ""
+        },
+        "CI.L1:6-04": {
+          "description": ""
+        },
+        "CI.L2:1": {
+          "description": ""
+        },
+        "CI.L2:2": {
+          "description": ""
+        },
+        "CI.L2:3": {
+          "description": ""
+        },
+        "CI.L2:4": {
+          "description": ""
+        },
+        "CI.L2:5": {
+          "description": ""
+        },
+        "CI.L2:6": {
+          "description": ""
+        },
+        "CI.L3A:1": {
+          "description": ""
+        },
+        "CI.L3A:10": {
+          "description": ""
+        },
+        "CI.L3A:11": {
+          "description": ""
+        },
+        "CI.L3A:2": {
+          "description": ""
+        },
+        "CI.L3A:3": {
+          "description": ""
+        },
+        "CI.L3A:4": {
+          "description": ""
+        },
+        "CI.L3A:5": {
+          "description": ""
+        },
+        "CI.L3A:6": {
+          "description": ""
+        },
+        "CI.L3A:7": {
+          "description": ""
+        },
+        "CI.L3A:8": {
+          "description": ""
+        },
+        "CI.L3A:9": {
+          "description": ""
+        },
+        "CI.L3B:1": {
+          "description": ""
+        },
+        "CI.L3B:2": {
+          "description": ""
+        },
+        "CI.L3B:3": {
+          "description": ""
+        },
+        "CI.L3B:4": {
+          "description": ""
+        },
+        "CI.L3B:5": {
+          "description": ""
+        },
+        "CI.L3B:6": {
+          "description": ""
+        },
+        "CI.L3B:7": {
+          "description": ""
+        },
+        "CI.L3B:8": {
+          "description": ""
+        },
+        "CL.L1:3-01": {
+          "description": ""
+        },
+        "CL.L1:3-02": {
+          "description": ""
+        },
+        "CL.L1:6-01": {
+          "description": ""
+        },
+        "CL.L1:6-02": {
+          "description": ""
+        },
+        "CL.L1:6-03": {
+          "description": ""
+        },
+        "CL.L2:1": {
+          "description": ""
+        },
+        "CL.L2:2": {
+          "description": ""
+        },
+        "CL.L2:3": {
+          "description": ""
+        },
+        "CL.L2:4": {
+          "description": ""
+        },
+        "CL.L3A:1": {
+          "description": ""
+        },
+        "CL.L3A:2": {
+          "description": ""
+        },
+        "CL.L3A:3": {
+          "description": ""
+        },
+        "CL.L3A:4": {
+          "description": ""
+        },
+        "CL.L3B:1": {
+          "description": ""
+        },
+        "CL.L3B:2": {
+          "description": ""
+        },
+        "CL.L3B:3": {
+          "description": ""
+        },
+        "CON-1.A.1": {
+          "description": ""
+        },
+        "CON-1.A.2": {
+          "description": ""
+        },
+        "CON-1.A.3": {
+          "description": ""
+        },
+        "CON-1.A.4": {
+          "description": ""
+        },
+        "CON-1.A.5": {
+          "description": ""
+        },
+        "CON-1.A.6": {
+          "description": ""
+        },
+        "CON-1.A.7": {
+          "description": ""
+        },
+        "CON-1.A.8": {
+          "description": ""
+        },
+        "CON-1.B.1": {
+          "description": ""
+        },
+        "CON-1.B.2": {
+          "description": ""
+        },
+        "CON-1.B.3": {
+          "description": ""
+        },
+        "CON-1.B.4": {
+          "description": ""
+        },
+        "CON-1.B.5": {
+          "description": ""
+        },
+        "CON-1.C.1": {
+          "description": ""
+        },
+        "CON-1.C.2": {
+          "description": ""
+        },
+        "CON-1.C.3": {
+          "description": ""
+        },
+        "CON-1.C.4": {
+          "description": ""
+        },
+        "CON-1.C.5": {
+          "description": ""
+        },
+        "CON-1.C.6": {
+          "description": ""
+        },
+        "CON-1.D.1": {
+          "description": ""
+        },
+        "CON-1.D.2": {
+          "description": ""
+        },
+        "CON-1.D.3": {
+          "description": ""
+        },
+        "CON-1.D.4": {
+          "description": ""
+        },
+        "CON-1.E.1": {
+          "description": ""
+        },
+        "CON-1.E.2": {
+          "description": ""
+        },
+        "CON-1.E.3": {
+          "description": ""
+        },
+        "CON-1.F.1": {
+          "description": ""
+        },
+        "CON-1.F.2": {
+          "description": ""
+        },
+        "CON-1.F.3": {
+          "description": ""
+        },
+        "CON-1.G.1": {
+          "description": ""
+        },
+        "CON-1.G.2": {
+          "description": ""
+        },
+        "CON-1.G.3": {
+          "description": ""
+        },
+        "CON-1.H.1": {
+          "description": ""
+        },
+        "CON-1.H.2": {
+          "description": ""
+        },
+        "CON-1.H.3": {
+          "description": ""
+        },
+        "CON-1.H.4": {
+          "description": ""
+        },
+        "CON-2.A.1": {
+          "description": ""
+        },
+        "CON-2.A.2": {
+          "description": ""
+        },
+        "CON-2.A.3": {
+          "description": ""
+        },
+        "CON-2.A.4": {
+          "description": ""
+        },
+        "CON-2.A.5": {
+          "description": ""
+        },
+        "CON-2.B.1": {
+          "description": ""
+        },
+        "CON-2.C.1": {
+          "description": ""
+        },
+        "CON-2.C.2": {
+          "description": ""
+        },
+        "CON-2.C.3": {
+          "description": ""
+        },
+        "CON-2.C.4": {
+          "description": ""
+        },
+        "CON-2.C.5": {
+          "description": ""
+        },
+        "CON-2.D.1": {
+          "description": ""
+        },
+        "CON-2.D.2": {
+          "description": ""
+        },
+        "CON-2.E.1": {
+          "description": ""
+        },
+        "CON-2.E.2": {
+          "description": ""
+        },
+        "CON-2.E.3": {
+          "description": ""
+        },
+        "CON-2.E.4": {
+          "description": ""
+        },
+        "CON-2.E.5": {
+          "description": ""
+        },
+        "CON-2.F.1": {
+          "description": ""
+        },
+        "CON-2.G.1": {
+          "description": ""
+        },
+        "CON-2.G.2": {
+          "description": ""
+        },
+        "CON-2.H.1": {
+          "description": ""
+        },
+        "CON-2.I.1": {
+          "description": ""
+        },
+        "CON-2.I.2": {
+          "description": ""
+        },
+        "CON-2.J.1": {
+          "description": ""
+        },
+        "CON-2.J.2": {
+          "description": ""
+        },
+        "CON-2.K.1": {
+          "description": ""
+        },
+        "CON-2.K.2": {
+          "description": ""
+        },
+        "CON-2.L.1": {
+          "description": ""
+        },
+        "CON-2.M.1": {
+          "description": ""
+        },
+        "CON-2.N.1": {
+          "description": ""
+        },
+        "CON-2.N.2": {
+          "description": ""
+        },
+        "CON-2.O.1": {
+          "description": ""
+        },
+        "CON-2.O.2": {
+          "description": ""
+        },
+        "CON-2.O.3": {
+          "description": ""
+        },
+        "CON-2.O.4": {
+          "description": ""
+        },
+        "CON-2.O.5": {
+          "description": ""
+        },
+        "CON-2.O.6": {
+          "description": ""
+        },
+        "CON-2.P.1": {
+          "description": ""
+        },
+        "CON-2.P.2": {
+          "description": ""
+        },
+        "CON-2.P.3": {
+          "description": ""
+        },
+        "CON-2.P.4": {
+          "description": ""
+        },
+        "CON-2.Q.1": {
+          "description": ""
+        },
+        "CPP.L1:3-01": {
+          "description": ""
+        },
+        "CPP.L1:3-02": {
+          "description": ""
+        },
+        "CPP.L1:3-03": {
+          "description": ""
+        },
+        "CPP.L1:3-04": {
+          "description": ""
+        },
+        "CPP.L1:3-05": {
+          "description": ""
+        },
+        "CPP.L1:3-06": {
+          "description": ""
+        },
+        "CPP.L1:6-01": {
+          "description": ""
+        },
+        "CPP.L1:6-02": {
+          "description": ""
+        },
+        "CPP.L1:6-03": {
+          "description": ""
+        },
+        "CPP.L1:6-04": {
+          "description": ""
+        },
+        "CPP.L1:6-05": {
+          "description": ""
+        },
+        "CPP.L1:6-06": {
+          "description": ""
+        },
+        "CPP.L1:6-07": {
+          "description": ""
+        },
+        "CPP.L1:6-08": {
+          "description": ""
+        },
+        "CPP.L1:6-09": {
+          "description": ""
+        },
+        "CPP.L1:6-10": {
+          "description": ""
+        },
+        "CPP.L2:1": {
+          "description": ""
+        },
+        "CPP.L2:2": {
+          "description": ""
+        },
+        "CPP.L2:3": {
+          "description": ""
+        },
+        "CPP.L2:4": {
+          "description": ""
+        },
+        "CPP.L2:5": {
+          "description": ""
+        },
+        "CPP.L2:6": {
+          "description": ""
+        },
+        "CPP.L2:7": {
+          "description": ""
+        },
+        "CPP.L2:8": {
+          "description": ""
+        },
+        "CPP.L2:9": {
+          "description": ""
+        },
+        "CPP.L3A:1": {
+          "description": ""
+        },
+        "CPP.L3A:10": {
+          "description": ""
+        },
+        "CPP.L3A:11": {
+          "description": ""
+        },
+        "CPP.L3A:12": {
+          "description": ""
+        },
+        "CPP.L3A:2": {
+          "description": ""
+        },
+        "CPP.L3A:3": {
+          "description": ""
+        },
+        "CPP.L3A:4": {
+          "description": ""
+        },
+        "CPP.L3A:5": {
+          "description": ""
+        },
+        "CPP.L3A:6": {
+          "description": ""
+        },
+        "CPP.L3A:7": {
+          "description": ""
+        },
+        "CPP.L3A:8": {
+          "description": ""
+        },
+        "CPP.L3A:9": {
+          "description": ""
+        },
+        "CPP.L3B:1": {
+          "description": ""
+        },
+        "CPP.L3B:2": {
+          "description": ""
+        },
+        "CPP.L3B:3": {
+          "description": ""
+        },
+        "CPP.L3B:4": {
+          "description": ""
+        },
+        "CPP.L3B:5": {
+          "description": ""
+        },
+        "CPP.L3B:6": {
+          "description": ""
+        },
+        "CPP.L3B:7": {
+          "description": ""
+        },
+        "CPP.L3B:8": {
+          "description": ""
+        },
+        "CRD-1.A.1": {
+          "description": ""
+        },
+        "CRD-1.A.2": {
+          "description": ""
+        },
+        "CRD-1.A.3": {
+          "description": ""
+        },
+        "CRD-1.A.4": {
+          "description": ""
+        },
+        "CRD-1.A.5": {
+          "description": ""
+        },
+        "CRD-1.A.6": {
+          "description": ""
+        },
+        "CRD-1.B.1": {
+          "description": ""
+        },
+        "CRD-1.B.2": {
+          "description": ""
+        },
+        "CRD-1.C.1": {
+          "description": ""
+        },
+        "CRD-2.A.1": {
+          "description": ""
+        },
+        "CRD-2.A.2": {
+          "description": ""
+        },
+        "CRD-2.B.1": {
+          "description": ""
+        },
+        "CRD-2.B.2": {
+          "description": ""
+        },
+        "CRD-2.B.3": {
+          "description": ""
+        },
+        "CRD-2.B.4": {
+          "description": ""
+        },
+        "CRD-2.B.5": {
+          "description": ""
+        },
+        "CRD-2.C.1": {
+          "description": ""
+        },
+        "CRD-2.C.2": {
+          "description": ""
+        },
+        "CRD-2.C.3": {
+          "description": ""
+        },
+        "CRD-2.C.4": {
+          "description": ""
+        },
+        "CRD-2.C.5": {
+          "description": ""
+        },
+        "CRD-2.C.6": {
+          "description": ""
+        },
+        "CRD-2.D.1": {
+          "description": ""
+        },
+        "CRD-2.D.2": {
+          "description": ""
+        },
+        "CRD-2.E.1": {
+          "description": ""
+        },
+        "CRD-2.E.2": {
+          "description": ""
+        },
+        "CRD-2.E.3": {
+          "description": ""
+        },
+        "CRD-2.E.4": {
+          "description": ""
+        },
+        "CRD-2.F.1": {
+          "description": ""
+        },
+        "CRD-2.F.2": {
+          "description": ""
+        },
+        "CRD-2.F.3": {
+          "description": ""
+        },
+        "CRD-2.F.4": {
+          "description": ""
+        },
+        "CRD-2.F.5": {
+          "description": ""
+        },
+        "CRD-2.F.6": {
+          "description": ""
+        },
+        "CRD-2.F.7": {
+          "description": ""
+        },
+        "CRD-2.G.1": {
+          "description": ""
+        },
+        "CRD-2.G.2": {
+          "description": ""
+        },
+        "CRD-2.G.3": {
+          "description": ""
+        },
+        "CRD-2.G.4": {
+          "description": ""
+        },
+        "CRD-2.G.5": {
+          "description": ""
+        },
+        "CRD-2.H.1": {
+          "description": ""
+        },
+        "CRD-2.H.2": {
+          "description": ""
+        },
+        "CRD-2.I.1": {
+          "description": ""
+        },
+        "CRD-2.I.2": {
+          "description": ""
+        },
+        "CRD-2.I.3": {
+          "description": ""
+        },
+        "CRD-2.I.4": {
+          "description": ""
+        },
+        "CRD-2.I.5": {
+          "description": ""
+        },
+        "CRD-2.J.1": {
+          "description": ""
+        },
+        "CRD-2.J.2": {
+          "description": ""
+        },
+        "CRD-2.J.3": {
+          "description": ""
+        },
+        "CSN-1.A.1": {
+          "description": ""
+        },
+        "CSN-1.A.2": {
+          "description": ""
+        },
+        "CSN-1.A.3": {
+          "description": ""
+        },
+        "CSN-1.A.4": {
+          "description": ""
+        },
+        "CSN-1.A.5": {
+          "description": ""
+        },
+        "CSN-1.A.6": {
+          "description": ""
+        },
+        "CSN-1.A.7": {
+          "description": ""
+        },
+        "CSN-1.A.8": {
+          "description": ""
+        },
+        "CSN-1.B.1": {
+          "description": ""
+        },
+        "CSN-1.B.2": {
+          "description": ""
+        },
+        "CSN-1.B.3": {
+          "description": ""
+        },
+        "CSN-1.B.4": {
+          "description": ""
+        },
+        "CSN-1.B.5": {
+          "description": ""
+        },
+        "CSN-1.B.6": {
+          "description": ""
+        },
+        "CSN-1.B.7": {
+          "description": ""
+        },
+        "CSN-1.C.1": {
+          "description": ""
+        },
+        "CSN-1.C.2": {
+          "description": ""
+        },
+        "CSN-1.C.3": {
+          "description": ""
+        },
+        "CSN-1.C.4": {
+          "description": ""
+        },
+        "CSN-1.D.1": {
+          "description": ""
+        },
+        "CSN-1.D.2": {
+          "description": ""
+        },
+        "CSN-1.D.3": {
+          "description": ""
+        },
+        "CSN-1.E.1": {
+          "description": ""
+        },
+        "CSN-1.E.2": {
+          "description": ""
+        },
+        "CSN-1.E.3": {
+          "description": ""
+        },
+        "CSN-1.E.4": {
+          "description": ""
+        },
+        "CSN-1.E.5": {
+          "description": ""
+        },
+        "CSN-1.E.6": {
+          "description": ""
+        },
+        "CSN-1.E.7": {
+          "description": ""
+        },
+        "CSN-2.A.1": {
+          "description": ""
+        },
+        "CSN-2.A.2": {
+          "description": ""
+        },
+        "CSN-2.A.3": {
+          "description": ""
+        },
+        "CSN-2.A.4": {
+          "description": ""
+        },
+        "CSN-2.A.5": {
+          "description": ""
+        },
+        "CSN-2.A.6": {
+          "description": ""
+        },
+        "CSN-2.A.7": {
+          "description": ""
+        },
+        "CSN-2.B.1": {
+          "description": ""
+        },
+        "CSN-2.B.2": {
+          "description": ""
+        },
+        "CSN-2.B.3": {
+          "description": ""
+        },
+        "CSN-2.B.4": {
+          "description": ""
+        },
+        "CSN-2.B.5": {
+          "description": ""
+        },
+        "CT.L1:3-01": {
+          "description": ""
+        },
+        "CT.L1:3-02": {
+          "description": ""
+        },
+        "CT.L1:6-01": {
+          "description": ""
+        },
+        "CT.L1:6-02": {
+          "description": ""
+        },
+        "CT.L1:6-03": {
+          "description": ""
+        },
+        "CT.L1:6-04": {
+          "description": ""
+        },
+        "CT.L1:6-05": {
+          "description": ""
+        },
+        "CT.L1:6-06": {
+          "description": ""
+        },
+        "CT.L2:1": {
+          "description": ""
+        },
+        "CT.L2:10": {
+          "description": ""
+        },
+        "CT.L2:11": {
+          "description": ""
+        },
+        "CT.L2:12": {
+          "description": ""
+        },
+        "CT.L2:13": {
+          "description": ""
+        },
+        "CT.L2:14": {
+          "description": ""
+        },
+        "CT.L2:15": {
+          "description": ""
+        },
+        "CT.L2:2": {
+          "description": ""
+        },
+        "CT.L2:3": {
+          "description": ""
+        },
+        "CT.L2:4": {
+          "description": ""
+        },
+        "CT.L2:5": {
+          "description": ""
+        },
+        "CT.L2:6": {
+          "description": ""
+        },
+        "CT.L2:7": {
+          "description": ""
+        },
+        "CT.L2:8": {
+          "description": ""
+        },
+        "CT.L2:9": {
+          "description": ""
+        },
+        "CT.L3A:1": {
+          "description": ""
+        },
+        "CT.L3A:10": {
+          "description": ""
+        },
+        "CT.L3A:11": {
+          "description": ""
+        },
+        "CT.L3A:2": {
+          "description": ""
+        },
+        "CT.L3A:3": {
+          "description": ""
+        },
+        "CT.L3A:4": {
+          "description": ""
+        },
+        "CT.L3A:5": {
+          "description": ""
+        },
+        "CT.L3A:6": {
+          "description": ""
+        },
+        "CT.L3A:7": {
+          "description": ""
+        },
+        "CT.L3A:8": {
+          "description": ""
+        },
+        "CT.L3A:9": {
+          "description": ""
+        },
+        "CT.L3B:1": {
+          "description": ""
+        },
+        "CT.L3B:10": {
+          "description": ""
+        },
+        "CT.L3B:11": {
+          "description": ""
+        },
+        "CT.L3B:2": {
+          "description": ""
+        },
+        "CT.L3B:3": {
+          "description": ""
+        },
+        "CT.L3B:4": {
+          "description": ""
+        },
+        "CT.L3B:5": {
+          "description": ""
+        },
+        "CT.L3B:6": {
+          "description": ""
+        },
+        "CT.L3B:7": {
+          "description": ""
+        },
+        "CT.L3B:8": {
+          "description": ""
+        },
+        "CT.L3B:9": {
+          "description": ""
+        },
+        "D1.1.3-5": {
+          "description": ""
+        },
+        "D1.1.6-8": {
+          "description": ""
+        },
+        "D1.1.9-12": {
+          "description": ""
+        },
+        "D1.1.K-2": {
+          "description": ""
+        },
+        "D1.2.3-5": {
+          "description": ""
+        },
+        "D1.2.6-8": {
+          "description": ""
+        },
+        "D1.2.9-12": {
+          "description": ""
+        },
+        "D1.2.K-2": {
+          "description": ""
+        },
+        "D1.3.3-5": {
+          "description": ""
+        },
+        "D1.3.6-8": {
+          "description": ""
+        },
+        "D1.3.9-12": {
+          "description": ""
+        },
+        "D1.3.K-2": {
+          "description": ""
+        },
+        "D1.4.3-5": {
+          "description": ""
+        },
+        "D1.4.6-8": {
+          "description": ""
+        },
+        "D1.4.9-12": {
+          "description": ""
+        },
+        "D1.4.K-2": {
+          "description": ""
+        },
+        "D1.5.3-5": {
+          "description": ""
+        },
+        "D1.5.6-8": {
+          "description": ""
+        },
+        "D1.5.9-12": {
+          "description": ""
+        },
+        "D1.5.K-2": {
+          "description": ""
+        },
+        "D2.Civ.1.3-5": {
+          "description": ""
+        },
+        "D2.Civ.1.6-8": {
+          "description": ""
+        },
+        "D2.Civ.1.9-12": {
+          "description": ""
+        },
+        "D2.Civ.1.K-2": {
+          "description": ""
+        },
+        "D2.Civ.10.3-5": {
+          "description": ""
+        },
+        "D2.Civ.10.6-8": {
+          "description": ""
+        },
+        "D2.Civ.10.9-12": {
+          "description": ""
+        },
+        "D2.Civ.10.K-2": {
+          "description": ""
+        },
+        "D2.Civ.11.3-5": {
+          "description": ""
+        },
+        "D2.Civ.11.6-8": {
+          "description": ""
+        },
+        "D2.Civ.11.9-12": {
+          "description": ""
+        },
+        "D2.Civ.11.K-2": {
+          "description": ""
+        },
+        "D2.Civ.12.3-": {
+          "description": ""
+        },
+        "D2.Civ.12.6-8": {
+          "description": ""
+        },
+        "D2.Civ.12.9-12": {
+          "description": ""
+        },
+        "D2.Civ.12.K-2": {
+          "description": ""
+        },
+        "D2.Civ.13.3-5": {
+          "description": ""
+        },
+        "D2.Civ.13.6-8": {
+          "description": ""
+        },
+        "D2.Civ.13.9-12": {
+          "description": ""
+        },
+        "D2.Civ.14.3-5": {
+          "description": ""
+        },
+        "D2.Civ.14.6-8": {
+          "description": ""
+        },
+        "D2.Civ.14.9-12": {
+          "description": ""
+        },
+        "D2.Civ.14.K-2": {
+          "description": ""
+        },
+        "D2.Civ.2.3-5": {
+          "description": ""
+        },
+        "D2.Civ.2.6-8": {
+          "description": ""
+        },
+        "D2.Civ.2.9-12": {
+          "description": ""
+        },
+        "D2.Civ.2.K-2": {
+          "description": ""
+        },
+        "D2.Civ.3.3-5": {
+          "description": ""
+        },
+        "D2.Civ.3.6-8": {
+          "description": ""
+        },
+        "D2.Civ.3.9-12": {
+          "description": ""
+        },
+        "D2.Civ.3.K-2": {
+          "description": ""
+        },
+        "D2.Civ.4.3-5": {
+          "description": ""
+        },
+        "D2.Civ.4.6-8": {
+          "description": ""
+        },
+        "D2.Civ.4.9-12": {
+          "description": ""
+        },
+        "D2.Civ.5.3-5": {
+          "description": ""
+        },
+        "D2.Civ.5.6-8": {
+          "description": ""
+        },
+        "D2.Civ.5.9-12": {
+          "description": ""
+        },
+        "D2.Civ.5.K-2": {
+          "description": ""
+        },
+        "D2.Civ.6.3-5": {
+          "description": ""
+        },
+        "D2.Civ.6.6-8": {
+          "description": ""
+        },
+        "D2.Civ.6.9-12": {
+          "description": ""
+        },
+        "D2.Civ.6.K-2": {
+          "description": ""
+        },
+        "D2.Civ.7.3-5": {
+          "description": ""
+        },
+        "D2.Civ.7.6-8": {
+          "description": ""
+        },
+        "D2.Civ.7.9-12": {
+          "description": ""
+        },
+        "D2.Civ.7.K-2": {
+          "description": ""
+        },
+        "D2.Civ.8.3-5": {
+          "description": ""
+        },
+        "D2.Civ.8.6-8": {
+          "description": ""
+        },
+        "D2.Civ.8.9-12": {
+          "description": ""
+        },
+        "D2.Civ.8.K-2": {
+          "description": ""
+        },
+        "D2.Civ.9.3-5": {
+          "description": ""
+        },
+        "D2.Civ.9.6-8": {
+          "description": ""
+        },
+        "D2.Civ.9.9-12": {
+          "description": ""
+        },
+        "D2.Civ.9.K-2": {
+          "description": ""
+        },
+        "D2.Eco.1.3-5": {
+          "description": ""
+        },
+        "D2.Eco.1.6-8": {
+          "description": ""
+        },
+        "D2.Eco.1.9-12": {
+          "description": ""
+        },
+        "D2.Eco.1.K-2": {
+          "description": ""
+        },
+        "D2.Eco.10.3-5": {
+          "description": ""
+        },
+        "D2.Eco.10.6-8": {
+          "description": ""
+        },
+        "D2.Eco.10.9-12": {
+          "description": ""
+        },
+        "D2.Eco.10.K-2": {
+          "description": ""
+        },
+        "D2.Eco.11.3-5": {
+          "description": ""
+        },
+        "D2.Eco.11.6-8": {
+          "description": ""
+        },
+        "D2.Eco.11.9-12": {
+          "description": ""
+        },
+        "D2.Eco.12.3-5": {
+          "description": ""
+        },
+        "D2.Eco.12.6-8": {
+          "description": ""
+        },
+        "D2.Eco.12.9-12": {
+          "description": ""
+        },
+        "D2.Eco.12.K-2": {
+          "description": ""
+        },
+        "D2.Eco.13.3-5": {
+          "description": ""
+        },
+        "D2.Eco.13.6-8": {
+          "description": ""
+        },
+        "D2.Eco.13.9-12": {
+          "description": ""
+        },
+        "D2.Eco.13.K-2": {
+          "description": ""
+        },
+        "D2.Eco.14.3-5": {
+          "description": ""
+        },
+        "D2.Eco.14.6-8": {
+          "description": ""
+        },
+        "D2.Eco.14.9-12": {
+          "description": ""
+        },
+        "D2.Eco.14.K-2": {
+          "description": ""
+        },
+        "D2.Eco.15.3-5": {
+          "description": ""
+        },
+        "D2.Eco.15.6-8": {
+          "description": ""
+        },
+        "D2.Eco.15.9-12": {
+          "description": ""
+        },
+        "D2.Eco.15.K-2": {
+          "description": ""
+        },
+        "D2.Eco.2.3-5": {
+          "description": ""
+        },
+        "D2.Eco.2.6-8": {
+          "description": ""
+        },
+        "D2.Eco.2.9-12": {
+          "description": ""
+        },
+        "D2.Eco.2.K-2": {
+          "description": ""
+        },
+        "D2.Eco.3.3-5": {
+          "description": ""
+        },
+        "D2.Eco.3.6-8": {
+          "description": ""
+        },
+        "D2.Eco.3.9-12": {
+          "description": ""
+        },
+        "D2.Eco.3.K-2": {
+          "description": ""
+        },
+        "D2.Eco.4.3-5": {
+          "description": ""
+        },
+        "D2.Eco.4.6-8": {
+          "description": ""
+        },
+        "D2.Eco.4.9-12": {
+          "description": ""
+        },
+        "D2.Eco.4.K-2": {
+          "description": ""
+        },
+        "D2.Eco.5.3-5": {
+          "description": ""
+        },
+        "D2.Eco.5.6-8": {
+          "description": ""
+        },
+        "D2.Eco.5.9-12": {
+          "description": ""
+        },
+        "D2.Eco.5.K-2": {
+          "description": ""
+        },
+        "D2.Eco.6.3-5": {
+          "description": ""
+        },
+        "D2.Eco.6.6-8": {
+          "description": ""
+        },
+        "D2.Eco.6.9-12": {
+          "description": ""
+        },
+        "D2.Eco.6.K-2": {
+          "description": ""
+        },
+        "D2.Eco.7.3-5": {
+          "description": ""
+        },
+        "D2.Eco.7.6-8": {
+          "description": ""
+        },
+        "D2.Eco.7.9-12": {
+          "description": ""
+        },
+        "D2.Eco.7.K-2": {
+          "description": ""
+        },
+        "D2.Eco.8.3-5": {
+          "description": ""
+        },
+        "D2.Eco.8.6-8": {
+          "description": ""
+        },
+        "D2.Eco.8.9-12": {
+          "description": ""
+        },
+        "D2.Eco.9.3-5": {
+          "description": ""
+        },
+        "D2.Eco.9.6-8": {
+          "description": ""
+        },
+        "D2.Eco.9.9-12": {
+          "description": ""
+        },
+        "D2.Eco.9.K-2": {
+          "description": ""
+        },
+        "D2.Geo.1.3-5": {
+          "description": ""
+        },
+        "D2.Geo.1.6-8": {
+          "description": ""
+        },
+        "D2.Geo.1.9-12": {
+          "description": ""
+        },
+        "D2.Geo.1.K-2": {
+          "description": ""
+        },
+        "D2.Geo.10.3-5": {
+          "description": ""
+        },
+        "D2.Geo.10.6-8": {
+          "description": ""
+        },
+        "D2.Geo.10.9-12": {
+          "description": ""
+        },
+        "D2.Geo.10.K-2": {
+          "description": ""
+        },
+        "D2.Geo.11.3-5": {
+          "description": ""
+        },
+        "D2.Geo.11.6-8": {
+          "description": ""
+        },
+        "D2.Geo.11.9-12": {
+          "description": ""
+        },
+        "D2.Geo.11.K-2": {
+          "description": ""
+        },
+        "D2.Geo.12.3-5": {
+          "description": ""
+        },
+        "D2.Geo.12.6-8": {
+          "description": ""
+        },
+        "D2.Geo.12.9-12": {
+          "description": ""
+        },
+        "D2.Geo.12.K-2": {
+          "description": ""
+        },
+        "D2.Geo.2.3-5": {
+          "description": ""
+        },
+        "D2.Geo.2.6-8": {
+          "description": ""
+        },
+        "D2.Geo.2.9-12": {
+          "description": ""
+        },
+        "D2.Geo.2.K-2": {
+          "description": ""
+        },
+        "D2.Geo.3.3-5": {
+          "description": ""
+        },
+        "D2.Geo.3.6-8": {
+          "description": ""
+        },
+        "D2.Geo.3.9-12": {
+          "description": ""
+        },
+        "D2.Geo.3.K-2": {
+          "description": ""
+        },
+        "D2.Geo.4.3-5": {
+          "description": ""
+        },
+        "D2.Geo.4.6-8": {
+          "description": ""
+        },
+        "D2.Geo.4.9-12": {
+          "description": ""
+        },
+        "D2.Geo.4.K-2": {
+          "description": ""
+        },
+        "D2.Geo.5.3-5": {
+          "description": ""
+        },
+        "D2.Geo.5.6-8": {
+          "description": ""
+        },
+        "D2.Geo.5.9-12": {
+          "description": ""
+        },
+        "D2.Geo.5.K-2": {
+          "description": ""
+        },
+        "D2.Geo.6.3-5": {
+          "description": ""
+        },
+        "D2.Geo.6.6-8": {
+          "description": ""
+        },
+        "D2.Geo.6.9-12": {
+          "description": ""
+        },
+        "D2.Geo.6.K-2": {
+          "description": ""
+        },
+        "D2.Geo.7.3-5": {
+          "description": ""
+        },
+        "D2.Geo.7.6-8": {
+          "description": ""
+        },
+        "D2.Geo.7.9-12": {
+          "description": ""
+        },
+        "D2.Geo.7.K-2": {
+          "description": ""
+        },
+        "D2.Geo.8.3-5": {
+          "description": ""
+        },
+        "D2.Geo.8.6-8": {
+          "description": ""
+        },
+        "D2.Geo.8.9-12": {
+          "description": ""
+        },
+        "D2.Geo.8.K-2": {
+          "description": ""
+        },
+        "D2.Geo.9.3-5": {
+          "description": ""
+        },
+        "D2.Geo.9.6-8": {
+          "description": ""
+        },
+        "D2.Geo.9.9-12": {
+          "description": ""
+        },
+        "D2.Geo.9.K-2": {
+          "description": ""
+        },
+        "D2.His.1.3-5": {
+          "description": ""
+        },
+        "D2.His.1.6-8": {
+          "description": ""
+        },
+        "D2.His.1.9-12": {
+          "description": ""
+        },
+        "D2.His.1.K-2": {
+          "description": ""
+        },
+        "D2.His.10.3-5": {
+          "description": ""
+        },
+        "D2.His.10.6-8": {
+          "description": ""
+        },
+        "D2.His.10.9-12": {
+          "description": ""
+        },
+        "D2.His.10.K-2": {
+          "description": ""
+        },
+        "D2.His.11.3-5": {
+          "description": ""
+        },
+        "D2.His.11.6-8": {
+          "description": ""
+        },
+        "D2.His.11.9-12": {
+          "description": ""
+        },
+        "D2.His.11.K-2": {
+          "description": ""
+        },
+        "D2.His.12.3-5": {
+          "description": ""
+        },
+        "D2.His.12.6-8": {
+          "description": ""
+        },
+        "D2.His.12.9-12": {
+          "description": ""
+        },
+        "D2.His.12.K-2": {
+          "description": ""
+        },
+        "D2.His.13.3-5": {
+          "description": ""
+        },
+        "D2.His.13.6-8": {
+          "description": ""
+        },
+        "D2.His.13.9-12": {
+          "description": ""
+        },
+        "D2.His.14.3-5": {
+          "description": ""
+        },
+        "D2.His.14.6-8": {
+          "description": ""
+        },
+        "D2.His.14.9-12": {
+          "description": ""
+        },
+        "D2.His.14.K-2": {
+          "description": ""
+        },
+        "D2.His.15.6-8": {
+          "description": ""
+        },
+        "D2.His.15.9-12": {
+          "description": ""
+        },
+        "D2.His.16.3-5": {
+          "description": ""
+        },
+        "D2.His.16.6-8": {
+          "description": ""
+        },
+        "D2.His.16.9-12": {
+          "description": ""
+        },
+        "D2.His.16.K-2": {
+          "description": ""
+        },
+        "D2.His.17.3-5": {
+          "description": ""
+        },
+        "D2.His.17.6-8": {
+          "description": ""
+        },
+        "D2.His.17.9-12": {
+          "description": ""
+        },
+        "D2.His.2.3-5": {
+          "description": ""
+        },
+        "D2.His.2.6-8": {
+          "description": ""
+        },
+        "D2.His.2.9-12": {
+          "description": ""
+        },
+        "D2.His.2.K-2": {
+          "description": ""
+        },
+        "D2.His.3.3-5": {
+          "description": ""
+        },
+        "D2.His.3.6-8": {
+          "description": ""
+        },
+        "D2.His.3.9-12": {
+          "description": ""
+        },
+        "D2.His.3.K-2": {
+          "description": ""
+        },
+        "D2.His.4.3-5": {
+          "description": ""
+        },
+        "D2.His.4.6-8": {
+          "description": ""
+        },
+        "D2.His.4.9-12": {
+          "description": ""
+        },
+        "D2.His.4.K-2": {
+          "description": ""
+        },
+        "D2.His.5.3-5": {
+          "description": ""
+        },
+        "D2.His.5.6-8": {
+          "description": ""
+        },
+        "D2.His.5.9-12": {
+          "description": ""
+        },
+        "D2.His.6.3-5": {
+          "description": ""
+        },
+        "D2.His.6.6-8": {
+          "description": ""
+        },
+        "D2.His.6.9-12": {
+          "description": ""
+        },
+        "D2.His.6.K-2": {
+          "description": ""
+        },
+        "D2.His.7.9-12": {
+          "description": ""
+        },
+        "D2.His.8.9-12": {
+          "description": ""
+        },
+        "D2.His.9.3-5": {
+          "description": ""
+        },
+        "D2.His.9.6-8": {
+          "description": ""
+        },
+        "D2.His.9.9-12": {
+          "description": ""
+        },
+        "D2.His.9.K-2": {
+          "description": ""
+        },
+        "D3.1.3-5": {
+          "description": ""
+        },
+        "D3.1.6-8": {
+          "description": ""
+        },
+        "D3.1.9-12": {
+          "description": ""
+        },
+        "D3.1.K-2": {
+          "description": ""
+        },
+        "D3.2.3-5": {
+          "description": ""
+        },
+        "D3.2.6-8": {
+          "description": ""
+        },
+        "D3.2.9-12": {
+          "description": ""
+        },
+        "D3.2.K-2": {
+          "description": ""
+        },
+        "D3.3.3-5": {
+          "description": ""
+        },
+        "D3.3.6-8": {
+          "description": ""
+        },
+        "D3.3.9-12": {
+          "description": ""
+        },
+        "D3.4.3-5": {
+          "description": ""
+        },
+        "D3.4.6-8": {
+          "description": ""
+        },
+        "D3.4.9-12": {
+          "description": ""
+        },
+        "D4.1.3-5": {
+          "description": ""
+        },
+        "D4.1.6-8": {
+          "description": ""
+        },
+        "D4.1.9-12": {
+          "description": ""
+        },
+        "D4.1.K-2": {
+          "description": ""
+        },
+        "D4.2.3-5": {
+          "description": ""
+        },
+        "D4.2.6-8": {
+          "description": ""
+        },
+        "D4.2.9-12": {
+          "description": ""
+        },
+        "D4.2.K-2": {
+          "description": ""
+        },
+        "D4.3.3-5": {
+          "description": ""
+        },
+        "D4.3.6-8": {
+          "description": ""
+        },
+        "D4.3.9-12": {
+          "description": ""
+        },
+        "D4.3.K-2": {
+          "description": ""
+        },
+        "D4.4.3-5": {
+          "description": ""
+        },
+        "D4.4.6-8": {
+          "description": ""
+        },
+        "D4.4.9-12": {
+          "description": ""
+        },
+        "D4.4.K-2": {
+          "description": ""
+        },
+        "D4.5.3-5": {
+          "description": ""
+        },
+        "D4.5.6-8": {
+          "description": ""
+        },
+        "D4.5.9-12": {
+          "description": ""
+        },
+        "D4.5.K-2": {
+          "description": ""
+        },
+        "D4.6.3-5": {
+          "description": ""
+        },
+        "D4.6.6-8": {
+          "description": ""
+        },
+        "D4.6.9-12": {
+          "description": ""
+        },
+        "D4.6.K-2": {
+          "description": ""
+        },
+        "D4.7.3-5": {
+          "description": ""
+        },
+        "D4.7.6-8": {
+          "description": ""
+        },
+        "D4.7.9-12": {
+          "description": ""
+        },
+        "D4.7.K-2": {
+          "description": ""
+        },
+        "D4.8.3-5": {
+          "description": ""
+        },
+        "D4.8.6-8": {
+          "description": ""
+        },
+        "D4.8.9-12": {
+          "description": ""
+        },
+        "D4.8.K-2": {
+          "description": ""
+        },
+        "DAT-1.A.1": {
+          "description": ""
+        },
+        "DAT-1.A.10": {
+          "description": ""
+        },
+        "DAT-1.A.2": {
+          "description": ""
+        },
+        "DAT-1.A.3": {
+          "description": ""
+        },
+        "DAT-1.A.4": {
+          "description": ""
+        },
+        "DAT-1.A.5": {
+          "description": ""
+        },
+        "DAT-1.A.6": {
+          "description": ""
+        },
+        "DAT-1.A.7": {
+          "description": ""
+        },
+        "DAT-1.A.8": {
+          "description": ""
+        },
+        "DAT-1.A.9": {
+          "description": ""
+        },
+        "DAT-1.B.1": {
+          "description": ""
+        },
+        "DAT-1.B.2": {
+          "description": ""
+        },
+        "DAT-1.B.3": {
+          "description": ""
+        },
+        "DAT-1.C.1": {
+          "description": ""
+        },
+        "DAT-1.C.2": {
+          "description": ""
+        },
+        "DAT-1.C.3": {
+          "description": ""
+        },
+        "DAT-1.C.4": {
+          "description": ""
+        },
+        "DAT-1.C.5": {
+          "description": ""
+        },
+        "DAT-1.D.1": {
+          "description": ""
+        },
+        "DAT-1.D.2": {
+          "description": ""
+        },
+        "DAT-1.D.3": {
+          "description": ""
+        },
+        "DAT-1.D.4": {
+          "description": ""
+        },
+        "DAT-1.D.5": {
+          "description": ""
+        },
+        "DAT-1.D.6": {
+          "description": ""
+        },
+        "DAT-1.D.7": {
+          "description": ""
+        },
+        "DAT-1.D.8": {
+          "description": ""
+        },
+        "DAT-2.A.1": {
+          "description": ""
+        },
+        "DAT-2.A.2": {
+          "description": ""
+        },
+        "DAT-2.A.3": {
+          "description": ""
+        },
+        "DAT-2.A.4": {
+          "description": ""
+        },
+        "DAT-2.B.1": {
+          "description": ""
+        },
+        "DAT-2.B.2": {
+          "description": ""
+        },
+        "DAT-2.B.3": {
+          "description": ""
+        },
+        "DAT-2.B.4": {
+          "description": ""
+        },
+        "DAT-2.B.5": {
+          "description": ""
+        },
+        "DAT-2.C.1": {
+          "description": ""
+        },
+        "DAT-2.C.2": {
+          "description": ""
+        },
+        "DAT-2.C.3": {
+          "description": ""
+        },
+        "DAT-2.C.4": {
+          "description": ""
+        },
+        "DAT-2.C.5": {
+          "description": ""
+        },
+        "DAT-2.C.6": {
+          "description": ""
+        },
+        "DAT-2.C.7": {
+          "description": ""
+        },
+        "DAT-2.C.8": {
+          "description": ""
+        },
+        "DAT-2.D.1": {
+          "description": ""
+        },
+        "DAT-2.D.2": {
+          "description": ""
+        },
+        "DAT-2.D.3": {
+          "description": ""
+        },
+        "DAT-2.D.4": {
+          "description": ""
+        },
+        "DAT-2.D.5": {
+          "description": ""
+        },
+        "DAT-2.D.6": {
+          "description": ""
+        },
+        "DAT-2.E.1": {
+          "description": ""
+        },
+        "DAT-2.E.2": {
+          "description": ""
+        },
+        "DAT-2.E.3": {
+          "description": ""
+        },
+        "DAT-2.E.4": {
+          "description": ""
+        },
+        "DAT-2.E.5": {
+          "description": ""
+        },
+        "F.BF.1": {
+          "description": ""
+        },
+        "F.BF.1.a": {
+          "description": ""
+        },
+        "F.BF.1.b": {
+          "description": ""
+        },
+        "F.BF.1.c": {
+          "description": ""
+        },
+        "F.BF.2": {
+          "description": ""
+        },
+        "F.BF.3": {
+          "description": ""
+        },
+        "F.BF.4": {
+          "description": ""
+        },
+        "F.BF.4.a": {
+          "description": ""
+        },
+        "F.BF.4.b": {
+          "description": ""
+        },
+        "F.BF.4.c": {
+          "description": ""
+        },
+        "F.BF.4.d": {
+          "description": ""
+        },
+        "F.BF.5": {
+          "description": ""
+        },
+        "F.IF.1": {
+          "description": ""
+        },
+        "F.IF.2": {
+          "description": ""
+        },
+        "F.IF.3": {
+          "description": ""
+        },
+        "F.IF.4": {
+          "description": ""
+        },
+        "F.IF.5": {
+          "description": ""
+        },
+        "F.IF.6": {
+          "description": ""
+        },
+        "F.IF.7": {
+          "description": ""
+        },
+        "F.IF.7.a": {
+          "description": ""
+        },
+        "F.IF.7.b": {
+          "description": ""
+        },
+        "F.IF.7.c": {
+          "description": ""
+        },
+        "F.IF.7.d": {
+          "description": ""
+        },
+        "F.IF.7.e": {
+          "description": ""
+        },
+        "F.IF.8": {
+          "description": ""
+        },
+        "F.IF.8.a": {
+          "description": ""
+        },
+        "F.IF.8.b": {
+          "description": ""
+        },
+        "F.IF.9": {
+          "description": ""
+        },
+        "F.LE.1": {
+          "description": ""
+        },
+        "F.LE.1.a": {
+          "description": ""
+        },
+        "F.LE.1.b": {
+          "description": ""
+        },
+        "F.LE.1.c": {
+          "description": ""
+        },
+        "F.LE.2": {
+          "description": ""
+        },
+        "F.LE.3": {
+          "description": ""
+        },
+        "F.LE.4": {
+          "description": ""
+        },
+        "F.LE.5": {
+          "description": ""
+        },
+        "F.TF.1": {
+          "description": ""
+        },
+        "F.TF.2": {
+          "description": ""
+        },
+        "F.TF.3": {
+          "description": ""
+        },
+        "F.TF.4": {
+          "description": ""
+        },
+        "F.TF.5": {
+          "description": ""
+        },
+        "F.TF.6": {
+          "description": ""
+        },
+        "F.TF.7": {
+          "description": ""
+        },
+        "F.TF.8": {
+          "description": ""
+        },
+        "F.TF.9": {
+          "description": ""
+        },
+        "G.C.1": {
+          "description": ""
+        },
+        "G.C.2": {
+          "description": ""
+        },
+        "G.C.3": {
+          "description": ""
+        },
+        "G.C.4": {
+          "description": ""
+        },
+        "G.C.5": {
+          "description": ""
+        },
+        "G.CO.1": {
+          "description": ""
+        },
+        "G.CO.10": {
+          "description": ""
+        },
+        "G.CO.11": {
+          "description": ""
+        },
+        "G.CO.12": {
+          "description": ""
+        },
+        "G.CO.13": {
+          "description": ""
+        },
+        "G.CO.2": {
+          "description": ""
+        },
+        "G.CO.3": {
+          "description": ""
+        },
+        "G.CO.4": {
+          "description": ""
+        },
+        "G.CO.5": {
+          "description": ""
+        },
+        "G.CO.6": {
+          "description": ""
+        },
+        "G.CO.7": {
+          "description": ""
+        },
+        "G.CO.8": {
+          "description": ""
+        },
+        "G.CO.9": {
+          "description": ""
+        },
+        "G.GMD.1": {
+          "description": ""
+        },
+        "G.GMD.2": {
+          "description": ""
+        },
+        "G.GMD.3": {
+          "description": ""
+        },
+        "G.GMD.4": {
+          "description": ""
+        },
+        "G.GPE.1": {
+          "description": ""
+        },
+        "G.GPE.2": {
+          "description": ""
+        },
+        "G.GPE.3": {
+          "description": ""
+        },
+        "G.GPE.4": {
+          "description": ""
+        },
+        "G.GPE.5": {
+          "description": ""
+        },
+        "G.GPE.6": {
+          "description": ""
+        },
+        "G.GPE.7": {
+          "description": ""
+        },
+        "G.MG.1": {
+          "description": ""
+        },
+        "G.MG.2": {
+          "description": ""
+        },
+        "G.MG.3": {
+          "description": ""
+        },
+        "G.SRT.1": {
+          "description": ""
+        },
+        "G.SRT.1.a": {
+          "description": ""
+        },
+        "G.SRT.1.b": {
+          "description": ""
+        },
+        "G.SRT.10": {
+          "description": ""
+        },
+        "G.SRT.11": {
+          "description": ""
+        },
+        "G.SRT.2": {
+          "description": ""
+        },
+        "G.SRT.3": {
+          "description": ""
+        },
+        "G.SRT.4": {
+          "description": ""
+        },
+        "G.SRT.5": {
+          "description": ""
+        },
+        "G.SRT.6": {
+          "description": ""
+        },
+        "G.SRT.7": {
+          "description": ""
+        },
+        "G.SRT.8": {
+          "description": ""
+        },
+        "G.SRT.9": {
+          "description": ""
+        },
+        "HS-ESS1-1": {
+          "description": ""
+        },
+        "HS-ESS1-2": {
+          "description": ""
+        },
+        "HS-ESS1-3": {
+          "description": ""
+        },
+        "HS-ESS1-4": {
+          "description": ""
+        },
+        "HS-ESS1-5": {
+          "description": ""
+        },
+        "HS-ESS1-6": {
+          "description": ""
+        },
+        "HS-ESS2-1": {
+          "description": ""
+        },
+        "HS-ESS2-2": {
+          "description": ""
+        },
+        "HS-ESS2-3": {
+          "description": ""
+        },
+        "HS-ESS2-4": {
+          "description": ""
+        },
+        "HS-ESS2-5": {
+          "description": ""
+        },
+        "HS-ESS2-6": {
+          "description": ""
+        },
+        "HS-ESS2-7": {
+          "description": ""
+        },
+        "HS-ESS3-1": {
+          "description": ""
+        },
+        "HS-ESS3-2": {
+          "description": ""
+        },
+        "HS-ESS3-3": {
+          "description": ""
+        },
+        "HS-ESS3-4": {
+          "description": ""
+        },
+        "HS-ESS3-5": {
+          "description": ""
+        },
+        "HS-ESS3-6": {
+          "description": ""
+        },
+        "HS-ETS1-1": {
+          "description": ""
+        },
+        "HS-ETS1-2": {
+          "description": ""
+        },
+        "HS-ETS1-3": {
+          "description": ""
+        },
+        "HS-ETS1-4": {
+          "description": ""
+        },
+        "HS-LS1-1": {
+          "description": ""
+        },
+        "HS-LS1-2": {
+          "description": ""
+        },
+        "HS-LS1-3": {
+          "description": ""
+        },
+        "HS-LS1-4": {
+          "description": ""
+        },
+        "HS-LS1-5": {
+          "description": ""
+        },
+        "HS-LS1-6": {
+          "description": ""
+        },
+        "HS-LS1-7": {
+          "description": ""
+        },
+        "HS-LS2-1": {
+          "description": ""
+        },
+        "HS-LS2-2": {
+          "description": ""
+        },
+        "HS-LS2-3": {
+          "description": ""
+        },
+        "HS-LS2-4": {
+          "description": ""
+        },
+        "HS-LS2-5": {
+          "description": ""
+        },
+        "HS-LS2-6": {
+          "description": ""
+        },
+        "HS-LS2-7": {
+          "description": ""
+        },
+        "HS-LS2-8": {
+          "description": ""
+        },
+        "HS-LS3-1": {
+          "description": ""
+        },
+        "HS-LS3-2": {
+          "description": ""
+        },
+        "HS-LS3-3": {
+          "description": ""
+        },
+        "HS-LS4-1": {
+          "description": ""
+        },
+        "HS-LS4-2": {
+          "description": ""
+        },
+        "HS-LS4-3": {
+          "description": ""
+        },
+        "HS-LS4-4": {
+          "description": ""
+        },
+        "HS-LS4-5": {
+          "description": ""
+        },
+        "HS-LS4-6": {
+          "description": ""
+        },
+        "HS-PS1-1": {
+          "description": ""
+        },
+        "HS-PS1-2": {
+          "description": ""
+        },
+        "HS-PS1-3": {
+          "description": ""
+        },
+        "HS-PS1-4": {
+          "description": ""
+        },
+        "HS-PS1-5": {
+          "description": ""
+        },
+        "HS-PS1-6": {
+          "description": ""
+        },
+        "HS-PS1-7": {
+          "description": ""
+        },
+        "HS-PS1-8": {
+          "description": ""
+        },
+        "HS-PS2-1": {
+          "description": ""
+        },
+        "HS-PS2-2": {
+          "description": ""
+        },
+        "HS-PS2-3": {
+          "description": ""
+        },
+        "HS-PS2-4": {
+          "description": ""
+        },
+        "HS-PS2-5": {
+          "description": ""
+        },
+        "HS-PS2-6": {
+          "description": ""
+        },
+        "HS-PS3-1": {
+          "description": ""
+        },
+        "HS-PS3-2": {
+          "description": ""
+        },
+        "HS-PS3-3": {
+          "description": ""
+        },
+        "HS-PS3-4": {
+          "description": ""
+        },
+        "HS-PS3-5": {
+          "description": ""
+        },
+        "HS-PS4-1": {
+          "description": ""
+        },
+        "HS-PS4-2": {
+          "description": ""
+        },
+        "HS-PS4-3": {
+          "description": ""
+        },
+        "HS-PS4-4": {
+          "description": ""
+        },
+        "HS-PS4-5": {
+          "description": ""
+        },
+        "IOC-1.A.1": {
+          "description": ""
+        },
+        "IOC-1.A.2": {
+          "description": ""
+        },
+        "IOC-1.A.3": {
+          "description": ""
+        },
+        "IOC-1.A.4": {
+          "description": ""
+        },
+        "IOC-1.A.5": {
+          "description": ""
+        },
+        "IOC-1.B.1": {
+          "description": ""
+        },
+        "IOC-1.B.2": {
+          "description": ""
+        },
+        "IOC-1.B.3": {
+          "description": ""
+        },
+        "IOC-1.B.4": {
+          "description": ""
+        },
+        "IOC-1.B.5": {
+          "description": ""
+        },
+        "IOC-1.B.6": {
+          "description": ""
+        },
+        "IOC-1.C.1": {
+          "description": ""
+        },
+        "IOC-1.C.2": {
+          "description": ""
+        },
+        "IOC-1.C.3": {
+          "description": ""
+        },
+        "IOC-1.C.4": {
+          "description": ""
+        },
+        "IOC-1.C.5": {
+          "description": ""
+        },
+        "IOC-1.D.1": {
+          "description": ""
+        },
+        "IOC-1.D.2": {
+          "description": ""
+        },
+        "IOC-1.D.3": {
+          "description": ""
+        },
+        "IOC-1.E.1": {
+          "description": ""
+        },
+        "IOC-1.E.2": {
+          "description": ""
+        },
+        "IOC-1.E.3": {
+          "description": ""
+        },
+        "IOC-1.E.4": {
+          "description": ""
+        },
+        "IOC-1.E.5": {
+          "description": ""
+        },
+        "IOC-1.E.6": {
+          "description": ""
+        },
+        "IOC-1.F.1": {
+          "description": ""
+        },
+        "IOC-1.F.10": {
+          "description": ""
+        },
+        "IOC-1.F.11": {
+          "description": ""
+        },
+        "IOC-1.F.2": {
+          "description": ""
+        },
+        "IOC-1.F.3": {
+          "description": ""
+        },
+        "IOC-1.F.4": {
+          "description": ""
+        },
+        "IOC-1.F.5": {
+          "description": ""
+        },
+        "IOC-1.F.6": {
+          "description": ""
+        },
+        "IOC-1.F.7": {
+          "description": ""
+        },
+        "IOC-1.F.8": {
+          "description": ""
+        },
+        "IOC-1.F.9": {
+          "description": ""
+        },
+        "IOC-2.A.1": {
+          "description": ""
+        },
+        "IOC-2.A.10": {
+          "description": ""
+        },
+        "IOC-2.A.11": {
+          "description": ""
+        },
+        "IOC-2.A.12": {
+          "description": ""
+        },
+        "IOC-2.A.13": {
+          "description": ""
+        },
+        "IOC-2.A.14": {
+          "description": ""
+        },
+        "IOC-2.A.15": {
+          "description": ""
+        },
+        "IOC-2.A.2": {
+          "description": ""
+        },
+        "IOC-2.A.3": {
+          "description": ""
+        },
+        "IOC-2.A.4": {
+          "description": ""
+        },
+        "IOC-2.A.5": {
+          "description": ""
+        },
+        "IOC-2.A.6": {
+          "description": ""
+        },
+        "IOC-2.A.7": {
+          "description": ""
+        },
+        "IOC-2.A.8": {
+          "description": ""
+        },
+        "IOC-2.A.9": {
+          "description": ""
+        },
+        "IOC-2.B.1": {
+          "description": ""
+        },
+        "IOC-2.B.10": {
+          "description": ""
+        },
+        "IOC-2.B.11": {
+          "description": ""
+        },
+        "IOC-2.B.2": {
+          "description": ""
+        },
+        "IOC-2.B.3": {
+          "description": ""
+        },
+        "IOC-2.B.4": {
+          "description": ""
+        },
+        "IOC-2.B.5": {
+          "description": ""
+        },
+        "IOC-2.B.6": {
+          "description": ""
+        },
+        "IOC-2.B.7": {
+          "description": ""
+        },
+        "IOC-2.B.8": {
+          "description": ""
+        },
+        "IOC-2.B.9": {
+          "description": ""
+        },
+        "IOC-2.C.1": {
+          "description": ""
+        },
+        "IOC-2.C.2": {
+          "description": ""
+        },
+        "IOC-2.C.3": {
+          "description": ""
+        },
+        "IOC-2.C.4": {
+          "description": ""
+        },
+        "IOC-2.C.5": {
+          "description": ""
+        },
+        "IOC-2.C.6": {
+          "description": ""
+        },
+        "IOC-2.C.7": {
+          "description": ""
+        },
+        "K-2-ETS1-1": {
+          "description": ""
+        },
+        "K-2-ETS1-2": {
+          "description": ""
+        },
+        "K-2-ETS1-3": {
+          "description": ""
+        },
+        "K-ESS2-1": {
+          "description": ""
+        },
+        "K-ESS2-2": {
+          "description": ""
+        },
+        "K-ESS3-1": {
+          "description": ""
+        },
+        "K-ESS3-2": {
+          "description": ""
+        },
+        "K-ESS3-3": {
+          "description": ""
+        },
+        "K-LS1-1": {
+          "description": ""
+        },
+        "K-PS2-1": {
+          "description": ""
+        },
+        "K-PS2-2": {
+          "description": ""
+        },
+        "K-PS3-1": {
+          "description": ""
+        },
+        "K-PS3-2": {
+          "description": ""
+        },
+        "K.CC.1": {
+          "description": ""
+        },
+        "K.CC.2": {
+          "description": ""
+        },
+        "K.CC.3": {
+          "description": ""
+        },
+        "K.CC.4": {
+          "description": ""
+        },
+        "K.CC.4.a": {
+          "description": ""
+        },
+        "K.CC.4.b": {
+          "description": ""
+        },
+        "K.CC.4.c": {
+          "description": ""
+        },
+        "K.CC.5": {
+          "description": ""
+        },
+        "K.CC.6": {
+          "description": ""
+        },
+        "K.CC.7": {
+          "description": ""
+        },
+        "K.G.1": {
+          "description": ""
+        },
+        "K.G.2": {
+          "description": ""
+        },
+        "K.G.3": {
+          "description": ""
+        },
+        "K.G.4": {
+          "description": ""
+        },
+        "K.G.5": {
+          "description": ""
+        },
+        "K.G.6": {
+          "description": ""
+        },
+        "K.L.1": {
+          "description": ""
+        },
+        "K.L.1.a": {
+          "description": ""
+        },
+        "K.L.1.b": {
+          "description": ""
+        },
+        "K.L.1.c": {
+          "description": ""
+        },
+        "K.L.1.d": {
+          "description": ""
+        },
+        "K.L.1.e": {
+          "description": ""
+        },
+        "K.L.1.f": {
+          "description": ""
+        },
+        "K.L.2": {
+          "description": ""
+        },
+        "K.L.2.a": {
+          "description": ""
+        },
+        "K.L.2.b": {
+          "description": ""
+        },
+        "K.L.2.c": {
+          "description": ""
+        },
+        "K.L.2.d": {
+          "description": ""
+        },
+        "K.L.3": {
+          "description": ""
+        },
+        "K.L.4": {
+          "description": ""
+        },
+        "K.L.4.a": {
+          "description": ""
+        },
+        "K.L.4.b": {
+          "description": ""
+        },
+        "K.L.5": {
+          "description": ""
+        },
+        "K.L.5.a": {
+          "description": ""
+        },
+        "K.L.5.b": {
+          "description": ""
+        },
+        "K.L.5.c": {
+          "description": ""
+        },
+        "K.L.5.d": {
+          "description": ""
+        },
+        "K.L.6": {
+          "description": ""
+        },
+        "K.MD.1": {
+          "description": ""
+        },
+        "K.MD.2": {
+          "description": ""
+        },
+        "K.MD.3": {
+          "description": ""
+        },
+        "K.NBT.1": {
+          "description": ""
+        },
+        "K.OA.1": {
+          "description": ""
+        },
+        "K.OA.2": {
+          "description": ""
+        },
+        "K.OA.3": {
+          "description": ""
+        },
+        "K.OA.4": {
+          "description": ""
+        },
+        "K.OA.5": {
+          "description": ""
+        },
+        "K.RF.1": {
+          "description": ""
+        },
+        "K.RF.1.a": {
+          "description": ""
+        },
+        "K.RF.1.b": {
+          "description": ""
+        },
+        "K.RF.1.c": {
+          "description": ""
+        },
+        "K.RF.1.d": {
+          "description": ""
+        },
+        "K.RF.2": {
+          "description": ""
+        },
+        "K.RF.2.a": {
+          "description": ""
+        },
+        "K.RF.2.b": {
+          "description": ""
+        },
+        "K.RF.2.c": {
+          "description": ""
+        },
+        "K.RF.2.d": {
+          "description": ""
+        },
+        "K.RF.2.e": {
+          "description": ""
+        },
+        "K.RF.3": {
+          "description": ""
+        },
+        "K.RF.3.a": {
+          "description": ""
+        },
+        "K.RF.3.b": {
+          "description": ""
+        },
+        "K.RF.3.c": {
+          "description": ""
+        },
+        "K.RF.3.d": {
+          "description": ""
+        },
+        "K.RF.4": {
+          "description": ""
+        },
+        "K.RI.1": {
+          "description": ""
+        },
+        "K.RI.10": {
+          "description": ""
+        },
+        "K.RI.2": {
+          "description": ""
+        },
+        "K.RI.3": {
+          "description": ""
+        },
+        "K.RI.4": {
+          "description": ""
+        },
+        "K.RI.5": {
+          "description": ""
+        },
+        "K.RI.6": {
+          "description": ""
+        },
+        "K.RI.7": {
+          "description": ""
+        },
+        "K.RI.8": {
+          "description": ""
+        },
+        "K.RI.9": {
+          "description": ""
+        },
+        "K.RL.1": {
+          "description": ""
+        },
+        "K.RL.10": {
+          "description": ""
+        },
+        "K.RL.2": {
+          "description": ""
+        },
+        "K.RL.3": {
+          "description": ""
+        },
+        "K.RL.4": {
+          "description": ""
+        },
+        "K.RL.5": {
+          "description": ""
+        },
+        "K.RL.6": {
+          "description": ""
+        },
+        "K.RL.7": {
+          "description": ""
+        },
+        "K.RL.8": {
+          "description": ""
+        },
+        "K.RL.9": {
+          "description": ""
+        },
+        "K.SL.1": {
+          "description": ""
+        },
+        "K.SL.2": {
+          "description": ""
+        },
+        "K.SL.3": {
+          "description": ""
+        },
+        "K.SL.4": {
+          "description": ""
+        },
+        "K.SL.5": {
+          "description": ""
+        },
+        "K.SL.6": {
+          "description": ""
+        },
+        "K.W.1": {
+          "description": ""
+        },
+        "K.W.10": {
+          "description": ""
+        },
+        "K.W.2": {
+          "description": ""
+        },
+        "K.W.3": {
+          "description": ""
+        },
+        "K.W.4": {
+          "description": ""
+        },
+        "K.W.5": {
+          "description": ""
+        },
+        "K.W.6": {
+          "description": ""
+        },
+        "K.W.7": {
+          "description": ""
+        },
+        "K.W.8": {
+          "description": ""
+        },
+        "K.W.9": {
+          "description": ""
+        },
+        "MOD-1.A.1": {
+          "description": ""
+        },
+        "MOD-1.A.2": {
+          "description": ""
+        },
+        "MOD-1.B.1": {
+          "description": ""
+        },
+        "MOD-1.B.2": {
+          "description": ""
+        },
+        "MOD-1.C.1": {
+          "description": ""
+        },
+        "MOD-1.C.2": {
+          "description": ""
+        },
+        "MOD-1.C.3": {
+          "description": ""
+        },
+        "MOD-1.C.4": {
+          "description": ""
+        },
+        "MOD-1.C.5": {
+          "description": ""
+        },
+        "MOD-1.C.6": {
+          "description": ""
+        },
+        "MOD-1.D.1": {
+          "description": ""
+        },
+        "MOD-1.D.2": {
+          "description": ""
+        },
+        "MOD-1.D.3": {
+          "description": ""
+        },
+        "MOD-1.D.4": {
+          "description": ""
+        },
+        "MOD-1.E.1": {
+          "description": ""
+        },
+        "MOD-1.E.2": {
+          "description": ""
+        },
+        "MOD-1.E.3": {
+          "description": ""
+        },
+        "MOD-1.E.4": {
+          "description": ""
+        },
+        "MOD-1.E.5": {
+          "description": ""
+        },
+        "MOD-1.E.6": {
+          "description": ""
+        },
+        "MOD-1.E.7": {
+          "description": ""
+        },
+        "MOD-1.E.8": {
+          "description": ""
+        },
+        "MOD-1.F.1": {
+          "description": ""
+        },
+        "MOD-1.F.2": {
+          "description": ""
+        },
+        "MOD-1.F.3": {
+          "description": ""
+        },
+        "MOD-1.G.1": {
+          "description": ""
+        },
+        "MOD-1.H.1": {
+          "description": ""
+        },
+        "MOD-2.A.1": {
+          "description": ""
+        },
+        "MOD-2.A.2": {
+          "description": ""
+        },
+        "MOD-2.A.3": {
+          "description": ""
+        },
+        "MOD-2.A.4": {
+          "description": ""
+        },
+        "MOD-2.A.5": {
+          "description": ""
+        },
+        "MOD-2.A.6": {
+          "description": ""
+        },
+        "MOD-2.B.1": {
+          "description": ""
+        },
+        "MOD-2.B.2": {
+          "description": ""
+        },
+        "MOD-2.B.3": {
+          "description": ""
+        },
+        "MOD-2.B.4": {
+          "description": ""
+        },
+        "MOD-2.B.5": {
+          "description": ""
+        },
+        "MOD-2.C.1": {
+          "description": ""
+        },
+        "MOD-2.C.2": {
+          "description": ""
+        },
+        "MOD-2.C.3": {
+          "description": ""
+        },
+        "MOD-2.C.4": {
+          "description": ""
+        },
+        "MOD-2.C.5": {
+          "description": ""
+        },
+        "MOD-2.D.1": {
+          "description": ""
+        },
+        "MOD-2.D.2": {
+          "description": ""
+        },
+        "MOD-2.D.3": {
+          "description": ""
+        },
+        "MOD-2.D.4": {
+          "description": ""
+        },
+        "MOD-2.D.5": {
+          "description": ""
+        },
+        "MOD-2.D.6": {
+          "description": ""
+        },
+        "MOD-2.D.7": {
+          "description": ""
+        },
+        "MOD-2.E.1": {
+          "description": ""
+        },
+        "MOD-2.E.2": {
+          "description": ""
+        },
+        "MOD-2.F.1": {
+          "description": ""
+        },
+        "MOD-2.F.2": {
+          "description": ""
+        },
+        "MOD-2.F.3": {
+          "description": ""
+        },
+        "MOD-2.F.4": {
+          "description": ""
+        },
+        "MOD-2.F.5": {
+          "description": ""
+        },
+        "MOD-2.F.6": {
+          "description": ""
+        },
+        "MOD-2.G.1": {
+          "description": ""
+        },
+        "MOD-2.G.2": {
+          "description": ""
+        },
+        "MOD-2.G.3": {
+          "description": ""
+        },
+        "MOD-2.G.4": {
+          "description": ""
+        },
+        "MOD-2.G.5": {
+          "description": ""
+        },
+        "MOD-2.H.1": {
+          "description": ""
+        },
+        "MOD-2.H.2": {
+          "description": ""
+        },
+        "MOD-2.H.3": {
+          "description": ""
+        },
+        "MOD-3.A.1": {
+          "description": ""
+        },
+        "MOD-3.A.2": {
+          "description": ""
+        },
+        "MOD-3.A.3": {
+          "description": ""
+        },
+        "MOD-3.A.4": {
+          "description": ""
+        },
+        "MOD-3.B.1": {
+          "description": ""
+        },
+        "MOD-3.B.10": {
+          "description": ""
+        },
+        "MOD-3.B.11": {
+          "description": ""
+        },
+        "MOD-3.B.12": {
+          "description": ""
+        },
+        "MOD-3.B.13": {
+          "description": ""
+        },
+        "MOD-3.B.14": {
+          "description": ""
+        },
+        "MOD-3.B.15": {
+          "description": ""
+        },
+        "MOD-3.B.2": {
+          "description": ""
+        },
+        "MOD-3.B.3": {
+          "description": ""
+        },
+        "MOD-3.B.4": {
+          "description": ""
+        },
+        "MOD-3.B.5": {
+          "description": ""
+        },
+        "MOD-3.B.6": {
+          "description": ""
+        },
+        "MOD-3.B.7": {
+          "description": ""
+        },
+        "MOD-3.B.8": {
+          "description": ""
+        },
+        "MOD-3.B.9": {
+          "description": ""
+        },
+        "MOD-3.C.1": {
+          "description": ""
+        },
+        "MOD-3.C.2": {
+          "description": ""
+        },
+        "MOD-3.C.3": {
+          "description": ""
+        },
+        "MOD-3.C.4": {
+          "description": ""
+        },
+        "MOD-3.D.1": {
+          "description": ""
+        },
+        "MOD-3.D.2": {
+          "description": ""
+        },
+        "MOD-3.D.3": {
+          "description": ""
+        },
+        "MOD-3.E.1": {
+          "description": ""
+        },
+        "MOD-3.E.2": {
+          "description": ""
+        },
+        "MOD-3.E.3": {
+          "description": ""
+        },
+        "MOD-3.E.4": {
+          "description": ""
+        },
+        "MP.1": {
+          "description": ""
+        },
+        "MP.2": {
+          "description": ""
+        },
+        "MP.3": {
+          "description": ""
+        },
+        "MP.4": {
+          "description": ""
+        },
+        "MP.5": {
+          "description": ""
+        },
+        "MP.6": {
+          "description": ""
+        },
+        "MP.7": {
+          "description": ""
+        },
+        "MP.8": {
+          "description": ""
+        },
+        "MS-ESS1-1": {
+          "description": ""
+        },
+        "MS-ESS1-2": {
+          "description": ""
+        },
+        "MS-ESS1-3": {
+          "description": ""
+        },
+        "MS-ESS1-4": {
+          "description": ""
+        },
+        "MS-ESS2-1": {
+          "description": ""
+        },
+        "MS-ESS2-2": {
+          "description": ""
+        },
+        "MS-ESS2-3": {
+          "description": ""
+        },
+        "MS-ESS2-4": {
+          "description": ""
+        },
+        "MS-ESS2-5": {
+          "description": ""
+        },
+        "MS-ESS2-6": {
+          "description": ""
+        },
+        "MS-ESS3-1": {
+          "description": ""
+        },
+        "MS-ESS3-2": {
+          "description": ""
+        },
+        "MS-ESS3-3": {
+          "description": ""
+        },
+        "MS-ESS3-4": {
+          "description": ""
+        },
+        "MS-ESS3-5": {
+          "description": ""
+        },
+        "MS-ETS1-1": {
+          "description": ""
+        },
+        "MS-ETS1-2": {
+          "description": ""
+        },
+        "MS-ETS1-3": {
+          "description": ""
+        },
+        "MS-ETS1-4": {
+          "description": ""
+        },
+        "MS-LS1-1": {
+          "description": ""
+        },
+        "MS-LS1-2": {
+          "description": ""
+        },
+        "MS-LS1-3": {
+          "description": ""
+        },
+        "MS-LS1-4": {
+          "description": ""
+        },
+        "MS-LS1-5": {
+          "description": ""
+        },
+        "MS-LS1-6": {
+          "description": ""
+        },
+        "MS-LS1-7": {
+          "description": ""
+        },
+        "MS-LS1-8": {
+          "description": ""
+        },
+        "MS-LS2-1": {
+          "description": ""
+        },
+        "MS-LS2-2": {
+          "description": ""
+        },
+        "MS-LS2-3": {
+          "description": ""
+        },
+        "MS-LS2-4": {
+          "description": ""
+        },
+        "MS-LS2-5": {
+          "description": ""
+        },
+        "MS-LS3-1": {
+          "description": ""
+        },
+        "MS-LS3-2": {
+          "description": ""
+        },
+        "MS-LS4-1": {
+          "description": ""
+        },
+        "MS-LS4-2": {
+          "description": ""
+        },
+        "MS-LS4-3": {
+          "description": ""
+        },
+        "MS-LS4-4": {
+          "description": ""
+        },
+        "MS-LS4-5": {
+          "description": ""
+        },
+        "MS-LS4-6": {
+          "description": ""
+        },
+        "MS-PS1-1": {
+          "description": ""
+        },
+        "MS-PS1-2": {
+          "description": ""
+        },
+        "MS-PS1-3": {
+          "description": ""
+        },
+        "MS-PS1-4": {
+          "description": ""
+        },
+        "MS-PS1-5": {
+          "description": ""
+        },
+        "MS-PS1-6": {
+          "description": ""
+        },
+        "MS-PS2-1": {
+          "description": ""
+        },
+        "MS-PS2-2": {
+          "description": ""
+        },
+        "MS-PS2-3": {
+          "description": ""
+        },
+        "MS-PS2-4": {
+          "description": ""
+        },
+        "MS-PS2-5": {
+          "description": ""
+        },
+        "MS-PS3-1": {
+          "description": ""
+        },
+        "MS-PS3-2": {
+          "description": ""
+        },
+        "MS-PS3-3": {
+          "description": ""
+        },
+        "MS-PS3-4": {
+          "description": ""
+        },
+        "MS-PS3-5": {
+          "description": ""
+        },
+        "MS-PS4-1": {
+          "description": ""
+        },
+        "MS-PS4-2": {
+          "description": ""
+        },
+        "MS-PS4-3": {
+          "description": ""
+        },
+        "N.CN.1": {
+          "description": ""
+        },
+        "N.CN.2": {
+          "description": ""
+        },
+        "N.CN.3": {
+          "description": ""
+        },
+        "N.CN.4": {
+          "description": ""
+        },
+        "N.CN.5": {
+          "description": ""
+        },
+        "N.CN.6": {
+          "description": ""
+        },
+        "N.CN.7": {
+          "description": ""
+        },
+        "N.CN.8": {
+          "description": ""
+        },
+        "N.CN.9": {
+          "description": ""
+        },
+        "N.Q.1": {
+          "description": ""
+        },
+        "N.Q.2": {
+          "description": ""
+        },
+        "N.Q.3": {
+          "description": ""
+        },
+        "N.RN.1": {
+          "description": ""
+        },
+        "N.RN.2": {
+          "description": ""
+        },
+        "N.RN.3": {
+          "description": ""
+        },
+        "N.VM.1": {
+          "description": ""
+        },
+        "N.VM.10": {
+          "description": ""
+        },
+        "N.VM.11": {
+          "description": ""
+        },
+        "N.VM.12": {
+          "description": ""
+        },
+        "N.VM.2": {
+          "description": ""
+        },
+        "N.VM.3": {
+          "description": ""
+        },
+        "N.VM.4": {
+          "description": ""
+        },
+        "N.VM.4.a": {
+          "description": ""
+        },
+        "N.VM.4.b": {
+          "description": ""
+        },
+        "N.VM.4.c": {
+          "description": ""
+        },
+        "N.VM.5": {
+          "description": ""
+        },
+        "N.VM.5.a": {
+          "description": ""
+        },
+        "N.VM.5.b": {
+          "description": ""
+        },
+        "N.VM.6": {
+          "description": ""
+        },
+        "N.VM.7": {
+          "description": ""
+        },
+        "N.VM.8": {
+          "description": ""
+        },
+        "N.VM.9": {
+          "description": ""
+        },
+        "S.CP.1": {
+          "description": ""
+        },
+        "S.CP.2": {
+          "description": ""
+        },
+        "S.CP.3": {
+          "description": ""
+        },
+        "S.CP.4": {
+          "description": ""
+        },
+        "S.CP.5": {
+          "description": ""
+        },
+        "S.CP.6": {
+          "description": ""
+        },
+        "S.CP.7": {
+          "description": ""
+        },
+        "S.CP.8": {
+          "description": ""
+        },
+        "S.CP.9": {
+          "description": ""
+        },
+        "S.IC.1": {
+          "description": ""
+        },
+        "S.IC.2": {
+          "description": ""
+        },
+        "S.IC.3": {
+          "description": ""
+        },
+        "S.IC.4": {
+          "description": ""
+        },
+        "S.IC.5": {
+          "description": ""
+        },
+        "S.IC.6": {
+          "description": ""
+        },
+        "S.ID.1": {
+          "description": ""
+        },
+        "S.ID.2": {
+          "description": ""
+        },
+        "S.ID.3": {
+          "description": ""
+        },
+        "S.ID.4": {
+          "description": ""
+        },
+        "S.ID.5": {
+          "description": ""
+        },
+        "S.ID.6": {
+          "description": ""
+        },
+        "S.ID.6.a": {
+          "description": ""
+        },
+        "S.ID.6.b": {
+          "description": ""
+        },
+        "S.ID.6.c": {
+          "description": ""
+        },
+        "S.ID.7": {
+          "description": ""
+        },
+        "S.ID.8": {
+          "description": ""
+        },
+        "S.ID.9": {
+          "description": ""
+        },
+        "S.MD.1": {
+          "description": ""
+        },
+        "S.MD.2": {
+          "description": ""
+        },
+        "S.MD.3": {
+          "description": ""
+        },
+        "S.MD.4": {
+          "description": ""
+        },
+        "S.MD.5": {
+          "description": ""
+        },
+        "S.MD.5.a": {
+          "description": ""
+        },
+        "S.MD.5.b": {
+          "description": ""
+        },
+        "S.MD.6": {
+          "description": ""
+        },
+        "S.MD.7": {
+          "description": ""
+        },
+        "VAR-1.A.1": {
+          "description": ""
+        },
+        "VAR-1.B.1": {
+          "description": ""
+        },
+        "VAR-1.B.2": {
+          "description": ""
+        },
+        "VAR-1.B.3": {
+          "description": ""
+        },
+        "VAR-1.C.1": {
+          "description": ""
+        },
+        "VAR-1.C.2": {
+          "description": ""
+        },
+        "VAR-1.C.3": {
+          "description": ""
+        },
+        "VAR-1.C.4": {
+          "description": ""
+        },
+        "VAR-1.D.1": {
+          "description": ""
+        },
+        "VAR-1.D.2": {
+          "description": ""
+        },
+        "VAR-1.E.1": {
+          "description": ""
+        },
+        "VAR-1.E.10": {
+          "description": ""
+        },
+        "VAR-1.E.11": {
+          "description": ""
+        },
+        "VAR-1.E.12": {
+          "description": ""
+        },
+        "VAR-1.E.13": {
+          "description": ""
+        },
+        "VAR-1.E.2": {
+          "description": ""
+        },
+        "VAR-1.E.3": {
+          "description": ""
+        },
+        "VAR-1.E.4": {
+          "description": ""
+        },
+        "VAR-1.E.5": {
+          "description": ""
+        },
+        "VAR-1.E.6": {
+          "description": ""
+        },
+        "VAR-1.E.7": {
+          "description": ""
+        },
+        "VAR-1.E.8": {
+          "description": ""
+        },
+        "VAR-1.E.9": {
+          "description": ""
+        },
+        "VAR-1.F.1": {
+          "description": ""
+        },
+        "VAR-1.F.2": {
+          "description": ""
+        },
+        "VAR-1.F.3": {
+          "description": ""
+        },
+        "VAR-1.F.4": {
+          "description": ""
+        },
+        "VAR-1.F.5": {
+          "description": ""
+        },
+        "VAR-1.F.6": {
+          "description": ""
+        },
+        "VAR-1.F.7": {
+          "description": ""
+        },
+        "VAR-1.G.1": {
+          "description": ""
+        },
+        "VAR-1.G.2": {
+          "description": ""
+        },
+        "VAR-1.G.3": {
+          "description": ""
+        },
+        "VAR-1.G.4": {
+          "description": ""
+        },
+        "VAR-1.H.1": {
+          "description": ""
+        },
+        "VAR-1.H.2": {
+          "description": ""
+        },
+        "VAR-2.A.1": {
+          "description": ""
+        },
+        "VAR-2.A.2": {
+          "description": ""
+        },
+        "VAR-2.A.3": {
+          "description": ""
+        },
+        "VAR-2.A.4": {
+          "description": ""
+        },
+        "VAR-2.A.5": {
+          "description": ""
+        },
+        "VAR-2.A.6": {
+          "description": ""
+        },
+        "VAR-2.A.7": {
+          "description": ""
+        },
+        "VAR-2.B.1": {
+          "description": ""
+        },
+        "VAR-2.B.2": {
+          "description": ""
+        },
+        "VAR-2.B.3": {
+          "description": ""
+        },
+        "VAR-2.C.1": {
+          "description": ""
+        },
+        "VAR-2.C.2": {
+          "description": ""
+        },
+        "VAR-2.C.3": {
+          "description": ""
+        },
+        "VAR-2.C.4": {
+          "description": ""
+        },
+        "VAR-2.D.1": {
+          "description": ""
+        },
+        "VAR-2.D.2": {
+          "description": ""
+        },
+        "VAR-2.D.3": {
+          "description": ""
+        },
+        "VAR-2.D.4": {
+          "description": ""
+        },
+        "VAR-2.D.5": {
+          "description": ""
+        },
+        "VAR-2.D.6": {
+          "description": ""
+        },
+        "VAR-2.D.7": {
+          "description": ""
+        },
+        "VAR-2.E.1": {
+          "description": ""
+        },
+        "VAR-2.E.2": {
+          "description": ""
+        },
+        "VAR-2.E.3": {
+          "description": ""
+        },
+        "VAR-2.E.4": {
+          "description": ""
+        },
+        "VAR-2.F.1": {
+          "description": ""
+        },
+        "VAR-2.F.2": {
+          "description": ""
+        },
+        "VAR-2.F.3": {
+          "description": ""
+        },
+        "VAR-2.F.4": {
+          "description": ""
+        },
+        "VAR-2.F.5": {
+          "description": ""
+        },
+        "VAR-2.G.1": {
+          "description": ""
+        },
+        "VAR-2.G.2": {
+          "description": ""
+        },
+        "VAR-2.G.3": {
+          "description": ""
+        }
+      }
+    }
+  }
 }
