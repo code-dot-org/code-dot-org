@@ -13,11 +13,11 @@ bn:
     passwords:
       updated_not_active: আপনার পাসওয়ার্ডটি সফলভাবে পরিবর্তন করা হয়েছে।
   errors:
+    invitations:
+      edit:
+        submit_button: আমার গুপ্ত-সংকেত (পাসওয়ার্ড) নির্ধারণ করুন
+      new:
+        header: আমন্ত্রণ প্রেরণ করুন
     messages:
       not_found: খুঁজে পাওয়া যায়নি
       not_locked: তালাবদ্ধ ছিল না
-    invitations:
-      new:
-        header: আমন্ত্রণ প্রেরণ করুন
-      edit:
-        submit_button: আমার গুপ্ত-সংকেত (পাসওয়ার্ড) নির্ধারণ করুন
