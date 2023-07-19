@@ -86,3 +86,20 @@
     max-width: 300px;
   }
 }
+
+.deprecated-course-page {
+  margin-bottom: 100px;
+
+  .deprecated-course-child {
+    display: inline-block;
+    max-width: 500px;
+  }
+
+  .deprecated-course-button {
+    margin-top: 0;
+  }
+
+  .deprecated-course-heading {
+    margin-top: 0;
+  }
+}

@@ -1,13 +1,9 @@
-.not-found-page
+.not-found-page.deprecated-course-page
   .error-parent
-    .error-child
-      %img{src: '/shared/images/sad-bee-avatar.png', alt: 'A sad bee'}
-      %br
+    .deprecated-course-child
+      %img{src: '/shared/images/happy_penguin.png', alt: 'A happy cartoon penguin'}
       .error-message
-        %h1= I18n.t('course_deprecated.title')
-        = I18n.t('course_deprecated.description')
-        %br
-        %br
+        %h1.deprecated-course-heading= I18n.t('course_deprecated.title')
         %a{href: '/'}
-          %button= I18n.t('course_deprecated.button')
-          // update href (a tag surrounding button invalid?
+          %button.deprecated-course-button= I18n.t('course_deprecated.button')
+          // update href (a tag surrounding button invalid? should just be a tag)
