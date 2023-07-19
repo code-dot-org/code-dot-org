@@ -1,28 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CourseOfferingEditor from '@cdo/apps/lib/levelbuilder/CourseOfferingEditor';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(showCourseOfferingEditor);
 
 function showCourseOfferingEditor() {
-  const scriptData = document.querySelector(
-    'script[data-course-offering-editor]'
-  );
-  const courseOfferingEditorData = JSON.parse(
-    scriptData.dataset.courseOfferingEditor
+  const courseOfferingEditorData = getScriptData('courseOfferingEditor');
+
+  const selfPacedPLCourseOfferings = getScriptData(
+    'selfPacedPlCourseOfferings'
   );
 
-  const scriptSelfPacedData = document.querySelector(
-    'script[data-self-paced-pl-course-offerings]'
-  );
-  const selfPacedPLCourseOfferings = JSON.parse(
-    scriptSelfPacedData.dataset.selfPacedPlCourseOfferings
-  );
-  const scriptPlPaths = document.querySelector(
-    'script[data-professional-learning-program-paths]'
-  );
-  const professionalLearningProgramPaths = JSON.parse(
-    scriptPlPaths.dataset.professionalLearningProgramPaths
+  const professionalLearningProgramPaths = getScriptData(
+    'professionalLearningProgramPaths'
   );
 
   ReactDOM.render(
