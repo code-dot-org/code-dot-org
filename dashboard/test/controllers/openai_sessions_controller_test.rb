@@ -3,6 +3,12 @@ require 'test_helper'
 class OpenaiSessionsControllerTest < ActionController::TestCase
   include OpenaiChatHelper
 
+  setup do
+    response = Net::HTTPResponse.new(nil, '200', nil)
+    OpenaiChatHelper.stubs(:request_chat_completion).returns(response)
+    OpenaiChatHelper.stubs(:get_chat_completion_response_message).returns({})
+  end
+
   # User without ai_chat_access is unable to access the chat completion endpoint
   test_user_gets_response_for :chat_completion,
   user: :levelbuilder,
@@ -18,9 +24,6 @@ class OpenaiSessionsControllerTest < ActionController::TestCase
   response: :bad_request
 
   # With ai_chat_access, a post request with a messages param returns a success
-  response = Net::HTTPResponse.new(nil, '200', nil)
-  OpenaiChatHelper.stubs(:request_chat_completion).returns(response)
-  OpenaiChatHelper.stubs(:get_chat_completion_response_message).returns({})
   test_user_gets_response_for :chat_completion,
   user: :ai_chat_access,
   method: :post,
