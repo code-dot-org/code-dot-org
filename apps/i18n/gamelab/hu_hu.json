@@ -1,10 +1,10 @@
 {
   "dropletBlock_createSprite_param2": "szélesség",
   "dropletBlock_createSprite_param3": "magasság",
-  "dropletBlock_setCollider_param0": "típus",
-  "dropletBlock_setCollider_param4": "magasság",
   "dropletBlock_setColliderEach_param0": "típus",
   "dropletBlock_setColliderEach_param4": "magasság",
+  "dropletBlock_setCollider_param0": "típus",
+  "dropletBlock_setCollider_param4": "magasság",
   "reinfFeedbackMsg": "Befejezted! Nyomd meg a \"Folytatást\" hogy tovább tudj lépni a következő szintre.",
   "shareGame": "Oszd meg a játékodat:"
 }

@@ -1,7 +1,7 @@
 {
   "addCSSButton": "เพิ่ม CSS",
-  "addImageButton": "เพิ่มรูปภาพ",
   "addHTMLButton": "เพิ่ม HTML",
+  "addImageButton": "เพิ่มรูปภาพ",
   "closeFullscreenPreview": "ปิดการแสดงตัวอย่างเต็มหน้าจอ",
   "currentProjectCapacity": "ใช้แล้ว {currentMegabytes}MB จาก {totalMegabytes}MB",
   "disallowedHtml": "ไฟล์ \"{filename}\" มีองค์ประกอบ HTML ที่ไม่ได้รับอนุญาต: `{disallowedTags}`พวกเขาจะถูกลบออกเมื่อกล่องโต้ตอบนี้ถูกปิด",
@@ -14,8 +14,8 @@
   "reset": "รีเซ็ตห้องปฏิบัติการเว็บ",
   "resetComplete": "รีเซ็ตห้องปฏิบัติการเว็บเสร็จสมบูรณ์",
   "resetFailure": "ไม่สามารถรีเซ็ตห้องปฏิบัติการเว็บ: {message}",
-  "toggleInspectorOn": "สารวัตร: ปิด",
   "toggleInspectorOff": "สารวัตร: เปิด",
+  "toggleInspectorOn": "สารวัตร: ปิด",
   "troubleshootingSupport": "โปรดดูบทความสนับสนุนของเรา [\"การแก้ไขปัญหา Web Lab\"]({url}) สำหรับข้อมูลเพิ่มเติม",
   "uploadError": "ข้อผิดพลาดในการอัพโหลด"
 }

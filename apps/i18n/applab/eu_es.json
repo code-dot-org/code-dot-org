@@ -7,7 +7,6 @@
   "catProcedures": "Funtzioak",
   "catText": "Testua",
   "catVariables": "Aldagaiak",
-  "designWorkspaceHeader": "Lan eremua: ",
   "designElementEvent_input": "Sarrera",
   "designElementProperty_image": "irudia",
   "designElementProperty_index": "indizea",
@@ -17,6 +16,7 @@
   "designElementProperty_zOrder": "sakonera",
   "designElementTheme_classic": "Klasikoa",
   "designElementTheme_default": "Lehenetsia",
+  "designWorkspaceHeader": "Lan eremua: ",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param4": "Altuera",
   "dropletBlock_penRGB_param3": "a",
@@ -29,7 +29,7 @@
   "nextLevel": "Zorionak! Ariketa hau amaitu duzu.",
   "no": "Ez",
   "numBlocksNeeded": "Ariketa hau %1 blokerekin ebatz daiteke.",
-  "repeatForever": "errepikatu betirako",
   "repeatDo": "egin",
+  "repeatForever": "errepikatu betirako",
   "yes": "Bai"
 }
