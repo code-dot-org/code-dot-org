@@ -2,73 +2,18 @@
   "hr-HR": {
     "data": {
       "programming_environments": {
-        "gamelab": {
-          "name": "Game Lab",
-          "categories": {
-            "game_lab": {
-              "name": "Game Lab"
-            },
-            "sprites": {
-              "name": "Likovi"
-            },
-            "groups": {
-              "name": "Grupe",
-              "expressions": {
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Boja"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Boja"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematika",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Vraća najmanji broj"
-                    },
-                    "max": {
-                      "description": "Vraća najveći broj"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Vraća najmanji broj"
-                    },
-                    "max": {
-                      "description": "Vraća najveći broj"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Varijable"
-            },
-            "functions": {
-              "name": "Funkcije"
-            }
-          }
-        },
         "applab": {
-          "name": "Laboratorij aplikacija",
           "categories": {
-            "ui_controls": {
+            "advanced": {
+              "name": "Napredno"
+            },
+            "canvas": {
+            },
+            "circuit": {
+            },
+            "control": {
               "expressions": {
-                "onEvent": {
+                "timedLoop": {
                   "palette_params": {
                     "callback": {
                       "type": "Funkcija"
@@ -88,9 +33,43 @@
                 }
               }
             },
-            "control": {
+            "functions": {
+              "name": "Funkcije"
+            },
+            "maker": {
+            },
+            "math": {
               "expressions": {
-                "timedLoop": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Vraća najveći broj"
+                    },
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Vraća najveći broj"
+                    },
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    }
+                  }
+                }
+              },
+              "name": "Matematika"
+            },
+            "micro_bit": {
+            },
+            "turtle": {
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
                   "palette_params": {
                     "callback": {
                       "type": "Funkcija"
@@ -99,83 +78,294 @@
                 }
               }
             },
-            "math": {
-              "name": "Matematika",
+            "variables": {
+              "name": "Varijable"
+            }
+          },
+          "name": "Laboratorij aplikacija"
+        },
+        "gamelab": {
+          "categories": {
+            "control": {
               "expressions": {
-                "randomNumber_min_max": {
+              }
+            },
+            "drawing": {
+              "expressions": {
+              }
+            },
+            "functions": {
+              "expressions": {
+              },
+              "name": "Funkcije"
+            },
+            "game_lab": {
+              "expressions": {
+              },
+              "name": "Game Lab"
+            },
+            "groups": {
+              "expressions": {
+                "setColorEach": {
                   "palette_params": {
-                    "min": {
-                      "description": "Vraća najmanji broj"
-                    },
-                    "max": {
-                      "description": "Vraća najveći broj"
+                    "color": {
+                      "type": "Boja"
                     }
                   }
                 },
-                "randomNumber": {
+                "setTintEach": {
                   "palette_params": {
-                    "min": {
-                      "description": "Vraća najmanji broj"
-                    },
-                    "max": {
-                      "description": "Vraća najveći broj"
+                    "color": {
+                      "type": "Boja"
                     }
                   }
                 }
-              }
+              },
+              "name": "Grupe"
             },
-            "variables": {
-              "name": "Varijable"
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Vraća najveći broj"
+                    },
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Vraća najveći broj"
+                    },
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    }
+                  }
+                }
+              },
+              "name": "Matematika"
             },
-            "functions": {
-              "name": "Funkcije"
-            },
-            "advanced": {
-              "name": "Napredno"
-            }
-          }
-        },
-        "spritelab": {
-          "name": "Lab likova",
-          "categories": {
             "sprites": {
+              "expressions": {
+              },
               "name": "Likovi"
             },
-            "world": {
-              "name": "Svijet"
-            },
-            "location": {
-              "name": "Lokacije"
-            },
+            "variables": {
+              "expressions": {
+              },
+              "name": "Varijable"
+            }
+          },
+          "name": "Game Lab"
+        },
+        "spritelab": {
+          "categories": {
             "actions": {
               "name": "Akcije"
-            },
-            "events": {
-              "name": "Događaji"
             },
             "behaviors": {
               "name": "Ponašanja"
             },
-            "loops": {
-              "name": "Petlje"
+            "comments": {
+              "name": "Komentari"
             },
-            "variables": {
-              "name": "Varijable"
-            },
-            "math": {
-              "name": "Matematika"
-            },
-            "logic": {
-              "name": "Logika"
+            "events": {
+              "name": "Događaji"
             },
             "functions": {
               "name": "Funkcije"
             },
+            "location": {
+              "name": "Lokacije"
+            },
+            "logic": {
+              "name": "Logika"
+            },
+            "loops": {
+              "name": "Petlje"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "sprites": {
+              "name": "Likovi"
+            },
             "text": {
               "name": "tekst"
             },
-            "comments": {
-              "name": "Komentari"
+            "variables": {
+              "name": "Varijable"
+            },
+            "world": {
+              "name": "Svijet"
+            }
+          },
+          "name": "Lab likova"
+        },
+        "weblab": {
+          "categories": {
+            "css_properties": {
+              "expressions": {
+                "Text-Dec": {
+                  "examples": {
+                  }
+                },
+                "background-color": {
+                  "examples": {
+                  }
+                },
+                "border": {
+                  "examples": {
+                  }
+                },
+                "border-bottom": {
+                  "examples": {
+                  }
+                },
+                "border-color": {
+                  "examples": {
+                  }
+                },
+                "border-left": {
+                  "examples": {
+                  }
+                },
+                "border-radius": {
+                  "examples": {
+                  }
+                },
+                "border-right": {
+                  "examples": {
+                  }
+                },
+                "border-style": {
+                  "examples": {
+                  }
+                },
+                "border-top": {
+                  "examples": {
+                  }
+                },
+                "border-width": {
+                  "examples": {
+                  }
+                },
+                "color": {
+                  "examples": {
+                  }
+                },
+                "float": {
+                  "examples": {
+                  }
+                },
+                "font-family": {
+                  "examples": {
+                  }
+                },
+                "font-size": {
+                  "examples": {
+                  }
+                },
+                "height": {
+                  "examples": {
+                  }
+                },
+                "margin": {
+                  "examples": {
+                  }
+                },
+                "pad": {
+                  "examples": {
+                  }
+                },
+                "pseudo-classes": {
+                  "examples": {
+                  }
+                },
+                "rgb-color": {
+                  "examples": {
+                  }
+                },
+                "width": {
+                  "examples": {
+                  }
+                }
+              }
+            },
+            "html_tags": {
+              "expressions": {
+                "A": {
+                  "examples": {
+                  }
+                },
+                "P": {
+                  "examples": {
+                  }
+                },
+                "body": {
+                  "examples": {
+                  }
+                },
+                "comment": {
+                  "examples": {
+                  }
+                },
+                "div": {
+                  "examples": {
+                  }
+                },
+                "doctype": {
+                  "examples": {
+                  }
+                },
+                "h": {
+                  "examples": {
+                  }
+                },
+                "head": {
+                  "examples": {
+                  }
+                },
+                "html": {
+                  "examples": {
+                  }
+                },
+                "img": {
+                  "examples": {
+                  }
+                },
+                "li": {
+                  "examples": {
+                  }
+                },
+                "link": {
+                  "examples": {
+                  }
+                },
+                "meta": {
+                  "examples": {
+                  }
+                },
+                "ol": {
+                  "examples": {
+                  }
+                },
+                "style": {
+                  "examples": {
+                  }
+                },
+                "title": {
+                  "examples": {
+                  }
+                },
+                "ul": {
+                  "examples": {
+                  }
+                }
+              }
             }
           }
         }
