@@ -13,7 +13,9 @@
     "./src/util/**/*.js*",
     "./src/templates/**/*.js*",
     "./src/code-studio/pd/components/*.js*",
-    "./src/code-studio/*.js"
+    "./src/code-studio/*.js",
+    "./test/**/*.ts",
+    "./test/**/*.tsx",
   ],
   "compilerOptions": {
     "jsx": "react",

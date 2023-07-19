@@ -49,7 +49,7 @@ export default class MusicBlocklyWorkspace {
       theme: CdoDarkTheme,
       renderer: experiments.isEnabled('zelos')
         ? Renderers.ZELOS
-        : Renderers.THRASOS,
+        : Renderers.DEFAULT,
       noFunctionBlockFrame: true,
       zoom: {
         startScale: experiments.isEnabled('zelos') ? 0.9 : 1,
