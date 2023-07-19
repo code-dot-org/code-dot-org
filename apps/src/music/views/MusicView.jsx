@@ -177,7 +177,7 @@ class UnconnectedMusicView extends React.Component {
       this.analyticsReporter.endSession();
     });
 
-    if (this.props.appName === 'music' || this.props.inIncubator) {
+    if (this.props.appName === 'music') {
       this.onLevelLoad(this.props.levelData, this.props.initialSources);
     }
   }
@@ -222,7 +222,7 @@ class UnconnectedMusicView extends React.Component {
     if (
       (!isEqual(prevProps.levelData, this.props.levelData) ||
         !isEqual(prevProps.initialSources, this.props.initialSources)) &&
-      (this.props.appName === 'music' || this.props.inIncubator)
+      this.props.appName === 'music'
     ) {
       this.onLevelLoad(this.props.levelData, this.props.initialSources);
     }
