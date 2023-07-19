@@ -25,6 +25,6 @@ class OpenaiSessionsController < ApplicationController
     }
 
     response = OpenaiChatHelper.request_chat_completion(headers, data)
-    OpenaiChatHelper.get_chat_completion_response_message(response)
+    render json: OpenaiChatHelper.get_chat_completion_response_message(response)
   end
 end
