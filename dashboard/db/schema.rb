@@ -638,8 +638,8 @@ ActiveRecord::Schema.define(version: 2023_07_13_141627) do
   end
 
   create_table "learning_goal_evidence_levels", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.integer "learning_goal_id"
-    t.integer "understanding"
+    t.integer "learning_goal_id", null: false
+    t.integer "understanding", null: false
     t.text "teacher_description"
     t.text "ai_prompt"
     t.datetime "created_at", precision: 6, null: false
@@ -648,9 +648,9 @@ ActiveRecord::Schema.define(version: 2023_07_13_141627) do
   end
 
   create_table "learning_goals", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.string "key"
+    t.string "key", null: false
     t.integer "position"
-    t.integer "rubric_id"
+    t.integer "rubric_id", null: false
     t.string "learning_goal"
     t.boolean "ai_enabled"
     t.text "tips"
@@ -1619,12 +1619,11 @@ ActiveRecord::Schema.define(version: 2023_07_13_141627) do
   end
 
   create_table "rubrics", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.integer "lesson_id"
-    t.integer "level_id"
+    t.integer "lesson_id", null: false
+    t.integer "level_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["lesson_id"], name: "index_rubrics_on_lesson_id", unique: true
-    t.index ["level_id"], name: "index_rubrics_on_level_id"
+    t.index ["lesson_id", "level_id"], name: "index_rubrics_on_lesson_id_and_level_id", unique: true
   end
 
   create_table "school_districts", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|

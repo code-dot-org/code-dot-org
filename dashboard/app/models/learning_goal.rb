@@ -3,9 +3,9 @@
 # Table name: learning_goals
 #
 #  id            :bigint           not null, primary key
-#  key           :string(255)
+#  key           :string(255)      not null
 #  position      :integer
-#  rubric_id     :integer
+#  rubric_id     :integer          not null
 #  learning_goal :string(255)
 #  ai_enabled    :boolean
 #  tips          :text(65535)
