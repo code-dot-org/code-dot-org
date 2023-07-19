@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:51:54.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -28,7 +33,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
-    "start_blocks": "rect(175, 175);\r\nfill(\"orange\");\r\nellipse(150,150);\r\nellipse(200,150);\r\nellipse(150,200);\r\nellipse(200,200);\r\nfill(\"purple\");",
+    "start_blocks": "//2) Change the code so it makes the picture in the instructions\r\n\r\nrect(175, 175);\r\nfill(\"orange\");\r\nellipse(150,150);\r\nellipse(200,150);\r\nellipse(150,200);\r\nellipse(200,200);\r\nfill(\"purple\");",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -80,13 +85,8 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:51:54.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:51:54.434+00:00\",\"changed\":[\"cloned from \\\"CSD U3 debug_2022\\\"\"],\"cloned_from\":\"CSD U3 debug_2022\"},{\"changed_at\":\"2022-10-12 16:23:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-04-26 22:06:59 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"rubric_performance_level_1\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:51:54.434+00:00\",\"changed\":[\"cloned from \\\"CSD U3 debug_2022\\\"\"],\"cloned_from\":\"CSD U3 debug_2022\"},{\"changed_at\":\"2022-10-12 16:23:37 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-04-26 22:06:59 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"rubric_performance_level_1\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-18 16:16:18 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

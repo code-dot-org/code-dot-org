@@ -475,7 +475,6 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   // If we know they succeeded, mark `levelComplete` true.
   const levelComplete = result;
 
-  // We're using blockly, report the program as JSON.
   let program = encodeURIComponent(
     Blockly.cdoUtils.getCode(Blockly.mainBlockSpace)
   );
