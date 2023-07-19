@@ -246,20 +246,35 @@ def sanitize_file_and_write(loc_path, dest_path)
 end
 
 def sanitize_data_and_write(data, dest_path)
-  sanitize! data
+  sorted_data = sort_and_sanitize(data)
 
   dest_data =
     case File.extname(dest_path)
     when '.yaml', '.yml'
-      data.to_yaml
+      sorted_data.to_yaml
     when '.json'
-      JSON.pretty_generate(data)
+      JSON.pretty_generate(sorted_data)
     else
       raise "do not know how to serialize localization data to #{dest_path}"
     end
 
   FileUtils.mkdir_p(File.dirname(dest_path))
   File.write(dest_path, dest_data)
+end
+
+def sort_and_sanitize(hash)
+  hash.sort_by {|key, _| key}.each_with_object({}) do |(key, value), result|
+    case value
+    when Hash
+      result[key] = sort_and_sanitize(value) unless value.empty?
+    when Array
+      result[key] = value.filter_map {|v| v.is_a?(Hash) ? sort_and_sanitize(v) : v}
+    when String
+      result[key] = value.gsub(/\\r/, "\r") unless value.empty?
+    else
+      result[key] = value unless value.nil?
+    end
+  end
 end
 
 # Wraps hash in correct format to be loaded by our i18n backend.

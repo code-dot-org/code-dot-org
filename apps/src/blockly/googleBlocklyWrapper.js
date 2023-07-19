@@ -202,6 +202,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('hasCategories');
   blocklyWrapper.wrapReadOnlyProperty('html');
   blocklyWrapper.wrapReadOnlyProperty('Input');
+  blocklyWrapper.wrapReadOnlyProperty('inputTypes');
   blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
   blocklyWrapper.wrapReadOnlyProperty('js');
   blocklyWrapper.wrapReadOnlyProperty('MenuItem');
@@ -549,7 +550,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
       container.style.display = 'inline-block';
       container.appendChild(svg);
       svg.appendChild(workspace.createDom());
-      Blockly.cdoUtils.loadBlocksToWorkspace(workspace, xml);
+      Blockly.cdoUtils.loadBlocksToWorkspace(
+        workspace,
+        Blockly.Xml.domToText(xml)
+      );
 
       // Loop through all the parent blocks and remove vertical translation value
       // This makes the output more condensed and readable, while preserving
