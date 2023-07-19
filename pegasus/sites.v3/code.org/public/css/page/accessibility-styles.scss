@@ -10,7 +10,7 @@
 }
 
 section.accessibility-efforts {
-
+  padding-bottom: calc(64px - 10px);
   .grid-container {
     margin-top: 5rem;
     gap: 4rem;
@@ -31,7 +31,7 @@ section.accessibility-efforts {
   }
 
   p {
-    @include body-two;
+    @include body-one;
   }
 }
 
@@ -40,5 +40,10 @@ section.accessibility-efforts {
     .flex-container {
       flex-direction: column;
     }
+  }
+}
+.text-wrapper {
+  p {
+    @include body-one;
   }
 }
