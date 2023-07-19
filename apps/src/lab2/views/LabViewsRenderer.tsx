@@ -5,11 +5,13 @@
  */
 import MusicView from '@cdo/apps/music/views/MusicView';
 import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
-import React from 'react';
+import classNames from 'classnames';
+import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {LabState} from '../lab2Redux';
 import ProgressContainer from '../progress/ProgressContainer';
 import {AppName} from '../types';
+import moduleStyles from './lab-views-renderer.module.scss';
 
 // Configuration for how a Lab should be rendered
 interface AppProperties {
@@ -40,9 +42,14 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     (state: {lab: LabState}) => state.lab.appName
   );
 
-  // TODO: Instead of rendering all known apps, render only visited apps.
-  // This will require refactoring logic around the labReadyForReload flag.
-  const appsToRender = Object.keys(appsProperties) as AppName[];
+  const [appsToRender, setAppsToRender] = useState<AppName[]>([]);
+
+  // When navigating to a new app type, add it to the list of apps to render.
+  useEffect(() => {
+    if (currentAppName && !appsToRender.includes(currentAppName)) {
+      setAppsToRender([...appsToRender, currentAppName]);
+    }
+  }, [currentAppName, appsToRender]);
 
   // Iterate through appsToRender and render Lab views for each. If
   // backgroundMode is true, the Lab view will always be rendered, but
@@ -93,11 +100,10 @@ const VisibilityContainer: React.FunctionComponent<
   return (
     <div
       id={`lab2-${appName}`}
-      style={{
-        width: '100%',
-        height: '100%',
-        visibility: visible ? 'visible' : 'hidden',
-      }}
+      className={classNames(
+        moduleStyles.visibilityContainer,
+        visible && moduleStyles.visible
+      )}
     >
       {children}
     </div>
