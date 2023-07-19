@@ -2,11 +2,43 @@
   "se-FI": {
     "data": {
       "standard_categories": {
+        "C": {
+          "description": "Jorbbát"
+        },
+        "ESS": {
+        },
+        "ESS1": {
+        },
+        "ESS2": {
+        },
+        "ESS3": {
+        },
+        "ETS": {
+        },
+        "ETS1": {
+        },
         "L": {
           "description": "Giella"
         },
-        "C": {
-          "description": "Jorbbát"
+        "LS": {
+        },
+        "LS1": {
+        },
+        "LS2": {
+        },
+        "LS3": {
+        },
+        "LS4": {
+        },
+        "PS": {
+        },
+        "PS1": {
+        },
+        "PS2": {
+        },
+        "PS3": {
+        },
+        "PS4": {
         }
       }
     }
