@@ -760,7 +760,6 @@ module LevelsHelper
       dialog: {},
       nonGlobal: true,
     }
-
     app = level.game.app
     # We can safely treat this string as HTML-safe because it's constructed
     # from levelbuilder-provided data, not user- or translator-provided.

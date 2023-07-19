@@ -5,6 +5,7 @@
   = stylesheet_link_tag 'jquery.handsontable.full', media: 'all'
   %script{src: webpack_asset_path('js/levelbuilder.js')}
   = javascript_include_tag 'jquery.handsontable.full'
+
 = form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
   = f.hidden_field :type, value: @type_class.to_s.presence || @level.type
 
