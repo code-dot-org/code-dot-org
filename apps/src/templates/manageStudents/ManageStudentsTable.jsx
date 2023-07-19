@@ -10,6 +10,7 @@ import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import ManageStudentsNameCell from './ManageStudentsNameCell';
 import ManageStudentsFamilyNameCell from './ManageStudentsFamilyNameCell';
@@ -484,7 +485,7 @@ class ManageStudentsTable extends Component {
     return {
       property: 'name',
       header: {
-        label: i18n.name(),
+        label: i18n.displayName(),
         props: {
           style: {
             ...tableLayoutStyles.headerCell,
@@ -507,13 +508,25 @@ class ManageStudentsTable extends Component {
     return {
       property: 'familyName',
       header: {
-        label: 'Family Name',
+        label: i18n.familyName(),
         props: {
           style: {
             ...tableLayoutStyles.headerCell,
           },
         },
-        transforms: [sortable],
+        transforms: [
+          (label, columnInfo) => ({
+            ...sortable(label, columnInfo),
+            children: (
+              <span>
+                {sortable(label, columnInfo).children}
+                <HelpTip>
+                  <p>{i18n.familyNameHelpTip()}</p>
+                </HelpTip>
+              </span>
+            ),
+          }),
+        ],
       },
       cell: {
         formatters: [this.familyNameFormatter],

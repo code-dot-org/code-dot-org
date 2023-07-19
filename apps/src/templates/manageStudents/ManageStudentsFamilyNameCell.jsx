@@ -36,8 +36,8 @@ class ManageStudentFamilyNameCell extends Component {
               // being set to undefined.
               value={editedValue || ''}
               onChange={this.onChangeName}
-              placeholder={i18n.familyNameForSorting()}
-              aria-label={i18n.familyNameForSorting()}
+              placeholder={i18n.familyName()}
+              aria-label={i18n.familyName()}
             />
           </div>
         )}
