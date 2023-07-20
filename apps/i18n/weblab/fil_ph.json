@@ -1,7 +1,7 @@
 {
   "addCSSButton": "Magdagdag ng CSS",
-  "addImageButton": "Magdagdag ng Imahe",
   "addHTMLButton": "Magdagdag ng HTML",
+  "addImageButton": "Magdagdag ng Imahe",
   "closeFullscreenPreview": "Isara ang preview ng buong screen",
   "currentProjectCapacity": "{currentMegabytes}MB ng {totalMegabytes}MB ang nagamit",
   "disallowedHtml": "Ang file na \"{filename}\" ay naglalaman ng mga elemento ng HTML na hindi pinapayagan: `{disallowedTags}`. Aalisin ang mga ito kapag isinara ang dialog na ito.",
@@ -14,8 +14,8 @@
   "reset": "I-reset ang Web Lab",
   "resetComplete": "Kumpleto na ang Pag-reset ng Web Lab",
   "resetFailure": "Nabigong i-reset ang Web Lab: {message}.",
-  "toggleInspectorOn": "Inspektor: Off",
   "toggleInspectorOff": "Inspektor: On",
+  "toggleInspectorOn": "Inspektor: Off",
   "troubleshootingSupport": "Pakitingnan ang aming artikulo ng suporta [\"Pag-troubleshoot ng mga problema sa Web Lab\"]({url}) para sa higit pang impormasyon.",
   "uploadError": "Error sa Pag-upload"
 }
