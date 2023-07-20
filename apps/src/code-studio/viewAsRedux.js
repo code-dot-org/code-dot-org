@@ -49,8 +49,9 @@ export const changeViewType = viewType => {
     // participant
     if (viewType === ViewType.Participant && queryParams('user_id')) {
       updateQueryParam('user_id', undefined);
+      // todo: maybe don't need to reload.
       // Make a stubbable call to window.location.reload
-      reload();
+      //reload();
       return;
     }
 
