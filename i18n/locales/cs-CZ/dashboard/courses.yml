@@ -57,21 +57,21 @@ cs:
         csd-2023:
           title: Objevování informatiky
     resources:
-      curriculum/csd/2020:
-        name: Obsah kurzu
-      teacher_forum/csd/2020:
-        name: Fórum učitelů
       curriculum/csd/2017:
         name: Obsah kurzu
       teacher_forum_6/csd/2017:
+        name: Fórum učitelů
+      curriculum/csd/2018:
+        name: Obsah kurzu
+      teacher_forum_6/csd/2018:
         name: Fórum učitelů
       curriculum/csd/2019:
         name: Obsah kurzu
       teacher_forum/csd/2019:
         name: Fórum učitelů
+      curriculum/csd/2020:
+        name: Obsah kurzu
+      teacher_forum/csd/2020:
+        name: Fórum učitelů
       getting_started_with_csd/csd/2021:
         name: Začínáme s CSD
-      curriculum/csd/2018:
-        name: Obsah kurzu
-      teacher_forum_6/csd/2018:
-        name: Fórum učitelů

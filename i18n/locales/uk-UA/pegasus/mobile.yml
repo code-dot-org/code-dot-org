@@ -898,7 +898,7 @@
   scratch_name: "Творіть програмуючи"
   lightbot_name: "Світлячок"
   thinkersmith_name: "Мої друзі-роботи"
-  condcards_name: "Листівки та умови"
+  condcards_name: "Умови з картами"
   lightbotintl_name: "Світлячок"
   codehs_name: "Навчання програмуванню з собакою Карел"
   codecademy_name: "Codecademy"
@@ -987,6 +987,7 @@
   express-2018_name: Експрес курс (2018)
   express-2019_name: Експрес курс (2019)
   express-2020_name: Експрес курс (2020)
+  express-2021_name: Експрес курс (2021)
   csd2_name: 'Блок 2: Веб-розробка'
   csd3_name: 'Блок 3: Анімація та ігри'
   accelerated_name: "Прискорений курс"
@@ -1432,6 +1433,7 @@
   compatibility_hide_this_warning: "Сховати попередження"
   compatibility_unsupported_browser: "Ваш браузер не підтримується. Оновіть свій браузер до <a href='%{supported_browsers_url}', target='_blank'>одного із підтримуваних</a>. Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть."
   compatibility_unsupported_browser_markdown: "Ваш браузер не підтримується. Оновіть свій браузер до <a href='%{supported_browsers_url}', target='_blank'>одного із підтримуваних</a>. Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть."
+  hourofcode_shortcode: "Код"
   flappy_shortcode: "махати"
   header_home: "Головна"
   header_my_dashboard: "Моя майстерня"
@@ -1505,6 +1507,7 @@
   sign_in_instruct_button: "Натисніть кнопку «Увійти»."
   reset_student_password: "Скинути паролів учнів"
   syncing_students: "Синхронізація ваших учнів"
+  hero_name: 'Minecraft: Подорож героя'
   applab_tile_title: "Вступ до App Lab (Вік13+)"
   applab_tile_subtitle: "Створіть власну аплікацію на JavaScript використовуючи блокове програмування. Або вдоскональте свої навики з текстовим програмуванням. (Лише англійською)"
   applab_tile_start_tutorial: "Початок"
@@ -1648,6 +1651,7 @@
   footer_about: "Про нас"
   footer_partners: "Партнери"
   footer_donate: "Підтримати"
+  footer_store: "Магазин"
   footer_support: "Довідка та спільнота"
   footer_terms: "Умови"
   ai_for_oceans: "Штучний інтелект для океанів"
