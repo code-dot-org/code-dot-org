@@ -4,15 +4,7 @@ import {Meta, Story} from '@storybook/react';
 
 export default {
   title: 'DesignSystem/Checkbox Component',
-  /**
-   * Storybook Docs Generation doesn't work properly (as of 07.19.2023).
-   * This workaround (component: Component.type instead of component: Component) is taken from
-   * https://github.com/storybookjs/storybook/issues/18136#issue-1225692751
-   * Feel free to remove this workaround when storybook fixes this issue.
-   */
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore-next-line
-  component: Checkbox.type,
+  component: Checkbox,
 } as Meta;
 
 //
