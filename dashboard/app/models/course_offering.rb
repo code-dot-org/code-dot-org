@@ -289,7 +289,7 @@ class CourseOffering < ApplicationRecord
   def summarize_for_catalog(locale_code = 'en-us')
     {
       key: key,
-      display_name: display_name,
+      display_name: localized_display_name,
       display_name_with_latest_year: display_name_with_latest_year(locale_code),
       grade_levels: grade_levels,
       duration: duration,

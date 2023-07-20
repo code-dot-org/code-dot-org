@@ -17,7 +17,7 @@ import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
 import SoundUploader from '../utils/SoundUploader';
-import {baseUrl, loadLibrary} from '../utils/Loader';
+import {loadLibrary} from '../utils/Loader';
 import MusicValidator from '../progress/MusicValidator';
 import Video from './Video';
 import {
@@ -53,7 +53,7 @@ import {
 } from '@cdo/apps/lab2/lab2Redux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
-import {BlockMode} from '../constants';
+import {baseAssetUrl, BlockMode} from '../constants';
 import {
   setProjectUpdatedAt,
   setProjectUpdatedError,
@@ -177,7 +177,7 @@ class UnconnectedMusicView extends React.Component {
       this.analyticsReporter.endSession();
     });
 
-    if (this.props.appName === 'music' || this.props.inIncubator) {
+    if (this.props.appName === 'music') {
       this.onLevelLoad(this.props.levelData, this.props.initialSources);
     }
   }
@@ -222,7 +222,7 @@ class UnconnectedMusicView extends React.Component {
     if (
       (!isEqual(prevProps.levelData, this.props.levelData) ||
         !isEqual(prevProps.initialSources, this.props.initialSources)) &&
-      (this.props.appName === 'music' || this.props.inIncubator)
+      this.props.appName === 'music'
     ) {
       this.onLevelLoad(this.props.levelData, this.props.initialSources);
     }
@@ -578,7 +578,7 @@ class UnconnectedMusicView extends React.Component {
             currentLevelIndex={this.props.currentLevelIndex}
             levelCount={this.getLevelCount()}
             onNextPanel={this.onNextPanel}
-            baseUrl={baseUrl}
+            baseUrl={baseAssetUrl}
             vertical={position !== InstructionsPositions.TOP}
             right={position === InstructionsPositions.RIGHT}
           />
