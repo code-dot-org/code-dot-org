@@ -1,9 +1,9 @@
 {
   "absolute": "absolútna hodnota",
+  "agentDiamondPathCongrats": "Gratulujeme k nájdeniu diamantovej cesty. Zatiaľ sa ti podarilo pozbierať  {count, plural, one {1 diamant} few {# diamanty} other {# diamantov}}!",
   "agentGenericFailureMessage": "Pokračuj v programovaní. Nezabudni využívať pomoc agenta.",
   "agentTooFewBlocksFailureMessage": "Skús pridávať bloky po jednom, aby sa agent dostal na správne miesto.",
   "at": "na",
-  "agentDiamondPathCongrats": "Gratulujeme k nájdeniu diamantovej cesty. Zatiaľ sa ti podarilo pozbierať  {count, plural, one {1 diamant} few {# diamanty} other {# diamantov}}!",
   "blockActionAdd": "pridaj",
   "blockActionAttack": "zaútoč na",
   "blockActionClone": "naklonuj bloky",

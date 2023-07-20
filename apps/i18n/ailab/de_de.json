@@ -1,15 +1,15 @@
 {
-  "selectDataset": "Wähle den Datensatz, welchen du nutzen möchtest.",
-  "uploadedDataset": "Du hast gerade einen Datensatz hochgeladen.",
-  "selectedDataset": "Du hast gerade einen Datensatz ausgewählt.",
-  "dataDisplayLabel": "Wähle eine Spalte zum Vorhersagen.",
   "dataDisplayFeatures": "Wähle eine oder mehrere Spalten als Eingabe zur Hilfe für die Vorhersage.",
-  "selectedFeatureNumerical": "Du hast gerade ein nummerisches Merkmal gewählt.",
-  "selectedFeatureCategorical": "Du hast gerade ein kategorisches Merkmal gewählt.",
-  "trainModel": "Dein Modell wird trainiert.",
+  "dataDisplayLabel": "Wähle eine Spalte zum Vorhersagen.",
   "generateResults": "Dein Modell wird getestet.",
+  "modelSummary": "Du hast dein Modell erfolgreich trainiert und gespeichert. Überprüfe die Details des Modells und klicke Beenden um dein trainiertes Modell im App Lab zu benutzen.",
   "results": "Überprüfe die Resultate.",
   "resultsDetails": "Die Details der Resultate werden angezeigt.",
   "saveModel": "Speichere das trainierte Modell für den Gebrauch im App Lab.",
-  "modelSummary": "Du hast dein Modell erfolgreich trainiert und gespeichert. Überprüfe die Details des Modells und klicke Beenden um dein trainiertes Modell im App Lab zu benutzen."
+  "selectDataset": "Wähle den Datensatz, welchen du nutzen möchtest.",
+  "selectedDataset": "Du hast gerade einen Datensatz ausgewählt.",
+  "selectedFeatureCategorical": "Du hast gerade ein kategorisches Merkmal gewählt.",
+  "selectedFeatureNumerical": "Du hast gerade ein nummerisches Merkmal gewählt.",
+  "trainModel": "Dein Modell wird trainiert.",
+  "uploadedDataset": "Du hast gerade einen Datensatz hochgeladen."
 }

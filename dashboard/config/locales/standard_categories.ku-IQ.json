@@ -2,17 +2,49 @@
   "ku-IQ": {
     "data": {
       "standard_categories": {
+        "C": {
+          "description": "بازنە"
+        },
         "CT": {
           "description": "بیرکردنەوەی ژمارەیی"
+        },
+        "ESS": {
+        },
+        "ESS1": {
+        },
+        "ESS2": {
+        },
+        "ESS3": {
+        },
+        "ETS": {
+        },
+        "ETS1": {
+        },
+        "F": {
+          "description": "فرمانەکان"
         },
         "L": {
           "description": "زمان"
         },
-        "C": {
-          "description": "بازنە"
+        "LS": {
         },
-        "F": {
-          "description": "فرمانەکان"
+        "LS1": {
+        },
+        "LS2": {
+        },
+        "LS3": {
+        },
+        "LS4": {
+        },
+        "PS": {
+        },
+        "PS1": {
+        },
+        "PS2": {
+        },
+        "PS3": {
+        },
+        "PS4": {
         }
       }
     }

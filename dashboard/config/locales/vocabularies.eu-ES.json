@@ -2,215 +2,37 @@
   "eu-ES": {
     "data": {
       "vocabularies": {
-        "debugging/minecraft/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/hero/unversioned": {
-          "word": "Arazketa"
-        },
-        "function/hero/unversioned": {
-          "word": "Funtzioa"
-        },
-        "code/poem-art/2021": {
-          "word": "Kodea"
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Arazketa"
-        },
-        "code/artist/unversioned": {
-          "word": "Kodea"
-        },
-        "debugging/artist/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Arazketa"
-        },
-        "conditionals/aquatic/unversioned": {
-          "word": "Baldintzak"
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Arazketa"
-        },
-        "loops/aquatic/unversioned": {
-          "word": "Itzuliak"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/mc/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Arazketa"
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/sports/unversioned": {
-          "word": "Kodea"
-        },
-        "debugging/sports/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/basketball/unversioned": {
-          "word": "Arazketa"
-        },
-        "debugging/coursed/2022": {
-          "word": "Arazketa"
-        },
-        "conditionals/coursed/2022": {
-          "word": "Baldintzak"
-        },
-        "variable/coursef/2022": {
-          "word": "Aldagaia"
-        },
-        "input/coursef/2022": {
+        "input/csd/2021": {
           "word": "Sarrera"
         },
-        "internet/coursef/2022": {
-          "word": "Internet"
-        },
-        "define/coursef/2022": {
-          "word": "Zehaztu"
-        },
-        "function/coursee/2022": {
-          "word": "Funtzioa"
-        },
-        "conditionals/coursee/2022": {
-          "word": "Baldintzak"
-        },
-        "copyright/coursee/2022": {
+        "copyright/csd/2021": {
           "word": "Egile-eskubideak"
         },
-        "define/coursee/2022": {
-          "word": "Zehaztu"
-        },
-        "debugging/courseb/2022": {
+        "debugging/csd/2021": {
           "word": "Arazketa"
         },
-        "drop/courseb/2022": {
-          "word": "Bota"
-        },
-        "debugging/express/2022": {
-          "word": "Arazketa"
-        },
-        "conditionals/express/2022": {
-          "word": "Baldintzak"
-        },
-        "function/express/2022": {
-          "word": "Funtzioa"
-        },
-        "variable/express/2022": {
+        "variable/csd/2021": {
           "word": "Aldagaia"
         },
-        "define/express/2022": {
-          "word": "Zehaztu"
-        },
-        "drop/pre-express/2022": {
-          "word": "Bota"
-        },
-        "debugging/pre-express/2022": {
-          "word": "Arazketa"
-        },
-        "debugging/coursea/2022": {
-          "word": "Arazketa"
-        },
-        "drop/coursea/2022": {
-          "word": "Bota"
-        },
-        "debugging/coursec/2022": {
-          "word": "Arazketa"
-        },
-        "data/coursec/2022": {
-          "word": "Datu"
-        },
-        "binary/coursec/2022": {
-          "word": "Bitarra"
-        },
-        "input/csd/2022": {
-          "word": "Sarrera"
-        },
-        "debugging/csd/2022": {
-          "word": "Arazketa"
-        },
-        "variable/csd/2022": {
-          "word": "Aldagaia"
-        },
-        "conditionals/csd/2022": {
+        "conditionals/csd/2021": {
           "word": "Baldintzak"
         },
-        "abstraction/csd/2022": {
+        "abstraction/csd/2021": {
           "word": "Abstrakzioa"
         },
-        "function/csd/2022": {
+        "function/csd/2021": {
           "word": "Funtzioa"
-        },
-        "copyright/csd/2022": {
-          "word": "Egile-eskubideak"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Kodea",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "variable/coursef/2021": {
-          "word": "Aldagaia"
-        },
-        "input/coursef/2021": {
-          "word": "Sarrera"
-        },
-        "internet/coursef/2021": {
-          "word": "Internet"
-        },
-        "define/coursef/2021": {
-          "word": "Zehaztu"
-        },
-        "debugging/courseb/2021": {
-          "word": "Arazketa"
-        },
-        "drop/courseb/2021": {
-          "word": "Bota"
         },
         "debugging/coursea/2021": {
           "word": "Arazketa"
         },
         "drop/coursea/2021": {
+          "word": "Bota"
+        },
+        "debugging/courseb/2021": {
+          "word": "Arazketa"
+        },
+        "drop/courseb/2021": {
           "word": "Bota"
         },
         "debugging/coursec/2021": {
@@ -224,6 +46,30 @@
         },
         "conditionals/coursed/2021": {
           "word": "Baldintzak"
+        },
+        "copyright/coursee/2021": {
+          "word": "Egile-eskubideak"
+        },
+        "function/coursee/2021": {
+          "word": "Funtzioa"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Baldintzak"
+        },
+        "define/coursee/2021": {
+          "word": "Zehaztu"
+        },
+        "variable/coursef/2021": {
+          "word": "Aldagaia"
+        },
+        "input/coursef/2021": {
+          "word": "Sarrera"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Zehaztu"
         },
         "debugging/express/2021": {
           "word": "Arazketa"
@@ -246,38 +92,192 @@
         "debugging/pre-express/2021": {
           "word": "Arazketa"
         },
-        "copyright/coursee/2021": {
-          "word": "Egile-eskubideak"
-        },
-        "function/coursee/2021": {
-          "word": "Funtzioa"
-        },
-        "conditionals/coursee/2021": {
-          "word": "Baldintzak"
-        },
-        "define/coursee/2021": {
-          "word": "Zehaztu"
-        },
-        "debugging/csd/2021": {
-          "word": "Arazketa"
-        },
-        "variable/csd/2021": {
-          "word": "Aldagaia"
-        },
-        "conditionals/csd/2021": {
-          "word": "Baldintzak"
-        },
-        "abstraction/csd/2021": {
-          "word": "Abstrakzioa"
-        },
-        "function/csd/2021": {
-          "word": "Funtzioa"
-        },
-        "input/csd/2021": {
+        "input/csd/2022": {
           "word": "Sarrera"
         },
-        "copyright/csd/2021": {
+        "copyright/csd/2022": {
           "word": "Egile-eskubideak"
+        },
+        "debugging/csd/2022": {
+          "word": "Arazketa"
+        },
+        "variable/csd/2022": {
+          "word": "Aldagaia"
+        },
+        "conditionals/csd/2022": {
+          "word": "Baldintzak"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstrakzioa"
+        },
+        "function/csd/2022": {
+          "word": "Funtzioa"
+        },
+        "debugging/coursea/2022": {
+          "word": "Arazketa"
+        },
+        "drop/coursea/2022": {
+          "word": "Bota"
+        },
+        "debugging/courseb/2022": {
+          "word": "Arazketa"
+        },
+        "drop/courseb/2022": {
+          "word": "Bota"
+        },
+        "debugging/coursec/2022": {
+          "word": "Arazketa"
+        },
+        "data/coursec/2022": {
+          "word": "Datu"
+        },
+        "binary/coursec/2022": {
+          "word": "Bitarra"
+        },
+        "debugging/coursed/2022": {
+          "word": "Arazketa"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Baldintzak"
+        },
+        "function/coursee/2022": {
+          "word": "Funtzioa"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Baldintzak"
+        },
+        "copyright/coursee/2022": {
+          "word": "Egile-eskubideak"
+        },
+        "define/coursee/2022": {
+          "word": "Zehaztu"
+        },
+        "variable/coursef/2022": {
+          "word": "Aldagaia"
+        },
+        "input/coursef/2022": {
+          "word": "Sarrera"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet"
+        },
+        "define/coursef/2022": {
+          "word": "Zehaztu"
+        },
+        "debugging/express/2022": {
+          "word": "Arazketa"
+        },
+        "conditionals/express/2022": {
+          "word": "Baldintzak"
+        },
+        "function/express/2022": {
+          "word": "Funtzioa"
+        },
+        "variable/express/2022": {
+          "word": "Aldagaia"
+        },
+        "define/express/2022": {
+          "word": "Zehaztu"
+        },
+        "drop/pre-express/2022": {
+          "word": "Bota"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Arazketa"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Baldintzak"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Arazketa"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Itzuliak"
+        },
+        "code/artist/unversioned": {
+          "word": "Kodea"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Arazketa"
+        },
+        "function/hero/unversioned": {
+          "word": "Funtzioa"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Arazketa"
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Arazketa"
+        },
+        "code/poem-art/2021": {
+          "word": "Kodea"
+        },
+        "code/sports/unversioned": {
+          "word": "Kodea"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Arazketa"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kodea",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         }
       }
     }

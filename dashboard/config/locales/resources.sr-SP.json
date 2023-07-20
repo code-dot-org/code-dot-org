@@ -2,309 +2,37 @@
   "sr-SP": {
     "data": {
       "resources": {
-        "csf-artist-intro-video/artist/unversioned": {
-          "name": "Увод у Уметника",
-          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
-        },
-        "csf-turns-angles-doc/artist/unversioned": {
-          "name": "Cкретања и углови",
-          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4"
-        },
-        "csf-turns-angles-video/artist/unversioned": {
-          "name": "Cкретања и углови",
-          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
-        },
-        "implementation_guide/coursed/2022": {
-          "name": "Водич за имплементацију"
-        },
-        "graph_paper_programming/coursed/2022": {
-          "name": "Графиконско - Папирно Програмирање"
-        },
-        "graph_paper_programming_1/coursed/2022": {
-          "name": "Графиконско - Папирно Програмирање"
-        },
-        "graph_paper_programming_2/coursed/2022": {
-          "name": "Графиконско - Папирно Програмирање"
-        },
-        "graph_paper_programming_3/coursed/2022": {
-          "name": "Графиконско - Папирно Програмирање"
-        },
-        "graph_paper_programming_4/coursed/2022": {
-          "name": "Графиконско - Папирно Програмирање"
-        },
-        "graph_paper_programming_5/coursed/2022": {
-          "name": "Графиконско - Папирно Програмирање"
-        },
-        "relay_programming/coursed/2022": {
-          "name": "Relay programming"
-        },
-        "relay_programming_1/coursed/2022": {
-          "name": "Relay programming"
-        },
-        "relay_programming_2/coursed/2022": {
-          "name": "Relay programming"
-        },
-        "relay_programming_3/coursed/2022": {
-          "name": "Relay programming"
-        },
-        "relay_programming_4/coursed/2022": {
-          "name": "Relay programming"
-        },
-        "relay_programming_5/coursed/2022": {
-          "name": "Relay programming"
-        },
-        "conditionals_with_cards/coursed/2022": {
-          "name": "Услови са картама"
-        },
-        "conditionals_with_cards_1/coursed/2022": {
-          "name": "Услови са картама"
-        },
-        "conditionals_with_cards_2/coursed/2022": {
-          "name": "Услови са картама"
-        },
-        "conditionals_with_cards_3/coursed/2022": {
-          "name": "Услови са картама"
-        },
-        "conditionals_with_cards_4/coursed/2022": {
-          "name": "Услови са картама"
-        },
-        "implementation_guide/coursef/2022": {
-          "name": "Водич за имплементацију"
-        },
-        "internet/coursef/2022": {
-          "name": "Интернет"
-        },
-        "internet_1/coursef/2022": {
-          "name": "Интернет"
-        },
-        "the_internet/coursef/2022": {
-          "name": "Интернет"
-        },
-        "implementation_guide/coursee/2022": {
-          "name": "Водич за имплементацију"
-        },
-        "turns_angles/coursee/2022": {
-          "name": "Cкретања и углови"
-        },
-        "turns_angles_1/coursee/2022": {
-          "name": "Cкретања и углови",
-          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
-        },
-        "implementation_guide/courseb/2022": {
-          "name": "Водич за имплементацију"
-        },
-        "move_it_move_it/courseb/2022": {
-          "name": "Помери га, помери"
-        },
-        "move_it_move_it_1/courseb/2022": {
-          "name": "Помери га, помери"
-        },
-        "move_it_move_it_2/courseb/2022": {
-          "name": "Помери га, помери"
-        },
-        "move_it_move_it_3/courseb/2022": {
-          "name": "Помери га, помери"
-        },
-        "getting_loopy/courseb/2022": {
-          "name": "Запетљанције"
-        },
-        "getting_loopy_1/courseb/2022": {
-          "name": "Запетљанције"
-        },
-        "getting_loopy_2/courseb/2022": {
-          "name": "Запетљанције"
-        },
-        "getting_loopy_3/courseb/2022": {
-          "name": "Запетљанције"
-        },
-        "the_big_event/courseb/2022": {
-          "name": "Велики догађај"
-        },
-        "the_big_event_1/courseb/2022": {
-          "name": "Велики догађај"
-        },
-        "the_big_event_2/courseb/2022": {
-          "name": "Велики догађај"
-        },
-        "artist_introduction/express/2022": {
-          "name": "Увод у Уметника",
-          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
-        },
-        "turns_angles/express/2022": {
-          "name": "Cкретања и углови",
-          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
-        },
-        "turns_angles_1/express/2022": {
-          "name": "Cкретања и углови"
-        },
-        "variables/express/2022": {
-          "name": "Променљиве"
-        },
-        "implementation_guide/coursea/2022": {
-          "name": "Водич за имплементацију"
-        },
-        "happy_maps/coursea/2022": {
-          "name": "Веселе мапе"
-        },
-        "the_big_event/coursea/2022": {
-          "name": "Велики догађај"
-        },
-        "the_big_event_1/coursea/2022": {
-          "name": "Велики догађај"
-        },
-        "the_big_event_2/coursea/2022": {
-          "name": "Велики догађај"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "Водич за имплементацију"
-        },
-        "my_robotic_friends/coursec/2022": {
-          "name": "Моји роботски пријатељи"
-        },
-        "my_robotic_friends_1/coursec/2022": {
-          "name": "Моји роботски пријатељи"
-        },
-        "my_robotic_friends_2/coursec/2022": {
-          "name": "Моји роботски пријатељи"
-        },
-        "my_robotic_friends_3/coursec/2022": {
-          "name": "Моји роботски пријатељи"
-        },
-        "my_robotic_friends_4/coursec/2022": {
-          "name": "Моји роботски пријатељи"
-        },
-        "artist_introduction/coursec/2022": {
-          "name": "Увод у Уметника",
-          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
-        },
-        "turns_angles/coursec/2022": {
-          "name": "Cкретања и углови",
-          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
-        },
-        "turns_angles_1/coursec/2022": {
-          "name": "Cкретања и углови"
-        },
-        "the_big_event/coursec/2022": {
-          "name": "Велики догађај"
-        },
-        "the_big_event_1/coursec/2022": {
-          "name": "Велики догађај"
-        },
-        "the_big_event_2/coursec/2022": {
-          "name": "Велики догађај"
-        },
-        "binary_bracelets/coursec/2022": {
-          "name": "Бинарне наруквице"
-        },
-        "binary_bracelets_1/coursec/2022": {
-          "name": "Бинарне наруквице"
-        },
-        "binary_bracelets_2/coursec/2022": {
-          "name": "Бинарне наруквице"
-        },
-        "binary_bracelets_3/coursec/2022": {
-          "name": "Бинарне наруквице"
-        },
-        "binary_bracelets_4/coursec/2022": {
-          "name": "Бинарне наруквице"
-        },
-        "video_machine_learning/csd/2022": {
-          "name": "Bидео: Mашинско учење"
-        },
-        "variables/csd/2022": {
-          "name": "Променљиве"
-        },
-        "variables_3/csd/2022": {
-          "name": "Променљиве"
-        },
-        "text/csd/2022": {
-          "name": "текст"
-        },
-        "conditionals/csd/2022": {
-          "name": "Кондиционали"
-        },
-        "velocity/csd/2022": {
-          "name": "Брзина"
-        },
-        "velocity_1/csd/2022": {
-          "name": "Брзина"
-        },
-        "velocity_2/csd/2022": {
-          "name": "Брзина"
-        },
-        "functions/csd/2022": {
-          "name": "Функције"
-        },
-        "functions_1/csd/2022": {
-          "name": "Функције"
-        },
-        "functions_4/csd/2022": {
-          "name": "Функције"
-        },
-        "lists/csd/2022": {
-          "name": "Листе"
-        },
-        "design_mode/csd/2022": {
-          "name": "Dizajn mod"
-        },
-        "variables_1/csd/2022": {
-          "name": "Променљиве"
-        },
-        "variables_2/csd/2022": {
-          "name": "Променљиве"
-        },
-        "functions_2/csd/2022": {
-          "name": "Функције"
-        },
-        "functions_3/csd/2022": {
-          "name": "Функције"
-        },
-        "functions_with_parameters/csd/2022": {
-          "name": "Функције са параметрима"
-        },
-        "functions_5/csd/2022": {
-          "name": "Функције"
-        },
-        "lesson_plans/courseb/2018": {
+        "lesson_plans/csd/2017": {
           "name": "План лекција"
         },
-        "lesson_plans/coursea/2018": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursed/2018": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursef/2018": {
-          "name": "План лекција"
-        },
-        "lesson_plans/express/2018": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursee/2018": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursec/2018": {
-          "name": "План лекција"
-        },
-        "code_introduced_1/csd/2018": {
+        "code_introduced/csd/2017": {
           "name": "Код представљен"
         },
-        "lesson_plans_2/csd/2018": {
+        "lesson_plans_1/csd/2017": {
           "name": "План лекција"
         },
-        "code_introduced_3/csd/2018": {
+        "code_introduced_1/csd/2017": {
           "name": "Код представљен"
         },
-        "lesson_plans_5/csd/2018": {
+        "lesson_plans_2/csd/2017": {
           "name": "План лекција"
         },
-        "lesson_plans_4/csd/2018": {
-          "name": "План лекција"
-        },
-        "code_introduced_2/csd/2018": {
+        "code_introduced_2/csd/2017": {
           "name": "Код представљен"
         },
-        "lesson_plans_3/csd/2018": {
+        "lesson_plans_3/csd/2017": {
+          "name": "План лекција"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "План лекција"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Код представљен"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "План лекција"
+        },
+        "lesson_plans/csd/2018": {
           "name": "План лекција"
         },
         "code_introduced/csd/2018": {
@@ -313,49 +41,46 @@
         "lesson_plans_1/csd/2018": {
           "name": "План лекција"
         },
-        "lesson_plans/csd/2018": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "План лекција"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "План лекција"
-        },
-        "lesson_plans/express/2019": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursec/2019": {
-          "name": "План лекција"
-        },
-        "code_introduced_1/csd/2019": {
+        "code_introduced_1/csd/2018": {
           "name": "Код представљен"
         },
-        "lesson_plans_2/csd/2019": {
+        "lesson_plans_2/csd/2018": {
           "name": "План лекција"
         },
-        "code_introduced_3/csd/2019": {
+        "code_introduced_2/csd/2018": {
           "name": "Код представљен"
         },
-        "lesson_plans_5/csd/2019": {
+        "lesson_plans_3/csd/2018": {
           "name": "План лекција"
         },
-        "code_introduced_2/csd/2019": {
+        "lesson_plans_4/csd/2018": {
+          "name": "План лекција"
+        },
+        "code_introduced_3/csd/2018": {
           "name": "Код представљен"
         },
-        "lesson_plans_3/csd/2019": {
+        "lesson_plans_5/csd/2018": {
           "name": "План лекција"
         },
-        "lesson_plans_4/csd/2019": {
+        "lesson_plans/coursea/2018": {
+          "name": "План лекција"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "План лекција"
+        },
+        "lesson_plans/express/2018": {
           "name": "План лекција"
         },
         "lesson_plans/csd/2019": {
@@ -367,52 +92,122 @@
         "lesson_plans_1/csd/2019": {
           "name": "План лекција"
         },
-        "code_introduced_1/csd/2017": {
+        "code_introduced_1/csd/2019": {
           "name": "Код представљен"
         },
-        "lesson_plans_2/csd/2017": {
+        "lesson_plans_2/csd/2019": {
           "name": "План лекција"
         },
-        "code_introduced_3/csd/2017": {
+        "code_introduced_2/csd/2019": {
           "name": "Код представљен"
         },
-        "lesson_plans_5/csd/2017": {
+        "lesson_plans_3/csd/2019": {
           "name": "План лекција"
         },
-        "code_introduced/csd/2017": {
+        "lesson_plans_4/csd/2019": {
+          "name": "План лекција"
+        },
+        "code_introduced_3/csd/2019": {
           "name": "Код представљен"
         },
-        "lesson_plans_1/csd/2017": {
+        "lesson_plans_5/csd/2019": {
           "name": "План лекција"
         },
-        "lesson_plans/csd/2017": {
+        "lesson_plans/coursea/2019": {
           "name": "План лекција"
         },
-        "lesson_plans_4/csd/2017": {
+        "lesson_plans/courseb/2019": {
           "name": "План лекција"
         },
-        "code_introduced_2/csd/2017": {
-          "name": "Код представљен"
-        },
-        "lesson_plans_3/csd/2017": {
+        "lesson_plans/coursec/2019": {
           "name": "План лекција"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
+        "lesson_plans/coursed/2019": {
+          "name": "План лекција"
         },
-        "implementation_guide/coursef/2021": {
+        "lesson_plans/coursee/2019": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "План лекција"
+        },
+        "lesson_plans/express/2019": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "План лекција"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "План лекција"
+        },
+        "lesson_plans/express/2020": {
+          "name": "План лекција"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "План лекција"
+        },
+        "lists/csd/2021": {
+          "name": "Листе"
+        },
+        "variables_1/csd/2021": {
+          "name": "Променљиве"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Брзина"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Брзина"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Функције"
+        },
+        "functions_1/csd/2021": {
+          "name": "Функције"
+        },
+        "design_mode/csd/2021": {
+          "name": "Dizajn mod"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Dizajn mod"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Bидео: Mашинско учење"
+        },
+        "functions_2/csd/2021": {
+          "name": "Функције"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Бројачке петље"
+        },
+        "for_loops/csd/2021": {
+          "name": "Бројачке петље"
+        },
+        "implementation_guide/coursea/2021": {
           "name": "Водич за имплементацију"
         },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "Интернет"
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Веселе мапе"
         },
-        "csf-internet-assessment/coursef/2021": {
-          "name": "Интернет"
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Велики догађај"
         },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "Интернет"
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Велики догађај"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Велики догађај"
         },
         "implementation_guide/courseb/2021": {
           "name": "Водич за имплементацију"
@@ -448,21 +243,6 @@
           "name": "Велики догађај"
         },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "Велики догађај"
-        },
-        "implementation_guide/coursea/2021": {
-          "name": "Водич за имплементацију"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Веселе мапе"
-        },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "Велики догађај"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "name": "Велики догађај"
-        },
-        "unplugged-video-big-event/coursea/2021": {
           "name": "Велики догађај"
         },
         "implementation_guide/coursec/2021": {
@@ -572,6 +352,28 @@
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Услови са картама"
         },
+        "implementation_guide/coursee/2021": {
+          "name": "Водич за имплементацију"
+        },
+        "csf-turns-angles-doc/coursee/2021": {
+          "name": "Cкретања и углови"
+        },
+        "csf-turns-angles-video/coursee/2021": {
+          "name": "Cкретања и углови",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Водич за имплементацију"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Интернет"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Интернет"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Интернет"
+        },
         "artist_introduction/express/2021": {
           "name": "Увод у Уметника",
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
@@ -586,75 +388,273 @@
         "variables_video/express/2021": {
           "name": "Променљиве"
         },
-        "implementation_guide/coursee/2021": {
+        "lists/csd/2022": {
+          "name": "Листе"
+        },
+        "variables/csd/2022": {
+          "name": "Променљиве"
+        },
+        "variables_3/csd/2022": {
+          "name": "Променљиве"
+        },
+        "text/csd/2022": {
+          "name": "текст"
+        },
+        "conditionals/csd/2022": {
+          "name": "Кондиционали"
+        },
+        "velocity/csd/2022": {
+          "name": "Брзина"
+        },
+        "velocity_1/csd/2022": {
+          "name": "Брзина"
+        },
+        "velocity_2/csd/2022": {
+          "name": "Брзина"
+        },
+        "functions/csd/2022": {
+          "name": "Функције"
+        },
+        "functions_1/csd/2022": {
+          "name": "Функције"
+        },
+        "functions_4/csd/2022": {
+          "name": "Функције"
+        },
+        "design_mode/csd/2022": {
+          "name": "Dizajn mod"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "Bидео: Mашинско учење"
+        },
+        "variables_1/csd/2022": {
+          "name": "Променљиве"
+        },
+        "variables_2/csd/2022": {
+          "name": "Променљиве"
+        },
+        "functions_2/csd/2022": {
+          "name": "Функције"
+        },
+        "functions_3/csd/2022": {
+          "name": "Функције"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Функције са параметрима"
+        },
+        "functions_5/csd/2022": {
+          "name": "Функције"
+        },
+        "implementation_guide/coursea/2022": {
           "name": "Водич за имплементацију"
         },
-        "csf-turns-angles-doc/coursee/2021": {
-          "name": "Cкретања и углови"
+        "happy_maps/coursea/2022": {
+          "name": "Веселе мапе"
         },
-        "csf-turns-angles-video/coursee/2021": {
+        "the_big_event/coursea/2022": {
+          "name": "Велики догађај"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Велики догађај"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Велики догађај"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Водич за имплементацију"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Помери га, помери"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Помери га, помери"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Помери га, помери"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Помери га, помери"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Запетљанције"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Запетљанције"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Запетљанције"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Запетљанције"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Велики догађај"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Велики догађај"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Велики догађај"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Водич за имплементацију"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Моји роботски пријатељи"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Моји роботски пријатељи"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Моји роботски пријатељи"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Моји роботски пријатељи"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Моји роботски пријатељи"
+        },
+        "artist_introduction/coursec/2022": {
+          "name": "Увод у Уметника",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "turns_angles/coursec/2022": {
           "name": "Cкретања и углови",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
-        "design_mode/csd/2021": {
-          "name": "Dizajn mod"
+        "turns_angles_1/coursec/2022": {
+          "name": "Cкретања и углови"
         },
-        "design_mode_1/csd/2021": {
-          "name": "Dizajn mod"
+        "the_big_event/coursec/2022": {
+          "name": "Велики догађај"
         },
-        "functions_2/csd/2021": {
-          "name": "Функције"
+        "the_big_event_1/coursec/2022": {
+          "name": "Велики догађај"
         },
-        "loops_in_app_lab/csd/2021": {
-          "name": "Бројачке петље"
+        "the_big_event_2/coursec/2022": {
+          "name": "Велики догађај"
         },
-        "for_loops/csd/2021": {
-          "name": "Бројачке петље"
+        "binary_bracelets/coursec/2022": {
+          "name": "Бинарне наруквице"
         },
-        "video_machine_learning/csd/2021": {
-          "name": "Bидео: Mашинско учење"
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Бинарне наруквице"
         },
-        "variables_1/csd/2021": {
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Бинарне наруквице"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Бинарне наруквице"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Бинарне наруквице"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Водич за имплементацију"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Графиконско - Папирно Програмирање"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Графиконско - Папирно Програмирање"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Графиконско - Папирно Програмирање"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Графиконско - Папирно Програмирање"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Графиконско - Папирно Програмирање"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Графиконско - Папирно Програмирање"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Relay programming"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Relay programming"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Relay programming"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Relay programming"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Relay programming"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Relay programming"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Услови са картама"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Услови са картама"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Услови са картама"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Услови са картама"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Услови са картама"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Водич за имплементацију"
+        },
+        "turns_angles/coursee/2022": {
+          "name": "Cкретања и углови"
+        },
+        "turns_angles_1/coursee/2022": {
+          "name": "Cкретања и углови",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Водич за имплементацију"
+        },
+        "internet/coursef/2022": {
+          "name": "Интернет"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Интернет"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Интернет"
+        },
+        "artist_introduction/express/2022": {
+          "name": "Увод у Уметника",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "turns_angles/express/2022": {
+          "name": "Cкретања и углови",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "turns_angles_1/express/2022": {
+          "name": "Cкретања и углови"
+        },
+        "variables/express/2022": {
           "name": "Променљиве"
         },
-        "velocity_1/csd/2021": {
-          "name": "Брзина"
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "Увод у Уметника",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
-        "velocity_2/csd/2021": {
-          "name": "Брзина"
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "Cкретања и углови",
+          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4"
         },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "Функције"
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "Cкретања и углови",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
-        "functions_1/csd/2021": {
-          "name": "Функције"
-        },
-        "lists/csd/2021": {
-          "name": "Листе"
-        },
-        "lesson_plans/pre-express/2020": {
-          "name": "План лекција"
-        },
-        "lesson_plans/express/2020": {
-          "name": "План лекција"
-        },
-        "lesson_plans/courseb/2020": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursed/2020": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursec/2020": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursee/2020": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursea/2020": {
-          "name": "План лекција"
-        },
-        "lesson_plans/coursef/2020": {
-          "name": "План лекција"
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         }
       }
     }

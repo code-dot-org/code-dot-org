@@ -2,17 +2,49 @@
   "mi-NZ": {
     "data": {
       "standard_categories": {
+        "C": {
+          "description": "Porowhita"
+        },
         "CT": {
           "description": "Whakaaro ā-Rorohiko"
+        },
+        "ESS": {
+        },
+        "ESS1": {
+        },
+        "ESS2": {
+        },
+        "ESS3": {
+        },
+        "ETS": {
+        },
+        "ETS1": {
+        },
+        "F": {
+          "description": "Ngā Taumahi"
         },
         "L": {
           "description": "Reo"
         },
-        "C": {
-          "description": "Porowhita"
+        "LS": {
         },
-        "F": {
-          "description": "Ngā Taumahi"
+        "LS1": {
+        },
+        "LS2": {
+        },
+        "LS3": {
+        },
+        "LS4": {
+        },
+        "PS": {
+        },
+        "PS1": {
+        },
+        "PS2": {
+        },
+        "PS3": {
+        },
+        "PS4": {
         }
       }
     }

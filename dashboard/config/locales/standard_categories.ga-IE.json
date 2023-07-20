@@ -2,17 +2,49 @@
   "ga-IE": {
     "data": {
       "standard_categories": {
+        "C": {
+          "description": "Ciorcail"
+        },
         "CT": {
           "description": "Smaointeoireacht Ríomhaireachtúil"
+        },
+        "ESS": {
+        },
+        "ESS1": {
+        },
+        "ESS2": {
+        },
+        "ESS3": {
+        },
+        "ETS": {
+        },
+        "ETS1": {
+        },
+        "F": {
+          "description": "Feidhmeanna"
         },
         "L": {
           "description": "Teanga"
         },
-        "C": {
-          "description": "Ciorcail"
+        "LS": {
         },
-        "F": {
-          "description": "Feidhmeanna"
+        "LS1": {
+        },
+        "LS2": {
+        },
+        "LS3": {
+        },
+        "LS4": {
+        },
+        "PS": {
+        },
+        "PS1": {
+        },
+        "PS2": {
+        },
+        "PS3": {
+        },
+        "PS4": {
         }
       }
     }

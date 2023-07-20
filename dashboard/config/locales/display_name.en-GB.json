@@ -2,15 +2,15 @@
   "en-GB": {
     "data": {
       "display_name": {
-        "CSD U3 Variables Map": "Variables",
-        "CSD U3 Variables Map_2018": "Variables",
-        "CSD U3 Variables Map_2019": "Variables",
-        "courseF_bee_for5_2021": "Variables",
         "CSD U3 - Interactive Card - Example1_2022": "Example",
         "CSD U3 - Interactive Card - Example2_2022": "Example",
         "CSD U3 - Interactive Card - Example3_2022": "Example",
         "CSD U3 - Interactive Card - Example4_2022": "Example",
-        "courseF_bee_for52022": "Variables"
+        "CSD U3 Variables Map": "Variables",
+        "CSD U3 Variables Map_2018": "Variables",
+        "CSD U3 Variables Map_2019": "Variables",
+        "courseF_bee_for52022": "Variables",
+        "courseF_bee_for5_2021": "Variables"
       }
     }
   }

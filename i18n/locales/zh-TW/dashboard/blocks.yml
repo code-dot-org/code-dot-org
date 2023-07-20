@@ -2513,7 +2513,7 @@ zh-TW:
             '"kelp"': 海帶
             '"polishedGranite"': 平滑花崗岩
       craft_placePrismarine:
-        text: 放置監獄
+        text: 放置海磷石
       craft_placeTorch:
         text: 放置火把
       craft_repeatUntilConduit:

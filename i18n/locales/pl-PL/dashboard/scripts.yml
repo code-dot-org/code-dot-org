@@ -6475,6 +6475,9 @@ pl:
         self-paced-pl-physical-computing1-2023:
           name: self-paced-pl-physical-computing1-2023
         self-paced-pl-physical-computing2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przygotowanie do nauczania tworzenia aplikacji na urządzenia z Circuit Playgrounds
           name: self-paced-pl-physical-computing2-2023
         self-paced-pl-csd1-2023:
           lesson_groups:
@@ -7041,9 +7044,49 @@ pl:
           title: CSA FRQ Practice Pre-2019
         self-paced-pl-aiml1:
           name: self-paced-pl-aiml1
+          description: |-
+            \*\*Czeka Cię: \*\*
+
+            -   Wprowadzenie do misji Code.org.
+            -   Poznasz, jak poruszać się po witrynie Code.org i narzędziach nauczyciela.
+            -   Konfiguracja sekcji w klasie.
+            -   Znalezienie i korzystanie z planów lekcji kursu i zasobów dla nauczycieli.
+            -   Poznasz, jak uzyskać dostęp do wsparcia podczas nauczania Code.org.
+
+            \*\*Sugerowany czas: \*\* 80 minut
+          student_description: |-
+            \*\*Czeka Cię: \*\*
+
+            -   Wprowadzenie do misji Code.org.
+            -   Poznasz, jak poruszać się po witrynie Code.org i narzędziach nauczyciela.
+            -   Konfiguracja sekcji w klasie.
+            -   Znalezienie i korzystanie z planów lekcji kursu i zasobów dla nauczycieli.
+            -   Poznasz, jak uzyskać dostęp do wsparcia podczas nauczania Code.org.
+
+            \*\*Sugerowany czas: \*\* 80 minut
         self-paced-pl-aiml2:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Nauczanie sztucznej inteligencji i uczenia maszynowego '
           name: self-paced-pl-aiml2
           title: 'Nauczanie sztucznej inteligencji i uczenia maszynowego '
+          description: |-
+            **W tym module profesjonalnego rozwoju:**
+
+            -   Uzyskasz wprowadzenie do sztucznej inteligencji i uczenia maszynowego.
+            -   Poćwiczysz kluczowe pojęcia zawarte w jednostce.
+            -   Zaangażujesz się w AI Lab i App Lab.
+            -   Zapoznasz się z projektami z końca rozdziału.
+            -   Opracujesz plan realizacji jednostki ze swoimi uczniami.
+
+            **Sugerowany czas:** 100 minut
+          student_description: |-
+            **W tym module profesjonalnego rozwoju:**
+
+            -   Uzyskasz wprowadzenie do sztucznej inteligencji i uczenia maszynowego.
+            -   Poćwiczysz kluczowe pojęcia zawarte w jednostce.
+            -   Zaangażujesz się w AI Lab i App Lab.
+            -   Zapoznasz się z projektami z końca rozdziału.
+            -   Opracujesz plan realizacji jednostki ze swoimi uczniami.
+
+            **Sugerowany czas:** 100 minut

@@ -1,9 +1,9 @@
 {
-  "continue": "Jätka",
   "areYouSure": "Oled kindel?",
   "cancel": "Tühista",
-  "yes": "Jah",
+  "continue": "Jätka",
+  "finish": "Lõpeta",
   "no": "Ei",
   "run": "Käivita",
-  "finish": "Lõpeta"
+  "yes": "Jah"
 }
