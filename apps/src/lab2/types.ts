@@ -11,7 +11,7 @@ export interface Channel {
   name: string;
   isOwner: boolean;
   projectType: ProjectType;
-  publishedAt: string;
+  publishedAt: string | null;
   createdAt: string;
   updatedAt: string;
 }
@@ -90,7 +90,8 @@ export interface LevelProperties {
   // the only labs we support have projects enabled, it's easier to make this a
   // disabled flag for specific exceptions.
   disableProjects?: 'true' | 'false';
-  levelData: LevelData;
+  levelData?: LevelData;
+  appName: AppName;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -171,7 +172,8 @@ export type AppName =
   | 'studio'
   | 'bounce'
   | 'poetry'
-  | 'spritelab';
+  | 'spritelab'
+  | 'standalone_video';
 
 export type StandaloneAppName =
   | 'spritelab'

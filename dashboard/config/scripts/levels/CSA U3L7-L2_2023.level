@@ -1,8 +1,13 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-01-12T21:48:04.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nThe <a href=\"https://www.kaggle.com/datasets/rakkesharv/forbes-2000-global-companies\" target=\"_blank\">**Forbes 200 Global Companies dataset**</a> includes organization names and profits made in 2022.\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">toString()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Forbes</code> class.\r\n\r\nWhat do this method do? How is this similar and different to how we traversed a 1D array before?",
+    "long_instructions": "##Investigate and Modify\r\n\r\nThe <a href=\"https://www.kaggle.com/datasets/rakkesharv/forbes-2000-global-companies\" target=\"_blank\">**Forbes 200 Global Companies dataset**</a> includes organization names and profits made in 2022.\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">toString()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Forbes</code> class.\r\n\r\nWhat does this method do? How is this similar and different to how we traversed a 1D array before?",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -20,11 +25,6 @@
 
     ]
   },
-  "game_id": 68,
-  "published": true,
-  "created_at": "2023-01-12T21:48:04.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-01-12T21:48:04.097+00:00\",\"changed\":[\"cloned from \\\"CSA Investigate Level Template\\\"\"],\"cloned_from\":\"CSA Investigate Level Template\"},{\"changed_at\":\"2023-01-12 21:48:12 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-26 05:48:00 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-27 04:46:54 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-31 20:47:48 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-01-12T21:48:04.097+00:00\",\"changed\":[\"cloned from \\\"CSA Investigate Level Template\\\"\"],\"cloned_from\":\"CSA Investigate Level Template\"},{\"changed_at\":\"2023-01-12 21:48:12 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-26 05:48:00 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-27 04:46:54 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-31 20:47:48 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-07-14 16:11:53 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

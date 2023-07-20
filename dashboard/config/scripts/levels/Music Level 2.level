@@ -35,7 +35,7 @@
       "startSources": {
         "blocks": {
           "languageVersion": 0,
-          "blocks": [{"type": "when_run_simple2", "x": 35, "y": 35}]
+          "blocks": [{"type": "when_run_simple2", "deletable": false, "movable": false, "x": 35, "y": 35}]
         },
         "variables": [{"name": "currentTime"}, {"name": "i"}]
       }

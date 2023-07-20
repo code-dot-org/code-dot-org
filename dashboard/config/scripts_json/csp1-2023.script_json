@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-20 22:01:22 UTC",
+    "serialized_at": "2023-07-18 20:52:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1254,7 +1254,7 @@
       "key": "63fd09fc-12a3-48a9-a839-14f361a94b87",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student a copy of the [Unit 1 Journal](\thttps://docs.google.com/presentation/d/1nCwU7a83mgtEIKId1Fw-JzsZkHicWN12WeCTDMJkw68/edit?usp=share_link) or have students set up a new section in their CSP journals.",
+        "description": "**Distribute:** Give each student a copy of the Unit 1 Journal ([Digital](https://docs.google.com/presentation/d/1nCwU7a83mgtEIKId1Fw-JzsZkHicWN12WeCTDMJkw68/edit?usp=share_link)/[Interactive Notebook](https://docs.google.com/presentation/d/1hydmwrk4buHxg1gW-4TvVKMkIDvru8FTRuk53N8T8es/edit?usp=drive_link)) or have students set up this unit's section in their CSP journals.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1399,18 +1399,6 @@
       },
       "seeding_key": {
         "activity_section.key": "c8db8b0f-2d6d-4fe7-8ae3-906c35840b69",
-        "lesson_activity.key": "9d85a2cb-a899-42c1-971b-7640e542ab2d"
-      }
-    },
-    {
-      "key": "7bd04295-383f-4705-930f-5fa85672ec5e",
-      "position": 7,
-      "properties": {
-        "description": "<div style=\"background-color: #d7f4e9; border: 1px solid #43876b; border-radius: 5px; font-size: 1em; padding: 15px; margin-bottom: 0px;\">\n<div style=\"margin-top: 0px; margin-left: 0px; margin-right: 20px; height: 185px\">\n<img src=\"https://images.code.org/73ab5fb605d7065835e32221817b69b7-Unit Journal Icon 4.png\" style=\"margin-right: 40px; float: left\">\n\n<p><i>Sample Unit Journal Explanation </i> </p>\n<br>\n<p>Links:</p>\n<a href=\"https://www.w3schools.com/tags/ref_colornames.asp\" target=\"_blank\">DIGITAL </a>\n\n</div>\n</div>\n",
-        "name": "Unit Journal"
-      },
-      "seeding_key": {
-        "activity_section.key": "7bd04295-383f-4705-930f-5fa85672ec5e",
         "lesson_activity.key": "9d85a2cb-a899-42c1-971b-7640e542ab2d"
       }
     },
@@ -5481,24 +5469,24 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp1-2022/resources",
-      "key": "all_resources",
+      "url": "/s/csp1-2023/resources",
+      "key": "all_resources_12",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources"
+        "resource.key": "all_resources_12"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp1-2022/standards",
-      "key": "all_standards",
+      "url": "/s/csp1-2023/standards",
+      "key": "all_standards_12",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards"
+        "resource.key": "all_standards_12"
       }
     },
     {
@@ -5601,11 +5589,9 @@
     },
     {
       "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
       "key": "course_vocabulary",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
@@ -6123,7 +6109,7 @@
       }
     },
     {
-      "name": "Unit 1 Journal",
+      "name": "Unit 1 Journal (Digital)",
       "url": "https://docs.google.com/presentation/d/1nCwU7a83mgtEIKId1Fw-JzsZkHicWN12WeCTDMJkw68/edit?usp=share_link",
       "key": "unit_1_journal",
       "properties": {
@@ -6132,6 +6118,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_1_journal"
+      }
+    },
+    {
+      "name": "Unit 1 Journal (Interactive Notebook)",
+      "url": "https://docs.google.com/presentation/d/1hydmwrk4buHxg1gW-4TvVKMkIDvru8FTRuk53N8T8es/edit?usp=drive_link",
+      "key": "unit_1_journal_-_interactive_notebook",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_journal_-_interactive_notebook"
       }
     }
   ],
@@ -6360,6 +6358,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Representing Information",
+        "resource.key": "unit_1_journal_-_interactive_notebook"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Representing Text",
         "resource.key": "ascii_reference_sheet"
       }
@@ -6416,13 +6420,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources",
+        "resource.key": "all_resources_12",
         "script.name": "csp1-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards",
+        "resource.key": "all_standards_12",
         "script.name": "csp1-2023"
       }
     },
@@ -6465,6 +6469,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_1_journal",
+        "script.name": "csp1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_1_journal_-_interactive_notebook",
         "script.name": "csp1-2023"
       }
     }

@@ -1,3 +1,5 @@
+export const baseAssetUrl = 'https://curriculum.code.org/media/musiclab/';
+
 export interface Trigger {
   id: string;
   dropdownLabel: string;

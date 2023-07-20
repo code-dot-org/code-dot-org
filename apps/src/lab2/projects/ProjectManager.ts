@@ -15,6 +15,7 @@ import {ChannelsStore} from './ChannelsStore';
 import {Channel, Project, ProjectSources} from '../types';
 import {currentLocation} from '@cdo/apps/utils';
 import Lab2MetricsReporter from '../Lab2MetricsReporter';
+const {reload} = require('@cdo/apps/utils');
 
 export default class ProjectManager {
   private readonly channelId: string;
@@ -47,6 +48,7 @@ export default class ProjectManager {
   private destroyed = false;
   private reduceChannelUpdates: boolean;
   private initialSaveComplete: boolean;
+  private forceReloading: boolean;
 
   constructor(
     sourcesStore: SourcesStore,
@@ -59,6 +61,7 @@ export default class ProjectManager {
     this.channelsStore = channelsStore;
     this.reduceChannelUpdates = reduceChannelUpdates;
     this.initialSaveComplete = false;
+    this.forceReloading = false;
   }
 
   // Load the project from the sources and channels store.
@@ -125,7 +128,7 @@ export default class ProjectManager {
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
     this.sourcesToSave = sources;
-    return this.enqueueSaveOrSave(forceSave);
+    return await this.enqueueSaveOrSave(forceSave);
   }
 
   /**
@@ -140,7 +143,7 @@ export default class ProjectManager {
       this.resetSaveState();
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    return this.enqueueSaveOrSave(true);
+    return await this.enqueueSaveOrSave(true);
   }
 
   /**
@@ -163,7 +166,7 @@ export default class ProjectManager {
       ) as Channel;
     }
     this.channelToSave.name = name;
-    return this.enqueueSaveOrSave(forceSave);
+    return await this.enqueueSaveOrSave(forceSave);
   }
 
   /**
@@ -235,6 +238,10 @@ export default class ProjectManager {
     this.saveStartListeners.push(listener);
   }
 
+  isForceReloading(): boolean {
+    return this.forceReloading;
+  }
+
   /**
    * Helper function to save a project, called either after a timeout or directly by save().
    * On a save, we check if there are unsaved changes to the source or channel.
@@ -247,7 +254,14 @@ export default class ProjectManager {
    * Listeners are notified of save status throughout the process.
    */
   private async saveHelper(): Promise<void> {
-    if (!this.sourcesToSave || !this.lastChannel) {
+    // We can't save without a last channel or last source.
+    // We also know we don't need to save if we don't have sources to save
+    // or a channel to save.
+    if (
+      !this.lastChannel ||
+      !this.lastSource ||
+      !(this.sourcesToSave || this.channelToSave)
+    ) {
       this.executeSaveNoopListeners(this.lastChannel);
       return;
     }
@@ -264,7 +278,7 @@ export default class ProjectManager {
       return;
     }
     // Only save the source if it has changed.
-    if (sourceChanged) {
+    if (this.sourcesToSave && sourceChanged) {
       try {
         await this.sourcesStore.save(this.channelId, this.sourcesToSave);
       } catch (error) {
@@ -301,14 +315,27 @@ export default class ProjectManager {
 
     this.saveInProgress = false;
     this.channelToSave = undefined;
-    this.executeSaveSuccessListeners(this.lastChannel, this.sourcesToSave);
+    this.executeSaveSuccessListeners(
+      this.lastChannel,
+      JSON.parse(this.lastSource) as ProjectSources
+    );
     this.initialSaveComplete = true;
   }
 
   private onSaveFail(errorMessage: string, error: Error) {
     this.saveInProgress = false;
     this.executeSaveFailListeners(error);
-    Lab2MetricsReporter.logError(errorMessage, error);
+    if (error.message.includes('409')) {
+      // If this is a conflict, we need to reload the page.
+      // We set forceReloading to true so the client can skip
+      // showing the user a dialog before reload.
+      this.forceReloading = true;
+      Lab2MetricsReporter.logWarning('Conflict on save, reloading page');
+      reload();
+    } else {
+      // Otherwise, we log the error.
+      Lab2MetricsReporter.logError(errorMessage, error);
+    }
   }
 
   private canSave(forceSave: boolean): boolean {
@@ -329,7 +356,7 @@ export default class ProjectManager {
   // initiate a save.
   // If we cannot save now, enqueue a save if one has not already been enqueued and
   // return a noop response.
-  private enqueueSaveOrSave(forceSave: boolean) {
+  private async enqueueSaveOrSave(forceSave: boolean) {
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
         // enqueue a save
@@ -344,8 +371,8 @@ export default class ProjectManager {
       return this.getNoopResponseAndSendSaveNoopEvent();
     } else {
       // if we can save immediately, initiate a save now. This is an async
-      // request that we do not wait for.
-      return this.saveHelper();
+      // request.
+      return await this.saveHelper();
     }
   }
 
