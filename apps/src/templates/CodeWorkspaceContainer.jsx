@@ -10,6 +10,12 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import * as utils from '../utils';
 import commonStyles from '../commonStyles';
+import {
+  MODAL_EDITOR_ID,
+  MODAL_EDITOR_NAME_INPUT_ID,
+  MODAL_EDITOR_DELETE_ID,
+  MODAL_EDITOR_CLOSE_ID,
+} from '../blockly/addons/functionEditorConstants';
 
 class CodeWorkspaceContainer extends React.Component {
   static propTypes = {
@@ -51,6 +57,52 @@ class CodeWorkspaceContainer extends React.Component {
       <div style={mainStyle} className="editor-column">
         <div id="codeWorkspace" style={styles.codeWorkspace}>
           {children}
+          <div id={MODAL_EDITOR_ID} style={styles[MODAL_EDITOR_ID]}>
+            <div
+              className="toolbar"
+              style={{
+                zIndex: 1,
+                position: 'absolute',
+                left: '142px',
+                top: '10px',
+                width: '800px',
+              }}
+            >
+              <div style={{float: 'right'}}>
+                <button type="button" id={MODAL_EDITOR_DELETE_ID}>
+                  delete
+                </button>
+                <button type="button" id={MODAL_EDITOR_CLOSE_ID}>
+                  close
+                </button>
+              </div>
+              <div
+                id={`${MODAL_EDITOR_NAME_INPUT_ID}Container`}
+                style={{padding: '10px', width: '100%'}}
+              >
+                <div style={{width: '100%'}}>Name your function: </div>
+                <div>
+                  <input
+                    id={MODAL_EDITOR_NAME_INPUT_ID}
+                    style={{width: '100%'}}
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div style={{padding: '10px', width: '100%'}}>
+                <div style={{width: '100%'}}>
+                  What is your function supposed to do?
+                </div>
+                <div>
+                  <textarea
+                    style={{width: '100%'}}
+                    id="functionDescriptionText"
+                    rows="2"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -98,6 +150,19 @@ const styles = {
     borderTopWidth: 1,
     borderTopStyle: 'solid',
     borderTopColor: '#ddd',
+  },
+  [MODAL_EDITOR_ID]: {
+    visibility: 'hidden',
+    position: 'absolute',
+    // TODO: Calculate these values based on the size of the workspace
+    top: '30px',
+    left: '0px',
+    zIndex: 1000,
+    width: '100%',
+    height: '100%',
+    // border: '10px solid green',
+    // borderRadius: '15px',
+    backgroundColor: 'white',
   },
   noVisualization: {
     // Overrides left set in css

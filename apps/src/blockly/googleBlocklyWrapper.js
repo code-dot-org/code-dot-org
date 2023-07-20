@@ -19,7 +19,7 @@ import CdoFieldMultilineInput from './addons/cdoFieldMultilineInput';
 import CdoFieldNumber from './addons/cdoFieldNumber';
 import CdoFieldTextInput from './addons/cdoFieldTextInput';
 import CdoFieldVariable from './addons/cdoFieldVariable';
-import FunctionEditor from './addons/functionEditor';
+import FunctionEditor from './addons/functionEditor.js';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
@@ -51,7 +51,12 @@ import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import BlockSvgUnused, {onBlockClickDragDelete} from './addons/blockSvgUnused';
 import {ToolboxType, Themes, Renderers} from './constants';
+<<<<<<< HEAD
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
+=======
+import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
+import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
+>>>>>>> 36576271c28 (initialize modal function editor with separate procedure model/workspace)
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
 import {
@@ -660,11 +665,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     trashcan.init();
 
     if (options.useModalFunctionEditor) {
-      // Customize auto-populated Functions toolbox category.
-      workspace.registerToolboxCategoryCallback(
-        'PROCEDURE',
-        functionsFlyoutCategory
-      );
+      // TODO: Is this the best place to call the init function
+      // (and is using the init function) reasonable for the modal function editor?
+      Blockly.behaviorEditor.init(workspace, opt_options.toolbox);
     }
 
     return workspace;

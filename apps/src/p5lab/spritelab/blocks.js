@@ -461,7 +461,6 @@ export default {
     Blockly.cdoUtils.registerCustomProcedureBlocks();
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
-
     const behaviorEditor = (Blockly.behaviorEditor = new Blockly.FunctionEditor(
       {
         FUNCTION_HEADER: i18n.behaviorEditorHeader(),
@@ -482,6 +481,8 @@ export default {
         Blockly.BlockValueType.LOCATION,
       ]
     ));
+    console.log('**** setting main workspace ****');
+    // behaviorEditor.setMainWorkspace(Blockly.mainBlockSpace);
 
     Blockly.Blocks.sprite_variables_get = {
       // Variable getter.

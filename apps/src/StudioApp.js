@@ -2833,6 +2833,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   }
 
   var div = document.getElementById('codeWorkspace');
+  // TODO: How many of these options apply to modal function editor?
   var options = {
     toolbox: config.level.toolbox,
     disableIfElseEditing: utils.valueOr(

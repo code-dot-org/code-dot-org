@@ -770,6 +770,7 @@ module LevelsHelper
     unless @blockly_loaded
       @blockly_loaded = true
       blocks = blocks + content_tag(:div, '', {id: 'codeWorkspace', style: 'display: none'}) +
+      # content_tag(:div, '', {id: 'emilysModalEditor', style: 'display: none'}) +
       content_tag(:style, '.blocklySvg { background: none; }') +
       content_tag(:script, '', src: webpack_asset_path('js/blockly.js')) +
       content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")) +
