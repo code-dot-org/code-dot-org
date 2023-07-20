@@ -13,10 +13,12 @@ import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelecto
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 import header from '@cdo/apps/code-studio/header';
 import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
+import {AppName} from '../types';
 
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   children,
   channelId,
+  appName,
 }) => {
   const currentLevelId = useSelector(
     (state: {progress: ProgressState}) => state.progress.currentLevelId
@@ -62,25 +64,42 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
           channelId,
         })
       );
-    } else if (channelId) {
+    } else if (channelId && appName) {
       // Otherwise, if we have a channel id, set up the lab using the channel id.
       // This path should only be used for lab pages that don't have a level, such as
-      // /projectbeats.
-      promise = dispatch(setUpWithoutLevel(channelId));
+      // /projectbeats. App name also must be provided if using this path.
+      promise = dispatch(setUpWithoutLevel({channelId, appName}));
+    } else if (channelId || appName) {
+      console.warn(
+        'If loading a lab without a level, channel ID and app name must both be provided'
+      );
     }
     return () => {
       // If we have an early return, we will abort the promise in progress.
       // An early return could happen if the level is changed mid-load.
       promise.abort();
     };
-  }, [channelId, currentLevelId, scriptId, levelPropertiesPath, dispatch]);
+  }, [
+    channelId,
+    appName,
+    currentLevelId,
+    scriptId,
+    levelPropertiesPath,
+    dispatch,
+  ]);
 
   useEffect(() => {
     window.addEventListener('beforeunload', event => {
       const projectManager = Lab2Registry.getInstance().getProjectManager();
       // Force a save before the page unloads, if there are unsaved changes.
       // If we need to force a save, prevent navigation so we can save first.
-      if (projectManager?.hasUnsavedChanges()) {
+      // We skip this if we are already force reloading, as that will occur when
+      // saving already encountered an issue.
+      if (
+        projectManager &&
+        !projectManager.isForceReloading() &&
+        projectManager.hasUnsavedChanges()
+      ) {
         projectManager.cleanUp();
         event.preventDefault();
         event.returnValue = '';
@@ -93,7 +112,6 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     // then possibly load a new header if the level has one.
     dispatch(clearHeader());
     // If there is no channel, we can't load a header.
-    // TODO: Handle the case of viewing another user's project.
     if (loadedChannelId && isOwnerOfChannel) {
       if (isStandaloneProjectLevel) {
         // Standalone projects see project header (includes rename option).
@@ -106,6 +124,14 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
           showShareAndRemix: !hideShareAndRemix,
         });
       }
+    } else if (
+      loadedChannelId &&
+      !isOwnerOfChannel &&
+      isStandaloneProjectLevel
+    ) {
+      // If we are viewing another user's project, and this is a standalone
+      // project, show the minimal project header (project name and remix button).
+      header.showMinimalProjectHeader();
     }
   }, [
     hideShareAndRemix,
@@ -120,7 +146,13 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
 
 interface ProjectContainerProps {
   children: React.ReactNode;
+  /** Channel ID for the project, if already known. Used for standalone projects and projects without levels. */
   channelId?: string;
+  /**
+   * App name for the lab that will be displayed, used only for projects without levels. Must be provided
+   * if loading a lab without a level.
+   */
+  appName?: AppName;
 }
 
 export default ProjectContainer;
