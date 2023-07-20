@@ -4,7 +4,7 @@ class OpenaiSessionsControllerTest < ActionController::TestCase
   setup do
     response = Net::HTTPResponse.new(nil, '200', nil)
     OpenaiChatHelper.stubs(:request_chat_completion).returns(response)
-    OpenaiChatHelper.stubs(:get_chat_completion_response_message).returns({})
+    OpenaiChatHelper.stubs(:get_chat_completion_response_message).returns({status: 200, json: {}})
   end
 
   # User without ai_chat_access is unable to access the chat completion endpoint
