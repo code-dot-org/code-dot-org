@@ -1,79 +1,79 @@
 ---
 en-GB:
-  errors:
-    messages:
-      not_saved: 'Please correct the following errors:'
   activerecord:
     attributes:
       user:
-        name: Display Name
+        age: Age
+        current_password: Current password
         email: Email
-        username: Username
+        gender: Gender
+        name: Display Name
         password: Password
         password_confirmation: Password confirmation
-        current_password: Current password
-        age: Age
-        gender: Gender
+        username: Username
   beta: beta
-  hello: Hello World
-  submit: Submit
-  next_page: Next page
   cancel: Cancel
-  or: or
+  certificate_hour_of_code: The Hour of Code
   continue: Continue
-  signup_form:
-    age: Age
-    email_preference_yes: 'Yes'
-    email_preference_no: 'No'
-    share_teacher_email_reg_partner_preference_yes: 'Yes'
-    share_teacher_email_reg_partner_preference_no: 'No'
-  signin_form:
-    login: Email
-    password: Password
-  password:
-    reset_form:
-      submit: Submit
-  section:
-    type:
-      email: Email
+  copy: Copy
   crud:
     edit: editar
     submit: Submit
+  dialog:
+    ok: OK
+    startover_cancel: Cancel
+    startover_ok: Start Over
+    startover_title: Are you sure you want to start over?
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
+  hello: Hello World
+  home:
+    trynow: Try now
   nav:
     header:
       educate_hoc: The Hour of Code
     user:
       create: Create
       infinity: Infinity
-  teacher:
-    panel:
-      answer_viewer: Teacher Panel
-  home:
-    trynow: Try now
-  certificate_hour_of_code: The Hour of Code
-  upsell:
-    widgets:
-      audience: Ages 14+
-  dialog:
-    ok: OK
-    startover_title: Are you sure you want to start over?
-    startover_ok: Start Over
-    startover_cancel: Cancel
-  terms_interstitial:
-    print: Print
-  race_interstitial:
-    submit: Submit
-  project:
-    name: Name
-    saved: Saved
+  next_page: Next page
+  or: or
+  password:
+    reset_form:
+      submit: Submit
   pd:
-    form_labels:
-      email: Email
     form_entries:
+      email_opt_in:
+        opt_in_no: 'No'
+        opt_in_yes: 'Yes'
       subjects:
         cs: Computer Science
         math: Mathematics
-      email_opt_in:
-        opt_in_yes: 'Yes'
-        opt_in_no: 'No'
-  copy: Copy
+    form_labels:
+      email: Email
+  project:
+    name: Name
+    saved: Saved
+  race_interstitial:
+    submit: Submit
+  section:
+    type:
+      email: Email
+  signin_form:
+    login: Email
+    password: Password
+  signup_form:
+    age: Age
+    email_preference_no: 'No'
+    email_preference_yes: 'Yes'
+    share_teacher_email_reg_partner_preference_no: 'No'
+    share_teacher_email_reg_partner_preference_yes: 'Yes'
+  submit: Submit
+  teacher:
+    panel:
+      answer_viewer: Teacher Panel
+  terms_interstitial:
+    print: Print
+  upsell:
+    widgets:
+      audience: Ages 14+

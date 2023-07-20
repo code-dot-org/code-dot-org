@@ -1,2 +1,10 @@
 {
+  "fa-AF": {
+    "data": {
+      "frameworks": {
+        "ngss": {
+        }
+      }
+    }
+  }
 }

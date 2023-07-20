@@ -2,119 +2,107 @@
   "eu-ES": {
     "data": {
       "lessons": {
-        "flappy/Flappy Code": {
-          "name": "Flappy Code"
+        "csd2-2017/Lists": {
+          "name": "Zerrendak"
         },
-        "hourofcode/Maze": {
-          "name": "Labirintoa"
-        },
-        "frozen/Artist": {
-          "name": "Anna eta Elsarekin programatu"
-        },
-        "iceage/Ice Age Play Lab": {
-          "name": "Ice Age joku laborategia"
-        },
-        "artist/Artist": {
-          "name": "Artista"
-        },
-        "gumball/Gumball Play Lab": {
-          "name": "Gumball joko laborategia"
-        },
-        "mc/Hour of Code 2015": {
-          "name": "Minecraft Kode Ordua"
-        },
-        "playlab/Play Lab": {
-          "name": "Jolas Laborategia"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "name": "Disneyren Infinity Play Lab"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Kodearen ordua 2013"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "Itzuliak"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "Gertaerak"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "Baldintzak"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "Funtzioak"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "Aldagaiak"
         },
-        "k5-onlinepd-2019/For Loops": {
-          "name": "For begiztak"
-        },
-        "coursed-2022/Graph Paper Programming": {
-          "name": "Paper grafiko programazioa"
-        },
-        "coursed-2022/Relay Programming": {
-          "name": "Txandaka programatzen"
-        },
-        "coursed-2022/Conditionals with Cards": {
-          "name": "Baldintzak Txartelekin"
-        },
-        "coursef-2022/The Internet": {
-          "name": "Internet"
-        },
-        "coursee-2022/Songwriting": {
-          "name": "Musika idazten"
-        },
-        "courseb-2022/Move It, Move It": {
-          "name": "Mugi ezazu, mugi ezazu!"
-        },
-        "courseb-2022/Getting Loopy": {
-          "name": "Iteratzen"
-        },
-        "coursea-2022/Happy Maps": {
-          "name": "Mapa Zoriontsuak"
-        },
-        "coursec-2022/The Big Event": {
-          "name": "Gertaera Handia"
-        },
-        "coursec-2022/Binary Bracelets": {
-          "name": "Eskumuturreko bitarrak"
-        },
-        "csd3-2022/Variables": {
-          "name": "Aldagaiak"
-        },
-        "csd3-2022/Sprites": {
+        "csd3-2017/Sprites": {
           "name": "Pertsonaiak"
         },
-        "csd3-2022/Sprite Properties": {
-          "name": "Sprite-n Propietateak"
-        },
-        "csd3-2022/Text": {
-          "name": "Testua"
-        },
-        "csd3-2022/Conditionals": {
+        "csd3-2017/Conditionals": {
           "name": "Baldintzak"
         },
-        "csd3-2022/Velocity": {
+        "csd3-2017/Velocity": {
           "name": "Abiadura"
         },
-        "csd3-2022/Functions": {
+        "csd3-2017/Functions": {
           "name": "Funtzioak"
         },
-        "csd6-2022/Functions": {
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Parametrodun funtzioak"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+        },
+        "coursea-2017/Loops in Artist": {
+          "name": "Begiztak Artistan"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+        },
+        "courseb-2017/Loops in Artist": {
+          "name": "Begiztak Artistan"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Bizitza errealeko algoritmoak: paperezko hegazkinak"
+        },
+        "coursec-2017/Loops in Artist": {
+          "name": "Begiztak Artistan"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "Kabiatutako begiztak"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Oinarri bat Eraikitzen"
+        },
+        "coursee-2017/Loops in Artist": {
+          "name": "Begiztak Artistan"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "Kabiatutako begiztak"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Oinarri bat Eraikitzen"
+        },
+        "coursef-2017/Loops in Artist": {
+          "name": "Begiztak Artistan"
+        },
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Algoritmoak: Tangramak"
+        },
+        "express-2017/Introduction": {
+          "name": "Sarrera"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Oinarri bat Eraikitzen"
+        },
+        "express-2017/Loops in Artist": {
+          "name": "Begiztak Artistan"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Kabiatutako begiztak"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+        },
+        "pre-express-2017/Loops in Artist": {
+          "name": "Begiztak Artistan"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Letraz-letra"
+        },
+        "csd2-2018/Lists": {
+          "name": "Zerrendak"
+        },
+        "csd3-2018/Variables": {
+          "name": "Aldagaiak"
+        },
+        "csd3-2018/Sprites": {
+          "name": "Pertsonaiak"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Baldintzak"
+        },
+        "csd3-2018/Velocity": {
+          "name": "Abiadura"
+        },
+        "csd3-2018/Functions": {
           "name": "Funtzioak"
         },
-        "courseb-2018/Move It, Move It": {
-          "name": "Mugi ezazu, mugi ezazu!"
-        },
-        "courseb-2018/Your Digital Footprint": {
-          "name": "Zure aztarna digitala"
+        "csd6-2018/Functions with Parameters": {
+          "name": "Parametrodun funtzioak"
         },
         "coursea-2018/Debugging: Unspotted Bugs": {
           "name": "Harrapatu gabeko akatsak"
@@ -127,6 +115,24 @@
         },
         "coursea-2018/Going Places Safely": {
           "name": "Joan segurtasunez"
+        },
+        "courseb-2018/Move It, Move It": {
+          "name": "Mugi ezazu, mugi ezazu!"
+        },
+        "courseb-2018/Your Digital Footprint": {
+          "name": "Zure aztarna digitala"
+        },
+        "coursec-2018/Building a Foundation": {
+          "name": "Oinarri bat Eraikitzen"
+        },
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Iteratzen"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "Gertaera Handia"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Eskumuturreko bitarrak"
         },
         "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "Paper grafiko programazioa"
@@ -142,6 +148,24 @@
         },
         "coursed-2018/Unplugged: Binary": {
           "name": "Irudi bitarrak"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Nire lagun robotikoak"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Oinarri bat Eraikitzen"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Baldintzak Txartelekin"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Musika idazten"
+        },
+        "coursee-2018/Internet": {
+          "name": "Internet"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Crowdsourcing"
         },
         "coursef-2018/Programming: My Robotic Friends": {
           "name": "Nire lagun robotikoak"
@@ -194,36 +218,6 @@
         "express-2018/Crowdsourcing": {
           "name": "Crowdsourcing"
         },
-        "coursee-2018/Programming: My Robotic Friends": {
-          "name": "Nire lagun robotikoak"
-        },
-        "coursee-2018/Building a Foundation": {
-          "name": "Oinarri bat Eraikitzen"
-        },
-        "coursee-2018/Conditionals with Cards": {
-          "name": "Baldintzak Txartelekin"
-        },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "Musika idazten"
-        },
-        "coursee-2018/Internet": {
-          "name": "Internet"
-        },
-        "coursee-2018/Crowdsourcing": {
-          "name": "Crowdsourcing"
-        },
-        "coursec-2018/Building a Foundation": {
-          "name": "Oinarri bat Eraikitzen"
-        },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "Iteratzen"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "Gertaera Handia"
-        },
-        "coursec-2018/Binary Bracelets": {
-          "name": "Eskumuturreko bitarrak"
-        },
         "pre-express-2018/Debugging: Unspotted Bugs": {
           "name": "Harrapatu gabeko akatsak"
         },
@@ -239,80 +233,8 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Letraz-letra"
         },
-        "csd3-2018/Variables": {
-          "name": "Aldagaiak"
-        },
-        "csd3-2018/Sprites": {
-          "name": "Pertsonaiak"
-        },
-        "csd3-2018/Conditionals": {
-          "name": "Baldintzak"
-        },
-        "csd3-2018/Velocity": {
-          "name": "Abiadura"
-        },
-        "csd3-2018/Functions": {
-          "name": "Funtzioak"
-        },
-        "csd6-2018/Functions with Parameters": {
-          "name": "Parametrodun funtzioak"
-        },
-        "csd2-2018/Lists": {
+        "csd2-2019/Lists": {
           "name": "Zerrendak"
-        },
-        "coursea-2019/Going Places Safely": {
-          "name": "Joan segurtasunez"
-        },
-        "coursea-2019/Programming: Happy Maps": {
-          "name": "Mapa Zoriontsuak"
-        },
-        "courseb-2019/Your Digital Footprint": {
-          "name": "Zure aztarna digitala"
-        },
-        "courseb-2019/Move It, Move It": {
-          "name": "Mugi ezazu, mugi ezazu!"
-        },
-        "courseb-2019/Loops: Getting Loopy": {
-          "name": "Iteratzen"
-        },
-        "coursed-2019/Algorithms: Graph Paper Programming": {
-          "name": "Paper grafiko programazioa"
-        },
-        "coursed-2019/Relay Programming": {
-          "name": "Txandaka programatzen"
-        },
-        "coursed-2019/Conditionals with Cards": {
-          "name": "Baldintzak Txartelekin"
-        },
-        "coursed-2019/Unplugged: Binary": {
-          "name": "Irudi bitarrak"
-        },
-        "coursed-2019/Digital Citizenship": {
-          "name": "Hiritartasun digitala"
-        },
-        "coursef-2019/Envelope Variables": {
-          "name": "Gutun-azaleko aldagarriak"
-        },
-        "coursef-2019/For Loop Fun": {
-          "name": "Begizta jostarirako"
-        },
-        "coursef-2019/Internet": {
-          "name": "Internet"
-        },
-        "coursef-2019/Crowdsourcing": {
-          "name": "Crowdsourcing"
-        },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "Musika idazten"
-        },
-        "coursec-2019/Binary Bracelets": {
-          "name": "Eskumuturreko bitarrak"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "Gertaera Handia"
-        },
-        "pre-express-2019/Spelling Bee": {
-          "name": "Letraz-letra"
         },
         "csd3-2019/Variables": {
           "name": "Aldagaiak"
@@ -332,155 +254,275 @@
         "csd6-2019/Functions with Parameters": {
           "name": "Parametrodun funtzioak"
         },
-        "csd2-2019/Lists": {
-          "name": "Zerrendak"
+        "coursea-2019/Going Places Safely": {
+          "name": "Joan segurtasunez"
         },
-        "coursef-2017/Building a Foundation": {
-          "name": "Oinarri bat Eraikitzen"
+        "coursea-2019/Programming: Happy Maps": {
+          "name": "Mapa Zoriontsuak"
         },
-        "coursef-2017/Loops in Artist": {
-          "name": "Begiztak Artistan"
+        "courseb-2019/Your Digital Footprint": {
+          "name": "Zure aztarna digitala"
         },
-        "coursef-2017/Algorithms: Tangrams": {
-          "name": "Algoritmoak: Tangramak"
+        "courseb-2019/Move It, Move It": {
+          "name": "Mugi ezazu, mugi ezazu!"
         },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+        "courseb-2019/Loops: Getting Loopy": {
+          "name": "Iteratzen"
         },
-        "coursea-2017/Loops in Artist": {
-          "name": "Begiztak Artistan"
+        "coursec-2019/Binary Bracelets": {
+          "name": "Eskumuturreko bitarrak"
         },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+        "coursec-2019/Events: The Big Event": {
+          "name": "Gertaera Handia"
         },
-        "pre-express-2017/Loops in Artist": {
-          "name": "Begiztak Artistan"
+        "coursed-2019/Algorithms: Graph Paper Programming": {
+          "name": "Paper grafiko programazioa"
         },
-        "pre-express-2017/Spelling Bee": {
+        "coursed-2019/Relay Programming": {
+          "name": "Txandaka programatzen"
+        },
+        "coursed-2019/Conditionals with Cards": {
+          "name": "Baldintzak Txartelekin"
+        },
+        "coursed-2019/Unplugged: Binary": {
+          "name": "Irudi bitarrak"
+        },
+        "coursed-2019/Digital Citizenship": {
+          "name": "Hiritartasun digitala"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Musika idazten"
+        },
+        "coursef-2019/Envelope Variables": {
+          "name": "Gutun-azaleko aldagarriak"
+        },
+        "coursef-2019/For Loop Fun": {
+          "name": "Begizta jostarirako"
+        },
+        "coursef-2019/Internet": {
+          "name": "Internet"
+        },
+        "coursef-2019/Crowdsourcing": {
+          "name": "Crowdsourcing"
+        },
+        "pre-express-2019/Spelling Bee": {
           "name": "Letraz-letra"
         },
-        "coursee-2017/Building a Foundation": {
-          "name": "Oinarri bat Eraikitzen"
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Mapa Zoriontsuak"
         },
-        "coursee-2017/Loops in Artist": {
-          "name": "Begiztak Artistan"
+        "courseb-2020/Move It, Move It": {
+          "name": "Mugi ezazu, mugi ezazu!"
         },
-        "coursee-2017/Nested Loops": {
-          "name": "Kabiatutako begiztak"
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Iteratzen"
         },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "Bizitza errealeko algoritmoak: paperezko hegazkinak"
+        "coursec-2020/Binary Bracelets": {
+          "name": "Eskumuturreko bitarrak"
         },
-        "coursec-2017/Loops in Artist": {
-          "name": "Begiztak Artistan"
+        "coursec-2020/Events: The Big Event": {
+          "name": "Gertaera Handia"
         },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Paper grafiko programazioa"
         },
-        "courseb-2017/Loops in Artist": {
-          "name": "Begiztak Artistan"
+        "coursed-2020/Relay Programming": {
+          "name": "Txandaka programatzen"
         },
-        "coursed-2017/Nested Loops": {
-          "name": "Kabiatutako begiztak"
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Baldintzak Txartelekin"
         },
-        "express-2017/Introduction": {
-          "name": "Sarrera"
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Irudi bitarrak"
         },
-        "express-2017/Building a Foundation": {
-          "name": "Oinarri bat Eraikitzen"
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Musika idazten"
         },
-        "express-2017/Loops in Artist": {
-          "name": "Begiztak Artistan"
+        "coursef-2020/Envelope Variables": {
+          "name": "Gutun-azaleko aldagarriak"
         },
-        "express-2017/Nested Loops": {
-          "name": "Kabiatutako begiztak"
+        "coursef-2020/Internet": {
+          "name": "Internet"
         },
-        "csd3-2017/Variables": {
+        "coursef-2020/For Loop Fun": {
+          "name": "Begizta jostarirako"
+        },
+        "csd3-2021/Variables": {
           "name": "Aldagaiak"
         },
-        "csd3-2017/Sprites": {
+        "csd3-2021/Sprites": {
           "name": "Pertsonaiak"
         },
-        "csd3-2017/Conditionals": {
+        "csd3-2021/Sprite Properties": {
+          "name": "Sprite-n Propietateak"
+        },
+        "csd3-2021/Text": {
+          "name": "Testua"
+        },
+        "csd3-2021/Conditionals": {
           "name": "Baldintzak"
         },
-        "csd3-2017/Velocity": {
+        "csd3-2021/Velocity": {
           "name": "Abiadura"
         },
-        "csd3-2017/Functions": {
+        "csd3-2021/Functions": {
           "name": "Funtzioak"
         },
-        "csd6-2017/Functions with Parameters_": {
+        "csd6-2021/Functions with Parameters": {
           "name": "Parametrodun funtzioak"
         },
-        "csd2-2017/Lists": {
-          "name": "Zerrendak"
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Mapa Zoriontsuak"
         },
-        "course4/Unplugged: Tangrams": {
-          "name": "Lineaz kanpo: tangramak"
+        "courseb-2021/Move It, Move It": {
+          "name": "Mugi ezazu, mugi ezazu!"
         },
-        "course4/Maze and Bee": {
-          "name": "Labirintoa eta Erlea"
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Iteratzen"
         },
-        "course4/Artist": {
+        "coursec-2021/Events: The Big Event": {
+          "name": "Gertaera Handia"
+        },
+        "coursec-2021/Binary Bracelets": {
+          "name": "Eskumuturreko bitarrak"
+        },
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Paper grafiko programazioa"
+        },
+        "coursed-2021/Relay Programming": {
+          "name": "Txandaka programatzen"
+        },
+        "coursed-2021/Conditionals with Cards": {
+          "name": "Baldintzak Txartelekin"
+        },
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Musika idazten"
+        },
+        "coursef-2021/For Loop Fun": {
+          "name": "Begizta jostarirako"
+        },
+        "coursef-2021/Internet": {
+          "name": "Internet"
+        },
+        "csd3-2022/Variables": {
+          "name": "Aldagaiak"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Pertsonaiak"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Sprite-n Propietateak"
+        },
+        "csd3-2022/Text": {
+          "name": "Testua"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Baldintzak"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Abiadura"
+        },
+        "csd3-2022/Functions": {
+          "name": "Funtzioak"
+        },
+        "csd6-2022/Functions": {
+          "name": "Funtzioak"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Mapa Zoriontsuak"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Mugi ezazu, mugi ezazu!"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Iteratzen"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Gertaera Handia"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Eskumuturreko bitarrak"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Paper grafiko programazioa"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Txandaka programatzen"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Baldintzak Txartelekin"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Musika idazten"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internet"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kodearen ordua 2013"
+        },
+        "artist/Artist": {
           "name": "Artista"
         },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "Deskonektatua: gutun-azaleko aldagaiak"
+        "flappy/Flappy Code": {
+          "name": "Flappy Code"
         },
-        "course4/Unplugged: Madlibs": {
-          "name": "Deskonektauta: Madlibs"
+        "frozen/Artist": {
+          "name": "Anna eta Elsarekin programatu"
         },
-        "course4/Artist: Variables": {
-          "name": "Artista: aldagaiak"
+        "gumball/Gumball Play Lab": {
+          "name": "Gumball joko laborategia"
         },
-        "course4/Play Lab: Variables": {
-          "name": "Jokoen Laborategia: Aldagaiak"
+        "hourofcode/Maze": {
+          "name": "Labirintoa"
         },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "Lineaz kanpo: For begizta dibertigarriak"
+        "iceage/Ice Age Play Lab": {
+          "name": "Ice Age joku laborategia"
         },
-        "course4/Bee: For Loops": {
-          "name": "Erlea: For Begiztak"
+        "infinity/Infinity": {
+          "name": "Disneyren Infinity Play Lab"
         },
-        "course4/Artist: For Loops": {
-          "name": "Artista: For begizta"
+        "mc/Hour of Code 2015": {
+          "name": "Minecraft Kode Ordua"
         },
-        "course4/Play Lab: For Loops": {
-          "name": "Laborategia: For begiztak"
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
-        "course4/Artist: Functions": {
-          "name": "Artista: funtzioak"
+        "playlab/Play Lab": {
+          "name": "Jolas Laborategia"
         },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "Deskonektatua: abestiak idatzi aldagaiekin"
+        "allthethings/Jigsaw": {
+          "name": "Buruhaustea"
         },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Artista: funtzioak eta aldagaiak"
+        "allthethings/Maze": {
+          "name": "Labirintoa"
         },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "Jokoen Laborategia: Parametrodun Funtzioak"
+        "allthethings/Artist": {
+          "name": "Artista"
         },
-        "course4/Bee: Functions with Parameters": {
-          "name": "Erlea: Funtzioak parametroekin"
+        "allthethings/Bee": {
+          "name": "Erlea"
         },
-        "course4/Unplugged: Binary": {
-          "name": "Desnkonektatua: binarioa"
+        "allthethings/Flappy": {
+          "name": "Flappy"
         },
-        "course4/Artist Binary": {
-          "name": "Artista bitarra"
+        "allthethings/Bounce": {
+          "name": "Errebotea"
         },
-        "course4/Super Challenge - Variables": {
-          "name": "Super erronka - Aldagaiak"
+        "allthethings/Multi": {
+          "name": "Multi"
         },
-        "course4/Super Challenge - For Loops": {
-          "name": "Super erronka - For begiztak"
+        "allthethings/Match": {
+          "name": "Parekatu"
         },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "Super erronka - funtzioak eta parametroak"
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "Muturreko erronka - osokoa"
+        "allthethings/Web Lab": {
+          "name": "Web Lab"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Konputazio zientzetarako sarrera"
@@ -541,6 +583,60 @@
         },
         "20-hour/Wrap-up": {
           "name": "Ixtea"
+        },
+        "course1/Happy Maps": {
+          "name": "Mapa Zoriontsuak"
+        },
+        "course1/Move it, Move it": {
+          "name": "Mugitu, mugitu"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Buruhaustea: ikasi arrastatu eta askatzen"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Labirintoa: Sekuentzia"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Labirintoa: Arazketa"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Erlea: sekuentzia"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Artista: sekuentzia"
+        },
+        "course1/Building a Foundation": {
+          "name": "Oinarri bat Eraikitzen"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Artista: Formak"
+        },
+        "course1/Spelling Bee": {
+          "name": "Letraz-letra"
+        },
+        "course1/Getting Loopy": {
+          "name": "Iteratzen"
+        },
+        "course1/Maze: Loops": {
+          "name": "Labirintoa: Begiztak"
+        },
+        "course1/Bee: Loops": {
+          "name": "Erlea: Begiztak"
+        },
+        "course1/The Big Event": {
+          "name": "Gertaera Handia"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Jolas laborategia: sortu istorioa"
+        },
+        "course1/Going Places Safely": {
+          "name": "Joan segurtasunez"
+        },
+        "course1/Artist: Loops": {
+          "name": "Artista: Begiztak"
         },
         "course2/Graph Paper Programming": {
           "name": "Paper grafiko programazioa"
@@ -662,188 +758,74 @@
         "course3/Artist: Patterns": {
           "name": "Artista: patroiak"
         },
-        "course1/Happy Maps": {
-          "name": "Mapa Zoriontsuak"
+        "course4/Unplugged: Tangrams": {
+          "name": "Lineaz kanpo: tangramak"
         },
-        "course1/Move it, Move it": {
-          "name": "Mugitu, mugitu"
+        "course4/Maze and Bee": {
+          "name": "Labirintoa eta Erlea"
         },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "Buruhaustea: ikasi arrastatu eta askatzen"
+        "course4/Artist": {
+          "name": "Artista"
         },
-        "course1/Maze: Sequence": {
-          "name": "Labirintoa: Sekuentzia"
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Deskonektatua: gutun-azaleko aldagaiak"
         },
-        "course1/Maze: Debugging": {
-          "name": "Labirintoa: Arazketa"
+        "course4/Unplugged: Madlibs": {
+          "name": "Deskonektauta: Madlibs"
         },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "Bizitza Errealeko Algoritmoak: Hazi bat Landatu"
+        "course4/Artist: Variables": {
+          "name": "Artista: aldagaiak"
         },
-        "course1/Bee: Sequence": {
-          "name": "Erlea: sekuentzia"
+        "course4/Play Lab: Variables": {
+          "name": "Jokoen Laborategia: Aldagaiak"
         },
-        "course1/Artist: Sequence": {
-          "name": "Artista: sekuentzia"
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Lineaz kanpo: For begizta dibertigarriak"
         },
-        "course1/Building a Foundation": {
-          "name": "Oinarri bat Eraikitzen"
+        "course4/Bee: For Loops": {
+          "name": "Erlea: For Begiztak"
         },
-        "course1/Artist: Shapes": {
-          "name": "Artista: Formak"
+        "course4/Artist: For Loops": {
+          "name": "Artista: For begizta"
         },
-        "course1/Spelling Bee": {
-          "name": "Letraz-letra"
+        "course4/Play Lab: For Loops": {
+          "name": "Laborategia: For begiztak"
         },
-        "course1/Getting Loopy": {
-          "name": "Iteratzen"
+        "course4/Artist: Functions": {
+          "name": "Artista: funtzioak"
         },
-        "course1/Maze: Loops": {
-          "name": "Labirintoa: Begiztak"
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Deskonektatua: abestiak idatzi aldagaiekin"
         },
-        "course1/Bee: Loops": {
-          "name": "Erlea: Begiztak"
+        "course4/Artist: Functions with Parameters": {
+          "name": "Artista: funtzioak eta aldagaiak"
         },
-        "course1/The Big Event": {
-          "name": "Gertaera Handia"
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Jokoen Laborategia: Parametrodun Funtzioak"
         },
-        "course1/Studio: Create a Story": {
-          "name": "Jolas laborategia: sortu istorioa"
+        "course4/Bee: Functions with Parameters": {
+          "name": "Erlea: Funtzioak parametroekin"
         },
-        "course1/Going Places Safely": {
-          "name": "Joan segurtasunez"
+        "course4/Unplugged: Binary": {
+          "name": "Desnkonektatua: binarioa"
         },
-        "course1/Artist: Loops": {
-          "name": "Artista: Begiztak"
+        "course4/Artist Binary": {
+          "name": "Artista bitarra"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Super erronka - Aldagaiak"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Super erronka - For begiztak"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Super erronka - funtzioak eta parametroak"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Muturreko erronka - osokoa"
         },
         "jigsaw/Jigsaw": {
           "name": "Buruhaustea"
-        },
-        "allthethings/Jigsaw": {
-          "name": "Buruhaustea"
-        },
-        "allthethings/Maze": {
-          "name": "Labirintoa"
-        },
-        "allthethings/Artist": {
-          "name": "Artista"
-        },
-        "allthethings/Bee": {
-          "name": "Erlea"
-        },
-        "allthethings/Flappy": {
-          "name": "Flappy"
-        },
-        "allthethings/Bounce": {
-          "name": "Errebotea"
-        },
-        "allthethings/Multi": {
-          "name": "Multi"
-        },
-        "allthethings/Match": {
-          "name": "Parekatu"
-        },
-        "allthethings/Minecraft": {
-          "name": "Minecraft"
-        },
-        "allthethings/Web Lab": {
-          "name": "Web Lab"
-        },
-        "coursef-2021/For Loop Fun": {
-          "name": "Begizta jostarirako"
-        },
-        "coursef-2021/Internet": {
-          "name": "Internet"
-        },
-        "courseb-2021/Move It, Move It": {
-          "name": "Mugi ezazu, mugi ezazu!"
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "name": "Iteratzen"
-        },
-        "coursea-2021/Programming: Happy Maps": {
-          "name": "Mapa Zoriontsuak"
-        },
-        "coursec-2021/Events: The Big Event": {
-          "name": "Gertaera Handia"
-        },
-        "coursec-2021/Binary Bracelets": {
-          "name": "Eskumuturreko bitarrak"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "Paper grafiko programazioa"
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "Txandaka programatzen"
-        },
-        "coursed-2021/Conditionals with Cards": {
-          "name": "Baldintzak Txartelekin"
-        },
-        "coursee-2021/Functions: Songwriting": {
-          "name": "Musika idazten"
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "Parametrodun funtzioak"
-        },
-        "csd3-2021/Variables": {
-          "name": "Aldagaiak"
-        },
-        "csd3-2021/Sprites": {
-          "name": "Pertsonaiak"
-        },
-        "csd3-2021/Sprite Properties": {
-          "name": "Sprite-n Propietateak"
-        },
-        "csd3-2021/Text": {
-          "name": "Testua"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "Baldintzak"
-        },
-        "csd3-2021/Velocity": {
-          "name": "Abiadura"
-        },
-        "csd3-2021/Functions": {
-          "name": "Funtzioak"
-        },
-        "courseb-2020/Move It, Move It": {
-          "name": "Mugi ezazu, mugi ezazu!"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
-          "name": "Iteratzen"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "Paper grafiko programazioa"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "Txandaka programatzen"
-        },
-        "coursed-2020/Conditionals with Cards": {
-          "name": "Baldintzak Txartelekin"
-        },
-        "coursed-2020/Unplugged: Binary": {
-          "name": "Irudi bitarrak"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "Eskumuturreko bitarrak"
-        },
-        "coursec-2020/Events: The Big Event": {
-          "name": "Gertaera Handia"
-        },
-        "coursee-2020/Functions: Songwriting": {
-          "name": "Musika idazten"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "Mapa Zoriontsuak"
-        },
-        "coursef-2020/Envelope Variables": {
-          "name": "Gutun-azaleko aldagarriak"
-        },
-        "coursef-2020/Internet": {
-          "name": "Internet"
-        },
-        "coursef-2020/For Loop Fun": {
-          "name": "Begizta jostarirako"
         }
       }
     }
