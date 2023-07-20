@@ -17,6 +17,7 @@ class LevelsController < ApplicationController
 
   # All level types that can be requested via /levels/new
   LEVEL_CLASSES = [
+    Aichat,
     Ailab,
     Applab,
     Artist,
@@ -441,6 +442,8 @@ class LevelsController < ApplicationController
         @game = Game.javalab
       elsif @type_class == Music
         @game = Game.music
+      elsif @type_class == Aichat
+        @game = Game.aichat
       end
       @level = @type_class.new
       render :edit
