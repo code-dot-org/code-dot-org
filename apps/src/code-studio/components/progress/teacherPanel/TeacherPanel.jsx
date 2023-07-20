@@ -207,7 +207,7 @@ class TeacherPanel extends React.Component {
               <div>{i18n.viewingSection()}</div>
               <SectionSelector
                 style={{margin: '0px 10px'}}
-                reloadOnChange={true}
+                reloadOnChange={false}
                 logToFirehose={() => this.logToFirehose('select_section')}
               />
               {selectedSection && (
