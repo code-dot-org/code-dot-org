@@ -522,12 +522,14 @@ class ManageStudentsTable extends Component {
           (label, columnInfo) => ({
             ...sortable(label, columnInfo),
             children: (
-              <span>
-                {sortable(label, columnInfo).children}
-                <HelpTip>
+              <>
+                {React.cloneElement(sortable(label, columnInfo).children, {
+                  key: '1',
+                })}
+                <HelpTip key="2">
                   <p>{i18n.familyNameHelpTip()}</p>
                 </HelpTip>
-              </span>
+              </>
             ),
           }),
         ],
