@@ -117,7 +117,7 @@ GoogleBlockly.Extensions.register('procedures_edit_button', editExtension);
 // This extension adds an SVG frame around procedures definition blocks.
 // Not used in Music Lab or wherever the modal function is enabled.
 GoogleBlockly.Extensions.register('procedures_block_frame', function () {
-  if (!useModalFunctionEditor) {
+  if (!useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
     this.functionalSvg_ = new BlockSvgFrame(
       this,
       msg.function(),

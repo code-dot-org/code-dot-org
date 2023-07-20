@@ -641,6 +641,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
 
+    if (options.noFunctionBlockFrame) {
+      workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
+    }
     workspace.addChangeListener(onBlockClickDragDelete);
 
     blocklyWrapper.navigationController.addWorkspace(workspace);
