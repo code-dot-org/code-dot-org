@@ -107,8 +107,6 @@ module Rack
     end
 
     class DeflateStream
-      # TODO: The `||=` is used below instead of `=` so as to avoid a constant redefinition warning.
-      # Fix this, so that direct assignment can be used.
       DEFLATE_ARGS = [
         Zlib::DEFAULT_COMPRESSION,
         # drop the zlib header which causes both Safari and IE to choke
