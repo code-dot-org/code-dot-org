@@ -1,4 +1,4 @@
-class OpenaiSessionsController < ApplicationController
+class OpenaiChatController < ApplicationController
   include OpenaiChatHelper
   authorize_resource class: false
 
