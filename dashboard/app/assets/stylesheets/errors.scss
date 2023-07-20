@@ -130,4 +130,13 @@
     color: $neutral_dark;
     margin-top: 0;
   }
+
+  a {
+    &.ds-btn {
+      color: $white;
+      background-color: $brand_secondary_default;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+  }
 }

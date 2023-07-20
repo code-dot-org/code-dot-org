@@ -4,6 +4,5 @@
       %img{src: '/shared/images/happy_penguin.png', alt: 'A happy cartoon penguin'}
       .error-message
         %h1.deprecated-course-heading= I18n.t('course_deprecated.title')
-        %a{href: '/'}
-          %button.deprecated-course-button= I18n.t('course_deprecated.button')
-          // update href (a tag surrounding button invalid? should just be a tag)
+        %a.deprecated-course-button.ds-btn{href: 'https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses'}
+          = I18n.t('course_deprecated.button')
