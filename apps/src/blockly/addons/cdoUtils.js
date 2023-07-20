@@ -12,6 +12,8 @@ import {
   positionBlocksOnWorkspace,
 } from './cdoSerializationHelpers';
 import {parseElement as parseXmlElement} from '../../xml';
+import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
+import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
 
 /**
  * Loads blocks to a workspace.
@@ -199,4 +201,9 @@ export function locationField(icon, onClick) {
     transformText: transformTextSetField,
     icon,
   });
+}
+
+export function registerCustomProcedureBlocks() {
+  unregisterProcedureBlocks();
+  Blockly.common.defineBlocks(procedureBlocks);
 }
