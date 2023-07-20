@@ -35,7 +35,7 @@ theme: responsive_full_width
           .text-wrapper
             %h3.heading-sm
               =hoc_s("accessibility_efforts_card_title_#{index + 1}")
-            %p
+            %p.body-three
               - if index == 1
                 =hoc_s(:accessibility_efforts_card_desc_2, markdown: :inline, locals: {voluntary_url: "https://www.section508.gov/sell/vpat/"})
               - elsif index == 3
