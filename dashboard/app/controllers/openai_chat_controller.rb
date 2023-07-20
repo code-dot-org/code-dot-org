@@ -5,7 +5,7 @@ class OpenaiChatController < ApplicationController
   # POST /openai/chat_completion
   def chat_completion
     unless has_required_messages_param?
-      return render status: :bad_request, json: {}
+      return render(status: :bad_request, json: {})
     end
 
     messages = params[:messages]
