@@ -199,7 +199,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.professional_learning_and_self_paced_course_offerings(locale_code = 'en-us')
-    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.get_instruction_type == 'self_paced'}.map do |co|
+    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}.map do |co|
       {
         id: co.id,
         key: co.key,
@@ -399,7 +399,7 @@ class CourseOffering < ApplicationRecord
     course_versions&.first&.content_root&.participant_audience
   end
 
-  def get_instruction_type
+  def instruction_type
     course_versions&.first&.content_root&.instruction_type
   end
 
