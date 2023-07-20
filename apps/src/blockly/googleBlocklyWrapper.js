@@ -54,11 +54,13 @@ import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import BlockSvgUnused, {onBlockClickDragDelete} from './addons/blockSvgUnused';
 import {ToolboxType, Themes, Renderers} from './constants';
-import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
-import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
+import {
+  ObservableProcedureModel,
+  ObservableParameterModel,
+} from '@blockly/block-shareable-procedures';
 
 const options = {
   contextMenu: true,
@@ -171,6 +173,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('ConnectionType');
   blocklyWrapper.wrapReadOnlyProperty('ContextMenu');
   blocklyWrapper.wrapReadOnlyProperty('contractEditor');
+  blocklyWrapper.wrapReadOnlyProperty('createBlockDefinitionsFromJsonArray');
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
   blocklyWrapper.wrapReadOnlyProperty('Css');
   blocklyWrapper.wrapReadOnlyProperty('DropDownDiv');
@@ -308,6 +311,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
     true /* opt_allowOverrides */
   );
 
+  // Register the shareable procedures serializer, used for the modal function editor.
+  blocklyWrapper.blockly_.serialization.registry.unregister('procedures');
+  blocklyWrapper.blockly_.serialization.registry.register(
+    'procedures',
+    new blocklyWrapper.blockly_.serialization.procedures.ProcedureSerializer(
+      ObservableProcedureModel,
+      ObservableParameterModel
+    )
+  );
   registerAllContextMenuItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
@@ -653,14 +665,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
         'PROCEDURE',
         functionsFlyoutCategory
       );
-    }
-    // Customize function definition blocks.
-    if (options.noFunctionBlockFrame) {
-      Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
-        FUNCTION_BLOCK_NO_FRAME.init;
-    } else {
-      Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
-        FUNCTION_BLOCK.init;
     }
 
     return workspace;
