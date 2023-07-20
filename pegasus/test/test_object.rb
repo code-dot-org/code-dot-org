@@ -8,8 +8,8 @@ class ObjectTest < Minitest::Test
     assert [].nil_or_empty?
     assert ({}).nil_or_empty?
 
-    assert !('a'.nil_or_empty?)
-    assert !([1].nil_or_empty?)
-    assert !(({a: 1}).nil_or_empty?)
+    assert_not('a'.nil_or_empty?)
+    assert_not([1].nil_or_empty?)
+    assert_not(({a: 1}).nil_or_empty?)
   end
 end
