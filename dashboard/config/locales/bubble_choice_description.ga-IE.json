@@ -2,15 +2,15 @@
   "ga-IE": {
     "data": {
       "bubble_choice_description": {
-        "courseC_artist_prog_challenge1_2021": "Tarraing seomra do gach ainmhí. ",
-        "courseD_bee_nestedLoops8_2021": "Bailigh an neachtar go léir ó gach bláth agus déan mil ag an gcíor mheala. Úsáid lúb neadaithe. ",
-        "courseD_bee_nestedLoops9_2021": "Déan an mhil go léir.",
-        "courseF_bee_variables_7a_2021": "Tá an dúshlán seo beagáinín difriúil. Cad is gá duit a dhéanamh lena réiteach?",
         "courseC_artist_prog_challenge12022": "Tarraing seomra do gach ainmhí. ",
+        "courseC_artist_prog_challenge1_2021": "Tarraing seomra do gach ainmhí. ",
         "courseD_artist_nestedLoops92022": "An féidir leat pictiúr den sórt seo a dhéanamh?",
         "courseD_bee_nestedLoops82022": "Bailigh an neachtar go léir ó gach bláth agus déan mil ag an gcíor mheala. Úsáid lúb neadaithe. ",
+        "courseD_bee_nestedLoops8_2021": "Bailigh an neachtar go léir ó gach bláth agus déan mil ag an gcíor mheala. Úsáid lúb neadaithe. ",
         "courseD_bee_nestedLoops92022": "Déan an mhil go léir.",
-        "courseF_bee_variables_7a2022": "Tá an dúshlán seo beagáinín difriúil. Cad is gá duit a dhéanamh lena réiteach?"
+        "courseD_bee_nestedLoops9_2021": "Déan an mhil go léir.",
+        "courseF_bee_variables_7a2022": "Tá an dúshlán seo beagáinín difriúil. Cad is gá duit a dhéanamh lena réiteach?",
+        "courseF_bee_variables_7a_2021": "Tá an dúshlán seo beagáinín difriúil. Cad is gá duit a dhéanamh lena réiteach?"
       }
     }
   }
