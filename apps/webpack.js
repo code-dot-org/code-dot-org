@@ -123,6 +123,12 @@ var baseConfig = {
         'standaloneVideo',
         'locale-do-not-import.js'
       ),
+      '@cdo/aichat/locale': path.resolve(
+        __dirname,
+        'src',
+        'aichat',
+        'locale-do-not-import.js'
+      ),
       '@cdo/poetry/locale': path.resolve(
         __dirname,
         'src',
