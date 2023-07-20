@@ -63,7 +63,7 @@ class Ability
       Foorm::LibraryQuestion,
       :javabuilder_session,
       CodeReview,
-      :openai_session
+      :openai_chat
     ]
     cannot :index, Level
 
@@ -284,7 +284,7 @@ class Ability
       end
 
       if user.permission?(UserPermission::AI_CHAT_ACCESS)
-        can :chat_completion, :openai_session
+        can :chat_completion, :openai_chat
       end
     end
 
