@@ -8,6 +8,7 @@ import {DATE_FORMAT} from '../workshop_dashboard/workshopConstants';
 import {Row, Col, ControlLabel, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import _ from 'lodash';
 
 export default class InternationalOptIn extends FormController {
   static propTypes = {
@@ -28,6 +29,9 @@ export default class InternationalOptIn extends FormController {
   serializeFormData() {
     const formData = super.serializeFormData();
     formData.form_data.email = this.props.accountEmail;
+    formData.form_data.schoolCountry = _.startCase(
+      _.camelCase(formData.form_data.schoolCountry)
+    );
     return formData;
   }
 
