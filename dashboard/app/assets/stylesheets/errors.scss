@@ -97,9 +97,37 @@
 
   .deprecated-course-button {
     margin-top: 0;
+    // all copied from denys?
+    font-family: $gotham-bold;
+    font-size: 1em !important;
+    padding: 10px 20px;
+    height: auto;
+    margin-right: 0;
+    background-color: $brand_secondary_default;
+    border: 2px solid $brand_secondary_default;
+    color: $neutral_white;
+    line-height: unset;
+
+    &:hover {
+      background-color: $brand_secondary_dark;
+      border-color: $brand_secondary_dark;
+      box-shadow: none;
+    }
+
+    &:focus {
+      border-color: $brand_primary_default;
+    }
+
+    &:disabled {
+      color: $neutral_white;
+      border-color: $neutral_dark20;
+      background-color: $neutral_dark20;
+      cursor: not-allowed;
+    }
   }
 
   .deprecated-course-heading {
+    color: $neutral_dark;
     margin-top: 0;
   }
 }
