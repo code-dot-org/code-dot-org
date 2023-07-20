@@ -136,6 +136,7 @@ class User < ApplicationRecord
     child_account_compliance_state_last_updated
     us_state
     country_code
+    family_name
   )
 
   attr_accessor(
@@ -553,6 +554,13 @@ class User < ApplicationRecord
     :fix_by_user_type
 
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
+
+  validate :no_family_name_for_teachers
+  def no_family_name_for_teachers
+    if family_name && (teacher? || sections_as_pl_participant.any?)
+      errors.add(:family_name, "can't be set for teachers or PL participants")
+    end
+  end
 
   before_validation :update_share_setting, unless: :under_13?
 
@@ -1026,6 +1034,12 @@ class User < ApplicationRecord
     return true if teacher? # No-op if user is already a teacher
     return false if email.blank?
 
+    # Remove family name, in case it was set on the student account.
+    # Must do this before updating user_type, to prevent validation failure.
+    if DCDO.get('family-name-features', false)
+      self.family_name = nil
+    end
+
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
     # teachers do not need another adult to have access to their account.
@@ -1040,6 +1054,8 @@ class User < ApplicationRecord
         new_attributes[:email] = email
       end
       update!(new_attributes)
+
+      self
     end
   rescue
     false # Relevant errors are set on the user model, so we rescue and return false here.
@@ -1662,7 +1678,7 @@ class User < ApplicationRecord
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_participant
-    visible_scripts.map(&:unit_group).compact.concat(section_courses).uniq
+    visible_scripts.filter_map(&:unit_group).concat(section_courses).uniq
   end
 
   # Checks if there are any launched scripts assigned to the user.
@@ -1758,7 +1774,7 @@ class User < ApplicationRecord
 
     pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
 
-    user_script_data = pl_user_scripts.map do |user_script|
+    user_script_data = pl_user_scripts.filter_map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
       # primary script.
       if exclude_primary_script && user_script[:script_id] == primary_script_id
@@ -1773,7 +1789,7 @@ class User < ApplicationRecord
           link: script_path(script),
         }
       end
-    end.compact
+    end
 
     user_course_data = courses_as_participant.select(&:pl_course?).map(&:summarize_short)
 
@@ -1798,7 +1814,7 @@ class User < ApplicationRecord
 
     user_student_scripts = user_scripts.select {|us| !us.script.pl_course?}
 
-    user_script_data = user_student_scripts.map do |user_script|
+    user_script_data = user_student_scripts.filter_map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
       # primary script.
       if exclude_primary_script && user_script[:script_id] == primary_script_id
@@ -1813,7 +1829,7 @@ class User < ApplicationRecord
           link: script_path(script),
         }
       end
-    end.compact
+    end
 
     user_course_data = courses_as_participant.select {|c| !c.pl_course?}.map(&:summarize_short)
 
@@ -1839,7 +1855,7 @@ class User < ApplicationRecord
   def section_courses
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
-    all_sections.map(&:unit_group).compact.uniq
+    all_sections.filter_map(&:unit_group).uniq
   end
 
   def visible_scripts
@@ -2048,6 +2064,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
+      family_name: DCDO.get('family-name-features', false) ? family_name : nil,
       email: email,
       hashed_email: hashed_email,
       user_type: user_type,
@@ -2255,7 +2272,7 @@ class User < ApplicationRecord
   def show_census_teacher_banner?
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
-    teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
+    teacher? && users_school && (next_census_display.nil? || Time.zone.today >= next_census_display.to_date)
   end
 
   # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
@@ -2326,6 +2343,13 @@ class User < ApplicationRecord
   def update_share_setting
     self.sharing_disabled = false if sections_as_student.empty?
     return true
+  end
+
+  # Updates the child_account_compliance_state attribute to the given state.
+  # @param {String} new_state - A constant from User::ChildAccountCompliance
+  def update_child_account_compliance(new_state)
+    self.child_account_compliance_state = new_state
+    self.child_account_compliance_state_last_updated = DateTime.now.new_offset(0)
   end
 
   # When creating an account, we want to look for any channels that got created
@@ -2529,7 +2553,7 @@ class User < ApplicationRecord
   end
 
   def code_review_groups
-    followeds.map(&:code_review_group).compact
+    followeds.filter_map(&:code_review_group)
   end
 
   private def account_age_in_years
@@ -2544,7 +2568,7 @@ class User < ApplicationRecord
   # Returns a list of all curriculums that the teacher currently has sections for
   # ex: ["csf", "csd"]
   private def curriculums_being_taught
-    @curriculums_being_taught ||= sections.map {|section| section.script&.curriculum_umbrella}.compact.uniq
+    @curriculums_being_taught ||= sections.filter_map {|section| section.script&.curriculum_umbrella}.uniq
   end
 
   private def has_attended_pd?
@@ -2621,7 +2645,6 @@ class User < ApplicationRecord
   end
 
   US_STATE_DROPDOWN_OPTIONS = {
-    '??' => I18n.t('signup_form.us_state_dropdown_options.other'),
     'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
     'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
     'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',
@@ -2638,7 +2661,15 @@ class User < ApplicationRecord
     'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington',
     'DC' => 'Washington D.C.', 'WV' => 'West Virginia', 'WI' => 'Wisconsin',
     'WY' => 'Wyoming'
-  }
+  }.freeze
+
+  # Returns a Hash of US state codes to state names meant for use in dropdown
+  # selection inputs for User accounts.
+  # Includes a '??' state code for a location not listed.
+  def self.us_state_dropdown_options
+    {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
+      merge(US_STATE_DROPDOWN_OPTIONS)
+  end
 
   # Verifies that the serialized attribute "us_state" is a 2 character string
   # representing a US State or "??" which represents a "N/A" kind of response.
@@ -2653,13 +2684,56 @@ class User < ApplicationRecord
       return
     end
     # Report an error if an invalid value was submitted (probably tampering).
-    unless US_STATE_DROPDOWN_OPTIONS.include?(us_state)
+    unless User.us_state_dropdown_options.include?(us_state)
       errors.add(:us_state, :invalid)
+    end
+  end
+
+  # Is this user compliant with our Child Account Policy(cap)?
+  # For students under-13, in Colorado, with a personal email login: we require
+  # parent permission before the student can start using their account.
+  def child_account_policy_compliant?
+    return true unless parent_permission_required?
+    child_account_compliance_state == ChildAccountCompliance::PERMISSION_GRANTED
+  end
+
+  # The individual US State child account policy configuration
+  # max_age: the oldest age of the child at which this policy applies.
+  CHILD_ACCOUNT_STATE_POLICY = {
+    'CO' => {
+      max_age: 12
+    }
+  }.freeze
+
+  # Check if parent permission is required for this account according to our
+  # Child Account Policy.
+  def parent_permission_required?
+    return false unless us_state
+    policy = CHILD_ACCOUNT_STATE_POLICY[us_state]
+    return false unless policy
+    return false unless age.to_i <= policy[:max_age].to_i
+    personal_account?
+  end
+
+  # Does the user login using credentials they personally control?
+  # For example, some accounts are created and owned by schools (Clever).
+  def personal_account?
+    return false if sponsored?
+    # List of credential types which we believe schools have ownership of.
+    school_owned_types = [AuthenticationOption::CLEVER]
+    # Does the user have an authentication method which is not controlled by
+    # their school? The presence of at least one authentication method which
+    # is owned by the student/parent means this is a "personal account".
+    authentication_options.any? do |option|
+      school_owned_types.exclude?(option.credential_type)
     end
   end
 
   # Values for the `child_account_compliance_state` attribute
   module ChildAccountCompliance
+    # The student's account has been used to issue a request to a parent.
+    REQUEST_SENT = 's'.freeze
+
     # The student's account has been approved by their parent.
     PERMISSION_GRANTED = 'g'.freeze
   end

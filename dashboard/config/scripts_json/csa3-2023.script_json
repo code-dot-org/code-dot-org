@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-19 20:03:28 UTC",
+    "serialized_at": "2023-07-12 13:45:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1605,7 +1605,7 @@
       "key": "cdf08cfa-fc4f-43aa-8377-3d9090f703e6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Discuss: Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that a `while` loop is used to print each element in the 1D array. Students may wonder how the use of the `while` loop is similar to how it was used in The Neighborhood."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Discuss: Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that a `while` loop is used to print each element in the 1D array. Students may wonder how the use of the `while` loop is similar to how it was used in The Neighborhood in Unit 1."
       },
       "seeding_key": {
         "activity_section.key": "cdf08cfa-fc4f-43aa-8377-3d9090f703e6",

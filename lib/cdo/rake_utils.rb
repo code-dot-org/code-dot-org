@@ -32,7 +32,9 @@ module RakeUtils
   end
 
   def self.restart_service(id)
-    sudo 'systemctl', 'restart', id.to_s if OS.linux? && CDO.chef_managed
+    return unless OS.linux? && CDO.chef_managed
+    sudo 'systemctl', 'daemon-reload'
+    sudo 'systemctl', 'restart', id.to_s
   end
 
   def self.system_(*args)
@@ -200,21 +202,26 @@ module RakeUtils
     RakeUtils.sudo 'npm', 'update', '--quiet', '-g', *args unless output.empty?
   end
 
-  def self.npm_install(*args)
-    frozen_lockfile = ENV['CI'] ? '--frozen-lockfile' : ''
+  def self.run_packages_with(command, *args)
     commands = []
+
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
-    commands += " yarn #{frozen_lockfile}".split
+    commands << command
     commands += args
+
     RakeUtils.system(*commands)
   end
 
+  def self.npm_install(*args)
+    run_packages_with('npm install', ENV['CI'] && '--frozen-lockfile', *args)
+  end
+
+  def self.yarn_install(*args)
+    run_packages_with('yarn', ENV['CI'] && '--frozen-lockfile', *args)
+  end
+
   def self.npm_rebuild(*args)
-    commands = []
-    commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
-    commands += " npm rebuild".split
-    commands += args
-    RakeUtils.system(*commands)
+    run_packages_with('npm rebuild', *args)
   end
 
   # Installs list of global npm packages if not already installed

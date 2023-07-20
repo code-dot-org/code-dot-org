@@ -1,2 +1,10 @@
 {
+  "bs-BA": {
+    "data": {
+      "frameworks": {
+        "ngss": {
+        }
+      }
+    }
+  }
 }

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::CourseFacilitatorsControllerTest < ::ActionController::TestCase
+class Api::V1::Pd::CourseFacilitatorsControllerTest < ActionController::TestCase
   {
     admin: :success,
     workshop_organizer: :success,

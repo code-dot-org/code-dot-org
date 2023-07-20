@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-24 16:34:24 UTC",
+    "serialized_at": "2023-07-02 01:30:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -769,6 +769,21 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "lesson-50",
+      "name": "AI Chat",
+      "absolute_position": 50,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 47,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "lesson_activities": [
@@ -1405,6 +1420,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "df85eaeb-e712-4d23-a0de-da19f1c0ef96",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "df85eaeb-e712-4d23-a0de-da19f1c0ef96",
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "activity_sections": [
@@ -1896,6 +1923,16 @@
       "seeding_key": {
         "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a",
         "lesson_activity.key": "e58ff15e-708f-4cd0-97cc-260c9929b0ca"
+      }
+    },
+    {
+      "key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231",
+        "lesson_activity.key": "df85eaeb-e712-4d23-a0de-da19f1c0ef96"
       }
     }
   ],
@@ -6035,6 +6072,27 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Music Video 1"
+        ],
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      },
+      "level_keys": [
+        "Music Video 1"
+      ]
+    },
+    {
+      "chapter": 171,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "Music Level 1"
         ]
@@ -6054,9 +6112,9 @@
       ]
     },
     {
-      "chapter": 171,
-      "position": 2,
-      "activity_section_position": 2,
+      "chapter": 172,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6078,9 +6136,9 @@
       ]
     },
     {
-      "chapter": 172,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 173,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6099,6 +6157,27 @@
       },
       "level_keys": [
         "Music Level 3"
+      ]
+    },
+    {
+      "chapter": 174,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AI Chat Test Level"
+        ],
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231"
+      },
+      "level_keys": [
+        "AI Chat Test Level"
       ]
     }
   ],
@@ -7425,7 +7504,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 4",
+        "level.key": "2-3 Maze 1",
         "script_level.level_keys": [
           "2-3 Maze 1",
           "2-3 Maze 4"
@@ -7438,7 +7517,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 1",
+        "level.key": "2-3 Maze 4",
         "script_level.level_keys": [
           "2-3 Maze 1",
           "2-3 Maze 4"
@@ -7555,7 +7634,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist Loops 4",
+        "level.key": "2-3 Artist 3",
         "script_level.level_keys": [
           "2-3 Artist 3",
           "2-3 Artist Loops 4"
@@ -7568,7 +7647,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 3",
+        "level.key": "2-3 Artist Loops 4",
         "script_level.level_keys": [
           "2-3 Artist 3",
           "2-3 Artist Loops 4"
@@ -8259,6 +8338,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Music Video 1",
+        "script_level.level_keys": [
+          "Music Video 1"
+        ],
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Music Level 1",
         "script_level.level_keys": [
           "Music Level 1"
@@ -8291,6 +8382,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings",
         "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AI Chat Test Level",
+        "script_level.level_keys": [
+          "AI Chat Test Level"
+        ],
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231"
       }
     }
   ],

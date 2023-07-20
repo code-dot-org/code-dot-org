@@ -132,9 +132,6 @@ jotform_forms:
     post201:     90065524560150
     facilitator: 91405279991164
 
-# Learning Tools Interoperability (LTI)
-lti_credentials: !Secret
-
 # PagerDuty
 pagerduty_token: !Secret
 
@@ -318,6 +315,9 @@ discourse_sso_secret:
 
 ### Application configuration defaults
 
+# Installs bin/i18n dependencies
+build_i18n: false
+
 i18n_backend:
 cache:
 app_servers: {}
@@ -446,7 +446,7 @@ stub_school_data: false
 
 disable_s3_image_uploads: false
 
-channels_api_secret: <%=poste_secret%>
+channels_api_secret: !Secret
 
 # Whether to prefix bundler commands with 'sudo'.
 # It may be useful to set this false when doing local development on Linux.
@@ -514,15 +514,24 @@ redshift_password:
 
 devinternal_db_writer: !Secret
 
-# Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
-db_cluster_id: !Secret
-db_proxy_reporting_endpoint: !Secret
-db_writer_endpoint: !Secret
+# Temporarily set in locals.yml until Stack Secrets are ready to deploy.
+db_cluster_id:
 
+# FOLLOW ON: Transition from the above naming convention to the `db_endpoint_[type]` convention below.
+db_endpoint_writer: PLACEHOLDER
+db_endpoint_proxy_writer: PLACEHOLDER
+db_endpoint_proxy_reader: PLACEHOLDER
+db_endpoint_proxy_reporting: PLACEHOLDER
+
+# Database credentials (username & password) are stored in an AWS Secret in a JSON format required by RDS Proxy:
+# https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy-setup.html#rds-proxy-secrets-arns
+db_credential_admin: {"username":"PLACEHOLDER", "password":"PLACEHOLDER"}
 db_admin_user: master
 db_admin_password: !Secret
+db_credential_writer: {"username":"PLACEHOLDER", "password":"PLACEHOLDER"}
 db_writer_user: application-writer
 db_writer_password: !Secret
+db_credential_reader: {"username":"PLACEHOLDER", "password":"PLACEHOLDER"}
 db_reader_user: readonly
 db_reader_password: !Secret
 

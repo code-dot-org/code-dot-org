@@ -1,4 +1,4 @@
-import {logError} from '../utils/MusicMetrics';
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import SoundEffects from './soundEffects';
 
 // audio
@@ -6,8 +6,6 @@ var audioContext = null;
 
 var soundEffects = null;
 
-// Length of time to fade out a sound, if trimming to a specific duration
-const RELEASE_DURATION_SECONDS = 0.1;
 // Time constant used to compute the release rate; at each time constant
 // interval the sound will decay exponentially.
 const RELEASE_TIME_CONSTANT = 0.075;
@@ -40,16 +38,27 @@ function createAudioContext(desiredSampleRate) {
   return context;
 }
 
-function WebAudio() {
+/**
+ * @param {*} options Optional audio system configuration.
+ *   {
+ *     delayTimeSeconds: number, // Delay time used in the delay effect
+ *     releaseTimeSeconds: number // Release time for fading out fixed-duration sounds
+ *   }
+ */
+function WebAudio(options) {
+  const {delayTimeSeconds, releaseTimeSeconds} = options;
   try {
     audioContext = createAudioContext(48000);
   } catch (e) {
-    logError('Web Audio API is not supported in this browser');
-    audioContext = null;
-    return;
+    Lab2MetricsReporter.logError(
+      'Web Audio API is not supported in this browser',
+      e
+    );
+    throw e;
   }
 
-  soundEffects = new SoundEffects(audioContext);
+  soundEffects = new SoundEffects(audioContext, delayTimeSeconds);
+  this.releaseTimeSeconds = releaseTimeSeconds;
 }
 
 WebAudio.prototype.getCurrentTime = function () {
@@ -60,7 +69,7 @@ WebAudio.prototype.getCurrentTime = function () {
   }
 };
 
-WebAudio.prototype.LoadSound = function (url, callback) {
+WebAudio.prototype.LoadSound = function (url, callback, onLoadFinished) {
   var request = new XMLHttpRequest();
   request.open('GET', url, true);
   request.responseType = 'arraybuffer';
@@ -72,13 +81,16 @@ WebAudio.prototype.LoadSound = function (url, callback) {
         request.response,
         function (buffer) {
           callback(buffer);
+          onLoadFinished();
         },
         function (e) {
-          logError(e);
+          Lab2MetricsReporter.logError('Error decoding audio data', e, {url});
+          onLoadFinished();
         }
       );
     } catch (e) {
-      logError(e);
+      Lab2MetricsReporter.logError('Error decoding audio data', e, {url});
+      onLoadFinished();
     }
   };
   request.send();
@@ -96,7 +108,7 @@ WebAudio.prototype.LoadSoundFromBuffer = function (buffer, callback) {
       }
     );
   } catch (e) {
-    logError(e);
+    Lab2MetricsReporter.logError('Error loading sound from buffer', e);
   }
 };
 
@@ -123,9 +135,10 @@ WebAudio.prototype.PlaySoundByBuffer = function (
     // If playing for a specific duration, apply a small fadeout to the sound
     // to prevent clicks and pops
     const gainNode = audioContext.createGain();
+    const releaseDuration = this.releaseTimeSeconds;
     gainNode.gain.setTargetAtTime(
       0,
-      when + duration - RELEASE_DURATION_SECONDS,
+      when + duration - releaseDuration,
       RELEASE_TIME_CONSTANT
     );
     source.connect(gainNode);

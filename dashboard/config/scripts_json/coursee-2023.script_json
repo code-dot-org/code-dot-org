@@ -15,11 +15,12 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2023-06-09 19:39:06 UTC",
+    "serialized_at": "2023-06-28 15:15:50 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

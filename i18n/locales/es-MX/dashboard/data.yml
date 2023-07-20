@@ -674,7 +674,7 @@ es-MX:
         csa-pl-intro-to-equals-method: Introducción al método .equals()
         csa-pl-equals-book: Escribir el método equals() para la clase Libro
         csa-multi-select-pl: Sentencias de selección múltiple en Java
-        csc_timecapsule_intro: Cápsula del Tiempo - Módulo 
+        csc_timecapsule_intro: Programa una Cápsula del Tiempo
         PL_Equity_in_CS_Education: Igualdad en la Enseñanza de la Informática
         csc_fm_pilot: Máquinas Funcionales (Piloto)
         csc_fm_pilot_v2: 'Máquinas Funcionales (Introducción)'
@@ -727,7 +727,7 @@ es-MX:
         csa-example-solution-1: 'Codificación en directo de una Solución de Ejemplo '
         csd_sprite_properties: Propiedades de Sprite
         csa-pl-documentation: Documentación en Laboratorio Java
-        csc-starquilts-intro: 'CSC: Colchas de Estrellas'
+        csc-starquilts-intro: Codificación de una colcha de estrella geométrica
         csc-mapmakers-intro: 'CSC: Mapmakers\t'
         csa-pl-vocab-pm: Vocabulario de Gestión de Proyectos
         csc-ecosystems-intro: Introducción a los Ecosistemas
@@ -735,6 +735,8 @@ es-MX:
         csc_animal_adaptations_intro: Introducción a las Adaptaciones Animales
         upload_sprites_backgrounds: Cargando Sprites y Fondos Personalizados
         PL_CSD_EquityBlindSpotsvid: Sesgo y responsabilidad
+        how-ai-works-llms-full: Cómo funcionan los chatbots y la modelación de lenguage
+        how-ai-works-creativity-full: '¿La IA tiene creatividad e imaginación?'
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

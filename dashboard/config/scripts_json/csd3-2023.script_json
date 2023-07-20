@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-30 22:50:35 UTC",
+    "serialized_at": "2023-07-12 16:43:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4348,7 +4348,13 @@
       "position": 6,
       "properties": {
         "description": "The second prediction level program has one small difference that will make it run a little differently. \n\n**Discuss:** Students should consider and discuss:\n* What will this program do? \n\n**Discussion Goal:** Notice that the blue background is never visible because it is immediately drawn over by the red background. Also, there's only ever one yellow dot visible since as the draw loop runs over and over it is placing down new backgrounds.\n",
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Inside versus outside the draw loop**\n\nThis is a good time to make sure students understand that code **outside** the draw loop is used to **set up the program**. It is for how you want your program to start. Code **inside** the draw loop is for things that are **changing as the program is running**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5b1985f6-d193-4456-865e-344495f2d52d",
@@ -16072,7 +16078,7 @@
   "resources": [
     {
       "name": "(Warm Up) Word Search",
-      "url": "https://docs.google.com/document/d/14hKTZSrP7tnghpJhTLYJNEPeb1CinUaa0KtzRPADji4/edit",
+      "url": "https://docs.google.com/document/d/1Mk9elfN5zVH2LLaY6Z5-c-97wt1k9qDCyMfxRBlB8qM/edit?usp=sharing",
       "key": "_warm_up_word_search",
       "properties": {
         "audience": "Student",
@@ -16766,7 +16772,7 @@
     },
     {
       "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/1sAILZnk26g21FluRhU0pWqVDOMBZVrNAko1mSVeuKHM/view",
+      "url": "https://docs.google.com/document/d/10XQ5HTNnp2OlJm0w3cF9urOGdPUDTbdK2I4VYadeomU/view",
       "key": "interactive_card_3",
       "properties": {
         "audience": "Student",
@@ -17559,8 +17565,8 @@
       }
     },
     {
-      "name": "Animation and Game Design Template ",
-      "url": "https://docs.google.com/presentation/d/1O1oWeMbIOetBbgmuwyXlUDmlr6L9ygQi0wLG89w_uq0/edit?usp=share_link",
+      "name": "Web Design Template ",
+      "url": "https://docs.google.com/presentation/d/1L7BgZu3XJVajibAfhK4c9o2R1_-nMC0ND_R3mXgN2wg/edit?usp=sharing",
       "key": "web_design_template",
       "properties": {
         "audience": "Student",

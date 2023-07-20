@@ -50,10 +50,7 @@ const blockXml = `<xml>
   </block>
 </xml>`;
 
-Blockly.cdoUtils.loadBlocksToWorkspace(
-  Blockly.mainBlockSpace,
-  Blockly.Xml.textToDom(blockXml)
-);
+Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, blockXml);
 const block = Blockly.mainBlockSpace.getTopBlocks()[0];
 const name = getInput('name').value || DEFAULT_NAME;
 

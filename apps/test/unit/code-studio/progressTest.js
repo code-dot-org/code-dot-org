@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import queryString from 'query-string';
 
 import * as viewAsRedux from '@cdo/apps/code-studio/viewAsRedux';
-import {__testonly__} from '@cdo/apps/code-studio/progressRedux';
+import {__testonly__} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {initViewAs} from '@cdo/apps/code-studio/progress';
 
 describe('bestResultLevelId', function () {

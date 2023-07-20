@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "свирај звук",
   "blockly_blockPlaySoundAtMeasureTooltip": "свирај звук",
+  "blockly_blockPlaySoundTooltip": "свирај звук",
   "blockly_blockRepeatTooltip": "понављај",
   "blockly_blockWhenRun": "Када кренеш",
   "blockly_blockWhenRunTooltip": "Када кренеш",
@@ -10,8 +10,9 @@
   "blockly_toolboxCategoryLogic": "Логика",
   "blockly_toolboxCategoryMath": "Математика",
   "blockly_toolboxCategoryVariables": "Променљиве",
-  "share": "Подели",
-  "startOver": "Počni ponovo",
+  "continue": "Настави",
   "panelHeaderInstructions": "Упутства",
-  "panelHeaderWorkspace": "Радни простор: "
+  "panelHeaderWorkspace": "Радни простор: ",
+  "share": "Подели",
+  "startOver": "Počni ponovo"
 }

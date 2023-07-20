@@ -1,10 +1,10 @@
 {
   "dropletBlock_createSprite_param2": "ширина",
   "dropletBlock_createSprite_param3": "висота",
-  "dropletBlock_setCollider_param0": "тип",
-  "dropletBlock_setCollider_param4": "висота",
   "dropletBlock_setColliderEach_param0": "тип",
   "dropletBlock_setColliderEach_param4": "висота",
+  "dropletBlock_setCollider_param0": "тип",
+  "dropletBlock_setCollider_param4": "висота",
   "reinfFeedbackMsg": "Ви закінчили! Натисніть \"Продовжити\", щоб перейти на наступний рівень. ",
   "shareGame": "Поділитись своєю грою:"
 }

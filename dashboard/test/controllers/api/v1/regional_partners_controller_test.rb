@@ -66,7 +66,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     get :index
     response = JSON.parse(@response.body)
     assert_equal RegionalPartner.count, response.length
-    assert response.include?({'id' => regional_partner.id, 'name' => regional_partner.name})
+    assert_includes(response, {'id' => regional_partner.id, 'name' => regional_partner.name})
   end
 
   # TODO: remove this test when workshop_organizer is deprecated

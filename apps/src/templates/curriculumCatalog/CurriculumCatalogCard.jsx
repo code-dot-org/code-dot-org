@@ -22,6 +22,13 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {
+  CreateSectionsToAssignSectionsDialog,
+  SignInToAssignSectionsDialog,
+  UpgradeAccountToAssignSectionsDialog,
+} from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const CurriculumCatalogCard = ({
   courseDisplayName,
@@ -32,6 +39,7 @@ const CurriculumCatalogCard = ({
   subjects = [],
   topics = [],
   pathToCourse,
+  onAssignSuccess,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -60,12 +68,14 @@ const CurriculumCatalogCard = ({
     imageAltText={imageAltText}
     translationIconTitle={i18n.courseInYourLanguage()}
     pathToCourse={pathToCourse + '?viewAs=Instructor'}
+    onAssignSuccess={onAssignSuccess}
     {...props}
   />
 );
 
 CurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
+  courseDisplayNameWithLatestYear: PropTypes.string.isRequired,
   duration: PropTypes.oneOf(Object.keys(translatedCourseOfferingDurations))
     .isRequired,
   gradesArray: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -85,12 +95,14 @@ CurriculumCatalogCard.propTypes = {
   courseOfferingId: PropTypes.number,
   scriptId: PropTypes.number,
   isStandAloneUnit: PropTypes.bool,
+  onAssignSuccess: PropTypes.func,
 };
 
 const CustomizableCurriculumCatalogCard = ({
   assignButtonDescription,
   assignButtonText,
   courseDisplayName,
+  courseDisplayNameWithLatestYear,
   duration,
   gradeRange,
   imageAltText,
@@ -102,13 +114,66 @@ const CustomizableCurriculumCatalogCard = ({
   quickViewButtonText,
   isEnglish,
   pathToCourse,
-  sectionsForDropdown,
+  sectionsForDropdown = [],
+  isTeacher,
+  isSignedOut,
+  onAssignSuccess,
+  courseId,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
 
+  const handleClickAssign = () => {
+    setIsAssignDialogOpen(true);
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT,
+      {
+        curriculum_offering: courseDisplayNameWithLatestYear,
+        has_sections: sectionsForDropdown.length > 0,
+        is_signed_in: !isSignedOut,
+      }
+    );
+  };
+
+  const renderAssignDialog = () => {
+    if (isSignedOut) {
+      return (
+        <SignInToAssignSectionsDialog
+          onClose={() => setIsAssignDialogOpen(false)}
+        />
+      );
+    } else if (isTeacher && sectionsForDropdown.length > 0) {
+      return (
+        <MultipleSectionsAssigner
+          assignmentName={courseDisplayNameWithLatestYear}
+          onClose={() => setIsAssignDialogOpen(false)}
+          sections={sectionsForDropdown}
+          participantAudience="student"
+          onAssignSuccess={onAssignSuccess}
+          isAssigningCourse={!!courseId}
+          courseId={courseId}
+          sectionDirections={i18n.chooseSectionsDirectionsOnCatalog()}
+          {...props}
+        />
+      );
+    } else if (isTeacher) {
+      return (
+        <CreateSectionsToAssignSectionsDialog
+          onClose={() => setIsAssignDialogOpen(false)}
+          onClick={() => {}}
+        />
+      );
+    } else {
+      return (
+        <UpgradeAccountToAssignSectionsDialog
+          onClose={() => setIsAssignDialogOpen(false)}
+        />
+      );
+    }
+  };
+
   return (
-    <>
+    <div>
       <div
         className={classNames(
           style.curriculumCatalogCardContainer,
@@ -123,14 +188,14 @@ const CustomizableCurriculumCatalogCard = ({
             <div className={style.labelsContainer}>
               <CardLabels subjectsAndTopics={subjectsAndTopics} />
             </div>
+            {!isEnglish && isTranslated && (
+              <FontAwesome
+                icon="language"
+                className="fa-solid"
+                title={translationIconTitle}
+              />
+            )}
           </div>
-          {isTranslated && (
-            <FontAwesome
-              icon="language"
-              className="fa-solid"
-              title={translationIconTitle}
-            />
-          )}
           <h4>{courseDisplayName}</h4>
           <div className={style.iconWithDescription}>
             <FontAwesome icon="user" className="fa-solid" />
@@ -159,30 +224,21 @@ const CustomizableCurriculumCatalogCard = ({
             <Button
               color={Button.ButtonColor.brandSecondaryDefault}
               type="button"
-              onClick={() => {
-                setIsAssignDialogOpen(true);
-              }}
+              onClick={handleClickAssign}
               aria-label={assignButtonDescription}
               text={assignButtonText}
             />
           </div>
         </div>
       </div>
-      {isAssignDialogOpen && (
-        <MultipleSectionsAssigner
-          assignmentName={courseDisplayName}
-          onClose={() => setIsAssignDialogOpen(false)}
-          sections={sectionsForDropdown}
-          participantAudience="student"
-          {...props}
-        />
-      )}
-    </>
+      {isAssignDialogOpen && renderAssignDialog()}
+    </div>
   );
 };
 
 CustomizableCurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
+  courseDisplayNameWithLatestYear: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
   gradeRange: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
@@ -199,6 +255,9 @@ CustomizableCurriculumCatalogCard.propTypes = {
   scriptId: PropTypes.number,
   isStandAloneUnit: PropTypes.bool,
   sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+  isTeacher: PropTypes.bool,
+  isSignedOut: PropTypes.bool.isRequired,
+  onAssignSuccess: PropTypes.func,
   // for screenreaders
   imageAltText: PropTypes.string,
   quickViewButtonDescription: PropTypes.string.isRequired,

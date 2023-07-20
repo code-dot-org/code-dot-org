@@ -15,19 +15,32 @@ import {
 } from '../redux/musicRedux';
 import commonI18n from '@cdo/locale';
 
+const LoadingProgress = () => {
+  const progressValue = useSelector(state => state.music.soundLoadingProgress);
+
+  if (progressValue >= 1) {
+    return null;
+  }
+
+  return (
+    <div id="loading-progress" className={moduleStyles.loadingProgress}>
+      <div
+        className={moduleStyles.loadingProgressFill}
+        style={{
+          width: `${progressValue * 100}%`,
+        }}
+      >
+        &nbsp;
+      </div>
+    </div>
+  );
+};
+
 /**
  * Renders the playback controls bar, including the play/pause button, show/hide beat pad button,
  * and show/hide instructions button.
  */
-const Controls = ({
-  setPlaying,
-  playTrigger,
-  top,
-  instructionsAvailable,
-  toggleInstructions,
-  instructionsOnRight,
-  hasTrigger,
-}) => {
+const Controls = ({setPlaying, playTrigger, hasTrigger}) => {
   const isPlaying = useSelector(state => state.music.isPlaying);
   const isBeatPadShowing = useSelector(state => state.music.isBeatPadShowing);
   const dispatch = useDispatch();
@@ -115,6 +128,7 @@ const Controls = ({
         </button>
       </div>
       {isBeatPadShowing && renderBeatPad()}
+      <LoadingProgress />
     </div>
   );
 };
@@ -122,10 +136,6 @@ const Controls = ({
 Controls.propTypes = {
   setPlaying: PropTypes.func.isRequired,
   playTrigger: PropTypes.func.isRequired,
-  top: PropTypes.bool.isRequired,
-  instructionsAvailable: PropTypes.bool.isRequired,
-  toggleInstructions: PropTypes.func.isRequired,
-  instructionsOnRight: PropTypes.bool.isRequired,
   hasTrigger: PropTypes.func.isRequired,
 };
 
