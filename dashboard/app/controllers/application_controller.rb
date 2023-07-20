@@ -82,7 +82,7 @@ class ApplicationController < ActionController::Base
 
   def render_404
     respond_to do |format|
-      format.html {render template: 'errors/deprecated_course', layout: 'layouts/application', status: :not_found}
+      format.html {render template: 'errors/not_found', layout: 'layouts/application', status: :not_found}
       format.all {head :not_found, content_type: 'text/html'}
     end
   end
