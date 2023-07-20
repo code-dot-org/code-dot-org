@@ -794,6 +794,10 @@ form {
       &.selected {
         background: $brand_primary_default;
       }
+
+      &:focus {
+        @include focus-outline;
+      }
     }
   }
 }
