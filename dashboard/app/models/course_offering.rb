@@ -19,13 +19,14 @@
 #  school_subject                   :string(255)
 #  device_compatibility             :string(255)
 #  description                      :string(255)
-#  self_paced_professional_learning :string(255)
 #  professional_learning_program    :string(255)
 #  video                            :string(255)
 #  published_date                   :datetime
+#  self_paced_pl_course_offering_id :integer
 #
 # Indexes
 #
+#  fk_rails_8283d50b87            (self_paced_pl_course_offering_id)
 #  index_course_offerings_on_key  (key) UNIQUE
 #
 

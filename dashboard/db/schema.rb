@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_13_141627) do
+ActiveRecord::Schema.define(version: 2023_07_20_231439) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -410,11 +410,12 @@ ActiveRecord::Schema.define(version: 2023_07_13_141627) do
     t.string "school_subject"
     t.string "device_compatibility"
     t.string "description"
-    t.string "self_paced_professional_learning"
     t.string "professional_learning_program"
     t.string "video"
     t.datetime "published_date"
+    t.integer "self_paced_pl_course_offering_id"
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
+    t.index ["self_paced_pl_course_offering_id"], name: "fk_rails_8283d50b87"
   end
 
   create_table "course_scripts", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -2247,6 +2248,7 @@ ActiveRecord::Schema.define(version: 2023_07_13_141627) do
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "circuit_playground_discount_applications", "schools"
+  add_foreign_key "course_offerings", "course_offerings", column: "self_paced_pl_course_offering_id"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "lti_deployments", "lti_integrations"
