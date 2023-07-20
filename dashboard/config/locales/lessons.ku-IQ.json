@@ -2,35 +2,122 @@
   "ku-IQ": {
     "data": {
       "lessons": {
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd2-2017/Lists": {
+          "name": "لیستەکان"
         },
-        "k5-onlinepd-2019/Loops": {
-          "name": "گرێکان"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "مەرجیەکان"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "فرمانەکان"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "گۆڕاوەکان"
         },
-        "coursed-2022/Graph Paper Programming": {
+        "csd3-2017/Conditionals": {
+          "name": "مەرجیەکان"
+        },
+        "csd3-2017/Functions": {
+          "name": "فرمانەکان"
+        },
+        "csd6-2017/Functions with Parameters_": {
+          "name": "فەرمانی بە پێوەر"
+        },
+        "csd2-2018/Lists": {
+          "name": "لیستەکان"
+        },
+        "csd3-2018/Variables": {
+          "name": "گۆڕاوەکان"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "مەرجیەکان"
+        },
+        "csd3-2018/Functions": {
+          "name": "فرمانەکان"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "فەرمانی بە پێوەر"
+        },
+        "coursea-2018/Programming: Happy Maps": {
+          "name": "نەخشەی دڵخۆش"
+        },
+        "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
-        "coursed-2022/Relay Programming": {
+        "coursed-2018/Relay Programming": {
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
-        "coursef-2022/The Internet": {
+        "coursee-2018/Internet": {
           "name": "ئینتەرنێت"
         },
-        "coursea-2022/Happy Maps": {
+        "express-2018/Graph Paper Programming": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
+        },
+        "express-2018/Relay Programming": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ"
+        },
+        "express-2018/Internet": {
+          "name": "ئینتەرنێت"
+        },
+        "csd2-2019/Lists": {
+          "name": "لیستەکان"
+        },
+        "csd3-2019/Variables": {
+          "name": "گۆڕاوەکان"
+        },
+        "csd3-2019/Conditionals": {
+          "name": "مەرجیەکان"
+        },
+        "csd3-2019/Functions": {
+          "name": "فرمانەکان"
+        },
+        "csd6-2019/Functions with Parameters": {
+          "name": "فەرمانی بە پێوەر"
+        },
+        "coursea-2019/Programming: Happy Maps": {
           "name": "نەخشەی دڵخۆش"
+        },
+        "coursed-2019/Algorithms: Graph Paper Programming": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
+        },
+        "coursed-2019/Relay Programming": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ"
+        },
+        "coursef-2019/Internet": {
+          "name": "ئینتەرنێت"
+        },
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "نەخشەی دڵخۆش"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ"
+        },
+        "coursef-2020/Internet": {
+          "name": "ئینتەرنێت"
+        },
+        "csd3-2021/Variables": {
+          "name": "گۆڕاوەکان"
+        },
+        "csd3-2021/Text": {
+          "name": "دەق"
+        },
+        "csd3-2021/Conditionals": {
+          "name": "مەرجیەکان"
+        },
+        "csd3-2021/Functions": {
+          "name": "فرمانەکان"
+        },
+        "csd6-2021/Functions with Parameters": {
+          "name": "فەرمانی بە پێوەر"
+        },
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "نەخشەی دڵخۆش"
+        },
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
+        },
+        "coursed-2021/Relay Programming": {
+          "name": "بەرنامەڕێژی بە پێشبڕکێ"
+        },
+        "coursef-2021/Internet": {
+          "name": "ئینتەرنێت"
         },
         "csd3-2022/Variables": {
           "name": "گۆڕاوەکان"
@@ -47,83 +134,29 @@
         "csd6-2022/Functions": {
           "name": "فرمانەکان"
         },
-        "coursea-2018/Programming: Happy Maps": {
+        "coursea-2022/Happy Maps": {
           "name": "نەخشەی دڵخۆش"
         },
-        "coursed-2018/Algorithms: Graph Paper Programming": {
+        "coursed-2022/Graph Paper Programming": {
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
-        "coursed-2018/Relay Programming": {
+        "coursed-2022/Relay Programming": {
           "name": "بەرنامەڕێژی بە پێشبڕکێ"
         },
-        "express-2018/Graph Paper Programming": {
-          "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
-        },
-        "express-2018/Relay Programming": {
-          "name": "بەرنامەڕێژی بە پێشبڕکێ"
-        },
-        "express-2018/Internet": {
+        "coursef-2022/The Internet": {
           "name": "ئینتەرنێت"
         },
-        "coursee-2018/Internet": {
-          "name": "ئینتەرنێت"
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
-        "csd3-2018/Variables": {
-          "name": "گۆڕاوەکان"
+        "allthethings/Jigsaw": {
+          "name": "مەتەڵە وێنە"
         },
-        "csd3-2018/Conditionals": {
-          "name": "مەرجیەکان"
-        },
-        "csd3-2018/Functions": {
-          "name": "فرمانەکان"
-        },
-        "csd6-2018/Functions with Parameters": {
-          "name": "فەرمانی بە پێوەر"
-        },
-        "csd2-2018/Lists": {
-          "name": "لیستەکان"
-        },
-        "coursea-2019/Programming: Happy Maps": {
-          "name": "نەخشەی دڵخۆش"
-        },
-        "coursed-2019/Algorithms: Graph Paper Programming": {
-          "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
-        },
-        "coursed-2019/Relay Programming": {
-          "name": "بەرنامەڕێژی بە پێشبڕکێ"
-        },
-        "coursef-2019/Internet": {
-          "name": "ئینتەرنێت"
-        },
-        "csd3-2019/Variables": {
-          "name": "گۆڕاوەکان"
-        },
-        "csd3-2019/Conditionals": {
-          "name": "مەرجیەکان"
-        },
-        "csd3-2019/Functions": {
-          "name": "فرمانەکان"
-        },
-        "csd6-2019/Functions with Parameters": {
-          "name": "فەرمانی بە پێوەر"
-        },
-        "csd2-2019/Lists": {
-          "name": "لیستەکان"
-        },
-        "csd3-2017/Variables": {
-          "name": "گۆڕاوەکان"
-        },
-        "csd3-2017/Conditionals": {
-          "name": "مەرجیەکان"
-        },
-        "csd3-2017/Functions": {
-          "name": "فرمانەکان"
-        },
-        "csd6-2017/Functions with Parameters_": {
-          "name": "فەرمانی بە پێوەر"
-        },
-        "csd2-2017/Lists": {
-          "name": "لیستەکان"
+        "allthethings/Bounce": {
+          "name": "هەڵبەزینەوە"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "پێشەكیەک بۆ زانستی کۆمپیوتەر"
@@ -185,6 +218,18 @@
         "20-hour/Wrap-up": {
           "name": "پوختەی بابەت"
         },
+        "course1/Happy Maps": {
+          "name": "نەخشەی دڵخۆش"
+        },
+        "course1/Artist: Sequence": {
+          "name": "هونەر: ریز"
+        },
+        "course1/Artist: Shapes": {
+          "name": "هونەر: شێوە"
+        },
+        "course1/Artist: Loops": {
+          "name": "هونەرمەند: خولانەوەکان"
+        },
         "course2/Graph Paper Programming": {
           "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
         },
@@ -203,65 +248,8 @@
         "course3/Bounce": {
           "name": "هەڵبەزینەوە"
         },
-        "course1/Happy Maps": {
-          "name": "نەخشەی دڵخۆش"
-        },
-        "course1/Artist: Sequence": {
-          "name": "هونەر: ریز"
-        },
-        "course1/Artist: Shapes": {
-          "name": "هونەر: شێوە"
-        },
-        "course1/Artist: Loops": {
-          "name": "هونەرمەند: خولانەوەکان"
-        },
         "jigsaw/Jigsaw": {
           "name": "مەتەڵە وێنە"
-        },
-        "allthethings/Jigsaw": {
-          "name": "مەتەڵە وێنە"
-        },
-        "allthethings/Bounce": {
-          "name": "هەڵبەزینەوە"
-        },
-        "coursef-2021/Internet": {
-          "name": "ئینتەرنێت"
-        },
-        "coursea-2021/Programming: Happy Maps": {
-          "name": "نەخشەی دڵخۆش"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "بەرنامەڕێژی بە پێشبڕکێ"
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "فەرمانی بە پێوەر"
-        },
-        "csd3-2021/Variables": {
-          "name": "گۆڕاوەکان"
-        },
-        "csd3-2021/Text": {
-          "name": "دەق"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "مەرجیەکان"
-        },
-        "csd3-2021/Functions": {
-          "name": "فرمانەکان"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "بەرنامەڕێژی پەڕەی هێڵکاری"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "بەرنامەڕێژی بە پێشبڕکێ"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "نەخشەی دڵخۆش"
-        },
-        "coursef-2020/Internet": {
-          "name": "ئینتەرنێت"
         }
       }
     }
