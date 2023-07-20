@@ -138,6 +138,8 @@ module Services
             any_pdf_generated = true
           end
 
+          # Generating resource PDFs is currently broken
+          # See https://codedotorg.atlassian.net/browse/TEACH-601
           #if should_generate_resource_pdf?(script)
           #  puts "Regenerating Unit Resources PDF for #{script.name}"
           #  generate_script_resources_pdf(script, dir)
@@ -170,6 +172,8 @@ module Services
             any_pdf_generated = true
           end
 
+          # Generating resource PDFs is currently broken
+          # See https://codedotorg.atlassian.net/browse/TEACH-601
           #if !script_resources_pdf_exists_for?(script) && should_generate_resource_pdf?(script)
           #  puts "Generating missing Unit Resources PDF for #{script.name}"
           #  generate_script_resources_pdf(script, dir)
