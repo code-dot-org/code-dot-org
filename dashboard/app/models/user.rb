@@ -134,6 +134,7 @@ class User < ApplicationRecord
     gender_third_party_input
     child_account_compliance_state
     child_account_compliance_state_last_updated
+    child_account_compliance_lock_out
     us_state
     country_code
     family_name
@@ -268,6 +269,8 @@ class User < ApplicationRecord
   end
 
   validate :validate_us_state, on: :create
+
+  before_create :lock_out_child_account, unless: :child_account_policy_compliant?
 
   before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
     self.gender = Policies::Gender.normalize gender_teacher_input
@@ -2720,6 +2723,15 @@ class User < ApplicationRecord
     child_account_compliance_state == ChildAccountCompliance::PERMISSION_GRANTED
   end
 
+  # TODO DAYNE ADD UNIT TESTS
+  def lock_out_child_account
+    # Verify the account has not already started the lock out process.
+    return if child_account_compliance_state
+    # Set the child's account to be locked out
+    update_child_account_compliance(ChildAccountCompliance::LOCKED_OUT)
+    self.child_account_compliance_lock_out = DateTime.now
+  end
+
   # The individual US State child account policy configuration
   # max_age: the oldest age of the child at which this policy applies.
   CHILD_ACCOUNT_STATE_POLICY = {
@@ -2747,13 +2759,20 @@ class User < ApplicationRecord
     # Does the user have an authentication method which is not controlled by
     # their school? The presence of at least one authentication method which
     # is owned by the student/parent means this is a "personal account".
-    authentication_options.any? do |option|
-      school_owned_types.exclude?(option.credential_type)
+    if migrated?
+      authentication_options.any? do |option|
+        school_owned_types.exclude?(option.credential_type)
+      end
+    else
+      school_owned_types.exclude?(provider)
     end
   end
 
   # Values for the `child_account_compliance_state` attribute
   module ChildAccountCompliance
+    # The student's account has been used to issue a request to a parent.
+    LOCKED_OUT = 'l'.freeze
+
     # The student's account has been used to issue a request to a parent.
     REQUEST_SENT = 's'.freeze
 

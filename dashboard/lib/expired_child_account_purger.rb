@@ -3,13 +3,12 @@ require 'cdo/aws/metrics'
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
 
-#
 # Scans for child accounts which should be hard-deleted because Code.org hasn't
 # received permission from their parents to create the account.
-# o
-# Sends metrics to Cloudwatch:
-# - Number of accounts purged
-# - max_accounts_to_purge limit exceeded
+#
+# Look at the `build_metrics` method to see which metrics are sent to
+# CloudWatch.
+#
 # Logs activity to Slack #cron-daily room.
 #
 # @see Technical Spec: Hard-deleting accounts
@@ -20,17 +19,18 @@ require 'cdo/chat_client'
 class ExpiredChildAccountPurger
   class SafetyConstraintViolation < RuntimeError; end
 
-  attr_reader :dry_run, :deleted_after, :max_accounts_to_purge, :log
+  attr_reader :dry_run, :created_after, :max_accounts_to_purge, :log
   alias :dry_run? :dry_run
 
   def initialize(options = {})
     @dry_run = options[:dry_run].nil? ? false : options[:dry_run]
     raise ArgumentError.new('dry_run must be boolean') unless [true, false].include? @dry_run
 
-    # Only purge accounts soft-deleted after this date.
-    # The default is 7 days ago.
-    @deleted_after = options[:deleted_after] || 7.days.ago
-    raise ArgumentError.new('deleted_after must be Time') unless @deleted_after.is_a? Time
+    # The amount of time an account is allowed to be locked out before it is
+    # purged.
+    # The default is 7 days.
+    @lock_out_period = options[:lock_out_period] || 7.days.ago
+    raise ArgumentError.new('lock_out_period must be Time') unless @lock_out_period.is_a? Time
 
     # Do nothing if more than this number of accounts would be purged in total.
     # The motivation of this limit is to protect ourselves from bugs where we
@@ -44,9 +44,9 @@ class ExpiredChildAccountPurger
   end
 
   def purge_expired_child_accounts!
+    reset
     # Query for how many accounts would be purged
     # Fail if the count is too high.
-    reset
     accounts = expired_child_accounts
     @num_accounts_to_be_purged = expired_child_accounts.size
     check_constraints accounts
@@ -55,9 +55,12 @@ class ExpiredChildAccountPurger
     accounts.each do |account|
       account_purger.purge_data_for_account account
       @num_accounts_purged += 1
+    rescue StandardError => exception
+      # If we failed to purge the account, add it to our manual review queue.
+      QueuedAccountPurge.create(user: account, reason_for_review: exception.message) unless @dry_run
+      @num_accounts_queued += 1
     end
 
-    #TODO DAYNE if an account fails to be purged, add it to the purger queue.
     QueuedAccountPurge.clean_up_resolved_records!
   rescue StandardError => exception
     yell exception.message
@@ -75,7 +78,8 @@ class ExpiredChildAccountPurger
 
     # Other values tracked internally and reset with every run
     @num_accounts_purged = 0
-    @num_accounts_to_be_purged = 0
+    @num_accounts_queued = 0
+    @purge_size_limit_exceeded = 0
     @start_time = Time.now
 
     start_activity_log
@@ -100,7 +104,9 @@ class ExpiredChildAccountPurger
   end
 
   def report_results
-    metrics = build_metrics
+    review_queue_depth = QueuedAccountPurge.count
+    manual_reviews_needed = QueuedAccountPurge.needing_manual_review.count
+    metrics = build_metrics review_queue_depth, manual_reviews_needed
     log_metrics metrics
 
     summary = build_summary review_queue_depth, manual_reviews_needed
@@ -113,19 +119,25 @@ class ExpiredChildAccountPurger
       else
         say "#{summary} #{log_link}"
       end
+    elsif rack_env? :development
+      puts "#{summary} #{log_link}"
     end
 
     upload_metrics metrics unless @dry_run
   end
 
-  def build_metrics
+  def build_metrics(review_queue_depth, manual_reviews_needed)
     {
-      # Number of accounts purged during this run
-      ChildAccountsPurged: @num_accounts_purged,
-      # Number of accounts which need to be purged during this run
-      ChildAccountsToBePurged: @num_accounts_to_be_purged,
       # 0 or 1 if the size of the purge would exceed the limit
-      PurgeSizeLimitExceeded: @purge_size_limit_exceeded
+      PurgeSizeLimitExceeded: @purge_size_limit_exceeded,
+      # Number of accounts purged during this run
+      AccountsPurged: @num_accounts_purged,
+      # Number of accounts queued for manual review during this run
+      AccountsQueued: @num_accounts_queued,
+      # Depth of review queue after this run (may include auto-retryable entries)
+      ReviewQueueDepth: review_queue_depth,
+      # Total number of accounts needs manual review (including accounts from previous runs)
+      ManualReviewQueueDepth: manual_reviews_needed
     }
   end
 
@@ -162,11 +174,11 @@ class ExpiredChildAccountPurger
 
   def purged_accounts_summary
     intro = @dry_run ? 'Would have purged' : 'Purged'
-    "#{intro} #{@num_accounts_purged} account(s)."
+    "#{intro} #{@num_accounts_purged} child account(s)."
   end
 
   def expired_accounts_summary
-    "#{@num_accounts_to_be_purged} account(s) have expired."
+    "#{@num_accounts_to_be_purged} child account(s) have expired."
   end
 
   # @return [String] HTML link to view uploaded log
@@ -196,9 +208,8 @@ class ExpiredChildAccountPurger
   end
 
   def prefixed(message)
-    "*ExpiredChildAccountPurger*#{@dry_run ? ' (dry-run)' : ''}" \
-    " <https://github.com/code-dot-org/code-dot-org/blob/production/dashboard
-/lib/expired_child_account_purger.rb|(source)>" \
+    "*ExpiredChildAccountPurger* #{@dry_run ? '(dry-run)' : ''}" \
+    "<https://github.com/code-dot-org/code-dot-org/blob/production/dashboard/lib/expired_child_account_purger.rb|(source)>" \
     "\n#{message}"
   end
 end

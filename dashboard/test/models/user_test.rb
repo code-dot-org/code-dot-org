@@ -4947,4 +4947,11 @@ class UserTest < ActiveSupport::TestCase
     teacher = create :teacher
     assert_equal User.marketing_segment_data_keys.sort, teacher.marketing_segment_data.keys.map(&:to_s).sort
   end
+
+  test "given a noncompliant child account, that account is locked out" do
+    student = create :locked_out_student
+    student.save!
+    assert_equal User::ChildAccountCompliance::LOCKED_OUT, student.child_account_compliance_state
+    assert_not_empty student.child_account_compliance_lock_out
+  end
 end
