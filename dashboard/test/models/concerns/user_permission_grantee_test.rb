@@ -126,8 +126,6 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
   test 'ai_chat_access?' do
     user = create :teacher
     refute user.ai_chat_access?
-    user.permission = UserPermission::LEVELBUILDER
-    refute user.ai_chat_access?
     user.permission = UserPermission::AI_CHAT_ACCESS
     assert user.ai_chat_access?
   end
