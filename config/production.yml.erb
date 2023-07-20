@@ -12,8 +12,9 @@ redshift_password: !Secret
 redshift_username: !Secret
 sinatra_session_secret: !Secret
 
+# In production, only the console server populates the admin credential.
 <% unless name&.include?('console') %>
-db_credential_admin:
+db_credential_admin: {"username":"ACCESS_DISABLED", "password":"ACCESS_DISABLED"}
 <% end %>
 
 newrelic_logging: true

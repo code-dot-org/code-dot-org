@@ -3,7 +3,7 @@ require_relative '../deployment'
 require_relative '../lib/cdo/mysql_console_helper'
 require 'uri'
 
-raise 'please define CDO.db_endpoint_writer' unless CDO.db_endpoint_writer
+raise 'please define CDO.db_endpoint_proxy_reader' unless CDO.db_endpoint_proxy_reader
 credentials = CDO.db_credential_reader
 db_connection_settings = URI::Generic.build(
   scheme: 'mysql',
