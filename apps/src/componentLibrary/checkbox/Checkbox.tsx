@@ -2,6 +2,7 @@ import React, {useRef, useEffect, ChangeEvent} from 'react';
 import classnames from 'classnames';
 
 import Typography from '@cdo/apps/componentLibrary/typography';
+import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
 import moduleStyles from './checkbox.module.scss';
 
@@ -24,7 +25,7 @@ export interface CheckboxProps {
   /** Is checkbox indeterminate */
   indeterminate?: boolean;
   /** Size of checkbox */
-  size?: 'xs' | 's' | 'm' | 'l';
+  size?: ComponentSizeXSToL;
 }
 
 /**

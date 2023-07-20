@@ -9,7 +9,6 @@ All notable changes to this project will be documented in this file.
 * filled in Checkbox component status
 * cleanup checkbox storybook
 * add different sizes of labels support
-* create apps/src/componentLibrary/common/constants.ts
 
 ## [0.2.1](https://github.com/code-dot-org/code-dot-org/pull/52338)
 * update checkbox storybook category
