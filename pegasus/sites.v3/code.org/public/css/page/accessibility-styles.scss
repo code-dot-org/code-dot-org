@@ -29,10 +29,6 @@ section.accessibility-efforts {
       border-radius: 50%;
     }
   }
-
-  p {
-    @include body-one;
-  }
 }
 
 .hero-banner-basic {
@@ -40,10 +36,5 @@ section.accessibility-efforts {
     .flex-container {
       flex-direction: column;
     }
-  }
-}
-.text-wrapper {
-  p {
-    @include body-one;
   }
 }

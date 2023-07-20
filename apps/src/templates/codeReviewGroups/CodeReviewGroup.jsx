@@ -4,8 +4,6 @@ import i18n from '@cdo/locale';
 import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
 import StudentGroup from './StudentGroup';
-// todo: remove this!
-// comment to force apps build in staging build
 
 export default function CodeReviewGroup({
   droppableId,
