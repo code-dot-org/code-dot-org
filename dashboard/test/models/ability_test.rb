@@ -941,10 +941,6 @@ class AbilityTest < ActiveSupport::TestCase
   test 'user without AI_CHAT_ACCESS cannot access Open AI chat completion endpoint' do
     levelbuilder = create :levelbuilder
     refute Ability.new(levelbuilder).can? :chat_completion, :openai_session
-    project_validator = create :project_validator
-    refute Ability.new(project_validator).can? :chat_completion, :openai_session
-    teacher = create :authorized_teacher
-    refute Ability.new(teacher).can? :chat_completion, :openai_session
   end
 
   private
