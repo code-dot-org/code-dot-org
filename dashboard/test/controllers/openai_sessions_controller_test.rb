@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class OpenaiSessionsControllerTest < ActionController::TestCase
-  include OpenaiChatHelper
-
   setup do
     response = Net::HTTPResponse.new(nil, '200', nil)
     OpenaiChatHelper.stubs(:request_chat_completion).returns(response)
