@@ -4,6 +4,7 @@
 - content_for(:head) do
   %script{src: webpack_asset_path("js/#{js_locale}/music_locale.js")}
   %script{src: webpack_asset_path("js/#{js_locale}/standaloneVideo_locale.js")}
+  %script{src: webpack_asset_path("js/#{js_locale}/aichat_locale.js")}
   %script{src: webpack_asset_path('js/googleblockly.js')}
   %script{src: webpack_asset_path('js/common.js')}
   %script{src: webpack_asset_path("js/lab2.js"), data: {appoptions: app_options.to_json}}
