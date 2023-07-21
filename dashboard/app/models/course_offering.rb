@@ -299,6 +299,7 @@ class CourseOffering < ApplicationRecord
       professional_learning_program: professional_learning_program,
       video: video,
       published_date: published_date,
+      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
     }
   end
 
@@ -342,6 +343,7 @@ class CourseOffering < ApplicationRecord
       professional_learning_program: professional_learning_program,
       video: video,
       published_date: published_date,
+      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
     }
   end
 
