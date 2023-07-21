@@ -21,8 +21,8 @@ Feature: Professional learning Sections
     When I select facilitator participant type
 
     # Edit Section Form
-    Then I wait to see "#uitest-section-name"
-    And I press keys "My Section of Teachers" for element "#uitest-section-name"
+    Then I wait to see "#uitest-section-name-setup"
+    And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
     Then I wait to see "#uitest-assignment-family"
     When I select the "ui-test-teacher-pl-course" option in dropdown "uitest-assignment-family"
     And I press the save button to create a new section
@@ -54,8 +54,8 @@ Feature: Professional learning Sections
     When I select facilitator participant type
 
     # Edit Section Form
-    Then I wait to see "#uitest-section-name"
-    And I press keys "My Section of Teachers" for element "#uitest-section-name"
+    Then I wait to see "#uitest-section-name-setup"
+    And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
     Then I wait to see "#uitest-assignment-family"
     When I select the "ui-test-teacher-pl-course" option in dropdown "uitest-assignment-family"
     And I press the save button to create a new section
@@ -87,8 +87,8 @@ Feature: Professional learning Sections
     When I select facilitator participant type
 
     # Edit Section Form
-    Then I wait to see "#uitest-section-name"
-    And I press keys "My Section of Teachers" for element "#uitest-section-name"
+    Then I wait to see "#uitest-section-name-setup"
+    And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
     Then I wait to see "#uitest-assignment-family"
     When I select the "ui-test-facilitator-pl-course" option in dropdown "uitest-assignment-family"
     And I press the save button to create a new section
@@ -120,8 +120,8 @@ Feature: Professional learning Sections
     When I select teacher participant type
 
     # Edit Section Form
-    Then I wait to see "#uitest-section-name"
-    And I press keys "My Section of Teachers" for element "#uitest-section-name"
+    Then I wait to see "#uitest-section-name-setup"
+    And I press keys "My Section of Teachers" for element "#uitest-section-name-setup"
     Then I wait to see "#uitest-assignment-family"
     When I select the "ui-test-teacher-pl-course" option in dropdown "uitest-assignment-family"
     And I press the save button to create a new section
@@ -145,7 +145,7 @@ Feature: Professional learning Sections
     # Participant Type Picker Does Not Show
     Then I should see the new section dialog
     Then I select email login
-    Then I wait to see "#uitest-section-name"
+    Then I wait to see "#uitest-section-name-setup"
 
   Scenario: Teacher tries to join professional learning section for teachers
     Given I create an authorized teacher-associated student named "Colin"
