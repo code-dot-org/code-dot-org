@@ -98,10 +98,11 @@ function updateSectionCourse(updateCourse, course) {
 
   // If no recommended version, fall back to the most recent stable version.
   if (courseVersionId === undefined) {
-    const stableVersions = Object.values(courseVersions).filter(
-      version => version.is_stable
-    );
-    courseVersionId = stableVersions[stableVersions.length - 1]?.id;
+    const stableVersions = Object.values(courseVersions)
+      .filter(version => version.is_stable)
+      .sort(cv => -cv.key);
+    console.log(stableVersions);
+    courseVersionId = stableVersions[0]?.id;
   }
 
   const courseVersion = courseVersions[courseVersionId];

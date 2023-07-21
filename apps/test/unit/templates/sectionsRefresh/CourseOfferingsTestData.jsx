@@ -822,6 +822,32 @@ export const noRecommendedVersionsOfferings = {
           display_name: 'Computer Science A',
           course_versions: [
             [
+              370,
+              {
+                id: 370,
+                key: '2019',
+                version_year: '19-20',
+                content_root_id: 32,
+                name: 'Informática A (19-20)',
+                path: '/courses/csa-2019',
+                type: 'UnitGroup',
+                is_stable: true,
+                is_recommended: false,
+                locales: ['English'],
+                units: {
+                  173: {
+                    id: 173,
+                    name: "Programación Orientada a Objetos ('19-'20)",
+                    path: '/s/csa1-2019',
+                    lesson_extras_available: false,
+                    text_to_speech_enabled: true,
+                    position: 1,
+                    requires_verified_instructor: true,
+                  },
+                },
+              },
+            ],
+            [
               373,
               {
                 id: 373,
