@@ -244,8 +244,7 @@ class UnconnectedMusicView extends React.Component {
       document.getElementById('blockly-div'),
       this.onBlockSpaceChange,
       this.props.isReadOnlyWorkspace,
-      levelData?.toolbox,
-      levelData?.simpleToolbox
+      levelData?.toolbox
     );
 
     this.library.setAllowedSounds(levelData?.sounds);

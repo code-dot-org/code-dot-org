@@ -7,9 +7,11 @@
     "level_data": {
       "text": "First, please play one sound.",
       "toolbox": {
-        "Play": ["play_sound_at_current_location_simple2"]
+        "blocks": {
+          "Play": ["play_sound_at_current_location_simple2"]
+        },
+        "type": "flyout"
       },
-      "simpleToolbox": true,
       "sounds": {
         "beats": ["disco_beat", "reggaeton_beat"]
       },

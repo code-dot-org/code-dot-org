@@ -35,27 +35,20 @@ export default class MusicBlocklyWorkspace {
    * @param {*} container HTML element to inject the workspace into
    * @param {*} onBlockSpaceChange callback fired when any block space change events occur
    * @param {*} isReadOnlyWorkspace is the workspace readonly
-   * @param {*} toolboxAllowList object defining allowed toolbox entries
-   * @param {*} simpleToolbox is the toolbox simple, without categories
+   * @param {*} toolbox information about the toolbox
    *
    */
-  init(
-    container,
-    onBlockSpaceChange,
-    isReadOnlyWorkspace,
-    toolboxAllowList,
-    simpleToolbox
-  ) {
+  init(container, onBlockSpaceChange, isReadOnlyWorkspace, toolbox) {
     if (this.workspace) {
       this.workspace.dispose();
     }
 
     this.container = container;
 
-    const toolbox = getToolbox(toolboxAllowList, simpleToolbox);
+    const toolboxBlocks = getToolbox(toolbox);
 
     this.workspace = Blockly.inject(container, {
-      toolbox: toolbox,
+      toolbox: toolboxBlocks,
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
       theme: CdoDarkTheme,
       renderer: experiments.isEnabled('zelos')
