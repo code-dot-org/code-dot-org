@@ -36,7 +36,7 @@ export default class MusicBlocklyWorkspace {
    * @param {*} onBlockSpaceChange callback fired when any block space change events occur
    * @param {*} isReadOnlyWorkspace is the workspace readonly
    * @param {*} toolboxAllowList object defining allowed toolbox entries
-   * @param {*} isReadOnlyWorkspace is the toolbox simple, without categories
+   * @param {*} simpleToolbox is the toolbox simple, without categories
    *
    */
   init(
