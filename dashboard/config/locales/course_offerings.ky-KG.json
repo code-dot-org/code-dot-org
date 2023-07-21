@@ -2,21 +2,21 @@
   "ky-KG": {
     "data": {
       "course_offerings": {
-        "flappy": "Flappy Code",
-        "jigsaw": "Jigsaw",
         "artist": "Сүрөтчү",
         "course1": "Курс 1",
         "course2": "Курс 2",
         "course3": "Курс 3",
         "course4": "Курс 4",
+        "flappy": "Flappy Code",
         "frozen": "Анна жана Элза менен код жазгыла",
         "hoc-encryption": "Код сааты: кадимки шифрлөө",
         "hourofcode": "Классикалык лабиринт",
         "infinity": "Disney Infinity оюн лабораториясы",
+        "jigsaw": "Jigsaw",
         "mc": "Minecraft код сааты",
         "minecraft": "Код сааты, Minecraft дизайнери",
-        "step": "кадам",
-        "soccer": "футбол"
+        "soccer": "футбол",
+        "step": "кадам"
       }
     }
   }

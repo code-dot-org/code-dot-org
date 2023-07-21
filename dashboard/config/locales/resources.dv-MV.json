@@ -2,6 +2,9 @@
   "dv-MV": {
     "data": {
       "resources": {
+        "video_machine_learning/csd/2021": {
+          "name": "ވީޑިއޯ:މެޝިން ލާނިންގ"
+        },
         "video_machine_learning/csd/2022": {
           "name": "ވީޑިއޯ:މެޝިން ލާނިންގ"
         },
@@ -9,9 +12,6 @@
           "name": "",
           "url": "",
           "type": ""
-        },
-        "video_machine_learning/csd/2021": {
-          "name": "ވީޑިއޯ:މެޝިން ލާނިންގ"
         }
       }
     }

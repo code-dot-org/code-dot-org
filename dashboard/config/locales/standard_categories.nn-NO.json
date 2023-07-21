@@ -2,17 +2,49 @@
   "nn-NO": {
     "data": {
       "standard_categories": {
+        "C": {
+          "description": "Tunnel"
+        },
         "CT": {
           "description": "Programmeringstenking"
+        },
+        "ESS": {
+        },
+        "ESS1": {
+        },
+        "ESS2": {
+        },
+        "ESS3": {
+        },
+        "ETS": {
+        },
+        "ETS1": {
+        },
+        "F": {
+          "description": "Funksjonar"
         },
         "L": {
           "description": "Språk"
         },
-        "C": {
-          "description": "Tunnel"
+        "LS": {
         },
-        "F": {
-          "description": "Funksjonar"
+        "LS1": {
+        },
+        "LS2": {
+        },
+        "LS3": {
+        },
+        "LS4": {
+        },
+        "PS": {
+        },
+        "PS1": {
+        },
+        "PS2": {
+        },
+        "PS3": {
+        },
+        "PS4": {
         }
       }
     }

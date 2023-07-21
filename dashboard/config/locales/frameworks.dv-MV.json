@@ -1,2 +1,10 @@
 {
+  "dv-MV": {
+    "data": {
+      "frameworks": {
+        "ngss": {
+        }
+      }
+    }
+  }
 }

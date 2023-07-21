@@ -1,9 +1,9 @@
 {
   "absolute": "ایبسولیوٹ (مطلق)",
+  "agentDiamondPathCongrats": "مبارکباد، آپ ڈائمنڈ راہ پایا! آپ جمع کی گئی ہیں {count, plural, one {1 ڈائمنڈ} other {# ہیرے}} اب تک!",
   "agentGenericFailureMessage": "ترمیز رکھیں! ایجنٹ کی مدد کے لیے استعمال کرنے کے لئے یاد رکھیں ۔",
   "agentTooFewBlocksFailureMessage": "ایجنٹ کا حق کے لئے جگہ حاصل کرنے کے لئے ایک وقت میں صرف ایک بلاک شامل کرنے کی کوشش کریں ۔",
   "at": "پر",
-  "agentDiamondPathCongrats": "مبارکباد، آپ ڈائمنڈ راہ پایا! آپ جمع کی گئی ہیں {count, plural, one {1 ڈائمنڈ} other {# ہیرے}} اب تک!",
   "blockActionAdd": "جمع",
   "blockActionAttack": "حملہ",
   "blockActionClone": "کلون کے خانے",

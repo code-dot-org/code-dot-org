@@ -1,2 +1,10 @@
 {
+  "et-EE": {
+    "data": {
+      "frameworks": {
+        "ngss": {
+        }
+      }
+    }
+  }
 }
