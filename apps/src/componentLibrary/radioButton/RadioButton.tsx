@@ -2,7 +2,10 @@ import React, {memo, ChangeEvent} from 'react';
 import classnames from 'classnames';
 
 import Typography from '@cdo/apps/componentLibrary/typography';
+import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+
 import moduleStyles from './radioButton.module.scss';
+import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
 
 export interface RadioButtonProps {
   /** Radio Button checked state */
@@ -21,7 +24,7 @@ export interface RadioButtonProps {
   /** Is Radio Button disabled */
   disabled?: boolean;
   /** Size of Radio Button */
-  size?: 'xs' | 's' | 'm' | 'l';
+  size?: ComponentSizeXSToL;
 }
 
 const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
@@ -33,6 +36,8 @@ const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
   disabled = false,
   size = 'm',
 }) => {
+  const bodyTextSize = componentSizeToBodyTextSizeMap[size];
+
   return (
     <label
       className={classnames(
@@ -53,7 +58,7 @@ const RadioButton: React.FunctionComponent<RadioButtonProps> = ({
         <Typography
           semanticTag="span"
           className={moduleStyles.radioButtonLabel}
-          visualAppearance="body-two"
+          visualAppearance={bodyTextSize}
         >
           {label}
         </Typography>
