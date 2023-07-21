@@ -11,12 +11,14 @@
       "library": "happy",
       "text": "#Loop It\nIt's common to take a beat and repeat it, sometimes for the rest of a song. But songs can get pretty long, so we'd need a ton of blocks if we added them one by one! Thankfully, repeating things is also common in code. In the `Control`(#999999) category of the toolbox, you'll find the `repeat`(#f218a2) block. Anything you put inside it will be repeated the number of times set by the block. \n## Do This\nUse this block to repeat the sounds that make up your beat a few times. You should notice the beat repeats the same number of times you set in the loop!",
       "toolbox": {
-        "Play": [
-          "play_sound_at_current_location_simple2"
-        ],
-        "Control": [
-          "repeat_simple2"
-        ]
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "repeat_simple2"
+          ]
+        }
       },
       "validations": [
         {
