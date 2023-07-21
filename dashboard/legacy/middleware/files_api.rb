@@ -652,7 +652,14 @@ class FilesApi < Sinatra::Base
 
     filename.downcase! if endpoint == 'files'
     begin
-      get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments']).to_json
+      versions = get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments'])
+      return versions.to_json if owns_channel?(encrypted_channel_id)
+
+      owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+      owner_user_id = user_id_for_storage_id(owner_storage_id)
+      return versions.to_json if teaches_student?(owner_user_id)
+
+      return versions.select {|version| version[:isLatest]}.to_json
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end

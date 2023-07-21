@@ -44,9 +44,6 @@ end
 # Used by lesson plan generator.
 apt_package 'enscript'
 
-# Provides a Dashboard database fixture for Pegasus tests.
-apt_package 'libsqlite3-dev'
-
 # Used to sync content between our Code.org shared Dropbox folder
 # and our git repository.
 apt_package 'unison' if node.chef_environment == 'staging'
