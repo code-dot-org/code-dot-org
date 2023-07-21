@@ -109,6 +109,8 @@ export interface VideoLevelData {
   download: string;
 }
 
+// TODO: Add AichatLevelData.
+
 export type LevelData = ProjectLevelData | VideoLevelData;
 
 // A validation condition.
@@ -157,6 +159,7 @@ export type ProjectType =
   | 'basketball';
 
 export type AppName =
+  | 'aichat'
   | 'applab'
   | 'calc'
   | 'dance'
