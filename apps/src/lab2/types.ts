@@ -11,7 +11,7 @@ export interface Channel {
   name: string;
   isOwner: boolean;
   projectType: ProjectType;
-  publishedAt: string;
+  publishedAt: string | null;
   createdAt: string;
   updatedAt: string;
 }
@@ -90,7 +90,7 @@ export interface LevelProperties {
   // the only labs we support have projects enabled, it's easier to make this a
   // disabled flag for specific exceptions.
   disableProjects?: 'true' | 'false';
-  levelData: LevelData;
+  levelData?: LevelData;
   appName: AppName;
 }
 
@@ -108,6 +108,8 @@ export interface VideoLevelData {
   src: string;
   download: string;
 }
+
+// TODO: Add AichatLevelData.
 
 export type LevelData = ProjectLevelData | VideoLevelData;
 
@@ -157,6 +159,7 @@ export type ProjectType =
   | 'basketball';
 
 export type AppName =
+  | 'aichat'
   | 'applab'
   | 'calc'
   | 'dance'

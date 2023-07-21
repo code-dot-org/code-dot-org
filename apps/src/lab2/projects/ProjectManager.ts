@@ -131,7 +131,7 @@ export default class ProjectManager {
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
     this.sourcesToSave = sources;
-    return this.enqueueSaveOrSave(forceSave);
+    return await this.enqueueSaveOrSave(forceSave);
   }
 
   /**
@@ -146,7 +146,7 @@ export default class ProjectManager {
       this.resetSaveState();
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    return this.enqueueSaveOrSave(true);
+    return await this.enqueueSaveOrSave(true);
   }
 
   /**
@@ -169,7 +169,7 @@ export default class ProjectManager {
       ) as Channel;
     }
     this.channelToSave.name = name;
-    return this.enqueueSaveOrSave(forceSave);
+    return await this.enqueueSaveOrSave(forceSave);
   }
 
   /**
@@ -259,7 +259,14 @@ export default class ProjectManager {
    * Listeners are notified of save status throughout the process.
    */
   private async saveHelper(): Promise<void> {
-    if (!this.sourcesToSave || !this.lastChannel) {
+    // We can't save without a last channel or last source.
+    // We also know we don't need to save if we don't have sources to save
+    // or a channel to save.
+    if (
+      !this.lastChannel ||
+      !this.lastSource ||
+      !(this.sourcesToSave || this.channelToSave)
+    ) {
       this.executeSaveNoopListeners(this.lastChannel);
       return;
     }
@@ -276,7 +283,7 @@ export default class ProjectManager {
       return;
     }
     // Only save the source if it has changed.
-    if (sourceChanged) {
+    if (this.sourcesToSave && sourceChanged) {
       try {
         await this.sourcesStore.save(this.channelId, this.sourcesToSave);
       } catch (error) {
@@ -313,7 +320,10 @@ export default class ProjectManager {
 
     this.saveInProgress = false;
     this.channelToSave = undefined;
-    this.executeSaveSuccessListeners(this.lastChannel, this.sourcesToSave);
+    this.executeSaveSuccessListeners(
+      this.lastChannel,
+      JSON.parse(this.lastSource) as ProjectSources
+    );
     this.initialSaveComplete = true;
   }
 
@@ -351,7 +361,7 @@ export default class ProjectManager {
   // initiate a save.
   // If we cannot save now, enqueue a save if one has not already been enqueued and
   // return a noop response.
-  private enqueueSaveOrSave(forceSave: boolean) {
+  private async enqueueSaveOrSave(forceSave: boolean) {
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
         // enqueue a save
@@ -366,8 +376,8 @@ export default class ProjectManager {
       return this.getNoopResponseAndSendSaveNoopEvent();
     } else {
       // if we can save immediately, initiate a save now. This is an async
-      // request that we do not wait for.
-      return this.saveHelper();
+      // request.
+      return await this.saveHelper();
     }
   }
 

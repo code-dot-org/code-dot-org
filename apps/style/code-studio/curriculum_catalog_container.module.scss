@@ -1,11 +1,12 @@
-@use "color.scss";
+@use 'color.scss';
 
 .catalogFiltersContainer {
   display: flex;
   align-items: baseline;
   gap: 16px;
   max-width: 60em;
-  margin: 1em auto;
+  margin: 0 auto;
+  padding: 1em 0;
 
   button {
     margin: 0;
@@ -16,7 +17,8 @@
   display: flex;
   justify-content: space-between;
   max-width: 60em;
-  margin: 1em auto;
+  margin: 0 auto;
+  padding: 0 0 1em 0;
 
   p {
     margin: 1em 0;
@@ -44,7 +46,7 @@ button.catalogClearFiltersButton {
 
 .catalogContentContainer {
   max-width: 60em;
-  margin: 1em auto;
+  margin: 0 auto 1em auto;
 }
 
 .catalogContentCards {
@@ -104,4 +106,10 @@ button.catalogClearFiltersButton {
 .assignSuccessMessage {
   margin: 16px;
   color: color.$bootstrap_success_text;
+}
+
+.fixedFiltersTop {
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
