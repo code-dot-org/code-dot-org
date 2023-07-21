@@ -32,6 +32,7 @@ import {
   clearPlaybackEvents,
   getCurrentlyPlayingBlockIds,
   setSoundLoadingProgress,
+  setUndoStatus,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import {
@@ -66,6 +67,7 @@ import {Key} from '../utils/Notes';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {isEqual} from 'lodash';
+import UndoRedoButtons from './UndoRedoButtons';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -123,6 +125,7 @@ class UnconnectedMusicView extends React.Component {
     isReadOnlyWorkspace: PropTypes.bool,
     updateLoadProgress: PropTypes.func,
     appName: PropTypes.string,
+    setUndoStatus: PropTypes.func,
   };
 
   constructor(props) {
@@ -395,6 +398,12 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
+    // Update undo status when blocks change.
+    this.props.setUndoStatus({
+      canUndo: this.musicBlocklyWorkspace.canUndo(),
+      canRedo: this.musicBlocklyWorkspace.canRedo(),
+    });
+
     const codeChanged = this.compileSong();
     if (codeChanged) {
       this.executeCompiledSong();
@@ -542,6 +551,14 @@ class UnconnectedMusicView extends React.Component {
     this.props.setCurrentPlayheadPosition(this.props.startingPlayheadPosition);
   };
 
+  undo = () => {
+    this.musicBlocklyWorkspace.undo();
+  };
+
+  redo = () => {
+    this.musicBlocklyWorkspace.redo();
+  };
+
   onFeedbackClicked = () => {
     this.analyticsReporter.onButtonClicked('feedback');
     window.open(
@@ -684,6 +701,12 @@ class UnconnectedMusicView extends React.Component {
               <PanelContainer
                 id="workspace-panel"
                 headerText={musicI18n.panelHeaderWorkspace()}
+                rightContent={
+                  <UndoRedoButtons
+                    onClickUndo={this.undo}
+                    onClickRedo={this.redo}
+                  />
+                }
               >
                 <div id="blockly-div" />
               </PanelContainer>
@@ -758,6 +781,7 @@ const MusicView = connect(
       dispatch(setLabReadyForReload(labReadyForReload)),
     navigateToNextLevel: () => dispatch(navigateToNextLevel()),
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
+    setUndoStatus: value => dispatch(setUndoStatus(value)),
   })
 )(UnconnectedMusicView);
 
