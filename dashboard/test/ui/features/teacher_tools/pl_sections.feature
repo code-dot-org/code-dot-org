@@ -36,8 +36,8 @@ Feature: Professional learning Sections
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
   Scenario: Create new professional learning section as universal instructor
-    Given I create an authorized teacher-associated student named "Sally"
-    When I sign in as "Teacher_Sally" and go home
+    Given I create an authorized teacher-associated student named "Maggie"
+    When I sign in as "Teacher_Maggie" and go home
     And I get universal instructor access
     And I reload the page
 
@@ -67,8 +67,8 @@ Feature: Professional learning Sections
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
   Scenario: Create new professional learning section as plc reviewer
-    Given I create an authorized teacher-associated student named "Sally"
-    When I sign in as "Teacher_Sally" and go home
+    Given I create an authorized teacher-associated student named "Arity"
+    When I sign in as "Teacher_Arity" and go home
     And I get plc reviewer access
     And I reload the page
 
@@ -98,8 +98,8 @@ Feature: Professional learning Sections
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
   Scenario: Create new professional learning section as facilitator
-    Given I create an authorized teacher-associated student named "Sally"
-    When I sign in as "Teacher_Sally" and go home
+    Given I create an authorized teacher-associated student named "Colin"
+    When I sign in as "Teacher_Colin" and go home
     And I get facilitator access
     And I reload the page
 
@@ -141,8 +141,8 @@ Feature: Professional learning Sections
     And element ".uitest-teacher-type" is not visible
 
   Scenario: Teacher tries to join professional learning section for teachers
-    Given I create an authorized teacher-associated student named "Sally"
-    When I sign in as "Teacher_Sally" and go home
+    Given I create an authorized teacher-associated student named "Bri"
+    When I sign in as "Teacher_Bri" and go home
     And I get universal instructor access
     And I create a new teacher section and go home
 
@@ -156,8 +156,8 @@ Feature: Professional learning Sections
     Then the professional learning joined sections table should have 1 row
 
   Scenario: Teacher tries to join professional learning section for facilitators
-    Given I create an authorized teacher-associated student named "Sally"
-    When I sign in as "Teacher_Sally" and go home
+    Given I create an authorized teacher-associated student named "Kelly"
+    When I sign in as "Teacher_Kelly" and go home
     And I get universal instructor access
     And I create a new facilitator section and go home
 
@@ -172,8 +172,8 @@ Feature: Professional learning Sections
     And element ".announcement-notification" contains text matching "You do not have the permissions to join section"
 
   Scenario: Facilitator tries to join professional learning section for teachers
-    Given I create an authorized teacher-associated student named "Sally"
-    When I sign in as "Teacher_Sally" and go home
+    Given I create an authorized teacher-associated student named "Gilly"
+    When I sign in as "Teacher_Gilly" and go home
     And I get universal instructor access
     And I create a new teacher section and go home
 
@@ -189,8 +189,8 @@ Feature: Professional learning Sections
     Then the professional learning joined sections table should have 1 row
 
   Scenario: Facilitator tries to join professional learning section for facilitators
-    Given I create an authorized teacher-associated student named "Sally"
-    When I sign in as "Teacher_Sally" and go home
+    Given I create an authorized teacher-associated student named "Sarah"
+    When I sign in as "Teacher_Sarah" and go home
     And I get universal instructor access
     And I create a new facilitator section and go home
 
@@ -206,8 +206,8 @@ Feature: Professional learning Sections
     Then the professional learning joined sections table should have 1 row
 
   Scenario: Universal Instructor tries to join professional learning section for teachers
-    Given I create an authorized teacher-associated student named "Sally"
-    When I sign in as "Teacher_Sally" and go home
+    Given I create an authorized teacher-associated student named "Lauren"
+    When I sign in as "Teacher_Lauren" and go home
     And I get universal instructor access
     And I create a new teacher section and go home
 
@@ -223,8 +223,8 @@ Feature: Professional learning Sections
     Then the professional learning joined sections table should have 1 row
 
   Scenario: Universal Instructor tries to join professional learning section for facilitators
-    Given I create an authorized teacher-associated student named "Sally"
-    When I sign in as "Teacher_Sally" and go home
+    Given I create an authorized teacher-associated student named "Syd"
+    When I sign in as "Teacher_Syd" and go home
     And I get universal instructor access
     And I create a new facilitator section and go home
 
