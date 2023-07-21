@@ -111,15 +111,13 @@
 
 # Publish identifiers for database Resources provisioned in this template to Secrets, so the values can dynamically
 # populate CDO.* application configuration settings.
-# TODO: Transition these configuration settings to AWS Systems Manager Parameter Store.
-
-#  TODO: Re-enable this when it's clear that a recently deleted Secret can be created again.
-#  DBClusterIDConfig:
-#    Type: AWS::SecretsManager::Secret
-#    Properties:
-#      Description: 'Publish Database Cluster ID to application configuration setting CDO.db_cluster_id'
-#      Name: !Sub "CfnStack/${AWS::StackName}/db_cluster_id"
-#      SecretString: <%#=rack_env?(:production) ? "'#{PRODUCTION_DB_CLUSTER_ID}'" : '!Ref AuroraCluster'%>
+# TODO: Transition these configuration settings to AWS Systems Manager Parameter Store or some equivalent system.
+  DBClusterIDConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish Database Cluster ID to application configuration setting CDO.db_cluster_id'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_cluster_id"
+      SecretString: <%=rack_env?(:production) ? "'#{PRODUCTION_DB_CLUSTER_ID}'" : '!Ref AuroraCluster'%>
   DBWriterEndpointConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
