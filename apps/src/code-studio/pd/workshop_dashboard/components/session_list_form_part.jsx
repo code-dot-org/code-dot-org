@@ -4,7 +4,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
-import {Row, Col} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import SessionFormPart from './session_form_part';
 import {DATE_FORMAT, MAX_SESSIONS} from '../workshopConstants';
 

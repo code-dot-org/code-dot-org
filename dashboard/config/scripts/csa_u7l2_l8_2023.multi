@@ -7,7 +7,7 @@ wrong '`80.0 0`'
 wrong '`80.0 5`'
 wrong '`17743 80.0`'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following class definition.

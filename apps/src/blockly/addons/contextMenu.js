@@ -297,6 +297,10 @@ function unregisterDefaultOptions() {
   // This needs to be wrapped in a try for now because our GoogleBlocklyWrapperTest.js
   // is not correctly cleaning up its state.
   try {
+    GoogleBlockly.ContextMenuRegistry.registry.unregister(
+      'blockCollapseExpand'
+    );
+    GoogleBlockly.ContextMenuRegistry.registry.unregister('blockInline');
     // cleanUp() doesn't currently account for immovable blocks.
     GoogleBlockly.ContextMenuRegistry.registry.unregister('cleanWorkspace');
     GoogleBlockly.ContextMenuRegistry.registry.unregister('collapseWorkspace');

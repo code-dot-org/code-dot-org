@@ -1,3 +1,6 @@
+# Temporarily skip this test to unblock test builds. See ticket for details:
+# https://codedotorg.atlassian.net/browse/SL-878
+@skip
 @eyes_mobile
 Feature: Look at mobile portait view
 

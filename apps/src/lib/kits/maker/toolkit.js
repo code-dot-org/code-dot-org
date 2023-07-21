@@ -17,9 +17,7 @@ import MakerError, {
   UnsupportedBrowserError,
   wrapKnownMakerErrors,
 } from './MakerError';
-import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
-import {isChrome, gtChrome33, isCodeOrgBrowser} from './util/browserChecks';
 import MicroBitBoard from './boards/microBit/MicroBitBoard';
 import {MB_API} from './boards/microBit/MicroBitConstants';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
@@ -155,7 +153,7 @@ function disconnect() {
  * @returns {Promise}
  */
 function confirmSupportedBrowser() {
-  if (isCodeOrgBrowser() || (isChrome() && gtChrome33())) {
+  if (shouldUseWebSerial()) {
     return Promise.resolve();
   } else {
     return Promise.reject(new UnsupportedBrowserError('Unsupported browser'));
@@ -183,25 +181,22 @@ function getBoard() {
     } else {
       return Promise.resolve(new VirtualCPBoard());
     }
-  } else if (shouldUseWebSerial()) {
-    return navigator.serial.getPorts().then(ports => {
-      // No previously connected port. Query user to select port.
-      if (!ports.length) {
-        return navigator.serial
-          .requestPort({filters: WEB_SERIAL_FILTERS})
-          .then(port => {
-            let wrappedPort = new WebSerialPortWrapper(port);
-            return new boardConstructor(wrappedPort);
-          });
-      } else {
-        let port = ports[0];
-        let wrappedPort = new WebSerialPortWrapper(port);
-        return new boardConstructor(wrappedPort);
-      }
-    });
-  } else {
-    return findPortWithViableDevice().then(port => new boardConstructor(port));
   }
+  return navigator.serial.getPorts().then(ports => {
+    // No previously connected port. Query user to select port.
+    if (!ports.length) {
+      return navigator.serial
+        .requestPort({filters: WEB_SERIAL_FILTERS})
+        .then(port => {
+          let wrappedPort = new WebSerialPortWrapper(port);
+          return new boardConstructor(wrappedPort);
+        });
+    } else {
+      let port = ports[0];
+      let wrappedPort = new WebSerialPortWrapper(port);
+      return new boardConstructor(wrappedPort);
+    }
+  });
 }
 
 function isConnecting() {

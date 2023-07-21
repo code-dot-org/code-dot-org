@@ -166,7 +166,7 @@ describe('LessonEditor', () => {
       .be.true;
     expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
     expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(2);
-    expect(wrapper.find('input').length).to.equal(7);
+    expect(wrapper.find('input').length).to.equal(8);
     expect(wrapper.find('select').length).to.equal(1);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(0);
     expect(wrapper.find('CollapsibleEditorSection').length).to.equal(3);

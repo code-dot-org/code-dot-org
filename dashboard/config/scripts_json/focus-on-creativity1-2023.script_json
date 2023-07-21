@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-03 00:41:22 UTC",
+    "serialized_at": "2023-06-21 18:22:22 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1050,7 +1051,7 @@
       "key": "5b58735f-ef57-4d1d-873b-db37de7ab19f",
       "position": 2,
       "properties": {
-        "description": "**Distribute**: Hand out copies of the activity guides."
+        "description": "**Distribute**: Hand out copies of the [r the_problem_solving_process/focus-on-creativity/2023] activity guides."
       },
       "seeding_key": {
         "activity_section.key": "5b58735f-ef57-4d1d-873b-db37de7ab19f",

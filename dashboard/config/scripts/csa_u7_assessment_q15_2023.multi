@@ -23,3 +23,10 @@ Which of the following is a correct header for a method of the `Barcode` class t
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+The question asks for a method that updates the UPC value and can only be used within the `Barcode` class.
+
+The keyword `private` makes a method only accessible within the class it's defined in. The method also needs to return an `int`, because it's supposed to update and return the UPC, which is an integer.
+
+Therefore, `private int updateUPC()` is the correct answer: it's a method that can only be used within the `Barcode` class and it returns an integer.
+MARKDOWN

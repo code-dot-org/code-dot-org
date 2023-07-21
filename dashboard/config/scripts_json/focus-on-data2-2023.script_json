@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-28 22:40:00 UTC",
+    "serialized_at": "2023-07-17 23:36:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6219,8 +6220,8 @@
       }
     },
     {
-      "name": "Secret Messages 2021",
-      "url": "https://docs.google.com/document/d/1McCQtY7xWPnKvemkAf0bLxxxyJVJzQomWv4wcjInjXc/view",
+      "name": "Secret Messages ",
+      "url": "https://docs.google.com/document/d/1j1IKIzIf3R3sck0hgW740SGbQmWTFdNKMrwPK0dBqSA/edit?usp=sharing",
       "key": "secret_messages_2021",
       "properties": {
         "audience": "Student",

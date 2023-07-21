@@ -12,13 +12,14 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "web-development",
-    "serialized_at": "2023-05-04 21:23:56 UTC",
-    "published_state": "beta",
+    "serialized_at": "2023-05-17 16:29:42 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -1512,7 +1513,7 @@
       "key": "2cd1db7a-9414-4d0a-88b3-b5c7ca0af128",
       "position": 4,
       "properties": {
-        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd2/2023] to each student, face down. Make sure students don't start the word search ahead of time.\n"
+        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd/2023] to each student, face down. Make sure students don't start the word search ahead of time.\n"
       },
       "seeding_key": {
         "activity_section.key": "2cd1db7a-9414-4d0a-88b3-b5c7ca0af128",
@@ -1591,7 +1592,7 @@
       "key": "2e44e7f2-2787-420b-bf9c-d148763c8154",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [r the_problem_solving_process/csd2/2023]  video.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [r the_problem_solving_process/csd/2023]  video.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?\n\n",
         "duration": "5",
         "name": "The Problem Solving Process",
         "tips": [
@@ -1786,7 +1787,7 @@
       "key": "7bfeabac-92d9-43d1-826c-dc764a69e061",
       "position": 8,
       "properties": {
-        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic website design for, following the Problem Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their design.\n\n**Distribute:** Pass out copies of the \n[r problem_solving_and_design/csd2/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit."
+        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic website design for, following the Problem Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their design.\n\n**Distribute:** Pass out copies of the \n[r problem_solving_and_design/csd/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit."
       },
       "seeding_key": {
         "activity_section.key": "7bfeabac-92d9-43d1-826c-dc764a69e061",
@@ -1958,7 +1959,7 @@
       "key": "60ead9cc-a271-4df0-8905-6da6df1b0945",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r pair_programming/csd2/2023] video in the slides.\n\n**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?\n\n**Discussion Goal:** The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry-standard practice, not just something fun to do.\n\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r pair_programming/csd/2023] video in the slides.\n\n**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?\n\n**Discussion Goal:** The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry-standard practice, not just something fun to do.\n\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2647,7 +2648,7 @@
       "key": "e9d3e86d-9694-4e8e-b161-d8c0279fa34d",
       "position": 5,
       "properties": {
-        "description": "**Distribute:**  Hand out a copy of the [r problem_solving_process_with_programming/csd2/2023] to pairs of students. Encourage students to look over the guide.\n\n**Display:** Show the slide with the Problem Solving Process graphic\n"
+        "description": "**Distribute:**  Hand out a copy of the [r problem_solving_process_with_programming/csd/2023] to pairs of students. Encourage students to look over the guide.\n\n**Display:** Show the slide with the Problem Solving Process graphic\n"
       },
       "seeding_key": {
         "activity_section.key": "e9d3e86d-9694-4e8e-b161-d8c0279fa34d",
@@ -8258,6 +8259,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-levelgroup_2023"
+        ],
         "progression": "Survey"
       },
       "bonus": false,

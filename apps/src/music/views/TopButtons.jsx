@@ -6,10 +6,7 @@ import moduleStyles from './topbuttons.module.scss';
 import FontAwesome from '../../templates/FontAwesome';
 import AppConfig from '../appConfig';
 import musicI18n from '../locale';
-import commonI18n from '@cdo/locale';
-import {useSelector} from 'react-redux';
-import Spinner from '../../code-studio/pd/components/spinner';
-import {projectUpdatedStatuses} from '../../code-studio/projectRedux';
+import SaveStatus from './SaveStatus';
 
 /**
  * Renders a set of miscellaneous buttons in the top of the Music Lab workspace,
@@ -20,9 +17,6 @@ const TopButtons = ({clearCode, uploadSound, canShowSaveStatus}) => {
   const [shareMessageShowing, setShareMessageShowing] = useState(false);
   const inputRef = useRef(null);
   const showUploadSound = AppConfig.getValue('show-upload') === 'true';
-  const updatedStatus = useSelector(
-    state => state.project.projectUpdatedStatus
-  );
 
   const startOverClicked = () => {
     analyticsReporter.onButtonClicked('start-over');
@@ -50,38 +44,6 @@ const TopButtons = ({clearCode, uploadSound, canShowSaveStatus}) => {
     }
 
     uploadSound(inputRef.current.files[0]);
-  };
-
-  const renderSaveMessage = () => {
-    return (
-      <div className={moduleStyles.saveMessageContainer}>
-        <div
-          className={classNames(
-            moduleStyles.saveMessage,
-            moduleStyles.saveMessageSaving,
-            updatedStatus === projectUpdatedStatuses.saving &&
-              moduleStyles.saveMessageShow
-          )}
-        >
-          <Spinner size={'small'} />
-          <div className={moduleStyles.saveMessageText}>
-            {commonI18n.saving()}
-          </div>
-        </div>
-        <div
-          className={classNames(
-            moduleStyles.saveMessage,
-            moduleStyles.saveMessageError,
-            updatedStatus === projectUpdatedStatuses.error &&
-              moduleStyles.saveMessageShow
-          )}
-        >
-          <div className={moduleStyles.saveMessageText}>
-            {commonI18n.projectSaveError()}
-          </div>
-        </div>
-      </div>
-    );
   };
 
   return (
@@ -119,7 +81,7 @@ const TopButtons = ({clearCode, uploadSound, canShowSaveStatus}) => {
         <FontAwesome icon={'commenting'} />
         &nbsp; {musicI18n.feedback()}
       </button>
-      {canShowSaveStatus && renderSaveMessage()}
+      {canShowSaveStatus && <SaveStatus />}
       {showUploadSound && (
         <fieldset>
           <input
@@ -146,7 +108,7 @@ const TopButtons = ({clearCode, uploadSound, canShowSaveStatus}) => {
 TopButtons.propTypes = {
   clearCode: PropTypes.func.isRequired,
   uploadSound: PropTypes.func.isRequired,
-  canShowSaveStatus: PropTypes.bool,
+  canShowSaveStatus: PropTypes.bool.isRequired,
 };
 
 export default TopButtons;

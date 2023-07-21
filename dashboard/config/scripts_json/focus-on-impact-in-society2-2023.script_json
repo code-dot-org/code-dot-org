@@ -5,15 +5,17 @@
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
       "project_sharing": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-02 19:32:03 UTC",
+    "serialized_at": "2023-05-17 16:49:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

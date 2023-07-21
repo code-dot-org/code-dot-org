@@ -479,14 +479,25 @@ class UnitGroup < ApplicationRecord
   end
 
   # @param family_name [String] The family name for a course family.
+  # @param locale [String] User or request locale. Optional.
   # @return [UnitGroup] Returns the latest stable version in a course family.
-  def self.latest_stable_version(family_name)
+  def self.latest_stable_version(family_name, locale: 'en-us')
     return nil if family_name.blank?
 
-    all_courses.select do |course|
+    stable_course_versions = all_courses.select do |course|
       course.family_name == family_name &&
         course.published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    end.max_by(&:version_year)
+    end.sort_by(&:version_year).reverse
+
+    # Only select stable, supported UnitGroups (ignore supported locales if locale is an English-speaking locale).
+    locale_str = locale&.to_s
+    if locale_str&.start_with?('en')
+      stable_course_versions.first
+    else
+      stable_course_versions.find do |cv|
+        cv.default_unit_group_units.all? {|unit_group_unit| unit_group_unit.script.supported_locales&.include?(locale_str)}
+      end
+    end
   end
 
   # @param family_name [String] The family name for a course family.
@@ -531,8 +542,7 @@ class UnitGroup < ApplicationRecord
     user.
       user_scripts.
       where(script_id: unit_ids).
-      select(&:version_warning_dismissed).
-      any?
+      any?(&:version_warning_dismissed)
   end
 
   @@course_cache = nil
@@ -600,6 +610,12 @@ class UnitGroup < ApplicationRecord
 
   def pilot?
     !!pilot_experiment
+  end
+
+  # Wrapper function to help with assignable course logic
+  # @return [CourseVersion]
+  def get_course_version
+    course_version
   end
 
   def has_pilot_experiment?(user)

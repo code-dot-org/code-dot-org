@@ -132,16 +132,16 @@ Factory.define('session starting in over a month from middleOfYearFakeToday')
     'start',
     new Date(
       middleOfYearFakeToday.getFullYear(),
-      middleOfYearFakeToday.getMonth() + 2,
-      middleOfYearFakeToday.getDate()
+      middleOfYearFakeToday.getMonth(),
+      middleOfYearFakeToday.getDate() + 32
     ).toISOString()
   )
   .attr(
     'end',
     new Date(
       middleOfYearFakeToday.getFullYear(),
-      middleOfYearFakeToday.getMonth() + 2,
-      middleOfYearFakeToday.getDate()
+      middleOfYearFakeToday.getMonth(),
+      middleOfYearFakeToday.getDate() + 32
     ).toISOString()
   );
 
@@ -170,16 +170,16 @@ Factory.define('session starting in over a month from endOfYearFakeToday')
     'start',
     new Date(
       endOfYearFakeToday.getFullYear(),
-      endOfYearFakeToday.getMonth() + 2,
-      endOfYearFakeToday.getDate()
+      endOfYearFakeToday.getMonth(),
+      endOfYearFakeToday.getDate() + 32
     ).toISOString()
   )
   .attr(
     'end',
     new Date(
       endOfYearFakeToday.getFullYear(),
-      endOfYearFakeToday.getMonth() + 2,
-      endOfYearFakeToday.getDate()
+      endOfYearFakeToday.getMonth(),
+      endOfYearFakeToday.getDate() + 32
     ).toISOString()
   );
 

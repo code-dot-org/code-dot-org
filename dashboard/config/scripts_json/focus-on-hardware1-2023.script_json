@@ -5,17 +5,19 @@
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-03 00:37:41 UTC",
+    "serialized_at": "2023-06-21 18:22:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1444,7 +1446,7 @@
       "key": "2c2cc969-7784-416b-b134-67f89f20d6a3",
       "position": 2,
       "properties": {
-        "description": "**Distribute**: Hand out copies of the activity guides."
+        "description": "**Distribute**: Hand out copies of the [r the_problem_solving_process/focus-on-hardware/2023] activity guides. "
       },
       "seeding_key": {
         "activity_section.key": "2c2cc969-7784-416b-b134-67f89f20d6a3",

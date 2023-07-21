@@ -32,21 +32,22 @@ class Poetry < GamelabJr
     standalone_app_name
     available_poems
   )
+  # Note that standalone_app_name refers to the Poetry subtype.
 
-  # Set the default poem to nil if the subtype does not have poems, or if the default poem is
-  # not in the list of poems for the subtype.
+  # Set the default poem to nil if the standalone_app does not have poems, or if the default poem is
+  # not in the list of poems for the standalone_app.
   def sanitize_default_poem
-    self.default_poem = nil if Poetry.subtypes_with_poems.exclude?(standalone_app_name) ||
-      Poetry.poem_keys_for_subtype(standalone_app_name).exclude?(default_poem)
+    self.default_poem = nil if Poetry.standalone_apps_with_poems.exclude?(standalone_app_name) ||
+      Poetry.poem_keys_for_standalone_app(standalone_app_name).exclude?(default_poem)
   end
 
-  # Set the available poems to nil if the subtype does not have poems.
-  # Also remove any available poems that are not in the list of poems for the subtype.
+  # Set the available poems to nil if the standalone_app does not have poems.
+  # Also remove any available poems that are not in the list of poems for the standalone_app.
   def sanitize_available_poems
-    self.available_poems = nil unless Poetry.subtypes_with_poems.include?(standalone_app_name)
-    return if Poetry.subtypes_with_poems.exclude?(standalone_app_name) || (available_poems && available_poems.empty?)
+    self.available_poems = nil unless Poetry.standalone_apps_with_poems.include?(standalone_app_name)
+    return if Poetry.standalone_apps_with_poems.exclude?(standalone_app_name) || (available_poems && available_poems.empty?)
     # filter out any invalid poems from available_poems
-    self.available_poems = available_poems & Poetry.poem_keys_for_subtype(standalone_app_name)
+    self.available_poems = available_poems & Poetry.poem_keys_for_standalone_app(standalone_app_name)
   end
 
   def validate_default_poem_and_available_poems
@@ -54,7 +55,7 @@ class Poetry < GamelabJr
     sanitize_available_poems
     # If there is a default poem and dropdown poem(s), check that the default poem is
     # in the dropdown poem list.
-    if default_poem.present? && Poetry.subtypes_with_poems.include?(standalone_app_name) &&
+    if default_poem.present? && Poetry.standalone_apps_with_poems.include?(standalone_app_name) &&
       available_poems && !available_poems.empty? && available_poems.exclude?(default_poem)
       errors.add(:default_poem, "selected default poem is not in dropdown poem list")
     end
@@ -73,7 +74,7 @@ class Poetry < GamelabJr
     [['Poetry', 'poetry'], ['Poetry HOC', 'poetry_hoc'],  ['Time Capsule', 'time_capsule']]
   end
 
-  def self.subtypes_with_poems
+  def self.standalone_apps_with_poems
     %w(poetry_hoc time_capsule)
   end
 
@@ -113,8 +114,8 @@ class Poetry < GamelabJr
   end
 
   # Used to get all available poems for a Poetry level.
-  def self.poems_for_subtype(subtype)
-    case subtype
+  def self.poems_for_standalone_app(standalone_app_name)
+    case standalone_app_name
     when 'poetry_hoc'
       hoc_poems
     when 'time_capsule'
@@ -124,10 +125,10 @@ class Poetry < GamelabJr
     end
   end
 
-  def self.poem_keys_for_subtype(subtype)
+  def self.poem_keys_for_standalone_app(standalone_app_name)
     # get the keys out of a poem list. Assumes each entry
     # in the list is a 2 element array
-    poems_for_subtype(subtype).map {|poem| poem[1]}
+    poems_for_standalone_app(standalone_app_name).map {|poem| poem[1]}
   end
 
   def self.hoc_poems

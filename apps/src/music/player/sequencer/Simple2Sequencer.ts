@@ -1,3 +1,4 @@
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {DEFAULT_CHORD_LENGTH, DEFAULT_PATTERN_LENGTH} from '../../constants';
 import {ChordEvent, ChordEventValue} from '../interfaces/ChordEvent';
 import {Effects, EffectValue} from '../interfaces/Effects';
@@ -133,8 +134,7 @@ export default class Simple2Sequencer extends Sequencer {
 
     const currentEffects = this.getCurrentEffects();
     if (currentEffects !== null) {
-      // Create a fresh effect context if there is one active
-      this.effectsStack.push({});
+      this.effectsStack.push({...currentEffects});
     }
   }
 
@@ -171,7 +171,7 @@ export default class Simple2Sequencer extends Sequencer {
   // Move to the next child of a play_random block.
   nextRandom() {
     if (this.randomStack.length === 0) {
-      console.warn(
+      Lab2MetricsReporter.logWarning(
         'Invalid state; tried to call nextRandom() without active random context'
       );
       return;
@@ -204,14 +204,14 @@ export default class Simple2Sequencer extends Sequencer {
   playSound(id: string, blockId: string) {
     const soundData = this.library.getSoundForId(id);
     if (soundData === null) {
-      console.warn('Could not find sound with ID: ' + id);
+      Lab2MetricsReporter.logWarning('Could not find sound with ID: ' + id);
       return;
     }
 
     this.addNewEvent<SoundEvent>({
       id,
       type: 'sound',
-      length: this.getLengthForId(id),
+      length: soundData.length,
       soundType: soundData.type,
       blockId,
       ...this.getCommonEventFields(),
@@ -278,10 +278,12 @@ export default class Simple2Sequencer extends Sequencer {
   }
 
   private getCommonEventFields() {
+    const effects = this.getCurrentEffects();
     return {
       triggered: this.inTrigger,
       when: this.getCurrentMeasure(),
-      effects: {...this.getCurrentEffects()} || undefined,
+      // Snapshot the current value of effects
+      effects: effects ? {...effects} : undefined,
       skipContext: this.getCurrentSkipContext(),
     };
   }
@@ -289,14 +291,13 @@ export default class Simple2Sequencer extends Sequencer {
   private addNewEvent<T extends PlaybackEvent>(event: T) {
     const currentFunctionId = this.getCurrentFunctionId();
     if (currentFunctionId === null) {
-      console.warn('Invalid state: no current function ID');
+      Lab2MetricsReporter.logWarning('Invalid state: no current function ID');
       return;
     }
     const currentFunction = this.functionMap[currentFunctionId];
 
     currentFunction.playbackEvents.push(event);
     this.updateMeasureForPlayByLength(event.length);
-    currentFunction.endMeasure = this.getCurrentMeasure();
   }
 
   // Internal helper to get the entry at the top of the stack, or null
@@ -391,11 +392,6 @@ export default class Simple2Sequencer extends Sequencer {
 
   private getUniqueInvocationId(): number {
     return this.uniqueInvocationIdUpTo++;
-  }
-
-  private getLengthForId(id: string): number {
-    const soundData = this.library.getSoundForId(id);
-    return soundData ? soundData.length : 0;
   }
 
   private resetStacks() {

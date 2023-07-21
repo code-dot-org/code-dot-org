@@ -17,24 +17,40 @@ export function getDefaultFileContents(filename, viewMode) {
 
 export const getTabKey = index => `file-${index}`;
 
+/**
+ * @typedef {Object} FileMetadataAndMore
+ * @property {Object.<string, string>} fileMetadata mapping between tab keys and actual file names
+ * @property {Array} orderedTabKeys order to display files in editor
+ * @property {string} activeTabKey
+ * @property {number} lastTabKeyIndex array index of last tab key
+ * @example
+ * {
+ *   fileMetadata: {'file-0': 'ClassOne.java', 'file-1': 'ClassTwo.java', 'file-2': 'ClassThree.java'},
+ *   orderedTabKeys: ['file-1', 'file-2', 'file-0'],
+ *   activeTabKey: 'file-1',
+ *   lastTabKeyIndex: 2
+ * }
+ */
+
+/**
+ * 'sources' contains file information as key-value pairs.
+ * The key is the file name such as 'Class1.java'.
+ * The value is a file object with the keys: text (source code),
+ * tabOrder (order of the file tab in orderedTabs from 0 to (number of files - 1)),
+ * isVisible, and isValidation (default is false)
+ * The file tabKey names (such as 'file-0', 'file-1') are stored in fileMetadata.
+ * For example, if sources contains the following:
+ * {
+ *   'ClassOne.java': {text: '', tabOrder: 2, isVisible: true},
+ *   'ClassTwo.java': {text: '', tabOrder: 0, isVisible: true},
+ *   'ClassThree.java': {text: '', tabOrder: 1, isVisible: true}
+ * },
+ * then depending on how Object.keys iterates through the keys on sources, we could have
+ * fileMetadata assigned: {'file-0': 'ClassOne.java', 'file-1': 'ClassTwo.java', 'file-2': 'ClassThree.java'}.
+ * and orderedTabKeys would be ['file-1', 'file-2', 'file-0'].
+ * @returns {FileMetadataAndMore}
+ */
 export const fileMetadataForEditor = (sources, isEditingStartSources) => {
-  /*
-  'sources' contains file information as key-value pairs.
-  The key is the file name such as 'Class1.java'.
-  The value is a file object with the keys: text (source code),
-  tabOrder (order of the file tab in orderedTabs from 0 to (number of files - 1)),
-  isVisible, and isValidation (default is false)
-  The file tabKey names (such as 'file-0', 'file-1') are stored in fileMetadata.
-  For example, if sources contains the following:
-  {
-    'ClassOne.java': {text: '', tabOrder: 2, isVisible: true},
-    'ClassTwo.java': {text: '', tabOrder: 0, isVisible: true},
-    'ClassThree.java': {text: '', tabOrder: 1, isVisible: true}
-  },
-  then depending on how Object.keys iterates through the keys on sources, we could have
-  fileMetadata assigned: {'file-0': 'ClassOne.java', 'file-1': 'ClassTwo.java', 'file-2': 'ClassThree.java'}.
-  and orderedTabKeys would be ['file-1', 'file-2', 'file-0'].
-  */
   let fileMetadata = {};
   let orderedTabKeys = [];
   let unorderedTabKeys = [];
