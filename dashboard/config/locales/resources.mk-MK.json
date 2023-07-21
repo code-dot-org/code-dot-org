@@ -2,97 +2,25 @@
   "mk-MK": {
     "data": {
       "resources": {
-        "curriculum_guide/coursed/2022": {
-          "name": "Наставна програма Водич"
-        },
-        "curriculum_guide/coursef/2022": {
-          "name": "Наставна програма Водич"
-        },
-        "curriculum_guide/coursee/2022": {
-          "name": "Наставна програма Водич"
-        },
-        "all_resources/courseb/2022": {
-          "url": "/s/курс-2022/ресурси"
-        },
-        "all_standards/courseb/2022": {
-          "url": "/s/курс-2022/стандарди"
-        },
-        "all_vocabulary/courseb/2022": {
-          "url": "/s/курс-2022/вокаб"
-        },
-        "curriculum_guide/courseb/2022": {
-          "name": "Наставна програма Водич"
-        },
-        "virtual_lesson_modifications/courseb/2022": {
-          "url": "https://docs.google.com/document/d/1lB1bXzIatKSSWLDLsLnRPXgoKR7Q-YzDQ1ClM0OcurU/view"
-        },
-        "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "url": "https://youtu.be/4Wugxc80fNU"
-        },
-        "variables/express/2022": {
-          "name": "Променливи"
-        },
-        "all_resources/coursea/2022": {
-          "url": "/s/курс-2022/ресурси"
-        },
-        "all_standards/coursea/2022": {
-          "url": "/s/курс-2022/стандарди"
-        },
-        "all_vocabulary/coursea/2022": {
-          "url": "/s/курс-2022/вокаб"
-        },
-        "curriculum_guide/coursea/2022": {
-          "name": "Наставна програма Водич"
-        },
-        "virtual_lesson_modifications/coursea/2022": {
-          "url": "https://docs.google.com/document/d/1yaXgv2_aX3vMhK1HAZbaSu1Cg3yKD4HgfqRu4_pGtYY/view"
-        },
-        "curriculum_guide/coursec/2022": {
-          "name": "Наставна програма Водич"
-        },
-        "variables/csd/2022": {
-          "name": "Променливи"
-        },
-        "variables_3/csd/2022": {
-          "name": "Променливи"
-        },
-        "sprites/csd/2022": {
-          "name": "Сприти"
-        },
-        "sprites_1/csd/2022": {
-          "name": "Сприти"
-        },
-        "text/csd/2022": {
-          "name": "Текст"
-        },
-        "lists/csd/2022": {
-          "name": "Листи"
-        },
-        "variables_1/csd/2022": {
-          "name": "Променливи"
-        },
-        "variables_2/csd/2022": {
-          "name": "Променливи"
+        "teacher_forum/coursea/2018": {
+          "url": "http://forum.code.org/c/csf"
         },
         "teacher_forum/courseb/2018": {
           "url": "https://forum.code.org/c/csf"
         },
-        "teacher_forum/coursea/2018": {
-          "url": "http://forum.code.org/c/csf"
+        "teacher_forum/coursec/2018": {
+          "url": "https://forum.code.org/c/csf"
         },
         "teacher_forum/coursed/2018": {
+          "url": "https://forum.code.org/c/csf"
+        },
+        "teacher_forum/coursee/2018": {
           "url": "https://forum.code.org/c/csf"
         },
         "teacher_forum/coursef/2018": {
           "url": "https://forum.code.org/c/csf"
         },
         "teacher_forum/express/2018": {
-          "url": "https://forum.code.org/c/csf"
-        },
-        "teacher_forum/coursee/2018": {
-          "url": "https://forum.code.org/c/csf"
-        },
-        "teacher_forum/coursec/2018": {
           "url": "https://forum.code.org/c/csf"
         },
         "curriculum_guide/coursea/2019": {
@@ -127,6 +55,22 @@
         "vocabulary/courseb/2019": {
           "url": "https://curriculum.code.org/csf-19/courseb/vocab/"
         },
+        "curriculum_guide/coursec/2019": {
+          "name": "Наставна програма Водич",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
+        },
+        "lesson_plans/coursec/2019": {
+          "url": "https://curriculum.code.org/csf-19/coursec/"
+        },
+        "standard_mappings/coursec/2019": {
+          "url": "https://curriculum.code.org/csf-19/coursec/standards/"
+        },
+        "teacher_forum/coursec/2019": {
+          "url": "https://forum.code.org/c/csf"
+        },
+        "vocabulary/coursec/2019": {
+          "url": "https://curriculum.code.org/csf-19/coursec/vocab/"
+        },
         "curriculum_guide/coursed/2019": {
           "name": "Наставна програма Водич",
           "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
@@ -142,22 +86,6 @@
         },
         "vocabulary/coursed/2019": {
           "url": "https://curriculum.code.org/csf-19/coursed/vocab/"
-        },
-        "curriculum_guide/coursef/2019": {
-          "name": "Наставна програма Водич",
-          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
-        },
-        "lesson_plans/coursef/2019": {
-          "url": "https://curriculum.code.org/csf-19/coursef/"
-        },
-        "standard_mappings/coursef/2019": {
-          "url": "https://curriculum.code.org/csf-19/coursef/standards/"
-        },
-        "teacher_forum/coursef/2019": {
-          "url": "https://forum.code.org/c/csf"
-        },
-        "vocabulary/coursef/2019": {
-          "url": "https://curriculum.code.org/csf-19/coursef/vocab/"
         },
         "curriculum_guide/coursee/2019": {
           "name": "Наставна програма Водич",
@@ -175,6 +103,22 @@
         "vocabulary/coursee/2019": {
           "url": "https://curriculum.code.org/csf-19/coursee/vocab/"
         },
+        "curriculum_guide/coursef/2019": {
+          "name": "Наставна програма Водич",
+          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
+        },
+        "lesson_plans/coursef/2019": {
+          "url": "https://curriculum.code.org/csf-19/coursef/"
+        },
+        "standard_mappings/coursef/2019": {
+          "url": "https://curriculum.code.org/csf-19/coursef/standards/"
+        },
+        "teacher_forum/coursef/2019": {
+          "url": "https://forum.code.org/c/csf"
+        },
+        "vocabulary/coursef/2019": {
+          "url": "https://curriculum.code.org/csf-19/coursef/vocab/"
+        },
         "lesson_plans/express/2019": {
           "url": "https://curriculum.code.org/csf-19/express/"
         },
@@ -186,145 +130,6 @@
         },
         "vocabulary/express/2019": {
           "url": "https://curriculum.code.org/csf-19/express/vocab/"
-        },
-        "curriculum_guide/coursec/2019": {
-          "name": "Наставна програма Водич",
-          "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
-        },
-        "lesson_plans/coursec/2019": {
-          "url": "https://curriculum.code.org/csf-19/coursec/"
-        },
-        "standard_mappings/coursec/2019": {
-          "url": "https://curriculum.code.org/csf-19/coursec/standards/"
-        },
-        "teacher_forum/coursec/2019": {
-          "url": "https://forum.code.org/c/csf"
-        },
-        "vocabulary/coursec/2019": {
-          "url": "https://curriculum.code.org/csf-19/coursec/vocab/"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "curriculum_guide_1/coursef/2021": {
-          "name": "Наставна програма Водич"
-        },
-        "curriculum_guide_1/courseb/2021": {
-          "name": "Наставна програма Водич"
-        },
-        "curriculum_guide_1/coursea/2021": {
-          "name": "Наставна програма Водич"
-        },
-        "curriculum_guide_1/coursec/2021": {
-          "name": "Наставна програма Водич"
-        },
-        "curriculum_guide_1/coursed/2021": {
-          "name": "Наставна програма Водич"
-        },
-        "variables_video/express/2021": {
-          "name": "Променливи"
-        },
-        "curriculum_guide_1/coursee/2021": {
-          "name": "Наставна програма Водич"
-        },
-        "variables_1/csd/2021": {
-          "name": "Променливи"
-        },
-        "sprites_1/csd/2021": {
-          "name": "Сприти"
-        },
-        "lists/csd/2021": {
-          "name": "Листи"
-        },
-        "lesson_plans/pre-express/2020": {
-          "url": "https://curriculum.code.org/csf-20/express/"
-        },
-        "standard_mappings/pre-express/2020": {
-          "url": "https://curriculum.code.org/csf-20/express/standards"
-        },
-        "teacher_forum/pre-express/2020": {
-          "url": "https://forum.code.org/c/csf"
-        },
-        "vocabulary/pre-express/2020": {
-          "url": "https://curriculum.code.org/csf-20/express/vocab/"
-        },
-        "lesson_plans/express/2020": {
-          "url": "https://curriculum.code.org/csf-20/express/"
-        },
-        "standard_mappings/express/2020": {
-          "url": "https://curriculum.code.org/csf-20/express/standards/"
-        },
-        "teacher_forum/express/2020": {
-          "url": "https://forum.code.org/c/csf"
-        },
-        "vocabulary/express/2020": {
-          "url": "https://curriculum.code.org/csf-20/express/vocab/"
-        },
-        "curriculum_guide/courseb/2020": {
-          "name": "Наставна програма Водич",
-          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
-        },
-        "lesson_plans/courseb/2020": {
-          "url": "https://curriculum.code.org/csf-20/courseb/"
-        },
-        "standard_mappings/courseb/2020": {
-          "url": "https://curriculum.code.org/csf-20/courseb/standards/"
-        },
-        "teacher_forum/courseb/2020": {
-          "url": "https://forum.code.org/c/csf"
-        },
-        "vocabulary/courseb/2020": {
-          "url": "https://curriculum.code.org/csf-20/courseb/vocab/"
-        },
-        "curriculum_guide/coursed/2020": {
-          "name": "Наставна програма Водич",
-          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
-        },
-        "lesson_plans/coursed/2020": {
-          "url": "https://curriculum.code.org/csf-20/coursed/"
-        },
-        "standard_mappings/coursed/2020": {
-          "url": "https://curriculum.code.org/csf-20/coursed/standards/"
-        },
-        "teacher_forum/coursed/2020": {
-          "url": "https://forum.code.org/c/csf"
-        },
-        "vocabulary/coursed/2020": {
-          "url": "https://curriculum.code.org/csf-20/coursed/vocab/"
-        },
-        "curriculum_guide/coursec/2020": {
-          "name": "Наставна програма Водич",
-          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
-        },
-        "lesson_plans/coursec/2020": {
-          "url": "https://curriculum.code.org/csf-20/coursec/"
-        },
-        "standard_mappings/coursec/2020": {
-          "url": "https://curriculum.code.org/csf-20/coursec/standards/"
-        },
-        "teacher_forum/coursec/2020": {
-          "url": "https://forum.code.org/c/csf"
-        },
-        "vocabulary/coursec/2020": {
-          "url": "https://curriculum.code.org/csf-20/coursec/vocab/"
-        },
-        "curriculum_guide/coursee/2020": {
-          "name": "Наставна програма Водич",
-          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
-        },
-        "lesson_plans/coursee/2020": {
-          "url": "https://curriculum.code.org/csf-20/coursee/"
-        },
-        "standard_mappings/coursee/2020": {
-          "url": "https://curriculum.code.org/csf-20/coursee/standards/"
-        },
-        "teacher_forum/coursee/2020": {
-          "url": "https://forum.code.org/c/csf"
-        },
-        "vocabulary/coursee/2020": {
-          "url": "https://curriculum.code.org/csf-20/coursee/vocab/"
         },
         "curriculum_guide/coursea/2020": {
           "name": "Наставна програма Водич",
@@ -342,6 +147,70 @@
         "vocabulary/coursea/2020": {
           "url": "https://curriculum.code.org/csf-20/coursea/vocab/"
         },
+        "curriculum_guide/courseb/2020": {
+          "name": "Наставна програма Водич",
+          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
+        },
+        "lesson_plans/courseb/2020": {
+          "url": "https://curriculum.code.org/csf-20/courseb/"
+        },
+        "standard_mappings/courseb/2020": {
+          "url": "https://curriculum.code.org/csf-20/courseb/standards/"
+        },
+        "teacher_forum/courseb/2020": {
+          "url": "https://forum.code.org/c/csf"
+        },
+        "vocabulary/courseb/2020": {
+          "url": "https://curriculum.code.org/csf-20/courseb/vocab/"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "Наставна програма Водич",
+          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
+        },
+        "lesson_plans/coursec/2020": {
+          "url": "https://curriculum.code.org/csf-20/coursec/"
+        },
+        "standard_mappings/coursec/2020": {
+          "url": "https://curriculum.code.org/csf-20/coursec/standards/"
+        },
+        "teacher_forum/coursec/2020": {
+          "url": "https://forum.code.org/c/csf"
+        },
+        "vocabulary/coursec/2020": {
+          "url": "https://curriculum.code.org/csf-20/coursec/vocab/"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Наставна програма Водич",
+          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
+        },
+        "lesson_plans/coursed/2020": {
+          "url": "https://curriculum.code.org/csf-20/coursed/"
+        },
+        "standard_mappings/coursed/2020": {
+          "url": "https://curriculum.code.org/csf-20/coursed/standards/"
+        },
+        "teacher_forum/coursed/2020": {
+          "url": "https://forum.code.org/c/csf"
+        },
+        "vocabulary/coursed/2020": {
+          "url": "https://curriculum.code.org/csf-20/coursed/vocab/"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Наставна програма Водич",
+          "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
+        },
+        "lesson_plans/coursee/2020": {
+          "url": "https://curriculum.code.org/csf-20/coursee/"
+        },
+        "standard_mappings/coursee/2020": {
+          "url": "https://curriculum.code.org/csf-20/coursee/standards/"
+        },
+        "teacher_forum/coursee/2020": {
+          "url": "https://forum.code.org/c/csf"
+        },
+        "vocabulary/coursee/2020": {
+          "url": "https://curriculum.code.org/csf-20/coursee/vocab/"
+        },
         "curriculum_guide/coursef/2020": {
           "name": "Наставна програма Водич",
           "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
@@ -357,6 +226,137 @@
         },
         "vocabulary/coursef/2020": {
           "url": "https://curriculum.code.org/csf-20/coursef/vocab/"
+        },
+        "lesson_plans/express/2020": {
+          "url": "https://curriculum.code.org/csf-20/express/"
+        },
+        "standard_mappings/express/2020": {
+          "url": "https://curriculum.code.org/csf-20/express/standards/"
+        },
+        "teacher_forum/express/2020": {
+          "url": "https://forum.code.org/c/csf"
+        },
+        "vocabulary/express/2020": {
+          "url": "https://curriculum.code.org/csf-20/express/vocab/"
+        },
+        "lesson_plans/pre-express/2020": {
+          "url": "https://curriculum.code.org/csf-20/express/"
+        },
+        "standard_mappings/pre-express/2020": {
+          "url": "https://curriculum.code.org/csf-20/express/standards"
+        },
+        "teacher_forum/pre-express/2020": {
+          "url": "https://forum.code.org/c/csf"
+        },
+        "vocabulary/pre-express/2020": {
+          "url": "https://curriculum.code.org/csf-20/express/vocab/"
+        },
+        "lists/csd/2021": {
+          "name": "Листи"
+        },
+        "variables_1/csd/2021": {
+          "name": "Променливи"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Сприти"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "Наставна програма Водич"
+        },
+        "curriculum_guide_1/courseb/2021": {
+          "name": "Наставна програма Водич"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "Наставна програма Водич"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "Наставна програма Водич"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Наставна програма Водич"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Наставна програма Водич"
+        },
+        "variables_video/express/2021": {
+          "name": "Променливи"
+        },
+        "lists/csd/2022": {
+          "name": "Листи"
+        },
+        "variables/csd/2022": {
+          "name": "Променливи"
+        },
+        "variables_3/csd/2022": {
+          "name": "Променливи"
+        },
+        "sprites/csd/2022": {
+          "name": "Сприти"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Сприти"
+        },
+        "text/csd/2022": {
+          "name": "Текст"
+        },
+        "variables_1/csd/2022": {
+          "name": "Променливи"
+        },
+        "variables_2/csd/2022": {
+          "name": "Променливи"
+        },
+        "all_resources/coursea/2022": {
+          "url": "/s/курс-2022/ресурси"
+        },
+        "all_standards/coursea/2022": {
+          "url": "/s/курс-2022/стандарди"
+        },
+        "all_vocabulary/coursea/2022": {
+          "url": "/s/курс-2022/вокаб"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "Наставна програма Водич"
+        },
+        "virtual_lesson_modifications/coursea/2022": {
+          "url": "https://docs.google.com/document/d/1yaXgv2_aX3vMhK1HAZbaSu1Cg3yKD4HgfqRu4_pGtYY/view"
+        },
+        "all_resources/courseb/2022": {
+          "url": "/s/курс-2022/ресурси"
+        },
+        "all_standards/courseb/2022": {
+          "url": "/s/курс-2022/стандарди"
+        },
+        "all_vocabulary/courseb/2022": {
+          "url": "/s/курс-2022/вокаб"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "Наставна програма Водич"
+        },
+        "virtual_lesson_modifications/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1lB1bXzIatKSSWLDLsLnRPXgoKR7Q-YzDQ1ClM0OcurU/view"
+        },
+        "how_to_make_a_class_section_on_code_org/courseb/2022": {
+          "url": "https://youtu.be/4Wugxc80fNU"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "Наставна програма Водич"
+        },
+        "curriculum_guide/coursed/2022": {
+          "name": "Наставна програма Водич"
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "Наставна програма Водич"
+        },
+        "curriculum_guide/coursef/2022": {
+          "name": "Наставна програма Водич"
+        },
+        "variables/express/2022": {
+          "name": "Променливи"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         }
       }
     }

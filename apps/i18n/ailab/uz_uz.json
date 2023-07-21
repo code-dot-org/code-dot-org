@@ -1,15 +1,15 @@
 {
-  "selectDataset": "Siz foydalanmoqchi bo'lgan ma'lumotlar to'plamini tanlang.",
-  "uploadedDataset": "Siz shunchaki ma'lumotlar to'plamini yukladingiz.",
-  "selectedDataset": "Siz shunchaki ma'lumotlar to'plamini tanladingiz.",
-  "dataDisplayLabel": "Bashorat qilish uchun bitta ustunni tanlang.",
   "dataDisplayFeatures": "Bashorat qilish uchun kirish sifatida bir yoki bir nechta ustunni tanlang.",
-  "selectedFeatureNumerical": "Siz shunchaki raqamli xususiyatni tanladingiz.",
-  "selectedFeatureCategorical": "Siz shunchaki kategorik xususiyatni tanladingiz.",
-  "trainModel": "Sizning modelingiz o'qitilmoqda.",
+  "dataDisplayLabel": "Bashorat qilish uchun bitta ustunni tanlang.",
   "generateResults": "Sizning modelingiz sinovdan o'tkazilmoqda.",
+  "modelSummary": "Siz modelingizni muvaffaqiyatli o'rgatdingiz va saqladingiz. Model tafsilotlarini ko'rib chiqing va App Lab-da o'qitilgan modelingizdan foydalanish uchun Finish tugmasini bosing.",
   "results": "Natijalarni ko'rib chiqing.",
   "resultsDetails": "Natijalar tafsilotlari ko'rsatilmoqda.",
   "saveModel": "App Lab -da foydalanish uchun o'qitilgan modelni saqlang.",
-  "modelSummary": "Siz modelingizni muvaffaqiyatli o'rgatdingiz va saqladingiz. Model tafsilotlarini ko'rib chiqing va App Lab-da o'qitilgan modelingizdan foydalanish uchun Finish tugmasini bosing."
+  "selectDataset": "Siz foydalanmoqchi bo'lgan ma'lumotlar to'plamini tanlang.",
+  "selectedDataset": "Siz shunchaki ma'lumotlar to'plamini tanladingiz.",
+  "selectedFeatureCategorical": "Siz shunchaki kategorik xususiyatni tanladingiz.",
+  "selectedFeatureNumerical": "Siz shunchaki raqamli xususiyatni tanladingiz.",
+  "trainModel": "Sizning modelingiz o'qitilmoqda.",
+  "uploadedDataset": "Siz shunchaki ma'lumotlar to'plamini yukladingiz."
 }

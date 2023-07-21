@@ -1,290 +1,375 @@
 ---
 bn:
-  errors:
-    messages:
-      not_saved: 'অনুগ্রহ করে নিম্নের ত্রুটিগুলো সংশোধন করুন:'
   activerecord:
+    attributes:
+      user:
+        age: বয়স
+        current_password: বর্তমান পাসওআর্ড
+        edit_header: একাউন্ট বিস্তারিত সম্পাদনা করুন
+        email: ই-মেইল
+        error:
+          future: ভবিষ্যতের হতে পারবে না
+        gender: লিঙ্গ
+        locale: ভাষা
+        name: প্রদর্শিত নাম
+        password: পাসওআর্ড
+        password_confirmation: পাসওআর্ড নিশ্চিতকরণ
+        username: উজারন্যাম
     errors:
       messages:
         blank: প্রয়োজন
         blank_plural: প্রয়োজন
-    attributes:
-      user:
-        name: প্রদর্শিত নাম
-        email: ই-মেইল
-        username: উজারন্যাম
-        password: পাসওআর্ড
-        password_confirmation: পাসওআর্ড নিশ্চিতকরণ
-        current_password: বর্তমান পাসওআর্ড
-        locale: ভাষা
-        age: বয়স
-        gender: লিঙ্গ
-        edit_header: একাউন্ট বিস্তারিত সম্পাদনা করুন
-        error:
-          future: ভবিষ্যতের হতে পারবে না
-  beta: বেটা
-  hello: হ্যালো ওয়ার্ল্ড
-  welcome_back: স্বাগতম %{name}
-  submit: জমা করুন
-  unsubmit: জমা না দেয়া
-  previous_page: পূর্বের পৃষ্ঠা
-  next_page: পরের পাতা
-  cancel: বাতিল করুন
-  okay: ঠিক আছে
-  or: অথবা
-  join_section:
-    code:
-      placeholder: অংশের কোড (ABCDEF)
   add_hint_form:
     placeholder: আপনার সংকেত দিন
     submit: সংকেত যুক্ত করুন
-  appname: Code.org
-  stage: ধাপ
-  stage_number: স্টেইজ %{number}
-  puzzle: ধাঁধা
-  trophies: পুরষ্কার
-  courses: পাঠ্যতালিকা
-  of: এর
-  more: বেশি
-  less: কম
-  try_hoc: Hour of Code এ আসতে, এখানে ক্লিক করো>>
-  try_k8intro: আমাদের 'K-৮ পরিচিতি' থেকে 'কম্পিউটার বিজ্ঞানের কোর্স' করে দেখুন (১৫-২৫
-    ঘন্টা)
-  k8intro: "'K-৮ পরিচিতি' থেকে 'কম্পিউটার বিজ্ঞানের কোর্স' (১৫-২৫ ঘন্টা)"
+  age_interstitial:
+    age: আপনার বয়স
   already_started: 'ইতোমধ্যে শুরু করেছ? এখান থেকে চালিয়ে যাও >> '
-  demos: 'Admin: সকল Demos'
-  continue: চালিয়ে যান
-  prize: পুরস্কার
-  more_info: আরও তথ্য
+  appname: Code.org
   auth:
-    sign_in_with: "%{provider} এর সাথে সাইন ইন করো"
-    signed_in: সাইনড ইন!
     already_signedup: ইতিমধ্যে সাইন আপ করেছ?
-    notyet_signedup: এখনো যোগ দেননি?
-    google_oauth2: গুগল অ্যাকাউন্ট
-    twitter: টুইটার
     facebook: ফেইসবুক
-    windowslive: মাইক্রোসফট অ্যাকাউন্ট
-    microsoft_v2_auth: মাইক্রোসফট অ্যাকাউন্ট
     forgot_password: আপনার পাসওয়ার্ড ভুলে গেছেন?
+    google_oauth2: গুগল অ্যাকাউন্ট
+    microsoft_v2_auth: মাইক্রোসফট অ্যাকাউন্ট
     need_confirmation: নিশ্চিতকরণ নির্দেশনা পাওনি?
     need_unlock: আনলক করার নির্দেশাবলী পাওনি?
-  signup_form:
-    student_count: "%{count} জন ছাত্রছাত্রী ইতিমধ্যে সাইন আপ করেছেন।"
-    teacher_count: "%{count} জন শিক্ষক ইতোমধ্যে সাইন আপ করেছেন।"
-    teacher_educator_guide: নির্দেশিকা দেখুন
-    title: Code.org এ সাইন আপ করুন।
-    school_name: স্কুলের নাম (ঐচ্ছিক)
-    school_address: স্কুলের ঠিকানা (ঐচ্ছিক)
-    address_placeholder: ঠিকানা, শহর, রাজ্য, জিপ
-    gender: লিঙ্গ (ঐচ্ছিক)
-    birthday: জন্মদিন (ঐচ্ছিক)
-    age: বয়স
-    user_type: আপনি কি একজন ছাত্র বা শিক্ষক?
-    submit: সাইন আপ
-    go_to_account: আমার অ্যাকাউন্টে যান
-    teacher: আপনি কি শিক্ষক?
-    valid_username: লভ্য!
-    invalid_username: ব্যবহারকারীর নাম কমপক্ষে 5 অক্ষর হতে হবে
-    taken_username: ব্যবহারকারীর নাম ইতিপূর্বে নেয়া হয়েছে।
-    valid_password: সঠিক পাসওয়ার্ড!
-    invalid_password: পাসওয়ার্ডের অন্তত 6 অক্ষর হতে হবে
-    mismatch_password: আপনার প্রবেশ করানো পাসওয়ার্ড দুটি মিলছে না
-    student_consent: আমি নিশ্চিত করছি যে Code.org এর সেবা ব্যবহার করার ক্ষেত্রে আমার
-      বাবা-মা অথবা বৈধ অভিভাবকের অনুমতি আছে।
-    user_type_button: অ্যাকাউন্ট-এর ধরন আপডেট করুন
-    user_type_label: অ্যাকাউন্ট-এর ধরন
-    user_type_student: ছাত্র
-    user_type_teacher: শিক্ষক
-    field_is_required: প্রয়োজন
-    accept_terms: আপনার একাউন্ট তৈরি করতে সম্মত হতে হবে।
-    email_preference_yes: '"হ্যাঁ"'
-    email_preference_no: না
-    share_teacher_email_reg_partner_preference_yes: '"হ্যাঁ"'
-    share_teacher_email_reg_partner_preference_no: না
-  school_info:
-    title: স্কুলের তথ্য (ঐচ্ছিক)
-    school_country: স্কুলের দেশ
-    select_school_type: স্কুলের ধরণ
-    other: অন্যান্য
-  signin_form:
-    title: একাউন্ট ইতিমধ্যেই আছে? সাইন ইন করুন
-    login: ই-মেইল
-    password: পাসওআর্ড
-    remember: আমাকে মনে রাখুন
-    submit: সাইন ইন করুন
-  signin:
-    try_heading: সাইন ইন ছাড়াই কোডিং চেষ্টা করতে চান?
-    try_hoc: প্রথমে এক ঘণ্টার কোড চেষ্টা করুন
-    try_20hours: আমাদের 20 ঘন্টা কম্পিউটার বিজ্ঞানের সাথে পরিচিতি দেখুন।
-  signinsection:
-    welcome: "%{section_name}-এ স্বাগতম"
-    name: আপনার নাম পছন্দ করুন।
-    picture: এখন আপনার গোপন ছবি সন্ধান করুন
-    words: এখন আপনার গোপন কথা লিখুন
-    login: সাইন ইন করুন
-  password:
-    reset_form:
-      title: আপনার পাসওয়ার্ড ভুলে গেছেন?
-      email: ইমেইল ঠিকানা
-      submit: জমা করুন
-    change_form:
-      title: আপনার পাসওয়ার্ড পরিবর্তন করুন
-      new_password: নতুন পাসওয়ার্ড
-      confirm_password: নতুন পাসওয়ার্ড নিশ্চিত করুন
-      submit: আমার পাসওয়ার্ড পরিবর্তন করুন
-  welcome_email:
-    subject: আমার ক্লাসে (Code.org তে) যোগ দিন।
-  section:
-    type:
-      word: গোপন শব্দ
-      email: ই-মেইল
+    notyet_signedup: এখনো যোগ দেননি?
+    sign_in_with: "%{provider} এর সাথে সাইন ইন করো"
+    signed_in: সাইনড ইন!
+    twitter: টুইটার
+    windowslive: মাইক্রোসফট অ্যাকাউন্ট
+  beta: বেটা
+  builder:
+    level:
+      create: নতুন স্তর তৈরি করুন
+      current: বর্তমান স্তর
+      unused: অব্যবহৃত স্তর
+    manage: স্তর গঠন করুন
+    view: দেখুন
+  cancel: বাতিল করুন
+  certificate_hour_of_code: এক ঘন্টার কোড
+  compatibility:
+    upgrade:
+      link: আরও জানুন
+  continue: চালিয়ে যান
+  contract_match:
+    wrong_title: ভুল উত্তর
+  cookie_banner:
+    accept: আমি একমত
+  copy: অনুলিপি
+  course_offering:
+    headers:
+      minecraft: মাইনক্র্যাফট
+  courses: পাঠ্যতালিকা
+  crud:
+    back: পেছনে
+    confirm: আপনি কি নিশ্চিত?
+    destroy: ধ্বংস
+    edit: সম্পাদনা
+    edit_model: "%{model} সম্পাদনা করুন"
+    new_model: নতুন %{model}
+    show: প্রদর্শন করুন
+    submit: জমা করুন
+    update: আপডেট
+  demos: 'Admin: সকল Demos'
+  dialog:
+    ok: ঠিক আছে
+    startover_cancel: বাতিল করুন
+    startover_ok: প্রথম থেকে শুরু কর
+    startover_title: তুমি কি নিশ্চিত ভাবে সব আবার আগের থেকে শুরু করতে চাও ?
+  download_pdf: উন্মুক্ত পাঠ পরিকল্পনা
+  errors:
+    messages:
+      not_saved: 'অনুগ্রহ করে নিম্নের ত্রুটিগুলো সংশোধন করুন:'
   follower:
-    invite_sent: আমন্ত্রণ পাঠানো হল।
     added_teacher: "%{name} আপনার শিক্ষক হিসেবে যুক্ত হলেন।"
-    registered: আপনি %{section_name} এর জন্য নিবন্ধন করেছেন।
     error:
-      signed_in: অগ্রসর হওয়ার আগে অনুগ্রহ করে সাইন আউট করুন
-      username_not_found: ইউজার নেম %{username} খুঁজে পাওয়া যায়নি
-      username_in_use: "%{username} ইতিমধ্যে নেয়া হয়েছে, অনুগ্রহ করে অন্য একটি চয়ন
-        করুন"
+      blank_code: অনুগ্রহ করে একটি শাখা কোড প্রবেশ করান
+      cant_join_own_section: দুঃখিত, আপনি আপনার নিজের সেকশনে যোগ দিতে পারবেন না।
       no_teacher: "'%{teacher_email_or_code}' দিয়ে সাইন আপ করা কাউকে খুঁজে পাওয়া যায়
         নি। অনুগ্রহ করে তাদের সাইন আপ করতে বলুন এবং আবার অ্যাড করুন"
       section_not_found: কোন শাখা খুঁজে পাওয়া যায়নি এই কোডের '%{section_code}
-      blank_code: অনুগ্রহ করে একটি শাখা কোড প্রবেশ করান
-      cant_join_own_section: দুঃখিত, আপনি আপনার নিজের সেকশনে যোগ দিতে পারবেন না।
+      signed_in: অগ্রসর হওয়ার আগে অনুগ্রহ করে সাইন আউট করুন
+      username_in_use: "%{username} ইতিমধ্যে নেয়া হয়েছে, অনুগ্রহ করে অন্য একটি চয়ন
+        করুন"
+      username_not_found: ইউজার নেম %{username} খুঁজে পাওয়া যায়নি
+    invite_sent: আমন্ত্রণ পাঠানো হল।
     mail:
       student_disassociated:
         subject: 'Code.org বিজ্ঞপ্তি: %{student_name} আর আপনার ছাত্র হিসেবে যুক্ত
           নেই।'
-  reports:
-    error:
-      access_denied: আপনার এই ব্যক্তির পরিসংখ্যান দেখার অনুমতি নেই
-  crud:
-    new_model: নতুন %{model}
-    show: প্রদর্শন করুন
-    edit: সম্পাদনা
-    edit_model: "%{model} সম্পাদনা করুন"
-    update: আপডেট
-    submit: জমা করুন
-    destroy: ধ্বংস
-    back: পেছনে
-    confirm: আপনি কি নিশ্চিত?
+    registered: আপনি %{section_name} এর জন্য নিবন্ধন করেছেন।
+  footer:
+    copyright: কপিরাইট
+    how_it_works: এটি কিভাবে কাজ করে
+    make_my_own_app: আমার নিজের অ্যাপ তৈরি করুন
+    more: আরো
+    privacy: গোপনীয়তার নীতি
+    secure: নিরাপদ সংস্করণ
+    support: সম্প্রদায় এবং সহায়তা
+    tos: সেবার শর্ত সমূহ
+    tos_short: শর্তাবলী
+  gender:
+    female: মহিলা
+    male: পুরুষ
+  hello: হ্যালো ওয়ার্ল্ড
+  hoc_download:
+    minecraft_name: মাইনক্র্যাফট এক ঘণ্টার কোড
+  home:
+    lesson_plans: পাঠ পরিকল্পনা
+    local_school: স্থানীয় স্কুল
+    online: অনলাইন
+    see_details: বিস্তারিত দেখুন
+    signin_message: ইতিমধ্যে রেজিস্ট্রেশন করেছেন? %{link}
+    student_reg_link: ছাত্রছাত্রীরা সাইন আপ করুন
+    teacher_reg_link: শিক্ষকরা সাইন আপ করুন
+    title: কোড স্টুডিও
+    try_beta_courses: নতুন! প্রাথমিক শ্রেণীর  শিক্ষার্থীদের জন্য পরীক্ষামূলক কোর্স
+      ব্যাবহার করে দেখুন।
+    trynow: এখন চেষ্টা করুন
+    use_as_teacher: শিক্ষক হিসেবে এই সাইটটি ব্যবহার করুন
+    view_course: কোর্স দেখুন
+    your_gallery: সংগ্রহশালা
+  join_section:
+    code:
+      placeholder: অংশের কোড (ABCDEF)
+  k8intro: "'K-৮ পরিচিতি' থেকে 'কম্পিউটার বিজ্ঞানের কোর্স' (১৫-২৫ ঘন্টা)"
+  landing:
+    report_bug: বাগ রিপোর্ট করুন
+    support: সহায়তা নিন
+  less: কম
+  lesson_plan: পাঠ পরিকল্পনা
+  level_group:
+    correct_title: আপনাকে ধন্যবাদ
+    wrong_title: আপনাকে ধন্যবাদ
+  level_group-submittable:
+    correct_title: আপনাকে ধন্যবাদ
+    wrong_title: আপনাকে ধন্যবাদ
+  match:
+    correct_title: সঠিক
+  more: বেশি
+  more_info: আরও তথ্য
+  multi:
+    correct_title: সঠিক
+    wrong_title: ভুল উত্তর
+  multi-submittable:
+    correct_title: আপনাকে ধন্যবাদ
+    wrong_title: আপনাকে ধন্যবাদ
   nav:
     header:
-      project_gallery: প্রকল্প
       educate_hoc: এক ঘন্টার কোড
-      stats: পরিসংখ্যান
       legal_privacy: গোপনীয়তার নীতি
       legal_tos: সেবার শর্ত সমূহ
+      project_gallery: প্রকল্প
+      stats: পরিসংখ্যান
+    popup:
+      close: বন্ধ
+      mastery: ধারণা
+      prizes_link: আরও তথ্য
+      progress: আপনার অগ্রগতি
+      puzzle_map: ষ্টেজসমূহ
     user:
-      classroom: শিক্ষক হোম পেজ
-      label: হ্যালো %{username}
-      stats: কোড স্টুডিও
-      settings: আমার একাউন্ট
-      logout: সাইন আউট
-      signin: সাইন ইন করুন
-      create: তৈরি করুন
       applab: অ্যাপ ল্যাব
       artist: শিল্পী
       bounce: বল লাফানো
+      classroom: শিক্ষক হোম পেজ
+      create: তৈরি করুন
       flappy: ফ্লাপি
       frozen: হিমায়িত
       gumball: গামবল
       iceage: বরফযুগ
       infinity: অসীম
+      label: হ্যালো %{username}
+      loading: লোড হচ্ছে...
+      logout: সাইন আউট
       minecraft_designer: মাইনক্র্যাফট
       playlab: প্লে ল্যাব
+      settings: আমার একাউন্ট
+      signin: সাইন ইন করুন
       starwars: স্টার ওয়ার্স
-      loading: লোড হচ্ছে...
-    popup:
-      progress: আপনার অগ্রগতি
-      close: বন্ধ
-      mastery: ধারণা
-      puzzle_map: ষ্টেজসমূহ
-      prizes_link: আরও তথ্য
+      stats: কোড স্টুডিও
+  next_page: পরের পাতা
+  of: এর
+  okay: ঠিক আছে
+  or: অথবা
+  password:
+    change_form:
+      confirm_password: নতুন পাসওয়ার্ড নিশ্চিত করুন
+      new_password: নতুন পাসওয়ার্ড
+      submit: আমার পাসওয়ার্ড পরিবর্তন করুন
+      title: আপনার পাসওয়ার্ড পরিবর্তন করুন
+    reset_form:
+      email: ইমেইল ঠিকানা
+      submit: জমা করুন
+      title: আপনার পাসওয়ার্ড ভুলে গেছেন?
+  pd:
+    form_entries:
+      email_opt_in:
+        opt_in_no: না
+        opt_in_yes: '"হ্যাঁ"'
+      gender:
+        female: মহিলা
+        male: পুরুষ
+      resources:
+        kodable: কোডাবল
+        other: অন্যান্য
+      robotics:
+        kodable: কোডাবল
+        other: অন্যান্য
+      subjects:
+        cs: কম্পিউটার বিজ্ঞান
+        math: গণিত
+        other: অন্যান্য
+      workshop_course:
+        other: অন্যান্য
+    form_labels:
+      email: ই-মেইল
+      school_country: স্কুলের দেশ
+  pdf_download: PDF ডাউনলোড করুন
+  pixelation:
+    binary: দ্বি-আঙ্কিক
+  previous_page: পূর্বের পৃষ্ঠা
+  prize: পুরস্কার
+  progress:
+    assessment: মূল্যায়ন
+    in_progress: অগ্রসর হচ্ছে
+    not_started: শুরু হয়নি
+    submitted: দাখিল
+  project:
+    abuse:
+      report_abuse_form:
+        abuse_type:
+          other: অন্যান্য
+    create: প্রকল্প তৈরি করুন
+    edit_project: প্রকল্প সম্পাদন করুন
+    exit: কোর্সের কাছে ফিরে যান।
+    name: নাম
+    new: নতুন তৈরি করুন
+    not_saved: সংরক্ষিত নয়
+    project_gallery: প্রকল্প
+    project_type: প্রকল্পের ধরন
+    projects: প্রকল্প
+    saved: গ্যালারিতে সংরক্ষিত!
+    updated: আপডেট
+    view_all: আমার প্রকল্প প্রদর্শন করুন
+  puzzle: ধাঁধা
+  race_interstitial:
+    decline: বন্ধ
+    races:
+      other: অন্যান্য
+    submit: জমা করুন
+  reference_area:
+    teacher: সমাধান দেখুন
+    title: সাহায্য প্রয়োজন?
+  reports:
+    error:
+      access_denied: আপনার এই ব্যক্তির পরিসংখ্যান দেখার অনুমতি নেই
+  school_info:
+    other: অন্যান্য
+    school_country: স্কুলের দেশ
+    select_school_type: স্কুলের ধরণ
+    title: স্কুলের তথ্য (ঐচ্ছিক)
+  school_info_interstitial:
+    save: সংরক্ষন করন
+  section:
+    type:
+      email: ই-মেইল
+      word: গোপন শব্দ
+  signin:
+    try_20hours: আমাদের 20 ঘন্টা কম্পিউটার বিজ্ঞানের সাথে পরিচিতি দেখুন।
+    try_heading: সাইন ইন ছাড়াই কোডিং চেষ্টা করতে চান?
+    try_hoc: প্রথমে এক ঘণ্টার কোড চেষ্টা করুন
+  signin_form:
+    login: ই-মেইল
+    password: পাসওআর্ড
+    remember: আমাকে মনে রাখুন
+    submit: সাইন ইন করুন
+    title: একাউন্ট ইতিমধ্যেই আছে? সাইন ইন করুন
+  signinsection:
+    login: সাইন ইন করুন
+    name: আপনার নাম পছন্দ করুন।
+    picture: এখন আপনার গোপন ছবি সন্ধান করুন
+    welcome: "%{section_name}-এ স্বাগতম"
+    words: এখন আপনার গোপন কথা লিখুন
+  signup_form:
+    accept_terms: আপনার একাউন্ট তৈরি করতে সম্মত হতে হবে।
+    address_placeholder: ঠিকানা, শহর, রাজ্য, জিপ
+    age: বয়স
+    birthday: জন্মদিন (ঐচ্ছিক)
+    email_preference_no: না
+    email_preference_yes: '"হ্যাঁ"'
+    field_is_required: প্রয়োজন
+    gender: লিঙ্গ (ঐচ্ছিক)
+    go_to_account: আমার অ্যাকাউন্টে যান
+    invalid_password: পাসওয়ার্ডের অন্তত 6 অক্ষর হতে হবে
+    invalid_username: ব্যবহারকারীর নাম কমপক্ষে 5 অক্ষর হতে হবে
+    mismatch_password: আপনার প্রবেশ করানো পাসওয়ার্ড দুটি মিলছে না
+    school_address: স্কুলের ঠিকানা (ঐচ্ছিক)
+    school_name: স্কুলের নাম (ঐচ্ছিক)
+    share_teacher_email_reg_partner_preference_no: না
+    share_teacher_email_reg_partner_preference_yes: '"হ্যাঁ"'
+    student_consent: আমি নিশ্চিত করছি যে Code.org এর সেবা ব্যবহার করার ক্ষেত্রে আমার
+      বাবা-মা অথবা বৈধ অভিভাবকের অনুমতি আছে।
+    student_count: "%{count} জন ছাত্রছাত্রী ইতিমধ্যে সাইন আপ করেছেন।"
+    submit: সাইন আপ
+    taken_username: ব্যবহারকারীর নাম ইতিপূর্বে নেয়া হয়েছে।
+    teacher: আপনি কি শিক্ষক?
+    teacher_count: "%{count} জন শিক্ষক ইতোমধ্যে সাইন আপ করেছেন।"
+    teacher_educator_guide: নির্দেশিকা দেখুন
+    title: Code.org এ সাইন আপ করুন।
+    user_type: আপনি কি একজন ছাত্র বা শিক্ষক?
+    user_type_button: অ্যাকাউন্ট-এর ধরন আপডেট করুন
+    user_type_label: অ্যাকাউন্ট-এর ধরন
+    user_type_student: ছাত্র
+    user_type_teacher: শিক্ষক
+    valid_password: সঠিক পাসওয়ার্ড!
+    valid_username: লভ্য!
+  stage: ধাপ
+  stage_number: স্টেইজ %{number}
+  studio:
+    all_courses: সব কোর্স
+  submit: জমা করুন
   teacher:
     answer: উত্তর
     dashboard: শিক্ষক ড্যাশবোর্ড
     for_teachers_only: শুধু শিক্ষকদের জন্য
+    panel:
+      answer_viewer: শিক্ষক প্যানেল
+      section: শাখা
+      student: ছাত্র
+      submitted_on: 'দাখিল করুন:'
+      try_it_yourself: নিজে চেষ্টা করুন
+      unsubmit: জমা না দেয়া
+      viewing_solution: সমাধান দর্শন
+    remove: "(শিক্ষক অপসারণ করুন)"
     title:
       one: 'আপনার শিক্ষক:'
       other: 'আপনার শিক্ষক:'
-    remove: "(শিক্ষক অপসারণ করুন)"
-    panel:
-      answer_viewer: শিক্ষক প্যানেল
-      student: ছাত্র
-      viewing_solution: সমাধান দর্শন
-      try_it_yourself: নিজে চেষ্টা করুন
-      section: শাখা
-      submitted_on: 'দাখিল করুন:'
-      unsubmit: জমা না দেয়া
-  user:
-    update_email: আপডেট
-    remove_parent_email_label: মুছে ফেলা
-  user_level:
-    completed: সম্পূর্ণ হয়েছে
-    tried: চেষ্টা করা হয়েছে
-  home:
-    title: কোড স্টুডিও
-    lesson_plans: পাঠ পরিকল্পনা
-    signin_message: ইতিমধ্যে রেজিস্ট্রেশন করেছেন? %{link}
-    student_reg_link: ছাত্রছাত্রীরা সাইন আপ করুন
-    teacher_reg_link: শিক্ষকরা সাইন আপ করুন
-    local_school: স্থানীয় স্কুল
-    online: অনলাইন
-    see_details: বিস্তারিত দেখুন
-    view_course: কোর্স দেখুন
-    trynow: এখন চেষ্টা করুন
-    try_beta_courses: নতুন! প্রাথমিক শ্রেণীর  শিক্ষার্থীদের জন্য পরীক্ষামূলক কোর্স
-      ব্যাবহার করে দেখুন।
-    use_as_teacher: শিক্ষক হিসেবে এই সাইটটি ব্যবহার করুন
-    your_gallery: সংগ্রহশালা
-  certificate_hour_of_code: এক ঘন্টার কোড
-  gender:
-    male: পুরুষ
-    female: মহিলা
-  user_type:
-    student: ছাত্র
-    teacher: শিক্ষক
-  footer:
-    copyright: কপিরাইট
-    more: আরো
-    support: সম্প্রদায় এবং সহায়তা
-    tos_short: শর্তাবলী
-    tos: সেবার শর্ত সমূহ
+  terms_interstitial:
+    print: ছাপুন
     privacy: গোপনীয়তার নীতি
-    secure: নিরাপদ সংস্করণ
-    make_my_own_app: আমার নিজের অ্যাপ তৈরি করুন
-    how_it_works: এটি কিভাবে কাজ করে
-  reference_area:
-    title: সাহায্য প্রয়োজন?
-    teacher: সমাধান দেখুন
-  video:
-    tab: ভিডিও।
-    autoplay_option: স্বয়ংচালিত ভিডিও
-    download: ভিডিও ডাউনলোড করুন
-  compatibility:
-    upgrade:
-      link: আরও জানুন
-  download_pdf: উন্মুক্ত পাঠ পরিকল্পনা
-  lesson_plan: পাঠ পরিকল্পনা
-  pdf_download: PDF ডাউনলোড করুন
-  builder:
-    manage: স্তর গঠন করুন
-    view: দেখুন
-    level:
-      create: নতুন স্তর তৈরি করুন
-      current: বর্তমান স্তর
-      unused: অব্যবহৃত স্তর
+    tos: সেবার শর্ত সমূহ
+  text_match:
+    correct_title: সঠিক
+    open_response_title: ধন্যবাদ
+  time:
+    day: দিন
+    hour: ১ ঘণ্টা
+    week: সপ্তাহ
+  trophies: পুরষ্কার
+  try_hoc: Hour of Code এ আসতে, এখানে ক্লিক করো>>
+  try_k8intro: আমাদের 'K-৮ পরিচিতি' থেকে 'কম্পিউটার বিজ্ঞানের কোর্স' করে দেখুন (১৫-২৫
+    ঘন্টা)
+  unsubmit: জমা না দেয়া
   upsell:
     applab:
-      title: অ্যাপ ল্যাব
+      audience: বয়সের ১৩+
       body: অ্যাপ ল্যাব একটি প্রোগ্রামিং পরিবেশ যেখানে আপনি সহজ অ্যাপ বানানো হয়।
         একটি অ্যাপ্লিকেশন নকশা (ডিজাইন) করুন ,তাকে কাজ করানোর জন্য ব্লক বা জাভাস্ক্রিপ্ট
         দিয়ে কোড করুন, তারপর এক সেকেন্ডের মধ্যে আপনার অ্যাপ্লিকেশন শেয়ার করুন।
-      audience: বয়সের ১৩+
       cta: শিখুন কিভাবে
+      title: অ্যাপ ল্যাব
     aquatic:
       title: মাইনক্র্যাফট
     flappy:
@@ -306,114 +391,29 @@ bn:
       title: মাইনক্র্যাফট
     starwars:
       title: স্টার ওয়ার্স
+    unplugged:
+      audience: বয়স ৬+
+    unplugged_conditionals:
+      title: শর্তযুক্ত
     weblab:
       audience: বয়সের ১৩+
       cta: শিখুন কিভাবে
     widgets:
       audience: বয়স 14+
       cta: শিখুন কিভাবে
-    unplugged_conditionals:
-      title: শর্তযুক্ত
-    unplugged:
-      audience: বয়স ৬+
-  landing:
-    report_bug: বাগ রিপোর্ট করুন
-    support: সহায়তা নিন
-  multi:
-    wrong_title: ভুল উত্তর
-    correct_title: সঠিক
-  multi-submittable:
-    wrong_title: আপনাকে ধন্যবাদ
-    correct_title: আপনাকে ধন্যবাদ
-  level_group:
-    wrong_title: আপনাকে ধন্যবাদ
-    correct_title: আপনাকে ধন্যবাদ
-  level_group-submittable:
-    wrong_title: আপনাকে ধন্যবাদ
-    correct_title: আপনাকে ধন্যবাদ
-  match:
-    correct_title: সঠিক
-  contract_match:
-    wrong_title: ভুল উত্তর
-  text_match:
-    open_response_title: ধন্যবাদ
-    correct_title: সঠিক
-  dialog:
-    ok: ঠিক আছে
-    startover_title: তুমি কি নিশ্চিত ভাবে সব আবার আগের থেকে শুরু করতে চাও ?
-    startover_ok: প্রথম থেকে শুরু কর
-    startover_cancel: বাতিল করুন
-  time:
-    hour: ১ ঘণ্টা
-    day: দিন
-    week: সপ্তাহ
-  age_interstitial:
-    age: আপনার বয়স
-  terms_interstitial:
-    tos: সেবার শর্ত সমূহ
-    privacy: গোপনীয়তার নীতি
-    print: ছাপুন
-  school_info_interstitial:
-    save: সংরক্ষন করন
-  race_interstitial:
-    races:
-      other: অন্যান্য
-    submit: জমা করুন
-    decline: বন্ধ
-  progress:
-    not_started: শুরু হয়নি
-    in_progress: অগ্রসর হচ্ছে
-    assessment: মূল্যায়ন
-    submitted: দাখিল
-  studio:
-    all_courses: সব কোর্স
-  project:
-    projects: প্রকল্প
-    create: প্রকল্প তৈরি করুন
-    new: নতুন তৈরি করুন
-    exit: কোর্সের কাছে ফিরে যান।
-    project_gallery: প্রকল্প
-    name: নাম
-    updated: আপডেট
-    project_type: প্রকল্পের ধরন
-    saved: গ্যালারিতে সংরক্ষিত!
-    not_saved: সংরক্ষিত নয়
-    view_all: আমার প্রকল্প প্রদর্শন করুন
-    edit_project: প্রকল্প সম্পাদন করুন
-    abuse:
-      report_abuse_form:
-        abuse_type:
-          other: অন্যান্য
-  hoc_download:
-    minecraft_name: মাইনক্র্যাফট এক ঘণ্টার কোড
-  pd:
-    form_labels:
-      email: ই-মেইল
-      school_country: স্কুলের দেশ
-    form_entries:
-      gender:
-        male: পুরুষ
-        female: মহিলা
-      subjects:
-        cs: কম্পিউটার বিজ্ঞান
-        math: গণিত
-        other: অন্যান্য
-      resources:
-        kodable: কোডাবল
-        other: অন্যান্য
-      robotics:
-        kodable: কোডাবল
-        other: অন্যান্য
-      workshop_course:
-        other: অন্যান্য
-      email_opt_in:
-        opt_in_yes: '"হ্যাঁ"'
-        opt_in_no: না
-  course_offering:
-    headers:
-      minecraft: মাইনক্র্যাফট
-  cookie_banner:
-    accept: আমি একমত
-  copy: অনুলিপি
-  pixelation:
-    binary: দ্বি-আঙ্কিক
+  user:
+    remove_parent_email_label: মুছে ফেলা
+    update_email: আপডেট
+  user_level:
+    completed: সম্পূর্ণ হয়েছে
+    tried: চেষ্টা করা হয়েছে
+  user_type:
+    student: ছাত্র
+    teacher: শিক্ষক
+  video:
+    autoplay_option: স্বয়ংচালিত ভিডিও
+    download: ভিডিও ডাউনলোড করুন
+    tab: ভিডিও।
+  welcome_back: স্বাগতম %{name}
+  welcome_email:
+    subject: আমার ক্লাসে (Code.org তে) যোগ দিন।

@@ -2,107 +2,80 @@
   "hy-AM": {
     "data": {
       "lessons": {
-        "flappy/Flappy Code": {
-          "name": "Flappy-ի կոդը"
+        "csd2-2017/Lists": {
+          "name": "ցուցակները"
         },
-        "hourofcode/Maze": {
-          "name": "Maze"
-        },
-        "frozen/Artist": {
-          "name": "Code with Anna and Elsa"
-        },
-        "iceage/Ice Age Play Lab": {
-          "name": "Ice Age Play Lab"
-        },
-        "artist/Artist": {
-          "name": "Արտիստ"
-        },
-        "gumball/Gumball Play Lab": {
-          "name": "Gumball Play Lab"
-        },
-        "starwars/Hour of Code 2015": {
-          "name": "Star Wars: Building a Galaxy With Code (JavaScript)"
-        },
-        "mc/Hour of Code 2015": {
-          "name": "Minecraft Hour of Code"
-        },
-        "playlab/Play Lab": {
-          "name": "Play Lab"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "name": "Disney Infinity Play Lab"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Ժամ օրենսգրքի 2013-"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "loops"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "Իրադարձություններ"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "conditionals"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "գործառույթները"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "փոփոխականների"
         },
-        "k5-onlinepd-2019/For Loops": {
-          "name": "For Loops"
+        "csd3-2017/Conditionals": {
+          "name": "conditionals"
         },
-        "coursed-2022/Graph Paper Programming": {
-          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        "csd3-2017/Functions": {
+          "name": "գործառույթները"
         },
-        "coursed-2022/Relay Programming": {
-          "name": "Relay programming"
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Գործառույթները պարամետրերով"
         },
-        "coursed-2022/Conditionals with Cards": {
-          "name": "Conditionals with Cards"
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Real-life Algorithms: Plant a Seed"
         },
-        "coursef-2022/The Internet": {
-          "name": "Համացանց"
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Real-life Algorithms: Plant a Seed"
         },
-        "coursee-2022/Songwriting": {
-          "name": "songwriting"
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Real-life Algorithms: Paper Planes"
         },
-        "courseb-2022/Move It, Move It": {
-          "name": "Տեղափոխել այն, տեղափոխել այն"
+        "coursed-2017/Nested Loops": {
+          "name": "nested Loops"
         },
-        "courseb-2022/Getting Loopy": {
-          "name": "Getting Loopy"
+        "coursee-2017/Building a Foundation": {
+          "name": "Building a Foundation"
         },
-        "coursea-2022/Happy Maps": {
+        "coursee-2017/Nested Loops": {
+          "name": "nested Loops"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Building a Foundation"
+        },
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Algorithms: Tangrams"
+        },
+        "express-2017/Introduction": {
+          "name": "ներածություն"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Building a Foundation"
+        },
+        "express-2017/Nested Loops": {
+          "name": "nested Loops"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Real-life Algorithms: Plant a Seed"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Spelling Bee"
+        },
+        "csd2-2018/Lists": {
+          "name": "ցուցակները"
+        },
+        "csd3-2018/Variables": {
+          "name": "փոփոխականների"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "conditionals"
+        },
+        "csd3-2018/Functions": {
+          "name": "գործառույթները"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "Գործառույթները պարամետրերով"
+        },
+        "coursea-2018/Programming: Happy Maps": {
           "name": "Ուրախ Քարտեզներ"
         },
-        "coursec-2022/The Big Event": {
-          "name": "The Big Event"
-        },
-        "coursec-2022/Binary Bracelets": {
-          "name": "Binary Bracelets"
-        },
-        "csd3-2022/Variables": {
-          "name": "փոփոխականների"
-        },
-        "csd3-2022/Text": {
-          "name": "տեքստ"
-        },
-        "csd3-2022/Conditionals": {
-          "name": "conditionals"
-        },
-        "csd3-2022/Functions": {
-          "name": "գործառույթները"
-        },
-        "csd6-2022/Functions": {
-          "name": "գործառույթները"
+        "coursea-2018/Going Places Safely": {
+          "name": "Going Places Safely"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Տեղափոխել այն, տեղափոխել այն"
@@ -110,11 +83,17 @@
         "courseb-2018/Your Digital Footprint": {
           "name": "Your Digital Footprint"
         },
-        "coursea-2018/Programming: Happy Maps": {
-          "name": "Ուրախ Քարտեզներ"
+        "coursec-2018/Building a Foundation": {
+          "name": "Building a Foundation"
         },
-        "coursea-2018/Going Places Safely": {
-          "name": "Going Places Safely"
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Getting Loopy"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "The Big Event"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Binary Bracelets"
         },
         "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
@@ -130,6 +109,24 @@
         },
         "coursed-2018/Unplugged: Binary": {
           "name": "Binary Images"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "My Robotic Friends"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Building a Foundation"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Conditionals with Cards"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "songwriting"
+        },
+        "coursee-2018/Internet": {
+          "name": "Համացանց"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Crowdsourcing"
         },
         "coursef-2018/Programming: My Robotic Friends": {
           "name": "My Robotic Friends"
@@ -182,36 +179,6 @@
         "express-2018/Crowdsourcing": {
           "name": "Crowdsourcing"
         },
-        "coursee-2018/Programming: My Robotic Friends": {
-          "name": "My Robotic Friends"
-        },
-        "coursee-2018/Building a Foundation": {
-          "name": "Building a Foundation"
-        },
-        "coursee-2018/Conditionals with Cards": {
-          "name": "Conditionals with Cards"
-        },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "songwriting"
-        },
-        "coursee-2018/Internet": {
-          "name": "Համացանց"
-        },
-        "coursee-2018/Crowdsourcing": {
-          "name": "Crowdsourcing"
-        },
-        "coursec-2018/Building a Foundation": {
-          "name": "Building a Foundation"
-        },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "Getting Loopy"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "The Big Event"
-        },
-        "coursec-2018/Binary Bracelets": {
-          "name": "Binary Bracelets"
-        },
         "pre-express-2018/Move It, Move It": {
           "name": "Տեղափոխել այն, տեղափոխել այն"
         },
@@ -221,20 +188,20 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Spelling Bee"
         },
-        "csd3-2018/Variables": {
+        "csd2-2019/Lists": {
+          "name": "ցուցակները"
+        },
+        "csd3-2019/Variables": {
           "name": "փոփոխականների"
         },
-        "csd3-2018/Conditionals": {
+        "csd3-2019/Conditionals": {
           "name": "conditionals"
         },
-        "csd3-2018/Functions": {
+        "csd3-2019/Functions": {
           "name": "գործառույթները"
         },
-        "csd6-2018/Functions with Parameters": {
+        "csd6-2019/Functions with Parameters": {
           "name": "Գործառույթները պարամետրերով"
-        },
-        "csd2-2018/Lists": {
-          "name": "ցուցակները"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Going Places Safely"
@@ -251,6 +218,12 @@
         "courseb-2019/Loops: Getting Loopy": {
           "name": "Getting Loopy"
         },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Binary Bracelets"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "The Big Event"
+        },
         "coursed-2019/Algorithms: Graph Paper Programming": {
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
@@ -266,6 +239,9 @@
         "coursed-2019/Digital Citizenship": {
           "name": "Digital Citizenship"
         },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "songwriting"
+        },
         "coursef-2019/Envelope Variables": {
           "name": "Envelope Variables"
         },
@@ -278,152 +254,206 @@
         "coursef-2019/Crowdsourcing": {
           "name": "Crowdsourcing"
         },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "songwriting"
-        },
-        "coursec-2019/Binary Bracelets": {
-          "name": "Binary Bracelets"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "The Big Event"
-        },
         "pre-express-2019/Spelling Bee": {
           "name": "Spelling Bee"
         },
-        "csd3-2019/Variables": {
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Ուրախ Քարտեզներ"
+        },
+        "courseb-2020/Move It, Move It": {
+          "name": "Տեղափոխել այն, տեղափոխել այն"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Getting Loopy"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Binary Bracelets"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "The Big Event"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Relay programming"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Conditionals with Cards"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Binary Images"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "songwriting"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "Envelope Variables"
+        },
+        "coursef-2020/Internet": {
+          "name": "Համացանց"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "For Loop Fun"
+        },
+        "csd3-2021/Variables": {
           "name": "փոփոխականների"
         },
-        "csd3-2019/Conditionals": {
+        "csd3-2021/Text": {
+          "name": "տեքստ"
+        },
+        "csd3-2021/Conditionals": {
           "name": "conditionals"
         },
-        "csd3-2019/Functions": {
+        "csd3-2021/Functions": {
           "name": "գործառույթները"
         },
-        "csd6-2019/Functions with Parameters": {
+        "csd6-2021/Functions with Parameters": {
           "name": "Գործառույթները պարամետրերով"
         },
-        "csd2-2019/Lists": {
-          "name": "ցուցակները"
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Ուրախ Քարտեզներ"
         },
-        "coursef-2017/Building a Foundation": {
-          "name": "Building a Foundation"
+        "courseb-2021/Move It, Move It": {
+          "name": "Տեղափոխել այն, տեղափոխել այն"
         },
-        "coursef-2017/Algorithms: Tangrams": {
-          "name": "Algorithms: Tangrams"
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Getting Loopy"
         },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Real-life Algorithms: Plant a Seed"
+        "coursec-2021/Events: The Big Event": {
+          "name": "The Big Event"
         },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Real-life Algorithms: Plant a Seed"
+        "coursec-2021/Binary Bracelets": {
+          "name": "Binary Bracelets"
         },
-        "pre-express-2017/Spelling Bee": {
-          "name": "Spelling Bee"
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
         },
-        "coursee-2017/Building a Foundation": {
-          "name": "Building a Foundation"
+        "coursed-2021/Relay Programming": {
+          "name": "Relay programming"
         },
-        "coursee-2017/Nested Loops": {
-          "name": "nested Loops"
+        "coursed-2021/Conditionals with Cards": {
+          "name": "Conditionals with Cards"
         },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "Real-life Algorithms: Paper Planes"
+        "coursee-2021/Functions: Songwriting": {
+          "name": "songwriting"
         },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Real-life Algorithms: Plant a Seed"
+        "coursef-2021/For Loop Fun": {
+          "name": "For Loop Fun"
         },
-        "coursed-2017/Nested Loops": {
-          "name": "nested Loops"
+        "coursef-2021/Internet": {
+          "name": "Համացանց"
         },
-        "express-2017/Introduction": {
-          "name": "ներածություն"
-        },
-        "express-2017/Building a Foundation": {
-          "name": "Building a Foundation"
-        },
-        "express-2017/Nested Loops": {
-          "name": "nested Loops"
-        },
-        "csd3-2017/Variables": {
+        "csd3-2022/Variables": {
           "name": "փոփոխականների"
         },
-        "csd3-2017/Conditionals": {
+        "csd3-2022/Text": {
+          "name": "տեքստ"
+        },
+        "csd3-2022/Conditionals": {
           "name": "conditionals"
         },
-        "csd3-2017/Functions": {
+        "csd3-2022/Functions": {
           "name": "գործառույթները"
         },
-        "csd6-2017/Functions with Parameters_": {
-          "name": "Գործառույթները պարամետրերով"
+        "csd6-2022/Functions": {
+          "name": "գործառույթները"
         },
-        "csd2-2017/Lists": {
-          "name": "ցուցակները"
+        "coursea-2022/Happy Maps": {
+          "name": "Ուրախ Քարտեզներ"
         },
-        "course4/Unplugged: Tangrams": {
-          "name": "Unplugged: Tangrams"
+        "courseb-2022/Move It, Move It": {
+          "name": "Տեղափոխել այն, տեղափոխել այն"
         },
-        "course4/Maze and Bee": {
-          "name": "Maze and Bee"
+        "courseb-2022/Getting Loopy": {
+          "name": "Getting Loopy"
         },
-        "course4/Artist": {
+        "coursec-2022/The Big Event": {
+          "name": "The Big Event"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binary Bracelets"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Relay programming"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Conditionals with Cards"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "songwriting"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Համացանց"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Ժամ օրենսգրքի 2013-"
+        },
+        "artist/Artist": {
           "name": "Արտիստ"
         },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "Unplugged: Envelope Variables"
+        "flappy/Flappy Code": {
+          "name": "Flappy-ի կոդը"
         },
-        "course4/Unplugged: Madlibs": {
-          "name": "Unplugged: Madlibs"
+        "frozen/Artist": {
+          "name": "Code with Anna and Elsa"
         },
-        "course4/Artist: Variables": {
-          "name": "Artist: Variables"
+        "gumball/Gumball Play Lab": {
+          "name": "Gumball Play Lab"
         },
-        "course4/Play Lab: Variables": {
-          "name": "Play Lab: Variables"
+        "hourofcode/Maze": {
+          "name": "Maze"
         },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "Unplugged: For Loop Fun"
+        "iceage/Ice Age Play Lab": {
+          "name": "Ice Age Play Lab"
         },
-        "course4/Bee: For Loops": {
-          "name": "Bee: For Loops"
+        "infinity/Infinity": {
+          "name": "Disney Infinity Play Lab"
         },
-        "course4/Artist: For Loops": {
-          "name": "Artist: For Loops"
+        "mc/Hour of Code 2015": {
+          "name": "Minecraft Hour of Code"
         },
-        "course4/Play Lab: For Loops": {
-          "name": "Play Lab: For Loops"
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
-        "course4/Artist: Functions": {
-          "name": "Artist: Functions"
+        "playlab/Play Lab": {
+          "name": "Play Lab"
         },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "Unplugged: Songwriting with Parameters"
+        "starwars/Hour of Code 2015": {
+          "name": "Star Wars: Building a Galaxy With Code (JavaScript)"
         },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Artist: Functions with Parameters"
+        "allthethings/Jigsaw": {
+          "name": "ոլորահատ սղոց"
         },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "Play Lab: Functions with Parameters"
+        "allthethings/Maze": {
+          "name": "Maze"
         },
-        "course4/Bee: Functions with Parameters": {
-          "name": "Bee: Functions with Parameters"
+        "allthethings/Artist": {
+          "name": "Արտիստ"
         },
-        "course4/Unplugged: Binary": {
-          "name": "Unplugged: Binary"
+        "allthethings/Bee": {
+          "name": "Bee"
         },
-        "course4/Artist Binary": {
-          "name": "Artist Binary"
+        "allthethings/Flappy": {
+          "name": "Flappy"
         },
-        "course4/Super Challenge - Variables": {
-          "name": "Super Challenge - Variables"
+        "allthethings/Bounce": {
+          "name": "Ցատկում"
         },
-        "course4/Super Challenge - For Loops": {
-          "name": "Super Challenge - For Loops"
+        "allthethings/Multi": {
+          "name": "Մուլտի"
         },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "Super Challenge - Functions and Parameters"
+        "allthethings/Match": {
+          "name": "Համապատասխան"
         },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "Extreme Challenge - Comprehensive"
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Ներածություն համակարգչային գիտության"
@@ -484,6 +514,60 @@
         },
         "20-hour/Wrap-up": {
           "name": "Փաթեթավորեք-up"
+        },
+        "course1/Happy Maps": {
+          "name": "Ուրախ Քարտեզներ"
+        },
+        "course1/Move it, Move it": {
+          "name": "Տեղափոխիր առարկան"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Գոլւխկոտրուկ. Սովորեք քաշելով տեղափոխել"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Maze: Sequence"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Maze: Debugging"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Real-life Algorithms: Plant a Seed"
+        },
+        "course1/Bee: Sequence": {
+          "name": "մեղու. հաջորդականություն"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Artist: Sequence"
+        },
+        "course1/Building a Foundation": {
+          "name": "Building a Foundation"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Artist: Shapes"
+        },
+        "course1/Spelling Bee": {
+          "name": "Spelling Bee"
+        },
+        "course1/Getting Loopy": {
+          "name": "Getting Loopy"
+        },
+        "course1/Maze: Loops": {
+          "name": "Լաբիրինթոս: Loops"
+        },
+        "course1/Bee: Loops": {
+          "name": "Bee: Loops"
+        },
+        "course1/The Big Event": {
+          "name": "The Big Event"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Play Lab: Create a Story"
+        },
+        "course1/Going Places Safely": {
+          "name": "Going Places Safely"
+        },
+        "course1/Artist: Loops": {
+          "name": "Artist: Loops"
         },
         "course2/Graph Paper Programming": {
           "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
@@ -605,176 +689,74 @@
         "course3/Artist: Patterns": {
           "name": "Artist: Patterns"
         },
-        "course1/Happy Maps": {
-          "name": "Ուրախ Քարտեզներ"
+        "course4/Unplugged: Tangrams": {
+          "name": "Unplugged: Tangrams"
         },
-        "course1/Move it, Move it": {
-          "name": "Տեղափոխիր առարկան"
+        "course4/Maze and Bee": {
+          "name": "Maze and Bee"
         },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "Գոլւխկոտրուկ. Սովորեք քաշելով տեղափոխել"
+        "course4/Artist": {
+          "name": "Արտիստ"
         },
-        "course1/Maze: Sequence": {
-          "name": "Maze: Sequence"
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Unplugged: Envelope Variables"
         },
-        "course1/Maze: Debugging": {
-          "name": "Maze: Debugging"
+        "course4/Unplugged: Madlibs": {
+          "name": "Unplugged: Madlibs"
         },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "Real-life Algorithms: Plant a Seed"
+        "course4/Artist: Variables": {
+          "name": "Artist: Variables"
         },
-        "course1/Bee: Sequence": {
-          "name": "մեղու. հաջորդականություն"
+        "course4/Play Lab: Variables": {
+          "name": "Play Lab: Variables"
         },
-        "course1/Artist: Sequence": {
-          "name": "Artist: Sequence"
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Unplugged: For Loop Fun"
         },
-        "course1/Building a Foundation": {
-          "name": "Building a Foundation"
+        "course4/Bee: For Loops": {
+          "name": "Bee: For Loops"
         },
-        "course1/Artist: Shapes": {
-          "name": "Artist: Shapes"
+        "course4/Artist: For Loops": {
+          "name": "Artist: For Loops"
         },
-        "course1/Spelling Bee": {
-          "name": "Spelling Bee"
+        "course4/Play Lab: For Loops": {
+          "name": "Play Lab: For Loops"
         },
-        "course1/Getting Loopy": {
-          "name": "Getting Loopy"
+        "course4/Artist: Functions": {
+          "name": "Artist: Functions"
         },
-        "course1/Maze: Loops": {
-          "name": "Լաբիրինթոս: Loops"
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Unplugged: Songwriting with Parameters"
         },
-        "course1/Bee: Loops": {
-          "name": "Bee: Loops"
+        "course4/Artist: Functions with Parameters": {
+          "name": "Artist: Functions with Parameters"
         },
-        "course1/The Big Event": {
-          "name": "The Big Event"
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Play Lab: Functions with Parameters"
         },
-        "course1/Studio: Create a Story": {
-          "name": "Play Lab: Create a Story"
+        "course4/Bee: Functions with Parameters": {
+          "name": "Bee: Functions with Parameters"
         },
-        "course1/Going Places Safely": {
-          "name": "Going Places Safely"
+        "course4/Unplugged: Binary": {
+          "name": "Unplugged: Binary"
         },
-        "course1/Artist: Loops": {
-          "name": "Artist: Loops"
+        "course4/Artist Binary": {
+          "name": "Artist Binary"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Super Challenge - Variables"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Super Challenge - For Loops"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Super Challenge - Functions and Parameters"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Extreme Challenge - Comprehensive"
         },
         "jigsaw/Jigsaw": {
           "name": "ոլորահատ սղոց"
-        },
-        "allthethings/Jigsaw": {
-          "name": "ոլորահատ սղոց"
-        },
-        "allthethings/Maze": {
-          "name": "Maze"
-        },
-        "allthethings/Artist": {
-          "name": "Արտիստ"
-        },
-        "allthethings/Bee": {
-          "name": "Bee"
-        },
-        "allthethings/Flappy": {
-          "name": "Flappy"
-        },
-        "allthethings/Bounce": {
-          "name": "Ցատկում"
-        },
-        "allthethings/Multi": {
-          "name": "Մուլտի"
-        },
-        "allthethings/Match": {
-          "name": "Համապատասխան"
-        },
-        "allthethings/Minecraft": {
-          "name": "Minecraft"
-        },
-        "coursef-2021/For Loop Fun": {
-          "name": "For Loop Fun"
-        },
-        "coursef-2021/Internet": {
-          "name": "Համացանց"
-        },
-        "courseb-2021/Move It, Move It": {
-          "name": "Տեղափոխել այն, տեղափոխել այն"
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "name": "Getting Loopy"
-        },
-        "coursea-2021/Programming: Happy Maps": {
-          "name": "Ուրախ Քարտեզներ"
-        },
-        "coursec-2021/Events: The Big Event": {
-          "name": "The Big Event"
-        },
-        "coursec-2021/Binary Bracelets": {
-          "name": "Binary Bracelets"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "Relay programming"
-        },
-        "coursed-2021/Conditionals with Cards": {
-          "name": "Conditionals with Cards"
-        },
-        "coursee-2021/Functions: Songwriting": {
-          "name": "songwriting"
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "Գործառույթները պարամետրերով"
-        },
-        "csd3-2021/Variables": {
-          "name": "փոփոխականների"
-        },
-        "csd3-2021/Text": {
-          "name": "տեքստ"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "conditionals"
-        },
-        "csd3-2021/Functions": {
-          "name": "գործառույթները"
-        },
-        "courseb-2020/Move It, Move It": {
-          "name": "Տեղափոխել այն, տեղափոխել այն"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
-          "name": "Getting Loopy"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "Relay programming"
-        },
-        "coursed-2020/Conditionals with Cards": {
-          "name": "Conditionals with Cards"
-        },
-        "coursed-2020/Unplugged: Binary": {
-          "name": "Binary Images"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "Binary Bracelets"
-        },
-        "coursec-2020/Events: The Big Event": {
-          "name": "The Big Event"
-        },
-        "coursee-2020/Functions: Songwriting": {
-          "name": "songwriting"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "Ուրախ Քարտեզներ"
-        },
-        "coursef-2020/Envelope Variables": {
-          "name": "Envelope Variables"
-        },
-        "coursef-2020/Internet": {
-          "name": "Համացանց"
-        },
-        "coursef-2020/For Loop Fun": {
-          "name": "For Loop Fun"
         }
       }
     }

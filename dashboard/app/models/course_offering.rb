@@ -48,6 +48,11 @@ class CourseOffering < ApplicationRecord
   ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
   MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
   HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
+  PROFESSIONAL_LEARNING_PROGRAM_PATHS = {
+    'K5 Workshops': 'code.org/professional-development-workshops',
+    '6-12 Workshops': 'code.org/apply',
+  }
+  validates :professional_learning_program, acceptance: {accept: PROFESSIONAL_LEARNING_PROGRAM_PATHS.values, message: "must be one of the professional learning program path. Expected one of: #{PROFESSIONAL_LEARNING_PROGRAM_PATHS.values}. Got:  \"%{value}\"."}
 
   DURATION_LABEL_TO_MINUTES_CAP = {
     lesson: 90,
@@ -57,7 +62,6 @@ class CourseOffering < ApplicationRecord
     semester: 5000,
     school_year: 525600,
   }
-
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
   #
@@ -194,6 +198,17 @@ class CourseOffering < ApplicationRecord
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
+  def self.professional_learning_and_self_paced_course_offerings(locale_code = 'en-us')
+    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}.map do |co|
+      {
+        id: co.id,
+        key: co.key,
+        display_name: co.display_name,
+        course_version_path: co.path_to_latest_published_version(locale_code)
+      }
+    end
+  end
+
   def self.single_unit_course_offerings_containing_units_info(unit_ids)
     single_unit_course_offerings_containing_units(unit_ids).map {|co| co.summarize_for_unit_selector(unit_ids)}
   end
@@ -289,7 +304,7 @@ class CourseOffering < ApplicationRecord
   def summarize_for_catalog(locale_code = 'en-us')
     {
       key: key,
-      display_name: display_name,
+      display_name: localized_display_name,
       display_name_with_latest_year: display_name_with_latest_year(locale_code),
       grade_levels: grade_levels,
       duration: duration,
@@ -382,6 +397,10 @@ class CourseOffering < ApplicationRecord
 
   def get_participant_audience
     course_versions&.first&.content_root&.participant_audience
+  end
+
+  def instruction_type
+    course_versions&.first&.content_root&.instruction_type
   end
 
   def grade_levels_list

@@ -68,21 +68,21 @@ zh-CN:
         csd-2023:
           title: 计算机科学探索
     resources:
-      curriculum/csd/2020:
-        name: 课程
-      teacher_forum/csd/2020:
-        name: 教师论坛
       curriculum/csd/2017:
         name: 课程
       teacher_forum_6/csd/2017:
+        name: 教师论坛
+      curriculum/csd/2018:
+        name: 课程
+      teacher_forum_6/csd/2018:
         name: 教师论坛
       curriculum/csd/2019:
         name: 课程
       teacher_forum/csd/2019:
         name: 教师论坛
+      curriculum/csd/2020:
+        name: 课程
+      teacher_forum/csd/2020:
+        name: 教师论坛
       getting_started_with_csd/csd/2021:
         name: 计算机科学发现入门
-      curriculum/csd/2018:
-        name: 课程
-      teacher_forum_6/csd/2018:
-        name: 教师论坛

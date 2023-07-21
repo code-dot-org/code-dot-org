@@ -1,10 +1,10 @@
 {
   "dropletBlock_createSprite_param2": "breidde",
   "dropletBlock_createSprite_param3": "høgd",
-  "dropletBlock_setCollider_param0": "type",
-  "dropletBlock_setCollider_param4": "høgd",
   "dropletBlock_setColliderEach_param0": "type",
   "dropletBlock_setColliderEach_param4": "høgd",
+  "dropletBlock_setCollider_param0": "type",
+  "dropletBlock_setCollider_param4": "høgd",
   "reinfFeedbackMsg": "Du er i mål! Velg \"Continue\" for å gå til neste nivå.",
   "shareGame": "Del spelet ditt:"
 }
