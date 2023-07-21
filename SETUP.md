@@ -394,22 +394,20 @@ On Apple Silicon/Intel Mac, additional steps are required to get `bundle install
 
 Simply run (if you're having issues only with part of gems in the command - you can run it with just needed gems)
 ```
-bundle update sqlite3 libv8 mini_racer
+bundle update libv8 mini_racer
 ```
 To fix issues in one line. It will update the Gemfile.lock file for you in the same way as described below.
 
 OR
 
 In Gemfile.lock, replace the two occurrences of libv8 (8.4.255.0) with libv8-node (15.14.0.0).
-Also update mini_racer to 0.4.0 (from 0.3.1). Also update sqlite3 to 1.6.3 (from 1.3.13):
+Also update mini_racer to 0.4.0 (from 0.3.1):
 
 ```
 libv8-node (15.14.0.0)
 ...
 mini_racer (0.4.0)
   libv8-node (~> 15.14.0.0)
-...
-sqlite3 (1.6.3)
 ```
 
 Then run the following commands to successfully complete a bundle install:
