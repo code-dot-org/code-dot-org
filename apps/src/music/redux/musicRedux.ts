@@ -171,7 +171,10 @@ const musicSlice = createSlice({
 export const getCurrentlyPlayingBlockIds = (state: {
   music: MusicState;
 }): string[] => {
-  const {currentPlayheadPosition, playbackEvents} = state.music;
+  const {isPlaying, currentPlayheadPosition, playbackEvents} = state.music;
+  if (!isPlaying) {
+    return [];
+  }
   const playingBlockIds: string[] = [];
 
   playbackEvents.forEach((playbackEvent: PlaybackEvent) => {

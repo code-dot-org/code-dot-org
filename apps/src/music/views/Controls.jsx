@@ -36,11 +36,65 @@ const LoadingProgress = () => {
   );
 };
 
+const SkipControls = () => {
+  const isPlaying = useSelector(state => state.music.isPlaying);
+  const dispatch = useDispatch();
+
+  const onClickSkip = useCallback(
+    forward => {
+      if (isPlaying) {
+        return;
+      }
+
+      if (forward) {
+        dispatch(moveStartPlayheadPositionForward());
+      } else {
+        dispatch(moveStartPlayheadPositionBackward());
+      }
+    },
+    [dispatch, isPlaying]
+  );
+
+  return (
+    <>
+      <button
+        id="skip-back-button"
+        className={classNames(
+          moduleStyles.controlButton,
+          moduleStyles.controlButtonSkip,
+          isPlaying && moduleStyles.controlButtonSkipDisabled
+        )}
+        onClick={() => onClickSkip(false)}
+        type="button"
+      >
+        <FontAwesome icon={'step-backward'} />
+      </button>
+      <button
+        id="skip-forward-button"
+        className={classNames(
+          moduleStyles.controlButton,
+          moduleStyles.controlButtonSkip,
+          isPlaying && moduleStyles.controlButtonSkipDisabled
+        )}
+        onClick={() => onClickSkip(true)}
+        type="button"
+      >
+        <FontAwesome icon={'step-forward'} />
+      </button>
+    </>
+  );
+};
+
 /**
  * Renders the playback controls bar, including the play/pause button, show/hide beat pad button,
  * and show/hide instructions button.
  */
-const Controls = ({setPlaying, playTrigger, hasTrigger}) => {
+const Controls = ({
+  setPlaying,
+  playTrigger,
+  hasTrigger,
+  enableSkipControls = false,
+}) => {
   const isPlaying = useSelector(state => state.music.isPlaying);
   const isBeatPadShowing = useSelector(state => state.music.isBeatPadShowing);
   const dispatch = useDispatch();
@@ -70,21 +124,6 @@ const Controls = ({setPlaying, playTrigger, hasTrigger}) => {
     );
   };
 
-  const onClickSkip = useCallback(
-    forward => {
-      if (isPlaying) {
-        return;
-      }
-
-      if (forward) {
-        dispatch(moveStartPlayheadPositionForward());
-      } else {
-        dispatch(moveStartPlayheadPositionBackward());
-      }
-    },
-    [dispatch, isPlaying]
-  );
-
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
       <div id="controls-section" className={moduleStyles.section}>
@@ -102,30 +141,7 @@ const Controls = ({setPlaying, playTrigger, hasTrigger}) => {
             {isPlaying ? commonI18n.stop() : commonI18n.runProgram()}
           </div>
         </button>
-        <button
-          id="skip-back-button"
-          className={classNames(
-            moduleStyles.controlButton,
-            moduleStyles.controlButtonSkip,
-            isPlaying && moduleStyles.controlButtonSkipDisabled
-          )}
-          onClick={() => onClickSkip(false)}
-          type="button"
-        >
-          <FontAwesome icon={'step-backward'} />
-        </button>
-        <button
-          id="skip-forward-button"
-          className={classNames(
-            moduleStyles.controlButton,
-            moduleStyles.controlButtonSkip,
-            isPlaying && moduleStyles.controlButtonSkipDisabled
-          )}
-          onClick={() => onClickSkip(true)}
-          type="button"
-        >
-          <FontAwesome icon={'step-forward'} />
-        </button>
+        {enableSkipControls && <SkipControls />}
       </div>
       {isBeatPadShowing && renderBeatPad()}
       <LoadingProgress />
@@ -137,6 +153,7 @@ Controls.propTypes = {
   setPlaying: PropTypes.func.isRequired,
   playTrigger: PropTypes.func.isRequired,
   hasTrigger: PropTypes.func.isRequired,
+  enableSkipControls: PropTypes.bool,
 };
 
 export default Controls;
