@@ -327,6 +327,7 @@ class Level < ApplicationRecord
   end
 
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
+    'Aichat', # no ideal solution
     'Ailab', # no ideal solution
     'Applab', # freeplay
     'Bounce', # no ideal solution
