@@ -101,7 +101,6 @@ function updateSectionCourse(updateCourse, course) {
     const stableVersions = Object.values(courseVersions)
       .filter(version => version.is_stable)
       .sort(version => -version.key);
-    console.log(stableVersions);
     courseVersionId = stableVersions[0]?.id;
   }
 
