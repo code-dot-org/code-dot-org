@@ -485,6 +485,8 @@ ro:
         hoc_dance_events: Petrecere cu dans - Evenimente
         hoc_dance_properties: Petrecere cu dans - Proprietăţi
         hoc_dance_congrats: Petrecere dansantă - Să înceapă petrecerea!
+        c_and_c_great_to_create: Este minunat să creezi și să joci corect
+        c_and_c_digital_sharing: Partajare digitală
         teaching_csf_how_it_works: 'Predarea cursului Fundamentele CS: Cum funcționează cursul'
         elem_pd_2: Știința calculatoarelor în școala elementară - PD film 2/2
         what_is_cs: Ce este știința calculatoarelor?
@@ -528,6 +530,7 @@ ro:
         csd_what_computers_do: Ce Fac Computerele?
         csf_my_online_neighborhood_2020: Cartierul meu online
         csf_follow_the_digital_trail: Urmărește Indiciul Digital
+        csf_private_and_personal_information: Informații private și personale
         csd_what_computers_are: Ce Este un Computer?
         codebreak_e01: 'Code Break 1.0 Algoritmuri cu Hill Harper'
         codebreak_e02: 'Code Break 2.0 Prototipuri cu Mark Cuban și Lyndsey Scott'
@@ -543,8 +546,28 @@ ro:
         codebreak_e10: 'Code Break 10.0: IA cu Kat Graham și Kate Park'
         codebreak_e11: 'Code Break 11.0: Teorii cu Susan Wojcicki și China Anne McClain'
         codebreak_e12: 'Code Break 12.0: Hardware cu Aloe Blacc, Bret Taylor, & Paula Mejia'
+        csf21pilot_events: 'Sprite Lab: Sprite în acțiune'
+        csf21pilot_prompts: 'Sprite Lab: Text și instrucțiuni'
+        csd_ml_intro_to_ai_lab: Introducere în AI Lab
+        csd_ml_import_model: Importul unui model AI
+        csf_lots_of_sprites: 'Sprite Lab: O mulțime de sprite'
         playlab_2021: Introducere in Play Lab
         playlab_2021_reader: Introducere in Play Lab
+        csp_defining_calling_functions: Definirea și apelarea funcțiilor
+        csp_tutorial_datatab: Fila de date în App Lab
+        csp_tutorial_libraries: Biblioteci în App Lab
+        PL-Video-21: Bine ați venit la Învățarea Profesională a Code.org!
+        csp_tutorial_datavis1: Vizualizator de date în App Lab - Partea 1
+        csp_tutorial_datavis2: Vizualizator de date în App Lab - Partea 2
+        csd_ml_intro_ai_lab_july2021: Introducere în AI Lab
+        csd_ml_training_testing_ai_lan: Instruire și testare în laboratorul AI
+        csd_ml_model_cards_july2021: Carduri model în AI Lab
+        csd_ml_numerical_ai_lab: Date numerice în laboratorul AI
+        Gettting_Started_Progress: Progres, Feedback și Evaluare
+        Gettting_Started_ClassSection: Crearea unei secțiuni de clasă
+        Gettting_Started_StudentExperience: Experiența studenților
+        Getting_Started_BasicFeatures: Caracteristici de bază ale Code.org
+        PL_overview_CSD: Ce este descoperirile de informatică?
         PL_CSD_TeacherTips_Advise: Sfaturi pentru Profesor - Recomandare pentru Noii Profesori
         PL_CSD_TeacherTips_IntroToCSD: Sfaturi pentru Profesor - Introducere în Descoperirile Informaticii
         PL_CSD_TeacherTips_ProblemSolvingProcess: Sfaturi pentru Profesor - Procesul de Soluționare a Problemei
@@ -557,6 +580,7 @@ ro:
         hello_world_intro: Hello World - Bun Venit în Laboratorul Spiritelor
         hello_world_events: Hello World - Programare cu Evenimente
         hello_world_congrats: Hello World - Fă Ce Dorești
+        csp_global_vs_local: Depanarea variabilelor globale vs. locale
         rough_poemart_intro: Arta poeziei v1 - Introducere
         rough_poemart_events: Arta poeziei v1 - Evenimente
         rough_poemart_imagery: Arta poeziei v1 - Imagini folosite
@@ -567,12 +591,133 @@ ro:
         poetry_module_multichoiceprompts: Întrebări cu răspunsuri multiple - Programare cu ajutorul poeziei
         poetry_module_conditionals: Relații de condiționalitate - Programare cu ajutorul poeziei
         poemart_intro: Introducere În Arta Poemului
+        poemart_events: Poem Arta Evenimente
+        poemart_imagery: Poem Art Imagery
+        poemart_celebration: Poem Arta Celebrare
+        csd_u6_variables_part2: Variabile - Modelul contorului
+        csd_ml_ethics_ai: 'Etică și AI '
+        outbreak_intro: 'Simularea focarului: Introducere'
+        outbreak_events: 'Outbreak Simulator: Evenimente'
+        outbreak_scientist: 'Simulator de focar: gândirea ca un om de știință'
+        outbreak_outro: 'Outbreak Simulator: Joc gratuit'
+        PL_overview_CSP: Ce este principiile de informatică?
+        PL_CSP_EIPMOverview: Ghid pentru lecțiile EIPM
         CSA-PL-debugging-temp: Introducere în Debugging în Java Lab - temp
+        csd_app_lab_design_mode: Modul de proiectare a laboratorului de aplicații CSD
+        csd_app_lab_events: CSD App Lab Evenimente
+        PL_CSD_Unit4_AppTesting: Testarea prototipului de hârtie
+        csd_u6_circuit_playground: Calcul fizic
+        CSA-PL-for-loops: Pentru bucle în Java
+        CSA-PL-variables: Crearea variabilelor în Java
         PL_CS_Journeys_Overview: Călătorii CS
+        CSA-PL-intro-to-java-lab: Bazele Java Lab
+        CSA-PL-first-program: Scrierea unui program în Java
+        CSD_u6_variables_part1: 'CSD: Variabile'
+        csd_u6_if_statements: 'CSD: În cazul în care declaraţiile'
+        csc-poem-art-intro: Intro Video
+        csc-poem-art-outro: Outro Video
+        csd_u6_call_define_functions: 'CSD: Apelarea şi definirea funcţiilor'
         csp_applab_parameters: Funcții cu Parametrii
+        starquilts_intro_artist: Introducere în Steaua Quilts
         CSA-PL-intro-to-arrays: Matrice Uni-Dimensionale (1D)
+        CSA-PL-1d-arrays-new-values: Introducerea valorilor în matricele 1D
+        CSA-PL-conditionals: Declarații condiționale în Java
+        CSA-PL-two-way-selection: Selecție bidirecțională
+        CSA-PL-Printing-in-Java: Imprimarea în Java
+        CSA-PL-multi-selection-statements: Declarații de selecție multiplă
+        PL_CSP_TeacherTips_Advice: 'Sfaturi pentru profesori: Sfaturi pentru noii profesori CS'
+        PL_CSP_TeacherTips_IntroToCSP: 'Sfaturi pentru profesori: Introducere în principiile CS'
+        PL_CSP_TeacherTips_Debugging: 'Sfaturi pentru profesori: Ajutor cu depanarea'
+        PL_CSP_TeacherTips_LeadLearner: 'Sfaturi pentru profesori: Cum să fii un elev principal'
+        PL_CSP_TeacherTips_APExam: 'Sfaturi pentru profesori: Pregătirea pentru examenul AP'
+        PL_CSP_TeacherTips_EIPM: 'Sfaturi pentru profesori: Procesul EIPM'
+        PL_CSD_CircuitPlayground_Overview: Prezentare generală a terenului de joacă
+        CSA-PL-debugging-22: Depanare în Java Lab
+        CSD_Unit6_InteractiveArtExemplar: Interactive Art Exemplu
         CS_Changing_Everything: Știința calculatoarelor schimbă totul
+        csa-alias-video: Egal și Aliasuri
+        csa-equals-video: Metoda egals ()
+        csa-user-stories: Povestiri ale utilizatorilor în ingineria software
+        csa-pl-vpl-m1-unit-3: Inginerie Software în Unitatea 3
+        csa-pl-intro-to-equality: Introducere în egalitate
+        csa-pl-intro-to-equals-method: Introducere în metoda .equals ()
+        csa-pl-equals-book: Scrierea metodei equals () pentru clasa Book
+        csa-multi-select-pl: Declarații de selecție multiplă în Java
+        csc_timecapsule_intro: Introducerea capsulei timpului
+        PL_Equity_in_CS_Education: Echitate în educaţia CS
+        csc_fm_pilot: Mașini funcționale (pilot)
+        csc_fm_pilot_v2: 'Funcție Mașini Intro '
+        csc-sprite-lab-pixel-editor: Desenați propriul Sprite
+        csa-pl-intro-to-strings: Introducere în șiruri de caractere în Java
+        csa-pl-compareTo: Metoda CompareTo ()
+        csc-event-short-intro: Evenimente Scurt Intro
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Prezentare generală a unității de joacă pentru circuite
+        csa-day-in-pm-pl: Ce face un manager de proiect?
+        csa-pl-intro-to-pm: Introducere în Managementul Proiectelor
+        PL_CSD_CircuitPlayground_Setup: Configurarea locului de joacă pentru circuit
+        csa_object_oriented_programming: 'CSA: Orientate pe obiecte de programare'
+        csa_creating_objects: 'CSA: Crearea de obiecte'
+        csa_calling_methods: 'CSA: Metode de apelare'
+        csa_while_loops: 'CSA: În timp ce buclele'
+        csa_inheritance: 'CSA: Moştenire'
+        csa_writing_a_method: 'CSA: Scrierea o metodă'
+        csa_software_engineering_code_reviews: 'CSA: Inginerie software - Codul clienţilor'
+        csa_conditional_statements: 'CSA: Declaraţii condiţionale'
+        csa_printing_in_java: 'CSA: Imprimarea în Java'
+        csa_two_way_selection_and_not: 'CSA: Două sensuri de selecţie şi nu'
+        csa-pl-intro-to-oop: Introducere în programarea orientată pe obiecte
+        csa-pl-welcome-to-Neighborhood: Bine ați venit la Cartier
+        csa-pl-calling-methods: Metode de apelare în Java
+        csa-pl-creating-objects: Crearea obiectelor
+        csa_accessor_methods: 'CSA: Metode de accesor'
+        csa_constructors: 'CSA: Constructori'
+        csa_creating_a_scanner_object: 'CSA: Crearea unui obiect Scanner'
+        csa_creating_variables: 'CSA: Crearea variabilelor'
+        csa_instance_variables_and_attributes: 'CSA: Variabile de instanţă şi atribute'
+        csa_mutator_methods: 'CSA: Metode de mutator'
+        csa_overloaded_constructors: 'CSA: Supraîncărcat constructori'
+        csa_the_tostring_method: 'CSA: ToString () Metoda'
+        csa_scanner_class_methods: 'CSA: Metode de clasa Scanner'
+        csa_for_loops: 'CSA: Pentru bucle'
+        csa_enhanced_for_loops: 'CSA: Îmbunătăţită pentru bucle'
+        csa_modifying_values_in_a_1d_array: 'CSA: Modificarea valorilor într-o matrice 1D'
+        csa_nested_loops: 'CSA: Bucle imbricate'
+        csa_one_dimensional_arrays: 'CSA: Une-dimensionale (1D) Arrays'
+        csa_polymorphism: 'CSA: Polimorfismul'
+        csa_casting: 'CSA: Turnare'
+        csa_equals_and_aliases: 'CSA: Este egală cu şi pseudonime'
+        csa_multi-selection_statements: 'CSA: Declaraţii de selecţie multiplă'
+        csa_random_numbers: 'CSA: Numere aleatoare'
+        csa_static_methods: 'CSA: Metode statice'
+        csa_static_variables: 'CSA: Variabile statice'
+        csa_the_equals_method: 'CSA: Este egal () Metoda'
+        csa_welcome_to_the_theater: 'CSA: Bine aţi venit la teatru'
+        enter_your_own_poem: Introduceți propria poezie
+        csa-example-solution-1: 'Codificarea live a unui exemplu de soluție '
         csd_sprite_properties: Proprietăți spiriduș
+        csa-pl-documentation: Documentație în Java Lab
+        csc-starquilts-intro: 'CSC: Stele pilote'
+        csa-pl-vocab-pm: Vocabularul managementului de proiect
+        csc-ecosystems-intro: Ecosisteme Intro
+        PL_CSD_MicroBit_Intro: Introducere în micro:bit
+        csc_animal_adaptations_intro: Adaptări Animale Intro
+        csa_two_dimensional_arrays: 'CSA: Două dimensionale (2D) Arrays'
+        csa_working_with_2d_array_elements: 'CSA: Lucrul cu elemente de matrice 2D'
+        csa_row_major_traversal: 'CSA: Rand-majore traversare'
+        csa_column_major_traversal: 'CSA: Coloana-majore traversare'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Îmbunătăţită pentru bucle şi matrice 2D'
+        csa_images_and_pixels: 'CSA: Imagini şi pixeli'
+        csa_wrapper_classes_part_1: 'CSA: Clase de ambalaj partea 1'
+        csa_wrapper_classes_part_2: 'CSA: Clase de ambalaj partea 2'
+        csa_the_arraylist_class: 'CSA: Clasa ArrayList'
+        csa_working_with_arraylist_data: 'CSA: Lucrul cu datele arrayList'
+        csa_remving_data_from_an_arraylist: 'CSA: Eliminarea datelor dintr-o listă de arrayList'
+        csa_private_methods: 'CSA: Metode de privat'
+        csa_recursion: 'CSA: Recursivitate'
+        csa_searching_algorithms: 'CSA: Algoritmi de căutare'
+        csa_sorting_algorithms: 'CSA: Algoritmi de sortare'
+        star_quilts_intro_to_artist: 'Stele Quilts: Introducere în artist'
+        upload_sprites_backgrounds: Încărcarea Sprites personalizate și fundaluri
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc

@@ -30,7 +30,7 @@ export default class LoginExport extends Component {
 
     if (students) {
       students.forEach(student => {
-        if (student.name !== '') {
+        if (student.name !== '' && student.userType !== 'teacher') {
           logins.push({
             sectionCode: this.props.sectionCode,
             sectionName: this.props.sectionName,

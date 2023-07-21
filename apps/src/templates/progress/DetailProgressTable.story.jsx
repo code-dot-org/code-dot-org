@@ -9,12 +9,18 @@ import {
   createStoreWithHiddenLesson,
 } from './progressTestHelpers';
 
+export default {
+  title: 'DetailProgressTable',
+  component: DetailProgressTable,
+};
+
 const lessons = [
   fakeLesson('Jigsaw', 1),
   fakeLesson('Maze', 2),
   fakeLesson('Artist', 3),
   fakeLesson('Something', 4),
 ];
+
 const levelsByLesson = [
   [
     {
@@ -45,37 +51,25 @@ const levelsByLesson = [
 
 const groupedLesson = {lessons, levelsByLesson};
 
-export default storybook => {
-  storybook.storiesOf('Progress/DetailProgressTable', module).addStoryTable([
-    {
-      name: 'simple DetailProgressTable',
-      story: () => (
-        <Provider
-          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
-        >
-          <DetailProgressTable groupedLesson={groupedLesson} />
-        </Provider>
-      ),
-    },
-    {
-      name: 'with hidden lesson as instructor',
-      description: 'lesson 2 should be white with dashed outline',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, '2')}>
-          <DetailProgressTable groupedLesson={groupedLesson} />
-        </Provider>
-      ),
-    },
-    {
-      name: 'with hidden lesson as participant',
-      description: 'lesson 2 should be invisible',
-      story: () => (
-        <Provider
-          store={createStoreWithHiddenLesson(ViewType.Participant, '2')}
-        >
-          <DetailProgressTable groupedLesson={groupedLesson} />
-        </Provider>
-      ),
-    },
-  ]);
-};
+const Template = store => (
+  <Provider store={store}>
+    <DetailProgressTable groupedLesson={groupedLesson} />
+  </Provider>
+);
+
+export const Simple = Template.bind({});
+Simple.args = createStoreWithHiddenLesson(ViewType.Instructor, null);
+
+// Lesson 2 should be white with dashed outline.
+export const WithHiddenLessonAsInstructor = Template.bind({});
+WithHiddenLessonAsInstructor.args = createStoreWithHiddenLesson(
+  ViewType.Instructor,
+  '2'
+);
+
+// Lesson 2 should be invisible.
+export const WithHiddenLessonAsParticipant = Template.bind({});
+WithHiddenLessonAsParticipant.args = createStoreWithHiddenLesson(
+  ViewType.Participant,
+  '2'
+);

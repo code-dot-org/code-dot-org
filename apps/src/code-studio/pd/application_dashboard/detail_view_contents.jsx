@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+/* eslint-disable no-restricted-imports */
 import {
   Row,
   Col,
@@ -11,6 +12,7 @@ import {
   InputGroup,
   Table,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import $ from 'jquery';
 import {

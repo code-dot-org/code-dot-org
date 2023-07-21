@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "បន្លឺសំលេង",
   "blockly_blockPlaySoundAtMeasureTooltip": "បន្លឺសំលេង",
+  "blockly_blockPlaySoundTooltip": "បន្លឺសំលេង",
   "blockly_blockRepeatTooltip": "ធ្វើ​ឡើង​វិញ",
   "blockly_blockWhenRun": "នៅពេលដំណើរការ",
   "blockly_blockWhenRunTooltip": "នៅពេលដំណើរការ",
@@ -10,6 +10,9 @@
   "blockly_toolboxCategoryLogic": "តក្ក",
   "blockly_toolboxCategoryMath": "គណិត​វិទ្យា",
   "blockly_toolboxCategoryVariables": "អ​ថេរ",
+  "continue": "បន្ត",
+  "panelHeaderInstructions": "សេចក្ដី​ណែនាំ ",
+  "panelHeaderWorkspace": "កន្លែងធ្វើការ ",
   "share": "ចែក​រំលែក",
-  "startOver": "ចាប់ផ្ដើម​ឡើង​វិញ"
+  "startOver": "ចាប់ផ្ដើម​សារឡើង​វិញ"
 }

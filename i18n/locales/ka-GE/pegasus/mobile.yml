@@ -366,6 +366,7 @@
   homepage_slot_text_link_buy: "მონაწილეობის მიღება"
   homepage_slot_text_link_donate: "შემოწირულობა"
   homepage_slot_text_link_shop: "მაისურები, ქუდები და სხვა"
+  homepage_slot_text_link_thebadguys: "კოდი ცუდ ბიჭებთან"
   homepage_slot_text_link_administrators: "შეიტანეთ CS თქვენს სკოლაში ან უბანში"
   homepage_gallery_header: "Code.org-ზე შექმნილია %{project_count} მილიონზე მეტი პროექტი"
   homepage_header_donors: "Code.org მადლობას უხდის მხარდამჭერებს"
@@ -1547,6 +1548,7 @@
   applab_tile_teacher_guide: "იხილეთ მასწავლებლის სახელმძღვანელო"
   aquatic_name: 'Minecraft: მოგზაურობა წყლის'
   account_sign_up_email_opt_in: "შეიძლება, რომ ელფოსტით მოგწეროთ კურსების განახლებები, ადგილობრივი შესაძლებლობები და სხვა სიახლეები კომპიუტერული მეცნიერებების შესახებ?"
+  account_sign_up_child_accept_terms: "ვადასტურებ, რომ მე მაქვს ჩემი მშობლის ან კანონიერი მეურვის ნებართვა, გამოიყენოს Code.org მომსახურება."
   hoc_overview_dance_title: "ცეკვა"
   hoc_overview_dance_subtitle: "კოდი Dance Party გაუზიაროს თქვენს მეგობრებს. Katy Perry, მადონა, ჯ ბალვინი, სია, კეიტ ურბანი, Ciara და კიდევ 25!"
   hoc_overview_dance_2019_subtitle: "კოდი Dance Party გაუზიაროს თქვენს მეგობრებს. რომელშიც Katy Perry, Shawn Mendes, პანიკა! დისკო, Lil Nas X, Jonas Brothers, Nicki Minaj, და კიდევ 34!"

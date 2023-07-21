@@ -1,51 +1,14 @@
 ---
 fr:
-  errors:
-    messages:
-      not_saved: 'Veuillez corriger les erreurs suivantes:'
-      too_young: Ce contenu est soumis à des restrictions d'age et n'est pas disponible
-        pour les jeunes élèves.
-      teacher_must_accept_terms: Ce contenu est soumis à des restrictions d'age et
-        n'est pas disponible pour les jeunes élèves. Demandez à votre professeur d'approuver
-        les nouvelles conditions d'utilisation pour vous donner l'accès à ce contenu.
-        Votre professeur peut le faire en se connectant sur Code Studio et en cliquant
-        sur le bouton « Voir les conditions mises à jour » en haut de la page d'accueil
-        de Code Studio.
-      pair_programmer: Vous êtes en train de programmer avec un élève qui n'a pas
-        accès à ce contenu. Pour accéder à ce contenu, arrêtez la programmation en
-        binôme et essayez à nouveau.
   activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            reset_password_token:
-              invalid: n'est pas valide. Notez que chaque lien ne peut être utilisé
-                qu'une seule fois pour réinitialiser votre mot de passe, et que seul
-                le lien envoyé le plus récemment fonctionnera.
-      messages:
-        blank: est obligatoire
-        blank_plural: sont obligatoires
-        invalid: est invalide
-        invalid_plural: sont invalides
     attributes:
       user:
-        name: Nom à afficher
-        name_example: Afficher le nom (par ex. SuperCodeur ou Jeanne S.)
-        email: E-mail
-        parent_email: E-mail du parent/tuteur
-        personal_email: Adresse email personnelle<a href="%{url}">(cliquer ici si
-          vous n’avez pas d'adresse e-mail)</a>
-        personal_email_markdown: Adresse email personnelle [(cliquer ici si vous n'avez
-          pas d'adresse email)](%{url})
-        username: nom d'utilisateur
-        password: Mot de passe
-        password_confirmation: Confirmation du mot de passe
-        current_password: Mot de passe actuel
-        locale: Langue
         age: Age
-        gender: Sexe
+        current_password: Mot de passe actuel
         edit_header: Modifier les détails du compte
+        email: E-mail
+        error:
+          future: ne peut pas être dans le futur
         finish_sign_up_header: Terminez la création de votre compte
         finish_sign_up_subheader: Remplissez les informations suivantes pour finir
           de créer votre compte Code.org pour <strong>%{email}</strong>.
@@ -56,95 +19,60 @@ fr:
           <strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: Remplissez les informations suivantes
           pour compléter la création d'un Code.org avec **%{provider}** de **%{email}**.
+        gender: Sexe
+        locale: Langue
+        name: Nom à afficher
+        name_example: Afficher le nom (par ex. SuperCodeur ou Jeanne S.)
+        parent_email: E-mail du parent/tuteur
+        password: Mot de passe
+        password_confirmation: Confirmation du mot de passe
+        personal_email: Adresse email personnelle<a href="%{url}">(cliquer ici si
+          vous n’avez pas d'adresse e-mail)</a>
+        personal_email_markdown: Adresse email personnelle [(cliquer ici si vous n'avez
+          pas d'adresse email)](%{url})
         reset_password_token: Le lien de réinitialisation du mot de passe que vous
           avez suivi
-        error:
-          future: ne peut pas être dans le futur
-  beta: beta
-  hello: Bonjour tout le monde
-  welcome_back: Bienvenue %{name}
-  your_professional_learning_plan: Votre plan d’apprentissage professionnel
-  see_your_learning_plan: Consultez votre plan d’apprentissage
-  submit: Envoyer
-  unsubmit: Ne pas envoyer
-  previous_page: Page précédente
-  next_page: Page suivante
-  next_resource: Ressource suivante
-  done_with_module: Module d'apprentissage terminé
-  cancel: Annuler
-  okay: OK
-  or: ou
-  heading_x_of_y: "%{heading} (page %{x} sur %{y})"
-  join_section:
-    code:
-      title: Rejoindre un groupe de classe sur Code.Org
-      placeholder: Code de la section (ABCDEF)
-      instructions: 'Merci d''entrer votre code à 6 caractères que votre professeur
-        vous a donné (exemple : « ABCDEF ») pour rejoindre son groupe de classe.'
-      instructions_short: Entrez le code à 6 caractères de votre groupe de classe
-      submit: Rejoindre
+        us_state: État
+        username: nom d'utilisateur
+        verified_teacher: Professeur vérifié
+    errors:
+      messages:
+        blank: est obligatoire
+        blank_plural: sont obligatoires
+        invalid: est invalide
+        invalid_plural: sont invalides
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: n'est pas valide. Notez que chaque lien ne peut être utilisé
+                qu'une seule fois pour réinitialiser votre mot de passe, et que seul
+                le lien envoyé le plus récemment fonctionnera.
   add_hint_form:
     placeholder: Écrire un indice ici
     submit: Ajouter un indice
-  appname: Code.org
-  stage: étape
-  stage_number: Leçon %{number} 
-  puzzle: Énigme
-  trophies: trophées
-  courses: Cours
-  courses_page:
-    title_student: Apprendre l'Informatique
-    title_teacher: Enseigner l'informatique
-  unplugged_activity: Activité Déconnectée
-  of: de
-  more: PLUS
-  less: MOINS
-  try_hoc: 'Essaie l''Heure de Code, en cliquant ici >> '
-  try_k8intro: Essaie notre cours d'Introduction à l'informatique pour l'école primaire
-    (15-25 heures)
-  k8intro: Cours d'Introduction à l'informatique pour l'école primaire (15-25 heures)
+  age_interstitial:
+    age: Ton âge
+    disclaimer: Comme toujours, Code.org ne louera pas, ne vendra pas ou ne partagera
+      pas ces informations avec des tiers.
+    header: Mise à jour des informations du compte
+    sign_out_markdown: Si vous ne souhaitez pas indiquer votre âge, vous pouvez vous
+      [déconnecter](%{url}).
+    warning: Nous sommes en train de mettre à jour notre plateforme afin de vous offrir
+      une protection renforcée des données personnelles. Pour ce faire, nous demandons
+      aux utilisateurs existants d'entrer leur âge.
   already_started: 'Déjà commencé ? Reprendre ici >> '
-  demos: 'Admin : Toutes les démos'
-  continue: Continuer
-  prize: prix
-  more_info: Plus d'informations
+  appname: Code.org
   auth:
-    continue_with: Continuer avec %{provider}
-    sign_in_with: Se connecter avec %{provider}
-    signed_in: Connecté!
-    signed_out_markdown: "### Vous avez fermé la session sur [Code.org](%{url})."
-    sign_out_of_markdown: "#### Vous utilisiez %{provider} pour vous connecter. [Click
-      here](%{url}) pour fermer la session %{provider}."
-    already_signedup: Déjà inscrit ?
-    notyet_signedup: Pas encore inscrit ?
-    google_oauth2: Compte Google
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Compte Microsoft
-    microsoft_v2_auth: Compte Microsoft
-    clever: Compte Clever
-    powerschool: Powerschool
-    forgot_password: Mot de passe oublié ?
-    migration_success: Succès ! Vous pouvez maintenant profiter de notre nouvelle
-      expérience de compte.
-    demigration_success: La nouvelle expérience de compte est désormais désactivée
-      sur votre compte.
-    need_confirmation: Pas reçu les instructions de confirmation ?
-    need_unlock: Pas reçu les instructions de déverrouillage?
-    not_linked: Désolé, votre compte Code.org n'est pas lié à %{provider}. Vous devez
-      vous identifier en tapant votre mot de passe, ci-dessous.
-    use_clever: Désolé, votre compte Code.org n'est pas lié à %{provider}. Merci de
-      vous connecter via Clever Portal.
-    invalid_provider: Désolé, les comptes %{provider} ne peuvent être liés aux comptes
-      Code.org.
-    migration_required: Désolé, pas d'affinité avec les comptes qui usent de l'expérience
-      de compte périmé. Veuillez mettre à jour vers l'expérience de compte inédite.
-    unable_to_connect_provider: Impossible de connecter votre compte Code.org à votre
-      compte %{provider}. Veuillez réessayer.
-    disconnect_successful: Succès! Nous avons déconnecté le compte externe de votre
-      compte Code.org.
     already_in_use: Votre compte %{provider} est déjà connecté à un autre compte Code.org.
     already_linked: Votre compte %{provider} est déjà lié à votre compte de Code.org.
+    already_signedup: Déjà inscrit ?
+    clever: Compte Clever
+    continue_with: Continuer avec %{provider}
+    demigration_success: La nouvelle expérience de compte est désormais désactivée
+      sur votre compte.
+    disconnect_successful: Succès! Nous avons déconnecté le compte externe de votre
+      compte Code.org.
     existing_account:
       account_exists: Bonnes nouvelles ! Tu as déjà un compte Code.org qui utilise
         %{email}
@@ -152,578 +80,206 @@ fr:
       sign_up: Pas votre adresse électronique ? Souhaitez-vous créer un nouveau compte
         avec une adresse électronique différente ? Nous lierons votre profil %{provider}
         si vous choisissez de créer un nouveau compte.
-  signup_form:
-    email_signup: Inscrivez-vous avec votre adresse e-mail
-    student_count: "%{count} élèves se sont déjà inscrits."
-    teacher_count: "%{count} enseignants se sont déjà inscrits."
-    overview: Inscrivez-vous pour suivre vos progression ou gérer votre classe. <a
-      href="/">Vous pouvez parcourir les différentes étapes et les casse-têtes</a>
-      sans compte, mais vous devez vous inscrire pour sauvegarder votre progression
-      et vos projets.
-    overview_markdown: Inscrivez-vous pour suivre vos progression ou gérer votre classe.
-      [Vous pouvez parcourir les différentes étapes et les casse-têtes](/) sans compte,
-      mais vous devez vous inscrire pour sauvegarder votre progression et vos projets.
-    hoc_already_signed_up_heading: Commencez sans vous connecter
-    hoc_already_signed_up_content: Vous êtes inscrit pour enseigner une Hour of Code
-      ! Vous et vos élèves n'avez pas besoin de vous connecter à Code Studio pour
-      participer à cet événement. Pour commencer, <a href="https://code.org/learn">choisissez
-      un didacticiel</a> pour votre classe et partagez le lien avec eux. <br/> <br/>
-      Si vous avez apprécié Hour of Code et souhaitez aller plus loin, vous pouvez
-      configurer un mot de passe et créer un compte Code Studio ci-dessous pour inscrire
-      vos étudiants dans l'un de nos cours <a href="https://code.org/educate">  plus
-      longs </a >.
-    hoc_already_signed_up_content_post_hoc: Merci d’avoir animé Une Hour of Code.
-      Pour vous connecter à Code Studio, vous aurez besoin d'un mot de passe pour
-      votre compte. Cela vous permettra d’enregistrer votre progression et de gérer
-      votre salle de classe. Vous serez en mesure d’assigner des cours aux élèves
-      et de suivre leur évolution. <a href="%{studio_url}"> Vous pouvez également
-      continuer à parcourir les différentes étapes et casse-têtes</a> sans créer de
-      compte.
-    hoc_already_signed_up_content_post_hoc_markdown: Je vous remercie d’avoir accueilli
-      Une Heure De Code. Pour vous connecter à Code Studio, vous aurez besoin d' un
-      mot de passe pour votre compte. Cela vous permettra de sauvegarder votre progression
-      et de gérer votre salle de classe. Vous serez en mesure d’assigner des cours
-      aux élèves et suivre leurs évolutions. [vous pouvez également continuer à parcourir
-      les différentes étapes et casse-têtes](%{studio_url}) sans créer un compte.
-    teacher_educator_guide: Consultez le guide de l'enseignant
-    title: S'inscrire sur Code.org
-    school_name: Nom de l'école (facultatif)
-    school_address: Adresse de l'école (facultatif)
-    address_placeholder: adresse, ville, état, code postal
-    gender: Sexe (facultatif)
-    birthday: Date de naissance (facultatif)
-    age: Age
-    user_type: Êtes-vous un élève ou un enseignant ?
-    submit: S’inscrire
-    go_to_account: Aller à mon compte
-    teacher: Êtes-vous un enseignant?
-    valid_username: Disponible !
-    invalid_username: Le nom d'utilisateur doit contenir au moins 5 caractères
-    taken_username: Nom d'utilisateur déjà utilisé
-    valid_password: Mot de passe correct !
-    invalid_password: Le mot de passe doit comporter au moins 6 caractères.
-    mismatch_password: Les deux mots de passe ne sont pas identiques.
-    student_consent: Je confirme que j’ai l'autorisation de mes parents ou de mon
-      tuteur légal d’utiliser les services de Code.org.
-    agree_us_data_transfer_student: "**J'accepte que Code.org puisse transférer des
-      données (y compris des données personnelles) de mon utilisation de ce site vers
-      les États-Unis** afin d'héberger et de traiter lesdites données."
-    agree_us_data_transfer_teacher: "**J'accepte que Code.org puisse transférer des
-      données (y compris des données personnelles) de mon utilisation (et de celle
-      de mes élèves) de ce site vers les États-Unis** afin d'héberger et de traiter
-      lesdites données."
-    data_collection_us: Je comprends que Code.org est un site Web à but non lucratif
-      hébergé aux États-Unis et que les lois régissant la collecte de données aux
-      États-Unis peuvent différer des lois de mon pays.
-    visit_privacy: Consultez [la politique de confidentialité](%{privacy_url}) de
-      Code.org pour en savoir plus.
-    student_terms_markdown: Les adresses e-mail ne sont pas stockées dans un format
-      qui nous permette de contacter les élèves. Les élèves ne recevront jamais d’e-mail
-      de Code.org sauf lors de la procédure de récupération de mot de passe. Voir
-      notre [politique de confidentialité](http://code.org/privacy) pour plus d'informations.
-    user_type_button: Mise à jour du type de compte
-    user_type_label: Type de compte
-    user_type_student: Élève
-    user_type_student_desc: 'Découvrez tous nos cours et activités et bien d''autres
-      :'
-    user_type_student_ability_1: Sauvegardez vos progrès et vos projets
-    user_type_student_ability_2: Rejoignez la section de classe de votre professeur
-    user_type_teacher: Professeur
-    user_type_teacher_desc: 'Tout ce dont les élèves ont accès et bien d''autres :'
-    user_type_teacher_ability_1: Créer des sections de classe
-    user_type_teacher_ability_2: Donner et suivre les devoirs des élèves
-    user_type_teacher_ability_3: S'inscrire à une formation professionnelle
-    user_type_teacher_ability_4: Intervenez dans notre forum des enseignants
-    field_is_required: est obligatoire
-    accept_terms: Vous devez accepter pour créer un compte
-    error: Une erreur est survenue.
-    email_preference_question: Pouvons-nous vous envoyer des e-mails d’information
-      sur nos formations, des opportunités près de chez vous ou d’autres brèves dans
-      le domaine informatique?
-    email_preference_privacy: "(Voir notre politique de protection des données)"
-    email_preference_yes: Oui
-    email_preference_no: Non
-    email_preference_required: Vous devez spécifier une adresse e-mail préférée.
-    share_teacher_email_reg_partner_question: Accepteriez-vous que nous partagions
-      vos coordonnées avec le [partenaire régional de Code.org] (%{cdo_regional_partner_desc})
-      de votre État afin qu'il puisse vous informer des activités de développement
-      professionnel, des ressources et autres événements qui ont lieu dans votre région
-      ?
-    share_teacher_email_reg_partner_preference_yes: Oui
-    share_teacher_email_reg_partner_preference_no: Non
-    share_teacher_email_reg_partner_preference_required: Vous devez spécifier une
-      adresse e-mail préférée.
-    parent_account_checkbox: Je suis un parent/tuteur inscrit au nom de mon enfant
-    parent_account_email_progress_permission: Pouvons-nous vous envoyer, par courriel,
-      des mises à jour occasionnelles, sur les progrès et les projets de votre enfant,
-      ainsi que des mises à jour sur ses cours et l’informatique ? [(Voir notre politique
-      de confidentialité)] %{privacy_policy_url}
-    parent_account_email_label: 'Adresse électronique du parent/tuteur '
-  school_info:
-    title: Informations de l’école (facultatif)
-    school_country: Pays de l’École
-    select_school_type: Type d'école
-    charter: Charte
-    private: Privé
-    public: Public
-    homeschool: École à domicile
-    after_school: Après l’école
-    other: Autre
-    state: État
-    district: Quartier
-    other_district_not_listed: Autre quartier, non listé ci-dessus
-    district_name: Nom du quartier
-    school: École
-    other_school_not_listed: Autre école non listée ci-dessus
-    school_name: Nom de l'école
-    school_zip: Code postal de l’école
-    school_address: Adresse de l'École
-    school_organization_name: Nom de l'École ou de l'Organisme
-    school_organization_zip: Code postal de l'École ou de l'Organisme
-  signin_form:
-    title: Tu as déjà un compte ? Authentification
-    login: E-mail
-    login_username: E-mail ou Nom d’Utilisateur
-    password: Mot de passe
-    remember: Se souvenir de moi
-    submit: Connexion
-  signin:
-    try_heading: Vous souhaitez essayer de coder sans vous inscrire ?
-    try_hoc: Essaie d'abord une Heure de Code
-    try_20hours: Essaie notre Introduction de 20 heures à l'informatique
-  signinsection:
-    welcome: Bienvenue sur %{section_name}
-    name: Choisis ton nom
-    picture: Maintenant, trouve ta photo secrète
-    words: Maintenant entre tes mots secrets
-    login: Connexion
-    invalid_login: Erreur d'identifiant, veuillez réessayer
-    pair_programming: J'ai un partenaire sur mon ordinateur
-    student_privacy_markdown: Savoir pourquoi vous ne voyez pas votre nom complet
-      [here](%{student_privacy_blog}).
-  password:
-    reset_form:
-      title: Mot de passe oublié ?
-      instructions: Entrez votre adresse e-mail ci-dessous et nous vous enverrons
-        les instructions pour la récupération de votre mot de passe.
-      email: Adresse e-mail
-      submit: Envoyer
-    reset_errors:
-      captcha_required: Veuillez remplir le CAPTCHA pour réinitialiser votre mot de
-        passe.
-      invalid_email: Il semble que vous vous soyez identifié avec une adresse e-mail
-        incorrecte. Veuillez envoyer un email à support@code.org pour recevoir un
-        lien de récupération de mot de passe.
-    change_form:
-      title: Changer son mot de passe
-      new_password: Nouveau mot de passe
-      confirm_password: Confirme le nouveau mot de passe
-      submit: Changer mon mot de passe
-  welcome_email:
-    subject: Rejoindre ma classe (sur Code.org)
-    body: |
-      Clique sur le lien ci-dessous pour t’inscrire aux tutoriels de science informatique sur Code.org (avec moi comme « enseignant ») :
-
-      %{link}
-
-      Les tutoriels sont amusants, visuellement attirants et enseignent les concepts de base de l'informatique à l'aide d'une expérience guidée qui reste ludique et simple. Apprends à coder avec Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs. Zombies ! :-)
-
-      %{name}
-  parent_mailer:
-    student_associated_subject: Informations de connexion pour Code.org
-    parent_email_added_subject: Bienvenue sur Code.org!
-  teacher_mailer:
-    new_teacher_subject: Bienvenue sur Code.org!
-    delete_teacher_subject: 'Notification de Code.org : votre compte a été supprimé'
-  section:
-    your_section:
-      one: 'Ta section:'
-      other: 'Tes sections:'
-    code_with_teacher: "%{section_code} avec %{teacher_name}"
-    confirm:
-      remove: Es-tu sûr de vouloir quitter cette section ?
-    default_name: Section sans titre
-    remove: "(supprimer la section)"
-    type:
-      picture: Mot de passe par image
-      word: Mot secret
-      email: E-mail
-      google_classroom: Google Classroom
-      clever: Clever
-  follower:
-    invite_sent: Invitation envoyée
-    added_teacher: "%{name} ajouté en tant que ton enseignant"
-    registered: Vous vous êtes inscrit à %{section_name}.
-    captcha_required: Veuillez remplir le CAPTCHA pour rejoindre cette section.
-    already_exists: Tu as déjà rejoint la section %{section_name}.
-    error:
-      signed_in: Merci de te déconnecter avant de continuer
-      username_not_found: Nom d'utilisateur %{username} introuvable
-      username_in_use: "%{username} est déjà utilisé, merci d’en choisir un autre"
-      no_teacher: Impossible de trouver quelqu'un de connecté avec «% {teacher_email_or_code}».
-        Demande-leur de s’inscrire ici et puis réessaie de les ajouter.
-      section_not_found: Impossible de trouver une section avec le code «%{section_code}».
-      blank_code: Saisis un code de section.
-      cant_join_own_section: Désolé, tu ne peux pas te joindre à ta propre section.
-      provider_managed_section: Cette section est gérée par un autre fournisseur et
-        ne peut pas être rejointe. Demande à ton professeur de t’ajouter via %{provider}
-        et de resynchroniser sa section.
-      restricted_section: Nous n'avons pas pu vous ajouter à la section %{section_code},
-        car elle est verrouillée. Veuillez contacter votre professeur pour obtenir
-        de l'aide.
-      full_section: Nous n'avons pas pu vous ajouter à la section %{section_code},
-        car elle contient déjà %{section_capacity} élèves. Veuillez contacter votre
-        professeur pour obtenir de l'aide.
-      not_participant_type: Nous n'avons pas pu vous ajouter à la section %{section_code},
-        vous ne remplissez pas les conditions pour y participer.
-    mail:
-      student_disassociated:
-        subject: 'Notification de Code.org: %{student_name} n''est plus considéré
-          comme l''un de vos élèves.'
-  reports:
-    error:
-      access_denied: Accès impossible aux statistiques de cette personne
+    facebook: Facebook
+    forgot_password: Mot de passe oublié ?
+    google_oauth2: Compte Google
+    invalid_provider: Désolé, les comptes %{provider} ne peuvent être liés aux comptes
+      Code.org.
+    microsoft_v2_auth: Compte Microsoft
+    migration_required: Désolé, pas d'affinité avec les comptes qui usent de l'expérience
+      de compte périmé. Veuillez mettre à jour vers l'expérience de compte inédite.
+    migration_success: Succès ! Vous pouvez maintenant profiter de notre nouvelle
+      expérience de compte.
+    need_confirmation: Pas reçu les instructions de confirmation ?
+    need_unlock: Pas reçu les instructions de déverrouillage?
+    not_linked: Désolé, votre compte Code.org n'est pas lié à %{provider}. Vous devez
+      vous identifier en tapant votre mot de passe, ci-dessous.
+    notyet_signedup: Pas encore inscrit ?
+    powerschool: Powerschool
+    sign_in_with: Se connecter avec %{provider}
+    sign_out_of_markdown: "#### Vous utilisiez %{provider} pour vous connecter. [Click
+      here](%{url}) pour fermer la session %{provider}."
+    signed_in: Connecté!
+    signed_out_markdown: "### Vous avez fermé la session sur [Code.org](%{url})."
+    twitter: Twitter
+    unable_to_connect_provider: Impossible de connecter votre compte Code.org à votre
+      compte %{provider}. Veuillez réessayer.
+    use_clever: Désolé, votre compte Code.org n'est pas lié à %{provider}. Merci de
+      vous connecter via Clever Portal.
+    windowslive: Compte Microsoft
+  behaviors:
+    this_sprite: ce sprite
+  beta: beta
+  builder:
+    back: Retour aux scripts
+    created: Tu as créé un nouveau script.
+    destroyed: Tu as détruit un script.
+    level:
+      create: Crée un nouveau niveau
+      current: Niveaux Actuels
+      unused: Niveaux Inutilisés
+    manage: Développer des niveaux
+    success: Tu as modifié les blocs avec succès.
+    view: Affichage
+  cancel: Annuler
+  certificate_hour_of_code: Heure de Code
+  certificate_sponsor_message: "%{sponsor_name} a fait le don généreux de parrainer
+    ton apprentissage."
+  code_org_logo_alt: Accueil Code.org
+  compatibility:
+    upgrade:
+      applab_unsupported_tablet: Le Labo des Applis fonctionne au mieux sur un ordinateur
+        portable ou fixe équipé d'une souris et d'un clavier. Il se peut que vous
+        rencontriez des difficultés en utilisant cet outil avec votre appareil actuel.
+      gamelab_unsupported_tablet: Le Labo Jeux fonctionne au mieux sur un ordinateur
+        portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez
+        des problèmes en utilisant cet outil avec votre appareil actuel.
+      link: En savoir plus
+      unsupported_message: 'Votre navigateur n''est pas compatible. Merci de mettre
+        votre navigateur à jour avec [l''un des navigateurs compatibles avec nos services](%{supported_browsers_url}).
+        Vous pouvez essayer d’afficher la page, mais les fonctionnalités risquent
+        d’être compromises. '
+      weblab_unsupported_locale_storage: Il se peut que vous rencontriez des difficultés
+        en utilisant le Labo Web en mode Navigation Privée. Merci de réactualiser
+        votre projet en mode normal. Nous sommes désolés pour la gêne occasionnée.
+  confirm: Confirmer
+  continue: Continuer
+  contract_match:
+    baddomainname: Un ou plusieurs éléments de ton domaine ont le mauvais nom.
+    baddomainsize: Ton contrat n'a pas le bon nombre d'éléments dans son domaine.
+    baddomaintype: Un ou plusieurs éléments de ton domaine ont le mauvais type ou
+      sont dans le mauvais ordre.
+    badname: Ton contrat comporte un nom incorrect.
+    badname_case: Les noms de fonction respectent la casse. Essaie de modifier la
+      casse du nom de ton contrat.
+    badrange: Ton contrat n’est pas dans la bonne gamme.
+    wrong_title: Réponse incorrecte
+  cookie_banner:
+    accept: J'accepte
+    message: En poursuivant votre navigation sur ce site ou en cliquant sur « J’accepte »,
+      vous acceptez le stockage de cookies sur votre ordinateur ou appareil.
+    more_information: Consulter la Politique de Confidentialité de Code.org.
+  copy: Copier
+  course_offering:
+    headers:
+      collections: Collections
+      csa_labs: Laboratoires CSA
+      csc: Connexions CS
+      csf: Fondamentaux d'Informatique
+      express: Express
+      favorites: Favoris
+      hello_world: Bonjour tout le monde !
+      labs_and_skills: Laboratoires et compétences
+      minecraft: Minecraft
+      popular_media: Médias populaires
+      self_paced: À votre rythme
+      sports: Sports
+      summer_workshops_612: 6 à 12 ateliers d'été
+      teacher_led: Dirigé par un enseignant
+      virtual_academic_year_workshops_612: 6 à 12 ateliers virtuels pour l'année universitaire
+      workshops_k5: Ateliers K-5
+      year_long: Toute l'année
+  courses: Cours
+  courses_category: Cours Complets
+  courses_page:
+    title_student: Apprendre l'Informatique
+    title_teacher: Enseigner l'informatique
   crud:
-    new_model: Nouveau %{model}
-    show: Afficher
-    edit: Modifier
-    edit_model: Modifier %{model}
-    update: Mise à jour
-    submit: Envoyer
-    destroy: Détruire
+    access_denied: Tu n’as pas accès à ce %{model}.
     back: Retour
     confirm: Es-tu certain ?
     created: "%{model} a été créé avec succès."
-    updated: "%{model} a été mis à jour avec succès."
+    destroy: Détruire
     destroyed: "%{model} a été supprimé avec succès."
-    access_denied: Tu n’as pas accès à ce %{model}.
+    edit: Modifier
+    edit_model: Modifier %{model}
+    new_model: Nouveau %{model}
+    show: Afficher
+    submit: Envoyer
+    update: Mise à jour
+    updated: "%{model} a été mis à jour avec succès."
+  demos: 'Admin : Toutes les démos'
+  deprecation:
+    algebra_lab: 'Le programme et le contenu de CS in Algebra sont obsolètes. Au cours
+      des prochains mois, ce laboratoire ne sera plus disponible. Veuillez plutôt
+      consulter [Bootstrap : Algebra] (%{bootstrap_algebra_url}). [En savoir plus]
+      (%{cs_algebra_url}).'
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: L’adresse e-mail fournie ne correspond pas
-          à l’adresse e-mail de ce compte
         personal_login_created_email: Vous vous êtes enregistré avec succès. Vous
           pouvez désormais vous connecter à votre compte avec votre e-mail et votre
           mot de passe
         personal_login_created_username: 'Vous vous êtes enregistré avec succès. Vous
           pouvez désormais vous connecter à votre compte avec votre nom d''utilisateur
           (%{username}) et votre mot de passe '
-  nav:
-    header:
-      finished_hoc: J'ai fini mon Heure de Code
-      sign_in_to_save: Connecte-toi pour enregistrer tes progrès.
-      my_dashboard: Mon Tableau de Bord
-      course_catalog: Catalogue des cours
-      project_gallery: Projets
-      sections: Sections
-      help_support: Aide et assistance technique
-      report_bug: Signaler un problème
-      report_abuse: Signaler un abus
-      teacher_community: Communauté des enseignants
-      professional_learning: Apprentissage professionnel
-      documentation: Documentation
-      tutorials: Didacticiels
-      app_lab_documentation: Documentation sur le Labo des Applis
-      app_lab_tutorials: Tutoriels du Labo des Applis
-      game_lab_documentation: Documentation sur le Labo des Jeux
-      game_lab_tutorials: Tutoriels du Labo des Jeux
-      sprite_lab_documentation: Documentation sur le Labo des Sprites
-      sprite_lab_tutorials: Tutoriels du Labo des Sprites
-      web_lab_documentation: Documentation Web Lab
-      educate_overview: Aperçu enseignant
-      educate_elementary: École primaire
-      educate_middle: Collège
-      educate_high: Lycée
-      educate_hoc: Heure de Code
-      educate_partner: Devenir partenaire
-      educate_beyond: Aller plus loin
-      educate_inspire: Inspirer un élève
-      educate_community: Communauté en ligne
-      educate_requirements: Pré-requis techniques
-      educate_tools: Outils et vidéos
-      about_us: À propos
-      about_leadership: Équipe de direction
-      about_donors: Donateurs
-      about_partners: Partenaires
-      about_team: Toute l'équipe
-      about_news: Actualité
-      about_evaluation: Évaluation
-      about_jobs: Emplois
-      about_contact: Nous contacter
-      about_faqs: FAQ
-      learn: Apprendre
-      stats: Statistiques
-      help_us: Nous aider
-      teach: Enseigner
-      about: À propos
-      legal: Confidentialité et mentions légales
-      legal_privacy: Politique de confidentialité
-      legal_cookie_notice: " Utilisation des cookies"
-      legal_tos: Conditions Générales d'Utilisation
-    user:
-      classroom: Page d'accueil de l'enseignant
-      district_dashboard: Tableau de bord du district
-      label: Bonjour %{username}
-      stats: Code Studio
-      my_projects: Mes projets
-      settings: Mon compte
-      logout: Déconnexion
-      signin: Connexion
-      signup: Créer un compte
-      already_registered: Déjà enregistré ?
-      pair_programming: Programmation en binôme
-      team: Équipe
-      driver: Enregistré
-      navigator: Partenaire
-      create: Créer
-      algebra_game: Algèbre
-      applab: Labo des applis
-      artist: Artiste
-      artist_k1: Artiste (Pré-lecteur)
-      basketball: Basket-ball
-      bounce: Rebond
-      calc: Calc
-      dance: Soirée Dansante
-      eval: Eval
-      flappy: Flappy
-      frozen: La Reine des neiges
-      gamelab: Labo Jeux
-      gamelab_jr: Labo des jeux (beta)
-      gumball: Le monde incroyable de Gumball
-      iceage: L’âge de Glace
-      infinity: Infini
-      makerlab: Maker Toolkit
-      minecraft_adventurer: Aventurier de Minecraft
-      minecraft_aquatic: Minecraft Aquatique
-      minecraft_codebuilder: 'Minecraft : Connexion au code'
-      minecraft_designer: Minecraft
-      minecraft_hero: Héros de Minecraft
-      playlab: Labo de jeux
-      playlab_k1: Labo du Jeu (Pré-lecteur)
-      poetry: Poésie
-      poetry_hoc: Art du poème
-      scratch: Scratch
-      sports: Sports
-      spritelab: Le Labo des Sprites
-      starwars: Star Wars
-      starwarsblocks: Star Wars (blocs)
-      starwarsblocks_hour: Star Wars (blocs)
-      thebadguys: Les Bad Guys
-      loading: Chargement...
-      weblab: Labo Web
-      view_all: Afficher tous les projets...
-    popup:
-      progress_for_user: progrès de %{name}
-      progress: Ton progrès
-      close: FERMER
-      mastery: Concepts
-      puzzle_map: Étapes
-      prizes: Remporte tous les %{total_trophies} trophées et gagne des prix!
-      prize_earned: Les %{total_trophies} trophées ont été remportés. Prix gagné !
-      prize_us_only: "(Uniquement pour les élèves vivant aux États-Unis)"
-      prizes_link: Plus d'informations
-  teacher:
-    answer: Réponse
-    dashboard: Tableau de bord enseignant
-    for_teachers_only: Pour les enseignants uniquement
-    title:
-      one: 'Ton enseignant:'
-      other: 'Tes enseignants:'
-    remove: "(supprimer l'enseignant)"
-    confirm:
-      remove: Es-tu sûr de vouloir supprimer cet enseignant?
-    students:
-      dashboard: Aller au Tableau de bord de l'enseignant
-    user_not_found: Impossible de trouver l’enseignant.
-    student_teacher_disassociated: Tu as quitté la section %{section_code} avec %{teacher_name}.
-    panel:
-      answer_viewer: Écran de l'enseignant
-      student: Élève
-      viewing_solution: Voir la solution
-      try_it_yourself: Essaie-le toi-même
-      section: Section
-      example: Exemple de solution
-      example_with_number: Exemple de solution %{solution_number}
-      submitted_on: 'Soumis le :'
-      last_updated: 'Dernière mise à jour :'
-      unsubmit: Ne pas envoyer
-      worked_with: A travaillé avec
-      update_lock_settings: Mettre à jour les paramètres de verrouillage ici.
-      clear_response: Effacer la réponse
-    student_code_view_diabled: Le code d'étudiant ne peut être visualisé pour cette
-      activité.
-  user:
-    email_confirm_needed: 'L''adresse e-mail n''a pas été confirmée:'
-    email_confirm_needed_required: 'Votre adresse e-mail %{email} n''a pas été confirmée
-      :'
-    email_confirm_wrong_email: "(Adresse e-mail invalide ?)"
-    email_resend_confirm: Renvoyer les instructions de confirmation
-    new_email_hint: "(veuillez vous assurer que vous pouvez recevoir des e-mails à
-      cette adresse)"
-    new_password_hint: "(laisser vide si rien n’est à changer)"
-    current_password_hint: "(nous avons besoin de votre mot de passe pour confirmer
-      les modifications)"
-    delete: Supprimer votre compte
-    delete_text: La suppression de votre compte effacera toutes les informations et
-      les progrès liés à ce compte.
-    delete_text_teacher_managed_note: Tu n’es pas autorisé à supprimer ce compte parce
-      qu’il est géré par ton professeur. Ton professeur devra te supprimer de ses
-      sections pour que tu puisses supprimer ton compte.
-    delete_text_teacher_note: 'Veuillez noter : supprimer votre compte ne supprimera
-      pas les comptes de vos élèves.'
-    delete_confirm: Êtes-vous sûr de vouloir supprimer votre compte ?
-    deleted_user: utilisateur supprimé
-    no_password_because_oauth: Aucun mot de passe parce que vous vous connectez avec
-      un fournisseur tiers.
-    no_password_because_sponsored: Consulte ton professeur pour gérer ton mot de passe.
-    create_personal_login: Créer un identifiant de mot de passe personnel
-    create_personal_login_under_13_info: Si tu veux continuer d'utiliser ton compte
-      Code.org, y compris après la fin de ton année scolaire, demande à tes parents
-      ou ton tuteur de t'aider à créer ta propre  connexion, ci-dessous.
-    create_personal_login_under_13_username: Nom d’utilisateur (n’utilisez pas votre
-      vrai nom !)
-    create_personal_login_under_13_parent_email: Adresse e-mail du parent/tuteur
-    create_personal_login_info: Si tu veux continuer d'utiliser ton compte Code.org,
-      y compris après la fin de ton année scolaire, tu peux créer ta propre connexion.
-    create_personal_login_link_account: Vous pouvez choisir de vous connecter à un
-      compte personnel dans la section « Gérer les comptes liés ».
-    create_personal_login_terms: En créant un identifiant personnel, j'accepte les
-      <a href='%{terms_of_service_url}', target='_blank'>termes et conditions</a>
-      de Code.org. Je confirme que j'ai l'autorisation de mes parents ou de mon tuteur
-      légal pour utiliser les services de Code.org même sans professeur.
-    create_personal_login_terms_markdown: En créant un login personnel, j'accepte
-      les [termes et conditions](%{terms_of_service_url}) de Code.org . Si j'ai moins
-      de 13 ans, je confirme en soumettant ce formulaire que j'ai l'autorisation des
-      mes parents ou de mon tuteur légal pour utiliser les services de Code.org même
-      sans un professeur.
-    create_personal_login_email_note: 'Remarque : Les adresses e-mail ne sont pas
-      stockées sous une forme qui permette de communiquer avec les élèves. Les élèves
-      ne recevront jamais d''e-mails de Code.org à l’exception de la récupération
-      de mot de passe. Voyez notre <a href=''%{privacy_policy_url}'', target=''_blank''>politique
-      de confidentialité</a> pour plus d’informations.'
-    create_personal_login_email_note_markdown: 'Remarque : Les adresses E-mail ne
-      sont pas stockées sous une forme qui permet de communiquer avec les élèves.
-      Les élèves ne recevront jamais d''e-mails de Code.org à l’exception de la récupération
-      de mot de passe. Consultez notre [politique de confidentialité](%{privacy_policy_url})
-      pour plus d’informations.'
-    enter_new_login_info: Saisissez vos nouvelles informations de connexion
-    confirm_secret_words: Confirmez votre identité en entrant vos mots secrets actuels
-    parent_email_label: E-mail du parent / tuteur (facultatif)
-    parent_email_hint: "(cela peut être utilisé pour la récupération du mot de passe)"
-    enter_parent_email: Entre l'adresse e-mail de tes parents ou de ton tuteur (pour
-      la récupération du mot de passe)
-    update: Mise à jour du compte
-    account_successfully_updated: Compte actualisé avec succès.
-    auth_option_saved: Vous avez réussi à lier votre %{provider} compte avec l'adresse
-      électronique %{email}.
-    auth_option_saved_no_email: Vous avez réussi à lier votre %{provider} compte.
-    update_email: Mise à jour
-    for_parents_and_guardians: Pour les parents et tuteurs
-    link_a_parent_email: Associez l'adresse électronique d'un parent/tuteur à ce compte
-      afin de rester informé des progrès et des projets de votre enfant. Vous pourrez
-      également utiliser cette l'adresse électronique pour récupérer le mot de passe.
-    parent_guardian_email_label: E-mail du parent/tuteur
-    remove_parent_email_label: Supprimer
-    none: Aucun
-    only_one_parent_email_supported_warning: 'Remarque : notre système ne supporte
-      qu''une seule adresse électronique de parent/tuteur par compte étudiant, pour
-      le moment.'
-    encrypted: chiffré
-  user_level:
-    completed: Terminé
-    tried: A essayé
-  home:
-    title: Code Studio
-    all_courses: Présentation des cours 1, 2 et 3
-    lesson_plans: Plans des cours
-    signin_message: Déjà enregistré? %{link}
-    student_reg_link: S'inscrire en tant qu’élève
-    teacher_reg_link: S'inscrire en tant qu’enseignant
-    signin_directions: Utilisez un compte pour suivre les progrès.<br/> Enseignants,
-      suivez l'ensemble de votre classe.
-    teacher_dashboard: Voir le tableau de bord des progrès
-    teacher_student_count_one: Vous avez %{count} élève.
-    teacher_student_count: Vous avez %{count} élèves.
-    teacher_averages: En moyenne, vos élèves ont gagné  %{trophy_average} sur %{trophy_max}
-      trophées «Maîtrise du Concept».
-    teacher_print_certificates: Imprimer les certificats pour les élèves ayant terminé
-      ce cours
-    teacher_read_blog: Lisez l'actualité et les mises à jour de notre matériel sur
-      notre Blog Enseignant
-    classroom: Votre classe
-    student_progress: Les progrès d’apprentissage
-    student_stats: Vous avez remporté %{trophy_count} trophées «Maîtrise du Concept»
-      sur %{trophy_max}.
-    student_left_off: 'Vous vous êtes arrêté à cet endroit la dernière fois:'
-    student_finished: Vous avez terminé tous les tutoriels de Code.org. Choisir une
-      autre classe %{online_link} ou une autre école  %{local_school_link}.
-    local_school: école locale
-    online: en ligne
-    see_details: Voir les détails
-    view_course: Voir le cours
-    prize_info: 'Prix de participation (enseignants des écoles publiques des États-Unis
-      uniquement): Jusqu''à 1 000 $ de récompenses pour la classe.'
-    tryfirst: 'Ou, vous pouvez d’abord essayer et vous inscrire plus tard :'
-    trynow: Essaie maintenant
-    add_hint_help: Aidez-nous à ajouter des astuces pertinentes aux tutoriels de Code.org
-    20hour_overview: Ce cours de 20 heures couvre les concepts fondamentaux de l'informatique
-      et de la programmation. Le cours est conçu pour être utilisé avec des élèves
-      de primaire, mais reste amusant pour tous les âges.
-    test_videos_help: Essayez notre nouveau lecteur vidéo dans votre école
-    try_beta_courses: Nouveau ! Essayez nos cours bêta pour les élèves de CM2
-    use_as_teacher: Utiliser ce site en tant qu'enseignant
-    heading_elementary_markdown: |-
-      ## 20 heures de parcours pour les
-
-      # Fondamentaux d'Informatique (tous les ages)
-    your_gallery: Galerie
-    no_primary_course: Essaye un cours Code Studio
-    choose_next_course: Essaye un cours Code Studio en le choisissant ci-dessous
-    print_certificate: Imprimer le certificat
-  certificate_sponsor_message: "%{sponsor_name} a fait le don généreux de parrainer
-    ton apprentissage."
-  certificate_hour_of_code: Heure de Code
-  move_students:
-    new_section_dne: Désolé, la section %{new_section_code} n’existe pas. Veuillez
-      saisir un code de section différent.
-    section_code_cant_be_current_section: La section courante ne peut pas être identique
-      à la nouvelle section.
-    current_section_dne: Désolé, la section %{current_section_code} n’existe pas.
-      Veuillez saisir un code de section différent.
-    student_ids_not_entered: Veuillez fournir les IDs des élèves.
-    student_not_found: Un ou plusieurs élèves n'ont pas été trouvés.
-    all_students_must_be_in_current_section: Tous les élèves doivent être inscrits
-      dans votre section.
-    already_enrolled_in_new_section: Vous ne pouvez pas déplacer ces élèves car ils
-      sont déjà dans une autre section.
-    third_party_login: Vous ne pouvez pas déplacer d’élèves dans une section qui est
-      synchronisée avec l’outil d’un tiers.
-    not_correct_participant_type: Impossible de déplacer ces utilisateurs car ils
-      n'ont pas les autorisations nécessaires pour participer à la nouvelle section.
-  share:
-    title: Apprends avec Code Studio
-    description: Tout le monde peut apprendre l’informatique. Crée des jeux, des applications
-      et de l'art avec du code.
-    try_hour_of_code: Essaie une Heure du Code !
-  gender:
-    male: Masculin
-    female: Féminin
-    non_binary: Non binaire
-    not_listed: Terme préféré non listé
-    none: Préfère ne pas répondre
-  user_type:
-    student: Élève
-    teacher: Professeur
+        user_type_change_email_mismatch: L’adresse e-mail fournie ne correspond pas
+          à l’adresse e-mail de ce compte
+  dialog:
+    ok: OK
+    startover_body: Cette action va réinitialiser le casse-tête à son état de départ
+      et supprimer tous les blocs que tu as ajoutés ou changés.
+    startover_cancel: Annuler
+    startover_ok: Recommencer
+    startover_title: Es-tu certain(e) de vouloir recommencer ?
+  done_with_module: Module d'apprentissage terminé
+  download_coming_soon: Activité téléchargeable prochainement.
+  download_pdf: Ouvrir le plan de cours
+  errors:
+    messages:
+      not_saved: 'Veuillez corriger les erreurs suivantes:'
+      pair_programmer: Vous êtes en train de programmer avec un élève qui n'a pas
+        accès à ce contenu. Pour accéder à ce contenu, arrêtez la programmation en
+        binôme et essayez à nouveau.
+      teacher_must_accept_terms: Ce contenu est soumis à des restrictions d'age et
+        n'est pas disponible pour les jeunes élèves. Demandez à votre professeur d'approuver
+        les nouvelles conditions d'utilisation pour vous donner l'accès à ce contenu.
+        Votre professeur peut le faire en se connectant sur Code Studio et en cliquant
+        sur le bouton « Voir les conditions mises à jour » en haut de la page d'accueil
+        de Code Studio.
+      too_young: Ce contenu est soumis à des restrictions d'age et n'est pas disponible
+        pour les jeunes élèves.
+  external_links:
+    disclaimer: Clause de non-responsabilité
+    disclaimer_text: Ce site peut avoir une politique de confidentialité qui diffère
+      de Code.org. Nous avons sélectionné ces ressources de tierces parties car nous
+      pensons qu'elles vous serons utiles. Nous ne sommes pas directement responsables
+      du contenu de ces sites, toutefois, vous pouvez <a href='%{support_url}'>contacter
+      le support</a> si vous trouvez des contenus suspects ou si les liens ne sont
+      plus actifs.
+    leaving_domain: Vous quittez maintenant ce domaine pour un site qui n’est pas
+      géré par Code.org.
+  follower:
+    added_teacher: "%{name} ajouté en tant que ton enseignant"
+    already_exists: Tu as déjà rejoint la section %{section_name}.
+    captcha_required: Veuillez remplir le CAPTCHA pour rejoindre cette section.
+    error:
+      blank_code: Saisis un code de section.
+      cant_join_own_section: Désolé, tu ne peux pas te joindre à ta propre section.
+      full_section: Nous n'avons pas pu vous ajouter à la section %{section_code},
+        car elle contient déjà %{section_capacity} élèves. Veuillez contacter votre
+        professeur pour obtenir de l'aide.
+      no_teacher: Impossible de trouver quelqu'un de connecté avec «% {teacher_email_or_code}».
+        Demande-leur de s’inscrire ici et puis réessaie de les ajouter.
+      not_participant_type: Nous n'avons pas pu vous ajouter à la section %{section_code},
+        vous ne remplissez pas les conditions pour y participer.
+      provider_managed_section: Cette section est gérée par un autre fournisseur et
+        ne peut pas être rejointe. Demande à ton professeur de t’ajouter via %{provider}
+        et de resynchroniser sa section.
+      restricted_section: Nous n'avons pas pu vous ajouter à la section %{section_code},
+        car elle est verrouillée. Veuillez contacter votre professeur pour obtenir
+        de l'aide.
+      section_not_found: Impossible de trouver une section avec le code «%{section_code}».
+      signed_in: Merci de te déconnecter avant de continuer
+      username_in_use: "%{username} est déjà utilisé, merci d’en choisir un autre"
+      username_not_found: Nom d'utilisateur %{username} introuvable
+    invite_sent: Invitation envoyée
+    mail:
+      student_disassociated:
+        subject: 'Notification de Code.org: %{student_name} n''est plus considéré
+          comme l''un de vos élèves.'
+    registered: Vous vous êtes inscrit à %{section_name}.
   footer:
-    thank_you: Nous tenons à remercier nos <a href="https://code.org/about/donors">
-      donateurs</a>, <a href="https://code.org/about/partners"> partenaires</a>, nos
-      <a href="https://code.org/about/team"> équipes</a>, notre casting vidéo et nos
-      <a href="https://code.org/about/advisors"> conseillers d'éducation</a> pour
-      leur soutien lors de la création de Code Studio.
-    help_from_html: Nous tenons particulièrement à remercier les ingénieurs d’Amazon,
-      de Google et de Microsoft, qui ont contribué à la création de ce matériel.
-    help_from_html_old: Des ingénieurs de chez Google, Microsoft, Facebook et Twitter
-      ont contribué à créer ces documents de formation.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits
       réservés. <br />Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm.
       Tous droits réservés.<br />La reine des neiges&#8482; &copy; %{current_year}
@@ -740,513 +296,63 @@ fr:
       Ltd. Tous droits réservés. Plantes contre Zombies&#8482; &copy; %{current_year}
       Electronic Arts Inc. Tous droits réservés. Le monde incroyable de Gumball est
       une marque commerciale et &copy; %{current_year} Cartoon Network.
+    built_on_code_studio: Développer sur Code Studio
+    built_on_github: Construit avec GitHub de Microsoft
     code_from_html: Code.org utilise p5.play, qui est distribué sous la licence <a
       href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
+    cookie_notice: " Utilisation des cookies"
+    copyright: Copyright
+    feedback: Fournir un commentaire
+    google_copyright: "&copy; Google Inc. utilisé avec autorisation. Google Classroom
+      est une marque déposée de Google Inc."
+    help_from_html: Nous tenons particulièrement à remercier les ingénieurs d’Amazon,
+      de Google et de Microsoft, qui ont contribué à la création de ce matériel.
+    help_from_html_old: Des ingénieurs de chez Google, Microsoft, Facebook et Twitter
+      ont contribué à créer ces documents de formation.
+    how_it_works: Comment ça marche
+    locale_select: Sélectionnez la langue
+    make_my_own_app: Développer ma propre application
+    more: Plus
     powered_by_aws: 'Amazon Web Services et le logo « Powered by AWS » sont des marques
       déposées d''Amazon.com, Inc. ou ses filiales aux États-Unis et/ou dans d''autres
       pays. '
-    built_on_github: Construit avec GitHub de Microsoft
-    google_copyright: "&copy; Google Inc. utilisé avec autorisation. Google Classroom
-      est une marque déposée de Google Inc."
-    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, le logo CODE et Hour
-      of Code&reg; sont des marques déposées de Code.org."
-    copyright: Copyright
-    more: Plus
-    feedback: Fournir un commentaire
-    translate: Portez-vous volontaire pour traduire vers votre langue
-    support: Assistance
-    support_url: http://support.code.org
-    tos_short: Conditions Générales
-    tos: Conditions Générales d'Utilisation
     privacy: Politique de confidentialité
     privacy_updated: Politique de confidentialité (mise à jour)
-    secure: Version sécurisée
     report_abuse: Signaler un abus
-    built_on_code_studio: Développer sur Code Studio
-    make_my_own_app: Développer ma propre application
-    how_it_works: Comment ça marche
-    try_hour_of_code: Essaie une Heure du Code !
+    secure: Version sécurisée
     store: Boutique
-    cookie_notice: " Utilisation des cookies"
-  reference_area:
-    title: Besoin d'aide ?
-    subtitle: Regarder les vidéos et les indices
-    teacher: Voir la solution
-    teacher_no_solution: Ne pas montrer la solution
-    auth_error: Tu n’es pas autorisé à voir la solution.
-    submit: Mettre à jour la localisation de l'artiste
-    direction: Direction au départ (en degrés)
-  video:
-    tab: Vidéo.
-    notes: Pas de vidéo ? Voir les notes.
-    notes_coming_soon: Il y aura bientôt des notes pour cette vidéo.
-    autoplay_option: Lire les vidéos automatiquement
-    download: Télécharger la vidéo
-    show_notes: Afficher les Notes
-    show_video: Afficher la Vidéo
-    label: 'Vidéo '
-  compatibility:
-    upgrade:
-      unsupported_message: 'Votre navigateur n''est pas compatible. Merci de mettre
-        votre navigateur à jour avec [l''un des navigateurs compatibles avec nos services](%{supported_browsers_url}).
-        Vous pouvez essayer d’afficher la page, mais les fonctionnalités risquent
-        d’être compromises. '
-      link: En savoir plus
-      applab_unsupported_tablet: Le Labo des Applis fonctionne au mieux sur un ordinateur
-        portable ou fixe équipé d'une souris et d'un clavier. Il se peut que vous
-        rencontriez des difficultés en utilisant cet outil avec votre appareil actuel.
-      gamelab_unsupported_tablet: Le Labo Jeux fonctionne au mieux sur un ordinateur
-        portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez
-        des problèmes en utilisant cet outil avec votre appareil actuel.
-      weblab_unsupported_locale_storage: Il se peut que vous rencontriez des difficultés
-        en utilisant le Labo Web en mode Navigation Privée. Merci de réactualiser
-        votre projet en mode normal. Nous sommes désolés pour la gêne occasionnée.
-  slow_loading: Cela prend plus de temps que d'habitude...
-  try_reloading: Essaie de recharger la page
-  next_stage: Terminé! Continue vers l'étape suivante
-  download_pdf: Ouvrir le plan de cours
-  lesson_plan: Plan de cours
-  view_lesson_plan: Voir le plan de cours
-  pdf_download: Télécharger le PDF
-  download_coming_soon: Activité téléchargeable prochainement.
-  video_coming_soon: Vidéo bientôt disponible !
-  share_code:
-    title: Clique sur « Démarrer » pour voir mon programme en action.
-    bounce_og_title: Vérifier mon jeu de rebond
-    flappy_og_title: Vérifier mon jeu Flappy l’oiseau
-    studio_og_title: Vérifier mon application Labo de jeux
-    check_out_what_i_made: Aller voir ce que j'ai fait
-    og_description: J'ai écrit le code moi-même avec Code.org
-    phone_number_not_allowed: On dirait qu’il y a un numéro de téléphone dedans. Essaie
-      de modifier le texte.
-    address_not_allowed: On dirait qu’il y a une adresse dedans. Essaie de modifier
-      le texte.
-    email_not_allowed: On dirait qu’il y a un e-mail dedans. Essaie de modifier le
-      texte.
-    profanity_not_allowed: On dirait qu’il y a des injures dedans. Essaie de modifier
-      le texte.
-  builder:
-    created: Tu as créé un nouveau script.
-    destroyed: Tu as détruit un script.
-    manage: Développer des niveaux
-    view: Affichage
-    back: Retour aux scripts
-    success: Tu as modifié les blocs avec succès.
-    level:
-      create: Crée un nouveau niveau
-      current: Niveaux Actuels
-      unused: Niveaux Inutilisés
-  upsell:
-    applab:
-      title: Labo des applis
-      body: App Lab est un environnement de programmation où vous pouvez créer des
-        applications simples. Concevez une application, codez-la avec des blocs ou
-        avec JavaScript, puis partagez-la en quelques secondes.
-      body_short: Concevez une application, codez à l'aide de blocs ou en JavaScript
-        pour la faire fonctionner, puis partagez votre application en quelques secondes.
-      audience: 'Âge recommandé: 13 ans et plus'
-      cta: Apprendre comment
-    aquatic:
-      title: Minecraft
-    dance-2019:
-      title: Soirée Dansante
-    dance:
-      title: Soirée Dansante
-    flappy:
-      title: Flappy l'oiseau
-      body: Tu veux écrire ton propre jeu en moins de 10 minutes ? Essaie notre tutoriel
-        de Code Flappy !
-    frozen:
-      title: La Reine des neiges
-    gallery:
-      title: Galerie
-      body: Regarde une galerie des applications et des images d'artistes créées par
-        nos utilisateurs.
-    gamelab:
-      title: Labo Jeux
-      body: Le Labo Jeux est un environnement de programmation où on peut créer des
-        animations simples et des jeux avec des objets et des personnages qui interagissent
-        entre eux.
-      audience: 'Âge recommandé: 13 ans et plus'
-      cta: Apprendre comment
-    hello-world:
-      title: Bonjour tout le monde !
-      body: Choisis entre quatre activités amusantes pour programmer des personnages
-        interactifs dans un monde que tu as créé!
-    hero:
-      title: Minecraft
-      body: Minecraft est de retour pour l’Heure de code avec une toute nouvelle activité !
-        Exploration de Minecraft avec le code.
-    hoc-encryption:
-      title: Cryptage simple
-      body: Les élèves apprendront les techniques pour créer et casser des messages
-        chiffrés.
-    hoc:
-      title: Labyrinthe classique
-      body: Essaie les fondamentaux de l'informatique. Des millions ont essayé.
-    hoc2014:
-      try_new_tutorial: Essaie notre nouveau tutoriel Heure de Code en version bêta
-      try_frozen: Artiste avec Anna et Elsa, de La Reine des neiges
-    infinity:
-      title: Labo Jeux Infinity
-      body: Utilise le Labo Jeux pour créer une histoire ou un jeu mettant en scène
-        les personnages de Disney Infinity.
-    minecraft:
-      title: Minecraft
-      body: Explore un monde Minecraft à travers son code.
-    minecraft2016:
-      title: Minecraft
-      body: Créez un jeu Minecraft. Créez vos propres versions des poulets, des moutons,
-        des creepers, des zombies et bien d'autres encore.
-    poem-art:
-      title: Art du poème
-      body: Exprime-toi! Programme un poème animé.
-    sports:
-      title: Sports
-      body: Créer un jeu de basket ou un mélange de différents sports.
-    starwars:
-      title: Star Wars
-    text-compression:
-      title: Compression de texte
-      body: Dans cette leçon, les élèves utiliseront le Widget de Compression de Texte
-        pour compresser le texte en remplaçant des modèles par des symboles.
-    weblab:
-      title: Le Labo du Web (beta)
-      body: Le Labo Web est un environnement de programmation où tu peux créer des
-        pages web simples, en utilisant l'HTML et le CSS. Crée tes pages web et partage
-        ton site en quelques instants.
-      audience: 'Âge recommandé: 13 ans et plus'
-      cta: Apprendre comment
-    widgets:
-      title: Widgets
-      body: Les élèves peuvent découvrir les concepts de notre cours pratique sur
-        les Principes de l'Informatique en utilisant ces outils numériques. Utilisez
-        les widgets directement, ou bien créez une leçon focalisant sur un seul concept,
-        pour votre classe.
-      audience: 14 ans et +
-      cta: Apprendre comment
-    unplugged_conditionals:
-      title: Instructions conditionnelles
-      body: Découvre les algorithmes et les déclarations conditionnelles, dans cette
-        activité « déconnectée », en t’appuyant sur un jeu de cartes.
-    unplugged:
-      title: Leçons en mode « déconnecté »
-      audience: À partir de 4 ans
-      body: Nous avons compilé une liste de leçons en mode « déconnecté » que vous
-        pouvez utiliser en classe. Vous pouvez désormais enseigner les bases de l'informatique,
-        que vous ayez ou non des ordinateurs dans votre classe ! Essayez d'utiliser
-        ces leçons sous forme de cours indépendant ou sous forme de leçons complémentaires
-        à l'un de vos cours d'informatique.
-      body_short: Si vous n'avez pas d'ordinateurs, essayez ces leçons en mode « déconnecté »
-        dans votre classe.
-    20-hour:
-      title: Cours accéléré
-      body: Ce cours de 20 heures couvre les concepts des fondamentaux de l'informatique
-        et de la programmation des Cours 2 à 4. Le cours est conçu pour être utilisé
-        avec des élèves de 10 à 18 ans. Découvre les Cours 2 à 4 pour une expérience
-        plus complète !
-      body_short: Apprends les fondamentaux de l'informatique avec une version accélérée
-        des cours 2 à 4.
-  landing:
-    prerelease_tutorial: Ce didacticiel est en version **beta**. Il est sujet à révision,
-      en fonction des commentaires, et des améliorations sont ensuite apportées.
-    report_bug: Signaler un bogue
-    support: Obtenir de l'aide
-    support_url: "//support.code.org"
-    help_resources: Aide et ressources
-    help_support: Aide et assistance technique
-    documentation: Documentation
-    tutorials: Didacticiels
+    support: Assistance
+    support_url: http://support.code.org
+    thank_you: Nous tenons à remercier nos <a href="https://code.org/about/donors">
+      donateurs</a>, <a href="https://code.org/about/partners"> partenaires</a>, nos
+      <a href="https://code.org/about/team"> équipes</a>, notre casting vidéo et nos
+      <a href="https://code.org/about/advisors"> conseillers d'éducation</a> pour
+      leur soutien lors de la création de Code Studio.
+    tos: Conditions Générales d'Utilisation
+    tos_short: Conditions Générales
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, le logo CODE et Hour
+      of Code&reg; sont des marques déposées de Code.org."
+    translate: Portez-vous volontaire pour traduire vers votre langue
+    try_hour_of_code: Essaie une Heure du Code !
+    view_code: Afficher le code
   free_response:
     placeholder: Entre ta réponse ici
-  multi:
-    wrong_title: Réponse incorrecte
-    wrong_body: La réponse que tu as saisie est incorrecte.  Merci de réessayer !
-    correct_title: Correct
-    correct_body: C'est la bonne réponse.
-    toofew_title: Trop peu de réponses.
-    toofew_body: S’il vous plaît sélectionnez deux réponses avant d'envoyer.
-  multi-submittable:
-    wrong_title: Merci
-    wrong_body: Merci d'avoir envoyé une réponse.
-    correct_title: Merci
-    correct_body: Merci d'avoir envoyé une réponse.
-    toofew_title: Trop peu de réponses.
-    toofew_body: S’il vous plaît sélectionnez deux réponses avant d'envoyer.
-  level_group:
-    wrong_title: Merci
-    wrong_body: Merci d'avoir envoyé des réponses.
-    correct_title: Merci
-    correct_body: Merci d'avoir envoyé des réponses.
-    hide_survey_last_answer: Cette enquête est anonyme. Veuillez consulter le tableau
-      de bord de l'enseignant pour des résultats agrégés.  Notez que les résultats
-      ne sont visibles que si au moins cinq élèves ont répondu à l’enquête.
-    survey_submission_thankyou: Merci d'avoir répondu à cette enquête! L’enquête a
-      été effacée de manière à ce que tes réponses restent anonymes. Note que ton
-      professeur pourra toujours voir les réponses de toute la classe, mais sans les
-      noms correspondants.
-  level_group-submittable:
-    wrong_title: Merci
-    wrong_body: Merci d'avoir envoyé des réponses.
-    correct_title: Merci
-    correct_body: Merci d'avoir envoyé des réponses.
-    unsubmit-title: Retirer ton évaluation
-    unsubmit-body: Retirer ton évaluation va réinitialiser l'heure et la date d'envoi.
-      Es-tu sûr ?
-    submit-incomplete-title: Envoyer une évaluation
-    submit-incomplete-body: Tu as laissé quelques questions sans réponse. Tu ne pourras
-      plus modifier ton évaluation après l'avoir envoyée. Es-tu sûr ?
-    submit-complete-title: Envoyer une évaluation
-    submit-complete-body: Tu ne pourras plus modifier ton évaluation après l'avoir
-      envoyée. Es-tu sûr ?
-  match:
-    wrong_title: Solution incorrecte
-    wrong_body: La solution que tu as saisie est incorrecte.  Merci de réessayer !
-    correct_title: Correct
-    correct_body: C'est la bonne réponse.
-  contract_match:
-    wrong_title: Réponse incorrecte
-    badname: Ton contrat comporte un nom incorrect.
-    badname_case: Les noms de fonction respectent la casse. Essaie de modifier la
-      casse du nom de ton contrat.
-    badrange: Ton contrat n’est pas dans la bonne gamme.
-    baddomainsize: Ton contrat n'a pas le bon nombre d'éléments dans son domaine.
-    baddomainname: Un ou plusieurs éléments de ton domaine ont le mauvais nom.
-    baddomaintype: Un ou plusieurs éléments de ton domaine ont le mauvais type ou
-      sont dans le mauvais ordre.
-  text_match:
-    placeholder: Entre ta réponse ici
-    open_response_title: Merci
-    open_response_body: Merci pour ta réponse !
-    correct_title: Correct
-    correct_body: C'est la bonne réponse.
-  lesson_extras:
-    bonus_level: Niveau bonus
-  dialog:
-    ok: OK
-    startover_title: Es-tu certain(e) de vouloir recommencer ?
-    startover_body: Cette action va réinitialiser le casse-tête à son état de départ
-      et supprimer tous les blocs que tu as ajoutés ou changés.
-    startover_ok: Recommencer
-    startover_cancel: Annuler
-  time:
-    hour: 1 heure
-    day: jour
-    week: semaine
-  age_interstitial:
-    age: Ton âge
-    header: Mise à jour des informations du compte
-    warning: Nous sommes en train de mettre à jour notre plateforme afin de vous offrir
-      une protection renforcée des données personnelles. Pour ce faire, nous demandons
-      aux utilisateurs existants d'entrer leur âge.
-    disclaimer: Comme toujours, Code.org ne louera pas, ne vendra pas ou ne partagera
-      pas ces informations avec des tiers.
-    sign_out_markdown: Si vous ne souhaitez pas indiquer votre âge, vous pouvez vous
-      [déconnecter](%{url}).
-  terms_interstitial:
-    title: Mise à jour des conditions d’utilisation et de la politique de confidentialité
-    intro_desc: Nous avons mis à jour nos conditions d’utilisation et politique de
-      confidentialité, tel que montré ci-dessous. Les changements sont en vigueur
-      à partir du 24 août 2016.  Le changement le plus important est que nous n'allons
-      <i>plus stocker les adresses e-mail des élèves sur Code Studio.</i> C'est très
-      important pour nous et nous espérons établir ainsi un nouveau standard pour
-      la protection de la vie privée des élèves dans les technologies de l’éducation.
-      Nous vous avons envoyé un résumé des autres modifications par e-mail.
-    intro_desc_markdown: Nous avons mis à jour nos conditions d’utilisation et politique
-      de confidentialité, tel que montré ci-dessous. Les changements sont en vigueur
-      à partir du 24 août 2016. Le changement le plus important est que nous n'allons
-      _plus stocker les adresses e-mail des élèves sur Code Studio._ C'est très important
-      pour nous et nous espérons établir ainsi un nouveau standard pour la protection
-      de la vie privée des élèves dans les technologies de l’éducation. Nous vous
-      avons envoyé un résumé des autres modifications par e-mail.
-    intro_instructions: Vous devrez accepter ces nouvelles conditions pour que vos
-      élèves âgés de moins de 13 ans aient un accès complet aux dernières fonctionnalités
-      de Code Studio. Lorsque vous créez un compte pour un élève de moins de 13 ans,
-      vous devrez confirmer que votre école a un accord des parents pour la collecte
-      de renseignements personnels de l’élève à l’usage et au profit de l’école, y
-      compris les programmes éducatifs tels que Code Studio.
-    tos: Conditions Générales d'Utilisation
-    privacy: Politique de confidentialité
-    privacy_notice: Déclaration de confidentialité
-    accept_label: J'accepte les <a href="%{tos_url} » target="_blank"> Conditions
-      d’Utilisation</a> et la<a href="%{privacy_url} » target="_blank"> Politique
-      de Confidentialité</a>
-    accept_label_markdown: J'accepte la mise à jour des [Conditions d’utilisation](%{tos_url})
-      et de la[Politique de confidentialité](%{privacy_url})
-    accept_tos: En vous inscrivant sur Corde.org, vous acceptez nos [Terms of Service](%{tos_url})
-      et [Privacy Policy](%{privacy_url}).
-    accept: Accepter 
-    print: Imprimer
-    reminder_desc: Nous avons mis à jour nos <a href="%{tos_url} » target="_blank">Conditions
-      d’utilisation</a> et notre<a href="%{privacy_url} » target="_blank">Politique
-      de confidentialité</a>. Veuillez les lire soigneusement avant de les accepter.
-      Notez que nos outils pédagogiques JavaScript peuvent être indisponibles pour
-      vos élèves avant votre acceptation expresse des conditions mises à jour.
-    reminder_desc_markdown: Nous avons mis à jour nos [Conditions d’utilisation](%{tos_url})
-      et notre[Politique de confidentialité](%{privacy_url}). Veuillez les lire soigneusement
-      avant de les accepter. Notez que nos outils pédagogiques JavaScript peuvent
-      être indisponibles pour vos élèves avant votre acceptation expresse des conditions
-      mises à jour.
-    review_terms: Consulter les éléments modifiés
-  school_info_interstitial:
-    title: Nous voulons apporter l'Informatique à tous les élèves - aidez-nous à suivre
-      notre progression !
-    message: Veuillez saisir les informations de l’école ci-dessous.
-    message_with_suggestion: Veuillez vérifier que les informations suivantes soient
-      correctes et corrigez-les si nécessaire.
-    save: Sauvegarder
-  race_interstitial:
-    title: 'En option : Aidez-nous à évaluer les progrès de nos actions en faveur
-      de la diversité en informatique'
-    message: Veuillez nous dire votre ethnicité (plusieurs choix possibles)
-    races:
-      white: Blanc
-      black: Noir ou afro-américain
-      hispanic: Hispanique ou latino
-      asian: Asiatique
-      hawaiian: Hawaïen indigène ou autres îles du Pacifique
-      american_indian: Indien d'Amérique ou Alaska
-      other: Autre
-      opt_out: Préfère ne pas le dire
-    submit: Envoyer
-    decline: Fermer
-  zendesk_too_young_message: Désolé, les plus jeunes utilisateurs ne peuvent pas accéder
-    à notre site d’aide. Tu peux parcourir <a href="http://support.code.org"> support.code.org</a>
-    sans t’authentifier ou demander à tes parents ou ton enseignant de nous contacter
-    à ta place.
-  zendesk_too_young_message_markdown: Désolé, les plus jeunes utilisateurs ne peuvent
-    pas accéder à notre site d’aide. Tu peux parcourir [support.code.org](http://support.code.org)
-    sans t’authentifier ou demander à tes parents ou ton enseignant de nous contacter
-    à ta place.
-  progress:
-    not_started: pas commencé
-    in_progress: en cours
-    completed_too_many_blocks: terminé, trop de blocs
-    completed_perfect: terminé, parfait
-    furthest_level_attempted: le plus haut niveau tenté
-    assessment: évaluation
-    submitted: envoyé
-  studio:
-    courses_working_on: Les cours sur lesquels tu travailles
-    completed_courses: Cours terminés
-    all_courses: Tous les cours
-  project:
-    projects: Projets
-    create: Crée un projet
-    create_a_project: 'Crée un nouveau projet :'
-    new: Créer un nouveau projet
-    exit: Retourner au cours
-    project_gallery: Projets
-    publish: Publier
-    unpublish: Annuler la Publication
-    share_title: Partage ton projet
-    share_copy_link: 'Copie le lien :'
-    share_embed_description: Vous pouvez copier le code intégré dans une page HTML
-      pour afficher le projet sur une page web.
-    share_u13_warning: Demande à ton professeur avant de partager. Partage seulement
-      des gens de ton école.
-    embed: Intégrer
-    advanced_share: Afficher les options avancées
-    no_projects: Tu n’as actuellement aucun projet. Clique sur un des boutons ci-dessus
-      pour démarrer un projet.
-    name: Nom
-    updated: Mis à jour
-    project_type: Type de projet
-    help_text: Clique sur <strong>Développer une application</strong> ou <strong>Dessiner
-      quelque chose</strong> ci-dessous pour créer un nouveau Labo de jeux ou d'artistes
-      !<br/>Tu peux revenir travailler sur tes projets à tout moment.
-    need_help: Essaye ces cours pour t'aider à démarrer un nouveau projet
-    thumbnail_help: Tu ne vois pas la bonne vignette pour ton projet ? Lance ton appli
-      pour générer une nouvelle vignette. Note que cela peut prendre quelques heures
-      pour que la vignette soit actualisée partout.
-    saved: Enregistré
-    not_saved: Non enregistré
-    view_all: Afficher « Mes projets »
-    edit_project: Modifier le projet
-    sharing_disabled: Désolé, ce projet ne peut pas être partagé. Si c'est votre projet
-      ou celui de vos élèves, veuillez vous <a href='https://studio.code.org/users/sign_in'>connecter</a>
-      à votre compte pour voir ce projet.
-    abuse:
-      tos: Ce projet a été signalé comme ne respectant pas les <a href='http://code.org/tos'>Conditions
-        générales d'utilisation</a> de Code.org, et ne peut donc pas être partagé
-        avec d'autres développeurs.
-      policy_violation: Ce projet contient des informations qui ne peuvent pas être
-        partagées. Contactez le propriétaire de l’application pour corriger le contenu
-        de leur application.
-      contact_us: Si tu penses qu'il s'agit d'une erreur, merci de <a href='https://code.org/contact'>
-        nous contacter.</a>
-      go_to_code_studio: Aller sur Code Studio
-      report_abuse_form:
-        intro: Si tu as découvert un contenu offensant, des menaces, de la cyber-intimidation,
-          du harcèlement ou que tu possèdes des droits d'auteur pour le contenu créé
-          à l'aide d'applications développées sur Code Studio, merci de remplir le
-          formulaire ci-dessous. Nous étudierons ton rapport très sérieusement, enquêterons
-          comme il se doite et prendrons les mesures appropriées.
-        validation:
-          email: Merci de donner une adresse e-mail
-          age: Merci de donner ton âge
-          abuse_type: Merci de préciser comment ce contenu viole les Conditions générales
-            d'utilisation
-          abuse_detail: Merci de donner des précisions au sujet du contenu que tu
-            signales
-        abusive_url: URL du contenu signalé
-        abuse_type:
-          question: Comment ce contenu viole-t-il les %{link_start}Conditions générales
-            d'utilisation%{link_end} ?
-          harassment: Menaces, cyber-intimidation, harcèlement
-          offensive: Contenu offensant
-          infringement: Violation du droit d'auteur
-          other: Autre
-        detail: Merci de fournir autant de détails que possible au sujet du contenu
-          que tu signales.
-        acknowledge: En envoyant ces informations, tu reconnais qu'elles seront traitées
-          en accord avec la %{link_start_privacy}Politique de confidentialité%{link_end}
-          et les %{link_start_tos}Conditions générales d'utilisation%{link_end} en
-          vigueur.
-  peer_review:
-    accepted:
-      name: Accepté
-      description_markdown: "**Oui**, la réponse soumise **répond** aux exigences"
-    rejected:
-      name: Rejeté
-      description_markdown: "**Non**, la réponse soumise **ne répond pas** aux exigences"
-    escalated:
-      name: Remonté
-      description: Je voudrais qu'un instructeur examine cette proposition
-    instructor_feedback: Commentaires de l’instructeur
-    peer_feedback: Commentaire par les pairs
-    outdated: Ce commentaire a été émis pour une version précédente
-    review_count: Tu dois compléter %{review_count} révisions pour cette unité.
-    peer_review: Commentaire par un pair
-  external_links:
-    disclaimer: Clause de non-responsabilité
-    leaving_domain: Vous quittez maintenant ce domaine pour un site qui n’est pas
-      géré par Code.org.
-    disclaimer_text: Ce site peut avoir une politique de confidentialité qui diffère
-      de Code.org. Nous avons sélectionné ces ressources de tierces parties car nous
-      pensons qu'elles vous serons utiles. Nous ne sommes pas directement responsables
-      du contenu de ces sites, toutefois, vous pouvez <a href='%{support_url}'>contacter
-      le support</a> si vous trouvez des contenus suspects ou si les liens ne sont
-      plus actifs.
+  gender:
+    female: Féminin
+    male: Masculin
+    non_binary: Non binaire
+    none: Préfère ne pas répondre
+    not_listed: Terme préféré non listé
+  heading_x_of_y: "%{heading} (page %{x} sur %{y})"
+  hello: Bonjour tout le monde
+  hidden_script: Ton professeur n'avait pas prévu que tu travailles ici. Demande lui
+    quelle unité tu dois suivre.
+  hidden_stage: 'Ton enseignant n''avait pas prévu que tu te retrouves ici. Demande-lui
+    sur quelle leçon tu devrais travailler. '
   hoc_download:
-    title: Téléchargements d'Heure du Code
-    capsule_title: Vous avez Internet ?
     capsule_desc: Utilisez l'application en ligne [%{app_name}](%{url}).
-    instructions_headline: Pas d’Internet ?
-    instructions: 'Instructions pour les enseignants : si vous avez un débit Internet
-      faible, ces didacticiels Hour of  Code sont disponibles en téléchargement et
-      utilisables hors ligne. Choisissez votre langue et votre plateforme, téléchargez
-      et installez-les sur tous les ordinateurs dans votre salle de classe. Vous pouvez
-      utiliser une clé USB pour les télécharger une seule fois et les installer ensuite
-      sur chaque ordinateur. Remarque : les élèves ne pourront pas se connecter à  Code
-      Studio, ni enregistrer leur progression, ni imprimer les certificats. Les enseignants
-      peuvent imprimer les certificats à l''avance <a href="%{url}">ici</a>.'
-    minecraft_name: Heure de Code Minecraft
-    starwars_blocks_name: 'Star Wars : Construire une Galaxie avec du Code (Blocks)'
-    starwars_javascript_name: 'Star Wars : Construire une Galaxie avec du Code (JavaScript)'
-    download_message: Téléchargement de %{app_name} pour l'utilisation hors ligne
-      (136 Mo)
+    capsule_title: Vous avez Internet ?
     download_in_Albanian: 'Télécharger en Albanais:'
     download_in_Arabic: 'Télécharger en Arabe:'
     download_in_Azerbaijani: 'Télécharger en Azéri:'
@@ -1254,8 +360,8 @@ fr:
     download_in_Bosnian: 'Télécharger en Bosnien:'
     download_in_Bulgarian: 'Télécharger en Bulgare:'
     download_in_Catalan: 'Télécharger en Catalan:'
-    download_in_Chinese-Taiwan: 'Télécharger en Chinois (Taïwan):'
     download_in_Chinese: 'Télécharger en Chinois:'
+    download_in_Chinese-Taiwan: 'Télécharger en Chinois (Taïwan):'
     download_in_Croatian: 'Télécharger en Croate:'
     download_in_Czech: 'Télécharger en Tchèque:'
     download_in_Danish: 'Télécharger en Danois:'
@@ -1278,8 +384,8 @@ fr:
     download_in_Norwegian: 'Télécharger en Norvégien:'
     download_in_Norwegian-Nynorsk: 'Télécharger en Norvégien/Néo-Norvégien:'
     download_in_Polish: 'Télécharger en Polonais:'
-    download_in_Portuguese-Brazil: 'Télécharger en Portugais (Brésil):'
     download_in_Portuguese: 'Télécharger en Portugais:'
+    download_in_Portuguese-Brazil: 'Télécharger en Portugais (Brésil):'
     download_in_Romanian: 'Télécharger en Roumain:'
     download_in_Russian: 'Télécharger en Russe:'
     download_in_Serbian: 'Téléchargement en Serbe:'
@@ -1289,71 +395,473 @@ fr:
     download_in_Turkish: 'Télécharger en Turc:'
     download_in_Ukrainian: 'Télécharger en Ukrainien:'
     download_in_Vietnamese: 'Télécharger en Vietnamien:'
-    windows: Windows (64 bits)
+    download_message: Téléchargement de %{app_name} pour l'utilisation hors ligne
+      (136 Mo)
+    instructions: 'Instructions pour les enseignants : si vous avez un débit Internet
+      faible, ces didacticiels Hour of  Code sont disponibles en téléchargement et
+      utilisables hors ligne. Choisissez votre langue et votre plateforme, téléchargez
+      et installez-les sur tous les ordinateurs dans votre salle de classe. Vous pouvez
+      utiliser une clé USB pour les télécharger une seule fois et les installer ensuite
+      sur chaque ordinateur. Remarque : les élèves ne pourront pas se connecter à  Code
+      Studio, ni enregistrer leur progression, ni imprimer les certificats. Les enseignants
+      peuvent imprimer les certificats à l''avance <a href="%{url}">ici</a>.'
+    instructions_headline: Pas d’Internet ?
     mac: Mac OS X
+    minecraft_name: Heure de Code Minecraft
+    starwars_blocks_name: 'Star Wars : Construire une Galaxie avec du Code (Blocks)'
+    starwars_javascript_name: 'Star Wars : Construire une Galaxie avec du Code (JavaScript)'
+    title: Téléchargements d'Heure du Code
+    windows: Windows (64 bits)
+  home:
+    20hour_overview: Ce cours de 20 heures couvre les concepts fondamentaux de l'informatique
+      et de la programmation. Le cours est conçu pour être utilisé avec des élèves
+      de primaire, mais reste amusant pour tous les âges.
+    add_hint_help: Aidez-nous à ajouter des astuces pertinentes aux tutoriels de Code.org
+    all_courses: Présentation des cours 1, 2 et 3
+    choose_next_course: Essaye un cours Code Studio en le choisissant ci-dessous
+    classroom: Votre classe
+    heading_elementary_markdown: |-
+      ## 20 heures de parcours pour les
+
+      # Fondamentaux d'Informatique (tous les ages)
+    lesson_plans: Plans des cours
+    local_school: école locale
+    no_primary_course: Essaye un cours Code Studio
+    online: en ligne
+    print_certificate: Imprimer le certificat
+    prize_info: 'Prix de participation (enseignants des écoles publiques des États-Unis
+      uniquement): Jusqu''à 1 000 $ de récompenses pour la classe.'
+    see_details: Voir les détails
+    signin_directions: Utilisez un compte pour suivre les progrès.<br/> Enseignants,
+      suivez l'ensemble de votre classe.
+    signin_message: Déjà enregistré? %{link}
+    student_finished: Vous avez terminé tous les tutoriels de Code.org. Choisir une
+      autre classe %{online_link} ou une autre école  %{local_school_link}.
+    student_left_off: 'Vous vous êtes arrêté à cet endroit la dernière fois:'
+    student_progress: Les progrès d’apprentissage
+    student_reg_link: S'inscrire en tant qu’élève
+    student_stats: Vous avez remporté %{trophy_count} trophées «Maîtrise du Concept»
+      sur %{trophy_max}.
+    teacher_averages: En moyenne, vos élèves ont gagné  %{trophy_average} sur %{trophy_max}
+      trophées «Maîtrise du Concept».
+    teacher_dashboard: Voir le tableau de bord des progrès
+    teacher_print_certificates: Imprimer les certificats pour les élèves ayant terminé
+      ce cours
+    teacher_read_blog: Lisez l'actualité et les mises à jour de notre matériel sur
+      notre Blog Enseignant
+    teacher_reg_link: S'inscrire en tant qu’enseignant
+    teacher_student_count: Vous avez %{count} élèves.
+    teacher_student_count_one: Vous avez %{count} élève.
+    test_videos_help: Essayez notre nouveau lecteur vidéo dans votre école
+    title: Code Studio
+    try_beta_courses: Nouveau ! Essayez nos cours bêta pour les élèves de CM2
+    tryfirst: 'Ou, vous pouvez d’abord essayer et vous inscrire plus tard :'
+    trynow: Essaie maintenant
+    use_as_teacher: Utiliser ce site en tant qu'enseignant
+    view_course: Voir le cours
+    your_gallery: Galerie
+  join_section:
+    code:
+      instructions: 'Merci d''entrer votre code à 6 caractères que votre professeur
+        vous a donné (exemple : « ABCDEF ») pour rejoindre son groupe de classe.'
+      instructions_short: Entrez le code à 6 caractères de votre groupe de classe
+      placeholder: Code de la section (ABCDEF)
+      submit: Rejoindre
+      title: Rejoindre un groupe de classe sur Code.Org
+  k8intro: Cours d'Introduction à l'informatique pour l'école primaire (15-25 heures)
+  landing:
+    documentation: Documentation
+    help_resources: Aide et ressources
+    help_support: Aide et assistance technique
+    prerelease_tutorial: Ce didacticiel est en version **beta**. Il est sujet à révision,
+      en fonction des commentaires, et des améliorations sont ensuite apportées.
+    report_bug: Signaler un bogue
+    support: Obtenir de l'aide
+    support_url: "//support.code.org"
+    tutorials: Didacticiels
+  less: MOINS
+  lesson_extras:
+    bonus_level: Niveau bonus
+  lesson_lock:
+    error:
+      cannot_view_locked_answers: Impossible d'afficher les réponses lorsque le système
+        est verrouillé
+      forbidden: L'utilisateur ne peut pas modifier les paramètres de verrouillage
+        de l'apprenant
+      missing_params: Fournir les identifiants de l'utilisateur, le niveau et les
+        codes d'identification d'unité.
+      no_updates: Aucune mise à jour à effectuer
+  lesson_plan: Plan de cours
+  level_group:
+    correct_body: Merci d'avoir envoyé des réponses.
+    correct_title: Merci
+    hide_survey_last_answer: Cette enquête est anonyme. Veuillez consulter le tableau
+      de bord de l'enseignant pour des résultats agrégés.  Notez que les résultats
+      ne sont visibles que si au moins cinq élèves ont répondu à l’enquête.
+    survey_submission_thankyou: Merci d'avoir répondu à cette enquête! L’enquête a
+      été effacée de manière à ce que tes réponses restent anonymes. Note que ton
+      professeur pourra toujours voir les réponses de toute la classe, mais sans les
+      noms correspondants.
+    wrong_body: Merci d'avoir envoyé des réponses.
+    wrong_title: Merci
+  level_group-submittable:
+    correct_body: Merci d'avoir envoyé des réponses.
+    correct_title: Merci
+    submit-complete-body: Tu ne pourras plus modifier ton évaluation après l'avoir
+      envoyée. Es-tu sûr ?
+    submit-complete-title: Envoyer une évaluation
+    submit-incomplete-body: Tu as laissé quelques questions sans réponse. Tu ne pourras
+      plus modifier ton évaluation après l'avoir envoyée. Es-tu sûr ?
+    submit-incomplete-title: Envoyer une évaluation
+    unsubmit-body: Retirer ton évaluation va réinitialiser l'heure et la date d'envoi.
+      Es-tu sûr ?
+    unsubmit-title: Retirer ton évaluation
+    wrong_body: Merci d'avoir envoyé des réponses.
+    wrong_title: Merci
+  level_summary:
+    correct_answer: Bonne réponse
   locked_stage: Les contenus ne sont pas visibles car cette étape est verrouillée
     pour l'instant. Ton professeur la déverrouillera lorsqu'il sera temps de travailler
     dessus ou pour consulter tes réponses.
-  hidden_stage: 'Ton enseignant n''avait pas prévu que tu te retrouves ici. Demande-lui
-    sur quelle leçon tu devrais travailler. '
-  hidden_script: Ton professeur n'avait pas prévu que tu travailles ici. Demande lui
-    quelle unité tu dois suivre.
+  maker:
+    google_oauth:
+      confirm_login: Sélectionnez « Confirmer » pour vous connecter avec votre compte
+        Google.
+      copy_code: Veuillez copier et coller ce code à l'intérieur de l'application
+        Maker pour vous connecter à Code.org.
+      enter_code: Veuillez entrer le code fourni lors de votre connexion via Google
+        sur votre navigateur par défaut.
+      error_invalid_user: Identifiant invalide. Veuillez vous reconnecter.
+      error_no_code: Veuillez entrer votre code de connexion.
+      error_token_expired: Le jeton est expiré. Veuillez vous reconnectez pour un
+        nouveau jeton.
+      error_wrong_provider: Mauvais fournisseur. Veuillez vous assurez que vous vous
+        connectez avec Google.
+      login_with_google: Connectez - vous à l'application Maker avec Google
+  match:
+    correct_body: C'est la bonne réponse.
+    correct_title: Correct
+    wrong_body: La solution que tu as saisie est incorrecte.  Merci de réessayer !
+    wrong_title: Solution incorrecte
+  more: PLUS
+  more_info: Plus d'informations
+  move_students:
+    all_students_must_be_in_current_section: Tous les élèves doivent être inscrits
+      dans votre section.
+    already_enrolled_in_new_section: Vous ne pouvez pas déplacer ces élèves car ils
+      sont déjà dans une autre section.
+    current_section_dne: Désolé, la section %{current_section_code} n’existe pas.
+      Veuillez saisir un code de section différent.
+    new_section_dne: Désolé, la section %{new_section_code} n’existe pas. Veuillez
+      saisir un code de section différent.
+    not_correct_participant_type: Impossible de déplacer ces utilisateurs car ils
+      n'ont pas les autorisations nécessaires pour participer à la nouvelle section.
+    section_code_cant_be_current_section: La section courante ne peut pas être identique
+      à la nouvelle section.
+    student_ids_not_entered: Veuillez fournir les IDs des élèves.
+    student_not_found: Un ou plusieurs élèves n'ont pas été trouvés.
+    third_party_login: Vous ne pouvez pas déplacer d’élèves dans une section qui est
+      synchronisée avec l’outil d’un tiers.
+  multi:
+    correct_body: C'est la bonne réponse.
+    correct_title: Correct
+    toofew_body: S’il vous plaît sélectionnez deux réponses avant d'envoyer.
+    toofew_title: Trop peu de réponses.
+    wrong_body: La réponse que tu as saisie est incorrecte.  Merci de réessayer !
+    wrong_title: Réponse incorrecte
+  multi-submittable:
+    correct_body: Merci d'avoir envoyé une réponse.
+    correct_title: Merci
+    toofew_body: S’il vous plaît sélectionnez deux réponses avant d'envoyer.
+    toofew_title: Trop peu de réponses.
+    wrong_body: Merci d'avoir envoyé une réponse.
+    wrong_title: Merci
+  nav:
+    header:
+      about: À propos
+      about_contact: Nous contacter
+      about_donors: Donateurs
+      about_evaluation: Évaluation
+      about_faqs: FAQ
+      about_jobs: Emplois
+      about_leadership: Équipe de direction
+      about_news: Actualité
+      about_partners: Partenaires
+      about_team: Toute l'équipe
+      about_us: À propos
+      app_lab_documentation: Documentation sur le Labo des Applis
+      app_lab_tutorials: Tutoriels du Labo des Applis
+      course_catalog: Catalogue des cours
+      documentation: Documentation
+      educate_beyond: Aller plus loin
+      educate_community: Communauté en ligne
+      educate_elementary: École primaire
+      educate_high: Lycée
+      educate_hoc: Heure de Code
+      educate_inspire: Inspirer un élève
+      educate_middle: Collège
+      educate_overview: Aperçu enseignant
+      educate_partner: Devenir partenaire
+      educate_requirements: Pré-requis techniques
+      educate_tools: Outils et vidéos
+      finished_hoc: J'ai fini mon Heure de Code
+      game_lab_documentation: Documentation sur le Labo des Jeux
+      game_lab_tutorials: Tutoriels du Labo des Jeux
+      help_support: Aide et assistance technique
+      help_us: Nous aider
+      incubator: Incubateur
+      learn: Apprendre
+      legal: Confidentialité et mentions légales
+      legal_cookie_notice: " Utilisation des cookies"
+      legal_privacy: Politique de confidentialité
+      legal_tos: Conditions Générales d'Utilisation
+      my_dashboard: Mon Tableau de Bord
+      professional_learning: Apprentissage professionnel
+      project_beats_documentation: Documentation du projet Beats
+      project_gallery: Projets
+      report_abuse: Signaler un abus
+      report_bug: Signaler un problème
+      sections: Sections
+      sign_in_to_save: Connecte-toi pour enregistrer tes progrès.
+      sprite_lab_documentation: Documentation sur le Labo des Sprites
+      sprite_lab_tutorials: Tutoriels du Labo des Sprites
+      stats: Statistiques
+      teach: Enseigner
+      teacher_community: Communauté des enseignants
+      tutorials: Didacticiels
+      web_lab_documentation: Documentation Web Lab
+    popup:
+      close: FERMER
+      mastery: Concepts
+      prize_earned: Les %{total_trophies} trophées ont été remportés. Prix gagné !
+      prize_us_only: "(Uniquement pour les élèves vivant aux États-Unis)"
+      prizes: Remporte tous les %{total_trophies} trophées et gagne des prix!
+      prizes_link: Plus d'informations
+      progress: Ton progrès
+      progress_for_user: progrès de %{name}
+      puzzle_map: Étapes
+    user:
+      algebra_game: Algèbre
+      already_registered: Déjà enregistré ?
+      applab: Labo des applis
+      artist: Artiste
+      artist_k1: Artiste (Pré-lecteur)
+      basketball: Basket-ball
+      bounce: Rebond
+      calc: Calc
+      classroom: Page d'accueil de l'enseignant
+      create: Créer
+      dance: Soirée Dansante
+      district_dashboard: Tableau de bord du district
+      driver: Enregistré
+      eval: Eval
+      flappy: Flappy
+      frozen: La Reine des neiges
+      gamelab: Labo Jeux
+      gamelab_jr: Labo des jeux (beta)
+      gumball: Le monde incroyable de Gumball
+      iceage: L’âge de Glace
+      infinity: Infini
+      label: Bonjour %{username}
+      loading: Chargement...
+      logout: Déconnexion
+      makerlab: Maker Toolkit
+      minecraft_adventurer: Aventurier de Minecraft
+      minecraft_aquatic: Minecraft Aquatique
+      minecraft_codebuilder: 'Minecraft : Connexion au code'
+      minecraft_designer: Minecraft
+      minecraft_hero: Héros de Minecraft
+      my_projects: Mes projets
+      navigator: Partenaire
+      pair_programming: Programmation en binôme
+      playlab: Labo de jeux
+      playlab_k1: Labo du Jeu (Pré-lecteur)
+      poetry: Poésie
+      poetry_hoc: Art du poème
+      scratch: Scratch
+      settings: Mon compte
+      signin: Connexion
+      signup: Créer un compte
+      sports: Sports
+      spritelab: Le Labo des Sprites
+      starwars: Star Wars
+      starwarsblocks: Star Wars (blocs)
+      starwarsblocks_hour: Star Wars (blocs)
+      stats: Code Studio
+      team: Équipe
+      thebadguys: Les Bad Guys
+      view_all: Afficher tous les projets...
+      weblab: Labo Web
+  next_level: Niveau suivant
+  next_page: Page suivante
+  next_resource: Ressource suivante
+  next_stage: Terminé! Continue vers l'étape suivante
   no_course_access_student: Vous n'avez pas accès à ce cours. S'il vous plaît informez
     votre professeur quel cours vous devriez suivre.
   no_course_access_teacher: Vous n'avez pas accès à ce cours. Si vous penser que vous
     devriez avoir accès à ce cours, s'il vous plaît écrivez à support@code.org afin
     que nous puissions arranger la situation.
-  no_script_access_student: Tu n’as pas accès à cette unité. Merci de demander à ton
-    professeur quelle unité tu devrais suivre.
-  no_script_access_teacher: Tu n’as pas accès à cette unité. Si tu penses que tu devrais
-    avoir accès à cette unité, merci d’écrire à support@code.org afin que nous puissions
-    corriger la situation.
-  no_level_access_student: Tu n’as pas accès à cette unité. Merci de demander à ton
-    professeur quelle unité tu devrais suivre.
-  no_level_access_teacher: Tu n’as pas accès à cette unité. Si tu penses que tu devrais
-    y avoir accès, merci d’écrire à support@code.org afin que nous puissions corriger
-    la situation.
   no_exemplar: Aucun exemple n'existe pour ce niveau.
   no_exemplar_access_student: Les élèves ne peuvent accéder aux programmes d'exemple.
     Merci de demander à ton professeur quelle unité tu devrais suivre.
   no_exemplar_access_teacher: Seul les professeurs peuvent accéder aux programmes
     exemples. Si vous voulez devenir un professeur autorisé, prière d'écrire à support@code.org.
-  return_unit_overview: Aller à l’aperçu de l'unité
-  return_course_overview: Accéder à l’aperçu du cours
-  view_all_units: Voir toutes les unités
-  view_teacher_guide: Voir le guide de l'enseignant
+  no_level_access_student: Tu n’as pas accès à cette unité. Merci de demander à ton
+    professeur quelle unité tu devrais suivre.
+  no_level_access_teacher: Tu n’as pas accès à cette unité. Si tu penses que tu devrais
+    y avoir accès, merci d’écrire à support@code.org afin que nous puissions corriger
+    la situation.
+  no_script_access_student: Tu n’as pas accès à cette unité. Merci de demander à ton
+    professeur quelle unité tu devrais suivre.
+  no_script_access_teacher: Tu n’as pas accès à cette unité. Si tu penses que tu devrais
+    avoir accès à cette unité, merci d’écrire à support@code.org afin que nous puissions
+    corriger la situation.
+  of: de
+  okay: OK
+  or: ou
+  page_not_found_button: Retourner à la page d’accueil
+  page_not_found_description: La page recherchée n'existe pas à cette adresse. Vérifie
+    l'adresse du site internet et réessaie. Sinon, retourne sur la page d'accueil.
+  page_not_found_header: '404 : Page Introuvable'
+  page_not_found_title: Page Introuvable
+  parent_email_banner:
+    link_your_email: Associez votre adresse électronique
+    not_now: Pas maintenant
+    text: "**Êtes-vous un parent ou un tuteur ?** Associez votre adresse électronique
+      à ce compte afin de rester informé des progrès et des projets de votre enfant
+      !** "
+  parent_mailer:
+    parent_email_added_subject: Bienvenue sur Code.org!
+    parent_permission_confirmation_subject: Merci d'avoir approuvé l'accès de votre
+      enfant à Code.org !
+    parent_permission_reminder_subject: Rappel, consentement parental requis pour
+      l'accès de votre enfant à Code.org
+    parent_permission_request_subject: Consentement parental requis pour l'accès de
+      votre enfant à Code.org
+    student_associated_subject: Informations de connexion pour Code.org
+  password:
+    change_form:
+      confirm_password: Confirme le nouveau mot de passe
+      new_password: Nouveau mot de passe
+      submit: Changer mon mot de passe
+      title: Changer son mot de passe
+    reset_errors:
+      captcha_required: Veuillez remplir le CAPTCHA pour réinitialiser votre mot de
+        passe.
+      invalid_email: Il semble que vous vous soyez identifié avec une adresse e-mail
+        incorrecte. Veuillez envoyer un email à support@code.org pour recevoir un
+        lien de récupération de mot de passe.
+    reset_form:
+      email: Adresse e-mail
+      instructions: Entrez votre adresse e-mail ci-dessous et nous vous enverrons
+        les instructions pour la récupération de votre mot de passe.
+      submit: Envoyer
+      title: Mot de passe oublié ?
   pd:
+    form_entries:
+      ages:
+        ages_11_12: 11-12 ans
+        ages_13_14: 13-14 ans
+        ages_15_16: 15-16 ans
+        ages_17_18: 17-18 ans
+        ages_19_over: 19 ans et +
+        ages_7_8: 7-8 ans
+        ages_9_10: 9-10 ans
+        ages_under_6: Moins de 6 ans
+      email_opt_in:
+        opt_in_no: Non
+        opt_in_yes: Oui
+      gender:
+        female: Féminin
+        male: Masculin
+        non_binary: Non binaire
+        none: Préfère ne pas répondre
+        not_listed: Terme préféré non listé
+      resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Academy
+        kodable: Kodable
+        na: Non applicable
+        other: Autre
+        scratch: Scratch
+        tynker: Tynker
+      robotics:
+        grok: Grok Learning
+        kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        na: Non applicable
+        other: Autre
+        ozobot: Ozobot
+        raspberry: Raspberry Pi
+        sphero: Sphero
+        wonder: Wonder Workshop
+      school_country:
+        australia: Australie
+        barbados: Barbade
+        belize: Belize
+        brazil: Brézil
+        canada: Canada
+        chile: Chili
+        colombia: Colombie
+        dominican_republic: République dominicaine
+        india: Inde
+        indonesia: Indonésie
+        israel: Israël
+        jamaica: Jamaïque
+        kenya: Kenya
+        malaysia: Malaisie
+        maldives: Maldives
+        mexico: Mexique
+        mongolia: Mongolie
+        new_zealand: Nouvelle-Zélande
+        paraguay: Paraguay
+        portugal: Portugal
+        slovakia: Slovaquie
+        south_korea: Corée du Sud
+        spain: Espagne
+        thailand: Thaïlande
+        trinidad_and_tobago: Trinité-et-Tobago
+        uzbekistan: Ouzbékistan
+        vietnam: Viêt Nam
+      subjects:
+        art: Art
+        cs: Informatique/Sciences informatiques
+        efl: Anglais comme Langue Étrangère
+        history: Histoire / Études Sociales
+        ict: TIC
+        la: Arts du langage
+        math: Math
+        music: Musique
+        na: Non applicable
+        other: 'Autre :'
+        science: Sciences
+      workshop_course:
+        csd: Découvertes de l'Informatique
+        csf_af: Les Fondamentaux de l’Informatique (Cours A-F)
+        csf_express: Les Fondamentaux de l’Informatique (Pré-Express ou Express)
+        csp: Principes de l'Informatique
+        not_applicable: Non applicable
+        other: Autre
     form_labels:
-      first_name: Prénom
-      first_name_preferred: Prénom préféré
-      last_name: Nom
-      email: E-mail
-      email_alternate: Autre email
-      gender: Sexe
-      school: École
-      school_name: Nom de l'école
-      school_city: Ville de l’École
-      school_city_district: École de ville/ district
-      school_country: Pays de l’École
-      school_department_region: Département/région scolaire
-      colombian_school_city: Ville de l’École
-      colombian_chilean_school_department: Département/région scolaire
-      colombian_school_municipality: Municipalité scolaire
-      colombian_chilean_school_name: Nom de l'école
+      ages: Quelle est la tranche d'âge de vos élèves, cette année ?
       chilean_school_commune: Commune
       chilean_school_id: Identifiant d'école
-      ages: Quelle est la tranche d'âge de vos élèves, cette année ?
-      subjects: Quelle(s) matière(s) enseignez-vous, cette année ?
-      resources: Parmi les ressources d’éducation en informatique suivantes, lesquelles
-        utilisez-vous ?
-      robotics: Parmi les ressources d’éducation en robotique suivantes, lesquelles
-        utilisez-vous ?
-      workshop_organizer: Organisateur d’Atelier
-      workshop_facilitator: Animateur d’Atelier
-      workshop_course: Cours d’Atelier
+      colombian_chilean_school_department: Département/région scolaire
+      colombian_chilean_school_name: Nom de l'école
+      colombian_school_city: Ville de l’École
+      colombian_school_municipality: Municipalité scolaire
+      email: E-mail
+      email_alternate: Autre email
       email_opt_in: Pouvons-nous vous envoyer des e-mails sur le programme international
         de Code.org, les mises à jours de nos cours, ou d’autres actualités sur l’informatique
         ?
+      first_name: Prénom
+      first_name_preferred: Prénom préféré
+      gender: Sexe
+      last_name: Nom
       legal_opt_in: 'En envoyant ce formulaire, vous acceptez de permettre à Code.org
         de partager les informations sur votre utilisation de Code.org et des ressources
         de Formation Professionnelle avec le(s) partenaire(s) international(aux) de
@@ -1366,99 +874,50 @@ fr:
         seront dépersonnalisées et agrégées. Nos Partenaires Internationaux et nos
         animateurs sont contractuellement tenus de traiter ces informations avec le
         même niveau de confidentialité que Code.org.'
-    form_entries:
-      gender:
-        male: Masculin
-        female: Féminin
-        non_binary: Non binaire
-        not_listed: Terme préféré non listé
-        none: Préfère ne pas répondre
-      school_country:
-        canada: Canada
-        chile: Chili
-        colombia: Colombie
-        israel: Israël
-        malaysia: Malaisie
-        mexico: Mexique
-        thailand: Thaïlande
-        uzbekistan: Ouzbékistan
-      ages:
-        ages_under_6: Moins de 6 ans
-        ages_7_8: 7-8 ans
-        ages_9_10: 9-10 ans
-        ages_11_12: 11-12 ans
-        ages_13_14: 13-14 ans
-        ages_15_16: 15-16 ans
-        ages_17_18: 17-18 ans
-        ages_19_over: 19 ans et +
-      subjects:
-        cs: Informatique/Sciences informatiques
-        ict: TIC
-        math: Math
-        science: Sciences
-        history: Histoire / Études Sociales
-        la: Arts du langage
-        efl: Anglais comme Langue Étrangère
-        music: Musique
-        art: Art
-        other: 'Autre :'
-        na: Non applicable
-      resources:
-        bootstrap: Bootstrap
-        codecademy: CodeCademy
-        csfirst: Google CS First
-        khan: Khan Academy
-        kodable: Kodable
-        scratch: Scratch
-        tynker: Tynker
-        other: Autre
-        na: Non applicable
-      robotics:
-        grok: Grok Learning
-        kodable: Kodable
-        lego: LEGO Education
-        microbit: Microbit
-        ozobot: Ozobot
-        sphero: Sphero
-        raspberry: Raspberry Pi
-        wonder: Wonder Workshop
-        other: Autre
-        na: Non applicable
-      workshop_course:
-        csf_af: Les Fondamentaux de l’Informatique (Cours A-F)
-        csf_express: Les Fondamentaux de l’Informatique (Pré-Express ou Express)
-        csd: Découvertes de l'Informatique
-        csp: Principes de l'Informatique
-        not_applicable: Non applicable
-      email_opt_in:
-        opt_in_yes: Oui
-        opt_in_no: Non
+      resources: Parmi les ressources d’éducation en informatique suivantes, lesquelles
+        utilisez-vous ?
+      robotics: Parmi les ressources d’éducation en robotique suivantes, lesquelles
+        utilisez-vous ?
+      school: École
+      school_city: Ville de l’École
+      school_city_district: École de ville/ district
+      school_country: Pays de l’École
+      school_department_region: Département/région scolaire
+      school_name: Nom de l'école
+      subjects: Quelle(s) matière(s) enseignez-vous, cette année ?
+      workshop_course: Cours d’Atelier
+      workshop_facilitator: Animateur d’Atelier
+      workshop_organizer: Organisateur d’Atelier
     international_opt_in:
-      title: Participation à l’Atelier
-      intro: Merci d’avoir pris le temps de recevoir une formation sur le programme
-        d’études de Code.org. Notre mission d’apporter des opportunités d’éducation
-        en informatique à tous les enfants, de toutes les écoles, du monde entier,
-        ne serait pas possible sans vous.
+      facilitator_not_applicable: Non applicable
+      facilitator_not_listed: Mon facilitateur n'est pas listé
       instructions: Veuillez remplir le formulaire, ci-dessous, pour indiquer que
         1) vous avez participé à un atelier de formation dirigé par un des partenaires
         internationaux de Code.org et 2) vous acceptez de partager vos informations
         avec notre partenaire international, dans votre pays, afin qu’il puisse soutenir
         votre parcours en tant que professeur d’informatique.
+      intro: Merci d’avoir pris le temps de recevoir une formation sur le programme
+        d’études de Code.org. Notre mission d’apporter des opportunités d’éducation
+        en informatique à tous les enfants, de toutes les écoles, du monde entier,
+        ne serait pas possible sans vous.
+      organizer_not_listed: Mon organisateur n'est pas listé
       thanks_markdown: Merci d’avoir soumis votre réponse ! Nous aurons grand plaisir
         à vous soutenir au long de votre découverte du programme d’études et des outils
         de Code.org. Veuillez continuer à partager vos questions et vos commentaires
         avec nous en nous écrivant à [support@code.org](%{support_email_url}) ou en
         postant sur le [forum des enseignants](%{teacher_forum_url})!
-      facilitator_not_listed: Mon facilitateur n'est pas listé
-      facilitator_not_applicable: Non applicable
-      organizer_not_listed: Mon organisateur n'est pas listé
+      title: Participation à l’Atelier
     logged_out:
-      heading: Merci de votre intérêt pour le Programme d’Apprentissage Professionnel
-        !
       body: Pour commencer, vous devez d’abord être connecté à votre compte de Code.org.
         Si vous désirez plus d’informations sur le programme, avant de commencer votre
         demande, veuillez consulter l’<a href="%{url}">aperçu du Programme d’Apprentissage
         Professionnel</a>.
+      heading: Merci de votre intérêt pour le Programme d’Apprentissage Professionnel
+        !
+    no_teacher_email:
+      body_markdown: Votre compte n’est pas associé à une adresse e-mail. Veuillez
+        [consulter les paramètres de votre compte](%{user_registration}) pour ajouter
+        votre adresse e-mail avant de remplir ce formulaire.
     not_teacher:
       body_markdown: Merci de votre intérêt pour le Programme d’Apprentissage Professionnel
         de Code.org ! Vous êtes actuellement connecté à un compte élève. Veuillez
@@ -1467,65 +926,782 @@ fr:
       more_markdown: Si vous désirez plus d’informations sur le programme, avant de
         commencer votre demande, veuillez consulter l’[aperçu du Programme d’Apprentissage
         Professionnel](%{pl_overview}).
-    no_teacher_email:
-      body_markdown: Votre compte n’est pas associé à une adresse e-mail. Veuillez
-        [consulter les paramètres de votre compte](%{user_registration}) pour ajouter
-        votre adresse e-mail avant de remplir ce formulaire.
-  courses_category: Cours Complets
-  course_offering:
-    headers:
-      minecraft: Minecraft
-      hello_world: Bonjour tout le monde !
-      sports: Sports
-      csf: Fondamentaux d'Informatique
-      csc: Connexions CS
-  cookie_banner:
-    message: En poursuivant votre navigation sur ce site ou en cliquant sur « J’accepte »,
-      vous acceptez le stockage de cookies sur votre ordinateur ou appareil.
-    more_information: Consulter la Politique de Confidentialité de Code.org.
-    accept: J'accepte
-  page_not_found_title: Page Introuvable
-  page_not_found_header: '404 : Page Introuvable'
-  page_not_found_description: La page recherchée n'existe pas à cette adresse. Vérifie
-    l'adresse du site internet et réessaie. Sinon, retourne sur la page d'accueil.
-  page_not_found_button: Retourner à la page d’accueil
-  copy: Copier
-  confirm: Confirmer
-  maker:
-    google_oauth:
-      login_with_google: Connectez - vous à l'application Maker avec Google
-      enter_code: Veuillez entrer le code fourni lors de votre connexion via Google
-        sur votre navigateur par défaut.
-      copy_code: Veuillez copier et coller ce code à l'intérieur de l'application
-        Maker pour vous connecter à Code.org.
-      error_token_expired: Le jeton est expiré. Veuillez vous reconnectez pour un
-        nouveau jeton.
-      error_wrong_provider: Mauvais fournisseur. Veuillez vous assurez que vous vous
-        connectez avec Google.
-      error_invalid_user: Identifiant invalide. Veuillez vous reconnecter.
-      error_no_code: Veuillez entrer votre code de connexion.
-      confirm_login: Sélectionnez « Confirmer » pour vous connecter avec votre compte
-        Google.
-  parent_email_banner:
-    text: "**Êtes-vous un parent ou un tuteur ?** Associez votre adresse électronique
-      à ce compte afin de rester informé des progrès et des projets de votre enfant
-      !** "
-    link_your_email: Associez votre adresse électronique
-    not_now: Pas maintenant
-  behaviors:
-    this_sprite: ce sprite
-  unit_prefix: Unité %{n}
-  code_org_logo_alt: Accueil Code.org
-  teacher_feedback: FeedBack enseignants
-  lesson_lock:
-    error:
-      no_updates: Aucune mise à jour à effectuer
-      missing_params: Fournir les identifiants de l'utilisateur, le niveau et les
-        codes d'identification d'unité.
-      cannot_view_locked_answers: Impossible d'afficher les réponses lorsque le système
-        est verrouillé
-      forbidden: L'utilisateur ne peut pas modifier les paramètres de verrouillage
-        de l'apprenant
-  reset_predict_progress_button: Supprimer la réponse
+  pdf_download: Télécharger le PDF
+  peer_review:
+    accepted:
+      description_markdown: "**Oui**, la réponse soumise **répond** aux exigences"
+      name: Accepté
+    escalated:
+      description: Je voudrais qu'un instructeur examine cette proposition
+      name: Remonté
+    instructor_feedback: Commentaires de l’instructeur
+    outdated: Ce commentaire a été émis pour une version précédente
+    peer_feedback: Commentaire par les pairs
+    peer_review: Commentaire par un pair
+    rejected:
+      description_markdown: "**Non**, la réponse soumise **ne répond pas** aux exigences"
+      name: Rejeté
+    review_count: Tu dois compléter %{review_count} révisions pour cette unité.
   pixelation:
+    actual_size: Taille réelle
     binary: Binaire
+    bits_per_pixel_header: Bits par pixel
+    hexadecimal: Hexadécimal
+    image_file_format_bits_per_pixel: 'Bits par pixel : 1 octet'
+    image_file_format_data_a: n bits de données de pixels
+    image_file_format_data_b: n = Largeur* Hauteur* Bits par pixel
+    image_file_format_header: Format de fichier image
+    image_file_format_height: 'Hauteur : 1 octet'
+    image_file_format_width: 'Largeur : 1 octet'
+    image_height: Hauteur de l'image
+    image_width: Largeur de l'image
+    pixel_format_header: Format de pixels
+    raw_format: Format RAW
+    raw_format_alt: Afficher les bits sans aucun formatage
+    readable_format: Format lisible
+    readable_format_alt: Afficher les bits séparés par pixel
+    save_image: Enregistrer l'image
+  previous_page: Page précédente
+  prize: prix
+  progress:
+    assessment: évaluation
+    completed_perfect: terminé, parfait
+    completed_too_many_blocks: terminé, trop de blocs
+    furthest_level_attempted: le plus haut niveau tenté
+    in_progress: en cours
+    not_started: pas commencé
+    submitted: envoyé
+  project:
+    abuse:
+      contact_us: Si tu penses qu'il s'agit d'une erreur, merci de <a href='https://code.org/contact'>
+        nous contacter.</a>
+      go_to_code_studio: Aller sur Code Studio
+      policy_violation: Ce projet contient des informations qui ne peuvent pas être
+        partagées. Contactez le propriétaire de l’application pour corriger le contenu
+        de leur application.
+      report_abuse_form:
+        abuse_type:
+          harassment: Menaces, cyber-intimidation, harcèlement
+          infringement: Violation du droit d'auteur
+          offensive: Contenu offensant
+          other: Autre
+          question: Comment ce contenu viole-t-il les %{link_start}Conditions générales
+            d'utilisation%{link_end} ?
+        abusive_url: URL du contenu signalé
+        acknowledge: En envoyant ces informations, tu reconnais qu'elles seront traitées
+          en accord avec la %{link_start_privacy}Politique de confidentialité%{link_end}
+          et les %{link_start_tos}Conditions générales d'utilisation%{link_end} en
+          vigueur.
+        detail: Merci de fournir autant de détails que possible au sujet du contenu
+          que tu signales.
+        intro: Si tu as découvert un contenu offensant, des menaces, de la cyber-intimidation,
+          du harcèlement ou que tu possèdes des droits d'auteur pour le contenu créé
+          à l'aide d'applications développées sur Code Studio, merci de remplir le
+          formulaire ci-dessous. Nous étudierons ton rapport très sérieusement, enquêterons
+          comme il se doite et prendrons les mesures appropriées.
+        validation:
+          abuse_detail: Merci de donner des précisions au sujet du contenu que tu
+            signales
+          abuse_type: Merci de préciser comment ce contenu viole les Conditions générales
+            d'utilisation
+          age: Merci de donner ton âge
+          captcha: Veuillez remplir le CAPTCHA pour signaler ce contenu.
+          email: Merci de donner une adresse e-mail
+      tos: Ce projet a été signalé comme ne respectant pas les <a href='http://code.org/tos'>Conditions
+        générales d'utilisation</a> de Code.org, et ne peut donc pas être partagé
+        avec d'autres développeurs.
+    advanced_share: Afficher les options avancées
+    create: Crée un projet
+    create_a_project: 'Crée un nouveau projet :'
+    edit_project: Modifier le projet
+    embed: Intégrer
+    exit: Retourner au cours
+    help_text: Clique sur <strong>Développer une application</strong> ou <strong>Dessiner
+      quelque chose</strong> ci-dessous pour créer un nouveau Labo de jeux ou d'artistes
+      !<br/>Tu peux revenir travailler sur tes projets à tout moment.
+    name: Nom
+    need_help: Essaye ces cours pour t'aider à démarrer un nouveau projet
+    new: Créer un nouveau projet
+    no_projects: Tu n’as actuellement aucun projet. Clique sur un des boutons ci-dessus
+      pour démarrer un projet.
+    not_saved: Non enregistré
+    project_gallery: Projets
+    project_type: Type de projet
+    projects: Projets
+    publish: Publier
+    saved: Enregistré
+    share_copy_link: 'Copie le lien :'
+    share_embed_description: Vous pouvez copier le code intégré dans une page HTML
+      pour afficher le projet sur une page web.
+    share_title: Partage ton projet
+    share_u13_warning: Demande à ton professeur avant de partager. Partage seulement
+      des gens de ton école.
+    sharing_disabled: Désolé, ce projet ne peut pas être partagé. Si c'est votre projet
+      ou celui de vos élèves, veuillez vous <a href='https://studio.code.org/users/sign_in'>connecter</a>
+      à votre compte pour voir ce projet.
+    thumbnail_help: Tu ne vois pas la bonne vignette pour ton projet ? Lance ton appli
+      pour générer une nouvelle vignette. Note que cela peut prendre quelques heures
+      pour que la vignette soit actualisée partout.
+    unpublish: Annuler la Publication
+    updated: Mis à jour
+    view_all: Afficher « Mes projets »
+  puzzle: Énigme
+  race_interstitial:
+    decline: Fermer
+    message: Veuillez nous dire votre ethnicité (plusieurs choix possibles)
+    races:
+      american_indian: Indien d'Amérique ou Alaska
+      asian: Asiatique
+      black: Noir ou afro-américain
+      hawaiian: Hawaïen indigène ou autres îles du Pacifique
+      hispanic: Hispanique ou latino
+      opt_out: Préfère ne pas le dire
+      other: Autre
+      white: Blanc
+    submit: Envoyer
+    title: 'En option : Aidez-nous à évaluer les progrès de nos actions en faveur
+      de la diversité en informatique'
+  reference_area:
+    auth_error: Tu n’es pas autorisé à voir la solution.
+    direction: Direction au départ (en degrés)
+    submit: Mettre à jour la localisation de l'artiste
+    subtitle: Regarder les vidéos et les indices
+    teacher: Voir la solution
+    teacher_no_solution: Ne pas montrer la solution
+    title: Besoin d'aide ?
+  reports:
+    error:
+      access_denied: Accès impossible aux statistiques de cette personne
+  reset_predict_progress_button: Supprimer la réponse
+  return_course_overview: Accéder à l’aperçu du cours
+  return_unit_overview: Aller à l’aperçu de l'unité
+  school_info:
+    after_school: Après l’école
+    charter: Charte
+    district: Quartier
+    district_name: Nom du quartier
+    homeschool: École à domicile
+    other: Autre
+    other_district_not_listed: Autre quartier, non listé ci-dessus
+    other_school_not_listed: Autre école non listée ci-dessus
+    private: Privé
+    public: Public
+    school: École
+    school_address: Adresse de l'École
+    school_country: Pays de l’École
+    school_name: Nom de l'école
+    school_organization_name: Nom de l'École ou de l'Organisme
+    school_organization_zip: Code postal de l'École ou de l'Organisme
+    school_zip: Code postal de l’école
+    select_school_type: Type d'école
+    state: État
+    title: Informations de l’école (facultatif)
+  school_info_interstitial:
+    message: Veuillez saisir les informations de l’école ci-dessous.
+    message_with_suggestion: Veuillez vérifier que les informations suivantes soient
+      correctes et corrigez-les si nécessaire.
+    save: Sauvegarder
+    title: Nous voulons apporter l'Informatique à tous les élèves - aidez-nous à suivre
+      notre progression !
+  section:
+    code_with_teacher: "%{section_code} avec %{teacher_name}"
+    confirm:
+      remove: Es-tu sûr de vouloir quitter cette section ?
+    default_name: Section sans titre
+    remove: "(supprimer la section)"
+    type:
+      clever: Clever
+      email: E-mail
+      google_classroom: Google Classroom
+      picture: Mot de passe par image
+      word: Mot secret
+    your_section:
+      one: 'Ta section:'
+      other: 'Tes sections:'
+  see_your_learning_plan: Consultez votre plan d’apprentissage
+  share:
+    description: Tout le monde peut apprendre l’informatique. Crée des jeux, des applications
+      et de l'art avec du code.
+    title: Apprends avec Code Studio
+    try_hour_of_code: Essaie une Heure du Code !
+  share_code:
+    address_not_allowed: On dirait qu’il y a une adresse dedans. Essaie de modifier
+      le texte.
+    bounce_og_title: Vérifier mon jeu de rebond
+    check_out_what_i_made: Aller voir ce que j'ai fait
+    email_not_allowed: On dirait qu’il y a un e-mail dedans. Essaie de modifier le
+      texte.
+    flappy_og_title: Vérifier mon jeu Flappy l’oiseau
+    og_description: J'ai écrit le code moi-même avec Code.org
+    phone_number_not_allowed: On dirait qu’il y a un numéro de téléphone dedans. Essaie
+      de modifier le texte.
+    profanity_not_allowed: On dirait qu’il y a des injures dedans. Essaie de modifier
+      le texte.
+    studio_og_title: Vérifier mon application Labo de jeux
+    title: Clique sur « Démarrer » pour voir mon programme en action.
+  signin:
+    try_20hours: Essaie notre Introduction de 20 heures à l'informatique
+    try_heading: Vous souhaitez essayer de coder sans vous inscrire ?
+    try_hoc: Essaie d'abord une Heure de Code
+  signin_form:
+    login: E-mail
+    login_username: E-mail ou Nom d’Utilisateur
+    password: Mot de passe
+    remember: Se souvenir de moi
+    submit: Connexion
+    title: Tu as déjà un compte ? Authentification
+  signinsection:
+    invalid_login: Erreur d'identifiant, veuillez réessayer
+    login: Connexion
+    name: Choisis ton nom
+    pair_programming: J'ai un partenaire sur mon ordinateur
+    picture: Maintenant, trouve ta photo secrète
+    student_privacy_markdown: Savoir pourquoi vous ne voyez pas votre nom complet
+      [here](%{student_privacy_blog}).
+    welcome: Bienvenue sur %{section_name}
+    words: Maintenant entre tes mots secrets
+  signup_form:
+    accept_terms: Vous devez accepter pour créer un compte
+    address_placeholder: adresse, ville, état, code postal
+    age: Age
+    agree_us_data_transfer_student: "**J'accepte que Code.org puisse transférer des
+      données (y compris des données personnelles) de mon utilisation de ce site vers
+      les États-Unis** afin d'héberger et de traiter lesdites données."
+    agree_us_data_transfer_teacher: "**J'accepte que Code.org puisse transférer des
+      données (y compris des données personnelles) de mon utilisation (et de celle
+      de mes élèves) de ce site vers les États-Unis** afin d'héberger et de traiter
+      lesdites données."
+    birthday: Date de naissance (facultatif)
+    data_collection_us: Je comprends que Code.org est un site Web à but non lucratif
+      hébergé aux États-Unis et que les lois régissant la collecte de données aux
+      États-Unis peuvent différer des lois de mon pays.
+    email_preference_no: Non
+    email_preference_privacy: "(Voir notre politique de protection des données)"
+    email_preference_question: Pouvons-nous vous envoyer des e-mails d’information
+      sur nos formations, des opportunités près de chez vous ou d’autres brèves dans
+      le domaine informatique?
+    email_preference_required: Vous devez spécifier une adresse e-mail préférée.
+    email_preference_yes: Oui
+    email_signup: Inscrivez-vous avec votre adresse e-mail
+    error: Une erreur est survenue.
+    field_is_required: est obligatoire
+    gender: Sexe (facultatif)
+    go_to_account: Aller à mon compte
+    hoc_already_signed_up_content: Vous êtes inscrit pour enseigner une Hour of Code
+      ! Vous et vos élèves n'avez pas besoin de vous connecter à Code Studio pour
+      participer à cet événement. Pour commencer, <a href="https://code.org/learn">choisissez
+      un didacticiel</a> pour votre classe et partagez le lien avec eux. <br/> <br/>
+      Si vous avez apprécié Hour of Code et souhaitez aller plus loin, vous pouvez
+      configurer un mot de passe et créer un compte Code Studio ci-dessous pour inscrire
+      vos étudiants dans l'un de nos cours <a href="https://code.org/educate">  plus
+      longs </a >.
+    hoc_already_signed_up_content_post_hoc: Merci d’avoir animé Une Hour of Code.
+      Pour vous connecter à Code Studio, vous aurez besoin d'un mot de passe pour
+      votre compte. Cela vous permettra d’enregistrer votre progression et de gérer
+      votre salle de classe. Vous serez en mesure d’assigner des cours aux élèves
+      et de suivre leur évolution. <a href="%{studio_url}"> Vous pouvez également
+      continuer à parcourir les différentes étapes et casse-têtes</a> sans créer de
+      compte.
+    hoc_already_signed_up_content_post_hoc_markdown: Je vous remercie d’avoir accueilli
+      Une Heure De Code. Pour vous connecter à Code Studio, vous aurez besoin d' un
+      mot de passe pour votre compte. Cela vous permettra de sauvegarder votre progression
+      et de gérer votre salle de classe. Vous serez en mesure d’assigner des cours
+      aux élèves et suivre leurs évolutions. [vous pouvez également continuer à parcourir
+      les différentes étapes et casse-têtes](%{studio_url}) sans créer un compte.
+    hoc_already_signed_up_heading: Commencez sans vous connecter
+    invalid_password: Le mot de passe doit comporter au moins 6 caractères.
+    invalid_username: Le nom d'utilisateur doit contenir au moins 5 caractères
+    mismatch_password: Les deux mots de passe ne sont pas identiques.
+    overview: Inscrivez-vous pour suivre vos progression ou gérer votre classe. <a
+      href="/">Vous pouvez parcourir les différentes étapes et les casse-têtes</a>
+      sans compte, mais vous devez vous inscrire pour sauvegarder votre progression
+      et vos projets.
+    overview_markdown: Inscrivez-vous pour suivre vos progression ou gérer votre classe.
+      [Vous pouvez parcourir les différentes étapes et les casse-têtes](/) sans compte,
+      mais vous devez vous inscrire pour sauvegarder votre progression et vos projets.
+    parent_account_checkbox: Je suis un parent/tuteur inscrit au nom de mon enfant
+    parent_account_email_label: 'Adresse électronique du parent/tuteur '
+    parent_account_email_progress_permission: Pouvons-nous vous envoyer, par courriel,
+      des mises à jour occasionnelles, sur les progrès et les projets de votre enfant,
+      ainsi que des mises à jour sur ses cours et l’informatique ? [(Voir notre politique
+      de confidentialité)] %{privacy_policy_url}
+    school_address: Adresse de l'école (facultatif)
+    school_name: Nom de l'école (facultatif)
+    share_teacher_email_reg_partner_preference_no: Non
+    share_teacher_email_reg_partner_preference_required: Vous devez spécifier une
+      adresse e-mail préférée.
+    share_teacher_email_reg_partner_preference_yes: Oui
+    share_teacher_email_reg_partner_question: Accepteriez-vous que nous partagions
+      vos coordonnées avec le [partenaire régional de Code.org] (%{cdo_regional_partner_desc})
+      de votre État afin qu'il puisse vous informer des activités de développement
+      professionnel, des ressources et autres événements qui ont lieu dans votre région
+      ?
+    student_consent: Je confirme que j’ai l'autorisation de mes parents ou de mon
+      tuteur légal d’utiliser les services de Code.org.
+    student_count: "%{count} élèves se sont déjà inscrits."
+    student_terms_markdown: Les adresses e-mail ne sont pas stockées dans un format
+      qui nous permette de contacter les élèves. Les élèves ne recevront jamais d’e-mail
+      de Code.org sauf lors de la procédure de récupération de mot de passe. Voir
+      notre [politique de confidentialité](http://code.org/privacy) pour plus d'informations.
+    submit: S’inscrire
+    taken_username: Nom d'utilisateur déjà utilisé
+    teacher: Êtes-vous un enseignant?
+    teacher_count: "%{count} enseignants se sont déjà inscrits."
+    teacher_educator_guide: Consultez le guide de l'enseignant
+    title: S'inscrire sur Code.org
+    us_state: État
+    us_state_dropdown_options:
+      other: L'endroit où j'habite n'est pas listé
+    user_type: Êtes-vous un élève ou un enseignant ?
+    user_type_button: Mise à jour du type de compte
+    user_type_label: Type de compte
+    user_type_student: Élève
+    user_type_student_ability_1: Sauvegardez vos progrès et vos projets
+    user_type_student_ability_2: Rejoignez la section de classe de votre professeur
+    user_type_student_desc: 'Découvrez tous nos cours et activités et bien d''autres
+      :'
+    user_type_teacher: Professeur
+    user_type_teacher_ability_1: Créer des sections de classe
+    user_type_teacher_ability_2: Donner et suivre les devoirs des élèves
+    user_type_teacher_ability_3: S'inscrire à une formation professionnelle
+    user_type_teacher_ability_4: Intervenez dans notre forum des enseignants
+    user_type_teacher_desc: 'Tout ce dont les élèves ont accès et bien d''autres :'
+    valid_password: Mot de passe correct !
+    valid_username: Disponible !
+    visit_privacy: Consultez [la politique de confidentialité](%{privacy_url}) de
+      Code.org pour en savoir plus.
+  slow_loading: Cela prend plus de temps que d'habitude...
+  stage: étape
+  stage_number: Leçon %{number} 
+  studio:
+    all_courses: Tous les cours
+    completed_courses: Cours terminés
+    courses_working_on: Les cours sur lesquels tu travailles
+  submit: Envoyer
+  teacher:
+    answer: Réponse
+    confirm:
+      remove: Es-tu sûr de vouloir supprimer cet enseignant?
+    dashboard: Tableau de bord enseignant
+    for_teachers_only: Pour les enseignants uniquement
+    panel:
+      answer_viewer: Écran de l'enseignant
+      clear_response: Effacer la réponse
+      example: Exemple de solution
+      example_with_number: Exemple de solution %{solution_number}
+      last_updated: 'Dernière mise à jour :'
+      section: Section
+      student: Élève
+      submitted_on: 'Soumis le :'
+      try_it_yourself: Essaie-le toi-même
+      unsubmit: Ne pas envoyer
+      update_lock_settings: Mettre à jour les paramètres de verrouillage ici.
+      viewing_solution: Voir la solution
+      worked_with: A travaillé avec
+    remove: "(supprimer l'enseignant)"
+    student_code_view_diabled: Le code d'étudiant ne peut être visualisé pour cette
+      activité.
+    student_teacher_disassociated: Tu as quitté la section %{section_code} avec %{teacher_name}.
+    students:
+      dashboard: Aller au Tableau de bord de l'enseignant
+    title:
+      one: 'Ton enseignant:'
+      other: 'Tes enseignants:'
+    user_not_found: Impossible de trouver l’enseignant.
+  teacher_feedback: FeedBack enseignants
+  teacher_mailer:
+    delete_teacher_subject: 'Notification de Code.org : votre compte a été supprimé'
+    new_teacher_subject: Bienvenue sur Code.org!
+    verified_teacher_subject: Vérification des enseignants de Code.org - Succès
+  terms_interstitial:
+    accept: Accepter 
+    accept_label: J'accepte les <a href="%{tos_url} » target="_blank"> Conditions
+      d’Utilisation</a> et la<a href="%{privacy_url} » target="_blank"> Politique
+      de Confidentialité</a>
+    accept_label_markdown: J'accepte la mise à jour des [Conditions d’utilisation](%{tos_url})
+      et de la[Politique de confidentialité](%{privacy_url})
+    accept_tos: En vous inscrivant sur Corde.org, vous acceptez nos [Terms of Service](%{tos_url})
+      et [Privacy Policy](%{privacy_url}).
+    intro_desc: Nous avons mis à jour nos conditions d’utilisation et politique de
+      confidentialité, tel que montré ci-dessous. Les changements sont en vigueur
+      à partir du 24 août 2016.  Le changement le plus important est que nous n'allons
+      <i>plus stocker les adresses e-mail des élèves sur Code Studio.</i> C'est très
+      important pour nous et nous espérons établir ainsi un nouveau standard pour
+      la protection de la vie privée des élèves dans les technologies de l’éducation.
+      Nous vous avons envoyé un résumé des autres modifications par e-mail.
+    intro_desc_markdown: Nous avons mis à jour nos conditions d’utilisation et politique
+      de confidentialité, tel que montré ci-dessous. Les changements sont en vigueur
+      à partir du 24 août 2016. Le changement le plus important est que nous n'allons
+      _plus stocker les adresses e-mail des élèves sur Code Studio._ C'est très important
+      pour nous et nous espérons établir ainsi un nouveau standard pour la protection
+      de la vie privée des élèves dans les technologies de l’éducation. Nous vous
+      avons envoyé un résumé des autres modifications par e-mail.
+    intro_instructions: Vous devrez accepter ces nouvelles conditions pour que vos
+      élèves âgés de moins de 13 ans aient un accès complet aux dernières fonctionnalités
+      de Code Studio. Lorsque vous créez un compte pour un élève de moins de 13 ans,
+      vous devrez confirmer que votre école a un accord des parents pour la collecte
+      de renseignements personnels de l’élève à l’usage et au profit de l’école, y
+      compris les programmes éducatifs tels que Code Studio.
+    print: Imprimer
+    privacy: Politique de confidentialité
+    privacy_notice: Déclaration de confidentialité
+    reminder_desc: Nous avons mis à jour nos <a href="%{tos_url} » target="_blank">Conditions
+      d’utilisation</a> et notre<a href="%{privacy_url} » target="_blank">Politique
+      de confidentialité</a>. Veuillez les lire soigneusement avant de les accepter.
+      Notez que nos outils pédagogiques JavaScript peuvent être indisponibles pour
+      vos élèves avant votre acceptation expresse des conditions mises à jour.
+    reminder_desc_markdown: Nous avons mis à jour nos [Conditions d’utilisation](%{tos_url})
+      et notre[Politique de confidentialité](%{privacy_url}). Veuillez les lire soigneusement
+      avant de les accepter. Notez que nos outils pédagogiques JavaScript peuvent
+      être indisponibles pour vos élèves avant votre acceptation expresse des conditions
+      mises à jour.
+    review_terms: Consulter les éléments modifiés
+    title: Mise à jour des conditions d’utilisation et de la politique de confidentialité
+    tos: Conditions Générales d'Utilisation
+  text_match:
+    correct_body: C'est la bonne réponse.
+    correct_title: Correct
+    open_response_body: Merci pour ta réponse !
+    open_response_title: Merci
+    placeholder: Entre ta réponse ici
+  time:
+    day: jour
+    hour: 1 heure
+    week: semaine
+  trophies: trophées
+  try_hoc: 'Essaie l''Heure de Code, en cliquant ici >> '
+  try_k8intro: Essaie notre cours d'Introduction à l'informatique pour l'école primaire
+    (15-25 heures)
+  try_reloading: Essaie de recharger la page
+  unit_prefix: Unité %{n}
+  unplugged_activity: Activité Déconnectée
+  unsubmit: Ne pas envoyer
+  upsell:
+    20-hour:
+      body: Ce cours de 20 heures couvre les concepts des fondamentaux de l'informatique
+        et de la programmation des Cours 2 à 4. Le cours est conçu pour être utilisé
+        avec des élèves de 10 à 18 ans. Découvre les Cours 2 à 4 pour une expérience
+        plus complète !
+      body_short: Apprends les fondamentaux de l'informatique avec une version accélérée
+        des cours 2 à 4.
+      title: Cours accéléré
+    applab:
+      audience: 'Âge recommandé: 13 ans et plus'
+      body: App Lab est un environnement de programmation où vous pouvez créer des
+        applications simples. Concevez une application, codez-la avec des blocs ou
+        avec JavaScript, puis partagez-la en quelques secondes.
+      body_short: Concevez une application, codez à l'aide de blocs ou en JavaScript
+        pour la faire fonctionner, puis partagez votre application en quelques secondes.
+      cta: Apprendre comment
+      image_alt: Un lapin violet portant un sac à dos propulsé par une fusée.
+      title: Labo des applis
+    applab-intro:
+      image_alt: Une main touche le centre de l'écran d'un smartphone. De la lumière
+        et des étincelles sortent de l'écran.
+    aquatic:
+      image_alt: Steve et Alex de Minecraft vous regardent.
+      title: Minecraft
+    artist:
+      image_alt: Un personnage caricatural tenant un énorme crayon et dessinant un
+        triangle.
+    conditionals:
+      image_alt: Deux mains mélangeant un jeu de cartes à jouer.
+    course1:
+      image_alt: Le bourdon et le poisson orange de Code.org debout devant un code.
+    course2:
+      image_alt: Un collage de puzzles de Code.org représentant un magicien vert,
+        un artiste et un poisson-orange.
+    course3:
+      image_alt: Un collage de puzzles de Code.org représentant un jeu, un zombie
+        et un ninja.
+    course4:
+      image_alt: Un collage de puzzles de Code.org représentant le football, des animaux
+        domestiques et un artiste.
+    coursea:
+      image_alt: Un collage de puzzles de Code.org représentant un éléphant et un
+        écureuil.
+    courseb:
+      image_alt: Un collage de puzzles de Code.org représentant un explorateur, des
+        pierres précieuses et une fleur.
+    coursec:
+      image_alt: Un collage de puzzles Code.org représentant un écureuil, des nombres
+        binaires et un oiseau rouge du jeu Angry Birds.
+    coursed:
+      image_alt: Un collage de puzzles Code.org représentant une abeille, des fleurs,
+        du miel et un cochon vert du jeu Angry Birds.
+    coursee:
+      image_alt: Un collage de puzzles de Code.org montrant une personne tenant une
+        pelle, une citrouille, un verger et une vache.
+    coursef:
+      image_alt: Un collage de puzzles Code.org représentant des formes géométriques
+        colorées, un pirate rouge et un artiste.
+    dance:
+      image_alt: Un chat cool et un requin joyeux dansant lors d'une fête.
+      title: Soirée Dansante
+    dance-2019:
+      image_alt: Un chat heureux, un paresseux et un requin dansant.
+      title: Soirée Dansante
+    dance-2022:
+      image_alt: Un extraterrestre vert et un robot dansant avec Saturne en arrière-plan.
+    donate:
+      image_alt: Un enfant pointe du doigt l'écran d'un ordinateur portable montrant
+        un puzzle Code.org.
+    elementary:
+      image_alt: Un bourdon et un écureuil debout dans un champ devant un arc-en-ciel.
+    express:
+      image_alt: Plants vs Zombies zombie et plante debout à côté de Flappy Bird.
+    flappy:
+      body: Tu veux écrire ton propre jeu en moins de 10 minutes ? Essaie notre tutoriel
+        de Code Flappy !
+      image_alt: Un oiseau jaune volant entre des tuyaux verts.
+      title: Flappy l'oiseau
+    frozen:
+      image_alt: Anna et Elsa du film La Reine des neiges. Entre les deux se trouve
+        une image d'Anna dessinant une jolie forme sur la glace à l'aide de ses patins
+        à glace.
+      title: La Reine des neiges
+    gallery:
+      body: Regarde une galerie des applications et des images d'artistes créées par
+        nos utilisateurs.
+      image_alt: Un artiste dessinant de nombreux cercles et un chat, une chauve-souris
+        et un fantôme debout dans un pays de vacances d'hiver.
+      title: Galerie
+    gamelab:
+      audience: 'Âge recommandé: 13 ans et plus'
+      body: Le Labo Jeux est un environnement de programmation où on peut créer des
+        animations simples et des jeux avec des objets et des personnages qui interagissent
+        entre eux.
+      cta: Apprendre comment
+      image_alt: Beaucoup de personnages de dessins animés et d'animaux debout sur
+        un trottoir et souriants.
+      title: Labo Jeux
+    hello-world:
+      body: Choisis entre quatre activités amusantes pour programmer des personnages
+        interactifs dans un monde que tu as créé!
+      title: Bonjour tout le monde !
+    hello-world-food:
+      image_alt: De nombreux animaux, extraterrestres et emojis gravitent autour de
+        la Terre.
+    hero:
+      body: Minecraft est de retour pour l’Heure de code avec une toute nouvelle activité !
+        Exploration de Minecraft avec le code.
+      image_alt: Un golem de fer de Minecraft debout devant une vue aérienne d'Anna
+        résolvant un casse-tête.
+      title: Minecraft
+    hoc:
+      body: Essaie les fondamentaux de l'informatique. Des millions ont essayé.
+      image_alt: Un collage d'images montrant du code, Mark Zuckerberg et Angry Birds.
+      title: Labyrinthe classique
+    hoc-encryption:
+      body: Les élèves apprendront les techniques pour créer et casser des messages
+        chiffrés.
+      image_alt: Un graphique à barres de la fréquence des lettres en anglais.
+      title: Cryptage simple
+    hoc2014:
+      try_frozen: Artiste avec Anna et Elsa, de La Reine des neiges
+      try_new_tutorial: Essaie notre nouveau tutoriel Heure de Code en version bêta
+    hourofcode:
+      image_alt: Un collage d'images montrant du code, Mark Zuckerberg et Angry Birds.
+    infinity:
+      body: Utilise le Labo Jeux pour créer une histoire ou un jeu mettant en scène
+        les personnages de Disney Infinity.
+      image_alt: Cinq personnages de Froze, Tangled et Big Hero 6 debout côte à côte.
+      title: Labo Jeux Infinity
+    map:
+      image_alt: Une image grise des États-Unis avec une vingtaine d'États surlignés
+        en violet.
+    mc:
+      image_alt: Anna et Steve de Minecraft debout devant un puzzle Minecraft de Code.org.
+    mc_escape:
+      image_alt: Un personnage de Minecraft portant un chapeau haut de forme et un
+        monocle tout en ouvrant un coffre au trésor rempli d'émeraudes.
+    minecraft:
+      body: Explore un monde Minecraft à travers son code.
+      image_alt: Anna et Steve de Minecraft debout devant un puzzle Minecraft de Code.org.
+      title: Minecraft
+    minecraft2016:
+      body: Créez un jeu Minecraft. Créez vos propres versions des poulets, des moutons,
+        des creepers, des zombies et bien d'autres encore.
+      title: Minecraft
+    oceans:
+      image_alt: Un robot dans l'océan scanne diverses créatures marines.
+    playlab:
+      image_alt: Un collage d'images montrant un chat bleu, un chien loufoque et une
+        belette préhistorique.
+    poem-art:
+      body: Exprime-toi! Programme un poème animé.
+      image_alt: Un calamar branché sur scène.
+      title: Art du poème
+    pre-express:
+      image_alt: Un chien et une licorne debout devant un arbre fait de pièces de
+        puzzle.
+    pre-express-2017:
+      image_alt: Un chien et une licorne debout devant un arbre fait de pièces de
+        puzzle.
+    pre-express-2018:
+      image_alt: Un chien et une licorne debout devant un arbre fait de pièces de
+        puzzle.
+    pre-express-2019:
+      image_alt: Un chien et une licorne debout devant un arbre fait de pièces de
+        puzzle.
+    sports:
+      body: Créer un jeu de basket ou un mélange de différents sports.
+      image_alt: Les logos de la NBA et de la WNBA sont affichés à côté d'un ballon
+        de football, d'un ballon de soccer, d'une rondelle de hockey et d'un ballon
+        de basket.
+      title: Sports
+    starwars:
+      image_alt: R2-D2, Leia, Rey et BB-8 debout dans le désert.
+      title: Star Wars
+    text-compression:
+      body: Dans cette leçon, les élèves utiliseront le Widget de Compression de Texte
+        pour compresser le texte en remplaçant des modèles par des symboles.
+      image_alt: Le texte est compressé en remplaçant des mots entiers par un seul
+        symbole.
+      title: Compression de texte
+    unplugged:
+      audience: À partir de 4 ans
+      body: Nous avons compilé une liste de leçons en mode « déconnecté » que vous
+        pouvez utiliser en classe. Vous pouvez désormais enseigner les bases de l'informatique,
+        que vous ayez ou non des ordinateurs dans votre classe ! Essayez d'utiliser
+        ces leçons sous forme de cours indépendant ou sous forme de leçons complémentaires
+        à l'un de vos cours d'informatique.
+      body_short: Si vous n'avez pas d'ordinateurs, essayez ces leçons en mode « déconnecté »
+        dans votre classe.
+      title: Leçons en mode « déconnecté »
+    unplugged_conditionals:
+      body: Découvre les algorithmes et les déclarations conditionnelles, dans cette
+        activité « déconnectée », en t’appuyant sur un jeu de cartes.
+      title: Instructions conditionnelles
+    weblab:
+      audience: 'Âge recommandé: 13 ans et plus'
+      body: Le Labo Web est un environnement de programmation où tu peux créer des
+        pages web simples, en utilisant l'HTML et le CSS. Crée tes pages web et partage
+        ton site en quelques instants.
+      cta: Apprendre comment
+      image_alt: Un écran d'ordinateur affichant du code HTML.
+      title: Le Labo du Web (beta)
+    widgets:
+      audience: 14 ans et +
+      body: Les élèves peuvent découvrir les concepts de notre cours pratique sur
+        les Principes de l'Informatique en utilisant ces outils numériques. Utilisez
+        les widgets directement, ou bien créez une leçon focalisant sur un seul concept,
+        pour votre classe.
+      cta: Apprendre comment
+      title: Widgets
+  user:
+    account_successfully_updated: Compte actualisé avec succès.
+    auth_option_saved: Vous avez réussi à lier votre %{provider} compte avec l'adresse
+      électronique %{email}.
+    auth_option_saved_no_email: Vous avez réussi à lier votre %{provider} compte.
+    confirm_secret_words: Confirmez votre identité en entrant vos mots secrets actuels
+    create_personal_login: Créer un identifiant de mot de passe personnel
+    create_personal_login_email_note: 'Remarque : Les adresses e-mail ne sont pas
+      stockées sous une forme qui permette de communiquer avec les élèves. Les élèves
+      ne recevront jamais d''e-mails de Code.org à l’exception de la récupération
+      de mot de passe. Voyez notre <a href=''%{privacy_policy_url}'', target=''_blank''>politique
+      de confidentialité</a> pour plus d’informations.'
+    create_personal_login_email_note_markdown: 'Remarque : Les adresses E-mail ne
+      sont pas stockées sous une forme qui permet de communiquer avec les élèves.
+      Les élèves ne recevront jamais d''e-mails de Code.org à l’exception de la récupération
+      de mot de passe. Consultez notre [politique de confidentialité](%{privacy_policy_url})
+      pour plus d’informations.'
+    create_personal_login_info: Si tu veux continuer d'utiliser ton compte Code.org,
+      y compris après la fin de ton année scolaire, tu peux créer ta propre connexion.
+    create_personal_login_link_account: Vous pouvez choisir de vous connecter à un
+      compte personnel dans la section « Gérer les comptes liés ».
+    create_personal_login_terms: En créant un identifiant personnel, j'accepte les
+      <a href='%{terms_of_service_url}', target='_blank'>termes et conditions</a>
+      de Code.org. Je confirme que j'ai l'autorisation de mes parents ou de mon tuteur
+      légal pour utiliser les services de Code.org même sans professeur.
+    create_personal_login_terms_markdown: En créant un login personnel, j'accepte
+      les [termes et conditions](%{terms_of_service_url}) de Code.org . Si j'ai moins
+      de 13 ans, je confirme en soumettant ce formulaire que j'ai l'autorisation des
+      mes parents ou de mon tuteur légal pour utiliser les services de Code.org même
+      sans un professeur.
+    create_personal_login_under_13_info: Si tu veux continuer d'utiliser ton compte
+      Code.org, y compris après la fin de ton année scolaire, demande à tes parents
+      ou ton tuteur de t'aider à créer ta propre  connexion, ci-dessous.
+    create_personal_login_under_13_parent_email: Adresse e-mail du parent/tuteur
+    create_personal_login_under_13_username: Nom d’utilisateur (n’utilisez pas votre
+      vrai nom !)
+    current_password_hint: "(nous avons besoin de votre mot de passe pour confirmer
+      les modifications)"
+    delete: Supprimer votre compte
+    delete_confirm: Êtes-vous sûr de vouloir supprimer votre compte ?
+    delete_text: La suppression de votre compte effacera toutes les informations et
+      les progrès liés à ce compte.
+    delete_text_teacher_managed_note: Tu n’es pas autorisé à supprimer ce compte parce
+      qu’il est géré par ton professeur. Ton professeur devra te supprimer de ses
+      sections pour que tu puisses supprimer ton compte.
+    delete_text_teacher_note: 'Veuillez noter : supprimer votre compte ne supprimera
+      pas les comptes de vos élèves.'
+    deleted_user: utilisateur supprimé
+    email_confirm_needed: 'L''adresse e-mail n''a pas été confirmée:'
+    email_confirm_needed_required: 'Votre adresse e-mail %{email} n''a pas été confirmée
+      :'
+    email_confirm_wrong_email: "(Adresse e-mail invalide ?)"
+    email_resend_confirm: Renvoyer les instructions de confirmation
+    encrypted: chiffré
+    enter_new_login_info: Saisissez vos nouvelles informations de connexion
+    enter_parent_email: Entre l'adresse e-mail de tes parents ou de ton tuteur (pour
+      la récupération du mot de passe)
+    for_parents_and_guardians: Pour les parents et tuteurs
+    link_a_parent_email: Associez l'adresse électronique d'un parent/tuteur à ce compte
+      afin de rester informé des progrès et des projets de votre enfant. Vous pourrez
+      également utiliser cette l'adresse électronique pour récupérer le mot de passe.
+    new_email_hint: "(veuillez vous assurer que vous pouvez recevoir des e-mails à
+      cette adresse)"
+    new_password_hint: "(laisser vide si rien n’est à changer)"
+    no_password_because_oauth: Aucun mot de passe parce que vous vous connectez avec
+      un fournisseur tiers.
+    no_password_because_sponsored: Consulte ton professeur pour gérer ton mot de passe.
+    none: Aucun
+    only_one_parent_email_supported_warning: 'Remarque : notre système ne supporte
+      qu''une seule adresse électronique de parent/tuteur par compte étudiant, pour
+      le moment.'
+    parent_email_hint: "(cela peut être utilisé pour la récupération du mot de passe)"
+    parent_email_label: E-mail du parent / tuteur (facultatif)
+    parent_guardian_email_label: E-mail du parent/tuteur
+    remove_parent_email_label: Supprimer
+    update: Mise à jour du compte
+    update_email: Mise à jour
+  user_level:
+    completed: Terminé
+    tried: A essayé
+  user_type:
+    student: Élève
+    teacher: Professeur
+  video:
+    autoplay_option: Lire les vidéos automatiquement
+    download: Télécharger la vidéo
+    label: 'Vidéo '
+    notes: Pas de vidéo ? Voir les notes.
+    notes_coming_soon: Il y aura bientôt des notes pour cette vidéo.
+    show_notes: Afficher les Notes
+    show_video: Afficher la Vidéo
+    tab: Vidéo.
+  video_coming_soon: Vidéo bientôt disponible !
+  view_all_units: Voir toutes les unités
+  view_lesson_plan: Voir le plan de cours
+  view_teacher_guide: Voir le guide de l'enseignant
+  welcome_back: Bienvenue %{name}
+  welcome_email:
+    body: |
+      Clique sur le lien ci-dessous pour t’inscrire aux tutoriels de science informatique sur Code.org (avec moi comme « enseignant ») :
+
+      %{link}
+
+      Les tutoriels sont amusants, visuellement attirants et enseignent les concepts de base de l'informatique à l'aide d'une expérience guidée qui reste ludique et simple. Apprends à coder avec Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs. Zombies ! :-)
+
+      %{name}
+    subject: Rejoindre ma classe (sur Code.org)
+  your_professional_learning_plan: Votre plan d’apprentissage professionnel
+  zendesk_too_young_message: Désolé, les plus jeunes utilisateurs ne peuvent pas accéder
+    à notre site d’aide. Tu peux parcourir <a href="http://support.code.org"> support.code.org</a>
+    sans t’authentifier ou demander à tes parents ou ton enseignant de nous contacter
+    à ta place.
+  zendesk_too_young_message_markdown: Désolé, les plus jeunes utilisateurs ne peuvent
+    pas accéder à notre site d’aide. Tu peux parcourir [support.code.org](http://support.code.org)
+    sans t’authentifier ou demander à tes parents ou ton enseignant de nous contacter
+    à ta place.

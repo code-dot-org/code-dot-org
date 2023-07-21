@@ -60,9 +60,20 @@ class JavabuilderSessionsController < ApplicationController
   end
 
   private def upload_project_files_and_render(session_id, project_files, encoded_payload)
-    response = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload)
+    if can?(:use_unrestricted_javabuilder, :javabuilder_session)
+      javabuilder_url = CDO.javabuilder_url
+      javabuilder_upload_url = CDO.javabuilder_upload_url
+    else
+      if !current_user.last_verified_captcha_at || (Time.now.utc - 24.hours) > current_user.last_verified_captcha_at
+        return render(status: :forbidden, json: {captcha_required: true})
+      end
+      javabuilder_url = CDO.javabuilder_demo_url
+      javabuilder_upload_url = CDO.javabuilder_demo_upload_url
+    end
+
+    response = JavalabFilesHelper.upload_project_files(project_files, request.host, encoded_payload, javabuilder_upload_url)
     if response
-      return render(json: {token: encoded_payload, session_id: session_id}) if response.code == '200'
+      return render(json: {token: encoded_payload, session_id: session_id, javabuilder_url: javabuilder_url}) if response.code == '200'
       return render(status: response.code, json: response.body)
     else
       return render(status: :internal_server_error, json: {error: "Error uploading sources."})
@@ -83,6 +94,10 @@ class JavabuilderSessionsController < ApplicationController
     # expire token in 1 minute
     expiration_time = (Time.now + 1.minute).to_i
 
+    # Note: the attribute name "verified_teachers" is now a misnomer,
+    # as we need to include any logged in teacher's user ID in this list
+    # in order to support javabuilder "eval" mode,
+    # which gives limited access to teachers testing out Javalab.
     payload = {
       iat: issued_at_time,
       iss: CDO.dashboard_hostname,
@@ -101,7 +116,7 @@ class JavabuilderSessionsController < ApplicationController
   end
 
   private def get_teacher_list
-    if current_user.verified_instructor?
+    if current_user.teacher?
       return [current_user.id]
     end
     teachers = []

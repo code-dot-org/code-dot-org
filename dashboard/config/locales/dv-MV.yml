@@ -1,58 +1,58 @@
 ---
 dv:
   continue: ކުރިއަށް ދިޔުމަށް
-  signup_form:
-    email_preference_yes: އާން
-    email_preference_no: ނޫން
-    share_teacher_email_reg_partner_preference_yes: އާން
-    share_teacher_email_reg_partner_preference_no: ނޫން
+  course_offering:
+    headers:
+      csf: ސީއެސް ފަންޑަމެންޓަލްސް
+  dialog:
+    ok: އޯކޭ
+    startover_ok: އަލުން ފަށާ
+  footer:
+    copyright: ކޮޕީރައިޓްސް
+    more: ގިނަ
+    privacy: ރައްކާތެރިކަމުގެ ޕޮލިސީ
+    report_abuse: އެބިއުސް ރިޕޯޓްކުރަން
+    tos: ޚިދުމަތުގެ ޓާރމްސް
+    translate: އަހަރުމެންގެ ކޮންޓެންޓް ތަރުޖަމާކުރަން ވޮލަންޓިއަރ ކުރަން
+  landing:
+    help_support: އެހީ އަދި ސަޕޯޓް
+  nav:
+    header:
+      about: އަބައުޓް
+      course_catalog: ކޯސް ކެޓަލޮގް
+      finished_hoc: ނިމިއްޖެ!
+      help_support: އެހީ އަދި ސަޕޯޓް
+      legal_privacy: ރައްކާތެރިކަމުގެ ޕޮލިސީ
+      legal_tos: ޚިދުމަތުގެ ޓާރމްސް
+      project_gallery: ޕްރޮޖެކްސް
+      report_bug: މައްސަލައެއް ރިޕޯޓު ކުރަން
+    user:
+      signin: ސައިން-އިން
+      signup: އެކައުންޓެއް ހެދުމަށް
+  pd:
+    form_entries:
+      email_opt_in:
+        opt_in_no: ނޫން
+        opt_in_yes: އާން
+  project:
+    project_gallery: ޕްރޮޖެކްސް
+    projects: ޕްރޮޖެކްސް
+  reference_area:
+    subtitle: މި ވީޑިއޯ އަދި ހިންޓުތައް ބަލާލާ
+    title: އެހީ ބޭނުންތަ؟
   signin_form:
     submit: ސައިން-އިން
   signinsection:
     login: ސައިން-އިން
-  nav:
-    header:
-      finished_hoc: ނިމިއްޖެ!
-      course_catalog: ކޯސް ކެޓަލޮގް
-      project_gallery: ޕްރޮޖެކްސް
-      help_support: އެހީ އަދި ސަޕޯޓް
-      report_bug: މައްސަލައެއް ރިޕޯޓު ކުރަން
-      about: އަބައުޓް
-      legal_privacy: ރައްކާތެރިކަމުގެ ޕޮލިސީ
-      legal_tos: ޚިދުމަތުގެ ޓާރމްސް
-    user:
-      signin: ސައިން-އިން
-      signup: އެކައުންޓެއް ހެދުމަށް
-  footer:
-    copyright: ކޮޕީރައިޓްސް
-    more: ގިނަ
-    translate: އަހަރުމެންގެ ކޮންޓެންޓް ތަރުޖަމާކުރަން ވޮލަންޓިއަރ ކުރަން
-    tos: ޚިދުމަތުގެ ޓާރމްސް
-    privacy: ރައްކާތެރިކަމުގެ ޕޮލިސީ
-    report_abuse: އެބިއުސް ރިޕޯޓްކުރަން
-  reference_area:
-    title: އެހީ ބޭނުންތަ؟
-    subtitle: މި ވީޑިއޯ އަދި ހިންޓުތައް ބަލާލާ
-  video:
-    tab: ވީޑިއޯ
-    notes: ވީޑިއޯއެއް ނެތް؟ ނޯޓްސް ދައްކާލާ.
-  landing:
-    help_support: އެހީ އަދި ސަޕޯޓް
-  dialog:
-    ok: އޯކޭ
-    startover_ok: އަލުން ފަށާ
+  signup_form:
+    email_preference_no: ނޫން
+    email_preference_yes: އާން
+    share_teacher_email_reg_partner_preference_no: ނޫން
+    share_teacher_email_reg_partner_preference_yes: އާން
   terms_interstitial:
-    tos: ޚިދުމަތުގެ ޓާރމްސް
-    privacy: ރައްކާތެރިކަމުގެ ޕޮލިސީ
     print: ޕްރިންޓް
-  project:
-    projects: ޕްރޮޖެކްސް
-    project_gallery: ޕްރޮޖެކްސް
-  pd:
-    form_entries:
-      email_opt_in:
-        opt_in_yes: އާން
-        opt_in_no: ނޫން
-  course_offering:
-    headers:
-      csf: ސީއެސް ފަންޑަމެންޓަލްސް
+    privacy: ރައްކާތެރިކަމުގެ ޕޮލިސީ
+    tos: ޚިދުމަތުގެ ޓާރމްސް
+  video:
+    notes: ވީޑިއޯއެއް ނެތް؟ ނޯޓްސް ދައްކާލާ.
+    tab: ވީޑިއޯ

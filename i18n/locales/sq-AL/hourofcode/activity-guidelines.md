@@ -78,9 +78,9 @@ Nese krijoni nje aktivitet ose udhezues i cili eshte i dizajnuar per nxenesit me
 
 Synimi i nje Ore Kodimi eshte ti jape fillestareve nje shije te pare te arritshme per shkencat kompjuterike ose programimit ( jo HTML). Toni duhe te jete qe: Toni duhet te jete ai:
 
-- Cdokush mund te mesoj shkencat kompjuterike - pa marre parasyshe moshen, gjinine, racen ose aftesite 
+- Cdokush mund te mesoj shkencat kompjuterike - pa marre parasyshe moshen, gjinine, racen ose aftesite
 - Shkenca kompjuterike është e lidhur me një shumëllojshmëri të gjerë të fushave dhe interesave. Të gjithë duhet të mësojnë! Cdokush duhet ta mesoje!
-- Inkurajoni studentët të krijojnë diçka që mund ta shpërndajnë me shokët/online. 
+- Inkurajoni studentët të krijojnë diçka që mund ta shpërndajnë me shokët/online.
 
 Aktivitetet duhet te tregojne koncepte te shklencave kompjuterike sic jane loops, conditionals, enkriptimi ose se si funksion interneti. Nje aktivitet mund poashtu ti mesoj pjesemarresit se si shkenca kompjuterike lidhet me eventet dhe historine e jetes reale. Per shembull, ligjerimi i UX design i cili ndihmon ne krijimin e aplikacioneve qe kane domethenie per nje nxenes ose kauze. Ne i diskurajojme aktivitetet qe fokusohen ne sintaksen e programimit ne vend te koncepteve. Per shembull, ne do t'i listojme, mirpo jo ti jepim vemendje te madhe aktiviteteve te cilat kane te bejne me HTML. Poashtu ne i disurajojme mesimet e programimit block, mesime qe fokusohen ne ndryshimin e konfigurimit te opsioneve me shume sesa mesimi se si mund te modifikoje nje algoritem nje proces.
 
@@ -122,7 +122,7 @@ Vizitoni [faqen e Dorzimit të Aktivitetit të Orës së Kodimit™](https://goo
 
 #### Gjera shtese qe do te ju duhen kur dergoni nje plan mesimor.
 
-* Link te planit tuaj mesimore Kjo mund te jete nje ueb faqe, link ne dropbox ose ndonje sherbim te ngjashem. 
+* Link te planit tuaj mesimore Kjo mund te jete nje ueb faqe, link ne dropbox ose ndonje sherbim te ngjashem.
 * Cfar softueri ose hardwari do t'i duhet mesuesit per te ekzekutuar planin mesimor? Robot? Asgjë?
 
 #### Gjera shtese qe do te ju duhen kur dergoni aktivitete online
@@ -181,7 +181,7 @@ Nese komiteti i rishikimit vlereson kete aktivitet si nje zero ne produksion dhe
 Si rezultat, ne menyre qe te listoheni, te gjitha aktivitetet duhet te:
 
 - Jene te pershtatshme per shkollat publike (nuk duhet te permbajne arme, permbajtje eksplicite, nuk duhet te permbajne permbajtje fetare, etj)
-- Kerkojnë regjistrim 
+- Kerkojnë regjistrim
 - Nuk kerkojne pagese (perjeshtimi i vetem eshte per aktivitetet robotike pasi qe keto mund te kerkojene blerjen e pakove te ndryshme per kete aktivitet)
 
 Per aktivitete vetanake per mesuesit e rinj dhe nxenesit:
@@ -212,7 +212,7 @@ Mund te perfshini [logon e ores se kodimit](https://hourofcode.com/us/promote/re
 
 - Ne cilat platform dhe shfletues te internetit funksionon me se mirti tutoriali?
 - A punon në telefona të mençur? tabletë? Tablets?
-- A ju rekomandojmë programimin çift? 
+- A ju rekomandojmë programimin çift?
 - Gjerat qe te keni ne konsiderate per perdorimin brenda klases? Konsideroni për përdorim në një klasë? p.sh. nëse ka video, këshillojë mësuesit për të treguar video në një ekran të projektuar për të gjithë klasën për ta parë së bashku
 
 **Inkorporoni reagime në fund të aktivitetit** (p.sh: "Ju përfunduat 10 nivele dhe mësuat për ciklet! Punë e shkëlqyer!") Punë e mrekullueshme!
@@ -275,4 +275,4 @@ Ju lutemi ta promovoni aktivitetin tuaj tek rrjeti juaj! Ju lutem drejtoni ata t
 
 [**Përsëri në krye**](#top)
 
-{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+{{ signup_button }}

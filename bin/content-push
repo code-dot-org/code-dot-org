@@ -83,11 +83,11 @@ def check_changes
 end
 
 def commit_changes(name)
+  ignore_levelbuilder_omissions
   exit 0 unless has_changes?
 
   branchname = GitUtils.current_branch
   exit 1 unless system("git add -A #{CONTENT_PATHS}")
-  ignore_levelbuilder_omissions
   exit 1 unless system("git commit -m '#{branchname} content changes (-#{name})'")
   exit 1 unless system("git pull")
   exit 1 unless system("git push")

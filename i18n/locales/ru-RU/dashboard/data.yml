@@ -635,7 +635,7 @@ ru:
         csd_app_lab_design_mode: Лаборатория CSD приложений - Режим Разработки
         csd_app_lab_events: Лаборатория CSD приложений - События
         PL_CSD_Unit4_AppTesting: Бумажный Прототип - Тестирование
-        csd_u6_circuit_playground: Физические Вычисления
+        csd_u6_circuit_playground: Физические вычисления
         CSA-PL-for-loops: Для циклов в Java
         CSA-PL-variables: Создание Переменных в Java
         PL_CS_Journeys_Overview: Занятия по информатике
@@ -673,7 +673,80 @@ ru:
         csa-pl-equals-book: Написание метода equals() для класса Book
         csa-multi-select-pl: Операторы множественного выбора в Java
         csc_timecapsule_intro: Введение Капсулы Времени
+        PL_Equity_in_CS_Education: Равноправие в образовании CS
+        csc_fm_pilot: Функциональные машины (пилот)
+        csc_fm_pilot_v2: 'Введение в функциональные машины '
+        csc-sprite-lab-pixel-editor: Нарисуйте свой собственный спрайт
+        csa-pl-intro-to-strings: Введение в строки в Java
+        csa-pl-compareTo: Метод compareTo ()
+        csc-event-short-intro: Краткое введение в события
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Обзор игрового блока Circuit
+        csa-day-in-pm-pl: Чем занимается менеджер проекта?
+        csa-pl-intro-to-pm: Введение в управление проектами
+        PL_CSD_CircuitPlayground_Setup: Настройка игровой площадки
+        csa_object_oriented_programming: 'CSA: объектно-ориентированное программирование'
+        csa_creating_objects: 'CSA: создание объектов'
+        csa_calling_methods: 'CSA: методы вызова'
+        csa_while_loops: 'CSA: Пока циклы'
+        csa_inheritance: 'CSA: Наследование'
+        csa_writing_a_method: 'CSA: написание метода'
+        csa_software_engineering_code_reviews: 'CSA: Инженерия программного обеспечения — обзоры кода'
+        csa_conditional_statements: 'CSA: условные заявления'
+        csa_printing_in_java: 'CSA: печать на Java'
+        csa_two_way_selection_and_not: 'CSA: двусторонний выбор, а не'
+        csa-pl-intro-to-oop: Введение в объектно-ориентированное программирование
+        csa-pl-welcome-to-Neighborhood: Добро пожаловать в The Neighborood
+        csa-pl-calling-methods: Вызов методов в Java
+        csa-pl-creating-objects: Создание объектов
+        csa_accessor_methods: 'CSA: методы доступа'
+        csa_constructors: 'CSA: Конструкторы'
+        csa_creating_a_scanner_object: 'CSA: создание объекта сканера'
+        csa_creating_variables: 'CSA: создание переменных'
+        csa_instance_variables_and_attributes: 'CSA: переменные и атрибуты экземпляра'
+        csa_mutator_methods: 'CSA: методы мутаторов'
+        csa_overloaded_constructors: 'CSA: перегруженные конструкторы'
+        csa_the_tostring_method: 'CSA: метод toString ()'
+        csa_scanner_class_methods: 'CSA: методы класса сканера'
+        csa_for_loops: 'CSA: Для циклов'
+        csa_enhanced_for_loops: 'CSA: улучшено для циклов'
+        csa_modifying_values_in_a_1d_array: 'CSA: изменение значений в одномерном массиве'
+        csa_nested_loops: 'CSA: вложенные циклы'
+        csa_one_dimensional_arrays: 'CSA: одномерные (одномерные) массивы'
+        csa_polymorphism: 'CSA: полиморфизм'
+        csa_casting: 'CSA: Кастинг'
+        csa_equals_and_aliases: 'CSA: равенства и псевдонимы'
+        csa_multi-selection_statements: 'CSA: заявления о множественных отборах'
+        csa_random_numbers: 'CSA: случайные числа'
+        csa_static_methods: 'CSA: статические методы'
+        csa_static_variables: 'CSA: статические переменные'
+        csa_the_equals_method: 'CSA: метод equals ()'
+        csa_welcome_to_the_theater: 'CSA: Добро пожаловать в театр'
+        enter_your_own_poem: Введите свое стихотворение
+        csa-example-solution-1: 'Кодирование в реальном времени: пример решения '
         csd_sprite_properties: Свойства спрайтов
+        csa-pl-documentation: Документация в Java Lab
+        csc-starquilts-intro: 'CSC: Стеганые одеяла со звездами'
+        csa-pl-vocab-pm: Словарь по управлению проектами
+        csc-ecosystems-intro: Введение в экосистемы
+        PL_CSD_MicroBit_Intro: Знакомство с микро:BIT
+        csc_animal_adaptations_intro: Введение в адаптацию животных
+        csa_two_dimensional_arrays: 'CSA: двумерные (2D) массивы'
+        csa_working_with_2d_array_elements: 'CSA: работа с элементами 2D-массива'
+        csa_row_major_traversal: 'CSA: Обход между строками и основными строками'
+        csa_column_major_traversal: 'CSA: Пересечение колонны и мажора'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: улучшено для циклов и двумерных массивов'
+        csa_images_and_pixels: 'CSA: изображения и пиксели'
+        csa_wrapper_classes_part_1: 'CSA: Классы оберток, часть 1'
+        csa_wrapper_classes_part_2: 'CSA: Классы оберток, часть 2'
+        csa_the_arraylist_class: 'CSA: класс ArrayList'
+        csa_working_with_arraylist_data: 'CSA: работа с данными ArrayList'
+        csa_remving_data_from_an_arraylist: 'CSA: удаление данных из ArrayList'
+        csa_private_methods: 'CSA: частные методы'
+        csa_recursion: 'CSA: Рекурсия'
+        csa_searching_algorithms: 'CSA: алгоритмы поиска'
+        csa_sorting_algorithms: 'CSA: алгоритмы сортировки'
+        star_quilts_intro_to_artist: 'Одеяла Star: знакомство с художником'
+        upload_sprites_backgrounds: Загрузка собственных спрайтов и фонов
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

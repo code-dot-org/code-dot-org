@@ -44,6 +44,7 @@ const ButtonHeight = {
 
 class Button extends React.Component {
   static propTypes = {
+    type: PropTypes.oneOf(['button', 'submit', 'reset']),
     className: PropTypes.string,
     href: PropTypes.string,
     text: PropTypes.string,
@@ -84,6 +85,7 @@ class Button extends React.Component {
 
   render() {
     const {
+      type,
       color = ButtonColor.orange,
       size = ButtonSize.default,
       href,
@@ -154,7 +156,9 @@ class Button extends React.Component {
         this.props.className,
         moduleStyles.main,
         moduleStyles.textButton,
-        'button-active-no-border'
+        'button-active-no-border',
+        color === ButtonColor.brandSecondaryDefault &&
+          moduleStyles.rebrandedTextButton
       );
     } else {
       className = classNames(
@@ -165,8 +169,11 @@ class Button extends React.Component {
       );
     }
 
+    const buttonProps = Tag === 'button' ? {type} : {};
+
     return (
       <Tag
+        {...buttonProps}
         className={className}
         style={{...buttonStyle}}
         href={disabled ? '#' : href}

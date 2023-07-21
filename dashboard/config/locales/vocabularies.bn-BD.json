@@ -2,46 +2,110 @@
   "bn-BD": {
     "data": {
       "vocabularies": {
-        "function/hero/unversioned": {
-          "word": "ফাংশন"
+        "copyright/csd/2021": {
+          "word": "কপিরাইট"
         },
-        "code/poem-art/2021": {
-          "word": "কোড"
+        "variable/csd/2021": {
+          "word": "চলক"
         },
-        "code/artist/unversioned": {
-          "word": "কোড"
-        },
-        "conditionals/aquatic/unversioned": {
+        "conditionals/csd/2021": {
           "word": "শর্তযুক্ত"
         },
-        "loops/aquatic/unversioned": {
-          "word": "চক্র"
+        "abstraction/csd/2021": {
+          "word": "অপসারণ"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+        "function/csd/2021": {
+          "word": "ফাংশন"
         },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+        "programming/coursea/2021": {
+          "word": "প্রোগ্রামিং"
         },
-        "code/sports/unversioned": {
-          "word": "কোড"
+        "programming/courseb/2021": {
+          "word": "প্রোগ্রামিং"
+        },
+        "programming/coursec/2021": {
+          "word": "প্রোগ্রামিং"
+        },
+        "binary/coursec/2021": {
+          "word": "দ্বি-আঙ্কিক"
+        },
+        "programming/coursed/2021": {
+          "word": "প্রোগ্রামিং"
+        },
+        "conditionals/coursed/2021": {
+          "word": "শর্তযুক্ত"
+        },
+        "copyright/coursee/2021": {
+          "word": "কপিরাইট"
+        },
+        "function/coursee/2021": {
+          "word": "ফাংশন"
+        },
+        "conditionals/coursee/2021": {
+          "word": "শর্তযুক্ত"
+        },
+        "define/coursee/2021": {
+          "word": "নির্ধারণ করুন"
+        },
+        "variable/coursef/2021": {
+          "word": "চলক"
+        },
+        "internet/coursef/2021": {
+          "word": "ইন্টারনেট"
+        },
+        "define/coursef/2021": {
+          "word": "নির্ধারণ করুন"
+        },
+        "programming/express/2021": {
+          "word": "প্রোগ্রামিং"
+        },
+        "conditionals/express/2021": {
+          "word": "শর্তযুক্ত"
+        },
+        "function/express/2021": {
+          "word": "ফাংশন"
+        },
+        "variable/express/2021": {
+          "word": "চলক"
+        },
+        "define/express/2021": {
+          "word": "নির্ধারণ করুন"
+        },
+        "programming/pre-express/2021": {
+          "word": "প্রোগ্রামিং"
+        },
+        "copyright/csd/2022": {
+          "word": "কপিরাইট"
+        },
+        "variable/csd/2022": {
+          "word": "চলক"
+        },
+        "conditionals/csd/2022": {
+          "word": "শর্তযুক্ত"
+        },
+        "abstraction/csd/2022": {
+          "word": "অপসারণ"
+        },
+        "function/csd/2022": {
+          "word": "ফাংশন"
+        },
+        "programming/coursea/2022": {
+          "word": "প্রোগ্রামিং"
+        },
+        "programming/courseb/2022": {
+          "word": "প্রোগ্রামিং"
+        },
+        "programming/coursec/2022": {
+          "word": "প্রোগ্রামিং"
+        },
+        "binary/coursec/2022": {
+          "word": "দ্বি-আঙ্কিক"
         },
         "programming/coursed/2022": {
           "word": "প্রোগ্রামিং"
         },
         "conditionals/coursed/2022": {
           "word": "শর্তযুক্ত"
-        },
-        "variable/coursef/2022": {
-          "word": "চলক"
-        },
-        "internet/coursef/2022": {
-          "word": "ইন্টারনেট"
-        },
-        "define/coursef/2022": {
-          "word": "নির্ধারণ করুন"
         },
         "function/coursee/2022": {
           "word": "ফাংশন"
@@ -55,8 +119,14 @@
         "define/coursee/2022": {
           "word": "নির্ধারণ করুন"
         },
-        "programming/courseb/2022": {
-          "word": "প্রোগ্রামিং"
+        "variable/coursef/2022": {
+          "word": "চলক"
+        },
+        "internet/coursef/2022": {
+          "word": "ইন্টারনেট"
+        },
+        "define/coursef/2022": {
+          "word": "নির্ধারণ করুন"
         },
         "programming/express/2022": {
           "word": "প্রোগ্রামিং"
@@ -76,29 +146,31 @@
         "programming/pre-express/2022": {
           "word": "প্রোগ্রামিং"
         },
-        "programming/coursea/2022": {
-          "word": "প্রোগ্রামিং"
-        },
-        "programming/coursec/2022": {
-          "word": "প্রোগ্রামিং"
-        },
-        "binary/coursec/2022": {
-          "word": "দ্বি-আঙ্কিক"
-        },
-        "variable/csd/2022": {
-          "word": "চলক"
-        },
-        "conditionals/csd/2022": {
+        "conditionals/aquatic/unversioned": {
           "word": "শর্তযুক্ত"
         },
-        "abstraction/csd/2022": {
-          "word": "অপসারণ"
+        "loops/aquatic/unversioned": {
+          "word": "চক্র"
         },
-        "function/csd/2022": {
+        "code/artist/unversioned": {
+          "word": "কোড"
+        },
+        "function/hero/unversioned": {
           "word": "ফাংশন"
         },
-        "copyright/csd/2022": {
-          "word": "কপিরাইট"
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/poem-art/2021": {
+          "word": "কোড"
+        },
+        "code/sports/unversioned": {
+          "word": "কোড"
         },
         "code/poem-art/unversioned": {
           "word": "কোড",
@@ -119,78 +191,6 @@
         "line/poem-art/unversioned": {
           "word": "",
           "definition": ""
-        },
-        "variable/coursef/2021": {
-          "word": "চলক"
-        },
-        "internet/coursef/2021": {
-          "word": "ইন্টারনেট"
-        },
-        "define/coursef/2021": {
-          "word": "নির্ধারণ করুন"
-        },
-        "programming/courseb/2021": {
-          "word": "প্রোগ্রামিং"
-        },
-        "programming/coursea/2021": {
-          "word": "প্রোগ্রামিং"
-        },
-        "programming/coursec/2021": {
-          "word": "প্রোগ্রামিং"
-        },
-        "binary/coursec/2021": {
-          "word": "দ্বি-আঙ্কিক"
-        },
-        "programming/coursed/2021": {
-          "word": "প্রোগ্রামিং"
-        },
-        "conditionals/coursed/2021": {
-          "word": "শর্তযুক্ত"
-        },
-        "programming/express/2021": {
-          "word": "প্রোগ্রামিং"
-        },
-        "conditionals/express/2021": {
-          "word": "শর্তযুক্ত"
-        },
-        "function/express/2021": {
-          "word": "ফাংশন"
-        },
-        "variable/express/2021": {
-          "word": "চলক"
-        },
-        "define/express/2021": {
-          "word": "নির্ধারণ করুন"
-        },
-        "programming/pre-express/2021": {
-          "word": "প্রোগ্রামিং"
-        },
-        "copyright/coursee/2021": {
-          "word": "কপিরাইট"
-        },
-        "function/coursee/2021": {
-          "word": "ফাংশন"
-        },
-        "conditionals/coursee/2021": {
-          "word": "শর্তযুক্ত"
-        },
-        "define/coursee/2021": {
-          "word": "নির্ধারণ করুন"
-        },
-        "variable/csd/2021": {
-          "word": "চলক"
-        },
-        "conditionals/csd/2021": {
-          "word": "শর্তযুক্ত"
-        },
-        "abstraction/csd/2021": {
-          "word": "অপসারণ"
-        },
-        "function/csd/2021": {
-          "word": "ফাংশন"
-        },
-        "copyright/csd/2021": {
-          "word": "কপিরাইট"
         }
       }
     }

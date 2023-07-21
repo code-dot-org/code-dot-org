@@ -86,38 +86,40 @@ az:
           title: CS Discoveries Kurikulum Araşdırması
         self-paced-pl-csd-2023:
           title: öz templi-pl-csd-2021
+        self-paced-pl-csp-2023:
+          title: öz templi-pl-csp-2021
     resources:
-      curriculum/csd/2020:
-        name: Kurikulum
-      teacher_forum/csd/2020:
-        name: Müəllim Forumu
       curriculum/csd/2017:
         name: Kurikulum
       teacher_forum_6/csd/2017:
         name: Müəllim Forumu
-      all_resources_7/csd/2022:
-        name: Bütün Resurslar
-      all_standards_7/csd/2022:
-        name: Bütün Standartlar
-      all_vocabulary_7/csd/2022:
-        name: Bütün Lüğət
+      curriculum/csd/2018:
+        name: Kurikulum
+      teacher_forum_6/csd/2018:
+        name: Müəllim Forumu
       curriculum/csd/2019:
         name: Kurikulum
       teacher_forum/csd/2019:
         name: Müəllim Forumu
-      all_resources_2/csd/2023:
-        name: Bütün Resurslar
-      all_standards_2/csd/2023:
-        name: Bütün Standartlar
-      all_vocabulary_2/csd/2023:
-        name: Bütün Lüğət
+      curriculum/csd/2020:
+        name: Kurikulum
+      teacher_forum/csd/2020:
+        name: Müəllim Forumu
       all_resources_1/csd/2021:
         name: Bütün Resurslar
       all_standards_1/csd/2021:
         name: Bütün Standartlar
       all_vocabulary_1/csd/2021:
         name: Bütün Lüğət
-      curriculum/csd/2018:
-        name: Kurikulum
-      teacher_forum_6/csd/2018:
-        name: Müəllim Forumu
+      all_resources_7/csd/2022:
+        name: Bütün Resurslar
+      all_standards_7/csd/2022:
+        name: Bütün Standartlar
+      all_vocabulary_7/csd/2022:
+        name: Bütün Lüğət
+      all_resources_2/csd/2023:
+        name: Bütün Resurslar
+      all_standards_2/csd/2023:
+        name: Bütün Standartlar
+      all_vocabulary_2/csd/2023:
+        name: Bütün Lüğət

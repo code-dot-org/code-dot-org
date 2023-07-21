@@ -8,6 +8,9 @@
         "csd-2022/applab-overview": {
           "display_name": "მიმოხილვა"
         },
+        "csd-2022/circuit-playground": {
+          "display_name": "მიკროსქემის სათამაშო მოედნის მიმოხილვა"
+        },
         "csd-2022/classes": {
           "display_name": "კლასები"
         },
@@ -50,8 +53,14 @@
         "csd-2022/lists": {
           "display_name": "სიები"
         },
+        "csd-2022/maker-toolkit": {
+          "display_name": "Maker ინსტრუმენტარიუმის"
+        },
         "csd-2022/maker-toolkit-overview": {
           "display_name": "მიმოხილვა"
+        },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "მოდელის ბარათები AI ლაბორატორიაში"
         },
         "csd-2022/other": {
           "display_name": "სხვა"

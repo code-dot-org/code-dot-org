@@ -197,7 +197,7 @@ tr:
             -   Bu müfredatı uygulamanıza yardımcı olacak _Müfredat Rehberi_, _Ders Kelimeleri_ ve diğer kaynakları aşağıdaki Öğretmen Kaynakları menüsünde bulabilirsiniz.
           version_title: "'23-'24"
         self-paced-pl-physical-computing-2022:
-          title: 'Cihazlarla Uygulama Oluşturmayı Öğretme '
+          title: Cihazlarla Uygulama Oluşturmayı Öğretme
           description_student: "## Hoş geldiniz\n\nEğitimcilerin Code.org ile ders vermeye başlamaları için Code.org'un kendi hızına göre ücretsiz çevrimiçi öğrenimine hoş geldiniz! Bu profesyonel öğrenim deneyimini tamamladıktan sonra öğrencilerinizle birlikte Code.org'un Cihazlarla Uygulama Oluşturma Ünitesini\\*\\* öğretmeye başlamak için hazır olacaksınız.\n\n### Size uygun öğrenmeyi bulun\n\n-   **Kendi hızınızda ilerleyin:** Bu kendi hızınızda öğrenme deneyimi, kendi öğreniminiz üzerinde kontrol sahibi olmanızı sağlamak için tasarlanmıştır. Her ders için önerilen zamanlar verilmiştir. Ancak, **içerikle kendi hızınızda etkileşim kurmanızı** öneririz.\n\n-   **İçeriğinizi seçin:** İçerik, hem Code.org'da hem de Cihazlarla Uygulama Oluşturma biriminde yeni olan öğretmenler için önerilen ilerleme biçiminde düzenlenmiştir. Ancak, **içeriğe ihtiyaçlarınızı en iyi karşılayan sırayla erişebilirsiniz.** Code.org platformuna zaten aşina iseniz, Code.org'u Kullanmaya Başlarken atlamayı ve doğrudan Hazırlanmaya Hazırlanma bölümüne geçmeyi seçebilirsiniz. Cihazlarla Uygulama Oluşturmayı Öğretin."
           description_teacher: "## Hoş geldiniz\n\nEğitimcilerin Code.org ile ders vermeye başlamaları için Code.org'un kendi hızına göre ücretsiz çevrimiçi öğrenimine hoş geldiniz! Bu profesyonel öğrenim deneyimini tamamladıktan sonra öğrencilerinizle birlikte Code.org'un Cihazlarla Uygulama Oluşturma Ünitesini\\*\\* öğretmeye başlamak için hazır olacaksınız.\n\n### Size uygun öğrenmeyi bulun\n\n-   **Kendi hızınızda ilerleyin:** Bu kendi hızınızda öğrenme deneyimi, kendi öğreniminiz üzerinde kontrol sahibi olmanızı sağlamak için tasarlanmıştır. Her ders için önerilen zamanlar verilmiştir. Ancak, **içerikle kendi hızınızda etkileşim kurmanızı** öneririz.\n\n-   **İçeriğinizi seçin:** İçerik, hem Code.org'da hem de Cihazlarla Uygulama Oluşturma biriminde yeni olan öğretmenler için önerilen ilerleme biçiminde düzenlenmiştir. Ancak, **içeriğe ihtiyaçlarınızı en iyi karşılayan sırayla erişebilirsiniz.** Code.org platformuna zaten aşina iseniz, Code.org'u Kullanmaya Başlarken atlamayı ve doğrudan Hazırlanmaya Hazırlanma bölümüne geçmeyi seçebilirsiniz. Cihazlarla Uygulama Oluşturmayı Öğretin."
           version_title: "'22-'23"
@@ -242,6 +242,14 @@ tr:
           description_teacher: "## Hoş geldiniz\n\nEğitimcilerin CS Discoveries'i öğretmeye başlaması için Code.org'un kendi hızına göre ayarlayabileceğiniz ücretsiz çevrimiçi kursuna hoş geldiniz! Bu çevrimiçi kursu tamamladıktan sonra öğrencilerinizle birlikte **Code.org'un Bilgisayar Bilimi Keşifleri kursunu** öğretmeye başlamak için hazır olacaksınız.\n\n### Size uygun öğrenmeyi bulun\n\n-   **Kendi hızınızda gidin:** Bu kendi hızınızda kurs, sizi sürücü koltuğuna oturtmak ve kendi öğreniminizin kontrolünü size vermek için tasarlanmıştır. Önerilen zamanlar her modül ve ders için verilmiştir. Ancak, **içerikle kendi hızınızda etkileşim kurmanızı** öneririz.\n\n-   **İçeriğinizi seçin:** Bu profesyonel öğrenim kursunun içeriği, hem Code.org hem de CS Discoveries'te yeni olan öğretmenler için önerilen ilerleme şeklinde düzenlenmiştir. Ancak, **ihtiyaçlarınızı en iyi karşılayan sırayla içerikle etkileşim kurabilirsiniz.** Başlamadan önce bu profesyonel öğrenim kursu hakkında daha fazla bilgi edinmek için tüm öğretmenlere **kısa karşılama birimiyle başlamalarını** öneririz."
           version_title: "'23-'24"
         pl-csd-summer-2023:
+          description_student: |-
+            **Olacaksın:**
+
+            -   CS Discoveries'i öğretmeye hazırlanın.
+            -   CS Discoveries müfredatındaki temel kavramları uygulayın.
+            -   Adil CS eğitimi anlayışınızı geliştirin.
+            -   Öğrenci deneyimi için empati geliştirin.
+            -   Benzer işler yapan öğretmenlerden oluşan bir ağın parçası olun.
           description_teacher: |-
             **Katılımcılar olacaklar:**
 
@@ -250,15 +258,49 @@ tr:
             -   Adil CS eğitimi anlayışınızı geliştirin.
             -   Öğrenci deneyimi için empati geliştirin.
             -   Benzer işler yapan öğretmenlerden oluşan bir ağın parçası olun.
+        virtual-pl-csd-summer-2023:
+          description_student: |-
+            **Olacaksın:**
+
+            -   CS Discoveries'i öğretmeye hazırlanın.
+            -   CS Discoveries müfredatındaki temel kavramları uygulayın.
+            -   Adil CS eğitimi anlayışınızı geliştirin.
+            -   Öğrenci deneyimi için empati geliştirin.
+            -   Benzer işler yapan öğretmenlerden oluşan bir ağın parçası olun.
+          description_teacher: |-
+            **Katılımcılar olacaklar:**
+
+            -   CS Discoveries'i öğretmeye hazırlanın.
+            -   CS Discoveries müfredatındaki temel kavramları uygulayın.
+            -   Adil CS eğitimi anlayışınızı geliştirin.
+            -   Öğrenci deneyimi için empati geliştirin.
+            -   Benzer işler yapan öğretmenlerden oluşan bir ağın parçası olun.
+        self-paced-pl-csp-2023:
+          title: kendi-temposunda-pl-csp-2021
+          description_student: "## Hoş geldiniz\n\n##### Eğitimcilerin CS İlkelerini öğretmeye başlamaları için Code.org'un kendi hızına göre ayarlayabileceğiniz ücretsiz çevrimiçi modüllerine hoş geldiniz! Bu çevrimiçi modülleri tamamladıktan sonra, öğrencilerinizle Code.org'un Bilgisayar Bilimi İlkeleri kursunu öğretmeye başlamak için hazır olacaksınız.\n\n### Size uygun öğrenmeyi bulun\n\n##### **Kendi hızınızda ilerleyin**: Kendi hızınızda ilerleyen bu modüller, sizi sürücü koltuğuna oturtmak ve kendi öğreniminizin kontrolünü size vermek için tasarlanmıştır. Önerilen zamanlar her modül ve ders için verilmiştir. Ancak, içerikle kendi hızınızda etkileşim kurmanızı öneririz.\n\n### İçeriğinizi seçin\n\n##### Bu profesyonel öğrenim modüllerinin içeriği, hem Code.org hem de CS İlkelerinde yeni olan öğretmenler için önerilen ilerleme biçiminde düzenlenmiştir. Ancak, içerikle ihtiyaçlarınızı en iyi karşılayan sırayla etkileşim kurabilirsiniz. Başlamadan önce tüm öğretmenlerin bu profesyonel öğrenim modülleri hakkında daha fazla bilgi edinmeleri için kısa hoş geldiniz ünitesiyle başlamalarını öneririz."
+          description_teacher: "## Hoş geldiniz\n\n##### Eğitimcilerin CS İlkelerini öğretmeye başlamaları için Code.org'un kendi hızına göre ayarlayabileceğiniz ücretsiz çevrimiçi modüllerine hoş geldiniz! Bu çevrimiçi modülleri tamamladıktan sonra, öğrencilerinizle Code.org'un Bilgisayar Bilimi İlkeleri kursunu öğretmeye başlamak için hazır olacaksınız.\n\n### Size uygun öğrenmeyi bulun\n\n##### **Kendi hızınızda ilerleyin**: Kendi hızınızda ilerleyen bu modüller, sizi sürücü koltuğuna oturtmak ve kendi öğreniminizin kontrolünü size vermek için tasarlanmıştır. Önerilen zamanlar her modül ve ders için verilmiştir. Ancak, içerikle kendi hızınızda etkileşim kurmanızı öneririz.\n\n### İçeriğinizi seçin\n\n##### Bu profesyonel öğrenim modüllerinin içeriği, hem Code.org hem de CS İlkelerinde yeni olan öğretmenler için önerilen ilerleme biçiminde düzenlenmiştir. Ancak, içerikle ihtiyaçlarınızı en iyi karşılayan sırayla etkileşim kurabilirsiniz. Başlamadan önce tüm öğretmenlerin bu profesyonel öğrenim modülleri hakkında daha fazla bilgi edinmeleri için kısa hoş geldiniz ünitesiyle başlamalarını öneririz."
     resources:
-      curriculum/csd/2020:
-        name: Müfredat
-      teacher_forum/csd/2020:
-        name: Öğretmen Forumu
       curriculum/csd/2017:
         name: Müfredat
       teacher_forum_6/csd/2017:
         name: Öğretmen Forumu
+      curriculum/csd/2018:
+        name: Müfredat
+      teacher_forum_6/csd/2018:
+        name: Öğretmen Forumu
+      curriculum/csd/2019:
+        name: Müfredat
+      teacher_forum/csd/2019:
+        name: Öğretmen Forumu
+      curriculum/csd/2020:
+        name: Müfredat
+      teacher_forum/csd/2020:
+        name: Öğretmen Forumu
+      csd_guide_to_assessment/csd/2021:
+        name: CSD Değerlendirme Kılavuzu
+        url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
+      getting_started_with_csd/csd/2021:
+        name: CSD'ye Başlarken
       csd_changelog_22-_23/csd/2022:
         name: CSD Değişiklik günlüğü '22-'23
         url: https://docs.google.com/document/d/1GR3VaThoqXY6XBeVCHcYvZtaQFn47jPpmLNRQB4IK7Y/preview
@@ -267,18 +309,5 @@ tr:
       csd_guide_to_assessment/csd/2022:
         name: CSD Değerlendirme Kılavuzu
         url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
-      curriculum/csd/2019:
-        name: Müfredat
-      teacher_forum/csd/2019:
-        name: Öğretmen Forumu
       csd_guide_to_assessment/csd/2023:
         name: CSD Değerlendirme Kılavuzu
-      csd_guide_to_assessment/csd/2021:
-        name: CSD Değerlendirme Kılavuzu
-        url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
-      getting_started_with_csd/csd/2021:
-        name: CSD'ye Başlarken
-      curriculum/csd/2018:
-        name: Müfredat
-      teacher_forum_6/csd/2018:
-        name: Öğretmen Forumu

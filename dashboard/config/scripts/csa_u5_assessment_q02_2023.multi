@@ -1,7 +1,7 @@
 name 'CSA U5 Assessment q02_2023'
 
-wrong 'The initial value of `max` should be set to `Integer.MIN_VALUE` instead of `0`.'
-right 'The loop condition for the outer loop should be `i < arr.length - 1`.'
+right 'The initial value of `max` should be set to `Integer.MIN_VALUE` instead of `0`.'
+wrong 'The loop condition for the outer loop should be `i < arr.length - 1`.'
 wrong 'The loop condition for the inner loop should be `j < arr.length - 1`.'
 wrong 'The condition `arr[i][j] > max` should be `arr[i][j] < max`.'
 wrong 'The return type of the method should be `void` instead of `int`.'

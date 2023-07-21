@@ -18,6 +18,10 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     response: :forbidden
   test_user_gets_response_for :get_access_token,
     params: {channelId: storage_encrypt_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
+    user: :with_recent_captcha_teacher,
+    response: :success
+  test_user_gets_response_for :get_access_token,
+    params: {channelId: storage_encrypt_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
   test_user_gets_response_for :get_access_token,
@@ -31,8 +35,9 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     response: :forbidden
   test_user_gets_response_for :access_token_with_override_sources,
     method: :post,
-    user: :teacher,
-    response: :forbidden
+    params: {overrideSources: "{'source': {}}", executionType: 'RUN', miniAppType: 'console'},
+    user: :with_recent_captcha_teacher,
+    response: :success
   test_user_gets_response_for :access_token_with_override_sources,
     method: :post,
     params: {overrideSources: "{'source': {}}", executionType: 'RUN', miniAppType: 'console'},
@@ -93,6 +98,26 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
 
     # decoded_token[0] is the JWT payload. Check that options are sent as stringified json
     assert_equal "{\"useNeighborhood\":\"true\"}", decoded_token[0]['options']
+  end
+
+  test 'response for verified teacher includes javabuilder url' do
+    verified_teacher = create(:authorized_teacher)
+    sign_in(verified_teacher)
+
+    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
+    response = JSON.parse(@response.body)
+
+    assert_equal(CDO.javabuilder_url, response['javabuilder_url'])
+  end
+
+  test 'response for unverified teacher includes demo javabuilder url' do
+    teacher = create(:with_recent_captcha_teacher)
+    sign_in(teacher)
+
+    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
+    response = JSON.parse(@response.body)
+
+    assert_equal(CDO.javabuilder_demo_url, response['javabuilder_url'])
   end
 
   test 'student of authorized teacher without csa section cannot get access token' do
@@ -203,7 +228,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     teachers_string = decoded_token[0]['verified_teachers']
     teachers = teachers_string.split(',')
     assert_equal 1, teachers.length
-    assert teachers.include?((verified_teacher_1.id).to_s)
+    assert_includes(teachers, (verified_teacher_1.id).to_s)
     # verified teacher 2 is not teaching the student csa
     refute teachers.include?((verified_teacher_2.id).to_s)
     refute teachers.include?((regular_teacher.id).to_s)
@@ -219,5 +244,37 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     decoded_token = JWT.decode(token, @rsa_key_test.public_key, true, {algorithm: 'RS256'})
     teachers_string = decoded_token[0]['verified_teachers']
     assert_equal (levelbuilder.id).to_s, teachers_string
+  end
+
+  test 'regular teacher account has correct verified_teachers parameter (supports javalab eval mode)' do
+    teacher = create :with_recent_captcha_teacher
+    sign_in(teacher)
+    get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
+
+    response = JSON.parse(@response.body)
+    token = response['token']
+    decoded_token = JWT.decode(token, @rsa_key_test.public_key, true, {algorithm: 'RS256'})
+    teachers_string = decoded_token[0]['verified_teachers']
+    assert_equal (teacher.id).to_s, teachers_string
+  end
+
+  test 'regular teacher who has never verified via captcha gets prompted for captcha' do
+    teacher = create :teacher
+    sign_in(teacher)
+    get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
+
+    assert_response :forbidden
+    response = JSON.parse(@response.body)
+    assert_equal(true, response['captcha_required'])
+  end
+
+  test 'regular teacher who has verified via captcha more than 24 hours ago gets prompted for captcha' do
+    teacher = create :teacher, last_verified_captcha_at: Time.now.utc - 25.hours
+    sign_in(teacher)
+    get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
+
+    assert_response :forbidden
+    response = JSON.parse(@response.body)
+    assert_equal(true, response['captcha_required'])
   end
 end

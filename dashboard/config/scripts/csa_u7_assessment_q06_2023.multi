@@ -24,3 +24,48 @@ What is printed as a result of the call `whatsUp("WATCH")`?
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+This method takes a `String` and checks if its length is greater than `1`. If it is, it creates a new `String` called `temp`, which is the original `String` minus the last character. Then it calls itself with this new `String`. After that call returns, it prints the new `String`.
+
+In case of `whatsUp("WATCH")`, here is the sequence of operations:
+
+1. Call `whatsUp("WATCH")`.
+
+    - `temp` is `"WATC"`.
+    
+    - Call `whatsUp("WATC")`.
+    
+        - `temp` is `"WAT"`.
+        
+        - Call `whatsUp("WAT")`.
+        
+            - `temp` is `"WA"`.
+            
+            - Call `whatsUp("WA")`.
+            
+                - `temp` is `"W"`.
+                
+                - Call `whatsUp("W")`.
+                
+                    - This call does nothing because the length of `"W"` is not greater than `1`.
+                    
+                - Print `"W"`.
+                
+            - Print `"WA"`.
+            
+        - Print `"WAT"`.
+        
+    - Print `"WATC"`.
+    
+- Print `"WATCH"`.
+
+So the output is:
+
+```
+W
+WA
+WAT
+WATC
+WATCH
+```
+MARKDOWN

@@ -2,17 +2,728 @@
   "hu-HU": {
     "data": {
       "standard_categories": {
-        "CT": {
-          "description": "Számítógépes gondolkodás"
+        "1": {
+          "description": "A hallgatók kreatív gondolkodást mutatnak, tudást építenek, és innovatív termékeket és folyamatokat fejlesztenek ki a technológia segítségével."
         },
-        "L": {
-          "description": "Nyelv"
+        "2": {
+          "description": "A diákok digitális médiát és környezetet használnak a kommunikációhoz és az együttműködéshez, beleértve a távolból is, hogy támogassák az egyéni tanulást és hozzájáruljanak mások tanulásához."
+        },
+        "3": {
+          "description": "A diákok digitális eszközöket alkalmaznak az információk összegyűjtésére, értékelésére és felhasználására."
+        },
+        "3-A-i": {
+          "description": "A tanulás természete - emberek vs gépek"
+        },
+        "3-A-ii": {
+          "description": "A tanulás természete - minták keresése az adatokban"
+        },
+        "3-A-iii": {
+          "description": "A tanulás természete - modell képzése"
+        },
+        "3-A-iv": {
+          "description": "A tanulás természete - constructinv vs érvelő használata"
+        },
+        "3-A-v": {
+          "description": "A tanulás természete - a belső reprezentációk kiigazítása"
+        },
+        "3-A-vi": {
+          "description": "A tanulás természete - a tapasztalatból való tanulás"
+        },
+        "3-B-i": {
+          "description": "Neurális hálózatok - neurális hálózat felépítése"
+        },
+        "3-B-ii": {
+          "description": "Neural Networks - súlybeállítás"
+        },
+        "3-C-i": {
+          "description": "Adatkészletek - jellemzőkészletek"
+        },
+        "3-C-ii": {
+          "description": "Adatkészletek - nagy adatkészletek"
+        },
+        "3-C-iii": {
+          "description": "Adatkészletek - torzítás"
+        },
+        "4": {
+          "description": "A hallgatók kritikus gondolkodási készségeket használnak a kutatás megtervezéséhez és elvégzéséhez, a projektek kezeléséhez, a problémák megoldásához és a megfelelő digitális eszközök és erőforrások felhasználásával megalapozott döntések meghozatalához."
+        },
+        "5": {
+          "description": "A diákok megértik a technológiával kapcsolatos emberi, kulturális és társadalmi kérdéseket, valamint jogi és etikai magatartást gyakorolnak."
+        },
+        "6": {
+          "description": "A hallgatók bizonyítják a technológiai koncepciók, rendszerek és műveletek alapos megértését."
+        },
+        "AAP-1": {
+          "description": "Ahhoz, hogy konkrét megoldásokat találjanak az általánosítható problémákra, a programozók többféle módon képviselik és rendszerezik az adatokat."
+        },
+        "AAP-1.A": {
+          "description": "Érték ábrázolása változóval."
+        },
+        "AAP-1.B": {
+          "description": "Határozza meg a változó értékét egy hozzárendelés eredményeként."
+        },
+        "AAP-1.C": {
+          "description": "Lista vagy karakterlánc ábrázolása változó használatával."
+        },
+        "AAP-1.D": {
+          "description": "Adatabsztrakcióhoz: \na. Adatabsztrakció fejlesztése listák segítségével több elem tárolására.\nb. Magyarázza el, hogyan kezeli az adatabsztrakció használata a programkód összetettségét."
+        },
+        "AAP-2": {
+          "description": "Az utasítások szekvenálásának és kombinálásának módja határozza meg a kiszámított eredményt. A programok iterációs és kiválasztási konstrukciókat tartalmaznak az ismétlés ábrázolására és a változatos bemeneti értékek kezelésére vonatkozó döntések meghozatalára."
+        },
+        "AAP-2.A": {
+          "description": "Kifejezzen egy algoritmust, amely szekvenálást használ programozási nyelv használata nélkül."
+        },
+        "AAP-2.B": {
+          "description": "Képviseljen lépésről lépésre algoritmikus folyamatot szekvenciális kód utasításokkal."
+        },
+        "AAP-2.C": {
+          "description": "Értékelje az aritmetikai operátorokat használó kifejezéseket."
+        },
+        "AAP-2.D": {
+          "description": "Értékelje a karakterláncokat manipuláló kifejezéseket."
+        },
+        "AAP-2.E": {
+          "description": "Két változó, kifejezés vagy érték közötti kapcsolat esetén: \na. Relációs operátorok ábrázolása\nb. Relációs operátorokat használó kifejezések értékelése."
+        },
+        "AAP-2.F": {
+          "description": "Logikai értékek közötti kapcsolatok esetén:\na. Képviselés logikai operátorok használatával.\nb. Értékelje ki azokat a kifejezéseket, amelyek logikai operátorokat használnak."
+        },
+        "AAP-2.G": {
+          "description": "Kifejezzen egy algoritmust, amely kiválasztást használ programozási nyelv használata nélkül."
+        },
+        "AAP-2.H": {
+          "description": "Kiválasztáshoz:\na. Képviselje feltételes utasításokkal.\nb. Határozza meg a feltételes állítások eredményét."
+        },
+        "AAP-2.I": {
+          "description": "Beágyazott kiválasztáshoz:\na. Beágyazott feltételes utasításokkal ábrázolja. \nb. Határozza meg a beágyazott feltételes állítások eredményét."
+        },
+        "AAP-2.J": {
+          "description": "Kifejezzen egy algoritmust, amely iterációt használ programozási nyelv használata nélkül."
+        },
+        "AAP-2.K": {
+          "description": "Iiterációhoz:\na. Képviselje iterációs utasításokkal.\nb. Határozza meg az iterációs állítások eredményét vagy mellékhatását."
+        },
+        "AAP-2.L": {
+          "description": "Hasonlítson össze több algoritmust annak megállapításához, hogy ugyanazt a mellékhatást vagy eredményt eredményezik-e."
+        },
+        "AAP-2.M": {
+          "description": "Algoritmusokhoz: \na. Algoritmusok létrehozása. \nb. Kombinálja és módosítsa a meglévő algoritmusokat."
+        },
+        "AAP-2.N": {
+          "description": "Listaműveletekhez:\na. Írjon olyan kifejezéseket, amelyek listaindexelést és listaeljárásokat használnak.\nb. Értékelje ki azokat a kifejezéseket, amelyek listaindexelést és listaeljárásokat használnak."
+        },
+        "AAP-2.O": {
+          "description": "Lista elemeit tartalmazó algoritmusok esetében:\na. Képviselje iteratív utasításokkal a lista bejárásához.\nb. Határozza meg egy algoritmus eredményét listaátjárókkal."
+        },
+        "AAP-2.P": {
+          "description": "Bináris keresési algoritmusok esetén:\na. Határozza meg az adatkészlet értékének megkereséséhez szükséges iterációk számát. \nb. Magyarázza el a bináris keresés elvégzéséhez szükséges követelményeket."
+        },
+        "AAP-3": {
+          "description": "A programozók kisebb és kezelhetőbb darabokra bontják a problémákat. Az eljárások létrehozásával és a paraméterek kihasználásával a programozók általánosítják az újrafelhasználható folyamatokat. Az eljárások lehetővé teszik a programozók számára, hogy a már tesztelt kódokra támaszkodjanak, lehetővé téve a programozók számára, hogy gyorsabban és magabiztosabban írjanak programokat."
+        },
+        "AAP-3.A": {
+          "description": "Eljárási hívásokhoz:\na. Írjon nyilatkozatokat a híváseljárásokhoz.\nb. Határozza meg az eljárási felhívás eredményét vagy hatását."
+        },
+        "AAP-3.B": {
+          "description": "Eljárási hívásokhoz:\na. Írjon nyilatkozatokat a híváseljárásokhoz.\nb. Határozza meg az eljárási felhívás eredményét vagy hatását."
+        },
+        "AAP-3.C": {
+          "description": "Eljárási absztrakciók kidolgozása a program összetettségének kezelésére eljárások írásával."
+        },
+        "AAP-3.D": {
+          "description": "Válassza ki a megfelelő könyvtárakat vagy meglévő kódszegmenseket az új programok létrehozásához."
+        },
+        "AAP-3.E": {
+          "description": "Véletlenszerű értékek generálásához: \na. Írjon kifejezéseket a lehetséges értékek generálásához. \nb. Értékelje a kifejezéseket a lehetséges eredmények meghatározásához."
+        },
+        "AAP-3.F": {
+          "description": "Szimulációkhoz:\na Magyarázza el, hogyan használhatók a számítógépek a valós jelenségek vagy eredmények ábrázolására. \nb. Hasonlítsa össze a szimulációk használatát a valós kontextusokkal."
+        },
+        "AAP-4": {
+          "description": "Vannak olyan problémák, amelyeket a számítógép nem tud megoldani, és még akkor is, ha a számítógép képes megoldani egy problémát, előfordulhat, hogy nem képes erre ésszerű idő alatt."
+        },
+        "AAP-4.A": {
+          "description": "Egy algoritmus hatékonyságának meghatározásához:\na Magyarázza el a különbséget az ésszerű időben futó algoritmusok és azok között, amelyek nem futnak ésszerű idő alatt. \nb. Azonosítsa azokat a helyzeteket, amikor a heurisztikus megoldás megfelelőbb lehet."
+        },
+        "AAP-4.B": {
+          "description": "Magyarázza el a megdönthetetlen problémák létezését a számítástechnikában."
+        },
+        "AP": {
+          "description": "Algoritmusok és programozás"
+        },
+        "APR": {
+          "description": "Aritmetika polinomokkal és racionális kifejezésekkel"
+        },
+        "BF": {
+          "description": "Építési funkciók"
+        },
+        "BI-1": {
+          "description": "A számítógépek érzékelők segítségével érzékelik a világot"
+        },
+        "BI-2": {
+          "description": "Az ügynökök fenntartják a világ reprezentációit, és érvelésre használják őket"
+        },
+        "BI-3": {
+          "description": "A számítógépek tanulhatnak az adatokból"
+        },
+        "BI-4": {
+          "description": "Az intelligens ügynököknek sokféle tudásra van szükségük ahhoz, hogy természetes módon kölcsönhatásba léphessenek az emberekkel"
+        },
+        "BI-5": {
+          "description": "Az AI pozitív és negatív módon is befolyásolhatja a társadalmat"
         },
         "C": {
           "description": "Alagút"
         },
+        "CC": {
+          "description": "Számolás és kardinalitás"
+        },
+        "CD": {
+          "description": "Számítógépek és kommunikációs eszközök"
+        },
+        "CED": {
+          "description": "Egyenletek létrehozása"
+        },
+        "CI": {
+          "description": "Közösségi, globális és etikai hatások"
+        },
+        "CL": {
+          "description": "együttműködés"
+        },
+        "CN": {
+          "description": "A komplex számrendszer"
+        },
+        "CO": {
+          "description": "Kongruencia"
+        },
+        "CON-1": {
+          "description": "A változók és operátorok szekvenálásának és kombinációjának módja határozza meg a kiszámított eredményt."
+        },
+        "CON-1.A": {
+          "description": "Értékelje a számtani kifejezéseket egy programkódban"
+        },
+        "CON-1.B": {
+          "description": "Értékelje ki, hogy mi tárolódik egy változóban egy kifejezés eredményeként egy hozzárendelési utasítással"
+        },
+        "CON-1.C": {
+          "description": "Értékelje az öntést használó aritmetikai kifejezéseket."
+        },
+        "CON-1.D": {
+          "description": "Értékelje ki azokat a kifejezéseket, amelyek a Math osztály metódusait használják."
+        },
+        "CON-1.E": {
+          "description": "Értékelje ki azokat a logikai kifejezéseket, amelyek relációs operátorokat használnak a programkódban."
+        },
+        "CON-1.F": {
+          "description": "Értékelje a compoudn logikai kifejezéseket a programkódban."
+        },
+        "CON-1.G": {
+          "description": "Hasonlítsa össze és hasonlítsa össze az ekvivalens logikai kifejezéseket."
+        },
+        "CON-1.H": {
+          "description": "Hasonlítsa össze az objektumhivatkozásokat logikai kifejezések használatával a programkódban."
+        },
+        "CON-2": {
+          "description": "A programozók beépítik az iterációt és a kiválasztást a kódba, hogy utasításokat adjanak a számítógépnek a sok lehetséges bemeneti érték mindegyikének feldolgozására"
+        },
+        "CON-2.A": {
+          "description": "Az elágazó logikai folyamatok ábrázolása feltételes utasítások használatával."
+        },
+        "CON-2.B": {
+          "description": "Az elágazó logikai folyamatok ábrázolása beágyazott feltételes utasítások használatával."
+        },
+        "CON-2.C": {
+          "description": "Képviselje az iteratív folyamatokat egy while eloop segítségével."
+        },
+        "CON-2.D": {
+          "description": "Algoritmusok esetén egy adott specifikáció összefüggésében, amely nem igényli a sokszögelés használatát: • Szabványos algoritmusok azonosítása. • Szabványos algoritmusok módosítása. • Algoritmus kidolgozása."
+        },
+        "CON-2.E": {
+          "description": "Az iteratív folyamatok ábrázolása a for hurok használatával."
+        },
+        "CON-2.F": {
+          "description": "Algoritmusokhoz egy adott specifikáció összefüggésében, amely magában foglalja a karakterlánc-objektumokat • Azonosítsa a szabványos algoritmusokat. • Módosítsa a szabványos algoritmusokat. • Algoritmus kidolgozása."
+        },
+        "CON-2.G": {
+          "description": "Beágyazott iteratív folyamatok ábrázolása"
+        },
+        "CON-2.H": {
+          "description": "Számítsa ki a kimutatások végrehajtásának számát és az iteratív utasítások informális futási idejű összehasonlítását."
+        },
+        "CON-2.I": {
+          "description": "Algoritmusok esetében egy adott specifikáció összefüggésében, amely tömbkeresztezéseket igényel: • Szabványos algoritmusok azonosítása. • Szabványos algoritmusok módosítása. • Algoritmus kidolgozása."
+        },
+        "CON-2.J": {
+          "description": "Algoritmusokhoz egy adott specifikáció összefüggésében, amely megköveteli az ArrayList áthaladások használatát: • Szabványos algoritmusok azonosítása. • Módosítsa a szabványos algoritmusokat. • Algoritmus kidolgozása."
+        },
+        "CON-2.K": {
+          "description": "Alkalmazzon szekvenciális/lineáris keresési algoritmusokat, hogy konkrét információkat keressen tömb vagy ArrayList objektumokban."
+        },
+        "CON-2.L": {
+          "description": "Alkalmazzon kiválasztási rendezési és beillesztési rendezési algoritmusokat a tömb vagy az ArrayList objektumok elemeinek rendezéséhez."
+        },
+        "CON-2.M": {
+          "description": "Számítsa ki a kimutatások végrehajtásának számát és a rendezési algoritmusok informális futásidejű összehasonlítását."
+        },
+        "CON-2.N": {
+          "description": "Algoritmusokhoz egy adott specifikáció kontextusában, amely 2D tömb áthaladásokat igényel: • Szabványos algoritmusok azonosítása. • Módosítsa a szabványos algoritmusokat. • Algoritmus kidolgozása."
+        },
+        "CON-2.O": {
+          "description": "Határozza meg a rekurzív módszerek végrehajtásának eredményét."
+        },
+        "CON-2.P": {
+          "description": "Alkalmazzon rekurzív keresési algoritmusokat a String, 1D tömb vagy ArrayList objektumokban található információkra."
+        },
+        "CON-2.Q": {
+          "description": "Alkalmazzon rekurzív algoritmusokat tömb vagy ArrayList objektumok elemeinek rendezésére."
+        },
+        "CP": {
+          "description": "Feltételes Valószínűség és A Valószínűség Szabályai"
+        },
+        "CPP": {
+          "description": "Számítástechnikai gyakorlat és programozás"
+        },
+        "CRD-1": {
+          "description": "Több perspektíva beépítése az együttműködés révén javítja a fejlesztendő számítástechnikai innovációkat."
+        },
+        "CRD-1.A": {
+          "description": "Magyarázza el, hogyan javítják a számítástechnikai innovációkat az együttműködés révén."
+        },
+        "CRD-1.B": {
+          "description": "Magyarázza el, hogyan fejlesztik ki a számítástechnikai innovációkat embercsoportok."
+        },
+        "CRD-1.C": {
+          "description": "Mutassa be a hatékony interperszonális készségeket az együttműködés során."
+        },
+        "CRD-2": {
+          "description": "A fejlesztők a felhasználó-központú iteratív tervezési folyamat segítségével hoznak létre és újítanak, amely magában foglalja a megvalósítási/visszacsatolási ciklusokat, és bőséges teret hagy a kísérletezésnek és a kockázatvállalásnak."
+        },
+        "CRD-2.A": {
+          "description": "Ismertesse a számítástechnikai innováció célját."
+        },
+        "CRD-2.B": {
+          "description": "Magyarázza el, hogyan működik egy program vagy kódszegmens."
+        },
+        "CRD-2.C": {
+          "description": "Azonosítsa a program bemeneteit (i) t."
+        },
+        "CRD-2.D": {
+          "description": "Azonosítsa a program által termelt kimenet (ek) t."
+        },
+        "CRD-2.E": {
+          "description": "Fejleszteni kell egy programot egy fejlesztési folyamat segítségével."
+        },
+        "CRD-2.F": {
+          "description": "Tervezzen egy programot és annak felhasználói felületét."
+        },
+        "CRD-2.G": {
+          "description": "Írja le a kódszegmens vagy program célját dokumentáció írásával."
+        },
+        "CRD-2.H": {
+          "description": "Nyugtázza a más forrásokból használt kódszegmenseket."
+        },
+        "CRD-2.I": {
+          "description": "Algoritmus vagy program hibái esetén: \na. Azonosítsa a hibát. \nb. Javítsa ki a hibát."
+        },
+        "CRD-2.J": {
+          "description": "Azonosítsa a bemeneteket és a megfelelő várható kimenetet vagy viselkedést, amelyek felhasználhatók egy algoritmus vagy program helyességének ellenőrzésére."
+        },
+        "CS": {
+          "description": "Számítástechnikai rendszerek"
+        },
+        "CSN-1": {
+          "description": "A számítógépes rendszerek és hálózatok megkönnyítik az adatok továbbítását."
+        },
+        "CSN-1.A": {
+          "description": "Magyarázza el, hogyan működnek együtt a számítástechnikai eszközök egy hálózatban."
+        },
+        "CSN-1.B": {
+          "description": "Magyarázza el, hogyan működik az internet."
+        },
+        "CSN-1.C": {
+          "description": "Magyarázza el, hogyan küldik az adatokat az interneten keresztül csomagokon keresztül."
+        },
+        "CSN-1.D": {
+          "description": "Ismertesse az internet és a világháló közötti különbségeket."
+        },
+        "CSN-2": {
+          "description": "A párhuzamos és elosztott számítástechnika több számítógépet használ fel az összetett problémák gyorsabb megoldására vagy a nagy adathalmazok feldolgozására."
+        },
+        "CSN-2.A": {
+          "description": "Hasonlítsa össze a szekvenciális, párhuzamos és elosztott számítástechnikát használó problémamegoldásokat."
+        },
+        "CSN-2.B": {
+          "description": "Határozza meg a szekvenciális és párhuzamos megoldások hatékonyságát."
+        },
+        "CSN-2.C": {
+          "description": "Ismertesse a párhuzamos és elosztott számítástechnika előnyeit és kihívásait."
+        },
+        "CT": {
+          "description": "Számítógépes gondolkodás"
+        },
+        "D1": {
+          "description": "Kérdések kidolgozása és tervezési kérdések"
+        },
+        "D2.Civ": {
+          "description": "Civics"
+        },
+        "D2.Eco": {
+          "description": "Közgazdaságtan"
+        },
+        "D3.Claims": {
+          "description": "Követelések kidolgozása és bizonyítékok felhasználása"
+        },
+        "D3.Sources": {
+          "description": "Források összegyűjtése és értékelése"
+        },
+        "D4.Action": {
+          "description": "Tájékozott cselekvés"
+        },
+        "D4.Conclusions": {
+          "description": "Kommunikáció és kritika következtetések"
+        },
+        "DA": {
+          "description": "Adatok & Elemzés"
+        },
+        "DAT-1": {
+          "description": "Az, hogy a számítógép hogyan ábrázolja az adatokat, eltér attól, ahogyan az adatokat értelmezik és megjelenítik a felhasználó számára. A programokat arra használják, hogy az adatokat olyan reprezentációvá alakítsák, amelyet az emberek könnyebben megértenek."
+        },
+        "DAT-1.A": {
+          "description": "Magyarázza el, hogyan lehet az adatokat bitekkel ábrázolni."
+        },
+        "DAT-1.B": {
+          "description": "Magyarázza el a bitek használatának következményeit az adatok ábrázolására."
+        },
+        "DAT-1.C": {
+          "description": "Bináris számok esetén:\na. Számítsa ki a pozitív egész szám bináris (2. alap) megfelelőjét (10. alap) és fordítva. \nb. Hasonlítsa össze és rendelje meg a bináris számokat."
+        },
+        "DAT-1.D": {
+          "description": "Hasonlítsa össze az adattömörítési algoritmusokat annak meghatározásához, hogy melyik a legjobb egy adott kontextusban."
+        },
+        "DAT-2": {
+          "description": "A programok felhasználhatók az adatok feldolgozására, amely lehetővé teszi a felhasználók számára, hogy információkat fedezzenek fel és új ismereteket hozzanak létre."
+        },
+        "DAT-2.A": {
+          "description": "Írja le, milyen információkat lehet kinyerni az adatokból."
+        },
+        "DAT-2.B": {
+          "description": "Írja le, milyen információkat lehet kinyerni a metaadatokból."
+        },
+        "DAT-2.C": {
+          "description": "Azonosítsa az adatok feldolgozásával kapcsolatos kihívásokat."
+        },
+        "DAT-2.D": {
+          "description": "Információk kinyerése az adatokból egy program segítségével."
+        },
+        "DAT-2.E": {
+          "description": "Magyarázza el, hogyan lehet a programokkal betekintést és ismereteket szerezni az adatokból."
+        },
+        "EE": {
+          "description": "Kifejezések és egyenletek"
+        },
+        "ESS": {
+          "description": "Föld- és űrtudomány"
+        },
+        "ESS1": {
+          "description": "A Föld helye az Univerzumban"
+        },
+        "ESS2": {
+          "description": "A Föld rendszerei"
+        },
+        "ESS3": {
+          "description": "Föld és emberi tevékenység"
+        },
+        "ETS": {
+          "description": "Mérnöki tudományok"
+        },
+        "ETS1": {
+          "description": "Mérnöki tervezés"
+        },
         "F": {
           "description": "Függvények"
+        },
+        "G": {
+          "description": "Geometria"
+        },
+        "GMD": {
+          "description": "Geometriai mérés és dimenzió"
+        },
+        "GPE": {
+          "description": "Geometriai tulajdonságok kifejezése egyenletekkel"
+        },
+        "ID": {
+          "description": "Kategorikus és mennyiségi adatok értelmezése"
+        },
+        "IF": {
+          "description": "Funkciók értelmezése"
+        },
+        "IOC-1": {
+          "description": "Míg a számítástechnikai innovációkat általában egy meghatározott cél elérésére tervezték, nem szándékos következményekkel járhatnak."
+        },
+        "IOC-1.A": {
+          "description": "Magyarázza el, hogyan lehet egy számítástechnikai innováció hatása jótékony és káros is."
+        },
+        "IOC-1.B": {
+          "description": "Magyarázza el, hogy egy számítástechnikai innováció milyen hatással lehet a rendeltetésszerű célon túl."
+        },
+        "IOC-1.C": {
+          "description": "Ismertesse azokat a kérdéseket, amelyek hozzájárulnak a digitális szakadékhoz."
+        },
+        "IOC-1.D": {
+          "description": "Magyarázza el, hogyan létezik elfogultság a számítástechnikai innovációkban."
+        },
+        "IOC-1.E": {
+          "description": "Magyarázza el, hogyan vesznek részt az emberek a problémamegoldó folyamatokban."
+        },
+        "IOC-1.F": {
+          "description": "Magyarázza el, hogyan vethet fel jogi és etikai aggályokat a számítástechnika használata."
+        },
+        "IOC-2": {
+          "description": "A számítástechnikai innovációk használata kockázatot jelenthet az Ön személyes biztonságára és személyazonosságára."
+        },
+        "IOC-2.A": {
+          "description": "Ismertesse a személyes adatok számítógépes rendszeren történő gyűjtéséből és tárolásából eredő magánélet kockázatait."
+        },
+        "IOC-2.B": {
+          "description": "Magyarázza el, hogyan lehet a számítástechnikai erőforrásokat védeni és visszaélni."
+        },
+        "IOC-2.C": {
+          "description": "Magyarázza el, hogyan szerezhető jogosulatlan hozzáférés a számítástechnikai erőforrásokhoz."
+        },
+        "L": {
+          "description": "Nyelv"
+        },
+        "LE": {
+          "description": "Lineáris, másodfokú és exponenciális modellek ★"
+        },
+        "LS": {
+          "description": "Élettudomány"
+        },
+        "LS1": {
+          "description": "A molekuláktól az organizmusokig: struktúrák és folyamatok"
+        },
+        "LS2": {
+          "description": "Ökoszisztémák: kölcsönhatások, energia és dinamika"
+        },
+        "LS3": {
+          "description": "Öröklődés: A tulajdonságok öröklődése és variációja"
+        },
+        "LS4": {
+          "description": "Biológiai evolúció: egység és sokféleség"
+        },
+        "MD": {
+          "description": "Valószínűség használata döntések meghozatalához"
+        },
+        "MG": {
+          "description": "Modellezés geometriával"
+        },
+        "MOD-1": {
+          "description": "Egyes objektumokat vagy fogalmakat olyan gyakran képviselnek, hogy a programozók felhasználhatják a már tesztelt meglévő kódot, lehetővé téve számukra, hogy gyorsabban és nagyobb magabiztossággal írjanak megoldásokat"
+        },
+        "MOD-1.A": {
+          "description": "Hívás Rendszer osztály módszerek generálni kimenet a konzolra."
+        },
+        "MOD-1.B": {
+          "description": "Magyarázza el az osztály és az objektum kapcsolatát."
+        },
+        "MOD-1.C": {
+          "description": "Azonosítsa, aláírásával, a helyes kivitelező hívása."
+        },
+        "MOD-1.D": {
+          "description": "Objektum létrehozásához: a. Objektumok létrehozása paraméterek nélküli konstruktorok hívásával. b. Objektumok létrehozása a konstruktorok paraméterekkel történő meghívásával."
+        },
+        "MOD-1.E": {
+          "description": "Hívjon nem statikus void módszereket paraméterek nélkül."
+        },
+        "MOD-1.F": {
+          "description": "Hívja a nem statikus érvénytelen módszereket paraméterekkel"
+        },
+        "MOD-1.G": {
+          "description": "Hívjon nem statikus, nem érvénytelen módszereket paraméterekkel vagy anélkül"
+        },
+        "MOD-1.H": {
+          "description": "Hívja a statikus módszereket."
+        },
+        "MOD-2": {
+          "description": "A programozók kódot használnak egy valós vagy elképzelt fizikai tárgy vagy nem fizikai fogalom ábrázolására azáltal, hogy egy osztályt az objektum vagy koncepció attirbutái és/vagy viselkedése alapján határoznak meg."
+        },
+        "MOD-2.A": {
+          "description": "Az osztályok, adatok, konstruktorok és módszerek hozzáférési és láthatósági korlátainak kijelölése."
+        },
+        "MOD-2.B": {
+          "description": "Adja meg az osztály konstruktorain keresztül inicializálandó attribútumok példányváltozóit."
+        },
+        "MOD-2.C": {
+          "description": "Desribe a funkcionalitás és használata programkód thorugh megjegyzéseket."
+        },
+        "MOD-2.D": {
+          "description": "Határozza meg az objektum viselkedését nem érvénytelen módszerekkel, osztályba írt praméterek nélkül."
+        },
+        "MOD-2.E": {
+          "description": "Határozza meg egy objektum viselkedését érvénytelen módszerekkel, osztályba írt paraméterekkel vagy anélkül."
+        },
+        "MOD-2.F": {
+          "description": "Határozza meg egy objektum viselkedését nem érvénytelen módszerekkel, osztályba írt paraméterekkel."
+        },
+        "MOD-2.G": {
+          "description": "Határozza meg az osztály viselkedését statikus módszerekkel."
+        },
+        "MOD-2.H": {
+          "description": "Határozza meg az osztályhoz tartozó statikus változókat."
+        },
+        "MOD-3": {
+          "description": "Amikor a több osztály közös attribútumokat és viselkedéseket tartalmaz, a programozók új osztályt hoznak létre, amely tartalmazza a hierarchiát alkotó megosztott attribútumokat és viselkedéseket. A hierarchia legmagasabb szintjén végrehajtott módosítások az alosztályokra vonatkoznak."
+        },
+        "MOD-3.A": {
+          "description": "Jelölje meg a példányváltozók privát láthatóságát az objektum attribútumainak beágyazásához."
+        },
+        "MOD-3.B": {
+          "description": "Hozzon létre öröklési kapcsolatot egy alosztályból a szuperosztályba."
+        },
+        "MOD-3.C": {
+          "description": "Határozza meg egy szuperosztály referenciaváltozóit, amelyeket egy alosztály objektumához kell hozzárendelni ugyanabban a hierarchiában."
+        },
+        "MOD-3.D": {
+          "description": "Hívási módszerek öröklési kapcsolatban."
+        },
+        "MOD-3.E": {
+          "description": "Hívja az Objektum osztály metódusokat öröklés útján."
+        },
+        "MP": {
+          "description": "Matematikai gyakorlatok"
+        },
+        "NBT": {
+          "description": "Szám és műveletek a tízes bázisban"
+        },
+        "NF": {
+          "description": "Szám és műveletek - törtek"
+        },
+        "NI": {
+          "description": "Hálózatok és az internet"
+        },
+        "NS": {
+          "description": "A számrendszer"
+        },
+        "OA": {
+          "description": "Műveletek és algebrai gondolkodás"
+        },
+        "PS": {
+          "description": "Fizikai tudomány"
+        },
+        "PS1": {
+          "description": "Anyag és kölcsönhatásai"
+        },
+        "PS2": {
+          "description": "Mozgás és stabilitás: erők és kölcsönhatások"
+        },
+        "PS3": {
+          "description": "Energia"
+        },
+        "PS4": {
+          "description": "Hullámok és alkalmazásaik az információátvitel technológiáiban"
+        },
+        "Q": {
+          "description": "Mennyiségek"
+        },
+        "REI": {
+          "description": "Érvelés egyenletekkel és egyenlőtlenségekkel"
+        },
+        "RF": {
+          "description": "Alapvető készségek olvasása"
+        },
+        "RH": {
+          "description": "Olvasástörténet/Társadalomtudományok"
+        },
+        "RI": {
+          "description": "Információs olvasás"
+        },
+        "RL": {
+          "description": "Irodalom olvasása"
+        },
+        "RN": {
+          "description": "A valós számrendszer"
+        },
+        "RP": {
+          "description": "Arányok és arányos kapcsolatok"
+        },
+        "RST": {
+          "description": "Olvasástechnikai/Műszaki"
+        },
+        "SL": {
+          "description": "Beszéd & Hallgatás"
+        },
+        "SP": {
+          "description": "Statisztika és Valószínűség"
+        },
+        "SRT": {
+          "description": "Hasonlóság, derékszögű háromszögek és trigonometria"
+        },
+        "SSE": {
+          "description": "A struktúra látása a kifejezésekben"
+        },
+        "TF": {
+          "description": "Trigonometrikus függvények"
+        },
+        "VAR-1": {
+          "description": "Ahhoz, hogy konkrét megoldásokat találjanak az általánosítható problémákra, a programozók változókat tartalmaznak a kódjukba, így ugyanaz az algoritmus különböző bemeneti értékek használatával fut"
+        },
+        "VAR-1.A": {
+          "description": "Hozzon létre karakterlánc-literálokat"
+        },
+        "VAR-1.B": {
+          "description": "Határozza meg a legmegfelelőbb adattípus-kategóriát egy adott specifikációhoz"
+        },
+        "VAR-1.C": {
+          "description": "Deklarálja a megfelelő típusú változókat a primitív adatok ábrázolására"
+        },
+        "VAR-1.D": {
+          "description": "Határozza meg a megfelelő típusú változókat a referenciaadatok ábrázolására."
+        },
+        "VAR-1.E": {
+          "description": "String osztály esetén: a. String objektumok létrehozása. b. Hívja a String metódusokat."
+        },
+        "VAR-1.F": {
+          "description": "Csomagolási osztályokhoz: a. Egész objektumok létrehozása. b. Egész számok hívása metódusok. c. Dupla objektumok létrehozása. d. Hívás Double metódusok."
+        },
+        "VAR-1.G": {
+          "description": "Magyarázza el, hol használhatók a változók a programkódban."
+        },
+        "VAR-1.H": {
+          "description": "Értékelje ki az objektumreferencia-kifejezéseket, amelyek ezt a kulcsszót használják."
+        },
+        "VAR-2": {
+          "description": "Nagy mennyiségű adat vagy összetett kapcsolatok kezelésére az adatokban, a programozók olyan kódot írnak, amely az adatokat egyetlen adatstruktúrába csoportosítja, és minden értékhez egyedi változókat hoz létre."
+        },
+        "VAR-2.A": {
+          "description": "A kapcsolódó primitív vagy objektum referenciaadatok gyűjteményeinek ábrázolása egydimenziós (1D) tömbobjektumok használatával."
+        },
+        "VAR-2.B": {
+          "description": "Traverse az elemeket egy 1D tömbben."
+        },
+        "VAR-2.C": {
+          "description": "Traverse az elemeket egy 1D tömb objektumban egy továbbfejlesztett hurok használatával."
+        },
+        "VAR-2.D": {
+          "description": "A kapcsolódó objektumreferencia-adatok gyűjteményeinek ábrázolása ArrayList objektumok használatával."
+        },
+        "VAR-2.E": {
+          "description": "ArrayList objektumok esetén: • Traverse egy for or while hurok használatával. • Traverse egy továbbfejlesztett hurok használatával."
+        },
+        "VAR-2.F": {
+          "description": "A kapcsolódó primitív vagy objektum referenciaadatok gyűjteményeinek ábrázolása kétdimenziós (2D) tömbobjektumok használatával."
+        },
+        "VAR-2.G": {
+          "description": "2D kiosztási objektumok esetén: • Sokszögelés a beágyazott hurkok használatával. • Átjárás a beágyazott továbbfejlesztett használatával hurkok esetén."
+        },
+        "VM": {
+          "description": "Vektor és mátrix mennyiségek"
+        },
+        "W": {
+          "description": "Írás"
+        },
+        "WHST": {
+          "description": "HS/S/T írása"
         }
       }
     }

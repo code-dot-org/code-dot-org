@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "grok garsą",
   "blockly_blockPlaySoundAtMeasureTooltip": "grok garsą",
+  "blockly_blockPlaySoundTooltip": "grok garsą",
   "blockly_blockRepeatTooltip": "kartok",
   "blockly_blockWhenRun": "paleidus",
   "blockly_blockWhenRunTooltip": "paleidus",
@@ -10,6 +10,9 @@
   "blockly_toolboxCategoryLogic": "Logika",
   "blockly_toolboxCategoryMath": "Matematika",
   "blockly_toolboxCategoryVariables": "Kintamieji",
+  "continue": "Tęsti",
+  "panelHeaderInstructions": "Instrukcijos",
+  "panelHeaderWorkspace": "Darbo laukas: ",
   "share": "Dalintis",
   "startOver": "Pradėti iš naujo"
 }

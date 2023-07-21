@@ -10,8 +10,11 @@
   "blockly_toolboxCategoryFunctions": "Funkcije",
   "blockly_toolboxCategoryLogic": "Logika",
   "blockly_toolboxCategoryMath": "Matematika",
-  "blockly_toolboxCategoryPlay": "Igraj",
+  "blockly_toolboxCategoryPlay": "Zvukovi",
   "blockly_toolboxCategoryVariables": "Varijable",
   "share": "Podijeli",
-  "startOver": "Počni ispočetka"
+  "startOver": "Počni ispočetka",
+  "panelHeaderInstructions": "Upute",
+  "panelHeaderWorkspace": "Radna površina: ",
+  "continue": "Nastavi"
 }

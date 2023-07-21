@@ -1,5 +1,8 @@
 @no_mobile
 Feature: Professional learning Sections
+
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Create new professional learning section as levelbuilder
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
@@ -32,6 +35,8 @@ Feature: Professional learning Sections
     And I wait until element "a:contains(My Section of Teachers)" is visible
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Create new professional learning section as universal instructor
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
@@ -64,6 +69,8 @@ Feature: Professional learning Sections
     And I wait until element "a:contains(My Section of Teachers)" is visible
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Create new professional learning section as plc reviewer
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
@@ -96,6 +103,8 @@ Feature: Professional learning Sections
     And I wait until element "a:contains(My Section of Teachers)" is visible
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Create new professional learning section as facilitator
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
@@ -128,6 +137,8 @@ Feature: Professional learning Sections
     And I wait until element "a:contains(My Section of Teachers)" is visible
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
+  @skip
+  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Teacher can not create professional learning section
     Given I create a teacher named "Teacher"
     And I sign in as "Teacher" and go home

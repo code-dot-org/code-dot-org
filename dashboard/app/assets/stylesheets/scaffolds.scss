@@ -33,8 +33,11 @@ div {
   display: inline-block;
 }
 
-.field_with_errors input {
-  background-color: $realyellow;
+.field_with_errors {
+  input, select {
+    background-color: $realyellow;
+    border-color: $red;
+  }
 }
 
 .field_with_errors_div {

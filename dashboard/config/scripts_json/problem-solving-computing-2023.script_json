@@ -13,13 +13,14 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "problem-solving-computing",
-    "serialized_at": "2023-05-03 00:54:35 UTC",
-    "published_state": "beta",
+    "serialized_at": "2023-06-21 18:26:30 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -1447,7 +1448,7 @@
       "key": "bcf256e3-2d38-438e-b092-48a4b3b08170",
       "position": 2,
       "properties": {
-        "description": "**Distribute**: Hand out copies of the activity guides."
+        "description": "**Distribute**: Hand out copies of the [r the_problem_solving_process/problem-solving-computing/2023] activity guides. "
       },
       "seeding_key": {
         "activity_section.key": "bcf256e3-2d38-438e-b092-48a4b3b08170",

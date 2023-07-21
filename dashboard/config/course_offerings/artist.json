@@ -10,6 +10,11 @@
   "header": "favorites",
   "image": "https://images.code.org/08d5be7ac5fddcc011e87acbb13b70e3-Artist.png",
   "cs_topic": "art_and_design,programming",
-  "school_subject": "math",
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}"
+  "school_subject": "",
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "self_paced_professional_learning": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null
 }

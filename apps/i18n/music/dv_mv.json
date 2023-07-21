@@ -1,5 +1,8 @@
 {
   "blockly_toolboxCategoryEvents": "އިވެންޓުތައް",
   "blockly_toolboxCategoryLogic": "ލޮޖިކް",
+  "continue": "ކުރިއަށް ދިޔުމަށް",
+  "panelHeaderInstructions": "އިރުޝާދުތައް",
+  "panelHeaderWorkspace": "ވޯކްސްޕޭސް",
   "startOver": "އަލުން ފަށާ"
 }

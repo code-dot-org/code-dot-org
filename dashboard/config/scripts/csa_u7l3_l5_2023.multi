@@ -7,7 +7,7 @@ wrong '`"Hello Java! bold"`'
 wrong '`"Hello Java! italic"`'
 wrong '`"Hello World! bold"`'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following `TextEditor` class.

@@ -1,7 +1,7 @@
 {
   "addCSSButton": "Afegir CSS",
-  "addImageButton": "Afegir imatge",
   "addHTMLButton": "Afegir HTML",
+  "addImageButton": "Afegir imatge",
   "closeFullscreenPreview": "Tancar la vista prèvia de pantalla completa",
   "currentProjectCapacity": "{currentMegabytes}MB de {totalMegabytes}MB utilitzats",
   "disallowedHtml": "L'arxiu \"{filename}\" conté elements HTML no compatibles: \"{disallowedTags}\". S'eliminaran quan es tanqui aquest diàleg.",
@@ -14,8 +14,8 @@
   "reset": "Reiniciar Laboratori Web",
   "resetComplete": "Reinici de Laboratori Web finalitzat",
   "resetFailure": "No s'ha pogut reiniciar el Laboratori Web: {message}.",
-  "toggleInspectorOn": "Inspector: Desactivat",
   "toggleInspectorOff": "Inspector: Activat",
+  "toggleInspectorOn": "Inspector: Desactivat",
   "troubleshootingSupport": "Consulteu el nostre article de suport [\"Solució de problemes del Laboratori Web\"]({url}) per a més informació.",
   "uploadError": "Error de càrrega"
 }

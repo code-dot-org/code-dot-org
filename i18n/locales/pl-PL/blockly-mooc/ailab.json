@@ -5,9 +5,11 @@
   "dataDisplayLabel": "Wybierz jedną kolumnę do przewidzenia.",
   "dataDisplayFeatures": "Wybierz jedną lub więcej kolumn jako dane wejściowe, aby pomóc w prognozowaniu.",
   "selectedFeatureNumerical": "Właśnie wybrałeś funkcję numeryczną.",
+  "selectedFeatureCategorical": "Właśnie wybrałeś funkcję kategoryczną.",
   "trainModel": "Twój model jest szkolony.",
   "generateResults": "Twój model jest testowany.",
   "results": "Przejrzyj wyniki.",
   "resultsDetails": "Wyświetlane są szczegóły wyników.",
-  "saveModel": "Zapisz wyszkolony model do użycia w App Lab."
+  "saveModel": "Zapisz wyszkolony model do użycia w App Lab.",
+  "modelSummary": "Pomyślnie przeszkoliłeś i zapisałeś swój model. Przejrzyj szczegóły swojego modelu i kliknij przycisk Zakończ, aby użyć wyszkolonego modelu w App Lab."
 }

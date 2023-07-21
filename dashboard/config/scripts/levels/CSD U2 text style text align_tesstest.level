@@ -1,0 +1,38 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2023-07-12T18:01:20.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "encrypted_examples": "Wv905MDJ/6R6CTNGAKe270o1cT4UWP4lh1RfEmP/ZjxKAqkeC+ZYVx3Sp+IJ\n/JOzmbKADEAN6S399Mx9Wf0cSA==\n",
+    "hide_share_and_remix": "false",
+    "parent_level_id": 18342,
+    "name_suffix": "_tesstest",
+    "reference_links": [
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags",
+      "/courses/csd-2022/guides/debugging-html"
+    ],
+    "map_reference": "/courses/csd-2022/guides/style-sheets",
+    "video_key": "csd_weblab_css_1",
+    "submittable": "false",
+    "long_instructions": "\r\n# Text Alignment\r\n\r\nThe `text-align` property sets the horizontal (side to side) position of the text within each line.\r\n\r\n# Do This\r\n1) Find the CSS code that is making the \"From Wikipedia\" in the `h6` tag align to the right.\r\n* Change the `h1` tag so that it is aligned to the center of the page.\r\n* Change the alignment of the paragraph tag, too.",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\"name\": \"style.css\",\r\n     \"data\": \"h1 {\\r\\n  color: green;\\r\\n  font-size: 24px;\\r\\n}\\r\\nh6 {\\r\\n  text-align: right;\\r\\n}\\r\\np {\\r\\n    font-size: 14px;\\r\\n}\"\r\n     },\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\r\\n<html> \\r\\n<head>\\r\\n   <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\r\\n<\\/head>\\r\\n<body>\\r\\n  <h1>Build a Terrarium!<\\/h1> \\r\\n  <h3>\\r\\n    What's a terrarium?\\r\\n  <\\/h3>\\r\\n  <p>\\r\\n    A terrarium is usually a sealable glass container containing soil and plants, and can be opened for maintenance to access the plants inside. \\r\\n  <\\/p> \\r\\n  <h6>From Wikipedia<\\/h6>\\r\\n\\r\\n  <h3>How do they work?<\\/h3>\\r\\n  <p> \\r\\n    The glass lets the light in, but it also keeps the water inside so there can be a water cycle.  That way your plants get all the sun they need but never lose any water!\\r\\n  <\\/p> \\r\\n\\r\\n  <h3>How can I make one?<\\/h3>\\r\\n  <p>\\r\\n    Get a big glass jar, and put it on its side, then put your dirt and plants inside.  Then make sure there's enough water and clse up the jar.\\r\\n  <\\/p> \\r\\n<\\/body>\\r\\n<\\/html>  \\r\\n\"\r\n    }\r\n  ]\r\n}",
+    "display_name": "Extra Code: Align text",
+    "thumbnail_url": "https://images.code.org/f074b4d2427feefc77110bc017f0ccc0-image-1565643571085.59.19 PM.png",
+    "bubble_choice_description": "Align text to the right or center of the page.",
+    "validation_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-07-12T18:01:20.487+00:00\",\"changed\":[\"cloned from \\\"CSD U2 text style text align_2023\\\"\"],\"cloned_from\":\"CSD U2 text style text align_2023\"}]"
+}]]></config>
+</Weblab>

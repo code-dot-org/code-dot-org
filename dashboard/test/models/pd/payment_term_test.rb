@@ -10,7 +10,7 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
     @program_manager_1, @program_manager_2 = pms.map(&:program_manager)
     @regional_partner_1, @regional_partner_2 = pms.map(&:regional_partner)
 
-    @workshop_1 = create :workshop, num_sessions: 1, sessions_from: Date.today, organizer: @program_manager_1
+    @workshop_1 = create :workshop, num_sessions: 1, sessions_from: Time.zone.today, organizer: @program_manager_1
     @workshop_2 = create :workshop, num_sessions: 1, sessions_from: 3.months.from_now.to_date, organizer: @program_manager_1
     @workshop_3 = create :workshop, organizer: @program_manager_2
   end
@@ -22,7 +22,7 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
         Pd::PaymentTerm.for_workshop(workshop)
       end
 
-      assert error.message.include? "No payment terms were found for workshop #{workshop.inspect}"
+      assert_includes(error.message, "No payment terms were found for workshop #{workshop.inspect}")
     end
   end
 
@@ -42,7 +42,7 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
   end
 
   test 'handles date ranges correctly' do
-    term_1 = create :pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today - 1.month, end_date: 1.month.from_now.to_date
+    term_1 = create :pd_payment_term, regional_partner: @regional_partner_1, start_date: Time.zone.today - 1.month, end_date: 1.month.from_now.to_date
     term_2 = create :pd_payment_term, regional_partner: @regional_partner_1, start_date: 1.month.from_now.to_date
 
     assert_equal term_1, Pd::PaymentTerm.for_workshop(@workshop_1)
@@ -61,12 +61,12 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
   end
 
   test 'validations for payment terms' do
-    term_1 = build(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today, properties: {})
+    term_1 = build(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Time.zone.today, properties: {})
     refute term_1.valid?
 
     assert_equal ['Must have either per attendee payment or fixed payment'], term_1.errors.full_messages
 
-    term_2 = build(:pd_payment_term, start_date: Date.today)
+    term_2 = build(:pd_payment_term, start_date: Time.zone.today)
     term_2.save
 
     assert_equal ['Regional partner must exist'], term_2.errors.full_messages
@@ -78,7 +78,7 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
   end
 
   test 'Old payment terms get truncated' do
-    term_1 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today)
+    term_1 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Time.zone.today)
 
     # A term for a specific course should not truncate this
     term_2 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 1.month.from_now.to_date, course: Pd::Workshop::COURSE_CSF)
@@ -87,10 +87,10 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
     assert_nil term_1.end_date
 
     # this should not truncate term 1 or 2
-    create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today + 2.months, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1)
+    create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Time.zone.today + 2.months, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1)
 
     [term_1, term_2].map(&:reload)
-    assert_empty [term_1, term_2].map(&:end_date).compact
+    assert_empty [term_1, term_2].filter_map(&:end_date)
 
     # this should truncate term 2
     create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 3.months.from_now.to_date, course: Pd::Workshop::COURSE_CSF)
@@ -107,11 +107,11 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
     # Old ends new as detailed in payment_term.rb has been handled by the above test case
 
     # Old contains new
-    term_1 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today)
+    term_1 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Time.zone.today)
     term_2 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 1.month.from_now.to_date, end_date: 2.months.from_now.to_date)
 
     term_1.reload
-    assert_equal Date.today..1.month.from_now.to_date, term_1.date_range
+    assert_equal Time.zone.today..1.month.from_now.to_date, term_1.date_range
     new_terms = Pd::PaymentTerm.where(regional_partner: @regional_partner_1, start_date: 2.months.from_now.to_date)
     assert_equal 2.months.from_now.to_date..Date::Infinity.new, new_terms.first.date_range
     assert_equal 1, new_terms.size
@@ -120,7 +120,7 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
 
     # New ends during old
     term_1 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 1.month.from_now.to_date)
-    term_2 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today, end_date: 2.months.from_now.to_date)
+    term_2 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Time.zone.today, end_date: 2.months.from_now.to_date)
 
     term_1.reload
     assert_equal 2.months.from_now.to_date..Date::Infinity.new, term_1.date_range
@@ -129,16 +129,16 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
 
     # New contains old
     term_1 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 1.month.from_now.to_date, end_date: 2.months.from_now.to_date)
-    create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today)
+    create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Time.zone.today)
 
     refute Pd::PaymentTerm.exists?(term_1.id)
   end
 
   test 'No overlap means no changes' do
-    term_1 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today, end_date: 1.month.from_now)
+    term_1 = create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Time.zone.today, end_date: 1.month.from_now)
     create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 2.months.from_now)
 
     term_1.reload
-    assert_equal Date.today..1.month.from_now.to_date, term_1.date_range
+    assert_equal Time.zone.today..1.month.from_now.to_date, term_1.date_range
   end
 end

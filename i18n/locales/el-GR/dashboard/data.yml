@@ -23,18 +23,18 @@ el:
         Farmer3: Ο Αγρότης 3
         Unplug10: Το Διαδίκτυο
         Artist5: Ο Καλλιτέχνης 5
-        Unplug11: συνοψίζω
+        Unplug11: Περίληψη
         MazeEC: Ο Λαβύρινθος
         Bounce: Αναπήδηση
         Flappy: Flappy Bird
         Jigsaw: Παζλ
         MazeStep: Κατάσταση Βήμα Λαβυρίνθου
         Wordsearch: Αναζήτηση Λέξεων
-        Webapp: App Lab
+        Webapp: Εργαστήριο εφαρμογών
         ArtistEC: Ο Καλλιτέχνης
         TextMatch: Ταίριασμα Κειμένου
         StudioEC: Εργαστήριο Παιχνιδιού
-        Applab: App Lab
+        Applab: Εργαστήριο εφαρμογών
         NetSim: Προσομοιωτής Διαδικτύου
         Custom: Καλλιτέχνης
         CustomStudio: Εργαστήριο Παιχνιδιού
@@ -261,7 +261,7 @@ el:
         maze_intro: Πρόλογος λαβυρίνθου
         artist_intro: Πρόλογος καλλιτέχνη
         farmer_intro: Εισαγωγή αγρότη
-        flappy_intro: '"Φτερογούλης" - Εισαγωγικές έννοιες'
+        flappy_intro: '"Flappy" - Εισαγωγικές έννοιες'
         loop_times: Πλακίδιο Επανάλαβε για
         loop_until: Πλακίδιο Επανάλαβε μέχρι
         if: Πλακίδιο Εάν
@@ -277,7 +277,7 @@ el:
         Unplug3: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
         Unplug4: Αλγόριθμοι
         Unplug5: Συναρτήσεις
-        Unplug6: Έλεγχοι
+        Unplug6: Συνθήκες
         Unplug7: Σύνθεση τραγουδιού
         Unplug8: Αφαίρεση
         Unplug9: Προγραμματισμός με αναμετάδοση
@@ -286,7 +286,7 @@ el:
         C1_happy_maps_unplugged: Χαρούμενοι Χάρτες
         C1_moveitmoveit_unplugged: Μετακίνησέ το, Μετακίνησέ το
         C1_bigevent_unplugged: Το Μεγάλο Γεγονός
-        C1_getting_loopy: Επαναλαμβανόμαστε
+        C1_getting_loopy: Εξερευνώντας τους βρόγχους
         C1_pair_programming: Προγραμματισμός κατά ζεύγη
         C1_maze_intro_sequencing: Αλληλουχία Λαβυρίνθου - Εισαγωγικά
         C1_maze_debugging: Εκσφαλμάτωση Λαβυρίνθου
@@ -310,7 +310,7 @@ el:
         C2_bee_conditionals: Συνθήκες της Μέλισσας
         C2_playlab_createstory: Εργαστήριο Παιχνιδιού - Δημιουργία μιας Ιστορίας
         C2_graph_paper: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-        C2_conditionals_with_cards: Έλεγχοι
+        C2_conditionals_with_cards: Συνθήκες
         C2_binary_bracelets: Δυαδικά Βραχιόλια
         C2_relay_programming: Προγραμματισμός Ρελέ
         C2_paper_airplanes: Χάρτινα Αεροπλανάκια
@@ -322,7 +322,7 @@ el:
         C3_bee_functions: Λειτουργίες μέλισσας
         C3_bee_conditionals: Συνθήκες της Μέλισσας
         C3_maze_conditionals: Συνθήκες λαβυρίνθου
-        C3_artist_nested_loops: Φωλιασμένες Επαναλήψεις
+        C3_artist_nested_loops: Εμφωλευμένοι Βρόχοι
         C3_farmer_while: Βρόχοι με «Όσο»
         C3_bee_nested_loops: Φωλιασμένες Επαναλήψεις
         C3_bee_debugging: Εκσφαλμάτωση της Μέλισσας
@@ -353,6 +353,7 @@ el:
         C4_unplugged_forloops: Βρόχοι Για
         C4_unplugged_parameters: Γράφουμε τραγούδια με παραμέτρους
         C4_unplugged_binary: Δυαδικό
+        CSF_a_b_artist_loops: Βρόχους στον καλλιτέχνη
         CSF_artist_angles: Γωνίες σε έναν καλλιτέχνη
         CSF_collector_k1_blocks: 'Θεμελιώσεις Επιστήμης Υπολογιστών: Ο Συλλέκτης'
         CSF_collector_repeat_loops: Ο Συλλέκτης Επαναλαμβάνει Βρόγχους
@@ -368,7 +369,7 @@ el:
         CSF_Super_Digital_Citizen: Σούπερ Ψηφιακός Πολίτης
         CSF_stevie_big_project: Ο Στίβι και το Μεγάλο Πρότζεκτ
         CSF_unspotted_bugs: Μη εντοπισμένα bugs
-        CSF_zuck_loops_short: Επανάληψη Βρόγχων
+        CSF_zuck_loops_short: Επανάληψη βρόχων
         frozen_intro: Εισαγωγή στην Ώρα του Κώδικα
         frozen_loops: Εισαγωγή στους Βρόχους (Επαναλήψεις)
         frozen_functions: Εισαγωγή στις Συναρτήσεις
@@ -480,15 +481,18 @@ el:
         applab_intro_sounds: Εργαστήριο Εφαρμογών - Εικόνες και Ήχοι
         applab_intro_designmode: Εργαστήριο Εφαρμογών - Λειτουργία Σχεδίασης
         applab_intro_share: Εργαστήριο Εφαρμογών - Μοιράσου την Εφαρμογή σου
+        csd_applab_arrays: Εισαγωγή στις συστοιχίες
         CSF_skinOverview_Harvester: Ο Θεριστής
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Βρόχοι με το BB-8
         CSF_harvester_skinOverview_K-1: Ο Θεριστής
+        CSF_harvester_loops_K1: Βρόχοι με τον Θεριστή
         CSF_scrat_loops_K1: Βρόχοι στην Εποχή των Παγετώνων
         CSF_scrat_loops_CF: Βρόχοι στην Εποχή των Παγετώνων
         CSF_if_allskins: Το Τουβλάκι Αν
-        CSF_ifelse_allskins: Χρησιμοποιώντας Τουβλάκια Αν/Αλλιώς
-        CSF_ifelseifelse_allskins: Χρησιμοποιώντας Τουβλάκια Αν/ΑλλιώςΑν/Αλλιώς
+        CSF_ifelse_allskins: Χρησιμοποιώντας τα μπλοκ Εάν/Αλλιώς
+        CSF_ifelseifelse_allskins: Χρησιμοποιώντας τα μπλοκ Εάν/Αλλιώςεάν/Αλλιώς
         CSF_loops_AB: Βρόχοι
         csd_gamelab_booleans: Boolean Εκφράσεις
         csd_gamelab_conditional_statements: Συνθήκες Ελέγχου
@@ -508,24 +512,114 @@ el:
         hoc_dance_congrats: Χορευτικό πάρτι - Το πάρτι ξεκίνησε!
         c_and_c_great_to_create: Είναι Τέλειο να Δημιουργούμε και να Παίζουμε Δίκαια
         c_and_c_digital_sharing: Κοινοποίηση στον ψηφιακό κόσμο
+        teaching_csf_how_it_works: 'Διδασκαλία CS Βασικές αρχές: Πώς λειτουργεί το μάθημα'
+        elem_pd_2: Δημοτικό Σχολείο Πληροφορικής - PD video 2/2
         what_is_cs: Τι είναι η επιστήμη υπολογιστών;
+        repeat_block: Χρήση του μπλοκ επανάληψης
         lesson_planning: Σχεδιασμός μαθημάτων
+        opd_closing: 'Διδασκαλία CS Βασικές αρχές: Κλείσιμο και επόμενα βήματα'
+        why_unplugged_lessons: Να «αποσυνδεθεί»
+        writing_first_program: Γράφοντας το πρώτο σας πρόγραμμα υπολογιστή
+        conditionals_with_cards: Αποσυνδεδεμένο Μάθημα σε Δράση - Προϋποθέσεις με Κάρτες
+        songwriting_with_functions: Unplugged μάθημα σε δράση - Συγγραφή τραγουδιών με συναρτήσεις
+        what_is_an_event: Τι είναι ένα γεγονός;
+        teaching_cs_pair_programming: 'Διδασκαλία CS Βασικές αρχές: Προγραμματισμός ζεύγους'
+        teaching_problem_solving: 'Διδασκαλία CS Βασικές αρχές: Διδασκαλία επίλυση προβλημάτων'
+        csd_applab_designmode: 'CS ανακαλύψεις: App Lab - Λειτουργία σχεδιασμού'
         csd_pair_programming: Προγραμματισμός κατά ζεύγη
+        csd_gamelab_functions: Συναρτήσεις κλήσης και ορισμού
         csd_applab_parameters: Συναρτήσεις με παραμέτρους
+        csd_applab_loops: Βρόχους στο App Lab
+        csd_problem_solving_process: Η Διαδικασία Επίλυσης Προβλημάτων
+        CSF_Going_Places_Safely: Η Online Γειτονιά μου
         CSF_SpriteLab_Intro_v2: 'Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων'
         CSF_Spritelab_MakeSprite_v2: Πώς να φτιάξετε χαρακτήρες
         CSF_SpriteLab_SpritesInAction_v2: Χαρακτήρες σε Δράση
         csd_debugging: Εντοπισμός σφαλμάτων
+        csd_applab_designmode_short: Λειτουργία σχεδίασης Lab Εφαρμογών
+        csp-pd-welcome: Καλώς ήρθατε στην Οικογένεια!
+        CSF-Teaching-Problem-Solving: Επίλυση Διδακτικών Προβλημάτων CSF
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Πιλοτικό βίντεο - Μπλοκ δεδομένων
+        u7-libraries-explanation: 'App Lab: Φτιάξτε το δικό σας μπλοκ - Πώς να χρησιμοποιήσετε βιβλιοθήκες'
+        how-to-k5-workshops: 'CS Βασικές αρχές του Code.org: Παιδί Δοκιμασμένο, Εγκρίθηκε Δάσκαλος'
+        why-should-teach-unplugged-activities: 'Συχνές Ερωτήσεις: Γιατί πρέπει να διδάσκω δραστηριότητες «unplugged»;'
+        cs-principles-intro-to-objects: 'CS Αρχές: Εισαγωγή στα Αντικείμενα'
         oceans_machine_learning: Εκμάθηση μηχανής
         oceans_training_data: Δεδομένα εκπαίδευσης
+        oceans_societal_implications: Κοινωνικές Επιπτώσεις
         hoc_dance_congrats_2019: Χορευτικό πάρτι 2019- Το πάρτι ξεκίνησε!
         hoc_dance_warmup_2019: Χορευτικό πάρτι 2019- Προθέρμανση
         hoc_dance_events_2019: Χορευτικό πάρτι 2019- Εκδηλώσεις
         hoc_dance_measures_2019: Χορευτικό πάρτι 2019- Μέτρα
         hoc_dance_properties_2019: Χορευτικό πάρτι 2019- Ιδιότητες
+        csd_what_computers_do: Τι κάνουν οι υπολογιστές;
+        csf_my_online_neighborhood_2020: Η Online Γειτονιά μου
+        csf_follow_the_digital_trail: Ακολουθήστε το Ψηφιακό Μονοπάτι
         csf_private_and_personal_information: Ιδιωτικές πληροφορίες και Δεδομένα Προσωπικού Χαρακτήρα
+        csd_what_computers_are: Τι είναι ένας υπολογιστής;
+        csd_how_teamwork_works: Πώς λειτουργεί η ομαδική εργασία
+        csd_teamwork_and_disagreement: Ομαδική Εργασία - Αντιμετώπιση Διαφωνίας
+        csf21pilot_events: 'Sprite Lab: Ξωτικά σε δράση'
+        csf21pilot_prompts: 'Sprite Lab: Κείμενο και προτροπές'
+        csd_ml_intro_to_ai_lab: Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης
+        csd_ml_import_model: Εισαγωγή μοντέλου AI
+        csf_lots_of_sprites: 'Sprite Lab: Πολλά ξωτικά'
         playlab_2021: Εισαγωγή στο εργαστήριο παιχνιδιού
         playlab_2021_reader: Εισαγωγή στο εργαστήριο παιχνιδιού
+        csp_defining_calling_functions: Ορισμός συναρτήσεων και κλήσεων
+        csp_tutorial_datatab: Καρτέλα δεδομένων στο App Lab
+        csp_tutorial_libraries: Βιβλιοθήκες στο App Lab
+        PL-Video-21: Καλώς ήρθατε στην Επαγγελματική Μάθηση του Code.org!
+        csp_tutorial_datavis1: Απεικόνιση δεδομένων στο App Lab - Μέρος 1
+        csp_tutorial_datavis2: Απεικόνιση δεδομένων στο App Lab - Μέρος 2
+        csd_ml_intro_ai_lab_july2021: Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης
+        csd_ml_training_testing_ai_lan: Εκπαίδευση και Δοκιμές στο Εργαστήριο Τεχνητής Νοημοσύνης
+        csd_ml_model_cards_july2021: Κάρτες Μοντέλων στο Εργαστήριο Τεχνητής Νοημοσύνης
+        csd_ml_numerical_ai_lab: Αριθμητικά δεδομένα στο Εργαστήριο Τεχνητής Νοημοσύνης
+        Gettting_Started_Progress: Πρόοδος, ανατροφοδότηση και αξιολόγηση
+        Gettting_Started_ClassSection: Δημιουργία Ενότητας Τάξης
+        Gettting_Started_StudentExperience: Η Εμπειρία των Φοιτητών
+        Getting_Started_BasicFeatures: Βασικά χαρακτηριστικά του Code.org
+        PL_overview_CSD: Τι είναι οι ανακαλύψεις της επιστήμης των υπολογιστών;
+        PL_CSD_TeacherTips_Advise: Συμβουλές Καθηγητών - Συμβουλές για Νέους Εκπαιδευτικούς
+        PL_CSD_TeacherTips_IntroToCSD: Συμβουλές για δασκάλους - Εισαγωγή στις ανακαλύψεις CS
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Συμβουλές Δασκάλου - Η Διαδικασία Επίλυσης Προβλημάτων
+        PL_CSD_TeacherTips_PairProgramming: Συμβουλές καθηγητή - Προγραμματισμός Pair
+        PL_CSD_TeacherTips_Debugging: Συμβουλές Καθηγητή - Αποσφαλμάτωση
+        PL_CSD_TeacherTips_LeadLearner: Συμβουλές Καθηγητή - Επικεφαλής Εκπαιδευόμενος
+        poembot-playtest-intro: Εισαγωγή δοκιμής παιχνιδιού PoemBot
+        poembot-playtest-sprites: PoemBot
+        poembot-playtest-events: Εκδηλώσεις δοκιμής παιχνιδιού PoemBot
+        hello_world_intro: Γεια σας κόσμε - Καλώς ήρθατε στο Sprite Lab
+        hello_world_events: Hello World - Προγραμματισμός με Εκδηλώσεις
+        hello_world_congrats: Hello World - Κάνε ό, τι θέλεις
+        csp_global_vs_local: Εντοπισμός σφαλμάτων καθολικών έναντι τοπικών μεταβλητών
+        rough_poemart_intro: v1 Εισαγωγή Τέχνης Ποίημα
+        rough_poemart_events: v1 Ποίημα Εκδηλώσεις
+        rough_poemart_imagery: v1 Ποίημα Εικόνες Τέχνης
+        rough_poemart_congrats: v1 Ποίημα Τέχνη Συγχαρητήρια
+        poetry_module_variables: Μεταβλητές - Κωδικοποίηση με Ποίηση
+        poetry_module_textandvariables: Κείμενο & Μεταβλητές - Κωδικοποίηση με Ποίηση
+        poetry_module_planningapp: Σχεδιασμός Poem Γεννήτρια App σας - Κωδικοποίηση με την ποίηση
+        poetry_module_multichoiceprompts: Προτροπές Πολλαπλών Επιλογών - Κωδικοποίηση με Ποίηση
+        poetry_module_conditionals: Προϋποθέσεις - Κωδικοποίηση με ποίηση
+        poemart_intro: Εισαγωγή στην Τέχνη Ποίημα
+        poemart_events: Εκδηλώσεις Ποίημα
+        poemart_imagery: Ποίημα Εικόνες Τέχνης
+        poemart_celebration: Εορτασμός Τέχνης Ποίημα
+        csd_u6_variables_part2: Μεταβλητές - Το πρότυπο μετρητή
+        csd_ml_ethics_ai: 'Ηθική και ΤΝ '
+        outbreak_intro: 'Προσομοίωση Επιδημίας: Εισαγωγή'
+        outbreak_events: 'Προσομοιωτής ξέσπασμα: Εκδηλώσεις'
+        outbreak_scientist: 'Προσομοιωτής ξέσπασμα: Σκέψη σαν επιστήμονας'
+        outbreak_outro: 'Προσομοιωτής ξέσπασμα: δωρεάν παιχνίδι'
+        PL_overview_CSP: Τι είναι οι Αρχές Πληροφορικής;
+        PL_CSP_EIPMOverview: Οδηγός για μαθήματα EIPM
+        CSA-PL-debugging-temp: Εισαγωγή στην αποσφαλμάτωση στο Java Lab - temp
+        csd_app_lab_design_mode: Λειτουργία Σχεδίασης Εργαστηρίου Εφαρμογών CSD
+        csd_app_lab_events: Εκδηλώσεις CSD App Lab
+        PL_CSD_Unit4_AppTesting: Δοκιμή πρωτοτύπου χαρτιού
+        csd_u6_circuit_playground: Φυσική Πληροφορική
         CSA-PL-for-loops: Για βρόχους σε Java.
         CSA-PL-variables: Δημιουργώντας μεταβλητές σε Java
         PL_CS_Journeys_Overview: Ταξίδια CS
@@ -538,13 +632,105 @@ el:
         csd_u6_call_define_functions: 'Ανακαλύψεις της Επιστήμης των Υπολογιστών: Ονομάζοντας και Ορίζοντας Λειτουργίες'
         csp_applab_parameters: Συναρτήσεις με παραμέτρους
         starquilts_intro_artist: Εισαγωγή στο Ψηφιδωτό Αστέρων
+        CSA-PL-intro-to-arrays: Μονοδιάστατες (1D) συστοιχίες
         CSA-PL-1d-arrays-new-values: Εισάγοντας τιμές με 1D πίνακα
         CSA-PL-conditionals: Συνθήκες Ελέγχου σε Java
         CSA-PL-two-way-selection: Δυαδική επιλογή
         CSA-PL-Printing-in-Java: Εκτύπωση σε Java
         CSA-PL-multi-selection-statements: Εντολές πολλαπλής επιλογής
+        PL_CSP_TeacherTips_Advice: 'Συμβουλές για δασκάλους: Συμβουλές για νέους καθηγητές CS'
+        PL_CSP_TeacherTips_IntroToCSP: 'Συμβουλές Καθηγητών: Εισαγωγή στις Αρχές CS'
+        PL_CSP_TeacherTips_Debugging: 'Συμβουλές καθηγητή: Βοήθεια με τον εντοπισμό σφαλμάτων'
+        PL_CSP_TeacherTips_LeadLearner: 'Συμβουλές Καθηγητή: Πώς να είστε επικεφαλής εκπαιδευόμενος'
+        PL_CSP_TeacherTips_APExam: 'Συμβουλές καθηγητή: Προετοιμασία για τις εξετάσεις AP'
+        PL_CSP_TeacherTips_EIPM: 'Συμβουλές για εκπαιδευτές: Η διαδικασία EIPM'
+        PL_CSD_CircuitPlayground_Overview: Επισκόπηση Παιδότοπου
+        CSA-PL-debugging-22: Εντοπισμός σφαλμάτων στο Java Lab
+        CSD_Unit6_InteractiveArtExemplar: Διαδραστικό υπόδειγμα τέχνης
         CS_Changing_Everything: H Επιστήμη των Υπολογιστών αλλάζει τα Πάντα
+        csa-alias-video: Ισοδύναμα και ψευδώνυμα
+        csa-equals-video: Η μέθοδος ίσον ()
+        csa-user-stories: Ιστορίες χρηστών στη Μηχανική Λογισμικού
+        csa-pl-vpl-m1-unit-3: Μηχανική Λογισμικού στη Μονάδα 3
+        csa-pl-intro-to-equality: Εισαγωγή στην Ισότητα
+        csa-pl-intro-to-equals-method: Εισαγωγή στη μέθοδο.equats ()
+        csa-pl-equals-book: Γράφοντας τη μέθοδο ισούται () για την κλάση Book
+        csa-multi-select-pl: Δηλώσεις πολλαπλής επιλογής σε Java
+        csc_timecapsule_intro: Εισαγωγή Χρονοκάψουλας
+        PL_Equity_in_CS_Education: Ίδια κεφάλαια στην εκπαίδευση CS
+        csc_fm_pilot: Μηχανήματα Λειτουργίας (Πιλότος)
+        csc_fm_pilot_v2: 'Μηχανήματα Λειτουργίας Εισαγωγή '
+        csc-sprite-lab-pixel-editor: Σχεδιάστε το δικό σας Sprite
+        csa-pl-intro-to-strings: Εισαγωγή στις συμβολοσειρές σε Java
+        csa-pl-compareTo: Η μέθοδος σύγκρισης προς ()
+        csc-event-short-intro: Σύντομη Εισαγωγή Εκδηλώσεων
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Επισκόπηση μονάδας παιδικής χαράς
+        csa-day-in-pm-pl: Τι κάνει ένας διαχειριστής έργου;
+        csa-pl-intro-to-pm: Εισαγωγή στη Διαχείριση Έργων
+        PL_CSD_CircuitPlayground_Setup: Ρύθμιση Παιδότοπος
+        csa_object_oriented_programming: 'CSA: Αντικειμενοστρεφής Προγραμματισμός'
+        csa_creating_objects: 'CSA: Δημιουργία αντικειμένων'
+        csa_calling_methods: 'CSA: Μέθοδοι κλήσης'
+        csa_while_loops: 'CSA: Ενώ βρόχους'
+        csa_inheritance: 'CSA: Κληρονομικότητα'
+        csa_writing_a_method: 'CSA: Γράφοντας μια μέθοδο'
+        csa_software_engineering_code_reviews: 'CSA: Μηχανική Λογισμικού - Κριτικές Κώδικα'
+        csa_conditional_statements: 'CSA: Δηλώσεις υπό όρους'
+        csa_printing_in_java: 'CSA: Εκτύπωση σε Java'
+        csa_two_way_selection_and_not: 'CSA: Αμφίδρομη επιλογή και όχι'
+        csa-pl-intro-to-oop: Εισαγωγή στον Αντικειμενοστρεφή Προγραμματισμό
+        csa-pl-welcome-to-Neighborhood: Καλώς ήρθατε στη γειτονιά
+        csa-pl-calling-methods: Μέθοδοι κλήσης σε Java
+        csa-pl-creating-objects: Δημιουργία Αντικειμένων
+        csa_accessor_methods: 'CSA: Μέθοδοι Πρόσβασης'
+        csa_constructors: 'CSA: Κατασκευαστές'
+        csa_creating_a_scanner_object: 'CSA: Δημιουργία αντικειμένου σαρωτή'
+        csa_creating_variables: 'CSA: Δημιουργία μεταβλητών'
+        csa_instance_variables_and_attributes: 'CSA: Μεταβλητές παρουσίας και χαρακτηριστικά'
+        csa_mutator_methods: 'CSA: Μέθοδοι Mutator'
+        csa_overloaded_constructors: 'CSA: Υπερφορτωμένοι Κατασκευαστές'
+        csa_the_tostring_method: 'CSA: Η μέθοδος ToString ()'
+        csa_scanner_class_methods: 'CSA: Μέθοδοι κλάσης σαρωτή'
+        csa_for_loops: 'CSA: Για βρόχους'
+        csa_enhanced_for_loops: 'CSA: Βελτιωμένη για βρόχους'
+        csa_modifying_values_in_a_1d_array: 'CSA: Τροποποίηση τιμών σε μια συστοιχία 1D'
+        csa_nested_loops: 'CSA: Εμφωλευμένοι Βρόχοι'
+        csa_one_dimensional_arrays: 'CSA: Μονοδιάστατες (1D) συστοιχίες'
+        csa_polymorphism: 'CSA: Πολυμορφισμός'
+        csa_casting: 'CSA: Χύτευση'
+        csa_equals_and_aliases: 'CSA: Ισοδύναμα και ψευδώνυμα'
+        csa_multi-selection_statements: 'CSA: Δηλώσεις πολλαπλής επιλογής'
+        csa_random_numbers: 'CSA: Τυχαίοι αριθμοί'
+        csa_static_methods: 'CSA: Στατικές μέθοδοι'
+        csa_static_variables: 'CSA: Στατικές Μεταβλητές'
+        csa_the_equals_method: 'CSA: Η μέθοδος ισούται ()'
+        csa_welcome_to_the_theater: 'CSA: Καλώς ήρθατε στο Θέατρο'
+        enter_your_own_poem: Εισάγετε το δικό σας ποίημα
+        csa-example-solution-1: 'Ζωντανή κωδικοποίηση μιας λύσης παραδειγματικά '
         csd_sprite_properties: Ιδιότητες Χαρακτήρα
+        csa-pl-documentation: Τεκμηρίωση σε Java Lab
+        csc-starquilts-intro: 'CSC: Παπλώματα Αστέρι'
+        csa-pl-vocab-pm: Λεξιλόγιο Διαχείρισης Έργου
+        csc-ecosystems-intro: Εισαγωγή Οικοσυστημάτων
+        PL_CSD_MicroBit_Intro: Εισαγωγή στο μικρό:bit
+        csc_animal_adaptations_intro: Εισαγωγή στις προσαρμογές των ζώων
+        csa_two_dimensional_arrays: 'CSA: Δισδιάστατες (2D) συστοιχίες'
+        csa_working_with_2d_array_elements: 'CSA: Εργασία με στοιχεία συστοιχίας 2D'
+        csa_row_major_traversal: 'CSA: Row-Σημαντικές Traversal'
+        csa_column_major_traversal: 'CSA: Στήλη-Σημαντική Διαστροφή'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Βελτιωμένη για βρόχους και 2D συστοιχίες'
+        csa_images_and_pixels: 'CSA: Εικόνες και εικονοστοιχεία'
+        csa_wrapper_classes_part_1: 'CSA: Τάξεις περιτυλίγματος Μέρος 1'
+        csa_wrapper_classes_part_2: 'CSA: Τάξεις περιτυλίγματος Μέρος 2'
+        csa_the_arraylist_class: 'CSA: Η κλάση ArrayList'
+        csa_working_with_arraylist_data: 'CSA: Εργασία με δεδομένα ArrayList'
+        csa_remving_data_from_an_arraylist: 'CSA: Κατάργηση δεδομένων από μια λίστα πίνακα'
+        csa_private_methods: 'CSA: Ιδιωτικές Μέθοδοι'
+        csa_recursion: 'CSA: Αναδρομή'
+        csa_searching_algorithms: 'CSA: Αλγόριθμοι Αναζητώντας'
+        csa_sorting_algorithms: 'CSA: Αλγόριθμοι Ταξινόμησης'
+        star_quilts_intro_to_artist: 'Αστέρια παπλώματα: Εισαγωγή στον Καλλιτέχνη'
+        upload_sprites_backgrounds: Αποστολή προσαρμοσμένων sprites και φόντα
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ

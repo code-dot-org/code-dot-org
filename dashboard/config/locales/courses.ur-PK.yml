@@ -3,14 +3,26 @@ ur:
   data:
     course:
       name:
+        csd-2017:
+          assignment_family_title: کمپیوٹر سائنس ڈسکووریز
+        csd-2018:
+          assignment_family_title: کمپیوٹر سائنس ڈسکووریز
+        csd-2023:
+          title: کمپیوٹر سائنس ڈسکووریز
+        csp-2017:
+          assignment_family_title: کمپیوٹر سائنس کے اصول
+        csp-2018:
+          assignment_family_title: کمپیوٹر سائنس کے اصول
         mike-test:
           title: کمپیوٹر سائنس کے بنیادی اصول
     resources:
+      getting_started_with_csd/csd/2021:
+        name: " CSD کے ساتھ آغاز کرنا"
+      teacher_forum/csd/2019:
+        name: ٹیچر فورم
       teacher_forum/csd/2020:
         name: ٹیچر فورم
       teacher_forum_6/csd/2017:
-        name: ٹیچر فورم
-      teacher_forum/csd/2019:
         name: ٹیچر فورم
       teacher_forum_6/csd/2018:
         name: ٹیچر فورم

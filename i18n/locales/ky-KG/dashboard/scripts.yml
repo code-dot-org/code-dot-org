@@ -594,3 +594,7 @@ ky:
               display_name: Функциялар
             csf_nested_loops:
               display_name: Шартуулар
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Өзгөрмөлөр

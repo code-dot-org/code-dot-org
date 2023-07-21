@@ -27,7 +27,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     refute_creates(ProgrammingExpression) do
       post :create, params: {key: 'expression_key', name: 'expression name', programming_environment_id: destroyed_programming_env_id}
     end
-    assert @response.body.include? "Valid programming environment is required"
+    assert_includes(@response.body, "Valid programming environment is required")
   end
 
   test 'can update programming expression from params' do
@@ -135,8 +135,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
 
-    File.expects(:exist?).returns(true).once
-    File.expects(:delete).once
+    FileUtils.expects(:rm_f).once
 
     delete :destroy, params: {
       id: programming_expression.id
@@ -150,8 +149,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
 
-    File.expects(:exist?).returns(true).once
-    File.expects(:delete).throws(StandardError).once
+    FileUtils.expects(:rm_f).throws(StandardError).once
 
     delete :destroy, params: {
       id: programming_expression.id

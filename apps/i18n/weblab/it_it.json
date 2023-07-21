@@ -1,2 +1,21 @@
 {
+  "addCSSButton": "Aggiungi CSS",
+  "addHTMLButton": "Aggiungi HTML",
+  "addImageButton": "Aggiungi immagine",
+  "closeFullscreenPreview": "Chiudi l'anteprima a schermo intero",
+  "currentProjectCapacity": "{currentMegabytes}MB di {totalMegabytes}MB utilizzati",
+  "disallowedHtml": "Il file \"{filename}\" contiene elementi HTML non consentiti: `{disallowedTags}`. Verranno rimossi alla chiusura di questa finestra di dialogo.",
+  "errorSavingProject": "Qualcosa non ha funzionato durante il salvataggio automatico del progetto. Controlla la tua connessione Internet e prova a salvare manualmente. Se il problema persiste, prova a ricaricare la pagina per ricominciare da capo.",
+  "fatalError": "Errore irreversibile: {message}. Se sei in modalità Navigazione privata, i dati non possono essere scritti.",
+  "loadFailure": "Siamo spiacenti, Web Lab non è stato caricato per qualche motivo. Errore: {message}",
+  "openFullscreenPreview": "Apri l'anteprima a schermo intero",
+  "refreshPreview": "Aggiorna e salva",
+  "reloading": "Ricaricamento in corso...",
+  "reset": "Ripristina Web Lab",
+  "resetComplete": "Reset Web Lab completo",
+  "resetFailure": "Ripristino Web Lab non riuscito: {message}.",
+  "toggleInspectorOff": "Ispettore: Attivo",
+  "toggleInspectorOn": "Ispettore: spento",
+  "troubleshootingSupport": "Per ulteriori informazioni, consulta il nostro articolo di supporto [\"Risoluzione dei problemi del Web Lab\"]({url}) .",
+  "uploadError": "Errore di caricamento"
 }

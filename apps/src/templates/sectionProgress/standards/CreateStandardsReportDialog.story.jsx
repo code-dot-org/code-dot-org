@@ -7,7 +7,12 @@ import sectionStandardsProgress from './sectionStandardsProgressRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 
-export default storybook => {
+export default {
+  title: 'CreateStandardsReportDialog',
+  component: CreateStandardsReportDialog,
+};
+
+export const overview = () => {
   const store = createStore(
     combineReducers({
       sectionStandardsProgress,
@@ -16,19 +21,15 @@ export default storybook => {
     })
   );
 
-  return storybook
-    .storiesOf('Standards/CreateStandardsReportDialog', module)
-    .add('overview', () => {
-      return (
-        <Provider store={store}>
-          <CreateStandardsReportDialog
-            isOpen
-            handleConfirm={action('Confirm')}
-            handleClose={action('Close')}
-            handleNext={action('Next')}
-            onCommentChange={action('Comment')}
-          />
-        </Provider>
-      );
-    });
+  return (
+    <Provider store={store}>
+      <CreateStandardsReportDialog
+        isOpen
+        handleConfirm={action('Confirm')}
+        handleClose={action('Close')}
+        handleNext={action('Next')}
+        onCommentChange={action('Comment')}
+      />
+    </Provider>
+  );
 };

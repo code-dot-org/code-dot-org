@@ -4,6 +4,7 @@ import PatternPanel from '../views/PatternPanel';
 import GoogleBlockly from 'blockly/core';
 import experiments from '@cdo/apps/util/experiments';
 import {generateGraphDataFromPattern} from '../utils/Patterns';
+import color from '@cdo/apps/util/color';
 
 const FIELD_WIDTH = 32;
 const FIELD_HEIGHT = 18;
@@ -61,7 +62,7 @@ class FieldPattern extends GoogleBlockly.Field {
     }
     if (this.textElement_) {
       if (experiments.isEnabled('zelos')) {
-        this.textElement_.style.fill = 'white';
+        this.textElement_.style.fill = color.neutral_light;
       }
     }
   }
@@ -88,9 +89,9 @@ class FieldPattern extends GoogleBlockly.Field {
 
     this.renderContent();
 
-    this.newDiv_.style.color = 'white';
+    this.newDiv_.style.color = color.neutral_light;
     this.newDiv_.style.width = '420px';
-    this.newDiv_.style.backgroundColor = 'black';
+    this.newDiv_.style.backgroundColor = color.dark_black;
     this.newDiv_.style.padding = '5px';
 
     return this.newDiv_;
@@ -134,7 +135,7 @@ class FieldPattern extends GoogleBlockly.Field {
     GoogleBlockly.utils.dom.createSvgElement(
       'rect',
       {
-        fill: '#292F36',
+        fill: color.neutral_dark,
         x: 1,
         y: 1,
         width: FIELD_WIDTH,
@@ -157,7 +158,7 @@ class FieldPattern extends GoogleBlockly.Field {
       GoogleBlockly.utils.dom.createSvgElement(
         'rect',
         {
-          fill: 'white',
+          fill: color.neutral_light,
           x: graphNote.x,
           y: graphNote.y,
           width: graphNote.width,

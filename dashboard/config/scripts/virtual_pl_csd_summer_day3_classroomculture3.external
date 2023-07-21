@@ -1,0 +1,31 @@
+name 'virtual-pl-csd-summer-day3-ClassroomCulture3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teamwork
+
+#### Fostering an inclusive culture and collaborating around computing are core practices in the <a href="https://k12cs.org/" target="blank">CS K12 Framework</a>. 
+
+## The Role of the Teacher
+
+#### Students may need guidance on effective strategies for teamwork and collaboration. For example, some students may suggest a "majority rules" approach to disagreement. Challenge students to think of how that may exclude valuable perspectives and whether there are better strategies that can incorporate the entire team's voice.
+<br>
+
+## Teamwork in the Curriculum
+
+<img src="https://images.code.org/ed1c067606ddc55ebe59bcb9af138209-image-1684268171621.png" alt="A clipboard with paper on it and a magnifying glass next to it. This icon is used to signal a resource for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+#### Opportunities for students to work in pairs or small teams are included throughout the CS Discoveries curriculum. Many of the end of unit projects are designed to be completed as small teams. To support student collaboration, you might consider having students complete a <a href="https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/view" target="blank" rel="noopener noreferrer">Student Guide to Team Planning</a> before beginning a group project. 
+
+
+<img src="https://images.code.org/ed1c067606ddc55ebe59bcb9af138209-image-1684268171621.png" alt="A clipboard with paper on it and a magnifying glass next to it. This icon is used to signal a resource for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+#### The curriculum includes a **video series to support students in developing effective teamwork skills**. These videos first appear in chapter 2 of the Web Design unit. If you are not teaching the Web Design unit, you might consider showing these videos before you start your first team project. You might also choose to revisit these videos each time you begin a new team project. 
+
+## Let's watch the teamwork videos! 
+
+
+
+
+MARKDOWN

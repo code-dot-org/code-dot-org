@@ -306,7 +306,6 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                   <div>
                     <Button
-                      type="primary"
                       color={Button.ButtonColor.brandSecondaryDefault}
                       id="sharing-dialog-copy-button"
                       icon="clipboard"
@@ -592,7 +591,7 @@ export const UnconnectedShareAllowedDialog = ShareAllowedDialog;
 
 export default connect(
   state => ({
-    exportApp: state.pageConstants.exportApp,
+    exportApp: state.pageConstants?.exportApp,
     isOpen: state.shareDialog.isOpen,
     isUnpublishPending: state.shareDialog.isUnpublishPending,
     inRestrictedShareMode: state.project.inRestrictedShareMode,

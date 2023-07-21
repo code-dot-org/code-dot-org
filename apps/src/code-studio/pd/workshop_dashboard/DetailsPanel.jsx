@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Row, Col, ButtonToolbar, Button} from 'react-bootstrap';
+import {Row, Col, ButtonToolbar, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ConfirmationDialog from '../components/confirmation_dialog';
 import WorkshopForm from './components/workshop_form';
 import WorkshopPanel from './WorkshopPanel';
