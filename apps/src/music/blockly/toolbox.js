@@ -305,7 +305,7 @@ const toolboxBlocks = {
 
 function generateToolbox(categoryBlocksMap, options) {
   const toolbox = {
-    kind: 'categoryToolbox',
+    kind: options?.simpleToolbox ? 'flyoutToolbox' : 'categoryToolbox',
     contents: [],
   };
 
@@ -330,12 +330,16 @@ function generateToolbox(categoryBlocksMap, options) {
       categoryContents.push(toolboxBlocks[blockName]);
     }
 
-    toolbox.contents.push({
-      kind: 'category',
-      name: getCategoryName(category),
-      cssConfig: baseCategoryCssConfig,
-      contents: categoryContents,
-    });
+    if (options?.simpleToolbox) {
+      toolbox.contents = toolbox.contents.concat(categoryContents);
+    } else {
+      toolbox.contents.push({
+        kind: 'category',
+        name: getCategoryName(category),
+        cssConfig: baseCategoryCssConfig,
+        contents: categoryContents,
+      });
+    }
   }
 
   if (options?.includeVariables) {
@@ -379,7 +383,7 @@ function getCategoryName(category) {
   return categoryTypeToLocalizedName[category];
 }
 
-export function getToolbox(allowList) {
+export function getToolbox(allowList, simpleToolbox) {
   switch (getBlockMode()) {
     case BlockMode.SIMPLE:
       return generateToolbox({
@@ -445,7 +449,7 @@ export function getToolbox(allowList) {
             BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
           ],
         },
-        {includeFunctions: true, allowList}
+        {includeFunctions: true, allowList, simpleToolbox}
       );
   }
 }

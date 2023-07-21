@@ -9,6 +9,7 @@
       "toolbox": {
         "Play": ["play_sound_at_current_location_simple2"]
       },
+      "simpleToolbox": true,
       "sounds": {
         "beats": ["disco_beat", "reggaeton_beat"]
       },
