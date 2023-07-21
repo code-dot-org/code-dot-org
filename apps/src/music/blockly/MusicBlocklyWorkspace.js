@@ -49,7 +49,7 @@ export default class MusicBlocklyWorkspace {
       theme: CdoDarkTheme,
       renderer: experiments.isEnabled('zelos')
         ? Renderers.ZELOS
-        : Renderers.THRASOS,
+        : Renderers.DEFAULT,
       noFunctionBlockFrame: true,
       zoom: {
         startScale: experiments.isEnabled('zelos') ? 0.9 : 1,
@@ -86,6 +86,10 @@ export default class MusicBlocklyWorkspace {
    * @param {*} scope Global scope to provide the execution runtime
    */
   compileSong(scope) {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return;
+    }
     Blockly.getGenerator().init(this.workspace);
 
     this.compiledEvents = {};
@@ -290,10 +294,18 @@ export default class MusicBlocklyWorkspace {
   }
 
   getCode() {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return {};
+    }
     return Blockly.serialization.workspaces.save(this.workspace);
   }
 
   getAllBlocks() {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return [];
+    }
     return this.workspace.getAllBlocks();
   }
 
@@ -328,6 +340,10 @@ export default class MusicBlocklyWorkspace {
 
   // Load the workspace with the given code.
   loadCode(code) {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return;
+    }
     Blockly.serialization.workspaces.load(code, this.workspace);
   }
 

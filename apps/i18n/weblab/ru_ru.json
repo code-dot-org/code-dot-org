@@ -1,7 +1,7 @@
 {
   "addCSSButton": "Добавить CSS",
-  "addImageButton": "Добавить изображение",
   "addHTMLButton": "Добавить HTML-код",
+  "addImageButton": "Добавить изображение",
   "closeFullscreenPreview": "Закрыть полноэкранный предпросмотр",
   "currentProjectCapacity": "Использовано {currentMegabytes}МБ из {totalMegabytes}МБ",
   "errorSavingProject": "Что-то не сработало при автоматическом сохранении проекта. Проверьте подключение к Интернету и попробуйте сохранить данные вручную. Если проблема не устранена, попробуйте перезагрузить страницу, чтобы начать заново.",
@@ -13,8 +13,8 @@
   "reset": "Перезагрузить веб-лабораторию",
   "resetComplete": "Перезагрузка веб-лаборатории завершена",
   "resetFailure": "Не удалось перезагрузить Web Lab: {message}.",
-  "toggleInspectorOn": "Инспектор: Выключен",
   "toggleInspectorOff": "Инспектор: Вкл.",
+  "toggleInspectorOn": "Инспектор: Выключен",
   "troubleshootingSupport": "Дополнительные сведения см. в нашей статье поддержки [\"Устранение неполадок Web Lab\"]({url}) .",
   "uploadError": "Ошибка при загрузке"
 }

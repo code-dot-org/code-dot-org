@@ -822,13 +822,13 @@ es:
     supports a variety of programming paradigms. This enables learners to seamlessly
     transition from block-based coding to text-based languages, and fosters creativity
     and innovation.
-  teach_page_top_heading: Teach computer science & ignite possibilities
-  teach_page_top_desc_01: Tap into your students' full potential with Code.org's free
-    Computer Science (CS) curriculum.
-  teach_page_top_desc_02: Join the global community of over 2 million educators empowering
-    the next generation of innovators, problem solvers, and digital citizens! Code.org
-    supports teachers the whole way with professional learning, comprehensive curricula,
-    and support when you need it.
+  teach_page_top_heading: Enseña las ciencias de la computación & crea posibilidades
+  teach_page_top_desc_01: Desarrolla todo el potencial de tus estudiantes con el currículo
+    gratuito de Ciencias de la Computación (CS) de Code.org.
+  teach_page_top_desc_02: "¡Únete a la comunidad global de más de 2 millones de educadores
+    que forman a los próximos innovadores y ciudadanos digitales! Code.org ofrece
+    aprendizaje profesional y programas de estudio con planes de lección para apoyar
+    a los docentes sin costo alguno."
   teach_page_why_teach_cs_heading: Why teach computer science with Code.org?
   teach_page_why_teach_cs_block_heading_01: Build foundational CS skills
   teach_page_why_teach_cs_block_desc_01: Like reading, writing, or math, computer
@@ -4505,7 +4505,7 @@ es:
     programadores nuevos tienen sobre estos temas, ya que ofrecen muchas oportunidades
     para la práctica, además de sugerencias y comentarios específicos.
 
-'
+    '
   tutorial_zulama_longdescription: En esta actividad, aprendes a editar el código
     JavaScript a través de un divertido juego de acción y a dominar conceptos de ciencias
     de la computación como variables y funciones. Vuelve a mezclar y ampliar el código
@@ -4847,7 +4847,7 @@ es:
     abiertas; los niños pueden usarlos como punto de partida para sus propias creaciones
     de aplicaciones. ¡Principiantes bienvenidos!
 
-'
+    '
   tutorial_tlcemo_longdescription: Los estudiantes crean y programan un robot 2D hecho
     de tarjetas para mostrar diferentes emociones. Crean una tabla que puede usarse
     para traducir emociones (comandos de alto nivel) en instrucciones de máquina de
@@ -5842,7 +5842,7 @@ es:
     pública. Si ya has hecho algunos códigos con bloques, lleva tus habilidades al
     siguiente nivel.
 
-'
+    '
   tutorial_cslartist_longdescription: "¿Sabías que hay un pequeño artista que vive
     dentro de cada computadora? Este PDF contiene una historia divertida con crucigramas
     que enseñará a los alumnos los fundamentos del arte digital, ya que crean sus

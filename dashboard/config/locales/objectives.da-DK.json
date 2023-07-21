@@ -2,6 +2,18 @@
   "da-DK": {
     "data": {
       "objectives": {
+        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
+          "description": "Erklære en variabel"
+        },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": ""
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": ""
+        },
+        "8805bb75-452c-4778-9cd2-6df020a13216": {
+          "description": "Erklære en variabel"
+        },
         "6394fdc5-50c3-423e-8135-a64594824db3": {
           "description": "Definere \"programmering\" og \"computervidenskab\""
         },
@@ -17,32 +29,23 @@
         "303a2b74-af73-401c-8929-1fc1c5611f18": {
           "description": "Skabe sammenhæng mellem computervidenskab og den virkelige verden"
         },
-        "bc47cc48-f07f-4d2b-aa2d-86f952ab0da3": {
-          "description": "Skabe sammenhæng mellem computervidenskab og den virkelige verden"
-        },
         "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
           "description": "Skabe sammenhæng mellem computervidenskab og den virkelige verden"
         },
-        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
-          "description": "Skabe sammenhæng mellem computervidenskab og den virkelige verden"
-        },
-        "4cc87f80-aa2a-4996-96bd-de31f9836620": {
-          "description": "Skabe sammenhæng mellem computervidenskab og den virkelige verden"
-        },
-        "663f8e5f-9d35-425b-8d51-931fcef2c2d4": {
+        "bc47cc48-f07f-4d2b-aa2d-86f952ab0da3": {
           "description": "Skabe sammenhæng mellem computervidenskab og den virkelige verden"
         },
         "b655e0ef-f98f-4db9-93f1-5d842b470c5d": {
           "description": "Skabe sammenhæng mellem computervidenskab og den virkelige verden"
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": ""
+        "4cc87f80-aa2a-4996-96bd-de31f9836620": {
+          "description": "Skabe sammenhæng mellem computervidenskab og den virkelige verden"
         },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": ""
+        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
+          "description": "Skabe sammenhæng mellem computervidenskab og den virkelige verden"
         },
-        "8805bb75-452c-4778-9cd2-6df020a13216": {
-          "description": "Erklære en variabel"
+        "663f8e5f-9d35-425b-8d51-931fcef2c2d4": {
+          "description": "Skabe sammenhæng mellem computervidenskab og den virkelige verden"
         },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
           "description": ""
@@ -52,9 +55,6 @@
         },
         "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
           "description": ""
-        },
-        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
-          "description": "Erklære en variabel"
         }
       }
     }

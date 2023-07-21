@@ -92,14 +92,36 @@ bg:
         self-paced-pl-csd-2023:
           version_title: "'23-'24"
     resources:
-      curriculum/csd/2020:
-        name: Учебна програма
-      teacher_forum/csd/2020:
-        name: Учителски форум
       curriculum/csd/2017:
         name: Учебна програма
       teacher_forum_6/csd/2017:
         name: Учителски форум
+      curriculum/csd/2018:
+        name: Учебна програма
+      teacher_forum_6/csd/2018:
+        name: Учителски форум
+      curriculum/csd/2019:
+        name: Учебна програма
+      teacher_forum/csd/2019:
+        name: Учителски форум
+      curriculum/csd/2020:
+        name: Учебна програма
+      teacher_forum/csd/2020:
+        name: Учителски форум
+      csd_curriculum_guide/csd/2021:
+        url: https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview
+      csd_guide_to_assessment/csd/2021:
+        url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
+      csd_guide_to_debugging/csd/2021:
+        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
+      csd_guide_to_differentiation/csd/2021:
+        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
+      csd_guide_to_using_resources/csd/2021:
+        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
+      csd_implementation_guide/csd/2021:
+        url: https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview
+      getting_started_with_csd/csd/2021:
+        url: https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview
       csd_changelog_22-_23/csd/2022:
         url: https://docs.google.com/document/d/1GR3VaThoqXY6XBeVCHcYvZtaQFn47jPpmLNRQB4IK7Y/preview
       csd_curriculum_guide/csd/2022:
@@ -118,10 +140,6 @@ bg:
         url: https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview
       csd_programming_levels_guide/csd/2022:
         url: https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview
-      curriculum/csd/2019:
-        name: Учебна програма
-      teacher_forum/csd/2019:
-        name: Учителски форум
       all_code_2/csd/2023:
         url: "/courses/csd-2023/code"
       all_resources_2/csd/2023:
@@ -154,21 +172,3 @@ bg:
         url: https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view
       csd_syllabus/csd/2023:
         url: https://docs.google.com/document/d/1wqoDRuGVb8ZNoVjikkq1ZflA_C57r-YHmn3awpJmSJQ/view
-      csd_curriculum_guide/csd/2021:
-        url: https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview
-      csd_guide_to_assessment/csd/2021:
-        url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
-      csd_guide_to_debugging/csd/2021:
-        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
-      csd_guide_to_differentiation/csd/2021:
-        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
-      csd_guide_to_using_resources/csd/2021:
-        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
-      csd_implementation_guide/csd/2021:
-        url: https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview
-      getting_started_with_csd/csd/2021:
-        url: https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview
-      curriculum/csd/2018:
-        name: Учебна програма
-      teacher_forum_6/csd/2018:
-        name: Учителски форум

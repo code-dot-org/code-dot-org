@@ -68,19 +68,19 @@ ko:
         csd-2023:
           title: 컴퓨터 과학 입문
     resources:
-      curriculum/csd/2020:
-        name: 교과 과정
-      teacher_forum/csd/2020:
-        name: 교사용 포럼
       curriculum/csd/2017:
         name: 교과 과정
       teacher_forum_6/csd/2017:
+        name: 교사용 포럼
+      curriculum/csd/2018:
+        name: 교과 과정
+      teacher_forum_6/csd/2018:
         name: 교사용 포럼
       curriculum/csd/2019:
         name: 교과 과정
       teacher_forum/csd/2019:
         name: 교사용 포럼
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: 교과 과정
-      teacher_forum_6/csd/2018:
+      teacher_forum/csd/2020:
         name: 교사용 포럼
