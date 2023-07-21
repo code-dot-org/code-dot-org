@@ -35,16 +35,27 @@ export default class MusicBlocklyWorkspace {
    * @param {*} container HTML element to inject the workspace into
    * @param {*} onBlockSpaceChange callback fired when any block space change events occur
    * @param {*} isReadOnlyWorkspace is the workspace readonly
+   * @param {*} toolboxAllowList object defining allowed toolbox entries
+   * @param {*} isReadOnlyWorkspace is the toolbox simple, without categories
+   *
    */
-  init(container, onBlockSpaceChange, isReadOnlyWorkspace) {
+  init(
+    container,
+    onBlockSpaceChange,
+    isReadOnlyWorkspace,
+    toolboxAllowList,
+    simpleToolbox
+  ) {
     if (this.workspace) {
       this.workspace.dispose();
     }
 
     this.container = container;
 
+    const toolbox = getToolbox(toolboxAllowList, simpleToolbox);
+
     this.workspace = Blockly.inject(container, {
-      toolbox: getToolbox(),
+      toolbox: toolbox,
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
       theme: CdoDarkTheme,
       renderer: experiments.isEnabled('zelos')
@@ -353,13 +364,5 @@ export default class MusicBlocklyWorkspace {
     } catch (e) {
       Lab2MetricsReporter.logError('Error running user generated code', e);
     }
-  }
-
-  updateToolbox(allowList) {
-    if (!this.workspace || this.workspace.options.readOnly) {
-      return;
-    }
-    const toolbox = getToolbox(allowList);
-    this.workspace.updateToolbox(toolbox);
   }
 }

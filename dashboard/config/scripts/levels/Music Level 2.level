@@ -10,6 +10,7 @@
         "Play": ["play_sound_at_current_location_simple2"],
         "Control": ["play_sounds_together"]
       },
+      "simpleToolbox": true,
       "sounds": {
         "beats": ["cafe_beat", "reggaeton_beat"],
         "leads": ["lucky_guitar", "picked_guitar"]
