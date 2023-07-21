@@ -48,6 +48,7 @@ class DCDOBase < DynamicConfigBase
       'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
       'curriculum-launch-hero-banner': DCDO.get('curriculum-launch-hero-banner', false),
       'blockly-json': DCDO.get('blockly-json', false),
+      'ai-pl-launch-banners': DCDO.get('ai-pl-launch-banners', false),
     }
   end
 end
