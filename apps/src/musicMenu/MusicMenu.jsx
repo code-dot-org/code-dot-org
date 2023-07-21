@@ -83,19 +83,19 @@ const optionsList = [
     description: 'Set a specific key by name (i.e. "C", "C#", "D", etc)',
   },
   {
-    name: 'skip-controls',
+    name: 'skip-controls-enabled',
     type: 'radio',
     values: [
-      {value: 'disabled', description: 'Disable skip controls.'},
-      {value: 'enabled', description: 'Enable skip controls.'},
+      {value: 'false', description: 'Disable skip controls.'},
+      {value: 'true', description: 'Enable skip controls.'},
     ],
   },
   {
-    name: 'keyboard-shortcuts',
+    name: 'keyboard-shortcuts-enabled',
     type: 'radio',
     values: [
-      {value: 'disabled', description: 'Disable keyboard shortcuts.'},
-      {value: 'enabled', description: 'Enable keyboard shortcuts.'},
+      {value: 'false', description: 'Disable keyboard shortcuts.'},
+      {value: 'true', description: 'Enable keyboard shortcuts.'},
     ],
   },
 ];

@@ -612,7 +612,7 @@ class UnconnectedMusicView extends React.Component {
                 this.musicBlocklyWorkspace
               )}
               enableSkipControls={
-                AppConfig.getValue('skip-controls') === 'enabled'
+                AppConfig.getValue('skip-controls-enabled') === 'true'
               }
             />
           </PanelContainer>
@@ -639,7 +639,7 @@ class UnconnectedMusicView extends React.Component {
 
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
-        {AppConfig.getValue('keyboard-shortcuts') === 'enabled' && (
+        {AppConfig.getValue('keyboard-shortcuts-enabled') === 'true' && (
           <KeyHandler
             togglePlaying={this.togglePlaying}
             playTrigger={this.playTrigger}
