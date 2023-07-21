@@ -1,9 +1,9 @@
 {
   "absolute": "absoluut",
+  "agentDiamondPathCongrats": "Gefeliciteerd, je hebt het diamanten pad gevonden! Je hebt tot nu toe {count, plural, one {1 diamond} other {# diamonds}} gevonden!",
   "agentGenericFailureMessage": "Blijf programmeren! Je kunt de agent altijd om hulp vragen.",
   "agentTooFewBlocksFailureMessage": "Probeer per keer maar één blok toe te voegen om de agent naar de juiste plek te leiden.",
   "at": "bij",
-  "agentDiamondPathCongrats": "Gefeliciteerd, je hebt het diamanten pad gevonden! Je hebt tot nu toe {count, plural, one {1 diamond} other {# diamonds}} gevonden!",
   "blockActionAdd": "toevoegen",
   "blockActionAttack": "aanval",
   "blockActionClone": "blokken klonen",

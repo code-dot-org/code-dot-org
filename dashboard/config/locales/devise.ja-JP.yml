@@ -44,28 +44,28 @@ ja:
       send_paranoid_instructions: アカウントが登録済みの場合、数分でロックを解除する方法が書かれたメールが届きます。
       unlocked: あなたのアカウントが正しくロック解除されました。続けるにはサインインしてください。
   errors:
+    invitations:
+      edit:
+        header: パスワードを設定します。
+        submit_button: パスワードを設定します。
+      invitation_removed: 招待は削除されました。
+      invitation_token_invalid: この招待コードは使えません。
+      new:
+        header: 招待を送る
+        submit_button: 招待を送る
+      no_invitations_remaining: もう招待は残っていません。
+      send_instructions: "%{email} に招待メールを送りました。"
+      updated: パスワードは変更されました。サインインしています。
+    mailer:
+      invitation_instructions:
+        accept: 招待を受け取る
+        hello: こんにちは %{email}
+        ignore: 招待を受け取らないときは、このメールを無視してください。<br />上のリンクにアクセスしてパスワードを設定しなければ、アカウントは作成されません。
+        someone_invited_you: あなたを %{url} に招待した人がいます。以下のリンクから受け取ってください。
+        subject: 招待の送り方
     messages:
       already_confirmed: すでに確認済です。サインインしてください
       confirmation_period_expired: "%{period}以内に確認する必要があるので、もう一度リクエストしてください"
       expired: 期限が切れたので、もう一度リクエストしてください
       not_found: 見つかりませんでした
       not_locked: ロックされていませんでした
-    invitations:
-      send_instructions: "%{email} に招待メールを送りました。"
-      invitation_token_invalid: この招待コードは使えません。
-      updated: パスワードは変更されました。サインインしています。
-      no_invitations_remaining: もう招待は残っていません。
-      invitation_removed: 招待は削除されました。
-      new:
-        header: 招待を送る
-        submit_button: 招待を送る
-      edit:
-        header: パスワードを設定します。
-        submit_button: パスワードを設定します。
-    mailer:
-      invitation_instructions:
-        subject: 招待の送り方
-        hello: こんにちは %{email}
-        someone_invited_you: あなたを %{url} に招待した人がいます。以下のリンクから受け取ってください。
-        accept: 招待を受け取る
-        ignore: 招待を受け取らないときは、このメールを無視してください。<br />上のリンクにアクセスしてパスワードを設定しなければ、アカウントは作成されません。

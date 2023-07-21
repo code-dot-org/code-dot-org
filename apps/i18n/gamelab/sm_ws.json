@@ -1,9 +1,9 @@
 {
   "dropletBlock_createSprite_param3": "maualuga",
-  "dropletBlock_setCollider_param0": "tusi",
-  "dropletBlock_setCollider_param4": "maualuga",
   "dropletBlock_setColliderEach_param0": "tusi",
   "dropletBlock_setColliderEach_param4": "maualuga",
+  "dropletBlock_setCollider_param0": "tusi",
+  "dropletBlock_setCollider_param4": "maualuga",
   "reinfFeedbackMsg": "Ua e uma! Oomi le \"Continue\" e faaauau i le isi laasaga.",
   "shareGame": "Faailoa lau taaloga"
 }

@@ -1,2 +1,10 @@
 {
+  "my-MM": {
+    "data": {
+      "frameworks": {
+        "ngss": {
+        }
+      }
+    }
+  }
 }

@@ -2,28 +2,22 @@
   "sv-SE": {
     "data": {
       "objectives": {
-        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
-          "description": "Illustrera förändringar i stämningen i en dikt."
-        },
-        "6da037be-d0be-4f41-a1e5-10b24a247190": {
-          "description": "Representera bildligt och bokstavligt språk i en text."
-        },
-        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
+        "6a6abb8f-e710-4a5e-9979-38e6fef573de": {
           "description": "Utveckla program som svarar på tidsinställda händelser"
         },
-        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
+        "18434de2-92be-4695-8dc7-4aed45243596": {
           "description": "Utveckla program som svarar på användarinmatning"
         },
-        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
+        "891d87fb-2024-4ecc-828e-fa4f12dbbb05": {
           "description": "Använda kod för att skapa dansanimationer"
         },
-        "f9486b57-7160-4b3b-b327-b311239d5d26": {
+        "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
           "description": "Utveckla program som svarar på tidsinställda händelser"
         },
-        "251fe027-d9b3-4384-99f6-53505275e4ce": {
+        "8ed739fb-18d9-49fa-8cf7-47c989fa6a6c": {
           "description": "Utveckla program som svarar på användarinmatning"
         },
-        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
+        "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2": {
           "description": "Använda kod för att skapa dansanimationer"
         },
         "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
@@ -50,6 +44,30 @@
         "f6a45c87-6f01-4df0-8020-0a9be77f0d10": {
           "description": "Utveckla program som svarar på användarinmatning"
         },
+        "f9486b57-7160-4b3b-b327-b311239d5d26": {
+          "description": "Utveckla program som svarar på tidsinställda händelser"
+        },
+        "251fe027-d9b3-4384-99f6-53505275e4ce": {
+          "description": "Utveckla program som svarar på användarinmatning"
+        },
+        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
+          "description": "Använda kod för att skapa dansanimationer"
+        },
+        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
+          "description": "Utveckla program som svarar på tidsinställda händelser"
+        },
+        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
+          "description": "Utveckla program som svarar på användarinmatning"
+        },
+        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
+          "description": "Använda kod för att skapa dansanimationer"
+        },
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Illustrera förändringar i stämningen i en dikt."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Representera bildligt och bokstavligt språk i en text."
+        },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
           "description": ""
         },
@@ -58,24 +76,6 @@
         },
         "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
           "description": "Representera bildligt och bokstavligt språk i en text."
-        },
-        "6a6abb8f-e710-4a5e-9979-38e6fef573de": {
-          "description": "Utveckla program som svarar på tidsinställda händelser"
-        },
-        "18434de2-92be-4695-8dc7-4aed45243596": {
-          "description": "Utveckla program som svarar på användarinmatning"
-        },
-        "891d87fb-2024-4ecc-828e-fa4f12dbbb05": {
-          "description": "Använda kod för att skapa dansanimationer"
-        },
-        "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
-          "description": "Utveckla program som svarar på tidsinställda händelser"
-        },
-        "8ed739fb-18d9-49fa-8cf7-47c989fa6a6c": {
-          "description": "Utveckla program som svarar på användarinmatning"
-        },
-        "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2": {
-          "description": "Använda kod för att skapa dansanimationer"
         }
       }
     }

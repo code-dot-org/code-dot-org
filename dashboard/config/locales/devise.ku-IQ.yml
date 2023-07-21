@@ -18,16 +18,16 @@ ku:
     sessions:
       signed_out: بەسەرکەوتوویی دەرچووی.
   errors:
-    messages:
-      not_found: نەدۆزرایەوە
     invitations:
-      new:
-        header: ناردنی بانگێشت
-        submit_button: ناردنی بانگێشتێک
       edit:
         header: تێپەڕەوشە دابنێ
         submit_button: تێپەڕەوشەکەم دانێ
+      new:
+        header: ناردنی بانگێشت
+        submit_button: ناردنی بانگێشتێک
     mailer:
       invitation_instructions:
-        subject: ڕێنماییەکانی بانگێشتکردن
         hello: سڵاو %{email}
+        subject: ڕێنماییەکانی بانگێشتکردن
+    messages:
+      not_found: نەدۆزرایەوە

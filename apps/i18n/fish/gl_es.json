@@ -1,9 +1,9 @@
 {
-  "continue": "Continuar",
   "areYouSure": "Tes a certeza?",
   "cancel": "Cancelar",
-  "yes": "Si",
+  "continue": "Continuar",
+  "finish": "Rematar",
   "no": "Non",
   "run": "Executar",
-  "finish": "Rematar"
+  "yes": "Si"
 }

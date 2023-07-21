@@ -268,14 +268,51 @@ es-MX:
           description_student: "## Bienvenido\n\n##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.\n\n### Encuentra el aprendizaje que funciona para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar."
           description_teacher: "## Bienvenido\n\n##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.\n\n### Encuentra el aprendizaje que funciona para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar."
     resources:
-      curriculum/csd/2020:
-        name: Plan de estudios
-      teacher_forum/csd/2020:
-        name: Foro de profesores
       curriculum/csd/2017:
         name: Plan de estudios
       teacher_forum_6/csd/2017:
         name: Foro de profesores
+      curriculum/csd/2018:
+        name: Plan de estudios
+      teacher_forum_6/csd/2018:
+        name: Foro de profesores
+      curriculum/csd/2019:
+        name: Plan de estudios
+      teacher_forum/csd/2019:
+        name: Foro de profesores
+      curriculum/csd/2020:
+        name: Plan de estudios
+      teacher_forum/csd/2020:
+        name: Foro de profesores
+      all_code/csd/2021:
+        name: Todo el Código
+      all_resources_1/csd/2021:
+        name: Todos los Recursos
+      all_standards_1/csd/2021:
+        name: Todos los Estándares
+      all_vocabulary_1/csd/2021:
+        name: Todo el Vocabulario
+      csd_curriculum_guide/csd/2021:
+        name: CSD Guía Curricular
+        url: https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview
+      csd_guide_to_assessment/csd/2021:
+        name: CSD Guía de Evaluacíon
+        url: https://docs.google.com/document/d/10OAqq0ecEAHsSy37l_h7-H3EGh5LE_gi/view
+      csd_guide_to_debugging/csd/2021:
+        name: CSD Guía para la Depuración
+        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
+      csd_guide_to_differentiation/csd/2021:
+        name: CSD Guía para la Diferenciación
+        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
+      csd_guide_to_using_resources/csd/2021:
+        name: Guía para el uso de recursos de Descubrimientos de las Ciencias de la Computación
+        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
+      csd_implementation_guide/csd/2021:
+        name: CSD Guía de Implementación
+        url: https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview
+      getting_started_with_csd/csd/2021:
+        name: Primeros pasos con CSD
+        url: https://docs.google.com/document/d/1jwPgmlorztdxnVUChhNjE32V651ZWFDs/view
       all_code_5/csd/2022:
         name: Todo el Código
       all_resources_7/csd/2022:
@@ -311,10 +348,6 @@ es-MX:
       csd_programming_levels_guide/csd/2022:
         name: CSD Guía de Niveles de Programación
         url: https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview
-      curriculum/csd/2019:
-        name: Plan de estudios
-      teacher_forum/csd/2019:
-        name: Foro de profesores
       all_code_2/csd/2023:
         name: Todo el Código
         url: "/cursos/csd-2023/código"
@@ -339,36 +372,3 @@ es-MX:
         name: CSD Guía de Implementación
       csd_learning_frameworks_1/csd/2023:
         name: CSD Entorno de Aprendizaje
-      all_code/csd/2021:
-        name: Todo el Código
-      all_resources_1/csd/2021:
-        name: Todos los Recursos
-      all_standards_1/csd/2021:
-        name: Todos los Estándares
-      all_vocabulary_1/csd/2021:
-        name: Todo el Vocabulario
-      csd_curriculum_guide/csd/2021:
-        name: CSD Guía Curricular
-        url: https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview
-      csd_guide_to_assessment/csd/2021:
-        name: CSD Guía de Evaluacíon
-        url: https://docs.google.com/document/d/10OAqq0ecEAHsSy37l_h7-H3EGh5LE_gi/view
-      csd_guide_to_debugging/csd/2021:
-        name: CSD Guía para la Depuración
-        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
-      csd_guide_to_differentiation/csd/2021:
-        name: CSD Guía para la Diferenciación
-        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
-      csd_guide_to_using_resources/csd/2021:
-        name: Guía para el uso de recursos de Descubrimientos de las Ciencias de la Computación
-        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
-      csd_implementation_guide/csd/2021:
-        name: CSD Guía de Implementación
-        url: https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview
-      getting_started_with_csd/csd/2021:
-        name: Primeros pasos con CSD
-        url: https://docs.google.com/document/d/1jwPgmlorztdxnVUChhNjE32V651ZWFDs/view
-      curriculum/csd/2018:
-        name: Plan de estudios
-      teacher_forum_6/csd/2018:
-        name: Foro de profesores

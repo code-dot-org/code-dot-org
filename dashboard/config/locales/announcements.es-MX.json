@@ -2,35 +2,81 @@
   "es-MX": {
     "data": {
       "announcements": {
-        "8f212dd2-169f-4a3d-9880-f76d3372b6c1": {
-          "notice": "Lecciones de Ampliación con el micro:bit",
-          "details": "¿Quieres introducir a tus alumnos en la informática física? Echa un vistazo a nuestras nuevas lecciones de ampliación de micro:bit para continuar el aprendizaje de los alumnos.",
-          "buttonText": "Aprende más"
+        "487af7e8-d3dd-46c2-a0fa-936a4e58d977": {
+          "notice": "¿Te has apuntado al examen AP?",
+          "details": "Ahora es el momento de inscribirse para hacer el examen de Principios de Informática AP. Asegúrate de preguntar a tu profesor sobre el plazo de inscripción de tu centro y apúntate hoy mismo. ¿No estás seguro de querer hacer el examen? Tenemos SEIS razones por las que deberías hacerlo. Compruébalas."
         },
-        "a3109564-513f-47c8-bdf3-d69a19f5149e": {
-          "notice": "Lecciones de Ampliación con el micro:bit",
-          "details": "¿Quieres introducir a tus alumnos en la informática física? Echa un vistazo a nuestras nuevas lecciones de ampliación de micro:bit para continuar el aprendizaje de los alumnos.",
-          "buttonText": "Aprende más"
+        "228f5294-78ec-4b7a-b6f6-76d6f92a01b4": {
+          "notice": "¡La encuesta fin de curso ya está abierta para los alumnos!",
+          "details": "Profesores, por favor, pedir a vuestros alumnos que completen esta importante encuesta. Se tarda menos de 10 minutos. Compruébalo: puedes encontrar un enlace a la encuesta en la parte inferior de la página de esta unidad o pulsar el botón \"Más información\" para ir directamente a ella. Pulsa el botón \"Ver Plan de Lección\" junto a la encuesta para ver las instrucciones. Gracias."
         },
-        "9b45f4aa-6b0a-44d7-9813-8e724baca343": {
-          "notice": "Lecciones de Ampliación con el micro:bit",
-          "details": "¿Quieres introducir a tus alumnos en la informática física? Echa un vistazo a nuestras nuevas lecciones de ampliación de micro:bit para continuar el aprendizaje de los alumnos.",
-          "buttonText": "Aprende más"
+        "249e1d1d-7ed0-4042-8e57-17f5f2061a9f": {
+          "notice": "¡Ya está abierta la encuesta fin de curso para los alumnos de Descubrimientos de Informática!",
+          "details": "Profesores, por favor, pedir a vuestros alumnos que completen esta importante encuesta. Se tarda menos de 10 minutos. Compruébalo: puedes encontrar un enlace a la encuesta en la parte inferior de la página de esta unidad o pulsar el botón \"Más información\" para ir directamente a ella. Pulsa el botón \"Ver Plan de Lección\" junto a la encuesta para ver las instrucciones. Gracias."
         },
-        "26f29937-fd4e-4738-8dfe-459f286636f4": {
-          "notice": "Lecciones de Ampliación con el micro:bit",
-          "details": "¿Quieres introducir a tus alumnos en la informática física? Echa un vistazo a nuestras nuevas lecciones de ampliación de micro:bit para continuar el aprendizaje de los alumnos.",
-          "buttonText": "Aprende más"
+        "d9b403ff-aa97-487a-a32d-df4da9967249": {
+          "notice": "¡Ya está abierta la encuesta fin de curso para los alumnos de Descubrimientos de Informática!",
+          "details": "Profesores, por favor, pedir a vuestros alumnos que completen esta importante encuesta. Se tarda menos de 10 minutos. Compruébalo: puedes encontrar un enlace a la encuesta en la parte inferior de la página de esta unidad o pulsar el botón \"Más información\" para ir directamente a ella. Pulsa el botón \"Ver Plan de Lección\" junto a la encuesta para ver las instrucciones. Gracias."
         },
-        "b7bff9e1-22bd-4f95-bb95-68e91fd5b3a3": {
+        "324c3312-b070-4ac4-8bde-4b97251b6760": {
+          "notice": "¡Ya está abierta la encuesta fin de curso para los alumnos de Descubrimientos de Informática!",
+          "details": "Profesores, por favor, pedir a vuestros alumnos que completen esta importante encuesta. Se tarda menos de 10 minutos. Compruébalo: puedes encontrar un enlace a la encuesta en la parte inferior de la página de esta unidad o pulsar el botón \"Más información\" para ir directamente a ella. Pulsa el botón \"Ver Plan de Lección\" junto a la encuesta para ver las instrucciones. Gracias."
+        },
+        "4a6677f7-ef10-4b41-812a-7bfe1aff7b00": {
+          "notice": "¡Ya está abierta la encuesta fin de curso para los alumnos de Descubrimientos de Informática!",
+          "details": "Profesores, por favor, pedir a vuestros alumnos que completen esta importante encuesta. Se tarda menos de 10 minutos. Compruébalo: puedes encontrar un enlace a la encuesta en la parte inferior de la página de esta unidad o pulsar el botón \"Más información\" para ir directamente a ella. Pulsa el botón \"Ver Plan de Lección\" junto a la encuesta para ver las instrucciones. Gracias."
+        },
+        "a5c79bfe-dc53-48e6-b535-cfbfb3eae114": {
+          "notice": "Nuevo: Elige qué lecciones mostrar u ocultar en tu sección",
+          "details": "Pulsa \"Más información\" para leer el artículo de ayuda sobre cómo mostrar y ocultar las lecciones."
+        },
+        "66984aed-46b1-4a2f-8d2f-c88c9f13ead0": {
+          "notice": "Nuevo: Elige qué lecciones mostrar u ocultar en tu sección",
+          "details": "Pulsa \"Más información\" para leer el artículo de ayuda sobre cómo mostrar y ocultar las lecciones."
+        },
+        "920785dd-41e4-4d34-a3af-3eadbec1c90e": {
+          "notice": "¡Consulta los nuevos recursos en Descubrimientos de Informática para 2019-2020!",
+          "details": "¡Más información sobre nuestras nuevas guías del profesor, marcos de aprendizaje, OneNote Journal y Flipgrid Disco Library!"
+        },
+        "12f743d3-19be-4f6e-be39-e61a9bfac4d6": {
           "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
-          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas.",
-          "buttonText": "Aprenda más"
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
         },
-        "e86b3b15-d704-41ff-9c63-73a77b7b477d": {
-          "notice": "Más oportunidades para opinar",
-          "details": "Ahora, cada lección incluye una encuesta rápida de dos preguntas para informar al equipo del plan de estudios sobre cómo ha ido la lección en el aula. Los estudiantes también tienen la oportunidad de dejar sus comentarios al final de cada unidad, y los profesores pueden responder a una breve encuesta para informar al equipo del plan de estudios de Code.org sobre el desarrollo de la unidad.",
-          "buttonText": "Encuesta a Docentes"
+        "07719219-e5f5-4ff5-b623-24063a236415": {
+          "notice": "Modificaciones de las lecciones virtuales",
+          "details": "Si estás enseñando en un entorno virtual, híbrido o socialmente distanciado, entonces puedes ver las modificaciones recomendadas a nuestros planes de estudio que se pueden utilizar en estos entornos."
+        },
+        "2b95b40d-3be9-445c-856a-879a6eceeea1": {
+          "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "219a6035-ef5e-4474-8dcc-682b3ba030d7": {
+          "notice": "Modificaciones de las lecciones virtuales",
+          "details": "Si estás enseñando en un entorno virtual, híbrido o socialmente distanciado, entonces puedes ver las modificaciones recomendadas a nuestros planes de estudio que se pueden utilizar en estos entornos."
+        },
+        "69e413fa-9081-4fac-8d73-9294b6fa1f11": {
+          "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "4fc301ee-93c8-4d3c-b4f6-8ad16536da1a": {
+          "notice": "Modificaciones de las lecciones virtuales",
+          "details": "Si estás enseñando en un entorno virtual, híbrido o socialmente distanciado, entonces puedes ver las modificaciones recomendadas a nuestros planes de estudio que se pueden utilizar en estos entornos."
+        },
+        "1ff50ed3-0032-4ed0-b28c-376ce0f1c2ce": {
+          "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "633d1416-a7fb-44b6-a724-8479fd66f4fa": {
+          "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "5972aa0b-1730-4977-82db-23cee2bda683": {
+          "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
+        },
+        "c89013b3-d0d5-4faa-842a-718092083fe6": {
+          "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
         },
         "79a249d7-fb90-4e9c-bd8b-e7884ad2034b": {
           "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
@@ -38,16 +84,6 @@
           "buttonText": "Aprenda más"
         },
         "be317006-f86b-44a9-9036-34c0508cc0e9": {
-          "notice": "Más oportunidades para opinar",
-          "details": "Ahora, cada lección incluye una encuesta rápida de dos preguntas para informar al equipo del plan de estudios sobre cómo ha ido la lección en el aula. Los estudiantes también tienen la oportunidad de dejar sus comentarios al final de cada unidad, y los profesores pueden responder a una breve encuesta para informar al equipo del plan de estudios de Code.org sobre el desarrollo de la unidad.",
-          "buttonText": "Encuesta a Docentes"
-        },
-        "b5b0c936-3bc6-4e69-8796-e205d103151f": {
-          "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
-          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas.",
-          "buttonText": "Aprenda más"
-        },
-        "028e71f9-ebae-48ab-9c69-d616fa7d8165": {
           "notice": "Más oportunidades para opinar",
           "details": "Ahora, cada lección incluye una encuesta rápida de dos preguntas para informar al equipo del plan de estudios sobre cómo ha ido la lección en el aula. Los estudiantes también tienen la oportunidad de dejar sus comentarios al final de cada unidad, y los profesores pueden responder a una breve encuesta para informar al equipo del plan de estudios de Code.org sobre el desarrollo de la unidad.",
           "buttonText": "Encuesta a Docentes"
@@ -62,12 +98,32 @@
           "details": "Ahora, cada lección incluye una encuesta rápida de dos preguntas para informar al equipo del plan de estudios sobre cómo ha ido la lección en el aula. Los estudiantes también tienen la oportunidad de dejar sus comentarios al final de cada unidad, y los profesores pueden responder a una breve encuesta para informar al equipo del plan de estudios de Code.org sobre el desarrollo de la unidad.",
           "buttonText": "Encuesta a Docentes"
         },
+        "b5b0c936-3bc6-4e69-8796-e205d103151f": {
+          "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas.",
+          "buttonText": "Aprenda más"
+        },
+        "028e71f9-ebae-48ab-9c69-d616fa7d8165": {
+          "notice": "Más oportunidades para opinar",
+          "details": "Ahora, cada lección incluye una encuesta rápida de dos preguntas para informar al equipo del plan de estudios sobre cómo ha ido la lección en el aula. Los estudiantes también tienen la oportunidad de dejar sus comentarios al final de cada unidad, y los profesores pueden responder a una breve encuesta para informar al equipo del plan de estudios de Code.org sobre el desarrollo de la unidad.",
+          "buttonText": "Encuesta a Docentes"
+        },
         "2e1b13ae-2ab8-4996-bf23-ca3e0fa1f8be": {
           "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
           "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas.",
           "buttonText": "Aprenda más"
         },
         "0d48422e-8580-494d-bca8-1cc758561e48": {
+          "notice": "Más oportunidades para opinar",
+          "details": "Ahora, cada lección incluye una encuesta rápida de dos preguntas para informar al equipo del plan de estudios sobre cómo ha ido la lección en el aula. Los estudiantes también tienen la oportunidad de dejar sus comentarios al final de cada unidad, y los profesores pueden responder a una breve encuesta para informar al equipo del plan de estudios de Code.org sobre el desarrollo de la unidad.",
+          "buttonText": "Encuesta a Docentes"
+        },
+        "b7bff9e1-22bd-4f95-bb95-68e91fd5b3a3": {
+          "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
+          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas.",
+          "buttonText": "Aprenda más"
+        },
+        "e86b3b15-d704-41ff-9c63-73a77b7b477d": {
           "notice": "Más oportunidades para opinar",
           "details": "Ahora, cada lección incluye una encuesta rápida de dos preguntas para informar al equipo del plan de estudios sobre cómo ha ido la lección en el aula. Los estudiantes también tienen la oportunidad de dejar sus comentarios al final de cada unidad, y los profesores pueden responder a una breve encuesta para informar al equipo del plan de estudios de Code.org sobre el desarrollo de la unidad.",
           "buttonText": "Encuesta a Docentes"
@@ -90,81 +146,25 @@
           "details": "Ahora, cada lección incluye una encuesta rápida de dos preguntas para informar al equipo del plan de estudios sobre cómo ha ido la lección en el aula. Los estudiantes también tienen la oportunidad de dejar sus comentarios al final de cada unidad, y los profesores pueden responder a una breve encuesta para informar al equipo del plan de estudios de Code.org sobre el desarrollo de la unidad.",
           "buttonText": "Encuesta a Docentes"
         },
-        "a5c79bfe-dc53-48e6-b535-cfbfb3eae114": {
-          "notice": "Nuevo: Elige qué lecciones mostrar u ocultar en tu sección",
-          "details": "Pulsa \"Más información\" para leer el artículo de ayuda sobre cómo mostrar y ocultar las lecciones."
+        "26f29937-fd4e-4738-8dfe-459f286636f4": {
+          "notice": "Lecciones de Ampliación con el micro:bit",
+          "details": "¿Quieres introducir a tus alumnos en la informática física? Echa un vistazo a nuestras nuevas lecciones de ampliación de micro:bit para continuar el aprendizaje de los alumnos.",
+          "buttonText": "Aprende más"
         },
-        "66984aed-46b1-4a2f-8d2f-c88c9f13ead0": {
-          "notice": "Nuevo: Elige qué lecciones mostrar u ocultar en tu sección",
-          "details": "Pulsa \"Más información\" para leer el artículo de ayuda sobre cómo mostrar y ocultar las lecciones."
+        "8f212dd2-169f-4a3d-9880-f76d3372b6c1": {
+          "notice": "Lecciones de Ampliación con el micro:bit",
+          "details": "¿Quieres introducir a tus alumnos en la informática física? Echa un vistazo a nuestras nuevas lecciones de ampliación de micro:bit para continuar el aprendizaje de los alumnos.",
+          "buttonText": "Aprende más"
         },
-        "249e1d1d-7ed0-4042-8e57-17f5f2061a9f": {
-          "notice": "¡Ya está abierta la encuesta fin de curso para los alumnos de Descubrimientos de Informática!",
-          "details": "Profesores, por favor, pedir a vuestros alumnos que completen esta importante encuesta. Se tarda menos de 10 minutos. Compruébalo: puedes encontrar un enlace a la encuesta en la parte inferior de la página de esta unidad o pulsar el botón \"Más información\" para ir directamente a ella. Pulsa el botón \"Ver Plan de Lección\" junto a la encuesta para ver las instrucciones. Gracias."
+        "9b45f4aa-6b0a-44d7-9813-8e724baca343": {
+          "notice": "Lecciones de Ampliación con el micro:bit",
+          "details": "¿Quieres introducir a tus alumnos en la informática física? Echa un vistazo a nuestras nuevas lecciones de ampliación de micro:bit para continuar el aprendizaje de los alumnos.",
+          "buttonText": "Aprende más"
         },
-        "4a6677f7-ef10-4b41-812a-7bfe1aff7b00": {
-          "notice": "¡Ya está abierta la encuesta fin de curso para los alumnos de Descubrimientos de Informática!",
-          "details": "Profesores, por favor, pedir a vuestros alumnos que completen esta importante encuesta. Se tarda menos de 10 minutos. Compruébalo: puedes encontrar un enlace a la encuesta en la parte inferior de la página de esta unidad o pulsar el botón \"Más información\" para ir directamente a ella. Pulsa el botón \"Ver Plan de Lección\" junto a la encuesta para ver las instrucciones. Gracias."
-        },
-        "324c3312-b070-4ac4-8bde-4b97251b6760": {
-          "notice": "¡Ya está abierta la encuesta fin de curso para los alumnos de Descubrimientos de Informática!",
-          "details": "Profesores, por favor, pedir a vuestros alumnos que completen esta importante encuesta. Se tarda menos de 10 minutos. Compruébalo: puedes encontrar un enlace a la encuesta en la parte inferior de la página de esta unidad o pulsar el botón \"Más información\" para ir directamente a ella. Pulsa el botón \"Ver Plan de Lección\" junto a la encuesta para ver las instrucciones. Gracias."
-        },
-        "d9b403ff-aa97-487a-a32d-df4da9967249": {
-          "notice": "¡Ya está abierta la encuesta fin de curso para los alumnos de Descubrimientos de Informática!",
-          "details": "Profesores, por favor, pedir a vuestros alumnos que completen esta importante encuesta. Se tarda menos de 10 minutos. Compruébalo: puedes encontrar un enlace a la encuesta en la parte inferior de la página de esta unidad o pulsar el botón \"Más información\" para ir directamente a ella. Pulsa el botón \"Ver Plan de Lección\" junto a la encuesta para ver las instrucciones. Gracias."
-        },
-        "228f5294-78ec-4b7a-b6f6-76d6f92a01b4": {
-          "notice": "¡La encuesta fin de curso ya está abierta para los alumnos!",
-          "details": "Profesores, por favor, pedir a vuestros alumnos que completen esta importante encuesta. Se tarda menos de 10 minutos. Compruébalo: puedes encontrar un enlace a la encuesta en la parte inferior de la página de esta unidad o pulsar el botón \"Más información\" para ir directamente a ella. Pulsa el botón \"Ver Plan de Lección\" junto a la encuesta para ver las instrucciones. Gracias."
-        },
-        "920785dd-41e4-4d34-a3af-3eadbec1c90e": {
-          "notice": "¡Consulta los nuevos recursos en Descubrimientos de Informática para 2019-2020!",
-          "details": "¡Más información sobre nuestras nuevas guías del profesor, marcos de aprendizaje, OneNote Journal y Flipgrid Disco Library!"
-        },
-        "487af7e8-d3dd-46c2-a0fa-936a4e58d977": {
-          "notice": "¿Te has apuntado al examen AP?",
-          "details": "Ahora es el momento de inscribirse para hacer el examen de Principios de Informática AP. Asegúrate de preguntar a tu profesor sobre el plazo de inscripción de tu centro y apúntate hoy mismo. ¿No estás seguro de querer hacer el examen? Tenemos SEIS razones por las que deberías hacerlo. Compruébalas."
-        },
-        "c89013b3-d0d5-4faa-842a-718092083fe6": {
-          "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
-          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
-        },
-        "1ff50ed3-0032-4ed0-b28c-376ce0f1c2ce": {
-          "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
-          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
-        },
-        "5972aa0b-1730-4977-82db-23cee2bda683": {
-          "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
-          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
-        },
-        "633d1416-a7fb-44b6-a724-8479fd66f4fa": {
-          "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
-          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
-        },
-        "69e413fa-9081-4fac-8d73-9294b6fa1f11": {
-          "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
-          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
-        },
-        "4fc301ee-93c8-4d3c-b4f6-8ad16536da1a": {
-          "notice": "Modificaciones de las lecciones virtuales",
-          "details": "Si estás enseñando en un entorno virtual, híbrido o socialmente distanciado, entonces puedes ver las modificaciones recomendadas a nuestros planes de estudio que se pueden utilizar en estos entornos."
-        },
-        "12f743d3-19be-4f6e-be39-e61a9bfac4d6": {
-          "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
-          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
-        },
-        "07719219-e5f5-4ff5-b623-24063a236415": {
-          "notice": "Modificaciones de las lecciones virtuales",
-          "details": "Si estás enseñando en un entorno virtual, híbrido o socialmente distanciado, entonces puedes ver las modificaciones recomendadas a nuestros planes de estudio que se pueden utilizar en estos entornos."
-        },
-        "2b95b40d-3be9-445c-856a-879a6eceeea1": {
-          "notice": "Apoyo a la Preparación de la Enseñanza de CS Discoveries (Descubrimiento de las Ciencias de la Computación)",
-          "details": "Además de nuestro plan de estudios, Code.org ofrece cursos de aprendizaje profesional autodidácticos y dirigidos por un facilitador para los profesores que deseen aplicar Descubrimientos de Informática en sus aulas."
-        },
-        "219a6035-ef5e-4474-8dcc-682b3ba030d7": {
-          "notice": "Modificaciones de las lecciones virtuales",
-          "details": "Si estás enseñando en un entorno virtual, híbrido o socialmente distanciado, entonces puedes ver las modificaciones recomendadas a nuestros planes de estudio que se pueden utilizar en estos entornos."
+        "a3109564-513f-47c8-bdf3-d69a19f5149e": {
+          "notice": "Lecciones de Ampliación con el micro:bit",
+          "details": "¿Quieres introducir a tus alumnos en la informática física? Echa un vistazo a nuestras nuevas lecciones de ampliación de micro:bit para continuar el aprendizaje de los alumnos.",
+          "buttonText": "Aprende más"
         }
       }
     }

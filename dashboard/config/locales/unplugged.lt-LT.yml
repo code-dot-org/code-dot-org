@@ -2,15 +2,203 @@
 lt:
   data:
     unplugged:
+      BigEvent:
+        desc: Mokiniai bus supažindinami su sąvoka „įvykis“ – tai yra veiksmai, kurių
+          kompiuteris laukia, kad jie įvyktų. Mokytoja spaudinės nupieštus mygtukus
+          ant popieriaus, o mokiniai turės reaguoti atitinkamai, priklausomai nuo
+          to, kuris mygtukas bus nuspaustas.
+        title: Didelis įvykis
+      BigEvent_2018:
+        desc: Mokiniai bus supažindinami su sąvoka „įvykis“ – tai yra veiksmai, kurių
+          kompiuteris laukia, kad jie įvyktų. Mokytoja spaudinės nupieštus mygtukus
+          ant popieriaus, o mokiniai turės reaguoti atitinkamai, priklausomai nuo
+          to, kuris mygtukas bus nuspaustas.
+        title: Didelis įvykis
+      BigEvent_2019:
+        desc: Mokiniai bus supažindinami su sąvoka „įvykis“ – tai yra veiksmai, kurių
+          kompiuteris laukia, kad jie įvyktų. Mokytoja spaudinės nupieštus mygtukus
+          ant popieriaus, o mokiniai turės reaguoti atitinkamai, priklausomai nuo
+          to, kuris mygtukas bus nuspaustas.
+        title: Didelis įvykis
+      BinaryBracelets:
+        desc: Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu
+          kodu. Mokiniai sužinos, kad duomenys gali būti pavaizduojami ir išsaugomi
+          daugiau nei vienu būdu.
+        title: Dvejetainės apyrankės
+      BinaryBracelets_2018:
+        desc: Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu
+          kodu. Mokiniai sužinos, kad duomenys gali būti pavaizduojami ir išsaugomi
+          daugiau nei vienu būdu.
+        title: Dvejetainės apyrankės
+      BinaryBracelets_2019:
+        desc: Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu
+          kodu. Mokiniai sužinos, kad duomenys gali būti pavaizduojami ir išsaugomi
+          daugiau nei vienu būdu.
+        title: Dvejetainės apyrankės
+      BinaryImages:
+        title: Dvejetainiai vaizdai
+      BinaryImages_2018:
+        title: Dvejetainiai vaizdai
+      BinaryImages_2019:
+        title: Dvejetainiai vaizdai
+      BuildingAFoundation:
+        title: Laiptuota piramidė
+      ComputationalThinking:
+        title: Skaičiuojamasis mąstymas
+      Conditionals:
+        desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir
+          sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“
+          arba „jei ištrauksiu juodą kortą, tu gausi tašką“.
+        title: Sąlyginiai sakiniai
+      ConditionalsPiecewiseFunctions:
+        title: Sąlygos ir funkcijos iš dalių
+      Conditionals_2018:
+        desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir
+          sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“
+          arba „jei ištrauksiu juodą kortą, tu gausi tašką“.
+        title: Sąlyginiai sakiniai
+      Conditionals_2019:
+        desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir
+          sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“
+          arba „jei ištrauksiu juodą kortą, tu gausi tašką“.
+        title: Sąlyginiai sakiniai
+      Crowdsourcing:
+        desc: Mokiniai naudoja komandinį programavimą – metodą, kuris yra dažnai naudojamas
+          informatikoje, kai užduotį atlieka visi kartu – tokiu būdu užduotis yra
+          išsprendžiama daug efektyviau nei ją būtų sprendęs vienas mokinys.
+        title: Komandinis programavimas
+      DiceRace:
+        title: 'Algoritmai realiame gyvenime: kauliukų lenktynės'
+      DigitalCitizenship:
+        desc: Mokiniai nagrinėja skirtumus tarp asmeninės informacijos ir privačios
+          informacijos, mokosi atskirti, ką yra saugu, o ką nesaugu skelbti internete.
+        title: Virtuali pilietybė
+      DigitalFootprint:
+        desc: Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą
+          apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų
+          galima sekti ir tai gali turėti pasėkmių.
+        title: Virtualūs pirštų antspaudai
+      DigitalFootprint_2018:
+        desc: Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą
+          apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų
+          galima sekti ir tai gali turėti pasėkmių.
+        title: Virtualūs pirštų antspaudai
+      DigitalFootprint_2019:
+        desc: Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą
+          apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų
+          galima sekti ir tai gali turėti pasėkmių.
+        title: Virtualūs pirštų antspaudai
+      FunctionalSuncatchers:
+        title: Sekų suvokimas
+      GettingLoopy:
+        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
+          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
+        title: Kartojimo supratimas
+      GettingLoopy_2018:
+        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
+          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
+        title: Kartojimo supratimas
+      GettingLoopy_2019:
+        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
+          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
+        title: Kartojimo supratimas
+      GoingPlacesSafely:
+        desc: Internetas yra galina, bet kartais ir pavojinga vieta. Mokytojai moko,
+          kaip būti saugiam naršant internete.
+        title: Saugus naršymas internete
+      GoingPlacesSafely_2018:
+        desc: Internetas yra galina, bet kartais ir pavojinga vieta. Mokytojai moko,
+          kaip būti saugiam naršant internete.
+        title: Saugus naršymas internete
+      GoingPlacesSafely_2019:
+        desc: Internetas yra galina, bet kartais ir pavojinga vieta. Mokytojai moko,
+          kaip būti saugiam naršant internete.
+        title: Saugus naršymas internete
+      GraphPaperProgramming:
+        desc: Mokiniai rašo algoritmus (instrukcijas) savo klasės draugams, kuriomis
+          naudodamasis, kitas mokinys turės nupiešti piešinį.
+        title: Programavimas ant languoto popieriaus
+      GraphPaperProgramming_2018:
+        desc: Mokiniai rašo algoritmus (instrukcijas) savo klasės draugams, kuriomis
+          naudodamasis, kitas mokinys turės nupiešti piešinį.
+        title: Programavimas ant languoto popieriaus
+      GraphPaperProgramming_2019:
+        desc: Mokiniai rašo algoritmus (instrukcijas) savo klasės draugams, kuriomis
+          naudodamasis, kitas mokinys turės nupiešti piešinį.
+        title: Programavimas ant languoto popieriaus
+      Internet:
+        desc: Mokiniai siunčia pranešimus, parašytus ant popieriaus lapo, kurie simbolizuoja
+          įvairius prisijungimo prie interneto būdus.
+        title: Internetas
+      MoveIt:
+        desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
+          veikėją per labirintą, naudodami vieną komandą.
+        title: Judėk, judėk
+      MoveItMoveIt_2018:
+        title: Judėk, judėk
+      MoveItMoveIt_2019:
+        title: Judėk, judėk
+      PaperPlanes:
+        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
+          bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus
+          kalbama apie informatiką ir algoritmų svarbą joje.
+        title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
+      PaperPlanes_2018:
+        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
+          bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus
+          kalbama apie informatiką ir algoritmų svarbą joje.
+        title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
+      PaperPlanes_2019:
+        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
+          bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus
+          kalbama apie informatiką ir algoritmų svarbą joje.
+        title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
+      PlantASeed:
+        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
+          pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
+          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
+        title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
+      PlantASeed_2018:
+        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
+          pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
+          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
+        title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
+      PlantASeed_2019:
+        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
+          pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
+          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
+        title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
+      RelayProgramming:
+        desc: Mokiniai dalyvaus estafetėje, kur kiekvienas dalyvis, nubėgęs prie lapo,
+          turės užrašyti vieną algoritmo komandą. Jeigu mokinys algoritme ras klaidą,
+          visas algoritmas turės būti ištrintas ir kuriamas iš naujo.
+        title: Programavimas komandoje
+      RelayProgramming_2018:
+        title: Programavimas komandoje
+      RelayProgramming_2018_2019:
+        title: Programavimas komandoje
+      SongwritingParameters:
+        desc: Mokiniai panaudos priedainio sąvoką dainoje ir išmoks, kas yra parametrai
+          (kurie pakeičia sudėtines komandas, kad jų nereikėtų perrašyti iš naujo).
+        title: Dainų rašymas
+      SongwritingWithParameters:
+        title: Dainų rašymas su parametrais
       Unplug1:
-        title: Informatikos įvadas
         desc: Šioje pamokėlėje bus supažindinama su programavimo samprata ir paaiškinama,
           ką dirba IT specialistas. Mokiniams bus suteikta galimybė pasijusti IT specialisto
           kailyje. Pamokėlės pabaigoje kiekvienas mokinys nešis namo priminimą, ką
           jis ar ji išmoko. Jūs galite būti linkę praleisti  įvairių sąvokų paaiškinimus,
           tačiau jas mokyti galima labai žaismingai.
+        title: Informatikos įvadas
+      Unplug10:
+        title: Internetas
+      Unplug11:
+        desc: Šis pirmųjų 20-ties valandų apibendrinimas padės klasei prisiminti visus
+          savo mėgstamiausius momentus iš pamokėlių. Mokiniams bus duodami patarimai,
+          kuriais jie gali vadovautis mokydamiesi informatikos toliau, jeigu jie tuo
+          susidomės.
+        title: Apibendrinimas
       Unplug2:
-        title: Skaičiuojamasis mąstymas
         desc: Mokiniai, nenaudodami kompiuterių, o tik popierių ir flomasterius, išmoks
           keturis kompiuterinio mąstymo žingsnius. Po trumpos įžangos, mokinius reikėtų
           padalyti į kelias grupes, kuriose jie surašys instrukcijas kitiems mokiniams,
@@ -21,6 +209,7 @@ lt:
           ji nupieštų tam tikrą monstrą. Komandos turės apsikeisti algoritmais ir
           pagal juos nupiešti monstrus. Po to bus patikrinama, ar mokiniai nupiešė
           tokį monstrą, kurį sugalvojo kita grupė.
+        title: Skaičiuojamasis mąstymas
       Unplug3:
         title: Programavimas ant languoto popieriaus
       Unplug4:
@@ -28,321 +217,132 @@ lt:
       Unplug5:
         title: Komandų kūrimas
       Unplug6:
-        title: Sąlygos
         desc: Tai yra žaidimas klasėje. Kai mokiniai bus supažindinti su sąlyginiais
           sakiniais ir kartojimu, klasėje visi kartu galės praktikuotis, naudodami
           iš anksto parašytą programą, žaisdami su kortomis.
+        title: Sąlygos
       Unplug7:
-        title: Dainos ir funkcijos
         desc: Skaityti dainos tekstą moka visi mokiniai. Mes šį  principą  pritaikysime  mokydami
           kurti savo komandas. Kai mokiniai supras, kaip iškviesti sukrutą komandą
           (funckiją), pridėsime papildomų parametrų, su kuriais yra iškviečiamos komandos.
+        title: Dainos ir funkcijos
       Unplug8:
         title: Komandos su parametrais
       Unplug9:
         title: Programavimas komandoje
-      Unplug10:
-        title: Internetas
-      Unplug11:
-        title: Apibendrinimas
-        desc: Šis pirmųjų 20-ties valandų apibendrinimas padės klasei prisiminti visus
-          savo mėgstamiausius momentus iš pamokėlių. Mokiniams bus duodami patarimai,
-          kuriais jie gali vadovautis mokydamiesi informatikos toliau, jeigu jie tuo
-          susidomės.
       UnplugHappyMaps:
+        desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
+          veikėją per labirintą, naudodami vieną komandą.
         title: Laimingieji žemėlapiai
+      UnplugHappyMaps_2018:
         desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
           veikėją per labirintą, naudodami vieną komandą.
-      MoveIt:
-        title: Judėk, judėk
+        title: Laimingieji žemėlapiai
+      UnplugHappyMaps_2019:
         desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
           veikėją per labirintą, naudodami vieną komandą.
-      PlantASeed:
-        title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
-          pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
-          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
-      BuildingAFoundation:
-        title: Laiptuota piramidė
-      GettingLoopy:
-        title: Kartojimo supratimas
-        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
-          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
-      RelayProgramming:
-        title: Programavimas komandoje
-        desc: Mokiniai dalyvaus estafetėje, kur kiekvienas dalyvis, nubėgęs prie lapo,
-          turės užrašyti vieną algoritmo komandą. Jeigu mokinys algoritme ras klaidą,
-          visas algoritmas turės būti ištrintas ir kuriamas iš naujo.
-      Conditionals:
-        title: Sąlyginiai sakiniai
-        desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir
-          sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“
-          arba „jei ištrauksiu juodą kortą, tu gausi tašką“.
-      BigEvent:
-        title: Didelis įvykis
+        title: Laimingieji žemėlapiai
+      courseABC_unplugged_bigEvent:
         desc: Mokiniai bus supažindinami su sąvoka „įvykis“ – tai yra veiksmai, kurių
           kompiuteris laukia, kad jie įvyktų. Mokytoja spaudinės nupieštus mygtukus
           ant popieriaus, o mokiniai turės reaguoti atitinkamai, priklausomai nuo
           to, kuris mygtukas bus nuspaustas.
-      GoingPlacesSafely:
-        title: Saugus naršymas internete
+        title: Didelis įvykis
+      courseAB_unplugged_plantASeed:
+        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
+          pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
+          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
+        title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
+      courseA_unplugged_goingPlacesSafely:
         desc: Internetas yra galina, bet kartais ir pavojinga vieta. Mokytojai moko,
           kaip būti saugiam naršant internete.
-      GraphPaperProgramming:
-        title: Programavimas ant languoto popieriaus
-        desc: Mokiniai rašo algoritmus (instrukcijas) savo klasės draugams, kuriomis
-          naudodamasis, kitas mokinys turės nupiešti piešinį.
-      PaperPlanes:
-        title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
-        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
-          bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus
-          kalbama apie informatiką ir algoritmų svarbą joje.
-      BinaryBracelets:
-        title: Dvejetainės apyrankės
-        desc: Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu
-          kodu. Mokiniai sužinos, kad duomenys gali būti pavaizduojami ir išsaugomi
-          daugiau nei vienu būdu.
-      DigitalFootprint:
-        title: Virtualūs pirštų antspaudai
+        title: Saugus naršymas internete
+      courseA_unplugged_happyMaps:
+        desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
+          veikėją per labirintą, naudodami vieną komandą.
+        title: Laimingieji žemėlapiai
+      courseB_unplugged_MRF:
+        title: Veikla be kompiuterių
+      courseB_unplugged_MRF_2018:
+        title: Mano draugai robotai
+      courseB_unplugged_MRF_2019:
+        title: Mano draugai robotai
+      courseB_unplugged_digitalFootprint:
         desc: Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą
           apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų
           galima sekti ir tai gali turėti pasėkmių.
-      ComputationalThinking:
-        title: Skaičiuojamasis mąstymas
-      FunctionalSuncatchers:
-        title: Sekų suvokimas
-      SongwritingParameters:
-        title: Dainų rašymas
-        desc: Mokiniai panaudos priedainio sąvoką dainoje ir išmoks, kas yra parametrai
-          (kurie pakeičia sudėtines komandas, kad jų nereikėtų perrašyti iš naujo).
-      DiceRace:
-        title: 'Algoritmai realiame gyvenime: kauliukų lenktynės'
-      Internet:
-        title: Internetas
-        desc: Mokiniai siunčia pranešimus, parašytus ant popieriaus lapo, kurie simbolizuoja
-          įvairius prisijungimo prie interneto būdus.
-      Crowdsourcing:
-        title: Komandinis programavimas
-        desc: Mokiniai naudoja komandinį programavimą – metodą, kuris yra dažnai naudojamas
-          informatikoje, kai užduotį atlieka visi kartu – tokiu būdu užduotis yra
-          išsprendžiama daug efektyviau nei ją būtų sprendęs vienas mokinys.
-      DigitalCitizenship:
-        title: Virtuali pilietybė
-        desc: Mokiniai nagrinėja skirtumus tarp asmeninės informacijos ir privačios
-          informacijos, mokosi atskirti, ką yra saugu, o ką nesaugu skelbti internete.
-      SongwritingWithParameters:
-        title: Dainų rašymas su parametrais
-      BinaryImages:
-        title: Dvejetainiai vaizdai
-      ConditionalsPiecewiseFunctions:
-        title: Sąlygos ir funkcijos iš dalių
-      courseB_unplugged_MRF:
-        title: Veikla be kompiuterių
+        title: Virtualūs pirštų antspaudai
       courseB_unplugged_loopyMRF:
         title: Veikla be kompiuterių
       courseC_Unplugged_ScreenOutTheMean:
         title: Veikla be kompiuterių
-      courseD_unplugged_digitalCitizenship:
+      courseC_Unplugged_ScreenOutTheMean_2018:
         title: Veikla be kompiuterių
-      courseF_unplugged_powerOfWords:
+      courseC_Unplugged_ScreenOutTheMean_2019:
         title: Veikla be kompiuterių
-      courseAB_unplugged_plantASeed:
-        title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
-          pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
-          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
-      courseA_unplugged_happyMaps:
-        title: Laimingieji žemėlapiai
-        desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
-          veikėją per labirintą, naudodami vieną komandą.
-      courseA_unplugged_goingPlacesSafely:
-        title: Saugus naršymas internete
-        desc: Internetas yra galina, bet kartais ir pavojinga vieta. Mokytojai moko,
-          kaip būti saugiam naršant internete.
-      courseABC_unplugged_bigEvent:
-        title: Didelis įvykis
-        desc: Mokiniai bus supažindinami su sąvoka „įvykis“ – tai yra veiksmai, kurių
-          kompiuteris laukia, kad jie įvyktų. Mokytoja spaudinės nupieštus mygtukus
-          ant popieriaus, o mokiniai turės reaguoti atitinkamai, priklausomai nuo
-          to, kuris mygtukas bus nuspaustas.
-      courseB_unplugged_digitalFootprint:
-        title: Virtualūs pirštų antspaudai
-        desc: Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą
-          apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų
-          galima sekti ir tai gali turėti pasėkmių.
-      courseC_unplugged_buildingAFoundation:
-        title: Laiptuota piramidė
-      courseC_unplugged_paperPlanes:
-        title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
-        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
-          bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus
-          kalbama apie informatiką ir algoritmų svarbą joje.
-      courseC_unplugged_gettingLoopy:
-        title: Kartojimo supratimas
-        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
-          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
       courseC_unplugged_binaryBracelets:
-        title: Dvejetainės apyrankės
         desc: Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu
           kodu. Mokiniai sužinos, kad duomenys gali būti pavaizduojami ir išsaugomi
           daugiau nei vienu būdu.
+        title: Dvejetainės apyrankės
+      courseC_unplugged_buildingAFoundation:
+        title: Laiptuota piramidė
+      courseC_unplugged_gettingLoopy:
+        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
+          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
+        title: Kartojimo supratimas
+      courseC_unplugged_paperPlanes:
+        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
+          bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus
+          kalbama apie informatiką ir algoritmų svarbą joje.
+        title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
+      courseD_unplugged_binaryImages:
+        title: Dvejetainiai vaizdai
+      courseD_unplugged_conditionalsCards:
+        desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir
+          sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“
+          arba „jei ištrauksiu juodą kortą, tu gausi tašką“.
+        title: Sąlyginiai sakiniai su kortomis
+      courseD_unplugged_digitalCitizenship:
+        title: Veikla be kompiuterių
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Veikla be kompiuterių
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Veikla be kompiuterių
       courseD_unplugged_graphPaperProgramming:
-        title: Programavimas ant languoto popieriaus
         desc: Mokiniai rašo algoritmus (instrukcijas) savo klasės draugams, kuriomis
           naudodamasis, kitas mokinys turės nupiešti piešinį.
+        title: Programavimas ant languoto popieriaus
       courseD_unplugged_relayProgramming:
-        title: Programavimas komandoje
         desc: Mokiniai dalyvaus estafetėje, kur kiekvienas dalyvis, nubėgęs prie lapo,
           turės užrašyti vieną algoritmo komandą. Jeigu mokinys algoritme ras klaidą,
           visas algoritmas turės būti ištrintas ir kuriamas iš naujo.
-      courseD_unplugged_conditionalsCards:
-        title: Sąlyginiai sakiniai su kortomis
-        desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir
-          sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“
-          arba „jei ištrauksiu juodą kortą, tu gausi tašką“.
-      courseD_unplugged_binaryImages:
-        title: Dvejetainiai vaizdai
-      courseE_unplugged_songwritingParameters:
-        title: Dainų rašymas su parametrais
-        desc: Mokiniai panaudos priedainio sąvoką dainoje ir išmoks, kas yra parametrai
-          (kurie pakeičia sudėtines komandas, kad jų nereikėtų perrašyti iš naujo).
-      courseE_unplugged_internet:
-        title: Internetas
-        desc: Mokiniai siunčia pranešimus, parašytus ant popieriaus lapo, kurie simbolizuoja
-          įvairius prisijungimo prie interneto būdus.
+        title: Programavimas komandoje
       courseE_unplugged_crowdsourcing:
-        title: Komandinis programavimas
         desc: Mokiniai naudoja komandinį programavimą – metodą, kuris yra dažnai naudojamas
           informatikoje, kai užduotį atlieka visi kartu – tokiu būdu užduotis yra
           išsprendžiama daug efektyviau nei ją būtų sprendęs vienas mokinys.
+        title: Komandinis programavimas
+      courseE_unplugged_internet:
+        desc: Mokiniai siunčia pranešimus, parašytus ant popieriaus lapo, kurie simbolizuoja
+          įvairius prisijungimo prie interneto būdus.
+        title: Internetas
       courseE_unplugged_songwriting:
-        title: Dainų rašymas
         desc: Mokiniai panaudos priedainio sąvoką dainoje ir išmoks, kas yra parametrai
           (kurie pakeičia sudėtines komandas, kad jų nereikėtų perrašyti iš naujo).
+        title: Dainų rašymas
+      courseE_unplugged_songwritingParameters:
+        desc: Mokiniai panaudos priedainio sąvoką dainoje ir išmoks, kas yra parametrai
+          (kurie pakeičia sudėtines komandas, kad jų nereikėtų perrašyti iš naujo).
+        title: Dainų rašymas su parametrais
+      courseF_unplugged_powerOfWords:
+        title: Veikla be kompiuterių
       courseF_unplugged_songwritingParameters:
         title: Dainų rašymas su parametrais
-      courseB_unplugged_MRF_2018:
-        title: Mano draugai robotai
-      PlantASeed_2018:
-        title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
-          pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
-          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
-      UnplugHappyMaps_2018:
-        title: Laimingieji žemėlapiai
-        desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
-          veikėją per labirintą, naudodami vieną komandą.
-      GoingPlacesSafely_2018:
-        title: Saugus naršymas internete
-        desc: Internetas yra galina, bet kartais ir pavojinga vieta. Mokytojai moko,
-          kaip būti saugiam naršant internete.
-      BigEvent_2018:
-        title: Didelis įvykis
-        desc: Mokiniai bus supažindinami su sąvoka „įvykis“ – tai yra veiksmai, kurių
-          kompiuteris laukia, kad jie įvyktų. Mokytoja spaudinės nupieštus mygtukus
-          ant popieriaus, o mokiniai turės reaguoti atitinkamai, priklausomai nuo
-          to, kuris mygtukas bus nuspaustas.
-      GraphPaperProgramming_2018:
-        title: Programavimas ant languoto popieriaus
-        desc: Mokiniai rašo algoritmus (instrukcijas) savo klasės draugams, kuriomis
-          naudodamasis, kitas mokinys turės nupiešti piešinį.
-      courseD_unplugged_digitalCitizenship_2018:
-        title: Veikla be kompiuterių
-      courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Veikla be kompiuterių
-      Conditionals_2018:
-        title: Sąlyginiai sakiniai
+      timeforcs_demo_conditionals:
         desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir
           sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“
           arba „jei ištrauksiu juodą kortą, tu gausi tašką“.
-      DigitalFootprint_2018:
-        title: Virtualūs pirštų antspaudai
-        desc: Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą
-          apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų
-          galima sekti ir tai gali turėti pasėkmių.
-      BinaryImages_2018:
-        title: Dvejetainiai vaizdai
-      PaperPlanes_2018:
-        title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
-        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
-          bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus
-          kalbama apie informatiką ir algoritmų svarbą joje.
-      GettingLoopy_2018:
-        title: Kartojimo supratimas
-        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
-          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
-      BinaryBracelets_2018:
-        title: Dvejetainės apyrankės
-        desc: Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu
-          kodu. Mokiniai sužinos, kad duomenys gali būti pavaizduojami ir išsaugomi
-          daugiau nei vienu būdu.
-      MoveItMoveIt_2018:
-        title: Judėk, judėk
-      RelayProgramming_2018:
-        title: Programavimas komandoje
-      courseB_unplugged_MRF_2019:
-        title: Mano draugai robotai
-      Conditionals_2019:
         title: Sąlyginiai sakiniai
-        desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir
-          sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“
-          arba „jei ištrauksiu juodą kortą, tu gausi tašką“.
-      GraphPaperProgramming_2019:
-        title: Programavimas ant languoto popieriaus
-        desc: Mokiniai rašo algoritmus (instrukcijas) savo klasės draugams, kuriomis
-          naudodamasis, kitas mokinys turės nupiešti piešinį.
-      RelayProgramming_2018_2019:
-        title: Programavimas komandoje
-      courseD_unplugged_digitalCitizenship_2019:
-        title: Veikla be kompiuterių
-      BinaryImages_2019:
-        title: Dvejetainiai vaizdai
-      GettingLoopy_2019:
-        title: Kartojimo supratimas
-        desc: Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
-          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu.
-      courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Veikla be kompiuterių
-      BigEvent_2019:
-        title: Didelis įvykis
-        desc: Mokiniai bus supažindinami su sąvoka „įvykis“ – tai yra veiksmai, kurių
-          kompiuteris laukia, kad jie įvyktų. Mokytoja spaudinės nupieštus mygtukus
-          ant popieriaus, o mokiniai turės reaguoti atitinkamai, priklausomai nuo
-          to, kuris mygtukas bus nuspaustas.
-      BinaryBracelets_2019:
-        title: Dvejetainės apyrankės
-        desc: Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu
-          kodu. Mokiniai sužinos, kad duomenys gali būti pavaizduojami ir išsaugomi
-          daugiau nei vienu būdu.
-      PaperPlanes_2019:
-        title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
-        desc: Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip pavyzdys
-          bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip pat bus
-          kalbama apie informatiką ir algoritmų svarbą joje.
-      PlantASeed_2019:
-        title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
-        desc: Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
-          pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
-          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai.
-      UnplugHappyMaps_2019:
-        title: Laimingieji žemėlapiai
-        desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
-          veikėją per labirintą, naudodami vieną komandą.
-      GoingPlacesSafely_2019:
-        title: Saugus naršymas internete
-        desc: Internetas yra galina, bet kartais ir pavojinga vieta. Mokytojai moko,
-          kaip būti saugiam naršant internete.
-      MoveItMoveIt_2019:
-        title: Judėk, judėk
-      DigitalFootprint_2019:
-        title: Virtualūs pirštų antspaudai
-        desc: Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą
-          apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų
-          galima sekti ir tai gali turėti pasėkmių.
       timeforcs_demo_crowdsourcing:
         title: Komandinis programavimas
-      timeforcs_demo_conditionals:
-        title: Sąlyginiai sakiniai
-        desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir
-          sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“
-          arba „jei ištrauksiu juodą kortą, tu gausi tašką“.

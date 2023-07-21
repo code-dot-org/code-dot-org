@@ -1,2 +1,10 @@
 {
+  "zu-ZA": {
+    "data": {
+      "frameworks": {
+        "ngss": {
+        }
+      }
+    }
+  }
 }
