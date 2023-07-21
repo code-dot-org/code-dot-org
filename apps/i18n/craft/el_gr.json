@@ -1,9 +1,9 @@
 {
   "absolute": "απόλυτη",
+  "agentDiamondPathCongrats": "Συγχαρητήρια, ανακάλυψες το μονοπάτι των διαμαντιών! Έχεις συλλέξει {count, plural, one {1 diamond} other {# diamonds}} μέχρι τώρα!",
   "agentGenericFailureMessage": "Συνέχισε να προγραμματίζεις! Μην ξεχνάς να χρησιμοποιείς τον Agent για βοήθεια.",
   "agentTooFewBlocksFailureMessage": "Δοκίμασε να προσθέτεις μόνο ένα τουβλάκι τη φορά για να μετακινήσεις τον Agent στο σωστό σημείο.",
   "at": "σε",
-  "agentDiamondPathCongrats": "Συγχαρητήρια, ανακάλυψες το μονοπάτι των διαμαντιών! Έχεις συλλέξει {count, plural, one {1 diamond} other {# diamonds}} μέχρι τώρα!",
   "blockActionAdd": "προσθέστε",
   "blockActionAttack": "επίθεση",
   "blockActionClone": "αντίγραψε τουβλάκια",

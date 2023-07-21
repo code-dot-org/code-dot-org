@@ -62,6 +62,28 @@ mi:
       unlocked: I angitu te whakawāteatanga o tō pūkei. Tēnā takiuru atu ki te haere
         tonu.
   errors:
+    invitations:
+      edit:
+        header: Tautuhia tō kupuhipa
+        submit_button: Tautuhia taku kupuhipa
+      invitation_removed: I tangohia tō pōhiri.
+      invitation_token_invalid: He muhu te maimai pōhiri nei!
+      new:
+        header: Tuku pōhiri
+        submit_button: Tukuna tētahi pōhiri
+      no_invitations_remaining: Korekau pōhiri e toe ana
+      send_instructions: Kua tukuna te pōhiri ā-īmērā ki %{email}.
+      updated: I tutuki te tautuhitanga o tō kupuhipa. Kua takiurua koe ināianei.
+    mailer:
+      invitation_instructions:
+        accept: Whakaae ki te pōhiri
+        hello: Tēnā koe %{email}
+        ignore: Waiho noa iho tēnei īmēra mēnā kāore koe i te hiahia ki te whakaae
+          ki te pōhiri.<br />Ka kore tō pūkei e waihangahia tae noa atu ki te wā kua
+          toro atu koe ki te honongaitua nei me te tautuhi i tō kupuhipa.
+        someone_invited_you: Nā tētahi koe i pōhiri ki %{url}. E āhei ana te whakaae
+          mā te honongaitua kei raro iho nei.
+        subject: Ngā tohutohu pōhiri
     messages:
       already_confirmed: i whakaūngia kētia, me ngana ki te takiuru
       confirmation_period_expired: me whakaū i roto i te %{period}, tēnā tonoa he
@@ -69,25 +91,3 @@ mi:
       expired: kua mōnehu, tēnā tonoa he mea hou
       not_found: kāore i kitea
       not_locked: kāore i raka
-    invitations:
-      send_instructions: Kua tukuna te pōhiri ā-īmērā ki %{email}.
-      invitation_token_invalid: He muhu te maimai pōhiri nei!
-      updated: I tutuki te tautuhitanga o tō kupuhipa. Kua takiurua koe ināianei.
-      no_invitations_remaining: Korekau pōhiri e toe ana
-      invitation_removed: I tangohia tō pōhiri.
-      new:
-        header: Tuku pōhiri
-        submit_button: Tukuna tētahi pōhiri
-      edit:
-        header: Tautuhia tō kupuhipa
-        submit_button: Tautuhia taku kupuhipa
-    mailer:
-      invitation_instructions:
-        subject: Ngā tohutohu pōhiri
-        hello: Tēnā koe %{email}
-        someone_invited_you: Nā tētahi koe i pōhiri ki %{url}. E āhei ana te whakaae
-          mā te honongaitua kei raro iho nei.
-        accept: Whakaae ki te pōhiri
-        ignore: Waiho noa iho tēnei īmēra mēnā kāore koe i te hiahia ki te whakaae
-          ki te pōhiri.<br />Ka kore tō pūkei e waihangahia tae noa atu ki te wā kua
-          toro atu koe ki te honongaitua nei me te tautuhi i tō kupuhipa.

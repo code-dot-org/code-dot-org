@@ -16,7 +16,7 @@ Probar una Hora del Código es una forma sencilla y divertida de introducir a lo
 - [Explora actividades y tutoriales](#explore-activities)
 - [Crea tu plan para el día](#create-your-plan)
 - [Promueve tu Hora del Código](#promote-your-hour)
-- [Cómo comenzar tu Hora del Código con energía](#how-to-start)
+- [Cómo empezar con fuerza La Hora del Código](#how-to-start)
 - [¡A programar!](#code)
 - [Celebra el éxito de tus estudiantes](#celebrate)
 - [Otros recursos de la Hora del Código para educadores](#other-resources)
@@ -45,9 +45,9 @@ Explora las actividades y decide con anticipación si deseas elegir un solo tuto
 
 ## 3. Crea tu plan para el día
 
-### Piensa en tus necesidades tecnológicas. ¡Las computadoras son opcionales!
+### Considera tus necesidades tecnológicas. ¡Las computadoras son opcionales!
 
-- Para tener una mejor experiencia con la Hora del Código, se recomienda contar con computadoras con conexión a Internet. Pero no necesitas una computadora para cada niño; incluso, puedes llevar adelante la Hora del Código sin computadoras. Para las [actividades sin conexión](/learn), solo tienes que filtrar la sección Tecnología en el aula para mostrar las opciones para “Sin computadoras o dispositivos”.
+- Para tener una mejor experiencia con la Hora del Código, se recomienda contar con computadoras con conexión a Internet. Pero no necesitas una computadora para cada niño; incluso, puedes desarrollar la Hora del Código sin computadoras. Para las [actividades sin conexión](/learn), solo tienes que filtrar la sección Tecnología en el aula para mostrar las opciones para “Sin computadoras o dispositivos”.
 - Asegúrate de probar los tutoriales en las computadoras o los dispositivos de los estudiantes para garantizar que el sonido y el video funcionen bien en los navegadores. ¿Tienes ancho de banda limitado? Muestra los videos a toda la clase para que los estudiantes no tengan que descargarlos. También puedes probar los tutoriales sin conexión.
 - Entrega auriculares, o pide a los estudiantes que traigan los suyos, en caso de que el tutorial que elijas funcione mejor con sonido.
 - ¿No tienes suficientes dispositivos? Usa la [programación en parejas](https://www.youtube.com/watch?v=vgkahOzFH2Q). Al formar equipos, los estudiantes se ayudan entre sí y dependen menos del docente. Además verán que las ciencias de la computación son una actividad social y colaborativa.
@@ -70,7 +70,7 @@ Ahora que has planificado tu evento, ¡es hora de comenzar a promoverlo!
 
 ¡Promueve la Hora del Código a otros docentes que quieran unirse a la diversión! ¡También es una gran oportunidad para comunicarse con el PTSA de tu escuela o compartir boletines informativos para padres, haciéndoles saber que sus hijos pueden volver a casa con ganas de probar más actividades y tutoriales!
 
-### Informa a los voluntarios cuando se registren a tu evento
+### Informa a los voluntarios a través registrando tu evento
 
 Al [inscribir tu evento de la Hora del Código](/#join), recibirás comunicaciones útiles por correo electrónico con noticias y consejos para organizar con éxito la Hora del Código. También es la forma en que puedes informar a los voluntarios locales que tu escuela está participando. Los voluntarios son un gran recurso y pueden venir a hablar con tu clase sobre ciencias de la computación o simplemente ayudar a tus estudiantes con las actividades de la Hora del Código.
 
@@ -86,7 +86,7 @@ Descubre más sobre carteles, videos, adhesivos y otras maneras de [promover tu 
 
 <a id="how-to-start"></a>
 
-## 5. Cómo comenzar tu Hora del Código con energía
+## Cómo empezar con fuerza La Hora del Código
 
 Una vez que haya llegado tu celebración de la Hora del Código, asegúrate de comenzar tu evento de la mejor manera con algunas de estas herramientas y consejos.
 
@@ -101,7 +101,7 @@ No hay problema si tú y tus estudiantes son nuevos en las ciencias de la comput
 
 - Explica algunas formas en las que la tecnología tiene un impacto en nuestras vidas, con ejemplos que les interesen a niños y niñas (habla acerca de salvar vidas, ayudar a las personas, conectarlas, etc.).
 - Prepara con la clase una lista de cosas que utilizan programación en la vida cotidiana.
-- Mira los consejos para hacer que las niñas se interesen en las ciencias de la computación [aquí]({{ urls/girls }}).
+- Mira los consejos para hacer que las jóvenes se interesen en las ciencias de la computación [aquí]({{ urls/girls }}).
 
 * * *
 

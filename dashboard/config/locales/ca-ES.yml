@@ -1,52 +1,14 @@
 ---
 ca:
-  errors:
-    messages:
-      not_saved: 'Corregeix els errors següents:'
-      too_young: Aquest contingut té restriccions d'edat en el lloc i no està disponible
-        per als estudiants més joves.
-      teacher_must_accept_terms: Aquest contingut té restriccions d'edat en el lloc
-        i no està disponible per als estudiants més joves. Demana el teu professor
-        d'acceptar les condicions actualitzades del servei per poder accedir a aquest
-        contingut. El teu professor pot fer-ho entreu al codi d'estudi i fent clic
-        el botó "Revisió actualitzada termes" a la part superior de la pàgina principal
-        de codi d'estudi.
-      pair_programmer: Actualment estàs programant en parella amb un estudiant que
-        no té accés a aquest contingut. Per accedir a aquest contingut, atura la programació
-        en parella i torna-hi.
   activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            reset_password_token:
-              invalid: és invàlid. Tingues en compte que cada enllaç només es pot
-                fer servir una vegada per restablir la contrasenya, i només funcionarà
-                l'enllaç més recent.
-      messages:
-        blank: és obligatori
-        blank_plural: son obligatoris
-        invalid: no és vàlid
-        invalid_plural: no son vàlids
     attributes:
       user:
-        name: Nom a mostrar
-        name_example: 'Mostra el nom (ex: Programador fantàstic o Joana S.)'
-        email: Correu electrònic
-        parent_email: E-mail del pare/tutor
-        personal_email: Adreça d'e-mail personal <a href="%{url}">(feu clic aquí si
-          teniu una adreça electrònica)</a>
-        personal_email_markdown: Adreça d'e-mail personal [(feu clic aquí si teniu
-          una adreça electrònica)](%{url})
-        username: nom d'usuari
-        password: Contrasenya
-        verified_teacher: Professor verificat
-        password_confirmation: Confirma la contrasenya
-        current_password: Contrasenya actual
-        locale: Llengua
         age: Edat
-        gender: Sexe
+        current_password: Contrasenya actual
         edit_header: Edita les dades del compte
+        email: Correu electrònic
+        error:
+          future: no pot ser en el futur
         finish_sign_up_header: Acabar de crear el seu compte
         finish_sign_up_subheader: Empleneu la informació següent per acabar creant
           un compte Code.org per a <strong>%{email}</strong>.
@@ -56,96 +18,58 @@ ca:
           creant un compte Code.org amb <strong>%{provider}</strong> per a <strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: Empleneu la informació següent
           per acabar creant un compte Code.org amb **%{provider}** per a **%{email}**.
+        gender: Sexe
+        locale: Llengua
+        name: Nom a mostrar
+        name_example: 'Mostra el nom (ex: Programador fantàstic o Joana S.)'
+        parent_email: E-mail del pare/tutor
+        password: Contrasenya
+        password_confirmation: Confirma la contrasenya
+        personal_email: Adreça d'e-mail personal <a href="%{url}">(feu clic aquí si
+          teniu una adreça electrònica)</a>
+        personal_email_markdown: Adreça d'e-mail personal [(feu clic aquí si teniu
+          una adreça electrònica)](%{url})
         reset_password_token: L'enllaç que has fet servir per restablir la contrasenya
-        error:
-          future: no pot ser en el futur
         us_state: Estat/província
-  beta: beta
-  hello: Hola món
-  welcome_back: Benvingut de nou, %{name}
-  your_professional_learning_plan: El seu pla d'aprenentatge professional
-  see_your_learning_plan: Veure el seu pla d'aprenentatge
-  submit: Envia
-  unsubmit: Retirar
-  previous_page: Pàgina anterior
-  next_page: Pàgina següent
-  next_level: Següent nivell
-  next_resource: Recurs següent
-  done_with_module: Mòdul d'Aprenentatge acabat
-  cancel: Cancel·lar
-  okay: D'acord
-  or: o
-  heading_x_of_y: "%{heading} (pàgina %{x} de %{y})"
-  join_section:
-    code:
-      title: Unir-se a una secció a Code.org
-      placeholder: Codi de secció (ABCDEF)
-      instructions: 'Introdueix el codi de 6 lletres que t''ha donat el teu professor
-        (exemple: "ABCDEF") per unir-te a la seva secció.'
-      instructions_short: Introdueix el codi de secció de 6 lletres
-      submit: Unir-me
+        username: nom d'usuari
+        verified_teacher: Professor verificat
+    errors:
+      messages:
+        blank: és obligatori
+        blank_plural: son obligatoris
+        invalid: no és vàlid
+        invalid_plural: no son vàlids
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: és invàlid. Tingues en compte que cada enllaç només es pot
+                fer servir una vegada per restablir la contrasenya, i només funcionarà
+                l'enllaç més recent.
   add_hint_form:
     placeholder: Introduïu la vostra pista aquí
     submit: Afegeix pista
-  appname: Code.org
-  stage: etapa
-  stage_number: Etapa %{number}
-  puzzle: Puzzle
-  trophies: trofeus
-  courses: cursos
-  courses_page:
-    title_student: Aprèn informàtica
-    title_teacher: Ensenyeu informàtica
-  unplugged_activity: Activitat sense connexió
-  of: de
-  more: MÉS
-  less: MENYS
-  try_hoc: 'Prova l''Hora de Codi, fes clic aquí >> '
-  try_k8intro: O proveu el nostre curs d'introducció a la Informàtica per a ESO (15-25
-    hores)
-  k8intro: Curs d'introducció a la informàtica per a ESO (15-25 hores)
+  age_interstitial:
+    age: La teva edat
+    disclaimer: Com sempre, Code.org mai llogarà, vendrà o compartirà aquesta informació
+      amb tercers.
+    header: Actualització d'informació del compte
+    sign_out_markdown: Si no vols indicar la teva edat, pots [tancar sessió](%{url}).
+    warning: Estem en procés d'actualitzar l'experiència que oferim per poder protegir
+      encara més la teva privacitat. Per fer-ho, necessitem que els usuaris existents
+      introdueixin la seva edat aquí.
   already_started: 'Ja has començat? Continua aquí >> '
-  demos: 'Admin: Totes les demos'
-  continue: Continuar
-  prize: premi
-  more_info: Més informació
+  appname: Code.org
   auth:
-    continue_with: Continua amb %{provider}
-    sign_in_with: Registra't amb %{provider}
-    signed_in: Registrat!
-    signed_out_markdown: "### Has tancat la sessió a [Code.org](%{url})."
-    sign_out_of_markdown: "### Has fet sevir un compte de %{provider} per iniciar
-      sessió. [Fes clic aquí](%{url}) per tancar la sessió de %{provider}."
-    already_signedup: Ja t'has registrat?
-    notyet_signedup: No t'has unit encara?
-    google_oauth2: Compte de Google
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Compte de Microsoft
-    microsoft_v2_auth: Compte de Microsoft
-    clever: Clever
-    powerschool: Powerschool
-    forgot_password: Has oblidat la constrasenya?
-    migration_success: Èxit! Has actualitzat a la nostra experiència de compte nou.
-    demigration_success: La nova experiència de compte està inhabilitada al vostre
-      compte.
-    need_confirmation: No has rebut les instruccions de confirmació?
-    need_unlock: No has rebut les instruccions de desbloqueig?
-    not_linked: Ho sentim, el teu compte Code.org no està vinculat a %{provider}.
-      Hauras d'iniciar la sessió escribint la contrasenya sota.
-    use_clever: Ho sentim, el teu compte Code.org no està vinculat a %{provider}.
-      Si us plau, inicieu la sessió a través del teu Clever Portal.
-    invalid_provider: Ho sentim, els comptes de %{provider} no es poden vincular amb
-      els comptes de Code.org.
-    migration_required: Ho sentim, no podem connectar o desconnectar comptes que segueixen
-      fent servir l'experiència de compte antic. Actualitza per fer servir l'experiència
-      de compte nova.
-    unable_to_connect_provider: Incapaç de connectar el vostre compte Code.org al
-      vostre compte de %{provider}. Torneu-ho a provar.
-    disconnect_successful: Fantàstic! Has desconnectat el compte extern del teu compte
-      de Code.org.
     already_in_use: "%{provider} compte ja està connectat a un altre compte Code.org."
     already_linked: "%{provider} compte ja està enllaçat al teu compte de Code.org."
+    already_signedup: Ja t'has registrat?
+    clever: Clever
+    continue_with: Continua amb %{provider}
+    demigration_success: La nova experiència de compte està inhabilitada al vostre
+      compte.
+    disconnect_successful: Fantàstic! Has desconnectat el compte extern del teu compte
+      de Code.org.
     existing_account:
       account_exists: Bones notícies! Ja tens un compte de Code.org que fa servir
         %{email}
@@ -154,19 +78,1045 @@ ca:
       sign_up: Aquest no és el teu correu? Vols crear un compte nou amb un correu
         diferent? Si decideixes crear un compte nou, podràs vincular el teu perfil
         de %{provider} des de la pàgina de Configuració del Compte.
+    facebook: Facebook
+    forgot_password: Has oblidat la constrasenya?
+    google_oauth2: Compte de Google
+    invalid_provider: Ho sentim, els comptes de %{provider} no es poden vincular amb
+      els comptes de Code.org.
+    microsoft_v2_auth: Compte de Microsoft
+    migration_required: Ho sentim, no podem connectar o desconnectar comptes que segueixen
+      fent servir l'experiència de compte antic. Actualitza per fer servir l'experiència
+      de compte nova.
+    migration_success: Èxit! Has actualitzat a la nostra experiència de compte nou.
+    need_confirmation: No has rebut les instruccions de confirmació?
+    need_unlock: No has rebut les instruccions de desbloqueig?
+    not_linked: Ho sentim, el teu compte Code.org no està vinculat a %{provider}.
+      Hauras d'iniciar la sessió escribint la contrasenya sota.
+    notyet_signedup: No t'has unit encara?
+    powerschool: Powerschool
+    sign_in_with: Registra't amb %{provider}
+    sign_out_of_markdown: "### Has fet sevir un compte de %{provider} per iniciar
+      sessió. [Fes clic aquí](%{url}) per tancar la sessió de %{provider}."
+    signed_in: Registrat!
+    signed_out_markdown: "### Has tancat la sessió a [Code.org](%{url})."
+    twitter: Twitter
+    unable_to_connect_provider: Incapaç de connectar el vostre compte Code.org al
+      vostre compte de %{provider}. Torneu-ho a provar.
+    use_clever: Ho sentim, el teu compte Code.org no està vinculat a %{provider}.
+      Si us plau, inicieu la sessió a través del teu Clever Portal.
+    windowslive: Compte de Microsoft
+  behaviors:
+    this_sprite: aquest sprite
+  beta: beta
+  builder:
+    back: Torna als scripts
+    created: Has creat un script nou.
+    destroyed: Has destruït un script.
+    level:
+      create: Crea un nivell nou
+      current: Nivells actuals
+      unused: Nivells sense utilitzats
+    manage: Construir nivells
+    success: Has editat els blocs correctament.
+    view: Visualitza
+  cancel: Cancel·lar
+  certificate_hour_of_code: L'hora del codi
+  code_org_logo_alt: Inici de Code.org
+  compatibility:
+    upgrade:
+      applab_unsupported_tablet: El Laboratori d'aplicacions funciona millor en un
+        ordinador de sobretaula o portàtil amb ratolí i teclat. És possible que tingueu
+        problemes si feu servir aquesta eina en el dispositiu actual.
+      gamelab_unsupported_tablet: El Laboratori de jocs funciona millor en un ordinador
+        de sobretaula o portàtil amb ratolí i teclat. És possible que tingueu problemes
+        si feu servir aquesta eina en el dispositiu actual.
+      link: Més informació
+      unsupported_message: El vostre navegador no és compatible. Sisplau, actualitzeu-lo
+        a [un dels nostres navegadors compatibles](%{supported_browsers_url}). Podeu
+        provar de veure la pàgina, però la funcionalitat es podria veure afectada.
+      weblab_unsupported_locale_storage: És possible que tingueu problemes amb el
+        Laboratori web si feu servir el mode de navegació privada. Sisplau, carregueu
+        el projecte un altre cop amb el mode normal. Disculpeu les molèsties.
+  confirm: confirmació
+  continue: Continuar
+  contract_match:
+    baddomainname: Un o més dels teus elements del domini té el nom errat.
+    baddomainsize: El teu contracte no té el nombre correcte d'elements del domini.
+    baddomaintype: Un o més dels teus elements de domini té un tipus erroni, o està
+      en ordre equivocat.
+    badname: El teu contracte té el nom malament.
+    badname_case: Els noms de les funcions distingeixen entre majúscules i minúscules.
+      Proveu de canviar al nom del teu contracte.
+    badrange: El teu contracte té el rang malament.
+    wrong_title: Resposta incorrecta
+  cookie_banner:
+    accept: D'acord
+    message: Si continueu fent servir la nostra pàgina web o feu clic a "Accepto",
+      accepteu que es guardin galetes al vostre ordinador o dispositiu.
+    more_information: Vegeu la Política de privacitat de Code.org.
+  copy: Copiar
+  course_offering:
+    headers:
+      collections: Col·leccions
+      csa_labs: CSA Labs
+      csc: Connexions CS
+      csf: Fonaments de la Informàtica
+      express: Express
+      favorites: Favorits
+      hello_world: Hola, món
+      labs_and_skills: Laboratoris i Habilitats
+      minecraft: Minecraft
+      popular_media: Mitjans de comunicació populars
+      self_paced: Auto-Paced
+      sports: Esports
+      summer_workshops_612: 6-12 Tallers d'estiu
+      teacher_led: Professor-Led
+      virtual_academic_year_workshops_612: 6—12 Tallers virtuals del curs acadèmic
+      workshops_k5: K-5 Tallers
+      year_long: Llarg any
+  courses: cursos
+  courses_category: Cursos complets
+  courses_page:
+    title_student: Aprèn informàtica
+    title_teacher: Ensenyeu informàtica
+  crud:
+    access_denied: No tens accés a aquest %{model}.
+    back: Tornar
+    confirm: Estàs segur?
+    created: "%{model} s'ha creat correctament."
+    destroy: Destrueix
+    destroyed: "%{model} s'ha esborrat correctament."
+    edit: Edita
+    edit_model: Edita %{model}
+    new_model: Crea %{model}
+    show: Mostra
+    submit: Envia
+    update: Actualitza
+    updated: "%{model} s'ha actualitzat correctament."
+  demos: 'Admin: Totes les demos'
+  deprecation:
+    algebra_lab: 'El pla d''estudis i els continguts d''Informàtica i Àlgebra està
+      a punt de quedar obsolet. En els pròxims mesos, aquest laboratori deixarà d''estar
+      disponible. En el seu lloc, consulteu-ne la versió alternativa [Bootstrap: Algebra](%{bootstrap_algebra_url}).
+      [Més informació](%{cs_algebra_url}).'
+  devise:
+    registrations:
+      user:
+        personal_login_created_email: Has creat un compte d'inici de sessió personal.
+          Ara ja pots iniciar sessió al teu compte amb el teu correu electrònic i
+          contrasenya
+        personal_login_created_username: Has creat un compte d'inici de sessió personal.
+          Ara ja pots iniciar sessió al teu compte amb el teu nom d'usuari (%{username})
+          i contrasenya
+        user_type_change_email_mismatch: El correu electrònic proporcionat no es correspon
+          amb el correu electrònic vinculat a aquest compte
+  dialog:
+    ok: OK
+    startover_body: Això tornarà el puzzle al seu estat inicial i eliminarà totes
+      les dades que hagis afegit o modificat.
+    startover_cancel: Cancel·lar
+    startover_ok: Torna a començar
+    startover_title: Estàs segur que vols tornar a començar?
+  done_with_module: Mòdul d'Aprenentatge acabat
+  download_coming_soon: Activitat descarregable properament.
+  download_pdf: Obre la unitat didàctica
+  errors:
+    messages:
+      not_saved: 'Corregeix els errors següents:'
+      pair_programmer: Actualment estàs programant en parella amb un estudiant que
+        no té accés a aquest contingut. Per accedir a aquest contingut, atura la programació
+        en parella i torna-hi.
+      teacher_must_accept_terms: Aquest contingut té restriccions d'edat en el lloc
+        i no està disponible per als estudiants més joves. Demana el teu professor
+        d'acceptar les condicions actualitzades del servei per poder accedir a aquest
+        contingut. El teu professor pot fer-ho entreu al codi d'estudi i fent clic
+        el botó "Revisió actualitzada termes" a la part superior de la pàgina principal
+        de codi d'estudi.
+      too_young: Aquest contingut té restriccions d'edat en el lloc i no està disponible
+        per als estudiants més joves.
+  external_links:
+    disclaimer: Exempció de responsabilitat
+    disclaimer_text: Aquesta pàgina pot tenir polítiques de privacitat diferents de
+      les de Code.org. Hem seleccionat aquests recursos externs perquè creiem que
+      et seran útils. Tot i que nosaltres no som els responsables directes del contingut
+      d'aquesta pàgina web, <a href='%{support_url}'>contacta amb nosaltres</a> si
+      hi trobes contingut qüestionable o si la pàgina web enllaçada ja no està disponible.
+    leaving_domain: Esteu sortint d'aquest domini per anar a una pàgina no gestionada
+      per Code.org.
+  follower:
+    added_teacher: S'ha afegit %{name} com el teu mestre
+    already_exists: Ja t'has unit a la secció %{section_name}.
+    captcha_required: Omple el CAPTCHA per unir-te a aquesta secció.
+    error:
+      blank_code: Introduïu un codi de secció
+      cant_join_own_section: No pots unir-te a la teva pròpia secció.
+      full_section: No t'hem pogut afegir a la secció %{section_code} perquè ja hi
+        ha %{section_capacity} alumnes. Posa't en contacte amb el teu professor perquè
+        t'ajudi.
+      no_teacher: No s'ha trobat ningú registrat amb '%{teacher_email_or_code}'. Si
+        us plau, demana'ls que es registrin aquí i després, prova a afegir-los una
+        altra vegada
+      not_participant_type: No t'hem pogut afegir a la secció %{section_code} perquè
+        el teu perfil de participant no és compatible amb aquesta secció.
+      provider_managed_section: Aquesta secció és gestionada per un altre proveïdor
+        i no t'hi pots unir. Demana al teu professor que t'hi afegeixi a través de
+        %{provider} i que torni a sincronitzar la secció.
+      restricted_section: No t'hem pogut afegir a la secció %{section_code} perquè
+        està bloquejada. Contacta amb el teu professor perquè t'ajudi.
+      section_not_found: No s'ha pogut trobar una secció amb el codi "%{section_code}".
+      signed_in: Tanca la sessió abans de continuar
+      username_in_use: "%{username} ja existeix, tria'n un altre"
+      username_not_found: Usuari %{username} no trobat
+    invite_sent: S'ha enviat la invitació
+    mail:
+      student_disassociated:
+        subject: 'Notificació Code.org: ja no s''associa %{student_name} com el vostre
+          alumne.'
+    registered: T'has registrat a %{section_name}.
+  footer:
+    art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Tots els drets reservats.
+      < br / > Star Wars &#8482; © %{current_year} Disney i Lucasfilm. Tots els drets
+      reservats. < br / > Frozen &#8482; © %{current_year} Disney. Tots els drets
+      reservats. < br / > Ice Age &#8482; © %{current_year} segle Xx Fox. Tots els
+      drets reservats. < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio entreteniment
+      Ltd. Tots els drets reservats. < br / > Plants vs Zombies &#8482; © %{current_year}
+      Electronic Arts Inc Tots els drets reservats. < br / > El sorprenent món de
+      Gumball és marca registrada i © 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Tots els
+      drets reservats. Star Wars&#8482; &copy; %{current_year} Disney i Lucasfilm.
+      Tots els drets reservats. Frozen&#8482; &copy; %{current_year} Disney. Tots
+      els drets reservats. Ice Age&#8482; &copy; %{current_year} 20th Century Fox.
+      Tots els drets reservats. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. Tots els drets reservats. Plants vs. Zombies&#8482; &copy;
+      %{current_year} Electronic Arts Inc. Tots els drets reservats. DreamWorks Los
+      tipos malos &copy; %{current_year} DreamWorks Animation LLC. Tots els drets
+      reservats.
+    built_on_code_studio: Creat a Code Studio
+    built_on_github: Fet amb GitHub de Microsoft
+    code_from_html: Code.org fa servir p5.play, sota llicència de <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+      GNU LGPL 2.1</a>.
+    cookie_notice: Política de galetes
+    copyright: Copyright
+    feedback: Digues la teva
+    google_copyright: "&copy; Google Inc. utilitzat amb permís. Google Classroom és
+      una marca comercial de Google Inc."
+    help_from_html: Enginyers de Google, Microsoft, Facebook i Twitter i han ajudat
+      a crear aquesta classe.
+    help_from_html_old: Enginyers d'Amazon, Google i Microsoft han ajudat a crear
+      aquests materials.
+    how_it_works: Com funciona
+    locale_select: Seleccionar idioma
+    make_my_own_app: Fer la meva aplicació
+    more: Més
+    powered_by_aws: Funciona amb Amazon Web Services
+    privacy: Política de privacitat
+    report_abuse: Denuncieu un abús
+    secure: Versió segura
+    store: Botiga
+    support: Suport
+    support_url: http://support.code.org
+    thank_you: Agraïm als nostres <a href="https://code.org/about/donors"> donants</a>,
+      <a href="https://code.org/about/partners"> socis</a>, al nostre <a href="https://code.org/about/team">
+      extens equip</a>, al nostre elenc de vídeo i als nostres <a href="https://code.org/about/advisors">
+      assessors d'educació</a> pel seu suport en la creació de Code Studio.
+    tos: Condicions d'ús
+    tos_short: Condicions
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, el logotip de CODE
+      i de l'Hora del Codi&reg; són marques registrades de Code.org."
+    translate: Ajudeu-nos a traduir els continguts
+    try_hour_of_code: Proveu una hora de codi!
+    view_code: Veure codi
+  free_response:
+    placeholder: Introdueix la teva resposta aquí
+  gender:
+    female: Dona
+    male: Home
+    non_binary: No binari
+    none: Prefereixo no respondre
+    not_listed: Terme preferit no mencionat
+  heading_x_of_y: "%{heading} (pàgina %{x} de %{y})"
+  hello: Hola món
+  hidden_script: El teu professor no tenia previst que arribessis aquí. Pregunta-li
+    quina unitat has de fer.
+  hidden_stage: El teu professor no tenia previst que arribessis aquí. Pregunta-li
+    quina lliçó has de fer.
+  hoc_download:
+    capsule_desc: Feu servir l'aplicació web [%{app_name}](%{url}).
+    capsule_title: Teniu connexió a internet?
+    download_in_Albanian: 'Descarregar en albanès:'
+    download_in_Arabic: 'Descarregar en àrab:'
+    download_in_Azerbaijani: 'Descarregar en àzeri:'
+    download_in_Basque: 'Descarregar en basc:'
+    download_in_Bosnian: 'Descarregar en bosnià:'
+    download_in_Bulgarian: 'Descarregar en búlgar:'
+    download_in_Catalan: 'Descarregar en català:'
+    download_in_Chinese: 'Descarregar en xinès:'
+    download_in_Chinese-Taiwan: 'Descarregar en xinès de Taiwan:'
+    download_in_Croatian: 'Descarregar en croat:'
+    download_in_Czech: 'Descarregar en txec:'
+    download_in_Danish: 'Descarregar en danès:'
+    download_in_Dutch: 'Descarregar en neerlandès:'
+    download_in_English: 'Descarregar en anglès:'
+    download_in_Finnish: 'Descarregueu en finès:'
+    download_in_French: 'Descarregar en francès:'
+    download_in_German: 'Descarregar en alemany:'
+    download_in_Greek: 'Descarregar en grec:'
+    download_in_Hebrew: 'Descarregar en hebreu:'
+    download_in_Hungarian: 'Descarregar en hongarès:'
+    download_in_Icelandic: 'Descarregar en islandès:'
+    download_in_Indonesian: 'Descarregar en indonesi:'
+    download_in_Irish: 'Descarregar en irlandès:'
+    download_in_Italian: 'Descarregar en italià:'
+    download_in_Japanese: 'Descarregar en japonès:'
+    download_in_Korean: 'Descarregar en coreà:'
+    download_in_Latvian: 'Descarregar en letó:'
+    download_in_Lithuanian: 'Descarregar en lituà:'
+    download_in_Norwegian: 'Descarregar en noruec:'
+    download_in_Norwegian-Nynorsk: 'Descarregar en noruec nynorsk:'
+    download_in_Polish: 'Descarregar en polonès:'
+    download_in_Portuguese: 'Descarregar en portuguès:'
+    download_in_Portuguese-Brazil: 'Descarregar en portuguès del Brasil:'
+    download_in_Romanian: 'Descarregar en romanès:'
+    download_in_Russian: 'Descarregar en rus:'
+    download_in_Serbian: 'Descarregar en serbi:'
+    download_in_Slovenian: 'Descarregar en eslovè:'
+    download_in_Spanish: 'Descarregar en espanyol:'
+    download_in_Swedish: 'Descarregar en suec:'
+    download_in_Turkish: 'Descarregar en turc:'
+    download_in_Ukrainian: 'Descarregar en ucraïnès:'
+    download_in_Vietnamese: 'Descarregar en vietnamita:'
+    download_message: Descarregar %{app_name} per fer-lo sense internet (136 MB).
+    instructions: 'Instruccions per als professors: si teniu una connexió a internet
+      deficient, aquests tutorials de l''Hora del Codi es poden descarregar i instal·lar
+      per fer-los sense connexió. Trieu el vostre idioma i plataforma i descarregueu-los
+      i instal·leu-los a tots els ordinadors de l''aula. Potser us interessaria fer
+      servir un USB per descarregar-los un cop i instal·larlos a tots els ordinadors.
+      Important: els alumnes no podran iniciar sessió a Code Studio, desar la feina
+      o imprimir els certificats. Els professors podeu imprimir els certificats amb
+      antelació [aquí](%{url}).'
+    instructions_headline: No teniu connexió a internet?
+    mac: Mac OS X
+    minecraft_name: Hora del Codi de Minecraft
+    starwars_blocks_name: 'La guerra de les galàxies: Crea una galàxia amb codi (Blocs)'
+    starwars_javascript_name: 'La guerra de les galàxies: Crea una galàxia amb codi
+      (JavaScript)'
+    title: Descàrregues de l'Hora del Codi
+    windows: Windows (64 bits)
+  home:
+    20hour_overview: Aquest curs de 20 hores és una introducció als conceptes bàsics
+      d'informàtica i programació. El curs ha estat dissenyat per impartir a alumnes
+      de 1er d'ESO, però és divertit d'aprendre a qualsevol edat.
+    add_hint_help: Si us plau, ajuda'ns a afegir pistes als tutorials de Code.org
+    all_courses: Informació general dels cursos 1, 2 i 3
+    choose_next_course: Intenta un curs Code Studio triant-ne un a continuació
+    classroom: La teva classe
+    heading_elementary_markdown: |-
+      ## Cursos de 20 hores de
+
+      # Fonaments de la Informàtica (per a totes les edats)
+    lesson_plans: Unitats didàctiques
+    local_school: escola local
+    no_primary_course: Intenta un curs a Code Studio
+    online: en línia
+    print_certificate: Imprimeix el certificat
+    prize_info: 'Premis de participació (només per escoles públiques dels Estats Units):
+      fins a 1.000 dòlars recompenses per aula.'
+    see_details: Veure detalls
+    signin_directions: Utilitza un compte per seguir el teu progrés. <br/> Professors,
+      seguïu la classe sencera.
+    signin_message: Ja estàs registrat? %{link}
+    student_finished: Has completat totes les classes, tria un altra classe %{online_link}
+      o a una %{local_school_link}
+    student_left_off: 'On ho vas deixar:'
+    student_progress: El teu progrés d'aprenentatge
+    student_reg_link: Alumne registra't
+    student_stats: Has guanyat %{trophy_count} de %{trophy_max} trofeus de "Concepte
+      de Domini".
+    teacher_averages: "Els teus estudiants han guanyat de mitjana %{trophy_average}
+      fora del \n%{trophy_max} \"Concepte de Domini\" de trofeus."
+    teacher_dashboard: Ves al tauler de progrés
+    teacher_print_certificates: Imprimeix certificats per als estudiants que acabin
+      aquest curs
+    teacher_read_blog: Llegiu notícies i actualitzacions sobre els nostres materials
+      al nostre Blog d'educació
+    teacher_reg_link: Mestre registra't
+    teacher_student_count: Tens %{count} estudiants.
+    teacher_student_count_one: Tens %{count} estudiant.
+    test_videos_help: Prova el nostre nou reproductor de vídeo a la teva escola
+    title: Code Studio
+    try_beta_courses: Nou! Prova els nostres cursos beta per alumnes de infantil
+    tryfirst: 'O podeu provar-ho primer i registrar-vos després:'
+    trynow: Més informació
+    use_as_teacher: Utilitza aquest lloc com a mestre
+    view_course: Veure el curs
+    your_gallery: Galeria
+  join_section:
+    code:
+      instructions: 'Introdueix el codi de 6 lletres que t''ha donat el teu professor
+        (exemple: "ABCDEF") per unir-te a la seva secció.'
+      instructions_short: Introdueix el codi de secció de 6 lletres
+      placeholder: Codi de secció (ABCDEF)
+      submit: Unir-me
+      title: Unir-se a una secció a Code.org
+  k8intro: Curs d'introducció a la informàtica per a ESO (15-25 hores)
+  landing:
+    documentation: Documentació
+    help_resources: Ajuda i recursos
+    help_support: Ajuda i suport
+    prerelease_tutorial: Aquest tutorial està en **beta**. L'anirem actualitzant a
+      mesura que rebem comentaris i hi fem millores.
+    report_bug: Informeu d'errors
+    support: Obtenir ajuda
+    support_url: support.code.org
+    tutorials: Tutorials
+  less: MENYS
+  lesson_extras:
+    bonus_level: Nivell extra
+  lesson_lock:
+    error:
+      cannot_view_locked_answers: No es poden visualitzar les respostes mentre està
+        bloquejat
+      forbidden: L'usuari no pot actualitzar l'estat bloquejable de l'alumne
+      missing_params: S'ha de proporcionar identificadors d'usuari, nivell i unitat
+      no_updates: No hi ha actualitzacions per realitzar
+  lesson_plan: Unitat didàctica
+  level_group:
+    correct_body: Moltes gràcies per les teves respostes.
+    correct_title: Gràcies
+    hide_survey_last_answer: Aquesta enquesta és anònima. Visiteu el panell de control
+      del professor per veure els resultats compilats. Tingueu present que els resultats
+      només seran visibles si com a mínim cinc alumnes han enviat l'enquesta.
+    survey_submission_thankyou: Gràcies per respondre l'enquesta! Hem esborrat les
+      respostes del formulari perquè es mantinguin anònimes. El teu professor podrà
+      veure les respostes de tota la classe, però sense cap nom associat.
+    wrong_body: Moltes gràcies per les teves respostes.
+    wrong_title: Gràcies
+  level_group-submittable:
+    correct_body: Moltes gràcies per les teves respostes.
+    correct_title: Gràcies
+    submit-complete-body: No podràs editar l'avaluació un cop l'hagis enviat. Estàs
+      segur que la vols enviar?
+    submit-complete-title: Enviar avaluació
+    submit-incomplete-body: Has deixat algunes preguntes sense acabar. Un cop enviïs
+      l'avaluació, no podràs editar-la. Estàs segur que la vols enviar?
+    submit-incomplete-title: Enviar avaluació
+    unsubmit-body: Si retires la teva avaluació, l'hora i la data es restabliran.
+      Estàs segur que ho vols fer?
+    unsubmit-title: Retirar avaluació
+    wrong_body: Moltes gràcies per les teves respostes.
+    wrong_title: Gràcies
+  locked_stage: Els continguts d'aquesta lliçó no són visibles perquè la lliçó es
+    troba bloquejada. El teu professor podrà desbloquejar-la quan arribi el moment
+    de treballar-hi o de revisar la teva feina.
+  maker:
+    google_oauth:
+      confirm_login: Seleccioneu "Confirmar" per iniciar sessió amb el vostre compte
+        de Google.
+      copy_code: Enganxeu aquest codi a l'aplicació Maker per iniciar sessió a Code.org.
+      enter_code: Introduïu el codi proporcionat en iniciar sessió a través de Google
+        en el vostre navegador per defecte.
+      error_invalid_user: Identificador d'usuari incorrecte. Intenteu iniciar sessió
+        de nou.
+      error_no_code: Introduïu el codi d'inici de sessió.
+      error_token_expired: Aquest token ha caducat. Torneu a iniciar sessió per rebre'n
+        un de nou.
+      error_wrong_provider: Proveïdor incorrecte. Assegureu-vos que esteu iniciant
+        sessió amb Google.
+      login_with_google: Inicieu sessió a l'aplicació Maker amb Google
+  match:
+    correct_body: Aquesta és la resposta correcta.
+    correct_title: Correcte
+    wrong_body: La solució que has introduït no és correcta.  Si us plau, intenta-ho
+      de nou!
+    wrong_title: Solució incorrecta
+  more: MÉS
+  more_info: Més informació
+  move_students:
+    all_students_must_be_in_current_section: Totes els alumnes han d'estar inscrits
+      a la vostra secció.
+    already_enrolled_in_new_section: No podeu moure aquests alumnes perquè ja es troben
+      a la secció nova.
+    current_section_dne: Ho sentim, però la secció %{current_section_code} no existeix.
+      Introduïu un codi de secció diferent.
+    new_section_dne: Ho sentim, però la secció %{new_section_code} no existeix. Introduïu
+      un codi de secció diferent.
+    not_correct_participant_type: No podeu moure aquests usuaris perquè no tenen els
+      permisos necessaris per participar en la secció nova.
+    section_code_cant_be_current_section: La secció actual no pot ser la mateixa que
+      la nova.
+    student_ids_not_entered: Introduïu els identificadors dels alumnes.
+    student_not_found: No s'han trobat un o més alumnes.
+    third_party_login: No podeu moure els alumnes a una secció sincronitzada amb una
+      eina externa.
+  multi:
+    correct_body: Aquesta és la resposta correcta.
+    correct_title: Correcte
+    wrong_body: La resposta que he introduït no és correcta.  Si us plau, intenta-ho
+      de nou!
+    wrong_title: Resposta incorrecta
+  multi-submittable:
+    correct_body: Moltes gràcies per la teva resposta.
+    correct_title: Gràcies
+    wrong_body: Moltes gràcies per la teva resposta.
+    wrong_title: Gràcies
+  nav:
+    header:
+      about: Qui som
+      about_contact: Contacta'ns
+      about_donors: Donants
+      about_evaluation: Avaluació
+      about_faqs: Preguntes freqüents
+      about_jobs: Llocs de treball
+      about_leadership: Lideratge
+      about_news: Sala de premsa
+      about_partners: Socis
+      about_team: Equip complet
+      about_us: Sobre nosaltres
+      course_catalog: Catàleg de cursos
+      documentation: Documentació
+      educate_beyond: Més enllà de Code.org
+      educate_community: Comunitat virtual
+      educate_elementary: Escola primària
+      educate_high: Batxillerat
+      educate_hoc: L'hora del codi
+      educate_inspire: Inspireu un alumne
+      educate_middle: E.S.O.
+      educate_overview: Resum del docent
+      educate_partner: Col·laboreu amb nosaltres
+      educate_tools: Eines i vídeos
+      finished_hoc: He acabat!
+      help_support: Ajuda i suport
+      help_us: Ajuda'ns
+      incubator: Incubadora
+      learn: Aprèn
+      legal_cookie_notice: Política de galetes
+      legal_privacy: Política de privacitat
+      legal_tos: Condicions d'ús
+      my_dashboard: El meu panell de control
+      professional_learning: Formació professional
+      project_gallery: Projectes
+      report_bug: Informar d'un problema
+      sections: Seccions
+      sign_in_to_save: Inicia la sessió per a desar el progrés
+      sprite_lab_documentation: Documentació del Laboratori d'Sprites
+      stats: Estadístiques
+      teach: Ensenya
+      teacher_community: Fòrum del professor
+      tutorials: Tutorials
+      web_lab_documentation: Documentació del Laboratori Web
+    popup:
+      close: TANCA
+      mastery: Conceptes
+      prize_earned: Has agafat els %{total_trophies} trofeus. El premi és teu!
+      prize_us_only: "(només estudiants EUA)"
+      prizes: Recull els %{total_trophies} trofeus i guanya premis!
+      prizes_link: Més informació
+      progress: El teu progrés
+      progress_for_user: Progrés de %{name}
+      puzzle_map: Etapes
+    user:
+      algebra_game: Àlgebra
+      already_registered: Ja estàs registrat?
+      applab: Laboratori d'aplicacions
+      artist: Artista
+      artist_k1: Artista (Pre-lector)
+      basketball: Bàsquet
+      bounce: Rebota
+      calc: Càlcul
+      classroom: Pàgina d'inici de mestre
+      create: Crear
+      dance: Festa de ball
+      district_dashboard: Quadre de comandament de districte
+      driver: Connectat
+      eval: Aval.
+      flappy: Flappy
+      frozen: Frozen
+      gamelab: Laboratori de jocs
+      gamelab_jr: Laboratori de Jocs (beta)
+      iceage: Edat de gel
+      infinity: Infinit
+      label: Hola %{username}
+      loading: Carregant...
+      logout: Tanca la sessió
+      makerlab: Maker Toolkit
+      minecraft_adventurer: 'Minecraft: L''aventurer'
+      minecraft_aquatic: Viatge Aquàtic de Minecraft
+      minecraft_codebuilder: 'Minecraft: Code Connection'
+      minecraft_designer: Minecraft
+      minecraft_hero: Heroi de Minecraft
+      navigator: Soci
+      pair_programming: Programació per parelles
+      playlab: Play Lab
+      playlab_k1: Laboratori de Jocs (pre-lector)
+      poetry: Poesia
+      poetry_hoc: L'art del poema
+      scratch: Scratch
+      settings: El meu compte
+      signin: Iniciar sessió
+      signup: Crear compte
+      sports: Esports
+      spritelab: Laboratori de personatges
+      starwars: Star Wars
+      stats: Code Studio
+      team: Equip
+      thebadguys: Males bèsties
+      view_all: Mostra tots els projectes...
+      weblab: Laboratori Web
+  next_level: Següent nivell
+  next_page: Pàgina següent
+  next_resource: Recurs següent
+  next_stage: Has acabat! Continua amb la següent etapa
+  no_course_access_student: No tens accés a aquest curs. Pregunta al teu professor
+    quin curs has de fer.
+  no_course_access_teacher: No teniu accés a aquest curs. Si creieu que hauríeu de
+    tenir accés a aquest curs, contacteu amb nosaltres a support@code.org perquè puguem
+    resoldre la situació.
+  no_exemplar: No hi ha exemples per aquest nivell.
+  no_exemplar_access_student: Els alumnes no poden accedir al codi d'exemple. Pregunta
+    al teu professor quin nivell has de fer.
+  no_exemplar_access_teacher: Només els professors verificats poden accedir al codi
+    d'exemple. Si voleu verificar-vos com a professor, escriviu-nos a support@code.org.
+  no_level_access_student: No tens accés a aquest nivell. Pregunta al teu professor
+    quina nivell has de fer.
+  no_level_access_teacher: No teniu accés a aquest nivell. Si creieu que hauríeu de
+    tenir accés a aquest nivell, contacteu amb nosaltres a support@code.org perquè
+    puguem resoldre la situació.
+  no_script_access_student: No tens accés a aquesta unitat. Pregunta al teu professor
+    quina unitat has de fer.
+  no_script_access_teacher: No teniu accés a aquesta unitat. Si creieu que hauríeu
+    de tenir accés a aquesta unitat, contacteu amb nosaltres a support@code.org perquè
+    puguem resoldre la situació.
+  of: de
+  okay: D'acord
+  or: o
+  parent_email_banner:
+    link_your_email: Vincular correu electrònic
+    not_now: Ara no
+    text: "**Sou un pare o tutor?** Vinculeu el vostre correu electrònic a aquest
+      compte per mantenir-vos informats sobre la feina i els projectes del vostre
+      fill!"
+  parent_mailer:
+    parent_email_added_subject: Benvinguts a Code.org!
+    student_associated_subject: Informació d'inici de sessió a Code.org
+  password:
+    change_form:
+      confirm_password: Confirma la nova contrasenya
+      new_password: Nova contrasenya
+      submit: Canvia la contrasenya
+      title: Canvia la contrasenya
+    reset_errors:
+      captcha_required: Ompliu el CAPTCHA per restablir la contrasenya.
+      invalid_email: Sembla que us heu registrat amb una adreça de correu invàlida.
+        Contacteu amb support@code.org per rebre un enllaç per recuperar la contrasenya.
+    reset_form:
+      email: Correu electrònic
+      instructions: Introduïu el correu electrònic associat al vostre compte a continuació
+        i us enviarem les instruccions per restablir la contrasenya.
+      submit: Envia
+      title: Has oblidat la constrasenya?
+  pd:
+    form_entries:
+      ages:
+        ages_11_12: 11-12 anys
+        ages_13_14: 13-14 anys
+        ages_15_16: 15-16 anys
+        ages_17_18: 17-18 anys
+        ages_19_over: A partir de 19 anys
+        ages_7_8: 7-8 anys
+        ages_9_10: 9-10 anys
+        ages_under_6: Fins a 6 anys
+      email_opt_in:
+        opt_in_no: 'No'
+        opt_in_yes: Sí
+      gender:
+        female: Dona
+        male: Home
+        non_binary: No binari
+        none: Prefereixo no respondre
+        not_listed: Terme preferit no mencionat
+      resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: CS First de Google
+        khan: Khan Academy
+        kodable: Kodable
+        na: No aplica
+        other: Altres
+        scratch: Scratch
+        tynker: Tynker
+      robotics:
+        grok: Grok Learning
+        kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        na: No aplica
+        other: Altres
+        ozobot: Ozobot
+        raspberry: Raspberry Pi
+        sphero: Sphero
+        wonder: Wonder Workshop
+      school_country:
+        barbados: Barbados
+        belize: Belize
+        canada: Canadà
+        chile: Xile
+        colombia: Colòmbia
+        israel: Israel
+        malaysia: Malàisia
+        mexico: Mèxic
+        paraguay: Paraguai
+        thailand: Tailàndia
+        uzbekistan: Uzbekistan
+      subjects:
+        art: Plàstica
+        cs: Informàtica
+        efl: Anglès com a llengua estrangera
+        history: Història / Ciències socials
+        ict: TIC
+        la: Arts del llenguatge
+        math: Matemàtiques
+        music: Música
+        na: No aplica
+        other: Altres
+        science: Ciència
+      workshop_course:
+        csd: Descobriments Informàtics
+        csf_af: Fonaments de la Informàtica (Cursos A-F)
+        csf_express: Fonaments de la Informàtica (Pre-exprés o Exprés)
+        csp: Principis de la Informàtica
+        not_applicable: No aplica
+        other: Altres
+    form_labels:
+      ages: Quines edats tenen els vostres alumnes d'aquest any?
+      chilean_school_commune: Comuna
+      chilean_school_id: Identificador de l'escola
+      colombian_chilean_school_department: Departament/regió de l'escola
+      colombian_chilean_school_name: Nom de l'escola
+      colombian_school_city: Ciutat de l'escola
+      colombian_school_municipality: Municipi de l'escola
+      email: Correu electrònic
+      email_alternate: Correu electrònic alternatiu
+      email_opt_in: Us podem enviar correus electrònics sobre el programa internacional
+        de Code.org, les actualitzacions dels nostres cursos o altres notícies relacionades
+        amb la informàtica?
+      first_name: Nom
+      first_name_preferred: Nom que preferiu
+      gender: Identitat de gènere
+      last_name: Cognom
+      legal_opt_in: 'En enviar aquest formulari, accepteu que Code.org comparteixi
+        informació sobre com utilitzeu Code.org i els recursos de formació professional
+        amb els socis internacionals de Code.org del vostre país o districte escolar
+        i amb els facilitadors. Compartirem les vostres dades de contacte, quins cursos/unitats
+        esteu fent, i dades combinades sobre les vostres classes amb aquests socis.
+        Això inclou el nombre d''alumnes de les vostres classes, la composició demogràfica
+        dels grups i el nom i el districte de la vostra escola. No compartirem cap
+        dada sobre els alumnes amb els nostres socis: la informació sobre els alumnes
+        serà anònima i compilada. Els nostres socis internacionals i facilitadors
+        estan obligats per contracte a tractar aquestes dades amb el mateix grau de
+        confidencialitat que Code.org.'
+      resources: Quins dels recursos educatius següents utilitzeu per ensenyar informàtica?
+      robotics: Quins dels recursos educatius següents utilitzeu per ensenyar robòtica?
+      school: Escola
+      school_city: Ciutat de l'escola
+      school_city_district: Ciutat/districte de l'escola
+      school_country: País de l'escola
+      school_department_region: Departament/regió de l'escola
+      school_name: Nom de l'escola
+      subjects: Quines assignatures ensenyeu aquest any?
+      workshop_course: Curs del taller
+      workshop_facilitator: Facilitador del taller
+      workshop_organizer: Organitzador del taller
+    international_opt_in:
+      facilitator_not_applicable: No aplica
+      facilitator_not_listed: El meu facilitador no apareix a la llista
+      instructions: Si us plau, empleneu el formulari següent per indicar que 1) heu
+        assistit a un taller de formació organitzar per un dels socis internacionals
+        de Code.org i 2) que accepteu que compartim les vostres dades amb el nostre
+        soci internacional del vostre país perquè us puguin donar suport mentre feu
+        classes d'informàtica.
+      intro: Gràcies per haver dedicat el vostre temps a rebre formació sobre el pla
+        d'estudis de Code.org. Sense vosaltres, no podríem dur a terme la nostra missió
+        de donar l'oportunitat d'aprendre informàtica als nens i nenes de les escoles
+        de tot el món.
+      organizer_not_listed: El meu organitzador no apareix a la llista
+      thanks_markdown: Gràcies per enviar el formulari! Estarem encantats d'ajudar-te
+        mentre et familiaritzes amb el pla d'estudis i les eines de Code.org. Fes-nos
+        arribar qualsevol pregunta i comentari a [support@code.org](%{support_email_url})
+        o publicant un missatge al [fòrum de professors](%{teacher_forum_url})!
+      title: Asistència al taller
+    logged_out:
+      body: Per començar, primer heu d'haver iniciat sessió al vostre compte de Code.org.
+        Si voleu més informació sobre el programa abans de començar la sol·licitud,
+        consulteu el <a href="%{url}">Resum del Programa de Formació Professional</a>.
+      heading: Gràcies pel vostre interès en el Programa de Formació Professional!
+    no_teacher_email:
+      body_markdown: El vostre compte no té un correu electrònic vinculat. [Visiteu
+        la pàgina de configuració del compte](%{user_registration}) per afegir-lo
+        abans d'emplenar el formulari.
+    not_teacher:
+      body_markdown: Gràcies pel vostre interès en el Programa de Formació Professional
+        de Code.org! Heu iniciat sessió amb un compte d'alumne. Creeu un compte de
+        professor o [aneu a la configuració d'usuari](%{user_settings}) per canviar
+        el compte d'estudiant a un de professor.
+      more_markdown: Si us agradaria rebre més informació sobre el programa abans
+        d'iniciar la sol·licitud, podeu consultar el [resum del Programa de Formació
+        Professional](%{pl_overview}).
+  pdf_download: Descarrega el PDF
+  peer_review:
+    accepted:
+      description_markdown: "**Sí**, aquest enviament **reuneix** els requisits"
+      name: Acceptat
+    escalated:
+      description: Voldria que un docent revisés aquest enviament
+      name: Transferit
+    instructor_feedback: Comentaris del docent
+    outdated: Aquests comentaris es van proporcionar per una versió enviada anteriorment
+    peer_feedback: Comentaris dels companys
+    peer_review: Revisió per part dels companys
+    rejected:
+      description_markdown: "**No**, aquest enviament **no reuneix** els requisits"
+      name: Rebutjat
+    review_count: Has de fer %{review_count} revisions per aquesta unitat
+  pixelation:
+    actual_size: Mida real
+    binary: Binari
+    bits_per_pixel_header: Bits per píxel
+    hexadecimal: Hexadecimal
+    image_file_format_bits_per_pixel: 'Bits per píxel: 1 byte'
+    image_file_format_data_a: n bits de dades de píxels
+    image_file_format_data_b: n = amplada * alçada * bits per píxel
+    image_file_format_header: Format d'arxiu d'imatge
+    image_file_format_height: 'Alçada: 1 byte'
+    image_file_format_width: 'Amplada: 1 byte'
+    image_height: Alçada de la imatge
+    image_width: Amplada de la imatge
+    pixel_format_header: Format de píxel
+    raw_format: Format en brut
+    raw_format_alt: Veure bits sense format
+    readable_format: Format llegible
+    readable_format_alt: Veure bits separats per píxel
+    save_image: Desar imatge
+  previous_page: Pàgina anterior
+  prize: premi
+  progress:
+    assessment: avaluació
+    completed_perfect: completat, perfecte
+    completed_too_many_blocks: completat, massa blocs
+    furthest_level_attempted: nivell més alt intentat
+    in_progress: En curs
+    not_started: no començat
+    submitted: enviat
+  project:
+    abuse:
+      contact_us: Si creieu que es tracta d'un error, <a href='https://code.org/contact'>contacteu
+        amb nosaltres.</a>
+      go_to_code_studio: Anar al Code Studio
+      policy_violation: Aquest projecte conté informació que no es pot compartir amb
+        tercers. Contacteu amb el propietari de l'aplicació perquè corregeixi el contingut
+        de l'aplicació.
+      report_abuse_form:
+        abuse_type:
+          harassment: Amenaces, ciberassetjament, intimidació
+          infringement: Infracció de copyright
+          offensive: Contingut ofensiu
+          other: Altres
+          question: En quin sentit infringeix aquest contingut les %{link_start}Condicions
+            de servei%{link_end}?
+        abusive_url: URL del contingut objecte de la queixa
+        acknowledge: En enviar aquesta informació, acceptes que es gestionarà d'acord
+          amb les condicions de la [Política de privacitat] (%{link_start_privacy})
+          i les [Condicions del servei] (%{link_end}.
+        detail: Proporciona'ns tants detalls com puguis sobre el contingut objecte
+          de la teva queixa.
+        intro: Si has trobat contingut ofensiu, amenaces, ciberassetjament, intimidacions
+          o algun cas d'infracció de drets d'autor que afecti el teu contingut mentre
+          fèies servir les aplicacions fetes a Code Studio, omple aquest formulari.
+          Estudiarem el teu informe molt seriosament, farem les comprovacions corresponents
+          i prendrem les mesures necessàries.
+        validation:
+          abuse_detail: Proporciona'ns informació detallada sobre el contingut objecte
+            de la teva queixa
+          abuse_type: Descriu en quin sentit aquest contingut infringeix les Condicions
+            de servei
+          age: Si us plau especifiqueu una edat
+          captcha: Omple el CAPTCHA per informar-nos sobre aquest contingut.
+          email: Si us plau introdueix una adreça de correu electrònic
+      tos: S'ha informat que aquest projecte infringeix les <a href='http://code.org/tos'>Condicions
+        de servei</a> de Code.org i, per tant, no es pot compartir.
+    advanced_share: Mostrar opcions avançades
+    create: Crear un projecte
+    create_a_project: 'Crear un nou projecte:'
+    edit_project: Edita el projecte
+    embed: Integrar
+    exit: Tornar al curs
+    help_text: Clica <strong>Fer una App</strong> o <strong>Dibuixa quelcom</strong>
+      a sota per a fer un nou projecte de Play Lab o d'Artist!<br/> Pots tornar i
+      continuar els projectes en qualsevol moment.
+    name: Nom
+    need_help: Necessita ajuda per començar?
+    new: Crea nou
+    no_projects: Actualment no tens cap projecte. Fes clic a un dels botons de dalt
+      per començar a fer-ne un.
+    not_saved: No desat
+    project_gallery: Projectes
+    project_type: Tipus de projecte
+    projects: Projectes
+    publish: Publicar
+    saved: Desat
+    share_copy_link: 'Copia l''enllaç:'
+    share_embed_description: Podeu copiar el codi integrat en una pàgina HTML per
+      mostrar el projecte en una pàgina web.
+    share_title: Compartir el teu projecte
+    share_u13_warning: Demana permís al teu professor abans de compartir res. Compartiu
+      la vostra feina només amb companys d'escola.
+    sharing_disabled: Ho sentim, aquest projecte no es pot compartir. Si és un projecte
+      vostre o d'algun dels vostres alumnes, <a href='https://studio.code.org/users/sign_in'>inicieu
+      sessió</a> amb el vostre compte per veure el projecte.
+    thumbnail_help: No veus la miniatura correcta del teu projecte? Executa l'aplicació
+      per generar-ne una de nova. Tingues en compte que poden passar un parell d'hores
+      fins que la miniatura s'actualitzi a tot arreu.
+    unpublish: Despublicar
+    updated: Actualitzat
+    view_all: Mostra els meus projectes
+  puzzle: Puzzle
+  race_interstitial:
+    decline: Tanca
+    message: Indiqueu el vostre origen ètnic (marqueu totes les opcions pertinents)
+    races:
+      american_indian: Indígena americà/natiu d'Alaska
+      asian: Asiàtic
+      black: Negre o afroamericà
+      hawaiian: Natiu de Hawaii o d'altres illes del Pacífic
+      hispanic: Hispànic o llatinoamericà
+      opt_out: Prefereixo no contestar
+      other: Altres
+      white: Blanc
+    submit: Envia
+    title: 'Opcional: Ajudeu-nos a avaluar el progrés de les nostres accions per millorar
+      la diversitat en informàtica'
+  reference_area:
+    auth_error: No estàs autoritzat a veure la solució.
+    direction: Direcció de Començament (en graus)
+    submit: Actualitzar la ubicació del personatge
+    subtitle: Mira aquests vídeos i consells
+    teacher: Mira la solució
+    teacher_no_solution: Deixar de veure la solució
+    title: Necessites ajuda?
+  reports:
+    error:
+      access_denied: No pots accedir a les estadístiques d'aquesta persona
+  reset_predict_progress_button: Esborrar resposta
+  return_course_overview: Anar al resum del curs
+  return_unit_overview: Anar el resum de la unitat
+  school_info:
+    after_school: Activitat extraescolar
+    charter: Carta
+    district: Districte/regió
+    district_name: Nom del districte/regió
+    homeschool: Educació a casa
+    other: Altres
+    other_district_not_listed: Un altre districte no mencionat
+    other_school_not_listed: Una altra escola no mencionada
+    private: Privada
+    public: Pública
+    school: Escola
+    school_address: Adreça de l'escola
+    school_country: País de l'escola
+    school_name: Nom de l'escola
+    school_organization_name: Nom de l'escola/centre/organització
+    school_organization_zip: Codi postal de l'escola/centre/organització
+    school_zip: Codi postal de l'escola
+    select_school_type: Tipus d'escola
+    state: Estat/província
+    title: Informació de l'escola (opcional)
+  school_info_interstitial:
+    message: Introduïu les dades de la vostra escola a continuació.
+    message_with_suggestion: Comproveu que la informació següent és correcta, o feu
+      qualsevol modificació necessària.
+    save: Desa
+    title: 'Volem que la informàtica arribi a tots els alumnes: ajudeu-nos a seguir
+      el nostre progrés!'
+  section:
+    code_with_teacher: "%{section_code} amb %{teacher_name}"
+    confirm:
+      remove: Estàs segur que vols sortir d'aquesta secció?
+    default_name: Secció sense títol
+    remove: "(eliminar secció)"
+    type:
+      clever: Clever
+      email: Correu electrònic
+      google_classroom: Google Classroom
+      picture: Imatge de contrasenya
+      word: Paraula de pas
+    your_section:
+      one: 'La vostra secció:'
+      other: 'Les vostres seccions:'
+  see_your_learning_plan: Veure el seu pla d'aprenentatge
+  share:
+    description: Tothom pot aprendre programació. Crea jocs, apps i art amb codi.
+    title: Aprendre sobre Code Studio
+    try_hour_of_code: Proveu una hora de codi!
+  share_code:
+    address_not_allowed: Sembla que hi ha una adreça en això. Proveu de canviar el
+      text.
+    bounce_og_title: Comprovi el meu joc de rebot
+    check_out_what_i_made: Comprova el que he fet
+    email_not_allowed: Sembla que hi ha un correu en això. Proveu de canviar el text.
+    flappy_og_title: Comprova el meu joc de Flappy
+    og_description: Vaig escriure el codi jo sol amb Code.org
+    phone_number_not_allowed: Sembla que hi ha un número de telèfon en això. Proveu
+      de canviar el text.
+    profanity_not_allowed: Sembla que hi ha males paraules en això. Proveu de canviar
+      el text.
+    studio_og_title: Fes una mirada a la meva aplicació Play Lab
+    title: Feu clic a «Executa» per veure el meu programa en acció
+  signin:
+    try_20hours: Proveu la nostra introducció a la Informàtica de 20 hores
+    try_heading: Vols provar a programar sense donar-te d'alta?
+    try_hoc: Proveu una Hora de Codi primer
+  signin_form:
+    login: Correu electrònic
+    login_username: Correu o nom d'usuari
+    password: Contrasenya
+    remember: Recorda'm
+    submit: Iniciar sessió
+    title: Ja tens un compte? Entra-hi
+  signinsection:
+    invalid_login: Error d'identificació, intenteu-ho de nou
+    login: Inicia la sessió
+    name: Trieu el vostre nom
+    pair_programming: Treballo amb un company al mateix ordinador
+    picture: Ara busqueu la vostra foto secreta
+    student_privacy_markdown: Consulta més informació sobre per què no apareix el
+      teu nom complet [here](%{student_privacy_blog}).
+    welcome: Benvingut a %{section_name}
+    words: Ara Introduïu les vostres paraules secretes
   signup_form:
+    accept_terms: Has d'acceptar crear un compte.
+    address_placeholder: adreça, ciutat, comunitat, codi postal
+    age: Edat
+    agree_us_data_transfer_student: "**Accepto que Code.org pugui transferir dades
+      (incloses les dades personals) sobre el meu ús d'aquest lloc als Estats Units**
+      amb la finalitat d'allotjar i processar aquestes dades."
+    agree_us_data_transfer_teacher: "**Accepto que Code.org pugui transferir dades
+      (incloses les dades personals) sobre el meu ús (i el dels meus alumnes) d'aquest
+      lloc als Estats Units** amb la finalitat d'allotjar i processar aquestes dades."
+    birthday: Aniversari (opcional)
+    data_collection_us: Entenc que Code.org és una pàgina web sense ànim de lucre
+      establerta als Estats Units i que les lleis que regeixen la recopilació de dades
+      en aquest país poden ser diferents de les del meu país.
+    email_preference_no: 'No'
+    email_preference_privacy: "(Vegeu la nostra política de privacitat)"
+    email_preference_question: Podem enviar-te un e-mail sobre actualitzacions en
+      els nostres cursos, oportunitats de locals o altres notícies d'informàtica?
+      (aproximadament un cop al mes)
+    email_preference_required: Heu d'especificar una preferència de correu electrònic.
+    email_preference_yes: Sí
     email_signup: Inscriu-te amb la teva adreça d'e-mail
-    student_count: "%{count} estudiants ja s'han inscrit."
-    teacher_count: "%{count} professors ja s'han inscrit."
-    overview: Inscrigui's en un compte per tal de seguir el seu progrés o gestionar
-      el seu grup-classe. <a href="/"> podeu navegar per les diferents etapes i trencaclosques</a>
-      sense un compte, però cal tenir compte per guardar les dades del seu progrés
-      i projectes.
-    overview_markdown: Inscrigui's en un compte per tal de seguir el seu progrés o
-      gestionar el seu grup-classe. [podeu navegar per les diferents etapes i trencaclosques](/)
-      sense un compte, però cal tenir compte per guardar les dades del seu progrés
-      i projectes.
-    hoc_already_signed_up_heading: Comença sense connectar-te
+    error: S'ha produït un error.
+    field_is_required: és obligatori
+    gender: Sexe (opcional)
+    go_to_account: Ves al meu compte
     hoc_already_signed_up_content: Estas inscrit per ensenyar una hora de codi! Vostè
       i els seus estudiants no cal que inicieu la sessió al Code Studio per participar
       en aquest esdeveniment. Per començar, <a href="%{learn_url}">escull un tutorial</a>
@@ -186,656 +1136,192 @@ ca:
       asignar cursos a estudiants i vure el seu progrés. [També pots seguir navegant
       entre els diferents nivells i trencaclosques](%{studio_url}) sense crear un
       compte.
-    teacher_educator_guide: Mira la guia de l'educador
-    title: Inscrigui's a Code.org
-    school_name: Nom de l'escola (opcional)
-    school_address: Adreça de l'escola (opcional)
-    address_placeholder: adreça, ciutat, comunitat, codi postal
-    gender: Sexe (opcional)
-    birthday: Aniversari (opcional)
-    age: Edat
-    user_type: Sou alumne o mestre?
-    submit: Inscriure's
-    go_to_account: Ves al meu compte
-    teacher: Sou mestre?
-    valid_username: Disponible!
-    invalid_username: El nom d'usuari ha de tenir almenys 5 caràcters
-    taken_username: El nom d'usuari ja existeix
-    valid_password: Contrasenya vàlida!
+    hoc_already_signed_up_heading: Comença sense connectar-te
     invalid_password: La contrasenya ha de tenir almenys 6 caràcters
+    invalid_username: El nom d'usuari ha de tenir almenys 5 caràcters
     mismatch_password: Les dues contrasenyes que has introduït no coincideixen
-    student_consent: Confirmo que tinc l'autorització dels meus pares o tutors legals
-      per utilitzar los serveis de Code.org.
-    agree_us_data_transfer_student: "**Accepto que Code.org pugui transferir dades
-      (incloses les dades personals) sobre el meu ús d'aquest lloc als Estats Units**
-      amb la finalitat d'allotjar i processar aquestes dades."
-    agree_us_data_transfer_teacher: "**Accepto que Code.org pugui transferir dades
-      (incloses les dades personals) sobre el meu ús (i el dels meus alumnes) d'aquest
-      lloc als Estats Units** amb la finalitat d'allotjar i processar aquestes dades."
-    data_collection_us: Entenc que Code.org és una pàgina web sense ànim de lucre
-      establerta als Estats Units i que les lleis que regeixen la recopilació de dades
-      en aquest país poden ser diferents de les del meu país.
-    visit_privacy: Consulteu la [Política de Privacitat](%{privacy_url}) de Code.org
-      per obtenir més informació.
-    student_terms_markdown: Les adreces de correu electrònic no s'emmagatzemen en
-      una forma que ens permeti contactar amb els alumnes. Els alumnes mai rebran
-      correus electrònics de Code.org excepte en el cas de voler recuperar la contrasenya.
-      Per a més informació, vegeu la nostra [Política de Privacitat](http://code.org/privacy).
-    user_type_button: Actualitzeu el tipus de compte
-    user_type_label: Tipus de compte
-    user_type_student: alumne
-    user_type_student_desc: 'Descobreix tots els nostres cursos i activitat, i:'
-    user_type_student_ability_1: Desa la teva feina i els teus projectes
-    user_type_student_ability_2: Uneix-te a la secció de classe del teu professor
-    user_type_teacher: Mestre
-    user_type_teacher_desc: 'Tot allò a què tenen accés els alumnes, i:'
-    user_type_teacher_ability_1: Crear seccions de classe
-    user_type_teacher_ability_2: Assignar i fer seguiment de la feina dels alumnes
-    user_type_teacher_ability_3: Inscriure's a formacions professionals
-    user_type_teacher_ability_4: Interactuar al nostre fòrum de professors
-    field_is_required: és obligatori
-    accept_terms: Has d'acceptar crear un compte.
-    error: S'ha produït un error.
-    email_preference_question: Podem enviar-te un e-mail sobre actualitzacions en
-      els nostres cursos, oportunitats de locals o altres notícies d'informàtica?
-      (aproximadament un cop al mes)
-    email_preference_privacy: "(Vegeu la nostra política de privacitat)"
-    email_preference_yes: Sí
-    email_preference_no: 'No'
-    email_preference_required: Heu d'especificar una preferència de correu electrònic.
+    overview: Inscrigui's en un compte per tal de seguir el seu progrés o gestionar
+      el seu grup-classe. <a href="/"> podeu navegar per les diferents etapes i trencaclosques</a>
+      sense un compte, però cal tenir compte per guardar les dades del seu progrés
+      i projectes.
+    overview_markdown: Inscrigui's en un compte per tal de seguir el seu progrés o
+      gestionar el seu grup-classe. [podeu navegar per les diferents etapes i trencaclosques](/)
+      sense un compte, però cal tenir compte per guardar les dades del seu progrés
+      i projectes.
+    parent_account_checkbox: Soc pare/mare/tutor legal i estic registrant el compte
+      en nom del meu fill/filla
+    parent_account_email_label: Correu electrònic per pares/tutors
+    parent_account_email_progress_permission: Us podem enviar notificacions ocasionals
+      sobre la feina i els projectes del vostre fill, i notícies sobre el seu curs
+      i la informàtica? [(Vegeu la nostra Política de Privacitat)](%{privacy_policy_url})
+    school_address: Adreça de l'escola (opcional)
+    school_name: Nom de l'escola (opcional)
+    share_teacher_email_reg_partner_preference_no: 'No'
+    share_teacher_email_reg_partner_preference_required: Heu d'especificar una preferència
+      de correu electrònic.
+    share_teacher_email_reg_partner_preference_yes: Sí
     share_teacher_email_reg_partner_question: Voleu que compartim les vostres dades
       de contacte amb el [soci regional de Code.org](%{cdo_regional_partner_desc})
       de la vostra zona perquè us puguin enviar notificacions sobre oportunitats de
       desenvolupament professional, recursos i esdeveniments?
-    share_teacher_email_reg_partner_preference_yes: Sí
-    share_teacher_email_reg_partner_preference_no: 'No'
-    share_teacher_email_reg_partner_preference_required: Heu d'especificar una preferència
-      de correu electrònic.
-    parent_account_checkbox: Soc pare/mare/tutor legal i estic registrant el compte
-      en nom del meu fill/filla
-    parent_account_email_progress_permission: Us podem enviar notificacions ocasionals
-      sobre la feina i els projectes del vostre fill, i notícies sobre el seu curs
-      i la informàtica? [(Vegeu la nostra Política de Privacitat)](%{privacy_policy_url})
-    parent_account_email_label: Correu electrònic per pares/tutors
+    student_consent: Confirmo que tinc l'autorització dels meus pares o tutors legals
+      per utilitzar los serveis de Code.org.
+    student_count: "%{count} estudiants ja s'han inscrit."
+    student_terms_markdown: Les adreces de correu electrònic no s'emmagatzemen en
+      una forma que ens permeti contactar amb els alumnes. Els alumnes mai rebran
+      correus electrònics de Code.org excepte en el cas de voler recuperar la contrasenya.
+      Per a més informació, vegeu la nostra [Política de Privacitat](http://code.org/privacy).
+    submit: Inscriure's
+    taken_username: El nom d'usuari ja existeix
+    teacher: Sou mestre?
+    teacher_count: "%{count} professors ja s'han inscrit."
+    teacher_educator_guide: Mira la guia de l'educador
+    title: Inscrigui's a Code.org
     us_state: Estat/província
-  school_info:
-    title: Informació de l'escola (opcional)
-    school_country: País de l'escola
-    select_school_type: Tipus d'escola
-    charter: Carta
-    private: Privada
-    public: Pública
-    homeschool: Educació a casa
-    after_school: Activitat extraescolar
-    other: Altres
-    state: Estat/província
-    district: Districte/regió
-    other_district_not_listed: Un altre districte no mencionat
-    district_name: Nom del districte/regió
-    school: Escola
-    other_school_not_listed: Una altra escola no mencionada
-    school_name: Nom de l'escola
-    school_zip: Codi postal de l'escola
-    school_address: Adreça de l'escola
-    school_organization_name: Nom de l'escola/centre/organització
-    school_organization_zip: Codi postal de l'escola/centre/organització
-  signin_form:
-    title: Ja tens un compte? Entra-hi
-    login: Correu electrònic
-    login_username: Correu o nom d'usuari
-    password: Contrasenya
-    remember: Recorda'm
-    submit: Iniciar sessió
-  signin:
-    try_heading: Vols provar a programar sense donar-te d'alta?
-    try_hoc: Proveu una Hora de Codi primer
-    try_20hours: Proveu la nostra introducció a la Informàtica de 20 hores
-  signinsection:
-    welcome: Benvingut a %{section_name}
-    name: Trieu el vostre nom
-    picture: Ara busqueu la vostra foto secreta
-    words: Ara Introduïu les vostres paraules secretes
-    login: Inicia la sessió
-    invalid_login: Error d'identificació, intenteu-ho de nou
-    pair_programming: Treballo amb un company al mateix ordinador
-    student_privacy_markdown: Consulta més informació sobre per què no apareix el
-      teu nom complet [here](%{student_privacy_blog}).
-  password:
-    reset_form:
-      title: Has oblidat la constrasenya?
-      instructions: Introduïu el correu electrònic associat al vostre compte a continuació
-        i us enviarem les instruccions per restablir la contrasenya.
-      email: Correu electrònic
-      submit: Envia
-    reset_errors:
-      captcha_required: Ompliu el CAPTCHA per restablir la contrasenya.
-      invalid_email: Sembla que us heu registrat amb una adreça de correu invàlida.
-        Contacteu amb support@code.org per rebre un enllaç per recuperar la contrasenya.
-    change_form:
-      title: Canvia la contrasenya
-      new_password: Nova contrasenya
-      confirm_password: Confirma la nova contrasenya
-      submit: Canvia la contrasenya
-  welcome_email:
-    subject: Uneix-te a la meva classe (a Code.org)
-    body: |
-      Clica el següent enllaç per inscriure't als tutorials d'informàtica de Code.org (amb mi com el teu "professor"):
-
-      %{link}
-
-      Els tutorials són divertits, visualment atractius, i ensenyen els conceptes bàsics de la informàtica utilitzant una senzilla i guiada experiència a l'estil videojoc. Aprèn a programar de Bill Gates, Mark Zuckerberg, Angry Birds, i Plants vs. Zombies! :-)
-
-      %{name}
-  parent_mailer:
-    student_associated_subject: Informació d'inici de sessió a Code.org
-    parent_email_added_subject: Benvinguts a Code.org!
-  teacher_mailer:
-    new_teacher_subject: Benvinguts a Code.org!
-    delete_teacher_subject: 'Notificació de Code.org: el vostre compte s''ha eliminat'
-    verified_teacher_subject: Verificació de professors a Code.org - Completada
-  section:
-    your_section:
-      one: 'La vostra secció:'
-      other: 'Les vostres seccions:'
-    code_with_teacher: "%{section_code} amb %{teacher_name}"
-    confirm:
-      remove: Estàs segur que vols sortir d'aquesta secció?
-    default_name: Secció sense títol
-    remove: "(eliminar secció)"
-    type:
-      picture: Imatge de contrasenya
-      word: Paraula de pas
-      email: Correu electrònic
-      google_classroom: Google Classroom
-      clever: Clever
-  follower:
-    invite_sent: S'ha enviat la invitació
-    added_teacher: S'ha afegit %{name} com el teu mestre
-    registered: T'has registrat a %{section_name}.
-    captcha_required: Omple el CAPTCHA per unir-te a aquesta secció.
-    already_exists: Ja t'has unit a la secció %{section_name}.
-    error:
-      signed_in: Tanca la sessió abans de continuar
-      username_not_found: Usuari %{username} no trobat
-      username_in_use: "%{username} ja existeix, tria'n un altre"
-      no_teacher: No s'ha trobat ningú registrat amb '%{teacher_email_or_code}'. Si
-        us plau, demana'ls que es registrin aquí i després, prova a afegir-los una
-        altra vegada
-      section_not_found: No s'ha pogut trobar una secció amb el codi "%{section_code}".
-      blank_code: Introduïu un codi de secció
-      cant_join_own_section: No pots unir-te a la teva pròpia secció.
-      provider_managed_section: Aquesta secció és gestionada per un altre proveïdor
-        i no t'hi pots unir. Demana al teu professor que t'hi afegeixi a través de
-        %{provider} i que torni a sincronitzar la secció.
-      restricted_section: No t'hem pogut afegir a la secció %{section_code} perquè
-        està bloquejada. Contacta amb el teu professor perquè t'ajudi.
-      full_section: No t'hem pogut afegir a la secció %{section_code} perquè ja hi
-        ha %{section_capacity} alumnes. Posa't en contacte amb el teu professor perquè
-        t'ajudi.
-      not_participant_type: No t'hem pogut afegir a la secció %{section_code} perquè
-        el teu perfil de participant no és compatible amb aquesta secció.
-    mail:
-      student_disassociated:
-        subject: 'Notificació Code.org: ja no s''associa %{student_name} com el vostre
-          alumne.'
-  reports:
-    error:
-      access_denied: No pots accedir a les estadístiques d'aquesta persona
-  crud:
-    new_model: Crea %{model}
-    show: Mostra
-    edit: Edita
-    edit_model: Edita %{model}
-    update: Actualitza
-    submit: Envia
-    destroy: Destrueix
-    back: Tornar
-    confirm: Estàs segur?
-    created: "%{model} s'ha creat correctament."
-    updated: "%{model} s'ha actualitzat correctament."
-    destroyed: "%{model} s'ha esborrat correctament."
-    access_denied: No tens accés a aquest %{model}.
-  devise:
-    registrations:
-      user:
-        user_type_change_email_mismatch: El correu electrònic proporcionat no es correspon
-          amb el correu electrònic vinculat a aquest compte
-        personal_login_created_email: Has creat un compte d'inici de sessió personal.
-          Ara ja pots iniciar sessió al teu compte amb el teu correu electrònic i
-          contrasenya
-        personal_login_created_username: Has creat un compte d'inici de sessió personal.
-          Ara ja pots iniciar sessió al teu compte amb el teu nom d'usuari (%{username})
-          i contrasenya
-  nav:
-    header:
-      finished_hoc: He acabat!
-      sign_in_to_save: Inicia la sessió per a desar el progrés
-      my_dashboard: El meu panell de control
-      course_catalog: Catàleg de cursos
-      project_gallery: Projectes
-      sections: Seccions
-      help_support: Ajuda i suport
-      report_bug: Informar d'un problema
-      teacher_community: Fòrum del professor
-      professional_learning: Formació professional
-      documentation: Documentació
-      tutorials: Tutorials
-      sprite_lab_documentation: Documentació del Laboratori d'Sprites
-      web_lab_documentation: Documentació del Laboratori Web
-      educate_overview: Resum del docent
-      educate_elementary: Escola primària
-      educate_middle: E.S.O.
-      educate_high: Batxillerat
-      educate_hoc: L'hora del codi
-      educate_partner: Col·laboreu amb nosaltres
-      educate_beyond: Més enllà de Code.org
-      educate_inspire: Inspireu un alumne
-      educate_community: Comunitat virtual
-      educate_tools: Eines i vídeos
-      about_us: Sobre nosaltres
-      about_leadership: Lideratge
-      about_donors: Donants
-      about_partners: Socis
-      about_team: Equip complet
-      about_news: Sala de premsa
-      about_evaluation: Avaluació
-      about_jobs: Llocs de treball
-      about_contact: Contacta'ns
-      about_faqs: Preguntes freqüents
-      learn: Aprèn
-      stats: Estadístiques
-      help_us: Ajuda'ns
-      teach: Ensenya
-      about: Qui som
-      incubator: Incubadora
-      legal_privacy: Política de privacitat
-      legal_cookie_notice: Política de galetes
-      legal_tos: Condicions d'ús
-    user:
-      classroom: Pàgina d'inici de mestre
-      district_dashboard: Quadre de comandament de districte
-      label: Hola %{username}
-      stats: Code Studio
-      settings: El meu compte
-      logout: Tanca la sessió
-      signin: Iniciar sessió
-      signup: Crear compte
-      already_registered: Ja estàs registrat?
-      pair_programming: Programació per parelles
-      team: Equip
-      driver: Connectat
-      navigator: Soci
-      create: Crear
-      algebra_game: Àlgebra
-      applab: Laboratori d'aplicacions
-      artist: Artista
-      artist_k1: Artista (Pre-lector)
-      basketball: Bàsquet
-      bounce: Rebota
-      calc: Càlcul
-      dance: Festa de ball
-      eval: Aval.
-      flappy: Flappy
-      frozen: Frozen
-      gamelab: Laboratori de jocs
-      gamelab_jr: Laboratori de Jocs (beta)
-      iceage: Edat de gel
-      infinity: Infinit
-      makerlab: Maker Toolkit
-      minecraft_adventurer: 'Minecraft: L''aventurer'
-      minecraft_aquatic: Viatge Aquàtic de Minecraft
-      minecraft_codebuilder: 'Minecraft: Code Connection'
-      minecraft_designer: Minecraft
-      minecraft_hero: Heroi de Minecraft
-      playlab: Play Lab
-      playlab_k1: Laboratori de Jocs (pre-lector)
-      poetry: Poesia
-      poetry_hoc: L'art del poema
-      scratch: Scratch
-      sports: Esports
-      spritelab: Laboratori de personatges
-      starwars: Star Wars
-      thebadguys: Males bèsties
-      loading: Carregant...
-      weblab: Laboratori Web
-      view_all: Mostra tots els projectes...
-    popup:
-      progress_for_user: Progrés de %{name}
-      progress: El teu progrés
-      close: TANCA
-      mastery: Conceptes
-      puzzle_map: Etapes
-      prizes: Recull els %{total_trophies} trofeus i guanya premis!
-      prize_earned: Has agafat els %{total_trophies} trofeus. El premi és teu!
-      prize_us_only: "(només estudiants EUA)"
-      prizes_link: Més informació
+    user_type: Sou alumne o mestre?
+    user_type_button: Actualitzeu el tipus de compte
+    user_type_label: Tipus de compte
+    user_type_student: alumne
+    user_type_student_ability_1: Desa la teva feina i els teus projectes
+    user_type_student_ability_2: Uneix-te a la secció de classe del teu professor
+    user_type_student_desc: 'Descobreix tots els nostres cursos i activitat, i:'
+    user_type_teacher: Mestre
+    user_type_teacher_ability_1: Crear seccions de classe
+    user_type_teacher_ability_2: Assignar i fer seguiment de la feina dels alumnes
+    user_type_teacher_ability_3: Inscriure's a formacions professionals
+    user_type_teacher_ability_4: Interactuar al nostre fòrum de professors
+    user_type_teacher_desc: 'Tot allò a què tenen accés els alumnes, i:'
+    valid_password: Contrasenya vàlida!
+    valid_username: Disponible!
+    visit_privacy: Consulteu la [Política de Privacitat](%{privacy_url}) de Code.org
+      per obtenir més informació.
+  slow_loading: Això està trigant més de l'habitual...
+  stage: etapa
+  stage_number: Etapa %{number}
+  studio:
+    all_courses: Tots els cursos
+    completed_courses: Cursos completats
+    courses_working_on: Cursos en els que estàs treballant
+  submit: Envia
   teacher:
     answer: Resposta
+    confirm:
+      remove: Esteu segur que voleu eliminar aquest mestre?
     for_teachers_only: Només per a professors
+    panel:
+      answer_viewer: Panell del professor
+      clear_response: Esborrar resposta
+      example: Exemple de solució
+      example_with_number: Exemple de solució %{solution_number}
+      last_updated: 'Darrera actualització:'
+      section: Secció
+      student: alumne
+      submitted_on: 'Enviat el:'
+      try_it_yourself: Prova-ho tu
+      unsubmit: Retirar
+      update_lock_settings: Actualitzeu la configuració bloqueig.
+      viewing_solution: Mostra la solució
+      worked_with: Ha treballat amb
+    remove: "(elimina el mestre)"
+    student_code_view_diabled: En aquesta activitat no es pot veure el codi de l'alumne.
+    student_teacher_disassociated: Vostè ha tret %{teacher_name} com el seu mestre.
+    students:
+      dashboard: Ves al Tauler del Mestre
     title:
       one: 'El teu mestre:'
       other: 'Els teus mestres:'
-    remove: "(elimina el mestre)"
-    confirm:
-      remove: Esteu segur que voleu eliminar aquest mestre?
-    students:
-      dashboard: Ves al Tauler del Mestre
     user_not_found: No es troba el mestre.
-    student_teacher_disassociated: Vostè ha tret %{teacher_name} com el seu mestre.
-    panel:
-      answer_viewer: Panell del professor
-      student: alumne
-      viewing_solution: Mostra la solució
-      try_it_yourself: Prova-ho tu
-      section: Secció
-      example: Exemple de solució
-      example_with_number: Exemple de solució %{solution_number}
-      submitted_on: 'Enviat el:'
-      last_updated: 'Darrera actualització:'
-      unsubmit: Retirar
-      worked_with: Ha treballat amb
-      update_lock_settings: Actualitzeu la configuració bloqueig.
-      clear_response: Esborrar resposta
-    student_code_view_diabled: En aquesta activitat no es pot veure el codi de l'alumne.
-  user:
-    email_confirm_needed: 'L''adreça de correu electrònic no ha estat confirmada:'
-    email_confirm_needed_required: 'La seva adreça de correu electrònic %{email} no
-      ha estat confirmada:'
-    email_confirm_wrong_email: "(Adreça d'e-mail equivocada?)"
-    email_resend_confirm: Torna a enviar les instruccions de confirmació
-    new_email_hint: "(assegureu-vos que podeu rebre correus electrònics en aquesta
-      adreça)"
-    new_password_hint: "(deixa-ho en blanc si no vols canviar-lo)"
-    current_password_hint: "(necessitem la teva contrasenya actual per a confirmar
-      els canvis)"
-    delete: Suprimir el vostre compte
-    delete_text: Fent clic al botó de sota suprimirà el compte.
-    delete_text_teacher_managed_note: No tens permís per eliminar aquest compte perquè
-      és el teu professor qui el gestiona. El teu professor t'haurà d'eliminar de
-      les seves seccions per tal que puguis eliminar el teu compte.
-    delete_text_teacher_note: 'Tingueu en compte: Si suprimiu el vostre compte no
-      s''esborrarant els comptes dels seus alumnes.'
-    delete_confirm: Esteu segur que voleu suprimir el vostre compte?
-    deleted_user: usuari eliminat
-    no_password_because_oauth: No tens contrasenya perquè inicies sessió amb un proveïdor
-      extern.
-    no_password_because_sponsored: Consulta el teu professor per gestionar la teva
-      contrasenya.
-    create_personal_login: Crear una contrasenya personal per iniciar sessió
-    create_personal_login_under_13_info: Si vols seguir fent servir el teu compte
-      de Code.org un cop acabat el curs acadèmic, demana als teus pares/tutors que
-      t'ajudin a crear un inici de sessió personal a continuació.
-    create_personal_login_under_13_username: Nom d'usuari (no facis servir el teu
-      nom real!)
-    create_personal_login_under_13_parent_email: Correu electrònic dels pares/tutors
-    create_personal_login_info: Si vols seguir fent servir el teu compte de Code.org
-      un cop acabat el curs acadèmic, pots crear el teu compte propi a continuació.
-    create_personal_login_link_account: O, si ho prefereixes, pots vincular-lo a un
-      compte personal a l'apartat de "Gestionar comptes vinculats".
-    create_personal_login_terms: 'En crear un compte d''accés personal, accepto les
-      <a href=''%{terms_of_service_url}'', target=''_blank''>condicions de servei</a>
-      de Code.org. Confirmo que tinc el permís dels meus pares o tutors legals per
-      fer servir els serveis de Code.org sense la supervisió d''un professor. '
-    create_personal_login_terms_markdown: 'En crear un compte d''accés personal, accepto
-      les [condicions de servei](%{terms_of_service_url}) de Code.org. Confirmo que
-      tinc el permís dels meus pares o tutors legals per fer servir els serveis de
-      Code.org sense la supervisió d''un professor. '
-    create_personal_login_email_note: 'Important: les adreces de correu electrònic
-      no s''emmagatzemen en una forma que ens permeti contactar amb els alumnes. Els
-      alumnes mai rebran correus electrònics de Code.org excepte en el cas de voler
-      recuperar la contrasenya. Per a més informació, vegeu la nostra <a href=''%{privacy_policy_url}'',
-      target=''_blank''>política de privacitat</a>.'
-    create_personal_login_email_note_markdown: 'Important: les adreces de correu electrònic
-      no s''emmagatzemen en una forma que ens permeti contactar amb els alumnes. Els
-      alumnes mai rebran correus electrònics de Code.org excepte en el cas de voler
-      recuperar la contrasenya. Per a més informació, vegeu la nostra [Política de
-      Privacitat](%{privacy_policy_url}).'
-    enter_new_login_info: Introdueix les dades d'accés noves
-    confirm_secret_words: Per confirmar que ets tu, has d'introduir les paraules secretes
-      que fas servir actualment
-    parent_email_label: Correu electrònic del pare/mare/tutor (opcional)
-    parent_email_hint: "(es pot fer servir per recuperar la contrasenya)"
-    enter_parent_email: Introdueix els correus electrònics dels teus pares o tutors
-      (per poder recuperar la contrasenya)
-    update: Actualitzar compte
-    account_successfully_updated: Compte actualitzat amb èxit.
-    auth_option_saved: Has vinculat el teu compte de %{provider} amb el correu electrònic
-      %{email}.
-    auth_option_saved_no_email: Has vinculat el teu compte de %{provider}.
-    update_email: Actualitza
-    for_parents_and_guardians: Per a pares i tutors
-    link_a_parent_email: Vinculeu el vostre correu electrònic com a pare o tutor per
-      estar informats de la feina i els projectes del vostre fill. També podreu fer
-      servir aquest compte per recuperar la contrasenya.
-    parent_guardian_email_label: E-mail del pare/tutor
-    remove_parent_email_label: Esborra
-    none: Cap
-    only_one_parent_email_supported_warning: 'Important: en aquests moments, només
-      es pot introduir un correu electrònic per pare o tutor per cada compte d''alumne.'
-    encrypted: encriptat
-  user_level:
-    completed: Completat
-    tried: Provat
-  home:
-    title: Code Studio
-    all_courses: Informació general dels cursos 1, 2 i 3
-    lesson_plans: Unitats didàctiques
-    signin_message: Ja estàs registrat? %{link}
-    student_reg_link: Alumne registra't
-    teacher_reg_link: Mestre registra't
-    signin_directions: Utilitza un compte per seguir el teu progrés. <br/> Professors,
-      seguïu la classe sencera.
-    teacher_dashboard: Ves al tauler de progrés
-    teacher_student_count_one: Tens %{count} estudiant.
-    teacher_student_count: Tens %{count} estudiants.
-    teacher_averages: "Els teus estudiants han guanyat de mitjana %{trophy_average}
-      fora del \n%{trophy_max} \"Concepte de Domini\" de trofeus."
-    teacher_print_certificates: Imprimeix certificats per als estudiants que acabin
-      aquest curs
-    teacher_read_blog: Llegiu notícies i actualitzacions sobre els nostres materials
-      al nostre Blog d'educació
-    classroom: La teva classe
-    student_progress: El teu progrés d'aprenentatge
-    student_stats: Has guanyat %{trophy_count} de %{trophy_max} trofeus de "Concepte
-      de Domini".
-    student_left_off: 'On ho vas deixar:'
-    student_finished: Has completat totes les classes, tria un altra classe %{online_link}
-      o a una %{local_school_link}
-    local_school: escola local
-    online: en línia
-    see_details: Veure detalls
-    view_course: Veure el curs
-    prize_info: 'Premis de participació (només per escoles públiques dels Estats Units):
-      fins a 1.000 dòlars recompenses per aula.'
-    tryfirst: 'O podeu provar-ho primer i registrar-vos després:'
-    trynow: Més informació
-    add_hint_help: Si us plau, ajuda'ns a afegir pistes als tutorials de Code.org
-    20hour_overview: Aquest curs de 20 hores és una introducció als conceptes bàsics
-      d'informàtica i programació. El curs ha estat dissenyat per impartir a alumnes
-      de 1er d'ESO, però és divertit d'aprendre a qualsevol edat.
-    test_videos_help: Prova el nostre nou reproductor de vídeo a la teva escola
-    try_beta_courses: Nou! Prova els nostres cursos beta per alumnes de infantil
-    use_as_teacher: Utilitza aquest lloc com a mestre
-    heading_elementary_markdown: |-
-      ## Cursos de 20 hores de
-
-      # Fonaments de la Informàtica (per a totes les edats)
-    your_gallery: Galeria
-    no_primary_course: Intenta un curs a Code Studio
-    choose_next_course: Intenta un curs Code Studio triant-ne un a continuació
-    print_certificate: Imprimeix el certificat
-  certificate_hour_of_code: L'hora del codi
-  move_students:
-    new_section_dne: Ho sentim, però la secció %{new_section_code} no existeix. Introduïu
-      un codi de secció diferent.
-    section_code_cant_be_current_section: La secció actual no pot ser la mateixa que
-      la nova.
-    current_section_dne: Ho sentim, però la secció %{current_section_code} no existeix.
-      Introduïu un codi de secció diferent.
-    student_ids_not_entered: Introduïu els identificadors dels alumnes.
-    student_not_found: No s'han trobat un o més alumnes.
-    all_students_must_be_in_current_section: Totes els alumnes han d'estar inscrits
-      a la vostra secció.
-    already_enrolled_in_new_section: No podeu moure aquests alumnes perquè ja es troben
-      a la secció nova.
-    third_party_login: No podeu moure els alumnes a una secció sincronitzada amb una
-      eina externa.
-    not_correct_participant_type: No podeu moure aquests usuaris perquè no tenen els
-      permisos necessaris per participar en la secció nova.
-  share:
-    title: Aprendre sobre Code Studio
-    description: Tothom pot aprendre programació. Crea jocs, apps i art amb codi.
-    try_hour_of_code: Proveu una hora de codi!
-  gender:
-    male: Home
-    female: Dona
-    non_binary: No binari
-    not_listed: Terme preferit no mencionat
-    none: Prefereixo no respondre
-  user_type:
-    student: alumne
-    teacher: Mestre
-  footer:
-    thank_you: Agraïm als nostres <a href="https://code.org/about/donors"> donants</a>,
-      <a href="https://code.org/about/partners"> socis</a>, al nostre <a href="https://code.org/about/team">
-      extens equip</a>, al nostre elenc de vídeo i als nostres <a href="https://code.org/about/advisors">
-      assessors d'educació</a> pel seu suport en la creació de Code Studio.
-    help_from_html: Enginyers de Google, Microsoft, Facebook i Twitter i han ajudat
-      a crear aquesta classe.
-    help_from_html_old: Enginyers d'Amazon, Google i Microsoft han ajudat a crear
-      aquests materials.
-    art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Tots els drets reservats.
-      < br / > Star Wars &#8482; © %{current_year} Disney i Lucasfilm. Tots els drets
-      reservats. < br / > Frozen &#8482; © %{current_year} Disney. Tots els drets
-      reservats. < br / > Ice Age &#8482; © %{current_year} segle Xx Fox. Tots els
-      drets reservats. < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio entreteniment
-      Ltd. Tots els drets reservats. < br / > Plants vs Zombies &#8482; © %{current_year}
-      Electronic Arts Inc Tots els drets reservats. < br / > El sorprenent món de
-      Gumball és marca registrada i © 2015 Cartoon Network.
-    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Tots els
-      drets reservats. Star Wars&#8482; &copy; %{current_year} Disney i Lucasfilm.
-      Tots els drets reservats. Frozen&#8482; &copy; %{current_year} Disney. Tots
-      els drets reservats. Ice Age&#8482; &copy; %{current_year} 20th Century Fox.
-      Tots els drets reservats. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Tots els drets reservats. Plants vs. Zombies&#8482; &copy;
-      %{current_year} Electronic Arts Inc. Tots els drets reservats. DreamWorks Los
-      tipos malos &copy; %{current_year} DreamWorks Animation LLC. Tots els drets
-      reservats.
-    code_from_html: Code.org fa servir p5.play, sota llicència de <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
-      GNU LGPL 2.1</a>.
-    powered_by_aws: Funciona amb Amazon Web Services
-    built_on_github: Fet amb GitHub de Microsoft
-    google_copyright: "&copy; Google Inc. utilitzat amb permís. Google Classroom és
-      una marca comercial de Google Inc."
-    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, el logotip de CODE
-      i de l'Hora del Codi&reg; són marques registrades de Code.org."
-    copyright: Copyright
-    more: Més
-    feedback: Digues la teva
-    translate: Ajudeu-nos a traduir els continguts
-    support: Suport
-    support_url: http://support.code.org
-    tos_short: Condicions
-    tos: Condicions d'ús
+  teacher_feedback: Comentaris del professor
+  teacher_mailer:
+    delete_teacher_subject: 'Notificació de Code.org: el vostre compte s''ha eliminat'
+    new_teacher_subject: Benvinguts a Code.org!
+    verified_teacher_subject: Verificació de professors a Code.org - Completada
+  terms_interstitial:
+    accept: Acceptar
+    accept_label: Accepto les<a href="%{tos_url}" target="_blank">Condicions de servei</a>
+      i la <a href="%{privacy_url}" target="_blank">Política de privacitat</a>.
+    accept_label_markdown: Accepto les [Condicions de servei](%{tos_url}) i la [Política
+      de privacitat](%{privacy_url}).
+    accept_tos: En registrar-vos a Code.org, accepteu les nostres [Condicions de servei](%{tos_url})
+      i la [Política de privacitat](%{privacy_url}).
+    intro_desc: Tal com es mostra a continuació, hem actualitzat les nostres condicions
+      de servei i la política de privacitat. Aquests canvis entraran en vigor el 24
+      d'agost del 2016. El canvi principal és que <i>deixarem d'emmagatzemar els correus
+      electrònics dels comptes dels alumnes a Code Studio.</i> És un pas molt important
+      per a nosaltres, i esperem que marqui un nou criteri per la privacitat dels
+      alumnes que fan servir tecnologies educatives. Us hem enviat un resum dels altres
+      canvis per correu electrònic.
+    intro_desc_markdown: Tal com es mostra a continuació, hem actualitzat les nostres
+      condicions de servei i la política de privacitat. Aquests canvis entraran en
+      vigor el 24 d'agost del 2016. El canvi principal és que *deixarem d'emmagatzemar
+      els correus electrònics dels comptes dels alumnes a Code Studio.* És un pas
+      molt important per a nosaltres, i esperem que marqui un nou criteri per la privacitat
+      dels alumnes que fan servir tecnologies educatives. Us hem enviat un resum dels
+      altres canvis per correu electrònic.
+    intro_instructions: Haureu d'acceptar aquestes noves condicions per tal que els
+      alumnes de menys de 13 anys de la vostra classe tinguin un accés total a les
+      funcions més recents de Code Studio. Quan registreu un compte d'un alumne de
+      menys de 13 anys, se us demanarà que confirmeu que la vostra escola compta amb
+      l'autorització dels pares per recopilar les dades personals de l'alumne per
+      a l'ús i benefici de l'escola, incloent per la inscripció a programes educatius
+      com ara Code Studio.
+    print: Imprimeix
     privacy: Política de privacitat
-    secure: Versió segura
-    report_abuse: Denuncieu un abús
-    built_on_code_studio: Creat a Code Studio
-    make_my_own_app: Fer la meva aplicació
-    how_it_works: Com funciona
-    try_hour_of_code: Proveu una hora de codi!
-    store: Botiga
-    cookie_notice: Política de galetes
-    view_code: Veure codi
-    locale_select: Seleccionar idioma
-  reference_area:
-    title: Necessites ajuda?
-    subtitle: Mira aquests vídeos i consells
-    teacher: Mira la solució
-    teacher_no_solution: Deixar de veure la solució
-    auth_error: No estàs autoritzat a veure la solució.
-    submit: Actualitzar la ubicació del personatge
-    direction: Direcció de Començament (en graus)
-  video:
-    tab: Vídeo.
-    notes: No hi ha vídeo? Mostra les notes.
-    notes_coming_soon: Notes per a aquest vídeo molt aviat.
-    autoplay_option: Reprodueix automàticament els vídeos
-    download: Descarregar vídeo
-    show_notes: Mostrar notes
-    show_video: Mostrar vídeo
-    label: Vídeo
-  compatibility:
-    upgrade:
-      unsupported_message: El vostre navegador no és compatible. Sisplau, actualitzeu-lo
-        a [un dels nostres navegadors compatibles](%{supported_browsers_url}). Podeu
-        provar de veure la pàgina, però la funcionalitat es podria veure afectada.
-      link: Més informació
-      applab_unsupported_tablet: El Laboratori d'aplicacions funciona millor en un
-        ordinador de sobretaula o portàtil amb ratolí i teclat. És possible que tingueu
-        problemes si feu servir aquesta eina en el dispositiu actual.
-      gamelab_unsupported_tablet: El Laboratori de jocs funciona millor en un ordinador
-        de sobretaula o portàtil amb ratolí i teclat. És possible que tingueu problemes
-        si feu servir aquesta eina en el dispositiu actual.
-      weblab_unsupported_locale_storage: És possible que tingueu problemes amb el
-        Laboratori web si feu servir el mode de navegació privada. Sisplau, carregueu
-        el projecte un altre cop amb el mode normal. Disculpeu les molèsties.
-  deprecation:
-    algebra_lab: 'El pla d''estudis i els continguts d''Informàtica i Àlgebra està
-      a punt de quedar obsolet. En els pròxims mesos, aquest laboratori deixarà d''estar
-      disponible. En el seu lloc, consulteu-ne la versió alternativa [Bootstrap: Algebra](%{bootstrap_algebra_url}).
-      [Més informació](%{cs_algebra_url}).'
-  slow_loading: Això està trigant més de l'habitual...
+    privacy_notice: Avís de privacitat
+    reminder_desc: Hem actualitzat les nostres <a href="%{tos_url}" target="_blank">Condicions
+      de servei</a> i la <a href="%{privacy_url}" target="_blank">Política de privacitat</a>.
+      Llegiu-les detingudament abans d'acceptar-les. Tingueu present que és possible
+      que els vostres alumnes no tinguin accés les eines amb què ensenyem JavaScript
+      fins que no accepteu explícitament les condicions actualitzades.
+    reminder_desc_markdown: Hem actualitzat les nostres [Condicions de servei](%{tos_url})
+      i la [Política de privacitat](%{privacy_url}). Llegiu-les detingudament abans
+      d'acceptar-les. Tingueu present que és possible que els vostres alumnes no tinguin
+      accés les eines amb què ensenyem JavaScript fins que no accepteu explícitament
+      les condicions actualitzades.
+    review_terms: Consultar les condicions actualitzades
+    title: Actualització de les condicions de servei i de la política de privacitat
+    tos: Condicions d'ús
+  text_match:
+    correct_body: Aquesta és la resposta correcta.
+    correct_title: Correcte
+    open_response_body: Gràcies per la resposta!
+    open_response_title: Gràcies
+    placeholder: Introdueix la teva resposta aquí
+  time:
+    day: dia
+    hour: 1 hora
+    week: setmana
+  trophies: trofeus
+  try_hoc: 'Prova l''Hora de Codi, fes clic aquí >> '
+  try_k8intro: O proveu el nostre curs d'introducció a la Informàtica per a ESO (15-25
+    hores)
   try_reloading: Prova de tornar a carregar la pàgina
-  next_stage: Has acabat! Continua amb la següent etapa
-  download_pdf: Obre la unitat didàctica
-  lesson_plan: Unitat didàctica
-  view_lesson_plan: Veure unitat didàctica
-  pdf_download: Descarrega el PDF
-  download_coming_soon: Activitat descarregable properament.
-  video_coming_soon: Vídeo molt aviat!
-  share_code:
-    title: Feu clic a «Executa» per veure el meu programa en acció
-    bounce_og_title: Comprovi el meu joc de rebot
-    flappy_og_title: Comprova el meu joc de Flappy
-    studio_og_title: Fes una mirada a la meva aplicació Play Lab
-    check_out_what_i_made: Comprova el que he fet
-    og_description: Vaig escriure el codi jo sol amb Code.org
-    phone_number_not_allowed: Sembla que hi ha un número de telèfon en això. Proveu
-      de canviar el text.
-    address_not_allowed: Sembla que hi ha una adreça en això. Proveu de canviar el
-      text.
-    email_not_allowed: Sembla que hi ha un correu en això. Proveu de canviar el text.
-    profanity_not_allowed: Sembla que hi ha males paraules en això. Proveu de canviar
-      el text.
-  builder:
-    created: Has creat un script nou.
-    destroyed: Has destruït un script.
-    manage: Construir nivells
-    view: Visualitza
-    back: Torna als scripts
-    success: Has editat els blocs correctament.
-    level:
-      create: Crea un nivell nou
-      current: Nivells actuals
-      unused: Nivells sense utilitzats
+  unit_prefix: Unitat %{n}
+  unplugged_activity: Activitat sense connexió
+  unsubmit: Retirar
   upsell:
+    20-hour:
+      body: Aquest curs de 20 hores és una introducció als conceptes bàsics d'informàtica
+        i programació. El curs ha estat dissenyat per impartir a alumnes de 1er d'ESO,
+        però és divertit d'aprendre a qualsevol edat.
+      body_short: Aprèn informàtica bàsica en una versió accelerada dels cursos 2-4.
+      title: Curs accelerat
     applab:
-      title: Laboratori d'aplicacions
+      audience: A partir de 13 anys
       body: El Laboratori d'aplicacions és un entorn de programació on podeu crear
         aplicacions simples. Dissenyeu una aplicació, programeu-la amb blocs o JavaScript
         per fer-la funcionar i compartiu-la en pocs segons.
       body_short: Dissenya una aplicació, programa-la amb blocs o JavaScript per fer-la
         funcionar, i comparteix-la en segons.
-      audience: A partir de 13 anys
       cta: Descobrir com fer-ho
       image_alt: Un conillet lila que porta una motxilla propulsada per coets.
+      title: Laboratori d'aplicacions
     applab-intro:
       image_alt: Una mà que toca el centre de la pantalla d'un telèfon intel·ligent.
         De la pantalla en surten llums i espurnes.
     aquatic:
-      title: Minecraft
       image_alt: L'Steve i l'Alex de Minecraft t'estan buscant.
+      title: Minecraft
     artist:
       image_alt: Un ninot de dibuixos animats sosté un llapis enorme i dibuixa un
         triangle.
@@ -871,14 +1357,14 @@ ca:
     coursef:
       image_alt: Un collage de trencaclosques de Code.org en què apareixen formes
         geomètriques de colors, un pirata vermell i un artista.
-    dance-2019:
+    dance:
+      image_alt: Un gat amb molt d'estil i un tauró alegre ballant en una festa.
       title: Festa de ball
+    dance-2019:
       image_alt: Un gat alegre, un peresós i un tauró ballant.
+      title: Festa de ball
     dance-2022:
       image_alt: Un alienígena verd i un robot ballant amb Saturn de fons.
-    dance:
-      title: Festa de ball
-      image_alt: Un gat amb molt d'estil i un tauró alegre ballant en una festa.
     donate:
       image_alt: Un nen que assenyala la pantalla d'un portàtil on hi ha un trencaclosques
         de Code.org.
@@ -888,128 +1374,108 @@ ca:
       image_alt: Un zombi i una planta de Plantes vs. Zombis al costat de l'ocell
         Flappy.
     flappy:
-      title: Codi Flappy
       body: Vols 'escriure el teu propi joc en menys de 10 minuts? Prova el nostre
         tutorial Codi Flappy!
       image_alt: Un ocell groc que vola entre canonades verdes.
+      title: Codi Flappy
     frozen:
-      title: Frozen
       image_alt: L'Anna i l'Elsa de la pel·lícula Frozen. Al mig hi ha una imatge
         de l'Anna dibuixant una forma molt maca sobre el gel amb els patins.
+      title: Frozen
     gallery:
-      title: Galeria
       body: Mira tota una galeria d'imatges artístiques i aplicacions creades pels
         nostres usuaris
       image_alt: Un artista que dibuixa molts cercles, i un gat, un ratpenat i un
         fantasma en un paisatge hivernal.
+      title: Galeria
     gamelab:
-      title: Laboratori de jocs
+      audience: A partir de 13 anys
       body: El Laboratori de jocs és un entorn de programació on podeu crear animacions
         simples i jocs amb objectes i caràcters que interaccionen uns amb altres.
-      audience: A partir de 13 anys
       cta: Descobrir com fer-ho
       image_alt: Moltes persones i animals de dibuixos somrients en una vorera.
-    hello-world-food:
-      image_alt: Molts animals, extraterrestres i emoticones orbitant la Terra.
+      title: Laboratori de jocs
     hello-world:
-      title: Hola, món
       body: Trieu entre quatre temes divertits per codificar caràcters interactius
         en un món que creeu.
+      title: Hola, món
+    hello-world-food:
+      image_alt: Molts animals, extraterrestres i emoticones orbitant la Terra.
     hero:
-      title: Minecraft
       body: Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca!
         Viatja a través de Minecraft amb el codi.
       image_alt: Un Gólem de ferro de Minecraft davant d'una imatge de l'Anna resolent
         un trencaclosques.
-    hoc-encryption:
-      body: Els alumnes aprendran tècniques per crear i revelar missatges xifrats.
-      image_alt: Un gràfic de barres sobre la freqüència d'ús de les lletres en anglès.
+      title: Minecraft
     hoc:
-      title: Laberint clàssic
       body: Prova els conceptes bàsics de la informàtica. Ja ho han fet milions d'usuaris.
       image_alt: Un collage d'imatges en què apareix un tros de codi, Mark Zuckerberg
         i el joc Angry Birds.
+      title: Laberint clàssic
+    hoc-encryption:
+      body: Els alumnes aprendran tècniques per crear i revelar missatges xifrats.
+      image_alt: Un gràfic de barres sobre la freqüència d'ús de les lletres en anglès.
+    hoc2014:
+      try_frozen: Amb els personatges Anna i Elsa de Frozem
+      try_new_tutorial: Provi la nova classe beta de l'Hora del Codi
     hourofcode:
       image_alt: Un collage d'imatges en què apareix un tros de codi, Mark Zuckerberg
         i el joc Angry Birds.
-    hoc2014:
-      try_new_tutorial: Provi la nova classe beta de l'Hora del Codi
-      try_frozen: Amb els personatges Anna i Elsa de Frozem
     infinity:
-      title: Infinity Play Lab
       body: Utilitza Play Lab per crear una història o un joc protagonitzada pels
         personatges de Disney infinity.
       image_alt: Un grup de cinc personatges de Frozen, Tangled i Big Hero 6.
+      title: Infinity Play Lab
     map:
       image_alt: Una imatge grisa dels Estats Units amb uns 20 estats ressaltats en
         lila.
-    mc_escape:
-      image_alt: Un personatge de Minecraft que porta un barret de copa i un monocle
-        i obre un cofre del tresor ple de maragdes.
     mc:
       image_alt: L'Anna i l'Steve de Minecraft davant d'un trencaclosques de Minecraft
         de Code.org.
+    mc_escape:
+      image_alt: Un personatge de Minecraft que porta un barret de copa i un monocle
+        i obre un cofre del tresor ple de maragdes.
     minecraft:
-      title: Minecraft
       body: Explora el món de Minecraft a través del codi
       image_alt: L'Anna i l'Steve de Minecraft davant d'un trencaclosques de Minecraft
         de Code.org.
-    minecraft2016:
       title: Minecraft
+    minecraft2016:
       body: Programa animals i altres criatures de Minecraft en la teva pròpia versió
         de Minecraft.
+      title: Minecraft
     oceans:
       image_alt: Un robot a l'oceà que observa diverses criatures marines.
     playlab:
       image_alt: Un collage en què apareix un gat blau, un gos beneit i una mostela
         prehistòrica.
     poem-art:
-      title: L'art del poema
       body: Expressa la teva creativitat! Fes servir codi per crear poemes animats.
       image_alt: Un calamar modern que actua sobre un escenari.
+      title: L'art del poema
+    pre-express:
+      image_alt: Un gos i un unicorn davant d'un arbre fet de peces de trencaclosques.
     pre-express-2017:
       image_alt: Un gos i un unicorn davant d'un arbre fet de peces de trencaclosques.
     pre-express-2018:
       image_alt: Un gos i un unicorn davant d'un arbre fet de peces de trencaclosques.
     pre-express-2019:
       image_alt: Un gos i un unicorn davant d'un arbre fet de peces de trencaclosques.
-    pre-express:
-      image_alt: Un gos i un unicorn davant d'un arbre fet de peces de trencaclosques.
     sports:
-      title: Esports
       body: Fes un joc de bàsquet o d'una barreja de diferents esports.
       image_alt: Els logotips de la NBA i la WNBA al costat d'una pilota de rugby,
         una altra de futbol, un disc d'hoquei i una pilota de bàsquet.
+      title: Esports
     starwars:
-      title: Star Wars
       image_alt: L'R2-D2, la Leia, la Rey i el BB-8 en un desert.
+      title: Star Wars
     text-compression:
-      title: Compressió de text
       body: En aquesta lliçó, els alumnes faran servir el Widget de Compressió de
         Text per comprimir textos tot substituint patrons per símbols.
       image_alt: Text que es comprimeix per mitjà de la substitució de paraules senceres
         per un únic símbol.
-    weblab:
-      title: Laboratori web (beta)
-      body: El Laboratori web és un entorn de programació on podeu crear pàgines web
-        simples utilitzant HTML i CSS. Dissenyeu pàgines i compartiu el vostre lloc
-        web en pocs segons.
-      audience: A partir de 13 anys
-      cta: Descobrir com fer-ho
-      image_alt: Una pantalla d'ordinador en què apareix codi HTML.
-    widgets:
-      title: Ginys
-      body: Els alumnes poden explorar conceptes del nostre curs Principis de la informàtica
-        amb aquestes eines digitals. Podran fer servir els widgets, o podeu crear
-        lliçons d'un sol concepte per la classe.
-      audience: Edat 14 +
-      cta: Descobrir com fer-ho
-    unplugged_conditionals:
-      title: Condicionals
-      body: Aprèn sobre algorismes i sentències condicionals amb una baralla de cartes
-        en aquesta activitat sense connexió.
+      title: Compressió de text
     unplugged:
-      title: Lliçons sense connexió
       audience: A partir de 4 anys
       body: Hem recopilat una llista de lliçons sense connexió que podeu fer servir
         a l'aula. Ara podeu ensenyar els fonaments de la informàtica tant si teniu
@@ -1017,171 +1483,133 @@ ca:
         o per complementar el vostre curs d'informàtica.
       body_short: Si no teniu ordinadors, proveu aquestes lliçons sense connexió a
         la classe.
-    20-hour:
-      title: Curs accelerat
-      body: Aquest curs de 20 hores és una introducció als conceptes bàsics d'informàtica
-        i programació. El curs ha estat dissenyat per impartir a alumnes de 1er d'ESO,
-        però és divertit d'aprendre a qualsevol edat.
-      body_short: Aprèn informàtica bàsica en una versió accelerada dels cursos 2-4.
-  landing:
-    prerelease_tutorial: Aquest tutorial està en **beta**. L'anirem actualitzant a
-      mesura que rebem comentaris i hi fem millores.
-    report_bug: Informeu d'errors
-    support: Obtenir ajuda
-    support_url: support.code.org
-    help_resources: Ajuda i recursos
-    help_support: Ajuda i suport
-    documentation: Documentació
-    tutorials: Tutorials
-  free_response:
-    placeholder: Introdueix la teva resposta aquí
-  multi:
-    wrong_title: Resposta incorrecta
-    wrong_body: La resposta que he introduït no és correcta.  Si us plau, intenta-ho
-      de nou!
-    correct_title: Correcte
-    correct_body: Aquesta és la resposta correcta.
-  multi-submittable:
-    wrong_title: Gràcies
-    wrong_body: Moltes gràcies per la teva resposta.
-    correct_title: Gràcies
-    correct_body: Moltes gràcies per la teva resposta.
-  level_group:
-    wrong_title: Gràcies
-    wrong_body: Moltes gràcies per les teves respostes.
-    correct_title: Gràcies
-    correct_body: Moltes gràcies per les teves respostes.
-    hide_survey_last_answer: Aquesta enquesta és anònima. Visiteu el panell de control
-      del professor per veure els resultats compilats. Tingueu present que els resultats
-      només seran visibles si com a mínim cinc alumnes han enviat l'enquesta.
-    survey_submission_thankyou: Gràcies per respondre l'enquesta! Hem esborrat les
-      respostes del formulari perquè es mantinguin anònimes. El teu professor podrà
-      veure les respostes de tota la classe, però sense cap nom associat.
-  level_group-submittable:
-    wrong_title: Gràcies
-    wrong_body: Moltes gràcies per les teves respostes.
-    correct_title: Gràcies
-    correct_body: Moltes gràcies per les teves respostes.
-    unsubmit-title: Retirar avaluació
-    unsubmit-body: Si retires la teva avaluació, l'hora i la data es restabliran.
-      Estàs segur que ho vols fer?
-    submit-incomplete-title: Enviar avaluació
-    submit-incomplete-body: Has deixat algunes preguntes sense acabar. Un cop enviïs
-      l'avaluació, no podràs editar-la. Estàs segur que la vols enviar?
-    submit-complete-title: Enviar avaluació
-    submit-complete-body: No podràs editar l'avaluació un cop l'hagis enviat. Estàs
-      segur que la vols enviar?
-  match:
-    wrong_title: Solució incorrecta
-    wrong_body: La solució que has introduït no és correcta.  Si us plau, intenta-ho
-      de nou!
-    correct_title: Correcte
-    correct_body: Aquesta és la resposta correcta.
-  contract_match:
-    wrong_title: Resposta incorrecta
-    badname: El teu contracte té el nom malament.
-    badname_case: Els noms de les funcions distingeixen entre majúscules i minúscules.
-      Proveu de canviar al nom del teu contracte.
-    badrange: El teu contracte té el rang malament.
-    baddomainsize: El teu contracte no té el nombre correcte d'elements del domini.
-    baddomainname: Un o més dels teus elements del domini té el nom errat.
-    baddomaintype: Un o més dels teus elements de domini té un tipus erroni, o està
-      en ordre equivocat.
-  text_match:
-    placeholder: Introdueix la teva resposta aquí
-    open_response_title: Gràcies
-    open_response_body: Gràcies per la resposta!
-    correct_title: Correcte
-    correct_body: Aquesta és la resposta correcta.
-  lesson_extras:
-    bonus_level: Nivell extra
-  dialog:
-    ok: OK
-    startover_title: Estàs segur que vols tornar a començar?
-    startover_body: Això tornarà el puzzle al seu estat inicial i eliminarà totes
-      les dades que hagis afegit o modificat.
-    startover_ok: Torna a començar
-    startover_cancel: Cancel·lar
-  time:
-    hour: 1 hora
-    day: dia
-    week: setmana
-  age_interstitial:
-    age: La teva edat
-    header: Actualització d'informació del compte
-    warning: Estem en procés d'actualitzar l'experiència que oferim per poder protegir
-      encara més la teva privacitat. Per fer-ho, necessitem que els usuaris existents
-      introdueixin la seva edat aquí.
-    disclaimer: Com sempre, Code.org mai llogarà, vendrà o compartirà aquesta informació
-      amb tercers.
-    sign_out_markdown: Si no vols indicar la teva edat, pots [tancar sessió](%{url}).
-  terms_interstitial:
-    title: Actualització de les condicions de servei i de la política de privacitat
-    intro_desc: Tal com es mostra a continuació, hem actualitzat les nostres condicions
-      de servei i la política de privacitat. Aquests canvis entraran en vigor el 24
-      d'agost del 2016. El canvi principal és que <i>deixarem d'emmagatzemar els correus
-      electrònics dels comptes dels alumnes a Code Studio.</i> És un pas molt important
-      per a nosaltres, i esperem que marqui un nou criteri per la privacitat dels
-      alumnes que fan servir tecnologies educatives. Us hem enviat un resum dels altres
-      canvis per correu electrònic.
-    intro_desc_markdown: Tal com es mostra a continuació, hem actualitzat les nostres
-      condicions de servei i la política de privacitat. Aquests canvis entraran en
-      vigor el 24 d'agost del 2016. El canvi principal és que *deixarem d'emmagatzemar
-      els correus electrònics dels comptes dels alumnes a Code Studio.* És un pas
-      molt important per a nosaltres, i esperem que marqui un nou criteri per la privacitat
-      dels alumnes que fan servir tecnologies educatives. Us hem enviat un resum dels
-      altres canvis per correu electrònic.
-    intro_instructions: Haureu d'acceptar aquestes noves condicions per tal que els
-      alumnes de menys de 13 anys de la vostra classe tinguin un accés total a les
-      funcions més recents de Code Studio. Quan registreu un compte d'un alumne de
-      menys de 13 anys, se us demanarà que confirmeu que la vostra escola compta amb
-      l'autorització dels pares per recopilar les dades personals de l'alumne per
-      a l'ús i benefici de l'escola, incloent per la inscripció a programes educatius
-      com ara Code Studio.
-    tos: Condicions d'ús
-    privacy: Política de privacitat
-    privacy_notice: Avís de privacitat
-    accept_label: Accepto les<a href="%{tos_url}" target="_blank">Condicions de servei</a>
-      i la <a href="%{privacy_url}" target="_blank">Política de privacitat</a>.
-    accept_label_markdown: Accepto les [Condicions de servei](%{tos_url}) i la [Política
-      de privacitat](%{privacy_url}).
-    accept_tos: En registrar-vos a Code.org, accepteu les nostres [Condicions de servei](%{tos_url})
-      i la [Política de privacitat](%{privacy_url}).
-    accept: Acceptar
-    print: Imprimeix
-    reminder_desc: Hem actualitzat les nostres <a href="%{tos_url}" target="_blank">Condicions
-      de servei</a> i la <a href="%{privacy_url}" target="_blank">Política de privacitat</a>.
-      Llegiu-les detingudament abans d'acceptar-les. Tingueu present que és possible
-      que els vostres alumnes no tinguin accés les eines amb què ensenyem JavaScript
-      fins que no accepteu explícitament les condicions actualitzades.
-    reminder_desc_markdown: Hem actualitzat les nostres [Condicions de servei](%{tos_url})
-      i la [Política de privacitat](%{privacy_url}). Llegiu-les detingudament abans
-      d'acceptar-les. Tingueu present que és possible que els vostres alumnes no tinguin
-      accés les eines amb què ensenyem JavaScript fins que no accepteu explícitament
-      les condicions actualitzades.
-    review_terms: Consultar les condicions actualitzades
-  school_info_interstitial:
-    title: 'Volem que la informàtica arribi a tots els alumnes: ajudeu-nos a seguir
-      el nostre progrés!'
-    message: Introduïu les dades de la vostra escola a continuació.
-    message_with_suggestion: Comproveu que la informació següent és correcta, o feu
-      qualsevol modificació necessària.
-    save: Desa
-  race_interstitial:
-    title: 'Opcional: Ajudeu-nos a avaluar el progrés de les nostres accions per millorar
-      la diversitat en informàtica'
-    message: Indiqueu el vostre origen ètnic (marqueu totes les opcions pertinents)
-    races:
-      white: Blanc
-      black: Negre o afroamericà
-      hispanic: Hispànic o llatinoamericà
-      asian: Asiàtic
-      hawaiian: Natiu de Hawaii o d'altres illes del Pacífic
-      american_indian: Indígena americà/natiu d'Alaska
-      other: Altres
-      opt_out: Prefereixo no contestar
-    submit: Envia
-    decline: Tanca
+      title: Lliçons sense connexió
+    unplugged_conditionals:
+      body: Aprèn sobre algorismes i sentències condicionals amb una baralla de cartes
+        en aquesta activitat sense connexió.
+      title: Condicionals
+    weblab:
+      audience: A partir de 13 anys
+      body: El Laboratori web és un entorn de programació on podeu crear pàgines web
+        simples utilitzant HTML i CSS. Dissenyeu pàgines i compartiu el vostre lloc
+        web en pocs segons.
+      cta: Descobrir com fer-ho
+      image_alt: Una pantalla d'ordinador en què apareix codi HTML.
+      title: Laboratori web (beta)
+    widgets:
+      audience: Edat 14 +
+      body: Els alumnes poden explorar conceptes del nostre curs Principis de la informàtica
+        amb aquestes eines digitals. Podran fer servir els widgets, o podeu crear
+        lliçons d'un sol concepte per la classe.
+      cta: Descobrir com fer-ho
+      title: Ginys
+  user:
+    account_successfully_updated: Compte actualitzat amb èxit.
+    auth_option_saved: Has vinculat el teu compte de %{provider} amb el correu electrònic
+      %{email}.
+    auth_option_saved_no_email: Has vinculat el teu compte de %{provider}.
+    confirm_secret_words: Per confirmar que ets tu, has d'introduir les paraules secretes
+      que fas servir actualment
+    create_personal_login: Crear una contrasenya personal per iniciar sessió
+    create_personal_login_email_note: 'Important: les adreces de correu electrònic
+      no s''emmagatzemen en una forma que ens permeti contactar amb els alumnes. Els
+      alumnes mai rebran correus electrònics de Code.org excepte en el cas de voler
+      recuperar la contrasenya. Per a més informació, vegeu la nostra <a href=''%{privacy_policy_url}'',
+      target=''_blank''>política de privacitat</a>.'
+    create_personal_login_email_note_markdown: 'Important: les adreces de correu electrònic
+      no s''emmagatzemen en una forma que ens permeti contactar amb els alumnes. Els
+      alumnes mai rebran correus electrònics de Code.org excepte en el cas de voler
+      recuperar la contrasenya. Per a més informació, vegeu la nostra [Política de
+      Privacitat](%{privacy_policy_url}).'
+    create_personal_login_info: Si vols seguir fent servir el teu compte de Code.org
+      un cop acabat el curs acadèmic, pots crear el teu compte propi a continuació.
+    create_personal_login_link_account: O, si ho prefereixes, pots vincular-lo a un
+      compte personal a l'apartat de "Gestionar comptes vinculats".
+    create_personal_login_terms: 'En crear un compte d''accés personal, accepto les
+      <a href=''%{terms_of_service_url}'', target=''_blank''>condicions de servei</a>
+      de Code.org. Confirmo que tinc el permís dels meus pares o tutors legals per
+      fer servir els serveis de Code.org sense la supervisió d''un professor. '
+    create_personal_login_terms_markdown: 'En crear un compte d''accés personal, accepto
+      les [condicions de servei](%{terms_of_service_url}) de Code.org. Confirmo que
+      tinc el permís dels meus pares o tutors legals per fer servir els serveis de
+      Code.org sense la supervisió d''un professor. '
+    create_personal_login_under_13_info: Si vols seguir fent servir el teu compte
+      de Code.org un cop acabat el curs acadèmic, demana als teus pares/tutors que
+      t'ajudin a crear un inici de sessió personal a continuació.
+    create_personal_login_under_13_parent_email: Correu electrònic dels pares/tutors
+    create_personal_login_under_13_username: Nom d'usuari (no facis servir el teu
+      nom real!)
+    current_password_hint: "(necessitem la teva contrasenya actual per a confirmar
+      els canvis)"
+    delete: Suprimir el vostre compte
+    delete_confirm: Esteu segur que voleu suprimir el vostre compte?
+    delete_text: Fent clic al botó de sota suprimirà el compte.
+    delete_text_teacher_managed_note: No tens permís per eliminar aquest compte perquè
+      és el teu professor qui el gestiona. El teu professor t'haurà d'eliminar de
+      les seves seccions per tal que puguis eliminar el teu compte.
+    delete_text_teacher_note: 'Tingueu en compte: Si suprimiu el vostre compte no
+      s''esborrarant els comptes dels seus alumnes.'
+    deleted_user: usuari eliminat
+    email_confirm_needed: 'L''adreça de correu electrònic no ha estat confirmada:'
+    email_confirm_needed_required: 'La seva adreça de correu electrònic %{email} no
+      ha estat confirmada:'
+    email_confirm_wrong_email: "(Adreça d'e-mail equivocada?)"
+    email_resend_confirm: Torna a enviar les instruccions de confirmació
+    encrypted: encriptat
+    enter_new_login_info: Introdueix les dades d'accés noves
+    enter_parent_email: Introdueix els correus electrònics dels teus pares o tutors
+      (per poder recuperar la contrasenya)
+    for_parents_and_guardians: Per a pares i tutors
+    link_a_parent_email: Vinculeu el vostre correu electrònic com a pare o tutor per
+      estar informats de la feina i els projectes del vostre fill. També podreu fer
+      servir aquest compte per recuperar la contrasenya.
+    new_email_hint: "(assegureu-vos que podeu rebre correus electrònics en aquesta
+      adreça)"
+    new_password_hint: "(deixa-ho en blanc si no vols canviar-lo)"
+    no_password_because_oauth: No tens contrasenya perquè inicies sessió amb un proveïdor
+      extern.
+    no_password_because_sponsored: Consulta el teu professor per gestionar la teva
+      contrasenya.
+    none: Cap
+    only_one_parent_email_supported_warning: 'Important: en aquests moments, només
+      es pot introduir un correu electrònic per pare o tutor per cada compte d''alumne.'
+    parent_email_hint: "(es pot fer servir per recuperar la contrasenya)"
+    parent_email_label: Correu electrònic del pare/mare/tutor (opcional)
+    parent_guardian_email_label: E-mail del pare/tutor
+    remove_parent_email_label: Esborra
+    update: Actualitzar compte
+    update_email: Actualitza
+  user_level:
+    completed: Completat
+    tried: Provat
+  user_type:
+    student: alumne
+    teacher: Mestre
+  video:
+    autoplay_option: Reprodueix automàticament els vídeos
+    download: Descarregar vídeo
+    label: Vídeo
+    notes: No hi ha vídeo? Mostra les notes.
+    notes_coming_soon: Notes per a aquest vídeo molt aviat.
+    show_notes: Mostrar notes
+    show_video: Mostrar vídeo
+    tab: Vídeo.
+  video_coming_soon: Vídeo molt aviat!
+  view_all_units: Veure totes les unitats
+  view_lesson_plan: Veure unitat didàctica
+  view_teacher_guide: Veure la guia docent
+  welcome_back: Benvingut de nou, %{name}
+  welcome_email:
+    body: |
+      Clica el següent enllaç per inscriure't als tutorials d'informàtica de Code.org (amb mi com el teu "professor"):
+
+      %{link}
+
+      Els tutorials són divertits, visualment atractius, i ensenyen els conceptes bàsics de la informàtica utilitzant una senzilla i guiada experiència a l'estil videojoc. Aprèn a programar de Bill Gates, Mark Zuckerberg, Angry Birds, i Plants vs. Zombies! :-)
+
+      %{name}
+    subject: Uneix-te a la meva classe (a Code.org)
+  your_professional_learning_plan: El seu pla d'aprenentatge professional
   zendesk_too_young_message: Lamentablement, els usuaris més joves no poden registrar-se
     en el nostre lloc de suport. Podeu navegar<a href="http://support.code.org">upport.code.org</a>
     sense registrar-vos o demanar als vostres pares o mestres que contactin amb nosaltres
@@ -1190,431 +1618,3 @@ ca:
     registrar-se en el nostre lloc de suport. Podeu navegar[upport.code.org](http://support.code.org)
     sense registrar-vos o demanar als vostres pares o mestres que contactin amb nosaltres
     en representació vostra.
-  progress:
-    not_started: no començat
-    in_progress: En curs
-    completed_too_many_blocks: completat, massa blocs
-    completed_perfect: completat, perfecte
-    furthest_level_attempted: nivell més alt intentat
-    assessment: avaluació
-    submitted: enviat
-  studio:
-    courses_working_on: Cursos en els que estàs treballant
-    completed_courses: Cursos completats
-    all_courses: Tots els cursos
-  project:
-    projects: Projectes
-    create: Crear un projecte
-    create_a_project: 'Crear un nou projecte:'
-    new: Crea nou
-    exit: Tornar al curs
-    project_gallery: Projectes
-    publish: Publicar
-    unpublish: Despublicar
-    share_title: Compartir el teu projecte
-    share_copy_link: 'Copia l''enllaç:'
-    share_embed_description: Podeu copiar el codi integrat en una pàgina HTML per
-      mostrar el projecte en una pàgina web.
-    share_u13_warning: Demana permís al teu professor abans de compartir res. Compartiu
-      la vostra feina només amb companys d'escola.
-    embed: Integrar
-    advanced_share: Mostrar opcions avançades
-    no_projects: Actualment no tens cap projecte. Fes clic a un dels botons de dalt
-      per començar a fer-ne un.
-    name: Nom
-    updated: Actualitzat
-    project_type: Tipus de projecte
-    help_text: Clica <strong>Fer una App</strong> o <strong>Dibuixa quelcom</strong>
-      a sota per a fer un nou projecte de Play Lab o d'Artist!<br/> Pots tornar i
-      continuar els projectes en qualsevol moment.
-    need_help: Necessita ajuda per començar?
-    thumbnail_help: No veus la miniatura correcta del teu projecte? Executa l'aplicació
-      per generar-ne una de nova. Tingues en compte que poden passar un parell d'hores
-      fins que la miniatura s'actualitzi a tot arreu.
-    saved: Desat
-    not_saved: No desat
-    view_all: Mostra els meus projectes
-    edit_project: Edita el projecte
-    sharing_disabled: Ho sentim, aquest projecte no es pot compartir. Si és un projecte
-      vostre o d'algun dels vostres alumnes, <a href='https://studio.code.org/users/sign_in'>inicieu
-      sessió</a> amb el vostre compte per veure el projecte.
-    abuse:
-      tos: S'ha informat que aquest projecte infringeix les <a href='http://code.org/tos'>Condicions
-        de servei</a> de Code.org i, per tant, no es pot compartir.
-      policy_violation: Aquest projecte conté informació que no es pot compartir amb
-        tercers. Contacteu amb el propietari de l'aplicació perquè corregeixi el contingut
-        de l'aplicació.
-      contact_us: Si creieu que es tracta d'un error, <a href='https://code.org/contact'>contacteu
-        amb nosaltres.</a>
-      go_to_code_studio: Anar al Code Studio
-      report_abuse_form:
-        intro: Si has trobat contingut ofensiu, amenaces, ciberassetjament, intimidacions
-          o algun cas d'infracció de drets d'autor que afecti el teu contingut mentre
-          fèies servir les aplicacions fetes a Code Studio, omple aquest formulari.
-          Estudiarem el teu informe molt seriosament, farem les comprovacions corresponents
-          i prendrem les mesures necessàries.
-        validation:
-          email: Si us plau introdueix una adreça de correu electrònic
-          age: Si us plau especifiqueu una edat
-          abuse_type: Descriu en quin sentit aquest contingut infringeix les Condicions
-            de servei
-          abuse_detail: Proporciona'ns informació detallada sobre el contingut objecte
-            de la teva queixa
-          captcha: Omple el CAPTCHA per informar-nos sobre aquest contingut.
-        abusive_url: URL del contingut objecte de la queixa
-        abuse_type:
-          question: En quin sentit infringeix aquest contingut les %{link_start}Condicions
-            de servei%{link_end}?
-          harassment: Amenaces, ciberassetjament, intimidació
-          offensive: Contingut ofensiu
-          infringement: Infracció de copyright
-          other: Altres
-        detail: Proporciona'ns tants detalls com puguis sobre el contingut objecte
-          de la teva queixa.
-        acknowledge: En enviar aquesta informació, acceptes que es gestionarà d'acord
-          amb les condicions de la [Política de privacitat] (%{link_start_privacy})
-          i les [Condicions del servei] (%{link_end}.
-  peer_review:
-    accepted:
-      name: Acceptat
-      description_markdown: "**Sí**, aquest enviament **reuneix** els requisits"
-    rejected:
-      name: Rebutjat
-      description_markdown: "**No**, aquest enviament **no reuneix** els requisits"
-    escalated:
-      name: Transferit
-      description: Voldria que un docent revisés aquest enviament
-    instructor_feedback: Comentaris del docent
-    peer_feedback: Comentaris dels companys
-    outdated: Aquests comentaris es van proporcionar per una versió enviada anteriorment
-    review_count: Has de fer %{review_count} revisions per aquesta unitat
-    peer_review: Revisió per part dels companys
-  external_links:
-    disclaimer: Exempció de responsabilitat
-    leaving_domain: Esteu sortint d'aquest domini per anar a una pàgina no gestionada
-      per Code.org.
-    disclaimer_text: Aquesta pàgina pot tenir polítiques de privacitat diferents de
-      les de Code.org. Hem seleccionat aquests recursos externs perquè creiem que
-      et seran útils. Tot i que nosaltres no som els responsables directes del contingut
-      d'aquesta pàgina web, <a href='%{support_url}'>contacta amb nosaltres</a> si
-      hi trobes contingut qüestionable o si la pàgina web enllaçada ja no està disponible.
-  hoc_download:
-    title: Descàrregues de l'Hora del Codi
-    capsule_title: Teniu connexió a internet?
-    capsule_desc: Feu servir l'aplicació web [%{app_name}](%{url}).
-    instructions_headline: No teniu connexió a internet?
-    instructions: 'Instruccions per als professors: si teniu una connexió a internet
-      deficient, aquests tutorials de l''Hora del Codi es poden descarregar i instal·lar
-      per fer-los sense connexió. Trieu el vostre idioma i plataforma i descarregueu-los
-      i instal·leu-los a tots els ordinadors de l''aula. Potser us interessaria fer
-      servir un USB per descarregar-los un cop i instal·larlos a tots els ordinadors.
-      Important: els alumnes no podran iniciar sessió a Code Studio, desar la feina
-      o imprimir els certificats. Els professors podeu imprimir els certificats amb
-      antelació [aquí](%{url}).'
-    minecraft_name: Hora del Codi de Minecraft
-    starwars_blocks_name: 'La guerra de les galàxies: Crea una galàxia amb codi (Blocs)'
-    starwars_javascript_name: 'La guerra de les galàxies: Crea una galàxia amb codi
-      (JavaScript)'
-    download_message: Descarregar %{app_name} per fer-lo sense internet (136 MB).
-    download_in_Albanian: 'Descarregar en albanès:'
-    download_in_Arabic: 'Descarregar en àrab:'
-    download_in_Azerbaijani: 'Descarregar en àzeri:'
-    download_in_Basque: 'Descarregar en basc:'
-    download_in_Bosnian: 'Descarregar en bosnià:'
-    download_in_Bulgarian: 'Descarregar en búlgar:'
-    download_in_Catalan: 'Descarregar en català:'
-    download_in_Chinese-Taiwan: 'Descarregar en xinès de Taiwan:'
-    download_in_Chinese: 'Descarregar en xinès:'
-    download_in_Croatian: 'Descarregar en croat:'
-    download_in_Czech: 'Descarregar en txec:'
-    download_in_Danish: 'Descarregar en danès:'
-    download_in_Dutch: 'Descarregar en neerlandès:'
-    download_in_English: 'Descarregar en anglès:'
-    download_in_Finnish: 'Descarregueu en finès:'
-    download_in_French: 'Descarregar en francès:'
-    download_in_German: 'Descarregar en alemany:'
-    download_in_Greek: 'Descarregar en grec:'
-    download_in_Hebrew: 'Descarregar en hebreu:'
-    download_in_Hungarian: 'Descarregar en hongarès:'
-    download_in_Icelandic: 'Descarregar en islandès:'
-    download_in_Indonesian: 'Descarregar en indonesi:'
-    download_in_Irish: 'Descarregar en irlandès:'
-    download_in_Italian: 'Descarregar en italià:'
-    download_in_Japanese: 'Descarregar en japonès:'
-    download_in_Korean: 'Descarregar en coreà:'
-    download_in_Latvian: 'Descarregar en letó:'
-    download_in_Lithuanian: 'Descarregar en lituà:'
-    download_in_Norwegian: 'Descarregar en noruec:'
-    download_in_Norwegian-Nynorsk: 'Descarregar en noruec nynorsk:'
-    download_in_Polish: 'Descarregar en polonès:'
-    download_in_Portuguese-Brazil: 'Descarregar en portuguès del Brasil:'
-    download_in_Portuguese: 'Descarregar en portuguès:'
-    download_in_Romanian: 'Descarregar en romanès:'
-    download_in_Russian: 'Descarregar en rus:'
-    download_in_Serbian: 'Descarregar en serbi:'
-    download_in_Slovenian: 'Descarregar en eslovè:'
-    download_in_Spanish: 'Descarregar en espanyol:'
-    download_in_Swedish: 'Descarregar en suec:'
-    download_in_Turkish: 'Descarregar en turc:'
-    download_in_Ukrainian: 'Descarregar en ucraïnès:'
-    download_in_Vietnamese: 'Descarregar en vietnamita:'
-    windows: Windows (64 bits)
-    mac: Mac OS X
-  locked_stage: Els continguts d'aquesta lliçó no són visibles perquè la lliçó es
-    troba bloquejada. El teu professor podrà desbloquejar-la quan arribi el moment
-    de treballar-hi o de revisar la teva feina.
-  hidden_stage: El teu professor no tenia previst que arribessis aquí. Pregunta-li
-    quina lliçó has de fer.
-  hidden_script: El teu professor no tenia previst que arribessis aquí. Pregunta-li
-    quina unitat has de fer.
-  no_course_access_student: No tens accés a aquest curs. Pregunta al teu professor
-    quin curs has de fer.
-  no_course_access_teacher: No teniu accés a aquest curs. Si creieu que hauríeu de
-    tenir accés a aquest curs, contacteu amb nosaltres a support@code.org perquè puguem
-    resoldre la situació.
-  no_script_access_student: No tens accés a aquesta unitat. Pregunta al teu professor
-    quina unitat has de fer.
-  no_script_access_teacher: No teniu accés a aquesta unitat. Si creieu que hauríeu
-    de tenir accés a aquesta unitat, contacteu amb nosaltres a support@code.org perquè
-    puguem resoldre la situació.
-  no_level_access_student: No tens accés a aquest nivell. Pregunta al teu professor
-    quina nivell has de fer.
-  no_level_access_teacher: No teniu accés a aquest nivell. Si creieu que hauríeu de
-    tenir accés a aquest nivell, contacteu amb nosaltres a support@code.org perquè
-    puguem resoldre la situació.
-  no_exemplar: No hi ha exemples per aquest nivell.
-  no_exemplar_access_student: Els alumnes no poden accedir al codi d'exemple. Pregunta
-    al teu professor quin nivell has de fer.
-  no_exemplar_access_teacher: Només els professors verificats poden accedir al codi
-    d'exemple. Si voleu verificar-vos com a professor, escriviu-nos a support@code.org.
-  return_unit_overview: Anar el resum de la unitat
-  return_course_overview: Anar al resum del curs
-  view_all_units: Veure totes les unitats
-  view_teacher_guide: Veure la guia docent
-  pd:
-    form_labels:
-      first_name: Nom
-      first_name_preferred: Nom que preferiu
-      last_name: Cognom
-      email: Correu electrònic
-      email_alternate: Correu electrònic alternatiu
-      gender: Identitat de gènere
-      school: Escola
-      school_name: Nom de l'escola
-      school_city: Ciutat de l'escola
-      school_city_district: Ciutat/districte de l'escola
-      school_country: País de l'escola
-      school_department_region: Departament/regió de l'escola
-      colombian_school_city: Ciutat de l'escola
-      colombian_chilean_school_department: Departament/regió de l'escola
-      colombian_school_municipality: Municipi de l'escola
-      colombian_chilean_school_name: Nom de l'escola
-      chilean_school_commune: Comuna
-      chilean_school_id: Identificador de l'escola
-      ages: Quines edats tenen els vostres alumnes d'aquest any?
-      subjects: Quines assignatures ensenyeu aquest any?
-      resources: Quins dels recursos educatius següents utilitzeu per ensenyar informàtica?
-      robotics: Quins dels recursos educatius següents utilitzeu per ensenyar robòtica?
-      workshop_organizer: Organitzador del taller
-      workshop_facilitator: Facilitador del taller
-      workshop_course: Curs del taller
-      email_opt_in: Us podem enviar correus electrònics sobre el programa internacional
-        de Code.org, les actualitzacions dels nostres cursos o altres notícies relacionades
-        amb la informàtica?
-      legal_opt_in: 'En enviar aquest formulari, accepteu que Code.org comparteixi
-        informació sobre com utilitzeu Code.org i els recursos de formació professional
-        amb els socis internacionals de Code.org del vostre país o districte escolar
-        i amb els facilitadors. Compartirem les vostres dades de contacte, quins cursos/unitats
-        esteu fent, i dades combinades sobre les vostres classes amb aquests socis.
-        Això inclou el nombre d''alumnes de les vostres classes, la composició demogràfica
-        dels grups i el nom i el districte de la vostra escola. No compartirem cap
-        dada sobre els alumnes amb els nostres socis: la informació sobre els alumnes
-        serà anònima i compilada. Els nostres socis internacionals i facilitadors
-        estan obligats per contracte a tractar aquestes dades amb el mateix grau de
-        confidencialitat que Code.org.'
-    form_entries:
-      gender:
-        male: Home
-        female: Dona
-        non_binary: No binari
-        not_listed: Terme preferit no mencionat
-        none: Prefereixo no respondre
-      school_country:
-        barbados: Barbados
-        belize: Belize
-        canada: Canadà
-        chile: Xile
-        colombia: Colòmbia
-        israel: Israel
-        malaysia: Malàisia
-        mexico: Mèxic
-        paraguay: Paraguai
-        thailand: Tailàndia
-        uzbekistan: Uzbekistan
-      ages:
-        ages_under_6: Fins a 6 anys
-        ages_7_8: 7-8 anys
-        ages_9_10: 9-10 anys
-        ages_11_12: 11-12 anys
-        ages_13_14: 13-14 anys
-        ages_15_16: 15-16 anys
-        ages_17_18: 17-18 anys
-        ages_19_over: A partir de 19 anys
-      subjects:
-        cs: Informàtica
-        ict: TIC
-        math: Matemàtiques
-        science: Ciència
-        history: Història / Ciències socials
-        la: Arts del llenguatge
-        efl: Anglès com a llengua estrangera
-        music: Música
-        art: Plàstica
-        other: Altres
-        na: No aplica
-      resources:
-        bootstrap: Bootstrap
-        codecademy: CodeCademy
-        csfirst: CS First de Google
-        khan: Khan Academy
-        kodable: Kodable
-        scratch: Scratch
-        tynker: Tynker
-        other: Altres
-        na: No aplica
-      robotics:
-        grok: Grok Learning
-        kodable: Kodable
-        lego: LEGO Education
-        microbit: Microbit
-        ozobot: Ozobot
-        sphero: Sphero
-        raspberry: Raspberry Pi
-        wonder: Wonder Workshop
-        other: Altres
-        na: No aplica
-      workshop_course:
-        csf_af: Fonaments de la Informàtica (Cursos A-F)
-        csf_express: Fonaments de la Informàtica (Pre-exprés o Exprés)
-        csd: Descobriments Informàtics
-        csp: Principis de la Informàtica
-        other: Altres
-        not_applicable: No aplica
-      email_opt_in:
-        opt_in_yes: Sí
-        opt_in_no: 'No'
-    international_opt_in:
-      title: Asistència al taller
-      intro: Gràcies per haver dedicat el vostre temps a rebre formació sobre el pla
-        d'estudis de Code.org. Sense vosaltres, no podríem dur a terme la nostra missió
-        de donar l'oportunitat d'aprendre informàtica als nens i nenes de les escoles
-        de tot el món.
-      instructions: Si us plau, empleneu el formulari següent per indicar que 1) heu
-        assistit a un taller de formació organitzar per un dels socis internacionals
-        de Code.org i 2) que accepteu que compartim les vostres dades amb el nostre
-        soci internacional del vostre país perquè us puguin donar suport mentre feu
-        classes d'informàtica.
-      thanks_markdown: Gràcies per enviar el formulari! Estarem encantats d'ajudar-te
-        mentre et familiaritzes amb el pla d'estudis i les eines de Code.org. Fes-nos
-        arribar qualsevol pregunta i comentari a [support@code.org](%{support_email_url})
-        o publicant un missatge al [fòrum de professors](%{teacher_forum_url})!
-      facilitator_not_listed: El meu facilitador no apareix a la llista
-      facilitator_not_applicable: No aplica
-      organizer_not_listed: El meu organitzador no apareix a la llista
-    logged_out:
-      heading: Gràcies pel vostre interès en el Programa de Formació Professional!
-      body: Per començar, primer heu d'haver iniciat sessió al vostre compte de Code.org.
-        Si voleu més informació sobre el programa abans de començar la sol·licitud,
-        consulteu el <a href="%{url}">Resum del Programa de Formació Professional</a>.
-    not_teacher:
-      body_markdown: Gràcies pel vostre interès en el Programa de Formació Professional
-        de Code.org! Heu iniciat sessió amb un compte d'alumne. Creeu un compte de
-        professor o [aneu a la configuració d'usuari](%{user_settings}) per canviar
-        el compte d'estudiant a un de professor.
-      more_markdown: Si us agradaria rebre més informació sobre el programa abans
-        d'iniciar la sol·licitud, podeu consultar el [resum del Programa de Formació
-        Professional](%{pl_overview}).
-    no_teacher_email:
-      body_markdown: El vostre compte no té un correu electrònic vinculat. [Visiteu
-        la pàgina de configuració del compte](%{user_registration}) per afegir-lo
-        abans d'emplenar el formulari.
-  courses_category: Cursos complets
-  course_offering:
-    headers:
-      favorites: Favorits
-      labs_and_skills: Laboratoris i Habilitats
-      minecraft: Minecraft
-      hello_world: Hola, món
-      popular_media: Mitjans de comunicació populars
-      sports: Esports
-      express: Express
-      csf: Fonaments de la Informàtica
-      csc: Connexions CS
-      year_long: Llarg any
-      csa_labs: CSA Labs
-      self_paced: Auto-Paced
-      teacher_led: Professor-Led
-      collections: Col·leccions
-      workshops_k5: K-5 Tallers
-      summer_workshops_612: 6-12 Tallers d'estiu
-      virtual_academic_year_workshops_612: 6—12 Tallers virtuals del curs acadèmic
-  cookie_banner:
-    message: Si continueu fent servir la nostra pàgina web o feu clic a "Accepto",
-      accepteu que es guardin galetes al vostre ordinador o dispositiu.
-    more_information: Vegeu la Política de privacitat de Code.org.
-    accept: D'acord
-  copy: Copiar
-  confirm: confirmació
-  maker:
-    google_oauth:
-      login_with_google: Inicieu sessió a l'aplicació Maker amb Google
-      enter_code: Introduïu el codi proporcionat en iniciar sessió a través de Google
-        en el vostre navegador per defecte.
-      copy_code: Enganxeu aquest codi a l'aplicació Maker per iniciar sessió a Code.org.
-      error_token_expired: Aquest token ha caducat. Torneu a iniciar sessió per rebre'n
-        un de nou.
-      error_wrong_provider: Proveïdor incorrecte. Assegureu-vos que esteu iniciant
-        sessió amb Google.
-      error_invalid_user: Identificador d'usuari incorrecte. Intenteu iniciar sessió
-        de nou.
-      error_no_code: Introduïu el codi d'inici de sessió.
-      confirm_login: Seleccioneu "Confirmar" per iniciar sessió amb el vostre compte
-        de Google.
-  parent_email_banner:
-    text: "**Sou un pare o tutor?** Vinculeu el vostre correu electrònic a aquest
-      compte per mantenir-vos informats sobre la feina i els projectes del vostre
-      fill!"
-    link_your_email: Vincular correu electrònic
-    not_now: Ara no
-  behaviors:
-    this_sprite: aquest sprite
-  unit_prefix: Unitat %{n}
-  code_org_logo_alt: Inici de Code.org
-  teacher_feedback: Comentaris del professor
-  lesson_lock:
-    error:
-      no_updates: No hi ha actualitzacions per realitzar
-      missing_params: S'ha de proporcionar identificadors d'usuari, nivell i unitat
-      cannot_view_locked_answers: No es poden visualitzar les respostes mentre està
-        bloquejat
-      forbidden: L'usuari no pot actualitzar l'estat bloquejable de l'alumne
-  reset_predict_progress_button: Esborrar resposta
-  pixelation:
-    raw_format: Format en brut
-    raw_format_alt: Veure bits sense format
-    readable_format: Format llegible
-    readable_format_alt: Veure bits separats per píxel
-    save_image: Desar imatge
-    actual_size: Mida real
-    image_file_format_header: Format d'arxiu d'imatge
-    image_file_format_width: 'Amplada: 1 byte'
-    image_file_format_height: 'Alçada: 1 byte'
-    image_file_format_bits_per_pixel: 'Bits per píxel: 1 byte'
-    image_file_format_data_a: n bits de dades de píxels
-    image_file_format_data_b: n = amplada * alçada * bits per píxel
-    image_width: Amplada de la imatge
-    image_height: Alçada de la imatge
-    bits_per_pixel_header: Bits per píxel
-    binary: Binari
-    hexadecimal: Hexadecimal
-    pixel_format_header: Format de píxel
