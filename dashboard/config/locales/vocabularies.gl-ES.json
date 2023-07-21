@@ -2,43 +2,80 @@
   "gl-ES": {
     "data": {
       "vocabularies": {
-        "function/hero/unversioned": {
-          "word": "Función"
+        "copyright/csd/2021": {
+          "word": "Dereitos de Autor"
         },
-        "code/poem-art/2021": {
-          "word": "Código"
+        "variable/csd/2021": {
+          "word": "Variábel"
         },
-        "code/artist/unversioned": {
-          "word": "Código"
-        },
-        "conditionals/aquatic/unversioned": {
+        "conditionals/csd/2021": {
           "word": "Condicionais"
         },
-        "loops/aquatic/unversioned": {
-          "word": "Bucles"
+        "abstraction/csd/2021": {
+          "word": "Abstracción"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+        "function/csd/2021": {
+          "word": "Función"
         },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
+        "binary/coursec/2021": {
+          "word": "Binario"
         },
-        "code/sports/unversioned": {
-          "word": "Código"
+        "conditionals/coursed/2021": {
+          "word": "Condicionais"
+        },
+        "copyright/coursee/2021": {
+          "word": "Dereitos de Autor"
+        },
+        "function/coursee/2021": {
+          "word": "Función"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Condicionais"
+        },
+        "define/coursee/2021": {
+          "word": "Definir"
+        },
+        "variable/coursef/2021": {
+          "word": "Variábel"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Definir"
+        },
+        "conditionals/express/2021": {
+          "word": "Condicionais"
+        },
+        "function/express/2021": {
+          "word": "Función"
+        },
+        "variable/express/2021": {
+          "word": "Variábel"
+        },
+        "define/express/2021": {
+          "word": "Definir"
+        },
+        "copyright/csd/2022": {
+          "word": "Dereitos de Autor"
+        },
+        "variable/csd/2022": {
+          "word": "Variábel"
+        },
+        "conditionals/csd/2022": {
+          "word": "Condicionais"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstracción"
+        },
+        "function/csd/2022": {
+          "word": "Función"
+        },
+        "binary/coursec/2022": {
+          "word": "Binario"
         },
         "conditionals/coursed/2022": {
           "word": "Condicionais"
-        },
-        "variable/coursef/2022": {
-          "word": "Variábel"
-        },
-        "internet/coursef/2022": {
-          "word": "Internet"
-        },
-        "define/coursef/2022": {
-          "word": "Definir"
         },
         "function/coursee/2022": {
           "word": "Función"
@@ -50,6 +87,15 @@
           "word": "Dereitos de Autor"
         },
         "define/coursee/2022": {
+          "word": "Definir"
+        },
+        "variable/coursef/2022": {
+          "word": "Variábel"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet"
+        },
+        "define/coursef/2022": {
           "word": "Definir"
         },
         "conditionals/express/2022": {
@@ -64,23 +110,31 @@
         "define/express/2022": {
           "word": "Definir"
         },
-        "binary/coursec/2022": {
-          "word": "Binario"
-        },
-        "variable/csd/2022": {
-          "word": "Variábel"
-        },
-        "conditionals/csd/2022": {
+        "conditionals/aquatic/unversioned": {
           "word": "Condicionais"
         },
-        "abstraction/csd/2022": {
-          "word": "Abstracción"
+        "loops/aquatic/unversioned": {
+          "word": "Bucles"
         },
-        "function/csd/2022": {
+        "code/artist/unversioned": {
+          "word": "Código"
+        },
+        "function/hero/unversioned": {
           "word": "Función"
         },
-        "copyright/csd/2022": {
-          "word": "Dereitos de Autor"
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/poem-art/2021": {
+          "word": "Código"
+        },
+        "code/sports/unversioned": {
+          "word": "Código"
         },
         "code/poem-art/unversioned": {
           "word": "Código",
@@ -101,60 +155,6 @@
         "line/poem-art/unversioned": {
           "word": "",
           "definition": ""
-        },
-        "variable/coursef/2021": {
-          "word": "Variábel"
-        },
-        "internet/coursef/2021": {
-          "word": "Internet"
-        },
-        "define/coursef/2021": {
-          "word": "Definir"
-        },
-        "binary/coursec/2021": {
-          "word": "Binario"
-        },
-        "conditionals/coursed/2021": {
-          "word": "Condicionais"
-        },
-        "conditionals/express/2021": {
-          "word": "Condicionais"
-        },
-        "function/express/2021": {
-          "word": "Función"
-        },
-        "variable/express/2021": {
-          "word": "Variábel"
-        },
-        "define/express/2021": {
-          "word": "Definir"
-        },
-        "copyright/coursee/2021": {
-          "word": "Dereitos de Autor"
-        },
-        "function/coursee/2021": {
-          "word": "Función"
-        },
-        "conditionals/coursee/2021": {
-          "word": "Condicionais"
-        },
-        "define/coursee/2021": {
-          "word": "Definir"
-        },
-        "variable/csd/2021": {
-          "word": "Variábel"
-        },
-        "conditionals/csd/2021": {
-          "word": "Condicionais"
-        },
-        "abstraction/csd/2021": {
-          "word": "Abstracción"
-        },
-        "function/csd/2021": {
-          "word": "Función"
-        },
-        "copyright/csd/2021": {
-          "word": "Dereitos de Autor"
         }
       }
     }

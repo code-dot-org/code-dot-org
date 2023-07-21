@@ -2,261 +2,29 @@
   "ga-IE": {
     "data": {
       "vocabularies": {
-        "debugging/minecraft/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/hero/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "function/hero/unversioned": {
-          "word": "Feidhm"
-        },
-        "code/poem-art/2021": {
-          "word": "Cód"
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "code/artist/unversioned": {
-          "word": "Cód"
-        },
-        "debugging/artist/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "conditionals/aquatic/unversioned": {
-          "word": "Coinníollacha"
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "loops/aquatic/unversioned": {
-          "word": "Lúba"
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "Criptiú"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/mc/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/sports/unversioned": {
-          "word": "Cód"
-        },
-        "debugging/sports/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "debugging/basketball/unversioned": {
-          "word": "Dífhabhtú"
-        },
-        "machine_learning/oceans/unversioned": {
-          "word": "Meaisínfhoghlaim"
-        },
-        "debugging/coursed/2022": {
-          "word": "Dífhabhtú"
-        },
-        "programming/coursed/2022": {
-          "word": "Códáil"
-        },
-        "conditionals/coursed/2022": {
-          "word": "Coinníollacha"
-        },
-        "behavior/coursef/2022": {
-          "word": "Iompar"
-        },
-        "variable/coursef/2022": {
-          "word": "Athróg"
-        },
-        "input/coursef/2022": {
+        "input/csd/2021": {
           "word": "Ionchur"
         },
-        "machine_learning/coursef/2022": {
-          "word": "Meaisínfhoghlaim"
-        },
-        "internet/coursef/2022": {
-          "word": "An tIdirlíon"
-        },
-        "define/coursef/2022": {
-          "word": "Sainmhínigh"
-        },
-        "behavior/coursee/2022": {
-          "word": "Iompar"
-        },
-        "function/coursee/2022": {
-          "word": "Feidhm"
-        },
-        "conditionals/coursee/2022": {
-          "word": "Coinníollacha"
-        },
-        "copyright/coursee/2022": {
+        "copyright/csd/2021": {
           "word": "Cóipcheart"
         },
-        "define/coursee/2022": {
-          "word": "Sainmhínigh"
-        },
-        "debugging/courseb/2022": {
+        "debugging/csd/2021": {
           "word": "Dífhabhtú"
         },
-        "drop/courseb/2022": {
-          "word": "Titim"
-        },
-        "programming/courseb/2022": {
-          "word": "Códáil"
-        },
-        "debugging/express/2022": {
-          "word": "Dífhabhtú"
-        },
-        "sequencing/express/2022": {
-          "word": "Seicheamhú"
-        },
-        "programming/express/2022": {
-          "word": "Códáil"
-        },
-        "behavior/express/2022": {
-          "word": "Iompar"
-        },
-        "conditionals/express/2022": {
-          "word": "Coinníollacha"
-        },
-        "function/express/2022": {
-          "word": "Feidhm"
-        },
-        "variable/express/2022": {
+        "variable/csd/2021": {
           "word": "Athróg"
         },
-        "define/express/2022": {
-          "word": "Sainmhínigh"
-        },
-        "drop/pre-express/2022": {
-          "word": "Titim"
-        },
-        "debugging/pre-express/2022": {
-          "word": "Dífhabhtú"
-        },
-        "programming/pre-express/2022": {
-          "word": "Códáil"
-        },
-        "debugging/coursea/2022": {
-          "word": "Dífhabhtú"
-        },
-        "drop/coursea/2022": {
-          "word": "Titim"
-        },
-        "programming/coursea/2022": {
-          "word": "Códáil"
-        },
-        "debugging/coursec/2022": {
-          "word": "Dífhabhtú"
-        },
-        "sequencing/coursec/2022": {
-          "word": "Seicheamhú"
-        },
-        "programming/coursec/2022": {
-          "word": "Códáil"
-        },
-        "binary/coursec/2022": {
-          "word": "Dénártha"
-        },
-        "input/csd/2022": {
-          "word": "Ionchur"
-        },
-        "debugging/csd/2022": {
-          "word": "Dífhabhtú"
-        },
-        "variable/csd/2022": {
-          "word": "Athróg"
-        },
-        "conditionals/csd/2022": {
+        "conditionals/csd/2021": {
           "word": "Coinníollacha"
         },
-        "abstraction/csd/2022": {
+        "abstraction/csd/2021": {
           "word": "Teibíocht"
         },
-        "function/csd/2022": {
+        "function/csd/2021": {
           "word": "Feidhm"
         },
-        "copyright/csd/2022": {
-          "word": "Cóipcheart"
-        },
-        "machine_learning/csd/2022": {
+        "machine_learning/csd/2021": {
           "word": "Meaisínfhoghlaim"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Cód",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "behavior/coursef/2021": {
-          "word": "Iompar"
-        },
-        "variable/coursef/2021": {
-          "word": "Athróg"
-        },
-        "input/coursef/2021": {
-          "word": "Ionchur"
-        },
-        "machine_learning/coursef/2021": {
-          "word": "Meaisínfhoghlaim"
-        },
-        "internet/coursef/2021": {
-          "word": "An tIdirlíon"
-        },
-        "define/coursef/2021": {
-          "word": "Sainmhínigh"
-        },
-        "debugging/courseb/2021": {
-          "word": "Dífhabhtú"
-        },
-        "drop/courseb/2021": {
-          "word": "Titim"
-        },
-        "programming/courseb/2021": {
-          "word": "Códáil"
         },
         "debugging/coursea/2021": {
           "word": "Dífhabhtú"
@@ -265,6 +33,15 @@
           "word": "Titim"
         },
         "programming/coursea/2021": {
+          "word": "Códáil"
+        },
+        "debugging/courseb/2021": {
+          "word": "Dífhabhtú"
+        },
+        "drop/courseb/2021": {
+          "word": "Titim"
+        },
+        "programming/courseb/2021": {
           "word": "Códáil"
         },
         "debugging/coursec/2021": {
@@ -287,6 +64,39 @@
         },
         "conditionals/coursed/2021": {
           "word": "Coinníollacha"
+        },
+        "behavior/coursee/2021": {
+          "word": "Iompar"
+        },
+        "copyright/coursee/2021": {
+          "word": "Cóipcheart"
+        },
+        "function/coursee/2021": {
+          "word": "Feidhm"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Coinníollacha"
+        },
+        "define/coursee/2021": {
+          "word": "Sainmhínigh"
+        },
+        "behavior/coursef/2021": {
+          "word": "Iompar"
+        },
+        "variable/coursef/2021": {
+          "word": "Athróg"
+        },
+        "input/coursef/2021": {
+          "word": "Ionchur"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Meaisínfhoghlaim"
+        },
+        "internet/coursef/2021": {
+          "word": "An tIdirlíon"
+        },
+        "define/coursef/2021": {
+          "word": "Sainmhínigh"
         },
         "debugging/express/2021": {
           "word": "Dífhabhtú"
@@ -321,44 +131,234 @@
         "programming/pre-express/2021": {
           "word": "Códáil"
         },
-        "behavior/coursee/2021": {
-          "word": "Iompar"
-        },
-        "copyright/coursee/2021": {
-          "word": "Cóipcheart"
-        },
-        "function/coursee/2021": {
-          "word": "Feidhm"
-        },
-        "conditionals/coursee/2021": {
-          "word": "Coinníollacha"
-        },
-        "define/coursee/2021": {
-          "word": "Sainmhínigh"
-        },
-        "machine_learning/csd/2021": {
-          "word": "Meaisínfhoghlaim"
-        },
-        "debugging/csd/2021": {
-          "word": "Dífhabhtú"
-        },
-        "variable/csd/2021": {
-          "word": "Athróg"
-        },
-        "conditionals/csd/2021": {
-          "word": "Coinníollacha"
-        },
-        "abstraction/csd/2021": {
-          "word": "Teibíocht"
-        },
-        "function/csd/2021": {
-          "word": "Feidhm"
-        },
-        "input/csd/2021": {
+        "input/csd/2022": {
           "word": "Ionchur"
         },
-        "copyright/csd/2021": {
+        "copyright/csd/2022": {
           "word": "Cóipcheart"
+        },
+        "debugging/csd/2022": {
+          "word": "Dífhabhtú"
+        },
+        "variable/csd/2022": {
+          "word": "Athróg"
+        },
+        "conditionals/csd/2022": {
+          "word": "Coinníollacha"
+        },
+        "abstraction/csd/2022": {
+          "word": "Teibíocht"
+        },
+        "function/csd/2022": {
+          "word": "Feidhm"
+        },
+        "machine_learning/csd/2022": {
+          "word": "Meaisínfhoghlaim"
+        },
+        "debugging/coursea/2022": {
+          "word": "Dífhabhtú"
+        },
+        "drop/coursea/2022": {
+          "word": "Titim"
+        },
+        "programming/coursea/2022": {
+          "word": "Códáil"
+        },
+        "debugging/courseb/2022": {
+          "word": "Dífhabhtú"
+        },
+        "drop/courseb/2022": {
+          "word": "Titim"
+        },
+        "programming/courseb/2022": {
+          "word": "Códáil"
+        },
+        "debugging/coursec/2022": {
+          "word": "Dífhabhtú"
+        },
+        "sequencing/coursec/2022": {
+          "word": "Seicheamhú"
+        },
+        "programming/coursec/2022": {
+          "word": "Códáil"
+        },
+        "binary/coursec/2022": {
+          "word": "Dénártha"
+        },
+        "debugging/coursed/2022": {
+          "word": "Dífhabhtú"
+        },
+        "programming/coursed/2022": {
+          "word": "Códáil"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Coinníollacha"
+        },
+        "behavior/coursee/2022": {
+          "word": "Iompar"
+        },
+        "function/coursee/2022": {
+          "word": "Feidhm"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Coinníollacha"
+        },
+        "copyright/coursee/2022": {
+          "word": "Cóipcheart"
+        },
+        "define/coursee/2022": {
+          "word": "Sainmhínigh"
+        },
+        "behavior/coursef/2022": {
+          "word": "Iompar"
+        },
+        "variable/coursef/2022": {
+          "word": "Athróg"
+        },
+        "input/coursef/2022": {
+          "word": "Ionchur"
+        },
+        "machine_learning/coursef/2022": {
+          "word": "Meaisínfhoghlaim"
+        },
+        "internet/coursef/2022": {
+          "word": "An tIdirlíon"
+        },
+        "define/coursef/2022": {
+          "word": "Sainmhínigh"
+        },
+        "debugging/express/2022": {
+          "word": "Dífhabhtú"
+        },
+        "sequencing/express/2022": {
+          "word": "Seicheamhú"
+        },
+        "programming/express/2022": {
+          "word": "Códáil"
+        },
+        "behavior/express/2022": {
+          "word": "Iompar"
+        },
+        "conditionals/express/2022": {
+          "word": "Coinníollacha"
+        },
+        "function/express/2022": {
+          "word": "Feidhm"
+        },
+        "variable/express/2022": {
+          "word": "Athróg"
+        },
+        "define/express/2022": {
+          "word": "Sainmhínigh"
+        },
+        "drop/pre-express/2022": {
+          "word": "Titim"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Dífhabhtú"
+        },
+        "programming/pre-express/2022": {
+          "word": "Códáil"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Coinníollacha"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Lúba"
+        },
+        "code/artist/unversioned": {
+          "word": "Cód"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "function/hero/unversioned": {
+          "word": "Feidhm"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Criptiú"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Meaisínfhoghlaim"
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "code/poem-art/2021": {
+          "word": "Cód"
+        },
+        "code/sports/unversioned": {
+          "word": "Cód"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Cód",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         }
       }
     }

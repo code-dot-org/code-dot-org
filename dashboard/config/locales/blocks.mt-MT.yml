@@ -32,13 +32,13 @@ mt:
         options:
           KEY:
             '"enter"': daħħal
-      gamelab_randColor:
-        text: kulur bl-addoċċ
-      gamelab_randomColor:
-        text: kulur bl-addoċċ
       Mikelab_randomColor:
         text: kulur bl-addoċċ
       aalab_layoutSprites:
         options:
           FORMAT:
             '"random"': bl-addoċċ
+      gamelab_randColor:
+        text: kulur bl-addoċċ
+      gamelab_randomColor:
+        text: kulur bl-addoċċ

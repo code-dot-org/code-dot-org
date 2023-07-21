@@ -4,6 +4,8 @@
       "frameworks": {
         "ccmath": {
           "name": "Ümumi Əsas Riyaziyyat Standartları"
+        },
+        "ngss": {
         }
       }
     }

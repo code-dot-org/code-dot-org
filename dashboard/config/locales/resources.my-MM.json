@@ -2,164 +2,686 @@
   "my-MM": {
     "data": {
       "resources": {
-        "poem_art_celebration/poem-art/2021": {
-          "type": "ဗီဒီယို"
+        "standard_mappings/csd/2017": {
+          "name": "Standard Mappings"
         },
-        "poem_art_events/poem-art/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "poem_art_imagery/poem-art/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "poem_art_introduction/poem-art/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "type": "ဗီဒီယို"
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "type": "ဗီဒီယို"
-        },
-        "ai-ml/oceans/unversioned": {
-          "type": "ဗီဒီယို"
-        },
-        "ai-societal/oceans/unversioned": {
-          "type": "ဗီဒီယို"
-        },
-        "ai-training/oceans/unversioned": {
-          "type": "ဗီဒီယို"
-        },
-        "teacher_forum/coursed/2022": {
+        "teacher_forum/csd/2017": {
           "name": "ဆရာဖိုရမ်"
         },
-        "pause_and_think_online/coursed/2022": {
-          "type": "ဗီဒီယို"
+        "vocabulary/csd/2017": {
+          "name": "ဝေါဟာရ"
         },
-        "teacher_forum/coursef/2022": {
+        "code_introduced/csd/2017": {
+          "name": "Codeမိတ်ဆက်"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum_1/csd/2017": {
           "name": "ဆရာဖိုရမ်"
         },
-        "the_power_of_words_the_power_of_words/coursef/2022": {
-          "type": "ဗီဒီယို"
+        "vocabulary_1/csd/2017": {
+          "name": "ဝေါဟာရ"
         },
-        "introducing_sprite_lab_1/coursef/2022": {
-          "type": "ဗီဒီယို"
+        "code_introduced_1/csd/2017": {
+          "name": "Codeမိတ်ဆက်"
         },
-        "ai_impact_on_society/coursef/2022": {
-          "type": "ဗီဒီယို"
+        "standard_mappings_2/csd/2017": {
+          "name": "Standard Mappings"
         },
-        "ai_machine_learning/coursef/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "ai_training_data_bias/coursef/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "teacher_forum/coursee/2022": {
+        "teacher_forum_2/csd/2017": {
           "name": "ဆရာဖိုရမ်"
         },
-        "pause_and_think_online/coursee/2022": {
-          "type": "ဗီဒီယို"
+        "vocabulary_2/csd/2017": {
+          "name": "ဝေါဟာရ"
         },
-        "digital_sharing_ethics_video_/coursee/2022": {
-          "type": "ဗီဒီယို"
+        "code_introduced_2/csd/2017": {
+          "name": "Codeမိတ်ဆက်"
         },
-        "teacher_forum/courseb/2022": {
+        "standard_mappings_3/csd/2017": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum_3/csd/2017": {
           "name": "ဆရာဖိုရမ်"
         },
-        "wiggles_-_gonoodle/courseb/2022": {
-          "type": "ဗီဒီယို"
+        "vocabulary_3/csd/2017": {
+          "name": "ဝေါဟာရ"
         },
-        "unspotted_bugs/courseb/2022": {
-          "type": "ဗီဒီယို"
+        "standard_mappings_4/csd/2017": {
+          "name": "Standard Mappings"
         },
-        "pause_and_think_online/courseb/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "teacher_forum/express/2022": {
+        "teacher_forum_4/csd/2017": {
           "name": "ဆရာဖိုရမ်"
         },
-        "pair_programming/express/2022": {
+        "vocabulary_4/csd/2017": {
+          "name": "ဝေါဟာရ"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Codeမိတ်ဆက်"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/csd/2018": {
+          "name": "ဝေါဟာရ"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Codeမိတ်ဆက်"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "ဝေါဟာရ"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Codeမိတ်ဆက်"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "ဝေါဟာရ"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Codeမိတ်ဆက်"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "ဝေါဟာရ"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Codeမိတ်ဆက်"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/express/2018": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/express/2018": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/express/2018": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/csd/2019": {
+          "name": "ဝေါဟာရ"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Codeမိတ်ဆက်"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "Standard Mappings"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "ဝေါဟာရ"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Codeမိတ်ဆက်"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "Standard Mappings"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "ဝေါဟာရ"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Codeမိတ်ဆက်"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "Standard Mappings"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "Standard Mappings"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "ဝေါဟာရ"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Codeမိတ်ဆက်"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Standard Mappings"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/express/2019": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/express/2019": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/express/2020": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/express/2020": {
+          "name": "ဝေါဟာရ"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "Standard Mappings"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "ဝေါဟာရ"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "problem-solving-process-1/csd/2021": {
           "type": "ဗီဒီယို"
         },
-        "artist_introduction/express/2022": {
+        "what-is-a-computer-1-2-3/csd/2021": {
           "type": "ဗီဒီယို"
         },
-        "turns_angles/express/2022": {
+        "what-do-computers-do/csd/2021": {
           "type": "ဗီဒီယို"
         },
-        "pause_and_think_online/express/2022": {
+        "intro_to_web_lab_part_2/csd/2021": {
           "type": "ဗီဒီယို"
         },
-        "pair_programming_video/express/2022": {
+        "video_intro_to_web_lab_part_1/csd/2021": {
           "type": "ဗီဒီယို"
         },
-        "variables/express/2022": {
+        "video_pair_programming/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "video_debugging/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "lists/csd/2021": {
+          "name": "စာရင်းများ"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "publishing_your_website/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "variables_1/csd/2021": {
           "name": "Variables"
         },
-        "teacher_forum/pre-express/2022": {
+        "introduction_to_sprites/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "the_animation_tab/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "animating-sprites/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "boolean_expressions/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "conditional_statements/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "if_else_statements/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "velocity_1/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "video_machine_learning/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "circuits-logic-video/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "seeing_ai/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum_1/coursea/2021": {
           "name": "ဆရာဖိုရမ်"
         },
-        "20_20_20_rule/pre-express/2022": {
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "ဗီဒီယို"
         },
-        "wiggles_-_go_noodle/pre-express/2022": {
+        "wiggles-go_noodle/coursea/2021": {
           "type": "ဗီဒီယို"
         },
-        "pause_and_think_online/pre-express/2022": {
+        "wiggles_-_gonoodle/coursea/2021": {
           "type": "ဗီဒီယို"
         },
-        "teacher_forum/coursea/2022": {
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "pair-programming/coursea/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum_1/courseb/2021": {
           "name": "ဆရာဖိုရမ်"
         },
-        "getting_started_-_creating_a_class_section/coursea/2022": {
+        "wiggles_-_gonoodle/courseb/2021": {
           "type": "ဗီဒီယို"
         },
-        "wiggles-go_noodle/coursea/2022": {
+        "unspotted_bugs/courseb/2021": {
           "type": "ဗီဒီယို"
         },
-        "wiggles_-_gonoodle/coursea/2022": {
+        "common-sense-media-pause-think/courseb/2021": {
           "type": "ဗီဒီယို"
         },
-        "debugging_with_the_step_button/coursea/2022": {
+        "unplugged-video-big-event/courseb/2021": {
           "type": "ဗီဒီယို"
         },
-        "pair-programming/coursea/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "pause_and_think_online/coursea/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "teacher_forum/coursec/2022": {
+        "teacher_forum_1/coursec/2021": {
           "name": "ဆရာဖိုရမ်"
         },
-        "pair_programming/coursec/2022": {
+        "pair-programming-vid/coursec/2021": {
           "type": "ဗီဒီယို"
         },
-        "pause_and_think_online/coursec/2022": {
+        "pause_and_think_online/coursec/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "pause_and_think_online/coursed/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "ai-ml/coursef/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "ai-societal/coursef/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "ai-training/coursef/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "pair_programming/express/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "artist_introduction/express/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "turns_angles/express/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "pause_and_think_online/express/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "pair_programming_video/express/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "variables_video/express/2021": {
+          "name": "Variables"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "20_20_20_rule/pre-express/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "type": "ဗီဒီယို"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
           "type": "ဗီဒီယို"
         },
         "teacher_forum/csd/2022": {
           "name": "ဆရာဖိုရမ်"
-        },
-        "binary_and_data/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "amazon_and_data/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "netflix_and_data/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "waze_and_data/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "video_impact_on_society/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "video_machine_learning/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "video_training_data_and_bias/csd/2022": {
-          "type": "ဗီဒီယို"
         },
         "problem_solving_process_1/csd/2022": {
           "type": "ဗီဒီယို"
@@ -168,6 +690,42 @@
           "type": "ဗီဒီယို"
         },
         "what_do_computers_do/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "video_debugging/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "video_pair_programming/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "lists/csd/2022": {
+          "name": "စာရင်းများ"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "publishing_your_website/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "video_teamwork/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "video_how_search_works/csd/2022": {
           "type": "ဗီဒီယို"
         },
         "drawing_in_game_lab_-_part_1/csd/2022": {
@@ -218,42 +776,6 @@
         "functions/csd/2022": {
           "type": "ဗီဒီယို"
         },
-        "intro_to_web_lab_part_2/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "video_intro_to_web_lab_part_1/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "video_debugging/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "video_pair_programming/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "lists/csd/2022": {
-          "name": "စာရင်းများ"
-        },
-        "intro_to_css_-_part_1/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "intro_to_css_-_part_2/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "creative_commons_overview/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "publishing_your_website/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "video_managing_disagreement/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "video_teamwork/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
-        "video_how_search_works/csd/2022": {
-          "type": "ဗီဒီယို"
-        },
         "the_design_thinking_process/csd/2022": {
           "type": "ဗီဒီယို"
         },
@@ -264,6 +786,27 @@
           "type": "ဗီဒီယို"
         },
         "events_in_app_lab_1/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "video_impact_on_society/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "video_machine_learning/csd/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "video_training_data_and_bias/csd/2022": {
           "type": "ဗီဒီယို"
         },
         "computer_science_is_changing_everything/csd/2022": {
@@ -339,688 +882,145 @@
         "view_and_download_survey_data/csd/2022": {
           "type": "ဗီဒီယို"
         },
-        "standard_mappings/courseb/2018": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/courseb/2018": {
+        "teacher_forum/coursea/2022": {
           "name": "ဆရာဖိုရမ်"
         },
-        "vocabulary/courseb/2018": {
-          "name": "ဝေါဟာရ"
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "ဗီဒီယို"
         },
-        "standard_mappings/coursea/2018": {
-          "name": "Standard Mappings"
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "ဗီဒီယို"
         },
-        "teacher_forum/coursea/2018": {
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum/courseb/2022": {
           "name": "ဆရာဖိုရမ်"
         },
-        "vocabulary/coursea/2018": {
-          "name": "ဝေါဟာရ"
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "ဗီဒီယို"
         },
-        "standard_mappings/coursed/2018": {
-          "name": "Standard Mappings"
+        "unspotted_bugs/courseb/2022": {
+          "type": "ဗီဒီယို"
         },
-        "teacher_forum/coursed/2018": {
+        "pause_and_think_online/courseb/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum/coursec/2022": {
           "name": "ဆရာဖိုရမ်"
         },
-        "vocabulary/coursed/2018": {
-          "name": "ဝေါဟာရ"
+        "pair_programming/coursec/2022": {
+          "type": "ဗီဒီယို"
         },
-        "standard_mappings/coursef/2018": {
-          "name": "Standard Mappings"
+        "pause_and_think_online/coursec/2022": {
+          "type": "ဗီဒီယို"
         },
-        "teacher_forum/coursef/2018": {
+        "teacher_forum/coursed/2022": {
           "name": "ဆရာဖိုရမ်"
         },
-        "vocabulary/coursef/2018": {
-          "name": "ဝေါဟာရ"
+        "pause_and_think_online/coursed/2022": {
+          "type": "ဗီဒီယို"
         },
-        "standard_mappings/express/2018": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/express/2018": {
+        "teacher_forum/coursee/2022": {
           "name": "ဆရာဖိုရမ်"
         },
-        "vocabulary/express/2018": {
-          "name": "ဝေါဟာရ"
+        "pause_and_think_online/coursee/2022": {
+          "type": "ဗီဒီယို"
         },
-        "standard_mappings/coursee/2018": {
-          "name": "Standard Mappings"
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "ဗီဒီယို"
         },
-        "teacher_forum/coursee/2018": {
+        "teacher_forum/coursef/2022": {
           "name": "ဆရာဖိုရမ်"
         },
-        "vocabulary/coursee/2018": {
-          "name": "ဝေါဟာရ"
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "ဗီဒီယို"
         },
-        "standard_mappings/coursec/2018": {
-          "name": "Standard Mappings"
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "ဗီဒီယို"
         },
-        "teacher_forum/coursec/2018": {
+        "ai_impact_on_society/coursef/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum/express/2022": {
           "name": "ဆရာဖိုရမ်"
         },
-        "vocabulary/coursec/2018": {
-          "name": "ဝေါဟာရ"
+        "pair_programming/express/2022": {
+          "type": "ဗီဒီယို"
         },
-        "code_introduced_1/csd/2018": {
-          "name": "Codeမိတ်ဆက်"
+        "artist_introduction/express/2022": {
+          "type": "ဗီဒီယို"
         },
-        "standard_mappings_2/csd/2018": {
-          "name": "Standard Mappings"
+        "turns_angles/express/2022": {
+          "type": "ဗီဒီယို"
         },
-        "teacher_forum_2/csd/2018": {
+        "pause_and_think_online/express/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "ဗီဒီယို"
+        },
+        "variables/express/2022": {
+          "name": "Variables"
+        },
+        "teacher_forum/pre-express/2022": {
           "name": "ဆရာဖိုရမ်"
         },
-        "vocabulary_2/csd/2018": {
-          "name": "ဝေါဟာရ"
+        "20_20_20_rule/pre-express/2022": {
+          "type": "ဗီဒီယို"
         },
-        "code_introduced_3/csd/2018": {
-          "name": "Codeမိတ်ဆက်"
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "ဗီဒီယို"
         },
-        "standard_mappings_5/csd/2018": {
-          "name": "Standard Mappings"
+        "pause_and_think_online/pre-express/2022": {
+          "type": "ဗီဒီယို"
         },
-        "teacher_forum_5/csd/2018": {
-          "name": "ဆရာဖိုရမ်"
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "ဗီဒီယို"
         },
-        "vocabulary_5/csd/2018": {
-          "name": "ဝေါဟာရ"
+        "ai-ml/oceans/unversioned": {
+          "type": "ဗီဒီယို"
         },
-        "standard_mappings_4/csd/2018": {
-          "name": "Standard Mappings"
+        "ai-societal/oceans/unversioned": {
+          "type": "ဗီဒီယို"
         },
-        "teacher_forum_4/csd/2018": {
-          "name": "ဆရာဖိုရမ်"
+        "ai-training/oceans/unversioned": {
+          "type": "ဗီဒီယို"
         },
-        "vocabulary_4/csd/2018": {
-          "name": "ဝေါဟာရ"
+        "poem_art_celebration/poem-art/2021": {
+          "type": "ဗီဒီယို"
         },
-        "code_introduced_2/csd/2018": {
-          "name": "Codeမိတ်ဆက်"
+        "poem_art_events/poem-art/2021": {
+          "type": "ဗီဒီယို"
         },
-        "standard_mappings_3/csd/2018": {
-          "name": "Standard Mappings"
+        "poem_art_imagery/poem-art/2021": {
+          "type": "ဗီဒီယို"
         },
-        "teacher_forum_3/csd/2018": {
-          "name": "ဆရာဖိုရမ်"
+        "poem_art_introduction/poem-art/2021": {
+          "type": "ဗီဒီယို"
         },
-        "vocabulary_3/csd/2018": {
-          "name": "ဝေါဟာရ"
-        },
-        "code_introduced/csd/2018": {
-          "name": "Codeမိတ်ဆက်"
-        },
-        "standard_mappings_1/csd/2018": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum_1/csd/2018": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary_1/csd/2018": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/csd/2018": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/csd/2018": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/csd/2018": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/coursea/2019": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/coursea/2019": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/coursea/2019": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/courseb/2019": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/courseb/2019": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/courseb/2019": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/coursed/2019": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/coursed/2019": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/coursed/2019": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/coursef/2019": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/coursef/2019": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/coursef/2019": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/coursee/2019": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/coursee/2019": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/coursee/2019": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/express/2019": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/express/2019": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/express/2019": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/coursec/2019": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/coursec/2019": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/coursec/2019": {
-          "name": "ဝေါဟာရ"
-        },
-        "teacher_forum/csd/2019": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "code_introduced_1/csd/2019": {
-          "name": "Codeမိတ်ဆက်"
-        },
-        "standard_mappings_2/csd/2019": {
-          "name": "Standard Mappings"
-        },
-        "vocabulary_2/csd/2019": {
-          "name": "ဝေါဟာရ"
-        },
-        "code_introduced_3/csd/2019": {
-          "name": "Codeမိတ်ဆက်"
-        },
-        "standard_mappings_5/csd/2019": {
-          "name": "Standard Mappings"
-        },
-        "vocabulary_5/csd/2019": {
-          "name": "ဝေါဟာရ"
-        },
-        "code_introduced_2/csd/2019": {
-          "name": "Codeမိတ်ဆက်"
-        },
-        "standard_mappings_3/csd/2019": {
-          "name": "Standard Mappings"
-        },
-        "vocabulary_3/csd/2019": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings_4/csd/2019": {
-          "name": "Standard Mappings"
-        },
-        "vocabulary_4/csd/2019": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/csd/2019": {
-          "name": "Standard Mappings"
-        },
-        "vocabulary/csd/2019": {
-          "name": "ဝေါဟာရ"
-        },
-        "code_introduced/csd/2019": {
-          "name": "Codeမိတ်ဆက်"
-        },
-        "standard_mappings_1/csd/2019": {
-          "name": "Standard Mappings"
-        },
-        "vocabulary_1/csd/2019": {
-          "name": "ဝေါဟာရ"
-        },
-        "code_introduced_1/csd/2017": {
-          "name": "Codeမိတ်ဆက်"
-        },
-        "standard_mappings_2/csd/2017": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum_2/csd/2017": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary_2/csd/2017": {
-          "name": "ဝေါဟာရ"
-        },
-        "code_introduced_3/csd/2017": {
-          "name": "Codeမိတ်ဆက်"
-        },
-        "standard_mappings_5/csd/2017": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum_5/csd/2017": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary_5/csd/2017": {
-          "name": "ဝေါဟာရ"
-        },
-        "code_introduced/csd/2017": {
-          "name": "Codeမိတ်ဆက်"
-        },
-        "standard_mappings_1/csd/2017": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum_1/csd/2017": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary_1/csd/2017": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/csd/2017": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/csd/2017": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/csd/2017": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings_4/csd/2017": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum_4/csd/2017": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary_4/csd/2017": {
-          "name": "ဝေါဟာရ"
-        },
-        "code_introduced_2/csd/2017": {
-          "name": "Codeမိတ်ဆက်"
-        },
-        "standard_mappings_3/csd/2017": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum_3/csd/2017": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary_3/csd/2017": {
-          "name": "ဝေါဟာရ"
+        "video-text-compression/text-compression/unversioned": {
+          "type": "ဗီဒီယို"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "",
           "url": "",
           "type": ""
-        },
-        "teacher_forum_1/coursef/2021": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "introducing_sprite_lab_1/coursef/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "the_power_of_words_the_power_of_words/coursef/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "pause_and_think_online/coursef/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "ai-ml/coursef/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "ai-societal/coursef/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "ai-training/coursef/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "teacher_forum_1/courseb/2021": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "wiggles_-_gonoodle/courseb/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "unspotted_bugs/courseb/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "common-sense-media-pause-think/courseb/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "unplugged-video-big-event/courseb/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "teacher_forum_1/coursea/2021": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "wiggles-go_noodle/coursea/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "wiggles_-_gonoodle/coursea/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "csf_debugging_k1_blocks/coursea/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "pair-programming/coursea/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "common-sense-media-pause-think/coursea/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "teacher_forum_1/coursec/2021": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "pair-programming-vid/coursec/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "pause_and_think_online/coursec/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "teacher_forum_1/coursed/2021": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "pause_and_think_online/coursed/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "pause_and_think_online_1/coursed/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "teacher_forum_1/express/2021": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "pair_programming/express/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "artist_introduction/express/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "turns_angles/express/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "pause_and_think_online/express/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "pair_programming_video/express/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "variables_video/express/2021": {
-          "name": "Variables"
-        },
-        "teacher_forum_1/pre-express/2021": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "20_20_20_rule/pre-express/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "wiggles_-_go_noodle/pre-express/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "common-sense-media-pause-think/pre-express/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "teacher_forum_1/coursee/2021": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "common-sense-media-pause-think/coursee/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "digital-sharing-video/coursee/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "ai_what_is_machine_learning_/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "seeing_ai/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "finding_patterns_in_data/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "introduction_to_ai_lab_1/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "training_and_testing_in_ai_lab/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "ai_training_data_bias/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "model_cards_in_ai_lab/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "if-statements_in_app_lab/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "numerical_data_in_ai_lab_2/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "cleaning_survey_data/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "view_and_download_survey_data/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "teacher_forum/csd/2021": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "the-design-thinking-process/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "whats-for-lunch-testing/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "intro_to_design_mode/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "internet-of-things-video/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "innovation-video-1-1/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "how_computers_word_hardware_software/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "analog-digital-video/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "introduction_to_arrays/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "circuits-logic-video/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "how-computers-work-data-and-binary/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "video_impact_on_society/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "video_machine_learning/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "video_training_data_and_bias/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "teacher_forum_1/csd/2021": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "drawing_in_game_lab_-_part_1/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "drawing_in_game_lab_-_part_2/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "introduction-to-variables/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "variables_1/csd/2021": {
-          "name": "Variables"
-        },
-        "introduction_to_sprites/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "the_animation_tab/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "youtube-flipbook/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "introduction_to_the_draw_loop/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "animating-sprites/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "boolean_expressions/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "conditional_statements/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "if_else_statements/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "velocity_1/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "problem-solving-process-1/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "what-is-a-computer-1-2-3/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "what-do-computers-do/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "intro_to_web_lab_part_2/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "video_intro_to_web_lab_part_1/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "video_pair_programming/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "video_debugging/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "lists/csd/2021": {
-          "name": "စာရင်းများ"
-        },
-        "intro_to_css_-_part_1/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "intro_to_css_-_part_2/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "creative-commons-video/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "publishing_your_website/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "teamwork-dealing-with-disagreement/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "how-teamwork-works/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "how-search-works-video/csd/2021": {
-          "type": "ဗီဒီယို"
-        },
-        "standard_mappings/pre-express/2020": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/pre-express/2020": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/pre-express/2020": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/express/2020": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/express/2020": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/express/2020": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/courseb/2020": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/courseb/2020": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/courseb/2020": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/coursed/2020": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/coursed/2020": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/coursed/2020": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/coursec/2020": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/coursec/2020": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/coursec/2020": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/coursee/2020": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/coursee/2020": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/coursee/2020": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/coursea/2020": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/coursea/2020": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/coursea/2020": {
-          "name": "ဝေါဟာရ"
-        },
-        "standard_mappings/coursef/2020": {
-          "name": "Standard Mappings"
-        },
-        "teacher_forum/coursef/2020": {
-          "name": "ဆရာဖိုရမ်"
-        },
-        "vocabulary/coursef/2020": {
-          "name": "ဝေါဟာရ"
         }
       }
     }
