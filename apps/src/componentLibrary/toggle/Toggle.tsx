@@ -1,6 +1,10 @@
 import React, {ChangeEvent, memo} from 'react';
 import classnames from 'classnames';
+
 import Typography from '@cdo/apps/componentLibrary/typography';
+import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
+
 import moduleStyles from './toggle.module.scss';
 
 export interface ToggleProps {
@@ -22,7 +26,7 @@ export interface ToggleProps {
   /** Toggle switch placement */
   position?: 'left' | 'right';
   /** Size of Radio Button */
-  size?: 'xs' | 's' | 'm' | 'l';
+  size?: ComponentSizeXSToL;
 }
 
 const Toggle: React.FunctionComponent<ToggleProps> = ({
@@ -35,6 +39,8 @@ const Toggle: React.FunctionComponent<ToggleProps> = ({
   position = 'left',
   size = 'm',
 }) => {
+  const bodyTextSize = componentSizeToBodyTextSizeMap[size];
+
   return (
     <label
       className={classnames(
@@ -59,7 +65,7 @@ const Toggle: React.FunctionComponent<ToggleProps> = ({
       </div>
 
       {label && (
-        <Typography semanticTag="span" visualAppearance="body-two">
+        <Typography semanticTag="span" visualAppearance={bodyTextSize}>
           {label}
         </Typography>
       )}
