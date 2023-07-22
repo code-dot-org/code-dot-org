@@ -389,7 +389,16 @@ FactoryBot.define do
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
-      factory :locked_out_student, traits: [:U13, :in_colorado]
+      factory :non_compliant_child, traits: [:U13, :in_colorado] do
+        factory :locked_out_child do
+          child_account_compliance_state {User::ChildAccountCompliance::LOCKED_OUT}
+          child_account_compliance_state_last_updated {DateTime.now}
+          child_account_compliance_lock_out {DateTime.now}
+          trait :expired do
+            child_account_compliance_lock_out {8.days.ago}
+          end
+        end
+      end
     end
 
     # We have some tests which want to create student accounts which don't have any authentication setup.

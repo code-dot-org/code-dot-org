@@ -2695,7 +2695,7 @@ class User < ApplicationRecord
   end
 
   def self.where_child_account_past_expiration_date(expiration_date = 7.days.ago)
-    where('created_at < ?', expiration_date)
+    where("JSON_EXTRACT(properties, '$.child_account_compliance_lock_out') < ?", expiration_date)
   end
   # Verifies that the serialized attribute "us_state" is a 2 character string
   # representing a US State or "??" which represents a "N/A" kind of response.

@@ -4949,9 +4949,15 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "given a noncompliant child account, that account is locked out" do
-    student = create :locked_out_student
+    student = create :non_compliant_child
     student.save!
     assert_equal User::ChildAccountCompliance::LOCKED_OUT, student.child_account_compliance_state
     assert_not_empty student.child_account_compliance_lock_out
+  end
+
+  test "given a compliant child account, that account is NOT locked out" do
+    student = create :non_compliant_child, :with_parent_permission
+    student.save!
+    assert_equal User::ChildAccountCompliance::PERMISSION_GRANTED, student.child_account_compliance_state
   end
 end

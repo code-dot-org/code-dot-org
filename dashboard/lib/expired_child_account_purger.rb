@@ -19,7 +19,7 @@ require 'cdo/chat_client'
 class ExpiredChildAccountPurger
   class SafetyConstraintViolation < RuntimeError; end
 
-  attr_reader :dry_run, :created_after, :max_accounts_to_purge, :log
+  attr_reader :dry_run, :lock_out_date, :max_accounts_to_purge, :log
   alias :dry_run? :dry_run
 
   def initialize(options = {})
@@ -29,8 +29,8 @@ class ExpiredChildAccountPurger
     # The amount of time an account is allowed to be locked out before it is
     # purged.
     # The default is 7 days.
-    @lock_out_period = options[:lock_out_period] || 7.days.ago
-    raise ArgumentError.new('lock_out_period must be Time') unless @lock_out_period.is_a? Time
+    @lock_out_date = options[:lock_out_date] || 7.days.ago
+    raise ArgumentError.new('lock_out_date must be Time') unless @lock_out_date.is_a? Time
 
     # Do nothing if more than this number of accounts would be purged in total.
     # The motivation of this limit is to protect ourselves from bugs where we
