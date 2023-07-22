@@ -1,6 +1,11 @@
 @import "color.scss";
 @import "./music-view.module.scss";
 
+@keyframes slidein {
+  from { opacity: 0; margin-top: 20px; }
+  to { opacity: 1; margin-top: 0px; }
+}
+
 .instructions {
   background-color: $neutral_dark;
   width: 100%;
@@ -84,8 +89,13 @@
     .text {
       overflow-y: auto;
       white-space: pre-wrap;
-      flex: 1;
-      color:  $neutral_light;
+      background-color: white;
+      padding: 15px 10px 10px 20px;
+      border-radius: 10px;
+      text-align: center;
+      color: #383837;
+      margin-bottom: 10px;
+      animation: slidein 0.5s;
     }
 
     .markdownText {
@@ -112,8 +122,13 @@
 
     .feedback {
       .message {
-        margin-top: 10px;
-        color: #ffa400;
+        background-color: white;
+        padding: 15px 10px 10px 20px;
+        border-radius: 10px;
+        text-align: center;
+        color: #383837;
+        border: dashed #383837 2px;
+        animation: slidein 0.5s;
 
         p {
           margin-bottom: 0;
