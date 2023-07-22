@@ -45,6 +45,8 @@
     flex: 2;
     background-color: #fca401;
     color: $neutral_light;
+    margin: 5px;
+    width: 50%;
 
     .text {
       padding-left: 10px;
@@ -80,5 +82,22 @@
     height: 5px;
     background-color: $neutral_dark60;
     position: absolute;
+  }
+}
+
+.buttonNext {
+  font-size: 14px;
+  background-color: $brand_secondary_default;
+  border-color: $brand_secondary_default;
+  color: white;
+  width: 50%;
+  padding: 5px 10px;
+  border-radius: 8px;
+  height: 38px;
+  margin: 5px;
+
+  &Disabled {
+    opacity: 50%;
+    cursor: default;
   }
 }

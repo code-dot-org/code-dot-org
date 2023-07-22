@@ -581,7 +581,6 @@ class UnconnectedMusicView extends React.Component {
             progressionStep={this.props.levelData}
             currentLevelIndex={this.props.currentLevelIndex}
             levelCount={this.getLevelCount()}
-            onNextPanel={this.onNextPanel}
             baseUrl={baseAssetUrl}
             vertical={position !== InstructionsPositions.TOP}
             right={position === InstructionsPositions.RIGHT}
@@ -614,6 +613,9 @@ class UnconnectedMusicView extends React.Component {
               enableSkipControls={
                 AppConfig.getValue('skip-controls-enabled') === 'true'
               }
+              onNextPanel={this.onNextPanel}
+              currentLevelIndex={this.props.currentLevelIndex}
+              levelCount={this.getLevelCount()}
             />
           </PanelContainer>
         </div>

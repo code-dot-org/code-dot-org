@@ -48,12 +48,12 @@ $default-spacing: 2px;
   gap: $default-spacing;
 
   .controlsArea {
-    width: 220px;
+    width: 280px;
     height: 100%;
   }
 
   .timelineArea {
-    width: calc(100% - 220px);
+    width: calc(100% - 280px);
     height: 100%;
   }
 }

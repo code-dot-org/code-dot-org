@@ -14,6 +14,7 @@ import {
   showBeatPad,
 } from '../redux/musicRedux';
 import commonI18n from '@cdo/locale';
+import musicI18n from '../locale';
 
 const LoadingProgress = () => {
   const progressValue = useSelector(state => state.music.soundLoadingProgress);
@@ -94,10 +95,22 @@ const Controls = ({
   playTrigger,
   hasTrigger,
   enableSkipControls = false,
+  onNextPanel,
+  currentLevelIndex,
+  levelCount,
 }) => {
   const isPlaying = useSelector(state => state.music.isPlaying);
   const isBeatPadShowing = useSelector(state => state.music.isBeatPadShowing);
+  const validationState = useSelector(state => state.lab.validationState);
   const dispatch = useDispatch();
+
+  const currentPanel = currentLevelIndex;
+
+  const getNextPanel = () => {
+    return currentPanel + 1 < levelCount ? currentPanel + 1 : null;
+  };
+
+  const hasNextPanel = validationState.satisfied ? !!getNextPanel() : false;
 
   useEffect(() => {
     if (isPlaying) {
@@ -141,6 +154,19 @@ const Controls = ({
             {isPlaying ? commonI18n.stop() : commonI18n.runProgram()}
           </div>
         </button>
+
+        <button
+          id="instructions-feedback-button"
+          type="button"
+          onClick={() => onNextPanel()}
+          className={classNames(
+            moduleStyles.buttonNext,
+            !hasNextPanel && moduleStyles.buttonNextDisabled
+          )}
+        >
+          {musicI18n.continue()}
+        </button>
+
         {enableSkipControls && <SkipControls />}
       </div>
       {isBeatPadShowing && renderBeatPad()}
@@ -154,6 +180,9 @@ Controls.propTypes = {
   playTrigger: PropTypes.func.isRequired,
   hasTrigger: PropTypes.func.isRequired,
   enableSkipControls: PropTypes.bool,
+  onNextPanel: PropTypes.func,
+  currentLevelIndex: PropTypes.number,
+  levelCount: PropTypes.number,
 };
 
 export default Controls;
