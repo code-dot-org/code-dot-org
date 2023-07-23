@@ -25,19 +25,6 @@ const TimelineSimple2Events = ({
     return currentUniqueSounds.indexOf(id);
   };
 
-  // NEW
-  const currentUniqueSounds2 = [];
-  orderedFunctions.forEach(orderedFunction => {
-    const functionName = orderedFunction.name;
-    orderedFunction.playbackEvents.forEach(playbackEvent => {
-      const id = functionName + ' ' + playbackEvent.id;
-      if (currentUniqueSounds2.indexOf(id) === -1) {
-        currentUniqueSounds2.push(id);
-      }
-    });
-  });
-
-  // OLD
   // Generate a list of unique sounds, with uniqueness being a combination of
   // the function name and the sound ID.
   // Let's cache the value of currentUniqueSounds so that the various helpers
@@ -52,14 +39,18 @@ const TimelineSimple2Events = ({
     }
   }
 
-  // For each function, determine its extents.
-  const uniqueFunctionExtents2 = {};
+  // Next, for each function, determine the boundaries of the sound events
+  // generated, including by functions it calls.
+  // The outcome is an object with each function's boundaries.
+  // Each timeline boundary has left/right position in measures, and
+  // top/bottom position in pixels.
+  const uniqueFunctionExtents = {};
   orderedFunctions.forEach(orderedFunction => {
     const uniqueFunctionId =
       orderedFunction.name + orderedFunction.uniqueInvocationId;
 
     const bounds = getFunctionBounds(orderedFunction);
-    uniqueFunctionExtents2[uniqueFunctionId] = bounds;
+    uniqueFunctionExtents[uniqueFunctionId] = bounds;
   });
 
   function getFunctionBounds(orderedFunction) {
@@ -67,6 +58,7 @@ const TimelineSimple2Events = ({
       top = 100000,
       right = 0,
       bottom = 0;
+
     orderedFunction.playbackEvents.forEach(playbackEvent => {
       left = Math.min(left, playbackEvent.when);
       right = Math.max(right, playbackEvent.when + playbackEvent.length);
@@ -98,57 +90,15 @@ const TimelineSimple2Events = ({
     return {left, right, top, bottom};
   }
 
-  const uniqueFunctionExtents2Array = [];
-  Object.keys(uniqueFunctionExtents2).forEach(key => {
-    uniqueFunctionExtents2Array.push(uniqueFunctionExtents2[key]);
+  const uniqueFunctionExtentsArray = [];
+  Object.keys(uniqueFunctionExtents).forEach(key => {
+    uniqueFunctionExtentsArray.push(uniqueFunctionExtents[key]);
   });
-
-  // Next, go through all sound events, and for each unique function that
-  // is involved, adjust the boundaries of timeline space if necessary.
-  // The outcome is an array of functions that generate sounds, with the
-  // timeline boundaries for each.
-  // Each timeline boundary has left/right position in measures, and
-  // top/bottom position in pixels.
-  const uniqueFunctionExtents = [];
-  for (const soundEvent of soundEvents) {
-    const soundId = soundEvent.id;
-    const functionName = soundEvent.functionContext.name;
-    const positionLeft = soundEvent.when;
-    const positionRight = positionLeft + soundEvent.length;
-    const positionTop = getVerticalOffsetForEventId(
-      functionName + ' ' + soundId
-    );
-    const positionBottom =
-      positionTop + getEventHeight(currentUniqueSounds.length);
-
-    const uniqueFunctionIndex = uniqueFunctionExtents.findIndex(
-      item =>
-        item.id === functionName + soundEvent.functionContext.uniqueInvocationId
-    );
-    if (uniqueFunctionIndex === -1) {
-      uniqueFunctionExtents.push({
-        id: functionName + soundEvent.functionContext.uniqueInvocationId,
-        positionLeft: positionLeft,
-        positionRight: positionRight,
-        positionTop: positionTop,
-        positionBottom: positionBottom,
-      });
-    } else {
-      const item = uniqueFunctionExtents[uniqueFunctionIndex];
-      uniqueFunctionExtents[uniqueFunctionIndex] = {
-        id: item.id,
-        positionLeft: Math.min(item.positionLeft, positionLeft),
-        positionRight: Math.max(item.positionRight, positionRight),
-        positionTop: Math.min(item.positionTop, positionTop),
-        positionBottom: Math.max(item.positionBottom, positionBottom),
-      };
-    }
-  }
 
   return (
     <div id="timeline-events">
       <div id="timeline-events-funtion-extents">
-        {uniqueFunctionExtents2Array.map((uniqueFunction, index) => (
+        {uniqueFunctionExtentsArray.map((uniqueFunction, index) => (
           <div
             key={index}
             style={{
