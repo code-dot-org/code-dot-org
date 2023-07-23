@@ -153,7 +153,8 @@ const TimelineSimple2Events = ({
             key={index}
             style={{
               position: 'absolute',
-              backgroundColor: 'rgba(255 255 255 / 0.12)',
+              backgroundColor:
+                index === 0 ? 'rgba(0 0 0 / 0)' : 'rgba(255 255 255 / 0.12)',
               borderRadius: 8,
               left: paddingOffset + (uniqueFunction.left - 1) * barWidth,
               width: (uniqueFunction.right - uniqueFunction.left) * barWidth,
