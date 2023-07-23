@@ -50,9 +50,6 @@ const styles = {
   inputBox: {
     width: 225,
   },
-  details: {
-    fontSize: 12,
-  },
 };
 
 export const UnconnectedManageStudentFamilyNameCell =
