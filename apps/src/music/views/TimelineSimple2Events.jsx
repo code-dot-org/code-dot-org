@@ -54,8 +54,8 @@ const TimelineSimple2Events = ({
   });
 
   function getFunctionBounds(orderedFunction) {
-    let left = 100000,
-      top = 100000,
+    let left = Number.MAX_SAFE_INTEGER,
+      top = Number.MAX_SAFE_INTEGER,
       right = 0,
       bottom = 0;
 
