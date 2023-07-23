@@ -29,8 +29,9 @@ export default class InternationalOptIn extends FormController {
   serializeFormData() {
     const formData = super.serializeFormData();
     formData.form_data.email = this.props.accountEmail;
+    // Capitalize country values to be consistent with other country strings in our database
     formData.form_data.schoolCountry = _.startCase(
-      _.camelCase(formData.form_data.schoolCountry)
+      formData.form_data.schoolCountry
     );
     return formData;
   }
@@ -75,7 +76,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isColombiaSelected() {
-    return this.props.data?.schoolCountry?.toLowerCase() === 'colombia';
+    return this.props.data?.schoolCountry === 'colombia';
   }
 
   /**
@@ -86,7 +87,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isChileSelected() {
-    return this.props.data?.schoolCountry?.toLowerCase() === 'chile';
+    return this.props.data?.schoolCountry === 'chile';
   }
 
   /**
@@ -97,7 +98,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isUzbekistanSelected() {
-    return this.props.data?.schoolCountry?.toLowerCase() === 'uzbekistan';
+    return this.props.data?.schoolCountry === 'uzbekistan';
   }
 
   /**
@@ -400,7 +401,7 @@ class InternationalOptInComponent extends FormComponent {
 
   renderSchoolFieldGroups() {
     let schoolDataFieldGroup;
-    const selectedCountry = this.props.data?.schoolCountry?.toLowerCase();
+    const selectedCountry = this.props.data?.schoolCountry;
     if (this.isColombiaSelected()) {
       schoolDataFieldGroup = this.renderColombianSchoolDataFieldGroup();
     } else if (this.isChileSelected()) {
@@ -455,7 +456,7 @@ class InternationalOptInComponent extends FormComponent {
   renderWorkshopFieldGroups() {
     // If no country has been selected, display the inputs disabled with a
     // placeholder text asking the user to select their country first.
-    const selectedCountry = this.props.data?.schoolCountry?.toLowerCase();
+    const selectedCountry = this.props.data?.schoolCountry;
     const placeholder = selectedCountry ? undefined : i18n.selectCountryFirst();
 
     const organizers = this.props.options.workshopOrganizer[
