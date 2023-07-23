@@ -1,15 +1,15 @@
 "project_identifier" : "codeorg-markdown-testing"
 "project_id" : "547997"
-"base_path" : "../../i18n/locales"
+"base_path" : ""
 
 # API Credentials must be loaded from a separate identity file. See
 # https://support.crowdin.com/configuration-file/#split-project-configuration-and-api-credentials
 "api_key" : ""
 
 files: [{
-  "source": "/source/markdown/**/*.md",
+  "source": "/i18n/locales/source/markdown/**/*.md",
   "translation": "/pegasus/sites.v3/code.org/i18n/**/%file_name%.%locale%.md.partial",
   "ignore": [
-    "/source/markdown/public/ai.md",
+    "/i18n/locales/source/markdown/public/ai.md",
     ],
   }]

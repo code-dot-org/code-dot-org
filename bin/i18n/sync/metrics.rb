@@ -8,27 +8,25 @@ module I18n
   module Sync
     module Metrics
       I18N_METRICS_NAMESPACE = 'I18n'.freeze
-      class << self
-        attr_accessor :machine_id
-      end
 
       def self.runtime(process)
-        start = Time.now
-        elapsed = Benchmark.realtime {yield}
-        log_metric(:RuntimeTest,
-                   [
-                     {name: "SyncStep", value: "in"},
-                     {name: "MethodName", value: process}
-                     # {name: "StartTime", value: start.utc.strftime("%Y/%m/%d")}
-                   ],
-                   elapsed,
-                   'Seconds'
+        result = nil
+        runtime = Benchmark.realtime {result = yield}
+        log_metric(
+          :RuntimeTest,
+          runtime,
+          [
+            {name: "SyncStep", value: "in"},
+            {name: "MethodName", value: process}
+          ],
+          'Seconds'
         )
-        puts "#{Time.now.utc.iso8601},#{process},#{start.utc.strftime('%Y/%m/%d')},#{elapsed}"
+
+        result
       end
 
-      def self.get_machine_id
-        @get_machine_id ||= begin
+      def self.machine_id
+        @machine_id ||= begin
           metadata_endpoint = 'http://169.254.169.254/latest/meta-data/'
           Net::HTTP.get(URI.parse(metadata_endpoint + 'instance-id'))
         rescue
@@ -36,8 +34,13 @@ module I18n
         end
       end
 
-      def self.log_metric(metric_name, addtl_dimensions, value, units='None')
-        machine_id = I18n::Sync::Metrics.machine_id ||= get_machine_id
+      # logging metrics into cloudwatch under i18n name space
+      # @param metric_name [Symbol] A metric name
+      # @param metric_value [Object] A metric value
+      # @param addtl_dimensions [Array<Hash>] additional dimensions
+      # @option opts [String] Metric units. Valid Values see CloudWatch MetricDatum:
+      # https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html
+      def self.log_metric(metric_name, metric_value, addtl_dimensions, metric_units='None')
         # add machine_id and environment dimensions to addtl_dimensions
         addtl_dimensions << {name: "Environment", value: CDO.rack_env}
         addtl_dimensions << {name: "MachineId", value: machine_id}
@@ -48,8 +51,8 @@ module I18n
             {
               metric_name: metric_name,
               dimensions: addtl_dimensions,
-              value: value,
-              unit: units
+              value: metric_value,
+              unit: metric_units
             }
           ]
         )
