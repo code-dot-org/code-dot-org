@@ -1,6 +1,7 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {MIN_NUM_MEASURES} from '../constants';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+import {FunctionEvents} from '../player/interfaces/FunctionEvents';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -40,6 +41,8 @@ export interface MusicState {
   isBeatPadShowing: boolean;
   /** The current list of playback events */
   playbackEvents: PlaybackEvent[];
+  /** The current ordered functions */
+  orderedFunctions: FunctionEvents[];
   /** The current last measure of the song */
   lastMeasure: number;
   /** The current sound loading progress, from 0-1 inclusive, representing the
@@ -60,6 +63,7 @@ const initialState: MusicState = {
   isHeadersShowing: true,
   isBeatPadShowing: true,
   playbackEvents: [],
+  orderedFunctions: [],
   lastMeasure: 0,
   soundLoadingProgress: 0,
   startingPlayheadPosition: 1,
@@ -139,12 +143,21 @@ const musicSlice = createSlice({
       state.playbackEvents = [];
       state.lastMeasure = 0;
     },
+    clearOrderedFunctions: state => {
+      state.orderedFunctions = [];
+    },
     addPlaybackEvents: (
       state,
       action: PayloadAction<{events: PlaybackEvent[]; lastMeasure: number}>
     ) => {
       state.playbackEvents.push(...action.payload.events);
       state.lastMeasure = action.payload.lastMeasure;
+    },
+    addOrderedFunctions: (
+      state,
+      action: PayloadAction<{orderedFunctions: FunctionEvents[]}>
+    ) => {
+      state.orderedFunctions.push(...action.payload.orderedFunctions);
     },
     setSoundLoadingProgress: (state, action: PayloadAction<number>) => {
       state.soundLoadingProgress = action.payload;
@@ -218,7 +231,9 @@ export const {
   hideBeatPad,
   toggleBeatPad,
   clearPlaybackEvents,
+  clearOrderedFunctions,
   addPlaybackEvents,
+  addOrderedFunctions,
   setSoundLoadingProgress,
   setStartPlayheadPosition,
   moveStartPlayheadPositionForward,

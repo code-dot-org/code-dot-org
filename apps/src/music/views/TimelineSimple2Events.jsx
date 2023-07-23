@@ -13,6 +13,7 @@ const TimelineSimple2Events = ({
   getEventHeight,
 }) => {
   const soundEvents = useSelector(state => state.music.playbackEvents);
+  const orderedFunctions = useSelector(state => state.music.orderedFunctions);
 
   const getVerticalOffsetForEventId = id => {
     return (
@@ -24,6 +25,19 @@ const TimelineSimple2Events = ({
     return currentUniqueSounds.indexOf(id);
   };
 
+  // NEW
+  const currentUniqueSounds2 = [];
+  orderedFunctions.forEach(orderedFunction => {
+    const functionName = orderedFunction.name;
+    orderedFunction.playbackEvents.forEach(playbackEvent => {
+      const id = functionName + ' ' + playbackEvent.id;
+      if (currentUniqueSounds2.indexOf(id) === -1) {
+        currentUniqueSounds2.push(id);
+      }
+    });
+  });
+
+  // OLD
   // Generate a list of unique sounds, with uniqueness being a combination of
   // the function name and the sound ID.
   // Let's cache the value of currentUniqueSounds so that the various helpers
@@ -37,6 +51,57 @@ const TimelineSimple2Events = ({
       currentUniqueSounds.push(id);
     }
   }
+
+  // For each function, determine its extents.
+  const uniqueFunctionExtents2 = {};
+  orderedFunctions.forEach(orderedFunction => {
+    const uniqueFunctionId =
+      orderedFunction.name + orderedFunction.uniqueInvocationId;
+
+    const bounds = getFunctionBounds(orderedFunction);
+    uniqueFunctionExtents2[uniqueFunctionId] = bounds;
+  });
+
+  function getFunctionBounds(orderedFunction) {
+    let left = 100000,
+      top = 100000,
+      right = 0,
+      bottom = 0;
+    orderedFunction.playbackEvents.forEach(playbackEvent => {
+      left = Math.min(left, playbackEvent.when);
+      right = Math.max(right, playbackEvent.when + playbackEvent.length);
+      top = Math.min(
+        top,
+        getVerticalOffsetForEventId(
+          orderedFunction.name + ' ' + playbackEvent.id
+        )
+      );
+      bottom = Math.max(
+        bottom,
+        getVerticalOffsetForEventId(
+          orderedFunction.name + ' ' + playbackEvent.id
+        ) + getEventHeight(currentUniqueSounds.length)
+      );
+    });
+
+    orderedFunction.calledFunctionIds.forEach(calledFunctionId => {
+      const calledFunction = orderedFunctions.find(
+        orderedF => orderedF.uniqueInvocationId === calledFunctionId
+      );
+      const bounds = getFunctionBounds(calledFunction);
+      left = Math.min(left, bounds.left);
+      right = Math.max(right, bounds.right);
+      top = Math.min(top, bounds.top);
+      bottom = Math.max(bottom, bounds.bottom);
+    });
+
+    return {left, right, top, bottom};
+  }
+
+  const uniqueFunctionExtents2Array = [];
+  Object.keys(uniqueFunctionExtents2).forEach(key => {
+    uniqueFunctionExtents2Array.push(uniqueFunctionExtents2[key]);
+  });
 
   // Next, go through all sound events, and for each unique function that
   // is involved, adjust the boundaries of timeline space if necessary.
@@ -83,21 +148,17 @@ const TimelineSimple2Events = ({
   return (
     <div id="timeline-events">
       <div id="timeline-events-funtion-extents">
-        {uniqueFunctionExtents.map((uniqueFunction, index) => (
+        {uniqueFunctionExtents2Array.map((uniqueFunction, index) => (
           <div
             key={index}
             style={{
               position: 'absolute',
               backgroundColor: 'rgba(255 255 255 / 0.12)',
               borderRadius: 8,
-              left:
-                paddingOffset + (uniqueFunction.positionLeft - 1) * barWidth,
-              width:
-                (uniqueFunction.positionRight - uniqueFunction.positionLeft) *
-                barWidth,
-              top: 32 + uniqueFunction.positionTop,
-              height:
-                uniqueFunction.positionBottom - uniqueFunction.positionTop - 3,
+              left: paddingOffset + (uniqueFunction.left - 1) * barWidth,
+              width: (uniqueFunction.right - uniqueFunction.left) * barWidth,
+              top: 32 + uniqueFunction.top,
+              height: uniqueFunction.bottom - uniqueFunction.top - 3,
             }}
           >
             &nbsp;
