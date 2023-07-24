@@ -21,6 +21,20 @@ pt:
       'App Project: Linking Screens': 'Projeto do Aplicativo: Vinculando Telas'
       'App Project: Screen Design': 'Projeto do Aplicativo: Design da Tela'
       'App Project: Screen Import': 'Projeto do Aplicativo: Importação de Tela'
+      'App: Choose a Kid''s Movie': 'App: Escolha um Filme Infantil'
+      'App: Friend Finder': 'App: Localizador de Amigos'
+      'App: Guess the Number': 'App: Adivinhe o Número'
+      'App: How Many Countries': 'App: Quantos Países'
+      'App: Improved Pet App': 'App: App de Pets Melhorado'
+      'App: Is It Your Birthday?': 'App: É seu aniversário?'
+      'App: My Famous Birthday': 'App: Meu Aniversário Famoso'
+      'App: National Parks': 'App: Parques Nacionais'
+      'App: Outfit Picker': 'App: Selecionador de Look'
+      'App: Pet Chooser': 'App: Selecionador de Pet'
+      'App: Stamp Notebook': 'App: Caderno de Selos'
+      'App: Story Creator': 'App: Criador de Histórias'
+      'App: The Fastest Finger': 'App: O Dedo Mais Rápido'
+      'App: Where Should I Live?': 'App: Onde eu Deveria Morar?'
       Arrays: Vetores
       Artist Intro with JR Hildebrand: Introdução do Artista com JR Hildebrand
       Artist Intro with JR Hildebrande: Introdução do Artista com JR Hildebrande
@@ -141,6 +155,7 @@ pt:
       Emotion Machine Example: Exemplo de Máquina de Emoção
       End of Course Projects: Projetos de conclusão de curso
       End-Of-Unit Survey: Pesquisa de Fim de Unidade
+      End-of-Unit Survey: Pesquisa de Fim de Unidade
       Escape Room Example: Exemplo de Sala de Escape
       Event Types: Tipos de Eventos
       Events: Eventos
@@ -421,6 +436,7 @@ pt:
         Jogos - Parte 2'
       'Video: For Loops': 'Vídeo: Laços Para'
       'Video: Functions': 'Vídeo: Funções'
+      'Video: IOSP Model': 'Vídeo: Modelo IOSP'
       'Video: If/Else Statements': 'Vídeo: Condicionais'
       'Video: Intro to CSS': 'Vídeo: Introdução a CSS'
       'Video: Intro to CSS Part 2': 'Vídeo: Introdução a CSS Parte 2'
@@ -431,11 +447,11 @@ pt:
       'Video: Introduction to Variables': 'Vídeo: Introdução às variáveis'
       'Video: Introduction to the Draw Loop': 'Vídeo: Introdução ao Laço de Desenho'
       'Video: Outbreak Simulator: Introduction': 'Video: Simulação de Vírus: Intro'
-      'Video: Problem Solving Process': 'Vídeo: Processo de resolução de problemas'
+      'Video: Problem Solving Process': 'Vídeo: O Processo de Resolução de Problemas'
       'Video: Sprite Movement': 'Vídeo: Movimento de Sprite'
       'Video: The Animation Tab': 'Vídeo: A guia de Animação'
       'Video: Velocity': 'Video: Velocidade'
-      'Video: What Makes a Computer, a Computer?': 'Vídeo: O que faz de um computador,
+      'Video: What Makes a Computer, a Computer?': 'Vídeo: O que faz de um computador
         um computador?'
       Warm Up: Aquecimento
       Website Project: Projeto do SIte

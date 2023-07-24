@@ -2,17 +2,49 @@
   "is-IS": {
     "data": {
       "standard_categories": {
+        "C": {
+          "description": "Hringir"
+        },
         "CT": {
           "description": "Tölvunarmiðuð hugsun"
+        },
+        "ESS": {
+        },
+        "ESS1": {
+        },
+        "ESS2": {
+        },
+        "ESS3": {
+        },
+        "ETS": {
+        },
+        "ETS1": {
+        },
+        "F": {
+          "description": "Föll"
         },
         "L": {
           "description": "Forritunarmál"
         },
-        "C": {
-          "description": "Hringir"
+        "LS": {
         },
-        "F": {
-          "description": "Föll"
+        "LS1": {
+        },
+        "LS2": {
+        },
+        "LS3": {
+        },
+        "LS4": {
+        },
+        "PS": {
+        },
+        "PS1": {
+        },
+        "PS2": {
+        },
+        "PS3": {
+        },
+        "PS4": {
         }
       }
     }

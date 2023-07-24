@@ -61,19 +61,19 @@ is:
         csd-2023:
           title: Uppgötvanir í Tölvunarfræði
     resources:
-      curriculum/csd/2020:
-        name: Námskrá
-      teacher_forum/csd/2020:
-        name: Kennaraspjall
       curriculum/csd/2017:
         name: Námskrá
       teacher_forum_6/csd/2017:
+        name: Kennaraspjall
+      curriculum/csd/2018:
+        name: Námskrá
+      teacher_forum_6/csd/2018:
         name: Kennaraspjall
       curriculum/csd/2019:
         name: Námskrá
       teacher_forum/csd/2019:
         name: Kennaraspjall
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: Námskrá
-      teacher_forum_6/csd/2018:
+      teacher_forum/csd/2020:
         name: Kennaraspjall

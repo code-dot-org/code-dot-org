@@ -8,9 +8,9 @@
   "blockly_toolboxCategoryLogic": "තර්කය",
   "blockly_toolboxCategoryMath": "ගණිත",
   "blockly_toolboxCategoryVariables": "විචල්‍යන්",
-  "share": "බෙදා ගන්න",
-  "startOver": "මුල සිට නැවත අරඹන්න",
+  "continue": "කරගෙන යන්න",
   "panelHeaderInstructions": "උපදෙස්",
   "panelHeaderWorkspace": "වැඩ අවකාශය: ",
-  "continue": "කරගෙන යන්න"
+  "share": "බෙදා ගන්න",
+  "startOver": "මුල සිට නැවත අරඹන්න"
 }

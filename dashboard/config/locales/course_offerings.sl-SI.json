@@ -2,24 +2,24 @@
   "sl-SI": {
     "data": {
       "course_offerings": {
-        "csp": "AP® računalniški principi",
-        "flappy": "Program za Plahutača (Flappyja)",
-        "jigsaw": "Sestavljanka",
         "algebra": "Računalništvo v računstvu",
         "artist": "Umetnik",
         "course1": "Tečaj 1",
         "course2": "Tečaj 2",
         "course3": "Tečaj 3",
         "course4": "Tečaj 4",
+        "csp": "AP® računalniški principi",
+        "edit-code": "Uredi kodo",
+        "flappy": "Program za Plahutača (Flappyja)",
         "frozen": "Frozen (Ledeno kraljestvo) z Ano in Elso",
+        "halloween": "noč čarovnic",
         "hourofcode": "Klasičen labirint",
+        "jigsaw": "Sestavljanka",
         "mc": "Minecraft Ura za kodo",
         "minecraft": "Minecraft Ura za kodo Oblikovalec",
         "playlab": "Play Lab",
-        "edit-code": "Uredi kodo",
-        "halloween": "noč čarovnic",
-        "step": "korak",
-        "soccer": "nogomet"
+        "soccer": "nogomet",
+        "step": "korak"
       }
     }
   }
