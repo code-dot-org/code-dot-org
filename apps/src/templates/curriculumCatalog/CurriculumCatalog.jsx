@@ -292,6 +292,11 @@ const CurriculumCatalog = ({
     );
   };
 
+  const handleCloseAssignSuccessMessage = () => {
+    setShowAssignSuccessMessage(false);
+    setAssignSuccessMessage('');
+  };
+
   // Renders search results based on the applied filters (or shows the No matching curriculums
   // message if no results).
   const renderSearchResults = () => {
@@ -382,7 +387,7 @@ const CurriculumCatalog = ({
           </BodyTwoText>
           <button
             aria-label="close success message"
-            onClick={() => setShowAssignSuccessMessage(false)}
+            onClick={handleCloseAssignSuccessMessage}
             type="button"
           >
             <strong>X</strong>

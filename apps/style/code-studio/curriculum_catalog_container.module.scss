@@ -1,5 +1,7 @@
 @use 'color.scss';
 
+$container-width: 309px;
+
 .catalogFiltersContainer {
   display: flex;
   align-items: baseline;
@@ -50,10 +52,10 @@ button.catalogClearFiltersButton {
 }
 
 .catalogContentCards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $container-width);
   justify-content: center;
-  gap: 1em;
+  grid-gap: 1em;
 }
 
 .catalogContentNoResults {
