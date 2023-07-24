@@ -103,14 +103,10 @@ def add_code_to_editor(code, append: false)
     const aceEditor = __TestInterface.getDroplet().aceEditor;
     aceEditor.textInput.focus();
     if (append) aceEditor.navigateFileEnd();
-    aceEditor.renderer.on('afterRender', function onAfterRender() {
-      aceEditor.renderer.off('afterRender', onAfterRender);
-      callback(true);
-    });
     aceEditor.onTextInput(code);
   JS
 
-  wait_short_until {@browser.execute_async_script(script, code, append)}
+  @browser.execute_script(script, code, append)
 end
 
 When /^ace editor code is equal to "([^"]+)"$/ do |expected_code|
