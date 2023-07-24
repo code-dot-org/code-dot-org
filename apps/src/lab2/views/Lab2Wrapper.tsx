@@ -25,8 +25,7 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   const isPageError: boolean = useSelector(hasPageError);
   const errorMessage: string | undefined = useSelector(
     (state: {lab: LabState}) =>
-      state?.lab?.pageError?.errorMessage ||
-      state?.lab?.pageError?.error?.message
+      state.lab.pageError?.errorMessage || state.lab.pageError?.error?.message
   );
   const overlayStyle: string = isLoading
     ? moduleStyles.showingBlock
@@ -76,7 +75,7 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
 };
 
 export interface ErrorUIProps {
-  message?: string | undefined;
+  message?: string;
 }
 
 export const ErrorUI: React.FunctionComponent<ErrorUIProps> = ({message}) => (
