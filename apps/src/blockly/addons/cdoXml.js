@@ -1,3 +1,31 @@
+import {procedureDefinitionTypes} from '../constants';
+
+// Helper function to sort block elements based on the block type
+function sortBlocksByType(blockElements, types) {
+  return blockElements.sort((a, b) => {
+    const aType = a.getAttribute('type');
+    const bType = b.getAttribute('type');
+
+    // If both blocks are of specified types, maintain their original order
+    if (types.includes(aType) && types.includes(bType)) {
+      return 0;
+    }
+
+    // If block a is of a specified type, it should come first
+    if (types.includes(aType)) {
+      return -1;
+    }
+
+    // If block b is of a specified type, it should come first
+    if (types.includes(bType)) {
+      return 1;
+    }
+
+    // Otherwise, maintain the original order
+    return 0;
+  });
+}
+
 export default function initializeBlocklyXml(blocklyWrapper) {
   // Clear xml namespace
   blocklyWrapper.utils.xml.NAME_SPACE = '';
@@ -34,22 +62,33 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     return block;
   };
 
-  blocklyWrapper.Xml.domToBlockSpace = function (blockSpace, xml) {
+  // Decode an XML DOM and create blocks on the workspace.
+  blocklyWrapper.Xml.domToBlockSpace = function (workspace, xml) {
+    const blocks = [];
+
+    // Convert XML to an array of block elements
+    const blockElements = Array.from(xml.childNodes).filter(
+      node => node.nodeName.toLowerCase() === 'block'
+    );
+
+    // Check if any block elements were found
+    if (blockElements.length === 0) {
+      return blocks;
+    }
+
+    // Procedure definitions should be loaded ahead of call
+    // blocks, so that the procedures map is updated correctly.
+    const sortedBlockElements = sortBlocksByType(
+      blockElements,
+      procedureDefinitionTypes
+    );
+
     // To position the blocks, we first render them all to the Block Space
     //  and parse any X or Y coordinates set in the XML. Then, we store
     //  the rendered blocks and the coordinates in an array so that we can
-    //  position them in two passes.
-    //  In the first pass, we position the visible blocks. In the second
-    //  pass, we position the invisible blocks. We do this so that
-    //  invisible blocks don't cause the visible blocks to flow
-    //  differently, which could leave gaps between the visible blocks.
-    const blocks = [];
-    xml.childNodes.forEach(xmlChild => {
-      if (xmlChild.nodeName.toLowerCase() !== 'block') {
-        // skip non-block xml elements
-        return;
-      }
-      const blockly_block = Blockly.Xml.domToBlock(xmlChild, blockSpace);
+    //  position them.
+    sortedBlockElements.forEach(xmlChild => {
+      const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
       const x = parseInt(xmlChild.getAttribute('x'), 10);
       const y = parseInt(xmlChild.getAttribute('y'), 10);
       blocks.push({

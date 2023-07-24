@@ -1,6 +1,20 @@
 import GoogleBlockly from 'blockly/core';
+import {procedureDefinitionTypes} from '../constants';
 
 const unknownBlockState = {type: 'unknown', enabled: false};
+
+// Sorting function, used by load()
+function sortBlocksByType(blockStates) {
+  return blockStates.sort((a, b) => {
+    if (procedureDefinitionTypes.includes(a.type)) {
+      return -1; // a comes before b
+    } else if (procedureDefinitionTypes.includes(b.type)) {
+      return 1; // b comes before a
+    } else {
+      return 0; // no change in order
+    }
+  });
+}
 
 export default class CdoBlockSerializer extends GoogleBlockly.serialization
   .blocks.BlockSerializer {
@@ -13,7 +27,9 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
    * @param {Blockly.Workspace} workspace - The workspace to deserialize into.
    */
   load(stateToLoad, workspace) {
-    const blockStates = stateToLoad['blocks'];
+    // Procedure definitions should be loaded ahead of call
+    // blocks, so that the procedures map is updated correctly.
+    const blockStates = sortBlocksByType(stateToLoad['blocks']);
 
     for (const blockState of blockStates) {
       try {
