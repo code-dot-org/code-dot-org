@@ -56,6 +56,13 @@ Layout/SpaceInsideHashLiteralBraces:
 Naming/RescuedExceptionsVariableName:
   PreferredName: exception
 
+# This Cop by default uses a custom Include directive which in our
+# project would also include pegasus
+# see https://github.com/rubocop/rubocop-rails/blob/d81af275bba3d06e30156596c2c057cf68f8272b/config/default.yml#L213C11-L213C11
+Rails/AssertNot:
+  Include:
+    - dashboard/**/test/**/*
+
 Rails/Date:
   EnforcedStyle: strict
 

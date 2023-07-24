@@ -10,7 +10,7 @@
       "startSources": {
         "blocks": {
           "languageVersion": 0,
-          "blocks": [{"type": "when_run_simple2", "deletable": false, "movable": false, "x": 36, "y": 36}]
+          "blocks": [{"id": "when-run-block", "type": "when_run_simple2", "deletable": false, "movable": false, "x": 36, "y": 36}]
         },
         "variables": [{"name": "currentTime"}, {"name": "i"}]
       }

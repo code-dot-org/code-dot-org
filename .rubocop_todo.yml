@@ -157,13 +157,6 @@ Performance/MethodObjectAsBlock:
 Rails/ApplicationMailer:
   Enabled: false
 
-# Offense count: 21
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: Include.
-# Include: **/test/**/*
-Rails/AssertNot:
-  Enabled: false
-
 # Offense count: 472
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: Whitelist, AllowedMethods, AllowedReceivers.

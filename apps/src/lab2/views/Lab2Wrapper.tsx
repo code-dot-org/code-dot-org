@@ -11,7 +11,7 @@ import {useSelector} from 'react-redux';
 import classNames from 'classnames';
 import moduleStyles from './Lab2Wrapper.module.scss';
 import ErrorBoundary from '../ErrorBoundary';
-import {isLabLoading, hasPageError} from '../lab2Redux';
+import {LabState, isLabLoading, hasPageError} from '../lab2Redux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Lab2MetricsReporter from '../Lab2MetricsReporter';
 const i18n = require('@cdo/locale');
@@ -23,7 +23,10 @@ export interface Lab2WrapperProps {
 const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   const isLoading: boolean = useSelector(isLabLoading);
   const isPageError: boolean = useSelector(hasPageError);
-
+  const errorMessage: string | undefined = useSelector(
+    (state: {lab: LabState}) =>
+      state.lab.pageError?.errorMessage || state.lab.pageError?.error?.message
+  );
   const overlayStyle: string = isLoading
     ? moduleStyles.showingBlock
     : moduleStyles.fadeInBlock;
@@ -65,20 +68,27 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
           )}
         </div>
 
-        {isPageError && <ErrorUI />}
+        {isPageError && <ErrorUI message={errorMessage} />}
       </div>
     </ErrorBoundary>
   );
 };
 
-export const ErrorUI = () => (
+export interface ErrorUIProps {
+  message?: string;
+}
+
+export const ErrorUI: React.FunctionComponent<ErrorUIProps> = ({message}) => (
   <div id="page-error-container" className={moduleStyles.pageErrorContainer}>
     <div id="page-error" className={moduleStyles.pageError}>
       <img
         className={moduleStyles.pageErrorImage}
         src="/shared/images/sad-bee-avatar.png"
       />
-      {i18n.loadingError()}
+      <div>{i18n.loadingError()}</div>
+      {message && (
+        <div className={moduleStyles.pageErrorMessage}>({message})</div>
+      )}
     </div>
   </div>
 );
