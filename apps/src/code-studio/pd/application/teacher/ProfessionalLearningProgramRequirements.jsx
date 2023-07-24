@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import {
   PageLabels,
   SectionHeaders,
-  TextFields
+  TextFields,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {
   PROGRAM_CSD,
   PROGRAM_CSP,
   PROGRAM_CSA,
-  styles as defaultStyles
+  styles as defaultStyles,
 } from './TeacherApplicationConstants';
 import PrivacyDialog from '../PrivacyDialog';
 import {PrivacyDialogMode} from '../../constants';
@@ -22,7 +22,7 @@ import {LabeledLargeInput} from '../../form_components_func/labeled/LabeledInput
 import {LabeledSingleCheckbox} from '../../form_components_func/labeled/LabeledSingleCheckbox';
 import {
   LabeledRadioButtons,
-  LabeledRadioButtonsWithAdditionalTextFields
+  LabeledRadioButtonsWithAdditionalTextFields,
 } from '../../form_components_func/labeled/LabeledRadioButtons';
 import {LabeledDynamicCheckBoxesWithAdditionalTextFields} from '../../form_components_func/labeled/LabeledCheckBoxes';
 import {useRegionalPartner} from '../../components/useRegionalPartner';
@@ -70,7 +70,7 @@ const ProfessionalLearningProgramRequirements = props => {
       options.push(TextFields.unableToAttend);
       const textFieldMap = {
         [TextFields.notSureExplain]: 'notSureExplain',
-        [TextFields.unableToAttend]: 'unableToAttend'
+        [TextFields.unableToAttend]: 'unableToAttend',
       };
 
       return (
@@ -215,7 +215,7 @@ const ProfessionalLearningProgramRequirements = props => {
         <LabeledRadioButtonsWithAdditionalTextFields
           name="committed"
           textFieldMap={{
-            [TextFields.noExplain]: 'other'
+            [TextFields.noExplain]: 'other',
           }}
         />
         {hasRegionalPartner ? (
@@ -316,7 +316,7 @@ ProfessionalLearningProgramRequirements.associatedFields = [
   ...Object.keys(PageLabels.professionalLearningProgramRequirements),
   'regionalPartnerId',
   'regionalPartnerGroup',
-  'regionalPartnerWorkshopIds'
+  'regionalPartnerWorkshopIds',
 ];
 
 ProfessionalLearningProgramRequirements.propTypes = {
@@ -324,7 +324,7 @@ ProfessionalLearningProgramRequirements.propTypes = {
   errors: PropTypes.arrayOf(PropTypes.string).isRequired,
   errorMessages: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };
 
 export default ProfessionalLearningProgramRequirements;
@@ -332,9 +332,9 @@ export default ProfessionalLearningProgramRequirements;
 const styles = {
   ...defaultStyles,
   error: {
-    color: color.red
+    color: color.red,
   },
   marginBottom: {
-    marginBottom: 30
-  }
+    marginBottom: 30,
+  },
 };

@@ -39,7 +39,7 @@ module.exports = function (window) {
     'timeEnd',
     'timeStamp',
     'trace',
-    'warn'
+    'warn',
   ];
   var method;
   for (var i = 0; i < methods.length; i++) {

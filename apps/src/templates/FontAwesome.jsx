@@ -11,7 +11,7 @@ import _ from 'lodash';
  */
 export default function FontAwesome({icon, className, title, ...props}) {
   const newProps = _.assign({}, props, {
-    className: `fa fa-${icon} ${className ? className : ''}`
+    className: `fa fa-${icon} ${className ? className : ''}`,
   });
   return <i {...newProps} title={title} />;
 }
@@ -19,7 +19,7 @@ export default function FontAwesome({icon, className, title, ...props}) {
 FontAwesome.propTypes = {
   icon: PropTypes.string.isRequired,
   className: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
   // Title should be used for semantic icons. If not given, the screenreader will not read the icon
   // See https://fontawesome.com/docs/web/dig-deeper/accessibility#icons-used-as-semantic-elements
 };

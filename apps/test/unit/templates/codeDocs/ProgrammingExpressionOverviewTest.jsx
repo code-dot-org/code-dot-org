@@ -21,16 +21,16 @@ describe('ProgrammingExpressionOverview', () => {
           name: 'param1',
           type: 'string',
           required: true,
-          description: 'description'
+          description: 'description',
         },
-        {name: 'param2'}
+        {name: 'param2'},
       ],
       examples: [
         {
           name: 'Example 1',
-          description: 'the first example'
-        }
-      ]
+          description: 'the first example',
+        },
+      ],
     };
   });
 
@@ -50,7 +50,7 @@ describe('ProgrammingExpressionOverview', () => {
       'Parameters',
       'Returns',
       'Tips',
-      'Additional Information'
+      'Additional Information',
     ]);
 
     expect(
@@ -144,7 +144,7 @@ describe('ProgrammingExpressionOverview', () => {
         programmingExpression={{
           ...defaultProgrammingExpression,
           blockName: 'gamelab_location_picker',
-          imageUrl: 'images.code.org/img'
+          imageUrl: 'images.code.org/img',
         }}
       />
     );
@@ -160,7 +160,7 @@ describe('ProgrammingExpressionOverview', () => {
       <ProgrammingExpressionOverview
         programmingExpression={{
           ...defaultProgrammingExpression,
-          imageUrl: 'images.code.org/img'
+          imageUrl: 'images.code.org/img',
         }}
       />
     );
@@ -183,7 +183,7 @@ describe('ProgrammingExpressionOverview', () => {
       <ProgrammingExpressionOverview
         programmingExpression={{
           ...defaultProgrammingExpression,
-          color: [355, '.7', '.7']
+          color: [355, '.7', '.7'],
         }}
       />
     );
@@ -197,7 +197,7 @@ describe('ProgrammingExpressionOverview', () => {
       <ProgrammingExpressionOverview
         programmingExpression={{
           ...defaultProgrammingExpression,
-          color: '#fff176'
+          color: '#fff176',
         }}
       />
     );
@@ -211,7 +211,7 @@ describe('ProgrammingExpressionOverview', () => {
       <ProgrammingExpressionOverview
         programmingExpression={{
           ...defaultProgrammingExpression,
-          color: null
+          color: null,
         }}
       />
     );

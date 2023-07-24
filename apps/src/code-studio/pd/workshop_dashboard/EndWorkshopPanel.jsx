@@ -1,14 +1,14 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import WorkshopPanel from './WorkshopPanel';
 import ConfirmationDialog from '../components/confirmation_dialog';
 import color from '@cdo/apps/util/color';
 
 const warningStyle = {
   color: color.red,
-  fontWeight: 'bold'
+  fontWeight: 'bold',
 };
 
 const earlyCloseWarning = (
@@ -35,11 +35,11 @@ export default class EndWorkshopPanel extends React.Component {
     workshopId: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
       .isRequired,
     isReadyToClose: PropTypes.bool,
-    loadWorkshop: PropTypes.func.isRequired
+    loadWorkshop: PropTypes.func.isRequired,
   };
 
   state = {
-    showEndWorkshopConfirmation: false
+    showEndWorkshopConfirmation: false,
   };
 
   componentWillUnmount() {
@@ -62,7 +62,7 @@ export default class EndWorkshopPanel extends React.Component {
     this.endRequest = $.ajax({
       method: 'POST',
       url: `/api/v1/pd/workshops/${workshopId}/end`,
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(() => {
         this.setState({showEndWorkshopConfirmation: false});

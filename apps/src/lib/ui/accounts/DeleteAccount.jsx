@@ -6,12 +6,12 @@ import color from '@cdo/apps/util/color';
 import {
   TeacherWarning,
   StudentWarning,
-  getCheckboxes
+  getCheckboxes,
 } from './DeleteAccountHelpers';
 import {navigateToHref} from '@cdo/apps/utils';
 import BootstrapButton from './BootstrapButton';
 import PersonalLoginDialog, {
-  dependentStudentsShape
+  dependentStudentsShape,
 } from './PersonalLoginDialog';
 import DeleteAccountDialog from './DeleteAccountDialog';
 
@@ -24,7 +24,7 @@ const DEFAULT_STATE = {
   password: '',
   passwordError: '',
   deleteVerification: '',
-  deleteError: ''
+  deleteError: '',
 };
 
 const dependedUponForLogin = ({isTeacher, hasStudents, dependentStudents}) => {
@@ -36,7 +36,7 @@ export default class DeleteAccount extends React.Component {
     isPasswordRequired: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
     dependentStudents: dependentStudentsShape,
-    hasStudents: PropTypes.bool.isRequired
+    hasStudents: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
@@ -64,7 +64,7 @@ export default class DeleteAccount extends React.Component {
     this.setState(state => {
       return {
         ...DEFAULT_STATE,
-        isPersonalLoginDialogOpen: !state.isPersonalLoginDialogOpen
+        isPersonalLoginDialogOpen: !state.isPersonalLoginDialogOpen,
       };
     });
   };
@@ -73,7 +73,7 @@ export default class DeleteAccount extends React.Component {
     this.setState(state => {
       return {
         ...DEFAULT_STATE,
-        isDeleteAccountDialogOpen: !state.isDeleteAccountDialogOpen
+        isDeleteAccountDialogOpen: !state.isDeleteAccountDialogOpen,
       };
     });
   };
@@ -82,7 +82,7 @@ export default class DeleteAccount extends React.Component {
   goToDeleteAccountDialog = () => {
     this.setState({
       isPersonalLoginDialogOpen: false,
-      isDeleteAccountDialogOpen: true
+      isDeleteAccountDialogOpen: true,
     });
   };
 
@@ -94,13 +94,13 @@ export default class DeleteAccount extends React.Component {
 
   onPasswordChange = event => {
     this.setState({
-      password: event.target.value
+      password: event.target.value,
     });
   };
 
   onDeleteVerificationChange = event => {
     this.setState({
-      deleteVerification: event.target.value
+      deleteVerification: event.target.value,
     });
   };
 
@@ -126,13 +126,13 @@ export default class DeleteAccount extends React.Component {
 
   deleteUser = () => {
     const payload = {
-      password_confirmation: this.state.password
+      password_confirmation: this.state.password,
     };
 
     $.ajax({
       url: '/users',
       method: 'DELETE',
-      data: payload
+      data: payload,
     })
       .done(result => {
         navigateToHref('/');
@@ -164,7 +164,7 @@ export default class DeleteAccount extends React.Component {
       password,
       passwordError,
       deleteVerification,
-      deleteError
+      deleteError,
     } = this.state;
     const isDependedUponForLogin = dependedUponForLogin(this.props);
 
@@ -217,21 +217,21 @@ export default class DeleteAccount extends React.Component {
 
 const styles = {
   container: {
-    paddingTop: 20
+    paddingTop: 20,
   },
   hr: {
-    borderColor: color.red
+    borderColor: color.red,
   },
   header: {
     fontSize: 22,
-    color: color.red
+    color: color.red,
   },
   warning: {
     marginTop: 10,
-    marginBottom: 10
+    marginBottom: 10,
   },
   buttonContainer: {
     display: 'flex',
-    justifyContent: 'flex-end'
-  }
+    justifyContent: 'flex-end',
+  },
 };

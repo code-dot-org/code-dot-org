@@ -32,7 +32,7 @@ describe('NetSimRemoteNodeSelectionPanel', function () {
       rootDiv,
       {
         nodesOnShard: clients,
-        incomingConnectionNodes: []
+        incomingConnectionNodes: [],
       },
       emptyCallbacks
     );
@@ -47,7 +47,7 @@ describe('NetSimRemoteNodeSelectionPanel', function () {
       joinButtonCallback: function () {},
       resetShardCallback: function () {},
       showRouterLogCallback: function () {},
-      showTeacherLogCallback: function () {}
+      showTeacherLogCallback: function () {},
     };
   });
 
@@ -77,7 +77,7 @@ describe('NetSimRemoteNodeSelectionPanel', function () {
         {
           nodesOnShard: nodes,
           remoteNode: nodes[0],
-          incomingConnectionNodes: []
+          incomingConnectionNodes: [],
         },
         emptyCallbacks
       );

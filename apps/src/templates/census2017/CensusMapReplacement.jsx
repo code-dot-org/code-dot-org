@@ -1,4 +1,3 @@
-/* global mapboxgl */
 import PropTypes from 'prop-types';
 import $ from 'jquery';
 import React, {Component} from 'react';
@@ -12,7 +11,7 @@ class CensusMapInfoWindow extends Component {
     city: PropTypes.string.isRequired,
     state: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
-    teachesCs: PropTypes.string.isRequired
+    teachesCs: PropTypes.string.isRequired,
   };
 
   render() {
@@ -60,8 +59,8 @@ class CensusMapInfoWindow extends Component {
         city: this.props.city,
         state: this.props.state,
         longitude: this.props.location.split(',')[0],
-        latitude: this.props.location.split(',')[1]
-      }
+        latitude: this.props.location.split(',')[1],
+      },
     };
 
     const colorClass = `color-small ${color}`;
@@ -117,7 +116,7 @@ class CensusMapInfoWindow extends Component {
 export default class CensusMapReplacement extends Component {
   static propTypes = {
     onTakeSurveyClick: PropTypes.func.isRequired,
-    school: PropTypes.object
+    school: PropTypes.object,
   };
 
   map = undefined;
@@ -196,7 +195,7 @@ export default class CensusMapReplacement extends Component {
       style: 'mapbox://styles/codeorg/cjyudafoo004w1cnpaeq8a0lz',
       zoom: 3,
       minZoom: 1,
-      center: [-98, 39]
+      center: [-98, 39],
     });
 
     this.map.dragRotate.disable();
@@ -208,7 +207,7 @@ export default class CensusMapReplacement extends Component {
     this.map.on('load', function () {
       _this.map.addSource('censustiles', {
         type: 'vector',
-        url: 'mapbox://codeorg.censustiles'
+        url: 'mapbox://codeorg.censustiles',
       });
 
       _this.map.addLayer({
@@ -217,7 +216,7 @@ export default class CensusMapReplacement extends Component {
         source: 'censustiles',
         'source-layer': 'census',
         layout: {
-          visibility: 'visible'
+          visibility: 'visible',
         },
         paint: {
           'circle-radius': 4,
@@ -228,16 +227,16 @@ export default class CensusMapReplacement extends Component {
             '#989CF8',
             ['MAYBE', 'HISTORICAL_MAYBE'],
             '#FFFDA6',
-            'white'
+            'white',
           ],
           'circle-stroke-width': 1,
-          'circle-stroke-color': '#000000'
+          'circle-stroke-color': '#000000',
         },
         filter: [
           'any',
           ['!=', 'teaches_cs', 'YES'],
-          ['!=', 'teaches_cs', 'HISTORICAL_YES']
-        ]
+          ['!=', 'teaches_cs', 'HISTORICAL_YES'],
+        ],
       });
       _this.map.addLayer({
         id: 'census-schools-teaching-cs',
@@ -248,13 +247,13 @@ export default class CensusMapReplacement extends Component {
           'icon-image': 'marker-15-green',
           'icon-allow-overlap': true,
           // Increase the icon size as we zoom in
-          'icon-size': ['interpolate', ['linear'], ['zoom'], 1, 0.7, 14, 1.6]
+          'icon-size': ['interpolate', ['linear'], ['zoom'], 1, 0.7, 14, 1.6],
         },
         filter: [
           'any',
           ['==', 'teaches_cs', 'YES'],
-          ['==', 'teaches_cs', 'HISTORICAL_YES']
-        ]
+          ['==', 'teaches_cs', 'HISTORICAL_YES'],
+        ],
       });
 
       _this.map.addControl(new mapboxgl.FullscreenControl(), 'top-right');
@@ -318,7 +317,7 @@ export default class CensusMapReplacement extends Component {
         zoom: 14,
         scrollwheel: this.scrollwheelOption,
         draggable: this.draggableOption,
-        speed: 2
+        speed: 2,
       };
       if (this.popup) {
         this.popup.remove();
@@ -333,7 +332,7 @@ export default class CensusMapReplacement extends Component {
         flying = false;
         const features = _this.map.querySourceFeatures('censustiles', {
           sourceLayer: 'census',
-          filter: ['all', ['==', 'school_id', school.nces_id]]
+          filter: ['all', ['==', 'school_id', school.nces_id]],
         });
         if (features.length > 0) {
           const properties = features[0].properties;

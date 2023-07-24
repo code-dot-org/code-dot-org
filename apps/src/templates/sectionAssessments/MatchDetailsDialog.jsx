@@ -13,7 +13,7 @@ class MatchDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func.isRequired,
-    questionAndAnswers: matchDetailsQuestionPropType
+    questionAndAnswers: matchDetailsQuestionPropType,
   };
 
   render() {
@@ -82,19 +82,19 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   instructions: {
-    marginTop: 20
+    marginTop: 20,
   },
   answers: {
     float: 'left',
-    width: 250
-  }
+    width: 250,
+  },
 };
 
 export const UnconnectedMatchDetailsDialog = MatchDetailsDialog;
 
 export default connect(state => ({
-  questionAndAnswers: getCurrentQuestion(state)
+  questionAndAnswers: getCurrentQuestion(state),
 }))(MatchDetailsDialog);

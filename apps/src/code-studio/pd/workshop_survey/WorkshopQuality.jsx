@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import VariableFormGroup from './VariableFormGroup';
 import FormComponent from '../form_components/FormComponent';
 
@@ -15,7 +15,7 @@ export default class WorkshopQuality extends FormComponent {
             } ${this.props.subject || ''} in the 2016-17 school year?`,
             name: 'willTeach',
             type: 'radio',
-            inline: true
+            inline: true,
           })}
         {this.props.data.willTeach &&
           this.props.data.willTeach === 'No' &&
@@ -23,21 +23,21 @@ export default class WorkshopQuality extends FormComponent {
             label: 'Please explain why not.',
             name: 'willNotTeachExplanation',
             type: 'text',
-            required: true
+            required: true,
           })}
 
         {!this.props.isLocalSummer &&
           this.buildButtonsFromOptions({
             label: 'Reason for attending? (select all that apply)',
             name: 'reasonForAttending',
-            type: 'check'
+            type: 'check',
           })}
         {this.props.data.reasonForAttending &&
           this.props.data.reasonForAttending.includes('Other') &&
           this.buildFieldGroup({
             label: 'Other reason?',
             name: 'reasonForAttendingOther',
-            type: 'text'
+            type: 'text',
           })}
 
         {!this.props.isLocalSummer &&
@@ -45,21 +45,21 @@ export default class WorkshopQuality extends FormComponent {
             label:
               'How did you hear about this workshop? (select all that apply)',
             name: 'howHeard',
-            type: 'check'
+            type: 'check',
           })}
         {this.props.data.howHeard &&
           this.props.data.howHeard.includes('Other') &&
           this.buildFieldGroup({
             label: 'Other source?',
             name: 'howHeardOther',
-            type: 'text'
+            type: 'text',
           })}
 
         {this.buildButtonsFromOptions({
           label:
             'I received clear communication about when and where the workshop would take place',
           name: 'receivedClearCommunication',
-          type: 'radio'
+          type: 'radio',
         })}
 
         {!this.props.isLocalSummer &&
@@ -69,7 +69,7 @@ export default class WorkshopQuality extends FormComponent {
               internet access/1:1 computing environment) necessary to effectively teach the course?
             `,
             name: 'schoolHasTech',
-            type: 'radio'
+            type: 'radio',
           })}
 
         {this.buildFieldGroup({
@@ -77,20 +77,20 @@ export default class WorkshopQuality extends FormComponent {
           label:
             'Do you have feedback about the venue and the way logistics were run for this workshop? Please be specific and provide suggestions for improvement.',
           name: 'venueFeedback',
-          required: true
+          required: true,
         })}
 
         {this.buildButtonsFromOptions({
           label:
             'Overall, how much have you learned about computer science from your workshop?',
           name: 'howMuchLearned',
-          type: 'radio'
+          type: 'radio',
         })}
         {this.buildButtonsFromOptions({
           label:
             'During your workshop, how motivating were the activities that this program had you do?',
           name: 'howMotivating',
-          type: 'radio'
+          type: 'radio',
         })}
 
         <VariableFormGroup
@@ -107,7 +107,7 @@ export default class WorkshopQuality extends FormComponent {
               name: 'howClearlyPresented',
               type: 'radio',
               required: true,
-              values: this.props.options.howClearlyPresented
+              values: this.props.options.howClearlyPresented,
             },
             {
               label:
@@ -115,7 +115,7 @@ export default class WorkshopQuality extends FormComponent {
               name: 'howInteresting',
               type: 'radio',
               required: true,
-              values: this.props.options.howInteresting
+              values: this.props.options.howInteresting,
             },
             {
               label:
@@ -123,7 +123,7 @@ export default class WorkshopQuality extends FormComponent {
               name: 'howOftenGivenFeedback',
               type: 'radio',
               required: true,
-              values: this.props.options.howOftenGivenFeedback
+              values: this.props.options.howOftenGivenFeedback,
             },
             {
               label:
@@ -131,7 +131,7 @@ export default class WorkshopQuality extends FormComponent {
               name: 'helpQuality',
               type: 'radio',
               required: true,
-              values: this.props.options.helpQuality
+              values: this.props.options.helpQuality,
             },
             {
               label:
@@ -139,7 +139,7 @@ export default class WorkshopQuality extends FormComponent {
               name: 'howComfortableAskingQuestions',
               type: 'radio',
               required: true,
-              values: this.props.options.howComfortableAskingQuestions
+              values: this.props.options.howComfortableAskingQuestions,
             },
             {
               label:
@@ -147,22 +147,22 @@ export default class WorkshopQuality extends FormComponent {
               name: 'howOftenTaughtNewThings',
               type: 'radio',
               required: true,
-              values: this.props.options.howOftenTaughtNewThings
-            }
+              values: this.props.options.howOftenTaughtNewThings,
+            },
           ]}
           rowVariableQuestions={[
             {
               label: 'What were two things {value} did well?',
               name: 'thingsFacilitatorDidWell',
               type: 'free_response',
-              required: true
+              required: true,
             },
             {
               label: 'What were two things {value} could do better?',
               name: 'thingsFacilitatorCouldImprove',
               type: 'free_response',
-              required: true
-            }
+              required: true,
+            },
           ]}
         />
       </FormGroup>
@@ -174,7 +174,7 @@ WorkshopQuality.propTypes = {
   ...FormComponent.propTypes,
   facilitatorNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   course: PropTypes.string.isRequired,
-  subject: PropTypes.string
+  subject: PropTypes.string,
 };
 
 WorkshopQuality.associatedFields = [
@@ -197,5 +197,5 @@ WorkshopQuality.associatedFields = [
   'howComfortableAskingQuestions',
   'howOftenTaughtNewThings',
   'thingsFacilitatorDidWell',
-  'thingsFacilitatorCouldImprove'
+  'thingsFacilitatorCouldImprove',
 ];

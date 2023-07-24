@@ -57,10 +57,23 @@ markdown <<MARKDOWN
 <details>
 <summary><strong>Coding with Poetry</strong></summary>
 
-##### Students animate poems with images, sounds, and effects to enhance the word choice in their poems.
+##### Students animate poems with images, sounds, and effects to reveal mood and imagery in their poems.
 
 
 <img src="https://images.code.org/c148179df0238d756a12c7b075ff7d8e-image-1680732701654.gif" alt="Gif of marshmallows burst" width="300px">
+
+</details>
+
+<div style="clear:both"/>
+<hr style="clear:both">
+
+<details>
+<summary><strong>Modeling Animal Adaptations</strong></summary>
+
+##### Students code animal behaviors to model how species survive in their environments.
+
+
+<img src="https://images.code.org/e72ce377731a6887b285252d923068a7-image-1682033456371.gif" alt="Meadow with a bear and rabbit" width="300px">
 
 
 </details>

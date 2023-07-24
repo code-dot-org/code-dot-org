@@ -93,7 +93,7 @@ NetSimPanel.prototype.render = function () {
       instanceID: this.instanceID_,
       className: this.className_,
       panelTitle: this.panelTitle_,
-      userToggleable: this.userToggleable_
+      userToggleable: this.userToggleable_,
     })
   );
   this.rootDiv_.html(newMarkup);

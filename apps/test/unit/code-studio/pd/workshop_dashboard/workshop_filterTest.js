@@ -6,7 +6,7 @@ describe('WorkshopFilter component', () => {
     const currentSubjects = {
       CSF: [],
       CSD: ['C1'],
-      CSP: ['C1', 'C2']
+      CSP: ['C1', 'C2'],
     };
 
     const legacySubjects = {CSD: ['L1'], CSP: ['L1', 'L2']};
@@ -20,9 +20,9 @@ describe('WorkshopFilter component', () => {
           CSD: [{value: 'C1', label: 'C1'}],
           CSP: [
             {value: 'C1', label: 'C1'},
-            {value: 'C2', label: 'C2'}
-          ]
-        }
+            {value: 'C2', label: 'C2'},
+          ],
+        },
       },
       {
         current: {},
@@ -31,9 +31,9 @@ describe('WorkshopFilter component', () => {
           CSD: [{value: 'L1', label: '[Legacy] L1'}],
           CSP: [
             {value: 'L1', label: '[Legacy] L1'},
-            {value: 'L2', label: '[Legacy] L2'}
-          ]
-        }
+            {value: 'L2', label: '[Legacy] L2'},
+          ],
+        },
       },
       {
         current: currentSubjects,
@@ -42,16 +42,16 @@ describe('WorkshopFilter component', () => {
           CSF: [],
           CSD: [
             {value: 'C1', label: 'C1'},
-            {value: 'L1', label: '[Legacy] L1'}
+            {value: 'L1', label: '[Legacy] L1'},
           ],
           CSP: [
             {value: 'C1', label: 'C1'},
             {value: 'C2', label: 'C2'},
             {value: 'L1', label: '[Legacy] L1'},
-            {value: 'L2', label: '[Legacy] L2'}
-          ]
-        }
-      }
+            {value: 'L2', label: '[Legacy] L2'},
+          ],
+        },
+      },
     ];
 
     testCases.forEach(testCase => {

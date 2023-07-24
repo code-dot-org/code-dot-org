@@ -11,10 +11,10 @@ export const valueSample = {
     message0: '%1',
     args0: [fieldSoundsDefinition],
     style: 'lab_blocks',
-    output: SOUND_VALUE_TYPE
+    output: SOUND_VALUE_TYPE,
   },
   generator: ctx => [
     ctx.getFieldValue(FIELD_SOUNDS_NAME),
-    Blockly.JavaScript.ORDER_ATOMIC
-  ]
+    Blockly.JavaScript.ORDER_ATOMIC,
+  ],
 };

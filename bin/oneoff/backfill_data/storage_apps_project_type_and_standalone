@@ -28,7 +28,7 @@ end
 
 def main
   if ARGV.length != 3
-    puts 'Usage: ./bin/oneoff/backfill_data/storage_apps_project_type_and_standalone '\
+    puts 'Usage: ./bin/oneoff/backfill_data/storage_apps_project_type_and_standalone ' \
       'start_index end_index batch_size'
     exit 1
   end
@@ -50,7 +50,7 @@ def main
       hidden = value_parsed['hidden']
 
       project_type = storage_app[:project_type] ? storage_app[:project_type] : project_type_from_value(value_parsed)
-      standalone = !storage_app[:standalone] ? false : !hidden
+      standalone = storage_app[:standalone] ? !hidden : false
 
       updates << [storage_app[:id], project_type, standalone]
     rescue

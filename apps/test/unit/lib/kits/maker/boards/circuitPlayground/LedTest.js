@@ -100,20 +100,20 @@ describe('Led', function () {
 function newTestLed() {
   return new Led({
     controller: makeStubController(),
-    board: makeCPBoardStub()
+    board: makeCPBoardStub(),
   });
 }
 
 function makeStubController() {
   return {
     initialize: {
-      value: () => {}
+      value: () => {},
     },
     write: {
-      value: () => {}
+      value: () => {},
     },
     update: {
-      value: () => {}
-    }
+      value: () => {},
+    },
   };
 }

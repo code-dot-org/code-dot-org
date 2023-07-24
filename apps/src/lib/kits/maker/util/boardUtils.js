@@ -3,17 +3,17 @@ import {
   CIRCUIT_PLAYGROUND_EXPRESS_PID,
   CIRCUIT_PLAYGROUND_PID,
   MICROBIT_PID,
-  MICROBIT_VID
+  MICROBIT_VID,
 } from '../portScanning';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
-import DCDO from '@cdo/apps/dcdo';
 import {isChromeOS, getChromeVersion} from '../util/browserChecks';
+import {MIN_CHROME_VERSION} from '@cdo/apps/lib/kits/maker/util/makerConstants';
 
 export const BOARD_TYPE = {
   CLASSIC: 'classic',
   EXPRESS: 'express',
   MICROBIT: 'microbit',
-  OTHER: 'other'
+  OTHER: 'other',
 };
 /**
  * Detects the type of board plugged into the serial port. Defaults to BOARD_TYPE.OTHER.
@@ -56,17 +56,14 @@ export function isWebSerialPort(port) {
 
 /**
  * Determines whether WebSerial port is available in the current browser.
- * WebSerial should be available in ChromeOS (depending on DCDO flag and
- * in a version after WebSerial was released) and in Chromium browsers.
+ * WebSerial should be available in ChromeOS (depending on version after WebSerial was released)
+ * and in Chromium browsers.
  */
 export function shouldUseWebSerial() {
   const webSerialAvailableInBrowser = 'serial' in navigator;
-  const usingChromeOSAndDCDO =
-    isChromeOS() &&
-    !!DCDO.get('webserial-on-chromeos', true) &&
-    getChromeVersion() >= 90;
-
-  return usingChromeOSAndDCDO || webSerialAvailableInBrowser;
+  const usingChromeOS =
+    isChromeOS() && getChromeVersion() >= MIN_CHROME_VERSION;
+  return usingChromeOS || webSerialAvailableInBrowser;
 }
 
 /** @const {number} serial port transfer rate */
@@ -76,7 +73,7 @@ export const SERIAL_BAUD = 57600;
 export const WEB_SERIAL_FILTERS = [
   {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_PID},
   {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_EXPRESS_PID},
-  {usbVendorId: MICROBIT_VID, usbProductId: MICROBIT_PID}
+  {usbVendorId: MICROBIT_VID, usbProductId: MICROBIT_PID},
 ];
 
 export const delayPromise = t => new Promise(resolve => setTimeout(resolve, t));

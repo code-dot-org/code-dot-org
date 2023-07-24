@@ -4,7 +4,7 @@ var assert = require('assert');
 import TutorialExplorer from '@cdo/apps/tutorialExplorer/tutorialExplorer';
 import {
   orgNameCodeOrg,
-  orgNameMinecraft
+  orgNameMinecraft,
 } from '@cdo/apps/tutorialExplorer/util';
 
 describe('TutorialExplorer filterTutorials tests', function () {
@@ -19,7 +19,7 @@ describe('TutorialExplorer filterTutorials tests', function () {
       tags_subject: 'english,history',
       tags_activity_type: '',
       displayweight: 2,
-      popularityrank: 2
+      popularityrank: 2,
     },
     {
       name: 'tut2',
@@ -30,7 +30,7 @@ describe('TutorialExplorer filterTutorials tests', function () {
       tags_subject: 'english,history',
       tags_activity_type: '',
       displayweight: 5,
-      popularityrank: 3
+      popularityrank: 3,
     },
     {
       name: 'tut3',
@@ -41,7 +41,7 @@ describe('TutorialExplorer filterTutorials tests', function () {
       tags_subject: 'english,history',
       tags_activity_type: '',
       displayweight: 9,
-      popularityrank: 4
+      popularityrank: 4,
     },
     {
       name: 'tut4',
@@ -51,7 +51,7 @@ describe('TutorialExplorer filterTutorials tests', function () {
       tags_platform: 'browser,ipad,android',
       tags_subject: 'english,history',
       displayweight: 5,
-      popularityrank: 1
+      popularityrank: 1,
     },
     {
       name: 'tut5',
@@ -62,7 +62,7 @@ describe('TutorialExplorer filterTutorials tests', function () {
       tags_subject: 'english,history,science',
       tags_activity_type: '',
       displayweight: 5,
-      popularityrank: 5
+      popularityrank: 5,
     },
     {
       name: 'tut6',
@@ -73,7 +73,7 @@ describe('TutorialExplorer filterTutorials tests', function () {
       tags_subject: 'english,history',
       tags_activity_type: '',
       displayweight: 5,
-      popularityrank: 6
+      popularityrank: 6,
     },
     {
       name: 'tut7',
@@ -83,7 +83,7 @@ describe('TutorialExplorer filterTutorials tests', function () {
       tags_platform: 'browser,ipad',
       tags_subject: 'english,history,science',
       displayweight: 5,
-      popularityrank: 7
+      popularityrank: 7,
     },
     {
       name: 'tut8',
@@ -94,7 +94,7 @@ describe('TutorialExplorer filterTutorials tests', function () {
       tags_subject: 'english,history,science',
       tags_activity_type: '',
       displayweight: 5,
-      popularityrank: 8
+      popularityrank: 8,
     },
     {
       name: 'tut9',
@@ -104,8 +104,8 @@ describe('TutorialExplorer filterTutorials tests', function () {
       tags_platform: 'browser,ipad',
       tags_subject: '',
       displayweight: 5,
-      popularityrank: 9
-    }
+      popularityrank: 9,
+    },
   ];
   const specTutorials = [
     {
@@ -117,7 +117,7 @@ describe('TutorialExplorer filterTutorials tests', function () {
       tags_subject: 'art',
       tags_activity_type: '',
       displayweight: 5,
-      popularityrank: 9
+      popularityrank: 9,
     },
     {
       name: 'special',
@@ -128,8 +128,8 @@ describe('TutorialExplorer filterTutorials tests', function () {
       tags_subject: 'math',
       tags_activity_type: '',
       displayweight: 5,
-      popularityrank: 10
-    }
+      popularityrank: 10,
+    },
   ];
   const tutorialsWithSpec = tutorials.concat(specTutorials);
 
@@ -139,7 +139,7 @@ describe('TutorialExplorer filterTutorials tests', function () {
       locale: 'en-us',
       sortBy: 'displayweight',
       orgname: 'all',
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -153,7 +153,7 @@ describe('TutorialExplorer filterTutorials tests', function () {
       locale: 'en-us',
       sortBy: 'displayweight',
       orgName: 'code',
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -168,10 +168,10 @@ describe('TutorialExplorer filterTutorials tests', function () {
   it('filter on platform', function () {
     const props = {
       filters: {
-        platform: ['mac']
+        platform: ['mac'],
       },
       locale: 'en-us',
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -184,10 +184,10 @@ describe('TutorialExplorer filterTutorials tests', function () {
     const props = {
       filters: {
         platform: ['iphone'],
-        subject: ['science']
+        subject: ['science'],
       },
       locale: 'en-us',
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -199,10 +199,10 @@ describe('TutorialExplorer filterTutorials tests', function () {
   it('filter on platform, no locale provided', function () {
     const props = {
       filters: {
-        platform: ['iphone']
+        platform: ['iphone'],
       },
       locale: null,
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -215,13 +215,13 @@ describe('TutorialExplorer filterTutorials tests', function () {
   it('filter on subject and language, use hideFilters', function () {
     const props = {
       filters: {
-        subject: ['history']
+        subject: ['history'],
       },
       hideFilters: {
-        platform: ['android']
+        platform: ['android'],
       },
       locale: 'gr-gr',
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -234,10 +234,10 @@ describe('TutorialExplorer filterTutorials tests', function () {
   it('filter on subject and language, sort by displayweight', function () {
     const props = {
       filters: {
-        subject: ['history']
+        subject: ['history'],
       },
       locale: 'gr-gr',
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -251,10 +251,10 @@ describe('TutorialExplorer filterTutorials tests', function () {
   it('filter on subject and language, sort by popularityrank', function () {
     const props = {
       filters: {
-        subject: ['history']
+        subject: ['history'],
       },
       locale: 'gr-gr',
-      sortByFieldName: 'popularityrank'
+      sortByFieldName: 'popularityrank',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -270,7 +270,7 @@ describe('TutorialExplorer filterTutorials tests', function () {
       filters: {},
       locale: 'gr-gr',
       specificLocale: true,
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
@@ -290,15 +290,15 @@ describe('TutorialExplorer filterTutorials tests', function () {
         tags_platform: 'browser,ipad',
         tags_subject: '',
         displayweight: 5,
-        popularityrank: 9
-      }
+        popularityrank: 9,
+      },
     ]);
 
     const props = {
       filters: {},
       orgName: orgNameCodeOrg,
       locale: 'en-us',
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(
@@ -327,7 +327,7 @@ describe('TutorialExplorer filterTutorials tests', function () {
       sortBy: 'displayweight',
       orgname: 'all',
       sortByFieldName: 'displayweight',
-      searchTerm: 'spec'
+      searchTerm: 'spec',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorialsWithSpec, props);
@@ -356,13 +356,13 @@ describe('TutorialExplorer filterTutorials tests', function () {
   it('get tutorials by search term and subject filter', function () {
     const props = {
       filters: {
-        subject: ['math']
+        subject: ['math'],
       },
       locale: 'en-us',
       sortBy: 'displayweight',
       orgname: 'code',
       sortByFieldName: 'displayweight',
-      searchTerm: 'spec'
+      searchTerm: 'spec',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorialsWithSpec, props);

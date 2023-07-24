@@ -6,26 +6,29 @@ import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {isCodeOrgBrowser, getChromeVersion} from '../util/browserChecks';
 import applabI18n from '@cdo/applab/locale';
 import i18n from '@cdo/locale';
-import {MAKER_DEPRECATION_SUPPORT_URL} from '../util/makerConstants';
+import {
+  MAKER_DEPRECATION_SUPPORT_URL,
+  MIN_CHROME_VERSION,
+} from '@cdo/apps/lib/kits/maker/util/makerConstants';
 
 const style = {
   twoColumns: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   descriptionFlexCard: {
-    width: '45%'
+    width: '45%',
   },
   circuitPlaygroundImg: {
     float: 'right',
     margin: '0 0 15px 10px',
-    borderRadius: '50%'
+    borderRadius: '50%',
   },
   microbitImg: {
     float: 'right',
-    margin: '0 0 15px 10px'
-  }
+    margin: '0 0 15px 10px',
+  },
 };
 
 export default class SetupGuide extends React.Component {
@@ -39,7 +42,7 @@ export default class SetupGuide extends React.Component {
           imgSrc: '/blockly/media/maker/microbit-drawing-green.png',
           description: applabI18n.makerSetupMicrobitDescription(),
           imgStyle: style.microbitImg,
-          alt: applabI18n.makerSetupMicrobitImageAltText()
+          alt: applabI18n.makerSetupMicrobitImageAltText(),
         };
       case 'circuitPlayground':
         return {
@@ -49,43 +52,58 @@ export default class SetupGuide extends React.Component {
           imgSrc: '/blockly/media/maker/circuit-playground-x-1.png',
           description: applabI18n.makerSetupCircuitPlaygroundDescription(),
           imgStyle: style.circuitPlaygroundImg,
-          alt: applabI18n.makerSetupCircuitPlaygroundImageAltText()
+          alt: applabI18n.makerSetupCircuitPlaygroundImageAltText(),
         };
       case 'general':
         return {
           id: 'general-description',
           title: applabI18n.makerSetupGeneralTitle(),
-          description: applabI18n.makerSetupGeneralDescription()
+          description: applabI18n.makerSetupGeneralDescription(),
         };
     }
   };
 
   render() {
-    // Experiment 'microbit', displays Circuit Playground and Micro:Bit descriptions.
     const chromeVersion = getChromeVersion();
 
     return (
       <div>
         {isCodeOrgBrowser() && (
           <Notification
-            type={NotificationType.warning}
-            notice={i18n.makerSetupDeprecationWarningAppTitle()}
-            details={i18n.makerSetupDeprecationWarningAppDetails()}
-            detailsLinkText={i18n.makerDeprecationWarningLinkText()}
+            type={NotificationType.failure}
+            notice={i18n.makerAppDeprecationNoticeTitle()}
+            details={i18n.makerAppDeprecationNoticeDetails()}
+            detailsLinkText={i18n.makerDeprecationNoticeLinkText()}
             detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
             dismissible
           />
         )}
-        {chromeVersion && chromeVersion <= 90 && (
-          <Notification
-            type={NotificationType.warning}
-            notice={i18n.makerSetupDeprecationWarningOldChromeTitle()}
-            details={i18n.makerSetupDeprecationWarningOldChromeDetails()}
-            detailsLinkText={i18n.makerDeprecationWarningLinkText()}
-            detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
-            dismissible
-          />
-        )}
+        {!isCodeOrgBrowser() &&
+          chromeVersion &&
+          chromeVersion < MIN_CHROME_VERSION && (
+            <Notification
+              type={NotificationType.warning}
+              notice={i18n.makerSetupDeprecationNoticeOldChromeTitle()}
+              details={i18n.makerSetupDeprecationNoticeOldChromeDetails()}
+              detailsLinkText={i18n.makerDeprecationNoticeLinkText()}
+              detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
+              dismissible
+            />
+          )}
+        {!isCodeOrgBrowser() &&
+          chromeVersion &&
+          chromeVersion < MIN_CHROME_VERSION && (
+            <Notification
+              type={NotificationType.warning}
+              notice={i18n.makerSetupDeprecationNoticeOldChromeTitle()}
+              details={i18n.makerSetupDeprecationNoticeOldChromeDetails({
+                minChromeVersion: MIN_CHROME_VERSION,
+              })}
+              detailsLinkText={i18n.makerDeprecationNoticeLinkText()}
+              detailsLink={MAKER_DEPRECATION_SUPPORT_URL}
+              dismissible
+            />
+          )}
         <h1>{applabI18n.makerSetupPageTitle()}</h1>
 
         <div>
@@ -140,7 +158,7 @@ DescriptionCard.propTypes = {
   imgStyle: PropTypes.object,
   description: PropTypes.string.isRequired,
   divStyle: PropTypes.object,
-  alt: PropTypes.string.isRequired
+  alt: PropTypes.string.isRequired,
 };
 
 function HeaderCard(props) {
@@ -157,5 +175,5 @@ HeaderCard.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  divStyle: PropTypes.object
+  divStyle: PropTypes.object,
 };

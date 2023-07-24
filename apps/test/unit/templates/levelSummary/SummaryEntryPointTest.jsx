@@ -9,7 +9,7 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 
 const JS_DATA = {
   response_count: 1,
-  is_contained_level: false
+  is_contained_level: false,
 };
 
 const INITIAL_STATE = {
@@ -17,14 +17,14 @@ const INITIAL_STATE = {
     selectedStudents: [{id: 0}],
     selectedSectionId: 0,
     sectionIds: [0],
-    sections: [{id: 0, name: 'test section'}]
-  }
+    sections: [{id: 0, name: 'test section'}],
+  },
 };
 
 const setUpWrapper = (state = {}, jsData = {}) => {
   const store = createStore(
     combineReducers({
-      teacherSections
+      teacherSections,
     }),
     {...INITIAL_STATE, ...state}
   );
@@ -69,8 +69,8 @@ describe('SummaryEntryPoint', () => {
         selectedStudents: [{id: 0}],
         selectedSectionId: null,
         sectionIds: [0],
-        sections: [{id: 0, name: 'test section'}]
-      }
+        sections: [{id: 0, name: 'test section'}],
+      },
     });
 
     expect(wrapper.find(`.${styles.responseIcon}`).length).to.eq(0);

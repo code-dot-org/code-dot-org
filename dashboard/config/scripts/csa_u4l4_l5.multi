@@ -24,3 +24,5 @@ if (y + 3 >= x) {
 System.out.print("x = " + x + " y = " + y);
 ```
 MARKDOWN
+
+allow_multiple_attempts true

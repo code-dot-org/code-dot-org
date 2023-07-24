@@ -52,7 +52,7 @@ CustomGameLogic.prototype.resolveCachedBlock_ = function (key) {
     code,
     {
       Studio: api,
-      Globals: Studio.Globals
+      Globals: Studio.Globals,
     },
     {legacy: true}
   );

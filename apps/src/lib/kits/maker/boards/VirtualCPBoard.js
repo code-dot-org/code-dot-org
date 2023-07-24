@@ -3,7 +3,7 @@ import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {
   J5_CONSTANTS,
-  N_COLOR_LEDS
+  N_COLOR_LEDS,
 } from './circuitPlayground/PlaygroundConstants';
 
 /**
@@ -52,7 +52,7 @@ export default class VirtualCPBoard extends EventEmitter {
       Accelerometer: VirtualAccelerometer,
       Animation: VirtualComponent,
       Servo: VirtualComponent,
-      TouchSensor: VirtualComponent
+      TouchSensor: VirtualComponent,
     };
 
     for (const constructorName in constructors) {
@@ -73,7 +73,7 @@ export default class VirtualCPBoard extends EventEmitter {
       accelerometer: new VirtualAccelerometer(),
       buttonL: new VirtualButton(),
       buttonR: new VirtualButton(),
-      ...J5_CONSTANTS
+      ...J5_CONSTANTS,
     };
 
     for (const componentName in components) {

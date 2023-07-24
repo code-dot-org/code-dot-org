@@ -13,7 +13,7 @@ import reducer, {
   appendBlankFrame,
   appendLibraryFrames,
   appendCustomFrames,
-  saveAnimation
+  saveAnimation,
 } from '@cdo/apps/p5lab/redux/animationList';
 import animationTab from '@cdo/apps/p5lab/redux/animationTab';
 import {EMPTY_IMAGE} from '@cdo/apps/p5lab/constants';
@@ -138,10 +138,10 @@ describe('animationList', function () {
           orderedKeys: [key],
           propsByKey: {
             [key]: {
-              sourceUrl: 'anything (we stub this)'
-            }
-          }
-        }
+              sourceUrl: 'anything (we stub this)',
+            },
+          },
+        },
       });
     });
 
@@ -154,7 +154,7 @@ describe('animationList', function () {
         .be.false;
       store.dispatch({
         type: DONE_LOADING_FROM_SOURCE,
-        key
+        key,
       });
       expect(store.getState().animationList.propsByKey[key].loadedFromSource).to
         .be.true;
@@ -170,7 +170,7 @@ describe('animationList', function () {
       store.dispatch({
         type: DONE_LOADING_FROM_SOURCE,
         key,
-        blob: new Blob([])
+        blob: new Blob([]),
       });
       expect(store.getState().animationList.propsByKey[key].blob).not.to.be
         .undefined;
@@ -186,7 +186,7 @@ describe('animationList', function () {
       store.dispatch({
         type: DONE_LOADING_FROM_SOURCE,
         key,
-        dataURI: EMPTY_IMAGE
+        dataURI: EMPTY_IMAGE,
       });
       expect(store.getState().animationList.propsByKey[key].dataURI).not.to.be
         .undefined;
@@ -202,7 +202,7 @@ describe('animationList', function () {
       store.dispatch({
         type: DONE_LOADING_FROM_SOURCE,
         key,
-        sourceSize: {x: 1, y: 1}
+        sourceSize: {x: 1, y: 1},
       });
       expect(store.getState().animationList.propsByKey[key].sourceSize).not.to
         .be.undefined;
@@ -224,7 +224,7 @@ describe('animationList', function () {
         frameCount: 1,
         looping: true,
         frameDelay: 4,
-        version: null
+        version: null,
       };
     }
     return {orderedKeys: orderedKeys, propsByKey: propsByKey};
@@ -269,7 +269,7 @@ describe('animationList', function () {
     it('when animationList has 0 items, currentAnimations.ANIMATION should be the empty string', function () {
       let animationList = {
         orderedKeys: [],
-        propsByKey: {}
+        propsByKey: {},
       };
       store.dispatch(setInitialAnimationList(animationList));
       expect(
@@ -562,7 +562,7 @@ describe('animationList', function () {
         frameCount: 1,
         looping: true,
         frameDelay: 4,
-        version: null
+        version: null,
       };
       store.dispatch(addLibraryAnimation(libraryAnimProps));
       let blankAnimationKey1 = store.getState().animationList.orderedKeys[0];
@@ -604,7 +604,7 @@ describe('animationList', function () {
     it('adds animation at front of list in Sprite Lab', function () {
       store.dispatch(
         setPageConstants({
-          isBlockly: true
+          isBlockly: true,
         })
       );
 
@@ -638,18 +638,18 @@ describe('animationList', function () {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
-            version: 'test-version'
-          }
-        }
+            version: 'test-version',
+          },
+        },
       };
       expectDeepEqual(withAbsoluteSourceUrls(serializedList, '123'), {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
             version: 'test-version',
-            sourceUrl: `${document.location.origin}/v3/animations/fake_id/foo.png?version=test-version`
-          }
-        }
+            sourceUrl: `${document.location.origin}/v3/animations/fake_id/foo.png?version=test-version`,
+          },
+        },
       });
     });
 
@@ -658,17 +658,17 @@ describe('animationList', function () {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
-            sourceUrl: '/some-origin-relative-url'
-          }
-        }
+            sourceUrl: '/some-origin-relative-url',
+          },
+        },
       };
       expectDeepEqual(withAbsoluteSourceUrls(serializedList, '123'), {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
-            sourceUrl: `${document.location.origin}/some-origin-relative-url`
-          }
-        }
+            sourceUrl: `${document.location.origin}/some-origin-relative-url`,
+          },
+        },
       });
     });
 
@@ -678,17 +678,17 @@ describe('animationList', function () {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
-            sourceUrl
-          }
-        }
+            sourceUrl,
+          },
+        },
       };
       expectDeepEqual(withAbsoluteSourceUrls(serializedList, '123'), {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
-            sourceUrl
-          }
-        }
+            sourceUrl,
+          },
+        },
       });
     });
 
@@ -697,17 +697,17 @@ describe('animationList', function () {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
-            sourceUrl: 'http://host.com/some-absolute-url'
-          }
-        }
+            sourceUrl: 'http://host.com/some-absolute-url',
+          },
+        },
       };
       expectDeepEqual(withAbsoluteSourceUrls(serializedList, '123'), {
         orderedKeys: ['foo'],
         propsByKey: {
           foo: {
-            sourceUrl: `${document.location.origin}/media?u=http%3A%2F%2Fhost.com%2Fsome-absolute-url`
-          }
-        }
+            sourceUrl: `${document.location.origin}/media?u=http%3A%2F%2Fhost.com%2Fsome-absolute-url`,
+          },
+        },
       });
     });
   });
@@ -780,7 +780,7 @@ describe('animationList', function () {
         frameCount: 1,
         looping: true,
         frameDelay: 4,
-        version: null
+        version: null,
       };
     });
 
@@ -830,7 +830,7 @@ describe('animationList', function () {
         frameCount: 1,
         looping: true,
         frameDelay: 4,
-        version: null
+        version: null,
       };
 
       saveAnimation('animation_1', libraryAnimProps);

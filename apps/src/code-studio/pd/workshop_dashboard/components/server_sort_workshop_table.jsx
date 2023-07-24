@@ -20,7 +20,7 @@ export default class ServerSortWorkshopTable extends React.Component {
     showSignupUrl: PropTypes.bool,
     showOrganizer: PropTypes.bool,
     generateCaptionFromWorkshops: PropTypes.func,
-    moreUrl: PropTypes.string
+    moreUrl: PropTypes.string,
   };
 
   constructor(props) {
@@ -52,7 +52,7 @@ export default class ServerSortWorkshopTable extends React.Component {
   render() {
     const queryParams = {
       ...this.props.queryParams,
-      order_by: this.state.orderBy
+      order_by: this.state.orderBy,
     };
 
     return (

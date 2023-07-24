@@ -28,3 +28,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 When this code segment executes, the condition for the `if` statement is `true` because `canMove()` returns `true` (the `Painter` object can move forward in the direction it is currently facing). The `Painter` object will then move forward one space then turn left. The `else` branch will not execute since the condition for the `if` statement was `true`.
 MARKDOWN
+
+allow_multiple_attempts true

@@ -14,3 +14,4 @@ answer 'code that is unnecessary'
 
 question 'pseudocode'
 answer 'a plain language description of the steps in an algorithm'
+allow_multiple_attempts true

@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import ProgrammingEnvironmentIndex, {
-  ProgrammingEnvironmentCard
+  ProgrammingEnvironmentCard,
 } from '@cdo/apps/templates/codeDocs/ProgrammingEnvironmentIndex';
 
 describe('ProgrammingEnvironmentIndex', () => {
@@ -15,15 +15,15 @@ describe('ProgrammingEnvironmentIndex', () => {
             title: 'Sprite Lab',
             description: 'description of spritelab',
             imageUrl: 'code.org/spritelab',
-            showPath: '/docs/spritelab'
+            showPath: '/docs/spritelab',
           },
           {
             name: 'gamelab',
             title: 'Game Lab',
             description: 'description of gamelab',
             imageUrl: 'code.org/gamelab',
-            showPath: '/docs/gamelab'
-          }
+            showPath: '/docs/gamelab',
+          },
         ]}
       />
     );
@@ -40,7 +40,7 @@ describe('ProgrammingEnvironmentCard', () => {
           title: 'Sprite Lab',
           description: 'description of spritelab',
           imageUrl: 'code.org/spritelab',
-          showPath: '/docs/spritelab'
+          showPath: '/docs/spritelab',
         }}
       />
     );
@@ -59,7 +59,7 @@ describe('ProgrammingEnvironmentCard', () => {
         programmingEnvironment={{
           name: 'spritelab',
           title: 'Sprite Lab',
-          showPath: '/docs/spritelab'
+          showPath: '/docs/spritelab',
         }}
       />
     );
@@ -77,7 +77,7 @@ describe('ProgrammingEnvironmentCard', () => {
           name: 'spritelab',
           description: 'description of spritelab',
           imageUrl: 'code.org/spritelab',
-          showPath: '/docs/spritelab'
+          showPath: '/docs/spritelab',
         }}
       />
     );

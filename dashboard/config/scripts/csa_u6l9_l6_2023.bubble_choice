@@ -1,6 +1,6 @@
 name 'CSA U6L9-L6_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: NLP Techniques'
+description 'Use `ArrayList` and `String` methods to implement techniques used in natural language processing.'
 
 sublevels
 level 'CSA U6L9-L6a_2023'

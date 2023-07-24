@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {setShowSharingColumn} from './manageStudentsRedux';
 import {connect} from 'react-redux';
 import QuickActionsCell, {
-  QuickActionsCellType
+  QuickActionsCellType,
 } from '../tables/QuickActionsCell';
 import ControlProjectSharingDialog from './ControlProjectSharingDialog';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
@@ -13,11 +13,11 @@ class ManageStudentsActionsHeaderCell extends Component {
   static propTypes = {
     editAll: PropTypes.func,
     isShareColumnVisible: PropTypes.bool,
-    hideSharingColumn: PropTypes.func
+    hideSharingColumn: PropTypes.func,
   };
 
   state = {
-    isProjectSharingDialogOpen: false
+    isProjectSharingDialogOpen: false,
   };
 
   openProjectSharingDialog = () => {
@@ -69,6 +69,6 @@ export default connect(
   dispatch => ({
     hideSharingColumn() {
       dispatch(setShowSharingColumn(false));
-    }
+    },
   })
 )(ManageStudentsActionsHeaderCell);

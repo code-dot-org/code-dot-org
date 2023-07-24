@@ -75,6 +75,16 @@ class RegionalPartner < ApplicationRecord
     SENT_BY_SYSTEM = 'sent_by_system'.freeze
   ].freeze
 
+  def are_apps_closed
+    apps_close_str = apps_close_date_teacher
+    if apps_close_str
+      close_date = Date.parse(apps_close_str)
+      return close_date.before?(Time.zone.today)
+    end
+
+    false
+  end
+
   # Upcoming and not ended
   def future_pd_workshops_organized
     pd_workshops_organized.future

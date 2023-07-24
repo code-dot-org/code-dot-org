@@ -9,11 +9,11 @@ export default class EnumPropertyRow extends React.Component {
     options: PropTypes.arrayOf(PropTypes.string).isRequired,
     handleChange: PropTypes.func.isRequired,
     desc: PropTypes.node,
-    containerStyle: PropTypes.object
+    containerStyle: PropTypes.object,
   };
 
   state = {
-    selectedValue: this.props.initialValue
+    selectedValue: this.props.initialValue,
   };
 
   handleChange = event => {

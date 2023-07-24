@@ -10,31 +10,31 @@ import {getStore} from '../../redux';
 export const styles = {
   button: {
     marginTop: 20,
-    marginLeft: '50%'
+    marginLeft: '50%',
   },
   buttonRTL: {
     marginTop: 20,
-    marginRight: '50%'
+    marginRight: '50%',
   },
   updateButton: {
-    marginLeft: 5
+    marginLeft: 5,
   },
   updateButtonRTL: {
-    marginRight: 5
+    marginRight: 5,
   },
   intro: {
     fontSize: 18,
     fontFamily: "'Gotham 5r', sans-serif",
     color: color.charcoal,
-    paddingRight: 20
+    paddingRight: 20,
   },
   schoolName: {
     color: color.purple,
-    fontStyle: 'italic'
+    fontStyle: 'italic',
   },
   body: {
-    margin: 10
-  }
+    margin: 10,
+  },
 };
 
 class SchoolInfoConfirmationDialog extends Component {
@@ -51,11 +51,11 @@ class SchoolInfoConfirmationDialog extends Component {
         country: PropTypes.string,
         school_type: PropTypes.string,
         school_name: PropTypes.string,
-        full_address: PropTypes.string
-      }).isRequired
+        full_address: PropTypes.string,
+      }).isRequired,
     }).isRequired,
     onClose: PropTypes.func,
-    isOpen: PropTypes.bool
+    isOpen: PropTypes.bool,
   };
 
   constructor(props) {
@@ -63,7 +63,7 @@ class SchoolInfoConfirmationDialog extends Component {
     this.state = {
       showSchoolInterstitial: false,
       schoolName: props.scriptData.existingSchoolInfo.school_name,
-      isOpen: props.isOpen || true
+      isOpen: props.isOpen || true,
     };
   }
 
@@ -80,7 +80,7 @@ class SchoolInfoConfirmationDialog extends Component {
       `/api/v1/user_school_infos/${this.props.scriptData.existingSchoolInfo.user_school_info_id}/update_last_confirmation_date`,
       {
         method: 'PATCH',
-        body: formData
+        body: formData,
       }
     )
       .then(this.closeModal)

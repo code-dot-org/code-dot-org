@@ -20,26 +20,26 @@ describe('ProgrammingClassOverview', () => {
           name: 'param1',
           type: 'string',
           required: true,
-          description: 'description'
+          description: 'description',
         },
-        {name: 'param2'}
+        {name: 'param2'},
       ],
       examples: [
         {
           name: 'Example 1',
-          description: 'the first example'
-        }
+          description: 'the first example',
+        },
       ],
       methods: [
         {
           key: 'method1',
-          name: 'method1()'
+          name: 'method1()',
         },
         {
           key: 'method2',
-          name: 'method2()'
-        }
-      ]
+          name: 'method2()',
+        },
+      ],
     };
   });
 
@@ -55,7 +55,7 @@ describe('ProgrammingClassOverview', () => {
       'Tips',
       'Additional Information',
       'Fields',
-      'Method Details'
+      'Method Details',
     ]);
 
     expect(
@@ -139,7 +139,7 @@ describe('ProgrammingClassOverview', () => {
       <ProgrammingClassOverview
         programmingClass={{
           ...defaultProgrammingClass,
-          color: '#fff176'
+          color: '#fff176',
         }}
       />
     );
@@ -153,7 +153,7 @@ describe('ProgrammingClassOverview', () => {
       <ProgrammingClassOverview
         programmingClass={{
           ...defaultProgrammingClass,
-          color: null
+          color: null,
         }}
       />
     );

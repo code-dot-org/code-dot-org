@@ -6,9 +6,8 @@ require 'active_support/core_ext/object/blank'
 require_relative '../../utils/selenium_browser'
 require 'retryable'
 
-BROWSER_NAME = ENV['BROWSER_CONFIG']
-$browser_config = JSON.parse(File.read("browsers.json")).detect {|b| b['name'] == BROWSER_NAME } || {}
-$browser_config.delete('name') # w3c spec won't allow name field
+UI_TEST_DIR = File.expand_path('../..', __dir__)
+$browser_config = JSON.parse(File.read(File.join(UI_TEST_DIR, "browsers.json"))).detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
 
 MAX_CONNECT_RETRIES = 3
 
@@ -24,26 +23,18 @@ def saucelabs_browser(test_run_name)
   is_tunnel = ENV['CIRCLE_BUILD_NUM']
   url = "http://#{CDO.saucelabs_username}:#{CDO.saucelabs_authkey}@#{is_tunnel ? 'localhost:4445' : 'ondemand.saucelabs.com:80'}/wd/hub"
 
-  capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config)
-
-  # if ENV['BROWSER_CONFIG'] == 'Firefox'
-  #   # Firefox >= 66 has an issue with its content blocker causing page loads to block indefinitely.
-  #   # Set content blocking to 'strict' as a workaround.
-  #   profile = Selenium::WebDriver::Firefox::Profile.new
-  #   profile['browser.contentblocking.category'] = 'strict'
-  #   capabilities[:firefox_profile] = profile
-  # end
+  capabilities = Selenium::WebDriver::Remote::Capabilities.new($browser_config.except('name'))
 
   sauce_options = {
     name: test_run_name,
     tags: [ENV['GIT_BRANCH']],
     build: CDO.circle_run_identifier || ENV['BUILD'],
     idleTimeout: 60,
-    seleniumVersion: Selenium::WebDriver::VERSION,
+    seleniumVersion: Selenium::WebDriver::VERSION
   }
-  sauce_options[:tunnelName] = CDO.circle_run_identifier if CDO.circle_run_identifier
+  sauce_options[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
   sauce_options[:priority] = ENV['PRIORITY'].to_i if ENV['PRIORITY']
-
+  capabilities["sauce:options"] ||= {}
   capabilities["sauce:options"].merge!(sauce_options)
 
   very_verbose "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"

@@ -19,38 +19,38 @@ const UPDATE_LESSON_GROUP_FIELD = 'unitEditor/UPDATE_LESSON_GROUP_FIELD';
 
 export const init = lessonGroups => ({
   type: INIT,
-  lessonGroups
+  lessonGroups,
 });
 
 export const addGroup = (groupPosition, groupKey, groupName) => ({
   type: ADD_GROUP,
   groupPosition,
   groupKey,
-  groupName
+  groupName,
 });
 
 export const addLesson = (groupPosition, lessonKey, lessonName) => ({
   type: ADD_LESSON,
   groupPosition,
   lessonKey,
-  lessonName
+  lessonName,
 });
 
 export const moveGroup = (groupPosition, direction) => ({
   type: MOVE_GROUP,
   groupPosition,
-  direction
+  direction,
 });
 
 export const removeGroup = groupPosition => ({
   type: REMOVE_GROUP,
-  groupPosition
+  groupPosition,
 });
 
 export const removeLesson = (groupPosition, lessonPosition) => ({
   type: REMOVE_LESSON,
   groupPosition,
-  lessonPosition
+  lessonPosition,
 });
 
 export const setLessonGroup = (
@@ -61,19 +61,19 @@ export const setLessonGroup = (
   type: SET_LESSON_GROUP,
   lessonPosition,
   oldGroupPosition,
-  newGroupPosition
+  newGroupPosition,
 });
 
 export const convertGroupToUserFacing = (groupPosition, key, displayName) => ({
   type: CONVERT_GROUP_USER_FACING,
   groupPosition,
   key,
-  displayName
+  displayName,
 });
 
 export const convertGroupToNonUserFacing = groupPosition => ({
   type: CONVERT_GROUP_NON_USER_FACING,
-  groupPosition
+  groupPosition,
 });
 
 export const reorderLesson = (
@@ -84,7 +84,7 @@ export const reorderLesson = (
   type: REORDER_LESSON,
   groupPosition,
   originalLessonPosition,
-  newLessonPosition
+  newLessonPosition,
 });
 
 export const updateLessonGroupField = (
@@ -95,7 +95,7 @@ export const updateLessonGroupField = (
   type: UPDATE_LESSON_GROUP_FIELD,
   lessonGroupPosition,
   fieldName,
-  fieldValue
+  fieldValue,
 });
 
 function updateGroupPositions(lessonGroups) {
@@ -127,7 +127,7 @@ function lessonGroups(state = [], action) {
         position: action.groupPosition,
         bigQuestions: '',
         description: '',
-        lessons: []
+        lessons: [],
       });
       updateGroupPositions(newState);
       break;
@@ -138,7 +138,7 @@ function lessonGroups(state = [], action) {
         key: action.lessonKey,
         name: action.lessonName,
         hasLessonPlan: true,
-        levels: []
+        levels: [],
       });
       updateLessonPositions(newState);
       break;
@@ -217,7 +217,7 @@ function lessonGroups(state = [], action) {
 }
 
 export default {
-  lessonGroups
+  lessonGroups,
 };
 
 // Use PropTypes.checkPropTypes to enforce that each entry in the array of
@@ -234,7 +234,7 @@ export const emptyNonUserFacingGroup = {
   position: 1,
   bigQuestions: '',
   description: '',
-  lessons: []
+  lessons: [],
 };
 
 export const mapLessonGroupDataForEditor = rawLessonGroups => {
@@ -258,8 +258,8 @@ export const mapLessonGroupDataForEditor = rawLessonGroups => {
           unplugged: lesson.unplugged,
           hasLessonPlan: lesson.hasLessonPlan,
           lessonEditPath: lesson.lessonEditPath,
-          name: lesson.name
-        }))
+          name: lesson.name,
+        })),
     }));
   if (lessonGroups.length === 0) {
     lessonGroups = [emptyNonUserFacingGroup];

@@ -25,3 +25,5 @@ What is printed as a result of the call `whatsUp("WATCH")` ?
 
 ![](https://images.code.org/91bb23d619f1812dbbeade840c40873d-image-1634929059116.png)
 MARKDOWN
+
+allow_multiple_attempts true

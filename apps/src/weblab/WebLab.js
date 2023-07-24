@@ -1,5 +1,3 @@
-/* global dashboard */
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import weblabI18n from '@cdo/weblab/locale';
@@ -9,7 +7,7 @@ import {
   DisallowedHtmlWarningDialog,
   FatalErrorDialog,
   ResetSuccessDialog,
-  UploadErrorDialog
+  UploadErrorDialog,
 } from '@cdo/apps/weblab/dialogs/';
 import {Provider} from 'react-redux';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
@@ -129,8 +127,8 @@ WebLab.prototype.init = function (config) {
               event: 'clear_puzzle_success',
               project_id: getCurrentId(),
               data_json: JSON.stringify({
-                responseText: xhr.responseText
-              })
+                responseText: xhr.responseText,
+              }),
             },
             {includeUserId: true}
           );
@@ -175,7 +173,7 @@ WebLab.prototype.init = function (config) {
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
-    validationEnabled: !!config.level.validationEnabled
+    validationEnabled: !!config.level.validationEnabled,
   });
 
   this.readOnly = config.readonlyWorkspace;
@@ -201,7 +199,7 @@ WebLab.prototype.init = function (config) {
         {
           showUnderageWarning: !getStore().getState().pageConstants.is13Plus,
           useFilesApi: config.useFilesApi,
-          disableAudioRecording: true
+          disableAudioRecording: true,
         }
       );
     });
@@ -289,7 +287,7 @@ WebLab.prototype.onMount = function (config) {
   initializeSubmitHelper({
     studioApp: this.studioApp_,
     onPuzzleComplete: this.onFinish.bind(this),
-    unsubmitUrl: this.level.unsubmitUrl
+    unsubmitUrl: this.level.unsubmitUrl,
   });
 };
 
@@ -343,7 +341,7 @@ WebLab.prototype.reportResult = function (submit, validated) {
       : () => {
           this.studioApp_.displayFeedback({
             feedbackType: testResult,
-            level: this.level
+            level: this.level,
           });
         };
   }
@@ -356,7 +354,7 @@ WebLab.prototype.reportResult = function (submit, validated) {
       testResult: testResult,
       program: this.getCurrentFilesVersionId() || '',
       submitted: submit,
-      onComplete: onComplete
+      onComplete: onComplete,
     });
   });
 };
@@ -525,7 +523,7 @@ WebLab.prototype.onFilesReady = function (files, filesVersionId) {
         study: 'weblab_loading_investigation',
         study_group: 'empty_manifest',
         event: 'get_empty_manifest',
-        project_id: getCurrentId()
+        project_id: getCurrentId(),
       },
       {includeUserId: true}
     );
@@ -534,7 +532,7 @@ WebLab.prototype.onFilesReady = function (files, filesVersionId) {
   this.fileEntries = assetListStore.list().map(fileEntry => ({
     name: fileEntry.filename,
     url: filesApi.basePath(fileEntry.filename),
-    versionId: fileEntry.versionId
+    versionId: fileEntry.versionId,
   }));
   this.initialFilesVersionId = this.initialFilesVersionId || filesVersionId;
 
@@ -654,7 +652,7 @@ WebLab.prototype.redux = function () {
   return {
     getStore,
     reducers,
-    actions
+    actions,
   };
 };
 
@@ -673,7 +671,7 @@ WebLab.prototype.tempLog = function (event, data = null) {
     {
       study: 'weblab_loading_investigation_2022',
       event: event,
-      data_json: data === null ? null : JSON.stringify(data)
+      data_json: data === null ? null : JSON.stringify(data),
     },
     {includeUserId: true}
   );
@@ -730,7 +728,7 @@ WebLab.prototype.brambleApi = function () {
     registerBeforeFirstWriteHook: this.registerBeforeFirstWriteHook.bind(this),
     redux: this.redux.bind(this),
     renameProjectFile: this.renameProjectFile.bind(this),
-    tempLog: this.tempLog.bind(this)
+    tempLog: this.tempLog.bind(this),
   };
 };
 

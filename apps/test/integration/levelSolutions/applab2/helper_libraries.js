@@ -3,7 +3,7 @@ import tickWrapper from '../../util/tickWrapper';
 
 const levelDef = {
   helperLibraries: ['HelloWorld'],
-  editCode: true
+  editCode: true,
 };
 
 export default {
@@ -13,7 +13,7 @@ export default {
   tests: [
     {
       libraries: {
-        HelloWorld: 'console.log("hello world"); var myVar = 123;'
+        HelloWorld: 'console.log("hello world"); var myVar = 123;',
       },
       description: 'Helper Libraries in App Lab',
       editCode: true,
@@ -30,8 +30,8 @@ export default {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

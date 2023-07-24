@@ -1,6 +1,6 @@
 name 'CSD U4 MC Q2_2023'
 type 'multi2'
-question 'You are designing a smart collar that will track pets, and you interviewed a user. Which of the following quotes from the interview are the most helpful in creating a profile for the user? (Select all that apply)'
+question 'During the design of a smart collar that will track pets, you decided to interview a user. Which of the following quotes from the interview are the most helpful in creating a profile for the user? (*Select two*)'
 wrong '"I enjoy watching soccer."'
 right '"I take care of pets for my relatives."'
 wrong '"The weather has been really nice recently."'
@@ -10,3 +10,5 @@ teacher_markdown <<MARKDOWN
 
 These quotes are the most relevant to designing a smart collar for pets.
 MARKDOWN
+
+allow_multiple_attempts true

@@ -39,7 +39,7 @@ var base = {
     $.ajax({
       url: this.api_base_url,
       type: 'get',
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(function (data, text) {
         callback(null, data);
@@ -63,7 +63,7 @@ var base = {
       url: this.api_base_url + stringifyQueryParams(queryParams),
       type: 'post',
       contentType: 'application/json; charset=utf-8',
-      data: JSON.stringify(value)
+      data: JSON.stringify(value),
     })
       .done(function (data, text) {
         callback(null, data);
@@ -83,7 +83,7 @@ var base = {
     $.ajax({
       url: this.api_base_url + '/' + childPath + '/delete',
       type: 'post',
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(function (data, text) {
         callback(null, true);
@@ -103,7 +103,7 @@ var base = {
     $.ajax({
       url: this.api_base_url + '/' + childPath,
       type: 'delete',
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(function (data, text) {
         callback(null, true);
@@ -125,7 +125,7 @@ var base = {
     $.ajax({
       url: this.api_base_url + '/' + childPath,
       type: 'get',
-      dataType: dataType
+      dataType: dataType,
     })
       .done(function (data, textStatus, jqXHR) {
         callback(null, data, jqXHR);
@@ -148,7 +148,7 @@ var base = {
       url: this.api_base_url + '/' + childPath,
       type: 'post',
       contentType: 'application/json; charset=utf-8',
-      data: JSON.stringify(value)
+      data: JSON.stringify(value),
     })
       .done(function (data, text) {
         callback(null, data);
@@ -171,7 +171,7 @@ var base = {
   copyAll: function (src, dest, callback) {
     $.ajax({
       url: this.api_base_url + '/' + dest + '?src=' + src,
-      type: 'put'
+      type: 'put',
     })
       .done(function (data, text) {
         callback(null, data);
@@ -195,13 +195,15 @@ var base = {
       url: this.api_base_url + '/' + id + '/' + filename,
       type: 'put',
       contentType: 'application/json; charset=utf-8',
-      data: value
+      data: value,
     })
       .done(function (data, text) {
         callback(null, data);
       })
       .fail(function (request, status, error) {
-        var err = errorString(request, status, error);
+        // json_bad_request helper adds details to the responseJSON
+        const details = request.responseJSON?.details || null;
+        const err = errorString(request, status, error, details);
         callback(err, false);
       });
   },
@@ -219,7 +221,7 @@ var base = {
       url: this.api_base_url + '/' + id + '/?' + queryParams,
       type: 'patch',
       contentType: 'application/json; charset=utf-8',
-      data: value
+      data: value,
     })
       .done(function (data, text) {
         callback(null, data);
@@ -228,12 +230,13 @@ var base = {
         var err = new Error('status: ' + status + '; error: ' + error);
         callback(err, false);
       });
-  }
+  },
 };
 
-function errorString(request, status, error) {
+function errorString(request, status, error, details = null) {
   return new Error(
-    `httpStatusCode: ${request.status}; status: ${status}; error: ${error}`
+    `httpStatusCode: ${request.status}; status: ${status}; error: ${error}`,
+    {cause: details}
   );
 }
 
@@ -245,7 +248,7 @@ module.exports = {
    */
   create: function (url) {
     return _.assign({}, base, {
-      api_base_url: url
+      api_base_url: url,
     });
-  }
+  },
 };

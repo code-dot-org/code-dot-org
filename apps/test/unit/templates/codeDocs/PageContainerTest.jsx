@@ -11,15 +11,15 @@ describe('PageContainer', () => {
           {
             key: 'world',
             name: 'World',
-            docs: [{key: 'width', name: 'Width', link: '/docs/ide/width'}]
+            docs: [{key: 'width', name: 'Width', link: '/docs/ide/width'}],
           },
           {
             key: 'sprites',
             name: 'Sprites',
             docs: [
-              {key: 'height', name: 'Sprite.Height', link: '/docs/ide/height'}
-            ]
-          }
+              {key: 'height', name: 'Sprite.Height', link: '/docs/ide/height'},
+            ],
+          },
         ]}
         programmingEnvironmentTitle="IDE Lab"
       >

@@ -24,3 +24,5 @@ The variable `sum` is initialized to the result of the value at index `3` plus t
 
 The value at index `6` is then added to the current value assigned to `sum`. The value at index `6` is `4`, so `sum` now contains the value `10`.
 MARKDOWN
+
+allow_multiple_attempts true

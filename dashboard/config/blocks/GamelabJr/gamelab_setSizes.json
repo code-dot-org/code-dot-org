@@ -26,7 +26,8 @@
         ]
       },
       {
-        "name": "N"
+        "name": "N",
+        "type": "Number"
       }
     ],
     "style": "default"

@@ -12,7 +12,7 @@ import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shap
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   isScriptHiddenForSection,
-  toggleHiddenScript
+  toggleHiddenScript,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -35,20 +35,20 @@ class CourseScript extends Component {
     hiddenLessonState: PropTypes.object.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenScript: PropTypes.func.isRequired,
-    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
   };
 
   state = {
-    confirmationMessageOpen: false
+    confirmationMessageOpen: false,
   };
 
   onReassignConfirm = () => {
     this.setState({
-      confirmationMessageOpen: true
+      confirmationMessageOpen: true,
     });
     setTimeout(() => {
       this.setState({
-        confirmationMessageOpen: false
+        confirmationMessageOpen: false,
       });
     }, 15000);
   };
@@ -64,8 +64,8 @@ class CourseScript extends Component {
         script_id: id,
         data_json: JSON.stringify({
           script_name: name,
-          section_id: selectedSectionId
-        })
+          section_id: selectedSectionId,
+        }),
       },
       {useProgressScriptId: false}
     );
@@ -86,7 +86,7 @@ class CourseScript extends Component {
       courseOfferingId,
       courseVersionId,
       sectionsForDropdown,
-      showAssignButton
+      showAssignButton,
     } = this.props;
 
     const isHidden = isScriptHiddenForSection(
@@ -114,7 +114,7 @@ class CourseScript extends Component {
       <div
         style={{
           ...styles.main,
-          ...(isHidden && styles.hidden)
+          ...(isHidden && styles.hidden),
         }}
         className="uitest-CourseScript"
         data-visibility={isHidden ? 'hidden' : 'visible'}
@@ -181,18 +181,18 @@ const styles = {
     borderColor: color.border_gray,
     borderStyle: 'solid',
     borderRadius: 2,
-    marginBottom: 12
+    marginBottom: 12,
   },
   content: {
-    padding: 20
+    padding: 20,
   },
   description: {
     marginTop: 20,
-    marginBottom: 20
+    marginBottom: 20,
   },
   title: {
     fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 5r", sans-serif',
   },
   // TODO: share better with ProgressLesson
   hidden: {
@@ -201,12 +201,12 @@ const styles = {
     marginTop: 0,
     marginBottom: 12,
     marginLeft: 0,
-    marginRight: 0
+    marginRight: 0,
   },
   flex: {
     display: 'flex',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };
 export const UnconnectedCourseScript = CourseScript;
 
@@ -223,7 +223,7 @@ export default connect(
     hiddenLessonState: state.hiddenLesson,
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&
-      state.teacherSections.sectionIds.length === 0
+      state.teacherSections.sectionIds.length === 0,
   }),
   {toggleHiddenScript}
 )(CourseScript);

@@ -1,4 +1,3 @@
-/* global addToHome Applab Blockly */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -26,6 +25,7 @@ import msg from '@cdo/locale';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import DCDO from '@cdo/apps/dcdo';
 
 const SHARE_IMAGE_NAME = '_share_image.png';
 
@@ -67,7 +67,7 @@ export function setupApp(appOptions) {
         analyticsReporter.sendEvent(EVENTS.TEACHER_VIEWING_STUDENT_WORK, {
           unitId: appOptions.serverScriptId,
           levelId: appOptions.serverLevelId,
-          sectionId: queryParams('section_id')
+          sectionId: queryParams('section_id'),
         });
       }
 
@@ -94,7 +94,7 @@ export function setupApp(appOptions) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
         return tryToUploadShareImageToS3({
           image: report.image,
-          level: appOptions.level
+          level: appOptions.level,
         });
       }
 
@@ -155,7 +155,7 @@ export function setupApp(appOptions) {
         const dialog = new LegacyDialog({
           body: body,
           width: 800,
-          redirect: lastServerResponse.nextRedirect
+          redirect: lastServerResponse.nextRedirect,
         });
         dialog.show();
       } else if (lastServerResponse.nextRedirect) {
@@ -194,7 +194,7 @@ export function setupApp(appOptions) {
           afterVideoCallback();
         }
       }
-    }
+    },
   };
   $.extend(true, appOptions, baseOptions);
 
@@ -266,7 +266,7 @@ function loadProjectAndCheckAbuse(appOptions) {
           renderAbusive(
             project,
             msg.sharingDisabled({
-              sign_in_url: 'https://studio.code.org/users/sign_in'
+              sign_in_url: 'https://studio.code.org/users/sign_in',
             })
           );
           return;
@@ -353,8 +353,8 @@ async function loadAppAsync(appOptions) {
       `/${appOptions.serverLevelId}`,
     data: {
       user_id: clientState.queryParams('user_id'),
-      get_channel_id: shouldGetChannelId
-    }
+      get_channel_id: shouldGetChannelId,
+    },
   });
 
   try {
@@ -480,10 +480,11 @@ const sourceHandler = {
       let source;
       let appOptions = getAppOptions();
       if (window.Blockly && Blockly.mainBlockSpace) {
+        const getSourceAsJson = !!DCDO.get('blockly-json', false);
         // If we're readOnly, source hasn't changed at all
         source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
           ? currentLevelSource
-          : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+          : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace, getSourceAsJson);
         resolve(source);
       } else if (appOptions.getCode) {
         source = appOptions.getCode();
@@ -512,7 +513,7 @@ const sourceHandler = {
       return prepareForRemix();
     }
     return Promise.resolve(); // Return an insta-resolved promise.
-  }
+  },
 };
 
 /** @type {AppOptionsConfig} */

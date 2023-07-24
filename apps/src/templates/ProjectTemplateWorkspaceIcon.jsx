@@ -21,6 +21,7 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
           data-tip
           data-for={this.tooltipId}
           aria-describedby={this.tooltipId}
+          alt={msg.workspaceProjectTemplateLevel()}
         />
         <ReactTooltip
           id={this.tooltipId}
@@ -39,15 +40,15 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
 
 const styles = {
   container: {
-    display: 'inline-block'
+    display: 'inline-block',
   },
   tooltip: {
     maxWidth: 200,
     lineHeight: '20px',
-    whiteSpace: 'normal'
+    whiteSpace: 'normal',
   },
   projectTemplateIcon: {
     marginRight: 5,
-    marginTop: -1
-  }
+    marginTop: -1,
+  },
 };

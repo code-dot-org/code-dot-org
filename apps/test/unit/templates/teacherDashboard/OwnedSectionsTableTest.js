@@ -8,7 +8,7 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import {
   UnconnectedOwnedSectionsTable as OwnedSectionsTable,
@@ -16,11 +16,11 @@ import {
   courseLinkFormatter,
   loginInfoFormatter,
   studentsFormatter,
-  COLUMNS
+  COLUMNS,
 } from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
 import Button from '@cdo/apps/templates/Button';
 import teacherSections, {
-  setSections
+  setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const GRADE_COLUMN = COLUMNS.GRADE.toString();
@@ -42,8 +42,8 @@ const sectionRowData = [
     assignmentNames: ['CS Discoveries', 'Unit 1: Problem Solving'],
     assignmentPaths: [
       '//localhost-studio.code.org:3000/courses/csd',
-      '//localhost-studio.code.org:3000/s/csd1-2019'
-    ]
+      '//localhost-studio.code.org:3000/s/csd1-2019',
+    ],
   },
   {
     id: 2,
@@ -53,7 +53,7 @@ const sectionRowData = [
     grades: ['4'],
     loginType: 'google_classroom',
     providerManaged: true,
-    hidden: false
+    hidden: false,
   },
   {
     id: 3,
@@ -64,7 +64,7 @@ const sectionRowData = [
     scriptId: 168,
     grades: ['3'],
     providerManaged: false,
-    hidden: false
+    hidden: false,
   },
   {
     id: 4,
@@ -75,8 +75,8 @@ const sectionRowData = [
     providerManaged: false,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: []
-  }
+    assignmentPaths: [],
+  },
 ];
 
 const sectionGradesRowData = [
@@ -91,7 +91,7 @@ const sectionGradesRowData = [
     providerManaged: true,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: []
+    assignmentPaths: [],
   },
   {
     id: 2,
@@ -104,7 +104,7 @@ const sectionGradesRowData = [
     providerManaged: true,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: []
+    assignmentPaths: [],
   },
   {
     id: 3,
@@ -118,7 +118,7 @@ const sectionGradesRowData = [
     providerManaged: false,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: []
+    assignmentPaths: [],
   },
   {
     id: 4,
@@ -130,7 +130,7 @@ const sectionGradesRowData = [
     providerManaged: false,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: []
+    assignmentPaths: [],
   },
   {
     id: 5,
@@ -144,7 +144,7 @@ const sectionGradesRowData = [
     hidden: false,
     loginType: SectionLoginType.picture,
     assignmentNames: [],
-    assignmentPaths: []
+    assignmentPaths: [],
   },
   {
     id: 6,
@@ -156,7 +156,7 @@ const sectionGradesRowData = [
     hidden: false,
     loginType: SectionLoginType.picture,
     assignmentNames: [],
-    assignmentPaths: []
+    assignmentPaths: [],
   },
   {
     id: 7,
@@ -168,8 +168,8 @@ const sectionGradesRowData = [
     hidden: false,
     loginType: SectionLoginType.picture,
     assignmentNames: [],
-    assignmentPaths: []
-  }
+    assignmentPaths: [],
+  },
 ];
 
 const plSectionRowData = [
@@ -185,7 +185,7 @@ const plSectionRowData = [
     providerManaged: true,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: []
+    assignmentPaths: [],
   },
   {
     id: 2,
@@ -199,7 +199,7 @@ const plSectionRowData = [
     providerManaged: true,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: []
+    assignmentPaths: [],
   },
   {
     id: 3,
@@ -214,8 +214,8 @@ const plSectionRowData = [
     providerManaged: false,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: []
-  }
+    assignmentPaths: [],
+  },
 ];
 
 // Scramble these for the table to start un-ordered
@@ -226,7 +226,7 @@ const sections = [
   sectionGradesRowData[4],
   sectionGradesRowData[3],
   sectionGradesRowData[1],
-  sectionGradesRowData[6]
+  sectionGradesRowData[6],
 ];
 
 describe('OwnedSectionsTable Sorting', () => {

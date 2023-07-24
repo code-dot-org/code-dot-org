@@ -9,9 +9,9 @@ export default class SessionTimesList extends React.Component {
   static propTypes = {
     sessions: PropTypes.arrayOf(
       PropTypes.shape({
-        id: PropTypes.number.isRequired
+        id: PropTypes.number.isRequired,
       })
-    ).isRequired
+    ).isRequired,
   };
 
   render() {

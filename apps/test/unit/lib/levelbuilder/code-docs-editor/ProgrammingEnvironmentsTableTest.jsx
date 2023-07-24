@@ -13,21 +13,21 @@ describe('ProgrammingEnvironmentsTable', () => {
           id: 1,
           name: 'applab',
           title: 'App Lab',
-          editPath: '/programming_environment/1/edit'
+          editPath: '/programming_environment/1/edit',
         },
         {
           id: 2,
           name: 'spritelab',
-          editPath: '/programming_environment/2/edit'
+          editPath: '/programming_environment/2/edit',
         },
         {
           id: 3,
           name: 'gamelab',
           title: 'Game Lab',
-          editPath: '/programming_environment/3/edit'
-        }
+          editPath: '/programming_environment/3/edit',
+        },
       ],
-      hidden: false
+      hidden: false,
     };
   });
 

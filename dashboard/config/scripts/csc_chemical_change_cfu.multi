@@ -10,3 +10,5 @@ right 'The wood particles did not change- they are still solid wood.'
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

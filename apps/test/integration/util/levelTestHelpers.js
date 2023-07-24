@@ -1,6 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
 import tickWrapper from './tickWrapper';
-/* global Gamelab */
 
 /**
  * @param {!string} testName
@@ -34,8 +33,8 @@ export function testAsyncProgramGameLab(
     },
     expected: {
       result: true,
-      testResult: TestResults.FREE_PLAY
-    }
+      testResult: TestResults.FREE_PLAY,
+    },
   };
 }
 
@@ -69,7 +68,7 @@ export function testApplabConsoleOutput({testName, source, expect, ticks = 2}) {
     },
     expected: {
       result: true,
-      testResult: TestResults.FREE_PLAY
-    }
+      testResult: TestResults.FREE_PLAY,
+    },
   };
 }

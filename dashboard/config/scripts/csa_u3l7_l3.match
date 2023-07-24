@@ -13,3 +13,5 @@ answer 'shared between all instances of a class'
 
 question 'final'
 answer 'cannot be changed'
+
+allow_multiple_attempts true

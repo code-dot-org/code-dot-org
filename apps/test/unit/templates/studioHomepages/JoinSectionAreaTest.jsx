@@ -7,7 +7,7 @@ import {shallow} from 'enzyme';
 const defaultProps = {
   initialJoinedPlSections: [],
   initialJoinedStudentSections: [],
-  isTeacher: false
+  isTeacher: false,
 };
 
 describe('JoinSectionArea', () => {

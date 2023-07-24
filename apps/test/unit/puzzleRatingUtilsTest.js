@@ -11,22 +11,22 @@ describe('Puzzle Rating Utils', function () {
     sampleRatings.push({
       script_id: 1,
       level_id: 1,
-      rating: 1
+      rating: 1,
     });
     sampleRatings.push({
       script_id: 1,
       level_id: 1,
-      rating: 0
+      rating: 0,
     });
     sampleRatings.push({
       script_id: 1,
       level_id: 2,
-      rating: 1
+      rating: 1,
     });
     sampleRatings.push({
       script_id: 1,
       level_id: 2,
-      rating: 0
+      rating: 0,
     });
   });
 

@@ -20,7 +20,7 @@ describe('ProgrammingExpressionsTable', () => {
           environmentId: 1,
           environmentTitle: 'App Lab',
           categoryName: 'UI Controls',
-          editPath: '/programming_expressions/1/edit'
+          editPath: '/programming_expressions/1/edit',
         },
         {
           id: 2,
@@ -29,7 +29,7 @@ describe('ProgrammingExpressionsTable', () => {
           environmentId: 1,
           environmentTitle: 'App Lab',
           categoryName: 'UI Controls',
-          editPath: '/programming_expressions/2/edit'
+          editPath: '/programming_expressions/2/edit',
         },
         {
           id: 3,
@@ -38,7 +38,7 @@ describe('ProgrammingExpressionsTable', () => {
           environmentId: 3,
           environmentTitle: 'Game Lab',
           categoryName: 'Sprites',
-          editPath: '/programming_expressions/3/edit'
+          editPath: '/programming_expressions/3/edit',
         },
         {
           id: 4,
@@ -46,26 +46,26 @@ describe('ProgrammingExpressionsTable', () => {
           environmentId: 2,
           environmentTitle: 'Sprite Lab',
           categoryName: 'Math',
-          editPath: '/programming_expressions/4/edit'
-        }
-      ]
+          editPath: '/programming_expressions/4/edit',
+        },
+      ],
     };
     defaultProps = {
       allProgrammingEnvironments: [
         {
           id: 1,
           name: 'applab',
-          title: 'App Lab'
+          title: 'App Lab',
         },
         {
           id: 2,
-          name: 'spritelab'
+          name: 'spritelab',
         },
         {
           id: 3,
           name: 'gamelab',
-          title: 'Game Lab'
-        }
+          title: 'Game Lab',
+        },
       ],
       allCategories: [
         {
@@ -73,24 +73,24 @@ describe('ProgrammingExpressionsTable', () => {
           environmentId: 2,
           environmentName: 'spritelab',
           key: 'math',
-          formattedName: 'Spritelab: Math'
+          formattedName: 'Spritelab: Math',
         },
         {
           id: 200,
           environmentId: 1,
           environmentName: 'applab',
           key: 'uicontrols',
-          formattedName: 'App Lab: UI Controls'
+          formattedName: 'App Lab: UI Controls',
         },
         {
           id: 300,
           environmentId: 3,
           environmentName: 'gamelab',
           key: 'sprites',
-          formattedName: 'Game Lab: Sprites'
-        }
+          formattedName: 'Game Lab: Sprites',
+        },
       ],
-      hidden: false
+      hidden: false,
     };
   });
 

@@ -3,7 +3,7 @@ import InputPrompt from './InputPrompt';
 
 export default {
   title: 'InputPrompt',
-  component: InputPrompt
+  component: InputPrompt,
 };
 
 const Template = args => (

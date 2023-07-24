@@ -24,7 +24,7 @@ class InlineHint extends React.Component {
     isBlockly: PropTypes.bool,
     isMinecraft: PropTypes.bool,
     isRtl: PropTypes.bool,
-    skinId: PropTypes.string
+    skinId: PropTypes.string,
   };
 
   componentDidMount() {
@@ -38,7 +38,7 @@ class InlineHint extends React.Component {
       {
         study: 'hint-videos',
         event: 'click',
-        data_string: this.props.video.key
+        data_string: this.props.video.key,
       },
       {includeUserId: true}
     );
@@ -78,5 +78,5 @@ export default connect(state => ({
   isMinecraft: state.pageConstants.isMinecraft,
   skinId: state.pageConstants.skinId,
   textToSpeechEnabled:
-    state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1
+    state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
 }))(Radium(InlineHint));

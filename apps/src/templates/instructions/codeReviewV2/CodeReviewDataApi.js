@@ -3,7 +3,7 @@ import javalabMsg from '@cdo/javalab/locale';
 
 export const timelineElementType = {
   review: 'review',
-  commit: 'commit'
+  commit: 'commit',
 };
 
 export default class CodeReviewDataApi {
@@ -21,15 +21,15 @@ export default class CodeReviewDataApi {
       type: 'GET',
       data: {
         scriptId: this.scriptId,
-        projectLevelId: this.projectLevelId || this.levelId
-      }
+        projectLevelId: this.projectLevelId || this.levelId,
+      },
     });
   }
 
   getInitialTimelineData = async () => {
     const [codeReviews, commits] = await Promise.all([
       this.getCodeReviews(),
-      this.getCommits()
+      this.getCommits(),
     ]);
 
     // Separates the closed reviews from the open review (if present)
@@ -58,7 +58,7 @@ export default class CodeReviewDataApi {
 
     return {
       timelineData, // Sorted closed reviews and commits
-      openReview // Single open review if present
+      openReview, // Single open review if present
     };
   };
 
@@ -68,8 +68,8 @@ export default class CodeReviewDataApi {
         url: `/code_reviews`,
         type: 'GET',
         data: {
-          channelId: this.channelId
-        }
+          channelId: this.channelId,
+        },
       })
         .done((codeReviews, _, request) => {
           this.token = request.getResponseHeader('csrf-token');
@@ -82,7 +82,7 @@ export default class CodeReviewDataApi {
   getCommits() {
     return $.ajax({
       url: `/project_commits/${this.channelId}`,
-      type: 'GET'
+      type: 'GET',
     });
   }
 
@@ -94,8 +94,8 @@ export default class CodeReviewDataApi {
             reject({
               profanityFoundError: javalabMsg.commentProfanityFound({
                 wordCount: profaneWords.length,
-                words: profaneWords.join(', ')
-              })
+                words: profaneWords.join(', '),
+              }),
             });
           } else {
             $.ajax({
@@ -104,8 +104,8 @@ export default class CodeReviewDataApi {
               headers: {'X-CSRF-Token': this.token},
               data: {
                 codeReviewId,
-                comment
-              }
+                comment,
+              },
             })
               .done(newComment => resolve(newComment))
               .fail(result => reject(result));
@@ -121,7 +121,7 @@ export default class CodeReviewDataApi {
         url: `/code_review_comments/${commentId}`,
         type: 'PATCH',
         headers: {'X-CSRF-Token': this.token},
-        data: {isResolved}
+        data: {isResolved},
       })
         .done(codeReviewComment => resolve(codeReviewComment))
         .fail(result => reject(result));
@@ -132,7 +132,7 @@ export default class CodeReviewDataApi {
     return $.ajax({
       url: `/code_review_comments/${commentId}`,
       type: 'DELETE',
-      headers: {'X-CSRF-Token': this.token}
+      headers: {'X-CSRF-Token': this.token},
     });
   }
 
@@ -143,13 +143,13 @@ export default class CodeReviewDataApi {
         type: 'PATCH',
         headers: {'X-CSRF-Token': this.token},
         data: {
-          isClosed: true
-        }
+          isClosed: true,
+        },
       })
         .done(updatedCodeReview =>
           resolve({
             ...updatedCodeReview,
-            timelineElementType: timelineElementType.review
+            timelineElementType: timelineElementType.review,
           })
         )
         .fail(result => reject(result));
@@ -167,13 +167,13 @@ export default class CodeReviewDataApi {
           scriptId: this.scriptId,
           levelId: this.levelId,
           projectLevelId: this.projectLevelId || this.levelId,
-          version: version
-        }
+          version: version,
+        },
       })
         .done(newCodeReview =>
           resolve({
             ...newCodeReview,
-            timelineElementType: timelineElementType.review
+            timelineElementType: timelineElementType.review,
           })
         )
         .fail(result => reject(result));

@@ -27,7 +27,7 @@ export class UnconnectedLevelToken extends Component {
     allowMajorCurriculumChanges: PropTypes.bool.isRequired,
 
     // from redux
-    toggleExpand: PropTypes.func
+    toggleExpand: PropTypes.func,
   };
 
   render() {
@@ -42,14 +42,14 @@ export class UnconnectedLevelToken extends Component {
             ? {
                 y: this.props.dragging ? this.props.delta : 0,
                 scale: spring(1.02, springConfig),
-                shadow: spring(5, springConfig)
+                shadow: spring(5, springConfig),
               }
             : {
                 y: this.props.dragging
                   ? spring(this.props.delta, springConfig)
                   : 0,
                 scale: 1,
-                shadow: 0
+                shadow: 0,
               }
         }
         key={scriptLevel.position}
@@ -93,7 +93,7 @@ export class LevelTokenContents extends Component {
     removeLevel: PropTypes.func.isRequired,
     activitySectionPosition: PropTypes.number.isRequired,
     activityPosition: PropTypes.number.isRequired,
-    allowMajorCurriculumChanges: PropTypes.bool.isRequired
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired,
   };
 
   handleDragStart = e => {
@@ -149,7 +149,9 @@ export class LevelTokenContents extends Component {
           boxShadow: `${color.shadow} 0 ${this.props.shadow}px ${
             this.props.shadow * 3
           }px`,
-          zIndex: this.props.draggedLevelPos ? 1000 : 500 - scriptLevel.position
+          zIndex: this.props.draggedLevelPos
+            ? 1000
+            : 500 - scriptLevel.position,
         })}
       >
         {allowMajorCurriculumChanges && (
@@ -224,7 +226,7 @@ const styles = {
     position: 'relative',
     background: '#eee',
     borderRadius: borderRadius,
-    margin: `${tokenMargin}px 0`
+    margin: `${tokenMargin}px 0`,
   },
   reorder: {
     fontSize: 16,
@@ -235,7 +237,7 @@ const styles = {
     padding: '7px 15px',
     borderTopLeftRadius: borderRadius,
     borderBottomLeftRadius: borderRadius,
-    cursor: 'ns-resize'
+    cursor: 'ns-resize',
   },
   levelTokenName: {
     padding: 7,
@@ -244,7 +246,7 @@ const styles = {
     width: '100%',
     borderTop: '1px solid #ddd',
     borderBottom: '1px solid #ddd',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   tag: {
     color: 'white',
@@ -255,7 +257,7 @@ const styles = {
     marginLeft: 5,
     marginTop: 5,
     display: 'flex',
-    flexWrap: 'nowrap'
+    flexWrap: 'nowrap',
   },
   remove: {
     fontSize: 14,
@@ -267,7 +269,7 @@ const styles = {
     padding: '7px 13px',
     borderTopRightRadius: borderRadius,
     borderBottomRightRadius: borderRadius,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   edit: {
     fontSize: 14,
@@ -277,36 +279,36 @@ const styles = {
     border: '1px solid #00adbc',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
     padding: '7px 13px',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   levelArea: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   titleAndBubble: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    flexGrow: 2
+    flexGrow: 2,
   },
   levelTitle: {
-    marginLeft: 5
+    marginLeft: 5,
   },
   levelDetailsArea: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   bubble: {
-    width: 34
-  }
+    width: 34,
+  },
 };
 
 export const LevelToken = connect(
   state => ({}),
   {
-    toggleExpand
+    toggleExpand,
   },
   null,
   {forwardRef: true}

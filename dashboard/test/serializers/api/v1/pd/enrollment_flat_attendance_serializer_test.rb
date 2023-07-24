@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::TestCase
+class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ActionController::TestCase
   freeze_time
 
   setup do
@@ -125,7 +125,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
   end
 
   test 'cdo scholarship column' do
-    workshop = create :workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    workshop = create :workshop, num_sessions: 1, sessions_from: Time.zone.today + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_CDO)
     assert_equal Pd::ScholarshipInfoConstants::YES_CDO, enrollment.scholarship_status
@@ -145,7 +145,7 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
   end
 
   test 'other scholarship column' do
-    workshop = create :workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    workshop = create :workshop, num_sessions: 1, sessions_from: Time.zone.today + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
     assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status

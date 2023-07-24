@@ -33,8 +33,8 @@ export default {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -63,8 +63,8 @@ export default {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -100,8 +100,8 @@ export default {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -138,8 +138,8 @@ export default {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -179,8 +179,8 @@ export default {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -214,8 +214,8 @@ export default {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -247,8 +247,8 @@ export default {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -274,15 +274,15 @@ export default {
           'getUserId',
           'drawChart',
           'drawChartFromRecords',
-          'getPrediction'
+          'getPrediction',
         ];
         assert.deepEqual(actualBlocks, expectedBlocks);
         Applab.onPuzzleComplete();
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

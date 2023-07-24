@@ -14,7 +14,7 @@ describe('SectionProgressToggle', () => {
       showStandardsToggle: true,
       setCurrentView: () => {},
       sectionId: 1,
-      currentView: ViewType.STANDARDS
+      currentView: ViewType.STANDARDS,
     };
   });
 

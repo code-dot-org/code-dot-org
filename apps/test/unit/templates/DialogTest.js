@@ -15,7 +15,7 @@ describe('Dialog', function () {
       const result = mount(<Dialog isOpen fullWidth />);
       expect(result.find('.modal').props().style).to.deep.equal({
         width: '90%',
-        marginLeft: '-45%'
+        marginLeft: '-45%',
       });
     });
   });

@@ -26,3 +26,4 @@ right 'ret[arr.length - i - 1][arr[0].length - j - 1]'
 wrong 'arr[arr.length - i - 1][arr[0].length - j - 1]'
 wrong 'ret[arr.length - i][arr[0].length - j]'
 wrong 'arr[arr.length - i][arr[0].length - j]'
+allow_multiple_attempts true

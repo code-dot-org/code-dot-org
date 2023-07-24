@@ -16,15 +16,15 @@ describe('ResourceList', () => {
             name: 'Student Resource',
             url: 'fake.url',
             download_url: 'download.fake.url',
-            type: 'Activity Guide'
+            type: 'Activity Guide',
           },
           {
             key: 'all-resource',
             name: 'All Resource',
             url: 'fake.url',
             download_url: 'download.fake.url',
-            type: 'Activity Guide'
-          }
+            type: 'Activity Guide',
+          },
         ]}
         pageType="teacher-lesson-plan"
       />
@@ -41,8 +41,8 @@ describe('ResourceList', () => {
             name: 'Student Resource',
             url: 'fake.url',
             download_url: 'download.fake.url',
-            type: 'Activity Guide'
-          }
+            type: 'Activity Guide',
+          },
         ]}
         pageType="teacher-lesson-plan"
       />
@@ -58,8 +58,8 @@ describe('ResourceList', () => {
             key: 'student-resource',
             name: 'Student Resource',
             url: 'fake.url',
-            type: 'Activity Guide'
-          }
+            type: 'Activity Guide',
+          },
         ]}
         pageType="teacher-lesson-plan"
       />
@@ -77,8 +77,8 @@ describe('ResourceList', () => {
             name: 'Student Resource',
             url: 'https://docs.google.com/document/d/fake/url',
             download_url: 'download.fake.url',
-            type: 'Activity Guide'
-          }
+            type: 'Activity Guide',
+          },
         ]}
         pageType="teacher-lesson-plan"
       />

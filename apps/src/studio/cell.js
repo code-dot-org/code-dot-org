@@ -66,7 +66,7 @@ Cell.prototype.serialize = function () {
     size: this.size_,
     direction: this.direction_,
     emotion: this.emotion_,
-    sprite: this.sprite_
+    sprite: this.sprite_,
   };
 };
 

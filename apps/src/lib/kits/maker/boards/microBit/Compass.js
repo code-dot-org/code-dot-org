@@ -35,8 +35,8 @@ export default class Compass extends EventEmitter {
           }
 
           return heading;
-        }
-      }
+        },
+      },
     });
   }
 

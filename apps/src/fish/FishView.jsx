@@ -13,7 +13,7 @@ class FishView extends React.Component {
   static propTypes = {
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
-    onMount: PropTypes.func.isRequired
+    onMount: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -34,7 +34,7 @@ class FishView extends React.Component {
       windowWidth,
       windowHeight,
       appWidth: this.codeAppRef.offsetWidth,
-      appHeight: this.codeAppRef.offsetHeight
+      appHeight: this.codeAppRef.offsetHeight,
     };
   }
 
@@ -48,7 +48,7 @@ class FishView extends React.Component {
       windowWidth,
       windowHeight,
       appWidth: this.codeAppRef.offsetWidth,
-      appHeight: this.codeAppRef.offsetHeight
+      appHeight: this.codeAppRef.offsetHeight,
     });
 
     const resizeThrottleWaitTime = 100;
@@ -131,7 +131,7 @@ class FishView extends React.Component {
             style={{
               ...styles.container,
               width: Math.round(containerWidth),
-              height: Math.round(containerHeight)
+              height: Math.round(containerHeight),
             }}
           >
             <div
@@ -151,7 +151,7 @@ const styles = {
   container: {
     position: 'relative',
     margin: '0 auto',
-    userSelect: 'none'
+    userSelect: 'none',
   },
   containerReact: {
     position: 'absolute',
@@ -160,23 +160,23 @@ const styles = {
     userSelect: 'none',
     fontFamily: '"Gotham 4r", arial, sans-serif',
     color: 'rgb(30,30,30)',
-    lineHeight: 1.3
+    lineHeight: 1.3,
   },
   backgroundCanvas: {
     position: 'absolute',
     left: 0,
     width: '100%',
     zIndex: -1,
-    borderRadius: '10px'
+    borderRadius: '10px',
   },
   activityCanvas: {
     width: '100%',
     borderRadius: '10px',
-    border: 'none'
-  }
+    border: 'none',
+  },
 };
 
 export default connect(state => ({
   isProjectLevel: state.pageConstants.isProjectLevel,
-  isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
+  isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
 }))(FishView);

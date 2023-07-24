@@ -15,7 +15,7 @@ describe('BorderedCallToAction', () => {
     headingText,
     descriptionText,
     buttonText,
-    buttonUrl
+    buttonUrl,
   };
 
   describe('default behavior', () => {
@@ -40,7 +40,7 @@ describe('BorderedCallToAction', () => {
     it('has a dashed border', () => {
       expect(borderedCtA.findAll('div')[0].props.style).to.contain({
         borderStyle: 'dashed',
-        borderWidth: 5
+        borderWidth: 5,
       });
     });
 
@@ -72,7 +72,7 @@ describe('BorderedCallToAction', () => {
       );
       expect(borderedCtA.findAll('div')[0].props.style).to.contain({
         borderStyle: 'solid',
-        borderWidth: 1
+        borderWidth: 1,
       });
     });
 

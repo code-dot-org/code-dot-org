@@ -292,7 +292,7 @@ NetSimLocalClientNode.prototype.makeWireRowForConnectingTo = function (
       localAddress: otherNode.getRandomAvailableClientAddress(),
       remoteAddress: otherNode.getAddress(),
       localHostname: this.getHostname(),
-      remoteHostname: otherNode.getHostname()
+      remoteHostname: otherNode.getHostname(),
     };
   }
   return NetSimLocalClientNode.superPrototype.makeWireRowForConnectingTo.call(
@@ -399,7 +399,7 @@ NetSimLocalClientNode.prototype.sendMessage = function (payload, onComplete) {
       toNodeID: remoteNodeID,
       simulatedBy: simulatingNodeID,
       payload: payload,
-      extraHopsRemaining: extraHops
+      extraHopsRemaining: extraHops,
     },
     function (err, row) {
       if (err) {

@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Overview of the steps to take.\r\n\r\n1. More specific step\r\n\r\n2. More specific step\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nalgorithm for method to write\r\n</pre>",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** What happens when either the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">binarySearch()</code> or <code style=\"background-color: #ececec; color: black; font-weight: bold;\">recursiveBinarySearch()</code> methods are applied to an unsorted list?\r\n\r\nCreate a 1D array with multiple unsorted values then call either (or both) of these methods with this list.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -16,13 +16,14 @@
     },
     "encrypted_examples": [
 
-    ]
+    ],
+    "project_template_level_name": "CSA U8L3-Binary Search PBT_2023"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-04-14T14:02:19.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-04-14T14:02:19.939+00:00\",\"changed\":[\"cloned from \\\"CSA U8L3-L3_2023\\\"\"],\"cloned_from\":\"CSA U8L3-L3_2023\"},{\"changed_at\":\"2023-04-14 14:02:21 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-14T14:02:19.939+00:00\",\"changed\":[\"cloned from \\\"CSA U8L3-L3_2023\\\"\"],\"cloned_from\":\"CSA U8L3-L3_2023\"},{\"changed_at\":\"2023-04-14 14:02:21 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-20 20:48:30 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-20 20:54:10 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-20 21:12:47 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -25,7 +25,7 @@ export default function Example({example, programmingEnvironmentName}) {
               src={embedUrl}
               style={{
                 ...styles.embeddedApp,
-                ...embeddedIdeStyles[programmingEnvironmentName]
+                ...embeddedIdeStyles[programmingEnvironmentName],
               }}
             />
             {example.image && <img src={example.image} />}
@@ -49,7 +49,7 @@ export default function Example({example, programmingEnvironmentName}) {
                 src={embedUrl}
                 style={{
                   width: '100%',
-                  height: enteredHeight * 1.5
+                  height: enteredHeight * 1.5,
                 }}
               />
             </div>
@@ -70,42 +70,42 @@ export default function Example({example, programmingEnvironmentName}) {
 
 Example.propTypes = {
   example: PropTypes.object,
-  programmingEnvironmentName: PropTypes.string
+  programmingEnvironmentName: PropTypes.string,
 };
 
 const styles = {
   example: {
     display: 'flex',
-    gap: 20
+    gap: 20,
   },
   embeddedApp: {
     border: 0,
-    transformOrigin: '0 0'
-  }
+    transformOrigin: '0 0',
+  },
 };
 
 const embeddedIdeStyles = {
   applab: {
     width: 375,
     height: 620,
-    transform: 'scale(0.7)'
+    transform: 'scale(0.7)',
   },
   gamelab: {
     width: 450,
     height: 781,
-    transform: 'scale(0.5)'
-  }
+    transform: 'scale(0.5)',
+  },
 };
 
 const embeddedIdeContainerStyles = {
   applab: {
     width: '280px',
     height: '450px',
-    paddingTop: '10px'
+    paddingTop: '10px',
   },
   gamelab: {
     width: '240px',
     height: '400px',
-    paddingTop: '20px'
-  }
+    paddingTop: '20px',
+  },
 };

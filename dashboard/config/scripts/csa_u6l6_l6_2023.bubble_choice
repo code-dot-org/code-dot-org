@@ -1,6 +1,6 @@
 name 'CSA U6L6-L6_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: The compareTo() Method'
+description 'Practice using the `compareTo()` method in the `String` class.'
 
 sublevels
 level 'CSA U6L6-L6a_2023'

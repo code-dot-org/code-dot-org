@@ -32,12 +32,12 @@ const RANDOM_VALUE = 'RAND';
 
 const TURN_BY_DIRECTION_VALUES = [
   [msg.turnRight(), 'turnRight'],
-  [msg.turnLeft(), 'turnLeft']
+  [msg.turnLeft(), 'turnLeft'],
 ];
 
 const TURN_DIRECTION_VALUES = [
   [msg.right(), 'turnRight'],
-  [msg.left(), 'turnLeft']
+  [msg.left(), 'turnLeft'],
 ];
 
 const POSITION_VALUES = [
@@ -50,27 +50,27 @@ const POSITION_VALUES = [
   [commonMsg.middleRight(), Position.MIDDLERIGHT.toString()],
   [commonMsg.bottomLeft(), Position.BOTTOMLEFT.toString()],
   [commonMsg.bottomCenter(), Position.BOTTOMCENTER.toString()],
-  [commonMsg.bottomRight(), Position.BOTTOMRIGHT.toString()]
+  [commonMsg.bottomRight(), Position.BOTTOMRIGHT.toString()],
 ];
 
 const JUMP_BY_DIRECTION_VALUES = [
   [msg.jumpForward(), 'jumpForward'],
-  [msg.jumpBackward(), 'jumpBackward']
+  [msg.jumpBackward(), 'jumpBackward'],
 ];
 
 const JUMP_DIRECTION_VALUES = [
   [msg.forward(), 'jumpForward'],
-  [msg.backward(), 'jumpBackward']
+  [msg.backward(), 'jumpBackward'],
 ];
 
 const MOVE_BY_DIRECTION_VALUES = [
   [msg.moveForward(), 'moveForward'],
-  [msg.moveBackward(), 'moveBackward']
+  [msg.moveBackward(), 'moveBackward'],
 ];
 
 const DIRECTION_VALUES = [
   [msg.forward(), 'moveForward'],
-  [msg.backward(), 'moveBackward']
+  [msg.backward(), 'moveBackward'],
 ];
 
 // Install extensions to Blockly's language and JavaScript generator.
@@ -96,7 +96,7 @@ exports.install = function (blockly, blockInstallOptions) {
       Colours.FROZEN6,
       Colours.FROZEN7,
       Colours.FROZEN8,
-      Colours.FROZEN9
+      Colours.FROZEN9,
     ];
     blockly.FieldColour.COLUMNS = 3;
   } else {
@@ -116,7 +116,7 @@ exports.install = function (blockly, blockInstallOptions) {
       Colours.GREEN,
       Colours.BLUE,
       Colours.AQUAMARINE,
-      Colours.PLUM
+      Colours.PLUM,
     ];
     blockly.FieldColour.COLUMNS = 4;
   }
@@ -144,7 +144,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.moveForwardTooltip());
-    }
+    },
   };
 
   blockly.Blocks.draw_move_by_constant_dropdown = {
@@ -163,7 +163,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.moveForwardTooltip());
-    }
+    },
   };
 
   generator.draw_move_by_constant = function () {
@@ -195,7 +195,7 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendField(
           new blockly.FieldAngleDropdown({
             directionTitleName: 'DIR',
-            menuGenerator: this.VALUE
+            menuGenerator: this.VALUE,
           }),
           'VALUE'
         )
@@ -204,11 +204,11 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.turnTooltip());
-    }
+    },
   };
 
   blockly.Blocks.draw_turn_by_constant_restricted.VALUE = [
-    30, 45, 60, 90, 120, 135, 150, 180
+    30, 45, 60, 90, 120, 135, 150, 180,
   ].map(function (t) {
     return [String(t), String(t)];
   });
@@ -240,7 +240,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput()
         .appendField(
           new blockly.FieldAngleTextInput('90', {
-            directionTitle: 'DIR'
+            directionTitle: 'DIR',
           }),
           'VALUE'
         )
@@ -249,7 +249,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.turnTooltip());
-    }
+    },
   };
 
   blockly.Blocks.draw_turn_by_constant_dropdown = {
@@ -264,7 +264,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput()
         .appendField(
           new blockly.FieldAngleDropdown({
-            directionTitleName: 'DIR'
+            directionTitleName: 'DIR',
           }),
           'VALUE'
         )
@@ -273,7 +273,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.turnTooltip());
-    }
+    },
   };
 
   generator.draw_turn_by_constant = function () {
@@ -319,7 +319,7 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendField(
           new blockly.FieldAngleDropdown({
             directionTitleName: 'DIR',
-            menuGenerator: this.VALUE
+            menuGenerator: this.VALUE,
           }),
           'VALUE'
         )
@@ -328,11 +328,11 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.turnTooltip());
-    }
+    },
   };
 
   blockly.Blocks.draw_turn_inline_restricted.VALUE = [
-    30, 45, 60, 90, 120, 135, 150, 180
+    30, 45, 60, 90, 120, 135, 150, 180,
   ].map(function (t) {
     return [String(t), String(t)];
   });
@@ -364,7 +364,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendDummyInput()
         .appendField(
           new blockly.FieldAngleTextInput('90', {
-            directionTitle: 'DIR'
+            directionTitle: 'DIR',
           }),
           'VALUE'
         )
@@ -373,7 +373,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.turnTooltip());
-    }
+    },
   };
 
   function createPointToBlocks(onInit) {
@@ -389,7 +389,7 @@ exports.install = function (blockly, blockInstallOptions) {
         if (onInit) {
           onInit(this);
         }
-      }
+      },
     };
   }
 
@@ -399,7 +399,7 @@ exports.install = function (blockly, blockInstallOptions) {
       .appendDummyInput()
       .appendField(
         new blockly.FieldAngleTextInput('0', {
-          direction: 'turnRight'
+          direction: 'turnRight',
         }),
         'DIRECTION'
       )
@@ -418,7 +418,7 @@ exports.install = function (blockly, blockInstallOptions) {
       .setCheck(blockly.BlockValueType.NUMBER)
       .addFieldHelper(blockly.BlockFieldHelper.ANGLE_HELPER, {
         block,
-        direction: 'turnRight'
+        direction: 'turnRight',
       });
     block.appendDummyInput().appendField(msg.degrees());
   });
@@ -439,7 +439,7 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendField(
           new blockly.FieldAngleDropdown({
             direction: 'turnRight',
-            menuGenerator: block.VALUE
+            menuGenerator: block.VALUE,
           }),
           'VALUE'
         )
@@ -448,7 +448,7 @@ exports.install = function (blockly, blockInstallOptions) {
   );
 
   blockly.Blocks.point_to_by_constant_restricted.VALUE = [
-    0, 30, 45, 60, 90, 120, 135, 150, 180
+    0, 30, 45, 60, 90, 120, 135, 150, 180,
   ].map(function (t) {
     return [String(t), String(t)];
   });
@@ -484,7 +484,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
-    getVars: Blockly.Variables.getVars
+    getVars: Blockly.Variables.getVars,
   };
 
   generator.variables_get_counter = generator.variables_get;
@@ -501,7 +501,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
-    getVars: Blockly.Variables.getVars
+    getVars: Blockly.Variables.getVars,
   };
 
   generator.variables_get_length = generator.variables_get;
@@ -518,7 +518,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
-    getVars: Blockly.Variables.getVars
+    getVars: Blockly.Variables.getVars,
   };
 
   generator.variables_get_sides = generator.variables_get;
@@ -538,7 +538,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setNextStatement(true);
       this.setInputsInline(true);
       this.setTooltip('');
-    }
+    },
   };
 
   generator.draw_a_square = function () {
@@ -553,7 +553,7 @@ exports.install = function (blockly, blockInstallOptions) {
       'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 4; ' + loopVar + '++) {',
       '  Turtle.moveForward(' + value_length + ');',
       '  Turtle.turnRight(90);',
-      '}\n'
+      '}\n',
     ].join('\n');
   };
 
@@ -571,7 +571,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip('');
-    }
+    },
   };
 
   generator.draw_a_snowman = function () {
@@ -627,7 +627,7 @@ exports.install = function (blockly, blockInstallOptions) {
       '    Turtle.turnLeft(180);',
       '  }',
       '}',
-      'Turtle.turnLeft(90);\n'
+      'Turtle.turnLeft(90);\n',
     ].join('\n');
   };
 
@@ -674,7 +674,7 @@ exports.install = function (blockly, blockInstallOptions) {
     domToMutation: function (xmlElement) {
       var counter = xmlElement.getAttribute('counter');
       this.setTitleValue(counter, 'VAR');
-    }
+    },
   };
 
   generator.controls_for_counter = generator.controls_for;
@@ -705,7 +705,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.moveTooltip());
-    }
+    },
   };
 
   generator.draw_move = function () {
@@ -743,7 +743,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.jumpTooltip());
-    }
+    },
   };
 
   var longMoveLengthDropdownValue = 'LONG_MOVE_LENGTH';
@@ -754,15 +754,15 @@ exports.install = function (blockly, blockInstallOptions) {
   var defaultDiagonalMoveLength = defaultMoveLength * Math.sqrt(2);
   var simpleLengthChoices = [
     [skin.longLineDraw, longMoveLengthDropdownValue],
-    [skin.shortLineDraw, shortMoveLengthDropdownValue]
+    [skin.shortLineDraw, shortMoveLengthDropdownValue],
   ];
   var simpleDiagonalLengthChoices = [
     [skin.longLineDraw, longDiagonalMoveLengthDropdownValue],
-    [skin.shortLineDraw, shortDiagonalMoveLengthDropdownValue]
+    [skin.shortLineDraw, shortDiagonalMoveLengthDropdownValue],
   ];
   var simpleLengthRightChoices = [
     [skin.longLineDrawRight, longMoveLengthDropdownValue],
-    [skin.shortLineDrawRight, shortMoveLengthDropdownValue]
+    [skin.shortLineDrawRight, shortMoveLengthDropdownValue],
   ];
 
   var SimpleMove = {
@@ -779,7 +779,7 @@ exports.install = function (blockly, blockInstallOptions) {
         imageDimensions: {width: 72, height: 56},
         lengths: simpleLengthChoices,
         defaultLength: defaultMoveLength,
-        defaultDropdownValue: longMoveLengthDropdownValue
+        defaultDropdownValue: longMoveLengthDropdownValue,
       },
       right: {
         title: commonMsg.directionEastLetter(),
@@ -789,7 +789,7 @@ exports.install = function (blockly, blockInstallOptions) {
         imageDimensions: {width: 72, height: 56},
         lengths: simpleLengthRightChoices,
         defaultLength: defaultMoveLength,
-        defaultDropdownValue: longMoveLengthDropdownValue
+        defaultDropdownValue: longMoveLengthDropdownValue,
       },
       up: {
         title: commonMsg.directionNorthLetter(),
@@ -799,7 +799,7 @@ exports.install = function (blockly, blockInstallOptions) {
         imageDimensions: {width: 72, height: 56},
         lengths: simpleLengthChoices,
         defaultLength: defaultMoveLength,
-        defaultDropdownValue: longMoveLengthDropdownValue
+        defaultDropdownValue: longMoveLengthDropdownValue,
       },
       down: {
         title: commonMsg.directionSouthLetter(),
@@ -809,7 +809,7 @@ exports.install = function (blockly, blockInstallOptions) {
         imageDimensions: {width: 72, height: 56},
         lengths: simpleLengthChoices,
         defaultLength: defaultMoveLength,
-        defaultDropdownValue: longMoveLengthDropdownValue
+        defaultDropdownValue: longMoveLengthDropdownValue,
       },
       up_left: {
         title: commonMsg.directionNorthwestLetter(),
@@ -819,7 +819,7 @@ exports.install = function (blockly, blockInstallOptions) {
         imageDimensions: {width: 72, height: 56},
         lengths: simpleDiagonalLengthChoices,
         defaultLength: defaultDiagonalMoveLength,
-        defaultDropdownValue: longDiagonalMoveLengthDropdownValue
+        defaultDropdownValue: longDiagonalMoveLengthDropdownValue,
       },
       up_right: {
         title: commonMsg.directionNortheastLetter(),
@@ -829,7 +829,7 @@ exports.install = function (blockly, blockInstallOptions) {
         imageDimensions: {width: 72, height: 56},
         lengths: simpleDiagonalLengthChoices,
         defaultLength: defaultDiagonalMoveLength,
-        defaultDropdownValue: longDiagonalMoveLengthDropdownValue
+        defaultDropdownValue: longDiagonalMoveLengthDropdownValue,
       },
       down_left: {
         title: commonMsg.directionSouthwestLetter(),
@@ -839,7 +839,7 @@ exports.install = function (blockly, blockInstallOptions) {
         imageDimensions: {width: 72, height: 56},
         lengths: simpleDiagonalLengthChoices,
         defaultLength: defaultDiagonalMoveLength,
-        defaultDropdownValue: longDiagonalMoveLengthDropdownValue
+        defaultDropdownValue: longDiagonalMoveLengthDropdownValue,
       },
       down_right: {
         title: commonMsg.directionSoutheastLetter(),
@@ -849,7 +849,7 @@ exports.install = function (blockly, blockInstallOptions) {
         imageDimensions: {width: 72, height: 56},
         lengths: simpleDiagonalLengthChoices,
         defaultLength: defaultDiagonalMoveLength,
-        defaultDropdownValue: longDiagonalMoveLengthDropdownValue
+        defaultDropdownValue: longDiagonalMoveLengthDropdownValue,
       },
       jump_left: {
         isJump: true,
@@ -857,7 +857,7 @@ exports.install = function (blockly, blockInstallOptions) {
         moveFunction: 'jumpLeft',
         image: skin.leftJumpArrow,
         tooltip: msg.jumpWestTooltip(),
-        defaultLength: defaultMoveLength
+        defaultLength: defaultMoveLength,
       },
       jump_right: {
         isJump: true,
@@ -865,7 +865,7 @@ exports.install = function (blockly, blockInstallOptions) {
         moveFunction: 'jumpRight',
         image: skin.rightJumpArrow,
         tooltip: msg.jumpEastTooltip(),
-        defaultLength: defaultMoveLength
+        defaultLength: defaultMoveLength,
       },
       jump_up: {
         isJump: true,
@@ -873,7 +873,7 @@ exports.install = function (blockly, blockInstallOptions) {
         moveFunction: 'jumpUp',
         image: skin.upJumpArrow,
         tooltip: msg.jumpNorthTooltip(),
-        defaultLength: defaultMoveLength
+        defaultLength: defaultMoveLength,
       },
       jump_down: {
         isJump: true,
@@ -881,7 +881,7 @@ exports.install = function (blockly, blockInstallOptions) {
         moveFunction: 'jumpDown',
         image: skin.downJumpArrow,
         tooltip: msg.jumpSouthTooltip(),
-        defaultLength: defaultMoveLength
+        defaultLength: defaultMoveLength,
       },
       jump_up_left: {
         isJump: true,
@@ -889,7 +889,7 @@ exports.install = function (blockly, blockInstallOptions) {
         moveFunction: 'jumpUpLeft',
         image: skin.upLeftJumpArrow,
         tooltip: msg.jumpNorthwestTooltip(),
-        defaultLength: defaultDiagonalMoveLength
+        defaultLength: defaultDiagonalMoveLength,
       },
       jump_up_right: {
         isJump: true,
@@ -897,7 +897,7 @@ exports.install = function (blockly, blockInstallOptions) {
         moveFunction: 'jumpUpRight',
         image: skin.upRightJumpArrow,
         tooltip: msg.jumpNortheastTooltip(),
-        defaultLength: defaultDiagonalMoveLength
+        defaultLength: defaultDiagonalMoveLength,
       },
       jump_down_left: {
         isJump: true,
@@ -905,7 +905,7 @@ exports.install = function (blockly, blockInstallOptions) {
         moveFunction: 'jumpDownLeft',
         image: skin.downLeftJumpArrow,
         tooltip: msg.jumpSouthwestTooltip(),
-        defaultLength: defaultDiagonalMoveLength
+        defaultLength: defaultDiagonalMoveLength,
       },
       jump_down_right: {
         isJump: true,
@@ -913,8 +913,8 @@ exports.install = function (blockly, blockInstallOptions) {
         moveFunction: 'jumpDownRight',
         image: skin.downRightJumpArrow,
         tooltip: msg.jumpSoutheastTooltip(),
-        defaultLength: defaultDiagonalMoveLength
-      }
+        defaultLength: defaultDiagonalMoveLength,
+      },
     },
     generateBlocksForAllDirections: function () {
       SimpleMove.generateBlocksForDirection('up');
@@ -955,7 +955,7 @@ exports.install = function (blockly, blockInstallOptions) {
           }
           input.appendField(
             new blockly.FieldLabel(directionConfig.title, {
-              fixedSize: {width: directionLetterWidth, height: 18}
+              fixedSize: {width: directionLetterWidth, height: 18},
             })
           );
 
@@ -980,7 +980,7 @@ exports.install = function (blockly, blockInstallOptions) {
             dropdown.setValue(directionConfig.defaultDropdownValue);
             input.appendField(dropdown, 'length');
           }
-        }
+        },
       };
     },
     generateCodeGenerator: function (direction, hasLengthInput) {
@@ -1002,7 +1002,7 @@ exports.install = function (blockly, blockInstallOptions) {
           "');\n"
         );
       };
-    }
+    },
   };
 
   SimpleMove.generateBlocksForAllDirections();
@@ -1045,7 +1045,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.jumpTooltip());
-    }
+    },
   };
 
   blockly.Blocks.jump_by_constant_dropdown = {
@@ -1065,7 +1065,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.jumpTooltip());
-    }
+    },
   };
 
   generator.jump_by_constant = function () {
@@ -1102,7 +1102,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.jumpTooltip());
-    }
+    },
   };
 
   blockly.Blocks.jump_to.VALUES = POSITION_VALUES;
@@ -1149,7 +1149,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.jumpTooltip());
-    }
+    },
   };
 
   generator.jump_to_xy = function () {
@@ -1176,7 +1176,7 @@ exports.install = function (blockly, blockInstallOptions) {
             blockly.BlockFieldHelper.ANGLE_HELPER,
             {
               block: this,
-              directionTitle: 'DIR'
+              directionTitle: 'DIR',
             }
           );
         },
@@ -1186,7 +1186,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.turnTooltip());
-    }
+    },
   };
 
   generator.draw_turn = function () {
@@ -1217,7 +1217,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.widthTooltip());
-    }
+    },
   };
 
   generator.draw_width = function () {
@@ -1242,7 +1242,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.widthTooltip());
-    }
+    },
   };
 
   generator.draw_width_inline = function () {
@@ -1263,12 +1263,12 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.penTooltip());
-    }
+    },
   };
 
   blockly.Blocks.draw_pen.STATE = [
     [msg.penUp(), 'penUp'],
-    [msg.penDown(), 'penDown']
+    [msg.penDown(), 'penDown'],
   ];
 
   generator.draw_pen = function () {
@@ -1289,7 +1289,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.colourTooltip());
-    }
+    },
   };
 
   blockly.Blocks.alpha = {
@@ -1305,7 +1305,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setNextStatement(true, null);
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.setTooltip('');
-    }
+    },
   };
 
   generator.alpha = function () {
@@ -1337,7 +1337,7 @@ exports.install = function (blockly, blockInstallOptions) {
         Colours.GREEN,
         Colours.BLUE,
         Colours.AQUAMARINE,
-        Colours.PLUM
+        Colours.PLUM,
       ];
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       var colourField = new Blockly.FieldColourDropdown(colours, 45, 35);
@@ -1347,7 +1347,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.colourTooltip());
-    }
+    },
   };
 
   generator.draw_colour_simple = function () {
@@ -1370,7 +1370,7 @@ exports.install = function (blockly, blockInstallOptions) {
           'VALUE'
         );
       this.setTooltip(msg.setPattern());
-    }
+    },
   };
 
   generator.draw_line_style_pattern = function () {
@@ -1392,7 +1392,7 @@ exports.install = function (blockly, blockInstallOptions) {
         'VISIBILITY'
       );
       this.setTooltip(msg.turtleVisibilityTooltip());
-    }
+    },
   };
 
   generator.up_big = function () {
@@ -1415,12 +1415,12 @@ exports.install = function (blockly, blockInstallOptions) {
         'VISIBILITY'
       );
       this.setTooltip(msg.turtleVisibilityTooltip());
-    }
+    },
   };
 
   blockly.Blocks.turtle_visibility.STATE = [
     [msg.hideTurtle(), 'hideTurtle'],
-    [msg.showTurtle(), 'showTurtle']
+    [msg.showTurtle(), 'showTurtle'],
   ];
 
   generator.turtle_visibility = function () {
@@ -1457,7 +1457,7 @@ exports.install = function (blockly, blockInstallOptions) {
         input.appendField(dropdown, 'VALUE');
 
         appendToDrawStickerBlock(blockName, this);
-      }
+      },
     };
   }
 
@@ -1551,7 +1551,7 @@ exports.install = function (blockly, blockInstallOptions) {
         input.appendField(dropdown, 'VALUE');
 
         appendToDrawShapeBlock(blockName, this);
-      }
+      },
     };
   }
 
@@ -1636,9 +1636,9 @@ exports.install = function (blockly, blockInstallOptions) {
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       var values = (skin.artistOptions || ['default']).map(artist => [
         msg.setCharacter({
-          character: artist.charAt(0).toUpperCase() + artist.slice(1)
+          character: artist.charAt(0).toUpperCase() + artist.slice(1),
         }),
-        artist
+        artist,
       ]);
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(values),
@@ -1646,7 +1646,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator.turtle_setArtist = function () {

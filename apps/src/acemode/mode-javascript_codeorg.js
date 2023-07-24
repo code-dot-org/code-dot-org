@@ -1,4 +1,3 @@
-/* global ace */
 import {getAllAvailableDropletBlocks} from '../dropletUtils';
 var annotationList = require('./annotationList');
 
@@ -30,7 +29,7 @@ exports.defineForAce = function (
       'ace/mode/folding/cstyle',
       'ace/config',
       'ace/lib/net',
-      'ace/ext/searchbox'
+      'ace/ext/searchbox',
     ],
     function (acerequire, exports, module) {
       var oop = acerequire('ace/lib/oop');
@@ -81,7 +80,7 @@ exports.defineForAce = function (
             undef: true,
             maxerr: 1000,
             predef: {},
-            exported: {}
+            exported: {},
           };
           // Mark all of our blocks as predefined so that linter doesnt complain about
           // using undefined variables. Only mark blocks that appear to be global functions

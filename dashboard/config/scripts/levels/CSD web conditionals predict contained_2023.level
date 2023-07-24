@@ -1,7 +1,12 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2022-09-19T22:57:34.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "properties": {
-    "long_instructions": "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png\" style=\"float:right;width:100px\">\r\n\r\n# If Statement\r\n\r\nBoolean expressions allow us to ask questions, but in order to use those questions to change the program's behavior, we need an [`if () `(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) statement.\r\n\r\n# Do This\r\n\r\n1) Read the code for this race car program.\r\n2) What will the program do when the car reaches the finish line?\r\n3) Why is the [`if () `(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) block inside the draw loop?\r\n",
+    "long_instructions": "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png\" style=\"float:right;width:100px\">\r\n\r\n# If Statement\r\n\r\nBoolean expressions allow us to ask questions, but in order to use those questions to change the program's behavior, we need an [`if () `(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) statement.\r\n\r\n# Do This\r\n\r\n1) Read the code for this race car program.\r\n2) What will the program do when the car crosses the finish line?\r\n3) Why is the [`if () `(#64B5F6)](/docs/ide/gamelab/expressions/ifBlock) block inside the draw loop?\r\n",
     "instructions_important": "false",
     "submittable": "false",
     "allow_user_uploads": "false",
@@ -14,13 +19,8 @@
     "optional": "false",
     "allow_multiple_attempts": "false"
   },
-  "level_num": "custom",
-  "game_id": 52,
-  "created_at": "2022-09-19T22:57:34.000Z",
-  "user_id": 106,
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:34.886+00:00\",\"changed\":[\"cloned from \\\"CSD web conditionals predict contained_2022\\\"\"],\"cloned_from\":\"CSD web conditionals predict contained_2022\"},{\"changed_at\":\"2023-01-13 19:26:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:34.886+00:00\",\"changed\":[\"cloned from \\\"CSD web conditionals predict contained_2022\\\"\"],\"cloned_from\":\"CSD web conditionals predict contained_2022\"},{\"changed_at\":\"2023-01-13 19:26:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 22:31:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

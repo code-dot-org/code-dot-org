@@ -51,10 +51,10 @@ describe('GameLabP5', function () {
           left: 0,
           top: 0,
           width: 400,
-          height: 400
+          height: 400,
         }),
         offsetWidth: 400,
-        offsetHeight: 400
+        offsetHeight: 400,
       };
       p5Wrapper.p5._curElement.elt = fakePlaySpaceElement;
     });
@@ -75,7 +75,7 @@ describe('GameLabP5', function () {
       p5Wrapper.p5._onmousemove({
         type: 'mousemove',
         clientX: 200,
-        clientY: 210
+        clientY: 210,
       });
 
       // Simulate advancing a few frames to get past first-frame weirdness around
@@ -92,7 +92,7 @@ describe('GameLabP5', function () {
       p5Wrapper.p5._onmousemove({
         type: 'mousemove',
         clientX: 201,
-        clientY: 211
+        clientY: 211,
       });
 
       // Advance a frame to pick up the new values
@@ -135,22 +135,22 @@ describe('GameLabP5', function () {
       assert.containSubset(p5Wrapper.p5.leftEdge, {
         position: {x: -50, y: 200},
         width: 100,
-        height: 400
+        height: 400,
       });
       assert.containSubset(p5Wrapper.p5.rightEdge, {
         position: {x: 450, y: 200},
         width: 100,
-        height: 400
+        height: 400,
       });
       assert.containSubset(p5Wrapper.p5.bottomEdge, {
         position: {x: 200, y: 450},
         width: 400,
-        height: 100
+        height: 100,
       });
       assert.containSubset(p5Wrapper.p5.topEdge, {
         position: {x: 200, y: -50},
         width: 400,
-        height: 100
+        height: 100,
       });
     });
   });

@@ -9,7 +9,7 @@ export default onClickOutside(
       options: PropTypes.arrayOf(PropTypes.string).isRequired,
       onOptionClicked: PropTypes.func.isRequired,
       onOptionHovered: PropTypes.func.isRequired,
-      onClickOutside: PropTypes.func.isRequired
+      onClickOutside: PropTypes.func.isRequired,
     };
 
     // Called by react-onclickoutside wrapper.
@@ -40,7 +40,7 @@ export default onClickOutside(
                 onMouseOver={() => this.props.onOptionHovered(index)}
                 style={{
                   ...styles.autocompleteOption,
-                  ...(isSelected ? styles.selectedStyle : {})
+                  ...(isSelected ? styles.selectedStyle : {}),
                 }}
               >
                 {option}
@@ -65,15 +65,15 @@ const styles = {
     border: '1px gray solid',
     padding: 0,
     marginTop: -2,
-    marginLeft: -1
+    marginLeft: -1,
   },
   autocompleteOption: {
     cursor: 'pointer',
     margin: 0,
-    padding: 4
+    padding: 4,
   },
   selectedStyle: {
     backgroundColor: '#cad6fa',
-    color: 'black'
-  }
+    color: 'black',
+  },
 };

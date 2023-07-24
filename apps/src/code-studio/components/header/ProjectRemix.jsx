@@ -1,22 +1,30 @@
-/* globals dashboard, appOptions */
-
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import * as utils from '../../../utils';
 import {refreshProjectName} from '../../projectRedux';
-import {styles} from './EditableProjectName';
+import styles from './project-header.module.scss';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import classNames from 'classnames';
 
 class ProjectRemix extends React.Component {
   static propTypes = {
     isSignedIn: PropTypes.bool,
     lightStyle: PropTypes.bool,
     refreshProjectName: PropTypes.func.isRequired,
-    inRestrictedShareMode: PropTypes.bool
+    inRestrictedShareMode: PropTypes.bool,
   };
 
   remixProject = () => {
+    if (Lab2Registry.hasEnabledProjects()) {
+      this.remixLab2Project();
+    } else {
+      this.remixLegacyProject();
+    }
+  };
+
+  remixLegacyProject = () => {
     if (
       dashboard.project.getCurrentId() &&
       dashboard.project.canServerSideRemix()
@@ -42,6 +50,15 @@ class ProjectRemix extends React.Component {
     }
   };
 
+  remixLab2Project = () => {
+    const projectManager = Lab2Registry.getInstance().getProjectManager();
+    if (projectManager) {
+      projectManager.flushSave().then(() => {
+        projectManager.redirectToRemix();
+      });
+    }
+  };
+
   render() {
     const {lightStyle, inRestrictedShareMode} = this.props;
     let className = 'project_remix header_button no-mc';
@@ -51,9 +68,8 @@ class ProjectRemix extends React.Component {
     return !inRestrictedShareMode ? (
       <button
         type="button"
-        className={className}
+        className={classNames(styles.buttonSpacing, className)}
         onClick={this.remixProject}
-        style={styles.buttonSpacing}
       >
         {i18n.remix()}
       </button>
@@ -65,7 +81,7 @@ export const UnconnectedProjectRemix = ProjectRemix;
 export default connect(
   state => ({
     isSignedIn: state.pageConstants && state.pageConstants.isSignedIn,
-    inRestrictedShareMode: state.project && state.project.inRestrictedShareMode
+    inRestrictedShareMode: state.project && state.project.inRestrictedShareMode,
   }),
   {refreshProjectName}
 )(ProjectRemix);

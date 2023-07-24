@@ -19,7 +19,7 @@ describe('ChangeEmailModal', () => {
     handleSubmit: () => {},
     handleCancel: () => {},
     userType: 'student',
-    isPasswordRequired: true
+    isPasswordRequired: true,
   };
 
   // Helpers for selecting particular elements/components
@@ -80,8 +80,8 @@ describe('ChangeEmailModal', () => {
             values: {
               newEmail: '',
               currentPassword: 'fake-password',
-              emailOptIn: 'yes'
-            }
+              emailOptIn: 'yes',
+            },
           });
 
           expect(wrapper.text()).to.include(
@@ -94,8 +94,8 @@ describe('ChangeEmailModal', () => {
             values: {
               newEmail: 'invalidEmail@nowhere',
               currentPassword: 'fake-password',
-              emailOptIn: 'yes'
-            }
+              emailOptIn: 'yes',
+            },
           });
 
           expect(wrapper.text()).to.include(
@@ -111,8 +111,8 @@ describe('ChangeEmailModal', () => {
             values: {
               newEmail: email,
               currentPassword: 'fake-password',
-              emailOptIn: 'yes'
-            }
+              emailOptIn: 'yes',
+            },
           });
 
           expect(wrapper.text()).to.include(
@@ -126,11 +126,11 @@ describe('ChangeEmailModal', () => {
             values: {
               newEmail: 'new@example.com',
               currentPassword: 'fake-password',
-              emailOptIn: 'yes'
+              emailOptIn: 'yes',
             },
             serverErrors: {
-              newEmail: serverError
-            }
+              newEmail: serverError,
+            },
           });
 
           expect(wrapper.text()).to.include(serverError);
@@ -141,8 +141,8 @@ describe('ChangeEmailModal', () => {
             values: {
               newEmail: 'new@example.com',
               currentPassword: '',
-              emailOptIn: 'yes'
-            }
+              emailOptIn: 'yes',
+            },
           });
 
           expect(wrapper.text()).to.include(
@@ -158,8 +158,8 @@ describe('ChangeEmailModal', () => {
             values: {
               newEmail: 'new@example.com',
               currentPassword: '',
-              emailOptIn: 'yes'
-            }
+              emailOptIn: 'yes',
+            },
           });
 
           expect(wrapper.text()).not.to.include(
@@ -173,11 +173,11 @@ describe('ChangeEmailModal', () => {
             values: {
               newEmail: 'new@example.com',
               currentPassword: 'fake-password',
-              emailOptIn: 'yes'
+              emailOptIn: 'yes',
             },
             serverErrors: {
-              currentPassword: serverError
-            }
+              currentPassword: serverError,
+            },
           });
 
           expect(wrapper.text()).to.include(serverError);
@@ -189,8 +189,8 @@ describe('ChangeEmailModal', () => {
               values: {
                 newEmail: 'new@example.com',
                 currentPassword: 'fake-password',
-                emailOptIn: ''
-              }
+                emailOptIn: '',
+              },
             });
 
             expect(wrapper.text()).to.include(
@@ -204,11 +204,11 @@ describe('ChangeEmailModal', () => {
               values: {
                 newEmail: 'new@example.com',
                 currentPassword: 'fake-password',
-                emailOptIn: 'yes'
+                emailOptIn: 'yes',
               },
               serverErrors: {
-                emailOptIn: serverError
-              }
+                emailOptIn: serverError,
+              },
             });
 
             expect(wrapper.text()).to.include(serverError);
@@ -220,8 +220,8 @@ describe('ChangeEmailModal', () => {
             values: {
               newEmail: '',
               currentPassword: '',
-              emailOptIn: ''
-            }
+              emailOptIn: '',
+            },
           });
 
           expect(submitButton(wrapper)).to.have.prop('disabled', true);
@@ -232,8 +232,8 @@ describe('ChangeEmailModal', () => {
             values: {
               newEmail: 'me@example.com',
               currentPassword: 'fakepassword',
-              emailOptIn: 'yes'
-            }
+              emailOptIn: 'yes',
+            },
           });
 
           expect(submitButton(wrapper)).to.have.prop('disabled', false);
@@ -244,14 +244,14 @@ describe('ChangeEmailModal', () => {
         it('on email', () => {
           wrapper.setState({
             serverErrors: {
-              newEmail: 'test-server-error'
-            }
+              newEmail: 'test-server-error',
+            },
           });
           expect(wrapper.state().serverErrors.newEmail).to.equal(
             'test-server-error'
           );
           emailInput(wrapper).simulate('change', {
-            target: {value: 'me@example.com'}
+            target: {value: 'me@example.com'},
           });
           expect(wrapper.state().serverErrors.newEmail).to.be.undefined;
         });
@@ -259,14 +259,14 @@ describe('ChangeEmailModal', () => {
         it('on password', () => {
           wrapper.setState({
             serverErrors: {
-              currentPassword: 'test-server-error'
-            }
+              currentPassword: 'test-server-error',
+            },
           });
           expect(wrapper.state().serverErrors.currentPassword).to.equal(
             'test-server-error'
           );
           passwordInput(wrapper).simulate('change', {
-            target: {value: 'fakepassword'}
+            target: {value: 'fakepassword'},
           });
           expect(wrapper.state().serverErrors.currentPassword).to.be.undefined;
         });
@@ -275,8 +275,8 @@ describe('ChangeEmailModal', () => {
           it('on emailOptIn', () => {
             wrapper.setState({
               serverErrors: {
-                emailOptIn: 'test-server-error'
-              }
+                emailOptIn: 'test-server-error',
+              },
             });
             expect(wrapper.state().serverErrors.emailOptIn).to.equal(
               'test-server-error'
@@ -299,20 +299,20 @@ describe('ChangeEmailModal', () => {
           expect(wrapper.state().serverErrors).to.deep.equal({
             newEmail: '',
             currentPassword: '',
-            emailOptIn: ''
+            emailOptIn: '',
           });
           wrapper.instance().onSubmitFailure({
             serverErrors: {
               newEmail: 'test-email-server-error',
               currentPassword: 'test-password-server-error',
-              emailOptIn: 'test-email-opt-in-server-error'
-            }
+              emailOptIn: 'test-email-opt-in-server-error',
+            },
           });
           expect(wrapper.state().saveState).to.equal('initial');
           expect(wrapper.state().serverErrors).to.deep.equal({
             newEmail: 'test-email-server-error',
             currentPassword: 'test-password-server-error',
-            emailOptIn: 'test-email-opt-in-server-error'
+            emailOptIn: 'test-email-opt-in-server-error',
           });
         });
       });

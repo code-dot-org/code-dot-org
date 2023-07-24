@@ -22,3 +22,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Since the method should return the square root of the absolute value of `value`, we first need to get its absolute value. We can then use the result to get the square root. The innermost method is evaluated first, and its result is used in the call to the outermost method.
 MARKDOWN
+
+allow_multiple_attempts true

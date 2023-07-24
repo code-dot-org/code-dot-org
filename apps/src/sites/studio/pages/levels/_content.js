@@ -12,7 +12,7 @@ $(document).ready(() => {
   // Load app specific Blockly blocks. This will enable level creators to write
   // Blockly XML and render the blocks directly in the level text.
   Blockly.assetUrl = assetUrl;
-  Blockly.Css.inject(document);
+  Blockly.cdoUtils.injectCss(document);
   // Install the common Blockly blocks
   commonBlocks.install(window.Blockly, {});
   if (hasScriptData('script[data-associatedBlocks]')) {
@@ -30,14 +30,14 @@ $(document).ready(() => {
       }
       appBlocks.install(window.Blockly, {
         skin,
-        app: associatedBlocks
+        app: associatedBlocks,
       });
     } catch (error) {
       console.error(
         `Unable to load blockly blocks for ${associatedBlocks}: ${error}`
       );
       logToCloud.addPageAction(logToCloud.PageAction.BlockLoadFailed, {
-        associatedBlocks
+        associatedBlocks,
       });
     }
   }

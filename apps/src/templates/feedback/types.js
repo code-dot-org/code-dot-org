@@ -7,12 +7,12 @@ export const feedbackShape = PropTypes.shape({
   student_first_visited_at: PropTypes.string,
   created_at: PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.instanceOf(Date)
+    PropTypes.instanceOf(Date),
   ]).isRequired,
   comment: PropTypes.string,
   performance: PropTypes.string,
   is_awaiting_teacher_review: PropTypes.bool,
-  review_state: PropTypes.string
+  review_state: PropTypes.string,
 });
 
 export const levelFeedbackShape = PropTypes.shape(levelFeedbackType);
@@ -23,7 +23,7 @@ export const levelFeedbackType = {
   levelNum: PropTypes.number.isRequired,
   linkToLevel: PropTypes.string.isRequired,
   unitName: PropTypes.string,
-  feedbacks: PropTypes.arrayOf(feedbackShape)
+  feedbacks: PropTypes.arrayOf(feedbackShape),
 };
 
 export const ReviewStates = makeEnum(

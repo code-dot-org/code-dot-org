@@ -6,4 +6,4 @@ wrong '0011 0011'
 right '0001 1010'
 wrong '0001 0010'
 wrong '0001 1110'
-allow_multiple_attempts nil
+allow_multiple_attempts true

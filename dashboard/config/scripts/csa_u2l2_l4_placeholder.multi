@@ -19,3 +19,5 @@ Consider the following code. What is the type of the variable `color`?
 7  mae.paint(color);
 ```
 MARKDOWN
+
+allow_multiple_attempts true

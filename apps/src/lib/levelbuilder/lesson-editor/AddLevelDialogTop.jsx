@@ -55,7 +55,7 @@ function AddLevelDialogTop(props) {
     $.ajax({
       url: url,
       method: 'GET',
-      contentType: 'application/json;charset=UTF-8'
+      contentType: 'application/json;charset=UTF-8',
     }).done((data, _, request) => {
       setLevels(data.levels);
       setNumPages(data.numPages);
@@ -121,7 +121,7 @@ AddLevelDialogTop.propTypes = {
   addLevel: PropTypes.func.isRequired,
 
   // from redux
-  searchOptions: PropTypes.object.isRequired
+  searchOptions: PropTypes.object.isRequired,
 };
 
 const styles = {
@@ -131,39 +131,39 @@ const styles = {
     paddingBottom: 20,
     width: 1100,
     fontFamily: '"Gotham 4r", sans-serif, sans-serif',
-    marginLeft: -600
+    marginLeft: -600,
   },
   dialogContent: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   topArea: {
     display: 'flex',
     flexDirection: 'column',
-    margin: 15
+    margin: 15,
   },
   bottomArea: {
     display: 'flex',
     flexDirection: 'column',
-    margin: 15
+    margin: 15,
   },
   textArea: {
-    width: '95%'
+    width: '95%',
   },
   levelsBox: {
     border: '1px solid black',
     width: '95%',
     height: '100%',
-    padding: 10
+    padding: 10,
   },
   filtersAndLevels: {
     display: 'flex',
-    flexDirection: 'column'
-  }
+    flexDirection: 'column',
+  },
 };
 
 export const UnconnectedAddLevelDialogTop = AddLevelDialogTop;
 
 export default connect(state => ({
-  searchOptions: state.levelSearchingInfo.searchOptions
+  searchOptions: state.levelSearchingInfo.searchOptions,
 }))(AddLevelDialogTop);

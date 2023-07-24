@@ -14,7 +14,7 @@ exports.install = function (blockly, blockInstallOptions) {
     title: msg.plant(),
     titleImage: undefined,
     tooltip: msg.plantTooltip(),
-    functionName: 'Maze.plant'
+    functionName: 'Maze.plant',
   });
 
   blockly.Blocks.planter_ifAtSoil = {
@@ -28,7 +28,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator.planter_ifAtSoil = function () {
@@ -49,7 +49,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   generator.planter_ifAtSprout = function () {

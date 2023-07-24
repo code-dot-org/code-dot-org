@@ -5,7 +5,7 @@ import {UnconnectedSummaryProgressRow as SummaryProgressRow} from '@cdo/apps/tem
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   fakeLesson,
-  fakeLevels
+  fakeLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 
 const baseProps = {
@@ -15,7 +15,7 @@ const baseProps = {
   lessonIsHiddenForStudents: false,
   lessonIsLockedForUser: () => false,
   lessonIsLockedForAllStudents: () => false,
-  viewAs: ViewType.Instructor
+  viewAs: ViewType.Instructor,
 };
 
 const setUp = (overrideProps = {}) => {
@@ -34,7 +34,7 @@ describe('SummaryProgressRow', () => {
     it('will not render if the lesson is hidden for students', () => {
       const wrapper = setUp({
         viewAs: ViewType.Participant,
-        lessonIsHiddenForStudents: true
+        lessonIsHiddenForStudents: true,
       });
       assert.equal(wrapper.isEmptyRender(), true);
     });
@@ -43,7 +43,7 @@ describe('SummaryProgressRow', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
         viewAs: ViewType.Participant,
-        lessonIsLockedForUser: () => true
+        lessonIsLockedForUser: () => true,
       });
 
       assert.equal(wrapper.props().style.borderStyle, 'dashed');
@@ -55,7 +55,7 @@ describe('SummaryProgressRow', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
         viewAs: ViewType.Participant,
-        lessonIsLockedForUser: () => true
+        lessonIsLockedForUser: () => true,
       });
 
       assert.strictEqual(
@@ -68,7 +68,7 @@ describe('SummaryProgressRow', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
         viewAs: ViewType.Participant,
-        lessonIsLockedForUser: () => true
+        lessonIsLockedForUser: () => true,
       });
 
       assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'lock');
@@ -80,7 +80,7 @@ describe('SummaryProgressRow', () => {
       const wrapper = setUp({
         lessonIsHiddenForStudents: true,
         lessonIsLockedForUser: () => false,
-        lessonIsLockedForAllStudents: () => false
+        lessonIsLockedForAllStudents: () => false,
       });
 
       assert.equal(wrapper.props().style.borderStyle, 'dashed');
@@ -90,7 +90,7 @@ describe('SummaryProgressRow', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
         lessonIsLockedForUser: () => false,
-        lessonIsLockedForAllStudents: () => true
+        lessonIsLockedForAllStudents: () => true,
       });
 
       assert.equal(wrapper.props().style.borderStyle, 'dashed');
@@ -102,7 +102,7 @@ describe('SummaryProgressRow', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
         lessonIsLockedForUser: () => false,
-        lessonIsLockedForAllStudents: () => true
+        lessonIsLockedForAllStudents: () => true,
       });
 
       assert.strictEqual(
@@ -115,7 +115,7 @@ describe('SummaryProgressRow', () => {
     it('disables bubbles when locked for instructor', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
-        lessonIsLockedForUser: () => true
+        lessonIsLockedForUser: () => true,
       });
 
       assert.strictEqual(
@@ -127,7 +127,7 @@ describe('SummaryProgressRow', () => {
     it('has a lock icon when lockable and locked for user', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
-        lessonIsLockedForUser: () => true
+        lessonIsLockedForUser: () => true,
       });
 
       assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'lock');
@@ -137,7 +137,7 @@ describe('SummaryProgressRow', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
         lessonIsLockedForUser: () => true,
-        lessonIsLockedForAllStudents: () => true
+        lessonIsLockedForAllStudents: () => true,
       });
 
       assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'lock');
@@ -145,7 +145,7 @@ describe('SummaryProgressRow', () => {
 
     it('has an eye slash icon when hidden for participants', () => {
       const wrapper = setUp({
-        lessonIsHiddenForStudents: true
+        lessonIsHiddenForStudents: true,
       });
 
       assert.equal(
@@ -158,7 +158,7 @@ describe('SummaryProgressRow', () => {
       const wrapper = setUp({
         lessonIsLockedForUser: () => false,
         lessonIsLockedForAllStudents: () => false,
-        lesson: fakeLesson('Maze', 1, true)
+        lesson: fakeLesson('Maze', 1, true),
       });
 
       assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'unlock');

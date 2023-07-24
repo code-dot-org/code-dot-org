@@ -14,7 +14,7 @@ const DEFAULT_PROPS = {
   currentUserBackgroundMusicMuted: false,
   setMuteMusic: () => {},
   muteBackgroundMusic: () => {},
-  unmuteBackgroundMusic: () => {}
+  unmuteBackgroundMusic: () => {},
 };
 
 describe('SignedInUser', () => {
@@ -35,7 +35,7 @@ describe('SignedInUser', () => {
     let onUnmuteSpy = sinon.spy();
     const wrapper = setUp({
       muteBackgroundMusic: onMuteSpy,
-      unmuteBackgroundMusic: onUnmuteSpy
+      unmuteBackgroundMusic: onUnmuteSpy,
     });
     wrapper.find('.uitest-mute-music-button').simulate('click');
     expect(onMuteSpy).to.have.been.calledOnce;
@@ -46,7 +46,7 @@ describe('SignedInUser', () => {
   describe('minecraft vs starwars styling', () => {
     it('uses starwars styling if isMinecraft is false', () => {
       const wrapper = setUp({
-        isMinecraft: false
+        isMinecraft: false,
       });
       expect(
         wrapper.find('#uitest-mute-music-button').at(0).props().style.color
@@ -55,7 +55,7 @@ describe('SignedInUser', () => {
 
     it('uses minecraft styling if isMinecraft is true', () => {
       const wrapper = setUp({
-        isMinecraft: true
+        isMinecraft: true,
       });
       expect(
         wrapper.find('#uitest-mute-music-button').at(0).props().isMinecraft

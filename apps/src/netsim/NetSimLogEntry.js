@@ -102,7 +102,7 @@ NetSimLogEntry.inherits(NetSimEntity);
  */
 NetSimLogEntry.LogStatus = {
   SUCCESS: 'success',
-  DROPPED: 'dropped'
+  DROPPED: 'dropped',
 };
 
 /**
@@ -123,7 +123,7 @@ NetSimLogEntry.prototype.buildRow = function () {
     base64Binary: binaryToBase64(this.binary),
     status: this.status,
     timestamp: this.timestamp,
-    sentBy: this.sentBy
+    sentBy: this.sentBy,
   };
 };
 
@@ -206,7 +206,7 @@ NetSimLogEntry.prototype.getLocalizedStatus = function () {
 NetSimLogEntry.prototype.getLocalizedPacketInfo = function () {
   return i18n.xOfYPackets({
     x: this.getHeaderField(Packet.HeaderType.PACKET_INDEX),
-    y: this.getHeaderField(Packet.HeaderType.PACKET_COUNT)
+    y: this.getHeaderField(Packet.HeaderType.PACKET_COUNT),
   });
 };
 

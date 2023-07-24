@@ -15,3 +15,5 @@ answer 'https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-152390210
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

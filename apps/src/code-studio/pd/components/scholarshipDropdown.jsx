@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Select from 'react-select';
 
 // update this to lock scholarships so that scholarship status can't be updated via the UI.
@@ -12,7 +12,7 @@ export class ScholarshipDropdown extends React.Component {
     dropdownOptions: PropTypes.array,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
-    isWorkshopAdmin: PropTypes.bool.isRequired
+    isWorkshopAdmin: PropTypes.bool.isRequired,
   };
 
   render() {

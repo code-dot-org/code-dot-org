@@ -14,7 +14,7 @@ describe('RollupLessonEntrySection', () => {
   beforeEach(() => {
     defaultProps = {
       objectToRollUp: 'Resources',
-      lesson: courseData.units[0].lessons[0]
+      lesson: courseData.units[0].lessons[0],
     };
   });
 

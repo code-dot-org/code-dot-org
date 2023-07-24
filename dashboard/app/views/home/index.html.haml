@@ -17,6 +17,8 @@
   = render partial: 'layouts/implicit_new_user_terms_interstitial'
 - elsif InitialSectionCreationInterstitialHelper.show?(current_user)
   = render partial: 'layouts/initial_section_creation_interstitial'
+- elsif @show_section_creation_celebration_dialog
+  = render partial: 'layouts/section_creation_celebration_dialog'
 - elsif (SchoolInfoInterstitialHelper.show_confirmation_dialog?(current_user) || @force_school_info_confirmation_dialog) && !params[:courseVersionId]
   - SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
   = render partial: 'layouts/school_info_confirmation_dialog'

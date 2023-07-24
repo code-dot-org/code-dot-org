@@ -8,7 +8,7 @@ import reducers, {
   updateLessonGroupField,
   removeGroup,
   emptyNonUserFacingGroup,
-  mapLessonGroupDataForEditor
+  mapLessonGroupDataForEditor,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import _ from 'lodash';
 
@@ -34,17 +34,17 @@ const getInitialState = () => ({
               inactiveIds: [],
               ids: ['2001'],
               kind: 'puzzle',
-              position: 1
+              position: 1,
             },
             {
               activeId: '2002',
               inactiveIds: [],
               ids: ['2002'],
               kind: 'puzzle',
-              position: 2
-            }
+              position: 2,
+            },
           ],
-          hasLessonPlan: true
+          hasLessonPlan: true,
         },
         {
           id: 101,
@@ -52,7 +52,7 @@ const getInitialState = () => ({
           name: 'B',
           position: 2,
           levels: [],
-          hasLessonPlan: false
+          hasLessonPlan: false,
         },
         {
           id: 102,
@@ -60,9 +60,9 @@ const getInitialState = () => ({
           name: 'C',
           position: 3,
           levels: [],
-          hasLessonPlan: true
-        }
-      ]
+          hasLessonPlan: true,
+        },
+      ],
     },
     {
       id: 2,
@@ -77,7 +77,7 @@ const getInitialState = () => ({
           name: 'D',
           position: 1,
           levels: [],
-          hasLessonPlan: true
+          hasLessonPlan: true,
         },
         {
           id: 105,
@@ -85,7 +85,7 @@ const getInitialState = () => ({
           name: 'E',
           position: 2,
           levels: [],
-          hasLessonPlan: true
+          hasLessonPlan: true,
         },
         {
           id: 106,
@@ -93,11 +93,11 @@ const getInitialState = () => ({
           name: 'F',
           position: 3,
           levels: [],
-          hasLessonPlan: false
-        }
-      ]
-    }
-  ]
+          hasLessonPlan: false,
+        },
+      ],
+    },
+  ],
 });
 
 const reducer = combineReducers(reducers);
@@ -228,8 +228,8 @@ describe('unitEditorRedux reducer tests', () => {
           position: 1,
           lessons: [
             {id: 101, position: 1},
-            {id: 102, position: 2}
-          ]
+            {id: 102, position: 2},
+          ],
         },
         {
           key: 'y',
@@ -237,9 +237,9 @@ describe('unitEditorRedux reducer tests', () => {
           position: 2,
           lessons: [
             {id: 103, position: 1},
-            {id: 104, position: 2}
-          ]
-        }
+            {id: 104, position: 2},
+          ],
+        },
       ];
       initialState.lessonGroups = initialLessonGroups;
     });
@@ -265,7 +265,7 @@ describe('unitEditorRedux reducer tests', () => {
               key: 'x',
               displayName: 'X',
               position: 1,
-              lessons: [{id: 101, position: 1}]
+              lessons: [{id: 101, position: 1}],
             },
             {
               key: 'y',
@@ -274,9 +274,9 @@ describe('unitEditorRedux reducer tests', () => {
               lessons: [
                 {id: 103, position: 1},
                 {id: 104, position: 2},
-                {id: 102, position: 3}
-              ]
-            }
+                {id: 102, position: 3},
+              ],
+            },
           ],
           state.lessonGroups
         );
@@ -293,15 +293,15 @@ describe('unitEditorRedux reducer tests', () => {
               lessons: [
                 {id: 101, position: 1},
                 {id: 102, position: 2},
-                {id: 104, position: 3}
-              ]
+                {id: 104, position: 3},
+              ],
             },
             {
               key: 'y',
               displayName: 'Y',
               position: 2,
-              lessons: [{id: 103, position: 1}]
-            }
+              lessons: [{id: 103, position: 1}],
+            },
           ],
           newState.lessonGroups
         );

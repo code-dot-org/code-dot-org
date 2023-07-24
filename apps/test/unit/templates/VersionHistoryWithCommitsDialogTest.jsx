@@ -16,14 +16,14 @@ const FAKE_VERSION_LIST_RESPONSE = {
       versionId: FAKE_CURRENT_VERSION,
       lastModified: new Date('2018-08-01T03:00:00'),
       isLatest: true,
-      comment: 'Commit comment'
+      comment: 'Commit comment',
     },
     {
       versionId: FAKE_PREVIOUS_VERSION,
       lastModified: new Date('2018-07-31T02:00:00'),
-      isLatest: false
-    }
-  ])
+      isLatest: false,
+    },
+  ]),
 };
 
 describe('VersionHistoryWithCommitsDialog', () => {
@@ -58,7 +58,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
         handleClearPuzzle: () => {},
         isProjectTemplateLevel: false,
         onClose: () => {},
-        isOpen: true
+        isOpen: true,
       },
       finishVersionHistoryLoad: () => {
         sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE);
@@ -72,7 +72,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
       finishRestoreVersion: () =>
         sourcesApi.restorePreviousFileVersion.firstCall.args[2](),
       failRestoreVersion: () =>
-        sourcesApi.restorePreviousFileVersion.firstCall.args[3]()
+        sourcesApi.restorePreviousFileVersion.firstCall.args[3](),
     });
   });
 
@@ -82,7 +82,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
     failVersionHistoryLoad,
     restoreSpy,
     finishRestoreVersion,
-    failRestoreVersion
+    failRestoreVersion,
   }) {
     it('renders loading spinner at first', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
@@ -253,8 +253,8 @@ describe('VersionHistoryWithCommitsDialog', () => {
               currentUrl: window.location.href,
               shareUrl: 'fake-share-url',
               isProjectTemplateLevel: false,
-              currentSourceVersionId: FAKE_CURRENT_VERSION
-            })
+              currentSourceVersionId: FAKE_CURRENT_VERSION,
+            }),
           },
           {includeUserId: true}
         );

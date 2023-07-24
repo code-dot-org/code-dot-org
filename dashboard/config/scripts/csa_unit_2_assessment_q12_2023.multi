@@ -28,3 +28,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Mutator methods have a return type of `void`, which means they do not return a value.
 MARKDOWN
+
+allow_multiple_attempts true

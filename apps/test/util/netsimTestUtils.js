@@ -70,7 +70,7 @@ exports.overrideNetSimTableApi = function (netsimTable) {
     },
     clearLog: function () {
       table.clearLog();
-    }
+    },
   };
 
   return netsimTable;
@@ -221,7 +221,7 @@ var fakeStorageTable = function () {
     /** Reset test log to empty */
     clearLog: function () {
       log_ = '';
-    }
+    },
   };
 };
 
@@ -232,7 +232,7 @@ exports.fakeShard = function () {
   /** @implements {PubSubChannel} */
   var fakeChannel = {
     subscribe: function (eventName, callback) {},
-    unsubscribe: function (eventName, callback) {}
+    unsubscribe: function (eventName, callback) {},
   };
 
   // In tests we normally disable delays, coalescing and jitter so that they
@@ -241,7 +241,7 @@ exports.fakeShard = function () {
   var defaultTestTableConfig = {
     minimumDelayBeforeRefresh: 0,
     maximumJitterDelay: 0,
-    minimumDelayBetweenRefreshes: 0
+    minimumDelayBetweenRefreshes: 0,
   };
 
   return {
@@ -265,10 +265,10 @@ exports.fakeShard = function () {
         'fakeShard',
         'log',
         Object.assign({}, defaultTestTableConfig, {
-          useIncrementalRefresh: true
+          useIncrementalRefresh: true,
         })
       )
-    )
+    ),
   };
 };
 
@@ -283,7 +283,7 @@ exports.initializeGlobalsToDefaultValues = function () {
     {},
     {
       level: _.cloneDeep(levels.custom),
-      globalMaxRouters: 20
+      globalMaxRouters: 20,
     }
   );
 };

@@ -9,3 +9,5 @@ wrong 'accessor'
 wrong 'constructor'
 wrong 'constructor overloading'
 right 'mutator'
+
+allow_multiple_attempts true

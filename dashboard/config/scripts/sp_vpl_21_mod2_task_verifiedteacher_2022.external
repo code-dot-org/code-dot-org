@@ -3,17 +3,17 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Task: Become a verified teacher
+# Task: Become a Verified Teacher
 
 ## Code.org’s CS Discoveries course offers additional materials for Code.org teachers that have become 'verified teachers.' 
 
-### These materials include:
+### **These materials include:**
 
-* Student assessments and surveys.
-* Example solutions and answer keys.
-* The ability to leave feedback for students on levels.
-* Teaching tips.
-* And more!
+* ##### Student assessments and surveys.
+* ##### Example solutions and answer keys.
+* ##### The ability to leave feedback for students on levels.
+* ##### Teaching tips.
+* ##### And more!
 
 ### If you are not already a verified teacher, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform" target="blank" rel="noopener noreferrer" >click here</a> to complete the form to become a verified teacher.
 

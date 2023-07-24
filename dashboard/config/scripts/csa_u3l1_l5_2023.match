@@ -14,3 +14,4 @@ answer 'a data type that contains a pointer to the memory location of an object'
 
 question 'one-dimensional (1D) array'
 answer 'a data structure that holds multiple values of the same data type'
+allow_multiple_attempts true

@@ -44,3 +44,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Each code segment uses an enhanced `for` loop to traverse the 1D array `numbers`. They all attempt to modify the values in the 1D array, however an enhanced `for` loop cannot be used to modify elements. This is because the enhanced `for` loop variable gets a copy of each value, so if the 1D array contains primitive values, it gets a copy of the value. Changes that are made only affect the enhanced `for` loop variable and not the original value in the 1D array.
 MARKDOWN
+
+allow_multiple_attempts true

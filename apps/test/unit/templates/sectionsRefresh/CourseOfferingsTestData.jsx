@@ -2,9 +2,9 @@
 export const elementarySchoolCourseOffering = {
   elementary: {
     Course: {
-      'CS Fundamentals': [{id: 19, key: 'coursea', display_name: 'Course A'}]
-    }
-  }
+      'CS Fundamentals': [{id: 19, key: 'coursea', display_name: 'Course A'}],
+    },
+  },
 };
 
 // Use this sample to test multiple headings, course versions, etc
@@ -38,7 +38,7 @@ export const highSchoolCourseOfferings = {
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: 1,
-                    requires_verified_instructor: true
+                    requires_verified_instructor: true,
                   },
                   3167: {
                     id: 3167,
@@ -47,7 +47,7 @@ export const highSchoolCourseOfferings = {
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: 3,
-                    requires_verified_instructor: true
+                    requires_verified_instructor: true,
                   },
                   5341: {
                     id: 5341,
@@ -56,12 +56,12 @@ export const highSchoolCourseOfferings = {
                     lesson_extras_available: true,
                     text_to_speech_enabled: true,
                     position: 9,
-                    requires_verified_instructor: true
-                  }
-                }
-              }
-            ]
-          ]
+                    requires_verified_instructor: true,
+                  },
+                },
+              },
+            ],
+          ],
         },
         {
           id: 74,
@@ -89,7 +89,7 @@ export const highSchoolCourseOfferings = {
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: 1,
-                    requires_verified_instructor: false
+                    requires_verified_instructor: false,
                   },
                   190: {
                     id: 190,
@@ -98,10 +98,10 @@ export const highSchoolCourseOfferings = {
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: 2,
-                    requires_verified_instructor: false
-                  }
-                }
-              }
+                    requires_verified_instructor: false,
+                  },
+                },
+              },
             ],
             [
               737,
@@ -124,7 +124,7 @@ export const highSchoolCourseOfferings = {
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: 1,
-                    requires_verified_instructor: false
+                    requires_verified_instructor: false,
                   },
                   5089: {
                     id: 5089,
@@ -133,14 +133,14 @@ export const highSchoolCourseOfferings = {
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: 2,
-                    requires_verified_instructor: false
-                  }
-                }
-              }
-            ]
-          ]
-        }
-      ]
+                    requires_verified_instructor: false,
+                  },
+                },
+              },
+            ],
+          ],
+        },
+      ],
     },
     'Standalone Unit': {
       'Teacher-Led': [
@@ -170,10 +170,10 @@ export const highSchoolCourseOfferings = {
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: null,
-                    requires_verified_instructor: false
-                  }
-                }
-              }
+                    requires_verified_instructor: false,
+                  },
+                },
+              },
             ],
             [
               799,
@@ -196,12 +196,12 @@ export const highSchoolCourseOfferings = {
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: null,
-                    requires_verified_instructor: false
-                  }
-                }
-              }
-            ]
-          ]
+                    requires_verified_instructor: false,
+                  },
+                },
+              },
+            ],
+          ],
         },
         {
           id: 407,
@@ -229,16 +229,16 @@ export const highSchoolCourseOfferings = {
                     lesson_extras_available: false,
                     text_to_speech_enabled: true,
                     position: null,
-                    requires_verified_instructor: false
-                  }
-                }
-              }
-            ]
-          ]
-        }
-      ]
-    }
-  }
+                    requires_verified_instructor: false,
+                  },
+                },
+              },
+            ],
+          ],
+        },
+      ],
+    },
+  },
 };
 
 // Keeping 5 categories to be able to test the uneven split of headers
@@ -271,12 +271,12 @@ export const hocCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 31,
@@ -304,12 +304,12 @@ export const hocCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 57,
@@ -337,12 +337,12 @@ export const hocCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 60,
@@ -370,13 +370,13 @@ export const hocCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
-      }
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
+      },
     ],
     'Hello World': [
       {
@@ -405,12 +405,12 @@ export const hocCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 46,
@@ -438,12 +438,12 @@ export const hocCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 379,
@@ -471,13 +471,13 @@ export const hocCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
-      }
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
+      },
     ],
     'Labs and Skills': [
       {
@@ -506,12 +506,12 @@ export const hocCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 8,
@@ -539,13 +539,13 @@ export const hocCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
-      }
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
+      },
     ],
     'Popular Media': [
       {
@@ -574,13 +574,13 @@ export const hocCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
-      }
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
+      },
     ],
     Sports: [
       {
@@ -609,12 +609,12 @@ export const hocCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 68,
@@ -642,12 +642,12 @@ export const hocCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 33,
@@ -675,15 +675,15 @@ export const hocCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
-      }
-    ]
-  }
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
+      },
+    ],
+  },
 };
 
 export const plCourseOfferings = {
@@ -715,12 +715,12 @@ export const plCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: true,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
       },
       {
         id: 362,
@@ -748,13 +748,13 @@ export const plCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,
                   position: null,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
-      }
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
+      },
     ],
     'Self-Paced': [
       {
@@ -783,7 +783,7 @@ export const plCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,
                   position: 1,
-                  requires_verified_instructor: false
+                  requires_verified_instructor: false,
                 },
                 4163: {
                   id: 4163,
@@ -792,7 +792,7 @@ export const plCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,
                   position: 2,
-                  requires_verified_instructor: false
+                  requires_verified_instructor: false,
                 },
                 4164: {
                   id: 4164,
@@ -801,13 +801,133 @@ export const plCourseOfferings = {
                   lesson_extras_available: false,
                   text_to_speech_enabled: false,
                   position: 3,
-                  requires_verified_instructor: false
-                }
-              }
-            }
-          ]
-        ]
-      }
-    ]
-  }
+                  requires_verified_instructor: false,
+                },
+              },
+            },
+          ],
+        ],
+      },
+    ],
+  },
+};
+
+export const noRecommendedVersionsOfferings = {
+  high: {
+    Course: {
+      'Year Long': [
+        {
+          id: 73,
+          key: 'csa',
+          display_name: 'Computer Science A',
+          course_versions: [
+            [
+              370,
+              {
+                id: 370,
+                key: '2019',
+                version_year: '19-20',
+                content_root_id: 32,
+                name: 'Informática A (19-20)',
+                path: '/courses/csa-2019',
+                type: 'UnitGroup',
+                is_stable: true,
+                is_recommended: false,
+                locales: ['English'],
+                units: {
+                  173: {
+                    id: 173,
+                    name: "Programación Orientada a Objetos ('19-'20)",
+                    path: '/s/csa1-2019',
+                    lesson_extras_available: false,
+                    text_to_speech_enabled: true,
+                    position: 1,
+                    requires_verified_instructor: true,
+                  },
+                },
+              },
+            ],
+            [
+              373,
+              {
+                id: 373,
+                key: '2022',
+                version_year: '22-23',
+                content_root_id: 32,
+                name: 'Informática A (22-23)',
+                path: '/courses/csa-2022',
+                type: 'UnitGroup',
+                is_stable: true,
+                is_recommended: false,
+                locales: ['English'],
+                units: {
+                  173: {
+                    id: 173,
+                    name: "Programación Orientada a Objetos ('22-'23)",
+                    path: '/s/csa1-2022',
+                    lesson_extras_available: false,
+                    text_to_speech_enabled: true,
+                    position: 1,
+                    requires_verified_instructor: true,
+                  },
+                },
+              },
+            ],
+            [
+              377,
+              {
+                id: 377,
+                key: '2020',
+                version_year: '',
+                content_root_id: 36,
+                name: 'Piloto de CSA',
+                path: '/courses/csa-pilot',
+                type: 'UnitGroup',
+                is_stable: false,
+                is_recommended: false,
+                locales: ['English'],
+                units: {
+                  177: {
+                    id: 177,
+                    name: 'Programación Orientada a Objetos *',
+                    path: '/s/csa1-pilot',
+                    lesson_extras_available: false,
+                    text_to_speech_enabled: false,
+                    position: 1,
+                    requires_verified_instructor: true,
+                  },
+                },
+              },
+            ],
+            [
+              775,
+              {
+                id: 775,
+                key: '2023',
+                version_year: '23-24',
+                content_root_id: 62,
+                name: 'Informática A (23-24)',
+                path: '/courses/csa-2023',
+                type: 'UnitGroup',
+                is_stable: false,
+                is_recommended: false,
+                locales: ['English'],
+                units: {
+                  174: {
+                    id: 174,
+                    name: 'Programación Orientada a Objetos *',
+                    path: '/s/csa1-2023',
+                    lesson_extras_available: false,
+                    text_to_speech_enabled: false,
+                    position: 1,
+                    requires_verified_instructor: true,
+                  },
+                },
+              },
+            ],
+          ],
+        },
+      ],
+    },
+  },
 };

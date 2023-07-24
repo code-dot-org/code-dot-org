@@ -61,7 +61,7 @@ const blockPlaceOrder = [
   'wool_orange',
   'wool_pink',
   'wool_red',
-  'wool_yellow'
+  'wool_yellow',
 ];
 
 // Agent code uses numbers for relative directions; semantically they represent
@@ -71,7 +71,7 @@ const directionToString = Object.freeze({
   0: 'forward',
   1: 'right',
   2: 'back',
-  3: 'left'
+  3: 'left',
 });
 
 // Map naming scheme for Agent-style block types to CodeBuilder-style block
@@ -115,7 +115,7 @@ const blockTypes = Object.freeze({
   planksBirch: 'planks,2',
   planksJungle: 'planks,3',
   planksOak: 'planks',
-  planksSpruce: 'planks,1'
+  planksSpruce: 'planks,1',
 });
 
 const blockConversions = Object.freeze({
@@ -231,7 +231,7 @@ const blockConversions = Object.freeze({
         ${next ? serialize(next) : ''}
       </block>
     `;
-  }
+  },
 });
 
 function convertBlockXml(blockXml) {

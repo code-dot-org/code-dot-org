@@ -13,7 +13,7 @@ describe('CourseOfferingEditor', () => {
     chromebook: 'not_recommended',
     tablet: 'not_recommended',
     mobile: 'ideal',
-    no_device: ''
+    no_device: '',
   };
 
   beforeEach(() => {
@@ -31,8 +31,34 @@ describe('CourseOfferingEditor', () => {
         image: 'https://images.code.org/spritelab.JPG',
         cs_topic: 'art_and_design',
         school_subject: 'science,english_language_arts',
-        device_compatibility: JSON.stringify(deviceCompatibilities)
-      }
+        device_compatibility: JSON.stringify(deviceCompatibilities),
+        description: 'An introductory course into computer science.',
+        professional_learning: 'code.org/apply',
+      },
+      selfPacedPLCourseOfferings: [
+        {
+          id: 1,
+          key: 'test-self-paced-pl-1',
+          display_name: 'Self Paced PL 1',
+          course_version_path: null,
+        },
+        {
+          id: 53,
+          key: 'test-self-paced-pl-2',
+          display_name: 'Self Paced PL 2',
+          course_version_path: null,
+        },
+        {
+          id: 135,
+          key: 'test-self-paced-pl-3',
+          display_name: 'Self Paced PL 3',
+          course_version_path: null,
+        },
+      ],
+      professionalLearningProgramPaths: {
+        'K5 Workshops': 'code.org/professional-development-workshops',
+        '6-12 Workshops': 'code.org/apply',
+      },
     };
   });
 
@@ -69,12 +95,14 @@ describe('CourseOfferingEditor', () => {
         image: 'https://images.code.org/spritelab.JPG',
         cs_topic: 'art_and_design',
         school_subject: 'science,english_language_arts',
-        device_compatibility: JSON.stringify(deviceCompatibilities)
+        device_compatibility: JSON.stringify(deviceCompatibilities),
+        description: 'An introductory course into computer science.',
+        professional_learning: 'code.org/apply',
       };
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
         200,
         {'Content-Type': 'application/json'},
-        JSON.stringify(returnData)
+        JSON.stringify(returnData),
       ]);
 
       const saveBar = wrapper.find('SaveBar');
@@ -105,7 +133,7 @@ describe('CourseOfferingEditor', () => {
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
         404,
         {'Content-Type': 'application/json'},
-        returnData
+        returnData,
       ]);
 
       const saveBar = wrapper.find('SaveBar');
@@ -142,13 +170,15 @@ describe('CourseOfferingEditor', () => {
         image: 'https://images.code.org/spritelab.JPG',
         cs_topic: 'art_and_design',
         school_subject: 'science,english_language_arts',
-        device_compatibility: JSON.stringify(deviceCompatibilities)
+        device_compatibility: JSON.stringify(deviceCompatibilities),
+        description: 'An introductory course into computer science.',
+        professional_learning: 'code.org/apply',
       };
 
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
         200,
         {'Content-Type': 'application/json'},
-        JSON.stringify(returnData)
+        JSON.stringify(returnData),
       ]);
 
       const saveBar = wrapper.find('SaveBar');
@@ -174,7 +204,7 @@ describe('CourseOfferingEditor', () => {
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
         404,
         {'Content-Type': 'application/json'},
-        returnData
+        returnData,
       ]);
 
       const saveBar = wrapper.find('SaveBar');

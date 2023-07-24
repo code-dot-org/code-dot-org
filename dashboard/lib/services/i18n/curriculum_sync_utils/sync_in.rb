@@ -30,7 +30,7 @@ module Services
 
             # we expect that some migrated scripts won't have any lesson plan content
             # at all; that's fine, we can just skip those.
-            data.reject! {|_, v| v.blank?} # don't want any empty values
+            data.compact_blank! # don't want any empty values
             next if data.blank?
 
             # write data to path

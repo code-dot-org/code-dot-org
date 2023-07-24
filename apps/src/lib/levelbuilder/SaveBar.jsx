@@ -10,7 +10,7 @@ export default function SaveBar({
   handleView,
   isSaving,
   lastSaved,
-  pathForShowButton
+  pathForShowButton,
 }) {
   const renderShowButtonOrPlaceholder = () => {
     const isShowButtonVisible = handleView || pathForShowButton;
@@ -74,12 +74,12 @@ SaveBar.propTypes = {
   handleView: PropTypes.func,
   isSaving: PropTypes.bool,
   lastSaved: PropTypes.number,
-  pathForShowButton: PropTypes.string
+  pathForShowButton: PropTypes.string,
 };
 
 SaveBar.defaultProps = {
   isSaving: false,
-  lastSaved: 0
+  lastSaved: 0,
 };
 
 const styles = {
@@ -95,28 +95,28 @@ const styles = {
     zIndex: 900,
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   saveButtonArea: {
     display: 'flex',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   saveButton: {
-    margin: '10px 50px 10px 20px'
+    margin: '10px 50px 10px 20px',
   },
   spinner: {
     fontSize: 25,
-    padding: 10
+    padding: 10,
   },
   lastSaved: {
     fontSize: 14,
     color: color.level_perfect,
-    padding: 15
+    padding: 15,
   },
   error: {
     fontSize: 14,
     color: color.red,
     padding: 15,
-    maxWidth: 800
-  }
+    maxWidth: 800,
+  },
 };

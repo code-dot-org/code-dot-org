@@ -5,7 +5,7 @@ import Button from './Button';
 import i18n from '@cdo/locale';
 import {
   unassignSection,
-  sectionName
+  sectionName,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import UnassignSectionDialog from '@cdo/apps/templates/UnassignSectionDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -31,7 +31,7 @@ function UnassignSectionButton({
   initialCourseId,
   unassignSection,
   sectionName,
-  isRtl
+  isRtl,
 }) {
   const [text, setText] = useState(i18n.assigned());
   const [icon, setIcon] = useState('check');
@@ -81,10 +81,10 @@ function UnassignSectionButton({
             scriptId: initialUnitId,
             courseId: initialCourseId,
             location: buttonLocationAnalytics,
-            date: new Date()
+            date: new Date(),
           },
           removeNullValues
-        )
+        ),
       },
       {includeUserId: true}
     );
@@ -126,23 +126,23 @@ UnassignSectionButton.propTypes = {
   initialCourseId: PropTypes.number,
   unassignSection: PropTypes.func.isRequired,
   sectionName: PropTypes.string,
-  isRtl: PropTypes.bool
+  isRtl: PropTypes.bool,
 };
 
 const styles = {
   buttonMargin: {
     marginLeft: 10,
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   buttonMarginRTL: {
     marginRight: 10,
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   boxShadow: {
-    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)'
-  }
+    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)',
+  },
 };
 
 export const UnconnectedUnassignSectionButton = UnassignSectionButton;
@@ -152,7 +152,7 @@ export default connect(
     isRtl: state.isRtl,
     initialUnitId: state.teacherSections.initialUnitId,
     initialCourseId: state.teacherSections.initialCourseId,
-    sectionName: sectionName(state, props.sectionId)
+    sectionName: sectionName(state, props.sectionId),
   }),
   {unassignSection}
 )(UnassignSectionButton);

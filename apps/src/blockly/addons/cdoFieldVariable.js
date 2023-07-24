@@ -60,7 +60,7 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
     // Add our custom options (Rename this variable, Rename all)
     options.push([
       msg.renameAll({variableName: this.getText()}),
-      RENAME_ALL_ID
+      RENAME_ALL_ID,
     ]);
     options.push([msg.renameThis(), RENAME_THIS_ID]);
 
@@ -88,6 +88,6 @@ CdoFieldVariable.modalPromptName = function (
     cancelText: confirmButtonLabel,
     confirmText: msg.cancel(),
     onConfirm: null,
-    onCancel: callback
+    onCancel: callback,
   });
 };

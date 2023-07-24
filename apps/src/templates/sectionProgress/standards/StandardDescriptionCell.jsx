@@ -10,7 +10,7 @@ class StandardDescriptionCell extends Component {
   static propTypes = {
     description: PropTypes.string,
     lessonsForStandardStatus: PropTypes.array,
-    isViewingReport: PropTypes.bool
+    isViewingReport: PropTypes.bool,
   };
 
   getLessonBoxes = () => {
@@ -38,7 +38,7 @@ class StandardDescriptionCell extends Component {
                   </div>
                   <div>
                     {i18n.completedStudentPercent({
-                      percentComplete: percentComplete
+                      percentComplete: percentComplete,
                     })}
                   </div>
                 </div>
@@ -87,33 +87,33 @@ const styles = {
   main: {
     display: 'flex',
     flexDirection: 'column',
-    height: '100%'
+    height: '100%',
   },
   description: {
-    marginBottom: 10
+    marginBottom: 10,
   },
   lessonsArea: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   lessonBoxes: {
     display: 'flex',
     flexDirection: 'row',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   lessonBox: {
-    marginBottom: 10
+    marginBottom: 10,
   },
   lessonsAreaTitle: {
     marginRight: 10,
-    width: '30%'
+    width: '30%',
   },
   tooltip: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   tooltipLessonName: {
-    fontFamily: '"Gotham 7r", sans-serif'
-  }
+    fontFamily: '"Gotham 7r", sans-serif',
+  },
 };
 
 export default StandardDescriptionCell;

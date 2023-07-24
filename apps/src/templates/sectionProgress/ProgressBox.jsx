@@ -12,7 +12,7 @@ export default class ProgressBox extends Component {
     perfect: PropTypes.number,
     style: PropTypes.object,
     lessonIsAllAssessment: PropTypes.bool,
-    lessonNumber: PropTypes.number
+    lessonNumber: PropTypes.number,
   };
 
   render() {
@@ -26,38 +26,38 @@ export default class ProgressBox extends Component {
           ? color.level_submitted
           : color.level_perfect
         : color.light_gray,
-      ...this.props.style
+      ...this.props.style,
     };
 
     const perfectLevels = {
       ...styles.filler,
       backgroundColor: color.level_perfect,
       height: perfect,
-      top: PROGRESS_BOX_SIZE - perfect
+      top: PROGRESS_BOX_SIZE - perfect,
     };
 
     const assessmentLevels = {
       ...styles.filler,
       backgroundColor: color.level_submitted,
       height: perfect,
-      top: PROGRESS_BOX_SIZE - perfect
+      top: PROGRESS_BOX_SIZE - perfect,
     };
 
     const incompleteLevels = {
       ...styles.filler,
       backgroundColor: color.level_not_tried,
-      height: incomplete
+      height: incomplete,
     };
 
     const imperfectLevels = {
       ...styles.filler,
       backgroundColor: color.level_passed,
-      height: imperfect
+      height: imperfect,
     };
 
     const lessonNumberStyle = {
       ...styles.lessonNumber,
-      color: perfect ? color.white : color.charcoal
+      color: perfect ? color.white : color.charcoal,
     };
     return (
       <div style={boxWithBorderStyle}>
@@ -82,11 +82,11 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     boxSizing: 'content-box',
-    position: 'relative'
+    position: 'relative',
   },
   filler: {
     width: PROGRESS_BOX_SIZE,
-    position: 'absolute'
+    position: 'absolute',
   },
   lessonNumber: {
     position: 'absolute',
@@ -94,6 +94,6 @@ const styles = {
     paddingTop: 2,
     textAlign: 'center',
     width: PROGRESS_BOX_SIZE,
-    fontFamily: '"Gotham 4r", sans-serif'
-  }
+    fontFamily: '"Gotham 4r", sans-serif',
+  },
 };

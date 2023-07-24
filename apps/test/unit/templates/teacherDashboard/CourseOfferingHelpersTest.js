@@ -5,7 +5,7 @@ import {
   translatedCourseOfferingDeviceTypes,
   translatedCourseOfferingDeviceCompatibilityLevels,
   translatedCourseOfferingDurations,
-  subjectsAndTopicsOrder
+  subjectsAndTopicsOrder,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 
 describe('CourseOfferingHelpers', () => {
@@ -49,7 +49,7 @@ describe('CourseOfferingHelpers', () => {
     expect(
       [
         ...Object.keys(translatedCourseOfferingSchoolSubjects),
-        ...Object.keys(translatedCourseOfferingCsTopics)
+        ...Object.keys(translatedCourseOfferingCsTopics),
       ].sort()
     ).to.deep.equal([...subjectsAndTopicsOrder].sort());
   });

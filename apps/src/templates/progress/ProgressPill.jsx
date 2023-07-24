@@ -13,7 +13,7 @@ import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import {
   BubbleShape,
   BubbleSize,
-  getBubbleUrl
+  getBubbleUrl,
 } from '@cdo/apps/templates/progress/BubbleFactory';
 
 /**
@@ -32,7 +32,7 @@ class ProgressPill extends React.Component {
     progressStyle: PropTypes.bool,
     onSingleLevelClick: PropTypes.func,
     // Redux
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   getUrl() {
@@ -73,7 +73,7 @@ class ProgressPill extends React.Component {
       disabled,
       progressStyle,
       isRtl,
-      onSingleLevelClick
+      onSingleLevelClick,
     } = this.props;
 
     const firstLevel = levels[0];
@@ -91,7 +91,7 @@ class ProgressPill extends React.Component {
       ...styles.levelPill,
       ...((url || onClick) && hoverStyle),
       ...(!multiLevelStep &&
-        levelProgressStyle(firstLevel.status, firstLevel.kind))
+        levelProgressStyle(firstLevel.status, firstLevel.kind)),
     };
 
     // Adjust icon margins if locale is RTL
@@ -123,7 +123,7 @@ class ProgressPill extends React.Component {
               className="ProgressPillTextAndIcon"
               style={{
                 ...textStyle,
-                ...(icon && iconMarginStyle)
+                ...(icon && iconMarginStyle),
               }}
             >
               {text}
@@ -167,12 +167,12 @@ const styles = {
     lineHeight: '18px',
     marginTop: 3,
     marginBottom: 3,
-    position: 'relative'
+    position: 'relative',
   },
   text: {
     display: 'inline-block',
     fontFamily: '"Gotham 5r", sans-serif',
-    letterSpacing: -0.12
+    letterSpacing: -0.12,
   },
   textProgressStyle: {
     display: 'inline-block',
@@ -182,18 +182,18 @@ const styles = {
     width: 120,
     whiteSpace: 'nowrap',
     overflow: 'hidden',
-    textOverflow: 'ellipsis'
+    textOverflow: 'ellipsis',
   },
   iconMargin: {
-    marginLeft: 10
+    marginLeft: 10,
   },
   iconMarginRTL: {
-    marginRight: 10
-  }
+    marginRight: 10,
+  },
 };
 
 export const UnconnectedProgressPill = ProgressPill;
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(Radium(ProgressPill));

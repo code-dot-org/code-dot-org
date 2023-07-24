@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-27T23:00:38.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -71,7 +76,9 @@
       "World.frameRate": null,
       "visible": null,
       "ifBlock": null,
-      "console.log": null
+      "console.log": null,
+      "addOperator": null,
+      "subtractOperator": null
     },
     "show_debug_watch": "true",
     "palette_category_at_start": "sprites",
@@ -94,13 +101,8 @@
 
     ]
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-27T23:00:38.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-27T23:00:38.065+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - conditionals - challenge 3_2023\\\"\"],\"cloned_from\":\"CSD U3 - conditionals - challenge 3_2023\"},{\"changed_at\":\"2022-09-27 23:02:16 +0000\",\"changed\":[\"free_play\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"display_name\",\"thumbnail_url\",\"reference_links\",\"map_reference\",\"bubble_choice_description\",\"watchers_prepopulated\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-09-28 20:22:58 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-30 19:49:17 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 19:14:39 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-27T23:00:38.065+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - conditionals - challenge 3_2023\\\"\"],\"cloned_from\":\"CSD U3 - conditionals - challenge 3_2023\"},{\"changed_at\":\"2022-09-27 23:02:16 +0000\",\"changed\":[\"free_play\",\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"display_name\",\"thumbnail_url\",\"reference_links\",\"map_reference\",\"bubble_choice_description\",\"watchers_prepopulated\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-09-28 20:22:58 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-30 19:49:17 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 19:14:39 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-20 17:15:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

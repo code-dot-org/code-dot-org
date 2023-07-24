@@ -33,13 +33,13 @@ export default function MicroBitButton(board) {
       // More 'down' events than 'up' indicates we are in a pressed state
       get: function () {
         return this.buttonEvents[1] > this.buttonEvents[2];
-      }
+      },
     },
     holdtime: {
       get: function () {
         return this.holdThreshold;
-      }
-    }
+      },
+    },
   });
 }
 MicroBitButton.inherits(EventEmitter);

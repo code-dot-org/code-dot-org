@@ -23,7 +23,7 @@ $(document).ready(function () {
       complete: function (data) {
         $('#implicit-terms-modal').modal('hide');
         location.reload();
-      }
+      },
     });
   });
 

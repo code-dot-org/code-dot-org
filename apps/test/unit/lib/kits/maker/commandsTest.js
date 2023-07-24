@@ -11,7 +11,7 @@ import {
   digitalWrite,
   injectBoardController,
   onBoardEvent,
-  pinMode
+  pinMode,
 } from '@cdo/apps/lib/kits/maker/commands';
 import VirtualCPBoard from '@cdo/apps/lib/kits/maker/boards/VirtualCPBoard';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
@@ -26,7 +26,7 @@ describe('maker/commands.js - CircuitPlayground', () => {
     injectBoardController(stubBoardController);
     errorHandler = {
       outputWarning: sinon.spy(),
-      outputError: sinon.stub()
+      outputError: sinon.stub(),
     };
     injectErrorHandler(errorHandler);
   });
@@ -177,7 +177,7 @@ describe('maker/commands.js - MicroBit', () => {
     injectBoardController(stubBoardController);
     errorHandler = {
       outputWarning: sinon.spy(),
-      outputError: sinon.stub()
+      outputError: sinon.stub(),
     };
     injectErrorHandler(errorHandler);
   });

@@ -4,7 +4,7 @@ import {
   stubRedux,
   restoreRedux,
   registerReducers,
-  getStore
+  getStore,
 } from '@cdo/apps/redux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import reducer, {
@@ -25,7 +25,6 @@ import reducer, {
   assignmentPaths,
   sectionFromServerSection,
   isAddingSection,
-  isEditingSection,
   beginImportRosterFlow,
   cancelImportRosterFlow,
   importOrUpdateRoster,
@@ -40,7 +39,7 @@ import reducer, {
   sortedSectionsList,
   sortSectionsList,
   assignToSection,
-  NO_SECTION
+  NO_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
@@ -50,7 +49,7 @@ const {
   IMPORT_ROSTER_FLOW_BEGIN,
   IMPORT_ROSTER_FLOW_LIST_LOADED,
   PENDING_NEW_SECTION_ID,
-  USER_EDITABLE_SECTION_PROPS
+  USER_EDITABLE_SECTION_PROPS,
 } = __testInterface__;
 
 const createdAt = '2019-10-21T23:45:34.345Z';
@@ -76,7 +75,7 @@ const sections = [
     studentCount: 10,
     hidden: false,
     restrict_section: false,
-    post_milestone_disabled: false
+    post_milestone_disabled: false,
   },
   {
     id: 12,
@@ -98,7 +97,7 @@ const sections = [
     studentCount: 1,
     hidden: false,
     restrict_section: false,
-    post_milestone_disabled: false
+    post_milestone_disabled: false,
   },
   {
     id: 307,
@@ -120,8 +119,8 @@ const sections = [
     studentCount: 0,
     hidden: false,
     restrict_section: false,
-    post_milestone_disabled: false
-  }
+    post_milestone_disabled: false,
+  },
 ];
 
 const students = [
@@ -129,14 +128,14 @@ const students = [
     id: 1,
     name: 'StudentA',
     sectionId: 'id',
-    sharingDisabled: false
+    sharingDisabled: false,
   },
   {
     id: 2,
     name: 'StudentB',
     sectionId: 'id',
-    sharingDisabled: false
-  }
+    sharingDisabled: false,
+  },
 ];
 
 describe('teacherSectionsRedux', () => {
@@ -161,14 +160,14 @@ describe('teacherSectionsRedux', () => {
         'google_oauth2',
         'clever',
         'email',
-        'windowslive'
+        'windowslive',
       ]);
       const nextState = reducer(initialState, action);
       assert.deepEqual(nextState.providers, [
         'google_classroom',
         'clever',
         'email',
-        'windowslive'
+        'windowslive',
       ]);
     });
   });
@@ -234,7 +233,7 @@ describe('teacherSectionsRedux', () => {
       const action2 = setSections(
         sections.map(section => ({
           id: section.id,
-          name: section.name
+          name: section.name,
         }))
       );
       assert.throws(() => {
@@ -328,7 +327,7 @@ describe('teacherSectionsRedux', () => {
         unitId: null,
         hidden: false,
         isAssigned: undefined,
-        restrictSection: false
+        restrictSection: false,
       });
     });
 
@@ -360,7 +359,7 @@ describe('teacherSectionsRedux', () => {
         unitId: unitId,
         hidden: false,
         isAssigned: undefined,
-        restrictSection: false
+        restrictSection: false,
       });
     });
   });
@@ -388,7 +387,7 @@ describe('teacherSectionsRedux', () => {
         unitId: null,
         hidden: false,
         isAssigned: undefined,
-        restrictSection: false
+        restrictSection: false,
       });
     });
 
@@ -420,7 +419,7 @@ describe('teacherSectionsRedux', () => {
         restrictSection: false,
         postMilestoneDisabled: false,
         codeReviewExpiresAt: null,
-        isAssignedCSA: undefined
+        isAssignedCSA: undefined,
       });
     });
   });
@@ -468,7 +467,7 @@ describe('teacherSectionsRedux', () => {
         editingNewSectionState,
         editSectionProperties({
           name: 'newName',
-          courseId: 61
+          courseId: 61,
         })
       );
       expect(state.sectionBeingEdited.name).to.equal('newName');
@@ -482,7 +481,7 @@ describe('teacherSectionsRedux', () => {
           editSectionProperties({
             name: 'newName',
             courseId: 61,
-            providerManaged: false // Uneditable!
+            providerManaged: false, // Uneditable!
           })
         )
       ).to.throw();
@@ -577,7 +576,7 @@ describe('teacherSectionsRedux', () => {
       createdAt: createdAt,
       hidden: false,
       restrict_section: false,
-      post_milestone_disabled: false
+      post_milestone_disabled: false,
     };
 
     function successResponse(customProps = {}) {
@@ -589,8 +588,8 @@ describe('teacherSectionsRedux', () => {
         JSON.stringify({
           ...(existingSection || newSectionDefaults),
           id: existingSection ? editingSectionId : 13,
-          ...customProps
-        })
+          ...customProps,
+        }),
       ];
     }
 
@@ -692,7 +691,7 @@ describe('teacherSectionsRedux', () => {
         editSectionProperties({
           name: 'Aquarius PM Block 2',
           loginType: 'picture',
-          grades: ['3']
+          grades: ['3'],
         })
       );
       server.respondWith(
@@ -702,7 +701,7 @@ describe('teacherSectionsRedux', () => {
           name: 'Aquarius PM Block 2',
           login_type: 'picture',
           grades: ['3'],
-          participantType: 'student'
+          participantType: 'student',
         })
       );
 
@@ -736,8 +735,8 @@ describe('teacherSectionsRedux', () => {
           restrictSection: false,
           postMilestoneDisabled: false,
           codeReviewExpiresAt: null,
-          isAssignedCSA: undefined
-        }
+          isAssignedCSA: undefined,
+        },
       });
     });
 
@@ -780,7 +779,7 @@ describe('teacherSectionsRedux', () => {
       return [
         200,
         {'Content-Type': 'application/json'},
-        JSON.stringify(response)
+        JSON.stringify(response),
       ];
     }
 
@@ -972,7 +971,7 @@ describe('teacherSectionsRedux', () => {
       studentCount: 10,
       hidden: false,
       restrict_section: false,
-      post_milestone_disabled: false
+      post_milestone_disabled: false,
     };
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {
@@ -1023,8 +1022,8 @@ describe('teacherSectionsRedux', () => {
         ...sections[1],
         course_offering_id: null,
         course_version_id: null,
-        unit_id: null
-      }
+        unit_id: null,
+      },
     });
     const stateWithInvalidUnitAssignment = reducer(stateWithSections, {
       type: EDIT_SECTION_SUCCESS,
@@ -1033,8 +1032,8 @@ describe('teacherSectionsRedux', () => {
         ...sections[1],
         course_offering_id: 2,
         course_version_id: 3,
-        unit_id: 9999
-      }
+        unit_id: 9999,
+      },
     });
     const stateWithInvalidCourseOfferingAssignment = reducer(
       stateWithSections,
@@ -1045,8 +1044,8 @@ describe('teacherSectionsRedux', () => {
           ...sections[1],
           course_offering_id: 9999,
           course_version_id: 9999,
-          unit_id: null
-        }
+          unit_id: null,
+        },
       }
     );
 
@@ -1161,29 +1160,6 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe('isEditingSection', () => {
-    it('is false in initial state', () => {
-      assert.isFalse(isEditingSection(initialState));
-    });
-
-    it('is false when creating a new section', () => {
-      const state = reducer(initialState, beginEditingSection());
-      assert.isFalse(isEditingSection(state));
-    });
-
-    it('is true when editing an existing section', () => {
-      const stateWithSections = reducer(initialState, setSections(sections));
-      const state = reducer(stateWithSections, beginEditingSection(12));
-      assert(isEditingSection(state));
-    });
-
-    it('is false after editing is cancelled', () => {
-      const initialState = reducer(initialState, beginEditingSection());
-      const state = reducer(initialState, cancelEditingSection());
-      assert.isFalse(isEditingSection(state));
-    });
-  });
-
   describe('the beginImportRosterFlow action', () => {
     let server;
     beforeEach(() => {
@@ -1205,7 +1181,7 @@ describe('teacherSectionsRedux', () => {
     const successResponse = (body = {}) => [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(body)
+      JSON.stringify(body),
     ];
 
     const failureResponse = [500, {}, 'test-failure-body'];
@@ -1300,7 +1276,7 @@ describe('teacherSectionsRedux', () => {
       expect(getState().teacherSections.classrooms).to.be.null;
       expect(getState().teacherSections.loadError).to.deep.equal({
         status: 500,
-        message: 'Unknown error.'
+        message: 'Unknown error.',
       });
       return expect(promise).to.be.rejected;
     });
@@ -1317,7 +1293,7 @@ describe('teacherSectionsRedux', () => {
     it('clears the classroom list', () => {
       store.dispatch({
         type: IMPORT_ROSTER_FLOW_LIST_LOADED,
-        classrooms: [1, 2, 3]
+        classrooms: [1, 2, 3],
       });
       expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
       store.dispatch(cancelImportRosterFlow());
@@ -1369,7 +1345,7 @@ describe('teacherSectionsRedux', () => {
     const successResponse = (body = {}) => [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(body)
+      JSON.stringify(body),
     ];
 
     const withGoogle = () =>
@@ -1381,7 +1357,7 @@ describe('teacherSectionsRedux', () => {
       withGoogle();
       store.dispatch({
         type: IMPORT_ROSTER_FLOW_LIST_LOADED,
-        classrooms: [1, 2, 3]
+        classrooms: [1, 2, 3],
       });
       expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
 
@@ -1477,7 +1453,7 @@ describe('teacherSectionsRedux', () => {
         'GET',
         `/dashboardapi/import_google_classroom?courseId=${TEST_COURSE_ID}&courseName=${TEST_COURSE_NAME}`,
         successResponse({
-          id: 1111
+          id: 1111,
         })
       );
       // Set up custom section load response to simulate the new section
@@ -1544,8 +1520,8 @@ describe('teacherSectionsRedux', () => {
             login_type: 'google_classroom',
             code: 'G-123456',
             studentCount: 10,
-            providerManaged: true
-          }
+            providerManaged: true,
+          },
         ])
       );
       expect(sectionProvider(getState(), 11)).to.equal('google_classroom');
@@ -1571,8 +1547,8 @@ describe('teacherSectionsRedux', () => {
             login_type: 'google_classroom',
             code: 'G-123456',
             studentCount: 10,
-            providerManaged: true
-          }
+            providerManaged: true,
+          },
         ])
       );
       expect(isSectionProviderManaged(getState(), 11)).to.be.true;
@@ -1583,15 +1559,15 @@ describe('teacherSectionsRedux', () => {
     it('filters out hidden sections', () => {
       const expectedVisibleSections = [
         {id: 11, hidden: false},
-        {id: 1, hidden: null}
+        {id: 1, hidden: null},
       ];
       const state = {
         teacherSections: {
           sections: {
             2: {id: 2, hidden: true},
-            ...expectedVisibleSections
-          }
-        }
+            ...expectedVisibleSections,
+          },
+        },
       };
       const actualVisibleSections = getVisibleSections(state);
 
@@ -1603,9 +1579,9 @@ describe('teacherSectionsRedux', () => {
         teacherSections: {
           sections: {
             2: {id: 2, hidden: true},
-            1: {id: 1, hidden: true}
-          }
-        }
+            1: {id: 1, hidden: true},
+          },
+        },
       };
       const visibleSections = getVisibleSections(state);
 
@@ -1615,8 +1591,8 @@ describe('teacherSectionsRedux', () => {
     it('does not error if there are no sections', () => {
       const state = {
         teacherSections: {
-          sections: {}
-        }
+          sections: {},
+        },
       };
       const visibleSections = getVisibleSections(state);
 
@@ -1630,16 +1606,16 @@ describe('teacherSectionsRedux', () => {
       const expected = [
         {
           id: 307,
-          name: 'My Third Section'
+          name: 'My Third Section',
         },
         {
           id: 12,
-          name: 'My Other Section'
+          name: 'My Other Section',
         },
         {
           id: 11,
-          name: 'My Section'
-        }
+          name: 'My Section',
+        },
       ];
       assert.deepEqual(sectionsNameAndId(state), expected);
     });
@@ -1664,7 +1640,7 @@ describe('teacherSectionsRedux', () => {
           providerManaged: false,
           hidden: false,
           assignmentNames: ['CS Discoveries 2017'],
-          assignmentPaths: ['/courses/csd-2017']
+          assignmentPaths: ['/courses/csd-2017'],
         },
         {
           id: 12,
@@ -1678,8 +1654,8 @@ describe('teacherSectionsRedux', () => {
           providerManaged: false,
           hidden: false,
           assignmentNames: ['Course A'],
-          assignmentPaths: ['/s/coursea-2017']
-        }
+          assignmentPaths: ['/s/coursea-2017'],
+        },
       ];
       assert.deepEqual(data, expected);
     });
@@ -1727,7 +1703,7 @@ describe('teacherSectionsRedux', () => {
         previousCourseVersionId: testSection.courseVersionId,
         newUnitId: 103,
         newCourseId: 101,
-        newCourseVersionId: 102
+        newCourseVersionId: 102,
       });
     });
 
@@ -1752,7 +1728,7 @@ describe('teacherSectionsRedux', () => {
         previousCourseVersionId: testSection.courseVersionId,
         newUnitId: 7,
         newCourseId: testSection.courseOfferingId,
-        newCourseVersionId: testSection.courseVersionId
+        newCourseVersionId: testSection.courseVersionId,
       });
     });
 

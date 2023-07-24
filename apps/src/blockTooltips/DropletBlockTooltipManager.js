@@ -1,4 +1,3 @@
-/*globals dashboard*/
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -29,7 +28,7 @@ var DEFAULT_TOOLTIP_CONFIG = {
   contentAsHTML: true,
   theme: 'droplet-block-tooltipster',
   offsetY: 2,
-  delay: 400
+  delay: 400,
 };
 
 /**
@@ -159,7 +158,7 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ =
                 }
               });
             }
-          }.bind(this)
+          }.bind(this),
         });
 
         // Store the title/funcName as data-block so we can attach callouts later:
@@ -197,7 +196,7 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function (functionName) {
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
     showExamplesLink: tooltipInfo.showExamplesLink,
-    showCodeLink: tooltipInfo.showCodeLink
+    showCodeLink: tooltipInfo.showCodeLink,
   });
 };
 

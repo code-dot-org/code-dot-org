@@ -111,7 +111,7 @@ export const commands = {
   stopTimedLoop(opts) {
     apiValidateType(opts, 'stopTimedLoop', 'key', opts.key, 'number', OPTIONAL);
     apiTimeoutList.stopTimedLoop(opts.key);
-  }
+  },
 };
 
 /**
@@ -126,7 +126,7 @@ export const executors = {
     executeCmd(null, 'setInterval', {callback, milliseconds}),
   clearInterval: intervalId => executeCmd(null, 'clearInterval', {intervalId}),
   timedLoop: (ms, callback) => executeCmd(null, 'timedLoop', {ms, callback}),
-  stopTimedLoop: key => executeCmd(null, 'stopTimedLoop', {key})
+  stopTimedLoop: key => executeCmd(null, 'stopTimedLoop', {key}),
 };
 
 /**
@@ -141,14 +141,14 @@ export const dropletConfig = {
     type: 'either',
     paletteParams: ['callback', 'ms'],
     params: ['function() {\n  \n}', '1000'],
-    allowFunctionDrop: {0: true}
+    allowFunctionDrop: {0: true},
   },
   clearTimeout: {
     func: 'clearTimeout',
     parent: executors,
     category: 'Control',
     paletteParams: ['__'],
-    params: ['__']
+    params: ['__'],
   },
   setInterval: {
     func: 'setInterval',
@@ -157,14 +157,14 @@ export const dropletConfig = {
     type: 'either',
     paletteParams: ['callback', 'ms'],
     params: ['function() {\n  \n}', '1000'],
-    allowFunctionDrop: {0: true}
+    allowFunctionDrop: {0: true},
   },
   clearInterval: {
     func: 'clearInterval',
     parent: executors,
     category: 'Control',
     paletteParams: ['__'],
-    params: ['__']
+    params: ['__'],
   },
   timedLoop: {
     func: 'timedLoop',
@@ -172,12 +172,12 @@ export const dropletConfig = {
     category: 'Control',
     paletteParams: ['ms', 'callback'],
     params: ['1000', 'function() {\n  \n}'],
-    allowFunctionDrop: {1: true}
+    allowFunctionDrop: {1: true},
   },
   stopTimedLoop: {
     func: 'stopTimedLoop',
     parent: executors,
     category: 'Control',
-    paramButtons: {minArgs: 0, maxArgs: 1}
-  }
+    paramButtons: {minArgs: 0, maxArgs: 1},
+  },
 };

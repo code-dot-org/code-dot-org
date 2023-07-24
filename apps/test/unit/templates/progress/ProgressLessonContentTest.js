@@ -21,7 +21,7 @@ describe('ProgressLessonContent', function () {
       <ProgressLessonContent
         levels={fakeLevels(3).map(level => ({
           ...level,
-          progression: 'Progression'
+          progression: 'Progression',
         }))}
         disabled={false}
       />

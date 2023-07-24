@@ -26,7 +26,7 @@ export function createMicroBitComponents(boardClient) {
     tempSensor: new MicroBitThermometer({mb: boardClient}),
     accelerometer: new Accelerometer({mb: boardClient}),
     compass: new Compass({mb: boardClient}),
-    lightSensor: new LightSensor({mb: boardClient})
+    lightSensor: new LightSensor({mb: boardClient}),
   });
 }
 
@@ -124,5 +124,5 @@ export const componentConstructors = {
   LightSensor,
   ExternalButton,
   ExternalLed,
-  CapacitiveTouchSensor
+  CapacitiveTouchSensor,
 };

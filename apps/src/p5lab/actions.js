@@ -30,7 +30,7 @@ export function changeInterfaceMode(interfaceMode) {
     $(window).trigger('appModeChanged');
     dispatch({
       type: CHANGE_INTERFACE_MODE,
-      interfaceMode: interfaceMode
+      interfaceMode: interfaceMode,
     });
     dispatch(
       setAllowInstructionsResize(interfaceMode === P5LabInterfaceMode.CODE)
@@ -42,7 +42,7 @@ export function toggleGridOverlay(showGridOverlay) {
   return function (dispatch) {
     dispatch({
       type: TOGGLE_GRID_OVERLAY,
-      showGridOverlay: showGridOverlay
+      showGridOverlay: showGridOverlay,
     });
   };
 }
@@ -50,7 +50,7 @@ export function toggleGridOverlay(showGridOverlay) {
 export function viewAnimationJson(animationJson) {
   return {
     type: VIEW_ANIMATION_JSON,
-    content: animationJson
+    content: animationJson,
   };
 }
 

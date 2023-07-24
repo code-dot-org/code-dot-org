@@ -11,35 +11,35 @@ export const tipTypes = {
     displayName: i18n.teachingTip(),
     icon: 'lightbulb-o',
     color: color.orange,
-    backgroundColor: color.lightest_orange
+    backgroundColor: color.lightest_orange,
   },
   contentCorner: {
     displayName: i18n.contentCorner(),
     icon: 'graduation-cap',
     color: color.teal,
-    backgroundColor: color.lightest_teal
+    backgroundColor: color.lightest_teal,
   },
   discussionGoal: {
     displayName: i18n.discussionGoal(),
     icon: 'comments',
     color: color.purple,
-    backgroundColor: color.lightest_purple
+    backgroundColor: color.lightest_purple,
   },
   assessmentOpportunity: {
     displayName: i18n.assessmentOpportunity(),
     icon: 'check-circle',
     color: color.purple,
-    backgroundColor: color.lightest_purple
-  }
+    backgroundColor: color.lightest_purple,
+  },
 };
 
 class LessonTip extends Component {
   static propTypes = {
-    tip: PropTypes.object
+    tip: PropTypes.object,
   };
 
   state = {
-    expanded: true
+    expanded: true,
   };
 
   getTabStyle = () => {
@@ -53,7 +53,7 @@ class LessonTip extends Component {
       ...styles.tab,
       ...defaultStyle,
       borderColor: tipColor,
-      ':hover': hoverStyle
+      ':hover': hoverStyle,
     };
   };
 
@@ -80,8 +80,8 @@ class LessonTip extends Component {
               ...styles.box,
               ...{borderColor: tipTypes[this.props.tip.type].color},
               ...{
-                backgroundColor: tipTypes[this.props.tip.type].backgroundColor
-              }
+                backgroundColor: tipTypes[this.props.tip.type].backgroundColor,
+              },
             }}
           >
             <SafeMarkdown markdown={this.props.tip.markdown} />
@@ -100,23 +100,23 @@ const styles = {
     borderTopRightRadius: 10,
     borderWidth: 1,
     padding: '5px 10px',
-    width: 200
+    width: 200,
   },
   box: {
     borderStyle: 'solid',
     borderWidth: 1,
-    padding: 10
+    padding: 10,
   },
   icon: {
     marginLeft: 7,
-    marginRight: 5
+    marginRight: 5,
   },
   caret: {
-    float: 'right'
+    float: 'right',
   },
   tip: {
-    marginBottom: 5
-  }
+    marginBottom: 5,
+  },
 };
 
 export default Radium(LessonTip);

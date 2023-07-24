@@ -77,7 +77,7 @@ export const commands = {
           sprite.scale = 0;
         }
       },
-      y: sprite => (sprite.y -= val)
+      y: sprite => (sprite.y -= val),
     };
     sprites.forEach(sprite => {
       if (specialCases[prop]) {
@@ -108,7 +108,7 @@ export const commands = {
       sprite.glideTargets.push(location);
       this.addBehavior(sprite, {
         func: behaviorCommands.glideFunc.apply(this),
-        name: 'glide'
+        name: 'glide',
       });
     });
   },
@@ -194,7 +194,7 @@ export const commands = {
       North: sprite => (sprite.y -= distance),
       East: sprite => (sprite.x += distance),
       South: sprite => (sprite.y += distance),
-      West: sprite => (sprite.x -= distance)
+      West: sprite => (sprite.x -= distance),
     };
     if (!dirs[direction]) {
       console.error('invalid direction: ' + direction);
@@ -243,12 +243,12 @@ export const commands = {
         if (val) {
           this.addBehavior(sprite, {
             func: behaviorCommands.draggableFunc.apply(this),
-            name: 'draggable'
+            name: 'draggable',
           });
         } else {
           this.removeBehavior(sprite, {
             func: behaviorCommands.draggableFunc.apply(this),
-            name: 'draggable'
+            name: 'draggable',
           });
         }
       },
@@ -257,7 +257,7 @@ export const commands = {
       scale: sprite => sprite.setScale(val / 100),
       width: sprite =>
         (sprite.width = (sprite.animation.getWidth() * val) / 100),
-      y: sprite => (sprite.y = 400 - val)
+      y: sprite => (sprite.y = 400 - val),
     };
     sprites.forEach(sprite => {
       if (specialCases[prop]) {
@@ -308,5 +308,5 @@ export const commands = {
         sprite.direction -= degrees;
       }
     });
-  }
+  },
 };

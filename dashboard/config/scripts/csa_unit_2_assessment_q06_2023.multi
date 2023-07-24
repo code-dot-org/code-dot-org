@@ -12,3 +12,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Overloading is defining two or more constructors or methods with the same name but different signatures.
 MARKDOWN
+
+allow_multiple_attempts true

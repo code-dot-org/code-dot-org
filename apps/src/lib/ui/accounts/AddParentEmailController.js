@@ -27,7 +27,7 @@ export default class AddParentEmailController {
     formParentEmailField,
     formParentOptInField,
     link,
-    onSuccessCallback
+    onSuccessCallback,
   }) {
     this.form = form;
     this.formParentEmailField = formParentEmailField;
@@ -86,8 +86,8 @@ export default class AddParentEmailController {
         if (validationErrors) {
           error = {
             serverErrors: {
-              parentEmail: validationErrors.email && validationErrors.email[0]
-            }
+              parentEmail: validationErrors.email && validationErrors.email[0],
+            },
           };
         } else {
           error = new Error('Unexpected failure: ' + xhr.status);

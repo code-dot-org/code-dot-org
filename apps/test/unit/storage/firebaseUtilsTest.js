@@ -1,7 +1,7 @@
 import {expect} from '../../util/reconfiguredChai';
 import {
   fixFirebaseKey,
-  validateFirebaseKey
+  validateFirebaseKey,
 } from '@cdo/apps/storage/firebaseUtils';
 
 describe('firebaseUtils', () => {

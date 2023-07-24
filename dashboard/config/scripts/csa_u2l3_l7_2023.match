@@ -5,3 +5,5 @@ height '100'
 
 question 'Question'
 answer 'Answer 1'
+
+allow_multiple_attempts true

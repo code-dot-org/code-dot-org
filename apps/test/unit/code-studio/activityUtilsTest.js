@@ -3,7 +3,7 @@ import {TestResults} from '@cdo/apps/constants';
 
 import {
   activityCssClass,
-  mergeActivityResult
+  mergeActivityResult,
 } from '@cdo/apps/code-studio/activityUtils';
 
 describe('mergeActivityResult', function () {

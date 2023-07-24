@@ -26,7 +26,7 @@ describe('MicroBitAccelerometer', function () {
       'x',
       'y',
       'z',
-      'acceleration'
+      'acceleration',
     ];
     let desc;
 

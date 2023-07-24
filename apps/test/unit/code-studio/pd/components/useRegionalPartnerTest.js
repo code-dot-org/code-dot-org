@@ -7,7 +7,7 @@ import sinon from 'sinon';
 import {useRegionalPartner} from '@cdo/apps/code-studio/pd/components/useRegionalPartner';
 import {
   PROGRAM_CSD,
-  PROGRAM_CSA
+  PROGRAM_CSA,
 } from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
 import _ from 'lodash';
 
@@ -21,7 +21,7 @@ const RegionalPartnerUser = props => {
   return null;
 };
 RegionalPartnerUser.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object,
 };
 
 const getRegionalPartnerData = () => {
@@ -31,13 +31,13 @@ const getRegionalPartnerData = () => {
 const GOOD_RESPONSE = {
   id: 1,
   name: 'reginald partner',
-  pl_programs_offered: ['CSA']
+  pl_programs_offered: ['CSA'],
 };
 
 const mockApiResponse = (status = 200, body = {}) => {
   return new window.Response(JSON.stringify(body), {
     status,
-    headers: {'Content-type': 'application/json'}
+    headers: {'Content-type': 'application/json'},
   });
 };
 
@@ -90,7 +90,7 @@ describe('useRegionalPartner tests', () => {
             school: '-1',
             schoolZipCode: '12345',
             schoolState: 'AK',
-            program: PROGRAM_CSA
+            program: PROGRAM_CSA,
           }}
         />
       );
@@ -113,7 +113,7 @@ describe('useRegionalPartner tests', () => {
             school: '-1',
             schoolZipCode: '12345',
             schoolState: 'AK',
-            program: PROGRAM_CSD
+            program: PROGRAM_CSD,
           }}
         />
       );
@@ -140,7 +140,7 @@ describe('useRegionalPartner tests', () => {
             school: '-1',
             schoolZipCode: '12345',
             schoolState: 'AK',
-            program: PROGRAM_CSA
+            program: PROGRAM_CSA,
           }}
         />
       );

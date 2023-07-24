@@ -81,7 +81,7 @@ describe('NetSimVisualization', function () {
       testShard,
       {
         localNodeID: localVizNode.getCorrespondingEntityId(),
-        remoteNodeID: remoteVizNode.getCorrespondingEntityId()
+        remoteNodeID: remoteVizNode.getCorrespondingEntityId(),
       },
       function (e, w) {
         newWire = w;

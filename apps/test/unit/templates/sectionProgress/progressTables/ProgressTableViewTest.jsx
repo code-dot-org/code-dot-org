@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import ProgressTableView, {
-  UnconnectedProgressTableView
+  UnconnectedProgressTableView,
 } from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
@@ -28,7 +28,7 @@ import {
   fakeLessonWithLevels,
   fakeStudents,
   fakeScriptData,
-  fakeProgressTableReduxInitialState
+  fakeProgressTableReduxInitialState,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import * as progressTableHelpers from '@cdo/apps/templates/sectionProgress/progressTables/progressTableHelpers';
 
@@ -52,7 +52,7 @@ const setUp = (currentView = ViewType.SUMMARY, overrideState = {}) => {
       sectionProgress,
       unitSelection,
       locales,
-      isRtl
+      isRtl,
     }),
     _.merge({}, initialState, overrideState)
   );
@@ -150,7 +150,7 @@ describe('ProgressTableView', () => {
       getSummaryCellFormattersStub.returns([
         () => <div />, // main cell formatter
         timeSpentFormatterStub,
-        lastUpdatedFormatterStub
+        lastUpdatedFormatterStub,
       ]);
 
       const container = setUp(ViewType.SUMMARY)
@@ -220,7 +220,7 @@ describe('ProgressTableView', () => {
       getDetailCellFormattersStub.returns([
         () => <div />, // main cell formatter
         timeSpentFormatterStub,
-        lastUpdatedFormatterStub
+        lastUpdatedFormatterStub,
       ]);
 
       const container = setUp(ViewType.DETAIL)

@@ -5,6 +5,6 @@ export function recordImpression(study_group) {
     study: 'teacher_dashboard_actions',
     study_group: study_group,
     event: 'load_feature',
-    data_json: '{}'
+    data_json: '{}',
   });
 }

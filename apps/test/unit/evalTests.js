@@ -42,7 +42,7 @@ describe('getTextStringsFromObject_', function () {
     var multi = new EvalMulti(text1, text2);
     assert.deepEqual(Eval.getTextStringsFromObject_(multi), [
       'i like math',
-      'i like math more'
+      'i like math more',
     ]);
   });
 
@@ -60,7 +60,7 @@ describe('getTextStringsFromObject_', function () {
       'one',
       'two',
       'three',
-      'four'
+      'four',
     ]);
   });
 });

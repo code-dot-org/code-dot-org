@@ -13,7 +13,7 @@ describe('TextareaWithMarkdownPreview', () => {
       markdown:
         '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
       helpTip: 'Helpful information so you know what to do',
-      handleMarkdownChange
+      handleMarkdownChange,
     };
   });
 

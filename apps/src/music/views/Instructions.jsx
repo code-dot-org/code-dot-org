@@ -1,22 +1,30 @@
 import PropTypes from 'prop-types';
 import React, {useContext, useEffect, useState} from 'react';
 import classNames from 'classnames';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import moduleStyles from './instructions.module.scss';
 import {AnalyticsContext} from '../context';
 import {useSelector} from 'react-redux';
+import musicI18n from '../locale';
 
 /**
  * Renders the Music Lab instructions component.
  */
-const Instructions = ({progression, onNextPanel, baseUrl, vertical, right}) => {
+const Instructions = ({
+  progressionStep,
+  currentLevelIndex,
+  levelCount,
+  onNextPanel,
+  baseUrl,
+  vertical,
+  right,
+}) => {
   const [showBigImage, setShowBigImage] = useState(false);
-  const progressState = useSelector(state => state.music.currentProgressState);
-  const currentPanel = progressState.step;
+  const validationState = useSelector(state => state.lab.validationState);
+  const currentPanel = currentLevelIndex;
 
   const getNextPanel = () => {
-    return currentPanel + 1 < progression.steps.length
-      ? currentPanel + 1
-      : null;
+    return currentPanel + 1 < levelCount ? currentPanel + 1 : null;
   };
 
   const imageClicked = () => {
@@ -29,11 +37,7 @@ const Instructions = ({progression, onNextPanel, baseUrl, vertical, right}) => {
     analyticsReporter.onInstructionsVisited(currentPanel + 1);
   }, [currentPanel, analyticsReporter]);
 
-  const nextPanel = getNextPanel();
-
-  const progressText = progression
-    ? `${currentPanel + 1}/${progression.steps.length}`
-    : '';
+  const hasNextPanel = validationState.satisfied ? !!getNextPanel() : false;
 
   return (
     <div
@@ -43,48 +47,32 @@ const Instructions = ({progression, onNextPanel, baseUrl, vertical, right}) => {
         vertical && moduleStyles.vertical
       )}
     >
-      {progression && (
+      {progressionStep && (
         <InstructionsPanel
-          panel={progression.steps[currentPanel]}
-          message={progressState.message}
+          panel={progressionStep}
+          message={validationState.message}
           vertical={vertical}
           baseUrl={baseUrl}
-          path={progression.path}
+          path={''}
           imageClicked={imageClicked}
           right={right}
           showBigImage={showBigImage}
+          onNextPanel={hasNextPanel ? onNextPanel : null}
         />
       )}
-      <div className={moduleStyles.bottom}>
-        <div className={moduleStyles.progressText}>{progressText}</div>
-        <div>
-          {progressState.satisfied && (
-            <button
-              type="button"
-              onClick={() => onNextPanel()}
-              className={classNames(
-                moduleStyles.button,
-                moduleStyles.buttonNext,
-                nextPanel !== null && moduleStyles.buttonActive
-              )}
-            >
-              Next
-            </button>
-          )}
-        </div>
-      </div>
     </div>
   );
 };
 
 Instructions.propTypes = {
-  progression: PropTypes.object,
-  currentPanel: PropTypes.number,
+  progressionStep: PropTypes.object,
+  currentLevelIndex: PropTypes.number,
+  levelCount: PropTypes.number,
   message: PropTypes.string,
   onNextPanel: PropTypes.func,
   baseUrl: PropTypes.string.isRequired,
   vertical: PropTypes.bool,
-  right: PropTypes.bool
+  right: PropTypes.bool,
 };
 
 const InstructionsPanel = ({
@@ -95,10 +83,12 @@ const InstructionsPanel = ({
   path,
   imageClicked,
   right,
-  showBigImage
+  showBigImage,
+  onNextPanel,
 }) => {
   return (
     <div
+      id="instructions-panel"
       className={classNames(
         moduleStyles.item,
         vertical && moduleStyles.itemVertical
@@ -144,15 +134,37 @@ const InstructionsPanel = ({
           )}
         </div>
       )}
-      <div
-        className={classNames(
-          moduleStyles.text,
-          vertical && moduleStyles.textVertical
-        )}
-      >
-        {panel.text}
-        <div className={moduleStyles.message}>{message}</div>
-      </div>
+      {panel.text && (
+        <div id="instructions-text" className={moduleStyles.text}>
+          <SafeMarkdown
+            markdown={panel.text}
+            className={moduleStyles.markdownText}
+          />
+        </div>
+      )}
+      {message && (
+        <div id="instructions-feedback" className={moduleStyles.feedback}>
+          <div
+            id="instructions-feedback-message"
+            className={moduleStyles.message}
+          >
+            <SafeMarkdown
+              markdown={message}
+              className={moduleStyles.markdownText}
+            />
+          </div>
+          {onNextPanel && (
+            <button
+              id="instructions-feedback-button"
+              type="button"
+              onClick={() => onNextPanel()}
+              className={moduleStyles.buttonNext}
+            >
+              {musicI18n.continue()}
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 };
@@ -165,7 +177,8 @@ InstructionsPanel.propTypes = {
   imageClicked: PropTypes.func.isRequired,
   showBigImage: PropTypes.bool,
   vertical: PropTypes.bool,
-  right: PropTypes.bool
+  right: PropTypes.bool,
+  onNextPanel: PropTypes.func,
 };
 
 export default Instructions;

@@ -1,5 +1,3 @@
-FactoryBot.allow_class_lookup = false
-
 FactoryBot.define do
   factory :census_submission_school_info, parent: :school_info_us do
     transient do
@@ -277,7 +275,6 @@ FactoryBot.define do
     school {build :school}
     school_year {2017}
     teaches_cs {nil}
-    audit_data {"Fake Audit Data"}
 
     trait :with_valid_teaches_cs do
       teaches_cs {"N"}
@@ -301,10 +298,6 @@ FactoryBot.define do
 
     trait :without_school do
       school {nil}
-    end
-
-    trait :without_audit_data do
-      audit_data {nil}
     end
   end
 end

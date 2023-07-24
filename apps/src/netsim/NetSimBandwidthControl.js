@@ -25,7 +25,7 @@ var NetSimBandwidthControl = (module.exports = function (
     value: Infinity,
     min: 4,
     max: 128 * NetSimConstants.BITS_PER_KILOBIT,
-    upperBoundInfinite: true
+    upperBoundInfinite: true,
   });
 
   // Auto-render, unlike our base class

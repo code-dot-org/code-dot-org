@@ -5,18 +5,18 @@ const migratedSampleResources = [
   {
     key: 'key1',
     name: 'Curriculum',
-    url: 'https://example.com/a'
+    url: 'https://example.com/a',
   },
   {
     key: 'key2',
     name: 'Vocabulary',
-    url: 'https://example.com/b'
-  }
+    url: 'https://example.com/b',
+  },
 ];
 
 export default {
   title: 'ResourcesDropdown',
-  component: ResourcesDropdown
+  component: ResourcesDropdown,
 };
 
 // Template
@@ -28,5 +28,5 @@ export const MigratedTeacherResources = Template.bind({});
 
 export const MigratedStudentResources = Template.bind({});
 MigratedStudentResources.args = {
-  studentFacing: true
+  studentFacing: true,
 };

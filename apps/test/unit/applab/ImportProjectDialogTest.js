@@ -5,14 +5,14 @@ import {expect} from '../../util/reconfiguredChai';
 import {ImportProjectDialog} from '@cdo/apps/applab/ImportProjectDialog';
 import {
   sources as sourcesApi,
-  channels as channelsApi
+  channels as channelsApi,
 } from '@cdo/apps/clientApi';
 
 describe('Applab ImportProjectDialog component', function () {
   var form, urlInput, nextButton;
 
   const defaultProps = {
-    onImport: () => {}
+    onImport: () => {},
   };
 
   beforeEach(() => {

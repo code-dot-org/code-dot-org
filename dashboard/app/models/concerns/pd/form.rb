@@ -135,9 +135,7 @@ module Pd::Form
     # empty fields may come about when the user selects then unselects an
     # option. They should be treated as if they do not exist
     @sanitized_and_trimmed_form_data_hash ||=
-      sanitized_form_data_hash.reject do |_, value|
-        value.blank?
-      end
+      sanitized_form_data_hash.compact_blank
   end
 
   def public_sanitized_form_data_hash

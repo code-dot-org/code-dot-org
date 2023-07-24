@@ -12,7 +12,7 @@ const DEFAULT_PROPS = {
   lastTimestamp: 1611964800,
   studentUrl: '/student-link',
   onToggleExpand: () => {},
-  isExpanded: false
+  isExpanded: false,
 };
 
 describe('ProgressTableStudentName', () => {

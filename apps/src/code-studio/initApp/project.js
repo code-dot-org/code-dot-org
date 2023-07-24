@@ -1,4 +1,3 @@
-/* global appOptions */
 import $ from 'jquery';
 import msg from '@cdo/locale';
 import * as utils from '../../utils';
@@ -34,7 +33,7 @@ import {
   workspaceAlertTypes,
   displayWorkspaceAlert,
   refreshInRestrictedShareMode,
-  refreshTeacherHasConfirmedUploadWarning
+  refreshTeacherHasConfirmedUploadWarning,
 } from '../projectRedux';
 
 // Name of the packed source file
@@ -44,7 +43,7 @@ var events = {
   // Fired when run state changes or we enter/exit design mode
   appModeChanged: 'appModeChanged',
   appInitialized: 'appInitialized',
-  workspaceChange: 'workspaceChange'
+  workspaceChange: 'workspaceChange',
 };
 
 // Number of consecutive failed attempts to update the channel.
@@ -66,7 +65,7 @@ var PathPart = {
   PROJECTS: 1,
   APP: 2,
   CHANNEL_ID: 3,
-  ACTION: 4
+  ACTION: 4,
 };
 
 /**
@@ -119,7 +118,7 @@ var currentSources = {
   selectedSong: null,
   selectedPoem: null,
   inRestrictedShareMode: false,
-  teacherHasConfirmedUploadWarning: false
+  teacherHasConfirmedUploadWarning: false,
 };
 
 /**
@@ -146,7 +145,7 @@ function unpackSources(data) {
     selectedPoem: data.selectedPoem,
     libraries: data.libraries,
     inRestrictedShareMode: data.inRestrictedShareMode,
-    teacherHasConfirmedUploadWarning: data.teacherHasConfirmedUploadWarning
+    teacherHasConfirmedUploadWarning: data.teacherHasConfirmedUploadWarning,
   };
 }
 
@@ -157,6 +156,7 @@ const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
 
 /**
  * Used by setThumbnailUrl() to set the project thumbnail URL path.
+ * NOTE: if changing this URL, update project thumbnail URL validation as well
  */
 const THUMBNAIL_PATH = '.metadata/thumbnail.png';
 
@@ -531,7 +531,7 @@ var projects = (module.exports = {
     },
     setCurrentSourceVersionId(id) {
       currentSourceVersionId = id;
-    }
+    },
   },
 
   //////////////////////////////////////////////////////////////////////
@@ -588,7 +588,7 @@ var projects = (module.exports = {
   showHeaderForProjectBacked() {
     if (this.shouldUpdateHeaders()) {
       header.showHeaderForProjectBacked({
-        showShareAndRemix: !this.shouldHideShareAndRemix()
+        showShareAndRemix: !this.shouldHideShareAndRemix(),
       });
     }
   },
@@ -1278,7 +1278,7 @@ var projects = (module.exports = {
   createNewChannelFromSource(source, callback) {
     channels.create(
       {
-        name: 'New Project'
+        name: 'New Project',
       },
       (err, channelData) => {
         sources.put(
@@ -1329,7 +1329,7 @@ var projects = (module.exports = {
             selectedPoem,
             libraries,
             inRestrictedShareMode,
-            teacherHasConfirmedUploadWarning
+            teacherHasConfirmedUploadWarning,
           });
         })
         .catch(error => callback({error}))
@@ -1351,7 +1351,7 @@ var projects = (module.exports = {
         this.saveSourceAndHtml_(
           {
             ...sourceAndHtml,
-            makerAPIsEnabled: apisEnabled
+            makerAPIsEnabled: apisEnabled,
           },
           () => {
             resolve();
@@ -1376,7 +1376,7 @@ var projects = (module.exports = {
         this.saveSourceAndHtml_(
           {
             ...sourceAndHtml,
-            libraries: updatedLibrariesList
+            libraries: updatedLibrariesList,
           },
           () => {
             resolve();
@@ -1426,8 +1426,8 @@ var projects = (module.exports = {
           isOwner: this.isOwner(),
           currentUrl: window.location.href,
           shareUrl: shareUrl,
-          currentSourceVersionId: currentSourceVersionId
-        })
+          currentSourceVersionId: currentSourceVersionId,
+        }),
       },
       {includeUserId: true}
     );
@@ -1776,6 +1776,7 @@ var projects = (module.exports = {
   },
 
   setThumbnailUrl() {
+    // NOTE: if changing this URL, update project thumbnail URL validation as well
     current.thumbnailUrl = `/v3/files/${current.id}/${THUMBNAIL_PATH}`;
     thumbnailChanged = true;
   },
@@ -1921,7 +1922,7 @@ var projects = (module.exports = {
       sourcesApi = useSourcesPublic ? sourcesPublic : sources;
     }
     return sourcesApi;
-  }
+  },
 });
 
 function fetchAbuseScore(resolve) {
@@ -1989,7 +1990,7 @@ function fetchPrivacyProfanityViolations(resolve) {
 function fetchAbuseScoreAndPrivacyViolations(project) {
   const promises = [
     new Promise(fetchAbuseScore),
-    new Promise(fetchShareFailure)
+    new Promise(fetchShareFailure),
   ];
 
   if (project.getStandaloneApp() === 'playlab') {
@@ -2130,7 +2131,7 @@ function parsePath() {
     return {
       appName: null,
       channelId: null,
-      action: null
+      action: null,
     };
   }
 
@@ -2152,6 +2153,6 @@ function parsePath() {
   return {
     appName: tokens[PathPart.APP],
     channelId,
-    action: tokens[PathPart.ACTION]
+    action: tokens[PathPart.ACTION],
   };
 }

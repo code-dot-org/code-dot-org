@@ -4,13 +4,13 @@ import {
   SyncOmniAuthSectionButton,
   READY,
   IN_PROGRESS,
-  SUCCESS
+  SUCCESS,
 } from './SyncOmniAuthSectionControl';
 import {action} from '@storybook/addon-actions';
 
 export default {
   title: 'SyncOmniAuthSectionButton',
-  component: SyncOmniAuthSectionButton
+  component: SyncOmniAuthSectionButton,
 };
 
 //
@@ -23,12 +23,12 @@ const Template = args => (
 
 const TemplateClever = Template.bind({});
 TemplateClever.args = {
-  provider: OAuthSectionTypes.clever
+  provider: OAuthSectionTypes.clever,
 };
 
 const TemplateGoogleClassroom = Template.bind({});
 TemplateGoogleClassroom.args = {
-  provider: OAuthSectionTypes.google_classroom
+  provider: OAuthSectionTypes.google_classroom,
 };
 
 //
@@ -38,35 +38,35 @@ TemplateGoogleClassroom.args = {
 export const SyncCleverReady = Template.bind({});
 SyncCleverReady.args = {
   ...TemplateClever.args,
-  buttonState: READY
+  buttonState: READY,
 };
 
 export const SyncGoogleClassroomReady = Template.bind({});
 SyncGoogleClassroomReady.args = {
   ...TemplateGoogleClassroom.args,
-  buttonState: READY
+  buttonState: READY,
 };
 
 export const SyncCleverInProgress = Template.bind({});
 SyncCleverInProgress.args = {
   ...TemplateClever.args,
-  buttonState: IN_PROGRESS
+  buttonState: IN_PROGRESS,
 };
 
 export const SyncGoogleClassroomInProgress = Template.bind({});
 SyncGoogleClassroomInProgress.args = {
   ...TemplateGoogleClassroom.args,
-  buttonState: IN_PROGRESS
+  buttonState: IN_PROGRESS,
 };
 
 export const SyncCleverSuccess = Template.bind({});
 SyncCleverSuccess.args = {
   ...TemplateClever.args,
-  buttonState: SUCCESS
+  buttonState: SUCCESS,
 };
 
 export const SyncGoogleClassroomSuccess = Template.bind({});
 SyncGoogleClassroomSuccess.args = {
   ...TemplateGoogleClassroom.args,
-  buttonState: SUCCESS
+  buttonState: SUCCESS,
 };

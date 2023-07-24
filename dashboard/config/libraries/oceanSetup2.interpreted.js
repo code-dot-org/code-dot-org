@@ -169,9 +169,9 @@ makeNewSpriteAnon("fishing_boat", ({"x":15,"y":40}));
 setProp(({costume: "fishing_boat"}), "scale", 100);
 makeNewSpriteAnon("underseadeco_25", ({"x":49,"y":349}));
 makeNewSpriteAnon("underseadeco_25", ({"x":350,"y":351}));
-makeNumSprites(8, "fish_10");
+makeNumSprites(6, "fish_10");
 setProp(({costume: "fish_10"}), "scale", 40);
-for (var count = 0; count < 12; count++) {
+for (var count = 0; count < 6; count++) {
   makeNewSpriteAnon("green-sea-plant-2", locationAt(math_random_int(1, 400), math_random_int(1, 300)));
 }
 setProp(({costume: "green-sea-plant-2"}), "scale", 40);
@@ -181,12 +181,12 @@ addBehaviorSimple(({costume: "fish_10"}), collectibleBehaviors(new Behavior(wand
 addBehaviorSimple(({costume: "fishing_boat"}), collectibleBehaviors(new Behavior(patrolling, [])));
 
   everyInterval(5, "seconds", function () {
-makeNumSprites(1, "fish_10");
+makeNumSprites(0, "fish_10");
   setProp(({costume: "fish_10"}), "scale", 40);
-    addBehaviorSimple(({costume: "fish_10"}), collectibleBehaviors(new Behavior(wandering, [])));
+    addBehaviorSimple(({costume: "fish_10"}));
   });
-everyInterval(3, "seconds", function () {
-for (var count = 0; count < 2; count++) {
+everyInterval(5, "seconds", function () {
+for (var count = 0; count < 1; count++) {
   makeNewSpriteAnon("green-sea-plant-2", locationAt(math_random_int(1, 400), math_random_int(1, 300)));
 }
   setProp(({costume: "green-sea-plant-2"}), "scale", 40);

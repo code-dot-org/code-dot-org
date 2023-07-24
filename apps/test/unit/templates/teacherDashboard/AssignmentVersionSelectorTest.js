@@ -8,7 +8,7 @@ const defaultProps = {
   onChangeVersion: () => {},
   selectedCourseVersionId: 1,
   courseVersions: courseOfferings['1'].course_versions,
-  disabled: false
+  disabled: false,
 };
 
 describe('AssignmentVersionSelector', () => {

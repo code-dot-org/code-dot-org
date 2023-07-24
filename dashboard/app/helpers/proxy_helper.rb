@@ -166,7 +166,10 @@ module ProxyHelper
       !ip_address.link_local? &&
       !ip_address.loopback? &&
       !ip_address.private? &&
+      # IPAddr doesn't have an exclude? method
+      # rubocop:disable Rails/NegateInclude
       !IPAddr.new('0.0.0.0/8').include?(ip_address)
+      # rubocop:enable Rails/NegateInclude
     )
   end
 end

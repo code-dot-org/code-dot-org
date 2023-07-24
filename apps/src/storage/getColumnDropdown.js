@@ -32,8 +32,8 @@ export function getTables() {
           '<span class="chooseAssetDropdownOption">' +
           msg.choosePrefix() +
           '</a>',
-        click: callback => openModal(ParamType.TABLE, callback)
-      }
+        click: callback => openModal(ParamType.TABLE, callback),
+      },
     ];
   };
 }
@@ -56,12 +56,12 @@ export function getColumns() {
           '<span class="chooseAssetDropdownOption">' +
           msg.choosePrefix() +
           '</a>',
-        click: callback => openModal(ParamType.COLUMN, callback, tableName)
-      }
+        click: callback => openModal(ParamType.COLUMN, callback, tableName),
+      },
     ];
   };
 }
 
 export var __TestInterface = {
-  getTableNameFromColumnSocket: getTableNameFromColumnSocket
+  getTableNameFromColumnSocket: getTableNameFromColumnSocket,
 };

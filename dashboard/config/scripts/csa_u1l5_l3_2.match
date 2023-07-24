@@ -17,3 +17,5 @@ answer 'the value given to an attribute when initializing an object'
 
 question 'formal parameter'
 answer 'the name of the attributes in the constructor signature'
+
+allow_multiple_attempts true

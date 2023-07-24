@@ -6,7 +6,7 @@ export default class ElementSelect extends React.Component {
   static propTypes = {
     onChangeElement: PropTypes.func.isRequired,
     elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
-    selected: PropTypes.instanceOf(HTMLElement)
+    selected: PropTypes.instanceOf(HTMLElement),
   };
 
   handleChange = e => {

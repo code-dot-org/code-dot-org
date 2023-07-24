@@ -6,14 +6,14 @@ import moduleStyles from './instructions-tab.module.scss';
 
 const craftStyles = {
   text: {
-    color: color.white
+    color: color.white,
   },
   highlighted: {
-    color: color.white
+    color: color.white,
   },
   highlightedWrapper: {
-    borderBottom: '2px solid ' + color.white
-  }
+    borderBottom: '2px solid ' + color.white,
+  },
 };
 
 export default class InstructionsTab extends Component {
@@ -26,7 +26,7 @@ export default class InstructionsTab extends Component {
     isLegacyTextColor: PropTypes.bool,
     teacherOnly: PropTypes.bool,
     isMinecraft: PropTypes.bool,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   render() {
@@ -46,7 +46,7 @@ export default class InstructionsTab extends Component {
           : highlightedWrapperStyle
         : this.props.teacherOnly
         ? styles.teacherText
-        : {})
+        : {}),
     };
     const highlightedTextStyle = isLegacyTextColor
       ? styles.legacyHighlightedText
@@ -67,7 +67,7 @@ export default class InstructionsTab extends Component {
         ? styles.teacherText
         : this.props.isMinecraft
         ? craftStyles.text
-        : defaultTextStyle)
+        : defaultTextStyle),
     };
     return (
       <button
@@ -96,7 +96,7 @@ const styles = {
     paddingBottom: 4,
     fontWeight: 'bold',
     cursor: 'pointer',
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
   },
   tabRtl: {
     marginLeft: 5,
@@ -105,42 +105,42 @@ const styles = {
     paddingBottom: 4,
     fontWeight: 'bold',
     cursor: 'pointer',
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
   },
   tabWrapper: {
     overflow: 'hidden',
-    display: 'flex'
+    display: 'flex',
   },
   defaultText: {
-    color: color.neutral_white
+    color: color.neutral_white,
   },
   legacyText: {
-    color: color.charcoal
+    color: color.charcoal,
   },
   text: {
     textOverflow: 'ellipsis',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   teacherText: {
-    color: color.lightest_cyan
+    color: color.lightest_cyan,
   },
   highlighted: {
-    color: color.neutral_white
+    color: color.neutral_white,
   },
   legacyHighlightedText: {
-    color: color.default_text
+    color: color.default_text,
   },
   highlightedWrapper: {
-    borderBottom: '2px solid ' + color.neutral_white
+    borderBottom: '2px solid ' + color.neutral_white,
   },
   legacyHighlightedWrapper: {
-    borderBottom: '2px solid ' + color.default_text
+    borderBottom: '2px solid ' + color.default_text,
   },
   teacherHighlighted: {
-    color: color.white
+    color: color.white,
   },
   teacherHighlightedWrapper: {
     color: color.lightest_cyan,
-    borderBottom: '2px solid ' + color.lightest_cyan
-  }
+    borderBottom: '2px solid ' + color.lightest_cyan,
+  },
 };

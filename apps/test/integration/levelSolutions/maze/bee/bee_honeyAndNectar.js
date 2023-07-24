@@ -6,7 +6,7 @@ var REPEAT_REQUIREMENT = {
     return block.type === 'controls_repeat';
   },
   type: 'controls_repeat',
-  titles: {TIMES: '???'}
+  titles: {TIMES: '???'},
 };
 
 // a no-op block for purposes of having a required block we can choose to insert
@@ -27,7 +27,7 @@ var levelDef = {
     [2, 1, 1, 1, 1, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 1, 1, 0, 0, 0, 0],
-    [0, 0, 1, 1, 0, 0, 0, 0]
+    [0, 0, 1, 1, 0, 0, 0, 0],
   ],
   startDirection: 1, // Direction.EAST,
   initialDirt: [
@@ -38,10 +38,10 @@ var levelDef = {
     [0, 3, -99, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   flowerType: 'redWithNectar',
-  requiredBlocks: [[REPEAT_REQUIREMENT]]
+  requiredBlocks: [[REPEAT_REQUIREMENT]],
 };
 
 module.exports = {
@@ -53,7 +53,7 @@ module.exports = {
       description: 'Get three nectar, make three honey',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       customValidator: function () {
         return (
@@ -72,16 +72,16 @@ module.exports = {
           'maze_moveForward',
           'maze_honey',
           'maze_honey',
-          'maze_honey'
+          'maze_honey',
         ]) +
         NOOP_REPEAT_END +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Get three nectar, make three honey: missing required block',
       expected: {
         result: true,
-        testResult: TestResults.MISSING_BLOCK_FINISHED
+        testResult: TestResults.MISSING_BLOCK_FINISHED,
       },
       customValidator: function () {
         return (
@@ -99,15 +99,15 @@ module.exports = {
           'maze_moveForward',
           'maze_honey',
           'maze_honey',
-          'maze_honey'
+          'maze_honey',
         ]) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Get two nectar, make three honey: missing required block',
       expected: {
         result: false,
-        testResult: TestResults.MISSING_BLOCK_FINISHED
+        testResult: TestResults.MISSING_BLOCK_FINISHED,
       },
       customValidator: function () {
         return (
@@ -124,9 +124,9 @@ module.exports = {
           'maze_moveForward',
           'maze_honey',
           'maze_honey',
-          'maze_honey'
+          'maze_honey',
         ]) +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

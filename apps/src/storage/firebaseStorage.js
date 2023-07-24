@@ -3,7 +3,7 @@ import {
   castValue,
   isBoolean,
   isNumber,
-  toBoolean
+  toBoolean,
 } from './dataBrowser/dataUtils';
 import parseCsv from 'csv-parse';
 import {
@@ -17,13 +17,13 @@ import {
   resetConfigForTesting,
   isInitialized,
   validateFirebaseKey,
-  getPathRef
+  getPathRef,
 } from './firebaseUtils';
 import {
   enforceTableCount,
   incrementRateLimitCounters,
   getLastRecordId,
-  updateTableCounters
+  updateTableCounters,
 } from './firebaseCounters';
 import {
   addColumnName,
@@ -32,7 +32,7 @@ import {
   addMissingColumns,
   getColumnsRef,
   getColumnNamesFromRecords,
-  getColumnNamesSnapshot
+  getColumnNamesSnapshot,
 } from './firebaseMetadata';
 import {tableType} from './redux/data';
 import {WarningType} from './constants';
@@ -92,7 +92,7 @@ FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
   } catch (e) {
     onError({
       type: WarningType.KEY_INVALID,
-      msg: `The key is invalid. ${e.message}`
+      msg: `The key is invalid. ${e.message}`,
     });
     return;
   }
@@ -122,7 +122,7 @@ function fixKeyName(key, onError) {
       type: WarningType.KEY_RENAMED,
       msg:
         `The key was renamed from "${key}" to "${newKey}" because the characters ` +
-        '"$", "#", "[", "]", and "/" are not allowed in key names.'
+        '"$", "#", "[", "]", and "/" are not allowed in key names.',
     });
     key = newKey;
   }
@@ -136,7 +136,7 @@ function fixTableName(tableName, onError) {
       type: WarningType.TABLE_RENAMED,
       msg:
         `The table was renamed from "${tableName}" to "${newTableName}" because the characters ` +
-        '"$", "#", "[", "]", and "/" are not allowed in table names.'
+        '"$", "#", "[", "]", and "/" are not allowed in table names.',
     });
     tableName = newTableName;
   }
@@ -167,7 +167,7 @@ FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
       } catch (e) {
         return Promise.reject({
           type: WarningType.KEY_INVALID,
-          msg: `The key is invalid. ${e.message}`
+          msg: `The key is invalid. ${e.message}`,
         });
       }
       if (jsonValue && jsonValue.length > config.maxPropertySize) {
@@ -270,7 +270,7 @@ function validateTableName(tableName) {
   } catch (e) {
     return Promise.reject({
       type: WarningType.TABLE_NAME_INVALID,
-      msg: `The table name is invalid. ${e.message}`
+      msg: `The table name is invalid. ${e.message}`,
     });
   }
 }
@@ -339,7 +339,7 @@ FirebaseStorage.readRecords = function (
         // this project's channel
         channelRef = getProjectDatabase();
       }
-    })
+    }),
   ]).then(() => {
     if (channelRef) {
       // We found this table in either current or project, so read the
@@ -595,7 +595,7 @@ function enforceUniqueTableNames(tableName) {
       if (snapshot.val()) {
         return Promise.reject({
           type: WarningType.DUPLICATE_TABLE_NAME,
-          msg: `There is already a table with name "${tableName}"`
+          msg: `There is already a table with name "${tableName}"`,
         });
       }
     });
@@ -606,7 +606,7 @@ function enforceUniqueTableNames(tableName) {
     checkForExistingTable(
       getPathRef(getProjectDatabase(), `current_tables/${tableName}`),
       tableName
-    )
+    ),
   ]);
 }
 
@@ -958,7 +958,7 @@ FirebaseStorage.coerceColumn = function (
       if (!allConverted) {
         onError({
           type: WarningType.CANNOT_CONVERT_COLUMN_TYPE,
-          msg: `Not all values in column "${columnName}" could be converted to type "${columnType}".`
+          msg: `Not all values in column "${columnName}" could be converted to type "${columnType}".`,
         });
       }
       return recordsRef.set(recordsData);
@@ -1006,7 +1006,7 @@ function validateRecordsData(recordsData) {
         type: WarningType.IMPORT_FAILED,
         msg:
           `Import failed because the data is too large. ` +
-          `A table may only contain ${config.maxTableRows} rows.`
+          `A table may only contain ${config.maxTableRows} rows.`,
       });
     }
     if (
@@ -1018,7 +1018,7 @@ function validateRecordsData(recordsData) {
         type: WarningType.IMPORT_FAILED,
         msg:
           `Import failed because one of of the records is too large. ` +
-          `The maximum allowable size is ${config.maxRecordSize} bytes.`
+          `The maximum allowable size is ${config.maxRecordSize} bytes.`,
       });
     }
     return recordsData;
@@ -1046,7 +1046,7 @@ function overwriteTableData(tableName, recordsData) {
       const count = Object.keys(recordsData).length;
       return countersRef.set({
         lastId: count,
-        rowCount: count
+        rowCount: count,
       });
     })
     .then(() =>

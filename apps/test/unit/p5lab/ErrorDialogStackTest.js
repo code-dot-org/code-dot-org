@@ -25,19 +25,19 @@ describe('ErrorDialogStack', function () {
         var newState = reducer([], reportError('a mistake'));
         expect(newState).not.to.equal(state);
         expect(newState).to.deep.equal([
-          {message: 'a mistake', error_type: undefined, error_cause: undefined}
+          {message: 'a mistake', error_type: undefined, error_cause: undefined},
         ]);
       });
 
       it('puts the new error object at the beginning of the stack', function () {
         var state = [
-          {message: 'original', error_type: undefined, error_cause: undefined}
+          {message: 'original', error_type: undefined, error_cause: undefined},
         ];
         var newState = reducer(state, reportError('new'));
         expect(newState).not.to.equal(state);
         expect(newState).to.deep.equal([
           {message: 'new', error_type: undefined, error_cause: undefined},
-          {message: 'original', error_type: undefined, error_cause: undefined}
+          {message: 'original', error_type: undefined, error_cause: undefined},
         ]);
       });
 
@@ -49,7 +49,7 @@ describe('ErrorDialogStack', function () {
         );
         expect(newState).not.to.equal(state);
         expect(newState).to.deep.equal([
-          {message: 'a mistake', error_type: 'anim_load', error_cause: '1234'}
+          {message: 'a mistake', error_type: 'anim_load', error_cause: '1234'},
         ]);
       });
 

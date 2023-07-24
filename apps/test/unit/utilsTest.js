@@ -18,7 +18,7 @@ const {
   createUuid,
   normalize,
   stringifyQueryParams,
-  getTabId
+  getTabId,
 } = utils;
 
 describe('utils modules', () => {
@@ -57,11 +57,11 @@ describe('utils modules', () => {
       expect(normalize({x: 0, y: -3})).to.eql({x: 0, y: -1});
       expect(normalize({x: 1, y: 1})).to.eql({
         x: 1 / Math.sqrt(2),
-        y: 1 / Math.sqrt(2)
+        y: 1 / Math.sqrt(2),
       });
       expect(normalize({x: 1, y: -2})).to.eql({
         x: 1 / Math.sqrt(5),
-        y: -2 / Math.sqrt(5)
+        y: -2 / Math.sqrt(5),
       });
     });
   });
@@ -70,7 +70,7 @@ describe('utils modules', () => {
     it('makes a shallow copy of an object', function () {
       const originalObject = {
         num: 2,
-        obj: {}
+        obj: {},
       };
       const newObject = shallowCopy(originalObject);
       expect(newObject).not.to.equal(originalObject);
@@ -83,7 +83,7 @@ describe('utils modules', () => {
     it('strips functions from an object', function () {
       const originalObject = {
         num: 2,
-        func: function () {}
+        func: function () {},
       };
       const newObject = cloneWithoutFunctions(originalObject);
       expect(newObject).not.to.equal(originalObject);
@@ -272,8 +272,8 @@ describe('utils modules', () => {
           },
           numberValidator: function (text) {
             return isNaN(text) ? null : text;
-          }
-        }
+          },
+        },
       };
 
       assert.equal(
@@ -524,7 +524,7 @@ describe('utils modules', () => {
           '&lt;',
           '&gt;',
           '&nbsp;',
-          '\n'
+          '\n',
         ];
 
         var randomTestString = function randomTestString() {
@@ -557,7 +557,7 @@ describe('utils modules', () => {
         SPRING: 'SPRING',
         SUMMER: 'SUMMER',
         FALL: 'FALL',
-        WINTER: 'WINTER'
+        WINTER: 'WINTER',
       });
     });
 
@@ -572,7 +572,7 @@ describe('utils modules', () => {
         undefined: 'undefined',
         null: 'null',
         3.14: '3.14',
-        '[object Object]': '[object Object]'
+        '[object Object]': '[object Object]',
       });
     });
 
@@ -618,14 +618,14 @@ describe('utils modules', () => {
         untouchedProperty: 'originalA',
         untouchedNestedProperty: {property: 'value'},
         overriddenProperty: 'originalC',
-        overriddenNestedProperty: {property: 'originalD'}
+        overriddenNestedProperty: {property: 'originalD'},
       };
 
       const overriddenValue = 'newB';
       const overrides = {
         overriddenProperty: overriddenValue,
         newProperty: 'newValue',
-        overriddenNestedProperty: {property: 'newD'}
+        overriddenNestedProperty: {property: 'newD'},
       };
 
       const expected = {
@@ -633,7 +633,7 @@ describe('utils modules', () => {
         untouchedNestedProperty: {property: 'value'},
         overriddenProperty: overriddenValue,
         overriddenNestedProperty: {property: 'newD'},
-        newProperty: 'newValue'
+        newProperty: 'newValue',
       };
 
       const actual = deepMergeConcatArrays(base, overrides);
@@ -652,7 +652,7 @@ describe('utils modules', () => {
         untouchedNestedProperty: {property: 'value'},
         overriddenProperty: 'originalC',
         overriddenNestedProperty: {property: 'originalD'},
-        items: [1, 2, 3]
+        items: [1, 2, 3],
       };
       const baseClone = _.cloneDeep(base);
 
@@ -660,7 +660,7 @@ describe('utils modules', () => {
         overriddenProperty: 'newB',
         newProperty: 'newValue',
         overriddenNestedProperty: {property: 'newD'},
-        items: [4, 5, 6]
+        items: [4, 5, 6],
       };
 
       const actual = deepMergeConcatArrays(base, overrides);
@@ -689,19 +689,19 @@ describe('utils modules', () => {
       const base = {
         first: 1,
         second: 2,
-        third: 3
+        third: 3,
       };
 
       const overrides = {
         third: '3',
         first: '1',
-        second: '2'
+        second: '2',
       };
 
       const expected = {
         first: '1',
         second: '2',
-        third: '3'
+        third: '3',
       };
       const actual = deepMergeConcatArrays(base, overrides);
       assert.deepEqual(expected, actual, 'overrides expected values');

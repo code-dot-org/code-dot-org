@@ -15,6 +15,8 @@ title: CS Connections
 
 <link href="/css/generated/csc-module.css" rel="stylesheet">
 
+{{ ai_skinny_banner_2023 }}
+
 # Computer Science Connections
 
 Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways!

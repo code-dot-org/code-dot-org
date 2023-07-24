@@ -9,18 +9,18 @@ const initialState = {
     lessonGroups: [],
     lessons: [
       {
-        levels: []
-      }
+        levels: [],
+      },
     ],
     focusAreaLessonIds: [],
     isSummaryView: false,
-    deeperLearningCourse: false
-  }
+    deeperLearningCourse: false,
+  },
 };
 
 export default {
   title: 'MiniViewTopRow',
-  component: MiniViewTopRow
+  component: MiniViewTopRow,
 };
 
 // Template
@@ -34,5 +34,5 @@ const Template = args => (
 
 export const Default = Template.bind({});
 Default.args = {
-  scriptName: 'course1'
+  scriptName: 'course1',
 };

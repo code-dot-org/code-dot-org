@@ -15,7 +15,7 @@ describe('MakerStatusOverlay', () => {
     handleTryAgain: () => {},
     handleDisableMaker: () => {},
     handleOpenSetupPage: () => {},
-    useVirtualBoardOnNextRun: () => {}
+    useVirtualBoardOnNextRun: () => {},
   };
 
   it('renders nothing by default', () => {

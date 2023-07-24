@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import queryString from 'query-string';
 
 import * as viewAsRedux from '@cdo/apps/code-studio/viewAsRedux';
-import {__testonly__} from '@cdo/apps/code-studio/progressRedux';
+import {__testonly__} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {initViewAs} from '@cdo/apps/code-studio/progress';
 
 describe('bestResultLevelId', function () {
@@ -20,7 +20,7 @@ describe('bestResultLevelId', function () {
       4: 20,
       5: 100,
       6: 0,
-      7: 100
+      7: 100,
     };
   });
   it("returns the level when there's only one", function () {
@@ -44,7 +44,7 @@ describe('initViewAs', function () {
   let mockStore, mockSetViewType, mockQueryStringParse;
   before(function () {
     mockStore = {
-      dispatch: sinon.fake()
+      dispatch: sinon.fake(),
     };
 
     mockSetViewType = sinon.stub(viewAsRedux, 'setViewType');

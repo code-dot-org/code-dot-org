@@ -10,3 +10,4 @@ question 'two-way selection'
 answer 'used when two sets of selection statements are needed – one to execute when the condition is true and one to execute when the condition is false'
 question 'relational operator'
 answer 'used to compare numeric values or arithmetic expressions'
+allow_multiple_attempts true

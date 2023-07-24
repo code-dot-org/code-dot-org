@@ -112,7 +112,7 @@ var NetSimShard = (module.exports = function (shardID, pubSubConfig) {
    */
   this.logTable = new NetSimTable(this.pubSubChannel, shardID, 'l', {
     // This is only safe to do because we never update or delete rows in this table.
-    useIncrementalRefresh: true
+    useIncrementalRefresh: true,
   });
   this.logTable.unsubscribe();
 });
@@ -154,7 +154,7 @@ NetSimShard.prototype.resetEverything = function (onComplete) {
     url: '/v3/netsim/' + this.id,
     type: 'delete',
     contentType: 'application/json; charset=utf-8',
-    dataType: 'json'
+    dataType: 'json',
   })
     .done(function () {
       onComplete(null, true);

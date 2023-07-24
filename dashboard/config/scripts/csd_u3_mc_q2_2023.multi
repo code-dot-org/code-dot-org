@@ -1,6 +1,6 @@
 name 'CSD U3 MC Q2_2023'
 type 'multi'
-question 'The following program attempts to draw a crab with a blue background. What change needs to be made so it works correctly? ![](https://images.code.org/34bb691c1fd9a278f739d4a6c8385e22-CSDunit3sprite.png)'
+question ' '
 wrong 'Move `background("blue");` to the end of the program'
 right 'Move `drawSprites();` to the end of the program'
 wrong 'Rename the variable `sprite` to `crab`'
@@ -11,3 +11,11 @@ teacher_markdown <<MARKDOWN
 
 `drawSprites()` should be called after all the sprites have been created.
 MARKDOWN
+
+markdown <<MARKDOWN
+The program below attempts to draw a crab with a blue background. What change needs to be made so that it works correctly?
+<br><br>
+![](https://images.code.org/34bb691c1fd9a278f739d4a6c8385e22-CSDunit3sprite.png)
+MARKDOWN
+
+allow_multiple_attempts true

@@ -24,7 +24,7 @@ const JSDebuggerState = Immutable.Record({
   commandHistory: null,
   logOutput: [],
   maxLogLevel: '',
-  isOpen: false
+  isOpen: false,
 });
 
 export function getRoot(state) {
@@ -97,7 +97,7 @@ export const selectors = {
   getLogOutput,
   getMaxLogLevel,
   isOpen,
-  isRunning
+  isRunning,
 };
 
 // actions
@@ -152,7 +152,7 @@ export function attach(jsInterpreter) {
       type: ATTACH,
       observer,
       watchIntervalId,
-      jsInterpreter
+      jsInterpreter,
     });
   };
 }
@@ -249,7 +249,7 @@ export const actions = {
   stepIn,
   stepOver,
   stepOut,
-  evalInCurrentScope
+  evalInCurrentScope,
 };
 
 // reducer
@@ -278,34 +278,34 @@ function computeNewMaxLogLevel(prevMaxLogLevel, newLogLevel) {
 export function reducer(state, action) {
   if (!state) {
     state = new JSDebuggerState({
-      isOpen: false
+      isOpen: false,
     });
   }
   if (action.type === INITIALIZE) {
     return state.merge({
       runApp: action.runApp,
-      commandHistory: new CommandHistory()
+      commandHistory: new CommandHistory(),
     });
   } else if (action.type === ATTACH) {
     return state.merge({
       jsInterpreter: action.jsInterpreter,
       observer: action.observer,
-      watchIntervalId: action.watchIntervalId
+      watchIntervalId: action.watchIntervalId,
     });
   } else if (action.type === APPEND_LOG) {
     return state.merge({
       logOutput: appendLogOutput(state.logOutput, action.output, action.type),
-      maxLogLevel: computeNewMaxLogLevel(state.maxLogLevel, action.logLevel)
+      maxLogLevel: computeNewMaxLogLevel(state.maxLogLevel, action.logLevel),
     });
   } else if (action.type === CLEAR_LOG) {
     return state.merge({
       logOutput: [],
-      maxLogLevel: ''
+      maxLogLevel: '',
     });
   } else if (action.type === DETACH) {
     return state.merge({
       jsInterpreter: null,
-      watchIntervalId: 0
+      watchIntervalId: 0,
     });
   } else if (action.type === CLOSE) {
     return state.set('isOpen', false);
@@ -319,5 +319,5 @@ export function reducer(state, action) {
 export const reducers = {
   jsdebugger: reducer,
   watchedExpressions,
-  runState
+  runState,
 };

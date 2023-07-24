@@ -35,6 +35,10 @@ def sync_out(upload_manifests=false)
   I18nScriptUtils.with_synchronous_stdout do
     I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
   end
+  puts "updating TTS I18n Static Messages (should usually be a no-op)"
+  I18nScriptUtils.with_synchronous_stdout do
+    I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n_static_messages.rb"
+  end
   clean_up_sync_out(CROWDIN_PROJECTS)
   puts "Sync out completed successfully"
 rescue => exception
@@ -148,6 +152,13 @@ def restore_redacted_files
 
   puts "Restoring redacted files in #{locales.count} locales, parallelized between #{Parallel.processor_count / 2} processes"
 
+  # Prepare some collection literals
+  app_types_with_link = %w(applab gamelab weblab)
+  resource_and_vocab_paths = [
+    'i18n/locales/original/dashboard/scripts.yml',
+    'i18n/locales/original/dashboard/courses.yml'
+  ]
+
   Parallel.each(locales, in_processes: (Parallel.processor_count / 2)) do |prop|
     locale = prop[:locale_s]
     next if locale == 'en-US'
@@ -172,10 +183,7 @@ def restore_redacted_files
       else
         # Everything else is differentiated only by the plugins used
         plugins = []
-        if [
-          'i18n/locales/original/dashboard/scripts.yml',
-          'i18n/locales/original/dashboard/courses.yml'
-        ].include? original_path
+        if resource_and_vocab_paths.include? original_path
           plugins << 'resourceLink'
           plugins << 'vocabularyDefinition'
         elsif original_path.starts_with? "i18n/locales/original/curriculum_content"
@@ -184,7 +192,7 @@ def restore_redacted_files
           plugins << 'visualCodeBlock'
           plugins << 'link'
           plugins << 'resourceLink'
-        elsif %w(applab gamelab weblab).include?(File.basename(original_path, '.json'))
+        elsif app_types_with_link.include?(File.basename(original_path, '.json'))
           plugins << 'link'
         end
         RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
@@ -238,20 +246,37 @@ def sanitize_file_and_write(loc_path, dest_path)
 end
 
 def sanitize_data_and_write(data, dest_path)
-  sanitize! data
+  sorted_data = sort_and_sanitize(data)
 
   dest_data =
     case File.extname(dest_path)
     when '.yaml', '.yml'
-      data.to_yaml
+      sorted_data.to_yaml
     when '.json'
-      JSON.pretty_generate(data)
+      JSON.pretty_generate(sorted_data)
     else
       raise "do not know how to serialize localization data to #{dest_path}"
     end
 
   FileUtils.mkdir_p(File.dirname(dest_path))
   File.write(dest_path, dest_data)
+end
+
+def sort_and_sanitize(hash)
+  hash.sort_by {|key, _| key}.each_with_object({}) do |(key, value), result|
+    case value
+    when Hash
+      # ensure we always call sort_and_sanitize on the hash to avoid top-level empty objects
+      sorted_hash = sort_and_sanitize(value)
+      result[key] = sorted_hash unless sorted_hash.empty?
+    when Array
+      result[key] = value.filter_map {|v| v.is_a?(Hash) ? sort_and_sanitize(v) : v}
+    when String
+      result[key] = value.gsub(/\\r/, "\r") unless value.empty?
+    else
+      result[key] = value unless value.nil?
+    end
+  end
 end
 
 # Wraps hash in correct format to be loaded by our i18n backend.
@@ -483,6 +508,8 @@ def distribute_translations(upload_manifests)
       destination_dir << "/.." if relative_path.start_with? "/views"
       relative_dir = File.dirname(relative_path)
       name = File.basename(loc_file, ".*")
+      # TODO: Remove the ai.md exception when ai.md files are deleted from crowdin
+      next if name == "ai" # ai.md file has been substituted by ai.haml
       destination = File.join(destination_dir, relative_dir, "#{name}.#{locale}.md.partial")
       FileUtils.mkdir_p(File.dirname(destination))
       FileUtils.mv(loc_file, destination)
@@ -605,6 +632,9 @@ def restore_markdown_headers
       source_path = File.join(File.dirname(source_path), File.basename(source_path, ".partial"))
     end
     begin
+      # TODO: Remove the ai.md exception when ai.md files are deleted from crowdin
+      # ai.md file has been substituted by ai.haml therefore source_path for ai.md translations does not exist
+      next unless File.exist? source_path # if source path does not exist, the markdown heaader can not be restored
       source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
     rescue Exception => exception
       puts "Error parsing yaml header in source_path=#{source_path} for path=#{path}"

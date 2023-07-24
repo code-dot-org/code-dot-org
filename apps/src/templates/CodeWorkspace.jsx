@@ -41,7 +41,7 @@ class CodeWorkspace extends React.Component {
     autogenerateML: PropTypes.func,
     closeWorkspaceAlert: PropTypes.func,
     workspaceAlert: PropTypes.object,
-    isProjectTemplateLevel: PropTypes.bool
+    isProjectTemplateLevel: PropTypes.bool,
   };
 
   shouldComponentUpdate(nextProps) {
@@ -102,13 +102,13 @@ class CodeWorkspace extends React.Component {
       readonlyWorkspace,
       withSettingsCog,
       showMakerToggle,
-      autogenerateML
+      autogenerateML,
     } = this.props;
     const showSettingsCog = withSettingsCog && !readonlyWorkspace;
     const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
     const chevronStyle = [
       styles.chevronButton,
-      runModeIndicators && isRunning && styles.runningIcon
+      runModeIndicators && isRunning && styles.runningIcon,
     ];
 
     const settingsCog = showSettingsCog && (
@@ -157,7 +157,7 @@ class CodeWorkspace extends React.Component {
           <span className="show-toolbox-label">{i18n.showToolbox()}</span>
         </span>
         <span>{settingsCog}</span>
-      </PaneSection>
+      </PaneSection>,
     ];
   }
 
@@ -297,13 +297,13 @@ class CodeWorkspace extends React.Component {
 
 const styles = {
   headerIcon: {
-    fontSize: 18
+    fontSize: 18,
   },
   runningIcon: {
     color: color.neutral_white,
     ':hover': {
-      color: color.neutral_dark20
-    }
+      color: color.neutral_dark20,
+    },
   },
   oldVersionWarning: {
     zIndex: 99,
@@ -312,7 +312,7 @@ const styles = {
     height: 20,
     padding: 5,
     opacity: 0.8,
-    position: 'relative'
+    position: 'relative',
   },
   studentNotStartedWarning: {
     zIndex: 99,
@@ -320,7 +320,7 @@ const styles = {
     height: 20,
     padding: 5,
     opacity: 0.9,
-    position: 'relative'
+    position: 'relative',
   },
   startBlocksBanner: {
     zIndex: 99,
@@ -328,7 +328,7 @@ const styles = {
     height: 20,
     padding: 5,
     opacity: 0.9,
-    position: 'relative'
+    position: 'relative',
   },
   chevronButton: {
     padding: 0,
@@ -341,14 +341,14 @@ const styles = {
     ':hover': {
       cursor: 'pointer',
       color: color.neutral_dark20,
-      boxShadow: 'none'
-    }
+      boxShadow: 'none',
+    },
   },
   toolboxHeaderContainer: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };
 
 export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
@@ -372,9 +372,9 @@ export default connect(
     runModeIndicators: shouldUseRunModeIndicators(state),
     showMakerToggle: !!state.pageConstants.showMakerToggle,
     workspaceAlert: state.project.workspaceAlert,
-    isProjectTemplateLevel: state.pageConstants.isProjectTemplateLevel
+    isProjectTemplateLevel: state.pageConstants.isProjectTemplateLevel,
   }),
   dispatch => ({
-    closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert())
+    closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert()),
   })
 )(Radium(CodeWorkspace));

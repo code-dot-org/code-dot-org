@@ -69,14 +69,14 @@ module.exports = {
   levelDefinition: {
     solutionBlocks: '',
     requiredBlocks: '',
-    freePlay: true
+    freePlay: true,
   },
   tests: [
     {
       description: 'getEquationFromBlock',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
       // Run all validation in a single test to avoid the overhead of new node
       // processes
@@ -139,7 +139,7 @@ module.exports = {
         validateGeneratedEquation(
           assert,
           blockUtils.mathBlockXml('functional_math_number_dropdown', null, {
-            NUM: 1
+            NUM: 1,
           }),
           new Equation(null, [], new ExpressionNode(1))
         );
@@ -148,7 +148,7 @@ module.exports = {
         validateGeneratedEquation(
           assert,
           blockUtils.mathBlockXml('functional_math_number_dropdown', null, {
-            NUM: '???'
+            NUM: '???',
           }),
           new Equation(null, [], new ExpressionNode(0))
         );
@@ -257,7 +257,7 @@ module.exports = {
 
         return true;
       },
-      xml: ''
-    }
-  ]
+      xml: '',
+    },
+  ],
 };

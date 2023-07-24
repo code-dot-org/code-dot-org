@@ -28,11 +28,11 @@ export class InlineDropdownMenu extends Component {
           throw new Error('each child must have an href or onclick');
         }
       });
-    }
+    },
   };
 
   state = {
-    isOpen: false
+    isOpen: false,
   };
 
   handleClickOutside = () => {
@@ -116,11 +116,11 @@ const styles = {
     background: 'none',
     lineHeight: '18px',
     ':hover': {
-      boxShadow: 'none'
+      boxShadow: 'none',
     },
     ':active': {
-      boxShadow: 'none'
-    }
+      boxShadow: 'none',
+    },
   },
   dropdownContainer: {
     top: 15,
@@ -130,7 +130,7 @@ const styles = {
     zIndex: 1,
     boxShadow: `3px 3px 3px ${color.lighter_gray}`,
     borderRadius: '4px',
-    backgroundColor: color.white
+    backgroundColor: color.white,
   },
   dropdownOptionContainer: {
     height: '22px',
@@ -141,12 +141,12 @@ const styles = {
     cursor: 'pointer',
     ':hover': {
       backgroundColor: color.lightest_gray,
-      textDecoration: 'none'
+      textDecoration: 'none',
     },
     ':focus': {
-      textDecoration: 'none'
+      textDecoration: 'none',
     },
     display: 'flex',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };

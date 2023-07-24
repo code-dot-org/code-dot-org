@@ -8,7 +8,7 @@ export const projectDataPropType = PropTypes.shape({
   thumbnailUrl: PropTypes.string,
   type: PropTypes.string.isRequired,
   publishedAt: PropTypes.string.isRequired,
-  publishedToPublic: PropTypes.bool.isRequired
+  publishedToPublic: PropTypes.bool.isRequired,
 });
 
 export const personalProjectDataPropType = PropTypes.shape({
@@ -18,7 +18,7 @@ export const personalProjectDataPropType = PropTypes.shape({
   type: PropTypes.string.isRequired,
   updatedAt: PropTypes.string.isRequired,
   isPublished: PropTypes.bool,
-  projectNameFailure: PropTypes.string
+  projectNameFailure: PropTypes.string,
 });
 
 export const featuredProjectDataPropType = PropTypes.shape({
@@ -29,23 +29,23 @@ export const featuredProjectDataPropType = PropTypes.shape({
   publishedAt: PropTypes.string,
   thumbnailUrl: PropTypes.string,
   featuredAt: PropTypes.string.isRequired,
-  unfeaturedAt: PropTypes.string
+  unfeaturedAt: PropTypes.string,
 });
 
 export const projectPropType = PropTypes.shape({
   projectData: projectDataPropType.isRequired,
-  currentGallery: PropTypes.string.isRequired
+  currentGallery: PropTypes.string.isRequired,
 });
 
 export const Galleries = {
   PUBLIC: 'PUBLIC',
   LIBRARIES: 'LIBRARIES',
-  PRIVATE: 'PRIVATE'
+  PRIVATE: 'PRIVATE',
 };
 
 export const featuredProjectTableTypes = {
   current: 'currentFeatured',
-  archived: 'archivedUnfeatured'
+  archived: 'archivedUnfeatured',
 };
 
 export const MAX_PROJECTS_PER_CATEGORY = 100;
@@ -63,6 +63,6 @@ export const convertChannelsToProjectData = function (projects) {
     thumbnailUrl: project.thumbnailUrl,
     type: project.projectType,
     isPublished: project.publishedAt !== null,
-    updatedAt: project.updatedAt
+    updatedAt: project.updatedAt,
   }));
 };

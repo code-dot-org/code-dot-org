@@ -23,7 +23,7 @@ describe('Java Lab Backpack Test', () => {
       onImport: () => {},
       backpackEnabled: true,
       sources: {},
-      validation: {}
+      validation: {},
     };
   });
 
@@ -51,7 +51,7 @@ describe('Java Lab Backpack Test', () => {
       .instance()
       .handleFileCheckboxChange({target: {name: 'Class3.java', checked: true}});
     wrapper.instance().handleFileCheckboxChange({
-      target: {name: 'Class1.java', checked: false}
+      target: {name: 'Class1.java', checked: false},
     });
     const selectedFiles = wrapper.instance().state.selectedFiles;
     expect(selectedFiles.length).to.equal(2);
@@ -77,7 +77,7 @@ describe('Java Lab Backpack Test', () => {
       dropdownOpen: false,
       backpackLoadError: true,
       selectedFiles: ['file1', 'file2'],
-      backpackFilenames: ['file1', 'file2', 'file3']
+      backpackFilenames: ['file1', 'file2', 'file3'],
     });
 
     wrapper.instance().expandDropdown();
@@ -90,14 +90,14 @@ describe('Java Lab Backpack Test', () => {
 
   it('import shows warning before overwriting files', () => {
     const otherProps = {
-      sources: {file1: {isVisible: true}, file2: {isVisible: true}}
+      sources: {file1: {isVisible: true}, file2: {isVisible: true}},
     };
     const wrapper = renderWithProps(otherProps);
     // set state to something that should be cleared by expandDropdown
     wrapper.instance().setState({
       dropdownOpen: true,
       backpackFilenames: ['file1', 'file2', 'file3'],
-      selectedFiles: ['file1', 'file3']
+      selectedFiles: ['file1', 'file3'],
     });
 
     wrapper.instance().handleImport();
@@ -108,14 +108,14 @@ describe('Java Lab Backpack Test', () => {
 
   it('import shows error if hidden file name is used', () => {
     const otherProps = {
-      sources: {visibleFile: {isVisible: true}, hiddenFile: {isVisible: false}}
+      sources: {visibleFile: {isVisible: true}, hiddenFile: {isVisible: false}},
     };
     const wrapper = renderWithProps(otherProps);
     // set state to something that should be cleared by expandDropdown
     wrapper.instance().setState({
       dropdownOpen: true,
       backpackFilenames: ['visibleFile', 'hiddenFile', 'file3'],
-      selectedFiles: ['hiddenFile', 'file3']
+      selectedFiles: ['hiddenFile', 'file3'],
     });
 
     wrapper.instance().handleImport();
@@ -130,7 +130,7 @@ describe('Java Lab Backpack Test', () => {
     wrapper.instance().setState({
       dropdownOpen: true,
       backpackFilenames: ['file1', 'file2', 'file3'],
-      selectedFiles: ['file2', 'file3']
+      selectedFiles: ['file2', 'file3'],
     });
 
     wrapper.instance().handleImport();
@@ -146,13 +146,13 @@ describe('Java Lab Backpack Test', () => {
 
   it('delete shows warning before deleting files', () => {
     const otherProps = {
-      sources: {file1: {isVisible: true}, file2: {isVisible: true}}
+      sources: {file1: {isVisible: true}, file2: {isVisible: true}},
     };
     const wrapper = renderWithProps(otherProps);
     wrapper.instance().setState({
       dropdownOpen: true,
       backpackFilenames: ['file1', 'file2', 'file3'],
-      selectedFiles: ['file1', 'file3']
+      selectedFiles: ['file1', 'file3'],
     });
 
     wrapper.instance().confirmAndDeleteFiles();
@@ -163,13 +163,13 @@ describe('Java Lab Backpack Test', () => {
 
   it('dropdown and modal are closed if delete succeeds', () => {
     const otherProps = {
-      sources: {file1: {isVisible: true}, file2: {isVisible: true}}
+      sources: {file1: {isVisible: true}, file2: {isVisible: true}},
     };
     const wrapper = renderWithProps(otherProps);
     wrapper.instance().setState({
       dropdownOpen: true,
       backpackFilenames: ['file1', 'file2', 'file3'],
-      selectedFiles: ['file1', 'file3']
+      selectedFiles: ['file1', 'file3'],
     });
     // set up delete files to call success callback
     backpackApiStub.deleteFiles.callsArg(2);
@@ -185,13 +185,13 @@ describe('Java Lab Backpack Test', () => {
 
   it('Delete error modal is shown if delete fails', () => {
     const otherProps = {
-      sources: {file1: {isVisible: true}, file2: {isVisible: true}}
+      sources: {file1: {isVisible: true}, file2: {isVisible: true}},
     };
     const wrapper = renderWithProps(otherProps);
     wrapper.instance().setState({
       dropdownOpen: true,
       backpackFilenames: ['file1', 'file2', 'file3'],
-      selectedFiles: ['file1', 'file3']
+      selectedFiles: ['file1', 'file3'],
     });
     // set up delete files to call failure callback
     backpackApiStub.deleteFiles.callsArgWith(1, null, ['file1', 'file3']);
@@ -207,13 +207,13 @@ describe('Java Lab Backpack Test', () => {
 
   it('Deleted files are removed from dropdown on partial delete success', () => {
     const otherProps = {
-      sources: {file1: {isVisible: true}, file2: {isVisible: true}}
+      sources: {file1: {isVisible: true}, file2: {isVisible: true}},
     };
     const wrapper = renderWithProps(otherProps);
     wrapper.instance().setState({
       dropdownOpen: true,
       backpackFilenames: ['file1', 'file2', 'file3'],
-      selectedFiles: ['file1', 'file3']
+      selectedFiles: ['file1', 'file3'],
     });
     // set up delete files to call failure callback where only file 1 failed to delete
     backpackApiStub.deleteFiles.callsArgWith(1, null, ['file1']);

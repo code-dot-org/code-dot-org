@@ -39,7 +39,7 @@ describe('PrintCertificates', () => {
         const mockResponse = JSON.stringify([
           {name: 'Student A'},
           {name: 'Student B'},
-          {name: 'Student C'}
+          {name: 'Student C'},
         ]);
         request.respond(
           200,
@@ -53,7 +53,7 @@ describe('PrintCertificates', () => {
       assert.deepEqual(wrapper.state('names'), [
         'Student A',
         'Student B',
-        'Student C'
+        'Student C',
       ]);
       finish();
     };

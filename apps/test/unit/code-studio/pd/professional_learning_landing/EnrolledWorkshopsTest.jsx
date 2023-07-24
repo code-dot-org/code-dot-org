@@ -11,11 +11,11 @@ describe('EnrolledWorkshops', () => {
   const workshops = [
     serializedWorkshopFactory.build({
       pre_workshop_survey_url: 'code.org/pre_survey_url',
-      workshop_starting_date: '2020-01-17T00:44:05.000Z'
+      workshop_starting_date: '2020-01-17T00:44:05.000Z',
     }),
     serializedWorkshopFactory.build({state: 'In Progress'}),
     serializedWorkshopFactory.build({state: 'Ended', attended: true}),
-    serializedWorkshopFactory.build({state: 'Ended'})
+    serializedWorkshopFactory.build({state: 'Ended'}),
   ];
 
   let clock;

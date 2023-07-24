@@ -11,7 +11,7 @@ describe('DataDocView', () => {
   beforeEach(() => {
     defaultProps = {
       dataDocName: docName,
-      dataDocContent: docContent
+      dataDocContent: docContent,
     };
   });
 

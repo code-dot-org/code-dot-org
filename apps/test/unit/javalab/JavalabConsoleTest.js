@@ -7,12 +7,12 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import javalabView, {setDisplayTheme} from '@cdo/apps/javalab/redux/viewRedux';
 import javalabConsole, {
   openPhotoPrompter,
-  closePhotoPrompter
+  closePhotoPrompter,
 } from '@cdo/apps/javalab/redux/consoleRedux';
 import javalab from '@cdo/apps/javalab/redux/javalabRedux';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
@@ -74,7 +74,7 @@ describe('Java Lab Console Test', () => {
     beforeEach(() => {
       onPhotoPrompterFileSelected = sinon.stub();
       wrapper = createWrapper({
-        onPhotoPrompterFileSelected: onPhotoPrompterFileSelected
+        onPhotoPrompterFileSelected: onPhotoPrompterFileSelected,
       });
     });
 

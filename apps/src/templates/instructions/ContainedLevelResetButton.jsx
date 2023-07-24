@@ -18,7 +18,7 @@ export const UnconnectedContainedLevelResetButton = ({
   userRoleInCourse,
   codeIsRunning,
   serverScriptId,
-  serverLevelId
+  serverLevelId,
 }) => {
   const [resetFailed, setResetFailed] = useState(false);
 
@@ -27,7 +27,7 @@ export const UnconnectedContainedLevelResetButton = ({
       study: 'reset-predict-level',
       event: 'level-reset',
       script_id: serverScriptId,
-      level_id: serverLevelId
+      level_id: serverLevelId,
     });
   };
 
@@ -71,7 +71,7 @@ UnconnectedContainedLevelResetButton.propTypes = {
   codeIsRunning: PropTypes.bool,
   // used for reporting
   serverScriptId: PropTypes.number,
-  serverLevelId: PropTypes.number
+  serverLevelId: PropTypes.number,
 };
 
 export default connect(
@@ -82,18 +82,18 @@ export default connect(
     userRoleInCourse: state.currentUser.userRoleInCourse,
     codeIsRunning: state.runState.isRunning,
     serverScriptId: state.pageConstants.serverScriptId,
-    serverLevelId: state.pageConstants.serverLevelId
+    serverLevelId: state.pageConstants.serverLevelId,
   }),
   dispatch => ({
     queryUserProgress(userId) {
       dispatch(queryUserProgress(userId));
-    }
+    },
   })
 )(UnconnectedContainedLevelResetButton);
 
 const styles = {
   error: {
     color: color.red,
-    fontStyle: 'italic'
-  }
+    fontStyle: 'italic',
+  },
 };

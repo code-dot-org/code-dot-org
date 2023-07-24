@@ -5,7 +5,6 @@ import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedAddSectionDialog as AddSectionDialog} from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 import _ from 'lodash';
 import * as utils from '@cdo/apps/utils';
-import experiments from '@cdo/apps/util/experiments';
 
 describe('AddSectionDialog', () => {
   let defaultProps,
@@ -42,7 +41,7 @@ describe('AddSectionDialog', () => {
         unitId: null,
         hidden: false,
         isAssigned: undefined,
-        restrictSection: false
+        restrictSection: false,
       },
       beginImportRosterFlow,
       setRosterProvider,
@@ -50,7 +49,7 @@ describe('AddSectionDialog', () => {
       setParticipantType,
       handleCancel,
       availableParticipantTypes: ['student'],
-      asyncLoadComplete: true
+      asyncLoadComplete: true,
     };
   });
 
@@ -65,7 +64,6 @@ describe('AddSectionDialog', () => {
     expect(wrapper.find('Spinner').length).to.equal(1);
     expect(wrapper.find('LoginTypePicker').length).to.equal(0);
     expect(wrapper.find('ParticipantTypePicker').length).to.equal(0);
-    expect(wrapper.find('Connect(EditSectionForm)').length).to.equal(0);
   });
 
   it('if login type is set but audience has not shows audience picker', () => {
@@ -82,39 +80,16 @@ describe('AddSectionDialog', () => {
     expect(wrapper.find('Spinner').length).to.equal(0);
     expect(wrapper.find('LoginTypePicker').length).to.equal(0);
     expect(wrapper.find('ParticipantTypePicker').length).to.equal(1);
-    expect(wrapper.find('Connect(EditSectionForm)').length).to.equal(0);
   });
 
-  it('once login type and audience are set EditSectionForm shows', () => {
-    let sectionWithLoginAndParticipantType = _.cloneDeep(defaultProps.section);
-    sectionWithLoginAndParticipantType.loginType = 'word';
-    sectionWithLoginAndParticipantType.participantType = 'student';
-
-    const wrapper = shallow(
-      <AddSectionDialog
-        {...defaultProps}
-        section={sectionWithLoginAndParticipantType}
-      />
-    );
-    expect(wrapper.find('Spinner').length).to.equal(0);
-    expect(wrapper.find('LoginTypePicker').length).to.equal(0);
-    expect(wrapper.find('ParticipantTypePicker').length).to.equal(0);
-    expect(wrapper.find('Connect(EditSectionForm)').length).to.equal(1);
-  });
-
-  describe('with sectionSetupRefresh experiment', () => {
+  describe('sectionSetupRefresh', () => {
     let navigateToHrefSpy;
 
     beforeEach(() => {
       navigateToHrefSpy = sinon.spy(utils, 'navigateToHref');
-      sinon
-        .stub(experiments, 'isEnabled')
-        .withArgs('sectionSetupRefresh')
-        .returns(true);
     });
 
     afterEach(() => {
-      experiments.isEnabled.restore();
       navigateToHrefSpy.restore();
     });
 

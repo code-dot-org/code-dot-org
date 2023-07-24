@@ -13,7 +13,7 @@ import Sounds from '../Sounds';
 export async function getSongManifest(useRestrictedSongs, manifestFilename) {
   if (!manifestFilename || manifestFilename.length === 0) {
     manifestFilename = useRestrictedSongs
-      ? 'songManifest2022.json'
+      ? 'songManifest2023_v1.json'
       : 'testManifest.json';
   }
 
@@ -36,7 +36,7 @@ export async function getSongManifest(useRestrictedSongs, manifestFilename) {
 
   return songManifest.map(song => ({
     ...song,
-    url: `${songPathPrefix}${song.url}.mp3`
+    url: `${songPathPrefix}${song.url}.mp3`,
   }));
 }
 
@@ -83,7 +83,7 @@ export function loadSong(songId, songData, onPreloadError) {
   const options = {
     id: url,
     mp3: url,
-    onPreloadError
+    onPreloadError,
   };
   Sounds.getSingleton().register(options);
 }

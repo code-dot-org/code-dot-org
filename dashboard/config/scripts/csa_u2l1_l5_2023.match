@@ -14,3 +14,4 @@ answer 'an object-oriented programming concept where the instance variables of a
 
 question 'refactor'
 answer 'to improve the readability, reusability, or structure of program code without altering its functionality'
+allow_multiple_attempts true

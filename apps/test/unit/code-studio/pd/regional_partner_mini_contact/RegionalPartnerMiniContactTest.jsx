@@ -12,7 +12,7 @@ describe('RegionalPartnerMiniContactTest', () => {
     zip: {type: 'FieldGroup', expectRequired: true},
     notes: {type: 'FieldGroup', expectRequired: false},
     role: {type: 'Select', expectRequired: false},
-    grade_levels: {type: 'ButtonList', expectRequired: false}
+    grade_levels: {type: 'ButtonList', expectRequired: false},
   };
 
   describe('Required fields', () => {

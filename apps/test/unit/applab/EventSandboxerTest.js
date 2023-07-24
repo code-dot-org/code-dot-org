@@ -181,7 +181,7 @@ describe('EventSandboxer', function () {
 
     it('adds "key" property when charCode is available', function () {
       var originalEvent = {
-        charCode: 65
+        charCode: 65,
       };
       var newEvent = sandboxer.sandboxEvent(originalEvent);
       assert.property(newEvent, 'key');
@@ -190,7 +190,7 @@ describe('EventSandboxer', function () {
 
     it('adds "key" property when keyCode is available', function () {
       var originalEvent = {
-        keyCode: 65
+        keyCode: 65,
       };
       var newEvent = sandboxer.sandboxEvent(originalEvent);
       assert.property(newEvent, 'key');
@@ -317,7 +317,7 @@ describe('EventSandboxer', function () {
     it('preserves "movementX" and "movementY" if they are both provided', function () {
       var originalEvent = {
         movementX: 10,
-        movementY: 15
+        movementY: 15,
       };
       var newEvent = sandboxer.sandboxEvent(originalEvent);
       assert.property(newEvent, 'movementX');
@@ -328,7 +328,7 @@ describe('EventSandboxer', function () {
 
     it('synthesizes "movementX/Y" properties when type is "mousemove"', function () {
       var originalEvent = {
-        type: 'mousemove'
+        type: 'mousemove',
       };
       var newEvent = sandboxer.sandboxEvent(originalEvent);
       assert.property(newEvent, 'movementX');
@@ -342,20 +342,20 @@ describe('EventSandboxer', function () {
         type: 'mousemove',
         currentTarget: target,
         clientX: x,
-        clientY: y
+        clientY: y,
       };
     }
 
     function makeMouseoutEvent(target) {
       return {
         type: 'mouseout',
-        currentTarget: target
+        currentTarget: target,
       };
     }
 
     it('updates synthesized "movementX/Y" properties based on currentTarget.id and last clientX/Y', function () {
       var fakeTarget = {
-        id: 'fakeTargetId'
+        id: 'fakeTargetId',
       };
 
       var mousemoveA = makeMousemoveEvent(fakeTarget, 50, 50);
@@ -377,7 +377,7 @@ describe('EventSandboxer', function () {
 
     it('can clear history for synthesized movements for an element', function () {
       var fakeTarget = {
-        id: 'fakeTargetId'
+        id: 'fakeTargetId',
       };
 
       var mousemoveA = makeMousemoveEvent(fakeTarget, 50, 50);
@@ -404,7 +404,7 @@ describe('EventSandboxer', function () {
   describe('hoisted event target properties', () => {
     it('copies "selectionStart" from the original event target to the new event', () => {
       const originalEvent = {
-        target: {tagName: 'TEXTAREA', selectionStart: Math.random()}
+        target: {tagName: 'TEXTAREA', selectionStart: Math.random()},
       };
       const newEvent = sandboxer.sandboxEvent(originalEvent);
       assert.equal(
@@ -415,7 +415,7 @@ describe('EventSandboxer', function () {
 
     it('copies "selectionEnd" from the original event target to the new event', () => {
       const originalEvent = {
-        target: {tagName: 'TEXTAREA', selectionEnd: Math.random()}
+        target: {tagName: 'TEXTAREA', selectionEnd: Math.random()},
       };
       const newEvent = sandboxer.sandboxEvent(originalEvent);
       assert.equal(newEvent.selectionEnd, originalEvent.target.selectionEnd);
@@ -423,7 +423,7 @@ describe('EventSandboxer', function () {
 
     it('copies "selectionStart" from the original event target to the new event if the target is the text type of INPUT', () => {
       const originalEvent = {
-        target: {tagName: 'INPUT', type: 'text', selectionStart: Math.random()}
+        target: {tagName: 'INPUT', type: 'text', selectionStart: Math.random()},
       };
       const newEvent = sandboxer.sandboxEvent(originalEvent);
       assert.equal(
@@ -434,7 +434,7 @@ describe('EventSandboxer', function () {
 
     it('copies "selectionEnd" from the original event target to the new event', () => {
       const originalEvent = {
-        target: {tagName: 'TEXTAREA', selectionEnd: Math.random()}
+        target: {tagName: 'TEXTAREA', selectionEnd: Math.random()},
       };
       const newEvent = sandboxer.sandboxEvent(originalEvent);
       assert.equal(newEvent.selectionEnd, originalEvent.target.selectionEnd);
@@ -442,11 +442,15 @@ describe('EventSandboxer', function () {
 
     it('does not add selectionStart or selectionEnd to the new event if they are missing or undefined', () => {
       const originalEvent = {
-        target: {tagName: 'TEXTAREA', selectionEnd: undefined}
+        target: {tagName: 'TEXTAREA', selectionEnd: undefined},
       };
       const newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.isFalse(newEvent.hasOwnProperty('selectionStart'));
-      assert.isFalse(newEvent.hasOwnProperty('selectionEnd'));
+      assert.isFalse(
+        Object.prototype.hasOwnProperty.call(newEvent, 'selectionStart')
+      );
+      assert.isFalse(
+        Object.prototype.hasOwnProperty.call(newEvent, 'selectionEnd')
+      );
     });
 
     it('does not add selectionStart or selectionEnd to the new event if the target is the range type of INPUT', () => {
@@ -455,12 +459,16 @@ describe('EventSandboxer', function () {
           tagName: 'INPUT',
           type: 'range',
           selectionStart: 3,
-          selectionEnd: 3
-        }
+          selectionEnd: 3,
+        },
       };
       const newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.isFalse(newEvent.hasOwnProperty('selectionStart'));
-      assert.isFalse(newEvent.hasOwnProperty('selectionEnd'));
+      assert.isFalse(
+        Object.prototype.hasOwnProperty.call(newEvent, 'selectionStart')
+      );
+      assert.isFalse(
+        Object.prototype.hasOwnProperty.call(newEvent, 'selectionEnd')
+      );
     });
   });
 
@@ -469,7 +477,7 @@ describe('EventSandboxer', function () {
       var randomId = Math.random();
       var originalEvent = {};
       originalEvent[originalName] = {
-        id: randomId
+        id: randomId,
       };
       var newEvent = sandboxer.sandboxEvent(originalEvent);
       assert.property(newEvent, originalName + 'Id');
@@ -513,7 +521,7 @@ describe('EventSandboxer', function () {
       // If the source property is present and the destination property is not,
       // assert that the destination property gets the value of the source property.
       var originalEvent = {
-        type: eventType
+        type: eventType,
       };
       originalEvent[srcProperty] = {id: randomIdA};
       var polyfilledEvent = sandboxer.sandboxEvent(originalEvent);
@@ -537,7 +545,7 @@ describe('EventSandboxer', function () {
       eventType
     ) {
       var originalEvent = {
-        type: eventType
+        type: eventType,
       };
 
       // If the source properties are present and the destination properties are

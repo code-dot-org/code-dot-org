@@ -9,16 +9,16 @@ const defaultLevel = {
     {
       name: 'Level 1',
       id: '2',
-      url: '/fake/url/'
-    }
+      url: '/fake/url/',
+    },
   ],
   activeId: '2',
-  expand: true
+  expand: true,
 };
 
 export default {
   title: 'LevelTokenDetails',
-  component: LevelTokenDetails
+  component: LevelTokenDetails,
 };
 
 const Template = args => (
@@ -36,22 +36,22 @@ const Template = args => (
 
 export const LevelTokenLessonExtras = Template.bind({});
 LevelTokenLessonExtras.args = {
-  lessonExtrasAvailableForUnit: true
+  lessonExtrasAvailableForUnit: true,
 };
 
 export const LevelTokenNoExtras = Template.bind({});
 LevelTokenNoExtras.args = {
-  lessonExtrasAvailableForUnit: false
+  lessonExtrasAvailableForUnit: false,
 };
 
 export const LevelTokenPL = Template.bind({});
 LevelTokenPL.args = {
   lessonExtrasAvailableForUnit: true,
-  isProfessionalLearningCourse: true
+  isProfessionalLearningCourse: true,
 };
 
 export const LevelTokenInactive = Template.bind({});
 LevelTokenInactive.args = {
   lessonExtrasAvailableForUnit: true,
-  inactiveLevelNames: ['Inactive Level']
+  inactiveLevelNames: ['Inactive Level'],
 };

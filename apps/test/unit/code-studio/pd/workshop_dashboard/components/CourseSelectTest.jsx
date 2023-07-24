@@ -1,16 +1,16 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import Permission, {
-  Organizer
+  Organizer,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import CourseSelect, {
-  getAllowedCourses
+  getAllowedCourses,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/components/CourseSelect';
 import '../workshopFactory';
 import {expect} from '../../../../../util/reconfiguredChai';
 import {
   Courses,
-  ActiveCourses
+  ActiveCourses,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 describe('CourseSelect', () => {

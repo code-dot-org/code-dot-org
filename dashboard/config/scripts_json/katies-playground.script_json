@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "katies-playground",
-    "serialized_at": "2023-04-18 14:12:30 UTC",
+    "serialized_at": "2023-05-19 21:25:09 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -80,7 +80,7 @@
     },
     {
       "key": "lesson-4",
-      "name": "Function Machines w Artist",
+      "name": "Math w Artist",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -553,6 +553,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Ocean Setup Test"
+        ]
       },
       "bonus": false,
       "seeding_key": {

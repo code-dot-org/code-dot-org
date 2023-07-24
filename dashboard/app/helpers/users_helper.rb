@@ -184,7 +184,7 @@ module UsersHelper
       progress
     end
     timestamp_by_user = progress_by_user.transform_values do |user|
-      user.values.map {|level| level[:last_progress_at]}.compact.max
+      user.values.filter_map {|level| level[:last_progress_at]}.max
     end
 
     [progress_by_user, timestamp_by_user]
@@ -439,8 +439,9 @@ module UsersHelper
   def percent_complete_total(unit, user = current_user)
     summary = summarize_user_progress(unit, user)
     levels = unit.script_levels.map(&:level)
+    complete_statuses = %w(perfect passed)
     completed = levels.count do |l|
-      sum = summary[:progress][l.id]; sum && %w(perfect passed).include?(sum[:status])
+      sum = summary[:progress][l.id]; sum && complete_statuses.include?(sum[:status])
     end
     (100.0 * completed / levels.count).round(2)
   end

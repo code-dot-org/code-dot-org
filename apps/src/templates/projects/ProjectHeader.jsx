@@ -5,11 +5,13 @@ import i18n from '@cdo/locale';
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import ProjectsPromo from './ProjectsPromo';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 
 export default class ProjectHeader extends React.Component {
   static propTypes = {
     canViewAdvancedTools: PropTypes.bool,
-    projectCount: PropTypes.number
+    projectCount: PropTypes.number,
+    showDeprecatedCalcAndEvalWarning: PropTypes.bool,
   };
 
   render() {
@@ -21,11 +23,19 @@ export default class ProjectHeader extends React.Component {
           short={true}
           headingText={i18n.projects()}
           subHeadingText={i18n.projectsSubHeadingMillions({
-            project_count: this.props.projectCount
+            project_count: this.props.projectCount,
           })}
           backgroundUrl={backgroundUrl}
         />
         <div className={'container main'}>
+          {this.props.showDeprecatedCalcAndEvalWarning && (
+            <Notification
+              type={NotificationType.warning}
+              notice={i18n.deprecatedCalcAndEvalWarning()}
+              details={i18n.deprecatedCalcAndEvalDetails()}
+              dismissible={false}
+            />
+          )}
           <ProjectsPromo />
           <StartNewProject
             canViewFullList

@@ -9,7 +9,7 @@ const DEFAULT_PROPS = {
   index: 1,
   name: 'Jerry',
   lockStatus: LockStatus.Locked,
-  handleRadioChange: () => {}
+  handleRadioChange: () => {},
 };
 
 const setUp = (overrideProps = {}) => {
@@ -63,8 +63,8 @@ describe('StudentRow', () => {
     lockLessonInput.simulate('change', {
       target: {
         value: lockLessonInput.props().value,
-        name: lockLessonInput.props().name
-      }
+        name: lockLessonInput.props().name,
+      },
     });
     expect(handleChangeSpy).to.have.been.calledWith(1, LockStatus.Locked);
   });

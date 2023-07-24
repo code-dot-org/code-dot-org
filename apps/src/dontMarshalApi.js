@@ -1,7 +1,7 @@
 import {
   OPTIONAL,
   apiValidateType,
-  outputWarning
+  outputWarning,
 } from './lib/util/javascriptMode';
 
 // APIs designed specifically to run on interpreter data structures without marshalling
@@ -337,7 +337,7 @@ const interpreterFunctions = {
   setGreen: interpreterSetGreen,
   setBlue: interpreterSetBlue,
   setAlpha: interpreterSetAlpha,
-  setRGB: interpreterSetRGB
+  setRGB: interpreterSetRGB,
 };
 
 export default interpreterFunctions;

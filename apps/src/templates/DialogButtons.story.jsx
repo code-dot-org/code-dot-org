@@ -3,41 +3,41 @@ import DialogButtons from './DialogButtons';
 
 export default {
   title: 'DialogButtons',
-  component: DialogButtons
+  component: DialogButtons,
 };
 
 const Template = args => <DialogButtons {...args} />;
 
 export const OK = Template.bind({});
 OK.args = {
-  ok: true
+  ok: true,
 };
 
 export const CancelText = Template.bind({});
 CancelText.args = {
-  cancelText: 'Custom Cancel Text'
+  cancelText: 'Custom Cancel Text',
 };
 
 export const ConfirmText = Template.bind({});
 ConfirmText.args = {
-  confirmText: 'Custom Confirm Text'
+  confirmText: 'Custom Confirm Text',
 };
 
 export const NextLevel = Template.bind({});
 NextLevel.args = {
   nextLevel: true,
-  continueText: 'Custom Continue Text'
+  continueText: 'Custom Continue Text',
 };
 
 export const TryAgain = Template.bind({});
 TryAgain.args = {
-  tryAgain: 'Custom Try Again Text'
+  tryAgain: 'Custom Try Again Text',
 };
 
 export const TryAgainWithHint = Template.bind({});
 TryAgainWithHint.args = {
   shouldPromptForHint: true,
-  tryAgain: 'Custom Try Again Text'
+  tryAgain: 'Custom Try Again Text',
 };
 
 export const K1Customizations = Template.bind({});
@@ -46,7 +46,7 @@ K1Customizations.args = {
   tryAgain: 'Custom Try Again',
   nextLevel: true,
   continueText: 'Custom Continue',
-  assetUrl: url => '/blockly/' + url
+  assetUrl: url => '/blockly/' + url,
 };
 
 export const K1FreePlay = Template.bind({});
@@ -56,5 +56,5 @@ K1FreePlay.args = {
   tryAgain: 'Custom Try Again',
   nextLevel: true,
   continueText: 'Custom Continue',
-  assetUrl: url => '/blockly/' + url
+  assetUrl: url => '/blockly/' + url,
 };

@@ -1,5 +1,3 @@
-/* global dashboard */
-
 var commonMsg = require('@cdo/locale');
 var utils = require('../utils');
 import {getStore} from '../redux';
@@ -15,7 +13,7 @@ module.exports = function (typeFilter) {
     .map(function (asset) {
       return {
         text: utils.quote(asset.filename),
-        display: utils.quote(asset.filename)
+        display: utils.quote(asset.filename),
       };
     });
   var handleChooseClick = function (callback) {
@@ -28,7 +26,7 @@ module.exports = function (typeFilter) {
         Sounds.getSingleton().stopAllAudio();
       },
       {
-        showUnderageWarning: !getStore().getState().pageConstants.is13Plus
+        showUnderageWarning: !getStore().getState().pageConstants.is13Plus,
       }
     );
   };
@@ -38,7 +36,7 @@ module.exports = function (typeFilter) {
       '<span class="chooseAssetDropdownOption">' +
       commonMsg.choosePrefix() +
       '</a>',
-    click: handleChooseClick
+    click: handleChooseClick,
   });
   return options;
 };

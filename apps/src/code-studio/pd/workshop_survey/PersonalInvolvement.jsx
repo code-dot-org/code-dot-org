@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import FormComponent from '../form_components/FormComponent';
 
 const LABELS = {
@@ -11,7 +11,7 @@ const LABELS = {
   howExcitedBefore:
     'Before the workshop, how excited were you about going to your {course} workshop?',
   overallHowInterested:
-    'Overall, how interested were you in the {course} in-person workshop?'
+    'Overall, how interested were you in the {course} in-person workshop?',
 };
 
 export default class PersonalInvolvement extends FormComponent {
@@ -27,7 +27,7 @@ export default class PersonalInvolvement extends FormComponent {
             label: this.labelFor(name),
             name: name,
             required: true,
-            type: 'radio'
+            type: 'radio',
           })
         )}
       </FormGroup>

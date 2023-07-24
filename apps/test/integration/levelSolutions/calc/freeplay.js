@@ -7,28 +7,28 @@ module.exports = {
   levelDefinition: {
     solutionBlocks: '',
     requiredBlocks: '',
-    freePlay: true
+    freePlay: true,
   },
   tests: [
     {
       description: 'Simple answer',
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
+        testResult: TestResults.FREE_PLAY,
       },
       xml:
         '<xml>' +
         blockUtils.calcBlockXml('functional_times', [
           blockUtils.calcBlockXml('functional_plus', [1, 2]),
-          blockUtils.calcBlockXml('functional_plus', [3, 4])
+          blockUtils.calcBlockXml('functional_plus', [3, 4]),
         ]) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Answer with a function',
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
+        testResult: TestResults.FREE_PLAY,
       },
       xml:
         '<xml>' +
@@ -61,15 +61,15 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'empty answer',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
-      xml: '<xml></xml>'
-    }
-  ]
+      xml: '<xml></xml>',
+    },
+  ],
 };

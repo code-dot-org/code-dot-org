@@ -1,5 +1,3 @@
-FactoryBot.allow_class_lookup = false
-
 FactoryBot.define do
   # example zip: 35010
   factory :regional_partner_alabama, parent: :regional_partner_with_summer_workshops do
@@ -19,8 +17,8 @@ FactoryBot.define do
   # example zip: 42001
   factory :regional_partner_kentucky, parent: :regional_partner_with_summer_workshops do
     # Applications are closed.
-    apps_open_date_teacher {(Date.current - 6.days).strftime("%Y-%m-%d")}
-    apps_close_date_teacher {(Date.current - 3.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Time.zone.today - 6.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Time.zone.today - 3.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "KY")]}
   end
 
@@ -38,15 +36,15 @@ FactoryBot.define do
   # example zip: 97202
   factory :regional_partner_oregon, parent: :regional_partner_with_summer_workshops do
     # Opening at a specific date in the future.
-    apps_open_date_teacher {(Date.current + 5.days).strftime("%Y-%m-%d")}
-    apps_close_date_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Time.zone.today + 5.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Time.zone.today + 15.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "OR")]}
   end
 
   # example zip: 82001
   factory :regional_partner_wyoming, parent: :regional_partner_with_summer_workshops do
-    apps_open_date_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
-    apps_close_date_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Time.zone.today + 6.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Time.zone.today + 15.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "WY")]}
   end
 
@@ -61,7 +59,7 @@ FactoryBot.define do
       duration_hours {6}
     end
     association :workshop, factory: :workshop
-    start {Date.current + 9.hours}
+    start {Time.zone.today + 9.hours}
     self.end {start + duration_hours.hours}
 
     trait :with_assigned_code do
@@ -70,7 +68,7 @@ FactoryBot.define do
   end
 
   factory :pd_payment_term, class: 'Pd::PaymentTerm' do
-    start_date {Date.current}
+    start_date {Time.zone.today}
     fixed_payment {50}
   end
 
@@ -223,7 +221,7 @@ FactoryBot.define do
           "pre-K"
         ],
         subjectsTaught: [
-          "English\/Language Arts"
+          "English/Language Arts"
         ]
       }.stringify_keys
     end
@@ -404,7 +402,9 @@ FactoryBot.define do
   end
 
   factory :pd_pre_workshop_survey, class: 'Pd::PreWorkshopSurvey' do
-    association :pd_enrollment
+    # Always create (never build) the associated Enrollment to guarantee that
+    # the through association to workshops will work
+    association :pd_enrollment, strategy: :create
   end
 
   factory :pd_regional_partner_contact, class: 'Pd::RegionalPartnerContact' do
@@ -498,7 +498,7 @@ FactoryBot.define do
     street_address {'333 Hogwarts Place'}
     city {'Magic City'}
     state {'Washington'}
-    add_attribute :zip_code, '98101'
+    add_attribute(:zip_code) {'98101'}
     principal_role {'Headmaster'}
     principal_first_name {'Albus'}
     principal_last_name {'Dumbledore'}

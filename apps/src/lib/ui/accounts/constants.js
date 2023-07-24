@@ -11,5 +11,5 @@ export const OAuthProviders = {
   google: 'google_oauth2',
   microsoft: 'microsoft_v2_auth',
   clever: 'clever',
-  facebook: 'facebook'
+  facebook: 'facebook',
 };

@@ -76,11 +76,11 @@ function resizeElement(element, xAmount, yAmount) {
 
   var start = {
     x: resizer.offset().left + resizer.width(),
-    y: resizer.offset().top + resizer.height()
+    y: resizer.offset().top + resizer.height(),
   };
   var end = {
     x: start.x + xAmount,
-    y: start.y + yAmount
+    y: start.y + yAmount,
   };
 
   // need to mouseover so that it sets up some internal state property
@@ -102,11 +102,11 @@ function dragElement(element, xAmount, yAmount) {
   var $element = $(element);
   var start = {
     x: $element.offset().left + 5,
-    y: $element.offset().top + 5
+    y: $element.offset().top + 5,
   };
   var end = {
     x: start.x + xAmount,
-    y: start.y + yAmount
+    y: start.y + yAmount,
   };
 
   // need to mouseover so that it sets up some internal state property
@@ -144,7 +144,7 @@ module.exports = {
         var buttonElement = $('#design_button1')[0];
 
         ReactTestUtils.Simulate.change(imageInput, {
-          target: {value: assetUrl}
+          target: {value: assetUrl},
         });
 
         assert.include(
@@ -156,8 +156,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'button image url correct with fully qualified url',
@@ -180,7 +180,7 @@ module.exports = {
         var buttonElement = $('#design_button1')[0];
 
         ReactTestUtils.Simulate.change(imageInput, {
-          target: {value: assetUrl}
+          target: {value: assetUrl},
         });
 
         assert.include(
@@ -192,8 +192,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description:
@@ -221,7 +221,7 @@ module.exports = {
         var originalButtonHeight = buttonElement.style.height;
 
         ReactTestUtils.Simulate.change(imageInput, {
-          target: {value: assetUrl}
+          target: {value: assetUrl},
         });
 
         // wait until image has loaded to do validation
@@ -259,8 +259,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'resizability',
@@ -346,8 +346,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -375,8 +375,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -404,8 +404,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -450,8 +450,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -490,8 +490,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -539,8 +539,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -566,8 +566,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -631,8 +631,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -698,7 +698,7 @@ module.exports = {
         );
 
         ReactTestUtils.Simulate.change(textArea, {
-          target: {value: 'Text1\nText2\nText3'}
+          target: {value: 'Text1\nText2\nText3'},
         });
 
         assert.equal(
@@ -707,7 +707,7 @@ module.exports = {
         );
 
         ReactTestUtils.Simulate.change(textArea, {
-          target: {value: 'Text1\n\nText2'}
+          target: {value: 'Text1\n\nText2'},
         });
 
         assert.equal(
@@ -736,7 +736,7 @@ module.exports = {
         // selected the screen.
         textArea = $('#propertyRowContainer textarea').first()[0];
         ReactTestUtils.Simulate.change(textArea, {
-          target: {value: "I said hey-hey-hey-hey\nWhat's going on?"}
+          target: {value: "I said hey-hey-hey-hey\nWhat's going on?"},
         });
         assert.equal(
           $('#designModeViz .textArea').first().prop('innerHTML'),
@@ -747,8 +747,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResults: undefined
-      }
+        testResults: undefined,
+      },
     },
 
     {
@@ -815,8 +815,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -897,8 +897,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -919,11 +919,11 @@ module.exports = {
         // Copy and paste the image
         var copy = testUtils.createKeyEvent('keydown', {
           which: 67,
-          altKey: true
+          altKey: true,
         });
         var paste = testUtils.createKeyEvent('keydown', {
           which: 86,
-          altKey: true
+          altKey: true,
         });
 
         var designModeElement = document.getElementById('designModeViz');
@@ -977,8 +977,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -1120,8 +1120,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -1177,8 +1177,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -1323,8 +1323,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -1494,7 +1494,7 @@ module.exports = {
 
         // Renaming to something with the 'design_' prefix fails.
         ReactTestUtils.Simulate.change(idInput, {
-          target: {value: 'design_button'}
+          target: {value: 'design_button'},
         });
         assert.equal(
           targetButton.id,
@@ -1509,7 +1509,7 @@ module.exports = {
 
         // Renaming to a blacklisted element id fails.
         ReactTestUtils.Simulate.change(idInput, {
-          target: {value: 'submitButton'}
+          target: {value: 'submitButton'},
         });
         assert.equal(
           targetButton.id,
@@ -1557,8 +1557,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -1584,7 +1584,7 @@ module.exports = {
 
         function selectElementAndValidate(id) {
           ReactTestUtils.Simulate.change(elementSelect, {
-            target: {value: id}
+            target: {value: id},
           });
           assertPropertyRowValue(0, 'id', id, assert);
         }
@@ -1596,8 +1596,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -1662,8 +1662,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -1761,8 +1761,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

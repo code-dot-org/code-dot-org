@@ -9,13 +9,13 @@ import sinon from 'sinon';
 const DEFAULT_PROPS = {
   students: [
     {id: 1, name: 'Student 1'},
-    {id: 2, name: 'Student 2'}
+    {id: 2, name: 'Student 2'},
   ],
   onSelectUser: () => {},
   getSelectedUserId: () => {},
   levelsWithProgress: [],
   sectionId: 1,
-  unitName: 'A Unit'
+  unitName: 'A Unit',
 };
 
 const levelsWithProgress = [
@@ -31,7 +31,7 @@ const levelsWithProgress = [
     passed: false,
     status: LevelStatus.not_tried,
     submitLevel: false,
-    userId: 1
+    userId: 1,
   },
   {
     id: '22',
@@ -45,8 +45,8 @@ const levelsWithProgress = [
     passed: false,
     status: LevelStatus.not_tried,
     submitLevel: false,
-    userId: 2
-  }
+    userId: 2,
+  },
 ];
 
 const setUp = overrideProps => {

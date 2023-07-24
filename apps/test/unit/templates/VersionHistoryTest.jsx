@@ -16,14 +16,14 @@ const FAKE_VERSION_LIST_RESPONSE = {
     {
       versionId: FAKE_CURRENT_VERSION,
       lastModified: new Date('2018-08-01T03:00:00'),
-      isLatest: true
+      isLatest: true,
     },
     {
       versionId: FAKE_PREVIOUS_VERSION,
       lastModified: new Date('2018-07-31T02:00:00'),
-      isLatest: false
-    }
-  ])
+      isLatest: false,
+    },
+  ]),
 };
 
 describe('VersionHistory', () => {
@@ -58,7 +58,7 @@ describe('VersionHistory', () => {
         handleClearPuzzle: () => {},
         isProjectTemplateLevel: false,
         useFilesApi: false,
-        isReadOnly: false
+        isReadOnly: false,
       },
       finishVersionHistoryLoad: () => {
         sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE);
@@ -69,7 +69,7 @@ describe('VersionHistory', () => {
       finishRestoreVersion: () =>
         sourcesApi.restorePreviousFileVersion.firstCall.args[2](),
       failRestoreVersion: () =>
-        sourcesApi.restorePreviousFileVersion.firstCall.args[3]()
+        sourcesApi.restorePreviousFileVersion.firstCall.args[3](),
     });
   });
 
@@ -89,7 +89,7 @@ describe('VersionHistory', () => {
         handleClearPuzzle: () => {},
         isProjectTemplateLevel: false,
         useFilesApi: true,
-        isReadOnly: false
+        isReadOnly: false,
       },
       finishVersionHistoryLoad: () => {
         filesApi.getVersionHistory.firstCall.args[0](
@@ -103,7 +103,7 @@ describe('VersionHistory', () => {
       finishRestoreVersion: () =>
         filesApi.restorePreviousVersion.firstCall.args[1](),
       failRestoreVersion: () =>
-        filesApi.restorePreviousVersion.firstCall.args[2]()
+        filesApi.restorePreviousVersion.firstCall.args[2](),
     });
   });
 
@@ -113,7 +113,7 @@ describe('VersionHistory', () => {
     failVersionHistoryLoad,
     restoreSpy,
     finishRestoreVersion,
-    failRestoreVersion
+    failRestoreVersion,
   }) {
     it('renders loading spinner at first', () => {
       wrapper = mount(<VersionHistory {...props} />);
@@ -294,8 +294,8 @@ describe('VersionHistory', () => {
               currentUrl: window.location.href,
               shareUrl: 'fake-share-url',
               isProjectTemplateLevel: false,
-              currentSourceVersionId: FAKE_CURRENT_VERSION
-            })
+              currentSourceVersionId: FAKE_CURRENT_VERSION,
+            }),
           },
           {includeUserId: true}
         );

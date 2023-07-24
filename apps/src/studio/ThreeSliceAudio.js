@@ -14,7 +14,7 @@ var PlaybackState = {
   NONE: 'none',
   BEGIN: 'begin',
   LOOP: 'loop',
-  END: 'end'
+  END: 'end',
 };
 
 /**
@@ -91,7 +91,7 @@ ThreeSliceAudio.prototype.enterState_ = function (state) {
     if (this.beginClipName_) {
       this.audioPlayer_.play(this.beginClipName_, {
         volume: this.volume_,
-        onEnded: callback
+        onEnded: callback,
       });
     } else {
       this.enterState_(PlaybackState.LOOP);
@@ -101,7 +101,7 @@ ThreeSliceAudio.prototype.enterState_ = function (state) {
       this.audioPlayer_.play(this.loopClipName_, {
         volume: this.volume_,
         loop: true,
-        onEnded: callback
+        onEnded: callback,
       });
     } else {
       this.enterState_(PlaybackState.END);
@@ -110,7 +110,7 @@ ThreeSliceAudio.prototype.enterState_ = function (state) {
     if (this.endClipName_) {
       this.audioPlayer_.play(this.endClipName_, {
         volume: this.volume_,
-        onEnded: callback
+        onEnded: callback,
       });
     } else {
       this.enterState_(PlaybackState.NONE);

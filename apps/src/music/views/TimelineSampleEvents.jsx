@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import React, {useRef, useContext} from 'react';
+import React, {useRef} from 'react';
 import UniqueSounds from '../utils/UniqueSounds';
-import {PlayerUtilsContext} from '../context';
 import TimelineElement from './TimelineElement';
+import {useSelector} from 'react-redux';
 
 /**
  * Renders timeline events, organized by unique sample ID.
@@ -10,10 +10,9 @@ import TimelineElement from './TimelineElement';
 const TimelineSampleEvents = ({
   barWidth,
   eventVerticalSpace,
-  getEventHeight
+  getEventHeight,
 }) => {
-  const playerUtils = useContext(PlayerUtilsContext);
-  const soundEvents = playerUtils.getPlaybackEvents();
+  const soundEvents = useSelector(state => state.music.playbackEvents);
 
   const uniqueSoundsRef = useRef(new UniqueSounds());
   // Let's cache the value of getUniqueSounds() so that the various helpers
@@ -55,7 +54,7 @@ const TimelineSampleEvents = ({
 TimelineSampleEvents.propTypes = {
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
-  getEventHeight: PropTypes.func.isRequired
+  getEventHeight: PropTypes.func.isRequired,
 };
 
 export default TimelineSampleEvents;

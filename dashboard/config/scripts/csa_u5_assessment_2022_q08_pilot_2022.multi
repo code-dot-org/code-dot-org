@@ -19,3 +19,5 @@ System.out.println(letters[1][2] + letters[2][1] + letters[1][1]);
 
 What is printed as a result of executing this code segment?
 MARKDOWN
+
+allow_multiple_attempts true

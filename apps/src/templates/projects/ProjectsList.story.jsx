@@ -3,7 +3,7 @@ import ProjectsList from './ProjectsList';
 
 export default {
   title: 'ProjectsList',
-  component: ProjectsList
+  component: ProjectsList,
 };
 
 const STUB_PROJECTS_DATA = [
@@ -12,7 +12,7 @@ const STUB_PROJECTS_DATA = [
     name: 'Antelope Freeway',
     studentName: 'Alice',
     type: 'applab',
-    updatedAt: '2016-12-31T23:59:59.999-08:00'
+    updatedAt: '2016-12-31T23:59:59.999-08:00',
   },
   {
     channel: 'AAAABBBBCCCCDDDDEE',
@@ -20,7 +20,7 @@ const STUB_PROJECTS_DATA = [
     studentName: 'Charlie',
     thumbnailUrl: '/media/common_images/stickers/cat.png',
     type: 'weblab',
-    updatedAt: '2016-11-30T00:00:00.001-08:00'
+    updatedAt: '2016-11-30T00:00:00.001-08:00',
   },
   {
     channel: 'NOPQRSTUVWXYZ567879',
@@ -28,8 +28,8 @@ const STUB_PROJECTS_DATA = [
     studentName: 'Bob',
     thumbnailUrl: '/media/common_images/stickers/bat.png',
     type: 'gamelab',
-    updatedAt: '2017-01-01T00:00:00.001-08:00'
-  }
+    updatedAt: '2017-01-01T00:00:00.001-08:00',
+  },
 ];
 
 const Template = args => (
@@ -45,10 +45,10 @@ export const WithThumbnails = Template.bind({});
 
 export const WithoutThumbnails = Template.bind({});
 WithoutThumbnails.args = {
-  showProjectThumbnails: false
+  showProjectThumbnails: false,
 };
 
 export const LocalizedWithThumbnails = Template.bind({});
 LocalizedWithThumbnails.args = {
-  localeCode: 'es-MX'
+  localeCode: 'es-MX',
 };

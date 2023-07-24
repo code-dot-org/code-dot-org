@@ -36,7 +36,7 @@ var allBlocks = [
   'stone',
   'tnt',
   'tree',
-  'wool'
+  'wool',
 ];
 
 // Install extensions to Blockly's language and JavaScript generator.
@@ -54,7 +54,7 @@ exports.install = function (blockly, blockInstallOptions) {
   var craftBlockOptions = {
     inventoryBlocks: Object.keys(dropdownBlockSet),
     ifBlockOptions: blockInstallOptions.level.ifBlockOptions,
-    placeBlockOptions: blockInstallOptions.level.placeBlockOptions
+    placeBlockOptions: blockInstallOptions.level.placeBlockOptions,
   };
 
   var inventoryBlocksEmpty =
@@ -73,7 +73,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_moveForward = function () {
@@ -89,7 +89,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_moveBackward = function () {
@@ -107,12 +107,12 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.Blocks.craft_turn.DIRECTIONS = [
     [i18n.blockTurnLeft() + ' \u21BA', 'left'],
-    [i18n.blockTurnRight() + ' \u21BB', 'right']
+    [i18n.blockTurnRight() + ' \u21BB', 'right'],
   ];
 
   blockly.getGenerator().craft_turn = function () {
@@ -131,7 +131,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_destroyBlock = function () {
@@ -154,7 +154,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendStatementInput('DO').appendField(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_ifBlockAhead = function () {
@@ -179,7 +179,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendStatementInput('DO').appendField(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_ifLavaAhead = function () {
@@ -208,7 +208,7 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendField(dropdown, 'TYPE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_placeBlock = function () {
@@ -220,7 +220,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [i18n.directionForward(), '0'],
     [i18n.directionBack(), '2'],
     [i18n.directionLeft(), '3'],
-    [i18n.directionRight(), '1']
+    [i18n.directionRight(), '1'],
   ];
 
   blockly.Blocks.craft_placeBlockDirection = {
@@ -240,7 +240,7 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendField(new blockly.FieldDropdown(fourDirections), 'DIR');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.getGenerator().craft_placeBlockDirection = function () {

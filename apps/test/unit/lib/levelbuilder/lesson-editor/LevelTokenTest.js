@@ -4,7 +4,7 @@ import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {
   UnconnectedLevelToken as LevelToken,
-  LevelTokenContents
+  LevelTokenContents,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
 import _ from 'lodash';
 
@@ -18,14 +18,14 @@ const defaultScriptLevel = {
       id: '2001',
       name: 'Level One',
       key: 'level-one',
-      url: '/path/to/edit/1'
-    }
+      url: '/path/to/edit/1',
+    },
   ],
   kind: 'puzzle',
   assessment: false,
   challenge: false,
   bonus: false,
-  instructor_in_training: false
+  instructor_in_training: false,
 };
 
 describe('LevelToken', () => {
@@ -44,7 +44,7 @@ describe('LevelToken', () => {
       delta: 0,
       handleDragStart,
       removeLevel,
-      toggleExpand
+      toggleExpand,
     };
   });
 
@@ -71,7 +71,7 @@ describe('LevelTokenContents', () => {
       allowMajorCurriculumChanges: true,
       handleDragStart,
       removeLevel,
-      toggleExpand
+      toggleExpand,
     };
   });
 
@@ -157,7 +157,7 @@ describe('LevelTokenContents', () => {
     tempScriptLevel.levels.push({
       id: '2002',
       name: 'Level Two',
-      url: '/path/to/edit/2'
+      url: '/path/to/edit/2',
     });
 
     const wrapper = shallow(
@@ -190,7 +190,7 @@ describe('LevelTokenContents', () => {
     defaultProps.scriptLevel.levels.push({
       id: '2002',
       name: 'Level Two',
-      url: '/path/to/edit/2'
+      url: '/path/to/edit/2',
     });
     const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
     const details = wrapper.find('Connect(LevelTokenDetails)');
