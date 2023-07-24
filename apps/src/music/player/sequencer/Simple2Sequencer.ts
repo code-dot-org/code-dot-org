@@ -133,10 +133,13 @@ export default class Simple2Sequencer extends Sequencer {
     const lastFunctionId = this.functionStack.pop();
     if (lastFunctionId !== undefined) {
       this.functionMap[lastFunctionId].endMeasure = this.getCurrentMeasure();
-      // Add the called function to the list of functions that its caller called.
-      this.functionMap[
-        this.functionStack[this.functionStack.length - 1]
-      ].calledFunctionIds.push(lastFunctionId);
+
+      if (this.functionStack.length > 0) {
+        // Add the called function to the list of functions that its caller called.
+        this.functionMap[
+          this.functionStack[this.functionStack.length - 1]
+        ].calledFunctionIds.push(lastFunctionId);
+      }
     }
 
     this.effectsStack.pop();
@@ -291,18 +294,6 @@ export default class Simple2Sequencer extends Sequencer {
     currentFunction.playbackEvents.push(event);
     this.updateMeasureForPlayByLength(event.length);
   }
-
-  /*
-  private addNewFunctionCall(functionName: string){
-    const currentFunctionId = this.getCurrentFunctionId();
-    if (currentFunctionId === null) {
-      Lab2MetricsReporter.logWarning('Invalid state: no current function ID');
-      return;
-    }
-    const currentFunction = this.functionMap[currentFunctionId];
-
-    currentFunction.calledFunctionIds.push(functionName);
-  }*/
 
   // Internal helper to get the entry at the top of the stack, or null
   // if the stack is empty.
