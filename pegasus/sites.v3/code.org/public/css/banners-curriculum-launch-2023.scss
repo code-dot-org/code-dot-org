@@ -109,7 +109,7 @@
   }
 }
 
-// Homepage skinny banner
+// Skinny banner
 .curriculum-banner-skinny {
   box-sizing: content-box;
   height: 130px;
@@ -155,7 +155,7 @@
     width: 60%;
 
     @media screen and (max-width: $width-sm) {
-      width: 100%;
+      width: 98%;
     }
 
     h1 {
