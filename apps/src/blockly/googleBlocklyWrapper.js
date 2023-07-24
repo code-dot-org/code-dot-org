@@ -311,16 +311,22 @@ function initializeBlocklyWrapper(blocklyInstance) {
     true /* opt_allowOverrides */
   );
 
+  const procedureSerializer =
+    new blocklyWrapper.blockly_.serialization.procedures.ProcedureSerializer(
+      ObservableProcedureModel,
+      ObservableParameterModel
+    );
+
+  blocklyWrapper.procedureSerializer = procedureSerializer;
   // Register the shareable procedures serializer, used for the modal function editor.
   blocklyWrapper.blockly_.serialization.registry.unregister('procedures');
   blocklyWrapper.blockly_.serialization.registry.register(
     'procedures',
-    new blocklyWrapper.blockly_.serialization.procedures.ProcedureSerializer(
-      ObservableProcedureModel,
-      ObservableParameterModel
-    )
+    procedureSerializer
   );
+
   registerAllContextMenuItems();
+
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
