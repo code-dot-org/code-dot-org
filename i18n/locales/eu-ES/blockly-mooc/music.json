@@ -11,5 +11,8 @@
   "blockly_toolboxCategoryMath": "Matematika",
   "blockly_toolboxCategoryVariables": "Aldagaiak",
   "share": "Partekatu",
-  "startOver": "Hasi Berriro"
+  "startOver": "Hasi Berriro",
+  "panelHeaderInstructions": "Argibideak",
+  "panelHeaderWorkspace": "Lan eremua: ",
+  "continue": "Jarraitu"
 }

@@ -7,6 +7,11 @@
   "catProcedures": "Functions",
   "catText": "Text",
   "catVariables": "Variables",
+  "designElementProperty_text": "text",
+  "designElementProperty_textAlignment_left": "बाँया",
+  "designElementProperty_textAlignment_right": "दाँया",
+  "designElementProperty_zOrder": "depth",
+  "designElementTheme_classic": "Classic",
   "designWorkspaceHeader": "कार्यस्थान",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param4": "height",
@@ -19,7 +24,7 @@
   "nextLevel": "Congratulations! You have completed this puzzle.",
   "no": "होइन",
   "numBlocksNeeded": "This puzzle can be solved with %1 blocks.",
-  "repeatForever": "repeat forever",
   "repeatDo": "do",
+  "repeatForever": "repeat forever",
   "yes": "हो"
 }

@@ -60,6 +60,7 @@ km:
         reset_password_token: "តំណភ្ជាប់សម្រាប់ការផ្លាស់ប្តូរលេខសម្ងាត់ដែលអ្នកបានធ្វើតាម"
         error:
           future: មិន​អាច​នៅ​ក្នុង​ថ្ងៃ​ក្រោយ
+        us_state: 'រដ្ឋ​(សាលា)'
   hello: "សួស្ដី​ពិភពលោក"
   welcome_back: "ស្វាគមន៍​ការ​មក​វិញ, %{name}"
   your_professional_learning_plan: "គំរោងនៃការសិក្សាមុខជំនាញរបស់អ្នក"
@@ -164,6 +165,7 @@ km:
     email_preference_no: "ទេ"
     share_teacher_email_reg_partner_preference_yes: "យល់ព្រម"
     share_teacher_email_reg_partner_preference_no: "ទេ"
+    us_state: 'រដ្ឋ​(សាលា)'
   school_info:
     title: 'ព័ត៌មានអំពីសាលា'
     school_country: 'សាលាក្នុងប្រទេស'
@@ -291,7 +293,7 @@ km:
       finished_hoc: "ខ្ញុំបានបញ្ចប់វគ្គ Hour of Code​​ របស់ខ្ញុំ។"
       sign_in_to_save: 'ចូលទៅកាន់គណនីដើម្បីកត់ទុកនូវតំណើរការ'
       my_dashboard: "ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ"
-      course_catalog: "មុខវិជ្ជាដោយផ្នែក"
+      course_catalog: "កាតាឡុកវគ្គសិក្សា"
       project_gallery: "គម្រោង​"
       sections: "វគ្គ"
       help_support: "ជំនួយ និងការគាំទ្រ"
@@ -349,14 +351,16 @@ km:
       basketball: 'កីឡាបាល់បោះ'
       bounce: 'បាល់​លោត'
       dance: 'Dance Party'
-      gamelab: 'មន្ទីរពិសោធន៍ ល្បែង'
+      gamelab: 'មន្ទីរពិសោធន៍ហ្គេម'
       gamelab_jr: 'បន្ទប់ហ្គេម (beta)'
       gumball: 'The Amazing World of Gumball'
       iceage: 'Ice Age'
       infinity: 'អនន្ត'
       minecraft_adventurer: 'Minecraft Adventurer'
+      minecraft_designer: 'ម៉ាញក្រាស់'
       playlab_k1: 'បន្ទប់លេង (សម្រាប់អ្នកដែលទើបរៀនអាន)'
-      spritelab: 'Sprite Lab'
+      poetry: 'កំណាព្យ'
+      spritelab: 'មន្ទីរពិសោធន៍ Sprite '
       starwarsblocks: 'Star Wars (ប្លុក)'
       starwarsblocks_hour: 'Star Wars (ប្លុក)'
       loading: 'កំពុង​ដំណើរការ...'
@@ -460,6 +464,7 @@ km:
     thank_you: '<a href="https://code.org/about/partners">'
     help_from_html: 'យើងចង់ទទួលស្គាល់ជាពិសេសវិស្វករ មកពី Amazon, Google និង Microsoft ដែលបានជួយបង្កើតអ្វីទាំងនេះ។'
     help_from_html_old: 'វិស្វករមកពីក្រុមហ៊ុន Amazon, Google, and Microsoft បានជួយបង្កើតឯកសារនេះឡើង។'
+    art_from_html_old: 'Minecraft&#8482; &ចម្លង; %{current_year} Microsoft ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ សង្គ្រាមផ្កាយ&#8482; &ចម្លង; %{current_year} Disney និង Lucasfilm ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ បង្កក&#8482; &ចម្លង; %{current_year} Disney ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ យុគសម័យទឹកកក&#8482; &ចម្លង; %{current_year} 20th Century Fox។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ Angry Birds&#8482; &ចម្លង; 2009-%{current_year} Rovio Entertainment Ltd. រក្សាសិទ្ធិគ្រប់យ៉ាង។ រុក្ខជាតិទល់នឹង Zombies&#8482; &ចម្លង; %{current_year} Electronic Arts Inc. រក្សាសិទ្ធិគ្រប់យ៉ាង។ DreamWorks មនុស្សអាក្រក់ &copy; %{current_year} DreamWorks Animation LLC ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។'
     powered_by_aws: 'Amazon Web Services ដែល “Powered by AWS” គឺជាពាណិជ្ជសញ្ញារបស់ Amazon.com, Inc. ឬសាខារបស់ខ្លួន នៅសហរដ្ឋអាមេរិក និង ប្រទេសផ្សេងទៀត។'
     built_on_github: 'បង្កើតឡើងលើ GitHub ដោយ Microsoft'
     copyright: 'រក្សាសិទ្ធ'
@@ -485,6 +490,8 @@ km:
     notes: 'គ្មាន​វីដេអូ​ទេ? មើល​កំណត់​ចំណាំ។'
     autoplay_option: 'ចាក់​វីដេអូ​ដោយ​ស្វ័យប្រវត្តិ'
     download: 'ទាញយក​វីដេអូ '
+    show_notes: 'បង្ហាញកំណត់ចំណាំ'
+    show_video: 'បង្ហាញកំណត់ចំណាំ'
     label: 'វីដេអូ'
   compatibility:
     upgrade:
@@ -512,6 +519,8 @@ km:
   upsell:
     applab:
       title: 'មន្ទីរពិសោធន៍កម្មវិធី​'
+    aquatic:
+      title: "ម៉ាញក្រាស់"
     dance-2019:
       title: 'Dance Party'
     dance:
@@ -520,13 +529,18 @@ km:
       title: 'Flappy កូដ'
       body: 'តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!'
     gamelab:
-      title: "មន្ទីរពិសោធន៍ ល្បែង"
+      title: "មន្ទីរពិសោធន៍ហ្គេម"
     hero:
+      title: "ម៉ាញក្រាស់"
       body: "Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។"
     hoc-encryption:
       title: "ការអ៉ីនគ្រីបធម្មតា"
     hoc:
       body: 'សាក​ល្បង​ផ្នែក​មូលដ្ឋាន​នៃ​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ។ មនុស្ស​ជា​ច្រើន​លាន​នាក់​បាន​សាកល្បង​រួច​ហើយ។'
+    minecraft:
+      title: "ម៉ាញក្រាស់"
+    minecraft2016:
+      title: "ម៉ាញក្រាស់"
     widgets:
       audience: "អាយុ 14 ឆ្នាំឡើង"
     unplugged_conditionals:
@@ -559,7 +573,7 @@ km:
     correct_title: "ត្រឹម​ត្រូវ"
     correct_body: "នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។"
   lesson_extras:
-    bonus_level: "ល្បែងផ្គុំរូបន្ថែម "
+    bonus_level: "កម្រិតបន្ថែម"
   dialog:
     ok: "យល់ព្រម"
     startover_title: "តើ​អ្នក​ពិត​ជា​ចង់​ចាប់ផ្ដើម​ឡើង​វិញ​មែនទេ?"
@@ -619,9 +633,14 @@ km:
       robotics:
         kodable: 'Kodable'
         other: "ផ្សេងៗ"
+      workshop_course:
+        other: 'ផ្សេងៗ'
       email_opt_in:
         opt_in_yes: 'យល់ព្រម'
         opt_in_no: 'ទេ'
+  course_offering:
+    headers:
+      minecraft: 'ម៉ាញក្រាស់'
   cookie_banner:
     accept: 'ខ្ញុំ​យល់​ព្រម'
   page_not_found_title: "រកទំព័រពុំឃើញ"

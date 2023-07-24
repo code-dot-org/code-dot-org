@@ -1,5 +1,9 @@
 @import "color", "font", "barlow-semi-condensed-font";
 
+/* This file is an adopted copy of apps/src/componentLibrary/typography/typography.module.scss.
+   Updating styles in this file will require a manual sync with the that file.
+*/
+
 // This stylesheet can be imported to maintain typographic
 // consistency across Dashboard and Pegasus sites.
 
@@ -9,7 +13,39 @@
 // identical classes for potential use on other elements if needed.
 
 // ----------------------------------------
-// v 1.0.1
+// v 2.0.0
+// ----------------------------------------
+
+// Sizes
+// Most of the typography elements have a set of different sizes (defined by "-one", "-two", "-three", "-four" suffixes).
+// (Not applicable to Headings and elements without those suffixes)
+// Common rule for all of those sizes are following:
+// 1. "-one" is bigger size.
+// 2. "-two" is a DEFAULT size, used in most of cases.
+// 3. "-three" is smaller size.
+// 4. "-four" is the smallest size.
+
+// Values
+// font-size uses rem
+// - works when the root font-size is 100% which uses the
+// browser default font-size of 16px (3rem = 16 x 3 = 48px)
+
+// margin uses em
+// - sets the margin relative to the parent element rather than the root
+// example:
+//  Imagine that we have h1 with font-size: 3rem (48px) and we want to set margin-bottom to it.
+//    - Setting margin-bottom to 0.5rem == 8px (html.font_size * 0.5) >>> rem is relative to root element (html tag) which is 16px
+//    - Setting margin-bottom to 0.5em == 24px (h1.font-size * 0.5) >>> em is relative to element itself or it's parent.
+//      Our h1 element has a font-size of 3rem (48px), so 0.5em will be equal to 48 * 0.5 = 24px margin-bottom.
+
+// Read more about rem vs em:
+// https://www.digitalocean.com/community/tutorials/css-rem-vs-em-units
+
+// line-height uses unitless numbers
+// - this multiplies the line-height by the element's font-size
+// and is the preferred way to set line-height according to Mozilla
+// https://developer.mozilla.org/en-US/docs/Web/CSS/line-height
+
 // ----------------------------------------
 
 // Heading styles
@@ -30,73 +66,109 @@
 
 @mixin heading-common {
   color: $neutral-dark;
-  line-height: 1.2;
   margin: 0 0 0.5em 0;
 }
 
 @mixin heading-xxl {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
-  font-size: 3em;
+  font-size: 3rem;
+  line-height: 1.16;
 }
 
 @mixin heading-xl {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
-  font-size: 2.125em;
+  font-size: 2.125rem;
+  line-height: 1.24;
 }
 
 @mixin heading-lg {
   @include heading-common;
   font-family: $barlowSemiCondensed-semibold;
-  font-size: 1.75em;
+  font-size: 1.75rem;
+  line-height: 1.28;
 }
 
 @mixin heading-md {
   @include heading-common;
   font-family: $barlowSemiCondensed-medium;
-  font-size: 1.5em;
+  font-size: 1.5rem;
+  line-height: 1.32;
 }
 
 @mixin heading-sm {
   @include heading-common;
   font-family: $gotham-bold, sans-serif;
-  font-size: 1.25em;
+  font-size: 1.25rem;
+  line-height: 1.40;
 }
 
 @mixin heading-xs {
   @include heading-common;
   font-family: $gotham-bold, sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
+  line-height: 1.48;
 }
 
 // Paragraph styles
 @mixin paragraph-common {
   color: $neutral-dark;
-  line-height: 1.5;
+  font-family: $gotham-regular, sans-serif;
   margin-bottom: 1em;
 }
 
 @mixin body-one {
   @include paragraph-common;
-  font-family: $gotham-regular, sans-serif;
-  font-size: 1em;
+  font-size: 1.25rem;
+  line-height: 1.4;
 }
 
 @mixin body-two {
   @include paragraph-common;
-  font-family: $gotham-regular, sans-serif;
-  font-size: 0.875em;
+  font-size: 1rem;
+  line-height: 1.48;
 }
 
-@mixin overline {
+@mixin body-three {
+  @include paragraph-common;
+  font-size: 0.875rem;
+  line-height: 1.54;
+}
+
+@mixin body-four {
+  @include paragraph-common;
+  font-size: 0.75rem;
+  line-height: 1.64;
+}
+
+// Overline styles
+@mixin overline-common {
   @include paragraph-common;
   font-family: $gotham-bold, sans-serif;
-  font-size: 0.75em;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.04rem;
 }
 
+@mixin overline-one {
+  @include overline-common;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+@mixin overline-two {
+  @include overline-common;
+  font-size: 0.75rem;
+  line-height: 1.64;
+}
+
+@mixin overline-three {
+  @include overline-common;
+  font-size: 0.625rem;
+  line-height: 1.76;
+}
+
+// Strong and Em styles
 @mixin strong {
   font-family: $gotham-bold, sans-serif;
 }
@@ -105,12 +177,16 @@
   font-family: $gotham-italics, sans-serif;
 }
 
+@mixin strong-em {
+  font-family: $gotham-bold-italics, sans-serif;
+}
+
 // Caption styles
 @mixin figcaption {
   font-family: $gotham-bold, sans-serif;
-  font-size: 0.875em;
+  font-size: 0.875rem;
   margin: 0.5em 0 1em;
-  line-height: 1.2;
+  line-height: 1.64;
 }
 
 // ----------------------------------------
@@ -130,22 +206,38 @@ h6,
 .heading-xs { @include heading-xs; }
 
 // Paragraphs
-// Use on default paragraphs
-p,
+// Use on larger paragraphs
 .body-one { @include body-one; }
+// Use on default paragraphs
+.body-two { @include body-two; }
 // Use on course block descriptions or anywhere
 // else that needs smaller paragraph text
-p.body-two,
-.body-two { @include body-two; }
+.body-three { @include body-three; }
+// Use on smallest paragraph text
+.body-four { @include body-four; }
+
+// Overlines
 // Use on small uppercase labels or descriptions
-p.overline,
-.overline { @include overline; }
+// (Bigger size)
+.overline-one { @include overline-one; }
+// (Default size)
+.overline-two { @include overline-two; }
+// (Smaller size)
+.overline-three { @include overline-three; }
+
 // Use in paragraphs to bold text
 strong,
 .strong { @include strong; }
 // Use in paragraphs to italicize text
 em,
 .em { @include em; }
+
+strong em,
+em strong,
+.em .strong,
+.strong .em {
+  @include strong-em;
+}
 
 // Captions
 // Use on figcaption elements that accompany images or videos

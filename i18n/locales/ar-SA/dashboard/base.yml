@@ -60,6 +60,7 @@ ar:
         reset_password_token: "رابط إعادة تعيين كلمة المرور الذي اتبعته"
         error:
           future: لا يمكن أن يكون في المستقبل
+        us_state: 'الولاية'
   beta: "تجريبي"
   hello: "مرحباً بالعالم"
   welcome_back: "أهلاً بكم من جديد، %{name}"
@@ -200,6 +201,7 @@ ar:
     parent_account_checkbox: "أنا أحد الوالدين / الوصي أسجل الدخول نيابة عن طفلي"
     parent_account_email_progress_permission: "هل يمكننا إرسال تحديثات إليك عبر البريد الإلكتروني حول تقدم طفلك ومشاريعه وتحديثات حول الدورة التدريبية وعلم الحاسوب؟ [(راجع سياسة الخصوصية لدينا)] %{privacy_policy_url}"
     parent_account_email_label: "البريد الإلكتروني للوالد / الوصي"
+    us_state: 'الولاية'
   school_info:
     title: 'معلومات المدرسة (اختيارية)'
     school_country: 'بلد المدرسة'
@@ -1186,6 +1188,7 @@ ar:
         csf_express: 'أساسيات علوم الكمبيوتر (ما قبل السريعة أو السريعة)'
         csd: 'اكتشافات علوم الكمبيوتر'
         csp: 'مبادئ علوم الكمبيوتر'
+        other: 'الأخرى'
         not_applicable: "لا ينطبق"
       email_opt_in:
         opt_in_yes: 'نعم'

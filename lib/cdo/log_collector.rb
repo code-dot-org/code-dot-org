@@ -29,13 +29,13 @@ class LogCollector
     start_time = Time.now
     yield
     info(
-      "Action '#{action_name}' completed without error in"\
-      " #{self.class.get_friendly_time(Time.now - start_time)}."
+      "Action '#{action_name}' completed without error in " \
+      "#{self.class.get_friendly_time(Time.now - start_time)}."
     )
   rescue StandardError => exception
     error(
-      "Action '#{action_name}' exited with error in"\
-      " #{self.class.get_friendly_time(Time.now - start_time)}."
+      "Action '#{action_name}' exited with error in " \
+      "#{self.class.get_friendly_time(Time.now - start_time)}."
     )
     record_exception(exception)
   end
@@ -52,13 +52,13 @@ class LogCollector
     start_time = Time.now
     yield
     info(
-      "Action '#{action_name}' completed without error in"\
-      " #{self.class.get_friendly_time(Time.now - start_time)}."
+      "Action '#{action_name}' completed without error in " \
+      "#{self.class.get_friendly_time(Time.now - start_time)}."
     )
   rescue StandardError
     error(
-      "Action '#{action_name}' exited with error in"\
-      " #{self.class.get_friendly_time(Time.now - start_time)}. Exception re-raised!"
+      "Action '#{action_name}' exited with error in " \
+      "#{self.class.get_friendly_time(Time.now - start_time)}. Exception re-raised!"
     )
     # To be handled by caller
     raise
@@ -94,9 +94,9 @@ class LogCollector
     exception_count = exceptions.length
     log_count = logs.length
     metric_count = metrics.length
-    summary = "Task '#{task_name}' recorded "\
-      "#{exception_count} #{'exception'.pluralize(exception_count)}, "\
-      "#{log_count} #{'log message'.pluralize(log_count)}, "\
+    summary = "Task '#{task_name}' recorded " \
+      "#{exception_count} #{'exception'.pluralize(exception_count)}, " \
+      "#{log_count} #{'log message'.pluralize(log_count)}, " \
       "and #{metric_count} #{'metric'.pluralize(metric_count)}."
 
     # Return a summary and a detailed list of exceptions, logs and metrics.

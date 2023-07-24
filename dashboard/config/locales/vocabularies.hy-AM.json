@@ -2,212 +2,34 @@
   "hy-AM": {
     "data": {
       "vocabularies": {
-        "debugging/minecraft/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/hero/unversioned": {
-          "word": "Debugging"
-        },
-        "function/hero/unversioned": {
-          "word": "Ֆունկցիա"
-        },
-        "code/poem-art/2021": {
-          "word": "Կոդ"
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Debugging"
-        },
-        "code/artist/unversioned": {
-          "word": "Կոդ"
-        },
-        "debugging/artist/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Debugging"
-        },
-        "conditionals/aquatic/unversioned": {
-          "word": "conditionals"
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Debugging"
-        },
-        "loops/aquatic/unversioned": {
-          "word": "loops"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/mc/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Debugging"
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/sports/unversioned": {
-          "word": "Կոդ"
-        },
-        "debugging/sports/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/basketball/unversioned": {
-          "word": "Debugging"
-        },
-        "debugging/coursed/2022": {
-          "word": "Debugging"
-        },
-        "programming/coursed/2022": {
-          "word": "Programming"
-        },
-        "conditionals/coursed/2022": {
-          "word": "conditionals"
-        },
-        "variable/coursef/2022": {
-          "word": "Փոփոխական"
-        },
-        "internet/coursef/2022": {
-          "word": "Internet"
-        },
-        "define/coursef/2022": {
-          "word": "Սահմանել"
-        },
-        "function/coursee/2022": {
-          "word": "Ֆունկցիա"
-        },
-        "conditionals/coursee/2022": {
-          "word": "conditionals"
-        },
-        "copyright/coursee/2022": {
+        "copyright/csd/2021": {
           "word": "հեղինակային իրավունք"
         },
-        "define/coursee/2022": {
-          "word": "Սահմանել"
-        },
-        "debugging/courseb/2022": {
+        "debugging/csd/2021": {
           "word": "Debugging"
         },
-        "programming/courseb/2022": {
-          "word": "Programming"
-        },
-        "debugging/express/2022": {
-          "word": "Debugging"
-        },
-        "programming/express/2022": {
-          "word": "Programming"
-        },
-        "conditionals/express/2022": {
-          "word": "conditionals"
-        },
-        "function/express/2022": {
-          "word": "Ֆունկցիա"
-        },
-        "variable/express/2022": {
+        "variable/csd/2021": {
           "word": "Փոփոխական"
         },
-        "define/express/2022": {
-          "word": "Սահմանել"
-        },
-        "debugging/pre-express/2022": {
-          "word": "Debugging"
-        },
-        "programming/pre-express/2022": {
-          "word": "Programming"
-        },
-        "debugging/coursea/2022": {
-          "word": "Debugging"
-        },
-        "programming/coursea/2022": {
-          "word": "Programming"
-        },
-        "debugging/coursec/2022": {
-          "word": "Debugging"
-        },
-        "programming/coursec/2022": {
-          "word": "Programming"
-        },
-        "binary/coursec/2022": {
-          "word": "երկուական"
-        },
-        "debugging/csd/2022": {
-          "word": "Debugging"
-        },
-        "variable/csd/2022": {
-          "word": "Փոփոխական"
-        },
-        "conditionals/csd/2022": {
+        "conditionals/csd/2021": {
           "word": "conditionals"
         },
-        "abstraction/csd/2022": {
+        "abstraction/csd/2021": {
           "word": "աբստրակցիա"
         },
-        "function/csd/2022": {
+        "function/csd/2021": {
           "word": "Ֆունկցիա"
-        },
-        "copyright/csd/2022": {
-          "word": "հեղինակային իրավունք"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Կոդ",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "variable/coursef/2021": {
-          "word": "Փոփոխական"
-        },
-        "internet/coursef/2021": {
-          "word": "Internet"
-        },
-        "define/coursef/2021": {
-          "word": "Սահմանել"
-        },
-        "debugging/courseb/2021": {
-          "word": "Debugging"
-        },
-        "programming/courseb/2021": {
-          "word": "Programming"
         },
         "debugging/coursea/2021": {
           "word": "Debugging"
         },
         "programming/coursea/2021": {
+          "word": "Programming"
+        },
+        "debugging/courseb/2021": {
+          "word": "Debugging"
+        },
+        "programming/courseb/2021": {
           "word": "Programming"
         },
         "debugging/coursec/2021": {
@@ -227,6 +49,27 @@
         },
         "conditionals/coursed/2021": {
           "word": "conditionals"
+        },
+        "copyright/coursee/2021": {
+          "word": "հեղինակային իրավունք"
+        },
+        "function/coursee/2021": {
+          "word": "Ֆունկցիա"
+        },
+        "conditionals/coursee/2021": {
+          "word": "conditionals"
+        },
+        "define/coursee/2021": {
+          "word": "Սահմանել"
+        },
+        "variable/coursef/2021": {
+          "word": "Փոփոխական"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Սահմանել"
         },
         "debugging/express/2021": {
           "word": "Debugging"
@@ -252,35 +95,192 @@
         "programming/pre-express/2021": {
           "word": "Programming"
         },
-        "copyright/coursee/2021": {
+        "copyright/csd/2022": {
           "word": "հեղինակային իրավունք"
         },
-        "function/coursee/2021": {
-          "word": "Ֆունկցիա"
-        },
-        "conditionals/coursee/2021": {
-          "word": "conditionals"
-        },
-        "define/coursee/2021": {
-          "word": "Սահմանել"
-        },
-        "debugging/csd/2021": {
+        "debugging/csd/2022": {
           "word": "Debugging"
         },
-        "variable/csd/2021": {
+        "variable/csd/2022": {
           "word": "Փոփոխական"
         },
-        "conditionals/csd/2021": {
+        "conditionals/csd/2022": {
           "word": "conditionals"
         },
-        "abstraction/csd/2021": {
+        "abstraction/csd/2022": {
           "word": "աբստրակցիա"
         },
-        "function/csd/2021": {
+        "function/csd/2022": {
           "word": "Ֆունկցիա"
         },
-        "copyright/csd/2021": {
+        "debugging/coursea/2022": {
+          "word": "Debugging"
+        },
+        "programming/coursea/2022": {
+          "word": "Programming"
+        },
+        "debugging/courseb/2022": {
+          "word": "Debugging"
+        },
+        "programming/courseb/2022": {
+          "word": "Programming"
+        },
+        "debugging/coursec/2022": {
+          "word": "Debugging"
+        },
+        "programming/coursec/2022": {
+          "word": "Programming"
+        },
+        "binary/coursec/2022": {
+          "word": "երկուական"
+        },
+        "debugging/coursed/2022": {
+          "word": "Debugging"
+        },
+        "programming/coursed/2022": {
+          "word": "Programming"
+        },
+        "conditionals/coursed/2022": {
+          "word": "conditionals"
+        },
+        "function/coursee/2022": {
+          "word": "Ֆունկցիա"
+        },
+        "conditionals/coursee/2022": {
+          "word": "conditionals"
+        },
+        "copyright/coursee/2022": {
           "word": "հեղինակային իրավունք"
+        },
+        "define/coursee/2022": {
+          "word": "Սահմանել"
+        },
+        "variable/coursef/2022": {
+          "word": "Փոփոխական"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet"
+        },
+        "define/coursef/2022": {
+          "word": "Սահմանել"
+        },
+        "debugging/express/2022": {
+          "word": "Debugging"
+        },
+        "programming/express/2022": {
+          "word": "Programming"
+        },
+        "conditionals/express/2022": {
+          "word": "conditionals"
+        },
+        "function/express/2022": {
+          "word": "Ֆունկցիա"
+        },
+        "variable/express/2022": {
+          "word": "Փոփոխական"
+        },
+        "define/express/2022": {
+          "word": "Սահմանել"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Debugging"
+        },
+        "programming/pre-express/2022": {
+          "word": "Programming"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "conditionals"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Debugging"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "loops"
+        },
+        "code/artist/unversioned": {
+          "word": "Կոդ"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Debugging"
+        },
+        "function/hero/unversioned": {
+          "word": "Ֆունկցիա"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Debugging"
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Debugging"
+        },
+        "code/poem-art/2021": {
+          "word": "Կոդ"
+        },
+        "code/sports/unversioned": {
+          "word": "Կոդ"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Debugging"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Կոդ",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         }
       }
     }

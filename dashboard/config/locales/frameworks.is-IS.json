@@ -1,2 +1,10 @@
 {
+  "is-IS": {
+    "data": {
+      "frameworks": {
+        "ngss": {
+        }
+      }
+    }
+  }
 }

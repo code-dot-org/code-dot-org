@@ -2609,6 +2609,8 @@ fa:
             '10': '10'
       storylab_clearHeadings:
         text: پاک کردن عنوانها
+      storylab_printText:
+        text: چاپ [TEXT][0]
       storylab_setForegroundEffect2:
         text: اجرای افکت [EFFECT][0]
         options:

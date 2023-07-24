@@ -41,6 +41,12 @@ module ApplicationHelper
     end
   end
 
+  def us_state_options
+    User.us_state_dropdown_options.map do |code, name|
+      [name, code]
+    end
+  end
+
   def activity_css_class(user_level)
     best_activity_css_class([user_level])
   end

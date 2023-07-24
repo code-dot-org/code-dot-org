@@ -1,3 +1,5 @@
+export const baseAssetUrl = 'https://curriculum.code.org/media/musiclab/';
+
 export interface Trigger {
   id: string;
   dropdownLabel: string;
@@ -30,18 +32,6 @@ export const Triggers: Trigger[] = [
     buttonLabel: '4',
     keyboardKey: '4',
   },
-  {
-    id: 'trigger5',
-    dropdownLabel: '5',
-    buttonLabel: '5',
-    keyboardKey: '5',
-  },
-  {
-    id: 'trigger6',
-    dropdownLabel: '6',
-    buttonLabel: '6',
-    keyboardKey: '6',
-  },
 ];
 
 export const BlockMode = {
@@ -50,8 +40,6 @@ export const BlockMode = {
   SIMPLE2: 'Simple2',
   TRACKS: 'Tracks',
 };
-
-export const DEFAULT_SOUND = 'beats/groovy_beat';
 
 // For reference, events look like this:
 // events: [{src: 'sound_1', tick: 3}]
@@ -73,3 +61,6 @@ export const DEFAULT_CHORD_LENGTH = 1;
 
 export const LOCAL_STORAGE = 'local';
 export const REMOTE_STORAGE = 'remote';
+
+// Minimum number of measures in a song
+export const MIN_NUM_MEASURES = 30;

@@ -719,6 +719,11 @@ ja:
         csa_sorting_algorithms: 'CSA: ソートアルゴリズム'
         star_quilts_intro_to_artist: 'スターキルト:アーティスト紹介'
         upload_sprites_backgrounds: カスタムスプライトと背景のアップロード
+        PL_CSD_EquityBlindSpotsvid: 偏見と責任
+        how-ai-works-llms-full: チャットボットと大規模言語モデルの仕組み
+        how-ai-works-creativity-full: AIに創造性と想像力はあるのか？
+        how-ai-works-llms-part1: チャットボットと大規模言語モデル Part 1
+        how-ai-works-llms-part2: チャットボットと大規模言語モデル Part 2
     callout:
       text:
         drag_blocks: '「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。'

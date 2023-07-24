@@ -7,6 +7,10 @@
   "catProcedures": "Funkcijas",
   "catText": "Teksts",
   "catVariables": "Mainīgie",
+  "designElementProperty_text": "teksts",
+  "designElementProperty_textAlignment_left": "pa kreisi",
+  "designElementProperty_textAlignment_right": "pa labi",
+  "designElementProperty_zOrder": "dziļums",
   "designWorkspaceHeader": "Darba virsma: ",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param4": "augstums",
@@ -18,7 +22,7 @@
   "nextLevel": "Apsveicu! Jūs pabeidzāt šo puzli.",
   "no": "Nē",
   "numBlocksNeeded": "Šo puzli var atrisināt ar %1 blokiem.",
-  "repeatForever": "mūžīgi atkārtot",
   "repeatDo": "darīt",
+  "repeatForever": "mūžīgi atkārtot",
   "yes": "Jā"
 }

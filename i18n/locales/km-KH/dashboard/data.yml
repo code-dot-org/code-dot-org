@@ -16,8 +16,8 @@ km:
         ArtistEC: វិចិត្រករ
         Applab: មន្ទីរពិសោធន៍កម្មវិធី​
         Custom: សិល្បករ
-        Gamelab: មន្ទីរពិសោធន៍ ល្បែង
-        Spritelab: Sprite Lab
+        Gamelab: មន្ទីរពិសោធន៍ហ្គេម
+        Spritelab: មន្ទីរពិសោធន៍ Sprite 
     trophy:
       name:
         Bronze: សំរឹទ្ធ
@@ -34,14 +34,14 @@ km:
         maze_2_18: "One more practice puzzle with the `if/else`\nblock!\\\\r\n\\\\r\nTrace it with your finger to see if you can figure it out on\nyour first try."
         jigsaw_1: ចុចលើប្លុក
         jigsaw_2: អូសប្លុកទៅរកគោលដៅ
-        jigsaw_3: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_3: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
         jigsaw_4: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
-        jigsaw_5: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
-        jigsaw_6: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
-        jigsaw_7: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
-        jigsaw_8: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
-        jigsaw_9: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
-        jigsaw_10: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_5: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_6: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_7: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_8: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_9: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_10: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
         jigsaw_11: ដាក់ប្លុកទាំងនេះ តាមលំដាប់លំដោយលេខរៀង
         jigsaw_12: ដាក់ប្លុកទាំងនេះ តាមលំដាប់លំដោយលេខរៀង
         studio_c2_8: "Can you have Waddles (actor 1) say\n\"Ouch!\" and play a \"hit\" sound if he runs into Chomp? \\\\r\n\\\\r\nWhen you're\ndone, play the game to make that happen."
@@ -52,21 +52,28 @@ km:
         studio_c3_game_6: "Add blocks to the `when run` event\nto change the background and the speed of Waddles.\\\\r\n\\\\r\nPlay the game and\nmove Waddles with the arrows until you score."
     video:
       name:
+        artist_intro: ការណែនាំពីវិចិត្រករ
+        loop_until: ធ្វើឡើងវិញរហូតដល់ប្លុក
         function: អនុគមន៍
         Unplug2: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         Unplug5: អនុគមន៍
         Unplug6: លក្ខខណ្ឌ
         C1_bigevent_unplugged: ព្រឹត្តិការណ៍ធំ
+        C1_artist_intro: ការណែនាំពីវិចិត្រករ
+        C2_artist_intro: ការណែនាំពីវិចិត្រករ
         C2_conditionals_with_cards: លក្ខខណ្ឌ
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
+        C3_artist_intro: ការណែនាំពីវិចិត្រករ
         C3_bounce: បាល់​លោត
         C3_computational_thinking: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
-        C4_loops_zombie: រង្វិល​ជុំ
+        C4_loops_zombie: ប្រតិបត្តិដដែលៗ
+        C4_variables_artist: អថេរ - សិល្បករ
         C4_conditionals: លក្ខខណ្ឌ
-        CSF_collector_k1_blocks: "CS មូលដ្ធានគ្រឹះ : អ្នកប្រមូល\n"
-        CSF_collector_repeat_loops: អ្នកប្រមូល ធ្វើដដែលៗឡើងវិញ
-        CSF_collector_text_blocks: "CS មូលដ្ធានគ្រឹះ : អ្នកប្រមូល\n"
+        CSF_a_b_artist_loops: សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)
+        CSF_collector_k1_blocks: 'មូលដ្ធានគ្រឹះ វិទ្យាសាស្រ្តកុំព្យូទ័រ : អ្នកប្រមូលកំណប់'
+        CSF_collector_repeat_loops: ការប្រើប្រាស់កូដប្លុក ធ្វើឡើងវិញ​​ (loops)
+        CSF_collector_text_blocks: 'មូលដ្ធានគ្រឹះ វិទ្យាសាស្រ្តកុំព្យូទ័រ : អ្នកប្រមូលកំណប់'
         CSF_debugging_k1_blocks: ការបំបាត់កំហុស (Debugging)
         CSF_debugging_text_blocks: ការបំបាត់កំហុស (Debugging)
         CSF_maze_intro_k1_blocks: ការណែនាំអំពីកូដស្ទូឌីយោ (Code studio)
@@ -75,7 +82,7 @@ km:
         CSF_stevie_big_project: Stevie and the Big Project
         CSF_unspotted_bugs: កំហុសដែលមិនបានគ្រោងទុក
         playlab_intro: ការណែនាំអំពីការអនុវត្តលើ Play Lab
-        csp_applab_loops: រង្វិល​ជុំ
+        csp_applab_loops: ប្រតិបត្តិដដែលៗ
         mc_2016_congrats: Minecraft Hour of Code - អបអរសាទរ
         mc_2017_agent_intro: Minecraft Hour of Code - The Agent
         mc_2017_repeat: Minecraft Hour of Code - រង្វិលជុំ
@@ -88,12 +95,19 @@ km:
         CSF_skinOverview_Harvester: អ្នកប្រមូលផល
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: ការធ្វើដដែលៗជាមួយ​ BB-8
         CSF_harvester_skinOverview_K-1: អ្នកប្រមូលផល
         CSF_scrat_loops_K1: ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក
         CSF_scrat_loops_CF: រង្វិលជុំក្នុងយុគសម័យទឹកកក
-        CSF_loops_AB: រង្វិល​ជុំ
+        CSF_loops_AB: ប្រតិបត្តិដដែលៗ
+        mc_2018_intro: 'Minecraft: ការណែនាំអំពីដំណើរកម្សាន្តក្នុងទឹក'
+        MC_2018_loops: 'Minecraft: ដំណើរកម្សាន្តក្នុងទឹក (ធ្វើសារឡើងវិញ)'
+        mc_2018_conditionals: 'Minecraft: លក្ខខណ្ឌនៃការធ្វើដំណើរកម្សាន្តក្នុងទឹក'
+        mc_2018_closing: 'Minecraft: សូមអបអរសាទរដំណើរកម្សាន្តក្នុងទឹក'
         hoc_dance_events: ព្រឹត្ដិការណ៍ - Dance Party
         hoc_dance_properties: លក្ខណៈសម្បត្តិ - Dance Party
+        CSF_SpriteLab_Intro_v2: សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍
+        CSF_Spritelab_MakeSprite_v2: របៀបបង្កើតអាង (Sprite)
         csd_debugging: ការបំបាត់កំហុស (Debugging)
         hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - Dance Party
         hoc_dance_properties_2019: លក្ខណៈសម្បត្តិ - Dance Party

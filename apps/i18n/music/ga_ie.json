@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "seinn fuaim",
   "blockly_blockPlaySoundAtMeasureTooltip": "seinn fuaim",
+  "blockly_blockPlaySoundTooltip": "seinn fuaim",
   "blockly_blockRepeatTooltip": "athdhéan",
   "blockly_blockWhenRun": "nuair a ritear é",
   "blockly_blockWhenRunTooltip": "nuair a ritear é",
@@ -10,7 +10,10 @@
   "blockly_toolboxCategoryLogic": "Loighic",
   "blockly_toolboxCategoryMath": "Matamaitic",
   "blockly_toolboxCategoryVariables": "Athróga",
+  "continue": "Ar aghaidh",
   "feedback": "Aiseolas",
+  "panelHeaderInstructions": "Treoracha",
+  "panelHeaderWorkspace": "Spás oibre: ",
   "share": "Comhroinn",
   "startOver": "Tosaigh Arís"
 }

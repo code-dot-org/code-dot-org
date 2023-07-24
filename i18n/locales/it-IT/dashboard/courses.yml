@@ -60,12 +60,16 @@ it:
           description_short: Impara i princìpi fondamentali dell'informatica.
         mike-test:
           title: Fondamenti di Informatica
+        self-paced-pl-csp-2021:
+          title: Insegnare i Principi Informatici
         csp-2022:
           description_short: Impara i princìpi fondamentali dell'informatica.
         vpl-csd-summer-pilot-ci-2022:
           title: Investigazione Curriculare di CS Discoveries
         self-paced-pl-csa-2022:
           title: CSA Moduli Per Iniziare
+        self-paced-pl-csp-2022:
+          title: Insegnare i Principi Informatici
         csp-2023:
           description_short: Impara i princìpi fondamentali dell'informatica.
         self-paced-pl-csa-2023:
@@ -74,51 +78,25 @@ it:
           title: Alla scoperta dell'informatica
         vpl-csd-summer-ci-2023:
           title: Investigazione Curriculare di CS Discoveries
+        self-paced-pl-csp-2023:
+          title: Insegnare i Principi Informatici
     resources:
-      curriculum/csd/2020:
-        name: Curriculum
-      teacher_forum/csd/2020:
-        name: Forum dell'insegnante
       curriculum/csd/2017:
         name: Curriculum
       teacher_forum_6/csd/2017:
         name: Forum dell'insegnante
-      all_code_5/csd/2022:
-        name: Tutti i programmi
-      all_resources_7/csd/2022:
-        name: Tutte le risorse
-      all_standards_7/csd/2022:
-        name: Tutti gli standard
-      all_vocabulary_7/csd/2022:
-        name: Tutte le voci di glossario
-      csd_curriculum_guide/csd/2022:
-        name: Guida al piano di studi
-      csd_guide_to_debugging/csd/2022:
-        name: Guida al debugging
-      csd_guide_to_differentiation/csd/2022:
-        name: Guida alla differenziazione
-      csd_guide_to_using_resources/csd/2022:
-        name: Guida all'utilizzo delle risorse
-      csd_implementation_guide/csd/2022:
-        name: Implementation Guide
+      curriculum/csd/2018:
+        name: Curriculum
+      teacher_forum_6/csd/2018:
+        name: Forum dell'insegnante
       curriculum/csd/2019:
         name: Curriculum
       teacher_forum/csd/2019:
         name: Forum dell'insegnante
-      all_code_2/csd/2023:
-        name: Tutti i programmi
-      all_resources_2/csd/2023:
-        name: Tutte le risorse
-      all_standards_2/csd/2023:
-        name: Tutti gli standard
-      all_vocabulary_2/csd/2023:
-        name: Tutte le voci di glossario
-      csd_guide_to_differentiation_1/csd/2023:
-        name: Guida alla differenziazione
-      csd_guide_to_using_resources_1/csd/2023:
-        name: Guida all'utilizzo delle risorse
-      csd_implementation_guide_1/csd/2023:
-        name: Implementation Guide
+      curriculum/csd/2020:
+        name: Curriculum
+      teacher_forum/csd/2020:
+        name: Forum dell'insegnante
       all_code/csd/2021:
         name: Tutti i programmi
       all_resources_1/csd/2021:
@@ -137,7 +115,41 @@ it:
         name: Guida all'utilizzo delle risorse
       csd_implementation_guide/csd/2021:
         name: Implementation Guide
-      curriculum/csd/2018:
-        name: Curriculum
-      teacher_forum_6/csd/2018:
-        name: Forum dell'insegnante
+      all_code_5/csd/2022:
+        name: Tutti i programmi
+      all_resources_7/csd/2022:
+        name: Tutte le risorse
+      all_standards_7/csd/2022:
+        name: Tutti gli standard
+      all_vocabulary_7/csd/2022:
+        name: Tutte le voci di glossario
+      csd_curriculum_guide/csd/2022:
+        name: Guida al piano di studi
+      csd_guide_to_debugging/csd/2022:
+        name: Guida al debugging
+      csd_guide_to_differentiation/csd/2022:
+        name: Guida alla differenziazione
+      csd_guide_to_using_resources/csd/2022:
+        name: Guida all'utilizzo delle risorse
+      csd_implementation_guide/csd/2022:
+        name: Implementation Guide
+      csd_learning_frameworks/csd/2022:
+        name: Piano di apprendimento
+      csd_programming_levels_guide/csd/2022:
+        name: Guida agli esercizi di programmazione
+      all_code_2/csd/2023:
+        name: Tutti i programmi
+      all_resources_2/csd/2023:
+        name: Tutte le risorse
+      all_standards_2/csd/2023:
+        name: Tutti gli standard
+      all_vocabulary_2/csd/2023:
+        name: Tutte le voci di glossario
+      csd_guide_to_differentiation_1/csd/2023:
+        name: Guida alla differenziazione
+      csd_guide_to_using_resources_1/csd/2023:
+        name: Guida all'utilizzo delle risorse
+      csd_implementation_guide_1/csd/2023:
+        name: Implementation Guide
+      csd_learning_frameworks_1/csd/2023:
+        name: Piano di apprendimento

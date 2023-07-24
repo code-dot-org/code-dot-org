@@ -4,7 +4,6 @@ Feature: Starwars Project
 Scenario: Starwars Flow
   Given I am on "http://studio.code.org/projects/starwars"
   And I get redirected to "/projects/starwars/([^\/]*?)/edit" via "dashboard"
-  And I rotate to landscape
   And I wait for the page to fully load
   Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
   And element "#runButton" is visible

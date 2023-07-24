@@ -87,8 +87,8 @@ class PardotV2
       yield prospects if block_given?
 
       total_results_retrieved += prospects.length
-      log "Retrieved #{total_results_retrieved} prospects. Last Pardot ID = #{last_id}."\
-        " #{limit.nil? ? 'No limit' : "Limit = #{limit}"}."
+      log "Retrieved #{total_results_retrieved} prospects. Last Pardot ID = #{last_id}. " \
+        "#{limit.nil? ? 'No limit' : "Limit = #{limit}"}."
       break if limit && total_results_retrieved >= limit
     end
 
@@ -381,7 +381,7 @@ class PardotV2
     # Return indexes of rejected emails and their error messages
     errors = extract_batch_request_errors doc
 
-    log "Completed a batch request to #{api_endpoint} in #{time_elapsed.round(2)} secs. "\
+    log "Completed a batch request to #{api_endpoint} in #{time_elapsed.round(2)} secs. " \
       "#{prospects.length} prospects submitted. #{errors.length} rejected."
 
     errors

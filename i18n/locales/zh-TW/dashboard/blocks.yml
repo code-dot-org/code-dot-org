@@ -2513,7 +2513,7 @@ zh-TW:
             '"kelp"': 海帶
             '"polishedGranite"': 平滑花崗岩
       craft_placePrismarine:
-        text: 放置監獄
+        text: 放置海磷石
       craft_placeTorch:
         text: 放置火把
       craft_repeatUntilConduit:
@@ -2555,6 +2555,8 @@ zh-TW:
             '8': '8'
             '9': '9'
             '10': '10'
+      storylab_printText:
+        text: 打印 {TEXT}
       storylab_setForegroundEffect2:
         text: 製作{EFFECT}效果
         options:

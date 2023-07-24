@@ -73,7 +73,7 @@ class AdvocacySite
           [
             {
               text_actual: "Our state policy agenda",
-              url: CDO.code_org_url("/files/Making_CS_Fundamental.pdf"),
+              url: "/2023_making_cs_foundational.pdf",
               new_tab: true
             },
             {

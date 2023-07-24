@@ -2,8 +2,27 @@
 ku:
   data:
     unplugged:
+      ComputationalThinking:
+        title: بیرکردنەوەی ژمارەیی
+      Conditionals:
+        title: مەرجیەکان
+      Conditionals_2018:
+        title: مەرجیەکان
+      Conditionals_2019:
+        title: مەرجیەکان
+      GraphPaperProgramming:
+        title: بەرنامەڕێژی پەڕەی هێڵکاری
+      GraphPaperProgramming_2018:
+        title: بەرنامەڕێژی پەڕەی هێڵکاری
+      GraphPaperProgramming_2019:
+        title: بەرنامەڕێژی پەڕەی هێڵکاری
+      RelayProgramming:
+        title: بەرنامەڕێژی بە پێشبڕکێ
+      RelayProgramming_2018:
+        title: بەرنامەڕێژی بە پێشبڕکێ
+      RelayProgramming_2018_2019:
+        title: بەرنامەڕێژی بە پێشبڕکێ
       Unplug1:
-        title: پێشەكیەک بۆ زانستی کۆمپیوتەر
         desc: ئەم وانەیە پێشەکییەکت پێدەدات لەبارەی تێگەیشتنی زانستی کۆمپیوتەر و بۆتی
           روون دەکاتەوە زانستی کۆمپیوتەر چی دەکات. هەروەها دەرفەتێک بە قوتابیان دەدات
           بۆ ئەوەی بزانن کاریگەری زانستی کۆمپیوتەر چییە، لە کۆتایی چالاکییەکە هەر
@@ -12,6 +31,9 @@ ku:
           تایبەت بە کۆمپیوتەر بکەیت، بەڵام دەبێت ئاگادار بیت بە شێوازێک ئەم کارە بکەیت
           کە چێژ و خۆشیان پێ ببەخشیت بۆ ئەوەی زیاتر لەوەی چاوەڕوان دەکەیت هەڵی زیاتر
           ببەخشیت.
+        title: پێشەكیەک بۆ زانستی کۆمپیوتەر
+      Unplug10:
+        title: ئینتەرنێت
       Unplug2:
         title: بیرکردنەوەی ژمارەیی
       Unplug3:
@@ -28,57 +50,35 @@ ku:
         title: پوختە
       Unplug9:
         title: بەرنامەڕێژی بە پێشبڕکێ
-      Unplug10:
-        title: ئینتەرنێت
       UnplugHappyMaps:
         title: نەخشەی دڵخۆش
-      RelayProgramming:
-        title: بەرنامەڕێژی بە پێشبڕکێ
-      Conditionals:
-        title: مەرجیەکان
-      GraphPaperProgramming:
-        title: بەرنامەڕێژی پەڕەی هێڵکاری
-      ComputationalThinking:
-        title: بیرکردنەوەی ژمارەیی
+      UnplugHappyMaps_2018:
+        title: نەخشەی دڵخۆش
+      UnplugHappyMaps_2019:
+        title: نەخشەی دڵخۆش
+      courseA_unplugged_happyMaps:
+        title: نەخشەی دڵخۆش
       courseB_unplugged_MRF:
         title: خولی بێ كۆمپیوتەر
       courseB_unplugged_loopyMRF:
         title: خولی بێ كۆمپیوتەر
       courseC_Unplugged_ScreenOutTheMean:
         title: خولی بێ كۆمپیوتەر
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: خولی بێ كۆمپیوتەر
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: خولی بێ كۆمپیوتەر
       courseD_unplugged_digitalCitizenship:
         title: خولی بێ كۆمپیوتەر
-      courseF_unplugged_powerOfWords:
+      courseD_unplugged_digitalCitizenship_2018:
         title: خولی بێ كۆمپیوتەر
-      courseA_unplugged_happyMaps:
-        title: نەخشەی دڵخۆش
+      courseD_unplugged_digitalCitizenship_2019:
+        title: خولی بێ كۆمپیوتەر
       courseD_unplugged_graphPaperProgramming:
         title: بەرنامەڕێژی پەڕەی هێڵکاری
       courseD_unplugged_relayProgramming:
         title: بەرنامەڕێژی بە پێشبڕکێ
-      UnplugHappyMaps_2018:
-        title: نەخشەی دڵخۆش
-      GraphPaperProgramming_2018:
-        title: بەرنامەڕێژی پەڕەی هێڵکاری
-      courseD_unplugged_digitalCitizenship_2018:
+      courseF_unplugged_powerOfWords:
         title: خولی بێ كۆمپیوتەر
-      courseC_Unplugged_ScreenOutTheMean_2018:
-        title: خولی بێ كۆمپیوتەر
-      Conditionals_2018:
-        title: مەرجیەکان
-      RelayProgramming_2018:
-        title: بەرنامەڕێژی بە پێشبڕکێ
-      Conditionals_2019:
-        title: مەرجیەکان
-      GraphPaperProgramming_2019:
-        title: بەرنامەڕێژی پەڕەی هێڵکاری
-      RelayProgramming_2018_2019:
-        title: بەرنامەڕێژی بە پێشبڕکێ
-      courseD_unplugged_digitalCitizenship_2019:
-        title: خولی بێ كۆمپیوتەر
-      courseC_Unplugged_ScreenOutTheMean_2019:
-        title: خولی بێ كۆمپیوتەر
-      UnplugHappyMaps_2019:
-        title: نەخشەی دڵخۆش
       timeforcs_demo_conditionals:
         title: مەرجیەکان

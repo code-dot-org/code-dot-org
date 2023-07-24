@@ -1,16 +1,41 @@
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
+import {Key} from '../utils/Notes';
 
 export default class MusicLibrary {
+  name: string;
   groups: FolderGroup[];
   private allowedSounds: Sounds | null;
 
-  constructor(libraryJson: LibraryJson) {
+  // BPM & Key associated with this library, or undefined if not present.
+  private bpm: number | undefined;
+  private key: Key | undefined;
+
+  constructor(name: string, libraryJson: LibraryJson) {
+    this.name = name;
     this.groups = libraryJson.groups;
     this.allowedSounds = null;
+
+    const firstGroup: FolderGroup = this.groups[0];
+    if (firstGroup.bpm) {
+      this.bpm = firstGroup.bpm;
+    }
+
+    if (firstGroup.key) {
+      this.key = Key[firstGroup.key.toUpperCase() as keyof typeof Key];
+    }
   }
 
-  getLengthForId(id: string): number | null {
-    return this.getSoundForId(id)?.length || null;
+  getDefaultSound(): string | undefined {
+    const firstGroup: FolderGroup = this.groups[0];
+
+    // Return the specified default sound if there is one.
+    if (firstGroup?.defaultSound) {
+      return firstGroup?.defaultSound;
+    }
+
+    // The fallback is the first non-instrument/kit folder's first sound.
+    const firstFolder = firstGroup?.folders.find(group => !group.type);
+    return `${firstFolder?.path}/${firstFolder?.sounds[0].src}`;
   }
 
   getSoundForId(id: string): SoundData | null {
@@ -65,6 +90,14 @@ export default class MusicLibrary {
 
     return foldersCopy;
   }
+
+  getBPM(): number | undefined {
+    return this.bpm;
+  }
+
+  getKey(): Key | undefined {
+    return this.key;
+  }
 }
 
 export type LibraryJson = {
@@ -81,6 +114,30 @@ export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
 
 export type SoundType = 'beat' | 'bass' | 'lead' | 'fx';
 
+/**
+ * A single event in a {@link SampleSequence}
+ */
+export interface SequenceEvent {
+  /** 1-indexed start position of this event, in 16th notes */
+  position: number;
+  /**
+   * The note value of this event, expressed as a numerical semitone
+   * offset from the project root note.
+   */
+  noteOffset: number;
+  /** Length of this event, in 16th notes */
+  length: number;
+}
+
+/**
+ * A sequence of individual samples, used to programmaticaly
+ * generate sounds at the current key and BPM.
+ */
+export interface SampleSequence {
+  instrument: string;
+  events: SequenceEvent[];
+}
+
 export interface SoundData {
   name: string;
   src: string;
@@ -88,6 +145,8 @@ export interface SoundData {
   type: SoundType;
   note?: number;
   restricted?: boolean;
+  sequence?: SampleSequence;
+  preview?: boolean;
 }
 
 export interface SoundFolder {
@@ -103,6 +162,9 @@ interface FolderGroup {
   name: string;
   imageSrc: string;
   path: string;
+  bpm?: number;
+  key?: string;
+  defaultSound?: string;
   folders: SoundFolder[];
 }
 

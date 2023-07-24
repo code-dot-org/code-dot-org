@@ -1,9 +1,9 @@
 {
   "absolute": "туйлын",
+  "agentDiamondPathCongrats": "Баяр хүргэе, та алмазны замыг олсон! Та өнөөг хүртэл {count, plural,one {1 алмаз} other {# алмаз}} цуглуулсан!",
   "agentGenericFailureMessage": "Кодчилохоо үргэлжлүүлээрэй! Туслахын тулд Агент ашиглахаа мартуузай.",
   "agentTooFewBlocksFailureMessage": "Агентийг зөв газартаа аваачихын тулд нэг удаад зөвхөн нэг блок нэмээд үзээрэй.",
   "at": "дээр",
-  "agentDiamondPathCongrats": "Баяр хүргэе, та алмазны замыг олсон! Та өнөөг хүртэл {count, plural,one {1 алмаз} other {# алмаз}} цуглуулсан!",
   "blockActionAdd": "нэмэх",
   "blockActionAttack": "довтлох",
   "blockActionClone": "блок хувилах",

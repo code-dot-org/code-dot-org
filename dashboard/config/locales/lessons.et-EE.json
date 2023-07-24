@@ -2,155 +2,98 @@
   "et-EE": {
     "data": {
       "lessons": {
-        "minecraft/Minecraft Hour of Code Designer": {
-          "name": "KoodiTund Minecraft Designer"
+        "csd2-2017/Lists": {
+          "name": "Loendid"
         },
-        "hero/Minecraft Hour of Code": {
-          "name": "Minecraft: Kangelase teekond"
-        },
-        "flappy/Flappy Code": {
-          "name": "Flappy kood"
-        },
-        "hourofcode/Maze": {
-          "name": "Labürint"
-        },
-        "frozen/Artist": {
-          "name": "Kirjuta koodi Anna ja Elsa'ga"
-        },
-        "iceage/Ice Age Play Lab": {
-          "name": "Jääaja Play Lab"
-        },
-        "artist/Artist": {
-          "name": "Kunstnik"
-        },
-        "gumball/Gumball Play Lab": {
-          "name": "Gumballi Play Lab"
-        },
-        "aquatic/Aquatic": {
-          "name": "Minecraft: Voyage Aquatic"
-        },
-        "starwars/Hour of Code 2015": {
-          "name": "Star Wars: galaktika loomine koodiga – (JavaScript)"
-        },
-        "mc/Hour of Code 2015": {
-          "name": "Minecrafti KoodiTund"
-        },
-        "playlab/Play Lab": {
-          "name": "Play Lab"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "name": "Disney Infinity Play Lab"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "KoodiTund 2013"
-        },
-        "dance-2019/Dance Party": {
-          "name": "Tantsuõhtu"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "Tsüklid"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "Sündmused"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "Tingimuslaused"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "Funktsioonid"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "Muutujad"
         },
-        "k5-onlinepd-2019/For Loops": {
-          "name": "For tsükkel"
-        },
-        "K5-OnlinePD/Computer Science Fundamentals": {
-          "name": "Arvutiteaduse alused"
-        },
-        "K5-OnlinePD/Next Steps": {
-          "name": "Järgmised sammud"
-        },
-        "netsim/Manual DNS": {
-          "name": "Manuaalne DNS"
-        },
-        "kodea-pd-2021/Computer Science Fundamentals": {
-          "name": "Arvutiteaduse alused"
-        },
-        "kodea-pd-2021/Next Steps": {
-          "name": "Järgmised sammud"
-        },
-        "coursed-2022/Graph Paper Programming": {
-          "name": "Millimeetripaberi programmeerimine"
-        },
-        "coursed-2022/Relay Programming": {
-          "name": "Relee programmeerimine"
-        },
-        "coursed-2022/Dance Party": {
-          "name": "Tantsuõhtu"
-        },
-        "coursed-2022/Loops in Ice Age": {
-          "name": "Tsüklik - Jääaeg"
-        },
-        "coursed-2022/Conditionals with Cards": {
-          "name": "Tingimuslaused kaartidel"
-        },
-        "coursef-2022/The Internet": {
-          "name": "Internet"
-        },
-        "coursee-2022/Songwriting": {
-          "name": "Laulude kirjutamine"
-        },
-        "courseb-2022/Move It, Move It": {
-          "name": "Liiguta, liiguta"
-        },
-        "courseb-2022/Getting Loopy": {
-          "name": "Muutub tsükliliseks"
-        },
-        "express-2022/Dance Party": {
-          "name": "Tantsuõhtu"
-        },
-        "coursea-2022/Happy Maps": {
-          "name": "Happy Maps"
-        },
-        "coursec-2022/The Big Event": {
-          "name": "Suursündmus"
-        },
-        "coursec-2022/Binary Bracelets": {
-          "name": "Binaarsed käevõrud"
-        },
-        "csd3-2022/Variables": {
-          "name": "Muutujad"
-        },
-        "csd3-2022/Sprites": {
+        "csd3-2017/Sprites": {
           "name": "Spraidid"
         },
-        "csd3-2022/Text": {
-          "name": "Tekst"
-        },
-        "csd3-2022/Conditionals": {
+        "csd3-2017/Conditionals": {
           "name": "Tingimuslaused"
         },
-        "csd3-2022/Velocity": {
+        "csd3-2017/Velocity": {
           "name": "Velocity"
         },
-        "csd3-2022/Functions": {
+        "csd3-2017/Functions": {
           "name": "Funktsioonid"
         },
-        "csd6-2022/Functions": {
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Parameetritega funktsioonid"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Päris elu algoritmid: Seemenda"
+        },
+        "coursea-2017/Events in Play Lab": {
+          "name": "Sündmused Mängude Laboris"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Päris elu algoritmid: Seemenda"
+        },
+        "courseb-2017/Events in Play Lab": {
+          "name": "Sündmused Mängude Laboris"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Päris elu algoritmid: paberlennukid"
+        },
+        "coursec-2017/Events in Play Lab": {
+          "name": "Sündmused Mängude Laboris"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "Korduvad tsüklid"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Vundamendi ehitus"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "Korduvad tsüklid"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Vundamendi ehitus"
+        },
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Algoritmid: Tangrammid"
+        },
+        "express-2017/Introduction": {
+          "name": "Sissejuhatus"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Vundamendi ehitus"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Korduvad tsüklid"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Päris elu algoritmid: Seemenda"
+        },
+        "pre-express-2017/Events in Play Lab": {
+          "name": "Sündmused Mängude Laboris"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Sõnamesilane"
+        },
+        "csd2-2018/Lists": {
+          "name": "Loendid"
+        },
+        "csd3-2018/Variables": {
+          "name": "Muutujad"
+        },
+        "csd3-2018/Sprites": {
+          "name": "Spraidid"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Tingimuslaused"
+        },
+        "csd3-2018/Velocity": {
+          "name": "Velocity"
+        },
+        "csd3-2018/Functions": {
           "name": "Funktsioonid"
         },
-        "courseb-2018/Move It, Move It": {
-          "name": "Liiguta, liiguta"
-        },
-        "courseb-2018/Your Digital Footprint": {
-          "name": "Sinu digitaalne jalajälg"
+        "csd6-2018/Functions with Parameters": {
+          "name": "Parameetritega funktsioonid"
         },
         "coursea-2018/Debugging: Unspotted Bugs": {
           "name": "Märkamata vead"
@@ -163,6 +106,24 @@
         },
         "coursea-2018/Going Places Safely": {
           "name": "Läheb asukohta turvaliselt"
+        },
+        "courseb-2018/Move It, Move It": {
+          "name": "Liiguta, liiguta"
+        },
+        "courseb-2018/Your Digital Footprint": {
+          "name": "Sinu digitaalne jalajälg"
+        },
+        "coursec-2018/Building a Foundation": {
+          "name": "Vundamendi ehitus"
+        },
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Muutub tsükliliseks"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "Suursündmus"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Binaarsed käevõrud"
         },
         "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "Millimeetripaberi programmeerimine"
@@ -181,6 +142,24 @@
         },
         "coursed-2018/Unplugged: Binary": {
           "name": "Binaarsed pildid"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Minu robotsõbrad"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Vundamendi ehitus"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Tingimuslaused kaartidel"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Laulude kirjutamine"
+        },
+        "coursee-2018/Internet": {
+          "name": "Internet"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Ühistegevused"
         },
         "coursef-2018/Programming: My Robotic Friends": {
           "name": "Minu robotsõbrad"
@@ -233,36 +212,6 @@
         "express-2018/Crowdsourcing": {
           "name": "Ühistegevused"
         },
-        "coursee-2018/Programming: My Robotic Friends": {
-          "name": "Minu robotsõbrad"
-        },
-        "coursee-2018/Building a Foundation": {
-          "name": "Vundamendi ehitus"
-        },
-        "coursee-2018/Conditionals with Cards": {
-          "name": "Tingimuslaused kaartidel"
-        },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "Laulude kirjutamine"
-        },
-        "coursee-2018/Internet": {
-          "name": "Internet"
-        },
-        "coursee-2018/Crowdsourcing": {
-          "name": "Ühistegevused"
-        },
-        "coursec-2018/Building a Foundation": {
-          "name": "Vundamendi ehitus"
-        },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "Muutub tsükliliseks"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "Suursündmus"
-        },
-        "coursec-2018/Binary Bracelets": {
-          "name": "Binaarsed käevõrud"
-        },
         "pre-express-2018/Debugging: Unspotted Bugs": {
           "name": "Märkamata vead"
         },
@@ -278,26 +227,26 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Sõnamesilane"
         },
-        "csd3-2018/Variables": {
+        "csd2-2019/Lists": {
+          "name": "Loendid"
+        },
+        "csd3-2019/Variables": {
           "name": "Muutujad"
         },
-        "csd3-2018/Sprites": {
+        "csd3-2019/Sprites": {
           "name": "Spraidid"
         },
-        "csd3-2018/Conditionals": {
+        "csd3-2019/Conditionals": {
           "name": "Tingimuslaused"
         },
-        "csd3-2018/Velocity": {
+        "csd3-2019/Velocity": {
           "name": "Velocity"
         },
-        "csd3-2018/Functions": {
+        "csd3-2019/Functions": {
           "name": "Funktsioonid"
         },
-        "csd6-2018/Functions with Parameters": {
+        "csd6-2019/Functions with Parameters": {
           "name": "Parameetritega funktsioonid"
-        },
-        "csd2-2018/Lists": {
-          "name": "Loendid"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Läheb asukohta turvaliselt"
@@ -313,6 +262,12 @@
         },
         "courseb-2019/Loops: Getting Loopy": {
           "name": "Muutub tsükliliseks"
+        },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Binaarsed käevõrud"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "Suursündmus"
         },
         "coursed-2019/Algorithms: Graph Paper Programming": {
           "name": "Millimeetripaberi programmeerimine"
@@ -335,6 +290,9 @@
         "coursed-2019/Dance Party": {
           "name": "Tantsuõhtu"
         },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Laulude kirjutamine"
+        },
         "coursef-2019/Envelope Variables": {
           "name": "Ümbriku muutujad"
         },
@@ -347,179 +305,263 @@
         "coursef-2019/Crowdsourcing": {
           "name": "Ühistegevused"
         },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "Laulude kirjutamine"
-        },
         "express-2019/Dance Party": {
           "name": "Tantsuõhtu"
-        },
-        "coursec-2019/Binary Bracelets": {
-          "name": "Binaarsed käevõrud"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "Suursündmus"
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Sõnamesilane"
         },
-        "csd3-2019/Variables": {
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Happy Maps"
+        },
+        "courseb-2020/Move It, Move It": {
+          "name": "Liiguta, liiguta"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Muutub tsükliliseks"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Binaarsed käevõrud"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "Suursündmus"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Millimeetripaberi programmeerimine"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Relee programmeerimine"
+        },
+        "coursed-2020/Dance Party": {
+          "name": "Tantsuõhtu"
+        },
+        "coursed-2020/Loops in Ice Age": {
+          "name": "Tsüklik - Jääaeg"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Tingimuslaused kaartidel"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Binaarsed pildid"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Laulude kirjutamine"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "Ümbriku muutujad"
+        },
+        "coursef-2020/Internet": {
+          "name": "Internet"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "For Loop Fun"
+        },
+        "express-2020/Dance Party": {
+          "name": "Tantsuõhtu"
+        },
+        "csd3-2021/Variables": {
           "name": "Muutujad"
         },
-        "csd3-2019/Sprites": {
+        "csd3-2021/Sprites": {
           "name": "Spraidid"
         },
-        "csd3-2019/Conditionals": {
+        "csd3-2021/Text": {
+          "name": "Tekst"
+        },
+        "csd3-2021/Conditionals": {
           "name": "Tingimuslaused"
         },
-        "csd3-2019/Velocity": {
+        "csd3-2021/Velocity": {
           "name": "Velocity"
         },
-        "csd3-2019/Functions": {
+        "csd3-2021/Functions": {
           "name": "Funktsioonid"
         },
-        "csd6-2019/Functions with Parameters": {
+        "csd6-2021/Functions with Parameters": {
           "name": "Parameetritega funktsioonid"
         },
-        "csd2-2019/Lists": {
-          "name": "Loendid"
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Happy Maps"
         },
-        "coursef-2017/Building a Foundation": {
-          "name": "Vundamendi ehitus"
+        "courseb-2021/Move It, Move It": {
+          "name": "Liiguta, liiguta"
         },
-        "coursef-2017/Algorithms: Tangrams": {
-          "name": "Algoritmid: Tangrammid"
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Muutub tsükliliseks"
         },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Päris elu algoritmid: Seemenda"
+        "coursec-2021/Events: The Big Event": {
+          "name": "Suursündmus"
         },
-        "coursea-2017/Events in Play Lab": {
-          "name": "Sündmused Mängude Laboris"
+        "coursec-2021/Binary Bracelets": {
+          "name": "Binaarsed käevõrud"
         },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Päris elu algoritmid: Seemenda"
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Millimeetripaberi programmeerimine"
         },
-        "pre-express-2017/Events in Play Lab": {
-          "name": "Sündmused Mängude Laboris"
+        "coursed-2021/Relay Programming": {
+          "name": "Relee programmeerimine"
         },
-        "pre-express-2017/Spelling Bee": {
-          "name": "Sõnamesilane"
+        "coursed-2021/Dance Party": {
+          "name": "Tantsuõhtu"
         },
-        "coursee-2017/Building a Foundation": {
-          "name": "Vundamendi ehitus"
+        "coursed-2021/Loops in Ice Age": {
+          "name": "Tsüklik - Jääaeg"
         },
-        "coursee-2017/Nested Loops": {
-          "name": "Korduvad tsüklid"
+        "coursed-2021/Conditionals with Cards": {
+          "name": "Tingimuslaused kaartidel"
         },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "Päris elu algoritmid: paberlennukid"
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Laulude kirjutamine"
         },
-        "coursec-2017/Events in Play Lab": {
-          "name": "Sündmused Mängude Laboris"
+        "coursef-2021/For Loop Fun": {
+          "name": "For Loop Fun"
         },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Päris elu algoritmid: Seemenda"
+        "coursef-2021/Internet": {
+          "name": "Internet"
         },
-        "courseb-2017/Events in Play Lab": {
-          "name": "Sündmused Mängude Laboris"
+        "express-2021/lesson-1": {
+          "name": "Tantsuõhtu"
         },
-        "coursed-2017/Nested Loops": {
-          "name": "Korduvad tsüklid"
-        },
-        "express-2017/Introduction": {
-          "name": "Sissejuhatus"
-        },
-        "express-2017/Building a Foundation": {
-          "name": "Vundamendi ehitus"
-        },
-        "express-2017/Nested Loops": {
-          "name": "Korduvad tsüklid"
-        },
-        "csd3-2017/Variables": {
+        "csd3-2022/Variables": {
           "name": "Muutujad"
         },
-        "csd3-2017/Sprites": {
+        "csd3-2022/Sprites": {
           "name": "Spraidid"
         },
-        "csd3-2017/Conditionals": {
+        "csd3-2022/Text": {
+          "name": "Tekst"
+        },
+        "csd3-2022/Conditionals": {
           "name": "Tingimuslaused"
         },
-        "csd3-2017/Velocity": {
+        "csd3-2022/Velocity": {
           "name": "Velocity"
         },
-        "csd3-2017/Functions": {
+        "csd3-2022/Functions": {
           "name": "Funktsioonid"
         },
-        "csd6-2017/Functions with Parameters_": {
-          "name": "Parameetritega funktsioonid"
+        "csd6-2022/Functions": {
+          "name": "Funktsioonid"
         },
-        "csd2-2017/Lists": {
-          "name": "Loendid"
+        "coursea-2022/Happy Maps": {
+          "name": "Happy Maps"
         },
-        "course4/Unplugged: Tangrams": {
-          "name": "Unplugged: Tangrammid"
+        "courseb-2022/Move It, Move It": {
+          "name": "Liiguta, liiguta"
         },
-        "course4/Maze and Bee": {
-          "name": "Labürint ja Mesilane"
+        "courseb-2022/Getting Loopy": {
+          "name": "Muutub tsükliliseks"
         },
-        "course4/Artist": {
+        "coursec-2022/The Big Event": {
+          "name": "Suursündmus"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binaarsed käevõrud"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Millimeetripaberi programmeerimine"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Relee programmeerimine"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Tantsuõhtu"
+        },
+        "coursed-2022/Loops in Ice Age": {
+          "name": "Tsüklik - Jääaeg"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Tingimuslaused kaartidel"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Laulude kirjutamine"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internet"
+        },
+        "express-2022/Dance Party": {
+          "name": "Tantsuõhtu"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "KoodiTund 2013"
+        },
+        "aquatic/Aquatic": {
+          "name": "Minecraft: Voyage Aquatic"
+        },
+        "artist/Artist": {
           "name": "Kunstnik"
         },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "Unplugged: Kirja muutujad"
+        "dance-2019/Dance Party": {
+          "name": "Tantsuõhtu"
         },
-        "course4/Unplugged: Madlibs": {
-          "name": "Unplugged: Madlibs"
+        "flappy/Flappy Code": {
+          "name": "Flappy kood"
         },
-        "course4/Artist: Variables": {
-          "name": "Kunstnik: Muutujad"
+        "frozen/Artist": {
+          "name": "Kirjuta koodi Anna ja Elsa'ga"
         },
-        "course4/Play Lab: Variables": {
-          "name": "Play Lab: Muutujad"
+        "gumball/Gumball Play Lab": {
+          "name": "Gumballi Play Lab"
         },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "Unplugged: For tsükkel Fun"
+        "hero/Minecraft Hour of Code": {
+          "name": "Minecraft: Kangelase teekond"
         },
-        "course4/Bee: For Loops": {
-          "name": "Mesilane: For tsüklid"
+        "hourofcode/Maze": {
+          "name": "Labürint"
         },
-        "course4/Artist: For Loops": {
-          "name": "Kunstnik: For tsüklid"
+        "iceage/Ice Age Play Lab": {
+          "name": "Jääaja Play Lab"
         },
-        "course4/Play Lab: For Loops": {
-          "name": "Play Lab: For tsükkel"
+        "infinity/Infinity": {
+          "name": "Disney Infinity Play Lab"
         },
-        "course4/Artist: Functions": {
-          "name": "Kunstnik: funktsioonid"
+        "mc/Hour of Code 2015": {
+          "name": "Minecrafti KoodiTund"
         },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "Unplugged: Laulukirjutamine parameetritega"
+        "minecraft/Minecraft Hour of Code Designer": {
+          "name": "KoodiTund Minecraft Designer"
         },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Kunstnik: Funktsioonid parameetritega"
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "Play Lab: Funktsioonid parameetritega"
+        "playlab/Play Lab": {
+          "name": "Play Lab"
         },
-        "course4/Bee: Functions with Parameters": {
-          "name": "Mesilane: Funktsioonid parameetritega"
+        "starwars/Hour of Code 2015": {
+          "name": "Star Wars: galaktika loomine koodiga – (JavaScript)"
         },
-        "course4/Unplugged: Binary": {
-          "name": "Unplugged: Binaar"
+        "netsim/Manual DNS": {
+          "name": "Manuaalne DNS"
         },
-        "course4/Artist Binary": {
-          "name": "Kunstnik Binaar"
+        "allthethings/Jigsaw": {
+          "name": "Pusle"
         },
-        "course4/Super Challenge - Variables": {
-          "name": "Super väljakutse - muutujad"
+        "allthethings/Maze": {
+          "name": "Labürint"
         },
-        "course4/Super Challenge - For Loops": {
-          "name": "Super väljakutse - For tsüklid"
+        "allthethings/Artist": {
+          "name": "Kunstnik"
         },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "Super väljakutse - funktsioonid ja parameetrid"
+        "allthethings/Bee": {
+          "name": "Mesilane"
         },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "Ekstreemne väljakutse - kõikehõlmav"
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Põrkama"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Studio": {
+          "name": "Stuudio"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Sissejuhatus arvutiõpetusse"
@@ -580,6 +622,60 @@
         },
         "20-hour/Wrap-up": {
           "name": "Kokkuvõte"
+        },
+        "course1/Happy Maps": {
+          "name": "Happy Maps"
+        },
+        "course1/Move it, Move it": {
+          "name": "Liiguta, liiguta"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Pusle: õpi lohistama ja paika seadma"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Labürint: Jada"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Labürint: vigade silumine"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Päris elu algoritmid: Seemenda"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Mesilane: Jada"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Kunstnik: Jada"
+        },
+        "course1/Building a Foundation": {
+          "name": "Vundamendi ehitus"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Kunstnik: Kujundid"
+        },
+        "course1/Spelling Bee": {
+          "name": "Sõnamesilane"
+        },
+        "course1/Getting Loopy": {
+          "name": "Muutub tsükliliseks"
+        },
+        "course1/Maze: Loops": {
+          "name": "Labürint: Tsüklid"
+        },
+        "course1/Bee: Loops": {
+          "name": "Mesilane: Tsüklid"
+        },
+        "course1/The Big Event": {
+          "name": "Suursündmus"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Play Lab: Kirjuta lugu"
+        },
+        "course1/Going Places Safely": {
+          "name": "Läheb asukohta turvaliselt"
+        },
+        "course1/Artist: Loops": {
+          "name": "Kunstnik: tsüklid"
         },
         "course2/Graph Paper Programming": {
           "name": "Millimeetripaberi programmeerimine"
@@ -701,200 +797,74 @@
         "course3/Artist: Patterns": {
           "name": "Kunstnik: mustrid"
         },
-        "course1/Happy Maps": {
-          "name": "Happy Maps"
+        "course4/Unplugged: Tangrams": {
+          "name": "Unplugged: Tangrammid"
         },
-        "course1/Move it, Move it": {
-          "name": "Liiguta, liiguta"
+        "course4/Maze and Bee": {
+          "name": "Labürint ja Mesilane"
         },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "Pusle: õpi lohistama ja paika seadma"
+        "course4/Artist": {
+          "name": "Kunstnik"
         },
-        "course1/Maze: Sequence": {
-          "name": "Labürint: Jada"
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Unplugged: Kirja muutujad"
         },
-        "course1/Maze: Debugging": {
-          "name": "Labürint: vigade silumine"
+        "course4/Unplugged: Madlibs": {
+          "name": "Unplugged: Madlibs"
         },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "Päris elu algoritmid: Seemenda"
+        "course4/Artist: Variables": {
+          "name": "Kunstnik: Muutujad"
         },
-        "course1/Bee: Sequence": {
-          "name": "Mesilane: Jada"
+        "course4/Play Lab: Variables": {
+          "name": "Play Lab: Muutujad"
         },
-        "course1/Artist: Sequence": {
-          "name": "Kunstnik: Jada"
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Unplugged: For tsükkel Fun"
         },
-        "course1/Building a Foundation": {
-          "name": "Vundamendi ehitus"
+        "course4/Bee: For Loops": {
+          "name": "Mesilane: For tsüklid"
         },
-        "course1/Artist: Shapes": {
-          "name": "Kunstnik: Kujundid"
+        "course4/Artist: For Loops": {
+          "name": "Kunstnik: For tsüklid"
         },
-        "course1/Spelling Bee": {
-          "name": "Sõnamesilane"
+        "course4/Play Lab: For Loops": {
+          "name": "Play Lab: For tsükkel"
         },
-        "course1/Getting Loopy": {
-          "name": "Muutub tsükliliseks"
+        "course4/Artist: Functions": {
+          "name": "Kunstnik: funktsioonid"
         },
-        "course1/Maze: Loops": {
-          "name": "Labürint: Tsüklid"
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Unplugged: Laulukirjutamine parameetritega"
         },
-        "course1/Bee: Loops": {
-          "name": "Mesilane: Tsüklid"
+        "course4/Artist: Functions with Parameters": {
+          "name": "Kunstnik: Funktsioonid parameetritega"
         },
-        "course1/The Big Event": {
-          "name": "Suursündmus"
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Play Lab: Funktsioonid parameetritega"
         },
-        "course1/Studio: Create a Story": {
-          "name": "Play Lab: Kirjuta lugu"
+        "course4/Bee: Functions with Parameters": {
+          "name": "Mesilane: Funktsioonid parameetritega"
         },
-        "course1/Going Places Safely": {
-          "name": "Läheb asukohta turvaliselt"
+        "course4/Unplugged: Binary": {
+          "name": "Unplugged: Binaar"
         },
-        "course1/Artist: Loops": {
-          "name": "Kunstnik: tsüklid"
+        "course4/Artist Binary": {
+          "name": "Kunstnik Binaar"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Super väljakutse - muutujad"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Super väljakutse - For tsüklid"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Super väljakutse - funktsioonid ja parameetrid"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Ekstreemne väljakutse - kõikehõlmav"
         },
         "jigsaw/Jigsaw": {
           "name": "Pusle"
-        },
-        "allthethings/Jigsaw": {
-          "name": "Pusle"
-        },
-        "allthethings/Maze": {
-          "name": "Labürint"
-        },
-        "allthethings/Artist": {
-          "name": "Kunstnik"
-        },
-        "allthethings/Bee": {
-          "name": "Mesilane"
-        },
-        "allthethings/Flappy": {
-          "name": "Flappy"
-        },
-        "allthethings/Bounce": {
-          "name": "Põrkama"
-        },
-        "allthethings/Multi": {
-          "name": "Multi"
-        },
-        "allthethings/Studio": {
-          "name": "Stuudio"
-        },
-        "allthethings/Minecraft": {
-          "name": "Minecraft"
-        },
-        "coursef-2021/For Loop Fun": {
-          "name": "For Loop Fun"
-        },
-        "coursef-2021/Internet": {
-          "name": "Internet"
-        },
-        "courseb-2021/Move It, Move It": {
-          "name": "Liiguta, liiguta"
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "name": "Muutub tsükliliseks"
-        },
-        "coursea-2021/Programming: Happy Maps": {
-          "name": "Happy Maps"
-        },
-        "coursec-2021/Events: The Big Event": {
-          "name": "Suursündmus"
-        },
-        "coursec-2021/Binary Bracelets": {
-          "name": "Binaarsed käevõrud"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "Millimeetripaberi programmeerimine"
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "Relee programmeerimine"
-        },
-        "coursed-2021/Dance Party": {
-          "name": "Tantsuõhtu"
-        },
-        "coursed-2021/Loops in Ice Age": {
-          "name": "Tsüklik - Jääaeg"
-        },
-        "coursed-2021/Conditionals with Cards": {
-          "name": "Tingimuslaused kaartidel"
-        },
-        "express-2021/lesson-1": {
-          "name": "Tantsuõhtu"
-        },
-        "coursee-2021/Functions: Songwriting": {
-          "name": "Laulude kirjutamine"
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "Parameetritega funktsioonid"
-        },
-        "csd3-2021/Variables": {
-          "name": "Muutujad"
-        },
-        "csd3-2021/Sprites": {
-          "name": "Spraidid"
-        },
-        "csd3-2021/Text": {
-          "name": "Tekst"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "Tingimuslaused"
-        },
-        "csd3-2021/Velocity": {
-          "name": "Velocity"
-        },
-        "csd3-2021/Functions": {
-          "name": "Funktsioonid"
-        },
-        "express-2020/Dance Party": {
-          "name": "Tantsuõhtu"
-        },
-        "courseb-2020/Move It, Move It": {
-          "name": "Liiguta, liiguta"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
-          "name": "Muutub tsükliliseks"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "Millimeetripaberi programmeerimine"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "Relee programmeerimine"
-        },
-        "coursed-2020/Dance Party": {
-          "name": "Tantsuõhtu"
-        },
-        "coursed-2020/Loops in Ice Age": {
-          "name": "Tsüklik - Jääaeg"
-        },
-        "coursed-2020/Conditionals with Cards": {
-          "name": "Tingimuslaused kaartidel"
-        },
-        "coursed-2020/Unplugged: Binary": {
-          "name": "Binaarsed pildid"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "Binaarsed käevõrud"
-        },
-        "coursec-2020/Events: The Big Event": {
-          "name": "Suursündmus"
-        },
-        "coursee-2020/Functions: Songwriting": {
-          "name": "Laulude kirjutamine"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "Happy Maps"
-        },
-        "coursef-2020/Envelope Variables": {
-          "name": "Ümbriku muutujad"
-        },
-        "coursef-2020/Internet": {
-          "name": "Internet"
-        },
-        "coursef-2020/For Loop Fun": {
-          "name": "For Loop Fun"
         }
       }
     }

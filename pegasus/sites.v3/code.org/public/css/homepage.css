@@ -617,7 +617,8 @@ body.modal-open .supreme-container{
 }
 
 .stats-box {
-  padding: 50px 20px 20px 20px;
+  padding: 0 1em;
+  line-height: 1;
 }
 
 .every-student {
@@ -639,8 +640,11 @@ body.modal-open .supreme-container{
 }
 
 .statistics {
+  margin: 2em auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 3em;
 }
 
 .statistics a .stats-number {
@@ -652,8 +656,9 @@ body.modal-open .supreme-container{
 
 .statistics a .stats-phrase {
   font-size: 14px;
+  line-height: 1.2;
   text-align: center;
-  padding-top: 25px;
+  padding-top: 12px;
   color: rgb(77, 87, 95);
   font-family: 'Gotham 4r', sans-serif;
 }

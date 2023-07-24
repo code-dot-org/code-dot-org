@@ -119,30 +119,30 @@ namespace :circle do
         eyes_features_or_rerun_failed = "--feature #{container_eyes_features.join(',')}"
       end
 
-      RakeUtils.system_stream_output "bundle exec ./runner.rb" \
-          " #{features_or_rerun_failed}" \
-          " --pegasus localhost.code.org:3000" \
-          " --dashboard localhost-studio.code.org:3000" \
-          " --circle" \
-          " --#{use_saucelabs ? "config #{ui_test_browsers.join(',')}" : 'local'}" \
-          " --parallel #{use_saucelabs ? 16 : 8}" \
-          " --abort_when_failures_exceed 10" \
-          " --retry_count 2" \
-          " --output-synopsis" \
-          " --with-status-page" \
-          " --html"
+      RakeUtils.system_stream_output "bundle exec ./runner.rb " \
+          "#{features_or_rerun_failed} " \
+          "--pegasus localhost.code.org:3000 " \
+          "--dashboard localhost-studio.code.org:3000 " \
+          "--circle " \
+          "--#{use_saucelabs ? "config #{ui_test_browsers.join(',')}" : 'local'} " \
+          "--parallel #{use_saucelabs ? 16 : 8} " \
+          "--abort_when_failures_exceed 10 " \
+          "--retry_count 2 " \
+          "--output-synopsis " \
+          "--with-status-page " \
+          "--html"
       if test_eyes?
-        RakeUtils.system_stream_output "bundle exec ./runner.rb" \
-            " --eyes" \
-            " #{eyes_features_or_rerun_failed}" \
-            " --config Chrome,iPhone" \
-            " --pegasus localhost.code.org:3000" \
-            " --dashboard localhost-studio.code.org:3000" \
-            " --circle" \
-            " --parallel 10" \
-            " --retry_count 1" \
-            " --with-status-page" \
-            " --html"
+        RakeUtils.system_stream_output "bundle exec ./runner.rb " \
+            "--eyes " \
+            "#{eyes_features_or_rerun_failed} " \
+            "--config Chrome,iPhone " \
+            "--pegasus localhost.code.org:3000 " \
+            "--dashboard localhost-studio.code.org:3000 " \
+            "--circle " \
+            "--parallel 10 " \
+            "--retry_count 1 " \
+            "--with-status-page " \
+            "--html"
       end
     end
     close_sauce_connect if use_saucelabs || test_eyes?

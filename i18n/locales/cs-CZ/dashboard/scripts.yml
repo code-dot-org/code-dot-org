@@ -7688,6 +7688,7 @@ cs:
             lessonGroup-2:
               display_name: Výuka umělé inteligence a strojového učení
           name: samoobslužným tempem pl-csd5-2023
+          title: 'Modul 7: Příprava na výuku umělé inteligence a strojového učení'
           description: "Tento profesionální výukový modul je navržen tak, aby vám pomohl připravit se na výuku jednotky AI a strojového učení Code.org.  \n\n\\*\\*V tomto modulu profesionálního učení budete: \\*\\*\n\n-   Získejte úvod do umělé inteligence a strojového učení. \n-   Praxe klíčové pojmy obsažené v jednotce.\n-   Zapojte se do AI Lab a App Lab.\n-   Prozkoumejte závěr kapitoly projektů. \n-   Vytvořte plán pro implementaci jednotky se svými studenty.\n\n\\*\\*Doporučený čas: \\*\\* 120 minut"
           student_description: "Tento profesionální výukový modul je navržen tak, aby vám pomohl připravit se na výuku jednotky AI a strojového učení Code.org.  \n\n\\*\\*V tomto modulu profesionálního učení budete: \\*\\*\n\n-   Získejte úvod do umělé inteligence a strojového učení. \n-   Praxe klíčové pojmy obsažené v jednotce.\n-   Zapojte se do AI Lab a App Lab.\n-   Prozkoumejte závěr kapitoly projektů. \n-   Vytvořte plán pro implementaci jednotky se svými studenty.\n\n\\*\\*Doporučený čas: \\*\\* 120 minut"
         pl-csd-summer-day1:
@@ -7962,3 +7963,7 @@ cs:
             -   Zjistěte více o příležitostech spojit se s širší komunitou CS.
 
             **Doporučený čas**: 70 minut
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Data

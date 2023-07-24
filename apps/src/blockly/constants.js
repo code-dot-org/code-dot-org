@@ -1,4 +1,5 @@
 import {makeEnum} from '@cdo/apps/utils';
+import {parseElement as parseXmlElement} from '../xml';
 
 export const BlocklyVersion = {
   CDO: 'CDO',
@@ -50,3 +51,21 @@ export const DEFAULT_SOUND = 'sound://category_digital/ping.mp3';
 export const NO_OPTIONS_MESSAGE = 'uninitialized';
 export const EMPTY_OPTION = '???';
 export const WORKSPACE_PADDING = 16;
+
+export function stringIsXml(str) {
+  try {
+    JSON.parse(str);
+    // If parsed successfully, string is json, not xml.
+    return false;
+  } catch (e) {
+    try {
+      parseXmlElement(str);
+      // If parsed successfully, string is not xml.
+      return true;
+    } catch (e) {
+      console.warn(`Source string ${str} is neither JSON nor XML.`);
+      // String is neither JSON or XML. Default to XML if we can't parse.
+      return true;
+    }
+  }
+}
