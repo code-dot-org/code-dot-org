@@ -56,6 +56,7 @@ import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
+import CdoFieldImage from './addons/cdoFieldImage';
 
 const options = {
   contextMenu: true,
@@ -180,7 +181,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldColour');
   blocklyWrapper.wrapReadOnlyProperty('FieldColourDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldIcon');
-  blocklyWrapper.wrapReadOnlyProperty('FieldImage');
   blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
@@ -258,6 +258,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   // Code.org custom fields
   blocklyWrapper.FieldButton = CdoFieldButton;
+  blocklyWrapper.FieldImage = CdoFieldImage;
   blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
   blocklyWrapper.FieldToggle = CdoFieldToggle;
 

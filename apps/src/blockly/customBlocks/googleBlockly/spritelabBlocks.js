@@ -119,4 +119,96 @@ export const blocks = {
       flyoutToggleButton.setIcon(useDefaultIcon);
     };
   },
+
+  // Set block to shadow for preview field if needed
+  setUpBlockShadowing() {
+    console.log('in google blockly set block to shadow');
+    const pointers = {
+      gamelab_clickedSpritePointer: {
+        parent: 'gamelab_spriteClicked',
+        imageIndex: 0,
+      },
+      gamelab_newSpritePointer: {
+        parent: 'gamelab_whenSpriteCreated',
+        imageIndex: 0,
+      },
+      gamelab_subjectSpritePointer: {
+        parent: 'gamelab_checkTouching',
+        imageIndex: 0,
+      },
+      gamelab_objectSpritePointer: {
+        parent: 'gamelab_checkTouching',
+        imageIndex: 1,
+      },
+    };
+
+    // when the parent changes, trigger a change to this block's field
+    if (Object.keys(pointers).includes(this.type)) {
+      console.log(`${this.type} is in pointerPairs`);
+      this.onchange = function () {
+        const rootBlock = this.getRootBlock();
+        const pointerData = pointers[this.type];
+        if (rootBlock.type === pointerData.parent) {
+          const imageUrl = rootBlock
+            .getChildren(true)[0]
+            .inputList[0].fieldRow[
+              pointerData.imageIndex
+            ].imageElement_.getAttribute('xlink:href');
+          console.log(`imageUrl is ${imageUrl}`);
+          const textInput = this.inputList[0].fieldRow[0];
+          const previewInput = this.inputList[0].fieldRow[1];
+          console.log(previewInput);
+          textInput.setValue(this.shortString);
+          previewInput.setValue(imageUrl);
+          previewInput.updateDimensions(this.thumbnailSize, this.thumbnailSize);
+          previewInput.getSize();
+        }
+      };
+      // const rootBlock = this.getRootBlock();
+      // if (rootBlock.type === pointerPairs[this.type]) {
+      //   console.log(
+      //     `found matching root & child, root is ${rootBlock.type}, this.type is ${this.type}`
+      //   );
+      // }
+    }
+
+    // switch (this.type) {
+    //   case 'gamelab_clickedSpritePointer':
+
+    //     this.setBlockToShadow(
+    //       root =>
+    //         root.type === 'gamelab_spriteClicked' &&
+    //         root.getConnections_()[1] &&
+    //         root.getConnections_()[1].targetBlock()
+    //     );
+    //     break;
+    //   case 'gamelab_newSpritePointer':
+    //     this.setBlockToShadow(
+    //       root =>
+    //         root.type === 'gamelab_whenSpriteCreated' &&
+    //         root.getConnections_()[1] &&
+    //         root.getConnections_()[1].targetBlock()
+    //     );
+    //     break;
+    //   case 'gamelab_subjectSpritePointer':
+    //     this.setBlockToShadow(
+    //       root =>
+    //         root.type === 'gamelab_checkTouching' &&
+    //         root.getConnections_()[1] &&
+    //         root.getConnections_()[1].targetBlock()
+    //     );
+    //     break;
+    //   case 'gamelab_objectSpritePointer':
+    //     this.setBlockToShadow(
+    //       root =>
+    //         root.type === 'gamelab_checkTouching' &&
+    //         root.getConnections_()[2] &&
+    //         root.getConnections_()[2].targetBlock()
+    //     );
+    //     break;
+    //   default:
+    //     // Not a pointer block, so no block to shadow
+    //     break;
+    // }
+  },
 };
