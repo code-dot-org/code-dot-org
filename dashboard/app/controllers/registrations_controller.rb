@@ -442,6 +442,8 @@ class RegistrationsController < Devise::RegistrationsController
       :full_address,
       :terms_of_service_version,
       :provider,
+      :us_state,
+      :country_code,
       school_info_attributes: [
         :country,
         :school_type,

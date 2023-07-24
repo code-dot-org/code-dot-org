@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.7.5'
+ruby '3.0.5'
 
 # Ruby 2.7 no longer includes some libraries by default; install
 # the ones we need here
@@ -10,6 +10,10 @@ gem 'thwait'
 # Ruby >= 2.7.7 targets a version of CGI with over-restrictive domain
 # validation; manually target a later version to pick up https://github.com/ruby/cgi/pull/29
 gem 'cgi', '~> 0.3.6'
+
+# Ruby 3.0 no longer provides sorted_set by default, so install it manually
+# see https://github.com/ruby/set/pull/2
+gem 'sorted_set'
 
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
@@ -94,7 +98,6 @@ group :development, :test do
 
   gem 'fakeredis', require: false
   gem 'mocha', require: false
-  gem 'sqlite3'
   gem 'timecop'
 
   # For UI testing.
@@ -106,10 +109,10 @@ group :development, :test do
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
-  gem 'selenium-webdriver', '~> 4.2.0' # 4.x is required for Ruby 3 support; <4.3 required for Http:Persistent to not be deprecated yet
+  gem 'selenium-webdriver', '~> 4.0'
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
-  gem 'webdrivers', '~> 5.2' # 4.7 required for selenium 4.x
+  gem 'webdrivers', '~> 5.2'
 
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
@@ -124,10 +127,11 @@ gem 'open_uri_redirections', require: false
 
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
-# Ref: https://github.com/puma/puma/pull/1646
-gem 'puma', github: 'wjordan/puma', branch: 'debugging'
+
+gem 'puma', '~> 5.0'
 gem 'puma_worker_killer'
 gem 'raindrops'
+gem 'sd_notify' # required for Puma to support systemd's Type=notify
 
 gem 'chronic', '~> 0.10.2'
 
@@ -180,7 +184,7 @@ gem 'honeybadger', '>= 4.5.6' # error monitoring
 
 gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
-gem 'redcarpet', '~> 3.3.4'
+gem 'redcarpet', '~> 3.5.1'
 
 gem 'geocoder'
 
@@ -237,7 +241,7 @@ gem 'aws-sdk-secretsmanager'
 # Lint tools
 group :development, :staging, :levelbuilder do
   gem 'haml_lint', require: false
-  gem 'rubocop', '1.28', require: false
+  gem 'rubocop', '~> 1.28', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rails-accessibility', require: false

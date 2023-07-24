@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 22:45:31 UTC",
+    "serialized_at": "2023-07-18 20:55:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -428,7 +428,7 @@
       "position": 2,
       "properties": {
         "duration": 40,
-        "name": "Parameters & Return Practice"
+        "name": "Parameters & Return Values Practice"
       },
       "seeding_key": {
         "lesson_activity.key": "c564b5be-1386-4811-9c0a-71f9e668085b",
@@ -905,8 +905,25 @@
       }
     },
     {
-      "key": "d6c3dc09-0593-4955-a17a-1a57c4eb025a",
+      "key": "554e2345-ec8d-493a-8474-1fdf2e1f2685",
       "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student a copy of the Unit 7 Journal ([Digital](https://docs.google.com/presentation/d/1AwWl-xkDJJ2tWWa2d73pV5FLTt8lFMHl1Hr0b8p3Idg/edit?usp=drive_link)/[Interactive Notebook](https://docs.google.com/presentation/d/1GgOsS_xBqZ1Q4_a8o957hbMZHy817MKEOw1VBa1Dvdk/edit?usp=drive_link)) or have students set up this unit's section in their CSP journals.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Journaling:** Journaling can take many different forms, but in general, it’s a tool for individual processing and reflection in a form that can be revisited as students develop their skills and understandings. The medium used for journaling can vary depending on classroom needs. \n\nFor more guidance and examples, check out the [**CSP Guide to Journaling**](https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/edit?usp=sharing)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "554e2345-ec8d-493a-8474-1fdf2e1f2685",
+        "lesson_activity.key": "af9b5fa0-cd63-450a-aae2-6b9598ef3a28"
+      }
+    },
+    {
+      "key": "d6c3dc09-0593-4955-a17a-1a57c4eb025a",
+      "position": 2,
       "properties": {
         "description": "Up to this point, we've learned the basics of programming: variables, conditionals, functions, lists, loops, and traversals. As you grow in your programming skills, you'll start to notice ways that you can organize your code so that it is easier to work with. That's what this unit is all about!",
         "name": "Preview Parameterized Functions\r",
@@ -919,7 +936,7 @@
     },
     {
       "key": "f5049b84-0ca8-44d2-9c8d-6bb54c111277",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why would you want to make your code easier to work with or read?*\n\n**Discussion Goal:** This is a good time to remind students that when we write code, we aren't just writing for a computer - we are also writing for humans who will need to understand our code. Better organization can help others quickly understand our code so they can help debug or build upon the code. \n"
       },
@@ -1108,8 +1125,15 @@
       "key": "204249a2-a6aa-4885-ab1f-f5ab1cbb5503",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is one reason why parameters and return values are useful? What is one way you think programming with parameters and return values may make programming or debugging more challenging?*\n\nHave students share responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Use this quick discussion to review what students should already have seen about parameters and return values while also discussing them to think about how they'll need to use those skills in today's lessons. You should use your remarks to review the fact that parameters and return help write neater programs, but they may be a little tricky at first to read and understand. That's why we practice!\n\nUp to this point, students have only seen complete traversals - that is, traversals where every element of a list is accessed. Now that they've been introduced to return, students can build partial traversals where a list is only partially accessed. For example: A list could be traversed to find a specific element. Once that element is found, \"found element x\" is returned, and the traversal stops. While students don't actually need to build partial traversals themselves, they now should know how it theoretically could be created. \n",
-        "name": "Quick Warm Up\r"
+        "description": "Today we're going to have a chance to practice programming with a lot of the concepts and patterns we've explored over the last two lessons. I encourage you to go through these with a partner, but pay close attention to what each other is doing. You will be choosing one of two apps to help develop today. While the design of each of these apps is complete, it will be your job to use your knowledge of lists in order to make the apps function as intended.\n\nWhichever app you choose, please continue to choose that <strong>same </strong>app on each of the choice levels. There are a total of *seven* levels for each app.\n\nIn our next lesson you're going to have to use a lot of these skills on an independent project, and these activities are good practice for what you'll find there! Alright, let's get to it!",
+        "name": "Quick Warm Up\r",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Move Quickly to the Activity:** There's a lot in the main activity of today's lesson. It is advisable to give students more time to get hands on with some code."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "204249a2-a6aa-4885-ab1f-f5ab1cbb5503",
@@ -1117,30 +1141,25 @@
       }
     },
     {
-      "key": "5c8baee4-bdd1-4fb7-89d0-e87da5a782c4",
-      "position": 2,
+      "key": "99d155a6-023e-49cd-8b15-9eaea66a1390",
+      "position": 1,
       "properties": {
+        "description": "**Group:** It is recommended that students work in pairs for this lesson. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio, Lesson 3 Level 1. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Optional Resource**: There is an activity guide available in the *Resources* section that contains all of the main tasks that students need to complete over the course of the seven levels. The tasks and descriptions in this activity guide are identical to what is presented within the levels themselves. However, some students might benefit from this task list as they work on creating the practice app.  "
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "5c8baee4-bdd1-4fb7-89d0-e87da5a782c4",
-        "lesson_activity.key": "54e56b69-9dc0-45cb-89af-8ecf6e207bec"
-      }
-    },
-    {
-      "key": "99c30a91-c62f-40bd-bdfb-903eb62a1f25",
-      "position": 3,
-      "properties": {
-        "description": "Parameters and return values allow us to write code that is neater and works in a larger number of scenarios. We're going to have to practice reading, writing, and debugging code like this however, because it works a little a differently than the programs we've gotten used to writing. Let's dive in!",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "99c30a91-c62f-40bd-bdfb-903eb62a1f25",
-        "lesson_activity.key": "54e56b69-9dc0-45cb-89af-8ecf6e207bec"
+        "activity_section.key": "99d155a6-023e-49cd-8b15-9eaea66a1390",
+        "lesson_activity.key": "c564b5be-1386-4811-9c0a-71f9e668085b"
       }
     },
     {
       "key": "9bff3697-6a50-4733-8524-532f782875c4",
-      "position": 1,
+      "position": 2,
       "properties": {
         "progression_name": "App Development Activity"
       },
@@ -1153,6 +1172,7 @@
       "key": "a3b1d893-f6b4-4f7b-ba50-95c9acaaa06b",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of working with parameters & return values do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. "
       },
       "seeding_key": {
         "activity_section.key": "a3b1d893-f6b4-4f7b-ba50-95c9acaaa06b",
@@ -1163,7 +1183,6 @@
       "key": "f65cceeb-d02c-4fe4-ab4c-2bc2e4f6379d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of working with parameters and return values do you feel like clicked today? What do you still feel like you have trouble with?*\n\nHave students share with one another before sharing with the whole class.\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "f65cceeb-d02c-4fe4-ab4c-2bc2e4f6379d",
@@ -1174,7 +1193,7 @@
       "key": "055be148-595c-420d-9a24-cee545e398f3",
       "position": 3,
       "properties": {
-        "description": "Working with parameters and return values can be tricky. We will get more practice tomorrow by making an app that uses lists to store information.",
+        "description": "Working with parameters & return values can be tricky. We will get more practice tomorrow by making an app that uses lists to store information.",
         "remarks": true
       },
       "seeding_key": {
@@ -2243,6 +2262,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Parameters, Returns, and Libraries Q1"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2265,6 +2287,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Parameters, Returns, and Libraries Q2"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2287,6 +2312,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Parameters, Returns, and Libraries Q3"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -3504,24 +3532,24 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csp7-2022/resources",
-      "key": "all_resources_6",
+      "url": "/s/csp7-2023/resources",
+      "key": "all_resources_18",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_6"
+        "resource.key": "all_resources_18"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp7-2022/standards",
-      "key": "all_standards_6",
+      "url": "/s/csp7-2023/standards",
+      "key": "all_standards_18",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_6"
+        "resource.key": "all_standards_18"
       }
     },
     {
@@ -3538,11 +3566,9 @@
     },
     {
       "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
       "key": "course_vocabulary",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
@@ -3729,6 +3755,30 @@
       }
     },
     {
+      "name": "Task List - Netflix Navigator",
+      "url": "https://docs.google.com/document/d/1OrmlGMWmfz52q5Z3DFl8dxKekOzKz_XJPUqLlGHRT3A/edit?usp=sharing",
+      "key": "task_list_-_netflix_navigator",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "task_list_-_netflix_navigator"
+      }
+    },
+    {
+      "name": "Task List - Ramen Radar",
+      "url": "https://docs.google.com/document/d/1MKzXndOpHJmZV5LbanOXD9Pbh8KjN0B3wNEGYaoWEFs/edit?usp=sharing",
+      "key": "task_list_-_ramen_radar",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "task_list_-_ramen_radar"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -3762,6 +3812,30 @@
       },
       "seeding_key": {
         "resource.key": "u7_high_score_sample_planning_guide_rubric"
+      }
+    },
+    {
+      "name": "Unit 7 Journal (Digital)",
+      "url": "https://docs.google.com/presentation/d/1AwWl-xkDJJ2tWWa2d73pV5FLTt8lFMHl1Hr0b8p3Idg/edit?usp=drive_link",
+      "key": "unit_7_journal_digital_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_7_journal_digital_"
+      }
+    },
+    {
+      "name": "Unit 7 Journal (Interactive Notebook)",
+      "url": "https://docs.google.com/presentation/d/1GgOsS_xBqZ1Q4_a8o957hbMZHy817MKEOw1VBa1Dvdk/edit?usp=drive_link",
+      "key": "unit_7_journal_interactive_notebook_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_7_journal_interactive_notebook_"
       }
     }
   ],
@@ -3816,6 +3890,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "resource.key": "unit_7_journal_digital_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "resource.key": "unit_7_journal_interactive_notebook_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Parameters and Return Investigate",
         "resource.key": "csp_unit_7_-_lesson_2_-_parameters_and_return_investigate"
       }
@@ -3836,6 +3922,18 @@
       "seeding_key": {
         "lesson.key": "Parameters and Return Practice",
         "resource.key": "csp_unit_7_-_lesson_3_-_parameters_and_return_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "resource.key": "task_list_-_netflix_navigator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "resource.key": "task_list_-_ramen_radar"
       }
     },
     {
@@ -3890,13 +3988,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_6",
+        "resource.key": "all_resources_18",
         "script.name": "csp7-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_6",
+        "resource.key": "all_standards_18",
         "script.name": "csp7-2023"
       }
     },
@@ -3927,6 +4025,18 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_7_journal_digital_",
+        "script.name": "csp7-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_7_journal_interactive_notebook_",
         "script.name": "csp7-2023"
       }
     }

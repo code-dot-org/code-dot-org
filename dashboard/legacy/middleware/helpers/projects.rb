@@ -302,7 +302,7 @@ class Projects
   end
 
   def to_a
-    @table.where(storage_id: @storage_id).exclude(state: 'deleted').map do |row|
+    @table.where(storage_id: @storage_id).exclude(state: 'deleted').filter_map do |row|
       channel_id = storage_encrypt_channel_id(row[:storage_id], row[:id])
       begin
         Projects.merged_row_value(
@@ -313,7 +313,7 @@ class Projects
       rescue JSON::ParserError
         nil
       end
-    end.compact
+    end
   end
 
   # Find the encrypted channel token for most recent project of the given level type.
@@ -465,21 +465,9 @@ class Projects
     'unknown'
   end
 
-  # Temporarily logging rather than erroring in order
-  # to confirm that only valid thumbnail URLs are present in existing projects.
-  # DCDO flag in place to choose when to enable/disable logging (off by default).
   def validate_thumbnail_url(channel_id, thumbnail_url)
     return true unless thumbnail_url
-
-    if !valid_thumbnail_url?(thumbnail_url) && DCDO.get('log_thumbnail_url_validation', false)
-      # raise ValidationError
-      Honeybadger.notify(
-        error_class: 'Project::ValidationError',
-        error_message: 'A project was saved with an unexpected thumbnail URL.',
-        context: {channel_id: channel_id, thumbnail_url: thumbnail_url}
-      )
-    end
-
+    raise ValidationError unless valid_thumbnail_url?(thumbnail_url)
     true
   end
 

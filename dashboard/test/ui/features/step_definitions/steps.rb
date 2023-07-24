@@ -210,6 +210,7 @@ Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
 end
 
 When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
+  wait_for_jquery
   wait_until {@browser.execute_script("return $(#{selector.dump}).text();").include? text}
 end
 
@@ -446,10 +447,10 @@ When /^I open the topmost blockly category "([^"]*)"$/ do |name|
   # editor is open, the first if it isn't
   @browser.execute_script(
     "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
-    "$('#{name_selector}').get(val).dispatchEvent(new MouseEvent('mousedown', {"\
-      "bubbles: true,"\
-      "cancelable: true,"\
-      "view: window"\
+    "$('#{name_selector}').get(val).dispatchEvent(new MouseEvent('mousedown', {" \
+      "bubbles: true," \
+      "cancelable: true," \
+      "view: window" \
     "}))"
   )
 rescue
@@ -463,10 +464,10 @@ And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
   # Escaping those gives us \\\\ per-character
   category_selector = "#\\\\:#{id}\\\\.label"
   @browser.execute_script(
-    "$('#{category_selector}').last().get(0).dispatchEvent(new MouseEvent('mousedown', {"\
-      "bubbles: true,"\
-      "cancelable: true,"\
-      "view: window"\
+    "$('#{category_selector}').last().get(0).dispatchEvent(new MouseEvent('mousedown', {" \
+      "bubbles: true," \
+      "cancelable: true," \
+      "view: window" \
     "}))"
   )
 rescue
@@ -586,7 +587,7 @@ When /^I type "([^"]*)" into "([^"]*)"$/ do |input_text, selector|
 end
 
 When /^I type '([^']*)' into "([^"]*)"$/ do |input_text, selector|
-  type_into_selector("\'#{input_text}\'", selector)
+  type_into_selector("'#{input_text}'", selector)
 end
 
 When /^I type "([^"]*)" into "([^"]*)" if I see it$/ do |input_text, selector|

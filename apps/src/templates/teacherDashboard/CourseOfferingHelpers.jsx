@@ -11,8 +11,8 @@ export const translatedCourseOfferingCsTopics = {
   games_and_animations: i18n.courseOfferingCsTopicGamesAndAnimations(),
   internet: i18n.courseOfferingCsTopicInternet(),
   physical_computing: i18n.courseOfferingCsTopicPhysicalComputing(),
-  web_design: i18n.courseOfferingCsTopicWebDesign(),
   programming: i18n.courseOfferingCsTopicProgramming(),
+  web_design: i18n.courseOfferingCsTopicWebDesign(),
 };
 
 // Same list as CourseOfferingSchoolSubjects in sharedCourseConstants but with translated strings

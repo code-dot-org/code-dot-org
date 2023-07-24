@@ -10,6 +10,11 @@ class SecretsConfigTest < Minitest::Test
 
   def setup
     self.config = CdoSecrets.new
+    Cdo::SecretsConfig::StackSecret.stubs(:current_stack_name).returns('test')
+  end
+
+  def teardown
+    Cdo::SecretsConfig::StackSecret.unstub(:current_stack_name)
   end
 
   def test_load
@@ -26,6 +31,8 @@ class SecretsConfigTest < Minitest::Test
     config.freeze_config
   end
 
+  # Helper method which allows tests to easily mock a single secret being
+  # returned by all invocations
   def stub_secret(str)
     client = Aws::SecretsManager::Client.new(
       stub_responses: {
@@ -37,11 +44,53 @@ class SecretsConfigTest < Minitest::Test
     config.cdo_secrets = Cdo::Secrets.new(client: client)
   end
 
+  # Helper method which allows tests to pass a hash of (key,secret) pairs, so
+  # that specific secrets can be returned on specific invocations
+  def stub_multiple_secrets(secret_strings)
+    client = Aws::SecretsManager::Client.new(
+      stub_responses: {
+        get_secret_value: ->(context) do
+          secret_id = context.params[:secret_id]
+          return 'ResourceNotFoundException' unless secret_strings.key?(secret_id)
+          {secret_string: secret_strings[secret_id]}
+        end
+      }
+    )
+    config.cdo_secrets = Cdo::Secrets.new(client: client)
+  end
+
   def test_secret_tag
     stub_secret 'bar!'
     load_configuration <<~YAML
       foo: foo!
       bar: !Secret
+    YAML
+    assert_equal 'foo!', config.foo
+    assert_equal 'bar!', config.bar
+  end
+
+  def test_stack_secret_tag
+    test_secrets = {
+      "/cdo/foo" => "default foo secret",
+      "CfnStack/test/foo" => "stack-specific foo secret (not used)",
+      "/cdo/bar" => "default bar secret (not used)",
+      "CfnStack/test/bar" => "stack-specific bar secret"
+    }
+    stub_multiple_secrets(test_secrets)
+
+    load_configuration <<~YAML
+      foo: !Secret
+      bar: !StackSecret
+    YAML
+    assert_equal 'default foo secret', config.foo
+    assert_equal 'stack-specific bar secret', config.bar
+  end
+
+  def test_stack_secret_tag_falls_back_to_regular_secret
+    stub_secret 'bar!'
+    load_configuration <<~YAML
+      foo: foo!
+      bar: !StackSecret
     YAML
     assert_equal 'foo!', config.foo
     assert_equal 'bar!', config.bar
@@ -78,7 +127,7 @@ class SecretsConfigTest < Minitest::Test
     load_configuration <<~YAML
       foo: !Secret
     YAML
-    assert_equal({bar: 'baz'}, config.foo)
-    assert_equal 'baz', config.foo.bar
+    assert_equal({'bar' => 'baz'}, config.foo)
+    assert_equal 'baz', config.foo['bar']
   end
 end

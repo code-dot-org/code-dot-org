@@ -26,7 +26,7 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
     refute_creates(ProgrammingClass) do
       post :create, params: {key: 'class_key', name: 'class name', programming_environment_id: destroyed_programming_env_id}
     end
-    assert @response.body.include? "Valid programming environment is required"
+    assert_includes(@response.body, "Valid programming environment is required")
   end
 
   test 'can update programming class from params' do

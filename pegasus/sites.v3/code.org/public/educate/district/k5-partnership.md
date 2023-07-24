@@ -31,7 +31,7 @@ Ideal partnerships are with school districts interested in bringing computer sci
 - Ongoing Facilitator support throughout the year.
 <br />
 <br />
-- Supplies needed to host **every workshop** including take home materials for attending teachers such as a printed curriculum guide, classroom supplies for the unplugged activities and fun Code.org swag.
+- Supplies needed to host **every workshop** including take home materials for attending teachers, classroom supplies for the unplugged activities and fun Code.org swag.
 <br />
 
 <img src="/images/supplies.png" width="165"/> 
@@ -69,7 +69,7 @@ But now our elementary schools can, at no cost, with the help of Code.org. [Lear
 
 Code.org is looking to [partner with school districts](/educate/k5-district-partnership) to prepare a Facilitator (chosen by the district) to deliver one-day, in-person workshops to district elementary school teachers to teach computer science in a format that's fun and accessible. 
 
-If accepted, Code.org would cover all costs of training the Facilitator, and would provide, free of charge, the Code Studio curriculum, supplies needed to host the workshops, including take home materials for attending teachers such as a printed curriculum guide, classroom supplies to teach the unplugged activities and fun Code.org swag.
+If accepted, Code.org would cover all costs of training the Facilitator, and would provide, free of charge, the Code Studio curriculum, supplies needed to host the workshops, including take home materials for attending teachers, classroom supplies to teach the unplugged activities and fun Code.org swag.
 
 In return, the district would be responsible for identifying a member of the district staff to facilitate the Code Studio professional development workshops and prepare district teachers to offer the Code Studio curriculum broadly within grades K-5.
 

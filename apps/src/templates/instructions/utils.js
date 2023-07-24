@@ -109,13 +109,21 @@ function removeCommentNodes(root) {
 
 /**
  * Converts any inline XML in the container element into embedded
- * readonly BlockSpaces
+ * read-only BlockSpaces in long instructions or authored hints in the Instructions panel.
  * @param {Element} xmlContainer The element in which to search for XML
  * @param {Boolean} isRtl True if we are displaying in RTL
  */
 export function convertXmlToBlockly(xmlContainer, isRtl) {
-  const xmls = xmlContainer.getElementsByTagName('xml');
+  // blockSpaceContainers are elements (div or span) that contain read-only block spaces
+  // We add the class name 'readonly-block-space-container' to these elements when they are created
+  // so that they can be easily removed  to prevent the duplication of blocks when toggling
+  // between long/short instructions or when the blocks are rendered in the levelbuilder
+  // edit mode.
+  Array.from(
+    xmlContainer.getElementsByClassName('readonly-block-space-container')
+  ).forEach(container => container.remove());
 
+  const xmls = xmlContainer.getElementsByTagName('xml');
   Array.prototype.forEach.call(xmls, function (xml) {
     // Skip conversion if XML already has a blockspace
     if (xml.getElementsByTagName('svg').length) {
@@ -135,6 +143,7 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
 
     // create a container and insert the blockspace into it
     const blockSpaceContainer = document.createElement(inline ? 'span' : 'div');
+    blockSpaceContainer.classList.add('readonly-block-space-container');
     if (inline) {
       // SVGs don't play nicely if they're rendered into purely inline elements,
       // so if our container is a span it should be inline-block

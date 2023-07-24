@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "80aac210-e31a-495e-984c-f487ff78d294",
+          "notice": "Star Quilts (beta) is being deprecated",
+          "details": "We are in the process of fully removing the Star Quilts (beta) content and course from Code.org within the next 5-7 months, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Star Quilts (beta) content will unfortunately not be addressed or fixed, as we work towards fully removing it. You can learn more about other course options here: ",
+          "link": "https://code.org/educate/csc",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "CS Connections Landing Page"
+        }
+      ],
       "curriculum_umbrella": "CSC",
       "hideable_lessons": true,
       "is_course": true,
@@ -14,8 +26,8 @@
     },
     "new_name": null,
     "family_name": "csc-starquilts",
-    "serialized_at": "2022-09-13 14:48:02 UTC",
-    "published_state": "stable",
+    "serialized_at": "2023-06-27 22:29:22 UTC",
+    "published_state": "sunsetting",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
