@@ -41,7 +41,7 @@
         PasswordLength: 10
         ExcludePunctuation: True
 <% else -%>
-      SecretString: <%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>
+      SecretString: '<%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>'
 <% end -%>
   DatabaseSecretWriter:
     Type: AWS::SecretsManager::Secret
@@ -55,7 +55,7 @@
         PasswordLength: 10
         ExcludePunctuation: True
 <% else -%>
-      SecretString: <%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>
+      SecretString: '<%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>'
 <% end -%>
   DatabaseSecretReader:
     Type: AWS::SecretsManager::Secret
@@ -69,7 +69,7 @@
         PasswordLength: 10
         ExcludePunctuation: True
 <% else -%>
-      SecretString: <%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>
+      SecretString: '<%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>'
 <% end -%>
 
 # Publish identifiers for database Resources provisioned in this template to Secrets, so the values can dynamically
