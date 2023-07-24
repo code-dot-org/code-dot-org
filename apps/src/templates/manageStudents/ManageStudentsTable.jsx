@@ -9,6 +9,7 @@ import PasswordReset from './PasswordReset';
 import ShowSecret from './ShowSecret';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
+import DCDO from '@cdo/apps/dcdo';
 import color from '@cdo/apps/util/color';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
@@ -457,9 +458,11 @@ class ManageStudentsTable extends Component {
 
     const columns = [this.nameColumn(sortable)];
 
-    if (this.props.participantType === 'student') {
-      // Only in non-PL sections.
-      columns.push(this.familyNameColumn(sortable));
+    if (!!DCDO.get('family-name-features', false)) {
+      if (this.props.participantType === 'student') {
+        // Only in non-PL sections.
+        columns.push(this.familyNameColumn(sortable));
+      }
     }
 
     columns.push(this.ageColumn(sortable));
