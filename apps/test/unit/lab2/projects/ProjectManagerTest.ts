@@ -5,35 +5,35 @@ import {ProjectSources, Channel} from '@cdo/apps/lab2/types';
 import {expect, assert} from 'chai';
 import sinon, {stubObject, StubbedInstance} from 'ts-sinon';
 
+const FAKE_CHANNEL_ID = 'fakeChannelId';
+
+const FAKE_SOURCE: ProjectSources = {
+  source: 'fakeSource',
+};
+
+const FAKE_CHANNEL: Channel = {
+  id: '123',
+  name: 'fakeChannel',
+  isOwner: true,
+  projectType: 'music',
+  publishedAt: null,
+  createdAt: 'fakeDate',
+  updatedAt: 'fakeDate',
+};
+
+const UPDATED_SOURCE = {
+  source: 'new source!',
+};
+const UPDATED_SOURCE_2 = {
+  source: 'new source2!',
+};
+
 describe('ProjectManager', () => {
   let sourcesStore: StubbedInstance<RemoteSourcesStore>;
   let channelsStore: StubbedInstance<RemoteChannelsStore>;
-  const FAKE_CHANNEL_ID = 'fakeChannelId';
-
-  const FAKE_SOURCE: ProjectSources = {
-    source: 'fakeSource',
-  };
-
-  const FAKE_CHANNEL: Channel = {
-    id: '123',
-    name: 'fakeChannel',
-    isOwner: true,
-    projectType: 'music',
-    publishedAt: null,
-    createdAt: 'fakeDate',
-    updatedAt: 'fakeDate',
-  };
-
-  const UPDATED_SOURCE = {
-    source: 'new source!',
-  };
-  const UPDATED_SOURCE_2 = {
-    source: 'new source2!',
-  };
 
   beforeEach(() => {
     sourcesStore = stubObject<RemoteSourcesStore>(new RemoteSourcesStore());
-    sourcesStore.load.returns(Promise.resolve(FAKE_SOURCE));
     // We need to create separate promises for each call so they can each
     // be read from.
     sourcesStore.save.onCall(0).returns(Promise.resolve(new Response('')));
@@ -49,6 +49,7 @@ describe('ProjectManager', () => {
   });
 
   it('returns sources and channel on load', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
     const projectManager = new ProjectManager(
       sourcesStore,
       channelsStore,
@@ -61,6 +62,7 @@ describe('ProjectManager', () => {
   });
 
   it('triggers save immediately on first save', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
     const projectManager = new ProjectManager(
       sourcesStore,
       channelsStore,
@@ -74,6 +76,7 @@ describe('ProjectManager', () => {
   });
 
   it('does not trigger a save if source has not changed', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
     const projectManager = new ProjectManager(
       sourcesStore,
       channelsStore,
@@ -87,6 +90,7 @@ describe('ProjectManager', () => {
   });
 
   it('does not trigger another save if we already saved during the last save interval', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
     const projectManager = new ProjectManager(
       sourcesStore,
       channelsStore,
@@ -103,6 +107,7 @@ describe('ProjectManager', () => {
   });
 
   it('always triggers a save on force save', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
     const projectManager = new ProjectManager(
       sourcesStore,
       channelsStore,
@@ -119,6 +124,7 @@ describe('ProjectManager', () => {
   });
 
   it('does not trigger save if destroyed', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
     const projectManager = new ProjectManager(
       sourcesStore,
       channelsStore,
@@ -134,6 +140,7 @@ describe('ProjectManager', () => {
   });
 
   it('skips second channel update in emergency mode', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
     const projectManager = new ProjectManager(
       sourcesStore,
       channelsStore,
@@ -152,6 +159,7 @@ describe('ProjectManager', () => {
   });
 
   it('triggers save noop event if save called before load', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
     const projectManager = new ProjectManager(
       sourcesStore,
       channelsStore,
@@ -166,6 +174,7 @@ describe('ProjectManager', () => {
   });
 
   it('only triggers a channel save on rename', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
     const projectManager = new ProjectManager(
       sourcesStore,
       channelsStore,
@@ -177,4 +186,26 @@ describe('ProjectManager', () => {
     assert.isTrue(sourcesStore.save.notCalled);
     assert.isTrue(channelsStore.save.calledOnce);
   });
+
+  it('can still save if initial load returned a 404', async () => {
+    sourcesStore.load.throws(new Error('404'));
+    const projectManager = new ProjectManager(
+      sourcesStore,
+      channelsStore,
+      FAKE_CHANNEL_ID,
+      false
+    );
+    await projectManager.load();
+    await projectManager.save(UPDATED_SOURCE);
+
+    assert.isTrue(sourcesStore.save.calledOnce);
+    assert.isTrue(channelsStore.save.calledOnce);
+  });
 });
+
+// Helper functions
+function stubSuccessfulSourceLoad(
+  sourcesStore: StubbedInstance<RemoteSourcesStore>
+) {
+  sourcesStore.load.returns(Promise.resolve(FAKE_SOURCE));
+}
