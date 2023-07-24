@@ -25,10 +25,7 @@ export default class ProjectManager {
   private readonly saveInterval: number = 30 * 1000; // 30 seconds
   private saveInProgress = false;
   private saveQueued = false;
-  private saveSuccessListeners: ((
-    channel: Channel,
-    sources: ProjectSources
-  ) => void)[] = [];
+  private saveSuccessListeners: ((channel: Channel) => void)[] = [];
   private saveNoopListeners: ((channel?: Channel) => void)[] = [];
   private saveFailListeners: ((error: Error) => void)[] = [];
   private saveStartListeners: (() => void)[] = [];
@@ -220,9 +217,7 @@ export default class ProjectManager {
     this.publishHelper(false);
   }
 
-  addSaveSuccessListener(
-    listener: (channel: Channel, sources: ProjectSources) => void
-  ) {
+  addSaveSuccessListener(listener: (channel: Channel) => void) {
     this.saveSuccessListeners.push(listener);
   }
 
@@ -257,11 +252,7 @@ export default class ProjectManager {
     // We can't save without a last channel or last source.
     // We also know we don't need to save if we don't have sources to save
     // or a channel to save.
-    if (
-      !this.lastChannel ||
-      !this.lastSource ||
-      !(this.sourcesToSave || this.channelToSave)
-    ) {
+    if (!this.lastChannel || !(this.sourcesToSave || this.channelToSave)) {
       this.executeSaveNoopListeners(this.lastChannel);
       return;
     }
@@ -315,10 +306,7 @@ export default class ProjectManager {
 
     this.saveInProgress = false;
     this.channelToSave = undefined;
-    this.executeSaveSuccessListeners(
-      this.lastChannel,
-      JSON.parse(this.lastSource) as ProjectSources
-    );
+    this.executeSaveSuccessListeners(this.lastChannel);
     this.initialSaveComplete = true;
   }
 
@@ -450,11 +438,8 @@ export default class ProjectManager {
   }
 
   // LISTENERS
-  private executeSaveSuccessListeners(
-    channel: Channel,
-    sources: ProjectSources
-  ) {
-    this.saveSuccessListeners.forEach(listener => listener(channel, sources));
+  private executeSaveSuccessListeners(channel: Channel) {
+    this.saveSuccessListeners.forEach(listener => listener(channel));
   }
 
   private executeSaveNoopListeners(channel?: Channel) {
