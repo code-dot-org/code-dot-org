@@ -188,6 +188,7 @@ describe('ProjectManager', () => {
   });
 
   it('can still save if initial load returned a 404', async () => {
+    // Error message will contain a 404 if sources store encountered a 404.
     sourcesStore.load.throws(new Error('404'));
     const projectManager = new ProjectManager(
       sourcesStore,
