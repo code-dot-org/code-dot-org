@@ -195,7 +195,10 @@ Then /^I should see the student section table$/ do
 end
 
 Then /^I should see the professional learning section table$/ do
-  steps 'Then I see ".uitest-owned-pl-sections"'
+  steps <<-GHERKIN
+    Given I scroll the ".uitest-owned-pl-sections" element into view
+    Then I see ".uitest-owned-pl-sections"
+  GHERKIN
 end
 
 Then /^I should see the professional learning joined sections table$/ do
