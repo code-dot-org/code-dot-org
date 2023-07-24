@@ -17,4 +17,6 @@
 #  index_learning_goals_on_rubric_id_and_key  (rubric_id,key) UNIQUE
 #
 class LearningGoal < ApplicationRecord
+  belongs_to :rubric
+  has_many :learning_goal_evidence_levels, dependent: :destroy
 end
