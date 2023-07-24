@@ -36,11 +36,11 @@ Feature: App Lab Embed
     And I wait until element "#divApplab > .screen > button#hello" is visible
     And element "#divApplab > .screen > button#hello" contains text "world"
     And I press "resetButton"
+    And I wait for the JS event loop to settle
 
     Then I navigate to the embedded version of my project with source hidden
     And I switch to the first iframe
     And I wait until element ".fa-play" is visible
-    And I wait for the JS event loop to settle
     And I click selector ".fa-play"
     And I wait until element "#divApplab > .screen > button#hello" is visible
     Then I wait until element "button.more-link" is visible
