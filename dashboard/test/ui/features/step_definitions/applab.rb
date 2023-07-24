@@ -129,17 +129,6 @@ Then(/^the droplet code is "([^"]*)"$/) do |code|
   expect(@browser.execute_script("return Applab.getCode()")).to eq(code)
 end
 
-And /^I append text to droplet "([^"]*)"$/ do |text|
-  script = <<~JAVASCRIPT
-    var aceEditor = window.__TestInterface.getDroplet().aceEditor;
-    aceEditor.navigateFileEnd();
-    aceEditor.textInput.focus();
-    aceEditor.onTextInput("#{text}");
-  JAVASCRIPT
-  @browser.execute_script(script)
-  steps 'I wait for the JS event loop to settle'
-end
-
 def set_nth_input(n, value)
   elements = @browser.find_elements(:css, '#design-properties input')
   # For some reason, the test machine seemed to stop responding to :delete. Even
