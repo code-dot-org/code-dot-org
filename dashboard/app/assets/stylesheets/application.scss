@@ -862,6 +862,17 @@ $small-footer-standard-width: 400px;
     #copyright-flyout {
       border: solid 1px $neutral_dark40;
       box-sizing: border-box;
+
+      h4, a:link {
+        color: $neutral_dark50;
+      }
+
+      img {
+        background-color: $neutral_light;
+        border-radius: 4px;
+        padding: 4px;
+        margin-bottom: 6px;
+      }
     }
 
     #copyright-flyout, #copyright-scroll-area {
