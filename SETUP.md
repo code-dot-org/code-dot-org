@@ -103,9 +103,25 @@ External contributors can supply alternate placeholder values for secrets normal
 These steps are for Apple devices running **macOS Monterey and Ventura**, including those running on [Apple Silicon (M1|M2)](https://en.wikipedia.org/wiki/Apple_silicon#M_series). 
 
 Notes:
+- At this time, if you are using an M1 Macbook, we recommend using Rosetta to set up an Intel-based development environment vs. trying to make things work with the ARM-based Apple Silicon environment.
+- These steps may need to change over time as 3rd party tools update to have versions compatible with the new architecture.
 - As macOS Catalina is no longer receiving security updates, we cannot recommend using it. If you still need support, see [old setup.md instructions for Catalina](https://github.com/code-dot-org/code-dot-org/blob/138d08a6f304c289e2b4388f513d81954ec85158/SETUP.md#os-x-catalina)
 
 Setup steps for macOS:
+
+1. _(M1 Mac users only)_ Install Rosetta 2.
+
+  - Check if Rosetta is already installed: `/usr/bin/pgrep -q oahd && echo Yes || echo No`
+  - If not, install Rosetta using
+    - `softwareupdate --install-rosetta` (launches the Rosetta installer) or
+    - `/usr/sbin/softwareupdate --install-rosetta --agree-to-license` (skips installer and license agreement)
+  - Follow these steps to enable Rosetta:
+    - Select the app (Terminal) in Finder from Applications/Utilities.
+    - Right-click on the app (Terminal) and select `Get Info`.
+    - In `General`, check the `Open using Rosetta` checkbox.
+    - Close the Terminal and open it again.
+    - To verify that you are using a Rosetta terminal, run the command `arch` from the command line and it should output `i386`. The native terminal without Rosetta would output `arm64` for the above command. If you still do not see `i386` in the terminal then try restarting your machine. 
+
 
 1. Open your Terminal. These steps assume you are using **zsh**, the default shell for OSX.
 
@@ -129,22 +145,26 @@ Setup steps for macOS:
           4. Confirm MySQL has started by running `brew services` again.
 
 1. Install the **Java 8 JSK**
-   1. For x86 macs: `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
-   2. For apple silicon: `brew install openjdk` (note this is not JDK 8, but it seems to work?)
-   3. Or by installing [sdkman](https://sdkman.io/) and installing a suitable JDK. Similar to **rbenv** and **nvm**, **sdkman** allows you to switch between versions of Java.
+   1. `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
+   2. Or by installing [sdkman](https://sdkman.io/) and installing a suitable JDK. Similar to **rbenv** and **nvm**, **sdkman** allows you to switch between versions of Java.
       1. Different versions will be available depending on your system architecture, use `sdk list java` to identify a Java 8 JDK available for ARM architecture.
       2. `sdk install java <version identifier>` to install a version
       3. `sdk default java <installed version>` to ensure it is the default for future shells.
 
-2. Install and configure **rbenv**
+1. Install and configure **rbenv**
     1. Install: `brew install rbenv`
     2. Run `echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc` to configure ZSH to use **rbenv**. See https://github.com/rbenv/rbenv#basic-git-checkout for instructions on configuring bash and other shells.
     3. Reload your .zshrc to load **rbenv**: `source ~/.zshrc`
 
-3. Install **Ruby**
-    1. Run `rbenv install` from the project root directory.
+1. Install **Ruby**
+    1. For non-M1 systems (including M1 systems using Rosetta), running `rbenv install` from the project root directory should be sufficient.
+    2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
 
-4.  *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
+      ```sh
+      optflags="-Wno-error=implicit-function-declaration" LDFLAGS="-L/opt/homebrew/opt/libffi/lib" CPPFLAGS="-I/opt/homebrew/opt/libffi/include" PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" rbenv install
+      ```
+
+1. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
 
     ```sh
     curl -O https://raw.githubusercontent.com/zph/homebrew-cervezas/master/pdftk.rb
@@ -154,7 +174,7 @@ Setup steps for macOS:
 
 1. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils parallel tidy-html5`
 
-6.  Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
+1. Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
     1. Install NVM via `brew install nvm`
 
     2. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
