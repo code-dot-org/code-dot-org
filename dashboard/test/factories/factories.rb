@@ -1761,6 +1761,7 @@ FactoryBot.define do
 
   factory :rubric do
     association :lesson
+    association :level
   end
 
   factory :learning_goal do

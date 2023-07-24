@@ -1545,7 +1545,7 @@ module Services
 
         next if lesson.levels.empty?
         (1..num_rubrics_per_lesson).each do |_r|
-          rubric = create :rubric, lesson: lesson, level: lesson.levels.first
+          rubric = create :rubric, lesson: lesson, level: lesson.levels.last
           (1..num_learning_goals_per_rubric).each do |lg|
             learning_goal = create :learning_goal, rubric: rubric, key: "#{lesson.name}-learning-goal-#{lg}"
             (1..num_learning_goal_evidence_levels_per_learning_goal).each do |lge|

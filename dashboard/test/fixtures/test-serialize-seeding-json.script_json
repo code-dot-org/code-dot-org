@@ -1058,7 +1058,7 @@
   ],
   "rubrics": [
     {
-      "level_name": "test-serialize-seeding-json_blockly_1",
+      "level_name": "test-serialize-seeding-json_blockly_8",
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
@@ -1066,7 +1066,7 @@
       }
     },
     {
-      "level_name": "test-serialize-seeding-json_blockly_9",
+      "level_name": "test-serialize-seeding-json_blockly_16",
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
         "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
