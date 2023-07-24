@@ -26,7 +26,6 @@
 #
 # Indexes
 #
-#  fk_rails_8283d50b87            (self_paced_pl_course_offering_id)
 #  index_course_offerings_on_key  (key) UNIQUE
 #
 
@@ -34,7 +33,7 @@ class CourseOffering < ApplicationRecord
   include Curriculum::SharedCourseConstants
 
   has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
-  has_one :self_paced_pl_course_offering, class_name: 'CourseOffering', foreign_key: :self_paced_pl_course_offering_id
+  belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
 
   validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
   validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}
