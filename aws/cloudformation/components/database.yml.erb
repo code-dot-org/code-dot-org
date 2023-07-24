@@ -29,83 +29,83 @@
   DB_INSTANCE_RANGE=(0..1)
 -%>
 
-DatabaseSecretAdmin:
-  Type: AWS::SecretsManager::Secret
-  Properties:
-    Name: !Sub "CfnStack/${AWS::StackName}/db_credential_admin"
-    Description: !Sub "Database credentials for ${AWS::StackName} admin user."
+  DatabaseSecretAdmin:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: !Sub "CfnStack/${AWS::StackName}/db_credential_admin"
+      Description: !Sub "Database credentials for ${AWS::StackName} admin user."
 <% if database -%>
-    GenerateSecretString:
-      SecretStringTemplate: !Sub '{"username": "${DatabaseUsername}"}'
-      GenerateStringKey: password
-      PasswordLength: 10
-      ExcludePunctuation: True
+      GenerateSecretString:
+        SecretStringTemplate: !Sub '{"username": "${DatabaseUsername}"}'
+        GenerateStringKey: password
+        PasswordLength: 10
+        ExcludePunctuation: True
 <% else -%>
-    SecretString: <%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>
+      SecretString: <%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>
 <% end -%>
-DatabaseSecretWriter:
-  Type: AWS::SecretsManager::Secret
-  Properties:
-    Name: !Sub "CfnStack/${AWS::StackName}/db_credential_writer"
-    Description: !Sub "Database credentials for ${AWS::StackName} writer user."
+  DatabaseSecretWriter:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: !Sub "CfnStack/${AWS::StackName}/db_credential_writer"
+      Description: !Sub "Database credentials for ${AWS::StackName} writer user."
 <% if database -%>
-    GenerateSecretString:
-      SecretStringTemplate: !Sub '{"username": "application-writer"}'
-      GenerateStringKey: password
-      PasswordLength: 10
-      ExcludePunctuation: True
+      GenerateSecretString:
+        SecretStringTemplate: !Sub '{"username": "application-writer"}'
+        GenerateStringKey: password
+        PasswordLength: 10
+        ExcludePunctuation: True
 <% else -%>
-    SecretString: <%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>
+      SecretString: <%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>
 <% end -%>
-DatabaseSecretReader:
-  Type: AWS::SecretsManager::Secret
-  Properties:
-    Name: !Sub "CfnStack/${AWS::StackName}/db_credential_reader"
-    Description: !Sub "Database credentials for ${AWS::StackName} reader user."
+  DatabaseSecretReader:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: !Sub "CfnStack/${AWS::StackName}/db_credential_reader"
+      Description: !Sub "Database credentials for ${AWS::StackName} reader user."
 <% if database -%>
-    GenerateSecretString:
-      SecretStringTemplate: !Sub '{"username": "readonly"}'
-      GenerateStringKey: password
-      PasswordLength: 10
-      ExcludePunctuation: True
+      GenerateSecretString:
+        SecretStringTemplate: !Sub '{"username": "readonly"}'
+        GenerateStringKey: password
+        PasswordLength: 10
+        ExcludePunctuation: True
 <% else -%>
-    SecretString: <%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>
+      SecretString: <%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>
 <% end -%>
 
 # Publish identifiers for database Resources provisioned in this template to Secrets, so the values can dynamically
 # populate CDO.* application configuration settings.
 # TODO: Transition these configuration settings to AWS Systems Manager Parameter Store or some equivalent system.
 
-DBClusterIDConfig:
-  Type: AWS::SecretsManager::Secret
-  Properties:
-    Description: 'Publish Database Cluster ID to application configuration setting CDO.db_cluster_id'
-    Name: !Sub "CfnStack/${AWS::StackName}/db_cluster_id"
-    SecretString: '<%=DATABASE_CONFIGURATION[:db_cluster_id]%>'
-DBWriterEndpointConfig:
-  Type: AWS::SecretsManager::Secret
-  Properties:
-    Description: 'Publish Database Cluster Writer Endpoint to application configuration setting CDO.db_endpoint_writer'
-    Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_writer"
-    SecretString: '<%=DATABASE_CONFIGURATION[:db_endpoint_writer]%>'
-DBProxyWriterEndpointConfig:
-  Type: AWS::SecretsManager::Secret
-  Properties:
-    Description: 'Publish RDS Proxy Writer Endpoint to the application configuration setting CDO.db_endpoint_proxy_writer'
-    Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_writer"
-    SecretString: '<%=DATABASE_CONFIGURATION[:db_endpoint_proxy_writer]%>'
-DBProxyReaderEndpointConfig:
-  Type: AWS::SecretsManager::Secret
-  Properties:
-    Description: 'Publish RDS Proxy Reader Endpoint to the application configuration setting CDO.db_endpoint_proxy_reader'
-    Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reader"
-    SecretString: '<%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reader]%>'
-DBProxyReportingEndpointConfig:
-  Type: AWS::SecretsManager::Secret
-  Properties:
-    Description: 'Publish RDS Proxy Reporting Endpoint to the application configuration setting CDO.db_endpoint_proxy_reporting'
-    Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reporting"
-    SecretString: '<%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reporting]%>'
+  DBClusterIDConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish Database Cluster ID to application configuration setting CDO.db_cluster_id'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_cluster_id"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_cluster_id]%>
+  DBWriterEndpointConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish Database Cluster Writer Endpoint to application configuration setting CDO.db_endpoint_writer'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_writer"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_writer]%>
+  DBProxyWriterEndpointConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish RDS Proxy Writer Endpoint to the application configuration setting CDO.db_endpoint_proxy_writer'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_writer"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_writer]%>
+  DBProxyReaderEndpointConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish RDS Proxy Reader Endpoint to the application configuration setting CDO.db_endpoint_proxy_reader'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reader"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reader]%>
+  DBProxyReportingEndpointConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish RDS Proxy Reporting Endpoint to the application configuration setting CDO.db_endpoint_proxy_reporting'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reporting"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reporting]%>
 
 <% if database-%>
 # We don't yet provision the production database cluster/instances via CloudFormation, but we're incrementally
