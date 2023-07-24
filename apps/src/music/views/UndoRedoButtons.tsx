@@ -1,7 +1,8 @@
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
+import {AnalyticsContext} from '../context';
 import {MusicState} from '../redux/musicRedux';
 import moduleStyles from './undo-redo-buttons.module.scss';
 
@@ -21,11 +22,29 @@ const UndoRedoButtons: React.FunctionComponent<UndoRedoButtonsProps> = ({
   const {canUndo, canRedo} = useSelector(
     (state: {music: MusicState}) => state.music.undoStatus
   );
+  const analyticsReporter = useContext(AnalyticsContext);
+
+  const clickHandler = useCallback(
+    (action: 'undo' | 'redo') => {
+      if (action === 'undo') {
+        onClickUndo();
+      }
+
+      if (action === 'redo') {
+        onClickRedo();
+      }
+
+      if (analyticsReporter) {
+        analyticsReporter.onButtonClicked(action);
+      }
+    },
+    [analyticsReporter, onClickRedo, onClickUndo]
+  );
 
   return (
     <div className={moduleStyles.container}>
       <button
-        onClick={onClickUndo}
+        onClick={() => clickHandler('undo')}
         type="button"
         className={classNames(
           moduleStyles.button,
@@ -35,7 +54,7 @@ const UndoRedoButtons: React.FunctionComponent<UndoRedoButtonsProps> = ({
         <FontAwesome title={undefined} icon="undo" className={'icon'} />
       </button>
       <button
-        onClick={onClickRedo}
+        onClick={() => clickHandler('redo')}
         type="button"
         className={classNames(
           moduleStyles.button,
