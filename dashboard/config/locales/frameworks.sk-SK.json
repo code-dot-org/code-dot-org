@@ -2,14 +2,11 @@
   "sk-SK": {
     "data": {
       "frameworks": {
-        "csta": {
-          "name": "Normy vyučovania informatiky podľa CSTA K-12 (2017)"
+        "ai4k12-2021": {
+          "name": "Národné usmernenia AI4K12 2021"
         },
-        "csp2021": {
-          "name": "Koncepčný rámec CSP"
-        },
-        "csta2011": {
-          "name": "Normy vyučovania informatiky podľa CSTA K-12 (2011)"
+        "c3ss": {
+          "name": "C3 Štandardy sociálnych štúdií"
         },
         "ccela": {
           "name": "Normy Common Core English Language Arts"
@@ -17,11 +14,23 @@
         "ccmath": {
           "name": "Normy Common Core Math"
         },
-        "ai4k12-2021": {
-          "name": "Národné usmernenia AI4K12 2021"
+        "csa": {
+          "name": "Koncepčný rámec ČSA"
+        },
+        "csp2021": {
+          "name": "Koncepčný rámec CSP"
+        },
+        "csta": {
+          "name": "Normy vyučovania informatiky podľa CSTA K-12 (2017)"
+        },
+        "csta2011": {
+          "name": "Normy vyučovania informatiky podľa CSTA K-12 (2011)"
         },
         "iste": {
           "name": "Normy ISTE pre žiakov"
+        },
+        "ngss": {
+          "name": "Veda štandardy novej generácie"
         }
       }
     }

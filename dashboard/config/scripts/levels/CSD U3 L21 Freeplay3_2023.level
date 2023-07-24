@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-10-07T21:21:49.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -31,7 +36,7 @@
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "instructions_important": "false",
     "show_debug_watch": "true",
     "display_name": "Fastest Animal!",
@@ -132,13 +137,8 @@
 
     ]
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-10-07T21:21:49.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-07T21:21:49.341+00:00\",\"changed\":[\"cloned from \\\"CSD U3 L21 Freeplay2_2023\\\"\"],\"cloned_from\":\"CSD U3 L21 Freeplay2_2023\"},{\"changed_at\":\"2022-10-07 21:28:38 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"code_functions\",\"thumbnail_url\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 21:34:57 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-19 21:21:47 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-07T21:21:49.341+00:00\",\"changed\":[\"cloned from \\\"CSD U3 L21 Freeplay2_2023\\\"\"],\"cloned_from\":\"CSD U3 L21 Freeplay2_2023\"},{\"changed_at\":\"2022-10-07 21:28:38 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"code_functions\",\"thumbnail_url\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 21:34:57 +0000\",\"changed\":[\"code_functions\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-19 21:21:47 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 22:10:30 +0000\",\"changed\":[\"all_animations_single_frame\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

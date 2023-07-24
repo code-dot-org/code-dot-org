@@ -232,6 +232,7 @@ ca:
       Intro to Sprites: Introducció als sprites
       Intro to Variables: Introducció a les variables
       Introducing Sprite Lab: Introducció al Laboratori d'Sprites
+      Introduction to Arrays: Introducció a les matrius
       Investigate: Investigar
       Isaac's Survey Data: Dades de l'enquesta de l'Isaac
       Iteration and Parameters: Iteració i paràmetres
@@ -420,6 +421,8 @@ ca:
       Teach AI a New Word: Ensenya una paraula nova a la IA
       'Technique: Frequency Analysis': 'Tècnica: Anàlisi de freqüències'
       Terminology Recap: Recapitulació de termes
+      Text Compression: Compressió de text
+      The Animation Tab: La pestanya Animació
       The Artist in Code Studio: L'Artista a Code Studio
       The Big Event - Unplugged Activity: El gran esdeveniment - Activitat sense connexió
       The Buzzer: El brunzidor
@@ -445,8 +448,10 @@ ca:
       Using Random Numbers: Ús de nombres aleatoris
       Using Training Data: Ús de dades d'entrenament
       Using the LED: Ús de LED
+      Using the Repeat Block: Utilitzant el bloc de repetició
       Using the Switch: Ús de la funció "switch"
       Variables: Variables
+      Velocity: Velocitat
       Velocity and the Counter Pattern: La velocitat i el patró de comptador
       Video: Vídeo
       Video - Encryption and Public Keys: 'Vídeo: Xifrat i claus públiques'

@@ -13,14 +13,14 @@ class ImmersiveReaderButton extends Component {
     // TODO: [Phase 2] This is a switch for legacy styles needed to revert Javalab rebranding changes.
     //  once we update Javalab to new styles we'll need to remove this prop and all of it's usage
     //  more info here: https://github.com/code-dot-org/code-dot-org/pull/50924
-    isLegacyStyles: PropTypes.bool
+    isLegacyStyles: PropTypes.bool,
   };
 
   componentDidMount() {
     if (this.shouldRender() && !this.renderButtonsCalled) {
       // Applies inline styling to the .immersive-reader-button elements
       renderButtons({
-        elements: [this.container]
+        elements: [this.container],
       });
       // Make sure renderButtons() is only called once.
       this.renderButtonsCalled = true;
@@ -55,7 +55,7 @@ class ImmersiveReaderButton extends Component {
         )}
         data-button-style={'icon'}
         style={{
-          borderRadius: hasRoundBorders ? 4 : '4px 0 0 4px'
+          borderRadius: hasRoundBorders ? 4 : '4px 0 0 4px',
         }}
         data-locale={locale}
         onClick={function () {

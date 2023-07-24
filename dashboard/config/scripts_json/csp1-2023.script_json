@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-19 21:21:09 UTC",
+    "serialized_at": "2023-07-18 20:52:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1254,7 +1254,7 @@
       "key": "63fd09fc-12a3-48a9-a839-14f361a94b87",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student a copy of the [Unit 1 Journal](\thttps://docs.google.com/presentation/d/1nCwU7a83mgtEIKId1Fw-JzsZkHicWN12WeCTDMJkw68/edit?usp=share_link) or have students set up a new section in their CSP journals.",
+        "description": "**Distribute:** Give each student a copy of the Unit 1 Journal ([Digital](https://docs.google.com/presentation/d/1nCwU7a83mgtEIKId1Fw-JzsZkHicWN12WeCTDMJkw68/edit?usp=share_link)/[Interactive Notebook](https://docs.google.com/presentation/d/1hydmwrk4buHxg1gW-4TvVKMkIDvru8FTRuk53N8T8es/edit?usp=drive_link)) or have students set up this unit's section in their CSP journals.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1399,18 +1399,6 @@
       },
       "seeding_key": {
         "activity_section.key": "c8db8b0f-2d6d-4fe7-8ae3-906c35840b69",
-        "lesson_activity.key": "9d85a2cb-a899-42c1-971b-7640e542ab2d"
-      }
-    },
-    {
-      "key": "7bd04295-383f-4705-930f-5fa85672ec5e",
-      "position": 7,
-      "properties": {
-        "description": "<div style=\"background-color: #d7f4e9; border: 1px solid #43876b; border-radius: 5px; font-size: 1em; padding: 15px; margin-bottom: 0px;\">\n<div style=\"margin-top: 0px; margin-left: 0px; margin-right: 20px; height: 185px\">\n<img src=\"https://images.code.org/73ab5fb605d7065835e32221817b69b7-Unit Journal Icon 4.png\" style=\"margin-right: 40px; float: left\">\n\n<p><i>Sample Unit Journal Explanation </i> </p>\n<br>\n<p>Links:</p>\n<a href=\"https://www.w3schools.com/tags/ref_colornames.asp\" target=\"_blank\">DIGITAL </a>\n\n</div>\n</div>\n",
-        "name": "Unit Journal"
-      },
-      "seeding_key": {
-        "activity_section.key": "7bd04295-383f-4705-930f-5fa85672ec5e",
         "lesson_activity.key": "9d85a2cb-a899-42c1-971b-7640e542ab2d"
       }
     },
@@ -3936,7 +3924,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n\n![](https://images.code.org/5e345a372dcfc1c8a51b8d3ab159238b-unit1didg.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1pjzi6hjYC6WJPjVGiCfsevZcfQQ-c7TgAlprjXjNrwo/edit?usp=sharing)"
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n\n![](https://images.code.org/5e345a372dcfc1c8a51b8d3ab159238b-unit1didg.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=share_link)"
           }
         ]
       },
@@ -5481,24 +5469,24 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp1-2022/resources",
-      "key": "all_resources",
+      "url": "/s/csp1-2023/resources",
+      "key": "all_resources_12",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources"
+        "resource.key": "all_resources_12"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp1-2022/standards",
-      "key": "all_standards",
+      "url": "/s/csp1-2023/standards",
+      "key": "all_standards_12",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards"
+        "resource.key": "all_standards_12"
       }
     },
     {
@@ -5601,11 +5589,9 @@
     },
     {
       "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
       "key": "course_vocabulary",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
@@ -5663,12 +5649,11 @@
       }
     },
     {
-      "name": "csp_unit_1-14_-_digital_information",
-      "url": "https://docs.google.com/presentation/d/1NdBBUQ5obA8Aeb4awZwTG3cyxNDM1d3GnGCrVRd8bgw/",
+      "name": "Assessment Day - Digital Information",
+      "url": "https://docs.google.com/presentation/d/1Drvhk77p-D9nsClbhQpyvSReAS10OkGEqVynT9IGCAQ/edit?usp=sharing",
       "key": "csp_unit_1-14_-_digital_information",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1NdBBUQ5obA8Aeb4awZwTG3cyxNDM1d3GnGCrVRd8bgw/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5806,6 +5791,18 @@
       }
     },
     {
+      "name": "CSP Unit 1 Slides",
+      "url": "https://docs.google.com/presentation/d/1pkSOulPP_rLLvhZrRU6wEXzRHy3kNALXhfP-u9r8XfM/edit?usp=drive_link",
+      "key": "csp_unit_1_slides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1_slides"
+      }
+    },
+    {
       "name": "DNA Testing Kits & The Security Risks in Digitized DNA",
       "url": "https://www.bleepingcomputer.com/news/security/dna-testing-kits-and-the-security-risks-in-digitized-dna/",
       "key": "dna_testing_kits_the_security_risks_in_digitized_dna",
@@ -5826,6 +5823,30 @@
       },
       "seeding_key": {
         "resource.key": "flippy_do"
+      }
+    },
+    {
+      "name": "Guide to Assessment",
+      "url": "https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit?usp=sharing",
+      "key": "guide_to_assessment",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_assessment"
+      }
+    },
+    {
+      "name": "Guide to Classroom Discussions",
+      "url": "https://docs.google.com/document/d/1Y3HdoKknnw5tdH_I5XtcONQrDxueMi0Xdgp3Nyr-Atk/edit?usp=sharing",
+      "key": "guide_to_classroom_discussions",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_classroom_discussions"
       }
     },
     {
@@ -5925,6 +5946,18 @@
       },
       "seeding_key": {
         "resource.key": "shape_cutouts"
+      }
+    },
+    {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
       }
     },
     {
@@ -6076,7 +6109,7 @@
       }
     },
     {
-      "name": "Unit 1 Journal",
+      "name": "Unit 1 Journal (Digital)",
       "url": "https://docs.google.com/presentation/d/1nCwU7a83mgtEIKId1Fw-JzsZkHicWN12WeCTDMJkw68/edit?usp=share_link",
       "key": "unit_1_journal",
       "properties": {
@@ -6085,6 +6118,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_1_journal"
+      }
+    },
+    {
+      "name": "Unit 1 Journal (Interactive Notebook)",
+      "url": "https://docs.google.com/presentation/d/1hydmwrk4buHxg1gW-4TvVKMkIDvru8FTRuk53N8T8es/edit?usp=drive_link",
+      "key": "unit_1_journal_-_interactive_notebook",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_journal_-_interactive_notebook"
       }
     }
   ],
@@ -6313,6 +6358,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Representing Information",
+        "resource.key": "unit_1_journal_-_interactive_notebook"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Representing Text",
         "resource.key": "ascii_reference_sheet"
       }
@@ -6333,6 +6384,12 @@
       "seeding_key": {
         "lesson.key": "Welcome to CSP",
         "resource.key": "csp_unit_1-1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "csp_unit_1_slides"
       }
     },
     {
@@ -6363,19 +6420,43 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources",
+        "resource.key": "all_resources_12",
         "script.name": "csp1-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards",
+        "resource.key": "all_standards_12",
         "script.name": "csp1-2023"
       }
     },
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_1_slides",
+        "script.name": "csp1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_assessment",
+        "script.name": "csp1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_classroom_discussions",
+        "script.name": "csp1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "syllabus",
         "script.name": "csp1-2023"
       }
     },
@@ -6390,15 +6471,16 @@
         "resource.key": "unit_1_journal",
         "script.name": "csp1-2023"
       }
-    }
-  ],
-  "scripts_student_resources": [
+    },
     {
       "seeding_key": {
-        "resource.key": "unit_1_journal",
+        "resource.key": "unit_1_journal_-_interactive_notebook",
         "script.name": "csp1-2023"
       }
     }
+  ],
+  "scripts_student_resources": [
+
   ],
   "vocabularies": [
 

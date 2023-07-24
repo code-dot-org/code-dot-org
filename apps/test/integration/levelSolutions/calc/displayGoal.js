@@ -18,21 +18,21 @@ module.exports = {
   levelDefinition: {
     solutionBlocks: '',
     requiredBlocks: '',
-    freePlay: true
+    freePlay: true,
   },
   tests: [
     {
       description: 'displayGoal',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
       // Run all validation in a single test to avoid the overhead of new node
       // processes
       customValidator: displayGoalCustomValidator,
-      xml: ''
-    }
-  ]
+      xml: '',
+    },
+  ],
 };
 
 function replaceSpaces(str) {
@@ -103,7 +103,7 @@ function displayGoalCustomValidator(assert) {
         [],
         new ExpressionNode('+', [
           new ExpressionNode('f', [1]),
-          new ExpressionNode('g', [2])
+          new ExpressionNode('g', [2]),
         ])
       )
     );
@@ -126,7 +126,7 @@ function displayGoalCustomValidator(assert) {
         [],
         new ExpressionNode('+', [
           new ExpressionNode('f', [1]),
-          new ExpressionNode('myvar')
+          new ExpressionNode('myvar'),
         ])
       )
     );

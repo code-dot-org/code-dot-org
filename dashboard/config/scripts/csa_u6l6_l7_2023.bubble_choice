@@ -1,6 +1,6 @@
 name 'CSA U6L6-L7_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: The String Class'
+description 'Practice using methods in the `String` class to process and manipulate text.'
 
 sublevels
 level 'CSA U6L6-L7a_2023'

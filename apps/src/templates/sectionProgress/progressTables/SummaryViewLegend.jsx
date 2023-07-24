@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 
 export default class SummaryViewLegend extends Component {
   static propTypes = {
-    showCSFProgressBox: PropTypes.bool
+    showCSFProgressBox: PropTypes.bool,
   };
 
   render() {
@@ -120,7 +120,7 @@ const styles = {
   header: {
     fontWeight: 'bold',
     color: color.charcoal,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   th: {
     backgroundColor: color.lightest_gray,
@@ -129,18 +129,18 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
     textAlign: 'center',
-    padding: 15
+    padding: 15,
   },
   td: {
     border: `1px solid ${color.lightest_gray}`,
     padding: 15,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   boxStyle: {
-    margin: '0 auto'
+    margin: '0 auto',
   },
   completedBoxes: {
     display: 'flex',
-    flexDirection: 'row'
-  }
+    flexDirection: 'row',
+  },
 };

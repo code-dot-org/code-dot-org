@@ -8,8 +8,8 @@ class ProtectedDesignWorkspace extends React.Component {
     interfaceMode: PropTypes.oneOf([
       ApplabInterfaceMode.CODE,
       ApplabInterfaceMode.DESIGN,
-      ApplabInterfaceMode.DATA
-    ]).isRequired
+      ApplabInterfaceMode.DATA,
+    ]).isRequired,
   };
 
   shouldComponentUpdate(nextProps) {
@@ -47,5 +47,5 @@ class ProtectedDesignWorkspace extends React.Component {
   }
 }
 export default connect(state => ({
-  interfaceMode: state.interfaceMode
+  interfaceMode: state.interfaceMode,
 }))(ProtectedDesignWorkspace);

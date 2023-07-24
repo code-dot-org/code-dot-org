@@ -135,7 +135,6 @@ sr:
     valid_password: "Валидна лозинка!"
     invalid_password: "Лозинка мора имати барем 6 знакова"
     mismatch_password: "Лозинке се не поклапају"
-    additional_information: "Потребне су нам додатне информације како би смо могли да наставимо са процесом регистрације."
     user_type_button: "Ажурирајте тип налога"
     user_type_label: "Врста налога"
     user_type_student: "студент"
@@ -494,6 +493,8 @@ sr:
         other: "Други"
       robotics:
         other: "Други"
+      workshop_course:
+        other: 'Други'
       email_opt_in:
         opt_in_yes: 'Да'
         opt_in_no: 'не'

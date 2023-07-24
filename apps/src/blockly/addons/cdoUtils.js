@@ -1,8 +1,47 @@
-import {ToolboxType, CLAMPED_NUMBER_REGEX} from '../constants';
+import {
+  ToolboxType,
+  CLAMPED_NUMBER_REGEX,
+  DEFAULT_SOUND,
+  stringIsXml,
+} from '../constants';
 import cdoTheme from '../themes/cdoTheme';
+import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
+import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+import {
+  convertXmlToJson,
+  positionBlocksOnWorkspace,
+} from './cdoSerializationHelpers';
+import {parseElement as parseXmlElement} from '../../xml';
+
+/**
+ * Loads blocks to a workspace.
+ * To maintain backwards compatibility we must be able to use the XML source if no JSON state is provided.
+ * @param {Blockly.Workspace} workspace - the current Blockly workspace
+ * @param {string} source - workspace serialization, either XML or JSON
+ * @param {*} stateToLoad - modern workspace serialization, may not be present
+ */
+export function loadBlocksToWorkspace(workspace, source) {
+  let isXml = stringIsXml(source);
+  let stateToLoad;
+  if (isXml) {
+    stateToLoad = convertXmlToJson(parseXmlElement(source));
+  } else {
+    stateToLoad = JSON.parse(source);
+  }
+  Blockly.serialization.workspaces.load(stateToLoad, workspace);
+  positionBlocksOnWorkspace(workspace);
+}
 
 export function setHSV(block, h, s, v) {
   block.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
+}
+
+export function injectCss() {
+  return Blockly.Css.inject(true, 'media');
+}
+
+export function resizeSvg(blockSpace) {
+  return Blockly.svgResize(blockSpace);
 }
 
 export function getBlockFields(block) {
@@ -103,8 +142,61 @@ export function getUserTheme(themeOption) {
   return Blockly.themes[localStorage.blocklyTheme] || themeOption || cdoTheme;
 }
 
-export function getCode(workspace) {
-  return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
-  // After supporting JSON block sources, change to:
-  // return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
+/**
+ * Retrieves the serialization of the workspace (student code).
+ *
+ * @param {Blockly.WorkspaceSvg} workspace - The workspace to serialize.
+ * @param {boolean} [getSourceAsJson] - Flag indicating whether to retrieve the code as JSON or XML.
+ *                                      If truthy, the code will be returned as a JSON string.
+ *                                      If falsy, the code will be returned as an XML string.
+ * @returns {string} The serialization of the workspace.
+ */
+export function getCode(workspace, getSourceAsJson) {
+  if (getSourceAsJson) {
+    return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
+  } else {
+    return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
+  }
+}
+
+export function soundField(onClick, transformText, icon) {
+  // Handle 'play sound' block with default param from CDO blockly.
+  // TODO: Remove when sprite lab is migrated to Google blockly.
+  const validator = newValue => {
+    if (typeof newValue !== 'string') {
+      return null;
+    }
+    if (!newValue.startsWith(SOUND_PREFIX) || !newValue.endsWith('.mp3')) {
+      console.error(
+        'An invalid sound value was selected. Therefore, the default sound value will be used.'
+      );
+      return DEFAULT_SOUND;
+    }
+    return newValue;
+  };
+  return new Blockly.FieldButton({
+    value: DEFAULT_SOUND,
+    validator,
+    onClick,
+    transformText,
+    icon,
+  });
+}
+
+export function locationField(icon, onClick) {
+  const transformTextSetField = value => {
+    if (value) {
+      try {
+        const loc = JSON.parse(value);
+        return `(${loc.x}, ${APP_HEIGHT - loc.y})`;
+      } catch (e) {
+        // Just ignore bad values
+      }
+    }
+  };
+  return new Blockly.FieldButton({
+    onClick,
+    transformText: transformTextSetField,
+    icon,
+  });
 }

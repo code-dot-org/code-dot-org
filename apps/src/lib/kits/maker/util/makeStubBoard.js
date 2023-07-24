@@ -7,7 +7,7 @@ export function makeCPBoardStub() {
   return new five.Board({
     io: new Playground({}),
     debug: false,
-    repl: false
+    repl: false,
   });
 }
 

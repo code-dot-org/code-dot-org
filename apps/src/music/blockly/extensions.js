@@ -1,26 +1,16 @@
-import {Triggers} from '../constants';
 import {BlockTypes} from './blockTypes';
 import {
   EXTRA_SOUND_INPUT_PREFIX,
   MINUS_IMAGE,
   PLUS_IMAGE,
   SOUND_VALUE_TYPE,
-  TRACK_NAME_FIELD
+  TRACK_NAME_FIELD,
 } from './constants';
-
-export const dynamicTriggerExtension = function () {
-  this.getInput('trigger').appendField(
-    new Blockly.FieldDropdown(function () {
-      return Triggers.map(trigger => [trigger.dropdownLabel, trigger.id]);
-    }),
-    'trigger'
-  );
-};
 
 export const getDefaultTrackNameExtension = player =>
   function () {
     this.getField(TRACK_NAME_FIELD).setValue(
-      `track ${Object.keys(player.getTracksMetadata()).length + 1}`
+      `track 1` // TODO: Replace with Sequencer output when re-enabling Tracks mode
     );
   };
 
@@ -28,7 +18,7 @@ export const playMultiMutator = {
   extraSoundInputCount_: 0,
   saveExtraState: function () {
     return {
-      extraSoundInputCount: this.extraSoundInputCount_
+      extraSoundInputCount: this.extraSoundInputCount_,
     };
   },
   loadExtraState: function (state) {
@@ -119,5 +109,5 @@ export const playMultiMutator = {
     }
 
     this.updateShape_(this.extraSoundInputCount_ - 1);
-  }
+  },
 };

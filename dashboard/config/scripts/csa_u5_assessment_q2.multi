@@ -36,3 +36,5 @@ for (int[] j : arr) {
 What is the value of `total` as a result of executing the code segment?
 
 MARKDOWN
+
+allow_multiple_attempts true

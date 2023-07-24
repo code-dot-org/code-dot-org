@@ -1,7 +1,7 @@
 import i18n from '@cdo/locale';
 import {
   inProgressFakeTimestamp,
-  notStartedFakeTimestamp
+  notStartedFakeTimestamp,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 
 export const testDataTimestamps = {
@@ -12,7 +12,7 @@ export const testDataTimestamps = {
   older: new Date('2018-10-09T20:52:05.000+00:00'),
   oldest: new Date('2018-10-07T20:52:05.000+00:00'),
   notStarted: notStartedFakeTimestamp,
-  inProgress: inProgressFakeTimestamp
+  inProgress: inProgressFakeTimestamp,
 };
 
 // Data for students' assessments multiple choice table
@@ -26,7 +26,7 @@ export const studentOverviewData = [
     numMatch: 10,
     isSubmitted: false,
     inProgress: false,
-    submissionTimeStamp: testDataTimestamps.notStarted
+    submissionTimeStamp: testDataTimestamps.notStarted,
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ export const studentOverviewData = [
     numMatch: 10,
     isSubmitted: false,
     inProgress: true,
-    submissionTimeStamp: testDataTimestamps.inProgress
+    submissionTimeStamp: testDataTimestamps.inProgress,
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ export const studentOverviewData = [
     numMatch: 10,
     isSubmitted: true,
     inProgress: false,
-    submissionTimeStamp: testDataTimestamps.newest
+    submissionTimeStamp: testDataTimestamps.newest,
   },
   {
     id: 4,
@@ -59,7 +59,7 @@ export const studentOverviewData = [
     numMatchCorrect: 10,
     numMatch: 10,
     inProgress: false,
-    submissionTimeStamp: testDataTimestamps.newer
+    submissionTimeStamp: testDataTimestamps.newer,
   },
   {
     id: 5,
@@ -70,7 +70,7 @@ export const studentOverviewData = [
     numMatch: 10,
     isSubmitted: true,
     inProgress: false,
-    submissionTimeStamp: testDataTimestamps.new
+    submissionTimeStamp: testDataTimestamps.new,
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const studentOverviewData = [
     numMatch: 10,
     isSubmitted: true,
     inProgress: false,
-    submissionTimeStamp: testDataTimestamps.old
+    submissionTimeStamp: testDataTimestamps.old,
   },
   {
     id: 7,
@@ -92,7 +92,7 @@ export const studentOverviewData = [
     numMatch: 10,
     isSubmitted: true,
     inProgress: false,
-    submissionTimeStamp: testDataTimestamps.older
+    submissionTimeStamp: testDataTimestamps.older,
   },
   {
     id: 8,
@@ -103,7 +103,7 @@ export const studentOverviewData = [
     numMatch: 10,
     isSubmitted: true,
     inProgress: false,
-    submissionTimeStamp: testDataTimestamps.oldest
+    submissionTimeStamp: testDataTimestamps.oldest,
   },
   {
     id: 9,
@@ -114,7 +114,7 @@ export const studentOverviewData = [
     numMatch: 10,
     isSubmitted: false,
     inProgress: true,
-    submissionTimeStamp: testDataTimestamps.inProgress
+    submissionTimeStamp: testDataTimestamps.inProgress,
   },
   {
     id: 10,
@@ -125,8 +125,8 @@ export const studentOverviewData = [
     numMatch: 10,
     isSubmitted: false,
     inProgress: false,
-    submissionTimeStamp: testDataTimestamps.notStarted
-  }
+    submissionTimeStamp: testDataTimestamps.notStarted,
+  },
 ];
 
 // Data for single student multiple choice assessment table
@@ -139,8 +139,8 @@ export const studentMCData = {
     {isCorrect: false, responses: 'B D'},
     {isCorrect: false, responses: 'E'},
     {isCorrect: false, responses: 'C'},
-    {isCorrect: true, responses: 'A'}
-  ]
+    {isCorrect: true, responses: 'A'},
+  ],
 };
 
 export const matchQuestionWith2Pairs = [
@@ -149,37 +149,37 @@ export const matchQuestionWith2Pairs = [
       {
         answer: 'answer 1',
         numAnswered: 6,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         answer: 'answer 2',
         numAnswered: 0,
-        isCorrect: true
-      }
+        isCorrect: true,
+      },
     ],
     id: 0,
     option: 'option 1',
     notAnswered: 1,
-    totalAnswered: 7
+    totalAnswered: 7,
   },
   {
     answers: [
       {
         answer: 'answer 1',
         numAnswered: 2,
-        isCorrect: true
+        isCorrect: true,
       },
       {
         answer: 'answer 2',
         numAnswered: 4,
-        isCorrect: false
-      }
+        isCorrect: false,
+      },
     ],
     id: 1,
     option: 'option 2',
     notAnswered: 1,
-    totalAnswered: 7
-  }
+    totalAnswered: 7,
+  },
 ];
 
 export const matchQuestionWith4Pairs = [
@@ -188,113 +188,113 @@ export const matchQuestionWith4Pairs = [
       {
         answer: 'answer 1',
         numAnswered: 6,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         answer: 'answer 2',
         numAnswered: 0,
-        isCorrect: true
+        isCorrect: true,
       },
       {
         answer: 'answer 3',
         numAnswered: 6,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         answer: 'answer 4',
         numAnswered: 0,
-        isCorrect: false
-      }
+        isCorrect: false,
+      },
     ],
     id: 0,
     option: 'option 1',
     notAnswered: 3,
-    totalAnswered: 15
+    totalAnswered: 15,
   },
   {
     answers: [
       {
         answer: 'answer 1',
         numAnswered: 5,
-        isCorrect: true
+        isCorrect: true,
       },
       {
         answer: 'answer 2',
         numAnswered: 5,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         answer: 'answer 3',
         numAnswered: 6,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         answer: 'answer 4',
         numAnswered: 5,
-        isCorrect: false
-      }
+        isCorrect: false,
+      },
     ],
     id: 1,
     option: 'option 2',
     notAnswered: 0,
-    totalAnswered: 15
+    totalAnswered: 15,
   },
   {
     answers: [
       {
         answer: 'answer 1',
         numAnswered: 0,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         answer: 'answer 2',
         numAnswered: 15,
-        isCorrect: true
+        isCorrect: true,
       },
       {
         answer: 'answer 3',
         numAnswered: 0,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         answer: 'answer 4',
         numAnswered: 0,
-        isCorrect: false
-      }
+        isCorrect: false,
+      },
     ],
     id: 2,
     option: 'option 3',
     notAnswered: 0,
-    totalAnswered: 15
+    totalAnswered: 15,
   },
   {
     answers: [
       {
         answer: 'answer 1',
         numAnswered: 1,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         answer: 'answer 2',
         numAnswered: 1,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         answer: 'answer 3',
         numAnswered: 1,
-        isCorrect: false
+        isCorrect: false,
       },
       {
         answer: 'answer 4',
         numAnswered: 0,
-        isCorrect: true
-      }
+        isCorrect: true,
+      },
     ],
     id: 3,
     option: 'option 4',
     notAnswered: 12,
-    totalAnswered: 15
-  }
+    totalAnswered: 15,
+  },
 ];
 
 // Data for multiple choice overview table
@@ -306,25 +306,25 @@ export const multipleChoiceData = [
       {
         multipleChoiceOption: i18n.answerOptionA(),
         percentAnswered: 40,
-        isCorrectAnswer: true
+        isCorrectAnswer: true,
       },
       {
         multipleChoiceOption: i18n.answerOptionB(),
         percentAnswered: 20,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionC(),
         percentAnswered: 20,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionD(),
         percentAnswered: 20,
-        isCorrectAnswer: false
-      }
+        isCorrectAnswer: false,
+      },
     ],
-    notAnswered: 10
+    notAnswered: 10,
   },
   {
     id: 2,
@@ -333,35 +333,35 @@ export const multipleChoiceData = [
       {
         multipleChoiceOption: i18n.answerOptionA(),
         percentAnswered: 30,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionB(),
         percentAnswered: 10,
-        isCorrectAnswer: true
+        isCorrectAnswer: true,
       },
       {
         multipleChoiceOption: i18n.answerOptionC(),
         percentAnswered: 10,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionD(),
         percentAnswered: 10,
-        isCorrectAnswer: true
+        isCorrectAnswer: true,
       },
       {
         multipleChoiceOption: i18n.answerOptionE(),
         percentAnswered: 20,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionF(),
         percentAnswered: 10,
-        isCorrectAnswer: false
-      }
+        isCorrectAnswer: false,
+      },
     ],
-    notAnswered: 30
+    notAnswered: 30,
   },
   {
     id: 3,
@@ -371,30 +371,30 @@ export const multipleChoiceData = [
       {
         multipleChoiceOption: i18n.answerOptionA(),
         percentAnswered: 50,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionB(),
         percentAnswered: 15,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionC(),
         percentAnswered: 20,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionD(),
         percentAnswered: 5,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionE(),
         percentAnswered: 5,
-        isCorrectAnswer: true
-      }
+        isCorrectAnswer: true,
+      },
     ],
-    notAnswered: 5
+    notAnswered: 5,
   },
   {
     id: 4,
@@ -404,40 +404,40 @@ export const multipleChoiceData = [
       {
         multipleChoiceOption: i18n.answerOptionA(),
         percentAnswered: 15,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionB(),
         percentAnswered: 18,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionC(),
         percentAnswered: 10,
-        isCorrectAnswer: true
+        isCorrectAnswer: true,
       },
       {
         multipleChoiceOption: i18n.answerOptionD(),
         percentAnswered: 9,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionE(),
         percentAnswered: 5,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionF(),
         percentAnswered: 32,
-        isCorrectAnswer: true
+        isCorrectAnswer: true,
       },
       {
         multipleChoiceOption: i18n.answerOptionG(),
         percentAnswered: 5,
-        isCorrectAnswer: false
-      }
+        isCorrectAnswer: false,
+      },
     ],
-    notAnswered: 33
+    notAnswered: 33,
   },
   {
     id: 5,
@@ -446,31 +446,31 @@ export const multipleChoiceData = [
       {
         multipleChoiceOption: i18n.answerOptionA(),
         percentAnswered: 15,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionB(),
         percentAnswered: 18,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionC(),
         percentAnswered: 10,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionD(),
         percentAnswered: 9,
-        isCorrectAnswer: false
+        isCorrectAnswer: false,
       },
       {
         multipleChoiceOption: i18n.answerOptionE(),
         percentAnswered: 5,
-        isCorrectAnswer: true
-      }
+        isCorrectAnswer: true,
+      },
     ],
-    notAnswered: 25
-  }
+    notAnswered: 25,
+  },
 ];
 
 // Data for single student table.
@@ -481,7 +481,7 @@ export const multipleChoiceDataForSingleStudent = multipleChoiceData.map(
       id: question.id,
       question: question.question,
       questionNumber: index + 1,
-      correctAnswer: ['C', 'C B', 'D', 'B', 'A'][index]
+      correctAnswer: ['C', 'C B', 'D', 'B', 'A'][index],
     };
   }
 );
@@ -492,7 +492,7 @@ export const matchDataForSingleStudent = {
   question: 'Can you match these?',
   questionNumber: 1,
   answers: [{text: 'answer 1'}, {text: 'answer 2'}],
-  options: [{text: 'option 1'}, {text: 'option 2'}]
+  options: [{text: 'option 1'}, {text: 'option 2'}],
 };
 
 // Data for free responses assessments table.
@@ -501,27 +501,27 @@ export const questionOne = [
     id: 1,
     studentId: '210',
     name: 'Caley',
-    response: ' '
+    response: ' ',
   },
   {
     id: 2,
     studentId: '211',
     name: 'Maddie',
     response: `Trees live in your fan brush, but you have to scare them out. Use absolutely no pressure. Just like an angel's wing. You can't have light without dark. You can't know happiness unless you've known sorrow. If you didn't have baby clouds, you wouldn't have big clouds. It is a lot of fun. We'll put all the little clouds in and let them dance around and have fun. And right there you got an almighty cloud. We don't have to be committed. We are just playing here. A tree cannot be straight if it has a crooked trunk. Let your heart take you to wherever you want to be. No worries. No cares. Just float and wait for the wind to blow you around. Put light against light - you have nothing. Put dark against dark - you have nothing. It's the contrast of light and dark that each give the other one meaning. This is truly an almighty mountain. The only thing worse than yellow snow is green snow. Paint anything you want on the canvas. Create your own world. You don't have to be crazy to do this but it does help. Tree trunks grow however makes them happy. Now let's put some happy little clouds in here. In your imagination you can go anywhere you want. It's so important to do something every day that will make you happy. Almost everything is going to happen for you automatically - you don't have to spend any time working or worrying. I'm a water fanatic. I love water.
-    We wash our brush with odorless thinner. A beautiful little sunset. All you have to learn here is how to have fun. Let's go up in here, and start having some fun Trees get lonely too, so we'll give him a little friend. There are no limits in this world. See. We take the corner of the brush and let it play back-and-forth. The little tiny Tim easels will let you down. Steve wants reflections, so let's give him reflections. It's beautiful - and we haven't even done anything to it yet. Just think about these things in your mind - then bring them into your world. We start with a vision in our heart, and we put it on canvas. I can't think of anything more rewarding than being able to express yourself to others through painting,`
+    We wash our brush with odorless thinner. A beautiful little sunset. All you have to learn here is how to have fun. Let's go up in here, and start having some fun Trees get lonely too, so we'll give him a little friend. There are no limits in this world. See. We take the corner of the brush and let it play back-and-forth. The little tiny Tim easels will let you down. Steve wants reflections, so let's give him reflections. It's beautiful - and we haven't even done anything to it yet. Just think about these things in your mind - then bring them into your world. We start with a vision in our heart, and we put it on canvas. I can't think of anything more rewarding than being able to express yourself to others through painting,`,
   },
   {
     id: 3,
     studentId: '212',
     name: 'Erin',
-    response: 'Go out on a limb - that is where the fruit is.'
+    response: 'Go out on a limb - that is where the fruit is.',
   },
   {
     id: 4,
     studentId: '213',
     name: 'BrendanBrendanBrendanBrendan',
     response: `We do not make mistakes we just have happy little accidents. Once you learn the technique,
-        ohhh! Turn you loose on the world; you become a tiger.,`
+        ohhh! Turn you loose on the world; you become a tiger.,`,
   },
   {
     id: 5,
@@ -529,8 +529,8 @@ export const questionOne = [
     name: 'Awesome Coder',
     response: `for (let ii = 0; ii < stuff.length; ii++) {
     console.log("I fixed a bug!!!");
-}`
-  }
+}`,
+  },
 ];
 
 // Data for free responses assessments table.
@@ -539,8 +539,8 @@ export const questionTwo = [
     id: 1,
     studentId: '210',
     name: 'Caley',
-    response: 'In every walk with nature, one receives far more than one seeks'
-  }
+    response: 'In every walk with nature, one receives far more than one seeks',
+  },
 ];
 
 // Data for free responses assessments table.
@@ -549,8 +549,8 @@ export const questionThree = [
     id: 1,
     studentId: '210',
     name: 'Maddie',
-    response: ' '
-  }
+    response: ' ',
+  },
 ];
 
 // Data for free responses survey table.
@@ -558,42 +558,42 @@ export const surveyOne = [
   {
     index: 0,
     response:
-      'Sea lettuce gumbo grape kale kombu cauliflower salsify kohlrabi okra sea lettuce broccoli celery lotus root carrot winter purslane turnip greens garlic.'
+      'Sea lettuce gumbo grape kale kombu cauliflower salsify kohlrabi okra sea lettuce broccoli celery lotus root carrot winter purslane turnip greens garlic.',
   },
   {
     index: 1,
     response:
-      'Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.'
+      'Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.',
   },
   {
     index: 2,
     response:
-      'Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jícama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea.'
+      'Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jícama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea.',
   },
   {
     index: 3,
     response:
-      'Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori.'
+      'Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori.',
   },
   {
     index: 4,
     response:
-      'Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale.'
-  }
+      'Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale.',
+  },
 ];
 
 // Data for free reponses for survey table
 export const surveyTwo = [
   {
     index: 0,
-    response: 'In every walk with nature, one receives far more than one seeks'
+    response: 'In every walk with nature, one receives far more than one seeks',
   },
   {
     index: 1,
-    response: 'In every walk with nature, one receives far more than one seeks'
+    response: 'In every walk with nature, one receives far more than one seeks',
   },
   {
     index: 2,
-    response: 'In every walk with nature, one receives far more than one seeks'
-  }
+    response: 'In every walk with nature, one receives far more than one seeks',
+  },
 ];

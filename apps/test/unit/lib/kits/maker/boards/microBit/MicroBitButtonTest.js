@@ -8,7 +8,7 @@ describe('MicroBitButton', function () {
   it('is an event emitter component', function () {
     const button = new MicroBitButton({
       mb: new MBFirmataClientStub(),
-      pin: 0
+      pin: 0,
     });
     expect(button).to.be.an.instanceOf(EventEmitter);
   });
@@ -19,7 +19,7 @@ describe('MicroBitButton', function () {
     beforeEach(() => {
       button = new MicroBitButton({
         mb: new MBFirmataClientStub(),
-        pin: 0
+        pin: 0,
       });
     });
 
@@ -47,7 +47,7 @@ describe('MicroBitButton', function () {
     beforeEach(() => {
       button = new MicroBitButton({
         mb: new MBFirmataClientStub(),
-        pin: 0
+        pin: 0,
       });
     });
     after(() => {
@@ -73,7 +73,7 @@ describe('MicroBitButton', function () {
       let boardClient = new MBFirmataClientStub();
       let button = new MicroBitButton({
         mb: boardClient,
-        pin: 0
+        pin: 0,
       });
 
       let emitSpy = sinon.spy(button, 'emit');

@@ -2,7 +2,7 @@ import {assert} from 'chai';
 import vocabularyEditor, {
   addVocabulary,
   updateVocabulary,
-  removeVocabulary
+  removeVocabulary,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import _ from 'lodash';
 
@@ -12,15 +12,15 @@ const getInitialState = () => [
     key: 'vocabulary-1',
     word: 'vocabulary-1',
     definition: 'definition1',
-    commonSenseMedia: false
+    commonSenseMedia: false,
   },
   {
     id: 2,
     key: 'vocabulary-2',
     word: 'vocabulary-2',
     definition: 'definition2',
-    commonSenseMedia: false
-  }
+    commonSenseMedia: false,
+  },
 ];
 
 describe('vocabulariesEditorRedux reducer tests', () => {
@@ -35,7 +35,7 @@ describe('vocabulariesEditorRedux reducer tests', () => {
         key: 'new-word',
         word: 'new-word',
         definition: 'new-definition',
-        commonSenseMedia: false
+        commonSenseMedia: false,
       })
     );
     assert.deepEqual(

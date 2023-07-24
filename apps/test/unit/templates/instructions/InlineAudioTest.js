@@ -13,9 +13,9 @@ const DEFAULT_PROPS = {
   textToSpeechEnabled: true,
   style: {
     button: {},
-    buttonImg: {}
+    buttonImg: {},
   },
-  ttsAutoplayEnabled: false
+  ttsAutoplayEnabled: false,
 };
 
 // this is a helper function which is used in a test to

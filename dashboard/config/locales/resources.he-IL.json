@@ -2,595 +2,172 @@
   "he-IL": {
     "data": {
       "resources": {
-        "poem_art_celebration/poem-art/2021": {
-          "type": "סרטון"
-        },
-        "poem_art_events/poem-art/2021": {
-          "type": "סרטון"
-        },
-        "poem_art_imagery/poem-art/2021": {
-          "type": "סרטון"
-        },
-        "poem_art_introduction/poem-art/2021": {
-          "type": "סרטון"
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "type": "סרטון"
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "type": "סרטון"
-        },
-        "ai-ml/oceans/unversioned": {
-          "type": "סרטון"
-        },
-        "ai-societal/oceans/unversioned": {
-          "type": "סרטון"
-        },
-        "ai-training/oceans/unversioned": {
-          "type": "סרטון"
-        },
-        "curriculum_guide/coursed/2022": {
-          "name": "מדריך תוכנית לימוד"
-        },
-        "implementation_guide/coursed/2022": {
-          "name": "מדריך יישום"
-        },
-        "teacher_forum/coursed/2022": {
-          "name": "פורום מורים"
-        },
-        "graph_paper_programming/coursed/2022": {
-          "name": "תכנות לנייר משבצות"
-        },
-        "graph_paper_programming_1/coursed/2022": {
-          "name": "תכנות לנייר משבצות"
-        },
-        "graph_paper_programming_2/coursed/2022": {
-          "name": "תכנות לנייר משבצות"
-        },
-        "graph_paper_programming_3/coursed/2022": {
-          "name": "תכנות לנייר משבצות"
-        },
-        "graph_paper_programming_4/coursed/2022": {
-          "name": "תכנות לנייר משבצות",
-          "type": "הערכה"
-        },
-        "graph_paper_programming_5/coursed/2022": {
-          "name": "תכנות לנייר משבצות"
-        },
-        "pair_programming/coursed/2022": {
-          "name": "תכנות בזוגות"
-        },
-        "relay_programming/coursed/2022": {
-          "name": "הרץ פעולה בשנית"
-        },
-        "relay_programming_1/coursed/2022": {
-          "name": "הרץ פעולה בשנית"
-        },
-        "relay_programming_2/coursed/2022": {
-          "name": "הרץ פעולה בשנית"
-        },
-        "relay_programming_3/coursed/2022": {
-          "name": "הרץ פעולה בשנית"
-        },
-        "relay_programming_4/coursed/2022": {
-          "name": "הרץ פעולה בשנית"
-        },
-        "relay_programming_5/coursed/2022": {
-          "name": "הרץ פעולה בשנית"
-        },
-        "pause_and_think_online/coursed/2022": {
-          "type": "סרטון"
-        },
-        "conditionals_with_cards/coursed/2022": {
-          "name": "התניות עם כרטיסים"
-        },
-        "conditionals_with_cards_1/coursed/2022": {
-          "name": "התניות עם כרטיסים"
-        },
-        "conditionals_with_cards_2/coursed/2022": {
-          "name": "התניות עם כרטיסים",
-          "type": "הערכה"
-        },
-        "conditionals_with_cards_3/coursed/2022": {
-          "name": "התניות עם כרטיסים"
-        },
-        "conditionals_with_cards_4/coursed/2022": {
-          "name": "התניות עם כרטיסים"
-        },
-        "curriculum_guide/coursef/2022": {
-          "name": "מדריך תוכנית לימוד"
-        },
-        "implementation_guide/coursef/2022": {
-          "name": "מדריך יישום"
-        },
-        "teacher_forum/coursef/2022": {
-          "name": "פורום מורים"
-        },
-        "the_power_of_words_the_power_of_words/coursef/2022": {
-          "type": "סרטון"
-        },
-        "introducing_sprite_lab_1/coursef/2022": {
-          "type": "סרטון"
-        },
-        "ai_impact_on_society/coursef/2022": {
-          "type": "סרטון"
-        },
-        "ai_machine_learning/coursef/2022": {
-          "type": "סרטון"
-        },
-        "ai_training_data_bias/coursef/2022": {
-          "type": "סרטון"
-        },
-        "internet/coursef/2022": {
-          "name": "אינטרנט",
-          "type": "הערכה"
-        },
-        "internet_1/coursef/2022": {
-          "name": "אינטרנט"
-        },
-        "the_internet/coursef/2022": {
-          "name": "האינטרנט"
-        },
-        "curriculum_guide/coursee/2022": {
-          "name": "מדריך תוכנית לימוד"
-        },
-        "implementation_guide/coursee/2022": {
-          "name": "מדריך יישום"
-        },
-        "teacher_forum/coursee/2022": {
-          "name": "פורום מורים"
-        },
-        "pause_and_think_online/coursee/2022": {
-          "type": "סרטון"
-        },
-        "functions_unplugged_songwriting_2/coursee/2022": {
-          "type": "הערכה"
-        },
-        "digital_sharing_ethics_video_/coursee/2022": {
-          "type": "סרטון"
-        },
-        "curriculum_guide/courseb/2022": {
-          "name": "מדריך תוכנית לימוד"
-        },
-        "implementation_guide/courseb/2022": {
-          "name": "מדריך יישום"
-        },
-        "teacher_forum/courseb/2022": {
-          "name": "פורום מורים"
-        },
-        "move_it_move_it/courseb/2022": {
-          "name": "זוזו, זוזו"
-        },
-        "move_it_move_it_1/courseb/2022": {
-          "name": "זוזו, זוזו"
-        },
-        "move_it_move_it_2/courseb/2022": {
-          "name": "זוזו, זוזו"
-        },
-        "move_it_move_it_3/courseb/2022": {
-          "name": "זוזו, זוזו"
-        },
-        "pair_programming/courseb/2022": {
-          "name": "תכנות בזוגות"
-        },
-        "wiggles_-_gonoodle/courseb/2022": {
-          "type": "סרטון"
-        },
-        "unspotted_bugs/courseb/2022": {
-          "type": "סרטון"
-        },
-        "getting_loopy/courseb/2022": {
-          "name": "עוברים ללולאות"
-        },
-        "getting_loopy_1/courseb/2022": {
-          "name": "עוברים ללולאות"
-        },
-        "getting_loopy_2/courseb/2022": {
-          "name": "עוברים ללולאות",
-          "type": "הערכה"
-        },
-        "getting_loopy_3/courseb/2022": {
-          "name": "עוברים ללולאות"
-        },
-        "pause_and_think_online/courseb/2022": {
-          "type": "סרטון"
-        },
-        "the_big_event/courseb/2022": {
-          "name": "האירוע הגדול"
-        },
-        "the_big_event_1/courseb/2022": {
-          "name": "האירוע הגדול",
-          "type": "הערכה"
-        },
-        "the_big_event_2/courseb/2022": {
-          "name": "האירוע הגדול"
-        },
-        "teacher_forum/express/2022": {
-          "name": "פורום מורים"
-        },
-        "pair_programming/express/2022": {
-          "name": "תכנות בזוגות",
-          "type": "סרטון"
-        },
-        "artist_introduction/express/2022": {
-          "type": "סרטון"
-        },
-        "turns_angles/express/2022": {
-          "type": "סרטון"
-        },
-        "pause_and_think_online/express/2022": {
-          "type": "סרטון"
-        },
-        "pair_programming_video/express/2022": {
-          "type": "סרטון"
-        },
-        "variables/express/2022": {
-          "name": "משתנים"
-        },
-        "teacher_forum/pre-express/2022": {
-          "name": "פורום מורים"
-        },
-        "20_20_20_rule/pre-express/2022": {
-          "type": "סרטון"
-        },
-        "pair_programming/pre-express/2022": {
-          "name": "תכנות בזוגות"
-        },
-        "wiggles_-_go_noodle/pre-express/2022": {
-          "type": "סרטון"
-        },
-        "pause_and_think_online/pre-express/2022": {
-          "type": "סרטון"
-        },
-        "curriculum_guide/coursea/2022": {
-          "name": "מדריך תוכנית לימוד"
-        },
-        "implementation_guide/coursea/2022": {
-          "name": "מדריך יישום"
-        },
-        "teacher_forum/coursea/2022": {
-          "name": "פורום מורים"
-        },
-        "getting_started_-_creating_a_class_section/coursea/2022": {
-          "type": "סרטון"
-        },
-        "pair_programming/coursea/2022": {
-          "name": "תכנות בזוגות"
-        },
-        "wiggles-go_noodle/coursea/2022": {
-          "type": "סרטון"
-        },
-        "happy_maps/coursea/2022": {
-          "name": "מפות שמחות"
-        },
-        "wiggles_-_gonoodle/coursea/2022": {
-          "type": "סרטון"
-        },
-        "debugging_with_the_step_button/coursea/2022": {
-          "type": "סרטון"
-        },
-        "pair-programming/coursea/2022": {
-          "type": "סרטון"
-        },
-        "pause_and_think_online/coursea/2022": {
-          "type": "סרטון"
-        },
-        "the_big_event/coursea/2022": {
-          "name": "האירוע הגדול"
-        },
-        "the_big_event_1/coursea/2022": {
-          "name": "האירוע הגדול",
-          "type": "הערכה"
-        },
-        "the_big_event_2/coursea/2022": {
-          "name": "האירוע הגדול"
-        },
-        "curriculum_guide/coursec/2022": {
-          "name": "מדריך תוכנית לימוד"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "מדריך יישום"
-        },
-        "teacher_forum/coursec/2022": {
-          "name": "פורום מורים"
-        },
-        "my_robotic_friends/coursec/2022": {
-          "name": "חברי הרובוטיים"
-        },
-        "my_robotic_friends_1/coursec/2022": {
-          "name": "חברי הרובוטיים"
-        },
-        "my_robotic_friends_2/coursec/2022": {
-          "name": "חברי הרובוטיים"
-        },
-        "my_robotic_friends_3/coursec/2022": {
-          "name": "חברי הרובוטיים"
-        },
-        "my_robotic_friends_4/coursec/2022": {
-          "name": "חברי הרובוטיים"
-        },
-        "pair_programming/coursec/2022": {
-          "name": "תכנות בזוגות",
-          "type": "סרטון"
-        },
-        "the_big_event/coursec/2022": {
-          "name": "האירוע הגדול"
-        },
-        "the_big_event_1/coursec/2022": {
-          "name": "האירוע הגדול",
-          "type": "הערכה"
-        },
-        "the_big_event_2/coursec/2022": {
-          "name": "האירוע הגדול"
-        },
-        "pause_and_think_online/coursec/2022": {
-          "type": "סרטון"
-        },
-        "binary_bracelets/coursec/2022": {
-          "name": "צמידים בינארים"
-        },
-        "binary_bracelets_1/coursec/2022": {
-          "name": "צמידים בינארים"
-        },
-        "binary_bracelets_2/coursec/2022": {
-          "name": "צמידים בינארים"
-        },
-        "binary_bracelets_3/coursec/2022": {
-          "name": "צמידים בינארים",
-          "type": "הערכה"
-        },
-        "binary_bracelets_4/coursec/2022": {
-          "name": "צמידים בינארים"
-        },
-        "teacher_forum/csd/2022": {
-          "name": "פורום מורים"
-        },
-        "ascii_and_binary_representation/csd/2022": {
-          "name": "ייצוג ASCII וייצוג בינארי"
-        },
-        "binary_and_data/csd/2022": {
-          "type": "סרטון"
-        },
-        "amazon_and_data/csd/2022": {
-          "type": "סרטון"
-        },
-        "netflix_and_data/csd/2022": {
-          "type": "סרטון"
-        },
-        "waze_and_data/csd/2022": {
-          "type": "סרטון"
-        },
-        "video_impact_on_society/csd/2022": {
-          "type": "סרטון"
-        },
-        "video_machine_learning/csd/2022": {
-          "name": "וידאו: למידת מכונה",
-          "type": "סרטון"
-        },
-        "video_training_data_and_bias/csd/2022": {
-          "type": "סרטון"
-        },
-        "problem_solving_process_1/csd/2022": {
-          "type": "סרטון"
-        },
-        "what_is_a_computer/csd/2022": {
-          "type": "סרטון"
-        },
-        "what_do_computers_do/csd/2022": {
-          "type": "סרטון"
-        },
-        "drawing_in_game_lab_-_part_1/csd/2022": {
-          "type": "סרטון"
-        },
-        "drawing_in_game_lab_-_part_2/csd/2022": {
-          "type": "סרטון"
-        },
-        "introduction_to_variables/csd/2022": {
-          "type": "סרטון"
-        },
-        "variables/csd/2022": {
-          "name": "משתנים"
-        },
-        "variables_3/csd/2022": {
-          "name": "משתנים"
-        },
-        "introduction_to_sprites/csd/2022": {
-          "type": "סרטון"
-        },
-        "sprites/csd/2022": {
-          "name": "דמויות"
-        },
-        "the_animation_tab/csd/2022": {
-          "type": "סרטון"
-        },
-        "sprites_1/csd/2022": {
-          "name": "דמויות"
-        },
-        "sprite_properties/csd/2022": {
-          "name": "מאפייני ספרייט"
-        },
-        "sprite_properties_1/csd/2022": {
-          "name": "מאפייני ספרייט"
-        },
-        "text/csd/2022": {
-          "name": "טקסט"
-        },
-        "flipbook_example_-_by_marnic_bos/csd/2022": {
-          "type": "סרטון"
-        },
-        "introduction_to_the_draw_loop/csd/2022": {
-          "type": "סרטון"
-        },
-        "sprite_movement/csd/2022": {
-          "type": "סרטון"
-        },
-        "boolean_expressions/csd/2022": {
-          "type": "סרטון"
-        },
-        "conditional_statements/csd/2022": {
-          "type": "סרטון"
-        },
-        "conditionals/csd/2022": {
-          "name": "תנאים"
-        },
-        "if_else_statements/csd/2022": {
-          "type": "סרטון"
-        },
-        "velocity/csd/2022": {
-          "type": "סרטון"
-        },
-        "functions/csd/2022": {
-          "name": "פונקציות",
-          "type": "סרטון"
-        },
-        "functions_1/csd/2022": {
-          "name": "פונקציות"
-        },
-        "functions_4/csd/2022": {
-          "name": "פונקציות"
-        },
-        "intro_to_web_lab_part_2/csd/2022": {
-          "type": "סרטון"
-        },
-        "video_intro_to_web_lab_part_1/csd/2022": {
-          "type": "סרטון"
-        },
-        "video_debugging/csd/2022": {
-          "type": "סרטון"
-        },
-        "video_pair_programming/csd/2022": {
-          "type": "סרטון"
-        },
-        "lists/csd/2022": {
-          "name": "רשימות"
-        },
-        "intro_to_css_-_part_1/csd/2022": {
-          "type": "סרטון"
-        },
-        "intro_to_css_-_part_2/csd/2022": {
-          "type": "סרטון"
-        },
-        "creative_commons_overview/csd/2022": {
-          "type": "סרטון"
-        },
-        "publishing_your_website/csd/2022": {
-          "type": "סרטון"
-        },
-        "video_managing_disagreement/csd/2022": {
-          "type": "סרטון"
-        },
-        "video_teamwork/csd/2022": {
-          "type": "סרטון"
-        },
-        "video_how_search_works/csd/2022": {
-          "type": "סרטון"
-        },
-        "the_design_thinking_process/csd/2022": {
-          "type": "סרטון"
-        },
-        "design_mode/csd/2022": {
-          "name": "מצב עיצוב"
-        },
-        "what_s_for_lunch_testing/csd/2022": {
-          "type": "סרטון"
-        },
-        "intro_to_design_mode/csd/2022": {
-          "type": "סרטון"
-        },
-        "events_in_app_lab_1/csd/2022": {
-          "type": "סרטון"
-        },
-        "computer_science_is_changing_everything/csd/2022": {
-          "type": "סרטון"
-        },
-        "the_internet_of_things/csd/2022": {
-          "type": "סרטון"
-        },
-        "circuits_and_logic/csd/2022": {
-          "type": "סרטון"
-        },
-        "if_statements_2/csd/2022": {
-          "type": "סרטון"
-        },
-        "the_counter_pattern_1/csd/2022": {
-          "type": "סרטון"
-        },
-        "variables_1/csd/2022": {
-          "name": "משתנים"
-        },
-        "variables_2/csd/2022": {
-          "name": "משתנים",
-          "type": "סרטון"
-        },
-        "input_output_devices/csd/2022": {
-          "type": "סרטון"
-        },
-        "introduction_to_arrays/csd/2022": {
-          "type": "סרטון"
-        },
-        "functions_2/csd/2022": {
-          "name": "פונקציות"
-        },
-        "functions_3/csd/2022": {
-          "name": "פונקציות",
-          "type": "סרטון"
-        },
-        "functions_with_parameters/csd/2022": {
-          "name": "פונקציות ופרמטרים",
-          "type": "סרטון"
-        },
-        "functions_5/csd/2022": {
-          "name": "פונקציות"
-        },
-        "ai_what_is_machine_learning_/csd/2022": {
-          "type": "סרטון"
-        },
-        "seeing_ai/csd/2022": {
-          "type": "סרטון"
-        },
-        "finding_patterns_in_data/csd/2022": {
-          "type": "סרטון"
-        },
-        "introduction_to_ai_lab_1/csd/2022": {
-          "type": "סרטון"
-        },
-        "training_and_testing_in_ai_lab/csd/2022": {
-          "type": "סרטון"
-        },
-        "ai_training_data_bias/csd/2022": {
-          "type": "סרטון"
-        },
-        "model_cards_in_ai_lab/csd/2022": {
-          "type": "סרטון"
-        },
-        "if-statements_in_app_lab/csd/2022": {
-          "type": "סרטון"
-        },
-        "numerical_data_in_ai_lab_2/csd/2022": {
-          "type": "סרטון"
-        },
-        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
-          "type": "סרטון"
-        },
-        "creating_a_survey_in_google_forms/csd/2022": {
-          "type": "סרטון"
-        },
-        "cleaning_survey_data/csd/2022": {
-          "type": "סרטון"
-        },
-        "view_and_download_survey_data/csd/2022": {
-          "type": "סרטון"
-        },
-        "lesson_plans/courseb/2018": {
+        "lesson_plans/csd/2017": {
           "name": "תוכנית לימודים"
         },
-        "standard_mappings/courseb/2018": {
+        "standard_mappings/csd/2017": {
           "name": "מיפוי סטנדרטי"
         },
-        "teacher_forum/courseb/2018": {
+        "teacher_forum/csd/2017": {
           "name": "פורום מורים"
         },
-        "vocabulary/courseb/2018": {
+        "vocabulary/csd/2017": {
+          "name": "אוצר מילים"
+        },
+        "code_introduced/csd/2017": {
+          "name": "היכרות עם קוד"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "פורום מורים"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "אוצר מילים"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "היכרות עם קוד"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "פורום מורים"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "אוצר מילים"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "היכרות עם קוד"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "פורום מורים"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "אוצר מילים"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "פורום מורים"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "אוצר מילים"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "היכרות עם קוד"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "פורום מורים"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "אוצר מילים"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "פורום מורים"
+        },
+        "vocabulary/csd/2018": {
+          "name": "אוצר מילים"
+        },
+        "code_introduced/csd/2018": {
+          "name": "היכרות עם קוד"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "פורום מורים"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "אוצר מילים"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "היכרות עם קוד"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "פורום מורים"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "אוצר מילים"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "היכרות עם קוד"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "פורום מורים"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "אוצר מילים"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "פורום מורים"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "אוצר מילים"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "היכרות עם קוד"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "פורום מורים"
+        },
+        "vocabulary_5/csd/2018": {
           "name": "אוצר מילים"
         },
         "lesson_plans/coursea/2018": {
@@ -605,6 +182,30 @@
         "vocabulary/coursea/2018": {
           "name": "אוצר מילים"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "פורום מורים"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "אוצר מילים"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "פורום מורים"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "אוצר מילים"
+        },
         "lesson_plans/coursed/2018": {
           "name": "תוכנית לימודים"
         },
@@ -615,6 +216,18 @@
           "name": "פורום מורים"
         },
         "vocabulary/coursed/2018": {
+          "name": "אוצר מילים"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "פורום מורים"
+        },
+        "vocabulary/coursee/2018": {
           "name": "אוצר מילים"
         },
         "lesson_plans/coursef/2018": {
@@ -641,112 +254,73 @@
         "vocabulary/express/2018": {
           "name": "אוצר מילים"
         },
-        "lesson_plans/coursee/2018": {
+        "lesson_plans/csd/2019": {
           "name": "תוכנית לימודים"
         },
-        "standard_mappings/coursee/2018": {
+        "standard_mappings/csd/2019": {
           "name": "מיפוי סטנדרטי"
         },
-        "teacher_forum/coursee/2018": {
+        "teacher_forum/csd/2019": {
           "name": "פורום מורים"
         },
-        "vocabulary/coursee/2018": {
+        "vocabulary/csd/2019": {
           "name": "אוצר מילים"
         },
-        "lesson_plans/coursec/2018": {
-          "name": "תוכנית לימודים"
-        },
-        "standard_mappings/coursec/2018": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "teacher_forum/coursec/2018": {
-          "name": "פורום מורים"
-        },
-        "vocabulary/coursec/2018": {
-          "name": "אוצר מילים"
-        },
-        "code_introduced_1/csd/2018": {
+        "code_introduced/csd/2019": {
           "name": "היכרות עם קוד"
         },
-        "lesson_plans_2/csd/2018": {
+        "lesson_plans_1/csd/2019": {
           "name": "תוכנית לימודים"
         },
-        "standard_mappings_2/csd/2018": {
+        "standard_mappings_1/csd/2019": {
           "name": "מיפוי סטנדרטי"
         },
-        "teacher_forum_2/csd/2018": {
-          "name": "פורום מורים"
-        },
-        "vocabulary_2/csd/2018": {
+        "vocabulary_1/csd/2019": {
           "name": "אוצר מילים"
         },
-        "code_introduced_3/csd/2018": {
+        "code_introduced_1/csd/2019": {
           "name": "היכרות עם קוד"
         },
-        "lesson_plans_5/csd/2018": {
+        "lesson_plans_2/csd/2019": {
           "name": "תוכנית לימודים"
         },
-        "standard_mappings_5/csd/2018": {
+        "standard_mappings_2/csd/2019": {
           "name": "מיפוי סטנדרטי"
         },
-        "teacher_forum_5/csd/2018": {
-          "name": "פורום מורים"
-        },
-        "vocabulary_5/csd/2018": {
+        "vocabulary_2/csd/2019": {
           "name": "אוצר מילים"
         },
-        "lesson_plans_4/csd/2018": {
-          "name": "תוכנית לימודים"
-        },
-        "standard_mappings_4/csd/2018": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "teacher_forum_4/csd/2018": {
-          "name": "פורום מורים"
-        },
-        "vocabulary_4/csd/2018": {
-          "name": "אוצר מילים"
-        },
-        "code_introduced_2/csd/2018": {
+        "code_introduced_2/csd/2019": {
           "name": "היכרות עם קוד"
         },
-        "lesson_plans_3/csd/2018": {
+        "lesson_plans_3/csd/2019": {
           "name": "תוכנית לימודים"
         },
-        "standard_mappings_3/csd/2018": {
+        "standard_mappings_3/csd/2019": {
           "name": "מיפוי סטנדרטי"
         },
-        "teacher_forum_3/csd/2018": {
-          "name": "פורום מורים"
-        },
-        "vocabulary_3/csd/2018": {
+        "vocabulary_3/csd/2019": {
           "name": "אוצר מילים"
         },
-        "code_introduced/csd/2018": {
+        "lesson_plans_4/csd/2019": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "אוצר מילים"
+        },
+        "code_introduced_3/csd/2019": {
           "name": "היכרות עם קוד"
         },
-        "lesson_plans_1/csd/2018": {
+        "lesson_plans_5/csd/2019": {
           "name": "תוכנית לימודים"
         },
-        "standard_mappings_1/csd/2018": {
+        "standard_mappings_5/csd/2019": {
           "name": "מיפוי סטנדרטי"
         },
-        "teacher_forum_1/csd/2018": {
-          "name": "פורום מורים"
-        },
-        "vocabulary_1/csd/2018": {
-          "name": "אוצר מילים"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "תוכנית לימודים"
-        },
-        "standard_mappings/csd/2018": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "teacher_forum/csd/2018": {
-          "name": "פורום מורים"
-        },
-        "vocabulary/csd/2018": {
+        "vocabulary_5/csd/2019": {
           "name": "אוצר מילים"
         },
         "curriculum_guide/coursea/2019": {
@@ -779,6 +353,21 @@
         "vocabulary/courseb/2019": {
           "name": "אוצר מילים"
         },
+        "curriculum_guide/coursec/2019": {
+          "name": "מדריך תוכנית לימוד"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "פורום מורים"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "אוצר מילים"
+        },
         "curriculum_guide/coursed/2019": {
           "name": "מדריך תוכנית לימוד"
         },
@@ -792,21 +381,6 @@
           "name": "פורום מורים"
         },
         "vocabulary/coursed/2019": {
-          "name": "אוצר מילים"
-        },
-        "curriculum_guide/coursef/2019": {
-          "name": "מדריך תוכנית לימוד"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "תוכנית לימודים"
-        },
-        "standard_mappings/coursef/2019": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "teacher_forum/coursef/2019": {
-          "name": "פורום מורים"
-        },
-        "vocabulary/coursef/2019": {
           "name": "אוצר מילים"
         },
         "curriculum_guide/coursee/2019": {
@@ -824,6 +398,21 @@
         "vocabulary/coursee/2019": {
           "name": "אוצר מילים"
         },
+        "curriculum_guide/coursef/2019": {
+          "name": "מדריך תוכנית לימוד"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "פורום מורים"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "אוצר מילים"
+        },
         "lesson_plans/express/2019": {
           "name": "תוכנית לימודים"
         },
@@ -836,231 +425,423 @@
         "vocabulary/express/2019": {
           "name": "אוצר מילים"
         },
-        "curriculum_guide/coursec/2019": {
+        "curriculum_guide/coursea/2020": {
           "name": "מדריך תוכנית לימוד"
         },
-        "lesson_plans/coursec/2019": {
+        "lesson_plans/coursea/2020": {
           "name": "תוכנית לימודים"
         },
-        "standard_mappings/coursec/2019": {
+        "standard_mappings/coursea/2020": {
           "name": "מיפוי סטנדרטי"
         },
-        "teacher_forum/coursec/2019": {
+        "teacher_forum/coursea/2020": {
           "name": "פורום מורים"
         },
-        "vocabulary/coursec/2019": {
+        "vocabulary/coursea/2020": {
           "name": "אוצר מילים"
         },
-        "teacher_forum/csd/2019": {
-          "name": "פורום מורים"
-        },
-        "code_introduced_1/csd/2019": {
-          "name": "היכרות עם קוד"
-        },
-        "lesson_plans_2/csd/2019": {
-          "name": "תוכנית לימודים"
-        },
-        "standard_mappings_2/csd/2019": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "vocabulary_2/csd/2019": {
-          "name": "אוצר מילים"
-        },
-        "code_introduced_3/csd/2019": {
-          "name": "היכרות עם קוד"
-        },
-        "lesson_plans_5/csd/2019": {
-          "name": "תוכנית לימודים"
-        },
-        "standard_mappings_5/csd/2019": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "vocabulary_5/csd/2019": {
-          "name": "אוצר מילים"
-        },
-        "code_introduced_2/csd/2019": {
-          "name": "היכרות עם קוד"
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "תוכנית לימודים"
-        },
-        "standard_mappings_3/csd/2019": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "vocabulary_3/csd/2019": {
-          "name": "אוצר מילים"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "תוכנית לימודים"
-        },
-        "standard_mappings_4/csd/2019": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "vocabulary_4/csd/2019": {
-          "name": "אוצר מילים"
-        },
-        "lesson_plans/csd/2019": {
-          "name": "תוכנית לימודים"
-        },
-        "standard_mappings/csd/2019": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "vocabulary/csd/2019": {
-          "name": "אוצר מילים"
-        },
-        "code_introduced/csd/2019": {
-          "name": "היכרות עם קוד"
-        },
-        "lesson_plans_1/csd/2019": {
-          "name": "תוכנית לימודים"
-        },
-        "standard_mappings_1/csd/2019": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "vocabulary_1/csd/2019": {
-          "name": "אוצר מילים"
-        },
-        "code_introduced_1/csd/2017": {
-          "name": "היכרות עם קוד"
-        },
-        "lesson_plans_2/csd/2017": {
-          "name": "תוכנית לימודים"
-        },
-        "standard_mappings_2/csd/2017": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "teacher_forum_2/csd/2017": {
-          "name": "פורום מורים"
-        },
-        "vocabulary_2/csd/2017": {
-          "name": "אוצר מילים"
-        },
-        "code_introduced_3/csd/2017": {
-          "name": "היכרות עם קוד"
-        },
-        "lesson_plans_5/csd/2017": {
-          "name": "תוכנית לימודים"
-        },
-        "standard_mappings_5/csd/2017": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "teacher_forum_5/csd/2017": {
-          "name": "פורום מורים"
-        },
-        "vocabulary_5/csd/2017": {
-          "name": "אוצר מילים"
-        },
-        "code_introduced/csd/2017": {
-          "name": "היכרות עם קוד"
-        },
-        "lesson_plans_1/csd/2017": {
-          "name": "תוכנית לימודים"
-        },
-        "standard_mappings_1/csd/2017": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "teacher_forum_1/csd/2017": {
-          "name": "פורום מורים"
-        },
-        "vocabulary_1/csd/2017": {
-          "name": "אוצר מילים"
-        },
-        "lesson_plans/csd/2017": {
-          "name": "תוכנית לימודים"
-        },
-        "standard_mappings/csd/2017": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "teacher_forum/csd/2017": {
-          "name": "פורום מורים"
-        },
-        "vocabulary/csd/2017": {
-          "name": "אוצר מילים"
-        },
-        "lesson_plans_4/csd/2017": {
-          "name": "תוכנית לימודים"
-        },
-        "standard_mappings_4/csd/2017": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "teacher_forum_4/csd/2017": {
-          "name": "פורום מורים"
-        },
-        "vocabulary_4/csd/2017": {
-          "name": "אוצר מילים"
-        },
-        "code_introduced_2/csd/2017": {
-          "name": "היכרות עם קוד"
-        },
-        "lesson_plans_3/csd/2017": {
-          "name": "תוכנית לימודים"
-        },
-        "standard_mappings_3/csd/2017": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "teacher_forum_3/csd/2017": {
-          "name": "פורום מורים"
-        },
-        "vocabulary_3/csd/2017": {
-          "name": "אוצר מילים"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "curriculum_guide_1/coursef/2021": {
+        "curriculum_guide/courseb/2020": {
           "name": "מדריך תוכנית לימוד"
         },
-        "implementation_guide/coursef/2021": {
+        "lesson_plans/courseb/2020": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "פורום מורים"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "אוצר מילים"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "מדריך תוכנית לימוד"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "פורום מורים"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "אוצר מילים"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "מדריך תוכנית לימוד"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "פורום מורים"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "אוצר מילים"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "מדריך תוכנית לימוד"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "פורום מורים"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "אוצר מילים"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "מדריך תוכנית לימוד"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "פורום מורים"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "אוצר מילים"
+        },
+        "lesson_plans/express/2020": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings/express/2020": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum/express/2020": {
+          "name": "פורום מורים"
+        },
+        "vocabulary/express/2020": {
+          "name": "אוצר מילים"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "תוכנית לימודים"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "מיפוי סטנדרטי"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "פורום מורים"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "אוצר מילים"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "פורום מורים"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "סרטון"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "סרטון"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "סרטון"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "type": "כותרת"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "סרטון"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "סרטון"
+        },
+        "video_pair_programming/csd/2021": {
+          "type": "סרטון"
+        },
+        "video_debugging/csd/2021": {
+          "type": "סרטון"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "כותרת"
+        },
+        "lists/csd/2021": {
+          "name": "רשימות"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "type": "סרטון"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "type": "סרטון"
+        },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "כותרת"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "סרטון"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "כותרת"
+        },
+        "publishing_your_website/csd/2021": {
+          "type": "סרטון"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "סרטון"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "סרטון"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "סרטון"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "כותרת"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "פורום מורים"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "סרטון"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "סרטון"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "סרטון"
+        },
+        "variables_1/csd/2021": {
+          "name": "משתנים"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "סרטון"
+        },
+        "the_animation_tab/csd/2021": {
+          "type": "סרטון"
+        },
+        "sprites_1/csd/2021": {
+          "name": "דמויות"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "מאפייני ספרייט"
+        },
+        "captioned-scenes/csd/2021": {
+          "type": "כותרת"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "סרטון"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "סרטון"
+        },
+        "animating-sprites/csd/2021": {
+          "type": "סרטון"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "כותרת"
+        },
+        "boolean_expressions/csd/2021": {
+          "type": "סרטון"
+        },
+        "conditional_statements/csd/2021": {
+          "type": "סרטון"
+        },
+        "if_else_statements/csd/2021": {
+          "type": "סרטון"
+        },
+        "interactive_card/csd/2021": {
+          "type": "כותרת"
+        },
+        "velocity_1/csd/2021": {
+          "type": "סרטון"
+        },
+        "side-scroller-1/csd/2021": {
+          "type": "כותרת"
+        },
+        "flyer-game-1/csd/2021": {
+          "type": "כותרת"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "פונקציות",
+          "type": "סרטון"
+        },
+        "functions_1/csd/2021": {
+          "name": "פונקציות"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "כותרת"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "סרטון"
+        },
+        "paper-prototypes/csd/2021": {
+          "type": "כותרת"
+        },
+        "design_mode/csd/2021": {
+          "name": "מצב עיצוב"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "סרטון"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "סרטון"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "מצב עיצוב"
+        },
+        "app-presentation/csd/2021": {
+          "type": "כותרת"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "סרטון"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "כותרת"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "סרטון"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "סרטון"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "סרטון"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "סרטון"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "וידאו: למידת מכונה",
+          "type": "סרטון"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "סרטון"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "כותרת"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "סרטון"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "סרטון"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "type": "סרטון"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "סרטון"
+        },
+        "functions_2/csd/2021": {
+          "name": "פונקציות"
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "כותרת"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "type": "סרטון"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "בשביל לולאות",
+          "type": "סרטון"
+        },
+        "for_loops/csd/2021": {
+          "name": "בשביל לולאות"
+        },
+        "circuits-logic-video/csd/2021": {
+          "type": "סרטון"
+        },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "כותרת"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "סרטון"
+        },
+        "seeing_ai/csd/2021": {
+          "type": "סרטון"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "סרטון"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "סרטון"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "סרטון"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "type": "סרטון"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "סרטון"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "סרטון"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "סרטון"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "סרטון"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "כותרת"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "סרטון"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "סרטון"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "כותרת"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "מדריך תוכנית לימוד"
+        },
+        "implementation_guide/coursea/2021": {
           "name": "מדריך יישום"
         },
-        "teacher_forum_1/coursef/2021": {
+        "teacher_forum_1/coursea/2021": {
           "name": "פורום מורים"
         },
-        "introducing_sprite_lab_1/coursef/2021": {
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "סרטון"
         },
-        "the_power_of_words_the_power_of_words/coursef/2021": {
+        "pair-programming-vid/coursea/2021": {
+          "name": "תכנות בזוגות"
+        },
+        "wiggles-go_noodle/coursea/2021": {
           "type": "סרטון"
         },
-        "pause_and_think_online/coursef/2021": {
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "מפות שמחות"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
           "type": "סרטון"
         },
-        "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "כיף עם לולאת \"עבור\""
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "type": "סרטון"
         },
-        "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "כיף עם לולאת \"עבור\"",
+        "pair-programming/coursea/2021": {
+          "type": "סרטון"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "type": "סרטון"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "האירוע הגדול"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "האירוע הגדול",
           "type": "הערכה"
         },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "כיף עם לולאת \"עבור\""
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "כיף עם לולאת \"עבור\""
-        },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "כיף עם לולאת \"עבור\""
-        },
-        "ai-ml/coursef/2021": {
-          "type": "סרטון"
-        },
-        "ai-societal/coursef/2021": {
-          "type": "סרטון"
-        },
-        "ai-training/coursef/2021": {
-          "type": "סרטון"
-        },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "אינטרנט"
-        },
-        "csf-internet-assessment/coursef/2021": {
-          "name": "אינטרנט",
-          "type": "הערכה"
-        },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "האינטרנט"
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "האירוע הגדול"
         },
         "curriculum_guide_1/courseb/2021": {
           "name": "מדריך תוכנית לימוד"
@@ -1118,49 +899,6 @@
         "unplugged-video-big-event/courseb/2021": {
           "name": "האירוע הגדול",
           "type": "סרטון"
-        },
-        "curriculum_guide_1/coursea/2021": {
-          "name": "מדריך תוכנית לימוד"
-        },
-        "implementation_guide/coursea/2021": {
-          "name": "מדריך יישום"
-        },
-        "teacher_forum_1/coursea/2021": {
-          "name": "פורום מורים"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "type": "סרטון"
-        },
-        "pair-programming-vid/coursea/2021": {
-          "name": "תכנות בזוגות"
-        },
-        "wiggles-go_noodle/coursea/2021": {
-          "type": "סרטון"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "מפות שמחות"
-        },
-        "wiggles_-_gonoodle/coursea/2021": {
-          "type": "סרטון"
-        },
-        "csf_debugging_k1_blocks/coursea/2021": {
-          "type": "סרטון"
-        },
-        "pair-programming/coursea/2021": {
-          "type": "סרטון"
-        },
-        "common-sense-media-pause-think/coursea/2021": {
-          "type": "סרטון"
-        },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "האירוע הגדול"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "name": "האירוע הגדול",
-          "type": "הערכה"
-        },
-        "unplugged-video-big-event/coursea/2021": {
-          "name": "האירוע הגדול"
         },
         "curriculum_guide_1/coursec/2021": {
           "name": "מדריך תוכנית לימוד"
@@ -1290,6 +1028,83 @@
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "התניות עם כרטיסים"
         },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "מדריך תוכנית לימוד"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "מדריך יישום"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "פורום מורים"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "type": "סרטון"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "type": "סרטון"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "type": "הערכה"
+        },
+        "rubric-csf-final-projects/coursee/2021": {
+          "type": "כותרת"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "מדריך תוכנית לימוד"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "מדריך יישום"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "פורום מורים"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "type": "סרטון"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "type": "סרטון"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "type": "סרטון"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "כיף עם לולאת \"עבור\""
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "כיף עם לולאת \"עבור\"",
+          "type": "הערכה"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "כיף עם לולאת \"עבור\""
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "כיף עם לולאת \"עבור\""
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "כיף עם לולאת \"עבור\""
+        },
+        "ai-ml/coursef/2021": {
+          "type": "סרטון"
+        },
+        "ai-societal/coursef/2021": {
+          "type": "סרטון"
+        },
+        "ai-training/coursef/2021": {
+          "type": "סרטון"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "אינטרנט"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "אינטרנט",
+          "type": "הערכה"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "האינטרנט"
+        },
+        "rubric-csf-final-projects/coursef/2021": {
+          "type": "כותרת"
+        },
         "teacher_forum_1/express/2021": {
           "name": "פורום מורים"
         },
@@ -1312,6 +1127,9 @@
         "variables_video/express/2021": {
           "name": "משתנים"
         },
+        "rubric-csf-final-projects/express/2021": {
+          "type": "כותרת"
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "פורום מורים"
         },
@@ -1327,341 +1145,661 @@
         "common-sense-media-pause-think/pre-express/2021": {
           "type": "סרטון"
         },
-        "curriculum_guide_1/coursee/2021": {
-          "name": "מדריך תוכנית לימוד"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "מדריך יישום"
-        },
-        "teacher_forum_1/coursee/2021": {
+        "teacher_forum/csd/2022": {
           "name": "פורום מורים"
         },
-        "common-sense-media-pause-think/coursee/2021": {
+        "problem_solving_process_1/csd/2022": {
           "type": "סרטון"
         },
-        "digital-sharing-video/coursee/2021": {
+        "what_is_a_computer/csd/2022": {
           "type": "סרטון"
         },
-        "csf-songwriting-assessment/coursee/2021": {
-          "type": "הערכה"
-        },
-        "ai_what_is_machine_learning_/csd/2021": {
+        "what_do_computers_do/csd/2022": {
           "type": "סרטון"
         },
-        "seeing_ai/csd/2021": {
+        "apps_and_problem_solving_2/csd/2022": {
+          "type": "כותרת"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
           "type": "סרטון"
         },
-        "finding_patterns_in_data/csd/2021": {
+        "video_intro_to_web_lab_part_1/csd/2022": {
           "type": "סרטון"
         },
-        "introduction_to_ai_lab_1/csd/2021": {
+        "video_debugging/csd/2022": {
           "type": "סרטון"
         },
-        "training_and_testing_in_ai_lab/csd/2021": {
+        "video_pair_programming/csd/2022": {
           "type": "סרטון"
         },
-        "ai_training_data_bias/csd/2021": {
+        "html_web_page/csd/2022": {
+          "type": "כותרת"
+        },
+        "lists/csd/2022": {
+          "name": "רשימות"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
           "type": "סרטון"
         },
-        "model_cards_in_ai_lab/csd/2021": {
+        "intro_to_css_-_part_2/csd/2022": {
           "type": "סרטון"
         },
-        "if-statements_in_app_lab/csd/2021": {
+        "your_personal_style/csd/2022": {
+          "type": "כותרת"
+        },
+        "creative_commons_overview/csd/2022": {
           "type": "סרטון"
         },
-        "numerical_data_in_ai_lab_2/csd/2021": {
+        "personal_web_page_1/csd/2022": {
+          "type": "כותרת"
+        },
+        "publishing_your_website/csd/2022": {
           "type": "סרטון"
         },
-        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+        "video_managing_disagreement/csd/2022": {
           "type": "סרטון"
         },
-        "cleaning_survey_data/csd/2021": {
+        "video_teamwork/csd/2022": {
           "type": "סרטון"
         },
-        "view_and_download_survey_data/csd/2021": {
+        "video_how_search_works/csd/2022": {
           "type": "סרטון"
         },
-        "teacher_forum/csd/2021": {
-          "name": "פורום מורים"
+        "website_for_a_purpose/csd/2022": {
+          "type": "כותרת"
         },
-        "the-design-thinking-process/csd/2021": {
+        "drawing_in_game_lab_-_part_1/csd/2022": {
           "type": "סרטון"
         },
-        "design_mode/csd/2021": {
-          "name": "מצב עיצוב"
-        },
-        "whats-for-lunch-testing/csd/2021": {
+        "drawing_in_game_lab_-_part_2/csd/2022": {
           "type": "סרטון"
         },
-        "intro_to_design_mode/csd/2021": {
+        "introduction_to_variables/csd/2022": {
           "type": "סרטון"
         },
-        "design_mode_1/csd/2021": {
-          "name": "מצב עיצוב"
-        },
-        "internet-of-things-video/csd/2021": {
-          "type": "סרטון"
-        },
-        "innovation-video-1-1/csd/2021": {
-          "type": "סרטון"
-        },
-        "how_computers_word_hardware_software/csd/2021": {
-          "type": "סרטון"
-        },
-        "analog-digital-video/csd/2021": {
-          "type": "סרטון"
-        },
-        "functions_2/csd/2021": {
-          "name": "פונקציות"
-        },
-        "introduction_to_arrays/csd/2021": {
-          "type": "סרטון"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "בשביל לולאות",
-          "type": "סרטון"
-        },
-        "for_loops/csd/2021": {
-          "name": "בשביל לולאות"
-        },
-        "circuits-logic-video/csd/2021": {
-          "type": "סרטון"
-        },
-        "how-computers-work-data-and-binary/csd/2021": {
-          "type": "סרטון"
-        },
-        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
-          "type": "סרטון"
-        },
-        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
-          "type": "סרטון"
-        },
-        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
-          "type": "סרטון"
-        },
-        "video_impact_on_society/csd/2021": {
-          "type": "סרטון"
-        },
-        "video_machine_learning/csd/2021": {
-          "name": "וידאו: למידת מכונה",
-          "type": "סרטון"
-        },
-        "video_training_data_and_bias/csd/2021": {
-          "type": "סרטון"
-        },
-        "teacher_forum_1/csd/2021": {
-          "name": "פורום מורים"
-        },
-        "drawing_in_game_lab_-_part_1/csd/2021": {
-          "type": "סרטון"
-        },
-        "drawing_in_game_lab_-_part_2/csd/2021": {
-          "type": "סרטון"
-        },
-        "introduction-to-variables/csd/2021": {
-          "type": "סרטון"
-        },
-        "variables_1/csd/2021": {
+        "variables/csd/2022": {
           "name": "משתנים"
         },
-        "introduction_to_sprites/csd/2021": {
+        "variables_3/csd/2022": {
+          "name": "משתנים"
+        },
+        "introduction_to_sprites/csd/2022": {
           "type": "סרטון"
         },
-        "the_animation_tab/csd/2021": {
-          "type": "סרטון"
-        },
-        "sprites_1/csd/2021": {
+        "sprites/csd/2022": {
           "name": "דמויות"
         },
-        "sprite_properties/csd/2021": {
+        "the_animation_tab/csd/2022": {
+          "type": "סרטון"
+        },
+        "sprites_1/csd/2022": {
+          "name": "דמויות"
+        },
+        "sprite_properties/csd/2022": {
           "name": "מאפייני ספרייט"
         },
-        "youtube-flipbook/csd/2021": {
+        "sprite_properties_1/csd/2022": {
+          "name": "מאפייני ספרייט"
+        },
+        "text/csd/2022": {
+          "name": "טקסט"
+        },
+        "captioned_scenes/csd/2022": {
+          "type": "כותרת"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
           "type": "סרטון"
         },
-        "introduction_to_the_draw_loop/csd/2021": {
+        "introduction_to_the_draw_loop/csd/2022": {
           "type": "סרטון"
         },
-        "animating-sprites/csd/2021": {
+        "sprite_movement/csd/2022": {
           "type": "סרטון"
         },
-        "boolean_expressions/csd/2021": {
+        "animated_scene/csd/2022": {
+          "type": "כותרת"
+        },
+        "boolean_expressions/csd/2022": {
           "type": "סרטון"
         },
-        "conditional_statements/csd/2021": {
+        "conditional_statements/csd/2022": {
           "type": "סרטון"
         },
-        "if_else_statements/csd/2021": {
+        "conditionals/csd/2022": {
+          "name": "תנאים"
+        },
+        "if_else_statements/csd/2022": {
           "type": "סרטון"
         },
-        "velocity_1/csd/2021": {
+        "interactive_card_3/csd/2022": {
+          "type": "כותרת"
+        },
+        "velocity/csd/2022": {
           "type": "סרטון"
         },
-        "calling_and_defining_functions/csd/2021": {
+        "side_scroller/csd/2022": {
+          "type": "כותרת"
+        },
+        "flyer_game/csd/2022": {
+          "type": "כותרת"
+        },
+        "functions/csd/2022": {
           "name": "פונקציות",
           "type": "סרטון"
         },
-        "functions_1/csd/2021": {
+        "functions_1/csd/2022": {
           "name": "פונקציות"
         },
-        "problem-solving-process-1/csd/2021": {
+        "functions_4/csd/2022": {
+          "name": "פונקציות"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "כותרת"
+        },
+        "the_design_thinking_process/csd/2022": {
           "type": "סרטון"
         },
-        "what-is-a-computer-1-2-3/csd/2021": {
+        "paper_prototypes/csd/2022": {
+          "type": "כותרת"
+        },
+        "design_mode/csd/2022": {
+          "name": "מצב עיצוב"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
           "type": "סרטון"
         },
-        "what-do-computers-do/csd/2021": {
+        "intro_to_design_mode/csd/2022": {
           "type": "סרטון"
         },
-        "intro_to_web_lab_part_2/csd/2021": {
+        "events_in_app_lab_1/csd/2022": {
           "type": "סרטון"
         },
-        "video_intro_to_web_lab_part_1/csd/2021": {
+        "app_presentation/csd/2022": {
+          "type": "כותרת"
+        },
+        "ascii_and_binary_representation/csd/2022": {
+          "name": "ייצוג ASCII וייצוג בינארי"
+        },
+        "binary_and_data/csd/2022": {
           "type": "סרטון"
         },
-        "video_pair_programming/csd/2021": {
+        "create_a_representation_2/csd/2022": {
+          "type": "כותרת"
+        },
+        "amazon_and_data/csd/2022": {
           "type": "סרטון"
         },
-        "video_debugging/csd/2021": {
+        "netflix_and_data/csd/2022": {
           "type": "סרטון"
         },
-        "lists/csd/2021": {
-          "name": "רשימות"
-        },
-        "intro_to_css_-_part_1/csd/2021": {
+        "waze_and_data/csd/2022": {
           "type": "סרטון"
         },
-        "intro_to_css_-_part_2/csd/2021": {
+        "video_impact_on_society/csd/2022": {
           "type": "סרטון"
         },
-        "creative-commons-video/csd/2021": {
+        "video_machine_learning/csd/2022": {
+          "name": "וידאו: למידת מכונה",
           "type": "סרטון"
         },
-        "publishing_your_website/csd/2021": {
+        "video_training_data_and_bias/csd/2022": {
           "type": "סרטון"
         },
-        "teamwork-dealing-with-disagreement/csd/2021": {
+        "make_a_recommendation_1/csd/2022": {
+          "type": "כותרת"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
           "type": "סרטון"
         },
-        "how-teamwork-works/csd/2021": {
+        "the_internet_of_things/csd/2022": {
           "type": "סרטון"
         },
-        "how-search-works-video/csd/2021": {
+        "circuits_and_logic/csd/2022": {
           "type": "סרטון"
         },
-        "lesson_plans/pre-express/2020": {
-          "name": "תוכנית לימודים"
+        "if_statements_2/csd/2022": {
+          "type": "סרטון"
         },
-        "standard_mappings/pre-express/2020": {
-          "name": "מיפוי סטנדרטי"
+        "the_counter_pattern_1/csd/2022": {
+          "type": "סרטון"
         },
-        "teacher_forum/pre-express/2020": {
-          "name": "פורום מורים"
+        "variables_1/csd/2022": {
+          "name": "משתנים"
         },
-        "vocabulary/pre-express/2020": {
-          "name": "אוצר מילים"
+        "variables_2/csd/2022": {
+          "name": "משתנים",
+          "type": "סרטון"
         },
-        "lesson_plans/express/2020": {
-          "name": "תוכנית לימודים"
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "כותרת"
         },
-        "standard_mappings/express/2020": {
-          "name": "מיפוי סטנדרטי"
+        "input_output_devices/csd/2022": {
+          "type": "סרטון"
         },
-        "teacher_forum/express/2020": {
-          "name": "פורום מורים"
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "כותרת"
         },
-        "vocabulary/express/2020": {
-          "name": "אוצר מילים"
+        "introduction_to_arrays/csd/2022": {
+          "type": "סרטון"
         },
-        "curriculum_guide/courseb/2020": {
+        "functions_2/csd/2022": {
+          "name": "פונקציות"
+        },
+        "functions_3/csd/2022": {
+          "name": "פונקציות",
+          "type": "סרטון"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "פונקציות ופרמטרים",
+          "type": "סרטון"
+        },
+        "functions_5/csd/2022": {
+          "name": "פונקציות"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "כותרת"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "כותרת"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "type": "סרטון"
+        },
+        "seeing_ai/csd/2022": {
+          "type": "סרטון"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "סרטון"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "type": "סרטון"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "type": "סרטון"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "type": "סרטון"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "type": "סרטון"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "סרטון"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "type": "סרטון"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "סרטון"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "כותרת"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "סרטון"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "סרטון"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "סרטון"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "כותרת"
+        },
+        "curriculum_guide/coursea/2022": {
           "name": "מדריך תוכנית לימוד"
         },
-        "lesson_plans/courseb/2020": {
-          "name": "תוכנית לימודים"
+        "implementation_guide/coursea/2022": {
+          "name": "מדריך יישום"
         },
-        "standard_mappings/courseb/2020": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "teacher_forum/courseb/2020": {
+        "teacher_forum/coursea/2022": {
           "name": "פורום מורים"
         },
-        "vocabulary/courseb/2020": {
-          "name": "אוצר מילים"
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "סרטון"
         },
-        "curriculum_guide/coursed/2020": {
+        "pair_programming/coursea/2022": {
+          "name": "תכנות בזוגות"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "סרטון"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "מפות שמחות"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "סרטון"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "סרטון"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "סרטון"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "סרטון"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "האירוע הגדול"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "האירוע הגדול",
+          "type": "הערכה"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "האירוע הגדול"
+        },
+        "curriculum_guide/courseb/2022": {
           "name": "מדריך תוכנית לימוד"
         },
-        "lesson_plans/coursed/2020": {
-          "name": "תוכנית לימודים"
+        "implementation_guide/courseb/2022": {
+          "name": "מדריך יישום"
         },
-        "standard_mappings/coursed/2020": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "teacher_forum/coursed/2020": {
+        "teacher_forum/courseb/2022": {
           "name": "פורום מורים"
         },
-        "vocabulary/coursed/2020": {
-          "name": "אוצר מילים"
+        "move_it_move_it/courseb/2022": {
+          "name": "זוזו, זוזו"
         },
-        "curriculum_guide/coursec/2020": {
+        "move_it_move_it_1/courseb/2022": {
+          "name": "זוזו, זוזו"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "זוזו, זוזו"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "זוזו, זוזו"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "תכנות בזוגות"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "סרטון"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "type": "סרטון"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "עוברים ללולאות"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "עוברים ללולאות"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "עוברים ללולאות",
+          "type": "הערכה"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "עוברים ללולאות"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "סרטון"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "האירוע הגדול"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "האירוע הגדול",
+          "type": "הערכה"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "האירוע הגדול"
+        },
+        "curriculum_guide/coursec/2022": {
           "name": "מדריך תוכנית לימוד"
         },
-        "lesson_plans/coursec/2020": {
-          "name": "תוכנית לימודים"
+        "implementation_guide/coursec/2022": {
+          "name": "מדריך יישום"
         },
-        "standard_mappings/coursec/2020": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "teacher_forum/coursec/2020": {
+        "teacher_forum/coursec/2022": {
           "name": "פורום מורים"
         },
-        "vocabulary/coursec/2020": {
-          "name": "אוצר מילים"
+        "my_robotic_friends/coursec/2022": {
+          "name": "חברי הרובוטיים"
         },
-        "curriculum_guide/coursee/2020": {
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "חברי הרובוטיים"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "חברי הרובוטיים"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "חברי הרובוטיים"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "חברי הרובוטיים"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "תכנות בזוגות",
+          "type": "סרטון"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "האירוע הגדול"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "האירוע הגדול",
+          "type": "הערכה"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "האירוע הגדול"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "סרטון"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "צמידים בינארים"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "צמידים בינארים"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "צמידים בינארים"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "צמידים בינארים",
+          "type": "הערכה"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "צמידים בינארים"
+        },
+        "curriculum_guide/coursed/2022": {
           "name": "מדריך תוכנית לימוד"
         },
-        "lesson_plans/coursee/2020": {
-          "name": "תוכנית לימודים"
+        "implementation_guide/coursed/2022": {
+          "name": "מדריך יישום"
         },
-        "standard_mappings/coursee/2020": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "teacher_forum/coursee/2020": {
+        "teacher_forum/coursed/2022": {
           "name": "פורום מורים"
         },
-        "vocabulary/coursee/2020": {
-          "name": "אוצר מילים"
+        "graph_paper_programming/coursed/2022": {
+          "name": "תכנות לנייר משבצות"
         },
-        "curriculum_guide/coursea/2020": {
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "תכנות לנייר משבצות"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "תכנות לנייר משבצות"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "תכנות לנייר משבצות"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "תכנות לנייר משבצות",
+          "type": "הערכה"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "תכנות לנייר משבצות"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "תכנות בזוגות"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "הרץ פעולה בשנית"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "הרץ פעולה בשנית"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "הרץ פעולה בשנית"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "הרץ פעולה בשנית"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "הרץ פעולה בשנית"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "הרץ פעולה בשנית"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "סרטון"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "התניות עם כרטיסים"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "התניות עם כרטיסים"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "התניות עם כרטיסים",
+          "type": "הערכה"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "התניות עם כרטיסים"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "התניות עם כרטיסים"
+        },
+        "curriculum_guide/coursee/2022": {
           "name": "מדריך תוכנית לימוד"
         },
-        "lesson_plans/coursea/2020": {
-          "name": "תוכנית לימודים"
+        "implementation_guide/coursee/2022": {
+          "name": "מדריך יישום"
         },
-        "standard_mappings/coursea/2020": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "teacher_forum/coursea/2020": {
+        "teacher_forum/coursee/2022": {
           "name": "פורום מורים"
         },
-        "vocabulary/coursea/2020": {
-          "name": "אוצר מילים"
+        "pause_and_think_online/coursee/2022": {
+          "type": "סרטון"
         },
-        "curriculum_guide/coursef/2020": {
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "הערכה"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "סרטון"
+        },
+        "cs_fundamentals_final_project/coursee/2022": {
+          "type": "כותרת"
+        },
+        "curriculum_guide/coursef/2022": {
           "name": "מדריך תוכנית לימוד"
         },
-        "lesson_plans/coursef/2020": {
-          "name": "תוכנית לימודים"
+        "implementation_guide/coursef/2022": {
+          "name": "מדריך יישום"
         },
-        "standard_mappings/coursef/2020": {
-          "name": "מיפוי סטנדרטי"
-        },
-        "teacher_forum/coursef/2020": {
+        "teacher_forum/coursef/2022": {
           "name": "פורום מורים"
         },
-        "vocabulary/coursef/2020": {
-          "name": "אוצר מילים"
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "סרטון"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "סרטון"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "סרטון"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "סרטון"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "סרטון"
+        },
+        "internet/coursef/2022": {
+          "name": "אינטרנט",
+          "type": "הערכה"
+        },
+        "internet_1/coursef/2022": {
+          "name": "אינטרנט"
+        },
+        "the_internet/coursef/2022": {
+          "name": "האינטרנט"
+        },
+        "cs_fundamentals_final_project/coursef/2022": {
+          "type": "כותרת"
+        },
+        "teacher_forum/express/2022": {
+          "name": "פורום מורים"
+        },
+        "pair_programming/express/2022": {
+          "name": "תכנות בזוגות",
+          "type": "סרטון"
+        },
+        "artist_introduction/express/2022": {
+          "type": "סרטון"
+        },
+        "turns_angles/express/2022": {
+          "type": "סרטון"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "סרטון"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "סרטון"
+        },
+        "variables/express/2022": {
+          "name": "משתנים"
+        },
+        "cs_fundamentals_final_project/express/2022": {
+          "type": "כותרת"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "פורום מורים"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "סרטון"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "תכנות בזוגות"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "סרטון"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "סרטון"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "סרטון"
+        },
+        "ai-ml/oceans/unversioned": {
+          "type": "סרטון"
+        },
+        "ai-societal/oceans/unversioned": {
+          "type": "סרטון"
+        },
+        "ai-training/oceans/unversioned": {
+          "type": "סרטון"
+        },
+        "poem_art_celebration/poem-art/2021": {
+          "type": "סרטון"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "סרטון"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "סרטון"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "type": "סרטון"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "סרטון"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         }
       }
     }

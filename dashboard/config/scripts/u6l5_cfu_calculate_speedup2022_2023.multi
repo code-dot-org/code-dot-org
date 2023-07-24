@@ -14,3 +14,5 @@ An algorithm was initially written sequentially. Later it was determined that a 
 
 What is the speedup of this parallel solution?
 MARKDOWN
+
+allow_multiple_attempts true

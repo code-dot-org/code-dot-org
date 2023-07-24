@@ -52,7 +52,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenClickTooltip());
-    }
+    },
   };
 
   generator.flappy_whenClick = function () {
@@ -75,7 +75,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenCollideGroundTooltip());
-    }
+    },
   };
 
   generator.flappy_whenCollideGround = function () {
@@ -98,7 +98,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenCollideObstacleTooltip());
-    }
+    },
   };
 
   generator.flappy_whenCollideObstacle = function () {
@@ -121,7 +121,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenEnterObstacleTooltip());
-    }
+    },
   };
 
   generator.flappy_whenEnterObstacle = function () {
@@ -144,7 +144,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.flapTooltip());
-    }
+    },
   };
 
   // // used to have a flappy_whenRunButtonClick.
@@ -168,7 +168,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.flapTooltip());
-    }
+    },
   };
 
   blockly.Blocks.flappy_flap_height.VALUES = [
@@ -177,7 +177,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.flapSmall(), 'Flappy.FlapHeight.SMALL'],
     [msg.flapNormal(), 'Flappy.FlapHeight.NORMAL'],
     [msg.flapLarge(), 'Flappy.FlapHeight.LARGE'],
-    [msg.flapVeryLarge(), 'Flappy.FlapHeight.VERY_LARGE']
+    [msg.flapVeryLarge(), 'Flappy.FlapHeight.VERY_LARGE'],
   ];
 
   generator.flappy_flap_height = function (velocity) {
@@ -231,7 +231,7 @@ exports.install = function (blockly, blockInstallOptions) {
         [msg.soundCrash(), '"crash"'],
         [msg.soundJingle(), '"jingle"'],
         [msg.soundSplash(), '"splash"'],
-        [msg.soundLaser(), '"laser"']
+        [msg.soundLaser(), '"laser"'],
       ];
     },
     get soundChoices() {
@@ -248,9 +248,9 @@ exports.install = function (blockly, blockInstallOptions) {
         [msg.playSoundCrash(), '"crash"'],
         [msg.playSoundJingle(), '"jingle"'],
         [msg.playSoundSplash(), '"splash"'],
-        [msg.playSoundLaser(), '"laser"']
+        [msg.playSoundLaser(), '"laser"'],
       ];
-    }
+    },
   };
 
   generator.flappy_playSound = function () {
@@ -273,7 +273,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.incrementPlayerScoreTooltip());
-    }
+    },
   };
 
   generator.flappy_incrementPlayerScore = function () {
@@ -295,7 +295,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.endGameTooltip());
-    }
+    },
   };
 
   generator.flappy_endGame = function () {
@@ -329,13 +329,13 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setSpeedTooltip());
-    }
+    },
   };
 
   blockly.Blocks.flappy_setSpeed.K1_VALUES = [
     [skin.speedSlow, 'Flappy.LevelSpeed.SLOW'],
     [skin.speedMedium, 'Flappy.LevelSpeed.NORMAL'],
-    [skin.speedFast, 'Flappy.LevelSpeed.FAST']
+    [skin.speedFast, 'Flappy.LevelSpeed.FAST'],
   ];
 
   blockly.Blocks.flappy_setSpeed.VALUES = [
@@ -344,7 +344,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.speedSlow(), 'Flappy.LevelSpeed.SLOW'],
     [msg.speedNormal(), 'Flappy.LevelSpeed.NORMAL'],
     [msg.speedFast(), 'Flappy.LevelSpeed.FAST'],
-    [msg.speedVeryFast(), 'Flappy.LevelSpeed.VERY_FAST']
+    [msg.speedVeryFast(), 'Flappy.LevelSpeed.VERY_FAST'],
   ];
 
   generator.flappy_setSpeed = function () {
@@ -366,7 +366,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setGapHeightTooltip());
-    }
+    },
   };
 
   blockly.Blocks.flappy_setGapHeight.VALUES = [
@@ -375,7 +375,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.setGapSmall(), 'Flappy.GapHeight.SMALL'],
     [msg.setGapNormal(), 'Flappy.GapHeight.NORMAL'],
     [msg.setGapLarge(), 'Flappy.GapHeight.LARGE'],
-    [msg.setGapVeryLarge(), 'Flappy.GapHeight.VERY_LARGE']
+    [msg.setGapVeryLarge(), 'Flappy.GapHeight.VERY_LARGE'],
   ];
 
   generator.flappy_setGapHeight = function () {
@@ -406,7 +406,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setBackgroundTooltip());
-    }
+    },
   };
 
   blockly.Blocks.flappy_setBackground.VALUES = [
@@ -416,7 +416,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.setBackgroundSciFi(), '"scifi"'],
     [msg.setBackgroundUnderwater(), '"underwater"'],
     [msg.setBackgroundCave(), '"cave"'],
-    [msg.setBackgroundSanta(), '"santa"']
+    [msg.setBackgroundSanta(), '"santa"'],
   ];
 
   blockly.Blocks.flappy_setBackground.K1_CHOICES = [
@@ -426,7 +426,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [skin.underwater.background, '"underwater"'],
     [skin.cave.background, '"cave"'],
     [skin.santa.background, '"santa"'],
-    [skin.randomPurpleIcon, RANDOM_VALUE]
+    [skin.randomPurpleIcon, RANDOM_VALUE],
   ];
 
   generator.flappy_setBackground = function () {
@@ -456,7 +456,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setPlayerTooltip());
-    }
+    },
   };
 
   blockly.Blocks.flappy_setPlayer.VALUES = [
@@ -474,7 +474,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.setPlayerUnicorn(), '"unicorn"'],
     [msg.setPlayerFairy(), '"fairy"'],
     [msg.setPlayerSuperman(), '"superman"'],
-    [msg.setPlayerTurkey(), '"turkey"']
+    [msg.setPlayerTurkey(), '"turkey"'],
   ];
 
   blockly.Blocks.flappy_setPlayer.K1_CHOICES = [
@@ -492,7 +492,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [skin.fairy.avatar, '"fairy"'],
     [skin.superman.avatar, '"superman"'],
     [skin.turkey.avatar, '"turkey"'],
-    [skin.randomPurpleIcon, RANDOM_VALUE]
+    [skin.randomPurpleIcon, RANDOM_VALUE],
   ];
 
   generator.flappy_setPlayer = function () {
@@ -522,7 +522,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setObstacleTooltip());
-    }
+    },
   };
 
   blockly.Blocks.flappy_setObstacle.VALUES = [
@@ -532,7 +532,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.setObstacleUnderwater(), '"underwater"'],
     [msg.setObstacleCave(), '"cave"'],
     [msg.setObstacleSanta(), '"santa"'],
-    [msg.setObstacleLaser(), '"laser"']
+    [msg.setObstacleLaser(), '"laser"'],
   ];
 
   blockly.Blocks.flappy_setObstacle.K1_CHOICES = [
@@ -542,7 +542,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [skin.cave.obstacle_bottom_thumb, '"cave"'],
     [skin.santa.obstacle_bottom_thumb, '"santa"'],
     [skin.laser.obstacle_bottom_thumb, '"laser"'],
-    [skin.randomPurpleIcon, RANDOM_VALUE]
+    [skin.randomPurpleIcon, RANDOM_VALUE],
   ];
 
   generator.flappy_setObstacle = function () {
@@ -572,7 +572,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setGroundTooltip());
-    }
+    },
   };
 
   blockly.Blocks.flappy_setGround.VALUES = [
@@ -582,7 +582,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.setGroundUnderwater(), '"underwater"'],
     [msg.setGroundCave(), '"cave"'],
     [msg.setGroundSanta(), '"santa"'],
-    [msg.setGroundLava(), '"lava"']
+    [msg.setGroundLava(), '"lava"'],
   ];
 
   blockly.Blocks.flappy_setGround.K1_CHOICES = [
@@ -592,7 +592,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [skin.cave.ground_thumb, '"cave"'],
     [skin.santa.ground_thumb, '"santa"'],
     [skin.lava.ground_thumb, '"lava"'],
-    [skin.randomPurpleIcon, RANDOM_VALUE]
+    [skin.randomPurpleIcon, RANDOM_VALUE],
   ];
 
   generator.flappy_setGround = function () {
@@ -614,7 +614,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setGravityTooltip());
-    }
+    },
   };
 
   blockly.Blocks.flappy_setGravity.VALUES = [
@@ -623,7 +623,7 @@ exports.install = function (blockly, blockInstallOptions) {
     [msg.setGravityLow(), 'Flappy.Gravity.LOW'],
     [msg.setGravityNormal(), 'Flappy.Gravity.NORMAL'],
     [msg.setGravityHigh(), 'Flappy.Gravity.HIGH'],
-    [msg.setGravityVeryHigh(), 'Flappy.Gravity.VERY_HIGH']
+    [msg.setGravityVeryHigh(), 'Flappy.Gravity.VERY_HIGH'],
   ];
 
   generator.flappy_setGravity = function () {
@@ -647,7 +647,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setScoreTooltip());
-    }
+    },
   };
 
   generator.flappy_setScore = function () {

@@ -19,28 +19,39 @@
           }
         },
         "2-3 Artist 3.4": {
-          "draw a circle": {
-            "name": "Σχεδίασε ένα κύκλο"
-          },
           "draw a car": {
             "name": "ζωγράφισε ένα αμάξι"
+          },
+          "draw a circle": {
+            "name": "Σχεδίασε ένα κύκλο"
           }
         },
         "2-3 Artist 7": {
           "draw_rect": {
             "name": "draw_rect",
             "parameters": {
-              "width": "πλάτος",
-              "height": "ύψος"
+              "height": "ύψος",
+              "width": "πλάτος"
             }
           }
         },
         "2-3 Artist Debugging 10": {
+          "draw R pad": {
+          },
+          "draw a button": {
+            "name": "σχεδιάστε ένα κουμπί"
+          },
+          "draw a circle": {
+            "name": "Σχεδίασε ένα κύκλο"
+          },
+          "draw cord": {
+            "name": "σχεδίασε καλώδιο"
+          },
           "draw square": {
             "name": "σχεδίασε τετράγωνο",
             "parameters": {
-              "width": "πλάτος",
-              "height": "ύψος"
+              "height": "ύψος",
+              "width": "πλάτος"
             }
           },
           "jump to controller top left": {
@@ -48,60 +59,57 @@
           },
           "jump to middle": {
             "name": "μετάβαση στην μέση"
-          },
-          "draw a circle": {
-            "name": "Σχεδίασε ένα κύκλο"
-          },
-          "draw a button": {
-            "name": "σχεδιάστε ένα κουμπί"
-          },
-          "draw cord": {
-            "name": "σχεδίασε καλώδιο"
           }
         },
         "2-3 Artist Debugging 5": {
+          "draw a head": {
+            "name": "σχεδίασε ένα κεφάλι"
+          },
+          "draw body and arms": {
+            "name": "σχεδίασε κορμό και χέρια",
+            "parameters": {
+            }
+          },
           "draw left leg": {
             "name": "σχεδίασε το αριστερό πόδι"
           },
           "draw right leg": {
             "name": "σχεδίασε το δεξί πόδι"
-          },
-          "draw body and arms": {
-            "name": "σχεδίασε κορμό και χέρια"
-          },
-          "draw a head": {
-            "name": "σχεδίασε ένα κεφάλι"
           }
         },
         "2-3 Artist Debugging 6": {
+          "draw arms": {
+            "name": "σχεδίασε χέρια"
+          },
+          "draw head": {
+            "name": "σχεδίασε κεφάλι"
+          },
+          "draw left leg": {
+            "name": "σχεδίασε το αριστερό πόδι"
+          },
           "draw right leg": {
             "name": "σχεδίασε το δεξί πόδι"
           },
           "draw sitting stick figure": {
             "name": "σχεδίασε καθιστή φιγούρα από γραμμές"
           },
-          "draw head": {
-            "name": "σχεδίασε κεφάλι"
-          },
-          "draw arms": {
-            "name": "σχεδίασε χέρια"
-          },
           "jump to neck": {
             "name": "πήδα στο λαιμό"
-          },
-          "draw left leg": {
-            "name": "σχεδίασε το αριστερό πόδι"
           }
         },
         "2-3 Artist Debugging 7": {
-          "draw O": {
-            "name": "σχεδίασε Ο"
-          },
           "draw D": {
             "name": "σχεδίασε D"
           },
           "draw E": {
             "name": "σχεδίασε Ε"
+          },
+          "draw O": {
+            "name": "σχεδίασε Ο"
+          }
+        },
+        "2-3 Artist Functions 1": {
+          "draw ear stems": {
           }
         },
         "2-3 Artist Functions 10": {
@@ -130,11 +138,15 @@
         "2-3 Artist Functions 2": {
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
           }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
           }
         },
         "2-3 Artist Functions 4": {
@@ -145,6 +157,14 @@
         "2-3 Artist Functions 9": {
           "draw a snowflake": {
             "name": "σχεδίασε μια νιφάδα χιονιού"
+          }
+        },
+        "2-3 Artist Loops 2": {
+          "draw 3 hexagons": {
+          },
+          "draw 4 hexagons": {
+          },
+          "draw 5 hexagons": {
           }
         },
         "2-3 Bee Functions 1": {
@@ -208,14 +228,14 @@
           }
         },
         "4-5 Artist 7": {
-          "draw triangle": {
-            "name": "σχεδίασε τρίγωνο"
+          "draw a car": {
+            "name": "ζωγράφισε ένα αμάξι"
           },
           "draw a circle": {
             "name": "Σχεδίασε ένα κύκλο"
           },
-          "draw a car": {
-            "name": "ζωγράφισε ένα αμάξι"
+          "draw triangle": {
+            "name": "σχεδίασε τρίγωνο"
           }
         },
         "4-5 Artist 8": {
@@ -261,12 +281,36 @@
             "name": "το παιχνίδι νικήθηκε"
           }
         },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "να σχεδιάζει ένα σχήμα",
+            "parameters": {
+              "length": "μήκος",
+              "sides": "πλευρές"
+            }
+          }
+        },
+        "Choose Your Own Adventure": {
+          "starting path": {
+          },
+          "story": {
+          },
+          "witch ending": {
+          }
+        },
         "Course 4 Artist Binary 1": {
           "draw": {
             "name": "ισοπαλία",
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "Course 4 Artist Binary 2": {
@@ -275,6 +319,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "Course 4 Artist Binary 3": {
@@ -283,6 +329,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "Course 4 Artist Binary 4": {
@@ -291,6 +339,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "Course 4 Artist Binary 5": {
@@ -299,6 +349,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "Course 4 Artist Binary 6": {
@@ -307,6 +359,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "Course 4 Artist Binary 7": {
@@ -315,6 +369,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "Course 4 Artist Binary Free Play 2": {
@@ -323,6 +379,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "Course 4 Artist Binary Free Play 2a": {
@@ -331,6 +389,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "Course 4 Artist Binary Free Play 2b": {
@@ -339,6 +399,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "Course 4 Artist Binary pre1": {
@@ -347,16 +409,58 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
+          }
+        },
+        "Course 4 Artist Functions Inspiration": {
+          "draw a square 20": {
+          }
+        },
+        "Course 4 Artist Functions challenge": {
+          "draw a line of squares": {
+          },
+          "draw a square 20": {
+          }
+        },
+        "Course 4 Bee Params 1": {
+          "get 3 nectar": {
+          }
+        },
+        "Course 4 Bee Params 2": {
+          "get 3 nectar": {
+          }
+        },
+        "Course 4 Bee Params 3": {
+          "get 3 nectar": {
+            "parameters": {
+            }
+          }
+        },
+        "Course 4 Bee Params 4": {
+          "get 3 nectar": {
+            "parameters": {
+            }
           }
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "πάρε 5 νέκταρ"
+            "name": "πάρε 5 νέκταρ",
+            "parameters": {
+            }
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "πάρε 5 νέκταρ"
+            "name": "πάρε 5 νέκταρ",
+            "parameters": {
+            }
+          }
+        },
+        "Course 4 Bee Params 7": {
+          "get many nectar": {
+            "parameters": {
+            }
           }
         },
         "Course 4 Bee Params 8": {
@@ -391,14 +495,16 @@
           "jump": {
             "name": "πήδα",
             "parameters": {
-              "height": "ύψος",
-              "actor": "ηθοποιός"
+              "actor": "ηθοποιός",
+              "height": "ύψος"
             }
           }
         },
         "Course 4 Play Lab Params 4": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "patrol": {
           }
         },
         "Course 4 Play Lab Params 5": {
@@ -456,11 +562,13 @@
           "draw a line of hexagons": {
             "name": "σχεδίασε μια γραμμή από εξάγωνα"
           },
-          "shift down/forward": {
-            "name": "μετατόπιση προς τα κάτω/εμπρός"
+          "draw a square 20": {
           },
           "shift down/backward": {
             "name": "μετατόπιση προς τα κάτω/πίσω"
+          },
+          "shift down/forward": {
+            "name": "μετατόπιση προς τα κάτω/εμπρός"
           }
         },
         "Course 4 SCF 1a": {
@@ -471,9 +579,27 @@
             }
           }
         },
+        "Course 4 SCF 1b": {
+          "make honey up and over": {
+          }
+        },
+        "Course 4 SCF 2": {
+          "draw a square 20": {
+          },
+          "draw an octagon": {
+          },
+          "draw octagons": {
+            "parameters": {
+            }
+          },
+          "shift down": {
+          }
+        },
         "Course 4 SCF 3": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw a square 20": {
           },
           "draw an octagon": {
             "parameters": {
@@ -481,9 +607,449 @@
             }
           }
         },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "η συνάρτηση μου"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "η συνάρτηση μου"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "LOGIC FLOWER": {
+          },
+          "LOGIC FLOWERS": {
+          },
+          "LOGIC FLOWERS2": {
+          },
+          "draw a circle": {
+            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
+            "name": "Σχεδίασε ένα κύκλο",
+            "parameters": {
+              "radius": "ακτίνα"
+            }
+          },
+          "draw a house": {
+            "name": "σχεδίασε ένα σπίτι",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "να σχεδιάζει έναν μύλο",
+            "parameters": {
+              "length": "μήκος",
+              "repeat": "επανάλαβε",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a shape": {
+            "name": "να σχεδιάζει ένα σχήμα",
+            "parameters": {
+              "length": "μήκος",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο",
+            "parameters": {
+              "length": "μήκος",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a star": {
+            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
+            "name": "σχεδίασε ένα αστέρι",
+            "parameters": {
+              "length": "μήκος",
+              "points": "πόντοι"
+            }
+          },
+          "draw a triangle": {
+            "name": "σχεδίασε ένα τρίγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "small flower": {
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "LOGIC FLOWER": {
+          },
+          "LOGIC FLOWERS": {
+          },
+          "LOGIC FLOWERS2": {
+          },
+          "draw a circle": {
+            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
+            "name": "Σχεδίασε ένα κύκλο",
+            "parameters": {
+              "radius": "ακτίνα"
+            }
+          },
+          "draw a house": {
+            "name": "σχεδίασε ένα σπίτι",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "να σχεδιάζει έναν μύλο",
+            "parameters": {
+              "length": "μήκος",
+              "repeat": "επανάλαβε",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a shape": {
+            "name": "να σχεδιάζει ένα σχήμα",
+            "parameters": {
+              "length": "μήκος",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο",
+            "parameters": {
+              "length": "μήκος",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a star": {
+            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
+            "name": "σχεδίασε ένα αστέρι",
+            "parameters": {
+              "length": "μήκος",
+              "points": "πόντοι"
+            }
+          },
+          "draw a triangle": {
+            "name": "σχεδίασε ένα τρίγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "small flower": {
+          }
+        },
         "Course E: Play Lab Project": {
           "do something": {
             "name": "κάνε κάτι"
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a circle": {
+            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
+            "name": "Σχεδίασε ένα κύκλο",
+            "parameters": {
+              "radius": "ακτίνα"
+            }
+          },
+          "draw a house": {
+            "name": "σχεδίασε ένα σπίτι",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "να σχεδιάζει έναν μύλο",
+            "parameters": {
+              "length": "μήκος",
+              "repeat": "επανάλαβε",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a shape": {
+            "name": "να σχεδιάζει ένα σχήμα",
+            "parameters": {
+              "length": "μήκος",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a star": {
+            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
+            "name": "σχεδίασε ένα αστέρι",
+            "parameters": {
+              "length": "μήκος",
+              "points": "πόντοι"
+            }
+          },
+          "draw a triangle": {
+            "name": "σχεδίασε ένα τρίγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a circle": {
+            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
+            "name": "Σχεδίασε ένα κύκλο",
+            "parameters": {
+              "radius": "ακτίνα"
+            }
+          },
+          "draw a house": {
+            "name": "σχεδίασε ένα σπίτι",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "να σχεδιάζει έναν μύλο",
+            "parameters": {
+              "length": "μήκος",
+              "repeat": "επανάλαβε",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a shape": {
+            "name": "να σχεδιάζει ένα σχήμα",
+            "parameters": {
+              "length": "μήκος",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a star": {
+            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
+            "name": "σχεδίασε ένα αστέρι",
+            "parameters": {
+              "length": "μήκος",
+              "points": "πόντοι"
+            }
+          },
+          "draw a triangle": {
+            "name": "σχεδίασε ένα τρίγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a circle": {
+            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
+            "name": "Σχεδίασε ένα κύκλο",
+            "parameters": {
+              "radius": "ακτίνα"
+            }
+          },
+          "draw a house": {
+            "name": "σχεδίασε ένα σπίτι",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "να σχεδιάζει έναν μύλο",
+            "parameters": {
+              "length": "μήκος",
+              "repeat": "επανάλαβε",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a shape": {
+            "name": "να σχεδιάζει ένα σχήμα",
+            "parameters": {
+              "length": "μήκος",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a star": {
+            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
+            "name": "σχεδίασε ένα αστέρι",
+            "parameters": {
+              "length": "μήκος",
+              "points": "πόντοι"
+            }
+          },
+          "draw a triangle": {
+            "name": "σχεδίασε ένα τρίγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a circle": {
+            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
+            "name": "Σχεδίασε ένα κύκλο",
+            "parameters": {
+              "radius": "ακτίνα"
+            }
+          },
+          "draw a house": {
+            "name": "σχεδίασε ένα σπίτι",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "να σχεδιάζει έναν μύλο",
+            "parameters": {
+              "length": "μήκος",
+              "repeat": "επανάλαβε",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a shape": {
+            "name": "να σχεδιάζει ένα σχήμα",
+            "parameters": {
+              "length": "μήκος",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a star": {
+            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
+            "name": "σχεδίασε ένα αστέρι",
+            "parameters": {
+              "length": "μήκος",
+              "points": "πόντοι"
+            }
+          },
+          "draw a triangle": {
+            "name": "σχεδίασε ένα τρίγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a circle": {
+            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
+            "name": "Σχεδίασε ένα κύκλο",
+            "parameters": {
+              "radius": "ακτίνα"
+            }
+          },
+          "draw a house": {
+            "name": "σχεδίασε ένα σπίτι",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "να σχεδιάζει έναν μύλο",
+            "parameters": {
+              "length": "μήκος",
+              "repeat": "επανάλαβε",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a shape": {
+            "name": "να σχεδιάζει ένα σχήμα",
+            "parameters": {
+              "length": "μήκος",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a star": {
+            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
+            "name": "σχεδίασε ένα αστέρι",
+            "parameters": {
+              "length": "μήκος",
+              "points": "πόντοι"
+            }
+          },
+          "draw a triangle": {
+            "name": "σχεδίασε ένα τρίγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a circle": {
+            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
+            "name": "Σχεδίασε ένα κύκλο",
+            "parameters": {
+              "radius": "ακτίνα"
+            }
+          },
+          "draw a house": {
+            "name": "σχεδίασε ένα σπίτι",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "να σχεδιάζει έναν μύλο",
+            "parameters": {
+              "length": "μήκος",
+              "repeat": "επανάλαβε",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a shape": {
+            "name": "να σχεδιάζει ένα σχήμα",
+            "parameters": {
+              "length": "μήκος",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a star": {
+            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
+            "name": "σχεδίασε ένα αστέρι",
+            "parameters": {
+              "length": "μήκος",
+              "points": "πόντοι"
+            }
+          },
+          "draw a triangle": {
+            "name": "σχεδίασε ένα τρίγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+          }
+        },
+        "CourseF_app_computer2022": {
+          "reset game": {
+          }
+        },
+        "CourseF_app_computer_-2022-2": {
+          "reset game": {
           }
         },
         "Find the Wizard": {
@@ -510,6 +1076,11 @@
             "name": "χτίσε γέφυρα"
           }
         },
+        "Function intro Ryan2022": {
+          "build bridge": {
+            "name": "χτίσε γέφυρα"
+          }
+        },
         "Function intro Ryan_2019": {
           "build bridge": {
             "name": "χτίσε γέφυρα"
@@ -520,9 +1091,20 @@
             "name": "χτίσε γέφυρα"
           }
         },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "χτίσε γέφυρα"
+          }
+        },
         "Geometric Sun": {
+          "diamond": {
+            "name": "διαμάντι"
+          },
           "draw a door": {
             "name": "σχεδίασε μια πόρτα"
+          },
+          "draw a house": {
+            "name": "σχεδίασε ένα σπίτι"
           },
           "draw grass": {
             "name": "σχεδίασε γρασίδι"
@@ -533,25 +1115,27 @@
           "rectangle": {
             "name": "ορθογώνιο"
           },
+          "square": {
+            "name": "τετράγωνο"
+          },
           "sun": {
             "name": "ήλιος"
           },
-          "diamond": {
-            "name": "διαμάντι"
+          "triangle": {
           },
           "window": {
             "name": "παράθυρο"
-          },
-          "draw a house": {
-            "name": "σχεδίασε ένα σπίτι"
-          },
-          "square": {
-            "name": "τετράγωνο"
           }
         },
         "Geometric Sun_2018": {
+          "diamond": {
+            "name": "διαμάντι"
+          },
           "draw a door": {
             "name": "σχεδίασε μια πόρτα"
+          },
+          "draw a house": {
+            "name": "σχεδίασε ένα σπίτι"
           },
           "draw grass": {
             "name": "σχεδίασε γρασίδι"
@@ -562,35 +1146,26 @@
           "rectangle": {
             "name": "ορθογώνιο"
           },
+          "square": {
+            "name": "τετράγωνο"
+          },
           "sun": {
             "name": "ήλιος"
           },
-          "diamond": {
-            "name": "διαμάντι"
+          "triangle": {
           },
           "window": {
             "name": "παράθυρο"
-          },
-          "draw a house": {
-            "name": "σχεδίασε ένα σπίτι"
-          },
-          "square": {
-            "name": "τετράγωνο"
           }
         },
         "Guess The Number": {
           "check guess": {
-            "name": "έλεγξε την μαντεψιά"
+            "name": "έλεγξε την μαντεψιά",
+            "parameters": {
+            }
           }
         },
         "InspirationalArtwork": {
-          "n-sided shape": {
-            "name": "σχήμα n όψεων",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος"
-            }
-          },
           "draw a loop": {
             "name": "σχεδίασε μια επανάληψη",
             "parameters": {
@@ -602,6 +1177,13 @@
             "name": "σχεδίασε έναν σπιράλ κύκλο",
             "parameters": {
               "size": "μέγεθος"
+            }
+          },
+          "n-sided shape": {
+            "name": "σχήμα n όψεων",
+            "parameters": {
+              "length": "μήκος",
+              "sides": "πλευρές"
             }
           }
         },
@@ -613,14 +1195,14 @@
               "sides": "πλευρές"
             }
           },
-          "n-sided shape": {
-            "name": "σχήμα n όψεων"
-          },
           "draw spiral circle": {
             "name": "σχεδίασε έναν σπιράλ κύκλο",
             "parameters": {
               "size": "μέγεθος"
             }
+          },
+          "n-sided shape": {
+            "name": "σχήμα n όψεων"
           }
         },
         "K-1 Artist2 3": {
@@ -638,7 +1220,20 @@
             "name": "σχεδίασε ορθογώνιο"
           }
         },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "συνάρτηση 1"
+          },
+          "function 2": {
+            "name": "συνάρτηση 2"
+          }
+        },
         "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "καθάρισε το μονοπάτι"
+          }
+        },
+        "MC_HOC_2017_07_Cole2022": {
           "clear path": {
             "name": "καθάρισε το μονοπάτι"
           }
@@ -653,7 +1248,20 @@
             "name": "καθάρισε το μονοπάτι"
           }
         },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "καθάρισε το μονοπάτι"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "διόρθωσε το μακρύ μονοπάτι"
+          },
+          "fix short path": {
+            "name": "διόρθωσε το σύντομο μονοπάτι"
+          }
+        },
+        "MC_HOC_2017_10_RETRY2022": {
           "fix long path": {
             "name": "διόρθωσε το μακρύ μονοπάτι"
           },
@@ -677,31 +1285,63 @@
             "name": "διόρθωσε το σύντομο μονοπάτι"
           }
         },
-        "MC_HOC_2017_Ali": {
-          "build short bridge": {
-            "name": "χτίσε μικρή γέφυρα"
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "διόρθωσε το μακρύ μονοπάτι"
           },
+          "fix short path": {
+            "name": "διόρθωσε το σύντομο μονοπάτι"
+          }
+        },
+        "MC_HOC_2017_Ali": {
           "build long bridge": {
             "name": "χτίσε εκτενή γέφυρα"
+          },
+          "build short bridge": {
+            "name": "χτίσε μικρή γέφυρα"
+          }
+        },
+        "MC_HOC_2017_Ali2022": {
+          "build long bridge": {
+            "name": "χτίσε εκτενή γέφυρα"
+          },
+          "build short bridge": {
+            "name": "χτίσε μικρή γέφυρα"
           }
         },
         "MC_HOC_2017_Ali_2019": {
-          "build short bridge": {
-            "name": "χτίσε μικρή γέφυρα"
-          },
           "build long bridge": {
             "name": "χτίσε εκτενή γέφυρα"
+          },
+          "build short bridge": {
+            "name": "χτίσε μικρή γέφυρα"
           }
         },
         "MC_HOC_2017_Ali_2020": {
-          "build short bridge": {
-            "name": "χτίσε μικρή γέφυρα"
-          },
           "build long bridge": {
             "name": "χτίσε εκτενή γέφυρα"
+          },
+          "build short bridge": {
+            "name": "χτίσε μικρή γέφυρα"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build long bridge": {
+            "name": "χτίσε εκτενή γέφυρα"
+          },
+          "build short bridge": {
+            "name": "χτίσε μικρή γέφυρα"
           }
         },
         "MC_HOC_2017_FP20x20": {
+          "function 1": {
+            "name": "συνάρτηση 1"
+          },
+          "function 2": {
+            "name": "συνάρτηση 2"
+          }
+        },
+        "MC_HOC_2017_FP20x202022": {
           "function 1": {
             "name": "συνάρτηση 1"
           },
@@ -725,7 +1365,41 @@
             "name": "συνάρτηση 2"
           }
         },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "συνάρτηση 1"
+          },
+          "function 2": {
+            "name": "συνάρτηση 2"
+          }
+        },
+        "NEW Course 4 Artist Functions 11": {
+          "draw a line of  squares": {
+          },
+          "draw a line of squares": {
+          },
+          "draw a square 20": {
+          }
+        },
+        "NEW Course 4 Artist Functions 12": {
+          "draw a line of squares": {
+          },
+          "draw a square 20": {
+          }
+        },
+        "NEW Course 4 Artist Functions 13": {
+          "draw a line of squares": {
+          },
+          "draw a square 20": {
+          }
+        },
         "NEW Course 4 Artist Functions 14": {
+          "draw a line of squares": {
+          },
+          "draw a square 20": {
+          },
+          "draw a square 40": {
+          },
           "empty function": {
             "name": "άδεια συνάρτηση"
           }
@@ -759,6 +1433,8 @@
           }
         },
         "NEW Course 4 Artist Params 1": {
+          "Draw a triangle": {
+          },
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο"
           }
@@ -775,18 +1451,18 @@
           }
         },
         "NEW Course 4 Artist Params 11": {
-          "draw a polygon": {
-            "name": "σχεδίασε ένα πολύγωνο",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος"
-            }
-          },
           "do something": {
             "name": "κάνε κάτι",
             "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος"
+              "length": "μήκος",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a polygon": {
+            "name": "σχεδίασε ένα πολύγωνο",
+            "parameters": {
+              "length": "μήκος",
+              "sides": "πλευρές"
             }
           }
         },
@@ -827,40 +1503,11 @@
           }
         },
         "NEW Course 4 Artist Params 15": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι",
-            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
-            "parameters": {
-              "points": "πόντοι",
-              "length": "μήκος"
-            }
-          },
           "draw a circle": {
-            "name": "Σχεδίασε ένα κύκλο",
             "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
+            "name": "Σχεδίασε ένα κύκλο",
             "parameters": {
               "radius": "ακτίνα"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "να σχεδιάζει έναν μύλο",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος",
-              "repeat": "επανάλαβε"
-            }
-          },
-          "draw a triangle": {
-            "name": "σχεδίασε ένα τρίγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a shape": {
-            "name": "να σχεδιάζει ένα σχήμα",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος"
             }
           },
           "draw a house": {
@@ -869,11 +1516,40 @@
               "length": "μήκος"
             }
           },
+          "draw a pinwheel": {
+            "name": "να σχεδιάζει έναν μύλο",
+            "parameters": {
+              "length": "μήκος",
+              "repeat": "επανάλαβε",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a shape": {
+            "name": "να σχεδιάζει ένα σχήμα",
+            "parameters": {
+              "length": "μήκος",
+              "sides": "πλευρές"
+            }
+          },
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο",
             "parameters": {
               "length": "μήκος",
               "sides": "πλευρές"
+            }
+          },
+          "draw a star": {
+            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
+            "name": "σχεδίασε ένα αστέρι",
+            "parameters": {
+              "length": "μήκος",
+              "points": "πόντοι"
+            }
+          },
+          "draw a triangle": {
+            "name": "σχεδίασε ένα τρίγωνο",
+            "parameters": {
+              "length": "μήκος"
             }
           }
         },
@@ -882,8 +1558,8 @@
             "name": "κάνε κάτι"
           },
           "draw a triangle": {
-            "name": "σχεδίασε ένα τρίγωνο",
-            "description": "σχεδίασε ένα τρίγωνο"
+            "description": "σχεδίασε ένα τρίγωνο",
+            "name": "σχεδίασε ένα τρίγωνο"
           }
         },
         "NEW Course 4 Artist Params 3": {
@@ -907,14 +1583,13 @@
           }
         },
         "NEW Course 4 Artist Params 6": {
-          "draw a triangle": {
-            "name": "σχεδίασε ένα τρίγωνο",
+          "draw a hexagon": {
+            "name": "σχεδίασε ένα εξάγωνο",
             "parameters": {
               "length": "μήκος"
             }
           },
-          "draw a hexagon": {
-            "name": "σχεδίασε ένα εξάγωνο",
+          "draw a sqaure": {
             "parameters": {
               "length": "μήκος"
             }
@@ -925,7 +1600,8 @@
               "length": "μήκος"
             }
           },
-          "draw a sqaure": {
+          "draw a triangle": {
+            "name": "σχεδίασε ένα τρίγωνο",
             "parameters": {
               "length": "μήκος"
             }
@@ -947,14 +1623,14 @@
           }
         },
         "NEW Course 4 Artist Params 9": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο",
             "parameters": {
               "length": "μήκος"
             }
-          },
-          "do something": {
-            "name": "κάνε κάτι"
           }
         },
         "NEW Course 4 Artist Params inspire": {
@@ -970,8 +1646,8 @@
           "jump": {
             "name": "πήδα",
             "parameters": {
-              "height": "ύψος",
-              "actor": "ηθοποιός"
+              "actor": "ηθοποιός",
+              "height": "ύψος"
             }
           },
           "patrol": {
@@ -982,40 +1658,11 @@
           }
         },
         "New Artist Project": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι",
-            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
-            "parameters": {
-              "points": "πόντοι",
-              "length": "μήκος"
-            }
-          },
           "draw a circle": {
-            "name": "Σχεδίασε ένα κύκλο",
             "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
+            "name": "Σχεδίασε ένα κύκλο",
             "parameters": {
               "radius": "ακτίνα"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "να σχεδιάζει έναν μύλο",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος",
-              "repeat": "επανάλαβε"
-            }
-          },
-          "draw a triangle": {
-            "name": "σχεδίασε ένα τρίγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a shape": {
-            "name": "να σχεδιάζει ένα σχήμα",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος"
             }
           },
           "draw a house": {
@@ -1024,8 +1671,37 @@
               "length": "μήκος"
             }
           },
+          "draw a pinwheel": {
+            "name": "να σχεδιάζει έναν μύλο",
+            "parameters": {
+              "length": "μήκος",
+              "repeat": "επανάλαβε",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a shape": {
+            "name": "να σχεδιάζει ένα σχήμα",
+            "parameters": {
+              "length": "μήκος",
+              "sides": "πλευρές"
+            }
+          },
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a star": {
+            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
+            "name": "σχεδίασε ένα αστέρι",
+            "parameters": {
+              "length": "μήκος",
+              "points": "πόντοι"
+            }
+          },
+          "draw a triangle": {
+            "name": "σχεδίασε ένα τρίγωνο",
             "parameters": {
               "length": "μήκος"
             }
@@ -1043,8 +1719,8 @@
           "jump": {
             "name": "πήδα",
             "parameters": {
-              "height": "ύψος",
-              "actor": "ηθοποιός"
+              "actor": "ηθοποιός",
+              "height": "ύψος"
             }
           },
           "patrol": {
@@ -1055,11 +1731,19 @@
           }
         },
         "Robot Doodle": {
+          "25 pixel square": {
+          },
+          "draw eye": {
+          },
           "draw head": {
             "name": "σχεδίασε κεφάλι"
           }
         },
         "Robot Doodle_2018": {
+          "25 pixel square": {
+          },
+          "draw eye": {
+          },
           "draw head": {
             "name": "σχεδίασε κεφάλι"
           }
@@ -1092,21 +1776,55 @@
         "course3_artist_functions_challenge1": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "my design": {
           }
         },
         "course3_artist_functions_challenge2": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "my design": {
           }
         },
         "course3_bee_functions_challenge1": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "get 3 nectar or honey": {
           }
         },
         "course3_bee_functions_challenge2": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "move and collect": {
+          }
+        },
+        "course3_bee_functions_challenge3": {
+          "check nectar or honey": {
+          },
+          "row of nectar": {
+          },
+          "rowOfNectar": {
+          }
+        },
+        "course3_bee_functions_challenge4": {
+          "check nectar or honey": {
+          },
+          "move and check": {
+          },
+          "row of nectar": {
+          },
+          "rowOfNectar": {
+          }
+        },
+        "course3_playLab_challenge1": {
+          "keep playing": {
+          },
+          "lose game": {
+          },
+          "win game": {
           }
         },
         "course4_artist_binary_challenge1": {
@@ -1115,6 +1833,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "course4_artist_binary_challenge2": {
@@ -1123,18 +1843,24 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
+          }
+        },
+        "course4_artist_concept_challenge2": {
+          "draw pinwheel": {
           }
         },
         "course4_artist_functions_challenge2": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "my design": {
           }
         },
         "course4_artist_fwp_challenge1": {
-          "draw background": {
-            "parameters": {
-              "color": "χρώμα"
-            }
+          "do something": {
+            "name": "κάνε κάτι"
           },
           "draw a polygon": {
             "name": "σχεδίασε ένα πολύγωνο",
@@ -1142,8 +1868,16 @@
               "sides": "πλευρές"
             }
           },
-          "do something": {
-            "name": "κάνε κάτι"
+          "draw a square 20": {
+          },
+          "draw background": {
+            "parameters": {
+              "color": "χρώμα"
+            }
+          }
+        },
+        "course4_bee_for_challenge1": {
+          "move and get nectar with counter": {
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -1170,6 +1904,11 @@
             "name": "πιθανή λύση"
           }
         },
+        "courseB_artist_loops_challenge22022": {
+          "potential solution": {
+            "name": "πιθανή λύση"
+          }
+        },
         "courseB_artist_loops_challenge2_2018": {
           "potential solution": {
             "name": "πιθανή λύση"
@@ -1185,7 +1924,21 @@
             "name": "πιθανή λύση"
           }
         },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "πιθανή λύση"
+          }
+        },
         "courseC_artist_prog3": {
+          "draw fire": {
+          },
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog32022": {
           "draw flame": {
             "parameters": {
               "x": "x"
@@ -1193,6 +1946,8 @@
           }
         },
         "courseC_artist_prog3_2018": {
+          "draw fire": {
+          },
           "draw flame": {
             "parameters": {
               "x": "x"
@@ -1200,6 +1955,8 @@
           }
         },
         "courseC_artist_prog3_2019": {
+          "draw fire": {
+          },
           "draw flame": {
             "parameters": {
               "x": "x"
@@ -1207,10 +1964,45 @@
           }
         },
         "courseC_artist_prog3_2020": {
+          "draw fire": {
+          },
           "draw flame": {
             "parameters": {
               "x": "x"
             }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw fire": {
+          },
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog4": {
+          "booster": {
+          }
+        },
+        "courseC_artist_prog42022": {
+          "booster": {
+          }
+        },
+        "courseC_artist_prog4_2018": {
+          "booster": {
+          }
+        },
+        "courseC_artist_prog4_2019": {
+          "booster": {
+          }
+        },
+        "courseC_artist_prog4_2020": {
+          "booster": {
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
           }
         },
         "courseC_data wizard": {
@@ -1218,7 +2010,17 @@
             "name": "κάνε κάτι"
           }
         },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "κάνε κάτι"
+          }
+        },
         "courseC_data wizard_2020": {
+          "do something": {
+            "name": "κάνε κάτι"
+          }
+        },
+        "courseC_data wizard_2021": {
           "do something": {
             "name": "κάνε κάτι"
           }
@@ -1229,6 +2031,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary1_2018": {
@@ -1237,6 +2041,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary1_2019": {
@@ -1245,6 +2051,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary1_2020": {
@@ -1253,6 +2061,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary2": {
@@ -1261,6 +2071,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary2_2018": {
@@ -1269,6 +2081,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary2_2019": {
@@ -1277,6 +2091,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary2_2020": {
@@ -1285,6 +2101,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary3": {
@@ -1293,6 +2111,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary3_2018": {
@@ -1301,6 +2121,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary3_2019": {
@@ -1309,6 +2131,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary3_2020": {
@@ -1317,6 +2141,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary4": {
@@ -1325,6 +2151,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary4_2018": {
@@ -1333,6 +2161,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary4_2019": {
@@ -1341,6 +2171,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary4_2020": {
@@ -1349,6 +2181,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary5": {
@@ -1357,6 +2191,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary5_2018": {
@@ -1365,6 +2201,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary5_2019": {
@@ -1373,6 +2211,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary5_2020": {
@@ -1381,6 +2221,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary6": {
@@ -1389,6 +2231,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary6_2018": {
@@ -1397,6 +2241,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary6_2019": {
@@ -1405,6 +2251,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary6_2020": {
@@ -1413,6 +2261,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary7": {
@@ -1421,6 +2271,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary7_2018": {
@@ -1429,6 +2281,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary7_2019": {
@@ -1437,6 +2291,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary7_2020": {
@@ -1445,6 +2301,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary8": {
@@ -1453,6 +2311,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary8_2018": {
@@ -1461,6 +2321,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary8_2019": {
@@ -1469,6 +2331,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary8_2020": {
@@ -1477,6 +2341,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1": {
@@ -1485,6 +2351,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1_2018": {
@@ -1493,6 +2361,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1_2019": {
@@ -1501,6 +2371,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1_2020": {
@@ -1509,6 +2381,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binaryFP_2018": {
@@ -1517,6 +2391,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binaryFP_2019": {
@@ -1525,6 +2401,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binaryFP_2020": {
@@ -1533,6 +2411,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge1_2018": {
@@ -1541,6 +2421,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge1_2019": {
@@ -1549,6 +2431,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge1_2020": {
@@ -1557,6 +2441,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge2_2018": {
@@ -1565,6 +2451,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge2_2019": {
@@ -1573,6 +2461,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge2_2020": {
@@ -1581,6 +2471,8 @@
             "parameters": {
               "binary": "δυαδικό"
             }
+          },
+          "draw bit": {
           }
         },
         "courseD_autorun_binary2_2019": {
@@ -1623,6 +2515,12 @@
             "name": "ισοπαλία"
           }
         },
+        "courseE_Dogger_2": {
+          "lose": {
+          },
+          "stop_everything": {
+          }
+        },
         "courseE_artist_concept1": {
           "do something": {
             "name": "κάνε κάτι"
@@ -1637,11 +2535,19 @@
           }
         },
         "courseE_artist_concept4": {
+          "draw a line of squares": {
+          },
+          "draw a plane of squares": {
+          },
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο"
           }
         },
         "courseE_artist_concept4_2018": {
+          "draw a line of squares": {
+          },
+          "draw a plane of squares": {
+          },
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο"
           }
@@ -1656,49 +2562,139 @@
             "name": "κάνε κάτι"
           }
         },
+        "courseE_artist_concept_challenge2": {
+          "draw pinwheel": {
+          }
+        },
+        "courseE_artist_concept_challenge2_2018": {
+          "draw pinwheel": {
+          }
+        },
+        "courseE_artist_functions1": {
+          "draw ear stems": {
+          }
+        },
         "courseE_artist_functions10": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw hexagon": {
+          },
+          "draw line of hexagons": {
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw hexagon": {
+          },
+          "draw line of hexagons": {
           }
         },
         "courseE_artist_functions10_2018": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw hexagon": {
+          },
+          "draw line of hexagons": {
           }
         },
         "courseE_artist_functions10_2019": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw hexagon": {
+          },
+          "draw line of hexagons": {
           }
         },
         "courseE_artist_functions10_2020": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw hexagon": {
+          },
+          "draw line of hexagons": {
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw hexagon": {
+          },
+          "draw line of hexagons": {
+          }
+        },
+        "courseE_artist_functions1_copy": {
+          "draw ear stems": {
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
           }
         },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2018": {
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2019": {
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2020": {
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "σχεδίασε ένα αστέρι"
           }
         },
         "courseE_artist_functions3_2018": {
@@ -1716,6 +2712,11 @@
             "name": "σχεδίασε ένα αστέρι"
           }
         },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "σχεδίασε ένα αστέρι"
+          }
+        },
         "courseE_artist_functions4": {
           "draw a star": {
             "name": "σχεδίασε ένα αστέρι"
@@ -1726,7 +2727,17 @@
             "name": "σχεδίασε ένα αστέρι"
           }
         },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "σχεδίασε ένα αστέρι"
+          }
+        },
         "courseE_artist_functions5": {
+          "draw a star": {
+            "name": "σχεδίασε ένα αστέρι"
+          }
+        },
+        "courseE_artist_functions52022": {
           "draw a star": {
             "name": "σχεδίασε ένα αστέρι"
           }
@@ -1746,7 +2757,17 @@
             "name": "σχεδίασε ένα αστέρι"
           }
         },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "σχεδίασε ένα αστέρι"
+          }
+        },
         "courseE_artist_functions5_copy": {
+          "draw a star": {
+            "name": "σχεδίασε ένα αστέρι"
+          }
+        },
+        "courseE_artist_functions5_dani": {
           "draw a star": {
             "name": "σχεδίασε ένα αστέρι"
           }
@@ -1754,125 +2775,271 @@
         "courseE_artist_functions7": {
           "draw a house": {
             "name": "σχεδίασε ένα σπίτι"
+          },
+          "draw a window": {
+          }
+        },
+        "courseE_artist_functions72022": {
+          "draw a window": {
           }
         },
         "courseE_artist_functions7_2018": {
           "draw a house": {
             "name": "σχεδίασε ένα σπίτι"
+          },
+          "draw a window": {
+          }
+        },
+        "courseE_artist_functions7_2019": {
+          "draw a window": {
           }
         },
         "courseE_artist_functions7_2020": {
           "draw a house": {
             "name": "σχεδίασε ένα σπίτι"
+          },
+          "draw a window": {
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
           }
         },
         "courseE_artist_functions8": {
           "do something": {
             "name": "κάνε κάτι"
           },
+          "draw a line of squares": {
+          },
           "draw square": {
             "name": "σχεδίασε τετράγωνο"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw a line of squares": {
+          },
+          "draw square": {
+            "name": "σχεδίασε τετράγωνο"
+          },
+          "staggered squares": {
           }
         },
         "courseE_artist_functions8_2018": {
           "do something": {
             "name": "κάνε κάτι"
           },
+          "draw a line of squares": {
+          },
           "draw square": {
             "name": "σχεδίασε τετράγωνο"
+          },
+          "staggered squares": {
           }
         },
         "courseE_artist_functions8_2019": {
           "do something": {
             "name": "κάνε κάτι"
           },
+          "draw a line of squares": {
+          },
           "draw square": {
             "name": "σχεδίασε τετράγωνο"
+          },
+          "staggered squares": {
           }
         },
         "courseE_artist_functions8_2020": {
           "do something": {
             "name": "κάνε κάτι"
           },
+          "draw a line of squares": {
+          },
           "draw square": {
             "name": "σχεδίασε τετράγωνο"
+          },
+          "staggered squares": {
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw a line of squares": {
+          },
+          "draw square": {
+            "name": "σχεδίασε τετράγωνο"
+          },
+          "staggered squares": {
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο"
           }
         },
         "courseE_artist_functions8a_2018": {
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο"
-          },
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο"
           }
         },
         "courseE_artist_functions8a_2019": {
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο"
-          },
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο"
           }
         },
         "courseE_artist_functions8a_2020": {
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο"
-          },
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw a line of squares": {
+          },
+          "draw square": {
+            "name": "σχεδίασε τετράγωνο"
           }
         },
         "courseE_artist_functions8b_2018": {
-          "draw square": {
-            "name": "σχεδίασε τετράγωνο"
-          },
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw a line of squares": {
+          },
+          "draw square": {
+            "name": "σχεδίασε τετράγωνο"
           }
         },
         "courseE_artist_functions8b_2019": {
-          "draw square": {
-            "name": "σχεδίασε τετράγωνο"
-          },
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw a line of squares": {
+          },
+          "draw square": {
+            "name": "σχεδίασε τετράγωνο"
           }
         },
         "courseE_artist_functions8b_2020": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw a line of squares": {
+          },
+          "draw square": {
+            "name": "σχεδίασε τετράγωνο"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw a line of squares": {
+          },
+          "draw square": {
+            "name": "σχεδίασε τετράγωνο"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw a line of squares": {
+          },
           "draw square": {
             "name": "σχεδίασε τετράγωνο"
           },
-          "do something": {
-            "name": "κάνε κάτι"
+          "staggered squares": {
           }
         },
         "courseE_artist_functions8c_2018": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw a line of squares": {
+          },
           "draw square": {
             "name": "σχεδίασε τετράγωνο"
           },
-          "do something": {
-            "name": "κάνε κάτι"
+          "staggered squares": {
           }
         },
         "courseE_artist_functions8c_2019": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw a line of squares": {
+          },
           "draw square": {
             "name": "σχεδίασε τετράγωνο"
           },
-          "do something": {
-            "name": "κάνε κάτι"
+          "staggered squares": {
           }
         },
         "courseE_artist_functions8c_2020": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw a line of squares": {
+          },
           "draw square": {
             "name": "σχεδίασε τετράγωνο"
           },
+          "staggered squares": {
+          }
+        },
+        "courseE_artist_functions8c_2021": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw a line of squares": {
+          },
+          "draw square": {
+            "name": "σχεδίασε τετράγωνο"
+          },
+          "staggered squares": {
           }
         },
         "courseE_artist_functions9": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw line of triangles": {
+          },
+          "draw triangle": {
+            "name": "σχεδίασε τρίγωνο"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw line of triangles": {
           },
           "draw triangle": {
             "name": "σχεδίασε τρίγωνο"
@@ -1882,6 +3049,8 @@
           "do something": {
             "name": "κάνε κάτι"
           },
+          "draw line of triangles": {
+          },
           "draw triangle": {
             "name": "σχεδίασε τρίγωνο"
           }
@@ -1889,6 +3058,8 @@
         "courseE_artist_functions9_2019": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw line of triangles": {
           },
           "draw triangle": {
             "name": "σχεδίασε τρίγωνο"
@@ -1898,113 +3069,296 @@
           "do something": {
             "name": "κάνε κάτι"
           },
+          "draw line of triangles": {
+          },
           "draw triangle": {
             "name": "σχεδίασε τρίγωνο"
           }
         },
-        "courseE_artist_functionsProj_2018": {
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw line of triangles": {
+          },
+          "draw triangle": {
+            "name": "σχεδίασε τρίγωνο"
+          }
+        },
+        "courseE_artist_functionsProj2022": {
+          "draw a line of squares": {
+          },
+          "draw hexagon": {
+          },
+          "draw line of hexagons": {
+          },
           "draw square": {
             "name": "σχεδίασε τετράγωνο"
+          },
+          "staggered squares": {
+          }
+        },
+        "courseE_artist_functionsProj_2018": {
+          "draw a line of squares": {
+          },
+          "draw hexagon": {
+          },
+          "draw line of hexagons": {
+          },
+          "draw square": {
+            "name": "σχεδίασε τετράγωνο"
+          },
+          "staggered squares": {
           }
         },
         "courseE_artist_functionsProj_2019": {
+          "draw a line of squares": {
+          },
+          "draw hexagon": {
+          },
+          "draw line of hexagons": {
+          },
           "draw square": {
             "name": "σχεδίασε τετράγωνο"
+          },
+          "staggered squares": {
           }
         },
         "courseE_artist_functionsProj_2020": {
+          "draw a line of squares": {
+          },
+          "draw hexagon": {
+          },
+          "draw line of hexagons": {
+          },
           "draw square": {
             "name": "σχεδίασε τετράγωνο"
+          },
+          "staggered squares": {
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw a line of squares": {
+          },
+          "draw hexagon": {
+          },
+          "draw line of hexagons": {
+          },
+          "draw square": {
+            "name": "σχεδίασε τετράγωνο"
+          },
+          "staggered squares": {
           }
         },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "my design": {
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "my design": {
           }
         },
         "courseE_artist_functions_challenge1_2018": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "my design": {
           }
         },
         "courseE_artist_functions_challenge1_2019": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "my design": {
           }
         },
         "courseE_artist_functions_challenge1_2020": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "my design": {
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "my design": {
           }
         },
         "courseE_artist_functions_challenge2": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "my design": {
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "my design": {
           }
         },
         "courseE_artist_functions_challenge2_2018": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "my design": {
           }
         },
         "courseE_artist_functions_challenge2_2019": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "my design": {
           }
         },
         "courseE_artist_functions_challenge2_2020": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "my design": {
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "my design": {
           }
         },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2018": {
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2019": {
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2020": {
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο"
+          },
+          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict2": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw line of polygons": {
+          },
+          "draw polygon": {
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw line of polygons": {
+          },
+          "draw polygon": {
           }
         },
         "courseE_artist_functions_predict2_2018": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw line of polygons": {
+          },
+          "draw polygon": {
           }
         },
         "courseE_artist_functions_predict2_2019": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw line of polygons": {
+          },
+          "draw polygon": {
           }
         },
         "courseE_artist_functions_predict2_2020": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw line of polygons": {
+          },
+          "draw polygon": {
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw line of polygons": {
+          },
+          "draw polygon": {
+          }
+        },
+        "courseE_bee_concept4": {
+          "honey nectar": {
           }
         },
         "courseE_bee_functions1": {
           "do something": {
             "name": "κάνε κάτι"
+          }
+        },
+        "courseE_bee_functions10": {
+          "move and make honey": {
+          }
+        },
+        "courseE_bee_functions11_predict1": {
+          "move and make honey": {
           }
         },
         "courseE_bee_functions2": {
@@ -2037,14 +3391,26 @@
             "name": "πάρε 7 κάνε 7"
           }
         },
+        "courseE_bee_functions8": {
+          "collect all nectar": {
+          }
+        },
+        "courseE_bee_functions9": {
+          "get all nectar": {
+          }
+        },
         "courseE_bee_functions_challenge1": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "get 3 nectar or honey": {
           }
         },
         "courseE_bee_functions_challenge2": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "move and collect": {
           }
         },
         "courseE_farmer_concept1": {
@@ -2055,11 +3421,425 @@
         "courseE_farmer_concept2": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "get pumpkin": {
+          }
+        },
+        "courseE_farmer_concept2_2018": {
+          "get pumpkin": {
           }
         },
         "courseE_farmer_concept3": {
           "do something": {
             "name": "κάνε κάτι"
+          }
+        },
+        "courseE_farmer_functions10a12022": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          },
+          "pick along path": {
+          },
+          "pumpkin square": {
+          }
+        },
+        "courseE_farmer_functions10a1_2018": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          },
+          "pick along path": {
+          },
+          "pumpkin square": {
+          }
+        },
+        "courseE_farmer_functions10a1_2019": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          },
+          "pick along path": {
+          },
+          "pumpkin square": {
+          }
+        },
+        "courseE_farmer_functions10a1_2020": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          },
+          "pick along path": {
+          },
+          "pumpkin square": {
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          },
+          "pick along path": {
+          },
+          "pumpkin square": {
+          }
+        },
+        "courseE_farmer_functions10b": {
+          "navigate": {
+          }
+        },
+        "courseE_farmer_functions11_predict": {
+          "check and pick": {
+          },
+          "find pumpkin": {
+          },
+          "wander path": {
+          }
+        },
+        "courseE_farmer_functions11_predict2022": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          },
+          "get produce": {
+          },
+          "pick along path": {
+          },
+          "pumpkin square": {
+          }
+        },
+        "courseE_farmer_functions11_predict_2018": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          },
+          "get produce": {
+          },
+          "pick along path": {
+          },
+          "pumpkin square": {
+          }
+        },
+        "courseE_farmer_functions11_predict_2019": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          },
+          "get produce": {
+          },
+          "pick along path": {
+          },
+          "pumpkin square": {
+          }
+        },
+        "courseE_farmer_functions11_predict_2020": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          },
+          "get produce": {
+          },
+          "pick along path": {
+          },
+          "pumpkin square": {
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          },
+          "get produce": {
+          },
+          "pick along path": {
+          },
+          "pumpkin square": {
+          }
+        },
+        "courseE_farmer_functions132022": {
+          "check for corn": {
+          },
+          "corn rectangle": {
+          },
+          "lettuce stairs": {
+          },
+          "pick along path": {
+          }
+        },
+        "courseE_farmer_functions13_2018": {
+          "check for corn": {
+          },
+          "corn rectangle": {
+          },
+          "lettuce stairs": {
+          },
+          "pick along path": {
+          }
+        },
+        "courseE_farmer_functions13_2019": {
+          "check for corn": {
+          },
+          "corn rectangle": {
+          },
+          "lettuce stairs": {
+          },
+          "pick along path": {
+          }
+        },
+        "courseE_farmer_functions13_2020": {
+          "check for corn": {
+          },
+          "corn rectangle": {
+          },
+          "lettuce stairs": {
+          },
+          "pick along path": {
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "check for corn": {
+          },
+          "corn rectangle": {
+          },
+          "lettuce stairs": {
+          },
+          "pick along path": {
+          }
+        },
+        "courseE_farmer_functions1a2022": {
+          "check square for corn": {
+          }
+        },
+        "courseE_farmer_functions1a_2018": {
+          "check square for corn": {
+          }
+        },
+        "courseE_farmer_functions1a_2019": {
+          "check square for corn": {
+          }
+        },
+        "courseE_farmer_functions1a_2020": {
+          "check square for corn": {
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+          }
+        },
+        "courseE_farmer_functions2b2022": {
+          "check square for corn": {
+          }
+        },
+        "courseE_farmer_functions2b_2018": {
+          "check square for corn": {
+          }
+        },
+        "courseE_farmer_functions2b_2019": {
+          "check square for corn": {
+          }
+        },
+        "courseE_farmer_functions2b_2020": {
+          "check square for corn": {
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+          }
+        },
+        "courseE_farmer_functions2ba": {
+          "corn and pumpkin": {
+          }
+        },
+        "courseE_farmer_functions2ba2022": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          }
+        },
+        "courseE_farmer_functions2ba_2018": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          }
+        },
+        "courseE_farmer_functions2ba_2019": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          }
+        },
+        "courseE_farmer_functions2ba_2020": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          }
+        },
+        "courseE_farmer_functions3c": {
+          "corn and pumpkin": {
+          }
+        },
+        "courseE_farmer_functions3c12022": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          },
+          "pick along path": {
+          }
+        },
+        "courseE_farmer_functions3c1_2018": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          },
+          "pick along path": {
+          }
+        },
+        "courseE_farmer_functions3c1_2019": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          },
+          "pick along path": {
+          }
+        },
+        "courseE_farmer_functions3c1_2020": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          },
+          "pick along path": {
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          },
+          "pick along path": {
+          }
+        },
+        "courseE_farmer_functions3c2022": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          }
+        },
+        "courseE_farmer_functions3c_2018": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          }
+        },
+        "courseE_farmer_functions3c_2019": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          }
+        },
+        "courseE_farmer_functions3c_2020": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+          },
+          "get all pumpkins": {
+          }
+        },
+        "courseE_farmer_functions4b": {
+          "corn and pumpkin": {
+          }
+        },
+        "courseE_farmer_functions5c": {
+          "corn and pumpkin": {
+          }
+        },
+        "courseE_farmer_functions6c": {
+          "corn and pumpkin": {
+          }
+        },
+        "courseE_farmer_functions7a12022": {
+          "garden square": {
+          }
+        },
+        "courseE_farmer_functions7a1_2018": {
+          "garden square": {
+          }
+        },
+        "courseE_farmer_functions7a1_2019": {
+          "garden square": {
+          }
+        },
+        "courseE_farmer_functions7a1_2020": {
+          "garden square": {
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+          }
+        },
+        "courseE_farmer_functions8a12022": {
+          "garden square": {
+          }
+        },
+        "courseE_farmer_functions8a1_2018": {
+          "garden square": {
+          }
+        },
+        "courseE_farmer_functions8a1_2019": {
+          "garden square": {
+          }
+        },
+        "courseE_farmer_functions8a1_2020": {
+          "garden square": {
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+          }
+        },
+        "courseE_farmer_functions8b": {
+          "navigate": {
+          }
+        },
+        "courseE_farmer_functions9a12022": {
+          "garden square": {
+          }
+        },
+        "courseE_farmer_functions9a1_2018": {
+          "garden square": {
+          }
+        },
+        "courseE_farmer_functions9a1_2019": {
+          "garden square": {
+          }
+        },
+        "courseE_farmer_functions9a1_2020": {
+          "garden square": {
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+          }
+        },
+        "courseE_farmer_functions9b": {
+          "navigate": {
+          }
+        },
+        "courseE_playLab_challenge1": {
+          "keep playing": {
+          },
+          "lose game": {
+          },
+          "win game": {
           }
         },
         "courseE_playLab_scaffold1": {
@@ -2082,19 +3862,22 @@
             "name": "κάνε κάτι"
           }
         },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "τέλος παιχνιδιού"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "τέλος παιχνιδιού"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "τέλος παιχνιδιού"
+          }
+        },
         "courseF_artist_fwp1": {
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο"
-          },
-          "checker": {
-            "parameters": {
-              "size": "μέγεθος",
-              "color": "χρώμα"
-            }
-          },
-          "do something": {
-            "name": "κάνε κάτι"
-          },
           "Make gingham": {
             "parameters": {
               "size": "μέγεθος"
@@ -2104,30 +3887,42 @@
             "parameters": {
               "length": "μήκος"
             }
+          },
+          "checker": {
+            "parameters": {
+              "color": "χρώμα",
+              "size": "μέγεθος"
+            }
+          },
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο"
           }
         },
         "courseF_artist_fwp2": {
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "checker": {
-            "parameters": {
-              "size": "μέγεθος",
-              "color": "χρώμα"
-            }
-          },
-          "do something": {
-            "name": "κάνε κάτι"
-          },
           "Make gingham": {
             "parameters": {
               "size": "μέγεθος"
             }
           },
           "black outline": {
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "checker": {
+            "parameters": {
+              "color": "χρώμα",
+              "size": "μέγεθος"
+            }
+          },
+          "do something": {
+            "name": "κάνε κάτι"
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο",
             "parameters": {
               "length": "μήκος"
             }
@@ -2142,6 +3937,11 @@
           }
         },
         "courseF_artist_fwp3": {
+          "black outline": {
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
           "draw a square": {
             "name": "σχεδίασε ένα τετράγωνο",
             "parameters": {
@@ -2155,13 +3955,8 @@
           },
           "filled square": {
             "parameters": {
-              "size": "μέγεθος",
-              "color": "χρώμα"
-            }
-          },
-          "black outline": {
-            "parameters": {
-              "length": "μήκος"
+              "color": "χρώμα",
+              "size": "μέγεθος"
             }
           }
         },
@@ -2197,8 +3992,8 @@
             "name": "σχεδίασε μια άκρη του σπιράλ",
             "parameters": {
               "length": "μήκος",
-              "sides": "πλευρές",
-              "min": "ελάχιστο"
+              "min": "ελάχιστο",
+              "sides": "πλευρές"
             }
           }
         },
@@ -2207,46 +4002,17 @@
             "name": "σχεδίασε μια άκρη του σπιράλ",
             "parameters": {
               "length": "μήκος",
-              "sides": "πλευρές",
-              "min": "ελάχιστο"
+              "min": "ελάχιστο",
+              "sides": "πλευρές"
             }
           }
         },
         "courseF_artist_fwp9": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι",
-            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
-            "parameters": {
-              "points": "πόντοι",
-              "length": "μήκος"
-            }
-          },
           "draw a circle": {
-            "name": "Σχεδίασε ένα κύκλο",
             "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
+            "name": "Σχεδίασε ένα κύκλο",
             "parameters": {
               "radius": "ακτίνα"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "να σχεδιάζει έναν μύλο",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος",
-              "repeat": "επανάλαβε"
-            }
-          },
-          "draw a triangle": {
-            "name": "σχεδίασε ένα τρίγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a shape": {
-            "name": "να σχεδιάζει ένα σχήμα",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος"
             }
           },
           "draw a house": {
@@ -2255,26 +4021,53 @@
               "length": "μήκος"
             }
           },
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο",
+          "draw a pinwheel": {
+            "name": "να σχεδιάζει έναν μύλο",
             "parameters": {
-              "length": "μήκος"
+              "length": "μήκος",
+              "repeat": "επανάλαβε",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a shape": {
+            "name": "να σχεδιάζει ένα σχήμα",
+            "parameters": {
+              "length": "μήκος",
+              "sides": "πλευρές"
             }
           },
           "draw a spiral edge": {
             "name": "σχεδίασε μια άκρη του σπιράλ",
             "parameters": {
               "length": "μήκος",
-              "sides": "πλευρές",
-              "min": "ελάχιστο"
+              "min": "ελάχιστο",
+              "sides": "πλευρές"
+            }
+          },
+          "draw a square": {
+            "name": "σχεδίασε ένα τετράγωνο",
+            "parameters": {
+              "length": "μήκος"
+            }
+          },
+          "draw a star": {
+            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
+            "name": "σχεδίασε ένα αστέρι",
+            "parameters": {
+              "length": "μήκος",
+              "points": "πόντοι"
+            }
+          },
+          "draw a triangle": {
+            "name": "σχεδίασε ένα τρίγωνο",
+            "parameters": {
+              "length": "μήκος"
             }
           }
         },
         "courseF_artist_fwp_challenge1": {
-          "draw background": {
-            "parameters": {
-              "color": "χρώμα"
-            }
+          "do something": {
+            "name": "κάνε κάτι"
           },
           "draw a polygon": {
             "name": "σχεδίασε ένα πολύγωνο",
@@ -2282,13 +4075,19 @@
               "sides": "πλευρές"
             }
           },
-          "do something": {
-            "name": "κάνε κάτι"
+          "draw a square 20": {
+          },
+          "draw background": {
+            "parameters": {
+              "color": "χρώμα"
+            }
           }
         },
         "courseF_artist_fwp_challenge2": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "draw a square 20": {
           },
           "draw an octagon": {
             "parameters": {
@@ -2296,9 +4095,101 @@
             }
           }
         },
+        "courseF_bee_conditionals2": {
+          "check nectar or honey": {
+          },
+          "move and check": {
+          }
+        },
+        "courseF_bee_for_challenge1": {
+          "move and get nectar with counter": {
+          }
+        },
+        "courseF_bee_for_challenge12022": {
+          "move and get nectar with counter": {
+          }
+        },
+        "courseF_bee_for_challenge1_2018": {
+          "move and get nectar with counter": {
+          }
+        },
+        "courseF_bee_for_challenge1_2019": {
+          "move and get nectar with counter": {
+          }
+        },
+        "courseF_bee_for_challenge1_2020": {
+          "move and get nectar with counter": {
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+          }
+        },
+        "courseF_bee_functions2": {
+          "get only nectar": {
+          }
+        },
+        "courseF_bee_functions3": {
+          "only make honey": {
+          }
+        },
+        "courseF_bee_functions3a": {
+          "check nectar or honey": {
+          }
+        },
+        "courseF_bee_functions4": {
+          "check nectar or honey": {
+          },
+          "move and check": {
+          }
+        },
+        "courseF_bee_functions5a": {
+          "check nectar or honey": {
+          },
+          "move and check": {
+          }
+        },
+        "courseF_bee_functions6": {
+          "get nectar make honey": {
+          }
+        },
+        "courseF_bee_functions7": {
+          "get nectar make honey": {
+          }
+        },
         "courseF_bee_functions8a": {
           "do something": {
             "name": "κάνε κάτι"
+          },
+          "get nectar make honey": {
+          }
+        },
+        "courseF_bee_functionsPre7": {
+          "get nectar make honey": {
+          }
+        },
+        "courseF_bee_functions_challenge1": {
+          "check nectar or honey": {
+          },
+          "row of nectar": {
+          },
+          "rowOfNectar": {
+          }
+        },
+        "courseF_bee_functions_challenge2": {
+          "check nectar or honey": {
+          },
+          "move and check": {
+          },
+          "rowOfNectar": {
+          }
+        },
+        "courseF_bee_fwp2": {
+          "rowOfNectar": {
+          }
+        },
+        "courseF_bee_fwp3": {
+          "rowOfNectar": {
           }
         },
         "courseF_bee_fwp4": {
@@ -2357,6 +4248,78 @@
             }
           }
         },
+        "courseF_bee_variables_1_2018": {
+          "collect row": {
+          }
+        },
+        "courseF_bee_variables_1_2019": {
+          "collect row": {
+          }
+        },
+        "courseF_bee_variables_1_2020": {
+          "collect row": {
+          }
+        },
+        "courseF_bee_variables_2_2018": {
+          "collect row": {
+          }
+        },
+        "courseF_bee_variables_2_2019": {
+          "collect row": {
+          }
+        },
+        "courseF_bee_variables_2_2020": {
+          "collect row": {
+          }
+        },
+        "courseF_bee_variables_3_2018": {
+          "collect row": {
+          }
+        },
+        "courseF_bee_variables_3_2019": {
+          "collect row": {
+          }
+        },
+        "courseF_bee_variables_3_2020": {
+          "collect row": {
+          }
+        },
+        "courseF_bee_variables_4_2018": {
+          "collect row": {
+          }
+        },
+        "courseF_bee_variables_4_2019": {
+          "collect row": {
+          }
+        },
+        "courseF_bee_variables_4_2020": {
+          "collect row": {
+          }
+        },
+        "courseF_bee_variables_5_2018": {
+          "collect row": {
+          }
+        },
+        "courseF_bee_variables_5_2019": {
+          "collect row": {
+          }
+        },
+        "courseF_bee_variables_5_2020": {
+          "collect row": {
+          }
+        },
+        "courseF_bee_variables_6_2018": {
+          "collect stairs": {
+          }
+        },
+        "courseF_bee_variables_6_2019": {
+          "collect stairs": {
+          }
+        },
+        "courseF_bee_variables_6_2020": {
+          "collect stairs": {
+          }
+        },
         "courseF_bee_variables_7_2018": {
           "collect": {
             "name": "σύλλεξε"
@@ -2375,16 +4338,22 @@
         "courseF_bee_variables_8_2018": {
           "collect": {
             "name": "σύλλεξε"
+          },
+          "move and increment": {
           }
         },
         "courseF_bee_variables_8_2019": {
           "collect": {
             "name": "σύλλεξε"
+          },
+          "move and increment": {
           }
         },
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "σύλλεξε"
+          },
+          "move and increment": {
           }
         },
         "grade5_artist_binary11": {
@@ -2410,747 +4379,6 @@
         "grade5_artist_binary9": {
           "draw": {
             "name": "ισοπαλία"
-          }
-        },
-        "CourseD_EOC_artist": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι",
-            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
-            "parameters": {
-              "points": "πόντοι",
-              "length": "μήκος"
-            }
-          },
-          "draw a circle": {
-            "name": "Σχεδίασε ένα κύκλο",
-            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
-            "parameters": {
-              "radius": "ακτίνα"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "να σχεδιάζει έναν μύλο",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος",
-              "repeat": "επανάλαβε"
-            }
-          },
-          "draw a triangle": {
-            "name": "σχεδίασε ένα τρίγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a shape": {
-            "name": "να σχεδιάζει ένα σχήμα",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος"
-            }
-          },
-          "draw a house": {
-            "name": "σχεδίασε ένα σπίτι",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          }
-        },
-        "Course E: Artist Project_examples_2021": {
-          "my function": {
-            "name": "η συνάρτηση μου"
-          }
-        },
-        "Course E: Frozen Project_examples_2021": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι",
-            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
-            "parameters": {
-              "points": "πόντοι",
-              "length": "μήκος"
-            }
-          },
-          "draw a circle": {
-            "name": "Σχεδίασε ένα κύκλο",
-            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
-            "parameters": {
-              "radius": "ακτίνα"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "να σχεδιάζει έναν μύλο",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος",
-              "repeat": "επανάλαβε"
-            }
-          },
-          "draw a triangle": {
-            "name": "σχεδίασε ένα τρίγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a shape": {
-            "name": "να σχεδιάζει ένα σχήμα",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος"
-            }
-          },
-          "draw a house": {
-            "name": "σχεδίασε ένα σπίτι",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο",
-            "parameters": {
-              "length": "μήκος",
-              "sides": "πλευρές"
-            }
-          }
-        },
-        "Course F: Artist Project_Flowers_examples_2021": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι",
-            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
-            "parameters": {
-              "points": "πόντοι",
-              "length": "μήκος"
-            }
-          },
-          "draw a circle": {
-            "name": "Σχεδίασε ένα κύκλο",
-            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
-            "parameters": {
-              "radius": "ακτίνα"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "να σχεδιάζει έναν μύλο",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος",
-              "repeat": "επανάλαβε"
-            }
-          },
-          "draw a triangle": {
-            "name": "σχεδίασε ένα τρίγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a shape": {
-            "name": "να σχεδιάζει ένα σχήμα",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος"
-            }
-          },
-          "draw a house": {
-            "name": "σχεδίασε ένα σπίτι",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          }
-        },
-        "CourseD_EOC_artist_2021": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι",
-            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
-            "parameters": {
-              "points": "πόντοι",
-              "length": "μήκος"
-            }
-          },
-          "draw a circle": {
-            "name": "Σχεδίασε ένα κύκλο",
-            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
-            "parameters": {
-              "radius": "ακτίνα"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "να σχεδιάζει έναν μύλο",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος",
-              "repeat": "επανάλαβε"
-            }
-          },
-          "draw a triangle": {
-            "name": "σχεδίασε ένα τρίγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a shape": {
-            "name": "να σχεδιάζει ένα σχήμα",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος"
-            }
-          },
-          "draw a house": {
-            "name": "σχεδίασε ένα σπίτι",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          }
-        },
-        "CourseD_EOC_artist_example2021": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι",
-            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
-            "parameters": {
-              "points": "πόντοι",
-              "length": "μήκος"
-            }
-          },
-          "draw a circle": {
-            "name": "Σχεδίασε ένα κύκλο",
-            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
-            "parameters": {
-              "radius": "ακτίνα"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "να σχεδιάζει έναν μύλο",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος",
-              "repeat": "επανάλαβε"
-            }
-          },
-          "draw a triangle": {
-            "name": "σχεδίασε ένα τρίγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a shape": {
-            "name": "να σχεδιάζει ένα σχήμα",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος"
-            }
-          },
-          "draw a house": {
-            "name": "σχεδίασε ένα σπίτι",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          }
-        },
-        "Function intro Ryan_2021": {
-          "build bridge": {
-            "name": "χτίσε γέφυρα"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2021": {
-          "clear path": {
-            "name": "καθάρισε το μονοπάτι"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2021": {
-          "fix long path": {
-            "name": "διόρθωσε το μακρύ μονοπάτι"
-          },
-          "fix short path": {
-            "name": "διόρθωσε το σύντομο μονοπάτι"
-          }
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "build short bridge": {
-            "name": "χτίσε μικρή γέφυρα"
-          },
-          "build long bridge": {
-            "name": "χτίσε εκτενή γέφυρα"
-          }
-        },
-        "MC_HOC_2017_FP20x20_2021": {
-          "function 1": {
-            "name": "συνάρτηση 1"
-          },
-          "function 2": {
-            "name": "συνάρτηση 2"
-          }
-        },
-        "courseB_artist_loops_challenge2_2021": {
-          "potential solution": {
-            "name": "πιθανή λύση"
-          }
-        },
-        "courseC_artist_prog3_2021": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            }
-          }
-        },
-        "courseC_data wizard_2021": {
-          "do something": {
-            "name": "κάνε κάτι"
-          }
-        },
-        "courseE_artist_functions10_2021": {
-          "do something": {
-            "name": "κάνε κάτι"
-          }
-        },
-        "courseE_artist_functions2_2021": {
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο"
-          }
-        },
-        "courseE_artist_functions2_dani": {
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο"
-          }
-        },
-        "courseE_artist_functions3_2021": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι"
-          }
-        },
-        "courseE_artist_functions4_dani": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι"
-          }
-        },
-        "courseE_artist_functions5_2021": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι"
-          }
-        },
-        "courseE_artist_functions5_dani": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι"
-          }
-        },
-        "courseE_artist_functions8_2021": {
-          "do something": {
-            "name": "κάνε κάτι"
-          },
-          "draw square": {
-            "name": "σχεδίασε τετράγωνο"
-          }
-        },
-        "courseE_artist_functions8a_2021": {
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο"
-          },
-          "do something": {
-            "name": "κάνε κάτι"
-          }
-        },
-        "courseE_artist_functions8b_2021": {
-          "draw square": {
-            "name": "σχεδίασε τετράγωνο"
-          },
-          "do something": {
-            "name": "κάνε κάτι"
-          }
-        },
-        "courseE_artist_functions8c_2021": {
-          "draw square": {
-            "name": "σχεδίασε τετράγωνο"
-          },
-          "do something": {
-            "name": "κάνε κάτι"
-          }
-        },
-        "courseE_artist_functions9_2021": {
-          "do something": {
-            "name": "κάνε κάτι"
-          },
-          "draw triangle": {
-            "name": "σχεδίασε τρίγωνο"
-          }
-        },
-        "courseE_artist_functionsProj_2021": {
-          "draw square": {
-            "name": "σχεδίασε τετράγωνο"
-          }
-        },
-        "courseE_artist_functions_challenge1_2021": {
-          "do something": {
-            "name": "κάνε κάτι"
-          }
-        },
-        "courseE_artist_functions_challenge2_2021": {
-          "do something": {
-            "name": "κάνε κάτι"
-          }
-        },
-        "courseE_artist_functions_predict1_2021": {
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο"
-          }
-        },
-        "courseE_artist_functions_predict1_dani": {
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο"
-          }
-        },
-        "courseE_artist_functions_predict2_2021": {
-          "do something": {
-            "name": "κάνε κάτι"
-          }
-        },
-        "courseF_apps_collector": {
-          "end game": {
-            "name": "τέλειωσε το παιχνίδι"
-          }
-        },
-        "Artist Autorun Test": {
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο"
-          }
-        },
-        "Auto Open Function Editor": {
-          "draw a shape": {
-            "name": "να σχεδιάζει ένα σχήμα",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος"
-            }
-          }
-        },
-        "MC Agent Freeplay": {
-          "function 1": {
-            "name": "συνάρτηση 1"
-          },
-          "function 2": {
-            "name": "συνάρτηση 2"
-          }
-        },
-        "Course E: Artist Project_examples2022": {
-          "my function": {
-            "name": "η συνάρτηση μου"
-          }
-        },
-        "Course E: Frozen Project_examples2022": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι",
-            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
-            "parameters": {
-              "points": "πόντοι",
-              "length": "μήκος"
-            }
-          },
-          "draw a circle": {
-            "name": "Σχεδίασε ένα κύκλο",
-            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
-            "parameters": {
-              "radius": "ακτίνα"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "να σχεδιάζει έναν μύλο",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος",
-              "repeat": "επανάλαβε"
-            }
-          },
-          "draw a triangle": {
-            "name": "σχεδίασε ένα τρίγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a shape": {
-            "name": "να σχεδιάζει ένα σχήμα",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος"
-            }
-          },
-          "draw a house": {
-            "name": "σχεδίασε ένα σπίτι",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο",
-            "parameters": {
-              "length": "μήκος",
-              "sides": "πλευρές"
-            }
-          }
-        },
-        "CourseD_EOC_artist2022": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι",
-            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
-            "parameters": {
-              "points": "πόντοι",
-              "length": "μήκος"
-            }
-          },
-          "draw a circle": {
-            "name": "Σχεδίασε ένα κύκλο",
-            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
-            "parameters": {
-              "radius": "ακτίνα"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "να σχεδιάζει έναν μύλο",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος",
-              "repeat": "επανάλαβε"
-            }
-          },
-          "draw a triangle": {
-            "name": "σχεδίασε ένα τρίγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a shape": {
-            "name": "να σχεδιάζει ένα σχήμα",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος"
-            }
-          },
-          "draw a house": {
-            "name": "σχεδίασε ένα σπίτι",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          }
-        },
-        "CourseD_EOC_artist_example20212022": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι",
-            "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
-            "parameters": {
-              "points": "πόντοι",
-              "length": "μήκος"
-            }
-          },
-          "draw a circle": {
-            "name": "Σχεδίασε ένα κύκλο",
-            "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
-            "parameters": {
-              "radius": "ακτίνα"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "να σχεδιάζει έναν μύλο",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος",
-              "repeat": "επανάλαβε"
-            }
-          },
-          "draw a triangle": {
-            "name": "σχεδίασε ένα τρίγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a shape": {
-            "name": "να σχεδιάζει ένα σχήμα",
-            "parameters": {
-              "sides": "πλευρές",
-              "length": "μήκος"
-            }
-          },
-          "draw a house": {
-            "name": "σχεδίασε ένα σπίτι",
-            "parameters": {
-              "length": "μήκος"
-            }
-          },
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο",
-            "parameters": {
-              "length": "μήκος"
-            }
-          }
-        },
-        "Function intro Ryan2022": {
-          "build bridge": {
-            "name": "χτίσε γέφυρα"
-          }
-        },
-        "MC_HOC_2017_07_Cole2022": {
-          "clear path": {
-            "name": "καθάρισε το μονοπάτι"
-          }
-        },
-        "MC_HOC_2017_10_RETRY2022": {
-          "fix long path": {
-            "name": "διόρθωσε το μακρύ μονοπάτι"
-          },
-          "fix short path": {
-            "name": "διόρθωσε το σύντομο μονοπάτι"
-          }
-        },
-        "MC_HOC_2017_Ali2022": {
-          "build short bridge": {
-            "name": "χτίσε μικρή γέφυρα"
-          },
-          "build long bridge": {
-            "name": "χτίσε εκτενή γέφυρα"
-          }
-        },
-        "MC_HOC_2017_FP20x202022": {
-          "function 1": {
-            "name": "συνάρτηση 1"
-          },
-          "function 2": {
-            "name": "συνάρτηση 2"
-          }
-        },
-        "courseB_artist_loops_challenge22022": {
-          "potential solution": {
-            "name": "πιθανή λύση"
-          }
-        },
-        "courseC_artist_prog32022": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            }
-          }
-        },
-        "courseC_data wizard2022": {
-          "do something": {
-            "name": "κάνε κάτι"
-          }
-        },
-        "courseE_artist_functions102022": {
-          "do something": {
-            "name": "κάνε κάτι"
-          }
-        },
-        "courseE_artist_functions22022": {
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο"
-          }
-        },
-        "courseE_artist_functions32022": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι"
-          }
-        },
-        "courseE_artist_functions52022": {
-          "draw a star": {
-            "name": "σχεδίασε ένα αστέρι"
-          }
-        },
-        "courseE_artist_functions82022": {
-          "do something": {
-            "name": "κάνε κάτι"
-          },
-          "draw square": {
-            "name": "σχεδίασε τετράγωνο"
-          }
-        },
-        "courseE_artist_functions8a2022": {
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο"
-          },
-          "do something": {
-            "name": "κάνε κάτι"
-          }
-        },
-        "courseE_artist_functions8b2022": {
-          "draw square": {
-            "name": "σχεδίασε τετράγωνο"
-          },
-          "do something": {
-            "name": "κάνε κάτι"
-          }
-        },
-        "courseE_artist_functions8c2022": {
-          "draw square": {
-            "name": "σχεδίασε τετράγωνο"
-          },
-          "do something": {
-            "name": "κάνε κάτι"
-          }
-        },
-        "courseE_artist_functions92022": {
-          "do something": {
-            "name": "κάνε κάτι"
-          },
-          "draw triangle": {
-            "name": "σχεδίασε τρίγωνο"
-          }
-        },
-        "courseE_artist_functionsProj2022": {
-          "draw square": {
-            "name": "σχεδίασε τετράγωνο"
-          }
-        },
-        "courseE_artist_functions_challenge12022": {
-          "do something": {
-            "name": "κάνε κάτι"
-          }
-        },
-        "courseE_artist_functions_challenge22022": {
-          "do something": {
-            "name": "κάνε κάτι"
-          }
-        },
-        "courseE_artist_functions_predict12022": {
-          "draw a square": {
-            "name": "σχεδίασε ένα τετράγωνο"
-          }
-        },
-        "courseE_artist_functions_predict22022": {
-          "do something": {
-            "name": "κάνε κάτι"
-          }
-        },
-        "courseF_apps_collector2022": {
-          "end game": {
-            "name": "τέλειωσε το παιχνίδι"
-          }
-        },
-        "courseF_apps_collector_-2022-2": {
-          "end game": {
-            "name": "τέλειωσε το παιχνίδι"
           }
         }
       }

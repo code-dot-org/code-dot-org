@@ -21,11 +21,13 @@ el:
       name: όνομα
       nectar: νέκταρ
       object: αντικείμενο
+      planet: πλανήτης
       points: πόντοι
       random: τυχαίο
       repeat: επανάλαβε
       right: δεξιά
       score: σκορ
+      shout: φωνάζω
       sides: πλευρές
       size: μέγεθος
       speed: ταχύτητα

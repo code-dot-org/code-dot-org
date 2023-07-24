@@ -4,7 +4,7 @@ import Button from '@cdo/apps/templates/Button';
 
 export default {
   title: 'DropdownButton',
-  component: DropdownButton
+  component: DropdownButton,
 };
 
 export const OrangeDropdownButton = () => (

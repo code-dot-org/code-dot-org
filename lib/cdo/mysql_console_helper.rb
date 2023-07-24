@@ -14,10 +14,10 @@ module MysqlConsoleHelper
   def self.run(db, args, warn: true)
     db = URI.parse(db) unless db.is_a?(URI)
     warning =
-      "*****************************************************************\n"\
-      "*** You are connecting to the production writer database.     ***\n"\
-      "*** Please connect to the reporting database instead via      ***\n"\
-      "*** bin/dashboard-reporting-sql or bin/pegasus-reporting-sql. ***\n"\
+      "*****************************************************************\n" \
+      "*** You are connecting to the production writer database.     ***\n" \
+      "*** Please connect to the reporting database instead via      ***\n" \
+      "*** bin/dashboard-reporting-sql or bin/pegasus-reporting-sql. ***\n" \
       "*****************************************************************"
     puts warning if warn && (db.host == CDO.db_writer_endpoint) && rack_env?(:production)
 

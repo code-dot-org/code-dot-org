@@ -10,13 +10,13 @@ export const tableLayoutStyles = {
     borderStyle: 'solid',
     borderColor: color.border_gray,
     width: styleConstants['content-width'],
-    backgroundColor: color.table_light_row
+    backgroundColor: color.table_light_row,
   },
   cell: {
     border: '1px solid',
     borderColor: color.border_light_gray,
     padding: 10,
-    fontSize: 14
+    fontSize: 14,
   },
   headerCell: {
     backgroundColor: color.table_header,
@@ -30,23 +30,23 @@ export const tableLayoutStyles = {
     paddingTop: 20,
     paddingBottom: 20,
     color: color.charcoal,
-    textAlign: 'inherit'
+    textAlign: 'inherit',
   },
   link: {
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
-    textDecoration: 'none'
+    textDecoration: 'none',
   },
   unsortableHeader: {
-    paddingLeft: 25
+    paddingLeft: 25,
   },
   unsortableHeaderRTL: {
-    paddingRight: 25
-  }
+    paddingRight: 25,
+  },
 };
 
 // Settings for WrappedSortable
 export const sortableOptions = {
   // Dim inactive sorting icons in the column headers
-  default: {color: 'rgba(0, 0, 0, 0.2 )'}
+  default: {color: 'rgba(0, 0, 0, 0.2 )'},
 };

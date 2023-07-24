@@ -293,6 +293,7 @@ sq:
           description_short: Përziej dhe përshtat sportet
           description: Përziej dhe përshtat sportet
           student_description: Përziej dhe përshtat sportet
+          name: sportet
         csp3-support:
           lesson_groups:
             required:
@@ -405,6 +406,8 @@ sq:
           lesson_groups:
             content:
               display_name: Përmbajtja
+        hero:
+          name: hero
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -513,8 +516,11 @@ sq:
               display_name: Përmbledhja
             content:
               display_name: Përmbajtja
+        dance:
+          name: valle
         aquatic:
           title: 'Minecraft: Udhëtimi ujor'
+          name: ujor
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -958,7 +964,7 @@ sq:
         2021drafting:
           lesson_groups:
             introduction:
-              display_name: Hyrja
+              display_name: Hyrje
             lessonGroup-3:
               display_name: variabla
             debugging:
@@ -990,6 +996,7 @@ sq:
             csf_events:
               display_name: Ngjarje
         courseb-2021:
+          description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë. Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes një larmie më të madhe enigmash. Studentët do të mësojnë bazat e programimit, teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit Play Lab.
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
@@ -1049,6 +1056,8 @@ sq:
               display_name: Shtetësi Dixhitale
         express-2021:
           lesson_groups:
+            csf_warmup:
+              display_name: Parapërgatitje
             csf_loops:
               display_name: cikle
             csf_conditionals:
@@ -1070,7 +1079,7 @@ sq:
         csf-2021-pilot:
           lesson_groups:
             ramp_up:
-              display_name: Hyrja
+              display_name: Hyrje
             lessonGroup-3:
               display_name: variabla
             variables:
@@ -1112,9 +1121,9 @@ sq:
         k5-onlinepd-2021:
           lesson_groups:
             k5_getting_started_1:
-              display_name: Hyrja
+              display_name: Hyrje
             Introduction:
-              display_name: Hyrja
+              display_name: Hyrje
         haikubot-pilot:
           lesson_groups:
             Lesson 3:
@@ -1233,6 +1242,7 @@ sq:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
+          title: Kursi A (2022)
         express-2022:
           lesson_groups:
             lessonGroup-9:
@@ -1264,11 +1274,15 @@ sq:
         courseb-2022:
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësi Digjitale
+            csf_sequencing:
+              display_name: Renditje
             csf_loops:
-              display_name: cikle
+              display_name: Loops
             csf_events:
               display_name: Ngjarje
+          title: Kursi B (2022)
+          description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë. Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes një larmie më të madhe enigmash. Nxënësit do të mësojnë bazat e programimit, teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit Play Lab.
         coursec-2022:
           lesson_groups:
             csf_digcit:
@@ -1508,6 +1522,7 @@ sq:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
+          description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë. Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes një larmie më të madhe enigmash. Studentët do të mësojnë bazat e programimit, teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit Play Lab.
         coursec-2023:
           lesson_groups:
             csf_digcit:
@@ -1538,3 +1553,43 @@ sq:
               display_name: funksione
             csf_nested_loops:
               display_name: Kushtet
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Hyrje
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Mbyll
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Mbyll
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Hyrje
+            lesson-12:
+              name: Mbyll
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Mbyll
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Mbyll
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Mbyll
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-4:
+              display_name: variabla
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: të dhëna

@@ -7,5 +7,5 @@ export const videoDataShape = PropTypes.shape({
   download: PropTypes.string,
   thumbnail: PropTypes.string,
   enable_fallback: PropTypes.bool,
-  autoplay: PropTypes.bool
+  autoplay: PropTypes.bool,
 });

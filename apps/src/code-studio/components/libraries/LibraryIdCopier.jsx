@@ -5,7 +5,7 @@ import Button from '@cdo/apps/templates/Button';
 
 export default class LibraryIdCopier extends React.Component {
   static propTypes = {
-    channelId: PropTypes.string.isRequired
+    channelId: PropTypes.string.isRequired,
   };
 
   copyChannelId = () => {
@@ -21,7 +21,7 @@ export default class LibraryIdCopier extends React.Component {
           type="text"
           ref={channelId => (this.channelId = channelId)}
           onClick={event => event.target.select()}
-          readOnly="true"
+          readOnly
           value={channelId}
           style={styles.copy}
         />
@@ -40,9 +40,9 @@ const styles = {
     cursor: 'copy',
     width: 250,
     height: 25,
-    marginBottom: 0
+    marginBottom: 0,
   },
   button: {
-    marginLeft: 10
-  }
+    marginLeft: 10,
+  },
 };

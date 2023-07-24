@@ -14,16 +14,16 @@ export default class MazeThumbnail extends React.Component {
     mazeSummary: PropTypes.shape({
       level: PropTypes.shape({
         startDirection: PropTypes.number.isRequired,
-        flowerType: PropTypes.string
+        flowerType: PropTypes.string,
       }).isRequired,
       map: PropTypes.array,
       serializedMaze: PropTypes.array,
-      skin: PropTypes.string.isRequired
-    })
+      skin: PropTypes.string.isRequired,
+    }),
   };
 
   static defaultProps = {
-    scale: 1
+    scale: 1,
   };
 
   componentDidMount() {
@@ -32,7 +32,7 @@ export default class MazeThumbnail extends React.Component {
     const Type = getSubtypeForSkin(this.props.mazeSummary.skin);
     const subtype = new Type(Maze, {
       skin,
-      level: this.props.mazeSummary.level
+      level: this.props.mazeSummary.level,
     });
 
     Maze.map = this.props.mazeSummary.serializedMaze
@@ -61,13 +61,13 @@ export default class MazeThumbnail extends React.Component {
           height: this.props.size,
           display: 'inline-block',
           overflow: 'hidden',
-          border: `1px solid ${color.lighter_gray}`
+          border: `1px solid ${color.lighter_gray}`,
         }}
       >
         <div
           style={{
             transform: `scale(${scale})`,
-            ...styles.wrapper
+            ...styles.wrapper,
           }}
         >
           <ProtectedStatefulDiv>
@@ -89,7 +89,7 @@ const styles = {
   wrapper: {
     display: 'inline-block',
     position: 'relative',
-    transformOrigin: '0 0'
+    transformOrigin: '0 0',
   },
   overlay: {
     width: 400,
@@ -98,12 +98,12 @@ const styles = {
     position: 'absolute',
     top: 0,
     left: 0,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   check: {
     fontSize: 350,
     lineHeight: '400px',
     color: '#fff',
-    opacity: 0.8
-  }
+    opacity: 0.8,
+  },
 };

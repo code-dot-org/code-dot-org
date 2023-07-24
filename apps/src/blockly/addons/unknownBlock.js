@@ -5,5 +5,5 @@ export const UNKNOWN_BLOCK = {
     this.appendDummyInput().appendField('unknown block', 'NAME');
     this.setPreviousStatement(true);
     this.setNextStatement(true);
-  }
+  },
 };

@@ -21,3 +21,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 The loop control variable `index` in this `for` loop is initialized to `animals.length - 1`, or the last index of the 1D array `animals`. The variable `index` is decreased by `1` until it reaches `0`, or the first element in `animals`. For each iteration of the `for` loop, the value is printed using a `print` statement instead of a `println` statement. This means that each element in `animals` is printed on one line in reverse order with a space in between each element.
 MARKDOWN
+
+allow_multiple_attempts true

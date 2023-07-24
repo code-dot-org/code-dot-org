@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Row, Col} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 export default class OrganizerFormPart extends React.Component {
   static propTypes = {
@@ -9,13 +9,13 @@ export default class OrganizerFormPart extends React.Component {
     organizerId: PropTypes.number,
     organizerName: PropTypes.string,
     onChange: PropTypes.func,
-    readOnly: PropTypes.bool
+    readOnly: PropTypes.bool,
   };
 
   state = {
     loading: true,
     potentialOrganizers: null,
-    error: false
+    error: false,
   };
 
   UNSAFE_componentWillMount() {
@@ -28,12 +28,12 @@ export default class OrganizerFormPart extends React.Component {
     $.ajax({
       method: 'GET',
       url: url,
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(data => {
         this.setState({
           loading: false,
-          potentialOrganizers: data
+          potentialOrganizers: data,
         });
       })
       .error(() => {
@@ -94,9 +94,9 @@ const styles = {
   readOnlyInput: {
     backgroundColor: 'inherit',
     cursor: 'default',
-    border: 'none'
+    border: 'none',
   },
   error: {
-    color: 'red'
-  }
+    color: 'red',
+  },
 };

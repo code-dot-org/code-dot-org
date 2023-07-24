@@ -13,7 +13,7 @@ import {
   CourseOfferingCsTopics,
   CourseOfferingSchoolSubjects,
   DeviceTypes,
-  DeviceCompatibilityLevels
+  DeviceCompatibilityLevels,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import {translatedCourseOfferingCategories} from '@cdo/apps/templates/teacherDashboard/AssignmentSelectorHelpers';
@@ -21,7 +21,7 @@ import {
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,
   translatedCourseOfferingDeviceTypes,
-  translatedCourseOfferingDeviceCompatibilityLevels
+  translatedCourseOfferingDeviceCompatibilityLevels,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import ImageInput from './ImageInput';
 
@@ -56,7 +56,7 @@ export default function CourseOfferingEditor(props) {
       method: 'PUT',
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(courseOffering)
+      data: JSON.stringify(courseOffering),
     })
       .done(data => {
         if (shouldCloseAfterSave) {
@@ -146,6 +146,22 @@ export default function CourseOfferingEditor(props) {
             dropdown.
           </p>
         </HelpTip>
+      </label>
+      <label>
+        Description
+        <HelpTip>
+          <p>
+            Write a short description (1-2 sentences) to explain the course
+            offering.
+          </p>
+        </HelpTip>
+        <br />
+        <textarea
+          type="text"
+          value={courseOffering.description}
+          style={(styles.input, styles.descriptionInput)}
+          onChange={e => updateCourseOffering('description', e.target.value)}
+        />
       </label>
       <label>
         Featured In Category
@@ -328,7 +344,30 @@ export default function CourseOfferingEditor(props) {
           </select>
         </label>
       ))}
-
+      <h3>Professional Learning</h3>
+      Professional Learning Program
+      <HelpTip>
+        <p>
+          Select a workshop where one can learn more about the professional
+          learning program
+        </p>
+      </HelpTip>
+      <select
+        value={courseOffering.professional_learning_program}
+        style={styles.dropdown}
+        onChange={e =>
+          updateCourseOffering('professional_learning_program', e.target.value)
+        }
+      >
+        <option value="">{translatedNoneOption}</option>
+        {Object.entries(props.professionalLearningProgramPaths).map(
+          ([key, path]) => (
+            <option key={key} value={path}>
+              {key}
+            </option>
+          )
+        )}
+      </select>
       <SaveBar
         handleSave={handleSave}
         error={error}
@@ -354,13 +393,28 @@ CourseOfferingEditor.propTypes = {
     image: PropTypes.string,
     cs_topic: PropTypes.string,
     school_subject: PropTypes.string,
-    device_compatibility: PropTypes.string
-  })
+    device_compatibility: PropTypes.string,
+    description: PropTypes.string,
+    professional_learning_program: PropTypes.string,
+  }),
+  selfPacedPLCourseOfferings: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      key: PropTypes.string,
+      display_name: PropTypes.string,
+      course_version_path: PropTypes.string,
+    })
+  ),
+  professionalLearningProgramPaths: PropTypes.objectOf(PropTypes.string),
 };
 
 const styles = {
   checkbox: {
-    margin: '0 0 0 7px'
+    margin: '0 0 0 7px',
+  },
+  descriptionInput: {
+    width: '75%',
+    height: '75px',
   },
   input: {
     width: '100%',
@@ -369,9 +423,9 @@ const styles = {
     color: '#555',
     border: '1px solid #ccc',
     borderRadius: 4,
-    margin: 0
+    margin: 0,
   },
   dropdown: {
-    margin: '0 6px'
-  }
+    margin: '0 6px',
+  },
 };

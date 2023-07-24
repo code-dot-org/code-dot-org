@@ -14,7 +14,7 @@ export default class TooltipWithIcon extends Component {
     tooltipId: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
-    includeAssessmentIcon: PropTypes.bool
+    includeAssessmentIcon: PropTypes.bool,
   };
   render() {
     const {tooltipId, icon, text, includeAssessmentIcon} = this.props;
@@ -37,13 +37,13 @@ export default class TooltipWithIcon extends Component {
 
 const styles = {
   tooltip: {
-    lineHeight: DOT_SIZE + 'px'
+    lineHeight: DOT_SIZE + 'px',
   },
   tooltipIcon: {
     paddingRight: 5,
-    paddingLeft: 5
+    paddingLeft: 5,
   },
   tooltipAssessmentIcon: {
-    paddingLeft: 5
-  }
+    paddingLeft: 5,
+  },
 };

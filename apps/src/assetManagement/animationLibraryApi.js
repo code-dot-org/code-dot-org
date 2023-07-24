@@ -2,7 +2,7 @@ import {createUuid} from '@cdo/apps/utils';
 
 export const UploadType = {
   SPRITE: 'Sprite',
-  METADATA: 'Metadata'
+  METADATA: 'Metadata',
 };
 
 /* Returns the animation manifest of either GameLab or SpriteLab in the specified locale
@@ -35,9 +35,9 @@ export function uploadDefaultListMetadata(metadata, environment) {
     {
       method: 'POST',
       headers: {
-        'content-type': 'application/json'
+        'content-type': 'application/json',
       },
-      body: JSON.stringify(metadata)
+      body: JSON.stringify(metadata),
     }
   )
     .then(response => {
@@ -100,7 +100,7 @@ export function generateAnimationMetadataForFile(fileObject) {
           metadata.name,
           '.png'
         ),
-        sourceSize: png.source_size
+        sourceSize: png.source_size,
       };
       return Promise.resolve(combinedMetadata);
     })
@@ -181,11 +181,11 @@ export function generateLevelAnimationsManifest() {
       let manifestJson = {
         '//': [
           'Animation Library Manifest',
-          'GENERATED FILE: DO NOT MODIFY DIRECTLY'
+          'GENERATED FILE: DO NOT MODIFY DIRECTLY',
         ],
         metadata: metadataNoAliases,
         categories: categoryMap,
-        aliases: aliasMap
+        aliases: aliasMap,
       };
 
       return JSON.stringify(manifestJson);
@@ -215,9 +215,9 @@ export function uploadAnimationToAnimationLibrary(destination, imageData) {
   return fetch(`/api/v1/animation-library` + destination, {
     method: 'POST',
     headers: {
-      'Content-Type': 'image/png'
+      'Content-Type': 'image/png',
     },
-    body: imageData
+    body: imageData,
   })
     .then(response => {
       if (!response.ok) {
@@ -240,9 +240,9 @@ export function uploadMetadataToAnimationLibrary(destination, jsonData) {
   return fetch(`/api/v1/animation-library` + destination, {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: jsonData
+    body: jsonData,
   })
     .then(response => {
       if (!response.ok) {

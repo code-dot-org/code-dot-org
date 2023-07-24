@@ -18,7 +18,7 @@ describe('showProjectAdmin', () => {
         hasPrivacyProfanityViolation: sinon.stub(),
         privacyProfanityDetailsEnglish: sinon.stub(),
         privacyProfanityDetailsIntl: sinon.stub(),
-        privacyProfanitySecondLanguage: sinon.stub()
+        privacyProfanitySecondLanguage: sinon.stub(),
       };
 
       rootElement = document.createElement('div');

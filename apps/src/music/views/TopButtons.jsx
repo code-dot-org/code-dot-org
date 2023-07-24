@@ -5,12 +5,14 @@ import {AnalyticsContext} from '../context';
 import moduleStyles from './topbuttons.module.scss';
 import FontAwesome from '../../templates/FontAwesome';
 import AppConfig from '../appConfig';
+import musicI18n from '../locale';
+import SaveStatus from './SaveStatus';
 
 /**
  * Renders a set of miscellaneous buttons in the top of the Music Lab workspace,
  * including Start Over, Share, Feedback, and optionally Upload Sound.
  */
-const TopButtons = ({clearCode, uploadSound}) => {
+const TopButtons = ({clearCode, uploadSound, canShowSaveStatus}) => {
   const analyticsReporter = useContext(AnalyticsContext);
   const [shareMessageShowing, setShareMessageShowing] = useState(false);
   const inputRef = useRef(null);
@@ -52,7 +54,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
         onClick={startOverClicked}
       >
         <FontAwesome icon={'refresh'} />
-        &nbsp; Start Over
+        &nbsp; {musicI18n.startOver()}
       </button>
       <button
         type="button"
@@ -60,7 +62,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
         onClick={onShareClicked}
       >
         <FontAwesome icon={'share-square-o'} />
-        &nbsp; Share
+        &nbsp; {musicI18n.share()}
         <div
           className={classNames(
             moduleStyles.shareComingSoon,
@@ -68,7 +70,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
           )}
         >
           <FontAwesome icon={'clock-o'} />
-          &nbsp; Sharing is under construction. Check back soon.
+          &nbsp; {musicI18n.shareComingSoon()}
         </div>
       </button>
       <button
@@ -77,8 +79,9 @@ const TopButtons = ({clearCode, uploadSound}) => {
         onClick={onFeedbackClicked}
       >
         <FontAwesome icon={'commenting'} />
-        &nbsp; Feedback
+        &nbsp; {musicI18n.feedback()}
       </button>
+      {canShowSaveStatus && <SaveStatus />}
       {showUploadSound && (
         <fieldset>
           <input
@@ -94,7 +97,7 @@ const TopButtons = ({clearCode, uploadSound}) => {
             id="compress_btn"
             className={moduleStyles.button}
           >
-            Upload
+            {musicI18n.upload()}
           </button>
         </fieldset>
       )}
@@ -104,7 +107,8 @@ const TopButtons = ({clearCode, uploadSound}) => {
 
 TopButtons.propTypes = {
   clearCode: PropTypes.func.isRequired,
-  uploadSound: PropTypes.func.isRequired
+  uploadSound: PropTypes.func.isRequired,
+  canShowSaveStatus: PropTypes.bool.isRequired,
 };
 
 export default TopButtons;

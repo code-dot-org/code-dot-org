@@ -12,18 +12,18 @@ import {
   playSoundsSequential,
   playSoundsRandom,
   repeatSimple2,
-  playChordAtCurrentLocationSimple2
+  playChordAtCurrentLocationSimple2,
 } from './blocks/simple2';
 import {
   newTrackAtMeasure,
   newTrackAtStart,
   newTrackOnTrigger,
   playSoundInTrack,
-  restInTrack
+  restInTrack,
 } from './blocks/tracks';
 import {
   playSoundAtCurrentLocation,
-  setCurrentLocationNextMeasure
+  setCurrentLocationNextMeasure,
 } from './blocks/simple';
 import {playSound} from './blocks/advanced';
 
@@ -52,7 +52,7 @@ const blockList = [
   newTrackOnTrigger,
   playSoundInTrack,
   restInTrack,
-  valueSample
+  valueSample,
 ];
 
 const MUSIC_BLOCKS = {};

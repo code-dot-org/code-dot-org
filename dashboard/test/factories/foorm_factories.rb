@@ -1,5 +1,3 @@
-FactoryBot.allow_class_lookup = false
-
 FactoryBot.define do
   factory :foorm_form, class: 'Foorm::Form' do
     sequence(:name) {|n| "FormName#{n}"}

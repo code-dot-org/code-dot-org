@@ -79,7 +79,7 @@ window.handleIFrameMessage = function (e) {
   ) {
     var urls = {
       docurl: encodeURIComponent(document.URL),
-      referrer: encodeURIComponent(document.referrer)
+      referrer: encodeURIComponent(document.referrer),
     };
     iframe.contentWindow.postMessage(
       JSON.stringify({type: 'urls', value: urls}),

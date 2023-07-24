@@ -14,21 +14,21 @@ exports.load = function (assetUrl, id) {
         height: 100,
         numHeadings: 36,
         numFrames: 10,
-        visible: true
+        visible: true,
       },
       smoothAnimate: true,
       consolidateTurnAndMove: true,
       linePatterns: {
         annaLine: skin.assetUrl('annaline.png'),
-        annaLine_2x: skin.assetUrl('annaline_2x.png')
+        annaLine_2x: skin.assetUrl('annaline_2x.png'),
       },
       // Used to populate the Set Pattern block
       lineStylePatternOptions: [
-        [skin.assetUrl('annaline-menuicon.png'), 'annaLine']
+        [skin.assetUrl('annaline-menuicon.png'), 'annaLine'],
       ],
       artistOptions: ['anna', 'elsa'],
       avatarAllowedScripts: ['frozen'],
-      blankAvatar: skin.assetUrl('blank.png')
+      blankAvatar: skin.assetUrl('blank.png'),
     },
 
     elsa: {
@@ -38,21 +38,21 @@ exports.load = function (assetUrl, id) {
         height: 100,
         numHeadings: 18,
         numFrames: 20,
-        visible: true
+        visible: true,
       },
       smoothAnimate: true,
       consolidateTurnAndMove: true,
       linePatterns: {
         elsaLine: skin.assetUrl('elsaline.png'),
-        elsaLine_2x: skin.assetUrl('elsaline_2x.png')
+        elsaLine_2x: skin.assetUrl('elsaline_2x.png'),
       },
       // Used to populate the Set Pattern block
       lineStylePatternOptions: [
-        [skin.assetUrl('elsaline-menuicon.png'), 'elsaLine']
+        [skin.assetUrl('elsaline-menuicon.png'), 'elsaLine'],
       ],
       artistOptions: ['anna', 'elsa'],
       avatarAllowedScripts: ['frozen'],
-      blankAvatar: skin.assetUrl('blank.png')
+      blankAvatar: skin.assetUrl('blank.png'),
     },
 
     artist: {
@@ -80,9 +80,9 @@ exports.load = function (assetUrl, id) {
         [skin.linePatterns.swirly2Menu, 'swirly2Line'],
         [skin.linePatterns.tiretrackMenu, 'tiretrackLine'],
         [skin.linePatterns.traintrackMenu, 'traintrackLine'],
-        [skin.linePatterns.waterMenu, 'waterLine']
-      ]
-    }
+        [skin.linePatterns.waterMenu, 'waterLine'],
+      ],
+    },
   };
 
   /**
@@ -120,7 +120,7 @@ exports.load = function (assetUrl, id) {
       'Unicorn',
       'Witch',
       'Wizard',
-      'Zombie'
+      'Zombie',
     ];
 
     // Miscellaneous stickers
@@ -143,7 +143,7 @@ exports.load = function (assetUrl, id) {
       'Rocket',
       'Triceratops',
       'Turtle',
-      'Zebra'
+      'Zebra',
     ];
 
     var mapping = {};
@@ -175,7 +175,7 @@ exports.load = function (assetUrl, id) {
     'smallRhombusLightBlue',
     'smallRhombusBlue',
     'smallRhombusPurple',
-    'smallRhombusMagenta'
+    'smallRhombusMagenta',
   ];
   var rhombus45degree = [
     'smallRhombusMaroon45',
@@ -193,7 +193,7 @@ exports.load = function (assetUrl, id) {
     'smallRhombusLightPurple45',
     'smallRhombusMagenta45',
     'smallRhombusLightPink45',
-    'smallRhombusGray45'
+    'smallRhombusGray45',
   ];
   var rhombus30degree = [
     'smallRhombusMaroon30',
@@ -205,20 +205,20 @@ exports.load = function (assetUrl, id) {
     'smallRhombusLightBlue30',
     'smallRhombusBlue30',
     'smallRhombusPurple30',
-    'smallRhombusMagenta30'
+    'smallRhombusMagenta30',
   ];
   var patternBlocks = [
     'hexagonYellow',
     'triangleGreen',
     'squareOrange',
-    'trapezoidRed'
+    'trapezoidRed',
   ];
 
   var allShapes = [
     ...rhombus60degree,
     ...rhombus45degree,
     ...rhombus30degree,
-    ...patternBlocks
+    ...patternBlocks,
   ];
 
   /**
@@ -250,7 +250,7 @@ exports.load = function (assetUrl, id) {
     height: 51,
     numHeadings: 180,
     numFrames: 1,
-    visible: true
+    visible: true,
   };
 
   // Get properties from config

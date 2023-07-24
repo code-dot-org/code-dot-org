@@ -10,7 +10,7 @@ const DEFAULT_PROPS = {
   onClickDownload: () => {},
   isCurrentScriptCSD: false,
   scriptName: 'Script Name',
-  exportableFeedbackData: []
+  exportableFeedbackData: [],
 };
 
 const setUp = (overrideProps = {}) => {

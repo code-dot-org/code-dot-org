@@ -3,7 +3,7 @@ import {
   dataURIToFramedBlob,
   toCanvas,
   toImage,
-  toImageData
+  toImageData,
 } from '@cdo/apps/imageUtils';
 import {assert} from 'chai';
 import expectedPng from './expected.png';

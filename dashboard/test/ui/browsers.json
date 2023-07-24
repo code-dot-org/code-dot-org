@@ -6,7 +6,7 @@
     "browserName": "chrome",
     "browserVersion": "105",
     "platformName": "Windows 10",
-    "sauce:options" : {
+    "sauce:options": {
       "screenResolution": "1280x1024",
       "extendedDebugging": true
     }
@@ -15,23 +15,23 @@
     "name": "Safari",
     "browserName": "Safari",
     "browserVersion": "14",
-    "platformName": "macOS 11.00",
-    "sauce:options": {}
+    "platformName": "macOS 11.00"
   },
   {
     "name": "Firefox",
     "browserName": "firefox",
-    "browserVersion": "79.0",
-    "platformName": "Windows 10",
-    "sauce:options": {}
+    "browserVersion": "112",
+    "platformName": "Windows 10"
   },
   {
     "name": "iPhone",
     "platformName": "iOS",
     "platformVersion": "15.4",
     "browserName": "safari",
+    "appium:deviceName": "iPhone Simulator",
+    "mobile": true,
+    "rotatable": true,
     "sauce:options": {
-      "deviceName": "iPhone Simulator",
       "deviceOrientation": "LANDSCAPE"
     }
   },
@@ -40,8 +40,10 @@
     "platformName": "iOS",
     "platformVersion": "14.5",
     "browserName": "safari",
+    "appium:deviceName": "iPad Simulator",
+    "mobile": true,
+    "rotatable": true,
     "sauce:options": {
-      "deviceName": "iPad Simulator",
       "deviceOrientation": "LANDSCAPE"
     }
   }

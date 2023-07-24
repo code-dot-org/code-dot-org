@@ -15,7 +15,7 @@ interface JavalabConsoleState {
 const initialState: JavalabConsoleState = {
   consoleLogs: [],
   isPhotoPrompterOpen: false,
-  photoPrompterPromptText: ''
+  photoPrompterPromptText: '',
 };
 
 const javalabConsoleSlice = createSlice({
@@ -44,8 +44,8 @@ const javalabConsoleSlice = createSlice({
     closePhotoPrompter(state) {
       state.isPhotoPrompterOpen = false;
       state.photoPrompterPromptText = '';
-    }
-  }
+    },
+  },
 });
 
 export const {
@@ -55,7 +55,7 @@ export const {
   appendMarkdownLog,
   clearConsoleLogs,
   openPhotoPrompter,
-  closePhotoPrompter
+  closePhotoPrompter,
 } = javalabConsoleSlice.actions;
 
 export default javalabConsoleSlice.reducer;

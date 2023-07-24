@@ -167,13 +167,13 @@ NetSimTabsComponent.prototype.render = function () {
   instructionsArea.bind('click', this.showInstructionsDialogCallback_);
 
   var rawMarkup = buildMarkup({
-    level: levelConfig
+    level: levelConfig,
   });
   var jQueryWrap = $(rawMarkup);
   this.rootDiv_.html(jQueryWrap);
 
   this.rootDiv_.find('.netsim-tabs').tabs({
-    active: levelConfig.defaultTabIndex
+    active: levelConfig.defaultTabIndex,
   });
 
   if (shouldShowTab(levelConfig, NetSimTabType.INSTRUCTIONS) && referenceArea) {
@@ -189,7 +189,7 @@ NetSimTabsComponent.prototype.render = function () {
       {
         chunkSizeChangeCallback: this.chunkSizeSliderChangeCallback_,
         bitRateChangeCallback: this.myDeviceBitRateChangeCallback_,
-        encodingChangeCallback: this.encodingChangeCallback_
+        encodingChangeCallback: this.encodingChangeCallback_,
       }
     );
   }
@@ -200,7 +200,7 @@ NetSimTabsComponent.prototype.render = function () {
       bandwidthSliderStopCallback: this.routerBandwidthSliderStopCallback_,
       memorySliderChangeCallback: this.routerMemorySliderChangeCallback_,
       memorySliderStopCallback: this.routerMemorySliderStopCallback_,
-      showRouterLogCallback: this.showRouterLogCallback_
+      showRouterLogCallback: this.showRouterLogCallback_,
     });
   }
 

@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import $ from 'jquery';
-import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -18,7 +17,6 @@ const USER_EDITABLE_SECTION_PROPS = [
   'loginType',
   'lessonExtras',
   'pairingAllowed',
-  'participantType',
   'ttsAutoplayEnabled',
   'participantType',
   'courseId',
@@ -28,7 +26,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'grades',
   'hidden',
   'restrictSection',
-  'codeReviewExpiresAt'
+  'codeReviewExpiresAt',
 ];
 
 /** @const {number} ID for a new section that has not been saved */
@@ -40,13 +38,13 @@ export const NO_SECTION = null;
 /** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/google_classrooms',
-  [OAuthSectionTypes.clever]: '/dashboardapi/clever_classrooms'
+  [OAuthSectionTypes.clever]: '/dashboardapi/clever_classrooms',
 };
 
 /** @const {Object} Map oauth section type to relative import URL. */
 const importUrlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
-  [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom'
+  [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
 };
 
 //
@@ -113,7 +111,7 @@ export const __testInterface__ = {
   IMPORT_ROSTER_FLOW_BEGIN,
   IMPORT_ROSTER_FLOW_LIST_LOADED,
   PENDING_NEW_SECTION_ID,
-  USER_EDITABLE_SECTION_PROPS
+  USER_EDITABLE_SECTION_PROPS,
 };
 
 //
@@ -121,24 +119,24 @@ export const __testInterface__ = {
 //
 export const setAuthProviders = providers => ({
   type: SET_AUTH_PROVIDERS,
-  providers
+  providers,
 });
 export const setRosterProvider = rosterProvider => ({
   type: SET_ROSTER_PROVIDER,
-  rosterProvider
+  rosterProvider,
 });
 export const setCourseOfferings = courseOfferings => ({
   type: SET_COURSE_OFFERINGS,
-  courseOfferings
+  courseOfferings,
 });
 export const setAvailableParticipantTypes = availableParticipantTypes => ({
   type: SET_AVAILABLE_PARTICIPANT_TYPES,
-  availableParticipantTypes
+  availableParticipantTypes,
 });
 export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   type: SET_STUDENT_SECTION,
   sectionId: sectionId,
-  students: studentInfo
+  students: studentInfo,
 });
 export const setPageType = pageType => ({type: SET_PAGE_TYPE, pageType});
 
@@ -146,7 +144,7 @@ export const setPageType = pageType => ({type: SET_PAGE_TYPE, pageType});
 export const setShowLockSectionField = showLockSectionField => {
   return {
     type: SET_SHOW_LOCK_SECTION_FIELD,
-    showLockSectionField
+    showLockSectionField,
   };
 };
 export const setSectionCodeReviewExpiresAt = (
@@ -156,7 +154,7 @@ export const setSectionCodeReviewExpiresAt = (
   return {
     type: SET_SECTION_CODE_REVIEW_EXPIRES_AT,
     sectionId,
-    codeReviewExpiresAt
+    codeReviewExpiresAt,
   };
 };
 
@@ -167,7 +165,7 @@ export const pageTypes = {
   scriptOverview: 'script_overview',
   courseOverview: 'course_overview',
   lessonExtras: 'lesson_extras',
-  homepage: 'homepage'
+  homepage: 'homepage',
 };
 
 /**
@@ -195,8 +193,8 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
     study_group: 'toggleSectionHidden',
     event: currentlyHidden ? 'restoreSection' : 'archiveSection',
     data_json: JSON.stringify({
-      section_id: sectionId
-    })
+      section_id: sectionId,
+    }),
   });
   return dispatch(finishEditingSection());
 };
@@ -238,10 +236,10 @@ export const assignToSection = (
           sectionId,
           unitId,
           courseId,
-          date: new Date()
+          date: new Date(),
         },
         removeNullValues
-      )
+      ),
     },
     {includeUserId: true}
   );
@@ -263,7 +261,7 @@ export const assignToSection = (
         previousCourseVersionId: section.courseVersionId,
         newUnitId: unitId,
         newCourseId: courseOfferingId,
-        newCourseVersionId: courseVersionId
+        newCourseVersionId: courseVersionId,
       });
     }
 
@@ -273,7 +271,7 @@ export const assignToSection = (
         courseId: courseId,
         courseOfferingId: courseOfferingId,
         courseVersionId: courseVersionId,
-        unitId: unitId
+        unitId: unitId,
       })
     );
     return dispatch(finishEditingSection(pageType));
@@ -295,7 +293,7 @@ export const unassignSection =
         courseId: null,
         courseOfferingId: null,
         courseVersionId: null,
-        unitId: null
+        unitId: null,
       })
     );
     firehoseClient.putRecord(
@@ -308,10 +306,10 @@ export const unassignSection =
             scriptId: initialUnitId,
             courseId: initialCourseId,
             location: location,
-            date: new Date()
+            date: new Date(),
           },
           removeNullValues
-        )
+        ),
       },
       {includeUserId: true}
     );
@@ -328,7 +326,7 @@ export const beginCreatingSection = (
   courseOfferingId,
   courseVersionId,
   unitId,
-  participantType
+  participantType,
 });
 
 /**
@@ -341,7 +339,7 @@ export const beginCreatingSection = (
 export const beginEditingSection = (sectionId = null, silent = false) => ({
   type: EDIT_SECTION_BEGIN,
   sectionId,
-  silent
+  silent,
 });
 
 /**
@@ -351,7 +349,7 @@ export const beginEditingSection = (sectionId = null, silent = false) => ({
  */
 export const editSectionProperties = props => ({
   type: EDIT_SECTION_PROPERTIES,
-  props
+  props,
 });
 
 /**
@@ -372,7 +370,7 @@ export const submitEditingSection = (dispatch, getState) => {
     url: dataUrl,
     method: httpMethod,
     contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify(serverSectionFromSection(section))
+    data: JSON.stringify(serverSectionFromSection(section)),
   });
 };
 
@@ -389,29 +387,9 @@ export const finishEditingSection = () => (dispatch, getState) => {
         dispatch({
           type: EDIT_SECTION_SUCCESS,
           sectionId: section.id,
-          serverSection: result
+          serverSection: result,
         });
         resolve(result);
-      })
-      .fail((jqXhr, status) => {
-        dispatch({type: EDIT_SECTION_FAILURE});
-        reject(status);
-      });
-  });
-};
-
-export const reloadAfterEditingSection = () => (dispatch, getState) => {
-  const state = getState().teacherSections;
-  const section = state.sectionBeingEdited;
-  return new Promise((resolve, reject) => {
-    submitEditingSection(dispatch, getState)
-      .done(result => {
-        dispatch({
-          type: EDIT_SECTION_SUCCESS,
-          sectionId: section.id,
-          serverSection: result
-        });
-        reload();
       })
       .fail((jqXhr, status) => {
         dispatch({type: EDIT_SECTION_FAILURE});
@@ -426,7 +404,7 @@ export const asyncLoadSectionData = id => dispatch => {
   let apis = [
     '/dashboardapi/sections',
     '/dashboardapi/sections/valid_course_offerings',
-    '/dashboardapi/sections/available_participant_types'
+    '/dashboardapi/sections/available_participant_types',
   ];
 
   // If section id is provided, load students for the current section.
@@ -440,7 +418,7 @@ export const asyncLoadSectionData = id => dispatch => {
         sections,
         validCourseOfferings,
         availableParticipantTypes,
-        students
+        students,
       ]) => {
         dispatch(setCourseOfferings(validCourseOfferings));
         dispatch(
@@ -503,7 +481,7 @@ export const beginImportRosterFlow = () => (dispatch, getState) => {
       .success(response => {
         dispatch({
           type: IMPORT_ROSTER_FLOW_LIST_LOADED,
-          classrooms: response.courses || []
+          classrooms: response.courses || [],
         });
         resolve();
       })
@@ -514,7 +492,7 @@ export const beginImportRosterFlow = () => (dispatch, getState) => {
         dispatch({
           type: IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED,
           status: result.status,
-          message
+          message,
         });
         reject(new Error(message));
       });
@@ -556,7 +534,7 @@ export const importOrUpdateRoster =
       .then(() =>
         dispatch({
           type: IMPORT_ROSTER_SUCCESS,
-          sectionId
+          sectionId,
         })
       );
   };
@@ -606,7 +584,7 @@ const initialState = {
   // The page where the action is occurring
   pageType: '',
   // DCDO Flag - show/hide Lock Section field
-  showLockSectionField: null
+  showLockSectionField: null,
 };
 /**
  * Generate shape for new section
@@ -634,7 +612,7 @@ function newSectionData(participantType) {
     unitId: null,
     hidden: false,
     isAssigned: undefined,
-    restrictSection: false
+    restrictSection: false,
   };
 }
 
@@ -655,28 +633,28 @@ export default function teacherSections(state = initialState, action) {
       ...state,
       providers: action.providers.map(provider =>
         mapProviderToSectionType(provider)
-      )
+      ),
     };
   }
 
   if (action.type === SET_PAGE_TYPE) {
     return {
       ...state,
-      pageType: action.pageType
+      pageType: action.pageType,
     };
   }
 
   if (action.type === SET_COURSE_OFFERINGS) {
     return {
       ...state,
-      courseOfferings: action.courseOfferings
+      courseOfferings: action.courseOfferings,
     };
   }
 
   if (action.type === SET_AVAILABLE_PARTICIPANT_TYPES) {
     return {
       ...state,
-      availableParticipantTypes: action.availableParticipantTypes
+      availableParticipantTypes: action.availableParticipantTypes,
     };
   }
 
@@ -687,7 +665,7 @@ export default function teacherSections(state = initialState, action) {
     );
     return {
       ...state,
-      selectedStudents
+      selectedStudents,
     };
   }
 
@@ -744,8 +722,8 @@ export default function teacherSections(state = initialState, action) {
       plSectionIds: plSectionIds,
       sections: {
         ...state.sections,
-        ..._.keyBy(sections, 'id')
-      }
+        ..._.keyBy(sections, 'id'),
+      },
     };
   }
 
@@ -766,7 +744,7 @@ export default function teacherSections(state = initialState, action) {
 
     return {
       ...state,
-      selectedSectionId: sectionId
+      selectedSectionId: sectionId,
     };
   }
 
@@ -781,7 +759,7 @@ export default function teacherSections(state = initialState, action) {
       sectionIds: _.without(state.sectionIds, sectionId),
       studentSectionIds: _.without(state.studentSectionIds, sectionId),
       plSectionIds: _.without(state.plSectionIds, sectionId),
-      sections: _.omit(state.sections, sectionId)
+      sections: _.omit(state.sections, sectionId),
     };
   }
 
@@ -798,9 +776,9 @@ export default function teacherSections(state = initialState, action) {
         ...state.sections,
         [sectionId]: {
           ...state.sections[sectionId],
-          hidden: !state.sections[sectionId].hidden
-        }
-      }
+          hidden: !state.sections[sectionId].hidden,
+        },
+      },
     };
   }
 
@@ -819,9 +797,9 @@ export default function teacherSections(state = initialState, action) {
           ...state.sections[sectionId],
           codeReviewExpiresAt: codeReviewExpiresAt
             ? Date.parse(codeReviewExpiresAt)
-            : null
-        }
-      }
+            : null,
+        },
+      },
     };
   }
 
@@ -843,7 +821,7 @@ export default function teacherSections(state = initialState, action) {
       initialCourseOfferingId: initialSectionData.courseOfferingId,
       initialCourseVersionId: initialSectionData.courseVersionId,
       initialLoginType: initialSectionData.loginType,
-      sectionBeingEdited: initialSectionData
+      sectionBeingEdited: initialSectionData,
     };
   }
 
@@ -863,7 +841,7 @@ export default function teacherSections(state = initialState, action) {
       initialCourseVersionId: initialSectionData.courseVersionId,
       initialLoginType: initialSectionData.loginType,
       sectionBeingEdited: initialSectionData,
-      showSectionEditDialog: !action.silent
+      showSectionEditDialog: !action.silent,
     };
   }
 
@@ -910,22 +888,22 @@ export default function teacherSections(state = initialState, action) {
         ...ttsAutoplayEnabledSettings,
         ...loginTypeSettings,
         ...gradeSettings,
-        ...action.props
-      }
+        ...action.props,
+      },
     };
   }
 
   if (action.type === EDIT_SECTION_CANCEL) {
     return {
       ...state,
-      sectionBeingEdited: null
+      sectionBeingEdited: null,
     };
   }
 
   if (action.type === EDIT_SECTION_REQUEST) {
     return {
       ...state,
-      saveInProgress: true
+      saveInProgress: true,
     };
   }
 
@@ -948,7 +926,7 @@ export default function teacherSections(state = initialState, action) {
     const newSections = _.omit(state.sections, oldSectionId);
     newSections[section.id] = {
       ...state.sections[section.id],
-      ...section
+      ...section,
     };
 
     const newStudentSectionIds = Object.values(newSections)
@@ -971,8 +949,8 @@ export default function teacherSections(state = initialState, action) {
           data_json: JSON.stringify({
             sectionId: section.id,
             initialLoginType: state.initialLoginType,
-            updatedLoginType: section.loginType
-          })
+            updatedLoginType: section.loginType,
+          }),
         },
         {includeUserId: true}
       );
@@ -981,7 +959,7 @@ export default function teacherSections(state = initialState, action) {
     let assignmentData = {
       section_id: section.id,
       section_creation_timestamp: section.createdAt,
-      page_name: state.pageType
+      page_name: state.pageType,
     };
     if (section.unitId !== state.initialUnitId) {
       assignmentData.unit_id = section.unitId;
@@ -1005,7 +983,7 @@ export default function teacherSections(state = initialState, action) {
           study: 'assignment',
           study_group: 'v1',
           event: newSection ? 'create_section' : 'edit_section_details',
-          data_json: JSON.stringify(assignmentData)
+          data_json: JSON.stringify(assignmentData),
         },
         {includeUserId: true}
       );
@@ -1022,28 +1000,28 @@ export default function teacherSections(state = initialState, action) {
       studentSectionIds: newStudentSectionIds,
       plSectionIds: newPlSectionIds,
       sectionBeingEdited: null,
-      saveInProgress: false
+      saveInProgress: false,
     };
   }
 
   if (action.type === EDIT_SECTION_FAILURE) {
     return {
       ...state,
-      saveInProgress: false
+      saveInProgress: false,
     };
   }
 
   if (action.type === ASYNC_LOAD_BEGIN) {
     return {
       ...state,
-      asyncLoadComplete: false
+      asyncLoadComplete: false,
     };
   }
 
   if (action.type === ASYNC_LOAD_END) {
     return {
       ...state,
-      asyncLoadComplete: true
+      asyncLoadComplete: true,
     };
   }
 
@@ -1053,7 +1031,7 @@ export default function teacherSections(state = initialState, action) {
     if (OAuthSectionTypes[action.rosterProvider]) {
       return {
         ...state,
-        rosterProvider: action.rosterProvider
+        rosterProvider: action.rosterProvider,
       };
     }
   }
@@ -1066,14 +1044,14 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       isRosterDialogOpen: true,
-      classrooms: null
+      classrooms: null,
     };
   }
 
   if (action.type === IMPORT_ROSTER_FLOW_LIST_LOADED) {
     return {
       ...state,
-      classrooms: action.classrooms.slice()
+      classrooms: action.classrooms.slice(),
     };
   }
 
@@ -1082,8 +1060,8 @@ export default function teacherSections(state = initialState, action) {
       ...state,
       loadError: {
         status: action.status,
-        message: action.message
-      }
+        message: action.message,
+      },
     };
   }
 
@@ -1092,14 +1070,14 @@ export default function teacherSections(state = initialState, action) {
       ...state,
       isRosterDialogOpen: false,
       rosterProvider: null,
-      classrooms: null
+      classrooms: null,
     };
   }
 
   if (action.type === IMPORT_ROSTER_REQUEST) {
     return {
       ...state,
-      classrooms: null
+      classrooms: null,
     };
   }
 
@@ -1110,8 +1088,8 @@ export default function teacherSections(state = initialState, action) {
       sectionBeingEdited: {
         ...state.sections[action.sectionId],
         // explicitly unhide section after importing
-        hidden: false
-      }
+        hidden: false,
+      },
     };
   }
 
@@ -1119,7 +1097,7 @@ export default function teacherSections(state = initialState, action) {
   if (action.type === SET_SHOW_LOCK_SECTION_FIELD) {
     return {
       ...state,
-      showLockSectionField: action.showLockSectionField
+      showLockSectionField: action.showLockSectionField,
     };
   }
 
@@ -1178,54 +1156,6 @@ export function assignedCourseOffering(state) {
   return courseOfferings[sectionBeingEdited?.courseOfferingId];
 }
 
-function assignedUnit(state) {
-  const {sectionBeingEdited, courseOfferings} = getRoot(state);
-
-  let assignedUnit = null;
-  const courseVersion =
-    courseOfferings[sectionBeingEdited.courseOfferingId]?.course_versions[
-      sectionBeingEdited.courseVersionId
-    ];
-
-  if (courseVersion) {
-    if (sectionBeingEdited.unitId) {
-      assignedUnit = courseVersion.units[sectionBeingEdited.unitId];
-    } else if (courseVersion.type === 'Unit') {
-      assignedUnit = Object.values(courseVersion.units)[0];
-    }
-  }
-
-  return assignedUnit;
-}
-
-export function assignedUnitName(state) {
-  const {sectionBeingEdited} = getRoot(state);
-  if (!sectionBeingEdited) {
-    return '';
-  }
-  const assignment = assignedUnit(state);
-  return assignment ? assignment.name : '';
-}
-
-export function assignedUnitLessonExtrasAvailable(state) {
-  const assignment = assignedUnit(state);
-  return assignment ? assignment.lesson_extras_available : false;
-}
-
-export function assignedUnitTextToSpeechEnabled(state) {
-  const {sectionBeingEdited} = getRoot(state);
-  if (!sectionBeingEdited) {
-    return false;
-  }
-  const assignment = assignedUnit(state);
-  return assignment ? assignment.text_to_speech_enabled : false;
-}
-
-export function assignedUnitRequiresVerifiedInstructor(state) {
-  const assignment = assignedUnit(state);
-  return assignment ? assignment.requires_verified_instructor : false;
-}
-
 export function getVisibleSections(state) {
   const allSections = Object.values(getRoot(state).sections);
   return sortSectionsList(allSections || []).filter(section => !section.hidden);
@@ -1249,10 +1179,10 @@ export function getSectionRows(state, sectionIds) {
       'participantType',
       'grades',
       'providerManaged',
-      'hidden'
+      'hidden',
     ]),
     assignmentNames: assignmentNames(courseOfferings, sections[id]),
-    assignmentPaths: assignmentPaths(courseOfferings, sections[id])
+    assignmentPaths: assignmentPaths(courseOfferings, sections[id]),
   }));
 }
 
@@ -1290,7 +1220,7 @@ export const sectionFromServerSection = serverSection => ({
     ? Date.parse(serverSection.code_review_expires_at)
     : null,
   isAssignedCSA: serverSection.is_assigned_csa,
-  participantType: serverSection.participant_type
+  participantType: serverSection.participant_type,
 });
 
 /**
@@ -1301,10 +1231,12 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   sectionId: sectionId,
   id: serverStudent.id,
   name: serverStudent.name,
+  familyName: serverStudent.family_name,
   sharingDisabled: serverStudent.sharing_disabled,
   secretPicturePath: serverStudent.secret_picture_path,
   secretPictureName: serverStudent.secret_picture_name,
-  secretWords: serverStudent.secret_words
+  secretWords: serverStudent.secret_words,
+  userType: serverStudent.user_type,
 });
 
 /**
@@ -1327,7 +1259,7 @@ export function serverSectionFromSection(section) {
     unit_id: section.unitId,
     course_id: section.courseId,
     restrict_section: section.restrictSection,
-    participant_type: section.participantType
+    participant_type: section.participantType,
   };
 }
 
@@ -1380,17 +1312,6 @@ export function isAddingSection(state) {
 }
 
 /**
- * Ask whether the user is currently editing an existing section using the
- * Edit Section dialog.
- */
-export function isEditingSection(state) {
-  return (
-    !!(state.sectionBeingEdited && state.sectionBeingEdited.id >= 0) &&
-    state.showSectionEditDialog
-  );
-}
-
-/**
  * @param {object} state - state.teacherSections in redux tree
  * Extract a list of name/id for each section
  */
@@ -1398,7 +1319,7 @@ export function sectionsNameAndId(state) {
   return sortSectionsList(
     state.sectionIds.map(id => ({
       id: parseInt(id, 10),
-      name: state.sections[id].name
+      name: state.sections[id].name,
     }))
   );
 }
@@ -1419,7 +1340,7 @@ export function sectionsForDropdown(
       (courseOfferingId !== null &&
         section.courseOfferingId === courseOfferingId &&
         courseVersionId !== null &&
-        section.courseVersionId === courseVersionId)
+        section.courseVersionId === courseVersionId),
   }));
 }
 
@@ -1473,7 +1394,8 @@ export const studentShape = PropTypes.shape({
   sectionId: PropTypes.number,
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
+  familyName: PropTypes.string,
   sharingDisabled: PropTypes.bool,
   secretPicturePath: PropTypes.string,
-  secretWords: PropTypes.string
+  secretWords: PropTypes.string,
 });

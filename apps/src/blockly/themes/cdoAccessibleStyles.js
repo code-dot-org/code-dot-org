@@ -22,7 +22,7 @@ export const protanopiaBlockStyles = {
   world_blocks: {colourPrimary: '#460B70'},
   behavior_blocks: {colourPrimary: '#005745'},
   location_blocks: {colourPrimary: '#D80D7B'},
-  lab_blocks: {colourPrimary: '#5A0A33'}
+  lab_blocks: {colourPrimary: '#5A0A33'},
 };
 export const deuteranopiaBlockStyles = {
   default: {colourPrimary: '#009175'},
@@ -39,7 +39,7 @@ export const deuteranopiaBlockStyles = {
   world_blocks: {colourPrimary: '#460B70'},
   behavior_blocks: {colourPrimary: '#003D30'},
   location_blocks: {colourPrimary: '#5F0914'},
-  lab_blocks: {colourPrimary: '#ED0DFD'}
+  lab_blocks: {colourPrimary: '#ED0DFD'},
 };
 export const tritanopiaBlockStyles = {
   default: {colourPrimary: '#009175'},
@@ -56,5 +56,5 @@ export const tritanopiaBlockStyles = {
   world_blocks: {colourPrimary: '#8E06CD'},
   behavior_blocks: {colourPrimary: '#5A0A33'},
   location_blocks: {colourPrimary: '#ED0DFD'},
-  lab_blocks: {colourPrimary: '#B40AFC'}
+  lab_blocks: {colourPrimary: '#B40AFC'},
 };

@@ -4,7 +4,7 @@ var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
 // Simple console that only has 'log' method
 var oldConsole = function () {
   var that = {
-    transcript: ''
+    transcript: '',
   };
 
   that.log = function (msg) {

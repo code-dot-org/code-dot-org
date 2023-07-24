@@ -10,8 +10,8 @@ export default class SessionTime extends React.Component {
   static propTypes = {
     session: PropTypes.shape({
       start: PropTypes.string.isRequired,
-      end: PropTypes.string.isRequired
-    }).isRequired
+      end: PropTypes.string.isRequired,
+    }).isRequired,
   };
 
   render() {

@@ -8,7 +8,7 @@ import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMar
 import {
   GameController,
   EventType,
-  utils as CraftUtils
+  utils as CraftUtils,
 } from '@code-dot-org/craft';
 import {handlePlayerSelection} from '@cdo/apps/craft/utils';
 import dom from '@cdo/apps/dom';
@@ -41,7 +41,7 @@ var characters = {
     smallStaticAvatar:
       MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Neutral.png',
     failureAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Fail.png',
-    winAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Win.png'
+    winAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Steve_Win.png',
   },
   Alex: {
     name: 'Alex',
@@ -49,8 +49,8 @@ var characters = {
     smallStaticAvatar:
       MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Neutral.png',
     failureAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Fail.png',
-    winAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Win.png'
-  }
+    winAvatar: MEDIA_URL + 'Sliced_Parts/Pop_Up_Character_Alex_Win.png',
+  },
 };
 
 var interfaceImages = {
@@ -66,7 +66,7 @@ var interfaceImages = {
     MEDIA_URL + 'Sliced_Parts/Reset_Button_Up_Slice.png',
     MEDIA_URL + 'Sliced_Parts/MC_Reset_Arrow_Icon.png',
     MEDIA_URL + 'Sliced_Parts/Reset_Button_Down_Slice.png',
-    MEDIA_URL + 'Sliced_Parts/Callout_Tail.png'
+    MEDIA_URL + 'Sliced_Parts/Callout_Tail.png',
   ],
   1: [
     MEDIA_URL + 'Sliced_Parts/Steve_Character_Select.png',
@@ -74,7 +74,7 @@ var interfaceImages = {
     characters.Steve.staticAvatar,
     characters.Steve.smallStaticAvatar,
     characters.Alex.staticAvatar,
-    characters.Alex.smallStaticAvatar
+    characters.Alex.smallStaticAvatar,
   ],
   2: [
     // TODO(bjordan): find different pre-load point for feedback images,
@@ -82,13 +82,13 @@ var interfaceImages = {
     characters.Alex.winAvatar,
     characters.Steve.winAvatar,
     characters.Alex.failureAvatar,
-    characters.Steve.failureAvatar
+    characters.Steve.failureAvatar,
   ],
   6: [
     MEDIA_URL + 'Sliced_Parts/House_Option_A_v3.png',
     MEDIA_URL + 'Sliced_Parts/House_Option_B_v3.png',
-    MEDIA_URL + 'Sliced_Parts/House_Option_C_v3.png'
-  ]
+    MEDIA_URL + 'Sliced_Parts/House_Option_C_v3.png',
+  ],
 };
 
 var MUSIC_METADATA = [
@@ -98,7 +98,7 @@ var MUSIC_METADATA = [
   {volume: 1, hasOgg: true, name: 'vignette4-intro'},
   {volume: 1, hasOgg: true, name: 'vignette5-shortpiano'},
   {volume: 1, hasOgg: true, name: 'vignette7-funky-chirps-short'},
-  {volume: 1, hasOgg: true, name: 'vignette8-free-play'}
+  {volume: 1, hasOgg: true, name: 'vignette8-free-play'},
 ];
 
 var CHARACTER_STEVE = 'Steve';
@@ -214,7 +214,7 @@ Craft.init = function (config) {
       Object.assign({}, config, {
         forceInsertTopBlock: 'when_run',
         appStrings: {
-          generatedCodeDescription: craftMsg.generatedCodeDescription()
+          generatedCodeDescription: craftMsg.generatedCodeDescription(),
         },
         loadAudio: function () {},
         afterInject: function () {
@@ -228,7 +228,7 @@ Craft.init = function (config) {
             assetRoot: Craft.skin.assetUrl(''),
             audioPlayer: {
               register: studioApp().registerAudio.bind(studioApp()),
-              play: studioApp().playAudio.bind(studioApp())
+              play: studioApp().playAudio.bind(studioApp()),
             },
             debug: false,
             customSlowMotion: config.level.isTestLevel
@@ -248,7 +248,7 @@ Craft.init = function (config) {
             },
             earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(
               levelConfig.puzzle_number
-            )
+            ),
           });
 
           if (!config.level.showPopupOnLoad) {
@@ -274,8 +274,8 @@ Craft.init = function (config) {
         },
         twitter: {
           text: 'Share on Twitter',
-          hashtag: 'Craft'
-        }
+          hashtag: 'Craft',
+        },
       })
     );
 
@@ -307,7 +307,7 @@ Craft.init = function (config) {
 
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
-    isMinecraft: true
+    isMinecraft: true,
   });
 
   ReactDOM.render(
@@ -383,7 +383,7 @@ Craft.initializeAppLevel = function (levelConfig) {
 
   var levelAssetPacks = {
     beforeLoad: Craft.minAssetsForLevelWithCharacter(levelConfig.puzzle_number),
-    afterLoad: Craft.afterLoadAssetsForLevel(levelConfig.puzzle_number)
+    afterLoad: Craft.afterLoadAssetsForLevel(levelConfig.puzzle_number),
   };
 
   Craft.gameController.loadLevel({
@@ -407,13 +407,13 @@ Craft.initializeAppLevel = function (levelConfig) {
         ? [levelConfig.gridWidth, levelConfig.gridHeight]
         : null,
     // eslint-disable-next-line no-eval
-    verificationFunction: eval('[' + levelConfig.verificationFunction + ']')[0] // TODO(bjordan): add to utils
+    verificationFunction: eval('[' + levelConfig.verificationFunction + ']')[0], // TODO(bjordan): add to utils
   });
 };
 
 Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
   return Craft.minAssetsForLevelNumber(levelNumber).concat([
-    Craft.characterAssetPackName(Craft.getCurrentCharacter())
+    Craft.characterAssetPackName(Craft.getCurrentCharacter()),
   ]);
 };
 
@@ -575,7 +575,7 @@ Craft.executeUserCode = function () {
     },
     turnRight: function (callback) {
       appCodeOrgAPI.turnRight(null, 'Player', resume(callback));
-    }
+    },
   };
 
   // Run user code.
@@ -585,7 +585,7 @@ Craft.executeUserCode = function () {
     code,
     {
       console: {
-        log: console.log
+        log: console.log,
       },
       ...asyncMethods,
       api: appCodeOrgAPI,
@@ -612,10 +612,10 @@ Craft.executeUserCode = function () {
           .getIsMiniblock(),
       isFinished: () =>
         Craft.gameController.levelModel.isFailed() ||
-        Craft.gameController.levelModel.isSolved()
+        Craft.gameController.levelModel.isSolved(),
     },
     {
-      asyncFunctionList: Object.values(asyncMethods)
+      asyncFunctionList: Object.values(asyncMethods),
     }
   );
 
@@ -673,17 +673,17 @@ Craft.reportResult = function (success) {
         appStrings: {
           reinfFeedbackMsg: craftMsg.reinfFeedbackMsg(),
           nextLevelMsg: craftMsg.nextLevelMsg({
-            puzzleNumber: Craft.initialConfig.level.puzzle_number
+            puzzleNumber: Craft.initialConfig.level.puzzle_number,
           }),
           tooManyBlocksFailMsgFunction: craftMsg.tooManyBlocksFail,
-          generatedCodeDescription: craftMsg.generatedCodeDescription()
+          generatedCodeDescription: craftMsg.generatedCodeDescription(),
         },
         feedbackImage: image,
         showingSharing: Craft.initialConfig.level.freePlay,
         saveToProjectGallery: true,
-        disableSaveToGallery: !isSignedIn
+        disableSaveToGallery: !isSignedIn,
       });
-    }
+    },
   });
 };
 

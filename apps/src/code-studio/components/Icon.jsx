@@ -6,7 +6,7 @@ import React from 'react';
  */
 export default class Icon extends React.Component {
   static propTypes = {
-    iconId: PropTypes.string.isRequired
+    iconId: PropTypes.string.isRequired,
   };
 
   render() {
@@ -15,8 +15,8 @@ export default class Icon extends React.Component {
         float: 'left',
         fontSize: '24px',
         width: '32px',
-        textAlign: 'center'
-      }
+        textAlign: 'center',
+      },
     };
 
     return <i className={'fa fa-' + this.props.iconId} style={styles.root} />;

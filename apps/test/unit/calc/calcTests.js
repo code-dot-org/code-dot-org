@@ -121,7 +121,7 @@ describe('evaluateResults_/evaluateFunction_', function () {
         [],
         new ExpressionNode('+', [
           new ExpressionNode('f', [2]),
-          new ExpressionNode('yvar')
+          new ExpressionNode('yvar'),
         ])
       )
     );

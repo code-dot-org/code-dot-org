@@ -10,10 +10,10 @@ describe('getTableNameFromColumnSocket', () => {
           next: {
             type: 'text',
             // The value in the socket has an extra set of double quotes
-            value: `"${tableName}"`
-          }
-        }
-      }
+            value: `"${tableName}"`,
+          },
+        },
+      },
     };
   };
   it('gets the table name from the socket', () => {

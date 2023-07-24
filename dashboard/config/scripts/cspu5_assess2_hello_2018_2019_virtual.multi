@@ -51,3 +51,5 @@ Going through the code line by line:
 * Inside the else statement, since the length of hello is not less than 3, we go into the else statement
 * Since the word length is not greater than 6, we go into the else statement where the code displays "I have never heard that before." in the console
 MARKDOWN
+
+allow_multiple_attempts true

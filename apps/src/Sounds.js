@@ -1,4 +1,3 @@
-/* global AudioContext */
 import Sound from './Sound';
 import _ from 'lodash';
 

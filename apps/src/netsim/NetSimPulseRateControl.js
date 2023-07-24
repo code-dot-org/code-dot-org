@@ -26,7 +26,7 @@ var NetSimPulseRateControl = (module.exports = function (
     value: initialValue,
     min: 0.5,
     max: 5.0,
-    step: -0.25
+    step: -0.25,
   });
 
   // Auto-render, unlike our base class

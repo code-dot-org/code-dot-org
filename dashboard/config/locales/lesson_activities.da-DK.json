@@ -2,74 +2,1244 @@
   "da-DK": {
     "data": {
       "lesson_activities": {
-        "35dfee9b-2785-47f9-93fd-9b3177d68ba6": {
-          "name": "Opvarmning"
-        },
-        "372347a4-5034-4888-9232-160ad727c83d": {
-          "name": "Opvarmning"
-        },
-        "b90a8b9e-d5d5-4cf5-899c-f0155b34afca": {
-          "name": "Opvarmning"
-        },
-        "c53a1348-2816-4c38-9417-92561d0bca19": {
-          "name": "Opvarmning"
-        },
-        "a653c76e-8536-4e82-adad-98306fc15f07": {
-          "name": "Opvarmning"
-        },
-        "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
-          "name": "Aktivitet"
-        },
-        "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf": {
-          "name": "Afslutning"
-        },
-        "26cd3c8b-1ae7-4fd3-87c2-12cf2612d677": {
-          "name": "Opvarmning"
-        },
-        "a026407c-221b-4f0a-a88d-ec29365ee5fe": {
-          "name": "Opvarmning"
-        },
-        "f4670c8c-98ec-47d0-b458-02a96f130b76": {
-          "name": "Opvarmning"
-        },
-        "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685": {
-          "name": "Aktivitet"
-        },
-        "ad24912f-a30c-4821-83a5-77e20997a044": {
-          "name": "Opvarmning"
-        },
-        "8b8d6959-c861-4474-950b-b097aaa9fae3": {
-          "name": "Aktivitet"
-        },
-        "e746d53a-16b6-4748-98ce-e04ed834264b": {
-          "name": "Afslutning"
-        },
-        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
-          "name": "Opvarmning"
-        },
-        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
+        "2ca3abdd-710e-49b4-9393-9c11a00308a3": {
           "name": ""
         },
-        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+        "1fe068b8-1da2-4611-b839-90992a1a77a7": {
           "name": ""
         },
-        "05180d31-d1ff-422e-8227-69f7d07884a6": {
+        "fb145498-9073-4bd2-a031-7808b50a3efa": {
+          "name": ""
+        },
+        "618d99a5-1be4-469b-8e5b-196023cca77e": {
+          "name": ""
+        },
+        "592e1014-6ce0-4f0e-9904-6e8610c536fb": {
+          "name": ""
+        },
+        "601367d1-a711-45ca-8129-5e0b39472088": {
+          "name": ""
+        },
+        "2079060a-d680-4da6-8bc5-c21c71c455de": {
+          "name": ""
+        },
+        "320cb4e7-1eb9-4510-bf0c-96498c7d9b59": {
+          "name": ""
+        },
+        "2f22bd22-5f78-444f-a3a5-7890b0d0a247": {
+          "name": ""
+        },
+        "7f5019c8-e89b-45d8-9048-2180d5e9a24f": {
+          "name": ""
+        },
+        "60b5a902-ec2e-4d3d-8172-c6e6c439bc2c": {
+          "name": ""
+        },
+        "899fd6a9-1214-43ec-a159-77c421de2c8a": {
+          "name": ""
+        },
+        "59cec226-923d-4712-8e8f-799b398e4365": {
+          "name": ""
+        },
+        "9af106d8-4c2a-4a7f-9443-efb869f46042": {
+          "name": ""
+        },
+        "c1487633-6ce6-4812-9d07-beed7f582215": {
+          "name": ""
+        },
+        "5aa154dd-1f39-4e03-b144-df04b4703180": {
+          "name": ""
+        },
+        "22d59daf-926a-4ff1-87d9-d3dfec2f1ef4": {
+          "name": ""
+        },
+        "c5959823-4993-4b52-a1eb-4810fbb8dab2": {
+          "name": ""
+        },
+        "baa0c795-4461-4af2-8397-9833219bae88": {
+          "name": ""
+        },
+        "2c1ce9f4-d65a-4020-b7ed-e4da0dc49e7b": {
+          "name": ""
+        },
+        "61dcaa29-1d32-48a9-87b3-4873c4eeec80": {
+          "name": ""
+        },
+        "252f7911-9519-495d-af6d-71a1dd1155df": {
+          "name": ""
+        },
+        "bd5f5260-8e13-4655-9302-a7405ceebc84": {
+          "name": ""
+        },
+        "9b28f9fb-485d-471f-ab65-c845d26516b1": {
+          "name": ""
+        },
+        "3c2debf5-2b7b-43a9-b8bf-7462c01c6068": {
           "name": "Opvarmning"
         },
-        "d81d8eed-09d3-4cf4-8860-c555f8c9bd8e": {
+        "b58f7f0f-78a4-4965-8f0d-9512076d5e0f": {
+          "name": "Aktivitet"
+        },
+        "135ce2c3-2a89-400c-a42e-4e8b71e2a309": {
           "name": "Opvarmning"
         },
-        "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
+        "675f7979-4687-4193-bd1e-10332a1ac050": {
           "name": "Aktivitet"
         },
-        "82dec89b-f375-4238-a251-ffae17c2dfd1": {
-          "name": "Aktivitet"
-        },
-        "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0": {
+        "a80e7362-2c08-40a7-9c59-b0d89cf1df88": {
           "name": "Opvarmning"
         },
-        "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
+        "c8d05b47-5ef6-429d-8162-74d7c1198428": {
           "name": "Aktivitet"
+        },
+        "17fde997-cb09-459a-a1fb-8e8d9a582343": {
+          "name": "Opvarmning"
+        },
+        "9612f586-66a9-4418-8a79-40080b796a76": {
+          "name": "Aktivitet"
+        },
+        "2329539a-1db5-45ec-b998-3d2f32f6b03c": {
+          "name": "Opvarmning"
+        },
+        "004e7885-e515-4aa8-b5b4-230b884cb6b8": {
+          "name": "Aktivitet"
+        },
+        "05118f86-6a73-4845-98b1-8ae7b80a3548": {
+          "name": "Opvarmning"
+        },
+        "a8aae27a-c021-4027-8ce0-37a888ec37f5": {
+          "name": "Aktivitet"
+        },
+        "4046b95d-cc3b-4913-ad2f-591fae47b6a4": {
+          "name": "Opvarmning"
+        },
+        "185f50c6-2c50-4650-91f6-f061d1051c91": {
+          "name": "Aktivitet"
+        },
+        "0b410a5f-fa45-4bac-a573-be593612cb48": {
+          "name": "Opvarmning"
+        },
+        "faf4b5ae-838a-4a44-bfe5-9450699ab59f": {
+          "name": "Aktivitet"
+        },
+        "6c10e88f-a232-4ac7-91cb-97ff2bc7d461": {
+          "name": "Opvarmning"
+        },
+        "a6b60e0a-6bb5-4967-bc4c-eabd863ab97c": {
+          "name": "Aktivitet"
+        },
+        "2b979bba-aad6-49d0-a32a-d436d4288649": {
+          "name": "Opvarmning"
+        },
+        "98ffa01e-f262-4df2-bcca-a7f669b80fec": {
+          "name": "Aktivitet"
+        },
+        "747f358d-231e-4d8e-9f58-ac2a57daa0cf": {
+          "name": "Opvarmning"
+        },
+        "fd95bfe8-a008-4994-a874-ff3f1ba81d58": {
+          "name": "Aktivitet"
+        },
+        "37d45c14-f225-4476-a638-7c7b11953ca1": {
+          "name": "Opvarmning"
+        },
+        "0e95e394-2a11-4fab-908d-ed712cd9f6b0": {
+          "name": "Aktivitet"
+        },
+        "759e83e6-0f30-4645-8966-a6feb2298480": {
+          "name": "Opvarmning"
+        },
+        "f7eebe16-f2a3-4e47-b558-a584b1bb2d0c": {
+          "name": "Aktivitet"
+        },
+        "a0381dd6-760a-46a9-9217-7e7744252d97": {
+          "name": "Opvarmning"
+        },
+        "94d4f5a6-67f3-4e3b-96e6-1c8eeb6a0bf3": {
+          "name": "Aktivitet"
+        },
+        "a0692a63-008e-4013-9089-9f9c9b22d67c": {
+          "name": "Opvarmning"
+        },
+        "53d85fa1-fecf-43b6-83f0-bef5454c41ed": {
+          "name": "Aktivitet"
+        },
+        "5ea39814-570e-4b27-a399-fe1e3f197d77": {
+          "name": "Opvarmning"
+        },
+        "c3347e87-c7d1-4002-aa31-a53dd8deee41": {
+          "name": "Aktivitet"
+        },
+        "ff0f61fd-a59d-4c4b-aae7-ad0c35798747": {
+          "name": "Opvarmning"
+        },
+        "f2b936fa-d72a-4aa3-a4d8-c1f34ab3aa14": {
+          "name": "Aktivitet"
+        },
+        "13fad4d8-f6df-4655-9054-9fdb847371db": {
+          "name": "Opvarmning"
+        },
+        "03d57f25-1cca-49af-8487-43c3a7efceb8": {
+          "name": "Aktivitet"
+        },
+        "2882d381-78b9-4874-8f84-6b9e4c251861": {
+          "name": "Opvarmning"
+        },
+        "9d2f6fef-3722-429e-b4c1-f6d1103c942b": {
+          "name": "Aktivitet"
+        },
+        "479d0cbe-6860-44be-bd76-9d7e266e0785": {
+          "name": "Opvarmning"
+        },
+        "9982617c-045f-447f-8f83-522ea617c3b9": {
+          "name": "Aktivitet"
+        },
+        "d8c9fbdb-b731-44f3-aa89-3bfd07111678": {
+          "name": "Opvarmning"
+        },
+        "87977467-a47d-46de-90b9-df606358da99": {
+          "name": "Aktivitet"
+        },
+        "cb8113ad-e18f-49a9-9cb5-bfb45ee43bc4": {
+          "name": "Opvarmning"
+        },
+        "60f3718d-0319-4213-a83d-3ce3cb6bdd80": {
+          "name": "Aktivitet"
+        },
+        "17a16dd3-54c2-4e6a-b6cf-f6bbb3394f62": {
+          "name": "Opvarmning"
+        },
+        "b3d7133e-335d-4c28-98d8-a61e8fecaab5": {
+          "name": "Aktivitet"
+        },
+        "54db6e45-9f93-4f70-aef0-f2820b64ad6d": {
+          "name": "Opvarmning"
+        },
+        "481b15da-1d94-404a-859d-31a4cfe544ef": {
+          "name": "Opvarmning"
+        },
+        "d6982573-b0dc-4c36-a400-b426cb43e2b4": {
+          "name": "Aktivitet"
+        },
+        "ff6415fc-9140-4824-ac75-30b80fff14ce": {
+          "name": "Opvarmning"
+        },
+        "50301e64-0051-4071-ab27-c0f0eb834ca5": {
+          "name": "Aktivitet"
+        },
+        "d0d7583f-c507-4ad5-92fa-0dff5d463423": {
+          "name": "Opvarmning"
+        },
+        "d5dd115f-dd41-4a16-b59f-0f77bb79ed00": {
+          "name": "Aktivitet"
+        },
+        "0e81302e-2d3e-4a15-a0be-8b8efd6c082f": {
+          "name": "Opvarmning"
+        },
+        "dd80250a-acb3-4fe7-a9b3-3703faad40ce": {
+          "name": "Aktivitet"
+        },
+        "ba30039c-8c54-4e5a-a810-18052eac7d45": {
+          "name": "Opvarmning"
+        },
+        "54106bc6-dce5-43e9-965a-07567d1856dc": {
+          "name": "Aktivitet"
+        },
+        "6fed748d-07a5-4be9-a535-2a1bd073cbd5": {
+          "name": "Opvarmning"
+        },
+        "8d3448c6-d7e5-44f9-8b60-e207f0026848": {
+          "name": "Aktivitet"
+        },
+        "ed6098ff-6be9-40e7-838e-eef99d12259b": {
+          "name": "Opvarmning"
+        },
+        "71440e94-c031-42dd-a79d-3f8cb5056b9f": {
+          "name": "Aktivitet"
+        },
+        "0051624b-1122-464c-a805-9dfd4e8afb4c": {
+          "name": "Opvarmning"
+        },
+        "12d9a87a-588e-43d1-b12d-ad4b83414276": {
+          "name": "Aktivitet"
+        },
+        "3a252e7c-c299-41f2-8617-a6b165dfd91f": {
+          "name": "Opvarmning"
+        },
+        "9c7bec47-be70-4024-a4f2-21f687434008": {
+          "name": "Aktivitet"
+        },
+        "5994929e-9d47-4037-9bf0-50728d56d31d": {
+          "name": "Opvarmning"
+        },
+        "9ca8c23c-8a83-49ad-8730-a9dbf170d403": {
+          "name": "Opvarmning"
+        },
+        "ab1c7be9-2338-4d6e-9e1e-bc8bf3588309": {
+          "name": "Aktivitet"
+        },
+        "5f4ab37a-26cb-4570-9e78-2a1a7ce16e21": {
+          "name": "Opvarmning"
+        },
+        "5c0c8ace-b8ec-4ea9-8e2a-6e3b55a93e17": {
+          "name": "Aktivitet"
+        },
+        "fa7bb816-68d0-4964-a4c9-acf09377edc3": {
+          "name": "Opvarmning"
+        },
+        "d72bfe99-62ed-4a91-87e0-27d873cc3aa8": {
+          "name": "Aktivitet"
+        },
+        "7e77a0b3-3a58-4d8d-9efa-b796c1496bde": {
+          "name": "Opvarmning"
+        },
+        "20458bdc-a944-45dd-b4a5-ddc0acf2a104": {
+          "name": "Aktivitet"
+        },
+        "fa1d9228-1d94-46f9-8a49-d075d82546d9": {
+          "name": "Opvarmning"
+        },
+        "b2692599-66de-4bb5-aeb5-c63a06dd7040": {
+          "name": "Aktivitet"
+        },
+        "3cca2572-607f-4925-8b36-6cf02506c1b6": {
+          "name": "Opvarmning"
+        },
+        "752eddc2-eb93-48e1-90f0-19932c4f53cd": {
+          "name": "Aktivitet"
+        },
+        "936100bf-97fb-4931-84be-dda8766c0ec4": {
+          "name": "Opvarmning"
+        },
+        "9a78dce2-0812-414f-8c20-1728b4ff1de2": {
+          "name": "Aktivitet"
+        },
+        "c1ba8c1a-11db-4139-8f1c-dfebadfdb0df": {
+          "name": "Opvarmning"
+        },
+        "a2816f13-47a2-43e5-bbfa-0e7d57301037": {
+          "name": "Aktivitet"
+        },
+        "5fdd8ca9-e42d-49ff-9edf-d9cc7c935d9e": {
+          "name": "Opvarmning"
+        },
+        "2e5b6973-dcd9-405c-958d-2366095f4375": {
+          "name": "Aktivitet"
+        },
+        "6dfd29b9-13c7-4603-989a-bbeecf4800ff": {
+          "name": "Opvarmning"
+        },
+        "2edac65a-ce15-4b8c-afc8-a2faebdeb5f4": {
+          "name": "Aktivitet"
+        },
+        "e0b108a8-9649-4dbe-81b2-18f26ef90572": {
+          "name": "Opvarmning"
+        },
+        "c4cdf9ba-b683-4025-bc79-a6e72c0d4cf3": {
+          "name": "Aktivitet"
+        },
+        "434c6d86-9182-4098-bdf9-a778a50a078a": {
+          "name": "Opvarmning"
+        },
+        "81d5093b-fe94-4257-bc54-ca5311532cdc": {
+          "name": "Aktivitet"
+        },
+        "f34a570f-40d4-4d59-a68b-73775272bd4c": {
+          "name": "Opvarmning"
+        },
+        "e22dd0d5-97b3-4829-9d90-3a213360c254": {
+          "name": "Aktivitet"
+        },
+        "bec6d0f0-443d-4368-aa3e-6ff205f0524d": {
+          "name": "Opvarmning"
+        },
+        "f664c4cd-edcd-4afe-b5e6-5e2902ae866f": {
+          "name": "Aktivitet"
+        },
+        "e9f7c2c0-864d-48ee-b321-8d5f9be28800": {
+          "name": "Opvarmning"
+        },
+        "d7b339c7-1053-4301-bba3-6c5befbc61fe": {
+          "name": "Aktivitet"
+        },
+        "7d4b68b8-c0ed-439b-996f-a3f992dc9824": {
+          "name": "Opvarmning"
+        },
+        "06f944ce-4a81-48b5-a87d-96072d1bfa7b": {
+          "name": "Aktivitet"
+        },
+        "b73c5968-42c4-4b4c-ac51-a6694f99c29b": {
+          "name": "Opvarmning"
+        },
+        "ee232401-7aef-488e-b0f1-4b169a7a854e": {
+          "name": "Aktivitet"
+        },
+        "177ca896-863b-456d-8703-29c35534f2d5": {
+          "name": "Opvarmning"
+        },
+        "c56d186e-9346-4a55-b871-3547db946cb0": {
+          "name": "Aktivitet"
+        },
+        "bd0c46dd-1416-4ca4-9882-cc070c732bcb": {
+          "name": "Opvarmning"
+        },
+        "22daa03a-31f9-4048-98d6-180a94b49a68": {
+          "name": "Aktivitet"
+        },
+        "78332cff-112e-4d7a-b0d5-dc027283de09": {
+          "name": "Opvarmning"
+        },
+        "d469a158-6f03-4bb2-a6bb-2fb04adc68bd": {
+          "name": "Aktivitet"
+        },
+        "91e4043a-b85e-4965-bb48-7dba5ae5b20d": {
+          "name": "Opvarmning"
+        },
+        "ec2b845c-4b81-4798-848a-37dd04f0ab69": {
+          "name": "Aktivitet"
+        },
+        "4500c96e-1367-4b79-867f-061dfdb75d5c": {
+          "name": "Opvarmning"
+        },
+        "ac036a2c-ddfd-4afa-8990-2c0488a6cac5": {
+          "name": "Aktivitet"
+        },
+        "82bb121e-9ad5-4b29-bf75-30eb4170b1dd": {
+          "name": "Opvarmning"
+        },
+        "2f663cbe-39d3-44bc-b3d0-3847de8616ed": {
+          "name": "Aktivitet"
+        },
+        "28cdb81b-9ed2-4623-8c97-76a04c4b296f": {
+          "name": "Opvarmning"
+        },
+        "e44e0ad1-b586-42a4-9be2-75e0eee0cccc": {
+          "name": "Aktivitet"
+        },
+        "5057296f-03f5-4ac1-b9b7-4b1e170c1224": {
+          "name": "Opvarmning"
+        },
+        "ee6441ac-3fe1-451b-846f-24a977986f9c": {
+          "name": "Aktivitet"
+        },
+        "69970ef2-e960-449e-8650-84b53151315d": {
+          "name": "Opvarmning"
+        },
+        "06cc83f5-66b2-401e-850a-466b164ef104": {
+          "name": "Aktivitet"
+        },
+        "d318c194-f178-4185-be90-b70771605b6d": {
+          "name": "Opvarmning"
+        },
+        "064fad66-35a6-480e-ad60-dff751b5230c": {
+          "name": "Aktivitet"
+        },
+        "12bc2f76-7b4a-4453-a526-fc5a0bbb15ca": {
+          "name": "Opvarmning"
+        },
+        "9057adaa-50f5-48cb-b7b7-1371ef765e1c": {
+          "name": "Aktivitet"
+        },
+        "b6431e82-34e6-4e30-a587-42d2b8b4bd45": {
+          "name": "Opvarmning"
+        },
+        "084345cc-db08-4c77-bc28-be51fb79dd0d": {
+          "name": "Aktivitet"
+        },
+        "2227e40d-8afc-4781-b754-90202fff194b": {
+          "name": "Opvarmning"
+        },
+        "88f424ec-df8f-42ff-b119-c556008dfea7": {
+          "name": "Aktivitet"
+        },
+        "a47a0ad5-f3d8-4221-b156-9ab515cae5ed": {
+          "name": "Opvarmning"
+        },
+        "6ca92cea-d2a1-458e-8db9-709a95333aae": {
+          "name": "Aktivitet"
+        },
+        "cc1e90a8-c328-4329-99ae-007c2b32a0b0": {
+          "name": "Opvarmning"
+        },
+        "f35f26af-8e10-45bd-8c84-89e2e6e20f43": {
+          "name": "Aktivitet"
+        },
+        "999079a5-883e-4dd2-a2a1-8f862f54b572": {
+          "name": "Opvarmning"
+        },
+        "d83211f4-e007-452b-a5e2-f97629f1e597": {
+          "name": "Aktivitet"
+        },
+        "7de677d4-93fd-4122-a399-36d5dc3def5f": {
+          "name": "Opvarmning"
+        },
+        "80deb03d-786b-4eaa-aee7-17d734850224": {
+          "name": "Aktivitet"
+        },
+        "6be6c7d6-44c4-4fc2-96a0-a45805228aa8": {
+          "name": "Opvarmning"
+        },
+        "5aa1b4d5-0d87-4e15-87db-51011f0a8751": {
+          "name": "Opvarmning"
+        },
+        "c50c799f-b401-406a-b4c2-6a01e8f1c548": {
+          "name": "Aktivitet"
+        },
+        "46b11dc4-968e-4e0e-9d4f-40f3c6578cef": {
+          "name": "Opvarmning"
+        },
+        "70ec98e0-3066-4f1f-84c7-be9d76266337": {
+          "name": "Aktivitet"
+        },
+        "a96114fa-8db5-435d-af1e-e0fa642884c2": {
+          "name": "Opvarmning"
+        },
+        "f7e9181a-0686-4d7a-b513-75351c14acb4": {
+          "name": "Aktivitet"
+        },
+        "a753e5d9-0e63-40ee-8f7c-36bfdb2ad5d9": {
+          "name": "Opvarmning"
+        },
+        "e1fd553e-ed7e-4eb4-ab51-58017d886b11": {
+          "name": "Aktivitet"
+        },
+        "a1617d40-6785-49e4-b561-204d00047c02": {
+          "name": "Opvarmning"
+        },
+        "4755fcca-85c5-4f39-acba-485c57676f3b": {
+          "name": "Aktivitet"
+        },
+        "0d30f79e-34e9-48fe-a12a-8b0f371978d4": {
+          "name": "Opvarmning"
+        },
+        "2f24c116-10b3-4af8-bdc5-a51bcf1774da": {
+          "name": "Aktivitet"
+        },
+        "c789c70d-29b1-4cf5-aece-7711d029ccaf": {
+          "name": "Opvarmning"
+        },
+        "72abdb81-0e9a-4df9-9cd0-33e8a24ef31d": {
+          "name": "Aktivitet"
+        },
+        "39782149-2c5f-4895-8551-bba742a5ade5": {
+          "name": "Opvarmning"
+        },
+        "7d2b43ce-ec07-43c9-bd67-39a4b85102c5": {
+          "name": "Aktivitet"
+        },
+        "411138d2-8c9a-49a9-94d8-50c39c0169bd": {
+          "name": "Opvarmning"
+        },
+        "85dc0809-df8e-4c21-b33c-6525dcc0c747": {
+          "name": "Aktivitet"
+        },
+        "91cbb1a3-213d-4268-b4fb-39fa76273d7d": {
+          "name": "Opvarmning"
+        },
+        "4e159304-5bcf-4392-8fc4-dec6c0d38c63": {
+          "name": "Aktivitet"
+        },
+        "d967d9e5-5f37-45a6-944d-5aec753a921b": {
+          "name": "Opvarmning"
+        },
+        "6696a89e-fd41-4622-9305-71a6590ec797": {
+          "name": "Aktivitet"
+        },
+        "6bcda0c6-95be-448f-b833-e73476a35b59": {
+          "name": "Opvarmning"
+        },
+        "9bbaadd9-354f-4ff6-b019-700d851293fa": {
+          "name": "Aktivitet"
+        },
+        "9964a143-7893-42ba-b74f-c36b7707cde0": {
+          "name": "Opvarmning"
+        },
+        "95526ba9-ab16-49b6-a013-d52be08b2753": {
+          "name": "Opvarmning"
+        },
+        "cf690c94-3a16-4106-8bb0-260d9a235edc": {
+          "name": "Aktivitet"
+        },
+        "4128a59a-9016-49c1-b024-dfdf80c1c433": {
+          "name": "Opvarmning"
+        },
+        "0ccf48b9-639c-43b3-b737-74a1bcec7f5b": {
+          "name": "Aktivitet"
+        },
+        "a236992e-e7c9-421c-acf6-b514973090f3": {
+          "name": "Opvarmning"
+        },
+        "7ca84cbe-1c13-4126-9078-d6413f5ed5b4": {
+          "name": "Aktivitet"
+        },
+        "e3c1e42f-d1cc-43fb-b67d-8891a213f382": {
+          "name": "Opvarmning"
+        },
+        "6039132d-56d7-42d2-acdb-ef7f1a25738f": {
+          "name": "Aktivitet"
+        },
+        "5a4d3e42-27fd-46e5-a022-a20242f61ebc": {
+          "name": "Opvarmning"
+        },
+        "8174009e-cbb9-49cf-95d6-f36a96d41eb5": {
+          "name": "Opvarmning"
+        },
+        "3ab3f540-cdac-498b-b4b5-49dba2a528bf": {
+          "name": "Aktivitet"
+        },
+        "434e1e94-f6aa-4bff-9376-154e62262354": {
+          "name": "Opvarmning"
+        },
+        "cf8ee96e-a948-4c2c-9565-beb1bee1bba1": {
+          "name": "Aktivitet"
+        },
+        "3cc22b01-089f-4dab-b3e8-fc62116c4901": {
+          "name": "Opvarmning"
+        },
+        "e7fed683-5b06-451a-83b6-44bd6135abba": {
+          "name": "Aktivitet"
+        },
+        "a7af54f2-f0da-4b17-bddd-88a8ba1390b2": {
+          "name": "Aktivitet"
+        },
+        "422a0e5f-bc1c-44e7-80ce-5a43d59f4fa8": {
+          "name": "Opvarmning"
+        },
+        "2e669b5a-1c6c-41f0-a5f9-3a79fcbf7fcd": {
+          "name": "Aktivitet"
+        },
+        "47dfd54a-dde6-4b61-81e3-db9405196209": {
+          "name": "Opvarmning"
+        },
+        "44ae7025-981f-4dae-b225-555618d67b2a": {
+          "name": "Aktivitet"
+        },
+        "ae2bd4be-26b3-4558-9767-0b8a79334bfb": {
+          "name": "Opvarmning"
+        },
+        "711c240c-07ab-449d-9ebb-b4bc6472d58a": {
+          "name": "Aktivitet"
+        },
+        "4d45a04e-3cd0-46cd-9a84-18f5b851b651": {
+          "name": "Opvarmning"
+        },
+        "926cd18a-3e1a-44b9-96df-d0099cbc2ac8": {
+          "name": "Aktivitet"
+        },
+        "80a5f11f-25ea-4558-8512-14fdaf973674": {
+          "name": "Opvarmning"
+        },
+        "f99bbd39-3dca-43a4-ac09-0248fea7bf8f": {
+          "name": "Aktivitet"
+        },
+        "81f15cf0-2f76-47e0-ac5b-ce9297fe585a": {
+          "name": "Opvarmning"
+        },
+        "f41592ef-5ee3-4e3e-a31a-57e5984ae0fb": {
+          "name": "Aktivitet"
+        },
+        "e2fa70c3-8c9d-4efa-a176-b4690bc9d425": {
+          "name": "Opvarmning"
+        },
+        "de11024e-5469-41b6-bc28-627c9515eff1": {
+          "name": "Aktivitet"
+        },
+        "83194b44-89d2-4b23-8601-b26ce5caa6af": {
+          "name": "Opvarmning"
+        },
+        "c71d2e1f-d483-4fe6-adad-2552ce4d1f4f": {
+          "name": "Aktivitet"
+        },
+        "7b0be7ad-5d23-4932-b902-3a8ecac6de48": {
+          "name": "Opvarmning"
+        },
+        "2fff60de-5366-470f-ad77-577397a87071": {
+          "name": "Aktivitet"
+        },
+        "0209e705-bb92-4abd-ab05-1d7a5e4a75d7": {
+          "name": "Opvarmning"
+        },
+        "cc88c5f7-4a54-4ec9-b548-194fb175932d": {
+          "name": "Aktivitet"
+        },
+        "f29a14ec-18f2-432b-bd53-2733dcccf763": {
+          "name": "Opvarmning"
+        },
+        "c9774311-07cd-4d0b-ae5e-c487a5e628c0": {
+          "name": "Aktivitet"
+        },
+        "aa94922e-e0f8-4904-8cd8-85deb77c2fb5": {
+          "name": "Opvarmning"
+        },
+        "87a42a0e-c065-49e6-a16d-42c7c66a8374": {
+          "name": "Aktivitet"
+        },
+        "ab9fd0ea-6fb7-4c2f-af28-884019f22f2c": {
+          "name": "Opvarmning"
+        },
+        "994368f3-b53e-4f5a-a1ab-f4a76c265a20": {
+          "name": "Aktivitet"
+        },
+        "b28bb858-5cd3-4f28-80d3-76cc74628df1": {
+          "name": "Opvarmning"
+        },
+        "a8f87090-0743-4286-86bc-e579a765d277": {
+          "name": "Aktivitet"
+        },
+        "c03168ed-89c2-4ce7-85d2-641c03d490e5": {
+          "name": "Opvarmning"
+        },
+        "4fca3f9a-dd6d-4ac7-8e6a-bd16d9acc664": {
+          "name": "Aktivitet"
+        },
+        "8392e6dd-4082-4c70-861f-eaff1d89ffd1": {
+          "name": "Opvarmning"
+        },
+        "fe4547e7-73f8-4c7b-a67f-a61b4a10332c": {
+          "name": "Aktivitet"
+        },
+        "449cef53-c3a4-4edd-8476-31e9df0e87f6": {
+          "name": "Opvarmning"
+        },
+        "d43f4114-8c37-45a7-b61b-3aca56ee5790": {
+          "name": "Aktivitet"
+        },
+        "0f9b927e-0931-463c-85dd-f92b58eea3dd": {
+          "name": "Aktivitet"
+        },
+        "5dfcbd45-2a32-4d96-a2a6-6dd72eabcaf8": {
+          "name": "Opvarmning"
+        },
+        "4b4cc069-5970-4809-bb0c-b2f8e1aae26c": {
+          "name": "Aktivitet"
+        },
+        "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
+          "name": "Aktivitet"
+        },
+        "1e259b12-ec38-426b-944e-f5778651c422": {
+          "name": "Opvarmning"
+        },
+        "dfb46414-d054-4af9-a6d6-b9c1ae4c5e97": {
+          "name": "Aktivitet"
+        },
+        "26057f9e-5b1c-4617-a7b1-e4e457e863fa": {
+          "name": "Opvarmning"
+        },
+        "a4a373a9-8067-4100-ac1d-ec5f142fb754": {
+          "name": "Opvarmning"
+        },
+        "c61550fb-464b-4871-92d2-f532c0ec62cf": {
+          "name": "Aktivitet"
+        },
+        "c7c9975a-6ebc-42fb-8d9a-fbc7b99af9ee": {
+          "name": "Opvarmning"
+        },
+        "3dd1254c-b1de-486d-803a-cd5b89ea1a47": {
+          "name": "Aktivitet"
+        },
+        "816793d2-3155-4838-9a16-ba286bead156": {
+          "name": "Opvarmning"
+        },
+        "3f5a4bdd-213f-4275-b48e-0cac9c216610": {
+          "name": "Aktivitet"
+        },
+        "5c3bcd7d-8427-4721-89b0-2f108b8a7a09": {
+          "name": "Opvarmning"
+        },
+        "8118c20a-f8a2-4de0-a5e9-e34b206c5e86": {
+          "name": "Aktivitet"
+        },
+        "38eab9f7-b033-4e5b-965a-3eb2f27f5912": {
+          "name": "Opvarmning"
+        },
+        "3dbcce13-3c8e-4eee-a9e5-06d38c3b0d58": {
+          "name": "Aktivitet"
+        },
+        "51d6802a-006e-49b9-ab1e-2df825642381": {
+          "name": "Opvarmning"
+        },
+        "da9c162b-7810-4bea-955e-05c213dbf55d": {
+          "name": "Aktivitet"
+        },
+        "e264e7c7-b049-4df7-9a0b-cf563b78b337": {
+          "name": "Opvarmning"
+        },
+        "6d1d534e-0aad-47aa-8eef-22cd0a519a83": {
+          "name": "Aktivitet"
+        },
+        "383c8d03-96b1-4d5e-93cc-54c238116c0c": {
+          "name": "Opvarmning"
+        },
+        "d5076b4a-5a03-45cd-b650-5469ab56c98f": {
+          "name": "Aktivitet"
+        },
+        "7f204217-26d5-46d3-ac48-93ecc6f84045": {
+          "name": "Opvarmning"
+        },
+        "c83f82b2-742a-4785-8983-14391e0b774f": {
+          "name": "Aktivitet"
+        },
+        "ad95b04a-2feb-4401-adfc-ec8c28ba2db7": {
+          "name": "Opvarmning"
+        },
+        "8e65c08e-13d9-43d5-928b-ca3421f606d8": {
+          "name": "Aktivitet"
+        },
+        "03ba9598-5b31-43d9-a146-ecc04d863d7e": {
+          "name": "Opvarmning"
+        },
+        "473b748b-3eb9-4753-8cdb-7d2b5b02ab1c": {
+          "name": "Aktivitet"
+        },
+        "86a8b2c7-4754-4019-8709-47a98dadc6ef": {
+          "name": "Opvarmning"
+        },
+        "54db2b83-e7bd-4ca3-9ba7-63ca15b72187": {
+          "name": "Aktivitet"
+        },
+        "a9116092-7bd2-45d8-9824-9d2943a640a3": {
+          "name": "Opvarmning"
+        },
+        "ed160324-6429-4ff1-90bb-abd785bb6b53": {
+          "name": "Aktivitet"
+        },
+        "89f2503d-4e63-425c-8d29-ea151fe30e0d": {
+          "name": "Opvarmning"
+        },
+        "d007f573-e403-48b9-8178-2922b329c878": {
+          "name": "Aktivitet"
+        },
+        "d6bba00e-c1a8-4b8b-9adb-01a2afd7cfdb": {
+          "name": "Opvarmning"
+        },
+        "31623c1a-bcef-465a-abf4-bd42d0578c3e": {
+          "name": "Aktivitet"
+        },
+        "edbbfe95-ddf0-43c8-ad9c-7be71e637c59": {
+          "name": "Opvarmning"
+        },
+        "9720e203-87bf-47f6-9e42-0d63712f4816": {
+          "name": "Aktivitet"
+        },
+        "a024167d-3c2d-4559-84fb-9146533f1cea": {
+          "name": "Opvarmning"
+        },
+        "b12c79ae-36b0-4853-b799-527d520d2d9b": {
+          "name": "Aktivitet"
+        },
+        "e809434f-4c36-4d12-8913-f96ddf9d6cd8": {
+          "name": "Opvarmning"
+        },
+        "8b5fccc2-132a-4c64-ba9f-a89ee576b760": {
+          "name": "Aktivitet"
+        },
+        "7609c319-8a5f-46ca-aef2-0abbca334761": {
+          "name": "Opvarmning"
+        },
+        "bcb8ee1c-146e-4442-98de-83ac220d074b": {
+          "name": "Aktivitet"
+        },
+        "ec3dd48d-ddff-49ff-8eed-a4a95e83f057": {
+          "name": "Opvarmning"
+        },
+        "fbf2d75e-dd6d-416c-8065-67a5e230ac12": {
+          "name": "Aktivitet"
+        },
+        "f6defd2f-09e1-4dd2-bdbf-b7d539cd651c": {
+          "name": "Opvarmning"
+        },
+        "4024c757-460a-4c1e-b9ba-0921922e446f": {
+          "name": "Aktivitet"
+        },
+        "07c33815-2515-4a63-91f1-51db34b0a00e": {
+          "name": "Opvarmning"
+        },
+        "f03fc05c-d123-4c38-bde0-0bbbaf397b94": {
+          "name": "Opvarmning"
+        },
+        "3c9570d2-fe30-4242-a735-9a2a4ee66bf0": {
+          "name": "Opvarmning"
+        },
+        "ad255314-ba48-44b7-a6b8-1f0cc1e24157": {
+          "name": "Opvarmning"
+        },
+        "7ca483b4-722a-4ed3-aa26-501375f59ab8": {
+          "name": "Opvarmning"
+        },
+        "e0f98e02-d388-4fa9-8f14-0774fe44df3b": {
+          "name": "Opvarmning"
+        },
+        "6aab5f16-5596-4536-b404-f46152246d24": {
+          "name": "Opvarmning"
+        },
+        "b6b94275-4d8a-4564-86ee-65c63e153d33": {
+          "name": "Opvarmning"
+        },
+        "e1843002-564c-4803-9eaa-44f48a8e4159": {
+          "name": "Opvarmning"
+        },
+        "2b650fd5-765d-4989-8e47-e21de2cdd0d5": {
+          "name": "Opvarmning"
+        },
+        "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c": {
+          "name": "Opvarmning"
+        },
+        "e4cb9683-b230-44f6-9e23-48bd955d1aa4": {
+          "name": "Opvarmning"
+        },
+        "339d5151-756f-4b66-b647-0f86a1dce7f9": {
+          "name": "Afslutning"
+        },
+        "0912bd0e-91c8-4f72-88ee-70d5ccd443f3": {
+          "name": "Opvarmning"
+        },
+        "e3fccb19-cd4f-4f90-a75c-a995b9150d32": {
+          "name": "Opvarmning"
+        },
+        "a9428abc-3bd7-4e69-a4fc-34672f65bca9": {
+          "name": "Opvarmning"
+        },
+        "f5cb74b0-f882-49c4-97ca-2695652b352c": {
+          "name": "Opvarmning"
+        },
+        "ee775447-c327-4e95-a523-663a02856cad": {
+          "name": "Konklusion"
+        },
+        "10140329-cade-4307-8132-d9ac56d8182c": {
+          "name": "Opvarmning"
+        },
+        "58912602-06a0-492d-b07d-ab9a63d4a7e0": {
+          "name": "Opvarmning"
+        },
+        "369c31b8-5f8b-44dc-a978-c5c56f794b7b": {
+          "name": "Opvarmning"
+        },
+        "ec70fc95-cedd-46df-9f23-30e8b75faabf": {
+          "name": "Opvarmning"
+        },
+        "f2c0f599-1a28-40b2-8782-e20d66e889e9": {
+          "name": "Aktivitet"
+        },
+        "edc16824-0eba-4aa8-b4a5-0cbac9b9afe7": {
+          "name": "Opvarmning"
+        },
+        "ad4e833a-3b1a-4da1-b894-887cf32573cb": {
+          "name": "Opvarmning"
+        },
+        "f9683417-64ad-4bc3-b152-bf0e90b35c41": {
+          "name": "Opvarmning"
+        },
+        "998a29f8-9f4a-451a-91ae-13ba9225c8c4": {
+          "name": "Opvarmning"
+        },
+        "15bbd3a3-247c-4e2a-be79-52d802f01920": {
+          "name": "Aktivitet"
+        },
+        "260a48d0-8cd7-4f15-b303-32e5c685a349": {
+          "name": "Opvarmning"
+        },
+        "d0107cb9-45b4-4d0b-871c-26c1f94cd85b": {
+          "name": "Opvarmning"
+        },
+        "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
+          "name": "Opvarmning"
+        },
+        "b5b68733-e757-4aec-84e2-8bea7936175b": {
+          "name": "Opvarmning"
+        },
+        "1c265744-1a1f-44f4-8380-7328759249ea": {
+          "name": "Opvarmning"
+        },
+        "d0c658b7-0ee9-4498-b93c-5bf082cc068e": {
+          "name": "Aktivitet"
+        },
+        "8bdab5a2-cc72-4591-9cea-63350d38c61e": {
+          "name": "Opvarmning"
+        },
+        "8d168c1a-0b80-4cff-8626-1f03a8ba046c": {
+          "name": "Opvarmning"
+        },
+        "63075b82-d582-409b-afd8-a8967040c94c": {
+          "name": "Opvarmning"
+        },
+        "8d10f0a0-909f-482c-a17f-3477280c7375": {
+          "name": "Opvarmning"
+        },
+        "38b78816-4a04-4c9b-b112-3704e9511c42": {
+          "name": "Opvarmning"
+        },
+        "63f9b85e-0c2c-4304-97fe-2ff3e63f8d4c": {
+          "name": "Opvarmning"
+        },
+        "300fccda-4810-433a-bbc6-14ceee1a1b5f": {
+          "name": "Opvarmning"
+        },
+        "d0de2b60-38a6-42fb-8d87-e63dc5e8b590": {
+          "name": "Opvarmning"
+        },
+        "617a65b9-bbea-4e3e-ae4b-cbb106b09af0": {
+          "name": "Opvarmning"
+        },
+        "ae81cfe6-45ff-4093-bd79-7c5e3f2b3c7e": {
+          "name": "Opvarmning"
+        },
+        "56feea4b-799f-4d15-a71b-8b6a09d23faf": {
+          "name": "Opvarmning"
+        },
+        "f9529bed-1eeb-4e6c-b078-e5adda35308a": {
+          "name": "Opvarmning"
+        },
+        "380a0a21-1ede-432e-bd0a-433c37514bba": {
+          "name": "Opvarmning"
+        },
+        "1d6a34ca-5dad-4492-8a1c-6b56f85874fa": {
+          "name": "Opvarmning"
+        },
+        "86fab19b-5ba7-490a-b1e6-75fb3527a9ac": {
+          "name": "Opvarmning"
+        },
+        "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
+          "name": "Aktivitet"
+        },
+        "75477df5-5a1f-4ee8-a294-37c3bb1f1153": {
+          "name": "Opvarmning"
+        },
+        "46464e07-b5ac-4ca4-84b2-3b43873360da": {
+          "name": "Opvarmning"
+        },
+        "7ff09578-5e62-4772-8f16-03bec23fca87": {
+          "name": "Opvarmning"
+        },
+        "5665d6c0-e9df-4c72-995a-2b43e543f96d": {
+          "name": "Opvarmning"
+        },
+        "e9ce9579-635c-4885-a9fd-6c260ae09dd4": {
+          "name": "Opvarmning"
+        },
+        "e2c8f30f-bc96-4c09-8765-e5986e61d230": {
+          "name": "Opvarmning"
+        },
+        "07c64430-a32e-455c-bd8b-4a9baa439a1f": {
+          "name": "Opvarmning"
+        },
+        "94431ce1-3b6a-4bff-b20c-eda2abf867e3": {
+          "name": "Opvarmning"
+        },
+        "5b27bb73-d7a0-4ff5-b8b4-3cc29aa2cc9e": {
+          "name": "Opvarmning"
+        },
+        "d7c5d028-ebdb-4366-9856-f36f780cd472": {
+          "name": "Opvarmning"
+        },
+        "8f8f7be8-e984-40ce-9b30-b423814535f8": {
+          "name": "Opvarmning"
+        },
+        "b93a77e0-76ff-4b91-9ec1-c19b04e0cca1": {
+          "name": "Opvarmning"
+        },
+        "d41159ef-433a-4547-a067-2695e41120ae": {
+          "name": "Konklusion"
+        },
+        "1014e6a8-473d-46e2-a448-ca92a6697405": {
+          "name": "Opvarmning"
+        },
+        "d2e747dc-0bde-4836-8d4c-c69868ad9b11": {
+          "name": "Opvarmning"
+        },
+        "02d69cfa-0438-4f7e-ad96-91985effa0dc": {
+          "name": "Opvarmning"
+        },
+        "dd01dd63-cce2-4280-836a-eb80e859c3a4": {
+          "name": "Opvarmning"
+        },
+        "b713c6b6-7ef2-44e1-aa4b-4fb81a5e4a2b": {
+          "name": "Opvarmning"
+        },
+        "9d8a6daa-38de-42a0-995f-16d869ca1101": {
+          "name": "Opvarmning"
+        },
+        "da87c8ba-9486-43e4-9dde-e6eac223396e": {
+          "name": "Opvarmning"
+        },
+        "82c8173b-040e-41ec-b6ca-f1369b308268": {
+          "name": "Opvarmning"
+        },
+        "eb0992db-a3cc-4724-a525-6a0c1d88c700": {
+          "name": "Opvarmning"
+        },
+        "0118e81c-812d-4001-976a-ad2dd2a8dd77": {
+          "name": "Opvarmning"
+        },
+        "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
+          "name": "Opvarmning"
+        },
+        "8be95f76-3e59-4701-906f-cfa1005ac3a6": {
+          "name": "Opvarmning"
+        },
+        "6cd8aaa8-8689-41c8-bbbf-2c396782b090": {
+          "name": "Opvarmning"
+        },
+        "0c41f900-2229-42ab-b5bd-15b78bb97e4e": {
+          "name": "Opvarmning"
+        },
+        "bb5fbcc6-51ec-4613-b32d-ac0ffb0d5737": {
+          "name": "Opvarmning"
+        },
+        "5750d053-1daa-409c-9b83-bc4306ba4aef": {
+          "name": "Opvarmning"
+        },
+        "98b93eda-ff3a-4b27-9d08-dbaf4e0e5dae": {
+          "name": "Opvarmning"
+        },
+        "9f8478ca-8f75-4594-b236-d3a1bfde400e": {
+          "name": "Opvarmning"
+        },
+        "37d588db-3870-49d8-abc6-0d9bf5403123": {
+          "name": "Opvarmning"
+        },
+        "7f8fd47b-526e-48ab-9ac2-33db70ea3b72": {
+          "name": "Opvarmning"
+        },
+        "eb628dad-be05-4a67-83d9-b33a3a2b9a2c": {
+          "name": "Opvarmning"
+        },
+        "dfb06a32-f536-4cb1-8784-bc67619ceacc": {
+          "name": "Opvarmning"
+        },
+        "8362c620-cea5-4a56-b0b4-74a606bf62da": {
+          "name": "Opvarmning"
+        },
+        "7995b5c0-d654-49d1-ac76-89931d3723e4": {
+          "name": "Opvarmning"
+        },
+        "7815d72f-def9-4c77-b4c9-4954d60ef232": {
+          "name": "Opvarmning"
+        },
+        "eba207ca-a259-40be-93b5-0a9c0c906b80": {
+          "name": "Aktivitet"
+        },
+        "9fc4791f-a664-44db-9185-6162b40db705": {
+          "name": "Opvarmning"
+        },
+        "3c96f7f3-f8fc-45f7-8222-8de9223b9551": {
+          "name": "Opvarmning"
+        },
+        "d9d579ea-18fb-4735-90ea-c04c59ba1a71": {
+          "name": "Opvarmning"
+        },
+        "171c9649-255a-4357-b532-6e6dc632285a": {
+          "name": "Opvarmning"
+        },
+        "5244a0ac-aa62-4a48-8a3a-4f641ade1ada": {
+          "name": "Opvarmning"
+        },
+        "0fbc0a74-9eca-48af-960b-6ec8e381e852": {
+          "name": "Opvarmning"
+        },
+        "a42e7dc3-d50c-4be9-b17c-338d432a17ca": {
+          "name": "Opvarmning"
+        },
+        "5f4d9aaa-d92d-45ad-858d-8b161ed4483a": {
+          "name": "Opvarmning"
+        },
+        "82634dba-ecce-4213-9e2b-4435bf9c1b5d": {
+          "name": "Opvarmning"
+        },
+        "46e18a1e-d87a-4452-aa83-d5f742e61da6": {
+          "name": "Opvarmning"
+        },
+        "ca2f991e-1866-4b1d-994c-d7a6a3c33b45": {
+          "name": "Opvarmning"
+        },
+        "4e59783c-7761-4afe-9775-d8c51ca075d0": {
+          "name": "Opvarmning"
+        },
+        "1924e7bb-be68-49eb-b3fb-1099623da9f6": {
+          "name": "Opvarmning"
+        },
+        "e1b92a7f-657f-4825-aa00-576f89e67200": {
+          "name": "Opvarmning"
+        },
+        "9c75f37e-a774-4e3e-9415-a820b02d8ce6": {
+          "name": "Opvarmning"
+        },
+        "4f1634b7-4e0e-471d-9c41-53ea1eaebcdb": {
+          "name": "Opvarmning"
+        },
+        "46092127-2648-4c2c-ada8-f13deb240e11": {
+          "name": "Opvarmning"
+        },
+        "4c3dc207-714d-4cee-bcc7-249ff9b10f0c": {
+          "name": "Opvarmning"
+        },
+        "f7461142-82fd-41d4-b3e2-93ca77d0a546": {
+          "name": "Opvarmning"
+        },
+        "5ad8f2f2-18ef-4477-b1ea-b57cb5cb328a": {
+          "name": "Opvarmning"
+        },
+        "4b6c37da-c087-41f8-94bd-6eddba55804d": {
+          "name": "Opvarmning"
+        },
+        "e2d15199-1c11-455d-b75b-2cae049dd245": {
+          "name": "Opvarmning"
+        },
+        "cc1c021d-e09b-40fc-8e6a-dff336140731": {
+          "name": "Opvarmning"
+        },
+        "94a2ea7b-e3cb-425d-a1f0-2a519b162fb3": {
+          "name": "Opvarmning"
+        },
+        "92dee8e9-e57d-4efc-baf7-a3ff2dba0d42": {
+          "name": "Opvarmning"
+        },
+        "3e2704f0-2560-4797-8c72-11016aee5c28": {
+          "name": "Opvarmning"
+        },
+        "80c82efc-16a4-446c-81b9-718fc3a5d1a9": {
+          "name": "Opvarmning"
+        },
+        "eef7a8c5-5a54-442c-ac88-6ed7ba0cc4fb": {
+          "name": "Opvarmning"
+        },
+        "414b4e57-110f-441f-a5ca-cbdc9f741a4c": {
+          "name": "Opvarmning"
+        },
+        "24f48744-cb50-4dd5-8a1f-95571f2ff1ba": {
+          "name": "Opvarmning"
+        },
+        "91422f13-9b33-46bf-890c-709607a6cdb1": {
+          "name": "Opvarmning"
+        },
+        "f544f06e-e5d9-4ca1-9baf-288bba9ff616": {
+          "name": "Opvarmning"
+        },
+        "dde11556-b732-467c-a7bf-70b47c9cc8ad": {
+          "name": "Opvarmning"
+        },
+        "f1cadd9a-0974-4abd-b152-5c923d0195e2": {
+          "name": "Opvarmning"
+        },
+        "a653b35f-9c27-4961-a91a-578072f1ae35": {
+          "name": "Opvarmning"
+        },
+        "65eecebd-7353-4fca-9e51-e34aa5e14a8e": {
+          "name": "Opvarmning"
+        },
+        "59675efe-890a-48b9-bd56-947f991df50b": {
+          "name": "Opvarmning"
+        },
+        "f2ded4ce-7dc9-49ec-b96c-1f4e00db122e": {
+          "name": "Opvarmning"
+        },
+        "ead863af-cc82-48f6-855f-0e2a4563ed9b": {
+          "name": "Opvarmning"
+        },
+        "3ad79f2e-3afc-4238-a58d-7f88ea78de65": {
+          "name": "Opvarmning"
+        },
+        "3eb2dbe1-88c5-4306-83e5-0f057590e7d5": {
+          "name": "Opvarmning"
         },
         "f0e43cbc-520d-42b7-8de2-0572d569695e": {
           "name": "Opvarmning"
@@ -80,473 +1250,38 @@
         "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
           "name": ""
         },
-        "abaa6b2f-5158-4a3b-b861-28580f6362af": {
-          "name": "Opvarmning"
+        "b47403db-764c-41c2-9c65-eea089621c6f": {
+          "name": ""
         },
-        "5cbfab6e-7ad8-476d-a15a-11c31bc85447": {
-          "name": "Opvarmning"
+        "6f2dd9af-fb21-4368-a9ce-738833702651": {
+          "name": ""
         },
-        "2483ab95-65f1-4cb0-a3e9-fa3f9c64d2e5": {
-          "name": "Opvarmning"
+        "de875c8f-2433-4a61-bd42-a2412a3fe033": {
+          "name": ""
         },
-        "e982d792-ed3f-403f-8782-58d0e74eb342": {
-          "name": "Opvarmning"
+        "a8c929bc-ca75-40ae-8dfa-eec74ee6a958": {
+          "name": ""
         },
-        "e0ff1760-cf11-4aea-a9c4-22eb56b368c5": {
-          "name": "Opvarmning"
+        "289f45ab-557e-43dc-99f9-f86ba374fd67": {
+          "name": ""
         },
-        "8799b3de-39a1-4578-87f7-2dc2b97e9e00": {
-          "name": "Opvarmning"
+        "433390db-3967-466a-b58a-db833369579d": {
+          "name": ""
         },
-        "cab760ed-3878-474c-a0f0-e9392b4bb0b5": {
-          "name": "Aktivitet"
+        "b8d08a94-3e62-472f-8364-e61cb8bf5ca7": {
+          "name": ""
         },
-        "88ef108d-c468-473b-baf1-9c6e2ec76ef7": {
-          "name": "Opvarmning"
+        "b3174c95-1b68-429d-8d32-804d57101288": {
+          "name": ""
         },
-        "c5b3762a-7ec7-45ad-8562-eed33738a7ad": {
-          "name": "Opvarmning"
+        "6e806048-9339-4a04-bf04-0e32ee0567f2": {
+          "name": ""
         },
-        "f6fded2d-a57f-48a5-b947-da8fad8826c9": {
-          "name": "Opvarmning"
+        "9708eb16-ce00-4d84-9534-8a145228ea21": {
+          "name": ""
         },
-        "9b4861a6-9fd1-4d39-ab25-1b7e219a4b20": {
-          "name": "Opvarmning"
-        },
-        "1253667e-4b6d-4ef3-9274-070f711e4b3d": {
-          "name": "Opvarmning"
-        },
-        "c44d899c-3a93-40bf-b986-05f28dd6c8d6": {
-          "name": "Opvarmning"
-        },
-        "02e66171-eb71-4c24-8669-fb18e86f77fd": {
-          "name": "Opvarmning"
-        },
-        "6dd1db92-1559-4c2f-8608-70f9707a186b": {
-          "name": "Opvarmning"
-        },
-        "41c25d95-9f6c-432e-89f8-223a863b2f87": {
-          "name": "Opvarmning"
-        },
-        "7cde513f-d979-4541-bc42-59000562fd58": {
-          "name": "Opvarmning"
-        },
-        "b3506973-239b-4824-a385-2f03108c216a": {
-          "name": "Opvarmning"
-        },
-        "d69af928-e1f1-4a06-9658-945085e43f97": {
-          "name": "Opvarmning"
-        },
-        "944b794e-9bf3-425c-9131-6e4c3662af4f": {
-          "name": "Opvarmning"
-        },
-        "78530493-657f-4a50-bd1c-16933b560f2c": {
-          "name": "Opvarmning"
-        },
-        "028bb774-7cbc-42be-ad21-8bea489a6df6": {
-          "name": "Opvarmning"
-        },
-        "a1d70f29-8c5a-4d71-a255-b35b990fd9a3": {
-          "name": "Opvarmning"
-        },
-        "ae88d237-aee6-4450-8e61-50a10fb79b36": {
-          "name": "Opvarmning"
-        },
-        "abe59550-aed1-48e4-a510-2f90824a0511": {
-          "name": "Opvarmning"
-        },
-        "457ab8d4-39af-4b6b-b9c3-50817773d057": {
-          "name": "Opvarmning"
-        },
-        "f66783e8-d1a3-41bf-9a02-5b14352a11ae": {
-          "name": "Aktivitet"
-        },
-        "e0464ee7-4360-4686-8654-b8f858f536c2": {
-          "name": "Opvarmning"
-        },
-        "3bfb35f7-e9ae-404c-8c91-2c78d4f1d5ee": {
-          "name": "Opvarmning"
-        },
-        "9cad9c6c-1877-4c63-beae-56fe65aa9194": {
-          "name": "Opvarmning"
-        },
-        "4d2e3a7b-6f10-4ae8-a150-38c094379da1": {
-          "name": "Opvarmning"
-        },
-        "a18d4bd3-bd12-49fd-9ce0-be5a87553023": {
-          "name": "Opvarmning"
-        },
-        "124a474b-26b3-42dc-bb84-af0a9be14cc5": {
-          "name": "Opvarmning"
-        },
-        "ca73e49f-ddae-48b1-88b4-99adf0c7d092": {
-          "name": "Opvarmning"
-        },
-        "f063bf55-a69c-43d8-aacf-9bf5fdc6e5b2": {
-          "name": "Opvarmning"
-        },
-        "ddea6cb3-a9cd-4715-9026-d36bf966b753": {
-          "name": "Opvarmning"
-        },
-        "4eec94f8-b49f-4b9a-944a-ab0ad4f03b6e": {
-          "name": "Opvarmning"
-        },
-        "29e0563f-459b-4d33-8100-3677a52b69d0": {
-          "name": "Opvarmning"
-        },
-        "7fef7c1f-99e3-4375-9440-2e0b2dc05349": {
-          "name": "Opvarmning"
-        },
-        "f60e6276-8f62-4f08-a89d-f237f44e58bc": {
-          "name": "Opvarmning"
-        },
-        "9b886d19-0e05-49b1-ba50-07065b389704": {
-          "name": "Opvarmning"
-        },
-        "8587af1b-82c6-44bb-aee2-1500f125d768": {
-          "name": "Opvarmning"
-        },
-        "fa98ed40-e7cd-4ad2-a13d-bfe4109fb78a": {
-          "name": "Opvarmning"
-        },
-        "15ae43a1-06b0-4baa-b04e-8699ef3fb26f": {
-          "name": "Konklusion"
-        },
-        "2d902c04-594b-4595-a677-3c45978e14d8": {
-          "name": "Opvarmning"
-        },
-        "07fd7769-b0ad-43eb-b0d1-ea4ccfac4baf": {
-          "name": "Afslutning"
-        },
-        "3dd03748-95a1-4a80-921c-79ca88f9c0d8": {
-          "name": "Opvarmning"
-        },
-        "aae8c0dc-7721-4ba9-a24d-4aaaf32e1e4a": {
-          "name": "Opvarmning"
-        },
-        "af4312be-c462-4833-8519-b405d96f2b2c": {
-          "name": "Opvarmning"
-        },
-        "b0af1c83-5e0a-4858-bb9b-3a90c6974933": {
-          "name": "Opvarmning"
-        },
-        "27fcf5f0-a9af-4634-a3f5-6ee183c9bce8": {
-          "name": "Konklusion"
-        },
-        "148289f4-4345-49b1-bb7d-d96e9c999fb9": {
-          "name": "Opvarmning"
-        },
-        "7e002958-d294-4986-bfdb-8d5cad5312e5": {
-          "name": "Opvarmning"
-        },
-        "81967def-358e-4733-aedd-9aa01a30d8e8": {
-          "name": "Opvarmning"
-        },
-        "bcdb311f-0e2f-4bce-8447-b935e91283d9": {
-          "name": "Opvarmning"
-        },
-        "5e5b0210-18c5-477b-9210-189a155e155a": {
-          "name": "Aktivitet"
-        },
-        "737e13d1-e7a2-4f63-be94-b9f2e7db97ee": {
-          "name": "Opvarmning"
-        },
-        "cf77273f-fbf5-470c-90c1-19dbc5bdbc35": {
-          "name": "Opvarmning"
-        },
-        "acde8fd8-754e-47b9-bd4e-a4fcf27b878b": {
-          "name": "Opvarmning"
-        },
-        "6b9e69c5-cb90-40e3-9130-f40a91e1e3ac": {
-          "name": "Opvarmning"
-        },
-        "1cd41560-d425-4c55-b269-ced0b1d8d561": {
-          "name": "Opvarmning"
-        },
-        "90198481-f560-4b5b-9229-5e51f18c29ac": {
-          "name": "Opvarmning"
-        },
-        "24856a1c-4bbd-4d30-a0a2-008175a93fca": {
-          "name": "Opvarmning"
-        },
-        "d3278419-8194-4a0a-a5ef-74eacedbfde4": {
-          "name": "Opvarmning"
-        },
-        "eb4e7f77-0313-4f4f-94c0-f0529ff532f3": {
-          "name": "Opvarmning"
-        },
-        "9b2f3c76-9f1d-4c78-ad3c-fa2af2cab780": {
-          "name": "Opvarmning"
-        },
-        "6f4ecd68-c7b8-46a9-a7f7-d78c902604b0": {
-          "name": "Opvarmning"
-        },
-        "f82ae62d-6e76-46b1-b3bd-ca643497839a": {
-          "name": "Opvarmning"
-        },
-        "dc6e401d-5f08-4449-b404-9f5390acfa3d": {
-          "name": "Opvarmning"
-        },
-        "70b4e0eb-e7bc-4317-a1d9-18fe9ce48353": {
-          "name": "Opvarmning"
-        },
-        "26877025-2ce3-4c89-8827-b7519c974edc": {
-          "name": "Opvarmning"
-        },
-        "533fe4fd-4ce1-4085-b8d3-38e05237f35c": {
-          "name": "Opvarmning"
-        },
-        "1b4f431b-2591-4b3e-961d-d6fd5e62b3bb": {
-          "name": "Opvarmning"
-        },
-        "ed28a98c-cc1e-4e7d-9e0c-d38e4856fafa": {
-          "name": "Opvarmning"
-        },
-        "b938281e-0cd0-459e-a65e-6d90e9d38cd8": {
-          "name": "Opvarmning"
-        },
-        "d8d7b243-06ca-48f2-a644-db75e5fa6e28": {
-          "name": "Opvarmning"
-        },
-        "c963266f-b222-4601-bc31-c985c0b01904": {
-          "name": "Opvarmning"
-        },
-        "a1218000-260d-4261-aaf9-9ae2f301cc7e": {
-          "name": "Opvarmning"
-        },
-        "a297e9ad-b7ae-4597-bc0a-8170357e0297": {
-          "name": "Opvarmning"
-        },
-        "fbdafa77-5cdf-41dc-bb4c-8bf6b05de624": {
-          "name": "Opvarmning"
-        },
-        "0155bb1f-f515-455c-8840-1944c6d52c49": {
-          "name": "Opvarmning"
-        },
-        "05222c29-d06f-4f0d-9c57-fb756176712c": {
-          "name": "Opvarmning"
-        },
-        "9ce3273c-9779-4593-a194-f2587287f9dd": {
-          "name": "Opvarmning"
-        },
-        "deba3deb-ae26-46d4-89c3-42552a652310": {
-          "name": "Opvarmning"
-        },
-        "9d268685-17bd-4661-9611-011e4c7e1f31": {
-          "name": "Opvarmning"
-        },
-        "cd8ce7f2-eb53-48a3-91d7-c8de92d6d9f9": {
-          "name": "Opvarmning"
-        },
-        "b0e6a592-befd-4cde-8182-b240bd487a11": {
-          "name": "Opvarmning"
-        },
-        "ba6f45d2-ed08-448b-bbd5-3b79c9b84917": {
-          "name": "Opvarmning"
-        },
-        "b2d3a6a7-15e7-4144-afed-b659a105270e": {
-          "name": "Opvarmning"
-        },
-        "32f8d56f-0681-4253-8457-7347e55de868": {
-          "name": "Opvarmning"
-        },
-        "476f0a7e-0f8c-48fb-855e-ed6245e473b1": {
-          "name": "Opvarmning"
-        },
-        "cf80987f-c93b-4518-834a-f43d1724b759": {
-          "name": "Opvarmning"
-        },
-        "7f14fa67-b053-43f1-b54e-1372448ae19f": {
-          "name": "Opvarmning"
-        },
-        "31cead7b-04b5-4f08-ad69-d024f371debc": {
-          "name": "Opvarmning"
-        },
-        "ee6ea4fb-151a-48af-aa6e-a83b9d779302": {
-          "name": "Opvarmning"
-        },
-        "b455bd64-1bbc-4c9a-b5a8-e0099ee42e8b": {
-          "name": "Opvarmning"
-        },
-        "e93a2018-fd89-4629-9861-4d0e8990d1bb": {
-          "name": "Opvarmning"
-        },
-        "7fa61201-c4ac-49d0-855a-853fca164cf6": {
-          "name": "Opvarmning"
-        },
-        "e624bae9-e201-4036-92dc-003b8468256a": {
-          "name": "Opvarmning"
-        },
-        "26024df9-6e4f-4347-a9e6-2d28952f5729": {
-          "name": "Opvarmning"
-        },
-        "7b5c3e7f-91ea-4159-b8c7-2346bd035d2d": {
-          "name": "Opvarmning"
-        },
-        "26a6d7b6-4e7f-45eb-9f06-0aac920cadf6": {
-          "name": "Opvarmning"
-        },
-        "239c73d7-f268-4c08-b4f4-1beea0c347cc": {
-          "name": "Opvarmning"
-        },
-        "29a3b6da-7fae-4611-910a-ba1103473edf": {
-          "name": "Opvarmning"
-        },
-        "97af5df7-745a-49e3-bd61-3ddd22defa7c": {
-          "name": "Opvarmning"
-        },
-        "fc7902ec-363b-4c18-b1b6-841de04061b5": {
-          "name": "Opvarmning"
-        },
-        "e68d3049-5654-4527-9c7b-8dc1426e138d": {
-          "name": "Opvarmning"
-        },
-        "23f581d0-c75d-456e-97cc-28bddf192f50": {
-          "name": "Opvarmning"
-        },
-        "7ae3d9c5-3492-44e0-be39-bc00114371c0": {
-          "name": "Opvarmning"
-        },
-        "e56a02fc-2b09-45ef-91bc-40a40ba87709": {
-          "name": "Opvarmning"
-        },
-        "d0023712-1596-4547-ad29-d742aab5fea5": {
-          "name": "Aktivitet"
-        },
-        "fef0dd69-afa1-48b8-a91a-bb7c90de0fff": {
-          "name": "Opvarmning"
-        },
-        "69b9baec-7332-406c-837a-fb64ae1fe34d": {
-          "name": "Opvarmning"
-        },
-        "d3e694da-2437-407e-9478-53c69d99ba8d": {
-          "name": "Opvarmning"
-        },
-        "a91088f0-aa3f-4df8-9274-d0311f23690b": {
-          "name": "Opvarmning"
-        },
-        "85aac025-b9a7-410d-aa32-833228487252": {
-          "name": "Opvarmning"
-        },
-        "bc37d277-781e-45ce-a009-5b860924fd0f": {
-          "name": "Aktivitet"
-        },
-        "7aa3d9d0-5f51-4169-935f-83c34e385ec4": {
-          "name": "Opvarmning"
-        },
-        "45ac5681-de1e-49f9-8135-957e7c79e3d7": {
-          "name": "Opvarmning"
-        },
-        "b1684e39-7a0d-4473-a2e2-3ca41cf53430": {
-          "name": "Opvarmning"
-        },
-        "c8520741-98b8-4caf-a698-966ba8b01e4e": {
-          "name": "Opvarmning"
-        },
-        "b1fb0e94-332b-43de-b96f-70188d1852ef": {
-          "name": "Opvarmning"
-        },
-        "7124ed35-c669-491b-8481-6406fa13bd93": {
-          "name": "Opvarmning"
-        },
-        "88aa1b29-4bee-44d8-80ec-1e533e712cc2": {
-          "name": "Opvarmning"
-        },
-        "f4b09758-1a3c-413b-b493-8e8f620af413": {
-          "name": "Opvarmning"
-        },
-        "0dc09009-c0c3-4970-ba5f-1afc56c122be": {
-          "name": "Opvarmning"
-        },
-        "e756dd3c-ceff-4018-ae32-e393404279eb": {
-          "name": "Opvarmning"
-        },
-        "5c108e1d-49dc-4541-af3a-664a08b5ec6b": {
-          "name": "Aktivitet"
-        },
-        "c18e05f7-0d0f-4e39-abc2-4fb8562e01b6": {
-          "name": "Opvarmning"
-        },
-        "07da61ee-3e60-401f-93f5-db5db83b5056": {
-          "name": "Aktivitet"
-        },
-        "a64b966d-88ef-42b1-84e0-e2610580157f": {
-          "name": "Opvarmning"
-        },
-        "24ad4aba-e165-4dea-8db6-936603069320": {
-          "name": "Aktivitet"
-        },
-        "ec11628f-ec7b-4f6d-a127-f2144ae20304": {
-          "name": "Opvarmning"
-        },
-        "fd4e41b1-b556-479f-960a-1be1a17f1058": {
-          "name": "Aktivitet"
-        },
-        "a0797d40-4d44-4c63-a9a7-e53a60f6ca38": {
-          "name": "Opvarmning"
-        },
-        "1ab5bbd8-cd8a-487b-83f0-69698df3e468": {
-          "name": "Opvarmning"
-        },
-        "0c4ae373-7471-46ed-aaac-ee3113f2f52e": {
-          "name": "Aktivitet"
-        },
-        "96fef0a5-f9aa-48e8-b294-7459fae2ecb4": {
-          "name": "Opvarmning"
-        },
-        "c5502c0a-28af-4325-8755-11faa13b36a7": {
-          "name": "Aktivitet"
-        },
-        "afbe3ff5-7c5e-4992-858a-461c5252b3c7": {
-          "name": "Opvarmning"
-        },
-        "5b44cfa8-86de-4ae9-a288-42985ed29e6b": {
-          "name": "Aktivitet"
-        },
-        "0c85934b-00e5-4627-b251-3d0d05371580": {
-          "name": "Aktivitet"
-        },
-        "4ad7640f-a2b8-41f6-8556-48484f04bffc": {
-          "name": "Opvarmning"
-        },
-        "20ef37d7-df6d-4214-844d-1cd93d421675": {
-          "name": "Aktivitet"
-        },
-        "d3038d43-d974-424a-94cb-4b8717d97333": {
-          "name": "Opvarmning"
-        },
-        "265785d2-284a-4835-80dd-a449ebf9ad71": {
-          "name": "Aktivitet"
-        },
-        "72e6ee76-5d28-4cf5-a9f5-557cf9f0a73f": {
-          "name": "Opvarmning"
-        },
-        "fcc352da-7cf2-499d-8a19-c0c3c1bb1847": {
-          "name": "Aktivitet"
-        },
-        "c4404910-4445-4834-9459-fec525857c4e": {
-          "name": "Opvarmning"
-        },
-        "0b582f6f-8192-49b4-bdae-041484ea1d42": {
-          "name": "Aktivitet"
-        },
-        "3586fc87-0dfd-47e6-9c18-b5f81a5ec9d1": {
-          "name": "Opvarmning"
-        },
-        "e88fa8a2-2e45-4f0b-a797-0b61d4d0488e": {
-          "name": "Aktivitet"
-        },
-        "6970dd73-1a71-4023-9766-c14e22a18629": {
-          "name": "Opvarmning"
-        },
-        "1b3f90a6-8f37-427e-bb28-75792a792293": {
-          "name": "Aktivitet"
-        },
-        "efed0d23-c1a2-415e-9982-e6ea83c57ea5": {
-          "name": "Opvarmning"
-        },
-        "7f34d9dc-d8b8-4dbf-a5b4-c771d005d163": {
-          "name": "Aktivitet"
+        "8324d97f-4ce6-4304-8cec-9d75a4f1ca80": {
+          "name": ""
         },
         "e4a1b801-8e00-42e8-b7fc-fa00f74c5225": {
           "name": "Opvarmning"
@@ -625,6 +1360,126 @@
         },
         "b553c458-f2cc-4394-9edc-e7191a58fb55": {
           "name": "Aktivitet"
+        },
+        "3bdeb93a-6ace-48f2-940e-594eb4fa00d4": {
+          "name": "Opvarmning"
+        },
+        "5114c102-679b-43ce-9399-33bff161328c": {
+          "name": "Aktivitet"
+        },
+        "b7284a94-d4c6-416d-ac6e-8db87fe43f80": {
+          "name": "Opvarmning"
+        },
+        "216a3a56-dfdd-4a03-bc80-c0dfffe009bd": {
+          "name": "Aktivitet"
+        },
+        "43ee246e-5e64-422c-b38c-9faaf86606f9": {
+          "name": "Opvarmning"
+        },
+        "2c7f63aa-3678-4002-9eb3-8b2a31c67b4e": {
+          "name": "Aktivitet"
+        },
+        "d8e45faa-a949-4eb7-bcb4-8428f585d898": {
+          "name": "Opvarmning"
+        },
+        "e6274218-3d12-4142-9853-c5181cd56475": {
+          "name": "Aktivitet"
+        },
+        "be6c8c89-1f6c-4c2f-b0eb-bbc3fe33ec1b": {
+          "name": "Opvarmning"
+        },
+        "8b87f42a-4c87-4dc5-ae0a-5f25fd83c33a": {
+          "name": "Aktivitet"
+        },
+        "14517b9b-38cb-4ae8-8d50-bc78b3e98acf": {
+          "name": "Opvarmning"
+        },
+        "dbe502b7-e665-4270-aaf6-1a80fd72fad0": {
+          "name": "Aktivitet"
+        },
+        "21690070-90bc-4081-98b7-b76a0292efc9": {
+          "name": "Opvarmning"
+        },
+        "389875ac-ca56-4ae8-8a27-8f14801f6c39": {
+          "name": "Aktivitet"
+        },
+        "4a7e57fd-fb56-42e5-a11c-6054e2e6c5da": {
+          "name": "Opvarmning"
+        },
+        "c37b5ded-66ba-45ec-8539-3e20e9278381": {
+          "name": "Aktivitet"
+        },
+        "228d432d-d102-4c02-a6eb-4d61bb7100fb": {
+          "name": "Opvarmning"
+        },
+        "7ad73074-fded-4be1-af2b-26e07e84b877": {
+          "name": "Aktivitet"
+        },
+        "46ff741f-0e49-45c4-857d-c300c99b2962": {
+          "name": "Opvarmning"
+        },
+        "1c5f0cad-10b0-4160-a136-12f002671e6e": {
+          "name": "Aktivitet"
+        },
+        "8e50d8fc-539c-48fa-bad5-e1ec1803e421": {
+          "name": "Opvarmning"
+        },
+        "5149e17c-def7-4ceb-9e3f-b42b99b26289": {
+          "name": "Opvarmning"
+        },
+        "c8931be5-1809-4c48-bc6f-78a3b1b6f0d3": {
+          "name": "Aktivitet"
+        },
+        "68c0a134-8cc6-4a5f-b220-ee3c270cf1cf": {
+          "name": "Opvarmning"
+        },
+        "6224d9de-e42e-483f-b2e1-6dbbc4e8fede": {
+          "name": "Aktivitet"
+        },
+        "b71f135e-d19b-4c1f-97a2-2481fe81bc2a": {
+          "name": "Opvarmning"
+        },
+        "1b86c4c4-fe9b-4fb6-b514-18f581445cc3": {
+          "name": "Aktivitet"
+        },
+        "0a7e6e70-9ef2-4206-a5fd-50edc395040c": {
+          "name": "Opvarmning"
+        },
+        "0650b4ca-7e20-4aa0-bd09-5b3dd8c3d7b0": {
+          "name": "Aktivitet"
+        },
+        "a4f528d4-2780-43c8-8dc5-504898c69e3f": {
+          "name": "Opvarmning"
+        },
+        "0514b8a9-0f74-4faa-b69f-864caee91b3a": {
+          "name": "Aktivitet"
+        },
+        "c346f5ba-78c4-4e36-81b3-0f31f5f6cf99": {
+          "name": "Opvarmning"
+        },
+        "9c513b6a-1d47-4395-8c08-5829adc76027": {
+          "name": "Aktivitet"
+        },
+        "2d0708ed-383e-4e11-a6bf-2fb25907e8a9": {
+          "name": "Opvarmning"
+        },
+        "456dfd41-4f34-49f4-902a-8f72b13a36b0": {
+          "name": "Aktivitet"
+        },
+        "9c1908f3-e14b-41ba-b93f-1a78bcb2a10a": {
+          "name": "Opvarmning"
+        },
+        "897d12c3-5f71-4989-a5e6-b503cb913f1f": {
+          "name": "Aktivitet"
+        },
+        "a9bf40b2-8994-40f7-912c-0da5bdf4a351": {
+          "name": "Opvarmning"
+        },
+        "2926147f-24e1-4728-b0b9-15f32d544182": {
+          "name": "Aktivitet"
+        },
+        "e11819a0-81a5-414c-b3fe-71e31ccfaaf7": {
+          "name": "Opvarmning"
         },
         "29c29273-e188-41d0-8559-b9048c892737": {
           "name": "Opvarmning"
@@ -788,126 +1643,6 @@
         "37150fb2-5983-44a9-bf23-91a8690bc5cf": {
           "name": "Aktivitet"
         },
-        "3bdeb93a-6ace-48f2-940e-594eb4fa00d4": {
-          "name": "Opvarmning"
-        },
-        "5114c102-679b-43ce-9399-33bff161328c": {
-          "name": "Aktivitet"
-        },
-        "b7284a94-d4c6-416d-ac6e-8db87fe43f80": {
-          "name": "Opvarmning"
-        },
-        "216a3a56-dfdd-4a03-bc80-c0dfffe009bd": {
-          "name": "Aktivitet"
-        },
-        "43ee246e-5e64-422c-b38c-9faaf86606f9": {
-          "name": "Opvarmning"
-        },
-        "2c7f63aa-3678-4002-9eb3-8b2a31c67b4e": {
-          "name": "Aktivitet"
-        },
-        "d8e45faa-a949-4eb7-bcb4-8428f585d898": {
-          "name": "Opvarmning"
-        },
-        "e6274218-3d12-4142-9853-c5181cd56475": {
-          "name": "Aktivitet"
-        },
-        "be6c8c89-1f6c-4c2f-b0eb-bbc3fe33ec1b": {
-          "name": "Opvarmning"
-        },
-        "8b87f42a-4c87-4dc5-ae0a-5f25fd83c33a": {
-          "name": "Aktivitet"
-        },
-        "14517b9b-38cb-4ae8-8d50-bc78b3e98acf": {
-          "name": "Opvarmning"
-        },
-        "dbe502b7-e665-4270-aaf6-1a80fd72fad0": {
-          "name": "Aktivitet"
-        },
-        "21690070-90bc-4081-98b7-b76a0292efc9": {
-          "name": "Opvarmning"
-        },
-        "389875ac-ca56-4ae8-8a27-8f14801f6c39": {
-          "name": "Aktivitet"
-        },
-        "4a7e57fd-fb56-42e5-a11c-6054e2e6c5da": {
-          "name": "Opvarmning"
-        },
-        "c37b5ded-66ba-45ec-8539-3e20e9278381": {
-          "name": "Aktivitet"
-        },
-        "228d432d-d102-4c02-a6eb-4d61bb7100fb": {
-          "name": "Opvarmning"
-        },
-        "7ad73074-fded-4be1-af2b-26e07e84b877": {
-          "name": "Aktivitet"
-        },
-        "46ff741f-0e49-45c4-857d-c300c99b2962": {
-          "name": "Opvarmning"
-        },
-        "1c5f0cad-10b0-4160-a136-12f002671e6e": {
-          "name": "Aktivitet"
-        },
-        "8e50d8fc-539c-48fa-bad5-e1ec1803e421": {
-          "name": "Opvarmning"
-        },
-        "5149e17c-def7-4ceb-9e3f-b42b99b26289": {
-          "name": "Opvarmning"
-        },
-        "c8931be5-1809-4c48-bc6f-78a3b1b6f0d3": {
-          "name": "Aktivitet"
-        },
-        "68c0a134-8cc6-4a5f-b220-ee3c270cf1cf": {
-          "name": "Opvarmning"
-        },
-        "6224d9de-e42e-483f-b2e1-6dbbc4e8fede": {
-          "name": "Aktivitet"
-        },
-        "b71f135e-d19b-4c1f-97a2-2481fe81bc2a": {
-          "name": "Opvarmning"
-        },
-        "1b86c4c4-fe9b-4fb6-b514-18f581445cc3": {
-          "name": "Aktivitet"
-        },
-        "0a7e6e70-9ef2-4206-a5fd-50edc395040c": {
-          "name": "Opvarmning"
-        },
-        "0650b4ca-7e20-4aa0-bd09-5b3dd8c3d7b0": {
-          "name": "Aktivitet"
-        },
-        "a4f528d4-2780-43c8-8dc5-504898c69e3f": {
-          "name": "Opvarmning"
-        },
-        "0514b8a9-0f74-4faa-b69f-864caee91b3a": {
-          "name": "Aktivitet"
-        },
-        "c346f5ba-78c4-4e36-81b3-0f31f5f6cf99": {
-          "name": "Opvarmning"
-        },
-        "9c513b6a-1d47-4395-8c08-5829adc76027": {
-          "name": "Aktivitet"
-        },
-        "2d0708ed-383e-4e11-a6bf-2fb25907e8a9": {
-          "name": "Opvarmning"
-        },
-        "456dfd41-4f34-49f4-902a-8f72b13a36b0": {
-          "name": "Aktivitet"
-        },
-        "9c1908f3-e14b-41ba-b93f-1a78bcb2a10a": {
-          "name": "Opvarmning"
-        },
-        "897d12c3-5f71-4989-a5e6-b503cb913f1f": {
-          "name": "Aktivitet"
-        },
-        "a9bf40b2-8994-40f7-912c-0da5bdf4a351": {
-          "name": "Opvarmning"
-        },
-        "2926147f-24e1-4728-b0b9-15f32d544182": {
-          "name": "Aktivitet"
-        },
-        "e11819a0-81a5-414c-b3fe-71e31ccfaaf7": {
-          "name": "Opvarmning"
-        },
         "554b4180-2899-4be8-a390-3e108705d899": {
           "name": "Opvarmning"
         },
@@ -1027,6 +1762,96 @@
         },
         "51e81087-45de-4e07-9398-390f4e2789d8": {
           "name": "Opvarmning"
+        },
+        "e756dd3c-ceff-4018-ae32-e393404279eb": {
+          "name": "Opvarmning"
+        },
+        "5c108e1d-49dc-4541-af3a-664a08b5ec6b": {
+          "name": "Aktivitet"
+        },
+        "c18e05f7-0d0f-4e39-abc2-4fb8562e01b6": {
+          "name": "Opvarmning"
+        },
+        "07da61ee-3e60-401f-93f5-db5db83b5056": {
+          "name": "Aktivitet"
+        },
+        "a64b966d-88ef-42b1-84e0-e2610580157f": {
+          "name": "Opvarmning"
+        },
+        "24ad4aba-e165-4dea-8db6-936603069320": {
+          "name": "Aktivitet"
+        },
+        "ec11628f-ec7b-4f6d-a127-f2144ae20304": {
+          "name": "Opvarmning"
+        },
+        "fd4e41b1-b556-479f-960a-1be1a17f1058": {
+          "name": "Aktivitet"
+        },
+        "a0797d40-4d44-4c63-a9a7-e53a60f6ca38": {
+          "name": "Opvarmning"
+        },
+        "1ab5bbd8-cd8a-487b-83f0-69698df3e468": {
+          "name": "Opvarmning"
+        },
+        "0c4ae373-7471-46ed-aaac-ee3113f2f52e": {
+          "name": "Aktivitet"
+        },
+        "96fef0a5-f9aa-48e8-b294-7459fae2ecb4": {
+          "name": "Opvarmning"
+        },
+        "c5502c0a-28af-4325-8755-11faa13b36a7": {
+          "name": "Aktivitet"
+        },
+        "afbe3ff5-7c5e-4992-858a-461c5252b3c7": {
+          "name": "Opvarmning"
+        },
+        "5b44cfa8-86de-4ae9-a288-42985ed29e6b": {
+          "name": "Aktivitet"
+        },
+        "0c85934b-00e5-4627-b251-3d0d05371580": {
+          "name": "Aktivitet"
+        },
+        "4ad7640f-a2b8-41f6-8556-48484f04bffc": {
+          "name": "Opvarmning"
+        },
+        "20ef37d7-df6d-4214-844d-1cd93d421675": {
+          "name": "Aktivitet"
+        },
+        "d3038d43-d974-424a-94cb-4b8717d97333": {
+          "name": "Opvarmning"
+        },
+        "265785d2-284a-4835-80dd-a449ebf9ad71": {
+          "name": "Aktivitet"
+        },
+        "72e6ee76-5d28-4cf5-a9f5-557cf9f0a73f": {
+          "name": "Opvarmning"
+        },
+        "fcc352da-7cf2-499d-8a19-c0c3c1bb1847": {
+          "name": "Aktivitet"
+        },
+        "c4404910-4445-4834-9459-fec525857c4e": {
+          "name": "Opvarmning"
+        },
+        "0b582f6f-8192-49b4-bdae-041484ea1d42": {
+          "name": "Aktivitet"
+        },
+        "3586fc87-0dfd-47e6-9c18-b5f81a5ec9d1": {
+          "name": "Opvarmning"
+        },
+        "e88fa8a2-2e45-4f0b-a797-0b61d4d0488e": {
+          "name": "Aktivitet"
+        },
+        "6970dd73-1a71-4023-9766-c14e22a18629": {
+          "name": "Opvarmning"
+        },
+        "1b3f90a6-8f37-427e-bb28-75792a792293": {
+          "name": "Aktivitet"
+        },
+        "efed0d23-c1a2-415e-9982-e6ea83c57ea5": {
+          "name": "Opvarmning"
+        },
+        "7f34d9dc-d8b8-4dbf-a5b4-c771d005d163": {
+          "name": "Aktivitet"
         },
         "b863b736-7488-420c-84c2-e9ff135ac7fb": {
           "name": "Opvarmning"
@@ -1244,6 +2069,456 @@
         "d7a74b12-1ed6-4164-8802-6de5de46ea00": {
           "name": "Aktivitet"
         },
+        "e624bae9-e201-4036-92dc-003b8468256a": {
+          "name": "Opvarmning"
+        },
+        "26024df9-6e4f-4347-a9e6-2d28952f5729": {
+          "name": "Opvarmning"
+        },
+        "7b5c3e7f-91ea-4159-b8c7-2346bd035d2d": {
+          "name": "Opvarmning"
+        },
+        "26a6d7b6-4e7f-45eb-9f06-0aac920cadf6": {
+          "name": "Opvarmning"
+        },
+        "239c73d7-f268-4c08-b4f4-1beea0c347cc": {
+          "name": "Opvarmning"
+        },
+        "29a3b6da-7fae-4611-910a-ba1103473edf": {
+          "name": "Opvarmning"
+        },
+        "97af5df7-745a-49e3-bd61-3ddd22defa7c": {
+          "name": "Opvarmning"
+        },
+        "fc7902ec-363b-4c18-b1b6-841de04061b5": {
+          "name": "Opvarmning"
+        },
+        "e68d3049-5654-4527-9c7b-8dc1426e138d": {
+          "name": "Opvarmning"
+        },
+        "23f581d0-c75d-456e-97cc-28bddf192f50": {
+          "name": "Opvarmning"
+        },
+        "7ae3d9c5-3492-44e0-be39-bc00114371c0": {
+          "name": "Opvarmning"
+        },
+        "2d902c04-594b-4595-a677-3c45978e14d8": {
+          "name": "Opvarmning"
+        },
+        "07fd7769-b0ad-43eb-b0d1-ea4ccfac4baf": {
+          "name": "Afslutning"
+        },
+        "3dd03748-95a1-4a80-921c-79ca88f9c0d8": {
+          "name": "Opvarmning"
+        },
+        "aae8c0dc-7721-4ba9-a24d-4aaaf32e1e4a": {
+          "name": "Opvarmning"
+        },
+        "af4312be-c462-4833-8519-b405d96f2b2c": {
+          "name": "Opvarmning"
+        },
+        "b0af1c83-5e0a-4858-bb9b-3a90c6974933": {
+          "name": "Opvarmning"
+        },
+        "27fcf5f0-a9af-4634-a3f5-6ee183c9bce8": {
+          "name": "Konklusion"
+        },
+        "148289f4-4345-49b1-bb7d-d96e9c999fb9": {
+          "name": "Opvarmning"
+        },
+        "7e002958-d294-4986-bfdb-8d5cad5312e5": {
+          "name": "Opvarmning"
+        },
+        "81967def-358e-4733-aedd-9aa01a30d8e8": {
+          "name": "Opvarmning"
+        },
+        "bcdb311f-0e2f-4bce-8447-b935e91283d9": {
+          "name": "Opvarmning"
+        },
+        "5e5b0210-18c5-477b-9210-189a155e155a": {
+          "name": "Aktivitet"
+        },
+        "737e13d1-e7a2-4f63-be94-b9f2e7db97ee": {
+          "name": "Opvarmning"
+        },
+        "cf77273f-fbf5-470c-90c1-19dbc5bdbc35": {
+          "name": "Opvarmning"
+        },
+        "acde8fd8-754e-47b9-bd4e-a4fcf27b878b": {
+          "name": "Opvarmning"
+        },
+        "e56a02fc-2b09-45ef-91bc-40a40ba87709": {
+          "name": "Opvarmning"
+        },
+        "d0023712-1596-4547-ad29-d742aab5fea5": {
+          "name": "Aktivitet"
+        },
+        "fef0dd69-afa1-48b8-a91a-bb7c90de0fff": {
+          "name": "Opvarmning"
+        },
+        "69b9baec-7332-406c-837a-fb64ae1fe34d": {
+          "name": "Opvarmning"
+        },
+        "d3e694da-2437-407e-9478-53c69d99ba8d": {
+          "name": "Opvarmning"
+        },
+        "a91088f0-aa3f-4df8-9274-d0311f23690b": {
+          "name": "Opvarmning"
+        },
+        "85aac025-b9a7-410d-aa32-833228487252": {
+          "name": "Opvarmning"
+        },
+        "bc37d277-781e-45ce-a009-5b860924fd0f": {
+          "name": "Aktivitet"
+        },
+        "7aa3d9d0-5f51-4169-935f-83c34e385ec4": {
+          "name": "Opvarmning"
+        },
+        "45ac5681-de1e-49f9-8135-957e7c79e3d7": {
+          "name": "Opvarmning"
+        },
+        "b1684e39-7a0d-4473-a2e2-3ca41cf53430": {
+          "name": "Opvarmning"
+        },
+        "c8520741-98b8-4caf-a698-966ba8b01e4e": {
+          "name": "Opvarmning"
+        },
+        "b1fb0e94-332b-43de-b96f-70188d1852ef": {
+          "name": "Opvarmning"
+        },
+        "7124ed35-c669-491b-8481-6406fa13bd93": {
+          "name": "Opvarmning"
+        },
+        "88aa1b29-4bee-44d8-80ec-1e533e712cc2": {
+          "name": "Opvarmning"
+        },
+        "f4b09758-1a3c-413b-b493-8e8f620af413": {
+          "name": "Opvarmning"
+        },
+        "0dc09009-c0c3-4970-ba5f-1afc56c122be": {
+          "name": "Opvarmning"
+        },
+        "abaa6b2f-5158-4a3b-b861-28580f6362af": {
+          "name": "Opvarmning"
+        },
+        "5cbfab6e-7ad8-476d-a15a-11c31bc85447": {
+          "name": "Opvarmning"
+        },
+        "2483ab95-65f1-4cb0-a3e9-fa3f9c64d2e5": {
+          "name": "Opvarmning"
+        },
+        "e982d792-ed3f-403f-8782-58d0e74eb342": {
+          "name": "Opvarmning"
+        },
+        "e0ff1760-cf11-4aea-a9c4-22eb56b368c5": {
+          "name": "Opvarmning"
+        },
+        "8799b3de-39a1-4578-87f7-2dc2b97e9e00": {
+          "name": "Opvarmning"
+        },
+        "cab760ed-3878-474c-a0f0-e9392b4bb0b5": {
+          "name": "Aktivitet"
+        },
+        "88ef108d-c468-473b-baf1-9c6e2ec76ef7": {
+          "name": "Opvarmning"
+        },
+        "c5b3762a-7ec7-45ad-8562-eed33738a7ad": {
+          "name": "Opvarmning"
+        },
+        "f6fded2d-a57f-48a5-b947-da8fad8826c9": {
+          "name": "Opvarmning"
+        },
+        "9b4861a6-9fd1-4d39-ab25-1b7e219a4b20": {
+          "name": "Opvarmning"
+        },
+        "1253667e-4b6d-4ef3-9274-070f711e4b3d": {
+          "name": "Opvarmning"
+        },
+        "c44d899c-3a93-40bf-b986-05f28dd6c8d6": {
+          "name": "Opvarmning"
+        },
+        "02e66171-eb71-4c24-8669-fb18e86f77fd": {
+          "name": "Opvarmning"
+        },
+        "6dd1db92-1559-4c2f-8608-70f9707a186b": {
+          "name": "Opvarmning"
+        },
+        "4d2e3a7b-6f10-4ae8-a150-38c094379da1": {
+          "name": "Opvarmning"
+        },
+        "a18d4bd3-bd12-49fd-9ce0-be5a87553023": {
+          "name": "Opvarmning"
+        },
+        "124a474b-26b3-42dc-bb84-af0a9be14cc5": {
+          "name": "Opvarmning"
+        },
+        "ca73e49f-ddae-48b1-88b4-99adf0c7d092": {
+          "name": "Opvarmning"
+        },
+        "f063bf55-a69c-43d8-aacf-9bf5fdc6e5b2": {
+          "name": "Opvarmning"
+        },
+        "ddea6cb3-a9cd-4715-9026-d36bf966b753": {
+          "name": "Opvarmning"
+        },
+        "4eec94f8-b49f-4b9a-944a-ab0ad4f03b6e": {
+          "name": "Opvarmning"
+        },
+        "29e0563f-459b-4d33-8100-3677a52b69d0": {
+          "name": "Opvarmning"
+        },
+        "7fef7c1f-99e3-4375-9440-2e0b2dc05349": {
+          "name": "Opvarmning"
+        },
+        "f60e6276-8f62-4f08-a89d-f237f44e58bc": {
+          "name": "Opvarmning"
+        },
+        "9b886d19-0e05-49b1-ba50-07065b389704": {
+          "name": "Opvarmning"
+        },
+        "8587af1b-82c6-44bb-aee2-1500f125d768": {
+          "name": "Opvarmning"
+        },
+        "fa98ed40-e7cd-4ad2-a13d-bfe4109fb78a": {
+          "name": "Opvarmning"
+        },
+        "15ae43a1-06b0-4baa-b04e-8699ef3fb26f": {
+          "name": "Konklusion"
+        },
+        "41c25d95-9f6c-432e-89f8-223a863b2f87": {
+          "name": "Opvarmning"
+        },
+        "7cde513f-d979-4541-bc42-59000562fd58": {
+          "name": "Opvarmning"
+        },
+        "b3506973-239b-4824-a385-2f03108c216a": {
+          "name": "Opvarmning"
+        },
+        "d69af928-e1f1-4a06-9658-945085e43f97": {
+          "name": "Opvarmning"
+        },
+        "944b794e-9bf3-425c-9131-6e4c3662af4f": {
+          "name": "Opvarmning"
+        },
+        "78530493-657f-4a50-bd1c-16933b560f2c": {
+          "name": "Opvarmning"
+        },
+        "028bb774-7cbc-42be-ad21-8bea489a6df6": {
+          "name": "Opvarmning"
+        },
+        "a1d70f29-8c5a-4d71-a255-b35b990fd9a3": {
+          "name": "Opvarmning"
+        },
+        "ae88d237-aee6-4450-8e61-50a10fb79b36": {
+          "name": "Opvarmning"
+        },
+        "abe59550-aed1-48e4-a510-2f90824a0511": {
+          "name": "Opvarmning"
+        },
+        "457ab8d4-39af-4b6b-b9c3-50817773d057": {
+          "name": "Opvarmning"
+        },
+        "f66783e8-d1a3-41bf-9a02-5b14352a11ae": {
+          "name": "Aktivitet"
+        },
+        "e0464ee7-4360-4686-8654-b8f858f536c2": {
+          "name": "Opvarmning"
+        },
+        "3bfb35f7-e9ae-404c-8c91-2c78d4f1d5ee": {
+          "name": "Opvarmning"
+        },
+        "9cad9c6c-1877-4c63-beae-56fe65aa9194": {
+          "name": "Opvarmning"
+        },
+        "6b9e69c5-cb90-40e3-9130-f40a91e1e3ac": {
+          "name": "Opvarmning"
+        },
+        "1cd41560-d425-4c55-b269-ced0b1d8d561": {
+          "name": "Opvarmning"
+        },
+        "90198481-f560-4b5b-9229-5e51f18c29ac": {
+          "name": "Opvarmning"
+        },
+        "24856a1c-4bbd-4d30-a0a2-008175a93fca": {
+          "name": "Opvarmning"
+        },
+        "d3278419-8194-4a0a-a5ef-74eacedbfde4": {
+          "name": "Opvarmning"
+        },
+        "eb4e7f77-0313-4f4f-94c0-f0529ff532f3": {
+          "name": "Opvarmning"
+        },
+        "9b2f3c76-9f1d-4c78-ad3c-fa2af2cab780": {
+          "name": "Opvarmning"
+        },
+        "6f4ecd68-c7b8-46a9-a7f7-d78c902604b0": {
+          "name": "Opvarmning"
+        },
+        "f82ae62d-6e76-46b1-b3bd-ca643497839a": {
+          "name": "Opvarmning"
+        },
+        "dc6e401d-5f08-4449-b404-9f5390acfa3d": {
+          "name": "Opvarmning"
+        },
+        "70b4e0eb-e7bc-4317-a1d9-18fe9ce48353": {
+          "name": "Opvarmning"
+        },
+        "26877025-2ce3-4c89-8827-b7519c974edc": {
+          "name": "Opvarmning"
+        },
+        "533fe4fd-4ce1-4085-b8d3-38e05237f35c": {
+          "name": "Opvarmning"
+        },
+        "1b4f431b-2591-4b3e-961d-d6fd5e62b3bb": {
+          "name": "Opvarmning"
+        },
+        "ed28a98c-cc1e-4e7d-9e0c-d38e4856fafa": {
+          "name": "Opvarmning"
+        },
+        "b938281e-0cd0-459e-a65e-6d90e9d38cd8": {
+          "name": "Opvarmning"
+        },
+        "d8d7b243-06ca-48f2-a644-db75e5fa6e28": {
+          "name": "Opvarmning"
+        },
+        "c963266f-b222-4601-bc31-c985c0b01904": {
+          "name": "Opvarmning"
+        },
+        "a1218000-260d-4261-aaf9-9ae2f301cc7e": {
+          "name": "Opvarmning"
+        },
+        "a297e9ad-b7ae-4597-bc0a-8170357e0297": {
+          "name": "Opvarmning"
+        },
+        "fbdafa77-5cdf-41dc-bb4c-8bf6b05de624": {
+          "name": "Opvarmning"
+        },
+        "0155bb1f-f515-455c-8840-1944c6d52c49": {
+          "name": "Opvarmning"
+        },
+        "05222c29-d06f-4f0d-9c57-fb756176712c": {
+          "name": "Opvarmning"
+        },
+        "9ce3273c-9779-4593-a194-f2587287f9dd": {
+          "name": "Opvarmning"
+        },
+        "deba3deb-ae26-46d4-89c3-42552a652310": {
+          "name": "Opvarmning"
+        },
+        "9d268685-17bd-4661-9611-011e4c7e1f31": {
+          "name": "Opvarmning"
+        },
+        "cd8ce7f2-eb53-48a3-91d7-c8de92d6d9f9": {
+          "name": "Opvarmning"
+        },
+        "b0e6a592-befd-4cde-8182-b240bd487a11": {
+          "name": "Opvarmning"
+        },
+        "ba6f45d2-ed08-448b-bbd5-3b79c9b84917": {
+          "name": "Opvarmning"
+        },
+        "b2d3a6a7-15e7-4144-afed-b659a105270e": {
+          "name": "Opvarmning"
+        },
+        "32f8d56f-0681-4253-8457-7347e55de868": {
+          "name": "Opvarmning"
+        },
+        "476f0a7e-0f8c-48fb-855e-ed6245e473b1": {
+          "name": "Opvarmning"
+        },
+        "cf80987f-c93b-4518-834a-f43d1724b759": {
+          "name": "Opvarmning"
+        },
+        "7f14fa67-b053-43f1-b54e-1372448ae19f": {
+          "name": "Opvarmning"
+        },
+        "31cead7b-04b5-4f08-ad69-d024f371debc": {
+          "name": "Opvarmning"
+        },
+        "ee6ea4fb-151a-48af-aa6e-a83b9d779302": {
+          "name": "Opvarmning"
+        },
+        "b455bd64-1bbc-4c9a-b5a8-e0099ee42e8b": {
+          "name": "Opvarmning"
+        },
+        "e93a2018-fd89-4629-9861-4d0e8990d1bb": {
+          "name": "Opvarmning"
+        },
+        "7fa61201-c4ac-49d0-855a-853fca164cf6": {
+          "name": "Opvarmning"
+        },
+        "f4670c8c-98ec-47d0-b458-02a96f130b76": {
+          "name": "Opvarmning"
+        },
+        "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685": {
+          "name": "Aktivitet"
+        },
+        "c53a1348-2816-4c38-9417-92561d0bca19": {
+          "name": "Opvarmning"
+        },
+        "d81d8eed-09d3-4cf4-8860-c555f8c9bd8e": {
+          "name": "Opvarmning"
+        },
+        "82dec89b-f375-4238-a251-ffae17c2dfd1": {
+          "name": "Aktivitet"
+        },
+        "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
+          "name": "Aktivitet"
+        },
+        "a026407c-221b-4f0a-a88d-ec29365ee5fe": {
+          "name": "Opvarmning"
+        },
+        "b90a8b9e-d5d5-4cf5-899c-f0155b34afca": {
+          "name": "Opvarmning"
+        },
+        "a653c76e-8536-4e82-adad-98306fc15f07": {
+          "name": "Opvarmning"
+        },
+        "ad24912f-a30c-4821-83a5-77e20997a044": {
+          "name": "Opvarmning"
+        },
+        "372347a4-5034-4888-9232-160ad727c83d": {
+          "name": "Opvarmning"
+        },
+        "26cd3c8b-1ae7-4fd3-87c2-12cf2612d677": {
+          "name": "Opvarmning"
+        },
+        "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
+          "name": "Aktivitet"
+        },
+        "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf": {
+          "name": "Afslutning"
+        },
+        "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0": {
+          "name": "Opvarmning"
+        },
+        "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
+          "name": "Aktivitet"
+        },
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": "Opvarmning"
+        },
+        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
+          "name": ""
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": ""
+        },
+        "35dfee9b-2785-47f9-93fd-9b3177d68ba6": {
+          "name": "Opvarmning"
+        },
+        "05180d31-d1ff-422e-8227-69f7d07884a6": {
+          "name": "Opvarmning"
+        },
+        "8b8d6959-c861-4474-950b-b097aaa9fae3": {
+          "name": "Aktivitet"
+        },
+        "e746d53a-16b6-4748-98ce-e04ed834264b": {
+          "name": "Afslutning"
+        },
+        "f652e4d2-c712-4cff-a011-f1dcea192263": {
+          "name": "Opvarmning"
+        },
         "901e8625-9092-42fc-9fcc-9c665720b1f4": {
           "name": "Opvarmning"
         },
@@ -1252,1176 +2527,6 @@
         },
         "18913d21-3c6f-4dd8-864e-09b70f80e640": {
           "name": ""
-        },
-        "f652e4d2-c712-4cff-a011-f1dcea192263": {
-          "name": "Opvarmning"
-        },
-        "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
-          "name": "Opvarmning"
-        },
-        "8be95f76-3e59-4701-906f-cfa1005ac3a6": {
-          "name": "Opvarmning"
-        },
-        "6cd8aaa8-8689-41c8-bbbf-2c396782b090": {
-          "name": "Opvarmning"
-        },
-        "0c41f900-2229-42ab-b5bd-15b78bb97e4e": {
-          "name": "Opvarmning"
-        },
-        "bb5fbcc6-51ec-4613-b32d-ac0ffb0d5737": {
-          "name": "Opvarmning"
-        },
-        "5750d053-1daa-409c-9b83-bc4306ba4aef": {
-          "name": "Opvarmning"
-        },
-        "98b93eda-ff3a-4b27-9d08-dbaf4e0e5dae": {
-          "name": "Opvarmning"
-        },
-        "9f8478ca-8f75-4594-b236-d3a1bfde400e": {
-          "name": "Opvarmning"
-        },
-        "37d588db-3870-49d8-abc6-0d9bf5403123": {
-          "name": "Opvarmning"
-        },
-        "7f8fd47b-526e-48ab-9ac2-33db70ea3b72": {
-          "name": "Opvarmning"
-        },
-        "eb628dad-be05-4a67-83d9-b33a3a2b9a2c": {
-          "name": "Opvarmning"
-        },
-        "dfb06a32-f536-4cb1-8784-bc67619ceacc": {
-          "name": "Opvarmning"
-        },
-        "8362c620-cea5-4a56-b0b4-74a606bf62da": {
-          "name": "Opvarmning"
-        },
-        "7995b5c0-d654-49d1-ac76-89931d3723e4": {
-          "name": "Opvarmning"
-        },
-        "7815d72f-def9-4c77-b4c9-4954d60ef232": {
-          "name": "Opvarmning"
-        },
-        "eba207ca-a259-40be-93b5-0a9c0c906b80": {
-          "name": "Aktivitet"
-        },
-        "9fc4791f-a664-44db-9185-6162b40db705": {
-          "name": "Opvarmning"
-        },
-        "3c96f7f3-f8fc-45f7-8222-8de9223b9551": {
-          "name": "Opvarmning"
-        },
-        "d9d579ea-18fb-4735-90ea-c04c59ba1a71": {
-          "name": "Opvarmning"
-        },
-        "e4cb9683-b230-44f6-9e23-48bd955d1aa4": {
-          "name": "Opvarmning"
-        },
-        "339d5151-756f-4b66-b647-0f86a1dce7f9": {
-          "name": "Afslutning"
-        },
-        "0912bd0e-91c8-4f72-88ee-70d5ccd443f3": {
-          "name": "Opvarmning"
-        },
-        "e3fccb19-cd4f-4f90-a75c-a995b9150d32": {
-          "name": "Opvarmning"
-        },
-        "a9428abc-3bd7-4e69-a4fc-34672f65bca9": {
-          "name": "Opvarmning"
-        },
-        "f5cb74b0-f882-49c4-97ca-2695652b352c": {
-          "name": "Opvarmning"
-        },
-        "ee775447-c327-4e95-a523-663a02856cad": {
-          "name": "Konklusion"
-        },
-        "10140329-cade-4307-8132-d9ac56d8182c": {
-          "name": "Opvarmning"
-        },
-        "58912602-06a0-492d-b07d-ab9a63d4a7e0": {
-          "name": "Opvarmning"
-        },
-        "369c31b8-5f8b-44dc-a978-c5c56f794b7b": {
-          "name": "Opvarmning"
-        },
-        "ec70fc95-cedd-46df-9f23-30e8b75faabf": {
-          "name": "Opvarmning"
-        },
-        "f2c0f599-1a28-40b2-8782-e20d66e889e9": {
-          "name": "Aktivitet"
-        },
-        "edc16824-0eba-4aa8-b4a5-0cbac9b9afe7": {
-          "name": "Opvarmning"
-        },
-        "ad4e833a-3b1a-4da1-b894-887cf32573cb": {
-          "name": "Opvarmning"
-        },
-        "f9683417-64ad-4bc3-b152-bf0e90b35c41": {
-          "name": "Opvarmning"
-        },
-        "07c33815-2515-4a63-91f1-51db34b0a00e": {
-          "name": "Opvarmning"
-        },
-        "f03fc05c-d123-4c38-bde0-0bbbaf397b94": {
-          "name": "Opvarmning"
-        },
-        "3c9570d2-fe30-4242-a735-9a2a4ee66bf0": {
-          "name": "Opvarmning"
-        },
-        "ad255314-ba48-44b7-a6b8-1f0cc1e24157": {
-          "name": "Opvarmning"
-        },
-        "7ca483b4-722a-4ed3-aa26-501375f59ab8": {
-          "name": "Opvarmning"
-        },
-        "e0f98e02-d388-4fa9-8f14-0774fe44df3b": {
-          "name": "Opvarmning"
-        },
-        "6aab5f16-5596-4536-b404-f46152246d24": {
-          "name": "Opvarmning"
-        },
-        "b6b94275-4d8a-4564-86ee-65c63e153d33": {
-          "name": "Opvarmning"
-        },
-        "e1843002-564c-4803-9eaa-44f48a8e4159": {
-          "name": "Opvarmning"
-        },
-        "2b650fd5-765d-4989-8e47-e21de2cdd0d5": {
-          "name": "Opvarmning"
-        },
-        "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c": {
-          "name": "Opvarmning"
-        },
-        "998a29f8-9f4a-451a-91ae-13ba9225c8c4": {
-          "name": "Opvarmning"
-        },
-        "15bbd3a3-247c-4e2a-be79-52d802f01920": {
-          "name": "Aktivitet"
-        },
-        "260a48d0-8cd7-4f15-b303-32e5c685a349": {
-          "name": "Opvarmning"
-        },
-        "d0107cb9-45b4-4d0b-871c-26c1f94cd85b": {
-          "name": "Opvarmning"
-        },
-        "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
-          "name": "Opvarmning"
-        },
-        "b5b68733-e757-4aec-84e2-8bea7936175b": {
-          "name": "Opvarmning"
-        },
-        "1c265744-1a1f-44f4-8380-7328759249ea": {
-          "name": "Opvarmning"
-        },
-        "d0c658b7-0ee9-4498-b93c-5bf082cc068e": {
-          "name": "Aktivitet"
-        },
-        "8bdab5a2-cc72-4591-9cea-63350d38c61e": {
-          "name": "Opvarmning"
-        },
-        "8d168c1a-0b80-4cff-8626-1f03a8ba046c": {
-          "name": "Opvarmning"
-        },
-        "63075b82-d582-409b-afd8-a8967040c94c": {
-          "name": "Opvarmning"
-        },
-        "8d10f0a0-909f-482c-a17f-3477280c7375": {
-          "name": "Opvarmning"
-        },
-        "38b78816-4a04-4c9b-b112-3704e9511c42": {
-          "name": "Opvarmning"
-        },
-        "63f9b85e-0c2c-4304-97fe-2ff3e63f8d4c": {
-          "name": "Opvarmning"
-        },
-        "300fccda-4810-433a-bbc6-14ceee1a1b5f": {
-          "name": "Opvarmning"
-        },
-        "d0de2b60-38a6-42fb-8d87-e63dc5e8b590": {
-          "name": "Opvarmning"
-        },
-        "617a65b9-bbea-4e3e-ae4b-cbb106b09af0": {
-          "name": "Opvarmning"
-        },
-        "ae81cfe6-45ff-4093-bd79-7c5e3f2b3c7e": {
-          "name": "Opvarmning"
-        },
-        "56feea4b-799f-4d15-a71b-8b6a09d23faf": {
-          "name": "Opvarmning"
-        },
-        "f9529bed-1eeb-4e6c-b078-e5adda35308a": {
-          "name": "Opvarmning"
-        },
-        "380a0a21-1ede-432e-bd0a-433c37514bba": {
-          "name": "Opvarmning"
-        },
-        "1d6a34ca-5dad-4492-8a1c-6b56f85874fa": {
-          "name": "Opvarmning"
-        },
-        "86fab19b-5ba7-490a-b1e6-75fb3527a9ac": {
-          "name": "Opvarmning"
-        },
-        "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
-          "name": "Aktivitet"
-        },
-        "75477df5-5a1f-4ee8-a294-37c3bb1f1153": {
-          "name": "Opvarmning"
-        },
-        "46464e07-b5ac-4ca4-84b2-3b43873360da": {
-          "name": "Opvarmning"
-        },
-        "7ff09578-5e62-4772-8f16-03bec23fca87": {
-          "name": "Opvarmning"
-        },
-        "5665d6c0-e9df-4c72-995a-2b43e543f96d": {
-          "name": "Opvarmning"
-        },
-        "e9ce9579-635c-4885-a9fd-6c260ae09dd4": {
-          "name": "Opvarmning"
-        },
-        "e2c8f30f-bc96-4c09-8765-e5986e61d230": {
-          "name": "Opvarmning"
-        },
-        "07c64430-a32e-455c-bd8b-4a9baa439a1f": {
-          "name": "Opvarmning"
-        },
-        "94431ce1-3b6a-4bff-b20c-eda2abf867e3": {
-          "name": "Opvarmning"
-        },
-        "171c9649-255a-4357-b532-6e6dc632285a": {
-          "name": "Opvarmning"
-        },
-        "5244a0ac-aa62-4a48-8a3a-4f641ade1ada": {
-          "name": "Opvarmning"
-        },
-        "0fbc0a74-9eca-48af-960b-6ec8e381e852": {
-          "name": "Opvarmning"
-        },
-        "a42e7dc3-d50c-4be9-b17c-338d432a17ca": {
-          "name": "Opvarmning"
-        },
-        "5f4d9aaa-d92d-45ad-858d-8b161ed4483a": {
-          "name": "Opvarmning"
-        },
-        "82634dba-ecce-4213-9e2b-4435bf9c1b5d": {
-          "name": "Opvarmning"
-        },
-        "46e18a1e-d87a-4452-aa83-d5f742e61da6": {
-          "name": "Opvarmning"
-        },
-        "ca2f991e-1866-4b1d-994c-d7a6a3c33b45": {
-          "name": "Opvarmning"
-        },
-        "4e59783c-7761-4afe-9775-d8c51ca075d0": {
-          "name": "Opvarmning"
-        },
-        "1924e7bb-be68-49eb-b3fb-1099623da9f6": {
-          "name": "Opvarmning"
-        },
-        "e1b92a7f-657f-4825-aa00-576f89e67200": {
-          "name": "Opvarmning"
-        },
-        "9c75f37e-a774-4e3e-9415-a820b02d8ce6": {
-          "name": "Opvarmning"
-        },
-        "4f1634b7-4e0e-471d-9c41-53ea1eaebcdb": {
-          "name": "Opvarmning"
-        },
-        "46092127-2648-4c2c-ada8-f13deb240e11": {
-          "name": "Opvarmning"
-        },
-        "4c3dc207-714d-4cee-bcc7-249ff9b10f0c": {
-          "name": "Opvarmning"
-        },
-        "f7461142-82fd-41d4-b3e2-93ca77d0a546": {
-          "name": "Opvarmning"
-        },
-        "5ad8f2f2-18ef-4477-b1ea-b57cb5cb328a": {
-          "name": "Opvarmning"
-        },
-        "4b6c37da-c087-41f8-94bd-6eddba55804d": {
-          "name": "Opvarmning"
-        },
-        "e2d15199-1c11-455d-b75b-2cae049dd245": {
-          "name": "Opvarmning"
-        },
-        "cc1c021d-e09b-40fc-8e6a-dff336140731": {
-          "name": "Opvarmning"
-        },
-        "94a2ea7b-e3cb-425d-a1f0-2a519b162fb3": {
-          "name": "Opvarmning"
-        },
-        "92dee8e9-e57d-4efc-baf7-a3ff2dba0d42": {
-          "name": "Opvarmning"
-        },
-        "3e2704f0-2560-4797-8c72-11016aee5c28": {
-          "name": "Opvarmning"
-        },
-        "80c82efc-16a4-446c-81b9-718fc3a5d1a9": {
-          "name": "Opvarmning"
-        },
-        "eef7a8c5-5a54-442c-ac88-6ed7ba0cc4fb": {
-          "name": "Opvarmning"
-        },
-        "414b4e57-110f-441f-a5ca-cbdc9f741a4c": {
-          "name": "Opvarmning"
-        },
-        "24f48744-cb50-4dd5-8a1f-95571f2ff1ba": {
-          "name": "Opvarmning"
-        },
-        "91422f13-9b33-46bf-890c-709607a6cdb1": {
-          "name": "Opvarmning"
-        },
-        "f544f06e-e5d9-4ca1-9baf-288bba9ff616": {
-          "name": "Opvarmning"
-        },
-        "dde11556-b732-467c-a7bf-70b47c9cc8ad": {
-          "name": "Opvarmning"
-        },
-        "f1cadd9a-0974-4abd-b152-5c923d0195e2": {
-          "name": "Opvarmning"
-        },
-        "a653b35f-9c27-4961-a91a-578072f1ae35": {
-          "name": "Opvarmning"
-        },
-        "65eecebd-7353-4fca-9e51-e34aa5e14a8e": {
-          "name": "Opvarmning"
-        },
-        "59675efe-890a-48b9-bd56-947f991df50b": {
-          "name": "Opvarmning"
-        },
-        "f2ded4ce-7dc9-49ec-b96c-1f4e00db122e": {
-          "name": "Opvarmning"
-        },
-        "ead863af-cc82-48f6-855f-0e2a4563ed9b": {
-          "name": "Opvarmning"
-        },
-        "3ad79f2e-3afc-4238-a58d-7f88ea78de65": {
-          "name": "Opvarmning"
-        },
-        "3eb2dbe1-88c5-4306-83e5-0f057590e7d5": {
-          "name": "Opvarmning"
-        },
-        "5b27bb73-d7a0-4ff5-b8b4-3cc29aa2cc9e": {
-          "name": "Opvarmning"
-        },
-        "d7c5d028-ebdb-4366-9856-f36f780cd472": {
-          "name": "Opvarmning"
-        },
-        "8f8f7be8-e984-40ce-9b30-b423814535f8": {
-          "name": "Opvarmning"
-        },
-        "b93a77e0-76ff-4b91-9ec1-c19b04e0cca1": {
-          "name": "Opvarmning"
-        },
-        "d41159ef-433a-4547-a067-2695e41120ae": {
-          "name": "Konklusion"
-        },
-        "1014e6a8-473d-46e2-a448-ca92a6697405": {
-          "name": "Opvarmning"
-        },
-        "d2e747dc-0bde-4836-8d4c-c69868ad9b11": {
-          "name": "Opvarmning"
-        },
-        "02d69cfa-0438-4f7e-ad96-91985effa0dc": {
-          "name": "Opvarmning"
-        },
-        "dd01dd63-cce2-4280-836a-eb80e859c3a4": {
-          "name": "Opvarmning"
-        },
-        "b713c6b6-7ef2-44e1-aa4b-4fb81a5e4a2b": {
-          "name": "Opvarmning"
-        },
-        "9d8a6daa-38de-42a0-995f-16d869ca1101": {
-          "name": "Opvarmning"
-        },
-        "da87c8ba-9486-43e4-9dde-e6eac223396e": {
-          "name": "Opvarmning"
-        },
-        "82c8173b-040e-41ec-b6ca-f1369b308268": {
-          "name": "Opvarmning"
-        },
-        "eb0992db-a3cc-4724-a525-6a0c1d88c700": {
-          "name": "Opvarmning"
-        },
-        "0118e81c-812d-4001-976a-ad2dd2a8dd77": {
-          "name": "Opvarmning"
-        },
-        "c7c9975a-6ebc-42fb-8d9a-fbc7b99af9ee": {
-          "name": "Opvarmning"
-        },
-        "3dd1254c-b1de-486d-803a-cd5b89ea1a47": {
-          "name": "Aktivitet"
-        },
-        "816793d2-3155-4838-9a16-ba286bead156": {
-          "name": "Opvarmning"
-        },
-        "3f5a4bdd-213f-4275-b48e-0cac9c216610": {
-          "name": "Aktivitet"
-        },
-        "5c3bcd7d-8427-4721-89b0-2f108b8a7a09": {
-          "name": "Opvarmning"
-        },
-        "8118c20a-f8a2-4de0-a5e9-e34b206c5e86": {
-          "name": "Aktivitet"
-        },
-        "38eab9f7-b033-4e5b-965a-3eb2f27f5912": {
-          "name": "Opvarmning"
-        },
-        "3dbcce13-3c8e-4eee-a9e5-06d38c3b0d58": {
-          "name": "Aktivitet"
-        },
-        "51d6802a-006e-49b9-ab1e-2df825642381": {
-          "name": "Opvarmning"
-        },
-        "da9c162b-7810-4bea-955e-05c213dbf55d": {
-          "name": "Aktivitet"
-        },
-        "e264e7c7-b049-4df7-9a0b-cf563b78b337": {
-          "name": "Opvarmning"
-        },
-        "6d1d534e-0aad-47aa-8eef-22cd0a519a83": {
-          "name": "Aktivitet"
-        },
-        "383c8d03-96b1-4d5e-93cc-54c238116c0c": {
-          "name": "Opvarmning"
-        },
-        "d5076b4a-5a03-45cd-b650-5469ab56c98f": {
-          "name": "Aktivitet"
-        },
-        "7f204217-26d5-46d3-ac48-93ecc6f84045": {
-          "name": "Opvarmning"
-        },
-        "c83f82b2-742a-4785-8983-14391e0b774f": {
-          "name": "Aktivitet"
-        },
-        "ad95b04a-2feb-4401-adfc-ec8c28ba2db7": {
-          "name": "Opvarmning"
-        },
-        "8e65c08e-13d9-43d5-928b-ca3421f606d8": {
-          "name": "Aktivitet"
-        },
-        "03ba9598-5b31-43d9-a146-ecc04d863d7e": {
-          "name": "Opvarmning"
-        },
-        "473b748b-3eb9-4753-8cdb-7d2b5b02ab1c": {
-          "name": "Aktivitet"
-        },
-        "86a8b2c7-4754-4019-8709-47a98dadc6ef": {
-          "name": "Opvarmning"
-        },
-        "54db2b83-e7bd-4ca3-9ba7-63ca15b72187": {
-          "name": "Aktivitet"
-        },
-        "a9116092-7bd2-45d8-9824-9d2943a640a3": {
-          "name": "Opvarmning"
-        },
-        "ed160324-6429-4ff1-90bb-abd785bb6b53": {
-          "name": "Aktivitet"
-        },
-        "89f2503d-4e63-425c-8d29-ea151fe30e0d": {
-          "name": "Opvarmning"
-        },
-        "d007f573-e403-48b9-8178-2922b329c878": {
-          "name": "Aktivitet"
-        },
-        "d6bba00e-c1a8-4b8b-9adb-01a2afd7cfdb": {
-          "name": "Opvarmning"
-        },
-        "31623c1a-bcef-465a-abf4-bd42d0578c3e": {
-          "name": "Aktivitet"
-        },
-        "edbbfe95-ddf0-43c8-ad9c-7be71e637c59": {
-          "name": "Opvarmning"
-        },
-        "9720e203-87bf-47f6-9e42-0d63712f4816": {
-          "name": "Aktivitet"
-        },
-        "a024167d-3c2d-4559-84fb-9146533f1cea": {
-          "name": "Opvarmning"
-        },
-        "b12c79ae-36b0-4853-b799-527d520d2d9b": {
-          "name": "Aktivitet"
-        },
-        "e809434f-4c36-4d12-8913-f96ddf9d6cd8": {
-          "name": "Opvarmning"
-        },
-        "8b5fccc2-132a-4c64-ba9f-a89ee576b760": {
-          "name": "Aktivitet"
-        },
-        "7609c319-8a5f-46ca-aef2-0abbca334761": {
-          "name": "Opvarmning"
-        },
-        "bcb8ee1c-146e-4442-98de-83ac220d074b": {
-          "name": "Aktivitet"
-        },
-        "ec3dd48d-ddff-49ff-8eed-a4a95e83f057": {
-          "name": "Opvarmning"
-        },
-        "fbf2d75e-dd6d-416c-8065-67a5e230ac12": {
-          "name": "Aktivitet"
-        },
-        "f6defd2f-09e1-4dd2-bdbf-b7d539cd651c": {
-          "name": "Opvarmning"
-        },
-        "4024c757-460a-4c1e-b9ba-0921922e446f": {
-          "name": "Aktivitet"
-        },
-        "12bc2f76-7b4a-4453-a526-fc5a0bbb15ca": {
-          "name": "Opvarmning"
-        },
-        "9057adaa-50f5-48cb-b7b7-1371ef765e1c": {
-          "name": "Aktivitet"
-        },
-        "b6431e82-34e6-4e30-a587-42d2b8b4bd45": {
-          "name": "Opvarmning"
-        },
-        "084345cc-db08-4c77-bc28-be51fb79dd0d": {
-          "name": "Aktivitet"
-        },
-        "2227e40d-8afc-4781-b754-90202fff194b": {
-          "name": "Opvarmning"
-        },
-        "88f424ec-df8f-42ff-b119-c556008dfea7": {
-          "name": "Aktivitet"
-        },
-        "a47a0ad5-f3d8-4221-b156-9ab515cae5ed": {
-          "name": "Opvarmning"
-        },
-        "6ca92cea-d2a1-458e-8db9-709a95333aae": {
-          "name": "Aktivitet"
-        },
-        "cc1e90a8-c328-4329-99ae-007c2b32a0b0": {
-          "name": "Opvarmning"
-        },
-        "f35f26af-8e10-45bd-8c84-89e2e6e20f43": {
-          "name": "Aktivitet"
-        },
-        "999079a5-883e-4dd2-a2a1-8f862f54b572": {
-          "name": "Opvarmning"
-        },
-        "d83211f4-e007-452b-a5e2-f97629f1e597": {
-          "name": "Aktivitet"
-        },
-        "7de677d4-93fd-4122-a399-36d5dc3def5f": {
-          "name": "Opvarmning"
-        },
-        "80deb03d-786b-4eaa-aee7-17d734850224": {
-          "name": "Aktivitet"
-        },
-        "6be6c7d6-44c4-4fc2-96a0-a45805228aa8": {
-          "name": "Opvarmning"
-        },
-        "5aa1b4d5-0d87-4e15-87db-51011f0a8751": {
-          "name": "Opvarmning"
-        },
-        "c50c799f-b401-406a-b4c2-6a01e8f1c548": {
-          "name": "Aktivitet"
-        },
-        "46b11dc4-968e-4e0e-9d4f-40f3c6578cef": {
-          "name": "Opvarmning"
-        },
-        "70ec98e0-3066-4f1f-84c7-be9d76266337": {
-          "name": "Aktivitet"
-        },
-        "a96114fa-8db5-435d-af1e-e0fa642884c2": {
-          "name": "Opvarmning"
-        },
-        "f7e9181a-0686-4d7a-b513-75351c14acb4": {
-          "name": "Aktivitet"
-        },
-        "a753e5d9-0e63-40ee-8f7c-36bfdb2ad5d9": {
-          "name": "Opvarmning"
-        },
-        "e1fd553e-ed7e-4eb4-ab51-58017d886b11": {
-          "name": "Aktivitet"
-        },
-        "a1617d40-6785-49e4-b561-204d00047c02": {
-          "name": "Opvarmning"
-        },
-        "4755fcca-85c5-4f39-acba-485c57676f3b": {
-          "name": "Aktivitet"
-        },
-        "0d30f79e-34e9-48fe-a12a-8b0f371978d4": {
-          "name": "Opvarmning"
-        },
-        "2f24c116-10b3-4af8-bdc5-a51bcf1774da": {
-          "name": "Aktivitet"
-        },
-        "c789c70d-29b1-4cf5-aece-7711d029ccaf": {
-          "name": "Opvarmning"
-        },
-        "72abdb81-0e9a-4df9-9cd0-33e8a24ef31d": {
-          "name": "Aktivitet"
-        },
-        "39782149-2c5f-4895-8551-bba742a5ade5": {
-          "name": "Opvarmning"
-        },
-        "7d2b43ce-ec07-43c9-bd67-39a4b85102c5": {
-          "name": "Aktivitet"
-        },
-        "411138d2-8c9a-49a9-94d8-50c39c0169bd": {
-          "name": "Opvarmning"
-        },
-        "85dc0809-df8e-4c21-b33c-6525dcc0c747": {
-          "name": "Aktivitet"
-        },
-        "91cbb1a3-213d-4268-b4fb-39fa76273d7d": {
-          "name": "Opvarmning"
-        },
-        "4e159304-5bcf-4392-8fc4-dec6c0d38c63": {
-          "name": "Aktivitet"
-        },
-        "d967d9e5-5f37-45a6-944d-5aec753a921b": {
-          "name": "Opvarmning"
-        },
-        "6696a89e-fd41-4622-9305-71a6590ec797": {
-          "name": "Aktivitet"
-        },
-        "6bcda0c6-95be-448f-b833-e73476a35b59": {
-          "name": "Opvarmning"
-        },
-        "9bbaadd9-354f-4ff6-b019-700d851293fa": {
-          "name": "Aktivitet"
-        },
-        "9964a143-7893-42ba-b74f-c36b7707cde0": {
-          "name": "Opvarmning"
-        },
-        "83194b44-89d2-4b23-8601-b26ce5caa6af": {
-          "name": "Opvarmning"
-        },
-        "c71d2e1f-d483-4fe6-adad-2552ce4d1f4f": {
-          "name": "Aktivitet"
-        },
-        "7b0be7ad-5d23-4932-b902-3a8ecac6de48": {
-          "name": "Opvarmning"
-        },
-        "2fff60de-5366-470f-ad77-577397a87071": {
-          "name": "Aktivitet"
-        },
-        "0209e705-bb92-4abd-ab05-1d7a5e4a75d7": {
-          "name": "Opvarmning"
-        },
-        "cc88c5f7-4a54-4ec9-b548-194fb175932d": {
-          "name": "Aktivitet"
-        },
-        "f29a14ec-18f2-432b-bd53-2733dcccf763": {
-          "name": "Opvarmning"
-        },
-        "c9774311-07cd-4d0b-ae5e-c487a5e628c0": {
-          "name": "Aktivitet"
-        },
-        "aa94922e-e0f8-4904-8cd8-85deb77c2fb5": {
-          "name": "Opvarmning"
-        },
-        "87a42a0e-c065-49e6-a16d-42c7c66a8374": {
-          "name": "Aktivitet"
-        },
-        "ab9fd0ea-6fb7-4c2f-af28-884019f22f2c": {
-          "name": "Opvarmning"
-        },
-        "994368f3-b53e-4f5a-a1ab-f4a76c265a20": {
-          "name": "Aktivitet"
-        },
-        "b28bb858-5cd3-4f28-80d3-76cc74628df1": {
-          "name": "Opvarmning"
-        },
-        "a8f87090-0743-4286-86bc-e579a765d277": {
-          "name": "Aktivitet"
-        },
-        "c03168ed-89c2-4ce7-85d2-641c03d490e5": {
-          "name": "Opvarmning"
-        },
-        "4fca3f9a-dd6d-4ac7-8e6a-bd16d9acc664": {
-          "name": "Aktivitet"
-        },
-        "8392e6dd-4082-4c70-861f-eaff1d89ffd1": {
-          "name": "Opvarmning"
-        },
-        "fe4547e7-73f8-4c7b-a67f-a61b4a10332c": {
-          "name": "Aktivitet"
-        },
-        "449cef53-c3a4-4edd-8476-31e9df0e87f6": {
-          "name": "Opvarmning"
-        },
-        "d43f4114-8c37-45a7-b61b-3aca56ee5790": {
-          "name": "Aktivitet"
-        },
-        "0f9b927e-0931-463c-85dd-f92b58eea3dd": {
-          "name": "Aktivitet"
-        },
-        "5dfcbd45-2a32-4d96-a2a6-6dd72eabcaf8": {
-          "name": "Opvarmning"
-        },
-        "4b4cc069-5970-4809-bb0c-b2f8e1aae26c": {
-          "name": "Aktivitet"
-        },
-        "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
-          "name": "Aktivitet"
-        },
-        "1e259b12-ec38-426b-944e-f5778651c422": {
-          "name": "Opvarmning"
-        },
-        "dfb46414-d054-4af9-a6d6-b9c1ae4c5e97": {
-          "name": "Aktivitet"
-        },
-        "26057f9e-5b1c-4617-a7b1-e4e457e863fa": {
-          "name": "Opvarmning"
-        },
-        "a4a373a9-8067-4100-ac1d-ec5f142fb754": {
-          "name": "Opvarmning"
-        },
-        "c61550fb-464b-4871-92d2-f532c0ec62cf": {
-          "name": "Aktivitet"
-        },
-        "95526ba9-ab16-49b6-a013-d52be08b2753": {
-          "name": "Opvarmning"
-        },
-        "cf690c94-3a16-4106-8bb0-260d9a235edc": {
-          "name": "Aktivitet"
-        },
-        "4128a59a-9016-49c1-b024-dfdf80c1c433": {
-          "name": "Opvarmning"
-        },
-        "0ccf48b9-639c-43b3-b737-74a1bcec7f5b": {
-          "name": "Aktivitet"
-        },
-        "a236992e-e7c9-421c-acf6-b514973090f3": {
-          "name": "Opvarmning"
-        },
-        "7ca84cbe-1c13-4126-9078-d6413f5ed5b4": {
-          "name": "Aktivitet"
-        },
-        "e3c1e42f-d1cc-43fb-b67d-8891a213f382": {
-          "name": "Opvarmning"
-        },
-        "6039132d-56d7-42d2-acdb-ef7f1a25738f": {
-          "name": "Aktivitet"
-        },
-        "5a4d3e42-27fd-46e5-a022-a20242f61ebc": {
-          "name": "Opvarmning"
-        },
-        "8174009e-cbb9-49cf-95d6-f36a96d41eb5": {
-          "name": "Opvarmning"
-        },
-        "3ab3f540-cdac-498b-b4b5-49dba2a528bf": {
-          "name": "Aktivitet"
-        },
-        "434e1e94-f6aa-4bff-9376-154e62262354": {
-          "name": "Opvarmning"
-        },
-        "cf8ee96e-a948-4c2c-9565-beb1bee1bba1": {
-          "name": "Aktivitet"
-        },
-        "3cc22b01-089f-4dab-b3e8-fc62116c4901": {
-          "name": "Opvarmning"
-        },
-        "e7fed683-5b06-451a-83b6-44bd6135abba": {
-          "name": "Aktivitet"
-        },
-        "a7af54f2-f0da-4b17-bddd-88a8ba1390b2": {
-          "name": "Aktivitet"
-        },
-        "422a0e5f-bc1c-44e7-80ce-5a43d59f4fa8": {
-          "name": "Opvarmning"
-        },
-        "2e669b5a-1c6c-41f0-a5f9-3a79fcbf7fcd": {
-          "name": "Aktivitet"
-        },
-        "47dfd54a-dde6-4b61-81e3-db9405196209": {
-          "name": "Opvarmning"
-        },
-        "44ae7025-981f-4dae-b225-555618d67b2a": {
-          "name": "Aktivitet"
-        },
-        "ae2bd4be-26b3-4558-9767-0b8a79334bfb": {
-          "name": "Opvarmning"
-        },
-        "711c240c-07ab-449d-9ebb-b4bc6472d58a": {
-          "name": "Aktivitet"
-        },
-        "4d45a04e-3cd0-46cd-9a84-18f5b851b651": {
-          "name": "Opvarmning"
-        },
-        "926cd18a-3e1a-44b9-96df-d0099cbc2ac8": {
-          "name": "Aktivitet"
-        },
-        "80a5f11f-25ea-4558-8512-14fdaf973674": {
-          "name": "Opvarmning"
-        },
-        "f99bbd39-3dca-43a4-ac09-0248fea7bf8f": {
-          "name": "Aktivitet"
-        },
-        "81f15cf0-2f76-47e0-ac5b-ce9297fe585a": {
-          "name": "Opvarmning"
-        },
-        "f41592ef-5ee3-4e3e-a31a-57e5984ae0fb": {
-          "name": "Aktivitet"
-        },
-        "e2fa70c3-8c9d-4efa-a176-b4690bc9d425": {
-          "name": "Opvarmning"
-        },
-        "de11024e-5469-41b6-bc28-627c9515eff1": {
-          "name": "Aktivitet"
-        },
-        "9ca8c23c-8a83-49ad-8730-a9dbf170d403": {
-          "name": "Opvarmning"
-        },
-        "ab1c7be9-2338-4d6e-9e1e-bc8bf3588309": {
-          "name": "Aktivitet"
-        },
-        "5f4ab37a-26cb-4570-9e78-2a1a7ce16e21": {
-          "name": "Opvarmning"
-        },
-        "5c0c8ace-b8ec-4ea9-8e2a-6e3b55a93e17": {
-          "name": "Aktivitet"
-        },
-        "fa7bb816-68d0-4964-a4c9-acf09377edc3": {
-          "name": "Opvarmning"
-        },
-        "d72bfe99-62ed-4a91-87e0-27d873cc3aa8": {
-          "name": "Aktivitet"
-        },
-        "7e77a0b3-3a58-4d8d-9efa-b796c1496bde": {
-          "name": "Opvarmning"
-        },
-        "20458bdc-a944-45dd-b4a5-ddc0acf2a104": {
-          "name": "Aktivitet"
-        },
-        "fa1d9228-1d94-46f9-8a49-d075d82546d9": {
-          "name": "Opvarmning"
-        },
-        "b2692599-66de-4bb5-aeb5-c63a06dd7040": {
-          "name": "Aktivitet"
-        },
-        "3cca2572-607f-4925-8b36-6cf02506c1b6": {
-          "name": "Opvarmning"
-        },
-        "752eddc2-eb93-48e1-90f0-19932c4f53cd": {
-          "name": "Aktivitet"
-        },
-        "936100bf-97fb-4931-84be-dda8766c0ec4": {
-          "name": "Opvarmning"
-        },
-        "9a78dce2-0812-414f-8c20-1728b4ff1de2": {
-          "name": "Aktivitet"
-        },
-        "c1ba8c1a-11db-4139-8f1c-dfebadfdb0df": {
-          "name": "Opvarmning"
-        },
-        "a2816f13-47a2-43e5-bbfa-0e7d57301037": {
-          "name": "Aktivitet"
-        },
-        "5fdd8ca9-e42d-49ff-9edf-d9cc7c935d9e": {
-          "name": "Opvarmning"
-        },
-        "2e5b6973-dcd9-405c-958d-2366095f4375": {
-          "name": "Aktivitet"
-        },
-        "6dfd29b9-13c7-4603-989a-bbeecf4800ff": {
-          "name": "Opvarmning"
-        },
-        "2edac65a-ce15-4b8c-afc8-a2faebdeb5f4": {
-          "name": "Aktivitet"
-        },
-        "e0b108a8-9649-4dbe-81b2-18f26ef90572": {
-          "name": "Opvarmning"
-        },
-        "c4cdf9ba-b683-4025-bc79-a6e72c0d4cf3": {
-          "name": "Aktivitet"
-        },
-        "434c6d86-9182-4098-bdf9-a778a50a078a": {
-          "name": "Opvarmning"
-        },
-        "81d5093b-fe94-4257-bc54-ca5311532cdc": {
-          "name": "Aktivitet"
-        },
-        "f34a570f-40d4-4d59-a68b-73775272bd4c": {
-          "name": "Opvarmning"
-        },
-        "e22dd0d5-97b3-4829-9d90-3a213360c254": {
-          "name": "Aktivitet"
-        },
-        "bec6d0f0-443d-4368-aa3e-6ff205f0524d": {
-          "name": "Opvarmning"
-        },
-        "f664c4cd-edcd-4afe-b5e6-5e2902ae866f": {
-          "name": "Aktivitet"
-        },
-        "e9f7c2c0-864d-48ee-b321-8d5f9be28800": {
-          "name": "Opvarmning"
-        },
-        "d7b339c7-1053-4301-bba3-6c5befbc61fe": {
-          "name": "Aktivitet"
-        },
-        "7d4b68b8-c0ed-439b-996f-a3f992dc9824": {
-          "name": "Opvarmning"
-        },
-        "06f944ce-4a81-48b5-a87d-96072d1bfa7b": {
-          "name": "Aktivitet"
-        },
-        "b73c5968-42c4-4b4c-ac51-a6694f99c29b": {
-          "name": "Opvarmning"
-        },
-        "ee232401-7aef-488e-b0f1-4b169a7a854e": {
-          "name": "Aktivitet"
-        },
-        "177ca896-863b-456d-8703-29c35534f2d5": {
-          "name": "Opvarmning"
-        },
-        "c56d186e-9346-4a55-b871-3547db946cb0": {
-          "name": "Aktivitet"
-        },
-        "bd0c46dd-1416-4ca4-9882-cc070c732bcb": {
-          "name": "Opvarmning"
-        },
-        "22daa03a-31f9-4048-98d6-180a94b49a68": {
-          "name": "Aktivitet"
-        },
-        "78332cff-112e-4d7a-b0d5-dc027283de09": {
-          "name": "Opvarmning"
-        },
-        "d469a158-6f03-4bb2-a6bb-2fb04adc68bd": {
-          "name": "Aktivitet"
-        },
-        "91e4043a-b85e-4965-bb48-7dba5ae5b20d": {
-          "name": "Opvarmning"
-        },
-        "ec2b845c-4b81-4798-848a-37dd04f0ab69": {
-          "name": "Aktivitet"
-        },
-        "4500c96e-1367-4b79-867f-061dfdb75d5c": {
-          "name": "Opvarmning"
-        },
-        "ac036a2c-ddfd-4afa-8990-2c0488a6cac5": {
-          "name": "Aktivitet"
-        },
-        "82bb121e-9ad5-4b29-bf75-30eb4170b1dd": {
-          "name": "Opvarmning"
-        },
-        "2f663cbe-39d3-44bc-b3d0-3847de8616ed": {
-          "name": "Aktivitet"
-        },
-        "28cdb81b-9ed2-4623-8c97-76a04c4b296f": {
-          "name": "Opvarmning"
-        },
-        "e44e0ad1-b586-42a4-9be2-75e0eee0cccc": {
-          "name": "Aktivitet"
-        },
-        "5057296f-03f5-4ac1-b9b7-4b1e170c1224": {
-          "name": "Opvarmning"
-        },
-        "ee6441ac-3fe1-451b-846f-24a977986f9c": {
-          "name": "Aktivitet"
-        },
-        "69970ef2-e960-449e-8650-84b53151315d": {
-          "name": "Opvarmning"
-        },
-        "06cc83f5-66b2-401e-850a-466b164ef104": {
-          "name": "Aktivitet"
-        },
-        "d318c194-f178-4185-be90-b70771605b6d": {
-          "name": "Opvarmning"
-        },
-        "064fad66-35a6-480e-ad60-dff751b5230c": {
-          "name": "Aktivitet"
-        },
-        "3c2debf5-2b7b-43a9-b8bf-7462c01c6068": {
-          "name": "Opvarmning"
-        },
-        "b58f7f0f-78a4-4965-8f0d-9512076d5e0f": {
-          "name": "Aktivitet"
-        },
-        "135ce2c3-2a89-400c-a42e-4e8b71e2a309": {
-          "name": "Opvarmning"
-        },
-        "675f7979-4687-4193-bd1e-10332a1ac050": {
-          "name": "Aktivitet"
-        },
-        "a80e7362-2c08-40a7-9c59-b0d89cf1df88": {
-          "name": "Opvarmning"
-        },
-        "c8d05b47-5ef6-429d-8162-74d7c1198428": {
-          "name": "Aktivitet"
-        },
-        "17fde997-cb09-459a-a1fb-8e8d9a582343": {
-          "name": "Opvarmning"
-        },
-        "9612f586-66a9-4418-8a79-40080b796a76": {
-          "name": "Aktivitet"
-        },
-        "2329539a-1db5-45ec-b998-3d2f32f6b03c": {
-          "name": "Opvarmning"
-        },
-        "004e7885-e515-4aa8-b5b4-230b884cb6b8": {
-          "name": "Aktivitet"
-        },
-        "05118f86-6a73-4845-98b1-8ae7b80a3548": {
-          "name": "Opvarmning"
-        },
-        "a8aae27a-c021-4027-8ce0-37a888ec37f5": {
-          "name": "Aktivitet"
-        },
-        "4046b95d-cc3b-4913-ad2f-591fae47b6a4": {
-          "name": "Opvarmning"
-        },
-        "185f50c6-2c50-4650-91f6-f061d1051c91": {
-          "name": "Aktivitet"
-        },
-        "0b410a5f-fa45-4bac-a573-be593612cb48": {
-          "name": "Opvarmning"
-        },
-        "faf4b5ae-838a-4a44-bfe5-9450699ab59f": {
-          "name": "Aktivitet"
-        },
-        "6c10e88f-a232-4ac7-91cb-97ff2bc7d461": {
-          "name": "Opvarmning"
-        },
-        "a6b60e0a-6bb5-4967-bc4c-eabd863ab97c": {
-          "name": "Aktivitet"
-        },
-        "2b979bba-aad6-49d0-a32a-d436d4288649": {
-          "name": "Opvarmning"
-        },
-        "98ffa01e-f262-4df2-bcca-a7f669b80fec": {
-          "name": "Aktivitet"
-        },
-        "747f358d-231e-4d8e-9f58-ac2a57daa0cf": {
-          "name": "Opvarmning"
-        },
-        "fd95bfe8-a008-4994-a874-ff3f1ba81d58": {
-          "name": "Aktivitet"
-        },
-        "37d45c14-f225-4476-a638-7c7b11953ca1": {
-          "name": "Opvarmning"
-        },
-        "0e95e394-2a11-4fab-908d-ed712cd9f6b0": {
-          "name": "Aktivitet"
-        },
-        "759e83e6-0f30-4645-8966-a6feb2298480": {
-          "name": "Opvarmning"
-        },
-        "f7eebe16-f2a3-4e47-b558-a584b1bb2d0c": {
-          "name": "Aktivitet"
-        },
-        "a0381dd6-760a-46a9-9217-7e7744252d97": {
-          "name": "Opvarmning"
-        },
-        "94d4f5a6-67f3-4e3b-96e6-1c8eeb6a0bf3": {
-          "name": "Aktivitet"
-        },
-        "a0692a63-008e-4013-9089-9f9c9b22d67c": {
-          "name": "Opvarmning"
-        },
-        "53d85fa1-fecf-43b6-83f0-bef5454c41ed": {
-          "name": "Aktivitet"
-        },
-        "5ea39814-570e-4b27-a399-fe1e3f197d77": {
-          "name": "Opvarmning"
-        },
-        "c3347e87-c7d1-4002-aa31-a53dd8deee41": {
-          "name": "Aktivitet"
-        },
-        "ff0f61fd-a59d-4c4b-aae7-ad0c35798747": {
-          "name": "Opvarmning"
-        },
-        "f2b936fa-d72a-4aa3-a4d8-c1f34ab3aa14": {
-          "name": "Aktivitet"
-        },
-        "13fad4d8-f6df-4655-9054-9fdb847371db": {
-          "name": "Opvarmning"
-        },
-        "03d57f25-1cca-49af-8487-43c3a7efceb8": {
-          "name": "Aktivitet"
-        },
-        "2882d381-78b9-4874-8f84-6b9e4c251861": {
-          "name": "Opvarmning"
-        },
-        "9d2f6fef-3722-429e-b4c1-f6d1103c942b": {
-          "name": "Aktivitet"
-        },
-        "479d0cbe-6860-44be-bd76-9d7e266e0785": {
-          "name": "Opvarmning"
-        },
-        "9982617c-045f-447f-8f83-522ea617c3b9": {
-          "name": "Aktivitet"
-        },
-        "d8c9fbdb-b731-44f3-aa89-3bfd07111678": {
-          "name": "Opvarmning"
-        },
-        "87977467-a47d-46de-90b9-df606358da99": {
-          "name": "Aktivitet"
-        },
-        "cb8113ad-e18f-49a9-9cb5-bfb45ee43bc4": {
-          "name": "Opvarmning"
-        },
-        "60f3718d-0319-4213-a83d-3ce3cb6bdd80": {
-          "name": "Aktivitet"
-        },
-        "17a16dd3-54c2-4e6a-b6cf-f6bbb3394f62": {
-          "name": "Opvarmning"
-        },
-        "b3d7133e-335d-4c28-98d8-a61e8fecaab5": {
-          "name": "Aktivitet"
-        },
-        "54db6e45-9f93-4f70-aef0-f2820b64ad6d": {
-          "name": "Opvarmning"
-        },
-        "481b15da-1d94-404a-859d-31a4cfe544ef": {
-          "name": "Opvarmning"
-        },
-        "d6982573-b0dc-4c36-a400-b426cb43e2b4": {
-          "name": "Aktivitet"
-        },
-        "ff6415fc-9140-4824-ac75-30b80fff14ce": {
-          "name": "Opvarmning"
-        },
-        "50301e64-0051-4071-ab27-c0f0eb834ca5": {
-          "name": "Aktivitet"
-        },
-        "d0d7583f-c507-4ad5-92fa-0dff5d463423": {
-          "name": "Opvarmning"
-        },
-        "d5dd115f-dd41-4a16-b59f-0f77bb79ed00": {
-          "name": "Aktivitet"
-        },
-        "0e81302e-2d3e-4a15-a0be-8b8efd6c082f": {
-          "name": "Opvarmning"
-        },
-        "dd80250a-acb3-4fe7-a9b3-3703faad40ce": {
-          "name": "Aktivitet"
-        },
-        "ba30039c-8c54-4e5a-a810-18052eac7d45": {
-          "name": "Opvarmning"
-        },
-        "54106bc6-dce5-43e9-965a-07567d1856dc": {
-          "name": "Aktivitet"
-        },
-        "6fed748d-07a5-4be9-a535-2a1bd073cbd5": {
-          "name": "Opvarmning"
-        },
-        "8d3448c6-d7e5-44f9-8b60-e207f0026848": {
-          "name": "Aktivitet"
-        },
-        "ed6098ff-6be9-40e7-838e-eef99d12259b": {
-          "name": "Opvarmning"
-        },
-        "71440e94-c031-42dd-a79d-3f8cb5056b9f": {
-          "name": "Aktivitet"
-        },
-        "0051624b-1122-464c-a805-9dfd4e8afb4c": {
-          "name": "Opvarmning"
-        },
-        "12d9a87a-588e-43d1-b12d-ad4b83414276": {
-          "name": "Aktivitet"
-        },
-        "3a252e7c-c299-41f2-8617-a6b165dfd91f": {
-          "name": "Opvarmning"
-        },
-        "9c7bec47-be70-4024-a4f2-21f687434008": {
-          "name": "Aktivitet"
-        },
-        "5994929e-9d47-4037-9bf0-50728d56d31d": {
-          "name": "Opvarmning"
         }
       }
     }

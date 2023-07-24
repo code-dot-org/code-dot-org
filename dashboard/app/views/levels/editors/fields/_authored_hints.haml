@@ -67,7 +67,9 @@
             'markdown',
             {
               callback: function(editor, change) {
-                convertXmlToBlockly(space.find('.markdown_preview').get(0));
+                const xmlContainer = space.find('.markdown_preview').get(0);
+
+                convertXmlToBlockly(xmlContainer);
                 space.find('.hint_markdown').val(editor.getValue());
                 space.find('.hint_markdown').trigger('change');
               },

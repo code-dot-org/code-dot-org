@@ -20,7 +20,7 @@ export default storybook => {
           onOptionHovered={action('hover')}
           onClickOutside={action('click outside')}
         />
-      )
+      ),
     },
     {
       name: 'with one selected',
@@ -33,7 +33,7 @@ export default storybook => {
           onOptionHovered={action('hover')}
           onClickOutside={action('click outside')}
         />
-      )
-    }
+      ),
+    },
   ]);
 };

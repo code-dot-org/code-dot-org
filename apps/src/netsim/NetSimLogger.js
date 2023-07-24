@@ -61,7 +61,7 @@ var LogLevel = {
   ERROR: 1,
   WARN: 2,
   INFO: 3,
-  VERBOSE: 4
+  VERBOSE: 4,
 };
 NetSimLogger.LogLevel = LogLevel;
 

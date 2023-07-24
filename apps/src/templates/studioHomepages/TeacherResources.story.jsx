@@ -5,7 +5,7 @@ import {reduxStore} from '@cdo/storybook/decorators';
 
 export default {
   title: 'TeacherResources',
-  component: TeacherResources
+  component: TeacherResources,
 };
 
 //

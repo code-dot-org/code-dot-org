@@ -8,12 +8,12 @@ describe('ProjectCard', () => {
   const featuredProjectData = {
     channel: '12345',
     isFeatured: true,
-    publishedAt: '2017-12-08T10:00:00.000+00:00'
+    publishedAt: '2017-12-08T10:00:00.000+00:00',
   };
   const unfeaturedProjectData = {
     channel: '67890',
     isFeatured: false,
-    publishedAt: '2017-12-08T10:00:00.000+00:00'
+    publishedAt: '2017-12-08T10:00:00.000+00:00',
   };
   it('displays featured project label', () => {
     const wrapper = shallow(

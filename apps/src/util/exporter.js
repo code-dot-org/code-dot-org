@@ -24,7 +24,7 @@ export function extractSoundAssets(options) {
       zipPath: zipAssetPrefix + filename,
       dataType: 'binary',
       filename,
-      searchUrl: soundProtocolUrl
+      searchUrl: soundProtocolUrl,
     };
   });
 }

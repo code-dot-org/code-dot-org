@@ -4,14 +4,14 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import {
   Header,
-  ConfirmCancelFooter
+  ConfirmCancelFooter,
 } from '../../lib/ui/SystemDialog/SystemDialog';
 import BaseDialog from '../BaseDialog';
 import Button from '../Button';
 import color from '../../util/color';
 import {
   ADD_A_PERSONAL_LOGIN_HELP_URL,
-  RELEASE_OR_DELETE_RECORDS_EXPLANATION
+  RELEASE_OR_DELETE_RECORDS_EXPLANATION,
 } from '@cdo/apps/lib/util/urlHelpers';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
@@ -20,7 +20,7 @@ export const MINIMUM_TEST_PROPS = {
   isOpen: true,
   studentName: 'Clark Kent',
   onConfirm: () => {},
-  onCancel: () => {}
+  onCancel: () => {},
 };
 
 // This set of props will be 'inherited' from BaseDialog and automatically
@@ -35,7 +35,7 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
     hasEverSignedIn: PropTypes.bool,
     dependsOnThisSectionForLogin: PropTypes.bool,
     onConfirm: PropTypes.func.isRequired,
-    onCancel: PropTypes.func.isRequired
+    onCancel: PropTypes.func.isRequired,
   };
 
   headerText() {
@@ -51,7 +51,7 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
       hasEverSignedIn,
       dependsOnThisSectionForLogin,
       onConfirm,
-      onCancel
+      onCancel,
     } = this.props;
     return (
       <BaseDialog
@@ -109,11 +109,11 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
 const styles = {
   container: {
     margin: 20,
-    color: color.charcoal
+    color: color.charcoal,
   },
   sendHomeInstructionsButton: {
     display: 'block',
     textAlign: 'center',
-    marginBottom: '1em'
-  }
+    marginBottom: '1em',
+  },
 };

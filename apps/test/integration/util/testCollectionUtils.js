@@ -1,5 +1,3 @@
-/* global LEVEL_TYPE */
-
 var _ = require('lodash');
 
 /**
@@ -61,7 +59,7 @@ module.exports = {
       level = _.cloneDeep(levels[testCollection.levelId]);
       level = {
         ...level,
-        ...(testData.levelDefinitionOverrides || {})
+        ...(testData.levelDefinitionOverrides || {}),
       };
     } else {
       if (
@@ -79,7 +77,7 @@ module.exports = {
     }
 
     return level;
-  }
+  },
 };
 
 function logError(msg) {

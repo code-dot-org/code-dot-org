@@ -24,3 +24,5 @@ public void mystery(Pixel[][] pixels) {
 
 Which of the following best describes what the method does?
 MARKDOWN
+
+allow_multiple_attempts true

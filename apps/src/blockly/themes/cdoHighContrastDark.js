@@ -9,6 +9,6 @@ export default GoogleBlockly.Theme.defineTheme(Themes.HIGH_CONTRAST_DARK, {
   blockStyles: cdoHighContrastBlockStyles,
   componentStyles: CdoDarkTheme.componentStyles,
   fontStyle: {
-    family: '"Gotham 4r", sans-serif'
-  }
+    family: '"Gotham 4r", sans-serif',
+  },
 });

@@ -60,10 +60,10 @@ describe('NetSimMessage', function () {
       simulatedBy: 2,
       base64Payload: {
         string: 'kg==',
-        len: 7
+        len: 7,
       },
       extraHopsRemaining: 3,
-      visitedNodeIDs: [4]
+      visitedNodeIDs: [4],
     });
     assert.equal(message.payload, '1001001');
   });
@@ -72,8 +72,8 @@ describe('NetSimMessage', function () {
     var message = new NetSimMessage(testShard, {
       base64Payload: {
         string: 'not a base64 string because of the question mark?',
-        len: 7
-      }
+        len: 7,
+      },
     });
     assert.strictEqual(message.payload, '');
   });
@@ -97,7 +97,7 @@ describe('NetSimMessage', function () {
       var simulatedBy = 2;
       var base64Payload = {
         string: 'kg==',
-        len: 7
+        len: 7,
       };
       var extraHopsRemaining = 3;
       var visitedNodeIDs = [4];
@@ -110,7 +110,7 @@ describe('NetSimMessage', function () {
           simulatedBy: simulatedBy,
           payload: '1001001',
           extraHopsRemaining: extraHopsRemaining,
-          visitedNodeIDs: visitedNodeIDs
+          visitedNodeIDs: visitedNodeIDs,
         },
         function () {}
       );
@@ -142,7 +142,7 @@ describe('NetSimMessage', function () {
           simulatedBy: 2,
           payload: 'some non-binary payload',
           extraHopsRemaining: 3,
-          visitedNodeIDs: [4]
+          visitedNodeIDs: [4],
         },
         function (err) {
           returnedError = err;
@@ -168,10 +168,10 @@ describe('NetSimMessage', function () {
         simulatedBy: 2,
         base64Payload: {
           string: 'kgA=',
-          len: 7
+          len: 7,
         },
         extraHopsRemaining: 3,
-        visitedNodeIDs: [4]
+        visitedNodeIDs: [4],
       },
       function (err, row) {
         testRow = row;
@@ -218,7 +218,7 @@ describe('NetSimMessage', function () {
           fromNodeID: 1,
           toNodeID: 2,
           simulatedBy: 2,
-          payload: '001'
+          payload: '001',
         },
         function () {}
       );
@@ -228,7 +228,7 @@ describe('NetSimMessage', function () {
           fromNodeID: 1,
           toNodeID: 2,
           simulatedBy: 2,
-          payload: '010'
+          payload: '010',
         },
         function () {}
       );
@@ -238,7 +238,7 @@ describe('NetSimMessage', function () {
           fromNodeID: 1,
           toNodeID: 2,
           simulatedBy: 2,
-          payload: '100'
+          payload: '100',
         },
         function () {}
       );
@@ -275,7 +275,7 @@ describe('NetSimMessage', function () {
       assertOwnProperty(row, 'base64Payload');
       assert.deepEqual(row.base64Payload, {
         string: '',
-        len: 0
+        len: 0,
       });
 
       assertOwnProperty(row, 'extraHopsRemaining');
@@ -288,7 +288,7 @@ describe('NetSimMessage', function () {
     it('converts local binary payload to base64 before creating row', function () {
       var base64Payload = {
         string: 'kg==',
-        len: 7
+        len: 7,
       };
       var message = new NetSimMessage(testShard, {
         fromNodeID: 1,
@@ -296,7 +296,7 @@ describe('NetSimMessage', function () {
         simulatedBy: 2,
         base64Payload: base64Payload,
         extraHopsRemaining: 3,
-        visitedNodeIDs: [4]
+        visitedNodeIDs: [4],
       });
       var row = message.buildRow();
       assert.equal(row.base64Payload.string, base64Payload.string);

@@ -2,20 +2,30 @@
 te:
   data:
     block_categories:
+      Actions: చర్యలు
       Advanced: అత్యాధునికమైన
       Behaviors: ప్రవర్తన
       Brushes: కుంచెలు
+      Category: వర్గం
+      Color: రంగు
       Comment: వ్యాఖ్య
       Comments: వ్యాఖ్యలు
+      Conditionals: షరతులు
       Dancers: నాట్యకారులు
       Effects: ప్రభావాలు
       Events: ఈవెంట్లు
+      Functions: విధులు
       'Functions ': క్రియలు
       Game/Score: ఆటలు  /మార్కులు
       Games/Score: ఆటలు/మార్కులు
       Groups: గుంపులు
       Locations: స్థానాలు
+      Logic: లాజిక్
+      Loops: ఉచ్చులు
+      Math: మఠం
       Numbers: అంకెలు
       Properties: లక్షణాలు
+      Text: టెక్స్ట్
+      Variables: వేరియబుల్స్
       'Variables ': చలరాసులు
       World: ప్రపంచం

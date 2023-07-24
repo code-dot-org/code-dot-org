@@ -4,7 +4,7 @@ title: Hour of Code Vägledningsguide
 
 {{ signup_button }}
 
-# Hur du planerar din Hour of Code
+# Hur du planerar Hour of Code
 
 ### Häng på och introducera en grupp elever till deras datavetenskap med dessa steg.
 

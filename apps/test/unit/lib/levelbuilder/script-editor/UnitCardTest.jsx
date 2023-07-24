@@ -8,10 +8,10 @@ import {
   stubRedux,
   restoreRedux,
   getStore,
-  registerReducers
+  registerReducers,
 } from '@cdo/apps/redux';
 import reducers, {
-  init
+  init,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import {Provider} from 'react-redux';
 
@@ -36,16 +36,16 @@ describe('UnitCard', () => {
           name: 'Lesson A',
           key: 'lesson-1',
           position: 1,
-          levels: []
+          levels: [],
         },
         {
           name: 'Lesson B',
           key: 'lesson-2',
           id: 101,
           position: 2,
-          levels: []
-        }
-      ]
+          levels: [],
+        },
+      ],
     },
     {
       key: 'lg-key-2',
@@ -60,17 +60,17 @@ describe('UnitCard', () => {
           key: 'lesson-3',
           name: 'Lesson C',
           position: 1,
-          levels: []
+          levels: [],
         },
         {
           name: 'Lesson D',
           key: 'lesson-4',
           id: 101,
           position: 2,
-          levels: []
-        }
-      ]
-    }
+          levels: [],
+        },
+      ],
+    },
   ];
 
   beforeEach(() => {
@@ -87,7 +87,7 @@ describe('UnitCard', () => {
       convertGroupToUserFacing,
       convertGroupToNonUserFacing,
       lessonGroups,
-      allowMajorCurriculumChanges: true
+      allowMajorCurriculumChanges: true,
     };
   });
 
@@ -115,7 +115,7 @@ describe('UnitCard', () => {
     expect(wrapper.find('button').map(b => b.text())).to.eql([
       'Lesson',
       'Lesson',
-      'Add Lesson Group'
+      'Add Lesson Group',
     ]);
   });
 

@@ -29,6 +29,6 @@ export default function NewProgrammingEnvironmentForm() {
 
 const styles = {
   inputStyle: {
-    marginLeft: 5
-  }
+    marginLeft: 5,
+  },
 };

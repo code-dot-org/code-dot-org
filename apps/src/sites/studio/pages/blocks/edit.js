@@ -2,13 +2,12 @@ import $ from 'jquery';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import jsonic from 'jsonic';
-import {parseElement} from '@cdo/apps/xml';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 import {customInputTypes as spritelabCustomInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blocks';
 import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
 import animationList, {
-  setInitialAnimationList
+  setInitialAnimationList,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -41,7 +40,7 @@ function initializeEditPage(defaultSprites) {
     assetUrl,
     valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
     typeHints: true,
-    isBlockEditMode: true
+    isBlockEditMode: true,
   });
 
   const blockConfigElement = document.getElementById('block_config');
@@ -62,12 +61,12 @@ function initializeEditPage(defaultSprites) {
   const helperCodeElement = document.getElementById('block_helper_code');
   configEditor = initializeCodeMirror(blockConfigElement, 'application/json', {
     callback: validateBlockConfig,
-    onUpdateLinting: onUpdateLinting
+    onUpdateLinting: onUpdateLinting,
   });
 
   helperEditor = initializeCodeMirror(helperCodeElement, 'javascript', {
     callback: _ => validateBlockConfig(),
-    onUpdateLinting: onUpdateLinting
+    onUpdateLinting: onUpdateLinting,
   });
   poolField.addEventListener('change', updateBlockPreview);
 
@@ -160,14 +159,14 @@ function updateBlockPreview() {
         pool: poolField.value,
         category: 'Custom',
         config: parsedConfig,
-        helperCode: helperEditor && helperEditor.getValue()
-      }
+        helperCode: helperEditor && helperEditor.getValue(),
+      },
     ],
-    customInputTypes
+    customInputTypes,
   });
-  const blocksDom = parseElement(`<block type="${blockName}" />`);
+  const block = `<block type="${blockName}" />`;
   Blockly.mainBlockSpace.clear();
-  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
+  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, block);
   Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
 }
 

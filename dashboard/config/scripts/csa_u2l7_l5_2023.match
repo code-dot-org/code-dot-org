@@ -14,3 +14,4 @@ answer 'gives the value that is currently assigned to an instance variable'
 
 question 'return by value'
 answer 'a copy of the value is given to where the method is called'
+allow_multiple_attempts true

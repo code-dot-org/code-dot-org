@@ -4,7 +4,7 @@ import FatalErrorDialog from './FatalErrorDialog';
 
 export default {
   title: 'FatalErrorDialog',
-  component: FatalErrorDialog
+  component: FatalErrorDialog,
 };
 
 export const Basic = () => (

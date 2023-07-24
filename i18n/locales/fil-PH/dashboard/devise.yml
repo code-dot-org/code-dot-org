@@ -50,9 +50,6 @@ fil:
       expired: "ay nag-expire, mangyaring humingi ng isa pa"
       not_found: "hindi nahanap"
       not_locked: "ay hindi na lock"
-      not_saved:
-        one: "1 error ipinagbabawal ang %{resource} sa pagse-save:"
-        other: "%{count} error na ipinagbabawal ang %{resource} na ma-save:"
     invitations:
       send_instructions: 'May paanyayang email ang pinadala kay %{email}.'
       invitation_token_invalid: 'Ang token ng imbistasyon na binigay ay hindi balido!'

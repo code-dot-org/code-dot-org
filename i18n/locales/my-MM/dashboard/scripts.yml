@@ -379,3 +379,7 @@ my:
               display_name: ဖြစ်စဥ်များ
             csf_loops:
               display_name: Loops
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Variables

@@ -91,14 +91,14 @@ module.exports = {
     useContractEditor: true,
     examplesRequired: true,
     requiredBlocks: '',
-    freePlay: false
+    freePlay: false,
   },
   tests: [
     {
       description: 'example is missing result block',
       expected: {
         result: false,
-        testResult: TestResults.EXAMPLE_FAILED
+        testResult: TestResults.EXAMPLE_FAILED,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -122,13 +122,13 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'example result doesnt match definition',
       expected: {
         result: false,
-        testResult: TestResults.EXAMPLE_FAILED
+        testResult: TestResults.EXAMPLE_FAILED,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -176,14 +176,14 @@ module.exports = {
         '      </block>' +
         '  </functional_input>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     },
 
     {
       description: 'example result does match definition',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       customValidator: function (assert) {
         assert.equal(Eval.message, null);
@@ -194,14 +194,14 @@ module.exports = {
         solutionBlocks +
         matchingExampleBlock +
         matchingExampleBlock +
-        '</xml>'
+        '</xml>',
     },
 
     {
       description: 'no examples when examples required',
       expected: {
         result: false,
-        testResult: TestResults.EXAMPLE_FAILED
+        testResult: TestResults.EXAMPLE_FAILED,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -212,14 +212,14 @@ module.exports = {
         );
         return true;
       },
-      xml: '<xml>' + solutionBlocks + '</xml>'
+      xml: '<xml>' + solutionBlocks + '</xml>',
     },
 
     {
       description: 'one example when two examples required',
       expected: {
         result: false,
-        testResult: TestResults.EXAMPLE_FAILED
+        testResult: TestResults.EXAMPLE_FAILED,
       },
       customValidator: function (assert) {
         assert.equal(
@@ -230,14 +230,14 @@ module.exports = {
         );
         return true;
       },
-      xml: '<xml>' + solutionBlocks + matchingExampleBlock + '</xml>'
+      xml: '<xml>' + solutionBlocks + matchingExampleBlock + '</xml>',
     },
 
     {
       description: 'example running hides solution and displays result',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       customValidator: function (assert) {
         var answerElement = document.getElementById('answer');
@@ -277,7 +277,7 @@ module.exports = {
         solutionBlocks +
         matchingExampleBlock +
         matchingExampleBlock +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

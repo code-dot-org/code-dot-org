@@ -80,9 +80,9 @@ DashboardUser.getCurrentUser = function () {
       },
       error: function (/*jqXHR, textStatus, errorThrown*/) {
         DashboardUser.currentUser_.initialize({
-          isSignedIn: false
+          isSignedIn: false,
         });
-      }
+      },
     });
   }
   return DashboardUser.currentUser_;

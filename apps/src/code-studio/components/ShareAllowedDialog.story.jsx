@@ -10,7 +10,7 @@ import project from '@cdo/apps/code-studio/projectRedux';
 
 export default {
   title: 'ShareAllowedDialog',
-  component: ShareAllowedDialog
+  component: ShareAllowedDialog,
 };
 
 const defaultArgs = {
@@ -28,7 +28,7 @@ const defaultArgs = {
   channelId: 'some-id',
   appType: 'gamelab',
   canShareSocial: true,
-  onClickPopup: action('onClickPopup')
+  onClickPopup: action('onClickPopup'),
 };
 
 const Template = args => (
@@ -46,7 +46,7 @@ const Template = args => (
 export const SpriteLab = Template.bind({});
 SpriteLab.args = {
   ...defaultArgs,
-  appType: 'spritelab'
+  appType: 'spritelab',
 };
 
 export const WithThumbnail = Template.bind({});
@@ -54,13 +54,13 @@ WithThumbnail.args = {
   ...defaultArgs,
   canPrint: true,
   thumbnailUrl:
-    'https://studio.code.org/v3/files/eDTsqHl7lQygvEa1j3HSwlUFHAu507gI54D_PUy5mWE/.metadata/thumbnail.png'
+    'https://studio.code.org/v3/files/eDTsqHl7lQygvEa1j3HSwlUFHAu507gI54D_PUy5mWE/.metadata/thumbnail.png',
 };
 
 export const AppLab = Template.bind({});
 AppLab.args = {
   ...defaultArgs,
-  appType: 'applab'
+  appType: 'applab',
 };
 
 export const WithExportForWeb = Template.bind({});
@@ -68,19 +68,19 @@ WithExportForWeb.args = {
   ...defaultArgs,
   appType: 'applab',
   canShareSocial: true,
-  exportApp: action('onClickExport')
+  exportApp: action('onClickExport'),
 };
 
 export const WithUnder13Warning = Template.bind({});
 WithUnder13Warning.args = {
   ...defaultArgs,
-  canShareSocial: false
+  canShareSocial: false,
 };
 
 export const Abusive = Template.bind({});
 Abusive.args = {
   ...defaultArgs,
-  isAbusive: true
+  isAbusive: true,
 };
 
 export const WithPublishButton = Template.bind({});
@@ -88,20 +88,20 @@ WithPublishButton.args = {
   ...defaultArgs,
   canPublish: true,
   thumbnailUrl:
-    'https://studio.code.org/v3/files/eDTsqHl7lQygvEa1j3HSwlUFHAu507gI54D_PUy5mWE/.metadata/thumbnail.png'
+    'https://studio.code.org/v3/files/eDTsqHl7lQygvEa1j3HSwlUFHAu507gI54D_PUy5mWE/.metadata/thumbnail.png',
 };
 
 export const WithDisabledPublishButton = Template.bind({});
 WithDisabledPublishButton.args = {
   ...defaultArgs,
-  canPublish: true
+  canPublish: true,
 };
 
 export const WithUnpublishButton = Template.bind({});
 WithUnpublishButton.args = {
   ...defaultArgs,
   canPublish: true,
-  isPublished: true
+  isPublished: true,
 };
 
 export const WithUnpublishPending = Template.bind({});
@@ -109,7 +109,7 @@ WithUnpublishPending.args = {
   ...defaultArgs,
   canPublish: true,
   isPublished: true,
-  isUnpublishPending: true
+  isUnpublishPending: true,
 };
 
 export const WithSharingForUserDisabled = Template.bind({});
@@ -118,7 +118,7 @@ WithSharingForUserDisabled.args = {
   canPublish: true,
   isPublished: true,
   isUnpublishPending: true,
-  userSharingDisabled: true
+  userSharingDisabled: true,
 };
 
 export const InRestrictedShareMode = Template.bind({});
@@ -126,5 +126,5 @@ InRestrictedShareMode.args = {
   ...defaultArgs,
   canPublish: true,
   inRestrictedShareMode: true,
-  appType: 'spritelab'
+  appType: 'spritelab',
 };

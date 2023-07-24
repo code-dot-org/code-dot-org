@@ -17,16 +17,16 @@ export const nonUserFacingGroup = {
       name: 'A',
       position: 1,
       key: 'lesson-1',
-      levels: []
+      levels: [],
     },
     {
       name: 'B',
       id: 101,
       position: 2,
       key: 'lesson-2',
-      levels: []
-    }
-  ]
+      levels: [],
+    },
+  ],
 };
 
 describe('LessonGroupCard', () => {
@@ -79,17 +79,17 @@ describe('LessonGroupCard', () => {
             name: 'A',
             position: 1,
             key: 'lesson-1',
-            levels: []
+            levels: [],
           },
           {
             name: 'B',
             id: 101,
             position: 2,
             key: 'lesson-2',
-            levels: []
-          }
-        ]
-      }
+            levels: [],
+          },
+        ],
+      },
     };
   });
 

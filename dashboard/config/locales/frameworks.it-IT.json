@@ -2,23 +2,35 @@
   "it-IT": {
     "data": {
       "frameworks": {
+        "ai4k12-2021": {
+          "name": "Linee guida nazionali AI4K12 2021"
+        },
+        "c3ss": {
+          "name": "Standard di studi sociali C3"
+        },
+        "ccela": {
+          "name": "Competenze linguistiche"
+        },
+        "ccmath": {
+          "name": "Competenze matematiche"
+        },
+        "csa": {
+          "name": "Quadro concettuale CSA"
+        },
+        "csp2021": {
+          "name": "Quadro concettuale CSP"
+        },
         "csta": {
           "name": "CSTA K-12 Computer Science Standards (2017)"
         },
         "csta2011": {
           "name": "CSTA K-12 Computer Science Standards (2011)"
         },
-        "ccela": {
-          "name": "Competenze linguistiche"
+        "iste": {
+          "name": "Standard ISTE per studenti"
         },
         "ngss": {
           "name": "Competenze scientifiche di ultima generazione"
-        },
-        "ccmath": {
-          "name": "Competenze matematiche"
-        },
-        "iste": {
-          "name": "Standard ISTE per studenti"
         }
       }
     }

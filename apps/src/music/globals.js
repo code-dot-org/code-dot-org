@@ -25,5 +25,5 @@ export default {
 
   getPlayer() {
     return playerRef;
-  }
+  },
 };

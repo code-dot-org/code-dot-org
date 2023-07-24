@@ -3,7 +3,7 @@ import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../../../util/deprecatedChai';
 import DeleteAccount, {
-  DELETE_VERIFICATION_STRING
+  DELETE_VERIFICATION_STRING,
 } from '@cdo/apps/lib/ui/accounts/DeleteAccount';
 import {getCheckboxes} from '@cdo/apps/lib/ui/accounts/DeleteAccountHelpers';
 import * as utils from '@cdo/apps/utils';
@@ -12,7 +12,7 @@ const DEFAULT_PROPS = {
   isPasswordRequired: true,
   isTeacher: false,
   hasStudents: false,
-  dependentStudents: []
+  dependentStudents: [],
 };
 
 describe('DeleteAccount', () => {
@@ -21,7 +21,7 @@ describe('DeleteAccount', () => {
       const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} />);
       wrapper.setState({
         isDeleteAccountDialogOpen: true,
-        deleteVerification: DELETE_VERIFICATION_STRING
+        deleteVerification: DELETE_VERIFICATION_STRING,
       });
       const confirmButton = wrapper.find('Button').at(0);
       expect(confirmButton).to.have.attr('disabled');
@@ -31,7 +31,7 @@ describe('DeleteAccount', () => {
       const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} />);
       wrapper.setState({
         isDeleteAccountDialogOpen: true,
-        password: 'password'
+        password: 'password',
       });
       const confirmButton = wrapper.find('Button').at(0);
       expect(confirmButton).to.have.attr('disabled');
@@ -42,7 +42,7 @@ describe('DeleteAccount', () => {
       wrapper.setState({
         isDeleteAccountDialogOpen: true,
         password: 'password',
-        deleteVerification: 'some other string'
+        deleteVerification: 'some other string',
       });
       const confirmButton = wrapper.find('Button').at(0);
       expect(confirmButton).to.have.attr('disabled');
@@ -55,7 +55,7 @@ describe('DeleteAccount', () => {
         );
         wrapper.setState({
           isDeleteAccountDialogOpen: true,
-          deleteVerification: DELETE_VERIFICATION_STRING
+          deleteVerification: DELETE_VERIFICATION_STRING,
         });
         const confirmButton = wrapper.find('Button').at(0);
         expect(confirmButton).to.not.have.attr('disabled');
@@ -66,7 +66,7 @@ describe('DeleteAccount', () => {
         wrapper.setState({
           isDeleteAccountDialogOpen: true,
           password: 'password',
-          deleteVerification: DELETE_VERIFICATION_STRING
+          deleteVerification: DELETE_VERIFICATION_STRING,
         });
         const confirmButton = wrapper.find('Button').at(0);
         expect(confirmButton).to.not.have.attr('disabled');
@@ -78,7 +78,7 @@ describe('DeleteAccount', () => {
         const dependentStudents = [
           {id: 1, name: 'Student B', username: 'student_b'},
           {id: 3, name: 'Student A', username: 'student_a'},
-          {id: 2, name: 'Student C', username: 'student_c'}
+          {id: 2, name: 'Student C', username: 'student_c'},
         ];
         const wrapper = mount(
           <DeleteAccount
@@ -116,7 +116,7 @@ describe('DeleteAccount', () => {
           isDeleteAccountDialogOpen: true,
           password: 'password',
           deleteVerification: DELETE_VERIFICATION_STRING,
-          checkboxes
+          checkboxes,
         });
         const confirmButton = wrapper.find('Button').at(0);
         expect(confirmButton).to.have.attr('disabled');
@@ -136,7 +136,7 @@ describe('DeleteAccount', () => {
         wrapper.setState({
           isDeleteAccountDialogOpen: true,
           deleteVerification: DELETE_VERIFICATION_STRING,
-          checkboxes
+          checkboxes,
         });
         const confirmButton = wrapper.find('Button').at(0);
         expect(confirmButton).to.not.have.attr('disabled');
@@ -156,7 +156,7 @@ describe('DeleteAccount', () => {
           isDeleteAccountDialogOpen: true,
           password: 'password',
           deleteVerification: DELETE_VERIFICATION_STRING,
-          checkboxes
+          checkboxes,
         });
         const confirmButton = wrapper.find('Button').at(0);
         expect(confirmButton).to.not.have.attr('disabled');
@@ -173,7 +173,7 @@ describe('DeleteAccount', () => {
         wrapper.setState({
           isDeleteAccountDialogOpen: true,
           password: 'password',
-          deleteVerification: DELETE_VERIFICATION_STRING
+          deleteVerification: DELETE_VERIFICATION_STRING,
         });
         const confirmButton = wrapper.find('Button').at(0);
         expect(confirmButton).to.not.have.attr('disabled');
@@ -189,7 +189,7 @@ describe('DeleteAccount', () => {
       wrapper.setState({
         isDeleteAccountDialogOpen: true,
         password: 'password',
-        deleteVerification: DELETE_VERIFICATION_STRING
+        deleteVerification: DELETE_VERIFICATION_STRING,
       });
       confirmButton = wrapper.find('Button').at(0);
       server = sinon.fakeServer.create();
@@ -203,7 +203,7 @@ describe('DeleteAccount', () => {
         server.respondWith('DELETE', `/users`, [
           204,
           {'Content-Type': 'application/json'},
-          ''
+          '',
         ]);
       });
 
@@ -222,7 +222,7 @@ describe('DeleteAccount', () => {
         server.respondWith('DELETE', `/users`, [
           400,
           {'Content-Type': 'application/json'},
-          '{"error": {"current_password": ["Incorrect password!"]}}'
+          '{"error": {"current_password": ["Incorrect password!"]}}',
         ]);
         confirmButton.simulate('click');
         server.respond();
@@ -234,7 +234,7 @@ describe('DeleteAccount', () => {
         server.respondWith('DELETE', `/users`, [
           400,
           {'Content-Type': 'application/json'},
-          ''
+          '',
         ]);
         confirmButton.simulate('click');
         server.respond();

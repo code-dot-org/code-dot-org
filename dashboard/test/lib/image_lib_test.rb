@@ -98,7 +98,7 @@ class ImageLibTest < ActiveSupport::TestCase
       end
     end
     result.strip!
-    '0' == result
+    result == '0'
   end
 
   # Helper function to evaluate and return output to stderr.

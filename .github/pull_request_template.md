@@ -1,15 +1,3 @@
-## Warning!!
-
-The AP CSP Create Performance Task is in progress from April 1 - May 1 2023. Please
-consider any risk introduced by this PR that could affect our students taking AP CSP. Code.org
-students taking AP CSP primarily use App Lab for their Create Task, however a small percent use Game
-Lab. Carefully consider whether your change has any risk of alterering, changing, or breaking
-anything in these two labs. Even small changes, such as a different button color, are considered
-significant during this time period. Reach out to the Student Learning team or Curriculum team for
-more details.
-
-<!-- end warning -->
-
 <!--
   A summary of the change, including any relevant background, motivation, and context.
   If relevant, include a description, screenshots, and/or video of the existing and new behavior.

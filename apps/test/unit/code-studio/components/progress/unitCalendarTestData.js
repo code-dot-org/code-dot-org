@@ -5,7 +5,7 @@ export const testLessons = [
     duration: 87,
     assessment: true,
     unplugged: false,
-    url: 'https://www.google.com/'
+    url: 'https://www.google.com/',
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const testLessons = [
     duration: 40,
     assessment: false,
     unplugged: true,
-    url: 'https://www.google.com/'
+    url: 'https://www.google.com/',
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const testLessons = [
     duration: 135,
     assessment: true,
     unplugged: true,
-    url: 'https://www.google.com/'
+    url: 'https://www.google.com/',
   },
   {
     id: 4,
@@ -29,8 +29,8 @@ export const testLessons = [
     duration: 60,
     assessment: false,
     unplugged: false,
-    url: 'https://www.google.com/'
-  }
+    url: 'https://www.google.com/',
+  },
 ];
 
 export const testLessonSchedule = [
@@ -44,8 +44,8 @@ export const testLessonSchedule = [
       url: 'https://www.google.com/',
       isStart: true,
       isEnd: true,
-      isMajority: true
-    }
+      isMajority: true,
+    },
   ],
   [
     {
@@ -57,7 +57,7 @@ export const testLessonSchedule = [
       url: 'https://www.google.com/',
       isStart: true,
       isEnd: true,
-      isMajority: true
+      isMajority: true,
     },
     {
       id: 3,
@@ -68,8 +68,8 @@ export const testLessonSchedule = [
       url: 'https://www.google.com/',
       isStart: true,
       isEnd: false,
-      isMajority: false
-    }
+      isMajority: false,
+    },
   ],
   [
     {
@@ -81,8 +81,8 @@ export const testLessonSchedule = [
       url: 'https://www.google.com/',
       isStart: false,
       isEnd: true,
-      isMajority: true
-    }
+      isMajority: true,
+    },
   ],
   [
     {
@@ -94,7 +94,7 @@ export const testLessonSchedule = [
       url: 'https://www.google.com/',
       isStart: true,
       isEnd: true,
-      isMajority: true
-    }
-  ]
+      isMajority: true,
+    },
+  ],
 ];

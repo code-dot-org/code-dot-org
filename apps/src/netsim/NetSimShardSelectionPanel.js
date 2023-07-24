@@ -78,7 +78,7 @@ var NetSimShardSelectionPanel = (module.exports = function (
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-shard-selection-panel',
     panelTitle: i18n.pickASection(),
-    userToggleable: false
+    userToggleable: false,
   });
 });
 NetSimShardSelectionPanel.inherits(NetSimPanel);
@@ -96,7 +96,7 @@ NetSimShardSelectionPanel.prototype.render = function () {
       displayName: this.displayName_,
       selectedShardID: this.selectedShardID_,
       shardChoices: this.shardChoices_,
-      SELECTOR_NONE_VALUE: SELECTOR_NONE_VALUE
+      SELECTOR_NONE_VALUE: SELECTOR_NONE_VALUE,
     })
   );
   this.getBody().html(newMarkup);

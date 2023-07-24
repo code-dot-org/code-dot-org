@@ -7,7 +7,7 @@ const DEFAULT_PROPS = {
   tooltipId: 'id',
   icon: 'desktop',
   text: 'Level Name',
-  includeAssessmentIcon: false
+  includeAssessmentIcon: false,
 };
 
 describe('TooltipWithIcon', () => {

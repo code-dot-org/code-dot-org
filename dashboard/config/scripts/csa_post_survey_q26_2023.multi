@@ -3,3 +3,4 @@ question 'I showed something I made in this class to friends or family outside o
 
 right 'Yes'
 right 'No'
+allow_multiple_attempts true

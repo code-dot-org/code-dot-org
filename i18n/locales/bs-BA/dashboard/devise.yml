@@ -50,9 +50,6 @@ bs:
       expired: "je istekao, molimo zatražite novi"
       not_found: "nije pronađeno"
       not_locked: "nije zaključan"
-      not_saved:
-        one: "1 greška zabranjuje da se %{resource} snimi:"
-        other: "%{count} grešaka zabranjuju %{resource} da se snimi:"
     invitations:
       send_instructions: 'E-mail pozivnica je poslana na %{email}.'
       invitation_token_invalid: 'Znak sa pozivnice nije valjan!'

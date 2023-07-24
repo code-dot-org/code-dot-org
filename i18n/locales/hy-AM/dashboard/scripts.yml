@@ -1553,3 +1553,17 @@ hy:
               display_name: գործառույթները
             csf_nested_loops:
               display_name: conditionals
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: ներածություն
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: ներածություն
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: փոփոխականների

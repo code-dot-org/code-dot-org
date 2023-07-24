@@ -51,9 +51,6 @@ he:
       expired: "פג תוקף, בבקשה בקש חדש"
       not_found: "לא נמצא"
       not_locked: "לא היה נעול"
-      not_saved:
-        one: "שגיאה 1 עצרה את תהליך השמירה עבור %{resource}:"
-        other: "%{count} שגיאות עצרו את תהליך השמירה עבור %{resource}:"
     invitations:
       send_instructions: 'הודעת הזמנה נשלחה ל%{email}.'
       invitation_token_invalid: 'אסימון ההזמנה שסופק אינו תקין!'

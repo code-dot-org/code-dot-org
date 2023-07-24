@@ -224,6 +224,17 @@ vi:
         studio_iceage_warn_ice_age: Mọi người cần phải di chuyển nhanh hơn vì kỷ băng hà đang đến gần! Hãy đổi cảnh nền thành băng giá và đặt tốc độ của Sid thành nhanh, sau đó nhấn Chạy và di chuyển cậu ta đến chỗ Diego để cảnh báo.
         studio_iceage_throw_hearts: Sid muốn cho bà của mình, Granny, biết rằng anh yêu bà. Hãy sử dụng lệnh “diễn viên ném” để Sid (diễn viên 1) ném trái tim vào Granny (diễn viên 2)! Đặt tâm trạng của Granny thành hạnh phúc khi bà nhận được trái tim.
         studio_iceage_free_play: Đã đến lúc làm game hoặc câu chuyện của riêng bạn rồi! Khi bạn hoàn tất, hãy nhấp chuột vào Hoàn tất để cho bạn bè của mình chơi thử game của bạn trên điện thoại, máy tính bảng hoặc máy tính của họ!
+        studio_gumball_hello1: Anais muốn kết bạn mới. Bạn có thể giúp cô ấy nói “hello” bằng cách kéo khối “nói” ra vào khu vực làm việc và gõ từ “hello” bên trong?
+        studio_gumball_hello2: Darwin (diễn viên 1) và anh trai Gumball (diễn viên 2) đang đi học. Giúp họ chào đón nhau bằng cách sử dụng khối “diễn viên nói” hai lần.
+        studio_gumball_move_to_flag: Banana Joe sắp giành chiến thắng một cuộc đua ngày sân! Giúp anh ta đi 200 pixel cuối cùng bằng cách sử dụng khối “di chuyển”.
+        studio_gumball_move_to_actor: Gumball (diễn viên 1) và Darwin (diễn viên 2) là muộn cho ngày thực địa! Trợ giúp Gumball di chuyển 200 pixel xuống Darwin bằng cách sử dụng khối “di chuyển diễn viên”. Tiếp theo, kết nối một khối với sự kiện “khi diễn viên chạm” để phát âm thanh khi họ tìm thấy nhau.
+        studio_gumball_repeat: Khối “lặp lại mãi mãi” cho phép bạn chạy mã liên tục. Bạn có thể đính kèm các khối để nó để giúp Gumball ấm lên cho cuộc đua của mình bằng cách di chuyển trái và phải nhiều lần?
+        studio_gumball_click_hello: Bạn có thể giúp Anton thông báo sự bắt đầu của một cuộc đua bằng cách nói “Sẵn sàng, thiết lập, đi!”? Để kiểm tra chương trình của bạn, đừng quên bấm vào Anton sau khi bạn nhấp vào Chạy!
+        studio_gumball_move_events: Darwin đang tham gia cuộc thi tập cờ! Giúp anh ta chạy xung quanh bằng cách gắn khối “di chuyển” cho mỗi sự kiện. Khi bạn hoàn tất, bấm Chạy và cố gắng thu thập tất cả các cờ.
+        studio_gumball_sound_and_points: Chúng tôi đã cung cấp hầu hết mã giúp Anton (diễn viên 2) di chuyển trái và phải, cũng như mã để di chuyển Banana Joe (diễn viên 1) quanh màn hình. Bạn có thể kết thúc mã và thêm khối vào sự kiện “khi diễn viên chạm” để làm cho nó để cả hai chơi một âm thanh và ghi điểm một điểm khi Banana Joe và Anton va chạm? Nhấn Run để chơi trò chơi.
+        studio_gumball_warn_food_fight: Darwin vừa thoát khỏi cuộc chiến lương thực! Thay đổi nền thành “nhân vật” và đặt tốc độ của Darwin thành nhanh, sau đó nhấn Run và di chuyển anh ta đến Penny để cảnh báo cô.
+        studio_gumball_join_food_fight: Tham gia vào cuộc chiến lương thực! Sử dụng lệnh “diễn viên ném item đúng” để có Banana Joe (diễn viên 1) ném thức ăn vào Anton (diễn viên 2)! Đặt tâm trạng của Anton trở nên tức giận khi hắn bị trúng đạn.
+        studio_gumball_free_play: Tạo trò chơi hoặc câu chuyện của riêng bạn. Khi bạn hoàn tất, hãy nhấp vào Kết thúc để cho phép bạn bè thử trò chơi của bạn trên điện thoại, máy tính bảng hoặc máy tính của họ!
         studio_full_sandbox: Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại của họ.
         studio_k1_1: Bạn có thể làm chú chó nói "hello world" không?
         studio_k1_2: Bạn có thể làm chú chó nói vài điều, sau đó chú mèo nói tiếp vài điều không?
@@ -344,11 +355,21 @@ vi:
         C4_unplugged_binary: Nhị phân
         CSF_a_b_artist_loops: Vòng lặp trong Artist
         CSF_artist_angles: Góc trong Artist
+        CSF_collector_k1_blocks: 'Các nguyên tắc cơ bản CS: The Collector'
+        CSF_collector_repeat_loops: Loops lặp lại Collector
+        CSF_collector_text_blocks: 'Các nguyên tắc cơ bản CS: The Collector'
+        CSF_create_functions: Tạo các hàm
         CSF_debugging_k1_blocks: Sửa lỗi
         CSF_debugging_text_blocks: Sửa lỗi
+        CSF_EF_cs_matters: Các vấn đề khoa học máy tính
         CSF_maze_intro_k1_blocks: Hướng dẫn sử dụng Code Studio
         CSF_maze_intro_text_blocks: Hướng dẫn sử dụng Code Studio
         CSF_my_robotic_friends: Bạn bè robot của tôi
+        CSF_Power_of_Words: Sức mạnh của từ
+        CSF_Super_Digital_Citizen: Super Digital Citizen
+        CSF_stevie_big_project: Stevie và dự án lớn
+        CSF_unspotted_bugs: Lỗi chưa phát hiện
+        CSF_zuck_loops_short: Lặp lại vòng lặp
         frozen_intro: Giới thiệu về Giờ Lập Trình
         frozen_loops: Giới thiệu về vòng lặp
         frozen_functions: Giới thiệu về hàm
@@ -359,6 +380,23 @@ vi:
         infinity_playlab_intro: Phòng trò chơi - Giới thiệu
         infinity_playlab_events: Sự kiện Phòng Trò Chơi
         infinity_playlab_repeat_forever: Phòng Trò Chơi lặp lại mãi mãi
+        csd_concept_how_computers_work: Giới thiệu cách thức hoạt động của máy tính
+        csd_concept_computer: 'Làm thế nào máy tính hoạt động: Điều gì tạo ra một máy tính, một máy tính?'
+        csd_concept_binary_data: 'Làm thế nào máy tính hoạt động: Nhị phân & dữ liệu'
+        csd_concept_circuits_logic: 'Làm thế nào máy tính hoạt động: Mạch & Logic'
+        csd_concept_memory_cpu_input_output: 'Làm thế nào máy tính hoạt động: Bộ nhớ, CPU, đầu vào và đầu ra'
+        csd_concept_hardware_software: 'Làm thế nào máy tính hoạt động: Phần cứng & phần mềm'
+        csd_concept_search: Cách hoạt động của Tìm kiếm
+        csd_external_amazon_data: Dữ liệu lớn được sử dụng như thế nào trong các hệ thống khuyến nghị của Amazon để thay đổi cuộc sống của chúng tôi
+        csd_external_netflix_data: Làm thế nào để Netflix thực hiện chương trình truyền hình và đề xuất phim?
+        csd_external_waze_data: Tại sao nhiều người dùng bị ám ảnh bởi Waze?
+        csd_gamelab_animation_tab: Tab hoạt hình
+        csd_gamelab_velocity: Vận tốc
+        csd_weblab_intro_1: Giới thiệu về Web Lab - Phần 1
+        csd_weblab_intro_2: Giới thiệu về Web Lab - Phần 2
+        csd_weblab_css_1: Giới thiệu về CSS - Phần 1
+        csd_weblab_css_2: Giới thiệu về CSS - Phần 2
+        csd_weblab_intro_3: Giới thiệu về Web Lab - Phần 3
         csp_applab_functions: Giới thiệu về hàm
         csp_applab_functions_parameters: Hàm và tham số
         csp_applab_loops: Vòng lặp
@@ -375,11 +413,22 @@ vi:
         mc_if_statements: Minecraft - Lệnh if
         mc_congrats_share: Minecraft - Xin chúc mừng
         mc_congrats_no_share: Minecraft - Xin chúc mừng
+        gumball_intro: Gumball Hour of Code - Giới thiệu
+        gumball_events: Gumball Hour of Code - Sự kiện
+        gumball_repeat: Gumball Hour of Code - Lặp lại các câu lệnh
+        iceage_intro: Ice Age Hour of Code - Giới thiệu
+        iceage_events: Ice Age Hour of Code - Sự kiện
+        iceage_repeat: Ice Age Hour of Code - Báo cáo lặp lại
         mc_2016_intro: Giờ lập trình Minecraft - Giới thiệu
         mc_2016_loops: Giờ lập trình Minecraft - Vòng lặp
         mc_2016_events: Giờ lập trình Minecraft - Sự kiện
         mc_2016_spawn: Giờ lập trình Minecraft - Tạo nhân vật
         mc_2016_congrats: Giờ lập trình Minecraft - Chúc mừng
+        applab_hoc_welcome: App Lab Hour of Code - Welcome
+        applab_hoc_setproperty: App Lab Hour Code - SetProperty
+        applab_hoc_onevent: App Lab Hour of Code - OnEvent
+        applab_hoc_designmode: ApplAb Hour of Code - Chế độ Thiết kế
+        applab_hoc_share: ApplAb Hour of Code - Chia sẻ
         mc_2017_agent_intro: Giờ lập trình Minecraft - Đặc vụ
         mc_2017_repeat: Giờ lập trình Minecraft - Vòng lặp liên tiếp
         mc_2017_functions: Giờ lập trình Minecraft - Hàm
@@ -388,10 +437,45 @@ vi:
         mc_2017_puzzle_3: Giờ lập trình Minecraft - Vòng lặp liên tiếp
         mc_2017_puzzle_8: Giờ lập trình Minecraft - Hàm
         mc_2017_puzzle_12: Giờ lập trình Minecraft - Chơi tự do
+        hint_videos_d_11_3_first: 'Gợi ý Video: D.11.3 Đầu tiên'
+        hint_videos_d_11_3_last: 'Gợi ý Video: D.11.3 Cuối'
+        hint_videos_d_11_4_first: 'Gợi ý Video: D.11.4 Đầu tiên'
+        hint_videos_d_11_4_last: 'Gợi ý Video: D.11.4 Cuối'
+        hint_videos_d_11_5_first: 'Gợi ý Video: D.11.5 Đầu tiên'
+        hint_videos_d_11_5_last: 'Gợi ý Video: D.11.5 Last'
+        hint_videos_d_11_6_first: 'Gợi ý Video: D.11.6 Đầu tiên'
+        hint_videos_d_11_6_last: 'Gợi ý Video: D.11.6 Last'
+        hint_videos_d_11_7_first: 'Gợi ý Video: D.11.7 Đầu tiên'
+        hint_videos_d_11_7_last: 'Gợi ý Video: D.11.7 Cuối'
+        hint_videos_d_11_9_first: 'Gợi ý Video: D.11.9 Đầu tiên'
+        hint_videos_d_11_9_last: 'Gợi ý Video: D.11.9 Cuối'
+        hint_videos_d_11_11_first: 'Gợi ý Video: D.11.11 Đầu tiên'
+        hint_videos_d_11_11_last: 'Gợi ý Video: D.11.11 Cuối'
+        applab_intro_welcome: App Lab - Bắt đầu
+        applab_intro_events: App Lab - Làm cho nó tương tác
+        applab_intro_sounds: App Lab - Hình ảnh và Âm thanh
+        applab_intro_designmode: App Lab - Chế độ thiết kế
+        applab_intro_share: App Lab - Chia sẻ ứng dụng của bạn
         csd_applab_arrays: Giới thiệu Danh sách
+        CSF_skinOverview_Harvester: The Harvester
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Vòng lặp với BB-8
+        CSF_harvester_skinOverview_K-1: The Harvester
+        CSF_harvester_loops_K1: Loops trong Harvester
         CSF_scrat_loops_K1: Vòng lặp trong Kỷ băng hà
         CSF_scrat_loops_CF: Vòng lặp trong Kỷ băng hà
+        CSF_if_allskins: Khối If
+        CSF_ifelse_allskins: Sử dụng If/Else Blocks
+        CSF_ifelseifelse_allskins: Sử dụng các khối IF/Elseif/else
         CSF_loops_AB: Vòng lặp
+        csd_gamelab_booleans: Biểu thức Boolean
+        csd_gamelab_conditional_statements: Câu lệnh có điều kiện
+        csd_gamelab_if_else: Câu lệnh IF/Else
+        CSF_SpriteLabIntro_CDEF: Đây là phòng thí nghiệm Sprite
+        CSF_Spritelab_MakeSprite_CDEF: Làm thế nào để làm cho một Sprite trong phòng thí nghiệm Sprite
+        CDEF_Video_SpritesInAction: Sprites trong hành động
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites trong hành động
         CSF_StarWars_ProjectIntro: Giới thiệu Dự án Star Wars
         mc_2018_intro: 'Minecraft: Chuyến thám hiểm đại dương - Giới thiệu'
         MC_2018_loops: 'Minecraft: Chuyến thám hiểm đại dương - Lặp tới khi'
@@ -403,22 +487,76 @@ vi:
         hoc_dance_congrats: Bữa Tiệc Khiêu Vũ - Quẩy lên!
         c_and_c_great_to_create: Sáng tạo và vui chơi công bằng thật tuyệt vời
         c_and_c_digital_sharing: Chia sẻ nội dung số
+        teaching_csf_how_it_works: 'Giảng dạy các nguyên tắc cơ bản CS: Cách hoạt động của khóa học'
+        elem_pd_2: Trường Tiểu học Khoa học Máy tính - PD video 2/2
+        what_is_cs: Khoa học máy tính là gì?
+        repeat_block: Sử dụng khối lặp lại
+        lesson_planning: Lập kế hoạch bài học
+        opd_closing: 'Giảng dạy các nguyên tắc cơ bản CS: Kết thúc & Các bước tiếp theo'
+        why_unplugged_lessons: Nhận được “rút phích cắm”
+        writing_first_program: Viết chương trình máy tính đầu tiên của bạn
+        conditionals_with_cards: Unplugged Bài học trong hành động - Điều kiện với Thẻ
+        songwriting_with_functions: Unplugged Lesson in Action - Bài hát với chức năng
+        what_is_an_event: Sự kiện là gì?
+        teaching_cs_pair_programming: 'Giảng dạy các nguyên tắc cơ bản CS: Lập trình cặp'
+        teaching_problem_solving: 'Giảng dạy các nguyên tắc cơ bản CS: Giảng dạy giải quyết vấn đề'
+        csd_applab_designmode: 'CS Discoveries: App Lab - Chế độ thiết kế'
         csd_pair_programming: Lập trình đôi
+        csd_gamelab_functions: Gọi và xác định hàm
         csd_applab_parameters: Hàm và tham số
+        csd_applab_loops: Vòng lặp trong App Lab
         csd_problem_solving_process: Quá trình giải quyết vấn đề
+        CSF_Going_Places_Safely: Khu phố trực tuyến của tôi
+        CSF_SpriteLab_Intro_v2: Giới thiệu Sprite Lab
+        CSF_Spritelab_MakeSprite_v2: Làm thế nào để làm cho một Sprite
+        CSF_SpriteLab_SpritesInAction_v2: Sprites trong hành động
         csd_debugging: Sửa lỗi
+        csd_applab_designmode_short: Chế độ thiết kế App Lab
+        csp-pd-welcome: Chào mừng bạn đến với Gia đình!
+        CSF-Teaching-Problem-Solving: Giải quyết vấn đề giảng dạy CSF
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot Video - Khối dữ liệu
+        u7-libraries-explanation: 'App Lab: Tạo khối của riêng bạn - Làm thế nào để sử dụng thư viện'
+        how-to-k5-workshops: 'Các nguyên tắc cơ bản CS của Code.org: Kiểm tra trẻ em, Giáo viên được phê duyệt'
+        why-should-teach-unplugged-activities: 'Hỏi đáp: Tại sao tôi nên dạy các hoạt động “không cắm”?'
+        cs-principles-intro-to-objects: 'Nguyên tắc CS: Giới thiệu cho các đối tượng'
         oceans_machine_learning: Học máy
+        oceans_training_data: Dữ liệu đào tạo
+        oceans_societal_implications: Tác động xã hội
         hoc_dance_congrats_2019: Bữa Tiệc Khiêu Vũ 2019 - Quẩy lên!
         hoc_dance_warmup_2019: Bữa Tiệc Khiêu Vũ 2019 - Khởi động
         hoc_dance_events_2019: Bữa Tiệc Khiêu Vũ 2019 - Sự kiện
         hoc_dance_measures_2019: Bữa Tiệc Khiêu Vũ 2019 - Nhịp
         hoc_dance_properties_2019: Bữa Tiệc Khiêu Vũ 2019 - Thuộc tính
+        csd_what_computers_do: Máy tính làm gì?
+        csf_my_online_neighborhood_2020: Khu phố trực tuyến của tôi
+        csf_follow_the_digital_trail: Đi theo đường mòn kỹ thuật số
         csf_private_and_personal_information: Thông tin cá nhân và riêng tư
         csd_what_computers_are: Máy tính là gì?
+        csd_how_teamwork_works: Làm thế nào làm việc theo nhóm
+        csd_teamwork_and_disagreement: Làm việc theo nhóm - Xử lý bất đồng
+        csf21pilot_events: 'Sprite Lab: Sprites trong hành động'
+        csf21pilot_prompts: 'Sprite Lab: Văn bản và lời nhắc'
         outbreak_mike: CodeBytes Tập 3 cùng Mike - Trình mô phỏng dịch bệnh bùng phát
+        csd_ml_intro_to_ai_lab: Giới thiệu về AI Lab
+        csd_ml_import_model: Nhập mô hình AI
         csf_lots_of_sprites: 'Sprite Lab: Rất nhiều nhân vật'
         playlab_2021: Giới thiệu về Phòng Trò Chơi
         playlab_2021_reader: Giới thiệu về Phòng Trò Chơi
+        csp_defining_calling_functions: Xác định và gọi hàm
+        csp_tutorial_datatab: Tab dữ liệu trong App Lab
+        csp_tutorial_libraries: Thư viện trong App Lab
+        PL-Video-21: Chào mừng bạn đến với Code.org của Professional Learning!
+        csp_tutorial_datavis1: Trình hiển thị dữ liệu trong App Lab - Phần 1
+        csp_tutorial_datavis2: Trình hiển thị dữ liệu trong App Lab - Phần 2
+        csd_ml_intro_ai_lab_july2021: Giới thiệu về AI Lab
+        csd_ml_training_testing_ai_lan: Đào tạo và thử nghiệm trong phòng thí nghiệm AI
+        csd_ml_model_cards_july2021: Thẻ mẫu trong AI Lab
+        csd_ml_numerical_ai_lab: Dữ liệu số trong phòng thí nghiệm AI
+        Gettting_Started_Progress: Tiến trình, Phản hồi và Đánh giá
+        Gettting_Started_ClassSection: Tạo một phần lớp
+        Gettting_Started_StudentExperience: Trải nghiệm sinh viên
+        Getting_Started_BasicFeatures: Các tính năng cơ bản của Code.org
+        PL_overview_CSD: Khám phá Khoa học Máy tính là gì?
         PL_CSD_TeacherTips_Advise: Mẹo dành cho giáo viên – Lời khuyên dành cho giáo viên mới
         PL_CSD_TeacherTips_IntroToCSD: Mẹo dành cho giáo viên – Giới thiệu về Khám phá KHMT
         PL_CSD_TeacherTips_ProblemSolvingProcess: Mẹo dành cho giáo viên – Quy trình giải quyết vấn đề
@@ -431,6 +569,7 @@ vi:
         hello_world_intro: Xin chào thế giới - Chào mừng đến với Sprite Lab
         hello_world_events: Xin chào thế giới - Lập trình với sự kiện
         hello_world_congrats: Xin chào thế giới - Làm điều bạn muốn
+        csp_global_vs_local: Gỡ lỗi toàn cầu so với các biến cục bộ
         rough_poemart_intro: v1 Nghệ Thuật Thơ Ca - Giới Thiệu 
         rough_poemart_events: v1 Nghệ Thuật Thơ Ca - Sự Kiện
         rough_poemart_imagery: v1 Nghệ Thuật Thơ Ca - Hình Ảnh
@@ -441,7 +580,22 @@ vi:
         poetry_module_multichoiceprompts: Lời nhắc nhiều lựa chọn - Code và Thơ
         poetry_module_conditionals: Điều kiện - Code và Thơ
         poemart_intro: Giới thiệu Tranh thơ ca
+        poemart_events: Sự kiện nghệ thuật bài thơ
+        poemart_imagery: Hình ảnh nghệ thuật bài thơ
+        poemart_celebration: Lễ kỷ niệm nghệ thuật bài thơ
+        csd_u6_variables_part2: Biến - Mẫu truy cập
+        csd_ml_ethics_ai: 'Đạo đức và AI '
+        outbreak_intro: 'Mô phỏng bùng phát: Giới thiệu'
+        outbreak_events: 'Trình mô phỏng bùng nổ: Sự kiện'
+        outbreak_scientist: 'Trình mô phỏng bùng nổ: suy nghĩ giống như một nhà khoa học'
+        outbreak_outro: 'Mô phỏng bùng nổ: Chơi miễn phí'
+        PL_overview_CSP: Nguyên tắc khoa học máy tính là gì?
+        PL_CSP_EIPMOverview: Hướng dẫn về các bài học EIPM
         CSA-PL-debugging-temp: Giới thiệu về Gỡ lỗi trong Java Lab - tạm thời
+        csd_app_lab_design_mode: Chế độ thiết kế CSD App Lab
+        csd_app_lab_events: Sự kiện CSD App Lab
+        PL_CSD_Unit4_AppTesting: Kiểm tra nguyên mẫu giấy
+        csd_u6_circuit_playground: Điện toán vật lý
         CSA-PL-for-loops: Vòng lặp for trong Java
         CSA-PL-variables: Tạo biến trong Java
         PL_CS_Journeys_Overview: Hành trình KHMT
@@ -460,8 +614,99 @@ vi:
         CSA-PL-two-way-selection: Lựa chọn hai hướng
         CSA-PL-Printing-in-Java: Hiển thị văn bản trong Java
         CSA-PL-multi-selection-statements: Câu lệnh nhiều lựa chọn
+        PL_CSP_TeacherTips_Advice: 'Lời khuyên của giáo viên: Lời khuyên cho giáo viên CS mới'
+        PL_CSP_TeacherTips_IntroToCSP: 'Lời khuyên của giáo viên: Giới thiệu về các nguyên tắc CS'
+        PL_CSP_TeacherTips_Debugging: 'Lời khuyên của giáo viên: Trợ giúp với gỡ lỗi'
+        PL_CSP_TeacherTips_LeadLearner: 'Lời khuyên của giáo viên: Làm thế nào để trở thành một người học chính'
+        PL_CSP_TeacherTips_APExam: 'Lời khuyên của giáo viên: Chuẩn bị cho kỳ thi AP'
+        PL_CSP_TeacherTips_EIPM: 'Lời khuyên của giáo viên: Quy trình EIPM'
+        PL_CSD_CircuitPlayground_Overview: Tổng quan về Sân chơi Circuit
+        CSA-PL-debugging-22: Gỡ lỗi trong Java Lab
+        CSD_Unit6_InteractiveArtExemplar: Mẫu nghệ thuật tương tác
         CS_Changing_Everything: Khoa học máy tính là Thay đổi Tất cả mọi thứ
+        csa-alias-video: Equals và bí danh
+        csa-equals-video: Phương pháp equals ()
+        csa-user-stories: Câu chuyện người dùng trong Kỹ thuật Phần mềm
+        csa-pl-vpl-m1-unit-3: Kỹ thuật phần mềm trong đơn vị 3
+        csa-pl-intro-to-equality: Giới thiệu về Bình đẳng
+        csa-pl-intro-to-equals-method: Giới thiệu về phương pháp .equals ()
+        csa-pl-equals-book: Viết phương pháp equals () cho lớp Book
+        csa-multi-select-pl: Câu lệnh đa lựa chọn trong Java
+        csc_timecapsule_intro: Time Capsule Giới thiệu
+        PL_Equity_in_CS_Education: Công bằng trong CS Education
+        csc_fm_pilot: Máy chức năng (Pilot)
+        csc_fm_pilot_v2: 'Giới thiệu máy chức năng '
+        csc-sprite-lab-pixel-editor: Vẽ Sprite của riêng bạn
+        csa-pl-intro-to-strings: Giới thiệu về Strings trong Java
+        csa-pl-compareTo: Phương pháp compareto ()
+        csc-event-short-intro: Giới thiệu ngắn sự kiện
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Tổng quan về đơn vị sân chơi mạch
+        csa-day-in-pm-pl: Người quản lý dự án làm gì?
+        csa-pl-intro-to-pm: Giới thiệu về quản lý dự án
+        PL_CSD_CircuitPlayground_Setup: Thiết lập sân chơi mạch
+        csa_object_oriented_programming: 'CSA: Lập trình hướng đối tượng'
+        csa_creating_objects: 'CSA: Tạo các đối tượng'
+        csa_calling_methods: 'CSA: Phương pháp gọi'
+        csa_while_loops: 'CSA: Trong khi vòng'
+        csa_inheritance: 'CSA: Thừa kế'
+        csa_writing_a_method: 'CSA: Viết một phương pháp'
+        csa_software_engineering_code_reviews: 'CSA: Software Engineering - Code Reviews'
+        csa_conditional_statements: 'CSA: Câu lệnh có điều kiện'
+        csa_printing_in_java: 'CSA: In ấn bằng Java'
+        csa_two_way_selection_and_not: 'CSA: Lựa chọn hai chiều và KHÔNG'
+        csa-pl-intro-to-oop: Giới thiệu về lập trình hướng đối tượng
+        csa-pl-welcome-to-Neighborhood: Chào mừng bạn đến với The Neighborhood
+        csa-pl-calling-methods: Phương pháp gọi điện thoại trong Java
+        csa-pl-creating-objects: Tạo các đối tượng
+        csa_accessor_methods: 'CSA: Phương pháp Accessor'
+        csa_constructors: 'CSA: Constructors'
+        csa_creating_a_scanner_object: 'CSA: Tạo một đối tượng máy quét'
+        csa_creating_variables: 'CSA: Tạo các biến'
+        csa_instance_variables_and_attributes: 'CSA: Phiên bản biến và thuộc tính'
+        csa_mutator_methods: 'CSA: Phương pháp Mutator'
+        csa_overloaded_constructors: 'CSA: Constructors quá tải'
+        csa_the_tostring_method: 'CSA: Phương pháp ToString ()'
+        csa_scanner_class_methods: 'CSA: Phương pháp lớp máy quét'
+        csa_for_loops: 'CSA: Đối với vòng lặp'
+        csa_enhanced_for_loops: 'CSA: Nâng cao cho vòng lặp'
+        csa_modifying_values_in_a_1d_array: 'CSA: Sửa đổi giá trị trong một mảng 1D'
+        csa_nested_loops: 'CSA: Vòng lặp lồng nhau'
+        csa_one_dimensional_arrays: 'CSA: Mảng một chiều (1D)'
+        csa_polymorphism: 'CSA: Đa hình'
+        csa_casting: 'CSA: Đúc'
+        csa_equals_and_aliases: 'CSA: Bằng và bí danh'
+        csa_multi-selection_statements: 'CSA: Báo cáo đa lựa chọn'
+        csa_random_numbers: 'CSA: Số Ngẫu nhiên'
+        csa_static_methods: 'CSA: Phương pháp tĩnh'
+        csa_static_variables: 'CSA: Biến tĩnh'
+        csa_the_equals_method: 'CSA: Phương pháp equals ()'
+        csa_welcome_to_the_theater: 'CSA: Chào mừng bạn đến với Nhà hát'
+        enter_your_own_poem: Nhập bài thơ của riêng bạn
+        csa-example-solution-1: 'Live Coding một giải pháp ví dụ '
         csd_sprite_properties: Thuộc tính của nhân vật
+        csa-pl-documentation: Tài liệu trong Java Lab
+        csc-starquilts-intro: 'CSC: Chăn bông sao'
+        csa-pl-vocab-pm: Từ vựng quản lý dự án
+        csc-ecosystems-intro: Giới thiệu về hệ sinh thái
+        PL_CSD_MicroBit_Intro: Giới thiệu về Micro:bit
+        csc_animal_adaptations_intro: Giới thiệu thích nghi động vật
+        csa_two_dimensional_arrays: 'CSA: Mảng hai chiều (2D)'
+        csa_working_with_2d_array_elements: 'CSA: Làm việc với các phần tử mảng 2D'
+        csa_row_major_traversal: 'CSA: Traversal Row-Major'
+        csa_column_major_traversal: 'CSA: Column-Major Traversal'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Tăng cường cho các vòng lặp và mảng 2D'
+        csa_images_and_pixels: 'CSA: Hình ảnh và Pixel'
+        csa_wrapper_classes_part_1: 'CSA: Lớp Wrapper Phần 1'
+        csa_wrapper_classes_part_2: 'CSA: Lớp Wrapper Phần 2'
+        csa_the_arraylist_class: 'CSA: Lớp ArrayList'
+        csa_working_with_arraylist_data: 'CSA: Làm việc với dữ liệu ArrayList'
+        csa_remving_data_from_an_arraylist: 'CSA: Loại bỏ dữ liệu từ một ArrayList'
+        csa_private_methods: 'CSA: Phương pháp riêng'
+        csa_recursion: 'CSA: Đệ quy'
+        csa_searching_algorithms: 'CSA: Các thuật toán tìm kiếm'
+        csa_sorting_algorithms: 'CSA: Các thuật toán sắp xếp'
+        star_quilts_intro_to_artist: 'Star Quilt: Giới thiệu cho nghệ sĩ'
+        upload_sprites_backgrounds: Tải lên tùy chỉnh Sprites và hình nền
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

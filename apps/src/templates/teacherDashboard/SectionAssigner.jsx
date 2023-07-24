@@ -16,13 +16,13 @@ class SectionAssigner extends Component {
     courseId: PropTypes.number,
     scriptId: PropTypes.number,
     forceReload: PropTypes.bool,
-    isOnCoursePage: PropTypes.bool,
+    isAssigningCourse: PropTypes.bool,
     isStandAloneUnit: PropTypes.bool,
     participantAudience: PropTypes.string,
     // Redux provided
     selectSection: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.number,
-    assignmentName: PropTypes.string
+    assignmentName: PropTypes.string,
   };
 
   onChangeSection = sectionId => {
@@ -30,16 +30,16 @@ class SectionAssigner extends Component {
   };
 
   state = {
-    confirmationMessageOpen: false
+    confirmationMessageOpen: false,
   };
 
   onReassignConfirm = () => {
     this.setState({
-      confirmationMessageOpen: true
+      confirmationMessageOpen: true,
     });
     setTimeout(() => {
       this.setState({
-        confirmationMessageOpen: false
+        confirmationMessageOpen: false,
       });
     }, 15000);
   };
@@ -55,9 +55,9 @@ class SectionAssigner extends Component {
       selectedSectionId,
       forceReload,
       assignmentName,
-      isOnCoursePage,
+      isAssigningCourse,
       isStandAloneUnit,
-      participantAudience
+      participantAudience,
     } = this.props;
     const selectedSection = sections.find(
       section => section.id === selectedSectionId
@@ -91,7 +91,7 @@ class SectionAssigner extends Component {
               assignmentName={assignmentName}
               sectionName={selectedSection.name}
               reassignConfirm={this.onReassignConfirm}
-              isOnCoursePage={isOnCoursePage}
+              isAssigningCourse={isAssigningCourse}
               isStandAloneUnit={isStandAloneUnit}
               participantAudience={participantAudience}
             />
@@ -104,11 +104,11 @@ class SectionAssigner extends Component {
 
 const styles = {
   section: {
-    marginBottom: 10
+    marginBottom: 10,
   },
   content: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   label: {
     width: '100%',
@@ -117,23 +117,23 @@ const styles = {
     paddingTop: 10,
     paddingBottom: 10,
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   confirmText: {
     fontSize: 12,
-    fontFamily: '"Gotham 4r", sans-serif'
-  }
+    fontFamily: '"Gotham 4r", sans-serif',
+  },
 };
 
 export const UnconnectedSectionAssigner = SectionAssigner;
 
 export default connect(
   state => ({
-    selectedSectionId: state.teacherSections.selectedSectionId
+    selectedSectionId: state.teacherSections.selectedSectionId,
   }),
   dispatch => ({
     selectSection(sectionId) {
       dispatch(selectSection(sectionId));
-    }
+    },
   })
 )(SectionAssigner);

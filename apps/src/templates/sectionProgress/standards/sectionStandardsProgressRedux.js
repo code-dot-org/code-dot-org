@@ -15,17 +15,17 @@ export const setStandardsData = standardsData => {
 };
 export const setTeacherCommentForReport = teacherComment => ({
   type: SET_TEACHER_COMMENT_FOR_REPORT,
-  teacherComment
+  teacherComment,
 });
 export const setSelectedLessons = selected => ({
   type: SET_SELECTED_LESSONS,
-  selected
+  selected,
 });
 export const setStudentLevelScores = (scriptId, lessonId, scoresData) => ({
   type: SET_STUDENT_LEVEL_SCORES,
   scriptId,
   lessonId,
-  scoresData
+  scoresData,
 });
 
 // Initial State
@@ -33,7 +33,7 @@ const initialState = {
   standardsData: [],
   teacherComment: null,
   selectedLessons: [],
-  studentLevelScoresByLesson: {}
+  studentLevelScoresByLesson: {},
 };
 
 function sortByShortcode(standardsByCategory) {
@@ -55,19 +55,19 @@ export default function sectionStandardsProgress(state = initialState, action) {
     const sortedStandards = _.map(groupedStandards, sortByShortcode);
     return {
       ...state,
-      standardsData: _.flatten(sortedStandards)
+      standardsData: _.flatten(sortedStandards),
     };
   }
   if (action.type === SET_TEACHER_COMMENT_FOR_REPORT) {
     return {
       ...state,
-      teacherComment: action.teacherComment
+      teacherComment: action.teacherComment,
     };
   }
   if (action.type === SET_SELECTED_LESSONS) {
     return {
       ...state,
-      selectedLessons: action.selected
+      selectedLessons: action.selected,
     };
   }
   if (action.type === SET_STUDENT_LEVEL_SCORES) {
@@ -84,10 +84,10 @@ export default function sectionStandardsProgress(state = initialState, action) {
           ...state.studentLevelScoresByLesson[action.scriptId],
           [action.lessonId]: {
             ...prevLevelScoreByLesson,
-            ...action.scoresData[action.scriptId][action.lessonId]
-          }
-        }
-      }
+            ...action.scoresData[action.scriptId][action.lessonId],
+          },
+        },
+      },
     };
   }
   return state;
@@ -140,7 +140,7 @@ export function getUnpluggedLessonsForScript(state) {
       number: lesson.position,
       url: lesson.lesson_plan_html_url,
       completed: lesson.completed,
-      inProgress: lesson.inProgress
+      inProgress: lesson.inProgress,
     };
   }
 
@@ -212,7 +212,7 @@ export const lessonsByStandard = state => {
             numStudentsCompleted: lessonCompletionStatus.numStudentsCompleted,
             numStudents: numStudents,
             url: lesson.lesson_plan_html_url,
-            unplugged: lesson.unplugged
+            unplugged: lesson.unplugged,
           };
           associatedLessons.push(lessonDetails);
         }
@@ -245,7 +245,7 @@ export function getUnpluggedLessonCompletionStatus(state, scriptId, lessonId) {
       state,
       scriptId,
       lessonId
-    )
+    ),
   };
 
   return completionByLesson;
@@ -354,7 +354,7 @@ export function fetchStandardsCoveredForScript(scriptId) {
     $.ajax({
       method: 'GET',
       dataType: 'json',
-      url: `/dashboardapi/script_standards/${scriptId}`
+      url: `/dashboardapi/script_standards/${scriptId}`,
     }).then(data => {
       const standardsData = data;
       dispatch(setStandardsData(standardsData));

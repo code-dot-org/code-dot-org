@@ -11,3 +11,5 @@ teacher_markdown <<MARKDOWN
 
 Output is the information that computers give to users. These are all examples of the information that is given to the user after processing, the thinking work of a computer.
 MARKDOWN
+
+allow_multiple_attempts true

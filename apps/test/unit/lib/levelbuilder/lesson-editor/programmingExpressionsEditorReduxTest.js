@@ -1,7 +1,7 @@
 import {assert} from 'chai';
 import programmingExpressionEditor, {
   addProgrammingExpression,
-  removeProgrammingExpression
+  removeProgrammingExpression,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
 
 const getInitialState = () => [
@@ -10,15 +10,15 @@ const getInitialState = () => [
     key: 'programmingExpression-1',
     name: 'playSound',
     category: 'UI controls',
-    programmingEnvironmentName: 'applab'
+    programmingEnvironmentName: 'applab',
   },
   {
     id: 2,
     key: 'programmingExpression-2',
     name: 'stopSound',
     category: 'UI controls',
-    programmingEnvironmentName: 'applab'
-  }
+    programmingEnvironmentName: 'applab',
+  },
 ];
 
 describe('programmingExpressionsEditorRedux reducer tests', () => {
@@ -38,7 +38,7 @@ describe('programmingExpressionsEditorRedux reducer tests', () => {
         key: 'programmingExpression-3',
         name: 'repeatSound',
         category: 'UI controls',
-        programmingEnvironmentName: 'applab'
+        programmingEnvironmentName: 'applab',
       })
     );
     assert.deepEqual(
@@ -46,7 +46,7 @@ describe('programmingExpressionsEditorRedux reducer tests', () => {
       [
         'programmingExpression-1',
         'programmingExpression-2',
-        'programmingExpression-3'
+        'programmingExpression-3',
       ]
     );
   });

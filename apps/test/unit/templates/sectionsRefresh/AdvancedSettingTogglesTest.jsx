@@ -29,9 +29,9 @@ describe('AdvancedSettingToggles', () => {
           pairingAllowed: true,
           restrictSection: false,
           ttsAutoplayEnabled: false,
-          lessonExtras: true
+          lessonExtras: true,
         }}
-        assignedUnitLessonExtrasAvailable={true}
+        hasLessonExtras={true}
       />
     );
     expect(
@@ -47,9 +47,9 @@ describe('AdvancedSettingToggles', () => {
           pairingAllowed: true,
           restrictSection: false,
           ttsAutoplayEnabled: false,
-          lessonExtras: true
+          lessonExtras: true,
         }}
-        assignedUnitTextToSpeechEnabled={true}
+        hasTextToSpeech={true}
       />
     );
     expect(
@@ -65,9 +65,9 @@ describe('AdvancedSettingToggles', () => {
           pairingAllowed: true,
           restrictSection: false,
           ttsAutoplayEnabled: false,
-          lessonExtras: true
+          lessonExtras: true,
         }}
-        assignedUnitTextToSpeechEnabled={true}
+        hasTextToSpeech={true}
       />
     );
     expect(
@@ -85,7 +85,7 @@ describe('AdvancedSettingToggles', () => {
           pairingAllowed: true,
           restrictSection: false,
           ttsAutoplayEnabled: false,
-          lessonExtras: true
+          lessonExtras: true,
         }}
       />
     );

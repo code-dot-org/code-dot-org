@@ -18,13 +18,14 @@
     ],
     "encrypted_examples": [
 
-    ]
+    ],
+    "project_template_level_name": "CSA U7L2-Parameters PBT_2023"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-04-11T13:53:11.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-04-11T13:53:11.434+00:00\",\"changed\":[\"cloned from \\\"CSA Predict Level Template\\\"\"],\"cloned_from\":\"CSA Predict Level Template\"},{\"changed_at\":\"2023-04-11 13:53:19 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-11T13:53:11.434+00:00\",\"changed\":[\"cloned from \\\"CSA Predict Level Template\\\"\"],\"cloned_from\":\"CSA Predict Level Template\"},{\"changed_at\":\"2023-04-11 13:53:19 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-28 13:36:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

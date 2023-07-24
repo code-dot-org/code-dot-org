@@ -14,8 +14,8 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version  # --> ruby 2.7.5
-     node --version  # --> v16.19.0
+     ruby --version  # --> ruby 3.0.5
+     node --version  # --> v18.16.0
      yarn --version  # --> 1.22.5
      ```
 
@@ -70,7 +70,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     - `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
 
 1. `bundle exec rake build`
-    - This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
+    - This may fail if you are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
     - This may fail for external contributors who don't have permissions to access Code.org AWS Secrets. Assign placeholder values to any configuration settings that are [ordinarily populated in Development environments from AWS Secrets](https://github.com/code-dot-org/code-dot-org/blob/staging/config/development.yml.erb) as indicated in this example: https://github.com/code-dot-org/code-dot-org/blob/5b3baed4a9c2e7226441ca4492a3bca23a4d7226/locals.yml.default#L136-L139
 
 1. Run the website `bin/dashboard-server`
@@ -152,7 +152,7 @@ Setup steps for macOS:
     rm ./pdftk.rb
     ```
 
-5.  Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils sqlite parallel tidy-html5 openssl`
+1. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils parallel tidy-html5`
 
 6.  Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
     1. Install NVM via `brew install nvm`
@@ -161,11 +161,15 @@ Setup steps for macOS:
 
     3. Running `nvm alias default $(cat ./.nvmrc)` will set your default node version for future shells.
 
-7.  Install **yarn** via `npm install -g yarn@1.22.5`
+1. Install **yarn** via `npm install -g yarn@1.22.19`
 
-8.  Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
+1. Install **OpenSSL**
+    1. Run `brew install openssl`
+    2. Following the instructions in the output, run a form of `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
 
-9.  Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo.
+1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
+
+1. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
 
 ### Ubuntu 18.04
 [Ubuntu 18.04 iso download][ubuntu-iso-url]
@@ -173,7 +177,7 @@ Setup steps for macOS:
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev build-essential redis-server rbenv chromium-browser parallel`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server rbenv chromium-browser parallel`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
 
     * Troubleshoot: `E: Package 'pdftk' has no installation candidate`. If you run into this error, remove `pdftk` from the previous command and run it again. Then try installing `pdftk` another way:
@@ -191,7 +195,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
         ```
 1. Install Node and Nodejs
     1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
-    1. `nvm install v16.19.0 && nvm alias default 16.19.0` Install nodejs v16.19.0
+    1. `nvm install v18.16.0 && nvm alias default 18.16.0` Install nodejs v18.16.0
     1. `node --version` Double check the version of node you are using. If it is wrong, then try restarting your terminal.
 1. Ensure rbenv and ruby-build are properly installed
     1. run `rbenv init` and follow the instructions.

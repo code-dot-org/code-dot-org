@@ -24,7 +24,7 @@ module.exports = function (container, options) {
     {
       mode: 'javascript',
       viewportMargin: Infinity,
-      matchBrackets: true
+      matchBrackets: true,
     }
   );
 

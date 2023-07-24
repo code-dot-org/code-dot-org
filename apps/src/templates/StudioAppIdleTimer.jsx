@@ -14,7 +14,7 @@ const IDLE_AFTER = 1000 * 60 * 2;
 class StudioAppIdleTimer extends React.Component {
   static propTypes = {
     setStartIdle: PropTypes.func.isRequired,
-    setEndIdle: PropTypes.func.isRequired
+    setEndIdle: PropTypes.func.isRequired,
   };
 
   render() {
@@ -34,5 +34,5 @@ export default connect(null, dispatch => ({
   },
   setEndIdle() {
     dispatch(setEndIdle());
-  }
+  },
 }))(StudioAppIdleTimer);

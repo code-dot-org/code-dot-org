@@ -2,7 +2,7 @@ import React from 'react';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import {
   COLUMNS,
-  COLUMNS_WITHOUT_THUMBNAILS
+  COLUMNS_WITHOUT_THUMBNAILS,
 } from '@cdo/apps/templates/projects/ProjectsList';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
@@ -15,7 +15,7 @@ const STUB_PROJECTS_DATA = [
     name: 'Antelope Freeway',
     studentName: 'Alice',
     type: 'weblab',
-    updatedAt: '2016-12-29T11:00:00-00:00'
+    updatedAt: '2016-12-29T11:00:00-00:00',
   },
   {
     channel: 'AAAABBBBCCCCDDDDEE',
@@ -23,22 +23,22 @@ const STUB_PROJECTS_DATA = [
     studentName: 'Charlie',
     thumbnailUrl: CAT_IMAGE_URL,
     type: 'weblab',
-    updatedAt: '2016-11-30T11:00:00-00:00'
+    updatedAt: '2016-11-30T11:00:00-00:00',
   },
   {
     channel: 'NOPQRSTUVWXYZ567879',
     name: 'Dominoes',
     studentName: 'Bob',
     type: 'gamelab',
-    updatedAt: '2017-01-01T11:00:00-00:00'
+    updatedAt: '2017-01-01T11:00:00-00:00',
   },
   {
     channel: 'VVVVWWWWXXXXYYYYZZ',
     name: 'A1 Locksmith',
     studentName: 'Alice',
     type: 'applab',
-    updatedAt: '2016-10-29T11:00:00-00:00'
-  }
+    updatedAt: '2016-10-29T11:00:00-00:00',
+  },
 ];
 
 const STUDIO_URL_PREFIX = '//foo-studio.code.org';

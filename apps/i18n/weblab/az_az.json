@@ -1,12 +1,21 @@
 {
   "addCSSButton": "CSS əlavə et",
-  "addImageButton": "Şəkil əlavə et",
   "addHTMLButton": "HTML əlavə et",
+  "addImageButton": "Şəkil əlavə et",
   "closeFullscreenPreview": "Tam ekran önizləməsini bağlayın",
+  "currentProjectCapacity": "{currentMegabytes}MB {totalMegabytes}MB istifadə",
+  "disallowedHtml": "Fayl \"{filename}\" icazə verilməyən HTML elementlərini ehtiva edir: `{disallowedTags}`. Bu dialoq bağlandıqda onlar silinəcəkdir.",
+  "errorSavingProject": "Layihənizi avtomatik qənaət edərkən bir şey işləmədi. İnternet bağlantınızı yoxlayın və əl ilə qənaət etməyə çalışın. Bu problem davam edərsə, yenidən başlamaq üçün səhifəni yenidən yükləməyə çalışın.",
+  "fatalError": "Ölümcül səhv: {message}. Şəxsi Baxış rejimindəsinizsə, məlumatlar yazıla bilməz.",
+  "loadFailure": "Üzr istəyirik, Web Lab nədənsə yüklənə bilmədi. Səhv: {message}",
   "openFullscreenPreview": "Tam ekran önizləməsini açın",
   "refreshPreview": "Yenile və Yadda saxla",
   "reloading": "Yenidən yüklənir...",
-  "toggleInspectorOn": "Müfəttiş:Qapalı",
+  "reset": "Veb Laboratoriyasını sıfırlayın",
+  "resetComplete": "Veb Laboratoriyası Sıfırlama Tamamlandı",
+  "resetFailure": "Web Lab sıfırlanmadı: {message}.",
   "toggleInspectorOff": "Müfəttiş: Açıq",
+  "toggleInspectorOn": "Müfəttiş:Qapalı",
+  "troubleshootingSupport": "Daha çox məlumat üçün dəstək məqaləmizə [\"Veb Laboratoriyası problemlərinin aradan qaldırılması\"]({url}) baxın.",
   "uploadError": "Yükləmə Xətası"
 }

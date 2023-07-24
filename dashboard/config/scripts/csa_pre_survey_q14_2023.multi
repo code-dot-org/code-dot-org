@@ -5,3 +5,4 @@ right 'Yes, an after-school program.'
 right 'Yes, independent online activities.'
 right 'Yes, a camp or summer program.'
 right 'No, I have never done computer science outside of school.'
+allow_multiple_attempts true

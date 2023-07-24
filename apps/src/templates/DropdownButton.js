@@ -26,11 +26,11 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
           throw new Error('each child must have an href or onclick');
         }
       });
-    }
+    },
   };
 
   state = {
-    dropdownOpen: false
+    dropdownOpen: false,
   };
 
   expandDropdown = () => {
@@ -111,7 +111,7 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
                   index > 0 && style.nonFirstAnchor
                 )}
                 style={{
-                  ...child.props.style
+                  ...child.props.style,
                 }}
               />
             ))}

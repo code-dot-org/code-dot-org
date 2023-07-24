@@ -29,3 +29,5 @@ teacher_markdown <<MARKDOWN
 **Explanation:** A.I. Bot learns better when it has more examples. The best way we can improve its ability to recognize fish is by giving it more examples to look at. Students may also make the connection that this is how humans learn, especially young children - the more examples we have, the better we learn.
 
 MARKDOWN
+
+allow_multiple_attempts true

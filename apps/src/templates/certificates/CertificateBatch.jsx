@@ -10,7 +10,7 @@ export default function CertificateBatch({
   courseName,
   courseTitle,
   initialStudentNames,
-  imageUrl
+  imageUrl,
 }) {
   const [studentNames, setStudentNames] = useState(
     initialStudentNames?.join('\n') || ''
@@ -64,32 +64,32 @@ const styles = {
     marginRight: 'auto',
     fontSize: 14,
     lineHeight: '22px',
-    color: 'dimgray'
+    color: 'dimgray',
   },
   imageWrapper: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   certificate: {
-    float: 'left'
+    float: 'left',
   },
   instructions: {
     display: 'inline-block',
     width: 360,
-    marginLeft: 20
+    marginLeft: 20,
   },
   textarea: {
-    width: 340
+    width: 340,
   },
   submit: {
     background: color.orange,
-    color: color.white
-  }
+    color: color.white,
+  },
 };
 
 CertificateBatch.propTypes = {
   courseName: PropTypes.string,
   courseTitle: PropTypes.string,
   initialStudentNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-  imageUrl: PropTypes.string.isRequired
+  imageUrl: PropTypes.string.isRequired,
 };

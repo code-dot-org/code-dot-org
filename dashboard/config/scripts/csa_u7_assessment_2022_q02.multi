@@ -43,3 +43,5 @@ public void mystery(int second, double first)
 { /* implementation not shown */ }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

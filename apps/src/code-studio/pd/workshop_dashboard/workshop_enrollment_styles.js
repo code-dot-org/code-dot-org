@@ -4,9 +4,9 @@ export const workshopEnrollmentStyles = {
     padding: 0,
     backgroundColor: 'white',
     fontFamily: '"Gotham 4r"',
-    fontSize: 14
+    fontSize: 14,
   },
   clickTarget: {
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+  },
 };

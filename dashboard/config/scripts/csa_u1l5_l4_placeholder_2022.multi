@@ -23,3 +23,5 @@ II. `jes.canMove()`
 
 III. `canMove(jes)`
 MARKDOWN
+
+allow_multiple_attempts true

@@ -20,7 +20,7 @@ export const gamelabLevelDefinition = {
     comment_Drawing: null,
     comment_Math: null,
     comment_GameLab: null,
-    comment_Sprites: null
+    comment_Sprites: null,
   },
   show_d_pad: 'false',
   edit_code: true,
@@ -56,5 +56,5 @@ export const gamelabLevelDefinition = {
   all_animations_single_frame: 'true',
   pause_animations_by_default: 'false',
   show_debug_watch: 'true',
-  editCode: 'true'
+  editCode: 'true',
 };

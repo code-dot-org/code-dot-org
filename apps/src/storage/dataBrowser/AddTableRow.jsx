@@ -11,7 +11,7 @@ import msg from '@cdo/locale';
 const INITIAL_STATE = {
   isAdding: false,
   // An object whose keys are column names and values are the raw user input.
-  newInput: {}
+  newInput: {},
 };
 
 class AddTableRow extends React.Component {
@@ -19,14 +19,14 @@ class AddTableRow extends React.Component {
     columnNames: PropTypes.array.isRequired,
     tableName: PropTypes.string.isRequired,
     showError: PropTypes.func.isRequired,
-    hideError: PropTypes.func.isRequired
+    hideError: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};
 
   handleChange(columnName, event) {
     const newInput = Object.assign({}, this.state.newInput, {
-      [columnName]: event.target.value
+      [columnName]: event.target.value,
     });
     this.setState({newInput});
   }

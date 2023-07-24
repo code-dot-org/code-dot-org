@@ -24,7 +24,7 @@ module.exports = {
           cl_app: config.app,
           cl_pwd: config.pwd,
           req_voice: $('#level_tts_voice').val(),
-          req_text: sourceText
+          req_text: sourceText,
         },
         function (data) {
           $('#tts-error').hide();
@@ -37,7 +37,7 @@ module.exports = {
           if (data.snd_url) {
             $('#tts-audio').attr({
               src: data.snd_url,
-              controls: 'controls'
+              controls: 'controls',
             });
           }
         }
@@ -53,13 +53,13 @@ module.exports = {
         cl_app: config.app,
         fields_selection: 'language_desc;speaker',
         frequency: '22050',
-        technology: 'HQ'
+        technology: 'HQ',
       },
       function (data) {
         var voices = Object.keys(data.voices).reduce(function (prev, curr) {
           var voice = {
             speaker: data.voices[curr].speaker,
-            id: curr
+            id: curr,
           };
           if (prev[data.voices[curr].language_desc]) {
             prev[data.voices[curr].language_desc].push(voice);
@@ -91,5 +91,5 @@ module.exports = {
           .attr('selected', true);
       }
     );
-  }
+  },
 };

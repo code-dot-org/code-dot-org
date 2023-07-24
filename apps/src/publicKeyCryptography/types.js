@@ -3,5 +3,5 @@ import PropTypes from 'prop-types';
 
 export const AnyChildren = PropTypes.oneOfType([
   PropTypes.node,
-  PropTypes.arrayOf(PropTypes.node)
+  PropTypes.arrayOf(PropTypes.node),
 ]);

@@ -65,7 +65,7 @@ class ApplicationHelperTest < ActionView::TestCase
         )
       )
     end
-    assert(!browser.cdo_unsupported?)
+    assert_not(browser.cdo_unsupported?)
   end
 
   test "chrome 34 detected" do

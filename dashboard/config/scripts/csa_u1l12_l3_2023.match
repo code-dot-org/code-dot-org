@@ -14,3 +14,4 @@ answer 'a statement that only executes when a condition is `true`'
 
 question 'decomposition'
 answer 'the process of breaking a problem down into smaller parts to write methods for each part'
+allow_multiple_attempts true

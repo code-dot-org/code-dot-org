@@ -1,5 +1,5 @@
 import GoogleBlockly from 'blockly/core';
-import {blockTypes} from './cdoConstants';
+import {customConnectionBlockTypes} from './cdoConstants';
 
 export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
   .ConstantProvider {
@@ -13,9 +13,9 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
    */
   shapeFor(connection) {
     const blockTypeShapeMap = {
-      [blockTypes.SPRITE]: this.TRI_INPUT_OUTPUT,
-      [blockTypes.BEHAVIOR]: this.ROUND_INPUT_OUTPUT,
-      [blockTypes.LOCATION]: this.RECT_INPUT_OUTPUT
+      [customConnectionBlockTypes.SPRITE]: this.TRI_INPUT_OUTPUT,
+      [customConnectionBlockTypes.BEHAVIOR]: this.ROUND_INPUT_OUTPUT,
+      [customConnectionBlockTypes.LOCATION]: this.RECT_INPUT_OUTPUT,
     };
     // `connection.check_` returns a list of accepted value types for the connection
     // or null if all types are compatible.
@@ -48,7 +48,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
     function makeMainPath(up) {
       return GoogleBlockly.utils.svgPaths.line([
         GoogleBlockly.utils.svgPaths.point(-width, (-1 * up * height) / 2),
-        GoogleBlockly.utils.svgPaths.point(width, (-1 * up * height) / 2)
+        GoogleBlockly.utils.svgPaths.point(width, (-1 * up * height) / 2),
       ]);
     }
 
@@ -59,7 +59,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
       width: width,
       height: height,
       pathDown: pathDown,
-      pathUp: pathUp
+      pathUp: pathUp,
     };
   }
 
@@ -75,7 +75,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
       return GoogleBlockly.utils.svgPaths.line([
         GoogleBlockly.utils.svgPaths.point(-width, 0),
         GoogleBlockly.utils.svgPaths.point(0, -1 * up * height),
-        GoogleBlockly.utils.svgPaths.point(width, 0)
+        GoogleBlockly.utils.svgPaths.point(width, 0),
       ]);
     }
 
@@ -86,7 +86,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
       width: width,
       height: height,
       pathDown: pathDown,
-      pathUp: pathUp
+      pathUp: pathUp,
     };
   }
 
@@ -98,7 +98,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
       const path = GoogleBlockly.utils.svgPaths.curve('c', [
         -width * 1.5 + ', 0 ',
         -width * 1.5 + ', ' + -1 * up * height + ' ',
-        '0, ' + -1 * up * height + ' '
+        '0, ' + -1 * up * height + ' ',
       ]);
       return path;
     }
@@ -110,7 +110,7 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
       width: width,
       height: height,
       pathDown: pathDown,
-      pathUp: pathUp
+      pathUp: pathUp,
     };
   }
 

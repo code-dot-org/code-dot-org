@@ -27,3 +27,5 @@ The last two are false.
 * (temperature == 0) || (temperature > 32) --> **False** - 30 does not equal 0 nor is it greater than 32.
 * (temperature < 0) || (temperature > 32) --> **False** - 30 is not less than 0 nor is it greater than 32.
 MARKDOWN
+
+allow_multiple_attempts true

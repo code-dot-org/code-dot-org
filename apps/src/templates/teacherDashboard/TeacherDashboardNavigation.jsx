@@ -15,40 +15,40 @@ export const TeacherDashboardPath = {
   stats: '/stats',
   manageStudents: '/manage_students',
   loginInfo: '/login_info',
-  standardsReport: '/standards_report'
+  standardsReport: '/standards_report',
 };
 
 const teacherDashboardLinks = [
   {
     label: i18n.teacherTabProgress(),
-    url: TeacherDashboardPath.progress
+    url: TeacherDashboardPath.progress,
   },
   {
     label: i18n.teacherTabStatsTextResponses(),
-    url: TeacherDashboardPath.textResponses
+    url: TeacherDashboardPath.textResponses,
   },
   {
     label: i18n.teacherTabAssessments(),
-    url: TeacherDashboardPath.assessments
+    url: TeacherDashboardPath.assessments,
   },
   {
     label: i18n.teacherTabProjects(),
-    url: TeacherDashboardPath.projects
+    url: TeacherDashboardPath.projects,
   },
   {
     label: i18n.teacherTabStats(),
-    url: TeacherDashboardPath.stats
+    url: TeacherDashboardPath.stats,
   },
   {
     label: i18n.teacherTabManageStudents(),
-    url: TeacherDashboardPath.manageStudents
-  }
+    url: TeacherDashboardPath.manageStudents,
+  },
 ];
 
 const ListPosition = {
   start: 'start',
   middle: 'middle',
-  end: 'end'
+  end: 'end',
 };
 
 export default class TeacherDashboardNavigation extends Component {
@@ -56,14 +56,14 @@ export default class TeacherDashboardNavigation extends Component {
     links: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired
+        url: PropTypes.string.isRequired,
       })
-    )
+    ),
   };
 
   state = {
     listPosition: ListPosition.start,
-    shouldScroll: true
+    shouldScroll: true,
   };
 
   componentDidMount() {
@@ -175,13 +175,13 @@ const styles = {
     display: 'flex',
     marginBottom: 10,
     overflow: 'hidden',
-    position: 'relative'
+    position: 'relative',
   },
   centerContainer: {
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   scrollableContainer: {
-    overflowX: 'scroll'
+    overflowX: 'scroll',
   },
   linkContainer: {
     whiteSpace: 'nowrap',
@@ -191,16 +191,16 @@ const styles = {
     paddingLeft: PADDING,
     paddingRight: PADDING,
     marginLeft: PADDING,
-    marginRight: PADDING
+    marginRight: PADDING,
   },
   activeLinkContainer: {
-    borderBottom: `3px solid ${color.orange}`
+    borderBottom: `3px solid ${color.orange}`,
   },
   link: {
     height: NAVBAR_HEIGHT,
     display: 'flex',
     alignItems: 'center',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   chevron: {
     position: 'sticky',
@@ -212,15 +212,15 @@ const styles = {
     marginTop: 13,
     paddingLeft: PADDING,
     paddingRight: PADDING,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   safariSticky: {
-    position: '-webkit-sticky'
+    position: '-webkit-sticky',
   },
   chevronLeft: {
-    left: 0
+    left: 0,
   },
   chevronRight: {
-    right: 0
-  }
+    right: 0,
+  },
 };

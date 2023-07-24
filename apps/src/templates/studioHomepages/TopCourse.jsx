@@ -16,7 +16,7 @@ class TopCourse extends Component {
     assignableName: PropTypes.string.isRequired,
     lessonName: PropTypes.string.isRequired,
     linkToOverview: PropTypes.string.isRequired,
-    linkToLesson: PropTypes.string.isRequired
+    linkToLesson: PropTypes.string.isRequired,
   };
 
   render() {
@@ -62,13 +62,13 @@ const styles = {
     height: 200,
     width: styleConstants['content-width'],
     marginBottom: 20,
-    backgroundColor: color.neutral_light
+    backgroundColor: color.neutral_light,
   },
   header: {
     position: 'absolute',
     width: styleConstants['content-width'],
     height: 80,
-    backgroundColor: color.brand_primary_default
+    backgroundColor: color.brand_primary_default,
   },
   name: {
     paddingTop: 10,
@@ -85,7 +85,7 @@ const styles = {
     display: 'inline',
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   description: {
     paddingLeft: 25,
@@ -100,24 +100,24 @@ const styles = {
     width: '65%',
     boxSizing: 'border-box',
     position: 'absolute',
-    zIndex: 2
+    zIndex: 2,
   },
   buttonBox: {
     marginTop: 120,
-    zIndex: 2
+    zIndex: 2,
   },
   lessonButton: {
     marginLeft: 20,
-    marginRight: 25
+    marginRight: 25,
   },
   ltr: {
-    float: 'left'
+    float: 'left',
   },
   rtl: {
-    float: 'right'
-  }
+    float: 'right',
+  },
 };
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(Radium(TopCourse));

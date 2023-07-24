@@ -94,7 +94,7 @@ class ScaryChangeDetector
         Looks like you are adding a column, changing a column or adding an index in this migration:
         #{changes.join("\n")}
         Making these types of changes on a large table (>10M rows) needs to be reviewed and
-        tested with the Infrastructure cabal to avoid negatively impacting production database performance.
+        tested with the Infrastructure team to avoid negatively impacting production database performance.
         The may cause MySQL to rebuild the entire table.
         For more information see https://dev.mysql.com/doc/refman/5.7/en/innodb-online-ddl-operations.html#online-ddl-column-operations.
 

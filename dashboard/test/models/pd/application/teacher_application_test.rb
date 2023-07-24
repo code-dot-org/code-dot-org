@@ -102,8 +102,8 @@ module Pd::Application
     end
 
     test 'accepted_at updates times' do
-      today = Date.today.to_time
-      tomorrow = Date.tomorrow.to_time
+      today = Time.zone.today.to_time
+      tomorrow = Time.zone.tomorrow.to_time
       application = create :pd_teacher_application
       assert_nil application.accepted_at
 
@@ -205,18 +205,26 @@ module Pd::Application
     test 'get_first_selected_workshop single local workshop' do
       Pd::Workshop.any_instance.stubs(:process_location)
 
-      workshop = create :workshop, location_address: 'Address', sessions_from: Date.today, num_sessions: 1
+      workshop = create :workshop, location_address: 'Address', sessions_from: Time.zone.today, num_sessions: 1
       application = create :pd_teacher_application, form_data_hash: (
       build :pd_teacher_application_hash,
         regional_partner_workshop_ids: [workshop.id],
-        able_to_attend_multiple: ["#{Date.today.strftime '%B %-d, %Y'} in Address"]
+        able_to_attend_multiple: ["#{Time.zone.today.strftime '%B %-d, %Y'} in Address"]
       )
 
       assert_equal workshop, application.get_first_selected_workshop
     end
 
     test 'get_first_selected_workshop multiple local workshops' do
-      workshops = (1..3).map {|i| create :workshop, num_sessions: 2, sessions_from: Date.today + i, location_address: %w(tba TBA tba)[i - 1]}
+      addresses = %w(tba TBA tba)
+      workshops = (1..3).map do |i|
+        create(
+          :workshop,
+          num_sessions: 2,
+          sessions_from: Time.zone.today + i,
+          location_address: addresses[i - 1]
+        )
+      end
 
       application = create :pd_teacher_application, form_data_hash: (
       build(:pd_teacher_application_hash, :with_multiple_workshops,
@@ -233,7 +241,7 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop multiple local workshops no selection returns first' do
-      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Date.today + i}
+      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Time.zone.today + i}
 
       application = create :pd_teacher_application, form_data_hash: (
       build(:pd_teacher_application_hash, :with_multiple_workshops,
@@ -269,7 +277,7 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop ignores deleted workshop from multiple list' do
-      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Date.today + i}
+      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Time.zone.today + i}
 
       application = create :pd_teacher_application, form_data_hash: (
       build(:pd_teacher_application_hash, :with_multiple_workshops,
@@ -286,8 +294,8 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop picks correct workshop even when multiple are on the same day' do
-      workshop_1 = create :workshop, num_sessions: 2, sessions_from: Date.today + 2
-      workshop_2 = create :workshop, num_sessions: 2, sessions_from: Date.today + 2
+      workshop_1 = create :workshop, num_sessions: 2, sessions_from: Time.zone.today + 2
+      workshop_2 = create :workshop, num_sessions: 2, sessions_from: Time.zone.today + 2
       workshop_1.update_column(:location_address, 'Location 1')
       workshop_2.update_column(:location_address, 'Location 2')
 
@@ -314,26 +322,26 @@ module Pd::Application
       ['csp', 'csd'].each do |course|
         columns = TeacherApplication.columns_to_remove(course)
         columns.keys.each do |k|
-          columns[k].each {|c| refute c.to_s.include?(course)}
+          columns[k].each {|c| refute_includes(c.to_s, course)}
         end
       end
     end
 
     test 'csv_filtered_labels' do
       csv_filtered_labels_csd = TeacherApplication.csv_filtered_labels('csd')
-      assert csv_filtered_labels_csd[:teacher].include? :csd_which_grades
-      refute csv_filtered_labels_csd[:teacher].include? :csp_which_grades
-      refute csv_filtered_labels_csd[:teacher].include? :csa_which_grades
+      assert_includes(csv_filtered_labels_csd[:teacher], :csd_which_grades)
+      refute_includes(csv_filtered_labels_csd[:teacher], :csp_which_grades)
+      refute_includes(csv_filtered_labels_csd[:teacher], :csa_which_grades)
 
       csv_filtered_labels_csp = TeacherApplication.csv_filtered_labels('csp')
-      refute csv_filtered_labels_csp[:teacher].include? :csd_which_grades
-      assert csv_filtered_labels_csp[:teacher].include? :csp_which_grades
-      refute csv_filtered_labels_csp[:teacher].include? :csa_which_grades
+      refute_includes(csv_filtered_labels_csp[:teacher], :csd_which_grades)
+      assert_includes(csv_filtered_labels_csp[:teacher], :csp_which_grades)
+      refute_includes(csv_filtered_labels_csp[:teacher], :csa_which_grades)
 
       csv_filtered_labels_csa = TeacherApplication.csv_filtered_labels('csa')
-      refute csv_filtered_labels_csa[:teacher].include? :csd_which_grades
-      refute csv_filtered_labels_csa[:teacher].include? :csp_which_grades
-      assert csv_filtered_labels_csa[:teacher].include? :csa_which_grades
+      refute_includes(csv_filtered_labels_csa[:teacher], :csd_which_grades)
+      refute_includes(csv_filtered_labels_csa[:teacher], :csp_which_grades)
+      assert_includes(csv_filtered_labels_csa[:teacher], :csa_which_grades)
     end
 
     test 'csv_header' do
@@ -342,21 +350,21 @@ module Pd::Application
       csa_plan_offer_question = "To which grades does your school plan to offer CSA in the #{APPLICATION_CURRENT_YEAR} school year?"
 
       csv_header_csd = CSV.parse(TeacherApplication.csv_header('csd'))[0]
-      assert csv_header_csd.include? csd_plan_offer_question
-      refute csv_header_csd.include? csp_plan_offer_question
-      refute csv_header_csd.include? csa_plan_offer_question
+      assert_includes(csv_header_csd, csd_plan_offer_question)
+      refute_includes(csv_header_csd, csp_plan_offer_question)
+      refute_includes(csv_header_csd, csa_plan_offer_question)
       assert_equal 90, csv_header_csd.length
 
       csv_header_csp = CSV.parse(TeacherApplication.csv_header('csp'))[0]
-      refute csv_header_csp.include? csd_plan_offer_question
-      assert csv_header_csp.include? csp_plan_offer_question
-      refute csv_header_csp.include? csa_plan_offer_question
+      refute_includes(csv_header_csp, csd_plan_offer_question)
+      assert_includes(csv_header_csp, csp_plan_offer_question)
+      refute_includes(csv_header_csp, csa_plan_offer_question)
       assert_equal 92, csv_header_csp.length
 
       csv_header_csa = CSV.parse(TeacherApplication.csv_header('csa'))[0]
-      refute csv_header_csa.include? csd_plan_offer_question
-      refute csv_header_csd.include? csp_plan_offer_question
-      assert csv_header_csa.include? csa_plan_offer_question
+      refute_includes(csv_header_csa, csd_plan_offer_question)
+      refute_includes(csv_header_csd, csp_plan_offer_question)
+      assert_includes(csv_header_csa, csa_plan_offer_question)
       assert_equal 94, csv_header_csa.length
     end
 
@@ -400,21 +408,21 @@ module Pd::Application
       TeacherApplication::FILTERED_LABELS.clear
 
       filtered_labels_csd = TeacherApplication.filtered_labels('csd')
-      assert filtered_labels_csd.include? :csd_which_grades
-      refute filtered_labels_csd.include? :csp_which_grades
-      refute filtered_labels_csd.include? :csa_which_grades
+      assert_includes(filtered_labels_csd, :csd_which_grades)
+      refute_includes(filtered_labels_csd, :csp_which_grades)
+      refute_includes(filtered_labels_csd, :csa_which_grades)
       assert_equal ['csd'], TeacherApplication::FILTERED_LABELS.keys
 
       filtered_labels_csp = TeacherApplication.filtered_labels('csp')
-      refute filtered_labels_csp.include? :csd_which_grades
-      assert filtered_labels_csp.include? :csp_which_grades
-      refute filtered_labels_csp.include? :csa_which_grades
+      refute_includes(filtered_labels_csp, :csd_which_grades)
+      assert_includes(filtered_labels_csp, :csp_which_grades)
+      refute_includes(filtered_labels_csp, :csa_which_grades)
       assert_equal ['csd', 'csp'], TeacherApplication::FILTERED_LABELS.keys
 
       filtered_labels_csa = TeacherApplication.filtered_labels('csa')
-      refute filtered_labels_csa.include? :csd_which_grades
-      refute filtered_labels_csa.include? :csp_which_grades
-      assert filtered_labels_csa.include? :csa_which_grades
+      refute_includes(filtered_labels_csa, :csd_which_grades)
+      refute_includes(filtered_labels_csa, :csp_which_grades)
+      assert_includes(filtered_labels_csa, :csa_which_grades)
       assert_equal ['csd', 'csp', 'csa'], TeacherApplication::FILTERED_LABELS.keys
     end
 
@@ -448,44 +456,6 @@ module Pd::Application
       application.update!(status: 'unreviewed')
       assert_equal Time.zone.now, application.updated_at
       assert_equal 3, application.status_log.count
-    end
-
-    test 'setting an auto-email status queues up an email if associated with an RP' do
-      application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
-      application = create :pd_teacher_application, form_data_hash: application_hash
-      assert_empty application.emails
-
-      application.expects(:queue_email).with('accepted')
-      application.update!(status: 'accepted')
-    end
-
-    test 'setting an auto-email status does not queue up an email if no RP' do
-      application = create :pd_teacher_application
-      assert_empty application.emails
-
-      application.expects(:queue_email).never
-      application.update!(status: 'accepted')
-    end
-
-    test 'setting a non auto-email status does not queue up a status email even if associated with an RP' do
-      application_hash = build :pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id
-      application = create :pd_teacher_application, form_data_hash: application_hash
-      assert_empty application.emails
-
-      application.expects(:queue_email).never
-      application.update!(status: 'pending')
-    end
-
-    test 'setting an auto-email status deletes unsent emails for the application' do
-      unrelated_email = create :pd_application_email
-      application = create :pd_teacher_application
-      associated_sent_email = create :pd_application_email, application: application, sent_at: Time.now
-      associated_unsent_email = create :pd_application_email, application: application
-
-      application.update!(status: 'pending_space_availability')
-      assert Email.exists?(unrelated_email.id)
-      assert Email.exists?(associated_sent_email.id)
-      refute Email.exists?(associated_unsent_email.id)
     end
 
     test 'test non course dynamically required fields' do
@@ -845,7 +815,7 @@ module Pd::Application
       incomplete = "Incomplete - Admin email sent on Oct 8"
       Timecop.freeze Date.new(2020, 10, 8) do
         application.stubs(:deliver_email)
-        application.queue_email :admin_approval, deliver_now: true
+        application.send_pd_application_email :admin_approval
         assert_equal incomplete, application.reload.principal_approval_state
       end
 
@@ -859,7 +829,7 @@ module Pd::Application
       assert_equal 'Not required', application.reload.principal_approval_state
 
       create :pd_principal_approval_application, teacher_application: application, approved: 'Yes'
-      assert application.reload.principal_approval_state.include? 'Complete - Admin said Yes on'
+      assert_includes(application.reload.principal_approval_state, 'Complete - Admin said Yes on')
     end
 
     test 'scholarship criteria uses regional partner set fields when specified' do
@@ -1123,14 +1093,6 @@ module Pd::Application
       create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
       TeacherApplication.send_admin_approval_reminders_to_teachers
       assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
-
-      # If we queued a teacher reminder email any time before but didn't send, we still cannot send.
-      application = create :pd_teacher_application
-      create :pd_application_email, application: application, email_type: 'admin_approval_teacher_reminder', created_at: 14.days.ago
-      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 14.days.ago
-      assert_equal 0, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
-      TeacherApplication.send_admin_approval_reminders_to_teachers
-      assert_equal 0, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
 
       # If we sent a teacher reminder email any time before, we cannot send.
       application = create :pd_teacher_application

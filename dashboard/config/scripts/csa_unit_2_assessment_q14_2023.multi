@@ -24,3 +24,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 `private` means that the instance variable is accessible only inside the class, while `public` means that the instance variable is accessible from outside of the class.
 MARKDOWN
+
+allow_multiple_attempts true

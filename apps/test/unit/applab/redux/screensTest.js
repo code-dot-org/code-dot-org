@@ -5,14 +5,14 @@ import sinon from 'sinon';
 import {
   sources as sourcesApi,
   channels as channelsApi,
-  assets as assetsApi
+  assets as assetsApi,
 } from '@cdo/apps/clientApi';
 import {createStore} from '../../../util/redux';
 import screensReducer, {
   toggleImportScreen,
   changeScreen,
   fetchProject,
-  importIntoProject
+  importIntoProject,
 } from '@cdo/apps/applab/redux/screens';
 import * as importFuncs from '@cdo/apps/applab/import';
 
@@ -163,7 +163,7 @@ describe('Applab Screens Reducer', function () {
                 channel: 'bar',
                 sources: 'foo',
                 assets: [],
-                existingAssets: []
+                existingAssets: [],
               }
             );
             expect(store.getState().importProject.importableProject).not.to.be

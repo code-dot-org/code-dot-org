@@ -54,9 +54,9 @@ end
 # Generate a set of JS objects from their ruby equivalents
 # It calls #generate_constants for each supplied const name. See above for more options
 # @param [Array] shared_const_names
-def generate_multiple_constants(shared_const_names, *options)
+def generate_multiple_constants(shared_const_names, **options)
   shared_const_names.map do |shared_const_name|
-    generate_constants shared_const_name, *options
+    generate_constants(shared_const_name, **options)
   end.join("\n\n")
 end
 

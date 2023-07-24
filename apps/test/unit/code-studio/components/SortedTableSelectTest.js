@@ -6,20 +6,20 @@ import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelec
 const ROW_DATA = [
   {id: 1, name: 'itemb'},
   {id: 3, name: 'itemc'},
-  {id: 0, name: 'itema'}
+  {id: 0, name: 'itema'},
 ];
 const OPTIONS = [
   {id: 0, name: 'optiona'},
   {id: 1, name: 'optionb'},
   {id: 2, name: 'optionc'},
-  {id: 3, name: 'optiond'}
+  {id: 3, name: 'optiond'},
 ];
 
 const DEFAULT_PROPS = {
   rowData: ROW_DATA,
   onRowChecked: () => {},
   options: OPTIONS,
-  onChooseOption: () => {}
+  onChooseOption: () => {},
 };
 
 describe('SortedTableSelect', () => {
@@ -52,11 +52,11 @@ describe('SortedTableSelect', () => {
   it('areAllSelected returns true when all rows are checked', () => {
     const rowData = [
       {id: 1, name: '1', isChecked: true},
-      {id: 2, name: '2', isChecked: true}
+      {id: 2, name: '2', isChecked: true},
     ];
     const props = {
       ...DEFAULT_PROPS,
-      ...{rowData: rowData}
+      ...{rowData: rowData},
     };
     const wrapper = shallow(<SortedTableSelect {...props} />);
     expect(wrapper.instance().areAllSelected()).to.be.true;
@@ -65,11 +65,11 @@ describe('SortedTableSelect', () => {
   it('areAllSelected returns false when at least one row is unchecked', () => {
     const rowData = [
       {id: 1, name: '1', isChecked: true},
-      {id: 2, name: '2', isChecked: false}
+      {id: 2, name: '2', isChecked: false},
     ];
     const props = {
       ...DEFAULT_PROPS,
-      ...{rowData: rowData}
+      ...{rowData: rowData},
     };
     const wrapper = shallow(<SortedTableSelect {...props} />);
     expect(wrapper.instance().areAllSelected()).to.be.false;

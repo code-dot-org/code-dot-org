@@ -4,7 +4,7 @@ import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {assert} from '../../util/reconfiguredChai';
 import {
   getConfigRef,
-  getProjectDatabase
+  getProjectDatabase,
 } from '@cdo/apps/storage/firebaseUtils';
 import Firebase from 'firebase';
 import MockFirebase from '../../util/MockFirebase';
@@ -123,7 +123,7 @@ const appLoaders = {
   gamelab: require('../../util/gamelab/loadTestableGamelab'),
   maze: require('@cdo/apps/sites/studio/pages/init/loadMaze'),
   studio: require('@cdo/apps/sites/studio/pages/init/loadStudio'),
-  turtle: require('@cdo/apps/sites/studio/pages/init/loadArtist')
+  turtle: require('@cdo/apps/sites/studio/pages/init/loadArtist'),
 };
 function runLevel(app, skinId, level, onAttempt, finished, testData) {
   var loadApp = appLoaders[app];
@@ -182,12 +182,12 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
         getConfigRef().set({
           limits: {
             15: 5,
-            60: 10
+            60: 10,
           },
           maxRecordSize: 100,
           maxPropertySize: 100,
           maxTableRows: 20,
-          maxTableCount: 10
+          maxTableCount: 10,
         });
         timeout = 500;
 
@@ -206,7 +206,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
       }, timeout);
       // waitLong();
     },
-    onAttempt: onAttempt
+    onAttempt: onAttempt,
   };
 
   loadApp(options);
@@ -215,7 +215,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
     installCustomBlocks({
       blockly: Blockly,
       blockDefinitions: level.sharedBlocks,
-      customInputTypes: options.blocksModule.customInputTypes
+      customInputTypes: options.blocksModule.customInputTypes,
     });
   }
 }

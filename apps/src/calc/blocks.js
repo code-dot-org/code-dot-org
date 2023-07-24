@@ -50,7 +50,7 @@ function installCompute(blockly, generator, gensym) {
         blockly.BlockValueType.NONE,
         [{name: 'ARG1', type: blockly.BlockValueType.NUMBER}]
       );
-    }
+    },
   };
 
   generator.functional_compute = function () {

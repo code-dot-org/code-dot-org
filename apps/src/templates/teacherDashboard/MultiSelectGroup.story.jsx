@@ -5,7 +5,7 @@ import {multiSelectOptionShape} from './shapes';
 
 export default {
   title: 'MultiSelectGroup',
-  component: MultiSelectGroup
+  component: MultiSelectGroup,
 };
 
 // This component is an integrated example for the <MultiSelectGroup>.
@@ -17,7 +17,7 @@ const BasicExampleComponent = props => {
   return <MultiSelectGroup values={values} setValues={setValues} {...props} />;
 };
 BasicExampleComponent.propTypes = {
-  options: PropTypes.arrayOf(multiSelectOptionShape).isRequired
+  options: PropTypes.arrayOf(multiSelectOptionShape).isRequired,
 };
 
 const Template = args => {
@@ -31,13 +31,13 @@ NotRequired.args = {
   options: [
     {
       label: 'test 1',
-      value: 'test-value-1'
+      value: 'test-value-1',
     },
     {
       label: 'test 2',
-      value: 'test-value-2'
-    }
-  ]
+      value: 'test-value-2',
+    },
+  ],
 };
 
 export const Required = Template.bind({});
@@ -48,11 +48,11 @@ Required.args = {
   options: [
     {
       label: 'test 1',
-      value: 'test-value-1'
+      value: 'test-value-1',
     },
     {
       label: 'test 2',
-      value: 'test-value-2'
-    }
-  ]
+      value: 'test-value-2',
+    },
+  ],
 };

@@ -10,7 +10,7 @@ import {
   getBubbleClassNames,
   getBubbleContent,
   getBubbleShape,
-  getBubbleUrl
+  getBubbleUrl,
 } from './BubbleFactory';
 import {levelProgressStyle} from './progressStyles';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
@@ -30,14 +30,14 @@ export default class ProgressBubble extends React.Component {
     selectedSectionId: PropTypes.number,
     selectedStudentId: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.number
+      PropTypes.number,
     ]),
     hideToolTips: PropTypes.bool,
     onClick: PropTypes.func,
     // We have the ability to hide the assessment checkmark badge because
     // it's visually cluttering in places like the teacher panel and progress table
     hideAssessmentBadge: PropTypes.bool,
-    lessonName: PropTypes.string
+    lessonName: PropTypes.string,
   };
 
   isClickable() {
@@ -127,12 +127,12 @@ export default class ProgressBubble extends React.Component {
     const levelID = level.bubbleText || level.letter || level.levelNumber;
     const lessonName = this.props.lessonName;
     let description = i18n.progressBubbleDescription({
-      levelID: levelID
+      levelID: levelID,
     });
     if (lessonName) {
       description = i18n.progressBubbleDescriptionWithLesson({
         levelID: levelID,
-        lessonName: lessonName
+        lessonName: lessonName,
       });
     }
     if (this.isClickable()) {

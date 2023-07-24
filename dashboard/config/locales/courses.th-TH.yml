@@ -3,22 +3,34 @@ th:
   data:
     course:
       name:
+        csd-2017:
+          assignment_family_title: การค้นพบของวิทยาการคอมพิวเตอร์
+        csd-2018:
+          assignment_family_title: การค้นพบของวิทยาการคอมพิวเตอร์
+        csd-2023:
+          title: การค้นพบของวิทยาการคอมพิวเตอร์
+        csp-2017:
+          assignment_family_title: หลักการของวิทยาการคอมพิวเตอร์
+        csp-2018:
+          assignment_family_title: หลักการของวิทยาการคอมพิวเตอร์
         mike-test:
           title: พื้นฐานด้านวิทยาการคอมพิวเตอร์
     resources:
-      curriculum/csd/2020:
-        name: หลักสูตร
-      teacher_forum/csd/2020:
-        name: ฟอรัมผู้สอน
       curriculum/csd/2017:
         name: หลักสูตร
-      teacher_forum_6/csd/2017:
-        name: ฟอรัมผู้สอน
-      curriculum/csd/2019:
-        name: หลักสูตร
-      teacher_forum/csd/2019:
-        name: ฟอรัมผู้สอน
       curriculum/csd/2018:
         name: หลักสูตร
+      curriculum/csd/2019:
+        name: หลักสูตร
+      curriculum/csd/2020:
+        name: หลักสูตร
+      getting_started_with_csd/csd/2021:
+        name: การเริ่มต้นใช้งาน CSD
+      teacher_forum/csd/2019:
+        name: ฟอรัมผู้สอน
+      teacher_forum/csd/2020:
+        name: ฟอรัมผู้สอน
+      teacher_forum_6/csd/2017:
+        name: ฟอรัมผู้สอน
       teacher_forum_6/csd/2018:
         name: ฟอรัมผู้สอน

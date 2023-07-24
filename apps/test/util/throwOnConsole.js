@@ -64,7 +64,7 @@ function throwOnConsoleEverywhere(methodName) {
       afterEach(function () {
         throwing = true;
       });
-    }
+    },
   };
 }
 

@@ -11,7 +11,7 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Provider} from 'react-redux';
@@ -25,7 +25,7 @@ const MINIMUM_PROPS = {
   lessonId: fakeLessonId,
   handleClose: () => {},
   selectedSectionId: fakeSectionId,
-  refetchSectionLockStatus: () => {}
+  refetchSectionLockStatus: () => {},
 };
 
 // Helper function to get the list of rows in the student table.
@@ -64,7 +64,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
   it('renders student row with name and lock status', () => {
     sinon.stub(lessonLockDataApi, 'useGetLockState').returns({
       loading: false,
-      serverLockState: [{name: 'fakeName', lockStatus: LockStatus.Locked}]
+      serverLockState: [{name: 'fakeName', lockStatus: LockStatus.Locked}],
     });
 
     const wrapper = mount(
@@ -86,8 +86,8 @@ describe('LessonLockDialog with stubbed section selector', () => {
       loading: false,
       serverLockState: [
         {name: 'fakeName1', lockStatus: LockStatus.Locked},
-        {name: 'fakeName2', lockStatus: LockStatus.Locked}
-      ]
+        {name: 'fakeName2', lockStatus: LockStatus.Locked},
+      ],
     });
 
     const wrapper = mount(
@@ -117,8 +117,8 @@ describe('LessonLockDialog with stubbed section selector', () => {
       loading: false,
       serverLockState: [
         {name: 'fakeName1', lockStatus: LockStatus.Editable},
-        {name: 'fakeName2', lockStatus: LockStatus.Editable}
-      ]
+        {name: 'fakeName2', lockStatus: LockStatus.Editable},
+      ],
     });
 
     const wrapper = mount(
@@ -148,8 +148,8 @@ describe('LessonLockDialog with stubbed section selector', () => {
       loading: false,
       serverLockState: [
         {name: 'fakeName1', lockStatus: LockStatus.Editable},
-        {name: 'fakeName2', lockStatus: LockStatus.Editable}
-      ]
+        {name: 'fakeName2', lockStatus: LockStatus.Editable},
+      ],
     });
 
     const wrapper = mount(
@@ -199,11 +199,11 @@ describe('LessonLockDialog with stubbed section selector', () => {
   it('handleSave calls saveLockState, refetchSectionLockStatus and handleClose', async () => {
     const initialLockStatus = [
       {name: 'fakeName1', lockStatus: LockStatus.Editable},
-      {name: 'fakeName2', lockStatus: LockStatus.Editable}
+      {name: 'fakeName2', lockStatus: LockStatus.Editable},
     ];
     sinon.stub(lessonLockDataApi, 'useGetLockState').returns({
       loading: false,
-      serverLockState: initialLockStatus
+      serverLockState: initialLockStatus,
     });
     const lessonLockSaveStub = sinon
       .stub(lessonLockDataApi, 'saveLockState')
@@ -245,11 +245,11 @@ describe('LessonLockDialog with stubbed section selector', () => {
   it('handleSave shows default error if failed with no message', async () => {
     const initialLockStatus = [
       {name: 'fakeName1', lockStatus: LockStatus.Editable},
-      {name: 'fakeName2', lockStatus: LockStatus.Editable}
+      {name: 'fakeName2', lockStatus: LockStatus.Editable},
     ];
     sinon.stub(lessonLockDataApi, 'useGetLockState').returns({
       loading: false,
-      serverLockState: initialLockStatus
+      serverLockState: initialLockStatus,
     });
     const lessonLockSaveStub = sinon
       .stub(lessonLockDataApi, 'saveLockState')
@@ -291,18 +291,18 @@ describe('LessonLockDialog with stubbed section selector', () => {
   it('handleSave shows error message from server if provided', async () => {
     const initialLockStatus = [
       {name: 'fakeName1', lockStatus: LockStatus.Editable},
-      {name: 'fakeName2', lockStatus: LockStatus.Editable}
+      {name: 'fakeName2', lockStatus: LockStatus.Editable},
     ];
     sinon.stub(lessonLockDataApi, 'useGetLockState').returns({
       loading: false,
-      serverLockState: initialLockStatus
+      serverLockState: initialLockStatus,
     });
     const lessonLockSaveStub = sinon
       .stub(lessonLockDataApi, 'saveLockState')
       .returns(
         Promise.resolve({
           ok: false,
-          json: () => Promise.resolve({error: 'Error message from server'})
+          json: () => Promise.resolve({error: 'Error message from server'}),
         })
       );
     const refetchStub = sinon.stub().returns(new Promise(resolve => resolve()));

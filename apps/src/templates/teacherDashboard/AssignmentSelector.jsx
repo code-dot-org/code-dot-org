@@ -6,7 +6,7 @@ import {sectionShape, assignmentCourseOfferingShape} from './shapes';
 import AssignmentVersionSelector from './AssignmentVersionSelector';
 import {
   CourseOfferingCategories,
-  ParticipantAudiencesByType
+  ParticipantAudiencesByType,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {translatedCourseOfferingCategories} from './AssignmentSelectorHelpers';
 
@@ -56,7 +56,7 @@ export default class AssignmentSelector extends Component {
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
-    isNewSection: PropTypes.bool
+    isNewSection: PropTypes.bool,
   };
 
   constructor(props) {
@@ -75,7 +75,7 @@ export default class AssignmentSelector extends Component {
     this.state = {
       selectedCourseOfferingId,
       selectedCourseVersionId,
-      selectedUnitId
+      selectedUnitId,
     };
   }
 
@@ -90,7 +90,7 @@ export default class AssignmentSelector extends Component {
       courseVersionId: isValidAssignment(selectedCourseVersionId)
         ? selectedCourseVersionId
         : null,
-      unitId: isValidAssignment(selectedUnitId) ? selectedUnitId : null
+      unitId: isValidAssignment(selectedUnitId) ? selectedUnitId : null,
     };
   }
 
@@ -105,7 +105,7 @@ export default class AssignmentSelector extends Component {
         {
           selectedCourseOfferingId: event.target.value,
           selectedCourseVersionId: noAssignment,
-          selectedUnitId: noAssignment
+          selectedUnitId: noAssignment,
         },
         this.reportChange
       );
@@ -137,7 +137,7 @@ export default class AssignmentSelector extends Component {
           {
             selectedCourseOfferingId: courseOfferingId,
             selectedCourseVersionId: courseVersionId,
-            selectedUnitId: firstUnitId
+            selectedUnitId: firstUnitId,
           },
           this.reportChange
         );
@@ -153,7 +153,7 @@ export default class AssignmentSelector extends Component {
       this.setState(
         {
           selectedUnitId: noAssignment,
-          selectedCourseVersionId: noAssignment
+          selectedCourseVersionId: noAssignment,
         },
         this.reportChange
       );
@@ -172,7 +172,7 @@ export default class AssignmentSelector extends Component {
         this.setState(
           {
             selectedUnitId: firstUnitId,
-            selectedCourseVersionId: courseVersionId
+            selectedCourseVersionId: courseVersionId,
           },
           this.reportChange
         );
@@ -187,7 +187,7 @@ export default class AssignmentSelector extends Component {
     ) {
       this.setState(
         {
-          selectedUnitId: noAssignment
+          selectedUnitId: noAssignment,
         },
         this.reportChange
       );
@@ -196,7 +196,7 @@ export default class AssignmentSelector extends Component {
       if (this.state.selectedUnitId !== unitId) {
         this.setState(
           {
-            selectedUnitId: unitId
+            selectedUnitId: unitId,
           },
           this.reportChange
         );
@@ -314,12 +314,12 @@ const styles = {
   family: {
     display: 'inline-block',
     marginTop: 4,
-    marginRight: 6
+    marginRight: 6,
   },
   secondary: {
-    marginTop: 6
+    marginTop: 6,
   },
   dropdownLabel: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  }
+    fontFamily: '"Gotham 5r", sans-serif',
+  },
 };

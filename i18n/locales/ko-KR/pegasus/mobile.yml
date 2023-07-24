@@ -387,7 +387,7 @@
   contact_form_topic_contribution: "공헌자"
   contact_form_topic_partner: "협력자"
   contact_form_topic_other: "기타"
-  contact_form_label_topic: "제목"
+  contact_form_label_topic: "주제"
   contact_form_label_email: "이메일 주소"
   contact_form_label_message: "메시지"
   contact_form_label_submit: "메시지 보내기"
@@ -698,7 +698,7 @@
   dashboard_sections_jumbotron_instruction: "새로운 섹션을 만들고 학생을 추가합니다. 섹션은 학생들을 모다 작은 모둠으로 구성할 수 있게 하여 학생들의 계정에 따라 진도를 추적할 수 있습니다."
   dashboard_sections_table_section: "섹션"
   dashboard_sections_table_secret: "로그인 유형"
-  dashboard_sections_table_grade: "등급"
+  dashboard_sections_table_grade: "학년"
   dashboard_sections_table_course: "코스"
   dashboard_sections_table_pairing_allowed: "페어 프로그래밍"
   dashboard_sections_table_stage_extras: "추가 단계"
@@ -797,7 +797,7 @@
   dashboard_login_none: "이메일"
   dashboard_stage: "단계"
   dashboard_puzzle: "퍼즐"
-  dashboard_question: "질문"
+  dashboard_question: "질문 입력"
   dashboard_response: "응답"
   dashboard_correctness: "정확성"
   dashboard_correctness_free_response: "자유 응답"
@@ -891,7 +891,7 @@
   older_systems: "저사양 시스템용 파트너 튜토리얼들"
   older_systems_subheading: "구버전 웹브라우져에서도 동작해야합니다. 모든 튜토리얼들을 제대로 살펴보시려면 <a href=\"http://browsehappy.com/\" target=\"_blank\">최신버전 웹브라우저</a> 로 업그레이드하세요."
   mobile_devices: "모바일 기기를 위한 파트너 튜토리얼들"
-  frozen_name: "안나, 엘사와 함께하는 코드"
+  frozen_name: "안나와 엘사가 함께하는 코드"
   starwars_name: '스타워즈: 코드로 은하계 건설하기'
   codeorg_name: "고전 미로게임"
   codeintl_name: "고전 미로게임"
@@ -1531,7 +1531,7 @@
   user_header_applab: '앱 랩 '
   user_header_artist: '아티스트 '
   user_header_gamelab: "게임 랩"
-  user_header_playlab: "Play Lab"
+  user_header_playlab: "플레이 랩"
   user_header_dance: "댄스 파티"
   user_header_spritelab: "스프라이트 연구소"
   user_header_minecraft: "마인크래프트"
@@ -1572,7 +1572,7 @@
   applab_tile_subtitle: "블록 기반 프로그래밍을 사용하여 자바스크립트로 앱을 만드세요. 또는 다음 레벨에서 텍스트 기반 프로그래밍 스킬을 발휘하세요 (영어 만)"
   applab_tile_start_tutorial: "시작"
   applab_tile_teacher_guide: "교사 가이드 보기"
-  aquatic_name: '마인크래프트: 보야지 아쿠아틱'
+  aquatic_name: '마인크래프트: 수중 항해'
   account_sign_up_email_opt_in: "과정  또는 지역 기회, 기타 컴퓨터 과학 뉴스 업데이트에 관한 이메일을 발송해도 되겠습니까? (대략 월 1회)"
   account_sign_up_child_accept_terms: "본인은 부모 또는 법적 보호자로부터 Code.org 서비스 사용을 허락받았음을 확인합니다."
   hoc_overview_dance_title: "댄스 파티"

@@ -48,7 +48,7 @@ describe('checkForEmptyContainerBlockFailure_', function () {
   it('returns ALL_PASS when no blocks are present', function () {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
-      blockXml: '<xml><block type="when_run"><next></next></block></xml>'
+      blockXml: '<xml><block type="when_run"><next></next></block></xml>',
     });
   });
 
@@ -56,7 +56,7 @@ describe('checkForEmptyContainerBlockFailure_', function () {
     checkResultForBlocks({
       result: TestResults.ALL_PASS,
       blockXml:
-        '<xml><block type="when_run"><next><block type="text_print"></block></next></block></xml>'
+        '<xml><block type="when_run"><next><block type="text_print"></block></next></block></xml>',
     });
   });
 
@@ -70,7 +70,7 @@ describe('checkForEmptyContainerBlockFailure_', function () {
         '<title name="TIMES">4</title>' +
         '</block>' +
         '</next></block>' +
-        '</xml>'
+        '</xml>',
     });
   });
 
@@ -87,7 +87,7 @@ describe('checkForEmptyContainerBlockFailure_', function () {
         '</statement>' +
         '</block>' +
         '</next></block>' +
-        '</xml>'
+        '</xml>',
     });
   });
 
@@ -105,7 +105,7 @@ describe('checkForEmptyContainerBlockFailure_', function () {
         '<mutation/>' +
         '<title name="NAME">do something</title>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     });
   });
 
@@ -119,7 +119,7 @@ describe('checkForEmptyContainerBlockFailure_', function () {
         '<mutation/>' +
         '<title name="NAME">do something</title>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     });
   });
 
@@ -136,7 +136,7 @@ describe('checkForEmptyContainerBlockFailure_', function () {
         '<block type="text_print"></block>' +
         '</statement>' +
         '</block>' +
-        '</xml>'
+        '</xml>',
     });
   });
 });
@@ -320,7 +320,7 @@ describe('getUserBlocks_', function () {
       '<block editable="false" type="text_print"></block>',
       '<block editable="false" type="text"><title name="TEXT">TextContent</title></block>',
       '<block editable="false" type="math_number"><title name="NUM">10</title></block>',
-      '</xml>'
+      '</xml>',
     ];
 
     validateNumUserBlocks(testBlockXml.join(''), 0);
@@ -332,7 +332,7 @@ describe('getUserBlocks_', function () {
       '<block editable="false" type="text_print"></block>',
       '<block editable="false" type="text"><title name="TEXT">TextContent</title></block>',
       '<block editable="false" type="math_number"><title name="NUM">10</title></block>',
-      '</xml>'
+      '</xml>',
     ];
 
     var readOnly = Blockly.readOnly;
@@ -442,22 +442,22 @@ describe('getMissingBlocks_ tests', function () {
     var testBlocks = [
       {
         test: 'someAwesomeVariable',
-        type: 'variables_get'
+        type: 'variables_get',
       },
       {
         test: 'TextContent',
-        type: 'text'
+        type: 'text',
       },
       {
         test: '10;',
-        type: 'math_number'
-      }
+        type: 'math_number',
+      },
     ];
 
     var testBlockXml = [
       '<block type="variables_get"><title name="VAR">someAwesomeVariable</title></block>',
       '<block type="text"><title name="TEXT">TextContent</title></block>',
-      '<block type="math_number"><title name="NUM">10</title></block>'
+      '<block type="math_number"><title name="NUM">10</title></block>',
     ];
     runTests(testBlocks, testBlockXml);
   });
@@ -468,26 +468,26 @@ describe('getMissingBlocks_ tests', function () {
         test: function (block) {
           return block.type === 'variables_get';
         },
-        type: 'variables_get'
+        type: 'variables_get',
       },
       {
         test: function (block) {
           return block.type === 'text';
         },
-        type: 'text'
+        type: 'text',
       },
       {
         test: function (block) {
           return block.type === 'math_number';
         },
-        type: 'math_number'
-      }
+        type: 'math_number',
+      },
     ];
 
     var testBlockXml = [
       '<block type="variables_get"><title name="VAR">someAwesomeVariable</title></block>',
       '<block type="text"><title name="TEXT">TextContent</title></block>',
-      '<block type="math_number"><title name="NUM">10</title></block>'
+      '<block type="math_number"><title name="NUM">10</title></block>',
     ];
 
     runTests(testBlocks, testBlockXml);
@@ -499,7 +499,7 @@ describe('getMissingBlocks_ tests', function () {
         requiredBlocks: [[testBlocks[0]]],
         numToFlag: 1,
         userBlockXml: '',
-        expectedResult: [testBlocks[0]]
+        expectedResult: [testBlocks[0]],
       });
     });
 
@@ -508,7 +508,7 @@ describe('getMissingBlocks_ tests', function () {
         requiredBlocks: [[testBlocks[0]]],
         numToFlag: 1,
         userBlockXml: '<xml>' + testBlockXml[1] + '</xml>',
-        expectedResult: [testBlocks[0]]
+        expectedResult: [testBlocks[0]],
       });
     });
 
@@ -517,7 +517,7 @@ describe('getMissingBlocks_ tests', function () {
         requiredBlocks: [[testBlocks[0]]],
         numToFlag: 1,
         userBlockXml: '<xml>' + testBlockXml[0] + '</xml>',
-        expectedResult: []
+        expectedResult: [],
       });
     });
 
@@ -526,7 +526,7 @@ describe('getMissingBlocks_ tests', function () {
         requiredBlocks: [[testBlocks[0]], [testBlocks[1]]],
         numToFlag: 1,
         userBlockXml: '',
-        expectedResult: [testBlocks[0]]
+        expectedResult: [testBlocks[0]],
       });
     });
     it('expect 2 blocks, numToFlag = 2, both missing, told both missing', function () {
@@ -534,7 +534,7 @@ describe('getMissingBlocks_ tests', function () {
         requiredBlocks: [[testBlocks[0]], [testBlocks[1]]],
         numToFlag: 2,
         userBlockXml: '',
-        expectedResult: [testBlocks[0], testBlocks[1]]
+        expectedResult: [testBlocks[0], testBlocks[1]],
       });
     });
     it('expect 2 blocks, numToFlag = 2, first block missing, told second block missing', function () {
@@ -542,7 +542,7 @@ describe('getMissingBlocks_ tests', function () {
         requiredBlocks: [[testBlocks[0]], [testBlocks[1]]],
         numToFlag: 2,
         userBlockXml: '<xml>' + testBlockXml[0] + '</xml>',
-        expectedResult: [testBlocks[1]]
+        expectedResult: [testBlocks[1]],
       });
     });
     it('expect 2 blocks, numToFlag = 2, second block missing, told first block missing', function () {
@@ -551,7 +551,7 @@ describe('getMissingBlocks_ tests', function () {
         numToFlag: 2,
         userBlockXml: '<xml>' + testBlockXml[0] + testBlockXml[1] + '</xml>',
         expectedResult: [],
-        assertMessage: 'no blocks missing'
+        assertMessage: 'no blocks missing',
       });
     });
 
@@ -561,11 +561,11 @@ describe('getMissingBlocks_ tests', function () {
       // empty workspace
       validateBlocks({
         requiredBlocks: [
-          [testBlocks[1], testBlocks[2]] // allow text or number
+          [testBlocks[1], testBlocks[2]], // allow text or number
         ],
         numToFlag: 1,
         userBlockXml: '',
-        expectedResult: [testBlocks[1]]
+        expectedResult: [testBlocks[1]],
       });
     });
 
@@ -573,22 +573,22 @@ describe('getMissingBlocks_ tests', function () {
       // should work with either block
       validateBlocks({
         requiredBlocks: [
-          [testBlocks[1], testBlocks[2]] // allow text or number
+          [testBlocks[1], testBlocks[2]], // allow text or number
         ],
         numToFlag: 1,
         userBlockXml: '<xml>' + testBlockXml[1] + '</xml>',
-        expectedResult: []
+        expectedResult: [],
       });
     });
 
     it('expect 1 of 2 blocks, second block there, told none missing', function () {
       validateBlocks({
         requiredBlocks: [
-          [testBlocks[1], testBlocks[2]] // allow text or number
+          [testBlocks[1], testBlocks[2]], // allow text or number
         ],
         numToFlag: 1,
         userBlockXml: '<xml>' + testBlockXml[2] + '</xml>',
-        expectedResult: []
+        expectedResult: [],
       });
     });
   }
@@ -613,7 +613,7 @@ describe('getMissingBlocks_ tests', function () {
       skinForTests = {
         assetUrl: function (str) {
           return str;
-        }
+        },
       };
     }
 
@@ -627,7 +627,7 @@ describe('getMissingBlocks_ tests', function () {
       requiredBlocks: level.requiredBlocks,
       numToFlag: 1,
       userBlockXml: testData.xml,
-      expectedResult: testData.missingBlocks
+      expectedResult: testData.missingBlocks,
     });
   }
 
@@ -660,9 +660,9 @@ describe('getCountableBlocks_', function () {
     skin: {
       assetUrl: function (str) {
         return str;
-      }
+      },
     },
-    isK1: false
+    isK1: false,
   };
   var studioApp;
 
@@ -830,7 +830,7 @@ describe('unusedBlocks', function () {
   // create our environment
   beforeEach(function () {
     reduxStub = sinon.stub(redux, 'getStore').returns({
-      getState: sinon.stub().returns({pageConstants: {isBramble: false}})
+      getState: sinon.stub().returns({pageConstants: {isBramble: false}}),
     });
     setupTestBlockly();
     var blockInstallOptions = {isK1: false};
@@ -858,14 +858,14 @@ describe('unusedBlocks', function () {
   it('fails when unused blocks are disabled', function () {
     checkResultForBlocks({
       result: TestResults.EXTRA_TOP_BLOCKS_FAIL,
-      unusedBlocksEnabled: false
+      unusedBlocksEnabled: false,
     });
   });
 
   it('passes when unused blocks are enabled', function () {
     checkResultForBlocks({
       result: TestResults.PASS_WITH_EXTRA_TOP_BLOCKS,
-      unusedBlocksEnabled: true
+      unusedBlocksEnabled: true,
     });
   });
 });

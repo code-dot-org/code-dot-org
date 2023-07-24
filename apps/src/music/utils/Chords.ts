@@ -24,7 +24,8 @@ const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
 export function generateNotesFromChord(
   chordEventValue: ChordEventValue
 ): ChordNote[] {
-  const {notes, playStyle} = chordEventValue;
+  const playStyle = chordEventValue.playStyle;
+  const notes = [...chordEventValue.notes];
   if (notes.length === 0) {
     return [];
   }
@@ -47,14 +48,14 @@ export function generateNotesFromChord(
     return arrayOfTicks.map(tick => {
       return {
         tick: tick,
-        note: notes[Math.floor(Math.random() * notes.length)]
+        note: notes[Math.floor(Math.random() * notes.length)],
       };
     });
   } else if (playStyle === 'together') {
     return notes.map(note => {
       return {
         tick: 1,
-        note
+        note,
       };
     });
   } else {
@@ -67,7 +68,7 @@ export function generateNotesFromChord(
     return arrayOfTicks.map(tick => {
       return {
         tick: tick,
-        note: notes[(tick - 1) % notes.length]
+        note: notes[(tick - 1) % notes.length],
       };
     });
   }
@@ -91,7 +92,7 @@ export function generateGraphDataFromChord({
   numOctaves,
   startOctave,
   padding,
-  noteHeightScale
+  noteHeightScale,
 }: GenerateGraphDataFromChordOptions): ChordGraphNote[] {
   const notes: ChordNote[] = generateNotesFromChord(chordEventValue);
 
@@ -115,7 +116,7 @@ export function generateGraphDataFromChord({
         useHeight -
         ((note.note - startOctave * 12) * useHeight) / (numOctaves * 12 - 1),
       width: noteWidth,
-      height: noteHeight
+      height: noteHeight,
     };
   });
 }

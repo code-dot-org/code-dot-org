@@ -15,7 +15,7 @@ describe('Pairing component', function () {
     server.respondWith('GET', '/pairings', [
       httpCode,
       {'Content-Type': 'application/json'},
-      JSON.stringify(response)
+      JSON.stringify(response),
     ]);
     return server;
   }
@@ -59,10 +59,10 @@ describe('Pairing component', function () {
         {
           id: 1,
           name: 'A section',
-          students: [{id: 11, name: 'First student'}]
-        }
+          students: [{id: 11, name: 'First student'}],
+        },
       ],
-      pairings: []
+      pairings: [],
     };
 
     beforeEach(() => {
@@ -70,7 +70,7 @@ describe('Pairing component', function () {
       server.respondWith('PUT', '/pairings', [
         500,
         {'Content-Type': 'application/json'},
-        ''
+        '',
       ]);
       component = createDomElement();
       server.respond();
@@ -122,12 +122,12 @@ describe('Pairing component', function () {
           name: 'A section',
           students: [
             {id: 11, name: 'First student'},
-            {id: 12, name: 'Second Student'}
-          ]
+            {id: 12, name: 'Second Student'},
+          ],
         },
-        {id: 15, name: 'Another section'}
+        {id: 15, name: 'Another section'},
       ],
-      pairings: []
+      pairings: [],
     };
 
     beforeEach(function () {
@@ -185,11 +185,11 @@ describe('Pairing component', function () {
           name: 'A section',
           students: [
             {id: 11, name: 'First student'},
-            {id: 12, name: 'Second Student'}
-          ]
-        }
+            {id: 12, name: 'Second Student'},
+          ],
+        },
       ],
-      pairings: []
+      pairings: [],
     };
 
     beforeEach(function () {
@@ -261,19 +261,19 @@ describe('Pairing component', function () {
           name: 'A section',
           students: [
             {id: 11, name: 'First student'},
-            {id: 12, name: 'Second Student'}
-          ]
+            {id: 12, name: 'Second Student'},
+          ],
         },
         {
           id: 56,
-          name: 'Another section'
-        }
+          name: 'Another section',
+        },
       ],
       pairings: [
         {id: 546, name: 'Josh'},
         {id: 563, name: 'Charing'},
-        {id: 96747, name: 'Andrew O.'}
-      ]
+        {id: 96747, name: 'Andrew O.'},
+      ],
     };
 
     beforeEach(function () {
@@ -281,7 +281,7 @@ describe('Pairing component', function () {
       server.respondWith('PUT', '/pairings', [
         200,
         {'Content-Type': 'application/json'},
-        JSON.stringify({sections: [], pairings: []})
+        JSON.stringify({sections: [], pairings: []}),
       ]);
       component = createDomElement();
       server.respond();

@@ -46,8 +46,8 @@ describe('consoleShim', function () {
     var fakeWindow = {
       console: {
         log: originalLogFunction,
-        snf: someNonstandardFunction
-      }
+        snf: someNonstandardFunction,
+      },
     };
     consoleShim(fakeWindow);
     var console = fakeWindow.console;

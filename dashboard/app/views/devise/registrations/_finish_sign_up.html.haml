@@ -1,8 +1,11 @@
+- require '../shared/middleware/helpers/experiments'
 - SignUpTracking.log_load_finish_sign_up session, (@user.provider || 'email')
+- require 'cpa'
 - require 'geocoder'
-- require 'country_codes'
 - location = Geocoder.search(request.ip).try(:first)
-- us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
+- country_code = location&.country_code.to_s.upcase
+-# 'RD' is the 'Reserved' country code for private IP's, i.e. localhost.
+- us_ip = ['US', 'RD'].include?(country_code)
 - @page_title = t('activerecord.attributes.user.finish_sign_up_header')
 
 #signup
@@ -85,7 +88,7 @@
         #student-name-label{style: "display: none;"}
           = f.label :name, t('activerecord.attributes.user.name_example')
         - if @user.errors[:name].present?
-          %p.error= @user.errors[:name].join(', ')
+          %p.error= @user.errors[:name].join('\n')
       .span5
         = f.text_field :name, maxlength: 255
 
@@ -93,25 +96,26 @@
       .span3.signup-field-label
         = f.label :age
         - if @user.errors[:age].present?
-          %p.error= @user.errors[:age].join(', ')
+          %p.error= @user.errors[:age].join('\n')
       .span5
         = f.select :age, age_options, include_blank: true
 
-    - if ask_gender_experiment?(request, session.id.to_s)
-      - gender_input_type = gender_input_type?(request, session)
-      - SignUpTracking.log_gender_input_type_started(session, gender_input_type, request.locale, 'email_signup')
-      - if gender_input_type != User::GenderExperimentHelper::GENDER_INPUT_TYPE_NONE
-        .row#gender-dropdown{style: "display: none;"}
-          .span3.signup-field-label
-            = f.label :gender, t('signup_form.gender')
-          - if @user.errors[:gender].present?
-            %span.error= @user.errors[:gender].join(', ')
-          - if gender_input_type == User::GenderExperimentHelper::GENDER_INPUT_TYPE_DROPDOWN
-            .span5
-              = f.select :gender, gender_options
-          - else
-            .span5
-              = f.text_field :gender
+    - if us_ip && Cpa.cpa_experience(request)
+      .row#us-state-dropdown{style: "display: none;"}
+        .span3.signup-field-label
+          = f.label :us_state
+          - if @user.errors[:us_state].present?
+            %p.error= @user.errors[:us_state].join('\n')
+        .span5
+          = f.select :us_state, us_state_options, include_blank: true
+          = f.hidden_field :country_code, value: country_code
+
+    - if experiment_value('gender', request)
+      .row#gender-field
+        .span3.signup-field-label
+          = f.label :gender_student_input, t('signup_form.gender')
+        .span5
+          = f.text_field :gender_student_input, maxlength: 50
 
     .row#school-info-section{style: "display: none;"}
       .span10

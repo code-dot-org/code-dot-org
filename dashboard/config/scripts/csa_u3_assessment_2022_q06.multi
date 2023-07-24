@@ -18,3 +18,5 @@ sum += values[0];
 
 What is stored in `sum` after this code segment is run?
 MARKDOWN
+
+allow_multiple_attempts true

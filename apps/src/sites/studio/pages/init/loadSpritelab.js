@@ -26,7 +26,7 @@ export default function loadSpritelab(options) {
         study: 'sprite_default_load',
         study_group: 'spritelab',
         event: 'backup_animations_used',
-        project_id: getCurrentId()
+        project_id: getCurrentId(),
       });
 
       return initializeOptionsAndSpritelab(spritelab, options);

@@ -7,25 +7,25 @@ const defaultStyle = {
   paddingLeft: 20,
   paddingRight: 20,
   paddingBottom: 20,
-  fontFamily: '"Gotham 4r", sans-serif, sans-serif'
+  fontFamily: '"Gotham 4r", sans-serif, sans-serif',
 };
 
 export default class LessonEditorDialog extends React.Component {
   static propTypes = {
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node
+      PropTypes.node,
     ]).isRequired,
     handleClose: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired,
-    style: PropTypes.object
+    style: PropTypes.object,
   };
 
   render() {
     const customStyle = this.props.style || {};
     const style = {
       ...defaultStyle,
-      ...customStyle
+      ...customStyle,
     };
 
     return (

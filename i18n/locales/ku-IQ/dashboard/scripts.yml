@@ -452,3 +452,7 @@ ku:
               display_name: فرمانەکان
             csf_nested_loops:
               display_name: مەرجیەکان
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: گۆڕاوەکان

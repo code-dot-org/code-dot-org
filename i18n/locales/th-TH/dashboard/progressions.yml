@@ -11,6 +11,7 @@ th:
       Back and Forth: เดินหน้าถอยหลัง
       Bass, Mid, and Treble: เสียงต่ำ เสียงกลาง เสียงสูง
       Challenge: ความท้าทาย
+      Change: เปลี่ยน
       Code Your Own Flappy Game: เขียนโค้ดเกมนกน้อยตะลุยโลกกว้างของคุณเอง
       Collector Game: เกมนักสะสม
       Dance Crews: ทีมเต้นรำ
@@ -28,15 +29,20 @@ th:
       Get In Formation: จัดรูปแบบกลุ่มนักเต้น
       Hello World: สวัสดีชาวโลก
       How to Make a Sprite: วิธีทำสไปรท์
+      Introducing Sprite Lab: แนะนำห้องปฏิบัติการสไปรท์
+      Introduction to Arrays: รู้เบื้องต้นเกี่ยวกับอาร์เรย์
       Learning from Simulations: เรียนรู้จากแบบจำลอง
       Lesson Extras: บทเรียนเพิ่มเติม
       Levels: เลเวล
       Lists: รายการ
       Measures: ห้องดนตรี
       'Minecraft: Hero''s Journey': 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
+      'Mini-Project: Sticker Art': 'มินิโปรเจกต์: สติกเกอร์อาร์ต'
       More Buttons: ปุ่มมากกว่านี้
+      My Online Neighborhood: พื้นที่ใกล้เคียงออนไลน์ของฉัน
       Overview: ภาพรวม
       Pair Programming: การจับคู่เพื่อเขียนโปรแกรม
+      Picturing Data: การวาดภาพข้อมูล
       Programming with Rey and BB-8: การเขียนโปรแกรมกับเรย์และบีบี-8
       Project: โปรเจกต์
       Properties: คุณสมบัติ
@@ -47,9 +53,12 @@ th:
       Sprite Properties: คุณสมบัติของสไปร์ท
       Teach AI a New Word: สอนคำศัพท์ใหม่ให้ AI
       Text Compression: การบีบอัดข้อความ
+      The Animation Tab: แท็บภาพเคลื่อนไหว
       The Harvester: เกษตรกรผู้เก็บเกี่ยว
       Train an AI to Clean the Ocean: ฝึกให้ AI ทำความสะอาดมหาสมุทร
+      Using the Repeat Block: การใช้บล็อกการทำซ้ำ
       Variables: ตัวแปร
+      Velocity: ความเร็ว
       Video: วิดีโอ
       'Video: Outbreak Simulator: Introduction': 'วิดีโอ: เครื่องจำลองการแพร่ระบาดของไวรัส: บทนำ'
       'Video: What Makes a Computer, a Computer?': 'วีดีโอ: อะไรทำให้คอมพิวเตอร์เป็นคอมพิวเตอร์ได้?'

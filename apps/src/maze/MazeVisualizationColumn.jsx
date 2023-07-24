@@ -25,7 +25,7 @@ MazeVisualizationColumn.propTypes = {
   searchWord: PropTypes.string,
   showCollectorGemCounter: PropTypes.bool,
   showFinishButton: PropTypes.bool,
-  showStepButton: PropTypes.bool.isRequired
+  showStepButton: PropTypes.bool.isRequired,
 };
 
 export default MazeVisualizationColumn;

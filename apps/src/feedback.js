@@ -25,7 +25,7 @@ import {
   showPublishDialog,
   PUBLISH_REQUEST,
   PUBLISH_SUCCESS,
-  PUBLISH_FAILURE
+  PUBLISH_FAILURE,
 } from './templates/projects/publishDialog/publishDialogRedux';
 import {createHiddenPrintWindow} from './utils';
 import testImageAccess from './code-studio/url_test';
@@ -184,7 +184,7 @@ FeedbackUtils.prototype.displayFeedback = function (
       continueText: options.continueText,
       isK1: options.level.isK1,
       freePlay: options.level.freePlay,
-      finalLevel: options.level.isLastLevelInLesson
+      finalLevel: options.level.isLastLevelInLesson,
     })
   );
 
@@ -276,7 +276,7 @@ FeedbackUtils.prototype.displayFeedback = function (
       onChallengeContinue = () => {
         puzzleRatingUtils.cachePuzzleRating(container, {
           script_id: options.response.script_id,
-          level_id: options.response.level_id
+          level_id: options.response.level_id,
         });
         onContinue();
       };
@@ -312,7 +312,7 @@ FeedbackUtils.prototype.displayFeedback = function (
     defaultBtnSelector: defaultBtnSelector,
     onHidden: onHidden,
     id: 'feedback-dialog',
-    showXButton: !options.hideXButton
+    showXButton: !options.hideXButton,
   });
 
   if (againButton) {
@@ -355,7 +355,7 @@ FeedbackUtils.prototype.displayFeedback = function (
       // Generate a generic feedback message to display when we show the
       // feedback block
       var genericFeedback = this.getFeedbackMessageElement_({
-        message: msg.tryBlocksBelowFeedback()
+        message: msg.tryBlocksBelowFeedback(),
       });
 
       // If there are feedback blocks, temporarily hide them.
@@ -390,8 +390,8 @@ FeedbackUtils.prototype.displayFeedback = function (
               script_id: options.response.script_id,
               level_id: options.response.level_id,
               feedback_type: options.feedbackType,
-              feedback_xml: feedbackBlocks ? feedbackBlocks.xml : undefined
-            }
+              feedback_xml: feedbackBlocks ? feedbackBlocks.xml : undefined,
+            },
           });
         }
       });
@@ -414,7 +414,7 @@ FeedbackUtils.prototype.displayFeedback = function (
       if (options.response && options.response.puzzle_ratings_enabled) {
         puzzleRatingUtils.cachePuzzleRating(feedback, {
           script_id: options.response.script_id,
-          level_id: options.response.level_id
+          level_id: options.response.level_id,
         });
       }
       options.onContinue();
@@ -513,7 +513,7 @@ FeedbackUtils.prototype.displayFeedback = function (
       backdrop:
         getStore().getState().pageConstants.appType === 'flappy'
           ? 'static'
-          : true
+          : true,
     });
 
     if (isPublished) {
@@ -539,8 +539,8 @@ function logDialogActions(event, options, isPerfect) {
         level_type: options.level ? options.level.skin : null,
         level_id: options.response ? options.response.level_id : null,
         level_path: options.response ? options.response.level_path : null,
-        isPerfectBlockCount: isPerfect
-      })
+        isPerfectBlockCount: isPerfect,
+      }),
     });
   }
 }
@@ -679,7 +679,7 @@ FeedbackUtils.prototype.getShareFailure_ = function (options) {
   var shareFailure = options.response.share_failure;
   var shareFailureDiv = document.createElement('div');
   shareFailureDiv.innerHTML = require('./templates/shareFailure.html.ejs')({
-    shareFailure: shareFailure
+    shareFailure: shareFailure,
   });
   return shareFailureDiv;
 };
@@ -721,12 +721,12 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
         break;
       case TestResults.RUNTIME_ERROR_FAIL:
         message = msg.runtimeErrorMsg({
-          lineNumber: options.executionError.lineNumber
+          lineNumber: options.executionError.lineNumber,
         });
         break;
       case TestResults.SYNTAX_ERROR_FAIL:
         message = msg.syntaxErrorMsg({
-          lineNumber: options.executionError.lineNumber
+          lineNumber: options.executionError.lineNumber,
         });
         break;
       case TestResults.EMPTY_BLOCK_FAIL:
@@ -806,7 +806,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
           msg.numBlocksNeeded;
         message = messageFunction({
           numBlocks: this.studioApp_.IDEAL_BLOCK_NUM,
-          puzzleNumber: options.level.puzzle_number || 0
+          puzzleNumber: options.level.puzzle_number || 0,
         });
         break;
       case TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL:
@@ -833,11 +833,11 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
         ) {
           message = msg.numBlocksNeeded({
             numBlocks: this.studioApp_.IDEAL_BLOCK_NUM,
-            puzzleNumber: options.level.puzzle_number || 0
+            puzzleNumber: options.level.puzzle_number || 0,
           });
         } else {
           message = msg.completedWithoutRecommendedBlock({
-            puzzleNumber: options.level.puzzle_number || 0
+            puzzleNumber: options.level.puzzle_number || 0,
           });
         }
         break;
@@ -863,7 +863,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
         var msgParams = {
           lessonNumber: 0, // TODO: remove once localized strings have been fixed
           stageName: lessonCompleted,
-          puzzleNumber: options.level.puzzle_number || 0
+          puzzleNumber: options.level.puzzle_number || 0,
         };
         if (
           TestResults.FREE_PLAY === options.feedbackType &&
@@ -963,7 +963,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('id', 'sharing');
   sharingDiv.innerHTML = require('./templates/sharing.html.ejs')({
-    options: options
+    options: options,
   });
 
   // Note: We have a dependency on dashboard here. This dependency has always
@@ -1024,7 +1024,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
           },
           onChange: function () {
             submitButton.disabled = true;
-          }
+          },
         });
         phone.focus();
         dom.addClickTouchEvent(submitButton, function () {
@@ -1033,7 +1033,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
             level_source: options.response.level_source_id,
             channel_id: options.channelId,
             type: project.getStandaloneApp(),
-            phone: phone.val()
+            phone: phone.val(),
           });
           $(submitButton).val('Sending..');
           phone.prop('readonly', true);
@@ -1096,7 +1096,7 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function (
 
   const generatedCodeProperties = this.getGeneratedCodeProperties({
     generatedCodeDescription:
-      options.appStrings && options.appStrings.generatedCodeDescription
+      options.appStrings && options.appStrings.generatedCodeDescription,
   });
 
   return (
@@ -1165,7 +1165,7 @@ FeedbackUtils.prototype.getGeneratedCodeProperties = function (options) {
     berkeleyLink:
       "<a href='http://bjc.berkeley.edu/' target='_blank'>Berkeley</a>",
     harvardLink:
-      "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>"
+      "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>",
   };
 
   const {message, shortMessage} = this.getGeneratedCodeDescriptions_(
@@ -1179,7 +1179,7 @@ FeedbackUtils.prototype.getGeneratedCodeProperties = function (options) {
   return {
     message,
     shortMessage,
-    code
+    code,
   };
 };
 
@@ -1197,20 +1197,20 @@ FeedbackUtils.prototype.getGeneratedCodeDescriptions_ = function (
   if (this.studioApp_.editCode) {
     return {
       message: '',
-      shortMessage: ''
+      shortMessage: '',
     };
   }
 
   if (generatedCodeDescription) {
     return {
       message: generatedCodeDescription,
-      shortMessage: generatedCodeDescription
+      shortMessage: generatedCodeDescription,
     };
   }
 
   return {
     message: msg.generatedCodeInfo(codeInfoMsgParams),
-    shortMessage: msg.shortGeneratedCodeInfo(codeInfoMsgParams)
+    shortMessage: msg.shortGeneratedCodeInfo(codeInfoMsgParams),
   };
 };
 
@@ -1224,7 +1224,7 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
   var codeDiv = document.createElement('div');
 
   var generatedCodeProperties = this.getGeneratedCodeProperties({
-    generatedCodeDescription: appStrings && appStrings.generatedCodeDescription
+    generatedCodeDescription: appStrings && appStrings.generatedCodeDescription,
   });
 
   ReactDOM.render(
@@ -1241,7 +1241,7 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
   var dialog = this.createModalDialog({
     contentDiv: codeDiv,
     icon: this.studioApp_.icon,
-    defaultBtnSelector: '#ok-button'
+    defaultBtnSelector: '#ok-button',
   });
 
   var okayButton = codeDiv.querySelector('#ok-button');
@@ -1269,7 +1269,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function (
     cancelText: msg.dialogCancel(),
     onConfirm: callback,
     onCancel: null,
-    hideIcon: hideIcon
+    hideIcon: hideIcon,
   });
 };
 
@@ -1300,11 +1300,11 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function (
 FeedbackUtils.prototype.showSimpleDialog = function (options) {
   const bodyTextStyle = {
     color: color.neutral_dark,
-    fontSize: '14px'
+    fontSize: '14px',
   };
 
   var textBoxStyle = {
-    marginBottom: 10
+    marginBottom: 10,
   };
   var contentDiv = ReactDOM.render(
     <div>
@@ -1327,7 +1327,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (options) {
   var dialog = this.createModalDialog({
     contentDiv: contentDiv,
     icon: options.hideIcon ? null : this.studioApp_.icon,
-    defaultBtnSelector: '#again-button'
+    defaultBtnSelector: '#again-button',
   });
 
   var cancelButton = contentDiv.querySelector('#again-button');
@@ -1376,7 +1376,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function () {
   var dialog = this.createModalDialog({
     contentDiv: contentDiv,
     icon: this.studioApp_.icon,
-    defaultBtnSelector: '#ok-button'
+    defaultBtnSelector: '#ok-button',
   });
 
   var okayButton = buttons.querySelector('#ok-button');
@@ -1612,7 +1612,7 @@ FeedbackUtils.prototype.getMissingBlocks_ = function (blocks, maxBlocksToFlag) {
   }
   return {
     blocksToDisplay: missingBlocks,
-    message: customMessage
+    message: customMessage,
   };
 };
 
@@ -1828,7 +1828,7 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
     autoResizeScrollableElement: elementToScroll,
     id: options.id,
     header: options.header,
-    close: options.showXButton
+    close: options.showXButton,
   });
 };
 

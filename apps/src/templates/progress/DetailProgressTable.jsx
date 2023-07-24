@@ -8,7 +8,7 @@ import {groupedLessonsType} from './progressTypes';
  */
 export default class DetailProgressTable extends React.Component {
   static propTypes = {
-    groupedLesson: groupedLessonsType.isRequired
+    groupedLesson: groupedLessonsType.isRequired,
   };
 
   render() {

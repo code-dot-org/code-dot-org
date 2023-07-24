@@ -30,3 +30,5 @@ public static void selectSort(int[] data) {
 
 Assume that `selectSort` is called with the array `{16, 13, 12, 50, 40, 10}`. What will the value of `data` be after three passes of the outer loop (i.e., when `j = 2` at the point indicated by `/* End of outer loop */`)?
 MARKDOWN
+
+allow_multiple_attempts true

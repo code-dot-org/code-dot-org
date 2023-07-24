@@ -5,13 +5,14 @@ import color from '@cdo/apps/util/color';
 import JavalabConsole from './JavalabConsole';
 import JavalabEditor from './JavalabEditor';
 import JavalabPanels from './JavalabPanels';
+import JavalabCaptchaDialog from './JavalabCaptchaDialog';
 import {setIsRunning, setIsTesting} from './redux/javalabRedux';
 import {appendOutputLog} from './redux/consoleRedux';
 import {setDisplayTheme} from './redux/viewRedux';
 import {DisplayTheme} from './DisplayTheme';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions, {
-  TabType
+  TabType,
 } from '@cdo/apps/templates/instructions/TopInstructions';
 import javalabMsg from '@cdo/javalab/locale';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
@@ -59,7 +60,7 @@ class JavalabView extends React.Component {
     validationPassed: PropTypes.bool,
     hasRunOrTestedCode: PropTypes.bool,
     hasOpenCodeReview: PropTypes.bool,
-    isJavabuilderConnecting: PropTypes.bool
+    isJavabuilderConnecting: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -132,12 +133,32 @@ class JavalabView extends React.Component {
         id="visualization"
         style={{
           ...styles.visualizationPlaceholder,
-          width: width + styleConstants['resize-bar-width']
+          width: width + styleConstants['resize-bar-width'],
         }}
       >
         &nbsp;
       </div>
     );
+  };
+
+  onCaptchaVerify = () => {
+    const {isRunning, isTesting, onRun, onTest} = this.props;
+    if (isRunning) {
+      onRun();
+    }
+    if (isTesting) {
+      onTest();
+    }
+  };
+
+  onCaptchaCancel = () => {
+    const {isRunning, isTesting, setIsRunning, setIsTesting} = this.props;
+    if (isRunning) {
+      setIsRunning(false);
+    }
+    if (isTesting) {
+      setIsTesting(false);
+    }
   };
 
   render() {
@@ -163,7 +184,7 @@ class JavalabView extends React.Component {
       validationPassed,
       hasRunOrTestedCode,
       hasOpenCodeReview,
-      isJavabuilderConnecting
+      isJavabuilderConnecting,
     } = this.props;
 
     if (displayTheme === DisplayTheme.DARK) {
@@ -191,9 +212,13 @@ class JavalabView extends React.Component {
       <StudioAppWrapper>
         <div
           style={{
-            ...styles.javalab
+            ...styles.javalab,
           }}
         >
+          <JavalabCaptchaDialog
+            onVerify={this.onCaptchaVerify}
+            onCancel={this.onCaptchaCancel}
+          />
           <JavalabPanels
             isLeftSideVisible={this.isLeftSideVisible()}
             viewMode={viewMode}
@@ -230,7 +255,7 @@ class JavalabView extends React.Component {
                 onPhotoPrompterFileSelected={onPhotoPrompterFileSelected}
                 style={{
                   ...styles.consoleParent,
-                  ...(!this.isLeftSideVisible() && {paddingBottom: 40})
+                  ...(!this.isLeftSideVisible() && {paddingBottom: 40}),
                 }}
                 bottomRow={
                   <ControlButtons
@@ -272,7 +297,7 @@ const styles = {
     position: 'relative',
     marginLeft: 0,
     color: color.black,
-    left: 0
+    left: 0,
   },
   consoleParent: {
     position: 'relative',
@@ -280,24 +305,24 @@ const styles = {
     flexDirection: 'column',
     height: '100%',
     flexGrow: 1,
-    overflowY: 'hidden'
+    overflowY: 'hidden',
   },
   visualizationPlaceholder: {
     height: 1,
     maxWidth: undefined,
     maxHeight: undefined,
-    marginTop: styleConstants['resize-bar-width']
+    marginTop: styleConstants['resize-bar-width'],
   },
   preview: {
-    marginTop: styleConstants['resize-bar-width']
+    marginTop: styleConstants['resize-bar-width'],
   },
   javalab: {
     display: 'flex',
     flexWrap: 'wrap',
-    direction: 'ltr'
+    direction: 'ltr',
   },
   clear: {
-    clear: 'both'
+    clear: 'both',
   },
   buttons: {
     display: 'flex',
@@ -305,14 +330,13 @@ const styles = {
     justifyContent: 'flex-end',
     width: '100%',
     margin: '10px 0',
-    overflowY: 'hidden'
-  }
+    overflowY: 'hidden',
+  },
 };
 
-// We use the UnconnectedJavalabView to make this component's methods testable.
-// This is a deprecated pattern but calling shallow().dive().instance() on the
-// connected JavalabView does not give us access to the methods owned by JavalabView.
+// Exported for tests
 export const UnconnectedJavalabView = JavalabView;
+
 export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
@@ -333,12 +357,12 @@ export default connect(
     validationPassed: state.javalab.validationPassed,
     hasRunOrTestedCode: state.javalab.hasRunOrTestedCode,
     hasOpenCodeReview: state.javalab.hasOpenCodeReview,
-    isJavabuilderConnecting: state.javalab.isJavabuilderConnecting
+    isJavabuilderConnecting: state.javalab.isJavabuilderConnecting,
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
     setDisplayTheme: displayTheme => dispatch(setDisplayTheme(displayTheme)),
     setIsRunning: isRunning => dispatch(setIsRunning(isRunning)),
-    setIsTesting: isTesting => dispatch(setIsTesting(isTesting))
+    setIsTesting: isTesting => dispatch(setIsTesting(isTesting)),
   })
 )(UnconnectedJavalabView);

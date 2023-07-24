@@ -1,7 +1,7 @@
 import {assert} from 'chai';
 import reducer, {
   setVerified,
-  setVerifiedResources
+  setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 
 describe('verifiedInstructorRedux', () => {

@@ -17,7 +17,7 @@ describe('ResourcesEditor', () => {
       resourceContext: defaultResourceContext,
       addResource,
       editResource,
-      removeResource
+      removeResource,
     };
   });
 
@@ -63,7 +63,7 @@ describe('ResourcesEditor', () => {
       key: 'added-resource',
       name: 'name of resource',
       url: 'fake.fake',
-      properties: {}
+      properties: {},
     });
     expect(addResource).to.have.been.calledOnce;
   });
@@ -73,7 +73,7 @@ describe('ResourcesEditor', () => {
     wrapper.instance().saveEditResource({
       key: resourceTestData[0].key,
       name: 'edited resource',
-      url: 'edited url'
+      url: 'edited url',
     });
     expect(editResource).to.have.been.calledOnce;
   });
@@ -101,20 +101,20 @@ describe('ResourcesEditor', () => {
       id: 1,
       key: 'all-code',
       name: 'All Code',
-      url: '/s/coursea/code'
+      url: '/s/coursea/code',
     };
     const vocabRollup = {
       id: 2,
       key: 'all-vocab',
       name: 'All Vocab',
-      url: '/s/coursea/vocab'
+      url: '/s/coursea/vocab',
     };
 
     const server = sinon.fakeServer.create();
     server.respondWith('GET', '/s/coursea/get_rollup_resources', [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify([codeRollup, vocabRollup])
+      JSON.stringify([codeRollup, vocabRollup]),
     ]);
     wrapper.instance().addRollupPages();
     server.respond();

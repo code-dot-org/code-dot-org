@@ -4,7 +4,7 @@ import {assert, expect} from '../../../util/reconfiguredChai';
 import SubmissionStatusAssessmentsTable from '@cdo/apps/templates/sectionAssessments/SubmissionStatusAssessmentsTable';
 import {
   studentOverviewData,
-  testDataTimestamps
+  testDataTimestamps,
 } from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
 import i18n from '@cdo/locale';
 

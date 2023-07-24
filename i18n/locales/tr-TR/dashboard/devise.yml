@@ -50,9 +50,6 @@ tr:
       expired: "süresi doldu, lütfen yeni bir tane iste"
       not_found: "bulunamadı"
       not_locked: "kilitli değil"
-      not_saved:
-        one: "1 hata %{resource} nesnesinin kaydedilmesini engelledi:"
-        other: "%{count} hata %{resource} kaynağının kaydedilmesini engelledi:"
     invitations:
       send_instructions: '%{email} adresine davetiye epostası gönderildi.'
       invitation_token_invalid: 'Sağlanan davet işareti geçerli değil!'

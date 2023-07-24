@@ -63,7 +63,7 @@ const styles = {
     color: color.charcoal,
     textAlign: 'center',
     fontSize: 16,
-    lineHeight: '24px'
+    lineHeight: '24px',
   },
   th: {
     backgroundColor: color.lightest_gray,
@@ -72,18 +72,18 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
     textAlign: 'center',
-    padding: 15
+    padding: 15,
   },
   td: {
     border: `1px solid ${color.lightest_gray}`,
-    padding: 15
+    padding: 15,
   },
   boxStyle: {
-    margin: '0 auto'
+    margin: '0 auto',
   },
   completedBoxes: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center'
-  }
+    justifyContent: 'center',
+  },
 };

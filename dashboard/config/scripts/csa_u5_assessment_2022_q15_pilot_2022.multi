@@ -29,3 +29,5 @@ public double findClosest(int[][] numbers, double targetValue) {
 
 Which of the following could be used to replace `/* missing code */` so that `findClosest` will work as intended?
 MARKDOWN
+
+allow_multiple_attempts true

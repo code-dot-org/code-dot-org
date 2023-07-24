@@ -157,7 +157,7 @@ authoredHintUtils.finalizeHints_ = function () {
           finalAttempt: finalAttemptRecord.attempt,
           finalTestResult: finalAttemptRecord.testResult,
           finalActivityId: finalAttemptRecord.activityId,
-          finalLevelSourceId: finalAttemptRecord.levelSourceId
+          finalLevelSourceId: finalAttemptRecord.levelSourceId,
         },
         hint
       );
@@ -184,7 +184,7 @@ authoredHintUtils.recordUnfinishedHint = function (hint) {
         prevAttempt: lastAttemptRecord.attempt,
         prevTestResult: lastAttemptRecord.testResult,
         prevActivityId: lastAttemptRecord.activityId,
-        prevLevelSourceId: lastAttemptRecord.levelSourceId
+        prevLevelSourceId: lastAttemptRecord.levelSourceId,
       },
       hint
     );
@@ -214,7 +214,7 @@ authoredHintUtils.finishHints = function (nextAttemptRecord) {
         nextAttempt: nextAttemptRecord.attempt,
         nextTestResult: nextAttemptRecord.testResult,
         nextActivityId: nextAttemptRecord.activityId,
-        nextLevelSourceId: nextAttemptRecord.levelSourceId
+        nextLevelSourceId: nextAttemptRecord.levelSourceId,
       },
       hint
     );
@@ -236,7 +236,7 @@ authoredHintUtils.submitHints = function (url) {
       attempt: finalHint.prevAttempt,
       testResult: finalHint.prevTestResult,
       activityId: finalHint.prevActivityId,
-      levelSourceId: finalHint.prevLevelSourceId
+      levelSourceId: finalHint.prevLevelSourceId,
     });
   }
 
@@ -252,7 +252,7 @@ authoredHintUtils.submitHints = function (url) {
       data: JSON.stringify({hints: hints}),
       complete: function () {
         authoredHintUtils.clearFinishedHints_();
-      }
+      },
     });
   }
 };
@@ -277,7 +277,7 @@ authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
       hintId: 'recommended_block_' + blockType,
       hintClass: 'recommended',
       hintType: 'contextual',
-      alreadySeen: block.alreadySeen
+      alreadySeen: block.alreadySeen,
     };
   });
   return hints;
@@ -313,7 +313,7 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
       hintPath: JSON.parse(hint.hint_path || '[]'),
       hintVideo: hint.hint_video || undefined,
       ttsUrl: hint.tts_url,
-      alreadySeen: false
+      alreadySeen: false,
     };
   });
 };

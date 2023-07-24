@@ -48,7 +48,7 @@ function installControlsRepeatSimplified(blockly, skin) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(blockly.Msg.CONTROLS_REPEAT_TOOLTIP);
-    }
+    },
   };
 
   blockly.Blocks.controls_repeat_simplified_dropdown = {
@@ -65,7 +65,7 @@ function installControlsRepeatSimplified(blockly, skin) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(blockly.Msg.CONTROLS_REPEAT_TOOLTIP);
-    }
+    },
   };
 }
 
@@ -88,7 +88,7 @@ function installControlsRepeatDropdown(blockly) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(blockly.Msg.CONTROLS_REPEAT_TOOLTIP);
-    }
+    },
   };
 }
 
@@ -103,7 +103,7 @@ function installNumberDropdown(blockly) {
       this.appendDummyInput().appendField(new blockly.FieldDropdown(), 'NUM');
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
       this.setTooltip(blockly.Msg.MATH_NUMBER_TOOLTIP);
-    }
+    },
   };
 }
 
@@ -120,7 +120,7 @@ function installPickOne(blockly) {
         'Pick one (Use only in required blocks)'
       );
       this.appendStatementInput('PICK');
-    }
+    },
   };
 
   blockly.JavaScript.pick_one = function () {
@@ -142,7 +142,7 @@ function installCategory(blockly) {
         .appendField(new blockly.FieldTextInput('Name'), 'CATEGORY');
       this.setPreviousStatement(false);
       this.setNextStatement(false);
-    }
+    },
   };
 
   blockly.JavaScript.category = function () {
@@ -159,7 +159,7 @@ function installCategory(blockly) {
         ['Variables', 'VARIABLE'],
         ['Functions', 'PROCEDURE'],
         ['Behaviors', 'Behavior'],
-        ['Locations', 'Location']
+        ['Locations', 'Location'],
       ]);
       // Not localized as this is only used by level builders
       this.appendDummyInput()
@@ -167,7 +167,7 @@ function installCategory(blockly) {
         .appendField(customDropdown, 'CUSTOM');
       this.setPreviousStatement(false);
       this.setNextStatement(false);
-    }
+    },
   };
 
   blockly.JavaScript.custom_category = function () {
@@ -197,7 +197,7 @@ function installWhenRun(blockly, skin, isK1) {
     },
     shouldBeGrayedOut: function () {
       return false;
-    }
+    },
   };
 
   blockly.JavaScript.when_run = function () {
@@ -228,8 +228,8 @@ function installJoinBlock(blockly) {
             } else if (ret !== '') {
               this.setInputCount(parseInt(ret));
             }
-          }.bind(this)
-        }
+          }.bind(this),
+        },
       ];
     },
 
@@ -291,7 +291,7 @@ function installJoinBlock(blockly) {
           100
         );
       }
-    }
+    },
   };
 
   blockly.JavaScript.text_join_simple = function () {
@@ -319,7 +319,7 @@ function installCommentBlock(blockly) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(commonMsg.commentTooltip());
-    }
+    },
   };
 
   blockly.JavaScript.comment = function () {

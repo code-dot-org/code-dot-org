@@ -13,3 +13,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Many errors are often caused by spelling or capitaliation issues, missing curly braces, or missing quotation marks.
 MARKDOWN
+
+allow_multiple_attempts true

@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   RegionalPartnerMiniContact,
-  RegionalPartnerMiniContactPopupLink
+  RegionalPartnerMiniContactPopupLink,
 } from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 
 window.showRegionalPartnerMiniContact = function () {
@@ -16,14 +16,14 @@ window.showRegionalPartnerMiniContact = function () {
 
   $.ajax({
     type: 'GET',
-    url: '/dashboardapi/v1/users/me/contact_details'
+    url: '/dashboardapi/v1/users/me/contact_details',
   })
     .done(results => {
       options = {
         user_name: results.user_name,
         email: results.email,
         zip: results.zip,
-        notes: notes
+        notes: notes,
       };
     })
     .complete(() => {

@@ -33,7 +33,7 @@ describe('JavalabEditorTabMenu', () => {
       fileIsVisible: true,
       fileIsValidation: false,
       activeTabKey: 'file-0',
-      orderedTabKeys: ['file-0', 'file-1', 'file-2']
+      orderedTabKeys: ['file-0', 'file-1', 'file-2'],
     };
   });
 
@@ -52,7 +52,7 @@ describe('JavalabEditorTabMenu', () => {
 
     it('displays moveLeft option and not moveRight if active tab is rightmost tab', () => {
       const wrapper = createWrapper({
-        activeTabKey: 'file-2'
+        activeTabKey: 'file-2',
       });
       assert.strictEqual(wrapper.children().length, 3);
       assert.isTrue(wrapper.childAt(1).text().includes(javalabMsg.moveLeft()));
@@ -60,7 +60,7 @@ describe('JavalabEditorTabMenu', () => {
 
     it('displays both moveRight and moveLeft if active tab is one of middle tabs', () => {
       const wrapper = createWrapper({
-        activeTabKey: 'file-1'
+        activeTabKey: 'file-1',
       });
       assert.strictEqual(wrapper.children().length, 4);
       assert.isTrue(wrapper.childAt(1).text().includes(javalabMsg.moveLeft()));
@@ -71,7 +71,7 @@ describe('JavalabEditorTabMenu', () => {
   describe('When there is only 1 tab in Java Lab editor', () => {
     it('does not display moveRight nor moveLeft', () => {
       const wrapper = createWrapper({
-        orderedTabKeys: ['file-0']
+        orderedTabKeys: ['file-0'],
       });
       assert.strictEqual(wrapper.children().length, 2);
       assert.isTrue(wrapper.childAt(0).text().includes(javalabMsg.rename()));

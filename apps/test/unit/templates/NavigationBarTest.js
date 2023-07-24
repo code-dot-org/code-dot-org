@@ -4,7 +4,7 @@ import {expect} from '../../util/reconfiguredChai';
 import {
   NavigationBar,
   NavigationCategory,
-  NavigationItem
+  NavigationItem,
 } from '@cdo/apps/templates/NavigationBar';
 import color from '@cdo/apps/util/color';
 

@@ -2,6 +2,7 @@
 // each theme will look like
 import PropTypes from 'prop-types';
 import React from 'react';
+import applabMsg from '@cdo/applab/locale';
 import {themeOptionsForSelect, DEFAULT_THEME_INDEX} from '../constants';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
@@ -11,11 +12,11 @@ export default class ThemeDropdown extends React.Component {
   static propTypes = {
     initialValue: PropTypes.string.isRequired,
     handleChange: PropTypes.func.isRequired,
-    description: PropTypes.node
+    description: PropTypes.node,
   };
 
   state = {
-    selectedValue: this.props.initialValue
+    selectedValue: this.props.initialValue,
   };
 
   handleChange = event => {
@@ -37,14 +38,16 @@ export default class ThemeDropdown extends React.Component {
         label: (
           <div className="theme-dropdown-label" style={styles.dropdownLabel}>
             <img style={styles.icon} src={themeOption.icon} />
-            <div style={styles.label}>{themeOption.displayName}</div>
+            <div style={styles.label}>
+              {applabMsg[`designElementTheme_${themeOption.option}`]()}
+            </div>
             <div className="checkbox">
               {selectedValue === themeOption.option && (
                 <FontAwesome icon="check" />
               )}
             </div>
           </div>
-        )
+        ),
       };
     });
     return (
@@ -66,18 +69,18 @@ export default class ThemeDropdown extends React.Component {
 const styles = {
   outerContainer: {
     marginBottom: 8,
-    width: 240
+    width: 240,
   },
   description: {
     paddingLeft: 2,
-    paddingBottom: 2
+    paddingBottom: 2,
   },
   label: {
-    paddingLeft: 4
+    paddingLeft: 4,
   },
   icon: {
     marginTop: 4,
-    marginBottom: 4
+    marginBottom: 4,
   },
   dropdownLabel: {
     display: 'flex',
@@ -85,6 +88,6 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingRight: '10px',
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+  },
 };

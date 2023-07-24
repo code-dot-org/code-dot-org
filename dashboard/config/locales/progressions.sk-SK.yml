@@ -77,8 +77,8 @@ sk:
       Checking for a Winner: Určuje sa víťaz
       'Choice Levels: Customize Your App': 'Voliteľné úrovne: Prispôsob si aplikáciu'
       Choose Your Own Adventure: Interaktívny príbeh
-      'Circuit Playground: Introduction': 'Cvičný obvod: Úvod'
-      Club Datasets: Množiny údajov klubov
+      'Circuit Playground: Introduction': 'Circuit Playground: Úvod'
+      Club Datasets: Množiny údajov krúžkov
       Code Prediction: Predpoveď kódu
       Code Your Own Flappy Game: Vytvor si hru v štýle Flappy Bird
       Code Your Page: Naprogramuj svoju stránku
@@ -132,7 +132,7 @@ sk:
       Draw a Background: Nakresli pozadie
       Drawing: Kreslenie
       Drawing Shapes: Kreslenie tvarov
-      Driver Alert System: Výstražný systém pre rodičov
+      Driver Alert System: Výstražný systém pre vodičov
       Editing Images: Úprava obrázkov
       End of Course Projects: Záverečné projekty
       Events: Udalosti
@@ -183,7 +183,7 @@ sk:
       HTML Tags: HTML tag-y
       Headings: Nadpisy
       Headings in HTML: Nadpisy v HTML
-      Hello World: Ahoj Svet
+      Hello World: Ahoj svet
       How to Create a Simple Function: Ako vytvoriť jednoduchú funkciu
       How to Make a Sprite: Ako vytvoriť postavu
       Hyperlinks: Hypertextové odkazy
@@ -194,7 +194,7 @@ sk:
       Import Your Model: Importuj svoj model
       Import a Model: Importovanie modelu
       Importing Your Model: Importovanie tvojho modelu
-      Improved Shoe Recommender: Vylepšený program na odporúčanie topánok
+      Improved Shoe Recommender: Lepšie odporúčanie topánok
       Incorporate Feedback: Zapracuj spätnú väzbu
       Input Examples: Príklady vstupu
       Input with If-Else: Vstup s "if/else" (ak/potom)
@@ -252,6 +252,7 @@ sk:
       'Mini-Project: Royal Battle': 'Mini-Projekt: Kráľovský súboj'
       'Mini-Project: Snowflake #1': 'Mini-Projekt: Snehová vločka č.1'
       'Mini-Project: Snowflake #2': 'Mini-Projekt: Snehová vločka č.2'
+      'Mini-Project: Sticker Art': 'Mini-projekt: Samolepka Art'
       'Mini-Project: Swimming Fish': 'Mini-Projekt: Plávajúca ryba'
       'Mini-Project: Swimming Fish (continued)': 'Mini-Projekt: Plávajúca ryba (pokračovanie)'
       'Mini-Project: User Input Programs': 'Miniprojekt: Programy reagujúce na vstupy
@@ -365,7 +366,7 @@ sk:
       Share Your Pages: Zdieľaj svoje stránky
       Share Your Stylesheets: Zdieľaj svoje súbory štýlov
       Shoe Recommendation Survey: Odporúčanie topánok – dotazník
-      Shoe Recommender: Program na odporúčanie topánok
+      Shoe Recommender: Odporúčanie topánok
       Side Scroller: Plošinovka
       Simple Circuits: Jednoduché el. obvody
       Skill Building: Budovanie zručností
@@ -405,7 +406,7 @@ sk:
       Train a Model in AI Lab: Trénovanie modelu v AI Labe
       Train an AI to Clean the Ocean: Vycvičte umelú inteligenciu na čistenie oceánov
       UI Element Properties: Vlastnosti častí užívateľského rozhrania
-      Ultimate Shoe Recommender: Záverečný program na odporúčanie topánok
+      Ultimate Shoe Recommender: Najlepšie odporúčanie topánok
       Upload Your Images: Nahraj svoje obrázky
       User Interface: Užívateľské prostredie
       Using Getters and Setters: Používanie GET/SET príkazov (vráť/nastav hodnotu)
@@ -458,6 +459,11 @@ sk:
       'Video: Happy Maps - Unplugged Activity': 'Video: Veselé mapy – aktivita bez
         počítača'
       'Video: Harvesting with Conditionals': 'Video: Zber úrody s podmienkami'
+      'Video: Hello World: Do What You Want': 'Video: Ahoj svet – Rob si, čo chceš '
+      'Video: Hello World: Programming with Events': 'Video: Ahoj svet – Programovanie
+        s udalosťami'
+      'Video: Hello World: Welcome to Sprite Lab': 'Video: Ahoj svet - Vitaj v Sprite
+        Labe'
       'Video: How Search Works': 'Video: Ako funguje vyhľadávanie'
       'Video: How to Create a Simple Function': 'Video: Ako vytvoriť jednoduchú funkciu'
       'Video: How to Make a Sprite': 'Video: Ako vytvoriť sprajt'

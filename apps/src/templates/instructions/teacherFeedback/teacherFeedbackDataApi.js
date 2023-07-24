@@ -7,6 +7,6 @@ export function updateTeacherFeedback(payload, token) {
     contentType: 'application/json;charset=UTF-8',
     dataType: 'json',
     data: JSON.stringify({teacher_feedback: payload}),
-    headers: {'X-CSRF-Token': token}
+    headers: {'X-CSRF-Token': token},
   }).done(data => data);
 }

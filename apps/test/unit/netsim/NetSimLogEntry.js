@@ -31,7 +31,7 @@ describe('NetSimLogEntry', function () {
     var logEntry = new NetSimLogEntry(testShard);
     var row = logEntry.buildRow();
 
-    assert(row.hasOwnProperty('nodeID'));
+    assert(Object.prototype.hasOwnProperty.call(row, 'nodeID'));
     assert.isUndefined(row.nodeID);
 
     assert.property(row, 'base64Binary');
@@ -56,11 +56,11 @@ describe('NetSimLogEntry', function () {
       nodeID: 42,
       base64Binary: {
         string: 'kg==',
-        len: 7
+        len: 7,
       },
       status: NetSimLogEntry.LogStatus.DROPPED,
       timestamp: 52000,
-      sentBy: 'Test User'
+      sentBy: 'Test User',
     };
     var logEntry = new NetSimLogEntry(testShard, row);
 
@@ -76,8 +76,8 @@ describe('NetSimLogEntry', function () {
     var logEntry = new NetSimLogEntry(testShard, {
       base64Binary: {
         string: 'not a base64 string because of the question mark?',
-        len: 7
-      }
+        len: 7,
+      },
     });
     assert.equal(logEntry.binary, '');
   });
@@ -170,13 +170,13 @@ describe('NetSimLogEntry', function () {
     var logEntry = new NetSimLogEntry(
       null,
       {
-        base64Binary: binaryToBase64('000100100011010001010110')
+        base64Binary: binaryToBase64('000100100011010001010110'),
       },
       [
         Packet.HeaderType.TO_ADDRESS,
         Packet.HeaderType.FROM_ADDRESS,
         Packet.HeaderType.PACKET_INDEX,
-        Packet.HeaderType.PACKET_COUNT
+        Packet.HeaderType.PACKET_COUNT,
       ]
     );
     assert.equal('1', logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS));

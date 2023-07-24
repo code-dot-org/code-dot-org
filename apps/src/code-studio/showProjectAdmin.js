@@ -52,7 +52,7 @@ export default project => {
         },
         error: function (data) {
           alert("Shucks. Something went wrong - this project wasn't featured.");
-        }
+        },
       });
     });
 
@@ -70,7 +70,7 @@ export default project => {
           alert(
             'Shucks. Something went wrong - this project is still featured.'
           );
-        }
+        },
       });
     });
   }

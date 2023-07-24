@@ -26,7 +26,7 @@ const {
   isCleverStudent,
   dependedUponForLogin,
   dependentStudents,
-  studentCount
+  studentCount,
 } = scriptData;
 
 $(document).ready(() => {
@@ -47,7 +47,7 @@ $(document).ready(() => {
     displayedParentEmail.text(parentEmail);
     displayedParentEmail.effect('highlight', {
       duration: 1500,
-      color: color.orange
+      color: color.orange,
     });
   };
   new AddParentEmailController({
@@ -57,11 +57,11 @@ $(document).ready(() => {
       '#add-parent-email-modal_user_parent_email_preference_opt_in'
     ),
     link: $('#add-parent-email-link'),
-    onSuccessCallback: updateDisplayedParentEmail
+    onSuccessCallback: updateDisplayedParentEmail,
   });
   new RemoveParentEmailController({
     form: $('#remove-parent-email-form'),
-    link: $('#remove-parent-email-link')
+    link: $('#remove-parent-email-link'),
   });
   new ChangeEmailController({
     form: $('#change-email-modal-form'),
@@ -70,7 +70,7 @@ $(document).ready(() => {
     userAge,
     userType,
     isPasswordRequired,
-    emailChangedCallback: onEmailChanged
+    emailChangedCallback: onEmailChanged,
   });
 
   new ChangeUserTypeController($('#change-user-type-modal-form'), userType);
@@ -124,7 +124,7 @@ function initializeCreatePersonalAccountControls() {
       window.dashboard.hashEmail({
         email_selector: '#create_personal_user_email',
         hashed_email_selector: '#create_personal_user_hashed_email',
-        age_selector: '#user_age'
+        age_selector: '#user_age',
       });
     }
   });

@@ -13,7 +13,7 @@ function inManifest(path) {
   return __karmaWebpackManifest__.indexOf(path) >= 0;
 }
 
-var testsContext = require.context('./unit', true, /\.jsx?$/);
+var testsContext = require.context('./unit', true, /\.[j|t]sx?$/);
 
 var runnable = testsContext.keys().filter(inManifest);
 

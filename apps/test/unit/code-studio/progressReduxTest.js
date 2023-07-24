@@ -1,5 +1,6 @@
 import {assert} from 'chai';
 import sinon from 'sinon';
+import _ from 'lodash';
 import {TestResults} from '@cdo/apps/constants';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -7,25 +8,28 @@ import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import {getLevelResult} from '@cdo/apps/templates/progress/progressHelpers';
 import reducer, {
   initProgress,
-  isPerfect,
   mergeResults,
   mergePeerReviewProgress,
   disablePostMilestone,
   setIsAge13Required,
   setIsSummaryView,
   setStudentDefaultsSummaryView,
+  setCurrentLessonId,
+  setLessonExtrasEnabled,
+  processedLessons,
+  __testonly__,
+} from '@cdo/apps/code-studio/progressRedux';
+import {
+  isPerfect,
   levelsByLesson,
   levelsForLessonId,
   progressionsFromLevels,
   groupedLessons,
-  processedLessons,
-  setCurrentLessonId,
   lessonExtrasUrl,
-  setLessonExtrasEnabled,
-  __testonly__
-} from '@cdo/apps/code-studio/progressRedux';
+  __testonly__ as __testonly__selectors,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 
-// This is some sample lesson data taken a course. I truncated to the first two
+// This is some sample lesson data taken from a course. I truncated to the first two
 // lessons, and also truncated the second lesson to the first 3 levels
 const lessonData = [
   // lesson 1
@@ -52,7 +56,9 @@ const lessonData = [
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: true,
-        sublevels: []
+        sublevels: [],
+        app: 'maze',
+        uses_lab2: false,
       },
       {
         ids: ['323'],
@@ -66,7 +72,9 @@ const lessonData = [
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
-        sublevels: []
+        sublevels: [],
+        app: 'maze',
+        uses_lab2: false,
       },
       {
         ids: ['322'],
@@ -81,15 +89,17 @@ const lessonData = [
         is_concept_level: false,
         bonus: true,
         display_as_unplugged: false,
-        sublevels: []
-      }
+        sublevels: [],
+        app: 'maze',
+        uses_lab2: false,
+      },
     ],
     lesson_plan_html_url:
       '//localhost.code.org:3000/curriculum/course3/1/Teacher',
     lesson_plan_pdf_url:
       '//localhost.code.org:3000/curriculum/course3/1/Teacher.pdf',
     student_lesson_plan_html_url:
-      '//localhost.code.org:3000/s/fake-course/lessons/1/student'
+      '//localhost.code.org:3000/s/fake-course/lessons/1/student',
   },
   // lesson 2 (hacked to have 3 levels)
   {
@@ -115,7 +125,9 @@ const lessonData = [
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
-        sublevels: []
+        sublevels: [],
+        app: 'maze',
+        uses_lab2: false,
       },
       {
         ids: ['339'],
@@ -128,7 +140,9 @@ const lessonData = [
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
-        sublevels: []
+        sublevels: [],
+        app: 'maze',
+        uses_lab2: false,
       },
       {
         ids: ['341'],
@@ -141,16 +155,18 @@ const lessonData = [
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: false,
-        sublevels: []
-      }
+        sublevels: [],
+        app: 'maze',
+        uses_lab2: false,
+      },
     ],
     lesson_plan_html_url:
       '//localhost.code.org:3000/curriculum/course3/2/Teacher',
     lesson_plan_pdf_url:
       '//localhost.code.org:3000/curriculum/course3/2/Teacher.pdf',
     lesson_extras_level_url:
-      '//localhost.code.org:3000/s/course3/lessons/2/extras'
-  }
+      '//localhost.code.org:3000/s/course3/lessons/2/extras',
+  },
 ];
 
 const lockableLessonData = [
@@ -177,10 +193,11 @@ const lockableLessonData = [
         is_concept_level: false,
         bonus: false,
         display_as_unplugged: true,
-        sublevels: []
-      }
-    ]
-  }
+        sublevels: [],
+        uses_lab2: false,
+      },
+    ],
+  },
 ];
 
 // In the app, this is passed to the client as part of the initial page load. We
@@ -191,7 +208,7 @@ const initialUnitOverviewProgress = {
   saveAnswersBeforeNavigation: false,
   lessonGroups: [],
   lessons: lessonData,
-  scriptName: 'course3'
+  scriptName: 'course3',
 };
 
 // The initial progress passed to the puzzle page
@@ -202,7 +219,7 @@ const initialPuzzlePageProgress = {
   lessonGroups: [],
   // We're on a puzzle in lesson 2. That is the only provided lesson
   lessons: [lessonData[1]],
-  scriptName: 'course3'
+  scriptName: 'course3',
 };
 
 describe('progressReduxTest', () => {
@@ -252,13 +269,13 @@ describe('progressReduxTest', () => {
         // lesson 2 level 2 is pass
         339: TestResults.ALL_PASS,
         // lesson 2 level 3 is incomplete
-        341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
+        341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED,
       });
       const nextState = reducer(initializedState, action);
 
       assert.deepEqual(nextState.levelResults, {
         339: TestResults.ALL_PASS,
-        341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
+        341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED,
       });
 
       // lessons are unchanged
@@ -270,7 +287,7 @@ describe('progressReduxTest', () => {
       // not perfect
       const state = {
         levelResults: {
-          341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
+          341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED,
         },
         lessons: [
           {
@@ -279,11 +296,11 @@ describe('progressReduxTest', () => {
               {
                 ids: ['341'],
                 kind: 'puzzle',
-                status: LevelStatus.not_tried
-              }
-            ]
-          }
-        ]
+                status: LevelStatus.not_tried,
+              },
+            ],
+          },
+        ],
       };
 
       // update progress to perfect
@@ -297,7 +314,7 @@ describe('progressReduxTest', () => {
       // perfect
       const state = {
         levelResults: {
-          339: TestResults.ALL_PASS
+          339: TestResults.ALL_PASS,
         },
         lessons: [
           {
@@ -306,16 +323,16 @@ describe('progressReduxTest', () => {
               {
                 ids: ['341'],
                 kind: 'puzzle',
-                status: LevelStatus.perfect
-              }
-            ]
-          }
-        ]
+                status: LevelStatus.perfect,
+              },
+            ],
+          },
+        ],
       };
 
       // try to update progress to a worse result
       const action = mergeResults({
-        341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
+        341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED,
       });
       const nextState = reducer(state, action);
       assert.equal(nextState.levelResults['339'], TestResults.ALL_PASS);
@@ -372,7 +389,7 @@ describe('progressReduxTest', () => {
       it('toggles to detail view when setting viewAs to instructor', () => {
         const state = {
           ...initialState,
-          isSummaryView: true
+          isSummaryView: true,
         };
         const nextState = reducer(state, setViewType(ViewType.Instructor));
         assert.strictEqual(nextState.isSummaryView, false);
@@ -382,7 +399,7 @@ describe('progressReduxTest', () => {
         const state = {
           ...initialState,
           studentDefaultsSummaryView: true,
-          isSummaryView: false
+          isSummaryView: false,
         };
         const nextState = reducer(state, setViewType(ViewType.Instructor));
         assert.strictEqual(nextState.isSummaryView, false);
@@ -392,7 +409,7 @@ describe('progressReduxTest', () => {
         const state = {
           ...initialState,
           studentDefaultsSummaryView: false,
-          isSummaryView: true
+          isSummaryView: true,
         };
         const nextState = reducer(state, setViewType(ViewType.Instructor));
         assert.strictEqual(nextState.isSummaryView, false);
@@ -407,7 +424,7 @@ describe('progressReduxTest', () => {
     it('does not allow setCurrentLessonId to replace an existing lesson id', () => {
       const state = {
         ...initialState,
-        currentLessonId: 111
+        currentLessonId: 111,
       };
       const nextState = reducer(state, setCurrentLessonId(222));
       assert.strictEqual(nextState.currentLessonId, 111);
@@ -427,7 +444,7 @@ describe('progressReduxTest', () => {
           url: '',
           name: 'Reviews unavailable at this time',
           icon: 'fa-lock',
-          locked: true
+          locked: true,
         },
         {
           ids: ['1'],
@@ -436,10 +453,10 @@ describe('progressReduxTest', () => {
           url: '',
           name: 'Reviews unavailable at this time',
           icon: 'fa-lock',
-          locked: true
-        }
+          locked: true,
+        },
       ],
-      lockable: false
+      lockable: false,
     };
 
     const intialOverviewProgressWithPeerReview = {
@@ -448,7 +465,7 @@ describe('progressReduxTest', () => {
       saveAnswersBeforeNavigation: false,
       lessons: lessonData,
       peerReviewLessonInfo: peerReviewLessonInfo,
-      scriptName: 'alltheplcthings'
+      scriptName: 'alltheplcthings',
     };
 
     it('can initialize progress with peer reviews on overview page', () => {
@@ -471,12 +488,13 @@ describe('progressReduxTest', () => {
     it('can provide progress for peer reviews', () => {
       // construct an initial state where we have 1 lesson of non-peer reviews
       // with some progress, and 1 lesson of peer reviews
+      const lesson = _.cloneDeep(lessonData[1]);
       const state = {
         levelResults: {
-          341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
+          341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED,
         },
-        lessons: [lessonData[1]],
-        peerReviewLessonInfo: peerReviewLessonInfo
+        lessons: [lesson],
+        peerReviewLessonInfo: peerReviewLessonInfo,
       };
       assert.equal(state.lessons[0].levels[2].ids[0], '341');
       state.lessons[0].levels[2].status = LevelStatus.attempted;
@@ -488,7 +506,7 @@ describe('progressReduxTest', () => {
         url: '',
         name: 'Reviews unavailable at this time',
         icon: 'fa-lock',
-        locked: true
+        locked: true,
       });
 
       const action = mergePeerReviewProgress([
@@ -498,8 +516,8 @@ describe('progressReduxTest', () => {
           name: 'Ready to review',
           result: TestResults.UNSUBMITTED_ATTEMPT,
           status: 'not_started',
-          url: '/peer_reviews/13'
-        }
+          url: '/peer_reviews/13',
+        },
       ]);
 
       const nextState = reducer(state, action);
@@ -524,7 +542,7 @@ describe('progressReduxTest', () => {
         url: '',
         name: 'Reviews unavailable at this time',
         icon: 'fa-lock',
-        locked: true
+        locked: true,
       });
 
       // Now assert for our new state
@@ -540,7 +558,7 @@ describe('progressReduxTest', () => {
         title: '',
         url: '/peer_reviews/13',
         name: 'Ready to review',
-        status: 'not_started'
+        status: 'not_started',
       });
     });
   });
@@ -557,7 +575,7 @@ describe('progressReduxTest', () => {
         // lesson 2 level 2 is pass
         339: TestResults.ALL_PASS,
         // lesson 2 level 3 is incomplete
-        341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
+        341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED,
       });
       const state = reducer(initializedState, action);
 
@@ -582,7 +600,9 @@ describe('progressReduxTest', () => {
             isLocked: false,
             bonus: false,
             sublevels: [],
-            teacherFeedbackReviewState: null
+            teacherFeedbackReviewState: null,
+            app: 'maze',
+            usesLab2: false,
           },
           {
             id: '323',
@@ -603,7 +623,9 @@ describe('progressReduxTest', () => {
             isLocked: false,
             bonus: false,
             sublevels: [],
-            teacherFeedbackReviewState: null
+            teacherFeedbackReviewState: null,
+            app: 'maze',
+            usesLab2: false,
           },
           {
             id: '322',
@@ -624,8 +646,10 @@ describe('progressReduxTest', () => {
             isLocked: false,
             bonus: true,
             sublevels: [],
-            teacherFeedbackReviewState: null
-          }
+            teacherFeedbackReviewState: null,
+            app: 'maze',
+            usesLab2: false,
+          },
         ],
         [
           {
@@ -647,7 +671,9 @@ describe('progressReduxTest', () => {
             isLocked: false,
             bonus: false,
             sublevels: [],
-            teacherFeedbackReviewState: null
+            teacherFeedbackReviewState: null,
+            app: 'maze',
+            usesLab2: false,
           },
           {
             id: '339',
@@ -668,7 +694,9 @@ describe('progressReduxTest', () => {
             isLocked: false,
             bonus: false,
             sublevels: [],
-            teacherFeedbackReviewState: null
+            teacherFeedbackReviewState: null,
+            app: 'maze',
+            usesLab2: false,
           },
           {
             id: '341',
@@ -689,9 +717,11 @@ describe('progressReduxTest', () => {
             isLocked: false,
             bonus: false,
             sublevels: [],
-            teacherFeedbackReviewState: null
-          }
-        ]
+            teacherFeedbackReviewState: null,
+            app: 'maze',
+            usesLab2: false,
+          },
+        ],
       ];
       const results = levelsByLesson(state);
       assert.equal(expected.length, results.length);
@@ -717,20 +747,20 @@ describe('progressReduxTest', () => {
                 title: 'Unplugged Activity',
                 ids: ['123'],
                 activeId: '123',
-                display_as_unplugged: true
+                display_as_unplugged: true,
               },
               {
                 kind: LevelKind.puzzle,
                 title: 1,
                 ids: ['124'],
                 activeId: '123',
-                display_as_unplugged: false
-              }
-            ]
-          }
+                display_as_unplugged: false,
+              },
+            ],
+          },
         ],
         unitProgress: {},
-        levelResults: {}
+        levelResults: {},
       });
       assert.equal(results[0][0].isUnplugged, true);
       assert.equal(results[0][0].levelNumber, null);
@@ -742,7 +772,7 @@ describe('progressReduxTest', () => {
       const results = levelsByLesson({
         lessons: lockableLessonData,
         unitProgress: {},
-        levelResults: {}
+        levelResults: {},
       });
       assert.equal(results[0][0].isLocked, true);
     });
@@ -763,7 +793,7 @@ describe('progressReduxTest', () => {
     it('sets isCurrentLevel to true for current level only', () => {
       const initializedState = {
         ...reducer(undefined, initProgress(initialUnitOverviewProgress)),
-        currentLevelId: lessonData[0].levels[1].activeId
+        currentLevelId: lessonData[0].levels[1].activeId,
       };
 
       const lessonId = lessonData[0].id;
@@ -792,16 +822,16 @@ describe('progressReduxTest', () => {
       const levels = [
         {
           status: 'not_tried',
-          url: '/step1/level1'
+          url: '/step1/level1',
         },
         {
           status: 'perfect',
-          url: '/step2/level1'
+          url: '/step2/level1',
         },
         {
           status: 'not_tried',
-          url: '/step2/level2'
-        }
+          url: '/step2/level2',
+        },
       ];
 
       assert.deepEqual(progressionsFromLevels(levels), [
@@ -809,8 +839,8 @@ describe('progressReduxTest', () => {
           name: undefined,
           displayName: undefined,
           start: 0,
-          levels: levels
-        }
+          levels: levels,
+        },
       ]);
     });
 
@@ -819,18 +849,18 @@ describe('progressReduxTest', () => {
         {
           status: 'not_tried',
           url: '/step1/level1',
-          name: 'Progression 1'
+          name: 'Progression 1',
         },
         {
           status: 'perfect',
           url: '/step2/level1',
-          name: 'Progression 1'
+          name: 'Progression 1',
         },
         {
           status: 'not_tried',
           url: '/step2/level2',
-          name: 'Progression 2'
-        }
+          name: 'Progression 2',
+        },
       ];
 
       const progressions = progressionsFromLevels(levels);
@@ -839,7 +869,7 @@ describe('progressReduxTest', () => {
         name: 'Progression 1',
         displayName: 'Progression 1',
         start: 0,
-        levels: levels.slice(0, 2)
+        levels: levels.slice(0, 2),
       });
     });
 
@@ -848,18 +878,18 @@ describe('progressReduxTest', () => {
         {
           status: 'not_tried',
           url: '/step1/level1',
-          name: 'One'
+          name: 'One',
         },
         {
           status: 'perfect',
           url: '/step2/level1',
-          name: 'Two'
+          name: 'Two',
         },
         {
           status: 'not_tried',
           url: '/step2/level2',
-          name: 'One'
-        }
+          name: 'One',
+        },
       ];
 
       const progressions = progressionsFromLevels(levels);
@@ -875,20 +905,20 @@ describe('progressReduxTest', () => {
           status: 'not_tried',
           url: '/step1/level1',
           progression: 'Progression 1',
-          progressionDisplayName: 'Progression 1'
+          progressionDisplayName: 'Progression 1',
         },
         {
           status: 'perfect',
           url: '/step2/level1',
           progression: 'Progression 1',
-          progressionDisplayName: 'Progression 1'
+          progressionDisplayName: 'Progression 1',
         },
         {
           status: 'not_tried',
           url: '/step2/level2',
           progression: 'Progression 2',
-          progressionDisplayName: 'Progression 2'
-        }
+          progressionDisplayName: 'Progression 2',
+        },
       ];
 
       const progressions = progressionsFromLevels(levels);
@@ -897,7 +927,7 @@ describe('progressReduxTest', () => {
         name: 'Progression 1',
         displayName: 'Progression 1',
         start: 0,
-        levels: levels.slice(0, 2)
+        levels: levels.slice(0, 2),
       });
     });
 
@@ -906,18 +936,18 @@ describe('progressReduxTest', () => {
         {
           status: 'not_tried',
           url: '/step1/level1',
-          progression: 'One'
+          progression: 'One',
         },
         {
           status: 'perfect',
           url: '/step2/level1',
-          progression: 'Two'
+          progression: 'Two',
         },
         {
           status: 'not_tried',
           url: '/step2/level2',
-          progression: 'One'
-        }
+          progression: 'One',
+        },
       ];
 
       const progressions = progressionsFromLevels(levels);
@@ -933,20 +963,20 @@ describe('progressReduxTest', () => {
           status: 'not_tried',
           url: '/step1/level1',
           name: 'Level 1',
-          progression: 'ProgressionOne'
+          progression: 'ProgressionOne',
         },
         {
           status: 'perfect',
           url: '/step2/level1',
           name: 'Level 2',
-          progression: 'ProgressionOne'
+          progression: 'ProgressionOne',
         },
         {
           status: 'not_tried',
           url: '/step2/level2',
           name: 'Level 3',
-          progression: 'ProgressionTwo'
-        }
+          progression: 'ProgressionTwo',
+        },
       ];
 
       const progressions = progressionsFromLevels(levels);
@@ -961,18 +991,18 @@ describe('progressReduxTest', () => {
         {
           status: 'not_tried',
           url: '/step1/level1',
-          progression: 'Progression 1'
+          progression: 'Progression 1',
         },
         {
           status: 'perfect',
           url: '/step2/level1',
-          progression: 'Progression 1'
+          progression: 'Progression 1',
         },
         {
           status: 'not_tried',
           url: '/step2/level2',
-          progression: 'Progression 2'
-        }
+          progression: 'Progression 2',
+        },
       ];
 
       const progressions = progressionsFromLevels(levels);
@@ -993,9 +1023,9 @@ describe('progressReduxTest', () => {
           name: 'fake level',
           ids: ['1'],
           activeId: 1,
-          title: 1
-        }
-      ]
+          title: 1,
+        },
+      ],
     });
 
     it('returns lesson group', () => {
@@ -1006,13 +1036,13 @@ describe('progressReduxTest', () => {
             display_name: 'Lesson Group',
             description: 'This is a lesson group',
             user_facing: false,
-            big_questions: ' - Why'
-          }
+            big_questions: ' - Why',
+          },
         ],
         lessons: [fakeLesson('Lesson Group', 'lesson1', 1)],
         unitProgress: {},
         levelResults: {},
-        focusAreaLessonIds: []
+        focusAreaLessonIds: [],
       };
 
       const groups = groupedLessons(state);
@@ -1030,17 +1060,17 @@ describe('progressReduxTest', () => {
             display_name: 'Lesson Group',
             description: 'This is a lesson group',
             user_facing: false,
-            big_questions: 'Why?'
-          }
+            big_questions: 'Why?',
+          },
         ],
         lessons: [
           fakeLesson('Lesson Group', 'lesson1', 1),
           fakeLesson('Lesson Group', 'lesson2', 2),
-          fakeLesson('Lesson Group', 'lesson3', 3)
+          fakeLesson('Lesson Group', 'lesson3', 3),
         ],
         unitProgress: {},
         levelResults: {},
-        focusAreaLessonIds: []
+        focusAreaLessonIds: [],
       };
 
       const groups = groupedLessons(state);
@@ -1053,7 +1083,7 @@ describe('progressReduxTest', () => {
         activeId: 2106,
         ids: ['2106'],
         title: 1,
-        bonus: true
+        bonus: true,
       };
       const state = {
         lessonGroups: [
@@ -1062,19 +1092,19 @@ describe('progressReduxTest', () => {
             display_name: 'Lesson Group',
             description: null,
             big_questions: null,
-            user_facing: false
-          }
+            user_facing: false,
+          },
         ],
         lessons: [
           {
             lesson_group_display_name: 'Lesson Group',
             levels: [bonusLevel],
-            lessons: []
-          }
+            lessons: [],
+          },
         ],
         unitProgress: {},
         levelResults: {},
-        focusAreaLessonIds: []
+        focusAreaLessonIds: [],
       };
 
       let groups = groupedLessons(state, false);
@@ -1096,13 +1126,13 @@ describe('progressReduxTest', () => {
         {
           name: 'lesson1',
           id: 123,
-          hidden: false
+          hidden: false,
         },
         {
           name: 'lesson2',
           id: 124,
-          hidden: true
-        }
+          hidden: true,
+        },
       ];
 
       const processed = processedLessons(lessons);
@@ -1115,23 +1145,23 @@ describe('progressReduxTest', () => {
         {
           name: 'lesson1',
           id: 123,
-          numberedLesson: true
+          numberedLesson: true,
         },
         {
           name: 'lesson2',
           id: 124,
-          numberedLesson: true
+          numberedLesson: true,
         },
         {
           name: 'survey1',
           id: 125,
-          numberedLesson: false
+          numberedLesson: false,
         },
         {
           name: 'lesson3',
           id: 126,
-          numberedLesson: true
-        }
+          numberedLesson: true,
+        },
       ];
 
       const processed = processedLessons(lessons);
@@ -1158,15 +1188,15 @@ describe('progressReduxTest', () => {
   });
 
   describe('peerReviewLesson', () => {
-    const {peerReviewLesson, PEER_REVIEW_ID} = __testonly__;
+    const {peerReviewLesson, PEER_REVIEW_ID} = __testonly__selectors;
     it('extracts lesson data from our peerReviewLessonInfo', () => {
       const state = {
         peerReviewLessonInfo: {
           lesson_group_display_name: 'Peer Review',
           levels: [],
           lockable: false,
-          name: 'You must complete 5 reviews for this unit'
-        }
+          name: 'You must complete 5 reviews for this unit',
+        },
       };
 
       const lesson = peerReviewLesson(state);
@@ -1177,7 +1207,7 @@ describe('progressReduxTest', () => {
   });
 
   describe('peerReviewLevels', () => {
-    const {peerReviewLevels, PEER_REVIEW_ID} = __testonly__;
+    const {peerReviewLevels, PEER_REVIEW_ID} = __testonly__selectors;
 
     it('sets icon to locked when locked', () => {
       const state = {
@@ -1190,10 +1220,10 @@ describe('progressReduxTest', () => {
               locked: true,
               name: 'Reviews Unavailable at this time',
               title: '',
-              url: ''
-            }
-          ]
-        }
+              url: '',
+            },
+          ],
+        },
       };
       const levels = peerReviewLevels(state);
       assert.equal(levels.length, 1);
@@ -1218,10 +1248,10 @@ describe('progressReduxTest', () => {
               result: 100,
               status: LevelStatus.perfect,
               title: '',
-              url: '/peer_reviews/1'
-            }
-          ]
-        }
+              url: '/peer_reviews/1',
+            },
+          ],
+        },
       };
       const levels = peerReviewLevels(state);
       assert.equal(levels.length, 1);
@@ -1243,7 +1273,7 @@ describe('progressReduxTest', () => {
 
     it('returns false if the level was not started', () => {
       const state = {
-        levelResults: {}
+        levelResults: {},
       };
       assert.isFalse(isPerfect(state, levelId));
     });
@@ -1251,8 +1281,8 @@ describe('progressReduxTest', () => {
     it('returns false if the level was not perfected', () => {
       const state = {
         levelResults: {
-          1: TestResults.MINIMUM_PASS_RESULT
-        }
+          1: TestResults.MINIMUM_PASS_RESULT,
+        },
       };
       assert.isFalse(isPerfect(state, levelId));
     });
@@ -1260,8 +1290,8 @@ describe('progressReduxTest', () => {
     it('returns true if the level was perfected', () => {
       const state = {
         levelResults: {
-          1: TestResults.ALL_PASS
-        }
+          1: TestResults.ALL_PASS,
+        },
       };
       assert.isTrue(isPerfect(state, levelId));
     });
@@ -1271,7 +1301,7 @@ describe('progressReduxTest', () => {
     it('returns the provided result for standard levels', () => {
       const result = getLevelResult({
         status: LevelStatus.perfect,
-        result: TestResults.ALL_PASS
+        result: TestResults.ALL_PASS,
       });
       assert.strictEqual(result, TestResults.ALL_PASS);
     });
@@ -1279,7 +1309,7 @@ describe('progressReduxTest', () => {
     it('gets result from status if no result provided', () => {
       const result = getLevelResult({
         status: LevelStatus.submitted,
-        pages_completed: [-50, null, null, null, null]
+        pages_completed: [-50, null, null, null, null],
       });
       assert.strictEqual(result, TestResults.SUBMITTED_RESULT);
     });
@@ -1301,7 +1331,7 @@ describe('progressReduxTest', () => {
       server.respondWith([
         200,
         {'Content-Type': 'application/json'},
-        JSON.stringify(data)
+        JSON.stringify(data),
       ]);
     };
 
@@ -1314,7 +1344,7 @@ describe('progressReduxTest', () => {
       const promise = userProgressFromServer(state, dispatch, 1);
       server.respond();
       return promise.then(responseData => {
-        assert.deepEqual(['progress/CLEAR_RESULTS'], getDispatchActions());
+        assert.deepEqual(['progress/clearResults'], getDispatchActions());
         assert.deepEqual({}, responseData);
       });
     });
@@ -1339,23 +1369,23 @@ describe('progressReduxTest', () => {
         completed: true,
         progress: {},
         peerReviewsPerformed: true,
-        current_lesson: 1
+        current_lesson: 1,
       };
       serverResponse(responseData);
       const promise = userProgressFromServer(state, dispatch, 1);
       server.respond();
 
       const expectedDispatchActions = [
-        'progress/CLEAR_RESULTS',
+        'progress/clearResults',
         'verifiedInstructor/SET_VERIFIED',
-        'progress/SET_IS_SUMMARY_VIEW',
-        'progress/UPDATE_FOCUS_AREAS',
+        'progress/setIsSummaryView',
+        'progress/updateFocusArea',
         'lessonLock/AUTHORIZE_LOCKABLE',
-        'progress/SET_UNIT_COMPLETED',
-        'progress/SET_UNIT_PROGRESS',
-        'progress/MERGE_RESULTS',
-        'progress/MERGE_PEER_REVIEW_PROGRESS',
-        'progress/SET_CURRENT_LESSON_ID'
+        'progress/setScriptCompleted',
+        'progress/setScriptProgress',
+        'progress/mergeResults',
+        'progress/mergePeerReviewProgress',
+        'progress/setCurrentLessonId',
       ];
       return promise.then(serverResponseData => {
         assert.deepEqual(expectedDispatchActions, getDispatchActions());

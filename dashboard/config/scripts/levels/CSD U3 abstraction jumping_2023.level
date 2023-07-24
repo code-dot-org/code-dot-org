@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T23:02:24.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -59,7 +64,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "long_instructions": "<img src=\"https://images.code.org/cdddf2fa838574cd428d51a4716b4277-image-1585726786629.gif\" style=\"float:right\">\r\n\r\n# Falling\r\n\r\nIf the user doesn't do anything, the player sprite should fall.\r\n\r\n# Do This\r\n\r\n* Find the code comment `// FALLING`.\r\n* Use the counter pattern to with the player sprite's velocityY to make the flyer fall.\r\n* Test your code to make sure that it works.  The sprite should fall faster as it goes down the screen.\r\n",
+    "long_instructions": "<img src=\"https://images.code.org/cdddf2fa838574cd428d51a4716b4277-image-1585726786629.gif\" style=\"float:right\">\r\n\r\n# Falling\r\n\r\nIf the user doesn't press any keys, the player sprite should fall.\r\n\r\n# Do This\r\n\r\n1. Find the code comment `// FALLING`.\r\n* Use the counter pattern to with the player sprite's velocityY to make the flyer fall.\r\n* Test your code to make sure that it works. \r\n   * _The sprite should fall faster as it goes down the screen._\r\n",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
     "start_in_animation_tab": "false",
@@ -92,13 +97,8 @@
     "validation_enabled": "true",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T23:02:24.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:02:24.028+00:00\",\"changed\":[\"cloned from \\\"CSD U3 abstraction jumping_2022\\\"\"],\"cloned_from\":\"CSD U3 abstraction jumping_2022\"},{\"changed_at\":\"2023-03-09 17:50:52 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:02:24.028+00:00\",\"changed\":[\"cloned from \\\"CSD U3 abstraction jumping_2022\\\"\"],\"cloned_from\":\"CSD U3 abstraction jumping_2022\"},{\"changed_at\":\"2023-03-09 17:50:52 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 17:33:36 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

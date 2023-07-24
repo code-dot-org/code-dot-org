@@ -4,7 +4,7 @@ import {
   highlightActiveLine,
   keymap,
   lineNumbers,
-  rectangularSelection
+  rectangularSelection,
 } from '@codemirror/view';
 import {EditorState} from '@codemirror/state';
 import {
@@ -13,13 +13,13 @@ import {
   foldKeymap,
   defaultHighlightStyle,
   bracketMatching,
-  syntaxHighlighting
+  syntaxHighlighting,
 } from '@codemirror/language';
 import {
   defaultKeymap,
   indentWithTab,
   history,
-  historyKeymap
+  historyKeymap,
 } from '@codemirror/commands';
 import {closeBrackets, closeBracketsKeymap} from '@codemirror/autocomplete';
 import {highlightSelectionMatches, searchKeymap} from '@codemirror/search';
@@ -46,9 +46,9 @@ const editorSetup = [
     ...searchKeymap,
     ...historyKeymap,
     ...foldKeymap,
-    indentWithTab
+    indentWithTab,
   ]),
-  EditorState.tabSize.of(2)
+  EditorState.tabSize.of(2),
 ];
 
 export {editorSetup};

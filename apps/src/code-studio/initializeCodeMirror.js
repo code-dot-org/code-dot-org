@@ -1,7 +1,6 @@
 /**
  * @file Function that initializes a CodeMirror editor in place of a textarea.
  */
-/* global inlineAttach */
 import $ from 'jquery';
 import CodeMirror from 'codemirror';
 import CodeMirrorSpellChecker from 'codemirror-spell-checker';
@@ -26,7 +25,7 @@ import SafeMarkdown from '../templates/SafeMarkdown';
 window.JSHINT = JSHINT;
 
 CodeMirrorSpellChecker({
-  codeMirrorInstance: CodeMirror
+  codeMirrorInstance: CodeMirror,
 });
 
 /**
@@ -73,7 +72,7 @@ function initializeCodeMirror(target, mode, options = {}) {
       updatePreview = editor => {
         ReactDOM.render(
           React.createElement(SafeMarkdown, {
-            markdown: editor.getValue()
+            markdown: editor.getValue(),
           }),
           previewElement
         );
@@ -112,8 +111,8 @@ function initializeCodeMirror(target, mode, options = {}) {
     gutters: ['CodeMirror-lint-markers'],
     lint: {
       getAnnotations: additionalAnnotations ? getAnnotations : undefined,
-      onUpdateLinting
-    }
+      onUpdateLinting,
+    },
   });
   if (callback) {
     editor.on('change', callback);
@@ -132,8 +131,8 @@ function initializeCodeMirror(target, mode, options = {}) {
       urlText: '![]({filename})', // `{filename}` tag gets replaced with URL
       errorText: 'Error uploading file; images must be no larger than 2MB',
       extraHeaders: {
-        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-      }
+        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
+      },
     };
 
     if (mode === 'javascript') {

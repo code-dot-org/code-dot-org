@@ -20,5 +20,5 @@ export const FUNCTION_BLOCK_NO_FRAME = {
     this.argumentVarModels_ = [];
     this.setStatements_(true);
     this.statementConnection_ = null;
-  }
+  },
 };

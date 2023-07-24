@@ -14,7 +14,7 @@ class PercentAnsweredCell extends Component {
     displayAnswer: PropTypes.string,
     isSurvey: PropTypes.bool,
     mainLayoutStyle: PropTypes.object,
-    valueLayoutStyle: PropTypes.object
+    valueLayoutStyle: PropTypes.object,
   };
 
   getBackgroundColor = percentValue => {
@@ -44,7 +44,7 @@ class PercentAnsweredCell extends Component {
 
     // Display a cell showing the percent answered.
     const backgroundCSS = {
-      backgroundColor: this.getBackgroundColor(percentValue)
+      backgroundColor: this.getBackgroundColor(percentValue),
     };
     return (
       <div style={{...this.props.mainLayoutStyle, ...backgroundCSS}}>
@@ -71,21 +71,21 @@ const styles = {
     alignItems: 'center',
     boxSizing: 'border-box',
     height: '100%',
-    padding: 10
+    padding: 10,
   },
   icon: {
-    color: color.level_perfect
+    color: color.level_perfect,
   },
   value: {
     color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif'
-  }
+    fontFamily: '"Gotham 5r", sans-serif',
+  },
 };
 
 PercentAnsweredCell.defaultProps = {
   percentValue: -1,
   mainLayoutStyle: styles.main,
-  valueLayoutStyle: {marginRight: 10}
+  valueLayoutStyle: {marginRight: 10},
 };
 
 export default PercentAnsweredCell;

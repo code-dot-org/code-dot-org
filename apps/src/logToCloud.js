@@ -138,5 +138,5 @@ module.exports = {
     } catch (e) {
       this.logError(e);
     }
-  }
+  },
 };

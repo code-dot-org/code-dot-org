@@ -8,8 +8,8 @@ var NetSimTestUtils = require('../../util/netsimTestUtils');
 const SIGNED_IN_USER = {
   user: {
     isSignedIn: true,
-    name: 'teacher'
-  }
+    name: 'teacher',
+  },
 };
 describe('NetSimLobby', () => {
   let rootDiv, netsim, getUserSectionsStub;
@@ -22,7 +22,7 @@ describe('NetSimLobby', () => {
       shardChange: {register: () => {}},
       isConnectedToShardID: () => {
         return true;
-      }
+      },
     };
   });
 
@@ -42,13 +42,13 @@ describe('NetSimLobby', () => {
       {
         id: 1,
         name: 'Course 1',
-        hidden: true
+        hidden: true,
       },
       {
         id: 2,
         name: 'Course 2',
-        hidden: false
-      }
+        hidden: false,
+      },
     ];
     netsimLobby.buildShardChoiceList_(sectionList, null);
     expect(netsimLobby.shardChoices_).to.have.lengthOf(1);

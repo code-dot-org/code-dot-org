@@ -363,7 +363,7 @@ export const commands = {
           [
             'moving_with_arrow_keys',
             'driving_with_arrow_keys',
-            'draggable'
+            'draggable',
           ].includes(behavior)
         )
       ) {
@@ -385,7 +385,7 @@ export const commands = {
           [
             'moving_with_arrow_keys',
             'driving_with_arrow_keys',
-            'draggable'
+            'draggable',
           ].includes(behavior)
         )
       ) {
@@ -523,5 +523,5 @@ export const commands = {
   variableCreated() {
     const result = this.studentVars.length >= 1;
     return result;
-  }
+  },
 };

@@ -40,7 +40,7 @@ ArtistAPI.prototype.drawSnowflake = function (type, id) {
       'spiral',
       'line',
       'parallelogram',
-      'square'
+      'square',
     ]);
   }
 

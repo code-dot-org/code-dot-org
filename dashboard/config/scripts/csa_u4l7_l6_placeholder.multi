@@ -26,3 +26,4 @@ right '0 2 0 2 0 2 0'
 wrong '0 2 0 2 0 2'
 wrong '0 2 1 0 2 1 0'
 wrong '0 1 2 1 2 1 2'
+allow_multiple_attempts true

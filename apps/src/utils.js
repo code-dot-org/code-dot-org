@@ -372,21 +372,21 @@ export function showGenericQtip(targetElement, title, message, position) {
         <p>${message}</p>
       `,
         title: {
-          button: $('<div class="tooltip-x-close"/>')
-        }
+          button: $('<div class="tooltip-x-close"/>'),
+        },
       },
       position,
       style: {
         classes: 'cdo-qtips',
         tip: {
           width: 20,
-          height: 20
-        }
+          height: 20,
+        },
       },
       hide: {
-        event: 'unfocus'
+        event: 'unfocus',
       },
-      show: false // don't show on mouseover
+      show: false, // don't show on mouseover
     })
     .qtip('show');
 }
@@ -397,7 +397,7 @@ export function showUnusedBlockQtip(targetElement) {
   const message = msg.unattachedBlockTipBody();
   const position = {
     my: 'bottom left',
-    at: 'top right'
+    at: 'top right',
   };
 
   showGenericQtip(targetElement, title, message, position);
@@ -575,7 +575,7 @@ export function normalize(vector) {
   }
   return {
     x: vector.x / mag,
-    y: vector.y / mag
+    y: vector.y / mag,
   };
 }
 
@@ -851,7 +851,7 @@ export function calculateOffsetCoordinates(element, clientX, clientY) {
   const rect = element.getBoundingClientRect();
   return {
     x: Math.round(((clientX - rect.left) * element.offsetWidth) / rect.width),
-    y: Math.round(((clientY - rect.top) * element.offsetHeight) / rect.height)
+    y: Math.round(((clientY - rect.top) * element.offsetHeight) / rect.height),
   };
 }
 
@@ -867,7 +867,7 @@ export const findProfanity = (text, locale, authenticityToken = null) => {
     url: '/profanity/find',
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify({text, locale})
+    data: JSON.stringify({text, locale}),
   };
 
   if (authenticityToken) {
@@ -908,7 +908,7 @@ const Environments = {
   staging: 'staging',
   adhoc: 'adhoc',
   development: 'development',
-  unknown: 'unknown'
+  unknown: 'unknown',
 };
 
 export function getEnvironment() {
@@ -949,4 +949,13 @@ export function isTestEnvironment() {
 
 export function isProductionEnvironment() {
   return getEnvironment() === Environments.production;
+}
+
+/**
+ * Fetch cookies signed by cloudfront which grant access to restricted content.
+ * @returns {Promise<Response>}
+ * TODO: Reuse this in Dance Party (Dance.js and songs.js)
+ */
+export function fetchSignedCookies() {
+  return fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
 }

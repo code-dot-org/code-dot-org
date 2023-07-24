@@ -13,7 +13,7 @@ describe('ExternalLed', function () {
       led = new ExternalLed({
         board: boardClient,
         pin: 0,
-        isOn: false
+        isOn: false,
       });
       setDigitalOutputSpy = sinon.spy(boardClient, 'setDigitalOutput');
     });
@@ -44,7 +44,7 @@ describe('ExternalLed', function () {
       led = new ExternalLed({
         board: boardClient,
         pin: 0,
-        isOn: false
+        isOn: false,
       });
       setDigitalOutputSpy = sinon.spy(boardClient, 'setDigitalOutput');
       onSpy = sinon.spy(led, 'on');
@@ -79,7 +79,7 @@ describe('ExternalLed', function () {
       led = new ExternalLed({
         board: boardClient,
         pin: 0,
-        isOn: false
+        isOn: false,
       });
       clock = sinon.useFakeTimers();
       sinon.spy(led, 'setDigitalOutputOn');

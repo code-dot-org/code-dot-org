@@ -22,3 +22,5 @@ public static void showMe(int arg) {
 
 What will be printed as a result of the call `showMe(12)`?
 MARKDOWN
+
+allow_multiple_attempts true

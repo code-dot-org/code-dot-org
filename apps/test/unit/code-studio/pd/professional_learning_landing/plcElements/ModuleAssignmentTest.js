@@ -13,7 +13,7 @@ describe('Module assignment element', () => {
           <ModuleAssignment
             moduleAssignmentData={{
               category: 'Overview',
-              status: key
+              status: key,
             }}
           />
         );

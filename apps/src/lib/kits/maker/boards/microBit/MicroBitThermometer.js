@@ -26,29 +26,29 @@ export default class MicroBitThermometer extends EventEmitter {
       raw: {
         get: function () {
           return this.board.mb.analogChannel[SENSOR_CHANNELS.tempSensor];
-        }
+        },
       },
       celsius: {
         get: function () {
           return this.raw;
-        }
+        },
       },
       fahrenheit: {
         get: function () {
           let rawValue = (this.celsius * 9) / 5 + 32;
           return roundToHundredth(rawValue);
-        }
+        },
       },
       C: {
         get: function () {
           return this.celsius;
-        }
+        },
       },
       F: {
         get: function () {
           return this.fahrenheit;
-        }
-      }
+        },
+      },
     });
   }
 

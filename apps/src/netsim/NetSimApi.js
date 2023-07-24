@@ -32,13 +32,13 @@ var shardApi = {
        * Beginning part of URL for all calls that interact with the shard.
        * @type {string}
        */
-      baseUrl: NETSIM_API_BASE_URL + '/' + shardID
+      baseUrl: NETSIM_API_BASE_URL + '/' + shardID,
     });
   },
 
   makeTableApi: function (tableName) {
     return tableApi.create(this.shardID, tableName);
-  }
+  },
 };
 
 /**
@@ -70,7 +70,7 @@ var tableApi = {
        * this table.
        * @type {string}
        */
-      baseUrl: NETSIM_API_BASE_URL + '/' + shardID + '/' + tableName
+      baseUrl: NETSIM_API_BASE_URL + '/' + shardID + '/' + tableName,
     });
   },
 
@@ -83,7 +83,7 @@ var tableApi = {
     $.ajax({
       url: this.baseUrl,
       type: 'get',
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(function (data, text) {
         callback(null, data);
@@ -103,7 +103,7 @@ var tableApi = {
     $.ajax({
       url: this.baseUrl + '@' + rowID,
       type: 'get',
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(function (data, text) {
         callback(null, data);
@@ -136,7 +136,7 @@ var tableApi = {
       url: this.baseUrl,
       type: 'post',
       contentType: 'application/json; charset=utf-8',
-      data: data
+      data: data,
     })
       .done(function (body, text) {
         callback(null, body);
@@ -162,7 +162,7 @@ var tableApi = {
     $.ajax({
       url: this.baseUrl + '?' + queryString,
       type: 'delete',
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(function (data, text) {
         callback(null, true);
@@ -195,7 +195,7 @@ var tableApi = {
      */
     fetch(this.baseUrl + '?' + queryString, {
       method: 'DELETE',
-      keepalive: true
+      keepalive: true,
     }).then(response => {
       if (response.ok) {
         callback(null, true);
@@ -215,7 +215,7 @@ var tableApi = {
     $.ajax({
       url: this.baseUrl + '/' + id,
       type: 'get',
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(function (data, text) {
         callback(null, data);
@@ -236,7 +236,7 @@ var tableApi = {
       url: this.baseUrl + '/' + id,
       type: 'post',
       contentType: 'application/json; charset=utf-8',
-      data: JSON.stringify(value)
+      data: JSON.stringify(value),
     })
       .done(function (data, text) {
         callback(null, data);
@@ -244,7 +244,7 @@ var tableApi = {
       .fail(function (request, status, error) {
         callback(new NetSimApiError(request), false);
       });
-  }
+  },
 };
 
 module.exports = {
@@ -265,5 +265,5 @@ module.exports = {
    */
   makeTableApi: function (shardID, tableName) {
     return tableApi.create(shardID, tableName);
-  }
+  },
 };

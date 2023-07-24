@@ -120,7 +120,7 @@ NetSimMessage.buildRowFromData = function (messageData) {
     simulatedBy: messageData.simulatedBy,
     base64Payload: binaryToBase64(messageData.payload),
     extraHopsRemaining: utils.valueOr(messageData.extraHopsRemaining, 0),
-    visitedNodeIDs: utils.valueOr(messageData.visitedNodeIDs, [])
+    visitedNodeIDs: utils.valueOr(messageData.visitedNodeIDs, []),
   };
 };
 

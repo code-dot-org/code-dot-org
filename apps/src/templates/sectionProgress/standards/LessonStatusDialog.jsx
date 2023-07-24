@@ -9,7 +9,7 @@ import LessonStatusList from './LessonStatusList';
 export default class LessonStatusDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    handleConfirm: PropTypes.func.isRequired
+    handleConfirm: PropTypes.func.isRequired,
   };
 
   render() {
@@ -43,6 +43,6 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
-  }
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
+  },
 };

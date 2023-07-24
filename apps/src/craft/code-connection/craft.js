@@ -30,7 +30,7 @@ const COMMON_UI_ASSETS = [
   MEDIA_URL + 'Sliced_Parts/Reset_Button_Up_Slice.png',
   MEDIA_URL + 'Sliced_Parts/MC_Reset_Arrow_Icon.png',
   MEDIA_URL + 'Sliced_Parts/Reset_Button_Down_Slice.png',
-  MEDIA_URL + 'Sliced_Parts/Callout_Tail.png'
+  MEDIA_URL + 'Sliced_Parts/Callout_Tail.png',
 ];
 
 const preloadImage = function (url) {
@@ -43,7 +43,7 @@ const preloadImage = function (url) {
  * @param {any} input
  */
 function getItemName(input) {
-  if (input.hasOwnProperty('name')) {
+  if (Object.prototype.hasOwnProperty.call(input, 'name')) {
     input = input['name'];
   }
   return input;
@@ -305,7 +305,7 @@ export const executeUserCode = function (client, code) {
           detectBlock: detectBlock,
           detectData: detectData,
           detectPos: detectPos,
-          command: command
+          command: command,
         },
         callback
       );
@@ -373,7 +373,7 @@ export const executeUserCode = function (client, code) {
           player: player,
           itemName: item['name'],
           data: item['data'],
-          amount: amount
+          amount: amount,
         },
         callback
       );
@@ -396,7 +396,7 @@ export const executeUserCode = function (client, code) {
           position: position,
           tileName: item['name'],
           tileData: item['data'],
-          oldBlockHandling: oldBlockHandling
+          oldBlockHandling: oldBlockHandling,
         },
         callback
       );
@@ -446,7 +446,7 @@ export const executeUserCode = function (client, code) {
           end: end,
           destination: destination,
           maskMode: maskMode,
-          cloneMode: cloneMode
+          cloneMode: cloneMode,
         },
         callback
       );
@@ -471,11 +471,11 @@ export const executeUserCode = function (client, code) {
           maskMode: 'filtered',
           cloneMode: cloneMode,
           tileName: item['name'],
-          tileData: item['data']
+          tileData: item['data'],
         },
         callback
       );
-    }
+    },
   };
 
   const methods = {
@@ -493,7 +493,7 @@ export const executeUserCode = function (client, code) {
     },
     getVec3: function (x, y, z) {
       return {x: `${x}`, y: `${y}`, z: `${z}`};
-    }
+    },
   };
 
   // Register async methods
@@ -529,7 +529,7 @@ export default class Craft {
 
     // Push initial level properties into the Redux store
     studioApp().setPageConstants(config, {
-      isMinecraft: true
+      isMinecraft: true,
     });
 
     Craft.render(config);
@@ -539,7 +539,7 @@ export default class Craft {
     const onMount = function () {
       studioApp().init({
         enableShowCode: false,
-        ...config
+        ...config,
       });
 
       var itemTypeKeys = Object.keys(items);
@@ -612,12 +612,12 @@ export default class Craft {
   static showConnectToCodeConnectionPopup = function () {
     var popupDiv = document.createElement('div');
     popupDiv.innerHTML = require('./dialogs/connectToCodeConnection.html.ejs')({
-      image: studioApp().assetUrl()
+      image: studioApp().assetUrl(),
     });
     var popupDialog = studioApp().createModalDialog({
       contentDiv: popupDiv,
       onHidden: function () {},
-      id: 'craft-popup-connect'
+      id: 'craft-popup-connect',
     });
     dom.addClickTouchEvent(
       document.getElementById('download-button'),
@@ -648,7 +648,7 @@ export default class Craft {
       onHidden: function () {
         callback(shareLink);
       },
-      id: 'craft-popup-import'
+      id: 'craft-popup-import',
     });
     dom.addClickTouchEvent(document.getElementById('import-button'), () => {
       shareLink = $('#share-link').val();
@@ -667,13 +667,13 @@ export default class Craft {
     const popupDiv = document.createElement('div');
     popupDiv.innerHTML = require('./dialogs/errorMessage.html.ejs')({
       title,
-      message
+      message,
     });
 
     const popupDialog = studioApp().createModalDialog({
       contentDiv: popupDiv,
       onHidden: function () {},
-      id: 'craft-popup-error'
+      id: 'craft-popup-error',
     });
 
     dom.addClickTouchEvent(document.getElementById('close-popup'), () => {

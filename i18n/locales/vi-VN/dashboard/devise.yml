@@ -50,9 +50,6 @@ vi:
       expired: "đã hết hạn, xin vui lòng yêu cầu cái mới"
       not_found: "không tìm thấy"
       not_locked: "đã không bị khóa"
-      not_saved:
-        one: "1 lỗi cấm %{resource} này được lưu:"
-        other: "%{count} lỗi cấm %{resource} này được lưu:"
     invitations:
       send_instructions: "một thư mời đã được gửi tới %{email}.\n"
       invitation_token_invalid: 'Dấu hiệu lời mời được cung cấp không hợp lệ!'

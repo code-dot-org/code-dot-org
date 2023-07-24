@@ -16,7 +16,7 @@ export default class VersionHistory extends React.Component {
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool.isRequired,
     selectedVersion: PropTypes.string,
-    isReadOnly: PropTypes.bool.isRequired
+    isReadOnly: PropTypes.bool.isRequired,
   };
 
   /**
@@ -35,7 +35,7 @@ export default class VersionHistory extends React.Component {
     versions: null,
     statusMessage: '',
     showSpinner: true,
-    confirmingClearPuzzle: false
+    confirmingClearPuzzle: false,
   };
 
   UNSAFE_componentWillMount() {
@@ -123,8 +123,8 @@ export default class VersionHistory extends React.Component {
           currentUrl: window.location.href,
           shareUrl: project.getShareUrl(),
           isProjectTemplateLevel: this.props.isProjectTemplateLevel,
-          currentSourceVersionId: project.getCurrentSourceVersionId()
-        })
+          currentSourceVersionId: project.getCurrentSourceVersionId(),
+        }),
       },
       {includeUserId: true}
     );

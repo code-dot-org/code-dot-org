@@ -5,7 +5,7 @@ import {fakeTeacherSectionsForDropdown} from './sectionAssignmentTestHelper';
 
 export default {
   title: 'TeacherSectionSelector',
-  component: TeacherSectionSelector
+  component: TeacherSectionSelector,
 };
 
 export const Basic = () => (

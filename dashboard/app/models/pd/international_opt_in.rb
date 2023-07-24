@@ -44,14 +44,10 @@ class Pd::InternationalOptIn < ApplicationRecord
     [
       :first_name,
       :last_name,
-      :gender,
       :school_name,
       :school_country,
-      :ages,
-      :subjects,
       :date,
       :workshop_organizer,
-      :workshop_facilitator,
       :workshop_course,
       :email_opt_in,
       :legal_opt_in
@@ -85,13 +81,8 @@ class Pd::InternationalOptIn < ApplicationRecord
 
   def self.options
     entry_keys = {
-      gender: %w(male female non_binary not_listed none),
-      schoolCountry: %w(barbados belize canada chile colombia israel malaysia mexico paraguay thailand uzbekistan),
-      ages: %w(ages_under_6 ages_7_8 ages_9_10 ages_11_12 ages_13_14 ages_15_16 ages_17_18 ages_19_over),
-      subjects: %w(cs ict math science history la efl music art other na),
-      resources: %w(bootstrap codecademy csfirst khan kodable lightbot scratch tynker other na),
-      robotics: %w(grok kodable lego microbit ozobot sphero raspberry wonder other na),
-      workshopCourse: %w(csf_af csf_express csd csp not_applicable),
+      schoolCountry: %w(australia barbados belize brazil canada chile colombia dominican_republic india indonesia israel jamaica kenya kosovo malaysia maldives mexico mongolia new_zealand paraguay portugal slovakia south_korea spain thailand trinidad_and_tobago uzbekistan vietnam),
+      workshopCourse: %w(csf_af csf_express csd csp csa other not_applicable),
       emailOptIn: %w(opt_in_yes opt_in_no),
       legalOptIn: %w(opt_in_yes opt_in_no)
     }
@@ -113,7 +104,6 @@ class Pd::InternationalOptIn < ApplicationRecord
     end]
 
     entries[:workshopOrganizer] = INTERNATIONAL_OPT_IN_PARTNERS
-    entries[:workshopFacilitator] = INTERNATIONAL_OPT_IN_FACILITATORS
 
     entries[:colombianSchoolData] = COLOMBIAN_SCHOOL_DATA
     entries[:chileanSchoolData] = CHILEAN_SCHOOL_DATA
@@ -149,20 +139,13 @@ class Pd::InternationalOptIn < ApplicationRecord
       firstNamePreferred
       lastName
       email
-      emailAlternate
-      gender
       school
       schoolCity
       schoolCityDistrict
       schoolCountry
       schoolDepartmentRegion
       schoolName
-      ages
-      subjects
-      resources
-      robotics
       workshopOrganizer
-      workshopFacilitator
       workshopCourse
       emailOptIn
       legalOptIn

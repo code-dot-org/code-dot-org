@@ -24,3 +24,5 @@ The following demonstrates tracing this code segment:
 
 ![](https://images.code.org/26d702d2ccc7b292af06ec22bb11313e-image-1675031221852.gif)
 MARKDOWN
+
+allow_multiple_attempts true

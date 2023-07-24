@@ -4,7 +4,7 @@
  * For now, uses Google charts.
  * @see {GoogleChart}
  */
-/* global Promise */
+
 import {quote} from '../utils';
 
 import GoogleChart from './GoogleChart';
@@ -54,7 +54,7 @@ ChartApi.ChartType = {
   BAR: 'bar',
   PIE: 'pie',
   LINE: 'line',
-  SCATTER: 'scatter'
+  SCATTER: 'scatter',
 };
 
 /** @type {Object.<string, GoogleChart>} */
@@ -62,7 +62,7 @@ ChartApi.TypeNameToType = {
   bar: GoogleChart.MaterialBarChart,
   pie: GoogleChart.PieChart,
   line: GoogleChart.MaterialLineChart,
-  scatter: GoogleChart.MaterialScatterChart
+  scatter: GoogleChart.MaterialScatterChart,
 };
 
 /**
@@ -141,7 +141,7 @@ ChartApi.prototype.drawChartFromRecords = function (
     var chart = this.createChart_(chartId, chartType);
     return Promise.all([
       chart.loadDependencies(),
-      this.fetchTableData_(tableName)
+      this.fetchTableData_(tableName),
     ])
       .then(
         function (results) {

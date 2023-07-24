@@ -643,13 +643,21 @@
   coursed-2021_name: Curs D (2021)
   coursee-2021_name: Curs E (2021)
   coursef-2021_name: Curs F (2021)
+  coursea-2022_name: Curs A (2022)
+  courseb-2022_name: Curs B (2022)
+  coursec-2022_name: Curs C (2022)
+  coursed-2022_name: Curs D (2022)
+  coursee-2022_name: Curs E (2022)
+  coursef-2022_name: Curs F (2022)
   express-2021_name: Curs exprés (2021)
+  express-2022_name: Curs Express (2022)
   accelerated_name: "Curs accelerat"
   express_name: "Curs exprés"
   20-hour_name: Curs accelerat
   classicmaze_name: "Laberint clàssic"
   iceage_name: "Edat de gel"
   minecraft_name: "Minecraft"
+  text-compression_name: Compressió de text
   applab_name: "Laboratori d'aplicacions"
   gamelab_name: "Laboratori de jocs"
   applab_gradelevel: "A partir de 13 anys"
@@ -1240,6 +1248,7 @@
   footer_store: "Botiga"
   footer_support: "Suport"
   footer_terms: "Condicions"
+  ai_for_oceans: "IA per Oceans"
   ai_for_oceans_lesson_plan: "unitat didàctica/lliço"
   ai_in_partnership_with: "En associació amb"
   ai_activity: "Activitat"

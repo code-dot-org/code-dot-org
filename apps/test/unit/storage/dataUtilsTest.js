@@ -7,7 +7,7 @@ import {
   editableValue,
   isNumber,
   isBoolean,
-  toBoolean
+  toBoolean,
 } from '@cdo/apps/storage/dataBrowser/dataUtils';
 
 describe('isBlank', () => {
@@ -34,7 +34,7 @@ describe('ignoreMissingValues', () => {
     {category1: 'red', category2: null, category3: 10},
     {category1: 'blue', category2: 1, category3: null},
     {category1: '', category2: 3, category3: 10},
-    {category1: '', category2: null, category3: undefined}
+    {category1: '', category2: null, category3: undefined},
   ];
   it('returns [] if there are no records', () => {
     expect(ignoreMissingValues([], [])).to.deep.equal([]);
@@ -50,7 +50,7 @@ describe('ignoreMissingValues', () => {
       {category1: 'blue', category2: 1, category3: 20},
       {category1: 'red', category2: 3, category3: 10},
       {category1: 'red', category2: null, category3: 10},
-      {category1: 'blue', category2: 1, category3: null}
+      {category1: 'blue', category2: 1, category3: null},
     ]);
 
     expect(ignoreMissingValues(records, ['category2'])).to.deep.equal([
@@ -59,7 +59,7 @@ describe('ignoreMissingValues', () => {
       {category1: 'red', category2: 3, category3: 10},
       {category1: undefined, category2: 4, category3: 10},
       {category1: 'blue', category2: 1, category3: null},
-      {category1: '', category2: 3, category3: 10}
+      {category1: '', category2: 3, category3: 10},
     ]);
 
     expect(ignoreMissingValues(records, ['category3'])).to.deep.equal([
@@ -68,7 +68,7 @@ describe('ignoreMissingValues', () => {
       {category1: 'red', category2: 3, category3: 10},
       {category1: undefined, category2: 4, category3: 10},
       {category1: 'red', category2: null, category3: 10},
-      {category1: '', category2: 3, category3: 10}
+      {category1: '', category2: 3, category3: 10},
     ]);
   });
 
@@ -79,7 +79,7 @@ describe('ignoreMissingValues', () => {
       {category1: 'red', category2: 1, category3: 10},
       {category1: 'blue', category2: 1, category3: 20},
       {category1: 'red', category2: 3, category3: 10},
-      {category1: 'blue', category2: 1, category3: null}
+      {category1: 'blue', category2: 1, category3: null},
     ]);
     expect(
       ignoreMissingValues(records, ['category2', 'category3'])
@@ -88,7 +88,7 @@ describe('ignoreMissingValues', () => {
       {category1: 'blue', category2: 1, category3: 20},
       {category1: 'red', category2: 3, category3: 10},
       {category1: undefined, category2: 4, category3: 10},
-      {category1: '', category2: 3, category3: 10}
+      {category1: '', category2: 3, category3: 10},
     ]);
 
     expect(
@@ -96,7 +96,7 @@ describe('ignoreMissingValues', () => {
     ).to.deep.equal([
       {category1: 'red', category2: 1, category3: 10},
       {category1: 'blue', category2: 1, category3: 20},
-      {category1: 'red', category2: 3, category3: 10}
+      {category1: 'red', category2: 3, category3: 10},
     ]);
   });
 });

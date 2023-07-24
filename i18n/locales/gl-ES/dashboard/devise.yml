@@ -50,9 +50,6 @@ gl:
       expired: "caducou, por favor pide unha nova"
       not_found: "non encontrado"
       not_locked: "non foi bloqueado"
-      not_saved:
-        one: "1 erro prohibiu este %{resource} de ser salvo:"
-        other: "%{count} erros non permite que este %{resource} sexa salvo:"
     invitations:
       send_instructions: 'Foi enviado un convite por e-mail para %{email}.'
       invitation_token_invalid: 'O teu convite non é válido!'

@@ -13,7 +13,7 @@ export default class HiddenUploader extends React.Component {
     allowedExtensions: PropTypes.string,
     onUploadStart: PropTypes.func.isRequired,
     onUploadDone: PropTypes.func.isRequired,
-    onUploadError: PropTypes.func
+    onUploadError: PropTypes.func,
   };
 
   componentDidMount() {
@@ -37,7 +37,7 @@ export default class HiddenUploader extends React.Component {
               study: 'sound-dialog-2',
               study_group: 'library-file',
               event: 'upload-file',
-              data_json: audioFileName
+              data_json: audioFileName,
             },
             {includeUserId: true}
           );
@@ -50,7 +50,7 @@ export default class HiddenUploader extends React.Component {
         if (props.onUploadError) {
           props.onUploadError(e.status);
         }
-      }
+      },
     });
   }
 

@@ -1,1 +1,20 @@
-{}
+{
+  "addCSSButton": "CSS の追加",
+  "addImageButton": "[イメージを追加]",
+  "addHTMLButton": "HTML の追加",
+  "closeFullscreenPreview": "全画面プレビューを閉じる",
+  "currentProjectCapacity": "{totalMegabytes}メガバイトのうち {currentMegabytes}メガバイトが使用されました",
+  "errorSavingProject": "プロジェクトの自動保存中に何かが機能しませんでした。インターネット接続を確認して、手動で保存してみてください。問題が解決しない場合は、ページをリロードして最初からやり直してください。",
+  "fatalError": "致命的なエラー: {message}。プライベートブラウジングモードの場合、データを書き込むことはできません。",
+  "loadFailure": "申し訳ありませんが、Web Lab が何らかの理由で読み込めませんでした。エラー: {message}",
+  "openFullscreenPreview": "全画面プレビューを開く",
+  "refreshPreview": "更新して保存",
+  "reloading": "再読み込み中...",
+  "reset": "Web ラボをリセット",
+  "resetComplete": "Web ラボのリセット完了",
+  "resetFailure": "Web ラボをリセットできませんでした: {message}。",
+  "toggleInspectorOn": "インスペクター:オフ",
+  "toggleInspectorOff": "インスペクター:オン",
+  "troubleshootingSupport": "詳細については、サポート記事 [\"Web Lab の問題のトラブルシューティング\"]({url}) を参照してください。",
+  "uploadError": "アップロードエラー"
+}

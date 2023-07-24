@@ -5,16 +5,16 @@ import moment from 'moment';
 import i18n from '@cdo/locale';
 import {
   ViewType,
-  scriptDataPropType
+  scriptDataPropType,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {
   studentLessonProgressType,
-  studentLevelProgressType
+  studentLevelProgressType,
 } from '@cdo/apps/templates/progress/progressTypes';
 import {shouldShowReviewStates} from '@cdo/apps/templates/progress/progressHelpers';
 import {
   getCurrentUnitData,
-  jumpToLessonDetails
+  jumpToLessonDetails,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import styleConstants from '@cdo/apps/styleConstants';
 import ProgressTableStudentList from './ProgressTableStudentList';
@@ -24,7 +24,7 @@ import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {
   getSummaryCellFormatters,
   getDetailCellFormatters,
-  getLevelIconHeaderFormatter
+  getLevelIconHeaderFormatter,
 } from './progressTableHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import classnames from 'classnames';
@@ -84,7 +84,7 @@ class ProgressTableView extends React.Component {
     onClickLesson: PropTypes.func.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     studentTimestamps: PropTypes.object.isRequired,
-    localeCode: PropTypes.string
+    localeCode: PropTypes.string,
   };
 
   constructor(props) {
@@ -115,9 +115,9 @@ class ProgressTableView extends React.Component {
           student: student,
           expansionIndex: 0,
           isExpanded: false,
-          useDarkBackground: index % 2 === 1
+          useDarkBackground: index % 2 === 1,
         };
-      })
+      }),
     };
 
     // set the locale for timestamp formatting in table cells
@@ -148,10 +148,10 @@ class ProgressTableView extends React.Component {
 
     // amountOfRowsToRender is a reactabular internal
     this.studentList?.bodyComponent.setState({
-      amountOfRowsToRender: initialRows
+      amountOfRowsToRender: initialRows,
     });
     this.contentView?.bodyComponent.setState({
-      amountOfRowsToRender: initialRows
+      amountOfRowsToRender: initialRows,
     });
     this.syncScrollTop();
   }
@@ -236,8 +236,8 @@ class ProgressTableView extends React.Component {
         data_json: JSON.stringify({
           student_id: studentId,
           section_id: this.props.sectionId,
-          visible: expanding
-        })
+          visible: expanding,
+        }),
       },
       {includeUserId: true}
     );
@@ -250,7 +250,7 @@ class ProgressTableView extends React.Component {
         id: idForExpansionIndex(rowData.student.id, i),
         student: rowData.student,
         expansionIndex: i,
-        useDarkBackground: rowData.useDarkBackground
+        useDarkBackground: rowData.useDarkBackground,
       });
     }
     const rows = [...this.state.rows];
@@ -281,11 +281,11 @@ class ProgressTableView extends React.Component {
       'dark-row': row.useDarkBackground,
       'primary-row': row.expansionIndex === 0,
       'expanded-row': row.expansionIndex > 0,
-      'first-expanded-row': row.expansionIndex === 1
+      'first-expanded-row': row.expansionIndex === 1,
     });
 
     return {
-      className: rowClassName
+      className: rowClassName,
     };
   }
 
@@ -293,9 +293,9 @@ class ProgressTableView extends React.Component {
     return {
       lessonCellFormatters: this.detailCellFormatters,
       extraHeaderFormatters: [
-        getLevelIconHeaderFormatter(this.props.scriptData)
+        getLevelIconHeaderFormatter(this.props.scriptData),
       ],
-      includeHeaderArrows: true
+      includeHeaderArrows: true,
     };
   }
 
@@ -305,7 +305,7 @@ class ProgressTableView extends React.Component {
         parseInt(progressTableStyleConstants.MIN_COLUMN_WIDTH)
       ),
       lessonCellFormatters: this.summaryCellFormatters,
-      includeHeaderArrows: false
+      includeHeaderArrows: false,
     };
   }
 
@@ -384,19 +384,19 @@ class ProgressTableView extends React.Component {
 
 const styles = {
   container: {
-    width: styleConstants['content-width']
+    width: styleConstants['content-width'],
   },
   studentList: {
     display: 'inline-block',
-    verticalAlign: 'top'
+    verticalAlign: 'top',
   },
   contentView: {
     display: 'inline-block',
-    width: parseInt(progressTableStyleConstants.CONTENT_VIEW_WIDTH)
+    width: parseInt(progressTableStyleConstants.CONTENT_VIEW_WIDTH),
   },
   midpageBanner: {
-    marginTop: '60px'
-  }
+    marginTop: '60px',
+  },
 };
 
 export const UnconnectedProgressTableView = ProgressTableView;
@@ -419,11 +419,11 @@ export default connect(
       state.sectionProgress.studentLastUpdateByUnit[
         state.unitSelection.scriptId
       ],
-    localeCode: state.locales.localeCode
+    localeCode: state.locales.localeCode,
   }),
   dispatch => ({
     onClickLesson(lessonPosition) {
       dispatch(jumpToLessonDetails(lessonPosition));
-    }
+    },
   })
 )(ProgressTableView);

@@ -7,7 +7,7 @@ class LessonExtrasFlagIcon extends React.PureComponent {
   static propTypes = {
     isPerfect: PropTypes.bool,
     isSelected: PropTypes.bool,
-    size: PropTypes.number
+    size: PropTypes.number,
   };
 
   render() {
@@ -16,7 +16,7 @@ class LessonExtrasFlagIcon extends React.PureComponent {
     const colorStyle = {
       ...styles.default,
       ...(isSelected && styles.selected),
-      ...(isPerfect && styles.perfect)
+      ...(isPerfect && styles.perfect),
     };
 
     return (
@@ -34,18 +34,18 @@ const styles = {
   default: {
     color: color.lighter_gray,
     ':hover': {
-      color: color.orange
-    }
+      color: color.orange,
+    },
   },
   selected: {
-    color: color.charcoal
+    color: color.charcoal,
   },
   perfect: {
-    color: color.level_perfect
+    color: color.level_perfect,
   },
   smallStack: {
     width: '1em',
     height: '1.1em',
-    lineHeight: '1em'
-  }
+    lineHeight: '1em',
+  },
 };

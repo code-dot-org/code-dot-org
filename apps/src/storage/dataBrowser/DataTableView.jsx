@@ -17,7 +17,7 @@ import style from './data-table-view.module.scss';
 import msg from '@cdo/locale';
 
 const INITIAL_STATE = {
-  showDebugView: false
+  showDebugView: false,
 };
 
 class DataTableView extends React.Component {
@@ -33,7 +33,7 @@ class DataTableView extends React.Component {
 
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
-    onViewChange: PropTypes.func.isRequired
+    onViewChange: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};
@@ -99,13 +99,13 @@ class DataTableView extends React.Component {
       tableName,
       onViewChange,
       libraryManifest,
-      isRtl
+      isRtl,
     } = this.props;
     const visible = DataView.TABLE === view;
     const debugDataStyle = {
       ...{
-        display: this.state.showDebugView ? '' : 'none'
-      }
+        display: this.state.showDebugView ? '' : 'none',
+      },
     };
     const readOnly = tableListMap[tableName] === tableType.SHARED;
 
@@ -172,7 +172,7 @@ export default connect(
     tableRecords: state.data.tableRecords || [],
     tableName: state.data.tableName || '',
     tableListMap: state.data.tableListMap || {},
-    libraryManifest: state.data.libraryManifest || {}
+    libraryManifest: state.data.libraryManifest || {},
   }),
   dispatch => ({
     onShowWarning(warningMsg, warningTitle) {
@@ -180,6 +180,6 @@ export default connect(
     },
     onViewChange(view) {
       dispatch(changeView(view));
-    }
+    },
   })
 )(DataTableView);

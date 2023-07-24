@@ -28,17 +28,17 @@ EvalTriangle.prototype.draw = function (parent) {
 
   var bottomLeft = {
     x: -this.edge_ / 2,
-    y: height / 3
+    y: height / 3,
   };
 
   var bottomRight = {
     x: this.edge_ / 2,
-    y: height / 3
+    y: height / 3,
   };
 
   var top = {
     x: 0,
-    y: (-height * 2) / 3
+    y: (-height * 2) / 3,
   };
 
   this.element_.setAttribute(

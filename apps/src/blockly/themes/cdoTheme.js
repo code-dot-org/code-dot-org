@@ -7,10 +7,10 @@ export default GoogleBlockly.Theme.defineTheme(Themes.MODERN, {
   blockStyles: cdoBlockStyles,
   categoryStyles: {},
   componentStyles: {
-    toolboxBackgroundColour: '#DDDDDD'
+    toolboxBackgroundColour: '#DDDDDD',
   },
   fontStyle: {
-    family: '"Gotham 4r", sans-serif'
+    family: '"Gotham 4r", sans-serif',
   },
-  startHats: null
+  startHats: null,
 });

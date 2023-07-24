@@ -20,19 +20,19 @@ export default class ChangeUserTypeModal extends React.Component {
     /**
      * @type {function()}
      */
-    handleCancel: PropTypes.func.isRequired
+    handleCancel: PropTypes.func.isRequired,
   };
 
   state = {
     saveState: STATE_INITIAL,
     values: {
       email: '',
-      emailOptIn: ''
+      emailOptIn: '',
     },
     serverErrors: {
       email: undefined,
-      emailOptIn: undefined
-    }
+      emailOptIn: undefined,
+    },
   };
 
   save = () => {
@@ -50,11 +50,11 @@ export default class ChangeUserTypeModal extends React.Component {
   cancel = () => this.props.handleCancel();
 
   onSubmitFailure = error => {
-    if (error && error.hasOwnProperty('serverErrors')) {
+    if (error && Object.prototype.hasOwnProperty.call(error, 'serverErrors')) {
       this.setState(
         {
           saveState: STATE_INITIAL,
-          serverErrors: error.serverErrors
+          serverErrors: error.serverErrors,
         },
         () => this.changeUserTypeForm.focusOnAnError()
       );
@@ -71,7 +71,8 @@ export default class ChangeUserTypeModal extends React.Component {
     const {serverErrors} = this.state;
     return {
       email: serverErrors.email || this.getEmailValidationError(),
-      emailOptIn: serverErrors.emailOptIn || this.getEmailOptInValidationError()
+      emailOptIn:
+        serverErrors.emailOptIn || this.getEmailOptInValidationError(),
     };
   }
 
@@ -104,7 +105,7 @@ export default class ChangeUserTypeModal extends React.Component {
     });
     this.setState({
       values: newValues,
-      serverErrors: newServerErrors
+      serverErrors: newServerErrors,
     });
   };
 
@@ -151,6 +152,6 @@ export default class ChangeUserTypeModal extends React.Component {
 const styles = {
   container: {
     margin: 20,
-    color: color.charcoal
-  }
+    color: color.charcoal,
+  },
 };

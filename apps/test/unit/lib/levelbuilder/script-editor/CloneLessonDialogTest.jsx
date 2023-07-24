@@ -13,7 +13,7 @@ describe('CloneLessonDialog', () => {
     defaultProps = {
       lessonId: 1,
       lessonName: 'lesson-1',
-      handleClose: handleCloseSpy
+      handleClose: handleCloseSpy,
     };
   });
 
@@ -32,7 +32,7 @@ describe('CloneLessonDialog', () => {
     const wrapper = shallow(<CloneLessonDialog {...defaultProps} />);
     let returnData = {
       editLessonUrl: '/lessons/1/edit',
-      editScriptUrl: '/s/test-script/edit'
+      editScriptUrl: '/s/test-script/edit',
     };
     fetchSpy
       .withArgs('/lessons/1/clone')
@@ -55,7 +55,7 @@ describe('CloneLessonDialog', () => {
   it('displays error message on failed clone', () => {
     const wrapper = shallow(<CloneLessonDialog {...defaultProps} />);
     let returnData = {
-      error: 'Error message.'
+      error: 'Error message.',
     };
     fetchSpy
       .withArgs('/lessons/1/clone')
@@ -120,7 +120,7 @@ describe('CloneLessonDialog', () => {
 
     let returnData = {
       editLessonUrl: '/lessons/1/edit',
-      editScriptUrl: '/s/test-script/edit'
+      editScriptUrl: '/s/test-script/edit',
     };
     fetchSpy
       .withArgs('/lessons/1/clone')
@@ -145,7 +145,7 @@ describe('CloneLessonDialog', () => {
 
     let returnData = {
       editLessonUrl: '/lessons/1/edit',
-      editScriptUrl: '/s/test-script/edit'
+      editScriptUrl: '/s/test-script/edit',
     };
     fetchSpy
       .withArgs('/lessons/1/clone')
