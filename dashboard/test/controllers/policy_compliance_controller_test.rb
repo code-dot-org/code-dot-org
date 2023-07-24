@@ -25,7 +25,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
     end
     user.reload
     assert_response :ok
-    assert_equal User::ChildAccountCompliance::PERMISSION_GRANTED, user.child_account_compliance_state
+    assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, user.child_account_compliance_state
     assert_not_empty user.child_account_compliance_state_last_updated
   end
 
@@ -65,7 +65,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   test "given a user already has parental permission, should just redirect back" do
     permission = create :parental_permission_request, :granted
     user = permission.user
-    user.child_account_compliance_state = User::ChildAccountCompliance::PERMISSION_GRANTED
+    user.child_account_compliance_state = Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
 
     sign_in user
 
@@ -90,7 +90,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
         }
       assert_redirected_to lockout_path
       user.reload
-      assert_equal User::ChildAccountCompliance::REQUEST_SENT, user.child_account_compliance_state
+      assert_equal Policies::ChildAccount::ComplianceState::REQUEST_SENT, user.child_account_compliance_state
       assert_not_empty user.child_account_compliance_state_last_updated
     end
   end

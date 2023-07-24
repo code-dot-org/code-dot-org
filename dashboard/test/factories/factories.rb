@@ -380,7 +380,7 @@ FactoryBot.define do
       end
 
       trait :with_parent_permission do
-        child_account_compliance_state {User::ChildAccountCompliance::PERMISSION_GRANTED}
+        child_account_compliance_state {Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED}
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
@@ -391,7 +391,7 @@ FactoryBot.define do
 
       factory :non_compliant_child, traits: [:U13, :in_colorado] do
         factory :locked_out_child do
-          child_account_compliance_state {User::ChildAccountCompliance::LOCKED_OUT}
+          child_account_compliance_state {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
           child_account_compliance_state_last_updated {DateTime.now}
           child_account_compliance_lock_out {DateTime.now}
           trait :expired do

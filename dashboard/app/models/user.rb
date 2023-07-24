@@ -270,7 +270,7 @@ class User < ApplicationRecord
 
   validate :validate_us_state, on: :create
 
-  before_create :lock_out_child_account, unless: :child_account_policy_compliant?
+  before_create :lock_out_child_account, unless: -> {Policies::ChildAccount.compliant?(self)}
 
   before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
     self.gender = Policies::Gender.normalize gender_teacher_input
@@ -2349,7 +2349,7 @@ class User < ApplicationRecord
   end
 
   # Updates the child_account_compliance_state attribute to the given state.
-  # @param {String} new_state - A constant from User::ChildAccountCompliance
+  # @param {String} new_state - A constant from Policies::ChildAccount::ComplianceState
   def update_child_account_compliance(new_state)
     self.child_account_compliance_state = new_state
     self.child_account_compliance_state_last_updated = DateTime.now.new_offset(0)
@@ -2690,7 +2690,7 @@ class User < ApplicationRecord
 
   def self.where_child_account_does_not_have_parent_permission
     where("JSON_EXTRACT(properties, '$.child_account_compliance_state') != ?",
-          ChildAccountCompliance::PERMISSION_GRANTED
+          Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
     )
   end
 
@@ -2715,68 +2715,11 @@ class User < ApplicationRecord
     end
   end
 
-  # Is this user compliant with our Child Account Policy(cap)?
-  # For students under-13, in Colorado, with a personal email login: we require
-  # parent permission before the student can start using their account.
-  def child_account_policy_compliant?
-    return true unless parent_permission_required?
-    child_account_compliance_state == ChildAccountCompliance::PERMISSION_GRANTED
-  end
-
-  # TODO DAYNE ADD UNIT TESTS
   def lock_out_child_account
     # Verify the account has not already started the lock out process.
     return if child_account_compliance_state
     # Set the child's account to be locked out
-    update_child_account_compliance(ChildAccountCompliance::LOCKED_OUT)
+    update_child_account_compliance(Policies::ChildAccount::ComplianceState::LOCKED_OUT)
     self.child_account_compliance_lock_out = DateTime.now
-  end
-
-  # The individual US State child account policy configuration
-  # max_age: the oldest age of the child at which this policy applies.
-  CHILD_ACCOUNT_STATE_POLICY = {
-    'CO' => {
-      max_age: 12
-    }
-  }.freeze
-
-  # Check if parent permission is required for this account according to our
-  # Child Account Policy.
-  def parent_permission_required?
-    return false unless us_state
-    policy = CHILD_ACCOUNT_STATE_POLICY[us_state]
-    return false unless policy
-    return false unless age.to_i <= policy[:max_age].to_i
-    personal_account?
-  end
-
-  # Does the user login using credentials they personally control?
-  # For example, some accounts are created and owned by schools (Clever).
-  def personal_account?
-    return false if sponsored?
-    # List of credential types which we believe schools have ownership of.
-    school_owned_types = [AuthenticationOption::CLEVER]
-    # Does the user have an authentication method which is not controlled by
-    # their school? The presence of at least one authentication method which
-    # is owned by the student/parent means this is a "personal account".
-    if migrated?
-      authentication_options.any? do |option|
-        school_owned_types.exclude?(option.credential_type)
-      end
-    else
-      school_owned_types.exclude?(provider)
-    end
-  end
-
-  # Values for the `child_account_compliance_state` attribute
-  module ChildAccountCompliance
-    # The student's account has been used to issue a request to a parent.
-    LOCKED_OUT = 'l'.freeze
-
-    # The student's account has been used to issue a request to a parent.
-    REQUEST_SENT = 's'.freeze
-
-    # The student's account has been approved by their parent.
-    PERMISSION_GRANTED = 'g'.freeze
   end
 end

@@ -19,8 +19,8 @@ class PolicyComplianceController < ApplicationController
     #Get User
     user = permission_request.user
     #Update User
-    if user.child_account_compliance_state != User::ChildAccountCompliance::PERMISSION_GRANTED
-      user.child_account_compliance_state = User::ChildAccountCompliance::PERMISSION_GRANTED
+    if user.child_account_compliance_state != Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
+      user.child_account_compliance_state = Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
       user.child_account_compliance_state_last_updated = DateTime.now
       user.save!
       parent_email = permission_request.parent_email
@@ -46,7 +46,7 @@ class PolicyComplianceController < ApplicationController
   # acts like the email was sent and sends no notice to the student it was not.
   def child_account_consent_request
     # If we already comply, don't suddenly invalid it
-    if current_user.child_account_compliance_state == User::ChildAccountCompliance::PERMISSION_GRANTED
+    if current_user.child_account_compliance_state == Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
       redirect_back fallback_location: lockout_path and return
     end
 
@@ -85,7 +85,7 @@ class PolicyComplianceController < ApplicationController
     permission_request.save!
 
     # Update the User
-    current_user.update_child_account_compliance(User::ChildAccountCompliance::REQUEST_SENT)
+    current_user.update_child_account_compliance(Policies::ChildAccount::ComplianceState::REQUEST_SENT)
     current_user.save!
 
     # Send the request email
