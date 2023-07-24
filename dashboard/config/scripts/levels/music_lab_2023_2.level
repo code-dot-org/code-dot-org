@@ -31,9 +31,11 @@
         ]
       },
       "toolbox": {
-        "Play": [
-          "play_sound_at_current_location_simple2"
-        ]
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        }
       },
       "text": "Let’s lay down a beat!\n## Do This\n1. Snap a `play`(#7435b2) block under the `when run`(#fca401) block, and click on the sound name to open the Sound Library. The Sound Library has all the sounds you can choose from for remixing this song. We're making a beat, so pick something with the little drum icon next to it.\n2. Hit the `Run`(#fca401) button to take a listen.",
       "validations": [
