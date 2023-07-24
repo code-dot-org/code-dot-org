@@ -1,23 +1,48 @@
 import React from 'react';
-import {RadioButton, RadioButtonsGroup} from './index';
+import {Meta, Story} from '@storybook/react';
+
+import {
+  RadioButton,
+  RadioButtonProps,
+  RadioButtonsGroup,
+  RadioButtonsGroupProps,
+} from './index';
 
 export default {
   title: 'DesignSystem/Radio Button Component',
-  component: RadioButton,
-};
+  /**
+   * Storybook Docs Generation doesn't work properly (as of 07.19.2023).
+   * This workaround (component: Component.type instead of component: Component) is taken from
+   * https://github.com/storybookjs/storybook/issues/18136#issue-1225692751
+   * Feel free to remove this workaround when storybook fixes this issue.
+   */
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore-next-line
+  component: RadioButton.type,
+} as Meta;
 
 //
 // TEMPLATE
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 // eslint-disable-next-line
-const MultipleTemplate = (args = []) => (
+const SingleTemplate:Story<RadioButtonProps> = (args) => <RadioButton {...args} />;
+
+const MultipleTemplate: Story<RadioButtonsGroupProps> = args => (
   <>
     <RadioButtonsGroup {...args} />
   </>
 );
-export const DefaultRadioButton = MultipleTemplate.bind({});
+
+export const DefaultRadioButton = SingleTemplate.bind({});
 DefaultRadioButton.args = {
+  name: 'radio1',
+  label: 'RadioButton 1',
+  value: 'radio1',
+};
+
+export const DefaultRadioButtonGroup = MultipleTemplate.bind({});
+DefaultRadioButtonGroup.args = {
   radioButtons: [
     {name: 'radio1', label: 'RadioButton 1', value: 'radio1'},
     {name: 'radio2', label: 'RadioButton 2', value: 'radio2'},
