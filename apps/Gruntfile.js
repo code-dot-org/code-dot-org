@@ -1295,16 +1295,6 @@ describe('entry tests', () => {
   grunt.loadTasks('tasks');
   grunt.registerTask('noop', function () {});
 
-  // grunt-notify npm is unmaintained and no longer works on macOS:
-  // replace it with an applescript shell command
-  if (os.platform() === 'darwin') {
-    grunt.registerMultiTask('notify', function () {
-      child_process.exec(
-        `osascript -e 'display notification "${this.target}" with title "code.org grunt"'`
-      );
-    });
-  }
-
   // Generate locale stub files in the build/locale/current folder
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
