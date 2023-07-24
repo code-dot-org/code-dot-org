@@ -45,6 +45,7 @@
     flex: 2;
     background-color: #fca401;
     color: $neutral_light;
+    margin: 0;
 
     .text {
       padding-left: 10px;
@@ -72,7 +73,7 @@
   height: 5px;
   background-color: $neutral_dark80;
   position: relative;
-  margin-top: auto;
+  margin-top: 15px;
   border-radius: 4px;
   overflow: hidden;
 
