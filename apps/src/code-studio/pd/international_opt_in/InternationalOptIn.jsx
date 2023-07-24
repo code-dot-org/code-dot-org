@@ -8,7 +8,7 @@ import {DATE_FORMAT} from '../workshop_dashboard/workshopConstants';
 import {Row, Col, ControlLabel, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import _ from 'lodash';
+import {snakeCase} from 'lodash';
 
 export default class InternationalOptIn extends FormController {
   static propTypes = {
@@ -579,7 +579,7 @@ function dateStringToMoment(dateString) {
 }
 
 function getCountryKey(countryName) {
-  return _.snakeCase(countryName);
+  return snakeCase(countryName);
 }
 
 InternationalOptInComponent.associatedFields = [
