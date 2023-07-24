@@ -2,19 +2,19 @@
   "en-GB": {
     "data": {
       "announcements": {
-        "b7bff9e1-22bd-4f95-bb95-68e91fd5b3a3": {
-          "buttonText": "Learn More"
-        },
         "79a249d7-fb90-4e9c-bd8b-e7884ad2034b": {
-          "buttonText": "Learn More"
-        },
-        "b5b0c936-3bc6-4e69-8796-e205d103151f": {
           "buttonText": "Learn More"
         },
         "f1160bfc-3ae9-41a1-8ac9-1c9e7de4afeb": {
           "buttonText": "Learn More"
         },
+        "b5b0c936-3bc6-4e69-8796-e205d103151f": {
+          "buttonText": "Learn More"
+        },
         "2e1b13ae-2ab8-4996-bf23-ca3e0fa1f8be": {
+          "buttonText": "Learn More"
+        },
+        "b7bff9e1-22bd-4f95-bb95-68e91fd5b3a3": {
           "buttonText": "Learn More"
         },
         "cd936bbe-e57c-4568-aad1-832ee483d149": {

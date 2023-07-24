@@ -1,90 +1,84 @@
 ---
 ky:
-  errors:
-    messages:
-      not_saved: 'Кийинки каталарды оңдогула:'
   activerecord:
+    attributes:
+      user:
+        age: Жашы
+        current_password: Учурдагы сырсөз
+        email: Эмейл
+        locale: Тили
+        name: Атын көрсөт
+        name_example: Атын көрсөт (м. Мыкты кодер же Жаңыл)
+        password: Сырсөз
+        password_confirmation: Сырсөздү тастыктоо
+        username: Колдонуучунун аты
     errors:
       messages:
         blank: милдеттүү
         blank_plural: милдеттүү
         invalid: жараксыз
         invalid_plural: жараксыз
-    attributes:
-      user:
-        name: Атын көрсөт
-        name_example: Атын көрсөт (м. Мыкты кодер же Жаңыл)
-        email: Эмейл
-        username: Колдонуучунун аты
-        password: Сырсөз
-        password_confirmation: Сырсөздү тастыктоо
-        current_password: Учурдагы сырсөз
-        locale: Тили
-        age: Жашы
-  submit: Кошуу
-  cancel: Жок кыл
-  okay: Окай
-  or: же
-  stage_number: "%{number}-сабак"
   already_started: 'Баштап койдуңар беле? Мындан уланткыла >> '
-  continue: Улантуу
-  more_info: Кененирээк
   auth:
     signed_in: Киргенсиңер!
-  signup_form:
-    hoc_already_signed_up_heading: Кирбей баштоо
-    age: Жашы
-    submit: Катталуу
-    field_is_required: милдеттүү
-    email_preference_privacy: "(Купуялуулук саясатыбызды карагыла)"
-    email_preference_yes: Ооба
-    email_preference_no: Жок
-    share_teacher_email_reg_partner_preference_yes: Ооба
-    share_teacher_email_reg_partner_preference_no: Жок
-  school_info:
-    other: Башка
-  signin_form:
-    login: Эмейл
-    password: Сырсөз
-    submit: Кирүү
-  signinsection:
-    login: Кирүү
-  password:
-    reset_form:
-      submit: Кошуу
-    change_form:
-      new_password: Жаңы сырсөз
-      confirm_password: Жаңы сырсөздү тастыкта
-  parent_mailer:
-    parent_email_added_subject: Code.org сайтына кош келиңиз!
-  teacher_mailer:
-    new_teacher_subject: Code.org сайтына кош келиңиз!
-  section:
-    type:
-      email: Эмейл
-      google_classroom: Google Classroom
-  follower:
-    already_exists: Сиз %{section_name} секциясына кошулгансыз.
+  builder:
+    level:
+      create: Жаңы деңгээл түзүү
+  cancel: Жок кыл
+  certificate_hour_of_code: Код сааты
+  compatibility:
+    upgrade:
+      link: Дагы кара
+  continue: Улантуу
+  copy: Көчүрүү
   crud:
+    edit: өзгөртүү
     new_model: Жаңы %{model}
     show: көрсөт
-    edit: өзгөртүү
     submit: Кошуу
+  dialog:
+    ok: OK
+    startover_cancel: Жок кыл
+    startover_ok: Кайра баштоо
+    startover_title: Кайрадан баштагыңыз келгени аныкпы?
+  errors:
+    messages:
+      not_saved: 'Кийинки каталарды оңдогула:'
+  follower:
+    already_exists: Сиз %{section_name} секциясына кошулгансыз.
+  hoc_download:
+    minecraft_name: Minecraft код сааты
+    windows: Windows
+  home:
+    trynow: Дагы кара
+  landing:
+    support: Жардам ал
+  level_group:
+    correct_title: Рахмат
+    wrong_title: Рахмат
+  level_group-submittable:
+    correct_title: Рахмат
+    wrong_title: Рахмат
+  more_info: Кененирээк
+  multi-submittable:
+    correct_title: Рахмат
+    wrong_title: Рахмат
   nav:
     header:
+      about_news: Жаңылыктар
+      educate_hoc: Код сааты
       my_dashboard: Менин тактам
       sections: Класс секциялары
-      educate_hoc: Код сааты
-      about_news: Жаңылыктар
+    popup:
+      prizes_link: кененирээк
     user:
-      signin: Кирүү
-      create: Түзүү
       algebra_game: Алгебра
       applab: App Lab
       artist: Сүрөтчү
       artist_k1: Сүрөтчү (мектепке чейин)
       basketball: Баскетбол
       bounce: Bounce
+      create: Түзүү
       gamelab: Оюн лабы
       gamelab_jr: Game Lab (бета)
       iceage: Муз доору
@@ -93,29 +87,96 @@ ky:
       minecraft_hero: Minecraft каарманы
       playlab_k1: Play Lab (мектепке чейин)
       scratch: Scratch
+      signin: Кирүү
       weblab: Web Lab
-    popup:
-      prizes_link: кененирээк
+  okay: Окай
+  or: же
+  page_not_found_title: Барак табылган жок
+  parent_mailer:
+    parent_email_added_subject: Code.org сайтына кош келиңиз!
+  password:
+    change_form:
+      confirm_password: Жаңы сырсөздү тастыкта
+      new_password: Жаңы сырсөз
+    reset_form:
+      submit: Кошуу
+  pd:
+    form_entries:
+      email_opt_in:
+        opt_in_no: Жок
+        opt_in_yes: Ооба
+      resources:
+        khan: Khan Academy
+        other: Башка
+        scratch: Scratch
+      robotics:
+        grok: Grok үйрөнүү
+        other: Башка
+      subjects:
+        cs: Информатика
+        la: Тил өнөрлөрү
+        math: Математика
+        other: Башка
+        science: Илим
+      workshop_course:
+        other: Башка
+    form_labels:
+      colombian_school_city: Мектеп жайгашкан шаар
+      email: Эмейл
+      school_city: Мектеп жайгашкан шаар
+  progress:
+    not_started: баштала элек
+  project:
+    abuse:
+      report_abuse_form:
+        abuse_type:
+          other: Башка
+    create_a_project: 'Жаңы долбоор түзүү:'
+    name: Аты
+    new: Жаңысын түзүү
+    saved: Сакталды
+    view_all: Долбоорлорумду көрүү
+  race_interstitial:
+    decline: Жабуу
+    races:
+      other: Башка
+    submit: Кошуу
+  school_info:
+    other: Башка
+  section:
+    type:
+      email: Эмейл
+      google_classroom: Google Classroom
+  signin_form:
+    login: Эмейл
+    password: Сырсөз
+    submit: Кирүү
+  signinsection:
+    login: Кирүү
+  signup_form:
+    age: Жашы
+    email_preference_no: Жок
+    email_preference_privacy: "(Купуялуулук саясатыбызды карагыла)"
+    email_preference_yes: Ооба
+    field_is_required: милдеттүү
+    hoc_already_signed_up_heading: Кирбей баштоо
+    share_teacher_email_reg_partner_preference_no: Жок
+    share_teacher_email_reg_partner_preference_yes: Ооба
+    submit: Катталуу
+  stage_number: "%{number}-сабак"
+  studio:
+    all_courses: Бардык курстар
+  submit: Кошуу
   teacher:
     dashboard: Мугалимдин тактасы
     panel:
       section: Секция
-  user:
-    none: Жок
-  home:
-    trynow: Дагы кара
-  certificate_hour_of_code: Код сааты
-  video:
-    tab: Видео.
-    notes: Видео жокпу? Эскертмелери көрсөт.
-    show_notes: Эскертмелери көрсөт
-    label: Видео
-  compatibility:
-    upgrade:
-      link: Дагы кара
-  builder:
-    level:
-      create: Жаңы деңгээл түзүү
+  teacher_mailer:
+    new_teacher_subject: Code.org сайтына кош келиңиз!
+  terms_interstitial:
+    print: Бастыр
+  time:
+    day: күн
   upsell:
     applab:
       title: App Lab
@@ -132,72 +193,11 @@ ky:
       body: Play Lab колдонуп, Disney Infinity каармандары катышкан окуя же оюн түзгүлө.
     unplugged_conditionals:
       title: Шартуулар
-  landing:
-    support: Жардам ал
-  multi-submittable:
-    wrong_title: Рахмат
-    correct_title: Рахмат
-  level_group:
-    wrong_title: Рахмат
-    correct_title: Рахмат
-  level_group-submittable:
-    wrong_title: Рахмат
-    correct_title: Рахмат
-  dialog:
-    ok: OK
-    startover_title: Кайрадан баштагыңыз келгени аныкпы?
-    startover_ok: Кайра баштоо
-    startover_cancel: Жок кыл
-  time:
-    day: күн
-  terms_interstitial:
-    print: Бастыр
-  race_interstitial:
-    races:
-      other: Башка
-    submit: Кошуу
-    decline: Жабуу
-  progress:
-    not_started: баштала элек
-  studio:
-    all_courses: Бардык курстар
-  project:
-    create_a_project: 'Жаңы долбоор түзүү:'
-    new: Жаңысын түзүү
-    name: Аты
-    saved: Сакталды
-    view_all: Долбоорлорумду көрүү
-    abuse:
-      report_abuse_form:
-        abuse_type:
-          other: Башка
-  hoc_download:
-    minecraft_name: Minecraft код сааты
-    windows: Windows
+  user:
+    none: Жок
+  video:
+    label: Видео
+    notes: Видео жокпу? Эскертмелери көрсөт.
+    show_notes: Эскертмелери көрсөт
+    tab: Видео.
   view_all_units: Бардык бирдиктерди көрүү
-  pd:
-    form_labels:
-      email: Эмейл
-      school_city: Мектеп жайгашкан шаар
-      colombian_school_city: Мектеп жайгашкан шаар
-    form_entries:
-      subjects:
-        cs: Информатика
-        math: Математика
-        science: Илим
-        la: Тил өнөрлөрү
-        other: Башка
-      resources:
-        khan: Khan Academy
-        scratch: Scratch
-        other: Башка
-      robotics:
-        grok: Grok үйрөнүү
-        other: Башка
-      workshop_course:
-        other: Башка
-      email_opt_in:
-        opt_in_yes: Ооба
-        opt_in_no: Жок
-  page_not_found_title: Барак табылган жок
-  copy: Көчүрүү

@@ -52,11 +52,11 @@ fi:
         csd-2023:
           title: Tietojenkäsittelytieteiden löydöt
     resources:
-      curriculum/csd/2020:
-        name: Opetussuunnitelma
       curriculum/csd/2017:
+        name: Opetussuunnitelma
+      curriculum/csd/2018:
         name: Opetussuunnitelma
       curriculum/csd/2019:
         name: Opetussuunnitelma
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: Opetussuunnitelma

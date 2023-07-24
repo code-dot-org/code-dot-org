@@ -21,39 +21,39 @@ mk:
       Dancelab_alternateMoves:
         options:
           GROUP:
-            sprites: сите
             '"ALIEN"': вонземјани
             '"CAT"': мачки
             '"DOG"': кучиња
             '"MOOSE"': лос
             '"ROBOT"': роботи
+            sprites: сите
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
-            sprites: сите
             '"ALIEN"': вонземјани
             '"CAT"': мачки
             '"DOG"': кучиња
             '"MOOSE"': лос
             '"ROBOT"': роботи
+            sprites: сите
       Dancelab_changePropEachBy:
         options:
           GROUP:
-            sprites: сите
             '"ALIEN"': вонземјани
             '"CAT"': мачки
             '"DOG"': кучиња
             '"MOOSE"': лос
             '"ROBOT"': роботи
+            sprites: сите
       Dancelab_doMoveEachLR:
         options:
           GROUP:
-            sprites: сите
             '"ALIEN"': вонземјани
             '"CAT"': мачки
             '"DOG"': кучиња
             '"MOOSE"': лос
             '"ROBOT"': роботи
+            sprites: сите
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -61,28 +61,28 @@ mk:
       Dancelab_jumpToEach:
         options:
           GROUP:
-            sprites: сите
             '"ALIEN"': вонземјани
             '"CAT"': мачки
             '"DOG"': кучиња
             '"MOOSE"': лос
             '"ROBOT"': роботи
+            sprites: сите
           LOCATION:
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": случајно
       Dancelab_layoutSprites:
         options:
+          FORMAT:
+            '"diamond"': дијамант
+            '"grid"': Мрежа
+            '"random"': случајно
+            '"spiral"': спирала
           GROUP:
-            sprites: сите
             '"ALIEN"': вонземјани
             '"CAT"': мачки
             '"DOG"': кучиња
             '"MOOSE"': лос
             '"ROBOT"': роботи
-          FORMAT:
-            '"diamond"': дијамант
-            '"grid"': Мрежа
-            '"spiral"': спирала
-            '"random"': случајно
+            sprites: сите
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
@@ -114,96 +114,96 @@ mk:
           LAYOUT:
             '"diamond"': дијамант
             '"grid"': Мрежа
-            '"spiral"': спирала
             '"random"': случајно
+            '"spiral"': спирала
       Dancelab_randomColor:
         text: случајна боја
       Dancelab_setDanceSpeed:
         options:
           SPEED:
+            '0.25': very slow
+            '0.5': slow
             '1': нормално
             '2': fast
             '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
-            sprites: сите
             '"ALIEN"': вонземјани
             '"CAT"': мачки
             '"DOG"': кучиња
             '"MOOSE"': лос
             '"ROBOT"': роботи
+            sprites: сите
           SPEED:
+            '0.25': very slow
+            '0.5': slow
             '1': нормално
             '2': fast
             '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setPropEach:
         options:
           GROUP:
-            sprites: сите
             '"ALIEN"': вонземјани
             '"CAT"': мачки
             '"DOG"': кучиња
             '"MOOSE"': лос
             '"ROBOT"': роботи
+            sprites: сите
       Dancelab_setPropRandomEach:
         options:
           GROUP:
-            sprites: сите
             '"ALIEN"': вонземјани
             '"CAT"': мачки
             '"DOG"': кучиња
             '"MOOSE"': лос
             '"ROBOT"': роботи
+            sprites: сите
       Dancelab_setTintEach:
         options:
           THIS:
-            sprites: сите
             '"ALIEN"': вонземјани
             '"CAT"': мачки
             '"DOG"': кучиња
             '"MOOSE"': лос
             '"ROBOT"': роботи
+            sprites: сите
       Dancelab_setTintEachInline:
         options:
           THIS:
-            sprites: сите
             '"ALIEN"': вонземјани
             '"CAT"': мачки
             '"DOG"': кучиња
             '"MOOSE"': лос
             '"ROBOT"': роботи
+            sprites: сите
       Dancelab_setVisibleEach:
         options:
           THIS:
-            sprites: сите
             '"ALIEN"': вонземјани
             '"CAT"': мачки
             '"DOG"': кучиња
             '"MOOSE"': лос
             '"ROBOT"': роботи
+            sprites: сите
       Dancelab_startMappingEach:
         options:
           GROUP:
-            sprites: сите
             '"ALIEN"': вонземјани
             '"CAT"': мачки
             '"DOG"': кучиња
             '"MOOSE"': лос
             '"ROBOT"': роботи
+            sprites: сите
       Dancelab_stopMappingEach:
         options:
           GROUP:
-            sprites: сите
             '"ALIEN"': вонземјани
             '"CAT"': мачки
             '"DOG"': кучиња
             '"MOOSE"': лос
             '"ROBOT"': роботи
+            sprites: сите
       Dancelab_translateStrings:
         options:
           STRING:
@@ -216,128 +216,6 @@ mk:
         options:
           EFFECT:
             '"rain"': дожд
-      gamelab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': Кога
-            '"while"': Додека
-      gamelab_collectibleBehaviors:
-        options:
-          BEHAVIOR:
-            new Behavior(spinning_right, []): се врти десно
-            new Behavior(spinning_left, []): врти лево
-            new Behavior(fluttering, []): разлетувањето
-            new Behavior(jittering, []): нервоза
-            new Behavior(wobbling, []): колебливи
-            new Behavior(wandering, []): талкање
-            new Behavior(patrolling, []): патролирање
-            new Behavior(moving_west_and_looping, []): се движат на запад и looping
-            new Behavior(moving_east_and_looping, []): движејќи се на исток и јамкајќи
-            new Behavior(moving_north_and_looping, []): движејќи се на север и јамкајќи
-            new Behavior(moving_south_and_looping, []): движење на југ и јамкање
-      gamelab_isKeyPressed:
-        options:
-          KEY:
-            '"i"': i
-      gamelab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': Кога
-            '"while"': Додека
-          KEY:
-            '"i"': i
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': Мрежа
-      gamelab_makeBurst:
-        options:
-          EFFECT:
-            '"burst"': пукна
-            '"rain"': дожд
-            '"spiral"': спирала
-      gamelab_makeNewSpriteGroup:
-        options:
-          FORMAT:
-            '"grid"': Мрежа
-      gamelab_makeSpritesWithSize:
-        options:
-          SIZE:
-            '30': small
-            '50': средни
-            '100': large
-      gamelab_playSoundOptions:
-        options:
-          SOUND:
-            "'sound://category_app/app_button_1.mp3'": копче
-            "'sound://category_collect/clicky_crunch.mp3'": криза
-            "'sound://category_pop/bubble_pop_cluster_1.mp3'": балонче
-            "'sound://category_animals/bear.mp3'": мечка
-            "'sound://category_animals/cow.mp3'": крава
-            "'sound://category_animals/pig.mp3'": прасе
-            "'sound://category_animals/sheep.mp3'": овци
-            "'sound://category_animals/goat.mp3'": коза
-            "'sound://category_animals/chicken.mp3'": пилешко
-            "'sound://category_animals/rooster.mp3'": петел
-            "'sound://category_animals/elephant.mp3'": слон
-            "'sound://category_animals/dolphin.mp3'": делфин
-            "'sound://category_animals/chick.mp3'": пиле
-            "'sound://category_animals/tiger.mp3'": тигар
-            "'sound://category_instrumental/harpe_pluck_1.mp3'": харфа
-            "'sound://category_retro/retro_game_ui_select_6.mp3'": Одбери
-            "'sound://category_digital/jump_7.mp3'": Рипај
-      gamelab_playSoundOptionsSoccer:
-        options:
-          SOUND:
-            "'sound://category_sports/Airhorn_SFX.mp3'": воздушенрог
-            "'sound://category_sports/One_Whistle_SFX.mp3'": свирче
-      gamelab_playerBehaviors:
-        options:
-          BEHAVIOR:
-            new Behavior(moving_with_arrow_keys, []): се движат со стрелките на тастатурата
-            new Behavior(driving_with_arrow_keys, []): возење со стрелките на тастатурата
-      gamelab_randColor:
-        text: случајна боја
-      gamelab_randomColor:
-        text: случајна боја
-      gamelab_setBackgroundImage:
-        options:
-          IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background.png"': суд
-            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': галаксија
-            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': Мрежа
-            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': ливада
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': сцена
-            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ѕвезди
-            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': метро
-            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': подземја
-      gamelab_setDefaultSpriteSize:
-        options:
-          SIZE:
-            '25': extra small
-            '50': small
-            '75': средни
-            '100': large
-      gamelab_setProp_dropdown:
-        options:
-          SIZE:
-            '25': extra small
-            '50': small
-            '75': средни
-            '100': large
-      gamelab_setSpeed_dropdown:
-        options:
-          SIZE:
-            '1': extra slow
-            '3': slow
-            '5': нормално
-            '7': fast
-            '9': extra fast
-      gamelab_spriteClicked:
-        options:
-          CONDITION:
-            '"when"': Кога
-            '"while"': Додека
       Mikelab_groupChangeAnim:
         options:
           SELECT:
@@ -375,24 +253,24 @@ mk:
       Mikelab_setBG:
         options:
           BG:
-            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': ливада
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': сцена
-            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': метро
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': подземја
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': метро
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': сцена
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': ливада
       Mikelab_whenKeyPressed:
         options:
           KEY:
-            '"w"': Запад
             '"a"': А
-            '"s"': Југ
             '"d"': Д
+            '"s"': Југ
+            '"w"': Запад
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"w"': Запад
             '"a"': А
-            '"s"': Југ
             '"d"': Д
+            '"s"': Југ
+            '"w"': Запад
       Poetry_addFrame:
         options:
           BRUSH:
@@ -411,18 +289,18 @@ mk:
       Poetry_playMusic:
         options:
           SOUND:
-            '"sound://category_nature/steady_campfire_loop.mp3"': логорски оган
-            '"sound://category_nature/forest_woodland_ambience_2.mp3"': шума
             '"sound://category_background/ocean_waves.mp3"': океан
             '"sound://category_background/rainforest_ambient_sound.mp3"': прашума
             '"sound://category_background/wavering_wind.mp3"': поспан
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': шума
+            '"sound://category_nature/steady_campfire_loop.mp3"': логорски оган
       Poetry_playSound:
         options:
           SOUND:
-            '"sound://category_bell/long_bell_notification.mp3"': ѕвоно
-            '"sound://category_pop/bubble_pop_cluster_2.mp3"': балонче
-            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Рипај
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Светло
+            '"sound://category_bell/long_bell_notification.mp3"': ѕвоно
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Рипај
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': балонче
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -463,6 +341,12 @@ mk:
           N:
             '0': "???"
             '1': '1'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -471,12 +355,6 @@ mk:
             '7': '7'
             '8': '8'
             '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
       Vector_where:
         options:
           PROPERTY:
@@ -489,27 +367,27 @@ mk:
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '1': сите
-            '0.75': most
-            '0.5': half of
             '0.25': few
+            '0.5': half of
+            '0.75': most
+            '1': сите
       aalab_someStartIntervention:
         options:
           PORTION:
-            '1': сите
-            '0.75': most
-            '0.5': half of
             '0.25': few
+            '0.5': half of
+            '0.75': most
+            '1': сите
       adaptations_adaptationBehaviors:
         options:
           BEHAVIOR:
-            new Behavior(spinning_right, []): се врти десно
-            new Behavior(spinning_left, []): врти лево
             new Behavior(fluttering, []): разлетувањето
             new Behavior(jittering, []): нервоза
-            new Behavior(wobbling, []): колебливи
-            new Behavior(wandering, []): талкање
             new Behavior(patrolling, []): патролирање
+            new Behavior(spinning_left, []): врти лево
+            new Behavior(spinning_right, []): се врти десно
+            new Behavior(wandering, []): талкање
+            new Behavior(wobbling, []): колебливи
       craft_ifPath:
         options:
           DIR:
@@ -517,8 +395,8 @@ mk:
       craft_ifStandingOn:
         options:
           TYPE:
-            "'sand'": песок
             "'planksOak'": дабови штици
+            "'sand'": песок
       craft_ifStandingOnLimit:
         options:
           TYPE:
@@ -530,6 +408,128 @@ mk:
           ENTITY:
             '"dolphin"': делфин
             '"squid"': лигња
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': Кога
+            '"while"': Додека
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(fluttering, []): разлетувањето
+            new Behavior(jittering, []): нервоза
+            new Behavior(moving_east_and_looping, []): движејќи се на исток и јамкајќи
+            new Behavior(moving_north_and_looping, []): движејќи се на север и јамкајќи
+            new Behavior(moving_south_and_looping, []): движење на југ и јамкање
+            new Behavior(moving_west_and_looping, []): се движат на запад и looping
+            new Behavior(patrolling, []): патролирање
+            new Behavior(spinning_left, []): врти лево
+            new Behavior(spinning_right, []): се врти десно
+            new Behavior(wandering, []): талкање
+            new Behavior(wobbling, []): колебливи
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"i"': i
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': Кога
+            '"while"': Додека
+          KEY:
+            '"i"': i
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': Мрежа
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': пукна
+            '"rain"': дожд
+            '"spiral"': спирала
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"grid"': Мрежа
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '100': large
+            '30': small
+            '50': средни
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_animals/bear.mp3'": мечка
+            "'sound://category_animals/chick.mp3'": пиле
+            "'sound://category_animals/chicken.mp3'": пилешко
+            "'sound://category_animals/cow.mp3'": крава
+            "'sound://category_animals/dolphin.mp3'": делфин
+            "'sound://category_animals/elephant.mp3'": слон
+            "'sound://category_animals/goat.mp3'": коза
+            "'sound://category_animals/pig.mp3'": прасе
+            "'sound://category_animals/rooster.mp3'": петел
+            "'sound://category_animals/sheep.mp3'": овци
+            "'sound://category_animals/tiger.mp3'": тигар
+            "'sound://category_app/app_button_1.mp3'": копче
+            "'sound://category_collect/clicky_crunch.mp3'": криза
+            "'sound://category_digital/jump_7.mp3'": Рипај
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": харфа
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": балонче
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": Одбери
+      gamelab_playSoundOptionsSoccer:
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": воздушенрог
+            "'sound://category_sports/One_Whistle_SFX.mp3'": свирче
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(driving_with_arrow_keys, []): возење со стрелките на тастатурата
+            new Behavior(moving_with_arrow_keys, []): се движат со стрелките на тастатурата
+      gamelab_randColor:
+        text: случајна боја
+      gamelab_randomColor:
+        text: случајна боја
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': подземја
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': метро
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': сцена
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': ливада
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': суд
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': Мрежа
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ѕвезди
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': галаксија
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '100': large
+            '25': extra small
+            '50': small
+            '75': средни
+      gamelab_setProp_dropdown:
+        options:
+          SIZE:
+            '100': large
+            '25': extra small
+            '50': small
+            '75': средни
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': нормално
+            '7': fast
+            '9': extra fast
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': Кога
+            '"while"': Додека
       storylab_setForegroundEffect2:
         options:
           EFFECT:

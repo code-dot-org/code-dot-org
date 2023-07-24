@@ -1,7 +1,7 @@
 {
   "addCSSButton": "سی ایس ایس شامل کریں",
-  "addImageButton": "تصویر شامل کریں",
   "addHTMLButton": "ایچ ٹی ایم ایل شامل کریں",
+  "addImageButton": "تصویر شامل کریں",
   "closeFullscreenPreview": "مکمل اسکرین پیش نظارہ بند کریں",
   "currentProjectCapacity": "استعمال کیا جاتا ہے {totalMegabytes}MB کے {currentMegabytes}MB",
   "errorSavingProject": "آپ کے منصوبے کو خود کار طریقے سے بچانے کے دوران کچھ کام نہیں کیا. اپنے انٹرنیٹ کنکشن کی جانچ پڑتال کریں اور دستی طور پر بچانے کی کوشش کریں. اگر یہ مسئلہ برقرار رہتا ہے، تو صفحے کو دوبارہ شروع کرنے کی کوشش کریں.",
@@ -12,8 +12,8 @@
   "reloading": "دوبارہ لوڈ ہو رہا ہے...",
   "reset": "ویب لیب ری سیٹ کریں",
   "resetComplete": "ویب لیب ری سیٹ مکمل",
-  "toggleInspectorOn": "انسپکٹر: آف",
   "toggleInspectorOff": "انسپکٹر: پر",
+  "toggleInspectorOn": "انسپکٹر: آف",
   "troubleshootingSupport": "مزید معلومات کے لیے براہ کرم ہمارے سپورٹ آرٹیکل [\"ویب لیب کے مسائل کا ازالہ\"]({url}) ملاحظہ کریں۔",
   "uploadError": "غلطی اپ لوڈ کریں"
 }
