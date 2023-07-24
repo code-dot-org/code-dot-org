@@ -8,8 +8,10 @@ Scenario: Script Level Versions
   And I ensure droplet is in block mode
   And I switch to text mode
   And I add code "// comment 1" to ace editor
+  Then ace editor code is equal to "// comment 1"
   And I press "runButton"
   And element ".project_updated_at" eventually contains text "Saved"
+  And I wait until jQuery Ajax requests are finished
 
   # reloading here creates a previous version containing only comment 1
   And I reload the page
