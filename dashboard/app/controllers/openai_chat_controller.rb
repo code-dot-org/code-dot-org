@@ -11,7 +11,6 @@ class OpenaiChatController < ApplicationController
     messages = params[:messages]
     response = OpenaiChatHelper.request_chat_completion(messages)
     chat_completion_return_message = OpenaiChatHelper.get_chat_completion_response_message(response)
-    return render(json: chat_completion_return_message[:json]) if chat_completion_return_message[:status] == 200
     return render(status: chat_completion_return_message[:status], json: chat_completion_return_message[:json])
   end
 
