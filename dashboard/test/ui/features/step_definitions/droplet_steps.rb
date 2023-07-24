@@ -116,8 +116,12 @@ When /^ace editor code is equal to "([^"]+)"$/ do |expected_code|
 end
 
 def get_ace_editor_code
-  script = 'return __TestInterface.getDroplet().aceEditor.getValue().trim();'
-  @browser.execute_script(script)
+  steps 'I wait for 0.5 seconds'
+  @browser.execute_script <<-JS
+    const aceEditor = __TestInterface.getDroplet().aceEditor;
+    aceEditor.renderer.updateFull(true);
+    return aceEditor.getValue().trim();
+  JS
 end
 
 When /^I add code for a library function$/ do
