@@ -29,10 +29,6 @@ export default class InternationalOptIn extends FormController {
   serializeFormData() {
     const formData = super.serializeFormData();
     formData.form_data.email = this.props.accountEmail;
-    // Capitalize country values to be consistent with other country strings in our database
-    formData.form_data.schoolCountry = _.startCase(
-      formData.form_data.schoolCountry
-    );
     return formData;
   }
 
@@ -76,7 +72,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isColombiaSelected() {
-    return this.props.data?.schoolCountry === 'colombia';
+    return getCountryKey(this.props.data?.schoolCountry) === 'colombia';
   }
 
   /**
@@ -87,7 +83,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isChileSelected() {
-    return this.props.data?.schoolCountry === 'chile';
+    return getCountryKey(this.props.data?.schoolCountry) === 'chile';
   }
 
   /**
@@ -98,7 +94,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isUzbekistanSelected() {
-    return this.props.data?.schoolCountry === 'uzbekistan';
+    return getCountryKey(this.props.data?.schoolCountry) === 'uzbekistan';
   }
 
   /**
@@ -460,7 +456,7 @@ class InternationalOptInComponent extends FormComponent {
     const placeholder = selectedCountry ? undefined : i18n.selectCountryFirst();
 
     const organizers = this.props.options.workshopOrganizer[
-      selectedCountry
+      getCountryKey(selectedCountry)
     ] || [i18n.organizerNotListed()];
     const selectOrganizer = this.buildSelectFieldGroup({
       name: 'workshopOrganizer',
@@ -580,6 +576,10 @@ function dateStringToMoment(dateString) {
     return date;
   }
   return null;
+}
+
+function getCountryKey(countryName) {
+  return _.snakeCase(countryName);
 }
 
 InternationalOptInComponent.associatedFields = [
