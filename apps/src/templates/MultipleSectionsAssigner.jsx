@@ -222,6 +222,7 @@ const MultipleSectionsAssigner = ({
             )}
         </div>
         <Button
+          id="select-all-sections"
           text={i18n.selectAll()}
           onClick={selectAllHandler}
           styleAsText
