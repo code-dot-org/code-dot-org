@@ -93,6 +93,9 @@ When /^I add code "([^"]+)" to ace editor$/ do |code|
   add_code_to_editor(code)
 end
 
+And /^I append text to droplet "([^"]*)"$/ do |text|
+  add_code_to_editor(text, append: true)
+end
 
 def add_code_to_editor(code, append: false)
   script = <<-JS
