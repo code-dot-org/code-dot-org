@@ -62,8 +62,7 @@ class Ability
       Foorm::Library,
       Foorm::LibraryQuestion,
       :javabuilder_session,
-      CodeReview,
-      :openai_chat
+      CodeReview
     ]
     cannot :index, Level
 
@@ -281,10 +280,6 @@ class Ability
         can :index, :peer_review_submissions
         can :dashboard, :peer_reviews
         can :report_csv, :peer_review_submissions
-      end
-
-      if user.permission?(UserPermission::AI_CHAT_ACCESS)
-        can :chat_completion, :openai_chat
       end
     end
 
