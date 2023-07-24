@@ -1,7 +1,7 @@
-@import "color.scss";
-@import "./theme/tokens-dark";
-@import "./music-view.module.scss";
-@import "../../mixins.scss";
+@import 'color.scss';
+@import './theme/tokens-dark';
+@import './music-view.module.scss';
+@import '../../mixins.scss';
 
 .controlsContainer {
   display: flex;
@@ -26,55 +26,46 @@
 
 .controlButton {
   text-align: center;
-  color: $neutral_light;
-  width: 100%;
   display: flex;
+  width: 100%;
+  height: 38px;
+  font-size: 14px;
   justify-content: center;
+  align-items: center;
   border: initial;
-  margin: 0;
+  border-radius: 8px;
+  margin: 2px;
+  padding: 5px 10px;
 
   &:active {
     border: initial !important;
   }
 
   &Run {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    padding: 5px 10px;
+    flex: 2;
     background-color: #fca401;
-    border-radius: 8px;
-    height: 38px;
+    color: $neutral_light;
+    margin: 0;
 
     .text {
       padding-left: 10px;
     }
   }
 
-  &Icon {
-    @include remove-button-styles;
-    margin: 5px 15px;
+  &Skip {
+    flex: 0.5;
+    background-color: $neutral_dark20;
+    color: $neutral_dark;
+
+    &Disabled {
+      opacity: 50%;
+      cursor: default;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
   }
-
-  &Hide {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-
-.icon {
-  font-size: 30px;
-}
-
-.feedbackIcon {
-  color: $neutral_light;
-}
-
-.startOverButton {
-  background-color: rgba(0 0 0 / 0);
-  color: $neutral_light;
-  font-size: 14px;
-  padding: 0 8px;
 }
 
 .loadingProgress {
@@ -82,7 +73,7 @@
   height: 5px;
   background-color: $neutral_dark80;
   position: relative;
-  margin-top: auto;
+  margin-top: 15px;
   border-radius: 4px;
   overflow: hidden;
 
