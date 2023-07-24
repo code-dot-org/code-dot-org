@@ -1,8 +1,8 @@
 {
   "dropletBlock_createSprite_param3": "උස",
-  "dropletBlock_setCollider_param0": "වර්ගය",
-  "dropletBlock_setCollider_param4": "උස",
   "dropletBlock_setColliderEach_param0": "වර්ගය",
   "dropletBlock_setColliderEach_param4": "උස",
+  "dropletBlock_setCollider_param0": "වර්ගය",
+  "dropletBlock_setCollider_param4": "උස",
   "shareGame": "ඔබගේ ක්‍රීඩාව මිතුරන් අතරේ හුවමාරු කරන්න:"
 }

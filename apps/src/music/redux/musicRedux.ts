@@ -1,4 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {MIN_NUM_MEASURES} from '../constants';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
@@ -45,6 +46,8 @@ export interface MusicState {
    * number of sounds loaded out of the total number of sounds to load.
    */
   soundLoadingProgress: number;
+  /** The 1-based playhead position to start playback from, scaled to measures */
+  startingPlayheadPosition: number;
 }
 
 const initialState: MusicState = {
@@ -59,6 +62,7 @@ const initialState: MusicState = {
   playbackEvents: [],
   lastMeasure: 0,
   soundLoadingProgress: 0,
+  startingPlayheadPosition: 1,
 };
 
 const musicSlice = createSlice({
@@ -145,6 +149,21 @@ const musicSlice = createSlice({
     setSoundLoadingProgress: (state, action: PayloadAction<number>) => {
       state.soundLoadingProgress = action.payload;
     },
+    setStartPlayheadPosition: (state, action: PayloadAction<number>) => {
+      state.startingPlayheadPosition = action.payload;
+    },
+    moveStartPlayheadPositionForward: state => {
+      state.startingPlayheadPosition = Math.min(
+        state.startingPlayheadPosition + 1,
+        Math.max(state.lastMeasure, MIN_NUM_MEASURES)
+      );
+    },
+    moveStartPlayheadPositionBackward: state => {
+      state.startingPlayheadPosition = Math.max(
+        1,
+        state.startingPlayheadPosition - 1
+      );
+    },
   },
 });
 
@@ -152,14 +171,21 @@ const musicSlice = createSlice({
 export const getCurrentlyPlayingBlockIds = (state: {
   music: MusicState;
 }): string[] => {
-  const {currentPlayheadPosition, playbackEvents} = state.music;
+  const {isPlaying, currentPlayheadPosition, playbackEvents} = state.music;
+  if (!isPlaying) {
+    return [];
+  }
   const playingBlockIds: string[] = [];
 
   playbackEvents.forEach((playbackEvent: PlaybackEvent) => {
     const currentlyPlaying =
       currentPlayheadPosition !== 0 &&
       currentPlayheadPosition >= playbackEvent.when &&
-      currentPlayheadPosition < playbackEvent.when + playbackEvent.length;
+      currentPlayheadPosition < playbackEvent.when + playbackEvent.length &&
+      !(
+        playbackEvent.skipContext?.insideRandom &&
+        playbackEvent.skipContext?.skipSound
+      );
 
     if (currentlyPlaying) {
       playingBlockIds.push(playbackEvent.blockId);
@@ -194,4 +220,7 @@ export const {
   clearPlaybackEvents,
   addPlaybackEvents,
   setSoundLoadingProgress,
+  setStartPlayheadPosition,
+  moveStartPlayheadPositionForward,
+  moveStartPlayheadPositionBackward,
 } = musicSlice.actions;

@@ -1,11 +1,16 @@
 {
-  "navigateBack": "Бозгашт",
-  "incorrectAnswer": "Нодуруст",
   "datasets": {
     "billionaires": {
       "fields": {
         "Gender": {
           "id": "Ҷинс"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Кишвар"
         }
       }
     },
@@ -25,17 +30,64 @@
           "id": "Кишвар"
         },
         "Gender": {
-          "id": "Ҷинс",
-          "description": "Ҷинс"
+          "description": "Ҷинс",
+          "id": "Ҷинс"
         }
       }
     },
-    "loneliness_music": {
+    "taco_toppings_toy": {
+    },
+    "thanksgiving": {
+      "card": {
+      },
       "fields": {
-        "Country": {
-          "id": "Кишвар"
+      }
+    },
+    "zoo": {
+      "card": {
+        "context": {
+        }
+      },
+      "fields": {
+        "Airborne": {
+        },
+        "Animal Name": {
+        },
+        "Aquatic": {
+        },
+        "Backbone": {
+        },
+        "Breathes": {
+        },
+        "Catsize": {
+        },
+        "Class": {
+        },
+        "Domestic": {
+        },
+        "Eggs": {
+        },
+        "Feathers": {
+        },
+        "Fins": {
+        },
+        "Hair": {
+        },
+        "Legs": {
+        },
+        "Milk": {
+        },
+        "Predator": {
+        },
+        "Tail": {
+        },
+        "Toothed": {
+        },
+        "Venomous": {
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Нодуруст",
+  "navigateBack": "Бозгашт"
 }

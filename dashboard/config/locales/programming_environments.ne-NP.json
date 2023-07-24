@@ -2,8 +2,113 @@
   "ne-NP": {
     "data": {
       "programming_environments": {
+        "applab": {
+          "categories": {
+            "advanced": {
+            },
+            "canvas": {
+            },
+            "circuit": {
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Function"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Function"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "Functions"
+            },
+            "maker": {
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "The maximum number returned"
+                    },
+                    "min": {
+                      "description": "The minimum number returned"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "The maximum number returned"
+                    },
+                    "min": {
+                      "description": "The minimum number returned"
+                    }
+                  }
+                }
+              },
+              "name": "Math"
+            },
+            "micro_bit": {
+            },
+            "turtle": {
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Function"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Plays the MP3 sound file from the specified URL."
+                }
+              }
+            },
+            "variables": {
+              "name": "Variables"
+            }
+          },
+          "description": "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.",
+          "name": "App Lab"
+        },
         "gamelab": {
           "categories": {
+            "control": {
+              "expressions": {
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "तारा"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "expressions": {
+              },
+              "name": "Functions"
+            },
             "game_lab": {
               "expressions": {
                 "playSound": {
@@ -12,7 +117,6 @@
               }
             },
             "groups": {
-              "name": "समूहहरु",
               "expressions": {
                 "setColorEach": {
                   "palette_params": {
@@ -28,153 +132,237 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "तारा"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "समूहहरु"
             },
             "math": {
-              "name": "Math",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "The minimum number returned"
-                    },
                     "max": {
                       "description": "The maximum number returned"
+                    },
+                    "min": {
+                      "description": "The minimum number returned"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "The minimum number returned"
-                    },
                     "max": {
                       "description": "The maximum number returned"
+                    },
+                    "min": {
+                      "description": "The minimum number returned"
                     }
                   }
                 }
+              },
+              "name": "Math"
+            },
+            "sprites": {
+              "expressions": {
               }
             },
             "variables": {
+              "expressions": {
+              },
               "name": "Variables"
-            },
-            "functions": {
-              "name": "Functions"
-            }
-          }
-        },
-        "applab": {
-          "name": "App Lab",
-          "description": "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Function"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Plays the MP3 sound file from the specified URL."
-                }
-              }
-            },
-            "data": {
-              "expressions": {
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Function"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Function"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Math",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "The minimum number returned"
-                    },
-                    "max": {
-                      "description": "The maximum number returned"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "The minimum number returned"
-                    },
-                    "max": {
-                      "description": "The maximum number returned"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Variables"
-            },
-            "functions": {
-              "name": "Functions"
             }
           }
         },
         "spritelab": {
           "categories": {
-            "world": {
-              "name": "विश्व"
-            },
             "actions": {
               "name": "Actions"
             },
             "events": {
               "name": "घटनाहरु"
             },
-            "loops": {
-              "name": "Loops"
-            },
-            "variables": {
-              "name": "Variables"
-            },
-            "math": {
-              "name": "Math"
+            "functions": {
+              "name": "Functions"
             },
             "logic": {
               "name": "लजिक"
             },
-            "functions": {
-              "name": "Functions"
+            "loops": {
+              "name": "Loops"
+            },
+            "math": {
+              "name": "Math"
             },
             "text": {
               "name": "Text"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "world": {
+              "name": "विश्व"
+            }
+          }
+        },
+        "weblab": {
+          "categories": {
+            "css_properties": {
+              "expressions": {
+                "Text-Dec": {
+                  "examples": {
+                  }
+                },
+                "background-color": {
+                  "examples": {
+                  }
+                },
+                "border": {
+                  "examples": {
+                  }
+                },
+                "border-bottom": {
+                  "examples": {
+                  }
+                },
+                "border-color": {
+                  "examples": {
+                  }
+                },
+                "border-left": {
+                  "examples": {
+                  }
+                },
+                "border-radius": {
+                  "examples": {
+                  }
+                },
+                "border-right": {
+                  "examples": {
+                  }
+                },
+                "border-style": {
+                  "examples": {
+                  }
+                },
+                "border-top": {
+                  "examples": {
+                  }
+                },
+                "border-width": {
+                  "examples": {
+                  }
+                },
+                "color": {
+                  "examples": {
+                  }
+                },
+                "float": {
+                  "examples": {
+                  }
+                },
+                "font-family": {
+                  "examples": {
+                  }
+                },
+                "font-size": {
+                  "examples": {
+                  }
+                },
+                "height": {
+                  "examples": {
+                  }
+                },
+                "margin": {
+                  "examples": {
+                  }
+                },
+                "pad": {
+                  "examples": {
+                  }
+                },
+                "pseudo-classes": {
+                  "examples": {
+                  }
+                },
+                "rgb-color": {
+                  "examples": {
+                  }
+                },
+                "width": {
+                  "examples": {
+                  }
+                }
+              }
+            },
+            "html_tags": {
+              "expressions": {
+                "A": {
+                  "examples": {
+                  }
+                },
+                "P": {
+                  "examples": {
+                  }
+                },
+                "body": {
+                  "examples": {
+                  }
+                },
+                "comment": {
+                  "examples": {
+                  }
+                },
+                "div": {
+                  "examples": {
+                  }
+                },
+                "doctype": {
+                  "examples": {
+                  }
+                },
+                "h": {
+                  "examples": {
+                  }
+                },
+                "head": {
+                  "examples": {
+                  }
+                },
+                "html": {
+                  "examples": {
+                  }
+                },
+                "img": {
+                  "examples": {
+                  }
+                },
+                "li": {
+                  "examples": {
+                  }
+                },
+                "link": {
+                  "examples": {
+                  }
+                },
+                "meta": {
+                  "examples": {
+                  }
+                },
+                "ol": {
+                  "examples": {
+                  }
+                },
+                "style": {
+                  "examples": {
+                  }
+                },
+                "title": {
+                  "examples": {
+                  }
+                },
+                "ul": {
+                  "examples": {
+                  }
+                }
+              }
             }
           }
         }

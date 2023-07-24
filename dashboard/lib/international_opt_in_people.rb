@@ -20,6 +20,7 @@ module InternationalOptInPeople
     israel: ["Wix.com"],
     jamaica: ["The Trust for the Americas"],
     kenya: ["STEAMLabs Africa"],
+    kosovo: ["SHPIQ"],
     malaysia: ["Malaysia Digital Economy Corporation"],
     maldives: ["Women in Tech Maldives"],
     mexico: ["Cuantrix"],

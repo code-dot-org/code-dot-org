@@ -2,17 +2,49 @@
   "da-DK": {
     "data": {
       "standard_categories": {
+        "C": {
+          "description": "Tunnel"
+        },
         "CT": {
           "description": "Data-Tænkning"
+        },
+        "ESS": {
+        },
+        "ESS1": {
+        },
+        "ESS2": {
+        },
+        "ESS3": {
+        },
+        "ETS": {
+        },
+        "ETS1": {
+        },
+        "F": {
+          "description": "Funktioner"
         },
         "L": {
           "description": "Sprog"
         },
-        "C": {
-          "description": "Tunnel"
+        "LS": {
         },
-        "F": {
-          "description": "Funktioner"
+        "LS1": {
+        },
+        "LS2": {
+        },
+        "LS3": {
+        },
+        "LS4": {
+        },
+        "PS": {
+        },
+        "PS1": {
+        },
+        "PS2": {
+        },
+        "PS3": {
+        },
+        "PS4": {
         }
       }
     }

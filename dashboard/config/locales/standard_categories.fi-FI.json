@@ -2,17 +2,49 @@
   "fi-FI": {
     "data": {
       "standard_categories": {
+        "C": {
+          "description": "Ympyrät"
+        },
         "CT": {
           "description": "Laskennallinen ajattelu"
+        },
+        "ESS": {
+        },
+        "ESS1": {
+        },
+        "ESS2": {
+        },
+        "ESS3": {
+        },
+        "ETS": {
+        },
+        "ETS1": {
+        },
+        "F": {
+          "description": "Funktiot"
         },
         "L": {
           "description": "Kieli"
         },
-        "C": {
-          "description": "Ympyrät"
+        "LS": {
         },
-        "F": {
-          "description": "Funktiot"
+        "LS1": {
+        },
+        "LS2": {
+        },
+        "LS3": {
+        },
+        "LS4": {
+        },
+        "PS": {
+        },
+        "PS1": {
+        },
+        "PS2": {
+        },
+        "PS3": {
+        },
+        "PS4": {
         }
       }
     }

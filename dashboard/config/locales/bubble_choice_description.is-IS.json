@@ -2,28 +2,25 @@
   "is-IS": {
     "data": {
       "bubble_choice_description": {
-        "courseC_artist_prog_challenge1_2021": "Teiknaðu bás fyrir hvert dýr. ",
-        "courseD_bee_nestedLoops8_2021": "Safnaðu öllum blómasafanum úr hverju blómi og búðu til hunang í hverju búi. \r\n\r\nNotaðu faldaða lykkju. ",
-        "courseD_bee_nestedLoops9_2021": "Búðu til allt hunangið.",
-        "courseF_bee_variables_7a_2021": "Þessi þraut er aðeins öðruvísi. Hvað þarft þú að gera til að leysa hana?",
-        "ramp_artist_loops8_2021": "Leitaðu að endurtekningu og styttu þennan kóða með því að nota lykkjur.",
-        "courseF_extras_sim": "Búa til og sérsmíða þinn eigin hermi!",
-        "spritelab_extras_repeat": "Búa til marga eins kvika fljótt með lykkjum!",
-        "ramp_artist_loops4_2021": "Búðu til þetta stjörnumynstur með því að setja röð aðgerða í lykkju",
         "courseC_artist_prog_challenge12022": "Teiknaðu bás fyrir hvert dýr. ",
-        "courseD_artist_nestedLoops92022": "Getur þú fundið út hvernig svona mynd er búin til?",
-        "courseD_bee_nestedLoops82022": "Safnaðu öllum blómasafanum úr hverju blómi og búðu til hunang í hverju búi. \r\n\r\nNotaðu faldaða lykkju. ",
-        "courseD_bee_nestedLoops92022": "Búðu til allt hunangið.",
-        "courseF_bee_variables_7a2022": "Þessi þraut er aðeins öðruvísi. Hvað þarft þú að gera til að leysa hana?",
-        "ramp_artist_loops82022": "Leitaðu að endurtekningu og styttu þennan kóða með því að nota lykkjur.",
-        "courseC_artist_prog7_2021": "Þetta nafnspjald gæludýrs hefur sérstakt form!",
-        "courseC_artist_prog_challenge2a_2021": "Hjálpaðu mér að teikna gulu línurnar á þessum vegi!",
+        "courseC_artist_prog_challenge1_2021": "Teiknaðu bás fyrir hvert dýr. ",
         "courseD_artist_nestedLoops32022": "Notaðu nýju færnina þína til að teikna fljótt síðustu gluggaröðina á þessari byggingu.",
         "courseD_artist_nestedLoops52022": "Notaðu það sem þú hefur lært til að teikna þessa hringi.",
         "courseD_artist_nestedLoops72022": "Notaðu það sem þú hefur lært til að teikna þessa ferninga.",
         "courseD_artist_nestedLoops82022": "Notaðu það sem þú hefur lært til að teikna þessa sexhyrninga.",
+        "courseD_artist_nestedLoops92022": "Getur þú fundið út hvernig svona mynd er búin til?",
         "courseD_artist_nestedLoops9_predict12022": "Hvaða teikningu mun þetta forrit búa til þegar þú smellir á „Keyra“?",
-        "ramp_artist_loops62022": "Lagaðu lykkjuna í þessum tröppum til að ljúka við þrautina."
+        "courseD_bee_nestedLoops82022": "Safnaðu öllum blómasafanum úr hverju blómi og búðu til hunang í hverju búi. \r\n\r\nNotaðu faldaða lykkju. ",
+        "courseD_bee_nestedLoops8_2021": "Safnaðu öllum blómasafanum úr hverju blómi og búðu til hunang í hverju búi. \r\n\r\nNotaðu faldaða lykkju. ",
+        "courseD_bee_nestedLoops92022": "Búðu til allt hunangið.",
+        "courseD_bee_nestedLoops9_2021": "Búðu til allt hunangið.",
+        "courseF_bee_variables_7a2022": "Þessi þraut er aðeins öðruvísi. Hvað þarft þú að gera til að leysa hana?",
+        "courseF_bee_variables_7a_2021": "Þessi þraut er aðeins öðruvísi. Hvað þarft þú að gera til að leysa hana?",
+        "courseF_extras_sim": "Búa til og sérsmíða þinn eigin hermi!",
+        "ramp_artist_loops62022": "Lagaðu lykkjuna í þessum tröppum til að ljúka við þrautina.",
+        "ramp_artist_loops82022": "Leitaðu að endurtekningu og styttu þennan kóða með því að nota lykkjur.",
+        "ramp_artist_loops8_2021": "Leitaðu að endurtekningu og styttu þennan kóða með því að nota lykkjur.",
+        "spritelab_extras_repeat": "Búa til marga eins kvika fljótt með lykkjum!"
       }
     }
   }

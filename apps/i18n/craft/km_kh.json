@@ -1,9 +1,9 @@
 {
   "absolute": "ដាច់​ខាត",
+  "agentDiamondPathCongrats": "អប់អរសាទរ​!អ្នកបានរកឃើញនូវផ្លូវគ្រាប់ពេជ្រហើយ! ​​​​​​អ្នកបានប្រមូល{count, plural, one{ពេជ្រមួយគ្រាប់}other {#គ្រាប់ពេជ្រ}}!",
   "agentGenericFailureMessage": "បន្តសរសេរកូដ​​!​ ត្រូវចាំថាប្រើប្រាស់ជំនួយការដើម្បីជួយ។",
   "agentTooFewBlocksFailureMessage": "ព្យាយាមបន្ថែមប្លុកម្ដងមួយ ដើម្បីអោយជំនួយការដើរដល់ចំនុចដែលត្រឹមត្រូវ។",
   "at": "នៅត្រង់",
-  "agentDiamondPathCongrats": "អប់អរសាទរ​!អ្នកបានរកឃើញនូវផ្លូវគ្រាប់ពេជ្រហើយ! ​​​​​​អ្នកបានប្រមូល{count, plural, one{ពេជ្រមួយគ្រាប់}other {#គ្រាប់ពេជ្រ}}!",
   "blockActionAdd": "បន្ថែម",
   "blockActionAttack": "វាយ",
   "blockActionClone": "បង្កើតប្លុកដែលដូចគ្នា",

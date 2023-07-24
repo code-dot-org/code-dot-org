@@ -1,9 +1,9 @@
 {
   "absolute": "აბსოლუტური",
+  "agentDiamondPathCongrats": "გილოცავთ, თქვენ ალმასის გზა იპოვნეთ! აქამდე თქვენ უკვე შეაგროვეთ {count, plural, one {1 ალმასი} other {# ალმასი}}!",
   "agentGenericFailureMessage": "განაგრძეთ კოდის წერა! დახმარებისთვის არ დაგავიწყდეთ აგენტის გამოყენება.",
   "agentTooFewBlocksFailureMessage": "აგენტის სწორ ადგილზე მისაყვანად სცადეთ ბლოკების სათითაოდ დამატება.",
   "at": " ",
-  "agentDiamondPathCongrats": "გილოცავთ, თქვენ ალმასის გზა იპოვნეთ! აქამდე თქვენ უკვე შეაგროვეთ {count, plural, one {1 ალმასი} other {# ალმასი}}!",
   "blockActionAdd": "დამატება",
   "blockActionAttack": "შეტევა",
   "blockActionClone": "ბლოკების კლონირება",

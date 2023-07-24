@@ -2,224 +2,836 @@
   "sm-WS": {
     "data": {
       "resources": {
-        "poem_art_celebration/poem-art/2021": {
-          "type": "Ata faasolo"
+        "standard_mappings/csd/2017": {
+          "name": "Fua Faatatau mo Faafanua"
         },
-        "poem_art_events/poem-art/2021": {
-          "type": "Ata faasolo"
-        },
-        "poem_art_imagery/poem-art/2021": {
-          "type": "Ata faasolo"
-        },
-        "poem_art_introduction/poem-art/2021": {
-          "type": "Ata faasolo"
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "type": "Ata faasolo"
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "type": "Ata faasolo"
-        },
-        "ai-ml/oceans/unversioned": {
-          "type": "Ata faasolo"
-        },
-        "ai-societal/oceans/unversioned": {
-          "type": "Ata faasolo"
-        },
-        "ai-training/oceans/unversioned": {
-          "type": "Ata faasolo"
-        },
-        "curriculum_guide/coursed/2022": {
-          "name": "Taiala"
-        },
-        "teacher_forum/coursed/2022": {
+        "teacher_forum/csd/2017": {
           "name": "Talanoaga a Faiaoga"
         },
-        "graph_paper_programming_4/coursed/2022": {
-          "type": "Suega"
+        "vocabulary/csd/2017": {
+          "name": "Utuvagana"
         },
-        "pause_and_think_online/coursed/2022": {
-          "type": "Ata faasolo"
+        "code_introduced/csd/2017": {
+          "name": "Faailo fou ua faailoa"
         },
-        "conditionals_with_cards_2/coursed/2022": {
-          "type": "Suega"
+        "standard_mappings_1/csd/2017": {
+          "name": "Fua Faatatau mo Faafanua"
         },
-        "curriculum_guide/coursef/2022": {
-          "name": "Taiala"
-        },
-        "teacher_forum/coursef/2022": {
+        "teacher_forum_1/csd/2017": {
           "name": "Talanoaga a Faiaoga"
         },
-        "the_power_of_words_the_power_of_words/coursef/2022": {
+        "vocabulary_1/csd/2017": {
+          "name": "Utuvagana"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Faailo fou ua faailoa"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Utuvagana"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Faailo fou ua faailoa"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Utuvagana"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Utuvagana"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Faailo fou ua faailoa"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Utuvagana"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Utuvagana"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Faailo fou ua faailoa"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Utuvagana"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Faailo fou ua faailoa"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Utuvagana"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Faailo fou ua faailoa"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Utuvagana"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Utuvagana"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Faailo fou ua faailoa"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Utuvagana"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Utuvagana"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Utuvagana"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Utuvagana"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Utuvagana"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Utuvagana"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Utuvagana"
+        },
+        "standard_mappings/express/2018": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/express/2018": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/express/2018": {
+          "name": "Utuvagana"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Utuvagana"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Faailo fou ua faailoa"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Utuvagana"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Faailo fou ua faailoa"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Utuvagana"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Faailo fou ua faailoa"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Utuvagana"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Utuvagana"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Faailo fou ua faailoa"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Utuvagana"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "Taiala"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Utuvagana"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "Taiala"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Utuvagana"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "Taiala"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Utuvagana"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "Taiala"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Utuvagana"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "Taiala"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Utuvagana"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "Taiala"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Utuvagana"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/express/2019": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/express/2019": {
+          "name": "Utuvagana"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "Taiala"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Utuvagana"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "Taiala"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Utuvagana"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "Taiala"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Utuvagana"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Taiala"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Utuvagana"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Taiala"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Utuvagana"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Taiala"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Utuvagana"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/express/2020": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/express/2020": {
+          "name": "Utuvagana"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "Fua Faatatau mo Faafanua"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Utuvagana"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "problem-solving-process-1/csd/2021": {
           "type": "Ata faasolo"
         },
-        "introducing_sprite_lab_1/coursef/2022": {
+        "what-is-a-computer-1-2-3/csd/2021": {
           "type": "Ata faasolo"
         },
-        "ai_impact_on_society/coursef/2022": {
+        "what-do-computers-do/csd/2021": {
           "type": "Ata faasolo"
         },
-        "ai_machine_learning/coursef/2022": {
-          "type": "Ata faasolo"
-        },
-        "ai_training_data_bias/coursef/2022": {
-          "type": "Ata faasolo"
-        },
-        "internet/coursef/2022": {
-          "type": "Suega"
-        },
-        "cs_fundamentals_final_project/coursef/2022": {
+        "apps_and_problem_solving/csd/2021": {
           "type": "Pusa tafafa"
         },
-        "curriculum_guide/coursee/2022": {
-          "name": "Taiala"
-        },
-        "teacher_forum/coursee/2022": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "pause_and_think_online/coursee/2022": {
+        "intro_to_web_lab_part_2/csd/2021": {
           "type": "Ata faasolo"
         },
-        "functions_unplugged_songwriting_2/coursee/2022": {
-          "type": "Suega"
-        },
-        "digital_sharing_ethics_video_/coursee/2022": {
+        "video_intro_to_web_lab_part_1/csd/2021": {
           "type": "Ata faasolo"
         },
-        "cs_fundamentals_final_project/coursee/2022": {
+        "video_pair_programming/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "video_debugging/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "html-web-page-1/csd/2021": {
           "type": "Pusa tafafa"
         },
-        "curriculum_guide/courseb/2022": {
-          "name": "Taiala"
+        "lists/csd/2021": {
+          "name": "Lisi"
         },
-        "teacher_forum/courseb/2022": {
+        "intro_to_css_-_part_1/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "Pusa tafafa"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "Pusa tafafa"
+        },
+        "publishing_your_website/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "Pusa tafafa"
+        },
+        "teacher_forum_1/csd/2021": {
           "name": "Talanoaga a Faiaoga"
         },
-        "wiggles_-_gonoodle/courseb/2022": {
+        "drawing_in_game_lab_-_part_1/csd/2021": {
           "type": "Ata faasolo"
         },
-        "unspotted_bugs/courseb/2022": {
+        "drawing_in_game_lab_-_part_2/csd/2021": {
           "type": "Ata faasolo"
         },
-        "getting_loopy_2/courseb/2022": {
-          "type": "Suega"
-        },
-        "pause_and_think_online/courseb/2022": {
+        "introduction-to-variables/csd/2021": {
           "type": "Ata faasolo"
         },
-        "the_big_event_1/courseb/2022": {
-          "type": "Suega"
-        },
-        "teacher_forum/express/2022": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "pair_programming/express/2022": {
-          "type": "Ata faasolo"
-        },
-        "artist_introduction/express/2022": {
-          "type": "Ata faasolo"
-        },
-        "turns_angles/express/2022": {
-          "type": "Ata faasolo"
-        },
-        "pause_and_think_online/express/2022": {
-          "type": "Ata faasolo"
-        },
-        "pair_programming_video/express/2022": {
-          "type": "Ata faasolo"
-        },
-        "variables/express/2022": {
+        "variables_1/csd/2021": {
           "name": "Fuainumera lasi "
         },
-        "cs_fundamentals_final_project/express/2022": {
+        "introduction_to_sprites/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "the_animation_tab/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "captioned-scenes/csd/2021": {
           "type": "Pusa tafafa"
         },
-        "teacher_forum/pre-express/2022": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "20_20_20_rule/pre-express/2022": {
+        "youtube-flipbook/csd/2021": {
           "type": "Ata faasolo"
         },
-        "wiggles_-_go_noodle/pre-express/2022": {
+        "introduction_to_the_draw_loop/csd/2021": {
           "type": "Ata faasolo"
         },
-        "pause_and_think_online/pre-express/2022": {
+        "animating-sprites/csd/2021": {
           "type": "Ata faasolo"
         },
-        "curriculum_guide/coursea/2022": {
+        "animated-scene-1/csd/2021": {
+          "type": "Pusa tafafa"
+        },
+        "boolean_expressions/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "conditional_statements/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "if_else_statements/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "interactive_card/csd/2021": {
+          "type": "Pusa tafafa"
+        },
+        "velocity_1/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "side-scroller-1/csd/2021": {
+          "type": "Pusa tafafa"
+        },
+        "flyer-game-1/csd/2021": {
+          "type": "Pusa tafafa"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "Pusa tafafa"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "paper-prototypes/csd/2021": {
+          "type": "Pusa tafafa"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "app-presentation/csd/2021": {
+          "type": "Pusa tafafa"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "Pusa tafafa"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "video_machine_learning/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "Pusa tafafa"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "Pusa tafafa"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "circuits-logic-video/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "Pusa tafafa"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "seeing_ai/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "Pusa tafafa"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "Ata faasolo"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "Pusa tafafa"
+        },
+        "curriculum_guide_1/coursea/2021": {
           "name": "Taiala"
         },
-        "teacher_forum/coursea/2022": {
+        "teacher_forum_1/coursea/2021": {
           "name": "Talanoaga a Faiaoga"
         },
-        "getting_started_-_creating_a_class_section/coursea/2022": {
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "Ata faasolo"
         },
-        "wiggles-go_noodle/coursea/2022": {
+        "wiggles-go_noodle/coursea/2021": {
           "type": "Ata faasolo"
         },
-        "wiggles_-_gonoodle/coursea/2022": {
+        "wiggles_-_gonoodle/coursea/2021": {
           "type": "Ata faasolo"
         },
-        "debugging_with_the_step_button/coursea/2022": {
+        "csf_debugging_k1_blocks/coursea/2021": {
           "type": "Ata faasolo"
         },
-        "pair-programming/coursea/2022": {
+        "pair-programming/coursea/2021": {
           "type": "Ata faasolo"
         },
-        "pause_and_think_online/coursea/2022": {
+        "common-sense-media-pause-think/coursea/2021": {
           "type": "Ata faasolo"
         },
-        "the_big_event_1/coursea/2022": {
+        "csf-the-big-event-assessment/coursea/2021": {
           "type": "Suega"
         },
-        "curriculum_guide/coursec/2022": {
+        "curriculum_guide_1/courseb/2021": {
           "name": "Taiala"
         },
-        "teacher_forum/coursec/2022": {
+        "teacher_forum_1/courseb/2021": {
           "name": "Talanoaga a Faiaoga"
         },
-        "pair_programming/coursec/2022": {
+        "wiggles_-_gonoodle/courseb/2021": {
           "type": "Ata faasolo"
         },
-        "the_big_event_1/coursec/2022": {
-          "type": "Suega"
-        },
-        "pause_and_think_online/coursec/2022": {
+        "unspotted_bugs/courseb/2021": {
           "type": "Ata faasolo"
         },
-        "binary_bracelets_3/coursec/2022": {
+        "csf-getting-loopy-assessment/courseb/2021": {
           "type": "Suega"
+        },
+        "common-sense-media-pause-think/courseb/2021": {
+          "type": "Ata faasolo"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "type": "Suega"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "type": "Ata faasolo"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "Taiala"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "type": "Ata faasolo"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "type": "Suega"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "type": "Ata faasolo"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "type": "Suega"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "Taiala"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "type": "Suega"
+        },
+        "pause_and_think_online/coursed/2021": {
+          "type": "Ata faasolo"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "type": "Ata faasolo"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "type": "Suega"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Taiala"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "type": "Ata faasolo"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "type": "Ata faasolo"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "type": "Suega"
+        },
+        "rubric-csf-final-projects/coursee/2021": {
+          "type": "Pusa tafafa"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Taiala"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "type": "Ata faasolo"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "type": "Ata faasolo"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "type": "Ata faasolo"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "type": "Suega"
+        },
+        "ai-ml/coursef/2021": {
+          "type": "Ata faasolo"
+        },
+        "ai-societal/coursef/2021": {
+          "type": "Ata faasolo"
+        },
+        "ai-training/coursef/2021": {
+          "type": "Ata faasolo"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "type": "Suega"
+        },
+        "rubric-csf-final-projects/coursef/2021": {
+          "type": "Pusa tafafa"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "pair_programming/express/2021": {
+          "type": "Ata faasolo"
+        },
+        "artist_introduction/express/2021": {
+          "type": "Ata faasolo"
+        },
+        "turns_angles/express/2021": {
+          "type": "Ata faasolo"
+        },
+        "pause_and_think_online/express/2021": {
+          "type": "Ata faasolo"
+        },
+        "pair_programming_video/express/2021": {
+          "type": "Ata faasolo"
+        },
+        "variables_video/express/2021": {
+          "name": "Fuainumera lasi "
+        },
+        "rubric-csf-final-projects/express/2021": {
+          "type": "Pusa tafafa"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "Talanoaga a Faiaoga"
+        },
+        "20_20_20_rule/pre-express/2021": {
+          "type": "Ata faasolo"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "type": "Ata faasolo"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "type": "Ata faasolo"
         },
         "teacher_forum/csd/2022": {
           "name": "Talanoaga a Faiaoga"
-        },
-        "binary_and_data/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "create_a_representation_2/csd/2022": {
-          "type": "Pusa tafafa"
-        },
-        "amazon_and_data/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "netflix_and_data/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "waze_and_data/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "video_impact_on_society/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "video_machine_learning/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "video_training_data_and_bias/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "make_a_recommendation_1/csd/2022": {
-          "type": "Pusa tafafa"
         },
         "problem_solving_process_1/csd/2022": {
           "type": "Ata faasolo"
@@ -231,6 +843,54 @@
           "type": "Ata faasolo"
         },
         "apps_and_problem_solving_2/csd/2022": {
+          "type": "Pusa tafafa"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "video_debugging/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "video_pair_programming/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "html_web_page/csd/2022": {
+          "type": "Pusa tafafa"
+        },
+        "lists/csd/2022": {
+          "name": "Lisi"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "Pusa tafafa"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "Pusa tafafa"
+        },
+        "publishing_your_website/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "video_teamwork/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "video_how_search_works/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "website_for_a_purpose/csd/2022": {
           "type": "Pusa tafafa"
         },
         "drawing_in_game_lab_-_part_1/csd/2022": {
@@ -299,54 +959,6 @@
         "make_your_own_game_3/csd/2022": {
           "type": "Pusa tafafa"
         },
-        "intro_to_web_lab_part_2/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "video_intro_to_web_lab_part_1/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "video_debugging/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "video_pair_programming/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "html_web_page/csd/2022": {
-          "type": "Pusa tafafa"
-        },
-        "lists/csd/2022": {
-          "name": "Lisi"
-        },
-        "intro_to_css_-_part_1/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "intro_to_css_-_part_2/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "your_personal_style/csd/2022": {
-          "type": "Pusa tafafa"
-        },
-        "creative_commons_overview/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "personal_web_page_1/csd/2022": {
-          "type": "Pusa tafafa"
-        },
-        "publishing_your_website/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "video_managing_disagreement/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "video_teamwork/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "video_how_search_works/csd/2022": {
-          "type": "Ata faasolo"
-        },
-        "website_for_a_purpose/csd/2022": {
-          "type": "Pusa tafafa"
-        },
         "the_design_thinking_process/csd/2022": {
           "type": "Ata faasolo"
         },
@@ -363,6 +975,33 @@
           "type": "Ata faasolo"
         },
         "app_presentation/csd/2022": {
+          "type": "Pusa tafafa"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "create_a_representation_2/csd/2022": {
+          "type": "Pusa tafafa"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "video_impact_on_society/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "video_machine_learning/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "type": "Ata faasolo"
+        },
+        "make_a_recommendation_1/csd/2022": {
           "type": "Pusa tafafa"
         },
         "computer_science_is_changing_everything/csd/2022": {
@@ -456,838 +1095,199 @@
         "design_an_ai_app_1/csd/2022": {
           "type": "Pusa tafafa"
         },
-        "standard_mappings/courseb/2018": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/courseb/2018": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary/courseb/2018": {
-          "name": "Utuvagana"
-        },
-        "standard_mappings/coursea/2018": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/coursea/2018": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary/coursea/2018": {
-          "name": "Utuvagana"
-        },
-        "standard_mappings/coursed/2018": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/coursed/2018": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary/coursed/2018": {
-          "name": "Utuvagana"
-        },
-        "standard_mappings/coursef/2018": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/coursef/2018": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary/coursef/2018": {
-          "name": "Utuvagana"
-        },
-        "standard_mappings/express/2018": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/express/2018": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary/express/2018": {
-          "name": "Utuvagana"
-        },
-        "standard_mappings/coursee/2018": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/coursee/2018": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary/coursee/2018": {
-          "name": "Utuvagana"
-        },
-        "standard_mappings/coursec/2018": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/coursec/2018": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary/coursec/2018": {
-          "name": "Utuvagana"
-        },
-        "code_introduced_1/csd/2018": {
-          "name": "Faailo fou ua faailoa"
-        },
-        "standard_mappings_2/csd/2018": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum_2/csd/2018": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary_2/csd/2018": {
-          "name": "Utuvagana"
-        },
-        "code_introduced_3/csd/2018": {
-          "name": "Faailo fou ua faailoa"
-        },
-        "standard_mappings_5/csd/2018": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum_5/csd/2018": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary_5/csd/2018": {
-          "name": "Utuvagana"
-        },
-        "standard_mappings_4/csd/2018": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum_4/csd/2018": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary_4/csd/2018": {
-          "name": "Utuvagana"
-        },
-        "code_introduced_2/csd/2018": {
-          "name": "Faailo fou ua faailoa"
-        },
-        "standard_mappings_3/csd/2018": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum_3/csd/2018": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary_3/csd/2018": {
-          "name": "Utuvagana"
-        },
-        "code_introduced/csd/2018": {
-          "name": "Faailo fou ua faailoa"
-        },
-        "standard_mappings_1/csd/2018": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum_1/csd/2018": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary_1/csd/2018": {
-          "name": "Utuvagana"
-        },
-        "standard_mappings/csd/2018": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/csd/2018": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary/csd/2018": {
-          "name": "Utuvagana"
-        },
-        "curriculum_guide/coursea/2019": {
+        "curriculum_guide/coursea/2022": {
           "name": "Taiala"
         },
-        "standard_mappings/coursea/2019": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/coursea/2019": {
+        "teacher_forum/coursea/2022": {
           "name": "Talanoaga a Faiaoga"
         },
-        "vocabulary/coursea/2019": {
-          "name": "Utuvagana"
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Ata faasolo"
         },
-        "curriculum_guide/courseb/2019": {
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Ata faasolo"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Ata faasolo"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Ata faasolo"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Ata faasolo"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Ata faasolo"
+        },
+        "the_big_event_1/coursea/2022": {
+          "type": "Suega"
+        },
+        "curriculum_guide/courseb/2022": {
           "name": "Taiala"
         },
-        "standard_mappings/courseb/2019": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/courseb/2019": {
+        "teacher_forum/courseb/2022": {
           "name": "Talanoaga a Faiaoga"
         },
-        "vocabulary/courseb/2019": {
-          "name": "Utuvagana"
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Ata faasolo"
         },
-        "curriculum_guide/coursed/2019": {
+        "unspotted_bugs/courseb/2022": {
+          "type": "Ata faasolo"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "type": "Suega"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Ata faasolo"
+        },
+        "the_big_event_1/courseb/2022": {
+          "type": "Suega"
+        },
+        "curriculum_guide/coursec/2022": {
           "name": "Taiala"
         },
-        "standard_mappings/coursed/2019": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/coursed/2019": {
+        "teacher_forum/coursec/2022": {
           "name": "Talanoaga a Faiaoga"
         },
-        "vocabulary/coursed/2019": {
-          "name": "Utuvagana"
+        "pair_programming/coursec/2022": {
+          "type": "Ata faasolo"
         },
-        "curriculum_guide/coursef/2019": {
+        "the_big_event_1/coursec/2022": {
+          "type": "Suega"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Ata faasolo"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "type": "Suega"
+        },
+        "curriculum_guide/coursed/2022": {
           "name": "Taiala"
         },
-        "standard_mappings/coursef/2019": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/coursef/2019": {
+        "teacher_forum/coursed/2022": {
           "name": "Talanoaga a Faiaoga"
         },
-        "vocabulary/coursef/2019": {
-          "name": "Utuvagana"
+        "graph_paper_programming_4/coursed/2022": {
+          "type": "Suega"
         },
-        "curriculum_guide/coursee/2019": {
+        "pause_and_think_online/coursed/2022": {
+          "type": "Ata faasolo"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "type": "Suega"
+        },
+        "curriculum_guide/coursee/2022": {
           "name": "Taiala"
         },
-        "standard_mappings/coursee/2019": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/coursee/2019": {
+        "teacher_forum/coursee/2022": {
           "name": "Talanoaga a Faiaoga"
         },
-        "vocabulary/coursee/2019": {
-          "name": "Utuvagana"
+        "pause_and_think_online/coursee/2022": {
+          "type": "Ata faasolo"
         },
-        "standard_mappings/express/2019": {
-          "name": "Fua Faatatau mo Faafanua"
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "Suega"
         },
-        "teacher_forum/express/2019": {
-          "name": "Talanoaga a Faiaoga"
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Ata faasolo"
         },
-        "vocabulary/express/2019": {
-          "name": "Utuvagana"
+        "cs_fundamentals_final_project/coursee/2022": {
+          "type": "Pusa tafafa"
         },
-        "curriculum_guide/coursec/2019": {
+        "curriculum_guide/coursef/2022": {
           "name": "Taiala"
         },
-        "standard_mappings/coursec/2019": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/coursec/2019": {
+        "teacher_forum/coursef/2022": {
           "name": "Talanoaga a Faiaoga"
         },
-        "vocabulary/coursec/2019": {
-          "name": "Utuvagana"
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Ata faasolo"
         },
-        "teacher_forum/csd/2019": {
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "Ata faasolo"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Ata faasolo"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Ata faasolo"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Ata faasolo"
+        },
+        "internet/coursef/2022": {
+          "type": "Suega"
+        },
+        "cs_fundamentals_final_project/coursef/2022": {
+          "type": "Pusa tafafa"
+        },
+        "teacher_forum/express/2022": {
           "name": "Talanoaga a Faiaoga"
         },
-        "code_introduced_1/csd/2019": {
-          "name": "Faailo fou ua faailoa"
+        "pair_programming/express/2022": {
+          "type": "Ata faasolo"
         },
-        "standard_mappings_2/csd/2019": {
-          "name": "Fua Faatatau mo Faafanua"
+        "artist_introduction/express/2022": {
+          "type": "Ata faasolo"
         },
-        "vocabulary_2/csd/2019": {
-          "name": "Utuvagana"
+        "turns_angles/express/2022": {
+          "type": "Ata faasolo"
         },
-        "code_introduced_3/csd/2019": {
-          "name": "Faailo fou ua faailoa"
+        "pause_and_think_online/express/2022": {
+          "type": "Ata faasolo"
         },
-        "standard_mappings_5/csd/2019": {
-          "name": "Fua Faatatau mo Faafanua"
+        "pair_programming_video/express/2022": {
+          "type": "Ata faasolo"
         },
-        "vocabulary_5/csd/2019": {
-          "name": "Utuvagana"
+        "variables/express/2022": {
+          "name": "Fuainumera lasi "
         },
-        "code_introduced_2/csd/2019": {
-          "name": "Faailo fou ua faailoa"
+        "cs_fundamentals_final_project/express/2022": {
+          "type": "Pusa tafafa"
         },
-        "standard_mappings_3/csd/2019": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "vocabulary_3/csd/2019": {
-          "name": "Utuvagana"
-        },
-        "standard_mappings_4/csd/2019": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "vocabulary_4/csd/2019": {
-          "name": "Utuvagana"
-        },
-        "standard_mappings/csd/2019": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "vocabulary/csd/2019": {
-          "name": "Utuvagana"
-        },
-        "code_introduced/csd/2019": {
-          "name": "Faailo fou ua faailoa"
-        },
-        "standard_mappings_1/csd/2019": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "vocabulary_1/csd/2019": {
-          "name": "Utuvagana"
-        },
-        "code_introduced_1/csd/2017": {
-          "name": "Faailo fou ua faailoa"
-        },
-        "standard_mappings_2/csd/2017": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum_2/csd/2017": {
+        "teacher_forum/pre-express/2022": {
           "name": "Talanoaga a Faiaoga"
         },
-        "vocabulary_2/csd/2017": {
-          "name": "Utuvagana"
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Ata faasolo"
         },
-        "code_introduced_3/csd/2017": {
-          "name": "Faailo fou ua faailoa"
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Ata faasolo"
         },
-        "standard_mappings_5/csd/2017": {
-          "name": "Fua Faatatau mo Faafanua"
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Ata faasolo"
         },
-        "teacher_forum_5/csd/2017": {
-          "name": "Talanoaga a Faiaoga"
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "Ata faasolo"
         },
-        "vocabulary_5/csd/2017": {
-          "name": "Utuvagana"
+        "ai-ml/oceans/unversioned": {
+          "type": "Ata faasolo"
         },
-        "code_introduced/csd/2017": {
-          "name": "Faailo fou ua faailoa"
+        "ai-societal/oceans/unversioned": {
+          "type": "Ata faasolo"
         },
-        "standard_mappings_1/csd/2017": {
-          "name": "Fua Faatatau mo Faafanua"
+        "ai-training/oceans/unversioned": {
+          "type": "Ata faasolo"
         },
-        "teacher_forum_1/csd/2017": {
-          "name": "Talanoaga a Faiaoga"
+        "poem_art_celebration/poem-art/2021": {
+          "type": "Ata faasolo"
         },
-        "vocabulary_1/csd/2017": {
-          "name": "Utuvagana"
+        "poem_art_events/poem-art/2021": {
+          "type": "Ata faasolo"
         },
-        "standard_mappings/csd/2017": {
-          "name": "Fua Faatatau mo Faafanua"
+        "poem_art_imagery/poem-art/2021": {
+          "type": "Ata faasolo"
         },
-        "teacher_forum/csd/2017": {
-          "name": "Talanoaga a Faiaoga"
+        "poem_art_introduction/poem-art/2021": {
+          "type": "Ata faasolo"
         },
-        "vocabulary/csd/2017": {
-          "name": "Utuvagana"
-        },
-        "standard_mappings_4/csd/2017": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum_4/csd/2017": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary_4/csd/2017": {
-          "name": "Utuvagana"
-        },
-        "code_introduced_2/csd/2017": {
-          "name": "Faailo fou ua faailoa"
-        },
-        "standard_mappings_3/csd/2017": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum_3/csd/2017": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary_3/csd/2017": {
-          "name": "Utuvagana"
+        "video-text-compression/text-compression/unversioned": {
+          "type": "Ata faasolo"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "",
           "url": "",
           "type": ""
-        },
-        "curriculum_guide_1/coursef/2021": {
-          "name": "Taiala"
-        },
-        "teacher_forum_1/coursef/2021": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "introducing_sprite_lab_1/coursef/2021": {
-          "type": "Ata faasolo"
-        },
-        "the_power_of_words_the_power_of_words/coursef/2021": {
-          "type": "Ata faasolo"
-        },
-        "pause_and_think_online/coursef/2021": {
-          "type": "Ata faasolo"
-        },
-        "csf-for-loop-fun-assessment/coursef/2021": {
-          "type": "Suega"
-        },
-        "ai-ml/coursef/2021": {
-          "type": "Ata faasolo"
-        },
-        "ai-societal/coursef/2021": {
-          "type": "Ata faasolo"
-        },
-        "ai-training/coursef/2021": {
-          "type": "Ata faasolo"
-        },
-        "csf-internet-assessment/coursef/2021": {
-          "type": "Suega"
-        },
-        "rubric-csf-final-projects/coursef/2021": {
-          "type": "Pusa tafafa"
-        },
-        "curriculum_guide_1/courseb/2021": {
-          "name": "Taiala"
-        },
-        "teacher_forum_1/courseb/2021": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "wiggles_-_gonoodle/courseb/2021": {
-          "type": "Ata faasolo"
-        },
-        "unspotted_bugs/courseb/2021": {
-          "type": "Ata faasolo"
-        },
-        "csf-getting-loopy-assessment/courseb/2021": {
-          "type": "Suega"
-        },
-        "common-sense-media-pause-think/courseb/2021": {
-          "type": "Ata faasolo"
-        },
-        "csf-the-big-event-assessment/courseb/2021": {
-          "type": "Suega"
-        },
-        "unplugged-video-big-event/courseb/2021": {
-          "type": "Ata faasolo"
-        },
-        "curriculum_guide_1/coursea/2021": {
-          "name": "Taiala"
-        },
-        "teacher_forum_1/coursea/2021": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "type": "Ata faasolo"
-        },
-        "wiggles-go_noodle/coursea/2021": {
-          "type": "Ata faasolo"
-        },
-        "wiggles_-_gonoodle/coursea/2021": {
-          "type": "Ata faasolo"
-        },
-        "csf_debugging_k1_blocks/coursea/2021": {
-          "type": "Ata faasolo"
-        },
-        "pair-programming/coursea/2021": {
-          "type": "Ata faasolo"
-        },
-        "common-sense-media-pause-think/coursea/2021": {
-          "type": "Ata faasolo"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "type": "Suega"
-        },
-        "curriculum_guide_1/coursec/2021": {
-          "name": "Taiala"
-        },
-        "teacher_forum_1/coursec/2021": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "pair-programming-vid/coursec/2021": {
-          "type": "Ata faasolo"
-        },
-        "csf-the-big-event-assessment/coursec/2021": {
-          "type": "Suega"
-        },
-        "pause_and_think_online/coursec/2021": {
-          "type": "Ata faasolo"
-        },
-        "csf-binary-bracelets-assessment/coursec/2021": {
-          "type": "Suega"
-        },
-        "curriculum_guide_1/coursed/2021": {
-          "name": "Taiala"
-        },
-        "teacher_forum_1/coursed/2021": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "csf-graph-paper-programming-assessment/coursed/2021": {
-          "type": "Suega"
-        },
-        "pause_and_think_online/coursed/2021": {
-          "type": "Ata faasolo"
-        },
-        "pause_and_think_online_1/coursed/2021": {
-          "type": "Ata faasolo"
-        },
-        "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "type": "Suega"
-        },
-        "teacher_forum_1/express/2021": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "pair_programming/express/2021": {
-          "type": "Ata faasolo"
-        },
-        "artist_introduction/express/2021": {
-          "type": "Ata faasolo"
-        },
-        "turns_angles/express/2021": {
-          "type": "Ata faasolo"
-        },
-        "pause_and_think_online/express/2021": {
-          "type": "Ata faasolo"
-        },
-        "pair_programming_video/express/2021": {
-          "type": "Ata faasolo"
-        },
-        "variables_video/express/2021": {
-          "name": "Fuainumera lasi "
-        },
-        "rubric-csf-final-projects/express/2021": {
-          "type": "Pusa tafafa"
-        },
-        "teacher_forum_1/pre-express/2021": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "20_20_20_rule/pre-express/2021": {
-          "type": "Ata faasolo"
-        },
-        "wiggles_-_go_noodle/pre-express/2021": {
-          "type": "Ata faasolo"
-        },
-        "common-sense-media-pause-think/pre-express/2021": {
-          "type": "Ata faasolo"
-        },
-        "curriculum_guide_1/coursee/2021": {
-          "name": "Taiala"
-        },
-        "teacher_forum_1/coursee/2021": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "common-sense-media-pause-think/coursee/2021": {
-          "type": "Ata faasolo"
-        },
-        "digital-sharing-video/coursee/2021": {
-          "type": "Ata faasolo"
-        },
-        "csf-songwriting-assessment/coursee/2021": {
-          "type": "Suega"
-        },
-        "rubric-csf-final-projects/coursee/2021": {
-          "type": "Pusa tafafa"
-        },
-        "ai_what_is_machine_learning_/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "seeing_ai/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "finding_patterns_in_data/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "introduction_to_ai_lab_1/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "training_and_testing_in_ai_lab/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "ai_training_data_bias/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "model_cards_in_ai_lab/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "if-statements_in_app_lab/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "numerical_data_in_ai_lab_2/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "create_an_ml_app/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "cleaning_survey_data/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "view_and_download_survey_data/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "design_an_ai_app_1/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "teacher_forum/csd/2021": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "the-design-thinking-process/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "paper-prototypes/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "whats-for-lunch-testing/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "intro_to_design_mode/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "app-presentation/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "internet-of-things-video/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "innovation-video-1-1/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "how_computers_word_hardware_software/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "analog-digital-video/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "make_a_game_1/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "introduction_to_arrays/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "circuits-logic-video/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "prototype-an-innovation-1/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "how-computers-work-data-and-binary/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "create_a_representation/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "video_impact_on_society/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "video_machine_learning/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "video_training_data_and_bias/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "make-a-recommendation-1/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "teacher_forum_1/csd/2021": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "drawing_in_game_lab_-_part_1/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "drawing_in_game_lab_-_part_2/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "introduction-to-variables/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "variables_1/csd/2021": {
-          "name": "Fuainumera lasi "
-        },
-        "introduction_to_sprites/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "the_animation_tab/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "captioned-scenes/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "youtube-flipbook/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "introduction_to_the_draw_loop/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "animating-sprites/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "animated-scene-1/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "boolean_expressions/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "conditional_statements/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "if_else_statements/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "interactive_card/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "velocity_1/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "side-scroller-1/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "flyer-game-1/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "make_your_own_game/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "problem-solving-process-1/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "what-is-a-computer-1-2-3/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "what-do-computers-do/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "apps_and_problem_solving/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "intro_to_web_lab_part_2/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "video_intro_to_web_lab_part_1/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "video_pair_programming/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "video_debugging/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "html-web-page-1/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "lists/csd/2021": {
-          "name": "Lisi"
-        },
-        "intro_to_css_-_part_1/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "intro_to_css_-_part_2/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "your-personal-style-1-2-3/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "creative-commons-video/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "personal-web-page/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "publishing_your_website/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "teamwork-dealing-with-disagreement/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "how-teamwork-works/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "how-search-works-video/csd/2021": {
-          "type": "Ata faasolo"
-        },
-        "website-for-a-purpose-1/csd/2021": {
-          "type": "Pusa tafafa"
-        },
-        "standard_mappings/pre-express/2020": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/pre-express/2020": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary/pre-express/2020": {
-          "name": "Utuvagana"
-        },
-        "standard_mappings/express/2020": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/express/2020": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary/express/2020": {
-          "name": "Utuvagana"
-        },
-        "curriculum_guide/courseb/2020": {
-          "name": "Taiala"
-        },
-        "standard_mappings/courseb/2020": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/courseb/2020": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary/courseb/2020": {
-          "name": "Utuvagana"
-        },
-        "curriculum_guide/coursed/2020": {
-          "name": "Taiala"
-        },
-        "standard_mappings/coursed/2020": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/coursed/2020": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary/coursed/2020": {
-          "name": "Utuvagana"
-        },
-        "curriculum_guide/coursec/2020": {
-          "name": "Taiala"
-        },
-        "standard_mappings/coursec/2020": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/coursec/2020": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary/coursec/2020": {
-          "name": "Utuvagana"
-        },
-        "curriculum_guide/coursee/2020": {
-          "name": "Taiala"
-        },
-        "standard_mappings/coursee/2020": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/coursee/2020": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary/coursee/2020": {
-          "name": "Utuvagana"
-        },
-        "curriculum_guide/coursea/2020": {
-          "name": "Taiala"
-        },
-        "standard_mappings/coursea/2020": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/coursea/2020": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary/coursea/2020": {
-          "name": "Utuvagana"
-        },
-        "curriculum_guide/coursef/2020": {
-          "name": "Taiala"
-        },
-        "standard_mappings/coursef/2020": {
-          "name": "Fua Faatatau mo Faafanua"
-        },
-        "teacher_forum/coursef/2020": {
-          "name": "Talanoaga a Faiaoga"
-        },
-        "vocabulary/coursef/2020": {
-          "name": "Utuvagana"
         }
       }
     }

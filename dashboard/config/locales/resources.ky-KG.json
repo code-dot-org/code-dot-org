@@ -2,175 +2,474 @@
   "ky-KG": {
     "data": {
       "resources": {
-        "poem_art_celebration/poem-art/2021": {
+        "vocabulary/csd/2017": {
+          "name": "Сөздүк"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Сөздүк"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Сөздүк"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/express/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Сөздүк"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/express/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/express/2020": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Сөздүк"
+        },
+        "problem-solving-process-1/csd/2021": {
           "type": "Видео"
         },
-        "poem_art_events/poem-art/2021": {
+        "what-is-a-computer-1-2-3/csd/2021": {
           "type": "Видео"
         },
-        "poem_art_imagery/poem-art/2021": {
+        "what-do-computers-do/csd/2021": {
           "type": "Видео"
         },
-        "poem_art_introduction/poem-art/2021": {
+        "intro_to_web_lab_part_2/csd/2021": {
           "type": "Видео"
         },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+        "video_intro_to_web_lab_part_1/csd/2021": {
           "type": "Видео"
         },
-        "video-text-compression/text-compression/unversioned": {
+        "video_pair_programming/csd/2021": {
           "type": "Видео"
         },
-        "ai-ml/oceans/unversioned": {
+        "video_debugging/csd/2021": {
           "type": "Видео"
         },
-        "ai-societal/oceans/unversioned": {
+        "lists/csd/2021": {
+          "name": "Тизмелер"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
           "type": "Видео"
         },
-        "ai-training/oceans/unversioned": {
+        "intro_to_css_-_part_2/csd/2021": {
           "type": "Видео"
         },
-        "graph_paper_programming/coursed/2022": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "graph_paper_programming_1/coursed/2022": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "graph_paper_programming_2/coursed/2022": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "graph_paper_programming_3/coursed/2022": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "graph_paper_programming_4/coursed/2022": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "graph_paper_programming_5/coursed/2022": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "relay_programming/coursed/2022": {
-          "name": "Релени програмдоо"
-        },
-        "relay_programming_1/coursed/2022": {
-          "name": "Релени програмдоо"
-        },
-        "relay_programming_2/coursed/2022": {
-          "name": "Релени програмдоо"
-        },
-        "relay_programming_3/coursed/2022": {
-          "name": "Релени програмдоо"
-        },
-        "relay_programming_4/coursed/2022": {
-          "name": "Релени програмдоо"
-        },
-        "relay_programming_5/coursed/2022": {
-          "name": "Релени програмдоо"
-        },
-        "pause_and_think_online/coursed/2022": {
+        "creative-commons-video/csd/2021": {
           "type": "Видео"
         },
-        "the_power_of_words_the_power_of_words/coursef/2022": {
+        "publishing_your_website/csd/2021": {
           "type": "Видео"
         },
-        "introducing_sprite_lab_1/coursef/2022": {
+        "teamwork-dealing-with-disagreement/csd/2021": {
           "type": "Видео"
         },
-        "ai_impact_on_society/coursef/2022": {
+        "how-teamwork-works/csd/2021": {
           "type": "Видео"
         },
-        "ai_machine_learning/coursef/2022": {
+        "how-search-works-video/csd/2021": {
           "type": "Видео"
         },
-        "ai_training_data_bias/coursef/2022": {
+        "drawing_in_game_lab_-_part_1/csd/2021": {
           "type": "Видео"
         },
-        "the_internet/coursef/2022": {
-          "name": "Интернет"
-        },
-        "pause_and_think_online/coursee/2022": {
+        "drawing_in_game_lab_-_part_2/csd/2021": {
           "type": "Видео"
         },
-        "digital_sharing_ethics_video_/coursee/2022": {
+        "introduction-to-variables/csd/2021": {
           "type": "Видео"
         },
-        "wiggles_-_gonoodle/courseb/2022": {
-          "type": "Видео"
-        },
-        "unspotted_bugs/courseb/2022": {
-          "type": "Видео"
-        },
-        "pause_and_think_online/courseb/2022": {
-          "type": "Видео"
-        },
-        "pair_programming/express/2022": {
-          "type": "Видео"
-        },
-        "artist_introduction/express/2022": {
-          "type": "Видео"
-        },
-        "turns_angles/express/2022": {
-          "type": "Видео"
-        },
-        "pause_and_think_online/express/2022": {
-          "type": "Видео"
-        },
-        "pair_programming_video/express/2022": {
-          "type": "Видео"
-        },
-        "variables/express/2022": {
+        "variables_1/csd/2021": {
           "name": "Өзгөрмөлөр"
         },
-        "20_20_20_rule/pre-express/2022": {
+        "introduction_to_sprites/csd/2021": {
           "type": "Видео"
         },
-        "wiggles_-_go_noodle/pre-express/2022": {
+        "the_animation_tab/csd/2021": {
           "type": "Видео"
         },
-        "pause_and_think_online/pre-express/2022": {
+        "youtube-flipbook/csd/2021": {
           "type": "Видео"
         },
-        "getting_started_-_creating_a_class_section/coursea/2022": {
+        "introduction_to_the_draw_loop/csd/2021": {
           "type": "Видео"
         },
-        "wiggles-go_noodle/coursea/2022": {
+        "animating-sprites/csd/2021": {
           "type": "Видео"
         },
-        "wiggles_-_gonoodle/coursea/2022": {
+        "boolean_expressions/csd/2021": {
           "type": "Видео"
         },
-        "debugging_with_the_step_button/coursea/2022": {
+        "conditional_statements/csd/2021": {
           "type": "Видео"
         },
-        "pair-programming/coursea/2022": {
+        "if_else_statements/csd/2021": {
           "type": "Видео"
         },
-        "pause_and_think_online/coursea/2022": {
+        "velocity_1/csd/2021": {
           "type": "Видео"
         },
-        "pair_programming/coursec/2022": {
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Функциялар",
           "type": "Видео"
         },
-        "pause_and_think_online/coursec/2022": {
+        "functions_1/csd/2021": {
+          "name": "Функциялар"
+        },
+        "the-design-thinking-process/csd/2021": {
           "type": "Видео"
         },
-        "binary_and_data/csd/2022": {
+        "whats-for-lunch-testing/csd/2021": {
           "type": "Видео"
         },
-        "amazon_and_data/csd/2022": {
+        "intro_to_design_mode/csd/2021": {
           "type": "Видео"
         },
-        "netflix_and_data/csd/2022": {
+        "how-computers-work-data-and-binary/csd/2021": {
           "type": "Видео"
         },
-        "waze_and_data/csd/2022": {
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
           "type": "Видео"
         },
-        "video_impact_on_society/csd/2022": {
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
           "type": "Видео"
         },
-        "video_machine_learning/csd/2022": {
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
           "type": "Видео"
         },
-        "video_training_data_and_bias/csd/2022": {
+        "video_impact_on_society/csd/2021": {
+          "type": "Видео"
+        },
+        "video_machine_learning/csd/2021": {
+          "type": "Видео"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "Видео"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Видео"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Компүтер илими баарын өзгөртүүдө",
+          "type": "Видео"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "type": "Видео"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "Видео"
+        },
+        "functions_2/csd/2021": {
+          "name": "Функциялар"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "type": "Видео"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "type": "Видео"
+        },
+        "circuits-logic-video/csd/2021": {
+          "type": "Видео"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "Видео"
+        },
+        "seeing_ai/csd/2021": {
+          "type": "Видео"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "Видео"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "Видео"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "Видео"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "type": "Видео"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "Видео"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "Видео"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "Видео"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "Видео"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "Видео"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "Видео"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "Видео"
+        },
+        "wiggles-go_noodle/coursea/2021": {
+          "type": "Видео"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "type": "Видео"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "type": "Видео"
+        },
+        "pair-programming/coursea/2021": {
+          "type": "Видео"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "type": "Видео"
+        },
+        "wiggles_-_gonoodle/courseb/2021": {
+          "type": "Видео"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "type": "Видео"
+        },
+        "common-sense-media-pause-think/courseb/2021": {
+          "type": "Видео"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "type": "Видео"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "type": "Видео"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "type": "Видео"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Графикалык кагазды програмдоо"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "Релени програмдоо"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "Релени програмдоо"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "Релени програмдоо"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "Релени програмдоо"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "Релени програмдоо"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "Релени програмдоо"
+        },
+        "pause_and_think_online/coursed/2021": {
+          "type": "Видео"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "type": "Видео"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "type": "Видео"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "type": "Видео"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "type": "Видео"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "type": "Видео"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "type": "Видео"
+        },
+        "ai-ml/coursef/2021": {
+          "type": "Видео"
+        },
+        "ai-societal/coursef/2021": {
+          "type": "Видео"
+        },
+        "ai-training/coursef/2021": {
+          "type": "Видео"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Интернет"
+        },
+        "pair_programming/express/2021": {
+          "type": "Видео"
+        },
+        "artist_introduction/express/2021": {
+          "type": "Видео"
+        },
+        "turns_angles/express/2021": {
+          "type": "Видео"
+        },
+        "pause_and_think_online/express/2021": {
+          "type": "Видео"
+        },
+        "pair_programming_video/express/2021": {
+          "type": "Видео"
+        },
+        "variables_video/express/2021": {
+          "name": "Өзгөрмөлөр"
+        },
+        "20_20_20_rule/pre-express/2021": {
+          "type": "Видео"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "type": "Видео"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
           "type": "Видео"
         },
         "problem_solving_process_1/csd/2022": {
@@ -180,6 +479,42 @@
           "type": "Видео"
         },
         "what_do_computers_do/csd/2022": {
+          "type": "Видео"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "Видео"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "Видео"
+        },
+        "video_debugging/csd/2022": {
+          "type": "Видео"
+        },
+        "video_pair_programming/csd/2022": {
+          "type": "Видео"
+        },
+        "lists/csd/2022": {
+          "name": "Тизмелер"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "type": "Видео"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "type": "Видео"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "Видео"
+        },
+        "publishing_your_website/csd/2022": {
+          "type": "Видео"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "type": "Видео"
+        },
+        "video_teamwork/csd/2022": {
+          "type": "Видео"
+        },
+        "video_how_search_works/csd/2022": {
           "type": "Видео"
         },
         "drawing_in_game_lab_-_part_1/csd/2022": {
@@ -240,42 +575,6 @@
         "functions_4/csd/2022": {
           "name": "Функциялар"
         },
-        "intro_to_web_lab_part_2/csd/2022": {
-          "type": "Видео"
-        },
-        "video_intro_to_web_lab_part_1/csd/2022": {
-          "type": "Видео"
-        },
-        "video_debugging/csd/2022": {
-          "type": "Видео"
-        },
-        "video_pair_programming/csd/2022": {
-          "type": "Видео"
-        },
-        "lists/csd/2022": {
-          "name": "Тизмелер"
-        },
-        "intro_to_css_-_part_1/csd/2022": {
-          "type": "Видео"
-        },
-        "intro_to_css_-_part_2/csd/2022": {
-          "type": "Видео"
-        },
-        "creative_commons_overview/csd/2022": {
-          "type": "Видео"
-        },
-        "publishing_your_website/csd/2022": {
-          "type": "Видео"
-        },
-        "video_managing_disagreement/csd/2022": {
-          "type": "Видео"
-        },
-        "video_teamwork/csd/2022": {
-          "type": "Видео"
-        },
-        "video_how_search_works/csd/2022": {
-          "type": "Видео"
-        },
         "the_design_thinking_process/csd/2022": {
           "type": "Видео"
         },
@@ -286,6 +585,27 @@
           "type": "Видео"
         },
         "events_in_app_lab_1/csd/2022": {
+          "type": "Видео"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "Видео"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "Видео"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "Видео"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "Видео"
+        },
+        "video_impact_on_society/csd/2022": {
+          "type": "Видео"
+        },
+        "video_machine_learning/csd/2022": {
+          "type": "Видео"
+        },
+        "video_training_data_and_bias/csd/2022": {
           "type": "Видео"
         },
         "computer_science_is_changing_everything/csd/2022": {
@@ -370,480 +690,160 @@
         "view_and_download_survey_data/csd/2022": {
           "type": "Видео"
         },
-        "vocabulary/courseb/2018": {
-          "name": "Сөздүк"
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Видео"
         },
-        "vocabulary/coursea/2018": {
-          "name": "Сөздүк"
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Видео"
         },
-        "vocabulary/coursed/2018": {
-          "name": "Сөздүк"
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Видео"
         },
-        "vocabulary/coursef/2018": {
-          "name": "Сөздүк"
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Видео"
         },
-        "vocabulary/express/2018": {
-          "name": "Сөздүк"
+        "pair-programming/coursea/2022": {
+          "type": "Видео"
         },
-        "vocabulary/coursee/2018": {
-          "name": "Сөздүк"
+        "pause_and_think_online/coursea/2022": {
+          "type": "Видео"
         },
-        "vocabulary/coursec/2018": {
-          "name": "Сөздүк"
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Видео"
         },
-        "code_introduced_1/csd/2018": {
-          "name": "Код киргизилди"
+        "unspotted_bugs/courseb/2022": {
+          "type": "Видео"
         },
-        "vocabulary_2/csd/2018": {
-          "name": "Сөздүк"
+        "pause_and_think_online/courseb/2022": {
+          "type": "Видео"
         },
-        "code_introduced_3/csd/2018": {
-          "name": "Код киргизилди"
+        "pair_programming/coursec/2022": {
+          "type": "Видео"
         },
-        "vocabulary_5/csd/2018": {
-          "name": "Сөздүк"
+        "pause_and_think_online/coursec/2022": {
+          "type": "Видео"
         },
-        "vocabulary_4/csd/2018": {
-          "name": "Сөздүк"
+        "graph_paper_programming/coursed/2022": {
+          "name": "Графикалык кагазды програмдоо"
         },
-        "code_introduced_2/csd/2018": {
-          "name": "Код киргизилди"
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Графикалык кагазды програмдоо"
         },
-        "vocabulary_3/csd/2018": {
-          "name": "Сөздүк"
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Графикалык кагазды програмдоо"
         },
-        "code_introduced/csd/2018": {
-          "name": "Код киргизилди"
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Графикалык кагазды програмдоо"
         },
-        "vocabulary_1/csd/2018": {
-          "name": "Сөздүк"
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Графикалык кагазды програмдоо"
         },
-        "vocabulary/csd/2018": {
-          "name": "Сөздүк"
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Графикалык кагазды програмдоо"
         },
-        "vocabulary/coursea/2019": {
-          "name": "Сөздүк"
+        "relay_programming/coursed/2022": {
+          "name": "Релени програмдоо"
         },
-        "vocabulary/courseb/2019": {
-          "name": "Сөздүк"
+        "relay_programming_1/coursed/2022": {
+          "name": "Релени програмдоо"
         },
-        "vocabulary/coursed/2019": {
-          "name": "Сөздүк"
+        "relay_programming_2/coursed/2022": {
+          "name": "Релени програмдоо"
         },
-        "vocabulary/coursef/2019": {
-          "name": "Сөздүк"
+        "relay_programming_3/coursed/2022": {
+          "name": "Релени програмдоо"
         },
-        "vocabulary/coursee/2019": {
-          "name": "Сөздүк"
+        "relay_programming_4/coursed/2022": {
+          "name": "Релени програмдоо"
         },
-        "vocabulary/express/2019": {
-          "name": "Сөздүк"
+        "relay_programming_5/coursed/2022": {
+          "name": "Релени програмдоо"
         },
-        "vocabulary/coursec/2019": {
-          "name": "Сөздүк"
+        "pause_and_think_online/coursed/2022": {
+          "type": "Видео"
         },
-        "code_introduced_1/csd/2019": {
-          "name": "Код киргизилди"
+        "pause_and_think_online/coursee/2022": {
+          "type": "Видео"
         },
-        "vocabulary_2/csd/2019": {
-          "name": "Сөздүк"
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Видео"
         },
-        "code_introduced_3/csd/2019": {
-          "name": "Код киргизилди"
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Видео"
         },
-        "vocabulary_5/csd/2019": {
-          "name": "Сөздүк"
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "Видео"
         },
-        "code_introduced_2/csd/2019": {
-          "name": "Код киргизилди"
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Видео"
         },
-        "vocabulary_3/csd/2019": {
-          "name": "Сөздүк"
+        "ai_machine_learning/coursef/2022": {
+          "type": "Видео"
         },
-        "vocabulary_4/csd/2019": {
-          "name": "Сөздүк"
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Видео"
         },
-        "vocabulary/csd/2019": {
-          "name": "Сөздүк"
+        "the_internet/coursef/2022": {
+          "name": "Интернет"
         },
-        "code_introduced/csd/2019": {
-          "name": "Код киргизилди"
+        "pair_programming/express/2022": {
+          "type": "Видео"
         },
-        "vocabulary_1/csd/2019": {
-          "name": "Сөздүк"
+        "artist_introduction/express/2022": {
+          "type": "Видео"
         },
-        "code_introduced_1/csd/2017": {
-          "name": "Код киргизилди"
+        "turns_angles/express/2022": {
+          "type": "Видео"
         },
-        "vocabulary_2/csd/2017": {
-          "name": "Сөздүк"
+        "pause_and_think_online/express/2022": {
+          "type": "Видео"
         },
-        "code_introduced_3/csd/2017": {
-          "name": "Код киргизилди"
+        "pair_programming_video/express/2022": {
+          "type": "Видео"
         },
-        "vocabulary_5/csd/2017": {
-          "name": "Сөздүк"
+        "variables/express/2022": {
+          "name": "Өзгөрмөлөр"
         },
-        "code_introduced/csd/2017": {
-          "name": "Код киргизилди"
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Видео"
         },
-        "vocabulary_1/csd/2017": {
-          "name": "Сөздүк"
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Видео"
         },
-        "vocabulary/csd/2017": {
-          "name": "Сөздүк"
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Видео"
         },
-        "vocabulary_4/csd/2017": {
-          "name": "Сөздүк"
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "Видео"
         },
-        "code_introduced_2/csd/2017": {
-          "name": "Код киргизилди"
+        "ai-ml/oceans/unversioned": {
+          "type": "Видео"
         },
-        "vocabulary_3/csd/2017": {
-          "name": "Сөздүк"
+        "ai-societal/oceans/unversioned": {
+          "type": "Видео"
+        },
+        "ai-training/oceans/unversioned": {
+          "type": "Видео"
+        },
+        "poem_art_celebration/poem-art/2021": {
+          "type": "Видео"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "Видео"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "Видео"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "type": "Видео"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "Видео"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "",
           "url": "",
           "type": ""
-        },
-        "introducing_sprite_lab_1/coursef/2021": {
-          "type": "Видео"
-        },
-        "the_power_of_words_the_power_of_words/coursef/2021": {
-          "type": "Видео"
-        },
-        "pause_and_think_online/coursef/2021": {
-          "type": "Видео"
-        },
-        "ai-ml/coursef/2021": {
-          "type": "Видео"
-        },
-        "ai-societal/coursef/2021": {
-          "type": "Видео"
-        },
-        "ai-training/coursef/2021": {
-          "type": "Видео"
-        },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "Интернет"
-        },
-        "wiggles_-_gonoodle/courseb/2021": {
-          "type": "Видео"
-        },
-        "unspotted_bugs/courseb/2021": {
-          "type": "Видео"
-        },
-        "common-sense-media-pause-think/courseb/2021": {
-          "type": "Видео"
-        },
-        "unplugged-video-big-event/courseb/2021": {
-          "type": "Видео"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "type": "Видео"
-        },
-        "wiggles-go_noodle/coursea/2021": {
-          "type": "Видео"
-        },
-        "wiggles_-_gonoodle/coursea/2021": {
-          "type": "Видео"
-        },
-        "csf_debugging_k1_blocks/coursea/2021": {
-          "type": "Видео"
-        },
-        "pair-programming/coursea/2021": {
-          "type": "Видео"
-        },
-        "common-sense-media-pause-think/coursea/2021": {
-          "type": "Видео"
-        },
-        "pair-programming-vid/coursec/2021": {
-          "type": "Видео"
-        },
-        "pause_and_think_online/coursec/2021": {
-          "type": "Видео"
-        },
-        "activity-answer-graph-paper/coursed/2021": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "assessment-answer-graph-paper/coursed/2021": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "graph-paper-programming/coursed/2021": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Графикалык кагазды програмдоо"
-        },
-        "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "Релени програмдоо"
-        },
-        "relay-assessment/coursed/2021": {
-          "name": "Релени програмдоо"
-        },
-        "relay-programming-assessment-answer-key/coursed/2021": {
-          "name": "Релени програмдоо"
-        },
-        "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "Релени програмдоо"
-        },
-        "teacher-video-relay-programming-2/coursed/2021": {
-          "name": "Релени програмдоо"
-        },
-        "unplugged-video-relay-programming/coursed/2021": {
-          "name": "Релени програмдоо"
-        },
-        "pause_and_think_online/coursed/2021": {
-          "type": "Видео"
-        },
-        "pause_and_think_online_1/coursed/2021": {
-          "type": "Видео"
-        },
-        "pair_programming/express/2021": {
-          "type": "Видео"
-        },
-        "artist_introduction/express/2021": {
-          "type": "Видео"
-        },
-        "turns_angles/express/2021": {
-          "type": "Видео"
-        },
-        "pause_and_think_online/express/2021": {
-          "type": "Видео"
-        },
-        "pair_programming_video/express/2021": {
-          "type": "Видео"
-        },
-        "variables_video/express/2021": {
-          "name": "Өзгөрмөлөр"
-        },
-        "20_20_20_rule/pre-express/2021": {
-          "type": "Видео"
-        },
-        "wiggles_-_go_noodle/pre-express/2021": {
-          "type": "Видео"
-        },
-        "common-sense-media-pause-think/pre-express/2021": {
-          "type": "Видео"
-        },
-        "common-sense-media-pause-think/coursee/2021": {
-          "type": "Видео"
-        },
-        "digital-sharing-video/coursee/2021": {
-          "type": "Видео"
-        },
-        "ai_what_is_machine_learning_/csd/2021": {
-          "type": "Видео"
-        },
-        "seeing_ai/csd/2021": {
-          "type": "Видео"
-        },
-        "finding_patterns_in_data/csd/2021": {
-          "type": "Видео"
-        },
-        "introduction_to_ai_lab_1/csd/2021": {
-          "type": "Видео"
-        },
-        "training_and_testing_in_ai_lab/csd/2021": {
-          "type": "Видео"
-        },
-        "ai_training_data_bias/csd/2021": {
-          "type": "Видео"
-        },
-        "model_cards_in_ai_lab/csd/2021": {
-          "type": "Видео"
-        },
-        "if-statements_in_app_lab/csd/2021": {
-          "type": "Видео"
-        },
-        "numerical_data_in_ai_lab_2/csd/2021": {
-          "type": "Видео"
-        },
-        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
-          "type": "Видео"
-        },
-        "cleaning_survey_data/csd/2021": {
-          "type": "Видео"
-        },
-        "view_and_download_survey_data/csd/2021": {
-          "type": "Видео"
-        },
-        "the-design-thinking-process/csd/2021": {
-          "type": "Видео"
-        },
-        "whats-for-lunch-testing/csd/2021": {
-          "type": "Видео"
-        },
-        "intro_to_design_mode/csd/2021": {
-          "type": "Видео"
-        },
-        "internet-of-things-video/csd/2021": {
-          "type": "Видео"
-        },
-        "innovation-video-1-1/csd/2021": {
-          "name": "Компүтер илими баарын өзгөртүүдө",
-          "type": "Видео"
-        },
-        "how_computers_word_hardware_software/csd/2021": {
-          "type": "Видео"
-        },
-        "analog-digital-video/csd/2021": {
-          "type": "Видео"
-        },
-        "functions_2/csd/2021": {
-          "name": "Функциялар"
-        },
-        "introduction_to_arrays/csd/2021": {
-          "type": "Видео"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "type": "Видео"
-        },
-        "circuits-logic-video/csd/2021": {
-          "type": "Видео"
-        },
-        "how-computers-work-data-and-binary/csd/2021": {
-          "type": "Видео"
-        },
-        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
-          "type": "Видео"
-        },
-        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
-          "type": "Видео"
-        },
-        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
-          "type": "Видео"
-        },
-        "video_impact_on_society/csd/2021": {
-          "type": "Видео"
-        },
-        "video_machine_learning/csd/2021": {
-          "type": "Видео"
-        },
-        "video_training_data_and_bias/csd/2021": {
-          "type": "Видео"
-        },
-        "drawing_in_game_lab_-_part_1/csd/2021": {
-          "type": "Видео"
-        },
-        "drawing_in_game_lab_-_part_2/csd/2021": {
-          "type": "Видео"
-        },
-        "introduction-to-variables/csd/2021": {
-          "type": "Видео"
-        },
-        "variables_1/csd/2021": {
-          "name": "Өзгөрмөлөр"
-        },
-        "introduction_to_sprites/csd/2021": {
-          "type": "Видео"
-        },
-        "the_animation_tab/csd/2021": {
-          "type": "Видео"
-        },
-        "youtube-flipbook/csd/2021": {
-          "type": "Видео"
-        },
-        "introduction_to_the_draw_loop/csd/2021": {
-          "type": "Видео"
-        },
-        "animating-sprites/csd/2021": {
-          "type": "Видео"
-        },
-        "boolean_expressions/csd/2021": {
-          "type": "Видео"
-        },
-        "conditional_statements/csd/2021": {
-          "type": "Видео"
-        },
-        "if_else_statements/csd/2021": {
-          "type": "Видео"
-        },
-        "velocity_1/csd/2021": {
-          "type": "Видео"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "Функциялар",
-          "type": "Видео"
-        },
-        "functions_1/csd/2021": {
-          "name": "Функциялар"
-        },
-        "problem-solving-process-1/csd/2021": {
-          "type": "Видео"
-        },
-        "what-is-a-computer-1-2-3/csd/2021": {
-          "type": "Видео"
-        },
-        "what-do-computers-do/csd/2021": {
-          "type": "Видео"
-        },
-        "intro_to_web_lab_part_2/csd/2021": {
-          "type": "Видео"
-        },
-        "video_intro_to_web_lab_part_1/csd/2021": {
-          "type": "Видео"
-        },
-        "video_pair_programming/csd/2021": {
-          "type": "Видео"
-        },
-        "video_debugging/csd/2021": {
-          "type": "Видео"
-        },
-        "lists/csd/2021": {
-          "name": "Тизмелер"
-        },
-        "intro_to_css_-_part_1/csd/2021": {
-          "type": "Видео"
-        },
-        "intro_to_css_-_part_2/csd/2021": {
-          "type": "Видео"
-        },
-        "creative-commons-video/csd/2021": {
-          "type": "Видео"
-        },
-        "publishing_your_website/csd/2021": {
-          "type": "Видео"
-        },
-        "teamwork-dealing-with-disagreement/csd/2021": {
-          "type": "Видео"
-        },
-        "how-teamwork-works/csd/2021": {
-          "type": "Видео"
-        },
-        "how-search-works-video/csd/2021": {
-          "type": "Видео"
-        },
-        "vocabulary/pre-express/2020": {
-          "name": "Сөздүк"
-        },
-        "vocabulary/express/2020": {
-          "name": "Сөздүк"
-        },
-        "vocabulary/courseb/2020": {
-          "name": "Сөздүк"
-        },
-        "vocabulary/coursed/2020": {
-          "name": "Сөздүк"
-        },
-        "vocabulary/coursec/2020": {
-          "name": "Сөздүк"
-        },
-        "vocabulary/coursee/2020": {
-          "name": "Сөздүк"
-        },
-        "vocabulary/coursea/2020": {
-          "name": "Сөздүк"
-        },
-        "vocabulary/coursef/2020": {
-          "name": "Сөздүк"
         }
       }
     }

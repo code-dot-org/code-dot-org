@@ -1,2 +1,10 @@
 {
+  "se-FI": {
+    "data": {
+      "frameworks": {
+        "ngss": {
+        }
+      }
+    }
+  }
 }

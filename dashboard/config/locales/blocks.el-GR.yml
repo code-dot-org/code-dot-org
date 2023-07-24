@@ -23,10 +23,8 @@ el:
             '2.00': large
             '3.00': extra large
       Dancelab_alternateMoves:
-        text: "{GROUP} εναλλαγή κάθε {N} μέτρα \nμεταξύ {MOVE1} και {MOVE2}"
         options:
           GROUP:
-            sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
             '"BEAR"': αρκούδες
             '"CAT"': όλες οι γάτες
@@ -39,108 +37,108 @@ el:
             '"SHARK"': καρχαρίες
             '"SLOTH"': βραδύποδες
             '"UNICORN"': μονόκεροι
+            sprites: όλα
           MOVE1:
-            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Παλαμάκια Ψηλά
+            MOVES.Clown: Gangnam
             MOVES.Dab: Νταμπ
             MOVES.DoubleJam: Διπλό κάτω
             MOVES.Drop: Πέσιμο
             MOVES.Floss: Φλος
             MOVES.Fresh: Φρέσκο
-            MOVES.Clown: Gangnam
             MOVES.Kick: Αστέρι
-            MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Αυτό ή Εκείνο
           MOVE2:
-            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Παλαμάκια Ψηλά
+            MOVES.Clown: Gangnam
             MOVES.Dab: Νταμπ
             MOVES.DoubleJam: Διπλό κάτω
             MOVES.Drop: Πέσιμο
             MOVES.Floss: Φλος
             MOVES.Fresh: Φρέσκο
-            MOVES.Clown: Gangnam
             MOVES.Kick: Αστέρι
-            MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Αυτό ή Εκείνο
+        text: "{GROUP} εναλλαγή κάθε {N} μέτρα \nμεταξύ {MOVE1} και {MOVE2}"
       Dancelab_atTimestamp:
-        text: μετά από {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': μέτρα
             '"seconds"': δευτερόλεπτα
+        text: μετά από {TIMESTAMP} {UNIT}
       Dancelab_changeColorBy:
-        text: άλλαξε του {COLOR} την {METHOD} κατά {AMOUNT}
         options:
           METHOD:
+            '"brightness"': φωτεινότητα
             '"hue"': απόχρωση
             '"saturation"': ένταση
-            '"brightness"': φωτεινότητα
+        text: άλλαξε του {COLOR} την {METHOD} κατά {AMOUNT}
       Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            '"ALIEN"': όλοι οι εξωγήινοι
+            '"BEAR"': αρκούδες
+            '"CAT"': όλες οι γάτες
+            '"DOG"': όλοι οι σκύλοι
+            '"DUCK"': πάπιες
+            '"FROG"': βάτραχοι
+            '"MOOSE"': όλα τα ελάφια
+            '"PINEAPPLE"': ανανάδες
+            '"ROBOT"': όλα τα ρομπότ
+            '"SHARK"': καρχαρίες
+            '"SLOTH"': βραδύποδες
+            '"UNICORN"': μονόκεροι
+            sprites: όλα
+          MOVE:
+            '"next"': "(Επόμενο)"
+            '"prev"': "(Προηγούμενο)"
+            '"rand"': "(Τυχαίο)"
+            MOVES.ClapHigh: Παλαμάκια Ψηλά
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Νταμπ
+            MOVES.DoubleJam: Διπλό κάτω
+            MOVES.Drop: Πέσιμο
+            MOVES.Floss: Φλος
+            MOVES.Fresh: Φρέσκο
+            MOVES.Kick: Αστέρι
+            MOVES.Rest: Κανένα
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Αυτό ή Εκείνο
         text: "{GROUP} κάντε {MOVE} {DIR} για πάντα"
-        options:
-          GROUP:
-            sprites: όλα
-            '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
-            '"CAT"': όλες οι γάτες
-            '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
-            '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
-            '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
-            '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
-          MOVE:
-            '"next"': "(Επόμενο)"
-            '"prev"': "(Προηγούμενο)"
-            '"rand"': "(Τυχαίο)"
-            MOVES.Roll: Body Roll
-            MOVES.ClapHigh: Παλαμάκια Ψηλά
-            MOVES.Dab: Νταμπ
-            MOVES.DoubleJam: Διπλό κάτω
-            MOVES.Drop: Πέσιμο
-            MOVES.Floss: Φλος
-            MOVES.Fresh: Φρέσκο
-            MOVES.Clown: Gangnam
-            MOVES.Kick: Αστέρι
-            MOVES.ThisOrThat: Αυτό ή Εκείνο
-            MOVES.Rest: Κανένα
       Dancelab_changeMoveLR:
-        text: "{SPRITE} κάνε {MOVE} {DIR} για πάντα"
         options:
           MOVE:
             '"next"': "(Επόμενο)"
             '"prev"': "(Προηγούμενο)"
             '"rand"': "(Τυχαίο)"
-            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Παλαμάκια Ψηλά
+            MOVES.Clown: Gangnam
             MOVES.Dab: Νταμπ
             MOVES.DoubleJam: Διπλό κάτω
             MOVES.Drop: Πέσιμο
             MOVES.Floss: Φλος
             MOVES.Fresh: Φρέσκο
-            MOVES.Clown: Gangnam
             MOVES.Kick: Αστέρι
-            MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Αυτό ή Εκείνο
+        text: "{SPRITE} κάνε {MOVE} {DIR} για πάντα"
       Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"height"': ύψος
+            '"rotation"': περιστροφή
+            '"scale"': μέγεθος
+            '"width"': πλάτος
+            '"x"': οριζόντια θέση
+            '"y"': κάθετη θέση
         text: αλλαγή {SPRITE} {PROPERTY} με {VAL}
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"width"': πλάτος
-            '"height"': ύψος
-            '"rotation"': περιστροφή
-            '"x"': οριζόντια θέση
-            '"y"': κάθετη θέση
       Dancelab_changePropEachBy:
-        text: αλλαγή {GROUP} {PROPERTY} από {VAL}
         options:
           GROUP:
-            sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
             '"BEAR"': αρκούδες
             '"CAT"': όλες οι γάτες
@@ -153,18 +151,18 @@ el:
             '"SHARK"': καρχαρίες
             '"SLOTH"': βραδύποδες
             '"UNICORN"': μονόκεροι
+            sprites: όλα
           PROPERTY:
-            '"scale"': μέγεθος
-            '"width"': πλάτος
             '"height"': ύψος
             '"rotation"': περιστροφή
+            '"scale"': μέγεθος
+            '"width"': πλάτος
             '"x"': οριζόντια θέση
             '"y"': κάθετη θέση
+        text: αλλαγή {GROUP} {PROPERTY} από {VAL}
       Dancelab_doMoveEachLR:
-        text: "{GROUP} κάντε {MOVE} {DIR} μία φορά"
         options:
           GROUP:
-            sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
             '"BEAR"': αρκούδες
             '"CAT"': όλες οι γάτες
@@ -177,99 +175,98 @@ el:
             '"SHARK"': καρχαρίες
             '"SLOTH"': βραδύποδες
             '"UNICORN"': μονόκεροι
+            sprites: όλα
           MOVE:
             '"rand"': "(Τυχαίο)"
-            MOVES.XBend: Λύγισε
-            MOVES.Roll: Body Roll
-            MOVES.XClapSide: Χτύπα παλαμάκι
             MOVES.ClapHigh: Παλαμάκια Ψηλά
+            MOVES.Clown: Gangnam
             MOVES.Dab: Νταμπ
-            MOVES.XFever: Ντίσκο
             MOVES.DoubleJam: Διπλό κάτω
             MOVES.Drop: Πέσιμο
             MOVES.Floss: Φλος
             MOVES.Fresh: Φρέσκο
-            MOVES.Clown: Gangnam
+            MOVES.Kick: Αστέρι
+            MOVES.Rest: Κανένα
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Αυτό ή Εκείνο
+            MOVES.XArmsSide: Φτάσε
+            MOVES.XArmsUp: Τεντώσου
+            MOVES.XBend: Λύγισε
+            MOVES.XClapSide: Χτύπα παλαμάκι
+            MOVES.XFever: Ντίσκο
             MOVES.XHeadHips: Κεφάλι + Γοφοί
-            MOVES.XHop: Πήδα
             MOVES.XHighKick: Κλώτσα
+            MOVES.XHop: Πήδα
             MOVES.XKnee: Γόνατο
             MOVES.XKneel: Γονάτισε
             MOVES.XOle: Όλε
-            MOVES.XArmsSide: Φτάσε
             MOVES.XSlide: Γλίστρα
-            MOVES.Kick: Αστέρι
-            MOVES.XArmsUp: Τεντώσου
-            MOVES.ThisOrThat: Αυτό ή Εκείνο
-            MOVES.Rest: Κανένα
+        text: "{GROUP} κάντε {MOVE} {DIR} μία φορά"
       Dancelab_doMoveLR:
-        text: "{SPRITE} κάνε {MOVE} {DIR} μία φορά"
         options:
           MOVE:
             '"rand"': "(Τυχαίο)"
-            MOVES.XBend: Λύγισε
-            MOVES.Roll: Body Roll
-            MOVES.XClapSide: Χτύπα παλαμάκι
             MOVES.ClapHigh: Παλαμάκια Ψηλά
+            MOVES.Clown: Gangnam
             MOVES.Dab: Νταμπ
-            MOVES.XFever: Ντίσκο
             MOVES.DoubleJam: Διπλό κάτω
             MOVES.Drop: Πέσιμο
             MOVES.Floss: Φλος
             MOVES.Fresh: Φρέσκο
-            MOVES.Clown: Gangnam
+            MOVES.Kick: Αστέρι
+            MOVES.Rest: Κανένα
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Αυτό ή Εκείνο
+            MOVES.XArmsSide: Φτάσε
+            MOVES.XArmsUp: Τεντώσου
+            MOVES.XBend: Λύγισε
+            MOVES.XClapSide: Χτύπα παλαμάκι
+            MOVES.XFever: Ντίσκο
             MOVES.XHeadHips: Κεφάλι + Γοφοί
-            MOVES.XHop: Πήδα
             MOVES.XHighKick: Κλώτσα
+            MOVES.XHop: Πήδα
             MOVES.XKnee: Γόνατο
             MOVES.XKneel: Γονάτισε
             MOVES.XOle: Όλε
-            MOVES.XArmsSide: Φτάσε
             MOVES.XSlide: Γλίστρα
-            MOVES.Kick: Αστέρι
-            MOVES.XArmsUp: Τεντώσου
-            MOVES.ThisOrThat: Αυτό ή Εκείνο
-            MOVES.Rest: Κανένα
+        text: "{SPRITE} κάνε {MOVE} {DIR} μία φορά"
       Dancelab_everySeconds:
-        text: 'κάθε {N} {UNIT} '
         options:
           UNIT:
             '"measures"': μέτρα
             '"seconds"': δευτερόλεπτα
+        text: 'κάθε {N} {UNIT} '
       Dancelab_everyVerseChorus:
-        text: 'κάθε {UNIT} '
         options:
           UNIT:
-            '"verse"': στροφή
             '"chorus"': ρεφρέν
+            '"verse"': στροφή
+        text: 'κάθε {UNIT} '
       Dancelab_getEnergy:
-        text: πάρε {RANGE}
         options:
           RANGE:
+            '"high"': πρίμα
             '"low"': μπάσα
             '"mid"': μεσαία
-            '"high"': πρίμα
+        text: πάρε {RANGE}
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
-            '"scale"': μέγεθος
-            '"width"': πλάτος
             '"height"': ύψος
             '"rotation"': περιστροφή
+            '"scale"': μέγεθος
+            '"tint"': απόχρωση
+            '"width"': πλάτος
             '"x"': οριζόντια θέση
             '"y"': κάθετη θέση
-            '"tint"': απόχρωση
+        text: "{SPRITE} {PROPERTY}"
       Dancelab_getTime:
-        text: τρέχον χρόνος σε {UNIT}
         options:
           UNIT:
             '"measures"': μέτρα
             '"seconds"': δευτερόλεπτα
+        text: τρέχον χρόνος σε {UNIT}
       Dancelab_ifDanceIs:
-        text: |-
-          αν {SPRITE} κάνει {DANCE}
-          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Παλαμάκια Ψηλά
@@ -279,37 +276,38 @@ el:
             MOVES.Drop: Πέσιμο
             MOVES.Floss: Φλος
             MOVES.Fresh: Φρέσκο
-            MOVES.Roll: Body Roll
             MOVES.Kick: Αστέρι
-            MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
-      Dancelab_ifTime:
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Αυτό ή Εκείνο
         text: |-
-          αν {UNIT} είναι {OP} {N}
+          αν {SPRITE} κάνει {DANCE}
           {DO1} {DO2}
+      Dancelab_ifTime:
         options:
           UNIT:
             '"measures"': μέτρα
             '"seconds"': δευτερόλεπτα
+        text: |-
+          αν {UNIT} είναι {OP} {N}
+          {DO1} {DO2}
       Dancelab_jumpTo:
-        text: "{SPRITE} πήγαινε στο {LOCATION}"
         options:
           LOCATION:
-            "{x: 200, y: 100}": πάνω
-            "{x: 200, y: 300}": κάτω
-            "{x: 100, y: 200}": αριστερά
-            "{x: 300, y: 200}": δεξιά
-            "{x: 200, y: 200}": κέντρο
             "{x: 100, y: 100}": πάνω - αριστερά
-            "{x: 300, y: 100}": πάνω - δεξιά
+            "{x: 100, y: 200}": αριστερά
             "{x: 100, y: 300}": κάτω - αριστερά
+            "{x: 200, y: 100}": πάνω
+            "{x: 200, y: 200}": κέντρο
+            "{x: 200, y: 300}": κάτω
+            "{x: 300, y: 100}": πάνω - δεξιά
+            "{x: 300, y: 200}": δεξιά
             "{x: 300, y: 300}": κάτω δεξιά
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": τυχαίο
+        text: "{SPRITE} πήγαινε στο {LOCATION}"
       Dancelab_jumpToEach:
-        text: άλμα {GROUP} προς το {LOCATION}
         options:
           GROUP:
-            sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
             '"BEAR"': αρκούδες
             '"CAT"': όλες οι γάτες
@@ -322,22 +320,38 @@ el:
             '"SHARK"': καρχαρίες
             '"SLOTH"': βραδύποδες
             '"UNICORN"': μονόκεροι
+            sprites: όλα
           LOCATION:
-            "{x: 200, y: 100}": πάνω
-            "{x: 200, y: 300}": κάτω
-            "{x: 100, y: 200}": αριστερά
-            "{x: 300, y: 200}": δεξιά
-            "{x: 200, y: 200}": κέντρο
             "{x: 100, y: 100}": πάνω - αριστερά
-            "{x: 300, y: 100}": πάνω - δεξιά
+            "{x: 100, y: 200}": αριστερά
             "{x: 100, y: 300}": κάτω - αριστερά
+            "{x: 200, y: 100}": πάνω
+            "{x: 200, y: 200}": κέντρο
+            "{x: 200, y: 300}": κάτω
+            "{x: 300, y: 100}": πάνω - δεξιά
+            "{x: 300, y: 200}": δεξιά
             "{x: 300, y: 300}": κάτω δεξιά
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": τυχαίο
+        text: άλμα {GROUP} προς το {LOCATION}
       Dancelab_layoutSprites:
-        text: διάταξη {GROUP} ως {FORMAT}
         options:
+          FORMAT:
+            '"border"': όριο
+            '"bottom"': κάτω σειρά
+            '"circle"': κύκλος
+            '"column"': στήλη
+            '"diamond"': διαμάντι
+            '"grid"': πλέγμα
+            '"inner"': εσωτερικό τετράγωνο
+            '"left"': αριστερή στήλη
+            '"plus"': συν
+            '"random"': τυχαίο
+            '"right"': δεξιά στήλη
+            '"row"': τάξη
+            '"spiral"': σπιράλ
+            '"top"': πάνω σειρά
+            '"x"': χιαστί
           GROUP:
-            sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
             '"BEAR"': αρκούδες
             '"CAT"': όλες οι γάτες
@@ -350,24 +364,9 @@ el:
             '"SHARK"': καρχαρίες
             '"SLOTH"': βραδύποδες
             '"UNICORN"': μονόκεροι
-          FORMAT:
-            '"border"': όριο
-            '"inner"': εσωτερικό τετράγωνο
-            '"diamond"': διαμάντι
-            '"circle"': κύκλος
-            '"grid"': πλέγμα
-            '"top"': πάνω σειρά
-            '"row"': τάξη
-            '"bottom"': κάτω σειρά
-            '"left"': αριστερή στήλη
-            '"column"': στήλη
-            '"right"': δεξιά στήλη
-            '"x"': χιαστί
-            '"plus"': συν
-            '"spiral"': σπιράλ
-            '"random"': τυχαίο
+            sprites: όλα
+        text: διάταξη {GROUP} ως {FORMAT}
       Dancelab_makeAnonymousDanceSprite:
-        text: φτιάξε ένα καινούριο {COSTUME} σε {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': εξωγήινος
@@ -383,20 +382,18 @@ el:
             '"SLOTH"': βραδύπους
             '"UNICORN"': μονόκερος
           LOCATION:
-            "{x: 200, y: 100}": πάνω
-            "{x: 200, y: 300}": κάτω
-            "{x: 100, y: 200}": αριστερά
-            "{x: 300, y: 200}": δεξιά
-            "{x: 200, y: 200}": κέντρο
             "{x: 100, y: 100}": πάνω - αριστερά
-            "{x: 300, y: 100}": πάνω - δεξιά
+            "{x: 100, y: 200}": αριστερά
             "{x: 100, y: 300}": κάτω - αριστερά
+            "{x: 200, y: 100}": πάνω
+            "{x: 200, y: 200}": κέντρο
+            "{x: 200, y: 300}": κάτω
+            "{x: 300, y: 100}": πάνω - δεξιά
+            "{x: 300, y: 200}": δεξιά
             "{x: 300, y: 300}": κάτω δεξιά
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": τυχαίο
+        text: φτιάξε ένα καινούριο {COSTUME} σε {LOCATION}
       Dancelab_makeNewDanceSprite:
-        text: |-
-          φτιάξε ένα νέο {COSTUME}
-          που ονομάζεται {NAME} στο {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': εξωγήινος
@@ -412,61 +409,21 @@ el:
             '"SLOTH"': βραδύπους
             '"UNICORN"': μονόκερος
           LOCATION:
-            "{x: 200, y: 100}": πάνω
-            "{x: 200, y: 300}": κάτω
-            "{x: 100, y: 200}": αριστερά
-            "{x: 300, y: 200}": δεξιά
-            "{x: 200, y: 200}": κέντρο
             "{x: 100, y: 100}": πάνω - αριστερά
-            "{x: 300, y: 100}": πάνω - δεξιά
+            "{x: 100, y: 200}": αριστερά
             "{x: 100, y: 300}": κάτω - αριστερά
+            "{x: 200, y: 100}": πάνω
+            "{x: 200, y: 200}": κέντρο
+            "{x: 200, y: 300}": κάτω
+            "{x: 300, y: 100}": πάνω - δεξιά
+            "{x: 300, y: 200}": δεξιά
             "{x: 300, y: 300}": κάτω δεξιά
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": τυχαίο
-      Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          φτιάξε {N} νέα {COSTUME}
-          σε διάταξη {LAYOUT}
+          φτιάξε ένα νέο {COSTUME}
+          που ονομάζεται {NAME} στο {LOCATION}
+      Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': όλοι οι εξωγήινοι
             '"BEAR"': αρκούδες
@@ -482,20 +439,63 @@ el:
             '"UNICORN"': μονόκεροι
           LAYOUT:
             '"border"': όριο
-            '"inner"': εσωτερικό τετράγωνο
-            '"diamond"': διαμάντι
-            '"circle"': κύκλος
-            '"grid"': πλέγμα
-            '"top"': πάνω σειρά
-            '"row"': τάξη
             '"bottom"': κάτω σειρά
-            '"left"': αριστερή στήλη
+            '"circle"': κύκλος
             '"column"': στήλη
-            '"right"': δεξιά στήλη
-            '"x"': χιαστί
+            '"diamond"': διαμάντι
+            '"grid"': πλέγμα
+            '"inner"': εσωτερικό τετράγωνο
+            '"left"': αριστερή στήλη
             '"plus"': συν
-            '"spiral"': σπιράλ
             '"random"': τυχαίο
+            '"right"': δεξιά στήλη
+            '"row"': τάξη
+            '"spiral"': σπιράλ
+            '"top"': πάνω σειρά
+            '"x"': χιαστί
+          N:
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '2': '2'
+            '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '3': '3'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '4': '4'
+            '40': '40'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+        text: |-
+          φτιάξε {N} νέα {COSTUME}
+          σε διάταξη {LAYOUT}
       Dancelab_mixColors:
         text: ανακάτεψε {COLOR1} και {COLOR2}
       Dancelab_nMeasures:
@@ -511,91 +511,89 @@ el:
       Dancelab_setBackground:
         text: όρισε χρώμα παρασκηνίου σε {COLOR}
       Dancelab_setBackgroundEffect:
-        text: όρισε παρασκήνιο σε {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"none"': Κανένα
             '"circles"': Σήραγγα
             '"color_cycle"': Χρώματα
             '"diamonds"': Διαμάντια
+            '"disco"': Τετράγωνα
             '"disco_ball"': Ντισκομπάλα
             '"fireworks"': Πυροτεχνήματα
-            '"swirl"': Hypno
+            '"galaxy"': Διάστημα
             '"kaleidoscope"': Καλειδοσκόπιο
             '"lasers"': Πίστα χορού λέιζερ
-            '"splatter"': Πιτσιλιές χρωμάτων
+            '"none"': Κανένα
             '"rainbow"': Ουράνιο τόξο
             '"snowflakes"': Χιόνι
-            '"text"': Τίτλος τραγουδιού
-            '"galaxy"': Διάστημα
             '"sparkles"': Αστράκια
             '"spiral"': Σπιράλ
-            '"disco"': Τετράγωνα
+            '"splatter"': Πιτσιλιές χρωμάτων
             '"stars"': Αστέρια
+            '"swirl"': Hypno
+            '"text"': Τίτλος τραγουδιού
           PALETTE:
-            '"rave"': Ασπρόμαυρο
             '"cool"': Μπλουζ
+            '"default"': Φωτεινό
             '"electronic"': Ηλεκτρονικό
             '"iceCream"': Παγωτό
-            '"default"': Φωτεινό
             '"neon"': Νέον
+            '"rave"': Ασπρόμαυρο
             '"tropical"': Τροπικό
             '"vintage"': Βίντατζ
             '"warm"': Κόκκινα
+        text: όρισε παρασκήνιο σε {EFFECT} {PALETTE}
       Dancelab_setBackgroundEffectWithPalette:
-        text: όρισε εφέ φόντου {PALETTE} {EFFECT}
         options:
           EFFECT:
-            '"none"': Κανένα
-            '"rand"': "(Τυχαίο)"
             '"circles"': Σήραγγα
-            '"quads"': Γωνίες
             '"color_cycle"': Χρώματα
             '"diamonds"': Διαμάντια
+            '"disco"': Τετράγωνα
             '"disco_ball"': Ντισκομπάλα
             '"fireworks"': Πυροτεχνήματα
             '"flowers"': Λουλούδια
+            '"galaxy"': Διάστημα
             '"growing_stars"': Ανερχόμενοι αστέρες
-            '"swirl"': Hypno
             '"kaleidoscope"': Καλειδοσκόπιο
             '"lasers"': Πίστα χορού λέιζερ
-            '"splatter"': Πιτσιλιές χρωμάτων
+            '"music_wave"': Κύματα
+            '"none"': Κανένα
+            '"quads"': Γωνίες
             '"rainbow"': Ουράνιο τόξο
-            '"ripples_random"': Τυχαίες πτυχώσεις
+            '"rand"': "(Τυχαίο)"
             '"ripples"': Πτυχώσεις
+            '"ripples_random"': Τυχαίες πτυχώσεις
             '"snowflakes"': Χιόνι
-            '"text"': Τίτλος τραγουδιού
-            '"squiggles"': Μουτζούρες
-            '"galaxy"': Διάστημα
             '"sparkles"': Αστράκια
             '"spiral"': Σπιράλ
-            '"disco"': Τετράγωνα
+            '"splatter"': Πιτσιλιές χρωμάτων
+            '"squiggles"': Μουτζούρες
             '"stars"': Αστέρια
-            '"music_wave"': Κύματα
+            '"swirl"': Hypno
+            '"text"': Τίτλος τραγουδιού
           PALETTE:
-            '"rave"': Ασπρόμαυρο
             '"cool"': Μπλουζ
+            '"default"': Φωτεινό
             '"electronic"': Ηλεκτρονικό
             '"iceCream"': Παγωτό
-            '"default"': Φωτεινό
             '"neon"': Νέον
+            '"rave"': Ασπρόμαυρο
             '"tropical"': Τροπικό
             '"vintage"': Βίντατζ
             '"warm"': Κόκκινα
+        text: όρισε εφέ φόντου {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
-        text: άλλαξε του {SPRITE} την ταχύτητα χορού σε {SPEED}
         options:
           SPEED:
+            '0.25': πολύ αργή
+            '0.5': αργή
             '1': κανονικό
             '2': γρήγορη
             '4': πολύ γρήγορη
-            '0.5': αργή
-            '0.25': πολύ αργή
+        text: άλλαξε του {SPRITE} την ταχύτητα χορού σε {SPEED}
       Dancelab_setDanceSpeedEach:
-        text: όρισε για {GROUP} την ταχύτητα χορού σε {SPEED}
         options:
           GROUP:
-            sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
             '"BEAR"': αρκούδες
             '"CAT"': όλες οι γάτες
@@ -608,104 +606,104 @@ el:
             '"SHARK"': καρχαρίες
             '"SLOTH"': βραδύποδες
             '"UNICORN"': μονόκεροι
+            sprites: όλα
           SPEED:
+            '0.25': πολύ αργή
+            '0.5': αργή
             '1': κανονικό
             '2': γρήγορη
             '4': πολύ γρήγορη
-            '0.5': αργή
-            '0.25': πολύ αργή
+        text: όρισε για {GROUP} την ταχύτητα χορού σε {SPEED}
       Dancelab_setForegroundEffect:
-        text: όρισε προσκήνιο σε {EFFECT}
         options:
           EFFECT:
-            '"none"': Κανένα
             '"bubbles"': Μπουρμπουλήθρες
+            '"color_lights"': Φώτα σκηνής
             '"confetti"': Κομφετί
+            '"floating_rainbows"': Ουράνιο τόξο
             '"hearts_red"': Καρδιές
             '"music_notes"': Νότες μουσικής
+            '"none"': Κανένα
             '"pineapples"': Ανανάδες
             '"pizzas"': Πίτσες
-            '"smiling_poop"': Κακάκια
             '"rain"': Βροχή
-            '"floating_rainbows"': Ουράνιο τόξο
-            '"smile_face"': Χαμόγελα
-            '"spotlight"': Προβολέας
-            '"color_lights"': Φώτα σκηνής
             '"raining_tacos"': Τάκο
-      Dancelab_setForegroundEffectExtended:
+            '"smile_face"': Χαμόγελα
+            '"smiling_poop"': Κακάκια
+            '"spotlight"': Προβολέας
         text: όρισε προσκήνιο σε {EFFECT}
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
-            '"none"': Κανένα
-            '"rand"': "(Τυχαίο)"
             '"bubbles"': Μπουρμπουλήθρες
-            '"hearts_colorful"': Πολύχρωμες καρδιές
+            '"color_lights"': Φώτα σκηνής
             '"confetti"': Κομφετί
             '"emojis"': Emojis
+            '"exploding_stars"': Οδοντωτός σύνδεσμος
+            '"floating_rainbows"': Ουράνιο τόξο
+            '"hearts_colorful"': Πολύχρωμες καρδιές
             '"hearts_red"': Καρδιές
             '"music_notes"': Νότες μουσικής
+            '"none"': Κανένα
             '"paint_drip"': Στάξιμο μπογιάς
             '"pineapples"': Ανανάδες
             '"pizzas"': Πίτσες
-            '"smiling_poop"': Κακάκια
             '"rain"': Βροχή
-            '"floating_rainbows"': Ουράνιο τόξο
-            '"smile_face"': Χαμόγελα
-            '"spotlight"': Προβολέας
-            '"color_lights"': Φώτα σκηνής
-            '"exploding_stars"': Οδοντωτός σύνδεσμος
             '"raining_tacos"': Τάκο
+            '"rand"': "(Τυχαίο)"
+            '"smile_face"': Χαμόγελα
+            '"smiling_poop"': Κακάκια
+            '"spotlight"': Προβολέας
+        text: όρισε προσκήνιο σε {EFFECT}
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"height"': ύψος
+            '"rotation"': περιστροφή
+            '"scale"': μέγεθος
+            '"width"': πλάτος
+            '"x"': οριζόντια θέση
+            '"y"': κάθετη θέση
         text: 'όρισε του {SPRITE} το {PROPERTY} σε {VAL} '
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"width"': πλάτος
-            '"height"': ύψος
-            '"rotation"': περιστροφή
-            '"x"': οριζόντια θέση
-            '"y"': κάθετη θέση
       Dancelab_setPropEach:
+        options:
+          GROUP:
+            '"ALIEN"': όλοι οι εξωγήινοι
+            '"BEAR"': αρκούδες
+            '"CAT"': όλες οι γάτες
+            '"DOG"': όλοι οι σκύλοι
+            '"DUCK"': πάπιες
+            '"FROG"': βάτραχοι
+            '"MOOSE"': όλα τα ελάφια
+            '"PINEAPPLE"': ανανάδες
+            '"ROBOT"': όλα τα ρομπότ
+            '"SHARK"': καρχαρίες
+            '"SLOTH"': βραδύποδες
+            '"UNICORN"': μονόκεροι
+            sprites: όλα
+          PROPERTY:
+            '"height"': ύψος
+            '"rotation"': περιστροφή
+            '"scale"': μέγεθος
+            '"tint"': απόχρωση
+            '"width"': πλάτος
+            '"x"': οριζόντια θέση
+            '"y"': κάθετη θέση
         text: όρισε για {GROUP} το {PROPERTY} σε {VAL}
-        options:
-          GROUP:
-            sprites: όλα
-            '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
-            '"CAT"': όλες οι γάτες
-            '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
-            '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
-            '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
-            '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"width"': πλάτος
-            '"height"': ύψος
-            '"rotation"': περιστροφή
-            '"x"': οριζόντια θέση
-            '"y"': κάθετη θέση
-            '"tint"': απόχρωση
       Dancelab_setPropRandom:
-        text: κάνε τυχαίο του {SPRITE} το {PROPERTY}
         options:
           PROPERTY:
-            '"scale"': μέγεθος
-            '"width"': πλάτος
             '"height"': ύψος
             '"rotation"': περιστροφή
+            '"scale"': μέγεθος
+            '"tint"': απόχρωση
+            '"width"': πλάτος
             '"x"': οριζόντια θέση
             '"y"': κάθετη θέση
-            '"tint"': απόχρωση
+        text: κάνε τυχαίο του {SPRITE} το {PROPERTY}
       Dancelab_setPropRandomEach:
-        text: τυχαία επιλογή {GROUP} {PROPERTY}
         options:
           GROUP:
-            sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
             '"BEAR"': αρκούδες
             '"CAT"': όλες οι γάτες
@@ -718,21 +716,21 @@ el:
             '"SHARK"': καρχαρίες
             '"SLOTH"': βραδύποδες
             '"UNICORN"': μονόκεροι
+            sprites: όλα
           PROPERTY:
-            '"scale"': μέγεθος
-            '"width"': πλάτος
             '"height"': ύψος
             '"rotation"': περιστροφή
+            '"scale"': μέγεθος
+            '"tint"': απόχρωση
+            '"width"': πλάτος
             '"x"': οριζόντια θέση
             '"y"': κάθετη θέση
-            '"tint"': απόχρωση
+        text: τυχαία επιλογή {GROUP} {PROPERTY}
       Dancelab_setTint:
         text: όρισε του {SPRITE} την απόχρωση σε {VAL}
       Dancelab_setTintEach:
-        text: όρισε {THIS} απόχρωση σε {VAL}
         options:
           THIS:
-            sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
             '"BEAR"': αρκούδες
             '"CAT"': όλες οι γάτες
@@ -745,11 +743,11 @@ el:
             '"SHARK"': καρχαρίες
             '"SLOTH"': βραδύποδες
             '"UNICORN"': μονόκεροι
+            sprites: όλα
+        text: όρισε {THIS} απόχρωση σε {VAL}
       Dancelab_setTintEachInline:
-        text: όρισε {THIS} απόχρωση σε {VAL}
         options:
           THIS:
-            sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
             '"BEAR"': αρκούδες
             '"CAT"': όλες οι γάτες
@@ -762,19 +760,19 @@ el:
             '"SHARK"': καρχαρίες
             '"SLOTH"': βραδύποδες
             '"UNICORN"': μονόκεροι
+            sprites: όλα
+        text: όρισε {THIS} απόχρωση σε {VAL}
       Dancelab_setTintInline:
         text: όρισε του {SPRITE} την απόχρωση σε {VAL}
       Dancelab_setVisible:
-        text: όρισε του {SPRITE} την ορατότητα σε {VISIBILITY}
         options:
           VISIBILITY:
-            'true': ορατό
             'false': αόρατο
+            'true': ορατό
+        text: όρισε του {SPRITE} την ορατότητα σε {VISIBILITY}
       Dancelab_setVisibleEach:
-        text: όρισε του {THIS} την ορατότητα σε {VISIBILITY}
         options:
           THIS:
-            sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
             '"BEAR"': αρκούδες
             '"CAT"': όλες οι γάτες
@@ -787,74 +785,74 @@ el:
             '"SHARK"': καρχαρίες
             '"SLOTH"': βραδύποδες
             '"UNICORN"': μονόκεροι
+            sprites: όλα
           VISIBILITY:
-            'true': ορατό
             'false': αόρατο
+            'true': ορατό
+        text: όρισε του {THIS} την ορατότητα σε {VISIBILITY}
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"height"': ύψος
+            '"rotation"': περιστροφή
+            '"scale"': μέγεθος
+            '"tint"': απόχρωση
+            '"width"': πλάτος
+            '"x"': οριζόντια θέση
+            '"y"': κάθετη θέση
+          RANGE:
+            '"bass"': μπάσα
+            '"mid"': μεσαία
+            '"treble"': πρίμα
         text: "{SPRITE} αλλάζει το {PROPERTY} ακολουθώντας τα {RANGE}"
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"width"': πλάτος
-            '"height"': ύψος
-            '"rotation"': περιστροφή
-            '"x"': οριζόντια θέση
-            '"y"': κάθετη θέση
-            '"tint"': απόχρωση
-          RANGE:
-            '"bass"': μπάσα
-            '"mid"': μεσαία
-            '"treble"': πρίμα
       Dancelab_startMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': όλοι οι εξωγήινοι
+            '"BEAR"': αρκούδες
+            '"CAT"': όλες οι γάτες
+            '"DOG"': όλοι οι σκύλοι
+            '"DUCK"': πάπιες
+            '"FROG"': βάτραχοι
+            '"MOOSE"': όλα τα ελάφια
+            '"PINEAPPLE"': ανανάδες
+            '"ROBOT"': όλα τα ρομπότ
+            '"SHARK"': καρχαρίες
+            '"SLOTH"': βραδύποδες
+            '"UNICORN"': μονόκεροι
+            sprites: όλα
+          PROPERTY:
+            '"height"': ύψος
+            '"rotation"': περιστροφή
+            '"scale"': μέγεθος
+            '"tint"': απόχρωση
+            '"width"': πλάτος
+            '"x"': οριζόντια θέση
+            '"y"': κάθετη θέση
+          RANGE:
+            '"bass"': μπάσα
+            '"mid"': μεσαία
+            '"treble"': πρίμα
         text: "{GROUP} έναρξη {PROPERTY} μετά το {RANGE}"
-        options:
-          GROUP:
-            sprites: όλα
-            '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
-            '"CAT"': όλες οι γάτες
-            '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
-            '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
-            '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
-            '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"width"': πλάτος
-            '"height"': ύψος
-            '"rotation"': περιστροφή
-            '"x"': οριζόντια θέση
-            '"y"': κάθετη θέση
-            '"tint"': απόχρωση
-          RANGE:
-            '"bass"': μπάσα
-            '"mid"': μεσαία
-            '"treble"': πρίμα
       Dancelab_stopMapping:
-        text: "{SPRITE} σταματάει να αλλάζει το {PROPERTY} ακολουθώντας τα {RANGE}"
         options:
           PROPERTY:
-            '"scale"': μέγεθος
-            '"width"': πλάτος
+            '"direction"': κατεύθυνση κίνησης
             '"height"': ύψος
             '"rotation"': περιστροφή
+            '"scale"': μέγεθος
+            '"tint"': απόχρωση
+            '"width"': πλάτος
             '"x"': οριζόντια θέση
             '"y"': κάθετη θέση
-            '"direction"': κατεύθυνση κίνησης
-            '"tint"': απόχρωση
           RANGE:
             '"bass"': μπάσα
             '"mid"': μεσαία
             '"treble"': πρίμα
+        text: "{SPRITE} σταματάει να αλλάζει το {PROPERTY} ακολουθώντας τα {RANGE}"
       Dancelab_stopMappingEach:
-        text: "{GROUP} στάσεις {PROPERTY} μετά το {RANGE}"
         options:
           GROUP:
-            sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
             '"BEAR"': αρκούδες
             '"CAT"': όλες οι γάτες
@@ -867,55 +865,24 @@ el:
             '"SHARK"': καρχαρίες
             '"SLOTH"': βραδύποδες
             '"UNICORN"': μονόκεροι
+            sprites: όλα
           PROPERTY:
-            '"scale"': μέγεθος
-            '"width"': πλάτος
+            '"direction"': κατεύθυνση κίνησης
             '"height"': ύψος
             '"rotation"': περιστροφή
+            '"scale"': μέγεθος
+            '"tint"': απόχρωση
+            '"width"': πλάτος
             '"x"': οριζόντια θέση
             '"y"': κάθετη θέση
-            '"direction"': κατεύθυνση κίνησης
-            '"tint"': απόχρωση
           RANGE:
             '"bass"': μπάσα
             '"mid"': μεσαία
             '"treble"': πρίμα
+        text: "{GROUP} στάσεις {PROPERTY} μετά το {RANGE}"
       Dancelab_translateStrings:
-        text: μετάφραση του [STRING] [0]
         options:
           STRING:
-            '"music_wave"': Κύματα
-            '"ripples"': Πτυχώσεις
-            '"ripples_random"': Τυχαίες πτυχώσεις
-            '"quads"': Γωνίες
-            '"flowers"': Λουλούδια
-            '"popsicles"': Παγωτά ξυλάκι
-            '"squiggles"': Μουτζούρες
-            '"growing_stars"': Ανερχόμενοι αστέρες
-            '"emojis"': Emojis
-            '"hearts_colorful"': Καρδιές
-            '"paint_drio"': Στάξιμο μπογιάς
-            '"exploding_stars"': Οδοντωτός σύνδεσμος
-            '"row_top"': πάνω σειρά
-            '"row_bottom"': κάτω σειρά
-            '"column_left"': αριστερή στήλη
-            '"column_right"': δεξιά στήλη
-            '"diamond"': διαμάντι
-            '"mural"': Τοιχογραφία
-            '"safari"': Σαφάρι
-            '"network"': Δίκτυο
-            '"highway"': Αυτοκινητόδρομος
-            '"stream"': Κανάλι
-            '"tile"': Τίτλος
-            '"shadow"': Σκιά
-            '"s"': σ
-            '"t"': τ
-            '"u"': θ
-            '"v"': ω
-            '"w"': ς
-            '"x"': x
-            '"y"': y
-            '"z"': ζ
             '"0"': '0'
             '"1"': '1'
             '"2"': '2'
@@ -926,21 +893,59 @@ el:
             '"7"': '7'
             '"8"': '8'
             '"9"': '9'
+            '"column_left"': αριστερή στήλη
+            '"column_right"': δεξιά στήλη
+            '"diamond"': διαμάντι
+            '"emojis"': Emojis
+            '"exploding_stars"': Οδοντωτός σύνδεσμος
+            '"flowers"': Λουλούδια
+            '"growing_stars"': Ανερχόμενοι αστέρες
+            '"hearts_colorful"': Καρδιές
+            '"highway"': Αυτοκινητόδρομος
+            '"mural"': Τοιχογραφία
+            '"music_wave"': Κύματα
+            '"network"': Δίκτυο
+            '"paint_drio"': Στάξιμο μπογιάς
+            '"popsicles"': Παγωτά ξυλάκι
+            '"quads"': Γωνίες
+            '"ripples"': Πτυχώσεις
+            '"ripples_random"': Τυχαίες πτυχώσεις
+            '"row_bottom"': κάτω σειρά
+            '"row_top"': πάνω σειρά
+            '"s"': σ
+            '"safari"': Σαφάρι
+            '"shadow"': Σκιά
+            '"squiggles"': Μουτζούρες
+            '"stream"': Κανάλι
+            '"t"': τ
+            '"tile"': Τίτλος
+            '"u"': θ
+            '"v"': ω
+            '"w"': ς
+            '"x"': x
+            '"y"': y
+            '"z"': ζ
+        text: μετάφραση του [STRING] [0]
       Dancelab_whenKey:
-        text: όταν πατηθεί το {KEY}
         options:
           KEY:
-            '"up"': επάνω
-            '"left"': αριστερά
-            '"down"': κάτω
-            '"right"': δεξιά
-            '"space"': διάστημα
-            '"enter"': έντερ
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
             '"a"': α
             '"b"': b
             '"c"': c
             '"d"': β
+            '"down"': κάτω
             '"e"': e
+            '"enter"': έντερ
             '"f"': f
             '"g"': g
             '"h"': η
@@ -948,48 +953,43 @@ el:
             '"j"': ξ
             '"k"': κ
             '"l"': λ
+            '"left"': αριστερά
             '"m"': μ
             '"n"': ν
             '"o"': ο
             '"p"': π
             '"q"': q
             '"r"': ρ
+            '"right"': δεξιά
             '"s"': σ
+            '"space"': διάστημα
             '"t"': τ
             '"u"': θ
+            '"up"': επάνω
             '"v"': ω
             '"w"': ς
             '"x"': x
             '"y"': y
             '"z"': ζ
-            '"0"': '0'
-            '"1"': '1'
-            '"2"': '2'
-            '"3"': '3'
-            '"4"': '4'
-            '"5"': '5'
-            '"6"': '6'
-            '"7"': '7'
-            '"8"': '8'
-            '"9"': '9'
+        text: όταν πατηθεί το {KEY}
       Dancelab_whenPeak:
-        text: όταν τα {RANGE} κορυφώνονται
         options:
           RANGE:
             '0': μπάσα
             '1': μεσαία
             '2': πρίμα
+        text: όταν τα {RANGE} κορυφώνονται
       Dancelab_whenSetup:
         text: αρχικοποίηση
       Dancelab_whenSetup2:
         text: αρχικοποίηση
       DansBlocks_getMicroscope:
-        text: Το μικροσκόπιο έχει {INPUT1}
         options:
           INPUT1:
             '1': χυμός λεμονιού
             '3': baking soda
             '5': both
+        text: Το μικροσκόπιο έχει {INPUT1}
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1012,668 +1012,141 @@ el:
         text: αντιπροσωπεύστε {NUM} νέος {ANIMATION_NAME} ξωτικά [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}πες{TEXT1}"
-      gamelab_addBehaviorSimple:
-        text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
-      gamelab_addTarget:
-        options:
-          OPT:
-            '"avoid"': Απόφυγε
-      gamelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
-      gamelab_atTime:
-        options:
-          UNIT:
-            '"seconds"': δευτερόλεπτα
-      gamelab_changePropBy:
-        text: αλλαγή {SPRITE} {PROPERTY} με {VAL}
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"rotation"': περιστροφή
-            '"x"': θέση x
-            '"y"': θέση y
-            '"direction"': κατεύθυνση κίνησης
-            '"speed"': ταχύτητα
-      gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} Πινελιές {SPRITE2}"
-        options:
-          CONDITION:
-            '"when"': όταν
-            '"while"': όσο
-      gamelab_clickedOn:
-        text: όταν {SPRITE} πατηθεί
-      gamelab_clickedSpritePointer:
-        text: "{SPRITE}"
-      gamelab_collectibleBehaviors:
-        options:
-          BEHAVIOR:
-            new Behavior(spinning_right, []): περιστροφή δεξιά
-            new Behavior(spinning_left, []): περιστροφή αριστερά
-            new Behavior(fluttering, []): τριγύρισμα
-            new Behavior(jittering, []): τρεμούλιασμα
-            new Behavior(wobbling, []): ταλάντευση
-            new Behavior(wandering, []): περιπλάνηση
-            new Behavior(patrolling, []): περιφρούρηση
-            new Behavior(moving_west_and_looping, []): μετακίνηση δυτικά και δημιουργία
-              βρόχου
-            new Behavior(moving_east_and_looping, []): μετακίνηση ανατολικά και δημιουργία
-              βρόχου
-            new Behavior(moving_north_and_looping, []): μετακίνηση βόρεια και δημιουργία
-              βρόχου
-            new Behavior(moving_south_and_looping, []): μετακίνηση νότια και δημιουργία
-              βρόχου
-      gamelab_comment:
-        text: 'σχόλιο: {COMMENT}'
-      gamelab_costumeImage:
-        text: "{COSTUME}"
-      gamelab_createNewSprite:
-        text: "φτιάξε καινούριο χαρακτήρα\n που ονομάζεται {NAME} \n με κοστούμι {COSTUME}
-          \n σε {LOCATION}"
-      gamelab_destroy:
-        text: αφαίρεσε {THIS}
-      gamelab_draggable:
-        text: είναι συρόμενο
-      gamelab_edgesDisplace:
-        text: τουβλάκι ακμών {SPRITE} από το να κινηθεί
-      gamelab_everyInterval:
-        text: 'κάθε {N} {UNIT} '
-        options:
-          UNIT:
-            '"seconds"': δευτερόλεπτα
-      gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"rotation"': περιστροφή
-            '"x"': θέση x
-            '"y"': θέση y
-            '"direction"': κατεύθυνση κίνησης
-            '"tint"': απόχρωση
-            '"speed"': ταχύτητα
-      gamelab_getThisSprite:
-        text: "{CHOICE} χαρακτήρας"
-        options:
-          CHOICE:
-            '"this"': αυτό
-      gamelab_getTime:
-        options:
-          UNIT:
-            '"seconds"': δευτερόλεπτα
-      gamelab_hideTitleScreen:
-        text: κρύψε την οθόνη τίτλων
-      gamelab_int10:
-        options:
-          VALUE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-      gamelab_isKeyPressed:
-        options:
-          KEY:
-            '"up"': επάνω
-            '"down"': κάτω
-            '"left"': αριστερά
-            '"right"': δεξιά
-            '"space"': διάστημα
-            '"a"': α
-            '"b"': b
-            '"c"': c
-            '"d"': β
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': η
-            '"i"': ι
-            '"j"': ξ
-            '"k"': κ
-            '"l"': λ
-            '"m"': μ
-            '"n"': ν
-            '"o"': ο
-            '"p"': π
-            '"q"': q
-            '"r"': ρ
-            '"s"': σ
-            '"t"': τ
-            '"u"': θ
-            '"v"': ω
-            '"w"': ς
-            '"x"': x
-            '"y"': y
-            '"z"': ζ
-      gamelab_isTouchingEdges:
-        text: "{SPRITE} αγγίζει τις άκρες"
-      gamelab_isTouchingSprite:
-        text: "{SPRITE} αγγίζει {TARGET}"
-      gamelab_jumpTo:
-        text: "{SPRITE} πήγαινε στο {LOCATION}"
-      gamelab_keyPressed:
-        text: "{CONDITION} {KEY} Πιέζεται"
-        options:
-          CONDITION:
-            '"when"': όταν
-            '"while"': όσο
-          KEY:
-            '"up"': επάνω
-            '"down"': κάτω
-            '"left"': αριστερά
-            '"right"': δεξιά
-            '"space"': διάστημα
-            '"a"': α
-            '"b"': b
-            '"c"': c
-            '"d"': β
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': η
-            '"i"': ι
-            '"j"': ξ
-            '"k"': κ
-            '"l"': λ
-            '"m"': μ
-            '"n"': ν
-            '"o"': ο
-            '"p"': π
-            '"q"': q
-            '"r"': ρ
-            '"s"': σ
-            '"t"': τ
-            '"u"': θ
-            '"v"': ω
-            '"w"': ς
-            '"x"': x
-            '"y"': y
-            '"z"': ζ
-      gamelab_layoutSprites:
-        text: διάταξη {GROUP} ως {FORMAT}
-        options:
-          FORMAT:
-            '"border"': όριο
-            '"circle"': κύκλος
-            '"grid"': πλέγμα
-            '"top"': πάνω σειρά
-            '"row"': τάξη
-            '"bottom"': κάτω σειρά
-            '"left"': αριστερή στήλη
-            '"column"': στήλη
-            '"right"': δεξιά στήλη
-      gamelab_locationAt:
-        text: 'θέση x: {X} y: {Y}'
-      gamelab_locationModifier:
-        text: "{DISTANCE} pixels {DIRECTION} από {LOCATION}"
-        options:
-          DIRECTION:
-            '"North"': Βοράς
-            '"East"': Ανατολή
-            '"South"': Νότος
-            '"West"': Δυτικά
-      gamelab_locationMouse:
-        text: θέση ποντικιού
-      gamelab_locationOf:
-        text: θέση από {SPRITE}
-      gamelab_location_picker:
-        text: "{LOCATION}"
-      gamelab_makeBurst:
-        options:
-          EFFECT:
-            '"burst"': εκρήγνυται
-            '"rain"': βροχή
-            '"spiral"': σπιράλ
-      gamelab_makeNewSpriteAnon:
-        text: δημιουργία νέου {ANIMATION_NAME} χαρακτήρα σε {LOCATION}
-      gamelab_makeNewSpriteGroup:
-        options:
-          FORMAT:
-            '"border"': όριο
-            '"circle"': κύκλος
-            '"grid"': πλέγμα
-            '"top"': πάνω σειρά
-            '"row"': τάξη
-            '"bottom"': κάτω σειρά
-            '"left"': αριστερή στήλη
-            '"column"': στήλη
-            '"right"': δεξιά στήλη
-      gamelab_makeProjectile:
-        options:
-          DIRECTION:
-            '0': δεξιά
-            '90': κάτω
-            '180': αριστερά
-            '270': επάνω
-      gamelab_makeSpritesWithSize:
-        text: φτιάξε {NUM} καινούριο {SIZE} {COSTUME} χαρακτήρες
-        options:
-          SIZE:
-            '30': small
-            '50': μεσαία
-            '100': large
-      gamelab_mirrorSprite:
-        text: "{SPRITE} γύρνα προς {DIRECTION}"
-        options:
-          DIRECTION:
-            '"right"': δεξιά
-            '"left"': αριστερά
-      gamelab_mouseLocation:
-        text: θέση ποντικιού
-      gamelab_moveForward:
-        text: κινήσου {SPRITE} {DISTANCE} pixels προς τα μπρος
-      gamelab_moveInDirection:
-        text: κινήσου {SPRITE} {DISTANCE} pixels {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Βοράς
-            '"East"': Ανατολή
-            '"South"': Νότος
-            '"West"': Δυτικά
-      gamelab_moveToward:
-        text: κινήσου {SPRITE} απόσταση {DISTANCE} προς {TARGET}
-      gamelab_newSpritePointer:
-        text: "{SPRITE}"
-      gamelab_objectSpritePointer:
-        text: "{SPRITE}"
-      gamelab_playSound:
-        text: παίξεΉχο {SOUND}
-      gamelab_playSoundOptions:
-        text: παίξεΉχο {SOUND}
-        options:
-          SOUND:
-            "'sound://category_app/app_button_1.mp3'": κουμπί
-            "'sound://category_collect/clicky_crunch.mp3'": τρίξιμο
-            "'sound://category_pop/bubble_pop_cluster_1.mp3'": φυσαλλίδα
-            "'sound://category_animals/bear.mp3'": Αρκούδα
-            "'sound://category_animals/cat.mp3'": γάτα
-            "'sound://category_animals/cow.mp3'": αγελάδα
-            "'sound://category_animals/pig.mp3'": γουρούνι
-            "'sound://category_animals/sheep.mp3'": πρόβατο
-            "'sound://category_animals/goat.mp3'": γίδα
-            "'sound://category_animals/chicken.mp3'": κοτόπουλο
-            "'sound://category_animals/rooster.mp3'": κόκορας
-            "'sound://category_animals/elephant.mp3'": ελέφαντας
-            "'sound://category_animals/dolphin.mp3'": δελφίνι
-            "'sound://category_animals/chick.mp3'": νεοσσός
-            "'sound://category_animals/dog.mp3'": σκύλος
-            "'sound://category_animals/tiger.mp3'": τίγρης
-            "'sound://category_instrumental/harpe_pluck_1.mp3'": άρπα
-            "'sound://category_retro/retro_game_ui_select_6.mp3'": επιλέξτε
-            "'sound://category_digital/jump_7.mp3'": πήδα
-      gamelab_playSoundOptionsSoccer:
-        text: παίξεΉχο {SOUND}
-        options:
-          SOUND:
-            "'sound://category_sports/Airhorn_SFX.mp3'": αεροτενόρος
-            "'sound://category_sports/Crowd_Applause_SFX.mp3'": χειροκρότημα
-            "'sound://category_sports/Crowd_Chant_SFX.mp3'": ρυθμικό τραγούδι
-            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": ζητωκραυγάσματα
-            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": κλωτσιά
-            "'sound://category_sports/Double_Whistle_SFX.mp3'": δύο σφυριξιές
-            "'sound://category_sports/One_Whistle_SFX.mp3'": σφυρίχτρα
-      gamelab_playSoundOptionsSpace:
-        text: παίξεΉχο {SOUND}
-        options:
-          SOUND:
-            "'sound://category_space/Blackhole_SFX.mp3'": μαύρη τρύπα
-            "'sound://category_space/Bullet_cluster_SFX.mp3'": σύγκρουση γαλαξιών
-            "'sound://category_space/Carina_SFX.mp3'": Τρόπις
-            "'sound://category_space/Cassiopeia_SFX.mp3'": Κασσιόπη
-            "'sound://category_space/Crab_nebula_SFX.mp3'": Νεφέλωμα του Καρκίνου
-            "'sound://category_space/Launch_SFX.mp3'": εκτόξευση
-            "'sound://category_space/Lift_Off.mp3'": απογείωση
-            "'sound://category_space/Pillars_SFX.mp3'": κολώνες
-            "'sound://category_space/Southern_ring_SFX.mp3'": νότιος δακτύλιος
-            "'sound://category_space/Supernova_SFX.mp3'": σουπερνόβα
-            "'sound://category_space/Tycho_SFX.mp3'": Κρατήρας Τάικο
-      gamelab_playerBehaviors:
-        options:
-          BEHAVIOR:
-            new Behavior(moving_with_arrow_keys, []): μετακίνηση με τα πλήκτρα βέλους
-            new Behavior(driving_with_arrow_keys, []): μετακίνηση με τα πλήκτρα βέλους
-            draggable(): είναι συρόμενο
-      gamelab_pointInDirection:
-        text: στρίψε το {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Βοράς
-            '"East"': Ανατολή
-            '"South"': Νότος
-            '"West"': Δυτικά
-      gamelab_printText:
-        text: εκτύπωσε {TEXT}
-      gamelab_randColor:
-        text: τυχαίο χρώμα
-      gamelab_randomColor:
-        text: τυχαίο χρώμα
-      gamelab_randomLocation:
-        text: τυχαία θέση
-      gamelab_removeAllBehaviors:
-        text: "{SPRITE} σταματάει τα πάντα"
-      gamelab_removeBehaviorSimple:
-        text: χαρακτήρας {SPRITE} σταματάει {BEHAVIOR}
-      gamelab_removeTint:
-        text: αφαίρεσε το χρώμα από {THIS}
-      gamelab_repeatForever:
-        text: επαναλάμβανε για πάντα
-      gamelab_setAnimation:
-        text: άλλαξε {THIS} κοστούμι σε {ANIMATION}
-      gamelab_setBackground:
-        text: όρισε χρώμα παρασκηνίου σε {COLOR}
-      gamelab_setBackgroundImage:
-        text: Ορισμός φόντου σε {IMG}
-        options:
-          IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': σπηλιά
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': πόλη
-            '"https://studio.code.org/blockly/media/skins/studio/background.png"': δικαστήριο
-            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': έρημος
-            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': γαλαξίας
-            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': πλέγμα
-            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': λιβάδι
-            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ουράνιο
-              τόξο
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': σκηνή
-            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': αστέρια
-            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': μετρό
-            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': υπόγεια
-            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': υποβρύχια
-            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': χειμώνας
-            undefined: Καμία
-      gamelab_setBackgroundImageAs:
-        text: Ορισμός φόντου σε {IMG}
-      gamelab_setDefaultSpriteSize:
-        options:
-          SIZE:
-            '25': extra small
-            '50': small
-            '75': μεσαία
-            '100': large
-      gamelab_setProp:
-        text: όρισε {SPRITE} {PROPERTY} σε {VAL}
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"rotation"': περιστροφή
-            '"x"': θέση x
-            '"y"': θέση y
-            '"direction"': κατεύθυνση κίνησης
-            '"speed"': ταχύτητα
-      gamelab_setProp_dropdown:
-        text: "΄όρισε {SPRITE} {PROPERTY} σε {SIZE}"
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-          SIZE:
-            '25': extra small
-            '50': small
-            '75': μεσαία
-            '100': large
-      gamelab_setSizes:
-        text: όρισε* {SPRITE} {PROPERTY} στο {N}%
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"width"': πλάτος
-            '"height"': ύψος
-      gamelab_setSpeed_dropdown:
-        options:
-          SIZE:
-            '1': extra slow
-            '3': αργή
-            '5': κανονικό
-            '7': γρήγορη
-            '9': extra fast
-      gamelab_setTint:
-        text: άλλαξε το χρώμα του {THIS} σε {COLOR}
-      gamelab_setupSim:
-        text: |-
-          προσομοίωση ρύθμισης με
-          {SPRITE1N}{SPRITE1COSTUME}Ταχύτητα{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}Ταχύτητα{SPRITE2SPEED}
-          Συλλογή
-          {SPRITE3N}{SPRITE3COSTUME}
-      gamelab_showTitleScreen:
-        text: δείξε οθόνη τίτλων {BREAK} τίτλος {TITLE} κείμενο {SUBTITLE}
-      gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} πατιέται"
-        options:
-          CONDITION:
-            '"when"': όταν
-            '"while"': όσο
-      gamelab_spriteThink:
-        text: "{SPRITE} σκέφτεται {SPEECH}"
-      gamelab_spriteThinkTime:
-        text: "{SPRITE}σκέφτεται{TEXT1}για{NUM}δευτερόλεπτα"
-      gamelab_spriteThink_fables2:
-        text: "{SPRITE} σκέφτεται {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Χμμ...
-            '"Time to make friends with the sheep."': "'Ώρα να γίνουμε φίλοι με το
-              πρόβατο."
-            '"She''ll never recognize me now."': Δε θα με αναγνωρίσει τώρα!
-            '"This costume keeps me warm."': Αυτή η στολή με κρατάει ζεστό.
-            '"I am actually a wolf."': Ουσιαστικά, είμαι ένας λύκος.
-      gamelab_spriteThink_fables3:
-        text: "{SPRITE} σκέφτεται {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Χμμ...
-            '"I''m feeling sleepy."': Νυστάζω.
-            '"No one could ever beat me."': Κανένας δε θα μπορούσε να με νικήσει.
-            '"I''ve done this race before."': Έχω κάνει αυτόν τον αγώνα ξανά.
-            '"My feet are bigger than Turtle''s feet."': Το πόδια μου είναι μεγαλύτερα
-              από τα πόδια της Χελώνας.
-      gamelab_spriteThink_fables4:
-        text: "{SPRITE} σκέφτεται {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Χμμ...
-            '"I''m so hungry."': Πεινάω τόσο πολύ.
-            '"I''m a visitor in this town."': Είμαι ένας επισκέπτης σε αυτήν την πόλη.
-            '"If we share, we''ll all have something to eat. "': Αν μοιραστούμε, όλοι
-              θα έχουμε από κάτι να φάμε.
-            '"I''ll trick everyone into giving me their food."': Θα ξεγελάσω τους
-              πάντες για να μου δώσουν το φαγητό τους.
-      gamelab_subjectSpritePointer:
-        text: "{SPRITE}"
-      gamelab_turn:
-        text: "{SPRITE} στρίψε {DIRECTION} {N} μοίρες"
-        options:
-          DIRECTION:
-            '"right"': δεξιά
-            '"left"': αριστερά
-      gamelab_whenDownArrow:
-        text: όταν πατηθεί το κάτω βέλος
-      gamelab_whenKey:
-        text: όταν πατηθεί το {KEY}
-        options:
-          KEY:
-            '"up"': επάνω
-            '"down"': κάτω
-            '"left"': αριστερά
-            '"right"': δεξιά
-            '"space"': διάστημα
-            '"a"': α
-            '"w"': ς
-            '"s"': σ
-            '"d"': β
-      gamelab_whenLeftArrow:
-        text: όταν πατηθεί το αριστερό βέλος
-      gamelab_whenRightArrow:
-        text: όταν πατηθεί το δεξί βέλος
-      gamelab_whenTouching:
-        text: όταν {SPRITE1} αγγίζει {SPRITE2}
-      gamelab_whenUpArrow:
-        text: όταν πατηθεί το πάνω βέλος
-      gamelab_whileDownArrow:
-        text: όσο πατιέται το κάτω βέλος
-      gamelab_whileKey:
-        text: όσο {KEY} πατιέται
-        options:
-          KEY:
-            '"up"': επάνω
-            '"down"': κάτω
-            '"left"': αριστερά
-            '"right"': δεξιά
-            '"space"': διάστημα
-            '"a"': α
-            '"w"': ς
-            '"s"': σ
-            '"d"': β
-      gamelab_whileLeftArrow:
-        text: όσο πατιέται το αριστερό βέλος
-      gamelab_whileRightArrow:
-        text: όσο πατιέται το δεξί βέλος
-      gamelab_whileTouching:
-        text: όσο {SPRITE1} αγγίζει {SPRITE2}
-      gamelab_whileUpArrow:
-        text: όσο το πάνω βέλος είναι πατημένο
-      gamelab_xLocationOf:
-        text: x συντεταγμένη του {SPRITE}
-      gamelab_yLocationOf:
-        text: y συντεταγμένη του {SPRITE}
       Mikelab_addBehaviorSimple:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
       Mikelab_addTrainingData:
-        text: 'Προσθήκη δεδομένων εκπαίδευσης: {NAME},{LOCATION}'
         options:
-          NAME:
-            "{x: 201, y: 100}": αντικείμενο
-            "{x: 200, y: 100}": ψάρι
           LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": η ετικέτα μου
             "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": ψάρι
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": όχι ψάρια
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": η ετικέτα μου
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": δεν είναι η ετικέτα
               μου
+          NAME:
+            "{x: 200, y: 100}": ψάρι
+            "{x: 201, y: 100}": αντικείμενο
+        text: 'Προσθήκη δεδομένων εκπαίδευσης: {NAME},{LOCATION}'
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
-            '"scale"': μέγεθος
+            '"direction"': κατεύθυνση κίνησης
             '"rotation"': περιστροφή
+            '"scale"': μέγεθος
             '"x"': θέση x
             '"y"': θέση y
-            '"direction"': κατεύθυνση κίνησης
       Mikelab_createNewSprite:
         options:
           LOCATION:
-            "{x: 200, y: 100}": πάνω
-            "{x: 200, y: 300}": κάτω
-            "{x: 100, y: 200}": αριστερά
-            "{x: 300, y: 200}": δεξιά
-            "{x: 200, y: 200}": κέντρο
             "{x: 100, y: 100}": πάνω - αριστερά
-            "{x: 300, y: 100}": πάνω - δεξιά
+            "{x: 100, y: 200}": αριστερά
             "{x: 100, y: 300}": κάτω - αριστερά
+            "{x: 200, y: 100}": πάνω
+            "{x: 200, y: 200}": κέντρο
+            "{x: 200, y: 300}": κάτω
+            "{x: 300, y: 100}": πάνω - δεξιά
+            "{x: 300, y: 200}": δεξιά
             "{x: 300, y: 300}": κάτω δεξιά
       Mikelab_getNext:
         text: Αποκτήστε το επόμενο αντικείμενο
       Mikelab_getProp:
         options:
           PROPERTY:
-            '"scale"': μέγεθος
+            '"direction"': κατεύθυνση κίνησης
             '"rotation"': περιστροφή
+            '"scale"': μέγεθος
             '"x"': θέση x
             '"y"': θέση y
-            '"direction"': κατεύθυνση κίνησης
       Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': όλα
+            '"this"': αυτό
         text: άλλαξε {SELECT} {COSTUME} σε {COSTUME2}
-        options:
-          SELECT:
-            '"all"': όλα
-            '"this"': αυτό
       Mikelab_groupChangePropBy:
-        text: άλλαξε {PROPERTY} του {SELECT} {COSTUME} κατά {VAL}
         options:
-          SELECT:
-            '"all"': όλα
-            '"this"': αυτό
           PROPERTY:
-            '"scale"': μέγεθος
+            '"direction"': κατεύθυνση κίνησης
             '"rotation"': περιστροφή
+            '"scale"': μέγεθος
             '"x"': θέση x
             '"y"': θέση y
-            '"direction"': κατεύθυνση κίνησης
+          SELECT:
+            '"all"': όλα
+            '"this"': αυτό
+        text: άλλαξε {PROPERTY} του {SELECT} {COSTUME} κατά {VAL}
       Mikelab_groupCreateNewSprite:
-        text: φτιάξε ένα καινούριο {COSTUME} σε {LOCATION}
         options:
           LOCATION:
-            "{x: 200, y: 100}": πάνω
-            "{x: 200, y: 300}": κάτω
-            "{x: 100, y: 200}": αριστερά
-            "{x: 300, y: 200}": δεξιά
-            "{x: 200, y: 200}": κέντρο
             "{x: 100, y: 100}": πάνω - αριστερά
-            "{x: 300, y: 100}": πάνω - δεξιά
+            "{x: 100, y: 200}": αριστερά
             "{x: 100, y: 300}": κάτω - αριστερά
+            "{x: 200, y: 100}": πάνω
+            "{x: 200, y: 200}": κέντρο
+            "{x: 200, y: 300}": κάτω
+            "{x: 300, y: 100}": πάνω - δεξιά
+            "{x: 300, y: 200}": δεξιά
             "{x: 300, y: 300}": κάτω δεξιά
+        text: φτιάξε ένα καινούριο {COSTUME} σε {LOCATION}
       Mikelab_groupDestroy:
-        text: αφαίρεσε {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': όλα
             '"this"': αυτό
+        text: αφαίρεσε {SELECT} {COSTUME}
       Mikelab_groupDisplace:
         text: όλα {COSTUME} τουβλάκια {COSTUME2} από το να κουνηθούν
       Mikelab_groupEdgesDisplace:
         text: τουβλάκι άκμών {COSTUME} από το να κουνηθεί
       Mikelab_groupGetProp:
-        text: "{SELECT} {COSTUME} {PROPERTY}"
         options:
+          PROPERTY:
+            '"direction"': κατεύθυνση κίνησης
+            '"rotation"': περιστροφή
+            '"scale"': μέγεθος
+            '"x"': θέση x
+            '"y"': θέση y
           SELECT:
             '"average"': μέσος όρος
             '"this"': αυτό
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"rotation"': περιστροφή
-            '"x"': θέση x
-            '"y"': θέση y
-            '"direction"': κατεύθυνση κίνησης
+        text: "{SELECT} {COSTUME} {PROPERTY}"
       Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': όλα
+            '"this"': αυτό
         text: σταμάτα {SELECT} {COSTUME} συμπεριφορές
-        options:
-          SELECT:
-            '"all"': όλα
-            '"this"': αυτό
       Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': όλα
+            '"this"': αυτό
         text: "{SELECT} {COSTUME} σταματάει {BEHAVIOR}"
-        options:
-          SELECT:
-            '"all"': όλα
-            '"this"': αυτό
       Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': όλα
+            '"this"': αυτό
         text: αφαίρεσε χρώμα από {SELECT} {COSTUME}
-        options:
-          SELECT:
-            '"all"': όλα
-            '"this"': αυτό
       Mikelab_groupSetProp:
-        text: όρισε {PROPERTY} του {SELECT} {COSTUME} σε {VAL}
         options:
-          SELECT:
-            '"all"': όλα
-            '"this"': αυτό
           PROPERTY:
-            '"scale"': μέγεθος
+            '"direction"': κατεύθυνση κίνησης
             '"rotation"': περιστροφή
+            '"scale"': μέγεθος
             '"x"': θέση x
             '"y"': θέση y
-            '"direction"': κατεύθυνση κίνησης
+          SELECT:
+            '"all"': όλα
+            '"this"': αυτό
+        text: όρισε {PROPERTY} του {SELECT} {COSTUME} σε {VAL}
       Mikelab_groupSetTint:
-        text: άλλαξε χρώμα του {SELECT} {COSTUME} σε {COLOR}
         options:
           SELECT:
             '"all"': όλα
             '"this"': αυτό
+        text: άλλαξε χρώμα του {SELECT} {COSTUME} σε {COLOR}
       Mikelab_groupWhenClickedOn:
         text: όταν {COSTUME} πατηθεί
       Mikelab_groupWhenXTouchesY:
@@ -1687,15 +1160,12 @@ el:
       Mikelab_hasBehavior:
         text: "{SPRITE} αυτή τη στιγμή κάνει {BEHAVIOR}"
       Mikelab_hideFish:
-        text: Αφαίρεση {TRASH}
         options:
           TRASH:
-            object: αντικείμενο
             fish: ψάρι
+            object: αντικείμενο
+        text: Αφαίρεση {TRASH}
       Mikelab_ifDanceIs:
-        text: |-
-          αν {SPRITE} κάνει {DANCE}
-          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Παλαμάκια Ψηλά
@@ -1705,34 +1175,37 @@ el:
             MOVES.Drop: Πέσιμο
             MOVES.Floss: Φλος
             MOVES.Fresh: Φρέσκο
-            MOVES.Roll: Body Roll
             MOVES.Kick: Αστέρι
-            MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Αυτό ή Εκείνο
+        text: |-
+          αν {SPRITE} κάνει {DANCE}
+          {DO1} {DO2}
       Mikelab_ifLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: ψάρι
+            MOVES.Clown: η ετικέτα μου
         text: |-
           Εάν {DANCE}
           Κάνουμε {DO1} Άλλο {DO2}
+      Mikelab_ifRecognizeLabel:
         options:
           DANCE:
             MOVES.ClapHigh: ψάρι
             MOVES.Clown: η ετικέτα μου
-      Mikelab_ifRecognizeLabel:
         text: |-
           Εάν αναγνωρίζετε το αντικείμενο ως {DANCE}
           Κάνουμε {DO1} Άλλο {DO2}
-        options:
-          DANCE:
-            MOVES.ClapHigh: ψάρι
-            MOVES.Clown: η ετικέτα μου
       Mikelab_ifRecognizeLabelOnly:
-        text: |-
-          Εάν αναγνωρίζετε το αντικείμενο ως {DANCE}
-          Κάνουμε {DO1}
         options:
           DANCE:
             MOVES.ClapHigh: ψάρι
             MOVES.Clown: δεν είναι η ετικέτα μου
+        text: |-
+          Εάν αναγνωρίζετε το αντικείμενο ως {DANCE}
+          Κάνουμε {DO1}
       Mikelab_joinText:
         text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
@@ -1755,18 +1228,18 @@ el:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': πόλη
-            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': λιβάδι
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': σκηνή
-            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': μετρό
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': υπόγεια
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': μετρό
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': σκηνή
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': λιβάδι
       Mikelab_setProp:
         options:
           PROPERTY:
-            '"scale"': μέγεθος
+            '"direction"': κατεύθυνση κίνησης
             '"rotation"': περιστροφή
+            '"scale"': μέγεθος
             '"x"': θέση x
             '"y"': θέση y
-            '"direction"': κατεύθυνση κίνησης
       Mikelab_setupSim:
         text: |-
           προσομοίωση ρύθμισης με
@@ -1777,76 +1250,76 @@ el:
       Mikelab_showScoreboard:
         options:
           CORNER:
-            '"right"': δεξιά
             '"left"': αριστερά
+            '"right"': δεξιά
       Mikelab_showText:
         options:
           PREPOSITION:
             '"below"': που ακολουθεί
       Mikelab_sprite:
-        text: καινούριο {COSTUME} χαρακτήρα σε {LOCATION}
         options:
           LOCATION:
-            "{x: 200, y: 100}": πάνω
-            "{x: 200, y: 300}": κάτω
-            "{x: 100, y: 200}": αριστερά
-            "{x: 300, y: 200}": δεξιά
-            "{x: 200, y: 200}": κέντρο
             "{x: 100, y: 100}": πάνω - αριστερά
-            "{x: 300, y: 100}": πάνω - δεξιά
+            "{x: 100, y: 200}": αριστερά
             "{x: 100, y: 300}": κάτω - αριστερά
+            "{x: 200, y: 100}": πάνω
+            "{x: 200, y: 200}": κέντρο
+            "{x: 200, y: 300}": κάτω
+            "{x: 300, y: 100}": πάνω - δεξιά
+            "{x: 300, y: 200}": δεξιά
             "{x: 300, y: 300}": κάτω δεξιά
+        text: καινούριο {COSTUME} χαρακτήρα σε {LOCATION}
       Mikelab_whenClickedOn:
         text: όταν {SPRITE} πατηθεί
       Mikelab_whenKeyPressed:
-        text: όταν πατηθεί το {KEY}
         options:
           KEY:
-            '"up"': επάνω βέλος
+            '"a"': Α
+            '"d"': Δ
             '"down"': κάτω βέλος
             '"left"': αριστερό βέλος
             '"right"': δεξί βέλος
-            '"w"': Δ
-            '"a"': Α
             '"s"': Ν
-            '"d"': Δ
+            '"up"': επάνω βέλος
+            '"w"': Δ
+        text: όταν πατηθεί το {KEY}
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': επάνω βέλος
+            '"a"': Α
+            '"d"': Δ
             '"down"': κάτω βέλος
             '"left"': αριστερό βέλος
             '"right"': δεξί βέλος
-            '"w"': Δ
-            '"a"': Α
             '"s"': Ν
-            '"d"': Δ
+            '"up"': επάνω βέλος
+            '"w"': Δ
       Mikelab_whenMouseClicked:
         text: όταν πατηθεί το ποντίκι
       Mikelab_whenYesNoClicked:
-        text: όταν πατήσατε {KEY}
         options:
           KEY:
-            '"yes"': ναι
             '"no"': όχι
+            '"yes"': ναι
+        text: όταν πατήσατε {KEY}
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': επάνω βέλος
             '"down"': κάτω βέλος
             '"left"': αριστερό βέλος
             '"right"': δεξί βέλος
+            '"up"': επάνω βέλος
       Mikelab_xLocationOf:
         text: x συντεταγμένη του {SPRITE}
       Mikelab_yLocationOf:
         text: y συντεταγμένη του {SPRITE}
       ParticlesBlocks_getMicroscope:
-        text: Το μικροσκόπιο έχει {INPUT1}
         options:
           INPUT1:
             '1': χυμός λεμονιού
             '3': baking soda
             '5': both
+        text: Το μικροσκόπιο έχει {INPUT1}
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
@@ -1856,22 +1329,22 @@ el:
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
-            new Behavior(solid, []): στερεό
             new Behavior(liquid, []): υγρό
+            new Behavior(solid, []): στερεό
             new Behavior(wandering, []): αέριο
       ParticlesBlocks_statesOfMatter2:
-        text: Ορίστε το {COSTUME} σε συμπεριφορά {BEHAVIOR}
         options:
           BEHAVIOR:
-            '"solid"': 'στερεό σωματίδιο '
-            '"liquid"': υγρό σωματίδιο
             '"gas"': αέριο σωματίδιο
+            '"liquid"': υγρό σωματίδιο
+            '"solid"': 'στερεό σωματίδιο '
+        text: Ορίστε το {COSTUME} σε συμπεριφορά {BEHAVIOR}
       ParticlesBlocks_statesOfMatter_testing:
         options:
           BEHAVIOR:
-            '"solid"': 'στερεό σωματίδιο '
-            '"liquid"': υγρό σωματίδιο
             '"gas"': αέριο σωματίδιο
+            '"liquid"': υγρό σωματίδιο
+            '"solid"': 'στερεό σωματίδιο '
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1895,24 +1368,23 @@ el:
       Poetry_playMusic:
         options:
           SOUND:
-            '"sound://category_nature/steady_campfire_loop.mp3"': πυρός προσκόπων
-            '"sound://category_nature/forest_woodland_ambience_2.mp3"': δάσους
-            '"sound://category_nature/summer_night_loop.mp3"': νύχτα
             '"sound://category_background/ocean_waves.mp3"': ωκεανός
             '"sound://category_background/rainforest_ambient_sound.mp3"': τροπικό
               δάσος
             '"sound://category_background/wavering_wind.mp3"': υπνηλία
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': αργή
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': δάσους
+            '"sound://category_nature/steady_campfire_loop.mp3"': πυρός προσκόπων
+            '"sound://category_nature/summer_night_loop.mp3"': νύχτα
       Poetry_playSound:
-        text: παίξεΉχο {SOUND}
         options:
           SOUND:
-            '"sound://category_bell/long_bell_notification.mp3"': καμπάνα
-            '"sound://category_pop/bubble_pop_cluster_2.mp3"': φυσαλλίδα
-            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': πήδα
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ανοιχτόχρωμος
-      Poetry_playSoundOptionsSpace:
+            '"sound://category_bell/long_bell_notification.mp3"': καμπάνα
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': πήδα
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': φυσαλλίδα
         text: παίξεΉχο {SOUND}
+      Poetry_playSoundOptionsSpace:
         options:
           SOUND:
             "'sound://category_space/Blackhole_SFX.mp3'": μαύρη τρύπα
@@ -1926,6 +1398,7 @@ el:
             "'sound://category_space/Southern_ring_SFX.mp3'": νότιος δακτύλιος
             "'sound://category_space/Supernova_SFX.mp3'": σουπερνόβα
             "'sound://category_space/Tycho_SFX.mp3'": Κρατήρας Τάικο
+        text: παίξεΉχο {SOUND}
       Poetry_setBackground:
         text: όρισε χρώμα παρασκηνίου σε {COLOR}
       Poetry_setBackgroundEffect:
@@ -1933,14 +1406,14 @@ el:
           EFFECT:
             '"bubbles"': Μπουρμπουλήθρες
             '"clouds"': συννεφιασμένος
+            '"colors"': Χρώματα
             '"confetti"': Κομφετί
             '"hearts"': καρδιές
-            '"space"': Διάστημα
             '"rain"': βροχή
             '"ripples"': Πτυχώσεις
-            '"colors"': Χρώματα
-            '"stars"': Αστέρια
+            '"space"': Διάστημα
             '"squiggles"': Μουτζούρες
+            '"stars"': Αστέρια
           PALETTE:
             '"ocean"': ωκεανός
             '"rainbow"': ουράνιο τόξο
@@ -1985,6 +1458,12 @@ el:
           N:
             '0': "???"
             '1': '1'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -1993,12 +1472,6 @@ el:
             '7': '7'
             '8': '8'
             '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
       RyanLab_moveForward:
         text: προχώρησε μπροστά
       RyanLab_turnLeft:
@@ -2026,41 +1499,41 @@ el:
       Vector_vectorNorth:
         text: βοράς
       Vector_where:
-        text: κάθε χαρακτήρας όπου {PROPERTY} είναι {VALUE} κάνε {STATEMENT}
         options:
           PROPERTY:
             "'shapeColor'": χρώμα
+        text: κάθε χαρακτήρας όπου {PROPERTY} είναι {VALUE} κάνε {STATEMENT}
       aalab_layoutSprites:
         options:
           FORMAT:
-            '"grid"': πλέγμα
             '"border"': όριο
-            '"row"': τάξη
+            '"grid"': πλέγμα
             '"random"': τυχαίο
+            '"row"': τάξη
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '1': όλα
-            '0.75': most
-            '0.5': half of
             '0.25': few
+            '0.5': half of
+            '0.75': most
+            '1': όλα
       aalab_someStartIntervention:
         options:
           PORTION:
-            '1': όλα
-            '0.75': most
-            '0.5': half of
             '0.25': few
+            '0.5': half of
+            '0.75': most
+            '1': όλα
       adaptations_adaptationBehaviors:
         options:
           BEHAVIOR:
-            new Behavior(spinning_right, []): περιστροφή δεξιά
-            new Behavior(spinning_left, []): περιστροφή αριστερά
             new Behavior(fluttering, []): τριγύρισμα
             new Behavior(jittering, []): τρεμούλιασμα
-            new Behavior(wobbling, []): ταλάντευση
-            new Behavior(wandering, []): περιπλάνηση
             new Behavior(patrolling, []): περιφρούρηση
+            new Behavior(spinning_left, []): περιστροφή αριστερά
+            new Behavior(spinning_right, []): περιστροφή δεξιά
+            new Behavior(wandering, []): περιπλάνηση
+            new Behavior(wobbling, []): ταλάντευση
       binary_drawBin:
         text: ζωγράφισε δυαδικό {BIN}
       binary_drawBinScreen:
@@ -2068,12 +1541,12 @@ el:
       binary_drawDec:
         text: ζωγράφισε δεκαδικό {DEC}
       binary_drawPixelHere:
-        text: όρισε pixel {VAL}
         options:
           VAL:
+            '"toggle"': εναλλαγή
             '0': σβηστό
             '1': ανοιχτό
-            '"toggle"': εναλλαγή
+        text: όρισε pixel {VAL}
       binary_drawString:
         text: ζωγράφισε συμβολοσειρά {STR}
       binary_goTo:
@@ -2083,89 +1556,89 @@ el:
       binary_gridSize:
         text: όρισε μέγεθος πλέγματος {SIZE}
       binary_move:
-        text: κινήσου {DIR}
         options:
           DIR:
-            '"up"': επάνω
             '"down"': κάτω
             '"left"': αριστερά
             '"right"': δεξιά
+            '"up"': επάνω
+        text: κινήσου {DIR}
       binary_whenKey:
-        text: όταν πατηθεί το {KEY}
         options:
           KEY:
-            '"up"': επάνω
+            '"a"': α
+            '"d"': β
             '"down"': κάτω
             '"left"': αριστερά
             '"right"': δεξιά
-            '"space"': διάστημα
-            '"a"': α
-            '"w"': ς
             '"s"': σ
-            '"d"': β
+            '"space"': διάστημα
+            '"up"': επάνω
+            '"w"': ς
+        text: όταν πατηθεί το {KEY}
       craft_ifPath:
-        text: |-
-          αν διαδρομή {DIR}
-          {STATEMENT}
         options:
           DIR:
             "'ahead'": μπροστά
-            "'right'": προς τα δεξιά
             "'left'": προς τα αριστερά
-      craft_ifStandingOn:
+            "'right'": προς τα δεξιά
         text: |-
-          αν στέκεται πάνω σε {TYPE}
+          αν διαδρομή {DIR}
           {STATEMENT}
+      craft_ifStandingOn:
         options:
           TYPE:
             "'blueCoralBlock'": μπλε κοράλλι
+            "'planksOak'": σανίδες δρυ
             "'redCoralBlock'": κόκκινο κοράλλι
             "'sand'": άμμος
-            "'wool_blue'": βαθιά νερά
-            "'planksOak'": σανίδες δρυ
             "'seaLantern'": θαλάσσιο φανάρι
-      craft_ifStandingOnLimit:
+            "'wool_blue'": βαθιά νερά
         text: |-
           αν στέκεται πάνω σε {TYPE}
           {STATEMENT}
+      craft_ifStandingOnLimit:
         options:
           TYPE:
-            "'sand'": άμμος
             "'darkPrismarine'": σκούρο θαλάσσιο πρίσμα
+            "'sand'": άμμος
             "'seaLantern'": θαλάσσιο φανάρι
+        text: |-
+          αν στέκεται πάνω σε {TYPE}
+          {STATEMENT}
       craft_log:
         text: μήνυμα καταγραφής {MESSAGE}
       craft_moveForward:
         text: προχώρησε μπροστά
       craft_placeBlock:
-        text: Τοποθετήστε {blockType}
         options:
           blockType:
-            '"strippedOak"': αποφλοιωμένη βελανιδιά
-            '"strippedDarkOak"': αποφλοιωμένη σκούρα βελανιδιά
-            '"stoneBricks"': πέτρινα τούβλα
-            '"mossyStoneBricks"': χορταριασμένα πέτρινα τούβλα
-            '"crackedStoneBricks"': ραγισμένα πέτρινα τούβλα
-            '"chiseledStoneBricks"': διακοσμητικά πέτρινα τούβλα
-            '"blueCoralBlock"': μπλοκ μπλε κοραλλιών
-            '"pinkCoralBlock"': μπλοκ ροζ κοραλλιών
-            '"magentaCoralBlock"': μπλοκ φούξια κοραλλιών
-            '"redCoralBlock"': μπλοκ κόκκινων κοραλλιών
-            '"yellowCoralBlock"': μπλοκ κίτρινων κοραλλιών
-            '"blueDeadCoralBlock"': μπλοκ μπλε νεκρών κοραλλιών
-            '"pinkDeadCoralBlock"': μπλοκ ροζ νεκρών κοραλλιών
-            '"magentaDeadCoralBlock"': μπλοκ φούξια νεκρών κοραλλιών
-            '"readDeadCoralBlock"': μπλοκ κόκκινων νεκρών κοραλλιών
-            '"yellowDeadCoralBlock"': μπλοκ κίτρινων νεκρών κοραλλιών
-            '"prismarine"': θαλάσσιο πρίσμα
-            '"darkPrismarine"': σκούρο θαλάσσιο πρίσμα
-            '"seaLantern"': θαλάσσιο φανάρι
-            '"packedIce"': συσκευασμένος πάγος
-            '"blueIce"': μπλε πάγος
             '"blackConcrete"': μαύρο σκυρόδεμα
-            '"seaGrass"': θαλάσσια βλάστηση
+            '"blueCoralBlock"': μπλοκ μπλε κοραλλιών
+            '"blueDeadCoralBlock"': μπλοκ μπλε νεκρών κοραλλιών
+            '"blueIce"': μπλε πάγος
+            '"chiseledStoneBricks"': διακοσμητικά πέτρινα τούβλα
+            '"crackedStoneBricks"': ραγισμένα πέτρινα τούβλα
+            '"darkPrismarine"': σκούρο θαλάσσιο πρίσμα
             '"kelp"': φύκια
+            '"magentaCoralBlock"': μπλοκ φούξια κοραλλιών
+            '"magentaDeadCoralBlock"': μπλοκ φούξια νεκρών κοραλλιών
+            '"mossyStoneBricks"': χορταριασμένα πέτρινα τούβλα
+            '"packedIce"': συσκευασμένος πάγος
+            '"pinkCoralBlock"': μπλοκ ροζ κοραλλιών
+            '"pinkDeadCoralBlock"': μπλοκ ροζ νεκρών κοραλλιών
             '"polishedGranite"': γυαλισμένος γρανίτης
+            '"prismarine"': θαλάσσιο πρίσμα
+            '"readDeadCoralBlock"': μπλοκ κόκκινων νεκρών κοραλλιών
+            '"redCoralBlock"': μπλοκ κόκκινων κοραλλιών
+            '"seaGrass"': θαλάσσια βλάστηση
+            '"seaLantern"': θαλάσσιο φανάρι
+            '"stoneBricks"': πέτρινα τούβλα
+            '"strippedDarkOak"': αποφλοιωμένη σκούρα βελανιδιά
+            '"strippedOak"': αποφλοιωμένη βελανιδιά
+            '"yellowCoralBlock"': μπλοκ κίτρινων κοραλλιών
+            '"yellowDeadCoralBlock"': μπλοκ κίτρινων νεκρών κοραλλιών
+        text: Τοποθετήστε {blockType}
       craft_placePrismarine:
         text: τοποθετήστε το θαλάσσιο πρίσμα
       craft_placeTorch:
@@ -2179,7 +1652,6 @@ el:
           επαναλάβετε μέχρι τον στόχο
           {STATEMENT}
       craft_spawnEntity:
-        text: Φύτεψε {ENTITY}
         options:
           ENTITY:
             '"cod"': βακαλάος
@@ -2188,17 +1660,19 @@ el:
             '"seaTurtle"': θαλάσσια χελώνα
             '"squid"': καλαμάρι
             '"tropicalFish"': τροπικό ψάρι
+        text: Φύτεψε {ENTITY}
       craft_turn:
-        text: στρίψε {DIR}
         options:
           DIR:
-            right: δεξιά ↻
             left: αριστερά ↺
+            right: δεξιά ↻
+        text: στρίψε {DIR}
       ecosystems_int10:
         options:
           VALUE:
             '0': '0'
             '1': '1'
+            '10': '10'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -2207,7 +1681,533 @@ el:
             '7': '7'
             '8': '8'
             '9': '9'
+      gamelab_addBehaviorSimple:
+        text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': Απόφυγε
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': δευτερόλεπτα
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"direction"': κατεύθυνση κίνησης
+            '"rotation"': περιστροφή
+            '"scale"': μέγεθος
+            '"speed"': ταχύτητα
+            '"x"': θέση x
+            '"y"': θέση y
+        text: αλλαγή {SPRITE} {PROPERTY} με {VAL}
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': όταν
+            '"while"': όσο
+        text: "{CONDITION} {SPRITE1} Πινελιές {SPRITE2}"
+      gamelab_clickedOn:
+        text: όταν {SPRITE} πατηθεί
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(fluttering, []): τριγύρισμα
+            new Behavior(jittering, []): τρεμούλιασμα
+            new Behavior(moving_east_and_looping, []): μετακίνηση ανατολικά και δημιουργία
+              βρόχου
+            new Behavior(moving_north_and_looping, []): μετακίνηση βόρεια και δημιουργία
+              βρόχου
+            new Behavior(moving_south_and_looping, []): μετακίνηση νότια και δημιουργία
+              βρόχου
+            new Behavior(moving_west_and_looping, []): μετακίνηση δυτικά και δημιουργία
+              βρόχου
+            new Behavior(patrolling, []): περιφρούρηση
+            new Behavior(spinning_left, []): περιστροφή αριστερά
+            new Behavior(spinning_right, []): περιστροφή δεξιά
+            new Behavior(wandering, []): περιπλάνηση
+            new Behavior(wobbling, []): ταλάντευση
+      gamelab_comment:
+        text: 'σχόλιο: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_createNewSprite:
+        text: "φτιάξε καινούριο χαρακτήρα\n που ονομάζεται {NAME} \n με κοστούμι {COSTUME}
+          \n σε {LOCATION}"
+      gamelab_destroy:
+        text: αφαίρεσε {THIS}
+      gamelab_draggable:
+        text: είναι συρόμενο
+      gamelab_edgesDisplace:
+        text: τουβλάκι ακμών {SPRITE} από το να κινηθεί
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': δευτερόλεπτα
+        text: 'κάθε {N} {UNIT} '
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"direction"': κατεύθυνση κίνησης
+            '"rotation"': περιστροφή
+            '"scale"': μέγεθος
+            '"speed"': ταχύτητα
+            '"tint"': απόχρωση
+            '"x"': θέση x
+            '"y"': θέση y
+        text: "{SPRITE} {PROPERTY}"
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"this"': αυτό
+        text: "{CHOICE} χαρακτήρας"
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': δευτερόλεπτα
+      gamelab_hideTitleScreen:
+        text: κρύψε την οθόνη τίτλων
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
             '10': '10'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"a"': α
+            '"b"': b
+            '"c"': c
+            '"d"': β
+            '"down"': κάτω
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': η
+            '"i"': ι
+            '"j"': ξ
+            '"k"': κ
+            '"l"': λ
+            '"left"': αριστερά
+            '"m"': μ
+            '"n"': ν
+            '"o"': ο
+            '"p"': π
+            '"q"': q
+            '"r"': ρ
+            '"right"': δεξιά
+            '"s"': σ
+            '"space"': διάστημα
+            '"t"': τ
+            '"u"': θ
+            '"up"': επάνω
+            '"v"': ω
+            '"w"': ς
+            '"x"': x
+            '"y"': y
+            '"z"': ζ
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} αγγίζει τις άκρες"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} αγγίζει {TARGET}"
+      gamelab_jumpTo:
+        text: "{SPRITE} πήγαινε στο {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': όταν
+            '"while"': όσο
+          KEY:
+            '"a"': α
+            '"b"': b
+            '"c"': c
+            '"d"': β
+            '"down"': κάτω
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': η
+            '"i"': ι
+            '"j"': ξ
+            '"k"': κ
+            '"l"': λ
+            '"left"': αριστερά
+            '"m"': μ
+            '"n"': ν
+            '"o"': ο
+            '"p"': π
+            '"q"': q
+            '"r"': ρ
+            '"right"': δεξιά
+            '"s"': σ
+            '"space"': διάστημα
+            '"t"': τ
+            '"u"': θ
+            '"up"': επάνω
+            '"v"': ω
+            '"w"': ς
+            '"x"': x
+            '"y"': y
+            '"z"': ζ
+        text: "{CONDITION} {KEY} Πιέζεται"
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': όριο
+            '"bottom"': κάτω σειρά
+            '"circle"': κύκλος
+            '"column"': στήλη
+            '"grid"': πλέγμα
+            '"left"': αριστερή στήλη
+            '"right"': δεξιά στήλη
+            '"row"': τάξη
+            '"top"': πάνω σειρά
+        text: διάταξη {GROUP} ως {FORMAT}
+      gamelab_locationAt:
+        text: 'θέση x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"East"': Ανατολή
+            '"North"': Βοράς
+            '"South"': Νότος
+            '"West"': Δυτικά
+        text: "{DISTANCE} pixels {DIRECTION} από {LOCATION}"
+      gamelab_locationMouse:
+        text: θέση ποντικιού
+      gamelab_locationOf:
+        text: θέση από {SPRITE}
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': εκρήγνυται
+            '"rain"': βροχή
+            '"spiral"': σπιράλ
+      gamelab_makeNewSpriteAnon:
+        text: δημιουργία νέου {ANIMATION_NAME} χαρακτήρα σε {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': όριο
+            '"bottom"': κάτω σειρά
+            '"circle"': κύκλος
+            '"column"': στήλη
+            '"grid"': πλέγμα
+            '"left"': αριστερή στήλη
+            '"right"': δεξιά στήλη
+            '"row"': τάξη
+            '"top"': πάνω σειρά
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': δεξιά
+            '180': αριστερά
+            '270': επάνω
+            '90': κάτω
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '100': large
+            '30': small
+            '50': μεσαία
+        text: φτιάξε {NUM} καινούριο {SIZE} {COSTUME} χαρακτήρες
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"left"': αριστερά
+            '"right"': δεξιά
+        text: "{SPRITE} γύρνα προς {DIRECTION}"
+      gamelab_mouseLocation:
+        text: θέση ποντικιού
+      gamelab_moveForward:
+        text: κινήσου {SPRITE} {DISTANCE} pixels προς τα μπρος
+      gamelab_moveInDirection:
+        options:
+          DIRECTION:
+            '"East"': Ανατολή
+            '"North"': Βοράς
+            '"South"': Νότος
+            '"West"': Δυτικά
+        text: κινήσου {SPRITE} {DISTANCE} pixels {DIRECTION}
+      gamelab_moveToward:
+        text: κινήσου {SPRITE} απόσταση {DISTANCE} προς {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_playSound:
+        text: παίξεΉχο {SOUND}
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_animals/bear.mp3'": Αρκούδα
+            "'sound://category_animals/cat.mp3'": γάτα
+            "'sound://category_animals/chick.mp3'": νεοσσός
+            "'sound://category_animals/chicken.mp3'": κοτόπουλο
+            "'sound://category_animals/cow.mp3'": αγελάδα
+            "'sound://category_animals/dog.mp3'": σκύλος
+            "'sound://category_animals/dolphin.mp3'": δελφίνι
+            "'sound://category_animals/elephant.mp3'": ελέφαντας
+            "'sound://category_animals/goat.mp3'": γίδα
+            "'sound://category_animals/pig.mp3'": γουρούνι
+            "'sound://category_animals/rooster.mp3'": κόκορας
+            "'sound://category_animals/sheep.mp3'": πρόβατο
+            "'sound://category_animals/tiger.mp3'": τίγρης
+            "'sound://category_app/app_button_1.mp3'": κουμπί
+            "'sound://category_collect/clicky_crunch.mp3'": τρίξιμο
+            "'sound://category_digital/jump_7.mp3'": πήδα
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": άρπα
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": φυσαλλίδα
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": επιλέξτε
+        text: παίξεΉχο {SOUND}
+      gamelab_playSoundOptionsSoccer:
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": αεροτενόρος
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": χειροκρότημα
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": ρυθμικό τραγούδι
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": ζητωκραυγάσματα
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": δύο σφυριξιές
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": κλωτσιά
+            "'sound://category_sports/One_Whistle_SFX.mp3'": σφυρίχτρα
+        text: παίξεΉχο {SOUND}
+      gamelab_playSoundOptionsSpace:
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": μαύρη τρύπα
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": σύγκρουση γαλαξιών
+            "'sound://category_space/Carina_SFX.mp3'": Τρόπις
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Κασσιόπη
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Νεφέλωμα του Καρκίνου
+            "'sound://category_space/Launch_SFX.mp3'": εκτόξευση
+            "'sound://category_space/Lift_Off.mp3'": απογείωση
+            "'sound://category_space/Pillars_SFX.mp3'": κολώνες
+            "'sound://category_space/Southern_ring_SFX.mp3'": νότιος δακτύλιος
+            "'sound://category_space/Supernova_SFX.mp3'": σουπερνόβα
+            "'sound://category_space/Tycho_SFX.mp3'": Κρατήρας Τάικο
+        text: παίξεΉχο {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): είναι συρόμενο
+            new Behavior(driving_with_arrow_keys, []): μετακίνηση με τα πλήκτρα βέλους
+            new Behavior(moving_with_arrow_keys, []): μετακίνηση με τα πλήκτρα βέλους
+      gamelab_pointInDirection:
+        options:
+          DIRECTION:
+            '"East"': Ανατολή
+            '"North"': Βοράς
+            '"South"': Νότος
+            '"West"': Δυτικά
+        text: στρίψε το {SPRITE} {DIRECTION}
+      gamelab_printText:
+        text: εκτύπωσε {TEXT}
+      gamelab_randColor:
+        text: τυχαίο χρώμα
+      gamelab_randomColor:
+        text: τυχαίο χρώμα
+      gamelab_randomLocation:
+        text: τυχαία θέση
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} σταματάει τα πάντα"
+      gamelab_removeBehaviorSimple:
+        text: χαρακτήρας {SPRITE} σταματάει {BEHAVIOR}
+      gamelab_removeTint:
+        text: αφαίρεσε το χρώμα από {THIS}
+      gamelab_repeatForever:
+        text: επαναλάμβανε για πάντα
+      gamelab_setAnimation:
+        text: άλλαξε {THIS} κοστούμι σε {ANIMATION}
+      gamelab_setBackground:
+        text: όρισε χρώμα παρασκηνίου σε {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': πόλη
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': υπόγεια
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': μετρό
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': σκηνή
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': λιβάδι
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': δικαστήριο
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': σπηλιά
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': έρημος
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': πλέγμα
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ουράνιο
+              τόξο
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': αστέρια
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': γαλαξίας
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': υποβρύχια
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': χειμώνας
+            undefined: Καμία
+        text: Ορισμός φόντου σε {IMG}
+      gamelab_setBackgroundImageAs:
+        text: Ορισμός φόντου σε {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '100': large
+            '25': extra small
+            '50': small
+            '75': μεσαία
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"direction"': κατεύθυνση κίνησης
+            '"rotation"': περιστροφή
+            '"scale"': μέγεθος
+            '"speed"': ταχύτητα
+            '"x"': θέση x
+            '"y"': θέση y
+        text: όρισε {SPRITE} {PROPERTY} σε {VAL}
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': μέγεθος
+          SIZE:
+            '100': large
+            '25': extra small
+            '50': small
+            '75': μεσαία
+        text: "΄όρισε {SPRITE} {PROPERTY} σε {SIZE}"
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': ύψος
+            '"scale"': μέγεθος
+            '"width"': πλάτος
+        text: όρισε* {SPRITE} {PROPERTY} στο {N}%
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': αργή
+            '5': κανονικό
+            '7': γρήγορη
+            '9': extra fast
+      gamelab_setTint:
+        text: άλλαξε το χρώμα του {THIS} σε {COLOR}
+      gamelab_setupSim:
+        text: |-
+          προσομοίωση ρύθμισης με
+          {SPRITE1N}{SPRITE1COSTUME}Ταχύτητα{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Ταχύτητα{SPRITE2SPEED}
+          Συλλογή
+          {SPRITE3N}{SPRITE3COSTUME}
+      gamelab_showTitleScreen:
+        text: δείξε οθόνη τίτλων {BREAK} τίτλος {TITLE} κείμενο {SUBTITLE}
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': όταν
+            '"while"': όσο
+        text: "{CONDITION} {SPRITE} πατιέται"
+      gamelab_spriteThink:
+        text: "{SPRITE} σκέφτεται {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}σκέφτεται{TEXT1}για{NUM}δευτερόλεπτα"
+      gamelab_spriteThink_fables2:
+        options:
+          THOUGHT:
+            '"Hmm..."': Χμμ...
+            '"I am actually a wolf."': Ουσιαστικά, είμαι ένας λύκος.
+            '"She''ll never recognize me now."': Δε θα με αναγνωρίσει τώρα!
+            '"This costume keeps me warm."': Αυτή η στολή με κρατάει ζεστό.
+            '"Time to make friends with the sheep."': "'Ώρα να γίνουμε φίλοι με το
+              πρόβατο."
+        text: "{SPRITE} σκέφτεται {THOUGHT}"
+      gamelab_spriteThink_fables3:
+        options:
+          THOUGHT:
+            '"Hmm..."': Χμμ...
+            '"I''m feeling sleepy."': Νυστάζω.
+            '"I''ve done this race before."': Έχω κάνει αυτόν τον αγώνα ξανά.
+            '"My feet are bigger than Turtle''s feet."': Το πόδια μου είναι μεγαλύτερα
+              από τα πόδια της Χελώνας.
+            '"No one could ever beat me."': Κανένας δε θα μπορούσε να με νικήσει.
+        text: "{SPRITE} σκέφτεται {THOUGHT}"
+      gamelab_spriteThink_fables4:
+        options:
+          THOUGHT:
+            '"Hmm..."': Χμμ...
+            '"I''ll trick everyone into giving me their food."': Θα ξεγελάσω τους
+              πάντες για να μου δώσουν το φαγητό τους.
+            '"I''m a visitor in this town."': Είμαι ένας επισκέπτης σε αυτήν την πόλη.
+            '"I''m so hungry."': Πεινάω τόσο πολύ.
+            '"If we share, we''ll all have something to eat. "': Αν μοιραστούμε, όλοι
+              θα έχουμε από κάτι να φάμε.
+        text: "{SPRITE} σκέφτεται {THOUGHT}"
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"left"': αριστερά
+            '"right"': δεξιά
+        text: "{SPRITE} στρίψε {DIRECTION} {N} μοίρες"
+      gamelab_whenDownArrow:
+        text: όταν πατηθεί το κάτω βέλος
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"a"': α
+            '"d"': β
+            '"down"': κάτω
+            '"left"': αριστερά
+            '"right"': δεξιά
+            '"s"': σ
+            '"space"': διάστημα
+            '"up"': επάνω
+            '"w"': ς
+        text: όταν πατηθεί το {KEY}
+      gamelab_whenLeftArrow:
+        text: όταν πατηθεί το αριστερό βέλος
+      gamelab_whenRightArrow:
+        text: όταν πατηθεί το δεξί βέλος
+      gamelab_whenTouching:
+        text: όταν {SPRITE1} αγγίζει {SPRITE2}
+      gamelab_whenUpArrow:
+        text: όταν πατηθεί το πάνω βέλος
+      gamelab_whileDownArrow:
+        text: όσο πατιέται το κάτω βέλος
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"a"': α
+            '"d"': β
+            '"down"': κάτω
+            '"left"': αριστερά
+            '"right"': δεξιά
+            '"s"': σ
+            '"space"': διάστημα
+            '"up"': επάνω
+            '"w"': ς
+        text: όσο {KEY} πατιέται
+      gamelab_whileLeftArrow:
+        text: όσο πατιέται το αριστερό βέλος
+      gamelab_whileRightArrow:
+        text: όσο πατιέται το δεξί βέλος
+      gamelab_whileTouching:
+        text: όσο {SPRITE1} αγγίζει {SPRITE2}
+      gamelab_whileUpArrow:
+        text: όσο το πάνω βέλος είναι πατημένο
+      gamelab_xLocationOf:
+        text: x συντεταγμένη του {SPRITE}
+      gamelab_yLocationOf:
+        text: y συντεταγμένη του {SPRITE}
       storylab_printText:
         text: εκτύπωσε {TEXT}
       storylab_setForegroundEffect2:
