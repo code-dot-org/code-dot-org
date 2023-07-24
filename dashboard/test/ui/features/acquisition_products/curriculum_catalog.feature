@@ -27,7 +27,7 @@ Feature: Curriculum Catalog Page
   Scenario: Signed-out user sees the curriculum catalog with offerings and can filter
     Given I am on "http://studio.code.org/catalog/lang/es"
     Then I wait until I am on "http://studio.code.org/catalog?lang=es"
-    And I open my eyes to test "Curriculum Catalog in Spansih"
+    And I open my eyes to test "Curriculum Catalog in Spanish"
     Then I wait until element "#topic-dropdown" is visible
     And I wait until element "h4:contains(Inteligencia Artificial para Océanos)" is visible
     And I see no difference for "Curriculum Catalog: All Offerings in Spanish"
