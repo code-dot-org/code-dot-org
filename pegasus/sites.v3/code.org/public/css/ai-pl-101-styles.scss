@@ -137,8 +137,18 @@
 }
 
 .action-block {
-  &--explore .overline {
-    text-transform: uppercase;
+  &--explore {
+    .overline {
+      text-transform: uppercase;
+    }
+    .action-block__space {
+      height: 32px;
+      display: block;
+      @media screen and (max-width: $width-sm) {
+        display: none;
+      }
+    }
+
   }
 }
 
@@ -160,7 +170,7 @@
   padding-bottom: calc(64px - 50px);
   @media screen and (max-width: $width-sm) {
     &__iframe {
-      height: 550px;
+      height: 700px;
     }
   }
 
