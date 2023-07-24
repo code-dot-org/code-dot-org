@@ -701,7 +701,7 @@ class UnconnectedMusicView extends React.Component {
               <PanelContainer
                 id="workspace-panel"
                 headerText={musicI18n.panelHeaderWorkspace()}
-                rightContent={
+                rightHeaderContent={
                   <UndoRedoButtons
                     onClickUndo={this.undo}
                     onClickRedo={this.redo}

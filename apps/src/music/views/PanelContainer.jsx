@@ -14,9 +14,9 @@ import moduleStyles from './panelContainer.module.scss';
 const PanelContainer = ({
   id,
   headerText,
+  rightHeaderContent,
+  leftHeaderContent,
   children,
-  rightContent,
-  leftContent,
 }) => {
   const isHeadersShowing = useSelector(state => state.music.isHeadersShowing);
 
@@ -32,7 +32,7 @@ const PanelContainer = ({
             moduleStyles.panelContainerHeader
           )}
         >
-          {leftContent && (
+          {leftHeaderContent && (
             <div
               className={classNames(
                 'panelContainerHeaderItemLeft',
@@ -40,7 +40,7 @@ const PanelContainer = ({
                 moduleStyles.panelContainerHeaderItemLeft
               )}
             >
-              {leftContent}
+              {leftHeaderContent}
             </div>
           )}
           <div
@@ -52,7 +52,7 @@ const PanelContainer = ({
           >
             {headerText}
           </div>
-          {rightContent && (
+          {rightHeaderContent && (
             <div
               className={classNames(
                 'panelContainerHeaderItemRight',
@@ -60,7 +60,7 @@ const PanelContainer = ({
                 moduleStyles.panelContainerHeaderItemRight
               )}
             >
-              {rightContent}
+              {rightHeaderContent}
             </div>
           )}
         </div>
@@ -74,8 +74,8 @@ PanelContainer.propTypes = {
   id: PropTypes.string.isRequired,
   headerText: PropTypes.string.isRequired,
   children: PropTypes.object,
-  rightContent: PropTypes.node,
-  leftContent: PropTypes.node,
+  rightHeaderContent: PropTypes.node,
+  leftHeaderContent: PropTypes.node,
 };
 
 export default PanelContainer;
