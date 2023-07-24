@@ -25,6 +25,41 @@ const TimelineSimple2Events = ({
     return currentUniqueSounds.indexOf(id);
   };
 
+  function getFunctionBounds(orderedFunction) {
+    let left = Number.MAX_SAFE_INTEGER,
+      top = Number.MAX_SAFE_INTEGER,
+      right = 0,
+      bottom = 0;
+
+    orderedFunction.playbackEvents.forEach(playbackEvent => {
+      left = Math.min(left, playbackEvent.when);
+      right = Math.max(right, playbackEvent.when + playbackEvent.length);
+      top = Math.min(
+        top,
+        getUniqueIndexForEventId(orderedFunction.name + ' ' + playbackEvent.id)
+      );
+      bottom = Math.max(
+        bottom,
+        getUniqueIndexForEventId(
+          orderedFunction.name + ' ' + playbackEvent.id
+        ) + 1
+      );
+    });
+
+    orderedFunction.calledFunctionIds.forEach(calledFunctionId => {
+      const calledFunction = orderedFunctions.find(
+        orderedF => orderedF.uniqueInvocationId === calledFunctionId
+      );
+      const bounds = getFunctionBounds(calledFunction);
+      left = Math.min(left, bounds.left);
+      right = Math.max(right, bounds.right);
+      top = Math.min(top, bounds.top);
+      bottom = Math.max(bottom, bounds.bottom);
+    });
+
+    return {left, right, top, bottom};
+  }
+
   // Generate a list of unique sounds, with uniqueness being a combination of
   // the function name and the sound ID.
   // Let's cache the value of currentUniqueSounds so that the various helpers
@@ -43,61 +78,25 @@ const TimelineSimple2Events = ({
   // generated, including by functions it calls.
   // The outcome is an object with each function's boundaries.
   // Each timeline boundary has left/right position in measures, and
-  // top/bottom position in pixels.
+  // top/bottom position in rows.
   const uniqueFunctionExtents = {};
   orderedFunctions.forEach(orderedFunction => {
     const uniqueFunctionId =
       orderedFunction.name + orderedFunction.uniqueInvocationId;
-
     const bounds = getFunctionBounds(orderedFunction);
     uniqueFunctionExtents[uniqueFunctionId] = bounds;
   });
-
-  function getFunctionBounds(orderedFunction) {
-    let left = Number.MAX_SAFE_INTEGER,
-      top = Number.MAX_SAFE_INTEGER,
-      right = 0,
-      bottom = 0;
-
-    orderedFunction.playbackEvents.forEach(playbackEvent => {
-      left = Math.min(left, playbackEvent.when);
-      right = Math.max(right, playbackEvent.when + playbackEvent.length);
-      top = Math.min(
-        top,
-        getVerticalOffsetForEventId(
-          orderedFunction.name + ' ' + playbackEvent.id
-        )
-      );
-      bottom = Math.max(
-        bottom,
-        getVerticalOffsetForEventId(
-          orderedFunction.name + ' ' + playbackEvent.id
-        ) + getEventHeight(currentUniqueSounds.length)
-      );
-    });
-
-    orderedFunction.calledFunctionIds.forEach(calledFunctionId => {
-      const calledFunction = orderedFunctions.find(
-        orderedF => orderedF.uniqueInvocationId === calledFunctionId
-      );
-      const bounds = getFunctionBounds(calledFunction);
-      left = Math.min(left, bounds.left);
-      right = Math.max(right, bounds.right);
-      top = Math.min(top, bounds.top);
-      bottom = Math.max(bottom, bounds.bottom);
-    });
-
-    return {left, right, top, bottom};
-  }
 
   const uniqueFunctionExtentsArray = [];
   Object.keys(uniqueFunctionExtents).forEach(key => {
     uniqueFunctionExtentsArray.push(uniqueFunctionExtents[key]);
   });
 
+  const eventHeight = getEventHeight(currentUniqueSounds.length);
+
   return (
     <div id="timeline-events">
-      <div id="timeline-events-funtion-extents">
+      <div id="timeline-events-function-extents">
         {uniqueFunctionExtentsArray.map((uniqueFunction, index) => (
           <div
             key={index}
@@ -108,8 +107,9 @@ const TimelineSimple2Events = ({
               borderRadius: 8,
               left: paddingOffset + (uniqueFunction.left - 1) * barWidth,
               width: (uniqueFunction.right - uniqueFunction.left) * barWidth,
-              top: 32 + uniqueFunction.top,
-              height: uniqueFunction.bottom - uniqueFunction.top - 3,
+              top: 32 + uniqueFunction.top * eventHeight,
+              height:
+                (uniqueFunction.bottom - uniqueFunction.top) * eventHeight - 3,
             }}
           >
             &nbsp;
@@ -122,11 +122,7 @@ const TimelineSimple2Events = ({
             key={index}
             eventData={eventData}
             barWidth={barWidth}
-            height={
-              getEventHeight(currentUniqueSounds.length) -
-              eventVerticalSpace -
-              1
-            }
+            height={eventHeight - eventVerticalSpace - 1}
             top={
               32 +
               getVerticalOffsetForEventId(
