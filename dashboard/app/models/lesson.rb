@@ -57,6 +57,8 @@ class Lesson < ApplicationRecord
   has_many :lessons_opportunity_standards,  dependent: :destroy
   has_many :opportunity_standards, through: :lessons_opportunity_standards, source: :standard
 
+  has_one :rubric, dependent: :destroy
+
   self.table_name = 'stages'
 
   serialized_attrs %w(
