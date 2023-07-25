@@ -1,5 +1,10 @@
 import BlockSvgUnused from './blockSvgUnused';
-import {WORKSPACE_PADDING} from '../constants';
+import {
+  WORKSPACE_PADDING,
+  procedureDefinitionTypes,
+  setupTypes,
+  sortBlocksByType,
+} from '../constants';
 import {frameSizes} from './cdoConstants';
 
 const {HEADER_HEIGHT, MARGIN_BOTTOM, MARGIN_SIDE, MARGIN_TOP} = frameSizes;
@@ -81,6 +86,10 @@ export function positionBlocksOnWorkspace(
   // If the workspace is RTL, horizontally mirror the starting position.
   cursor.x = workspace.RTL ? width - cursor.x : cursor.x;
 
+  // When positioning blocks with the cursor, place set up blocks (e.g. when_run)
+  // at the top, and procedure definitions (e.g. functions/behaviors) at the bottom.
+  blocks = sortBlocksByType(blocks, setupTypes);
+  blocks = sortBlocksByType(blocks, procedureDefinitionTypes, true);
   blocks.forEach(block => {
     positionBlock(block, cursor);
   });
