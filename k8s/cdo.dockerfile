@@ -43,6 +43,7 @@ RUN \
     rbenv \
     rsync \
     sudo \
+    time \
     wget \
     unzip \
     zlib1g-dev \
@@ -99,7 +100,11 @@ RUN \
   # DONE HACK WORKAROUNDS FOR APPLE SILICON
   true
 
-# TODO: move to the top with other apt-get install commands
+RUN \
+  --mount=type=cache,sharing=locked,uid=1000,gid=1000,target=${SRC}/vendor/cache \
+  eval "$(rbenv init -)" && \
+  time bundle install && \
+
 ################################################################################
 FROM cdo-base as cdo-user-utils
 ################################################################################
