@@ -1031,6 +1031,46 @@ gl:
           title: Hora do Código Minecraft
         netsim:
           title: Simulador de internet
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Condicionais
+            lessonGroup-5:
+              display_name: Variables
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-4:
+              display_name: Bucles
+            lessonGroup-6:
+              display_name: Eventos
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Bucles aniñados
+            lessonGroup-4:
+              display_name: Funcións
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-4:
+              display_name: Bucles
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-4:
+              display_name: Bucles
+            lessonGroup-5:
+              display_name: Eventos
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-6:
+              display_name: Bucles
         pl-csd-summer-day1:
           lessons:
             lesson-3:
@@ -1107,6 +1147,12 @@ gl:
           lesson_groups:
             required:
               display_name: Visión xeral
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-4:
+              display_name: Bucles
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:
