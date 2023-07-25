@@ -2,25 +2,9 @@
   "it-IT": {
     "data": {
       "start_html": {
-        "AllTheThings Applab DesignModeDefault": {
-        },
-        "AppLab Intro 7 - Change Text 2": {
-        },
-        "AppLab Intro 7 - Full Text": {
-        },
-        "AppLab Intro 7 - onEvent intro": {
-        },
         "AppLab Intro 7 - onEvent twoButtons": {
           "Off": "Off",
           "On": "On"
-        },
-        "AppLab Intro 7 - playSound": {
-        },
-        "AppLab Intro 7 - thisOrThatAddButton": {
-        },
-        "AppLab Intro 7 - thisOrThatPersonalize": {
-        },
-        "AppLab Intro 7 - thisOrThatSetScreen": {
         },
         "CSD U1 IO Pet Chooser 2_2021": {
           "1584 Maple St": "Via degli aceri 1584",
@@ -865,24 +849,6 @@
           "4": "4",
           "5": "5"
         },
-        "CSD U2 RGB others": {
-        },
-        "CSD U2 RGB others_2018": {
-        },
-        "CSD U2 RGB others_2019": {
-        },
-        "CSD U2 RGB summer": {
-        },
-        "CSD U2 RGB summer_2018": {
-        },
-        "CSD U2 RGB summer_2019": {
-        },
-        "CSD U2 RGB winter": {
-        },
-        "CSD U2 RGB winter_2018": {
-        },
-        "CSD U2 RGB winter_2019": {
-        },
         "CSD U6 - Accelerometer - A_2222": {
           "Click on an image below to learn more about each person": "Fai clic su un'immagine qui sotto per saperne di più su ogni persona",
           "Pioneers in Electronics": "Pionieri dell'elettronica"
@@ -1326,8 +1292,6 @@
           "F": "F",
           "G": "G",
           "Play Song!": "Suona una canzone!"
-        },
-        "CSD U6 - Music - P_2222": {
         },
         "CSD U6 - Music - Piano_2222": {
           "A": "A",
@@ -1790,14 +1754,6 @@
           "Temp Sensor Reading": "Lettura del sensore di temperatura",
           "value": "valore"
         },
-        "CSD U6 Catch the Mouse": {
-        },
-        "CSD U6 Catch the Mouse_2018": {
-        },
-        "CSD U6 Catch the Mouse_2019": {
-        },
-        "CSD U6 Catch the Mouse_2021": {
-        },
         "CSD U6 Driver pt 2": {
           "Get to the checkered flag but don't hit the red ones!": "Raggiungi la bandiera a scacchi ma non colpire quelle rosse!",
           "You did it!": "Ce l'hai fatta!"
@@ -2182,14 +2138,6 @@
           "Meh": "Così così",
           "Sad": "Triste"
         },
-        "CSD U6 for loop button array": {
-        },
-        "CSD U6 for loop button array_2018": {
-        },
-        "CSD U6 for loop button array_2019": {
-        },
-        "CSD U6 for loop button array_2021": {
-        },
         "CSD U6 for loop click exit": {
           "Toggle Next LED": "Attiva il LED successivo"
         },
@@ -2213,22 +2161,6 @@
         },
         "CSD U6 for loop click predict_2021": {
           "Toggle Next LED": "Attiva il LED successivo"
-        },
-        "CSD U6 for loop images": {
-        },
-        "CSD U6 for loop images_2018": {
-        },
-        "CSD U6 for loop images_2019": {
-        },
-        "CSD U6 for loop images_2021": {
-        },
-        "CSD U6 for loop list.length": {
-        },
-        "CSD U6 for loop list.length_2018": {
-        },
-        "CSD U6 for loop list.length_2019": {
-        },
-        "CSD U6 for loop list.length_2021": {
         },
         "CSD U6 frequency": {
           "Buzzer Control": "Controlli del cicalino",
@@ -2398,14 +2330,6 @@
           "pulse": "impulso",
           "short buzz": "ronzio breve"
         },
-        "CSD U6 getProperty dropdown": {
-        },
-        "CSD U6 getProperty dropdown_2018": {
-        },
-        "CSD U6 getProperty dropdown_2019": {
-        },
-        "CSD U6 getProperty dropdown_2021": {
-        },
         "CSD U6 getProperty input": {
           "Submit": "Invia"
         },
@@ -2501,12 +2425,6 @@
         "CSD U6 investigate orientation_2021": {
           "pitch:": "pitch:",
           "roll:": "roll:"
-        },
-        "CSD U6 light pattern challenge_2018": {
-        },
-        "CSD U6 light pattern challenge_2019": {
-        },
-        "CSD U6 light pattern challenge_2021": {
         },
         "CSD U6 light show": {
           "blink": "lampeggiamento",
@@ -2635,14 +2553,6 @@
           "high": "alta",
           "low": "bassa",
           "text": "testo"
-        },
-        "CSD U6 setProperty Text": {
-        },
-        "CSD U6 setProperty Text_2018": {
-        },
-        "CSD U6 setProperty Text_2019": {
-        },
-        "CSD U6 setProperty Text_2021": {
         },
         "CSD U6 setProperty hidden": {
           "Alarm:": "Allarme:",
@@ -2792,20 +2702,10 @@
           "Try the following:": "Prova le seguenti soluzioni:",
           "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
         },
-        "CSD U6 tugowar demo": {
-        },
-        "CSD U6 tugowar demo_2018": {
-        },
-        "CSD U6 tugowar demo_2019": {
-        },
-        "CSD U6 tugowar demo_2021": {
-        },
         "CSDU4 - Design Mode - 17": {
           "Click me!": "Cliccami!",
           "I'm a button!": "Sono un pulsante!",
           "Red Button!": "Pulsante Rosso!"
-        },
-        "CSDU4 - Design Mode - 18": {
         },
         "CSDU4 Connecting Screens": {
           "Blue": "Blu",
@@ -2956,8 +2856,6 @@
           "When?": "Quando?",
           "Why?": "Perchè?"
         },
-        "CSDU6 - UI and Inputs - get set with text input": {
-        },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
           "=": "=",
@@ -2965,10 +2863,6 @@
         },
         "CSDU6 - UI and Inputs - getNumber practice": {
           "????": "????"
-        },
-        "CSDU6 - UI and Inputs - setProperty": {
-        },
-        "CSDU6 - UI and Inputs - setProperty first level": {
         },
         "CSDU6 - UI and Inputs - setScreen": {
           "About Me": "A proposito di me:",
@@ -2979,14 +2873,6 @@
           "OFF": "OFF",
           "Stop Alarm": "Ferma l'allarme",
           "Trigger Alarm": "Allarme evento:"
-        },
-        "CSDU6 - toggleswitch state setProp": {
-        },
-        "CSDU6 - toggleswitch state setProp_2018": {
-        },
-        "CSDU6 - toggleswitch state setProp_2019": {
-        },
-        "CSDU6 - toggleswitch state setProp_2021": {
         },
         "CSDU6 Circuit Playground Test": {
           "Board Not Detected!": "Scheda non rilevata!",
@@ -3032,14 +2918,6 @@
           "Success!": "Fatto!",
           "Try the following:": "Prova le seguenti soluzioni:",
           "Visit studio.code.org/maker/setup": "Visita studio.code.org/maker/setup"
-        },
-        "CSDU6 array select days": {
-        },
-        "CSDU6 array select days_2018": {
-        },
-        "CSDU6 array select days_2019": {
-        },
-        "CSDU6 array select days_2021": {
         },
         "CSDU6 circuit playground piano": {
           "A": "A",
@@ -3113,37 +2991,11 @@
           "F": "F",
           "G": "G"
         },
-        "Escape Room Example": {
-        },
-        "Final Room Escape App": {
-        },
-        "Room Escape Workshop - 1": {
-        },
-        "Room Escape Workshop - 10": {
-        },
-        "Room Escape Workshop - 10 - 2": {
-        },
-        "Room Escape Workshop - 3": {
-        },
-        "Room Escape Workshop - 3-2": {
-        },
-        "Room Escape Workshop - 4": {
-        },
-        "Room Escape Workshop - 5": {
-        },
-        "Room Escape Workshop - 7": {
-        },
-        "Room Escape Workshop - 8": {
-        },
-        "Room Escape Workshop - 9-2": {
-        },
         "allthethings design mode elements": {
           "Button": "Pulsante",
           "Option 1": "Opzione 1",
           "Option 2": "Opzione 2",
           "text": "testo"
-        },
-        "allthethings_moviebot": {
         },
         "csa widget test2": {
           "8": "8"
@@ -3675,9 +3527,11 @@
           "Raspado Recommender": "Suggeritore di Raspado",
           "chili en polbo:": "peperoncino in polvere:",
           "coconut:": "cocco:",
+          "lechera:": "panna:",
           "lime:": "lime:",
           "mango:": "mango:",
           "no": "no",
+          "pecan:": "noci pecan:",
           "preference": "preferenza",
           "strawberry:": "fragola:",
           "vanilla:": "Vanilla",
@@ -3688,46 +3542,110 @@
           "Raspado Recommender": "Suggeritore di Raspado",
           "chili en polbo:": "peperoncino in polvere:",
           "coconut:": "cocco:",
+          "lechera:": "panna:",
           "lime:": "lime:",
           "mango:": "mango:",
           "no": "no",
+          "pecan:": "noci pecan:",
           "preference": "preferenza",
           "strawberry:": "fragola:",
           "vanilla:": "Vanilla",
           "yes": "sì"
         },
         "ml-intro ai lab- fruit veggie widget": {
+          "According to the line you drew, your model thinks this food is a": "Secondo la linea che hai tracciato, il tuo modello pensa che questo cibo sia un",
+          "Click in two places to draw a line!": "Fai clic in due punti per tracciare una linea!",
           "Continue": "Prosegui",
-          "Loading...": "Sto caricando..."
+          "Flip Colors": "Capovolgi i colori",
+          "Fruit Accuracy:": "Accuratezza della frutta:",
+          "Hover over a dot to see its name": "Passa il mouse su un punto per vederne il nome",
+          "Let's See What The Model Decides": "Vediamo cosa decide il modello",
+          "Loading...": "Sto caricando...",
+          "On a Scale from 1-10, how would you rate": "Su una scala da 1 a 10, come valuteresti",
+          "Try Your Own Food!": "Assaggia il tuo cibo!",
+          "Veggie Accuracy:": "Accuratezza delle verdure:",
+          "What is the nameof your food?": "Come si chiama il tuo cibo?",
+          "Your new food has been added to the graph as a gray square!": "Il tuo nuovo cibo è stato aggiunto al grafico come un quadrato grigio!",
+          "x Axis": "Asse x",
+          "y Axis": "Asse y"
         },
         "ml-intro ai lab- fruit veggie widget_2022": {
+          "According to the line you drew, your model thinks this food is a": "Secondo la linea che hai tracciato, il tuo modello pensa che questo cibo sia un",
+          "Click in two places to draw a line!": "Fai clic in due punti per tracciare una linea!",
           "Continue": "Prosegui",
-          "Loading...": "Sto caricando..."
+          "Flip Colors": "Capovolgi i colori",
+          "Fruit Accuracy:": "Accuratezza della frutta:",
+          "Hover over a dot to see its name": "Passa il mouse su un punto per vederne il nome",
+          "Let's See What The Model Decides": "Vediamo cosa decide il modello",
+          "Loading...": "Sto caricando...",
+          "On a Scale from 1-10, how would you rate": "Su una scala da 1 a 10, come valuteresti",
+          "Try Your Own Food!": "Assaggia il tuo cibo!",
+          "Veggie Accuracy:": "Accuratezza delle verdure:",
+          "What is the nameof your food?": "Come si chiama il tuo cibo?",
+          "Your new food has been added to the graph as a gray square!": "Il tuo nuovo cibo è stato aggiunto al grafico come un quadrato grigio!",
+          "x Axis": "Asse x",
+          "y Axis": "Asse y"
         },
         "ml-intro app lab-book recommender demo-2021": {
+          "By Myself": "Da solo",
           "Cat": "Gatto",
+          "Class Book Recommender": "Suggeritore per i libri di classe",
+          "Dragon": "Drago",
+          "How do you like to spendtime?": "Come ti piace passare il tempo?",
+          "How would your friends describe you?": "Come ti descriverebbero i tuoi amici?",
+          "Independent": "Autonomo",
           "Indoors": "Al chiuso",
+          "Myterious": "Misterioso",
           "Outdoors": "All'aperto",
           "Predict": "Predict",
-          "Silly": "Sciocco"
+          "Silly": "Sciocco",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "Questa app può consigliarti un libro da leggere in base ai tuoi interessi. È pensato per un nuovo studente a scuola in modo che possa leggere un libro letto anche da altre persone della scuola e avere qualcosa di cui parlare per fare nuove amicizie.",
+          "Thoughtful": "Premuroso",
+          "Walrus": "Tricheco",
+          "Where do you like to spend time?": "Dove ti piace passare il tempo?",
+          "Which animal do you like the most?": "Quale animale ti piace di più?",
+          "With Friends": "Con gli amici",
+          "Wolf": "Lupo"
         },
         "ml-intro app lab-book recommender demo_2022": {
+          "By Myself": "Da solo",
           "Cat": "Gatto",
+          "Class Book Recommender": "Suggeritore per i libri di classe",
+          "Dragon": "Drago",
+          "How do you like to spendtime?": "Come ti piace passare il tempo?",
+          "How would your friends describe you?": "Come ti descriverebbero i tuoi amici?",
+          "Independent": "Autonomo",
           "Indoors": "Al chiuso",
+          "Myterious": "Misterioso",
           "Outdoors": "All'aperto",
           "Predict": "Predict",
-          "Silly": "Sciocco"
+          "Silly": "Sciocco",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "Questa app può consigliarti un libro da leggere in base ai tuoi interessi. È pensato per un nuovo studente a scuola in modo che possa leggere un libro letto anche da altre persone della scuola e avere qualcosa di cui parlare per fare nuove amicizie.",
+          "Thoughtful": "Premuroso",
+          "Walrus": "Tricheco",
+          "Where do you like to spend time?": "Dove ti piace passare il tempo?",
+          "Which animal do you like the most?": "Quale animale ti piace di più?",
+          "With Friends": "Con gli amici",
+          "Wolf": "Lupo"
         },
         "ml-model card-medical app v2 2021-2": {
           "18-34": "18-34",
           "35-60": "35-60",
           "A": "A",
+          "AIAN": "AIAN",
           "Achy": "Dolorante",
+          "Age?": "Età?",
           "Area of Pain?": "Area del dolore?",
+          "BAM": "BAM",
+          "Bleeding?": "Sanguinamento?",
           "Dull": "Sordo",
           "Gender?": "Sesso?",
+          "Medical Priority": "Priorità medica",
+          "NHPI": "NHPI",
           "Over 60": "Oltre 60",
           "Pain Type": "Tipo di dolore",
+          "Please Sign In Below": "Effettua il login qui sotto",
+          "Race?": "Etnia?",
           "Sharp": "Acuto",
           "Shortness of Breath?": "Mancanza di respiro?",
           "Sign In": "Accedi",
@@ -3749,12 +3667,20 @@
           "18-34": "18-34",
           "35-60": "35-60",
           "A": "A",
+          "AIAN": "AIAN",
           "Achy": "Dolorante",
+          "Age?": "Età?",
           "Area of Pain?": "Area del dolore?",
+          "BAM": "BAM",
+          "Bleeding?": "Sanguinamento?",
           "Dull": "Sordo",
           "Gender?": "Sesso?",
+          "Medical Priority": "Priorità medica",
+          "NHPI": "NHPI",
           "Over 60": "Oltre 60",
           "Pain Type": "Tipo di dolore",
+          "Please Sign In Below": "Effettua il login qui sotto",
+          "Race?": "Etnia?",
           "Sharp": "Acuto",
           "Shortness of Breath?": "Mancanza di respiro?",
           "Sign In": "Accedi",
@@ -3773,50 +3699,122 @@
           "yes": "sì"
         },
         "ml-model cards-book recommender model card": {
+          "By Myself": "Da solo",
           "Cat": "Gatto",
+          "Class Book Recommender": "Suggeritore per i libri di classe",
+          "Dragon": "Drago",
+          "How do you like to spendtime?": "Come ti piace passare il tempo?",
+          "How would your friends describe you?": "Come ti descriverebbero i tuoi amici?",
+          "Independent": "Autonomo",
           "Indoors": "Al chiuso",
+          "Myterious": "Misterioso",
           "Outdoors": "All'aperto",
           "Predict": "Predict",
-          "Silly": "Sciocco"
+          "Silly": "Sciocco",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "Questa app può consigliarti un libro da leggere in base ai tuoi interessi. È pensato per un nuovo studente a scuola in modo che possa leggere un libro letto anche da altre persone della scuola e avere qualcosa di cui parlare per fare nuove amicizie.",
+          "Thoughtful": "Premuroso",
+          "Walrus": "Tricheco",
+          "Where do you like to spend time?": "Dove ti piace passare il tempo?",
+          "Which animal do you like the most?": "Quale animale ti piace di più?",
+          "With Friends": "Con gli amici",
+          "Wolf": "Lupo"
         },
         "ml-model cards-book recommender model card_2022": {
+          "By Myself": "Da solo",
           "Cat": "Gatto",
+          "Class Book Recommender": "Suggeritore per i libri di classe",
+          "Dragon": "Drago",
+          "How do you like to spendtime?": "Come ti piace passare il tempo?",
+          "How would your friends describe you?": "Come ti descriverebbero i tuoi amici?",
+          "Independent": "Autonomo",
           "Indoors": "Al chiuso",
+          "Myterious": "Misterioso",
           "Outdoors": "All'aperto",
           "Predict": "Predict",
-          "Silly": "Sciocco"
+          "Silly": "Sciocco",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "Questa app può consigliarti un libro da leggere in base ai tuoi interessi. È pensato per un nuovo studente a scuola in modo che possa leggere un libro letto anche da altre persone della scuola e avere qualcosa di cui parlare per fare nuove amicizie.",
+          "Thoughtful": "Premuroso",
+          "Walrus": "Tricheco",
+          "Where do you like to spend time?": "Dove ti piace passare il tempo?",
+          "Which animal do you like the most?": "Quale animale ti piace di più?",
+          "With Friends": "Con gli amici",
+          "Wolf": "Lupo"
         },
         "ml-models in applab-choice if quotes": {
           "1": "1",
           "2": "2",
           "3": "3",
           "4+": "4+",
+          "Free Time": "Tempo libero",
+          "Not At All": "Niente affatto",
+          "Number of Pets?": "Numero di animali domestici?",
+          "Pet": "Animale",
+          "Pet Recommendation: Dog!": "Raccomandazione per animali domestici: cane!",
+          "Pet Recommendation: Fish!": "Raccomandazione per animali domestici: pesce!",
+          "Pet Recommendation: Iguana!": "Raccomandazione per animali domestici: Iguana!",
+          "Pet Recommendation: Parakeet": "Raccomandazione per animali domestici: pappagallino",
+          "Playful?": "Giocherellone?",
           "Predict": "Predict",
-          "Temperature": "Temperatura"
+          "Sort Of": "Una specie di",
+          "Temperature": "Temperatura",
+          "Very": "Molto"
         },
         "ml-models in applab-choice if quotes_2022": {
           "1": "1",
           "2": "2",
           "3": "3",
           "4+": "4+",
+          "Free Time": "Tempo libero",
+          "Not At All": "Niente affatto",
+          "Number of Pets?": "Numero di animali domestici?",
+          "Pet": "Animale",
+          "Pet Recommendation: Dog!": "Raccomandazione per animali domestici: cane!",
+          "Pet Recommendation: Fish!": "Raccomandazione per animali domestici: pesce!",
+          "Pet Recommendation: Iguana!": "Raccomandazione per animali domestici: Iguana!",
+          "Pet Recommendation: Parakeet": "Raccomandazione per animali domestici: pappagallino",
+          "Playful?": "Giocherellone?",
           "Predict": "Predict",
-          "Temperature": "Temperatura"
+          "Sort Of": "Una specie di",
+          "Temperature": "Temperatura",
+          "Very": "Molto"
         },
         "ml-models in applab-choice if wrong place": {
           "1": "1",
           "2": "2",
           "3": "3",
           "4+": "4+",
+          "Free Time": "Tempo libero",
+          "Not At All": "Niente affatto",
+          "Number of Pets?": "Numero di animali domestici?",
+          "Pet": "Animale",
+          "Pet Recommendation: Dog!": "Raccomandazione per animali domestici: cane!",
+          "Pet Recommendation: Fish!": "Raccomandazione per animali domestici: pesce!",
+          "Pet Recommendation: Iguana!": "Raccomandazione per animali domestici: Iguana!",
+          "Pet Recommendation: Parakeet": "Raccomandazione per animali domestici: pappagallino",
+          "Playful?": "Giocherellone?",
           "Predict": "Predict",
-          "Temperature": "Temperatura"
+          "Sort Of": "Una specie di",
+          "Temperature": "Temperatura",
+          "Very": "Molto"
         },
         "ml-models in applab-choice if wrong place_2022": {
           "1": "1",
           "2": "2",
           "3": "3",
           "4+": "4+",
+          "Free Time": "Tempo libero",
+          "Not At All": "Niente affatto",
+          "Number of Pets?": "Numero di animali domestici?",
+          "Pet": "Animale",
+          "Pet Recommendation: Dog!": "Raccomandazione per animali domestici: cane!",
+          "Pet Recommendation: Fish!": "Raccomandazione per animali domestici: pesce!",
+          "Pet Recommendation: Iguana!": "Raccomandazione per animali domestici: Iguana!",
+          "Pet Recommendation: Parakeet": "Raccomandazione per animali domestici: pappagallino",
+          "Playful?": "Giocherellone?",
           "Predict": "Predict",
-          "Temperature": "Temperatura"
+          "Sort Of": "Una specie di",
+          "Temperature": "Temperatura",
+          "Very": "Molto"
         },
         "ml-models in applab-choice intended warnings": {
           "1": "1",
@@ -3824,9 +3822,22 @@
           "3": "3",
           "4+": "4+",
           "Back": "Indietro",
+          "Free Time": "Tempo libero",
           "Intended Uses": "Utilizzi previsti",
+          "Limitations and Warnings": "Limitazioni e avvertenze",
+          "More Information": "Ulteriori Informazioni",
+          "Not At All": "Niente affatto",
+          "Number of Pets?": "Numero di animali domestici?",
+          "Pet": "Animale",
+          "Pet Recommendation: Dog!": "Raccomandazione per animali domestici: cane!",
+          "Pet Recommendation: Fish!": "Raccomandazione per animali domestici: pesce!",
+          "Pet Recommendation: Iguana!": "Raccomandazione per animali domestici: Iguana!",
+          "Pet Recommendation: Parakeet": "Raccomandazione per animali domestici: pappagallino",
+          "Playful?": "Giocherellone?",
           "Predict": "Predict",
-          "Temperature": "Temperatura"
+          "Sort Of": "Una specie di",
+          "Temperature": "Temperatura",
+          "Very": "Molto"
         },
         "ml-models in applab-choice intended warnings_2022": {
           "1": "1",
@@ -3834,48 +3845,139 @@
           "3": "3",
           "4+": "4+",
           "Back": "Indietro",
+          "Free Time": "Tempo libero",
           "Intended Uses": "Utilizzi previsti",
+          "Limitations and Warnings": "Limitazioni e avvertenze",
+          "More Information": "Ulteriori Informazioni",
+          "Not At All": "Niente affatto",
+          "Number of Pets?": "Numero di animali domestici?",
+          "Pet": "Animale",
+          "Pet Recommendation: Dog!": "Raccomandazione per animali domestici: cane!",
+          "Pet Recommendation: Fish!": "Raccomandazione per animali domestici: pesce!",
+          "Pet Recommendation: Iguana!": "Raccomandazione per animali domestici: Iguana!",
+          "Pet Recommendation: Parakeet": "Raccomandazione per animali domestici: pappagallino",
+          "Playful?": "Giocherellone?",
           "Predict": "Predict",
-          "Temperature": "Temperatura"
+          "Sort Of": "Una specie di",
+          "Temperature": "Temperatura",
+          "Very": "Molto"
         },
         "ml-models in applab-choice predict typos": {
           "1": "1",
           "2": "2",
           "3": "3",
           "4+": "4+",
+          "Free Time": "Tempo libero",
+          "Not At All": "Niente affatto",
+          "Number of Pets?": "Numero di animali domestici?",
+          "Pet": "Animale",
+          "Pet Recommendation: Dog!": "Raccomandazione per animali domestici: cane!",
+          "Pet Recommendation: Fish!": "Raccomandazione per animali domestici: pesce!",
+          "Pet Recommendation: Iguana!": "Raccomandazione per animali domestici: Iguana!",
+          "Pet Recommendation: Parakeet": "Raccomandazione per animali domestici: pappagallino",
+          "Playful?": "Giocherellone?",
           "Predict": "Predict",
-          "Temperature": "Temperatura"
+          "Sort Of": "Una specie di",
+          "Temperature": "Temperatura",
+          "Very": "Molto"
         },
         "ml-models in applab-choice predict typos_2022": {
           "1": "1",
           "2": "2",
           "3": "3",
           "4+": "4+",
+          "Free Time": "Tempo libero",
+          "Not At All": "Niente affatto",
+          "Number of Pets?": "Numero di animali domestici?",
+          "Pet": "Animale",
+          "Pet Recommendation: Dog!": "Raccomandazione per animali domestici: cane!",
+          "Pet Recommendation: Fish!": "Raccomandazione per animali domestici: pesce!",
+          "Pet Recommendation: Iguana!": "Raccomandazione per animali domestici: Iguana!",
+          "Pet Recommendation: Parakeet": "Raccomandazione per animali domestici: pappagallino",
+          "Playful?": "Giocherellone?",
           "Predict": "Predict",
-          "Temperature": "Temperatura"
+          "Sort Of": "Una specie di",
+          "Temperature": "Temperatura",
+          "Very": "Molto"
         },
         "ml-models in applab-zoo assessment": {
+          "AB": "AB",
+          "AQ": "AQ",
           "B": "B",
+          "H": "H",
+          "It's A Mammal!": "È un mammifero!",
+          "It's A Reptile!": "È un rettile!",
+          "It's a Bird!": "È un uccello!",
+          "It's a Bug!": "È un insetto!",
+          "It's a Crustacean!": "È un crostaceo!",
+          "It's a Fish!": "È un pesce!",
+          "It's an Amphibian!": "È un anfibio!",
           "No": "No",
           "Predict": "Predict",
           "Yes": "Sì"
         },
         "ml-models in applab-zoo assessment_2022": {
+          "AB": "AB",
+          "AQ": "AQ",
           "B": "B",
+          "H": "H",
+          "It's A Mammal!": "È un mammifero!",
+          "It's A Reptile!": "È un rettile!",
+          "It's a Bird!": "È un uccello!",
+          "It's a Bug!": "È un insetto!",
+          "It's a Crustacean!": "È un crostaceo!",
+          "It's a Fish!": "È un pesce!",
+          "It's an Amphibian!": "È un anfibio!",
           "No": "No",
           "Predict": "Predict",
           "Yes": "Sì"
         },
         "ml-models in applab-zoo model embed": {
+          "Animal Predictor!": "Previsione animale!",
+          "Does it have a backbone?": "Ha una spina dorsale?",
+          "Does it have hair?": "Ha il pelo?",
           "Intended Uses": "Utilizzi previsti",
+          "Is it airborne?": "Vola?",
+          "Is it aquatic?": "È acquatico?",
+          "It's A Mammal!": "È un mammifero!",
+          "It's A Reptile!": "È un rettile!",
+          "It's a Bird!": "È un uccello!",
+          "It's a Bug!": "È un insetto!",
+          "It's a Crustacean!": "È un crostaceo!",
+          "It's a Fish!": "È un pesce!",
+          "It's an Amphibian!": "È un anfibio!",
+          "Limitations": "Limitazioni",
+          "More Information": "Ulteriori Informazioni",
+          "Next!": "Avanti!",
           "No": "No",
           "Predict": "Predict",
+          "This app can be used to identify the type of animal you see in the real world. This can be used in Zoos or Wildlife Sanctuaries to help educate people about the type of animals they are looking at.": "Questa app può essere utilizzata per identificare il tipo di animale che vedi nel mondo reale. Questo può essere usato negli zoo o nelle riserve naturali della fauna selvatica per aiutare a educare le persone sul tipo di animali che stanno osservando.",
+          "This app was trained on a small set of animals and only animals that typically appear in a zoo. This app may not work well with more exotic animals.": "Questa app è stata addestrata su un piccolo gruppo di animali e solo su animali che di solito compaiono in uno zoo. Questa app potrebbe non funzionare bene con animali più esotici.",
+          "This app will predict a type of animal based on four questions!": "Questa app in base a quattro domande può prevedere un tipo di animale!",
           "Yes": "Sì"
         },
         "ml-models in applab-zoo model embed_2022": {
+          "Animal Predictor!": "Previsione animale!",
+          "Does it have a backbone?": "Ha una spina dorsale?",
+          "Does it have hair?": "Ha il pelo?",
           "Intended Uses": "Utilizzi previsti",
+          "Is it airborne?": "Vola?",
+          "Is it aquatic?": "È acquatico?",
+          "It's A Mammal!": "È un mammifero!",
+          "It's A Reptile!": "È un rettile!",
+          "It's a Bird!": "È un uccello!",
+          "It's a Bug!": "È un insetto!",
+          "It's a Crustacean!": "È un crostaceo!",
+          "It's a Fish!": "È un pesce!",
+          "It's an Amphibian!": "È un anfibio!",
+          "Limitations": "Limitazioni",
+          "More Information": "Ulteriori Informazioni",
+          "Next!": "Avanti!",
           "No": "No",
           "Predict": "Predict",
+          "This app can be used to identify the type of animal you see in the real world. This can be used in Zoos or Wildlife Sanctuaries to help educate people about the type of animals they are looking at.": "Questa app può essere utilizzata per identificare il tipo di animale che vedi nel mondo reale. Questo può essere usato negli zoo o nelle riserve naturali della fauna selvatica per aiutare a educare le persone sul tipo di animali che stanno osservando.",
+          "This app was trained on a small set of animals and only animals that typically appear in a zoo. This app may not work well with more exotic animals.": "Questa app è stata addestrata su un piccolo gruppo di animali e solo su animali che di solito compaiono in uno zoo. Questa app potrebbe non funzionare bene con animali più esotici.",
+          "This app will predict a type of animal based on four questions!": "Questa app in base a quattro domande può prevedere un tipo di animale!",
           "Yes": "Sì"
         },
         "ml-models-shoes decision tree-2021": {
@@ -3919,6 +4021,7 @@
         "ml-models-shoes points-2021": {
           "Another Recommendation!": "Un'altra raccomandazione!",
           "Casual": "Casual",
+          "Do you care about people noticing your shoes?": "Ti interessa che la gente si accorga delle tue scarpe?",
           "Hard Work": "Duro lavoro",
           "How do you feel about socks?": "Cosa ne pensi delle calze?",
           "In Bed": "A letto",
@@ -3945,6 +4048,7 @@
         "ml-models-shoes points_2022": {
           "Another Recommendation!": "Un'altra raccomandazione!",
           "Casual": "Casual",
+          "Do you care about people noticing your shoes?": "Ti interessa che la gente si accorga delle tue scarpe?",
           "Hard Work": "Duro lavoro",
           "How do you feel about socks?": "Cosa ne pensi delle calze?",
           "In Bed": "A letto",
@@ -3982,12 +4086,24 @@
         },
         "ml-use model card-example3A-2021": {
           "Alert": "Avviso",
+          "Cars:": "Auto:",
           "Driver Alert System": "Sistema di avviso al conducente",
           "Get Started": "Inizia",
+          "How Many Other Cars Are On The Road?": "Quante altre auto ci sono sulla strada?",
+          "Note: Normally all of this data would be collected by sensors. For this test, you will need to enter the data yourself": "Nota: normalmente tutti questi dati vengono raccolti dai sensori. Per questo test, dovrai inserire tu stesso i dati",
           "Predict": "Predict",
+          "Predict!": "Prevedi!",
           "Temperature:": "Temperatura:",
+          "This app simulates a Car Alert System safety feature. It analyzes the road conditions and gives a rating on how safe it is to be driving right now.": "Questa app simula una funzione di sicurezza del sistema di allarme auto. Analizza le condizioni della strada e fornisce una valutazione di quanto sia sicuro guidare in questo momento.",
+          "This feature determines how many other cars are on the road using a proximity sensor. The more cars there are on the road, the more dangerous driving conditions can be.": "Questa funzione determina quante altre auto ci sono sulla strada utilizzando un sensore di prossimità. Più auto ci sono sulla strada, più pericolose possono essere le condizioni di guida.",
+          "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "Questa funzione determina la temperatura attuale utilizzando un sensore di temperatura. Se fa troppo caldo, le auto possono surriscaldarsi e funzionare male. Se il clima è troppo freddo, alcune parti dell'auto possono congelarsi o stringersi e non funzionare correttamente.",
+          "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "Questa funzione determina l'ora del giorno utilizzando un sensore di luce. La guida al crepuscolo e di notte tende ad essere più pericolosa della guida diurna.",
+          "This feature determines what the weather is like using an atmospheric sensor. Road conditions become more dangerous in snowy or foggy weather. Under certain conditions, the sun can also blind drivers and cause accidents": "Questa funzione determina le condizioni meteorologiche utilizzando un sensore atmosferico. Le condizioni stradali diventano più pericolose in caso di neve o nebbia. In determinate condizioni, il sole può anche accecare i conducenti e causare incidenti",
           "Time Of Day:": "Ora del giorno:",
           "Weather:": "Meteo:",
+          "What Is The Weather Like?": "Com'è il tempo?",
+          "What is the Temperature Outside?": "Qual è la temperatura esterna?",
+          "What time of day is it?": "Che ora del giorno è?",
           "cloudy": "nuvoloso",
           "daylight": "luce del giorno",
           "dusk": "Crepuscolo",
@@ -3999,12 +4115,24 @@
         },
         "ml-use model card-example3A_2022": {
           "Alert": "Avviso",
+          "Cars:": "Auto:",
           "Driver Alert System": "Sistema di avviso al conducente",
           "Get Started": "Inizia",
+          "How Many Other Cars Are On The Road?": "Quante altre auto ci sono sulla strada?",
+          "Note: Normally all of this data would be collected by sensors. For this test, you will need to enter the data yourself": "Nota: normalmente tutti questi dati vengono raccolti dai sensori. Per questo test, dovrai inserire tu stesso i dati",
           "Predict": "Predict",
+          "Predict!": "Prevedi!",
           "Temperature:": "Temperatura:",
+          "This app simulates a Car Alert System safety feature. It analyzes the road conditions and gives a rating on how safe it is to be driving right now.": "Questa app simula una funzione di sicurezza del sistema di allarme auto. Analizza le condizioni della strada e fornisce una valutazione di quanto sia sicuro guidare in questo momento.",
+          "This feature determines how many other cars are on the road using a proximity sensor. The more cars there are on the road, the more dangerous driving conditions can be.": "Questa funzione determina quante altre auto ci sono sulla strada utilizzando un sensore di prossimità. Più auto ci sono sulla strada, più pericolose possono essere le condizioni di guida.",
+          "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "Questa funzione determina la temperatura attuale utilizzando un sensore di temperatura. Se fa troppo caldo, le auto possono surriscaldarsi e funzionare male. Se il clima è troppo freddo, alcune parti dell'auto possono congelarsi o stringersi e non funzionare correttamente.",
+          "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "Questa funzione determina l'ora del giorno utilizzando un sensore di luce. La guida al crepuscolo e di notte tende ad essere più pericolosa della guida diurna.",
+          "This feature determines what the weather is like using an atmospheric sensor. Road conditions become more dangerous in snowy or foggy weather. Under certain conditions, the sun can also blind drivers and cause accidents": "Questa funzione determina le condizioni meteorologiche utilizzando un sensore atmosferico. Le condizioni stradali diventano più pericolose in caso di neve o nebbia. In determinate condizioni, il sole può anche accecare i conducenti e causare incidenti",
           "Time Of Day:": "Ora del giorno:",
           "Weather:": "Meteo:",
+          "What Is The Weather Like?": "Com'è il tempo?",
+          "What is the Temperature Outside?": "Qual è la temperatura esterna?",
+          "What time of day is it?": "Che ora del giorno è?",
           "cloudy": "nuvoloso",
           "daylight": "luce del giorno",
           "dusk": "Crepuscolo",
