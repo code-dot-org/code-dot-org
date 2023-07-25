@@ -12,9 +12,7 @@ export default function RubricFloatingActionButton() {
         onClick={() => setIsOpen(!isOpen)}
         type="button"
       />
-      {isOpen && (
-        <div style={{position: 'fixed', left: 10, bottom: 108}}>hi</div>
-      )}
+      {isOpen && <div className={style.rubricContainer}>hi</div>}
     </div>
   );
 }

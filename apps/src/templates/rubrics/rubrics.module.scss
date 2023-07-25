@@ -4,8 +4,22 @@
   bottom: 48px;
 
   // background-color: aquamarine;
-  background-image: 'http://localhost-studio.code.org:3000/assets/js/AI-FABwp510c6fb65f08ac5f588a82fea6dfdcda.png';
+  background-image: url('http://localhost-studio.code.org:3000/assets/js/AI-FABwp510c6fb65f08ac5f588a82fea6dfdcda.png');
   height: 60px;
   width: 60px;
   padding: 0;
+
+  border-width: 0;
+  border-radius: 30px;
+}
+
+.rubricContainer {
+  position: fixed;
+            left: 10px;
+            bottom: 116px;
+            width: 120px;
+            height: 48px;
+            border-style: solid;
+            border-color: green;
+            border-width: 2px;
 }
