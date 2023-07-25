@@ -48,6 +48,10 @@ export interface MusicState {
   soundLoadingProgress: number;
   /** The 1-based playhead position to start playback from, scaled to measures */
   startingPlayheadPosition: number;
+  undoStatus: {
+    canUndo: boolean;
+    canRedo: boolean;
+  };
 }
 
 const initialState: MusicState = {
@@ -63,6 +67,10 @@ const initialState: MusicState = {
   lastMeasure: 0,
   soundLoadingProgress: 0,
   startingPlayheadPosition: 1,
+  undoStatus: {
+    canUndo: false,
+    canRedo: false,
+  },
 };
 
 const musicSlice = createSlice({
@@ -164,6 +172,12 @@ const musicSlice = createSlice({
         state.startingPlayheadPosition - 1
       );
     },
+    setUndoStatus: (
+      state,
+      action: PayloadAction<{canUndo: boolean; canRedo: boolean}>
+    ) => {
+      state.undoStatus = action.payload;
+    },
   },
 });
 
@@ -223,4 +237,5 @@ export const {
   setStartPlayheadPosition,
   moveStartPlayheadPositionForward,
   moveStartPlayheadPositionBackward,
+  setUndoStatus,
 } = musicSlice.actions;
