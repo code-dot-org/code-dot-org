@@ -155,9 +155,14 @@ COPY --chown=${USERNAME} \
   ./apps/eslint/
 
 RUN \
-  cd apps && \
+  #
+  # Instuct Docker to maintain a build cache for yarn package downloads
+  # so we don't have to re-download npms whenever package.json changes
+  --mount=type=cache,sharing=locked,uid=1000,gid=1000,target=${HOME}/.cache/yarn \
+  #
   # Install apps/node_modules using yarn
-  yarn && \
+  cd apps && \
+  yarn install --frozen-lockfile --ignore-scripts && \
   true
 
 ################################################################################
