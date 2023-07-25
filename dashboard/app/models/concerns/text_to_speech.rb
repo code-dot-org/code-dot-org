@@ -141,7 +141,7 @@ module TextToSpeech
 
   def tts_should_update(property, update_all = false)
     changed = property_changed?(property)
-    (changed || update_all) && write_to_file? && published
+    (changed || update_all) && Policies::LevelFiles.write_to_file?(self) && published
   end
 
   def tts_short_instructions_text
