@@ -19,10 +19,10 @@
 #  school_subject                   :string(255)
 #  device_compatibility             :string(255)
 #  description                      :string(255)
-#  self_paced_professional_learning :string(255)
 #  professional_learning_program    :string(255)
 #  video                            :string(255)
 #  published_date                   :datetime
+#  self_paced_pl_course_offering_id :integer
 #
 # Indexes
 #
@@ -33,6 +33,7 @@ class CourseOffering < ApplicationRecord
   include Curriculum::SharedCourseConstants
 
   has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
+  belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
 
   validates :category, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES, message: "must be one of the course offering categories. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CATEGORIES}. Got: \"%{value}\"."}
   validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}
