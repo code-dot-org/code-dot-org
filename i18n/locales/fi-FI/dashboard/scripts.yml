@@ -1910,3 +1910,49 @@ fi:
               display_name: Digitaalinen kansalaisuus
             lessonGroup-4:
               display_name: Muuttujat
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-4:
+              display_name: Silmukat
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-4:
+              display_name: Silmukat
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-4:
+              display_name: Silmukat
+            lessonGroup-6:
+              display_name: Tapahtumat
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-4:
+              display_name: Silmukat
+            lessonGroup-5:
+              display_name: Tapahtumat
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-6:
+              display_name: Silmukat
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sisäkkäiset silmukat
+            lessonGroup-4:
+              display_name: Funktiot
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ehtolausekkeet
+            lessonGroup-5:
+              display_name: Muuttujat
