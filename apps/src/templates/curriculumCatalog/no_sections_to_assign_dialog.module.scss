@@ -22,7 +22,6 @@
 
 .buttonContainer {
   display: flex;
-  flex-flow: wrap;
   gap: 1em;
 
   // screen sizes larger than mobile
@@ -32,7 +31,21 @@
 
   // mobile screen sizes
   @media screen and (max-width: $width-sm) {
+    hr {
+      display: none;
+    }
+
+    margin-top: 1em;
     justify-content: center;
+    flex-direction: column-reverse;
+    button,
+    a,
+    a:link,
+    a:visited {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
   }
 
   button,
