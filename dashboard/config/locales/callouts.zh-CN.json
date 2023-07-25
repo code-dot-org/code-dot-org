@@ -20,8 +20,6 @@
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "你现在正处于设计模式中。"
         },
-        "Big Game Vars 1": {
-        },
         "CSD U3 - conditionals - transition": {
           "CSD_U3_L8_S6_C1": "将控制台日志语句放到这里"
         },
@@ -51,18 +49,6 @@
         },
         "CSD U3 Boolean Predict_2022": {
           "": "程序会在这里打印结果"
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2019": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
-        },
-        "CSD U3 Random add_2021": {
-        },
-        "CSD U3 Random add_2022": {
         },
         "CSD U3 Sprites anitab 1": {
           "": "点击打开动画标签页"
@@ -762,48 +748,8 @@
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
-        "CSD U6 - Accelerometer - PB_2222": {
-        },
-        "CSD U6 - Accelerometer - PC_2222": {
-        },
-        "CSD U6 - Accelerometer - SB2_2222": {
-        },
-        "CSD U6 - Color LEDs - CA_2222": {
-        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "在此处添加代码"
-        },
-        "CSD U6 - Combine Inputs - A_2222": {
-        },
-        "CSD U6 - Combine Inputs - PracD_2222": {
-        },
-        "CSD U6 - Combine Inputs - SB1_2222": {
-        },
-        "CSD U6 - Functions - P2A_2222": {
-        },
-        "CSD U6 - Functions - P2C_2222": {
-        },
-        "CSD U6 - Functions - SB1_2222": {
-        },
-        "CSD U6 - Functions - SB2_2222": {
-        },
-        "CSD U6 - Functions - SB3_2222": {
-        },
-        "CSD U6 - Functions - SB4_2222": {
-        },
-        "CSD U6 - Functions - SB6_2222": {
-        },
-        "CSD U6 - Functions - SB7_2222": {
-        },
-        "CSD U6 - Functions - SB_2222": {
-        },
-        "CSD U6 - If Variables - A_2222": {
-        },
-        "CSD U6 - Music - A_2222": {
-        },
-        "CSD U6 - Music - SB3_2222": {
-        },
-        "CSD U6 - Sensors - PB_2222": {
         },
         "CSD U6 colorLeds intensity": {
           "CSDU6L10_rainbow": "在此处添加代码"
@@ -903,10 +849,6 @@
         },
         "CSDU4 - Design Mode - 3": {
           "": "使用 setText 模块来改变 titleLabel 的文本"
-        },
-        "Calc Circles of Eval .2": {
-        },
-        "Calc Vars 1": {
         },
         "Course 4 Artist 4": {
           "repeat_full_circle": "输入僵尸至少需要移动多少次才能完成一个完整的循环"
@@ -1113,14 +1055,6 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "在这里找到”所有鸭子“模块"
         },
-        "Eval Booleans 2": {
-        },
-        "Eval Define Funcs 3": {
-        },
-        "Eval Define Funcs Test": {
-        },
-        "Eval Strings Images .2": {
-        },
         "Fish Tank 3-validated2022": {
           "spritelab_comment": "使用此模块记录你的或老师的代码是如何起作用的。"
         },
@@ -1172,8 +1106,6 @@
         },
         "InspirationalArtwork_2018": {
           "InspirationalArtwork_1": "尝试使用这个标签下的新的`评论 `模块, 让自己能在程序里记笔记！"
-        },
-        "Luigi's Pizza 1": {
         },
         "MC HOC 2016 Level 2-2": {
           "craft2_run_button_callout": "准备就绪后，点击“运行”试试看你的程序。"
@@ -1252,8 +1184,6 @@
         },
         "NEW Course 4 Artist Params 10": {
           "create_function": "点击这里来打开函数的选项，然后点击“创建函数”的按钮。"
-        },
-        "NEW Course 4 Artist Params 2": {
         },
         "NEW Course 4 Artist Params 9": {
           "add_and_drag_parameter": "在这里填写参数的名称，点击添加，然后将它拖动到函数定义中",
@@ -2809,10 +2739,6 @@
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "可以在下面找到你的变量！"
         },
-        "courseF_collector_items_-2022-2": {
-        },
-        "courseF_collector_player_move_-2022-2": {
-        },
         "courseF_editable_card": {
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
@@ -2866,8 +2792,6 @@
         },
         "courseF_events_time_-2022-2": {
           "events_category": "点击这里打开事件类别。"
-        },
-        "courseF_groups_size_-2022-2": {
         },
         "courseF_label_predict": {
           "variablesPredict": "仔细看下面的代码。"
@@ -3271,74 +3195,6 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "新模块！"
-        },
-        "iceage_hello1": {
-        },
-        "iceage_hello2": {
-        },
-        "iceage_move_events": {
-        },
-        "iceage_move_events_dani": {
-        },
-        "iceage_move_to_actor": {
-        },
-        "iceage_repeat": {
-        },
-        "iceage_sound_and_points": {
-        },
-        "iceage_sound_and_points_dani": {
-        },
-        "iceage_warn_ice_age": {
-        },
-        "iceage_warn_ice_age_dani": {
-        },
-        "ml-customize apps-choice3": {
-        },
-        "ml-customize apps-choice3_2022": {
-        },
-        "ml-customize apps-choice5": {
-        },
-        "ml-customize apps-choice5_2022": {
-        },
-        "ml-intro app lab-book recommender 5C-2021": {
-        },
-        "ml-intro app lab-book recommender 5C_2022": {
-        },
-        "ml-intro app lab-book recommender 5E-2021": {
-        },
-        "ml-intro app lab-book recommender 5E_2022": {
-        },
-        "ml-models in applab-screens-1-2021": {
-        },
-        "ml-models in applab-screens-1_2022": {
-        },
-        "ml-models in applab-screens-3-2021": {
-        },
-        "ml-models in applab-screens-3_2022": {
-        },
-        "ml-use model card-choice3": {
-        },
-        "ml-use model card-choice3_2022": {
-        },
-        "ml-use model card-choice5": {
-        },
-        "ml-use model card-choice5_2022": {
-        },
-        "ml-use model card-example3C-2021": {
-        },
-        "ml-use model card-example3C_2022": {
-        },
-        "ml-use model card-example3D-2021": {
-        },
-        "ml-use model card-example3D_2022": {
-        },
-        "ml-use model card-example3_EditB-2021": {
-        },
-        "ml-use model card-example3_EditB_2022": {
-        },
-        "ml-use model card-example3_EditC-2021": {
-        },
-        "ml-use model card-example3_EditC_2022": {
         },
         "outbreak2": {
           "minitoolbox": "点击这里扩展块。",
