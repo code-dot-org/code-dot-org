@@ -1,6 +1,10 @@
 import _ from 'lodash';
 import {SVG_NS} from '@cdo/apps/constants';
 import Button from '@cdo/apps/templates/Button';
+import {
+  changeShadowedImage,
+  resetShadowedImageToLongString,
+} from './blockHelper';
 
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 
@@ -122,7 +126,6 @@ export const blocks = {
 
   // Set block to shadow for preview field if needed
   setUpBlockShadowing() {
-    console.log('in google blockly set block to shadow');
     const pointers = {
       gamelab_clickedSpritePointer: {
         parent: 'gamelab_spriteClicked',
@@ -144,71 +147,40 @@ export const blocks = {
 
     // when the parent changes, trigger a change to this block's field
     if (Object.keys(pointers).includes(this.type)) {
-      console.log(`${this.type} is in pointerPairs`);
+      const pointerData = pointers[this.type];
       this.onchange = function () {
         const rootBlock = this.getRootBlock();
-        const pointerData = pointers[this.type];
+        let parent = undefined;
         if (rootBlock.type === pointerData.parent) {
-          const imageUrl = rootBlock
-            .getChildren(true)[0]
-            .inputList[0].fieldRow[
-              pointerData.imageIndex
-            ].imageElement_.getAttribute('xlink:href');
-          console.log(`imageUrl is ${imageUrl}`);
-          const textInput = this.inputList[0].fieldRow[0];
-          const previewInput = this.inputList[0].fieldRow[1];
-          console.log(previewInput);
-          textInput.setValue(this.shortString);
-          previewInput.setValue(imageUrl);
-          previewInput.updateDimensions(this.thumbnailSize, this.thumbnailSize);
-          previewInput.getSize();
+          parent = rootBlock;
+        } else if (this.getRootBlock().type === this.type) {
+          const potentialParents = Blockly.getMainWorkspace()
+            .getTopBlocks()
+            .filter(block => block.type === pointers[this.type].parent);
+          console.log({potentialParents});
+          potentialParents.forEach(potentialParent => {
+            const inputs = potentialParent.inputList.filter(
+              input => input.name === 'flyout_input'
+            );
+            if (inputs.length > 0) {
+              if (
+                inputs[0]?.fieldRow[0]?.flyout_?.workspace_
+                  .getAllBlocks()
+                  .filter(block => block.id === this.id).length > 0
+              ) {
+                parent = potentialParent;
+              }
+            }
+          });
+        }
+        if (parent) {
+          changeShadowedImage(parent, this, pointerData.imageIndex);
+        } else {
+          // the block is probably disconnected from the root or toolbox. Reset to
+          // default text.
+          resetShadowedImageToLongString(this);
         }
       };
-      // const rootBlock = this.getRootBlock();
-      // if (rootBlock.type === pointerPairs[this.type]) {
-      //   console.log(
-      //     `found matching root & child, root is ${rootBlock.type}, this.type is ${this.type}`
-      //   );
-      // }
     }
-
-    // switch (this.type) {
-    //   case 'gamelab_clickedSpritePointer':
-
-    //     this.setBlockToShadow(
-    //       root =>
-    //         root.type === 'gamelab_spriteClicked' &&
-    //         root.getConnections_()[1] &&
-    //         root.getConnections_()[1].targetBlock()
-    //     );
-    //     break;
-    //   case 'gamelab_newSpritePointer':
-    //     this.setBlockToShadow(
-    //       root =>
-    //         root.type === 'gamelab_whenSpriteCreated' &&
-    //         root.getConnections_()[1] &&
-    //         root.getConnections_()[1].targetBlock()
-    //     );
-    //     break;
-    //   case 'gamelab_subjectSpritePointer':
-    //     this.setBlockToShadow(
-    //       root =>
-    //         root.type === 'gamelab_checkTouching' &&
-    //         root.getConnections_()[1] &&
-    //         root.getConnections_()[1].targetBlock()
-    //     );
-    //     break;
-    //   case 'gamelab_objectSpritePointer':
-    //     this.setBlockToShadow(
-    //       root =>
-    //         root.type === 'gamelab_checkTouching' &&
-    //         root.getConnections_()[2] &&
-    //         root.getConnections_()[2].targetBlock()
-    //     );
-    //     break;
-    //   default:
-    //     // Not a pointer block, so no block to shadow
-    //     break;
-    // }
   },
 };
