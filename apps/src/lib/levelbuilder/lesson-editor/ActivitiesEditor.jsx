@@ -24,6 +24,7 @@ class ActivitiesEditor extends Component {
     //redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
     addActivity: PropTypes.func.isRequired,
+    // unitTitle: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -157,14 +158,6 @@ class ActivitiesEditor extends Component {
               Activity
             </button>
           )}
-          <a
-            className="btn add-rubric"
-            style={styles.addRubric}
-            href="https://levelbuilder-studio.code.org/rubrics/new"
-          >
-            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Rubric
-          </a>
         </div>
         <input
           type="hidden"
@@ -187,14 +180,6 @@ const styles = {
     border: `1px solid ${color.cyan}`,
     boxShadow: 'none',
   },
-  addRubric: {
-    fontSize: 14,
-    color: 'white',
-    background: color.cyan,
-    border: `1px solid ${color.cyan}`,
-    boxShadow: 'none',
-    margin: `5px 5px 0px`,
-  },
 };
 
 export const UnconnectedActivitiesEditor = ActivitiesEditor;
@@ -202,6 +187,7 @@ export const UnconnectedActivitiesEditor = ActivitiesEditor;
 export default connect(
   state => ({
     activities: state.activities,
+    // unitTitle: state.progress.unitTitle,
   }),
   {
     addActivity,
