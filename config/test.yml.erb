@@ -51,6 +51,3 @@ disable_s3_image_uploads: true
 
 # provide a unique path for firebase channels data for ci, to avoid conflicts in channel ids.
 firebase_channel_id_suffix: '<%=ci ? "-#{circle_run_identifier}" : ''%>'
-
-jwks_data: <%=File.read("#{File.expand_path(File.dirname(__FILE__))}../dashboard/public/oauth/jwks.json")%>
-jwk_private_key_data: !Secret
