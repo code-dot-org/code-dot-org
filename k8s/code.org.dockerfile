@@ -103,7 +103,7 @@ RUN \
   true
 
 RUN \
-  --mount=type=cache,sharing=locked,uid=1000,gid=1000,target=${SRC}/vendor/cache \
+#   --mount=type=cache,sharing=locked,uid=1000,gid=1000,target=${SRC}/vendor/cache \
   eval "$(rbenv init -)" && \
   time bundle install && \
   true
@@ -188,6 +188,10 @@ COPY --from=code.org-node_modules --link ${SRC}/apps/node_modules ./apps/node_mo
 COPY --from=code.org-rbenv --link ${HOME}/.rbenv ${HOME}/.rbenv
 
 COPY --chown=${USERNAME} --link ./ ./
+
+# These are only required for installing Apple Silicon hack workarounds from code.org-rbenv
+COPY --from=code.org-rbenv ${SRC}/.bundle ${SRC}/.bundle
+COPY --from=code.org-rbenv ${SRC}/Gemfile ${SRC}/Gemfile
 
 SHELL [ "zsh", "-l", "-c" ]
 
