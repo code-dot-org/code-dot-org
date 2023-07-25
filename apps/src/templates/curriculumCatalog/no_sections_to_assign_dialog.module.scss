@@ -1,7 +1,8 @@
 @import "color.scss";
+@import "breakpoints";
 
 .dialogContainer {
-  height: 18rem;
+  min-height: 18rem;
   display: flex;
   flex-flow: column;
 
@@ -21,7 +22,18 @@
 
 .buttonContainer {
   display: flex;
-  justify-content: space-between;
+  flex-flow: wrap;
+  gap: 1em;
+
+  // screen sizes larger than mobile
+  @media screen and (min-width: $width-sm) {
+    justify-content: space-between;
+  }
+
+  // mobile screen sizes
+  @media screen and (max-width: $width-sm) {
+    justify-content: center;
+  }
 
   button,
   a,
