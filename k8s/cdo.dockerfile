@@ -64,6 +64,32 @@ ENV HOME=/home/${USERNAME}
 WORKDIR ${SRC}
 
 ################################################################################
+FROM cdo-base as cdo-rbenv
+################################################################################
+
+COPY --chown=${USERNAME} \
+  .ruby-version \
+  ./
+
+RUN \
+  mkdir -p "$(rbenv root)"/plugins && \
+  git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build && \
+  rbenv install && \
+  true
+
+COPY --chown=${USERNAME} \
+  Gemfile \
+  Gemfile.lock \
+  ./
+
+RUN \
+  eval "$(rbenv init -)" && \
+  gem install bundler -v 2.3.22 && \
+  rbenv rehash && \
+  true
+
+# TODO: move to the top with other apt-get install commands
+################################################################################
 FROM cdo-base as cdo-user-utils
 ################################################################################
 
@@ -103,30 +129,6 @@ RUN \
   true
 
 WORKDIR ${SRC}
-
-################################################################################
-FROM cdo-base as cdo-rbenv
-################################################################################
-
-COPY --chown=${USERNAME} \
-  .ruby-version \
-  ./
-
-RUN \
-  mkdir -p "$(rbenv root)"/plugins && \
-  git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build && \
-  rbenv install && \
-  true
-
-COPY --chown=${USERNAME} \
-  Gemfile \
-  Gemfile.lock \
-  ./
-
-RUN \
-  eval "$(rbenv init -)" && \
-  gem install bundler -v 2.3.22 && \
-  bundle install
 
 ################################################################################
 FROM cdo-user-utils as cdo-node_modules
