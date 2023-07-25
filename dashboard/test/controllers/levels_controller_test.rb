@@ -8,7 +8,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    Level.any_instance.stubs(:write_to_file?).returns(false) # don't write to level files
+    Services::LevelFiles.stubs(:write_to_file?).returns(false) # don't write to level files
 
     @level = create(:level)
     @partner_level = create :level, editor_experiment: 'platformization-partners'
@@ -494,7 +494,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should create and destroy custom level with level file" do
     # Enable writing custom level to file for this specific test only
-    Level.any_instance.stubs(:write_to_file?).returns(true)
+    Policies::LevelFiles.stubs(:write_to_file?).returns(true)
 
     level_name = 'TestCustomLevel'
     begin

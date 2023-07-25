@@ -22,7 +22,7 @@ module Services
       return unless Policies::LevelFiles.write_to_file?(level)
 
       # TODO: not sure why this isn't using level_file_path
-      file_path = Dir.glob(Rails.root.join("config/scripts/**/#{name}.level")).first
+      file_path = Dir.glob(Rails.root.join("config/scripts/**/#{level.name}.level")).first
       File.delete(file_path) if file_path && File.exist?(file_path)
     end
 
