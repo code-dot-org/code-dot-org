@@ -29,7 +29,9 @@ import {
   setInstructionsPosition,
   InstructionsPositions,
   addPlaybackEvents,
+  addOrderedFunctions,
   clearPlaybackEvents,
+  clearOrderedFunctions,
   getCurrentlyPlayingBlockIds,
   setSoundLoadingProgress,
   setUndoStatus,
@@ -106,7 +108,9 @@ class UnconnectedMusicView extends React.Component {
     setInstructionsPosition: PropTypes.func,
     navigateToLevelId: PropTypes.func,
     clearPlaybackEvents: PropTypes.func,
+    clearOrderedFunctions: PropTypes.func,
     addPlaybackEvents: PropTypes.func,
+    addOrderedFunctions: PropTypes.func,
     currentlyPlayingBlockIds: PropTypes.array,
     isHeadersShowing: PropTypes.bool,
     sendSuccessReport: PropTypes.func,
@@ -466,6 +470,9 @@ class UnconnectedMusicView extends React.Component {
       events: playbackEvents,
       lastMeasure: this.sequencer.getLastMeasure(),
     });
+    this.props.addOrderedFunctions({
+      orderedFunctions: this.sequencer.getOrderedFunctions(),
+    });
     this.player.playEvents(playbackEvents);
 
     this.playingTriggers.push({
@@ -484,12 +491,16 @@ class UnconnectedMusicView extends React.Component {
   executeCompiledSong = () => {
     // Clear the events list because it will be populated next.
     this.props.clearPlaybackEvents();
+    this.props.clearOrderedFunctions();
 
     this.sequencer.clear();
     this.musicBlocklyWorkspace.executeCompiledSong(this.playingTriggers);
     this.props.addPlaybackEvents({
       events: this.sequencer.getPlaybackEvents(),
       lastMeasure: this.sequencer.getLastMeasure(),
+    });
+    this.props.addOrderedFunctions({
+      orderedFunctions: this.sequencer.getOrderedFunctions(),
     });
   };
 
@@ -769,8 +780,11 @@ const MusicView = connect(
       dispatch(setInstructionsPosition(instructionsPosition)),
     navigateToLevelId: levelId => dispatch(navigateToLevelId(levelId)),
     clearPlaybackEvents: () => dispatch(clearPlaybackEvents()),
+    clearOrderedFunctions: () => dispatch(clearOrderedFunctions()),
     addPlaybackEvents: playbackEvents =>
       dispatch(addPlaybackEvents(playbackEvents)),
+    addOrderedFunctions: orderedFunctions =>
+      dispatch(addOrderedFunctions(orderedFunctions)),
     sendSuccessReport: appType => dispatch(sendSuccessReport(appType)),
     setProjectUpdatedSaving: () => dispatch(setProjectUpdatedSaving()),
     setProjectUpdatedAt: updatedAt => dispatch(setProjectUpdatedAt(updatedAt)),
