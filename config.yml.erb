@@ -592,3 +592,6 @@ cdo_amplitude_api_key:
 
 # API Key for doublethedonation.com
 ddconf_api_key: !Secret
+
+jwks_data: <%=File.read("#{File.expand_path(File.dirname(__FILE__))}/dashboard/public/oauth/jwks.json")%>
+jwk_private_key_data: !Secret

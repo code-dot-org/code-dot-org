@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+# This script is used to generate new JSON Web Keys (JWK) to be added to the
+# JSON Web Key Set (JWKS) exposed at /oauth/jwks. It generates both the public
+# key and the private key. The public key will be added to the JWKS in
+# dashboard/public/oauth/jwks.json. It will print the private key and
+# key id (kid) that is to be used for updating the secret at CDO.jwks_data.
+
+require 'jwt'
+require 'json'
+
+params = {use: 'sig', alg: 'RS256'}
+jwk = JWT::JWK.new(OpenSSL::PKey::RSA.new(2048), params, kid_generator: JWT::JWK::Thumbprint)
+jwks_hash = JWT::JWK::Set.new(jwk).export
+
+# generate string private key to save as secret
+private_key = jwk.signing_key.to_s
+
+# read current JWKS
+jwks_data = File.join(File.dirname(__FILE__), '../dashboard/public/oauth/jwks.json')
+jwks_json = File.read(jwks_data)
+current_jwks = JSON.parse(jwks_json).transform_keys(&:to_sym)
+
+# get new key
+new_jwk = jwks_hash[:keys][0]
+# push new key to current jwks keys array
+current_jwks[:keys] << new_jwk
+# update jwks.json
+File.write(jwks_data, current_jwks.to_json)
+
+private_key_obj = {
+  kid: jwk[:kid],
+  private_key: private_key,
+}
+
+print "Update secret CDO.jwk_private_key_data with the following value:\n\n"
+print private_key_obj.to_json
