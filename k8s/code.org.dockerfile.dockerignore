@@ -1,8 +1,21 @@
-**/.git
+
+##########################################################################
+# THESE LARGE STATIC FILES ARE INJECTED USING code.org-static.dockerfile #
+##########################################################################
+dashboard/app/assets
+dashboard/public
+apps/static
+shared
 
 apps/i18n
 i18n/locales
 dashboard/config/locales
+##########################################################################
+
+
+**/.git
+
+
 
 # Are these just seeds for the DB or are these potentially read directly?
 dashboard/tmp
@@ -15,10 +28,6 @@ pegasus/sites
 # ???
 pegasus/cache
 
-dashboard/app/assets
-dashboard/public
-apps/static
-shared
 
 ##### Files we don't mount into the Dockerfile at all, are these needed still? ####
 

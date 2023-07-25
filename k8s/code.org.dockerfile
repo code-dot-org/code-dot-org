@@ -1,5 +1,7 @@
 # syntax=docker/dockerfile:1
 
+ARG CODE_ORG_STATIC
+
 ################################################################################
 FROM ubuntu:22.04 as code.org-base
 ################################################################################
@@ -171,9 +173,13 @@ RUN \
   yarn install --frozen-lockfile --ignore-scripts && \
   true
 
+FROM $CODE_ORG_STATIC as code.org-static
+
 ################################################################################
 FROM code.org-user-utils
 ################################################################################
+
+COPY --from=code.org-static --link / ./
 
 # Copy in apps/node_modules (built in parallel)
 COPY --from=code.org-node_modules --link ${SRC}/apps/node_modules ./apps/node_modules
