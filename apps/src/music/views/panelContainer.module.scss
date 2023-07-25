@@ -9,7 +9,7 @@
   position: relative;
 
   .panelContainerHeader {
-    min-height: 28px;
+    min-height: 30px;
     background-color: $neutral_dark80;
     border-bottom: solid $default-spacing $dark_black;
     position: relative;
@@ -26,11 +26,11 @@
       }
 
       &Right {
-        right: 10px;
+        right: 4px;
       }
 
       &Left {
-        left: 10px;
+        left: 4px;
       }
     }
   }
