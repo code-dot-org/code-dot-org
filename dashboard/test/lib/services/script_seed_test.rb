@@ -68,7 +68,7 @@ module Services
       #   4 queries to set up course offering and course version
       #   34 queries - two for each model, + one extra query each for Lessons,
       #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
-      #     Resources, and Vocabulary.
+      #     Resources, Vocabulary, Rubric, LearningGoal, and LearningGoalEvidenceLevel.
       #     These 2-3 queries per model are to (1) delete old entries, (2) import
       #     new/updated entries, and then (3) fetch the result for use by the next
       #     layer down in the hierarchy.
