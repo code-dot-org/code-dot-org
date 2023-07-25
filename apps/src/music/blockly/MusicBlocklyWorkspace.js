@@ -35,16 +35,20 @@ export default class MusicBlocklyWorkspace {
    * @param {*} container HTML element to inject the workspace into
    * @param {*} onBlockSpaceChange callback fired when any block space change events occur
    * @param {*} isReadOnlyWorkspace is the workspace readonly
+   * @param {*} toolbox information about the toolbox
+   *
    */
-  init(container, onBlockSpaceChange, isReadOnlyWorkspace) {
+  init(container, onBlockSpaceChange, isReadOnlyWorkspace, toolbox) {
     if (this.workspace) {
       this.workspace.dispose();
     }
 
     this.container = container;
 
+    const toolboxBlocks = getToolbox(toolbox);
+
     this.workspace = Blockly.inject(container, {
-      toolbox: getToolbox(),
+      toolbox: toolboxBlocks,
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
       theme: CdoDarkTheme,
       renderer: experiments.isEnabled('zelos')
@@ -86,6 +90,10 @@ export default class MusicBlocklyWorkspace {
    * @param {*} scope Global scope to provide the execution runtime
    */
   compileSong(scope) {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return;
+    }
     Blockly.getGenerator().init(this.workspace);
 
     this.compiledEvents = {};
@@ -290,10 +298,18 @@ export default class MusicBlocklyWorkspace {
   }
 
   getCode() {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return {};
+    }
     return Blockly.serialization.workspaces.save(this.workspace);
   }
 
   getAllBlocks() {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return [];
+    }
     return this.workspace.getAllBlocks();
   }
 
@@ -328,6 +344,10 @@ export default class MusicBlocklyWorkspace {
 
   // Load the workspace with the given code.
   loadCode(code) {
+    if (!this.workspace) {
+      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      return;
+    }
     Blockly.serialization.workspaces.load(code, this.workspace);
   }
 
@@ -337,13 +357,5 @@ export default class MusicBlocklyWorkspace {
     } catch (e) {
       Lab2MetricsReporter.logError('Error running user generated code', e);
     }
-  }
-
-  updateToolbox(allowList) {
-    if (!this.workspace || this.workspace.options.readOnly) {
-      return;
-    }
-    const toolbox = getToolbox(allowList);
-    this.workspace.updateToolbox(toolbox);
   }
 }

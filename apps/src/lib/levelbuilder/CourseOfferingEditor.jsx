@@ -148,6 +148,22 @@ export default function CourseOfferingEditor(props) {
         </HelpTip>
       </label>
       <label>
+        Description
+        <HelpTip>
+          <p>
+            Write a short description (1-2 sentences) to explain the course
+            offering.
+          </p>
+        </HelpTip>
+        <br />
+        <textarea
+          type="text"
+          value={courseOffering.description}
+          style={(styles.input, styles.descriptionInput)}
+          onChange={e => updateCourseOffering('description', e.target.value)}
+        />
+      </label>
+      <label>
         Featured In Category
         <HelpTip>
           <p>
@@ -328,7 +344,30 @@ export default function CourseOfferingEditor(props) {
           </select>
         </label>
       ))}
-
+      <h3>Professional Learning</h3>
+      Professional Learning Program
+      <HelpTip>
+        <p>
+          Select a workshop where one can learn more about the professional
+          learning program
+        </p>
+      </HelpTip>
+      <select
+        value={courseOffering.professional_learning_program}
+        style={styles.dropdown}
+        onChange={e =>
+          updateCourseOffering('professional_learning_program', e.target.value)
+        }
+      >
+        <option value="">{translatedNoneOption}</option>
+        {Object.entries(props.professionalLearningProgramPaths).map(
+          ([key, path]) => (
+            <option key={key} value={path}>
+              {key}
+            </option>
+          )
+        )}
+      </select>
       <SaveBar
         handleSave={handleSave}
         error={error}
@@ -355,12 +394,27 @@ CourseOfferingEditor.propTypes = {
     cs_topic: PropTypes.string,
     school_subject: PropTypes.string,
     device_compatibility: PropTypes.string,
+    description: PropTypes.string,
+    professional_learning_program: PropTypes.string,
   }),
+  selfPacedPLCourseOfferings: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      key: PropTypes.string,
+      display_name: PropTypes.string,
+      course_version_path: PropTypes.string,
+    })
+  ),
+  professionalLearningProgramPaths: PropTypes.objectOf(PropTypes.string),
 };
 
 const styles = {
   checkbox: {
     margin: '0 0 0 7px',
+  },
+  descriptionInput: {
+    width: '75%',
+    height: '75px',
   },
   input: {
     width: '100%',
