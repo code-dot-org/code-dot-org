@@ -5,7 +5,10 @@ const unknownBlockState = {type: 'unknown', enabled: false};
 
 // Sorting function, used by load()
 function sortBlocksByType(blockStates) {
-  return blockStates.sort((a, b) => {
+  // Create a copy of the blockStates array in case it's read-only
+  const copiedBlockStates = [...blockStates];
+
+  return copiedBlockStates.sort((a, b) => {
     if (procedureDefinitionTypes.includes(a.type)) {
       return -1; // a comes before b
     } else if (procedureDefinitionTypes.includes(b.type)) {
