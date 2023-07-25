@@ -15,4 +15,5 @@
 #  index_learning_goal_evidence_levels_on_lg_id_and_understanding  (learning_goal_id,understanding) UNIQUE
 #
 class LearningGoalEvidenceLevel < ApplicationRecord
+  belongs_to :learning_goal
 end
