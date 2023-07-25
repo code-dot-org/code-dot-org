@@ -5,8 +5,8 @@ FROM --platform=linux/amd64 ubuntu:22.04 as cdo-base
 ENV \
   USERNAME=cdo \
   AWS_PROFILE=cdo \
-  NODE_VERSION=16.19.0 \
-  YARN_VERSION=1.22.5 \
+  NODE_VERSION=18.16.0 \
+  YARN_VERSION=1.22.19 \
   SRC="/code-dot-org"
 
 RUN \
