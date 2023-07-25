@@ -176,10 +176,10 @@ FROM code.org-user-utils
 ################################################################################
 
 # Copy in apps/node_modules (built in parallel)
-COPY --from=cdo-node_modules --link ${SRC}/apps/node_modules ./apps/node_modules
+COPY --from=code.org-node_modules --link ${SRC}/apps/node_modules ./apps/node_modules
 
 # Copy in ~/.rbenv (built in parallel)
-COPY --from=cdo-rbenv --link ${HOME}/.rbenv ${HOME}/.rbenv
+COPY --from=code.org-rbenv --link ${HOME}/.rbenv ${HOME}/.rbenv
 
 COPY --chown=${USERNAME} --link ./ ./
 
