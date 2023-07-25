@@ -41,6 +41,7 @@ Dashboard::Application.routes.draw do
     get "/musiclab", to: redirect("/projectbeats", status: 302)
     get "/projectbeats", to: "musiclab#index"
     get "/musiclab/menu", to: "musiclab#menu"
+    get "/musiclab/gallery", to: "musiclab#gallery"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
     resources :activity_hints, only: [:update]
