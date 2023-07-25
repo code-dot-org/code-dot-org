@@ -3,7 +3,7 @@ FROM --platform=linux/amd64 ubuntu:22.04 as cdo-base
 ################################################################################
 
 ENV \
-  USERNAME=cdo \
+  USERNAME=code.org \
   AWS_PROFILE=cdo \
   NODE_VERSION=18.16.0 \
   YARN_VERSION=1.22.19 \
@@ -48,9 +48,10 @@ RUN \
     # surpress noisy dpkg install/setup lines (errors & warnings still show)
     > /dev/null && \
   # 
-  # Setup cdo user account
+  # Setup 'code.org' user and group
   echo "${USERNAME} ALL=NOPASSWD: ALL" >> /etc/sudoers && \
-  useradd --user-group --system --create-home --no-log-init -s /bin/zsh ${USERNAME} && \
+  groupadd -g 1000 ${USERNAME} && \
+  useradd --system --create-home --no-log-init -s /bin/zsh -u 1000 -g 1000 ${USERNAME} && \
   chown -R ${USERNAME} /usr/local && \
   #
   # Create ${SRC} directory
