@@ -118,6 +118,7 @@ class UnconnectedMusicView extends React.Component {
     levelData: PropTypes.object,
     labReadyForReload: PropTypes.bool,
     setLabReadyForReload: PropTypes.func,
+    startingPlayheadPosition: PropTypes.number,
     navigateToNextLevel: PropTypes.func,
     isReadOnlyWorkspace: PropTypes.bool,
     updateLoadProgress: PropTypes.func,
@@ -243,10 +244,10 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.init(
       document.getElementById('blockly-div'),
       this.onBlockSpaceChange,
-      this.props.isReadOnlyWorkspace
+      this.props.isReadOnlyWorkspace,
+      levelData?.toolbox
     );
 
-    this.musicBlocklyWorkspace.updateToolbox(levelData?.toolbox);
     this.library.setAllowedSounds(levelData?.sounds);
     this.props.setShowInstructions(!!levelData?.text);
 
@@ -517,10 +518,13 @@ class UnconnectedMusicView extends React.Component {
     this.executeCompiledSong();
     this.saveCode(true);
 
-    this.player.playSong(this.sequencer.getPlaybackEvents());
+    this.player.playSong(
+      this.sequencer.getPlaybackEvents(),
+      this.props.startingPlayheadPosition
+    );
 
     this.props.setIsPlaying(true);
-    this.props.setCurrentPlayheadPosition(1);
+    this.props.setCurrentPlayheadPosition(this.props.startingPlayheadPosition);
     this.props.clearSelectedBlockId();
   };
 
@@ -535,7 +539,7 @@ class UnconnectedMusicView extends React.Component {
     this.executeCompiledSong();
 
     this.props.setIsPlaying(false);
-    this.props.setCurrentPlayheadPosition(0);
+    this.props.setCurrentPlayheadPosition(this.props.startingPlayheadPosition);
   };
 
   onFeedbackClicked = () => {
@@ -607,6 +611,9 @@ class UnconnectedMusicView extends React.Component {
               hasTrigger={this.musicBlocklyWorkspace.hasTrigger.bind(
                 this.musicBlocklyWorkspace
               )}
+              enableSkipControls={
+                AppConfig.getValue('skip-controls-enabled') === 'true'
+              }
             />
           </PanelContainer>
         </div>
@@ -632,10 +639,12 @@ class UnconnectedMusicView extends React.Component {
 
     return (
       <AnalyticsContext.Provider value={this.analyticsReporter}>
-        <KeyHandler
-          togglePlaying={this.togglePlaying}
-          playTrigger={this.playTrigger}
-        />
+        {AppConfig.getValue('keyboard-shortcuts-enabled') === 'true' && (
+          <KeyHandler
+            togglePlaying={this.togglePlaying}
+            playTrigger={this.playTrigger}
+          />
+        )}
         <UpdateTimer
           getCurrentPlayheadPosition={this.getCurrentPlayheadPosition}
           updateHighlightedBlocks={this.updateHighlightedBlocks}
@@ -723,6 +732,7 @@ const MusicView = connect(
     labReadyForReload: state.lab.labReadyForReload,
     isReadOnlyWorkspace: isReadOnlyWorkspace(state),
     appName: state.lab.appName,
+    startingPlayheadPosition: state.music.startingPlayheadPosition,
   }),
   dispatch => ({
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
