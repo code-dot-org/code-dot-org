@@ -15,7 +15,6 @@ module OpenaiChatHelper
   # @param [Integer] limit - Number of requests allowed over period.
   # @param [Integer] period - Period of time in seconds.
   def self.throttled_request_chat_completion(messages, id, limit, period)
-    puts "Cdo::Throttle.throttle(OPENAI_CHAT_PREFIX + id.to_s, limit, period): #{Cdo::Throttle.throttle(OPENAI_CHAT_PREFIX + id.to_s, limit, period)}"
     return if Cdo::Throttle.throttle(OPENAI_CHAT_PREFIX + id.to_s, limit, period)
 
     # Set up the API endpoint URL and request headers
