@@ -16,19 +16,9 @@
         "Course 4 Play Lab Params 10": {
           "46e888cc716ac8ec6fad01e85eb7c37c": "المستوى: "
         },
-        "Course 4 Play Lab Vars 1": {
-        },
-        "Course 4 Play Lab Vars 2": {
-        },
-        "Course 4 Play Lab Vars 6": {
-        },
-        "Course 4 Play Lab Vars 7": {
-        },
         "Course 4 Playlab For Loop Freeplay": {
           "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
           "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
-        },
-        "Course 4 Playlab For Loops 6b": {
         },
         "Course E: Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
@@ -68,10 +58,6 @@
           "7fec9998c3e5a11f435dc6f2f8e399db": "الخيار ٢",
           "8e7d34ed67fe4ec0910cefee2f5059cd": "راقص السماء",
           "c3787b1ed128fdeec3ad638c8ba547d3": "الخيار ٣"
-        },
-        "CourseF_outbreak8": {
-        },
-        "CourseF_outbreak8_-2022-2": {
         },
         "Find the Wizard": {
           "0464d226582401370945003bc8850990": "موهاهاها!",
@@ -129,10 +115,6 @@
         "OPD-K5-projects-7": {
           "3e11a2dc6edb909c47778bed75a81769": "النص هنا",
           "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا."
-        },
-        "Virtual Pet 1_2019": {
-        },
-        "Virtual Pet 1_2020": {
         },
         "course3_playLab_challenge1": {
           "3e11a2dc6edb909c47778bed75a81769": "النص هنا",
@@ -616,8 +598,6 @@
           "e522ee28f39133b45497637539ff429b": "أدخل رقماً:",
           "f6175c6f0b0bcfff0256286315f0eb7b": "ألعاب الحفلة"
         },
-        "courseF_extras_sim": {
-        },
         "courseF_label_predict": {
           "937dc37c06cc5d89a7096eb048b73590": "يأتي فوراً",
           "f15045cb7e57652546d4a0b2c695356f": "ما الذي سوف تأكله؟"
@@ -674,8 +654,6 @@
         "courseF_playlab_variables_challenge1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
           "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
-        },
-        "courseF_playlab_variables_challenge2": {
         },
         "courseF_project_1": {
           "498cd895eb5a102c5aeb977e2b928dee": "شكرا لك!",
@@ -795,8 +773,6 @@
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "ما اسمك؟"
-        },
-        "courseF_variables_predict_-2022-2": {
         },
         "coursee_helloworld_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "مرحبا بالعالم!"
