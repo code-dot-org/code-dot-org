@@ -4,7 +4,8 @@
       "hoc2022-soon-hoc",
       "hoc2022-actual-hoc",
       "pl-launch-superhero",
-      "curriculum-launch-2023"
+      "curriculum-launch-2023",
+      "ai-pl-launch-2023"
     ]
   },
 
@@ -114,6 +115,21 @@
           "studio_button_link": "/catalog",
           "button_text": "call_to_action_explore_curriculum_catalog",
           "img_src": "/images/banners/banner-curriculum-catalog-illustration-black.png"
+        }
+      ]
+    },
+    "ai-pl-launch-2023": {
+      "dcdo": "ai-pl-launch-banners",
+      "class": "ai-pl-banner-hero homepage",
+      "desktopImage": "/images/banners/banner-bg-ai-pl-purple.png",
+      "actions": [
+        {
+          "type": "flex-container",
+          "text_h1": "ai_pl_101_hero_heading",
+          "text_desc": "ai_pl_101_hero_desc",
+          "button_link": "/ai/pl/101",
+          "button_text": "front_join_us_learn_more",
+          "img_src": "/images/ai/pl/101/hero--2-m.png"
         }
       ]
     }
