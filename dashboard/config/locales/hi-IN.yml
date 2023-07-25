@@ -1,50 +1,14 @@
 ---
 hi:
-  errors:
-    messages:
-      not_saved: 'कृपया निम्न गलतिया सुधारें:'
-      too_young: यह सामग्री आयु प्रतिबंधित है और युवा छात्रों के लिए उपलब्ध नहीं है
-      teacher_must_accept_terms: इस सामग्री के स्थान पर आयु प्रतिबंध है और युवा छात्रों
-        के लिए उपलब्ध नहीं है । अपने शिक्षक से पूछें कि आप इस सामग्री तक पहुंच प्रदान
-        करने के लिए सेवा की शर्तों को स्वीकार करते हैं । अपने शिक्षक कोड स्टूडियो
-        में प्रवेश और कोड स्टूडियो मुखपृष्ठ के शीर्ष के पास "समीक्षा अद्यतन शर्तें"
-        बटन पर क्लिक करके ऐसा कर सकते हैं ।
-      pair_programmer: 'आप वर्तमान में एक छात्र है जो इस सामग्री के लिए उपयोग नहीं
-        है के साथ जोड़ी प्रोग्रामिंग कर रहे हैं । इस सामग्री तक पहुंचने के लिए, युग्मन
-        प्रोग्रामिंग रोकें और पुन: प्रयास करें ।'
   activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            reset_password_token:
-              invalid: अमान्य है। ध्यान दें कि आपके पासवर्ड को रीसेट करने के लिए प्रत्येक
-                लिंक का उपयोग केवल एक बार किया जा सकता है, और केवल सबसे हाल ही में
-                भेजा गया लिंक काम करेगा।
-      messages:
-        blank: की आवश्यकता है
-        blank_plural: की आवश्यकता है
-        invalid: अमान्य है।
-        invalid_plural: अमान्य हैं
     attributes:
       user:
-        name: प्रदर्शन नाम
-        name_example: प्रदर्शन नाम (उदा कूल सांकेतिक या जेन एस.)
-        email: ईमेल
-        parent_email: अभिभावक ईमेल/
-        personal_email: व्यक्तिगत ईमेल पता <a href="%{url}">(अगर आपके पास ईमेल एड्रेस
-          नहीं है तो यहां क्लिक करें) </a>
-        personal_email_markdown: व्यक्तिगत ईमेल पता [(अगर आपके पास ईमेल एड्रेस नहीं
-          है तो यहां क्लिक करें)](%{url})
-        username: उपयोगकर्ता नाम
-        password: पासवर्ड
-        verified_teacher: सत्यापित शिक्षक
-        password_confirmation: पासवर्ड पुष्टिकरण
-        current_password: वर्तमान पासवर्ड
-        locale: भाषा
         age: उम्र
-        gender: लिंग
+        current_password: वर्तमान पासवर्ड
         edit_header: खाता विवरण संपादित करें
+        email: ईमेल
+        error:
+          future: भविष्य में नहीं किया जा सकता
         finish_sign_up_header: अपना खाता बनाना समाप्त करें
         finish_sign_up_subheader: "< div वर्ग के लिए एक Code.org खाता बनाना समाप्त
           करने के लिए निंन जानकारी भरें <strong>%{email}</strong>"
@@ -54,97 +18,60 @@ hi:
           समाप्त करने के लिए निम्न जानकारी भरें <strong>%{provider}</strong>के लिये<strong>%{email}</strong>"
         finish_sign_up_subheader_provider_markdown: "&lt; div वर्ग के लिए एक Code.org
           खाता बनाना समाप्त करने के लिए निम्न जानकारी भरें **%{provider}**के लिये**%{email}**"
+        gender: लिंग
+        locale: भाषा
+        name: प्रदर्शन नाम
+        name_example: प्रदर्शन नाम (उदा कूल सांकेतिक या जेन एस.)
+        parent_email: अभिभावक ईमेल/
+        password: पासवर्ड
+        password_confirmation: पासवर्ड पुष्टिकरण
+        personal_email: व्यक्तिगत ईमेल पता <a href="%{url}">(अगर आपके पास ईमेल एड्रेस
+          नहीं है तो यहां क्लिक करें) </a>
+        personal_email_markdown: व्यक्तिगत ईमेल पता [(अगर आपके पास ईमेल एड्रेस नहीं
+          है तो यहां क्लिक करें)](%{url})
         reset_password_token: आपके द्वारा अनुसरण किया गया रीसेट पासवर्ड लिंक
-        error:
-          future: भविष्य में नहीं किया जा सकता
         us_state: राज्य
-  beta: बीटा
-  hello: हैलो वर्ल्ड
-  welcome_back: वापस, %{name} में आपका स्वागत है
-  your_professional_learning_plan: आपका व्यावसायिक शिक्षण योजना
-  see_your_learning_plan: आपके सीखने की योजना देखें
-  submit: सबमिट करें
-  unsubmit: अनसब्मिट
-  previous_page: पिछला पृष्ठ
-  next_page: अगले पृष्ठ
-  next_level: अगला स्तर
-  next_resource: अगले संसाधन
-  done_with_module: इस लर्निंग मॉड्यूल के साथ हो गया
-  cancel: रद्द करें
-  okay: ठीक है
-  or: 'अथवा '
-  heading_x_of_y: "%{heading}(पेज %{x} के लिए %{y})"
-  join_section:
-    code:
-      title: Code.org पर एक अनुभाग में शामिल हों
-      placeholder: अनुभाग कोड (ABCDEF)
-      instructions: 'कृपया 6 अक्षरों का कोड दर्ज करें जिसे आपके शिक्षक ने आपके साथ
-        साझा किया था (उदाहरण: "ABCDEF") उनके अनुभाग में शामिल होने के लिए।'
-      instructions_short: अपने 6 पत्र अनुभाग कोड दर्ज करें
-      submit: सम्मिलित हों
+        username: उपयोगकर्ता नाम
+        verified_teacher: सत्यापित शिक्षक
+    errors:
+      messages:
+        blank: की आवश्यकता है
+        blank_plural: की आवश्यकता है
+        invalid: अमान्य है।
+        invalid_plural: अमान्य हैं
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: अमान्य है। ध्यान दें कि आपके पासवर्ड को रीसेट करने के लिए प्रत्येक
+                लिंक का उपयोग केवल एक बार किया जा सकता है, और केवल सबसे हाल ही में
+                भेजा गया लिंक काम करेगा।
   add_hint_form:
     placeholder: कृपया अपने सुझाव यहाँ दर्ज करें
     submit: जोड़ने के संकेत
-  appname: कोड.ऑर्ग
-  stage: मंच
-  stage_number: मंच %{number}
-  puzzle: पहेली
-  trophies: ट्राफियां
-  courses: पाठ्यक्रम
-  courses_page:
-    title_student: कंप्यूटर विज्ञान सीखो
-    title_teacher: कंप्यूटर साइंस
-  unplugged_activity: अनप्लग्ड एक्टिविटी
-  of: की
-  more: अधिक
-  less: कम
-  try_hoc: 'ऑवर ऑफ़ कोड का प्रयास करे, यहाँ क्लिक करें >> '
-  try_k8intro: हमारा K-8 कंप्यूटर विज्ञान का परिचय पाठ्यक्रम (१५-२५ घंटे) का प्रयास
-    करें
-  k8intro: K-8 कंप्यूटर विज्ञान का परिचय पाठ्यक्रम (१५-२५ घंटे)
+  age_interstitial:
+    age: आपकी आयु
+    disclaimer: हमेशा की तरह, code.org इस जानकारी को कभी भी किसी तीसरे पक्षों को किराए
+      पर नहीं देगा, बेचेगा नहीं या साझा नहीं करेगा।
+    header: खाता सूचना अद्यतन
+    sign_out_markdown: यदि आप अपनी आयु नहीं देना चाहते हैं तो आप [साइन आउट](%{url})
+      कर सकते हैं।
+    warning: हम आपको और भी मजबूत गोपनीयता सुरक्षा देने के लिए अपने अनुभव को अपडेट
+      करने की प्रक्रिया में हैं। ऐसा करने के लिए, हमें मौजूदा उपयोगकर्ताओं के द्वारा
+      यहां अपनी आयु दर्ज करने की आवश्यकता है।
   already_started: 'पहले शुरू किया? पुनः आरम्भ करें >> '
-  demos: 'एडमिन: सारे प्रदर्शन'
-  continue: जारी रखें
-  prize: पुरस्कार
-  more_info: अधिक जानकारी
+  appname: कोड.ऑर्ग
   auth:
-    continue_with: "%{provider} के साथ साइन इन करें"
-    sign_in_with: "%{provider} के साथ साइन इन करें"
-    signed_in: साइंगड इन!
-    signed_out_markdown: "### आपने [Code.org](%{url}) से साइन आउट कर लिया है।"
-    sign_out_of_markdown: "#### आपने साइन इन करने के लिए %{provider} का उपयोग किया।
-      [यहां क्लिक करें](%{url}) %{provider} से साइन आउट करने के लिए।"
-    already_signedup: पहले से पंजीकृत?
-    notyet_signedup: अभी तक शामिल नहीं हुए?
-    google_oauth2: गूगल खाता
-    twitter: ट्विटर
-    facebook: फेसबुक
-    windowslive: Microsoft खाता
-    microsoft_v2_auth: Microsoft खाता
-    clever: Clever
-    powerschool: Powerschool
-    forgot_password: अपना पासवर्ड भूल गए?
-    migration_success: सफलता! आप हमारे नए खाते के अनुभव के लिए अद्यतन किया है ।
-    demigration_success: नया खाता अनुभव अब आपके खाते पर अक्षम किया गया है ।
-    need_confirmation: पुष्टिकरण निर्देश प्राप्त नहीं हुआ?
-    need_unlock: खोलने के अनुदेश नही मिले?
-    not_linked: क्षमा करें, आपका Code.org खाता %{provider}से लिंक नहीं है । आपको नीचे
-      अपना पासवर्ड लिखकर साइन इन करना होगा.
-    use_clever: क्षमा करें, आपका Code.org खाता %{provider} से लिंक नहीं है । इसके
-      बजाय अपने चतुर पोर्टल के माध्यम से साइन इन करें ।
-    invalid_provider: क्षमा करें, %{provider} खातों को Code.org खातों से लिंक नहीं
-      किया जा सकता है।
-    migration_required: क्षमा करें, हम उन खातों को कनेक्ट या डिस्कनेक्ट नहीं कर सकते
-      हैं जो अभी भी पुराने खाते के अनुभव का उपयोग कर रहे हैं। कृपया नए खाता अनुभव
-      में अपडेट करें।
-    unable_to_connect_provider: 'अपने Code.org खाते को अपने %{provider} वर्ग से कनेक्ट
-      करने में असमर्थ |कृपया पुन: प्रयास करें ।'
-    disconnect_successful: सफलता! हमने आपके Code.org खाते से बाहरी खाते को डिस्कनेक्ट
-      कर दिया है।
     already_in_use: आपका %{provider} खाता पहले से ही अंय Code.org खाते से कनेक्टेड
       है ।
     already_linked: आपका %{provider} खाता पहले से ही अंय Code.org खाते से कनेक्टेड
       है ।
+    already_signedup: पहले से पंजीकृत?
+    clever: Clever
+    continue_with: "%{provider} के साथ साइन इन करें"
+    demigration_success: नया खाता अनुभव अब आपके खाते पर अक्षम किया गया है ।
+    disconnect_successful: सफलता! हमने आपके Code.org खाते से बाहरी खाते को डिस्कनेक्ट
+      कर दिया है।
     existing_account:
       account_exists: खुशखबरी! आपके पास पहले से एक Code.org खाता है जो %{email} का
         उपयोग करता है
@@ -153,19 +80,1063 @@ hi:
       sign_up: आपकी ईमेल नहीं है? एक अलग ईमेल के साथ एक नया खाता बनाना चाहते हैं?
         यदि आप एक नया खाता बनाना चुनते हैं तो आप अपनी %{provider} प्रोफ़ाइल को अपने
         खाता सेटिंग पेज से भी लिंक कर सकेंगे।
+    facebook: फेसबुक
+    forgot_password: अपना पासवर्ड भूल गए?
+    google_oauth2: गूगल खाता
+    invalid_provider: क्षमा करें, %{provider} खातों को Code.org खातों से लिंक नहीं
+      किया जा सकता है।
+    microsoft_v2_auth: Microsoft खाता
+    migration_required: क्षमा करें, हम उन खातों को कनेक्ट या डिस्कनेक्ट नहीं कर सकते
+      हैं जो अभी भी पुराने खाते के अनुभव का उपयोग कर रहे हैं। कृपया नए खाता अनुभव
+      में अपडेट करें।
+    migration_success: सफलता! आप हमारे नए खाते के अनुभव के लिए अद्यतन किया है ।
+    need_confirmation: पुष्टिकरण निर्देश प्राप्त नहीं हुआ?
+    need_unlock: खोलने के अनुदेश नही मिले?
+    not_linked: क्षमा करें, आपका Code.org खाता %{provider}से लिंक नहीं है । आपको नीचे
+      अपना पासवर्ड लिखकर साइन इन करना होगा.
+    notyet_signedup: अभी तक शामिल नहीं हुए?
+    powerschool: Powerschool
+    sign_in_with: "%{provider} के साथ साइन इन करें"
+    sign_out_of_markdown: "#### आपने साइन इन करने के लिए %{provider} का उपयोग किया।
+      [यहां क्लिक करें](%{url}) %{provider} से साइन आउट करने के लिए।"
+    signed_in: साइंगड इन!
+    signed_out_markdown: "### आपने [Code.org](%{url}) से साइन आउट कर लिया है।"
+    twitter: ट्विटर
+    unable_to_connect_provider: 'अपने Code.org खाते को अपने %{provider} वर्ग से कनेक्ट
+      करने में असमर्थ |कृपया पुन: प्रयास करें ।'
+    use_clever: क्षमा करें, आपका Code.org खाता %{provider} से लिंक नहीं है । इसके
+      बजाय अपने चतुर पोर्टल के माध्यम से साइन इन करें ।
+    windowslive: Microsoft खाता
+  behaviors:
+    this_sprite: यह स्प्राइट
+  beta: बीटा
+  builder:
+    back: स्क्रिप्ट्स पर वापस जाएं
+    created: आपने नई स्क्रिप्ट बनाई है।
+    destroyed: आपने स्क्रिप्ट नष्ट कर दी।
+    level:
+      create: नया स्तर बनाएं
+      current: मौजूदा स्तर
+      unused: उपयोग न किए गए स्तर
+    manage: स्तर बनाएं
+    success: आपने सफलतापूर्वक ब्लॉक संपादित किए।
+    view: देखें
+  cancel: रद्द करें
+  certificate_hour_of_code: आवर ऑफ़ कोड
+  certificate_sponsor_message: "%{sponsor_name} ने आपके सीखने को प्रायोजित करने के
+    लिए उदार उपहार दिया।"
+  code_org_logo_alt: Code.org होम
+  compatibility:
+    upgrade:
+      applab_unsupported_tablet: ऐप लैब माउस और कीबोर्ड के साथ डेस्कटॉप या लैपटॉप
+        कंप्यूटर पर सबसे अच्छा काम करता है। आपकी मौजूदा डिवाइस पर इस टूल का उपयोग
+        करने में आपको समस्याएं आ सकती हैं।
+      gamelab_unsupported_tablet: गेम लैब माउस और कीबोर्ड के साथ डेस्कटॉप या लैपटॉप
+        कंप्यूटर पर सबसे अच्छा काम करता है। आपकी मौजूदा डिवाइस पर इस टूल का उपयोग
+        करने में आपको समस्याएं आ सकती हैं।
+      link: अधिक जानें
+      unsupported_message: आपका ब्राउजर समर्थित नहीं है। कृपया अपने ब्राउजर को <a
+        href='%{supported_browsers_url}', target='_blank'>हमारे समर्थित ब्राउजरों
+        में से एक</a> के साथ अपग्रेड करें। आप पृष्ठ देखने का प्रयास कर सकते हैं, लेकिन
+        कार्यात्मकता खंडित हुई हो सकती है।
+      weblab_unsupported_locale_storage: 'निजी ब्राउजिंग मोड में वेब लैब का उपयोग
+        करने में आपको समस्याएं आ सकती हैं। कृपया अपने प्रोजेक्ट को सामान्य मोड में
+        पुनःलोड करें। असुविधा के लिए खेद है। '
+  confirm: पुष्टि करें
+  continue: जारी रखें
+  contract_match:
+    baddomainname: आपकी एक या अधिक डोमेन आइटमों का गलत नाम है।
+    baddomainsize: डोमेन में आपके कांट्रैक्ट के पास आइटमों की सही संख्या नहीं है।
+    baddomaintype: आपकी एक या अधिक डोमेन आइटमों का गलत प्रकार है, या वे गलत क्रम में
+      हैं।
+    badname: आपके कांट्रैक्ट का गलत नाम है।
+    badname_case: कार्य नाम केस-सेंसिटिव हैं।  अपने कांट्रैक्ट के नाम का केस बदलने
+      का प्रयास करें।
+    badrange: आपके कांट्रैक्ट की गलत रेंज है।
+    wrong_title: गलत जवाब
+  cookie_banner:
+    accept: मैं सहमत हूँ
+    message: हमारी साइट को लगातार ब्राउज करके या "मैं सहमत हूं” पर क्लिक करके, आप
+      अपने कंप्यूटर या डिवाइस पर कुकीज स्टोर करने के लिए सहमति देते हैं।
+    more_information: Code.org की गोपनीयता नीति देखें।
+  copy: प्रतिलिपि बनाएँ
+  course_offering:
+    headers:
+      collections: कलेक्शन्स
+      csa_labs: CSA लैब्स
+      csc: कंप्यूटर साइंस से सम्बंधित जानकारी
+      csf: कंप्यूटर साइंस की बुनियादी बातें
+      express: एक्सप्रेस
+      favorites: पसंदीदा
+      hello_world: हैलो दुनिया
+      labs_and_skills: लैब्स और स्किल्स
+      minecraft: माइनक्राफ्ट
+      popular_media: पॉपुलर मीडिया
+      self_paced: सेल्फ-पेस्ड
+      sports: खेल
+      summer_workshops_612: 6-12 ग्रीष्मकालीन कार्यशालाएं
+      teacher_led: शिक्षक-नेतृत्व वाली
+      virtual_academic_year_workshops_612: 6—12 वर्चुअल एकेडमिक ईयर वर्कशॉप
+      workshops_k5: K-5 कार्यशालाएं
+      year_long: साल भर
+  courses: पाठ्यक्रम
+  courses_category: Full Courses
+  courses_page:
+    title_student: कंप्यूटर विज्ञान सीखो
+    title_teacher: कंप्यूटर साइंस
+  crud:
+    access_denied: आपके पास इस %{model} की पहुंच नहीं है।
+    back: वापस
+    confirm: क्या आपको यकीन है?
+    created: "%{model} सफलतापूर्वक बनाया गया"
+    destroy: नष्ट करें
+    destroyed: "%{model} सफलतापूर्वक हटा दिया गया था।"
+    edit: संपादित करें
+    edit_model: "%{model} बदले"
+    new_model: नया %{model}
+    show: दिखाएं
+    submit: सबमिट करें
+    update: अद्यतन करें
+    updated: "%{model} को सफलतापूर्वक अद्यतन किया गया था।"
+  demos: 'एडमिन: सारे प्रदर्शन'
+  deprecation:
+    algebra_lab: 'बीजगणित पाठ्यक्रम और सामग्री में सीएस को बहिष्कृत किया जा रहा है।
+      अगले कुछ महीनों में यह लैब उपलब्ध नहीं रहेगी। कृपया इसके बजाय [बूटस्ट्रैप: बीजगणित]
+      (%{bootstrap_algebra_url}) देखें। [और जानें] (%{cs_algebra_url})।'
+  devise:
+    registrations:
+      user:
+        personal_login_created_email: आपने सफलतापूर्वक निजी लॉगिन बना लिया है। अब
+          आप अपनी ईमेल और पासवर्ड से अपने खाते पर साइन इन कर सकते हैं
+        personal_login_created_username: आपने सफलतापूर्वक निजी लॉगिन बना लिया है।
+          अब आप अपने उपयोगकर्ता नाम (%{username}) और पासवर्ड से अपने खाते पर साइन
+          इन कर सकते हैं।
+        user_type_change_email_mismatch: आपके द्वारा प्रदान किया गया ईमेल पता इस खाते
+          के लिए ईमेल पते से मेल नहीं खाता
+  dialog:
+    ok: ठीक है
+    startover_body: यह पहेली को इसकी शुरुआती स्थिति में पुनः सेट कर देगा और आपके द्वारा
+      जोड़ा गया या बदला गया पूरा डेटा पुनः सेट कर देगा।
+    startover_cancel: रद्द करें
+    startover_ok: 'पुन: प्रारंभ करें'
+    startover_title: Aapko यकीन है कि आप prarambh se शुरू करना चाहते हैं?
+  done_with_module: इस लर्निंग मॉड्यूल के साथ हो गया
+  download_coming_soon: डाउनलोड करने योग्य गतिविधि जल्द आ रही है।
+  download_pdf: पाठ योजना खोलें
+  errors:
+    messages:
+      not_saved: 'कृपया निम्न गलतिया सुधारें:'
+      pair_programmer: 'आप वर्तमान में एक छात्र है जो इस सामग्री के लिए उपयोग नहीं
+        है के साथ जोड़ी प्रोग्रामिंग कर रहे हैं । इस सामग्री तक पहुंचने के लिए, युग्मन
+        प्रोग्रामिंग रोकें और पुन: प्रयास करें ।'
+      teacher_must_accept_terms: इस सामग्री के स्थान पर आयु प्रतिबंध है और युवा छात्रों
+        के लिए उपलब्ध नहीं है । अपने शिक्षक से पूछें कि आप इस सामग्री तक पहुंच प्रदान
+        करने के लिए सेवा की शर्तों को स्वीकार करते हैं । अपने शिक्षक कोड स्टूडियो
+        में प्रवेश और कोड स्टूडियो मुखपृष्ठ के शीर्ष के पास "समीक्षा अद्यतन शर्तें"
+        बटन पर क्लिक करके ऐसा कर सकते हैं ।
+      too_young: यह सामग्री आयु प्रतिबंधित है और युवा छात्रों के लिए उपलब्ध नहीं है
+  external_links:
+    disclaimer: अस्वीकरण
+    disclaimer_text: इस साइट की ऐसी गोपनीयता नीतियां हो सकती हैं, जो Code.org से अलग
+      हों। हमने ये तृतीय पक्ष के संसाधन चुने हैं क्योंकि हमारे विचार में वे आपके लिए
+      उपयोगी होंगे। हालांकि हम इस वेबसाइट के सामग्री के लिए सीधे तौर पर जिम्मेदार
+      नहीं हैं, यदि आपको लगता है कि सामग्री आपत्तिजनक है, या यदि लिंक की गई साइट अब
+      उपलब्ध नहीं है, तो कृपया <a href='%{support_url}'>सहयोग टीम से संपर्क</a> करें।
+    leaving_domain: अब आप इस डोमेन को ऐसी साइट पर छोड़ रहे हैं, जो Code.org द्वारा
+      संचालित नहीं है।
+  follower:
+    added_teacher: अपने शिक्षक के रूप में जोड़ा गया %{name}
+    already_exists: आप पहले से ही सेक्शन %{section_name} से जुड़े हुए हैं।
+    captcha_required: कृपया इस अनुभाग में शामिल होने के लिए कैप्चा भरें।
+    error:
+      blank_code: कृपया एक अनुभाग कोड दर्ज करें
+      cant_join_own_section: हमें खेद है कि आप अपने खुद के अनुभाग से नहीं जुड़ सकते।
+      full_section: हम आपको अनुभाग %{section_code} में शामिल नहीं कर सके क्योंकि इसमें
+        पहले से ही %{section_capacity} छात्र हैं। कृपया मदद के लिए अपने शिक्षक के
+        साथ संपर्क करें।
+      no_teacher: किसी के साथ '%{teacher_email_or_code}' पर हस्ताक्षर किए नहीं ढूँढ
+        सका। कृपया यहाँ साइन अप करने के लिए उन्हें पूछना और फिर उन्हें फिर से जोड़ने
+        का प्रयास करें
+      not_participant_type: हम आपको अनुभाग %{section_code} में नहीं जोड़ सके क्योंकि
+        आप अनुभाग के लिए प्रतिभागी प्रकार को पूरा नहीं करते हैं।
+      provider_managed_section: यह अनुभाग दूसरे प्रदाता द्वारा प्रबंधित किया गया है
+        और आप नहीं जुड़ सकते। कृपया अपने अध्यापक को कहें कि वह आपको %{provider} द्वारा
+        जोड़ें और अपने अनुभाग को पुन:समकालिक करें।
+      restricted_section: हम आपको अनुभाग %{section_code} में शामिल नहीं कर सकते हैं
+        क्योंकि यह लॉक है। कृपया मदद के लिए अपने शिक्षक के साथ संपर्क करें।
+      section_not_found: कोड '%{section_code}' के साथ एक खंड नहीं ढूँढ सका।
+      signed_in: कृपया आगे बढ़ने से पहले signout
+      username_in_use: "%{username} पहले से ही लिया जाता है, कृपया किसी अन्य चुनें"
+      username_not_found: उपयोगकर्ता नाम नहीं मिला %{username}
+    invite_sent: आमंत्रण भेजा गया
+    mail:
+      student_disassociated:
+        subject: 'Code.org सूचना: %{student_name} अब आपके छात्र के तौर पर जुड़ा हुआ
+          नहीं है।'
+    registered: आप %{section_name} के लिए पंजीकृत किया है।
+  footer:
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. सभी अधिकार सुरक्षित
+      हैं।<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. सभी
+      अधिकार सुरक्षित हैं।<br />Frozen&#8482; &copy; %{current_year} Disney. सभी अधिकार
+      सुरक्षित हैं।<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. सभी
+      अधिकार सुरक्षित हैं।<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio
+      Entertainment Ltd. सभी अधिकार सुरक्षित हैं।<br />Plants vs. Zombies&#8482; &copy;
+      %{current_year} Electronic Arts Inc. सभी अधिकार सुरक्षित हैं।<br />The Amazing
+      World of Gumball ट्रेडमार्क है और &copy; %{current_year} Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. सभी अधिकार
+      सुरक्षित हैं। Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
+      सभी अधिकार सुरक्षित हैं। Frozen&#8482; &copy; %{current_year} Disney. सभी अधिकार
+      सुरक्षित हैं। Ice Age&#8482; &copy; %{current_year} 20th Century Fox. सभी अधिकार
+      सुरक्षित हैं। Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
+      Ltd. सभी अधिकार सुरक्षित हैं। Plants vs. Zombies&#8482; &copy; %{current_year}
+      Electronic Arts Inc. सभी अधिकार सुरक्षित हैं। The Amazing World of Gumball ट्रेडमार्क
+      है और &copy; %{current_year} Cartoon Network.
+    built_on_code_studio: कोड स्टूडियो पर आधारित
+    built_on_github: माइक्रोसॉफ्ट से गिटहब पर बनाया गया
+    code_from_html: Code.org, p5.play का उपयोग करती है, जिसका <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
+      LGPL 2.1</a> के अंतर्गत लाइसेंस है।
+    cookie_notice: कुकी नोटिस
+    copyright: कॉपीराइट
+    feedback: प्रतिक्रिया प्रदान करें
+    google_copyright: "&copy; Google Inc. अनुमति के साथ प्रयोग किया जाता है। Google
+      Classroom Google Inc. का ट्रेडमार्क है।"
+    help_from_html: विशेष रूप से हम Amazon, Google, और Microsoft के इंजीनियरों को
+      मान्यता देना चाहते हैं, जिन्होंने इन सामग्रियों को तैयार करने में मदद की।
+    help_from_html_old: अमेज़न, गूगल, माइक्रोसॉफ्ट के इंजीनियरों ने इन सामग्रियों
+      बनाने में मदद की है।
+    how_it_works: यह कैसे काम करता है (कोड देखें)
+    locale_select: भाषा का चयन करें
+    make_my_own_app: मेरा खुद का ऐप बनाएं
+    more: अधिक
+    powered_by_aws: अमेज़ॅन वेब सर्विसेज द्वारा संचालित
+    privacy: गोपनीयता नीति
+    privacy_updated: गोपनीयता नीति (अपडेट किया गया)
+    report_abuse: दुर्व्यवहार रिपोर्ट करें
+    secure: सुरक्षित संस्करण
+    store: स्टोर
+    support: सहयोग
+    thank_you: हम अपने कोड स्टूडियो बनाने में <a href="https://code.org/about/donors">दानियों</a>,
+      <a href="https://code.org/about/partners">साझेदारों</a>, हमारी <a href="https://code.org/about/team">विस्तृत
+      टीम</a>, हमारी वीडियो कास्ट और हमारे <a href="https://code.org/about/advisors">शिक्षा
+      सलाहकारों</a> का उनके सहयोग के लिए धन्यवाद करते हैं।
+    tos: सेवा की शर्तें
+    tos_short: शर्तें
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE लोगो और आवर
+      ऑफ़ कोड&reg; Code.org के ट्रेडमार्क हैं।"
+    translate: हमारी सामग्री को अनुवाद करने के लिए स्वेच्छा से आए
+    try_hour_of_code: आवर ऑफ़ कोड आजमाएं!
+    view_code: कोड देखें
+  free_response:
+    placeholder: अपना उत्तर यहाँ दर्ज करें
+  gender:
+    female: महिला
+    male: पुरूष
+    non_binary: गैर-युग्मक
+    none: जवाब नहीं देना चाहते
+    not_listed: वरीय शब्द सूचीबद्ध नहीं है
+  heading_x_of_y: "%{heading}(पेज %{x} के लिए %{y})"
+  hello: हैलो वर्ल्ड
+  hidden_script: आपके अध्यापक ने यहां आपके होने की अपेक्षा नहीं की थी। कृपया अपने
+    अध्यापक से पूछें कि आपको किस इकाई पर होना चाहिए।
+  hidden_stage: आपके अध्यापक ने यहां आपके होने की अपेक्षा नहीं की थी। कृपया अपने अध्यापक
+    से पूछें कि आपको किस पाठ पर होना चाहिए।
+  hoc_download:
+    capsule_desc: ऑनलाइन, वेब-आधारित <a href="%{url}">%{app_name}</a> का उपयोग करें।
+    capsule_title: क्या आपके पास इंटरनेट है?
+    download_in_Albanian: 'अल्बेनियन में डाउनलोड करें:'
+    download_in_Arabic: 'अरबी में डाउनलोड करें:'
+    download_in_Azerbaijani: 'अज़ेरबैजानी में डाउनलोड करें:'
+    download_in_Basque: 'बास्क में डाउनलोड करें:'
+    download_in_Bosnian: 'बोस्नियन में डाउनलोड करें:'
+    download_in_Bulgarian: 'बल्गेरियन में डाउनलोड करें:'
+    download_in_Catalan: 'कैटलन में डाउनलोड करें:'
+    download_in_Chinese: 'चीनी में डाउनलोड करें:'
+    download_in_Chinese-Taiwan: 'चीनी-ताईवान में डाउनलोड करें:'
+    download_in_Croatian: 'क्रोएशियाई में डाउनलोड करें:'
+    download_in_Czech: 'चेक में डाउनलोड करें:'
+    download_in_Danish: 'डेनिश में डाउनलोड करें:'
+    download_in_Dutch: 'डच में डाउनलोड करें:'
+    download_in_English: 'अंग्रेजी में डाउनलोड करें:'
+    download_in_Finnish: 'फिनिश में डाउनलोड करें:'
+    download_in_French: 'फ्रांसीसी में डाउनलोड करें:'
+    download_in_German: 'जर्मन में डाउनलोड करें:'
+    download_in_Greek: 'यूनानी में डाउनलोड करें:'
+    download_in_Hebrew: 'यहूदी में डाउनलोड करें:'
+    download_in_Hungarian: 'हंगेरियन में डाउनलोड करें:'
+    download_in_Icelandic: 'आइसलैंडिक में डाउनलोड करें:'
+    download_in_Indonesian: 'इंडोनेशियाई में डाउनलोड करें:'
+    download_in_Irish: 'आयरिश में डाउनलोड करें:'
+    download_in_Italian: 'इतालवी में डाउनलोड करें:'
+    download_in_Japanese: 'जापानी में डाउनलोड करें:'
+    download_in_Korean: 'कोरियाई में डाउनलोड करें:'
+    download_in_Latvian: 'लातवियाई में डाउनलोड करें:'
+    download_in_Lithuanian: 'लिथुआनियन में डाउनलोड करें:'
+    download_in_Norwegian: 'नार्वेजियन में डाउनलोड करें:'
+    download_in_Norwegian-Nynorsk: 'नार्वेजियन-नायरोस्क में डाउनलोड करें:'
+    download_in_Polish: 'पोलिश में डाउनलोड करें:'
+    download_in_Portuguese: 'पुर्तगाली में डाउनलोड करें:'
+    download_in_Portuguese-Brazil: 'पुर्तगाली-ब्राज़ील में डाउनलोड करें:'
+    download_in_Romanian: 'रोमानियन में डाउनलोड करें:'
+    download_in_Russian: 'रूसी में डाउनलोड करें:'
+    download_in_Serbian: 'सर्बियन में डाउनलोड करें:'
+    download_in_Slovenian: 'स्लोवेनियन में डाउनलोड करें:'
+    download_in_Spanish: 'स्पेनी में डाउनलोड करें:'
+    download_in_Swedish: 'स्वीडिश में डाउनलोड करें:'
+    download_in_Turkish: 'तुर्की में डाउनलोड करें:'
+    download_in_Ukrainian: 'यूक्रेनी में डाउनलोड करें:'
+    download_in_Vietnamese: 'वियतनामी में डाउनलोड करें:'
+    download_message: ऑफलाइन उपयोग के लिए %{app_name} डाउनलोड करें (136MB)
+    instructions: 'अध्यापकों के लिए निर्देश: यदि आपकी धीमी इंटरनेट सेवा है, तो ये
+      आवर ऑफ़ कोड ट्यूटोरियल्स ऑफलाइन उपयोग हेतु डाउनलोड और इंस्टॉल करने के लिए उपलब्ध
+      हैं। अपनी भाषा और प्लेटफार्म चुनें, अपनी कक्षा में सभी कंप्यूटरों पर इसे डाउनलोड
+      और इंस्टॉल करें। आप सभी कंप्यूटरों पर एक बार डाउनलोड और इंस्टॉल करने के लिए
+      USB ड्राइव का उपयोग करना चाह सकते हैं। नोट: छात्र कोड स्टूडियो में लॉग इन करने,
+      प्रगति सुरक्षित करने या प्रमाण-पत्र प्रिंट करने में सक्षम नहीं होंगे। अध्यापक
+      समय से पहले <a href="%{url}">यहां</a> प्रमाण-पत्र प्रिंट कर सकते हैं।'
+    instructions_headline: इंटरनेट नहीं है?
+    mac: Mac OS X
+    minecraft_name: Minecraft आवर ऑफ़ कोड
+    starwars_blocks_name: 'Star Wars: कोड से तारा समूह बनाना (ब्लॉक्स)'
+    starwars_javascript_name: 'Star Wars: कोड से तारा समूह बनाना (JavaScript)'
+    title: आवर ऑफ़ कोड डाउनलोड्स
+    windows: Windows (64-बिट)
+  home:
+    20hour_overview: यह 20-घंटे का पाठ्यक्रम कोर कंप्यूटर साइंस और प्रोग्रामिंग पेश
+      करता है। पाठ्यक्रम ग्रेड्स K-8 के लिए कक्षाओं में उपयोग के लिए तैयार किया गया
+      है, परंतु यह हर आयु वर्ग के लिए सीखने में मज़ेदार है।
+    add_hint_help: कृपया Code.org ट्यूटोरियल्स के लिए ताज़ा संकेत जोड़ने में हमारी
+      मदद करें
+    all_courses: पाठ्यक्रमों 1, 2, व 3 की रूपरेखा
+    choose_next_course: नीचे दिए गए कोड स्टूडियो पाठ्यक्रम में से एक चुनकर आजमाएं
+    classroom: आपकी कक्षा
+    heading_elementary_markdown: |-
+      ## 20 घंटे के पाठ्यक्रम
+
+      # कंप्यूटर विज्ञान की बुनियादी बातों के लिए (सभी आयु)
+    lesson_plans: पाठ की योजनाएं
+    local_school: स्थानीय स्कूल
+    no_primary_course: कोड स्टूडियो पाठ्यक्रम आजमाएं
+    online: ऑनलाइन
+    print_certificate: प्रमाण-पत्र प्रिंट करें
+    prize_info: 'भागीदारी के लिए इनाम (केवल अमेरिकी पब्लिक स्कूल अध्यापकों के लिए):
+      कक्षा इनामों में $1,000 तक।'
+    see_details: विवरण देखें
+    signin_directions: प्रगति का पता लगाने के लिए खाते का उपयोग करें।<br/> अध्यापकगण,
+      अपनी संपूर्ण कक्षा को ट्रैक करें।
+    signin_message: क्या पहले से ही पंजीकृत हैं? %{link}
+    student_finished: आपने सभी Code.org ट्योटोरियल पूरे कर लिए हैं।  %{online_link}
+      या %{local_school_link} पर अन्य कक्षा चुनें।
+    student_left_off: 'जहां आपने छोड़ा था:'
+    student_progress: आपकी सीखने की प्रगति
+    student_reg_link: छात्र साइन अप
+    student_stats: आपने %{trophy_max} "Concept Mastery” में से %{trophy_count} ट्रॉफीज
+      हासिल की हैं।
+    teacher_averages: औसतन आपके छात्रों ने %{trophy_max} "Concept Mastery” में से
+      %{trophy_average} ट्रॉफी हासिल की हैं।
+    teacher_dashboard: प्रगति डैशबोर्ड देखें
+    teacher_print_certificates: उन छात्रों के लिए प्रमाण-पत्र प्रिंट करें, जो यह पाठ्यक्रम
+      पूरा कर लें
+    teacher_read_blog: हमारे एजुकेटर ब्लॉग पर समाचारों और हमारी सामग्रियों में अद्यतनों
+      के बारे में पढ़ें
+    teacher_reg_link: अध्यापक साइन अप
+    teacher_student_count: आपके पास %{count} छात्र हैं।
+    teacher_student_count_one: आपके पास %{count} छात्र है।
+    test_videos_help: अपने स्कूल में हमारे नए वीडियो प्लेयर का परीक्षण करें
+    title: कोड स्टूडियो
+    try_beta_courses: नया! K-5 के छात्रों के लिए हमारे बीटा पाठ्यक्रमों को आजमाएं
+    tryfirst: 'या, आप पहले इसे आजमा सकते हैं, और बाद में साइन अप कर सकते हैं:'
+    trynow: अधिक जानें
+    use_as_teacher: इस साइट को अध्यापक के तौर पर उपयोग करें
+    view_course: पाठ्यक्रम देखें
+    your_gallery: गैलरी
+  join_section:
+    code:
+      instructions: 'कृपया 6 अक्षरों का कोड दर्ज करें जिसे आपके शिक्षक ने आपके साथ
+        साझा किया था (उदाहरण: "ABCDEF") उनके अनुभाग में शामिल होने के लिए।'
+      instructions_short: अपने 6 पत्र अनुभाग कोड दर्ज करें
+      placeholder: अनुभाग कोड (ABCDEF)
+      submit: सम्मिलित हों
+      title: Code.org पर एक अनुभाग में शामिल हों
+  k8intro: K-8 कंप्यूटर विज्ञान का परिचय पाठ्यक्रम (१५-२५ घंटे)
+  landing:
+    documentation: दस्तावेजीकरण
+    help_resources: मदद और संसाधन
+    help_support: सहायता और समर्थन
+    prerelease_tutorial: यह ट्यूटोरियल **बीटा** में है। यह फीडबैक प्राप्त होने और
+      सुधार किए जाने के कारण संशोधन के अधीन है।
+    report_bug: बग की रिपोर्ट करें
+    support: मदद प्राप्त करें
+    tutorials: ट्यूटोरियल
+  less: कम
+  lesson_extras:
+    bonus_level: बोनस स्तर
+  lesson_lock:
+    error:
+      cannot_view_locked_answers: लॉक होने पर उत्तर नहीं देख सकते
+      forbidden: उपयोगकर्ता छात्र की लॉक करने योग्य स्थिति को अपडेट नहीं कर सकता
+      missing_params: उपयोगकर्ता, स्तर और इकाई आईडी प्रदान करनी चाहिए
+      no_updates: करने के लिए कोई अपडेट नहीं
+  lesson_plan: पाठ योजना
+  level_group:
+    correct_body: जवाब प्रस्तुत करने के लिए धन्यवाद।
+    correct_title: धन्यवाद
+    hide_survey_last_answer: यह सर्वेक्षण बिना नाम का है।   कृपया संचित परिणामों के
+      लिए अध्यापक डैशबोर्ड पर जाएं।  ध्यान दें कि परिणाम केवल तभी दिखाई देंगे, यदि
+      कम से कम पांच छात्रों ने सर्वेक्षण प्रस्तुत किया है।
+    survey_submission_thankyou: यह सर्वेक्षण प्रस्तुत करने के लिए आपका धन्यवाद! सर्वेक्षण
+      मिटा दिया गया है ताकि आपके जवाब गुमनाम रह पाएं। ध्यान दें कि आपका अध्यापक तब
+      भी संपूर्ण कक्षा के लिए जवाब देखने में सक्षम होगा, लेकिन बिना शामिल किए नामों
+      के।
+    wrong_body: जवाब प्रस्तुत करने के लिए धन्यवाद।
+    wrong_title: धन्यवाद
+  level_group-submittable:
+    correct_body: जवाब प्रस्तुत करने के लिए धन्यवाद।
+    correct_title: धन्यवाद
+    submit-complete-body: इसे प्रस्तुत करने के बाद आप अपने मूल्यांकन को संपादित नहीं
+      कर सकते।  क्या आप निश्चित हैं?
+    submit-complete-title: अपना मूल्यांकन प्रस्तुत करें
+    submit-incomplete-body: आपने कुछ सवाल अधूरे छोड़ दिए हैं।  इसे प्रस्तुत करने के
+      बाद आप अपने मूल्यांकन को संपादित नहीं कर सकते।  क्या आप निश्चित हैं?
+    submit-incomplete-title: अपना मूल्यांकन प्रस्तुत करें
+    unsubmit-body: अपने मूल्यांकन को अनसब्मिट करने से प्रस्तुत करने का समय और तिथि
+      पुनः सेट हो जाएगी।  क्या आप निश्चित हैं?
+    unsubmit-title: अपना मूल्यांकन असब्मिट करें
+    wrong_body: जवाब प्रस्तुत करने के लिए धन्यवाद।
+    wrong_title: धन्यवाद
+  locked_stage: इस स्टेज की सामग्रियां दिखाई नहीं देतीं क्योंकि यह स्टेज इस समय लॉक
+    है। आपका अध्यापक इस स्टेज को अनलॉक कर सकता है, जब इस पर काम करने या आपके जवाबों
+    की समीक्षा करने का समय हो।
+  maker:
+    google_oauth:
+      confirm_login: अपने Google खाते के साथ लॉग इन करने के लिए "पुष्टि करें" चुनें।
+      copy_code: कृपया Code.org में लॉग इन करने के लिए इस कोड को Maker ऐप में कॉपी
+        और पेस्ट करें।
+      enter_code: कृपया अपने डिफ़ॉल्ट ब्राउज़र पर Google के जरिए लॉग इन करने पर प्रदान
+        किया गया कोड दर्ज करें।
+      error_invalid_user: अमान्य उपयोगकर्ता आइडी। फिर से लॉग इन करने का प्रयास करें।
+      error_no_code: कृपया अपना लॉगिन कोड दर्ज करें।
+      error_token_expired: टोकन की समय सीमा समाप्त हो गई है। कृपया नए टोकन के लिए
+        फिर से लॉग इन करें।
+      error_wrong_provider: गलत प्रदाता। कृपया सुनिश्चित करें कि आप Google के साथ
+        लॉग इन कर रहे हैं।
+      login_with_google: Google के साथ Maker ऐप में लॉगिन करें
+  match:
+    correct_body: यह सही जवाब है।
+    correct_title: सही
+    wrong_body: आपके द्वारा दर्ज किया गया समाधान सही नहीं है।  कृपया दुबारा प्रयास
+      करें!
+    wrong_title: गलत समाधान
+  more: अधिक
+  more_info: अधिक जानकारी
+  move_students:
+    all_students_must_be_in_current_section: सभी छात्रों को इस समय अपने अनुभाग में
+      नामांकन करना होगा।
+    already_enrolled_in_new_section: आप इन छात्रों को मूव नहीं कर सकते क्योंकि वे
+      पहले ही नए अनुभाग में हैं।
+    current_section_dne: हमें खेद है कि अनुभाग %{current_section_code} मौजूद नहीं
+      है। कृपया अलग अनुभाग कोड दर्ज करें।
+    new_section_dne: हमें खेद है कि अनुभाग %{new_section_code} मौजूद नहीं है। कृपया
+      अलग अनुभाग कोड दर्ज करें।
+    not_correct_participant_type: आप इन उपयोगकर्ताओं को स्थानांतरित नहीं कर सकते हैं
+      क्योंकि उनके पास नए अनुभाग में भाग लेने की अनुमति नहीं है।
+    section_code_cant_be_current_section: मौजूदा अनुभाग, नए अनुभाग के समान नहीं हो
+      सकता।
+    student_ids_not_entered: कृपया student_ids प्रदान करें।
+    student_not_found: एक या अधिक छात्र नहीं मिले।
+    third_party_login: आप छात्रों को ऐसे अनुभाग में मूव नहीं कर सकते, जिसका समकालीकरण
+      तृतीय पक्ष के टूल के साथ किया हुआ है।
+  multi:
+    correct_body: यह सही जवाब है।
+    correct_title: सही
+    wrong_body: आपके द्वारा दर्ज किया गया जवाब सही नहीं है।  कृपया दुबारा प्रयास करें!
+    wrong_title: गलत जवाब
+  multi-submittable:
+    correct_body: जवाब प्रस्तुत करने के लिए धन्यवाद।
+    correct_title: धन्यवाद
+    wrong_body: जवाब प्रस्तुत करने के लिए धन्यवाद।
+    wrong_title: धन्यवाद
+  nav:
+    header:
+      about: के बारे में
+      about_contact: हमें संपर्क करें
+      about_donors: दानी
+      about_evaluation: मूल्यांकन
+      about_faqs: अकसर पूछे जाने वाले सवाल
+      about_jobs: नौकरियां
+      about_leadership: लीडरशिप
+      about_news: न्यूजरूम
+      about_partners: साझेदार
+      about_team: पूरी टीम
+      about_us: हमारे बारे में
+      app_lab_documentation: ऐप लैब दस्तावेज
+      app_lab_tutorials: ऐप लैब ट्यूटोरियल्स
+      course_catalog: कोर्स कैटलॉग
+      documentation: दस्तावेजीकरण
+      educate_beyond: Code.org से परे
+      educate_community: ऑनलाइन समुदाय
+      educate_elementary: प्राथमिक स्कूल
+      educate_high: हाई स्कूल
+      educate_hoc: आवर ऑफ़ कोड
+      educate_inspire: किसी छात्र को प्रेरित करें
+      educate_middle: मिडल स्कूल
+      educate_overview: शिक्षक रूपरेखा
+      educate_partner: हमारे साथ साझेदारी करें
+      educate_requirements: तकनीकी जरूरतें
+      educate_tools: टूल्स और वीडियो
+      finished_hoc: मैंने पूरा कर लिया!
+      game_lab_documentation: गेम लैब दस्तावेज
+      game_lab_tutorials: गेम लैब ट्यूटोरियल्स
+      help_support: सहायता और समर्थन
+      help_us: हमारी मदद करें
+      incubator: इनक्यूबेटर
+      learn: सीखें
+      legal: निजता और कानूनी
+      legal_cookie_notice: कुकी नोटिस
+      legal_privacy: गोपनीयता नीति
+      legal_tos: सेवा की शर्तें
+      my_dashboard: मेरा डैशबोर्ड
+      professional_learning: पेशेवर प्रशिक्षण
+      project_gallery: प्रोजेक्ट्स
+      report_abuse: दुरुपयोग की रिपोर्ट करें
+      report_bug: समस्या की रिपोर्ट करें
+      sections: अनुभाग
+      sign_in_to_save: प्रगति को सुरक्षित करने के लिए साइन इन करें
+      sprite_lab_documentation: स्प्राइट लैब दस्तावेज़ीकरण
+      sprite_lab_tutorials: स्प्राइट लैब ट्यूटोरियल
+      stats: आंकड़े
+      teach: पढ़ाएं
+      teacher_community: अध्यापक समुदाय
+      tutorials: ट्यूटोरियल
+      web_lab_documentation: वेब लैब दस्तावेज़ीकरण
+    popup:
+      close: बंद करें
+      mastery: धारणाएं
+      prize_earned: सभी %{total_trophies} ट्रॉफीज एकत्र की। इनाम जीता!
+      prize_us_only: "(केवल अमेरिकी छात्र)"
+      prizes: सभी %{total_trophies} ट्रॉफीज एकत्र करें और इनाम जीतें!
+      prizes_link: अधिक जानकारी
+      progress: आपकी प्रगति
+      progress_for_user: "%{Name} की प्रगति"
+      puzzle_map: चरण
+    user:
+      algebra_game: बीज गणित
+      already_registered: पहले ही पंजीकरण किया हुआ है?
+      applab: ऐप लैब
+      artist: कलाकार
+      artist_k1: कलाकार (आरंभिक-पाठक)
+      basketball: बास्केटबॉल
+      bounce: उछाल
+      calc: Calc
+      classroom: अध्यापक संबंधी मुख्य पृष्ठ
+      create: बनाए
+      dance: डांस पार्टी
+      district_dashboard: डिस्ट्रिक्ट डैशबोर्ड
+      driver: लॉग इन किया
+      eval: Eval
+      flappy: फ्लैपी
+      frozen: फ्रोजन
+      gamelab: गेम लैब
+      gamelab_jr: गेम लैब (बीटा)
+      gumball: गम्बॉल की अद्भुत दुनिया
+      iceage: हिम युग
+      infinity: अनंत
+      label: हेलो %{username}
+      loading: लोड हो रहा है...
+      logout: साइन आउट करें
+      makerlab: मेकर टूलकिट
+      minecraft_adventurer: Minecraft एडवेंचरर
+      minecraft_aquatic: Minecraft जलचर
+      minecraft_codebuilder: 'Minecraft: कोड कनेक्शन'
+      minecraft_designer: माइनक्राफ्ट
+      minecraft_hero: Minecraft हीरो
+      my_projects: मेरे प्रोजेक्ट
+      navigator: साझेदार
+      pair_programming: युग्म प्रोग्रामिंग
+      playlab: प्ले लैब
+      playlab_k1: प्ले लैब (आरंभिक-पाठक)
+      poetry: काव्य
+      poetry_hoc: कविता आर्ट
+      scratch: Scratch
+      settings: खाता सेटिंग्स
+      signin: दाखिल करना
+      signup: एक खाता बनाएँ
+      sports: खेल
+      spritelab: स्प्राइट लैब
+      starwars: स्टार वॉर्स
+      starwarsblocks: Star Wars (ब्लॉक्स)
+      starwarsblocks_hour: Star Wars (ब्लॉक्स)
+      stats: कोड स्टूडियो
+      team: टीम
+      thebadguys: दि बैड गाइस
+      view_all: सभी प्रोजेक्ट देखें...
+      weblab: वेब लैब
+  next_level: अगला स्तर
+  next_page: अगले पृष्ठ
+  next_resource: अगले संसाधन
+  next_stage: समाप्त! अगले चरण पर जारी रखें
+  no_course_access_student: आपके पास इस पाठ्यक्रम तक पहुंच नहीं है। कृपया अपने शिक्षक
+    से पूछें कि आपको कौन सा कोर्स करना चाहिए।
+  no_course_access_teacher: आपके पास इस पाठ्यक्रम तक पहुंच नहीं है। यदि आपको लगता
+    है कि आपके पास इस कोर्स तक पहुंच होनी चाहिए, तो कृपया support@code.org पर लिखें
+    ताकि हम स्थिति को ठीक कर सकें।
+  no_exemplar: इस स्तर के लिए कोई उदाहरण मौजूद नहीं है।
+  no_exemplar_access_student: छात्र उदाहरण कोड तक पहुंच नहीं कर सकते हैं। कृपया अपने
+    शिक्षक से पूछें कि आपको किस स्तर पर होना चाहिए।
+  no_exemplar_access_teacher: केवल सत्यापित शिक्षक ही उदाहरण कोड तक पहुंच कर सकते
+    हैं। यदि आप एक सत्यापित शिक्षक बनना चाहते हैं, तो कृपया support@code.org पर लिखें।
+  no_level_access_student: इस स्तर तक आपकी पहुंच नहीं है। कृपया अपने अध्यापक से पूछें
+    कि आपको किस स्तर पर होना चाहिए।
+  no_level_access_teacher: इस स्तर तक आपकी पहुंच नहीं है। यदि आपको लगता है कि इस स्तर
+    तक आपकी पहुंच होनी चाहिए, तो कृपया support@code.org को लिखें, ताकि हम स्थिति को
+    ठीक कर पाएं।
+  no_script_access_student: इस इकाई तक आपकी पहुंच नहीं है। कृपया अपने अध्यापक से पूछें
+    कि आपको किस इकाई पर होना चाहिए।
+  no_script_access_teacher: इस इकाई तक आपकी पहुंच नहीं है। यदि आपको लगता है कि इस
+    इकाई तक आपकी पहुंच होनी चाहिए, तो कृपया support@code.org को लिखें, ताकि हम स्थिति
+    को ठीक कर पाएं।
+  of: की
+  okay: ठीक है
+  or: 'अथवा '
+  page_not_found_button: मुख्य पृष्ठ पर वापस जाएं
+  page_not_found_description: जो पृष्ठ आप खोज रहे हैं, वह इस पते पर मौजूद नहीं है।
+    वेब पता देखें और दुबारा प्रस्तुत करें। या, हमारे मुख्य पृष्ठ पर जाएं
+  page_not_found_header: '404: पृष्ठ नहीं मिला'
+  page_not_found_title: पृष्ठ नहीं मिला
+  parent_email_banner:
+    link_your_email: अपनी ईमेल को लिंक करें
+    not_now: अभी नहीं
+    text: "**क्या आप माता-पिता हैं या अभिभावक?** अपने बच्चे की प्रगति और प्रोजेक्ट्स
+      के बारे में अपडेट्स प्राप्त करने के लिए इस खाते को अपनी ईमेल से लिंक करें।"
+  parent_mailer:
+    parent_email_added_subject: Code.org में आपका स्वागत है!
+    student_associated_subject: Code.org के लिए लॉगिन जानकारी
+  password:
+    change_form:
+      confirm_password: नए पासवर्ड की पुष्टि करें
+      new_password: नया पासवर्ड
+      submit: मेरा पासवर्ड परिवर्तित करें
+      title: अपना पासवर्ड परिवर्तित करें
+    reset_errors:
+      captcha_required: कृपया अपना पासवर्ड रीसेट करने के लिए CAPTCHA भरें।
+      invalid_email: ऐसा प्रतीत होता है कि आपने शायद अवैध ईमेल पते का साथ साइन अप
+        किया है। कृपया पासवर्ड रिकवरी लिंक प्राप्त करने के लिए support@code.org को
+        ईमेल करें।
+    reset_form:
+      email: ईमेल पता
+      instructions: नीचे आपके खाते के साथ जुड़ा अपना ईमेल पता दर्ज करें और हम आपको
+        पासवर्ड रीसेट निर्देश भेजेंगे।
+      submit: सबमिट करें
+      title: अपना पासवर्ड भूल गए?
+  pd:
+    form_entries:
+      ages:
+        ages_11_12: 11-12 वर्ष
+        ages_13_14: 13-14 वर्ष
+        ages_15_16: 15-16 वर्ष
+        ages_17_18: 17-18 वर्ष
+        ages_19_over: 19+ वर्ष
+        ages_7_8: 7-8 वर्ष
+        ages_9_10: 9-10 वर्ष
+        ages_under_6: "< 6 वर्ष"
+      email_opt_in:
+        opt_in_no: नहीं
+        opt_in_yes: हां
+      gender:
+        female: महिला
+        male: पुरूष
+        non_binary: गैर-युग्मक
+        none: जवाब नहीं देना चाहते
+        not_listed: वरीय शब्द सूचीबद्ध नहीं है
+      resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Academy
+        kodable: Kodable
+        na: लागू नहीं
+        other: अन्य
+        scratch: Scratch
+        tynker: Tynker
+      robotics:
+        grok: Grok Learning
+        kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        na: लागू नहीं
+        other: अन्य
+        ozobot: Ozobot
+        raspberry: Raspberry Pi
+        sphero: Sphero
+        wonder: Wonder Workshop
+      school_country:
+        barbados: बारबाडोस
+        belize: बेलीज
+        canada: कनाडा
+        chile: चिली
+        colombia: कोलंबिया
+        israel: इज़राइल
+        malaysia: मलेशिया
+        mexico: मेक्सिको
+        paraguay: पराग्वे
+        thailand: थाईलैंड
+        uzbekistan: उज़्बेकिस्तान
+      subjects:
+        art: कला
+        cs: कंप्यूटर विज्ञान
+        efl: विदेशी भाषा के रूप में अंग्रेजी
+        history: इतिहास / समाजिक विज्ञान
+        ict: ICT
+        la: भाषा कला
+        math: गणित
+        music: संगीत
+        na: लागू नहीं
+        other: 'अन्य:'
+        science: विज्ञान
+      workshop_course:
+        csd: CS Discoveries
+        csf_af: CS मूल सिद्धांत (पाठ्यक्रम A-F)
+        csf_express: CS मूल सिद्धांत (प्री-एक्सप्रेस या एक्सप्रेस)
+        csp: CS Principles
+        not_applicable: लागू नहीं
+        other: अन्य
+    form_labels:
+      ages: इस वर्ष आप कौन-से आयु वर्ग(वर्गों) को सिखा रहे हैं?
+      chilean_school_commune: कम्यून
+      chilean_school_id: स्कूल आईडी
+      colombian_chilean_school_department: स्कूल विभाग/क्षेत्र
+      colombian_chilean_school_name: स्कूल का नाम
+      colombian_school_city: स्कूल का शहर
+      colombian_school_municipality: स्कूल नगर पालिका
+      email: ईमेल
+      email_alternate: वैकल्पिक ईमेल
+      email_opt_in: क्या हम Code.org के अंतर्राष्ट्रीय कार्यक्रम, हमारे पाठ्यक्रमों
+        में अद्यतनों या कंप्यूटर साइंस के अन्य समाचारों के लिए आपको ईमेल कर सकते हैं?
+      first_name: पहला नाम
+      first_name_preferred: वरीय पहला नाम
+      gender: लैंगिक पहचान
+      last_name: अंतिम नाम
+      legal_opt_in: "यह फार्म प्रस्तुत करके, आप इस बारे में Code.org को जानकारी साझा
+        करने के लिए सहमति दे रहे हैं कि आप Code.org और अपने देश में Code.org के अंतर्राष्ट्रीय
+        साझेदार(रों), स्कूल जिला, और प्रशिक्षकों के साथ पेशेवर शिक्षण संसाधनों का
+        उपयोग कैसे करते हैं। हम इन साझेदारों के साथ आपकी संपर्क जानकारी, जो पाठ्यक्रम/इकाईयां
+        आप उपयोग कर रहे हैं, उन्हें और आपकी कक्षाओं के बारे में संचित डेटा साझा करेंगे।
+        इसमें आपकी कक्षाओं में छात्रों की संख्या, आपकी कक्षा में जनसांख्किीय विश्लेषण
+        और आपके स्कूल व जिले का नाम शामिल है। हम अपने साझेदारों के साथ अलग-अलग छात्रों
+        के बारे में कोई जानकारी साझा नहीं करेंगे: पूरी छात्र जानकारी से पहचान हटाई
+        जाएगी और उसे संकलित किया जाएगा। हमारे अंतर्राष्ट्रीय साझेदार और प्रशिक्षक
+        Code.org के समान ही गोपनीयता के समान स्तर के साथ अनुबंध के तहत इस जानकारी
+        से व्यवहार करने के लिए बाध्य हैं। \n"
+      resources: आप निम्नलिखित में से कौन-से CS शिक्षा संसाधनों का उपयोग करते हैं?
+      robotics: आप निम्नलिखित में से कौन-से रोबोटिक्स संसाधनों का उपयोग करते हैं?
+      school: स्कूल
+      school_city: स्कूल का शहर
+      school_city_district: 'स्कूल का शहर/ जिला
+
+        '
+      school_country: स्कूल देश
+      school_department_region: स्कूल विभाग/क्षेत्र
+      school_name: स्कूल का नाम
+      subjects: इस वर्ष आप कौन-सा विषय सिखा रहे हैं?
+      workshop_course: वर्कशॉप पाठ्यक्रम
+      workshop_facilitator: वर्कशॉप समन्वयक
+      workshop_organizer: वर्कशॉप संयोजक
+    international_opt_in:
+      facilitator_not_applicable: लागू नहीं
+      facilitator_not_listed: मेरा सुविधाकर्ता सूचीबद्ध नहीं है
+      instructions: कृपया यह बताने के लिए नीचे दिया गया फार्म भरें कि 1) आपने Code.org
+        के अंतर्राष्ट्रीय साझेदारों द्वारा आयोजित प्रशिक्षण वर्कशॉप में भाग लिया था,
+        और 2) आप अपने देश में हमारे अंतर्राष्ट्रीय साझेदार के साथ अपने जानकारी साझा
+        करने के लिए सहमत हैं, ताकि वे कंप्यूटर साइंस के अध्यापर के तौर पर आपके सफर
+        को सहयोग करने में मदद कर पाएं।
+      intro: Code.org के पाठ्यक्रम पर प्रशिक्षण प्राप्त करने के लिए समय निकालने हेतु
+        आपका धन्यवाद।  कंप्यूटर साइंस की शिक्षा के अवसरों को दुनियाभर के सभी स्कूलों
+        में सभी बच्चों तक पहुंचाने का हमारा उद्देश्य आपके बिना संभव नहीं है।
+      organizer_not_listed: मेरा आयोजक सूचीबद्ध नहीं है
+      thanks_markdown: दर्ज करने के लिए आपका धन्यवाद! जैसे ही आप Code.org के पाठ्यक्रम
+        और टूल्स को जानते हैं, हम आपका समर्थन करने के लिए तत्पर हैं। कृपया हमें [support@code.org](%{support_email_url})
+        पर लिखकर या [शिक्षक फ़ोरम](%{teacher_forum_url}) पर पोस्ट करके अपने प्रश्न
+        और प्रतिक्रिया हमारे साथ साझा करते रहें!
+      title: वर्कशॉप हाजिरी
+    logged_out:
+      body: शुरू करने के लिए, पहले आपको अपने Code.org खाते पर लॉग इन करने की जरूरत
+        है। यदि आप अपना आवेदन शुरू करने से पहले कार्यक्रम के बारे में और जानकारी प्राप्त
+        करना चाहते हैं, तो कृपया <a href="%{url}">पेशेवर शिक्षण कार्यक्रम की रूपरेखा</a>
+        देखें।
+      heading: पेशेवर शिक्षण कार्यक्रम में रुचि दिखाने के लिए आपका धन्यवाद!
+    no_teacher_email:
+      body_markdown: आपके खाते में कोई ईमेल पता नहीं है। कृपया इस फ़ॉर्म को पूरा करने
+        से पहले अपना ईमेल पता जोड़ने के लिए [अपनी खाता सेटिंग पर जाएं](%{user_registration})।
+    not_teacher:
+      body_markdown: Code.org के पेशेवर शिक्षण कार्यक्रम में आपकी रुचि के लिए धन्यवाद!
+        आपने वर्तमान में एक छात्र खाते में साइन इन किया हुआ है। अपने खाते को छात्र
+        से शिक्षक में अपग्रेड करने के लिए कृपया या तो एक शिक्षक खाता बनाएं या [अपनी
+        उपयोगकर्ता सेटिंग पर जाएं](%{user_settings})।
+      more_markdown: यदि आप अपना आवेदन शुरू करने से पहले कार्यक्रम के बारे में अधिक
+        जानकारी चाहते हैं, तो कृपया [पेशेवर शिक्षण कार्यक्रम अवलोकन](%{pl_overview})
+        देखें।
+  pdf_download: PDF डाउनलोड करें
+  peer_review:
+    accepted:
+      description_markdown: "**हां**, यह सबमिशन आवश्यकताओं को **पूरा करता** है"
+      name: स्वीकृत
+    escalated:
+      description: मैं इस प्रस्तुत की समीक्षा के लिए एक इंस्ट्रक्टर चाहता हूं
+      name: तीव्र किया गया
+    instructor_feedback: इंस्ट्रक्टर की प्रतिक्रिया
+    outdated: यह प्रतिक्रिया पिछले प्रस्तुत किए संस्करण के लिए जोड़ी गई थी
+    peer_feedback: सहपाठी की प्रक्रिया
+    peer_review: सहकर्मी की समीक्षा
+    rejected:
+      description_markdown: "**नहीं**, यह सबमिशन आवश्यकताओं को **पूरा नहीं करता**
+        है"
+      name: अस्वीकृत
+    review_count: आपको इस इकाई के लिए %{review_count} समीक्षाएं पूरी करनी होंगी
+  pixelation:
+    actual_size: वास्तविक आकार
+    binary: युग्मक
+    bits_per_pixel_header: बिट्स प्रति पिक्सेल
+    hexadecimal: हेक्साडेसीमल
+    image_file_format_bits_per_pixel: 'बिट्स प्रति पिक्सेल: 1 बाइट'
+    image_file_format_data_a: पिक्सेल डेटा के n बिट्स
+    image_file_format_data_b: n = चौड़ाई* ऊंचाई * बिट्स प्रति पिक्सेल
+    image_file_format_header: इमेज फ़ाइल फॉर्मेट
+    image_file_format_height: 'ऊंचाई: 1 बाइट'
+    image_file_format_width: 'चौड़ाई: 1 बाइट'
+    image_height: इमेज की ऊंचाई
+    image_width: इमेज की चौड़ाई
+    pixel_format_header: पिक्सेल फ़ॉर्मेट
+    raw_format: कच्चा फ़ॉर्मेट
+    raw_format_alt: बिना किसी फ़ॉर्मेटिंग के बिट्स देखें
+    readable_format: पठनीय फ़ॉर्मेट
+    readable_format_alt: पिक्सेल द्वारा अलग किए गए बिट्स देखें
+    save_image: इमेज सेव करें
+  previous_page: पिछला पृष्ठ
+  prize: पुरस्कार
+  progress:
+    assessment: मूल्यांकन
+    completed_perfect: पूरा हुआ, बढ़िया
+    completed_too_many_blocks: पूरा हुआ, बहुत सारे ब्लॉक्स
+    furthest_level_attempted: सबसे आगे के स्तर का प्रयास किया
+    in_progress: प्रगति में
+    not_started: शुरू नहीं हुआ
+    submitted: प्रस्तुत किया
+  project:
+    abuse:
+      contact_us: यदि आपको लगता है कि यह एक त्रुटि है, तो कृपया <a href='https://code.org/contact'>हमें
+        संपर्क करें।</a>
+      go_to_code_studio: कोड स्टूडियो पर जाएं
+      policy_violation: इस प्रोजेक्ट में ऐसी जानकारी शामिल है, जिसे दूसरों के साथ
+        साझा नहीं किया जा सकता। कृपया उनके ऐप की सामग्रियों को ठीक करने के लिए ऐप
+        मालिक से संपर्क करें।
+      report_abuse_form:
+        abuse_type:
+          harassment: धमकियां, साइबर दादागिरी, उत्पीड़न
+          infringement: कॉपीराइट उल्लंघन
+          offensive: अपमानजनक सामग्री
+          other: अन्य
+          question: यह सामग्री किस प्रकार से %{link_start}Terms of Service%{link_end}
+            का उल्लंघन करती है?
+        abusive_url: रिपोर्ट की जा रही सामग्री का URL
+        acknowledge: यह जानकारी प्रस्तुत करके, आप स्वीकार करके हैं कि इसे %{link_start_privacy}Privacy
+          Policy%{link_end} और %{link_start_tos}Terms of Service%{link_end} की शर्तों
+          के अनुसार निपटाया जाएगा।
+        detail: कृपया उस सामग्री के संबंध में अधिक से अधिक विवरण प्रदान करें, जिसकी
+          आप रिपोर्ट कर रहे हैं
+        intro: यदि आपने कोड स्टूडियो पर बने ऐप्स का उपयोग करते समय अपमानजनक सामग्री,
+          धमकियों, साइबर दादागिरी, उत्पीड़न, या आपकी खुद की सामग्री के लिए कॉपीराइट
+          के उल्लंघन की किसी घटना का सामना किया है, तो कृपया नीचे दिया गया फार्म भरें।
+          हम आपकी रिपोर्ट को पूरी गंभीरता से लेंगे, इसकी जांच करेंगे और उचित कार्रवाई
+          करेंगे।
+        validation:
+          abuse_detail: कृपया उस सामग्री के संबंध में विवरण प्रदान करें, जिसकी आप
+            रिपोर्ट कर रहे हैं
+          abuse_type: कृपया जवाब दें कि यह सामग्री किस प्रकार से सेवा की शर्तों का
+            उल्लंघन करती है
+          age: कृपया आयु निर्दिष्ट करें
+          captcha: इस सामग्री की रिपोर्ट करने के लिए कृपया CAPTCHA भरें।
+          email: कृपया ईमेल पता प्रदान करें
+      tos: यह प्रोजेक्ट Code.org की <a href='http://code.org/tos'>सेवा की शर्तों</a>
+        का उल्लंघन करने के लिए रिपोर्ट किया गया है और इसे दूसरों के साथ साझा नहीं
+        किया जा सकता।
+    advanced_share: उन्नत विकल्प दिखाएं
+    create: प्रोजेक्ट बनाएँ
+    create_a_project: 'एक नया प्रोजेक्ट बनाएं:'
+    edit_project: प्रोजेक्ट संपादित करें
+    embed: जोड़ा गया
+    exit: पाठ्यक्रम पर लौटें
+    help_text: नीचे नया प्रोजेक्ट शुरू करने के लिए <strong>एक ऐप बनाएं</strong> या
+      <strong>कुछ चित्रित करें</strong> पर क्लिक करें!<br/>आप किसी भी समय वापस आकर
+      अपने प्रोजेक्टों पर काम कर सकते हैं।
+    name: नाम
+    need_help: अपने नए प्रोजेक्ट की शुरुआत करने में मदद के लिए ये नए पाठ्यक्रम आजमाएं।
+    new: नया बनाएँ
+    no_projects: इस समय आपके पास कोई प्रोजेक्ट नहीं हैं। प्रोजेक्ट शुरू करने के लिए
+      ऊपर दिए बटनों में से एक पर क्लिक करें।
+    not_saved: सुरक्षित नहीं किया
+    project_gallery: प्रोजेक्ट्स
+    project_type: प्रोजेक्ट का प्रकार
+    projects: प्रोजेक्ट्स
+    publish: प्रकाशित करें
+    saved: सहेजा गया
+    share_copy_link: 'लिंक कॉपी करें:'
+    share_embed_description: आप वेबपेज पर प्रोजेक्ट प्रदर्शित करने के लिए HTML पृष्ठ
+      में जोड़ा गया कोड पेस्ट कर सकते हैं।
+    share_title: अपना प्रोजेक्ट साझा करें
+    share_u13_warning: साझा करने से पहले अपने अध्यापक से पूछें। केवल अपने स्कूल के
+      अन्य छात्रों के साथ ही साझा करें।
+    sharing_disabled: हमें खेद है कि यह प्रोजेक्ट साझा करने के लिए उपलब्ध नहीं है।
+      यदि यह आपका प्रोजेक्ट है या आपके छात्रों में से किसी एक का प्रोजेक्ट है, तो
+      कृपया प्रोजेक्ट देखने के लिए अपने खाते पर <a href='https://studio.code.org/users/sign_in'>साइन
+      इन</a> करें।
+    thumbnail_help: क्या आपको अपने प्रोजेक्ट के लिए सही थम्बनेल नहीं दिखाई दे रहा?
+      नया थम्बनेल बनाने के लिए अपना ऐप चलाएं। ध्यान दें कि थम्बनेल को कहीं भी ताज़ा
+      होने में कुछ घंटे लग सकते हैं।
+    unpublish: प्रकाशित करना रद्द करें
+    updated: अद्यतन किया
+    view_all: मेरे प्रोजेक्ट्स देखें
+  puzzle: पहेली
+  race_interstitial:
+    decline: बंद करें
+    message: कृपया हमें अपनी जाति बताएं (उन सभी पर सही का निशान लगाएं, जो लागू होते
+      हैं)
+    races:
+      american_indian: अमेरिकी भारतीय/अलास्का मूल
+      asian: एशियाई
+      black: ब्लैक या अफ्रीकी अमेरिकी
+      hawaiian: मूल हवाईयन या अन्य पेसिफिक आईलैंडर
+      hispanic: हिस्पैनिक या लैटिनो
+      opt_out: नहीं बताना चाहते
+      other: अन्य
+      white: गोरा
+    submit: सबमिट करें
+    title: 'वैकल्पिक: कंप्यूटर साइंस में विविधता में सुधार करने के प्रति हमारी प्रगति
+      को ट्रैक करने में हमारी मदद करें'
+  reference_area:
+    auth_error: आपको समाधान देखने की अनुमति नहीं है।
+    direction: दिशा शुरू करें (डिग्रियों में)
+    submit: कलाकार स्थान अद्यतन करें
+    subtitle: देखें ये वीडियो और संकेत
+    teacher: समाधान देखें
+    teacher_no_solution: समाधान देखना बंद करें
+    title: मदद चाहिए?
+  reports:
+    error:
+      access_denied: आपको इस व्यक्ति के आंकड़ों तक पहुंच नहीं है
+  reset_predict_progress_button: उत्तर मिटाएँ
+  return_course_overview: पाठ्यक्रम की रूपरेखा पर जाएं
+  return_unit_overview: इकाई की रूपरेखा पर जाएं
+  school_info:
+    after_school: आफ्टर स्कूल
+    charter: चार्टर
+    district: जिला
+    district_name: जिले का नाम
+    homeschool: होमस्कूल
+    other: अन्य
+    other_district_not_listed: अन्य जिला ऊपर सूचीबद्ध नहीं है
+    other_school_not_listed: अन्य स्कूल ऊपर सूचीबद्ध नहीं है
+    private: प्राइवेट
+    public: सार्वजनिक
+    school: स्कूल
+    school_address: स्कूल का पता
+    school_country: स्कूल देश
+    school_name: स्कूल का नाम
+    school_organization_name: स्कूल/संगठन का नाम
+    school_organization_zip: स्कूल/संगठन का ज़िप कोड
+    school_zip: स्कूल का ज़िप कोड
+    select_school_type: स्कूल का प्रकार
+    state: राज्य
+    title: स्कूल संबंधी जानकारी (वैकल्पिक)
+  school_info_interstitial:
+    message: कृपया नीचे अपने स्कूल की जानकारी दर्ज करें।
+    message_with_suggestion: कृपया सत्यापन करें कि निम्न जानकारी सही है, या आवश्यकता
+      के अनुसार अद्यतन करें।
+    save: सहेजें
+    title: हम प्रत्येक छात्र तक कंप्यूटर साइंस पहुंचाना चाहते हैं - हमारी प्रगति को
+      ट्रैक करने में हमारी मदद करें!
+  section:
+    code_with_teacher: "%{teacher_name} के साथ %{section_code} "
+    confirm:
+      remove: क्या आप सचमुच यह अनुभाग छोड़ना चाहते हैं?
+    default_name: शीर्षक रहित अनुभाग
+    remove: "(अनुभाग हटाएं)"
+    type:
+      clever: Clever
+      email: ईमेल
+      google_classroom: Google कक्षा
+      picture: तस्वीर पासवर्ड
+      word: गुप्त शब्द
+    your_section:
+      one: आपका अनुभाग
+      other: 'आपके अनुभाग:'
+  see_your_learning_plan: आपके सीखने की योजना देखें
+  share:
+    description: कोई भी कंप्यूटर साइंस सीख सकता है। कोड के साथ गेम्स, ऐप्स और आर्ट
+      बनाएं।
+    title: कोड स्टूडियो पर सीखें
+    try_hour_of_code: आवर ऑफ़ कोड आजमाएं!
+  share_code:
+    address_not_allowed: ऐसा प्रतीत होता है कि इसमें पता है। टेक्सट बदलने का प्रयास
+      करें।
+    bounce_og_title: मेरी बाउंस गेम देखें
+    check_out_what_i_made: देखें कि मैंने क्या बनाया है
+    email_not_allowed: ऐसा प्रतीत होता है कि इसमें ईमेल है। टेक्सट बदलने का प्रयास
+      करें।
+    flappy_og_title: मेरी फ्लैपी गेम देखें
+    og_description: मैंने Code.org के साथ खुद कोड लिखा है
+    phone_number_not_allowed: ऐसा प्रतीत होता है कि इसमें फोन नंबर है। टेक्सट बदलने
+      का प्रयास करें।
+    profanity_not_allowed: ऐसा प्रतीत होता है कि इसमें गाली है। टेक्सट बदलने का प्रयास
+      करें।
+    studio_og_title: मेरा प्ले लैब ऐप देखें
+    title: क्रिया में होने वाले मेरे कार्यक्रम को देखने के लिए 'चलाएं' पर क्लिक करें
+  signin:
+    try_20hours: कंप्यूटर विज्ञान के लिए हमारे 20 घंटे पहचान की कोशिश
+    try_heading: कोडिंग के बिना साइन अप करने की कोशिश करना चाहते हैं?
+    try_hoc: पहले संहिता के एक घंटे के प्रयास
+  signin_form:
+    login: ईमेल
+    login_username: ईमेल या उपयोगकर्ता नाम
+    password: पासवर्ड
+    remember: मुझे याद रखना
+    submit: दाखिल करना
+    title: एक खाता पहले से ही है ? साइन इन करें
+  signinsection:
+    invalid_login: अवैध लॉगिन, कृपया दुबारा कोशिश करें
+    login: दाखिल करना
+    name: अपने नाम का चयन करें
+    pair_programming: मेरे कंप्यूटर पर मेरा एक पार्टनर है
+    picture: अब अपने गुप्त चित्र ढूँढें
+    student_privacy_markdown: आपको अपना पूरा नाम क्यों नहीं दिखाई दे रहा है, इस बारे
+      में और जानें [here](%{student_privacy_blog})।
+    welcome: "%{section_name} करने के लिए आपका स्वागत है"
+    words: अब आपके गुप्त शब्द दर्ज करें
   signup_form:
+    accept_terms: खाता बनाने के लिए आपको सहमति देनी होगी।
+    address_placeholder: पता, शहर, राज्य, पिन
+    age: उम्र
+    agree_us_data_transfer_student: "**मैं सहमत हूं कि Code.org इस साइट के मेरे उपयोग
+      से मिले डेटा (व्यक्तिगत डेटा सहित) को संयुक्त राज्य अमेरिका में ऐसे डेटा की
+      होस्टिंग और प्रोसेसिंग के लिए स्थानांतरित कर सकता है।"
+    agree_us_data_transfer_teacher: "**मैं सहमत हूं कि Code.org इस साइट के मेरे उपयोग
+      (और मेरे विद्यार्थी के उपयोग) से मिले डेटा (व्यक्तिगत डेटा सहित) को संयुक्त
+      राज्य अमेरिका** में ऐसे डेटा की होस्टिंग और प्रोसेसिंग के लिए स्थानांतरित कर
+      सकता है।"
+    birthday: जन्मदिन (यदि आप चाहते हैं)
+    data_collection_us: मैं समझता/ती हूं कि Code.org एक अमेरिका स्थित गैर-लाभकारी
+      वेबसाइट है और यह कि संयुक्त राज्य अमेरिका में डेटा कलेक्शन को नियंत्रित करने
+      वाले कानून मेरे देश के कानूनों से भिन्न हो सकते हैं।
+    email_preference_no: नहीं
+    email_preference_privacy: "(हमारी गोपनीयता नीति देखें)"
+    email_preference_question: क्या हम आपको हमारे पाठ्यक्रमों में अद्यतन, स्थानीय
+      अवसरों या अन्य कंप्यूटर साइंस के बारे में ईमेल भेज सकते हैं? (मोटे तौर पर माह
+      में एक बार)
+    email_preference_required: आपको ईमेल प्राथमिकता बतानी होगी।
+    email_preference_yes: हां
     email_signup: अपने ईमेल पते के साथ साइन अप करें
-    student_count: "%{count} छात्रों जिनहोने पहले ही साइन अप किया हैं"
-    teacher_count: "%{count} शिक्षकों जिनहोने पहले ही साइन अप किया हैं"
-    overview: अपनी प्रगति को ट्रैक करने या अपनी कक्षा का प्रबंधन करने के लिए एक खाते
-      के लिए साइन अप करें । <a href="/"> आप विभिन्न चरणों और पहेलियाँ ब्राउज़ कर सकते
-      हैं </a> एक खाते के बिना, लेकिन आप अपनी प्रगति और प्रोजेक्टों को बचाने के लिए
-      साइन अप करने की आवश्यकता होगी ।
-    overview_markdown: अपनी प्रगति को ट्रैक करने या अपनी कक्षा का प्रबंधन करने के
-      लिए एक खाते के लिए साइन अप करें । [आप विभिन्न चरणों और पहेलियाँ ब्राउज़ कर सकते
-      हैं](/) एक खाते के बिना, लेकिन आप अपनी प्रगति और प्रोजेक्टों को बचाने के लिए
-      साइन अप करने की आवश्यकता होगी ।
-    hoc_already_signed_up_heading: लॉग इन किए बिना आरंभ करें
+    error: एक त्रुटि घटित हुई है।
+    field_is_required: की आवश्यकता है
+    gender: लिंग (यदि आप चाहते हैं)
+    go_to_account: मेरा खाता पर जाएं
     hoc_already_signed_up_content: आप साइन अप करने के लिए कोड के एक घंटे सिखाना है!
       आप और आपके छात्रों को इस ईवेंट में भाग लेने के लिए कोड स्टूडियो में साइन इन
       करने की आवश्यकता नहीं है । आरंभ करने के लिए, <a href="%{learn_url}"> एक ट्यूटोरियल
@@ -185,673 +1156,193 @@ hi:
       करने देगा । आप छात्रों को पाठ्यक्रम प्रदान करने और उनकी प्रगति को ट्रैक करने
       में सक्षम हो जाएगा । [आप भी विभिन्न चरणों और पहेलियाँ ब्राउज़ करने के लिए जारी
       रख सकते हैं](%{studio_url}) खाता बनाए बिना ।
-    teacher_educator_guide: शिक्षक मार्गदर्शिका देखें
-    title: कोड.ऑर्ग साइन अप छात्र के लिए
-    school_name: स्कूल का नाम (यदि आप चाहते हैं)
-    school_address: स्कूल का पता (यदि आप चाहते हैं)
-    address_placeholder: पता, शहर, राज्य, पिन
-    gender: लिंग (यदि आप चाहते हैं)
-    birthday: जन्मदिन (यदि आप चाहते हैं)
-    age: उम्र
-    user_type: आप एक छात्र या शिक्षक हैं?
-    submit: साइन अप
-    go_to_account: मेरा खाता पर जाएं
-    teacher: क्या आप एक शिक्षक हैं?
-    valid_username: उपलब्ध!
-    invalid_username: प्रयोक्ता नाम कम से कम पाँच अक्षरों का होना चाहिए
-    taken_username: ये प्रयोक्ता का नाम पहले से लिया है
-    valid_password: वैध पासवर्ड!
+    hoc_already_signed_up_heading: लॉग इन किए बिना आरंभ करें
     invalid_password: पासवर्ड कम से कम ६ अंकों का होना चाहिए
+    invalid_username: प्रयोक्ता नाम कम से कम पाँच अक्षरों का होना चाहिए
     mismatch_password: आपके द्वारा दर्ज दो पासवर्ड एक समान नहीं हैं
-    student_consent: मैं पुष्टि करता हूं कि मैं अपने माता पिता या कानूनी है गार्जियन
-      Code.org सेवाओं का उपयोग करने की अनुमति है ।
-    agree_us_data_transfer_student: "**मैं सहमत हूं कि Code.org इस साइट के मेरे उपयोग
-      से मिले डेटा (व्यक्तिगत डेटा सहित) को संयुक्त राज्य अमेरिका में ऐसे डेटा की
-      होस्टिंग और प्रोसेसिंग के लिए स्थानांतरित कर सकता है।"
-    agree_us_data_transfer_teacher: "**मैं सहमत हूं कि Code.org इस साइट के मेरे उपयोग
-      (और मेरे विद्यार्थी के उपयोग) से मिले डेटा (व्यक्तिगत डेटा सहित) को संयुक्त
-      राज्य अमेरिका** में ऐसे डेटा की होस्टिंग और प्रोसेसिंग के लिए स्थानांतरित कर
-      सकता है।"
-    data_collection_us: मैं समझता/ती हूं कि Code.org एक अमेरिका स्थित गैर-लाभकारी
-      वेबसाइट है और यह कि संयुक्त राज्य अमेरिका में डेटा कलेक्शन को नियंत्रित करने
-      वाले कानून मेरे देश के कानूनों से भिन्न हो सकते हैं।
-    visit_privacy: और अधिक जानने के लिए Code.org की [निजता नीति](%{privacy_url}) पर
-      जाएं।
-    student_terms_markdown: ईमेल पते ऐसे रूप में संग्रहीत नहीं होते हैं जो हमें छात्रों
-      से संपर्क करने की अनुमति देता है। पासवर्ड रिकवरी के अलावा छात्रों को Code.org
-      से कभी भी ईमेल प्राप्त नहीं होंगे। अधिक जानकारी के लिए हमारी [गोपनीयता नीति](http://code.org/privacy)
-      देखें।
-    user_type_button: खाता प्रकार अद्यतन करें
-    user_type_label: खाता प्रकार
-    user_type_student: छात्र
-    user_type_student_desc: 'हमारे सभी पाठ्यक्रमों और गतिविधियों का अन्वेषण करें,
-      साथ ही:'
-    user_type_student_ability_1: अपनी प्रगति और परियोजनाओं को सेव करें
-    user_type_student_ability_2: अपने शिक्षक के कक्षा अनुभाग में शामिल हों
-    user_type_teacher: अध्यापक
-    user_type_teacher_desc: 'छात्रों की हर चीज तक पहुंच है, साथ ही:'
-    user_type_teacher_ability_1: कक्षा अनुभाग बनाएं
-    user_type_teacher_ability_2: छात्र कार्य असाइन करें और ट्रैक करें
-    user_type_teacher_ability_3: व्यावसायिक शिक्षा में नामांकन करें
-    user_type_teacher_ability_4: हमारे शिक्षक मंच पर बातचीत करें
-    field_is_required: की आवश्यकता है
-    accept_terms: खाता बनाने के लिए आपको सहमति देनी होगी।
-    error: एक त्रुटि घटित हुई है।
-    email_preference_question: क्या हम आपको हमारे पाठ्यक्रमों में अद्यतन, स्थानीय
-      अवसरों या अन्य कंप्यूटर साइंस के बारे में ईमेल भेज सकते हैं? (मोटे तौर पर माह
-      में एक बार)
-    email_preference_privacy: "(हमारी गोपनीयता नीति देखें)"
-    email_preference_yes: हां
-    email_preference_no: नहीं
-    email_preference_required: आपको ईमेल प्राथमिकता बतानी होगी।
+    overview: अपनी प्रगति को ट्रैक करने या अपनी कक्षा का प्रबंधन करने के लिए एक खाते
+      के लिए साइन अप करें । <a href="/"> आप विभिन्न चरणों और पहेलियाँ ब्राउज़ कर सकते
+      हैं </a> एक खाते के बिना, लेकिन आप अपनी प्रगति और प्रोजेक्टों को बचाने के लिए
+      साइन अप करने की आवश्यकता होगी ।
+    overview_markdown: अपनी प्रगति को ट्रैक करने या अपनी कक्षा का प्रबंधन करने के
+      लिए एक खाते के लिए साइन अप करें । [आप विभिन्न चरणों और पहेलियाँ ब्राउज़ कर सकते
+      हैं](/) एक खाते के बिना, लेकिन आप अपनी प्रगति और प्रोजेक्टों को बचाने के लिए
+      साइन अप करने की आवश्यकता होगी ।
+    parent_account_checkbox: मैं अपने बच्चे की ओर से साइन अप करने वाला माता या पिता/अभिभावक
+      हूं
+    parent_account_email_label: माता या पिता/अभिभावक की ईमेल
+    parent_account_email_progress_permission: क्या हम आपको, आपके बच्चे की प्रगति और
+      प्रोजेक्ट्स के बारे में अपडेट्स और उनके कोर्स और कंप्यूटर साइंस के बारे में
+      अपडेट्स के बार में कभी-कभार ईमेल कर सकते हैं? [(हमारी गोपनीयता नीति देखें)](%{privacy_policy_url})
+    school_address: स्कूल का पता (यदि आप चाहते हैं)
+    school_name: स्कूल का नाम (यदि आप चाहते हैं)
+    share_teacher_email_reg_partner_preference_no: नहीं
+    share_teacher_email_reg_partner_preference_required: आपको ईमेल प्राथमिकता बतानी
+      होगी।
+    share_teacher_email_reg_partner_preference_yes: हां
     share_teacher_email_reg_partner_question: क्या आप चाहते हैं कि हम आपके स्टेट में
       [Code.org क्षेत्रीय पार्टनर](%{cdo_regional_partner_desc}) के साथ आपके संपर्क
       को शेयर करें ताकि वे आपको लोकल प्रोफेशनल डेवलपमेंट, संसाधनों और इवेंट के बारे
       में सूचित कर सकें?
-    share_teacher_email_reg_partner_preference_yes: हां
-    share_teacher_email_reg_partner_preference_no: नहीं
-    share_teacher_email_reg_partner_preference_required: आपको ईमेल प्राथमिकता बतानी
-      होगी।
-    parent_account_checkbox: मैं अपने बच्चे की ओर से साइन अप करने वाला माता या पिता/अभिभावक
-      हूं
-    parent_account_email_progress_permission: क्या हम आपको, आपके बच्चे की प्रगति और
-      प्रोजेक्ट्स के बारे में अपडेट्स और उनके कोर्स और कंप्यूटर साइंस के बारे में
-      अपडेट्स के बार में कभी-कभार ईमेल कर सकते हैं? [(हमारी गोपनीयता नीति देखें)](%{privacy_policy_url})
-    parent_account_email_label: माता या पिता/अभिभावक की ईमेल
+    student_consent: मैं पुष्टि करता हूं कि मैं अपने माता पिता या कानूनी है गार्जियन
+      Code.org सेवाओं का उपयोग करने की अनुमति है ।
+    student_count: "%{count} छात्रों जिनहोने पहले ही साइन अप किया हैं"
+    student_terms_markdown: ईमेल पते ऐसे रूप में संग्रहीत नहीं होते हैं जो हमें छात्रों
+      से संपर्क करने की अनुमति देता है। पासवर्ड रिकवरी के अलावा छात्रों को Code.org
+      से कभी भी ईमेल प्राप्त नहीं होंगे। अधिक जानकारी के लिए हमारी [गोपनीयता नीति](http://code.org/privacy)
+      देखें।
+    submit: साइन अप
+    taken_username: ये प्रयोक्ता का नाम पहले से लिया है
+    teacher: क्या आप एक शिक्षक हैं?
+    teacher_count: "%{count} शिक्षकों जिनहोने पहले ही साइन अप किया हैं"
+    teacher_educator_guide: शिक्षक मार्गदर्शिका देखें
+    title: कोड.ऑर्ग साइन अप छात्र के लिए
     us_state: राज्य
-  school_info:
-    title: स्कूल संबंधी जानकारी (वैकल्पिक)
-    school_country: स्कूल देश
-    select_school_type: स्कूल का प्रकार
-    charter: चार्टर
-    private: प्राइवेट
-    public: सार्वजनिक
-    homeschool: होमस्कूल
-    after_school: आफ्टर स्कूल
-    other: अन्य
-    state: राज्य
-    district: जिला
-    other_district_not_listed: अन्य जिला ऊपर सूचीबद्ध नहीं है
-    district_name: जिले का नाम
-    school: स्कूल
-    other_school_not_listed: अन्य स्कूल ऊपर सूचीबद्ध नहीं है
-    school_name: स्कूल का नाम
-    school_zip: स्कूल का ज़िप कोड
-    school_address: स्कूल का पता
-    school_organization_name: स्कूल/संगठन का नाम
-    school_organization_zip: स्कूल/संगठन का ज़िप कोड
-  signin_form:
-    title: एक खाता पहले से ही है ? साइन इन करें
-    login: ईमेल
-    login_username: ईमेल या उपयोगकर्ता नाम
-    password: पासवर्ड
-    remember: मुझे याद रखना
-    submit: दाखिल करना
-  signin:
-    try_heading: कोडिंग के बिना साइन अप करने की कोशिश करना चाहते हैं?
-    try_hoc: पहले संहिता के एक घंटे के प्रयास
-    try_20hours: कंप्यूटर विज्ञान के लिए हमारे 20 घंटे पहचान की कोशिश
-  signinsection:
-    welcome: "%{section_name} करने के लिए आपका स्वागत है"
-    name: अपने नाम का चयन करें
-    picture: अब अपने गुप्त चित्र ढूँढें
-    words: अब आपके गुप्त शब्द दर्ज करें
-    login: दाखिल करना
-    invalid_login: अवैध लॉगिन, कृपया दुबारा कोशिश करें
-    pair_programming: मेरे कंप्यूटर पर मेरा एक पार्टनर है
-    student_privacy_markdown: आपको अपना पूरा नाम क्यों नहीं दिखाई दे रहा है, इस बारे
-      में और जानें [here](%{student_privacy_blog})।
-  password:
-    reset_form:
-      title: अपना पासवर्ड भूल गए?
-      instructions: नीचे आपके खाते के साथ जुड़ा अपना ईमेल पता दर्ज करें और हम आपको
-        पासवर्ड रीसेट निर्देश भेजेंगे।
-      email: ईमेल पता
-      submit: सबमिट करें
-    reset_errors:
-      captcha_required: कृपया अपना पासवर्ड रीसेट करने के लिए CAPTCHA भरें।
-      invalid_email: ऐसा प्रतीत होता है कि आपने शायद अवैध ईमेल पते का साथ साइन अप
-        किया है। कृपया पासवर्ड रिकवरी लिंक प्राप्त करने के लिए support@code.org को
-        ईमेल करें।
-    change_form:
-      title: अपना पासवर्ड परिवर्तित करें
-      new_password: नया पासवर्ड
-      confirm_password: नए पासवर्ड की पुष्टि करें
-      submit: मेरा पासवर्ड परिवर्तित करें
-  welcome_email:
-    subject: मेरी कक्षा में शामिल हों (पर Code.org)
-    body: 'Code.org पर कंप्यूटर विज्ञान tutorials के लिए (मुझे अपने "शिक्षक" के रूप
-      में) के साथ साइन अप करने के लिए नीचे दिए गए लिंक पर क्लिक करें:%{link} ट्यूटोरियल
-      रहे हैं मज़ा, नेत्रहीन आकर्षक, और एक सरल, निर्देशित, खेल की तरह अनुभव का उपयोग
-      कर कंप्यूटर विज्ञान की मूलभूत अवधारणाओं सिखाने। बिल गेट्स, मार्क Zuckerberg,
-      गुस्से में पक्षियों और लाश बनाम संयंत्रों से कोड करने के लिए जानें! :-) %{name}
-
-'
-  parent_mailer:
-    student_associated_subject: Code.org के लिए लॉगिन जानकारी
-    parent_email_added_subject: Code.org में आपका स्वागत है!
-  teacher_mailer:
-    new_teacher_subject: Code.org में आपका स्वागत है!
-    delete_teacher_subject: 'Code.org सूचना: आपका खाता मिटा दिया गया है'
-    verified_teacher_subject: Code.org शिक्षक सत्यापन - सफलता
-  section:
-    your_section:
-      one: आपका अनुभाग
-      other: 'आपके अनुभाग:'
-    code_with_teacher: "%{teacher_name} के साथ %{section_code} "
-    confirm:
-      remove: क्या आप सचमुच यह अनुभाग छोड़ना चाहते हैं?
-    default_name: शीर्षक रहित अनुभाग
-    remove: "(अनुभाग हटाएं)"
-    type:
-      picture: तस्वीर पासवर्ड
-      word: गुप्त शब्द
-      email: ईमेल
-      google_classroom: Google कक्षा
-      clever: Clever
-  follower:
-    invite_sent: आमंत्रण भेजा गया
-    added_teacher: अपने शिक्षक के रूप में जोड़ा गया %{name}
-    registered: आप %{section_name} के लिए पंजीकृत किया है।
-    captcha_required: कृपया इस अनुभाग में शामिल होने के लिए कैप्चा भरें।
-    already_exists: आप पहले से ही सेक्शन %{section_name} से जुड़े हुए हैं।
-    error:
-      signed_in: कृपया आगे बढ़ने से पहले signout
-      username_not_found: उपयोगकर्ता नाम नहीं मिला %{username}
-      username_in_use: "%{username} पहले से ही लिया जाता है, कृपया किसी अन्य चुनें"
-      no_teacher: किसी के साथ '%{teacher_email_or_code}' पर हस्ताक्षर किए नहीं ढूँढ
-        सका। कृपया यहाँ साइन अप करने के लिए उन्हें पूछना और फिर उन्हें फिर से जोड़ने
-        का प्रयास करें
-      section_not_found: कोड '%{section_code}' के साथ एक खंड नहीं ढूँढ सका।
-      blank_code: कृपया एक अनुभाग कोड दर्ज करें
-      cant_join_own_section: हमें खेद है कि आप अपने खुद के अनुभाग से नहीं जुड़ सकते।
-      provider_managed_section: यह अनुभाग दूसरे प्रदाता द्वारा प्रबंधित किया गया है
-        और आप नहीं जुड़ सकते। कृपया अपने अध्यापक को कहें कि वह आपको %{provider} द्वारा
-        जोड़ें और अपने अनुभाग को पुन:समकालिक करें।
-      restricted_section: हम आपको अनुभाग %{section_code} में शामिल नहीं कर सकते हैं
-        क्योंकि यह लॉक है। कृपया मदद के लिए अपने शिक्षक के साथ संपर्क करें।
-      full_section: हम आपको अनुभाग %{section_code} में शामिल नहीं कर सके क्योंकि इसमें
-        पहले से ही %{section_capacity} छात्र हैं। कृपया मदद के लिए अपने शिक्षक के
-        साथ संपर्क करें।
-      not_participant_type: हम आपको अनुभाग %{section_code} में नहीं जोड़ सके क्योंकि
-        आप अनुभाग के लिए प्रतिभागी प्रकार को पूरा नहीं करते हैं।
-    mail:
-      student_disassociated:
-        subject: 'Code.org सूचना: %{student_name} अब आपके छात्र के तौर पर जुड़ा हुआ
-          नहीं है।'
-  reports:
-    error:
-      access_denied: आपको इस व्यक्ति के आंकड़ों तक पहुंच नहीं है
-  crud:
-    new_model: नया %{model}
-    show: दिखाएं
-    edit: संपादित करें
-    edit_model: "%{model} बदले"
-    update: अद्यतन करें
-    submit: सबमिट करें
-    destroy: नष्ट करें
-    back: वापस
-    confirm: क्या आपको यकीन है?
-    created: "%{model} सफलतापूर्वक बनाया गया"
-    updated: "%{model} को सफलतापूर्वक अद्यतन किया गया था।"
-    destroyed: "%{model} सफलतापूर्वक हटा दिया गया था।"
-    access_denied: आपके पास इस %{model} की पहुंच नहीं है।
-  devise:
-    registrations:
-      user:
-        user_type_change_email_mismatch: आपके द्वारा प्रदान किया गया ईमेल पता इस खाते
-          के लिए ईमेल पते से मेल नहीं खाता
-        personal_login_created_email: आपने सफलतापूर्वक निजी लॉगिन बना लिया है। अब
-          आप अपनी ईमेल और पासवर्ड से अपने खाते पर साइन इन कर सकते हैं
-        personal_login_created_username: आपने सफलतापूर्वक निजी लॉगिन बना लिया है।
-          अब आप अपने उपयोगकर्ता नाम (%{username}) और पासवर्ड से अपने खाते पर साइन
-          इन कर सकते हैं।
-  nav:
-    header:
-      finished_hoc: मैंने पूरा कर लिया!
-      sign_in_to_save: प्रगति को सुरक्षित करने के लिए साइन इन करें
-      my_dashboard: मेरा डैशबोर्ड
-      course_catalog: कोर्स कैटलॉग
-      project_gallery: प्रोजेक्ट्स
-      sections: अनुभाग
-      help_support: सहायता और समर्थन
-      report_bug: समस्या की रिपोर्ट करें
-      report_abuse: दुरुपयोग की रिपोर्ट करें
-      teacher_community: अध्यापक समुदाय
-      professional_learning: पेशेवर प्रशिक्षण
-      documentation: दस्तावेजीकरण
-      tutorials: ट्यूटोरियल
-      app_lab_documentation: ऐप लैब दस्तावेज
-      app_lab_tutorials: ऐप लैब ट्यूटोरियल्स
-      game_lab_documentation: गेम लैब दस्तावेज
-      game_lab_tutorials: गेम लैब ट्यूटोरियल्स
-      sprite_lab_documentation: स्प्राइट लैब दस्तावेज़ीकरण
-      sprite_lab_tutorials: स्प्राइट लैब ट्यूटोरियल
-      web_lab_documentation: वेब लैब दस्तावेज़ीकरण
-      educate_overview: शिक्षक रूपरेखा
-      educate_elementary: प्राथमिक स्कूल
-      educate_middle: मिडल स्कूल
-      educate_high: हाई स्कूल
-      educate_hoc: आवर ऑफ़ कोड
-      educate_partner: हमारे साथ साझेदारी करें
-      educate_beyond: Code.org से परे
-      educate_inspire: किसी छात्र को प्रेरित करें
-      educate_community: ऑनलाइन समुदाय
-      educate_requirements: तकनीकी जरूरतें
-      educate_tools: टूल्स और वीडियो
-      about_us: हमारे बारे में
-      about_leadership: लीडरशिप
-      about_donors: दानी
-      about_partners: साझेदार
-      about_team: पूरी टीम
-      about_news: न्यूजरूम
-      about_evaluation: मूल्यांकन
-      about_jobs: नौकरियां
-      about_contact: हमें संपर्क करें
-      about_faqs: अकसर पूछे जाने वाले सवाल
-      learn: सीखें
-      stats: आंकड़े
-      help_us: हमारी मदद करें
-      teach: पढ़ाएं
-      about: के बारे में
-      incubator: इनक्यूबेटर
-      legal: निजता और कानूनी
-      legal_privacy: गोपनीयता नीति
-      legal_cookie_notice: कुकी नोटिस
-      legal_tos: सेवा की शर्तें
-    user:
-      classroom: अध्यापक संबंधी मुख्य पृष्ठ
-      district_dashboard: डिस्ट्रिक्ट डैशबोर्ड
-      label: हेलो %{username}
-      stats: कोड स्टूडियो
-      my_projects: मेरे प्रोजेक्ट
-      settings: खाता सेटिंग्स
-      logout: साइन आउट करें
-      signin: दाखिल करना
-      signup: एक खाता बनाएँ
-      already_registered: पहले ही पंजीकरण किया हुआ है?
-      pair_programming: युग्म प्रोग्रामिंग
-      team: टीम
-      driver: लॉग इन किया
-      navigator: साझेदार
-      create: बनाए
-      algebra_game: बीज गणित
-      applab: ऐप लैब
-      artist: कलाकार
-      artist_k1: कलाकार (आरंभिक-पाठक)
-      basketball: बास्केटबॉल
-      bounce: उछाल
-      calc: Calc
-      dance: डांस पार्टी
-      eval: Eval
-      flappy: फ्लैपी
-      frozen: फ्रोजन
-      gamelab: गेम लैब
-      gamelab_jr: गेम लैब (बीटा)
-      gumball: गम्बॉल की अद्भुत दुनिया
-      iceage: हिम युग
-      infinity: अनंत
-      makerlab: मेकर टूलकिट
-      minecraft_adventurer: Minecraft एडवेंचरर
-      minecraft_aquatic: Minecraft जलचर
-      minecraft_codebuilder: 'Minecraft: कोड कनेक्शन'
-      minecraft_designer: माइनक्राफ्ट
-      minecraft_hero: Minecraft हीरो
-      playlab: प्ले लैब
-      playlab_k1: प्ले लैब (आरंभिक-पाठक)
-      poetry: काव्य
-      poetry_hoc: कविता आर्ट
-      scratch: Scratch
-      sports: खेल
-      spritelab: स्प्राइट लैब
-      starwars: स्टार वॉर्स
-      starwarsblocks: Star Wars (ब्लॉक्स)
-      starwarsblocks_hour: Star Wars (ब्लॉक्स)
-      thebadguys: दि बैड गाइस
-      loading: लोड हो रहा है...
-      weblab: वेब लैब
-      view_all: सभी प्रोजेक्ट देखें...
-    popup:
-      progress_for_user: "%{Name} की प्रगति"
-      progress: आपकी प्रगति
-      close: बंद करें
-      mastery: धारणाएं
-      puzzle_map: चरण
-      prizes: सभी %{total_trophies} ट्रॉफीज एकत्र करें और इनाम जीतें!
-      prize_earned: सभी %{total_trophies} ट्रॉफीज एकत्र की। इनाम जीता!
-      prize_us_only: "(केवल अमेरिकी छात्र)"
-      prizes_link: अधिक जानकारी
+    user_type: आप एक छात्र या शिक्षक हैं?
+    user_type_button: खाता प्रकार अद्यतन करें
+    user_type_label: खाता प्रकार
+    user_type_student: छात्र
+    user_type_student_ability_1: अपनी प्रगति और परियोजनाओं को सेव करें
+    user_type_student_ability_2: अपने शिक्षक के कक्षा अनुभाग में शामिल हों
+    user_type_student_desc: 'हमारे सभी पाठ्यक्रमों और गतिविधियों का अन्वेषण करें,
+      साथ ही:'
+    user_type_teacher: अध्यापक
+    user_type_teacher_ability_1: कक्षा अनुभाग बनाएं
+    user_type_teacher_ability_2: छात्र कार्य असाइन करें और ट्रैक करें
+    user_type_teacher_ability_3: व्यावसायिक शिक्षा में नामांकन करें
+    user_type_teacher_ability_4: हमारे शिक्षक मंच पर बातचीत करें
+    user_type_teacher_desc: 'छात्रों की हर चीज तक पहुंच है, साथ ही:'
+    valid_password: वैध पासवर्ड!
+    valid_username: उपलब्ध!
+    visit_privacy: और अधिक जानने के लिए Code.org की [निजता नीति](%{privacy_url}) पर
+      जाएं।
+  slow_loading: इसमें सामान्य से बहुत अधिक समय लग रहा है...
+  stage: मंच
+  stage_number: मंच %{number}
+  studio:
+    all_courses: सभी पाठ्यक्रम
+    completed_courses: पूरे किए गए पाठ्यक्रम
+    courses_working_on: पाठ्यक्रम, जिन पर आप काम कर रहे हैं
+  submit: सबमिट करें
   teacher:
     answer: जवाब
+    confirm:
+      remove: क्या आप सचमुच इस अध्यापक को हटाना चाहते हैं?
     dashboard: अध्यापक डैशबोर्ड
     for_teachers_only: केवल अध्यापकों के लिए
+    panel:
+      answer_viewer: अध्यापक पैनल
+      clear_response: स्पष्ट जवाब
+      example: उदाहरण समाधान
+      example_with_number: उदाहरण समाधान %{solution_number}
+      last_updated: 'पिछली बार अद्यतन किया:'
+      section: अनुभाग
+      student: छात्र
+      submitted_on: 'इस तारीख को प्रस्तुत किया गया:'
+      try_it_yourself: इसे खुद आजमाएं
+      unsubmit: अनसब्मिट
+      update_lock_settings: यहां लॉक सेटिंग्स अद्यतन करें।
+      viewing_solution: समाधान देखना
+      worked_with: के साथ काम किया
+    remove: "(अध्यापक को हटाएं)"
+    student_code_view_diabled: इस गतिविधि के लिए विद्यार्थी कोड को नहीं देखा जा सकता
+      है।
+    student_teacher_disassociated: आपने %{teacher_name} वाला अनुभाग %{section_code}
+      छोड़ दिया है।
+    students:
+      dashboard: अध्यापक डैशबोर्ड पर जाएं
     title:
       one: 'आपका अध्यापक:'
       other: 'आपके अध्यापक:'
-    remove: "(अध्यापक को हटाएं)"
-    confirm:
-      remove: क्या आप सचमुच इस अध्यापक को हटाना चाहते हैं?
-    students:
-      dashboard: अध्यापक डैशबोर्ड पर जाएं
     user_not_found: अध्यापक नहीं ढूंढा जा सका।
-    student_teacher_disassociated: आपने %{teacher_name} वाला अनुभाग %{section_code}
-      छोड़ दिया है।
-    panel:
-      answer_viewer: अध्यापक पैनल
-      student: छात्र
-      viewing_solution: समाधान देखना
-      try_it_yourself: इसे खुद आजमाएं
-      section: अनुभाग
-      example: उदाहरण समाधान
-      example_with_number: उदाहरण समाधान %{solution_number}
-      submitted_on: 'इस तारीख को प्रस्तुत किया गया:'
-      last_updated: 'पिछली बार अद्यतन किया:'
-      unsubmit: अनसब्मिट
-      worked_with: के साथ काम किया
-      update_lock_settings: यहां लॉक सेटिंग्स अद्यतन करें।
-      clear_response: स्पष्ट जवाब
-    student_code_view_diabled: इस गतिविधि के लिए विद्यार्थी कोड को नहीं देखा जा सकता
-      है।
-  user:
-    email_confirm_needed: 'ईमेल पते की पुष्टि नहीं की गई है:'
-    email_confirm_needed_required: 'आपके ईमेल पते %{email} की पुष्टि नहीं की गई है:'
-    email_confirm_wrong_email: "(गलत ईमेल पता?)"
-    email_resend_confirm: पुष्टिकरण निर्देश दुबारा भेजें
-    new_email_hint: "(सुनिश्चित करें कि आप इस ईमेल पते पर ईमेल्स प्राप्त कर सकते हैं)"
-    new_password_hint: "(यदि आप इसे बदलना नहीं चाहते हैं तो खाली छोड़ दें)"
-    current_password_hint: "(हमें आपके बदलावों की पुष्टि करने के लिए आपके मौजूदा पासवर्ड
-      की जरूरत है)"
-    delete: खाता मिटाएं
-    delete_text: आपका खाता मिटाने से इस खाते से जुड़ी सारी जानकारी और प्रगति मिट जाएगी।
-    delete_text_teacher_managed_note: आपको इस खाते को मिटाने की अनुमति नहीं है क्योंकि
-      इसका प्रबंधन आपके अध्यापक द्वारा किया गया है। इससे पहले कि आप अपना खाता मिटा
-      पाएं, आपके अध्यापक(कों) को उनके अनुभागों से आपको हटाने की जरूरत होगी।
-    delete_text_teacher_note: 'कृपया नोट करें: आपका खाता मिटाने से आपके छात्रों के
-      खाते नहीं मिटेंगे।'
-    delete_confirm: क्या आप सचमुच अपना खाता मिटाना चाहते हैं?
-    deleted_user: मिटाया गया उपयोगकर्ता
-    no_password_because_oauth: कोई पासवर्ड नहीं क्योंकि आप तृतीय-पक्ष के प्रदाता से
-      साइन इन करते हैं।
-    no_password_because_sponsored: अपने पासवर्ड का प्रबंधन करने के लिए अपने अध्यापक
-      से मिलें।
-    create_personal_login: निजी पासवर्ड लॉगिन बनाएं
-    create_personal_login_under_13_info: यदि आप अपने स्कूल वर्ष के समाप्त होने के
-      बाद भी अपने Code.org खाते का उपयोग जारी रखना चाहते हैं, तो नीचे अपना खुद का
-      निजी लॉगिन बनाने में अपने माता या पिता/अभिभावक से मदद लें।
-    create_personal_login_under_13_username: उपयोगकर्ता नाम (अपने असली नाम का उपयोग
-      न करें!)
-    create_personal_login_under_13_parent_email: माता या पिता/अभिभावक का ईमेल पता
-    create_personal_login_info: यदि आप अपने स्कूल वर्ष के समाप्त होने के बाद भी अपने
-      Code.org खाते का उपयोग जारी रखना चाहते हैं, तो नीचे अपना खुद का लॉगिन बना सकते
-      हैं।
-    create_personal_login_link_account: इसकी बजाय आप “लिंक किए खातों का प्रबंधन करें”
-      अनुभाग के अंतर्गत निजी खाते से जुड़ने का चयन भी कर सकते हैं।
-    create_personal_login_terms: निजी लॉगिन बनाकर, मैं Code.org की <a href='%{terms_of_service_url}',
-      target='_blank'>सेवा की शर्तों</a> से बाध्य होने के लिए सहमत हूं। मैं पुष्टि
-      करता हूं कि मुझे बिना अध्यापक के भी Code.org सेवाओं का उपयोग करने की मेरे माता
-      या पिता या कानूनी अभिभावक की अनुमति है।
-    create_personal_login_terms_markdown: निजी लॉगिन बनाकर, मैं Code.org की [सेवा
-      की शर्तों](%{terms_of_service_url}) से बाध्य होने के लिए सहमत हूं। मैं पुष्टि
-      करता हूं कि मुझे बिना अध्यापक के भी Code.org सेवाओं का उपयोग करने की मेरे माता
-      या पिता या कानूनी अभिभावक की अनुमति है।
-    create_personal_login_email_note: 'नोट: ईमेल पते एक फॉर्म में संग्रहित नहीं किए
-      जाते, जिससे हम छात्रों से संपर्क कर पाएं। पासवर्ड रिकवरी के सिवाय छात्रों को
-      कभी भी Code.org से ईमेल नहीं आएगी। अधिक जानकारी के लिए हमारी our <a href=''%{privacy_policy_url}'',
-      target=''_blank''>गोपनीयता नीति देखें</a>।'
-    create_personal_login_email_note_markdown: 'नोट: ईमेल पते एक फॉर्म में संग्रहित
-      नहीं किए जाते, जिससे हम छात्रों से संपर्क कर पाएं। पासवर्ड रिकवरी के सिवाय छात्रों
-      को कभी भी Code.org से ईमेल नहीं आएगी। अधिक जानकारी के लिए हमारी our [गोपनीयता
-      नीति देखें](%{privacy_policy_url})।'
-    enter_new_login_info: अपनी नई लॉगिन जानकारी दर्ज करें
-    confirm_secret_words: अपने मौजूदा गुप्त शब्द दर्ज करके पुष्टि करें कि यह आप हैं
-    parent_email_label: माता या पिता/अभिभावक की ईमेल (वैकल्पिक)
-    parent_email_hint: "(इसे पासवर्ड रिकवरी के लिए उपयोग किया जा सकता है)"
-    enter_parent_email: अपने माता या पिता या अभिभावक का ईमेल पता दर्ज करें (पासवर्ड
-      रिकवरी के लिए)
-    update: खाता अद्यतन करें
-    account_successfully_updated: खाता सफलतापूर्वक अद्यतन हो गया।
-    auth_option_saved: आपने अपने %{provider} खाते को ईमेल %{email} के साथ सफलतापूर्वक
-      लिंक कर लिया है।
-    auth_option_saved_no_email: आपने अपना %{provider} खाता सफलतापूर्वक लिंक कर लिया
-      है।
-    update_email: अद्यतन करें
-    for_parents_and_guardians: माता-पिता और अभिभावकों के लिए
-    link_a_parent_email: अपने बच्चे की प्रगति और प्रोजेक्ट्स के बारे में अपडेट्स प्राप्त
-      करने के लिए इस खाते को माता या पिता/अभिभावक ईमेल पते से लिंक करें। आप पासवर्ड
-      रिकवरी के लिए भी इस ईमेल पते का उपयोग कर पाएंगे।
-    parent_guardian_email_label: अभिभावक ईमेल/
-    remove_parent_email_label: हटाएँ
-    none: कोई नहीं
-    only_one_parent_email_supported_warning: 'ध्यान दें: हम इस समय प्रति विद्यार्थी
-      खाता, केवल एक माता या पिता/अभिभावक ईमेल पते को सहयोग करने में सक्षम हैं।'
-    encrypted: कूटलेखन किया
-  user_level:
-    completed: पूरा हो गया
-    tried: कोशिश की
-  home:
-    title: कोड स्टूडियो
-    all_courses: पाठ्यक्रमों 1, 2, व 3 की रूपरेखा
-    lesson_plans: पाठ की योजनाएं
-    signin_message: क्या पहले से ही पंजीकृत हैं? %{link}
-    student_reg_link: छात्र साइन अप
-    teacher_reg_link: अध्यापक साइन अप
-    signin_directions: प्रगति का पता लगाने के लिए खाते का उपयोग करें।<br/> अध्यापकगण,
-      अपनी संपूर्ण कक्षा को ट्रैक करें।
-    teacher_dashboard: प्रगति डैशबोर्ड देखें
-    teacher_student_count_one: आपके पास %{count} छात्र है।
-    teacher_student_count: आपके पास %{count} छात्र हैं।
-    teacher_averages: औसतन आपके छात्रों ने %{trophy_max} "Concept Mastery” में से
-      %{trophy_average} ट्रॉफी हासिल की हैं।
-    teacher_print_certificates: उन छात्रों के लिए प्रमाण-पत्र प्रिंट करें, जो यह पाठ्यक्रम
-      पूरा कर लें
-    teacher_read_blog: हमारे एजुकेटर ब्लॉग पर समाचारों और हमारी सामग्रियों में अद्यतनों
-      के बारे में पढ़ें
-    classroom: आपकी कक्षा
-    student_progress: आपकी सीखने की प्रगति
-    student_stats: आपने %{trophy_max} "Concept Mastery” में से %{trophy_count} ट्रॉफीज
-      हासिल की हैं।
-    student_left_off: 'जहां आपने छोड़ा था:'
-    student_finished: आपने सभी Code.org ट्योटोरियल पूरे कर लिए हैं।  %{online_link}
-      या %{local_school_link} पर अन्य कक्षा चुनें।
-    local_school: स्थानीय स्कूल
-    online: ऑनलाइन
-    see_details: विवरण देखें
-    view_course: पाठ्यक्रम देखें
-    prize_info: 'भागीदारी के लिए इनाम (केवल अमेरिकी पब्लिक स्कूल अध्यापकों के लिए):
-      कक्षा इनामों में $1,000 तक।'
-    tryfirst: 'या, आप पहले इसे आजमा सकते हैं, और बाद में साइन अप कर सकते हैं:'
-    trynow: अधिक जानें
-    add_hint_help: कृपया Code.org ट्यूटोरियल्स के लिए ताज़ा संकेत जोड़ने में हमारी
-      मदद करें
-    20hour_overview: यह 20-घंटे का पाठ्यक्रम कोर कंप्यूटर साइंस और प्रोग्रामिंग पेश
-      करता है। पाठ्यक्रम ग्रेड्स K-8 के लिए कक्षाओं में उपयोग के लिए तैयार किया गया
-      है, परंतु यह हर आयु वर्ग के लिए सीखने में मज़ेदार है।
-    test_videos_help: अपने स्कूल में हमारे नए वीडियो प्लेयर का परीक्षण करें
-    try_beta_courses: नया! K-5 के छात्रों के लिए हमारे बीटा पाठ्यक्रमों को आजमाएं
-    use_as_teacher: इस साइट को अध्यापक के तौर पर उपयोग करें
-    heading_elementary_markdown: |-
-      ## 20 घंटे के पाठ्यक्रम
-
-      # कंप्यूटर विज्ञान की बुनियादी बातों के लिए (सभी आयु)
-    your_gallery: गैलरी
-    no_primary_course: कोड स्टूडियो पाठ्यक्रम आजमाएं
-    choose_next_course: नीचे दिए गए कोड स्टूडियो पाठ्यक्रम में से एक चुनकर आजमाएं
-    print_certificate: प्रमाण-पत्र प्रिंट करें
-  certificate_sponsor_message: "%{sponsor_name} ने आपके सीखने को प्रायोजित करने के
-    लिए उदार उपहार दिया।"
-  certificate_hour_of_code: आवर ऑफ़ कोड
-  move_students:
-    new_section_dne: हमें खेद है कि अनुभाग %{new_section_code} मौजूद नहीं है। कृपया
-      अलग अनुभाग कोड दर्ज करें।
-    section_code_cant_be_current_section: मौजूदा अनुभाग, नए अनुभाग के समान नहीं हो
-      सकता।
-    current_section_dne: हमें खेद है कि अनुभाग %{current_section_code} मौजूद नहीं
-      है। कृपया अलग अनुभाग कोड दर्ज करें।
-    student_ids_not_entered: कृपया student_ids प्रदान करें।
-    student_not_found: एक या अधिक छात्र नहीं मिले।
-    all_students_must_be_in_current_section: सभी छात्रों को इस समय अपने अनुभाग में
-      नामांकन करना होगा।
-    already_enrolled_in_new_section: आप इन छात्रों को मूव नहीं कर सकते क्योंकि वे
-      पहले ही नए अनुभाग में हैं।
-    third_party_login: आप छात्रों को ऐसे अनुभाग में मूव नहीं कर सकते, जिसका समकालीकरण
-      तृतीय पक्ष के टूल के साथ किया हुआ है।
-    not_correct_participant_type: आप इन उपयोगकर्ताओं को स्थानांतरित नहीं कर सकते हैं
-      क्योंकि उनके पास नए अनुभाग में भाग लेने की अनुमति नहीं है।
-  share:
-    title: कोड स्टूडियो पर सीखें
-    description: कोई भी कंप्यूटर साइंस सीख सकता है। कोड के साथ गेम्स, ऐप्स और आर्ट
-      बनाएं।
-    try_hour_of_code: आवर ऑफ़ कोड आजमाएं!
-  gender:
-    male: पुरूष
-    female: महिला
-    non_binary: गैर-युग्मक
-    not_listed: वरीय शब्द सूचीबद्ध नहीं है
-    none: जवाब नहीं देना चाहते
-  user_type:
-    student: छात्र
-    teacher: अध्यापक
-  footer:
-    thank_you: हम अपने कोड स्टूडियो बनाने में <a href="https://code.org/about/donors">दानियों</a>,
-      <a href="https://code.org/about/partners">साझेदारों</a>, हमारी <a href="https://code.org/about/team">विस्तृत
-      टीम</a>, हमारी वीडियो कास्ट और हमारे <a href="https://code.org/about/advisors">शिक्षा
-      सलाहकारों</a> का उनके सहयोग के लिए धन्यवाद करते हैं।
-    help_from_html: विशेष रूप से हम Amazon, Google, और Microsoft के इंजीनियरों को
-      मान्यता देना चाहते हैं, जिन्होंने इन सामग्रियों को तैयार करने में मदद की।
-    help_from_html_old: अमेज़न, गूगल, माइक्रोसॉफ्ट के इंजीनियरों ने इन सामग्रियों
-      बनाने में मदद की है।
-    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. सभी अधिकार सुरक्षित
-      हैं।<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. सभी
-      अधिकार सुरक्षित हैं।<br />Frozen&#8482; &copy; %{current_year} Disney. सभी अधिकार
-      सुरक्षित हैं।<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. सभी
-      अधिकार सुरक्षित हैं।<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. सभी अधिकार सुरक्षित हैं।<br />Plants vs. Zombies&#8482; &copy;
-      %{current_year} Electronic Arts Inc. सभी अधिकार सुरक्षित हैं।<br />The Amazing
-      World of Gumball ट्रेडमार्क है और &copy; %{current_year} Cartoon Network.
-    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. सभी अधिकार
-      सुरक्षित हैं। Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
-      सभी अधिकार सुरक्षित हैं। Frozen&#8482; &copy; %{current_year} Disney. सभी अधिकार
-      सुरक्षित हैं। Ice Age&#8482; &copy; %{current_year} 20th Century Fox. सभी अधिकार
-      सुरक्षित हैं। Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
-      Ltd. सभी अधिकार सुरक्षित हैं। Plants vs. Zombies&#8482; &copy; %{current_year}
-      Electronic Arts Inc. सभी अधिकार सुरक्षित हैं। The Amazing World of Gumball ट्रेडमार्क
-      है और &copy; %{current_year} Cartoon Network.
-    code_from_html: Code.org, p5.play का उपयोग करती है, जिसका <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
-      LGPL 2.1</a> के अंतर्गत लाइसेंस है।
-    powered_by_aws: अमेज़ॅन वेब सर्विसेज द्वारा संचालित
-    built_on_github: माइक्रोसॉफ्ट से गिटहब पर बनाया गया
-    google_copyright: "&copy; Google Inc. अनुमति के साथ प्रयोग किया जाता है। Google
-      Classroom Google Inc. का ट्रेडमार्क है।"
-    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE लोगो और आवर
-      ऑफ़ कोड&reg; Code.org के ट्रेडमार्क हैं।"
-    copyright: कॉपीराइट
-    more: अधिक
-    feedback: प्रतिक्रिया प्रदान करें
-    translate: हमारी सामग्री को अनुवाद करने के लिए स्वेच्छा से आए
-    support: सहयोग
-    tos_short: शर्तें
-    tos: सेवा की शर्तें
+  teacher_feedback: अध्यापक की प्रतिक्रिया
+  teacher_mailer:
+    delete_teacher_subject: 'Code.org सूचना: आपका खाता मिटा दिया गया है'
+    new_teacher_subject: Code.org में आपका स्वागत है!
+    verified_teacher_subject: Code.org शिक्षक सत्यापन - सफलता
+  terms_interstitial:
+    accept: स्वीकार करें
+    accept_label: मैं <a href="%{tos_url}" target="_blank">सेवा की शर्तों</a> और <a
+      href="%{privacy_url}" target="_blank">गोपनीयता नीति</a> के लिए सहमत हूं।
+    accept_label_markdown: मैं [सेवा की शर्तों](%{tos_url}) और [गोपनीयता नीति](%{privacy_url})
+      के लिए सहमत हूं।
+    accept_tos: Code.org के लिए साइन अप करके, आप हमारी [सेवा की शर्तों](%{tos_url})
+      और [गोपनीयता नीति](%{privacy_url}) के लिए सहमति देते हैं।
+    intro_desc: 'हमने अपनी सेवा की शर्तों और गोपनीयता नीति का अद्यतन किया है, जैसा
+      कि नीचे दिखाया गया है। बदलाव 24 अगस्त 2016 से प्रभावी होंगे। सबसे बड़ा बदलाव
+      है: हम <i>अब कोड स्टूडियो पर छात्र खातों के लिए ईमेल पते संचित नहीं करेंगे।</i>
+      यह हमारे लिए बहुत बड़ी बात है, और हमें आशा है कि यह शिक्षा तकनीक में छात्र गोपनीयता
+      का नया मानक तय करती है। हमने आपको ईमेल द्वारा अन्य बदलावों का सारांश भेज दिया
+      है।'
+    intro_desc_markdown: 'हमने अपनी सेवा की शर्तों और गोपनीयता नीति का अद्यतन किया
+      है, जैसा कि नीचे दिखाया गया है। बदलाव 24 अगस्त 2016 से प्रभावी होंगे। सबसे बड़ा
+      बदलाव है: हम _अब कोड स्टूडियो पर छात्र खातों के लिए ईमेल पते संचित नहीं करेंगे।_
+      यह हमारे लिए बहुत बड़ी बात है, और हमें आशा है कि यह शिक्षा तकनीक में छात्र गोपनीयता
+      का नया मानक तय करती है। हमने आपको ईमेल द्वारा अन्य बदलावों का सारांश भेज दिया
+      है।'
+    intro_instructions: आपको कोड स्टूडियो में सभी नवीनतम विशेषताओं तक पूरी पहुंच पाने
+      के लिए अपनी कक्षा में 13 वर्ष से कम की आयु वाले छात्रों के लिए इन नई शर्तों
+      को स्वीकार करना होगा। 13 वर्ष से कम की आयु वाले छात्र के लिए खाता पंजीकृत करते
+      समय, आपसे यह पुष्टि करने के लिए कहा जाएगा कि आपके स्कूल के पास, कोड स्टूडियो
+      जैसे शिक्षा कार्यक्रमों सहित, स्कूल के उपयोग और लाभ के लिए छात्र की निजी जानकारी
+      एकत्र करने के लिए माता-पिता की सहमति है।
+    print: छापें
     privacy: गोपनीयता नीति
-    privacy_updated: गोपनीयता नीति (अपडेट किया गया)
-    secure: सुरक्षित संस्करण
-    report_abuse: दुर्व्यवहार रिपोर्ट करें
-    built_on_code_studio: कोड स्टूडियो पर आधारित
-    make_my_own_app: मेरा खुद का ऐप बनाएं
-    how_it_works: यह कैसे काम करता है (कोड देखें)
-    try_hour_of_code: आवर ऑफ़ कोड आजमाएं!
-    store: स्टोर
-    cookie_notice: कुकी नोटिस
-    view_code: कोड देखें
-    locale_select: भाषा का चयन करें
-  reference_area:
-    title: मदद चाहिए?
-    subtitle: देखें ये वीडियो और संकेत
-    teacher: समाधान देखें
-    teacher_no_solution: समाधान देखना बंद करें
-    auth_error: आपको समाधान देखने की अनुमति नहीं है।
-    submit: कलाकार स्थान अद्यतन करें
-    direction: दिशा शुरू करें (डिग्रियों में)
-  video:
-    tab: वीडियो
-    notes: कोई वीडियो नहीं? नोट्स दिखाएं
-    notes_coming_soon: इस वीडियो के लिए नोट्स जल्द आ रहे हैं।
-    autoplay_option: वीडियो को ऑटोप्ले करें
-    download: वीडियो डाउनलोड करें
-    show_notes: नोट्स दिखाएं
-    show_video: वीडियो दिखाएं
-    label: वीडीयो
-  compatibility:
-    upgrade:
-      unsupported_message: आपका ब्राउजर समर्थित नहीं है। कृपया अपने ब्राउजर को <a
-        href='%{supported_browsers_url}', target='_blank'>हमारे समर्थित ब्राउजरों
-        में से एक</a> के साथ अपग्रेड करें। आप पृष्ठ देखने का प्रयास कर सकते हैं, लेकिन
-        कार्यात्मकता खंडित हुई हो सकती है।
-      link: अधिक जानें
-      applab_unsupported_tablet: ऐप लैब माउस और कीबोर्ड के साथ डेस्कटॉप या लैपटॉप
-        कंप्यूटर पर सबसे अच्छा काम करता है। आपकी मौजूदा डिवाइस पर इस टूल का उपयोग
-        करने में आपको समस्याएं आ सकती हैं।
-      gamelab_unsupported_tablet: गेम लैब माउस और कीबोर्ड के साथ डेस्कटॉप या लैपटॉप
-        कंप्यूटर पर सबसे अच्छा काम करता है। आपकी मौजूदा डिवाइस पर इस टूल का उपयोग
-        करने में आपको समस्याएं आ सकती हैं।
-      weblab_unsupported_locale_storage: 'निजी ब्राउजिंग मोड में वेब लैब का उपयोग
-        करने में आपको समस्याएं आ सकती हैं। कृपया अपने प्रोजेक्ट को सामान्य मोड में
-        पुनःलोड करें। असुविधा के लिए खेद है। '
-  deprecation:
-    algebra_lab: 'बीजगणित पाठ्यक्रम और सामग्री में सीएस को बहिष्कृत किया जा रहा है।
-      अगले कुछ महीनों में यह लैब उपलब्ध नहीं रहेगी। कृपया इसके बजाय [बूटस्ट्रैप: बीजगणित]
-      (%{bootstrap_algebra_url}) देखें। [और जानें] (%{cs_algebra_url})।'
-  slow_loading: इसमें सामान्य से बहुत अधिक समय लग रहा है...
+    privacy_notice: गोपनीयता नोटिस
+    reminder_desc: हमने अपनी <a href="%{tos_url}" target="_blank">सेवा की शर्तों</a>
+      और <a href="%{privacy_url}" target="_blank">गोपनीयता नीति</a> का अद्यतन किया
+      है। कृपया उन्हें स्वीकार करने से पहले अच्छी तरह पढ़ लें। ध्यान दें कि अद्यतन
+      की गई शर्तों को स्पष्ट रूप से स्वीकार करने से पहले JavaScript सिखाने वाले हमारे
+      टूल्स आपके छात्रों के लिए उपलब्ध नहीं हो सकते।
+    reminder_desc_markdown: हमने अपनी [सेवा की शर्तों](%{tos_url}) और [गोपनीयता नीति](%{privacy_url})
+      का अद्यतन किया है। कृपया उन्हें स्वीकार करने से पहले अच्छी तरह पढ़ लें। ध्यान
+      दें कि अद्यतन की गई शर्तों को स्पष्ट रूप से स्वीकार करने से पहले JavaScript
+      सिखाने वाले हमारे टूल्स आपके छात्रों के लिए उपलब्ध नहीं हो सकते।
+    review_terms: अद्यतन की गई शर्तों की समीक्षा करें
+    title: अद्यतन की गई सेवा की शर्तें और गोपनीयता नीति
+    tos: सेवा की शर्तें
+  text_match:
+    correct_body: यह सही जवाब है।
+    correct_title: सही
+    open_response_body: आपके जवाब के लिए धन्यवाद!
+    open_response_title: धन्यवाद
+    placeholder: अपना उत्तर यहाँ दर्ज करें
+  time:
+    day: दिन
+    hour: 1 घंटा
+    week: सप्ताह
+  trophies: ट्राफियां
+  try_hoc: 'ऑवर ऑफ़ कोड का प्रयास करे, यहाँ क्लिक करें >> '
+  try_k8intro: हमारा K-8 कंप्यूटर विज्ञान का परिचय पाठ्यक्रम (१५-२५ घंटे) का प्रयास
+    करें
   try_reloading: पृष्ठ को पुनः लोड करने का प्रयास करें
-  next_stage: समाप्त! अगले चरण पर जारी रखें
-  download_pdf: पाठ योजना खोलें
-  lesson_plan: पाठ योजना
-  view_lesson_plan: पाठ योजना देखें
-  pdf_download: PDF डाउनलोड करें
-  download_coming_soon: डाउनलोड करने योग्य गतिविधि जल्द आ रही है।
-  video_coming_soon: वीडियो जल्द आ रहा है!
-  share_code:
-    title: क्रिया में होने वाले मेरे कार्यक्रम को देखने के लिए 'चलाएं' पर क्लिक करें
-    bounce_og_title: मेरी बाउंस गेम देखें
-    flappy_og_title: मेरी फ्लैपी गेम देखें
-    studio_og_title: मेरा प्ले लैब ऐप देखें
-    check_out_what_i_made: देखें कि मैंने क्या बनाया है
-    og_description: मैंने Code.org के साथ खुद कोड लिखा है
-    phone_number_not_allowed: ऐसा प्रतीत होता है कि इसमें फोन नंबर है। टेक्सट बदलने
-      का प्रयास करें।
-    address_not_allowed: ऐसा प्रतीत होता है कि इसमें पता है। टेक्सट बदलने का प्रयास
-      करें।
-    email_not_allowed: ऐसा प्रतीत होता है कि इसमें ईमेल है। टेक्सट बदलने का प्रयास
-      करें।
-    profanity_not_allowed: ऐसा प्रतीत होता है कि इसमें गाली है। टेक्सट बदलने का प्रयास
-      करें।
-  builder:
-    created: आपने नई स्क्रिप्ट बनाई है।
-    destroyed: आपने स्क्रिप्ट नष्ट कर दी।
-    manage: स्तर बनाएं
-    view: देखें
-    back: स्क्रिप्ट्स पर वापस जाएं
-    success: आपने सफलतापूर्वक ब्लॉक संपादित किए।
-    level:
-      create: नया स्तर बनाएं
-      current: मौजूदा स्तर
-      unused: उपयोग न किए गए स्तर
+  unit_prefix: इकाई %{n}
+  unplugged_activity: अनप्लग्ड एक्टिविटी
+  unsubmit: अनसब्मिट
   upsell:
+    20-hour:
+      body: 20-घंटे के इस कोर्स में मुख्य कंप्यूटर साइंस और कोर्स 2-4 में मौजूद प्रोग्रामिंग
+        अवधारणाओं को शामिल किया गया है। कोर्स 10-18 आयु वर्ग के छात्रों के लिए तैयार
+        किया गया है। अधिक संपूर्ण अनुभव के लिए कोर्स 2-4 देखें!
+      body_short: पाठ्यक्रमों 2-4 के त्वरित संस्करण में कंप्यूटर साइंस की बुनियादी
+        बातें सीखें।
+      title: त्वरित पाठ्यक्रम
     applab:
-      title: ऐप लैब
+      audience: आयु 13+
       body: ऐप लैब एक प्रोग्रामिंग वातावरण है जहां आप सरल ऐप बना सकते हैं। एक ऐप डिज़ाइन
         करें, इसे काम करने के लिए ब्लॉक या जावास्क्रिप्ट के साथ कोड करें, फिर सेकंडो
         में अपना ऐप साझा करें।
       body_short: ऐप डिजाइन करें, इसे लाभदायक बनाने के लिए ब्लॉक्स या JavaScript के
         साथ कोड बनाएं, फिर सेकंडों में अपना ऐप साझा करें।
-      audience: आयु 13+
       cta: जानें कैसे
       image_alt: रॉकेट से चलने वाला बैकपैक पहने बैंगनी रंग का बन्नी।
+      title: ऐप लैब
     applab-intro:
       image_alt: एक हाथ स्मार्टफोन स्क्रीन के केंद्र को टैप कर रहा है। स्क्रीन से
         लाइट और स्पार्कल्स निकल रहे हैं।
     aquatic:
-      title: माइनक्राफ्ट
       image_alt: माइनक्राफ्ट के स्टीव और एलेक्स आपको देख रहे हैं।
+      title: माइनक्राफ्ट
     artist:
       image_alt: एक कार्टूनिश व्यक्ति एक विशाल पेंसिल पकड़े हुए और एक त्रिकोण खींचता
         है।
@@ -887,14 +1378,14 @@ hi:
     coursef:
       image_alt: रंगीन ज्यामितीय आकृतियों, एक लाल समुद्री डाकू और एक कलाकार को दर्शाने
         वाली Code.org पहेलियों का एक कोलाज।
-    dance-2019:
+    dance:
+      image_alt: एक पार्टी में नाचती हुई एक मस्त बिल्ली और खुश शार्क।
       title: डांस पार्टी
+    dance-2019:
       image_alt: एक खुश बिल्ली, आलसी, और शार्क नाचते हुए।
+      title: डांस पार्टी
     dance-2022:
       image_alt: पृष्ठभूमि में शनि के साथ नृत्य करते एक हरे रंग का एलियन और रोबोट।
-    dance:
-      title: डांस पार्टी
-      image_alt: एक पार्टी में नाचती हुई एक मस्त बिल्ली और खुश शार्क।
     donate:
       image_alt: Code.org पहेली दिखाने वाली लैपटॉप स्क्रीन की ओर इशारा करता एक बच्चा।
     elementary:
@@ -903,127 +1394,107 @@ hi:
     express:
       image_alt: फ्लैपी बर्ड के बगल में खड़े पौधे बनाम ज़ोंबी ज़ोंबी और पौधे।
     flappy:
-      title: फ्लैपी कोड
       body: क्या आप 10 मिनट से कम समय में अपनी खुद की गेम लिख सकते हैं? हमारा फ्लैपी
         कोड ट्यूटोरियल आजमाएं!
       image_alt: हरे पाइपों के बीच उड़ने वाला एक पीला पक्षी।
+      title: फ्लैपी कोड
     frozen:
-      title: फ्रोजन
       image_alt: फिल्म फ्रोजन से अन्ना और एल्सा। उनके बीच एक छवि है जिसमें अन्ना अपने
         आइस स्केट्स का उपयोग करके बर्फ में एक सुंदर आकृति बना रही हैं।
+      title: फ्रोजन
     gallery:
-      title: गैलरी
       body: ऐप की गैलरी और हमारे उपयोगकर्ताओं द्वारा बनाए कलाकार चित्र देखें
       image_alt: एक कलाकार बहुत सारे वृत्त बनाता है और एक बिल्ली, चमगादड़ और भूत सर्दियों
         की छुट्टियों की भूमि में खड़े होते हैं।
+      title: गैलरी
     gamelab:
-      title: गेम लैब
+      audience: आयु 13+
       body: गेम लैब एक प्रोग्रामिंग वातावरण है जहां आप वस्तुओं और पात्रों के साथ सरल
         एनिमेशन और गेम बना सकते हैं जो एक दूसरे के साथ बातचीत करते हैं।
-      audience: आयु 13+
       cta: जानें कैसे
       image_alt: कई कार्टून लोग और जानवर फुटपाथ पर खड़े होकर मुस्कुराते हैं।
-    hello-world-food:
-      image_alt: कई जानवर, एलियंस और इमोजी पृथ्वी की परिक्रमा करते हैं।
+      title: गेम लैब
     hello-world:
-      title: हैलो दुनिया
       body: आपके द्वारा बनाई गई दुनिया में इंटरैक्टिव वर्णों को कोड करने के लिए चार
         मज़ेदार थीम्स में से चुनें।
+      title: हैलो दुनिया
+    hello-world-food:
+      image_alt: कई जानवर, एलियंस और इमोजी पृथ्वी की परिक्रमा करते हैं।
     hero:
-      title: माइनक्राफ्ट
       body: Minecraft बिल्कुल नई गतिविधि के साथ आवर ऑफ़ कोड के लिए लौट आया है! कोड
         के साथ Minecraft के माध्यम से सफर।
       image_alt: माइनक्राफ्ट का एक आयरन गोलेम एक पहेली को हल करते हुए अन्ना के ऊपर
         के दृश्य के सामने खड़ा है।
-    hoc-encryption:
-      title: सरल एन्क्रिप्शन
-      body: छात्र एन्क्रिप्टेड संदेशों को बनाने और तोड़ने के तकनीक सीखेंगे।
-      image_alt: अंग्रेजी भाषा में अक्षर आवृत्तियों का एक बार ग्राफ।
+      title: माइनक्राफ्ट
     hoc:
-      title: क्लासिक मेज़ (Classic Maze)
       body: कंप्यूटर विज्ञान की मूल बातें आज़माएं। लाखों ने इसे ट्राई किया है।
       image_alt: कोड, मार्क जुकरबर्ग और एंग्री बर्ड्स दिखाने वाली तस्वीरों का एक कोलाज।
+      title: क्लासिक मेज़ (Classic Maze)
+    hoc-encryption:
+      body: छात्र एन्क्रिप्टेड संदेशों को बनाने और तोड़ने के तकनीक सीखेंगे।
+      image_alt: अंग्रेजी भाषा में अक्षर आवृत्तियों का एक बार ग्राफ।
+      title: सरल एन्क्रिप्शन
+    hoc2014:
+      try_frozen: Frozen से ऐना और एल्सा के साथ कलाकार
+      try_new_tutorial: बीटा में हमारा नया आवर ऑफ़ कोड ट्यूटोरियल आजमाएं
     hourofcode:
       image_alt: कोड, मार्क जुकरबर्ग और एंग्री बर्ड्स दिखाने वाली तस्वीरों का एक कोलाज।
-    hoc2014:
-      try_new_tutorial: बीटा में हमारा नया आवर ऑफ़ कोड ट्यूटोरियल आजमाएं
-      try_frozen: Frozen से ऐना और एल्सा के साथ कलाकार
     infinity:
-      title: इन्फिनिटी प्ले लैब
       body: डिज्नी इन्फिनिटी पात्रों द्वारा अभिनीत एक कहानी या गेम बनाने के लिए उपयोग
         करें।
       image_alt: फ्रोज़, टैंगल्ड और बिग हीरो 6 के पांच किरदार एक साथ खड़े हैं।
+      title: इन्फिनिटी प्ले लैब
     map:
       image_alt: लगभग 20 राज्यों के साथ संयुक्त राज्य अमेरिका की एक धूसर छवि बैंगनी
         रंग में हाइलाइट की गई है।
-    mc_escape:
-      image_alt: पन्ने से भरा खजाना खोलते समय एक शीर्ष टोपी और मोनोकल पहने हुए एक
-        माइनक्राफ्ट चरित्र।
     mc:
       image_alt: Minecraft के अन्ना और स्टीव एक Code.org Minecraft पहेली के सामने
         खड़े हैं।
+    mc_escape:
+      image_alt: पन्ने से भरा खजाना खोलते समय एक शीर्ष टोपी और मोनोकल पहने हुए एक
+        माइनक्राफ्ट चरित्र।
     minecraft:
-      title: माइनक्राफ्ट
       body: कोड के जरिए Minecraft की दुनिया का पता लगाएँ
       image_alt: Minecraft के अन्ना और स्टीव एक Code.org Minecraft पहेली के सामने
         खड़े हैं।
-    minecraft2016:
       title: माइनक्राफ्ट
+    minecraft2016:
       body: Minecraft के आपके खुद के संस्करण में जानवरों और अन्य Minecraft प्राणियों
         को प्रोग्राम करें।
+      title: माइनक्राफ्ट
     oceans:
       image_alt: समुद्र में एक रोबोट विभिन्न समुद्री जीवों को स्कैन कर रहा है।
     playlab:
       image_alt: एक नीली बिल्ली, नासमझ कुत्ते और प्रागैतिहासिक नेवला को दिखाने वाला
         एक चित्र कोलाज।
     poem-art:
-      title: कविता आर्ट
       body: अपने आप को व्यक्त करें! एनिमेटेड कविताएं तैयार करने के लिए कोड का प्रयोग
         करें।
       image_alt: एक मंच पर प्रदर्शन करते हुए एक हिप्स्टर स्क्वीड।
+      title: कविता आर्ट
+    pre-express:
+      image_alt: पहेली के टुकड़ों से बने पेड़ के सामने एक कुत्ता और गेंडा खड़ा है।
     pre-express-2017:
       image_alt: पहेली के टुकड़ों से बने पेड़ के सामने एक कुत्ता और गेंडा खड़ा है।
     pre-express-2018:
       image_alt: पहेली के टुकड़ों से बने पेड़ के सामने एक कुत्ता और गेंडा खड़ा है।
     pre-express-2019:
       image_alt: पहेली के टुकड़ों से बने पेड़ के सामने एक कुत्ता और गेंडा खड़ा है।
-    pre-express:
-      image_alt: पहेली के टुकड़ों से बने पेड़ के सामने एक कुत्ता और गेंडा खड़ा है।
     sports:
-      title: खेल
       body: बास्केटबॉल गेम बनाएं या खेलों में मिलाएं व मिलान करें।
       image_alt: फुटबॉल, सॉकर बॉल, हॉकी पक और बास्केटबॉल के बगल में NBA और WNBA लोगो
         प्रदर्शित होते हैं।
+      title: खेल
     starwars:
-      title: स्टार वॉर्स
       image_alt: R2-D2, लीया, रे, और BB-8 एक रेगिस्तान में खड़े हैं।
+      title: स्टार वॉर्स
     text-compression:
-      title: टेक्स्ट कम्प्रेशन
       body: इस पाठ में, छात्र प्रतीकों के साथ पैटर्न को प्रतिस्थापित करके टेक्स्ट
         को कम्प्रेश करने के लिए टेक्स्ट कम्प्रेशन विजेट (widget) का उपयोग करेंगे।
       image_alt: संपूर्ण शब्दों को एक प्रतीक से बदलकर पाठ को संपीड़ित किया जा रहा
         है।
-    weblab:
-      title: वेब लैब (बीटा)
-      body: वेब लैब एक प्रोग्रामिंग वातावरण है जहां आप HTML और CSS का उपयोग करके सरल
-        वेब पेज बना सकते हैं। अपने वेब पेज डिज़ाइन करें और सेकंडो में अपनी साइट साझा
-        करें।
-      audience: आयु 13+
-      cta: जानें कैसे
-      image_alt: HTML कोड प्रदर्शित करने वाली एक कंप्यूटर स्क्रीन।
-    widgets:
-      title: विजेट (Widgets)
-      body: छात्र इन डिजीटल टूल्स का उपयोग करते हुए हमारे प्रायोगिक कंप्यूटर साइंस
-        सिद्धांत पाठ्यक्रम से अवधारणाओं की पड़ताल कर सकते हैं। उनके खुद के विजेट का
-        उपयोग करें, या अपनी कक्षा के लिए एकल-अवधारणा वाला पाठ तैयार करें।
-      audience: आयु 14+
-      cta: जानें कैसे
-    unplugged_conditionals:
-      title: कंडीशनल्स
-      body: कार्ड के डेक का उपयोग करके इस "अनप्लग्ड" गतिविधि में एल्गोरिदम और कंडीशनल
-        स्टेटमेंट के बारे में जानें।
+      title: टेक्स्ट कम्प्रेशन
     unplugged:
-      title: अनप्लग किए गए पाठ
       audience: आयु 4+
       body: हमने आपकी कक्षा में आपके उपयोग के लिए अनप्लग किए गए पाठों की सूची संकलित
         की है। अब आप कंप्यूटर साइंस के मूल सिद्धांत सिखा सकते हैं, चाहे आपकी कक्षा
@@ -1032,169 +1503,129 @@ hi:
         करने का प्रयास करें।
       body_short: यदि आपके पास कंप्यूटर नहीं हैं, तो अपनी कक्षा में इन अनप्लग किए
         पाठों को आजमाएं।
-    20-hour:
-      title: त्वरित पाठ्यक्रम
-      body: 20-घंटे के इस कोर्स में मुख्य कंप्यूटर साइंस और कोर्स 2-4 में मौजूद प्रोग्रामिंग
-        अवधारणाओं को शामिल किया गया है। कोर्स 10-18 आयु वर्ग के छात्रों के लिए तैयार
-        किया गया है। अधिक संपूर्ण अनुभव के लिए कोर्स 2-4 देखें!
-      body_short: पाठ्यक्रमों 2-4 के त्वरित संस्करण में कंप्यूटर साइंस की बुनियादी
-        बातें सीखें।
-  landing:
-    prerelease_tutorial: यह ट्यूटोरियल **बीटा** में है। यह फीडबैक प्राप्त होने और
-      सुधार किए जाने के कारण संशोधन के अधीन है।
-    report_bug: बग की रिपोर्ट करें
-    support: मदद प्राप्त करें
-    help_resources: मदद और संसाधन
-    help_support: सहायता और समर्थन
-    documentation: दस्तावेजीकरण
-    tutorials: ट्यूटोरियल
-  free_response:
-    placeholder: अपना उत्तर यहाँ दर्ज करें
-  multi:
-    wrong_title: गलत जवाब
-    wrong_body: आपके द्वारा दर्ज किया गया जवाब सही नहीं है।  कृपया दुबारा प्रयास करें!
-    correct_title: सही
-    correct_body: यह सही जवाब है।
-  multi-submittable:
-    wrong_title: धन्यवाद
-    wrong_body: जवाब प्रस्तुत करने के लिए धन्यवाद।
-    correct_title: धन्यवाद
-    correct_body: जवाब प्रस्तुत करने के लिए धन्यवाद।
-  level_group:
-    wrong_title: धन्यवाद
-    wrong_body: जवाब प्रस्तुत करने के लिए धन्यवाद।
-    correct_title: धन्यवाद
-    correct_body: जवाब प्रस्तुत करने के लिए धन्यवाद।
-    hide_survey_last_answer: यह सर्वेक्षण बिना नाम का है।   कृपया संचित परिणामों के
-      लिए अध्यापक डैशबोर्ड पर जाएं।  ध्यान दें कि परिणाम केवल तभी दिखाई देंगे, यदि
-      कम से कम पांच छात्रों ने सर्वेक्षण प्रस्तुत किया है।
-    survey_submission_thankyou: यह सर्वेक्षण प्रस्तुत करने के लिए आपका धन्यवाद! सर्वेक्षण
-      मिटा दिया गया है ताकि आपके जवाब गुमनाम रह पाएं। ध्यान दें कि आपका अध्यापक तब
-      भी संपूर्ण कक्षा के लिए जवाब देखने में सक्षम होगा, लेकिन बिना शामिल किए नामों
-      के।
-  level_group-submittable:
-    wrong_title: धन्यवाद
-    wrong_body: जवाब प्रस्तुत करने के लिए धन्यवाद।
-    correct_title: धन्यवाद
-    correct_body: जवाब प्रस्तुत करने के लिए धन्यवाद।
-    unsubmit-title: अपना मूल्यांकन असब्मिट करें
-    unsubmit-body: अपने मूल्यांकन को अनसब्मिट करने से प्रस्तुत करने का समय और तिथि
-      पुनः सेट हो जाएगी।  क्या आप निश्चित हैं?
-    submit-incomplete-title: अपना मूल्यांकन प्रस्तुत करें
-    submit-incomplete-body: आपने कुछ सवाल अधूरे छोड़ दिए हैं।  इसे प्रस्तुत करने के
-      बाद आप अपने मूल्यांकन को संपादित नहीं कर सकते।  क्या आप निश्चित हैं?
-    submit-complete-title: अपना मूल्यांकन प्रस्तुत करें
-    submit-complete-body: इसे प्रस्तुत करने के बाद आप अपने मूल्यांकन को संपादित नहीं
-      कर सकते।  क्या आप निश्चित हैं?
-  match:
-    wrong_title: गलत समाधान
-    wrong_body: आपके द्वारा दर्ज किया गया समाधान सही नहीं है।  कृपया दुबारा प्रयास
-      करें!
-    correct_title: सही
-    correct_body: यह सही जवाब है।
-  contract_match:
-    wrong_title: गलत जवाब
-    badname: आपके कांट्रैक्ट का गलत नाम है।
-    badname_case: कार्य नाम केस-सेंसिटिव हैं।  अपने कांट्रैक्ट के नाम का केस बदलने
-      का प्रयास करें।
-    badrange: आपके कांट्रैक्ट की गलत रेंज है।
-    baddomainsize: डोमेन में आपके कांट्रैक्ट के पास आइटमों की सही संख्या नहीं है।
-    baddomainname: आपकी एक या अधिक डोमेन आइटमों का गलत नाम है।
-    baddomaintype: आपकी एक या अधिक डोमेन आइटमों का गलत प्रकार है, या वे गलत क्रम में
+      title: अनप्लग किए गए पाठ
+    unplugged_conditionals:
+      body: कार्ड के डेक का उपयोग करके इस "अनप्लग्ड" गतिविधि में एल्गोरिदम और कंडीशनल
+        स्टेटमेंट के बारे में जानें।
+      title: कंडीशनल्स
+    weblab:
+      audience: आयु 13+
+      body: वेब लैब एक प्रोग्रामिंग वातावरण है जहां आप HTML और CSS का उपयोग करके सरल
+        वेब पेज बना सकते हैं। अपने वेब पेज डिज़ाइन करें और सेकंडो में अपनी साइट साझा
+        करें।
+      cta: जानें कैसे
+      image_alt: HTML कोड प्रदर्शित करने वाली एक कंप्यूटर स्क्रीन।
+      title: वेब लैब (बीटा)
+    widgets:
+      audience: आयु 14+
+      body: छात्र इन डिजीटल टूल्स का उपयोग करते हुए हमारे प्रायोगिक कंप्यूटर साइंस
+        सिद्धांत पाठ्यक्रम से अवधारणाओं की पड़ताल कर सकते हैं। उनके खुद के विजेट का
+        उपयोग करें, या अपनी कक्षा के लिए एकल-अवधारणा वाला पाठ तैयार करें।
+      cta: जानें कैसे
+      title: विजेट (Widgets)
+  user:
+    account_successfully_updated: खाता सफलतापूर्वक अद्यतन हो गया।
+    auth_option_saved: आपने अपने %{provider} खाते को ईमेल %{email} के साथ सफलतापूर्वक
+      लिंक कर लिया है।
+    auth_option_saved_no_email: आपने अपना %{provider} खाता सफलतापूर्वक लिंक कर लिया
+      है।
+    confirm_secret_words: अपने मौजूदा गुप्त शब्द दर्ज करके पुष्टि करें कि यह आप हैं
+    create_personal_login: निजी पासवर्ड लॉगिन बनाएं
+    create_personal_login_email_note: 'नोट: ईमेल पते एक फॉर्म में संग्रहित नहीं किए
+      जाते, जिससे हम छात्रों से संपर्क कर पाएं। पासवर्ड रिकवरी के सिवाय छात्रों को
+      कभी भी Code.org से ईमेल नहीं आएगी। अधिक जानकारी के लिए हमारी our <a href=''%{privacy_policy_url}'',
+      target=''_blank''>गोपनीयता नीति देखें</a>।'
+    create_personal_login_email_note_markdown: 'नोट: ईमेल पते एक फॉर्म में संग्रहित
+      नहीं किए जाते, जिससे हम छात्रों से संपर्क कर पाएं। पासवर्ड रिकवरी के सिवाय छात्रों
+      को कभी भी Code.org से ईमेल नहीं आएगी। अधिक जानकारी के लिए हमारी our [गोपनीयता
+      नीति देखें](%{privacy_policy_url})।'
+    create_personal_login_info: यदि आप अपने स्कूल वर्ष के समाप्त होने के बाद भी अपने
+      Code.org खाते का उपयोग जारी रखना चाहते हैं, तो नीचे अपना खुद का लॉगिन बना सकते
       हैं।
-  text_match:
-    placeholder: अपना उत्तर यहाँ दर्ज करें
-    open_response_title: धन्यवाद
-    open_response_body: आपके जवाब के लिए धन्यवाद!
-    correct_title: सही
-    correct_body: यह सही जवाब है।
-  lesson_extras:
-    bonus_level: बोनस स्तर
-  dialog:
-    ok: ठीक है
-    startover_title: Aapko यकीन है कि आप prarambh se शुरू करना चाहते हैं?
-    startover_body: यह पहेली को इसकी शुरुआती स्थिति में पुनः सेट कर देगा और आपके द्वारा
-      जोड़ा गया या बदला गया पूरा डेटा पुनः सेट कर देगा।
-    startover_ok: 'पुन: प्रारंभ करें'
-    startover_cancel: रद्द करें
-  time:
-    hour: 1 घंटा
-    day: दिन
-    week: सप्ताह
-  age_interstitial:
-    age: आपकी आयु
-    header: खाता सूचना अद्यतन
-    warning: हम आपको और भी मजबूत गोपनीयता सुरक्षा देने के लिए अपने अनुभव को अपडेट
-      करने की प्रक्रिया में हैं। ऐसा करने के लिए, हमें मौजूदा उपयोगकर्ताओं के द्वारा
-      यहां अपनी आयु दर्ज करने की आवश्यकता है।
-    disclaimer: हमेशा की तरह, code.org इस जानकारी को कभी भी किसी तीसरे पक्षों को किराए
-      पर नहीं देगा, बेचेगा नहीं या साझा नहीं करेगा।
-    sign_out_markdown: यदि आप अपनी आयु नहीं देना चाहते हैं तो आप [साइन आउट](%{url})
-      कर सकते हैं।
-  terms_interstitial:
-    title: अद्यतन की गई सेवा की शर्तें और गोपनीयता नीति
-    intro_desc: 'हमने अपनी सेवा की शर्तों और गोपनीयता नीति का अद्यतन किया है, जैसा
-      कि नीचे दिखाया गया है। बदलाव 24 अगस्त 2016 से प्रभावी होंगे। सबसे बड़ा बदलाव
-      है: हम <i>अब कोड स्टूडियो पर छात्र खातों के लिए ईमेल पते संचित नहीं करेंगे।</i>
-      यह हमारे लिए बहुत बड़ी बात है, और हमें आशा है कि यह शिक्षा तकनीक में छात्र गोपनीयता
-      का नया मानक तय करती है। हमने आपको ईमेल द्वारा अन्य बदलावों का सारांश भेज दिया
-      है।'
-    intro_desc_markdown: 'हमने अपनी सेवा की शर्तों और गोपनीयता नीति का अद्यतन किया
-      है, जैसा कि नीचे दिखाया गया है। बदलाव 24 अगस्त 2016 से प्रभावी होंगे। सबसे बड़ा
-      बदलाव है: हम _अब कोड स्टूडियो पर छात्र खातों के लिए ईमेल पते संचित नहीं करेंगे।_
-      यह हमारे लिए बहुत बड़ी बात है, और हमें आशा है कि यह शिक्षा तकनीक में छात्र गोपनीयता
-      का नया मानक तय करती है। हमने आपको ईमेल द्वारा अन्य बदलावों का सारांश भेज दिया
-      है।'
-    intro_instructions: आपको कोड स्टूडियो में सभी नवीनतम विशेषताओं तक पूरी पहुंच पाने
-      के लिए अपनी कक्षा में 13 वर्ष से कम की आयु वाले छात्रों के लिए इन नई शर्तों
-      को स्वीकार करना होगा। 13 वर्ष से कम की आयु वाले छात्र के लिए खाता पंजीकृत करते
-      समय, आपसे यह पुष्टि करने के लिए कहा जाएगा कि आपके स्कूल के पास, कोड स्टूडियो
-      जैसे शिक्षा कार्यक्रमों सहित, स्कूल के उपयोग और लाभ के लिए छात्र की निजी जानकारी
-      एकत्र करने के लिए माता-पिता की सहमति है।
-    tos: सेवा की शर्तें
-    privacy: गोपनीयता नीति
-    privacy_notice: गोपनीयता नोटिस
-    accept_label: मैं <a href="%{tos_url}" target="_blank">सेवा की शर्तों</a> और <a
-      href="%{privacy_url}" target="_blank">गोपनीयता नीति</a> के लिए सहमत हूं।
-    accept_label_markdown: मैं [सेवा की शर्तों](%{tos_url}) और [गोपनीयता नीति](%{privacy_url})
-      के लिए सहमत हूं।
-    accept_tos: Code.org के लिए साइन अप करके, आप हमारी [सेवा की शर्तों](%{tos_url})
-      और [गोपनीयता नीति](%{privacy_url}) के लिए सहमति देते हैं।
-    accept: स्वीकार करें
-    print: छापें
-    reminder_desc: हमने अपनी <a href="%{tos_url}" target="_blank">सेवा की शर्तों</a>
-      और <a href="%{privacy_url}" target="_blank">गोपनीयता नीति</a> का अद्यतन किया
-      है। कृपया उन्हें स्वीकार करने से पहले अच्छी तरह पढ़ लें। ध्यान दें कि अद्यतन
-      की गई शर्तों को स्पष्ट रूप से स्वीकार करने से पहले JavaScript सिखाने वाले हमारे
-      टूल्स आपके छात्रों के लिए उपलब्ध नहीं हो सकते।
-    reminder_desc_markdown: हमने अपनी [सेवा की शर्तों](%{tos_url}) और [गोपनीयता नीति](%{privacy_url})
-      का अद्यतन किया है। कृपया उन्हें स्वीकार करने से पहले अच्छी तरह पढ़ लें। ध्यान
-      दें कि अद्यतन की गई शर्तों को स्पष्ट रूप से स्वीकार करने से पहले JavaScript
-      सिखाने वाले हमारे टूल्स आपके छात्रों के लिए उपलब्ध नहीं हो सकते।
-    review_terms: अद्यतन की गई शर्तों की समीक्षा करें
-  school_info_interstitial:
-    title: हम प्रत्येक छात्र तक कंप्यूटर साइंस पहुंचाना चाहते हैं - हमारी प्रगति को
-      ट्रैक करने में हमारी मदद करें!
-    message: कृपया नीचे अपने स्कूल की जानकारी दर्ज करें।
-    message_with_suggestion: कृपया सत्यापन करें कि निम्न जानकारी सही है, या आवश्यकता
-      के अनुसार अद्यतन करें।
-    save: सहेजें
-  race_interstitial:
-    title: 'वैकल्पिक: कंप्यूटर साइंस में विविधता में सुधार करने के प्रति हमारी प्रगति
-      को ट्रैक करने में हमारी मदद करें'
-    message: कृपया हमें अपनी जाति बताएं (उन सभी पर सही का निशान लगाएं, जो लागू होते
-      हैं)
-    races:
-      white: गोरा
-      black: ब्लैक या अफ्रीकी अमेरिकी
-      hispanic: हिस्पैनिक या लैटिनो
-      asian: एशियाई
-      hawaiian: मूल हवाईयन या अन्य पेसिफिक आईलैंडर
-      american_indian: अमेरिकी भारतीय/अलास्का मूल
-      other: अन्य
-      opt_out: नहीं बताना चाहते
-    submit: सबमिट करें
-    decline: बंद करें
+    create_personal_login_link_account: इसकी बजाय आप “लिंक किए खातों का प्रबंधन करें”
+      अनुभाग के अंतर्गत निजी खाते से जुड़ने का चयन भी कर सकते हैं।
+    create_personal_login_terms: निजी लॉगिन बनाकर, मैं Code.org की <a href='%{terms_of_service_url}',
+      target='_blank'>सेवा की शर्तों</a> से बाध्य होने के लिए सहमत हूं। मैं पुष्टि
+      करता हूं कि मुझे बिना अध्यापक के भी Code.org सेवाओं का उपयोग करने की मेरे माता
+      या पिता या कानूनी अभिभावक की अनुमति है।
+    create_personal_login_terms_markdown: निजी लॉगिन बनाकर, मैं Code.org की [सेवा
+      की शर्तों](%{terms_of_service_url}) से बाध्य होने के लिए सहमत हूं। मैं पुष्टि
+      करता हूं कि मुझे बिना अध्यापक के भी Code.org सेवाओं का उपयोग करने की मेरे माता
+      या पिता या कानूनी अभिभावक की अनुमति है।
+    create_personal_login_under_13_info: यदि आप अपने स्कूल वर्ष के समाप्त होने के
+      बाद भी अपने Code.org खाते का उपयोग जारी रखना चाहते हैं, तो नीचे अपना खुद का
+      निजी लॉगिन बनाने में अपने माता या पिता/अभिभावक से मदद लें।
+    create_personal_login_under_13_parent_email: माता या पिता/अभिभावक का ईमेल पता
+    create_personal_login_under_13_username: उपयोगकर्ता नाम (अपने असली नाम का उपयोग
+      न करें!)
+    current_password_hint: "(हमें आपके बदलावों की पुष्टि करने के लिए आपके मौजूदा पासवर्ड
+      की जरूरत है)"
+    delete: खाता मिटाएं
+    delete_confirm: क्या आप सचमुच अपना खाता मिटाना चाहते हैं?
+    delete_text: आपका खाता मिटाने से इस खाते से जुड़ी सारी जानकारी और प्रगति मिट जाएगी।
+    delete_text_teacher_managed_note: आपको इस खाते को मिटाने की अनुमति नहीं है क्योंकि
+      इसका प्रबंधन आपके अध्यापक द्वारा किया गया है। इससे पहले कि आप अपना खाता मिटा
+      पाएं, आपके अध्यापक(कों) को उनके अनुभागों से आपको हटाने की जरूरत होगी।
+    delete_text_teacher_note: 'कृपया नोट करें: आपका खाता मिटाने से आपके छात्रों के
+      खाते नहीं मिटेंगे।'
+    deleted_user: मिटाया गया उपयोगकर्ता
+    email_confirm_needed: 'ईमेल पते की पुष्टि नहीं की गई है:'
+    email_confirm_needed_required: 'आपके ईमेल पते %{email} की पुष्टि नहीं की गई है:'
+    email_confirm_wrong_email: "(गलत ईमेल पता?)"
+    email_resend_confirm: पुष्टिकरण निर्देश दुबारा भेजें
+    encrypted: कूटलेखन किया
+    enter_new_login_info: अपनी नई लॉगिन जानकारी दर्ज करें
+    enter_parent_email: अपने माता या पिता या अभिभावक का ईमेल पता दर्ज करें (पासवर्ड
+      रिकवरी के लिए)
+    for_parents_and_guardians: माता-पिता और अभिभावकों के लिए
+    link_a_parent_email: अपने बच्चे की प्रगति और प्रोजेक्ट्स के बारे में अपडेट्स प्राप्त
+      करने के लिए इस खाते को माता या पिता/अभिभावक ईमेल पते से लिंक करें। आप पासवर्ड
+      रिकवरी के लिए भी इस ईमेल पते का उपयोग कर पाएंगे।
+    new_email_hint: "(सुनिश्चित करें कि आप इस ईमेल पते पर ईमेल्स प्राप्त कर सकते हैं)"
+    new_password_hint: "(यदि आप इसे बदलना नहीं चाहते हैं तो खाली छोड़ दें)"
+    no_password_because_oauth: कोई पासवर्ड नहीं क्योंकि आप तृतीय-पक्ष के प्रदाता से
+      साइन इन करते हैं।
+    no_password_because_sponsored: अपने पासवर्ड का प्रबंधन करने के लिए अपने अध्यापक
+      से मिलें।
+    none: कोई नहीं
+    only_one_parent_email_supported_warning: 'ध्यान दें: हम इस समय प्रति विद्यार्थी
+      खाता, केवल एक माता या पिता/अभिभावक ईमेल पते को सहयोग करने में सक्षम हैं।'
+    parent_email_hint: "(इसे पासवर्ड रिकवरी के लिए उपयोग किया जा सकता है)"
+    parent_email_label: माता या पिता/अभिभावक की ईमेल (वैकल्पिक)
+    parent_guardian_email_label: अभिभावक ईमेल/
+    remove_parent_email_label: हटाएँ
+    update: खाता अद्यतन करें
+    update_email: अद्यतन करें
+  user_level:
+    completed: पूरा हो गया
+    tried: कोशिश की
+  user_type:
+    student: छात्र
+    teacher: अध्यापक
+  video:
+    autoplay_option: वीडियो को ऑटोप्ले करें
+    download: वीडियो डाउनलोड करें
+    label: वीडीयो
+    notes: कोई वीडियो नहीं? नोट्स दिखाएं
+    notes_coming_soon: इस वीडियो के लिए नोट्स जल्द आ रहे हैं।
+    show_notes: नोट्स दिखाएं
+    show_video: वीडियो दिखाएं
+    tab: वीडियो
+  video_coming_soon: वीडियो जल्द आ रहा है!
+  view_all_units: सभी इकाईयां देखें
+  view_lesson_plan: पाठ योजना देखें
+  view_teacher_guide: अध्यापक गाइड देखें
+  welcome_back: वापस, %{name} में आपका स्वागत है
+  welcome_email:
+    body: 'Code.org पर कंप्यूटर विज्ञान tutorials के लिए (मुझे अपने "शिक्षक" के रूप
+      में) के साथ साइन अप करने के लिए नीचे दिए गए लिंक पर क्लिक करें:%{link} ट्यूटोरियल
+      रहे हैं मज़ा, नेत्रहीन आकर्षक, और एक सरल, निर्देशित, खेल की तरह अनुभव का उपयोग
+      कर कंप्यूटर विज्ञान की मूलभूत अवधारणाओं सिखाने। बिल गेट्स, मार्क Zuckerberg,
+      गुस्से में पक्षियों और लाश बनाम संयंत्रों से कोड करने के लिए जानें! :-) %{name}
+
+      '
+    subject: मेरी कक्षा में शामिल हों (पर Code.org)
+  your_professional_learning_plan: आपका व्यावसायिक शिक्षण योजना
   zendesk_too_young_message: हमें खेद है कि कम आयु के उपयोगकर्ता हमारी सहयोग साइट
     पर साइन इन नहीं कर सकते। आप बिना साइन के <a href="http://support.code.org">support.code.org</a>
     को ब्राउज कर सकते हैं या अपने माता-पिता या अध्यापक से आपके लिए हमें संपर्क करने
@@ -1203,434 +1634,3 @@ hi:
     साइट पर साइन इन नहीं कर सकते। आप बिना साइन के [support.code.org](http://support.code.org)
     को ब्राउज कर सकते हैं या अपने माता-पिता या अध्यापक से आपके लिए हमें संपर्क करने
     के लिए कह सकते हैं।
-  progress:
-    not_started: शुरू नहीं हुआ
-    in_progress: प्रगति में
-    completed_too_many_blocks: पूरा हुआ, बहुत सारे ब्लॉक्स
-    completed_perfect: पूरा हुआ, बढ़िया
-    furthest_level_attempted: सबसे आगे के स्तर का प्रयास किया
-    assessment: मूल्यांकन
-    submitted: प्रस्तुत किया
-  studio:
-    courses_working_on: पाठ्यक्रम, जिन पर आप काम कर रहे हैं
-    completed_courses: पूरे किए गए पाठ्यक्रम
-    all_courses: सभी पाठ्यक्रम
-  project:
-    projects: प्रोजेक्ट्स
-    create: प्रोजेक्ट बनाएँ
-    create_a_project: 'एक नया प्रोजेक्ट बनाएं:'
-    new: नया बनाएँ
-    exit: पाठ्यक्रम पर लौटें
-    project_gallery: प्रोजेक्ट्स
-    publish: प्रकाशित करें
-    unpublish: प्रकाशित करना रद्द करें
-    share_title: अपना प्रोजेक्ट साझा करें
-    share_copy_link: 'लिंक कॉपी करें:'
-    share_embed_description: आप वेबपेज पर प्रोजेक्ट प्रदर्शित करने के लिए HTML पृष्ठ
-      में जोड़ा गया कोड पेस्ट कर सकते हैं।
-    share_u13_warning: साझा करने से पहले अपने अध्यापक से पूछें। केवल अपने स्कूल के
-      अन्य छात्रों के साथ ही साझा करें।
-    embed: जोड़ा गया
-    advanced_share: उन्नत विकल्प दिखाएं
-    no_projects: इस समय आपके पास कोई प्रोजेक्ट नहीं हैं। प्रोजेक्ट शुरू करने के लिए
-      ऊपर दिए बटनों में से एक पर क्लिक करें।
-    name: नाम
-    updated: अद्यतन किया
-    project_type: प्रोजेक्ट का प्रकार
-    help_text: नीचे नया प्रोजेक्ट शुरू करने के लिए <strong>एक ऐप बनाएं</strong> या
-      <strong>कुछ चित्रित करें</strong> पर क्लिक करें!<br/>आप किसी भी समय वापस आकर
-      अपने प्रोजेक्टों पर काम कर सकते हैं।
-    need_help: अपने नए प्रोजेक्ट की शुरुआत करने में मदद के लिए ये नए पाठ्यक्रम आजमाएं।
-    thumbnail_help: क्या आपको अपने प्रोजेक्ट के लिए सही थम्बनेल नहीं दिखाई दे रहा?
-      नया थम्बनेल बनाने के लिए अपना ऐप चलाएं। ध्यान दें कि थम्बनेल को कहीं भी ताज़ा
-      होने में कुछ घंटे लग सकते हैं।
-    saved: सहेजा गया
-    not_saved: सुरक्षित नहीं किया
-    view_all: मेरे प्रोजेक्ट्स देखें
-    edit_project: प्रोजेक्ट संपादित करें
-    sharing_disabled: हमें खेद है कि यह प्रोजेक्ट साझा करने के लिए उपलब्ध नहीं है।
-      यदि यह आपका प्रोजेक्ट है या आपके छात्रों में से किसी एक का प्रोजेक्ट है, तो
-      कृपया प्रोजेक्ट देखने के लिए अपने खाते पर <a href='https://studio.code.org/users/sign_in'>साइन
-      इन</a> करें।
-    abuse:
-      tos: यह प्रोजेक्ट Code.org की <a href='http://code.org/tos'>सेवा की शर्तों</a>
-        का उल्लंघन करने के लिए रिपोर्ट किया गया है और इसे दूसरों के साथ साझा नहीं
-        किया जा सकता।
-      policy_violation: इस प्रोजेक्ट में ऐसी जानकारी शामिल है, जिसे दूसरों के साथ
-        साझा नहीं किया जा सकता। कृपया उनके ऐप की सामग्रियों को ठीक करने के लिए ऐप
-        मालिक से संपर्क करें।
-      contact_us: यदि आपको लगता है कि यह एक त्रुटि है, तो कृपया <a href='https://code.org/contact'>हमें
-        संपर्क करें।</a>
-      go_to_code_studio: कोड स्टूडियो पर जाएं
-      report_abuse_form:
-        intro: यदि आपने कोड स्टूडियो पर बने ऐप्स का उपयोग करते समय अपमानजनक सामग्री,
-          धमकियों, साइबर दादागिरी, उत्पीड़न, या आपकी खुद की सामग्री के लिए कॉपीराइट
-          के उल्लंघन की किसी घटना का सामना किया है, तो कृपया नीचे दिया गया फार्म भरें।
-          हम आपकी रिपोर्ट को पूरी गंभीरता से लेंगे, इसकी जांच करेंगे और उचित कार्रवाई
-          करेंगे।
-        validation:
-          email: कृपया ईमेल पता प्रदान करें
-          age: कृपया आयु निर्दिष्ट करें
-          abuse_type: कृपया जवाब दें कि यह सामग्री किस प्रकार से सेवा की शर्तों का
-            उल्लंघन करती है
-          abuse_detail: कृपया उस सामग्री के संबंध में विवरण प्रदान करें, जिसकी आप
-            रिपोर्ट कर रहे हैं
-          captcha: इस सामग्री की रिपोर्ट करने के लिए कृपया CAPTCHA भरें।
-        abusive_url: रिपोर्ट की जा रही सामग्री का URL
-        abuse_type:
-          question: यह सामग्री किस प्रकार से %{link_start}Terms of Service%{link_end}
-            का उल्लंघन करती है?
-          harassment: धमकियां, साइबर दादागिरी, उत्पीड़न
-          offensive: अपमानजनक सामग्री
-          infringement: कॉपीराइट उल्लंघन
-          other: अन्य
-        detail: कृपया उस सामग्री के संबंध में अधिक से अधिक विवरण प्रदान करें, जिसकी
-          आप रिपोर्ट कर रहे हैं
-        acknowledge: यह जानकारी प्रस्तुत करके, आप स्वीकार करके हैं कि इसे %{link_start_privacy}Privacy
-          Policy%{link_end} और %{link_start_tos}Terms of Service%{link_end} की शर्तों
-          के अनुसार निपटाया जाएगा।
-  peer_review:
-    accepted:
-      name: स्वीकृत
-      description_markdown: "**हां**, यह सबमिशन आवश्यकताओं को **पूरा करता** है"
-    rejected:
-      name: अस्वीकृत
-      description_markdown: "**नहीं**, यह सबमिशन आवश्यकताओं को **पूरा नहीं करता**
-        है"
-    escalated:
-      name: तीव्र किया गया
-      description: मैं इस प्रस्तुत की समीक्षा के लिए एक इंस्ट्रक्टर चाहता हूं
-    instructor_feedback: इंस्ट्रक्टर की प्रतिक्रिया
-    peer_feedback: सहपाठी की प्रक्रिया
-    outdated: यह प्रतिक्रिया पिछले प्रस्तुत किए संस्करण के लिए जोड़ी गई थी
-    review_count: आपको इस इकाई के लिए %{review_count} समीक्षाएं पूरी करनी होंगी
-    peer_review: सहकर्मी की समीक्षा
-  external_links:
-    disclaimer: अस्वीकरण
-    leaving_domain: अब आप इस डोमेन को ऐसी साइट पर छोड़ रहे हैं, जो Code.org द्वारा
-      संचालित नहीं है।
-    disclaimer_text: इस साइट की ऐसी गोपनीयता नीतियां हो सकती हैं, जो Code.org से अलग
-      हों। हमने ये तृतीय पक्ष के संसाधन चुने हैं क्योंकि हमारे विचार में वे आपके लिए
-      उपयोगी होंगे। हालांकि हम इस वेबसाइट के सामग्री के लिए सीधे तौर पर जिम्मेदार
-      नहीं हैं, यदि आपको लगता है कि सामग्री आपत्तिजनक है, या यदि लिंक की गई साइट अब
-      उपलब्ध नहीं है, तो कृपया <a href='%{support_url}'>सहयोग टीम से संपर्क</a> करें।
-  hoc_download:
-    title: आवर ऑफ़ कोड डाउनलोड्स
-    capsule_title: क्या आपके पास इंटरनेट है?
-    capsule_desc: ऑनलाइन, वेब-आधारित <a href="%{url}">%{app_name}</a> का उपयोग करें।
-    instructions_headline: इंटरनेट नहीं है?
-    instructions: 'अध्यापकों के लिए निर्देश: यदि आपकी धीमी इंटरनेट सेवा है, तो ये
-      आवर ऑफ़ कोड ट्यूटोरियल्स ऑफलाइन उपयोग हेतु डाउनलोड और इंस्टॉल करने के लिए उपलब्ध
-      हैं। अपनी भाषा और प्लेटफार्म चुनें, अपनी कक्षा में सभी कंप्यूटरों पर इसे डाउनलोड
-      और इंस्टॉल करें। आप सभी कंप्यूटरों पर एक बार डाउनलोड और इंस्टॉल करने के लिए
-      USB ड्राइव का उपयोग करना चाह सकते हैं। नोट: छात्र कोड स्टूडियो में लॉग इन करने,
-      प्रगति सुरक्षित करने या प्रमाण-पत्र प्रिंट करने में सक्षम नहीं होंगे। अध्यापक
-      समय से पहले <a href="%{url}">यहां</a> प्रमाण-पत्र प्रिंट कर सकते हैं।'
-    minecraft_name: Minecraft आवर ऑफ़ कोड
-    starwars_blocks_name: 'Star Wars: कोड से तारा समूह बनाना (ब्लॉक्स)'
-    starwars_javascript_name: 'Star Wars: कोड से तारा समूह बनाना (JavaScript)'
-    download_message: ऑफलाइन उपयोग के लिए %{app_name} डाउनलोड करें (136MB)
-    download_in_Albanian: 'अल्बेनियन में डाउनलोड करें:'
-    download_in_Arabic: 'अरबी में डाउनलोड करें:'
-    download_in_Azerbaijani: 'अज़ेरबैजानी में डाउनलोड करें:'
-    download_in_Basque: 'बास्क में डाउनलोड करें:'
-    download_in_Bosnian: 'बोस्नियन में डाउनलोड करें:'
-    download_in_Bulgarian: 'बल्गेरियन में डाउनलोड करें:'
-    download_in_Catalan: 'कैटलन में डाउनलोड करें:'
-    download_in_Chinese-Taiwan: 'चीनी-ताईवान में डाउनलोड करें:'
-    download_in_Chinese: 'चीनी में डाउनलोड करें:'
-    download_in_Croatian: 'क्रोएशियाई में डाउनलोड करें:'
-    download_in_Czech: 'चेक में डाउनलोड करें:'
-    download_in_Danish: 'डेनिश में डाउनलोड करें:'
-    download_in_Dutch: 'डच में डाउनलोड करें:'
-    download_in_English: 'अंग्रेजी में डाउनलोड करें:'
-    download_in_Finnish: 'फिनिश में डाउनलोड करें:'
-    download_in_French: 'फ्रांसीसी में डाउनलोड करें:'
-    download_in_German: 'जर्मन में डाउनलोड करें:'
-    download_in_Greek: 'यूनानी में डाउनलोड करें:'
-    download_in_Hebrew: 'यहूदी में डाउनलोड करें:'
-    download_in_Hungarian: 'हंगेरियन में डाउनलोड करें:'
-    download_in_Icelandic: 'आइसलैंडिक में डाउनलोड करें:'
-    download_in_Indonesian: 'इंडोनेशियाई में डाउनलोड करें:'
-    download_in_Irish: 'आयरिश में डाउनलोड करें:'
-    download_in_Italian: 'इतालवी में डाउनलोड करें:'
-    download_in_Japanese: 'जापानी में डाउनलोड करें:'
-    download_in_Korean: 'कोरियाई में डाउनलोड करें:'
-    download_in_Latvian: 'लातवियाई में डाउनलोड करें:'
-    download_in_Lithuanian: 'लिथुआनियन में डाउनलोड करें:'
-    download_in_Norwegian: 'नार्वेजियन में डाउनलोड करें:'
-    download_in_Norwegian-Nynorsk: 'नार्वेजियन-नायरोस्क में डाउनलोड करें:'
-    download_in_Polish: 'पोलिश में डाउनलोड करें:'
-    download_in_Portuguese-Brazil: 'पुर्तगाली-ब्राज़ील में डाउनलोड करें:'
-    download_in_Portuguese: 'पुर्तगाली में डाउनलोड करें:'
-    download_in_Romanian: 'रोमानियन में डाउनलोड करें:'
-    download_in_Russian: 'रूसी में डाउनलोड करें:'
-    download_in_Serbian: 'सर्बियन में डाउनलोड करें:'
-    download_in_Slovenian: 'स्लोवेनियन में डाउनलोड करें:'
-    download_in_Spanish: 'स्पेनी में डाउनलोड करें:'
-    download_in_Swedish: 'स्वीडिश में डाउनलोड करें:'
-    download_in_Turkish: 'तुर्की में डाउनलोड करें:'
-    download_in_Ukrainian: 'यूक्रेनी में डाउनलोड करें:'
-    download_in_Vietnamese: 'वियतनामी में डाउनलोड करें:'
-    windows: Windows (64-बिट)
-    mac: Mac OS X
-  locked_stage: इस स्टेज की सामग्रियां दिखाई नहीं देतीं क्योंकि यह स्टेज इस समय लॉक
-    है। आपका अध्यापक इस स्टेज को अनलॉक कर सकता है, जब इस पर काम करने या आपके जवाबों
-    की समीक्षा करने का समय हो।
-  hidden_stage: आपके अध्यापक ने यहां आपके होने की अपेक्षा नहीं की थी। कृपया अपने अध्यापक
-    से पूछें कि आपको किस पाठ पर होना चाहिए।
-  hidden_script: आपके अध्यापक ने यहां आपके होने की अपेक्षा नहीं की थी। कृपया अपने
-    अध्यापक से पूछें कि आपको किस इकाई पर होना चाहिए।
-  no_course_access_student: आपके पास इस पाठ्यक्रम तक पहुंच नहीं है। कृपया अपने शिक्षक
-    से पूछें कि आपको कौन सा कोर्स करना चाहिए।
-  no_course_access_teacher: आपके पास इस पाठ्यक्रम तक पहुंच नहीं है। यदि आपको लगता
-    है कि आपके पास इस कोर्स तक पहुंच होनी चाहिए, तो कृपया support@code.org पर लिखें
-    ताकि हम स्थिति को ठीक कर सकें।
-  no_script_access_student: इस इकाई तक आपकी पहुंच नहीं है। कृपया अपने अध्यापक से पूछें
-    कि आपको किस इकाई पर होना चाहिए।
-  no_script_access_teacher: इस इकाई तक आपकी पहुंच नहीं है। यदि आपको लगता है कि इस
-    इकाई तक आपकी पहुंच होनी चाहिए, तो कृपया support@code.org को लिखें, ताकि हम स्थिति
-    को ठीक कर पाएं।
-  no_level_access_student: इस स्तर तक आपकी पहुंच नहीं है। कृपया अपने अध्यापक से पूछें
-    कि आपको किस स्तर पर होना चाहिए।
-  no_level_access_teacher: इस स्तर तक आपकी पहुंच नहीं है। यदि आपको लगता है कि इस स्तर
-    तक आपकी पहुंच होनी चाहिए, तो कृपया support@code.org को लिखें, ताकि हम स्थिति को
-    ठीक कर पाएं।
-  no_exemplar: इस स्तर के लिए कोई उदाहरण मौजूद नहीं है।
-  no_exemplar_access_student: छात्र उदाहरण कोड तक पहुंच नहीं कर सकते हैं। कृपया अपने
-    शिक्षक से पूछें कि आपको किस स्तर पर होना चाहिए।
-  no_exemplar_access_teacher: केवल सत्यापित शिक्षक ही उदाहरण कोड तक पहुंच कर सकते
-    हैं। यदि आप एक सत्यापित शिक्षक बनना चाहते हैं, तो कृपया support@code.org पर लिखें।
-  return_unit_overview: इकाई की रूपरेखा पर जाएं
-  return_course_overview: पाठ्यक्रम की रूपरेखा पर जाएं
-  view_all_units: सभी इकाईयां देखें
-  view_teacher_guide: अध्यापक गाइड देखें
-  pd:
-    form_labels:
-      first_name: पहला नाम
-      first_name_preferred: वरीय पहला नाम
-      last_name: अंतिम नाम
-      email: ईमेल
-      email_alternate: वैकल्पिक ईमेल
-      gender: लैंगिक पहचान
-      school: स्कूल
-      school_name: स्कूल का नाम
-      school_city: स्कूल का शहर
-      school_city_district: 'स्कूल का शहर/ जिला
-
-'
-      school_country: स्कूल देश
-      school_department_region: स्कूल विभाग/क्षेत्र
-      colombian_school_city: स्कूल का शहर
-      colombian_chilean_school_department: स्कूल विभाग/क्षेत्र
-      colombian_school_municipality: स्कूल नगर पालिका
-      colombian_chilean_school_name: स्कूल का नाम
-      chilean_school_commune: कम्यून
-      chilean_school_id: स्कूल आईडी
-      ages: इस वर्ष आप कौन-से आयु वर्ग(वर्गों) को सिखा रहे हैं?
-      subjects: इस वर्ष आप कौन-सा विषय सिखा रहे हैं?
-      resources: आप निम्नलिखित में से कौन-से CS शिक्षा संसाधनों का उपयोग करते हैं?
-      robotics: आप निम्नलिखित में से कौन-से रोबोटिक्स संसाधनों का उपयोग करते हैं?
-      workshop_organizer: वर्कशॉप संयोजक
-      workshop_facilitator: वर्कशॉप समन्वयक
-      workshop_course: वर्कशॉप पाठ्यक्रम
-      email_opt_in: क्या हम Code.org के अंतर्राष्ट्रीय कार्यक्रम, हमारे पाठ्यक्रमों
-        में अद्यतनों या कंप्यूटर साइंस के अन्य समाचारों के लिए आपको ईमेल कर सकते हैं?
-      legal_opt_in: "यह फार्म प्रस्तुत करके, आप इस बारे में Code.org को जानकारी साझा
-        करने के लिए सहमति दे रहे हैं कि आप Code.org और अपने देश में Code.org के अंतर्राष्ट्रीय
-        साझेदार(रों), स्कूल जिला, और प्रशिक्षकों के साथ पेशेवर शिक्षण संसाधनों का
-        उपयोग कैसे करते हैं। हम इन साझेदारों के साथ आपकी संपर्क जानकारी, जो पाठ्यक्रम/इकाईयां
-        आप उपयोग कर रहे हैं, उन्हें और आपकी कक्षाओं के बारे में संचित डेटा साझा करेंगे।
-        इसमें आपकी कक्षाओं में छात्रों की संख्या, आपकी कक्षा में जनसांख्किीय विश्लेषण
-        और आपके स्कूल व जिले का नाम शामिल है। हम अपने साझेदारों के साथ अलग-अलग छात्रों
-        के बारे में कोई जानकारी साझा नहीं करेंगे: पूरी छात्र जानकारी से पहचान हटाई
-        जाएगी और उसे संकलित किया जाएगा। हमारे अंतर्राष्ट्रीय साझेदार और प्रशिक्षक
-        Code.org के समान ही गोपनीयता के समान स्तर के साथ अनुबंध के तहत इस जानकारी
-        से व्यवहार करने के लिए बाध्य हैं। \n"
-    form_entries:
-      gender:
-        male: पुरूष
-        female: महिला
-        non_binary: गैर-युग्मक
-        not_listed: वरीय शब्द सूचीबद्ध नहीं है
-        none: जवाब नहीं देना चाहते
-      school_country:
-        barbados: बारबाडोस
-        belize: बेलीज
-        canada: कनाडा
-        chile: चिली
-        colombia: कोलंबिया
-        israel: इज़राइल
-        malaysia: मलेशिया
-        mexico: मेक्सिको
-        paraguay: पराग्वे
-        thailand: थाईलैंड
-        uzbekistan: उज़्बेकिस्तान
-      ages:
-        ages_under_6: "< 6 वर्ष"
-        ages_7_8: 7-8 वर्ष
-        ages_9_10: 9-10 वर्ष
-        ages_11_12: 11-12 वर्ष
-        ages_13_14: 13-14 वर्ष
-        ages_15_16: 15-16 वर्ष
-        ages_17_18: 17-18 वर्ष
-        ages_19_over: 19+ वर्ष
-      subjects:
-        cs: कंप्यूटर विज्ञान
-        ict: ICT
-        math: गणित
-        science: विज्ञान
-        history: इतिहास / समाजिक विज्ञान
-        la: भाषा कला
-        efl: विदेशी भाषा के रूप में अंग्रेजी
-        music: संगीत
-        art: कला
-        other: 'अन्य:'
-        na: लागू नहीं
-      resources:
-        bootstrap: Bootstrap
-        codecademy: CodeCademy
-        csfirst: Google CS First
-        khan: Khan Academy
-        kodable: Kodable
-        scratch: Scratch
-        tynker: Tynker
-        other: अन्य
-        na: लागू नहीं
-      robotics:
-        grok: Grok Learning
-        kodable: Kodable
-        lego: LEGO Education
-        microbit: Microbit
-        ozobot: Ozobot
-        sphero: Sphero
-        raspberry: Raspberry Pi
-        wonder: Wonder Workshop
-        other: अन्य
-        na: लागू नहीं
-      workshop_course:
-        csf_af: CS मूल सिद्धांत (पाठ्यक्रम A-F)
-        csf_express: CS मूल सिद्धांत (प्री-एक्सप्रेस या एक्सप्रेस)
-        csd: CS Discoveries
-        csp: CS Principles
-        other: अन्य
-        not_applicable: लागू नहीं
-      email_opt_in:
-        opt_in_yes: हां
-        opt_in_no: नहीं
-    international_opt_in:
-      title: वर्कशॉप हाजिरी
-      intro: Code.org के पाठ्यक्रम पर प्रशिक्षण प्राप्त करने के लिए समय निकालने हेतु
-        आपका धन्यवाद।  कंप्यूटर साइंस की शिक्षा के अवसरों को दुनियाभर के सभी स्कूलों
-        में सभी बच्चों तक पहुंचाने का हमारा उद्देश्य आपके बिना संभव नहीं है।
-      instructions: कृपया यह बताने के लिए नीचे दिया गया फार्म भरें कि 1) आपने Code.org
-        के अंतर्राष्ट्रीय साझेदारों द्वारा आयोजित प्रशिक्षण वर्कशॉप में भाग लिया था,
-        और 2) आप अपने देश में हमारे अंतर्राष्ट्रीय साझेदार के साथ अपने जानकारी साझा
-        करने के लिए सहमत हैं, ताकि वे कंप्यूटर साइंस के अध्यापर के तौर पर आपके सफर
-        को सहयोग करने में मदद कर पाएं।
-      thanks_markdown: दर्ज करने के लिए आपका धन्यवाद! जैसे ही आप Code.org के पाठ्यक्रम
-        और टूल्स को जानते हैं, हम आपका समर्थन करने के लिए तत्पर हैं। कृपया हमें [support@code.org](%{support_email_url})
-        पर लिखकर या [शिक्षक फ़ोरम](%{teacher_forum_url}) पर पोस्ट करके अपने प्रश्न
-        और प्रतिक्रिया हमारे साथ साझा करते रहें!
-      facilitator_not_listed: मेरा सुविधाकर्ता सूचीबद्ध नहीं है
-      facilitator_not_applicable: लागू नहीं
-      organizer_not_listed: मेरा आयोजक सूचीबद्ध नहीं है
-    logged_out:
-      heading: पेशेवर शिक्षण कार्यक्रम में रुचि दिखाने के लिए आपका धन्यवाद!
-      body: शुरू करने के लिए, पहले आपको अपने Code.org खाते पर लॉग इन करने की जरूरत
-        है। यदि आप अपना आवेदन शुरू करने से पहले कार्यक्रम के बारे में और जानकारी प्राप्त
-        करना चाहते हैं, तो कृपया <a href="%{url}">पेशेवर शिक्षण कार्यक्रम की रूपरेखा</a>
-        देखें।
-    not_teacher:
-      body_markdown: Code.org के पेशेवर शिक्षण कार्यक्रम में आपकी रुचि के लिए धन्यवाद!
-        आपने वर्तमान में एक छात्र खाते में साइन इन किया हुआ है। अपने खाते को छात्र
-        से शिक्षक में अपग्रेड करने के लिए कृपया या तो एक शिक्षक खाता बनाएं या [अपनी
-        उपयोगकर्ता सेटिंग पर जाएं](%{user_settings})।
-      more_markdown: यदि आप अपना आवेदन शुरू करने से पहले कार्यक्रम के बारे में अधिक
-        जानकारी चाहते हैं, तो कृपया [पेशेवर शिक्षण कार्यक्रम अवलोकन](%{pl_overview})
-        देखें।
-    no_teacher_email:
-      body_markdown: आपके खाते में कोई ईमेल पता नहीं है। कृपया इस फ़ॉर्म को पूरा करने
-        से पहले अपना ईमेल पता जोड़ने के लिए [अपनी खाता सेटिंग पर जाएं](%{user_registration})।
-  courses_category: Full Courses
-  course_offering:
-    headers:
-      favorites: पसंदीदा
-      labs_and_skills: लैब्स और स्किल्स
-      minecraft: माइनक्राफ्ट
-      hello_world: हैलो दुनिया
-      popular_media: पॉपुलर मीडिया
-      sports: खेल
-      express: एक्सप्रेस
-      csf: कंप्यूटर साइंस की बुनियादी बातें
-      csc: कंप्यूटर साइंस से सम्बंधित जानकारी
-      year_long: साल भर
-      csa_labs: CSA लैब्स
-      self_paced: सेल्फ-पेस्ड
-      teacher_led: शिक्षक-नेतृत्व वाली
-      collections: कलेक्शन्स
-      workshops_k5: K-5 कार्यशालाएं
-      summer_workshops_612: 6-12 ग्रीष्मकालीन कार्यशालाएं
-      virtual_academic_year_workshops_612: 6—12 वर्चुअल एकेडमिक ईयर वर्कशॉप
-  cookie_banner:
-    message: हमारी साइट को लगातार ब्राउज करके या "मैं सहमत हूं” पर क्लिक करके, आप
-      अपने कंप्यूटर या डिवाइस पर कुकीज स्टोर करने के लिए सहमति देते हैं।
-    more_information: Code.org की गोपनीयता नीति देखें।
-    accept: मैं सहमत हूँ
-  page_not_found_title: पृष्ठ नहीं मिला
-  page_not_found_header: '404: पृष्ठ नहीं मिला'
-  page_not_found_description: जो पृष्ठ आप खोज रहे हैं, वह इस पते पर मौजूद नहीं है।
-    वेब पता देखें और दुबारा प्रस्तुत करें। या, हमारे मुख्य पृष्ठ पर जाएं
-  page_not_found_button: मुख्य पृष्ठ पर वापस जाएं
-  copy: प्रतिलिपि बनाएँ
-  confirm: पुष्टि करें
-  maker:
-    google_oauth:
-      login_with_google: Google के साथ Maker ऐप में लॉगिन करें
-      enter_code: कृपया अपने डिफ़ॉल्ट ब्राउज़र पर Google के जरिए लॉग इन करने पर प्रदान
-        किया गया कोड दर्ज करें।
-      copy_code: कृपया Code.org में लॉग इन करने के लिए इस कोड को Maker ऐप में कॉपी
-        और पेस्ट करें।
-      error_token_expired: टोकन की समय सीमा समाप्त हो गई है। कृपया नए टोकन के लिए
-        फिर से लॉग इन करें।
-      error_wrong_provider: गलत प्रदाता। कृपया सुनिश्चित करें कि आप Google के साथ
-        लॉग इन कर रहे हैं।
-      error_invalid_user: अमान्य उपयोगकर्ता आइडी। फिर से लॉग इन करने का प्रयास करें।
-      error_no_code: कृपया अपना लॉगिन कोड दर्ज करें।
-      confirm_login: अपने Google खाते के साथ लॉग इन करने के लिए "पुष्टि करें" चुनें।
-  parent_email_banner:
-    text: "**क्या आप माता-पिता हैं या अभिभावक?** अपने बच्चे की प्रगति और प्रोजेक्ट्स
-      के बारे में अपडेट्स प्राप्त करने के लिए इस खाते को अपनी ईमेल से लिंक करें।"
-    link_your_email: अपनी ईमेल को लिंक करें
-    not_now: अभी नहीं
-  behaviors:
-    this_sprite: यह स्प्राइट
-  unit_prefix: इकाई %{n}
-  code_org_logo_alt: Code.org होम
-  teacher_feedback: अध्यापक की प्रतिक्रिया
-  lesson_lock:
-    error:
-      no_updates: करने के लिए कोई अपडेट नहीं
-      missing_params: उपयोगकर्ता, स्तर और इकाई आईडी प्रदान करनी चाहिए
-      cannot_view_locked_answers: लॉक होने पर उत्तर नहीं देख सकते
-      forbidden: उपयोगकर्ता छात्र की लॉक करने योग्य स्थिति को अपडेट नहीं कर सकता
-  reset_predict_progress_button: उत्तर मिटाएँ
-  pixelation:
-    raw_format: कच्चा फ़ॉर्मेट
-    raw_format_alt: बिना किसी फ़ॉर्मेटिंग के बिट्स देखें
-    readable_format: पठनीय फ़ॉर्मेट
-    readable_format_alt: पिक्सेल द्वारा अलग किए गए बिट्स देखें
-    save_image: इमेज सेव करें
-    actual_size: वास्तविक आकार
-    image_file_format_header: इमेज फ़ाइल फॉर्मेट
-    image_file_format_width: 'चौड़ाई: 1 बाइट'
-    image_file_format_height: 'ऊंचाई: 1 बाइट'
-    image_file_format_bits_per_pixel: 'बिट्स प्रति पिक्सेल: 1 बाइट'
-    image_file_format_data_a: पिक्सेल डेटा के n बिट्स
-    image_file_format_data_b: n = चौड़ाई* ऊंचाई * बिट्स प्रति पिक्सेल
-    image_width: इमेज की चौड़ाई
-    image_height: इमेज की ऊंचाई
-    bits_per_pixel_header: बिट्स प्रति पिक्सेल
-    binary: युग्मक
-    hexadecimal: हेक्साडेसीमल
-    pixel_format_header: पिक्सेल फ़ॉर्मेट

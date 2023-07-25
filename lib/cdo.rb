@@ -322,4 +322,4 @@ module Cdo
     end
   end
 end
-CDO ||= Cdo::Impl.instance
+CDO = Cdo::Impl.instance

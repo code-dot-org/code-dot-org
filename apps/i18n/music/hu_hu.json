@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "hang lejátszása",
   "blockly_blockPlaySoundAtMeasureTooltip": "hang lejátszása",
+  "blockly_blockPlaySoundTooltip": "hang lejátszása",
   "blockly_blockRepeatTooltip": "ismételd",
   "blockly_blockRestTooltip": "pihenés",
   "blockly_blockWhenRun": "futtatáskor",
@@ -13,11 +13,11 @@
   "blockly_toolboxCategoryMath": "Matematika",
   "blockly_toolboxCategoryPlay": "Hangok",
   "blockly_toolboxCategoryVariables": "változók",
+  "continue": "Tovább",
   "feedback": "Visszajelzés",
-  "share": "Megosztás",
-  "startOver": "Újrakezdés",
-  "upload": "Feltöltés",
   "panelHeaderInstructions": "Utasítások",
   "panelHeaderWorkspace": "Munkaterület: ",
-  "continue": "Tovább"
+  "share": "Megosztás",
+  "startOver": "Újrakezdés",
+  "upload": "Feltöltés"
 }

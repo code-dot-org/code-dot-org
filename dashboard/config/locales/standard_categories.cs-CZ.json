@@ -2,122 +2,59 @@
   "cs-CZ": {
     "data": {
       "standard_categories": {
-        "DA": {
-          "description": "Data a analýza"
-        },
-        "DAT-1": {
-          "description": "Způsob, jakým počítač reprezentuje data, se liší od toho, jakým tato data interpretuje a zobrazuje uživateli. Programy pak překládají data do podoby, která je srozumitelnější pro uživatele."
-        },
-        "IOC-2": {
-          "description": "Používání počítačových inovací může zahrnovat rizika pro osobní bezpečnost a identitu."
-        },
-        "DAT-1.D": {
-          "description": "Srovnejte algoritmy komprese dat a určete, který je v daném kontextu nejlepší."
-        },
-        "IOC-2.B": {
-          "description": "Vysvětlete, jak můžou být výpočetní prostředky chráněny a zneužívány."
-        },
-        "CD": {
-          "description": "Počítače a komunikační zařízení"
-        },
-        "CI": {
-          "description": "Společenství, globální a etické vlivy"
-        },
-        "CL": {
-          "description": "Spolupráce"
-        },
-        "CPP": {
-          "description": "Počítačová praxe a programování"
-        },
-        "CT": {
-          "description": "Aritmetické Myšlení"
-        },
-        "L": {
-          "description": "Jazyk"
-        },
-        "RI": {
-          "description": "Čtení informačně"
-        },
-        "RL": {
-          "description": "Čtení literatury"
-        },
-        "SL": {
-          "description": "Mluvení a poslech"
-        },
-        "W": {
-          "description": "Psaní"
-        },
-        "C": {
-          "description": "Tunel"
-        },
-        "F": {
-          "description": "Funkce"
-        },
-        "G": {
-          "description": "Geometrie"
-        },
-        "MP": {
-          "description": "Cvičení z matematiky"
-        },
-        "NBT": {
-          "description": "Číslo a operace v desítkové soustavě"
-        },
-        "OA": {
-          "description": "Operace a algebraické myšlení"
-        },
         "1": {
           "description": "Studenti prokážou tvůrčí myšlení a znalost konstruktů, vyvinou inovativní produkty a vytvoří procesy, které využívají technologie."
         },
         "2": {
           "description": "Studenti používají digitální média a prostředí ke komunikaci a spolupráci, včetně práce na dálku, k podpoře individuálního učení a rozvoji vzdělání u ostatních."
         },
+        "3": {
+          "description": "Studenti používají digitální nástroje ke shromažďování, vyhodnotit, a používat informace."
+        },
+        "3-A-i": {
+          "description": "Povaha učení - lidé vs stroje"
+        },
+        "3-A-ii": {
+          "description": "Povaha učení - hledání vzorců v datech"
+        },
+        "3-A-iii": {
+          "description": "Povaha učení - trénink modelu"
+        },
+        "3-A-iv": {
+          "description": "Povaha učení - constructinv vs použití reasoner"
+        },
+        "3-A-v": {
+          "description": "Povaha učení - přizpůsobení interních reprezentací"
+        },
+        "3-A-vi": {
+          "description": "Povaha učení - učení se ze zkušenosti"
+        },
+        "3-B-i": {
+          "description": "Neuronové sítě - struktura neuronové sítě"
+        },
+        "3-B-ii": {
+          "description": "Neuronové sítě - nastavení hmotnosti"
+        },
+        "3-C-i": {
+          "description": "Datové sady - sady prvků"
+        },
+        "3-C-ii": {
+          "description": "Datové sady - velké datové sady"
+        },
+        "3-C-iii": {
+          "description": "Datové sady - zkreslení"
+        },
         "4": {
           "description": "Studenti využijí dovednost kritického myšlení při plánování a vedení výzkumu, správě projektů, řešení problémů a provádění informovaných rozhodnutí za pomoci vhodných digitálních nástrojů a zdrojů."
+        },
+        "5": {
+          "description": "Studenti rozumí člověku, kulturní, a společenské problémy související s technologií a praktikováním právního a etického chování."
         },
         "6": {
           "description": "Studenti demonstrují dobré porozumění technologickým konceptům, systémům a operacím."
         },
-        "AP": {
-          "description": "Algoritmy a programování"
-        },
-        "CS": {
-          "description": "Výpočetní systémy"
-        },
-        "IC": {
-          "description": "Tvorba závěrů a odůvodnění závěrů"
-        },
-        "NI": {
-          "description": "Sítě a internet"
-        },
         "AAP-1": {
           "description": "Chcete-li najít konkrétní řešení zobecnitelných problémů, programátoři reprezentují a organizují data několika způsoby."
-        },
-        "AAP-2": {
-          "description": "Způsob, jakým jsou příkazy sekvenovány a kombinovány v programu, určuje vypočítaný výsledek. Programy obsahují iterační a výběrové konstrukty, které představují opakování a rozhodují o zpracování různých vstupních hodnot."
-        },
-        "AAP-3": {
-          "description": "Programátoři rozkládají problémy na menší a zvládnutelnější kousky. Vytvořením postupů a pákových parametrů programátoři zobecňují procesy, které lze znovu použít. Postupy umožňují programátorům čerpat ze stávajícího kódu, který již byl testován, což programátorům umožňuje psát programy rychleji a s větší jistotou."
-        },
-        "AAP-4": {
-          "description": "Existují problémy, které počítač nedokáže vyřešit, a dokonce i když počítač dokáže vyřešit problém, nemusí to být schopen tak učinit v rozumném čase."
-        },
-        "CRD-1": {
-          "description": "Začlenění více perspektiv prostřednictvím spolupráce zlepšuje vyvíjené výpočetní inovace."
-        },
-        "CRD-2": {
-          "description": "Vývojáři vytvářejí a inovují pomocí iterativního procesu návrhu, který je zaměřen na uživatele, který zahrnuje cykly implementace/zpětné vazby a který ponechává dostatek prostoru pro experimentování a riskování."
-        },
-        "CSN-1": {
-          "description": "Počítačové systémy a sítě usnadňují přenos dat."
-        },
-        "CSN-2": {
-          "description": "Paralelní a distribuované výpočty využívají více počítačů k rychlejšímu řešení složitých problémů nebo zpracování velkých datových sad."
-        },
-        "DAT-2": {
-          "description": "Programy lze použít ke zpracování dat, což uživatelům umožňuje objevovat informace a vytvářet nové znalosti."
-        },
-        "IOC-1": {
-          "description": "Zatímco programy jsou obvykle navrženy tak, aby dosáhly konkrétního účelu, they may have unintended consequences"
         },
         "AAP-1.A": {
           "description": "Představují hodnotu s proměnnou."
@@ -130,6 +67,9 @@
         },
         "AAP-1.D": {
           "description": "Pro abstrakci dat: \na. Vyvíjejte abstrakci dat pomocí seznamů pro uložení více prvků.\nb. Vysvětlete, jak použití abstrakce dat řídí složitost v programovém kódu."
+        },
+        "AAP-2": {
+          "description": "Způsob, jakým jsou příkazy sekvenovány a kombinovány v programu, určuje vypočítaný výsledek. Programy obsahují iterační a výběrové konstrukty, které představují opakování a rozhodují o zpracování různých vstupních hodnot."
         },
         "AAP-2.A": {
           "description": "Vyjádřete algoritmus, který používá sekvenování bez použití programovacího jazyka."
@@ -179,6 +119,9 @@
         "AAP-2.P": {
           "description": "Pro binární vyhledávací algoritmy:\na. Určete počet iterací potřebných k nalezení hodnoty v datové sadě. \nb. Vysvětlete požadavky potřebné k dokončení binárního vyhledávání."
         },
+        "AAP-3": {
+          "description": "Programátoři rozkládají problémy na menší a zvládnutelnější kousky. Vytvořením postupů a pákových parametrů programátoři zobecňují procesy, které lze znovu použít. Postupy umožňují programátorům čerpat ze stávajícího kódu, který již byl testován, což programátorům umožňuje psát programy rychleji a s větší jistotou."
+        },
         "AAP-3.A": {
           "description": "Pro volání procedur:\na. Napište příkazy k procedurám volání.\nb Určete výsledek nebo účinek volání procedury."
         },
@@ -197,329 +140,65 @@
         "AAP-3.F": {
           "description": "Pro simulace:\na. Vysvětlete, jak lze počítače použít k reprezentaci skutečných jevů nebo výsledků. \nb. Porovnat použití simulací s reálnými kontexty."
         },
+        "AAP-4": {
+          "description": "Existují problémy, které počítač nedokáže vyřešit, a dokonce i když počítač dokáže vyřešit problém, nemusí to být schopen tak učinit v rozumném čase."
+        },
         "AAP-4.A": {
           "description": "Pro stanovení účinnosti algoritmu:\na. Vysvětlete rozdíl mezi algoritmy, které běží v přiměřeném čase, a těmi, které neběží v přiměřeném čase. \nb. Identifikovat situace, kdy by heuristické řešení mohlo být vhodnější."
         },
         "AAP-4.B": {
           "description": "Vysvětlit existenci nerozhodnutelných problémů v informatice."
         },
-        "CRD-1.A": {
-          "description": "Vysvětlete, jak se zlepšují výpočetní inovace prostřednictvím spolupráce."
+        "AP": {
+          "description": "Algoritmy a programování"
         },
-        "CRD-1.B": {
-          "description": "Vysvětlete, jak výpočetní inovace vyvíjejí skupiny lidí."
+        "APR": {
+          "description": "Aritmetika s polynomy a racionálními výrazy"
         },
-        "CRD-1.C": {
-          "description": "Prokázat efektivní mezilidské dovednosti během spolupráce."
+        "BF": {
+          "description": "Stavební funkce"
         },
-        "CRD-2.A": {
-          "description": "Popište účel výpočetní inovace."
+        "BI-1": {
+          "description": "Počítače vnímají svět pomocí senzorů"
         },
-        "CRD-2.B": {
-          "description": "Vysvětlete, jak funguje segment programu nebo kódu."
+        "BI-2": {
+          "description": "Agenti udržují reprezentace světa a používají je k uvažování"
         },
-        "CRD-2.C": {
-          "description": "Identifikujte vstupy do programu."
+        "BI-3": {
+          "description": "Počítače se mohou učit z dat"
         },
-        "CRD-2.D": {
-          "description": "Identifikujte výstupy vytvořené programem."
+        "BI-4": {
+          "description": "Inteligentní agenti vyžadují mnoho druhů znalostí, aby přirozeně komunikovali s lidmi"
         },
-        "CRD-2.E": {
-          "description": "Vypracujte program pomocí vývojového procesu."
+        "BI-5": {
+          "description": "AI může ovlivnit společnost pozitivním i negativním způsobem"
         },
-        "CRD-2.F": {
-          "description": "Navrhněte program a jeho uživatelské rozhraní."
+        "C": {
+          "description": "Tunel"
         },
-        "CRD-2.G": {
-          "description": "Popište účel segmentu kódu nebo programu napsáním dokumentace."
+        "CC": {
+          "description": "Počítání a mohutnost"
         },
-        "CRD-2.H": {
-          "description": "Potvrďte segmenty kódu použité z jiných zdrojů."
+        "CD": {
+          "description": "Počítače a komunikační zařízení"
         },
-        "CRD-2.I": {
-          "description": "Chyby v algoritmu nebo programu: \na. Identifikujte chybu. \nb. Opravte chybu."
+        "CED": {
+          "description": "Vytváření rovnic"
         },
-        "CRD-2.J": {
-          "description": "Identifikujte vstupy a odpovídající očekávaný výstup nebo chování, které lze použít ke kontrole správnosti algoritmu nebo programu."
+        "CI": {
+          "description": "Společenství, globální a etické vlivy"
         },
-        "CSN-1.A": {
-          "description": "Vysvětlete, jak výpočetní zařízení pracují společně v síti."
+        "CL": {
+          "description": "Spolupráce"
         },
-        "CSN-1.B": {
-          "description": "Vysvětlete, jak funguje internet."
+        "CN": {
+          "description": "Komplexní číselný systém"
         },
-        "CSN-1.C": {
-          "description": "Vysvětlete, jak jsou data odesílána přes internet prostřednictvím paketů."
-        },
-        "CSN-1.D": {
-          "description": "Popište rozdíly mezi internetem a World Wide Web."
-        },
-        "CSN-2.A": {
-          "description": "Porovnejte řešení problémů, která používají sekvenční, paralelní a distribuované výpočty."
-        },
-        "CSN-2.B": {
-          "description": "Určete účinnost sekvenčních a paralelních řešení."
-        },
-        "CSN-2.C": {
-          "description": "Popsat výhody a výzvy paralelního a distribuovaného výpočetní techniky."
-        },
-        "DAT-1.A": {
-          "description": "Vysvětlete, jak mohou být data reprezentována pomocí bitů."
-        },
-        "DAT-1.B": {
-          "description": "Vysvětlete důsledky použití bitů k reprezentaci dat."
-        },
-        "DAT-1.C": {
-          "description": "Pro binární čísla:\na. Vypočítejte binární (základní 2) ekvivalent kladného celého čísla (báze 10) a naopak. \nb. Porovnejte a objednejte binární čísla."
-        },
-        "DAT-2.A": {
-          "description": "Popište, jaké informace lze extrahovat z dat."
-        },
-        "DAT-2.B": {
-          "description": "Popište, jaké informace lze extrahovat z metadat."
-        },
-        "DAT-2.C": {
-          "description": "Identifikujte problémy spojené se zpracováním dat."
-        },
-        "DAT-2.D": {
-          "description": "Extrahujte informace z dat pomocí programu."
-        },
-        "DAT-2.E": {
-          "description": "Vysvětlete, jak lze programy použít k získání přehledu a znalostí z dat."
-        },
-        "IOC-1.A": {
-          "description": "Vysvětlit etické a sociální důsledky výpočetních systémů"
-        },
-        "IOC-1.B": {
-          "description": "Vysvětlete rizika pro soukromí ze shromažďování a ukládání osobních údajů v počítačových systémech."
-        },
-        "IOC-1.C": {
-          "description": "Popište problémy, které přispívají k digitální propasti."
-        },
-        "IOC-1.D": {
-          "description": "Vysvětlete, jak existuje zkreslení ve výpočetních inovacích."
-        },
-        "IOC-1.E": {
-          "description": "Vysvětlete, jak se lidé podílejí na procesech řešení problémů ve velkém měřítku."
-        },
-        "IOC-1.F": {
-          "description": "Vysvětlete, jak by používání výpočetní techniky mohlo vyvolat právní a etické obavy."
-        },
-        "IOC-2.A": {
-          "description": "Popište rizika pro soukromí ze shromažďování a ukládání osobních údajů v počítačovém systému."
-        },
-        "IOC-2.C": {
-          "description": "Vysvětlete, jak se získává neoprávněný přístup k výpočetním prostředkům."
-        },
-        "D1": {
-          "description": "Rozvíjení otázek a plánovacích dotazů"
-        },
-        "D3.Sources": {
-          "description": "Shromažďování a hodnocení zdrojů"
-        },
-        "D3.Claims": {
-          "description": "Rozvoj nároků a používání důkazů"
-        },
-        "D4.Conclusions": {
-          "description": "Komunikace a kritika závěrů"
-        },
-        "D4.Action": {
-          "description": "Přijetí informovaných opatření"
-        },
-        "D2.Civ": {
-          "description": "Občanská výchova"
-        },
-        "D2.Eco": {
-          "description": "Ekonomika"
-        },
-        "RF": {
-          "description": "Čtení základních dovedností"
-        },
-        "RH": {
-          "description": "Historie čtení/Sociální studia"
-        },
-        "RST": {
-          "description": "Čtenářská věda/Technická"
-        },
-        "WHST": {
-          "description": "Psaní HS/S/T"
-        },
-        "ESS": {
-          "description": "Věda o Zemi a vesmíru"
-        },
-        "ETS": {
-          "description": "Inženýrství ve vědách"
-        },
-        "LS": {
-          "description": "Věda o životě"
-        },
-        "PS": {
-          "description": "Fyzikální věda"
-        },
-        "ESS1": {
-          "description": "Místo Země ve vesmíru"
-        },
-        "ESS2": {
-          "description": "Systémy Země"
-        },
-        "ESS3": {
-          "description": "Země a lidská činnost"
-        },
-        "ETS1": {
-          "description": "Inženýrský design"
-        },
-        "LS1": {
-          "description": "Od molekul k organismům: struktury a procesy"
-        },
-        "LS2": {
-          "description": "Ekosystémy: Interakce, energie a dynamika"
-        },
-        "LS3": {
-          "description": "Dědičnost: Dědičnost a variace vlastností"
-        },
-        "LS4": {
-          "description": "Biologická evoluce: jednota a rozmanitost"
-        },
-        "PS1": {
-          "description": "Hmota a její interakce"
-        },
-        "PS2": {
-          "description": "Pohyb a stabilita: Síly a interakce"
-        },
-        "PS3": {
-          "description": "Energie"
-        },
-        "PS4": {
-          "description": "Vlny a jejich aplikace v technologiích v přenosu informací"
-        },
-        "MOD-1": {
-          "description": "Některé objekty nebo koncepty jsou tak často zastoupeny, že programátoři mohou čerpat ze stávajícího kódu, který již byl testován, což jim umožňuje psát řešení rychleji as větší mírou důvěry"
-        },
-        "MOD-2": {
-          "description": "Programátoři používají kód k reprezentaci fyzického objektu nebo nefyzického konceptu, skutečného nebo imaginovaného, definováním třídy založené na attirbutes a/nebo chování objektu nebo konceptu"
-        },
-        "MOD-3": {
-          "description": "Když mulitple třídy obsahují společné atributy a chování, programátoři vytvoří novou třídu obsahující sdílené atributy a chování tvořící hierachii. Úpravy provedené na nejvyšší úrovni hierarchie se vztahují na podtřídy."
-        },
-        "VAR-1": {
-          "description": "Chcete-li najít konkrétní řešení zobecnitelných problémů, programátoři zahrnují do svého kódu proměnné, takže stejný algoritmus běží pomocí různých vstupních hodnot"
-        },
-        "VAR-2": {
-          "description": "Chcete-li spravovat velké množství dat nebo složité vztahy v datech, programátoři píší kód, který seskupuje data dohromady do jedné datové struktury, a to i při vytváření jednotlivých proměnných pro každou hodnotu."
+        "CO": {
+          "description": "Kongruence"
         },
         "CON-1": {
           "description": "Způsob, jakým jsou proměnné a operátory sekvenovány a kombinovány ve výrazu, určuje vypočítaný výsledek."
-        },
-        "CON-2": {
-          "description": "Programátoři začleňují iteraci a výběr do kódu jako způsob poskytování pokynů pro počítač ke zpracování každé z mnoha možných vstupních hodnot"
-        },
-        "MOD-1.A": {
-          "description": "Zavolejte metody třídy System pro generování výstupu do konzoly."
-        },
-        "MOD-1.B": {
-          "description": "Vysvětlete vztah mezi třídou a objektem."
-        },
-        "MOD-1.C": {
-          "description": "Identifikovat, pomocí jeho podpisu, správný konstruktor je volán."
-        },
-        "MOD-1.D": {
-          "description": "Pro vytvoření objektu: a. Vytvářejte objekty voláním konstruktorů bez parametrů. b. Vytvářejte objekty voláním konstruktorů s parametry."
-        },
-        "MOD-1.E": {
-          "description": "Zavolejte nestatické metody void bez parametrů."
-        },
-        "MOD-1.F": {
-          "description": "Zavolejte nestatické metody void s parametry"
-        },
-        "MOD-1.G": {
-          "description": "Zavolejte nestatické metody bez prázdnoty s parametry nebo bez nich"
-        },
-        "MOD-1.H": {
-          "description": "Zavolejte statické metody."
-        },
-        "MOD-2.A": {
-          "description": "Určete omezení přístupu a viditelnosti třídám, datům, konstruktérů a metodám."
-        },
-        "MOD-2.B": {
-          "description": "Definujte proměnné instance pro atributy, které mají být inicializovány prostřednictvím konstruktorů třídy."
-        },
-        "MOD-2.C": {
-          "description": "Desribe funkčnost a použití programového kódu thorugh komentáře."
-        },
-        "MOD-2.D": {
-          "description": "Definujte chování objektu pomocí metod bez void bez prametrů zapsaných ve třídě."
-        },
-        "MOD-2.E": {
-          "description": "Definujte chování objektu pomocí metod void s parametry zapsanými ve třídě nebo bez nich."
-        },
-        "MOD-2.F": {
-          "description": "Definujte chování objektu pomocí metod bez void s parametry napsanými ve třídě."
-        },
-        "MOD-2.G": {
-          "description": "Definujte chování třídy pomocí statických metod."
-        },
-        "MOD-2.H": {
-          "description": "Definujte statické proměnné, které patří do třídy."
-        },
-        "MOD-3.A": {
-          "description": "Určete soukromou viditelnost proměnných instance pro zapouzdření atributů objektu."
-        },
-        "MOD-3.B": {
-          "description": "Vytvořte dědičný vztah z podtřídy k nadtřídě."
-        },
-        "MOD-3.C": {
-          "description": "Definujte referenční proměnné nadtřídy, které mají být přiřazeny k objektu podtřídy ve stejné hierarchii."
-        },
-        "MOD-3.D": {
-          "description": "Metody volání v dědičném vztahu."
-        },
-        "MOD-3.E": {
-          "description": "Volání metody třídy Object prostřednictvím dědičnosti."
-        },
-        "VAR-1.A": {
-          "description": "Vytvářejte smyčcové literály"
-        },
-        "VAR-1.B": {
-          "description": "Určete nejvhodnější kategorii datového typu pro konkrétní specifikaci"
-        },
-        "VAR-1.C": {
-          "description": "Deklarovat proměnné správných typů reprezentovat primitivní data"
-        },
-        "VAR-1.D": {
-          "description": "Definujte proměnné správných typů, které představují referenční data."
-        },
-        "VAR-1.E": {
-          "description": "Pro třídu String: a. Vytvořit objekty String. b. Metody Call String."
-        },
-        "VAR-1.F": {
-          "description": "Pro třídy wrapper: a. Vytvořit celočíselné objekty. b. Call Integer metody. c. Vytvořit dvojité objekty. d. Volání dvojitých metod."
-        },
-        "VAR-1.G": {
-          "description": "Vysvětlete, kde lze v programovém kódu použít proměnné."
-        },
-        "VAR-1.H": {
-          "description": "Vyhodnoťte výrazy referenčních objektů, které používají toto klíčové slovo."
-        },
-        "VAR-2.A": {
-          "description": "Představují kolekce souvisejících primitivních nebo objektových referenčních dat pomocí jednorozměrných (1D) objektů pole."
-        },
-        "VAR-2.B": {
-          "description": "Pošlapte prvky v 1D poli."
-        },
-        "VAR-2.C": {
-          "description": "Projděte prvky v objektu 1D pole pomocí rozšířené smyčky."
-        },
-        "VAR-2.D": {
-          "description": "Reprezentují kolekce souvisejících objektových referenčních dat pomocí objektů ArrayList."
-        },
-        "VAR-2.E": {
-          "description": "Pro objekty ArrayList: • Pohybový pořad pomocí smyčky for nebo while. • Procházet pomocí rozšířené smyčky pro."
-        },
-        "VAR-2.F": {
-          "description": "Představují kolekce souvisejících primitivních nebo objektových referenčních dat pomocí dvourozměrných (2D) objektů pole."
-        },
-        "VAR-2.G": {
-          "description": "Pro objekty 2D pole: • Pořadový pořad pomocí vnořeného pro smyčky. • Pořadový pořad pomocí vnořeného rozšířeného pro smyčky."
         },
         "CON-1.A": {
           "description": "Vyhodnocení aritmetických výrazů v programovém kódu"
@@ -544,6 +223,9 @@
         },
         "CON-1.H": {
           "description": "Porovnejte reference objektů pomocí logických výrazů v programovém kódu."
+        },
+        "CON-2": {
+          "description": "Programátoři začleňují iteraci a výběr do kódu jako způsob poskytování pokynů pro počítač ke zpracování každé z mnoha možných vstupních hodnot"
         },
         "CON-2.A": {
           "description": "Představují větvení logické procesy pomocí podmíněných příkazů."
@@ -596,29 +278,173 @@
         "CON-2.Q": {
           "description": "Použijte rekurzivní algoritmy pro řazení prvků objektů pole nebo ArrayList."
         },
-        "APR": {
-          "description": "Aritmetika s polynomy a racionálními výrazy"
-        },
-        "BF": {
-          "description": "Stavební funkce"
-        },
-        "CC": {
-          "description": "Počítání a mohutnost"
-        },
-        "CED": {
-          "description": "Vytváření rovnic"
-        },
-        "CN": {
-          "description": "Komplexní číselný systém"
-        },
-        "CO": {
-          "description": "Kongruence"
-        },
         "CP": {
           "description": "Podmíněná Pravděpodobnost A Pravidla Pravděpodobnosti"
         },
+        "CPP": {
+          "description": "Počítačová praxe a programování"
+        },
+        "CRD-1": {
+          "description": "Začlenění více perspektiv prostřednictvím spolupráce zlepšuje vyvíjené výpočetní inovace."
+        },
+        "CRD-1.A": {
+          "description": "Vysvětlete, jak se zlepšují výpočetní inovace prostřednictvím spolupráce."
+        },
+        "CRD-1.B": {
+          "description": "Vysvětlete, jak výpočetní inovace vyvíjejí skupiny lidí."
+        },
+        "CRD-1.C": {
+          "description": "Prokázat efektivní mezilidské dovednosti během spolupráce."
+        },
+        "CRD-2": {
+          "description": "Vývojáři vytvářejí a inovují pomocí iterativního procesu návrhu, který je zaměřen na uživatele, který zahrnuje cykly implementace/zpětné vazby a který ponechává dostatek prostoru pro experimentování a riskování."
+        },
+        "CRD-2.A": {
+          "description": "Popište účel výpočetní inovace."
+        },
+        "CRD-2.B": {
+          "description": "Vysvětlete, jak funguje segment programu nebo kódu."
+        },
+        "CRD-2.C": {
+          "description": "Identifikujte vstupy do programu."
+        },
+        "CRD-2.D": {
+          "description": "Identifikujte výstupy vytvořené programem."
+        },
+        "CRD-2.E": {
+          "description": "Vypracujte program pomocí vývojového procesu."
+        },
+        "CRD-2.F": {
+          "description": "Navrhněte program a jeho uživatelské rozhraní."
+        },
+        "CRD-2.G": {
+          "description": "Popište účel segmentu kódu nebo programu napsáním dokumentace."
+        },
+        "CRD-2.H": {
+          "description": "Potvrďte segmenty kódu použité z jiných zdrojů."
+        },
+        "CRD-2.I": {
+          "description": "Chyby v algoritmu nebo programu: \na. Identifikujte chybu. \nb. Opravte chybu."
+        },
+        "CRD-2.J": {
+          "description": "Identifikujte vstupy a odpovídající očekávaný výstup nebo chování, které lze použít ke kontrole správnosti algoritmu nebo programu."
+        },
+        "CS": {
+          "description": "Výpočetní systémy"
+        },
+        "CSN-1": {
+          "description": "Počítačové systémy a sítě usnadňují přenos dat."
+        },
+        "CSN-1.A": {
+          "description": "Vysvětlete, jak výpočetní zařízení pracují společně v síti."
+        },
+        "CSN-1.B": {
+          "description": "Vysvětlete, jak funguje internet."
+        },
+        "CSN-1.C": {
+          "description": "Vysvětlete, jak jsou data odesílána přes internet prostřednictvím paketů."
+        },
+        "CSN-1.D": {
+          "description": "Popište rozdíly mezi internetem a World Wide Web."
+        },
+        "CSN-2": {
+          "description": "Paralelní a distribuované výpočty využívají více počítačů k rychlejšímu řešení složitých problémů nebo zpracování velkých datových sad."
+        },
+        "CSN-2.A": {
+          "description": "Porovnejte řešení problémů, která používají sekvenční, paralelní a distribuované výpočty."
+        },
+        "CSN-2.B": {
+          "description": "Určete účinnost sekvenčních a paralelních řešení."
+        },
+        "CSN-2.C": {
+          "description": "Popsat výhody a výzvy paralelního a distribuovaného výpočetní techniky."
+        },
+        "CT": {
+          "description": "Aritmetické Myšlení"
+        },
+        "D1": {
+          "description": "Rozvíjení otázek a plánovacích dotazů"
+        },
+        "D2.Civ": {
+          "description": "Občanská výchova"
+        },
+        "D2.Eco": {
+          "description": "Ekonomika"
+        },
+        "D3.Claims": {
+          "description": "Rozvoj nároků a používání důkazů"
+        },
+        "D3.Sources": {
+          "description": "Shromažďování a hodnocení zdrojů"
+        },
+        "D4.Action": {
+          "description": "Přijetí informovaných opatření"
+        },
+        "D4.Conclusions": {
+          "description": "Komunikace a kritika závěrů"
+        },
+        "DA": {
+          "description": "Data a analýza"
+        },
+        "DAT-1": {
+          "description": "Způsob, jakým počítač reprezentuje data, se liší od toho, jakým tato data interpretuje a zobrazuje uživateli. Programy pak překládají data do podoby, která je srozumitelnější pro uživatele."
+        },
+        "DAT-1.A": {
+          "description": "Vysvětlete, jak mohou být data reprezentována pomocí bitů."
+        },
+        "DAT-1.B": {
+          "description": "Vysvětlete důsledky použití bitů k reprezentaci dat."
+        },
+        "DAT-1.C": {
+          "description": "Pro binární čísla:\na. Vypočítejte binární (základní 2) ekvivalent kladného celého čísla (báze 10) a naopak. \nb. Porovnejte a objednejte binární čísla."
+        },
+        "DAT-1.D": {
+          "description": "Srovnejte algoritmy komprese dat a určete, který je v daném kontextu nejlepší."
+        },
+        "DAT-2": {
+          "description": "Programy lze použít ke zpracování dat, což uživatelům umožňuje objevovat informace a vytvářet nové znalosti."
+        },
+        "DAT-2.A": {
+          "description": "Popište, jaké informace lze extrahovat z dat."
+        },
+        "DAT-2.B": {
+          "description": "Popište, jaké informace lze extrahovat z metadat."
+        },
+        "DAT-2.C": {
+          "description": "Identifikujte problémy spojené se zpracováním dat."
+        },
+        "DAT-2.D": {
+          "description": "Extrahujte informace z dat pomocí programu."
+        },
+        "DAT-2.E": {
+          "description": "Vysvětlete, jak lze programy použít k získání přehledu a znalostí z dat."
+        },
         "EE": {
           "description": "Výrazy a rovnice"
+        },
+        "ESS": {
+          "description": "Věda o Zemi a vesmíru"
+        },
+        "ESS1": {
+          "description": "Místo Země ve vesmíru"
+        },
+        "ESS2": {
+          "description": "Systémy Země"
+        },
+        "ESS3": {
+          "description": "Země a lidská činnost"
+        },
+        "ETS": {
+          "description": "Inženýrství ve vědách"
+        },
+        "ETS1": {
+          "description": "Inženýrský design"
+        },
+        "F": {
+          "description": "Funkce"
+        },
+        "G": {
+          "description": "Geometrie"
         },
         "GMD": {
           "description": "Geometrické měření a rozměr"
@@ -626,14 +452,68 @@
         "GPE": {
           "description": "Vyjádření geometrických vlastností pomocí rovnic"
         },
+        "IC": {
+          "description": "Dopady počítačů"
+        },
         "ID": {
           "description": "Interpretace kategorických a kvantitativních dat"
         },
         "IF": {
           "description": "Funkce tlumočení"
         },
+        "IOC-1": {
+          "description": "Zatímco výpočetní inovace jsou obvykle navrženy tak, aby dosáhly konkrétního účelu, mohou mít nezamýšlené důsledky."
+        },
+        "IOC-1.A": {
+          "description": "Vysvětlete, jak může být účinek výpočetní inovace prospěšný i škodlivý."
+        },
+        "IOC-1.B": {
+          "description": "Vysvětlete, jak může mít výpočetní inovace dopad nad rámec zamýšleného účelu."
+        },
+        "IOC-1.C": {
+          "description": "Popište problémy, které přispívají k digitální propasti."
+        },
+        "IOC-1.D": {
+          "description": "Vysvětlete, jak existuje zkreslení ve výpočetních inovacích."
+        },
+        "IOC-1.E": {
+          "description": "Vysvětlete, jak se lidé podílejí na procesech řešení problémů ve velkém měřítku."
+        },
+        "IOC-1.F": {
+          "description": "Vysvětlete, jak by používání výpočetní techniky mohlo vyvolat právní a etické obavy."
+        },
+        "IOC-2": {
+          "description": "Používání počítačových inovací může zahrnovat rizika pro osobní bezpečnost a identitu."
+        },
+        "IOC-2.A": {
+          "description": "Popište rizika pro soukromí ze shromažďování a ukládání osobních údajů v počítačovém systému."
+        },
+        "IOC-2.B": {
+          "description": "Vysvětlete, jak můžou být výpočetní prostředky chráněny a zneužívány."
+        },
+        "IOC-2.C": {
+          "description": "Vysvětlete, jak se získává neoprávněný přístup k výpočetním prostředkům."
+        },
+        "L": {
+          "description": "Jazyk"
+        },
         "LE": {
           "description": "Lineární, kvadratické a exponenciální modely ★"
+        },
+        "LS": {
+          "description": "Věda o životě"
+        },
+        "LS1": {
+          "description": "Od molekul k organismům: struktury a procesy"
+        },
+        "LS2": {
+          "description": "Ekosystémy: Interakce, energie a dynamika"
+        },
+        "LS3": {
+          "description": "Dědičnost: Dědičnost a variace vlastností"
+        },
+        "LS4": {
+          "description": "Biologická evoluce: jednota a rozmanitost"
         },
         "MD": {
           "description": "Použití pravděpodobnosti k rozhodování"
@@ -641,11 +521,110 @@
         "MG": {
           "description": "Modelování s geometrií"
         },
+        "MOD-1": {
+          "description": "Některé objekty nebo koncepty jsou tak často zastoupeny, že programátoři mohou čerpat ze stávajícího kódu, který již byl testován, což jim umožňuje psát řešení rychleji as větší mírou důvěry"
+        },
+        "MOD-1.A": {
+          "description": "Zavolejte metody třídy System pro generování výstupu do konzoly."
+        },
+        "MOD-1.B": {
+          "description": "Vysvětlete vztah mezi třídou a objektem."
+        },
+        "MOD-1.C": {
+          "description": "Identifikovat, pomocí jeho podpisu, správný konstruktor je volán."
+        },
+        "MOD-1.D": {
+          "description": "Pro vytvoření objektu: a. Vytvářejte objekty voláním konstruktorů bez parametrů. b. Vytvářejte objekty voláním konstruktorů s parametry."
+        },
+        "MOD-1.E": {
+          "description": "Zavolejte nestatické metody void bez parametrů."
+        },
+        "MOD-1.F": {
+          "description": "Zavolejte nestatické metody void s parametry"
+        },
+        "MOD-1.G": {
+          "description": "Zavolejte nestatické metody bez prázdnoty s parametry nebo bez nich"
+        },
+        "MOD-1.H": {
+          "description": "Zavolejte statické metody."
+        },
+        "MOD-2": {
+          "description": "Programátoři používají kód k reprezentaci fyzického objektu nebo nefyzického konceptu, skutečného nebo imaginovaného, definováním třídy založené na attirbutes a/nebo chování objektu nebo konceptu"
+        },
+        "MOD-2.A": {
+          "description": "Určete omezení přístupu a viditelnosti třídám, datům, konstruktérů a metodám."
+        },
+        "MOD-2.B": {
+          "description": "Definujte proměnné instance pro atributy, které mají být inicializovány prostřednictvím konstruktorů třídy."
+        },
+        "MOD-2.C": {
+          "description": "Desribe funkčnost a použití programového kódu thorugh komentáře."
+        },
+        "MOD-2.D": {
+          "description": "Definujte chování objektu pomocí metod bez void bez prametrů zapsaných ve třídě."
+        },
+        "MOD-2.E": {
+          "description": "Definujte chování objektu pomocí metod void s parametry zapsanými ve třídě nebo bez nich."
+        },
+        "MOD-2.F": {
+          "description": "Definujte chování objektu pomocí metod bez void s parametry napsanými ve třídě."
+        },
+        "MOD-2.G": {
+          "description": "Definujte chování třídy pomocí statických metod."
+        },
+        "MOD-2.H": {
+          "description": "Definujte statické proměnné, které patří do třídy."
+        },
+        "MOD-3": {
+          "description": "Když mulitple třídy obsahují společné atributy a chování, programátoři vytvoří novou třídu obsahující sdílené atributy a chování tvořící hierachii. Úpravy provedené na nejvyšší úrovni hierarchie se vztahují na podtřídy."
+        },
+        "MOD-3.A": {
+          "description": "Určete soukromou viditelnost proměnných instance pro zapouzdření atributů objektu."
+        },
+        "MOD-3.B": {
+          "description": "Vytvořte dědičný vztah z podtřídy k nadtřídě."
+        },
+        "MOD-3.C": {
+          "description": "Definujte referenční proměnné nadtřídy, které mají být přiřazeny k objektu podtřídy ve stejné hierarchii."
+        },
+        "MOD-3.D": {
+          "description": "Metody volání v dědičném vztahu."
+        },
+        "MOD-3.E": {
+          "description": "Volání metody třídy Object prostřednictvím dědičnosti."
+        },
+        "MP": {
+          "description": "Cvičení z matematiky"
+        },
+        "NBT": {
+          "description": "Číslo a operace v desítkové soustavě"
+        },
         "NF": {
           "description": "Počet a operace - zlomky"
         },
+        "NI": {
+          "description": "Sítě a internet"
+        },
         "NS": {
           "description": "Číselný systém"
+        },
+        "OA": {
+          "description": "Operace a algebraické myšlení"
+        },
+        "PS": {
+          "description": "Fyzikální věda"
+        },
+        "PS1": {
+          "description": "Hmota a její interakce"
+        },
+        "PS2": {
+          "description": "Pohyb a stabilita: Síly a interakce"
+        },
+        "PS3": {
+          "description": "Energie"
+        },
+        "PS4": {
+          "description": "Vlny a jejich aplikace v technologiích v přenosu informací"
         },
         "Q": {
           "description": "Množství"
@@ -653,11 +632,29 @@
         "REI": {
           "description": "Uvažování s rovnicemi a nerovnostmi"
         },
+        "RF": {
+          "description": "Čtení základních dovedností"
+        },
+        "RH": {
+          "description": "Historie čtení/Sociální studia"
+        },
+        "RI": {
+          "description": "Čtení informačně"
+        },
+        "RL": {
+          "description": "Čtení literatury"
+        },
         "RN": {
           "description": "Systém reálných čísel"
         },
         "RP": {
           "description": "Poměry a proporcionální vztahy"
+        },
+        "RST": {
+          "description": "Čtenářská věda/Technická"
+        },
+        "SL": {
+          "description": "Mluvení a poslech"
         },
         "SP": {
           "description": "Statistika a pravděpodobnost"
@@ -671,62 +668,65 @@
         "TF": {
           "description": "Trigonometrické funkce"
         },
+        "VAR-1": {
+          "description": "Chcete-li najít konkrétní řešení zobecnitelných problémů, programátoři zahrnují do svého kódu proměnné, takže stejný algoritmus běží pomocí různých vstupních hodnot"
+        },
+        "VAR-1.A": {
+          "description": "Vytvářejte smyčcové literály"
+        },
+        "VAR-1.B": {
+          "description": "Určete nejvhodnější kategorii datového typu pro konkrétní specifikaci"
+        },
+        "VAR-1.C": {
+          "description": "Deklarovat proměnné správných typů reprezentovat primitivní data"
+        },
+        "VAR-1.D": {
+          "description": "Definujte proměnné správných typů, které představují referenční data."
+        },
+        "VAR-1.E": {
+          "description": "Pro třídu String: a. Vytvořit objekty String. b. Metody Call String."
+        },
+        "VAR-1.F": {
+          "description": "Pro třídy wrapper: a. Vytvořit celočíselné objekty. b. Call Integer metody. c. Vytvořit dvojité objekty. d. Volání dvojitých metod."
+        },
+        "VAR-1.G": {
+          "description": "Vysvětlete, kde lze v programovém kódu použít proměnné."
+        },
+        "VAR-1.H": {
+          "description": "Vyhodnoťte výrazy referenčních objektů, které používají toto klíčové slovo."
+        },
+        "VAR-2": {
+          "description": "Chcete-li spravovat velké množství dat nebo složité vztahy v datech, programátoři píší kód, který seskupuje data dohromady do jedné datové struktury, a to i při vytváření jednotlivých proměnných pro každou hodnotu."
+        },
+        "VAR-2.A": {
+          "description": "Představují kolekce souvisejících primitivních nebo objektových referenčních dat pomocí jednorozměrných (1D) objektů pole."
+        },
+        "VAR-2.B": {
+          "description": "Pošlapte prvky v 1D poli."
+        },
+        "VAR-2.C": {
+          "description": "Projděte prvky v objektu 1D pole pomocí rozšířené smyčky."
+        },
+        "VAR-2.D": {
+          "description": "Reprezentují kolekce souvisejících objektových referenčních dat pomocí objektů ArrayList."
+        },
+        "VAR-2.E": {
+          "description": "Pro objekty ArrayList: • Pohybový pořad pomocí smyčky for nebo while. • Procházet pomocí rozšířené smyčky pro."
+        },
+        "VAR-2.F": {
+          "description": "Představují kolekce souvisejících primitivních nebo objektových referenčních dat pomocí dvourozměrných (2D) objektů pole."
+        },
+        "VAR-2.G": {
+          "description": "Pro objekty 2D pole: • Pořadový pořad pomocí vnořeného pro smyčky. • Pořadový pořad pomocí vnořeného rozšířeného pro smyčky."
+        },
         "VM": {
           "description": "Vektorové a maticové veličiny"
         },
-        "BI-1": {
-          "description": "Počítače vnímají svět pomocí senzorů"
+        "W": {
+          "description": "Psaní"
         },
-        "BI-2": {
-          "description": "Agenti udržují reprezentace světa a používají je k uvažování"
-        },
-        "BI-3": {
-          "description": "Počítače se mohou učit z dat"
-        },
-        "BI-4": {
-          "description": "Inteligentní agenti vyžadují mnoho druhů znalostí, aby přirozeně komunikovali s lidmi"
-        },
-        "BI-5": {
-          "description": "AI může ovlivnit společnost pozitivním i negativním způsobem"
-        },
-        "3-A-i": {
-          "description": "Povaha učení - lidé vs stroje"
-        },
-        "3-A-ii": {
-          "description": "Povaha učení - hledání vzorců v datech"
-        },
-        "3-A-iii": {
-          "description": "Povaha učení - trénink modelu"
-        },
-        "3-A-iv": {
-          "description": "Povaha učení - constructinv vs použití reasoner"
-        },
-        "3-A-v": {
-          "description": "Povaha učení - přizpůsobení interních reprezentací"
-        },
-        "3-A-vi": {
-          "description": "Povaha učení - učení se ze zkušenosti"
-        },
-        "3-B-i": {
-          "description": "Neuronové sítě - struktura neuronové sítě"
-        },
-        "3-B-ii": {
-          "description": "Neuronové sítě - nastavení hmotnosti"
-        },
-        "3-C-i": {
-          "description": "Datové sady - sady prvků"
-        },
-        "3-C-ii": {
-          "description": "Datové sady - velké datové sady"
-        },
-        "3-C-iii": {
-          "description": "Datové sady - zkreslení"
-        },
-        "3": {
-          "description": "Studenti používají digitální nástroje ke shromažďování, vyhodnotit, a používat informace."
-        },
-        "5": {
-          "description": "Studenti rozumí člověku, kulturní, a společenské problémy související s technologií a praktikováním právního a etického chování."
+        "WHST": {
+          "description": "Psaní HS/S/T"
         }
       }
     }

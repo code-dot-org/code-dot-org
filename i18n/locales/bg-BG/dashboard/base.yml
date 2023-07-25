@@ -361,7 +361,7 @@ bg:
       educate_elementary: "Начално училище"
       educate_middle: "Средно училище"
       educate_high: "Гимназия"
-      educate_hoc: "Hour of Code"
+      educate_hoc: "Час на Кода"
       educate_partner: "Партньорство с нас"
       educate_beyond: "Отвъд Code.org"
       educate_inspire: "Вдъхнови ученик"
@@ -559,7 +559,7 @@ bg:
     choose_next_course: "Опитайте курс като си изберете един от тези по-долу"
     print_certificate: "Печат на сертификат"
   certificate_sponsor_message: "%{sponsor_name} направи щедрият подарък да спонсорира твоето обучение."
-  certificate_hour_of_code: "Hour of Code"
+  certificate_hour_of_code: "Час на Кода"
   move_students:
     new_section_dne: "Съжалявам, но %{new_section_code} раздел не съществува. Моля, въведете код за друг раздел."
     section_code_cant_be_current_section: "Текущият раздел не може да бъде същият като новия раздел."

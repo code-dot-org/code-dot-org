@@ -2,235 +2,65 @@
   "mi-NZ": {
     "data": {
       "resources": {
-        "graph_paper_programming/coursed/2022": {
-          "name": "Papatono Pepa Kauwhata"
-        },
-        "graph_paper_programming_1/coursed/2022": {
-          "name": "Papatono Pepa Kauwhata"
-        },
-        "graph_paper_programming_2/coursed/2022": {
-          "name": "Papatono Pepa Kauwhata"
-        },
-        "graph_paper_programming_3/coursed/2022": {
-          "name": "Papatono Pepa Kauwhata"
-        },
-        "graph_paper_programming_4/coursed/2022": {
-          "name": "Papatono Pepa Kauwhata"
-        },
-        "graph_paper_programming_5/coursed/2022": {
-          "name": "Papatono Pepa Kauwhata"
-        },
-        "pair_programming/coursed/2022": {
-          "name": "Papatonotanga ā-Tānga"
-        },
-        "relay_programming/coursed/2022": {
-          "name": "Papatonotanga ā-Tānga"
-        },
-        "relay_programming_1/coursed/2022": {
-          "name": "Papatonotanga ā-Tānga"
-        },
-        "relay_programming_2/coursed/2022": {
-          "name": "Papatonotanga ā-Tānga"
-        },
-        "relay_programming_3/coursed/2022": {
-          "name": "Papatonotanga ā-Tānga"
-        },
-        "relay_programming_4/coursed/2022": {
-          "name": "Papatonotanga ā-Tānga"
-        },
-        "relay_programming_5/coursed/2022": {
-          "name": "Papatonotanga ā-Tānga"
-        },
-        "internet/coursef/2022": {
-          "name": "Te Ipurangi"
-        },
-        "internet_1/coursef/2022": {
-          "name": "Te Ipurangi"
-        },
-        "the_internet/coursef/2022": {
-          "name": "Te Ipurangi"
-        },
-        "move_it_move_it/courseb/2022": {
-          "name": "E Neke, E Neke"
-        },
-        "move_it_move_it_1/courseb/2022": {
-          "name": "E Neke, E Neke"
-        },
-        "move_it_move_it_2/courseb/2022": {
-          "name": "E Neke, E Neke"
-        },
-        "move_it_move_it_3/courseb/2022": {
-          "name": "E Neke, E Neke"
-        },
-        "pair_programming/courseb/2022": {
-          "name": "Papatonotanga ā-Tānga"
-        },
-        "getting_loopy/courseb/2022": {
-          "name": "Kia Koromeke"
-        },
-        "getting_loopy_1/courseb/2022": {
-          "name": "Kia Koromeke"
-        },
-        "getting_loopy_2/courseb/2022": {
-          "name": "Kia Koromeke"
-        },
-        "getting_loopy_3/courseb/2022": {
-          "name": "Kia Koromeke"
-        },
-        "the_big_event/courseb/2022": {
-          "name": "Te Takahanga Nui"
-        },
-        "the_big_event_1/courseb/2022": {
-          "name": "Te Takahanga Nui"
-        },
-        "the_big_event_2/courseb/2022": {
-          "name": "Te Takahanga Nui"
-        },
-        "pair_programming/express/2022": {
-          "name": "Papatonotanga ā-Tānga"
-        },
-        "variables/express/2022": {
-          "name": "Ngā Taurangi"
-        },
-        "pair_programming/pre-express/2022": {
-          "name": "Papatonotanga ā-Tānga"
-        },
-        "pair_programming/coursea/2022": {
-          "name": "Papatonotanga ā-Tānga"
-        },
-        "happy_maps/coursea/2022": {
-          "name": "Ngā Mahere Harikoa"
-        },
-        "the_big_event/coursea/2022": {
-          "name": "Te Takahanga Nui"
-        },
-        "the_big_event_1/coursea/2022": {
-          "name": "Te Takahanga Nui"
-        },
-        "the_big_event_2/coursea/2022": {
-          "name": "Te Takahanga Nui"
-        },
-        "pair_programming/coursec/2022": {
-          "name": "Papatonotanga ā-Tānga"
-        },
-        "the_big_event/coursec/2022": {
-          "name": "Te Takahanga Nui"
-        },
-        "the_big_event_1/coursec/2022": {
-          "name": "Te Takahanga Nui"
-        },
-        "the_big_event_2/coursec/2022": {
-          "name": "Te Takahanga Nui"
-        },
-        "binary_bracelets/coursec/2022": {
-          "name": "Kōmore Ā-Rua"
-        },
-        "binary_bracelets_1/coursec/2022": {
-          "name": "Kōmore Ā-Rua"
-        },
-        "binary_bracelets_2/coursec/2022": {
-          "name": "Kōmore Ā-Rua"
-        },
-        "binary_bracelets_3/coursec/2022": {
-          "name": "Kōmore Ā-Rua"
-        },
-        "binary_bracelets_4/coursec/2022": {
-          "name": "Kōmore Ā-Rua"
-        },
-        "make_a_recommendation/csd/2022": {
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
           "type": "Arotake ā-Hoa"
         },
-        "apps_and_problem_solving_1/csd/2022": {
+        "html-web-page/csd/2021": {
           "type": "Arotake ā-Hoa"
         },
-        "variables/csd/2022": {
-          "name": "Ngā Taurangi"
-        },
-        "variables_3/csd/2022": {
-          "name": "Ngā Taurangi"
-        },
-        "text/csd/2022": {
-          "name": "Kuputuhi"
-        },
-        "conditionals/csd/2022": {
-          "name": "Ngā Here"
-        },
-        "interactive_card_2/csd/2022": {
-          "type": "Arotake ā-Hoa"
-        },
-        "functions/csd/2022": {
-          "name": "Ngā Taumahi"
-        },
-        "functions_1/csd/2022": {
-          "name": "Ngā Taumahi"
-        },
-        "functions_4/csd/2022": {
-          "name": "Ngā Taumahi"
-        },
-        "make_your_own_game_2/csd/2022": {
-          "type": "Arotake ā-Hoa"
-        },
-        "html_web_page_2/csd/2022": {
-          "type": "Arotake ā-Hoa"
-        },
-        "lists/csd/2022": {
+        "lists/csd/2021": {
           "name": "Ngā Rārangi"
         },
-        "your_personal_style_1/csd/2022": {
+        "your-personal-style-1/csd/2021": {
           "type": "Arotake ā-Hoa"
         },
-        "personal_web_page/csd/2022": {
+        "personal-web-page-1/csd/2021": {
           "type": "Arotake ā-Hoa"
         },
-        "website_for_a_purpose_1/csd/2022": {
+        "website-for-a-purpose/csd/2021": {
           "type": "Arotake ā-Hoa"
         },
-        "variables_1/csd/2022": {
+        "variables_1/csd/2021": {
           "name": "Ngā Taurangi"
         },
-        "variables_2/csd/2022": {
-          "name": "Ngā Taurangi"
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Arotake ā-Hoa"
         },
-        "functions_2/csd/2022": {
+        "calling_and_defining_functions/csd/2021": {
           "name": "Ngā Taumahi"
         },
-        "functions_3/csd/2022": {
+        "functions_1/csd/2021": {
           "name": "Ngā Taumahi"
         },
-        "functions_with_parameters/csd/2022": {
-          "name": "Ngā Taumahi Whai Tawhā"
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Arotake ā-Hoa"
         },
-        "functions_5/csd/2022": {
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Arotake ā-Hoa"
+        },
+        "functions_2/csd/2021": {
           "name": "Ngā Taumahi"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
+        "loops_in_app_lab/csd/2021": {
+          "name": "Mō Ngā Koromeke"
         },
-        "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "Kia Ngahau te Mahi Koromeke"
+        "for_loops/csd/2021": {
+          "name": "Mō Ngā Koromeke"
         },
-        "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "Kia Ngahau te Mahi Koromeke"
+        "pair-programming-vid/coursea/2021": {
+          "name": "Papatonotanga ā-Tānga"
         },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Kia Ngahau te Mahi Koromeke"
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Ngā Mahere Harikoa"
         },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Kia Ngahau te Mahi Koromeke"
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Te Takahanga Nui"
         },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Kia Ngahau te Mahi Koromeke"
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Te Takahanga Nui"
         },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "Te Ipurangi"
-        },
-        "csf-internet-assessment/coursef/2021": {
-          "name": "Te Ipurangi"
-        },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "Te Ipurangi"
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Te Takahanga Nui"
         },
         "mimi-activity/courseb/2021": {
           "name": "E Neke, E Neke"
@@ -266,21 +96,6 @@
           "name": "Te Takahanga Nui"
         },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "Te Takahanga Nui"
-        },
-        "pair-programming-vid/coursea/2021": {
-          "name": "Papatonotanga ā-Tānga"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Ngā Mahere Harikoa"
-        },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "Te Takahanga Nui"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "name": "Te Takahanga Nui"
-        },
-        "unplugged-video-big-event/coursea/2021": {
           "name": "Te Takahanga Nui"
         },
         "pair-programming-vid/coursec/2021": {
@@ -349,6 +164,30 @@
         "unplugged-video-relay-programming/coursed/2021": {
           "name": "Papatonotanga ā-Tānga"
         },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Kia Ngahau te Mahi Koromeke"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Kia Ngahau te Mahi Koromeke"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Kia Ngahau te Mahi Koromeke"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Kia Ngahau te Mahi Koromeke"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Kia Ngahau te Mahi Koromeke"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Te Ipurangi"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Te Ipurangi"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Te Ipurangi"
+        },
         "pair_programming/express/2021": {
           "name": "Papatonotanga ā-Tānga"
         },
@@ -358,50 +197,211 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "Papatonotanga ā-Tānga"
         },
-        "functions_2/csd/2021": {
-          "name": "Ngā Taumahi"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "Mō Ngā Koromeke"
-        },
-        "for_loops/csd/2021": {
-          "name": "Mō Ngā Koromeke"
-        },
-        "make-a-recommendation-peer-review-2019/csd/2021": {
+        "apps_and_problem_solving_1/csd/2022": {
           "type": "Arotake ā-Hoa"
         },
-        "variables_1/csd/2021": {
-          "name": "Ngā Taurangi"
-        },
-        "interactive-card-1-2-3-4/csd/2021": {
+        "html_web_page_2/csd/2022": {
           "type": "Arotake ā-Hoa"
         },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "Ngā Taumahi"
-        },
-        "functions_1/csd/2021": {
-          "name": "Ngā Taumahi"
-        },
-        "make-your-own-game-1-2-3/csd/2021": {
-          "type": "Arotake ā-Hoa"
-        },
-        "apps-and-problem-solving-peer-review-2019/csd/2021": {
-          "type": "Arotake ā-Hoa"
-        },
-        "html-web-page/csd/2021": {
-          "type": "Arotake ā-Hoa"
-        },
-        "lists/csd/2021": {
+        "lists/csd/2022": {
           "name": "Ngā Rārangi"
         },
-        "your-personal-style-1/csd/2021": {
+        "your_personal_style_1/csd/2022": {
           "type": "Arotake ā-Hoa"
         },
-        "personal-web-page-1/csd/2021": {
+        "personal_web_page/csd/2022": {
           "type": "Arotake ā-Hoa"
         },
-        "website-for-a-purpose/csd/2021": {
+        "website_for_a_purpose_1/csd/2022": {
           "type": "Arotake ā-Hoa"
+        },
+        "variables/csd/2022": {
+          "name": "Ngā Taurangi"
+        },
+        "variables_3/csd/2022": {
+          "name": "Ngā Taurangi"
+        },
+        "text/csd/2022": {
+          "name": "Kuputuhi"
+        },
+        "conditionals/csd/2022": {
+          "name": "Ngā Here"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Arotake ā-Hoa"
+        },
+        "functions/csd/2022": {
+          "name": "Ngā Taumahi"
+        },
+        "functions_1/csd/2022": {
+          "name": "Ngā Taumahi"
+        },
+        "functions_4/csd/2022": {
+          "name": "Ngā Taumahi"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Arotake ā-Hoa"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Arotake ā-Hoa"
+        },
+        "variables_1/csd/2022": {
+          "name": "Ngā Taurangi"
+        },
+        "variables_2/csd/2022": {
+          "name": "Ngā Taurangi"
+        },
+        "functions_2/csd/2022": {
+          "name": "Ngā Taumahi"
+        },
+        "functions_3/csd/2022": {
+          "name": "Ngā Taumahi"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Ngā Taumahi Whai Tawhā"
+        },
+        "functions_5/csd/2022": {
+          "name": "Ngā Taumahi"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Ngā Mahere Harikoa"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Te Takahanga Nui"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Te Takahanga Nui"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Te Takahanga Nui"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "E Neke, E Neke"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "E Neke, E Neke"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "E Neke, E Neke"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "E Neke, E Neke"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Kia Koromeke"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Kia Koromeke"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Kia Koromeke"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Kia Koromeke"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Te Takahanga Nui"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Te Takahanga Nui"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Te Takahanga Nui"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Te Takahanga Nui"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Te Takahanga Nui"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Te Takahanga Nui"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Kōmore Ā-Rua"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Kōmore Ā-Rua"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Kōmore Ā-Rua"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Kōmore Ā-Rua"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Kōmore Ā-Rua"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Papatono Pepa Kauwhata"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Papatono Pepa Kauwhata"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Papatono Pepa Kauwhata"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Papatono Pepa Kauwhata"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Papatono Pepa Kauwhata"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Papatono Pepa Kauwhata"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "internet/coursef/2022": {
+          "name": "Te Ipurangi"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Te Ipurangi"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Te Ipurangi"
+        },
+        "pair_programming/express/2022": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "variables/express/2022": {
+          "name": "Ngā Taurangi"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         }
       }
     }

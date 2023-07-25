@@ -2,200 +2,25 @@
   "si-LK": {
     "data": {
       "vocabularies": {
-        "code/dance-extras/unversioned": {
-          "word": "කේතය"
-        },
-        "code/minecraft/unversioned": {
-          "word": "කේතය"
-        },
-        "code/hero/unversioned": {
-          "word": "කේතය"
-        },
-        "function/hero/unversioned": {
-          "word": "ශ්‍රිතය"
-        },
-        "code/poem-art/2021": {
-          "word": "කේතය"
-        },
-        "code/flappy/unversioned": {
-          "word": "කේතය"
-        },
-        "code/hourofcode/unversioned": {
-          "word": "කේතය"
-        },
-        "code/frozen/unversioned": {
-          "word": "කේතය"
-        },
-        "code/iceage/unversioned": {
-          "word": "කේතය"
-        },
-        "code/artist/unversioned": {
-          "word": "කේතය"
-        },
-        "code/gumball/unversioned": {
-          "word": "කේතය"
-        },
-        "code/dance/unversioned": {
-          "word": "කේතය"
-        },
-        "code/aquatic/unversioned": {
-          "word": "කේතය"
-        },
-        "conditionals/aquatic/unversioned": {
-          "word": "කන්ඩිෂනලස්"
-        },
-        "loops/aquatic/unversioned": {
-          "word": "ලූපයන්"
-        },
-        "code/starwars/unversioned": {
-          "word": "කේතය"
-        },
-        "code/mc/unversioned": {
-          "word": "කේතය"
-        },
-        "code/playlab/unversioned": {
-          "word": "කේතය"
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "කේතය"
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/sports/unversioned": {
-          "word": "කේතය"
-        },
-        "code/infinity/unversioned": {
-          "word": "කේතය"
-        },
-        "code/basketball/unversioned": {
-          "word": "කේතය"
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "කේතය"
-        },
-        "code/dance-2019/unversioned": {
-          "word": "කේතය"
-        },
-        "programming/coursed/2022": {
-          "word": "ක්‍රමලේඛනය"
-        },
-        "code/coursed/2022": {
-          "word": "කේතය"
-        },
-        "conditionals/coursed/2022": {
-          "word": "කන්ඩිෂනලස්"
-        },
-        "variable/coursef/2022": {
-          "word": "විචල්‍යය"
-        },
-        "internet/coursef/2022": {
-          "word": "අන්තර්ජාලය"
-        },
-        "define/coursef/2022": {
-          "word": "අර්ථ දක්වන්න"
-        },
-        "function/coursee/2022": {
-          "word": "ශ්‍රිතය"
-        },
-        "conditionals/coursee/2022": {
-          "word": "කන්ඩිෂනලස්"
-        },
-        "copyright/coursee/2022": {
+        "copyright/csd/2021": {
           "word": "ප්‍රකාශන හිමිකම"
         },
-        "define/coursee/2022": {
-          "word": "අර්ථ දක්වන්න"
-        },
-        "programming/courseb/2022": {
-          "word": "ක්‍රමලේඛනය"
-        },
-        "programming/express/2022": {
-          "word": "ක්‍රමලේඛනය"
-        },
-        "code/express/2022": {
-          "word": "කේතය"
-        },
-        "conditionals/express/2022": {
-          "word": "කන්ඩිෂනලස්"
-        },
-        "function/express/2022": {
-          "word": "ශ්‍රිතය"
-        },
-        "variable/express/2022": {
+        "variable/csd/2021": {
           "word": "විචල්‍යය"
         },
-        "define/express/2022": {
-          "word": "අර්ථ දක්වන්න"
-        },
-        "programming/pre-express/2022": {
-          "word": "ක්‍රමලේඛනය"
-        },
-        "programming/coursea/2022": {
-          "word": "ක්‍රමලේඛනය"
-        },
-        "programming/coursec/2022": {
-          "word": "ක්‍රමලේඛනය"
-        },
-        "data/coursec/2022": {
-          "word": "දත්ත"
-        },
-        "binary/coursec/2022": {
-          "word": "ද්විමය"
-        },
-        "variable/csd/2022": {
-          "word": "විචල්‍යය"
-        },
-        "conditionals/csd/2022": {
+        "conditionals/csd/2021": {
           "word": "කන්ඩිෂනලස්"
         },
-        "abstraction/csd/2022": {
+        "abstraction/csd/2021": {
           "word": "ඇබ්ස්ට්‍රැක්ෂන්"
         },
-        "function/csd/2022": {
+        "function/csd/2021": {
           "word": "ශ්‍රිතය"
         },
-        "copyright/csd/2022": {
-          "word": "ප්‍රකාශන හිමිකම"
-        },
-        "code/poem-art/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "variable/coursef/2021": {
-          "word": "විචල්‍යය"
-        },
-        "internet/coursef/2021": {
-          "word": "අන්තර්ජාලය"
-        },
-        "define/coursef/2021": {
-          "word": "අර්ථ දක්වන්න"
-        },
-        "programming/courseb/2021": {
+        "programming/coursea/2021": {
           "word": "ක්‍රමලේඛනය"
         },
-        "programming/coursea/2021": {
+        "programming/courseb/2021": {
           "word": "ක්‍රමලේඛනය"
         },
         "programming/coursec/2021": {
@@ -212,6 +37,27 @@
         },
         "conditionals/coursed/2021": {
           "word": "කන්ඩිෂනලස්"
+        },
+        "copyright/coursee/2021": {
+          "word": "ප්‍රකාශන හිමිකම"
+        },
+        "function/coursee/2021": {
+          "word": "ශ්‍රිතය"
+        },
+        "conditionals/coursee/2021": {
+          "word": "කන්ඩිෂනලස්"
+        },
+        "define/coursee/2021": {
+          "word": "අර්ථ දක්වන්න"
+        },
+        "variable/coursef/2021": {
+          "word": "විචල්‍යය"
+        },
+        "internet/coursef/2021": {
+          "word": "අන්තර්ජාලය"
+        },
+        "define/coursef/2021": {
+          "word": "අර්ථ දක්වන්න"
         },
         "programming/express/2021": {
           "word": "ක්‍රමලේඛනය"
@@ -234,32 +80,186 @@
         "programming/pre-express/2021": {
           "word": "ක්‍රමලේඛනය"
         },
-        "copyright/coursee/2021": {
+        "copyright/csd/2022": {
           "word": "ප්‍රකාශන හිමිකම"
         },
-        "function/coursee/2021": {
-          "word": "ශ්‍රිතය"
-        },
-        "conditionals/coursee/2021": {
-          "word": "කන්ඩිෂනලස්"
-        },
-        "define/coursee/2021": {
-          "word": "අර්ථ දක්වන්න"
-        },
-        "variable/csd/2021": {
+        "variable/csd/2022": {
           "word": "විචල්‍යය"
         },
-        "conditionals/csd/2021": {
+        "conditionals/csd/2022": {
           "word": "කන්ඩිෂනලස්"
         },
-        "abstraction/csd/2021": {
+        "abstraction/csd/2022": {
           "word": "ඇබ්ස්ට්‍රැක්ෂන්"
         },
-        "function/csd/2021": {
+        "function/csd/2022": {
           "word": "ශ්‍රිතය"
         },
-        "copyright/csd/2021": {
+        "programming/coursea/2022": {
+          "word": "ක්‍රමලේඛනය"
+        },
+        "programming/courseb/2022": {
+          "word": "ක්‍රමලේඛනය"
+        },
+        "programming/coursec/2022": {
+          "word": "ක්‍රමලේඛනය"
+        },
+        "data/coursec/2022": {
+          "word": "දත්ත"
+        },
+        "binary/coursec/2022": {
+          "word": "ද්විමය"
+        },
+        "programming/coursed/2022": {
+          "word": "ක්‍රමලේඛනය"
+        },
+        "code/coursed/2022": {
+          "word": "කේතය"
+        },
+        "conditionals/coursed/2022": {
+          "word": "කන්ඩිෂනලස්"
+        },
+        "function/coursee/2022": {
+          "word": "ශ්‍රිතය"
+        },
+        "conditionals/coursee/2022": {
+          "word": "කන්ඩිෂනලස්"
+        },
+        "copyright/coursee/2022": {
           "word": "ප්‍රකාශන හිමිකම"
+        },
+        "define/coursee/2022": {
+          "word": "අර්ථ දක්වන්න"
+        },
+        "variable/coursef/2022": {
+          "word": "විචල්‍යය"
+        },
+        "internet/coursef/2022": {
+          "word": "අන්තර්ජාලය"
+        },
+        "define/coursef/2022": {
+          "word": "අර්ථ දක්වන්න"
+        },
+        "programming/express/2022": {
+          "word": "ක්‍රමලේඛනය"
+        },
+        "code/express/2022": {
+          "word": "කේතය"
+        },
+        "conditionals/express/2022": {
+          "word": "කන්ඩිෂනලස්"
+        },
+        "function/express/2022": {
+          "word": "ශ්‍රිතය"
+        },
+        "variable/express/2022": {
+          "word": "විචල්‍යය"
+        },
+        "define/express/2022": {
+          "word": "අර්ථ දක්වන්න"
+        },
+        "programming/pre-express/2022": {
+          "word": "ක්‍රමලේඛනය"
+        },
+        "code/aquatic/unversioned": {
+          "word": "කේතය"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "කන්ඩිෂනලස්"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "ලූපයන්"
+        },
+        "code/artist/unversioned": {
+          "word": "කේතය"
+        },
+        "code/basketball/unversioned": {
+          "word": "කේතය"
+        },
+        "code/dance-2019/unversioned": {
+          "word": "කේතය"
+        },
+        "code/dance-extras-2019/unversioned": {
+          "word": "කේතය"
+        },
+        "code/dance-extras/unversioned": {
+          "word": "කේතය"
+        },
+        "code/dance/unversioned": {
+          "word": "කේතය"
+        },
+        "code/flappy/unversioned": {
+          "word": "කේතය"
+        },
+        "code/frozen/unversioned": {
+          "word": "කේතය"
+        },
+        "code/gumball/unversioned": {
+          "word": "කේතය"
+        },
+        "code/hero/unversioned": {
+          "word": "කේතය"
+        },
+        "function/hero/unversioned": {
+          "word": "ශ්‍රිතය"
+        },
+        "code/hourofcode/unversioned": {
+          "word": "කේතය"
+        },
+        "code/iceage/unversioned": {
+          "word": "කේතය"
+        },
+        "code/infinity/unversioned": {
+          "word": "කේතය"
+        },
+        "code/mc/unversioned": {
+          "word": "කේතය"
+        },
+        "code/minecraft/unversioned": {
+          "word": "කේතය"
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/playlab/unversioned": {
+          "word": "කේතය"
+        },
+        "code/poem-art/2021": {
+          "word": "කේතය"
+        },
+        "code/sports/unversioned": {
+          "word": "කේතය"
+        },
+        "code/starwars/unversioned": {
+          "word": "කේතය"
+        },
+        "code/starwarsblocks/unversioned": {
+          "word": "කේතය"
+        },
+        "code/poem-art/unversioned": {
+          "word": "කේතය",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         }
       }
     }

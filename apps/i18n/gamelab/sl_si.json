@@ -1,8 +1,8 @@
 {
   "dropletBlock_createSprite_param3": "višina",
-  "dropletBlock_setCollider_param0": "Vrsta",
-  "dropletBlock_setCollider_param4": "višina",
   "dropletBlock_setColliderEach_param0": "Vrsta",
   "dropletBlock_setColliderEach_param4": "višina",
+  "dropletBlock_setCollider_param0": "Vrsta",
+  "dropletBlock_setCollider_param4": "višina",
   "shareGame": "Delite vašo igro z ostalimi:"
 }

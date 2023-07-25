@@ -7,7 +7,6 @@
   "catProcedures": "អនុ​គមន៍",
   "catText": "អត្ថ​​បទ",
   "catVariables": "អ​ថេរ",
-  "designWorkspaceHeader": "កន្លែងធ្វើការ ",
   "designElementEvent_input": "ធាតុបញ្ចូល",
   "designElementProperty_fitImage_none": "គ្មាន",
   "designElementProperty_text": "អត្ថបទ",
@@ -16,6 +15,7 @@
   "designElementProperty_zOrder": "ជម្រៅ",
   "designElementTheme_classic": "បុរាណ",
   "designElementTheme_default": "គម្រូ​ដើម",
+  "designWorkspaceHeader": "កន្លែងធ្វើការ ",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param2": "y",
   "dropletBlock_drawImage_param4": "កម្ពស់",
@@ -27,7 +27,7 @@
   "nextLevel": "សូម​អបអរ​សាទរ! អ្នក​បាន​បញ្ចប់​ល្បែង​ប្រាជ្ញា​នេះ​ហើយ។",
   "no": "ទេ",
   "numBlocksNeeded": "ល្បែង​ប្រាជ្ញា​នេះ​អាច​ត្រូវ​បាន​ដោះស្រាយ​ជាមួយ​ប្លុក​ចំនួន %1 ។",
-  "repeatForever": "ធ្វើ​ឡើង​វិញ​ជា​រៀង​រហូត",
   "repeatDo": "ធ្វើ",
+  "repeatForever": "ធ្វើ​ឡើង​វិញ​ជា​រៀង​រហូត",
   "yes": "យល់ព្រម"
 }

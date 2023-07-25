@@ -2,39 +2,49 @@
   "en-GB": {
     "data": {
       "vocabularies": {
-        "function/hero/unversioned": {
-          "word": "Function"
-        },
-        "code/poem-art/2021": {
-          "word": "Code"
-        },
-        "code/artist/unversioned": {
-          "word": "Code"
-        },
-        "loops/aquatic/unversioned": {
-          "word": "Loops"
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/sports/unversioned": {
-          "word": "Code"
-        },
-        "variable/coursef/2022": {
+        "variable/csd/2021": {
           "word": "Variable"
         },
-        "define/coursef/2022": {
+        "function/csd/2021": {
+          "word": "Function"
+        },
+        "function/coursee/2021": {
+          "word": "Function"
+        },
+        "define/coursee/2021": {
           "word": "Define"
+        },
+        "variable/coursef/2021": {
+          "word": "Variable"
+        },
+        "define/coursef/2021": {
+          "word": "Define"
+        },
+        "function/express/2021": {
+          "word": "Function"
+        },
+        "variable/express/2021": {
+          "word": "Variable"
+        },
+        "define/express/2021": {
+          "word": "Define"
+        },
+        "variable/csd/2022": {
+          "word": "Variable"
+        },
+        "function/csd/2022": {
+          "word": "Function"
         },
         "function/coursee/2022": {
           "word": "Function"
         },
         "define/coursee/2022": {
+          "word": "Define"
+        },
+        "variable/coursef/2022": {
+          "word": "Variable"
+        },
+        "define/coursef/2022": {
           "word": "Define"
         },
         "function/express/2022": {
@@ -46,11 +56,28 @@
         "define/express/2022": {
           "word": "Define"
         },
-        "variable/csd/2022": {
-          "word": "Variable"
+        "loops/aquatic/unversioned": {
+          "word": "Loops"
         },
-        "function/csd/2022": {
+        "code/artist/unversioned": {
+          "word": "Code"
+        },
+        "function/hero/unversioned": {
           "word": "Function"
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/poem-art/2021": {
+          "word": "Code"
+        },
+        "code/sports/unversioned": {
+          "word": "Code"
         },
         "code/poem-art/unversioned": {
           "word": "Code",
@@ -71,33 +98,6 @@
         "line/poem-art/unversioned": {
           "word": "",
           "definition": ""
-        },
-        "variable/coursef/2021": {
-          "word": "Variable"
-        },
-        "define/coursef/2021": {
-          "word": "Define"
-        },
-        "function/express/2021": {
-          "word": "Function"
-        },
-        "variable/express/2021": {
-          "word": "Variable"
-        },
-        "define/express/2021": {
-          "word": "Define"
-        },
-        "function/coursee/2021": {
-          "word": "Function"
-        },
-        "define/coursee/2021": {
-          "word": "Define"
-        },
-        "variable/csd/2021": {
-          "word": "Variable"
-        },
-        "function/csd/2021": {
-          "word": "Function"
         }
       }
     }
