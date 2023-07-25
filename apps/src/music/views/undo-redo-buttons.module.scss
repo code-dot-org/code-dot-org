@@ -10,13 +10,13 @@
   background-color: $neutral_dark;
   color: $neutral_light;
   display: flex;
-  height: 20px;
+  height: 24px;
+  width: 24px;
   font-size: 13px;
   justify-content: center;
   align-items: center;
   border-radius: 3px;
   margin: 2px;
-  padding: 5px;
   transition: opacity 0.2s ease;
 
   &Disabled {
