@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 ################################################################################
-FROM ubuntu:22.04 as cdo-base
+FROM ubuntu:22.04 as code.org-base
 ################################################################################
 
 ENV \
@@ -67,7 +67,7 @@ ENV HOME=/home/${USERNAME}
 WORKDIR ${SRC}
 
 ################################################################################
-FROM cdo-base as cdo-rbenv
+FROM code.org-base as code.org-rbenv
 ################################################################################
 
 COPY --chown=${USERNAME} \
@@ -104,9 +104,10 @@ RUN \
   --mount=type=cache,sharing=locked,uid=1000,gid=1000,target=${SRC}/vendor/cache \
   eval "$(rbenv init -)" && \
   time bundle install && \
+  true
 
 ################################################################################
-FROM cdo-base as cdo-user-utils
+FROM code.org-base as code.org-user-utils
 ################################################################################
 
 ARG RAILS_ENV=development
@@ -147,7 +148,7 @@ RUN \
 WORKDIR ${SRC}
 
 ################################################################################
-FROM cdo-user-utils as cdo-node_modules
+FROM code.org-user-utils as code.org-node_modules
 ################################################################################
 
 COPY --chown=${USERNAME} \
@@ -171,7 +172,7 @@ RUN \
   true
 
 ################################################################################
-FROM cdo-user-utils
+FROM code.org-user-utils
 ################################################################################
 
 # Copy in apps/node_modules (built in parallel)

@@ -22,7 +22,7 @@ build:
       - '**/*.jsx'
       - '**/*.json'
     docker:
-      dockerfile: ./k8s/cdo.dockerfile
+      dockerfile: ./k8s/code.org.dockerfile
       cacheFrom:
       - code.org
       - 475661607190.dkr.ecr.us-east-1.amazonaws.com/code.org:staging
