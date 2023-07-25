@@ -23,17 +23,12 @@ class OpenaiChatController < ApplicationController
       DCDO.get('openai_chat_request_limit_per_min_ip', REQUEST_LIMIT_PER_MIN_IP) :
       DCDO.get('openai_chat_request_limit_per_min_default', REQUEST_LIMIT_PER_MIN_DEFAULT)
     period = 60
-    puts "id: #{id}, limit: #{limit}, period: #{period}"
-    puts "throttle_ip: #{throttle_ip}"
     OpenaiChatHelper.throttled_request_chat_completion(messages, id, limit, period) do |response|
-      puts "response: #{response}"
       chat_completion_return_message = OpenaiChatHelper.get_chat_completion_response_message(response)
-      puts "chat_completion_return_message: #{chat_completion_return_message}"
       return render(status: chat_completion_return_message[:status], json: chat_completion_return_message[:json])
     end
 
     # If we make it here, the request should be throttled.
-    puts "throttled"
     Honeybadger.notify(
       error_class: 'RequestThrottledWarning',
       error_message: "Client throttled for POST #{request.path}",
