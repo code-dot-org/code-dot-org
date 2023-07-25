@@ -40,6 +40,10 @@ class MusiclabController < ApplicationController
   end
 
   def gallery
+    unless current_user&.admin?
+      render :no_access
+    end
+
     view_options(full_width: true, responsive_content: true, no_padding_container: true)
     @channel_ids = Project.where(project_type: "music").last(50).map {|project| JSON.parse(project.value)["id"]}.compact_blank
   end
