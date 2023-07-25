@@ -172,6 +172,18 @@ describe('setProperty and read Property', () => {
       expect(text_area.innerHTML).to.equal('Gamma Delta');
       expect(dropdown.value).to.equal('Epsilon Zeta');
     });
+
+    it('Escapes HTML in text area', () => {
+      designMode.updateProperty(
+        text_area,
+        'value',
+        '<script>alert("hi")</script>'
+      );
+      expect(text_area.innerHTML).to.equal(
+        '&lt;script&gt;alert("hi")&lt;/script&gt;'
+      );
+    });
+
     it('Sets the expected value for dropdowns, text area, and text input', () => {
       designMode.updateProperty(text_input, 'value', 'Iota Kappa');
       designMode.updateProperty(text_area, 'value', 'Lambda Mu');
@@ -181,6 +193,7 @@ describe('setProperty and read Property', () => {
       expect(text_area.innerHTML).to.equal('Lambda Mu');
       expect(dropdown.value).to.equal('Eta Theta');
     });
+
     it('Uses the asset timestamp in the source path for pictures', () => {
       designMode.updateProperty(picture, 'picture', 'picture.jpg', 123456);
       expect(picture.src).to.contain('picture.jpg?t=123456');
@@ -208,6 +221,13 @@ describe('setProperty and read Property', () => {
       );
       expect(designMode.readProperty(dropdown, 'value')).to.equal(
         'Epsilon Zeta'
+      );
+    });
+
+    it('unescapes HTML in text area', () => {
+      text_area.innerHTML = '&lt;script&gt;alert("hi")&lt;/script&gt;';
+      expect(designMode.readProperty(text_area, 'value')).to.equal(
+        '<script>alert("hi")</script>'
       );
     });
   });
