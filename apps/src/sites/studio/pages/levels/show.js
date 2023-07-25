@@ -9,7 +9,7 @@ import instructions, {
   setTtsAutoplayEnabledForLevel,
   setCodeReviewEnabledForLevel,
 } from '@cdo/apps/redux/instructions';
-import FloatingActionButton from '@cdo/apps/templates/FloatingActionButton';
+import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 
 $(document).ready(initPage);
 
@@ -55,9 +55,7 @@ function initPage() {
 
   if (fabMountPoint) {
     ReactDOM.render(
-      <FloatingActionButton buttonClassName="test-button">
-        <div>hello!</div>
-      </FloatingActionButton>,
+      <RubricFloatingActionButton />,
       document.getElementById('fab-mount-point')
     );
   }
