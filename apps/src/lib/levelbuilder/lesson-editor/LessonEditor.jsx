@@ -460,7 +460,7 @@ class LessonEditor extends Component {
         <a
           className="btn add-rubric"
           style={styles.addRubric}
-          href="https://levelbuilder-studio.code.org/rubrics/new"
+          href="/rubrics/new"
         >
           <i style={styles.buttonText} className="fa fa-plus-circle" />
           Add Rubric
