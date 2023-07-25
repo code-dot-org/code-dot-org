@@ -29,9 +29,9 @@ module I18n
       I18n::Resources::Dashboard::CourseOfferings.sync_in
       I18n::Resources::Dashboard::Standards.sync_in
       I18n::Resources::Dashboard::Docs.sync_in
+      I18n::Resources::Apps::ExternalSources.sync_in
       puts "Copying source files"
       I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
-      localize_external_sources
       localize_course_resources
       redact_level_content
       redact_script_and_course_content
@@ -41,53 +41,6 @@ module I18n
     rescue => exception
       puts "Sync in failed from the error: #{exception}"
       raise exception
-    end
-
-    # These files are synced in using the `bin/i18n-codeorg/in.sh` script.
-    def self.localize_external_sources
-      puts "Preparing external sources"
-      external_sources_dir = File.join(I18N_SOURCE_DIR, "external-sources")
-
-      # ml-playground (AI Lab) files
-
-      # Get the display names of the datasets stored in the dataset manifest file.
-      # manifest = File.join(external_sources_dir, 'ml-playground', 'datasets-manifest.json')
-      manifest = "apps/node_modules/@code-dot-org/ml-playground/public/datasets-manifest.json"
-      manifest_datasets = JSON.parse(File.read(manifest))['datasets']
-      dataset_names = manifest_datasets.map {|dataset| [dataset['id'], dataset['name']]}.to_h
-
-      # These are overwritten in this format so the properties that use
-      # arrays have unique identifiers for translation.
-      dataset_files = File.join(external_sources_dir, 'ml-playground', 'datasets', '*')
-      Dir.glob(dataset_files).each do |dataset_file|
-        original_dataset = JSON.parse(File.read(dataset_file))
-
-        # Converts array to map and uses the field id as a unique identifier.
-        fields_as_hash = original_dataset["fields"].map do |field|
-          [
-            field["id"],
-            {
-              "id" => field["id"],
-              "description" => field["description"]
-            }
-          ]
-        end.to_h
-
-        final_dataset = {
-          "fields" => fields_as_hash,
-          "card" => {
-            "description" => original_dataset.dig("card", "description"),
-            "context" => {
-              "potentialUses" => original_dataset.dig("card", "context", "potentialUses"),
-              "potentialMisuses" => original_dataset.dig("card", "context", "potentialMisuses")
-            }
-          }
-        }
-        dataset_name = dataset_names[original_dataset['name']]
-        final_dataset["name"] = dataset_name if dataset_name
-
-        File.write(dataset_file, JSON.pretty_generate(final_dataset))
-      end
     end
 
     def self.localize_level_and_project_content

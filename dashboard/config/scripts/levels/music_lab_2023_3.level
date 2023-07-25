@@ -9,7 +9,13 @@
     "encrypted": "false",
     "level_data": {
       "library": "happy",
-      "text": "#Loop It\nIt's common to take a beat and repeat it, sometimes for the rest of a song. But songs can get pretty long, so we'd need a ton of blocks if we added them one by one! Thankfully, repeating things is also common in code. In the `Control`(#999999) category of the toolbox, you'll find the `repeat`(#f218a2) block. Anything you put inside it will be repeated the number of times set by the block. \n## Do This\nUse this block to repeat the sounds that make up your beat a few times. You should notice the beat repeats the same number of times you set in the loop!",
+      "text": "#Loop It\nIt's common to take a beat and repeat it, sometimes for the rest of a song. But songs can get pretty long, so we'd need a ton of blocks if we added them one by one! Thankfully, repeating things is also common in code. In the `Control`(#999999) category of the toolbox, you'll find the `repeat`(#f218a2) block. Anything you put inside it will be repeated the number of times set by the block. \n## Do This\nUse the `repeat`(#f218a2) block to repeat the sounds that make up your beat a few times. You should notice the beat repeats the same number of times you set in the loop!",
+      "sounds": {
+        "remix_happy": [
+          "drums_1",
+          "drums_2"
+        ]
+      },
       "toolbox": {
         "blocks": {
           "Play": [
@@ -57,9 +63,10 @@
         ]
       }
     },
+    "hide_share_and_remix": "true",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2023-06-20 23:51:56 +0000\",\"changed\":[\"published\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-20 23:53:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-20 23:55:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 22:42:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-22 19:33:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-22 19:33:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 20:59:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 20:59:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-13 22:09:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-13 22:09:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-06-20 23:51:56 +0000\",\"changed\":[\"published\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-20 23:53:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-20 23:55:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 22:42:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-22 19:33:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-22 19:33:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 20:59:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 20:59:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-13 22:09:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-13 22:09:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-24 22:14:11 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
