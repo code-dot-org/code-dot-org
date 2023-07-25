@@ -53,7 +53,7 @@ class CourseOffering < ApplicationRecord
     'K5 Workshops': 'code.org/professional-development-workshops',
     '6-12 Workshops': 'code.org/apply',
   }
-  validates :professional_learning_program, acceptance: {accept: PROFESSIONAL_LEARNING_PROGRAM_PATHS.values, message: "must be one of the professional learning program path. Expected one of: #{PROFESSIONAL_LEARNING_PROGRAM_PATHS.values}. Got:  \"%{value}\"."}
+  validates :professional_learning_program, acceptance: {accept: PROFESSIONAL_LEARNING_PROGRAM_PATHS.values, message: "must be one of the professional learning program path. Expected one of: #{PROFESSIONAL_LEARNING_PROGRAM_PATHS.values}. Got:  \"%{value}\"."}, allow_blank: true
 
   DURATION_LABEL_TO_MINUTES_CAP = {
     lesson: 90,
