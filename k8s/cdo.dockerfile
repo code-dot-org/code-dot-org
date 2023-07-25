@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1
+
 ################################################################################
 FROM ubuntu:22.04 as cdo-base
 ################################################################################
@@ -159,15 +161,16 @@ RUN \
   true
 
 ################################################################################
-FROM cdo-node_modules
+FROM cdo-user-utils
 ################################################################################
 
-# Copy in .rbenv from the cdo-rbenv stage (runs in parallel with cdo-node_modules)
-COPY --from=cdo-rbenv ${HOME}/.rbenv ${HOME}/.rbenv
+# Copy in apps/node_modules (built in parallel)
+COPY --from=cdo-node_modules --link ${SRC}/apps/node_modules ./apps/node_modules
 
-COPY --chown=${USERNAME} \
-  ./ \
-  ./
+# Copy in ~/.rbenv (built in parallel)
+COPY --from=cdo-rbenv --link ${HOME}/.rbenv ${HOME}/.rbenv
+
+COPY --chown=${USERNAME} --link ./ ./
 
 SHELL [ "zsh", "-l", "-c" ]
 
