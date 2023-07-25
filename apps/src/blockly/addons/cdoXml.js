@@ -1,4 +1,30 @@
-import {procedureDefinitionTypes, sortBlocksByType} from '../constants';
+import {procedureDefinitionTypes} from '../constants';
+
+// Helper function to sort block elements based on the block type
+function sortBlocksByType(blockElements, types) {
+  return blockElements.sort((a, b) => {
+    const aType = a.getAttribute('type');
+    const bType = b.getAttribute('type');
+
+    // If both blocks are of specified types, maintain their original order
+    if (types.includes(aType) && types.includes(bType)) {
+      return 0;
+    }
+
+    // If block a is of a specified type, it should come first
+    if (types.includes(aType)) {
+      return -1;
+    }
+
+    // If block b is of a specified type, it should come first
+    if (types.includes(bType)) {
+      return 1;
+    }
+
+    // Otherwise, maintain the original order
+    return 0;
+  });
+}
 
 export default function initializeBlocklyXml(blocklyWrapper) {
   // Clear xml namespace
