@@ -4,8 +4,7 @@ import Button from '@cdo/apps/templates/Button';
 import {
   changeShadowedImage,
   resetShadowedImageToLongString,
-} from './blockHelper';
-
+} from '@cdo/apps/blockly/addons/cdoBlockShadow';
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 
 export const blocks = {
@@ -144,41 +143,50 @@ export const blocks = {
         imageIndex: 1,
       },
     };
-
     // when the parent changes, trigger a change to this block's field
     if (Object.keys(pointers).includes(this.type)) {
       const pointerData = pointers[this.type];
-      this.onchange = function () {
-        const rootBlock = this.getRootBlock();
-        let parent = undefined;
-        if (rootBlock.type === pointerData.parent) {
-          parent = rootBlock;
-        } else if (this.getRootBlock().type === this.type) {
-          const potentialParents = Blockly.getMainWorkspace()
-            .getTopBlocks()
-            .filter(block => block.type === pointers[this.type].parent);
-          console.log({potentialParents});
-          potentialParents.forEach(potentialParent => {
-            const inputs = potentialParent.inputList.filter(
-              input => input.name === 'flyout_input'
-            );
-            if (inputs.length > 0) {
-              if (
-                inputs[0]?.fieldRow[0]?.flyout_?.workspace_
-                  .getAllBlocks()
-                  .filter(block => block.id === this.id).length > 0
-              ) {
-                parent = potentialParent;
-              }
-            }
-          });
+      this.onchange = function (event) {
+        if (event.type === Blockly.Events.BLOCK_DRAG && event.isStart) {
+          // don't update the shadowed image on drag start.
+          return;
         }
-        if (parent) {
-          changeShadowedImage(parent, this, pointerData.imageIndex);
-        } else {
-          // the block is probably disconnected from the root or toolbox. Reset to
-          // default text.
-          resetShadowedImageToLongString(this);
+        if (
+          event.type === Blockly.Events.BLOCK_CREATE ||
+          event.type === Blockly.Events.BLOCK_CHANGE ||
+          event.type === Blockly.Events.BLOCK_DRAG
+        ) {
+          console.log('trying to update!');
+          const rootBlock = this.getRootBlock();
+          let parent = undefined;
+          if (rootBlock.type === pointerData.parent) {
+            parent = rootBlock;
+          } else if (this.getRootBlock().type === this.type) {
+            const potentialParents = Blockly.getMainWorkspace()
+              .getTopBlocks()
+              .filter(block => block.type === pointers[this.type].parent);
+            potentialParents.forEach(potentialParent => {
+              const inputs = potentialParent.inputList.filter(
+                input => input.name === 'flyout_input'
+              );
+              if (inputs.length > 0) {
+                if (
+                  inputs[0]?.fieldRow[0]?.flyout_?.workspace_
+                    .getAllBlocks()
+                    .filter(block => block.id === this.id).length > 0
+                ) {
+                  parent = potentialParent;
+                }
+              }
+            });
+          }
+          if (parent) {
+            changeShadowedImage(parent, this, pointerData.imageIndex);
+          } else {
+            // the block is probably disconnected from the root or toolbox. Reset to
+            // default text.
+            resetShadowedImageToLongString(this);
+          }
         }
       };
     }

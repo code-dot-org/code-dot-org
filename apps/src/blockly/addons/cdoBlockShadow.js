@@ -5,9 +5,12 @@ export function changeShadowedImage(
 ) {
   const imageUrl = parentBlock
     .getChildren(true)[0]
-    .inputList[0].fieldRow[imageIndexOnParent].imageElement_.getAttribute(
+    ?.inputList[0]?.fieldRow[imageIndexOnParent]?.imageElement_?.getAttribute(
       'xlink:href'
     );
+  if (!imageUrl) {
+    resetShadowedImageToLongString(childBlock);
+  }
   const textInput = childBlock.inputList[0].fieldRow[0];
   const previewInput = childBlock.inputList[0].fieldRow[1];
   textInput.setValue(childBlock.shortString);
