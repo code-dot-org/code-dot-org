@@ -104,6 +104,7 @@ RUN \
   --mount=type=cache,sharing=locked,uid=1000,gid=1000,target=${SRC}/vendor/cache \
   eval "$(rbenv init -)" && \
   time bundle install && \
+  true
 
 ################################################################################
 FROM cdo-base as cdo-user-utils
