@@ -25,13 +25,16 @@ import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/procedure
 export function loadBlocksToWorkspace(workspace, source) {
   let isXml = stringIsXml(source);
   let stateToLoad;
+  let blockOrderMap;
   if (isXml) {
-    stateToLoad = convertXmlToJson(parseXmlElement(source));
+    const xml = parseXmlElement(source);
+    stateToLoad = convertXmlToJson(xml);
+    blockOrderMap = Blockly.Xml.createBlockOrderMap(xml);
   } else {
     stateToLoad = JSON.parse(source);
   }
   Blockly.serialization.workspaces.load(stateToLoad, workspace);
-  positionBlocksOnWorkspace(workspace);
+  positionBlocksOnWorkspace(workspace, blockOrderMap);
 }
 
 export function setHSV(block, h, s, v) {

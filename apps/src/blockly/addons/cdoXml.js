@@ -64,25 +64,13 @@ export default function initializeBlocklyXml(blocklyWrapper) {
 
   // Decode an XML DOM and create blocks on the workspace.
   blocklyWrapper.Xml.domToBlockSpace = function (workspace, xml) {
-    const blocks = [];
-
-    // Convert XML to an array of block elements
-    const blockElements = Array.from(xml.childNodes).filter(
-      node => node.nodeName.toLowerCase() === 'block'
-    );
-
-    // Check if any block elements were found
-    if (blockElements.length === 0) {
-      return blocks;
-    }
-
-    // Procedure definitions should be loaded ahead of call
-    // blocks, so that the procedures map is updated correctly.
-    const sortedBlockElements = sortBlocksByType(
-      blockElements,
+    Blockly.Xml.createBlockOrderMap(xml);
+    const sortedBlockElements = getSortedBlockElements(
+      xml,
       procedureDefinitionTypes
     );
 
+    const blocks = [];
     // To position the blocks, we first render them all to the Block Space
     //  and parse any X or Y coordinates set in the XML. Then, we store
     //  the rendered blocks and the coordinates in an array so that we can
@@ -102,4 +90,54 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   };
 
   blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
+
+  /**
+   * Creates a block order map for the given XML by sorting the block elements and
+   * mapping their sorted positions to their original positions in the XML.
+   * This is used to reset a list of blocks into their original order before
+   * re-positioning blocks on the rendered workspace.
+   *
+   * @param {Element} xml - The XML element containing block elements to create the order map.
+   * @returns {Map} A map with sorted block index as key and original index in the XML as value.
+   */
+  blocklyWrapper.Xml.createBlockOrderMap = function (xml) {
+    // Convert XML to an array of block elements
+    const unsortedBlockElements = Array.from(xml.childNodes).filter(
+      node => node.nodeName.toLowerCase() === 'block'
+    );
+    const sortedBlockElements = getSortedBlockElements(
+      xml,
+      procedureDefinitionTypes
+    );
+    const blockOrderMap = new Map();
+    unsortedBlockElements.forEach((element, index) => {
+      blockOrderMap.set(sortedBlockElements.indexOf(element), index);
+    });
+    return blockOrderMap;
+  };
+}
+
+/**
+ * Extracts block elements from the provided XML and returns them sorted based on their types.
+ * If no block elements are found in the XML, an empty array is returned.
+ *
+ * @param {Element} xml - The XML element containing block elements.
+ * @param {string[]} types - An array of strings representing block types. These types are moved to the front of the list.
+ * @returns {Array} An array of sorted block elements or an empty array if no blocks are present.
+ */
+function getSortedBlockElements(xml, types) {
+  // Convert XML to an array of block elements
+  const blockElements = Array.from(xml.childNodes).filter(
+    node => node.nodeName.toLowerCase() === 'block'
+  );
+
+  // Check if any block elements were found
+  if (blockElements.length === 0) {
+    return [];
+  }
+
+  // Procedure definitions should be loaded ahead of call
+  // blocks, so that the procedures map is updated correctly.
+  const sortedBlockElements = sortBlocksByType(blockElements, types);
+  return sortedBlockElements;
 }
