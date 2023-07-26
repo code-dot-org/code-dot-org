@@ -4,6 +4,7 @@ import {ChordEvent, ChordEventValue} from '../interfaces/ChordEvent';
 import {Effects, EffectValue} from '../interfaces/Effects';
 import {PatternEvent, PatternEventValue} from '../interfaces/PatternEvent';
 import {PlaybackEvent} from '../interfaces/PlaybackEvent';
+import {FunctionEvents} from '../interfaces/FunctionEvents';
 import {SkipContext} from '../interfaces/SkipContext';
 import {SoundEvent} from '../interfaces/SoundEvent';
 import MusicLibrary from '../MusicLibrary';
@@ -13,20 +14,6 @@ interface SequenceFrame {
   measure: number;
   together: boolean;
   lastMeasures: number[];
-}
-
-/**
- * This is very similar to {@link FunctionContext}, but also contains
- * all playback events that occur in the function. This model will be
- * useful for timeline rendering, but as of now is only used within this
- * class.
- */
-interface FunctionEvents {
-  name: string;
-  uniqueInvocationId: number;
-  playbackEvents: PlaybackEvent[];
-  startMeasure: number;
-  endMeasure: number;
 }
 
 interface SkipFrame {
@@ -128,6 +115,7 @@ export default class Simple2Sequencer extends Sequencer {
       startMeasure: this.getCurrentMeasure(),
       endMeasure: this.getCurrentMeasure(),
       playbackEvents: [],
+      calledFunctionIds: [],
     };
 
     this.functionStack.push(uniqueId);
@@ -145,6 +133,13 @@ export default class Simple2Sequencer extends Sequencer {
     const lastFunctionId = this.functionStack.pop();
     if (lastFunctionId !== undefined) {
       this.functionMap[lastFunctionId].endMeasure = this.getCurrentMeasure();
+
+      if (this.functionStack.length > 0) {
+        // Add the called function to the list of functions that its caller called.
+        this.functionMap[
+          this.functionStack[this.functionStack.length - 1]
+        ].calledFunctionIds.push(lastFunctionId);
+      }
     }
 
     this.effectsStack.pop();

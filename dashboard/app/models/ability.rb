@@ -62,8 +62,7 @@ class Ability
       Foorm::Library,
       Foorm::LibraryQuestion,
       :javabuilder_session,
-      CodeReview,
-      :openai_chat
+      CodeReview
     ]
     cannot :index, Level
 

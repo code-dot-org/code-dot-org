@@ -37,13 +37,7 @@ class OpenaiChatController < ApplicationController
     head :too_many_requests
   end
 
-  private def has_required_messages_param?
-    begin
-      params.require([:messages])
-    rescue ActionController::ParameterMissing
-      return false
-    end
-
-    true
+  def has_required_messages_param?
+    params[:messages].present?
   end
 end
