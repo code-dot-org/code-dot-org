@@ -91,6 +91,8 @@
             font-size: 14px !important;
           }
 
+          // Setting varying heights to each logo to match
+          // the code.org/ai/pl/101 landing page styles
           &:nth-of-type(2) img { height: 24px }
           &:nth-of-type(3) img { height: 26px }
           &:nth-of-type(4) img { height: 18px }
@@ -151,6 +153,7 @@
 }
 
 // Skinny banner
+// Currently shown on code.org/teach
 aside.ai-pl-banner-skinny {
   box-sizing: content-box;
   height: 130px;
