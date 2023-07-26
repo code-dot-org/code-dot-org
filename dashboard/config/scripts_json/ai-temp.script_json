@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-07-24 21:14:51 UTC",
+    "serialized_at": "2023-07-25 23:50:12 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -44,7 +44,7 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.",
+        "overview": "In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - AI Bot - is learning how to detect patterns in fish.",
         "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n",
         "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean"
       },
@@ -812,12 +812,12 @@
       "key": "e2cda095-ba18-4a9b-96e6-ecae1e84b767",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  _Today we begin a unit on Artificial Intelligence, or AI. What’s an example of AI either in your personal life or that you’ve seen in a movie or book?_",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  _What’s an example of Artificial Intelligence (or AI) either in your personal life or that you’ve seen in a movie or book?_",
         "name": "Journal",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**What Is AI?** At a basic level, artificial intelligence is when a computer program mimics the intelligence of a human being. This can appear as solving a problem, engaging in conversations, displaying emotions, and many other forms. Shortly after this prompt, students will watch a video that further defines AI and the focus of this unit, Machine Learning.\n"
+            "markdown": "**What Is AI?** At a basic level, artificial intelligence is when a computer program mimics the intelligence of a human being. This can appear as solving a problem, engaging in conversations, displaying emotions, and many other forms. Students may gravitate towards examples of artificial intelligence whose form also mimics a human being, such as interactive robots or Siri or having a conversation with ChatGPT, but also emphasize examples that broader and more embedded in tools we use frequently, such as social media algorithms or streaming recommendation algorithms.\n\nShortly after this prompt, students will watch a video that further defines AI and the focus of this unit, Machine Learning.\n"
           }
         ]
       },
@@ -926,8 +926,14 @@
       "key": "44138582-895d-49bb-bf82-a06abd7109ab",
       "position": 1,
       "properties": {
-        "description": "In today’s activity, we’re going to use machine learning to help a robot clean up the ocean and learn how to identify fish. We’ll give it lots of examples of fish, give it time to learn from those examples, and then see how well it does in cleaning up the ocean.",
-        "remarks": true
+        "description": "In today’s activity, we’re going to use machine learning to help a robot clean up the ocean. To do this, we need to teach the robot to recognize fish so it will clean up anything that isn't a fish. We’ll give it lots of examples of fish, give it time to learn from those examples, and then see how well it does in cleaning up the ocean.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Real-World Influence:** This type of technology is being used in the real-world by groups such as [The Ocean Cleanup](https://theoceancleanup.com/), which have used artificial intelligence and machine learning to train robots to recognize plastics in the water. You could consider showing this short video to the class as a way to further motivate today's activity: [How AI Helps Clean Oceans From Plastics](https://www.youtube.com/watch?v=3S2w-ewCf5s)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "44138582-895d-49bb-bf82-a06abd7109ab",
@@ -979,7 +985,7 @@
       "key": "35976cf9-0349-45f5-a866-8ee51c5b1e4a",
       "position": 5,
       "properties": {
-        "description": "| Activity                           | As a Class                                                                                                                                                                      |\n| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| **Training Screen** ![](https://images.code.org/d5c6d852f32c09b038315b9c4b5a77f1-oceans1-sm.png) | <ul><li>Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun</li><li>Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish</li><li>At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.</li><li>Before continuing, have students record on their activity guide how many images they </li></ul>|\n| **Testing Screen** ![](https://images.code.org/1c133d1ed2eb5f634fe0469aef40b4c6-oceans2-sm.png) | <ul><li>A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.</li></ul> |\n| **Evaluation Screen** ![](https://images.code.org/418cdfba3b4181267a1713855a005bc6-oceans3-sm.png) |<ul><li>Have students count the number of fish that it identified correctly. Record this on the activity guide.</li><li>It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion. </li></ul> |\n\n&nbsp;\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
+        "description": "| Activity                           | As a Class                                                                                                                                                                      |\n| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| **Training Screen** ![](https://images.code.org/d5c6d852f32c09b038315b9c4b5a77f1-oceans1-sm.png) | <ul><li>Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun</li><li>Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish</li><li>At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.</li><li>Before continuing, have students record on their activity guide how many images they used for their training data </li></ul>|\n| **Testing Screen** ![](https://images.code.org/1c133d1ed2eb5f634fe0469aef40b4c6-oceans2-sm.png) | <ul><li>A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.</li></ul> |\n| **Evaluation Screen** ![](https://images.code.org/418cdfba3b4181267a1713855a005bc6-oceans3-sm.png) |<ul><li>Have students count the number of fish that it identified correctly. Record this on the activity guide.</li><li>It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion. </li></ul> |\n\n&nbsp;\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
       },
       "seeding_key": {
         "activity_section.key": "35976cf9-0349-45f5-a866-8ee51c5b1e4a",
@@ -1140,7 +1146,7 @@
       "key": "72ae012c-853b-4990-a298-38738b6992eb",
       "position": 18,
       "properties": {
-        "description": "Even with a small example like this, we see that machine learning can get into trouble and learn something that’s harmful to a particular type of fish. Having more data and making sure it represents all types of fish can help solve this problem. These types of examples happen in real life too and can have serious consequences, such as whether or not you receive medical care or get a job offer. Throughout this unit, as we learn how to use machine learning to solve problems, we need to always be thinking about: What is the impact, and who is being included or excluded?",
+        "description": "Even with a small example like this, we see that machine learning can get into trouble and learn something untrue about a particular type of fish. Having more data and making sure it represents all types of fish can help solve this problem. These types of examples happen in real life too and can have serious consequences, such as whether or not you receive medical care or get a job offer. As we learn how to use machine learning to solve problems, we need to always be thinking about: What is the impact, and who is being included or excluded?",
         "remarks": true
       },
       "seeding_key": {
@@ -1163,7 +1169,7 @@
       "key": "dab81f50-3f98-4996-b401-f01699ca1efc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  _What is something new you learned about machine learning today? What is a new question you have about machine learning?_\n\nEncourage students to choose one of these to share with you on the way out the door, or to write their responses on a post-it note that can be displayed in the classroom. If possible, keep track of these items throughout the unit and refer back to them in later lessons when they are addressed.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  _What's a situation where it it might be helpful to use machine learning to solve a problem?_\n\nEncourage students to share with you on the way out the door, or to write their responses on a post-it note that can be displayed in the classroom. If you teach additional lessons within this unit, you can refer back to these post-its as these topics are covered in other lessons.",
         "name": "Journal"
       },
       "seeding_key": {
@@ -1369,8 +1375,14 @@
       "key": "920d8ff2-cf46-41a8-9cf4-0cc18706a5f6",
       "position": 8,
       "properties": {
-        "description": "We're helping a sports arena make its scoreboard more accessible. We want to train a camera to detect what the scores are so it can be broadcast to a radio receive for people who are visually impaired. For this to work, it needs to detect the which number is displayed on the scoreboard. Each number is represented with one of these displays, which uses 7 segments to create images.",
-        "remarks": true
+        "description": "We're helping a sports arena improve its scoreboard. We want to train a camera to detect what the scores are so it can be broadcast to a radio receiver for people who are visually impaired. For this to work, it needs to detect which number is displayed on the scoreboard. Each number is represented with one of these displays, which uses 7 segments to create images.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Improving Accessibility:** A lot of image recognition software is designed for accessibility purposes and making improvements for folks who are visually impaired. You may decide to show this [Seeing AI video](https://www.youtube.com/watch?v=DybczED-GKE) as an example of how visually impaired folks are self-sufficient and use technology as one of many tools to solve problems in their daily life."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "920d8ff2-cf46-41a8-9cf4-0cc18706a5f6",
@@ -1442,7 +1454,13 @@
       "key": "c8c950b5-ec66-4196-9d5b-67170e0684ae",
       "position": 14,
       "properties": {
-        "description": "| Slides                           | Say                                                                                                                                                                      |\n| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| ![](https://images.code.org/1b79baa3ea6dfa043c4ca65862fde192-slides1.png) | **Say:** The left side of this guide represents the inputs that your sensor can detect. It knows when each individual segment is turned on.                              |\n| ![](https://images.code.org/ddf12b3544d8315ddb987a86cb1ec8ef-slides2.png) | **Say:** The right side of this guide represents the decision we're trying to make. We need to build a path from the inputs on the left to these decisions on the right. |\n| ![](https://images.code.org/67dd4d7689a543737ea8bf31e21e377f-slides3.png) | **Say:** This central area is where you can build your network, just like in the video                                                                                   |\n| ![](https://images.code.org/b5be83c4dbfac8bfcacb8cbed48546c8-slides4.png) | **Say:** You can combine at most 2 inputs from previous layers to create a new combination, like this \"corner\" combined from two segments                                |\n| ![](https://images.code.org/52227f3ce8b3cfbf9e779f3b9bb948a1-slides5.png) | **Say:** You can make as many items in this column as you want! For the first layer, you may end up with a lot of combinations in this column                            |\n| ![](https://images.code.org/b5a0d32cf2af3901fe39ad517eaec037-slides6.png) | **Say:** You can combine from previous layers to move into the next layers, creating more complex shaps like this \"Top Half\"                                             |\n| ![](https://images.code.org/4ff1cfacd677b6992336307c0cffc8ba-slides7.png) | **Say:** You can combine from any previous layer, but you can still only use 2 inputs at a time                                                                          |\n| ![](https://images.code.org/59b7b329453c40494bfc0f5d8353ffce-slides8.png) | **Say:** The final layer is special - it can combine up to 3 inputs from any of the previous layers\n\n"
+        "description": "| Slides                           | Say                                                                                                                                                                      |\n| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| ![](https://images.code.org/1b79baa3ea6dfa043c4ca65862fde192-slides1.png) | **Say:** The left side of this guide represents the inputs that your sensor can detect. It knows when each individual segment is turned on.                              |\n| ![](https://images.code.org/ddf12b3544d8315ddb987a86cb1ec8ef-slides2.png) | **Say:** The right side of this guide represents the decision we're trying to make. We need to build a path from the inputs on the left to these decisions on the right. |\n| ![](https://images.code.org/67dd4d7689a543737ea8bf31e21e377f-slides3.png) | **Say:** This central area is where you can build your network, just like in the video                                                                                   |\n| ![](https://images.code.org/b5be83c4dbfac8bfcacb8cbed48546c8-slides4.png) | **Say:** You can combine at most 2 inputs from previous layers to create a new combination, like this \"corner\" combined from two segments                                |\n| ![](https://images.code.org/52227f3ce8b3cfbf9e779f3b9bb948a1-slides5.png) | **Say:** You can make as many items in this column as you want! For the first layer, you may end up with a lot of combinations in this column                            |\n| ![](https://images.code.org/b5a0d32cf2af3901fe39ad517eaec037-slides6.png) | **Say:** You can combine from previous layers to move into the next layers, creating more complex shaps like this \"Top Half\"                                             |\n| ![](https://images.code.org/4ff1cfacd677b6992336307c0cffc8ba-slides7.png) | **Say:** You can combine from any previous layer, but you can still only use 2 inputs at a time                                                                          |\n| ![](https://images.code.org/59b7b329453c40494bfc0f5d8353ffce-slides8.png) | **Say:** The final layer is special - it can combine up to 3 inputs from any of the previous layers\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Examples:** Several examples are provided in this document: [r _example_computer_vision/ai-temp/unversioned]. Consider reviewing these examples before teaching the lesson to see what kinds of networks students may create."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c8c950b5-ec66-4196-9d5b-67170e0684ae",
@@ -1511,11 +1529,11 @@
       "key": "50115111-857f-49c1-89b6-38b95ea3dc9f",
       "position": 19,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with the first example",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with the first example\n\n(Click to expand)\n\n![expandable](https://images.code.org/4cdc08b1dcb88459de2a0ab96a1406c7-slide1.png)",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Use the network, not your eyes:** Students may comment that, once they have the inputs on the left-side, they already know what number it is - they can \"figure it out just by looking at it\". Remind students that the goal isn't for _**us**_ to figure it out with our eyes and brain, but for a _**computer**_ to figure it our with its sensors and algorithm. You can also ask students to consider all of the steps that happened in nanoseconds once they saw these inputs - their brain needed to combine all of this information together to know what number it was. This network is doing the same thing, acting like the computer's \"brain\" to make a decision once it sees the inputs."
+            "markdown": "**Use the network, not your eyes:** Students may comment that, once they have the inputs on the left-side, they already know what number it is - they can \"figure it out just by looking at it\". Remind students that the goal isn't for _**us**_ to figure it out with our eyes and brain, but for a _**computer**_ to figure it our with its sensors and algorithm. This can be useful for images that are incredibly large or complex (like satellite images of crowded markets) that we might not be able to interpret, or situations where we need to interpret images incredibly quickly which computers can do faster than we can.\n\n\nYou can also ask students to consider all of the steps that happened in nanoseconds once they saw these inputs - their brain needed to combine all of this information together to know what number it was. This network is doing the same thing, acting like the computer's \"brain\" to make a decision once it sees the inputs."
           }
         ]
       },
@@ -1550,11 +1568,11 @@
       "key": "9a49f599-618f-4ad9-a4c6-d3ba85526823",
       "position": 22,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the second example",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the second example\n\n(Click to expand)\n\n![expandable](https://images.code.org/b5c77b6b8e7752fa6a51cb73e4c1c2f1-slide2.png)",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Optional Extensions:**\n\n* Consider having students trade networks with another pair, then giving students a third example and seeing if they can trace a neighbor's network\n* Consider inviting students to trace the solution in front of the class, explaining how their network works\n* Consider giving students the number 8 as an input, which will activate every single space in their network, then prompt them to consider how they can make a decision when this happens\n* Consider telling students that one of the segments if \"burnt out\", and then giving them a pattern that doesn't exactly match with any number (for example: an 8, but the bottom segment is missing, so it looks like an A). What number will their network identify it as?"
+            "markdown": "**Optional Extensions:**\n\n* Consider having students trade networks with another pair, then giving students a third example and seeing if they can trace a neighbor's network\n* Consider inviting students to trace the solution in front of the class, explaining how their network works\n* Consider giving students the number 8 as an input, which will activate every single space in their network, then prompt them to consider how they can make a decision when this happens\n* Consider telling students that one of the segments if \"burnt out\", and then giving them a pattern that doesn't exactly match with any number (for example: an 8, but the bottom segment is missing, so it looks like an A). What number will their network identify it as?\n* Consider asking students to \"time themselves\" tracing through the network, then asking students to notice if some networks are \"more efficient\" than others and take less time to complete."
           }
         ]
       },
@@ -1564,21 +1582,10 @@
       }
     },
     {
-      "key": "15d41629-fa6c-4dc6-b7c9-d579614d9e7e",
+      "key": "5a7670d4-a5ef-4756-86a2-f33a4564c992",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **(Option 1) Prompt:** _How would you adapt your network to work with a 14-segment display? What would need to change?_"
-      },
-      "seeding_key": {
-        "activity_section.key": "15d41629-fa6c-4dc6-b7c9-d579614d9e7e",
-        "lesson_activity.key": "0601474b-ca09-4996-8160-e880e4cec3e8"
-      }
-    },
-    {
-      "key": "5a7670d4-a5ef-4756-86a2-f33a4564c992",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **(Option 3) Prompt:** What do you imagine a network could look like that could identify the image below? What do the inputs look like? What do some of the middle layers look like?\n\n(Click to expand. Image source: Wikimedia Commons)\n\n![expandable](https://images.code.org/46689f062047e100e3073bc8a00fd51f-Semaphore_Signals_A-Z.jpg)"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What do you imagine a network could look like that could identify the image below? What do the inputs look like? What do some of the middle layers look like?\n\n(Click to expand. Image source: Wikimedia Commons)\n\n![expandable](https://images.code.org/46689f062047e100e3073bc8a00fd51f-Semaphore_Signals_A-Z.jpg)"
       },
       "seeding_key": {
         "activity_section.key": "5a7670d4-a5ef-4756-86a2-f33a4564c992",
@@ -1587,7 +1594,7 @@
     },
     {
       "key": "1810f940-d14f-41b9-bfd1-629d114679dd",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is an open-ended prompt for students to apply the skills they practiced in the lesson to a new situation, but they still may struggle adapting to a new context - it's okay for students to struggle and \"talk it out\" as they work through this together. Students should identify the individual left and right flag positions as inputs, and the combination of the two as the output letter. The middle layer could look like two flags combined together - for example: left flag straight left + right flag straight right = R. This example network would be simpler than the class example because there are less components to build together.",
         "tips": [
@@ -1604,7 +1611,7 @@
     },
     {
       "key": "12149e56-a564-43f2-97b9-15dd29ecba69",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "**(Optional) Extension:** Consider watching the [r what_a_neural_network_sees/ai-temp/unversioned] video from the [Experiments with Google](https://experiments.withgoogle.com/what-neural-nets-see) page. The short video gives a live example of how image classification works as a neural network, where you can see the inputs and hidden layers. \n"
       },

@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "musiclab-pilot",
-    "serialized_at": "2023-07-24 22:30:09 UTC",
+    "serialized_at": "2023-07-25 22:02:09 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -83,14 +83,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music_lab_2023_1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music_lab_2023_1"
+          "music_lab_2023_melody_sequencing"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -98,7 +95,7 @@
         "activity_section.key": "16b02d16-0319-4005-a794-c508e9dd7acb"
       },
       "level_keys": [
-        "music_lab_2023_1"
+        "music_lab_2023_melody_sequencing"
       ]
     },
     {
@@ -299,6 +296,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_pilot_intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -318,9 +318,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "music_lab_2023_1",
+        "level.key": "music_lab_2023_melody_sequencing",
         "script_level.level_keys": [
-          "music_lab_2023_1"
+          "music_lab_2023_melody_sequencing"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
