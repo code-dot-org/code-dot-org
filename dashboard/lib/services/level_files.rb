@@ -49,7 +49,7 @@ module Services
       else
         level = Level.find_by_name(name) || Level.new(name: name)
         level.md5 = md5
-        level = Services::LevelXml.load_custom_level_xml(level_data, level)
+        level = Services::LevelFiles.load_custom_level_xml(level_data, level)
         level
       end
     rescue Exception => exception
