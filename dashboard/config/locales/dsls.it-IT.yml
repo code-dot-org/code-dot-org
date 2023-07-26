@@ -702,8 +702,6 @@ it-IT:
           # Immagini Binarie
 
           Comunica come ricreare un'immagine usando solo due valori semplici.
-      Building a UI with Design Mode: {}
-      CSD - Getters and Setters: {}
       CSD CSS project RGB_2021:
         description: Scopri come ottenere ancora più colori utilizzando i codici RGB.
         display_name: Colori RGB
@@ -1252,9 +1250,6 @@ it-IT:
         content1: descrizione qui
       CSD U2 Design Project_2018_2019:
         content1: descrizione qui
-      CSD U2 Expression Exemplars: {}
-      CSD U2 Expression Exemplars_2018: {}
-      CSD U2 Expression Exemplars_2018_2019: {}
       CSD U2 Expression Exemplars_2018_2019_pilot_2021:
         markdown: |
           # Esempi di siti Web personali
@@ -1308,7 +1303,6 @@ it-IT:
           * [Lo scopo dei siti web - Scheda attività](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
         teacher_markdown: "* [Lo scopo dei siti web - Esempi](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
           | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
-      CSD U2 L12 Overview: {}
       CSD U2 L2 Overview:
         content1: descrizione qui
         markdown: |
@@ -1387,13 +1381,8 @@ it-IT:
           *  **[Elenco Elementi](//docs.code.org/weblab/li/)** - `<li></li>`
           *  **[Elenco Ordinato](//docs.code.org/weblab/ol/)** - `<ol></ol>`
 
-      CSD U2 L7 Overview: {}
       CSD U2 Lesson 6 Overview:
         content1: descrizione qui
-      CSD U2 Lesson 9 Overview: {}
-      CSD U2 PSP Programming: {}
-      CSD U2 PSP Programming_2018: {}
-      CSD U2 PSP Programming_2018_2019: {}
       CSD U2 Sample CSS layout_2021:
         markdown: |+
           # Siti Web di esempio
@@ -1547,7 +1536,7 @@ it-IT:
         - {}
         - text: 1, 2 e 3
         markdown: |
-          Uno studente utilizza un foglio di stile per rendere verdi tutti i paragrafi del sito Web, ma non funziona su index.html, anche se funziona sulle altre pagine Web. Cosa potrebbe causare il problema?
+          Uno studente utilizza un foglio di stile per rendere verdi tutti i paragrafi del sito web, ma non funziona su index.html, anche se funziona sulle altre pagine web. Cosa potrebbe causare il problema?
 
           1. Lo studente ha dimenticato di collegare il foglio di stile alla pagina index.html.
           1. Lo studente non ha caricato le immagini utilizzate nella pagina index.html.
@@ -1561,7 +1550,7 @@ it-IT:
         - {}
         - text: 1, 2 e 3
         markdown: |
-          Uno studente utilizza un foglio di stile per rendere verdi tutti i paragrafi del sito Web, ma non funziona su index.html, anche se funziona sulle altre pagine Web. Cosa potrebbe causare il problema?
+          Uno studente utilizza un foglio di stile per rendere verdi tutti i paragrafi del sito web, ma non funziona su index.html, anche se funziona sulle altre pagine web. Cosa potrebbe causare il problema?
 
           1. Lo studente ha dimenticato di collegare il foglio di stile alla pagina index.html.
           1. Lo studente non ha caricato le immagini utilizzate nella pagina index.html.
@@ -2239,7 +2228,6 @@ it-IT:
           * [personaggio.rimbalza()](//studio.code.org/docs/gamelab/bounce/)
           * [personaggio.rimbalzo](//studio.code.org/docs/gamelab/bounciness/)
 
-      CSD U3 Defender SFLP: {}
       CSD U3 Entertainment:
         markdown: "# Iniziare la tua ricerca\n\nPer scoprire di più su come l'informatica
           e la programmazione giocano un ruolo nell'intrattenimento, dovrai fare qualche
@@ -2464,11 +2452,6 @@ it-IT:
           * [Informatica e Intrattenimento](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit) - Exemplar ([PDF](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=doc))
 
 
-      CSD U3 Lesson Overview 10: {}
-      CSD U3 Lesson Overview 11: {}
-      CSD U3 Lesson Overview 12: {}
-      CSD U3 Lesson Overview 13: {}
-      CSD U3 Lesson Overview 14: {}
       CSD U3 Lesson Overview 2:
         markdown: |-
           # Panoramica
@@ -2529,13 +2512,6 @@ it-IT:
           ## Risorse
 
           * [Introduzione alle variabili](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
-      CSD U3 Lesson Overview 6: {}
-      CSD U3 Lesson Overview 7: {}
-      CSD U3 Lesson Overview 8: {}
-      CSD U3 Lesson Overview 9: {}
-      CSD U3 Movement Challenges: {}
-      CSD U3 Project Build a Game SFLP: {}
-      CSD U3 SFLP Velocity: {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
@@ -2888,7 +2864,6 @@ it-IT:
         questions:
         - text: Qual è la posizione x della mela alla fine di questo programma?
         title: Domanda n. 3
-      CSD U3 Using the Game Design Process SLFP: {}
       CSD U3 combining rep:
         content1: descrizione qui
       CSD U3 combining rep_2018:
@@ -3356,13 +3331,6 @@ it-IT:
         questions:
         - text: Data l'opportunità di testare questo wireframe con gli utenti, quali
             DUE cose sarebbero più importanti da cercare?
-      CSD U4L01 SFLP: {}
-      CSD U4L02 SFLP: {}
-      CSD U4L03 SFLP: {}
-      CSD U4L04 SFLP: {}
-      CSD U4L05 SFLP: {}
-      CSD U4L06 SFLP: {}
-      CSD U4L07 SFLP: {}
       CSD U4L08 SFLP:
         markdown: |+
           # Panoramica
@@ -3384,7 +3352,6 @@ it-IT:
           ## Risorse
 
           * [Ricerca di mercato](https://docs.google.com/document/d/1zDS5HCQ3nTwWHh4Dr4Ix17Db9fMRVJA8lNefwdcjiA0/export?format=pdf) - Guida Attività
-      CSD U4L10 SFLP: {}
       CSD U4L11 SFLP:
         markdown: |
           # Panoramica
@@ -3396,8 +3363,6 @@ it-IT:
 
           * [Prototipo - Verifica Utente](https://docs.google.com/document/d/1cPIdaayUutKdsq1RFT-keF4X-o4XBrF2BnMaVutc-_4/export?format=pdf) - Guida attività
           * [Verifica applicazione " Menù del pranzo"](https://drive.google.com/open?id=0BxKeX2-Lg_EYUTBNbnMyUENFcGs) - Video
-      CSD U4L12 SFLP: {}
-      CSD U4L13 SFLP: {}
       CSD U4L15 SFLP:
         markdown: "# Panoramica\n\nI teams eseguono un altro ciclo di verifiche utente,
           questa volta usando il loro prototipo interattivo. I riscontri raccolti
@@ -3419,7 +3384,6 @@ it-IT:
           ## Risorse
 
           * [Analisi della verifica Utente](https://docs.google.com/document/d/1Y7cri91LU_70n6CrIGnUSedPwA_TMfYCkyhCjfpfTns/export?format=pdf) - Guida attività
-      CSD U4L17 SFLP: {}
       CSD U5 Encryption 1:
         content1: descrizione qui
       CSD U5 Encryption 1_2018:
@@ -4479,17 +4443,9 @@ it-IT:
         description: In queste attività, metti alla prova le tue abilità la gestione
           del testo.
         display_name: Applicazioni pratiche
-      CSD-U5-SFLP ASCII and Binary Representation: {}
-      CSD-U5-SFLP Automating Data Decisions: {}
       CSD-U5-SFLP Combining Representations:
         teacher_markdown: "* [Registro per animali domestici](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/)
           - Esempio ([PDF](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/export?format=pdf))\n"
-      CSD-U5-SFLP Create a Representation: {}
-      CSD-U5-SFLP Interpreting Data: {}
-      CSD-U5-SFLP Making Decisions with Data: {}
-      CSD-U5-SFLP Patterns and Representation: {}
-      CSD-U5-SFLP Problem Solving and Data: {}
-      CSD-U5-SFLP Problem Solving with Big Data: {}
       CSD-U5-SFLP Representation Matters:
         markdown: |
           # Panoramica
@@ -4506,15 +4462,6 @@ it-IT:
           * [Dati sui pasti] ( https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/edit?usp=sharing) - Risorsa ([PDF](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=doc))
 
           [/key]
-      CSD-U5-SFLP Representing Images: {}
-      CSD-U5-SFLP Representing Numbers Part 1: {}
-      CSD-U5-SFLP Representing Numbers Part 2: {}
-      CSD-U5-SFLP Solve a Data Problem: {}
-      'CSD: getText vs getNumber': {}
-      'CSD: setProperty': {}
-      CSDU6 Innovation: {}
-      CSDU6 Innovation_2018: {}
-      CSDU6 Innovation_2018_2019: {}
       CSDU6 Innovation_2021:
         markdown: |
           # Ricerca sull'innovazione
@@ -4598,7 +4545,6 @@ it-IT:
         - {}
         questions:
         - {}
-      CSP pre-assessment survey: {}
       Choose 2 Test:
         answers:
         - correct: true
@@ -4607,7 +4553,6 @@ it-IT:
         - {}
         questions:
         - {}
-      Choosing Good IDs: {}
       ConditionalsWithCards-Unplugged:
         markdown: |-
           # Istruzioni condizionali con le carte da gioco
@@ -5204,8 +5149,6 @@ it-IT:
           # Condivisione digitale
 
           In questa lezione considererai le sfide e i benefici del rispetto della proprietà e del copyright, in particolare negli ambienti digitali.
-      ECSPD1 computational thinker: {}
-      Embedded Video Test: {}
       EnvelopeVariables-Unplugged:
         markdown: "# Variabili involucro \n\nLe variabili permettono molta libertà
           nell'informatica. Questa lezione aiuta a spiegare cosa sono le variabili
@@ -7632,7 +7575,6 @@ it-IT:
           lezione. \n\n***\n<a href=\"https://curriculum.code.org/csf-19/coursed/10/\"
           target=\"blank\">![](https://images.code.org/d4959eca61f272b9416ff4e65a259bd2-image-1573080208870.43.14
           PM.png)</a>"
-      OPD-K5 Stage5Go_dani: {}
       OPD-K5 Stage5Review:
         markdown: |-
           # Cicli > Riflessioni
@@ -8153,7 +8095,25 @@ it-IT:
           quando si accede con un account insegnante. Se non disponi di un account
           insegnante, puoi **<a href=\"https://studio.code.org/users/sign_up\" target=\"blank\">crearlo
           ora</a>**.\n\n<a href=\"http://studio.code.org/\" target=\"blank\">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>"
-      OPD-K5 Stage9Start_dani: {}
+      OPD-K5 Stage9Start_dani:
+        markdown: "# Gestione della classe > Esploriamo le risorse per gli insegnanti\n\nDalla
+          lezione 4 alla lezione 8 hai avuto modo di prendere visione di alcune lezioni
+          tradizionali e risorse online disponibili per i corsi di \"Fondamenti di
+          informatica\" relative ai concetti di informatica che stai imparando.\nOra
+          che hai un'idea di cosa sia la programmazione informatica ed anche di come
+          si possa insegnare questa materia, è giunto il momento di pianificare il
+          tuo insegnamento. In questa lezione visiteremo altre aree della piattaforma
+          di Code.org ed il **[Pannello di controllo dell'insegnante](http://studio.code.org/)**.
+          \n\nAl termine della lezione 10, avrai:\n\n- scoperto altre risorse disponibili
+          per gli insegnanti,\n- imparato ad utilizzare il **[Pannello di controllo
+          dell'insegnante](http://studio.code.org/)** di Code.org,\n- riflettuto su
+          come integrare l'informatica nelle tue pratiche di insegnamento.\n\n***\n\nQui
+          sotto puoi vedere come si presenta il pannello di controllo dell'insegnante.
+          Per arrivarci devi fare login in Code.org con la tua utenza da insegnante
+          -- sarà la tua schermata predefinita quando accederai a questo sito. Se
+          non hai un'utenza da insegnante, puoi **[richiederla qui](https://studio.code.org/users/sign_up)**.
+          Se sei un'insegnante italiano, ti consigliamo di partire dal [sito di Programma
+          il Futuro](https://programmailfuturo.it).\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
       OPD-K5 Using CS:
         markdown: "# Gestione della classe > Preparati per una lezione in Code Studio\n\nVediamo
           come puoi gestire la tua classe durante una lezione in Code Studio.\n\n##
@@ -8178,7 +8138,6 @@ it-IT:
           delle lezioni per guidarli nell'apprendimento e lo svolgimento delle attività
           tradizionali che potrai fare senza uso di computer. Utilizza i forum di
           Code.org e Programma il Futuro per unirti agli altri insegnanti.\n\n"
-      OPD-K5 Using CS_dani: {}
       OPD-K5 Vocabulary:
         markdown: |-
           # Fondamenti di informatica > Parole chiave
@@ -9148,7 +9107,6 @@ it-IT:
           <div style="clear: both"></div>
 
           **Ora prova tu!**
-      'Overview: If Statements': {}
       'Overview: Images':
         markdown: "# Immagini\n\n## Inserisci un URL di un'immagine sul web\n\n<img
           src=\"https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png\"
@@ -9200,10 +9158,6 @@ it-IT:
           </div>
 
           ![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
-      'Overview: setPosition': {}
-      PDK5 Foundations F: {}
-      PDK5 Intro C: {}
-      PS U3 Assessment1 new: {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -9354,8 +9308,6 @@ it-IT:
       RelayProgramming-Unplugged_2021:
         markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorando
           in gruppo scrivete programmi per disegnare immagini. "
-      Responding to User Input: {}
-      Sample CSP Assessment: {}
       ScreenOutTheMean-Unplugged:
         markdown: |-
           # Scherma la Cattiveria
@@ -9501,6 +9453,10 @@ it-IT:
           ### Per favore, prenditi un momento per rispondere a queste **tre brevi domande**.
 
           _Code.org prende sul serio la tua privacy._ Le tue risposte qui verranno mantenute <strong>anonime</strong>. Il tuo insegnante può vedere le risposte per l'intera classe, ma senza i nomi collegati.
+        teacher_markdown: |
+          **Sondaggio di fine unità per gli insegnanti:** mentre i tuoi studenti completano il sondaggio, ti saremmo grati se completassi un breve sondaggio per gli insegnanti
+
+          ## [Fare clic qui per il sondaggio degli insegnanti](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -9703,11 +9659,6 @@ it-IT:
           [Cose'è un Computer](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing) - Guida Attività ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))
 
 
-      Unit 2 Lesson 10 Overview: {}
-      Unit 2 Lesson 16 Overview: {}
-      Unit 2 Lesson 7 Overview: {}
-      Unit 2 Lesson 8 Overview: {}
-      Video - The Future of Big Data: {}
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -10155,7 +10106,6 @@ it-IT:
           <small>
           <em>Code.org prende sul serio la tua privacy.</em> Le tue risposte qui verranno mantenute <strong>anonime</strong>. Il tuo insegnante può vedere le risposte per l'intera classe, ma senza i nomi collegati.
           </small>
-      allthethings_bubble_choice: {}
       allthethings_external_displayed_as_unplugged:
         content1: descrizione qui
       allthethings_external_not_displayed_as_unplugged:
@@ -12991,8 +12941,6 @@ it-IT:
           più modificarlo dopo aver fatto clic su \"Esegui\".\n</h3>\n<br/><hr/>\n<h3>Nella
           prossima lezione scriverai del codice con variabili che *cambieranno valore*
           durante l'esecuzione del programma.</h3>\n\n"
-      courseF_groups_freeplay_2022_pilot_-2022-2: {}
-      courseF_groups_practice_2022_pilot_-2022-2: {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
@@ -14160,13 +14108,8 @@ it-IT:
           text: L'artista disegnerà quattro quadrati uno sopra l'altro.
         questions:
         - text: Cosa succederà quando cliccherai su "Esegui"?
-      csd-post-survey-2017-implementation-student: {}
-      csd-post-survey-2017-implementation-teacher: {}
-      csd-post-survey-2017-implementation-teacher_2019: {}
-      csd-post-survey-2017-levelgroup: {}
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
         title: Sondaggio finale per gli studenti del corso "Alla scoperta dell'informatica"
-      csd-post-survey-2017-levelgroup_2018: {}
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -14642,8 +14585,6 @@ it-IT:
         - correct: true
         questions:
         - {}
-      csd-post-survey-2018-markdown-with-link-to-survey: {}
-      csd-post-survey-2018-markdown-with-link-to-survey_v2: {}
       csd-post-survey-2018-topic-ai:
         answers:
         - correct: true
@@ -14877,7 +14818,6 @@ it-IT:
 
       csd-post-survey-levelgroup-2018:
         title: Sondaggio finale per gli studenti del corso "Alla scoperta dell'informatica"
-      csd-post-survey-levelgroup_2019: {}
       csd-post-survey-markdown-with-link-to-survey_2021:
         markdown: |+
           # Sondaggio post-corso Alla scoperta dell'informatica
@@ -19480,7 +19420,6 @@ it-IT:
           dici.\n\n***\n\n### Parte 1: La scuola in generale\n\n#### *Per prima cosa,
           vogliamo chiederti quali sono i tuoi pensieri e le tue sensazioni sulla
           scuola, in generale.*"
-      csp-post-survey-2017 preamble 1_2019: {}
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -20155,7 +20094,6 @@ it-IT:
           text: Non sono affatto d'accordo
         questions:
         - text: Posso davvero essere me stesso a scuola.
-      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2018-topics-preamble:
         content1: descrizione qui
       csp-post-survey-2018-unit-feedback-preamble:
@@ -20205,8 +20143,6 @@ it-IT:
           text: Non sono affatto d'accordo
         questions:
         - {}
-      csp-pre-survey-2017 preamble 1: {}
-      csp-pre-survey-2017 preamble 1_2018: {}
       csp-pre-survey-2017 preamble 1_2021:
         markdown: "### **Questo sondaggio è anonimo**\n\n*La compilazione di questo
           breve sondaggio dovrebbe rubare **al massimo 10 minuti** del tuo tempo.\n*Code.org
@@ -20249,30 +20185,18 @@ it-IT:
 
 
           * Aiutaci facendo in modo che i tuoi studenti contribuiscano a questa fondamentale raccolta di dati. La loro opinione può fare la differenza!
-      csp-pre-survey-2017 preamble 2 cs in general: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2019: {}
       csp-pre-survey-2017 preamble 2 cs in general_2021:
         markdown: "##Informatica in generale"
       csp-pre-survey-2017 preamble 2 cs in general_2022:
         markdown: "##Informatica in generale"
-      csp-pre-survey-2017 preamble 3 this class: {}
-      csp-pre-survey-2017 preamble 3 this class_2018: {}
-      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2019: {}
       csp-pre-survey-2017 preamble 3 this class_2021:
         markdown: "### L'informatica nel tuo futuro\n"
       csp-pre-survey-2017 preamble 3 this class_2022:
         markdown: "### L'informatica nel tuo futuro\n"
-      csp-pre-survey-2017 preamble 4 the future: {}
-      csp-pre-survey-2017 preamble 4 the future_2018: {}
       csp-pre-survey-2017 preamble 4 the future_2021:
         markdown: "### L'informatica nel tuo futuro\n"
       csp-pre-survey-2017 preamble 4 the future_2022:
         markdown: "### L'informatica nel tuo futuro\n"
-      csp-pre-survey-2017 preamble 5 demographics: {}
-      csp-pre-survey-2017 preamble 5 demographics_2018: {}
       csp-pre-survey-2017 preamble 5 demographics_2021:
         markdown: "### Il tuo background in informatica\n"
       csp-pre-survey-2017 preamble 5 demographics_2022:
@@ -21501,8 +21425,6 @@ it-IT:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017-q36-preamble: {}
-      csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pre-survey-2017-q37:
         answers:
         - correct: true
@@ -22274,6 +22196,10 @@ it-IT:
         display_name: Personalizza la tua app
       ml-club app-choice parent_2022:
         display_name: Personalizza la tua app
+        teacher_markdown: |-
+          **Supporto agli studenti:** questi esercizi sono simili a personalizzazioni simili completate dagli studenti nelle lezioni precedenti. Se gli studenti si bloccano, considera di indirizzarli a queste lezioni precedenti:
+          -   Aggiunta di più schermate per ciascuna caratteristica: [Lezione 13 - Personalizzazione delle app](../../13/levels/2)
+          -   Aggiunta di più schermate per la previsione risultante: [Lezione 13 - Schede modello in Sviluppo App](../../10/levels/5)
       ml-customize apps-practice choice-2021:
         display_name: Esercitati a personalizzare le tue app
       ml-customize apps-practice choice_2022:
@@ -22637,9 +22563,6 @@ it-IT:
           text: Non sono affatto d'accordo
         questions:
         - {}
-      pre-assessment survey heading1: {}
-      pre-assessment survey heading2: {}
-      pre-assessment survey heading3: {}
       pre-assessment survey q1:
         answers:
         - correct: true
@@ -23169,8 +23092,6 @@ it-IT:
           text: Non sono affatto d'accordo
         questions:
         - {}
-      sample external 1: {}
-      sample external 2: {}
       someone_else_encourage:
         answers:
         - correct: true

@@ -29,9 +29,12 @@ import {
   setInstructionsPosition,
   InstructionsPositions,
   addPlaybackEvents,
+  addOrderedFunctions,
   clearPlaybackEvents,
+  clearOrderedFunctions,
   getCurrentlyPlayingBlockIds,
   setSoundLoadingProgress,
+  setUndoStatus,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
 import {
@@ -66,6 +69,7 @@ import {Key} from '../utils/Notes';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {isEqual} from 'lodash';
+import UndoRedoButtons from './UndoRedoButtons';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -104,7 +108,9 @@ class UnconnectedMusicView extends React.Component {
     setInstructionsPosition: PropTypes.func,
     navigateToLevelId: PropTypes.func,
     clearPlaybackEvents: PropTypes.func,
+    clearOrderedFunctions: PropTypes.func,
     addPlaybackEvents: PropTypes.func,
+    addOrderedFunctions: PropTypes.func,
     currentlyPlayingBlockIds: PropTypes.array,
     isHeadersShowing: PropTypes.bool,
     sendSuccessReport: PropTypes.func,
@@ -123,6 +129,7 @@ class UnconnectedMusicView extends React.Component {
     isReadOnlyWorkspace: PropTypes.bool,
     updateLoadProgress: PropTypes.func,
     appName: PropTypes.string,
+    setUndoStatus: PropTypes.func,
   };
 
   constructor(props) {
@@ -395,6 +402,12 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
+    // Update undo status when blocks change.
+    this.props.setUndoStatus({
+      canUndo: this.musicBlocklyWorkspace.canUndo(),
+      canRedo: this.musicBlocklyWorkspace.canRedo(),
+    });
+
     const codeChanged = this.compileSong();
     if (codeChanged) {
       this.executeCompiledSong();
@@ -457,6 +470,9 @@ class UnconnectedMusicView extends React.Component {
       events: playbackEvents,
       lastMeasure: this.sequencer.getLastMeasure(),
     });
+    this.props.addOrderedFunctions({
+      orderedFunctions: this.sequencer.getOrderedFunctions(),
+    });
     this.player.playEvents(playbackEvents);
 
     this.playingTriggers.push({
@@ -475,12 +491,16 @@ class UnconnectedMusicView extends React.Component {
   executeCompiledSong = () => {
     // Clear the events list because it will be populated next.
     this.props.clearPlaybackEvents();
+    this.props.clearOrderedFunctions();
 
     this.sequencer.clear();
     this.musicBlocklyWorkspace.executeCompiledSong(this.playingTriggers);
     this.props.addPlaybackEvents({
       events: this.sequencer.getPlaybackEvents(),
       lastMeasure: this.sequencer.getLastMeasure(),
+    });
+    this.props.addOrderedFunctions({
+      orderedFunctions: this.sequencer.getOrderedFunctions(),
     });
   };
 
@@ -540,6 +560,14 @@ class UnconnectedMusicView extends React.Component {
 
     this.props.setIsPlaying(false);
     this.props.setCurrentPlayheadPosition(this.props.startingPlayheadPosition);
+  };
+
+  undo = () => {
+    this.musicBlocklyWorkspace.undo();
+  };
+
+  redo = () => {
+    this.musicBlocklyWorkspace.redo();
   };
 
   onFeedbackClicked = () => {
@@ -684,6 +712,12 @@ class UnconnectedMusicView extends React.Component {
               <PanelContainer
                 id="workspace-panel"
                 headerText={musicI18n.panelHeaderWorkspace()}
+                rightHeaderContent={
+                  <UndoRedoButtons
+                    onClickUndo={this.undo}
+                    onClickRedo={this.redo}
+                  />
+                }
               >
                 <div id="blockly-div" />
               </PanelContainer>
@@ -746,8 +780,11 @@ const MusicView = connect(
       dispatch(setInstructionsPosition(instructionsPosition)),
     navigateToLevelId: levelId => dispatch(navigateToLevelId(levelId)),
     clearPlaybackEvents: () => dispatch(clearPlaybackEvents()),
+    clearOrderedFunctions: () => dispatch(clearOrderedFunctions()),
     addPlaybackEvents: playbackEvents =>
       dispatch(addPlaybackEvents(playbackEvents)),
+    addOrderedFunctions: orderedFunctions =>
+      dispatch(addOrderedFunctions(orderedFunctions)),
     sendSuccessReport: appType => dispatch(sendSuccessReport(appType)),
     setProjectUpdatedSaving: () => dispatch(setProjectUpdatedSaving()),
     setProjectUpdatedAt: updatedAt => dispatch(setProjectUpdatedAt(updatedAt)),
@@ -758,6 +795,7 @@ const MusicView = connect(
       dispatch(setLabReadyForReload(labReadyForReload)),
     navigateToNextLevel: () => dispatch(navigateToNextLevel()),
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
+    setUndoStatus: value => dispatch(setUndoStatus(value)),
   })
 )(UnconnectedMusicView);
 

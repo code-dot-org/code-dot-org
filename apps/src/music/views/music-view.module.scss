@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color.scss';
 
 // Constants
 $timeline-area-height: 200px;
@@ -34,7 +34,7 @@ $default-spacing: 2px;
     z-index: 10;
 
     &.topButtonsContainerWithHeaders {
-      top: 31px;
+      top: 35px;
     }
   }
 }

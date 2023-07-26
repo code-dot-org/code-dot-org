@@ -16,4 +16,9 @@ class Rubric < ApplicationRecord
   has_many :learning_goals, -> {order(:position)}, dependent: :destroy
   belongs_to :level
   belongs_to :lesson
+
+  def seeding_key(seed_context)
+    my_lesson = seed_context.lessons.find {|l| l.id == lesson_id}
+    my_lesson.seeding_key(seed_context)
+  end
 end

@@ -876,10 +876,6 @@
         "Dance_Party_extras_alternate_2019": {
           "alternate": "Alternatif blok \"Dansçılar\" kategorisindedir."
         },
-        "Farmer for Authored Hint testing": {
-        },
-        "Farmer for TTS testing": {
-        },
         "Function intro Ryan": {
           "Function_intro_Ryan_a": "Bir fonksiyonu programının içinde birçok kez çağırabilirsin!  Bu bulmacayı çözmek için iki kez çağırmayı dene.",
           "Function_intro_Ryan_b": "Fonksiyonları düzgün çağırırsanız, bu yolda seyahat edeceksiniz..."
@@ -1640,8 +1636,6 @@
           "courseA_collector_loops_challenge1_b": "Eğer bir şeyi sadece bir kez yapıyorsanız döngü kullanmanıza gerek yoktur.",
           "courseA_collector_loops_challenge1_c": "Mağaranın sağ tarafında 6 değerli taş vardır, ama sadece bir kez ilerleyip, 5 kez toplaman gerekecek. Neden biliyor musun?"
         },
-        "course1_collector_loops_challenge2": {
-        },
         "course1_collector_loops_challenge3": {
           "courseB_collector_loops_challenge1_c": "Her yolun arasında Doğuya iki defa ilerleyin.\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\nBunu sadece 14 blok ile yapabilirsiniz.  Bir çözüm yolu görmek için bir ipucuna daha basın.",
           "courseB_collector_loops_challenge1_d": "Bunu dene!\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -1695,8 +1689,6 @@
         "course2_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_a": "Herhangi bir ağaca çarpmadan her bir çiçeğe ve peteğe ulaşan bir yol bulabilir misin? En iyi yol bir spiraldir.\n\n\\*\\* Bunu çözerken sola dönmenize hiç  gerek yok. \\*\\*",
           "courseD_bee_conditionals_challenge1_b": "Bu bulmacada her alanda çiçek, petek olabilir ya da hiçbir şey olmayabilir. Bu demektir ki her karede eğer/değilse (if/else) koşulunu tekrarlayabilirsin."
-        },
-        "course2_bee_conditionals_challenge2": {
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Her yığında sadece bir hazine parçası olsaydı, orjinal kod harika çalışırdı!",
@@ -2351,12 +2343,8 @@
           "courseA_collector_loops_challenge2kp_a": "Bu bulmacayı çözmek için döngüleri kullanabilir misiniz?",
           "courseA_collector_loops_challenge2kp_b": "Sonuca ulaşmak için bu yolu deneyin."
         },
-        "courseA_collector_preLoops4": {
-        },
         "courseA_collector_preLoops5": {
           "courseA_collector_preLoops5_a": "Bir elmas bile alabilmek için iki farklı yönde gitmeniz gerekiyor!"
-        },
-        "courseA_collector_preLoops6": {
         },
         "courseA_collector_preLoops7": {
           "courseA_collector_loops2_b": "Hazine olan bir kareye geldiğinizde hazineyi almak için bu bloğu kullanın.\n\n<xml>  <block type=\"collector_collect\"/></xml>"

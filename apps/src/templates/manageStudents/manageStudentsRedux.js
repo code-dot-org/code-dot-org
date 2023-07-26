@@ -886,6 +886,7 @@ const updateStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
     student: {
       id: updatedStudentInfo.id,
       name: updatedStudentInfo.name,
+      family_name: updatedStudentInfo.familyName,
       age: updatedStudentInfo.age,
       gender: updatedStudentInfo.gender,
       gender_teacher_input: updatedStudentInfo.genderTeacherInput,
@@ -914,6 +915,7 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
     studentsToAdd[i] = {
       editing: true,
       name: updatedStudentsInfo[i].name,
+      family_name: updatedStudentsInfo[i].familyName,
       age: updatedStudentsInfo[i].age,
       gender: updatedStudentsInfo[i].gender,
       gender_teacher_input: updatedStudentsInfo[i].genderTeacherInput,

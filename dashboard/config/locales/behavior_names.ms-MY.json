@@ -1575,10 +1575,6 @@
           "swimming left and right": "berenang ke kiri dan ke kanan",
           "wandering": "merayau"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "growing": "membesar",
           "jittering": "terketar",
@@ -3027,8 +3023,6 @@
           "spinning right": "berputar ke kanan",
           "wandering": "merayau",
           "wobbling": "bergoyang"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "membesar",

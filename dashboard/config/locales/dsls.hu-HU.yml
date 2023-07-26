@@ -536,8 +536,28 @@ hu-HU:
         content1: a leírás itt található
       Begin planning your project_2018_2019:
         content1: a leírás itt található
+        markdown: |+
+          # Projekt példák
+
+          A végső projekt követkeik. Mielőtt elkezdenéd, szánj egy kis időta példaprojektek áttekintésére!
+
+          | Éhes mókus | Űrlény mese |
+          |---|---|
+          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Adj hangot a játékhoz! | Adj másik hátteret a történethez! |
+
       Begin planning your project_2018_2019_2020:
         content1: a leírás itt található
+        markdown: |+
+          # Projekt példák
+
+          A végső projekt követkeik. Mielőtt elkezdenéd, szánj egy kis időta példaprojektek áttekintésére!
+
+          | Éhes mókus | Űrlény mese |
+          |---|---|
+          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Adj hangot a játékhoz! | Adj másik hátteret a történethez! |
+
       BigEvent-Unplugged:
         markdown: |
           # A nagy esemény
@@ -558,27 +578,39 @@ hu-HU:
           # A nagy esemény
 
           A számítástechnikában az események olyan akciók, amiket a számítógép kijelez. Ebben a leckében a gép mindenre másképp reagál, attól függően, hogy melyik gombot nyomod meg.
-      BinaryBracelets-Unplugged: {}
-      BinaryBracelets-Unplugged2022: {}
-      BinaryBracelets-Unplugged_2020: {}
-      BinaryBracelets-Unplugged_2021: {}
-      BinaryImages-Unplugged: {}
-      BinaryImages-Unplugged_2020: {}
-      Building a UI with Design Mode: {}
-      CSD - Getters and Setters: {}
-      CSD CSS project RGB_2021: {}
-      CSD CSS project RGB_2022: {}
-      CSD CSS project Review_2021: {}
-      CSD CSS project Review_2022: {}
+      BinaryBracelets-Unplugged:
+        markdown: |
+          # Bináris karkötők
+
+          Készíts egy karkötőt, amely a nevedet jelenti egy olyan rendszerben, amelyet a számítógépek megértenek!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged2022:
+        markdown: |
+          # Bináris karkötők
+
+          Készíts egy karkötőt, amely a nevedet jelenti egy olyan rendszerben, amelyet a számítógépek megértenek!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged_2020:
+        markdown: |
+          # Bináris karkötők
+
+          Készíts egy karkötőt, amely a nevedet jelenti egy olyan rendszerben, amelyet a számítógépek megértenek!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged_2021:
+        markdown: |
+          # Bináris karkötők
+
+          Készíts egy karkötőt, amely a nevedet jelenti egy olyan rendszerben, amelyet a számítógépek megértenek!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       CSD End of Unit Survey - Unit 1 - IntroMD_2022:
         teacher_markdown: |
           **Tanári szakaszzáró kérdőív:** Amíg a diákjai kitöltik a felmérést, nagyra értékelnénk, ha kitöltene egy gyors tanári kérdőívet
 
           ## [Kattintson ide a tanári kérdőívhez](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1)
-      CSD Games Parameters challenge_2021: {}
-      CSD Games Parameters challenge_2022: {}
-      CSD Games Properties challenge_2021: {}
-      CSD Games Properties challenge_2022: {}
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -601,20 +633,6 @@ hu-HU:
         display_name: Sprite tulajdonságok
       CSD Games Properties practice_2022:
         display_name: Sprite tulajdonságok
-      CSD Games Sprites Challenges_2021: {}
-      CSD Games Sprites Challenges_2022: {}
-      CSD Games Sprites practice_2021: {}
-      CSD Games Sprites practice_2022: {}
-      CSD Games parameters practice_2021: {}
-      CSD Games parameters practice_2022: {}
-      CSD Games variables challenge_2021: {}
-      CSD Games variables challenge_2022: {}
-      CSD Games variables practice_2021: {}
-      CSD Games variables practice_2022: {}
-      CSD HTML project Lists_2021: {}
-      CSD HTML project Lists_2022: {}
-      CSD HTML project Review_2021: {}
-      CSD HTML project Review_2022: {}
       CSD Header Size MC:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -720,12 +738,6 @@ hu-HU:
           &lt;h6&gt; Gofrik &lt;/h6&gt;
           </pre>
         title: Címek Gyorsellenőrzése
-      CSD Interactive Animations and Games Post-Project Test: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2021: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2022: {}
-      CSD Physical Computing Post-Project Test: {}
-      CSD Physical Computing Post-Project Test_2021: {}
-      CSD Physical Computing Post-Project Test_2022: {}
       CSD Student End of Unit Survey - Unit 1_2022:
         title: Számítástechnika felfedezése c. tanfolyam szakaszzáró felmérése
       CSD U1 IOSP match:
@@ -839,7 +851,6 @@ hu-HU:
         teacher_markdown: |-
           *[Appok és Problémamegoldás](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Projekt Útmutató Példány ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
           * [Appok és Problémamegoldás](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) -  Szakmai Értékelés Példány ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
-      CSD U1 Test: {}
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -924,10 +935,6 @@ hu-HU:
         - {}
         questions:
         - {}
-      CSD U1 Test_2021: {}
-      CSD U1 Test_2022: {}
-      CSD U2 CSS challenge_pilot_2021: {}
-      CSD U2 CSS challenge_pilot_2022: {}
       CSD U2 CSS practice_pilot_2021:
         display_name: Szöveg Stilizálása CSS-ben
       CSD U2 CSS practice_pilot_2022:
@@ -1037,8 +1044,6 @@ hu-HU:
           <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
 
           <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
-      CSD U2 Expression Exemplars_2018_2019_pilot_2021: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2022: {}
       CSD U2 Image challenge_pilot_2021:
         display_name: Képek hozzáadása
       CSD U2 Image challenge_pilot_2022:
@@ -1063,7 +1068,6 @@ hu-HU:
           (https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
         teacher_markdown: "* [A weboldalak célja - Példa](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
           | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
-      CSD U2 L12 Overview: {}
       CSD U2 L2 Overview:
         content1: a leírás itt található
         markdown: "# Áttekintés\n\nEz a lecke a weboldalakat, mint személyes kifejezésmódot
@@ -1164,7 +1168,6 @@ hu-HU:
           * [Munkáid Licencelése - Tevékenységi útmutató](https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf)
       CSD U2 Lesson 6 Overview:
         content1: a leírás itt található
-      CSD U2 Lesson 9 Overview: {}
       CSD U2 PSP Programming:
         markdown: |-
           # A Programozás Problémamegoldó Folyamata
@@ -1264,12 +1267,6 @@ hu-HU:
           * Kérj meg egy osztálytársadat, hogy olvassa el a kódodat, hogy megbizonyosodj arról, hogy a dokumentációd világos és pontos-e.
           * Próbáld meg "megtörni" a programodat, hogy megtaláld azokat az interakciókat vagy bemeneti adatokat, amelyeket jobban tudnál kezelni.
           * Határozz meg néhány olyan fokozatos változtatást, amelyet a következő iterációban elvégezhetsz
-      CSD U2 Sample CSS layout_2021: {}
-      CSD U2 Sample CSS layout_2022: {}
-      CSD U2 Sample CSS text_2021: {}
-      CSD U2 Sample CSS text_2022: {}
-      CSD U2 Sample classes_2021: {}
-      CSD U2 Sample classes_2022: {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -1517,10 +1514,6 @@ hu-HU:
           4. Amazon.com - Online vásárlási oldal mindenféle ári számára
           5. Yahoo.com - Egy keresőmotor, email szolgáltató és hírforrás
           6. Wikipedia.org - Egy ingyenes enciklopédia felhasználók által generált tartalommal
-      CSD U2 Top Websites_2018: {}
-      CSD U2 Top Websites_2018_2019: {}
-      CSD U2 Top Websites_2018_2019_pilot_2021: {}
-      CSD U2 Top Websites_2018_2019_pilot_2022: {}
       CSD U2 expand project:
         content1: a leírás itt található
         markdown: |
@@ -1643,12 +1636,6 @@ hu-HU:
         - {}
         - {}
         - {}
-      CSD U2 layout style challenge_pilot_2021: {}
-      CSD U2 layout style challenge_pilot_2022: {}
-      CSD U2 layout style practice_pilot_2021: {}
-      CSD U2 layout style practice_pilot_2022: {}
-      CSD U2 links challenge_2021: {}
-      CSD U2 links challenge_2022: {}
       CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -1740,8 +1727,6 @@ hu-HU:
         content1: a leírás itt található
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: a leírás itt található
-      CSD U3 - Design a Game 1 - ExampleChoice_2022: {}
-      CSD U3 - Interactive Card - ExampleChoice_2022: {}
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1807,11 +1792,6 @@ hu-HU:
         - {}
         - {}
         - {}
-      CSD U3 AnimationsMulti STOP project guide: {}
-      CSD U3 AnimationsMulti STOP project guide_2018: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022: {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1880,9 +1860,6 @@ hu-HU:
           * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
           * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
           * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
-      CSD U3 Defender SFLP: {}
-      CSD U3 Entertainment: {}
-      CSD U3 Entertainment_2018_2019: {}
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -1957,14 +1934,6 @@ hu-HU:
         - {}
         - {}
         - {}
-      CSD U3 Lesson Overview 1: {}
-      CSD U3 Lesson Overview 10: {}
-      CSD U3 Lesson Overview 11: {}
-      CSD U3 Lesson Overview 12: {}
-      CSD U3 Lesson Overview 13: {}
-      CSD U3 Lesson Overview 14: {}
-      CSD U3 Lesson Overview 2: {}
-      CSD U3 Lesson Overview 3: {}
       CSD U3 Lesson Overview 4:
         markdown: |-
           Ez a óra kibővíti a rajzolási készségeket a szélesség és a magasság megismeretésével, és bevezeti a véletlen számok generálásának fogalmát. Az osztály megtanul rajzolni az ellipse() és a rect() olyan változataival, amelyek szélességi és magassági paramétereket tartalmaznak, valamint a background() blokk használatával színekkel tölti ki a képernyőt. A folyamat végén az osztály megismerkedik a randomNumber() blokkal, és az új blokkok segítségével egy véletlenszerű szivárványkígyót rajzolnak.
@@ -1992,13 +1961,6 @@ hu-HU:
           ## Erőforrások
 
           * [Bevezetés a változókba](https://youtu.be/G41G_PEWFjE) - Videó ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
-      CSD U3 Lesson Overview 6: {}
-      CSD U3 Lesson Overview 7: {}
-      CSD U3 Lesson Overview 8: {}
-      CSD U3 Lesson Overview 9: {}
-      CSD U3 Movement Challenges: {}
-      CSD U3 Project Build a Game SFLP: {}
-      CSD U3 SFLP Velocity: {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
@@ -2231,7 +2193,6 @@ hu-HU:
         - {}
         questions:
         - {}
-      CSD U3 Using the Game Design Process SLFP: {}
       CSD U3 combining rep:
         content1: a leírás itt található
       CSD U3 combining rep_2018:
@@ -2282,8 +2243,6 @@ hu-HU:
         - {}
         - {}
         - {}
-      CSD U3 drawing challenges_2021: {}
-      CSD U3 drawing challenges_2022: {}
       CSD U3 drawing practice choice_2021:
         display_name: Gyakorlás
       CSD U3 drawing practice choice_2022:
@@ -2453,22 +2412,6 @@ hu-HU:
         - correct: true
         questions:
         - {}
-      CSD U4L01 SFLP: {}
-      CSD U4L02 SFLP: {}
-      CSD U4L03 SFLP: {}
-      CSD U4L04 SFLP: {}
-      CSD U4L05 SFLP: {}
-      CSD U4L06 SFLP: {}
-      CSD U4L07 SFLP: {}
-      CSD U4L08 SFLP: {}
-      CSD U4L09 SFLP: {}
-      CSD U4L10 SFLP: {}
-      CSD U4L11 SFLP: {}
-      CSD U4L12 SFLP: {}
-      CSD U4L13 SFLP: {}
-      CSD U4L15 SFLP: {}
-      CSD U4L16 SFLP: {}
-      CSD U4L17 SFLP: {}
       CSD U5 Encryption 1:
         content1: a leírás itt található
       CSD U5 Encryption 1_2018:
@@ -2501,7 +2444,6 @@ hu-HU:
         content1: a leírás itt található
       CSD U5 student record_2018_2019:
         content1: a leírás itt található
-      CSD U5 test: {}
       CSD U5 test clean multi:
         answers:
         - {}
@@ -2643,43 +2585,30 @@ hu-HU:
         - {}
         questions:
         - {}
-      CSD U5 test_2021: {}
-      CSD U5 test_2022: {}
       CSD U6 - Accelerometer - Chal_2222:
         display_name: Feladatszintek
-      CSD U6 - Accelerometer - Prac_2222: {}
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Feladatszintek
-      CSD U6 - Board Inputs - Prac_2222: {}
       CSD U6 - Board Outputs - Chal_2222:
         display_name: Feladatszintek
-      CSD U6 - Board Outputs - Prac_2222: {}
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Feladatszintek
-      CSD U6 - Color LEDs - Prac_2222: {}
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: Feladatszintek
-      CSD U6 - Combine Inputs - Prac_2222: {}
-      CSD U6 - Functions - Prac_2222: {}
       CSD U6 - If Variables - Chal_2222:
         display_name: Feladatszintek
       CSD U6 - Music - Chal_2222:
         display_name: Feladatszintek
       CSD U6 - Physical Input - Chal_2222:
         display_name: Feladatszintek
-      CSD U6 - Physical Input - Prac_2222: {}
       CSD U6 - Physical Output - Chal_2222:
         display_name: Feladatszintek
-      CSD U6 - Physical Output - Prac_2222: {}
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Feladatszintek
-      CSD U6 - Screen Inputs - Prac_2222: {}
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Feladatszintek
-      CSD U6 - Screen Outputs - Prac_2222: {}
       CSD U6 - Sensors - Chal_2222:
         display_name: Feladatszintek
-      CSD U6 - Sensors - Prac_2222: {}
       CSD U6 LED create intro:
         content1: a leírás itt található
       CSD U6 LED create intro_2018:
@@ -2720,10 +2649,6 @@ hu-HU:
         - correct: true
         questions:
         - {}
-      CSD U6 circuit smart bike blinker build: {}
-      CSD U6 circuit smart bike blinker build_2018: {}
-      CSD U6 circuit smart bike blinker build_2018_2019: {}
-      CSD U6 circuit smart bike blinker build_2021: {}
       CSD U6 final intro:
         content1: a leírás itt található
       CSD U6 final intro_2018:
@@ -2732,10 +2657,6 @@ hu-HU:
         content1: a leírás itt található
       CSD U6 final intro_2021:
         content1: a leírás itt található
-      CSD U6 game project stop: {}
-      CSD U6 game project stop_2018: {}
-      CSD U6 game project stop_2018_2019: {}
-      CSD U6 game project stop_2021: {}
       CSD U6 setProperty predict multi:
         answers:
         - {}
@@ -2907,108 +2828,26 @@ hu-HU:
         - {}
         questions:
         - {}
-      CSD U6 tugowar stop: {}
-      CSD U6 tugowar stop_2018: {}
-      CSD U6 tugowar stop_2018_2019: {}
-      CSD U6 tugowar stop_2021: {}
-      CSD User Centered Design Post-Project Test: {}
-      CSD User Centered Design Post-Project Test_2021: {}
-      CSD User Centered Design Post-Project Test_2022: {}
-      CSD Web Development Post-Project Test: {}
-      CSD Web Development Post-Project Test_pilot_2021: {}
-      CSD Web Development Post-Project Test_pilot_2022: {}
-      CSD Web Headings challenge_2021: {}
-      CSD Web Headings challenge_2022: {}
-      CSD Web Headings practice_2021: {}
-      CSD Web Headings practice_2022: {}
-      CSD Web Sample Pages_2021: {}
-      CSD Web Sample Pages_2022: {}
       CSD games cake challenge choice_2021:
         display_name: Feladatok
       CSD games cake challenge choice_2022:
         display_name: Feladatok
-      CSD games collisions challenge choice_2021: {}
-      CSD games collisions challenge choice_2022: {}
-      CSD games collisions practice choice_2021: {}
-      CSD games collisions practice choice_2022: {}
-      CSD games functions challenge choice_2021: {}
-      CSD games functions challenge choice_2022: {}
-      CSD games functions practice choice_2021: {}
-      CSD games functions practice choice_2022: {}
-      CSD games istouching challenge choice_2021: {}
-      CSD games istouching challenge choice_2022: {}
-      CSD games istouching practice choice_2021: {}
-      CSD games istouching practice choice_2022: {}
-      CSD games movement2 challenge choice_2021: {}
-      CSD games movement2 challenge choice_2022: {}
-      CSD games movement2 practice choice_2021: {}
-      CSD games movement2 practice choice_2022: {}
       CSD games platform challenge choice_2021:
         display_name: Feladatok
       CSD games platform challenge choice_2022:
         display_name: Feladatok
-      CSD games random challenge_2021: {}
-      CSD games random challenge_2022: {}
-      CSD games random practice_2021: {}
-      CSD games random practice_2022: {}
-      CSD games velocity challenge choice_2021: {}
-      CSD games velocity challenge choice_2022: {}
-      CSD games velocity practice choice_2021: {}
-      CSD games velocity practice choice_2022: {}
-      CSD web classes challenge_2021: {}
-      CSD web classes challenge_2022: {}
-      CSD web classes practice_2021: {}
-      CSD web classes practice_2022: {}
-      CSD web conditionals challenge choice_2021: {}
-      CSD web conditionals challenge choice_2022: {}
-      CSD web conditionals practice choice_2021: {}
-      CSD web conditionals practice choice_2022: {}
-      CSD web draw loop challenge choice_2021: {}
-      CSD web draw loop challenge choice_2022: {}
       CSD web draw loop practice choice_2021:
         display_name: Gyakorlás
       CSD web draw loop practice choice_2022:
         display_name: Gyakorlás
-      CSD web keyboard challenge choice_2021: {}
-      CSD web keyboard challenge choice_2022: {}
-      CSD web keyboard practice choice_2021: {}
-      CSD web keyboard practice choice_2022: {}
-      CSD web mouse challenge choice_2021: {}
-      CSD web mouse challenge choice_2022: {}
-      CSD web mouse practice choice_2021: {}
-      CSD web mouse practice choice_2022: {}
-      CSD web movement challenge choice_2021: {}
-      CSD web movement challenge choice_2022: {}
       CSD web movement practice choice_2021:
         display_name: Gyakorlás
       CSD web movement practice choice_2022:
         display_name: Gyakorlás
-      CSD web text challenge choice_2021: {}
-      CSD web text challenge choice_2022: {}
       CSD web text practice choice_2021:
         display_name: Gyakorlás
       CSD web text practice choice_2022:
         display_name: Gyakorlás
-      CSD-U5-SFLP ASCII and Binary Representation: {}
-      CSD-U5-SFLP Automating Data Decisions: {}
-      CSD-U5-SFLP Combining Representations: {}
-      CSD-U5-SFLP Create a Representation: {}
-      CSD-U5-SFLP Interpreting Data: {}
-      CSD-U5-SFLP Making Decisions with Data: {}
-      CSD-U5-SFLP Patterns and Representation: {}
-      CSD-U5-SFLP Problem Solving and Data: {}
-      CSD-U5-SFLP Problem Solving with Big Data: {}
-      CSD-U5-SFLP Representation Matters: {}
-      CSD-U5-SFLP Representing Images: {}
-      CSD-U5-SFLP Representing Numbers Part 1: {}
-      CSD-U5-SFLP Representing Numbers Part 2: {}
-      CSD-U5-SFLP Solve a Data Problem: {}
-      'CSD: getText vs getNumber': {}
-      'CSD: setProperty': {}
-      CSDU6 Innovation: {}
-      CSDU6 Innovation_2018: {}
-      CSDU6 Innovation_2018_2019: {}
-      CSDU6 Innovation_2021: {}
       CSP PD Example Question 1:
         answers:
         - {}
@@ -3021,7 +2860,6 @@ hu-HU:
         - {}
         questions:
         - {}
-      CSP pre-assessment survey: {}
       Choose 2 Test:
         answers:
         - correct: true
@@ -3030,12 +2868,6 @@ hu-HU:
         - {}
         questions:
         - {}
-      Choosing Good IDs: {}
-      ConditionalsWithCards-Unplugged: {}
-      ConditionalsWithCards-Unplugged2022: {}
-      ConditionalsWithCards-Unplugged_2020: {}
-      ConditionalsWithCards-Unplugged_2021: {}
-      CourseE_Artist_Practice_2022: {}
       CourseE_Lesson_11_Artist_Practice_2022:
         description: Nagyszerű munka! Válaszd ki a következő feladatodat! Csinálj
           meg annyit az alábbiak közül, amennyit csak tudsz! Gyakorold tovább a függvényeket
@@ -3198,7 +3030,6 @@ hu-HU:
           a fejét a városba. "
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
         content1: a leírás itt található
-      Crowdsourcing-Unplugged: {}
       Dance_Party_extras_intro:
         markdown: |
           # Táncolj tovább!
@@ -3359,26 +3190,11 @@ hu-HU:
           <img src=""https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif""></a>
 
           </div>"
-      Design a Screen for your App_2018: {}
-      Design a Screen for your App_2018_2019: {}
-      Design a Screen for your App_2021: {}
-      Design a Screen for your App_2022: {}
-      DesigningForAccessibilityMarkdownLevel2022: {}
-      DesigningForAccessibilityMarkdownLevel_2019: {}
-      DesigningForAccessibilityMarkdownLevel_2019_2020: {}
-      DesigningForAccessibilityMarkdownLevel_2021: {}
-      DigitalCitizenship-Unplugged: {}
       DigitalFootprint-Unplugged:
         markdown: |
           # Digitális lábnyomod
 
           Az önmagdról szóló információk online létrehozása digitális lábnyomot hoz létre.
-      DigitalSharing-Unplugged: {}
-      DigitalSharing-Unplugged2022: {}
-      DigitalSharing-Unplugged_2020: {}
-      DigitalSharing-Unplugged_2021: {}
-      ECSPD1 computational thinker: {}
-      Embedded Video Test: {}
       EnvelopeVariables-Unplugged:
         markdown: "# A változók nagyon sok szabadságot biztosítanak a számítástechnikában.
           Ez a lecke segít abban, hogy megértsd, mik azok a változók és hogyan használhatjuk
@@ -3389,16 +3205,9 @@ hu-HU:
           Ez a lecke segít abban, hogy megértsd, mik azok a változók és hogyan használhatjuk
           őket különféle módokon. Használd ezt a tevékenységet, az absztrakció lecke
           előtt (vagy együtt), hogy igazán érthető legyen.\n"
-      EnvelopeVariables-Unplugged_2021_2: {}
-      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2: {}
       Eval Contracts F:
         answers:
         - ''
-      Example App Types_2018: {}
-      Example App Types_2018_2019: {}
-      ForLoopFun-Unplugged: {}
-      ForLoopFun-Unplugged_2020: {}
-      ForLoopFun-Unplugged_2021: {}
       GettingLoopy-Unplugged:
         markdown: |
           # Ismétlődések
@@ -3423,10 +3232,6 @@ hu-HU:
         markdown: "# Helyek biztonságos felkeresése \n\nAz internet nagyon hasznos,
           de néha veszélyes hely is tud lenni. Figyelj a biztonságra az internet használata
           közben!\n"
-      GraphPaperProgramming-Unplugged: {}
-      GraphPaperProgramming-Unplugged2022: {}
-      GraphPaperProgramming-Unplugged_2020: {}
-      GraphPaperProgramming-Unplugged_2021: {}
       HappyLoops-Unplugged:
         markdown: |
           # Boldog ciklusok
@@ -3565,10 +3370,6 @@ hu-HU:
           #### A diákjaim nem látják egymást, amikor az általam megadott URL-címen az internet-szimulátorhoz mennek. Mit tegyek?
           A diákoknak ugyanabban a csoportban kell lenniük, hogy lássák egymást az internet-szimulátor előcsarnokában. Ellenőrizze, hogy az előző oldalon található csoportbeállítási utasításoknak megfelelően járt-e el, és hogy a kérdéses diákok csatlakoztak-e az adott csoportkódhoz. Az is előfordulhat, hogy néhány diák, ha korábban már elvégeztek néhány Code.org tanfolyamot,  több csoportnak is tagja. Ezért ellenőrizze, hogy a diákok tudják a csoport nevét, és mielőtt belépnek a lobbiba, a megfelelőt választották ki a legördülő listából.
 
-      Internet-Unplugged: {}
-      Internet-Unplugged2022_2022_pilot_-2022-2: {}
-      Internet-Unplugged_2020: {}
-      Internet-Unplugged_2021: {}
       K-1 Artist 1 Multi 1:
         answers:
         - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
@@ -3830,134 +3631,56 @@ hu-HU:
         - {}
       Multi-Screen Apps:
         content1: a leírás itt található
-      MyLoopyRoboticFriends-Unplugged: {}
-      MyLoopyRoboticFriends-Unplugged2022: {}
-      MyLoopyRoboticFriends-Unplugged_2020: {}
-      MyLoopyRoboticFriends-Unplugged_2021: {}
-      MyRoboticFriends-Unplugged: {}
-      MyRoboticFriends-Unplugged2022: {}
-      MyRoboticFriends-Unplugged_2020: {}
-      MyRoboticFriends-Unplugged_2021: {}
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |
+          # Ciklusos Robot barátaim
+
+          Ciklusok használatával rövidítsd le a programodat!
+      MyLoopyRoboticFriends-Unplugged2022:
+        markdown: |
+          # Ciklusos Robot barátaim
+
+          Ciklusok használatával rövidítsd le a programodat!
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |
+          # Ciklusos Robot barátaim
+
+          Ciklusok használatával rövidítsd le a programodat!
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Ciklusos Robot barátaim
+
+          Ciklusok használatával rövidítsd le a programodat!
+      MyRoboticFriends-Unplugged:
+        markdown: |
+          # Robot barátaim
+
+          Tanulj meg programozni úgy, hogy kódot írsz a barátaidnak!
+      MyRoboticFriends-Unplugged2022:
+        markdown: |
+          # Robot barátaim
+
+          Tanulj meg programozni úgy, hogy kódot írsz a barátaidnak!
+      MyRoboticFriends-Unplugged_2020:
+        markdown: |
+          # Robot barátaim
+
+          Tanulj meg programozni úgy, hogy kódot írsz a barátaidnak!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Robot barátaim
+
+          Tanulj meg programozni úgy, hogy kódot írsz a barátaidnak!
       New Challenge Introduction:
         content1: a leírás itt található
-      OPD-K5 About: {}
-      OPD-K5 About_copy: {}
-      OPD-K5 About_dani: {}
-      OPD-K5 Assessment: {}
-      OPD-K5 Assessment_copy: {}
-      OPD-K5 Assessment_dani: {}
-      OPD-K5 CS Courses: {}
-      OPD-K5 CS Courses_copy: {}
-      OPD-K5 CS Courses_dani: {}
-      OPD-K5 CS Tips: {}
-      OPD-K5 CS Tips_copy: {}
-      OPD-K5 CS Tips_dani: {}
-      OPD-K5 Celebrate: {}
-      OPD-K5 Celebrate_dani: {}
-      OPD-K5 Congrats: {}
-      OPD-K5 CongratsFinal: {}
-      OPD-K5 CongratsFinal_dani: {}
-      OPD-K5 Congrats_dani: {}
-      OPD-K5 Connect: {}
-      OPD-K5 Connect_copy: {}
-      OPD-K5 Connect_dani: {}
-      OPD-K5 Culture: {}
-      OPD-K5 Culture_dani: {}
-      OPD-K5 Outline: {}
-      OPD-K5 Outline_copy: {}
-      OPD-K5 Outline_dani: {}
-      OPD-K5 Pair: {}
-      OPD-K5 Pair_copy: {}
-      OPD-K5 Pair_dani: {}
-      OPD-K5 Participation: {}
-      OPD-K5 Participation_copy: {}
-      OPD-K5 Participation_dani: {}
-      OPD-K5 PostSurvey: {}
-      OPD-K5 PostSurvey_dani: {}
-      OPD-K5 PreSurvey: {}
-      OPD-K5 PreSurvey_dani: {}
-      OPD-K5 Puzzles: {}
-      OPD-K5 Puzzles_dani: {}
       OPD-K5 Reviewing Reflections:
         content1: a leírás itt található
-      OPD-K5 Stage10Start: {}
-      OPD-K5 Stage10Start_copy: {}
-      OPD-K5 Stage10Start_dani: {}
-      OPD-K5 Stage1Go: {}
-      OPD-K5 Stage1Go_dani: {}
-      OPD-K5 Stage2Go: {}
-      OPD-K5 Stage2Go_copy: {}
-      OPD-K5 Stage2Go_dani: {}
-      OPD-K5 Stage2Overview: {}
-      OPD-K5 Stage2Overview_dani: {}
-      OPD-K5 Stage3Go: {}
-      OPD-K5 Stage3Go_dani: {}
-      OPD-K5 Stage3Start: {}
-      OPD-K5 Stage3Start_copy: {}
-      OPD-K5 Stage3Start_dani: {}
       OPD-K5 Stage3aGo:
         content1: a leírás itt található
       OPD-K5 Stage3aGo_copy:
         content1: a leírás itt található
       OPD-K5 Stage3aGo_dani:
         content1: a leírás itt található
-      OPD-K5 Stage4Go: {}
-      OPD-K5 Stage4Go_copy: {}
-      OPD-K5 Stage4Go_dani: {}
-      OPD-K5 Stage4Review: {}
-      OPD-K5 Stage4Review_dani: {}
-      OPD-K5 Stage4Start: {}
-      OPD-K5 Stage4Start_copy: {}
-      OPD-K5 Stage4Start_dani: {}
-      OPD-K5 Stage5Go: {}
-      OPD-K5 Stage5Go_copy: {}
-      OPD-K5 Stage5Go_dani: {}
-      OPD-K5 Stage5Review: {}
-      OPD-K5 Stage5Review_dani: {}
-      OPD-K5 Stage5Start: {}
-      OPD-K5 Stage5Start_copy: {}
-      OPD-K5 Stage5Start_dani: {}
-      OPD-K5 Stage6Go: {}
-      OPD-K5 Stage6Go_copy: {}
-      OPD-K5 Stage6Go_dani: {}
-      OPD-K5 Stage6Review: {}
-      OPD-K5 Stage6Review_dani: {}
-      OPD-K5 Stage6Start: {}
-      OPD-K5 Stage6Start_copy: {}
-      OPD-K5 Stage6Start_dani: {}
-      OPD-K5 Stage7Go: {}
-      OPD-K5 Stage7Go_copy: {}
-      OPD-K5 Stage7Go_dani: {}
-      OPD-K5 Stage7Start: {}
-      OPD-K5 Stage7Start_copy: {}
-      OPD-K5 Stage7Start_dani: {}
-      OPD-K5 Stage8Go: {}
-      OPD-K5 Stage8Go_dani: {}
-      OPD-K5 Stage8Start: {}
-      OPD-K5 Stage8Start_dani: {}
-      OPD-K5 Stage9Go: {}
-      OPD-K5 Stage9Go_dani: {}
-      OPD-K5 Stage9Start: {}
-      OPD-K5 Stage9Start_copy: {}
-      OPD-K5 Stage9Start_dani: {}
-      OPD-K5 Using CS: {}
-      OPD-K5 Using CS_dani: {}
-      OPD-K5 Vocabulary: {}
-      OPD-K5 Vocabulary_dani: {}
-      OPD-K5 Welcome 2: {}
-      OPD-K5 Welcome 2_copy: {}
-      OPD-K5 Welcome 2_dani: {}
-      OPD-K5 What is Mastery: {}
-      OPD-K5 What is Mastery_copy: {}
-      OPD-K5 What is Mastery_dani: {}
-      OPD-K5 Why teach CS: {}
-      OPD-K5 Why teach CS_copy: {}
-      OPD-K5 Why teach CS_dani: {}
-      OPD-K5 Younger Grades: {}
-      OPD-K5 Younger Grades_dani: {}
-      OPD-K5 Your Plan: {}
-      OPD-K5 Your Plan_copy: {}
-      OPD-K5 Your Plan_dani: {}
       OPD-K5 conditionals introduced:
         content1: a leírás itt található
       OPD-K5 debugging:
@@ -4012,16 +3735,6 @@ hu-HU:
         content1: a leírás itt található
       OPD-K5-projects-1:
         content1: a leírás itt található
-      OPD-Stage3Start: {}
-      OPD-Stage3Start_dani: {}
-      'Overview: Design Mode': {}
-      'Overview: If Statements': {}
-      'Overview: Images': {}
-      'Overview: onEvent': {}
-      'Overview: setPosition': {}
-      PDK5 Foundations F: {}
-      PDK5 Intro C: {}
-      PS U3 Assessment1 new: {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -4086,9 +3799,20 @@ hu-HU:
         - {}
         questions:
         - {}
-      PicturingData-Unplugged: {}
-      PicturingData-Unplugged_2020: {}
-      PowerOfWords-Unplugged: {}
+      PicturingData-Unplugged:
+        markdown: |
+          # Adatok ábrázolása
+
+          Használd a Play Lab projektet adatgyűjtéshez és előrejelzésekhez.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PicturingData-Unplugged_2020:
+        markdown: |
+          # Adatok ábrázolása
+
+          Használd a Play Lab projektet adatgyűjtéshez és előrejelzésekhez.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
       PowerOfWords-Unplugged2022_2022_pilot_-2022-2:
         markdown: |
           # A szavak ereje
@@ -4104,11 +3828,15 @@ hu-HU:
           # A szavak ereje
 
           ## Mit tegyél, ha valaki szemétkedik, vagy bántó kifejezéseket használ az interneten?
-      PowerfulPasswords-Unplugged: {}
+      PowerfulPasswords-Unplugged:
+        markdown: |
+          # Hatékony jelszavak
+
+          Fedezd fel, miért használják az emberek a jelszavakat, ismerd meg a jelszavak használatának előnyeit, és fedezd fel az erős, biztonságos jelszavak létrehozásának és megtartásának stratégiáit.
+
+          ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
       Prepare for your presentation:
         content1: a leírás itt található
-      Prepare for your presentation_2018: {}
-      PrivatePersonalInformation-Unplugged: {}
       PrivatePersonalInformation-Unplugged2022:
         markdown: |
           # Privát és személyes információk
@@ -4121,35 +3849,16 @@ hu-HU:
         markdown: |
           # Privát és személyes információk
           ## Milyen információk azok, amik online megosztása rendben van?
-      RelayProgramming-Unplugged: {}
-      RelayProgramming-Unplugged2022: {}
-      RelayProgramming-Unplugged_2020: {}
-      RelayProgramming-Unplugged_2021: {}
-      Responding to User Input: {}
-      Sample CSP Assessment: {}
       ScreenOutTheMean-Unplugged:
         markdown: |-
           # Gonoszkodás a képernyőn
 
           Ma arról fogunk tanulni, hogy mit kell tenned, ha valaki gonosz veled az interneten
-      SimonSays-Unplugged: {}
-      SimonSays-Unplugged_2020: {}
-      SimonSays-Unplugged_2021: {}
-      Social Sleuth_2018_2019: {}
-      Songwriting-Unplugged: {}
-      Songwriting-Unplugged2022: {}
-      Songwriting-Unplugged_2020: {}
-      Songwriting-Unplugged_2021: {}
       Student End of Unit Survey - Intro+TeacherMD_csd2-2022:
         teacher_markdown: |
           **Tanári szakaszzáró kérdőív:** Amíg a diákjai kitöltik a felmérést, nagyra értékelnénk, ha kitöltene egy gyors tanári kérdőívet
 
           ## [Kattintson ide a tanári kérdőívhez](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2)
-      Student End of Unit Survey - Intro+TeacherMD_csd3-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd4-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd5-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd6-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd7-2022: {}
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -4170,12 +3879,6 @@ hu-HU:
         - correct: true
         questions:
         - {}
-      Student End of Unit Survey_csd2-2022: {}
-      Student End of Unit Survey_csd3-2022: {}
-      Student End of Unit Survey_csd4-2022: {}
-      Student End of Unit Survey_csd5-2022: {}
-      Student End of Unit Survey_csd6-2022: {}
-      Student End of Unit Survey_csd7-2022: {}
       Submittable Multi:
         answers:
         - text: kék
@@ -4298,11 +4001,6 @@ hu-HU:
         teacher_markdown: "[Mi az a Számítógép - Minták](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing)
           - Tevékenységi Útmutató ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf)
           | [DOCX] (https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))"
-      Unit 2 Lesson 10 Overview: {}
-      Unit 2 Lesson 16 Overview: {}
-      Unit 2 Lesson 7 Overview: {}
-      Unit 2 Lesson 8 Overview: {}
-      Video - The Future of Big Data: {}
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -4413,8 +4111,6 @@ hu-HU:
         - correct: true
         questions:
         - {}
-      aiml-ch1-pulse-survey_2021: {}
-      aiml-ch1-pulse-survey_2022: {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -4519,9 +4215,6 @@ hu-HU:
         - correct: true
         questions:
         - {}
-      aiml-intro-pulse-survey_2021: {}
-      aiml-intro-pulse-survey_2022: {}
-      aiml-pulse-check-survey-1-levelgroup Ch2_2021: {}
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
@@ -4577,8 +4270,6 @@ hu-HU:
         - correct: true
         questions:
         - {}
-      aiml-pulse-check-survey-preamble_2021: {}
-      allthethings_bubble_choice: {}
       allthethings_external_displayed_as_unplugged:
         content1: a leírás itt található
       allthethings_external_not_displayed_as_unplugged:
@@ -4756,7 +4447,8 @@ hu-HU:
         - correct: true
           feedback: Helyes!
           text: A művész egy négyzetet fog rajzolni.
-        - {}
+        - feedback: Hibás. A művész egy négyzetet rajzol.
+          text: A művész ötszöget fog rajzolni
         questions:
         - text: Nézd meg figyelmesen az alábbi kódot! Mi történik, ha megnyomod a
             "Futtatás" gombot?
@@ -4822,64 +4514,102 @@ hu-HU:
             "Futtatás" gombot?
       courseC_multi_harvester_loops11_predict1:
         answers:
-        - text: '4'
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '4'
         - correct: true
           feedback: Helyes!
           text: '12'
-        - text: '15'
-        - text: Nem tudom.
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '15'
+        - feedback: A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer 3 az 12!
+          text: Nem tudom.
         questions:
-        - {}
+        - text: Nézd meg közelebbről az alábbi kódot! Mennyi tököt gyűjt a farmer,
+            amikor megnyomod a "Futtatás" gombot?
       courseC_multi_harvester_loops11_predict12022:
         answers:
-        - text: '4'
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '4'
         - correct: true
           feedback: Helyes!
           text: '12'
-        - text: '15'
-        - text: '20'
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '15'
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '20'
         questions:
-        - {}
+        - text: Nézd meg közelebbről az alábbi kódot! Mennyi tököt gyűjt a farmer,
+            amikor megnyomod a "Futtatás" gombot?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
-        - text: '4'
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '4'
         - correct: true
           feedback: Helyes!
           text: '12'
-        - text: '15'
-        - text: Nem tudom.
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '15'
+        - feedback: A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer 3 az 12!
+          text: Nem tudom.
         questions:
-        - {}
+        - text: Nézd meg közelebbről az alábbi kódot! Mennyi tököt gyűjt a farmer,
+            amikor megnyomod a "Futtatás" gombot?
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
-        - text: '4'
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '4'
         - correct: true
           feedback: Helyes!
           text: '12'
-        - text: '15'
-        - text: Nem tudom.
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '15'
+        - feedback: A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer 3 az 12!
+          text: Nem tudom.
         questions:
-        - {}
+        - text: Nézd meg közelebbről az alábbi kódot! Mennyi tököt gyűjt a farmer,
+            amikor megnyomod a "Futtatás" gombot?
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
-        - text: '4'
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '4'
         - correct: true
           feedback: Helyes!
           text: '12'
-        - text: '15'
-        - text: Nem tudom.
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '15'
+        - feedback: A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer 3 az 12!
+          text: Nem tudom.
         questions:
-        - {}
+        - text: Nézd meg közelebbről az alábbi kódot! Mennyi tököt gyűjt a farmer,
+            amikor megnyomod a "Futtatás" gombot?
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
-        - text: '4'
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '4'
         - correct: true
           feedback: Helyes!
           text: '12'
-        - text: '15'
-        - text: '20'
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '15'
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '20'
         questions:
-        - {}
+        - text: Nézd meg közelebbről az alábbi kódot! Mennyi tököt gyűjt a farmer,
+            amikor megnyomod a "Futtatás" gombot?
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
@@ -4903,6 +4633,7 @@ hu-HU:
           text: A motkány nem ér el a makkig, mert nincs elég 'előrelépni' blokk a
             kódban.
         - feedback: A motkány nem ér el a makkig, mivel rossz irányba fordul.
+          text: A Motkány nem mozdul el az első blokkról.
         questions:
         - text: Keress hibákat a kódban! Elér a motkány a makkig, vagy van valami
             gond a kóddal?
@@ -4988,6 +4719,7 @@ hu-HU:
         - feedback: Nem jó! Ez a kód pontosan a malachoz visz.
           text: A madár beleszalad a TNT-be.
         - feedback: Nem jó! Ez a kód pontosan a malachoz visz.
+          text: A madár nekifut a falnak.
         questions:
         - text: Nézd végig a kódot nagyon alaposan! Mi történik, ha megnyomod a "Futtatás"
             gombot?
@@ -5070,6 +4802,7 @@ hu-HU:
           feedback: Helyes!
           text: BB-8 ötöt lép előre és felszedi az összes fémdarabot
         - feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+          text: BB-8 csak hármat lép előre.
         questions:
         - text: Mit gondolsz, mi történik, ha ráklikkelsz a "Futtatás"-ra?
       courseC_multi_starWars_predict1_2018:
@@ -5121,6 +4854,7 @@ hu-HU:
           feedback: Helyes!
           text: BB-8 ötöt lép előre és felszedi az összes fémdarabot
         - feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+          text: BB-8 csak hármat lép előre.
         questions:
         - text: Mit gondolsz, mi történik, ha ráklikkelsz a "Futtatás"-ra?
       courseC_multi_starWars_predict2:
@@ -5154,6 +4888,7 @@ hu-HU:
           text: BB-8 gond nélkül összegyűjti az összes fémdarabot.
         - feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
             miközben hármat kellene előre haladnia.
+          text: BB-8 rossz irányba fordul az első ciklus után.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018:
@@ -5237,12 +4972,6 @@ hu-HU:
         description: Elértél a D tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
         display_name: Kurzus Projekt vége
-      courseD_EOC_examples2022: {}
-      courseD_EOC_examples_2021: {}
-      courseD_external_binary1: {}
-      courseD_external_binary1_2018: {}
-      courseD_external_binary1_2018_2019: {}
-      courseD_external_binary1_2018_2019_2020: {}
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -6130,7 +5859,6 @@ hu-HU:
         - correct: true
         questions:
         - {}
-      courseE_project_exemplars_2019: {}
       courseE_project_exemplars_2019_2020:
         markdown: "# Projekt példák\n\nNekiállhatsz az utolsó projektednek. Mielőtt
           elkezded, szánj egy kis időt, hogy megnézz néhány példa projektet. \n\n##
@@ -6213,10 +5941,6 @@ hu-HU:
         display_name: Kurzus Projekt vége
       courseF_EOC_samples_2021:
         display_name: Kurzus Projekt vége
-      courseF_artist_practice: {}
-      courseF_beeFor_practice: {}
-      courseF_beeVar_practice: {}
-      courseF_bee_practice: {}
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -6244,11 +5968,6 @@ hu-HU:
         - text: Nem tudom.
         questions:
         - {}
-      courseF_collector_samples_2022_pilot_-2022-2: {}
-      courseF_events_freeplay: {}
-      courseF_events_freeplay2022_2022_pilot_-2022-2: {}
-      courseF_events_practice: {}
-      courseF_events_practice2022_2022_pilot_-2022-2: {}
       courseF_events_predict_multi:
         answers:
         - {}
@@ -6265,11 +5984,6 @@ hu-HU:
         - {}
         questions:
         - {}
-      courseF_external_variableConstant: {}
-      courseF_external_variableConstant_2018: {}
-      courseF_external_variableConstant_2018_2019: {}
-      courseF_external_variableConstant_2018_2019_2020: {}
-      courseF_groups_freeplay_2022_pilot_-2022-2: {}
       courseF_groups_practice_2022_pilot_-2022-2:
         display_name: Gyakorlás rengeteg sprite-tal
       courseF_groups_predict_multi_2022_pilot_-2022-2:
@@ -6286,7 +6000,6 @@ hu-HU:
         questions:
         - text: 'Tippelj: A Futtatás megnyomása után mi történik, ha rákattintasz
             az egyes sprite-okra?'
-      courseF_intro_apps: {}
       courseF_intro_apps2022_2022_pilot_-2022-2:
         description: Ezek a projektek a Sprite Lab keretében készültek. Próbáld ki
           őket most, hogy mire használhatók! A tanfolyam végére képes leszel ilyen
@@ -6309,28 +6022,6 @@ hu-HU:
         - {}
         questions:
         - {}
-      courseF_markdown_algorithms_end: {}
-      courseF_markdown_algorithms_intro: {}
-      courseF_markdown_conditionals_end: {}
-      courseF_markdown_conditionals_intro: {}
-      courseF_markdown_debugging_end: {}
-      courseF_markdown_debugging_intro: {}
-      courseF_markdown_forloops_end: {}
-      courseF_markdown_forloops_end_2019: {}
-      courseF_markdown_forloops_end_2019_2020: {}
-      courseF_markdown_forloops_intro: {}
-      courseF_markdown_forloops_intro_2019: {}
-      courseF_markdown_forloops_intro_2019_2020: {}
-      courseF_markdown_loops_end: {}
-      courseF_markdown_loops_intro: {}
-      courseF_markdown_nestedloops_end: {}
-      courseF_markdown_nestedloops_intro: {}
-      courseF_markdown_variables_end: {}
-      courseF_markdown_variables_end_2019: {}
-      courseF_markdown_variables_end_2019_2020: {}
-      courseF_markdown_variables_intro: {}
-      courseF_markdown_variables_intro_2019: {}
-      courseF_markdown_variables_intro_2019_2020: {}
       courseF_multi_artist_for10_predict1:
         answers:
         - {}
@@ -6518,7 +6209,6 @@ hu-HU:
         - text: Nem tudom.
         questions:
         - {}
-      courseF_project_exemplars_2019: {}
       courseF_project_exemplars_2019_2020:
         markdown: "# Projekt Példák\n\nElkezdheted az utolsó projektedet. Mielőtt
           nekilátsz, szánj egy kis időt arra, hogy megnézel néhány példa projektet.
@@ -6535,10 +6225,6 @@ hu-HU:
           \"Spiral (Artist)\")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)
           \ |\n| Alkoss valamit változókkal | Légy kreatív számláló ciklusok használatával!
           |\n\n"
-      courseF_sprites_freeplay: {}
-      courseF_sprites_freeplay2022_2022_pilot_-2022-2: {}
-      courseF_sprites_practice: {}
-      courseF_sprites_practice2022_2022_pilot_-2022-2: {}
       courseF_sprites_predict_multi:
         answers:
         - {}
@@ -6555,8 +6241,6 @@ hu-HU:
         - {}
         questions:
         - {}
-      courseF_text_practice: {}
-      courseF_text_practice2022_2022_pilot_-2022-2: {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -6589,10 +6273,6 @@ hu-HU:
         - {}
         questions:
         - {}
-      courseF_variables_projects: {}
-      courseF_variables_projects2022_2022_pilot_-2022-2: {}
-      courseF_variables_samples: {}
-      courseF_variables_samples2022_2022_pilot_-2022-2: {}
       courseF_variables_stop:
         content1: a leírás itt található
       courseF_variables_stop2022_2022_pilot_-2022-2:
@@ -6651,12 +6331,6 @@ hu-HU:
         - {}
         questions:
         - {}
-      csd-post-survey-2017-implementation-student: {}
-      csd-post-survey-2017-implementation-teacher: {}
-      csd-post-survey-2017-implementation-teacher_2019: {}
-      csd-post-survey-2017-levelgroup: {}
-      csd-post-survey-2017-levelgroup-2018-2nd-semester: {}
-      csd-post-survey-2017-levelgroup_2018: {}
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -6991,8 +6665,6 @@ hu-HU:
         - correct: true
         questions:
         - {}
-      csd-post-survey-2018-markdown-with-link-to-survey: {}
-      csd-post-survey-2018-markdown-with-link-to-survey_v2: {}
       csd-post-survey-2018-topic-ai:
         answers:
         - correct: true
@@ -7165,11 +6837,6 @@ hu-HU:
         - correct: true
         questions:
         - {}
-      csd-post-survey-intro-2019: {}
-      csd-post-survey-levelgroup-2018: {}
-      csd-post-survey-levelgroup_2019: {}
-      csd-post-survey-markdown-with-link-to-survey_2021: {}
-      csd-post-survey-markdown-with-link-to-survey_2022: {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -7321,61 +6988,8 @@ hu-HU:
         content1: a leírás itt található
       csd-post-survey-unit6-preamble:
         content1: a leírás itt található
-      csd-pre-survey-2017-levelgroup: {}
-      csd-pre-survey-2017-levelgroup_2018: {}
-      csd-pre-survey-levelgroup_2019: {}
-      csd-pre-survey-levelgroup_21_22: {}
       csd-pre-survey-levelgroup_21_22_2022:
         title: Számítástechnika felfedezése c. tanfolyam előzetes felmérése
-      csd-pulse-check-survey-1-levelgroup U1Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2021: {}
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
@@ -9851,15 +9465,6 @@ hu-HU:
         - correct: true
         questions:
         - {}
-      csd-pulse-check-survey-preamble: {}
-      csd-pulse-check-survey-preamble_2018: {}
-      csd-pulse-check-survey-preamble_2018_2019: {}
-      csd-pulse-check-survey-preamble_2019: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2021: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2022: {}
-      csd-pulse-check-survey-preamble_2021: {}
-      csd-pulse-check-survey-preamble_2022: {}
-      csd-pulse-check-survey-preamble_2222: {}
       csf_be_a_super_digital_citizen:
         content1: a leírás itt található
         markdown: |
@@ -9989,8 +9594,6 @@ hu-HU:
           # Az Online Szomszédságom
 
           ## Hogyan juss el biztonságosan valahová online?
-      csp-post-survey-2017 preamble 1: {}
-      csp-post-survey-2017 preamble 1_2019: {}
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -10405,7 +10008,6 @@ hu-HU:
         - correct: true
         questions:
         - {}
-      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2018-topics-preamble:
         content1: a leírás itt található
       csp-post-survey-2018-unit-feedback-preamble:
@@ -10434,30 +10036,6 @@ hu-HU:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017 preamble 1: {}
-      csp-pre-survey-2017 preamble 1_2018: {}
-      csp-pre-survey-2017 preamble 1_2021: {}
-      csp-pre-survey-2017 preamble 1_2022: {}
-      csp-pre-survey-2017 preamble 2 cs in general: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2021: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2022: {}
-      csp-pre-survey-2017 preamble 3 this class: {}
-      csp-pre-survey-2017 preamble 3 this class_2018: {}
-      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2021: {}
-      csp-pre-survey-2017 preamble 3 this class_2022: {}
-      csp-pre-survey-2017 preamble 4 the future: {}
-      csp-pre-survey-2017 preamble 4 the future_2018: {}
-      csp-pre-survey-2017 preamble 4 the future_2021: {}
-      csp-pre-survey-2017 preamble 4 the future_2022: {}
-      csp-pre-survey-2017 preamble 5 demographics: {}
-      csp-pre-survey-2017 preamble 5 demographics_2018: {}
-      csp-pre-survey-2017 preamble 5 demographics_2021: {}
-      csp-pre-survey-2017 preamble 5 demographics_2022: {}
       csp-pre-survey-2017-q1:
         answers:
         - correct: true
@@ -11209,8 +10787,6 @@ hu-HU:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017-q36-preamble: {}
-      csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pre-survey-2017-q37:
         answers:
         - correct: true
@@ -11534,8 +11110,6 @@ hu-HU:
         description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
         display_name: Kurzus Projekt vége
-      express_EOC_examples2022: {}
-      express_EOC_examples_2021: {}
       family_encourage:
         answers:
         - correct: true
@@ -11584,6 +11158,7 @@ hu-HU:
           text: Laurel összegyűjti az összes kincset.
         - feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
             nincs, és ez hibát okoz.
+          text: Laurel 1 kincset gyűjt a kód használatával.
         questions:
         - text: Nézd meg ezt a kódot figyelmesen! Mit gondolsz, mi történik, ha lefuttatod
             a programot?
@@ -11659,7 +11234,6 @@ hu-HU:
         questions:
         - text: Nézd meg ezt a kódot figyelmesen! Mit gondolsz, mi történik, ha lefuttatod
             a programot?
-      gradek1_activity_beNice: {}
       how-often-consider-alternative-approaches-2019:
         answers:
         - correct: true
@@ -11796,34 +11370,10 @@ hu-HU:
         display_name: Alkalmazás testreszabása
       ml-club app-choice parent_2022:
         display_name: Alkalmazás testreszabása
-      ml-customize apps-practice choice-2021: {}
-      ml-customize apps-practice choice_2022: {}
-      ml-good data-isaac data: {}
-      ml-good data-isaac data_2022: {}
-      ml-good data-kim data: {}
-      ml-good data-kim data_2022: {}
-      ml-good data-kim survey: {}
-      ml-good data-kim survey_2022: {}
       ml-intro app lab-book recommender 5-2021:
         display_name: Alkalmazás testreszabása
       ml-intro app lab-book recommender 5_2022:
         display_name: Alkalmazás testreszabása
-      ml-model card-medical-1-2021: {}
-      ml-model card-medical-1_2022: {}
-      ml-model card-medical-2-2021: {}
-      ml-model card-medical-2_2022: {}
-      ml-model card-medical-3-2021: {}
-      ml-model card-medical-3_2022: {}
-      ml-models in applab-choice parent: {}
-      ml-models in applab-choice parent_2022: {}
-      ml-models-shoe survey: {}
-      ml-models-shoe survey_2022: {}
-      ml-plan survey-copy form: {}
-      ml-plan survey-copy form_2022: {}
-      ml-use model card-pet model card-2021: {}
-      ml-use model card-pet model card_2022: {}
-      ml-use models applab-practice choice-2021: {}
-      ml-use models applab-practice choice_2022: {}
       naturally-better-at-cs:
         answers:
         - correct: true
@@ -11882,9 +11432,6 @@ hu-HU:
         - correct: true
         questions:
         - {}
-      pre-assessment survey heading1: {}
-      pre-assessment survey heading2: {}
-      pre-assessment survey heading3: {}
       pre-assessment survey q1:
         answers:
         - correct: true
@@ -12239,8 +11786,6 @@ hu-HU:
         - correct: true
         questions:
         - {}
-      sample external 1: {}
-      sample external 2: {}
       someone_else_encourage:
         answers:
         - correct: true
