@@ -345,29 +345,60 @@ export default function CourseOfferingEditor(props) {
         </label>
       ))}
       <h3>Professional Learning</h3>
-      Professional Learning Program
-      <HelpTip>
-        <p>
-          Select a workshop where one can learn more about the professional
-          learning program
-        </p>
-      </HelpTip>
-      <select
-        value={courseOffering.professional_learning_program}
-        style={styles.dropdown}
-        onChange={e =>
-          updateCourseOffering('professional_learning_program', e.target.value)
-        }
-      >
-        <option value="">{translatedNoneOption}</option>
-        {Object.entries(props.professionalLearningProgramPaths).map(
-          ([key, path]) => (
-            <option key={key} value={path}>
-              {key}
+      <label>
+        Professional Learning Program
+        <HelpTip>
+          <p>
+            Select a workshop where one can learn more about the professional
+            learning program
+          </p>
+        </HelpTip>
+        <select
+          value={courseOffering.professional_learning_program}
+          style={styles.dropdown}
+          onChange={e =>
+            updateCourseOffering(
+              'professional_learning_program',
+              e.target.value
+            )
+          }
+        >
+          <option value="">{translatedNoneOption}</option>
+          {Object.entries(props.professionalLearningProgramPaths).map(
+            ([key, path]) => (
+              <option key={key} value={path}>
+                {key}
+              </option>
+            )
+          )}
+        </select>
+      </label>
+      <label>
+        Self-Paced Professional Learning
+        <HelpTip>
+          <p>
+            Pick the self-paced course offering that supports teachers teaching
+            the course offering.
+          </p>
+        </HelpTip>
+        <select
+          value={courseOffering.self_paced_pl_course_offering_id}
+          style={styles.dropdown}
+          onChange={e => {
+            updateCourseOffering(
+              'self_paced_pl_course_offering_id',
+              e.target.value
+            );
+          }}
+        >
+          <option value="">{translatedNoneOption}</option>
+          {Object.values(props.selfPacedPLCourseOfferings).map(co => (
+            <option key={co.id} value={co.id}>
+              {co.display_name}
             </option>
-          )
-        )}
-      </select>
+          ))}
+        </select>
+      </label>
       <SaveBar
         handleSave={handleSave}
         error={error}
@@ -396,13 +427,13 @@ CourseOfferingEditor.propTypes = {
     device_compatibility: PropTypes.string,
     description: PropTypes.string,
     professional_learning_program: PropTypes.string,
+    self_paced_pl_course_offering_id: PropTypes.number,
   }),
   selfPacedPLCourseOfferings: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
       key: PropTypes.string,
       display_name: PropTypes.string,
-      course_version_path: PropTypes.string,
     })
   ),
   professionalLearningProgramPaths: PropTypes.objectOf(PropTypes.string),
