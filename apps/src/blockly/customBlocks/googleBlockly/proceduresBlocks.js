@@ -3,6 +3,8 @@ import BlockSvgFrame from '../../addons/blockSvgFrame';
 import msg from '@cdo/locale';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
 
+// In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
+// we would need to send that property from the backend and save it in lab2Redux.
 const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -11,6 +13,8 @@ const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
  */
 export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   {
+    // Block for defining a function (aka procedure) with no return value.
+    // When using the modal function editor, the name field is an uneditable label.
     type: 'procedures_defnoreturn',
     message0: '%1 %2 %3 %4',
     message1: '%1',
@@ -59,6 +63,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     mutator: 'procedure_def_mutator',
   },
   {
+    // Block for calling a procedure with no return value.
     type: 'procedures_callnoreturn',
     message0: '%1 %2',
     args0: [
