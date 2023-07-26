@@ -38,11 +38,18 @@ build:
   local:
     useBuildkit: true # required for caching layers, see https://github.com/moby/moby/issues/34715#issuecomment-589655390
 deploy:
-  docker:
-    images:
-    - code.org
+  # docker:
+  #   images:
+  #   - code.org
+  kubectl: {}
+manifests:
+  rawYaml:
+  - ./k8s/code.org/*.yaml
 
 portForward:
-- resourceType: Container
-  resourceName: code.org
+- resourceType: deployment
+  resourceName: dashboard
   port: 3000
+- resourceType: deployment
+  resourceName: db
+  port: 3306
