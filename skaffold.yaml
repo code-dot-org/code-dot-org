@@ -41,3 +41,8 @@ deploy:
   docker:
     images:
     - code.org
+
+portForward:
+- resourceType: Container
+  resourceName: code.org
+  port: 3000

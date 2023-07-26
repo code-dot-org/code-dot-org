@@ -1,5 +1,7 @@
 # Documentation at https://git-scm.com/docs/gitignore.
 
+aws.config
+
 \#*#
 *.pid
 *.pid.oldbin
