@@ -57,6 +57,7 @@ import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
 import CdoFieldImage from './addons/cdoFieldImage';
+import {getShadowedBlockImageUrl} from './addons/cdoBlockShadow';
 
 const options = {
   contextMenu: true,
@@ -677,6 +678,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.cdoUtils = cdoUtils;
   blocklyWrapper.customBlocks = customBlocks;
+  blocklyWrapper.getShadowedBlockImageUrl = getShadowedBlockImageUrl;
 
   return blocklyWrapper;
 }

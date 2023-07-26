@@ -2,8 +2,8 @@ import _ from 'lodash';
 import {SVG_NS} from '@cdo/apps/constants';
 import Button from '@cdo/apps/templates/Button';
 import {
-  changeShadowedImage,
-  resetShadowedImageToLongString,
+  blockShadowingPairs,
+  updateShadowedBlockImage,
 } from '@cdo/apps/blockly/addons/cdoBlockShadow';
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 
@@ -125,31 +125,16 @@ export const blocks = {
 
   // Set block to shadow for preview field if needed
   setUpBlockShadowing() {
-    const pointers = {
-      gamelab_clickedSpritePointer: {
-        parent: 'gamelab_spriteClicked',
-        imageIndex: 0,
-      },
-      gamelab_newSpritePointer: {
-        parent: 'gamelab_whenSpriteCreated',
-        imageIndex: 0,
-      },
-      gamelab_subjectSpritePointer: {
-        parent: 'gamelab_checkTouching',
-        imageIndex: 0,
-      },
-      gamelab_objectSpritePointer: {
-        parent: 'gamelab_checkTouching',
-        imageIndex: 1,
-      },
-    };
     // when the parent changes, trigger a change to this block's field
-    if (Object.keys(pointers).includes(this.type)) {
-      const pointerData = pointers[this.type];
+    if (Object.keys(blockShadowingPairs).includes(this.type)) {
       this.onchange = function (event) {
         if (
-          event.type === Blockly.Events.BLOCK_DRAG &&
-          (event.isStart || event.blockId !== this.id)
+          (event.type === Blockly.Events.BLOCK_DRAG &&
+            (event.isStart || event.blockId !== this.id)) ||
+          (event.type === Blockly.Events.BLOCK_CREATE &&
+            event.blockId === this.id) ||
+          (event.type === Blockly.Events.BLOCK_CHANGE &&
+            event.blockId === this.id)
         ) {
           // We only care about drag events if the event is on this block and
           // it's the end of the drag. Otherwise, we can skip this event.
@@ -160,40 +145,8 @@ export const blocks = {
           event.type === Blockly.Events.BLOCK_CHANGE ||
           event.type === Blockly.Events.BLOCK_DRAG
         ) {
-          const rootBlock = this.getRootBlock();
-          let parent = undefined;
-          if (rootBlock.type === pointerData.parent) {
-            parent = rootBlock;
-          } else if (this.getRootBlock().type === this.type) {
-            const potentialParents = Blockly.getMainWorkspace()
-              .getTopBlocks()
-              .filter(block => block.type === pointers[this.type].parent);
-            potentialParents.forEach(potentialParent => {
-              const inputs = potentialParent.inputList.filter(
-                input => input.name === 'flyout_input'
-              );
-              if (inputs.length > 0) {
-                const flyoutWorkspace =
-                  inputs[0].fieldRow[0]?.flyout_?.workspace_;
-                if (
-                  flyoutWorkspace &&
-                  flyoutWorkspace.id === this.workspace.id &&
-                  flyoutWorkspace
-                    .getAllBlocks()
-                    .filter(block => block.id === this.id).length > 0
-                ) {
-                  parent = potentialParent;
-                }
-              }
-            });
-          }
-          if (parent) {
-            changeShadowedImage(parent, this, pointerData.imageIndex);
-          } else {
-            // the block is probably disconnected from the root or toolbox. Reset to
-            // default text.
-            resetShadowedImageToLongString(this);
-          }
+          const checkWorkspaceId = event.type !== Blockly.Events.BLOCK_CREATE;
+          updateShadowedBlockImage(this, checkWorkspaceId);
         }
       };
     }

@@ -329,6 +329,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
   };
   blocklyWrapper.customBlocks = customBlocks;
+
+  blocklyWrapper.getShadowedBlockImageUrl = () => {
+    return '';
+  };
+
   return blocklyWrapper;
 }
 

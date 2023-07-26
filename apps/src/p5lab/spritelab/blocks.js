@@ -289,10 +289,14 @@ const customInputTypes = {
         }
       }
       block.thumbnailSize = 32;
+      const imageUrl = Blockly.getShadowedBlockImageUrl(block, false);
+      const width = imageUrl.length > 0 ? block.thumbnailSize : 1;
+      const firstField =
+        imageUrl.length > 0 ? block.shortString : block.longString;
       currentInputRow
-        .appendField(block.longString)
+        .appendField(firstField)
         .appendField(
-          new Blockly.FieldImage('', 1, block.thumbnailSize),
+          new Blockly.FieldImage(imageUrl, width, block.thumbnailSize),
           inputConfig.name
         );
     },
