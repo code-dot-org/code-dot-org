@@ -260,6 +260,23 @@ class Level < ApplicationRecord
     !(current_parent&.type == "LevelGroup")
   end
 
+  def to_xml(options = {})
+    builder = Nokogiri::XML::Builder.new do |xml|
+      xml.send(type) do
+        xml.config do
+          hash = serializable_hash(include: :level_concept_difficulty).deep_dup
+          hash = filter_level_attributes(hash)
+          if encrypted?
+            hash['encrypted_properties'] = Encryption.encrypt_object(hash.delete('properties'))
+            hash['encrypted_notes'] = Encryption.encrypt_object(hash.delete('notes'))
+          end
+          xml.cdata(JSON.pretty_generate(hash.as_json))
+        end
+      end
+    end
+    builder.to_xml(PRETTY_PRINT)
+  end
+
   PRETTY_PRINT = {save_with: Nokogiri::XML::Node::SaveOptions::NO_DECLARATION | Nokogiri::XML::Node::SaveOptions::FORMAT}
 
   def self.pretty_print_xml(xml_string)
