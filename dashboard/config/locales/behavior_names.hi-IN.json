@@ -1575,10 +1575,6 @@
           "swimming left and right": "बाएं और दाएं तैराकी करना",
           "wandering": "घूमना"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "growing": "बढ़ना",
           "jittering": "कलमलाना",
@@ -3027,8 +3023,6 @@
           "spinning right": "दाएं घुमाना",
           "wandering": "घूमना",
           "wobbling": "लड़खड़ाना"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "बढ़ना",

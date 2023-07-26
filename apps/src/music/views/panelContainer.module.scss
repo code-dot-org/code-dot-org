@@ -1,5 +1,5 @@
-@import "color.scss";
-@import "./music-view.module.scss";
+@import 'color.scss';
+@import './music-view.module.scss';
 
 .panelContainer {
   width: 100%;
@@ -9,22 +9,29 @@
   position: relative;
 
   .panelContainerHeader {
-    min-height: 26px;
+    min-height: 30px;
+    background-color: $neutral_dark80;
+    border-bottom: solid $default-spacing $dark_black;
+    position: relative;
 
-    .panelContainerHeaderBackground {
+    .panelContainerHeaderItem {
       position: absolute;
-      background-color: $neutral_dark80;
-      border-bottom: solid $default-spacing $dark_black;
-      width: 100%;
-      height: 24px;
-    }
+      top: 50%;
+      transform: translateY(-50%);
 
-    .panelContainerHeaderText {
-      position: absolute;
-      color: $neutral_light;
-      width: 100%;
-      text-align: center;
-      top: 3px;
+      &Text {
+        color: $neutral_light;
+        width: 100%;
+        text-align: center;
+      }
+
+      &Right {
+        right: 4px;
+      }
+
+      &Left {
+        left: 4px;
+      }
     }
   }
 }

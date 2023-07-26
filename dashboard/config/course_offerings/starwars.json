@@ -1,6 +1,6 @@
 {
   "key": "starwars",
-  "display_name": "Star Wars: Building a Galaxy With Code (Javascript)",
+  "display_name": "Star Wars: Building a Galaxy With Code (JavaScript)",
   "category": "hoc",
   "is_featured": false,
   "assignable": true,
@@ -15,5 +15,6 @@
   "description": null,
   "professional_learning_program": null,
   "video": null,
-  "published_date": null
+  "published_date": null,
+  "self_paced_pl_course_offering_id": null
 }

@@ -1575,10 +1575,6 @@
           "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
           "wandering": "அலைந்து திரிதல்"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "growing": "வளர்கிறது",
           "jittering": "நடுக்கம் ",
@@ -3027,8 +3023,6 @@
           "spinning right": "வலதுபுறம் சுழல்கிறது  ",
           "wandering": "அலைந்து திரிதல்",
           "wobbling": "தள்ளாட்டம்"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "வளரும்",

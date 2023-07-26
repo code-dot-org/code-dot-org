@@ -55,8 +55,6 @@
               "width": "larghezza"
             }
           },
-          "jump to controller top left": {
-          },
           "jump to middle": {
             "name": "salta in mezzo"
           }
@@ -94,8 +92,6 @@
           },
           "draw sitting stick figure": {
             "name": "disegna una figura stilizzata seduta"
-          },
-          "jump to neck": {
           }
         },
         "2-3 Artist Debugging 7": {
@@ -161,14 +157,6 @@
         "2-3 Artist Functions 9": {
           "draw a snowflake": {
             "name": "disegna un fiocco di neve"
-          }
-        },
-        "2-3 Artist Loops 2": {
-          "draw 3 hexagons": {
-          },
-          "draw 4 hexagons": {
-          },
-          "draw 5 hexagons": {
           }
         },
         "2-3 Bee Functions 1": {

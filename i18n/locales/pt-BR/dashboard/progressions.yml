@@ -7,10 +7,15 @@ pt:
       'AI: Impact on Society - Video': 'IA: Impacto na sociedade - Vídeo'
       'AI: Training Data & Bias - Video': 'IA: Dados de treinamento e viés - Vídeo'
       Accelerometer Events: Eventos do Acelerômetro
+      Add Content and HTML: Adicione Conteúdo e HTML
+      Add Content and Structure to Your Page: Adicione Conteúdo e Estrutura à sua Página
       Add Movement: Adicionar Movimento
       Add Sprites: Adicionar Sprites
+      Add Style: Adicione Estilo
+      Add Style to Your Page: Adicione Estilo à sua Página
       Add Text: Adicionar Texto
       Adding Images: Adicionando Imagens
+      Adding Pages: Adicionando páginas
       Adding Screens: Adicionando Telas
       Alien Defender: Defensor alienígena
       Analog Sensors: Sensores analógicos
@@ -76,12 +81,15 @@ pt:
       'Challenge: Checking for Multiple Conditions': 'Desafio: Verificando Múltiplas Condições'
       'Challenge: Draw an Image': 'Desafio: Desenhar uma Imagem'
       'Challenge: Extend Your Scene': 'Desafio: Estenda sua Cena'
+      'Challenge: Lists': 'Desafio: Listas'
       'Challenge: Making Sense of Sensors': 'Desafio: Entendendo os sensores'
+      'Challenge: RGB Colors': 'Desafio: Cores RGB'
       'Challenge: Updating Variables': 'Desafio: Atualizando Variáveis'
       Challenges: Desafios
       Change: Mudança
       Changing Screens: Mudando Telas
       Changing Sensor Scale: Alterando a escala do Sensor
+      Check Your Work: Verifique Seu Trabalho
       Check-In Survey: Pesquisa de verificação
       Checking for a Winner: Verificando um Vencedor
       Choose Your Own Adventure: Escolha sua Aventura
@@ -93,6 +101,7 @@ pt:
       Circuits and Logic: Circuitos e Lógica
       Code Prediction: Previsão de código
       Code Your Own Flappy Game: Desenvolva seu próprio Flappy Game
+      Code Your Page: Codifique sua página
       Collector Game: Jogo de Colecionador
       Collision Detection: Detecção de Colisão
       Collision Detection Review: Revisão de Detecção de colisão
@@ -203,6 +212,7 @@ pt:
       Getters and Setters: Getters e Setters
       Getting Properties: Obtendo propriedades
       Graph Paper Programming - Unplugged Activity: Programação com Papel Gráfico - Atividade offline
+      Green Glass Door: Porta de vidro verde
       Guess The Number: Adivinhe o Número
       HTML Tags: Tags HTML
       Hardware and Software: Hardware e Software
@@ -219,6 +229,8 @@ pt:
       Images in HTML: Imagens em HTML
       Importing Screens: Importando Telas
       Improve Your Game: Melhore seu Jogo
+      Improved Shoe Recommender: Recomendador de calçado aprimorado
+      Incorporate Feedback: Incorpore Feedback
       Innovation Research: Pesquisa de Inovação
       Input Examples: Exemplos de Entradas
       Input with If-Else: Entradas com "If-Else"
@@ -251,6 +263,7 @@ pt:
       Linking Screens: Telas de vinculação
       Lists: Listas
       Lists in HTML: Listas em HTML
+      Looking for Patterns: Procurando padrões
       Looping: Repetição
       Loops with the Artist: Laços com o Artista
       Make Your Sprites: Faça seus Sprites
@@ -314,7 +327,7 @@ pt:
       Plotting Shapes in Game Lab: Plotando Formas no Jogo do Laboratório
       Polling Events: Eventos de votação
       Post-Course Survey Instructions: Instruções de Pesquisa Pós-curso
-      Practice: Praticar
+      Practice: Pratique
       Predict: Previsão
       Prediction: Previsão
       Programming with Rey and BB-8: Programação com Rey e BB-8
@@ -323,6 +336,7 @@ pt:
       Project - Background and Variables: Projeto - Histórico e Variáveis
       Project - Finishing Touches: Projeto - Toques Finais
       Project - Sprites and Interactions: Projeto - Sprites e Interações
+      Project Guide: Guia do projeto
       Project Work: Projeto de trabalho
       Properties: Propriedades
       Publishing Your Website: Publicando seu site
@@ -347,7 +361,10 @@ pt:
       Review: Revisar
       Review Your Animated Scene: Revise sua Cena animada
       Review Your Game: Revise seu Jogo
+      Review Your Page: Revise sua página
       Review Your Scene: Revise sua Cena
+      'Review: CSS': 'Resenha: CSS'
+      'Review: HTML': 'Revisão: HTML'
       Revise Artist Project: Revisar Projeto Artista
       Revise Sprite Lab Project: Revisar o Projeto de Laboratório de Sprite
       Revisiting the Counter Pattern: Revisitando o Padrão do Contador
@@ -356,9 +373,13 @@ pt:
       Sample App: Aplicativo exemplo
       Sample Game: Jogo de Exemplo
       Sample Games: Jogos de Exemplo
+      Sample Personal Web Pages: Exemplos de Páginas Pessoais da Web
+      Sample Personal Websites: Exemplos de Sites Pessoais
       Sample Platform Jumper Game: Exemplo de Jogo - Saltador de Plataformas
       Sample Program: Programa de Exemplo
       Sample Programs: Programas de Exemplo
+      Sample Web Page: Exemplo de site
+      Sample Website: Exemplo de site
       Scoring & Scoreboard: Pontuação e placar
       Screen Design: Design de Tela
       Sensor Events: Eventos de Sensor
@@ -369,11 +390,16 @@ pt:
       Shapes and Parameters: Formas e Parâmetros
       Shapes and the Draw Loop: Formas e o Laço de Desenho
       Share Your App: Compartilhe Seu App
+      Share Your Pages: Compartilhe Suas Páginas
+      Share Your Stylesheets: Compartilhe Suas Folhas de Estilo
+      Shoe Recommendation Survey: Pesquisa de recomendação de calçado
+      Shoe Recommender: Recomendador de sapato
       Side Scroller: Rolagem Lateral
       Simple Circuits: Circuitos Simples
       Skill Building: Desenvolvimento de Habilidades
       Sliders: Barras de Rolagem
       Smart Bike - Blinkers: Bicicleta Inteligente - Blinkers
+      Social Sleuth: Detetive social
       Speed it Up, Slow it Down: Acelerar, retardar
       Sprite Interactions: Interações com Sprite
       Sprite Interactions Review: Revisão de interações de Sprite
@@ -399,9 +425,12 @@ pt:
       The Counter Pattern: O padrão Contador
       The Draw Loop: O laço de desenho
       The Harvester: A Colheitadeira
+      Top Websites: Principais Sites
       Tour of Design Mode: Introdução ao Modo Design
       Train an AI to Clean the Ocean: Treine uma IA para limpar o oceano
       UI Element Properties: Propriedades do Elemento de UI
+      Ultimate Shoe Recommender: Recomendador definitivo de calçado
+      Upload Your Images: Carregue suas imagens
       User Interface: Interface do Usuário
       Using Accelerometer Events: Usando eventos do acelerômetro
       Using Arrays: Usando Vetores
@@ -422,13 +451,17 @@ pt:
       'Video: CS Matters': 'Vídeo: Importância da Ciência da Computação'
       'Video: Conditional Statements': 'Vídeo: Declarações Condicionais'
       'Video: Conditionals': 'Vídeo: Condicionais'
+      'Video: Debugging': 'Vídeo: Depuração'
       'Video: Drawing in Game Lab - Part 1': 'Vídeo: Desenhando no Laboratório de Jogos - Parte 1'
       'Video: Drawing in Game Lab - Part 2': 'Vídeo: Desenhando no Laboratório de Jogos - Parte 2'
       'Video: For Loops': 'Vídeo: Laços Para'
       'Video: Functions': 'Vídeo: Funções'
+      'Video: How Search Works': 'Vídeo: Como Funciona a Ferramenta de Busca'
       'Video: IOSP Model': 'Vídeo: Modelo IOSP'
       'Video: If/Else Statements': 'Vídeo: Condicionais'
       'Video: Intro to CSS': 'Vídeo: Introdução a CSS'
+      'Video: Intro to CSS - Part 1': 'Vídeo: Introdução ao CSS - Parte 1'
+      'Video: Intro to CSS - Part 2': 'Vídeo: Introdução ao CSS - Parte 2'
       'Video: Intro to CSS Part 2': 'Vídeo: Introdução a CSS Parte 2'
       'Video: Intro to Web Lab - Part 1': 'Vídeo: Introdução ao Web Lab - Parte 1'
       'Video: Intro to Web Lab - Part 2': 'Vídeo: Introdução ao Web Lab - Parte 2'
@@ -436,9 +469,13 @@ pt:
       'Video: Introduction to Sprites': 'Vídeo: Introdução a Sprites'
       'Video: Introduction to Variables': 'Vídeo: Introdução às variáveis'
       'Video: Introduction to the Draw Loop': 'Vídeo: Introdução ao Laço de Desenho'
+      'Video: Managing Disagreement': 'Vídeo: Gerenciando Discordâncias'
       'Video: Outbreak Simulator: Introduction': 'Video: Simulação de Vírus: Intro'
+      'Video: Pair Programming': 'Vídeo: Programação em pares'
       'Video: Problem Solving Process': 'Vídeo: O Processo de Resolução de Problemas'
+      'Video: Publishing Your Website': 'Vídeo: Publicando seu site'
       'Video: Sprite Movement': 'Vídeo: Movimento de Sprite'
+      'Video: Teamwork': 'Vídeo: Trabalho em Equipe'
       'Video: The Animation Tab': 'Vídeo: A guia de Animação'
       'Video: Velocity': 'Video: Velocidade'
       'Video: What Makes a Computer, a Computer?': 'Vídeo: O que faz de um computador um computador?'
@@ -449,6 +486,7 @@ pt:
       While Loops with the Farmer: While Loops com o agricultor
       Wrap-up: Resumo
       Your Personal Website: Seu Site Pessoal
+      Your Team Project: Seu Projeto de Equipe
       getNumber: pegarNúmero
       getProperty: getProperty
       isTouching: estaTocando

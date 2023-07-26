@@ -1575,10 +1575,6 @@
           "swimming left and right": "bơi sang trái và phải",
           "wandering": "lang thang"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "growing": "phóng to",
           "jittering": "phập phồng",
@@ -3027,8 +3023,6 @@
           "spinning right": "xoay phải",
           "wandering": "lang thang",
           "wobbling": "nhúc nhích"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "phóng to",

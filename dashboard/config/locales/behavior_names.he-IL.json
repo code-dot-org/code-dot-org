@@ -1483,10 +1483,6 @@
           "swimming left and right": "לשחות שמאלה וימינה",
           "wandering": "לשוטט"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "growing": "לגדול",
           "jittering": "לרעוד",
@@ -2810,8 +2806,6 @@
           "spinning right": "להסתובב ימינה",
           "wandering": "לשוטט",
           "wobbling": "להתנדנד"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "לגדול",
