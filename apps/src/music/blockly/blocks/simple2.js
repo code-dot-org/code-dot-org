@@ -147,7 +147,7 @@ export const playSoundAtCurrentLocationSimple2 = {
   generator: block =>
     `Sequencer.playSound("${block.getFieldValue(FIELD_SOUNDS_NAME)}", "${
       block.id
-    }");`,
+    }");\n`,
 };
 
 export const playPatternAtCurrentLocationSimple2 = {

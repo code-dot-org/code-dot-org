@@ -135,7 +135,11 @@ const InstructionsPanel = ({
         </div>
       )}
       {panel.text && (
-        <div id="instructions-text" className={moduleStyles.text}>
+        <div
+          key={panel.text}
+          id="instructions-text"
+          className={moduleStyles.text}
+        >
           <SafeMarkdown
             markdown={panel.text}
             className={moduleStyles.markdownText}
@@ -145,6 +149,7 @@ const InstructionsPanel = ({
       {message && (
         <div id="instructions-feedback" className={moduleStyles.feedback}>
           <div
+            key={message}
             id="instructions-feedback-message"
             className={moduleStyles.message}
           >
@@ -152,17 +157,17 @@ const InstructionsPanel = ({
               markdown={message}
               className={moduleStyles.markdownText}
             />
+            {onNextPanel && (
+              <button
+                id="instructions-feedback-button"
+                type="button"
+                onClick={() => onNextPanel()}
+                className={moduleStyles.buttonNext}
+              >
+                {musicI18n.continue()}
+              </button>
+            )}
           </div>
-          {onNextPanel && (
-            <button
-              id="instructions-feedback-button"
-              type="button"
-              onClick={() => onNextPanel()}
-              className={moduleStyles.buttonNext}
-            >
-              {musicI18n.continue()}
-            </button>
-          )}
         </div>
       )}
     </div>
