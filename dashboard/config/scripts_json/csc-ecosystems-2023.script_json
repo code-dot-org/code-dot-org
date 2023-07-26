@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2023-07-18 22:23:25 UTC",
+    "serialized_at": "2023-07-25 22:07:01 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1912,6 +1912,28 @@
   ],
   "resources": [
     {
+      "name": "CS Connections Landing Page",
+      "url": "https://code.org/educate/csc",
+      "key": "cs_connections_landing_page",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page"
+      }
+    },
+    {
+      "name": "CSC Extended Connections Book List",
+      "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview\t",
+      "key": "csc_extended_connections_book_list",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list"
+      }
+    },
+    {
       "name": "Ecologist's Notebook",
       "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview",
       "key": "ecologist_s_notebook",
@@ -1938,6 +1960,38 @@
       }
     },
     {
+      "name": "Helpful Hints for teachers and learners\t",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\t",
+      "key": "helpful_hints_for_teachers_and_learners",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners"
+      }
+    },
+    {
+      "name": "Resource List for All Lessons",
+      "url": "\t/s/csc-ecosystems-2023/resources",
+      "key": "resource_list_for_all_lessons",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "resource_list_for_all_lessons"
+      }
+    },
+    {
+      "name": "Standards in Simulating a Marine Ecosystem ",
+      "url": "/s/csc-ecosystems-2023/standards",
+      "key": "standards_in_simulating_a_marine_ecosystem",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "standards_in_simulating_a_marine_ecosystem"
+      }
+    },
+    {
       "name": "Understanding Overfishing Article",
       "url": "https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing",
       "key": "understanding_overfishing_article",
@@ -1947,6 +2001,17 @@
       },
       "seeding_key": {
         "resource.key": "understanding_overfishing_article"
+      }
+    },
+    {
+      "name": "Vocabulary in Simulating a Marine Ecosystem",
+      "url": "/s/csc-ecosystems-2023/vocab",
+      "key": "vocabulary_in_simulating_a_marine_ecosystem",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_in_simulating_a_marine_ecosystem"
       }
     }
   ],
@@ -1983,7 +2048,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page",
+        "script.name": "csc-ecosystems-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list",
+        "script.name": "csc-ecosystems-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners",
+        "script.name": "csc-ecosystems-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "resource_list_for_all_lessons",
+        "script.name": "csc-ecosystems-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standards_in_simulating_a_marine_ecosystem",
+        "script.name": "csc-ecosystems-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary_in_simulating_a_marine_ecosystem",
+        "script.name": "csc-ecosystems-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
