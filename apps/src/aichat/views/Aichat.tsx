@@ -11,7 +11,6 @@ interface AichatProps {
 
 const Aichat: React.FunctionComponent<AichatProps> = ({children}) => (
   <div id="aichat-container" className={styles.container}>
-    <div>Hello world!</div>
     {children}
   </div>
 );
