@@ -671,15 +671,6 @@ mn-MN:
           <img src = "// сургалтын хөтөлбөр.code.org/images/applab/getText.png" style = "margin: 20px auto">
 
           Ихэнхдээ та ашиглагч ашиглахдаа үр дүнгээ хэмжигдэхүүн болгон хадгалах нь зүйтэй бөгөөд ингэснээр програмынхаа туршид ашиглах боломжтой болно.
-      CSD CSS project RGB_2021: {}
-      CSD CSS project RGB_2022: {}
-      CSD CSS project Review_2021: {}
-      CSD CSS project Review_2022: {}
-      CSD End of Unit Survey - Unit 1 - IntroMD_2022: {}
-      CSD Games Parameters challenge_2021: {}
-      CSD Games Parameters challenge_2022: {}
-      CSD Games Properties challenge_2021: {}
-      CSD Games Properties challenge_2022: {}
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -698,24 +689,10 @@ mn-MN:
         - {}
         questions:
         - {}
-      CSD Games Properties practice_2021: {}
-      CSD Games Properties practice_2022: {}
-      CSD Games Sprites Challenges_2021: {}
-      CSD Games Sprites Challenges_2022: {}
-      CSD Games Sprites practice_2021: {}
-      CSD Games Sprites practice_2022: {}
-      CSD Games parameters practice_2021: {}
-      CSD Games parameters practice_2022: {}
-      CSD Games variables challenge_2021: {}
-      CSD Games variables challenge_2022: {}
       CSD Games variables practice_2021:
         display_name: Хувьсагчдын дадлага
       CSD Games variables practice_2022:
         display_name: Хувьсагчдын дадлага
-      CSD HTML project Lists_2021: {}
-      CSD HTML project Lists_2022: {}
-      CSD HTML project Review_2021: {}
-      CSD HTML project Review_2022: {}
       CSD Header Size MC:
         answers:
         - {}
@@ -746,13 +723,6 @@ mn-MN:
         - correct: true
         - {}
         - {}
-      CSD Interactive Animations and Games Post-Project Test: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2021: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2022: {}
-      CSD Physical Computing Post-Project Test: {}
-      CSD Physical Computing Post-Project Test_2021: {}
-      CSD Physical Computing Post-Project Test_2022: {}
-      CSD Student End of Unit Survey - Unit 1_2022: {}
       CSD U1 IOSP match:
         answers:
         - {}
@@ -786,12 +756,6 @@ mn-MN:
         - {}
         - text: Хадгалалт
         - text: Боловсруулалт
-      CSD U1 Lesson 5 Overview: {}
-      CSD U1 Lesson 6 Overview: {}
-      CSD U1 Lesson 7 Overview: {}
-      CSD U1 Lesson 8 Overview: {}
-      CSD U1 Lesson 9 Overview: {}
-      CSD U1 Test: {}
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -876,10 +840,6 @@ mn-MN:
         - {}
         questions:
         - {}
-      CSD U1 Test_2021: {}
-      CSD U1 Test_2022: {}
-      CSD U2 CSS challenge_pilot_2021: {}
-      CSD U2 CSS challenge_pilot_2022: {}
       CSD U2 CSS practice_pilot_2021:
         display_name: Текстийг CSS ашиглан загварчлах
       CSD U2 CSS practice_pilot_2022:
@@ -890,18 +850,8 @@ mn-MN:
         content1: тайлбар энд байна
       CSD U2 Design Project_2018_2019:
         content1: тайлбар энд байна
-      CSD U2 Expression Exemplars: {}
-      CSD U2 Expression Exemplars_2018: {}
-      CSD U2 Expression Exemplars_2018_2019: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2021: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2022: {}
-      CSD U2 Image challenge_pilot_2021: {}
-      CSD U2 Image challenge_pilot_2022: {}
-      CSD U2 Image practice_pilot_2021: {}
-      CSD U2 Image practice_pilot_2022: {}
       CSD U2 L1 Overview:
         content1: тайлбар энд байна
-      CSD U2 L12 Overview: {}
       CSD U2 L2 Overview:
         content1: тайлбар энд байна
       CSD U2 L3 Overview:
@@ -912,19 +862,8 @@ mn-MN:
         content1: тайлбар энд байна
       CSD U2 L6 Overview:
         content1: тайлбар энд байна
-      CSD U2 L7 Overview: {}
       CSD U2 Lesson 6 Overview:
         content1: тайлбар энд байна
-      CSD U2 Lesson 9 Overview: {}
-      CSD U2 PSP Programming: {}
-      CSD U2 PSP Programming_2018: {}
-      CSD U2 PSP Programming_2018_2019: {}
-      CSD U2 Sample CSS layout_2021: {}
-      CSD U2 Sample CSS layout_2022: {}
-      CSD U2 Sample CSS text_2021: {}
-      CSD U2 Sample CSS text_2022: {}
-      CSD U2 Sample classes_2021: {}
-      CSD U2 Sample classes_2022: {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -1102,11 +1041,6 @@ mn-MN:
         - correct: true
         - {}
         - {}
-      CSD U2 Top Websites: {}
-      CSD U2 Top Websites_2018: {}
-      CSD U2 Top Websites_2018_2019: {}
-      CSD U2 Top Websites_2018_2019_pilot_2021: {}
-      CSD U2 Top Websites_2018_2019_pilot_2022: {}
       CSD U2 expand project:
         content1: тайлбар энд байна
       CSD U2 expand project_2018:
@@ -1152,12 +1086,6 @@ mn-MN:
         - {}
         - {}
         - {}
-      CSD U2 layout style challenge_pilot_2021: {}
-      CSD U2 layout style challenge_pilot_2022: {}
-      CSD U2 layout style practice_pilot_2021: {}
-      CSD U2 layout style practice_pilot_2022: {}
-      CSD U2 links challenge_2021: {}
-      CSD U2 links challenge_2022: {}
       CSD U2 lists match:
         answers:
         - {}
@@ -1207,8 +1135,6 @@ mn-MN:
         content1: тайлбар энд байна
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: тайлбар энд байна
-      CSD U3 - Design a Game 1 - ExampleChoice_2022: {}
-      CSD U3 - Interactive Card - ExampleChoice_2022: {}
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1274,11 +1200,6 @@ mn-MN:
         - {}
         - {}
         - {}
-      CSD U3 AnimationsMulti STOP project guide: {}
-      CSD U3 AnimationsMulti STOP project guide_2018: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022: {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1330,10 +1251,6 @@ mn-MN:
         content1: тайлбар энд байна
       CSD U3 Card Examples_2018_2019_pilot_2021:
         content1: тайлбар энд байна
-      CSD U3 Collisions SFLP: {}
-      CSD U3 Defender SFLP: {}
-      CSD U3 Entertainment: {}
-      CSD U3 Entertainment_2018_2019: {}
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -1364,7 +1281,6 @@ mn-MN:
         - {}
         - correct: true
         - {}
-      CSD U3 Functions SFLP: {}
       CSD U3 Keypress Matching:
         answers:
         - {}
@@ -1392,23 +1308,6 @@ mn-MN:
         - {}
         - {}
         - {}
-      CSD U3 Lesson Overview 1: {}
-      CSD U3 Lesson Overview 10: {}
-      CSD U3 Lesson Overview 11: {}
-      CSD U3 Lesson Overview 12: {}
-      CSD U3 Lesson Overview 13: {}
-      CSD U3 Lesson Overview 14: {}
-      CSD U3 Lesson Overview 2: {}
-      CSD U3 Lesson Overview 3: {}
-      CSD U3 Lesson Overview 4: {}
-      CSD U3 Lesson Overview 5: {}
-      CSD U3 Lesson Overview 6: {}
-      CSD U3 Lesson Overview 7: {}
-      CSD U3 Lesson Overview 8: {}
-      CSD U3 Lesson Overview 9: {}
-      CSD U3 Movement Challenges: {}
-      CSD U3 Project Build a Game SFLP: {}
-      CSD U3 SFLP Velocity: {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
@@ -1641,7 +1540,6 @@ mn-MN:
         - {}
         questions:
         - {}
-      CSD U3 Using the Game Design Process SLFP: {}
       CSD U3 combining rep:
         content1: тайлбар энд байна
       CSD U3 combining rep_2018:
@@ -1692,10 +1590,6 @@ mn-MN:
         - {}
         - {}
         - {}
-      CSD U3 drawing challenges_2021: {}
-      CSD U3 drawing challenges_2022: {}
-      CSD U3 drawing practice choice_2021: {}
-      CSD U3 drawing practice choice_2022: {}
       CSD U3 game intro:
         content1: тайлбар энд байна
       CSD U3 game intro_2018:
@@ -1861,22 +1755,6 @@ mn-MN:
         - correct: true
         questions:
         - {}
-      CSD U4L01 SFLP: {}
-      CSD U4L02 SFLP: {}
-      CSD U4L03 SFLP: {}
-      CSD U4L04 SFLP: {}
-      CSD U4L05 SFLP: {}
-      CSD U4L06 SFLP: {}
-      CSD U4L07 SFLP: {}
-      CSD U4L08 SFLP: {}
-      CSD U4L09 SFLP: {}
-      CSD U4L10 SFLP: {}
-      CSD U4L11 SFLP: {}
-      CSD U4L12 SFLP: {}
-      CSD U4L13 SFLP: {}
-      CSD U4L15 SFLP: {}
-      CSD U4L16 SFLP: {}
-      CSD U4L17 SFLP: {}
       CSD U5 Encryption 1:
         content1: тайлбар энд байна
       CSD U5 Encryption 1_2018:
@@ -1909,7 +1787,6 @@ mn-MN:
         content1: тайлбар энд байна
       CSD U5 student record_2018_2019:
         content1: тайлбар энд байна
-      CSD U5 test: {}
       CSD U5 test clean multi:
         answers:
         - {}
@@ -2051,31 +1928,6 @@ mn-MN:
         - {}
         questions:
         - {}
-      CSD U5 test_2021: {}
-      CSD U5 test_2022: {}
-      CSD U6 - Accelerometer - Chal_2222: {}
-      CSD U6 - Accelerometer - Prac_2222: {}
-      CSD U6 - Board Inputs - Chal_2222: {}
-      CSD U6 - Board Inputs - Prac_2222: {}
-      CSD U6 - Board Outputs - Chal_2222: {}
-      CSD U6 - Board Outputs - Prac_2222: {}
-      CSD U6 - Color LEDs - Chal_2222: {}
-      CSD U6 - Color LEDs - Prac_2222: {}
-      CSD U6 - Combine Inputs - Chal_2222: {}
-      CSD U6 - Combine Inputs - Prac_2222: {}
-      CSD U6 - Functions - Prac_2222: {}
-      CSD U6 - If Variables - Chal_2222: {}
-      CSD U6 - Music - Chal_2222: {}
-      CSD U6 - Physical Input - Chal_2222: {}
-      CSD U6 - Physical Input - Prac_2222: {}
-      CSD U6 - Physical Output - Chal_2222: {}
-      CSD U6 - Physical Output - Prac_2222: {}
-      CSD U6 - Screen Inputs - Chal_2222: {}
-      CSD U6 - Screen Inputs - Prac_2222: {}
-      CSD U6 - Screen Outputs - Chal_2222: {}
-      CSD U6 - Screen Outputs - Prac_2222: {}
-      CSD U6 - Sensors - Chal_2222: {}
-      CSD U6 - Sensors - Prac_2222: {}
       CSD U6 LED create intro:
         content1: тайлбар энд байна
       CSD U6 LED create intro_2018:
@@ -2116,10 +1968,6 @@ mn-MN:
         - correct: true
         questions:
         - {}
-      CSD U6 circuit smart bike blinker build: {}
-      CSD U6 circuit smart bike blinker build_2018: {}
-      CSD U6 circuit smart bike blinker build_2018_2019: {}
-      CSD U6 circuit smart bike blinker build_2021: {}
       CSD U6 final intro:
         content1: тайлбар энд байна
       CSD U6 final intro_2018:
@@ -2128,10 +1976,6 @@ mn-MN:
         content1: тайлбар энд байна
       CSD U6 final intro_2021:
         content1: тайлбар энд байна
-      CSD U6 game project stop: {}
-      CSD U6 game project stop_2018: {}
-      CSD U6 game project stop_2018_2019: {}
-      CSD U6 game project stop_2021: {}
       CSD U6 setProperty predict multi:
         answers:
         - {}
@@ -2298,96 +2142,14 @@ mn-MN:
         - {}
         questions:
         - {}
-      CSD U6 tugowar stop: {}
-      CSD U6 tugowar stop_2018: {}
-      CSD U6 tugowar stop_2018_2019: {}
-      CSD U6 tugowar stop_2021: {}
-      CSD User Centered Design Post-Project Test: {}
-      CSD User Centered Design Post-Project Test_2021: {}
-      CSD User Centered Design Post-Project Test_2022: {}
-      CSD Web Development Post-Project Test: {}
-      CSD Web Development Post-Project Test_pilot_2021: {}
-      CSD Web Development Post-Project Test_pilot_2022: {}
-      CSD Web Headings challenge_2021: {}
-      CSD Web Headings challenge_2022: {}
-      CSD Web Headings practice_2021: {}
-      CSD Web Headings practice_2022: {}
-      CSD Web Sample Pages_2021: {}
-      CSD Web Sample Pages_2022: {}
-      CSD games cake challenge choice_2021: {}
-      CSD games cake challenge choice_2022: {}
-      CSD games collisions challenge choice_2021: {}
-      CSD games collisions challenge choice_2022: {}
-      CSD games collisions practice choice_2021: {}
-      CSD games collisions practice choice_2022: {}
-      CSD games functions challenge choice_2021: {}
-      CSD games functions challenge choice_2022: {}
       CSD games functions practice choice_2021:
         display_name: Функцүүдийн дадлага
       CSD games functions practice choice_2022:
         display_name: Функцүүдийн дадлага
-      CSD games istouching challenge choice_2021: {}
-      CSD games istouching challenge choice_2022: {}
-      CSD games istouching practice choice_2021: {}
-      CSD games istouching practice choice_2022: {}
-      CSD games movement2 challenge choice_2021: {}
-      CSD games movement2 challenge choice_2022: {}
-      CSD games movement2 practice choice_2021: {}
-      CSD games movement2 practice choice_2022: {}
-      CSD games platform challenge choice_2021: {}
-      CSD games platform challenge choice_2022: {}
-      CSD games random challenge_2021: {}
-      CSD games random challenge_2022: {}
-      CSD games random practice_2021: {}
-      CSD games random practice_2022: {}
-      CSD games velocity challenge choice_2021: {}
-      CSD games velocity challenge choice_2022: {}
-      CSD games velocity practice choice_2021: {}
-      CSD games velocity practice choice_2022: {}
-      CSD web classes challenge_2021: {}
-      CSD web classes challenge_2022: {}
-      CSD web classes practice_2021: {}
-      CSD web classes practice_2022: {}
-      CSD web conditionals challenge choice_2021: {}
-      CSD web conditionals challenge choice_2022: {}
       CSD web conditionals practice choice_2021:
         display_name: Нөхцлүүдийн дадлага
       CSD web conditionals practice choice_2022:
         display_name: Нөхцлүүдийн дадлага
-      CSD web draw loop challenge choice_2021: {}
-      CSD web draw loop challenge choice_2022: {}
-      CSD web draw loop practice choice_2021: {}
-      CSD web draw loop practice choice_2022: {}
-      CSD web keyboard challenge choice_2021: {}
-      CSD web keyboard challenge choice_2022: {}
-      CSD web keyboard practice choice_2021: {}
-      CSD web keyboard practice choice_2022: {}
-      CSD web mouse challenge choice_2021: {}
-      CSD web mouse challenge choice_2022: {}
-      CSD web mouse practice choice_2021: {}
-      CSD web mouse practice choice_2022: {}
-      CSD web movement challenge choice_2021: {}
-      CSD web movement challenge choice_2022: {}
-      CSD web movement practice choice_2021: {}
-      CSD web movement practice choice_2022: {}
-      CSD web text challenge choice_2021: {}
-      CSD web text challenge choice_2022: {}
-      CSD web text practice choice_2021: {}
-      CSD web text practice choice_2022: {}
-      CSD-U5-SFLP ASCII and Binary Representation: {}
-      CSD-U5-SFLP Automating Data Decisions: {}
-      CSD-U5-SFLP Combining Representations: {}
-      CSD-U5-SFLP Create a Representation: {}
-      CSD-U5-SFLP Interpreting Data: {}
-      CSD-U5-SFLP Making Decisions with Data: {}
-      CSD-U5-SFLP Patterns and Representation: {}
-      CSD-U5-SFLP Problem Solving and Data: {}
-      CSD-U5-SFLP Problem Solving with Big Data: {}
-      CSD-U5-SFLP Representation Matters: {}
-      CSD-U5-SFLP Representing Images: {}
-      CSD-U5-SFLP Representing Numbers Part 1: {}
-      CSD-U5-SFLP Representing Numbers Part 2: {}
-      CSD-U5-SFLP Solve a Data Problem: {}
       'CSD: getText vs getNumber':
         markdown: |
           # getText vs getNumber
@@ -2432,10 +2194,6 @@ mn-MN:
           юм. Ер нь та өнгийг зургаан өнцөгтийн утга, эсвэл \"RGb (255,0,0)\" * гэх
           мэт гурван аравтын RGB утгатай гэж мэдэгддэг.\n\n<img src = \"https://images.code.org/43291bf1c067145771bf88a147d74d26-image-1480538343306.png\"
           style = \"display: block; margin: auto\">\n"
-      CSDU6 Innovation: {}
-      CSDU6 Innovation_2018: {}
-      CSDU6 Innovation_2018_2019: {}
-      CSDU6 Innovation_2021: {}
       CSP PD Example Question 1:
         answers:
         - {}
@@ -2448,7 +2206,6 @@ mn-MN:
         - {}
         questions:
         - {}
-      CSP pre-assessment survey: {}
       Choose 2 Test:
         answers:
         - correct: true
@@ -2525,9 +2282,6 @@ mn-MN:
           # Карт бүхий нөхцлүүд
 
           Хөзрийн тоглоом тоглож, "Би улаан карт сугалбал, би оноо авна" ба "Би хар карт сугалбал, та оноо авна" гэсэн дүрэм зохиогоорой
-      CourseE_Artist_Practice_2022: {}
-      CourseE_Lesson_11_Artist_Practice_2022: {}
-      CourseE_Lesson_7_Artist_Practice_2022: {}
       CourseF_outbreak_story:
         content1: тайлбар энд байна
       CourseF_outbreak_story2:
@@ -2703,10 +2457,6 @@ mn-MN:
           <img src = "https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"> </a>
 
           </div>
-      Design a Screen for your App_2018: {}
-      Design a Screen for your App_2018_2019: {}
-      Design a Screen for your App_2021: {}
-      Design a Screen for your App_2022: {}
       DesigningForAccessibilityMarkdownLevel2022:
         markdown: "# Хүртээмжтэй байдлыг бий болгох\n* Компьютерын шинжлэх ухааны
           ертөнцөд, **хүртээмжтэй байдлыг бий болгох** нь хөгжлийн бэрхшээлтэй хүмүүст
@@ -2765,8 +2515,6 @@ mn-MN:
       DigitalSharing-Unplugged_2021:
         markdown: "# Дижитал хуваалцах\n\nЭнэхүү хичээлээрэй өмчлөл, зохиогчийн эрхийг
           хүндлэхийн ашиг тус, сорилтыг ялангуяа дижитал орчинд үзэх болно. \n"
-      ECSPD1 computational thinker: {}
-      Embedded Video Test: {}
       EnvelopeVariables-Unplugged:
         markdown: |
           # Дугтуйны хувьсагчид
@@ -2777,13 +2525,9 @@ mn-MN:
           # Дугтуйны хувьсагчид
 
           Хувьсагч нь компьютерын шинжлэх ухаанд маш их эрх чөлөөг бий болгодог. Энэхүү хичээлээр хувьсагчид гэж юу вэ гэдгийг тайлбарлах, тэдгээрийг хэрхэн олон янзаар ашиглаж болох тухай тайлбарлах боломжийг бид олж авна.
-      EnvelopeVariables-Unplugged_2021_2: {}
-      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2: {}
       Eval Contracts F:
         answers:
         - ''
-      Example App Types_2018: {}
-      Example App Types_2018_2019: {}
       ForLoopFun-Unplugged:
         markdown: "# Гогцоогоор хөгжилдөхөд зориулж\n\nГогцоо биднийг зүйлсийг дахин
           дахин хийхэд тусалдгийг бид мэднэ. Гэхдээ, бид дотор нь хийсэн нэмэлт бүтэц
@@ -3422,7 +3166,6 @@ mn-MN:
           Хичээлийн үргэлжлэх хугацаа\n\nЭнэхүү онлайн хичээлийг дүүргэхэд таны өмнөх
           мэдлэг, Code.org-н материалыг та хэр гүнзгий судлахыг хүсэж байгаагаас хамааран
           3-7 цаг зарцуулна.\n"
-      OPD-K5 About_copy: {}
       OPD-K5 About_dani:
         markdown: "## Хичээлийн тойм\n\nЭнэхүү хичээл нь Code.org-н Компьютерын шинжлэх
           ухааны үндсэн хичээлийн хөтөлбөр, багш нарт зориулсан материалыг танилцуулах
@@ -3467,7 +3210,6 @@ mn-MN:
           > <a href="http://support.code.org" target="blank"> <button class = "plc"> Тусламж авах >> </button> </a>
 
           Форумд сэтгэгдэл үлдээсний дараа энд буцаж очоод дараагийн шат руу шилжихийн тулд доор дарна уу.
-      OPD-K5 Assessment_copy: {}
       OPD-K5 Assessment_dani:
         markdown: |
           # Төлөвлөлт> Бусад эх үүсвэрүүд
@@ -3509,8 +3251,6 @@ mn-MN:
           Таны хичээлд компьютерийн шинжлэх ухааны ойлголтуудыг оруулах нэг л хичээл шаардагдана. Оюутнуудынхаа CS-ийг сонирхож байгааг харахад сурагчдынхаа талаар чиглүүлэх өдөр тутмын хичээлийн төлөвлөгөө, компьютергүйгээр хийж болох ажлууд, бусад багш нартай холбогдох форумд хамрагдана.
 
 
-      OPD-K5 CS Courses_copy: {}
-      OPD-K5 CS Courses_dani: {}
       OPD-K5 CS Tips:
         markdown: |
           # Эхлэх> Онлайн сургалтыг чиглүүлэх
@@ -3574,7 +3314,6 @@ mn-MN:
 
 
           > Энэ нь зөвхөн түүнд байгаа юм! Хэрэв энэ платформ хэрхэн ажилладаг талаар танд мэргэжилтэн хэрэгтэй бол хэзээ ч энэ түвшинд буцаж ирээрэй.
-      OPD-K5 CS Tips_copy: {}
       OPD-K5 CS Tips_dani:
         markdown: |
           # Эхлэх> Онлайн сургалтыг чиглүүлэх
@@ -3719,7 +3458,6 @@ mn-MN:
           <br/>
 
           > ** Компьютерийн шинжлэх ухааны багш нарын нийгэмлэгт (CSTA) элсэх: ** [CSTA] (http://csta.acm.org/index.html) нь компьютерийн шинжлэх ухааныг хөгжүүлэх зорилготой үндэстний даяар боловсролын байгууллагуудын оролцоотой нийгэм юм. энэ сэдвийг олон нийтэд түгээн дэлгэрүүлэхийн зэрэгцээ оюутнуудад боловсрол олгох. Тэд жил бүр бага хурал зохион байгуулдаг бөгөөд орон нутгийн хурлыг хуралдуулдаг бүлгүүдтэй.
-      OPD-K5 Connect_copy: {}
       OPD-K5 Connect_dani:
         markdown: |
           # Дараагийн алхамууд> Холбоорой
@@ -3842,7 +3580,6 @@ mn-MN:
           үе шатанд их, эсвэл бага цаг зарцуулахыг хүсэж магадгүй гэдгийг анхаараарай.
           Энэхүү хичээл нь бүхэлдээ хувь хүний хурдаас шалтгаалсан тул, та хичээлээ
           үлдээгээд, ямар ч үе шат руу эргэн ирж, эсвэл буцаж болно гэдгийг анхаараарай.\n"
-      OPD-K5 Outline_copy: {}
       OPD-K5 Outline_dani:
         markdown: "# Эхлүүлэх > Хичээлийн тойм\n\nХичээл нь 11 үе шатанд хуваагдах
           ба үе шат бүр \"үе\" эсвэл \"\"таавар\"-с бүрдэнэ. Та бүх хичээлийг дүүргэвэл
@@ -3914,7 +3651,6 @@ mn-MN:
           <iframe width = "640" height = "390" src = "https://www.youtube.com/embed/sxToW3ixrwo" frameborder = "0" зөвшөөрөлтэй дэлгэц> </iframe>
           [Видеог харж чадахгүй байна уу? Энд дарна уу] (https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
           <br/>
-      OPD-K5 Pair_copy: {}
       OPD-K5 Pair_dani:
         markdown: |
           # Шилдэг туршлага> Хос нэвтрүүлэг
@@ -3977,7 +3713,6 @@ mn-MN:
           ## Та ямар төлөвлөгөөтэй вэ?
 
           Туршлагаасаа илүү ашиг тустай болох үүднээс энэ онлайн сургалтыг хэзээ, хэзээ хийх талаар бодож үзээрэй. Сайхан төлөвлөгөө боловсруулсны дараа 1-р шат руу гүн гүнзгий шумбахаа үргэлжлүүлээрэй.
-      OPD-K5 Participation_copy: {}
       OPD-K5 Participation_dani:
         markdown: |
           # Эхлэх> Оролцоог төлөвлөх
@@ -4177,7 +3912,6 @@ mn-MN:
             - Сурч мэдсэн зүйлээ эргэцүүлэн бод
             - Та үргэлжлүүлэн суралцахаар төлөвлөж буй дараагийн алхмуудаа төлөвлө
             - Компьютерийн шинжлэх ухааны боловсролыг сонирхож буй дэлхийн багш сурган хүмүүжүүлэгчдийн нийгэмлэгтэй холбоо тогтоох
-      OPD-K5 Stage10Start_copy: {}
       OPD-K5 Stage10Start_dani:
         markdown: |
           # Дараагийн алхамууд> Ингээд тоймлон үзье
@@ -4245,7 +3979,6 @@ mn-MN:
           > **Заах зөвлөмж:** Компьютерийн шинжлэх ухаан нь баялаг, нарийн төвөгтэй сахилга баттай байж болох ч Code.org дээр багш, оюутнууд илүү өндөр түвшний төслүүдэд суухаасаа өмнө үндсийг эзэмших шаардлагатай болдог гэдгийг бид хүлээн зөвшөөрдөг. Энэ онлайн сургалт нь танд, багш нарт эдгээр үндсэн зүйлийг заадаг бөгөөд ингэснээр та оюутнуудаа бас дэмжихэд нь туслах болно.
 
           Дараагийн шатанд, бид энэ хичээлийн үлдсэн агуулгын талаар бодох зарим хүрээний талаар товч танилцуулах болно. Дараа нь бид шууд шумбаж, компьютерийн шинжлэх ухааныг сурч эхэлнэ.
-      OPD-K5 Stage2Go_copy: {}
       OPD-K5 Stage2Go_dani:
         markdown: |
           # КШУ-ны үндэслэлүүд> Урагшаа харах
@@ -4345,7 +4078,6 @@ mn-MN:
           > ** Энэ үе шатанд юу хүлээж байна: ** Дараагийн шатуудад бид танай ангийн оюутнуудад санаагаа хэрхэн яаж нэвтрүүлэхээ загварчлах үүднээс нэг ойлголттой танилцуулах хичээлийн төлөвлөгөөг эхлүүлнэ. Дараа нь, бид танд видео зааварчилгаа өгч, тааврыг цувралаар танилцуулж, сурч мэдсэн зүйлээ хэрэгжүүлэхийг хүсч байна. Тааварыг дуусгахын тулд та Blockly кодын блок ашиглан кодыг бичих хэрэгтэй болно. Эдгээр хичээлүүд нь цэцэрлэгийн сурагчдад зориулагдсан А курсээс авсан болно. Суралцагчдад энэ ойлголтыг хэрхэн заах талаар бодож үзэх боломжийг хаах болно. Энэ шатанд та 10-30 минутын хооронд зарцуулах хэрэгтэй.
 
           Бэлэн үү? Явцгаая!
-      OPD-K5 Stage3Start_copy: {}
       OPD-K5 Stage3Start_dani:
         markdown: |
           # Дараалал> Үе шатын тойм
@@ -4523,7 +4255,6 @@ mn-MN:
 
           > <a href="http://forum.code.org/t/teaching-loops-and-efficiency/405/1" target="blank">Форумд хэлэлцүүлэг хийх >> </button></a>
           Форумд сэтгэгдэл үлдээсний дараа энд буцаж очоод дараагийн шат руу шилжихийн тулд доор дарна уу.
-      OPD-K5 Stage4Go_copy: {}
       OPD-K5 Stage4Go_dani:
         markdown: |
           # Гогцоо> Залгаагүй хичээлүүд
@@ -4600,7 +4331,6 @@ mn-MN:
           > ** Энэ үе шатанд юу хүлээх ёстой вэ? ** Доорхи шатуудад гогцоонуудын тухай ойлголтод төвлөрсөн хичээл, С хичээлийн (2-р ангийн зориулалттай) цуврал тааврыг танилцуулж байна. Тааварыг дуусгахын тулд та визуал, блок дээр суурилсан програм ашиглан код бичих хэрэгтэй болно. Бид эргэн тусгах боломжийг хаах болно. Энэ шатанд та 20-45 минутын хооронд зарцуулах хэрэгтэй.
 
           Бэлэн үү? Эхэлцгээе!
-      OPD-K5 Stage4Start_copy: {}
       OPD-K5 Stage4Start_dani:
         markdown: |
           # Гогцоо> 5-р шат
@@ -4652,8 +4382,6 @@ mn-MN:
           > <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank"> <button class = "plc"> Форумд хэлэлцэх >> </button> </a> байна
 
           Форумд сэтгэгдэл үлдээсний дараа энд буцаж очоод дараагийн шат руу шилжихийн тулд доор дарна уу.
-      OPD-K5 Stage5Go_copy: {}
-      OPD-K5 Stage5Go_dani: {}
       OPD-K5 Stage5Review:
         markdown: |
           # Нөхцлүүд> Тусгах
@@ -4688,7 +4416,6 @@ mn-MN:
           >** Энэ үе шатанд юу хүлээх вэ? ** Бид эхлээд нөхцөлт ойлголтыг танилцуулдаг D курс (3-р ангийн сурагчдад зориулагдсан) хичээлээс салгагдсан хичээлийг танилцуулна. Дараа нь та нөхцлийг ашиглан сургалтаа хэрэгжүүлэхийг танаас хүсэх болно. Бид эргэн тусгах боломжийг хаах болно. Энэ шатанд та 20-45 минутын хооронд зарцуулах хэрэгтэй.
 
           Бэлэн үү? Эхэлцгээе!
-      OPD-K5 Stage5Start_copy: {}
       OPD-K5 Stage5Start_dani:
         markdown: |
           # Нөхцлүүд> Үе шатны тойм
@@ -4741,7 +4468,6 @@ mn-MN:
           > <a href="http://forum.code.org/t/teaching-functions/407/1" target="blank"> <button class = "plc"> Форумд хэлэлцэх >> </button> </a> байна
 
           Форумд сэтгэгдэл үлдээсний дараа энд буцаж очоод дараагийн шат руу шилжихийн тулд доор дарна уу.
-      OPD-K5 Stage6Go_copy: {}
       OPD-K5 Stage6Go_dani:
         markdown: |
           # Функц> Залгаагүй хичээлүүд
@@ -4813,7 +4539,6 @@ mn-MN:
 
           Бэлэн үү? Эхэлцгээе!
 
-      OPD-K5 Stage6Start_copy: {}
       OPD-K5 Stage6Start_dani:
         markdown: |+
           # Функцүүд> Үе шатны тойм
@@ -4870,7 +4595,6 @@ mn-MN:
           > <a href="http://forum.code.org/t/teaching-events/409/1" target="blank"> <button class = "plc"> Форумд хэлэлцэх >> </button> </a> байна
 
           Форумд сэтгэгдэл үлдээсний дараа энд буцаж очоод доорх товчин дээр дарна уу.
-      OPD-K5 Stage7Go_copy: {}
       OPD-K5 Stage7Go_dani:
         markdown: |
           # Үйл явдал> Залгаагүй хичээлүүд
@@ -4928,7 +4652,6 @@ mn-MN:
           > ** Энэ үе шатанд юу хүлээх вэ: ** Та С хичээлээс (2-р ангийн сургалтанд зориулагдсан) салгагдсан хичээлээс эхлэх болно. Дараа нь та Course F (5-р ангийн сурагчдад зориулагдсан) -ээс авахуулаад та бүхэнд үйл явдлын блокуудыг туршиж үзэх боломжийг олгох болно. Бид эргэн тусгах боломжийг хаах болно. Энэ шатанд та 20-45 минутын хооронд зарцуулах хэрэгтэй.
 
           Бэлэн үү? Эхэлцгээе!
-      OPD-K5 Stage7Start_copy: {}
       OPD-K5 Stage7Start_dani:
         markdown: |
           # Үйл явдал> Үе шатын тойм
@@ -5106,8 +4829,6 @@ mn-MN:
           Багшийн хяналтын самбарын дэлгэцийн агшин доор байна. Үүнийг үзэхийн тулд та Code.org багшийн дансандаа нэвтрэх хэрэгтэй. Хэрэв та нэвтэрч орсноор Code.org вэбсайт дээр харагдаж буй дэлгэцийг анх оруулсан байх ёстой. Хэрэв танд багшийн данс байхгүй бол та ** [энд бүртгүүлэх] (https://studio.code.org/users/sign_up) ** руу орно уу.
 
           ! [] (https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)
-      OPD-K5 Stage9Start_copy: {}
-      OPD-K5 Stage9Start_dani: {}
       OPD-K5 Using CS:
         markdown: |+
           # Төлөвлөлт> Code Studio хичээлд бэлдэх
@@ -5129,7 +4850,6 @@ mn-MN:
 
 
 
-      OPD-K5 Using CS_dani: {}
       OPD-K5 Vocabulary:
         markdown: |
           # КШУ-ны үндэс суурь> Товч толь бичиг
@@ -5168,7 +4888,6 @@ mn-MN:
            - **[Компьютерын шинжлэх ухаан (КШУ) Шуурхайгийн өмнөх үндсэн хичээл](http://studio.code.org/s/pre-express)**: ойролцоогоор 20 цаг (4-8 насныханд)
 
 
-      OPD-K5 Welcome 2_copy: {}
       OPD-K5 Welcome 2_dani:
         markdown: |+
           # Эхлүүлэх > Компьютерын шинжлэх ухааны үндсэн хичээл
@@ -5226,7 +4945,6 @@ mn-MN:
           ** 9-р шат ** дээр та Code.org-ийн багш нарын үнэгүй сургалтын хөтөлбөр, нөөцийг судлах болно. Та эдгээр нөөцүүдийн аль нэгийг эсвэл өөрийн сонгосон сургалтын бусад нөөцийг ашиглах боломжтой. Энэхүү сургалтанд хамрагдсанаар компьютерын шинжлэх ухааны аливаа сургалтын хөтөлбөрийг ойлгох шаардлагатай болно.
 
           ** 10, 11-р үе шатууд дээр бид эдгээр ойлголтыг танай ангиудад заахад илүү их суралцах эсвэл илүү бэлэн байлгахад ашиглах нөөцийн чиглэл рүү зааж өгнө.
-      OPD-K5 What is Mastery_copy: {}
       OPD-K5 What is Mastery_dani:
         markdown: |
           # Урагшаа харах> Ур чадвар гэж юу вэ?
@@ -5281,7 +4999,6 @@ mn-MN:
           </a>: //code.org/promote "target =" blank "> <button class =" default "> Судалгаа хийх >> </button> </a>
 
           Бидний судалгааг судалж хэдэн цагийг өнгөрөөж, аливаа сонирхолтой эсвэл сонирхолтой баримт, олж мэдсэн зүйлсийнхээ талаар тэмдэглээрэй.
-      OPD-K5 Why teach CS_copy: {}
       OPD-K5 Why teach CS_dani:
         markdown: |
           # CS үндэс суурь> Компьютерийн шинжлэх ухааныг яагаад заах ёстой вэ?
@@ -5347,7 +5064,6 @@ mn-MN:
           <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"> <button class = "plc"> Төлөвлөгөө оруул </a> товчлуур> </a> дээр дарна уу
 
           Форумд сэтгэгдэл үлдээсний дараа энд буцаж очоод доорх товчин дээр дарна уу.
-      OPD-K5 Your Plan_copy: {}
       OPD-K5 Your Plan_dani:
         markdown: |
           # Төлөвлөлт> Таны төлөвлөгөө
@@ -5590,9 +5306,6 @@ mn-MN:
 
           <img src = "https://images.code.org/fc7e830fa2ea994b885c76618b484dfa-image-1476889137756.gif">
           </div>
-      PDK5 Foundations F: {}
-      PDK5 Intro C: {}
-      PS U3 Assessment1 new: {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -5676,9 +5389,6 @@ mn-MN:
           # Үгийн хүч
 
           Онлайнд өөдгүй зан гаргасан хүмүүс байвал юу хийх ёстойг та өнөөдөр сурна.
-      PowerOfWords-Unplugged2022_2022_pilot_-2022-2: {}
-      PowerOfWords-Unplugged_2020: {}
-      PowerOfWords-Unplugged_2021: {}
       PowerfulPasswords-Unplugged:
         markdown: |
           # Хүчирхэг нууц үг
@@ -5688,7 +5398,6 @@ mn-MN:
           ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
       Prepare for your presentation:
         content1: тайлбар энд байна
-      Prepare for your presentation_2018: {}
       PrivatePersonalInformation-Unplugged:
         markdown: |
           # Хувийн ба нууц мэдээлэл
@@ -5696,9 +5405,6 @@ mn-MN:
           Ерөнхий мэдлэгийн боловсролын хөгжүүлсэн энэхүү хичээл нь онлайнд хуваалцахад аюулгүй мэдээлэл ба тийм биш мэдээллийн хоорондох ялгааны тухай заана
 
           ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
-      PrivatePersonalInformation-Unplugged2022: {}
-      PrivatePersonalInformation-Unplugged_2020: {}
-      PrivatePersonalInformation-Unplugged_2021: {}
       RelayProgramming-Unplugged:
         markdown: |
           # Буухиа програмчлал
@@ -5776,7 +5482,6 @@ mn-MN:
 
           ### Та дараагийнхийг туршиж үзэх болно!
 
-      Sample CSP Assessment: {}
       ScreenOutTheMean-Unplugged:
         markdown: |
           # Өөдгүй хүмүүсийг ялгаарай
@@ -5792,8 +5497,6 @@ mn-MN:
           # Симон хэлж байна
 
           Тоглоом тоглоод, зөв үр дүнд хүрэхийн тулд ямар команд хэрэгтэй талаар бодоорой.
-      SimonSays-Unplugged_2021: {}
-      Social Sleuth_2018_2019: {}
       Songwriting-Unplugged:
         markdown: |
           # Дуу бичих
@@ -5814,12 +5517,6 @@ mn-MN:
           # Дуу бичих
 
           Функцийг тодорхойлох, дуудах талаар сурахын тулд дуун доторх хоорын ойлголтыг ашиглана.
-      Student End of Unit Survey - Intro+TeacherMD_csd2-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd3-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd4-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd5-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd6-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd7-2022: {}
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -5840,12 +5537,6 @@ mn-MN:
         - correct: true
         questions:
         - {}
-      Student End of Unit Survey_csd2-2022: {}
-      Student End of Unit Survey_csd3-2022: {}
-      Student End of Unit Survey_csd4-2022: {}
-      Student End of Unit Survey_csd5-2022: {}
-      Student End of Unit Survey_csd6-2022: {}
-      Student End of Unit Survey_csd7-2022: {}
       Submittable Multi:
         answers:
         - text: цэнхэр
@@ -5952,10 +5643,6 @@ mn-MN:
           ашиглаж болжээ. \n* Ухаалаг утасны програмууд найзуудтайгаа яриах, хөгжим
           сонсох, дэлгүүр хэсэх, вэб шалгахад хүмүүст тусалдаг.\n* Бусдын хэрэгцээг
           ойлгож, үүнийг мэдсэнээр программ зохиох нь программч хүнд чухал!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
-      Unit 1 Lesson 1 Overview: {}
-      Unit 1 Lesson 2 Overview: {}
-      Unit 1 Lesson 3 Overview: {}
-      Unit 1 Lesson 4 Overview: {}
       Unit 1 Lesson 6 Overview:
         markdown: "# Асуудлыг шийдвэрлэх - Компьютер ба логик: 6-р хичээл - Бит ашиглан
           боловсруулах\n\n## Ерөнхий мэдээлэл\n\nЭнэ хичээлээр та энгийн дүрсийн бит
@@ -5964,11 +5651,6 @@ mn-MN:
           \n\n(https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing)
           - Үйл ажиллагааны заавар ([PDF](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf)
           | [DOCX](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))\n"
-      Unit 2 Lesson 10 Overview: {}
-      Unit 2 Lesson 16 Overview: {}
-      Unit 2 Lesson 7 Overview: {}
-      Unit 2 Lesson 8 Overview: {}
-      Video - The Future of Big Data: {}
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -6079,8 +5761,6 @@ mn-MN:
         - correct: true
         questions:
         - {}
-      aiml-ch1-pulse-survey_2021: {}
-      aiml-ch1-pulse-survey_2022: {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -6175,9 +5855,6 @@ mn-MN:
         - correct: true
         questions:
         - {}
-      aiml-intro-pulse-survey_2021: {}
-      aiml-intro-pulse-survey_2022: {}
-      aiml-pulse-check-survey-1-levelgroup Ch2_2021: {}
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
@@ -6233,8 +5910,6 @@ mn-MN:
         - correct: true
         questions:
         - {}
-      aiml-pulse-check-survey-preamble_2021: {}
-      allthethings_bubble_choice: {}
       allthethings_external_displayed_as_unplugged:
         content1: тайлбар энд байна
       allthethings_external_not_displayed_as_unplugged:
@@ -6391,10 +6066,6 @@ mn-MN:
           text: үгүй
         questions:
         - {}
-      courseAB_EOC2022: {}
-      courseAB_EOC_2021: {}
-      courseB_EOC2022: {}
-      courseB_EOC_2021: {}
       courseC_multi_artist_prog6_predict1:
         answers:
         - feedback: Буруу байна. Зураач квадрат зурна.
@@ -6916,11 +6587,6 @@ mn-MN:
         questions:
         - text: Доорх кодыг анхааралтай ажиглаарай. "Ажиллуулах" дээр дарахад юу болох
             вэ?
-      courseD_EOC2022: {}
-      courseD_EOC_2020: {}
-      courseD_EOC_2021: {}
-      courseD_EOC_examples2022: {}
-      courseD_EOC_examples_2021: {}
       courseD_external_binary1:
         markdown: |+
           <h1>Хоёртын тусламжтайгаар зурах</h1>
@@ -8136,12 +7802,6 @@ mn-MN:
         questions:
         - text: Энэ код нь шинэ блок ашигладаг. "Ажиллуулах" товчийг дарахад юу тохиолдоно
             гэж та бодож байна вэ?
-      courseD_project_exemplars_2020_2021: {}
-      courseE_EOC2022: {}
-      courseE_EOC_2020: {}
-      courseE_EOC_2021: {}
-      courseE_EOC_examples2022: {}
-      courseE_EOC_examples_2021: {}
       courseE_multi_bee_functions_predict1:
         answers:
         - correct: true
@@ -8379,7 +8039,6 @@ mn-MN:
           | [![Дүрс (Зураач)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Дүрс (Зураач)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Функцийн цэцэг (Зураач)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Функцийн цэцэг (Зураач)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
           | Сараалжин гогцоог бүтээлчээр хийе! | Функцэд бүтээлчээр хандъя! |
 
-      courseE_project_exemplars_2019_2020: {}
       courseE_swim_fish_behavior_predict12022:
         answers:
         - text: Юу ч болохгүй.
@@ -8400,18 +8059,6 @@ mn-MN:
         questions:
         - text: Доорх кодыг анхааралтай ажиглаарай. "Ажиллуулах" дээр дарахад юу болох
             вэ?
-      courseExpress_EOC_2020: {}
-      courseExpress_project_exemplars_2019_2020: {}
-      courseF_EOC_2020: {}
-      courseF_EOC_2021: {}
-      courseF_EOC_examples2022_2022_pilot_-2022-2: {}
-      courseF_EOC_examples_2021: {}
-      courseF_EOC_samples2022: {}
-      courseF_EOC_samples_2021: {}
-      courseF_artist_practice: {}
-      courseF_beeFor_practice: {}
-      courseF_beeVar_practice: {}
-      courseF_bee_practice: {}
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -8439,11 +8086,6 @@ mn-MN:
         - text: Би мэдэхгүй.
         questions:
         - {}
-      courseF_collector_samples_2022_pilot_-2022-2: {}
-      courseF_events_freeplay: {}
-      courseF_events_freeplay2022_2022_pilot_-2022-2: {}
-      courseF_events_practice: {}
-      courseF_events_practice2022_2022_pilot_-2022-2: {}
       courseF_events_predict_multi:
         answers:
         - {}
@@ -8468,11 +8110,6 @@ mn-MN:
           дараа нь \"Ажиллуулах\" дээр дарсны дараа өөрчлөхдөө ижил * утгыг олон удаа
           програмд ашигладаг.  </h3>\n<br/><hr/>\n<h3>Цувралын дараагийн хэсэгт програмын
           дотор *хүчтэй* өөрчлөх хувьсагч бүхий код бичих болно.</h3>\n\n"
-      courseF_external_variableConstant_2018: {}
-      courseF_external_variableConstant_2018_2019: {}
-      courseF_external_variableConstant_2018_2019_2020: {}
-      courseF_groups_freeplay_2022_pilot_-2022-2: {}
-      courseF_groups_practice_2022_pilot_-2022-2: {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
@@ -8481,8 +8118,6 @@ mn-MN:
         - {}
         questions:
         - {}
-      courseF_intro_apps: {}
-      courseF_intro_apps2022_2022_pilot_-2022-2: {}
       courseF_labels_predict_multi:
         answers:
         - {}
@@ -8501,28 +8136,6 @@ mn-MN:
         - {}
         questions:
         - {}
-      courseF_markdown_algorithms_end: {}
-      courseF_markdown_algorithms_intro: {}
-      courseF_markdown_conditionals_end: {}
-      courseF_markdown_conditionals_intro: {}
-      courseF_markdown_debugging_end: {}
-      courseF_markdown_debugging_intro: {}
-      courseF_markdown_forloops_end: {}
-      courseF_markdown_forloops_end_2019: {}
-      courseF_markdown_forloops_end_2019_2020: {}
-      courseF_markdown_forloops_intro: {}
-      courseF_markdown_forloops_intro_2019: {}
-      courseF_markdown_forloops_intro_2019_2020: {}
-      courseF_markdown_loops_end: {}
-      courseF_markdown_loops_intro: {}
-      courseF_markdown_nestedloops_end: {}
-      courseF_markdown_nestedloops_intro: {}
-      courseF_markdown_variables_end: {}
-      courseF_markdown_variables_end_2019: {}
-      courseF_markdown_variables_end_2019_2020: {}
-      courseF_markdown_variables_intro: {}
-      courseF_markdown_variables_intro_2019: {}
-      courseF_markdown_variables_intro_2019_2020: {}
       courseF_multi_artist_for10_predict1:
         answers:
         - feedback: Буруу байна. Зураач нь `-д зориулав` гогцооны давталт хооронд
@@ -8938,11 +8551,6 @@ mn-MN:
           | [![Цэцэг (Зураач)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Спираль (Зураач)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
           | Хувьсагчдыг үр бүтээлтэй ашиглая! | Гогцоог үр бүтээлтэй ашиглая! |
 
-      courseF_project_exemplars_2019_2020: {}
-      courseF_sprites_freeplay: {}
-      courseF_sprites_freeplay2022_2022_pilot_-2022-2: {}
-      courseF_sprites_practice: {}
-      courseF_sprites_practice2022_2022_pilot_-2022-2: {}
       courseF_sprites_predict_multi:
         answers:
         - {}
@@ -8959,8 +8567,6 @@ mn-MN:
         - {}
         questions:
         - {}
-      courseF_text_practice: {}
-      courseF_text_practice2022_2022_pilot_-2022-2: {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -8993,10 +8599,6 @@ mn-MN:
         - {}
         questions:
         - {}
-      courseF_variables_projects: {}
-      courseF_variables_projects2022_2022_pilot_-2022-2: {}
-      courseF_variables_samples: {}
-      courseF_variables_samples2022_2022_pilot_-2022-2: {}
       courseF_variables_stop:
         content1: тайлбар энд байна
       courseF_variables_stop2022_2022_pilot_-2022-2:
@@ -9091,12 +8693,6 @@ mn-MN:
           text: Зураач дөрвөн квадратыг нэг нэг дээр нь зурна.
         questions:
         - text: '"Ажиллуулах" товчийг дарахад юу тохиолдох вэ?'
-      csd-post-survey-2017-implementation-student: {}
-      csd-post-survey-2017-implementation-teacher: {}
-      csd-post-survey-2017-implementation-teacher_2019: {}
-      csd-post-survey-2017-levelgroup: {}
-      csd-post-survey-2017-levelgroup-2018-2nd-semester: {}
-      csd-post-survey-2017-levelgroup_2018: {}
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -9431,8 +9027,6 @@ mn-MN:
         - correct: true
         questions:
         - {}
-      csd-post-survey-2018-markdown-with-link-to-survey: {}
-      csd-post-survey-2018-markdown-with-link-to-survey_v2: {}
       csd-post-survey-2018-topic-ai:
         answers:
         - correct: true
@@ -9605,11 +9199,6 @@ mn-MN:
         - correct: true
         questions:
         - {}
-      csd-post-survey-intro-2019: {}
-      csd-post-survey-levelgroup-2018: {}
-      csd-post-survey-levelgroup_2019: {}
-      csd-post-survey-markdown-with-link-to-survey_2021: {}
-      csd-post-survey-markdown-with-link-to-survey_2022: {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -9761,60 +9350,6 @@ mn-MN:
         content1: тайлбар энд байна
       csd-post-survey-unit6-preamble:
         content1: тайлбар энд байна
-      csd-pre-survey-2017-levelgroup: {}
-      csd-pre-survey-2017-levelgroup_2018: {}
-      csd-pre-survey-levelgroup_2019: {}
-      csd-pre-survey-levelgroup_21_22: {}
-      csd-pre-survey-levelgroup_21_22_2022: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2021: {}
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
@@ -12290,24 +11825,12 @@ mn-MN:
         - correct: true
         questions:
         - {}
-      csd-pulse-check-survey-preamble: {}
-      csd-pulse-check-survey-preamble_2018: {}
-      csd-pulse-check-survey-preamble_2018_2019: {}
-      csd-pulse-check-survey-preamble_2019: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2021: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2022: {}
-      csd-pulse-check-survey-preamble_2021: {}
-      csd-pulse-check-survey-preamble_2022: {}
-      csd-pulse-check-survey-preamble_2222: {}
       csf_be_a_super_digital_citizen:
         content1: тайлбар энд байна
       csf_be_a_super_digital_citizen2022:
         content1: тайлбар энд байна
       csf_be_a_super_digital_citizen_2021:
         content1: тайлбар энд байна
-      csf_digital_trails: {}
-      csf_digital_trails2022: {}
-      csf_digital_trails_2021: {}
       csf_password_power-up:
         content1: тайлбар энд байна
       csf_password_power-up2022:
@@ -12320,11 +11843,6 @@ mn-MN:
         content1: тайлбар энд байна
       csf_putting_a_stop_to_online_meanness_2021:
         content1: тайлбар энд байна
-      csf_safety_in_my_online_neighborhood: {}
-      csf_safety_in_my_online_neighborhood2022: {}
-      csf_safety_in_my_online_neighborhood_2021: {}
-      csp-post-survey-2017 preamble 1: {}
-      csp-post-survey-2017 preamble 1_2019: {}
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -12739,7 +12257,6 @@ mn-MN:
         - correct: true
         questions:
         - {}
-      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2018-topics-preamble:
         content1: тайлбар энд байна
       csp-post-survey-2018-unit-feedback-preamble:
@@ -12768,30 +12285,6 @@ mn-MN:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017 preamble 1: {}
-      csp-pre-survey-2017 preamble 1_2018: {}
-      csp-pre-survey-2017 preamble 1_2021: {}
-      csp-pre-survey-2017 preamble 1_2022: {}
-      csp-pre-survey-2017 preamble 2 cs in general: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2021: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2022: {}
-      csp-pre-survey-2017 preamble 3 this class: {}
-      csp-pre-survey-2017 preamble 3 this class_2018: {}
-      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2021: {}
-      csp-pre-survey-2017 preamble 3 this class_2022: {}
-      csp-pre-survey-2017 preamble 4 the future: {}
-      csp-pre-survey-2017 preamble 4 the future_2018: {}
-      csp-pre-survey-2017 preamble 4 the future_2021: {}
-      csp-pre-survey-2017 preamble 4 the future_2022: {}
-      csp-pre-survey-2017 preamble 5 demographics: {}
-      csp-pre-survey-2017 preamble 5 demographics_2018: {}
-      csp-pre-survey-2017 preamble 5 demographics_2021: {}
-      csp-pre-survey-2017 preamble 5 demographics_2022: {}
       csp-pre-survey-2017-q1:
         answers:
         - correct: true
@@ -13543,8 +13036,6 @@ mn-MN:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017-q36-preamble: {}
-      csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pre-survey-2017-q37:
         answers:
         - correct: true
@@ -13860,10 +13351,6 @@ mn-MN:
         - correct: true
         questions:
         - {}
-      express_EOC2022: {}
-      express_EOC_2021: {}
-      express_EOC_examples2022: {}
-      express_EOC_examples_2021: {}
       family_encourage:
         answers:
         - correct: true
@@ -14118,34 +13605,6 @@ mn-MN:
         - correct: true
         questions:
         - {}
-      ml-club app-choice parent: {}
-      ml-club app-choice parent_2022: {}
-      ml-customize apps-practice choice-2021: {}
-      ml-customize apps-practice choice_2022: {}
-      ml-good data-isaac data: {}
-      ml-good data-isaac data_2022: {}
-      ml-good data-kim data: {}
-      ml-good data-kim data_2022: {}
-      ml-good data-kim survey: {}
-      ml-good data-kim survey_2022: {}
-      ml-intro app lab-book recommender 5-2021: {}
-      ml-intro app lab-book recommender 5_2022: {}
-      ml-model card-medical-1-2021: {}
-      ml-model card-medical-1_2022: {}
-      ml-model card-medical-2-2021: {}
-      ml-model card-medical-2_2022: {}
-      ml-model card-medical-3-2021: {}
-      ml-model card-medical-3_2022: {}
-      ml-models in applab-choice parent: {}
-      ml-models in applab-choice parent_2022: {}
-      ml-models-shoe survey: {}
-      ml-models-shoe survey_2022: {}
-      ml-plan survey-copy form: {}
-      ml-plan survey-copy form_2022: {}
-      ml-use model card-pet model card-2021: {}
-      ml-use model card-pet model card_2022: {}
-      ml-use models applab-practice choice-2021: {}
-      ml-use models applab-practice choice_2022: {}
       naturally-better-at-cs:
         answers:
         - correct: true
@@ -14204,9 +13663,6 @@ mn-MN:
         - correct: true
         questions:
         - {}
-      pre-assessment survey heading1: {}
-      pre-assessment survey heading2: {}
-      pre-assessment survey heading3: {}
       pre-assessment survey q1:
         answers:
         - correct: true
@@ -14561,8 +14017,6 @@ mn-MN:
         - correct: true
         questions:
         - {}
-      sample external 1: {}
-      sample external 2: {}
       someone_else_encourage:
         answers:
         - correct: true

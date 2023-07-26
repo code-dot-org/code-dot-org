@@ -93,6 +93,7 @@ sq:
     not_linked: Na vjen keq, por llogaria juaj në Code.org nuk është e lidhur me %{provider}.
       Duhet të identifikoheni duke shtypur fjalëkalimin më poshtë.
     notyet_signedup: Nuk jeni të regjistruar akoma?
+    powerschool: Shkolla e fuqizuar
     sign_in_with: Logohu me %{provider}
     sign_out_of_markdown: '#### Ju keni përdorur %{provider} për t''u kyçur. <a href="%{url}">Klikoni
       këtu për tu ç''kyçur nga %{provider}.'
@@ -179,6 +180,7 @@ sq:
     startover_cancel: Anulo
     startover_ok: 'Fillo nga fillimi '
     startover_title: A jeni i sigurt që doni të filloni nga fillimi?
+  done_with_module: Ky modul mësimor përfundojë
   download_coming_soon: Së shpejti veprime me shkarkim.
   download_pdf: Hap Planin Mësimor
   errors:
@@ -240,6 +242,7 @@ sq:
       Electronic Arts Inc. Të gjitha të drejtat e rezervuara <br /> The World Amazing
       e Gumball is trademark and &copy;  %{current_year} Cartoon Network.
     built_on_code_studio: Mëso në Code Studio
+    built_on_github: E ndërtuar në GitHub nga Microsoft
     code_from_html: Code.org përdor p5.play, e cila është e licencuar sipas <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">  GNU
       LGPL 2.1</a> .
     copyright: E drejta e autorit
@@ -428,7 +431,7 @@ sq:
       learn: Mëso
       legal_privacy: Rregullat e Privatësisë
       legal_tos: Kushtet e shërbimit
-      project_gallery: Projekte
+      project_gallery: Projektet
       report_bug: Raporto një problem
       sections: Seksionet
       sign_in_to_save: Logohu për të ruajtur ecurinë tënde
@@ -473,6 +476,7 @@ sq:
       starwars: Lufta e Yjeve
       stats: Code Studio
       team: Skuadra
+      view_all: Shiko të gjitha projektet...
   next_page: Faqja tjetër
   next_resource: Burimi tjetër
   next_stage: Përfundoi! Vazhdo tek hapi tjetër

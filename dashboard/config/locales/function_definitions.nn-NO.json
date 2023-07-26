@@ -36,8 +36,6 @@
           }
         },
         "2-3 Artist Debugging 10": {
-          "draw R pad": {
-          },
           "draw a button": {
             "name": "teikn ein knapp"
           },
@@ -66,9 +64,7 @@
             "name": "teikn eit hovud"
           },
           "draw body and arms": {
-            "name": "teikn kropp og armar",
-            "parameters": {
-            }
+            "name": "teikn kropp og armar"
           },
           "draw left leg": {
             "name": "teikn venstre bein"
@@ -90,8 +86,6 @@
           "draw right leg": {
             "name": "teikn høgre bein"
           },
-          "draw sitting stick figure": {
-          },
           "jump to neck": {
             "name": "gå til hals"
           }
@@ -105,10 +99,6 @@
           },
           "draw O": {
             "name": "teikn O"
-          }
-        },
-        "2-3 Artist Functions 1": {
-          "draw ear stems": {
           }
         },
         "2-3 Artist Functions 10": {
@@ -137,15 +127,11 @@
         "2-3 Artist Functions 2": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "2-3 Artist Functions 4": {
@@ -156,14 +142,6 @@
         "2-3 Artist Functions 9": {
           "draw a snowflake": {
             "name": "teikn eit snøfnugg"
-          }
-        },
-        "2-3 Artist Loops 2": {
-          "draw 3 hexagons": {
-          },
-          "draw 4 hexagons": {
-          },
-          "draw 5 hexagons": {
           }
         },
         "2-3 Bee Functions 1": {
@@ -270,14 +248,6 @@
             "name": "få 5 nektar"
           }
         },
-        "4-5 Bee Debugging 9": {
-          "make all honey": {
-          }
-        },
-        "Alien Defender": {
-          "game has been won": {
-          }
-        },
         "Artist Autorun Test": {
           "draw a square": {
             "name": "teikn eit kvadrat"
@@ -293,8 +263,6 @@
           }
         },
         "Choose Your Own Adventure": {
-          "starting path": {
-          },
           "story": {
             "name": "historie"
           },
@@ -307,8 +275,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 2": {
@@ -316,8 +282,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 3": {
@@ -325,8 +289,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 4": {
@@ -334,8 +296,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 5": {
@@ -343,8 +303,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 6": {
@@ -352,8 +310,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 7": {
@@ -361,8 +317,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary Free Play 2": {
@@ -370,8 +324,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary Free Play 2a": {
@@ -379,8 +331,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary Free Play 2b": {
@@ -388,8 +338,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary pre1": {
@@ -397,8 +345,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Functions Inspiration": {
@@ -426,37 +372,27 @@
         },
         "Course 4 Bee Params 3": {
           "get 3 nectar": {
-            "name": "få 3 nektar",
-            "parameters": {
-            }
+            "name": "få 3 nektar"
           }
         },
         "Course 4 Bee Params 4": {
           "get 3 nectar": {
-            "name": "få 3 nektar",
-            "parameters": {
-            }
+            "name": "få 3 nektar"
           }
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "få 5 nektar",
-            "parameters": {
-            }
+            "name": "få 5 nektar"
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "få 5 nektar",
-            "parameters": {
-            }
+            "name": "få 5 nektar"
           }
         },
         "Course 4 Bee Params 7": {
           "get many nectar": {
-            "name": "få mange nektar",
-            "parameters": {
-            }
+            "name": "få mange nektar"
           }
         },
         "Course 4 Bee Params 8": {
@@ -595,9 +531,7 @@
             "name": "teikn ein åttekant"
           },
           "draw octagons": {
-            "name": "teikn åttekantar",
-            "parameters": {
-            }
+            "name": "teikn åttekantar"
           },
           "shift down": {
             "name": "skift ned"
@@ -628,12 +562,6 @@
           }
         },
         "Course E: Frozen Project_examples2022": {
-          "LOGIC FLOWER": {
-          },
-          "LOGIC FLOWERS": {
-          },
-          "LOGIC FLOWERS2": {
-          },
           "draw a circle": {
             "description": "Tegn en sirkel med det forklarte radius",
             "name": "teikn ein sirkel",
@@ -681,17 +609,9 @@
             "parameters": {
               "length": "lengde"
             }
-          },
-          "small flower": {
           }
         },
         "Course E: Frozen Project_examples_2021": {
-          "LOGIC FLOWER": {
-          },
-          "LOGIC FLOWERS": {
-          },
-          "LOGIC FLOWERS2": {
-          },
           "draw a circle": {
             "description": "Tegn en sirkel med det forklarte radius",
             "name": "teikn ein sirkel",
@@ -739,8 +659,6 @@
             "parameters": {
               "length": "lengde"
             }
-          },
-          "small flower": {
           }
         },
         "Course E: Play Lab Project": {
@@ -1042,18 +960,6 @@
             }
           }
         },
-        "CourseF_app_computer": {
-          "reset game": {
-          }
-        },
-        "CourseF_app_computer2022": {
-          "reset game": {
-          }
-        },
-        "CourseF_app_computer_-2022-2": {
-          "reset game": {
-          }
-        },
         "Find the Wizard": {
           "check guess": {
             "name": "sjekk gjetning"
@@ -1164,9 +1070,7 @@
         },
         "Guess The Number": {
           "check guess": {
-            "name": "sjekk gjetning",
-            "parameters": {
-            }
+            "name": "sjekk gjetning"
           }
         },
         "InspirationalArtwork": {
@@ -1747,8 +1651,6 @@
           "25 pixel square": {
             "name": "25 piksler stor firkant"
           },
-          "draw eye": {
-          },
           "draw head": {
             "name": "teikn hovud"
           }
@@ -1756,8 +1658,6 @@
         "Robot Doodle_2018": {
           "25 pixel square": {
             "name": "25 piksler stor firkant"
-          },
-          "draw eye": {
           },
           "draw head": {
             "name": "teikn hovud"
@@ -1791,55 +1691,21 @@
         "course3_artist_functions_challenge1": {
           "do something": {
             "name": "gjer noko"
-          },
-          "my design": {
           }
         },
         "course3_artist_functions_challenge2": {
           "do something": {
             "name": "gjer noko"
-          },
-          "my design": {
           }
         },
         "course3_bee_functions_challenge1": {
           "do something": {
             "name": "gjer noko"
-          },
-          "get 3 nectar or honey": {
           }
         },
         "course3_bee_functions_challenge2": {
           "do something": {
             "name": "gjer noko"
-          },
-          "move and collect": {
-          }
-        },
-        "course3_bee_functions_challenge3": {
-          "check nectar or honey": {
-          },
-          "row of nectar": {
-          },
-          "rowOfNectar": {
-          }
-        },
-        "course3_bee_functions_challenge4": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          },
-          "row of nectar": {
-          },
-          "rowOfNectar": {
-          }
-        },
-        "course3_playLab_challenge1": {
-          "keep playing": {
-          },
-          "lose game": {
-          },
-          "win game": {
           }
         },
         "course4_artist_binary_challenge1": {
@@ -1847,8 +1713,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "course4_artist_binary_challenge2": {
@@ -1856,19 +1720,11 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
-          }
-        },
-        "course4_artist_concept_challenge2": {
-          "draw pinwheel": {
           }
         },
         "course4_artist_functions_challenge2": {
           "do something": {
             "name": "gjer noko"
-          },
-          "my design": {
           }
         },
         "course4_artist_fwp_challenge1": {
@@ -1887,10 +1743,6 @@
             "parameters": {
               "color": "farge"
             }
-          }
-        },
-        "course4_bee_for_challenge1": {
-          "move and get nectar with counter": {
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -1943,8 +1795,6 @@
           }
         },
         "courseC_artist_prog3": {
-          "draw fire": {
-          },
           "draw flame": {
             "parameters": {
               "x": "x"
@@ -1959,8 +1809,6 @@
           }
         },
         "courseC_artist_prog3_2018": {
-          "draw fire": {
-          },
           "draw flame": {
             "parameters": {
               "x": "x"
@@ -1968,8 +1816,6 @@
           }
         },
         "courseC_artist_prog3_2019": {
-          "draw fire": {
-          },
           "draw flame": {
             "parameters": {
               "x": "x"
@@ -1977,8 +1823,6 @@
           }
         },
         "courseC_artist_prog3_2020": {
-          "draw fire": {
-          },
           "draw flame": {
             "parameters": {
               "x": "x"
@@ -1986,36 +1830,10 @@
           }
         },
         "courseC_artist_prog3_2021": {
-          "draw fire": {
-          },
           "draw flame": {
             "parameters": {
               "x": "x"
             }
-          }
-        },
-        "courseC_artist_prog4": {
-          "booster": {
-          }
-        },
-        "courseC_artist_prog42022": {
-          "booster": {
-          }
-        },
-        "courseC_artist_prog4_2018": {
-          "booster": {
-          }
-        },
-        "courseC_artist_prog4_2019": {
-          "booster": {
-          }
-        },
-        "courseC_artist_prog4_2020": {
-          "booster": {
-          }
-        },
-        "courseC_artist_prog4_2021": {
-          "booster": {
           }
         },
         "courseC_data wizard": {
@@ -2043,8 +1861,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary1_2018": {
@@ -2052,8 +1868,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary1_2019": {
@@ -2061,8 +1875,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary1_2020": {
@@ -2070,8 +1882,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary2": {
@@ -2079,8 +1889,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary2_2018": {
@@ -2088,8 +1896,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary2_2019": {
@@ -2097,8 +1903,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary2_2020": {
@@ -2106,8 +1910,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary3": {
@@ -2115,8 +1917,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary3_2018": {
@@ -2124,8 +1924,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary3_2019": {
@@ -2133,8 +1931,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary3_2020": {
@@ -2142,8 +1938,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary4": {
@@ -2151,8 +1945,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary4_2018": {
@@ -2160,8 +1952,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary4_2019": {
@@ -2169,8 +1959,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary4_2020": {
@@ -2178,8 +1966,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary5": {
@@ -2187,8 +1973,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary5_2018": {
@@ -2196,8 +1980,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary5_2019": {
@@ -2205,8 +1987,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary5_2020": {
@@ -2214,8 +1994,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary6": {
@@ -2223,8 +2001,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary6_2018": {
@@ -2232,8 +2008,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary6_2019": {
@@ -2241,8 +2015,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary6_2020": {
@@ -2250,8 +2022,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary7": {
@@ -2259,8 +2029,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary7_2018": {
@@ -2268,8 +2036,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary7_2019": {
@@ -2277,8 +2043,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary7_2020": {
@@ -2286,8 +2050,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8": {
@@ -2295,8 +2057,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_2018": {
@@ -2304,8 +2064,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_2019": {
@@ -2313,8 +2071,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_2020": {
@@ -2322,8 +2078,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1": {
@@ -2331,8 +2085,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1_2018": {
@@ -2340,8 +2092,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1_2019": {
@@ -2349,8 +2099,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1_2020": {
@@ -2358,8 +2106,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binaryFP_2018": {
@@ -2367,8 +2113,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binaryFP_2019": {
@@ -2376,8 +2120,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binaryFP_2020": {
@@ -2385,8 +2127,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge1_2018": {
@@ -2394,8 +2134,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge1_2019": {
@@ -2403,8 +2141,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge1_2020": {
@@ -2412,8 +2148,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge2_2018": {
@@ -2421,8 +2155,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge2_2019": {
@@ -2430,8 +2162,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge2_2020": {
@@ -2439,8 +2169,6 @@
             "parameters": {
               "binary": "binær"
             }
-          },
-          "draw bit": {
           }
         },
         "courseE_Dogger_2": {
@@ -2494,18 +2222,6 @@
         "courseE_artist_concept_challenge1_2018": {
           "do something": {
             "name": "gjer noko"
-          }
-        },
-        "courseE_artist_concept_challenge2": {
-          "draw pinwheel": {
-          }
-        },
-        "courseE_artist_concept_challenge2_2018": {
-          "draw pinwheel": {
-          }
-        },
-        "courseE_artist_functions1": {
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions10": {
@@ -2574,68 +2290,44 @@
             "name": "teikn ei linje av sekskantar"
           }
         },
-        "courseE_artist_functions1_copy": {
-          "draw ear stems": {
-          }
-        },
-        "courseE_artist_functions1_dani": {
-          "draw ear stems": {
-          }
-        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions22022": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2018": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2019": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2020": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2021": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_dani": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions32022": {
@@ -2721,34 +2413,16 @@
         "courseE_artist_functions7": {
           "draw a house": {
             "name": "teikn eit hus"
-          },
-          "draw a window": {
-          }
-        },
-        "courseE_artist_functions72022": {
-          "draw a window": {
           }
         },
         "courseE_artist_functions7_2018": {
           "draw a house": {
             "name": "teikn eit hus"
-          },
-          "draw a window": {
-          }
-        },
-        "courseE_artist_functions7_2019": {
-          "draw a window": {
           }
         },
         "courseE_artist_functions7_2020": {
           "draw a house": {
             "name": "teikn eit hus"
-          },
-          "draw a window": {
-          }
-        },
-        "courseE_artist_functions7_2021": {
-          "draw a window": {
           }
         },
         "courseE_artist_functions8": {
@@ -3001,8 +2675,6 @@
           "do something": {
             "name": "gjer noko"
           },
-          "draw line of triangles": {
-          },
           "draw triangle": {
             "name": "teikn trekant"
           }
@@ -3010,8 +2682,6 @@
         "courseE_artist_functions92022": {
           "do something": {
             "name": "gjer noko"
-          },
-          "draw line of triangles": {
           },
           "draw triangle": {
             "name": "teikn trekant"
@@ -3021,8 +2691,6 @@
           "do something": {
             "name": "gjer noko"
           },
-          "draw line of triangles": {
-          },
           "draw triangle": {
             "name": "teikn trekant"
           }
@@ -3030,8 +2698,6 @@
         "courseE_artist_functions9_2019": {
           "do something": {
             "name": "gjer noko"
-          },
-          "draw line of triangles": {
           },
           "draw triangle": {
             "name": "teikn trekant"
@@ -3041,8 +2707,6 @@
           "do something": {
             "name": "gjer noko"
           },
-          "draw line of triangles": {
-          },
           "draw triangle": {
             "name": "teikn trekant"
           }
@@ -3050,8 +2714,6 @@
         "courseE_artist_functions9_2021": {
           "do something": {
             "name": "gjer noko"
-          },
-          "draw line of triangles": {
           },
           "draw triangle": {
             "name": "teikn trekant"
@@ -3145,141 +2807,101 @@
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "gjer noko"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge12022": {
           "do something": {
             "name": "gjer noko"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge1_2018": {
           "do something": {
             "name": "gjer noko"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge1_2019": {
           "do something": {
             "name": "gjer noko"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge1_2020": {
           "do something": {
             "name": "gjer noko"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
             "name": "gjer noko"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge2": {
           "do something": {
             "name": "gjer noko"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge22022": {
           "do something": {
             "name": "gjer noko"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge2_2018": {
           "do something": {
             "name": "gjer noko"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge2_2019": {
           "do something": {
             "name": "gjer noko"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge2_2020": {
           "do something": {
             "name": "gjer noko"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
             "name": "gjer noko"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict12022": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2018": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2019": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2020": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_dani": {
           "draw a square": {
             "name": "teikn eit kvadrat"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict2": {
@@ -3411,15 +3033,11 @@
         "courseE_bee_functions_challenge1": {
           "do something": {
             "name": "gjer noko"
-          },
-          "get 3 nectar or honey": {
           }
         },
         "courseE_bee_functions_challenge2": {
           "do something": {
             "name": "gjer noko"
-          },
-          "move and collect": {
           }
         },
         "courseE_farmer_concept1": {
@@ -3981,14 +3599,6 @@
             "name": "naviger"
           }
         },
-        "courseE_playLab_challenge1": {
-          "keep playing": {
-          },
-          "lose game": {
-          },
-          "win game": {
-          }
-        },
         "courseE_playLab_scaffold1": {
           "do something": {
             "name": "gjer noko"
@@ -4246,36 +3856,6 @@
             }
           }
         },
-        "courseF_bee_conditionals2": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          }
-        },
-        "courseF_bee_for_challenge1": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge12022": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge1_2018": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge1_2019": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge1_2020": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge1_2021": {
-          "move and get nectar with counter": {
-          }
-        },
         "courseF_bee_functions2": {
           "get only nectar": {
             "name": "få berre nektar"
@@ -4284,22 +3864,6 @@
         "courseF_bee_functions3": {
           "only make honey": {
             "name": "berre lag honning"
-          }
-        },
-        "courseF_bee_functions3a": {
-          "check nectar or honey": {
-          }
-        },
-        "courseF_bee_functions4": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          }
-        },
-        "courseF_bee_functions5a": {
-          "check nectar or honey": {
-          },
-          "move and check": {
           }
         },
         "courseF_bee_functions6": {
@@ -4323,30 +3887,6 @@
         "courseF_bee_functionsPre7": {
           "get nectar make honey": {
             "name": "få nektar lag honning"
-          }
-        },
-        "courseF_bee_functions_challenge1": {
-          "check nectar or honey": {
-          },
-          "row of nectar": {
-          },
-          "rowOfNectar": {
-          }
-        },
-        "courseF_bee_functions_challenge2": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          },
-          "rowOfNectar": {
-          }
-        },
-        "courseF_bee_fwp2": {
-          "rowOfNectar": {
-          }
-        },
-        "courseF_bee_fwp3": {
-          "rowOfNectar": {
           }
         },
         "courseF_bee_fwp4": {

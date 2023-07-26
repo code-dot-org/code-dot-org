@@ -391,12 +391,16 @@ uk:
         csd_external_netflix_data: Як Netflix створює рекомендації передач та фільмів?
         csd_external_waze_data: Чому так багато користувачів обманюють Waze?
         csd_gamelab_animation_tab: Анімація
+        csd_gamelab_draw_1: Малювання в Ігровій Лабораторії - Частина 1
+        csd_gamelab_draw_2: Малювання в Ігровій Лабораторії - Частина 2
+        csd_gamelab_variables_1: Вступ до змінних - Частина 1
         csd_gamelab_velocity: Швидкість
         csd_weblab_intro_1: Представляємо Веб лабораторію - частина 1
         csd_weblab_intro_2: Представляємо Веб лабораторію - частина 2
         csd_weblab_css_1: Основи CSS - частина 1
         csd_weblab_css_2: Основи CSS - частина 2
         csd_weblab_intro_3: Представляємо Веб лабораторію - частина 3
+        csp_applab_variables_1: Вступ до змінних - Частина 1
         csp_applab_functions: Представляємо функції
         csp_applab_functions_parameters: Функції з параметрами
         csp_applab_loops: Цикли
@@ -526,7 +530,7 @@ uk:
         csd_applab_parameters: Функції з параметрами
         csd_applab_loops: Цикли в Лабораторії додатків
         csd_problem_solving_process: Процес вирішення проблем
-        CSF_Going_Places_Safely: Моє Інтернет-сусідство
+        CSF_Going_Places_Safely: Мій інтернет-район
         CSF_SpriteLab_Intro_v2: Представляємо Спрайт Лабораторію
         CSF_Spritelab_MakeSprite_v2: Як створити спрайт
         CSF_SpriteLab_SpritesInAction_v2: Спрайти в роботі
@@ -542,7 +546,7 @@ uk:
         hoc_dance_measures_2019: Танцювальна вечірка 2019 — Такти
         hoc_dance_properties_2019: Танцювальна вечірка 2019 — Властивості
         csd_what_computers_do: Що роблять комп’ютери?
-        csf_my_online_neighborhood_2020: Моє Інтернет-сусідство
+        csf_my_online_neighborhood_2020: Мій інтернет-район
         csf_follow_the_digital_trail: Йди за цифровим шляхом
         csf_private_and_personal_information: Приватна та особиста інформація
         csd_what_computers_are: Що таке комп’ютер?
@@ -556,7 +560,8 @@ uk:
         csp_applab_parameters: Функції з параметрами
         CS_Changing_Everything: Інформатика змінює все
         csc_timecapsule_intro: Пишемо код для капсули часу
-        csc-starquilts-intro: Створюємо код для геометричної фігури зірки з окремих елементів
+        csd_sprite_properties: Властивості спрайтів
+        csc-starquilts-intro: Кодуємо геометричний зірковий узор
         csc-ecosystems-intro: Імітація морської екосистеми
     callout:
       text:

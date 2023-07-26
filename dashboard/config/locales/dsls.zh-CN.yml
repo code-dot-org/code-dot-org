@@ -719,15 +719,6 @@ zh-CN:
           <img src="//curriculum.code.org/images/applab/getText.png" style="margin: 20px auto">
 
           在使用取值器时，将结果保存到变量中，通常是个好主意，这样能在程序中随时使用。
-      CSD CSS project RGB_2021: {}
-      CSD CSS project RGB_2022: {}
-      CSD CSS project Review_2021: {}
-      CSD CSS project Review_2022: {}
-      CSD End of Unit Survey - Unit 1 - IntroMD_2022: {}
-      CSD Games Parameters challenge_2021: {}
-      CSD Games Parameters challenge_2022: {}
-      CSD Games Properties challenge_2021: {}
-      CSD Games Properties challenge_2022: {}
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -750,22 +741,10 @@ zh-CN:
         display_name: 精灵图属性
       CSD Games Properties practice_2022:
         display_name: 精灵图属性
-      CSD Games Sprites Challenges_2021: {}
-      CSD Games Sprites Challenges_2022: {}
-      CSD Games Sprites practice_2021: {}
-      CSD Games Sprites practice_2022: {}
-      CSD Games parameters practice_2021: {}
-      CSD Games parameters practice_2022: {}
-      CSD Games variables challenge_2021: {}
-      CSD Games variables challenge_2022: {}
       CSD Games variables practice_2021:
         display_name: 变量练习
       CSD Games variables practice_2022:
         display_name: 变量练习
-      CSD HTML project Lists_2021: {}
-      CSD HTML project Lists_2022: {}
-      CSD HTML project Review_2021: {}
-      CSD HTML project Review_2022: {}
       CSD Header Size MC:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -873,13 +852,6 @@ zh-CN:
           &lt;h6&gt; Waffles &lt;/h6&gt;
           </pre>
         title: 快速检查标题
-      CSD Interactive Animations and Games Post-Project Test: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2021: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2022: {}
-      CSD Physical Computing Post-Project Test: {}
-      CSD Physical Computing Post-Project Test_2021: {}
-      CSD Physical Computing Post-Project Test_2022: {}
-      CSD Student End of Unit Survey - Unit 1_2022: {}
       CSD U1 IOSP match:
         answers:
         - text: 从互联网上获取当天的天气预报
@@ -1071,8 +1043,6 @@ zh-CN:
         title: 计算机和解决问题 项目后测试
       CSD U1 Test_2022:
         title: 计算机和解决问题 项目后测试
-      CSD U2 CSS challenge_pilot_2021: {}
-      CSD U2 CSS challenge_pilot_2022: {}
       CSD U2 CSS practice_pilot_2021:
         display_name: 使用 CSS 设置文本样式
       CSD U2 CSS practice_pilot_2022:
@@ -1206,8 +1176,6 @@ zh-CN:
           <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
 
           <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
-      CSD U2 Expression Exemplars_2018_2019_pilot_2021: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2022: {}
       CSD U2 Image challenge_pilot_2021:
         display_name: 添加图片
       CSD U2 Image challenge_pilot_2022:
@@ -1498,12 +1466,6 @@ zh-CN:
           # 回顾问题解决过程
 
           在课堂上回顾问题解决过程的四个步骤。
-      CSD U2 Sample CSS layout_2021: {}
-      CSD U2 Sample CSS layout_2022: {}
-      CSD U2 Sample CSS text_2021: {}
-      CSD U2 Sample CSS text_2022: {}
-      CSD U2 Sample classes_2021: {}
-      CSD U2 Sample classes_2022: {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -1714,8 +1676,6 @@ zh-CN:
           * Facebook.com - 用户可与好友分享精彩内容的社交媒体
           * Yahoo.com - 一款搜索引擎，同时也是电子邮件提供者及新闻网站
           * Wikipedia.org - 自由而且免费的百科全书，用户可以编辑其中的内容
-      CSD U2 Top Websites_2018_2019_pilot_2021: {}
-      CSD U2 Top Websites_2018_2019_pilot_2022: {}
       CSD U2 expand project:
         content1: 描述
         markdown: |
@@ -1838,12 +1798,6 @@ zh-CN:
         - text: 图像路径中的文件扩展名（.jpg）丢失
         - text: 图像路径的属性不是“src”
         - text: 文件名中包含空格
-      CSD U2 layout style challenge_pilot_2021: {}
-      CSD U2 layout style challenge_pilot_2022: {}
-      CSD U2 layout style practice_pilot_2021: {}
-      CSD U2 layout style practice_pilot_2022: {}
-      CSD U2 links challenge_2021: {}
-      CSD U2 links challenge_2022: {}
       CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -2012,8 +1966,6 @@ zh-CN:
           # 计划检查点
 
           在允许学生继续学习其他关卡之前，检查他们的计划。
-      CSD U3 - Design a Game 1 - ExampleChoice_2022: {}
-      CSD U3 - Interactive Card - ExampleChoice_2022: {}
       CSD U3 - conditionals - Matching:
         answers:
         - text: dog.rotation &lt; cat.rotation
@@ -2104,8 +2056,6 @@ zh-CN:
           # 停一下
 
           在继续之前，要查看该项目的项目指南。还要等待老师的指示。
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022: {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -3127,8 +3077,6 @@ zh-CN:
         - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
             AM.png
         title: drawSprites
-      CSD U3 drawing challenges_2021: {}
-      CSD U3 drawing challenges_2022: {}
       CSD U3 drawing practice choice_2021:
         display_name: 练习
       CSD U3 drawing practice choice_2022:
@@ -3941,7 +3889,6 @@ zh-CN:
           gray; margin:1px;\"></div>\n</div>\n\n## 学生记录用下列规则来保存：\n\n * <h4>前 8 位比特用二进制数字表示学生的年级。</h4>\n
           * <h4>随后 8 位用二进制数字保存学生年龄。</h4>\n * <h4>接下来的 8 位用 ASCII 保存学生名字的首字母。</h4>\n
           * <h4>最后 8 位用 ASCII 保存学生姓氏的首字母。</h4>\n\n<br />\n<br />\n"
-      CSD U5 test: {}
       CSD U5 test clean multi:
         answers:
         - {}
@@ -4083,43 +4030,30 @@ zh-CN:
         - {}
         questions:
         - {}
-      CSD U5 test_2021: {}
-      CSD U5 test_2022: {}
       CSD U6 - Accelerometer - Chal_2222:
         display_name: 挑战关卡
-      CSD U6 - Accelerometer - Prac_2222: {}
       CSD U6 - Board Inputs - Chal_2222:
         display_name: 挑战关卡
-      CSD U6 - Board Inputs - Prac_2222: {}
       CSD U6 - Board Outputs - Chal_2222:
         display_name: 挑战关卡
-      CSD U6 - Board Outputs - Prac_2222: {}
       CSD U6 - Color LEDs - Chal_2222:
         display_name: 挑战关卡
-      CSD U6 - Color LEDs - Prac_2222: {}
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: 挑战关卡
-      CSD U6 - Combine Inputs - Prac_2222: {}
-      CSD U6 - Functions - Prac_2222: {}
       CSD U6 - If Variables - Chal_2222:
         display_name: 挑战关卡
       CSD U6 - Music - Chal_2222:
         display_name: 挑战关卡
       CSD U6 - Physical Input - Chal_2222:
         display_name: 挑战关卡
-      CSD U6 - Physical Input - Prac_2222: {}
       CSD U6 - Physical Output - Chal_2222:
         display_name: 挑战关卡
-      CSD U6 - Physical Output - Prac_2222: {}
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: 挑战关卡
-      CSD U6 - Screen Inputs - Prac_2222: {}
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: 挑战关卡
-      CSD U6 - Screen Outputs - Prac_2222: {}
       CSD U6 - Sensors - Chal_2222:
         display_name: 挑战关卡
-      CSD U6 - Sensors - Prac_2222: {}
       CSD U6 LED create intro:
         content1: 描述
         markdown: |
@@ -4580,84 +4514,30 @@ zh-CN:
           # 停一下
 
           在继续之前，要查看该项目的项目指南。还要等待老师的指示。
-      CSD User Centered Design Post-Project Test: {}
-      CSD User Centered Design Post-Project Test_2021: {}
-      CSD User Centered Design Post-Project Test_2022: {}
-      CSD Web Development Post-Project Test: {}
-      CSD Web Development Post-Project Test_pilot_2021: {}
-      CSD Web Development Post-Project Test_pilot_2022: {}
-      CSD Web Headings challenge_2021: {}
-      CSD Web Headings challenge_2022: {}
-      CSD Web Headings practice_2021: {}
-      CSD Web Headings practice_2022: {}
-      CSD Web Sample Pages_2021: {}
-      CSD Web Sample Pages_2022: {}
       CSD games cake challenge choice_2021:
         display_name: 挑战
       CSD games cake challenge choice_2022:
         display_name: 挑战
-      CSD games collisions challenge choice_2021: {}
-      CSD games collisions challenge choice_2022: {}
-      CSD games collisions practice choice_2021: {}
-      CSD games collisions practice choice_2022: {}
-      CSD games functions challenge choice_2021: {}
-      CSD games functions challenge choice_2022: {}
       CSD games functions practice choice_2021:
         display_name: 函数练习
       CSD games functions practice choice_2022:
         display_name: 函数练习
-      CSD games istouching challenge choice_2021: {}
-      CSD games istouching challenge choice_2022: {}
-      CSD games istouching practice choice_2021: {}
-      CSD games istouching practice choice_2022: {}
-      CSD games movement2 challenge choice_2021: {}
-      CSD games movement2 challenge choice_2022: {}
-      CSD games movement2 practice choice_2021: {}
-      CSD games movement2 practice choice_2022: {}
       CSD games platform challenge choice_2021:
         display_name: 挑战
       CSD games platform challenge choice_2022:
         display_name: 挑战
-      CSD games random challenge_2021: {}
-      CSD games random challenge_2022: {}
-      CSD games random practice_2021: {}
-      CSD games random practice_2022: {}
-      CSD games velocity challenge choice_2021: {}
-      CSD games velocity challenge choice_2022: {}
-      CSD games velocity practice choice_2021: {}
-      CSD games velocity practice choice_2022: {}
-      CSD web classes challenge_2021: {}
-      CSD web classes challenge_2022: {}
-      CSD web classes practice_2021: {}
-      CSD web classes practice_2022: {}
-      CSD web conditionals challenge choice_2021: {}
-      CSD web conditionals challenge choice_2022: {}
       CSD web conditionals practice choice_2021:
         display_name: 条件练习
       CSD web conditionals practice choice_2022:
         display_name: 条件练习
-      CSD web draw loop challenge choice_2021: {}
-      CSD web draw loop challenge choice_2022: {}
       CSD web draw loop practice choice_2021:
         display_name: 练习
       CSD web draw loop practice choice_2022:
         display_name: 练习
-      CSD web keyboard challenge choice_2021: {}
-      CSD web keyboard challenge choice_2022: {}
-      CSD web keyboard practice choice_2021: {}
-      CSD web keyboard practice choice_2022: {}
-      CSD web mouse challenge choice_2021: {}
-      CSD web mouse challenge choice_2022: {}
-      CSD web mouse practice choice_2021: {}
-      CSD web mouse practice choice_2022: {}
-      CSD web movement challenge choice_2021: {}
-      CSD web movement challenge choice_2022: {}
       CSD web movement practice choice_2021:
         display_name: 练习
       CSD web movement practice choice_2022:
         display_name: 练习
-      CSD web text challenge choice_2021: {}
-      CSD web text challenge choice_2022: {}
       CSD web text practice choice_2021:
         display_name: 练习
       CSD web text practice choice_2022:
@@ -5040,7 +4920,6 @@ zh-CN:
         - {}
         questions:
         - {}
-      CSP pre-assessment survey: {}
       Choose 2 Test:
         answers:
         - correct: true
@@ -5546,8 +5425,6 @@ zh-CN:
           # 数字共享
 
           这节课会思考尊重所有权和版权的挑战和好处，特别是在数字环境中。
-      ECSPD1 computational thinker: {}
-      Embedded Video Test: {}
       EnvelopeVariables-Unplugged:
         markdown: |
           # 信封变量
@@ -6201,7 +6078,6 @@ zh-CN:
           ## 访问 support.code.org\n> 如果遇到困难或有疑问，请确保查看了 support.code.org 上的支持文档！也可以直接通过此页面找到我们。[论坛](http://forum.code.org/t/teaching-conditionals/406/1)。\n\n>
           <a href=\"http://support.code.org\" target=\"blank\"><button class=\"plc\">获得帮助
           >></button></a>\n\n在论坛中发表评论后，返回此处，然后单击下面的按钮进入下一阶段。\n"
-      OPD-K5 Assessment_copy: {}
       OPD-K5 Assessment_dani:
         markdown: "# 计划 > 其它资源\n\n作为教师登录 Code.org 后，可以看到更多学生没有的功能。已经了解了如何查找课程，创建部分并将课程分配给该部分。还可以：
           \n\n- **跟踪学生进度**：[评估](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress)
@@ -6221,8 +6097,6 @@ zh-CN:
           中找到这些步骤。\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
           第 3 步：将课程分配给小组\n点击正在教学的课程 -- 应该可看到下面这样的页面。点击 \"分配课程\" 并将课程分配给某个小组。 \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
           第 4 步：开始教学！ \n所需要的只是一堂将计算机科学概念带入课堂的课程。一旦看到学生对计算机科学的热情，就可以进一步制定每日课程计划来指导学生，无需计算机即可进行的线下活动，以及与其他老师建立联系的论坛。\n\n\n"
-      OPD-K5 CS Courses_copy: {}
-      OPD-K5 CS Courses_dani: {}
       OPD-K5 CS Tips:
         markdown: |
           # 入门 > 浏览在线课程
@@ -6432,7 +6306,6 @@ zh-CN:
           \ \n\n<br/>\n\n> **与推特中的 [@teachcode](http://twitter.com/teachcode) 联系。**
           \ \n\n<br/>\n\n> **加入计算机科学教师协会 (CSTA):** [CSTA](http://csta.acm.org/index.html)
           是一个遍布全国的教育工作者团体，致力于为学生提供计算机科学教育，同时提高公众对这一学科的认识。他们会举办年度会议和地区分会。\n"
-      OPD-K5 Connect_copy: {}
       OPD-K5 Connect_dani:
         markdown: "# 下一步 > 建立联系\n\n除了进行进一步的正式培训之外，还可以考虑访问 code.org 社区以继续与他人进行非正式学习，或者只是寻求支持或建立同伴网络。这样做：
           \ \n\n<br/><br/>\n\n> **继续参与 code.org 的教师专业学习社区：** 在本课程中一直使用的论坛将是前进的重要资源。不仅可以使用它来回顾本课程的学习内容，还可以在继续旅途中找到支持，甚至为需要专业知识的其他人提供支持。请立即将其添加为书签并经常访问：[http://forum.code.org/c/csf](http://forum.code.org/c/csf)
@@ -6725,7 +6598,6 @@ zh-CN:
           <br/>
 
 
-      OPD-K5 Pair_copy: {}
       OPD-K5 Pair_dani:
         markdown: |+
           # 最佳实践 > 结对编程
@@ -6874,7 +6746,6 @@ zh-CN:
           - 反思自己的学习
           - 为下一步继续学习做计划
           - 与对计算机科学教育感兴趣的全球教育工作者社区建立联系
-      OPD-K5 Stage10Start_copy: {}
       OPD-K5 Stage10Start_dani:
         markdown: |
           # 下一步 > 开始回顾
@@ -6942,7 +6813,6 @@ zh-CN:
           > **教学技巧：** 尽管计算机科学可以是一门丰富而复杂的学科，但在 Code.org 中，我们认识到教师和学生在进入更高层次的项目之前需要掌握基础知识。该在线课程将教给老师这些基本知识，以便可以为学生提供支持。
 
           在下一阶段，将简要介绍一些框架，用于思考本课程的其余内容。然后，将深入研究并开始学习计算机科学。
-      OPD-K5 Stage2Go_copy: {}
       OPD-K5 Stage2Go_dani:
         markdown: |
           # 计算机科学基础 > 展望
@@ -7020,7 +6890,6 @@ zh-CN:
           > **本阶段的期望：** 在接下来的关卡中，将从线下课程计划开始，来介绍概念，以展示如何班级的学生介绍想法。然后，将提供视频指导，介绍一系列难题，并进行学习。为了完成难题，需要使用代码块编写代码。这些课程来自课程 A，该课程适用于幼儿园学生。最后，将有机会思考如何向学生传授这一概念。此阶段可能需要 10-30 分钟。
 
           准备好了？开始吧！
-      OPD-K5 Stage3Start_copy: {}
       OPD-K5 Stage3Start_dani:
         markdown: |
           # 顺序 > 阶段概述
@@ -7088,7 +6957,6 @@ zh-CN:
           ## 反思\n> 如何向学生介绍循环的概念？<br><br> [在论坛中分享。](http://forum.code.org/t/teaching-loops-and-efficiency/405/1)\n\n>
           <a href=\"http://forum.code.org/t/teaching-loops-and-efficiency/405/1\"
           target=\"blank\"><button class=\"plc\">在论坛中讨论 >></button></a>\n\n在论坛中发表评论后，返回此处，然后单击下面的按钮进入下一阶段。\n\n"
-      OPD-K5 Stage4Go_copy: {}
       OPD-K5 Stage4Go_dani:
         markdown: "# 循环 > 线下课程\n\n在这个阶段中，会看到将循环添加到有重复动作的程序中，会多么有效率。下个阶段，会编码 **如果语句**
           和其它条件语句。  \n<br/>\n\n**1. 观看 2 年级的课程 C \"[开始循环](https://levelbuilder.code.org/curriculum/coursec/7/Teacher)\"
@@ -7137,7 +7005,6 @@ zh-CN:
           > **本阶段的期望：** 在接下来的内容中，会介绍来自课程 C （适用于 2 年级），重点关注于循环概念的一个线下课程和一系列的难题。要完成难题，需要用可视化、基于模块的方法编程。最后会有机会进行反思。此阶段可能需要 20-45 分钟。
 
           准备好了？开始！
-      OPD-K5 Stage4Start_copy: {}
       OPD-K5 Stage4Start_dani:
         markdown: |
           # 循环 > 第 5 阶段概述
@@ -7164,8 +7031,6 @@ zh-CN:
           ## 反思\n> 如何向学生们解释条件语句的概念？[在论坛上分享](http://forum.code.org/t/teaching-conditionals/406/1).\n\n>
           <a href=\"http://forum.code.org/t/teaching-conditionals/406/1\" target=\"blank\"><button
           class=\"plc\">在论坛中讨论 >></button></a>\n\n 在论坛中发表评论后，返回此处，然后单击下面的按钮进入下一阶段。\n"
-      OPD-K5 Stage5Go_copy: {}
-      OPD-K5 Stage5Go_dani: {}
       OPD-K5 Stage5Review:
         markdown: "# 条件语句 > 反思\n\n在这个阶段中，探索了条件语句是如何帮助程序员将逻辑加入代码中。下个阶段，会看到函数是如何让编码到达新的水平。
           \ \n\n**花一些时间，来看看计算机科学基础教案中是如何介绍条件语句的，思考如何将建议的活动带到自己的课堂上。**\n\n![](https://images.code.org/6335e7aa128d84c96ac402005cd9a3bb-image-1549053033052.jpg)\n"
@@ -7188,7 +7053,6 @@ zh-CN:
           >**本阶段的期望：** 首先会介绍来自课程 D（3 年级）的线下课程，来介绍条件语句的思想。然后，会完成一系列难题，来应用学到的条件语句。最后会有机会进行反思。本阶段可能需要 20-45 分钟。
 
           准备好了？开始！
-      OPD-K5 Stage5Start_copy: {}
       OPD-K5 Stage5Start_dani:
         markdown: |
           # 条件语句 > 阶段概述
@@ -7244,7 +7108,6 @@ zh-CN:
           > <a href="http://forum.code.org/t/teaching-functions/407/1" target="blank"><button class="plc">在论坛中讨论 >></button></a>
 
           在论坛中发表评论后，返回此处，然后单击下面的按钮进入下一阶段。
-      OPD-K5 Stage6Go_copy: {}
       OPD-K5 Stage6Go_dani:
         markdown: |
           # 函数 > 线下课程
@@ -7319,7 +7182,6 @@ zh-CN:
 
           准备好了？开始！
 
-      OPD-K5 Stage6Start_copy: {}
       OPD-K5 Stage6Start_dani:
         markdown: |+
           # 函数 > 阶段概述
@@ -7378,7 +7240,6 @@ zh-CN:
           论坛中发表评论后，返回此处，然后单击下面的按钮进入下一阶段。
 
 
-      OPD-K5 Stage7Go_copy: {}
       OPD-K5 Stage7Go_dani:
         markdown: |+
           # 事件 > 线下活动
@@ -7426,7 +7287,6 @@ zh-CN:
           40px;\">\n\n现在，已经学会了顺序程序，添加循环，使用条件语句和函数。快要学完了！   \n\n本阶段中，会看一看 *事件*，这是计算机科学中另一个关键的概念。在探索事件时，将组合已经学会的知识，写出一些更复杂的程序。\n\n完成第
           8 阶段后，可以：\n\n- 练习编写简单的事件\n- 思考在课堂上的应用\n\n>**本阶段的期望：** 从来自课程 C （2 年级）的线下课程开始。然后会探索一些来自课程
           F（5 年级）的难题，来体验事件模块。最后有机会进行反思。本阶段可能需要 20-45 分钟。\n\n准备好了？开始！\n"
-      OPD-K5 Stage7Start_copy: {}
       OPD-K5 Stage7Start_dani:
         markdown: "# 事件 > 阶段概述\n\n<img src=\"https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG\"
           width=\"450px\" style=\"border-radius: 10px; float: right; margin: 0 0 40px
@@ -7558,7 +7418,6 @@ zh-CN:
           Code.org 设置第一个计算机科学班级。 也可在 [支持文档](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)
           中找到所有步骤。\n\n## Step 3: 第 3 步：将课程分配给小组\n点击正在教学的课程 -- 应该可看到下面这样的页面。点击 \"分配课程\"
           并将课程分配给某个小组。\n\n## 第 4 步：开始教学！\n所需要的只是一堂将计算机科学概念带入课堂的课程。一旦看到学生对计算机科学的热情，就可以进一步制定每日课程计划来指导学生，无需计算机即可进行的线下活动，以及与其他老师建立联系的论坛。\n\n\n\n"
-      OPD-K5 Using CS_dani: {}
       OPD-K5 Vocabulary:
         markdown: |
           # 计算机科学基础 > 关键词汇
@@ -7597,7 +7456,6 @@ zh-CN:
            - **[计算机科学 (CS) 基础 预速成](http://studio.code.org/s/pre-express)**: 大约 20 小时 (4-8 岁)
 
 
-      OPD-K5 Welcome 2_copy: {}
       OPD-K5 Welcome 2_dani:
         markdown: |+
           # 开始 > 计算机科学基础课程
@@ -7655,7 +7513,6 @@ zh-CN:
           在 **第 9 阶段**，会浏览 Code.org 的教师免费教案和资源。可以选择使用这些或其它资源。完成课程后，就能理解任何计算机科学教案的基础知识。
 
           在 **第 10 和 11 阶段**，会给出继续学习或准备在课堂上讲授这些概念的资源。
-      OPD-K5 What is Mastery_copy: {}
       OPD-K5 What is Mastery_dani:
         markdown: |
           # 展望 > 什么是精通？
@@ -7784,7 +7641,6 @@ zh-CN:
           <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"><button class="plc">发布自己的计划 >></button></a>
 
           在论坛中发表评论后，返回此处，然后单击下面的按钮继续。
-      OPD-K5 Your Plan_copy: {}
       OPD-K5 Your Plan_dani:
         markdown: |
           # 计划 > 自己的计划
@@ -8000,9 +7856,6 @@ zh-CN:
           来查看任何点的 x、y 坐标。\n\n<div style=\"width: 100%; text-align: center\">\n<img
           src=\"https://images.code.org/8b346602d75f2877c64e1793b6a04302-image-1476889124747.png\">\n\n<img
           src=\"https://images.code.org/fc7e830fa2ea994b885c76618b484dfa-image-1476889137756.gif\">\n</div>\n"
-      PDK5 Foundations F: {}
-      PDK5 Intro C: {}
-      PS U3 Assessment1 new: {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -8226,7 +8079,6 @@ zh-CN:
           \   });\n\n在应用实验室示例中，函数是另一种在onEvent（当事件发生时）函数的成分，只是成分必须是函数本身。我们可以另外建立一个函数然后这样写：\n\n
           \   function doSomething() {\n    \t// Do something\n    }\n    \n    onEvent(\"button\",
           \"click\", doSomething);\n\n\n在第二个示例中，注意我们有给予函数`doSomething`（做什么）到`onEvent`（当事件发生时）函数，我们不加入闭合符带后面。这是因为我们没有设定函数作为物品。"
-      Sample CSP Assessment: {}
       ScreenOutTheMean-Unplugged:
         markdown: |
           # 远离网络欺凌
@@ -8297,16 +8149,11 @@ zh-CN:
           # 写歌
 
           用歌曲中副歌的概念，来学习定义和调用函数。
-      Student End of Unit Survey - Intro+TeacherMD_csd2-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd3-2022: {}
       Student End of Unit Survey - Intro+TeacherMD_csd4-2022:
         teacher_markdown: |
           **教师单元末调查：** 在你的学生完成调查之后，我们非常感谢你完成教师调查
 
           ## [点击这里查看教师调查] (https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
-      Student End of Unit Survey - Intro+TeacherMD_csd5-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd6-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd7-2022: {}
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -8327,12 +8174,6 @@ zh-CN:
         - correct: true
         questions:
         - {}
-      Student End of Unit Survey_csd2-2022: {}
-      Student End of Unit Survey_csd3-2022: {}
-      Student End of Unit Survey_csd4-2022: {}
-      Student End of Unit Survey_csd5-2022: {}
-      Student End of Unit Survey_csd6-2022: {}
-      Student End of Unit Survey_csd7-2022: {}
       Submittable Multi:
         answers:
         - text: 蓝色
@@ -8542,7 +8383,6 @@ zh-CN:
           *  **[边框宽度（border width）](//studio.code.org/docs/weblab/border-width/)** - `border-width: value;`
           *  **[边框颜色（border color）](//studio.code.org/docs/weblab/border-color/)** - `border-color: value;`
 
-      Video - The Future of Big Data: {}
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -8755,7 +8595,6 @@ zh-CN:
         title: 人工智能和机器学习快速调查！
       aiml-intro-pulse-survey_2022:
         title: 人工智能和机器学习快速调查！
-      aiml-pulse-check-survey-1-levelgroup Ch2_2021: {}
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
@@ -8811,8 +8650,6 @@ zh-CN:
         - correct: true
         questions:
         - {}
-      aiml-pulse-check-survey-preamble_2021: {}
-      allthethings_bubble_choice: {}
       allthethings_external_displayed_as_unplugged:
         content1: 描述
       allthethings_external_not_displayed_as_unplugged:
@@ -11057,8 +10894,6 @@ zh-CN:
           <br/><hr/>
           <h3>在这个系列接下来的部分，会使用在程序中能 *变化* 的变量。</h3>
 
-      courseF_groups_freeplay_2022_pilot_-2022-2: {}
-      courseF_groups_practice_2022_pilot_-2022-2: {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
@@ -11889,9 +11724,6 @@ zh-CN:
           text: 这位艺术家将画四个互相重叠的正方形。
         questions:
         - text: 点击 "运行" 按钮后会发生什么？
-      csd-post-survey-2017-implementation-student: {}
-      csd-post-survey-2017-implementation-teacher: {}
-      csd-post-survey-2017-implementation-teacher_2019: {}
       csd-post-survey-2017-levelgroup:
         title: 计算机科学发现期末学生调查
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
@@ -12478,8 +12310,6 @@ zh-CN:
         title: 计算机科学发现课程 期末学生问卷
       csd-post-survey-levelgroup_2019:
         title: 计算机科学发现期末学生调查
-      csd-post-survey-markdown-with-link-to-survey_2021: {}
-      csd-post-survey-markdown-with-link-to-survey_2022: {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -15220,15 +15050,6 @@ zh-CN:
         - correct: true
         questions:
         - {}
-      csd-pulse-check-survey-preamble: {}
-      csd-pulse-check-survey-preamble_2018: {}
-      csd-pulse-check-survey-preamble_2018_2019: {}
-      csd-pulse-check-survey-preamble_2019: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2021: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2022: {}
-      csd-pulse-check-survey-preamble_2021: {}
-      csd-pulse-check-survey-preamble_2022: {}
-      csd-pulse-check-survey-preamble_2222: {}
       csf_be_a_super_digital_citizen:
         content1: 描述
         markdown: |-
@@ -15342,8 +15163,6 @@ zh-CN:
         markdown: |-
           # 我的线上邻居
           ## 在上网时你是如何保障安全的？
-      csp-post-survey-2017 preamble 1: {}
-      csp-post-survey-2017 preamble 1_2019: {}
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -15758,7 +15577,6 @@ zh-CN:
         - correct: true
         questions:
         - {}
-      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2018-topics-preamble:
         content1: 描述
       csp-post-survey-2018-unit-feedback-preamble:
@@ -15796,30 +15614,6 @@ zh-CN:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017 preamble 1: {}
-      csp-pre-survey-2017 preamble 1_2018: {}
-      csp-pre-survey-2017 preamble 1_2021: {}
-      csp-pre-survey-2017 preamble 1_2022: {}
-      csp-pre-survey-2017 preamble 2 cs in general: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2021: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2022: {}
-      csp-pre-survey-2017 preamble 3 this class: {}
-      csp-pre-survey-2017 preamble 3 this class_2018: {}
-      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2021: {}
-      csp-pre-survey-2017 preamble 3 this class_2022: {}
-      csp-pre-survey-2017 preamble 4 the future: {}
-      csp-pre-survey-2017 preamble 4 the future_2018: {}
-      csp-pre-survey-2017 preamble 4 the future_2021: {}
-      csp-pre-survey-2017 preamble 4 the future_2022: {}
-      csp-pre-survey-2017 preamble 5 demographics: {}
-      csp-pre-survey-2017 preamble 5 demographics_2018: {}
-      csp-pre-survey-2017 preamble 5 demographics_2021: {}
-      csp-pre-survey-2017 preamble 5 demographics_2022: {}
       csp-pre-survey-2017-q1:
         answers:
         - correct: true
@@ -16571,8 +16365,6 @@ zh-CN:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017-q36-preamble: {}
-      csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pre-survey-2017-q37:
         answers:
         - correct: true
@@ -17145,34 +16937,10 @@ zh-CN:
         display_name: 自定义你的应用
       ml-club app-choice parent_2022:
         display_name: 自定义你的应用
-      ml-customize apps-practice choice-2021: {}
-      ml-customize apps-practice choice_2022: {}
-      ml-good data-isaac data: {}
-      ml-good data-isaac data_2022: {}
-      ml-good data-kim data: {}
-      ml-good data-kim data_2022: {}
-      ml-good data-kim survey: {}
-      ml-good data-kim survey_2022: {}
       ml-intro app lab-book recommender 5-2021:
         display_name: 自定义你的应用
       ml-intro app lab-book recommender 5_2022:
         display_name: 自定义你的应用
-      ml-model card-medical-1-2021: {}
-      ml-model card-medical-1_2022: {}
-      ml-model card-medical-2-2021: {}
-      ml-model card-medical-2_2022: {}
-      ml-model card-medical-3-2021: {}
-      ml-model card-medical-3_2022: {}
-      ml-models in applab-choice parent: {}
-      ml-models in applab-choice parent_2022: {}
-      ml-models-shoe survey: {}
-      ml-models-shoe survey_2022: {}
-      ml-plan survey-copy form: {}
-      ml-plan survey-copy form_2022: {}
-      ml-use model card-pet model card-2021: {}
-      ml-use model card-pet model card_2022: {}
-      ml-use models applab-practice choice-2021: {}
-      ml-use models applab-practice choice_2022: {}
       naturally-better-at-cs:
         answers:
         - correct: true
@@ -17301,9 +17069,6 @@ zh-CN:
         - correct: true
         questions:
         - {}
-      pre-assessment survey heading1: {}
-      pre-assessment survey heading2: {}
-      pre-assessment survey heading3: {}
       pre-assessment survey q1:
         answers:
         - correct: true
@@ -17682,8 +17447,6 @@ zh-CN:
         - correct: true
         questions:
         - {}
-      sample external 1: {}
-      sample external 2: {}
       someone_else_encourage:
         answers:
         - correct: true
