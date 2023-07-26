@@ -8,7 +8,7 @@ interface PanelContainerProps {
   children?: React.ReactNode;
   rightHeaderContent?: React.ReactNode;
   leftHeaderContent?: React.ReactNode;
-  isHeadersShowing?: boolean;
+  hideHeaders?: boolean;
 }
 
 /**
@@ -24,14 +24,14 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
   rightHeaderContent,
   leftHeaderContent,
   children,
-  isHeadersShowing = true,
+  hideHeaders,
 }) => {
   return (
     <div
       className={classNames('panelContainer', moduleStyles.panelContainer)}
       id={id}
     >
-      {isHeadersShowing && (
+      {!hideHeaders && (
         <div
           className={classNames(
             'panelContainerHeader',
