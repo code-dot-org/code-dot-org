@@ -26,7 +26,6 @@ style_min: true
 
 #homepage.supreme-container
   = view :homepage_hero
-  = view :curriculum_launch_skinny_banner
 
   - if request.language == "en"
     = view :curriculum_banner
@@ -36,6 +35,7 @@ style_min: true
     = view :homepage_below_hero_announcement
 
   = view :homepage_tenth_anniversary
+  = view :curriculum_launch_skinny_banner
   = view :homepage_sections
   = view :homepage_gallery
   = view :homepage_supporters
