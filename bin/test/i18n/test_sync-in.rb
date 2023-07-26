@@ -15,11 +15,11 @@ class I18n::SyncInTest < Minitest::Test
     I18n::Resources::Dashboard::Standards.expects(:sync_in).in_sequence(exec_seq)
     I18n::Resources::Dashboard::Docs.expects(:sync_in).in_sequence(exec_seq)
     I18n::Resources::Apps::ExternalSources.expects(:sync_in).in_sequence(exec_seq)
+    I18n::Resources::Apps::Labs.expects(:sync_in).in_sequence(exec_seq)
     I18nScriptUtils.expects(:run_bash_script).with('bin/i18n-codeorg/in.sh').in_sequence(exec_seq)
     I18n::SyncIn.expects(:localize_course_resources).in_sequence(exec_seq)
     I18n::SyncIn.expects(:redact_level_content).in_sequence(exec_seq)
     I18n::SyncIn.expects(:redact_script_and_course_content).in_sequence(exec_seq)
-    I18n::SyncIn.expects(:redact_labs_content).in_sequence(exec_seq)
     I18n::SyncIn.expects(:localize_markdown_content).in_sequence(exec_seq)
 
     I18n::SyncIn.perform
