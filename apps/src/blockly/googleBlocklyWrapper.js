@@ -254,7 +254,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     ['field_number', 'FieldNumber', CdoFieldNumber],
     ['field_angle', 'FieldAngle', CdoFieldAngle],
     ['field_multilinetext', 'FieldMultilineInput', CdoFieldMultilineInput],
-    ['field_flyout', 'FieldFlyout', CdoFieldFlyout],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -266,6 +265,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.FieldButton = CdoFieldButton;
   blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
   blocklyWrapper.FieldToggle = CdoFieldToggle;
+  blocklyWrapper.FieldFlyout = CdoFieldFlyout;
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
@@ -319,7 +319,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.procedureSerializer = procedureSerializer;
   // Register the shareable procedures serializer, used for the modal function editor.
-  blocklyWrapper.blockly_.serialization.registry.unregister('procedures');
   blocklyWrapper.blockly_.serialization.registry.register(
     'procedures',
     procedureSerializer
