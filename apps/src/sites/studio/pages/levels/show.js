@@ -9,7 +9,6 @@ import instructions, {
   setTtsAutoplayEnabledForLevel,
   setCodeReviewEnabledForLevel,
 } from '@cdo/apps/redux/instructions';
-import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 
 $(document).ready(initPage);
 
@@ -33,7 +32,6 @@ function initPage() {
   const unversionedRedirectDialogMountPoint = document.getElementById(
     'unversioned-redirect-dialog'
   );
-  const fabMountPoint = document.getElementById('fab-mount-point');
   if (redirectDialogMountPoint && config.redirect_script_url) {
     ReactDOM.render(
       <ScriptLevelRedirectDialog
@@ -50,13 +48,6 @@ function initPage() {
     ReactDOM.render(
       <UnversionedScriptRedirectDialog />,
       unversionedRedirectDialogMountPoint
-    );
-  }
-
-  if (fabMountPoint) {
-    ReactDOM.render(
-      <RubricFloatingActionButton />,
-      document.getElementById('fab-mount-point')
     );
   }
 }
