@@ -16,7 +16,7 @@
     "./src/code-studio/pd/components/*.js*",
     "./src/code-studio/*.js",
     "./test/**/*.ts",
-    "./test/**/*.tsx", "src/lab2/views/components/PanelContainer.jsx",
+    "./test/**/*.tsx",
   ],
   "compilerOptions": {
     "jsx": "react",
