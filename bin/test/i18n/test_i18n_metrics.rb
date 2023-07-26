@@ -5,7 +5,7 @@ require 'cdo/aws/metrics'
 class I18nMetricsTest < Minitest::Test
   def setup
     Cdo::Metrics.client = Aws::CloudWatch::Client.new(stub_responses: true)
-    I18n::Metrics.machine_id = "local_machine"
+    I18n::Metrics.stubs(:machine_id).returns('local_machine')
   end
 
   def expect_metric(name, value, dimensions)
@@ -14,6 +14,6 @@ class I18nMetricsTest < Minitest::Test
 
   def test_report_runtime
     expect_metric(:Runtime, 1, [{name: "dim1", value: 1}, {name: "dim2", value: 2}, {name: "Environment", value: :test}, {name: "MachineId", value: "local_machine"}])
-    I18n::Metrics.report_runtime([{name: "dim1", value: 1}, {name: "dim2", value: 2}], 1)
+    I18n::Metrics.report_runtime([{name: "dim1", value: 1}, {name: "dim2", value: 2}]) {1}
   end
 end
