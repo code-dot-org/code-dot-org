@@ -15,6 +15,10 @@ dashboard/config/locales
 
 **/.git
 
+# Why can't I find this in .gitignore? Anyway, it changes whenever vscode does its automatic 
+# `bundle install` which triggers constant surprise skaffold rebuilds (ugh)
+.ruby-lsp
+
 
 
 # Are these just seeds for the DB or are these potentially read directly?
