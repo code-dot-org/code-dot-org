@@ -4,7 +4,8 @@
 # JSON Web Key Set (JWKS) exposed at /oauth/jwks. It generates both the public
 # key and the private key. The public key will be added to the JWKS in
 # dashboard/public/oauth/jwks.json. It will print the private key and
-# key id (kid) that is to be used for updating the secret at CDO.jwks_data.
+# key id (kid) that is to be used for updating the secret at
+# CDO.jwk_private_key_data.
 
 # When you include 'dev' as an argument, it will write the JWK and the private
 # key to your locals.yml. This should be done once for local development.
@@ -13,6 +14,7 @@ require 'jwt'
 require 'json'
 
 allowed_args = ["dev", "prod"].freeze
+# default to 'prod'
 arg = ARGV.first || "prod"
 
 puts "Usage: 'dev' or 'prod' as arguments...\n" unless allowed_args.include? arg
