@@ -8,6 +8,7 @@
     // import {component} from "folder/component";
     "./src/music/**/*.js*",
     "./src/aichat/**/*.js*",
+    "./src/lab2/**/*.js*",
     "./src/*.js*",
     "./src/javalab/**/*.js",
     "./src/lib/util/**/*.js",

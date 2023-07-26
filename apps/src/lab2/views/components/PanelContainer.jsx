@@ -16,7 +16,7 @@ const PanelContainer = ({
   rightHeaderContent,
   leftHeaderContent,
   children,
-  isHeadersShowing,
+  isHeadersShowing = true,
 }) => {
   return (
     <div
