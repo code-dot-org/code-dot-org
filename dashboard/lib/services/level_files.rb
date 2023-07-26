@@ -10,7 +10,7 @@ module Services
       return unless Policies::LevelFiles.write_to_file?(level) && level.published
 
       file_path = Policies::LevelFiles.level_file_path(level.name)
-      File.write(file_path, Services::LevelXml.level_to_xml(level))
+      File.write(file_path, level.to_xml)
       file_path
     end
 
@@ -57,6 +57,19 @@ module Services
       new_e = Exception.new("in level: #{level_path}: #{exception.message}")
       new_e.set_backtrace(exception.backtrace)
       raise new_e
+    end
+
+    # Populate the given Level object with data from the given XML-formatted String
+    def self.load_custom_level_xml(xml, level)
+      xml_node = Nokogiri::XML(xml, &:noblanks)
+      level = level.with_type(xml_node.root.name)
+
+      # Delete entries for all other attributes that may no longer be specified in the xml.
+      # Fixes issue #75863324 (delete removed level properties on import)
+      level.send(:write_attribute, 'properties', {})
+      level.assign_attributes(level.load_level_xml(xml_node))
+
+      level
     end
   end
 end
