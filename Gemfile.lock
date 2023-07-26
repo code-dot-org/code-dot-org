@@ -48,6 +48,16 @@ GIT
     full-name-splitter (0.1.2)
 
 GIT
+  remote: https://github.com/snickell/aws-google.git
+  revision: ded320a364b2bac8573863192bec2fee1f7dd779
+  branch: cli-only-auth
+  specs:
+    aws-google (0.2.1)
+      aws-sdk-core (~> 3.130)
+      google-apis-core
+      launchy (~> 2)
+
+GIT
   remote: https://github.com/wjordan/image_optim.git
   revision: 939996f7ad102227c73b42bfda0058f9c66698aa
   ref: cdo
@@ -204,10 +214,6 @@ GEM
     auto_strip_attributes (2.1.0)
       activerecord (>= 3.0)
     aws-eventstream (1.2.0)
-    aws-google (0.2.0)
-      aws-sdk-core (~> 3.130)
-      google-apis-core
-      launchy (~> 2)
     aws-partitions (1.686.0)
     aws-sdk-acm (1.44.0)
       aws-sdk-core (~> 3, >= 3.119.0)
@@ -925,7 +931,7 @@ DEPENDENCIES
   addressable
   annotate (~> 3.1.1)
   auto_strip_attributes (~> 2.1)
-  aws-google (~> 0.2.0)
+  aws-google (>= 0.2.1)!
   aws-sdk-acm
   aws-sdk-cloudformation
   aws-sdk-cloudfront

@@ -147,6 +147,13 @@ RUN \
   echo 'eval "$(rbenv init -)"' | tee -a ${HOME}/.bashrc ${HOME}/.zshrc && \
   true
 
+
+# # Install gcloud (line copied from https://cloud.google.com/sdk/docs/install#deb, search for "Docker Tip")
+# USER root
+# RUN apt-get install -y gnupg
+# RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - && apt-get update -y && apt-get install google-cloud-cli -y
+# USER ${USERNAME}
+
 WORKDIR ${SRC}
 
 ################################################################################
@@ -186,6 +193,8 @@ COPY --from=code.org-node_modules --link ${SRC}/apps/node_modules ./apps/node_mo
 
 # Copy in ~/.rbenv (built in parallel)
 COPY --from=code.org-rbenv --link ${HOME}/.rbenv ${HOME}/.rbenv
+
+COPY --chown=${USERNAME} aws.config ${HOME}/.aws/config
 
 COPY --chown=${USERNAME} --link ./ ./
 
