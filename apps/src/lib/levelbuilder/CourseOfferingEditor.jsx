@@ -385,7 +385,6 @@ export default function CourseOfferingEditor(props) {
           value={courseOffering.self_paced_pl_course_offering_id}
           style={styles.dropdown}
           onChange={e => {
-            console.log(e.target.value);
             updateCourseOffering(
               'self_paced_pl_course_offering_id',
               e.target.value
