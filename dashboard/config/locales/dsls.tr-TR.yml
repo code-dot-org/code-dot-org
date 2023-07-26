@@ -615,17 +615,6 @@ tr-TR:
           # İkili Resimler
 
           Sadece iki basit değeri kullanarak bir resmin nasıl yeniden oluşturulacağını iletin.
-      Building a UI with Design Mode: {}
-      CSD - Getters and Setters: {}
-      CSD CSS project RGB_2021: {}
-      CSD CSS project RGB_2022: {}
-      CSD CSS project Review_2021: {}
-      CSD CSS project Review_2022: {}
-      CSD End of Unit Survey - Unit 1 - IntroMD_2022: {}
-      CSD Games Parameters challenge_2021: {}
-      CSD Games Parameters challenge_2022: {}
-      CSD Games Properties challenge_2021: {}
-      CSD Games Properties challenge_2022: {}
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -648,22 +637,10 @@ tr-TR:
         display_name: Nesne özellikleri
       CSD Games Properties practice_2022:
         display_name: Nesne özellikleri
-      CSD Games Sprites Challenges_2021: {}
-      CSD Games Sprites Challenges_2022: {}
-      CSD Games Sprites practice_2021: {}
-      CSD Games Sprites practice_2022: {}
-      CSD Games parameters practice_2021: {}
-      CSD Games parameters practice_2022: {}
-      CSD Games variables challenge_2021: {}
-      CSD Games variables challenge_2022: {}
       CSD Games variables practice_2021:
         display_name: Değişkenleri Uygulama
       CSD Games variables practice_2022:
         display_name: Değişkenleri Uygulama
-      CSD HTML project Lists_2021: {}
-      CSD HTML project Lists_2022: {}
-      CSD HTML project Review_2021: {}
-      CSD HTML project Review_2022: {}
       CSD Header Size MC:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -734,13 +711,6 @@ tr-TR:
         content1: Aşağıdaki koda bak ve başlıkların nasıl görüntüleneceğini tahmin
           et. Sağdaki seçeneklerden birini seç.
         title: Hızlı Başlık Taraması
-      CSD Interactive Animations and Games Post-Project Test: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2021: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2022: {}
-      CSD Physical Computing Post-Project Test: {}
-      CSD Physical Computing Post-Project Test_2021: {}
-      CSD Physical Computing Post-Project Test_2022: {}
-      CSD Student End of Unit Survey - Unit 1_2022: {}
       CSD U1 IOSP match:
         answers:
         - {}
@@ -838,7 +808,6 @@ tr-TR:
         teacher_markdown: |-
           * [Uygulamalar ve Problem Çözümü](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Proje Rehber Örneği ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
           * [Uygulamalar ve Problem Çözümü]](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Akran Değerlendirmesi Örneği ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
-      CSD U1 Test: {}
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -923,10 +892,6 @@ tr-TR:
         - {}
         questions:
         - {}
-      CSD U1 Test_2021: {}
-      CSD U1 Test_2022: {}
-      CSD U2 CSS challenge_pilot_2021: {}
-      CSD U2 CSS challenge_pilot_2022: {}
       CSD U2 CSS practice_pilot_2021:
         display_name: CSS ile Metin Biçimlendirme
       CSD U2 CSS practice_pilot_2022:
@@ -937,11 +902,6 @@ tr-TR:
         content1: açıklama buraya
       CSD U2 Design Project_2018_2019:
         content1: açıklama buraya
-      CSD U2 Expression Exemplars: {}
-      CSD U2 Expression Exemplars_2018: {}
-      CSD U2 Expression Exemplars_2018_2019: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2021: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2022: {}
       CSD U2 Image challenge_pilot_2021:
         display_name: 'Görüntü Ekleme '
       CSD U2 Image challenge_pilot_2022:
@@ -966,7 +926,6 @@ tr-TR:
           * [Web Sitesinin Amaçları - Etkinlik Rehberi](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
         teacher_markdown: "* [Web Sitesinin Amaçları - Örnek](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
           | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
-      CSD U2 L12 Overview: {}
       CSD U2 L2 Overview:
         content1: açıklama buraya
         markdown: "# Genel Bakış\n\nBu ders web sitelerini kişisel ifade aracı olarak
@@ -1045,19 +1004,8 @@ tr-TR:
           *  **[Liste Ögesi](//studio.code.org/docs/weblab/li/)** - `<li></li>`
           *  **[Sıralı List](//studio.code.org/docs/weblab/ol/)** - `<ol></ol>`
 
-      CSD U2 L7 Overview: {}
       CSD U2 Lesson 6 Overview:
         content1: açıklama buraya
-      CSD U2 Lesson 9 Overview: {}
-      CSD U2 PSP Programming: {}
-      CSD U2 PSP Programming_2018: {}
-      CSD U2 PSP Programming_2018_2019: {}
-      CSD U2 Sample CSS layout_2021: {}
-      CSD U2 Sample CSS layout_2022: {}
-      CSD U2 Sample CSS text_2021: {}
-      CSD U2 Sample CSS text_2022: {}
-      CSD U2 Sample classes_2021: {}
-      CSD U2 Sample classes_2022: {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -1248,10 +1196,6 @@ tr-TR:
           4. Amazon.com - Her türlü ürün için çevrimiçi alışveriş sitesi
           4. Yahoo.com - Bir arama motoru, e-posta sağlayıcısı ve haber kaynağı
           5. Wikipedia.org - Kullanıcılar tarafından oluşturulan içeriğe sahip ücretsiz bir ansiklopedi
-      CSD U2 Top Websites_2018: {}
-      CSD U2 Top Websites_2018_2019: {}
-      CSD U2 Top Websites_2018_2019_pilot_2021: {}
-      CSD U2 Top Websites_2018_2019_pilot_2022: {}
       CSD U2 expand project:
         content1: açıklama buraya
       CSD U2 expand project_2018:
@@ -1297,12 +1241,6 @@ tr-TR:
         - {}
         - {}
         - {}
-      CSD U2 layout style challenge_pilot_2021: {}
-      CSD U2 layout style challenge_pilot_2022: {}
-      CSD U2 layout style practice_pilot_2021: {}
-      CSD U2 layout style practice_pilot_2022: {}
-      CSD U2 links challenge_2021: {}
-      CSD U2 links challenge_2022: {}
       CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -1394,8 +1332,6 @@ tr-TR:
         content1: açıklama buraya
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: açıklama buraya
-      CSD U3 - Design a Game 1 - ExampleChoice_2022: {}
-      CSD U3 - Interactive Card - ExampleChoice_2022: {}
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1461,11 +1397,6 @@ tr-TR:
         - {}
         - {}
         - {}
-      CSD U3 AnimationsMulti STOP project guide: {}
-      CSD U3 AnimationsMulti STOP project guide_2018: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022: {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1534,9 +1465,6 @@ tr-TR:
           * [hareketlinesne.çarpıştırıcıkur()](//studio.code.org/docs/gamelab/setCollider/)
           * [hareketlinesne.sekme()](//studio.code.org/docs/gamelab/bounce/)
           * [hareketlinesne.canlılık](//studio.code.org/docs/gamelab/bonciness/)
-      CSD U3 Defender SFLP: {}
-      CSD U3 Entertainment: {}
-      CSD U3 Entertainment_2018_2019: {}
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -1607,14 +1535,6 @@ tr-TR:
         - {}
         - {}
         - {}
-      CSD U3 Lesson Overview 1: {}
-      CSD U3 Lesson Overview 10: {}
-      CSD U3 Lesson Overview 11: {}
-      CSD U3 Lesson Overview 12: {}
-      CSD U3 Lesson Overview 13: {}
-      CSD U3 Lesson Overview 14: {}
-      CSD U3 Lesson Overview 2: {}
-      CSD U3 Lesson Overview 3: {}
       CSD U3 Lesson Overview 4:
         markdown: |-
           # Genel Bakış
@@ -1647,13 +1567,6 @@ tr-TR:
           ## Kaynaklar
 
           * [Değişkenlere Giriş](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
-      CSD U3 Lesson Overview 6: {}
-      CSD U3 Lesson Overview 7: {}
-      CSD U3 Lesson Overview 8: {}
-      CSD U3 Lesson Overview 9: {}
-      CSD U3 Movement Challenges: {}
-      CSD U3 Project Build a Game SFLP: {}
-      CSD U3 SFLP Velocity: {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
@@ -1892,7 +1805,6 @@ tr-TR:
         - {}
         questions:
         - {}
-      CSD U3 Using the Game Design Process SLFP: {}
       CSD U3 combining rep:
         content1: açıklama buraya
       CSD U3 combining rep_2018:
@@ -1943,8 +1855,6 @@ tr-TR:
         - {}
         - {}
         - {}
-      CSD U3 drawing challenges_2021: {}
-      CSD U3 drawing challenges_2022: {}
       CSD U3 drawing practice choice_2021:
         display_name: Alıştırma
       CSD U3 drawing practice choice_2022:
@@ -2114,22 +2024,6 @@ tr-TR:
         - correct: true
         questions:
         - {}
-      CSD U4L01 SFLP: {}
-      CSD U4L02 SFLP: {}
-      CSD U4L03 SFLP: {}
-      CSD U4L04 SFLP: {}
-      CSD U4L05 SFLP: {}
-      CSD U4L06 SFLP: {}
-      CSD U4L07 SFLP: {}
-      CSD U4L08 SFLP: {}
-      CSD U4L09 SFLP: {}
-      CSD U4L10 SFLP: {}
-      CSD U4L11 SFLP: {}
-      CSD U4L12 SFLP: {}
-      CSD U4L13 SFLP: {}
-      CSD U4L15 SFLP: {}
-      CSD U4L16 SFLP: {}
-      CSD U4L17 SFLP: {}
       CSD U5 Encryption 1:
         content1: açıklama buraya
       CSD U5 Encryption 1_2018:
@@ -2162,7 +2056,6 @@ tr-TR:
         content1: açıklama buraya
       CSD U5 student record_2018_2019:
         content1: açıklama buraya
-      CSD U5 test: {}
       CSD U5 test clean multi:
         answers:
         - {}
@@ -2304,43 +2197,30 @@ tr-TR:
         - {}
         questions:
         - {}
-      CSD U5 test_2021: {}
-      CSD U5 test_2022: {}
       CSD U6 - Accelerometer - Chal_2222:
         display_name: Mücadele Düzeyleri
-      CSD U6 - Accelerometer - Prac_2222: {}
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Mücadele Düzeyleri
-      CSD U6 - Board Inputs - Prac_2222: {}
       CSD U6 - Board Outputs - Chal_2222:
         display_name: Mücadele Düzeyleri
-      CSD U6 - Board Outputs - Prac_2222: {}
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Mücadele Düzeyleri
-      CSD U6 - Color LEDs - Prac_2222: {}
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: Mücadele Düzeyleri
-      CSD U6 - Combine Inputs - Prac_2222: {}
-      CSD U6 - Functions - Prac_2222: {}
       CSD U6 - If Variables - Chal_2222:
         display_name: Mücadele Düzeyleri
       CSD U6 - Music - Chal_2222:
         display_name: Mücadele Düzeyleri
       CSD U6 - Physical Input - Chal_2222:
         display_name: Mücadele Düzeyleri
-      CSD U6 - Physical Input - Prac_2222: {}
       CSD U6 - Physical Output - Chal_2222:
         display_name: Mücadele Düzeyleri
-      CSD U6 - Physical Output - Prac_2222: {}
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Mücadele Düzeyleri
-      CSD U6 - Screen Inputs - Prac_2222: {}
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Mücadele Düzeyleri
-      CSD U6 - Screen Outputs - Prac_2222: {}
       CSD U6 - Sensors - Chal_2222:
         display_name: Mücadele Düzeyleri
-      CSD U6 - Sensors - Prac_2222: {}
       CSD U6 LED create intro:
         content1: açıklama buraya
       CSD U6 LED create intro_2018:
@@ -2381,10 +2261,6 @@ tr-TR:
         - correct: true
         questions:
         - {}
-      CSD U6 circuit smart bike blinker build: {}
-      CSD U6 circuit smart bike blinker build_2018: {}
-      CSD U6 circuit smart bike blinker build_2018_2019: {}
-      CSD U6 circuit smart bike blinker build_2021: {}
       CSD U6 final intro:
         content1: açıklama buraya
       CSD U6 final intro_2018:
@@ -2393,10 +2269,6 @@ tr-TR:
         content1: açıklama buraya
       CSD U6 final intro_2021:
         content1: açıklama buraya
-      CSD U6 game project stop: {}
-      CSD U6 game project stop_2018: {}
-      CSD U6 game project stop_2018_2019: {}
-      CSD U6 game project stop_2021: {}
       CSD U6 setProperty predict multi:
         answers:
         - {}
@@ -2568,62 +2440,18 @@ tr-TR:
         - {}
         questions:
         - {}
-      CSD U6 tugowar stop: {}
-      CSD U6 tugowar stop_2018: {}
-      CSD U6 tugowar stop_2018_2019: {}
-      CSD U6 tugowar stop_2021: {}
-      CSD User Centered Design Post-Project Test: {}
-      CSD User Centered Design Post-Project Test_2021: {}
-      CSD User Centered Design Post-Project Test_2022: {}
-      CSD Web Development Post-Project Test: {}
-      CSD Web Development Post-Project Test_pilot_2021: {}
-      CSD Web Development Post-Project Test_pilot_2022: {}
-      CSD Web Headings challenge_2021: {}
-      CSD Web Headings challenge_2022: {}
-      CSD Web Headings practice_2021: {}
-      CSD Web Headings practice_2022: {}
-      CSD Web Sample Pages_2021: {}
-      CSD Web Sample Pages_2022: {}
       CSD games cake challenge choice_2021:
         display_name: Mücadeleler
       CSD games cake challenge choice_2022:
         display_name: Mücadeleler
-      CSD games collisions challenge choice_2021: {}
-      CSD games collisions challenge choice_2022: {}
-      CSD games collisions practice choice_2021: {}
-      CSD games collisions practice choice_2022: {}
-      CSD games functions challenge choice_2021: {}
-      CSD games functions challenge choice_2022: {}
       CSD games functions practice choice_2021:
         display_name: Fonksiyonları Uygulama
       CSD games functions practice choice_2022:
         display_name: Fonksiyonları Uygulama
-      CSD games istouching challenge choice_2021: {}
-      CSD games istouching challenge choice_2022: {}
-      CSD games istouching practice choice_2021: {}
-      CSD games istouching practice choice_2022: {}
-      CSD games movement2 challenge choice_2021: {}
-      CSD games movement2 challenge choice_2022: {}
-      CSD games movement2 practice choice_2021: {}
-      CSD games movement2 practice choice_2022: {}
       CSD games platform challenge choice_2021:
         display_name: Mücadeleler
       CSD games platform challenge choice_2022:
         display_name: Mücadeleler
-      CSD games random challenge_2021: {}
-      CSD games random challenge_2022: {}
-      CSD games random practice_2021: {}
-      CSD games random practice_2022: {}
-      CSD games velocity challenge choice_2021: {}
-      CSD games velocity challenge choice_2022: {}
-      CSD games velocity practice choice_2021: {}
-      CSD games velocity practice choice_2022: {}
-      CSD web classes challenge_2021: {}
-      CSD web classes challenge_2022: {}
-      CSD web classes practice_2021: {}
-      CSD web classes practice_2022: {}
-      CSD web conditionals challenge choice_2021: {}
-      CSD web conditionals challenge choice_2022: {}
       CSD web conditionals practice choice_2021:
         display_name: 'Koşulları Uygulama
 
@@ -2632,52 +2460,18 @@ tr-TR:
         display_name: 'Koşulları Uygulama
 
           '
-      CSD web draw loop challenge choice_2021: {}
-      CSD web draw loop challenge choice_2022: {}
       CSD web draw loop practice choice_2021:
         display_name: Alıştırma
       CSD web draw loop practice choice_2022:
         display_name: Alıştırma
-      CSD web keyboard challenge choice_2021: {}
-      CSD web keyboard challenge choice_2022: {}
-      CSD web keyboard practice choice_2021: {}
-      CSD web keyboard practice choice_2022: {}
-      CSD web mouse challenge choice_2021: {}
-      CSD web mouse challenge choice_2022: {}
-      CSD web mouse practice choice_2021: {}
-      CSD web mouse practice choice_2022: {}
-      CSD web movement challenge choice_2021: {}
-      CSD web movement challenge choice_2022: {}
       CSD web movement practice choice_2021:
         display_name: Alıştırma
       CSD web movement practice choice_2022:
         display_name: Alıştırma
-      CSD web text challenge choice_2021: {}
-      CSD web text challenge choice_2022: {}
       CSD web text practice choice_2021:
         display_name: Alıştırma
       CSD web text practice choice_2022:
         display_name: Alıştırma
-      CSD-U5-SFLP ASCII and Binary Representation: {}
-      CSD-U5-SFLP Automating Data Decisions: {}
-      CSD-U5-SFLP Combining Representations: {}
-      CSD-U5-SFLP Create a Representation: {}
-      CSD-U5-SFLP Interpreting Data: {}
-      CSD-U5-SFLP Making Decisions with Data: {}
-      CSD-U5-SFLP Patterns and Representation: {}
-      CSD-U5-SFLP Problem Solving and Data: {}
-      CSD-U5-SFLP Problem Solving with Big Data: {}
-      CSD-U5-SFLP Representation Matters: {}
-      CSD-U5-SFLP Representing Images: {}
-      CSD-U5-SFLP Representing Numbers Part 1: {}
-      CSD-U5-SFLP Representing Numbers Part 2: {}
-      CSD-U5-SFLP Solve a Data Problem: {}
-      'CSD: getText vs getNumber': {}
-      'CSD: setProperty': {}
-      CSDU6 Innovation: {}
-      CSDU6 Innovation_2018: {}
-      CSDU6 Innovation_2018_2019: {}
-      CSDU6 Innovation_2021: {}
       CSP PD Example Question 1:
         answers:
         - {}
@@ -2690,7 +2484,6 @@ tr-TR:
         - {}
         questions:
         - {}
-      CSP pre-assessment survey: {}
       Choose 2 Test:
         answers:
         - correct: true
@@ -2699,7 +2492,6 @@ tr-TR:
         - {}
         questions:
         - {}
-      Choosing Good IDs: {}
       ConditionalsWithCards-Unplugged:
         markdown: |-
           # Kartlarla Koşullar
@@ -3120,10 +2912,6 @@ tr-TR:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
-      Design a Screen for your App_2018: {}
-      Design a Screen for your App_2018_2019: {}
-      Design a Screen for your App_2021: {}
-      Design a Screen for your App_2022: {}
       DesigningForAccessibilityMarkdownLevel2022:
         markdown: |-
           # Erişilebilirlik için Tasarlama
@@ -3194,8 +2982,6 @@ tr-TR:
           # Dijital Paylaşım
 
           Bu derste, özellikle dijital ortamlarda mülkiyet ve telif hakkına uymanın zorluklarını ve faydalarını göz önünde bulunduracaksınız.
-      ECSPD1 computational thinker: {}
-      Embedded Video Test: {}
       EnvelopeVariables-Unplugged:
         markdown: "# Zarf Değişkenleri \n\nDeğişkenler, bilgisayar biliminde bir sürü
           serbestlik sağlar. Bu ders, değişkenlerin ne olduğunu ve bunları birçok
@@ -3217,8 +3003,6 @@ tr-TR:
       Eval Contracts F:
         answers:
         - ''
-      Example App Types_2018: {}
-      Example App Types_2018_2019: {}
       ForLoopFun-Unplugged:
         markdown: |-
           # İçin Döngüsü Eğlencesi
@@ -3726,7 +3510,6 @@ tr-TR:
           ve neler olduğunu ve bu aracı kullanabileceğiniz çeşitli yolları bildiğinizi
           doğrulamak için bir kişi - partner, küçük grup, tüm sınıf - ile bir araya
           gelmelisiniz.\n\n\n"
-      OPD-K5 About: {}
       OPD-K5 About_copy:
         markdown: "# 'Computer Science Fundamentals Öğretme'ye Hoşgeldiniz\n\n<img
           src=\"https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png\"
@@ -3757,8 +3540,6 @@ tr-TR:
           boyutunu büyütmek için:\n- Mac'de, \"Komut\" ve \"+\"a tıklayın\n- Windows'de,
           \"Kontrol\" ve \"+\"a tıklayın\n\nPunto boyutunu küçültmek için: \n- Mac'de,
           \"Komut\" ve \"-\"a tıklayın\n- Windows'de, \"Kontrol\" ve \"-\"a tıklayın\n"
-      OPD-K5 About_dani: {}
-      OPD-K5 Assessment: {}
       OPD-K5 Assessment_copy:
         markdown: "# Diğer kaynaklar\n\nCode.org'a bir öğretmen olarak oturum açarsanız,
           öğrencilerinizin erişemediği birçok özelliğe erişiminiz olur. Bir dersi
@@ -3788,7 +3569,6 @@ tr-TR:
           sağındaki açılır menü aracılığıyla support.code.org ve öğretmen forumumuza
           her zaman erişebilirsiniz.\n\n![](https://images.code.org/35d6218f47f5b0b00975369dd9f5bea5-image-1573169909110.38.03
           PM.png)\n\n"
-      OPD-K5 Assessment_dani: {}
       OPD-K5 CS Courses:
         markdown: |-
           # Planlama > Code.org'a başlarken
@@ -3903,8 +3683,6 @@ tr-TR:
           gördüğünüzde, öğrencilerinizi yönlendirmek için günlük ders planları, bir
           bilgisayar olmadan yapabileceğiniz bağlantısız aktiviteler ve diğer öğretmenler
           ile bağlantı kuracağınız forumlar ile daha ileriye gidin.\n\n"
-      OPD-K5 CS Courses_dani: {}
-      OPD-K5 CS Tips: {}
       OPD-K5 CS Tips_copy:
         markdown: |+
           # Bu çevrimiçi kursa gitme
@@ -3931,14 +3709,6 @@ tr-TR:
           <br/>
 
 
-      OPD-K5 CS Tips_dani: {}
-      OPD-K5 Celebrate: {}
-      OPD-K5 Celebrate_dani: {}
-      OPD-K5 Congrats: {}
-      OPD-K5 CongratsFinal: {}
-      OPD-K5 CongratsFinal_dani: {}
-      OPD-K5 Congrats_dani: {}
-      OPD-K5 Connect: {}
       OPD-K5 Connect_copy:
         markdown: "# Sonraki adımlar \n\n\n## Post-anket yapın\n\nTüm kursu sırayla
           yapıp yapmamanıza bağlı olmaksızın, geri bildiriminizi duymak isteriz. Lütfen,
@@ -3973,10 +3743,6 @@ tr-TR:
           ve ayrıca bölgesel toplantıları tutan bölümleri vardır.\n\n\n> Katıldığınız
           için teşekkür ederiz! Bilgisayar bilimini ve Code Studio'yu sınıfınızda
           nasıl uyguladığını duymayı sabırsızlıkla bekliyoruz!\n\n"
-      OPD-K5 Connect_dani: {}
-      OPD-K5 Culture: {}
-      OPD-K5 Culture_dani: {}
-      OPD-K5 Outline: {}
       OPD-K5 Outline_copy:
         markdown: "# Kurs taslağı\n\nKurs, her birinin bunlarda dersleri olduğu dört
           kavram parçasına bölünür. Dersler, halk arasında öğrenciler ve öğretmenler
@@ -4046,8 +3812,6 @@ tr-TR:
           unutmayınız. Bu kursun tamamen kişiye özel olduğunu; kursu her zaman bırakabileceğinizi
           ve herhangi bir kademe veya seviyede istediğiniz zaman geri gelebileceğinizi
           veya yeniden ziyaret edebileceğinizi unutmayın.\n\n"
-      OPD-K5 Outline_dani: {}
-      OPD-K5 Pair: {}
       OPD-K5 Pair_copy:
         markdown: "# Öğretme pratiği: Eşli programlama\n\nBirçok eğitimcinin kullandığı
           önemli bir sınıf yönetimi stratejisi, stratejik gruplamadır. Code.org'da,
@@ -4071,8 +3835,6 @@ tr-TR:
           videoyu izleyin.\n\n<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\"
           target=\"blank\">![](https://images.code.org/01da36dbe56da7986c3652991d4828e8-image-1571172869229.54.16
           PM.png)</a>\n\n[Videoyu göremiyor musunuz? Buraya tıklayın](https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)\n<br/>\n\n\n\n\n"
-      OPD-K5 Pair_dani: {}
-      OPD-K5 Participation: {}
       OPD-K5 Participation_copy:
         markdown: |-
           # Katılımınızı Planlama
@@ -4098,13 +3860,6 @@ tr-TR:
           ## Sizin için iyi olan öğrenme deneyimini bulun
 
           Nihayetinde çevrimiçi öğrenme herkes içindir. Bu kursta, akranlarınız ile gerçek zamanda iletişim kurmanız için yerleşik bir mekanizma veya eğitmen bulunmaz. Birebir ilgiye daha fazla ihtiyacınız olduğunu düşünüyorsanız veya işbirliği ve ilişki kurma için daha fazla imkanın bulunduğu gerçek zamanlı bir sınıfta daha iyi öğrendiğinizi biliyorsanız, <a href="http://code.org/professional-development-workshops" target="blank">yüz yüze profesyonel gelişim fırsatlarımızdan</a> birini takip etmenizi tavsiye ederiz.
-      OPD-K5 Participation_dani: {}
-      OPD-K5 PostSurvey: {}
-      OPD-K5 PostSurvey_dani: {}
-      OPD-K5 PreSurvey: {}
-      OPD-K5 PreSurvey_dani: {}
-      OPD-K5 Puzzles: {}
-      OPD-K5 Puzzles_dani: {}
       OPD-K5 Reviewing Reflections:
         content1: açıklama buraya
         markdown: "# Genel Bakış: Yansımaları Gözden Geçirme\n\nTebrikler! Temel kodlama
@@ -4113,7 +3868,6 @@ tr-TR:
           birkaçını gözden geçirme şansınız olacak. İsterseniz bunları değiştirmekten
           veya güncellemekten çekinmeyin! \n\nKurslar E ila F'deki isteğe bağlı bölümü
           tamamlamak istemezseniz, bu seviyeleri atlayabilirsiniz. "
-      OPD-K5 Stage10Start: {}
       OPD-K5 Stage10Start_copy:
         markdown: "# Genel Bakış: Sonraki Adımlar\n\n<img src=\"https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG\"
           class=\"level-image\">\n\n## Şimdiye kadar neler yaptınız\n\n - Computer
@@ -4128,10 +3882,6 @@ tr-TR:
           meslektaş eğitimcilerden oluşan küresel bir topluluk ile bağlantı kuracaksınız\n
           - Sonrasında yapılacak anket aracılığıyla bir geri bildirim sunacaksınız\n
           - Bir bitirme belgesi yazdıracaksınız\n\n"
-      OPD-K5 Stage10Start_dani: {}
-      OPD-K5 Stage1Go: {}
-      OPD-K5 Stage1Go_dani: {}
-      OPD-K5 Stage2Go: {}
       OPD-K5 Stage2Go_copy:
         markdown: "# Yansıtma\n\n<img src=\"https://images.code.org/14c402555ec4a61bf86f8ce9e9f61667-image-1571692551306.jpg\"
           class=\"level-image\">\n\n## Dur ve yansıt\nŞimdiye kadar bu kursun; bilgisayar
@@ -4152,12 +3902,6 @@ tr-TR:
           sizi bir bilgisayar bilimcisi yapmaz ama bunun yerine, bilgilerinizi öğrencileriniz
           ile paylaşmaktan heyecan duyacağınız ana kavramlarda yeterince rahat hissetmenize
           yardım eder."
-      OPD-K5 Stage2Go_dani: {}
-      OPD-K5 Stage2Overview: {}
-      OPD-K5 Stage2Overview_dani: {}
-      OPD-K5 Stage3Go: {}
-      OPD-K5 Stage3Go_dani: {}
-      OPD-K5 Stage3Start: {}
       OPD-K5 Stage3Start_copy:
         markdown: |+
           # Genel Bakış: Sıralama
@@ -4174,7 +3918,6 @@ tr-TR:
           - Ders Uygulaması Planlama Kılavuzlarını görme ve bunlarla pratik yapma şansınız olacak
 
 
-      OPD-K5 Stage3Start_dani: {}
       OPD-K5 Stage3aGo:
         content1: açıklama buraya
       OPD-K5 Stage3aGo_copy:
@@ -4205,7 +3948,6 @@ tr-TR:
           PM.png)</a>"
       OPD-K5 Stage3aGo_dani:
         content1: açıklama buraya
-      OPD-K5 Stage4Go: {}
       OPD-K5 Stage4Go_copy:
         markdown: |+
           # Bağlantısız Ders: Döngüye Giriş
@@ -4222,10 +3964,6 @@ tr-TR:
           ***
           <a href="https://curriculum.code.org/csf-19/courseb/6/" target="blank">![](https://images.code.org/74f963b452dbba7eb260d6b9e1fa2b4c-image-1573079606451.33.05 PM.png)</a>
 
-      OPD-K5 Stage4Go_dani: {}
-      OPD-K5 Stage4Review: {}
-      OPD-K5 Stage4Review_dani: {}
-      OPD-K5 Stage4Start: {}
       OPD-K5 Stage4Start_copy:
         markdown: |-
           # Genel Bakış: Döngüler
@@ -4237,8 +3975,6 @@ tr-TR:
 
           ## Öğretme pratiği: Eşli programlama
           - Eşli programlamanın faydasını ve gerçek dünyada nasıl kullanıldığını anlama
-      OPD-K5 Stage4Start_dani: {}
-      OPD-K5 Stage5Go: {}
       OPD-K5 Stage5Go_copy:
         markdown: "# Bağlantısız Ders: Kartlarla Koşullar\n\n> **Koşullar** eğer-ifadeleridir.\n\n***\n\n##
           **1. Kurs D'den \"<a href=\"https://curriculum.code.org/csf-19/coursed/10/\"
@@ -4253,10 +3989,6 @@ tr-TR:
           amaçlar.\n\n***\n<a href=\"https://curriculum.code.org/csf-19/coursed/10/\"
           target=\"blank\">![](https://images.code.org/d4959eca61f272b9416ff4e65a259bd2-image-1573080208870.43.14
           PM.png)</a>\n"
-      OPD-K5 Stage5Go_dani: {}
-      OPD-K5 Stage5Review: {}
-      OPD-K5 Stage5Review_dani: {}
-      OPD-K5 Stage5Start: {}
       OPD-K5 Stage5Start_copy:
         markdown: |+
           # Genel Bakış: Koşullar
@@ -4271,8 +4003,6 @@ tr-TR:
           ## Öğretme pratiği: Günlüğe kaydetme
           - Öğrencilerin işlemesine ve öğrendiklerini yansıtmasına ve sorunlarla baş etmelerine yardımcı olmak için günlük yönergelerini kullanma
 
-      OPD-K5 Stage5Start_dani: {}
-      OPD-K5 Stage6Go: {}
       OPD-K5 Stage6Go_copy:
         markdown: "# Bağlantısız Ders: Şarkı Yazma\n\n> Bir **fonksiyon**, kolayca
           tekrar tekrar çağırabileceğiniz bir kod parçasıdır.\n\nProgramcılar, daima
@@ -4289,10 +4019,6 @@ tr-TR:
           bu video, öğretmen olarak sizin için destek olmayı amaçlar. \n\n***\n<a
           href=\"https://curriculum.code.org/csf-19/coursee/14/\" target=\"blank\">![](https://images.code.org/c961585a0e79fc2934530d251dd84f53-image-1573080971047.55.58
           PM.png)</a>"
-      OPD-K5 Stage6Go_dani: {}
-      OPD-K5 Stage6Review: {}
-      OPD-K5 Stage6Review_dani: {}
-      OPD-K5 Stage6Start: {}
       OPD-K5 Stage6Start_copy:
         markdown: |
           # Genel Bakış: Fonksiyonlar
@@ -4301,8 +4027,6 @@ tr-TR:
 
           ## Kodlama Kavramları: Fonksiyonlar
           - Basit fonksiyonları kodlama pratiği yapma
-      OPD-K5 Stage6Start_dani: {}
-      OPD-K5 Stage7Go: {}
       OPD-K5 Stage7Go_copy:
         markdown: "# Bağlantısız Ders: Büyük Olay\n\n> Bir **olay**bilgisayarınıza
           bir şeyin olması için \"dinlemesi\", daha sonra eyleme geçirmesi gereken
@@ -4318,8 +4042,6 @@ tr-TR:
           bir videodur. \n\n***\n<a href=\"https://curriculum.code.org/csf-19/coursec/14/\"
           target=\"blank\">![](https://images.code.org/37ab92bffc396c3b60f83123b44a0552-image-1573080011247.39.43
           PM.png)</a>"
-      OPD-K5 Stage7Go_dani: {}
-      OPD-K5 Stage7Start: {}
       OPD-K5 Stage7Start_copy:
         markdown: |-
           # Genel Bakış: Olaylar
@@ -4331,14 +4053,6 @@ tr-TR:
 
           ## Öğretme pratiği: Hata ayıklama
           - Bir algoritma veya programdaki sorunları bulma ve düzeltme
-      OPD-K5 Stage7Start_dani: {}
-      OPD-K5 Stage8Go: {}
-      OPD-K5 Stage8Go_dani: {}
-      OPD-K5 Stage8Start: {}
-      OPD-K5 Stage8Start_dani: {}
-      OPD-K5 Stage9Go: {}
-      OPD-K5 Stage9Go_dani: {}
-      OPD-K5 Stage9Start: {}
       OPD-K5 Stage9Start_copy:
         markdown: "# Öğretmen Kaynaklarını Keşfetme\n\nTalimatlarınızı planlamaya
           başlamanın zamanıdır. Bu aşamada Code.org'un başka alanlarına ve **<a href=\"http://studio.code.org/\"
@@ -4348,12 +4062,6 @@ tr-TR:
           varsayılan ekran olmalıdır. Bir öğretmen hesabınız yoksa, **<a href=\"https://studio.code.org/users/sign_up\"
           target=\"blank\">buradan oturum açabilirsiniz</a>**.\n\n<a href=\"http://studio.code.org/\"
           target=\"blank\">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>\n"
-      OPD-K5 Stage9Start_dani: {}
-      OPD-K5 Using CS: {}
-      OPD-K5 Using CS_dani: {}
-      OPD-K5 Vocabulary: {}
-      OPD-K5 Vocabulary_dani: {}
-      OPD-K5 Welcome 2: {}
       OPD-K5 Welcome 2_copy:
         markdown: |+
           # Computer Science Fundamentals Kursları
@@ -4463,8 +4171,6 @@ tr-TR:
           ** Daha sonra her kursun ne hakkında olduğuna dair daha faza ayrıntı görmek isterseniz, oldukça kapsamlı <a href="https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview" target="blank">Computer Science Fundamentals Müfredat Kılavuzumuza</a> bakabilirsiniz.**
 
 
-      OPD-K5 Welcome 2_dani: {}
-      OPD-K5 What is Mastery: {}
       OPD-K5 What is Mastery_copy:
         markdown: "# İleriyi Düşünme\n\n## Öğretme pratikleri\nSonraki kavram parçasında
           aşağıdaki öğretme pratiklerini öğreneceksiniz:\n\n- Ders planlarını bulma
@@ -4484,8 +4190,6 @@ tr-TR:
           birine hayır diye yanıtlıyorsanız, ilerlemeden önce Computer Science Fundamentals
           kurslarından birindeki derse yeniden bakmayı veya bu konu hakkında daha
           fazla şey keşfetmeyi düşünün.\n"
-      OPD-K5 What is Mastery_dani: {}
-      OPD-K5 Why teach CS: {}
       OPD-K5 Why teach CS_copy:
         markdown: "# Bilgisayar bilimini neden öğretiriz?\n\n<img src=\"https://images.code.org/2d5f7097062637d95a723129689b4891-image-1571684813152.JPG\"
           class=\"level-image\">\n\n### **Önemli becerileri geliştir**\nAraştırma,
@@ -4513,10 +4217,6 @@ tr-TR:
           class=\"default\">İlham verici videoları keşfet >></button></a>\n\n> <a
           href=\"http://code.org/promote\" target=\"blank\"><button class=\"default\">Araştırmayı
           keşfet >></button></a>\n\n<img src=\"https://images.code.org/1b213b6c2256c6992b899df3c62559a0-image-1571684948168.jpg\">"
-      OPD-K5 Why teach CS_dani: {}
-      OPD-K5 Younger Grades: {}
-      OPD-K5 Younger Grades_dani: {}
-      OPD-K5 Your Plan: {}
       OPD-K5 Your Plan_copy:
         markdown: "# Planınız\n\nBu aşamanın, Code Studio'da bulunan kaynakları size
           tanıtmaya yardımcı olduğunu umuyoruz. Code.org veya Code Studio kaynaklarından
@@ -4534,7 +4234,6 @@ tr-TR:
           ilham alabilmeniz için başkalarının gönderilerine bakmanız konusunda sizleri
           teşvik ederiz.\n\n> <a href=\"http://forum.code.org/t/teaching-computer-science-your-plans/412\"
           target=\"blank\"><button class=\"plc\">Planınızı paylaşın >></button></a>"
-      OPD-K5 Your Plan_dani: {}
       OPD-K5 conditionals introduced:
         content1: açıklama buraya
         markdown: |+
@@ -5012,16 +4711,6 @@ tr-TR:
           |---|---|
           |<a href="https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view" target="blank">![Aç Sincap (Oyun Laboratuvarı)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Aç Sincap (Oyun Laboratuvarı")</a>| <a href="https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view" target="blank">![Uzaylı Hikayesi (Oyun Laboratuvarı)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Uzaylı Hikayesi (Oyun Laboratuvarı")</a>|
           | Bu oyuna ses eklemeye çalışın! | Bu hikayeye başka bir sahne eklemeye çalışın! |
-      OPD-Stage3Start: {}
-      OPD-Stage3Start_dani: {}
-      'Overview: Design Mode': {}
-      'Overview: If Statements': {}
-      'Overview: Images': {}
-      'Overview: onEvent': {}
-      'Overview: setPosition': {}
-      PDK5 Foundations F: {}
-      PDK5 Intro C: {}
-      PS U3 Assessment1 new: {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -5180,8 +4869,6 @@ tr-TR:
           # Röle Programlama
 
           Takımlara ayrılın ve resimleri çizen programlar yazmak için birlikte çalışın.
-      Responding to User Input: {}
-      Sample CSP Assessment: {}
       ScreenOutTheMean-Unplugged:
         markdown: |-
           # Ortalamayı Filtrele
@@ -5202,7 +4889,6 @@ tr-TR:
           # Algoritmayı İzle
 
           Bir oyun oynayın ve doğru sonuça ulaşmak için hangi komutların gerektiğini düşünün
-      Social Sleuth_2018_2019: {}
       Songwriting-Unplugged:
         markdown: |-
           # Şarkı yazma
@@ -5223,12 +4909,6 @@ tr-TR:
           # Şarkı yazma
 
           Fonksiyonları tanımlamayı ve çağırmayı öğrenmek için bir şarkıdaki koro kavramını kullanın.
-      Student End of Unit Survey - Intro+TeacherMD_csd2-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd3-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd4-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd5-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd6-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd7-2022: {}
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -5249,12 +4929,6 @@ tr-TR:
         - correct: true
         questions:
         - {}
-      Student End of Unit Survey_csd2-2022: {}
-      Student End of Unit Survey_csd3-2022: {}
-      Student End of Unit Survey_csd4-2022: {}
-      Student End of Unit Survey_csd5-2022: {}
-      Student End of Unit Survey_csd6-2022: {}
-      Student End of Unit Survey_csd7-2022: {}
       Submittable Multi:
         answers:
         - text: mavi
@@ -5409,11 +5083,6 @@ tr-TR:
         teacher_markdown: "[Bilgisayar Nedir - Örnek](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing)
           - Aktivite Rehberi([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf)
           | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))"
-      Unit 2 Lesson 10 Overview: {}
-      Unit 2 Lesson 16 Overview: {}
-      Unit 2 Lesson 7 Overview: {}
-      Unit 2 Lesson 8 Overview: {}
-      Video - The Future of Big Data: {}
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -5524,8 +5193,6 @@ tr-TR:
         - correct: true
         questions:
         - {}
-      aiml-ch1-pulse-survey_2021: {}
-      aiml-ch1-pulse-survey_2022: {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -5620,9 +5287,6 @@ tr-TR:
         - correct: true
         questions:
         - {}
-      aiml-intro-pulse-survey_2021: {}
-      aiml-intro-pulse-survey_2022: {}
-      aiml-pulse-check-survey-1-levelgroup Ch2_2021: {}
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
@@ -5678,8 +5342,6 @@ tr-TR:
         - correct: true
         questions:
         - {}
-      aiml-pulse-check-survey-preamble_2021: {}
-      allthethings_bubble_choice: {}
       allthethings_external_displayed_as_unplugged:
         content1: açıklama buraya
       allthethings_external_not_displayed_as_unplugged:
@@ -9290,13 +8952,8 @@ tr-TR:
           text: Artist, üst üste binen dört kare çizecek.
         questions:
         - text: '"Çalıştır" düğmesine bastığınızda ne olacak?'
-      csd-post-survey-2017-implementation-student: {}
-      csd-post-survey-2017-implementation-teacher: {}
-      csd-post-survey-2017-implementation-teacher_2019: {}
-      csd-post-survey-2017-levelgroup: {}
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
         title: CS Keşifleri Ders Sonu Öğrenci Değerlendirmesi
-      csd-post-survey-2017-levelgroup_2018: {}
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -9631,8 +9288,6 @@ tr-TR:
         - correct: true
         questions:
         - {}
-      csd-post-survey-2018-markdown-with-link-to-survey: {}
-      csd-post-survey-2018-markdown-with-link-to-survey_v2: {}
       csd-post-survey-2018-topic-ai:
         answers:
         - correct: true
@@ -9805,12 +9460,8 @@ tr-TR:
         - correct: true
         questions:
         - {}
-      csd-post-survey-intro-2019: {}
       csd-post-survey-levelgroup-2018:
         title: CS Keşifleri Ders Sonu Öğrenci Değerlendirmesi
-      csd-post-survey-levelgroup_2019: {}
-      csd-post-survey-markdown-with-link-to-survey_2021: {}
-      csd-post-survey-markdown-with-link-to-survey_2022: {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -9983,55 +9634,6 @@ tr-TR:
         title: CS Keşifleri Öğrenci Ön Ders Değerlendirmesi
       csd-pre-survey-levelgroup_21_22_2022:
         title: CS Keşifleri Öğrenci Ön Ders Değerlendirmesi
-      csd-pulse-check-survey-1-levelgroup U1Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2021: {}
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
@@ -12507,15 +12109,6 @@ tr-TR:
         - correct: true
         questions:
         - {}
-      csd-pulse-check-survey-preamble: {}
-      csd-pulse-check-survey-preamble_2018: {}
-      csd-pulse-check-survey-preamble_2018_2019: {}
-      csd-pulse-check-survey-preamble_2019: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2021: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2022: {}
-      csd-pulse-check-survey-preamble_2021: {}
-      csd-pulse-check-survey-preamble_2022: {}
-      csd-pulse-check-survey-preamble_2222: {}
       csf_be_a_super_digital_citizen:
         content1: açıklama buraya
         markdown: |-
@@ -12645,8 +12238,6 @@ tr-TR:
           # Çevrimiçi Komşum
 
           ## İnternette güvenli bir şekilde sayfalara nasıl gidersiniz?
-      csp-post-survey-2017 preamble 1: {}
-      csp-post-survey-2017 preamble 1_2019: {}
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -13061,7 +12652,6 @@ tr-TR:
         - correct: true
         questions:
         - {}
-      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2018-topics-preamble:
         content1: açıklama buraya
       csp-post-survey-2018-unit-feedback-preamble:
@@ -13090,30 +12680,6 @@ tr-TR:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017 preamble 1: {}
-      csp-pre-survey-2017 preamble 1_2018: {}
-      csp-pre-survey-2017 preamble 1_2021: {}
-      csp-pre-survey-2017 preamble 1_2022: {}
-      csp-pre-survey-2017 preamble 2 cs in general: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2021: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2022: {}
-      csp-pre-survey-2017 preamble 3 this class: {}
-      csp-pre-survey-2017 preamble 3 this class_2018: {}
-      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2021: {}
-      csp-pre-survey-2017 preamble 3 this class_2022: {}
-      csp-pre-survey-2017 preamble 4 the future: {}
-      csp-pre-survey-2017 preamble 4 the future_2018: {}
-      csp-pre-survey-2017 preamble 4 the future_2021: {}
-      csp-pre-survey-2017 preamble 4 the future_2022: {}
-      csp-pre-survey-2017 preamble 5 demographics: {}
-      csp-pre-survey-2017 preamble 5 demographics_2018: {}
-      csp-pre-survey-2017 preamble 5 demographics_2021: {}
-      csp-pre-survey-2017 preamble 5 demographics_2022: {}
       csp-pre-survey-2017-q1:
         answers:
         - correct: true
@@ -13865,8 +13431,6 @@ tr-TR:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017-q36-preamble: {}
-      csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pre-survey-2017-q37:
         answers:
         - correct: true
@@ -14456,34 +14020,10 @@ tr-TR:
         display_name: Uygulamanızı Kişiselleştirin
       ml-club app-choice parent_2022:
         display_name: Uygulamanızı Kişiselleştirin
-      ml-customize apps-practice choice-2021: {}
-      ml-customize apps-practice choice_2022: {}
-      ml-good data-isaac data: {}
-      ml-good data-isaac data_2022: {}
-      ml-good data-kim data: {}
-      ml-good data-kim data_2022: {}
-      ml-good data-kim survey: {}
-      ml-good data-kim survey_2022: {}
       ml-intro app lab-book recommender 5-2021:
         display_name: Uygulamanızı Kişiselleştirin
       ml-intro app lab-book recommender 5_2022:
         display_name: Uygulamanızı Kişiselleştirin
-      ml-model card-medical-1-2021: {}
-      ml-model card-medical-1_2022: {}
-      ml-model card-medical-2-2021: {}
-      ml-model card-medical-2_2022: {}
-      ml-model card-medical-3-2021: {}
-      ml-model card-medical-3_2022: {}
-      ml-models in applab-choice parent: {}
-      ml-models in applab-choice parent_2022: {}
-      ml-models-shoe survey: {}
-      ml-models-shoe survey_2022: {}
-      ml-plan survey-copy form: {}
-      ml-plan survey-copy form_2022: {}
-      ml-use model card-pet model card-2021: {}
-      ml-use model card-pet model card_2022: {}
-      ml-use models applab-practice choice-2021: {}
-      ml-use models applab-practice choice_2022: {}
       naturally-better-at-cs:
         answers:
         - correct: true
@@ -14652,9 +14192,6 @@ tr-TR:
         - correct: true
         questions:
         - {}
-      pre-assessment survey heading1: {}
-      pre-assessment survey heading2: {}
-      pre-assessment survey heading3: {}
       pre-assessment survey q1:
         answers:
         - correct: true
@@ -15009,8 +14546,6 @@ tr-TR:
         - correct: true
         questions:
         - {}
-      sample external 1: {}
-      sample external 2: {}
       someone_else_encourage:
         answers:
         - correct: true

@@ -1575,10 +1575,6 @@
           "swimming left and right": "plavání doleva a doprava",
           "wandering": "potulování se"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "growing": "růst",
           "jittering": "komíhání",
@@ -3027,8 +3023,6 @@
           "spinning right": "otáčení doprava",
           "wandering": "potulování se",
           "wobbling": "kymácení"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "růst",

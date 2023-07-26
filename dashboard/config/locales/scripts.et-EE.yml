@@ -1881,6 +1881,56 @@ et:
           title: KoodiTund Minecraft Designer
         netsim:
           title: Interneti simulaator
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spraidid
+            lessonGroup-3:
+              display_name: Tingimuslaused
+            lessonGroup-5:
+              display_name: Muutujad
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spraidid
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-4:
+              display_name: Tsüklid
+            lessonGroup-6:
+              display_name: Sündmused
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Korduvad tsüklid
+            lessonGroup-4:
+              display_name: Funktsioonid
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-4:
+              display_name: Tsüklid
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-4:
+              display_name: Tsüklid
+            lessonGroup-5:
+              display_name: Sündmused
+            lessonGroup-6:
+              display_name: Andmed
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-6:
+              display_name: Tsüklid
+            lessonGroup-7:
+              display_name: Andmed
         new-express:
           lesson_groups:
             content:
@@ -1972,6 +2022,12 @@ et:
               display_name: Õpetamise tavad
             required:
               display_name: Ülevaade
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-4:
+              display_name: Tsüklid
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:
