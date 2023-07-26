@@ -11,7 +11,7 @@
 }
 
 .ai-pl-banner-hero.homepage {
-  max-width: 1020px;
+  max-width: 1200px;
   margin: 2em auto 5em;
   position: relative;
 
@@ -33,10 +33,13 @@
     flex-wrap: wrap;
 
     .text-wrapper {
-      width: 50%;
+      width: 54%;
+
+      @media screen and (max-width: $width-md) {
+        width: 100%;
+      }
 
       @media screen and (max-width: $width-sm) {
-        width: 100%;
         justify-content: center;
         text-align: center;
       }
@@ -65,6 +68,36 @@
         }
       }
 
+      // Logo list
+      ul {
+        margin: 0 0 2em;
+        justify-content: flex-start;
+        gap: 2.25em;
+
+        @media screen and (max-width: $width-sm) {
+          justify-content: center;
+          gap: 0 2em;
+        }
+
+        li {
+          all: unset;
+          list-style-type: none;
+
+          &:before {
+            content: "";
+          }
+
+          p {
+            font-size: 14px !important;
+          }
+
+          &:nth-of-type(2) img { height: 24px }
+          &:nth-of-type(3) img { height: 26px }
+          &:nth-of-type(4) img { height: 18px }
+          &:nth-of-type(5) img { height: 20px }
+        }
+      }
+
       // Copied over from design-system-pegasus.scss
       a.link-button {
         height: unset;
@@ -87,16 +120,15 @@
     figure {
       margin: 0;
       padding: 0;
-      width: 50%;
+      width: 48%;
       position: absolute;
       bottom: -7em;
-      right: -3em;
+      right: -4em;
       z-index: -1;
 
       @media screen and (max-width: $width-md) {
-        margin: 0 1em;
-        width: 48%;
-        bottom: -4em;
+        width: 34%;
+        bottom: -48px;
         right: 0;
       }
 
@@ -104,14 +136,14 @@
         width: 100%;
         text-align: center;
         margin: 0 auto;
-        bottom: -16em;
+        bottom: -216px;
       }
 
       img {
         width: 100%;
 
         @media screen and (max-width: $width-sm) {
-          margin-left: -22px;
+          width: 80%;
         }
       }
     }
