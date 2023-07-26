@@ -7,7 +7,6 @@
     // can add its folder here to enable the syntax:
     // import {component} from "folder/component";
     "./src/music/**/*.js*",
-    "./src/aichat/**/*.js*",
     "./src/*.js*",
     "./src/javalab/**/*.js",
     "./src/lib/util/**/*.js",
