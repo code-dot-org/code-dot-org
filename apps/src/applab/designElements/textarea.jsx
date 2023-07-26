@@ -231,7 +231,7 @@ export default {
   onPropertyChange: function (element, name, value) {
     switch (name) {
       case 'value':
-        element.innerHTML = utils.escapeText(value);
+        element.innerHTML = utils.escapeHtml(value);
         break;
       default:
         return false;
@@ -242,7 +242,7 @@ export default {
   readProperty: function (element, name) {
     switch (name) {
       case 'value':
-        return utils.unescapeText(element.innerHTML);
+        return utils.unescapeHtml(element.innerHTML);
       default:
         throw `unknown property name ${name}`;
     }
