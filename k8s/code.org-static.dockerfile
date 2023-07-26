@@ -9,3 +9,6 @@ COPY --link shared shared
 COPY --link apps/i18n apps/i18n
 COPY --link i18n/locales i18n/locales
 COPY --link dashboard/config/locales dashboard/config/locales
+
+COPY --link pegasus/sites.v3 pegasus/sites.v3
+COPY --link pegasus/sites pegasus/sites
