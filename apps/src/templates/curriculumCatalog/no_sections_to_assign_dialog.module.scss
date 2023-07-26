@@ -17,7 +17,19 @@
 }
 
 .lowerContainer {
-  margin-top: auto;
+  // screen sizes larger than mobile
+  @media screen and (min-width: $width-sm) {
+    margin-top: auto;
+  }
+
+  // mobile screen sizes
+  @media screen and (max-width: $width-sm) {
+    margin-top: 1em;
+
+    hr {
+      display: none;
+    }
+  }
 }
 
 .buttonContainer {
@@ -34,10 +46,6 @@
     margin-top: 1em;
     justify-content: center;
     flex-direction: column-reverse;
-
-    hr {
-      display: none;
-    }
 
     button,
     a,
