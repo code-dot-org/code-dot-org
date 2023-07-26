@@ -14,6 +14,8 @@ module I18n
           puts 'Preparing *labs files'
           FileUtils.mkdir_p(I18N_SOURCE_DIR_PATH)
 
+          FileUtils.cp(CDO.dir('apps/node_modules/@code-dot-org/ml-activities/i18n/oceans.json'), File.join(I18N_SOURCE_DIR_PATH, 'fish.json'))
+
           Dir[CDO.dir('apps/i18n/**/en_us.json')].each do |filepath|
             FileUtils.cp(filepath, File.join(I18N_SOURCE_DIR_PATH, "#{filepath.split('/')[-2]}.json"))
           end

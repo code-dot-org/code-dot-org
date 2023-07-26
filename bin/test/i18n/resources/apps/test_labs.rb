@@ -7,6 +7,7 @@ class I18n::Resources::Apps::LabsTest < Minitest::Test
 
     # Preparation of i18n source files
     FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/blockly-mooc')).in_sequence(exec_seq)
+    FileUtils.expects(:cp).with(CDO.dir('apps/node_modules/@code-dot-org/ml-activities/i18n/oceans.json'), CDO.dir('i18n/locales/source/blockly-mooc/fish.json')).in_sequence(exec_seq)
     Dir.expects(:[]).with(CDO.dir('apps/i18n/**/en_us.json')).returns(['apps/i18n/expected_lab/en_us.json']).in_sequence(exec_seq)
     FileUtils.expects(:cp).with('apps/i18n/expected_lab/en_us.json', CDO.dir('i18n/locales/source/blockly-mooc/expected_lab.json')).in_sequence(exec_seq)
 
