@@ -1,6 +1,7 @@
 import {RemoteChannelsStore} from '@cdo/apps/lab2/projects/ChannelsStore';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {RemoteSourcesStore} from '@cdo/apps/lab2/projects/SourcesStore';
+import {ValidationError} from '@cdo/apps/lab2/responseValidators';
 import {ProjectSources, Channel} from '@cdo/apps/lab2/types';
 import {expect, assert} from 'chai';
 import sinon, {stubObject, StubbedInstance} from 'ts-sinon';
@@ -201,6 +202,38 @@ describe('ProjectManager', () => {
 
     assert.isTrue(sourcesStore.save.calledOnce);
     assert.isTrue(channelsStore.save.calledOnce);
+  });
+
+  it('can still load a channel if sources fail validation', async () => {
+    sourcesStore.load.throws(new ValidationError('JSON error'));
+    const projectManager = new ProjectManager(
+      sourcesStore,
+      channelsStore,
+      FAKE_CHANNEL_ID,
+      false
+    );
+
+    const {channel, sources} = await projectManager.load();
+
+    assert.isUndefined(sources);
+    assert.deepEqual(channel, FAKE_CHANNEL);
+  });
+
+  it('throw an error if loading sources fails for any other reason', async () => {
+    const error = new Error('500 Network Error');
+    sourcesStore.load.throws(error);
+    const projectManager = new ProjectManager(
+      sourcesStore,
+      channelsStore,
+      FAKE_CHANNEL_ID,
+      false
+    );
+
+    try {
+      await projectManager.load();
+    } catch (e) {
+      assert.deepEqual(e, error);
+    }
   });
 });
 
