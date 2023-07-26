@@ -1,5 +1,7 @@
 @import 'color.scss', 'font.scss', 'breakpoints.scss', 'barlow-semi-condensed-font';
 
+// Homepage hero banner
+
 // Overrides the text align so this
 // works with LTR and RTL languages
 #homepage #hero #actions {
@@ -112,6 +114,77 @@
           margin-left: -22px;
         }
       }
+    }
+  }
+}
+
+// Skinny banner
+aside.ai-pl-banner-skinny {
+  box-sizing: content-box;
+  height: 130px;
+  background-color: #360161;
+  overflow: hidden;
+
+  @media (max-width: 1232px) {
+    background: #360161 url("/images/ai/pl/101/skinny--2.svg") 95% bottom no-repeat;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    height: unset;
+    background-size: 40%;
+  }
+
+  a:hover,
+  a:active,
+  a:visited,
+  a:link {
+    text-decoration: none;
+  }
+
+  .wrapper {
+    max-width: 1250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 1.5rem 4rem;
+
+    @media screen and (max-width: $width-sm) {
+      padding: 3rem 2rem;
+    }
+  }
+
+  .text-wrapper {
+    text-align: center;
+
+    h1 {
+      font-size: 1.875rem;
+      font-family: $barlowSemiCondensed-semibold;
+      color: $neutral-white;
+      margin: 0 auto 6px;
+    }
+
+    p {
+      margin-bottom: 0;
+      color: $neutral-white;
+    }
+  }
+
+  button {
+    background: $neutral-white;
+    border-color: $neutral-white;
+    color: $neutral_dark;
+  }
+
+  img {
+
+    &.right {
+      margin-top: -2rem;
+    }
+
+    @media screen and (max-width: 1232px) {
+      display: none;
     }
   }
 }
