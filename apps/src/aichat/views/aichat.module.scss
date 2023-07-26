@@ -1,5 +1,9 @@
 @import 'color.scss';
 
+// Constants
+$default-border-radius: 0;
+$default-spacing: 2px;
+
 // We will fade in the next button for 1s after a 6s delay, then leave it showing.
 @keyframes fade-in-button {
   0% {

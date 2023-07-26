@@ -9,8 +9,9 @@ import {
   sendSuccessReport,
   navigateToNextLevel,
 } from '@cdo/apps/code-studio/progressRedux';
-import aichatLocale from './locale';
+import aichatLocale from '../locale';
 import styles from './aichat.module.scss';
+import PanelContainer from './PanelContainer';
 
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -24,6 +25,7 @@ const AichatView: React.FunctionComponent = () => {
   return (
     <div id="aichat">
       <Aichat>
+        <PanelContainer id="instructions-panel" headerText="Instructions" />
         <button
           id="aichat-continue-button"
           type="button"
