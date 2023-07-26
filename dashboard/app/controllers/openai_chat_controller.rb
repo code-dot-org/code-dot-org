@@ -1,3 +1,5 @@
+# A controller for handling requests to the OpenAI chat completion API.
+
 class OpenaiChatController < ApplicationController
   include OpenaiChatHelper
   authorize_resource class: false
