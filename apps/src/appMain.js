@@ -97,7 +97,6 @@ export default function (app, levels, options) {
         ...levelCustomBlocksConfig,
       ];
       if (customBlocksConfig.length > 0) {
-        console.log({customBlocksConfig: customBlocksConfig});
         const blocksByCategory = installCustomBlocks({
           blockly: Blockly,
           blockDefinitions: customBlocksConfig,

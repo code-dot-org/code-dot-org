@@ -173,8 +173,12 @@ export const blocks = {
                 input => input.name === 'flyout_input'
               );
               if (inputs.length > 0) {
+                const flyoutWorkspace =
+                  inputs[0].fieldRow[0]?.flyout_?.workspace_;
                 if (
-                  inputs[0]?.fieldRow[0]?.flyout_?.workspace_
+                  flyoutWorkspace &&
+                  flyoutWorkspace.id === this.workspace.id &&
+                  flyoutWorkspace
                     .getAllBlocks()
                     .filter(block => block.id === this.id).length > 0
                 ) {
@@ -184,14 +188,10 @@ export const blocks = {
             });
           }
           if (parent) {
-            console.log(`changing shadowed image`);
-            console.log({event: event, parent: parent, child: this});
             changeShadowedImage(parent, this, pointerData.imageIndex);
           } else {
             // the block is probably disconnected from the root or toolbox. Reset to
             // default text.
-            console.log(`resetting shadowed image`);
-            console.log({event: event, child: this});
             resetShadowedImageToLongString(this);
           }
         }

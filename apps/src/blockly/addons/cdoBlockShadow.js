@@ -8,11 +8,6 @@ export function changeShadowedImage(
     [
       imageIndexOnParent
     ]?.inputList[0]?.fieldRow[0]?.imageElement_?.getAttribute('xlink:href');
-  console.log({
-    imageUrl: imageUrl,
-    childBlock: childBlock,
-    parentBlock: parentBlock,
-  });
   if (!imageUrl) {
     resetShadowedImageToLongString(childBlock);
   }
