@@ -7,6 +7,7 @@ export default function EvidenceDescriptionsRow({isAiEnabled, evidenceLabel}) {
       <label style={styles.gridLabels}>{evidenceLabel}</label>
       <textarea style={styles.textareaBoxes} />
       <textarea
+        className={'ui-test-ai-prompt-textbox'}
         style={styles.textareaBoxes}
         disabled={!isAiEnabled}
         required={isAiEnabled}

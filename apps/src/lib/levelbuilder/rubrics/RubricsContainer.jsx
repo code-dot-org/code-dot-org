@@ -15,9 +15,16 @@ export default function RubricsContainer({unit, lesson}) {
   const renderLearningGoalItems = learningGoalList.map(goal => (
     <LearningGoalItem
       deleteItem={() => deleteKeyConcept(goal.id)}
-      id={goal.id}
+      key={goal.id}
     />
   ));
+
+  const deleteKeyConcept = id => {
+    var updatedLearningGoalList = learningGoalList.filter(
+      item => item.id !== id
+    );
+    setLearningGoalList(updatedLearningGoalList);
+  };
 
   const addNewConceptHandler = event => {
     // temporary tool for creating unique Ids
@@ -29,14 +36,6 @@ export default function RubricsContainer({unit, lesson}) {
     setLearningGoalList(oldList => {
       return [...oldList, {id: updatedId}];
     });
-  };
-
-  const deleteKeyConcept = id => {
-    var updatedLearningGoalList = learningGoalList.filter(
-      item => item.id !== id
-    );
-    console.log('updated list = ' + updatedLearningGoalList);
-    setLearningGoalList(updatedLearningGoalList);
   };
 
   return (
@@ -69,6 +68,7 @@ export default function RubricsContainer({unit, lesson}) {
           size={Button.ButtonSize.narrow}
           icon="plus-circle"
           iconClassName="fa fa-plus-circle"
+          id="ui-test-add-new-concept-button"
         />
         <Button
           color={Button.ButtonColor.orange}

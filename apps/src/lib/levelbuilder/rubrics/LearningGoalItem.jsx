@@ -5,7 +5,7 @@ import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import EvidenceDescriptions from './EvidenceDescriptions';
 import Button from '../../../templates/Button';
 
-export default function LearningGoalItem({deleteItem, id}) {
+export default function LearningGoalItem({deleteItem}) {
   const [aiEnabled, setAiEnabled] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -50,6 +50,7 @@ export default function LearningGoalItem({deleteItem, id}) {
           onClick={() => deleteItem()}
           icon="trash"
           iconClassName="fa-trash"
+          className="ui-test-delete-concept-button"
         />
       </div>
     </div>
@@ -57,8 +58,6 @@ export default function LearningGoalItem({deleteItem, id}) {
 }
 
 LearningGoalItem.propTypes = {
-  checked: PropTypes.bool,
-  id: PropTypes.number,
   deleteItem: PropTypes.func,
 };
 
