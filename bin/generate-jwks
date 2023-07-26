@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
-# This script is used to generate new JSON Web Keys (JWK) to be added to the
+# This script is meant to be run locally on a dev machine (not a server), and it
+# is used to generate new JSON Web Keys (JWK) to be added to the
 # JSON Web Key Set (JWKS) exposed at /oauth/jwks. It generates both the public
 # key and the private key. The public key will be added to the JWKS in
 # dashboard/public/oauth/jwks.json. It will print the private key and
