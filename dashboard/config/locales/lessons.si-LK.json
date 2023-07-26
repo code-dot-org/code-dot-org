@@ -2,128 +2,77 @@
   "si-LK": {
     "data": {
       "lessons": {
-        "flappy/Flappy Code": {
-          "name": "ෆ්ලැපි කේතය"
+        "csd2-2017/Lists": {
+          "name": "ලැයිස්තු"
         },
-        "hourofcode/Maze": {
-          "name": "පැටලිලි සහිත මාර්ගය"
-        },
-        "frozen/Artist": {
-          "name": "ඇනා සහ එල්සා සමඟ කේතනය කරන්න"
-        },
-        "iceage/Ice Age Play Lab": {
-          "name": "අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය"
-        },
-        "artist/Artist": {
-          "name": "කලාකරු"
-        },
-        "gumball/Gumball Play Lab": {
-          "name": "ගම්බෝල් ක්‍රීඩා විද්‍යාගාරය"
-        },
-        "starwars/Hour of Code 2015": {
-          "name": "Star Wars: කේත හරහා මන්දාකිනිය ගොඩනගන්න (JavaScript)"
-        },
-        "mc/Hour of Code 2015": {
-          "name": "Minecraft Hour of Code"
-        },
-        "playlab/Play Lab": {
-          "name": "ක්‍රීඩා පරීක්ෂණාගාරය"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "name": "ඩිස්නි අසීමිත ක්‍රීඩා විද්‍යාගාරය"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "පැයේ කේතය 2013"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "ලූපයන්"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "වැඩසටහන්"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "කන්ඩිෂනලස්"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "විචල්‍යන්"
         },
-        "k5-onlinepd-2019/For Loops": {
-          "name": "ලූපයන් සඳහා"
+        "csd3-2017/Conditionals": {
+          "name": "කන්ඩිෂනලස්"
         },
-        "K5-OnlinePD/Next Steps": {
-          "name": "ඉදිරි පියවර"
+        "csd3-2017/Functions": {
+          "name": "ශ්‍රිතයන්"
         },
-        "netsim/Overview and Setup Instructions": {
-          "name": "දළ විශ්ලේෂණය සහ පිහිටුවීමේ උපදෙස්"
+        "csd6-2017/Functions with Parameters_": {
+          "name": "පරාමිතියන් සහිත ශ්‍රිත"
         },
-        "netsim/Broadcasting messages": {
-          "name": "ප්‍රචාරණ පණිවිඩ"
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න"
         },
-        "netsim/Manual DNS": {
-          "name": "හස්තීය DNS"
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න"
         },
-        "netsim/Automatic DNS node": {
-          "name": "ස්වයංක්‍රීය DNS නෝඩුව"
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල"
         },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "අන්තර්ජාල සමාකෘති නිදහස්ව ක්‍රීඩා කිරීම"
+        "coursed-2017/Nested Loops": {
+          "name": "නැවත නැවත සිදුවන ලුප"
         },
-        "kodea-pd-2021/Next Steps": {
-          "name": "ඉදිරි පියවර"
+        "coursee-2017/Building a Foundation": {
+          "name": "පදනමක් තැනීම"
         },
-        "coursed-2022/Graph Paper Programming": {
-          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        "coursee-2017/Nested Loops": {
+          "name": "නැවත නැවත සිදුවන ලුප"
         },
-        "coursed-2022/Relay Programming": {
-          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        "coursef-2017/Building a Foundation": {
+          "name": "පදනමක් තැනීම"
         },
-        "coursed-2022/Conditionals with Cards": {
-          "name": "කාඩ්පත් සමඟ කොන්දේසික"
+        "express-2017/Introduction": {
+          "name": "හැදින්වීම"
         },
-        "coursef-2022/The Internet": {
-          "name": "අන්තර්ජාලය"
+        "express-2017/Building a Foundation": {
+          "name": "පදනමක් තැනීම"
         },
-        "coursee-2022/Songwriting": {
-          "name": "ගීත ලිවීම"
+        "express-2017/Nested Loops": {
+          "name": "නැවත නැවත සිදුවන ලුප"
         },
-        "courseb-2022/Move It, Move It": {
-          "name": "එය ගෙන යන්න, ගෙන යන්න"
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න"
         },
-        "courseb-2022/Getting Loopy": {
-          "name": "ඔල්මාද වීම"
+        "pre-express-2017/Spelling Bee": {
+          "name": "අක්ෂර වින්‍යාස බඹරා"
         },
-        "coursea-2022/Happy Maps": {
+        "csd2-2018/Lists": {
+          "name": "ලැයිස්තු"
+        },
+        "csd3-2018/Variables": {
+          "name": "විචල්‍යන්"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "කන්ඩිෂනලස්"
+        },
+        "csd3-2018/Functions": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "පරාමිතියන් සහිත ශ්‍රිත"
+        },
+        "coursea-2018/Programming: Happy Maps": {
           "name": "සතුටු සිතියම්"
         },
-        "coursec-2022/The Big Event": {
-          "name": "විශාල සිදුවීම"
-        },
-        "coursec-2022/Binary Bracelets": {
-          "name": "ද්විමය වළලු"
-        },
-        "csd3-2022/Variables": {
-          "name": "විචල්‍යන්"
-        },
-        "csd3-2022/Text": {
-          "name": "පෙළ"
-        },
-        "csd3-2022/Conditionals": {
-          "name": "කන්ඩිෂනලස්"
-        },
-        "csd3-2022/Functions": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "csd6-2022/Functions": {
-          "name": "ශ්‍රිතයන්"
+        "coursea-2018/Going Places Safely": {
+          "name": "තැන්වලට සුරක්ෂිතව යාම"
         },
         "courseb-2018/Move It, Move It": {
           "name": "එය ගෙන යන්න, ගෙන යන්න"
@@ -131,11 +80,17 @@
         "courseb-2018/Your Digital Footprint": {
           "name": "ඔබේ ඩිජිටල් පා සටහන"
         },
-        "coursea-2018/Programming: Happy Maps": {
-          "name": "සතුටු සිතියම්"
+        "coursec-2018/Building a Foundation": {
+          "name": "පදනමක් තැනීම"
         },
-        "coursea-2018/Going Places Safely": {
-          "name": "තැන්වලට සුරක්ෂිතව යාම"
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "ඔල්මාද වීම"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "විශාල සිදුවීම"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "ද්විමය වළලු"
         },
         "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "ප්‍රස්තාර රටා වැඩසටහන්"
@@ -151,6 +106,24 @@
         },
         "coursed-2018/Unplugged: Binary": {
           "name": "ද්විමය පින්තූර"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "මගේ රොබෝ මිතුරන්"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "පදනමක් තැනීම"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "ගීත ලිවීම"
+        },
+        "coursee-2018/Internet": {
+          "name": "අන්තර්ජාලය"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Crowdsourcing වැඩසටහන"
         },
         "coursef-2018/Programming: My Robotic Friends": {
           "name": "මගේ රොබෝ මිතුරන්"
@@ -203,36 +176,6 @@
         "express-2018/Crowdsourcing": {
           "name": "Crowdsourcing වැඩසටහන"
         },
-        "coursee-2018/Programming: My Robotic Friends": {
-          "name": "මගේ රොබෝ මිතුරන්"
-        },
-        "coursee-2018/Building a Foundation": {
-          "name": "පදනමක් තැනීම"
-        },
-        "coursee-2018/Conditionals with Cards": {
-          "name": "කාඩ්පත් සමඟ කොන්දේසික"
-        },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "ගීත ලිවීම"
-        },
-        "coursee-2018/Internet": {
-          "name": "අන්තර්ජාලය"
-        },
-        "coursee-2018/Crowdsourcing": {
-          "name": "Crowdsourcing වැඩසටහන"
-        },
-        "coursec-2018/Building a Foundation": {
-          "name": "පදනමක් තැනීම"
-        },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "ඔල්මාද වීම"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "විශාල සිදුවීම"
-        },
-        "coursec-2018/Binary Bracelets": {
-          "name": "ද්විමය වළලු"
-        },
         "pre-express-2018/Move It, Move It": {
           "name": "එය ගෙන යන්න, ගෙන යන්න"
         },
@@ -242,20 +185,20 @@
         "pre-express-2018/Spelling Bee": {
           "name": "අක්ෂර වින්‍යාස බඹරා"
         },
-        "csd3-2018/Variables": {
+        "csd2-2019/Lists": {
+          "name": "ලැයිස්තු"
+        },
+        "csd3-2019/Variables": {
           "name": "විචල්‍යන්"
         },
-        "csd3-2018/Conditionals": {
+        "csd3-2019/Conditionals": {
           "name": "කන්ඩිෂනලස්"
         },
-        "csd3-2018/Functions": {
+        "csd3-2019/Functions": {
           "name": "ශ්‍රිතයන්"
         },
-        "csd6-2018/Functions with Parameters": {
+        "csd6-2019/Functions with Parameters": {
           "name": "පරාමිතියන් සහිත ශ්‍රිත"
-        },
-        "csd2-2018/Lists": {
-          "name": "ලැයිස්තු"
         },
         "coursea-2019/Going Places Safely": {
           "name": "තැන්වලට සුරක්ෂිතව යාම"
@@ -272,6 +215,12 @@
         "courseb-2019/Loops: Getting Loopy": {
           "name": "ඔල්මාද වීම"
         },
+        "coursec-2019/Binary Bracelets": {
+          "name": "ද්විමය වළලු"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "විශාල සිදුවීම"
+        },
         "coursed-2019/Algorithms: Graph Paper Programming": {
           "name": "ප්‍රස්තාර රටා වැඩසටහන්"
         },
@@ -287,6 +236,9 @@
         "coursed-2019/Digital Citizenship": {
           "name": "ඩිජිටල් පුරවැසිකම"
         },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "ගීත ලිවීම"
+        },
         "coursef-2019/Envelope Variables": {
           "name": "ආවරණය කරන ලද විචල්‍ය"
         },
@@ -299,149 +251,221 @@
         "coursef-2019/Crowdsourcing": {
           "name": "Crowdsourcing වැඩසටහන"
         },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "ගීත ලිවීම"
-        },
-        "coursec-2019/Binary Bracelets": {
-          "name": "ද්විමය වළලු"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "විශාල සිදුවීම"
-        },
         "pre-express-2019/Spelling Bee": {
           "name": "අක්ෂර වින්‍යාස බඹරා"
         },
-        "csd3-2019/Variables": {
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "සතුටු සිතියම්"
+        },
+        "courseb-2020/Move It, Move It": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "ඔල්මාද වීම"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "ද්විමය වළලු"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "විශාල සිදුවීම"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "ද්විමය පින්තූර"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "ගීත ලිවීම"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "ආවරණය කරන ලද විචල්‍ය"
+        },
+        "coursef-2020/Internet": {
+          "name": "අන්තර්ජාලය"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "For ලුපයේ සතුට"
+        },
+        "csd3-2021/Variables": {
           "name": "විචල්‍යන්"
         },
-        "csd3-2019/Conditionals": {
+        "csd3-2021/Text": {
+          "name": "පෙළ"
+        },
+        "csd3-2021/Conditionals": {
           "name": "කන්ඩිෂනලස්"
         },
-        "csd3-2019/Functions": {
+        "csd3-2021/Functions": {
           "name": "ශ්‍රිතයන්"
         },
-        "csd6-2019/Functions with Parameters": {
+        "csd6-2021/Functions with Parameters": {
           "name": "පරාමිතියන් සහිත ශ්‍රිත"
         },
-        "csd2-2019/Lists": {
-          "name": "ලැයිස්තු"
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "සතුටු සිතියම්"
         },
-        "coursef-2017/Building a Foundation": {
-          "name": "පදනමක් තැනීම"
+        "courseb-2021/Move It, Move It": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න"
         },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න"
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "ඔල්මාද වීම"
         },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න"
+        "coursec-2021/Events: The Big Event": {
+          "name": "විශාල සිදුවීම"
         },
-        "pre-express-2017/Spelling Bee": {
-          "name": "අක්ෂර වින්‍යාස බඹරා"
+        "coursec-2021/Binary Bracelets": {
+          "name": "ද්විමය වළලු"
         },
-        "coursee-2017/Building a Foundation": {
-          "name": "පදනමක් තැනීම"
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
         },
-        "coursee-2017/Nested Loops": {
-          "name": "නැවත නැවත සිදුවන ලුප"
+        "coursed-2021/Relay Programming": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
         },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල"
+        "coursed-2021/Conditionals with Cards": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික"
         },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න"
+        "coursee-2021/Functions: Songwriting": {
+          "name": "ගීත ලිවීම"
         },
-        "coursed-2017/Nested Loops": {
-          "name": "නැවත නැවත සිදුවන ලුප"
+        "coursef-2021/For Loop Fun": {
+          "name": "For ලුපයේ සතුට"
         },
-        "express-2017/Introduction": {
-          "name": "හැදින්වීම"
+        "coursef-2021/Internet": {
+          "name": "අන්තර්ජාලය"
         },
-        "express-2017/Building a Foundation": {
-          "name": "පදනමක් තැනීම"
-        },
-        "express-2017/Nested Loops": {
-          "name": "නැවත නැවත සිදුවන ලුප"
-        },
-        "csd3-2017/Variables": {
+        "csd3-2022/Variables": {
           "name": "විචල්‍යන්"
         },
-        "csd3-2017/Conditionals": {
+        "csd3-2022/Text": {
+          "name": "පෙළ"
+        },
+        "csd3-2022/Conditionals": {
           "name": "කන්ඩිෂනලස්"
         },
-        "csd3-2017/Functions": {
+        "csd3-2022/Functions": {
           "name": "ශ්‍රිතයන්"
         },
-        "csd6-2017/Functions with Parameters_": {
-          "name": "පරාමිතියන් සහිත ශ්‍රිත"
+        "csd6-2022/Functions": {
+          "name": "ශ්‍රිතයන්"
         },
-        "csd2-2017/Lists": {
-          "name": "ලැයිස්තු"
+        "coursea-2022/Happy Maps": {
+          "name": "සතුටු සිතියම්"
         },
-        "course4/Unplugged: Tangrams": {
-          "name": "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: Tangrams"
+        "courseb-2022/Move It, Move It": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න"
         },
-        "course4/Maze and Bee": {
-          "name": "අවුල් ජාලය සහ බඹරා"
+        "courseb-2022/Getting Loopy": {
+          "name": "ඔල්මාද වීම"
         },
-        "course4/Artist": {
+        "coursec-2022/The Big Event": {
+          "name": "විශාල සිදුවීම"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "ද්විමය වළලු"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "ගීත ලිවීම"
+        },
+        "coursef-2022/The Internet": {
+          "name": "අන්තර්ජාලය"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "පැයේ කේතය 2013"
+        },
+        "artist/Artist": {
           "name": "කලාකරු"
         },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ආවරණය කරන ලද විචල්‍යන්"
+        "flappy/Flappy Code": {
+          "name": "ෆ්ලැපි කේතය"
         },
-        "course4/Unplugged: Madlibs": {
-          "name": "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: Madlibs"
+        "frozen/Artist": {
+          "name": "ඇනා සහ එල්සා සමඟ කේතනය කරන්න"
         },
-        "course4/Artist: Variables": {
-          "name": "කලාකරු: විචල්‍ය"
+        "gumball/Gumball Play Lab": {
+          "name": "ගම්බෝල් ක්‍රීඩා විද්‍යාගාරය"
         },
-        "course4/Play Lab: Variables": {
-          "name": "ක්‍රීඩා විද්‍යාගාරය: විචල්‍යන්"
+        "hourofcode/Maze": {
+          "name": "පැටලිලි සහිත මාර්ගය"
         },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: For Loop සෙල්ලම"
+        "iceage/Ice Age Play Lab": {
+          "name": "අයිස් ඒජ් ක්‍රීඩා විද්‍යාගාරය"
         },
-        "course4/Bee: For Loops": {
-          "name": "බඹරා: ලූපයන් සඳහා"
+        "infinity/Infinity": {
+          "name": "ඩිස්නි අසීමිත ක්‍රීඩා විද්‍යාගාරය"
         },
-        "course4/Artist: For Loops": {
-          "name": "කලාකරු: ලූපයන් සඳහා"
+        "mc/Hour of Code 2015": {
+          "name": "Minecraft Hour of Code"
         },
-        "course4/Play Lab: For Loops": {
-          "name": "ක්‍රීඩා පරීක්ෂණාගාරය: ලූපයන් සඳහා"
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
-        "course4/Artist: Functions": {
-          "name": "කලාකරු: ශ්‍රිත"
+        "playlab/Play Lab": {
+          "name": "ක්‍රීඩා පරීක්ෂණාගාරය"
         },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: පරාමිතීන් සමඟ ගීත ලිවීම"
+        "starwars/Hour of Code 2015": {
+          "name": "Star Wars: කේත හරහා මන්දාකිනිය ගොඩනගන්න (JavaScript)"
         },
-        "course4/Artist: Functions with Parameters": {
-          "name": "කලාකරු: පරාමිතියන් සහිත ශ්‍රිත"
+        "netsim/Overview and Setup Instructions": {
+          "name": "දළ විශ්ලේෂණය සහ පිහිටුවීමේ උපදෙස්"
         },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "ක්‍රීඩා පරීක්ෂණාගාරය: පරාමිතියන් සහිත ශ්‍රිත"
+        "netsim/Broadcasting messages": {
+          "name": "ප්‍රචාරණ පණිවිඩ"
         },
-        "course4/Bee: Functions with Parameters": {
-          "name": "බඹරා: පරාමිතියන් සහිත ශ්‍රිත"
+        "netsim/Manual DNS": {
+          "name": "හස්තීය DNS"
         },
-        "course4/Unplugged: Binary": {
-          "name": "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ද්විමය සංඛ්‍යා"
+        "netsim/Automatic DNS node": {
+          "name": "ස්වයංක්‍රීය DNS නෝඩුව"
         },
-        "course4/Artist Binary": {
-          "name": "කලාකරු ද්විමය"
+        "netsim/Internet Simulator Freeplay": {
+          "name": "අන්තර්ජාල සමාකෘති නිදහස්ව ක්‍රීඩා කිරීම"
         },
-        "course4/Super Challenge - Variables": {
-          "name": "සුපිරි අභියෝගය - විචල්‍යන්"
+        "allthethings/Jigsaw": {
+          "name": "පින්තූර ප්‍රෙහේලිකාව"
         },
-        "course4/Super Challenge - For Loops": {
-          "name": "සුපිරි අභියෝගය - For loops"
+        "allthethings/Maze": {
+          "name": "පැටලිලි සහිත මාර්ගය"
         },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "සුපිරි අභියෝගය - පරාමිතියන් සහ ශ්‍රිත"
+        "allthethings/Artist": {
+          "name": "කලාකරු"
         },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "දැඩි අභියෝගය - පුළුල්"
+        "allthethings/Flappy": {
+          "name": "ෆ්ලැපි"
+        },
+        "allthethings/Bounce": {
+          "name": "Bounce"
+        },
+        "allthethings/Multi": {
+          "name": "බහුවිධ"
+        },
+        "allthethings/Match": {
+          "name": "ගළපන්න"
+        },
+        "allthethings/Studio": {
+          "name": "ස්ටූඩියෝව"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "පරිඝණක විද්‍යාව හැදින්වීම"
@@ -502,6 +526,60 @@
         },
         "20-hour/Wrap-up": {
           "name": "වෙළනවා"
+        },
+        "course1/Happy Maps": {
+          "name": "සතුටු සිතියම්"
+        },
+        "course1/Move it, Move it": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "පින්තූර ප්‍රෙහේලිකාව: ඇදගෙන ගොස් දැමීමට පුරුදු වන්න"
+        },
+        "course1/Maze: Sequence": {
+          "name": "අවුල් ජාලය: අනුක්‍රමය"
+        },
+        "course1/Maze: Debugging": {
+          "name": "නි‍දොස් කිරීම"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න"
+        },
+        "course1/Bee: Sequence": {
+          "name": "බඹරා: අනුක්‍රමය"
+        },
+        "course1/Artist: Sequence": {
+          "name": "කලාකරු: අනුක්‍රමය"
+        },
+        "course1/Building a Foundation": {
+          "name": "පදනමක් තැනීම"
+        },
+        "course1/Artist: Shapes": {
+          "name": "කලාකරු: හැඩයන්"
+        },
+        "course1/Spelling Bee": {
+          "name": "අක්ෂර වින්‍යාස බඹරා"
+        },
+        "course1/Getting Loopy": {
+          "name": "ඔල්මාද වීම"
+        },
+        "course1/Maze: Loops": {
+          "name": "අවුල් ජාලය: ලූපයන්"
+        },
+        "course1/Bee: Loops": {
+          "name": "බඹරා: ලූපයන්"
+        },
+        "course1/The Big Event": {
+          "name": "විශාල සිදුවීම"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "ක්‍රීඩා විද්‍යාගාරය: කථාවක් සාදන්න"
+        },
+        "course1/Going Places Safely": {
+          "name": "තැන්වලට සුරක්ෂිතව යාම"
+        },
+        "course1/Artist: Loops": {
+          "name": "කලාකරු: ලූපයන්"
         },
         "course2/Graph Paper Programming": {
           "name": "ප්‍රස්තාර රටා වැඩසටහන්"
@@ -623,176 +701,74 @@
         "course3/Artist: Patterns": {
           "name": "කලාකරු: රටා"
         },
-        "course1/Happy Maps": {
-          "name": "සතුටු සිතියම්"
+        "course4/Unplugged: Tangrams": {
+          "name": "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: Tangrams"
         },
-        "course1/Move it, Move it": {
-          "name": "එය ගෙන යන්න, ගෙන යන්න"
+        "course4/Maze and Bee": {
+          "name": "අවුල් ජාලය සහ බඹරා"
         },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "පින්තූර ප්‍රෙහේලිකාව: ඇදගෙන ගොස් දැමීමට පුරුදු වන්න"
+        "course4/Artist": {
+          "name": "කලාකරු"
         },
-        "course1/Maze: Sequence": {
-          "name": "අවුල් ජාලය: අනුක්‍රමය"
+        "course4/Unplugged: Envelope Variables": {
+          "name": "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ආවරණය කරන ලද විචල්‍යන්"
         },
-        "course1/Maze: Debugging": {
-          "name": "නි‍දොස් කිරීම"
+        "course4/Unplugged: Madlibs": {
+          "name": "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: Madlibs"
         },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න"
+        "course4/Artist: Variables": {
+          "name": "කලාකරු: විචල්‍ය"
         },
-        "course1/Bee: Sequence": {
-          "name": "බඹරා: අනුක්‍රමය"
+        "course4/Play Lab: Variables": {
+          "name": "ක්‍රීඩා විද්‍යාගාරය: විචල්‍යන්"
         },
-        "course1/Artist: Sequence": {
-          "name": "කලාකරු: අනුක්‍රමය"
+        "course4/Unplugged: For Loop Fun": {
+          "name": "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: For Loop සෙල්ලම"
         },
-        "course1/Building a Foundation": {
-          "name": "පදනමක් තැනීම"
+        "course4/Bee: For Loops": {
+          "name": "බඹරා: ලූපයන් සඳහා"
         },
-        "course1/Artist: Shapes": {
-          "name": "කලාකරු: හැඩයන්"
+        "course4/Artist: For Loops": {
+          "name": "කලාකරු: ලූපයන් සඳහා"
         },
-        "course1/Spelling Bee": {
-          "name": "අක්ෂර වින්‍යාස බඹරා"
+        "course4/Play Lab: For Loops": {
+          "name": "ක්‍රීඩා පරීක්ෂණාගාරය: ලූපයන් සඳහා"
         },
-        "course1/Getting Loopy": {
-          "name": "ඔල්මාද වීම"
+        "course4/Artist: Functions": {
+          "name": "කලාකරු: ශ්‍රිත"
         },
-        "course1/Maze: Loops": {
-          "name": "අවුල් ජාලය: ලූපයන්"
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: පරාමිතීන් සමඟ ගීත ලිවීම"
         },
-        "course1/Bee: Loops": {
-          "name": "බඹරා: ලූපයන්"
+        "course4/Artist: Functions with Parameters": {
+          "name": "කලාකරු: පරාමිතියන් සහිත ශ්‍රිත"
         },
-        "course1/The Big Event": {
-          "name": "විශාල සිදුවීම"
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "ක්‍රීඩා පරීක්ෂණාගාරය: පරාමිතියන් සහිත ශ්‍රිත"
         },
-        "course1/Studio: Create a Story": {
-          "name": "ක්‍රීඩා විද්‍යාගාරය: කථාවක් සාදන්න"
+        "course4/Bee: Functions with Parameters": {
+          "name": "බඹරා: පරාමිතියන් සහිත ශ්‍රිත"
         },
-        "course1/Going Places Safely": {
-          "name": "තැන්වලට සුරක්ෂිතව යාම"
+        "course4/Unplugged: Binary": {
+          "name": "පරිගණක අවශ්‍ය නැති අභ්‍යාසයක්: ද්විමය සංඛ්‍යා"
         },
-        "course1/Artist: Loops": {
-          "name": "කලාකරු: ලූපයන්"
+        "course4/Artist Binary": {
+          "name": "කලාකරු ද්විමය"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "සුපිරි අභියෝගය - විචල්‍යන්"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "සුපිරි අභියෝගය - For loops"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "සුපිරි අභියෝගය - පරාමිතියන් සහ ශ්‍රිත"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "දැඩි අභියෝගය - පුළුල්"
         },
         "jigsaw/Jigsaw": {
           "name": "පින්තූර ප්‍රෙහේලිකාව"
-        },
-        "allthethings/Jigsaw": {
-          "name": "පින්තූර ප්‍රෙහේලිකාව"
-        },
-        "allthethings/Maze": {
-          "name": "පැටලිලි සහිත මාර්ගය"
-        },
-        "allthethings/Artist": {
-          "name": "කලාකරු"
-        },
-        "allthethings/Flappy": {
-          "name": "ෆ්ලැපි"
-        },
-        "allthethings/Bounce": {
-          "name": "Bounce"
-        },
-        "allthethings/Multi": {
-          "name": "බහුවිධ"
-        },
-        "allthethings/Match": {
-          "name": "ගළපන්න"
-        },
-        "allthethings/Studio": {
-          "name": "ස්ටූඩියෝව"
-        },
-        "allthethings/Minecraft": {
-          "name": "Minecraft"
-        },
-        "coursef-2021/For Loop Fun": {
-          "name": "For ලුපයේ සතුට"
-        },
-        "coursef-2021/Internet": {
-          "name": "අන්තර්ජාලය"
-        },
-        "courseb-2021/Move It, Move It": {
-          "name": "එය ගෙන යන්න, ගෙන යන්න"
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "name": "ඔල්මාද වීම"
-        },
-        "coursea-2021/Programming: Happy Maps": {
-          "name": "සතුටු සිතියම්"
-        },
-        "coursec-2021/Events: The Big Event": {
-          "name": "විශාල සිදුවීම"
-        },
-        "coursec-2021/Binary Bracelets": {
-          "name": "ද්විමය වළලු"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
-        },
-        "coursed-2021/Conditionals with Cards": {
-          "name": "කාඩ්පත් සමඟ කොන්දේසික"
-        },
-        "coursee-2021/Functions: Songwriting": {
-          "name": "ගීත ලිවීම"
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "පරාමිතියන් සහිත ශ්‍රිත"
-        },
-        "csd3-2021/Variables": {
-          "name": "විචල්‍යන්"
-        },
-        "csd3-2021/Text": {
-          "name": "පෙළ"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "කන්ඩිෂනලස්"
-        },
-        "csd3-2021/Functions": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "courseb-2020/Move It, Move It": {
-          "name": "එය ගෙන යන්න, ගෙන යන්න"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
-          "name": "ඔල්මාද වීම"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
-        },
-        "coursed-2020/Conditionals with Cards": {
-          "name": "කාඩ්පත් සමඟ කොන්දේසික"
-        },
-        "coursed-2020/Unplugged: Binary": {
-          "name": "ද්විමය පින්තූර"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "ද්විමය වළලු"
-        },
-        "coursec-2020/Events: The Big Event": {
-          "name": "විශාල සිදුවීම"
-        },
-        "coursee-2020/Functions: Songwriting": {
-          "name": "ගීත ලිවීම"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "සතුටු සිතියම්"
-        },
-        "coursef-2020/Envelope Variables": {
-          "name": "ආවරණය කරන ලද විචල්‍ය"
-        },
-        "coursef-2020/Internet": {
-          "name": "අන්තර්ජාලය"
-        },
-        "coursef-2020/For Loop Fun": {
-          "name": "For ලුපයේ සතුට"
         }
       }
     }

@@ -11,6 +11,12 @@
         "CSD U3 Variables Predict Where X_2019": {
           "CSD_U3_variables": "Vaihda numeroa tässä"
         },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Vaihda numeroa tässä"
+        },
+        "CSD U3 Variables Predict Where X_2022": {
+          "CSD_U3_variables": "Vaihda numeroa tässä"
+        },
         "CSD U3 debug": {
           "CSD_U3_rect_c1": "Tässä on koodi"
         },
@@ -18,6 +24,42 @@
           "CSD_U3_rect_c1": "Tässä on koodi"
         },
         "CSD U3 debug_2019": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 drawing practice 3_2022": {
           "CSD_U3_rect_c1": "Tässä on koodi"
         },
         "CSD U3 ellipse": {
@@ -29,6 +71,12 @@
         "CSD U3 ellipse_2019": {
           "CSD_U3_rect_c1": "Tässä on koodi"
         },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
         "CSD U3 fill": {
           "CSD_U3_rect_c1": "Tässä on koodi"
         },
@@ -36,6 +84,24 @@
           "CSD_U3_rect_c1": "Tässä on koodi"
         },
         "CSD U3 fill_2019": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 properties tint_2022": {
           "CSD_U3_rect_c1": "Tässä on koodi"
         },
         "CSD U3 rect": {
@@ -48,6 +114,12 @@
         "CSD U3 rect_2019": {
           "CSD_U3_rect_c1": "Tässä on koodi"
         },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 rect_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
         "CSD U3 sequence": {
           "CSD_U3_rect_c1": "Tässä on koodi"
         },
@@ -56,6 +128,60 @@
         },
         "CSD U3 sequence_2019": {
           "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Vaihda numeroa tässä"
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "Vaihda numeroa tässä"
         },
         "Course 4 Artist 4": {
           "repeat_full_circle": "Syötä se määrä kertoja, jonka zombin pitää liikkua tehdäkseen täysi ympyrä"
@@ -81,6 +207,12 @@
         "Course 4 Artist Vars 8": {
           "Course_4_Artist_Vars_8_a": "Tarvitsetko lisää tilaa?  Vedä tätä palkkia tehdäksesi koodausalueesta laajempi."
         },
+        "Course 4 Bee 1": {
+          "if_bee_nectar": "Käytä \"jos\"-lohkoa päättääksesi pitääkö mehiläisen kerätä nektaria vai tehdä hunajaa"
+        },
+        "Course 4 Bee 3": {
+          "if_else_bee": "Käytä \"jos-muuten\"-lohkoa siten, että mehiläinen kerää mettä kukasta ja tekee hunajaa jos se ei ole kukassa"
+        },
         "Course 4 Bee Params 2": {
           "edit_get_nectar": "Käytä tätä nappia muokataksesi funktiota. Muuta suuntaa, jonne mehiläinen kääntyy keräämään mettä."
         },
@@ -99,23 +231,69 @@
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "Lisää tämä blokki ohjelmaasi!"
         },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Lisää tämä blokki ohjelmaasi!"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Lisää tämä blokki ohjelmaasi!"
+        },
         "CourseD_Dance_2020_02": {
-          "dance_callout_11_a": "Lisää tämä blokki ohjelmaasi.",
-          "arrow_buttons": "Paina nuolinäppäimiä, jotta voit hallita tanssijaasi."
+          "arrow_buttons": "Paina nuolinäppäimiä, jotta voit hallita tanssijaasi.",
+          "dance_callout_11_a": "Lisää tämä blokki ohjelmaasi."
+        },
+        "CourseD_Dance_2020_022022": {
+          "arrow_buttons": "Paina nuolinäppäimiä, jotta voit hallita tanssijaasi.",
+          "dance_callout_11_a": "Lisää tämä blokki ohjelmaasi."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "arrow_buttons": "Paina nuolinäppäimiä, jotta voit hallita tanssijaasi.",
+          "dance_callout_11_a": "Lisää tämä blokki ohjelmaasi."
         },
         "CourseD_Dance_2020_04": {
+          "dance_callout_02": "Lisää tämä blokki ohjelmaasi!"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Lisää tämä blokki ohjelmaasi!"
+        },
+        "CourseD_Dance_2020_04_2021": {
           "dance_callout_02": "Lisää tämä blokki ohjelmaasi!"
         },
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "Lisää uusi tapahtuma ohjelmaan."
         },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Lisää uusi tapahtuma ohjelmaan."
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Lisää uusi tapahtuma ohjelmaan."
+        },
         "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Uusi blokki!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Uusi blokki!"
+        },
+        "CourseD_Dance_2020_06_2021": {
           "dance_party_11_5_groups": "Uusi blokki!"
         },
         "CourseD_Dance_2020_07": {
           "setprop_hint": "Uusi blokki!"
         },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Uusi blokki!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Uusi blokki!"
+        },
         "CourseD_Dance_2020_09": {
+          "new_block_3": "Uusi blokki!",
+          "new_block_4": "Uusi blokki!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Uusi blokki!",
+          "new_block_4": "Uusi blokki!"
+        },
+        "CourseD_Dance_2020_09_2021": {
           "new_block_3": "Uusi blokki!",
           "new_block_4": "Uusi blokki!"
         },
@@ -142,8 +320,8 @@
           "dance_callout_01": "Lisää tämä blokki ohjelmaasi!"
         },
         "Dance_2019_02": {
-          "dance_callout_11_a": "Lisää tämä blokki ohjelmaasi.",
-          "arrow_buttons": "Paina nuolinäppäimiä, jotta voit hallita tanssijaasi."
+          "arrow_buttons": "Paina nuolinäppäimiä, jotta voit hallita tanssijaasi.",
+          "dance_callout_11_a": "Lisää tämä blokki ohjelmaasi."
         },
         "Dance_2019_04": {
           "dance_callout_02": "Lisää tämä blokki ohjelmaasi!"
@@ -183,10 +361,16 @@
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen samannimistä koodia työtilassa."
         },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen samannimistä koodia työtilassa."
+        },
         "Function intro Ryan_2019": {
           "Function_intro_Ryan_1": "Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen samannimistä koodia työtilassa."
         },
         "Function intro Ryan_2020": {
+          "Function_intro_Ryan_1": "Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen samannimistä koodia työtilassa."
+        },
+        "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen samannimistä koodia työtilassa."
         },
         "Infinity_move_collide": {
@@ -202,7 +386,16 @@
         "Infinity_repeat": {
           "Infinity_repeat_callout": "Aseta liikuta lohkoja tänne"
         },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "Paina \"Suorita\" -painiketta suorittaaksesi ohjelman kun olet valmis."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "Paina \"Suorita\" aloittaaksesi liikkumisen."
+        },
         "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_1": "Tämä on toisto-silmukka!  Napsauta sitä työtilassa ja lisää koodia, jota haluat toistaa yhä uudelleen."
+        },
+        "MC_HOC_2017_03_Cole2022": {
           "MC_HOC_2017_03_Cole_1": "Tämä on toisto-silmukka!  Napsauta sitä työtilassa ja lisää koodia, jota haluat toistaa yhä uudelleen."
         },
         "MC_HOC_2017_03_Cole_2019": {
@@ -211,7 +404,13 @@
         "MC_HOC_2017_03_Cole_2020": {
           "MC_HOC_2017_03_Cole_1": "Tämä on toisto-silmukka!  Napsauta sitä työtilassa ja lisää koodia, jota haluat toistaa yhä uudelleen."
         },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Tämä on toisto-silmukka!  Napsauta sitä työtilassa ja lisää koodia, jota haluat toistaa yhä uudelleen."
+        },
         "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Agent voi leijua veden päällä, mutta pelaaja ei!"
+        },
+        "MC_HOC_2017_04_Cole2022": {
           "MC_HOC_2017_04_Cole_a": "Agent voi leijua veden päällä, mutta pelaaja ei!"
         },
         "MC_HOC_2017_04_Cole_2019": {
@@ -220,7 +419,13 @@
         "MC_HOC_2017_04_Cole_2020": {
           "MC_HOC_2017_04_Cole_a": "Agent voi leijua veden päällä, mutta pelaaja ei!"
         },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent voi leijua veden päällä, mutta pelaaja ei!"
+        },
         "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "Et voi heittää näitä kuutioita pois, mutta voit muokata niitä!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
           "MC_HOC_2017_06_Cole_1": "Et voi heittää näitä kuutioita pois, mutta voit muokata niitä!"
         },
         "MC_HOC_2017_06_Cole_2019": {
@@ -229,13 +434,22 @@
         "MC_HOC_2017_06_Cole_2020": {
           "MC_HOC_2017_06_Cole_1": "Et voi heittää näitä kuutioita pois, mutta voit muokata niitä!"
         },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Et voi heittää näitä kuutioita pois, mutta voit muokata niitä!"
+        },
         "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_1": "Agent voi leijua laavan päällä, mutta pelaaja ei!  "
+        },
+        "MC_HOC_2017_Ali2022": {
           "MC_HOC_2017_08_RY_1": "Agent voi leijua laavan päällä, mutta pelaaja ei!  "
         },
         "MC_HOC_2017_Ali_2019": {
           "MC_HOC_2017_08_RY_1": "Agent voi leijua laavan päällä, mutta pelaaja ei!  "
         },
         "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_1": "Agent voi leijua laavan päällä, mutta pelaaja ei!  "
+        },
+        "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "Agent voi leijua laavan päällä, mutta pelaaja ei!  "
         },
         "NEW Course 4 Artist Functions 7": {
@@ -248,8 +462,8 @@
           "create_function": "Napsauta täällä avataksesi \"Toiminnot\" kohta, ja napsauta sitten \"Luo funktio\" -painiketta."
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Lisää funktioosi parametreja napsauttamalla muokkaa",
-          "add_and_drag_parameter": "Kirjoita parametrisi nimi tähän, napsauta lisää ja sitten vedä se funktiosi määrittelyyn"
+          "add_and_drag_parameter": "Kirjoita parametrisi nimi tähän, napsauta lisää ja sitten vedä se funktiosi määrittelyyn",
+          "edit_add_parameter": "Lisää funktioosi parametreja napsauttamalla muokkaa"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "Korvaa kysymysmerkit vetämällä pituusmuuttuja tähän "
@@ -257,10 +471,19 @@
         "NEW Course 4 Bee For Loops 5": {
           "actions_category": "Työkaluilla on uusi ulkoasu! \"Toiminnot\" -lohkot löytyvät nyt täältä."
         },
+        "New Artist Project": {
+          "New Artist Project_callout1": "Klikkaa kategorioita nähdäksesi lohkot työkalupalkissasi. Siirrä lohkoja työtilaan lisätäksesi ne ohjelmaasi."
+        },
         "New Frozen Project": {
           "snowflake_dropdown": "Käytä tätä alasvetovalikkoa luodaksesi erilaisia lumihiutaleita!"
         },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "Klikkaa kategorioita nähdäksesi lohkot työkalupalkissasi. Siirrä lohkoja työtilaan lisätäksesi ne ohjelmaasi."
+        },
         "Overworld Chop Trees": {
+          "craft_callout_preplaced": "Olemme koonneet sinulle muutamia palikoita"
+        },
+        "Overworld Chop Trees2022": {
           "craft_callout_preplaced": "Olemme koonneet sinulle muutamia palikoita"
         },
         "Overworld Chop Trees_2019": {
@@ -269,7 +492,13 @@
         "Overworld Chop Trees_2020": {
           "craft_callout_preplaced": "Olemme koonneet sinulle muutamia palikoita"
         },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Olemme koonneet sinulle muutamia palikoita"
+        },
         "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Tämä koodi aloittaa talosi rakentamisen. Saatko sen viimeisteltyä?"
+        },
+        "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "Tämä koodi aloittaa talosi rakentamisen. Saatko sen viimeisteltyä?"
         },
         "Overworld House Frame Chosen_2019": {
@@ -278,19 +507,33 @@
         "Overworld House Frame Chosen_2020": {
           "craft_callout_preplaced_house": "Tämä koodi aloittaa talosi rakentamisen. Saatko sen viimeisteltyä?"
         },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Tämä koodi aloittaa talosi rakentamisen. Saatko sen viimeisteltyä?"
+        },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]",
-          "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle."
+          "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle.",
+          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle.",
+          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]",
-          "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle."
+          "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle.",
+          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]",
-          "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle."
+          "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle.",
+          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle.",
+          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]"
         },
         "Overworld Place Wall": {
+          "craft_inside_repeat": "Toista toimintoja asettamalla palikoita tänne"
+        },
+        "Overworld Place Wall2022": {
           "craft_inside_repeat": "Toista toimintoja asettamalla palikoita tänne"
         },
         "Overworld Place Wall_2019": {
@@ -299,7 +542,13 @@
         "Overworld Place Wall_2020": {
           "craft_inside_repeat": "Toista toimintoja asettamalla palikoita tänne"
         },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Toista toimintoja asettamalla palikoita tänne"
+        },
         "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö etenemiskomennon?"
+        },
+        "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö etenemiskomennon?"
         },
         "Underground Avoiding Lava_2019": {
@@ -308,13 +557,22 @@
         "Underground Avoiding Lava_2020": {
           "craft_callout_moveforward": "Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö etenemiskomennon?"
         },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö etenemiskomennon?"
+        },
         "Underground Iron": {
+          "craft_what_is_iron": "Louhi tämä rauta!"
+        },
+        "Underground Iron2022": {
           "craft_what_is_iron": "Louhi tämä rauta!"
         },
         "Underground Iron_2019": {
           "craft_what_is_iron": "Louhi tämä rauta!"
         },
         "Underground Iron_2020": {
+          "craft_what_is_iron": "Louhi tämä rauta!"
+        },
+        "Underground Iron_2021": {
           "craft_what_is_iron": "Louhi tämä rauta!"
         },
         "frozen circle function with parameter": {
@@ -358,63 +616,6 @@
         "frozen square snowflake": {
           "replace_questions": "Käytä alasvetovalikkoa ja korvaa \"???\" numerolla"
         },
-        "CourseD_Dance_2020_01_2021": {
-          "dance_callout_01": "Lisää tämä blokki ohjelmaasi!"
-        },
-        "CourseD_Dance_2020_02_2021": {
-          "dance_callout_11_a": "Lisää tämä blokki ohjelmaasi.",
-          "arrow_buttons": "Paina nuolinäppäimiä, jotta voit hallita tanssijaasi."
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "Lisää tämä blokki ohjelmaasi!"
-        },
-        "CourseD_Dance_2020_05_2021": {
-          "dance_callout_05": "Lisää uusi tapahtuma ohjelmaan."
-        },
-        "CourseD_Dance_2020_06_2021": {
-          "dance_party_11_5_groups": "Uusi blokki!"
-        },
-        "CourseD_Dance_2020_07_2021": {
-          "setprop_hint": "Uusi blokki!"
-        },
-        "CourseD_Dance_2020_09_2021": {
-          "new_block_3": "Uusi blokki!",
-          "new_block_4": "Uusi blokki!"
-        },
-        "Function intro Ryan_2021": {
-          "Function_intro_Ryan_1": "Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen samannimistä koodia työtilassa."
-        },
-        "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "Tämä on toisto-silmukka!  Napsauta sitä työtilassa ja lisää koodia, jota haluat toistaa yhä uudelleen."
-        },
-        "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "Agent voi leijua veden päällä, mutta pelaaja ei!"
-        },
-        "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_1": "Et voi heittää näitä kuutioita pois, mutta voit muokata niitä!"
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "MC_HOC_2017_08_RY_1": "Agent voi leijua laavan päällä, mutta pelaaja ei!  "
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "Olemme koonneet sinulle muutamia palikoita"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Tämä koodi aloittaa talosi rakentamisen. Saatko sen viimeisteltyä?"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]",
-          "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle."
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "Toista toimintoja asettamalla palikoita tänne"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö etenemiskomennon?"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "Louhi tämä rauta!"
-        },
         "helloworld_animals_costumes": {
           "hello_world_new": "Uusi blokki!"
         },
@@ -437,11 +638,31 @@
         "helloworld_food_costumes": {
           "hello_world_new": "Uusi blokki!"
         },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Uusi blokki!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Uusi blokki!"
+        },
         "helloworld_food_sizes": {
           "hello_world_new": "Uusi blokki!",
           "hello_world_new_block": "Uusi blokki!"
         },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Uusi blokki!",
+          "hello_world_new_block": "Uusi blokki!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Uusi blokki!",
+          "hello_world_new_block": "Uusi blokki!"
+        },
         "helloworld_food_sounds": {
+          "hello_world_new": "Uusi blokki!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Uusi blokki!"
+        },
+        "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Uusi blokki!"
         },
         "helloworld_retro_costumes": {
@@ -467,237 +688,16 @@
           "poetry_new_block": "Uusi blokki!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Uusi blokki!",
-          "poetry_music": "Uusi blokki!"
+          "poetry_music": "Uusi blokki!",
+          "poetry_sound": "Uusi blokki!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Uusi blokki!",
           "poetry_sprite_stops": "Uusi blokki!"
         },
         "poetry_hoc_spriteSizes": {
-          "poetry_set_sprite": "Uusi blokki!",
-          "poetry_remove_sprite": "Uusi blokki!"
-        },
-        "MC HOC 2016 Level 2-2": {
-          "craft2_run_button_callout": "Paina \"Suorita\" -painiketta suorittaaksesi ohjelman kun olet valmis."
-        },
-        "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "Paina \"Suorita\" aloittaaksesi liikkumisen."
-        },
-        "New Artist Project": {
-          "New Artist Project_callout1": "Klikkaa kategorioita nähdäksesi lohkot työkalupalkissasi. Siirrä lohkoja työtilaan lisätäksesi ne ohjelmaasi."
-        },
-        "New Play Lab Project": {
-          "New Play Lab Project_callout1": "Klikkaa kategorioita nähdäksesi lohkot työkalupalkissasi. Siirrä lohkoja työtilaan lisätäksesi ne ohjelmaasi."
-        },
-        "CSD U3 Variables Predict Where X_2021": {
-          "CSD_U3_variables": "Vaihda numeroa tässä"
-        },
-        "CSD U3 debug_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 drawing challenge 2_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 drawing challenge 3_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 drawing practice 1_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 drawing practice 2_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 drawing practice 3_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 ellipse_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 fill_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 properties depth_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 properties tint_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 rect_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 sequence_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 shapes arc_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 shapes behind_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 shapes line_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 shapes missing_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 shapes polygon_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 shapes scene_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 shapes_2021": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD web text explore_2021": {
-          "CSD_U3_variables": "Vaihda numeroa tässä"
-        },
-        "CSD U3 Variables Predict Where X_2022": {
-          "CSD_U3_variables": "Vaihda numeroa tässä"
-        },
-        "CSD U3 debug_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 drawing challenge 2_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 drawing challenge 3_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 drawing practice 1_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 drawing practice 2_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 drawing practice 3_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 ellipse_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 fill_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 properties depth_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 properties tint_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 rect_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 sequence_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 shapes arc_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 shapes behind_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 shapes line_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 shapes missing_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 shapes polygon_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 shapes scene_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD U3 shapes_2022": {
-          "CSD_U3_rect_c1": "Tässä on koodi"
-        },
-        "CSD web text explore_2022": {
-          "CSD_U3_variables": "Vaihda numeroa tässä"
-        },
-        "CourseD_Dance_2020_012022": {
-          "dance_callout_01": "Lisää tämä blokki ohjelmaasi!"
-        },
-        "CourseD_Dance_2020_022022": {
-          "dance_callout_11_a": "Lisää tämä blokki ohjelmaasi.",
-          "arrow_buttons": "Paina nuolinäppäimiä, jotta voit hallita tanssijaasi."
-        },
-        "CourseD_Dance_2020_042022": {
-          "dance_callout_02": "Lisää tämä blokki ohjelmaasi!"
-        },
-        "CourseD_Dance_2020_052022": {
-          "dance_callout_05": "Lisää uusi tapahtuma ohjelmaan."
-        },
-        "CourseD_Dance_2020_062022": {
-          "dance_party_11_5_groups": "Uusi blokki!"
-        },
-        "CourseD_Dance_2020_072022": {
-          "setprop_hint": "Uusi blokki!"
-        },
-        "CourseD_Dance_2020_092022": {
-          "new_block_3": "Uusi blokki!",
-          "new_block_4": "Uusi blokki!"
-        },
-        "Function intro Ryan2022": {
-          "Function_intro_Ryan_1": "Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen samannimistä koodia työtilassa."
-        },
-        "MC_HOC_2017_03_Cole2022": {
-          "MC_HOC_2017_03_Cole_1": "Tämä on toisto-silmukka!  Napsauta sitä työtilassa ja lisää koodia, jota haluat toistaa yhä uudelleen."
-        },
-        "MC_HOC_2017_04_Cole2022": {
-          "MC_HOC_2017_04_Cole_a": "Agent voi leijua veden päällä, mutta pelaaja ei!"
-        },
-        "MC_HOC_2017_06_Cole2022": {
-          "MC_HOC_2017_06_Cole_1": "Et voi heittää näitä kuutioita pois, mutta voit muokata niitä!"
-        },
-        "MC_HOC_2017_Ali2022": {
-          "MC_HOC_2017_08_RY_1": "Agent voi leijua laavan päällä, mutta pelaaja ei!  "
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "Olemme koonneet sinulle muutamia palikoita"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "Tämä koodi aloittaa talosi rakentamisen. Saatko sen viimeisteltyä?"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]",
-          "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle."
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "Toista toimintoja asettamalla palikoita tänne"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö etenemiskomennon?"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "Louhi tämä rauta!"
-        },
-        "Course 4 Bee 1": {
-          "if_bee_nectar": "Käytä \"jos\"-lohkoa päättääksesi pitääkö mehiläisen kerätä nektaria vai tehdä hunajaa"
-        },
-        "Course 4 Bee 3": {
-          "if_else_bee": "Käytä \"jos-muuten\"-lohkoa siten, että mehiläinen kerää mettä kukasta ja tekee hunajaa jos se ei ole kukassa"
-        },
-        "helloworld_food_costumes_soccer-2022": {
-          "hello_world_new": "Uusi blokki!"
-        },
-        "helloworld_food_costumes_space-2022": {
-          "hello_world_new": "Uusi blokki!"
-        },
-        "helloworld_food_sizes_soccer-2022": {
-          "hello_world_new": "Uusi blokki!",
-          "hello_world_new_block": "Uusi blokki!"
-        },
-        "helloworld_food_sizes_space-2022": {
-          "hello_world_new": "Uusi blokki!",
-          "hello_world_new_block": "Uusi blokki!"
-        },
-        "helloworld_food_sounds_soccer-2022": {
-          "hello_world_new": "Uusi blokki!"
-        },
-        "helloworld_food_sounds_space-2022": {
-          "hello_world_new": "Uusi blokki!"
+          "poetry_remove_sprite": "Uusi blokki!",
+          "poetry_set_sprite": "Uusi blokki!"
         }
       }
     }

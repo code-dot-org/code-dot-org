@@ -1,9 +1,9 @@
 {
   "absolute": "pūmau",
+  "agentDiamondPathCongrats": "Ngā Mihi, kitea e koe te ara taimana! Kua kohia e koe {kaute, plural, kotahi{1 taimana} other {# nga taimana}}!",
   "agentGenericFailureMessage": "Waeheretia tonu! Kia mahara ki te whakamahi i te māngai ki te awhina.",
   "agentTooFewBlocksFailureMessage": "Whakamātauria kia kotahi noa te poraka i te wa kotahi kia waiho i Te Māngai ki te wahi tika.",
   "at": "ki",
-  "agentDiamondPathCongrats": "Ngā Mihi, kitea e koe te ara taimana! Kua kohia e koe {kaute, plural, kotahi{1 taimana} other {# nga taimana}}!",
   "blockActionAdd": "tāpiri",
   "blockActionAttack": "whakaeke",
   "blockActionClone": "paraka pūrua",

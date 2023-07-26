@@ -2,17 +2,49 @@
   "nl-NL": {
     "data": {
       "standard_categories": {
+        "C": {
+          "description": "Tunnel"
+        },
         "CT": {
           "description": "Rekenend Denken"
+        },
+        "ESS": {
+        },
+        "ESS1": {
+        },
+        "ESS2": {
+        },
+        "ESS3": {
+        },
+        "ETS": {
+        },
+        "ETS1": {
+        },
+        "F": {
+          "description": "Functies"
         },
         "L": {
           "description": "Taal"
         },
-        "C": {
-          "description": "Tunnel"
+        "LS": {
         },
-        "F": {
-          "description": "Functies"
+        "LS1": {
+        },
+        "LS2": {
+        },
+        "LS3": {
+        },
+        "LS4": {
+        },
+        "PS": {
+        },
+        "PS1": {
+        },
+        "PS2": {
+        },
+        "PS3": {
+        },
+        "PS4": {
         }
       }
     }

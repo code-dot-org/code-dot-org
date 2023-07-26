@@ -2,6 +2,317 @@
   "nl-NL": {
     "data": {
       "behavior_names": {
+        "CourseE_Project_SpriteLab_cupcake_examples2022": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "CourseE_Project_SpriteLab_cupcake_examples_2021": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "CourseE_Project_SpriteLab_examples2022": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "CourseE_Project_SpriteLab_examples_2021": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "CourseF_outbreak1": {
+          "recovering": "herstellend"
+        },
+        "CourseF_outbreak1_-2022-2": {
+          "recovering": "herstellend"
+        },
+        "CourseF_outbreak2": {
+          "recovering": "herstellend"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "recovering": "herstellend"
+        },
+        "CourseF_outbreak3": {
+          "recovering": "herstellend"
+        },
+        "CourseF_outbreak3_-2022-2": {
+          "recovering": "herstellend"
+        },
+        "CourseF_outbreak4": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "recovering": "herstellend"
+        },
+        "CourseF_outbreak4_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "recovering": "herstellend"
+        },
+        "CourseF_outbreak5": {
+          "recovering": "herstellend"
+        },
+        "CourseF_outbreak5_-2022-2": {
+          "recovering": "herstellend"
+        },
+        "CourseF_outbreak6": {
+          "recovering": "herstellend"
+        },
+        "CourseF_outbreak6_-2022-2": {
+          "recovering": "herstellend"
+        },
+        "CourseF_outbreak7": {
+          "moving left and right": "links en rechts bewegen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "recovering": "herstellend"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "moving left and right": "links en rechts bewegen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "recovering": "herstellend"
+        },
+        "CourseF_outbreak8": {
+          "moving left and right": "links en rechts bewegen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "recovering": "herstellend"
+        },
+        "CourseF_outbreak8_-2022-2": {
+          "moving left and right": "links en rechts bewegen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "recovering": "herstellend"
+        },
+        "Virtual Pet 1_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "Virtual Pet 1_2021": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseE_aboutme_1_2021": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_aquarium": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_aquarium2022": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_card": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_card2022": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_card_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_chatbot": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_chatbot2022": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_collector": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_collector2022": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_madlib": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_madlib2022": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_pet": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_pet2022": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_apps_pet_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_editable_card": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_editable_card_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_editable_chatbot": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_editable_madlib": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_events_practice_reorder": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_events_practice_reorder_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_text_choice_conversation": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_text_choice_events": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_text_choice_events_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_text_choice_freeplay": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_text_choice_freeplay_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_text_choice_interview": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_text_choice_interview_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_text_choice_multiprompt": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_text_choice_multiprompt_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_variables_card": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_variables_card_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_variables_card_finish": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_variables_card_finish_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_variables_chatbot": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_variables_chatbot_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_variables_chatbot_finish": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_variables_chatbot_finish_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_variables_madlib": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_variables_madlib_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_variables_madlib_finish": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "courseF_variables_madlib_finish_-2022-2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_animals_backgrounds": {
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_animals_behaviors": {
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_animals_sounds": {
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_emoji_backgrounds": {
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_emoji_behaviors": {
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_emoji_sounds": {
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_food_backgrounds": {
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_food_behaviors": {
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_food_sounds": {
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_retro_backgrounds": {
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_retro_behaviors": {
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_retro_sounds": {
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "international_outbreak_freeplay": {
+          "moving left and right": "links en rechts bewegen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "recovering": "herstellend"
+        },
         "outbreak1": {
           "recovering": "herstellend"
         },
@@ -12,8 +323,8 @@
           "recovering": "herstellend"
         },
         "outbreak4": {
-          "recovering": "herstellend",
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "recovering": "herstellend"
         },
         "outbreak5": {
           "recovering": "herstellend"
@@ -22,182 +333,24 @@
           "recovering": "herstellend"
         },
         "outbreak7": {
-          "recovering": "herstellend",
           "moving left and right": "links en rechts bewegen",
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "recovering": "herstellend"
         },
         "outbreak8": {
-          "recovering": "herstellend",
           "moving left and right": "links en rechts bewegen",
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "recovering": "herstellend"
         },
         "outbreak_freeplay": {
-          "recovering": "herstellend",
           "moving left and right": "links en rechts bewegen",
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "recovering": "herstellend"
         },
         "outbreak_freeplay_basic": {
-          "recovering": "herstellend",
           "moving left and right": "links en rechts bewegen",
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "CourseF_Project_SpriteLab_examples_2021": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "CourseF_outbreak1": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
           "recovering": "herstellend"
-        },
-        "CourseF_outbreak2": {
-          "recovering": "herstellend"
-        },
-        "CourseF_outbreak3": {
-          "recovering": "herstellend"
-        },
-        "CourseF_outbreak4": {
-          "recovering": "herstellend",
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "CourseF_outbreak5": {
-          "recovering": "herstellend"
-        },
-        "CourseF_outbreak6": {
-          "recovering": "herstellend"
-        },
-        "CourseF_outbreak7": {
-          "recovering": "herstellend",
-          "moving left and right": "links en rechts bewegen",
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "CourseF_outbreak8": {
-          "recovering": "herstellend",
-          "moving left and right": "links en rechts bewegen",
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "Virtual Pet 1_2021": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_aquarium": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_card": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_chatbot": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_collector": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_madlib": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_pet": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_editable_card": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_editable_chatbot": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_editable_madlib": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_events_practice_reorder": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_text_choice_conversation": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_text_choice_events": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_text_choice_freeplay": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_text_choice_interview": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_text_choice_multiprompt": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_variables_card": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_variables_card_finish": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_variables_chatbot": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_variables_chatbot_finish": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_variables_madlib": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_variables_madlib_finish": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "simcustom_2021": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "CourseE_Project_SpriteLab_cupcake_examples_2021": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "CourseE_Project_SpriteLab_examples_2021": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseE_aboutme_1_2021": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "international_outbreak_freeplay": {
-          "recovering": "herstellend",
-          "moving left and right": "links en rechts bewegen",
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "helloworld_animals_behaviors": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen",
-          "moving north and looping": "Naar het noorden bewegen en lussen",
-          "moving south and looping": "Naar het zuiden bewegen en lussen"
-        },
-        "helloworld_emoji_behaviors": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen",
-          "moving north and looping": "Naar het noorden bewegen en lussen",
-          "moving south and looping": "Naar het zuiden bewegen en lussen"
-        },
-        "helloworld_retro_behaviors": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen",
-          "moving north and looping": "Naar het noorden bewegen en lussen",
-          "moving south and looping": "Naar het zuiden bewegen en lussen"
-        },
-        "helloworld_animals_sounds": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen",
-          "moving north and looping": "Naar het noorden bewegen en lussen",
-          "moving south and looping": "Naar het zuiden bewegen en lussen"
-        },
-        "helloworld_emoji_sounds": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen",
-          "moving north and looping": "Naar het noorden bewegen en lussen",
-          "moving south and looping": "Naar het zuiden bewegen en lussen"
-        },
-        "helloworld_food_sounds": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen",
-          "moving north and looping": "Naar het noorden bewegen en lussen",
-          "moving south and looping": "Naar het zuiden bewegen en lussen"
-        },
-        "helloworld_retro_sounds": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen",
-          "moving north and looping": "Naar het noorden bewegen en lussen",
-          "moving south and looping": "Naar het zuiden bewegen en lussen"
-        },
-        "helloworld_food_behaviors": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen",
-          "moving north and looping": "Naar het noorden bewegen en lussen",
-          "moving south and looping": "Naar het zuiden bewegen en lussen"
-        },
-        "poetry_hoc_spriteSizes": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
         },
         "poetry_hoc_addSprites": {
           "moving with arrow keys": "bewegen met de pijtjestoetsen"
@@ -214,167 +367,14 @@
         "poetry_hoc_spriteBehaviors": {
           "moving with arrow keys": "bewegen met de pijtjestoetsen"
         },
-        "helloworld_animals_backgrounds": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen",
-          "moving north and looping": "Naar het noorden bewegen en lussen",
-          "moving south and looping": "Naar het zuiden bewegen en lussen"
-        },
-        "helloworld_emoji_backgrounds": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen",
-          "moving north and looping": "Naar het noorden bewegen en lussen",
-          "moving south and looping": "Naar het zuiden bewegen en lussen"
-        },
-        "helloworld_food_backgrounds": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen",
-          "moving north and looping": "Naar het noorden bewegen en lussen",
-          "moving south and looping": "Naar het zuiden bewegen en lussen"
-        },
-        "helloworld_retro_backgrounds": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen",
-          "moving north and looping": "Naar het noorden bewegen en lussen",
-          "moving south and looping": "Naar het zuiden bewegen en lussen"
-        },
-        "CourseE_Project_SpriteLab_cupcake_examples2022": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "CourseE_Project_SpriteLab_examples2022": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "CourseF_outbreak1_-2022-2": {
-          "recovering": "herstellend"
-        },
-        "CourseF_outbreak2_-2022-2": {
-          "recovering": "herstellend"
-        },
-        "CourseF_outbreak3_-2022-2": {
-          "recovering": "herstellend"
-        },
-        "CourseF_outbreak4_-2022-2": {
-          "recovering": "herstellend",
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "CourseF_outbreak5_-2022-2": {
-          "recovering": "herstellend"
-        },
-        "CourseF_outbreak6_-2022-2": {
-          "recovering": "herstellend"
-        },
-        "CourseF_outbreak7_-2022-2": {
-          "recovering": "herstellend",
-          "moving left and right": "links en rechts bewegen",
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "CourseF_outbreak8_-2022-2": {
-          "recovering": "herstellend",
-          "moving left and right": "links en rechts bewegen",
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "Virtual Pet 1_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_aquarium2022": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_aquarium_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_card2022": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_card_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_chatbot2022": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_chatbot_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_collector2022": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_collector_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_madlib2022": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_madlib_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_pet2022": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_apps_pet_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_editable_card_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_editable_chatbot_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_editable_madlib_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_events_practice_reorder_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_text_choice_conversation_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_text_choice_events_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_text_choice_freeplay_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_text_choice_interview_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_text_choice_multiprompt_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_variables_card_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_variables_card_finish_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_variables_chatbot_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_variables_chatbot_finish_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_variables_madlib_-2022-2": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen"
-        },
-        "courseF_variables_madlib_finish_-2022-2": {
+        "poetry_hoc_spriteSizes": {
           "moving with arrow keys": "bewegen met de pijtjestoetsen"
         },
         "simcustom_-2022-2": {
           "moving with arrow keys": "bewegen met de pijtjestoetsen"
         },
-        "helloworld_food_backgrounds_soccer-2022": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen",
-          "moving north and looping": "Naar het noorden bewegen en lussen",
-          "moving south and looping": "Naar het zuiden bewegen en lussen"
-        },
-        "helloworld_food_backgrounds_space-2022": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen",
-          "moving north and looping": "Naar het noorden bewegen en lussen",
-          "moving south and looping": "Naar het zuiden bewegen en lussen"
-        },
-        "helloworld_food_sounds_soccer-2022": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen",
-          "moving north and looping": "Naar het noorden bewegen en lussen",
-          "moving south and looping": "Naar het zuiden bewegen en lussen"
-        },
-        "helloworld_food_sounds_space-2022": {
-          "moving with arrow keys": "bewegen met de pijtjestoetsen",
-          "moving north and looping": "Naar het noorden bewegen en lussen",
-          "moving south and looping": "Naar het zuiden bewegen en lussen"
+        "simcustom_2021": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
         }
       }
     }

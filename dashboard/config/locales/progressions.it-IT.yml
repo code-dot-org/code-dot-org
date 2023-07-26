@@ -76,7 +76,7 @@ it:
         e operatori di confronto
       Build a Platform Jumper: Costruisci un gioco di salto tra piattaforme
       Build a Screen: Costruire una Schermata
-      Building a UI with Design Mode: Creare un'UI con la Modalità Design
+      Building a UI with Design Mode: Creare un'UI con la Modalità interfaccia
       Building an App: Creazione di un'app
       'Bunny ': Flipper
       Button Circuits: Circuiti con i pulsanti
@@ -105,7 +105,7 @@ it:
         app'
       Choose Your Own Adventure: Scegli La Tua Avventura
       Choosing Good IDs: Scegliere Buoni ID
-      'Circuit Playground: Introduction': 'Circuito parco giochi: Introduzione'
+      'Circuit Playground: Introduction': 'Circuit Playground: Introduzione'
       Circuits and Logic: Circuiti e logica
       Club Datasets: Insieme di dati del club
       Code Prediction: Prevedere il programma
@@ -174,7 +174,7 @@ it:
       Emotion Machine Example: Esempio di macchina delle emozioni
       End of Course Projects: Progetto di Fine Corso
       End-Of-Unit Survey: Sondaggio di Fine Unità
-      End-of-Unit Survey: Sondaggio di Fine Unità
+      End-of-Unit Survey: Sondaggio di fine unità
       Escape Room Example: Esempio di Escape Room
       Events: Eventi
       Events and Linking Screens: Eventi e collegare schermate
@@ -272,7 +272,7 @@ it:
       Introduction to Arrays: Introduzione alle matrici (array)
       Introduction to Game Lab: Introduzione a Sviluppo Giochi
       Introduction to Variables: Introduzione alle variabili
-      Investigate: Investiga
+      Investigate: Indaga
       Isaac's Survey Data: Dati del sondaggio di Isaac
       Iteration and Parameters: Iterazione e Parametri
       Keep On Dancing!: Continua A Danzare!
@@ -356,7 +356,7 @@ it:
       New Shapes: Nuove Forme
       Orientation: Orientamento
       Overview: Panoramica
-      'Overview: Design Mode': 'Panoramica: Modalità Design'
+      'Overview: Design Mode': 'Panoramica: Modalità interfaccia '
       'Overview: If Statements': 'Panoramica: Istruzioni If'
       'Overview: Images': 'Panoramica: Immagini'
       'Overview: onEvent': 'Panoramica: onEvent'
@@ -523,12 +523,12 @@ it:
       Velocity and the Counter Pattern: Velocità e Schema di Conteggio
       Video: Video
       Video - Encryption and Public Keys: 'Video: Crittografia e Chiavi Pubbliche'
-      Video - Functions: 'Video: Funzioni'
+      Video - Functions: Video - Funzioni
       Video - If Statements: Video - Istruzioni condizionali `If`
-      Video - Introduction to Arrays: 'Video: Introduzione agli Insiemi'
+      Video - Introduction to Arrays: Video - Introduzione alle matrici (array)
       'Video - Maze Intro: Programming with Blocks': 'Video - Introduzione al labirinto:
         programmare con i blocchi'
-      Video - Parameters: 'Video: Parametri'
+      Video - Parameters: Video - Parametri
       Video - The Counter Pattern: Video - Lo schema a contatore
       Video - Variables: Video - Variabili
       'Video:  Debugging with the Step Button': Video - Correggere gli errori con
@@ -661,8 +661,8 @@ it:
       'Video: The Collector': Video - La collezionista
       'Video: The Harvester': Video - La contadina
       'Video: Training Data & Bias': Video - Dati di apprendimento e distorsioni
-      'Video: Training Data and Bias': 'Video: dati di apprendimento e pregiudizi
-        (o bias)'
+      'Video: Training Data and Bias': 'Video: dati di apprendimento e distorsioni
+        (bias)'
       'Video: Unplugged Variables in Envelopes': Video - Variabili nelle buste - Attività
         tradizionale
       'Video: Using the Repeat Block': Video - Usare i blocchi di ripetizione

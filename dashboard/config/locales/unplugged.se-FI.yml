@@ -2,6 +2,277 @@
 se:
   data:
     unplugged:
+      BigEvent:
+        desc: Oahppit láidestuvvojit programmeret "dáhpáhusat", mii lea dahkku maid
+          dihtor ovttat ládje goziha. Oahpaheaddji deaddá boaluid báber-fjernkontroll:as
+          ja oahppit reagerejit dan mielde makkár boallu deddojuvvo.
+        title: Stuora Dáhpáhus
+      BigEvent_2018:
+        desc: Oahppit láidestuvvojit programmeret "dáhpáhusat", mii lea dahkku maid
+          dihtor ovttat ládje goziha. Oahpaheaddji deaddá boaluid báber-fjernkontroll:as
+          ja oahppit reagerejit dan mielde makkár boallu deddojuvvo.
+        title: Stuora Dáhpáhus
+      BigEvent_2019:
+        desc: Oahppit láidestuvvojit programmeret "dáhpáhusat", mii lea dahkku maid
+          dihtor ovttat ládje goziha. Oahpaheaddji deaddá boaluid báber-fjernkontroll:as
+          ja oahppit reagerejit dan mielde makkár boallu deddojuvvo.
+        title: Stuora Dáhpáhus
+      BinaryBracelets:
+        desc: Oahppit ráhkadit giehtabáttiid vuosttaš bustávain iežaset namas binára
+          ovdanbuktiimiin. Oahppit ohppet ahte dátat sáhttet representerejuvvot ja
+          vurkejuvvot eanet go ovttain málliin.
+        title: Binára Giehtabáttit
+      BinaryBracelets_2018:
+        desc: Oahppit ráhkadit giehtabáttiid vuosttaš bustávain iežaset namas binára
+          ovdanbuktiimiin. Oahppit ohppet ahte dátat sáhttet representerejuvvot ja
+          vurkejuvvot eanet go ovttain málliin.
+        title: Binára Giehtabáttit
+      BinaryBracelets_2019:
+        desc: Oahppit ráhkadit giehtabáttiid vuosttaš bustávain iežaset namas binára
+          ovdanbuktiimiin. Oahppit ohppet ahte dátat sáhttet representerejuvvot ja
+          vurkejuvvot eanet go ovttain málliin.
+        title: Binára Giehtabáttit
+      BinaryImages:
+        desc: Vaikko ollu olbmot jurddašit binára leat buiga nullat ja ovttežat, ohppe
+          min ovddeš oahppit ahte informašuvnnas sáhttet leat oallut binára molssaeavttut.
+          Dán lekšuvnnas joatkit dán viidáseappot, go dát čájeha movt dihtor sáhttá
+          vurket vel eanet kompleaksa informašuvnnaid (ovdamearkka dihte govat ja
+          ivnnit) binárain maiddái.
+        title: Binára Govat
+      BinaryImages_2018:
+        desc: Vaikko ollu olbmot jurddašit binára leat buiga nullat ja ovttežat, ohppe
+          min ovddeš oahppit ahte informašuvnnas sáhttet leat oallut binára molssaeavttut.
+          Dán lekšuvnnas joatkit dán viidáseappot, go dát čájeha movt dihtor sáhttá
+          vurket vel eanet kompleaksa informašuvnnaid (ovdamearkka dihte govat ja
+          ivnnit) binárain maiddái.
+        title: Binára Govat
+      BinaryImages_2019:
+        desc: Vaikko ollu olbmot jurddašit binára leat buiga nullat ja ovttežat, ohppe
+          min ovddeš oahppit ahte informašuvnnas sáhttet leat oallut binára molssaeavttut.
+          Dán lekšuvnnas joatkit dán viidáseappot, go dát čájeha movt dihtor sáhttá
+          vurket vel eanet kompleaksa informašuvnnaid (ovdamearkka dihte govat ja
+          ivnnit) binárain maiddái.
+        title: Binára Govat
+      Booleans:
+        desc: Boolánat leat njealját ja maŋemus dátatyhpa maid galggat oahppat dán
+          kurssas. Dán doaimmas oahpat mat Boolánat leat, ja movt dát sáhttet veahkehit
+          min čállit funkšuvnnaid mat jurddašit logalaččat
+        title: Boolánat ja Logihkka
+      BuildingAFoundation:
+        desc: Oahppit huksejit struktuvrra masa dušše atnet olámuttu lassireaidduid.
+          Struktuvrrat fertejit válbmet ovtta bargobihtá (olahit vissis allodaga dahje
+          guoddit vissis deattu), ja oahppit digaštallet idea ahte juoga lea bistevaš
+          go áššit šaddet váddásat.
+        title: Hukset Vuođu
+      BuildingAFoundation_2019:
+        desc: 'jorgalus váilu: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+        title: 'jorgalus váilu: en-US.data.unplugged.BuildingAFoundation_2018.title'
+      CollisionDetection:
+        desc: Mearridit goas šearpmas objeavttat guoskkahuvvojit lea dehálaš aspeakta
+          eanas spealuin. Dán lekšuvnnas mii geahččat movt Pytagoras ja Gaskaid MihtidanForme
+          sáhttet geavahuvvot mihtidit gaskka guovtti čujuhusas ovtta sajis, ja de
+          mearridit movt diet guokte čujuhusa (dahje speallanfigurat) guoskkadeaba.
+        title: Fuomáš Oktibeaškkehemiid ja Pytagoras
+      ComputationalThinking:
+        desc: Oahppit geavahit meroštallanjurddašeami (čuolbmačoavdin, minstariid
+          gávdnat, rátkit, algoritmmat) gávnnahit movt galget speallat spealu mas
+          eai leat neavvagat.
+      Conditionals:
+        desc: Oahppat evttolaš dadjama birra, oahppit spellet koartaspealu ja ráhkadit
+          njuolggadusaid nu go Jus mun geasán rukses koartta, oaččun ovtta čuoggá"
+          ja "Jus mun geasán čáhppes koartta, de oaččut don ovtta čuoggá."
+      ConditionalsPiecewiseFunctions:
+        desc: Paramehterat maid mii sirdit funkšuvnnaide dagahit dan ahte loahppabohtosat
+          varierejit čavges minstara ráhkadeami mielde. Jus dette mii áigut paramehteriid
+          main leat muhtun árvvut ráhkadan dihte  loahppabohtosiid geavahettin ovtta
+          minstara, muhto eará árvvuid geavahit eará minstara. Dása dárbbahit eavttuid...
+        title: Eavttut ja Bihtáidmielde Funkšuvnnat
+      Conditionals_2018:
+        desc: Oahppat evttolaš dadjama birra, oahppit spellet koartaspealu ja ráhkadit
+          njuolggadusaid nu go Jus mun geasán rukses koartta, oaččun ovtta čuoggá"
+          ja "Jus mun geasán čáhppes koartta, de oaččut don ovtta čuoggá."
+      Conditionals_2019:
+        desc: Oahppat evttolaš dadjama birra, oahppit spellet koartaspealu ja ráhkadit
+          njuolggadusaid nu go Jus mun geasán rukses koartta, oaččun ovtta čuoggá"
+          ja "Jus mun geasán čáhppes koartta, de oaččut don ovtta čuoggá."
+      Contracts:
+        desc: Kontrávttat addet midjiide vugiid ipmirdit ja digaštallat funkšuvnnaid.
+          Dán lekšuvnnas galget geahččat movt Kontrávttat sáhttet veahkehit min ipmirdit
+          ođđa programmerengiela dahje funkšuvnna.
+        title: Kontrávttat, Domena, ja Viidodat
+      Crowdsourcing:
+        desc: Oahppit geavahit joavkočohkkema, čuolbmačoavdinteknihka mii lea dábálaš
+          dihtordiehtagis válbmet bargobihtá ovttas nugo klássalanjas effektiivaleppot
+          go jus studeanta livččii akto geahččalan.
+        title: Joavkočohkken
+      Crowdsourcing_2019:
+        desc: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.desc'
+        title: 'jorgalus váilu: en-US.data.unplugged.Crowdsourcing_2018.title'
+      DesignRecipe:
+        desc: Maŋemus dásis oahppit čálle hui eaŋkilis funkšuvnnaid - muhto eanet
+          sofistikerejuvvon funkšuvnnat gáibidit bures jurddašuvvon lahkoneami. Designa
+          Ráhkadanneava lea struktuvrralaš lahkoneapmi čállinfunkšuvnnaide mat inkluderejit
+          čállinteastta-casaid sihkkarastit ahte funkšuvdna doaibmá nu go galgá.
+        title: Designa Ráhkadanneava
+      DiceRace:
+        desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis.
+          Oassin dás oahppit galget identifiseret ja čállit algoritmmaid bircospealu
+          váste.
+        title: 'Duohta-máilmmi Algoritmmat: Birccu bálkestit'
+      DigitalCitizenship:
+        desc: Oahppit vásihit mii lea erohus gaskkal priváhta ja persovnnalaš informašuvdna,
+          čuoldit mii lea oadjebas dahje ja mii ii leat oadjebas juohkit neahtas.
+        title: Digitála Stáhtaborgárvuohta
+      DigitalFootprint:
+        desc: Oahpaheaddjit čájehit ohppiide ahte go sii bidjet dieđuid iežaset birra
+          nehttii de dát ráhkada digitála luotta, mas leat váikkuhusat.
+        title: Du Digitála Luodda
+      DigitalFootprint_2018:
+        desc: Oahpaheaddjit čájehit ohppiide ahte go sii bidjet dieđuid iežaset birra
+          nehttii de dát ráhkada digitála luotta, mas leat váikkuhusat.
+        title: Du Digitála Luodda
+      DigitalFootprint_2019:
+        desc: Oahpaheaddjit čájehit ohppiide ahte go sii bidjet dieđuid iežaset birra
+          nehttii de dát ráhkada digitála luotta, mas leat váikkuhusat.
+        title: Du Digitála Luodda
+      EnvelopeVariables:
+        desc: Variábelat addet eanet friddjavuođa dihtordiehtagis. Dát lekšuvdna veahkeha
+          čilget mat variábelat leat ja movt mii sáhttit dáid geavahit iešguđetlágan
+          vugiiguin. Geavat dán doaimma ovdal (dahje ovttas dainna) lekšuvnna abstrakšuvnna
+          nu ahte deaivvat ideain.
+        title: Konvoluhtta Variábelat
+      EnvelopeVariables_2019:
+        desc: 'jorgalus váilu: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+        title: 'jorgalus váilu: en-US.data.unplugged.EnvelopeVariables_2018.title'
+      ForLoopFun:
+        desc: Mii diehtit ahte mohkit diktet min dahkat diŋggaid ođđasit ahte ođđasit,
+          muhto dál galgat oahppat movt geavahit mohkiid mat sisttisdollet lassi struktuvrra.
+        title: Suohttasat Mohkiid váste
+      ForLoopFun_2019:
+        desc: 'jorgalus váilu: en-US.data.unplugged.ForLoopFun_2018.desc'
+        title: 'jorgalus váilu: en-US.data.unplugged.ForLoopFun_2018.title'
+      FunctionalSuncatchers:
+        desc: Oahppit ráhkadit algoritma mas leat variábelat ja funkšuvnnat (kodenbihtát
+          maid áiggut geavahit ođđasit aht ođđasit) ráhkadit beaivváščoggiid streaŋggaiguin
+          ja helmmuiguin.
+        title: Doaibmi Beaivváščoaggit
+      GettingLoopy:
+        desc: Dát lekšuvdna láidesta movt programmeret mohkiid (geardduheaddji neavvagat)
+          dánsendoaimmaid čađa. Oahppit galget oahppat eaŋkilis koreografiija, ja
+          de nevvojuvvojit geardduhit dan.
+        title: Šaddat Gáiggasin
+      GettingLoopy_2018:
+        desc: Dát lekšuvdna láidesta movt programmeret mohkiid (geardduheaddji neavvagat)
+          dánsendoaimmaid čađa. Oahppit galget oahppat eaŋkilis koreografiija, ja
+          de nevvojuvvojit geardduhit dan.
+        title: Šaddat Gáiggasin
+      GettingLoopy_2019:
+        desc: Dát lekšuvdna láidesta movt programmeret mohkiid (geardduheaddji neavvagat)
+          dánsendoaimmaid čađa. Oahppit galget oahppat eaŋkilis koreografiija, ja
+          de nevvojuvvojit geardduhit dan.
+        title: Šaddat Gáiggasin
+      GoingPlacesSafely:
+        desc: Interneahtta lea fámolaš, ja muhtun geardde maid várálaš báiki. Oahpaheaddjit
+          čájehit movt don sáhtát leat oadjebas go navigeret Interneahtas.
+        title: Mannat Sihkkaris Sajiide
+      GoingPlacesSafely_2018:
+        desc: Interneahtta lea fámolaš, ja muhtun geardde maid várálaš báiki. Oahpaheaddjit
+          čájehit movt don sáhtát leat oadjebas go navigeret Interneahtas.
+        title: Mannat Sihkkaris Sajiide
+      GoingPlacesSafely_2019:
+        desc: Interneahtta lea fámolaš, ja muhtun geardde maid várálaš báiki. Oahpaheaddjit
+          čájehit movt don sáhtát leat oadjebas go navigeret Interneahtas.
+        title: Mannat Sihkkaris Sajiide
+      GraphPaperProgramming:
+        desc: Oahppit čállet algoritmma (neavvačoahkit) go geavahit ovdagihtii definerejuvvon
+          kommándo-čohkiid neavvut skuvlaoappáid/-vieljaid reproduseret tevnnega.
+      GraphPaperProgramming_2018:
+        desc: Oahppit čállet algoritmma (neavvačoahkit) go geavahit ovdagihtii definerejuvvon
+          kommándo-čohkiid neavvut skuvlaoappáid/-vieljaid reproduseret tevnnega.
+      GraphPaperProgramming_2019:
+        desc: Oahppit čállet algoritmma (neavvačoahkit) go geavahit ovdagihtii definerejuvvon
+          kommándo-čohkiid neavvut skuvlaoappáid/-vieljaid reproduseret tevnnega.
+      GraphingData_2019:
+        desc: Dán lekšuvnnas oahppit čohkkejit dátaid Speallan-lab-prošeavttas dahje
+          duohtamáilmmi -scenariijain ja geavahit daid ráhkadit einnostemiid.
+        title: Presenteret Dátaid
+      Internet:
+        desc: Oahppit sáddejit dieđuid mat representerejit iešguđetlágan Interneahttafievrredanvugiid
+          geavahettiin báberbihtáid.
+        title: Interneahtta
+      Internet_2019:
+        desc: 'jorgalus váilu: en-US.data.unplugged.Internet_2018.desc'
+        title: 'jorgalus váilu: en-US.data.unplugged.Internet_2018.title'
+      MadGlibs:
+        desc: Abstrakšuvdna lea okta dain deháleamos gálggain maid dihtordietaga dutki
+          ferte ipmirdit. Dát doaibma oažžu du ohppiid analyseret erohusaid muitalusain
+          nu ahte sáhttá rátkit daid eret. Rátkojuvvon muitalusat šaddet ođđa somás
+          ja mielahis muitalussan.
+        title: Mielahis Glibs:at
+      MoveIt:
+        desc: Oahppit ráhkadit eaŋkilis algoritmmaid (neavvačoahkit) sirdit mearkka
+          labyrinta čađa ovttain eaŋkilis kommándoin.
+        title: Sirdde, Sirdde
+      PaperPlanes:
+        desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis,
+          ráhkadit earenoamáš bábergirdi. Dát lekšuvdna deattuha maiddái stuorit gova
+          dihtordiehtagas ja movt algoritmmain lea guovddáš rolla das.
+        title: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
+      PaperPlanes_2018:
+        desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis,
+          ráhkadit earenoamáš bábergirdi. Dát lekšuvdna deattuha maiddái stuorit gova
+          dihtordiehtagas ja movt algoritmmain lea guovddáš rolla das.
+        title: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
+      PaperPlanes_2019:
+        desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis,
+          ráhkadit earenoamáš bábergirdi. Dát lekšuvdna deattuha maiddái stuorit gova
+          dihtordiehtagas ja movt algoritmmain lea guovddáš rolla das.
+        title: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
+      PlantASeed:
+        desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis
+          geavahettiin ovdamearkan doaimma mas gilvá siepmana. Dát deattuha maid stuorit
+          gova dihtordiehtagas ja dan ahte algoritmmain lea guovddáš rolla.
+        title: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+      PlantASeed_2018:
+        desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis
+          geavahettiin ovdamearkan doaimma mas gilvá siepmana. Dát deattuha maid stuorit
+          gova dihtordiehtagas ja dan ahte algoritmmain lea guovddáš rolla.
+        title: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+      PlantASeed_2019:
+        desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis
+          geavahettiin ovdamearkan doaimma mas gilvá siepmana. Dát deattuha maid stuorit
+          gova dihtordiehtagas ja dan ahte algoritmmain lea guovddáš rolla.
+        title: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+      RelayProgramming:
+        desc: Oahppit čađahit sáttatviehkama, mas sii gietti merkejit čálidettiin
+          algoritma man vuođđu lea "Gráfalaš BáberPrográmmeren"-govva. Sii dušše čállet
+          ovtta neavvaga hávális, ja jus lea boastut gokkoge, de fertejit sihkkut
+          visot mearkkaid dan rádjái.
+      RelayProgramming_2018:
+        desc: Dát doaibma álgá oanehis lekšuvnnain movt ohcat boastuvuođaid ja movt
+          nagodit, ja de viidáseappot gilvalit áiggiin go oahppit juohkásit joavkkuide
+          ja ovttasbarget čállit prográmma, ovtta neavvaga hávális.
+      RelayProgramming_2018_2019:
+        desc: Dát doaibma álgá oanehis lekšuvnnain movt ohcat boastuvuođaid ja movt
+          nagodit, ja de viidáseappot gilvalit áiggiin go oahppit juohkásit joavkkuide
+          ja ovttasbarget čállit prográmma, ovtta neavvaga hávális.
+      SongwritingParameters:
+        desc: Oahppit geavahit korakonseapta lávlagis oahppat defineren- ja riŋgenfunkšuvnnaid.
+        title: Lávlagiid čállit
+      SongwritingParameters_2019:
+        desc: 'jorgalus váilu: en-US.data.unplugged.SongwritingParameters_2018.desc'
+        title: 'jorgalus váilu: en-US.data.unplugged.SongwritingParameters_2018.title'
+      SongwritingWithParameters:
+        desc: Okta dain sievamus struktuvrrain dihtordiehtaga máilmmis lea funkšuvdna.
+          Funkšuvnnat (gohčoduvvon prosedyran) lea miniprográmmažat maid sáhtát geavahit
+          ođđasit ahte ođđasit stuorit prográmmaid siste. Dát lekšuvdna veahkeha ohppiid
+          intuitiivvalaččat ipmirdit manne lea vuogas bargu ovttastahttit kodabihtáid
+          funkšuvnnas.
+      TangramAlgorithms:
+        desc: Dát lekšuvdna čájeha juoidá dehálačča algoritmmaid birra. Jus ráhkadat
+          algoritmma eaŋkilit, de das leat máŋga geavahanvuogi. Jus áiggut leat sihkar
+          ahte buohkain lea seamma loahppaboađus, de dárbbaša algoritma eanet detáljaid.
+        title: Tangrámma Algoritmmat
       Unplug1:
         desc: Dát lekšuvdna introdusere doahpaga DihtorDiehtaga ja čilge maid DihtorDutki
           bargá. Dát maid addá ohppiide vejolašvuođa geahččalit Dihtordutkin. Juohke
@@ -10,6 +281,15 @@ se:
           mánaide sániid mat gullet boahttevaš lekšuvnnaide, muhto lea mihá buoret
           jus sidjiide čilget somás ja stoahkanvugiin. Soaittát dan dihte seastit
           olu áiggi das mii boahtá maŋŋelis.
+      Unplug10:
+        desc: Dán lekšuvnnas oahppit galget mahkáš girdit Interneahta čađa, seammás
+          go ohppet neahttaadreassaid, IP:aid ja DNS birra.
+      Unplug11:
+        desc: Loahpalaš čoahkkaigeassu vuosttaš 20-diibmosaš ráiddus veahkeha klássa
+          ođđasit vásihit visot sin favorihtta vásáhusaid, seammás go sii besset oaidnit
+          boahttevaš lávkkiid dihtordiehtaga mátkkis maid iešheanalaččat sáhttet čuovvut
+          jus lea beroštupmi.
+        title: Čoahkkáigeassu
       Unplug2:
         desc: Oahppit ohppet njeallje dási meroštallanjurddašeami geavahettiin dušše
           báhpira ja peanna. Maŋŋil oanehis introdukšuvnna, de berreše oahppit juhkkojuvvot
@@ -45,10 +325,10 @@ se:
           materiálas ja ráhkadit mearritmeahttun eavttuid iešguđetge oahppi lassireaidduide.
           Dákkár geavaheapmi generalaš ovdamearkkain lea buorre introdukšuvdna variábeliidda.
       Unplug6:
-        title: Eavttut
         desc: Dát lea speallu olles klássii. Maŋŋil go lea láidestan ideaide eavttut,
           jus-dadjamušat, ja mohkit, de sáhttá klássa hárjehallat fárrolaga geavahettiin
           ovdagihtii-čállon prográmma, koartastohka, ja geassinlihku.
+        title: Eavttut
       Unplug7:
         desc: Teakstalohkan lea oahpis aktivitehta eanas ohppiide. Mii váldit aktivitehta
           masa oahppit leat oahppásat, ja geavahit dan addit nanu oahpu movt defineret
@@ -63,239 +343,135 @@ se:
           ja geavaha dáid gálggaid deattuhit man dehálaš lea válbmet prográmmaid mat
           doibmet maŋŋálaga ja mat dássedit isket leat go prográmmas "boastuvuođat
           dahje bugsat".
-      Unplug10:
-        desc: Dán lekšuvnnas oahppit galget mahkáš girdit Interneahta čađa, seammás
-          go ohppet neahttaadreassaid, IP:aid ja DNS birra.
-      Unplug11:
-        title: Čoahkkáigeassu
-        desc: Loahpalaš čoahkkaigeassu vuosttaš 20-diibmosaš ráiddus veahkeha klássa
-          ođđasit vásihit visot sin favorihtta vásáhusaid, seammás go sii besset oaidnit
-          boahttevaš lávkkiid dihtordiehtaga mátkkis maid iešheanalaččat sáhttet čuovvut
-          jus lea beroštupmi.
       UnplugHappyMaps:
+        desc: Oahppit ráhkadit eaŋkilis algoritmmaid (neavvačoahkit) sirdit mearkka
+          labyrinta čađa ovttain eaŋkilis kommándoin.
         title: Movttegis Kárttat
+      UnplugHappyMaps_2018:
         desc: Oahppit ráhkadit eaŋkilis algoritmmaid (neavvačoahkit) sirdit mearkka
           labyrinta čađa ovttain eaŋkilis kommándoin.
-      MoveIt:
-        title: Sirdde, Sirdde
+        title: Movttegis Kárttat
+      UnplugHappyMaps_2019:
         desc: Oahppit ráhkadit eaŋkilis algoritmmaid (neavvačoahkit) sirdit mearkka
           labyrinta čađa ovttain eaŋkilis kommándoin.
-      PlantASeed:
-        title: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+        title: Movttegis Kárttat
+      VideoGamesCoordinatePlanes:
+        desc: Iskka movt videospealut maid don liikot speallat, leat  baicca algebra:in
+          stivrejuvvon! Suokkardala movt algebra dajaldagat ja koordinahtavuogádagat
+          sáhttet veahkehit min ipmirdit movt videospealut doibmet, ja plánegoađe
+          de videospealu maid áiggut ráhkadit.
+        title: VideoSpealut ja KoordináhtaVuogádagat
+      courseABC_unplugged_bigEvent:
+        desc: Oahppit láidestuvvojit programmeret "dáhpáhusat", mii lea dahkku maid
+          dihtor ovttat ládje goziha. Oahpaheaddji deaddá boaluid báber-fjernkontroll:as
+          ja oahppit reagerejit dan mielde makkár boallu deddojuvvo.
+        title: Stuora Dáhpáhus
+      courseAB_unplugged_plantASeed:
         desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis
           geavahettiin ovdamearkan doaimma mas gilvá siepmana. Dát deattuha maid stuorit
           gova dihtordiehtagas ja dan ahte algoritmmain lea guovddáš rolla.
-      BuildingAFoundation:
-        title: Hukset Vuođu
+        title: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
+      courseA_unplugged_goingPlacesSafely:
+        desc: Interneahtta lea fámolaš, ja muhtun geardde maid várálaš báiki. Oahpaheaddjit
+          čájehit movt don sáhtát leat oadjebas go navigeret Interneahtas.
+        title: Mannat Sihkkaris Sajiide
+      courseA_unplugged_happyMaps:
+        desc: Oahppit ráhkadit eaŋkilis algoritmmaid (neavvačoahkit) sirdit mearkka
+          labyrinta čađa ovttain eaŋkilis kommándoin.
+        title: Movttegis Kárttat
+      courseA_unplugged_loops:
+        desc: Dán lekšuvnnas don oahpat mohkiid birra!
+        title: Mohkit Neahtahaga
+      courseA_unplugged_loops_2018:
+        desc: Dán lekšuvnnas don oahpat mohkiid birra!
+        title: Mohkit Neahtahaga
+      courseA_unplugged_loops_2019:
+        desc: Dán lekšuvnnas don oahpat mohkiid birra!
+        title: Mohkit Neahtahaga
+      courseB_unplugged_CnC_2018:
+        desc: Dahkkivuoigatvuohta ja Kreativitehta joavku lea luoikan DihtorDiehtaga
+          Vuođuide, dát lekšuvdna lea dan váste ahte veahkehit ohppiid ipmirdit juohkima
+          ja inspirašuvnna kreatiiva proseassaid. Dáid mielde maiddái čuovvu promoteret
+          kreatiiva dajaldagaid ja dárbu leat vuoiggalaš kreatiiva barggus.
+        title: Lea Buorre Ráhkadit ja Speallat Vuoiggalaččat
+      courseB_unplugged_CnC_2019:
+        desc: Dahkkivuoigatvuohta ja Kreativitehta joavku lea luoikan DihtorDiehtaga
+          Vuođuide, dát lekšuvdna lea dan váste ahte veahkehit ohppiid ipmirdit juohkima
+          ja inspirašuvnna kreatiiva proseassaid. Dáid mielde maiddái čuovvu promoteret
+          kreatiiva dajaldagaid ja dárbu leat vuoiggalaš kreatiiva barggus.
+        title: Lea Buorre Ráhkadit ja Speallat Vuoiggalaččat
+      courseB_unplugged_MRF:
+        desc: Dán lekšuvnnas, de don "programmeret" iežat olbmáid!
+        title: Neahtahaga Doaibma
+      courseB_unplugged_MRF_2018:
+        desc: Oahpa programmeret dainna ahte čálát koda du olbmáide!
+      courseB_unplugged_MRF_2019:
+        desc: Oahpa programmeret dainna ahte čálát koda du olbmáide!
+      courseB_unplugged_digitalFootprint:
+        desc: Oahpaheaddjit čájehit ohppiide ahte go sii bidjet dieđuid iežaset birra
+          nehttii de dát ráhkada digitála luotta, mas leat váikkuhusat.
+        title: Du Digitála Luodda
+      courseB_unplugged_loopyMRF:
+        desc: Nugo "Mu Robohtalaš Olbmát", de don "programmeret" iežat olbmáid, muhto
+          dán háve mohkiiguin!
+        title: Neahtahaga Doaibma
+      courseB_unplugged_loopyMRF_2019:
+        title: Mu Mohkke Robota Olbmát
+      courseB_unplugged_passwords_2019:
+        desc: Suokkardala manne olbmot geavahit čoavddasániid, oahpa ovdamuniid birra
+          geavahit čoavddasáni ja oza strategiijaid ráhkadit ja doalahit vuoibmás,
+          sihkkaris čoavddasániid.
+        title: Vuoibmás Čoavddasánit
+      courseC_Unplugged_ScreenOutTheMean:
+        desc: Otne oahpat maid dahkat jus muhtun láhtte fasttit neahtas.
+        title: Neahtahaga Doaibma
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        desc: Otne oahpat maid dahkat jus muhtun láhtte fasttit neahtas.
+        title: Neahtahaga Doaibma
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        desc: Otne oahpat maid dahkat jus muhtun láhtte fasttit neahtas.
+        title: Neahtahaga Doaibma
+      courseC_unplugged_binaryBracelets:
+        desc: Oahppit ráhkadit giehtabáttiid vuosttaš bustávain iežaset namas binára
+          ovdanbuktiimiin. Oahppit ohppet ahte dátat sáhttet representerejuvvot ja
+          vurkejuvvot eanet go ovttain málliin.
+        title: Binára Giehtabáttit
+      courseC_unplugged_buildingAFoundation:
         desc: Oahppit huksejit struktuvrra masa dušše atnet olámuttu lassireaidduid.
           Struktuvrrat fertejit válbmet ovtta bargobihtá (olahit vissis allodaga dahje
           guoddit vissis deattu), ja oahppit digaštallet idea ahte juoga lea bistevaš
           go áššit šaddet váddásat.
-      GettingLoopy:
-        title: Šaddat Gáiggasin
+        title: Hukset Vuođu
+      courseC_unplugged_gettingLoopy:
         desc: Dát lekšuvdna láidesta movt programmeret mohkiid (geardduheaddji neavvagat)
           dánsendoaimmaid čađa. Oahppit galget oahppat eaŋkilis koreografiija, ja
           de nevvojuvvojit geardduhit dan.
-      RelayProgramming:
-        desc: Oahppit čađahit sáttatviehkama, mas sii gietti merkejit čálidettiin
-          algoritma man vuođđu lea "Gráfalaš BáberPrográmmeren"-govva. Sii dušše čállet
-          ovtta neavvaga hávális, ja jus lea boastut gokkoge, de fertejit sihkkut
-          visot mearkkaid dan rádjái.
-      Conditionals:
-        desc: Oahppat evttolaš dadjama birra, oahppit spellet koartaspealu ja ráhkadit
-          njuolggadusaid nu go Jus mun geasán rukses koartta, oaččun ovtta čuoggá"
-          ja "Jus mun geasán čáhppes koartta, de oaččut don ovtta čuoggá."
-      BigEvent:
-        title: Stuora Dáhpáhus
-        desc: Oahppit láidestuvvojit programmeret "dáhpáhusat", mii lea dahkku maid
-          dihtor ovttat ládje goziha. Oahpaheaddji deaddá boaluid báber-fjernkontroll:as
-          ja oahppit reagerejit dan mielde makkár boallu deddojuvvo.
-      GoingPlacesSafely:
-        title: Mannat Sihkkaris Sajiide
-        desc: Interneahtta lea fámolaš, ja muhtun geardde maid várálaš báiki. Oahpaheaddjit
-          čájehit movt don sáhtát leat oadjebas go navigeret Interneahtas.
-      GraphPaperProgramming:
-        desc: Oahppit čállet algoritmma (neavvačoahkit) go geavahit ovdagihtii definerejuvvon
-          kommándo-čohkiid neavvut skuvlaoappáid/-vieljaid reproduseret tevnnega.
-      PaperPlanes:
-        title: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
+        title: Šaddat Gáiggasin
+      courseC_unplugged_paperPlanes:
         desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis,
           ráhkadit earenoamáš bábergirdi. Dát lekšuvdna deattuha maiddái stuorit gova
           dihtordiehtagas ja movt algoritmmain lea guovddáš rolla das.
-      BinaryBracelets:
-        title: Binára Giehtabáttit
-        desc: Oahppit ráhkadit giehtabáttiid vuosttaš bustávain iežaset namas binára
-          ovdanbuktiimiin. Oahppit ohppet ahte dátat sáhttet representerejuvvot ja
-          vurkejuvvot eanet go ovttain málliin.
-      DigitalFootprint:
-        title: Du Digitála Luodda
-        desc: Oahpaheaddjit čájehit ohppiide ahte go sii bidjet dieđuid iežaset birra
-          nehttii de dát ráhkada digitála luotta, mas leat váikkuhusat.
-      ComputationalThinking:
-        desc: Oahppit geavahit meroštallanjurddašeami (čuolbmačoavdin, minstariid
-          gávdnat, rátkit, algoritmmat) gávnnahit movt galget speallat spealu mas
-          eai leat neavvagat.
-      FunctionalSuncatchers:
-        title: Doaibmi Beaivváščoaggit
-        desc: Oahppit ráhkadit algoritma mas leat variábelat ja funkšuvnnat (kodenbihtát
-          maid áiggut geavahit ođđasit aht ođđasit) ráhkadit beaivváščoggiid streaŋggaiguin
-          ja helmmuiguin.
-      SongwritingParameters:
-        title: Lávlagiid čállit
-        desc: Oahppit geavahit korakonseapta lávlagis oahppat defineren- ja riŋgenfunkšuvnnaid.
-      DiceRace:
-        title: 'Duohta-máilmmi Algoritmmat: Birccu bálkestit'
-        desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis.
-          Oassin dás oahppit galget identifiseret ja čállit algoritmmaid bircospealu
-          váste.
-      Internet:
-        title: Interneahtta
-        desc: Oahppit sáddejit dieđuid mat representerejit iešguđetlágan Interneahttafievrredanvugiid
-          geavahettiin báberbihtáid.
-      Crowdsourcing:
-        title: Joavkočohkken
-        desc: Oahppit geavahit joavkočohkkema, čuolbmačoavdinteknihka mii lea dábálaš
-          dihtordiehtagis válbmet bargobihtá ovttas nugo klássalanjas effektiivaleppot
-          go jus studeanta livččii akto geahččalan.
-      DigitalCitizenship:
-        title: Digitála Stáhtaborgárvuohta
-        desc: Oahppit vásihit mii lea erohus gaskkal priváhta ja persovnnalaš informašuvdna,
-          čuoldit mii lea oadjebas dahje ja mii ii leat oadjebas juohkit neahtas.
-      TangramAlgorithms:
-        title: Tangrámma Algoritmmat
-        desc: Dát lekšuvdna čájeha juoidá dehálačča algoritmmaid birra. Jus ráhkadat
-          algoritmma eaŋkilit, de das leat máŋga geavahanvuogi. Jus áiggut leat sihkar
-          ahte buohkain lea seamma loahppaboađus, de dárbbaša algoritma eanet detáljaid.
-      EnvelopeVariables:
-        title: Konvoluhtta Variábelat
-        desc: Variábelat addet eanet friddjavuođa dihtordiehtagis. Dát lekšuvdna veahkeha
-          čilget mat variábelat leat ja movt mii sáhttit dáid geavahit iešguđetlágan
-          vugiiguin. Geavat dán doaimma ovdal (dahje ovttas dainna) lekšuvnna abstrakšuvnna
-          nu ahte deaivvat ideain.
-      MadGlibs:
-        title: Mielahis Glibs:at
-        desc: Abstrakšuvdna lea okta dain deháleamos gálggain maid dihtordietaga dutki
-          ferte ipmirdit. Dát doaibma oažžu du ohppiid analyseret erohusaid muitalusain
-          nu ahte sáhttá rátkit daid eret. Rátkojuvvon muitalusat šaddet ođđa somás
-          ja mielahis muitalussan.
-      ForLoopFun:
-        title: Suohttasat Mohkiid váste
-        desc: Mii diehtit ahte mohkit diktet min dahkat diŋggaid ođđasit ahte ođđasit,
-          muhto dál galgat oahppat movt geavahit mohkiid mat sisttisdollet lassi struktuvrra.
-      SongwritingWithParameters:
-        desc: Okta dain sievamus struktuvrrain dihtordiehtaga máilmmis lea funkšuvdna.
-          Funkšuvnnat (gohčoduvvon prosedyran) lea miniprográmmažat maid sáhtát geavahit
-          ođđasit ahte ođđasit stuorit prográmmaid siste. Dát lekšuvdna veahkeha ohppiid
-          intuitiivvalaččat ipmirdit manne lea vuogas bargu ovttastahttit kodabihtáid
-          funkšuvnnas.
-      BinaryImages:
-        title: Binára Govat
+        title: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
+      courseD_unplugged_binaryImages:
         desc: Vaikko ollu olbmot jurddašit binára leat buiga nullat ja ovttežat, ohppe
           min ovddeš oahppit ahte informašuvnnas sáhttet leat oallut binára molssaeavttut.
           Dán lekšuvnnas joatkit dán viidáseappot, go dát čájeha movt dihtor sáhttá
           vurket vel eanet kompleaksa informašuvnnaid (ovdamearkka dihte govat ja
           ivnnit) binárain maiddái.
-      VideoGamesCoordinatePlanes:
-        title: VideoSpealut ja KoordináhtaVuogádagat
-        desc: Iskka movt videospealut maid don liikot speallat, leat  baicca algebra:in
-          stivrejuvvon! Suokkardala movt algebra dajaldagat ja koordinahtavuogádagat
-          sáhttet veahkehit min ipmirdit movt videospealut doibmet, ja plánegoađe
-          de videospealu maid áiggut ráhkadit.
-      Contracts:
-        title: Kontrávttat, Domena, ja Viidodat
-        desc: Kontrávttat addet midjiide vugiid ipmirdit ja digaštallat funkšuvnnaid.
-          Dán lekšuvnnas galget geahččat movt Kontrávttat sáhttet veahkehit min ipmirdit
-          ođđa programmerengiela dahje funkšuvnna.
-      DesignRecipe:
-        title: Designa Ráhkadanneava
-        desc: Maŋemus dásis oahppit čálle hui eaŋkilis funkšuvnnaid - muhto eanet
-          sofistikerejuvvon funkšuvnnat gáibidit bures jurddašuvvon lahkoneami. Designa
-          Ráhkadanneava lea struktuvrralaš lahkoneapmi čállinfunkšuvnnaide mat inkluderejit
-          čállinteastta-casaid sihkkarastit ahte funkšuvdna doaibmá nu go galgá.
-      Booleans:
-        title: Boolánat ja Logihkka
-        desc: Boolánat leat njealját ja maŋemus dátatyhpa maid galggat oahppat dán
-          kurssas. Dán doaimmas oahpat mat Boolánat leat, ja movt dát sáhttet veahkehit
-          min čállit funkšuvnnaid mat jurddašit logalaččat
-      ConditionalsPiecewiseFunctions:
-        title: Eavttut ja Bihtáidmielde Funkšuvnnat
-        desc: Paramehterat maid mii sirdit funkšuvnnaide dagahit dan ahte loahppabohtosat
-          varierejit čavges minstara ráhkadeami mielde. Jus dette mii áigut paramehteriid
-          main leat muhtun árvvut ráhkadan dihte  loahppabohtosiid geavahettin ovtta
-          minstara, muhto eará árvvuid geavahit eará minstara. Dása dárbbahit eavttuid...
-      CollisionDetection:
-        title: Fuomáš Oktibeaškkehemiid ja Pytagoras
-        desc: Mearridit goas šearpmas objeavttat guoskkahuvvojit lea dehálaš aspeakta
-          eanas spealuin. Dán lekšuvnnas mii geahččat movt Pytagoras ja Gaskaid MihtidanForme
-          sáhttet geavahuvvot mihtidit gaskka guovtti čujuhusas ovtta sajis, ja de
-          mearridit movt diet guokte čujuhusa (dahje speallanfigurat) guoskkadeaba.
-      courseA_unplugged_loops:
-        title: Mohkit Neahtahaga
-        desc: Dán lekšuvnnas don oahpat mohkiid birra!
-      courseB_unplugged_MRF:
-        title: Neahtahaga Doaibma
-        desc: Dán lekšuvnnas, de don "programmeret" iežat olbmáid!
-      courseB_unplugged_loopyMRF:
-        title: Neahtahaga Doaibma
-        desc: Nugo "Mu Robohtalaš Olbmát", de don "programmeret" iežat olbmáid, muhto
-          dán háve mohkiiguin!
-      courseC_Unplugged_ScreenOutTheMean:
-        title: Neahtahaga Doaibma
-        desc: Otne oahpat maid dahkat jus muhtun láhtte fasttit neahtas.
+        title: Binára Govat
+      courseD_unplugged_conditionalsCards:
+        desc: Oahppat evttolaš dadjama birra, oahppit spellet koartaspealu ja ráhkadit
+          njuolggadusaid nu go Jus mun geasán rukses koartta, oaččun ovtta čuoggá"
+          ja "Jus mun geasán čáhppes koartta, de oaččut don ovtta čuoggá."
       courseD_unplugged_digitalCitizenship:
-        title: Neahtahaga Doaibma
         desc: Otne oahpat maid mearkkaša leat Digitála Servodatmiellahttun.
-      courseE_unplugged_privateInformation:
-        title: 'Common Sense Education: Priváhta ja Persovnnalaš Informašuvdna'
-        desc: Otne oahpat erohusa priváhta ja persovnnalaš informašuvnnas!
-      courseF_unplugged_powerOfWords:
         title: Neahtahaga Doaibma
-        desc: Otne oahpat maid dahkat jus muhtun láhtte fasttit neahtas.
-      deeper learning description:
-        desc: 'jorgalus váilu: en-US.data.unplugged.desc'
-      courseAB_unplugged_plantASeed:
-        title: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
-        desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis
-          geavahettiin ovdamearkan doaimma mas gilvá siepmana. Dát deattuha maid stuorit
-          gova dihtordiehtagas ja dan ahte algoritmmain lea guovddáš rolla.
-      courseA_unplugged_happyMaps:
-        title: Movttegis Kárttat
-        desc: Oahppit ráhkadit eaŋkilis algoritmmaid (neavvačoahkit) sirdit mearkka
-          labyrinta čađa ovttain eaŋkilis kommándoin.
-      courseA_unplugged_goingPlacesSafely:
-        title: Mannat Sihkkaris Sajiide
-        desc: Interneahtta lea fámolaš, ja muhtun geardde maid várálaš báiki. Oahpaheaddjit
-          čájehit movt don sáhtát leat oadjebas go navigeret Interneahtas.
-      courseABC_unplugged_bigEvent:
-        title: Stuora Dáhpáhus
-        desc: Oahppit láidestuvvojit programmeret "dáhpáhusat", mii lea dahkku maid
-          dihtor ovttat ládje goziha. Oahpaheaddji deaddá boaluid báber-fjernkontroll:as
-          ja oahppit reagerejit dan mielde makkár boallu deddojuvvo.
-      courseB_unplugged_digitalFootprint:
-        title: Du Digitála Luodda
-        desc: Oahpaheaddjit čájehit ohppiide ahte go sii bidjet dieđuid iežaset birra
-          nehttii de dát ráhkada digitála luotta, mas leat váikkuhusat.
-      courseC_unplugged_buildingAFoundation:
-        title: Hukset Vuođu
-        desc: Oahppit huksejit struktuvrra masa dušše atnet olámuttu lassireaidduid.
-          Struktuvrrat fertejit válbmet ovtta bargobihtá (olahit vissis allodaga dahje
-          guoddit vissis deattu), ja oahppit digaštallet idea ahte juoga lea bistevaš
-          go áššit šaddet váddásat.
-      courseC_unplugged_paperPlanes:
-        title: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
-        desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis,
-          ráhkadit earenoamáš bábergirdi. Dát lekšuvdna deattuha maiddái stuorit gova
-          dihtordiehtagas ja movt algoritmmain lea guovddáš rolla das.
-      courseC_unplugged_gettingLoopy:
-        title: Šaddat Gáiggasin
-        desc: Dát lekšuvdna láidesta movt programmeret mohkiid (geardduheaddji neavvagat)
-          dánsendoaimmaid čađa. Oahppit galget oahppat eaŋkilis koreografiija, ja
-          de nevvojuvvojit geardduhit dan.
-      courseC_unplugged_binaryBracelets:
-        title: Binára Giehtabáttit
-        desc: Oahppit ráhkadit giehtabáttiid vuosttaš bustávain iežaset namas binára
-          ovdanbuktiimiin. Oahppit ohppet ahte dátat sáhttet representerejuvvot ja
-          vurkejuvvot eanet go ovttain málliin.
+      courseD_unplugged_digitalCitizenship_2018:
+        desc: Otne oahpat maid mearkkaša leat Digitála Servodatmiellahttun.
+        title: Neahtahaga Doaibma
+      courseD_unplugged_digitalCitizenship_2019:
+        desc: Otne oahpat maid mearkkaša leat Digitála Servodatmiellahttun.
+        title: Neahtahaga Doaibma
       courseD_unplugged_graphPaperProgramming:
         desc: Oahppit čállet algoritmma (neavvačoahkit) go geavahit ovdagihtii definerejuvvon
           kommándo-čohkiid neavvut skuvlaoappáid/-vieljaid reproduseret tevnnega.
@@ -304,269 +480,93 @@ se:
           algoritma man vuođđu lea "Gráfalaš BáberPrográmmeren"-govva. Sii dušše čállet
           ovtta neavvaga hávális, ja jus lea boastut gokkoge, de fertejit sihkkut
           visot mearkkaid dan rádjái.
-      courseD_unplugged_conditionalsCards:
-        desc: Oahppat evttolaš dadjama birra, oahppit spellet koartaspealu ja ráhkadit
-          njuolggadusaid nu go Jus mun geasán rukses koartta, oaččun ovtta čuoggá"
-          ja "Jus mun geasán čáhppes koartta, de oaččut don ovtta čuoggá."
-      courseD_unplugged_binaryImages:
-        title: Binára Govat
-        desc: Vaikko ollu olbmot jurddašit binára leat buiga nullat ja ovttežat, ohppe
-          min ovddeš oahppit ahte informašuvnnas sáhttet leat oallut binára molssaeavttut.
-          Dán lekšuvnnas joatkit dán viidáseappot, go dát čájeha movt dihtor sáhttá
-          vurket vel eanet kompleaksa informašuvnnaid (ovdamearkka dihte govat ja
-          ivnnit) binárain maiddái.
-      courseE_unplugged_diceRace:
-        title: 'Duohta-máilmmi Algoritmmat: Birccu bálkestit'
-        desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis.
-          Oassin dás oahppit galget identifiseret ja čállit algoritmmaid bircospealu
-          váste.
-      courseE_unplugged_songwritingParameters:
-        desc: Oahppit geavahit korakonseapta lávlagis oahppat defineren- ja riŋgenfunkšuvnnaid.
-      courseE_unplugged_internet:
-        title: Interneahtta
-        desc: Oahppit sáddejit dieđuid mat representerejit iešguđetlágan Interneahttafievrredanvugiid
-          geavahettiin báberbihtáid.
+      courseE_simon_says_2019:
+        desc: "Speala spealu ja smiehtas makkár kommándot leat dárbbašlaččat oažžut
+          rievttes bohtosa.\r\n\r\n![test image](https://code.org/images/logo.png)"
+        title: Simmon Sihtá
+      courseE_unplugged_CnC_2018:
+        desc: 'Dahkkivuoigatvuohta ja Kreativitehta joavku lea luoikan DihtorDiehtaga
+          Vuođuide, dát lekšuvdna lea dan váste ahte veahkehit ohppiid ipmirdit hástalusaid
+          ja ovdamuniid das ahte árvvusatnit eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit
+          digitála birrasiin. Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára
+          vuoigatvuođaid mat leat dehálaš oasit leat ehtalaš digitála servodatássin.
+
+          '
+        title: Digitála Juohkin
+      courseE_unplugged_CnC_2019:
+        desc: 'Dahkkivuoigatvuohta ja Kreativitehta joavku lea luoikan DihtorDiehtaga
+          Vuođuide, dát lekšuvdna lea dan váste ahte veahkehit ohppiid ipmirdit hástalusaid
+          ja ovdamuniid das ahte árvvusatnit eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit
+          digitála birrasiin. Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára
+          vuoigatvuođaid mat leat dehálaš oasit leat ehtalaš digitála servodatássin.
+
+          '
+        title: Digitála Juohkin
+      courseE_unplugged_accessAbility_2019:
+        desc: Oahpa movt beassanvejolašvuohta ja empatiija árvu jurddariđu bokte ja
+          designe beassanvejolašvuođa čovdosiid hypotehtalaš app:aide.
+        title: BeassanVejolašvuohta
       courseE_unplugged_crowdsourcing:
-        title: Joavkočohkken
         desc: Oahppit geavahit joavkočohkkema, čuolbmačoavdinteknihka mii lea dábálaš
           dihtordiehtagis válbmet bargobihtá ovttas nugo klássalanjas effektiivaleppot
           go jus studeanta livččii akto geahččalan.
+        title: Joavkočohkken
+      courseE_unplugged_diceRace:
+        desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis.
+          Oassin dás oahppit galget identifiseret ja čállit algoritmmaid bircospealu
+          váste.
+        title: 'Duohta-máilmmi Algoritmmat: Birccu bálkestit'
+      courseE_unplugged_internet:
+        desc: Oahppit sáddejit dieđuid mat representerejit iešguđetlágan Interneahttafievrredanvugiid
+          geavahettiin báberbihtáid.
+        title: Interneahtta
+      courseE_unplugged_privateInformation:
+        desc: Otne oahpat erohusa priváhta ja persovnnalaš informašuvnnas!
+        title: 'Common Sense Education: Priváhta ja Persovnnalaš Informašuvdna'
+      courseE_unplugged_privateInformation_2019:
+        desc: Ovdánahtton Common Sense Education, Dát lekšuvdna čájeha erohusaid gaskkal
+          informášuvnna mii lea sihkar juogadit online ja informášuvnna mii leat lea
+          nu.
+        title: Priváhta ja Persovnnlaš Dieđut
       courseE_unplugged_songwriting:
-        title: Lávlagiid čállit
         desc: Oahppit geavahit korakonseapta lávlagis oahppat defineren- ja riŋgenfunkšuvnnaid.
-      courseF_unplugged_tangrams:
-        title: Tangrámma Algoritmmat
-        desc: Dát lekšuvdna čájeha juoidá dehálačča algoritmmaid birra. Jus ráhkadat
-          algoritmma eaŋkilit, de das leat máŋga geavahanvuogi. Jus áiggut leat sihkar
-          ahte buohkain lea seamma loahppaboađus, de dárbbaša algoritma eanet detáljaid.
+        title: Lávlagiid čállit
+      courseE_unplugged_songwritingParameters:
+        desc: Oahppit geavahit korakonseapta lávlagis oahppat defineren- ja riŋgenfunkšuvnnaid.
       courseF_unplugged_envelopeVariables:
-        title: Konvoluhtta Variábelat
         desc: Variábelat addet eanet friddjavuođa dihtordiehtagis. Dát lekšuvdna veahkeha
           čilget mat variábelat leat ja movt mii sáhttit dáid geavahit iešguđetlágan
           vugiiguin. Geavat dán doaimma ovdal (dahje ovttas dainna) lekšuvnna abstrakšuvnna
           nu ahte deaivvat ideain.
+        title: Konvoluhtta Variábelat
       courseF_unplugged_forLoopFun:
-        title: Suohttasat Mohkiid váste
         desc: Mii diehtit ahte mohkit diktet min dahkat diŋggaid ođđasit ahte ođđasit,
           muhto dál galgat oahppat movt geavahit mohkiid mat sisttisdollet lassi struktuvrra.
+        title: Suohttasat Mohkiid váste
+      courseF_unplugged_powerOfWords:
+        desc: Otne oahpat maid dahkat jus muhtun láhtte fasttit neahtas.
+        title: Neahtahaga Doaibma
+      courseF_unplugged_powerOfWords_2019:
+        desc: 'jorgalus váilu: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+        title: 'jorgalus váilu: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
       courseF_unplugged_songwritingParameters:
         desc: Okta dain sievamus struktuvrrain dihtordiehtaga máilmmis lea funkšuvdna.
           Funkšuvnnat (gohčoduvvon prosedyran) lea miniprográmmažat maid sáhtát geavahit
           ođđasit ahte ođđasit stuorit prográmmaid siste. Dát lekšuvdna veahkeha ohppiid
           intuitiivvalaččat ipmirdit manne lea vuogas bargu ovttastahttit kodabihtáid
           funkšuvnnas.
-      courseB_unplugged_MRF_2018:
-        desc: Oahpa programmeret dainna ahte čálát koda du olbmáide!
-      PlantASeed_2018:
-        title: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
-        desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis
-          geavahettiin ovdamearkan doaimma mas gilvá siepmana. Dát deattuha maid stuorit
-          gova dihtordiehtagas ja dan ahte algoritmmain lea guovddáš rolla.
-      UnplugHappyMaps_2018:
-        title: Movttegis Kárttat
-        desc: Oahppit ráhkadit eaŋkilis algoritmmaid (neavvačoahkit) sirdit mearkka
-          labyrinta čađa ovttain eaŋkilis kommándoin.
-      GoingPlacesSafely_2018:
-        title: Mannat Sihkkaris Sajiide
-        desc: Interneahtta lea fámolaš, ja muhtun geardde maid várálaš báiki. Oahpaheaddjit
-          čájehit movt don sáhtát leat oadjebas go navigeret Interneahtas.
-      courseA_unplugged_loops_2018:
-        title: Mohkit Neahtahaga
-        desc: Dán lekšuvnnas don oahpat mohkiid birra!
-      BigEvent_2018:
-        title: Stuora Dáhpáhus
-        desc: Oahppit láidestuvvojit programmeret "dáhpáhusat", mii lea dahkku maid
-          dihtor ovttat ládje goziha. Oahpaheaddji deaddá boaluid báber-fjernkontroll:as
-          ja oahppit reagerejit dan mielde makkár boallu deddojuvvo.
-      GraphPaperProgramming_2018:
-        desc: Oahppit čállet algoritmma (neavvačoahkit) go geavahit ovdagihtii definerejuvvon
-          kommándo-čohkiid neavvut skuvlaoappáid/-vieljaid reproduseret tevnnega.
-      courseD_unplugged_digitalCitizenship_2018:
-        title: Neahtahaga Doaibma
-        desc: Otne oahpat maid mearkkaša leat Digitála Servodatmiellahttun.
-      courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Neahtahaga Doaibma
-        desc: Otne oahpat maid dahkat jus muhtun láhtte fasttit neahtas.
-      Conditionals_2018:
-        desc: Oahppat evttolaš dadjama birra, oahppit spellet koartaspealu ja ráhkadit
-          njuolggadusaid nu go Jus mun geasán rukses koartta, oaččun ovtta čuoggá"
-          ja "Jus mun geasán čáhppes koartta, de oaččut don ovtta čuoggá."
-      DigitalFootprint_2018:
-        title: Du Digitála Luodda
-        desc: Oahpaheaddjit čájehit ohppiide ahte go sii bidjet dieđuid iežaset birra
-          nehttii de dát ráhkada digitála luotta, mas leat váikkuhusat.
-      BinaryImages_2018:
-        title: Binára Govat
-        desc: Vaikko ollu olbmot jurddašit binára leat buiga nullat ja ovttežat, ohppe
-          min ovddeš oahppit ahte informašuvnnas sáhttet leat oallut binára molssaeavttut.
-          Dán lekšuvnnas joatkit dán viidáseappot, go dát čájeha movt dihtor sáhttá
-          vurket vel eanet kompleaksa informašuvnnaid (ovdamearkka dihte govat ja
-          ivnnit) binárain maiddái.
-      PaperPlanes_2018:
-        title: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
-        desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis,
-          ráhkadit earenoamáš bábergirdi. Dát lekšuvdna deattuha maiddái stuorit gova
-          dihtordiehtagas ja movt algoritmmain lea guovddáš rolla das.
-      GettingLoopy_2018:
-        title: Šaddat Gáiggasin
-        desc: Dát lekšuvdna láidesta movt programmeret mohkiid (geardduheaddji neavvagat)
-          dánsendoaimmaid čađa. Oahppit galget oahppat eaŋkilis koreografiija, ja
-          de nevvojuvvojit geardduhit dan.
-      BinaryBracelets_2018:
-        title: Binára Giehtabáttit
-        desc: Oahppit ráhkadit giehtabáttiid vuosttaš bustávain iežaset namas binára
-          ovdanbuktiimiin. Oahppit ohppet ahte dátat sáhttet representerejuvvot ja
-          vurkejuvvot eanet go ovttain málliin.
-      courseB_unplugged_CnC_2018:
-        title: Lea Buorre Ráhkadit ja Speallat Vuoiggalaččat
-        desc: Dahkkivuoigatvuohta ja Kreativitehta joavku lea luoikan DihtorDiehtaga
-          Vuođuide, dát lekšuvdna lea dan váste ahte veahkehit ohppiid ipmirdit juohkima
-          ja inspirašuvnna kreatiiva proseassaid. Dáid mielde maiddái čuovvu promoteret
-          kreatiiva dajaldagaid ja dárbu leat vuoiggalaš kreatiiva barggus.
-      courseE_unplugged_CnC_2018:
-        title: Digitála Juohkin
-        desc: 'Dahkkivuoigatvuohta ja Kreativitehta joavku lea luoikan DihtorDiehtaga
-          Vuođuide, dát lekšuvdna lea dan váste ahte veahkehit ohppiid ipmirdit hástalusaid
-          ja ovdamuniid das ahte árvvusatnit eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit
-          digitála birrasiin. Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára
-          vuoigatvuođaid mat leat dehálaš oasit leat ehtalaš digitála servodatássin.
-
-'
-      RelayProgramming_2018:
-        desc: Dát doaibma álgá oanehis lekšuvnnain movt ohcat boastuvuođaid ja movt
-          nagodit, ja de viidáseappot gilvalit áiggiin go oahppit juohkásit joavkkuide
-          ja ovttasbarget čállit prográmma, ovtta neavvaga hávális.
-      courseB_unplugged_MRF_2019:
-        desc: Oahpa programmeret dainna ahte čálát koda du olbmáide!
-      BuildingAFoundation_2019:
-        title: 'jorgalus váilu: en-US.data.unplugged.BuildingAFoundation_2018.title'
-        desc: 'jorgalus váilu: en-US.data.unplugged.BuildingAFoundation_2018.desc'
-      courseB_unplugged_loopyMRF_2019:
-        title: Mu Mohkke Robota Olbmát
-      Conditionals_2019:
-        desc: Oahppat evttolaš dadjama birra, oahppit spellet koartaspealu ja ráhkadit
-          njuolggadusaid nu go Jus mun geasán rukses koartta, oaččun ovtta čuoggá"
-          ja "Jus mun geasán čáhppes koartta, de oaččut don ovtta čuoggá."
-      courseF_unplugged_powerOfWords_2019:
-        title: 'jorgalus váilu: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
-        desc: 'jorgalus váilu: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
-      EnvelopeVariables_2019:
-        title: 'jorgalus váilu: en-US.data.unplugged.EnvelopeVariables_2018.title'
-        desc: 'jorgalus váilu: en-US.data.unplugged.EnvelopeVariables_2018.desc'
-      ForLoopFun_2019:
-        title: 'jorgalus váilu: en-US.data.unplugged.ForLoopFun_2018.title'
-        desc: 'jorgalus váilu: en-US.data.unplugged.ForLoopFun_2018.desc'
-      GraphPaperProgramming_2019:
-        desc: Oahppit čállet algoritmma (neavvačoahkit) go geavahit ovdagihtii definerejuvvon
-          kommándo-čohkiid neavvut skuvlaoappáid/-vieljaid reproduseret tevnnega.
-      RelayProgramming_2018_2019:
-        desc: Dát doaibma álgá oanehis lekšuvnnain movt ohcat boastuvuođaid ja movt
-          nagodit, ja de viidáseappot gilvalit áiggiin go oahppit juohkásit joavkkuide
-          ja ovttasbarget čállit prográmma, ovtta neavvaga hávális.
-      courseD_unplugged_digitalCitizenship_2019:
-        title: Neahtahaga Doaibma
-        desc: Otne oahpat maid mearkkaša leat Digitála Servodatmiellahttun.
-      BinaryImages_2019:
-        title: Binára Govat
-        desc: Vaikko ollu olbmot jurddašit binára leat buiga nullat ja ovttežat, ohppe
-          min ovddeš oahppit ahte informašuvnnas sáhttet leat oallut binára molssaeavttut.
-          Dán lekšuvnnas joatkit dán viidáseappot, go dát čájeha movt dihtor sáhttá
-          vurket vel eanet kompleaksa informašuvnnaid (ovdamearkka dihte govat ja
-          ivnnit) binárain maiddái.
-      courseE_unplugged_privateInformation_2019:
-        title: Priváhta ja Persovnnlaš Dieđut
-        desc: Ovdánahtton Common Sense Education, Dát lekšuvdna čájeha erohusaid gaskkal
-          informášuvnna mii lea sihkar juogadit online ja informášuvnna mii leat lea
-          nu.
-      SongwritingParameters_2019:
-        title: 'jorgalus váilu: en-US.data.unplugged.SongwritingParameters_2018.title'
-        desc: 'jorgalus váilu: en-US.data.unplugged.SongwritingParameters_2018.desc'
-      courseE_unplugged_CnC_2019:
-        title: Digitála Juohkin
-        desc: 'Dahkkivuoigatvuohta ja Kreativitehta joavku lea luoikan DihtorDiehtaga
-          Vuođuide, dát lekšuvdna lea dan váste ahte veahkehit ohppiid ipmirdit hástalusaid
-          ja ovdamuniid das ahte árvvusatnit eaiggátvuođa ja dahkkivuoigatvuođa, earenoamážit
-          digitála birrasiin. Oahppit berrejit movttiidahttojuvvot árvvusátnit dáiddára
-          vuoigatvuođaid mat leat dehálaš oasit leat ehtalaš digitála servodatássin.
-
-'
-      Internet_2019:
-        title: 'jorgalus váilu: en-US.data.unplugged.Internet_2018.title'
-        desc: 'jorgalus váilu: en-US.data.unplugged.Internet_2018.desc'
-      Crowdsourcing_2019:
-        title: 'jorgalus váilu: en-US.data.unplugged.Crowdsourcing_2018.title'
-        desc: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.desc'
-      GettingLoopy_2019:
-        title: Šaddat Gáiggasin
-        desc: Dát lekšuvdna láidesta movt programmeret mohkiid (geardduheaddji neavvagat)
-          dánsendoaimmaid čađa. Oahppit galget oahppat eaŋkilis koreografiija, ja
-          de nevvojuvvojit geardduhit dan.
-      courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Neahtahaga Doaibma
-        desc: Otne oahpat maid dahkat jus muhtun láhtte fasttit neahtas.
-      BigEvent_2019:
-        title: Stuora Dáhpáhus
-        desc: Oahppit láidestuvvojit programmeret "dáhpáhusat", mii lea dahkku maid
-          dihtor ovttat ládje goziha. Oahpaheaddji deaddá boaluid báber-fjernkontroll:as
-          ja oahppit reagerejit dan mielde makkár boallu deddojuvvo.
-      BinaryBracelets_2019:
-        title: Binára Giehtabáttit
-        desc: Oahppit ráhkadit giehtabáttiid vuosttaš bustávain iežaset namas binára
-          ovdanbuktiimiin. Oahppit ohppet ahte dátat sáhttet representerejuvvot ja
-          vurkejuvvot eanet go ovttain málliin.
-      PaperPlanes_2019:
-        title: 'Duohta-máilmmi Algoritmmat: BáberGirdit'
-        desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis,
-          ráhkadit earenoamáš bábergirdi. Dát lekšuvdna deattuha maiddái stuorit gova
-          dihtordiehtagas ja movt algoritmmain lea guovddáš rolla das.
-      PlantASeed_2019:
-        title: 'Duohta-máilmmi Algoritmmat: Gilvve Siepmana'
-        desc: Dát lekšuvdna čájeha vugiid movt geavahit algoritmmaid árgabeaivvis
-          geavahettiin ovdamearkan doaimma mas gilvá siepmana. Dát deattuha maid stuorit
-          gova dihtordiehtagas ja dan ahte algoritmmain lea guovddáš rolla.
-      UnplugHappyMaps_2019:
-        title: Movttegis Kárttat
-        desc: Oahppit ráhkadit eaŋkilis algoritmmaid (neavvačoahkit) sirdit mearkka
-          labyrinta čađa ovttain eaŋkilis kommándoin.
-      GoingPlacesSafely_2019:
-        title: Mannat Sihkkaris Sajiide
-        desc: Interneahtta lea fámolaš, ja muhtun geardde maid várálaš báiki. Oahpaheaddjit
-          čájehit movt don sáhtát leat oadjebas go navigeret Interneahtas.
-      courseA_unplugged_loops_2019:
-        title: Mohkit Neahtahaga
-        desc: Dán lekšuvnnas don oahpat mohkiid birra!
-      DigitalFootprint_2019:
-        title: Du Digitála Luodda
-        desc: Oahpaheaddjit čájehit ohppiide ahte go sii bidjet dieđuid iežaset birra
-          nehttii de dát ráhkada digitála luotta, mas leat váikkuhusat.
-      courseB_unplugged_CnC_2019:
-        title: Lea Buorre Ráhkadit ja Speallat Vuoiggalaččat
-        desc: Dahkkivuoigatvuohta ja Kreativitehta joavku lea luoikan DihtorDiehtaga
-          Vuođuide, dát lekšuvdna lea dan váste ahte veahkehit ohppiid ipmirdit juohkima
-          ja inspirašuvnna kreatiiva proseassaid. Dáid mielde maiddái čuovvu promoteret
-          kreatiiva dajaldagaid ja dárbu leat vuoiggalaš kreatiiva barggus.
-      GraphingData_2019:
-        title: Presenteret Dátaid
-        desc: Dán lekšuvnnas oahppit čohkkejit dátaid Speallan-lab-prošeavttas dahje
-          duohtamáilmmi -scenariijain ja geavahit daid ráhkadit einnostemiid.
-      courseE_unplugged_accessAbility_2019:
-        title: BeassanVejolašvuohta
-        desc: Oahpa movt beassanvejolašvuohta ja empatiija árvu jurddariđu bokte ja
-          designe beassanvejolašvuođa čovdosiid hypotehtalaš app:aide.
-      courseE_simon_says_2019:
-        title: Simmon Sihtá
-        desc: "Speala spealu ja smiehtas makkár kommándot leat dárbbašlaččat oažžut
-          rievttes bohtosa.\r\n\r\n![test image](https://code.org/images/logo.png)"
-      courseB_unplugged_passwords_2019:
-        title: Vuoibmás Čoavddasánit
-        desc: Suokkardala manne olbmot geavahit čoavddasániid, oahpa ovdamuniid birra
-          geavahit čoavddasáni ja oza strategiijaid ráhkadit ja doalahit vuoibmás,
-          sihkkaris čoavddasániid.
-      timeforcs_demo_crowdsourcing:
-        title: Joavkočohkken
-        desc: '_Josh-notáhtta: dan sadjái movt vuosttaš lekšuvdna lei, de lean formateren
-          dán nu ahte lea dábálaš neahtahaga lekšuvdna._'
+      courseF_unplugged_tangrams:
+        desc: Dát lekšuvdna čájeha juoidá dehálačča algoritmmaid birra. Jus ráhkadat
+          algoritmma eaŋkilit, de das leat máŋga geavahanvuogi. Jus áiggut leat sihkar
+          ahte buohkain lea seamma loahppaboađus, de dárbbaša algoritma eanet detáljaid.
+        title: Tangrámma Algoritmmat
+      deeper learning description:
+        desc: 'jorgalus váilu: en-US.data.unplugged.desc'
       timeforcs_demo_conditionals:
         desc: Oahppat evttolaš dadjama birra, oahppit spellet koartaspealu ja ráhkadit
           njuolggadusaid nu go Jus mun geasán rukses koartta, oaččun ovtta čuoggá"
           ja "Jus mun geasán čáhppes koartta, de oaččut don ovtta čuoggá."
+      timeforcs_demo_crowdsourcing:
+        desc: '_Josh-notáhtta: dan sadjái movt vuosttaš lekšuvdna lei, de lean formateren
+          dán nu ahte lea dábálaš neahtahaga lekšuvdna._'
+        title: Joavkočohkken

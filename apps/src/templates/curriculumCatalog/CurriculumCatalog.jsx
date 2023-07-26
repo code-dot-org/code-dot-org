@@ -292,6 +292,11 @@ const CurriculumCatalog = ({
     );
   };
 
+  const handleCloseAssignSuccessMessage = () => {
+    setShowAssignSuccessMessage(false);
+    setAssignSuccessMessage('');
+  };
+
   // Renders search results based on the applied filters (or shows the No matching curriculums
   // message if no results).
   const renderSearchResults = () => {
@@ -382,65 +387,67 @@ const CurriculumCatalog = ({
           </BodyTwoText>
           <button
             aria-label="close success message"
-            onClick={() => setShowAssignSuccessMessage(false)}
+            onClick={handleCloseAssignSuccessMessage}
             type="button"
           >
             <strong>X</strong>
           </button>
         </div>
       )}
-      <div className={style.catalogFiltersContainer}>
-        <Heading6 className={style.catalogFiltersRowLabel}>
-          {i18n.filterBy()}
-        </Heading6>
-        {Object.keys(filterTypes).map(filterKey => (
-          <CheckboxDropdown
-            key={filterKey}
-            name={filterKey}
-            label={filterTypes[filterKey].label}
-            allOptions={filterTypes[filterKey].options}
-            checkedOptions={appliedFilters[filterKey]}
-            onChange={e => handleSelect(e, filterKey)}
-            handleSelectAll={() => handleSelectAllOfFilter(filterKey)}
-            handleClearAll={() => handleClearAllOfFilter(filterKey)}
-          />
-        ))}
-        <Button
-          id="clear-filters"
-          className={style.catalogClearFiltersButton}
-          type="button"
-          onClick={handleClear}
-          text={i18n.clearFilters()}
-          styleAsText
-          color={Button.ButtonColor.brandSecondaryDefault}
-        />
-      </div>
-      {!isEnglish && (
-        <div className={style.catalogLanguageFilterRow}>
-          <div className={style.catalogLanguageFilterRowNumAvailable}>
-            <BodyTwoText>
-              {i18n.numCurriculaAvailableInLanguage({
-                numCurricula: numFilteredTranslatedCurricula,
-                language: languageNativeName,
-              })}
-            </BodyTwoText>
-            <FontAwesome
-              icon="language"
-              className="fa-solid"
-              title={i18n.courseInYourLanguage()}
+      <div className={style.fixedFiltersTop}>
+        <div className={style.catalogFiltersContainer}>
+          <Heading6 className={style.catalogFiltersRowLabel}>
+            {i18n.filterBy()}
+          </Heading6>
+          {Object.keys(filterTypes).map(filterKey => (
+            <CheckboxDropdown
+              key={filterKey}
+              name={filterKey}
+              label={filterTypes[filterKey].label}
+              allOptions={filterTypes[filterKey].options}
+              checkedOptions={appliedFilters[filterKey]}
+              onChange={e => handleSelect(e, filterKey)}
+              handleSelectAll={() => handleSelectAllOfFilter(filterKey)}
+              handleClearAll={() => handleClearAllOfFilter(filterKey)}
             />
-          </div>
-          <Toggle
-            name="filterTranslatedToggle"
-            label={i18n.onlyShowCurriculaInLanguage({
-              language: languageNativeName,
-            })}
-            size="m"
-            checked={appliedFilters['translated']}
-            onChange={e => handleToggleLanguageFilter(e.target.checked)}
+          ))}
+          <Button
+            id="clear-filters"
+            className={style.catalogClearFiltersButton}
+            type="button"
+            onClick={handleClear}
+            text={i18n.clearFilters()}
+            styleAsText
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </div>
-      )}
+        {!isEnglish && (
+          <div className={style.catalogLanguageFilterRow}>
+            <div className={style.catalogLanguageFilterRowNumAvailable}>
+              <BodyTwoText>
+                {i18n.numCurriculaAvailableInLanguage({
+                  numCurricula: numFilteredTranslatedCurricula,
+                  language: languageNativeName,
+                })}
+              </BodyTwoText>
+              <FontAwesome
+                icon="language"
+                className="fa-solid"
+                title={i18n.courseInYourLanguage()}
+              />
+            </div>
+            <Toggle
+              name="filterTranslatedToggle"
+              label={i18n.onlyShowCurriculaInLanguage({
+                language: languageNativeName,
+              })}
+              size="m"
+              checked={appliedFilters['translated']}
+              onChange={e => handleToggleLanguageFilter(e.target.checked)}
+            />
+          </div>
+        )}
+      </div>
       <div className={style.catalogContentContainer}>
         {renderSearchResults()}
       </div>

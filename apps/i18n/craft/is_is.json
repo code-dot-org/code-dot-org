@@ -1,9 +1,9 @@
 {
   "absolute": "algildi",
+  "agentDiamondPathCongrats": "Til hamingju, þú fannst demantaleiðina! Þú hefur nú safnað {count, plural, one {1 demanti} other {# demöntum}}!",
   "agentGenericFailureMessage": "Haltu áfram að kóða! Mundu að nota Umba til að hjálpa þér.",
   "agentTooFewBlocksFailureMessage": "Prófaðu að bæta bara einum kubbi við í einu til að koma Umba á réttan stað.",
   "at": "hjá",
-  "agentDiamondPathCongrats": "Til hamingju, þú fannst demantaleiðina! Þú hefur nú safnað {count, plural, one {1 demanti} other {# demöntum}}!",
   "blockActionAdd": "bæta við",
   "blockActionAttack": "ráðast á",
   "blockActionClone": "klóna blokkir",

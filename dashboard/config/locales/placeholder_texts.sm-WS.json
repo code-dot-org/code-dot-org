@@ -19,8 +19,8 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
         },
         "Find the Wizard": {
-          "0b895ef4c917e50663bc2a7327cbee3d": "Ua e maua au",
           "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "0b895ef4c917e50663bc2a7327cbee3d": "Ua e maua au",
           "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
         },
         "FoodFight": {
@@ -229,9 +229,9 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
         },
         "courseF_playlab_variables2b": {
-          "48d6215903dff56238e52e8891380c8f": "lanumoana",
           "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
-          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei",
+          "48d6215903dff56238e52e8891380c8f": "lanumoana"
         },
         "courseF_playlab_variables3b_josh": {
           "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
@@ -246,9 +246,9 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
         },
         "courseF_playlab_variables5c": {
-          "bda9643ac6601722a28f238714274da4": "lanu mumu",
           "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
-          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei",
+          "bda9643ac6601722a28f238714274da4": "lanu mumu"
         },
         "courseF_playlab_variables6c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
@@ -259,18 +259,18 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
         },
         "courseF_playlab_variables7c": {
-          "c216de13cd615c884ff2cc5894324e17": "Filifili se lanu. ",
           "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
-          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei",
+          "c216de13cd615c884ff2cc5894324e17": "Filifili se lanu. "
         },
         "courseF_playlab_variables8c": {
-          "bec312aa7dbfb0c284d221d2aa8e9ffd": "Malo",
-          "cd0d7bbbbb604e524bfc25effa78095d": "Na ou mafaufau i le lanu",
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei",
           "8460ae10541cf8ded22a4e899ddfc0bb": "Faamalie atu",
           "8622f69e8cf70458a82fc22d8e46372f": "Na ou le mafaufauina se lanu",
+          "bec312aa7dbfb0c284d221d2aa8e9ffd": "Malo",
           "c216de13cd615c884ff2cc5894324e17": "Filifili se lanu. ",
-          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
-          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+          "cd0d7bbbbb604e524bfc25effa78095d": "Na ou mafaufau i le lanu"
         },
         "courseF_playlab_variables_challenge1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",

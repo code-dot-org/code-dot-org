@@ -2,67 +2,10 @@
   "se-FI": {
     "data": {
       "programming_environments": {
-        "gamelab": {
-          "categories": {
-            "game_lab": {
-              "expressions": {
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "Čáhppes ja Vilges"
-                    }
-                  }
-                },
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "Ráhkat Musihka"
-                    }
-                  }
-                }
-              }
-            },
-            "sprites": {
-              "name": "Sprite:at",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Spirála"
-                    }
-                  }
-                }
-              }
-            },
-            "groups": {
-              "name": "Joavkkut"
-            },
-            "drawing": {
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Násti"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
         "applab": {
-          "description": "App Lab lea programmerenbiras gos sáhtát ráhkadit eaŋkilis app:aid. Ráhkat app:a, koda blohkaiguin dahje JavaScript:ain oažžut dán doaibmat, ja de juoge app:a jođánit.",
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "Ráhkat Musihka"
-                    }
-                  }
-                }
-              }
+            "advanced": {
+              "name": "Avanserta"
             },
             "canvas": {
               "expressions": {
@@ -138,6 +81,10 @@
                 }
               }
             },
+            "circuit": {
+            },
+            "control": {
+            },
             "data": {
               "expressions": {
                 "createRecord": {
@@ -184,31 +131,282 @@
                 }
               }
             },
-            "advanced": {
-              "name": "Avanserta"
+            "functions": {
+            },
+            "maker": {
+            },
+            "math": {
+            },
+            "micro_bit": {
+            },
+            "turtle": {
+            },
+            "ui_controls": {
+              "expressions": {
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Ráhkat Musihka"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+            }
+          },
+          "description": "App Lab lea programmerenbiras gos sáhtát ráhkadit eaŋkilis app:aid. Ráhkat app:a, koda blohkaiguin dahje JavaScript:ain oažžut dán doaibmat, ja de juoge app:a jođánit."
+        },
+        "gamelab": {
+          "categories": {
+            "control": {
+              "expressions": {
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Násti"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "expressions": {
+              }
+            },
+            "game_lab": {
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Čáhppes ja Vilges"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Ráhkat Musihka"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "expressions": {
+              },
+              "name": "Joavkkut"
+            },
+            "math": {
+              "expressions": {
+              }
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spirála"
+                    }
+                  }
+                }
+              },
+              "name": "Sprite:at"
+            },
+            "variables": {
+              "expressions": {
+              }
             }
           }
         },
         "spritelab": {
-          "name": "Sprite-lab",
           "categories": {
-            "sprites": {
-              "name": "Sprite:at"
-            },
-            "world": {
-              "name": "Máilbmi"
-            },
-            "location": {
-              "name": "Báikkit"
-            },
-            "events": {
-              "name": "Dáhpáhusaid"
-            },
             "behaviors": {
               "name": "Láhttemat"
             },
             "comments": {
               "name": "Kommentárat"
+            },
+            "events": {
+              "name": "Dáhpáhusaid"
+            },
+            "location": {
+              "name": "Báikkit"
+            },
+            "sprites": {
+              "name": "Sprite:at"
+            },
+            "world": {
+              "name": "Máilbmi"
+            }
+          },
+          "name": "Sprite-lab"
+        },
+        "weblab": {
+          "categories": {
+            "css_properties": {
+              "expressions": {
+                "Text-Dec": {
+                  "examples": {
+                  }
+                },
+                "background-color": {
+                  "examples": {
+                  }
+                },
+                "border": {
+                  "examples": {
+                  }
+                },
+                "border-bottom": {
+                  "examples": {
+                  }
+                },
+                "border-color": {
+                  "examples": {
+                  }
+                },
+                "border-left": {
+                  "examples": {
+                  }
+                },
+                "border-radius": {
+                  "examples": {
+                  }
+                },
+                "border-right": {
+                  "examples": {
+                  }
+                },
+                "border-style": {
+                  "examples": {
+                  }
+                },
+                "border-top": {
+                  "examples": {
+                  }
+                },
+                "border-width": {
+                  "examples": {
+                  }
+                },
+                "color": {
+                  "examples": {
+                  }
+                },
+                "float": {
+                  "examples": {
+                  }
+                },
+                "font-family": {
+                  "examples": {
+                  }
+                },
+                "font-size": {
+                  "examples": {
+                  }
+                },
+                "height": {
+                  "examples": {
+                  }
+                },
+                "margin": {
+                  "examples": {
+                  }
+                },
+                "pad": {
+                  "examples": {
+                  }
+                },
+                "pseudo-classes": {
+                  "examples": {
+                  }
+                },
+                "rgb-color": {
+                  "examples": {
+                  }
+                },
+                "width": {
+                  "examples": {
+                  }
+                }
+              }
+            },
+            "html_tags": {
+              "expressions": {
+                "A": {
+                  "examples": {
+                  }
+                },
+                "P": {
+                  "examples": {
+                  }
+                },
+                "body": {
+                  "examples": {
+                  }
+                },
+                "comment": {
+                  "examples": {
+                  }
+                },
+                "div": {
+                  "examples": {
+                  }
+                },
+                "doctype": {
+                  "examples": {
+                  }
+                },
+                "h": {
+                  "examples": {
+                  }
+                },
+                "head": {
+                  "examples": {
+                  }
+                },
+                "html": {
+                  "examples": {
+                  }
+                },
+                "img": {
+                  "examples": {
+                  }
+                },
+                "li": {
+                  "examples": {
+                  }
+                },
+                "link": {
+                  "examples": {
+                  }
+                },
+                "meta": {
+                  "examples": {
+                  }
+                },
+                "ol": {
+                  "examples": {
+                  }
+                },
+                "style": {
+                  "examples": {
+                  }
+                },
+                "title": {
+                  "examples": {
+                  }
+                },
+                "ul": {
+                  "examples": {
+                  }
+                }
+              }
             }
           }
         }

@@ -5,6 +5,12 @@
         "4-5 Bee Conditionals 2": {
           "4_5_Bee_Conditionals_2_1": "Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea."
         },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "Bihurtu duzu pantaila berde? Horrela bada,  klikatu 'Amaitu', bestela klikatu 'Berrezarri', zuzendu zure programa eta sakatu 'Hasi' berriro."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Orain Diseinu moduan zaude."
+        },
         "Course 4 Artist 4": {
           "repeat_full_circle": "Adierazi zenbatetan mugitu behar den zonbia biribil osoa egiteko."
         },
@@ -64,8 +70,8 @@
           "create_function": "Klik egin hemen \"Funtzioak\" zabalgarria irekitzeko, eta ondoren \"Funtzio bat sortu\" botoian."
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Klikatu \"editatu\" zure funtzioan parametro bat gehitzeko",
-          "add_and_drag_parameter": "Idatzi hemen zure parametroaren izena, klikatu \"gehitu\" eta orduan arrastatu ezazu zure funtzioaren definiziora"
+          "add_and_drag_parameter": "Idatzi hemen zure parametroaren izena, klikatu \"gehitu\" eta orduan arrastatu ezazu zure funtzioaren definiziora",
+          "edit_add_parameter": "Klikatu \"editatu\" zure funtzioan parametro bat gehitzeko"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "Arrastatu \"luzera\" aldagaia hona galdera-ikurrak ordezkatzeko"
@@ -79,13 +85,22 @@
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Hona hemen hainbat bloke zu hasi ahal izateko"
         },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Hona hemen hainbat bloke zu hasi ahal izateko"
+        },
         "Overworld Chop Trees_2019": {
           "craft_callout_preplaced": "Hona hemen hainbat bloke zu hasi ahal izateko"
         },
         "Overworld Chop Trees_2020": {
           "craft_callout_preplaced": "Hona hemen hainbat bloke zu hasi ahal izateko"
         },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Hona hemen hainbat bloke zu hasi ahal izateko"
+        },
         "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Kode honen bitartez, zure etxea eraikitzen hasiko da. Bukatu dezakezu zuk?"
+        },
+        "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "Kode honen bitartez, zure etxea eraikitzen hasiko da. Bukatu dezakezu zuk?"
         },
         "Overworld House Frame Chosen_2019": {
@@ -94,7 +109,13 @@
         "Overworld House Frame Chosen_2020": {
           "craft_callout_preplaced_house": "Kode honen bitartez, zure etxea eraikitzen hasiko da. Bukatu dezakezu zuk?"
         },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Kode honen bitartez, zure etxea eraikitzen hasiko da. Bukatu dezakezu zuk?"
+        },
         "Overworld Move to Sheep": {
+          "craft_run_button_callout": "Sakatu \"Hasi\" zure programa probatzeko"
+        },
+        "Overworld Move to Sheep2022": {
           "craft_run_button_callout": "Sakatu \"Hasi\" zure programa probatzeko"
         },
         "Overworld Move to Sheep_2019": {
@@ -103,7 +124,13 @@
         "Overworld Move to Sheep_2020": {
           "craft_run_button_callout": "Sakatu \"Hasi\" zure programa probatzeko"
         },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Sakatu \"Hasi\" zure programa probatzeko"
+        },
         "Overworld Place Wall": {
+          "craft_inside_repeat": "Errepikatu ekintzak blokeak hemen txertatuz"
+        },
+        "Overworld Place Wall2022": {
           "craft_inside_repeat": "Errepikatu ekintzak blokeak hemen txertatuz"
         },
         "Overworld Place Wall_2019": {
@@ -112,7 +139,13 @@
         "Overworld Place Wall_2020": {
           "craft_inside_repeat": "Errepikatu ekintzak blokeak hemen txertatuz"
         },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Errepikatu ekintzak blokeak hemen txertatuz"
+        },
         "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Kode honek laba bilatzen du. Gehitu dezakezu agindu bat aurrera mugitzeko?"
+        },
+        "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "Kode honek laba bilatzen du. Gehitu dezakezu agindu bat aurrera mugitzeko?"
         },
         "Underground Avoiding Lava_2019": {
@@ -121,7 +154,13 @@
         "Underground Avoiding Lava_2020": {
           "craft_callout_moveforward": "Kode honek laba bilatzen du. Gehitu dezakezu agindu bat aurrera mugitzeko?"
         },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Kode honek laba bilatzen du. Gehitu dezakezu agindu bat aurrera mugitzeko?"
+        },
         "Underground Iron": {
+          "craft_what_is_iron": "Erauzi burdina!"
+        },
+        "Underground Iron2022": {
           "craft_what_is_iron": "Erauzi burdina!"
         },
         "Underground Iron_2019": {
@@ -130,7 +169,31 @@
         "Underground Iron_2020": {
           "craft_what_is_iron": "Erauzi burdina!"
         },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Erauzi burdina!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
         "courseD_bee_conditionals2": {
+          "4_5_Bee_Conditionals_2_1": "Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea."
+        },
+        "courseD_bee_conditionals22022": {
           "4_5_Bee_Conditionals_2_1": "Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea."
         },
         "courseD_bee_conditionals2_2018": {
@@ -142,7 +205,13 @@
         "courseD_bee_conditionals2_2020": {
           "4_5_Bee_Conditionals_2_1": "Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea."
         },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea."
+        },
         "courseD_bee_conditionals2_copy": {
+          "4_5_Bee_Conditionals_2_1": "Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea."
+        },
+        "courseD_bee_conditionals2_dani": {
           "4_5_Bee_Conditionals_2_1": "Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea."
         },
         "frozen circle function with parameter": {
@@ -184,75 +253,6 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Erabili menu zabalgarria \"???\" zenbaki batez ordezkatzeko"
-        },
-        "courseD_bee_conditionals2_dani": {
-          "4_5_Bee_Conditionals_2_1": "Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea."
-        },
-        "AppLab Intro 7 - Change Screen Color": {
-          "applab_hoc_finish": "Bihurtu duzu pantaila berde? Horrela bada,  klikatu 'Amaitu', bestela klikatu 'Berrezarri', zuzendu zure programa eta sakatu 'Hasi' berriro."
-        },
-        "AppLab Intro 7 - thisOrThatAddButton": {
-          "AppLabHoCFinal11": "Orain Diseinu moduan zaude."
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "Hona hemen hainbat bloke zu hasi ahal izateko"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Kode honen bitartez, zure etxea eraikitzen hasiko da. Bukatu dezakezu zuk?"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Sakatu \"Hasi\" zure programa probatzeko"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "Errepikatu ekintzak blokeak hemen txertatuz"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "Kode honek laba bilatzen du. Gehitu dezakezu agindu bat aurrera mugitzeko?"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "Erauzi burdina!"
-        },
-        "courseA_EOC_playlab_animals": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_fantasy": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_people": {
-          "question_mark": "?"
-        },
-        "courseD_bee_conditionals2_2021": {
-          "4_5_Bee_Conditionals_2_1": "Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea."
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "Hona hemen hainbat bloke zu hasi ahal izateko"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "Kode honen bitartez, zure etxea eraikitzen hasiko da. Bukatu dezakezu zuk?"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Sakatu \"Hasi\" zure programa probatzeko"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "Errepikatu ekintzak blokeak hemen txertatuz"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "Kode honek laba bilatzen du. Gehitu dezakezu agindu bat aurrera mugitzeko?"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "Erauzi burdina!"
-        },
-        "courseA_EOC_playlab_animals2022": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_fantasy2022": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_people2022": {
-          "question_mark": "?"
-        },
-        "courseD_bee_conditionals22022": {
-          "4_5_Bee_Conditionals_2_1": "Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea."
         }
       }
     }

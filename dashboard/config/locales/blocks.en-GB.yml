@@ -93,61 +93,6 @@ en-GB:
           KEY:
             '"space"': space
             '"x"': x
-      gamelab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      gamelab_isKeyPressed:
-        options:
-          KEY:
-            '"space"': space
-            '"x"': x
-      gamelab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-          KEY:
-            '"space"': space
-            '"x"': x
-      gamelab_playSoundOptions:
-        options:
-          SOUND:
-            "'sound://category_collect/clicky_crunch.mp3'": crunch
-            "'sound://category_animals/cow.mp3'": cow
-            "'sound://category_animals/chicken.mp3'": chicken
-            "'sound://category_digital/jump_7.mp3'": jump
-      gamelab_randColor:
-        text: random colour
-      gamelab_randomColor:
-        text: random colour
-      gamelab_setBackgroundImage:
-        options:
-          IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': cave
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': city
-            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': desert
-            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': rainbow
-            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': underwater
-            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
-      gamelab_setSizes:
-        options:
-          PROPERTY:
-            '"height"': height
-      gamelab_spriteClicked:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      gamelab_whenKey:
-        options:
-          KEY:
-            '"space"': space
-      gamelab_whileKey:
-        options:
-          KEY:
-            '"space"': space
       Mikelab_randomColor:
         text: random colour
       Mikelab_setBG:
@@ -157,22 +102,22 @@ en-GB:
       Mikelab_whenKeyPressed:
         options:
           KEY:
-            '"w"': W
             '"a"': A
-            '"s"': S
             '"d"': D
+            '"s"': S
+            '"w"': W
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"w"': W
             '"a"': A
-            '"s"': S
             '"d"': D
+            '"s"': S
+            '"w"': W
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': 'yes'
             '"no"': 'no'
+            '"yes"': 'yes'
       Poetry_addFrame:
         options:
           BRUSH:
@@ -217,8 +162,8 @@ en-GB:
       craft_ifStandingOn:
         options:
           TYPE:
-            "'sand'": sand
             "'planksOak'": oak planks
+            "'sand'": sand
       craft_ifStandingOnLimit:
         options:
           TYPE:
@@ -231,3 +176,58 @@ en-GB:
             '"readDeadCoralBlock"': read dead coral block
       craft_placeTorch:
         text: place torch
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"space"': space
+            '"x"': x
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+          KEY:
+            '"space"': space
+            '"x"': x
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_animals/chicken.mp3'": chicken
+            "'sound://category_animals/cow.mp3'": cow
+            "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_digital/jump_7.mp3'": jump
+      gamelab_randColor:
+        text: random colour
+      gamelab_randomColor:
+        text: random colour
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': city
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': cave
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': desert
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': rainbow
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': underwater
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': height
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"space"': space
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"space"': space

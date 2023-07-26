@@ -2,214 +2,6 @@
   "te-IN": {
     "data": {
       "callouts": {
-        "CourseD_Dance_2020_04": {
-          "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
-        },
-        "CourseD_Dance_Party_01": {
-          "dance_callout_01": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
-        },
-        "CourseD_Dance_Party_02": {
-          "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
-        },
-        "CourseD_Dance_Party_04": {
-          "dance_callout_04": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
-        },
-        "CourseD_Dance_Party_06": {
-          "dance_callout_06": "ఇక్కడ మీ కొత్త డాన్సర్‌ను జోడించండి"
-        },
-        "Dance_2019_04": {
-          "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
-        },
-        "Dance_Party_01": {
-          "dance_callout_01": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
-        },
-        "Dance_Party_02": {
-          "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
-        },
-        "Dance_Party_04": {
-          "dance_callout_04": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
-        },
-        "Dance_Party_06": {
-          "dance_callout_06": "ఇక్కడ మీ కొత్త డాన్సర్‌ను జోడించండి"
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
-        },
-        "CourseD_Dance_2020_042022": {
-          "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
-        },
-        "CourseF_outbreak7_-2022-2": {
-          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
-        },
-        "New Sprite Lab Project": {
-          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
-        },
-        "courseE_aboutme_22022": {
-          "": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
-        },
-        "coursee_helloworld_events": {
-          "hello_world_click_hint": "మీ కార్యస్థలానికి ఈ ఈవెంట్ బ్లాక్ను జోడించండి."
-        },
-        "coursee_helloworld_freeplay": {
-          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
-        },
-        "coursee_helloworld_say": {
-          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి.",
-          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి."
-        },
-        "helloworld_animals_backgrounds": {
-          "hw_background_location": "క్రొత్త నేపథ్యాన్ని సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
-        },
-        "helloworld_animals_behaviors": {
-          "hello_world_behavior_blocks": "దిగువ ప్రవర్తనలలో ఒకదానితో ఈ బ్లాక్ను ఉపయోగించండి."
-        },
-        "helloworld_animals_click": {
-          "hw_Run": "కోడ్ అమలు చేయడానికి ఇక్కడ క్లిక్ చేయండి."
-        },
-        "helloworld_animals_events": {
-          "hello_world_click_hint": "మీ కార్యస్థలానికి ఈ ఈవెంట్ బ్లాక్ను జోడించండి."
-        },
-        "helloworld_animals_freeplay": {
-          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
-        },
-        "helloworld_animals_location": {
-          "pin": "పిన్"
-        },
-        "helloworld_animals_multi": {
-          "pin": "పిన్"
-        },
-        "helloworld_animals_say": {
-          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి.",
-          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి."
-        },
-        "helloworld_animals_sizes": {
-          "hello_world_new_block": "కొత్త బ్లాక్!!!!"
-        },
-        "helloworld_emoji_backgrounds": {
-          "hw_background_location": "క్రొత్త నేపథ్యాన్ని సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
-        },
-        "helloworld_emoji_behaviors": {
-          "hello_world_behavior_blocks": "దిగువ ప్రవర్తనలలో ఒకదానితో ఈ బ్లాక్ను ఉపయోగించండి."
-        },
-        "helloworld_emoji_click": {
-          "hw_Run": "కోడ్ అమలు చేయడానికి ఇక్కడ క్లిక్ చేయండి."
-        },
-        "helloworld_emoji_events": {
-          "hello_world_click_hint": "మీ కార్యస్థలానికి ఈ ఈవెంట్ బ్లాక్ను జోడించండి."
-        },
-        "helloworld_emoji_freeplay": {
-          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
-        },
-        "helloworld_emoji_location": {
-          "pin": "పిన్"
-        },
-        "helloworld_emoji_multi": {
-          "pin": "పిన్"
-        },
-        "helloworld_emoji_say": {
-          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి.",
-          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి."
-        },
-        "helloworld_food_backgrounds": {
-          "hw_background_location": "క్రొత్త నేపథ్యాన్ని సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
-        },
-        "helloworld_food_backgrounds_soccer-2022": {
-          "hw_background_location": "క్రొత్త నేపథ్యాన్ని సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
-        },
-        "helloworld_food_backgrounds_space-2022": {
-          "hw_background_location": "క్రొత్త నేపథ్యాన్ని సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
-        },
-        "helloworld_food_behaviors": {
-          "hello_world_behavior_blocks": "దిగువ ప్రవర్తనలలో ఒకదానితో ఈ బ్లాక్ను ఉపయోగించండి."
-        },
-        "helloworld_food_behaviors_soccer-2022": {
-          "hello_world_behavior_blocks": "దిగువ ప్రవర్తనలలో ఒకదానితో ఈ బ్లాక్ను ఉపయోగించండి."
-        },
-        "helloworld_food_behaviors_space-2022": {
-          "hello_world_behavior_blocks": "దిగువ ప్రవర్తనలలో ఒకదానితో ఈ బ్లాక్ను ఉపయోగించండి."
-        },
-        "helloworld_food_click": {
-          "hw_Run": "కోడ్ అమలు చేయడానికి ఇక్కడ క్లిక్ చేయండి."
-        },
-        "helloworld_food_click_soccer-2022": {
-          "hw_Run": "కోడ్ అమలు చేయడానికి ఇక్కడ క్లిక్ చేయండి."
-        },
-        "helloworld_food_click_space-2022": {
-          "hw_Run": "మొదట ఇక్కడ క్లిక్ చేయండి!"
-        },
-        "helloworld_food_events": {
-          "hello_world_click_hint": "మీ కార్యస్థలానికి ఈ ఈవెంట్ బ్లాక్ను జోడించండి."
-        },
-        "helloworld_food_events_soccer-2022": {
-          "hello_world_click_hint": "మీ కార్యస్థలానికి ఈ ఈవెంట్ బ్లాక్ను జోడించండి."
-        },
-        "helloworld_food_events_space-2022": {
-          "hello_world_click_hint": "మీ కార్యస్థలానికి ఈ ఈవెంట్ బ్లాక్ను జోడించండి."
-        },
-        "helloworld_food_freeplay": {
-          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
-        },
-        "helloworld_food_freeplay_soccer-2022": {
-          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
-        },
-        "helloworld_food_freeplay_space-2022": {
-          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
-        },
-        "helloworld_food_location": {
-          "pin": "పిన్"
-        },
-        "helloworld_food_location_soccer-2022": {
-          "pin": "పిన్"
-        },
-        "helloworld_food_location_space-2022": {
-          "pin": "పిన్"
-        },
-        "helloworld_food_multi": {
-          "pin": "పిన్"
-        },
-        "helloworld_food_multi_soccer-2022": {
-          "pin": "పిన్"
-        },
-        "helloworld_food_multi_space-2022": {
-          "pin": "పిన్"
-        },
-        "helloworld_food_say": {
-          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి.",
-          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి."
-        },
-        "helloworld_food_say_soccer-2022": {
-          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి.",
-          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి."
-        },
-        "helloworld_food_say_space-2022": {
-          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి.",
-          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి."
-        },
-        "helloworld_retro_backgrounds": {
-          "hw_background_location": "క్రొత్త నేపథ్యాన్ని సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
-        },
-        "helloworld_retro_behaviors": {
-          "hello_world_behavior_blocks": "దిగువ ప్రవర్తనలలో ఒకదానితో ఈ బ్లాక్ను ఉపయోగించండి."
-        },
-        "helloworld_retro_click": {
-          "hw_Run": "కోడ్ అమలు చేయడానికి ఇక్కడ క్లిక్ చేయండి."
-        },
-        "helloworld_retro_events": {
-          "hello_world_click_hint": "మీ కార్యస్థలానికి ఈ ఈవెంట్ బ్లాక్ను జోడించండి."
-        },
-        "helloworld_retro_freeplay": {
-          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
-        },
-        "helloworld_retro_location": {
-          "pin": "పిన్"
-        },
-        "helloworld_retro_multi": {
-          "pin": "పిన్"
-        },
-        "helloworld_retro_say": {
-          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి.",
-          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి."
-        },
         "Course 4 Artist 4": {
           "repeat_full_circle": "పూర్తి వృత్తం చేయడానికి జోంబీ ఎన్నిసార్లు తరలించాలో నమోదు చేయండి"
         },
@@ -246,6 +38,45 @@
         "Course 4 Play Lab Vars 1": {
           "arrows_move_actor": "నటుడిని తరలించడానికి బాణాలను ఉపయోగించండి"
         },
+        "CourseD_Dance_2020_04": {
+          "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
+        },
+        "CourseD_Dance_Party_01": {
+          "dance_callout_01": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
+        },
+        "CourseD_Dance_Party_02": {
+          "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
+        },
+        "CourseD_Dance_Party_04": {
+          "dance_callout_04": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
+        },
+        "CourseD_Dance_Party_06": {
+          "dance_callout_06": "ఇక్కడ మీ కొత్త డాన్సర్‌ను జోడించండి"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "Dance_2019_04": {
+          "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
+        },
+        "Dance_Party_01": {
+          "dance_callout_01": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
+        },
+        "Dance_Party_02": {
+          "dance_callout_02": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
+        },
+        "Dance_Party_04": {
+          "dance_callout_04": "ఈ బ్లాక్‌ను మీ ప్రోగ్రాంకు జోడించండి!"
+        },
+        "Dance_Party_06": {
+          "dance_callout_06": "ఇక్కడ మీ కొత్త డాన్సర్‌ను జోడించండి"
+        },
         "Infinity_move_collide": {
           "Infinity_move_collide_callout": "ఈ సంఘటన జరిగినప్పుడు ధ్వనిని ప్లే చేయండి."
         },
@@ -269,8 +100,8 @@
           "create_function": "“విధులు” ఫ్లైఅవుట్ తెరవడానికి ఇక్కడ క్లిక్ చేసి, ఆపై “ఫంక్షన్ సృష్టించు” బటన్ క్లిక్ చేయండి."
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "మీ ఫంక్షన్లో పరామితిని జోడించడానికి సవరించు క్లిక్ చేయండి",
-          "add_and_drag_parameter": "ఇక్కడ మీ పరామితి పేరిట వ్రాయండి, జోడించు క్లిక్ చేసి, ఆపై మీ ఫంక్షన్ నిర్వచనంలోకి లాగండి"
+          "add_and_drag_parameter": "ఇక్కడ మీ పరామితి పేరిట వ్రాయండి, జోడించు క్లిక్ చేసి, ఆపై మీ ఫంక్షన్ నిర్వచనంలోకి లాగండి",
+          "edit_add_parameter": "మీ ఫంక్షన్లో పరామితిని జోడించడానికి సవరించు క్లిక్ చేయండి"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "ప్రశ్న గుర్తులను భర్తీ చేయడానికి పొడవు వేరియబుల్ను ఇక్కడ లాగండి"
@@ -280,6 +111,9 @@
         },
         "New Frozen Project": {
           "snowflake_dropdown": "వివిధ వడగళ్ళు సృష్టించడానికి ఈ డ్రాప్-డౌన్ ఉపయోగించండి!"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
         },
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "మీరు ప్రారంభించడానికి మేము ఇక్కడ కొన్ని బ్లాక్లను ఉంచాము"
@@ -371,6 +205,19 @@
         "Underground Iron_2021": {
           "craft_what_is_iron": "ఈ ఇనుమును మైన్ చేయండి!"
         },
+        "courseE_aboutme_22022": {
+          "": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "మీ కార్యస్థలానికి ఈ ఈవెంట్ బ్లాక్ను జోడించండి."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "coursee_helloworld_say": {
+          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి.",
+          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
+        },
         "frozen circle function with parameter": {
           "frozen_circle_function_with_parameter_circle": "“వృత్తాన్ని సృష్టించండి” బ్లాక్ ఉపయోగించండి మరియు పరిమాణాన్ని మార్చండి."
         },
@@ -410,6 +257,159 @@
         },
         "frozen square snowflake": {
           "replace_questions": "“???” స్థానంలో డ్రాప్-డౌన్ ఉపయోగించండి ఒక సంఖ్యతో"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "క్రొత్త నేపథ్యాన్ని సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "దిగువ ప్రవర్తనలలో ఒకదానితో ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "కోడ్ అమలు చేయడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "మీ కార్యస్థలానికి ఈ ఈవెంట్ బ్లాక్ను జోడించండి."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "helloworld_animals_location": {
+          "pin": "పిన్"
+        },
+        "helloworld_animals_multi": {
+          "pin": "పిన్"
+        },
+        "helloworld_animals_say": {
+          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి.",
+          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new_block": "కొత్త బ్లాక్!!!!"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "క్రొత్త నేపథ్యాన్ని సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "దిగువ ప్రవర్తనలలో ఒకదానితో ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "కోడ్ అమలు చేయడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "మీ కార్యస్థలానికి ఈ ఈవెంట్ బ్లాక్ను జోడించండి."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "helloworld_emoji_location": {
+          "pin": "పిన్"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "పిన్"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి.",
+          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "క్రొత్త నేపథ్యాన్ని సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "క్రొత్త నేపథ్యాన్ని సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "క్రొత్త నేపథ్యాన్ని సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "దిగువ ప్రవర్తనలలో ఒకదానితో ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "దిగువ ప్రవర్తనలలో ఒకదానితో ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "దిగువ ప్రవర్తనలలో ఒకదానితో ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "కోడ్ అమలు చేయడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "కోడ్ అమలు చేయడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "మొదట ఇక్కడ క్లిక్ చేయండి!"
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "మీ కార్యస్థలానికి ఈ ఈవెంట్ బ్లాక్ను జోడించండి."
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "మీ కార్యస్థలానికి ఈ ఈవెంట్ బ్లాక్ను జోడించండి."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "మీ కార్యస్థలానికి ఈ ఈవెంట్ బ్లాక్ను జోడించండి."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "helloworld_food_location": {
+          "pin": "పిన్"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "పిన్"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "పిన్"
+        },
+        "helloworld_food_multi": {
+          "pin": "పిన్"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "పిన్"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "పిన్"
+        },
+        "helloworld_food_say": {
+          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి.",
+          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి.",
+          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి.",
+          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "క్రొత్త నేపథ్యాన్ని సెట్ చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "దిగువ ప్రవర్తనలలో ఒకదానితో ఈ బ్లాక్ను ఉపయోగించండి."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "కోడ్ అమలు చేయడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "మీ కార్యస్థలానికి ఈ ఈవెంట్ బ్లాక్ను జోడించండి."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "మీ ప్రాజెక్ట్కు దుస్తులను జోడించడానికి ఇక్కడ క్లిక్ చేయండి."
+        },
+        "helloworld_retro_location": {
+          "pin": "పిన్"
+        },
+        "helloworld_retro_multi": {
+          "pin": "పిన్"
+        },
+        "helloworld_retro_say": {
+          "hello_world_make_sprite": "ఒక స్ప్రైట్ సృష్టించడానికి ఈ బ్లాక్ ఉపయోగించండి.",
+          "hello_world_say": "స్ప్రిట్స్ మాట్లాడేలా చేయడానికి ఈ బ్లాక్ను ఉపయోగించండి."
         }
       }
     }

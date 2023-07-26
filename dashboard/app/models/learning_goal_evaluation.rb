@@ -17,4 +17,5 @@
 #  updated_at       :datetime         not null
 #
 class LearningGoalEvaluation < ApplicationRecord
+  belongs_to :learning_goal
 end
