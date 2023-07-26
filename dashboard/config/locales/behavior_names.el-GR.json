@@ -1467,10 +1467,6 @@
           "swimming left and right": "κολυμπώντας αριστερά και δεξιά",
           "wandering": "περιπλάνηση"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "growing": "αυξάνεται",
           "jittering": "τρεμούλιασμα",
@@ -2754,8 +2750,6 @@
           "spinning right": "περιστροφή δεξιά",
           "wandering": "περιπλάνηση",
           "wobbling": "ταλάντευση"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "αυξάνεται",

@@ -20,80 +20,6 @@
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "Ikaw ay nasa Design Mode na ngayon."
         },
-        "Big Game Vars 1": {
-        },
-        "CSD U3 - conditionals - transition": {
-        },
-        "CSD U3 - conditionals - transition_2018": {
-        },
-        "CSD U3 - conditionals - transition_2019": {
-        },
-        "CSD U3 - conditionals - transition_2021": {
-        },
-        "CSD U3 - conditionals - transition_2022": {
-        },
-        "CSD U3 Boolean Predict": {
-        },
-        "CSD U3 Boolean Predict_2018": {
-        },
-        "CSD U3 Boolean Predict_2019": {
-        },
-        "CSD U3 Boolean Predict_2021": {
-        },
-        "CSD U3 Boolean Predict_2022": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2019": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
-        },
-        "CSD U3 Random add_2021": {
-        },
-        "CSD U3 Random add_2022": {
-        },
-        "CSD U3 Sprites anitab 1": {
-        },
-        "CSD U3 Sprites anitab 1_2018": {
-        },
-        "CSD U3 Sprites anitab 1_2019": {
-        },
-        "CSD U3 Sprites anitab 1_2021": {
-        },
-        "CSD U3 Sprites anitab 1_2022": {
-        },
-        "CSD U3 Sprites intro sprites": {
-        },
-        "CSD U3 Sprites intro sprites_2018": {
-        },
-        "CSD U3 Sprites intro sprites_2019": {
-        },
-        "CSD U3 Sprites intro sprites_2021": {
-        },
-        "CSD U3 Sprites intro sprites_2022": {
-        },
-        "CSD U3 Sprites text": {
-        },
-        "CSD U3 Sprites text_2018": {
-        },
-        "CSD U3 Sprites text_2019": {
-        },
-        "CSD U3 Sprites text_2021": {
-        },
-        "CSD U3 Sprites text_2022": {
-        },
-        "CSD U3 UP_ARROW": {
-        },
-        "CSD U3 UP_ARROW_2018": {
-        },
-        "CSD U3 UP_ARROW_2018_2019": {
-        },
-        "CSD U3 UP_ARROW_2021": {
-        },
-        "CSD U3 UP_ARROW_2022": {
-        },
         "CSD U3 Variables Predict Where X": {
           "CSD_U3_variables": "Baguhin ang numero dito"
         },
@@ -123,184 +49,6 @@
         },
         "CSD U3 Variables Predict Where X_2022": {
           "CSD_U3_variables": "Baguhin ang numero dito"
-        },
-        "CSD U3 abstraction accelerateX": {
-        },
-        "CSD U3 abstraction accelerateX_2018": {
-        },
-        "CSD U3 abstraction accelerateX_2019": {
-        },
-        "CSD U3 abstraction accelerateX_2021": {
-        },
-        "CSD U3 abstraction accelerateX_2022": {
-        },
-        "CSD U3 abstraction accelerateY": {
-        },
-        "CSD U3 abstraction accelerateY_2018": {
-        },
-        "CSD U3 abstraction accelerateY_2019": {
-        },
-        "CSD U3 abstraction accelerateY_2021": {
-        },
-        "CSD U3 abstraction accelerateY_2022": {
-        },
-        "CSD U3 abstraction jump": {
-        },
-        "CSD U3 abstraction jump_2018": {
-        },
-        "CSD U3 abstraction jump_2018_2019": {
-        },
-        "CSD U3 abstraction jump_2021": {
-        },
-        "CSD U3 abstraction jump_2022": {
-        },
-        "CSD U3 abstraction jumping": {
-        },
-        "CSD U3 abstraction jumping_2018": {
-        },
-        "CSD U3 abstraction jumping_2019": {
-        },
-        "CSD U3 abstraction jumping_2021": {
-        },
-        "CSD U3 abstraction jumping_2022": {
-        },
-        "CSD U3 abstraction looping": {
-        },
-        "CSD U3 abstraction looping_2018": {
-        },
-        "CSD U3 abstraction looping_2019": {
-        },
-        "CSD U3 abstraction looping_2021": {
-        },
-        "CSD U3 abstraction looping_2022": {
-        },
-        "CSD U3 abstraction rotation": {
-        },
-        "CSD U3 abstraction rotation control": {
-        },
-        "CSD U3 abstraction rotation control_2018": {
-        },
-        "CSD U3 abstraction rotation control_2019": {
-        },
-        "CSD U3 abstraction rotation control_2021": {
-        },
-        "CSD U3 abstraction rotation control_2022": {
-        },
-        "CSD U3 abstraction rotation_2018": {
-        },
-        "CSD U3 abstraction rotation_2019": {
-        },
-        "CSD U3 abstraction rotation_2021": {
-        },
-        "CSD U3 abstraction rotation_2022": {
-        },
-        "CSD U3 abstraction tumbleweed": {
-        },
-        "CSD U3 abstraction tumbleweed_2018": {
-        },
-        "CSD U3 abstraction tumbleweed_2019": {
-        },
-        "CSD U3 abstraction tumbleweed_2021": {
-        },
-        "CSD U3 abstraction tumbleweed_2022": {
-        },
-        "CSD U3 abstraction velocityX": {
-        },
-        "CSD U3 abstraction velocityX control": {
-        },
-        "CSD U3 abstraction velocityX control_2018": {
-        },
-        "CSD U3 abstraction velocityX control_2019": {
-        },
-        "CSD U3 abstraction velocityX control_2021": {
-        },
-        "CSD U3 abstraction velocityX control_2022": {
-        },
-        "CSD U3 abstraction velocityX if-statements": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2018": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2019": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2021": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2022": {
-        },
-        "CSD U3 abstraction velocityX_2018": {
-        },
-        "CSD U3 abstraction velocityX_2019": {
-        },
-        "CSD U3 abstraction velocityX_2021": {
-        },
-        "CSD U3 abstraction velocityX_2022": {
-        },
-        "CSD U3 abstraction velocityY": {
-        },
-        "CSD U3 abstraction velocityY control": {
-        },
-        "CSD U3 abstraction velocityY control_2018": {
-        },
-        "CSD U3 abstraction velocityY control_2019": {
-        },
-        "CSD U3 abstraction velocityY control_2021": {
-        },
-        "CSD U3 abstraction velocityY control_2022": {
-        },
-        "CSD U3 abstraction velocityY_2018": {
-        },
-        "CSD U3 abstraction velocityY_2019": {
-        },
-        "CSD U3 abstraction velocityY_2021": {
-        },
-        "CSD U3 abstraction velocityY_2022": {
-        },
-        "CSD U3 collisions isTouching intro": {
-        },
-        "CSD U3 collisions isTouching intro_2018": {
-        },
-        "CSD U3 collisions isTouching intro_2019": {
-        },
-        "CSD U3 collisions isTouching intro_2021": {
-        },
-        "CSD U3 collisions isTouching intro_2022": {
-        },
-        "CSD U3 collisions scoreboard": {
-        },
-        "CSD U3 collisions scoreboard_2018": {
-        },
-        "CSD U3 collisions scoreboard_2019": {
-        },
-        "CSD U3 collisions try blocks": {
-        },
-        "CSD U3 collisions try blocks_2018": {
-        },
-        "CSD U3 collisions try blocks_2019": {
-        },
-        "CSD U3 collisions try blocks_2021": {
-        },
-        "CSD U3 collisions try blocks_2022": {
-        },
-        "CSD U3 collisions types": {
-        },
-        "CSD U3 collisions types2_2021": {
-        },
-        "CSD U3 collisions types2_2022": {
-        },
-        "CSD U3 collisions types3_2021": {
-        },
-        "CSD U3 collisions types3_2022": {
-        },
-        "CSD U3 collisions types4_2021": {
-        },
-        "CSD U3 collisions types4_2022": {
-        },
-        "CSD U3 collisions types_2018": {
-        },
-        "CSD U3 collisions types_2019": {
-        },
-        "CSD U3 collisions types_2021": {
-        },
-        "CSD U3 collisions types_2022": {
         },
         "CSD U3 debug": {
           "CSD_U3_rect_c1": "Narito ang code",
@@ -401,76 +149,6 @@
         "CSD U3 fill_2022": {
           "CSD_U3_rect_c1": "Narito ang code",
           "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
-        },
-        "CSD U3 game backgrounds": {
-        },
-        "CSD U3 game backgrounds_2018": {
-        },
-        "CSD U3 game backgrounds_2019": {
-        },
-        "CSD U3 game backgrounds_2021": {
-        },
-        "CSD U3 game backgrounds_2022": {
-        },
-        "CSD U3 game variables": {
-        },
-        "CSD U3 game variables_2018": {
-        },
-        "CSD U3 game variables_2019": {
-        },
-        "CSD U3 game variables_2021": {
-        },
-        "CSD U3 game variables_2022": {
-        },
-        "CSD U3 keydown conditional": {
-        },
-        "CSD U3 keydown conditional_2018": {
-        },
-        "CSD U3 keydown conditional_2018_2019": {
-        },
-        "CSD U3 keydown conditional_2021": {
-        },
-        "CSD U3 keydown conditional_2022": {
-        },
-        "CSD U3 platform background1": {
-        },
-        "CSD U3 platform background1_2018": {
-        },
-        "CSD U3 platform background1_2019": {
-        },
-        "CSD U3 platform background1_2021": {
-        },
-        "CSD U3 platform background1_2022": {
-        },
-        "CSD U3 platform platform1": {
-        },
-        "CSD U3 platform platform1_2018": {
-        },
-        "CSD U3 platform platform1_2019": {
-        },
-        "CSD U3 platform platform1_2021": {
-        },
-        "CSD U3 platform platform1_2022": {
-        },
-        "CSD U3 platform scoreboard": {
-        },
-        "CSD U3 platform scoreboard_2018": {
-        },
-        "CSD U3 platform scoreboard_2019": {
-        },
-        "CSD U3 platform scoreboard_2021": {
-        },
-        "CSD U3 platform scoreboard_2022": {
-        },
-        "CSD U3 platform variable1": {
-        },
-        "CSD U3 platform variable1_2018": {
-        },
-        "CSD U3 platform variable1_2019": {
-        },
-        "CSD U3 platform variable1_2021": {
-        },
-        "CSD U3 platform variable1_2022": {
         },
         "CSD U3 properties depth_2021": {
           "CSD_U3_rect_c1": "Narito ang code",
@@ -580,48 +258,8 @@
           "CSD_U3_rect_c1": "Narito ang code",
           "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
         },
-        "CSD U6 - Accelerometer - PB_2222": {
-        },
-        "CSD U6 - Accelerometer - PC_2222": {
-        },
-        "CSD U6 - Accelerometer - SB2_2222": {
-        },
-        "CSD U6 - Color LEDs - CA_2222": {
-        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "Idagdag ang iyong code dito"
-        },
-        "CSD U6 - Combine Inputs - A_2222": {
-        },
-        "CSD U6 - Combine Inputs - PracD_2222": {
-        },
-        "CSD U6 - Combine Inputs - SB1_2222": {
-        },
-        "CSD U6 - Functions - P2A_2222": {
-        },
-        "CSD U6 - Functions - P2C_2222": {
-        },
-        "CSD U6 - Functions - SB1_2222": {
-        },
-        "CSD U6 - Functions - SB2_2222": {
-        },
-        "CSD U6 - Functions - SB3_2222": {
-        },
-        "CSD U6 - Functions - SB4_2222": {
-        },
-        "CSD U6 - Functions - SB6_2222": {
-        },
-        "CSD U6 - Functions - SB7_2222": {
-        },
-        "CSD U6 - Functions - SB_2222": {
-        },
-        "CSD U6 - If Variables - A_2222": {
-        },
-        "CSD U6 - Music - A_2222": {
-        },
-        "CSD U6 - Music - SB3_2222": {
-        },
-        "CSD U6 - Sensors - PB_2222": {
         },
         "CSD U6 colorLeds intensity": {
           "CSDU6L10_rainbow": "Idagdag ang iyong code dito"
@@ -634,14 +272,6 @@
         },
         "CSD U6 colorLeds intensity_2021": {
           "CSDU6L10_rainbow": "Idagdag ang iyong code dito"
-        },
-        "CSD U6 getProperty input": {
-        },
-        "CSD U6 getProperty input_2018": {
-        },
-        "CSD U6 getProperty input_2019": {
-        },
-        "CSD U6 getProperty input_2021": {
         },
         "CSD U6 light show": {
           "CSDUDL03P09": "Ano ang ginagawa ng linyang ito?"
@@ -691,29 +321,11 @@
         "CSD U6 tugowar variables 3_2021": {
           "CSD_U6_checkWin": "Suriin kung nanalo ang manlalaro"
         },
-        "CSD games sidescroll background_2021": {
-        },
-        "CSD games sidescroll background_2022": {
-        },
-        "CSD games velocity bee_2021": {
-        },
-        "CSD games velocity bee_2022": {
-        },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Baguhin ang numero dito"
         },
         "CSD web text explore_2022": {
           "CSD_U3_variables": "Baguhin ang numero dito"
-        },
-        "CSD web text size_2021": {
-        },
-        "CSD web text size_2022": {
-        },
-        "CSDU4 - Design Mode - 3": {
-        },
-        "Calc Circles of Eval .2": {
-        },
-        "Calc Vars 1": {
         },
         "Course 4 Artist 4": {
           "repeat_full_circle": "Maglagay ng bilang kung ilang beses ba dapat gumalaw ang zombie para makagawa ng buong bilog"
@@ -920,20 +532,6 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "Tingnan dito para sa mga block na \"lahat pato\""
         },
-        "Eval Booleans 2": {
-        },
-        "Eval Define Funcs 3": {
-        },
-        "Eval Define Funcs Test": {
-        },
-        "Eval Strings Images .2": {
-        },
-        "Fish Tank 3-validated2022": {
-        },
-        "Fish Tank 3-validated_2019": {
-        },
-        "Fish Tank 3-validated_2020": {
-        },
         "Fish Tank 3-validated_2021": {
           "spritelab_comment": "Gamitin ang block na ito upang iwanan ang sarili mo o ang mga tala ng guro mo tungkol sa kung paano gumagana ang iyong code."
         },
@@ -976,8 +574,6 @@
         },
         "InspirationalArtwork_2018": {
           "InspirationalArtwork_1": "Subukang gamitin ang bagong `comment` na bloke sa ilalim ng label na ito para hayaan ang iyong sarili na magtala sa loob ng iyong mga programa!"
-        },
-        "Luigi's Pizza 1": {
         },
         "MC HOC 2016 Level 2-2": {
           "craft2_run_button_callout": "Kapag handa ka na, pindutin ang \"Run\" upang subukan ang programa mo."
@@ -1045,8 +641,6 @@
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "Maaaring mag-hover ang Agent sa lava, ngunit hindi magagawa nina Steve at Alex!"
         },
-        "NEW Course 4 Artist Functions 3": {
-        },
         "NEW Course 4 Artist Functions 7": {
           "edit_function": "Mag-click dito para ma-edit ang iyong function."
         },
@@ -1056,8 +650,6 @@
         "NEW Course 4 Artist Params 10": {
           "create_function": "Mag-click dito para mabuksan ang \"Functions\" na flyout, pagkatapos ay i-click ang \"Create a Function\" na button."
         },
-        "NEW Course 4 Artist Params 2": {
-        },
         "NEW Course 4 Artist Params 9": {
           "add_and_drag_parameter": "Isulat ang pangalan ng iyong parameter dito, i-click ang add, at pagkatapos i-drag ito sa iyong pagbibigay ng kahulugan sa iyong function",
           "edit_add_parameter": "I-click ang edit para makadagdag ng parameter sa iyong function"
@@ -1065,32 +657,18 @@
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "I-drag ang haba na variable dito para mapalitan ang mga marka ng tanong"
         },
-        "NEW Course 4 Bee For Loops 4": {
-        },
         "NEW Course 4 Bee For Loops 5": {
           "actions_category": "Ang tool box ay nagkaroon ng bagong itsura. Ang \"Aksyon\" na mga bloke ay nandito na ngayon."
         },
-        "New Artist Project": {
-        },
         "New Frozen Project": {
           "snowflake_dropdown": "Gamitin ang drop-down na ito para makalikha na iba't ibang mga snowflakes!"
-        },
-        "New Play Lab Project": {
         },
         "New Sprite Lab Project": {
           "costumes_tab": "I-click dito upang magdagdag ng mga kasuotan sa proyekto mo.",
           "make_sprite": "Gamitin ang mga block dito para gumawa ng sprite!"
         },
-        "OPD-K5-forloops-5": {
-        },
-        "OPD-K5-projects-4": {
-        },
-        "OPD-K5-spritelab-3": {
-        },
         "OPD-K5-variables-1": {
           "grade5_artist_variables_triangles1_1": "Bigyang-pansin na ang mga bloke ngayon ay mayroon nang bagong paraan para maglagay ng mga numero. Ang mga `math` na mga bloke ay maaaring hilahin palabas at igalaw sa paligid!"
-        },
-        "OPD-K5-variables-5": {
         },
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Naglagay tayo ng ilang mga bloke dito para makapagsimula ka"
@@ -1196,10 +774,6 @@
         "Virtual Pet 2_-2022-2": {
           "vp_costumes": "I-click dito upang magdagdag ng mga bagong costume sa proyekto mo!"
         },
-        "Virtual Pet 2_2019": {
-        },
-        "Virtual Pet 2_2020": {
-        },
         "Virtual Pet 2_2021": {
           "vp_costumes": "I-click dito upang magdagdag ng mga bagong costume sa proyekto mo!"
         },
@@ -1209,44 +783,14 @@
         "Virtual Pet 6_2021": {
           "vp_costumes": "I-click dito upang magdagdag ng mga bagong costume sa proyekto mo!"
         },
-        "behaviors 1": {
-        },
-        "behaviors 1_2020": {
-        },
-        "behaviors 3a": {
-        },
-        "behaviors 3a_2020": {
-        },
-        "behaviors 4": {
-        },
-        "behaviors 4_2020": {
-        },
-        "behaviors 5": {
-        },
-        "behaviors 5_2020": {
-        },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "course2_bee_conditionals_challenge2": {
           "courseD_bee_conditionals_challenge2_1": "Gamitin ang loop na ito para kolektahin ang lahat ng nektar (o pulot) mula sa isang bulaklak (o pulot-pukyutan)."
-        },
-        "course3_artist_functions_challenge1": {
-        },
-        "course3_artist_functions_challenge2": {
         },
         "course3_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_callout1": "Gamitin ang utos na ito para mapagalaw ang bubuyog patalikod."
         },
-        "course3_bee_functions_challenge3": {
-        },
         "course3_playLab_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "Ang blokeng ito nagbibigay-daan sa iyo na mapagalaw ang mga aktor sa iba't ibang bahagi ng espasyo ng laro."
-        },
-        "course4_artist_functions_challenge2": {
-        },
-        "course4_bee_fwp_challenge2": {
         },
         "courseA_EOC_playlab_animals": {
           "question_mark": "?"
@@ -1266,41 +810,11 @@
         "courseA_EOC_playlab_people2022": {
           "question_mark": "?"
         },
-        "courseA_artist_loops4": {
-        },
-        "courseA_artist_loops42022": {
-        },
-        "courseA_artist_loops4_2018": {
-        },
-        "courseA_artist_loops4_2019": {
-        },
-        "courseA_artist_loops4_2020": {
-        },
         "courseA_artist_loops4_2021": {
           "courseA_artist_loops4_1": "Sinasabi sa iyo ng numerong ito kung ilan sa mga block na ito ang magagamit mo sa palaisipang ito."
         },
-        "courseA_artist_loops7": {
-        },
-        "courseA_artist_loops72022": {
-        },
-        "courseA_artist_loops7_2018": {
-        },
-        "courseA_artist_loops7_2019": {
-        },
-        "courseA_artist_loops7_2020": {
-        },
         "courseA_artist_loops7_2021": {
           "courseA_artist_loops7_1": "Ang numerong ito ay nangangahulugan na isa lamang sa ganitong uri ng block ang maaaring gamitin sa huling sagot."
-        },
-        "courseA_artist_loops8": {
-        },
-        "courseA_artist_loops82022": {
-        },
-        "courseA_artist_loops8_2018": {
-        },
-        "courseA_artist_loops8_2019": {
-        },
-        "courseA_artist_loops8_2020": {
         },
         "courseA_artist_loops8_2021": {
           "courseA_artist_loops8_1": "Alam mo ba na maaari kang bumalik sa isang linya kapag kailangan mo?"
@@ -1320,20 +834,8 @@
         "courseA_collector_loops1_2021": {
           "courseA_collector_loops1_1": "Nakakakita ka ba ng ilang bagong mga bloke sa loob ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin ang mga ito sa mamayang yugto."
         },
-        "courseA_collector_loops3": {
-        },
-        "courseA_collector_loops32022": {
-        },
-        "courseA_collector_loops3_2018": {
-        },
-        "courseA_collector_loops3_2019": {
-        },
-        "courseA_collector_loops3_2020": {
-        },
         "courseA_collector_loops3_2021": {
           "gradek_adventurer_loops2_1": "Sinasabi sa iyo ng numerong ito kung ilan sa mga block na ito ang magagamit mo sa palaisipang ito."
-        },
-        "courseA_collector_preLoops1": {
         },
         "courseA_collector_preLoops2": {
           "courseA_collector_loops1_1": "Nakakakita ka ba ng ilang bagong mga bloke sa loob ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin ang mga ito sa mamayang yugto."
@@ -1386,30 +888,8 @@
         "courseA_maze_seq2": {
           "courseA_maze_seqA_callout1": "Gamitin hakbang na pindutan para makapunta sa bawat hakbang sa programa. Ito ay makakatulong sa iyo na maghanap ng bug!"
         },
-        "courseA_maze_seq4": {
-        },
-        "courseA_playLab_events4": {
-        },
-        "courseA_playLab_events42022": {
-        },
-        "courseA_playLab_events4_2018": {
-        },
-        "courseA_playLab_events4_2019": {
-        },
-        "courseA_playLab_events4_2020": {
-        },
         "courseA_playLab_events4_2021": {
           "courseA_playlab_events4_callout1": "Isa itong callout"
-        },
-        "courseA_playLab_events5": {
-        },
-        "courseA_playLab_events52022": {
-        },
-        "courseA_playLab_events5_2018": {
-        },
-        "courseA_playLab_events5_2019": {
-        },
-        "courseA_playLab_events5_2020": {
         },
         "courseA_playLab_events5_2021": {
           "courseA_playLab_events5_1": "Mag-click dito upang baguhin ang direksiyon ng arrow ng kaganapan."
@@ -1540,24 +1020,8 @@
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "Gamitin ang berdeng drop down na arrow para baguhin ang mga direksyon."
         },
-        "courseC19_playLab_EOC3": {
-        },
-        "courseC19_playLab_EOC32022": {
-        },
-        "courseC19_playLab_EOC3_2020": {
-        },
         "courseC19_playLab_EOC3_2021": {
           "courseE_playLab_scaffold3_1": "Kunin ang aktor sa bandilang ito upang magpatuloy sa susunod na antas."
-        },
-        "courseC_PlayLab_events8": {
-        },
-        "courseC_PlayLab_events82022": {
-        },
-        "courseC_PlayLab_events8_2018": {
-        },
-        "courseC_PlayLab_events8_2019": {
-        },
-        "courseC_PlayLab_events8_2020": {
         },
         "courseC_PlayLab_events8_2021": {
           "courseC_PlayLab_events8_callout1": "Gamitin ang block na ito kapag nagkadikit si Waddles at Chomp!"
@@ -1583,20 +1047,8 @@
         "courseC_PlayLab_events_lesson_extras": {
           "courseC_PlayLab_events_challenge1_1": "Ang blokeng ito nagbibigay-daan sa iyo na mapagalaw ang mga aktor sa iba't ibang bahagi ng espasyo ng laro."
         },
-        "courseC_artist_loops1a2022": {
-        },
-        "courseC_artist_loops1a_2019": {
-        },
-        "courseC_artist_loops1a_2020": {
-        },
         "courseC_artist_loops1a_2021": {
           "jumpto_callout": "Napakahalaga ng block na ito sa proyektong ito. Tiyaking gamitin ito!"
-        },
-        "courseC_artist_loops1b2022": {
-        },
-        "courseC_artist_loops1b_2019": {
-        },
-        "courseC_artist_loops1b_2020": {
         },
         "courseC_artist_loops1b_2021": {
           "sticker2": "Idagdag ito sa gitna ng program mo."
@@ -1621,14 +1073,6 @@
         },
         "courseC_collector_prog1": {
           "courseC_collector_prog1_1": "Nakakakita ka ba ng ilang bagong mga bloke sa loob ng toolbox? Huwag mag-aalala, aming ipapakita sa iyo kung paano gamitin ang mga ito sa mamayang yugto."
-        },
-        "courseC_collector_prog12022": {
-        },
-        "courseC_collector_prog1_2018": {
-        },
-        "courseC_collector_prog1_2019": {
-        },
-        "courseC_collector_prog1_2020": {
         },
         "courseC_collector_prog1_2021": {
           "courseC_collector_prog1_1": "Nakikita mo ba ang ilang mga bagong block sa toolbox? Huwag mag-alala, ipapakita namin sa iyo kung paano gamitin ang mga ito sa ibang aralin."
@@ -1687,16 +1131,8 @@
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_1": "Ang mga blokeng ito ay naka-lock at hindi maaaring burahin!"
         },
-        "courseC_maze_debugging92022": {
-        },
-        "courseC_maze_debugging9_2019": {
-        },
-        "courseC_maze_debugging9_2020": {
-        },
         "courseC_maze_debugging9_2021": {
           "courseC_maze_debugging9_2019_1": "I-drag ang mga block sa toolbox papunta sa workspace mo."
-        },
-        "courseC_maze_debugging9_copy_2020": {
         },
         "courseC_maze_programming1": {
           "grade2_CaringForNewPet_0_1": "Matapos ikonekta ang lahat ng mga bloke, pindutin ang \"Run\" para simulan ang iyong programa."
@@ -1775,16 +1211,6 @@
         },
         "courseC_maze_programming4_2021": {
           "courseC_maze_programming4_1": "Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo."
-        },
-        "courseC_maze_programming5": {
-        },
-        "courseC_maze_programming52022": {
-        },
-        "courseC_maze_programming5_2018": {
-        },
-        "courseC_maze_programming5_2019": {
-        },
-        "courseC_maze_programming5_2020": {
         },
         "courseC_maze_programming5_2021": {
           "": "Walang mga numero ang mga block na ito. Maaari kang gumamit ng marami hangga't gusto mo!"
@@ -1922,14 +1348,6 @@
         "courseD_collector_ramp8": {
           "courseD_collector_ramp8_1": "Gamitin ang blokeng ito para magkolekta ng isang piraso ng kayamanan.  "
         },
-        "courseD_farmer_while72022": {
-        },
-        "courseD_farmer_while7_2018": {
-        },
-        "courseD_farmer_while7_2019": {
-        },
-        "courseD_farmer_while7_2020": {
-        },
         "courseD_farmer_while7_2021": {
           "courseD_farmer_while7_2018_PathAhead": "Kakailanganin mong gamitin ang block na `habang nasa unahan ang landas` para malutas ang palaisipang ito."
         },
@@ -1944,12 +1362,6 @@
         },
         "courseD_maze_intro4_2021": {
           "courseC_maze_programming4_1": "Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo."
-        },
-        "courseD_maze_intro5a2022": {
-        },
-        "courseD_maze_intro5a_2019": {
-        },
-        "courseD_maze_intro5a_2020": {
         },
         "courseD_maze_intro5a_2021": {
           "": "Walang mga numero ang mga block na ito. Maaari kang gumamit ng marami hangga't gusto mo!"
@@ -2026,26 +1438,8 @@
         "courseD_maze_ramp4_2020": {
           "courseC_maze_programming4_1": "Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo."
         },
-        "courseD_maze_ramp5": {
-        },
-        "courseD_maze_ramp52022": {
-        },
-        "courseD_maze_ramp5_2018": {
-        },
-        "courseD_maze_ramp5_2019": {
-        },
-        "courseD_maze_ramp5_2020": {
-        },
         "courseD_maze_ramp5_2021": {
           "": "Walang mga numero ang mga block na ito. Maaari kang gumamit ng marami hangga't gusto mo!"
-        },
-        "courseD_maze_ramp5a": {
-        },
-        "courseD_maze_ramp5a_2018": {
-        },
-        "courseD_maze_ramp5a_2019": {
-        },
-        "courseD_maze_ramp5a_2020": {
         },
         "courseD_maze_ramp6": {
           "courseD_maze_ramp6_1": "Kahit anong code ang ilalagay mo dito ay mag-uulit ng ilang beses ayon sa kagustuhan mo, pagkatapos ay magpatuloy na patakbuhin ang natirang programa."
@@ -2068,8 +1462,6 @@
         "courseD_scrat_ramp4": {
           "courseC_maze_programming4_1": "Ito ay ang hangganan ng iyong bloke. Nagsasabi ito kung ilan sa mga blokeng ito ang natira para magamit mo."
         },
-        "courseD_scrat_ramp5": {
-        },
         "courseD_scrat_ramp6": {
           "courseD_maze_ramp6_1": "Kahit anong code ang ilalagay mo dito ay mag-uulit ng ilang beses ayon sa kagustuhan mo, pagkatapos ay magpatuloy na patakbuhin ang natirang programa."
         },
@@ -2083,21 +1475,11 @@
           "courseE_artist_ramp8_1": "Maaari mong baguhin ang numerong ito.",
           "courseE_artist_ramp8_2": "Mag-click dito para ma-type kung ilang beses uulitin ang iyong code."
         },
-        "courseE_aboutme_2": {
-        },
         "courseE_aboutme_22022": {
           "": "I-click dito upang magdagdag ng mga kasuotan sa proyekto mo."
         },
-        "courseE_aboutme_2_2020": {
-        },
         "courseE_aboutme_2_2021": {
           "": "Mag-klik dito!"
-        },
-        "courseE_artist_functions1": {
-        },
-        "courseE_artist_functions1_copy": {
-        },
-        "courseE_artist_functions1_dani": {
         },
         "courseE_artist_functions2": {
           "courseD_artist_functions2_1": "Kapag ang berdeng bloke ito ay tumatakbo, lahat ng code sa loob ng function ay tatakbo. Ano ang dapat gawin ng artista pagkatapos iguhit ang unang parisukat?"
@@ -2141,29 +1523,9 @@
         "courseE_artist_functions8a_2021": {
           "courseD_artist_functions8_1": "Ang iyong mga bloke para sa paglikha ng mga function ay inilipat sa ilalim ng label na ito sa loob ng iyong toolbox."
         },
-        "courseE_artist_functions_challenge1": {
-        },
-        "courseE_artist_functions_challenge12022": {
-        },
-        "courseE_artist_functions_challenge1_2018": {
-        },
-        "courseE_artist_functions_challenge1_2019": {
-        },
-        "courseE_artist_functions_challenge1_2020": {
-        },
         "courseE_artist_functions_challenge1_2021": {
           "courseE_artist_functions_challenge1_callout1": "Ipagpatuloy ang program na ito sa pamamagitan ng pagdaragdag ng higit pang code sa ibaba.",
           "courseE_artist_functions_challenge1_callout2": "Kung hindi mo gusto ang disenyong ito, baguhin ito sa anumang gusto mo!"
-        },
-        "courseE_artist_functions_challenge2": {
-        },
-        "courseE_artist_functions_challenge22022": {
-        },
-        "courseE_artist_functions_challenge2_2018": {
-        },
-        "courseE_artist_functions_challenge2_2019": {
-        },
-        "courseE_artist_functions_challenge2_2020": {
         },
         "courseE_artist_functions_challenge2_2021": {
           "courseE_artist_functions_challenge2_callout1": "Ipagpatuloy ang program na ito sa pamamagitan ng pagdaragdag ng higit pang code sa ibaba.",
@@ -2177,60 +1539,20 @@
           "courseE_artist_ramp8_1": "Maaari mong baguhin ang numerong ito.",
           "courseE_artist_ramp8_2": "Mag-click dito para ma-type kung ilang beses uulitin ang iyong code."
         },
-        "courseE_farmer_functions1": {
-        },
-        "courseE_farmer_functions12022": {
-        },
-        "courseE_farmer_functions132022": {
-        },
-        "courseE_farmer_functions13_2018": {
-        },
-        "courseE_farmer_functions13_2019": {
-        },
-        "courseE_farmer_functions13_2020": {
-        },
         "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "Ang gulay na ito ay hindi kilala. Nagbabago ito sa tuwing pinapatakbo mo ang program."
-        },
-        "courseE_farmer_functions1_2018": {
-        },
-        "courseE_farmer_functions1_2019": {
-        },
-        "courseE_farmer_functions1_2020": {
         },
         "courseE_farmer_functions1_2021": {
           "courseE_farmer_functions1_2": "Ang toolbox ay medyo naiiba sa oras na ito! Mag-click sa iba't ibang kategorya upang makita kung aling mga block ang mayroon ka."
         },
-        "courseE_farmer_functions1a": {
-        },
-        "courseE_farmer_functions1a2022": {
-        },
-        "courseE_farmer_functions1a_2018": {
-        },
-        "courseE_farmer_functions1a_2019": {
-        },
-        "courseE_farmer_functions1a_2020": {
-        },
         "courseE_farmer_functions1a_2021": {
           "courseE_farmer_functions1a_1": "Ang gulay na ito ay hindi kilala. Nagbabago ito sa tuwing pinapatakbo mo ang program."
-        },
-        "courseE_farmer_functions2b": {
-        },
-        "courseE_farmer_functions2b2022": {
-        },
-        "courseE_farmer_functions2b_2018": {
-        },
-        "courseE_farmer_functions2b_2019": {
-        },
-        "courseE_farmer_functions2b_2020": {
         },
         "courseE_farmer_functions2b_2021": {
           "courseE_farmer_functions1a_1": "Ang gulay na ito ay hindi kilala. Nagbabago ito sa tuwing pinapatakbo mo ang program."
         },
         "courseE_playLab_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "Ang blokeng ito nagbibigay-daan sa iyo na mapagalaw ang mga aktor sa iba't ibang bahagi ng espasyo ng laro."
-        },
-        "courseE_playLab_scaffold3": {
         },
         "courseF_apps_aquarium": {
           "run_button": "Pindutin muna ang Run button!",
@@ -2310,102 +1632,14 @@
           "run_button": "Pindutin muna ang Run button!",
           "visualizationResizeBar": "I-drag ang 3 tuldok para baguhin ang laki ng play area."
         },
-        "courseF_artist_for1": {
-        },
-        "courseF_artist_for12022": {
-        },
-        "courseF_artist_for1_2018": {
-        },
-        "courseF_artist_for1_2019": {
-        },
-        "courseF_artist_for1_2020": {
-        },
         "courseF_artist_for1_2021": {
           "courseF_artist_for1_1": "Ang toolbox ay nasa mode na \"kategorya\" upang magkaroon ng higit na puwang sa code mo. Ang `para sa` na mga loop ay nakatira dito."
-        },
-        "courseF_artist_fwp1": {
-        },
-        "courseF_artist_fwp4": {
-        },
-        "courseF_artist_fwp5": {
-        },
-        "courseF_artist_variables3": {
-        },
-        "courseF_artist_variables3_2018": {
-        },
-        "courseF_artist_variables3_2019": {
-        },
-        "courseF_artist_variables3_2020": {
-        },
-        "courseF_artist_variables6": {
-        },
-        "courseF_artist_variables6_2018": {
-        },
-        "courseF_artist_variables6_2019": {
-        },
-        "courseF_artist_variables6_2020": {
-        },
-        "courseF_artist_variables6a": {
-        },
-        "courseF_artist_variables6a_2018": {
-        },
-        "courseF_artist_variables6a_2019": {
-        },
-        "courseF_artist_variables6a_2020": {
-        },
-        "courseF_bee_conditionals2": {
-        },
-        "courseF_bee_conditionals5": {
-        },
-        "courseF_bee_for4": {
-        },
-        "courseF_bee_for42022": {
-        },
-        "courseF_bee_for4_2018": {
-        },
-        "courseF_bee_for4_2019": {
-        },
-        "courseF_bee_for4_2020": {
         },
         "courseF_bee_for4_2021": {
           "courseF_bee_for4_1": "Makikita mo ang `para sa` na loop dito!"
         },
-        "courseF_bee_for9": {
-        },
-        "courseF_bee_for92022": {
-        },
-        "courseF_bee_for9_2018": {
-        },
-        "courseF_bee_for9_2019": {
-        },
-        "courseF_bee_for9_2020": {
-        },
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_1": "Makikita mo ang `matematika` na block dito."
-        },
-        "courseF_bee_functions2": {
-        },
-        "courseF_bee_functions6": {
-        },
-        "courseF_bee_functions_challenge1": {
-        },
-        "courseF_bee_fwp1": {
-        },
-        "courseF_bee_fwp2": {
-        },
-        "courseF_bee_fwp3": {
-        },
-        "courseF_bee_fwp4": {
-        },
-        "courseF_bee_fwp_challenge2": {
-        },
-        "courseF_bee_variables_1_2018": {
-        },
-        "courseF_bee_variables_1_2019": {
-        },
-        "courseF_bee_variables_1_2020": {
-        },
-        "courseF_bee_variables_1a2022": {
         },
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "Makikita mo ang mga variable mo dito sa ibaba!"
@@ -2461,8 +1695,6 @@
         "courseF_events_predict": {
           "behaviors_edit": "Mag-click dito upang makita kung paano gumagana ang pag-uugaling ito."
         },
-        "courseF_events_predict_-2022-2": {
-        },
         "courseF_events_time": {
           "events_category": "Mag-click dito upang buksan ang kategoryang Mga Kaganapan."
         },
@@ -2477,14 +1709,6 @@
         },
         "courseF_label_predict_-2022-2": {
           "variablesPredict": "Tingnang mabuti ang code sa ibaba ng puntong ito."
-        },
-        "courseF_playlab_variables1a": {
-        },
-        "courseF_playlab_variables5c": {
-        },
-        "courseF_playlab_variables6c": {
-        },
-        "courseF_playlab_variables7c": {
         },
         "courseF_sprites_behaviors": {
           "behaviors_category": "Mag-click dito upang buksan ang kategoryang Mga Pag-uugali."
@@ -2595,12 +1819,6 @@
         "coursee_helloworld_say": {
           "hello_world_make_sprite": "Gamitin ang block na ito upang gumawa ng tiyanak.",
           "hello_world_say": "Gamitin ang block na ito upang makapagsalita ang mga tiyanak."
-        },
-        "express_maze_debugging92022": {
-        },
-        "express_maze_debugging9_2019": {
-        },
-        "express_maze_debugging9_2020": {
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "I-drag ang mga block sa toolbox papunta sa workspace mo."
@@ -2867,74 +2085,6 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Bagong block!"
-        },
-        "iceage_hello1": {
-        },
-        "iceage_hello2": {
-        },
-        "iceage_move_events": {
-        },
-        "iceage_move_events_dani": {
-        },
-        "iceage_move_to_actor": {
-        },
-        "iceage_repeat": {
-        },
-        "iceage_sound_and_points": {
-        },
-        "iceage_sound_and_points_dani": {
-        },
-        "iceage_warn_ice_age": {
-        },
-        "iceage_warn_ice_age_dani": {
-        },
-        "ml-customize apps-choice3": {
-        },
-        "ml-customize apps-choice3_2022": {
-        },
-        "ml-customize apps-choice5": {
-        },
-        "ml-customize apps-choice5_2022": {
-        },
-        "ml-intro app lab-book recommender 5C-2021": {
-        },
-        "ml-intro app lab-book recommender 5C_2022": {
-        },
-        "ml-intro app lab-book recommender 5E-2021": {
-        },
-        "ml-intro app lab-book recommender 5E_2022": {
-        },
-        "ml-models in applab-screens-1-2021": {
-        },
-        "ml-models in applab-screens-1_2022": {
-        },
-        "ml-models in applab-screens-3-2021": {
-        },
-        "ml-models in applab-screens-3_2022": {
-        },
-        "ml-use model card-choice3": {
-        },
-        "ml-use model card-choice3_2022": {
-        },
-        "ml-use model card-choice5": {
-        },
-        "ml-use model card-choice5_2022": {
-        },
-        "ml-use model card-example3C-2021": {
-        },
-        "ml-use model card-example3C_2022": {
-        },
-        "ml-use model card-example3D-2021": {
-        },
-        "ml-use model card-example3D_2022": {
-        },
-        "ml-use model card-example3_EditB-2021": {
-        },
-        "ml-use model card-example3_EditB_2022": {
-        },
-        "ml-use model card-example3_EditC-2021": {
-        },
-        "ml-use model card-example3_EditC_2022": {
         },
         "outbreak2": {
           "minitoolbox": "Mag-click dito upang palakihin ang bloke.",
