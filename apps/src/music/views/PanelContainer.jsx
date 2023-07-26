@@ -11,7 +11,13 @@ import moduleStyles from './panelContainer.module.scss';
  * its parent; this means that the main scene is responsible for allocating
  * the layout of all the panels.
  */
-const PanelContainer = ({id, headerText, children}) => {
+const PanelContainer = ({
+  id,
+  headerText,
+  rightHeaderContent,
+  leftHeaderContent,
+  children,
+}) => {
   const isHeadersShowing = useSelector(state => state.music.isHeadersShowing);
 
   return (
@@ -26,22 +32,37 @@ const PanelContainer = ({id, headerText, children}) => {
             moduleStyles.panelContainerHeader
           )}
         >
+          {leftHeaderContent && (
+            <div
+              className={classNames(
+                'panelContainerHeaderItemLeft',
+                moduleStyles.panelContainerHeaderItem,
+                moduleStyles.panelContainerHeaderItemLeft
+              )}
+            >
+              {leftHeaderContent}
+            </div>
+          )}
           <div
             className={classNames(
-              'panelContainerHeaderBackground',
-              moduleStyles.panelContainerHeaderBackground
-            )}
-          >
-            &nbsp;
-          </div>
-          <div
-            className={classNames(
-              'panelContainerHeaderText',
-              moduleStyles.panelContainerHeaderText
+              'panelContainerHeaderItemText',
+              moduleStyles.panelContainerHeaderItem,
+              moduleStyles.panelContainerHeaderItemText
             )}
           >
             {headerText}
           </div>
+          {rightHeaderContent && (
+            <div
+              className={classNames(
+                'panelContainerHeaderItemRight',
+                moduleStyles.panelContainerHeaderItem,
+                moduleStyles.panelContainerHeaderItemRight
+              )}
+            >
+              {rightHeaderContent}
+            </div>
+          )}
         </div>
       )}
       {children}
@@ -53,6 +74,8 @@ PanelContainer.propTypes = {
   id: PropTypes.string.isRequired,
   headerText: PropTypes.string.isRequired,
   children: PropTypes.object,
+  rightHeaderContent: PropTypes.node,
+  leftHeaderContent: PropTypes.node,
 };
 
 export default PanelContainer;

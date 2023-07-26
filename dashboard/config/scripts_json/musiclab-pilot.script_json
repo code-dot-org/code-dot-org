@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "musiclab-pilot",
-    "serialized_at": "2023-07-10 20:53:33 UTC",
+    "serialized_at": "2023-07-25 22:02:09 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -87,7 +87,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music_lab_2023_1"
+          "music_lab_2023_melody_sequencing"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -95,7 +95,7 @@
         "activity_section.key": "16b02d16-0319-4005-a794-c508e9dd7acb"
       },
       "level_keys": [
-        "music_lab_2023_1"
+        "music_lab_2023_melody_sequencing"
       ]
     },
     {
@@ -104,6 +104,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_2023_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -125,6 +128,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_2023_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -146,6 +152,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_2023_4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -167,6 +176,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_2023_5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -188,6 +200,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_2023_6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -209,6 +224,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "mid-activity placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -230,6 +248,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_2023_7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -251,6 +272,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_2203_8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -265,14 +289,38 @@
       "level_keys": [
         "music_lab_2203_8"
       ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music_pilot_intro"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music_pilot_intro"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-pilot",
+        "activity_section.key": "16b02d16-0319-4005-a794-c508e9dd7acb"
+      },
+      "level_keys": [
+        "music_pilot_intro"
+      ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "music_lab_2023_1",
+        "level.key": "music_lab_2023_melody_sequencing",
         "script_level.level_keys": [
-          "music_lab_2023_1"
+          "music_lab_2023_melody_sequencing"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -369,6 +417,18 @@
         "level.key": "music_lab_2203_8",
         "script_level.level_keys": [
           "music_lab_2203_8"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-pilot",
+        "activity_section.key": "16b02d16-0319-4005-a794-c508e9dd7acb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music_pilot_intro",
+        "script_level.level_keys": [
+          "music_pilot_intro"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

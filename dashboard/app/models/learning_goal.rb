@@ -19,4 +19,13 @@
 class LearningGoal < ApplicationRecord
   belongs_to :rubric
   has_many :learning_goal_evidence_levels, dependent: :destroy
+
+  def seeding_key(seed_context)
+    my_rubric = seed_context.rubrics.find {|r| r.id == rubric_id}
+    my_key = {
+      'learning_goal.key': key
+    }
+    rubric_seeding_key = my_rubric.seeding_key(seed_context)
+    my_key.merge!(rubric_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
+  end
 end
