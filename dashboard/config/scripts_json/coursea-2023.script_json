@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2023-06-28 15:14:14 UTC",
+    "serialized_at": "2023-07-25 23:05:06 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6752,6 +6752,18 @@
       }
     },
     {
+      "name": "CSF Course Syllabus",
+      "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+      "key": "csf_course_syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_syllabus"
+      }
+    },
+    {
       "name": "CSF Lesson Recommendations",
       "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
       "key": "csf_lesson_recommendations",
@@ -7052,6 +7064,18 @@
       }
     },
     {
+      "name": "Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview",
+      "key": "teaching_and_learning_strategies",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teaching_and_learning_strategies"
+      }
+    },
+    {
       "name": "The Big Event",
       "url": "https://youtu.be/u0WV9shCoak",
       "key": "the_big_event",
@@ -7113,6 +7137,18 @@
       },
       "seeding_key": {
         "resource.key": "unplugged_blockly_blocks_grades_k-1_"
+      }
+    },
+    {
+      "name": "Values and Philosophy",
+      "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview\t",
+      "key": "values_and_philosophy_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "values_and_philosophy_1"
       }
     },
     {
@@ -7487,6 +7523,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csf_course_syllabus",
+        "script.name": "coursea-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "debugging_guide",
         "script.name": "coursea-2023"
       }
@@ -7506,6 +7548,18 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "coursea-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teaching_and_learning_strategies",
+        "script.name": "coursea-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "values_and_philosophy_1",
         "script.name": "coursea-2023"
       }
     }
