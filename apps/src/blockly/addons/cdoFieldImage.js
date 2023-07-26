@@ -3,6 +3,7 @@ import GoogleBlockly from 'blockly/core';
 export default class CdoFieldImage extends GoogleBlockly.FieldImage {
   newWidth = null;
   newHeight = null;
+  allowImageChange = true;
 
   updateDimensions(width, height) {
     this.newWidth = width;
@@ -21,5 +22,13 @@ export default class CdoFieldImage extends GoogleBlockly.FieldImage {
       this.newWidth = null;
       this.newHeight = null;
     }
+  }
+
+  setAllowImageChange(allowImageChange) {
+    this.allowImageChange = allowImageChange;
+  }
+
+  shouldAllowImageChange() {
+    return this.allowImageChange;
   }
 }

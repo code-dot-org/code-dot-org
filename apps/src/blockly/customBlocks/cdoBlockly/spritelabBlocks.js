@@ -59,7 +59,6 @@ export const blocks = {
   appendMiniToolboxToggle() {},
 
   setUpBlockShadowing() {
-    console.log('in cdo setBlockToShadow!');
     switch (this.type) {
       case 'gamelab_clickedSpritePointer':
         this.setBlockToShadow(

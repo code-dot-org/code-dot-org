@@ -128,6 +128,18 @@ export const blocks = {
     // when the parent changes, trigger a change to this block's field
     if (Object.keys(blockShadowingPairs).includes(this.type)) {
       this.onchange = function (event) {
+        const imagePreview = this.inputList && this.inputList[0].fieldRow[1];
+        if (!imagePreview) {
+          return;
+        }
+        if (
+          event.type === Blockly.Events.BLOCK_DRAG &&
+          event.blockId === this.id
+        ) {
+          // If this is a start event, prevent image changes.
+          // If it is an end event, allow image changes again.
+          imagePreview.setAllowImageChange(!event.isStart);
+        }
         if (
           (event.type === Blockly.Events.BLOCK_DRAG &&
             (event.isStart || event.blockId !== this.id)) ||
@@ -141,9 +153,10 @@ export const blocks = {
           return;
         }
         if (
-          event.type === Blockly.Events.BLOCK_CREATE ||
-          event.type === Blockly.Events.BLOCK_CHANGE ||
-          event.type === Blockly.Events.BLOCK_DRAG
+          imagePreview.shouldAllowImageChange() &&
+          (event.type === Blockly.Events.BLOCK_CREATE ||
+            event.type === Blockly.Events.BLOCK_CHANGE ||
+            event.type === Blockly.Events.BLOCK_DRAG)
         ) {
           const checkWorkspaceId = event.type !== Blockly.Events.BLOCK_CREATE;
           updateShadowedBlockImage(this, checkWorkspaceId);
