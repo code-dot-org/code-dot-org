@@ -7,22 +7,24 @@ module I18n
   module Metrics
     I18N_METRICS_NAMESPACE = 'I18n'.freeze
 
-    def self.report_runtime(addtl_dimensions)
-      log_metric(:Runtime, addtl_dimensions, yield)
+    def self.report_runtime(addtl_dimensions = [])
+      log_metric(:Runtime, yield, addtl_dimensions)
     end
 
+    # returns the EC2 instance ID if we are running the sync from an EC2,
+    # and 'local_machine' otherwise
     def self.machine_id
       @machine_id ||= begin
-        Net::HTTP.get(URI.parse(CDO.ec2_metadata_endpoint + 'instance-id'))
+        Net::HTTP.get(URI.parse(CDO.ec2_instance_id_endpoint))
       rescue
         'local_machine'
       end
     end
 
-    def self.log_metric(metric_name, addtl_dimensions, value)
+    def self.log_metric(metric_name, value, addtl_dimensions = [])
       # add machine_id and environment dimensions to addtl_dimensions
-      addtl_dimensions << {name: "Environment", value: CDO.rack_env}
-      addtl_dimensions << {name: "MachineId", value: machine_id}
+      addtl_dimensions << {name: 'Environment', value: CDO.rack_env}
+      addtl_dimensions << {name: 'MachineId', value: machine_id}
 
       Cdo::Metrics.put_metric(
         I18N_METRICS_NAMESPACE,
