@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {useSelector} from 'react-redux';
 import classNames from 'classnames';
 import moduleStyles from './panelContainer.module.scss';
 
@@ -17,9 +16,8 @@ const PanelContainer = ({
   rightHeaderContent,
   leftHeaderContent,
   children,
+  isHeadersShowing,
 }) => {
-  const isHeadersShowing = useSelector(state => state.music.isHeadersShowing);
-
   return (
     <div
       className={classNames('panelContainer', moduleStyles.panelContainer)}
@@ -76,6 +74,7 @@ PanelContainer.propTypes = {
   children: PropTypes.object,
   rightHeaderContent: PropTypes.node,
   leftHeaderContent: PropTypes.node,
+  isHeadersShowing: PropTypes.bool,
 };
 
 export default PanelContainer;

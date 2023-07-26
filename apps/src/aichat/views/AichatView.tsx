@@ -11,7 +11,7 @@ import {
 } from '@cdo/apps/code-studio/progressRedux';
 import aichatLocale from '../locale';
 import styles from './aichat.module.scss';
-import PanelContainer from './PanelContainer';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
