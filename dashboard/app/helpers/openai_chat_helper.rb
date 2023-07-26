@@ -1,7 +1,6 @@
 module OpenaiChatHelper
   OPEN_AI_URL = "https://api.openai.com/v1/chat/completions"
   OPENAI_CHAT_COMPLETION_API_KEY = CDO.openai_chat_completion_api_key
-  CODE_ORG_ID = CDO.openai_chat_completion_org_id
   TEMPERATURE = 0
   GPT_MODEL = 'gpt-3.5-turbo'
 
@@ -9,9 +8,9 @@ module OpenaiChatHelper
     # Set up the API endpoint URL and request headers
     headers = {
       "Content-Type" => "application/json",
-      "Authorization" => "Bearer #{OPENAI_CHAT_COMPLETION_API_KEY}",
-      "OpenAI-Organization" => CODE_ORG_ID
+      "Authorization" => "Bearer #{OPENAI_CHAT_COMPLETION_API_KEY}"
     }
+    headers["OpenAI-Organization"] = CDO.openai_chat_completion_org_id if CDO.openai_chat_completion_org_id
 
     data = {
       model: GPT_MODEL,

@@ -14,13 +14,7 @@ class OpenaiChatController < ApplicationController
     return render(status: chat_completion_return_message[:status], json: chat_completion_return_message[:json])
   end
 
-  private def has_required_messages_param?
-    begin
-      params.require([:messages])
-    rescue ActionController::ParameterMissing
-      return false
-    end
-
-    true
+  def has_required_messages_param?
+    params[:messages].present?
   end
 end
