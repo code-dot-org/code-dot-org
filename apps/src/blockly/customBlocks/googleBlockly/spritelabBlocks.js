@@ -147,8 +147,12 @@ export const blocks = {
     if (Object.keys(pointers).includes(this.type)) {
       const pointerData = pointers[this.type];
       this.onchange = function (event) {
-        if (event.type === Blockly.Events.BLOCK_DRAG && event.isStart) {
-          // don't update the shadowed image on drag start.
+        if (
+          event.type === Blockly.Events.BLOCK_DRAG &&
+          (event.isStart || event.blockId !== this.id)
+        ) {
+          // We only care about drag events if the event is on this block and
+          // it's the end of the drag. Otherwise, we can skip this event.
           return;
         }
         if (
@@ -156,7 +160,6 @@ export const blocks = {
           event.type === Blockly.Events.BLOCK_CHANGE ||
           event.type === Blockly.Events.BLOCK_DRAG
         ) {
-          console.log('trying to update!');
           const rootBlock = this.getRootBlock();
           let parent = undefined;
           if (rootBlock.type === pointerData.parent) {
@@ -181,10 +184,14 @@ export const blocks = {
             });
           }
           if (parent) {
+            console.log(`changing shadowed image`);
+            console.log({event: event, parent: parent, child: this});
             changeShadowedImage(parent, this, pointerData.imageIndex);
           } else {
             // the block is probably disconnected from the root or toolbox. Reset to
             // default text.
+            console.log(`resetting shadowed image`);
+            console.log({event: event, child: this});
             resetShadowedImageToLongString(this);
           }
         }

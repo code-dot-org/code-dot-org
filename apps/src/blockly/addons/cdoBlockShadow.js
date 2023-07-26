@@ -4,10 +4,15 @@ export function changeShadowedImage(
   imageIndexOnParent
 ) {
   const imageUrl = parentBlock
-    .getChildren(true)[0]
-    ?.inputList[0]?.fieldRow[imageIndexOnParent]?.imageElement_?.getAttribute(
-      'xlink:href'
-    );
+    .getChildren(true)
+    [
+      imageIndexOnParent
+    ]?.inputList[0]?.fieldRow[0]?.imageElement_?.getAttribute('xlink:href');
+  console.log({
+    imageUrl: imageUrl,
+    childBlock: childBlock,
+    parentBlock: parentBlock,
+  });
   if (!imageUrl) {
     resetShadowedImageToLongString(childBlock);
   }
