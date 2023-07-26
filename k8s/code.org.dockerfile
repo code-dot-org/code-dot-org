@@ -48,6 +48,7 @@ RUN \
     time \
     wget \
     unzip \
+    tzdata \
     zlib1g-dev \
     zsh \
     # surpress noisy dpkg install/setup lines (errors & warnings still show)
@@ -186,6 +187,12 @@ FROM $CODE_ORG_STATIC as code.org-static
 FROM code.org-user-utils
 ################################################################################
 
+USER root
+RUN apt-get install -y \
+  mariadb-server && \
+  true
+USER ${USERNAME}
+
 COPY --from=code.org-static --link / ./
 
 # Copy in apps/node_modules (built in parallel)
@@ -201,6 +208,13 @@ COPY --chown=${USERNAME} --link ./ ./
 # These are only required for installing Apple Silicon hack workarounds from code.org-rbenv
 COPY --from=code.org-rbenv ${SRC}/.bundle ${SRC}/.bundle
 COPY --from=code.org-rbenv ${SRC}/Gemfile ${SRC}/Gemfile
+
+RUN \
+  #
+  # We don't copy in .git (huge), and `bundle exec rake install` references it a couple places and fails without it
+  # so we create a blank one:
+  git init && \
+  true
 
 SHELL [ "zsh", "-l", "-c" ]
 
