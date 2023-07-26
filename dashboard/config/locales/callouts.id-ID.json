@@ -20,80 +20,6 @@
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "Anda sekarang dalam Mode desain."
         },
-        "Big Game Vars 1": {
-        },
-        "CSD U3 - conditionals - transition": {
-        },
-        "CSD U3 - conditionals - transition_2018": {
-        },
-        "CSD U3 - conditionals - transition_2019": {
-        },
-        "CSD U3 - conditionals - transition_2021": {
-        },
-        "CSD U3 - conditionals - transition_2022": {
-        },
-        "CSD U3 Boolean Predict": {
-        },
-        "CSD U3 Boolean Predict_2018": {
-        },
-        "CSD U3 Boolean Predict_2019": {
-        },
-        "CSD U3 Boolean Predict_2021": {
-        },
-        "CSD U3 Boolean Predict_2022": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2019": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
-        },
-        "CSD U3 Random add_2021": {
-        },
-        "CSD U3 Random add_2022": {
-        },
-        "CSD U3 Sprites anitab 1": {
-        },
-        "CSD U3 Sprites anitab 1_2018": {
-        },
-        "CSD U3 Sprites anitab 1_2019": {
-        },
-        "CSD U3 Sprites anitab 1_2021": {
-        },
-        "CSD U3 Sprites anitab 1_2022": {
-        },
-        "CSD U3 Sprites intro sprites": {
-        },
-        "CSD U3 Sprites intro sprites_2018": {
-        },
-        "CSD U3 Sprites intro sprites_2019": {
-        },
-        "CSD U3 Sprites intro sprites_2021": {
-        },
-        "CSD U3 Sprites intro sprites_2022": {
-        },
-        "CSD U3 Sprites text": {
-        },
-        "CSD U3 Sprites text_2018": {
-        },
-        "CSD U3 Sprites text_2019": {
-        },
-        "CSD U3 Sprites text_2021": {
-        },
-        "CSD U3 Sprites text_2022": {
-        },
-        "CSD U3 UP_ARROW": {
-        },
-        "CSD U3 UP_ARROW_2018": {
-        },
-        "CSD U3 UP_ARROW_2018_2019": {
-        },
-        "CSD U3 UP_ARROW_2021": {
-        },
-        "CSD U3 UP_ARROW_2022": {
-        },
         "CSD U3 Variables Predict Where X": {
           "CSD_U3_variables": "Ubah nomornya disini"
         },
@@ -123,184 +49,6 @@
         },
         "CSD U3 Variables Predict Where X_2022": {
           "CSD_U3_variables": "Ubah nomornya disini"
-        },
-        "CSD U3 abstraction accelerateX": {
-        },
-        "CSD U3 abstraction accelerateX_2018": {
-        },
-        "CSD U3 abstraction accelerateX_2019": {
-        },
-        "CSD U3 abstraction accelerateX_2021": {
-        },
-        "CSD U3 abstraction accelerateX_2022": {
-        },
-        "CSD U3 abstraction accelerateY": {
-        },
-        "CSD U3 abstraction accelerateY_2018": {
-        },
-        "CSD U3 abstraction accelerateY_2019": {
-        },
-        "CSD U3 abstraction accelerateY_2021": {
-        },
-        "CSD U3 abstraction accelerateY_2022": {
-        },
-        "CSD U3 abstraction jump": {
-        },
-        "CSD U3 abstraction jump_2018": {
-        },
-        "CSD U3 abstraction jump_2018_2019": {
-        },
-        "CSD U3 abstraction jump_2021": {
-        },
-        "CSD U3 abstraction jump_2022": {
-        },
-        "CSD U3 abstraction jumping": {
-        },
-        "CSD U3 abstraction jumping_2018": {
-        },
-        "CSD U3 abstraction jumping_2019": {
-        },
-        "CSD U3 abstraction jumping_2021": {
-        },
-        "CSD U3 abstraction jumping_2022": {
-        },
-        "CSD U3 abstraction looping": {
-        },
-        "CSD U3 abstraction looping_2018": {
-        },
-        "CSD U3 abstraction looping_2019": {
-        },
-        "CSD U3 abstraction looping_2021": {
-        },
-        "CSD U3 abstraction looping_2022": {
-        },
-        "CSD U3 abstraction rotation": {
-        },
-        "CSD U3 abstraction rotation control": {
-        },
-        "CSD U3 abstraction rotation control_2018": {
-        },
-        "CSD U3 abstraction rotation control_2019": {
-        },
-        "CSD U3 abstraction rotation control_2021": {
-        },
-        "CSD U3 abstraction rotation control_2022": {
-        },
-        "CSD U3 abstraction rotation_2018": {
-        },
-        "CSD U3 abstraction rotation_2019": {
-        },
-        "CSD U3 abstraction rotation_2021": {
-        },
-        "CSD U3 abstraction rotation_2022": {
-        },
-        "CSD U3 abstraction tumbleweed": {
-        },
-        "CSD U3 abstraction tumbleweed_2018": {
-        },
-        "CSD U3 abstraction tumbleweed_2019": {
-        },
-        "CSD U3 abstraction tumbleweed_2021": {
-        },
-        "CSD U3 abstraction tumbleweed_2022": {
-        },
-        "CSD U3 abstraction velocityX": {
-        },
-        "CSD U3 abstraction velocityX control": {
-        },
-        "CSD U3 abstraction velocityX control_2018": {
-        },
-        "CSD U3 abstraction velocityX control_2019": {
-        },
-        "CSD U3 abstraction velocityX control_2021": {
-        },
-        "CSD U3 abstraction velocityX control_2022": {
-        },
-        "CSD U3 abstraction velocityX if-statements": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2018": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2019": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2021": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2022": {
-        },
-        "CSD U3 abstraction velocityX_2018": {
-        },
-        "CSD U3 abstraction velocityX_2019": {
-        },
-        "CSD U3 abstraction velocityX_2021": {
-        },
-        "CSD U3 abstraction velocityX_2022": {
-        },
-        "CSD U3 abstraction velocityY": {
-        },
-        "CSD U3 abstraction velocityY control": {
-        },
-        "CSD U3 abstraction velocityY control_2018": {
-        },
-        "CSD U3 abstraction velocityY control_2019": {
-        },
-        "CSD U3 abstraction velocityY control_2021": {
-        },
-        "CSD U3 abstraction velocityY control_2022": {
-        },
-        "CSD U3 abstraction velocityY_2018": {
-        },
-        "CSD U3 abstraction velocityY_2019": {
-        },
-        "CSD U3 abstraction velocityY_2021": {
-        },
-        "CSD U3 abstraction velocityY_2022": {
-        },
-        "CSD U3 collisions isTouching intro": {
-        },
-        "CSD U3 collisions isTouching intro_2018": {
-        },
-        "CSD U3 collisions isTouching intro_2019": {
-        },
-        "CSD U3 collisions isTouching intro_2021": {
-        },
-        "CSD U3 collisions isTouching intro_2022": {
-        },
-        "CSD U3 collisions scoreboard": {
-        },
-        "CSD U3 collisions scoreboard_2018": {
-        },
-        "CSD U3 collisions scoreboard_2019": {
-        },
-        "CSD U3 collisions try blocks": {
-        },
-        "CSD U3 collisions try blocks_2018": {
-        },
-        "CSD U3 collisions try blocks_2019": {
-        },
-        "CSD U3 collisions try blocks_2021": {
-        },
-        "CSD U3 collisions try blocks_2022": {
-        },
-        "CSD U3 collisions types": {
-        },
-        "CSD U3 collisions types2_2021": {
-        },
-        "CSD U3 collisions types2_2022": {
-        },
-        "CSD U3 collisions types3_2021": {
-        },
-        "CSD U3 collisions types3_2022": {
-        },
-        "CSD U3 collisions types4_2021": {
-        },
-        "CSD U3 collisions types4_2022": {
-        },
-        "CSD U3 collisions types_2018": {
-        },
-        "CSD U3 collisions types_2019": {
-        },
-        "CSD U3 collisions types_2021": {
-        },
-        "CSD U3 collisions types_2022": {
         },
         "CSD U3 debug": {
           "CSD_U3_rect_c1": "Inilah kodenya",
@@ -401,76 +149,6 @@
         "CSD U3 fill_2022": {
           "CSD_U3_rect_c1": "Inilah kodenya",
           "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
-        },
-        "CSD U3 game backgrounds": {
-        },
-        "CSD U3 game backgrounds_2018": {
-        },
-        "CSD U3 game backgrounds_2019": {
-        },
-        "CSD U3 game backgrounds_2021": {
-        },
-        "CSD U3 game backgrounds_2022": {
-        },
-        "CSD U3 game variables": {
-        },
-        "CSD U3 game variables_2018": {
-        },
-        "CSD U3 game variables_2019": {
-        },
-        "CSD U3 game variables_2021": {
-        },
-        "CSD U3 game variables_2022": {
-        },
-        "CSD U3 keydown conditional": {
-        },
-        "CSD U3 keydown conditional_2018": {
-        },
-        "CSD U3 keydown conditional_2018_2019": {
-        },
-        "CSD U3 keydown conditional_2021": {
-        },
-        "CSD U3 keydown conditional_2022": {
-        },
-        "CSD U3 platform background1": {
-        },
-        "CSD U3 platform background1_2018": {
-        },
-        "CSD U3 platform background1_2019": {
-        },
-        "CSD U3 platform background1_2021": {
-        },
-        "CSD U3 platform background1_2022": {
-        },
-        "CSD U3 platform platform1": {
-        },
-        "CSD U3 platform platform1_2018": {
-        },
-        "CSD U3 platform platform1_2019": {
-        },
-        "CSD U3 platform platform1_2021": {
-        },
-        "CSD U3 platform platform1_2022": {
-        },
-        "CSD U3 platform scoreboard": {
-        },
-        "CSD U3 platform scoreboard_2018": {
-        },
-        "CSD U3 platform scoreboard_2019": {
-        },
-        "CSD U3 platform scoreboard_2021": {
-        },
-        "CSD U3 platform scoreboard_2022": {
-        },
-        "CSD U3 platform variable1": {
-        },
-        "CSD U3 platform variable1_2018": {
-        },
-        "CSD U3 platform variable1_2019": {
-        },
-        "CSD U3 platform variable1_2021": {
-        },
-        "CSD U3 platform variable1_2022": {
         },
         "CSD U3 properties depth_2021": {
           "CSD_U3_rect_c1": "Inilah kodenya",
@@ -580,48 +258,8 @@
           "CSD_U3_rect_c1": "Inilah kodenya",
           "CSD_U3_rect_c2": "Tarik blok ini ke area kode."
         },
-        "CSD U6 - Accelerometer - PB_2222": {
-        },
-        "CSD U6 - Accelerometer - PC_2222": {
-        },
-        "CSD U6 - Accelerometer - SB2_2222": {
-        },
-        "CSD U6 - Color LEDs - CA_2222": {
-        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "Tambahkan kode anda disini"
-        },
-        "CSD U6 - Combine Inputs - A_2222": {
-        },
-        "CSD U6 - Combine Inputs - PracD_2222": {
-        },
-        "CSD U6 - Combine Inputs - SB1_2222": {
-        },
-        "CSD U6 - Functions - P2A_2222": {
-        },
-        "CSD U6 - Functions - P2C_2222": {
-        },
-        "CSD U6 - Functions - SB1_2222": {
-        },
-        "CSD U6 - Functions - SB2_2222": {
-        },
-        "CSD U6 - Functions - SB3_2222": {
-        },
-        "CSD U6 - Functions - SB4_2222": {
-        },
-        "CSD U6 - Functions - SB6_2222": {
-        },
-        "CSD U6 - Functions - SB7_2222": {
-        },
-        "CSD U6 - Functions - SB_2222": {
-        },
-        "CSD U6 - If Variables - A_2222": {
-        },
-        "CSD U6 - Music - A_2222": {
-        },
-        "CSD U6 - Music - SB3_2222": {
-        },
-        "CSD U6 - Sensors - PB_2222": {
         },
         "CSD U6 colorLeds intensity": {
           "CSDU6L10_rainbow": "Tambahkan kode anda disini"
@@ -634,14 +272,6 @@
         },
         "CSD U6 colorLeds intensity_2021": {
           "CSDU6L10_rainbow": "Tambahkan kode anda disini"
-        },
-        "CSD U6 getProperty input": {
-        },
-        "CSD U6 getProperty input_2018": {
-        },
-        "CSD U6 getProperty input_2019": {
-        },
-        "CSD U6 getProperty input_2021": {
         },
         "CSD U6 light show": {
           "CSDUDL03P09": "Apa kegunaan garis ini?"
@@ -691,29 +321,11 @@
         "CSD U6 tugowar variables 3_2021": {
           "CSD_U6_checkWin": "Periksa apakah pemain telah menang"
         },
-        "CSD games sidescroll background_2021": {
-        },
-        "CSD games sidescroll background_2022": {
-        },
-        "CSD games velocity bee_2021": {
-        },
-        "CSD games velocity bee_2022": {
-        },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Ubah nomornya disini"
         },
         "CSD web text explore_2022": {
           "CSD_U3_variables": "Ubah nomornya disini"
-        },
-        "CSD web text size_2021": {
-        },
-        "CSD web text size_2022": {
-        },
-        "CSDU4 - Design Mode - 3": {
-        },
-        "Calc Circles of Eval .2": {
-        },
-        "Calc Vars 1": {
         },
         "Course 4 Artist 4": {
           "repeat_full_circle": "Masukkan frekuensi gerakan zombie untuk membuat lingkaran penuh"
@@ -920,14 +532,6 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "Lihat di sini untuk blok \"semua bebek\""
         },
-        "Eval Booleans 2": {
-        },
-        "Eval Define Funcs 3": {
-        },
-        "Eval Define Funcs Test": {
-        },
-        "Eval Strings Images .2": {
-        },
         "Fish Tank 3-validated2022": {
           "spritelab_comment": "Gunakan blok ini untuk membuat catatan untuk Anda atau guru Anda tentang cara kerja kode."
         },
@@ -979,8 +583,6 @@
         },
         "InspirationalArtwork_2018": {
           "InspirationalArtwork_1": "Coba gunakan blok `komentar` di bawah label ini untuk meninggalkan catatan Anda sendiri di dalam program Anda!"
-        },
-        "Luigi's Pizza 1": {
         },
         "MC HOC 2016 Level 2-2": {
           "craft2_run_button_callout": "Ketika anda sudah siap, tekan \"Jalankan\" untuk mencoba program anda."
@@ -1059,8 +661,6 @@
         },
         "NEW Course 4 Artist Params 10": {
           "create_function": "Klik di sini untuk membuka flyout \"Functions\", lalu klik tombol \"Create a Function\"."
-        },
-        "NEW Course 4 Artist Params 2": {
         },
         "NEW Course 4 Artist Params 9": {
           "add_and_drag_parameter": "Tulis nama parameter Anda di sini, klik add, lalu tarik ke definisi function Anda",
@@ -2616,10 +2216,6 @@
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "Anda dapat menemukan variabel Anda di bawah sini!"
         },
-        "courseF_collector_items_-2022-2": {
-        },
-        "courseF_collector_player_move_-2022-2": {
-        },
         "courseF_editable_card": {
           "visualizationResizeBar": "Drag 3 titik untuk mengubah ukuran area permainan."
         },
@@ -2673,8 +2269,6 @@
         },
         "courseF_events_time_-2022-2": {
           "events_category": "Klik di sini untuk membuka kategori Event."
-        },
-        "courseF_groups_size_-2022-2": {
         },
         "courseF_label_predict": {
           "variablesPredict": "Lihat dengan cermat code di bawah titik ini."
@@ -3078,74 +2672,6 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Blok baru!"
-        },
-        "iceage_hello1": {
-        },
-        "iceage_hello2": {
-        },
-        "iceage_move_events": {
-        },
-        "iceage_move_events_dani": {
-        },
-        "iceage_move_to_actor": {
-        },
-        "iceage_repeat": {
-        },
-        "iceage_sound_and_points": {
-        },
-        "iceage_sound_and_points_dani": {
-        },
-        "iceage_warn_ice_age": {
-        },
-        "iceage_warn_ice_age_dani": {
-        },
-        "ml-customize apps-choice3": {
-        },
-        "ml-customize apps-choice3_2022": {
-        },
-        "ml-customize apps-choice5": {
-        },
-        "ml-customize apps-choice5_2022": {
-        },
-        "ml-intro app lab-book recommender 5C-2021": {
-        },
-        "ml-intro app lab-book recommender 5C_2022": {
-        },
-        "ml-intro app lab-book recommender 5E-2021": {
-        },
-        "ml-intro app lab-book recommender 5E_2022": {
-        },
-        "ml-models in applab-screens-1-2021": {
-        },
-        "ml-models in applab-screens-1_2022": {
-        },
-        "ml-models in applab-screens-3-2021": {
-        },
-        "ml-models in applab-screens-3_2022": {
-        },
-        "ml-use model card-choice3": {
-        },
-        "ml-use model card-choice3_2022": {
-        },
-        "ml-use model card-choice5": {
-        },
-        "ml-use model card-choice5_2022": {
-        },
-        "ml-use model card-example3C-2021": {
-        },
-        "ml-use model card-example3C_2022": {
-        },
-        "ml-use model card-example3D-2021": {
-        },
-        "ml-use model card-example3D_2022": {
-        },
-        "ml-use model card-example3_EditB-2021": {
-        },
-        "ml-use model card-example3_EditB_2022": {
-        },
-        "ml-use model card-example3_EditC-2021": {
-        },
-        "ml-use model card-example3_EditC_2022": {
         },
         "outbreak2": {
           "minitoolbox": "Klik di sini untuk memperluas blok.",

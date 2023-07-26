@@ -35,8 +35,6 @@
           }
         },
         "2-3 Artist Debugging 10": {
-          "draw R pad": {
-          },
           "draw a button": {
             "name": "bir düymə çək"
           },
@@ -52,8 +50,6 @@
               "height": "hündürlük",
               "width": "enlik"
             }
-          },
-          "jump to controller top left": {
           },
           "jump to middle": {
             "name": "ortaya tullan"
@@ -89,10 +85,6 @@
           },
           "draw right leg": {
             "name": "sağ ayaq çək"
-          },
-          "draw sitting stick figure": {
-          },
-          "jump to neck": {
           }
         },
         "2-3 Artist Debugging 7": {
@@ -104,10 +96,6 @@
           },
           "draw O": {
             "name": "O çək"
-          }
-        },
-        "2-3 Artist Functions 1": {
-          "draw ear stems": {
           }
         },
         "2-3 Artist Functions 10": {
@@ -136,15 +124,11 @@
         "2-3 Artist Functions 2": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "2-3 Artist Functions 4": {
@@ -186,14 +170,6 @@
         "2-3 Bee Functions 4": {
           "move and get nectar": {
             "name": "hərəkət et və nektar al"
-          }
-        },
-        "2-3 Bee Functions 5": {
-          "move and get 4": {
-          }
-        },
-        "2-3 Bee Functions 6": {
-          "move and get 4": {
           }
         },
         "2-3 Bee Functions 8": {
@@ -245,18 +221,6 @@
             "name": "hədəf çək"
           }
         },
-        "4-5 Bee Conditionals 7": {
-          "check purple flower": {
-          }
-        },
-        "4-5 Bee Conditionals 8": {
-          "check flower make honey": {
-          }
-        },
-        "4-5 Bee Conditionals Assessment 1": {
-          "get nectar or make honey": {
-          }
-        },
         "4-5 Bee Debugging 7": {
           "make 3 honey": {
             "name": "3 bal düzəlt"
@@ -265,10 +229,6 @@
         "4-5 Bee Debugging 8": {
           "get 5 nectar": {
             "name": "5 nektar əldə edin"
-          }
-        },
-        "4-5 Bee Debugging 9": {
-          "make all honey": {
           }
         },
         "Alien Defender": {
@@ -307,8 +267,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 2": {
@@ -317,8 +275,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 3": {
@@ -327,8 +283,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 4": {
@@ -337,8 +291,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 5": {
@@ -347,8 +299,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 6": {
@@ -357,8 +307,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 7": {
@@ -367,8 +315,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary Free Play 2": {
@@ -377,8 +323,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary Free Play 2a": {
@@ -387,8 +331,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary Free Play 2b": {
@@ -397,8 +339,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary pre1": {
@@ -407,8 +347,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Functions Inspiration": {
@@ -580,14 +518,8 @@
           "draw a hexagon": {
             "name": "altıbucaqlı çək"
           },
-          "draw a line of hexagons": {
-          },
           "draw a square 20": {
             "name": "20 kvadratı çəkin"
-          },
-          "shift down/backward": {
-          },
-          "shift down/forward": {
           }
         },
         "Course 4 SCF 1a": {
@@ -597,10 +529,6 @@
               "counter": "sayğac",
               "dir": "istiqamət"
             }
-          }
-        },
-        "Course 4 SCF 1b": {
-          "make honey up and over": {
           }
         },
         "Course 4 SCF 2": {
@@ -615,8 +543,6 @@
             "parameters": {
               "numOctagons": "numSəkkizguşəli"
             }
-          },
-          "shift down": {
           }
         },
         "Course 4 SCF 3": {
@@ -644,12 +570,6 @@
           }
         },
         "Course E: Frozen Project_examples2022": {
-          "LOGIC FLOWER": {
-          },
-          "LOGIC FLOWERS": {
-          },
-          "LOGIC FLOWERS2": {
-          },
           "draw a circle": {
             "description": "verilən radiuslu çevrə çək",
             "name": "çevrə çək",
@@ -703,12 +623,6 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
-          "LOGIC FLOWER": {
-          },
-          "LOGIC FLOWERS": {
-          },
-          "LOGIC FLOWERS2": {
-          },
           "draw a circle": {
             "description": "verilən radiuslu çevrə çək",
             "name": "çevrə çək",
@@ -1221,8 +1135,6 @@
             "parameters": {
               "size": "ölçü"
             }
-          },
-          "n-sided shape": {
           }
         },
         "K-1 Artist2 3": {
@@ -1426,10 +1338,6 @@
           },
           "draw a square 20": {
             "name": "20 kvadratı çəkin"
-          },
-          "draw a square 40": {
-          },
-          "empty function": {
           }
         },
         "NEW Course 4 Artist Functions 3": {
@@ -1803,29 +1711,21 @@
         "course3_artist_functions_challenge1": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "my design": {
           }
         },
         "course3_artist_functions_challenge2": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "my design": {
           }
         },
         "course3_bee_functions_challenge1": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "get 3 nectar or honey": {
           }
         },
         "course3_bee_functions_challenge2": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "move and collect": {
           }
         },
         "course3_bee_functions_challenge3": {
@@ -1834,8 +1734,6 @@
           },
           "row of nectar": {
             "name": "nektar sırası"
-          },
-          "rowOfNectar": {
           }
         },
         "course3_bee_functions_challenge4": {
@@ -1847,8 +1745,6 @@
           },
           "row of nectar": {
             "name": "nektar sırası"
-          },
-          "rowOfNectar": {
           }
         },
         "course3_playLab_challenge1": {
@@ -1868,8 +1764,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "course4_artist_binary_challenge2": {
@@ -1878,19 +1772,11 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
-          }
-        },
-        "course4_artist_concept_challenge2": {
-          "draw pinwheel": {
           }
         },
         "course4_artist_functions_challenge2": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "my design": {
           }
         },
         "course4_artist_fwp_challenge1": {
@@ -1909,10 +1795,6 @@
             "parameters": {
               "color": "rəng"
             }
-          }
-        },
-        "course4_bee_for_challenge1": {
-          "move and get nectar with counter": {
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -2088,8 +1970,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary1_2018": {
@@ -2098,8 +1978,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary1_2019": {
@@ -2108,8 +1986,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary1_2020": {
@@ -2118,8 +1994,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary2": {
@@ -2128,8 +2002,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary2_2018": {
@@ -2138,8 +2010,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary2_2019": {
@@ -2148,8 +2018,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary2_2020": {
@@ -2158,8 +2026,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary3": {
@@ -2168,8 +2034,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary3_2018": {
@@ -2178,8 +2042,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary3_2019": {
@@ -2188,8 +2050,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary3_2020": {
@@ -2198,8 +2058,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary4": {
@@ -2208,8 +2066,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary4_2018": {
@@ -2218,8 +2074,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary4_2019": {
@@ -2228,8 +2082,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary4_2020": {
@@ -2238,8 +2090,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary5": {
@@ -2248,8 +2098,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary5_2018": {
@@ -2258,8 +2106,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary5_2019": {
@@ -2268,8 +2114,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary5_2020": {
@@ -2278,8 +2122,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary6": {
@@ -2288,8 +2130,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary6_2018": {
@@ -2298,8 +2138,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary6_2019": {
@@ -2308,8 +2146,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary6_2020": {
@@ -2318,8 +2154,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary7": {
@@ -2328,8 +2162,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary7_2018": {
@@ -2338,8 +2170,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary7_2019": {
@@ -2348,8 +2178,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary7_2020": {
@@ -2358,8 +2186,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8": {
@@ -2368,8 +2194,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_2018": {
@@ -2378,8 +2202,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_2019": {
@@ -2388,8 +2210,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_2020": {
@@ -2398,8 +2218,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1": {
@@ -2408,8 +2226,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1_2018": {
@@ -2418,8 +2234,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1_2019": {
@@ -2428,8 +2242,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1_2020": {
@@ -2438,8 +2250,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binaryFP_2018": {
@@ -2448,8 +2258,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binaryFP_2019": {
@@ -2458,8 +2266,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binaryFP_2020": {
@@ -2468,8 +2274,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge1_2018": {
@@ -2478,8 +2282,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge1_2019": {
@@ -2488,8 +2290,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge1_2020": {
@@ -2498,8 +2298,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge2_2018": {
@@ -2508,8 +2306,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge2_2019": {
@@ -2518,8 +2314,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge2_2020": {
@@ -2528,8 +2322,6 @@
             "parameters": {
               "binary": "ikilik"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_autorun_binary2_2019": {
@@ -2575,8 +2367,6 @@
         "courseE_Dogger_2": {
           "lose": {
             "name": "uduzmaq"
-          },
-          "stop_everything": {
           }
         },
         "courseE_artist_concept1": {
@@ -2622,18 +2412,6 @@
         "courseE_artist_concept_challenge1_2018": {
           "do something": {
             "name": "bir şey etmək"
-          }
-        },
-        "courseE_artist_concept_challenge2": {
-          "draw pinwheel": {
-          }
-        },
-        "courseE_artist_concept_challenge2_2018": {
-          "draw pinwheel": {
-          }
-        },
-        "courseE_artist_functions1": {
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions10": {
@@ -2702,47 +2480,29 @@
             "name": "altıbucaqlının xəttini çəkin"
           }
         },
-        "courseE_artist_functions1_copy": {
-          "draw ear stems": {
-          }
-        },
-        "courseE_artist_functions1_dani": {
-          "draw ear stems": {
-          }
-        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions22022": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2018": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2019": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2020": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2021": {
@@ -2756,15 +2516,11 @@
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_dani": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions32022": {
@@ -3286,36 +3042,26 @@
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge12022": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge1_2018": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge1_2019": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge1_2020": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge1_2021": {
@@ -3329,36 +3075,26 @@
         "courseE_artist_functions_challenge2": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge22022": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge2_2018": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge2_2019": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge2_2020": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge2_2021": {
@@ -3372,57 +3108,41 @@
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict12022": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2018": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2019": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2020": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_dani": {
           "draw a square": {
             "name": "kvadrat çək"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict2": {
@@ -3526,10 +3246,6 @@
             "name": "hərəkət et və nektar al"
           }
         },
-        "courseE_bee_functions5": {
-          "move and get 4": {
-          }
-        },
         "courseE_bee_functions6": {
           "get 7 nectar make 7 honey": {
             "name": "7 nektar al və 7 bal düzəlt"
@@ -3553,15 +3269,11 @@
         "courseE_bee_functions_challenge1": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "get 3 nectar or honey": {
           }
         },
         "courseE_bee_functions_challenge2": {
           "do something": {
             "name": "bir şey etmək"
-          },
-          "move and collect": {
           }
         },
         "courseE_farmer_concept1": {
@@ -4401,30 +4113,6 @@
             "name": "hərəkət et və yoxla"
           }
         },
-        "courseF_bee_for_challenge1": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge12022": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge1_2018": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge1_2019": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge1_2020": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge1_2021": {
-          "move and get nectar with counter": {
-          }
-        },
         "courseF_bee_functions2": {
           "get only nectar": {
             "name": "yalnız nektar alın"
@@ -4485,8 +4173,6 @@
           },
           "row of nectar": {
             "name": "nektar sırası"
-          },
-          "rowOfNectar": {
           }
         },
         "courseF_bee_functions_challenge2": {
@@ -4495,16 +4181,6 @@
           },
           "move and check": {
             "name": "hərəkət et və yoxla"
-          },
-          "rowOfNectar": {
-          }
-        },
-        "courseF_bee_fwp2": {
-          "rowOfNectar": {
-          }
-        },
-        "courseF_bee_fwp3": {
-          "rowOfNectar": {
           }
         },
         "courseF_bee_fwp4": {
@@ -4568,78 +4244,6 @@
             }
           }
         },
-        "courseF_bee_variables_1_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_1_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_1_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_2_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_2_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_2_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_3_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_3_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_3_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_4_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_4_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_4_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_5_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_5_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_5_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_6_2018": {
-          "collect stairs": {
-          }
-        },
-        "courseF_bee_variables_6_2019": {
-          "collect stairs": {
-          }
-        },
-        "courseF_bee_variables_6_2020": {
-          "collect stairs": {
-          }
-        },
         "courseF_bee_variables_7_2018": {
           "collect": {
             "name": "topla  "
@@ -4658,22 +4262,16 @@
         "courseF_bee_variables_8_2018": {
           "collect": {
             "name": "topla  "
-          },
-          "move and increment": {
           }
         },
         "courseF_bee_variables_8_2019": {
           "collect": {
             "name": "topla  "
-          },
-          "move and increment": {
           }
         },
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "topla  "
-          },
-          "move and increment": {
           }
         },
         "grade5_artist_binary11": {

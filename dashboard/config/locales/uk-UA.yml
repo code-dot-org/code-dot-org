@@ -1086,7 +1086,7 @@ uk:
       Code.org, щоб дізнатися більше.
   slow_loading: Це займає більше часу, ніж звичайно...
   stage: Етап
-  stage_number: Етап %{number}
+  stage_number: Урок %{number}
   studio:
     all_courses: Всі курси
     completed_courses: Завершені курси
