@@ -115,6 +115,25 @@ export function escapeHtml(unsafe) {
 }
 
 /**
+ * Reverses escaped HTML into its original form.
+ * List of special characters is taken from
+ * https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html.
+ * @param {string} safe - The string to unescape.
+ * @returns {string} Unescaped string. Returns an empty string if input is null or undefined.
+ */
+export function unescapeHtml(safe) {
+  return safe
+    ? safe
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+        .replace(/&#47;/g, '/')
+    : '';
+}
+
+/**
  * Version of modulo which, unlike javascript's `%` operator,
  * will always return a positive remainder.
  * @param number
