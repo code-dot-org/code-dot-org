@@ -1,7 +1,15 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 import moduleStyles from './panelContainer.module.scss';
+
+interface PanelContainerProps {
+  id: string;
+  headerText: string;
+  children?: React.ReactNode;
+  rightHeaderContent?: React.ReactNode;
+  leftHeaderContent?: React.ReactNode;
+  isHeadersShowing?: boolean;
+}
 
 /**
  * A container for a top-level panel with a header.  The content of the panel
@@ -10,13 +18,13 @@ import moduleStyles from './panelContainer.module.scss';
  * its parent; this means that the main scene is responsible for allocating
  * the layout of all the panels.
  */
-const PanelContainer = ({
+const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
   id,
   headerText,
   rightHeaderContent,
   leftHeaderContent,
   children,
-  isHeadersShowing,
+  isHeadersShowing = true,
 }) => {
   return (
     <div
@@ -66,15 +74,6 @@ const PanelContainer = ({
       {children}
     </div>
   );
-};
-
-PanelContainer.propTypes = {
-  id: PropTypes.string.isRequired,
-  headerText: PropTypes.string.isRequired,
-  children: PropTypes.object,
-  rightHeaderContent: PropTypes.node,
-  leftHeaderContent: PropTypes.node,
-  isHeadersShowing: PropTypes.bool,
 };
 
 export default PanelContainer;
