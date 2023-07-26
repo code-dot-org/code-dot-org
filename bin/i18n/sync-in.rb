@@ -30,12 +30,12 @@ module I18n
       I18n::Resources::Dashboard::Standards.sync_in
       I18n::Resources::Dashboard::Docs.sync_in
       I18n::Resources::Apps::ExternalSources.sync_in
+      I18n::Resources::Apps::Labs.sync_in
       puts "Copying source files"
       I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
       localize_course_resources
       redact_level_content
       redact_script_and_course_content
-      redact_labs_content
       localize_markdown_content
       puts "Sync in completed successfully"
     rescue => exception
@@ -468,23 +468,6 @@ module I18n
 
       Dir.glob(File.join(I18N_SOURCE_DIR, "course_content/**/*.json")).each do |source_path|
         redact_level_file(source_path)
-      end
-    end
-
-    # These files are synced in using the `bin/i18n-codeorg/in.sh` script.
-    def self.redact_labs_content
-      puts "Redacting *labs content"
-
-      # Only CSD labs are redacted, since other labs were already part of the i18n pipeline and redaction would edit
-      # strings existing in crowdin already
-      redactable_labs = %w(applab gamelab weblab)
-
-      redactable_labs.each do |lab_name|
-        source_path = File.join(I18N_SOURCE_DIR, "blockly-mooc", lab_name + ".json")
-        backup_path = source_path.sub("source", "original")
-        FileUtils.mkdir_p(File.dirname(backup_path))
-        FileUtils.cp(source_path, backup_path)
-        RedactRestoreUtils.redact(source_path, source_path, ['link'])
       end
     end
 
