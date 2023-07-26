@@ -78,26 +78,18 @@
           "rubric_performance_level_3": "Gran parte dei contenuti sono tra tag. Almeno un tag d'intestazione è utilizzato.",
           "rubric_performance_level_4": "Quasi nessun contenuto è contenuto nei tag."
         },
-        "CSD U2 Image Tag 2_2019": {
-        },
         "CSD U2 Image assessment_2021": {
-          "rubric_key_concept": "Struttura il contenuto di una pagina web utilizzando HTML (aggiungi un'immagine a una pagina web). Fornisci accuratamente gli altri attributi quando li utilizzi.",
+          "rubric_key_concept": "Struttura il contenuto di una pagina web utilizzando HTML (aggiungi un'immagine a una pagina web). Attribuisci correttamente il lavoro degli altri quando lo utilizzi in un tuo progetto.",
           "rubric_performance_level_1": "L'immagine viene visualizzata correttamente e un attributo `alt` fornisce una descrizione di prova ragionevole dell'immagine. Nessun codice non necessario è incluso nel tag `img`. L'attribuzione è accurata e l'immagine è denominata in modo appropriato.",
           "rubric_performance_level_2": "L'immagine viene visualizzata correttamente e viene utilizzata in base alla descrizione della licenza di copyright.",
           "rubric_performance_level_3": "Viene utilizzato il tag `img` e viene fornito un indirizzo sorgente per l'immagine, ma potrebbero esserci piccoli errori di sintassi o errori di ortografia che impediscono la corretta visualizzazione dell'immagine. L'immagine potrebbe non essere disponibile per uso legale sulla pagina web."
         },
         "CSD U2 Image assessment_2022": {
-          "rubric_key_concept": "Struttura il contenuto di una pagina web utilizzando HTML (aggiungi un'immagine a una pagina web). Fornisci accuratamente gli altri attributi quando li utilizzi.",
+          "rubric_key_concept": "Struttura il contenuto di una pagina web utilizzando HTML (aggiungi un'immagine a una pagina web). Attribuisci correttamente il lavoro degli altri quando lo utilizzi in un tuo progetto.",
           "rubric_performance_level_1": "L'immagine viene visualizzata correttamente e un attributo `alt` fornisce una descrizione di prova ragionevole dell'immagine. Nessun codice non necessario è incluso nel tag `img`. L'attribuzione è accurata e l'immagine è denominata in modo appropriato.",
           "rubric_performance_level_2": "L'immagine viene visualizzata correttamente e viene utilizzata in base alla descrizione della licenza di copyright.",
           "rubric_performance_level_3": "Viene utilizzato il tag `img` e viene fornito un indirizzo sorgente per l'immagine, ma potrebbero esserci piccoli errori di sintassi o errori di ortografia che impediscono la corretta visualizzazione dell'immagine. L'immagine potrebbe non essere disponibile per uso legale sulla pagina web.",
           "rubric_performance_level_4": "Il tag `img` non viene utilizzato o non viene fornito alcun indirizzo sorgente per l'immagine."
-        },
-        "CSD U2 add style_2019": {
-        },
-        "CSD U2 add style_2021": {
-        },
-        "CSD U2 add style_2022": {
         },
         "CSD U2 adding pages_2021": {
           "rubric_key_concept": "Creazione di un artefatto digitale e collegamento all'interno di un sito multipagina\n",
@@ -129,14 +121,6 @@
         },
         "CSD U2 classes summer_2019": {
           "rubric_key_concept": "Crea classi che possono essere referenziate e modificate come gruppo."
-        },
-        "CSD U2 text style h3_2019": {
-        },
-        "CSD U2 text style h3_2021": {
-        },
-        "CSD U2 text style h3_2022": {
-        },
-        "CSD U2 un_ordered lists": {
         },
         "CSD U3 Conditionals Apple 2_2018_2019": {
           "rubric_key_concept": "Usa le istruzioni condizionali per controllare il flusso di un programma.",
@@ -270,8 +254,6 @@
           "rubric_performance_level_2": "I pesci si muovono tutti sulla schermata nell'ordine indicato dalle istruzioni.",
           "rubric_performance_level_3": "Lo schema a contatore viene utilizzato all'interno della funzione ciclica `draw()` per diminuire la posizione x dei pesci blu e verdi. I pesci si muovono tutti a sinistra sullo schermo, ma non necessariamente alla velocità stabilita.",
           "rubric_performance_level_4": "Lo schema del contatore è stato utilizzato al di fuori della funzione ciclica `draw()` o non è stato utilizzato affatto."
-        },
-        "CSD U3 Movement Your Own 2_2018": {
         },
         "CSD U3 Random Debug Cloud_2018_2019": {
           "rubric_key_concept": "Utilizza gli argomenti per modificare il modo in cui un metodo o comando è eseguito. ",
@@ -970,28 +952,50 @@
           "rubric_performance_level_3": "C'è almeno un evento nel prototipo che può essere attivato per produrre una sorta di risposta.",
           "rubric_performance_level_4": "Non ci sono eventi nel prototipo."
         },
-        "allthethings-mini-rubric": {
-        },
         "allthethings-mini-rubric-gamelab": {
           "rubric_key_concept": "Concetto chiave"
         },
-        "allthethings-mini-rubric-weblab": {
-        },
         "ml-club app-review submit": {
+          "rubric_key_concept": "Creazione di un'app intuitiva che utilizza l'apprendimento automatico",
+          "rubric_performance_level_1": "Il modello è stato importato e l'app funziona correttamente. L'app ha un tema e la richiesta all'utente per ogni menu a discesa è stata modificata per essere una domanda. L'app ha una schermata di benvenuto e un pulsante che modifica correttamente le schermate.",
+          "rubric_performance_level_2": "Il modello è stato importato e l'app funziona correttamente. L'app ha un tema e la richiesta all'utente per il menu a discesa è stata modificata per essere una domanda. Tuttavia, la schermata di benvenuto è incompleta o non funziona correttamente.",
+          "rubric_performance_level_3": "Il modello è stato importato e l'app funziona correttamente, ma non sono state apportate modifiche alla progettazione della schermata o al testo a schermo. Non è presente alcuna schermata di benvenuto.",
           "rubric_performance_level_4": "L'app non è stata avviata"
         },
         "ml-club app-review submit_2022": {
+          "rubric_key_concept": "Creazione di un'app intuitiva che utilizza l'apprendimento automatico",
+          "rubric_performance_level_1": "Il modello è stato importato e l'app funziona correttamente. L'app ha un tema e la richiesta all'utente per ogni menu a discesa è stata modificata per essere una domanda. L'app ha una schermata di benvenuto e un pulsante che modifica correttamente le schermate.",
+          "rubric_performance_level_2": "Il modello è stato importato e l'app funziona correttamente. L'app ha un tema e la richiesta all'utente per il menu a discesa è stata modificata per essere una domanda. Tuttavia, la schermata di benvenuto è incompleta o non funziona correttamente.",
+          "rubric_performance_level_3": "Il modello è stato importato e l'app funziona correttamente, ma non sono state apportate modifiche alla progettazione della schermata o al testo a schermo. Non è presente alcuna schermata di benvenuto.",
           "rubric_performance_level_4": "L'app non è stata avviata"
         },
         "ml-intro app lab-book recommender 4-2021": {
+          "rubric_key_concept": "Creazione di un'app intuitiva che utilizza l'apprendimento automatico",
+          "rubric_performance_level_1": "Il modello è stato importato e l'app funziona correttamente. L'app ha un tema e la richiesta all'utente per ogni menu a discesa è stata modificata per essere una domanda. L'app ha una schermata di benvenuto e un pulsante che modifica correttamente le schermate.",
+          "rubric_performance_level_2": "Il modello è stato importato e l'app funziona correttamente. L'app ha un tema e la richiesta all'utente per il menu a discesa è stata modificata per essere una domanda. Tuttavia, la schermata di benvenuto è incompleta o non funziona correttamente.",
+          "rubric_performance_level_3": "Il modello è stato importato e l'app funziona correttamente, ma non sono state apportate modifiche alla progettazione della schermata o al testo a schermo. Non è presente alcuna schermata di benvenuto.",
           "rubric_performance_level_4": "L'app non è stata avviata"
         },
         "ml-intro app lab-book recommender 4_2022": {
+          "rubric_key_concept": "Creazione di un'app intuitiva che utilizza l'apprendimento automatico",
+          "rubric_performance_level_1": "Il modello è stato importato e l'app funziona correttamente. L'app ha un tema e la richiesta all'utente per ogni menu a discesa è stata modificata per essere una domanda. L'app ha una schermata di benvenuto e un pulsante che modifica correttamente le schermate.",
+          "rubric_performance_level_2": "Il modello è stato importato e l'app funziona correttamente. L'app ha un tema e la richiesta all'utente per il menu a discesa è stata modificata per essere una domanda. Tuttavia, la schermata di benvenuto è incompleta o non funziona correttamente.",
+          "rubric_performance_level_3": "Il modello è stato importato e l'app funziona correttamente, ma non sono state apportate modifiche alla progettazione della schermata o al testo a schermo. Non è presente alcuna schermata di benvenuto.",
           "rubric_performance_level_4": "L'app non è stata avviata"
         },
         "ml-models in applab-zoo assessment": {
+          "rubric_key_concept": "Usa la scheda modello per aggiornare un'app e usa le istruzioni condizionali `if` per modificare le schermate di un'app",
+          "rubric_performance_level_1": "La schermata di previsione contiene frasi complete per ogni caratteristica e le istruzioni condizionali `if` vengono utilizzate per modificare la schermata in base al valore previsto.",
+          "rubric_performance_level_2": "La schermata di previsione contiene alcune frasi complete e alcune istruzioni condizionali `if` vengono utilizzate per modificare la schermata in base al valore previsto, tuttavia l'app è incompleta.",
+          "rubric_performance_level_3": "La schermata di previsione non contiene frasi complete o ci sono errori con le istruzioni condizionali `if` per cambiare la schermata.",
+          "rubric_performance_level_4": "L'app non è stata aggiornata."
         },
         "ml-models in applab-zoo assessment_2022": {
+          "rubric_key_concept": "Usa la scheda modello per aggiornare un'app e usa le istruzioni condizionali `if` per modificare le schermate di un'app",
+          "rubric_performance_level_1": "La schermata di previsione contiene frasi complete per ogni caratteristica e le istruzioni condizionali `if` vengono utilizzate per modificare la schermata in base al valore previsto.",
+          "rubric_performance_level_2": "La schermata di previsione contiene alcune frasi complete e alcune istruzioni condizionali `if` vengono utilizzate per modificare la schermata in base al valore previsto, tuttavia l'app è incompleta.",
+          "rubric_performance_level_3": "La schermata di previsione non contiene frasi complete o ci sono errori con le istruzioni condizionali `if` per cambiare la schermata.",
+          "rubric_performance_level_4": "L'app non è stata aggiornata."
         }
       }
     }

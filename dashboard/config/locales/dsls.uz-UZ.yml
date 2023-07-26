@@ -544,17 +544,6 @@ uz-UZ:
           # Binar rasmlar
 
           Faqat ikkita oddiy qiymatdan foydalangan holda tasvirni tiklash bo'yicha xabar bering.
-      Building a UI with Design Mode: {}
-      CSD - Getters and Setters: {}
-      CSD CSS project RGB_2021: {}
-      CSD CSS project RGB_2022: {}
-      CSD CSS project Review_2021: {}
-      CSD CSS project Review_2022: {}
-      CSD End of Unit Survey - Unit 1 - IntroMD_2022: {}
-      CSD Games Parameters challenge_2021: {}
-      CSD Games Parameters challenge_2022: {}
-      CSD Games Properties challenge_2021: {}
-      CSD Games Properties challenge_2022: {}
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -577,22 +566,10 @@ uz-UZ:
         display_name: Sprait hususiyatlari
       CSD Games Properties practice_2022:
         display_name: Sprait hususiyatlari
-      CSD Games Sprites Challenges_2021: {}
-      CSD Games Sprites Challenges_2022: {}
-      CSD Games Sprites practice_2021: {}
-      CSD Games Sprites practice_2022: {}
-      CSD Games parameters practice_2021: {}
-      CSD Games parameters practice_2022: {}
-      CSD Games variables challenge_2021: {}
-      CSD Games variables challenge_2022: {}
       CSD Games variables practice_2021:
         display_name: Variables Practice
       CSD Games variables practice_2022:
         display_name: Variables Practice
-      CSD HTML project Lists_2021: {}
-      CSD HTML project Lists_2022: {}
-      CSD HTML project Review_2021: {}
-      CSD HTML project Review_2022: {}
       CSD Header Size MC:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -705,13 +682,6 @@ uz-UZ:
           &lt;h6&gt; Waffles &lt;/h6&gt;
           </pre>
         title: Sarlavhalarni tezkor tekshirish
-      CSD Interactive Animations and Games Post-Project Test: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2021: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2022: {}
-      CSD Physical Computing Post-Project Test: {}
-      CSD Physical Computing Post-Project Test_2021: {}
-      CSD Physical Computing Post-Project Test_2022: {}
-      CSD Student End of Unit Survey - Unit 1_2022: {}
       CSD U1 IOSP match:
         answers:
         - {}
@@ -760,10 +730,6 @@ uz-UZ:
 
           [Qabul qiluvchi va joʻnatuvchi qurilmalar - foydalanish yoʻriqnomasi]
           (https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
-      CSD U1 Lesson 6 Overview: {}
-      CSD U1 Lesson 7 Overview: {}
-      CSD U1 Lesson 8 Overview: {}
-      CSD U1 Lesson 9 Overview: {}
       CSD U1 Test:
         title: 'Kompyuterlar va muammolarni hal qilish loyihasidan keyingi test '
       CSD U1 Test PSP match:
@@ -854,8 +820,6 @@ uz-UZ:
         title: 'Kompyuterlar va muammolarni hal qilish loyihasidan keyingi test '
       CSD U1 Test_2022:
         title: 'Kompyuterlar va muammolarni hal qilish loyihasidan keyingi test '
-      CSD U2 CSS challenge_pilot_2021: {}
-      CSD U2 CSS challenge_pilot_2022: {}
       CSD U2 CSS practice_pilot_2021:
         display_name: Styling Text with CSS
       CSD U2 CSS practice_pilot_2022:
@@ -911,8 +875,6 @@ uz-UZ:
           <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
 
           <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
-      CSD U2 Expression Exemplars_2018_2019_pilot_2021: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2022: {}
       CSD U2 Image challenge_pilot_2021:
         display_name: Rasm qo'shish
       CSD U2 Image challenge_pilot_2022:
@@ -938,7 +900,6 @@ uz-UZ:
           * [Vebsaytlar maqsadi - Yo'riqlar](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
         teacher_markdown: "* [Veb-saytlar maqsadi - Namuna](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
           | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
-      CSD U2 L12 Overview: {}
       CSD U2 L2 Overview:
         content1: tafsilotlar bu yerda
         markdown: |-
@@ -965,10 +926,8 @@ uz-UZ:
         content1: tafsilotlar bu yerda
       CSD U2 L6 Overview:
         content1: tafsilotlar bu yerda
-      CSD U2 L7 Overview: {}
       CSD U2 Lesson 6 Overview:
         content1: tafsilotlar bu yerda
-      CSD U2 Lesson 9 Overview: {}
       CSD U2 PSP Programming:
         markdown: |-
           # Dasturlash uchun muammolarni hal qilish jarayoni
@@ -1080,12 +1039,6 @@ uz-UZ:
           # Muammolarni hal qilish jarayonini ko'rib chiqing
 
           Muammolarni hal qilish jarayonining to'rt bosqichini sinf ishi sifatida ko'rib chiqing.
-      CSD U2 Sample CSS layout_2021: {}
-      CSD U2 Sample CSS layout_2022: {}
-      CSD U2 Sample CSS text_2021: {}
-      CSD U2 Sample CSS text_2022: {}
-      CSD U2 Sample classes_2021: {}
-      CSD U2 Sample classes_2022: {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -1302,8 +1255,6 @@ uz-UZ:
           * Amazon.com - har xil turdagi tovarlarni onlayn xarid qilish sayti
           * Yahoo.com - qidiruv tizimi, elektron pochta provayderi va yangiliklar manbasi
           * Wikipedia.org - foydalanuvchilar tomonidan yaratilgan kontentli bepul ensiklopediya
-      CSD U2 Top Websites_2018_2019_pilot_2021: {}
-      CSD U2 Top Websites_2018_2019_pilot_2022: {}
       CSD U2 expand project:
         content1: tafsilotlar bu yerda
         teacher_markdown: Talabalar veb-saytlarini kengaytirish bo'yicha ushbu ko'rsatmalar
@@ -1361,12 +1312,6 @@ uz-UZ:
         - {}
         - {}
         - {}
-      CSD U2 layout style challenge_pilot_2021: {}
-      CSD U2 layout style challenge_pilot_2022: {}
-      CSD U2 layout style practice_pilot_2021: {}
-      CSD U2 layout style practice_pilot_2022: {}
-      CSD U2 links challenge_2021: {}
-      CSD U2 links challenge_2022: {}
       CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -1481,8 +1426,6 @@ uz-UZ:
           # Rejalarni tekshirish
 
           Qolgan bosqichlarga o'tishga ruxsat berishdan oldin, talabalarning rejalarini tekshiring.
-      CSD U3 - Design a Game 1 - ExampleChoice_2022: {}
-      CSD U3 - Interactive Card - ExampleChoice_2022: {}
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1548,11 +1491,6 @@ uz-UZ:
         - {}
         - {}
         - {}
-      CSD U3 AnimationsMulti STOP project guide: {}
-      CSD U3 AnimationsMulti STOP project guide_2018: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022: {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1604,10 +1542,6 @@ uz-UZ:
         content1: tafsilotlar bu yerda
       CSD U3 Card Examples_2018_2019_pilot_2021:
         content1: tafsilotlar bu yerda
-      CSD U3 Collisions SFLP: {}
-      CSD U3 Defender SFLP: {}
-      CSD U3 Entertainment: {}
-      CSD U3 Entertainment_2018_2019: {}
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -1638,7 +1572,6 @@ uz-UZ:
         - {}
         - correct: true
         - {}
-      CSD U3 Functions SFLP: {}
       CSD U3 Keypress Matching:
         answers:
         - text: keyWentDown()
@@ -1666,23 +1599,6 @@ uz-UZ:
         - {}
         - {}
         - {}
-      CSD U3 Lesson Overview 1: {}
-      CSD U3 Lesson Overview 10: {}
-      CSD U3 Lesson Overview 11: {}
-      CSD U3 Lesson Overview 12: {}
-      CSD U3 Lesson Overview 13: {}
-      CSD U3 Lesson Overview 14: {}
-      CSD U3 Lesson Overview 2: {}
-      CSD U3 Lesson Overview 3: {}
-      CSD U3 Lesson Overview 4: {}
-      CSD U3 Lesson Overview 5: {}
-      CSD U3 Lesson Overview 6: {}
-      CSD U3 Lesson Overview 7: {}
-      CSD U3 Lesson Overview 8: {}
-      CSD U3 Lesson Overview 9: {}
-      CSD U3 Movement Challenges: {}
-      CSD U3 Project Build a Game SFLP: {}
-      CSD U3 SFLP Velocity: {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
@@ -1921,7 +1837,6 @@ uz-UZ:
         - {}
         questions:
         - {}
-      CSD U3 Using the Game Design Process SLFP: {}
       CSD U3 combining rep:
         content1: tafsilotlar bu yerda
       CSD U3 combining rep_2018:
@@ -2004,8 +1919,6 @@ uz-UZ:
             AM.png
         - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
             AM.png
-      CSD U3 drawing challenges_2021: {}
-      CSD U3 drawing challenges_2022: {}
       CSD U3 drawing practice choice_2021:
         display_name: Amaliyot
       CSD U3 drawing practice choice_2022:
@@ -2175,22 +2088,6 @@ uz-UZ:
         - correct: true
         questions:
         - {}
-      CSD U4L01 SFLP: {}
-      CSD U4L02 SFLP: {}
-      CSD U4L03 SFLP: {}
-      CSD U4L04 SFLP: {}
-      CSD U4L05 SFLP: {}
-      CSD U4L06 SFLP: {}
-      CSD U4L07 SFLP: {}
-      CSD U4L08 SFLP: {}
-      CSD U4L09 SFLP: {}
-      CSD U4L10 SFLP: {}
-      CSD U4L11 SFLP: {}
-      CSD U4L12 SFLP: {}
-      CSD U4L13 SFLP: {}
-      CSD U4L15 SFLP: {}
-      CSD U4L16 SFLP: {}
-      CSD U4L17 SFLP: {}
       CSD U5 Encryption 1:
         content1: tafsilotlar bu yerda
       CSD U5 Encryption 1_2018:
@@ -2223,7 +2120,6 @@ uz-UZ:
         content1: tafsilotlar bu yerda
       CSD U5 student record_2018_2019:
         content1: tafsilotlar bu yerda
-      CSD U5 test: {}
       CSD U5 test clean multi:
         answers:
         - {}
@@ -2365,43 +2261,30 @@ uz-UZ:
         - {}
         questions:
         - {}
-      CSD U5 test_2021: {}
-      CSD U5 test_2022: {}
       CSD U6 - Accelerometer - Chal_2222:
         display_name: Chaqiriq bosqichlari
-      CSD U6 - Accelerometer - Prac_2222: {}
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Chaqiriq bosqichlari
-      CSD U6 - Board Inputs - Prac_2222: {}
       CSD U6 - Board Outputs - Chal_2222:
         display_name: Chaqiriq bosqichlari
-      CSD U6 - Board Outputs - Prac_2222: {}
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Chaqiriq bosqichlari
-      CSD U6 - Color LEDs - Prac_2222: {}
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: Chaqiriq bosqichlari
-      CSD U6 - Combine Inputs - Prac_2222: {}
-      CSD U6 - Functions - Prac_2222: {}
       CSD U6 - If Variables - Chal_2222:
         display_name: Chaqiriq bosqichlari
       CSD U6 - Music - Chal_2222:
         display_name: Chaqiriq bosqichlari
       CSD U6 - Physical Input - Chal_2222:
         display_name: Chaqiriq bosqichlari
-      CSD U6 - Physical Input - Prac_2222: {}
       CSD U6 - Physical Output - Chal_2222:
         display_name: Chaqiriq bosqichlari
-      CSD U6 - Physical Output - Prac_2222: {}
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Chaqiriq bosqichlari
-      CSD U6 - Screen Inputs - Prac_2222: {}
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Chaqiriq bosqichlari
-      CSD U6 - Screen Outputs - Prac_2222: {}
       CSD U6 - Sensors - Chal_2222:
         display_name: Chaqiriq bosqichlari
-      CSD U6 - Sensors - Prac_2222: {}
       CSD U6 LED create intro:
         content1: tafsilotlar bu yerda
       CSD U6 LED create intro_2018:
@@ -2470,10 +2353,6 @@ uz-UZ:
           PM.png)\n"
         questions:
         - {}
-      CSD U6 circuit smart bike blinker build: {}
-      CSD U6 circuit smart bike blinker build_2018: {}
-      CSD U6 circuit smart bike blinker build_2018_2019: {}
-      CSD U6 circuit smart bike blinker build_2021: {}
       CSD U6 final intro:
         content1: tafsilotlar bu yerda
       CSD U6 final intro_2018:
@@ -2482,10 +2361,6 @@ uz-UZ:
         content1: tafsilotlar bu yerda
       CSD U6 final intro_2021:
         content1: tafsilotlar bu yerda
-      CSD U6 game project stop: {}
-      CSD U6 game project stop_2018: {}
-      CSD U6 game project stop_2018_2019: {}
-      CSD U6 game project stop_2021: {}
       CSD U6 setProperty predict multi:
         answers:
         - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
@@ -2657,115 +2532,40 @@ uz-UZ:
         - {}
         questions:
         - {}
-      CSD U6 tugowar stop: {}
-      CSD U6 tugowar stop_2018: {}
-      CSD U6 tugowar stop_2018_2019: {}
-      CSD U6 tugowar stop_2021: {}
       CSD User Centered Design Post-Project Test:
         title: 'Foydalanuvchiga qaratilgan dizayn: loyihadan keyingi sinov'
       CSD User Centered Design Post-Project Test_2021:
         title: 'Foydalanuvchiga qaratilgan dizayn: loyihadan keyingi sinov'
       CSD User Centered Design Post-Project Test_2022:
         title: 'Foydalanuvchiga qaratilgan dizayn: loyihadan keyingi sinov'
-      CSD Web Development Post-Project Test: {}
-      CSD Web Development Post-Project Test_pilot_2021: {}
-      CSD Web Development Post-Project Test_pilot_2022: {}
-      CSD Web Headings challenge_2021: {}
-      CSD Web Headings challenge_2022: {}
-      CSD Web Headings practice_2021: {}
-      CSD Web Headings practice_2022: {}
-      CSD Web Sample Pages_2021: {}
-      CSD Web Sample Pages_2022: {}
       CSD games cake challenge choice_2021:
         display_name: Chaqiriqlar
       CSD games cake challenge choice_2022:
         display_name: Chaqiriqlar
-      CSD games collisions challenge choice_2021: {}
-      CSD games collisions challenge choice_2022: {}
-      CSD games collisions practice choice_2021: {}
-      CSD games collisions practice choice_2022: {}
-      CSD games functions challenge choice_2021: {}
-      CSD games functions challenge choice_2022: {}
       CSD games functions practice choice_2021:
         display_name: Funksiyalar. Amaliyot
       CSD games functions practice choice_2022:
         display_name: Funksiyalar. Amaliyot
-      CSD games istouching challenge choice_2021: {}
-      CSD games istouching challenge choice_2022: {}
-      CSD games istouching practice choice_2021: {}
-      CSD games istouching practice choice_2022: {}
-      CSD games movement2 challenge choice_2021: {}
-      CSD games movement2 challenge choice_2022: {}
-      CSD games movement2 practice choice_2021: {}
-      CSD games movement2 practice choice_2022: {}
       CSD games platform challenge choice_2021:
         display_name: Chaqiriqlar
       CSD games platform challenge choice_2022:
         display_name: Chaqiriqlar
-      CSD games random challenge_2021: {}
-      CSD games random challenge_2022: {}
-      CSD games random practice_2021: {}
-      CSD games random practice_2022: {}
-      CSD games velocity challenge choice_2021: {}
-      CSD games velocity challenge choice_2022: {}
-      CSD games velocity practice choice_2021: {}
-      CSD games velocity practice choice_2022: {}
-      CSD web classes challenge_2021: {}
-      CSD web classes challenge_2022: {}
-      CSD web classes practice_2021: {}
-      CSD web classes practice_2022: {}
-      CSD web conditionals challenge choice_2021: {}
-      CSD web conditionals challenge choice_2022: {}
       CSD web conditionals practice choice_2021:
         display_name: Conditionals Practice
       CSD web conditionals practice choice_2022:
         display_name: Conditionals Practice
-      CSD web draw loop challenge choice_2021: {}
-      CSD web draw loop challenge choice_2022: {}
       CSD web draw loop practice choice_2021:
         display_name: Amaliyot
       CSD web draw loop practice choice_2022:
         display_name: Amaliyot
-      CSD web keyboard challenge choice_2021: {}
-      CSD web keyboard challenge choice_2022: {}
-      CSD web keyboard practice choice_2021: {}
-      CSD web keyboard practice choice_2022: {}
-      CSD web mouse challenge choice_2021: {}
-      CSD web mouse challenge choice_2022: {}
-      CSD web mouse practice choice_2021: {}
-      CSD web mouse practice choice_2022: {}
-      CSD web movement challenge choice_2021: {}
-      CSD web movement challenge choice_2022: {}
       CSD web movement practice choice_2021:
         display_name: Amaliyot
       CSD web movement practice choice_2022:
         display_name: Amaliyot
-      CSD web text challenge choice_2021: {}
-      CSD web text challenge choice_2022: {}
       CSD web text practice choice_2021:
         display_name: Amaliyot
       CSD web text practice choice_2022:
         display_name: Amaliyot
-      CSD-U5-SFLP ASCII and Binary Representation: {}
-      CSD-U5-SFLP Automating Data Decisions: {}
-      CSD-U5-SFLP Combining Representations: {}
-      CSD-U5-SFLP Create a Representation: {}
-      CSD-U5-SFLP Interpreting Data: {}
-      CSD-U5-SFLP Making Decisions with Data: {}
-      CSD-U5-SFLP Patterns and Representation: {}
-      CSD-U5-SFLP Problem Solving and Data: {}
-      CSD-U5-SFLP Problem Solving with Big Data: {}
-      CSD-U5-SFLP Representation Matters: {}
-      CSD-U5-SFLP Representing Images: {}
-      CSD-U5-SFLP Representing Numbers Part 1: {}
-      CSD-U5-SFLP Representing Numbers Part 2: {}
-      CSD-U5-SFLP Solve a Data Problem: {}
-      'CSD: getText vs getNumber': {}
-      'CSD: setProperty': {}
-      CSDU6 Innovation: {}
-      CSDU6 Innovation_2018: {}
-      CSDU6 Innovation_2018_2019: {}
-      CSDU6 Innovation_2021: {}
       CSP PD Example Question 1:
         answers:
         - {}
@@ -2778,7 +2578,6 @@ uz-UZ:
         - {}
         questions:
         - {}
-      CSP pre-assessment survey: {}
       Choose 2 Test:
         answers:
         - correct: true
@@ -2787,7 +2586,6 @@ uz-UZ:
         - {}
         questions:
         - {}
-      Choosing Good IDs: {}
       ConditionalsWithCards-Unplugged:
         markdown: |-
           # Kartalar bilan shartli bayonotlar
@@ -2808,9 +2606,6 @@ uz-UZ:
           # Kartalar bilan shartli bayonotlar
 
           Karta o'yinini o'ynang va "Agar men qizil karta olsam, men ball olaman" va "agar men qora kartani tortsam, siz ball olasiz" kabi qoidalarni yaratadilar.
-      CourseE_Artist_Practice_2022: {}
-      CourseE_Lesson_11_Artist_Practice_2022: {}
-      CourseE_Lesson_7_Artist_Practice_2022: {}
       CourseF_outbreak_story:
         content1: tafsilotlar bu yerda
         markdown: |
@@ -2979,7 +2774,6 @@ uz-UZ:
           * Ehtimollar, immunitet, vaksinalar va boshqalar!
 
           Siz simulyatsiya modelingizni boshqalar bilan ulashishingiz yoki shaharga virus kelganda boshqalarning sog'lig'ini saqlashga yordam berish uchun nima qilishimiz mumkinligi haqida dikr almashishingiz mumkin.
-      Crowdsourcing-Unplugged: {}
       Dance_Party_extras_intro:
         markdown: |
           # Raqsni davom eting!
@@ -3142,10 +2936,6 @@ uz-UZ:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
-      Design a Screen for your App_2018: {}
-      Design a Screen for your App_2018_2019: {}
-      Design a Screen for your App_2021: {}
-      Design a Screen for your App_2022: {}
       DesigningForAccessibilityMarkdownLevel2022:
         markdown: |
           # Erishuvchanlik (Accessibility) uchun dizayn
@@ -3191,25 +2981,9 @@ uz-UZ:
           # Raqamli fuqarolik
 
           Ba’zi ma’lumotlar onlayn tarzda tarqatish uchun xavfli hisoblanadi. Bu dars sizga xavfsiz va maxfiy ma’lumotlar o‘rtasidagi farqni o‘rganishga yordam beradi
-      DigitalFootprint-Unplugged: {}
-      DigitalSharing-Unplugged: {}
-      DigitalSharing-Unplugged2022: {}
-      DigitalSharing-Unplugged_2020: {}
-      DigitalSharing-Unplugged_2021: {}
-      ECSPD1 computational thinker: {}
-      Embedded Video Test: {}
-      EnvelopeVariables-Unplugged: {}
-      EnvelopeVariables-Unplugged_2020: {}
-      EnvelopeVariables-Unplugged_2021_2: {}
-      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2: {}
       Eval Contracts F:
         answers:
         - ''
-      Example App Types_2018: {}
-      Example App Types_2018_2019: {}
-      ForLoopFun-Unplugged: {}
-      ForLoopFun-Unplugged_2020: {}
-      ForLoopFun-Unplugged_2021: {}
       GettingLoopy-Unplugged:
         markdown: |-
           # Sikllanish
@@ -3230,7 +3004,6 @@ uz-UZ:
           # Sikllanish
 
           Ushbu dars raqs harakatlari orqali sikllarni dasturlash bilan tanishtiradi.
-      GoingPlacesSafely-unplugged: {}
       GraphPaperProgramming-Unplugged:
         markdown: |-
           # Katakli qog'ozda dasturlash
@@ -3251,8 +3024,6 @@ uz-UZ:
           # Katakli qog'ozda dasturlash
 
           Sinfdoshlaringiz rasm chizishda foydalanishi mumkin bo'lgan algoritmlarni yozing.
-      HappyLoops-Unplugged: {}
-      HappyLoops-Unplugged_2020: {}
       HappyMaps-Unplugged:
         markdown: |-
           # Baxtli xaritalar
@@ -3279,10 +3050,6 @@ uz-UZ:
         content1: tafsilotlar bu yerda
       Internet Simulator Setup 3:
         content1: tafsilotlar bu yerda
-      Internet-Unplugged: {}
-      Internet-Unplugged2022_2022_pilot_-2022-2: {}
-      Internet-Unplugged_2020: {}
-      Internet-Unplugged_2021: {}
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -3597,7 +3364,6 @@ uz-UZ:
           ## Kurs davomiyligi
 
           Ushbu onlayn kursni o'tish 3-7 soat talab etadi, bu vaqt sizning bilim darajangiz va Code.org resurslariga qanchalik chuqur sho'ng'imoqchi bo'lganizga bo'gliq.
-      OPD-K5 About_copy: {}
       OPD-K5 About_dani:
         markdown: |-
           # Ishni boshlash: Dars haqida
@@ -3645,7 +3411,6 @@ uz-UZ:
           > <a href="http://support.code.org" target="blank"> <button class="plc"> Yordam oling >> </button> </a>
 
           Forumda sharh qoldirgandan so'ng, bu yerga qayting va keyingi bosqichga o'tish uchun pastga bosing.
-      OPD-K5 Assessment_copy: {}
       OPD-K5 Assessment_dani:
         markdown: |-
           # Rejalashtirish > Boshqa manbalar
@@ -3684,8 +3449,6 @@ uz-UZ:
           ***
           ## 4-qadam: O'qitishni boshlang!
           Sinfingizga informatika tushunchalarini olib kirish uchun bitta dars yetarli. Talabalaringiz informatikaga bo'lgan ishtiyoqini ko'rganingizdan so'ng, talabalarga rahbarlik qilish uchun kundalik dars rejalari, kompyutersiz bajarish mumkin bo'lgan katta mashg'ulotlar va boshqa o'qituvchilar bilan bog'lanish uchun forumlar bilan davom eting.
-      OPD-K5 CS Courses_copy: {}
-      OPD-K5 CS Courses_dani: {}
       OPD-K5 CS Tips:
         markdown: |-
           # Ishni boshlash > Ushbu onlayn kursda harakat qilish
@@ -3749,7 +3512,6 @@ uz-UZ:
 
 
           > Bu hammasi! Agar ushbu platforma ishlashi bo'yicha yangilash zarur bo'lsa, istalgan vaqtda ushbu darajaga qaytishingiz mumkin.
-      OPD-K5 CS Tips_copy: {}
       OPD-K5 CS Tips_dani:
         markdown: |-
           # Ishni boshlash > Ushbu onlayn kursda harakat qilish
@@ -3894,7 +3656,6 @@ uz-UZ:
           <br/>
 
           > ** Informatika o'qituvchilari assotsiatsiyasiga (CSTA) a'zo bo'ling: ** [CSTA](http://csta.acm.org/index.html) - bu butun mamlakat bo'ylab o'qituvchilarning faol jamoasi bo'lib, ular kompyuter fanlarini uning dolzarbligini keng jamoatchilikka yetkazish bilan birga har bir maktabga olib kelish va o'quvchilarga ta'lim berishga intiladi. Ular har yili konferensiyani o'tkazadilar, shuningdek mahalliy yig'ilishlar o'tkazadigan bo'limlarga ega.
-      OPD-K5 Connect_copy: {}
       OPD-K5 Connect_dani:
         markdown: |-
           # Keyingi qadamlar> Aloqada bo'ling
@@ -4062,7 +3823,6 @@ uz-UZ:
           - Ushbu kurs bo'yicha mahsulot va mulohazalar bilan o'rtoqlashish
 
           > ** Izoh **: O'qishni rejalashtirishda sizga yordam berish uchun tavsiya etilgan vaqtlar yuqorida keltirilgan. Iltimos, nazarda tuting, bilimingiz, qiziqishingiz va imkoniyatlaringizga qarab ma'lum bir bosqichda ko'proq yoki kamroq vaqt sarflashingiz mumkin. Shuni yodda tutingki, ushbu kurs mustaqil o'rganishga mo'ljallangan; ixtiyoriy vaqtda kursni tark etib, istalgan vaqtda istalgan bosqich yoki darajaga kirishingiz yoki qaytishingiz mumkin.
-      OPD-K5 Outline_copy: {}
       OPD-K5 Outline_dani:
         markdown: |-
           # Ishni boshlash > Kurslar rejasi
@@ -4181,7 +3941,6 @@ uz-UZ:
 
           [Videoni ko'rinmayaptimi? Bu yerni bosing](https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
           <br/>
-      OPD-K5 Pair_copy: {}
       OPD-K5 Pair_dani:
         markdown: |-
           # Eng yaxshi amaliyotlar> Juftlikda dasturlash
@@ -4246,7 +4005,6 @@ uz-UZ:
           ## Sizning rejangiz qanday?
 
           Biroz vaqt ajrating, ushbu onlayn kursni qachon va qanday tugatishni o'ylab ko'ring, shunda tajribadan ko'proq foyda olasiz. Yaxshi reja tuziboq, 1-bosqichga sho'ng'ing.
-      OPD-K5 Participation_copy: {}
       OPD-K5 Participation_dani:
         markdown: |-
           # Ishni boshlash > Ishtirok etishni rejalashtirish
@@ -4440,7 +4198,6 @@ uz-UZ:
             - O'zingizning bilimingiz haqida mulohaza qilish
             - O'qishni davom etish uchun keyingi qadamlarni rejalashtirish
             - informatika ta'limiga qiziqqan hamkasb o'qituvchilarning global hamjamiyati bilan bog'lanish
-      OPD-K5 Stage10Start_copy: {}
       OPD-K5 Stage10Start_dani:
         markdown: |-
           # Keyingi qadamlar > Keling, ko'rib chiqamiz
@@ -4508,7 +4265,6 @@ uz-UZ:
           > ** O'qitish bo'yicha maslahat: ** Informatika boy va murakkab yo'nalish bo'lsa-da, biz Code.org saytida o'qituvchi va talabalar yuqori darajadagi loyihalarga kirishishdan oldin asoslarni o'zlashtirishi kerakligini tushunamiz. Ushbu onlayn kurs sizga, o'qituvchiga, shu asoslarni o'rgatadi, shunda siz ham o'quvchilaringizni qo'llab-quvvatlay olasiz.
 
           Keyingi bosqichda biz sizni ushbu darsning qolgan tarkibi haqida o'ylashingiz uchun freymvork bilan qisqacha tanishtirib o'tamiz. Keyin biz kompyuter fanini o'rganishga sho'ng'iymiz.
-      OPD-K5 Stage2Go_copy: {}
       OPD-K5 Stage2Go_dani:
         markdown: |-
           # CS asoslari> Oldinga nazar
@@ -4606,7 +4362,6 @@ uz-UZ:
           > ** Ushbu bosqichda nimani kutish kerak: ** Keyingi bosqichlarda biz sizni konsepsiya bilan tanishtirish, sinfingizga qanday g'oyalarni taqdim etishingizni modellashtirish uchun kompyutersiz dars rejasidan boshlaymiz. Keyin biz sizga video ko'rsatma beramiz va bir qator jumboqlar bilan tanishtiramiz va bilimlaringizni qo'llashingizni so'raymiz. Jumboqni yechish uchun siz Blockly bloklari yordamida kod yozishingiz kerak. Ushbu darslar bolalar bog'chasi o'quvchilari uchun mo'ljallangan A kursidan olingan. Ushbu konsepsiyani o'quvchilaringizga qanday o'rgatishingiz mumkinligi haqida fikr yuritish imkoniyati mavjud. Ushbu bosqich 10-30 daqiqaga mo'ljallangan.
 
           Tayyormisiz? Unda boshladik!
-      OPD-K5 Stage3Start_copy: {}
       OPD-K5 Stage3Start_dani:
         markdown: |-
           # Ketma-ketliklar > Bosqich haqida umumiy ma'lumot
@@ -4784,7 +4539,6 @@ uz-UZ:
           > <a href="http://forum.code.org/t/teaching-loops-and-efficiency/405/1" target="blank"><button class="plc"> Forumlarda muhokama qiling >> </button></a>
 
           Forumda sharh qoldirgandan so'ng, bu yerga qayting va keyingi bosqichga o'tish uchun pastga bosing.
-      OPD-K5 Stage4Go_copy: {}
       OPD-K5 Stage4Go_dani:
         markdown: |-
           # Sikllar > Kompyutersiz darslar
@@ -4863,7 +4617,6 @@ uz-UZ:
           > ** Ushbu bosqichda nimani kutish mumkin: ** Keyingi bosqichlarda biz sikl tushunchasini o'rganishga bag'ishlangan kompyutersiz darsni va C kursidan (2-sinf uchun mo'ljallangan) jumboqlarni taqdim etamiz. Jumboqni yechish uchun siz vizual, bloklarga asoslangan dasturlash yordamida kod yozishingiz kerak. Fikrlashga imkoniyat berish bilan yakunlaymiz. Ushbu bosqich 20-45 daqiqaga mo'ljallangan.
 
           Tayyormisiz? Boshladik!
-      OPD-K5 Stage4Start_copy: {}
       OPD-K5 Stage4Start_dani:
         markdown: |-
           # Sikllar > 5-bosqich haqida umumiy ma'lumot
@@ -4917,8 +4670,6 @@ uz-UZ:
           > <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank"><button class="plc"> Forumda muhokama qiling >> </button></a>
 
           Forumda sharh qoldirgandan so'ng, bu yerga qayting va keyingi bosqichga o'tish uchun pastga bosing.
-      OPD-K5 Stage5Go_copy: {}
-      OPD-K5 Stage5Go_dani: {}
       OPD-K5 Stage5Review:
         markdown: |
           # Shartli bayonotlar > Fikrlash
@@ -4953,7 +4704,6 @@ uz-UZ:
           > ** Ushbu bosqichda nimani kutish kerak: ** Dastlab biz D kursidan (3-sinf uchun mo'ljallangan) shartli bayonotlar g'oyasini taklif qiladigan kompyutersiz dars bilan tanishamiz. So'ngra, bir qator jumboqlarni yechamiz, shartli ravishda o'z bilimingizni qo'llash so'raydi. Fikrlash imkoniyati bilan yakunlaymiz. Ushbu bosqich 20-45 daqiqaga mo'ljallangan.
 
           Tayyormisiz? Qani ketdik!
-      OPD-K5 Stage5Start_copy: {}
       OPD-K5 Stage5Start_dani:
         markdown: |-
           # Shartli bayonotlar> Bosqich haqida umumiy ma'lumot
@@ -5009,7 +4759,6 @@ uz-UZ:
           > <a href="http://forum.code.org/t/teaching-functions/407/1" target="blank"> <button class="plc"> Forumda muhokama qiling >> </button> </a>
 
           Forumda sharh qoldirgandan so'ng, bu yerga qayting va keyingi bosqichga o'tish uchun pastga bosing.
-      OPD-K5 Stage6Go_copy: {}
       OPD-K5 Stage6Go_dani:
         markdown: |-
           # Funksiyalar> Kompyutersiz darslar
@@ -5083,7 +4832,6 @@ uz-UZ:
           > ** Ushbu bosqichda nimani kutish kerak: ** Birinchidan, siz "E" kursidan (4-sinf uchun mo'ljallangan) funksiyalarni taqdim etgan kompyutersiz darsni ko'rib chiqasiz. Keyin siz video orqali funksiyalar haqida bilib olasiz va turli xil jumboqlarda funksiyalardan foydalanishni mashq qilasiz. Keyin siz o'z amaliyotingiz haqida fikr yuritasiz. Ushbu bosqish 20-45 daqiqaga mo'ljallangan.
 
           Tayyormisiz? Boshladik!
-      OPD-K5 Stage6Start_copy: {}
       OPD-K5 Stage6Start_dani:
         markdown: |-
           # Funksiyalar> Bosqich haqida umumiy ma'lumot
@@ -5140,7 +4888,6 @@ uz-UZ:
           > <a href="http://forum.code.org/t/teaching-events/409/1" target="blank"><button class="plc"> Forumda muhokama qiling >> </button> </a>
 
           Forumda sharh qoldirgandan so'ng, bu yerga qayting va davom etish uchun pastga bosing.
-      OPD-K5 Stage7Go_copy: {}
       OPD-K5 Stage7Go_dani:
         markdown: |-
           # Hodisalar > Kompyutrersiz darslar
@@ -5199,7 +4946,6 @@ uz-UZ:
           > ** Ushbu bosqichda nimani kutish kerak: ** Siz C kursidan (2-sinf uchun mo'ljallangan) hodisalarni tanishtirish uchun ajratilgan darsdan boshlaysiz. Keyin siz F kursidan voqealar bloklari bilan tajriba o'tkazishga imkon beradigan jumboqlarni o'rganasiz (5-sinf uchun mo'ljallangan). Fikrlash imkoniyati bilan yakunlaymiz. Ushbu bosqich 20-45 daqiqaga mo'ljallangan.
 
           Tayyormisiz? Boshladik!
-      OPD-K5 Stage7Start_copy: {}
       OPD-K5 Stage7Start_dani:
         markdown: |-
           # Hodisalar> Bosqich haqida umumiy ma'lumot
@@ -5377,8 +5123,6 @@ uz-UZ:
           O'qituvchilar panelidan skrinshot quyida keltirilgan. Siz uni ko'rish uchun Code.org o'qituvchi hisob qaydnomangizga kirishingiz kerak bo'ladi - tizimga kirganda Code.org veb-saytida sukunat bo'yicha ko'rsatiladi. Agar o'qituvchi hisobingiz bo'lmasa, ** [bu yerda ro'yxatdan o'ting](https://studio.code.org/users/sign_up) **.
 
           ![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)
-      OPD-K5 Stage9Start_copy: {}
-      OPD-K5 Stage9Start_dani: {}
       OPD-K5 Using CS:
         markdown: |-
           # Rejalashtirish> Code.org darsi uchun tayyorlanish
@@ -5399,7 +5143,6 @@ uz-UZ:
           ***
           ## 4-qadam: O'qitishni boshlang!
           Sinfingizga informatika tushunchalarini olib kirish uchun bitta dars yetarli. Talabalaringiz informatikaga bo'lgan ishtiyoqini ko'rganingizdan so'ng, talabalarga rahbarlik qilish uchun kundalik dars rejalari, kompyutersiz bajarish mumkin bo'lgan katta mashg'ulotlar va boshqa o'qituvchilar bilan bog'lanish uchun forumlar bilan davom eting.
-      OPD-K5 Using CS_dani: {}
       OPD-K5 Vocabulary:
         markdown: |-
           # CS asoslari> Kalit so'zlar
@@ -5438,7 +5181,6 @@ uz-UZ:
            - **[Kompyuter fanlari (CS) asoslari Pre-Ekspress](http://studio.code.org/s/pre-express)**: taxminan 20 soat (4-8 yosh)
 
 
-      OPD-K5 Welcome 2_copy: {}
       OPD-K5 Welcome 2_dani:
         markdown: |+
           # Ishni boshlash > Kompyuter fanlari (Informatika) asoslari kurslari
@@ -5496,7 +5238,6 @@ uz-UZ:
           ** 9-bosqich ** da siz o'qituvchilar uchun Code.org bepul o'quv dasturlari va manbalarini o'rganasiz. Siz ushbu manbalardan yoki o'zingiz tanlagan boshqa o'quv manbalaridan foydalanishni tanlashingiz mumkin. Ushbu kursni yakunlash sizga har qanday boshlang'ich informatika o'quv dasturini tushunishingizga yordam beradi.
 
           ** 10 va 11 bosqichlarida biz sizga ko'proq ma'lumot olish yoki sinfda o'rgatish uchun ko'proq tayyorgarlik ko'rishda foydalanishingiz mumkin bo'lgan manbalar bo'yicha ko'rsatma beramiz
-      OPD-K5 What is Mastery_copy: {}
       OPD-K5 What is Mastery_dani:
         markdown: |-
           # Oldinga nazar > Mahorat nima?
@@ -5551,7 +5292,6 @@ uz-UZ:
           <a href="http://code.org/educate/inspire" target="blank"><button class="default"> Ilhom beruvchi videolarni ko'ring >> </button></a><a href="http://code.org/promote" target="blank"><button class="default"> Tadqiqotni o'rganish >> </button></a>
 
           Tadqiqotlarimiz bilan tanishish uchun bir necha daqiqa sarflang va kashf etgan har qanday tegishli yoki qiziqarli faktlar yoki tushunchalarni yozib oling.
-      OPD-K5 Why teach CS_copy: {}
       OPD-K5 Why teach CS_dani:
         markdown: |-
           # CS asoslari> Nega kompyuter fanini o'rgatish kerak?
@@ -5617,7 +5357,6 @@ uz-UZ:
           <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"> <button class="plc"> Rejangizni joylashtiring >> </button></a>
 
           Forumda sharh qoldirgandan so'ng, bu yerga qayting va davom etish uchun pastga bosing.
-      OPD-K5 Your Plan_copy: {}
       OPD-K5 Your Plan_dani:
         markdown: |-
           # Rejalashtirish > Rejangiz
@@ -5708,14 +5447,6 @@ uz-UZ:
           Ushbu qisqa bosqichni yakunlab, quyidagilarni amalga oshirasiz:
 
           - Kursning keyingi bosqichlarini ko'rib chiqish orqali informatika fanining "asoslarini o'zlashtirishga" tayyorlanish
-      'Overview: Design Mode': {}
-      'Overview: If Statements': {}
-      'Overview: Images': {}
-      'Overview: onEvent': {}
-      'Overview: setPosition': {}
-      PDK5 Foundations F: {}
-      PDK5 Intro C: {}
-      PS U3 Assessment1 new: {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -5780,9 +5511,6 @@ uz-UZ:
         - {}
         questions:
         - {}
-      PicturingData-Unplugged: {}
-      PicturingData-Unplugged_2020: {}
-      PowerOfWords-Unplugged: {}
       PowerOfWords-Unplugged2022_2022_pilot_-2022-2:
         markdown: |-
           #So'z kuchi
@@ -5798,7 +5526,6 @@ uz-UZ:
           #So'z kuchi
 
           ## Agar kimdir internetda qo'pol yoki haqoratli so'z ishlatsa, nima qilish kerak?
-      PowerfulPasswords-Unplugged: {}
       Prepare for your presentation:
         content1: tafsilotlar bu yerda
         markdown: |-
@@ -5852,9 +5579,6 @@ uz-UZ:
           # Navbatda dasturlash
 
           Jamoalarga bo'lining va birgalikda rasm chizish uchun dasturlarni yozing.
-      Responding to User Input: {}
-      Sample CSP Assessment: {}
-      ScreenOutTheMean-Unplugged: {}
       SimonSays-Unplugged:
         markdown: |+
           # Saymon so'zlaydi
@@ -5869,8 +5593,6 @@ uz-UZ:
           O'ynang va natijaga erishish uchun qanday buyruqlar kerakligini o'ylab ko'ring.
 
 
-      SimonSays-Unplugged_2021: {}
-      Social Sleuth_2018_2019: {}
       Songwriting-Unplugged:
         markdown: |-
           # Qo'shiq yozish
@@ -5891,12 +5613,6 @@ uz-UZ:
           # Qo'shiq yozish
 
           Talabalar funksiyalarni aniqlash va chaqirish haqida ma'lumot olish uchun qo'shiqdagi xor tushunchasidan foydalanadilar
-      Student End of Unit Survey - Intro+TeacherMD_csd2-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd3-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd4-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd5-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd6-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd7-2022: {}
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -5917,12 +5633,6 @@ uz-UZ:
         - correct: true
         questions:
         - {}
-      Student End of Unit Survey_csd2-2022: {}
-      Student End of Unit Survey_csd3-2022: {}
-      Student End of Unit Survey_csd4-2022: {}
-      Student End of Unit Survey_csd5-2022: {}
-      Student End of Unit Survey_csd6-2022: {}
-      Student End of Unit Survey_csd7-2022: {}
       Submittable Multi:
         answers:
         - text: ko‘k
@@ -6050,14 +5760,6 @@ uz-UZ:
           * [Alumin Qayiqlar - Namuna](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Yo'riqlar ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
 
           [/key]
-      Unit 1 Lesson 2 Overview: {}
-      Unit 1 Lesson 3 Overview: {}
-      Unit 1 Lesson 4 Overview: {}
-      Unit 2 Lesson 10 Overview: {}
-      Unit 2 Lesson 16 Overview: {}
-      Unit 2 Lesson 7 Overview: {}
-      Unit 2 Lesson 8 Overview: {}
-      Video - The Future of Big Data: {}
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -6168,8 +5870,6 @@ uz-UZ:
         - correct: true
         questions:
         - {}
-      aiml-ch1-pulse-survey_2021: {}
-      aiml-ch1-pulse-survey_2022: {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -6264,9 +5964,6 @@ uz-UZ:
         - correct: true
         questions:
         - {}
-      aiml-intro-pulse-survey_2021: {}
-      aiml-intro-pulse-survey_2022: {}
-      aiml-pulse-check-survey-1-levelgroup Ch2_2021: {}
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
@@ -6322,8 +6019,6 @@ uz-UZ:
         - correct: true
         questions:
         - {}
-      aiml-pulse-check-survey-preamble_2021: {}
-      allthethings_bubble_choice: {}
       allthethings_external_displayed_as_unplugged:
         content1: tafsilotlar bu yerda
       allthethings_external_not_displayed_as_unplugged:
@@ -8861,7 +8556,6 @@ uz-UZ:
         description: Siz yakuniy loyihangizni boshlamoqchisiz. Ishni boshlashdan oldin,
           namunali loyihalarni ko'rib chiqishga vaqt ajrating.
         display_name: End of Course Project
-      courseF_artist_practice: {}
       courseF_beeFor_practice:
         display_name: Asalari mashqi
       courseF_beeVar_practice:
@@ -8919,11 +8613,6 @@ uz-UZ:
         questions:
         - text: Quyidagi kodga qarang. Oxirida asalari nechta nektar birligini yig'adi?
         title: Bee Variables Multi
-      courseF_collector_samples_2022_pilot_-2022-2: {}
-      courseF_events_freeplay: {}
-      courseF_events_freeplay2022_2022_pilot_-2022-2: {}
-      courseF_events_practice: {}
-      courseF_events_practice2022_2022_pilot_-2022-2: {}
       courseF_events_predict_multi:
         answers:
         - {}
@@ -8986,8 +8675,6 @@ uz-UZ:
 
 
 
-      courseF_groups_freeplay_2022_pilot_-2022-2: {}
-      courseF_groups_practice_2022_pilot_-2022-2: {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
@@ -9790,10 +9477,6 @@ uz-UZ:
           \"Spiral (Artist)\")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)
           \ |\n| O'zgaruvchilar bilan ijod qilaylik! | O'zgaruvchilar bilan ijod qilaylik!
           |\n\n"
-      courseF_sprites_freeplay: {}
-      courseF_sprites_freeplay2022_2022_pilot_-2022-2: {}
-      courseF_sprites_practice: {}
-      courseF_sprites_practice2022_2022_pilot_-2022-2: {}
       courseF_sprites_predict_multi:
         answers:
         - {}
@@ -9810,8 +9493,6 @@ uz-UZ:
         - {}
         questions:
         - {}
-      courseF_text_practice: {}
-      courseF_text_practice2022_2022_pilot_-2022-2: {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -9844,10 +9525,6 @@ uz-UZ:
         - {}
         questions:
         - {}
-      courseF_variables_projects: {}
-      courseF_variables_projects2022_2022_pilot_-2022-2: {}
-      courseF_variables_samples: {}
-      courseF_variables_samples2022_2022_pilot_-2022-2: {}
       courseF_variables_stop:
         content1: tafsilotlar bu yerda
       courseF_variables_stop2022_2022_pilot_-2022-2:
@@ -9942,12 +9619,6 @@ uz-UZ:
           text: Rassom to'rt kvadratni bir-birining ustiga chizadi.
         questions:
         - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
-      csd-post-survey-2017-implementation-student: {}
-      csd-post-survey-2017-implementation-teacher: {}
-      csd-post-survey-2017-implementation-teacher_2019: {}
-      csd-post-survey-2017-levelgroup: {}
-      csd-post-survey-2017-levelgroup-2018-2nd-semester: {}
-      csd-post-survey-2017-levelgroup_2018: {}
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -10282,8 +9953,6 @@ uz-UZ:
         - correct: true
         questions:
         - {}
-      csd-post-survey-2018-markdown-with-link-to-survey: {}
-      csd-post-survey-2018-markdown-with-link-to-survey_v2: {}
       csd-post-survey-2018-topic-ai:
         answers:
         - correct: true
@@ -10456,11 +10125,6 @@ uz-UZ:
         - correct: true
         questions:
         - {}
-      csd-post-survey-intro-2019: {}
-      csd-post-survey-levelgroup-2018: {}
-      csd-post-survey-levelgroup_2019: {}
-      csd-post-survey-markdown-with-link-to-survey_2021: {}
-      csd-post-survey-markdown-with-link-to-survey_2022: {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -10622,55 +10286,6 @@ uz-UZ:
         title: Talabalar uchun CS Discoveries kursidan oldingi so'rovnoma
       csd-pre-survey-levelgroup_21_22_2022:
         title: Talabalar uchun CS Discoveries kursidan oldingi so'rovnoma
-      csd-pulse-check-survey-1-levelgroup U1Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2021: {}
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
@@ -13146,15 +12761,6 @@ uz-UZ:
         - correct: true
         questions:
         - {}
-      csd-pulse-check-survey-preamble: {}
-      csd-pulse-check-survey-preamble_2018: {}
-      csd-pulse-check-survey-preamble_2018_2019: {}
-      csd-pulse-check-survey-preamble_2019: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2021: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2022: {}
-      csd-pulse-check-survey-preamble_2021: {}
-      csd-pulse-check-survey-preamble_2022: {}
-      csd-pulse-check-survey-preamble_2222: {}
       csf_be_a_super_digital_citizen:
         content1: tafsilotlar bu yerda
         markdown: |-
@@ -13263,8 +12869,6 @@ uz-UZ:
           # Mening onlayn mahallam
 
           ## Qanday qilib onlayn tarzda xavfsiz joylarga boriladi?
-      csp-post-survey-2017 preamble 1: {}
-      csp-post-survey-2017 preamble 1_2019: {}
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -13679,7 +13283,6 @@ uz-UZ:
         - correct: true
         questions:
         - {}
-      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2018-topics-preamble:
         content1: tafsilotlar bu yerda
       csp-post-survey-2018-unit-feedback-preamble:
@@ -13709,30 +13312,6 @@ uz-UZ:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017 preamble 1: {}
-      csp-pre-survey-2017 preamble 1_2018: {}
-      csp-pre-survey-2017 preamble 1_2021: {}
-      csp-pre-survey-2017 preamble 1_2022: {}
-      csp-pre-survey-2017 preamble 2 cs in general: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2021: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2022: {}
-      csp-pre-survey-2017 preamble 3 this class: {}
-      csp-pre-survey-2017 preamble 3 this class_2018: {}
-      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2021: {}
-      csp-pre-survey-2017 preamble 3 this class_2022: {}
-      csp-pre-survey-2017 preamble 4 the future: {}
-      csp-pre-survey-2017 preamble 4 the future_2018: {}
-      csp-pre-survey-2017 preamble 4 the future_2021: {}
-      csp-pre-survey-2017 preamble 4 the future_2022: {}
-      csp-pre-survey-2017 preamble 5 demographics: {}
-      csp-pre-survey-2017 preamble 5 demographics_2018: {}
-      csp-pre-survey-2017 preamble 5 demographics_2021: {}
-      csp-pre-survey-2017 preamble 5 demographics_2022: {}
       csp-pre-survey-2017-q1:
         answers:
         - correct: true
@@ -14484,8 +14063,6 @@ uz-UZ:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017-q36-preamble: {}
-      csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pre-survey-2017-q37:
         answers:
         - correct: true
@@ -15076,34 +14653,6 @@ uz-UZ:
         - correct: true
         questions:
         - {}
-      ml-club app-choice parent: {}
-      ml-club app-choice parent_2022: {}
-      ml-customize apps-practice choice-2021: {}
-      ml-customize apps-practice choice_2022: {}
-      ml-good data-isaac data: {}
-      ml-good data-isaac data_2022: {}
-      ml-good data-kim data: {}
-      ml-good data-kim data_2022: {}
-      ml-good data-kim survey: {}
-      ml-good data-kim survey_2022: {}
-      ml-intro app lab-book recommender 5-2021: {}
-      ml-intro app lab-book recommender 5_2022: {}
-      ml-model card-medical-1-2021: {}
-      ml-model card-medical-1_2022: {}
-      ml-model card-medical-2-2021: {}
-      ml-model card-medical-2_2022: {}
-      ml-model card-medical-3-2021: {}
-      ml-model card-medical-3_2022: {}
-      ml-models in applab-choice parent: {}
-      ml-models in applab-choice parent_2022: {}
-      ml-models-shoe survey: {}
-      ml-models-shoe survey_2022: {}
-      ml-plan survey-copy form: {}
-      ml-plan survey-copy form_2022: {}
-      ml-use model card-pet model card-2021: {}
-      ml-use model card-pet model card_2022: {}
-      ml-use models applab-practice choice-2021: {}
-      ml-use models applab-practice choice_2022: {}
       naturally-better-at-cs:
         answers:
         - correct: true
@@ -15244,9 +14793,6 @@ uz-UZ:
         - correct: true
         questions:
         - {}
-      pre-assessment survey heading1: {}
-      pre-assessment survey heading2: {}
-      pre-assessment survey heading3: {}
       pre-assessment survey q1:
         answers:
         - correct: true
@@ -15601,8 +15147,6 @@ uz-UZ:
         - correct: true
         questions:
         - {}
-      sample external 1: {}
-      sample external 2: {}
       someone_else_encourage:
         answers:
         - correct: true

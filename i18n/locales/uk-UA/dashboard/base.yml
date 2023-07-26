@@ -89,7 +89,7 @@ uk:
     submit: 'Додати підказку'
   appname: "Code.org"
   stage: "Етап"
-  stage_number: "Етап %{number}"
+  stage_number: "Урок %{number}"
   puzzle: "Завдання"
   trophies: "трофеї"
   courses: 'курси'

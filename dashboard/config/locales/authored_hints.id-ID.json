@@ -48,8 +48,6 @@
         "2-3 Artist Debugging 7": {
           "2-3_Artist_Debugging_7_a": "Apa yang terjadi jika si pelukis berjalan atau melompat ke belakang setelah dia menggambar garis pertama?"
         },
-        "2-3 Artist Debugging 8": {
-        },
         "2-3 Artist Debugging 9": {
           "2-3_Artist_Debugging_9_a": "Si pelukis harus berbelok 60 derajat ke kiri sebelum mulai menggambar!",
           "2-3_Artist_Debugging_9_b": "Anda tidak perlu menambah blok program lagi untuk satu putaran penuh, hanya tambah 60 derajat ke 'kiri' dari blok yang sudah tersedia!"
@@ -212,8 +210,6 @@
         },
         "4-5 Artist 4": {
           "4-5_Artist_4_a": "Satu loop penuh adalah 360 derajat!\nItulah jumlah berapa banyak pengulangan pada kode ini sebelum satu loop diselesaikan (begeser tiap 1 derajat sekali)!"
-        },
-        "4-5 Artist 5": {
         },
         "4-5 Artist 7": {
           "4-5_Artist_7_a": "Sudut mana yang paling kecil? pada sudut berapa si pelukis bediri? "
@@ -869,10 +865,6 @@
         "Dance_Party_extras_alternate_2019": {
           "alternate": "Blok yang berganti terdapat dalam kategori \"Penari\"."
         },
-        "Farmer for Authored Hint testing": {
-        },
-        "Farmer for TTS testing": {
-        },
         "Function intro Ryan": {
           "Function_intro_Ryan_a": "Anda dapat memanggil function berulang kali di dalam program Anda!  Coba panggil dua kali untuk memecahkan puzzle ini",
           "Function_intro_Ryan_b": "Jika Anda memanggil function dengan benar, ini adalah jalan yang akan Anda tempuh..."
@@ -1163,8 +1155,6 @@
         },
         "NEW Course 4 Artist Params 11": {
           "NEW_Course_4_Artist_Params_11_a": "Terdapat lebih dari satu nomor yang perlu diganti dengan variabel di dalam fungsi."
-        },
-        "NEW Course 4 Artist Params 13": {
         },
         "NEW Course 4 Artist Params 14": {
           "NEW_Course_4_Artist_Params_14_a": "Boleh menjalankan program beberapa kali untuk mencari tahu cara kerja function dengan berbagai parameter."
@@ -1630,8 +1620,6 @@
           "courseA_collector_loops_challenge1_b": "Anda tidak perlu menggunakan sebuah loop jika anda hanya melakukan satu hal untuk satu kali saja.",
           "courseA_collector_loops_challenge1_c": "Terdapat 6 permata di sisi kanan gua, tetapi anda hanya butuh untuk bergerak dan mengumpulkan 5 kali. Anda tahu kenapa?"
         },
-        "course1_collector_loops_challenge2": {
-        },
         "course1_collector_loops_challenge3": {
           "courseB_collector_loops_challenge1_c": "Bergeraklah ke Timur dua kali di antara setiap jalur.\n\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>\n\nAnda bisa melakukannya hanya dengan 14 blok. Klik satu petunjuk lagi untuk melihat solusinya.",
           "courseB_collector_loops_challenge1_d": "Cobalah ini!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1679,13 +1667,9 @@
         "course2_artist_prog_challenge1": {
           "courseC_artist_prog_challenge1_a": "Panjang persegi itu adalah lebar 200 piksel dan tinggi 100 piksel. "
         },
-        "course2_artist_prog_challenge2": {
-        },
         "course2_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_a": "Dapatkah anda menemukan jalan yang mencapai setiap bunga dan sarang lebah tanpa menabrak pohon apa pun? Jalan terbaik adalah sebuah spiral.\n\n**Anda dapat mengatasi ini tanpa pernah berbelok ke kiri.**",
           "courseD_bee_conditionals_challenge1_b": "Dalam hal puzzle ini, setiap ruang bisa memiliki sebuah bunga, sebuah sisir madu, atau tidak. Itu berarti Anda bisa mengulangi kata kunci `if / else` Anda di setiap kotak."
-        },
-        "course2_bee_conditionals_challenge2": {
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Kode asli akan berhasil - jika hanya ada satu harta karun di setiap tumpukan!",
@@ -1714,8 +1698,6 @@
         "course2_maze_programming_challenge2": {
           "courseC_maze_programming_challenge2_a": "_Jika Anda mengirim saya mundur, berhati-hatilah agar saya putar ke jalan yang benar!_",
           "courseC_maze_programming_challenge2_b": "Solusi terpendek hanya menggunakan 5 blok, tapi menggunakan blok `repeat`!"
-        },
-        "course3_artist_functions_challenge1": {
         },
         "course3_artist_functions_challenge2": {
           "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nBlok `jump to` ini memudahkan Anda menggerakkan artis zombi ke sembarang piksel di kisi-kisi, kapan pun Anda mau. Caranya adalah dengan menggerakkannya sejumlah piksel ke kanan dan sejumlah piksel turun. Piksel ini selalu dihitung dari pojok kiri atas, yang berarti posisi artis zombi_sebelum_ perintah dijalankan tidak jadi masalah!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
@@ -2338,12 +2320,8 @@
           "courseA_collector_loops_challenge2kp_a": "Bisakah anda menggunakan loop untuk memecahkan puzzle ini?",
           "courseA_collector_loops_challenge2kp_b": "Cobalah jalan ini untuk membuat anda mendapatkan sebuah solusi."
         },
-        "courseA_collector_preLoops4": {
-        },
         "courseA_collector_preLoops5": {
           "courseA_collector_preLoops5_a": "Anda harus pergi dua arah yang berbeda untuk mendapatkan satu permata!"
-        },
-        "courseA_collector_preLoops6": {
         },
         "courseA_collector_preLoops7": {
           "courseA_collector_loops2_b": "Setelah anda bergerak ke kotak berisi harta karun, gunakan blok ini untuk mengambilnya.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
@@ -5492,8 +5470,6 @@
         },
         "courseC_artist_loops7a": {
           "courseC_artist_loops7a_a": "Sebuah loop memiliki 360 derajat. Kalikan derajat di belokan Anda dengan jumlah yang Anda ulangi. Apakah sama dengan 360? Periksa rotasi yang disarankan untuk melihat bahwa ini berhasil!"
-        },
-        "courseC_artist_loops7a2022": {
         },
         "courseC_artist_loops7a_2018": {
           "courseC_artist_loops7a_a": "Sebuah loop memiliki 360 derajat. Kalikan derajat di belokan Anda dengan jumlah yang Anda ulangi. Apakah sama dengan 360? Periksa rotasi yang disarankan untuk melihat bahwa ini berhasil!"
@@ -12265,14 +12241,6 @@
         "courseF_bee_variables_4a_2021": {
           "courseF_bee_variables_4_2021_1": "Alih-alih menambahkan 1 ke variable, tambahkan 2 setiap kali."
         },
-        "courseF_clicker_finish_-2022-2": {
-        },
-        "courseF_clicker_score_-2022-2": {
-        },
-        "courseF_collector_freeplay_-2022-2": {
-        },
-        "courseF_collector_score_-2022-2": {
-        },
         "courseF_events_choice_pufferfish": {
           "changeProp": "Anda juga akan membutuhkan blok ini:<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
@@ -12284,16 +12252,6 @@
         },
         "courseF_events_key_-2022-2": {
           "changePropBlock": "Anda juga akan membutuhkan blok ini:<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
-        },
-        "courseF_groups_behaviors_-2022-2": {
-        },
-        "courseF_groups_costume_-2022-2": {
-        },
-        "courseF_groups_say_-2022-2": {
-        },
-        "courseF_groups_size_-2022-2": {
-        },
-        "courseF_groups_touch_-2022-2": {
         },
         "courseF_playlab_variables1a": {
           "courseF_playlab_variables1a_a": "Anda perlu mengganti ucapan “Apa yang harus saya teriakkan?” dalam blok hijau dengan “Gol!”"
@@ -12350,10 +12308,6 @@
         },
         "courseF_text_concat_-2022-2": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "courseF_variables2_click_-2022-2": {
-        },
-        "courseF_variables2_set_-2022-2": {
         },
         "courseF_variables_card_finish": {
           "card_idea1": "Anda dapat menambahkan prompt kedua (atau ketiga atau keempat) dengan menghubungkan blok prompt baru berisi variable yang berbeda dengan event `when answered` pertama Anda.<xml><block type=\"gamelab_whenPromptAnswered\">    <value name=\"VAR\">      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">        <title name=\"VAR\">name</title>      </block>    </value>    <next>      <block type=\"gamelab_setPrompt\">        <value name=\"QUESTION\">          <block type=\"text\" can_disconnect_from_parent=\"false\">            <title name=\"TEXT\">apa kado yang Anda inginkan untuk ulang tahun?</title>          </block>        </value>        <value name=\"VAR\">          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">            <title name=\"VAR\">gift</title>          </block>        </value>      </block>    </next>  </block></xml>",

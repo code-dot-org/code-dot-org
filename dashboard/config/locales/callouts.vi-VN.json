@@ -20,92 +20,8 @@
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "Bạn đang ở chế độ Thiết kế."
         },
-        "Big Game Vars 1": {
-        },
-        "CSD U3 - conditionals - transition": {
-        },
-        "CSD U3 - conditionals - transition_2018": {
-        },
-        "CSD U3 - conditionals - transition_2019": {
-        },
-        "CSD U3 - conditionals - transition_2021": {
-        },
-        "CSD U3 - conditionals - transition_2022": {
-        },
-        "CSD U3 Boolean Predict": {
-        },
-        "CSD U3 Boolean Predict_2018": {
-        },
-        "CSD U3 Boolean Predict_2019": {
-        },
-        "CSD U3 Boolean Predict_2021": {
-        },
-        "CSD U3 Boolean Predict_2022": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2019": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
-        },
-        "CSD U3 Random add_2021": {
-        },
-        "CSD U3 Random add_2022": {
-        },
-        "CSD U3 Sprites anitab 1": {
-        },
-        "CSD U3 Sprites anitab 1_2018": {
-        },
-        "CSD U3 Sprites anitab 1_2019": {
-        },
-        "CSD U3 Sprites anitab 1_2021": {
-        },
-        "CSD U3 Sprites anitab 1_2022": {
-        },
-        "CSD U3 Sprites intro sprites": {
-        },
-        "CSD U3 Sprites intro sprites_2018": {
-        },
-        "CSD U3 Sprites intro sprites_2019": {
-        },
-        "CSD U3 Sprites intro sprites_2021": {
-        },
-        "CSD U3 Sprites intro sprites_2022": {
-        },
-        "CSD U3 Sprites text": {
-        },
-        "CSD U3 Sprites text_2018": {
-        },
-        "CSD U3 Sprites text_2019": {
-        },
-        "CSD U3 Sprites text_2021": {
-        },
-        "CSD U3 Sprites text_2022": {
-        },
-        "CSD U3 UP_ARROW": {
-        },
-        "CSD U3 UP_ARROW_2018": {
-        },
-        "CSD U3 UP_ARROW_2018_2019": {
-        },
-        "CSD U3 UP_ARROW_2021": {
-        },
-        "CSD U3 UP_ARROW_2022": {
-        },
         "CSD U3 Variables Predict Where X": {
           "CSD_U3_variables": "Thay đổi số ở đây"
-        },
-        "CSD U3 Variables Predict Where XY": {
-        },
-        "CSD U3 Variables Predict Where XY_2018": {
-        },
-        "CSD U3 Variables Predict Where XY_2019": {
-        },
-        "CSD U3 Variables Predict Where XY_2021": {
-        },
-        "CSD U3 Variables Predict Where XY_2022": {
         },
         "CSD U3 Variables Predict Where X_2018": {
           "CSD_U3_variables": "Thay đổi số ở đây"
@@ -118,184 +34,6 @@
         },
         "CSD U3 Variables Predict Where X_2022": {
           "CSD_U3_variables": "Thay đổi số ở đây"
-        },
-        "CSD U3 abstraction accelerateX": {
-        },
-        "CSD U3 abstraction accelerateX_2018": {
-        },
-        "CSD U3 abstraction accelerateX_2019": {
-        },
-        "CSD U3 abstraction accelerateX_2021": {
-        },
-        "CSD U3 abstraction accelerateX_2022": {
-        },
-        "CSD U3 abstraction accelerateY": {
-        },
-        "CSD U3 abstraction accelerateY_2018": {
-        },
-        "CSD U3 abstraction accelerateY_2019": {
-        },
-        "CSD U3 abstraction accelerateY_2021": {
-        },
-        "CSD U3 abstraction accelerateY_2022": {
-        },
-        "CSD U3 abstraction jump": {
-        },
-        "CSD U3 abstraction jump_2018": {
-        },
-        "CSD U3 abstraction jump_2018_2019": {
-        },
-        "CSD U3 abstraction jump_2021": {
-        },
-        "CSD U3 abstraction jump_2022": {
-        },
-        "CSD U3 abstraction jumping": {
-        },
-        "CSD U3 abstraction jumping_2018": {
-        },
-        "CSD U3 abstraction jumping_2019": {
-        },
-        "CSD U3 abstraction jumping_2021": {
-        },
-        "CSD U3 abstraction jumping_2022": {
-        },
-        "CSD U3 abstraction looping": {
-        },
-        "CSD U3 abstraction looping_2018": {
-        },
-        "CSD U3 abstraction looping_2019": {
-        },
-        "CSD U3 abstraction looping_2021": {
-        },
-        "CSD U3 abstraction looping_2022": {
-        },
-        "CSD U3 abstraction rotation": {
-        },
-        "CSD U3 abstraction rotation control": {
-        },
-        "CSD U3 abstraction rotation control_2018": {
-        },
-        "CSD U3 abstraction rotation control_2019": {
-        },
-        "CSD U3 abstraction rotation control_2021": {
-        },
-        "CSD U3 abstraction rotation control_2022": {
-        },
-        "CSD U3 abstraction rotation_2018": {
-        },
-        "CSD U3 abstraction rotation_2019": {
-        },
-        "CSD U3 abstraction rotation_2021": {
-        },
-        "CSD U3 abstraction rotation_2022": {
-        },
-        "CSD U3 abstraction tumbleweed": {
-        },
-        "CSD U3 abstraction tumbleweed_2018": {
-        },
-        "CSD U3 abstraction tumbleweed_2019": {
-        },
-        "CSD U3 abstraction tumbleweed_2021": {
-        },
-        "CSD U3 abstraction tumbleweed_2022": {
-        },
-        "CSD U3 abstraction velocityX": {
-        },
-        "CSD U3 abstraction velocityX control": {
-        },
-        "CSD U3 abstraction velocityX control_2018": {
-        },
-        "CSD U3 abstraction velocityX control_2019": {
-        },
-        "CSD U3 abstraction velocityX control_2021": {
-        },
-        "CSD U3 abstraction velocityX control_2022": {
-        },
-        "CSD U3 abstraction velocityX if-statements": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2018": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2019": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2021": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2022": {
-        },
-        "CSD U3 abstraction velocityX_2018": {
-        },
-        "CSD U3 abstraction velocityX_2019": {
-        },
-        "CSD U3 abstraction velocityX_2021": {
-        },
-        "CSD U3 abstraction velocityX_2022": {
-        },
-        "CSD U3 abstraction velocityY": {
-        },
-        "CSD U3 abstraction velocityY control": {
-        },
-        "CSD U3 abstraction velocityY control_2018": {
-        },
-        "CSD U3 abstraction velocityY control_2019": {
-        },
-        "CSD U3 abstraction velocityY control_2021": {
-        },
-        "CSD U3 abstraction velocityY control_2022": {
-        },
-        "CSD U3 abstraction velocityY_2018": {
-        },
-        "CSD U3 abstraction velocityY_2019": {
-        },
-        "CSD U3 abstraction velocityY_2021": {
-        },
-        "CSD U3 abstraction velocityY_2022": {
-        },
-        "CSD U3 collisions isTouching intro": {
-        },
-        "CSD U3 collisions isTouching intro_2018": {
-        },
-        "CSD U3 collisions isTouching intro_2019": {
-        },
-        "CSD U3 collisions isTouching intro_2021": {
-        },
-        "CSD U3 collisions isTouching intro_2022": {
-        },
-        "CSD U3 collisions scoreboard": {
-        },
-        "CSD U3 collisions scoreboard_2018": {
-        },
-        "CSD U3 collisions scoreboard_2019": {
-        },
-        "CSD U3 collisions try blocks": {
-        },
-        "CSD U3 collisions try blocks_2018": {
-        },
-        "CSD U3 collisions try blocks_2019": {
-        },
-        "CSD U3 collisions try blocks_2021": {
-        },
-        "CSD U3 collisions try blocks_2022": {
-        },
-        "CSD U3 collisions types": {
-        },
-        "CSD U3 collisions types2_2021": {
-        },
-        "CSD U3 collisions types2_2022": {
-        },
-        "CSD U3 collisions types3_2021": {
-        },
-        "CSD U3 collisions types3_2022": {
-        },
-        "CSD U3 collisions types4_2021": {
-        },
-        "CSD U3 collisions types4_2022": {
-        },
-        "CSD U3 collisions types_2018": {
-        },
-        "CSD U3 collisions types_2019": {
-        },
-        "CSD U3 collisions types_2021": {
-        },
-        "CSD U3 collisions types_2022": {
         },
         "CSD U3 debug": {
           "CSD_U3_rect_c1": "Đây là mã nguồn"
@@ -371,76 +109,6 @@
         },
         "CSD U3 fill_2022": {
           "CSD_U3_rect_c1": "Đây là mã nguồn"
-        },
-        "CSD U3 game backgrounds": {
-        },
-        "CSD U3 game backgrounds_2018": {
-        },
-        "CSD U3 game backgrounds_2019": {
-        },
-        "CSD U3 game backgrounds_2021": {
-        },
-        "CSD U3 game backgrounds_2022": {
-        },
-        "CSD U3 game variables": {
-        },
-        "CSD U3 game variables_2018": {
-        },
-        "CSD U3 game variables_2019": {
-        },
-        "CSD U3 game variables_2021": {
-        },
-        "CSD U3 game variables_2022": {
-        },
-        "CSD U3 keydown conditional": {
-        },
-        "CSD U3 keydown conditional_2018": {
-        },
-        "CSD U3 keydown conditional_2018_2019": {
-        },
-        "CSD U3 keydown conditional_2021": {
-        },
-        "CSD U3 keydown conditional_2022": {
-        },
-        "CSD U3 platform background1": {
-        },
-        "CSD U3 platform background1_2018": {
-        },
-        "CSD U3 platform background1_2019": {
-        },
-        "CSD U3 platform background1_2021": {
-        },
-        "CSD U3 platform background1_2022": {
-        },
-        "CSD U3 platform platform1": {
-        },
-        "CSD U3 platform platform1_2018": {
-        },
-        "CSD U3 platform platform1_2019": {
-        },
-        "CSD U3 platform platform1_2021": {
-        },
-        "CSD U3 platform platform1_2022": {
-        },
-        "CSD U3 platform scoreboard": {
-        },
-        "CSD U3 platform scoreboard_2018": {
-        },
-        "CSD U3 platform scoreboard_2019": {
-        },
-        "CSD U3 platform scoreboard_2021": {
-        },
-        "CSD U3 platform scoreboard_2022": {
-        },
-        "CSD U3 platform variable1": {
-        },
-        "CSD U3 platform variable1_2018": {
-        },
-        "CSD U3 platform variable1_2019": {
-        },
-        "CSD U3 platform variable1_2021": {
-        },
-        "CSD U3 platform variable1_2022": {
         },
         "CSD U3 properties depth_2021": {
           "CSD_U3_rect_c1": "Đây là mã nguồn"
@@ -526,64 +194,6 @@
         "CSD U3 shapes_2022": {
           "CSD_U3_rect_c1": "Đây là mã nguồn"
         },
-        "CSD U6 - Accelerometer - PB_2222": {
-        },
-        "CSD U6 - Accelerometer - PC_2222": {
-        },
-        "CSD U6 - Accelerometer - SB2_2222": {
-        },
-        "CSD U6 - Color LEDs - CA_2222": {
-        },
-        "CSD U6 - Color LEDs - SB4_2222": {
-        },
-        "CSD U6 - Combine Inputs - A_2222": {
-        },
-        "CSD U6 - Combine Inputs - PracD_2222": {
-        },
-        "CSD U6 - Combine Inputs - SB1_2222": {
-        },
-        "CSD U6 - Functions - P2A_2222": {
-        },
-        "CSD U6 - Functions - P2C_2222": {
-        },
-        "CSD U6 - Functions - SB1_2222": {
-        },
-        "CSD U6 - Functions - SB2_2222": {
-        },
-        "CSD U6 - Functions - SB3_2222": {
-        },
-        "CSD U6 - Functions - SB4_2222": {
-        },
-        "CSD U6 - Functions - SB6_2222": {
-        },
-        "CSD U6 - Functions - SB7_2222": {
-        },
-        "CSD U6 - Functions - SB_2222": {
-        },
-        "CSD U6 - If Variables - A_2222": {
-        },
-        "CSD U6 - Music - A_2222": {
-        },
-        "CSD U6 - Music - SB3_2222": {
-        },
-        "CSD U6 - Sensors - PB_2222": {
-        },
-        "CSD U6 colorLeds intensity": {
-        },
-        "CSD U6 colorLeds intensity_2018": {
-        },
-        "CSD U6 colorLeds intensity_2019": {
-        },
-        "CSD U6 colorLeds intensity_2021": {
-        },
-        "CSD U6 getProperty input": {
-        },
-        "CSD U6 getProperty input_2018": {
-        },
-        "CSD U6 getProperty input_2019": {
-        },
-        "CSD U6 getProperty input_2021": {
-        },
         "CSD U6 light show": {
           "CSDUDL03P09": "Dòng này làm gì?"
         },
@@ -595,22 +205,6 @@
         },
         "CSD U6 light show_2021": {
           "CSDUDL03P09": "Dòng này làm gì?"
-        },
-        "CSD U6 tugowar variables 1": {
-        },
-        "CSD U6 tugowar variables 1_2018": {
-        },
-        "CSD U6 tugowar variables 1_2019": {
-        },
-        "CSD U6 tugowar variables 1_2021": {
-        },
-        "CSD U6 tugowar variables 2": {
-        },
-        "CSD U6 tugowar variables 2_2018": {
-        },
-        "CSD U6 tugowar variables 2_2019": {
-        },
-        "CSD U6 tugowar variables 2_2021": {
         },
         "CSD U6 tugowar variables 3": {
           "CSD_U6_checkWin": "Kiểm tra xem người chơi thắng chưa"
@@ -624,29 +218,11 @@
         "CSD U6 tugowar variables 3_2021": {
           "CSD_U6_checkWin": "Kiểm tra xem người chơi thắng chưa"
         },
-        "CSD games sidescroll background_2021": {
-        },
-        "CSD games sidescroll background_2022": {
-        },
-        "CSD games velocity bee_2021": {
-        },
-        "CSD games velocity bee_2022": {
-        },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "Thay đổi số ở đây"
         },
         "CSD web text explore_2022": {
           "CSD_U3_variables": "Thay đổi số ở đây"
-        },
-        "CSD web text size_2021": {
-        },
-        "CSD web text size_2022": {
-        },
-        "CSDU4 - Design Mode - 3": {
-        },
-        "Calc Circles of Eval .2": {
-        },
-        "Calc Vars 1": {
         },
         "Course 4 Artist 4": {
           "repeat_full_circle": "Nhập vào số lần các zombie đã di chuyển để vẽ một vòng tròn"
@@ -656,8 +232,6 @@
         },
         "Course 4 Artist For Loops 4": {
           "place_counter_variable": "Kéo biến để đếm số vào trong khối lệnh này"
-        },
-        "Course 4 Artist Functions challenge": {
         },
         "Course 4 Artist Vars 1": {
           "repeat_blocks": "Sử dụng khối \"Lặp lại\" và đè nó xung quanh các khối trong vùng không gian làm việc"
@@ -677,15 +251,11 @@
         "Course 4 Bee 1": {
           "if_bee_nectar": "Sử dụng khối lệnh \"nếu\" để quyết định nếu ong phải lấy mật hoa hoặc làm mật ong"
         },
-        "Course 4 Bee 3": {
-        },
         "Course 4 Bee Params 2": {
           "edit_get_nectar": "Sử dụng nút này để chỉnh sửa các hàm và thay đổi hướng của ong để nó rẽ và lấy mật hoa."
         },
         "Course 4 Maze 4": {
           "repeat": "Đặt khối bên trong vòng lặp để lặp lại lệnh"
-        },
-        "Course 4 Play Lab Params 2": {
         },
         "Course 4 Play Lab Params 3": {
           "edit_function": "Click vào đây để chỉnh sửa hàm của bạn."
@@ -695,12 +265,6 @@
         },
         "Course 4 Play Lab Vars 1": {
           "arrows_move_actor": "Sử dụng các mũi tên để di chuyển các diễn viên"
-        },
-        "Course 4 Play Lab Vars 9": {
-        },
-        "Course 4 Playlab For Loops 4b": {
-        },
-        "Course 4 SCV 6": {
         },
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "Chọn loại vũ công ở đây."
@@ -846,14 +410,6 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "Tìm kiếm khối “all ducks” tại đây"
         },
-        "Eval Booleans 2": {
-        },
-        "Eval Define Funcs 3": {
-        },
-        "Eval Define Funcs Test": {
-        },
-        "Eval Strings Images .2": {
-        },
         "Fish Tank 3-validated2022": {
           "spritelab_comment": "Hãy dùng khối này để ghi lại lưu ý cho chính bạn hoặc cho giáo viên của bạn về cách hoạt động của mã lệnh."
         },
@@ -899,12 +455,6 @@
         },
         "Infinity_repeat": {
           "Infinity_repeat_callout": "Đặt khối lệnh di chuyển ở trong vị trí này"
-        },
-        "InspirationalArtwork": {
-        },
-        "InspirationalArtwork_2018": {
-        },
-        "Luigi's Pizza 1": {
         },
         "MC HOC 2016 Level 2-2": {
           "craft2_run_button_callout": "Khi bạn sẵn sàng, hãy nhấn \"Chạy\" để thử chương trình."
@@ -972,8 +522,6 @@
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex thì không thể!"
         },
-        "NEW Course 4 Artist Functions 3": {
-        },
         "NEW Course 4 Artist Functions 7": {
           "edit_function": "Click vào đây để chỉnh sửa hàm của bạn."
         },
@@ -983,16 +531,12 @@
         "NEW Course 4 Artist Params 10": {
           "create_function": "Nhấp vào đâu để mở hộp \"chức năng\", sau đó nhấp vào \"tạo một chức năng mới\"."
         },
-        "NEW Course 4 Artist Params 2": {
-        },
         "NEW Course 4 Artist Params 9": {
           "add_and_drag_parameter": "Viết tên tham số của bạn vào đây, bấm vào \"Thêm\", và sau đó kéo nó vào định nghĩa hàm của bạn",
           "edit_add_parameter": "Nhấp vào chỉnh sửa để thêm một tham số trong hàm của bạn"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "Kéo biến chiều dài ở đây để thay thế các ký hiệu chấm hỏi"
-        },
-        "NEW Course 4 Bee For Loops 4": {
         },
         "NEW Course 4 Bee For Loops 5": {
           "actions_category": "Hộp công cụ có một cái nhìn mới! Các khối \"hành động\" đã ở đây."
@@ -1020,10 +564,6 @@
         },
         "OPD-K5-spritelab-3": {
           "spritelab_comment": "Hãy dùng khối này để ghi lại lưu ý cho chính bạn hoặc cho giáo viên của bạn về cách hoạt động của mã lệnh."
-        },
-        "OPD-K5-variables-1": {
-        },
-        "OPD-K5-variables-5": {
         },
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Chúng tôi đã đặt một số khối gỗ ở đây để giúp bạn bắt đầu"
@@ -1090,10 +630,6 @@
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Lặp lại các hành động bằng cách đặt các khối gỗ vào đây"
         },
-        "Robot Doodle": {
-        },
-        "Robot Doodle_2018": {
-        },
         "Underground Avoiding Lava": {
           "craft_callout_moveforward": "Mã này sẽ kiểm tra xem có dung nham hay không, bạn có thể thêm một lệnh để di chuyển về phía trước không?"
         },
@@ -1148,23 +684,11 @@
         "behaviors 1_2020": {
           "behaviors_edit": "Nhấp chuột vào đây để xem cách hoạt động của hành vi này."
         },
-        "behaviors 3a": {
-        },
-        "behaviors 3a_2020": {
-        },
         "behaviors 4": {
           "behaviors_edit": "Nhấp chuột vào đây để xem cách hoạt động của hành vi này."
         },
         "behaviors 4_2020": {
           "behaviors_edit": "Nhấp chuột vào đây để xem cách hoạt động của hành vi này."
-        },
-        "behaviors 5": {
-        },
-        "behaviors 5_2020": {
-        },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
         },
         "course2_bee_conditionals_challenge2": {
           "courseD_bee_conditionals_challenge2_1": "Hãy dùng vòng lặp này để lấy tất cả mật hoa (hoặc mật ong) từ một bông hoa (hoặc tổ ong)."
@@ -1177,18 +701,12 @@
           "courseE_artist_functions_challenge2_callout1": "Hãy cho chương trình này tiếp tục chạy bằng cách thêm nhiều mã lệnh vào phía dưới.",
           "courseE_artist_functions_challenge2_callout2": "Nếu bạn không thích thiết kế này, hãy thay đổi thành bất cứ hình gì bạn muốn!"
         },
-        "course3_bee_debugging_challenge1": {
-        },
-        "course3_bee_functions_challenge3": {
-        },
         "course3_playLab_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "Khối này giúp bạn di chuyển các diễn viên đến các vị trí khác nhau trong không gian chơi."
         },
         "course4_artist_functions_challenge2": {
           "courseE_artist_functions_challenge2_callout1": "Hãy cho chương trình này tiếp tục chạy bằng cách thêm nhiều mã lệnh vào phía dưới.",
           "courseE_artist_functions_challenge2_callout2": "Nếu bạn không thích thiết kế này, hãy thay đổi thành bất cứ hình gì bạn muốn!"
-        },
-        "course4_bee_fwp_challenge2": {
         },
         "courseA_EOC_playlab_animals": {
           "question_mark": "?"
@@ -1262,8 +780,6 @@
         "courseA_artist_loops8_2021": {
           "courseA_artist_loops8_1": "Bạn có biết rằng bạn có thể vẽ lại đè lên một đường bất cứ khi nào bạn cần không?"
         },
-        "courseA_collector_loops1": {
-        },
         "courseA_collector_loops12022": {
           "courseA_collector_loops1_1": "Hãy dùng khối này để lấy báu vật."
         },
@@ -1293,18 +809,6 @@
         },
         "courseA_collector_loops3_2021": {
           "gradek_adventurer_loops2_1": "Con số này cho bạn biết có bao nhiêu khối bạn có thể sử dụng trong câu đố này."
-        },
-        "courseA_collector_preLoops1": {
-        },
-        "courseA_collector_preLoops2": {
-        },
-        "courseA_collector_preLoops3": {
-        },
-        "courseA_collector_preLoops4": {
-        },
-        "courseA_collector_preLoops5": {
-        },
-        "courseA_collector_preLoops6": {
         },
         "courseA_maze_ramp22022": {
           "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
@@ -1338,10 +842,6 @@
         },
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "Hãy nhấp chuột vào bóng đèn khi bạn cần gợi ý nhé!"
-        },
-        "courseA_maze_seq2": {
-        },
-        "courseA_maze_seq4": {
         },
         "courseA_playLab_events4": {
           "courseA_playlab_events4_callout1": "Đây là chú thích"
@@ -1442,10 +942,6 @@
         "courseB_artist_loops3_2021": {
           "courseB_artist_loops3_1": "Trong hộp công cụ chỉ có một khối như vậy. Bạn sẽ dùng khối đó như thế nào?"
         },
-        "courseB_artist_loops5": {
-        },
-        "courseB_collector_loops1": {
-        },
         "courseB_collector_loops12022": {
           "courseB_collector_loops1_1": "Hãy dùng khối này để lấy báu vật."
         },
@@ -1478,10 +974,6 @@
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1": "जेव्हा तुम्हाला हिंटची गरज असेल तेव्हा लाईटबल्बला क्लिक करा!  "
-        },
-        "courseB_maze_seq2": {
-        },
-        "courseB_maze_seq3": {
         },
         "courseB_playlab_events6": {
           "courseB_playlab_events6_a": "Hãy dùng mũi tên thả xuống màu xanh lá để đổi hướng."
@@ -1576,21 +1068,11 @@
         "courseC_artist_loops1b_2021": {
           "sticker2": "Thêm khối này vào giữa chương trình của bạn."
         },
-        "courseC_artist_loopsPrePre1a": {
-        },
-        "courseC_artist_loopsPrePre1a_2018": {
-        },
-        "courseC_artist_loopsPrePre1a_2019": {
-        },
-        "courseC_artist_loopsPrePre1a_2020": {
-        },
         "courseC_artist_prog22022": {
           "slider": "Ở đây, bạn có thể cho chương trình chậm đi."
         },
         "courseC_artist_prog2_2021": {
           "slider": "Ở đây, bạn có thể cho chương trình chậm đi."
-        },
-        "courseC_collector_prog1": {
         },
         "courseC_collector_prog12022": {
           "courseC_collector_prog1_1": "Bạn có thấy một số khối mới trong hộp công cụ không? Đừng lo lắng, chúng tôi sẽ hướng dẫn bạn cách sử dụng các khối này trong một bài học khác."
@@ -1643,12 +1125,8 @@
         "courseC_harvester_loops1_2021": {
           "courseC_harvester_loops1_callout1": "Số bốn trên bí ngô cho bạn biết rằng có bốn bí ngô ở đó để nhặt."
         },
-        "courseC_maze_debugging5": {
-        },
         "courseC_maze_debugging52022": {
           "courseC_maze_debugging5_1": "Các khối này đã bị khóa và không thể xóa được!"
-        },
-        "courseC_maze_debugging5_2018": {
         },
         "courseC_maze_debugging5_2019": {
           "courseC_maze_debugging5_1": "Các khối này đã bị khóa và không thể xóa được!"
@@ -1818,8 +1296,6 @@
         "courseC_starWars_loops2_dani": {
           "courseC_starWars_loops2": "Trong bài tập này, bạn chỉ có sẵn một trong những khối sau."
         },
-        "courseC_video_angles": {
-        },
         "courseD_artist_nestedLoops1a": {
           "courseD_artist_nestedLoops1a_1": "Bạn không cần dùng màu sắc để làm đúng bài tập này. Nếu muốn, khối `random color` (màu ngẫu nhiên) này sẽ dễ hơn nhiều đấy!"
         },
@@ -1837,8 +1313,6 @@
         },
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "Bạn không cần dùng màu sắc để làm đúng bài tập này. Nếu muốn, khối `random color` (màu ngẫu nhiên) này sẽ dễ hơn nhiều đấy!"
-        },
-        "courseD_artist_ramp11": {
         },
         "courseD_bee_conditionals2": {
           "4_5_Bee_Conditionals_2_1": "Đừng quên kiểm tra TẤT CẢ đám mây xem có HOA hay không. Bạn không cần kiểm tra tổ ong đâu nhé."
@@ -1882,17 +1356,11 @@
         "courseD_bee_conditionals_challenge2_2021": {
           "courseD_bee_conditionals_challenge2_1": "Hãy dùng vòng lặp này để lấy tất cả mật hoa (hoặc mật ong) từ một bông hoa (hoặc tổ ong)."
         },
-        "courseD_bee_debugging_challenge1": {
-        },
-        "courseD_bee_debugging_challenge1a": {
-        },
         "courseD_bee_nestedLoops1a2022": {
           "stepButton": "Hãy thử xem qua từng khối trong mã lệnh của bạn."
         },
         "courseD_bee_nestedLoops1a_2021": {
           "stepButton": "Hãy thử xem qua từng khối trong mã lệnh của bạn."
-        },
-        "courseD_collector_ramp8": {
         },
         "courseD_farmer_while72022": {
           "courseD_farmer_while7_2018_PathAhead": "Bạn cần dùng khối `while path ahead` (khi có đường phía trước) để giải bài tập này."
@@ -2033,12 +1501,6 @@
         "courseD_maze_ramp5a_2020": {
           "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
         },
-        "courseD_maze_ramp6": {
-        },
-        "courseD_playLab_condFP": {
-        },
-        "courseD_playLab_condFP_2018": {
-        },
         "courseD_scrat_ramp1": {
           "grade2_CaringForNewPet_0_1": "Sau khi đã ghép các khối vào với nhau, ấn \"Chạy\" để bắt đầu chương trình."
         },
@@ -2054,14 +1516,8 @@
         "courseD_scrat_ramp5": {
           "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
         },
-        "courseD_scrat_ramp6": {
-        },
-        "courseD_scrat_ramp7": {
-        },
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_1": "Đây là bài tập thử thách đầu tiên của bạn! Những bài tập này tương đối khó và có thể phải thử vài lần."
-        },
-        "courseD_video_nestedLoopsArtist": {
         },
         "courseE_aboutme_2": {
           "": "Nhấp chuột vào đây!"
@@ -2074,12 +1530,6 @@
         },
         "courseE_aboutme_2_2021": {
           "": "Nhấp chuột vào đây!"
-        },
-        "courseE_artist_functions1": {
-        },
-        "courseE_artist_functions1_copy": {
-        },
-        "courseE_artist_functions1_dani": {
         },
         "courseE_artist_functions2": {
           "courseD_artist_functions2_1": "Khi khối màu xanh lục này chạy, tất cả mã lệnh trong hàm sẽ chạy. Họa sĩ phải làm gì sau khi vẽ hình vuông đầu tiên?"
@@ -2170,10 +1620,6 @@
         "courseE_artist_functions_challenge2_2021": {
           "courseE_artist_functions_challenge2_callout1": "Hãy cho chương trình này tiếp tục chạy bằng cách thêm nhiều mã lệnh vào phía dưới.",
           "courseE_artist_functions_challenge2_callout2": "Nếu bạn không thích thiết kế này, hãy thay đổi thành bất cứ hình gì bạn muốn!"
-        },
-        "courseE_artist_ramp8": {
-        },
-        "courseE_artist_ramp8_2": {
         },
         "courseE_farmer_functions1": {
           "courseE_farmer_functions1_2": "Hộp công cụ lần này có cấu trúc hơi khác một chút! Hãy nhấp chuột vào các danh mục khác nhau để xem bạn có những khối nào."
@@ -2346,40 +1792,6 @@
         "courseF_artist_for1_2021": {
           "courseF_artist_for1_1": "Hộp công cụ ở chế độ “danh mục” để tạo thêm chỗ cho mã lệnh. Vòng lặp `for` (với) có ở đây."
         },
-        "courseF_artist_fwp1": {
-        },
-        "courseF_artist_fwp4": {
-        },
-        "courseF_artist_fwp5": {
-        },
-        "courseF_artist_variables3": {
-        },
-        "courseF_artist_variables3_2018": {
-        },
-        "courseF_artist_variables3_2019": {
-        },
-        "courseF_artist_variables3_2020": {
-        },
-        "courseF_artist_variables6": {
-        },
-        "courseF_artist_variables6_2018": {
-        },
-        "courseF_artist_variables6_2019": {
-        },
-        "courseF_artist_variables6_2020": {
-        },
-        "courseF_artist_variables6a": {
-        },
-        "courseF_artist_variables6a_2018": {
-        },
-        "courseF_artist_variables6a_2019": {
-        },
-        "courseF_artist_variables6a_2020": {
-        },
-        "courseF_bee_conditionals2": {
-        },
-        "courseF_bee_conditionals5": {
-        },
         "courseF_bee_for4": {
           "courseF_bee_for4_1": "Bạn sẽ tìm thấy vòng lặp `for` (với) ở đây!"
         },
@@ -2416,22 +1828,6 @@
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_1": "Bạn sẽ thấy khối `math` (tính toán) tại đây."
         },
-        "courseF_bee_functions2": {
-        },
-        "courseF_bee_functions6": {
-        },
-        "courseF_bee_functions_challenge1": {
-        },
-        "courseF_bee_fwp1": {
-        },
-        "courseF_bee_fwp2": {
-        },
-        "courseF_bee_fwp3": {
-        },
-        "courseF_bee_fwp4": {
-        },
-        "courseF_bee_fwp_challenge2": {
-        },
         "courseF_bee_variables_1_2018": {
           "courseF_bee_functions_1_2018_1": "Bạn có thể tìm thấy các biến của mình dưới đây!"
         },
@@ -2446,10 +1842,6 @@
         },
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "Bạn có thể tìm thấy các biến của mình dưới đây!"
-        },
-        "courseF_collector_items_-2022-2": {
-        },
-        "courseF_collector_player_move_-2022-2": {
         },
         "courseF_editable_card": {
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
@@ -2505,21 +1897,11 @@
         "courseF_events_time_-2022-2": {
           "events_category": "Nhấp chuột vào đây để mở danh mục Sự kiện."
         },
-        "courseF_groups_size_-2022-2": {
-        },
         "courseF_label_predict": {
           "variablesPredict": "Hãy xem kỹ mã lệnh dưới đây."
         },
         "courseF_label_predict_-2022-2": {
           "variablesPredict": "Hãy xem kỹ mã lệnh dưới đây."
-        },
-        "courseF_playlab_variables1a": {
-        },
-        "courseF_playlab_variables5c": {
-        },
-        "courseF_playlab_variables6c": {
-        },
-        "courseF_playlab_variables7c": {
         },
         "courseF_sprites_behaviors": {
           "behaviors_category": "Nhấp chuột vào đây để mở danh mục Hành vi."
@@ -2683,14 +2065,6 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Sử dụng tùy chọn ở trong khối lệnh để thay thế \"???\" với một số"
-        },
-        "grade5_artist_variables_triangles1": {
-        },
-        "grade5_artist_variables_triangles1_2018": {
-        },
-        "grade5_artist_variables_triangles1_2019": {
-        },
-        "grade5_artist_variables_triangles1_2020": {
         },
         "helloworld_animals_backgrounds": {
           "hw_background_location": "Dùng khối này để đặt hình nền mới."
@@ -2901,74 +2275,6 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Khối mới!"
-        },
-        "iceage_hello1": {
-        },
-        "iceage_hello2": {
-        },
-        "iceage_move_events": {
-        },
-        "iceage_move_events_dani": {
-        },
-        "iceage_move_to_actor": {
-        },
-        "iceage_repeat": {
-        },
-        "iceage_sound_and_points": {
-        },
-        "iceage_sound_and_points_dani": {
-        },
-        "iceage_warn_ice_age": {
-        },
-        "iceage_warn_ice_age_dani": {
-        },
-        "ml-customize apps-choice3": {
-        },
-        "ml-customize apps-choice3_2022": {
-        },
-        "ml-customize apps-choice5": {
-        },
-        "ml-customize apps-choice5_2022": {
-        },
-        "ml-intro app lab-book recommender 5C-2021": {
-        },
-        "ml-intro app lab-book recommender 5C_2022": {
-        },
-        "ml-intro app lab-book recommender 5E-2021": {
-        },
-        "ml-intro app lab-book recommender 5E_2022": {
-        },
-        "ml-models in applab-screens-1-2021": {
-        },
-        "ml-models in applab-screens-1_2022": {
-        },
-        "ml-models in applab-screens-3-2021": {
-        },
-        "ml-models in applab-screens-3_2022": {
-        },
-        "ml-use model card-choice3": {
-        },
-        "ml-use model card-choice3_2022": {
-        },
-        "ml-use model card-choice5": {
-        },
-        "ml-use model card-choice5_2022": {
-        },
-        "ml-use model card-example3C-2021": {
-        },
-        "ml-use model card-example3C_2022": {
-        },
-        "ml-use model card-example3D-2021": {
-        },
-        "ml-use model card-example3D_2022": {
-        },
-        "ml-use model card-example3_EditB-2021": {
-        },
-        "ml-use model card-example3_EditB_2022": {
-        },
-        "ml-use model card-example3_EditC-2021": {
-        },
-        "ml-use model card-example3_EditC_2022": {
         },
         "outbreak2": {
           "minitoolbox": "Nhấn vào đây để mở rộng khối.",

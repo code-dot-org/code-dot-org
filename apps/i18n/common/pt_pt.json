@@ -2169,8 +2169,8 @@
   "teachers": "Professores",
   "teachingGuide": "Guia de Ensino",
   "teachingTip": "Dica de ensino",
-  "tellUsAboutWorkshop": "Conte-nos sobre o workshop que você está participando",
-  "tellUsAboutYourself": "Conte-nos sobre você",
+  "tellUsAboutWorkshop": "Fale-nos sobre a formação que está a participar",
+  "tellUsAboutYourself": "Fale-nos sobre si",
   "test": "Teste",
   "text": "Texto",
   "textToSpeechProfanity": "Seu texto contém linguagem imprópria para que não seja reproduzido. Atualize seu projeto para remover o {profanityCount, plural, one {palavra} other {palavras}} “{profaneWords}”.\n",
@@ -2340,7 +2340,7 @@
   "windows": "Windows",
   "withoutHints": "Sem pedir pistas!",
   "workedWith": "Trabalhou Com:",
-  "workshopDate": "Data da Oficina",
+  "workshopDate": "Data da formação",
   "workspaceHeaderShort": "Área de trabalho: ",
   "workspaceProjectTemplateLevel": "Este ícone significa que este nível é parte de um projeto maior. Mudanças serão salvas através destes níveis.",
   "wrongCourseVersionWarningDetails": "Notamos que você possui progresso em uma versão mais antiga deste curso. Você pode voltar para aquela versão em qualquer momento utilizando o menu suspenso abaixo para selecionar a versão do curso que você deseja.",
@@ -2366,7 +2366,7 @@
   "yourSchoolProfessionalLearningProgramsButton": "Veja programas de aprendizado profissionais",
   "yourSchoolTeacherButton": "Comece a ensinar",
   "yourSchoolTeacherDesc": "Comece a ensinar hoje, não é necessária experiência com ciência da computação",
-  "yourSchoolTellUs": "Conte-nos sobre a sua escola",
+  "yourSchoolTellUs": "Fale-nos sobre a sua escola",
   "yourSectionsList": "Suas seções",
   "zipOrCountry": "Código postal ou país"
 }

@@ -29,6 +29,9 @@
         "csd-2022/classes": {
           "display_name": "Класи"
         },
+        "csd-2022/collision-detection": {
+          "display_name": "Виявлення зіткнень"
+        },
         "csd-2022/color-lights": {
           "display_name": "Кольорове світло"
         },
@@ -125,11 +128,23 @@
         "csd-2022/problem-solving-process-general": {
           "display_name": "Процес вирішення проблем"
         },
+        "csd-2022/random-numbers": {
+          "display_name": "Випадкові числа"
+        },
         "csd-2022/selecting-a-label": {
           "display_name": "Вибір мітки"
         },
         "csd-2022/selecting-features": {
           "display_name": "Вибір ознак"
+        },
+        "csd-2022/shapes-and-parameters": {
+          "display_name": "Фігури та параметри"
+        },
+        "csd-2022/sprite-interactions": {
+          "display_name": "Взаємодія спрайтів"
+        },
+        "csd-2022/sprite-properties": {
+          "display_name": "Властивості спрайтів"
         },
         "csd-2022/sprites": {
           "display_name": "Спрайти"
@@ -148,6 +163,9 @@
         },
         "csd-2022/the-counter-pattern-2": {
           "display_name": "Лічильник шаблону"
+        },
+        "csd-2022/the-draw-loop": {
+          "display_name": "Цикл малювання"
         },
         "csd-2022/using-data-with-categorical-features": {
           "display_name": "Використання даних з категорійними ознаками"

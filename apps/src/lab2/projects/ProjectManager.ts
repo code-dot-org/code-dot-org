@@ -15,6 +15,7 @@ import {ChannelsStore} from './ChannelsStore';
 import {Channel, Project, ProjectSources} from '../types';
 import {currentLocation} from '@cdo/apps/utils';
 import Lab2MetricsReporter from '../Lab2MetricsReporter';
+import {ValidationError} from '../responseValidators';
 const {reload} = require('@cdo/apps/utils');
 
 export default class ProjectManager {
@@ -71,9 +72,15 @@ export default class ProjectManager {
       sources = await this.sourcesStore.load(this.channelId);
       this.lastSource = JSON.stringify(sources);
     } catch (error) {
-      // If sourceResponse is a 404 (not found), we still want to load the channel.
-      // Source can return not found if the project is new. Throw if not a 404.
-      if (!(error as Error).message.includes('404')) {
+      // If there was a validation error or sourceResponse is a 404 (not found),
+      // we still want to load the channel. In the case of a validation error,
+      // we will default to empty sources. Source can return not found if the project
+      // is new. If neither of these cases, throw the error.
+      if (error instanceof ValidationError) {
+        Lab2MetricsReporter.logWarning(
+          `Error validating sources (${error.message}). Defaulting to empty sources.`
+        );
+      } else if (!(error as Error).message.includes('404')) {
         Lab2MetricsReporter.logError('Error loading sources', error as Error);
         throw error;
       }
