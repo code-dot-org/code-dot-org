@@ -1011,6 +1011,46 @@ lv:
           description_short: Iepazīsti Minecraft pasauli, izmantojot kodu
         netsim:
           title: Interneta simulators
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sazarojumi
+            lessonGroup-5:
+              display_name: Mainīgie
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitālā pilsonība
+            lessonGroup-4:
+              display_name: Cikli
+            lessonGroup-6:
+              display_name: Pasākumi
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Cikls ciklā
+            lessonGroup-4:
+              display_name: Funkcijas
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitālā pilsonība
+            lessonGroup-4:
+              display_name: Cikli
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitālā pilsonība
+            lessonGroup-4:
+              display_name: Cikli
+            lessonGroup-5:
+              display_name: Pasākumi
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitālā pilsonība
+            lessonGroup-6:
+              display_name: Cikli
         new-e:
           lesson_groups:
             csf_e_2:
@@ -1068,6 +1108,12 @@ lv:
           lesson_groups:
             required:
               display_name: Pārskats
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitālā pilsonība
+            lessonGroup-4:
+              display_name: Cikli
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:

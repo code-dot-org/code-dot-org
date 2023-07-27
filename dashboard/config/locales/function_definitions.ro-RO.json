@@ -67,9 +67,7 @@
             "name": "desenează un cap"
           },
           "draw body and arms": {
-            "name": "desenează corpul și brațele",
-            "parameters": {
-            }
+            "name": "desenează corpul și brațele"
           },
           "draw left leg": {
             "name": "desenează piciorul stâng"
@@ -161,14 +159,6 @@
         "2-3 Artist Functions 9": {
           "draw a snowflake": {
             "name": "desenează un fulg de nea"
-          }
-        },
-        "2-3 Artist Loops 2": {
-          "draw 3 hexagons": {
-          },
-          "draw 4 hexagons": {
-          },
-          "draw 5 hexagons": {
           }
         },
         "2-3 Bee Functions 1": {
@@ -300,12 +290,8 @@
           }
         },
         "Choose Your Own Adventure": {
-          "starting path": {
-          },
           "story": {
             "name": "poveste"
-          },
-          "witch ending": {
           }
         },
         "Course 4 Artist Binary 1": {
@@ -314,8 +300,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 2": {
@@ -324,8 +308,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 3": {
@@ -334,8 +316,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 4": {
@@ -344,8 +324,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 5": {
@@ -354,8 +332,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 6": {
@@ -364,8 +340,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 7": {
@@ -374,8 +348,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary Free Play 2": {
@@ -384,8 +356,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary Free Play 2a": {
@@ -394,8 +364,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary Free Play 2b": {
@@ -404,8 +372,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary pre1": {
@@ -414,8 +380,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Functions Inspiration": {
@@ -443,37 +407,27 @@
         },
         "Course 4 Bee Params 3": {
           "get 3 nectar": {
-            "name": "obţine de 3 ori nectar",
-            "parameters": {
-            }
+            "name": "obţine de 3 ori nectar"
           }
         },
         "Course 4 Bee Params 4": {
           "get 3 nectar": {
-            "name": "obţine de 3 ori nectar",
-            "parameters": {
-            }
+            "name": "obţine de 3 ori nectar"
           }
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "strânge nectar de 5 ori",
-            "parameters": {
-            }
+            "name": "strânge nectar de 5 ori"
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "strânge nectar de 5 ori",
-            "parameters": {
-            }
+            "name": "strânge nectar de 5 ori"
           }
         },
         "Course 4 Bee Params 7": {
           "get many nectar": {
-            "name": "obţine mult nectar",
-            "parameters": {
-            }
+            "name": "obţine mult nectar"
           }
         },
         "Course 4 Bee Params 8": {
@@ -490,8 +444,6 @@
           }
         },
         "Course 4 Play Lab Params 10": {
-          "level_up": {
-          },
           "score_points": {
             "parameters": {
               "points": "puncte"
@@ -605,12 +557,8 @@
           "draw a square 20": {
             "name": "desenează un pătrat 20"
           },
-          "draw an octagon": {
-          },
           "draw octagons": {
-            "name": "desenează octogoane",
-            "parameters": {
-            }
+            "name": "desenează octogoane"
           },
           "shift down": {
             "name": "deplasează jos"
@@ -1086,15 +1034,11 @@
           }
         },
         "Find the Wizard": {
-          "check guess": {
-          },
           "do something": {
             "name": "facă ceva"
           }
         },
         "FoodFight": {
-          "level_up": {
-          },
           "score_points": {
             "parameters": {
               "points": "puncte"
@@ -1130,17 +1074,11 @@
           "diamond": {
             "name": "diamant"
           },
-          "draw a door": {
-          },
           "draw a house": {
             "name": "desenează o casă"
           },
           "draw grass": {
             "name": "desenează iarbă"
-          },
-          "draw windows": {
-          },
-          "rectangle": {
           },
           "square": {
             "name": "pătrat"
@@ -1150,25 +1088,17 @@
           },
           "triangle": {
             "name": "triunghi"
-          },
-          "window": {
           }
         },
         "Geometric Sun_2018": {
           "diamond": {
             "name": "diamant"
           },
-          "draw a door": {
-          },
           "draw a house": {
             "name": "desenează o casă"
           },
           "draw grass": {
             "name": "desenează iarbă"
-          },
-          "draw windows": {
-          },
-          "rectangle": {
           },
           "square": {
             "name": "pătrat"
@@ -1178,14 +1108,6 @@
           },
           "triangle": {
             "name": "triunghi"
-          },
-          "window": {
-          }
-        },
-        "Guess The Number": {
-          "check guess": {
-            "parameters": {
-            }
           }
         },
         "InspirationalArtwork": {
@@ -1218,8 +1140,6 @@
             "parameters": {
               "size": "dimensiune"
             }
-          },
-          "n-sided shape": {
           }
         },
         "K-1 Artist2 3": {
@@ -1235,12 +1155,6 @@
         "K-1 Artist2 5": {
           "draw rectangle": {
             "name": "desenează dreptunghiul"
-          }
-        },
-        "MC Agent Freeplay": {
-          "function 1": {
-          },
-          "function 2": {
           }
         },
         "MC_HOC_2017_07_Cole": {
@@ -1346,30 +1260,6 @@
           },
           "build short bridge": {
             "name": "construiește un pod scurt"
-          }
-        },
-        "MC_HOC_2017_FP20x20": {
-          "function 1": {
-          },
-          "function 2": {
-          }
-        },
-        "MC_HOC_2017_FP20x202022": {
-          "function 1": {
-          },
-          "function 2": {
-          }
-        },
-        "MC_HOC_2017_FP20x20_2019": {
-          "function 1": {
-          },
-          "function 2": {
-          }
-        },
-        "MC_HOC_2017_FP20x20_2020": {
-          "function 1": {
-          },
-          "function 2": {
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
@@ -1728,12 +1618,6 @@
             }
           }
         },
-        "New Minecraft Hero Project": {
-          "function 1": {
-          },
-          "function 2": {
-          }
-        },
         "New Play Lab Project": {
           "jump": {
             "name": "sari",
@@ -1751,19 +1635,11 @@
           }
         },
         "Robot Doodle": {
-          "25 pixel square": {
-          },
-          "draw eye": {
-          },
           "draw head": {
             "name": "desenează cap"
           }
         },
         "Robot Doodle_2018": {
-          "25 pixel square": {
-          },
-          "draw eye": {
-          },
           "draw head": {
             "name": "desenează cap"
           }
@@ -1781,10 +1657,6 @@
         "Standalone_Artist_9": {
           "my function": {
             "name": "funcţiunea mea"
-          }
-        },
-        "course1_artist_loops_challenge1": {
-          "\"simple\" solution": {
           }
         },
         "course1_artist_loops_challenge2": {
@@ -1811,41 +1683,11 @@
         "course3_bee_functions_challenge1": {
           "do something": {
             "name": "facă ceva"
-          },
-          "get 3 nectar or honey": {
           }
         },
         "course3_bee_functions_challenge2": {
           "do something": {
             "name": "facă ceva"
-          },
-          "move and collect": {
-          }
-        },
-        "course3_bee_functions_challenge3": {
-          "check nectar or honey": {
-          },
-          "row of nectar": {
-          },
-          "rowOfNectar": {
-          }
-        },
-        "course3_bee_functions_challenge4": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          },
-          "row of nectar": {
-          },
-          "rowOfNectar": {
-          }
-        },
-        "course3_playLab_challenge1": {
-          "keep playing": {
-          },
-          "lose game": {
-          },
-          "win game": {
           }
         },
         "course4_artist_binary_challenge1": {
@@ -1854,8 +1696,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "course4_artist_binary_challenge2": {
@@ -1864,12 +1704,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
-          }
-        },
-        "course4_artist_concept_challenge2": {
-          "draw pinwheel": {
           }
         },
         "course4_artist_functions_challenge2": {
@@ -1899,10 +1733,6 @@
             }
           }
         },
-        "course4_bee_for_challenge1": {
-          "move and get nectar with counter": {
-          }
-        },
         "course4_bee_fwp_challenge1": {
           "pick row": {
             "parameters": {
@@ -1915,10 +1745,6 @@
             "parameters": {
               "length": "lungime"
             }
-          }
-        },
-        "courseA_artist_loops_challenge1": {
-          "\"simple\" solution": {
           }
         },
         "courseB_artist_loops_challenge2": {
@@ -2073,8 +1899,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary1_2018": {
@@ -2083,8 +1907,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary1_2019": {
@@ -2093,8 +1915,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary1_2020": {
@@ -2103,8 +1923,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary2": {
@@ -2113,8 +1931,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary2_2018": {
@@ -2123,8 +1939,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary2_2019": {
@@ -2133,8 +1947,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary2_2020": {
@@ -2143,8 +1955,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary3": {
@@ -2153,8 +1963,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary3_2018": {
@@ -2163,8 +1971,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary3_2019": {
@@ -2173,8 +1979,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary3_2020": {
@@ -2183,8 +1987,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary4": {
@@ -2193,8 +1995,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary4_2018": {
@@ -2203,8 +2003,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary4_2019": {
@@ -2213,8 +2011,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary4_2020": {
@@ -2223,8 +2019,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary5": {
@@ -2233,8 +2027,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary5_2018": {
@@ -2243,8 +2035,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary5_2019": {
@@ -2253,8 +2043,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary5_2020": {
@@ -2263,8 +2051,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary6": {
@@ -2273,8 +2059,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary6_2018": {
@@ -2283,8 +2067,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary6_2019": {
@@ -2293,8 +2075,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary6_2020": {
@@ -2303,8 +2083,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary7": {
@@ -2313,8 +2091,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary7_2018": {
@@ -2323,8 +2099,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary7_2019": {
@@ -2333,8 +2107,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary7_2020": {
@@ -2343,8 +2115,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8": {
@@ -2353,8 +2123,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_2018": {
@@ -2363,8 +2131,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_2019": {
@@ -2373,8 +2139,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_2020": {
@@ -2383,8 +2147,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1": {
@@ -2393,8 +2155,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1_2018": {
@@ -2403,8 +2163,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1_2019": {
@@ -2413,8 +2171,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1_2020": {
@@ -2423,8 +2179,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binaryFP_2018": {
@@ -2433,8 +2187,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binaryFP_2019": {
@@ -2443,8 +2195,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binaryFP_2020": {
@@ -2453,8 +2203,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge1_2018": {
@@ -2463,8 +2211,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge1_2019": {
@@ -2473,8 +2219,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge1_2020": {
@@ -2483,8 +2227,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge2_2018": {
@@ -2493,8 +2235,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge2_2019": {
@@ -2503,8 +2243,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge2_2020": {
@@ -2513,8 +2251,6 @@
             "parameters": {
               "binary": "binar"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_autorun_binary2_2019": {
@@ -2557,12 +2293,6 @@
             "name": "desenează"
           }
         },
-        "courseE_Dogger_2": {
-          "lose": {
-          },
-          "stop_everything": {
-          }
-        },
         "courseE_artist_concept1": {
           "do something": {
             "name": "facă ceva"
@@ -2580,8 +2310,6 @@
           "draw a line of squares": {
             "name": "desenează un rând de pătrate"
           },
-          "draw a plane of squares": {
-          },
           "draw a square": {
             "name": "desenează un pătrat"
           }
@@ -2589,8 +2317,6 @@
         "courseE_artist_concept4_2018": {
           "draw a line of squares": {
             "name": "desenează un rând de pătrate"
-          },
-          "draw a plane of squares": {
           },
           "draw a square": {
             "name": "desenează un pătrat"
@@ -2604,14 +2330,6 @@
         "courseE_artist_concept_challenge1_2018": {
           "do something": {
             "name": "facă ceva"
-          }
-        },
-        "courseE_artist_concept_challenge2": {
-          "draw pinwheel": {
-          }
-        },
-        "courseE_artist_concept_challenge2_2018": {
-          "draw pinwheel": {
           }
         },
         "courseE_artist_functions1": {
@@ -3501,21 +3219,9 @@
             "name": "desenează poligon"
           }
         },
-        "courseE_bee_concept4": {
-          "honey nectar": {
-          }
-        },
         "courseE_bee_functions1": {
           "do something": {
             "name": "facă ceva"
-          }
-        },
-        "courseE_bee_functions10": {
-          "move and make honey": {
-          }
-        },
-        "courseE_bee_functions11_predict1": {
-          "move and make honey": {
           }
         },
         "courseE_bee_functions2": {
@@ -3548,26 +3254,14 @@
             "name": "obține 7 și fă 7"
           }
         },
-        "courseE_bee_functions8": {
-          "collect all nectar": {
-          }
-        },
-        "courseE_bee_functions9": {
-          "get all nectar": {
-          }
-        },
         "courseE_bee_functions_challenge1": {
           "do something": {
             "name": "facă ceva"
-          },
-          "get 3 nectar or honey": {
           }
         },
         "courseE_bee_functions_challenge2": {
           "do something": {
             "name": "facă ceva"
-          },
-          "move and collect": {
           }
         },
         "courseE_farmer_concept1": {
@@ -3578,12 +3272,6 @@
         "courseE_farmer_concept2": {
           "do something": {
             "name": "facă ceva"
-          },
-          "get pumpkin": {
-          }
-        },
-        "courseE_farmer_concept2_2018": {
-          "get pumpkin": {
           }
         },
         "courseE_farmer_concept3": {
@@ -3659,18 +3347,6 @@
           },
           "pumpkin square": {
             "name": "pătrat dovleac"
-          }
-        },
-        "courseE_farmer_functions10b": {
-          "navigate": {
-          }
-        },
-        "courseE_farmer_functions11_predict": {
-          "check and pick": {
-          },
-          "find pumpkin": {
-          },
-          "wander path": {
           }
         },
         "courseE_farmer_functions11_predict2022": {
@@ -3878,10 +3554,6 @@
             "name": "caută porumb în pătrat"
           }
         },
-        "courseE_farmer_functions2ba": {
-          "corn and pumpkin": {
-          }
-        },
         "courseE_farmer_functions2ba2022": {
           "check square for corn": {
             "name": "caută porumb în pătrat"
@@ -3920,10 +3592,6 @@
           },
           "get all pumpkins": {
             "name": "strânge toți dovlecii"
-          }
-        },
-        "courseE_farmer_functions3c": {
-          "corn and pumpkin": {
           }
         },
         "courseE_farmer_functions3c12022": {
@@ -4021,18 +3689,6 @@
             "name": "strânge toți dovlecii"
           }
         },
-        "courseE_farmer_functions4b": {
-          "corn and pumpkin": {
-          }
-        },
-        "courseE_farmer_functions5c": {
-          "corn and pumpkin": {
-          }
-        },
-        "courseE_farmer_functions6c": {
-          "corn and pumpkin": {
-          }
-        },
         "courseE_farmer_functions7a12022": {
           "garden square": {
             "name": "pătrat grădină"
@@ -4083,10 +3739,6 @@
             "name": "pătrat grădină"
           }
         },
-        "courseE_farmer_functions8b": {
-          "navigate": {
-          }
-        },
         "courseE_farmer_functions9a12022": {
           "garden square": {
             "name": "pătrat grădină"
@@ -4110,18 +3762,6 @@
         "courseE_farmer_functions9a1_2021": {
           "garden square": {
             "name": "pătrat grădină"
-          }
-        },
-        "courseE_farmer_functions9b": {
-          "navigate": {
-          }
-        },
-        "courseE_playLab_challenge1": {
-          "keep playing": {
-          },
-          "lose game": {
-          },
-          "win game": {
           }
         },
         "courseE_playLab_scaffold1": {
@@ -4375,59 +4015,9 @@
             }
           }
         },
-        "courseF_bee_conditionals2": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          }
-        },
-        "courseF_bee_for_challenge1": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge12022": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge1_2018": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge1_2019": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge1_2020": {
-          "move and get nectar with counter": {
-          }
-        },
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "mutați și obțineți nectar cu contor"
-          }
-        },
-        "courseF_bee_functions2": {
-          "get only nectar": {
-          }
-        },
-        "courseF_bee_functions3": {
-          "only make honey": {
-          }
-        },
-        "courseF_bee_functions3a": {
-          "check nectar or honey": {
-          }
-        },
-        "courseF_bee_functions4": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          }
-        },
-        "courseF_bee_functions5a": {
-          "check nectar or honey": {
-          },
-          "move and check": {
           }
         },
         "courseF_bee_functions6": {
@@ -4451,30 +4041,6 @@
         "courseF_bee_functionsPre7": {
           "get nectar make honey": {
             "name": "obține nectar fă miere"
-          }
-        },
-        "courseF_bee_functions_challenge1": {
-          "check nectar or honey": {
-          },
-          "row of nectar": {
-          },
-          "rowOfNectar": {
-          }
-        },
-        "courseF_bee_functions_challenge2": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          },
-          "rowOfNectar": {
-          }
-        },
-        "courseF_bee_fwp2": {
-          "rowOfNectar": {
-          }
-        },
-        "courseF_bee_fwp3": {
-          "rowOfNectar": {
           }
         },
         "courseF_bee_fwp4": {
@@ -4533,78 +4099,6 @@
             }
           }
         },
-        "courseF_bee_variables_1_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_1_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_1_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_2_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_2_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_2_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_3_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_3_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_3_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_4_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_4_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_4_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_5_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_5_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_5_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_6_2018": {
-          "collect stairs": {
-          }
-        },
-        "courseF_bee_variables_6_2019": {
-          "collect stairs": {
-          }
-        },
-        "courseF_bee_variables_6_2020": {
-          "collect stairs": {
-          }
-        },
         "courseF_bee_variables_7_2018": {
           "collect": {
             "name": "colectează"
@@ -4623,22 +4117,16 @@
         "courseF_bee_variables_8_2018": {
           "collect": {
             "name": "colectează"
-          },
-          "move and increment": {
           }
         },
         "courseF_bee_variables_8_2019": {
           "collect": {
             "name": "colectează"
-          },
-          "move and increment": {
           }
         },
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "colectează"
-          },
-          "move and increment": {
           }
         },
         "grade5_artist_binary11": {

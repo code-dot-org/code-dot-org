@@ -20,18 +20,6 @@
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "Du befindest dich nun im Designmodus."
         },
-        "Big Game Vars 1": {
-        },
-        "CSD U3 - conditionals - transition": {
-        },
-        "CSD U3 - conditionals - transition_2018": {
-        },
-        "CSD U3 - conditionals - transition_2019": {
-        },
-        "CSD U3 - conditionals - transition_2021": {
-        },
-        "CSD U3 - conditionals - transition_2022": {
-        },
         "CSD U3 Boolean Predict": {
           "": "Dieses Programm wird hier ein Ergebnis anzeigen"
         },
@@ -58,50 +46,6 @@
         },
         "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
           "": " "
-        },
-        "CSD U3 Random add_2021": {
-        },
-        "CSD U3 Random add_2022": {
-        },
-        "CSD U3 Sprites anitab 1": {
-        },
-        "CSD U3 Sprites anitab 1_2018": {
-        },
-        "CSD U3 Sprites anitab 1_2019": {
-        },
-        "CSD U3 Sprites anitab 1_2021": {
-        },
-        "CSD U3 Sprites anitab 1_2022": {
-        },
-        "CSD U3 Sprites intro sprites": {
-        },
-        "CSD U3 Sprites intro sprites_2018": {
-        },
-        "CSD U3 Sprites intro sprites_2019": {
-        },
-        "CSD U3 Sprites intro sprites_2021": {
-        },
-        "CSD U3 Sprites intro sprites_2022": {
-        },
-        "CSD U3 Sprites text": {
-        },
-        "CSD U3 Sprites text_2018": {
-        },
-        "CSD U3 Sprites text_2019": {
-        },
-        "CSD U3 Sprites text_2021": {
-        },
-        "CSD U3 Sprites text_2022": {
-        },
-        "CSD U3 UP_ARROW": {
-        },
-        "CSD U3 UP_ARROW_2018": {
-        },
-        "CSD U3 UP_ARROW_2018_2019": {
-        },
-        "CSD U3 UP_ARROW_2021": {
-        },
-        "CSD U3 UP_ARROW_2022": {
         },
         "CSD U3 Variables Predict Where X": {
           "CSD_U3_variables": "Ändere die Zahl hier"
@@ -178,16 +122,6 @@
         "CSD U3 abstraction jump_2022": {
           "CSD_U3_L11_S17_C1": "Sieh dir diese if-Anweisung an"
         },
-        "CSD U3 abstraction jumping": {
-        },
-        "CSD U3 abstraction jumping_2018": {
-        },
-        "CSD U3 abstraction jumping_2019": {
-        },
-        "CSD U3 abstraction jumping_2021": {
-        },
-        "CSD U3 abstraction jumping_2022": {
-        },
         "CSD U3 abstraction looping": {
           "CSD_U3_L11_S17_C1": "Sieh dir diese if-Anweisung an"
         },
@@ -203,8 +137,6 @@
         "CSD U3 abstraction looping_2022": {
           "CSD_U3_L11_S17_C1": "Sieh dir diese if-Anweisung an"
         },
-        "CSD U3 abstraction rotation": {
-        },
         "CSD U3 abstraction rotation control": {
           "CSD_U3_L11_S5_C1": "Schaue dir diesen Code an."
         },
@@ -219,14 +151,6 @@
         },
         "CSD U3 abstraction rotation control_2022": {
           "CSD_U3_L11_S5_C1": "Schaue dir diesen Code an."
-        },
-        "CSD U3 abstraction rotation_2018": {
-        },
-        "CSD U3 abstraction rotation_2019": {
-        },
-        "CSD U3 abstraction rotation_2021": {
-        },
-        "CSD U3 abstraction rotation_2022": {
         },
         "CSD U3 abstraction tumbleweed": {
           "CSD_U3_L11_S17_C1": "Sieh dir diese if-Anweisung an"
@@ -341,16 +265,6 @@
         },
         "CSD U3 collisions scoreboard_2019": {
           "CSD_U3_L12_S8_C1": "Diese Bausteine zeigen die Punktzahl an."
-        },
-        "CSD U3 collisions try blocks": {
-        },
-        "CSD U3 collisions try blocks_2018": {
-        },
-        "CSD U3 collisions try blocks_2019": {
-        },
-        "CSD U3 collisions try blocks_2021": {
-        },
-        "CSD U3 collisions try blocks_2022": {
         },
         "CSD U3 collisions types": {
           "CSD_U3_L13_S6_C1": "Füge hier deinen Code hinzu."
@@ -520,36 +434,6 @@
           "CSD_U3_L18_S3_C2": "Variablenbereich",
           "CSD_U3_S18_L3_C1": "Dieser Baustein erstellt eine neue Variable."
         },
-        "CSD U3 keydown conditional": {
-        },
-        "CSD U3 keydown conditional_2018": {
-        },
-        "CSD U3 keydown conditional_2018_2019": {
-        },
-        "CSD U3 keydown conditional_2021": {
-        },
-        "CSD U3 keydown conditional_2022": {
-        },
-        "CSD U3 platform background1": {
-        },
-        "CSD U3 platform background1_2018": {
-        },
-        "CSD U3 platform background1_2019": {
-        },
-        "CSD U3 platform background1_2021": {
-        },
-        "CSD U3 platform background1_2022": {
-        },
-        "CSD U3 platform platform1": {
-        },
-        "CSD U3 platform platform1_2018": {
-        },
-        "CSD U3 platform platform1_2019": {
-        },
-        "CSD U3 platform platform1_2021": {
-        },
-        "CSD U3 platform platform1_2022": {
-        },
         "CSD U3 platform scoreboard": {
           "CSD_U3_L17_S7_C1": "Die Punktzahl wird hier ausgegeben."
         },
@@ -564,16 +448,6 @@
         },
         "CSD U3 platform scoreboard_2022": {
           "CSD_U3_L17_S7_C1": "Die Punktzahl wird hier ausgegeben."
-        },
-        "CSD U3 platform variable1": {
-        },
-        "CSD U3 platform variable1_2018": {
-        },
-        "CSD U3 platform variable1_2019": {
-        },
-        "CSD U3 platform variable1_2021": {
-        },
-        "CSD U3 platform variable1_2022": {
         },
         "CSD U3 properties depth_2021": {
           "CSD_U3_rect_c1": "Hier ist der Code",
@@ -683,56 +557,6 @@
           "CSD_U3_rect_c1": "Hier ist der Code",
           "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
         },
-        "CSD U6 - Accelerometer - PB_2222": {
-        },
-        "CSD U6 - Accelerometer - PC_2222": {
-        },
-        "CSD U6 - Accelerometer - SB2_2222": {
-        },
-        "CSD U6 - Color LEDs - CA_2222": {
-        },
-        "CSD U6 - Color LEDs - SB4_2222": {
-        },
-        "CSD U6 - Combine Inputs - A_2222": {
-        },
-        "CSD U6 - Combine Inputs - PracD_2222": {
-        },
-        "CSD U6 - Combine Inputs - SB1_2222": {
-        },
-        "CSD U6 - Functions - P2A_2222": {
-        },
-        "CSD U6 - Functions - P2C_2222": {
-        },
-        "CSD U6 - Functions - SB1_2222": {
-        },
-        "CSD U6 - Functions - SB2_2222": {
-        },
-        "CSD U6 - Functions - SB3_2222": {
-        },
-        "CSD U6 - Functions - SB4_2222": {
-        },
-        "CSD U6 - Functions - SB6_2222": {
-        },
-        "CSD U6 - Functions - SB7_2222": {
-        },
-        "CSD U6 - Functions - SB_2222": {
-        },
-        "CSD U6 - If Variables - A_2222": {
-        },
-        "CSD U6 - Music - A_2222": {
-        },
-        "CSD U6 - Music - SB3_2222": {
-        },
-        "CSD U6 - Sensors - PB_2222": {
-        },
-        "CSD U6 colorLeds intensity": {
-        },
-        "CSD U6 colorLeds intensity_2018": {
-        },
-        "CSD U6 colorLeds intensity_2019": {
-        },
-        "CSD U6 colorLeds intensity_2021": {
-        },
         "CSD U6 getProperty input": {
           "CSD_U6L06P03": "Füge hier deinen Block hinzu."
         },
@@ -744,38 +568,6 @@
         },
         "CSD U6 getProperty input_2021": {
           "CSD_U6L06P03": "Füge hier deinen Block hinzu."
-        },
-        "CSD U6 light show": {
-        },
-        "CSD U6 light show_2018": {
-        },
-        "CSD U6 light show_2019": {
-        },
-        "CSD U6 light show_2021": {
-        },
-        "CSD U6 tugowar variables 1": {
-        },
-        "CSD U6 tugowar variables 1_2018": {
-        },
-        "CSD U6 tugowar variables 1_2019": {
-        },
-        "CSD U6 tugowar variables 1_2021": {
-        },
-        "CSD U6 tugowar variables 2": {
-        },
-        "CSD U6 tugowar variables 2_2018": {
-        },
-        "CSD U6 tugowar variables 2_2019": {
-        },
-        "CSD U6 tugowar variables 2_2021": {
-        },
-        "CSD U6 tugowar variables 3": {
-        },
-        "CSD U6 tugowar variables 3_2018": {
-        },
-        "CSD U6 tugowar variables 3_2019": {
-        },
-        "CSD U6 tugowar variables 3_2021": {
         },
         "CSD games sidescroll background_2021": {
           "CSD_U3_L11_S17_C1": "Sieh dir diese if-Anweisung an"
@@ -795,16 +587,8 @@
         "CSD web text explore_2022": {
           "CSD_U3_variables": "Ändere die Zahl hier"
         },
-        "CSD web text size_2021": {
-        },
-        "CSD web text size_2022": {
-        },
         "CSDU4 - Design Mode - 3": {
           "": "Verwende den setText-Baustein, um den Text von titleLabel zu ändern"
-        },
-        "Calc Circles of Eval .2": {
-        },
-        "Calc Vars 1": {
         },
         "Course 4 Artist 4": {
           "repeat_full_circle": "Füge die Anzahl der Bewegungen ein, die der Zombie machen muss, um eine volle Runde zu laufen"
@@ -845,8 +629,6 @@
         "Course 4 Maze 4": {
           "repeat": "Setze Bausteine in die Schleife, um Befehle zu wiederholen"
         },
-        "Course 4 Play Lab Params 2": {
-        },
         "Course 4 Play Lab Params 3": {
           "edit_function": "Klicke hier, um die Funktion zu bearbeiten."
         },
@@ -858,10 +640,6 @@
         },
         "Course 4 Play Lab Vars 9": {
           "Course_4_Play_Lab_Vars_9_1": "Nun sind alle deine Bausteine in Kategorien geordnet. Klicke auf eine Kategorie, um die Bausteine darin zu sehen."
-        },
-        "Course 4 Playlab For Loops 4b": {
-        },
-        "Course 4 SCV 6": {
         },
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "Wähle hier den Typ des Tänzers aus."
@@ -1007,14 +785,6 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "Schaue hier nach dem Block \"alle Enten\""
         },
-        "Eval Booleans 2": {
-        },
-        "Eval Define Funcs 3": {
-        },
-        "Eval Define Funcs Test": {
-        },
-        "Eval Strings Images .2": {
-        },
         "Fish Tank 3-validated2022": {
           "spritelab_comment": "Verwende diesen Baustein, um dir selbst oder Deinem Lehrer Notizen darüber zu machen, wie Dein Code funktioniert."
         },
@@ -1066,8 +836,6 @@
         },
         "InspirationalArtwork_2018": {
           "InspirationalArtwork_1": "Versuche den 'Kommentar'-Block unter diesem Etikett zu benutzen, um dir selbst Notizen innerhalb deines Programms zu hinterlassen!"
-        },
-        "Luigi's Pizza 1": {
         },
         "MC HOC 2016 Level 2-2": {
           "craft2_run_button_callout": "Mit \"Ausführen\" testest du dein Programm, wenn du fertig bist."
@@ -1146,8 +914,6 @@
         },
         "NEW Course 4 Artist Params 10": {
           "create_function": "Klicke hier, um das \"Funktionsmenü\" zu öffnen, dann klicke auf \"Erstelle eine Funktion\"."
-        },
-        "NEW Course 4 Artist Params 2": {
         },
         "NEW Course 4 Artist Params 9": {
           "add_and_drag_parameter": "Schreibe den Namen deines Parameters hier hin, klicke „Hinzufügen“ und ziehe ihn dann in deine Funktionsdefinition",
@@ -2703,10 +2469,6 @@
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "Deine Variablen findest du hier drunter!"
         },
-        "courseF_collector_items_-2022-2": {
-        },
-        "courseF_collector_player_move_-2022-2": {
-        },
         "courseF_editable_card": {
           "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
         },
@@ -2760,8 +2522,6 @@
         },
         "courseF_events_time_-2022-2": {
           "events_category": "Klicke hier, um die Kategorie Ereignisse zu öffnen."
-        },
-        "courseF_groups_size_-2022-2": {
         },
         "courseF_label_predict": {
           "variablesPredict": "Untersuche den nachfolgenden Code unter diesem Punkt."
@@ -3165,74 +2925,6 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Neuer Block!"
-        },
-        "iceage_hello1": {
-        },
-        "iceage_hello2": {
-        },
-        "iceage_move_events": {
-        },
-        "iceage_move_events_dani": {
-        },
-        "iceage_move_to_actor": {
-        },
-        "iceage_repeat": {
-        },
-        "iceage_sound_and_points": {
-        },
-        "iceage_sound_and_points_dani": {
-        },
-        "iceage_warn_ice_age": {
-        },
-        "iceage_warn_ice_age_dani": {
-        },
-        "ml-customize apps-choice3": {
-        },
-        "ml-customize apps-choice3_2022": {
-        },
-        "ml-customize apps-choice5": {
-        },
-        "ml-customize apps-choice5_2022": {
-        },
-        "ml-intro app lab-book recommender 5C-2021": {
-        },
-        "ml-intro app lab-book recommender 5C_2022": {
-        },
-        "ml-intro app lab-book recommender 5E-2021": {
-        },
-        "ml-intro app lab-book recommender 5E_2022": {
-        },
-        "ml-models in applab-screens-1-2021": {
-        },
-        "ml-models in applab-screens-1_2022": {
-        },
-        "ml-models in applab-screens-3-2021": {
-        },
-        "ml-models in applab-screens-3_2022": {
-        },
-        "ml-use model card-choice3": {
-        },
-        "ml-use model card-choice3_2022": {
-        },
-        "ml-use model card-choice5": {
-        },
-        "ml-use model card-choice5_2022": {
-        },
-        "ml-use model card-example3C-2021": {
-        },
-        "ml-use model card-example3C_2022": {
-        },
-        "ml-use model card-example3D-2021": {
-        },
-        "ml-use model card-example3D_2022": {
-        },
-        "ml-use model card-example3_EditB-2021": {
-        },
-        "ml-use model card-example3_EditB_2022": {
-        },
-        "ml-use model card-example3_EditC-2021": {
-        },
-        "ml-use model card-example3_EditC_2022": {
         },
         "outbreak2": {
           "minitoolbox": "Klicke hier, um den Block zu erweitern.",

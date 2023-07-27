@@ -48,8 +48,6 @@
         "2-3 Artist Debugging 7": {
           "2-3_Artist_Debugging_7_a": "რა მოხთება, თუ პირველი ხაზის დახატვის შემდეგ, მხატვარს უკან გადაადგილებთ ან გადაახტუნებთ?"
         },
-        "2-3 Artist Debugging 8": {
-        },
         "2-3 Artist Debugging 9": {
           "2-3_Artist_Debugging_9_a": "მხატვარი მარცხნივ კიდევ 60 გრადუსით უნდა შეტრიალდეს იმისათვის, რომ ხატვა დაიწყოს!",
           "2-3_Artist_Debugging_9_b": "სრულად მობრუნებისთვის თქვენ არ გიწევთ კიდევ ერთი ბლოკის დამატება, უბრალოდ დაუმატეთ 60 გრადუსი `შეტრიალდი მარცხნივ` ბლოკს, რომელიც უკვე გვაქვს!"
@@ -212,8 +210,6 @@
         },
         "4-5 Artist 4": {
           "4-5_Artist_4_a": "წრეში 360 გრადუსია!\n\nზუსტად ამდენჯერ უნდა გაიმეოროთ ეს კოდი (ყოველ ჯერზე 1 გრადუსით მობრუნებით) სანამ დაასრულებთ წრეს!"
-        },
-        "4-5 Artist 5": {
         },
         "4-5 Artist 7": {
           "4-5_Artist_7_a": "რომელი კუთხეა ყველაზე პატარა? რომელ კუთხეზე დგას მხატვარი? "
@@ -531,92 +527,6 @@
         "CourseD_2022_LessonExtra16b": {
           "courseD_harvester_nested_loops_challenge1_a": "სავარაუდოდ, თქვენ უკვე გამოიყენეთ ციკლი, რათა შექმნათ ტეხილის მსგავსი ნიმუში. თუ გახსოვთ ეს ალგორითმი, შეგიძლიათ შეიტანოთ მასში მცირე ცვლილებები."
         },
-        "CourseD_Dance_2020_01": {
-        },
-        "CourseD_Dance_2020_012022": {
-        },
-        "CourseD_Dance_2020_01_2021": {
-        },
-        "CourseD_Dance_2020_02": {
-        },
-        "CourseD_Dance_2020_022022": {
-        },
-        "CourseD_Dance_2020_02_2021": {
-        },
-        "CourseD_Dance_2020_03": {
-        },
-        "CourseD_Dance_2020_032022": {
-        },
-        "CourseD_Dance_2020_03_2021": {
-        },
-        "CourseD_Dance_2020_04": {
-        },
-        "CourseD_Dance_2020_042022": {
-        },
-        "CourseD_Dance_2020_04_2021": {
-        },
-        "CourseD_Dance_2020_05": {
-        },
-        "CourseD_Dance_2020_052022": {
-        },
-        "CourseD_Dance_2020_05_2021": {
-        },
-        "CourseD_Dance_2020_06": {
-        },
-        "CourseD_Dance_2020_062022": {
-        },
-        "CourseD_Dance_2020_06_2021": {
-        },
-        "CourseD_Dance_2020_07": {
-        },
-        "CourseD_Dance_2020_072022": {
-        },
-        "CourseD_Dance_2020_07_2021": {
-        },
-        "CourseD_Dance_2020_08": {
-        },
-        "CourseD_Dance_2020_082022": {
-        },
-        "CourseD_Dance_2020_08_2021": {
-        },
-        "CourseD_Dance_2020_09": {
-        },
-        "CourseD_Dance_2020_092022": {
-        },
-        "CourseD_Dance_2020_09_2021": {
-        },
-        "CourseD_Dance_2020_bonus1": {
-        },
-        "CourseD_Dance_2020_bonus12022": {
-        },
-        "CourseD_Dance_2020_bonus1_2021": {
-        },
-        "CourseD_Dance_2022_lessonextra1": {
-        },
-        "CourseD_Dance_2022_lessonextra10a": {
-        },
-        "CourseD_Dance_Party_01": {
-        },
-        "CourseD_Dance_Party_02": {
-        },
-        "CourseD_Dance_Party_03": {
-        },
-        "CourseD_Dance_Party_04": {
-        },
-        "CourseD_Dance_Party_06": {
-        },
-        "CourseD_Dance_Party_08": {
-        },
-        "CourseD_Dance_Party_09": {
-        },
-        "CourseD_Dance_Party_10": {
-        },
-        "CourseD_Dance_Party_11": {
-        },
-        "CourseD_Dance_Party_11_5": {
-        },
-        "CourseD_Dance_Party_11b": {
-        },
         "CourseD_Minecraft_LessonExtra13a": {
           "courseD_harvester_nested_loops_challenge1_a": "სავარაუდოდ, თქვენ უკვე გამოიყენეთ ციკლი, რათა შექმნათ ტეხილის მსგავსი ნიმუში. თუ გახსოვთ ეს ალგორითმი, შეგიძლიათ შეიტანოთ მასში მცირე ცვლილებები."
         },
@@ -661,78 +571,6 @@
         },
         "CourseE_HOC 2018 Level_9b_2021": {
           "voyage_aquatic_9a": "ხედავთ წითელი და ლურჯი მარჯნის ბლოკებს? გამოიყენეთ ისინი როგორც ორიენტირები რომ მოუხვიოთ მარჯვნივ და მარცხნივ რიფებს შორის."
-        },
-        "CourseF_outbreak1": {
-        },
-        "CourseF_outbreak1_-2022-2": {
-        },
-        "CourseF_outbreak2": {
-        },
-        "CourseF_outbreak2_-2022-2": {
-        },
-        "CourseF_outbreak3": {
-        },
-        "CourseF_outbreak3_-2022-2": {
-        },
-        "CourseF_outbreak4": {
-        },
-        "CourseF_outbreak4_-2022-2": {
-        },
-        "CourseF_outbreak6": {
-        },
-        "CourseF_outbreak6_-2022-2": {
-        },
-        "CourseF_outbreak7": {
-        },
-        "CourseF_outbreak7_-2022-2": {
-        },
-        "Dance_2019_01": {
-        },
-        "Dance_2019_02": {
-        },
-        "Dance_2019_03": {
-        },
-        "Dance_2019_04": {
-        },
-        "Dance_2019_05": {
-        },
-        "Dance_2019_06": {
-        },
-        "Dance_2019_07": {
-        },
-        "Dance_2019_08": {
-        },
-        "Dance_2019_09": {
-        },
-        "Dance_Party_01": {
-        },
-        "Dance_Party_02": {
-        },
-        "Dance_Party_03": {
-        },
-        "Dance_Party_04": {
-        },
-        "Dance_Party_05": {
-        },
-        "Dance_Party_06": {
-        },
-        "Dance_Party_08": {
-        },
-        "Dance_Party_09": {
-        },
-        "Dance_Party_10": {
-        },
-        "Dance_Party_11": {
-        },
-        "Dance_Party_11_5": {
-        },
-        "Dance_Party_11b": {
-        },
-        "Dance_Party_extras_alternate_2019": {
-        },
-        "Farmer for Authored Hint testing": {
-        },
-        "Farmer for TTS testing": {
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_a": "პროგრამაში ფუნქციის გამოძახება ბევრჯერ შეგიძლიათ! ამ თავსატეხის ამოსახსნელად სცადეთ მისი ორჯერ გამოძახება.",
@@ -1025,23 +863,13 @@
         "NEW Course 4 Artist Params 11": {
           "NEW_Course_4_Artist_Params_11_a": "აქ არის ერთზე მეტი რიცხვი, რომელსაც ფუნქციის შიგნით ცვლადით ჩანაცვლება ესაჭიროება."
         },
-        "NEW Course 4 Artist Params 13": {
-        },
-        "NEW Course 4 Artist Params 14": {
-        },
         "NEW Course 4 Artist Params inspire": {
           "after": "როდესაც ყვავილის თითოეულ ფურცელზე მუშაობას მორჩებით, მანამ სანამ 60 გრადუსით მოუხვევთ, დარწმუნდით რომ ჯერ \"წინ გადაადგილდებით\" 20 პიქსელით.",
           "brush_width": "მანამ სანამ რამეს გავაკეთებთ, ჯაგრისის სიგანე 1-ს გავუტოლოთ და ლურჯი ფერი მივცეთ.",
           "double_loop": "სცადეთ \"გამეორების\" ციკლის შიგნით მოათავსოთ კოდის ბლოკი: \"for ციკლი\"."
         },
-        "NEW Course 4 Bee For Loops 10a": {
-        },
-        "NEW Course 4 Bee For Loops 7": {
-        },
         "NEW Course 4 Bee For Loops 8": {
           "NEW_Course_4_Bee_For_Loops_8_a": "თუ თქვენი ციკლი ზრდადობით ითვლის, ყოველ ჯერზე ზრდის მაჩვენებელი თვენი მთვლელის ცვლადს ემატება.\n\nრამდენი უნდა დაუმატოთ თითოეულ რიცხვს, იმისათვის რომ მისი მოდევნო რიცხვი მიიღოთ?"
-        },
-        "New Minecraft Hero Project": {
         },
         "OPD-K5-events-2": {
           "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -1064,8 +892,6 @@
         },
         "OPD-K5-forloops-2": {
           "courseF_bee_for2_b": "არ დაგავიწყდეთ წინ გადაადგილება ციკლებს შორის, რათა მიაღწიოთ ყოველ ყვავილამდე."
-        },
-        "OPD-K5-forloops-5": {
         },
         "OPD-K5-forloops-6": {
           "courseF_bee_for6_c": "თქვენი ციკლი უნდა ითვლიდეს **5-დან 1-მდე**."
@@ -1406,30 +1232,6 @@
           "mc_9_b": "კედელში შავი ლაქები ქვანახშირია! გამოიყენეთ `ბლოკის განადგურება` მათ გამოსათხრელად.",
           "mc_9_c": "იმისათვის, რომ განათავსოთ ჩირაღდანი იმ სივრცეში, სადაც დგახართ, გამოიყენეთ ბლოკი `ჩირაღდნის დაყენება`."
         },
-        "behaviors 2": {
-        },
-        "behaviors 2_2020": {
-        },
-        "behaviors 3": {
-        },
-        "behaviors 3_2020": {
-        },
-        "behaviors 3a": {
-        },
-        "behaviors 3a_2020": {
-        },
-        "behaviors 5": {
-        },
-        "behaviors 5_2020": {
-        },
-        "behaviors 6": {
-        },
-        "behaviors 6_2020": {
-        },
-        "behaviors 7": {
-        },
-        "behaviors 7_2020": {
-        },
         "comment_intro_maze_2018": {
           "courseC_maze_programming4_a": "კომენტარები ძალიან სასარგებლოა მათთვის, ვინც თქვენს კოდს კითხულობს.",
           "courseC_maze_programming4_b": "დაამატეთ კომენტარი, როცა ცვლით მიმართულებას - რა მოხდებოდა, სხვა მხარეს რომ წასულიყავით?"
@@ -1456,8 +1258,6 @@
           "courseA_collector_loops_challenge1_a": "თუ პროგრამაში რამე არასწორად შესრულდა, სცადეთ თითოეულ ციკლში რიცხვების შეცვლა.",
           "courseA_collector_loops_challenge1_b": "თუ რამეს ერთჯერადად ასრულებთ, ციკლის გამოყენება არ გჭირდებათ.",
           "courseA_collector_loops_challenge1_c": "გამოქვაბულის მარჯვენა მხარეს 6 ძვირფასი ქვაა, თუმცა თქვენ უნდა გადაადგილდეთ და შეაგროვოთ ისინი მხოლოდ 5-ჯერ. ხვდებით რატომ?"
-        },
-        "course1_collector_loops_challenge2": {
         },
         "course1_collector_loops_challenge3": {
           "courseB_collector_loops_challenge1_c": "მწკრივიდან მწკრივზე გადასვლისთვის, ორჯერ გადადით აღმოსავლეთით.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nამის გაკეთება სულ 14 ბლოკით შეგიძლიათ. დააწკაპუნეთ შემდეგი რჩევის სანახავად. ",
@@ -1513,8 +1313,6 @@
         "course2_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_a": "შეგიძლიათ იპოვოთ გზა, რომელიც ხეებთან დაჯახების გარეშე მიგიყვანთ ყველა ყვავილამდე და ფიჭამდე? საუკეთესო გზა სპირალურია.\n\n**ამის ამოხსნა შეგიძლიათ მარცხნივ შეხვევის გარეშე.**",
           "courseD_bee_conditionals_challenge1_b": "ამ თავსატეხში ყოველი თავისუფალი ადგილი შეიძლება იყოს ყვავილი, ფიჭა ან არაფერი. ეს იმას ნიშნავს, რომ თქვენ შეგიძლიათ გაიმეოროთ `თუ/სხვაგვარად`პირობითი ბლოკი ყოველ კვადრატთან."
-        },
-        "course2_bee_conditionals_challenge2": {
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "საწყისი კოდი მშვენივრად მუშაობს - მაშინმ როდესაც თითოეულ გროვაში მხოლოდ ერთი განძის ნაწილაკია!",
@@ -1779,18 +1577,6 @@
           "courseA_artist_loops7_b": "ჯერ დაწერეთ კოდი ერთი ტალღისთვის, შემდეგ გაიმეორეთ იგივე მოქმედება მომდევნო ორი ტალღის დასახატად.",
           "courseA_artist_loops7_c": "გახსოვდეთ, რომ შეგიძლია ჩასვათ 1-ზე მეტი ბლოკი შემდეგ ციკლში: <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>."
         },
-        "courseA_artist_loops8": {
-        },
-        "courseA_artist_loops82022": {
-        },
-        "courseA_artist_loops8_2018": {
-        },
-        "courseA_artist_loops8_2019": {
-        },
-        "courseA_artist_loops8_2020": {
-        },
-        "courseA_artist_loops8_2021": {
-        },
         "courseA_artist_loops9": {
           "courseA_artist_loops9_b": "დამატებული ბლოკი უნდა განთავსდეს ამ \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> ციკლში.",
           "courseA_artist_loops9_c": "თუ არ შეგიძლიათ გაარკვიოთ, სად უნდა ჩასვათ ციკლი, სცადეთ ნაწილ-ნაწილ დაწეროთ ამოხსნა და მოძებნოთ გამეორებადი კოდი."
@@ -1901,18 +1687,6 @@
         "courseA_collector_loops3_2021": {
           "courseA_collector_loops3_b": "გახსოვდეთ, თქვენ შეგიძლიათ 1-ზე მეტი ბლოკის განთავსება <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ციკლში."
         },
-        "courseA_collector_loops4": {
-        },
-        "courseA_collector_loops42022": {
-        },
-        "courseA_collector_loops4_2018": {
-        },
-        "courseA_collector_loops4_2019": {
-        },
-        "courseA_collector_loops4_2020": {
-        },
-        "courseA_collector_loops4_2021": {
-        },
         "courseA_collector_loops5": {
           "courseA_collector_loops5_b": "სცადეთ პრობლემის დაყოფა ორ ნაწილად: ჯერ გვერდზე გადაადგილება, შემდეგ კი ქვემოთ.",
           "courseA_collector_loops5_c": "თქვენ მოგიწევთ <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ციკლით დაწყება, რომელიც გადაადგილებს ლორელს დასავლეთისკენ და აგროვებს განძს."
@@ -1960,18 +1734,6 @@
         "courseA_collector_loops6_2021": {
           "courseA_collector_loops6_a": "ვერ გაარკვიეთ, სად არის შეცდომა? სცადეთ კოდის ორჯერ გაშვება და ნახეთ რა მოხდება.",
           "courseA_collector_loops6_b": "ყველაზე მოკლე ამოხსნა იყენებს 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ციკლს, ერთს მეორის შემდეგ."
-        },
-        "courseA_collector_loops7": {
-        },
-        "courseA_collector_loops72022": {
-        },
-        "courseA_collector_loops7_2018": {
-        },
-        "courseA_collector_loops7_2019": {
-        },
-        "courseA_collector_loops7_2020": {
-        },
-        "courseA_collector_loops7_2021": {
         },
         "courseA_collector_loops8": {
           "courseA_collector_loops8_b": "სცადეთ ამ თავსატეხის სამ ნაწილად დაყოფა და თითოეულისთვის ციკლის დაწერა.",
@@ -2051,48 +1813,8 @@
           "courseA_collector_loops_challenge1_c": "გამოქვაბულის მარჯვენა მხარეს 6 ძვირფასი ქვაა, თუმცა თქვენ უნდა გადაადგილდეთ და სამხრეთისკენ მოძრაობისას შეაგროვოთ ისინი მხოლოდ 5-ჯერ. ხვდებით რატომ?",
           "courseA_collector_loops_challenge1_d": "თავდაპირველად მოცემული პროგრამა არ აგროვებს 2 ძვირფას ქვას. სცადეთ ამ კოდის ბოლოში დამატება:\n\n<xml><block type=\"maze_moveEast\">\n<next>\n<block type=\"collector_collect_simplified\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
         },
-        "courseA_collector_loops_challenge2": {
-        },
-        "courseA_collector_loops_challenge2kp": {
-        },
-        "courseA_collector_loops_challenge2kp2022": {
-        },
-        "courseA_collector_loops_challenge2kp_2018": {
-        },
-        "courseA_collector_loops_challenge2kp_2019": {
-        },
-        "courseA_collector_loops_challenge2kp_2020": {
-        },
-        "courseA_collector_loops_challenge2kp_2021": {
-        },
-        "courseA_collector_preLoops4": {
-        },
-        "courseA_collector_preLoops5": {
-        },
-        "courseA_collector_preLoops6": {
-        },
         "courseA_collector_preLoops7": {
           "courseA_collector_loops2_b": "მას შემდეგ, რაც განძის შემცველ კვადრატამდე მიაღწევთ, მის ასაღებად ეს ბლოკი გამოიყენეთ.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
-        },
-        "courseA_harvester_loops1": {
-        },
-        "courseA_harvester_loops12022": {
-        },
-        "courseA_harvester_loops1_2019": {
-        },
-        "courseA_harvester_loops1_2020": {
-        },
-        "courseA_harvester_loops1_2021": {
-        },
-        "courseA_harvester_loops2": {
-        },
-        "courseA_harvester_loops22022": {
-        },
-        "courseA_harvester_loops2_2019": {
-        },
-        "courseA_harvester_loops2_2020": {
-        },
-        "courseA_harvester_loops2_2021": {
         },
         "courseA_harvester_loops3": {
           "courseA_harvester_loops3_b": "კოდის გასამეორებლად გადმოათრიეთ `გამეორების` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) ციკლი, შემდეგ კი მოათავსეთ მასში სასურველი ბლოკი. "
@@ -2108,16 +1830,6 @@
         },
         "courseA_harvester_loops3_2021": {
           "courseA_harvester_loops3_b": "კოდის გასამეორებლად გადმოათრიეთ `გამეორების` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> ) ციკლი, შემდეგ კი მოათავსეთ მასში სასურველი ბლოკი. "
-        },
-        "courseA_harvester_loops4": {
-        },
-        "courseA_harvester_loops42022": {
-        },
-        "courseA_harvester_loops4_2019": {
-        },
-        "courseA_harvester_loops4_2020": {
-        },
-        "courseA_harvester_loops4_2021": {
         },
         "courseA_harvester_loops5": {
           "courseA_harvester_loops5_a": "თუ გაიჭედეთ, სცადეთ ამ თავსატეხის ამოხსნა 2 ნაწილად, ერთი ნაწილი კუთხემდე, მეორე ნაწილი კი კუთხის შემდეგ."
@@ -2149,16 +1861,6 @@
         "courseA_harvester_loops5a_2021": {
           "courseA_harvester_loops5a_a": "პირველი ციკლის შემდეგ თქვენ დაგჭირდებათ კიდევ ერთი `გამეორების` ციკლის გამოყენება."
         },
-        "courseA_harvester_loops5b": {
-        },
-        "courseA_harvester_loops5b2022": {
-        },
-        "courseA_harvester_loops5b_2019": {
-        },
-        "courseA_harvester_loops5b_2020": {
-        },
-        "courseA_harvester_loops5b_2021": {
-        },
         "courseA_harvester_loops6": {
           "courseA_harvester_loops6_a": "თუ გაიჭედეთ, სცადეთ საფეხურების ქაღალდზე ჩამოწერა და განმეორებადი ნაწილების პოვნა."
         },
@@ -2173,136 +1875,6 @@
         },
         "courseA_harvester_loops6_2021": {
           "courseA_harvester_loops6_a": "თუ გაიჭედეთ, სცადეთ საფეხურების ქაღალდზე ჩამოწერა და განმეორებადი ნაწილების პოვნა."
-        },
-        "courseA_harvester_loops7": {
-        },
-        "courseA_harvester_loops72022": {
-        },
-        "courseA_harvester_loops7_2019": {
-        },
-        "courseA_harvester_loops7_2020": {
-        },
-        "courseA_harvester_loops7_2021": {
-        },
-        "courseA_harvester_loops9": {
-        },
-        "courseA_harvester_loops92022": {
-        },
-        "courseA_harvester_loops9_2019": {
-        },
-        "courseA_harvester_loops9_2020": {
-        },
-        "courseA_harvester_loops9_2021": {
-        },
-        "courseA_harvester_seq1": {
-        },
-        "courseA_harvester_seq10": {
-        },
-        "courseA_harvester_seq102022": {
-        },
-        "courseA_harvester_seq10_2019": {
-        },
-        "courseA_harvester_seq10_2020": {
-        },
-        "courseA_harvester_seq10_2021": {
-        },
-        "courseA_harvester_seq12022": {
-        },
-        "courseA_harvester_seq13": {
-        },
-        "courseA_harvester_seq132022": {
-        },
-        "courseA_harvester_seq13_2019": {
-        },
-        "courseA_harvester_seq13_2020": {
-        },
-        "courseA_harvester_seq13_2021": {
-        },
-        "courseA_harvester_seq1_2019": {
-        },
-        "courseA_harvester_seq1_2020": {
-        },
-        "courseA_harvester_seq1_2021": {
-        },
-        "courseA_harvester_seq2": {
-        },
-        "courseA_harvester_seq22022": {
-        },
-        "courseA_harvester_seq2_2019": {
-        },
-        "courseA_harvester_seq2_2020": {
-        },
-        "courseA_harvester_seq2_2021": {
-        },
-        "courseA_harvester_seq3": {
-        },
-        "courseA_harvester_seq32022": {
-        },
-        "courseA_harvester_seq3_2019": {
-        },
-        "courseA_harvester_seq3_2020": {
-        },
-        "courseA_harvester_seq3_2021": {
-        },
-        "courseA_harvester_seq4": {
-        },
-        "courseA_harvester_seq42022": {
-        },
-        "courseA_harvester_seq4_2019": {
-        },
-        "courseA_harvester_seq4_2020": {
-        },
-        "courseA_harvester_seq4_2021": {
-        },
-        "courseA_harvester_seq5": {
-        },
-        "courseA_harvester_seq52022": {
-        },
-        "courseA_harvester_seq5_2019": {
-        },
-        "courseA_harvester_seq5_2020": {
-        },
-        "courseA_harvester_seq5_2021": {
-        },
-        "courseA_harvester_seq6": {
-        },
-        "courseA_harvester_seq62022": {
-        },
-        "courseA_harvester_seq6_2019": {
-        },
-        "courseA_harvester_seq6_2020": {
-        },
-        "courseA_harvester_seq6_2021": {
-        },
-        "courseA_harvester_seq7": {
-        },
-        "courseA_harvester_seq72022": {
-        },
-        "courseA_harvester_seq7_2019": {
-        },
-        "courseA_harvester_seq7_2020": {
-        },
-        "courseA_harvester_seq7_2021": {
-        },
-        "courseA_harvester_seq8": {
-        },
-        "courseA_harvester_seq82022": {
-        },
-        "courseA_harvester_seq8_2019": {
-        },
-        "courseA_harvester_seq8_2020": {
-        },
-        "courseA_harvester_seq8_2021": {
-        },
-        "courseA_harvester_seq9": {
-        },
-        "courseA_harvester_seq92022": {
-        },
-        "courseA_harvester_seq9_2019": {
-        },
-        "courseA_harvester_seq9_2020": {
-        },
-        "courseA_harvester_seq9_2021": {
         },
         "courseA_maze_ramp22022": {
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -2379,26 +1951,6 @@
         "courseA_maze_ramp5a_2021": {
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
-        "courseA_maze_seq1": {
-        },
-        "courseA_maze_seq10": {
-        },
-        "courseA_maze_seq102022": {
-        },
-        "courseA_maze_seq10_2018": {
-        },
-        "courseA_maze_seq10_2019": {
-        },
-        "courseA_maze_seq10_2020": {
-        },
-        "courseA_maze_seq10_2021": {
-        },
-        "courseA_maze_seq10_copy": {
-        },
-        "courseA_maze_seq10_dani": {
-        },
-        "courseA_maze_seq12022": {
-        },
         "courseA_maze_seq13": {
           "courseA_maze_seq13_b": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება და კოდის გაშვება, რათა ნახოთ, რა მოხდება.",
           "courseA_maze_seq13_c": "ეს <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> ბლოკები დაგეხმარებათ გოჭთან მიახლოებაში."
@@ -2423,14 +1975,6 @@
           "courseA_maze_seq13_b": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება და კოდის გაშვება, რათა ნახოთ, რა მოხდება.",
           "courseA_maze_seq13_c": "ეს <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> ბლოკები დაგეხმარებათ გოჭთან მიახლოებაში."
         },
-        "courseA_maze_seq1_2018": {
-        },
-        "courseA_maze_seq1_2019": {
-        },
-        "courseA_maze_seq1_2020": {
-        },
-        "courseA_maze_seq1_2021": {
-        },
         "courseA_maze_seq2": {
           "courseA_maze_seq2_b": "სცადეთ, ჯერ გაუშვათ კოდი, რათა ნახოთ, სად მოხვდება ჩიტი. შემდეგ რა უნდა გააკეთოთ?"
         },
@@ -2444,31 +1988,11 @@
         "courseA_maze_seq5": {
           "courseA_maze_seq5_b": "თქვენ დაგჭირდებათ ორი სხვადასხვა მიმართულების ბლოკი."
         },
-        "courseA_maze_seq52022": {
-        },
-        "courseA_maze_seq5_2018": {
-        },
-        "courseA_maze_seq5_2019": {
-        },
-        "courseA_maze_seq5_2020": {
-        },
-        "courseA_maze_seq5_2021": {
-        },
         "courseA_maze_seq5_copy": {
           "courseA_maze_seq5_b": "თქვენ დაგჭირდებათ ორი სხვადასხვა მიმართულების ბლოკი."
         },
         "courseA_maze_seq5_dani": {
           "courseA_maze_seq5_b": "თქვენ დაგჭირდებათ ორი სხვადასხვა მიმართულების ბლოკი."
-        },
-        "courseA_maze_seq5a2022": {
-        },
-        "courseA_maze_seq5a_2018": {
-        },
-        "courseA_maze_seq5a_2019": {
-        },
-        "courseA_maze_seq5a_2020": {
-        },
-        "courseA_maze_seq5a_2021": {
         },
         "courseA_maze_seq6": {
           "courseA_maze_seq6_b": "თუ გაიჭედეთ, სცადეთ ამ თავსატეხის ამოხსნა 2 ნაწილად, ერთი ნაწილი კუთხემდე, მეორე ნაწილი კი კუთხის შემდეგ."
@@ -2493,28 +2017,6 @@
         },
         "courseA_maze_seq6_dani": {
           "courseA_maze_seq6_b": "თუ გაიჭედეთ, სცადეთ ამ თავსატეხის ამოხსნა 2 ნაწილად, ერთი ნაწილი კუთხემდე, მეორე ნაწილი კი კუთხის შემდეგ."
-        },
-        "courseA_maze_seq7": {
-        },
-        "courseA_maze_seq7_copy": {
-        },
-        "courseA_maze_seq7_dani": {
-        },
-        "courseA_maze_seq8": {
-        },
-        "courseA_maze_seq82022": {
-        },
-        "courseA_maze_seq8_2018": {
-        },
-        "courseA_maze_seq8_2019": {
-        },
-        "courseA_maze_seq8_2020": {
-        },
-        "courseA_maze_seq8_2021": {
-        },
-        "courseA_maze_seq8_copy": {
-        },
-        "courseA_maze_seq8_dani": {
         },
         "courseA_maze_seq9": {
           "courseA_maze_seq9_b": "თუ არ ხართ დარწმუნებული, თუ რა უნდა გააკეთოთ, სცადეთ \"თავიდან\" ღილაკზე დაკლიკვა და დააკვირდით, რა ხდება არასწორად.",
@@ -2592,18 +2094,6 @@
         "courseA_playLab_events3_2021": {
           "courseA_playLab_events3_b": "არ დაგავიწყდეთ, რომ პროგრამის დასრულების შემდეგ ჯორჯის დროშისკენ გადაადგილება შეგიძლიათ მარცხენა ისრის ღილაკით. როდესაც დროშა გამწვანდება, ამ დონეს დაასრულებთ!"
         },
-        "courseA_playLab_events4": {
-        },
-        "courseA_playLab_events42022": {
-        },
-        "courseA_playLab_events4_2018": {
-        },
-        "courseA_playLab_events4_2019": {
-        },
-        "courseA_playLab_events4_2020": {
-        },
-        "courseA_playLab_events4_2021": {
-        },
         "courseA_playLab_events5": {
           "courseA_playLab_events5_b": "იცოდით, რომ თუ დააწკაპებთ ღილაკის მოვლენას, შეძლებთ ამ მოვლენისათვის ახალი ღილაკის არჩევას?\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
         },
@@ -2621,18 +2111,6 @@
         },
         "courseA_playLab_events5_2021": {
           "courseA_playLab_events5_b": "იცოდით, რომ თუ დააწკაპებთ ღილაკის მოვლენას, შეძლებთ ამ მოვლენისათვის ახალი ღილაკის არჩევას?\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
-        },
-        "courseA_playLab_events6": {
-        },
-        "courseA_playLab_events62022": {
-        },
-        "courseA_playLab_events6_2018": {
-        },
-        "courseA_playLab_events6_2019": {
-        },
-        "courseA_playLab_events6_2020": {
-        },
-        "courseA_playLab_events6_2021": {
         },
         "courseA_playLab_events7": {
           "courseA_playLab_events7_a": "გამოიყენეთ ეს ბლოკი, რათა აკონტროლოთ, თუ რა მოხდება მაშინ, როდესაც მსახიობები ერთმანეთს დაეჯახებიან.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n\n<title name=\"SPRITE1\">1</title>\n<title name=\"SPRITE2\">0</title>\n</block></xml>"
@@ -4606,29 +4084,13 @@
           "courseC_PlayLab_eventsA_a": "თავსატეხის ამოსახსნელად გამოიყენეთ ბლოკები `ფონის დაყენება` და `პერსონაჟისთვის ____ სიჩქარის მინიჭება`.",
           "courseC_PlayLab_eventsA_b": "ამ თავსატეხის ამოსახსნელად თქვენ დაგჭირდებათ, სპეციალურად გამოწიოთ და სამუშაო სივრცეში ჩააგდოთ მოვლენის ბლოკი`გაშვებისას`."
         },
-        "courseC_PlayLab_eventsA_embed2022": {
-        },
-        "courseC_PlayLab_eventsA_embed_2019": {
-        },
-        "courseC_PlayLab_eventsA_embed_2020": {
-        },
-        "courseC_PlayLab_eventsA_embed_2021": {
-        },
         "courseC_PlayLab_eventsFP": {
           "idea1": "_გჭირდებათ იდეა??_\n\n**მანდ ვინ არის?** განუსაზღვრეთ პერსონაჟებს შემთხვევით სურათები, რომ ვერავინ მიხვდეს, ვინ გამოჩნდება შემდეგ.\n\n![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)",
           "idea2": "_გჭირდებათ იდეა?_\n\n**თავგადასავლის ძიება** - შეცვალეთ ფონი და შემდეგ ათქმევინეთ პერსონაჟებს, ვინ სად არის.\n\n![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)"
         },
-        "courseC_PlayLab_eventsFP2022": {
-        },
         "courseC_PlayLab_eventsFP_2018": {
           "idea1": "_გჭირდებათ იდეა??_\n\n**მანდ ვინ არის?** განუსაზღვრეთ პერსონაჟებს შემთხვევით სურათები, რომ ვერავინ მიხვდეს, ვინ გამოჩნდება შემდეგ.\n\n![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)",
           "idea2": "_გჭირდებათ იდეა?_\n\n**თავგადასავლის ძიება** - შეცვალეთ ფონი და შემდეგ ათქმევინეთ პერსონაჟებს, ვინ სად არის.\n\n![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)"
-        },
-        "courseC_PlayLab_eventsFP_2019": {
-        },
-        "courseC_PlayLab_eventsFP_2020": {
-        },
-        "courseC_PlayLab_eventsFP_2021": {
         },
         "courseC_PlayLab_events_challenge1": {
           "courseC_PlayLab_events_challenge_a": "სათამაშო სივრცეში პერსონაჟების სხვადასხვა ადგილას გადასაადგილებლად, შეგიძლიათ გამოიყენოთ ეს ბლოკი: \n<xml> <block type=\"studio_setSpritePosition\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">12</title>\n</block></xml>",
@@ -4704,14 +4166,6 @@
         "courseC_artist_loops1a_2021": {
           "courseC_artist_loops1a_a": "თავიდან ეს ბლიკი დაგჭირდებათ:\n<xml>\n<block type=\"jump_to_xy\">\n\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>",
           "courseC_artist_loops1a_b": "სტიკერის დასახატად გამოიყენეთ ეს ბლოკი!\n<xml>\n<block type=\"sticker\">\n\n<title name=\"VALUE\">Bird</title>\n</block>\n</xml>"
-        },
-        "courseC_artist_loops1b2022": {
-        },
-        "courseC_artist_loops1b_2019": {
-        },
-        "courseC_artist_loops1b_2020": {
-        },
-        "courseC_artist_loops1b_2021": {
         },
         "courseC_artist_loops2a": {
           "courseC_artist_loops2a_a": "ციკლის შიგნით თქვენ დაგჭირდებათ ახტეთ 200-მდე სიგრძეზე ზემოთ და 200-მდე სიგრძეზე ქვემოთ, შემდეგ დახატოთ ჩიტის ეტიკეტი, შემდეგ შემობრუნდეთ 30 გრადუსით.",
@@ -4836,8 +4290,6 @@
         "courseC_artist_loops7a": {
           "courseC_artist_loops7a_a": "წრე შეიცავს 360 გრადუსს. გაამრავლეთ მობრუნების გრადუსი გამეორებების რაოდენობაზე. უდრის თუ არა პასუხი 360-ს?\nშეამოწმეთ შემოთავაზებული მობრუნებები, რათა ნახოთ, როგორ მუშაობს ეს ნიმუში!"
         },
-        "courseC_artist_loops7a2022": {
-        },
         "courseC_artist_loops7a_2018": {
           "courseC_artist_loops7a_a": "წრე შეიცავს 360 გრადუსს. გაამრავლეთ მობრუნების გრადუსი გამეორებების რაოდენობაზე. უდრის თუ არა პასუხი 360-ს?\nშეამოწმეთ შემოთავაზებული მობრუნებები, რათა ნახოთ, როგორ მუშაობს ეს ნიმუში!"
         },
@@ -4881,18 +4333,6 @@
         "courseC_artist_loopsPrePre1a_2020": {
           "courseC_artist_loopsPrePre1a_a": "პირველი ბლოკი, რომელიც დაგჭირდებათ არის:\n\n![](<https://images.code.org/60e3354a2e7dd37b64833eac1e8694be-image-1499710228373.08.14 AM.png>)",
           "courseC_artist_loopsPrePre1a_b": "50 პიქსელით წინ გადასაადგილებლად გამოიყენეთ ეს ბლოკი\n\n![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)"
-        },
-        "courseC_artist_prog2": {
-        },
-        "courseC_artist_prog22022": {
-        },
-        "courseC_artist_prog2_2018": {
-        },
-        "courseC_artist_prog2_2019": {
-        },
-        "courseC_artist_prog2_2020": {
-        },
-        "courseC_artist_prog2_2021": {
         },
         "courseC_artist_prog3": {
           "courseC_artist_prog3_b": "გინდათ შეამოკლოთ კოდი? სცადეთ ამ თავსატეხში ციკლის გამოყენება."
@@ -4966,18 +4406,6 @@
           "courseC_artist_prog5_c": "სცადეთ `მობრუნების` ბლოკებზე ჩამოსაშლელი სიების გამოყენება, რათა გაიგოთ თუ რომელი კუთხე გჭირდებათ!",
           "courseC_artist_prog5_d": "ყოველი მობრუნების კუთხე უნდა იყოს 90 გრადუსი და უნდა იყოს მიმართული მარჯვნისაკენ."
         },
-        "courseC_artist_prog6": {
-        },
-        "courseC_artist_prog62022": {
-        },
-        "courseC_artist_prog6_2018": {
-        },
-        "courseC_artist_prog6_2019": {
-        },
-        "courseC_artist_prog6_2020": {
-        },
-        "courseC_artist_prog6_2021": {
-        },
         "courseC_artist_prog7": {
           "courseC_artist_prog7_c": "თქვენ შეგიძლიათ `მობრუნების` ბლოკების ჩამოსაშლელი სიების გამოყენება, რათა გაიგოთ, თუ რომელი კუთხე გჭირდებათ!",
           "courseC_artist_prog7_d": "თქვენ დაგჭირდებათ:\n\n-   წინ გადაადგილდება\n-   45 გრადუსით მარჯვნივ მობრუნება\n-   წინ გადაადგილება\n-   90 გრადუსით მარჯვნივ მობრუნება\n-   წინ გადაადგილება\n-   45 გრადუსით მარჯვნივ მობრუნება\n\nგაიმეორეთ ეს ნიმუში 2-ჯერ!",
@@ -5025,18 +4453,6 @@
         },
         "courseC_artist_prog_challenge1_2021": {
           "courseC_artist_prog_challenge1_a": "თქვენ ამის დახატვა შუაში ხაზგასმული მართკუთხედის ან ორი განსხვავებული კვადრატის სახით შეგიძლიათ!"
-        },
-        "courseC_artist_prog_challenge2a": {
-        },
-        "courseC_artist_prog_challenge2a2022": {
-        },
-        "courseC_artist_prog_challenge2a_2018": {
-        },
-        "courseC_artist_prog_challenge2a_2019": {
-        },
-        "courseC_artist_prog_challenge2a_2020": {
-        },
-        "courseC_artist_prog_challenge2a_2021": {
         },
         "courseC_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_b": "გამოიყენეთ ციკლები, რათა გეყოთ `შეგროვების` ბლოკები!"
@@ -5175,18 +4591,6 @@
         },
         "courseC_collector_prog6_2021": {
           "courseC_collector_prog6_b": "გაიჭედეთ? განძის შესაგროვებლად ეს ბილიკი სცადეთ."
-        },
-        "courseC_collector_prog7": {
-        },
-        "courseC_collector_prog72022": {
-        },
-        "courseC_collector_prog7_2018": {
-        },
-        "courseC_collector_prog7_2019": {
-        },
-        "courseC_collector_prog7_2020": {
-        },
-        "courseC_collector_prog7_2021": {
         },
         "courseC_collector_prog_challenge1": {
           "courseC_collector_prog_challenge1_a": "დამატებითი განძის შესაგროვებლად შეგიძლიათ `შეგროვების` ბრძანება უფრო ხშირად გამოიყენოთ."
@@ -5739,18 +5143,6 @@
         "courseC_maze_debugging4_2021": {
           "courseC_maze_debugging4_b": "ერთ-ერთ ბრუნს სკრატი მცდარი მიმართულებით მიჰყავს, შეგიძლიათ გამოარკვიოთ რომელს?"
         },
-        "courseC_maze_debugging5": {
-        },
-        "courseC_maze_debugging52022": {
-        },
-        "courseC_maze_debugging5_2018": {
-        },
-        "courseC_maze_debugging5_2019": {
-        },
-        "courseC_maze_debugging5_2020": {
-        },
-        "courseC_maze_debugging5_2021": {
-        },
         "courseC_maze_debugging6": {
           "courseC_maze_debugging6_b": "კოდში პირველი დეფექტის პოვნისა და არმოფხვრის შემდეგ, გააგრძელეთ კოდში შეცდომების ძიებისა და მათი აღმოფხვრის პროცესი, იმისათვის რომ იპოვოთ შემდეგი.\nიმეორეთ ეს პროგრამა მანამ სანამ პროგრამა სწორად არ იმუშავებს!"
         },
@@ -5768,18 +5160,6 @@
         },
         "courseC_maze_debugging6_2021": {
           "courseC_maze_debugging6_b": "კოდში პირველი დეფექტის პოვნისა და არმოფხვრის შემდეგ, გააგრძელეთ კოდში შეცდომების ძიებისა და მათი აღმოფხვრის პროცესი, იმისათვის რომ იპოვოთ შემდეგი.\nიმეორეთ ეს პროგრამა მანამ სანამ პროგრამა სწორად არ იმუშავებს!"
-        },
-        "courseC_maze_debugging7": {
-        },
-        "courseC_maze_debugging72022": {
-        },
-        "courseC_maze_debugging7_2018": {
-        },
-        "courseC_maze_debugging7_2019": {
-        },
-        "courseC_maze_debugging7_2020": {
-        },
-        "courseC_maze_debugging7_2021": {
         },
         "courseC_maze_debugging_challenge1": {
           "courseC_maze_debugging_challenge1_a": "მარცხნივ თუ მარჯვნივ? ეს თქვენი გადასაწყვეტია!",
@@ -5835,42 +5215,6 @@
           "courseC_maze_debugging_challenge2_b": "თუ იჭედებით, სცადეთ კოდის გამართვა. სად დაიწყო შეცდომები?",
           "courseC_maze_debugging_challenge2_c": "არსებობს ორი სხვადასხვა გზა, რომელსაც შეგიძლიათ გაჰყვეთ წინ გადაადგილებისა და მობრუნების მხოლოდ ოთხი ბლოკის გამოყენებით. თუ მოიფიქრებთ, როგორ გამოიყენოთ გამეორების ბლოკი, ის შესაძლოა მეტიც იყოს!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
         },
-        "courseC_maze_loops_challenge1a": {
-        },
-        "courseC_maze_loops_challenge1a2022": {
-        },
-        "courseC_maze_loops_challenge1a_2018": {
-        },
-        "courseC_maze_loops_challenge1a_2019": {
-        },
-        "courseC_maze_loops_challenge1a_2020": {
-        },
-        "courseC_maze_loops_challenge1a_2021": {
-        },
-        "courseC_maze_programming1": {
-        },
-        "courseC_maze_programming12022": {
-        },
-        "courseC_maze_programming1_2018": {
-        },
-        "courseC_maze_programming1_2019": {
-        },
-        "courseC_maze_programming1_2020": {
-        },
-        "courseC_maze_programming1_2021": {
-        },
-        "courseC_maze_programming2": {
-        },
-        "courseC_maze_programming22022": {
-        },
-        "courseC_maze_programming2_2018": {
-        },
-        "courseC_maze_programming2_2019": {
-        },
-        "courseC_maze_programming2_2020": {
-        },
-        "courseC_maze_programming2_2021": {
-        },
         "courseC_maze_programming3": {
           "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\nკოდის შუა ნაწილიდან ბლოკის წასაშლელად ყველა სხვა ბლოკი სამუშაო სივრცის სხვა ნაწილას გამოწიეთ.\nინსტრუმენტების პანელიდან უკან შეწიეთ ბლოკი, რომლის წაშლაც გინდათ.\nსაბოლოოდ, ყველა ბლოკი თავის ადგილზე დააბრუნეთ."
         },
@@ -5888,18 +5232,6 @@
         },
         "courseC_maze_programming3_2021": {
           "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\nკოდის შუა ნაწილიდან ბლოკის წასაშლელად ყველა სხვა ბლოკი სამუშაო სივრცის სხვა ნაწილას გამოწიეთ.\nინსტრუმენტების პანელიდან უკან შეწიეთ ბლოკი, რომლის წაშლაც გინდათ.\nსაბოლოოდ, ყველა ბლოკი თავის ადგილზე დააბრუნეთ."
-        },
-        "courseC_maze_programming4": {
-        },
-        "courseC_maze_programming42022": {
-        },
-        "courseC_maze_programming4_2018": {
-        },
-        "courseC_maze_programming4_2019": {
-        },
-        "courseC_maze_programming4_2020": {
-        },
-        "courseC_maze_programming4_2021": {
         },
         "courseC_maze_programming5": {
           "courseC_maze_programming5_b": "თავსატეხის დასასრულებლად ჩიტს ერთხელ შეხვევა სჭირდება. შეგიძლია გამოარკვიო საით?",
@@ -6365,16 +5697,6 @@
         "courseD_artist_2_2021": {
           "courseD_artist_project1_a": "გამოიყენეთ ჩამოსაშლელი მენიუ `მობრუნების` ბლოკებზე, რომ შეარჩიოთ თქვენთვის სასურველი კუთხე!"
         },
-        "courseD_artist_52022": {
-        },
-        "courseD_artist_5_2018": {
-        },
-        "courseD_artist_5_2018_2019": {
-        },
-        "courseD_artist_5_2018_2020": {
-        },
-        "courseD_artist_5_2021": {
-        },
         "courseD_artist_binary1": {
           "courseD_artist_binary1_a": "ჩაანაცვლეთ \"???\" ტექსტსის ბლოკში იმ ორობითი სურათით, რომელიც გსურთ, ნულებისა და ერთების გამოყენებით.",
           "courseD_artist_binary1_b": "მხატვარი დახატავს თეთრ სივრცეს თითოეული 1-სათვის და შავ სივრცეს თითოეული 0-ისათვის.",
@@ -6610,18 +5932,6 @@
           "courseD_artist_nestedLoops3_a": "იმისათვის რომ კვადრატის თავიდან იმ ადგილზე მოხვდეთ, სადაც მე-2 კვადრატზე მუშაობა უნდა დაიწყო, გამოიყენეთ წინ გადახტომის\\` ბლოკი. \nრა სიშორეზე უნდა გადახტეთ, თუ კვადრატები 20 პიქსელის სიმაღლისაა და ერთმანეთისგანაც 20 პიქსელით არის დაშორებული?",
           "courseD_artist_nestedLoops3_c": "დაიწყეთ `განმეორების` ციკლის გამოყენებით, რომ შექმნათ ერთი კვადრატი. შემდეგ გაიმეორეთ ის კვადრატი რვაჯერ, კვადრატებს შორის 40 პიქსელით გადაადგილებით. "
         },
-        "courseD_artist_nestedLoops4": {
-        },
-        "courseD_artist_nestedLoops42022": {
-        },
-        "courseD_artist_nestedLoops4_2018": {
-        },
-        "courseD_artist_nestedLoops4_2019": {
-        },
-        "courseD_artist_nestedLoops4_2020": {
-        },
-        "courseD_artist_nestedLoops4_2021": {
-        },
         "courseD_artist_nestedLoops5": {
           "courseD_artist_nestedLoops5_b": "წრის შესაქმნელად განმეორების ციკლი ისე უნდა დააყენოთ, რომ მან 360-ჯერ გაიმეოროს. ციკლის შიგნით გაადგილდით წინ 1 პიქსელით და მობრუნდით 1 გრადუსით."
         },
@@ -6642,8 +5952,6 @@
         },
         "courseD_artist_nestedLoops7": {
           "courseD_artist_nestedLoops7_b": "გამოიყენეთ ჩასმული ციკლი, სადაც შიდა ციკლი კვადრატის კოდია.\n\n-   გაიმეორეთ 6-ჯერ\n-   გააკეთეთ კვადრატი\n-   გადახტით წინ **50 პიქსელით**\n-   მობრუნდით **60 გრადუსით**"
-        },
-        "courseD_artist_nestedLoops72022": {
         },
         "courseD_artist_nestedLoops7_2018": {
           "courseD_artist_nestedLoops7_b": "გამოიყენეთ ჩასმული ციკლი, სადაც შიდა ციკლი კვადრატის კოდია.\n\n-   გაიმეორეთ 6-ჯერ\n-   გააკეთეთ კვადრატი\n-   გადახტით წინ **50 პიქსელით**\n-   მობრუნდით **60 გრადუსით**"
@@ -6683,8 +5991,6 @@
         "courseD_artist_nestedLoops9": {
           "courseD_artist_nestedLoops9_c": "გამოიყენეთ ორი ჩასმული ციკლი:\n\n-   გაიმეორეთ 8-ჯერ\n-   დახატეთ კვადრატი\n-   გადახტით წინ 50 პიქსელით\n-   მობრუნდით მარჯვნივ 45 პიქსელით\n-   გაიმეორეთ 8-ჯერ\n-   დახატეთ სამკუთხედ\n-   გადახტით წინ 50 პიქსელით\n-   მობრუნდით მარჯვნივ 45 პიქსელით"
         },
-        "courseD_artist_nestedLoops92022": {
-        },
         "courseD_artist_nestedLoops9_2018": {
           "courseD_artist_nestedLoops9_c": "გამოიყენეთ ორი ჩასმული ციკლი:\n\n-   გაიმეორეთ 8-ჯერ\n-   დახატეთ კვადრატი\n-   გადახტით წინ 50 პიქსელით\n-   მობრუნდით მარჯვნივ 45 პიქსელით\n-   გაიმეორეთ 8-ჯერ\n-   დახატეთ სამკუთხედ\n-   გადახტით წინ 50 პიქსელით\n-   მობრუნდით მარჯვნივ 45 პიქსელით"
         },
@@ -6696,18 +6002,6 @@
         },
         "courseD_artist_nestedLoops9_2021": {
           "courseD_artist_nestedLoops9_c": "გამოიყენეთ ორი ჩასმული ციკლი:\n\n-   გაიმეორეთ 8-ჯერ\n-   დახატეთ კვადრატი\n-   გადახტით წინ 50 პიქსელით\n-   მობრუნდით მარჯვნივ 45 პიქსელით\n-   გაიმეორეთ 8-ჯერ\n-   დახატეთ სამკუთხედ\n-   გადახტით წინ 50 პიქსელით\n-   მობრუნდით მარჯვნივ 45 პიქსელით"
-        },
-        "courseD_artist_nestedLoopsFP": {
-        },
-        "courseD_artist_nestedLoopsFP2022": {
-        },
-        "courseD_artist_nestedLoopsFP_2018": {
-        },
-        "courseD_artist_nestedLoopsFP_2019": {
-        },
-        "courseD_artist_nestedLoopsFP_2020": {
-        },
-        "courseD_artist_nestedLoopsFP_2021": {
         },
         "courseD_artist_nestedLoops_challenge1": {
           "courseD_artist_nestedLoops_challenge1_a": "დაიწყეთ ჩასმული ციკლის შექმნით, რათა დახატოთ ოთხი რვაკუთხედი. მობრუნდით 45 გრადუსით რომ გააკეთოთ რვაკუთხედი. გადახტით და მობრუნდით 90 გრადუსით თითოეულის შემდეგ.",
@@ -6994,22 +6288,6 @@
           "courseD_artist_binary8_b": "პირველ რიგში სცადეთ კოდის გაშვება, რომ ნახოთ, თუ რასთან გაქვთ საქმე.",
           "courseD_artist_binary8_c": "არ შეუშინდეთ შეცდომის დაშვებას! სცადეთ ორობითად დაწერა და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე უკეთ გაიგებთ, რა ხდება."
         },
-        "courseD_bee_conditionals1_predict1": {
-        },
-        "courseD_bee_conditionals1_predict12022": {
-        },
-        "courseD_bee_conditionals1_predict1_2018": {
-        },
-        "courseD_bee_conditionals1_predict1_2019": {
-        },
-        "courseD_bee_conditionals1_predict1_2020": {
-        },
-        "courseD_bee_conditionals1_predict1_2021": {
-        },
-        "courseD_bee_conditionals1_predict1_copy": {
-        },
-        "courseD_bee_conditionals1_predict1_dani": {
-        },
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_b": "ამ ლაბირინთის გასავლელად თქვენ შეგიძლიათ `გამეორების` ციკლის ან `სანამ წინ გზა არის` ბლოკების გამოყენება.",
           "courseD_bee_conditionals2_c": "თქვენ არ გიწევთ ღრუბლებში ფიჭების შემოწმება, იქ მხოლოდ ყვავილები ან ცარიელი სივრცეებია."
@@ -7069,16 +6347,8 @@
         "courseD_bee_conditionals4": {
           "courseD_bee_conditionals4_c": "<xml><block type=\"maze_untilBlocked\"/></xml> ბლოკის გამოყენებით, თქვენ უნდა იმოძრაოთ წინ და შეამოწმოთ, არის თუ არა სადმე ყვავილი. თუ იქ ყვავილია, რა უნდა გააკეთოს ფუტკარმა?"
         },
-        "courseD_bee_conditionals42022": {
-        },
         "courseD_bee_conditionals4_2018": {
           "courseD_bee_conditionals4_c": "<xml><block type=\"maze_untilBlocked\"/></xml> ბლოკის გამოყენებით, თქვენ უნდა იმოძრაოთ წინ და შეამოწმოთ, არის თუ არა სადმე ყვავილი. თუ იქ ყვავილია, რა უნდა გააკეთოს ფუტკარმა?"
-        },
-        "courseD_bee_conditionals4_2019": {
-        },
-        "courseD_bee_conditionals4_2020": {
-        },
-        "courseD_bee_conditionals4_2021": {
         },
         "courseD_bee_conditionals4_copy": {
           "courseD_bee_conditionals4_c": "<xml><block type=\"maze_untilBlocked\"/></xml> ბლოკის გამოყენებით, თქვენ უნდა იმოძრაოთ წინ და შეამოწმოთ, არის თუ არა სადმე ყვავილი. თუ იქ ყვავილია, რა უნდა გააკეთოს ფუტკარმა?"
@@ -7091,18 +6361,10 @@
           "courseD_bee_conditionals5_b": "`სანამ წინ არის გზა` ბლოკის შიგნით თქვენ მოგიწევთ წინ მოძრაობა და ყვავილის არსებობის შემოწმება. როგორ შეამოწმებთ, არის თუ არა წინ ყვავილი? რას გააკეთებთ, თუ ყვავილი არის?",
           "courseD_bee_conditionals5_c": "მართკუთხედს აქვს 3 გვერდი ყვავილებით, ამიტომ კოდი უნდა `განმეორდეს 3-ჯერ`. ყოველი გამეორებისას ფუტკარმა უნდა გააგრძელოს გზაზე მოძრაობა, `სანამ წინ გზა არსებობს`. გზაზე მოძრაობის გასაგრძელებლად, ფუტკარმა უნდა `იმოძრაოს წინ`. გზაში ფუტკარმა უნდა შეამოწმოს ყვავილის არსებობა. `თუ იქ ყვავილია`, ფუტკარმა უნდა `შეაგროვოს ნექტარი`."
         },
-        "courseD_bee_conditionals52022": {
-        },
         "courseD_bee_conditionals5_2018": {
           "courseD_bee_conditionals5_a": "განიხილეთ ამ მართკუთხა გზის ყოველი გვერდი, როგორც ცალკე გზა. შექმენით ჩასმული ციკლი გარედან `გამეორების` ბლოკით და შიგნიდან `სანამ წინ გზა არის` ციკლით. რამდენი გზის გავლა მოუწევს ფუტკარს, თუ ფუტკარმა უნდა იბზუილოს ყოველ ყვავილიან მხარეს?",
           "courseD_bee_conditionals5_b": "`სანამ წინ არის გზა` ბლოკის შიგნით თქვენ მოგიწევთ წინ მოძრაობა და ყვავილის არსებობის შემოწმება. როგორ შეამოწმებთ, არის თუ არა წინ ყვავილი? რას გააკეთებთ, თუ ყვავილი არის?",
           "courseD_bee_conditionals5_c": "მართკუთხედს აქვს 3 გვერდი ყვავილებით, ამიტომ კოდი უნდა `განმეორდეს 3-ჯერ`. ყოველი გამეორებისას ფუტკარმა უნდა გააგრძელოს გზაზე მოძრაობა, `სანამ წინ გზა არსებობს`. გზაზე მოძრაობის გასაგრძელებლად, ფუტკარმა უნდა `იმოძრაოს წინ`. გზაში ფუტკარმა უნდა შეამოწმოს ყვავილის არსებობა. `თუ იქ ყვავილია`, ფუტკარმა უნდა `შეაგროვოს ნექტარი`."
-        },
-        "courseD_bee_conditionals5_2019": {
-        },
-        "courseD_bee_conditionals5_2020": {
-        },
-        "courseD_bee_conditionals5_2021": {
         },
         "courseD_bee_conditionals5_copy": {
           "courseD_bee_conditionals5_a": "განიხილეთ ამ მართკუთხა გზის ყოველი გვერდი, როგორც ცალკე გზა. შექმენით ჩასმული ციკლი გარედან `გამეორების` ბლოკით და შიგნიდან `სანამ წინ გზა არის` ციკლით. რამდენი გზის გავლა მოუწევს ფუტკარს, თუ ფუტკარმა უნდა იბზუილოს ყოველ ყვავილიან მხარეს?",
@@ -7155,18 +6417,6 @@
         },
         "courseD_bee_conditionals7_2021": {
           "courseD_bee_conditionals7_b": "თუ ღრუბლის ქვეშ ყვავილი არაა, იქ ფიჭაა, ამიტომ თქვენ არ მოგიწევთ ცარიელი ადგილისთვის კოდის მოფიქრება."
-        },
-        "courseD_bee_conditionals7_predict2": {
-        },
-        "courseD_bee_conditionals7_predict22022": {
-        },
-        "courseD_bee_conditionals7_predict2_2018": {
-        },
-        "courseD_bee_conditionals7_predict2_2019": {
-        },
-        "courseD_bee_conditionals7_predict2_2020": {
-        },
-        "courseD_bee_conditionals7_predict2_2021": {
         },
         "courseD_bee_conditionals8": {
           "courseD_bee_conditionals8_a": "**გახსოვდეთ:**ეს თავსატეხი ყოველ გაშვებაზე იცვლება.\n\nთქვენ დაგჭირდებათ პირობითი ბლოკის (`თუ` ან `თუ/სხვაგვარად`) გამოყენება ამ გამოწვევის დასაძლევად.",
@@ -7305,18 +6555,6 @@
         "courseD_bee_nestedLoops2_2021": {
           "courseD_bee_nestedLoops2_b": "თუ არ შეგიძლიათ გაარკვიოთ, სად უნდა ჩასვათ ციკლი, სცადეთ ნაწილ-ნაწილ დაწეროთ ამოხსნა და მოძებნოთ გამეორებადი კოდი.",
           "courseD_bee_nestedLoops2_c": "გახსოვდეთ, გამეორების ციკლში შეგიძლიათ მოათავსოთ ერთზე მეტი ბლოკი."
-        },
-        "courseD_bee_nestedLoops7": {
-        },
-        "courseD_bee_nestedLoops72022": {
-        },
-        "courseD_bee_nestedLoops7_2018": {
-        },
-        "courseD_bee_nestedLoops7_2019": {
-        },
-        "courseD_bee_nestedLoops7_2020": {
-        },
-        "courseD_bee_nestedLoops7_2021": {
         },
         "courseD_bounce_events10s2022": {
           "courseD_bounce_events10s_a": "თქვენს კოდში უნდა იყოს ეს ორივე მოვლენა:\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">მოქნევა</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">სტვენა</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next>\\</block</xml>"
@@ -7461,8 +6699,6 @@
         "courseD_collector_debugging1": {
           "courseD_collector_debugging1_c": "არ დაგავიწყდეთ `შეგროვების` ბლოკის გამოყენება განძთან მისვლის შემდეგ, რათა შეაგროვოთ ის."
         },
-        "courseD_collector_debugging10_predict1": {
-        },
         "courseD_collector_debugging1a2022": {
           "courseD_collector_debugging1_c": "არ დაგავიწყდეთ `შეგროვების` ბლოკის გამოყენება განძთან მისვლის შემდეგ, რათა შეაგროვოთ ის."
         },
@@ -7517,18 +6753,6 @@
         "courseD_collector_debugging4": {
           "courseD_collector_debugging4_c": "ამ ციკლს მხოლოდ ერთი ბლოკი აკლია. შეგილიათ მიხვდეთ, რომელი?"
         },
-        "courseD_collector_debugging4a2022": {
-        },
-        "courseD_collector_debugging4a_2018": {
-        },
-        "courseD_collector_debugging4a_2019": {
-        },
-        "courseD_collector_debugging4a_2020": {
-        },
-        "courseD_collector_debugging4a_2021": {
-        },
-        "courseD_collector_debugging5": {
-        },
         "courseD_collector_debugging5a2022": {
           "courseD_collector_debugging5a_a": "რა აკეთებს?\n\nრას უნდა აკეთებდეს?\n\nრას გეუბნებათ ეს?",
           "courseD_collector_debugging5a_b": "როდესაც შეაგროვებთ განძეულობის პირველ რიგს, რა იქნება დარჩენილი შესასრულებლად თქვენს კოდში?"
@@ -7566,10 +6790,6 @@
         },
         "courseD_collector_debugging6a_2021": {
           "courseD_collector_debugging6_b": "როგორც ჩანს, ყველა საჭირო ბლოკი უკვე სამუშაო სივრცეშია. თუ ამ ყველაფერმა დაგაბნიათ, სცადეთ \"თავიდან დაწყების\" ღილაკზე დაწკაპება."
-        },
-        "courseD_collector_debugging8": {
-        },
-        "courseD_collector_debugging9": {
         },
         "courseD_collector_debugging_challenge2": {
           "courseD_collector_debugging_challenge2_a": "ყურადღება გაამახვილეთ პირველი ორი გროვიდან ორი ძვირფასი ქვის შეგროვებაზე.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nგამოიყენეთ ეს ბლოკები.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">მოძრაობაწინ</title>\n\n                  </block>\n                  \n\n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
@@ -7629,18 +6849,6 @@
           "courseD_collector_ramp9_a": "დაიწყეთ ლორელის პირველ განძთან მიყვანით და განძის შეგროვებით. შეგიძლიათ გაიმეოროთ ეს მიმდევრობა მეორე გროვის ასაღებად?",
           "courseD_collector_ramp9_b": "თუ საკუთარი კოდის გამარტივება გსურთ, შეგიძლიათ ჩასვათ ერთი ციკლი მეორეში! ამას ეწოდება **ჩასმული ციკლი**."
         },
-        "courseD_farmer_condLoops1": {
-        },
-        "courseD_farmer_condLoops12022": {
-        },
-        "courseD_farmer_condLoops1_2018": {
-        },
-        "courseD_farmer_condLoops1_2019": {
-        },
-        "courseD_farmer_condLoops1_2020": {
-        },
-        "courseD_farmer_condLoops1_2021": {
-        },
         "courseD_farmer_condLoops2": {
           "courseD_farmer_condLoops2_c": "თქვენი `თუ` ბრძანება შეიძლება ასე გამოიყურებოდეს:\n\n\\-თუ სიმინდია\n\\-აიღე სიმინდი\n\\-სხვაგვარად\n\\-თუ სალათია\n\\\\t აიღე სალათი\n\nთუ იქ არაფერია, არაფერსაც არ აიღებთ!"
         },
@@ -7658,18 +6866,6 @@
         },
         "courseD_farmer_condLoops2_2021": {
           "courseD_farmer_condLoops2_c": "თქვენი `თუ` ბრძანება შეიძლება ასე გამოიყურებოდეს:\n\n\\-თუ სიმინდია\n\\-აიღე სიმინდი\n\\-სხვაგვარად\n\\-თუ სალათია\n\\\\t აიღე სალათი\n\nთუ იქ არაფერია, არაფერსაც არ აიღებთ!"
-        },
-        "courseD_farmer_condLoops3": {
-        },
-        "courseD_farmer_condLoops32022": {
-        },
-        "courseD_farmer_condLoops3_2018": {
-        },
-        "courseD_farmer_condLoops3_2019": {
-        },
-        "courseD_farmer_condLoops3_2020": {
-        },
-        "courseD_farmer_condLoops3_2021": {
         },
         "courseD_farmer_condLoops4": {
           "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "`სანამ` ციკლი მიხედავს ცარიელ სივრცეებსაც! იქიდან გამომდინარე, რომ სალათი არ არის, ის არ შეაგროვებს მას და კოდი გაგრძლედება.",
@@ -7717,30 +6913,6 @@
         "courseD_farmer_condLoops5_2021": {
           "courseD_farmer_condLoops5_a": "ეს ახალი ციკლია: `გამეორება, სანამ გოგრაა`. შეგიძლიათ მიხვდეთ, თუ როგორ უნდა გამოიყენოთ ეს თავსატეხში?",
           "courseD_farmer_condLoops5_b": "ყოველ ადგილას შეიძლება იყოს ერთზე მეტი სიმინდი ან სალათი. გამოიყენეთ `სანამ` ციკლი, რათა შეაგროვოთ ყველა მათგანი!"
-        },
-        "courseD_farmer_condLoops6": {
-        },
-        "courseD_farmer_condLoops62022": {
-        },
-        "courseD_farmer_condLoops6_2018": {
-        },
-        "courseD_farmer_condLoops6_2019": {
-        },
-        "courseD_farmer_condLoops6_2020": {
-        },
-        "courseD_farmer_condLoops6_2021": {
-        },
-        "courseD_farmer_condLoops7": {
-        },
-        "courseD_farmer_condLoops72022": {
-        },
-        "courseD_farmer_condLoops7_2018": {
-        },
-        "courseD_farmer_condLoops7_2019": {
-        },
-        "courseD_farmer_condLoops7_2020": {
-        },
-        "courseD_farmer_condLoops7_2021": {
         },
         "courseD_farmer_condLoops_challenge1": {
           "courseD_farmer_condLoops_challenge1_a": "\"ნაბიჯის\" ღილაკი შეიძლება ძალიან გამოგადგეთ ამ გამოწვევასთან გასამკლავებლად.",
@@ -7939,18 +7111,6 @@
         "courseD_farmer_while7_2021": {
           "courseD_farmer_conditionals8_b": "`სანამ წინ გზაა` ციკლის გამეორების ციკლში განლაგება დაგეხმარებათ ამ თავსატეხის ამოხსნაში.",
           "courseD_farmer_conditionals8_c": "რა უნდა გააკეთოთ ყოველი გზის ბოლოს?"
-        },
-        "courseD_farmer_while8": {
-        },
-        "courseD_farmer_while82022": {
-        },
-        "courseD_farmer_while8_2018": {
-        },
-        "courseD_farmer_while8_2019": {
-        },
-        "courseD_farmer_while8_2020": {
-        },
-        "courseD_farmer_while8_2021": {
         },
         "courseD_farmer_while_challenge1": {
           "courseD_farmer_conditionals8_c": "ამის ამოხსნა შესაძლებელია `გამეორების` ციკლების გამოყენების გარეშე. ამისთვის თქვენ დაგჭირდებათ ოთხი `სანამ` ციკლის გამოყენება.",
@@ -8244,18 +7404,6 @@
           "courseD_maze_nestedLoops3_b": "თუ არ შეგიძლიათ გაარკვიოთ, სად უნდა ჩასვათ ციკლი, სცადეთ ნაწილ-ნაწილ დაწეროთ ამოხსნა და მოძებნოთ გამეორებადი კოდი.",
           "courseD_maze_nestedLoops3_c": "სცადეთ კოდის დაწერა სწორი გზისთვის და მობრუნებისთვის. შეგიძლიათ გაიმეოროთ ეს მზესუმზირასთან მისასვლელად?"
         },
-        "courseD_maze_nestedLoops4": {
-        },
-        "courseD_maze_nestedLoops42022": {
-        },
-        "courseD_maze_nestedLoops4_2018": {
-        },
-        "courseD_maze_nestedLoops4_2019": {
-        },
-        "courseD_maze_nestedLoops4_2020": {
-        },
-        "courseD_maze_nestedLoops4_2021": {
-        },
         "courseD_maze_nestedLoops5": {
           "courseD_maze_nestedLoops5_b": "თუ არ შეგიძლიათ გაარკვიოთ, სად უნდა ჩასვათ ციკლი, სცადეთ ნაწილ-ნაწილ დაწეროთ ამოხსნა და მოძებნოთ გამეორებადი კოდი."
         },
@@ -8273,18 +7421,6 @@
         },
         "courseD_maze_nestedLoops5_2021": {
           "courseD_maze_nestedLoops5_b": "თუ არ შეგიძლიათ გაარკვიოთ, სად უნდა ჩასვათ ციკლი, სცადეთ ნაწილ-ნაწილ დაწეროთ ამოხსნა და მოძებნოთ გამეორებადი კოდი."
-        },
-        "courseD_maze_nestedLoops6": {
-        },
-        "courseD_maze_nestedLoops62022": {
-        },
-        "courseD_maze_nestedLoops6_2018": {
-        },
-        "courseD_maze_nestedLoops6_2019": {
-        },
-        "courseD_maze_nestedLoops6_2020": {
-        },
-        "courseD_maze_nestedLoops6_2021": {
         },
         "courseD_maze_ramp1": {
           "courseC_maze_programming1_b": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი არ გქონდეთ."
@@ -8321,22 +7457,6 @@
         },
         "courseD_maze_ramp2_2021": {
           "courseC_maze_programming2_b": "დარწმუნდით, რომ დაკლიკვა ხდება სამივე ბლოკზე და ის დაკავშირებულია `როცა გაიშვება` ბლოკთან."
-        },
-        "courseD_maze_ramp3": {
-        },
-        "courseD_maze_ramp32022": {
-        },
-        "courseD_maze_ramp3_2018": {
-        },
-        "courseD_maze_ramp3_2019": {
-        },
-        "courseD_maze_ramp3_2020": {
-        },
-        "courseD_maze_ramp3_2021": {
-        },
-        "courseD_maze_ramp4": {
-        },
-        "courseD_maze_ramp4_2018": {
         },
         "courseD_maze_ramp4_2019": {
           "courseC_maze_programming4_a": "ციყვის ხედვის არედან შეგიძლიათ შეუხვიოთ მარჯვნივ ან მარცხნივ. თუ მარჯვენა მიმართულების პირისპირ დგახართ, მარჯვნივ შეხვევა ქვემოთ მიგათითებინებთ.",
@@ -8585,37 +7705,17 @@
           "courseD_playLab_cond1_b": "გამოიყენეთ ჩამოსაშლელი მენიუები `როდესაც ისარი` და `მსახიობის გადაადგილება` ბლოკებზე, მათი მოძრაობის მიმართულების შესაცვლელად.",
           "courseD_playLab_cond1_c": "არ დაგავიწყდეთ ცალფეხას დრაკონთან მიყვანა, როდესაც მთელ კოდს დაწერთ!"
         },
-        "courseD_playLab_cond2": {
-        },
-        "courseD_playLab_cond2_2018": {
-        },
-        "courseD_playLab_cond3": {
-        },
-        "courseD_playLab_cond3_2018": {
-        },
         "courseD_playLab_cond3a": {
           "courseD_playLab_cond3_c": "-   `თუ` დრაკონი ბედნიერია \n    -   `ქულის დამატება`\n    -   `ქულის დამატება`  \n\n-   `სხვა შემთხვევაში` `ქულის დამატება`"
         },
         "courseD_playLab_cond3a_2018": {
           "courseD_playLab_cond3_c": "-   `თუ` დრაკონი ბედნიერია \n    -   `ქულის დამატება`\n    -   `ქულის დამატება`  \n\n-   `სხვა შემთხვევაში` `ქულის დამატება`"
         },
-        "courseD_playLab_cond4": {
-        },
-        "courseD_playLab_cond4_2018": {
-        },
         "courseD_playLab_cond5": {
           "courseD_playLab_cond5_b": "შეგიძლიათ გქონდეთ ერთზე მეტი `მუდმივად გამეორების` ციკლი სამუშაო სივრცეში."
         },
         "courseD_playLab_cond5_2018": {
           "courseD_playLab_cond5_b": "შეგიძლიათ გქონდეთ ერთზე მეტი `მუდმივად გამეორების` ციკლი სამუშაო სივრცეში."
-        },
-        "courseD_playLab_cond6": {
-        },
-        "courseD_playLab_cond6_2018": {
-        },
-        "courseD_playLab_cond6a": {
-        },
-        "courseD_playLab_cond6a_2018": {
         },
         "courseD_scrat_ramp1": {
           "courseC_maze_programming1_b": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება, კოდის გაშვება და ნახეთ, რა მოხდება, თუნდაც თავსატეხი ბოლომდე ამოხსნილი არ გქონდეთ."
@@ -8634,8 +7734,6 @@
         "courseD_scrat_ramp5": {
           "courseC_maze_programming5_b": "რამდენად შორს უნდა გადაადგილდეთ კუთხემდე მისაღწევად?",
           "courseC_maze_programming5_c": "ღორამდე მისაღწევად საჭიროა კუთხესთან მარცხნივ მოხვევა."
-        },
-        "courseD_scrat_ramp6": {
         },
         "courseD_scrat_ramp7": {
           "courseD_scrat_programming6_a": "ამ თავსატეხის ამოსახსნელად ორი ტიპის გზა არსებობს!",
@@ -8804,18 +7902,6 @@
         "courseE_artist_functions6": {
           "grade4_artist_functions_windows0_c": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე უკეთ მიხვდებით, რა ხდება."
         },
-        "courseE_artist_functions7": {
-        },
-        "courseE_artist_functions72022": {
-        },
-        "courseE_artist_functions7_2018": {
-        },
-        "courseE_artist_functions7_2019": {
-        },
-        "courseE_artist_functions7_2020": {
-        },
-        "courseE_artist_functions7_2021": {
-        },
         "courseE_artist_functions8": {
           "courseD_artist_functions8_d": "კვადრატების ხაზის გასაკეთებლად,\n\n-   გაიმეორეთ 3-ჯერ\n-   დახატეთ კვადრატის **50 პიქსელი** სიგრძის გვერდებით\n-   გადახტით წინ **100 პიქსელით**",
           "courseD_artist_functions8_f": "თქვენ გჭირდებათ მხოლოდ ერთი `წინ გადაადგილების` ბლოკი, მაგრამ ამის გარდა, დაგჭირდებათ რამდენიმე `წინ გადახტომის` და/ან `უკან გადახტომის` ბლოკი!",
@@ -8845,26 +7931,6 @@
           "courseD_artist_functions8_d": "კვადრატების ხაზის გასაკეთებლად,\n\n-   გაიმეორეთ 3-ჯერ\n-   დახატეთ კვადრატის **50 პიქსელი** სიგრძის გვერდებით\n-   გადახტით წინ **100 პიქსელით**",
           "courseD_artist_functions8_f": "თქვენ გჭირდებათ მხოლოდ ერთი `წინ გადაადგილების` ბლოკი, მაგრამ ამის გარდა, დაგჭირდებათ რამდენიმე `წინ გადახტომის` და/ან `უკან გადახტომის` ბლოკი!",
           "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-        },
-        "courseE_artist_functions8b2022": {
-        },
-        "courseE_artist_functions8b_2018": {
-        },
-        "courseE_artist_functions8b_2019": {
-        },
-        "courseE_artist_functions8b_2020": {
-        },
-        "courseE_artist_functions8b_2021": {
-        },
-        "courseE_artist_functions8c2022": {
-        },
-        "courseE_artist_functions8c_2018": {
-        },
-        "courseE_artist_functions8c_2019": {
-        },
-        "courseE_artist_functions8c_2020": {
-        },
-        "courseE_artist_functions8c_2021": {
         },
         "courseE_artist_functions9": {
           "courseD_artist_functions9_c": "სამკუთხედების მწკრივის დასახაზად:\n\n-   4-ჯერ გამეორება\n-   სამკუთხედის დახატვა\n-   50 პიქსელით წინ გადახტომა",
@@ -9168,16 +8234,6 @@
           "courseE_farmer_functions3c_a": "რომელი მიმდევრობა მეორდება ხშირად ამ პროგრამაში? შეგიძლიათ გადმოათრიოთ ეს ბლოკები ფუნქციაში?",
           "courseE_farmer_functions3c_b": "არ დაგავიწყდეთ თქვენი ფუნქციის გამოძახება მთავარ პროგრამაში, როდესაც ამოიღებთ ბლოკებს."
         },
-        "courseE_farmer_functions3c12022": {
-        },
-        "courseE_farmer_functions3c1_2018": {
-        },
-        "courseE_farmer_functions3c1_2019": {
-        },
-        "courseE_farmer_functions3c1_2020": {
-        },
-        "courseE_farmer_functions3c1_2021": {
-        },
         "courseE_farmer_functions4b": {
           "courseE_farmer_functions4b_a": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ ბლოკების დამატება და კოდის გაშვება, თუნდაც ჯერ ამოხსნილი არ გქონდეთ თავსატეხი. ასე უკეთ მიხვდებით, რა ხდება.",
           "courseE_farmer_functions4b_b": "არ დაგავიწყდეთ მობრუნება ყოველი გზის გავლის შემდეგ.",
@@ -9192,45 +8248,15 @@
           "courseE_farmer_functions6c_b": "გამოგადგებათ თუ არა `თუ/სხვაგვარად` ბლოკი იმის შესამოწმებლად, არის თუ არა სალათის ფურცლები ადგილზე?",
           "courseE_farmer_functions6c_c": "არ დაივიწყოთ სიმინდის შემოწმების გაგრძელება!"
         },
-        "courseE_farmer_functions7a12022": {
-        },
-        "courseE_farmer_functions7a1_2018": {
-        },
-        "courseE_farmer_functions7a1_2019": {
-        },
-        "courseE_farmer_functions7a1_2020": {
-        },
-        "courseE_farmer_functions7a1_2021": {
-        },
         "courseE_farmer_functions7b": {
           "courseE_farmer_functions7b_a": "აქ ფუნქცია არ გჭირდებათ, მაგრამ შეგიძლიათ გამოიყენოთ, თუ დაგეხმარებათ!",
           "courseE_farmer_functions7b_b": "გამოიყენეთ `თუ/მაშინ` დებულება, რომ შეამოწმოთ მოსავალი, შემდეგ მობრუნდით იქიდან გამომდინარე, თუ რომელ მოსავალს იპოვით.",
           "courseE_farmer_functions7b_c": "`გამეორება გოგრამდე` ციკლი დაგეხმარებათ მთლიანი ლაბირინთის გასავლელად."
         },
-        "courseE_farmer_functions8a12022": {
-        },
-        "courseE_farmer_functions8a1_2018": {
-        },
-        "courseE_farmer_functions8a1_2019": {
-        },
-        "courseE_farmer_functions8a1_2020": {
-        },
-        "courseE_farmer_functions8a1_2021": {
-        },
         "courseE_farmer_functions8b": {
           "courseE_farmer_functions8b_a": "სცადეთ მოცემული კოდის გაშვება, რომ ნახოთ, თუ რას აკეთებს ის. რა გჭირდებათ ამის შემდეგ?",
           "courseE_farmer_functions8b_b": "ჩააგდეთ ყველა დასაწყები ბლოკი ფუნქციაში, რომ მათი გამოყენება ერთზე მეტჯერ შეძლოთ.",
           "courseE_farmer_functions8b_c": "რამდენჯერ გჭირდებათ ფუნქციის გამოძახება?"
-        },
-        "courseE_farmer_functions9a12022": {
-        },
-        "courseE_farmer_functions9a1_2018": {
-        },
-        "courseE_farmer_functions9a1_2019": {
-        },
-        "courseE_farmer_functions9a1_2020": {
-        },
-        "courseE_farmer_functions9a1_2021": {
         },
         "courseE_farmer_functions9b": {
           "courseE_farmer_functions9b_a": "შეგიძლიათ გამოიყენოთ ჩასმული `თუ` და `თუ/სხვაგვარად` დებულებები გზაზე გადასაადგილებლად?",
@@ -9408,30 +8434,6 @@
         },
         "courseE_playLab_scaffold5": {
           "courseE_playLab_scaffold5_a": "ამ დონის დასასრულებლად უნდა მოიგოთ, ან წააგოთ. გამოიყენეთ `თამაშის მოგებულად დასრულება` ან `თამაშის წაგებულად დასრულება` ბლოკი დასასრულებლად."
-        },
-        "courseF_artist_for1": {
-        },
-        "courseF_artist_for10": {
-        },
-        "courseF_artist_for102022": {
-        },
-        "courseF_artist_for10_2018": {
-        },
-        "courseF_artist_for10_2019": {
-        },
-        "courseF_artist_for10_2020": {
-        },
-        "courseF_artist_for10_2021": {
-        },
-        "courseF_artist_for12022": {
-        },
-        "courseF_artist_for1_2018": {
-        },
-        "courseF_artist_for1_2019": {
-        },
-        "courseF_artist_for1_2020": {
-        },
-        "courseF_artist_for1_2021": {
         },
         "courseF_artist_for2": {
           "courseF_artist_for2_b": "არ დაგავიწყდეთ 10-ის ტოლი ბიჯით დათვლა თქვენს ციკლში.",
@@ -9661,23 +8663,11 @@
           "courseF_artist_for_challenge2_c": "`for ციკლი` იზდება 5-დან 250-მდე 2-ის ტოლი ბიჯით. ",
           "courseF_artist_for_challenge2_d": "**ამოხსნა:**\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_width\" inline=\"false\">\n<value name=\"WIDTH\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<next>\n<block type=\"controls_for_counter\" inline=\"true\">\n<mutation counter=\"counter\"></mutation>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">5</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"math_number\">\n<title name=\"NUM\">250</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n<value name=\"COLOUR\">\n<block type=\"colour_rgb\" inline=\"false\">\n<value name=\"RED\">\n<block type=\"math_number\">\n<title name=\"NUM\">255</title>\n</block>\n</value>\n<value name=\"GREEN\">\n<block type=\"variables_get\">\n<title name=\"VAR\">მთვლელი</title>\n</block>\n</value>\n<value name=\"BLUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">MINUS</title>\n<value name=\"A\">\n<block type=\"math_number\">\n<title name=\"NUM\">255</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"variables_get\">\n<title name=\"VAR\">მთვლელი</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</value>\n<next>\n<block type=\"draw_move\" inline=\"true\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n<value name=\"VALUE\">\n<block type=\"variables_get\">\n<title name=\"VAR\">მთვლელი</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">მობრუნებამარჯვნივ</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">80</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
         },
-        "courseF_artist_fwp1": {
-        },
-        "courseF_artist_fwp2": {
-        },
-        "courseF_artist_fwp3": {
-        },
         "courseF_artist_fwp4": {
           "courseF_artist_fwp4_c": "ფიგურების დასახატად მოგიწევთ თქვენი ფუნქციის სამჯერ გამოძახება."
         },
         "courseF_artist_fwp5": {
           "courseF_artist_fwp5_c": "თქვენ მგიწევთ ფუნქციის ოდნავ დარედაქტირება, ვინაიდან თქვენი წინა ფუნქცია აბრუნებდა მხატვარს მარჯვნივ ყოველი გვერდის შემდეგ, ხოლო ეს სურათი უნდა იყოს შებრუნებული მარცხნივ."
-        },
-        "courseF_artist_fwp6": {
-        },
-        "courseF_artist_fwp7": {
-        },
-        "courseF_artist_fwp8": {
         },
         "courseF_artist_fwp9": {
           "courseF_artist_fwp9_a": "სცადეთ ამ ნახატებიდან ერთ-ერთი:\n![](<https://images.code.org/eae6d52956c2bc06b90db3693037df36-image-1493739069435.9.13 hints.png>)"
@@ -9893,8 +8883,6 @@
         "courseF_artist_variablesFP": {
           "courseF_artist_variablesFP_a": "სცადეთ ამ ნახატებიდან ერთ-ერთი:\n![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png>)"
         },
-        "courseF_artist_variablesFP2022": {
-        },
         "courseF_artist_variablesFP_2018": {
           "courseF_artist_variablesFP_a": "სცადეთ ამ ნახატებიდან ერთ-ერთი:\n![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png>)"
         },
@@ -9903,8 +8891,6 @@
         },
         "courseF_artist_variablesFP_2020": {
           "courseF_artist_variablesFP_a": "სცადეთ ამ ნახატებიდან ერთ-ერთი:\n![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png>)"
-        },
-        "courseF_artist_variablesFP_2021": {
         },
         "courseF_artist_variables_challenge1": {
           "courseF_artist_variables_challenge1_a": "ყოველი ვერტიკალური ხაზის სიგრძეა `10`. ყოველი ჰორიზონტალური ხაზის სიგრძე უნდა იყოს `სიგრძე`.",
@@ -10000,18 +8986,6 @@
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_c": "ამ თავსატეხში, პირველი ყვავილების მიმდევრობა შედგება **14** ყვავილისგან, ხოლო მეორე **10** ყვავილისგან, მესამე შედგება **6** ყვავილისგან, მეოთხე კი **2**-სგან.\n\nამ ნახატში, **7** წითელი კვადრატია, **5** ნარინჯისფერი, **3** მწვანე და **1** ლურჯი ბლოკი.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nრა აქვთ საერთო ამ რიცხვებს?"
         },
-        "courseF_bee_for11": {
-        },
-        "courseF_bee_for112022": {
-        },
-        "courseF_bee_for11_2018": {
-        },
-        "courseF_bee_for11_2019": {
-        },
-        "courseF_bee_for11_2020": {
-        },
-        "courseF_bee_for11_2021": {
-        },
         "courseF_bee_for12022": {
           "courseF_bee_for1_b": "`გამეორების` ციკლში თქვენ დაგჭირდებათ ორი ბლოკი, რათა შეაგროვოთ მთელი ნექტარი."
         },
@@ -10044,18 +9018,6 @@
         },
         "courseF_bee_for2_2021": {
           "courseF_bee_for2_b": "არ დაგავიწყდეთ წინ გადაადგილება ციკლებს შორის, რათა მიაღწიოთ ყოველ ყვავილამდე."
-        },
-        "courseF_bee_for4": {
-        },
-        "courseF_bee_for42022": {
-        },
-        "courseF_bee_for4_2018": {
-        },
-        "courseF_bee_for4_2019": {
-        },
-        "courseF_bee_for4_2020": {
-        },
-        "courseF_bee_for4_2021": {
         },
         "courseF_bee_for5": {
           "courseF_bee_for5_b": "გამოიყენეთ `მთვლელის` ცვლადი ყოველ ციკლში, რათა ფუტკარმა დაფაროს სხვადასხვა მანძილი ყვავილებს შორის.",
@@ -10140,18 +9102,6 @@
         "courseF_bee_for8_2021": {
           "courseF_bee_for8_b": "ამ თავსატეხში, ყვევილების შესაგროვებლად, თქვენ დაგჭირდებათ კიბის საფეხურისებრი პრინციპით მოძრაობა.",
           "courseF_bee_for8_c": "თქვენ ციკლმა უნდა დაითვალოს _3-დან 15-მდე_ გარკვეული ნაზრდით. რისი ტოლია ნაზრდი?"
-        },
-        "courseF_bee_for9": {
-        },
-        "courseF_bee_for92022": {
-        },
-        "courseF_bee_for9_2018": {
-        },
-        "courseF_bee_for9_2019": {
-        },
-        "courseF_bee_for9_2020": {
-        },
-        "courseF_bee_for9_2021": {
         },
         "courseF_bee_for_challenge2": {
           "courseF_bee_for_challenge2_a": "მოძრაობის ამ ვარიანტს შეხედეთ:\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
@@ -10238,8 +9188,6 @@
         "courseF_bee_fwp1": {
           "courseF_bee_fwp1_b": "განაგრძეთ გზაზე მოძრაობა `გამეორების` ბლოკის საშუალებით. დარწმუნდით, რომ იყენებთ `წინ გადაადგილებას` და ამოწმებთ, არის თუ არა იქ ყვავილი `თუ` ბრძანებით."
         },
-        "courseF_bee_fwp2": {
-        },
         "courseF_bee_fwp3": {
           "courseF_bee_fwp3_b": "წინ ნექტარის 3 მწკრივია, რა სახის მობრუნებების და მოძრაობების შესრულება გჭირდებათ მწკრივებს შორის?",
           "courseF_bee_fwp3_c": "ამ თავსატეხის ამოსახსნელად თქვენ დაგჭირდებათ ფუნქციის 3-ჯერ გამოძახება. ყოველ გამოძახებს შორის თქვენ მოგიწევთ 2-ჯერ `მარჯვნივ მობრუნება`, `წინ გადაადგილება`, შემდეგ ისევ `მარჯვნივ` მობრუნება. ან თქვენ დაგჭირდებათ `მარცხნივ მობრუნება`, 2-ჯერ `წინ გადაადგილება`, შემდეგ ისევ `მარცხნივ მობრუნება`."
@@ -10249,8 +9197,6 @@
         },
         "courseF_bee_fwp5": {
           "courseF_bee_fwp5_a_b": "არ დაგავიწყდეთ ფუნქციის მობრუნება ფუნქციის თითოეულ გამოძახებასთან."
-        },
-        "courseF_bee_fwp6": {
         },
         "courseF_bee_fwp7": {
           "courseF_bee_fwp7_b": "დაამატეთ `თუ` ბრძანება თქვენს ფუნქციაში, რათა ფუტკარმა შეამოწმოს, როგორც ფიჭების, ასევე ყვავილების არსებობა."
@@ -10273,56 +9219,6 @@
           "courseF_bee_fwp_challenge2_b": "გითავდებათ `წინ გადაადგილების` ბლოკები?\nსცადეთ მთავარ პროგრამაში _მეორე_ `for ციკლის` გამოყენება.",
           "courseF_bee_fwp_challenge2_c": "**აი როგორ უნდა გამოიყურებოდეს თქვენი ფუნქცია:**\n\n<xml><block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\" usercreated=\"true\">\n<mutation>\n<arg name=\"length\"/>\n</mutation>\n\n<title name=\"NAME\">pick row</title>\n<statement name=\"STACK\">\n<block type=\"maze_turn\">\n<title name=\"DIR\">მობრუნებამარცხნივ</title>\n<next>\n<block type=\"controls_for\" inline=\"true\">\n<title name=\"VAR\">მთვლელი</title>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"parameters_get\">\n<title name=\"VAR\">სიგრძე</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n<next>\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"variables_get\">\n<title name=\"VAR\">მთვლელი</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"harvester_ifHasCrop\">\n<title name=\"LOC\">Corn</title>\n<statement name=\"DO\">\n<block type=\"harvester_corn\"/>\n</statement>\n<next>\n<block type=\"harvester_ifHasCrop\">\n<title name=\"LOC\">Pumpkin</title>\n<statement name=\"DO\">\n<block type=\"harvester_pumpkin\"/>\n</statement>\n<next>\n<block type=\"harvester_ifHasCrop\">\n<title name=\"LOC\">Lettuce</title>\n<statement name=\"DO\">\n<block type=\"harvester_lettuce\"/>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"controls_repeat_ext\" inline=\"true\">\n<value name=\"TIMES\">\n<block type=\"parameters_get\">\n<title name=\"VAR\">სიგრძე</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">მოძრაობაუკან</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">მობრუნებამარჯვნივ</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</xml>",
           "courseF_bee_fwp_challenge2_d": "**თქვენი მთავარი პროგრამა ასე უნდა გამოიყურებოდეს:**\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_for\" inline=\"true\">\n\n<title name=\"VAR\">მთვლელი2</title>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"math_number\">\n<title name=\"NUM\">6</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n<next>\n<block type=\"procedures_callnoreturn\" inline=\"false\">\n<mutation name=\"pick row\">\n<arg name=\"length\"/>\n</mutation>\n<value name=\"ARG0\">\n<block type=\"variables_get\">\n<title name=\"VAR\">მთვლელი2</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block></xml>"
-        },
-        "courseF_bee_variables_3_2018": {
-        },
-        "courseF_bee_variables_3_2019": {
-        },
-        "courseF_bee_variables_3_2020": {
-        },
-        "courseF_bee_variables_3a2022": {
-        },
-        "courseF_bee_variables_3a_2021": {
-        },
-        "courseF_bee_variables_3aa2022": {
-        },
-        "courseF_bee_variables_3aa_2021": {
-        },
-        "courseF_bee_variables_4_2019": {
-        },
-        "courseF_bee_variables_4_2020": {
-        },
-        "courseF_bee_variables_4a2022": {
-        },
-        "courseF_bee_variables_4a_2021": {
-        },
-        "courseF_clicker_finish_-2022-2": {
-        },
-        "courseF_clicker_score_-2022-2": {
-        },
-        "courseF_collector_freeplay_-2022-2": {
-        },
-        "courseF_collector_score_-2022-2": {
-        },
-        "courseF_events_choice_pufferfish": {
-        },
-        "courseF_events_choice_pufferfish_-2022-2": {
-        },
-        "courseF_events_key": {
-        },
-        "courseF_events_key_-2022-2": {
-        },
-        "courseF_groups_behaviors_-2022-2": {
-        },
-        "courseF_groups_costume_-2022-2": {
-        },
-        "courseF_groups_say_-2022-2": {
-        },
-        "courseF_groups_size_-2022-2": {
-        },
-        "courseF_groups_touch_-2022-2": {
-        },
-        "courseF_playlab_variables1a": {
         },
         "courseF_playlab_variables2b": {
           "courseF_playlab_variables2b_a": "თქვენი აზრით, რას იტყვის კიკი, როდესაც დააწკაპებთ `გაშვებას`?"
@@ -10358,34 +9254,6 @@
           "courseF_playlab_variables_challenge2_a": "დაამატეთ და გამოაკელით ქულები `ქულების`ცვლადს სპრაიტების შეჯახებისას.",
           "courseF_playlab_variables_challenge2_b": "თქვენ შეგიძლიათ შეცვალოთ პარამეტრი იმისათვის, რომ განსაზღვროთ, როგორ იმოძრავებს სპრაიტი ისრების ღილაკებზე დაჭერის დროს.",
           "courseF_playlab_variables_challenge2_c": "**ამოხსნა:**\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">მობრუნებამარცხნივ</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">მობრუნებამარცხნივ</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">მოძრაობაწინ</title>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
-        },
-        "courseF_sprites_clouds": {
-        },
-        "courseF_sprites_clouds_-2022-2": {
-        },
-        "courseF_text_choice_multiprompt": {
-        },
-        "courseF_text_choice_multiprompt_-2022-2": {
-        },
-        "courseF_text_concat": {
-        },
-        "courseF_text_concat_-2022-2": {
-        },
-        "courseF_variables2_click_-2022-2": {
-        },
-        "courseF_variables2_set_-2022-2": {
-        },
-        "courseF_variables_card_finish": {
-        },
-        "courseF_variables_card_finish_-2022-2": {
-        },
-        "courseF_variables_chatbot_finish": {
-        },
-        "courseF_variables_chatbot_finish_-2022-2": {
-        },
-        "courseF_variables_madlib_finish": {
-        },
-        "courseF_variables_madlib_finish_-2022-2": {
         },
         "coursea_maze_ramp12022": {
           "courseC_maze_programming1_b": "არ შეგეშინდეთ შეცდომის დაშვების! სცადეთ რამე და თუ არ იმუშავებს, სცადეთ სხვა რამე!"
@@ -10651,18 +9519,6 @@
         "iceage_warn_ice_age_dani": {
           "iceage_warn_ice_age_a": "ამ თავსატეხის დასასრულებლად თქვენ მხოლოდ ორი ბლოკის დამატება დაგჭირდებათ. ",
           "iceage_warn_ice_age_b": "დაამატეთ ორივე ახალი ბლოკი `გაშვებისას` მოვლენის შიგნით, რათა ისინი პროგრამის გაშვებისთანავე შესრულდნენ."
-        },
-        "poetry_hoc_addSprites": {
-        },
-        "poetry_hoc_backgroundEffects": {
-        },
-        "poetry_hoc_events1": {
-        },
-        "poetry_hoc_sounds": {
-        },
-        "poetry_hoc_spriteBehaviors": {
-        },
-        "poetry_hoc_spriteSizes": {
         }
       }
     }

@@ -832,16 +832,6 @@ de-DE:
           <hr>
 
           **Jetzt bist du an der Reihe!**
-      CSD - Getters and Setters: {}
-      CSD CSS project RGB_2021: {}
-      CSD CSS project RGB_2022: {}
-      CSD CSS project Review_2021: {}
-      CSD CSS project Review_2022: {}
-      CSD End of Unit Survey - Unit 1 - IntroMD_2022: {}
-      CSD Games Parameters challenge_2021: {}
-      CSD Games Parameters challenge_2022: {}
-      CSD Games Properties challenge_2021: {}
-      CSD Games Properties challenge_2022: {}
       CSD Games Properties multi predict_2021:
         answers:
         - correct: true
@@ -864,22 +854,10 @@ de-DE:
         display_name: Sprite Eigenschaften
       CSD Games Properties practice_2022:
         display_name: Sprite Eigenschaften
-      CSD Games Sprites Challenges_2021: {}
-      CSD Games Sprites Challenges_2022: {}
-      CSD Games Sprites practice_2021: {}
-      CSD Games Sprites practice_2022: {}
-      CSD Games parameters practice_2021: {}
-      CSD Games parameters practice_2022: {}
-      CSD Games variables challenge_2021: {}
-      CSD Games variables challenge_2022: {}
       CSD Games variables practice_2021:
         display_name: Variablen Übung
       CSD Games variables practice_2022:
         display_name: Variablen Übung
-      CSD HTML project Lists_2021: {}
-      CSD HTML project Lists_2022: {}
-      CSD HTML project Review_2021: {}
-      CSD HTML project Review_2022: {}
       CSD Header Size MC:
         answers:
         - correct: true
@@ -995,13 +973,6 @@ de-DE:
           &lt;h6&gt; Waffeln &lt;/h6&gt;
           </pre>
         title: Überschriften-Schnellprüfung
-      CSD Interactive Animations and Games Post-Project Test: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2021: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2022: {}
-      CSD Physical Computing Post-Project Test: {}
-      CSD Physical Computing Post-Project Test_2021: {}
-      CSD Physical Computing Post-Project Test_2022: {}
-      CSD Student End of Unit Survey - Unit 1_2022: {}
       CSD U1 IOSP match:
         answers:
         - {}
@@ -1185,8 +1156,6 @@ de-DE:
         title: Projektbezogener Test zum Thema Computer und Problemlösung
       CSD U1 Test_2022:
         title: Projektbezogener Test zum Thema Computer und Problemlösung
-      CSD U2 CSS challenge_pilot_2021: {}
-      CSD U2 CSS challenge_pilot_2022: {}
       CSD U2 CSS practice_pilot_2021:
         display_name: Text mit CSS formatieren
       CSD U2 CSS practice_pilot_2022:
@@ -1224,8 +1193,6 @@ de-DE:
           <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
 
           <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
-      CSD U2 Expression Exemplars_2018_2019_pilot_2021: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2022: {}
       CSD U2 Image challenge_pilot_2021:
         display_name: Hinzufügen von Bildern
       CSD U2 Image challenge_pilot_2022:
@@ -1236,7 +1203,6 @@ de-DE:
         display_name: Hinzufügen von Bildern
       CSD U2 L1 Overview:
         content1: hier die Beschreibung
-      CSD U2 L12 Overview: {}
       CSD U2 L2 Overview:
         content1: hier die Beschreibung
       CSD U2 L3 Overview:
@@ -1252,16 +1218,6 @@ de-DE:
           (https://docs.google.com/document/d/1NaoTAfCTdaMZ-CPlK3ii7gqvK674d320tPvQyz-2t9o/export?format=pdf)\n"
       CSD U2 Lesson 6 Overview:
         content1: hier die Beschreibung
-      CSD U2 Lesson 9 Overview: {}
-      CSD U2 PSP Programming: {}
-      CSD U2 PSP Programming_2018: {}
-      CSD U2 PSP Programming_2018_2019: {}
-      CSD U2 Sample CSS layout_2021: {}
-      CSD U2 Sample CSS layout_2022: {}
-      CSD U2 Sample CSS text_2021: {}
-      CSD U2 Sample CSS text_2022: {}
-      CSD U2 Sample classes_2021: {}
-      CSD U2 Sample classes_2022: {}
       CSD U2 Test Classes:
         answers:
         - correct: true
@@ -1478,8 +1434,6 @@ de-DE:
           * Amazon.com - Online-Shopping-Seiten für alle Arten von Waren
           * Yahoo.com - Eine Suchmaschine, ein E-Mail-Anbieter und eine Nachrichtenquelle
           * Wikipedia.org - Eine kostenlose Enzyklopädie mit Inhalten, die von Nutzern erstellt wurden
-      CSD U2 Top Websites_2018_2019_pilot_2021: {}
-      CSD U2 Top Websites_2018_2019_pilot_2022: {}
       CSD U2 expand project:
         content1: hier die Beschreibung
       CSD U2 expand project_2018:
@@ -1536,12 +1490,6 @@ de-DE:
         - text: Die Dateierweiterung (.jpg) fehlt in der Bildadresse
         - text: Die Bildadresse wird nicht als `src`-Attribut angegeben
         - text: Im Dateinamen ist ein Leerzeichen vorhanden
-      CSD U2 layout style challenge_pilot_2021: {}
-      CSD U2 layout style challenge_pilot_2022: {}
-      CSD U2 layout style practice_pilot_2021: {}
-      CSD U2 layout style practice_pilot_2022: {}
-      CSD U2 links challenge_2021: {}
-      CSD U2 links challenge_2022: {}
       CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -1630,8 +1578,6 @@ de-DE:
         content1: hier die Beschreibung
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: hier die Beschreibung
-      CSD U3 - Design a Game 1 - ExampleChoice_2022: {}
-      CSD U3 - Interactive Card - ExampleChoice_2022: {}
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1712,8 +1658,6 @@ de-DE:
           # Stopp
 
           Bevor du weitermachst, solltest du dir den Projektleitfaden für dieses Projekt ansehen. Warte auch auf Anweisungen deines Lehrers.
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022: {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1780,7 +1724,6 @@ de-DE:
           damit ein Sprite ein anderes über den Bildschirm schiebt, bevor sie mit
           den vier Kollisionsbausteinen (`collide`, `displace`, `bounce` und `bounceOff`)
           üben."
-      CSD U3 Defender SFLP: {}
       CSD U3 Entertainment:
         markdown: |-
           # Starte deine Suche
@@ -1975,14 +1918,6 @@ de-DE:
         - {}
         - {}
         - {}
-      CSD U3 Lesson Overview 1: {}
-      CSD U3 Lesson Overview 10: {}
-      CSD U3 Lesson Overview 11: {}
-      CSD U3 Lesson Overview 12: {}
-      CSD U3 Lesson Overview 13: {}
-      CSD U3 Lesson Overview 14: {}
-      CSD U3 Lesson Overview 2: {}
-      CSD U3 Lesson Overview 3: {}
       CSD U3 Lesson Overview 4:
         markdown: |+
           # Überblick
@@ -2011,13 +1946,6 @@ de-DE:
           [Wert einer Variablen deklarieren und zuweisen](//studio.code.org/docs/gamelab/declareAssign_x/)\n\n##
           Ressourcen\n\n* [Einführung zu Variablen](https://youtu.be/G41G_PEWFjE)
           - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))\n"
-      CSD U3 Lesson Overview 6: {}
-      CSD U3 Lesson Overview 7: {}
-      CSD U3 Lesson Overview 8: {}
-      CSD U3 Lesson Overview 9: {}
-      CSD U3 Movement Challenges: {}
-      CSD U3 Project Build a Game SFLP: {}
-      CSD U3 SFLP Velocity: {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - correct: true
@@ -2311,7 +2239,6 @@ de-DE:
         - correct: true
         questions:
         - {}
-      CSD U3 Using the Game Design Process SLFP: {}
       CSD U3 combining rep:
         content1: hier die Beschreibung
         markdown: |+
@@ -2427,8 +2354,6 @@ de-DE:
             AM.png">
         - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
             AM.png">
-      CSD U3 drawing challenges_2021: {}
-      CSD U3 drawing challenges_2022: {}
       CSD U3 drawing practice choice_2021:
         display_name: Übung
       CSD U3 drawing practice choice_2022:
@@ -2598,22 +2523,6 @@ de-DE:
         - correct: true
         questions:
         - {}
-      CSD U4L01 SFLP: {}
-      CSD U4L02 SFLP: {}
-      CSD U4L03 SFLP: {}
-      CSD U4L04 SFLP: {}
-      CSD U4L05 SFLP: {}
-      CSD U4L06 SFLP: {}
-      CSD U4L07 SFLP: {}
-      CSD U4L08 SFLP: {}
-      CSD U4L09 SFLP: {}
-      CSD U4L10 SFLP: {}
-      CSD U4L11 SFLP: {}
-      CSD U4L12 SFLP: {}
-      CSD U4L13 SFLP: {}
-      CSD U4L15 SFLP: {}
-      CSD U4L16 SFLP: {}
-      CSD U4L17 SFLP: {}
       CSD U5 Encryption 1:
         content1: hier die Beschreibung
         markdown: |
@@ -3155,39 +3064,28 @@ de-DE:
         title: Daten und Gesellschaft Test nach Ende des Projekts
       CSD U6 - Accelerometer - Chal_2222:
         display_name: Herausforderungslevels
-      CSD U6 - Accelerometer - Prac_2222: {}
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Herausforderungslevels
-      CSD U6 - Board Inputs - Prac_2222: {}
       CSD U6 - Board Outputs - Chal_2222:
         display_name: Herausforderungslevels
-      CSD U6 - Board Outputs - Prac_2222: {}
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Herausforderungslevels
-      CSD U6 - Color LEDs - Prac_2222: {}
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: Herausforderungslevels
-      CSD U6 - Combine Inputs - Prac_2222: {}
-      CSD U6 - Functions - Prac_2222: {}
       CSD U6 - If Variables - Chal_2222:
         display_name: Herausforderungslevels
       CSD U6 - Music - Chal_2222:
         display_name: Herausforderungslevels
       CSD U6 - Physical Input - Chal_2222:
         display_name: Herausforderungslevels
-      CSD U6 - Physical Input - Prac_2222: {}
       CSD U6 - Physical Output - Chal_2222:
         display_name: Herausforderungslevels
-      CSD U6 - Physical Output - Prac_2222: {}
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Herausforderungslevels
-      CSD U6 - Screen Inputs - Prac_2222: {}
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Herausforderungslevels
-      CSD U6 - Screen Outputs - Prac_2222: {}
       CSD U6 - Sensors - Chal_2222:
         display_name: Herausforderungslevels
-      CSD U6 - Sensors - Prac_2222: {}
       CSD U6 LED create intro:
         content1: hier die Beschreibung
         markdown: |-
@@ -3551,108 +3449,34 @@ de-DE:
           # Stopp
 
           Bevor du weitermachst, solltest du dir den Projektleitfaden für dieses Projekt ansehen. Warte auch auf Anweisungen deines Lehrers.
-      CSD User Centered Design Post-Project Test: {}
-      CSD User Centered Design Post-Project Test_2021: {}
-      CSD User Centered Design Post-Project Test_2022: {}
-      CSD Web Development Post-Project Test: {}
-      CSD Web Development Post-Project Test_pilot_2021: {}
-      CSD Web Development Post-Project Test_pilot_2022: {}
-      CSD Web Headings challenge_2021: {}
-      CSD Web Headings challenge_2022: {}
-      CSD Web Headings practice_2021: {}
-      CSD Web Headings practice_2022: {}
-      CSD Web Sample Pages_2021: {}
-      CSD Web Sample Pages_2022: {}
       CSD games cake challenge choice_2021:
         display_name: Herausforderungen
       CSD games cake challenge choice_2022:
         display_name: Herausforderungen
-      CSD games collisions challenge choice_2021: {}
-      CSD games collisions challenge choice_2022: {}
-      CSD games collisions practice choice_2021: {}
-      CSD games collisions practice choice_2022: {}
-      CSD games functions challenge choice_2021: {}
-      CSD games functions challenge choice_2022: {}
       CSD games functions practice choice_2021:
         display_name: Übung zu Funktionen
       CSD games functions practice choice_2022:
         display_name: Übung zu Funktionen
-      CSD games istouching challenge choice_2021: {}
-      CSD games istouching challenge choice_2022: {}
-      CSD games istouching practice choice_2021: {}
-      CSD games istouching practice choice_2022: {}
-      CSD games movement2 challenge choice_2021: {}
-      CSD games movement2 challenge choice_2022: {}
-      CSD games movement2 practice choice_2021: {}
-      CSD games movement2 practice choice_2022: {}
       CSD games platform challenge choice_2021:
         display_name: Herausforderungen
       CSD games platform challenge choice_2022:
         display_name: Herausforderungen
-      CSD games random challenge_2021: {}
-      CSD games random challenge_2022: {}
-      CSD games random practice_2021: {}
-      CSD games random practice_2022: {}
-      CSD games velocity challenge choice_2021: {}
-      CSD games velocity challenge choice_2022: {}
-      CSD games velocity practice choice_2021: {}
-      CSD games velocity practice choice_2022: {}
-      CSD web classes challenge_2021: {}
-      CSD web classes challenge_2022: {}
-      CSD web classes practice_2021: {}
-      CSD web classes practice_2022: {}
-      CSD web conditionals challenge choice_2021: {}
-      CSD web conditionals challenge choice_2022: {}
       CSD web conditionals practice choice_2021:
         display_name: Übung zu Bedingungen
       CSD web conditionals practice choice_2022:
         display_name: Übung zu Bedingungen
-      CSD web draw loop challenge choice_2021: {}
-      CSD web draw loop challenge choice_2022: {}
       CSD web draw loop practice choice_2021:
         display_name: Übung
       CSD web draw loop practice choice_2022:
         display_name: Übung
-      CSD web keyboard challenge choice_2021: {}
-      CSD web keyboard challenge choice_2022: {}
-      CSD web keyboard practice choice_2021: {}
-      CSD web keyboard practice choice_2022: {}
-      CSD web mouse challenge choice_2021: {}
-      CSD web mouse challenge choice_2022: {}
-      CSD web mouse practice choice_2021: {}
-      CSD web mouse practice choice_2022: {}
-      CSD web movement challenge choice_2021: {}
-      CSD web movement challenge choice_2022: {}
       CSD web movement practice choice_2021:
         display_name: Übung
       CSD web movement practice choice_2022:
         display_name: Übung
-      CSD web text challenge choice_2021: {}
-      CSD web text challenge choice_2022: {}
       CSD web text practice choice_2021:
         display_name: Übung
       CSD web text practice choice_2022:
         display_name: Übung
-      CSD-U5-SFLP ASCII and Binary Representation: {}
-      CSD-U5-SFLP Automating Data Decisions: {}
-      CSD-U5-SFLP Combining Representations: {}
-      CSD-U5-SFLP Create a Representation: {}
-      CSD-U5-SFLP Interpreting Data: {}
-      CSD-U5-SFLP Making Decisions with Data: {}
-      CSD-U5-SFLP Patterns and Representation: {}
-      CSD-U5-SFLP Problem Solving and Data: {}
-      CSD-U5-SFLP Problem Solving with Big Data: {}
-      CSD-U5-SFLP Representation Matters: {}
-      CSD-U5-SFLP Representing Images: {}
-      CSD-U5-SFLP Representing Numbers Part 1: {}
-      CSD-U5-SFLP Representing Numbers Part 2: {}
-      CSD-U5-SFLP Solve a Data Problem: {}
-      'CSD: getText vs getNumber': {}
-      'CSD: setProperty': {}
-      CSDU6 Innovation: {}
-      CSDU6 Innovation_2018: {}
-      CSDU6 Innovation_2018_2019: {}
-      CSDU6 Innovation_2021: {}
       CSP PD Example Question 1:
         answers:
         - {}
@@ -3665,7 +3489,6 @@ de-DE:
         - {}
         questions:
         - {}
-      CSP pre-assessment survey: {}
       Choose 2 Test:
         answers:
         - correct: true
@@ -3674,7 +3497,6 @@ de-DE:
         - correct: true
         questions:
         - {}
-      Choosing Good IDs: {}
       ConditionalsWithCards-Unplugged:
         markdown: |
           # Bedingungen mit Karten
@@ -4114,8 +3936,6 @@ de-DE:
           # Digital Sharing
 
           In dieser Lektion wirst du die Herausforderungen und Vorteile der Achtung von Eigentum und Urheberrecht, insbesondere in digitalen Umgebungen, betrachten.
-      ECSPD1 computational thinker: {}
-      Embedded Video Test: {}
       EnvelopeVariables-Unplugged:
         markdown: |
           # Envelope Variablen
@@ -5073,7 +4893,6 @@ de-DE:
           mit Unterrichtsplänen, die Ihre SchülerInnen anleiten, mit Aktivitäten ohne
           Geräte und mit Foren, in denen Sie sich mit anderen LehrerInnen austauschen
           können, weiter vertiefen."
-      OPD-K5 CS Courses_dani: {}
       OPD-K5 CS Tips:
         markdown: |
           # Erste Schritte > Navigieren in diesem Online-Kurs
@@ -6487,7 +6306,6 @@ de-DE:
           Lektion suchen. \n\n***\n<a href=\"https://curriculum.code.org/csf-19/coursed/10/\"
           target=\"blank\" rel=\"noopener noreferrer\">![](https://images.code.org/d4959eca61f272b9416ff4e65a259bd2-image-1573080208870.43.14
           PM.png)</a>"
-      OPD-K5 Stage5Go_dani: {}
       OPD-K5 Stage5Review:
         markdown: "# Bedingungen > Reflektieren\n\nIn dieser Phase haben wir untersucht,
           wie Bedingungen Programmierern helfen, ihrem Code Logik hinzuzufügen. In
@@ -6996,7 +6814,6 @@ de-DE:
           die Ihre SchülerInnen anleiten, mit Aktivitäten, die Sie ohne Geräte durchführen
           können, und mit Foren, in denen Sie sich mit anderen LehrerInnen austauschen
           können, noch weiter gehen."
-      OPD-K5 Using CS_dani: {}
       OPD-K5 Vocabulary:
         markdown: |2-
              # Grundlagen der Informatik > Grundwortschatz
@@ -8080,9 +7897,6 @@ de-DE:
           eines beliebigen Punktes zu sehen.\n\n<div style=\"width: 100%; text-align:
           center\">\n<img src=\"https://images.code.org/8b346602d75f2877c64e1793b6a04302-image-1476889124747.png\">\n\n<img
           src=\"https://images.code.org/fc7e830fa2ea994b885c76618b484dfa-image-1476889137756.gif\">\n</div>\n"
-      PDK5 Foundations F: {}
-      PDK5 Intro C: {}
-      PS U3 Assessment1 new: {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -8241,8 +8055,6 @@ de-DE:
           # Relais-Programmierung
 
           Teilt euch in Teams auf und arbeitet zusammen, um Programme zu schreiben, die Bilder zeichnen.
-      Responding to User Input: {}
-      Sample CSP Assessment: {}
       ScreenOutTheMean-Unplugged:
         markdown: |
           # Screen Out the Mean #
@@ -8263,7 +8075,6 @@ de-DE:
           # Folge dem Algorithmus
 
           Spiele ein Spiel und überlege, welche Befehle nötig sind, um das richtige Ergebnis zu erhalten.
-      Social Sleuth_2018_2019: {}
       Songwriting-Unplugged:
         markdown: |
           # Songwriting
@@ -8284,12 +8095,6 @@ de-DE:
           # Songwriting
 
           Verwende das Konzept des Refrains in einem Lied, um mehr über die Definition und den Aufruf von Funktionen zu erfahren.
-      Student End of Unit Survey - Intro+TeacherMD_csd2-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd3-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd4-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd5-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd6-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd7-2022: {}
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -8310,12 +8115,6 @@ de-DE:
         - correct: true
         questions:
         - {}
-      Student End of Unit Survey_csd2-2022: {}
-      Student End of Unit Survey_csd3-2022: {}
-      Student End of Unit Survey_csd4-2022: {}
-      Student End of Unit Survey_csd5-2022: {}
-      Student End of Unit Survey_csd6-2022: {}
-      Student End of Unit Survey_csd7-2022: {}
       Submittable Multi:
         answers:
         - correct: true
@@ -8491,11 +8290,6 @@ de-DE:
           * [Pixel Filtering](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))
         teacher_markdown: "* [Pixel Filterung](https://drive.google.com/open?id=1D3VELqNLAyrPeDl3o-PWxOPV8VD9bwdhoMIH0E9fLM8)
           - Answer Key"
-      Unit 2 Lesson 10 Overview: {}
-      Unit 2 Lesson 16 Overview: {}
-      Unit 2 Lesson 7 Overview: {}
-      Unit 2 Lesson 8 Overview: {}
-      Video - The Future of Big Data: {}
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -8606,8 +8400,6 @@ de-DE:
         - correct: true
         questions:
         - {}
-      aiml-ch1-pulse-survey_2021: {}
-      aiml-ch1-pulse-survey_2022: {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -8702,9 +8494,6 @@ de-DE:
         - correct: true
         questions:
         - {}
-      aiml-intro-pulse-survey_2021: {}
-      aiml-intro-pulse-survey_2022: {}
-      aiml-pulse-check-survey-1-levelgroup Ch2_2021: {}
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
@@ -8760,8 +8549,6 @@ de-DE:
         - correct: true
         questions:
         - {}
-      aiml-pulse-check-survey-preamble_2021: {}
-      allthethings_bubble_choice: {}
       allthethings_external_displayed_as_unplugged:
         content1: hier die Beschreibung
       allthethings_external_not_displayed_as_unplugged:
@@ -12080,8 +11867,6 @@ de-DE:
           Variablen schreiben, die sich innerhalb des Programms *verändern*.</h3>
 
           '
-      courseF_groups_freeplay_2022_pilot_-2022-2: {}
-      courseF_groups_practice_2022_pilot_-2022-2: {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
@@ -13409,13 +13194,8 @@ de-DE:
           text: Der Künstler wird vier Quadrate übereinander zeichnen.
         questions:
         - text: Was passiert, wenn du die Schaltfläche "Ausführen" drückst?
-      csd-post-survey-2017-implementation-student: {}
-      csd-post-survey-2017-implementation-teacher: {}
-      csd-post-survey-2017-implementation-teacher_2019: {}
-      csd-post-survey-2017-levelgroup: {}
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
         title: 'CS Discoveries: Schülerumfrage am Kursende'
-      csd-post-survey-2017-levelgroup_2018: {}
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -13952,9 +13732,6 @@ de-DE:
         markdown: "# Diese Umfrage befindet sich noch in der Entwicklung\n"
       csd-post-survey-levelgroup-2018:
         title: 'CS Discoveries: Schülerumfrage am Kursende'
-      csd-post-survey-levelgroup_2019: {}
-      csd-post-survey-markdown-with-link-to-survey_2021: {}
-      csd-post-survey-markdown-with-link-to-survey_2022: {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -14116,10 +13893,6 @@ de-DE:
           ## Ressourcen
 
           * [Aluminiumfolienboote](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (kopiere als [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
-      csd-pre-survey-2017-levelgroup_2018: {}
-      csd-pre-survey-levelgroup_2019: {}
-      csd-pre-survey-levelgroup_21_22: {}
-      csd-pre-survey-levelgroup_21_22_2022: {}
       csd-pulse-check-survey-1-levelgroup U1Ch2:
         title: Blitzumfrage zu Informatik-Entdeckungen!
       csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
@@ -16693,15 +16466,6 @@ de-DE:
         - correct: true
         questions:
         - {}
-      csd-pulse-check-survey-preamble: {}
-      csd-pulse-check-survey-preamble_2018: {}
-      csd-pulse-check-survey-preamble_2018_2019: {}
-      csd-pulse-check-survey-preamble_2019: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2021: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2022: {}
-      csd-pulse-check-survey-preamble_2021: {}
-      csd-pulse-check-survey-preamble_2022: {}
-      csd-pulse-check-survey-preamble_2222: {}
       csf_be_a_super_digital_citizen:
         content1: hier die Beschreibung
         markdown: |-
@@ -16792,8 +16556,6 @@ de-DE:
           # Meine Online-Nachbarschaft
 
           ## Wie geht man sicher online?
-      csp-post-survey-2017 preamble 1: {}
-      csp-post-survey-2017 preamble 1_2019: {}
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -17208,7 +16970,6 @@ de-DE:
         - correct: true
         questions:
         - {}
-      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2018-topics-preamble:
         content1: hier die Beschreibung
       csp-post-survey-2018-unit-feedback-preamble:
@@ -17237,30 +16998,6 @@ de-DE:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017 preamble 1: {}
-      csp-pre-survey-2017 preamble 1_2018: {}
-      csp-pre-survey-2017 preamble 1_2021: {}
-      csp-pre-survey-2017 preamble 1_2022: {}
-      csp-pre-survey-2017 preamble 2 cs in general: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2021: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2022: {}
-      csp-pre-survey-2017 preamble 3 this class: {}
-      csp-pre-survey-2017 preamble 3 this class_2018: {}
-      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2021: {}
-      csp-pre-survey-2017 preamble 3 this class_2022: {}
-      csp-pre-survey-2017 preamble 4 the future: {}
-      csp-pre-survey-2017 preamble 4 the future_2018: {}
-      csp-pre-survey-2017 preamble 4 the future_2021: {}
-      csp-pre-survey-2017 preamble 4 the future_2022: {}
-      csp-pre-survey-2017 preamble 5 demographics: {}
-      csp-pre-survey-2017 preamble 5 demographics_2018: {}
-      csp-pre-survey-2017 preamble 5 demographics_2021: {}
-      csp-pre-survey-2017 preamble 5 demographics_2022: {}
       csp-pre-survey-2017-q1:
         answers:
         - correct: true
@@ -18012,8 +17749,6 @@ de-DE:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017-q36-preamble: {}
-      csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pre-survey-2017-q37:
         answers:
         - correct: true
@@ -18677,34 +18412,10 @@ de-DE:
         display_name: Passe deine App an
       ml-club app-choice parent_2022:
         display_name: Passe deine App an
-      ml-customize apps-practice choice-2021: {}
-      ml-customize apps-practice choice_2022: {}
-      ml-good data-isaac data: {}
-      ml-good data-isaac data_2022: {}
-      ml-good data-kim data: {}
-      ml-good data-kim data_2022: {}
-      ml-good data-kim survey: {}
-      ml-good data-kim survey_2022: {}
       ml-intro app lab-book recommender 5-2021:
         display_name: Passe deine App an
       ml-intro app lab-book recommender 5_2022:
         display_name: Passe deine App an
-      ml-model card-medical-1-2021: {}
-      ml-model card-medical-1_2022: {}
-      ml-model card-medical-2-2021: {}
-      ml-model card-medical-2_2022: {}
-      ml-model card-medical-3-2021: {}
-      ml-model card-medical-3_2022: {}
-      ml-models in applab-choice parent: {}
-      ml-models in applab-choice parent_2022: {}
-      ml-models-shoe survey: {}
-      ml-models-shoe survey_2022: {}
-      ml-plan survey-copy form: {}
-      ml-plan survey-copy form_2022: {}
-      ml-use model card-pet model card-2021: {}
-      ml-use model card-pet model card_2022: {}
-      ml-use models applab-practice choice-2021: {}
-      ml-use models applab-practice choice_2022: {}
       naturally-better-at-cs:
         answers:
         - correct: true
@@ -18812,9 +18523,6 @@ de-DE:
         - correct: true
         questions:
         - {}
-      pre-assessment survey heading1: {}
-      pre-assessment survey heading2: {}
-      pre-assessment survey heading3: {}
       pre-assessment survey q1:
         answers:
         - correct: true
@@ -19169,8 +18877,6 @@ de-DE:
         - correct: true
         questions:
         - {}
-      sample external 1: {}
-      sample external 2: {}
       someone_else_encourage:
         answers:
         - correct: true
