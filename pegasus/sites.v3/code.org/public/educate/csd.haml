@@ -4,8 +4,7 @@ theme: responsive_full_width
 ---
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
-%link{href: "/css/generated/lib/slick.css", rel: "stylesheet"}
-%link{href: "/css/generated/lib/slick-theme.css", rel: "stylesheet"}
+
 %link{href: "/css/generated/csd-styles.css", rel: "stylesheet"}
 
 %section.hero-banner-basic.overlay
@@ -86,6 +85,7 @@ theme: responsive_full_width
     %h2=hoc_s(:heading_flexible_units)
     %p=hoc_s(:csd_page_courses_flexible_units_desc)
 
+    = view :flexible_units_carousel
 
 = view :section_divider_line
 
@@ -117,4 +117,3 @@ theme: responsive_full_width
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::CSD_CURRICULUM_PAGE_VISITED_EVENT
 
 
-%script{:src=>'/js/lib/slick.js'}
