@@ -289,7 +289,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
 * Option C: Use an Amazon EC2 instance:
   1. Request AWS access from [accounts@code.org](mailto:accounts@code.org) if you haven't already done so.
   1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard:
-     * **Step 1: Choose AMI**: Select Ubuntu Server 18.04 (20.04 or 22.04 is fine as well but 22.04 does require extra setup steps explained later in the setup.)
+     * **Step 1: Choose AMI**: Select Ubuntu Server 18.04 if you want to match our current server version; 20.04 or 22.04 both work fine as well but 22.04 does require extra setup steps explained later in the setup.
      * **Step 2: Choose instance type**: Choose at least 16 GiB memory (e.g. `t2.xlarge`)
      * **Step 3: Configure Instance**: 
        * Set IAM Instance Profile to `DeveloperEC2`
@@ -558,4 +558,4 @@ While it's possible to run the server locally without these, we've found the fol
 - Memory: minimum of 8GB RAM for `dashboard-server` and `yarn`
 - Storage: The repository takes up 20GB
 
-[ubuntu-iso-url]: https://releases.ubuntu.com/18.04/
+[ubuntu-iso-url]:  https://releases.ubuntu.com/18.04/ubuntu-18.04.6-desktop-amd64.iso
