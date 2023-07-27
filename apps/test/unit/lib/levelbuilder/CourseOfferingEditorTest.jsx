@@ -105,6 +105,7 @@ describe('CourseOfferingEditor', () => {
         device_compatibility: JSON.stringify(deviceCompatibilities),
         description: 'An introductory course into computer science.',
         professional_learning: 'code.org/apply',
+        video: 'https://www.youtube-nocookie.com/test_video',
       };
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
         200,
@@ -180,6 +181,7 @@ describe('CourseOfferingEditor', () => {
         device_compatibility: JSON.stringify(deviceCompatibilities),
         description: 'An introductory course into computer science.',
         professional_learning: 'code.org/apply',
+        video: 'https://www.youtube-nocookie.com/test_video',
       };
 
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
