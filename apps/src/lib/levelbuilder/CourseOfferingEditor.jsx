@@ -507,7 +507,6 @@ CourseOfferingEditor.propTypes = {
   professionalLearningProgramPaths: PropTypes.objectOf(PropTypes.string),
   videos: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number,
       name: PropTypes.string,
       youtube_url: PropTypes.string,
       thumbnail: PropTypes.string,

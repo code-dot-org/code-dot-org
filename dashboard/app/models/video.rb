@@ -159,7 +159,6 @@ class Video < ApplicationRecord
   def self.videos_for_course_offering_editor
     Video.all.map do |video|
       {
-        id: video.id,
         name: video.localized_name,
         youtube_url: video.youtube_url,
         thumbnail: video.thumbnail_path,
