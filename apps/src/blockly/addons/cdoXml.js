@@ -1,4 +1,4 @@
-import {procedureDefinitionTypes} from '../constants';
+import {PROCEDURE_DEFINITION_TYPES} from '../constants';
 
 export default function initializeBlocklyXml(blocklyWrapper) {
   // Clear xml namespace
@@ -41,7 +41,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     Blockly.Xml.createBlockOrderMap(xml);
     const sortedBlockElements = getSortedBlockElements(
       xml,
-      procedureDefinitionTypes
+      PROCEDURE_DEFINITION_TYPES
     );
     const blocks = [];
     // To position the blocks, we first render them all to the Block Space
@@ -83,7 +83,7 @@ export function createBlockOrderMap(xml) {
   );
   const sortedBlockElements = getSortedBlockElements(
     xml,
-    procedureDefinitionTypes
+    PROCEDURE_DEFINITION_TYPES
   );
   const blockOrderMap = new Map();
   unsortedBlockElements.forEach((element, index) => {

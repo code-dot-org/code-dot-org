@@ -4,7 +4,7 @@ import {
   getSortedBlockElements,
   createBlockOrderMap,
 } from '@cdo/apps/blockly/addons/cdoXml';
-import {procedureDefinitionTypes} from '@cdo/apps/blockly/constants';
+import {PROCEDURE_DEFINITION_TYPES} from '@cdo/apps/blockly/constants';
 
 const parser = new DOMParser();
 
@@ -26,7 +26,7 @@ describe('sortBlocksByType', function () {
     // Call the function
     const sortedBlockElements = sortBlocksByType(
       blockElementsCopy,
-      procedureDefinitionTypes
+      PROCEDURE_DEFINITION_TYPES
     );
 
     // Expected sorted block elements
@@ -56,7 +56,7 @@ describe('getSortedBlockElements', function () {
     // Call the function
     const sortedBlockElements = getSortedBlockElements(
       xmlDoc.documentElement,
-      procedureDefinitionTypes
+      PROCEDURE_DEFINITION_TYPES
     );
 
     // Expected sorted block elements

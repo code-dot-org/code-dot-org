@@ -1,5 +1,5 @@
 import GoogleBlockly from 'blockly/core';
-import {procedureDefinitionTypes} from '../constants';
+import {PROCEDURE_DEFINITION_TYPES} from '../constants';
 
 const unknownBlockState = {type: 'unknown', enabled: false};
 
@@ -35,7 +35,7 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
     // procedures map is updated correctly.
     const blockStates = sortBlocksByType(
       stateToLoad['blocks'],
-      procedureDefinitionTypes
+      PROCEDURE_DEFINITION_TYPES
     );
 
     for (const blockState of blockStates) {
