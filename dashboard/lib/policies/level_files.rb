@@ -8,8 +8,11 @@ module Policies
       raise("Multiple .level files for '#{level.name}' found: #{level_paths}") if level_paths.many?
 
       # If we don't yet have a .level file, create a new one. We organize level
-      # files into a `levels` directory to keep them separate from scripts.
-      level_paths.first || Rails.root.join("config/scripts/levels/#{level.name}.level")
+      # files into a `levels` directory to keep them separate from scripts, and
+      # we further organize them by the associated Game to avoid packing too
+      # many files into a single directory.
+      raise("No valid Game for '#{level.name}' found") unless level.game && level.game.name
+      level_paths.first || Rails.root.join("config/scripts/levels/#{level.game.name}/#{level.name}.level")
     end
 
     # Return whether or not the given level should be serialized to the file

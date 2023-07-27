@@ -4,7 +4,7 @@ module Policies
   class LevelFilesTest < ActiveSupport::TestCase
     test 'will provide a default if no file exists' do
       level = create(:level, name: "Testing Default Level File")
-      expected_file_path = Rails.root.join("config/scripts/levels/#{level_name}.level")
+      expected_file_path = Rails.root.join("config/scripts/levels/#{level.game.name}/#{level.name}.level")
       refute File.exist?(expected_file_path)
       assert_equal Policies::LevelFiles.level_file_path(level), expected_file_path
     end
@@ -28,6 +28,13 @@ module Policies
     ensure
       # Make sure we clean up all touched level files, even if the test fails
       level_files.each {|level_file| FileUtils.rm_f(level_file)}
+    end
+
+    test 'can only create a new file path for levels with an associated game' do
+      gameless_level = create(:level, game: nil)
+      refute gameless_level.game
+      exception = assert_raises {Policies::LevelFiles.level_file_path(gameless_level)}
+      assert_includes(exception.message, "No valid Game for '#{gameless_level.name}' found")
     end
 
     test 'will raise if multiple .level files found with the same name' do
