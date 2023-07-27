@@ -34,25 +34,23 @@ describe('CourseOfferingEditor', () => {
         device_compatibility: JSON.stringify(deviceCompatibilities),
         description: 'An introductory course into computer science.',
         professional_learning: 'code.org/apply',
+        self_paced_pl_course_offering_id: 1,
       },
       selfPacedPLCourseOfferings: [
         {
           id: 1,
           key: 'test-self-paced-pl-1',
           display_name: 'Self Paced PL 1',
-          course_version_path: null,
         },
         {
           id: 53,
           key: 'test-self-paced-pl-2',
           display_name: 'Self Paced PL 2',
-          course_version_path: null,
         },
         {
           id: 135,
           key: 'test-self-paced-pl-3',
           display_name: 'Self Paced PL 3',
-          course_version_path: null,
         },
       ],
       professionalLearningProgramPaths: {

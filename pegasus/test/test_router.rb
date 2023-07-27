@@ -114,4 +114,14 @@ class RouterTest < Minitest::Test
     refute_match "<title>1,2,3</title>", resp.body
     assert_match "<title>&lt;%= (1..3).to_a.join(&#39;,&#39;).inspect %&gt;</title>", resp.body
   end
+
+  def test_parsing_yaml_header
+    fixture_path = File.join(__dir__, 'fixtures/sites/code.org/public/div_brackets.md')
+
+    yaml_header, content, lines_count = app.helpers.parse_yaml_header(fixture_path)
+
+    assert_equal({'x' => 'y'}, yaml_header)
+    assert_equal("### HELLO\n\n[class]\n\n[#id]\n\nTesting div-brackets.\n\n[/#id]\n\n[/class]\n", content)
+    assert_equal(6, lines_count)
+  end
 end
