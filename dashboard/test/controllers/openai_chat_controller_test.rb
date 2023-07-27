@@ -3,7 +3,7 @@ require 'test_helper'
 class OpenaiChatControllerTest < ActionController::TestCase
   setup do
     response = Net::HTTPResponse.new(nil, '200', nil)
-    OpenaiChatHelper.stubs(:request_chat_completion).returns(response)
+    OpenaiChatHelper.stubs(:throttled_request_chat_completion).returns(response)
     OpenaiChatHelper.stubs(:get_chat_completion_response_message).returns({status: 200, json: {}})
   end
 
