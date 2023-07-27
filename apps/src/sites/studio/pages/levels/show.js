@@ -33,7 +33,6 @@ function initPage() {
   const unversionedRedirectDialogMountPoint = document.getElementById(
     'unversioned-redirect-dialog'
   );
-  const fabMountPoint = document.getElementById('fab-mount-point');
   if (redirectDialogMountPoint && config.redirect_script_url) {
     ReactDOM.render(
       <ScriptLevelRedirectDialog
@@ -53,6 +52,7 @@ function initPage() {
     );
   }
 
+  const fabMountPoint = document.getElementById('fab-mount-point');
   if (fabMountPoint) {
     ReactDOM.render(
       <RubricFloatingActionButton />,
