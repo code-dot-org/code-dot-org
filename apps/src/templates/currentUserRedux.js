@@ -60,7 +60,8 @@ const initialState = {
   signInState: SignInState.Unknown,
   hasSeenStandardsReportInfo: false,
   isBackgroundMusicMuted: false,
-  isSortedByFamilyName: tryGetLocalStorage(SORT_BY_FAMILY_NAME, false) || false,
+  isSortedByFamilyName:
+    tryGetLocalStorage(SORT_BY_FAMILY_NAME, 'false') ?? false,
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true,
 };
@@ -121,7 +122,7 @@ export default function currentUser(state = initialState, action) {
       userType: user_type,
       isBackgroundMusicMuted: mute_music,
       isSortedByFamilyName:
-        tryGetLocalStorage(SORT_BY_FAMILY_NAME, false) || false,
+        tryGetLocalStorage(SORT_BY_FAMILY_NAME, 'false') ?? false,
       under13: under_13,
     };
   }

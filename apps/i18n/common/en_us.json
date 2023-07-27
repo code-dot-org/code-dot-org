@@ -1035,6 +1035,7 @@
   "fallbackVideoClosedCaptioningDialogClose": "Close",
   "familyName": "Family name",
   "familyNameHelpTip": "Optional. If provided, allows you to sort by this name instead of the display name on the teacher panel.",
+  "familyNameToolTip": "Family names can be edited on the Manage Students tab of this section's teacher dashboard.",
   "featureAgain": "Feature again",
   "featured": "Featured",
   "featuredProject": "Featured Project",
