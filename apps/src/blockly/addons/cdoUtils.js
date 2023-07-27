@@ -28,6 +28,11 @@ export function loadBlocksToWorkspace(workspace, source) {
   } else {
     stateToLoad = JSON.parse(source);
   }
+  // If we had to revert the shareable procedures blocks, this will correct
+  // and JSON modified that was modified before the revert.
+  if (!Blockly.procedureSerializer) {
+    stateToLoad = removeProceduresModelFromState(stateToLoad);
+  }
   Blockly.serialization.workspaces.load(stateToLoad, workspace);
   positionBlocksOnWorkspace(workspace);
 }
@@ -199,4 +204,24 @@ export function locationField(icon, onClick) {
     transformText: transformTextSetField,
     icon,
   });
+}
+
+function removeProceduresModelFromState(stateToLoad) {
+  const {blocks, procedures} = stateToLoad;
+
+  if (!procedures) {
+    return stateToLoad;
+  }
+
+  blocks.blocks.forEach(block => {
+    if (block.type === 'procedures_defnoreturn' && block.extraState) {
+      const name = procedures.filter(
+        procedure => procedure.id === block.extraState.procedureId
+      )[0].name;
+      block.fields = {
+        NAME: name,
+      };
+    }
+  });
+  return stateToLoad;
 }
