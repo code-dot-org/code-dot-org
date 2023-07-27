@@ -12,7 +12,6 @@ import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import moduleStyles from './music-view.module.scss';
 import {AnalyticsContext} from '../context';
-import TopButtons from './TopButtons';
 import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
@@ -698,20 +697,6 @@ class UnconnectedMusicView extends React.Component {
               this.renderInstructions(InstructionsPositions.LEFT)}
 
             <div id="blockly-area" className={moduleStyles.blocklyArea}>
-              <div
-                id="top-buttons-container"
-                className={classNames(
-                  moduleStyles.topButtonsContainer,
-                  this.props.isHeadersShowing &&
-                    moduleStyles.topButtonsContainerWithHeaders
-                )}
-              >
-                <TopButtons
-                  clearCode={this.clearCode}
-                  uploadSound={file => this.soundUploader.uploadSound(file)}
-                  canShowSaveStatus={!this.isScriptLevel()}
-                />
-              </div>
               <PanelContainer
                 id="workspace-panel"
                 headerText={musicI18n.panelHeaderWorkspace()}
@@ -720,6 +705,7 @@ class UnconnectedMusicView extends React.Component {
                   <UndoRedoButtons
                     onClickUndo={this.undo}
                     onClickRedo={this.redo}
+                    clearCode={this.clearCode}
                   />
                 }
               >

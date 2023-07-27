@@ -1,3 +1,7 @@
+import {
+  DialogContext,
+  DialogType,
+} from '@cdo/apps/lab2/views/dialogs/DialogManager';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
 import React, {useCallback, useContext} from 'react';
@@ -9,6 +13,7 @@ import moduleStyles from './undo-redo-buttons.module.scss';
 interface UndoRedoButtonsProps {
   onClickUndo: () => void;
   onClickRedo: () => void;
+  clearCode: () => void;
 }
 
 /**
@@ -18,13 +23,15 @@ interface UndoRedoButtonsProps {
 const UndoRedoButtons: React.FunctionComponent<UndoRedoButtonsProps> = ({
   onClickUndo,
   onClickRedo,
+  clearCode,
 }) => {
   const {canUndo, canRedo} = useSelector(
     (state: {music: MusicState}) => state.music.undoStatus
   );
   const analyticsReporter = useContext(AnalyticsContext);
+  const dialogControl = useContext(DialogContext);
 
-  const clickHandler = useCallback(
+  const onClickUndoRedo = useCallback(
     (action: 'undo' | 'redo') => {
       if (action === 'undo') {
         onClickUndo();
@@ -41,10 +48,37 @@ const UndoRedoButtons: React.FunctionComponent<UndoRedoButtonsProps> = ({
     [analyticsReporter, onClickRedo, onClickUndo]
   );
 
+  const onClickStartOver = useCallback(() => {
+    if (dialogControl) {
+      dialogControl.showDialog(DialogType.StartOver, clearCode);
+    }
+
+    if (analyticsReporter) {
+      analyticsReporter.onButtonClicked('startOver');
+    }
+  }, [dialogControl, analyticsReporter, clearCode]);
+
+  const onFeedbackClicked = () => {
+    if (analyticsReporter) {
+      analyticsReporter.onButtonClicked('feedback');
+      window.open(
+        'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
+        '_blank'
+      );
+    }
+  };
+
   return (
     <div className={moduleStyles.container}>
       <button
-        onClick={() => clickHandler('undo')}
+        onClick={onClickStartOver}
+        type="button"
+        className={classNames(moduleStyles.button)}
+      >
+        <FontAwesome title={undefined} icon="refresh" className={'icon'} />
+      </button>
+      <button
+        onClick={() => onClickUndoRedo('undo')}
         type="button"
         className={classNames(
           moduleStyles.button,
@@ -54,7 +88,7 @@ const UndoRedoButtons: React.FunctionComponent<UndoRedoButtonsProps> = ({
         <FontAwesome title={undefined} icon="undo" className={'icon'} />
       </button>
       <button
-        onClick={() => clickHandler('redo')}
+        onClick={() => onClickUndoRedo('redo')}
         type="button"
         className={classNames(
           moduleStyles.button,
@@ -62,6 +96,13 @@ const UndoRedoButtons: React.FunctionComponent<UndoRedoButtonsProps> = ({
         )}
       >
         <FontAwesome title={undefined} icon="redo" className={'icon'} />
+      </button>
+      <button
+        onClick={onFeedbackClicked}
+        type="button"
+        className={classNames(moduleStyles.button)}
+      >
+        <FontAwesome title={undefined} icon="commenting" className={'icon'} />
       </button>
     </div>
   );
