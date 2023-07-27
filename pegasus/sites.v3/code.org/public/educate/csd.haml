@@ -4,7 +4,6 @@ theme: responsive_full_width
 ---
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
-
 %link{href: "/css/generated/csd-styles.css", rel: "stylesheet"}
 
 %section.hero-banner-basic.overlay
@@ -85,14 +84,14 @@ theme: responsive_full_width
     %h2=hoc_s(:heading_flexible_units)
     %p=hoc_s(:csd_page_courses_flexible_units_desc)
 
-    = view :flexible_units_carousel
-
-= view :section_divider_line
+    = view :carousel_csd_flexible
 
 %section#collections
   .wrapper
     %h2=hoc_s(:heading_collections)
     %p=hoc_s(:csd_page_courses_collections_desc)
+
+    = view :carousel_csd_collections
 
 
 %section.bg-neutral-light
@@ -117,3 +116,49 @@ theme: responsive_full_width
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::CSD_CURRICULUM_PAGE_VISITED_EVENT
 
 
+%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
+
+
+:javascript
+  function reorganizeAndWrapSlides(carouselId) {
+    const carouselContainer = document.getElementById(carouselId);
+    if (!carouselContainer) {
+      console.error(`Carousel container with id "${carouselId}" not found.`);
+      return;
+    }
+
+    const slidesContainer = carouselContainer.querySelector('.slides');
+    if (!slidesContainer) {
+      console.error(`Slides container not found inside the carousel.`);
+      return;
+    }
+
+    const slideItems = Array.from(slidesContainer.querySelectorAll('.slide'));
+
+    const actionBlocks = Array.from(carouselContainer.querySelectorAll('.action-block.action-block--one-col.flex-space-between'));
+    actionBlocks.forEach(block => block.remove());
+
+    const slides = [];
+    while (actionBlocks.length > 0) {
+      slides.push(actionBlocks.splice(0, 3));
+    }
+
+    slides.forEach(slide => {
+      const slideWrapper = document.createElement('div');
+      slideWrapper.className = 'slide';
+      slide.forEach(slideItem => {
+        slideWrapper.appendChild(slideItem);
+      });
+
+      slidesContainer.appendChild(slideWrapper);
+    });
+
+    slideItems.forEach(slideItem => slideItem.remove());
+  }
+  function handleScreenSize(carouselId) {
+    if (window.innerWidth > 768) {
+    console.log(carouselId)
+      reorganizeAndWrapSlides(carouselId);
+    }
+  }
