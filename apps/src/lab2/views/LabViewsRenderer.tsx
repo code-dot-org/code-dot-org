@@ -3,7 +3,7 @@
  * currently active Lab (determined by the current app name). This
  * helps facilitate level-switching between labs without page reloads.
  */
-import AichatView from '@cdo/apps/aichat/AichatView';
+import AichatView from '@cdo/apps/aichat/views/AichatView';
 import MusicView from '@cdo/apps/music/views/MusicView';
 import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import classNames from 'classnames';

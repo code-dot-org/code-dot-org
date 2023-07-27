@@ -1,5 +1,7 @@
 @import 'color.scss';
-@import './music-view.module.scss';
+
+// Constants
+$default-spacing: 2px;
 
 .panelContainer {
   width: 100%;
