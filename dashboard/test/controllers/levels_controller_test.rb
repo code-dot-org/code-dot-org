@@ -504,12 +504,12 @@ class LevelsControllerTest < ActionController::TestCase
         program: @program
       }
       level = Level.find_by(name: level_name)
-      file_path = Policies::LevelFiles.level_file_path(level.name)
+      file_path = Policies::LevelFiles.level_file_path(level)
       assert_equal true, file_path && File.exist?(file_path)
       delete :destroy, params: {id: level}
       assert_equal false, file_path && File.exist?(file_path)
     ensure
-      file_path = Policies::LevelFiles.level_file_path(level_name)
+      file_path = Policies::LevelFiles.level_file_path(Level.find_by(name: level_name))
       File.delete(file_path) if file_path && File.exist?(file_path)
     end
   end

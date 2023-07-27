@@ -9,7 +9,7 @@ module Services
       # this level and are ready for that file to be updated.
       return unless Policies::LevelFiles.write_to_file?(level) && level.published
 
-      file_path = Policies::LevelFiles.level_file_path(level.name)
+      file_path = Policies::LevelFiles.level_file_path(level)
       File.write(file_path, level.to_xml)
       file_path
     end
