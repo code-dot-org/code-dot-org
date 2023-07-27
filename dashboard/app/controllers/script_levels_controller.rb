@@ -160,7 +160,9 @@ class ScriptLevelsController < ApplicationController
 
     @body_classes = @level.properties['background']
 
-    @show_rubric = current_user&.has_pilot_experiment?('ai-ta-rubrics') && @script_level.lesson.rubric.present?
+    @show_rubric = current_user&.has_pilot_experiment?('ai-ta-rubrics') &&
+                   current_user&.teacher? &&
+                   @script_level.lesson.rubric.present?
 
     present_level
   end
