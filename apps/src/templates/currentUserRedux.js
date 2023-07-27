@@ -1,7 +1,6 @@
-import {makeEnum, tryGetLocalStorage} from '../utils';
+import {makeEnum} from '../utils';
 import analyticsReport from '@cdo/apps/lib/util/AnalyticsReporter';
 
-const SORT_BY_FAMILY_NAME = 'sortByFamilyName';
 const SET_CURRENT_USER_NAME = 'currentUser/SET_CURRENT_USER_NAME';
 const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';
 const SET_USER_TYPE = 'currentUser/SET_USER_TYPE';
@@ -60,8 +59,7 @@ const initialState = {
   signInState: SignInState.Unknown,
   hasSeenStandardsReportInfo: false,
   isBackgroundMusicMuted: false,
-  isSortedByFamilyName:
-    tryGetLocalStorage(SORT_BY_FAMILY_NAME, 'false') ?? false,
+  isSortedByFamilyName: false,
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true,
 };
@@ -121,8 +119,6 @@ export default function currentUser(state = initialState, action) {
       userName: username,
       userType: user_type,
       isBackgroundMusicMuted: mute_music,
-      isSortedByFamilyName:
-        tryGetLocalStorage(SORT_BY_FAMILY_NAME, 'false') ?? false,
       under13: under_13,
     };
   }
