@@ -1,3 +1,6 @@
+# don't inject K8S related manifests so skaffold doesn't rebuild/sync
+skaffold.yaml
+k8s/code.org
 
 ##########################################################################
 # THESE LARGE STATIC FILES ARE INJECTED USING code.org-static.dockerfile #
@@ -10,11 +13,17 @@ shared
 apps/i18n
 i18n/locales
 dashboard/config/locales
+
+pegasus/sites.v3
+pegasus/sites
 ##########################################################################
 
-# don't inject K8S related manifests so skaffold doesn't rebuild/sync
-skaffold.yaml
-k8s/code.org
+##########################################################################
+# MYRIAD DB SEED FILES ARE INJECTED USING code.org-db-seed.dockerfile    #
+##########################################################################
+dashboard/config/scripts
+dashboard/config/scripts_json
+##########################################################################
 
 
 **/.git
@@ -24,15 +33,6 @@ k8s/code.org
 .ruby-lsp
 
 
-
-# Are these just seeds for the DB or are these potentially read directly?
-dashboard/tmp
-dashboard/config/scripts
-dashboard/config/scripts_json
-dashboard/config/scripts/levels
-
-pegasus/sites.v3
-pegasus/sites
 # ???
 pegasus/cache
 
@@ -165,3 +165,6 @@ npm-debug.log
 
 ##### COPY PASTED FROM /dashboard/log/.gitignore with /dashboard/log prefixing #####
 /dashboard/log/*
+
+##### COPY PASTED FROM /dashboard/tmp/.gitignore with /dashboard/tmp prefixing #####
+/dashboard/tmp/*
