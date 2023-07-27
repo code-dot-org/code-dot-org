@@ -877,10 +877,6 @@
         "Dance_Party_extras_alternate_2019": {
           "alternate": "Le bloc « alterner » est dans la catégorie « Danseurs »."
         },
-        "Farmer for Authored Hint testing": {
-        },
-        "Farmer for TTS testing": {
-        },
         "Function intro Ryan": {
           "Function_intro_Ryan_a": "Dans ton programme, tu pourras appeler une fonction autant de fois que tu le voudras ! Essaie de l'appeler deux fois pour résoudre ce casse-tête.",
           "Function_intro_Ryan_b": "Si tu appelles correctement les fonctions, voici le chemin que tu prendras..."
@@ -1641,8 +1637,6 @@
           "courseA_collector_loops_challenge1_b": "Tu n’as pas besoin d’utiliser de boucle si tu fais quelque chose qu’une seule fois.",
           "courseA_collector_loops_challenge1_c": "Il y a 6 gemmes sur la droite de la grotte, mais tu n’as besoin de bouger et de collecter que 5 fois. Sais-tu pourquoi ?"
         },
-        "course1_collector_loops_challenge2": {
-        },
         "course1_collector_loops_challenge3": {
           "courseB_collector_loops_challenge1_c": "Déplace-toi à l’Est deux fois entre chaque chemin.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nTu peux résoudre ce problème en seulement 14 blocs. Clique de nouveau pour voir une solution.",
           "courseB_collector_loops_challenge1_d": "Essaie ceci !\n\n<xml>\n<block type=\"when_run » deletable=\"false » movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -1698,8 +1692,6 @@
           "courseD_bee_conditionals_challenge1_a": "Peux-tu trouver un chemin qui atteint toutes les fleurs et gâteaux de miel sans aller dans les arbres ? Le meilleur chemin est une spirale.\n\n**Tu peux résoudre ceci sans jamais tourner à gauche.**",
           "courseD_bee_conditionals_challenge1_b": "Dans cette casse-tête, chaque espace peut avoir une fleur, un rayon de miel ou rien du tout. Cela signifie que tu peux répéter ta condition `« Si/Sinon »` sur chaque espace."
         },
-        "course2_bee_conditionals_challenge2": {
-        },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_b": "Utilise des boucles pour ne pas être à court de blocs ˋcollecter\\` !"
         },
@@ -1725,8 +1717,6 @@
         "course2_maze_programming_challenge2": {
           "courseC_maze_programming_challenge2_a": "_\"Si tu me fais aller en arrière, fais très attention de me faire tourner dans le bon sens!\"_",
           "courseC_maze_programming_challenge2_b": "La solution la plus courte n’utilise que 5 blocs, mais elle utilise le bloc ˋrépéter\\` !"
-        },
-        "course3_artist_functions_challenge1": {
         },
         "course3_artist_functions_challenge2": {
           "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nCe bloc `sauter à` te permet de faire sauter l'artiste zombie sur n'importe quel pixel de la grille, quand tu le souhaites. Il fonctionne en le bougeant d'un nombre de pixels à droite et d'un autre nombre vers le bas. C'est toujours compté à partir du coin supérieur gauche, ce qui signifie que ce n'est pas important où se trouve l'artiste zombie \\_avant \\_ que la commande soit exécutée !\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
@@ -1777,8 +1767,6 @@
           "courseE_playLab_challenge1_a": "Voici ce que tu pourrais faire lorsque le joueur gagne le jeu:\n\n-   Faire disparaitre le dinosaure\n-   Arrêter les écureuils.\n-   Faire plaisir aux écureuils et au chevalier.\n-   Mettre un nouvel arrière plan\n-   Faire que le chevalier remercie le joueur de l'avoir aidé.\n-   Faire disparaitre tous les acteurs et montrer un message « Tu as gagné! ».",
           "courseE_playLab_challenge1_b": "Voici ce que tu pourrais faire lorsque le joueur perd le jeu:\n\n-   Faire disparaitre le chevalier.\n-   Rendre les écureuils tristes.\n-   Faire dire quelque chose au dinosaure.\n-   Mettre un nouvel arrière-plan.\n-   Faire disparaitre tous les acteurs et montrer un message « Fin du Jeu »."
         },
-        "course4_artist_binary_challenge2": {
-        },
         "course4_artist_concept_challenge2": {
           "courseE_artist_concept_challenge2_a": "Dès que tu as définis une fonction, tu peux l'appeler encore et encore - n'importe quand, dès que tu le souhaites!",
           "courseE_artist_concept_challenge2_b": "Tu peux sauter à différentes positions sur le tableau en utilisant cette commande:\n\n<xml>  <block type=\"jump_to\">\n    <title name=\"VALUE\">???</title>\n  </block></xml>"
@@ -1811,8 +1799,6 @@
           "courseD_bee_nested_loops_challenge2_b": "Pour obtenir les 4 joyaux, utilise d'abord une boucle pour t'éloigner du centre. Tourne à gauche ou à droite, puis utilise une boucle imbriquée pour aller de la première pile de joyaux à la seconde. Si tu répètes la boucle imbriquée suffisamment de fois, la collectionneuse bougera autour _de toute_ la grotte !",
           "courseD_bee_nested_loops_challenge2_c": "Le programme le plus court qui atteint tous les joyaux utilise un seul bloc `collecter` et 2 blocs `tourner`.",
           "courseD_bee_nested_loops_challenge2_d": "**Solution :**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "course4_harvester_nested_loops_challenge1": {
         },
         "course4_playlab_variables_challenge1": {
           "courseF_playlab_variables_challenge1_a": "Tu auras besoin de blocs supplémentaires de la boîte à outils pour amener les acteurs à parler.\n\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n                      <value name=\"TEXT\">\n                  <block type=\"text\">\n                    <title name=\"TEXT\">Knock knock.</title>\n                  </block>\n                </value>\n      <value name=\"TIME\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n      </block></xml>"
@@ -5505,8 +5491,6 @@
         },
         "courseC_artist_loops7a": {
           "courseC_artist_loops7a_a": "Il y a 360 degrés dans un cercle. Multiplie les degrés de ta rotation par le nombre de fois que tu répètes.\nEst-ce égal à 360 ?\nVérifie les rotations suggérées pour voir si ça marche !"
-        },
-        "courseC_artist_loops7a2022": {
         },
         "courseC_artist_loops7a_2018": {
           "courseC_artist_loops7a_a": "Il y a 360 degrés dans un cercle. Multiplie les degrés de ta rotation par le nombre de fois que tu répètes.\nEst-ce égal à 360 ?\nVérifie les rotations suggérées pour voir si ça marche !"
@@ -12278,14 +12262,6 @@
         "courseF_bee_variables_4a_2021": {
           "courseF_bee_variables_4_2021_1": "Au lieu d'ajouter 1 à la variable, ajoute 2 à chaque fois. "
         },
-        "courseF_clicker_finish_-2022-2": {
-        },
-        "courseF_clicker_score_-2022-2": {
-        },
-        "courseF_collector_freeplay_-2022-2": {
-        },
-        "courseF_collector_score_-2022-2": {
-        },
         "courseF_events_choice_pufferfish": {
           "changeProp": "Tu auras aussi besoin de ce bloc :\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
@@ -12297,16 +12273,6 @@
         },
         "courseF_events_key_-2022-2": {
           "changePropBlock": "Tu aureas aussi besoin de ce bloc :\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
-        },
-        "courseF_groups_behaviors_-2022-2": {
-        },
-        "courseF_groups_costume_-2022-2": {
-        },
-        "courseF_groups_say_-2022-2": {
-        },
-        "courseF_groups_size_-2022-2": {
-        },
-        "courseF_groups_touch_-2022-2": {
         },
         "courseF_playlab_variables1a": {
           "courseF_playlab_variables1a_a": "Ton but est de remplacer les mots “Que dois-je crier ?” dans le bloc vert par “But !”"
@@ -12363,10 +12329,6 @@
         },
         "courseF_text_concat_-2022-2": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "courseF_variables2_click_-2022-2": {
-        },
-        "courseF_variables2_set_-2022-2": {
         },
         "courseF_variables_card_finish": {
           "card_idea1": "Tu peux ajouter une deuxième (ou troisième ou quatrième) invite en reliant un nouveau bloc invite avec une variable différente à ton premier événement « lorsqu'une réponse aura été faite ». \n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get » can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text » can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">what do you want for your birthday?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get » can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">gift</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",

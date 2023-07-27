@@ -878,10 +878,6 @@
         "Dance_Party_extras_alternate_2019": {
           "alternate": "교대 블록은 “댄서” 카테고리에 있습니다."
         },
-        "Farmer for Authored Hint testing": {
-        },
-        "Farmer for TTS testing": {
-        },
         "Function intro Ryan": {
           "Function_intro_Ryan_a": "프로그램 내에서 같은 함수를 여러 번 호출할 수 있어요! 함수를 두 번 호출해 퍼즐을 풀어보세요.",
           "Function_intro_Ryan_b": "함수를 바르게 호출하면 이 경로로 이동하게 될 것입니다..."
@@ -1624,8 +1620,6 @@
           "courseA_artist_loops_challenge1_c": "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)",
           "courseA_artist_loops_challenge1_d": "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
         },
-        "course1_artist_loops_challenge2": {
-        },
         "course1_artist_loops_challenge3": {
           "courseA_artist_loops_challenge2_a": "이와 같은 블록: <xml>  <block type=\"simple_move_up_left\"/></xml>은 아티스트가 비스듬히 움직일 수 있게 해줄 것입니다. "
         },
@@ -1637,8 +1631,6 @@
         "course1_collector_loops_challenge1": {
           "courseA_collector_loops_challenge1_b": "한 번에 뭔가를 한 번만 할거면 루프를 사용할 필요가 없습니다."
         },
-        "course1_collector_loops_challenge2": {
-        },
         "course1_collector_loops_challenge3": {
           "courseB_collector_loops_challenge1_c": "각 경로 사이에서 동쪽으로 두 번 이동:\n\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>\n\n14개의 블록만으로 이것을 할 수 있습니다. 솔루션을 보기 위해 한 개 이상의 힌트를 클릭하세요. ",
           "courseB_collector_loops_challenge1_d": "이것을 시도하세요:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1648,8 +1640,6 @@
           "courseB_collector_loops_challenge2_b": "이 패턴이 반복되면, 라우렐은 동굴 아래에서 벽에 부딪치지 않을 거예요!\n\n<xml><block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block></xml> ",
           "courseB_collector_loops_challenge2_c": "`반복` 블록을 사용하여 마지막 보물 더비를 모으세요!",
           "courseB_collector_loops_challenge2_d": "이 솔루션을 시도하세요:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">4</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_simplified_dropdown\">\n            <title name=\"TIMES\" config=\"3-10\">6</title>\n            <statement name=\"DO\">\n              <block type=\"collector_collect\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "course1_maze_debugging_challenge1": {
         },
         "course1_maze_debugging_challenge2": {
           "courseB_maze_seq_challenge2_a": "이 퍼즐을 풀기 위해 블록을 추가하거나 제거할 필요는 없습니다."
@@ -1671,13 +1661,9 @@
           "courseA_playlab_events_challenge2_b": "로봇이 삐 소리를 내게 만들 수 있습니다.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_c": "화난 괴물이 으르렁거리게 만들 수 있습니다.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
-        "course2_artist_nestedLoops_challenge1": {
-        },
         "course2_artist_nestedLoops_challenge2": {
           "courseD_artist_nestedLoops_challenge2_a": "정오각형을 그리려면, 아티스트는 45도로 8회 회전해야 합니다.",
           "courseD_artist_nestedLoops_challenge2_b": "사각형을 그리려면, 아티스트는 90도로 4회 회전해야 합니다."
-        },
-        "course2_artist_prog_challenge1": {
         },
         "course2_artist_prog_challenge2": {
           "courseC_artist_prog_challenge2_a": "반복 블럭안에 실행 블럭들을 넣으면 반복해서 실행이 됩니다. 한번 해보세요! "
@@ -1685,16 +1671,8 @@
         "course2_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_b": "이 퍼즐에서 각 공간에는 꽃 또는 벌집이 있거나 아무 것도 없을 수 있습니다. 각 사각형에서 'if/else' 조건문을 반복할 수 있다는 의미입니다."
         },
-        "course2_bee_conditionals_challenge2": {
-        },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_b": "'모으기' 블록을 다 써버리지 않도록 루프를 사용하세요!"
-        },
-        "course2_collector_prog_challenge1": {
-        },
-        "course2_collector_prog_challenge2": {
-        },
-        "course2_harvester_loops_challenge1": {
         },
         "course2_harvester_loops_challenge2": {
           "courseC_harvester_loops_challenge2_a": "이것을 푸는 한 가지 방법은 지그재그처럼 보입니다. 또 다른 방법은 나선형처럼 보입니다! 이와 같은 퍼즐을 푸는 방법은 다양하게 많이 있습니다. 끈기를 가지세요! ",
@@ -1702,12 +1680,8 @@
           "courseC_harvester_loops_challenge2_c": "이 지그 재그 패턴은 퍼즐을 단지 20개의 블록으로 끝내기 위해 두 번 반복시킬 수 있습니다!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
           "courseC_harvester_loops_challenge2_d": "이 나선형 패턴은 단지 18개의 블록으로 코딩할 수 있습니다!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
         },
-        "course2_maze_loops_challenge1": {
-        },
         "course2_maze_programming_challenge2": {
           "courseC_maze_programming_challenge2_a": "_나를 뒤로 보내면, 내가 바른 방향으로 돌 때 특히 주의해야 합니다!_"
-        },
-        "course3_artist_functions_challenge1": {
         },
         "course3_artist_functions_challenge2": {
           "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\n이 `점프` 블록은 원할 때 마다 언제든 좀비 아티스트를 그리드 위 일정 픽셀로 이동시킬 수 있게 해줍니다. 우측으로 몇 번의 픽셀 또한 아래로 몇 번의 픽셀로 이동시켜 도달할 수 있습니다. 항상 좌측상단 모서리에서부터 수를 세기 시작하며 이것은 명령을 실행하기_전_에 좀비 아티스트가 어디에 있는지는 상관 없다는 의미입니다!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
@@ -1740,19 +1714,13 @@
         "course3_farmer_condLoops_challenge1": {
           "courseD_farmer_condLoops_challenge1_b": "정상적으로 호박에 있을 때는 `호박을 딸`것입니다. 호박에 있을 때 그 밖에 다른 무슨 일을 해야 할까요?"
         },
-        "course3_farmer_condLoops_challenge2": {
-        },
         "course3_maze_debugging_challenge1": {
           "courseC_maze_debugging_challenge1_a": "좌측 또는 우측? 여러분에게 달려 있어요!",
           "courseC_maze_debugging_challenge1_b": "스크랫의 경로는 직사각형 모양이예요! 매번 같은 방향으로 회전해야 해요!"
         },
-        "course3_maze_debugging_challenge2": {
-        },
         "course3_playLab_challenge1": {
           "courseE_playLab_challenge1_a": "플레이어가 게임에서 이길 때 할 수 있는 몇 가지 일이 여기에 있습니다:\n\n-   공룡을 사라지게 만들기.\n-   다람쥐를 멈추게 하기.\n-   다람쥐와 기사를 행복하게 만들기.\n-   새 배경 설정.\n-   기사가 플레이어에게 도와줘 고마움을 느낌.\n-   모든 액터를 사라지게 만들고 \"이겼습니다!\" 메시지가 나오게 합니다.",
           "courseE_playLab_challenge1_b": "플레이어가 게임에서 졌을 때 할 수 있는 몇 가지 일이 여기에 있습니다:\n\n-   기사를 사라지게 만들기.\n-   다람쥐를 슬프게 만들기.\n-   공룡에게 뭔가 말하게 만들기.\n-   새 배경 설정.\n-   모든 액터를 사라지게 만들고 \"게임 끝!\" 메시지가 나오게 합니다."
-        },
-        "course4_artist_binary_challenge2": {
         },
         "course4_artist_concept_challenge2": {
           "courseE_artist_concept_challenge2_a": "일단 함수를 정의하면, 이 함수를 원하는 때 원하는 곳에서 계속해서 다시 호출할 수 있습니다! ",
@@ -1783,8 +1751,6 @@
           "courseD_bee_nested_loops_challenge2_b": "모두 4개의 보석을 얻기 위해, 먼저 중앙에서 멀어지게 이동하는 루프를 사용하고 그 다음 중첩 루프를 사용해 첫 번째 보물 더미에서 두 번째로 이동합니다. 중첩 루프를 충분히 여러 번 반복하면, 모으는 이는 동굴_전체_여기 저기를 이동할 것입니다!",
           "courseD_bee_nested_loops_challenge2_c": "모든 보물에 도달하는 가장 짧은 프로그램은 `모으기` 블록 한 개와 두 번의 회전 만을 사용합니다.",
           "courseD_bee_nested_loops_challenge2_d": "**솔루션:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "course4_harvester_nested_loops_challenge1": {
         },
         "course4_playlab_variables_challenge1": {
           "courseF_playlab_variables_challenge1_a": "액터를 말하게 하려면 툴박스에 있는 추가적인 블록이 필요합니다."
@@ -2293,8 +2259,6 @@
           "courseA_collector_loops_challenge1_c": "시작할 때 동굴 우측에 6개의 보석이 있지만 남쪽으로 5회 이동하여 보물을 얻어야만 합니다. 이유를 아세요?",
           "courseA_collector_loops_challenge1_d": "시작 문제는 마지막 2개의 보석을 모으지 않습니다. 이 코드를 맨 끝에 추가해 보세요:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
         },
-        "courseA_collector_loops_challenge2": {
-        },
         "courseA_collector_loops_challenge2kp": {
           "courseA_collector_loops_challenge2kp_a": "이 퍼즐을 해결하기 위해 루프를 사용할 수 있습니까?",
           "courseA_collector_loops_challenge2kp_b": "이 경로를 시도하여 솔루션에 도달하세요."
@@ -2318,12 +2282,6 @@
         "courseA_collector_loops_challenge2kp_2021": {
           "courseA_collector_loops_challenge2kp_a": "이 퍼즐을 해결하기 위해 루프를 사용할 수 있습니까?",
           "courseA_collector_loops_challenge2kp_b": "이 경로를 시도하여 솔루션에 도달하세요."
-        },
-        "courseA_collector_preLoops4": {
-        },
-        "courseA_collector_preLoops5": {
-        },
-        "courseA_collector_preLoops6": {
         },
         "courseA_collector_preLoops7": {
           "courseA_collector_loops2_b": "보물을 가지고 정사각형으로 이동한 후, 이 블록을 사용하여 집어 올리세요.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
@@ -5472,8 +5430,6 @@
         },
         "courseC_artist_loops7a": {
           "courseC_artist_loops7a_a": "원은 360도입니다. 회전 횟수에서 각도를 반복한 횟수로 곱합니다. 몫이 360입니까?\n제안된 회전을 확인하여 이 방식이 맞는지 보세요! "
-        },
-        "courseC_artist_loops7a2022": {
         },
         "courseC_artist_loops7a_2018": {
           "courseC_artist_loops7a_a": "원은 360도입니다. 회전 횟수에서 각도를 반복한 횟수로 곱합니다. 몫이 360입니까?\n제안된 회전을 확인하여 이 방식이 맞는지 보세요! "
@@ -12206,14 +12162,6 @@
         "courseF_bee_variables_4a_2021": {
           "courseF_bee_variables_4_2021_1": "변수에 1을 더하는 대신, 매번 2를 더합니다."
         },
-        "courseF_clicker_finish_-2022-2": {
-        },
-        "courseF_clicker_score_-2022-2": {
-        },
-        "courseF_collector_freeplay_-2022-2": {
-        },
-        "courseF_collector_score_-2022-2": {
-        },
         "courseF_events_choice_pufferfish": {
           "changeProp": "이 블록이 필요할 것입니다:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
@@ -12225,16 +12173,6 @@
         },
         "courseF_events_key_-2022-2": {
           "changePropBlock": "이 블록이 필요할 것입니다:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
-        },
-        "courseF_groups_behaviors_-2022-2": {
-        },
-        "courseF_groups_costume_-2022-2": {
-        },
-        "courseF_groups_say_-2022-2": {
-        },
-        "courseF_groups_size_-2022-2": {
-        },
-        "courseF_groups_touch_-2022-2": {
         },
         "courseF_playlab_variables1a": {
           "courseF_playlab_variables1a_a": "녹색 블록에서 “뭐라고 소리 질러야 할까요?” 단어를 “골인l!”으로 대체할 수도 있습니다."
@@ -12291,10 +12229,6 @@
         },
         "courseF_text_concat_-2022-2": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "courseF_variables2_click_-2022-2": {
-        },
-        "courseF_variables2_set_-2022-2": {
         },
         "courseF_variables_card_finish": {
           "card_idea1": "다른 변수를 가진 새 프롬프트 블록을 첫 번째 `응답되었을 때` 이벤트에 연결함으로써 두 번째 (또는 세 번째, 네 번째) 프롬프트를 추가할 수 있습니다.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">생일에 무엇을 하고 싶어요?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">선물</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",

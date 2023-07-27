@@ -821,6 +821,7 @@
   "dropletBlock_whileBlock_signatureOverride": "만약 반복",
   "duplicate": "복사",
   "duration": "소요 시간",
+  "durationLabel": "지속 시간: {duration}",
   "edit": "편집",
   "editAll": "모두 편집",
   "editProject": "프로젝트 편집",

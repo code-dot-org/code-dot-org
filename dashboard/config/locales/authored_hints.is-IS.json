@@ -760,30 +760,6 @@
         "CourseE_HOC 2018 Level_9b_2021": {
           "voyage_aquatic_9a": "Sérðu rauðu og bláu kóralkubbana? Þeir sýna þér hvenær á að snúa til hægri og vinstri í gegnum rifið."
         },
-        "CourseF_outbreak1": {
-        },
-        "CourseF_outbreak1_-2022-2": {
-        },
-        "CourseF_outbreak2": {
-        },
-        "CourseF_outbreak2_-2022-2": {
-        },
-        "CourseF_outbreak3": {
-        },
-        "CourseF_outbreak3_-2022-2": {
-        },
-        "CourseF_outbreak4": {
-        },
-        "CourseF_outbreak4_-2022-2": {
-        },
-        "CourseF_outbreak6": {
-        },
-        "CourseF_outbreak6_-2022-2": {
-        },
-        "CourseF_outbreak7": {
-        },
-        "CourseF_outbreak7_-2022-2": {
-        },
         "Dance_2019_01": {
           "challenges": "**Valfrjálsar áskoranir**\n\n-   Velja að spila annað lag.\n-   Færa dansarann á annan stað.\n-   Búa til fleiri en einn dansara.",
           "validation": "**Hvernig klára ég þetta borð?**\n\n-   Láttu dansara birtast á skjánum.\n\n_Þetta borð endar eftir 4 takta._"
@@ -862,10 +838,6 @@
         },
         "Dance_Party_extras_alternate_2019": {
           "alternate": "Skiptingakubburinn er í flokknum \"Dansarar\"."
-        },
-        "Farmer for Authored Hint testing": {
-        },
-        "Farmer for TTS testing": {
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_a": "Þú getur kallað á sama fall oftar en einu sinni í forriti! Prófaðu að kalla á það tvisvar til að leysa þessa þraut.",
@@ -1590,10 +1562,6 @@
         },
         "behaviors 6_2020": {
           "behavior hint": "Prófaðu að breyta atferlinu! \n\n-   Hvaða gildi stjórnar hraða hverrar veru?"
-        },
-        "behaviors 7": {
-        },
-        "behaviors 7_2020": {
         },
         "comment_intro_maze_2018": {
           "courseC_maze_programming4_a": "Athugasemdir eru einnig hjálplegar þegar aðrir reyna að lesa kóðann þinn.",
@@ -5241,12 +5209,6 @@
           "courseC_PlayLab_eventsA_a": "Notaðu kubbana `hafa bakgrunn` og `hafa leikmann hraðan` til að leysa þessa þraut.",
           "courseC_PlayLab_eventsA_b": "Þú þarft að draga `þegar keyrt` kubb út á vinnusvæðið til að leysa þessa þraut."
         },
-        "courseC_PlayLab_eventsA_embed2022": {
-        },
-        "courseC_PlayLab_eventsA_embed_2019": {
-        },
-        "courseC_PlayLab_eventsA_embed_2020": {
-        },
         "courseC_PlayLab_eventsA_embed_2021": {
           "courseC_PlayLab_eventsA_a": "Notaðu örvarlyklana til að færa mörgæsina. Þú þarft ekki að skrifa neinn kóða til að ljúka þessu borði."
         },
@@ -7110,16 +7072,6 @@
         "courseC_starWars_loops5": {
           "courseC_starWars_loops5_a": "Besta lausnin notar eina `færa niður`skipun og eina lykkju með annarri `færa` skipun.",
           "courseC_starWars_loops5_b": "Til að færast niður þarft þú að snúa og svo fara áfram."
-        },
-        "courseC_starWars_loops52022": {
-        },
-        "courseC_starWars_loops5_2018": {
-        },
-        "courseC_starWars_loops5_2019": {
-        },
-        "courseC_starWars_loops5_2020": {
-        },
-        "courseC_starWars_loops5_2021": {
         },
         "courseC_starWars_loops5_copy": {
           "courseC_starWars_loops5_a": "Besta lausnin notar eina `færa niður`skipun og eina lykkju með annarri `færa` skipun.",
@@ -11719,8 +11671,6 @@
         "courseF_artist_variablesFP": {
           "courseF_artist_variablesFP_a": "Prófaðu eina af þessum þremur teikningum.\n![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png>)"
         },
-        "courseF_artist_variablesFP2022": {
-        },
         "courseF_artist_variablesFP_2018": {
           "courseF_artist_variablesFP_a": "Prófaðu eina af þessum þremur teikningum.\n![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png>)"
         },
@@ -11729,8 +11679,6 @@
         },
         "courseF_artist_variablesFP_2020": {
           "courseF_artist_variablesFP_a": "Prófaðu eina af þessum þremur teikningum.\n![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png>)"
-        },
-        "courseF_artist_variablesFP_2021": {
         },
         "courseF_artist_variables_challenge1": {
           "courseF_artist_variables_challenge1_a": "Hver lóðrétt lína hefur lengdina 10. Hver lárétt lína ætti að hafa lengdina `lengd`.",
@@ -12231,49 +12179,11 @@
         "courseF_bee_variables_3_2020": {
           "courseF_bee_variables_3_2019_1": "Til að draga 1 frá breytunni getur þú notað þennan kóða í forritinu þínu:\n<xml><block type=\"variables_set\" inline=\"false\">\n                    <title name=\"VAR\">gather</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">gather</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">1</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block></xml>"
         },
-        "courseF_bee_variables_3a2022": {
-        },
-        "courseF_bee_variables_3a_2021": {
-        },
-        "courseF_bee_variables_3aa2022": {
-        },
-        "courseF_bee_variables_3aa_2021": {
-        },
         "courseF_bee_variables_4_2019": {
           "courseF_bee_variables_4_2019_1": "Í stað þess að draga 1 frá `safna` (gather) ætti að bæta 1 við. Hvaða gildi ætti breytan að hafa í upphafi?"
         },
         "courseF_bee_variables_4_2020": {
           "courseF_bee_variables_4_2019_1": "Í stað þess að draga 1 frá `safna` (gather) ætti að bæta 1 við. Hvaða gildi ætti breytan að hafa í upphafi?"
-        },
-        "courseF_bee_variables_4a2022": {
-        },
-        "courseF_bee_variables_4a_2021": {
-        },
-        "courseF_clicker_finish_-2022-2": {
-        },
-        "courseF_clicker_score_-2022-2": {
-        },
-        "courseF_collector_freeplay_-2022-2": {
-        },
-        "courseF_collector_score_-2022-2": {
-        },
-        "courseF_events_choice_pufferfish": {
-        },
-        "courseF_events_choice_pufferfish_-2022-2": {
-        },
-        "courseF_events_key": {
-        },
-        "courseF_events_key_-2022-2": {
-        },
-        "courseF_groups_behaviors_-2022-2": {
-        },
-        "courseF_groups_costume_-2022-2": {
-        },
-        "courseF_groups_say_-2022-2": {
-        },
-        "courseF_groups_size_-2022-2": {
-        },
-        "courseF_groups_touch_-2022-2": {
         },
         "courseF_playlab_variables1a": {
           "courseF_playlab_variables1a_a": "Þú ættir að setja orðið \"Mark!\" í stað \"Hvað á ég að hrópa?\" í græna kubbnum."
@@ -12313,34 +12223,6 @@
           "courseF_playlab_variables_challenge2_b": "Þú getur breytt stikanum fyrir hversu langt kvikinn þinn færist í hvert sinn sem ýtt er á einhvern örvarlykil.",
           "courseF_playlab_variables_challenge2_c": "\\*Lausn:\\*\\*\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
-        "courseF_sprites_clouds": {
-        },
-        "courseF_sprites_clouds_-2022-2": {
-        },
-        "courseF_text_choice_multiprompt": {
-        },
-        "courseF_text_choice_multiprompt_-2022-2": {
-        },
-        "courseF_text_concat": {
-        },
-        "courseF_text_concat_-2022-2": {
-        },
-        "courseF_variables2_click_-2022-2": {
-        },
-        "courseF_variables2_set_-2022-2": {
-        },
-        "courseF_variables_card_finish": {
-        },
-        "courseF_variables_card_finish_-2022-2": {
-        },
-        "courseF_variables_chatbot_finish": {
-        },
-        "courseF_variables_chatbot_finish_-2022-2": {
-        },
-        "courseF_variables_madlib_finish": {
-        },
-        "courseF_variables_madlib_finish_-2022-2": {
-        },
         "coursea_maze_ramp12022": {
           "courseC_maze_programming1_a": "Ef fuglinn er ekki að komast til svínsins, þarftu að gæta þess að allir kubbarnir séu tengdir saman og smella svo aftur á \"Keyra\".",
           "courseC_maze_programming1_b": "Ekki óttast að gera mistök! Prófaðu eitthvað og ef það virkar ekki skaltu bara prófa eitthvað annað!"
@@ -12360,10 +12242,6 @@
         "coursea_maze_ramp1_2021": {
           "courseC_maze_programming1_a": "Ef fuglinn er ekki að komast til svínsins, þarftu að gæta þess að allir kubbarnir séu tengdir saman og smella svo aftur á \"Keyra\".",
           "courseC_maze_programming1_b": "Ekki óttast að gera mistök! Prófaðu eitthvað og ef það virkar ekki skaltu bara prófa eitthvað annað!"
-        },
-        "coursee_helloworld_events": {
-        },
-        "coursee_helloworld_say": {
         },
         "grade5_artist_variables_triangles1": {
           "grade5_artist_variables_triangles1_a": "Til að hafa 60 gráðu innra horn í þessum þríhyrningi þarftu að snúa listamanninum um 120 gráður.",
@@ -12385,117 +12263,17 @@
           "grade5_artist_variables_triangles1_b": "Notaðu `endurtaka` lykkjuna svo kóðinn verði styttri.",
           "grade5_artist_variables_triangles1_c": "Innan í lykkjunni ættir þú að fara áfram um 50 díla og snúa svo til vinstri 120 gráður."
         },
-        "helloworld_animals_backgrounds": {
-        },
-        "helloworld_animals_behaviors": {
-        },
-        "helloworld_animals_click": {
-        },
-        "helloworld_animals_costumes": {
-        },
-        "helloworld_animals_events": {
-        },
-        "helloworld_animals_location": {
-        },
         "helloworld_animals_multi": {
           "cat_xml": "Gættu þess að búningarnir passi saman í hverjum kubbi.\n\n<xml>\n  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_cat_hello\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Meow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_cat_hello\"</title>\n      </block>\n    </value>\n    </block></next></block>\n</xml>"
         },
         "helloworld_animals_say": {
           "hello-world-first-solution-bear": "Til að láta björnin segja eitthvað er hægt að tengja kóðakubbana svona:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
-        "helloworld_animals_sizes": {
-        },
-        "helloworld_emoji_backgrounds": {
-        },
-        "helloworld_emoji_behaviors": {
-        },
-        "helloworld_emoji_click": {
-        },
-        "helloworld_emoji_costumes": {
-        },
-        "helloworld_emoji_events": {
-        },
-        "helloworld_emoji_location": {
-        },
-        "helloworld_emoji_multi": {
-        },
         "helloworld_emoji_say": {
           "hello-world-first-solution-emoji": "Til að láta tjáknið segja eitthvað er hægt að tengja kóðakubbana svona:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
-        "helloworld_emoji_sizes": {
-        },
-        "helloworld_food_backgrounds": {
-        },
-        "helloworld_food_backgrounds_soccer-2022": {
-        },
-        "helloworld_food_backgrounds_space-2022": {
-        },
-        "helloworld_food_behaviors": {
-        },
-        "helloworld_food_behaviors_soccer-2022": {
-        },
-        "helloworld_food_behaviors_space-2022": {
-        },
-        "helloworld_food_click": {
-        },
-        "helloworld_food_click_soccer-2022": {
-        },
-        "helloworld_food_click_space-2022": {
-        },
-        "helloworld_food_costumes": {
-        },
-        "helloworld_food_costumes_soccer-2022": {
-        },
-        "helloworld_food_costumes_space-2022": {
-        },
-        "helloworld_food_events": {
-        },
-        "helloworld_food_events_soccer-2022": {
-        },
-        "helloworld_food_events_space-2022": {
-        },
-        "helloworld_food_location": {
-        },
-        "helloworld_food_location_soccer-2022": {
-        },
-        "helloworld_food_location_space-2022": {
-        },
-        "helloworld_food_multi": {
-        },
-        "helloworld_food_multi_soccer-2022": {
-        },
-        "helloworld_food_multi_space-2022": {
-        },
-        "helloworld_food_say": {
-        },
-        "helloworld_food_say_soccer-2022": {
-        },
-        "helloworld_food_say_space-2022": {
-        },
-        "helloworld_food_sizes": {
-        },
-        "helloworld_food_sizes_soccer-2022": {
-        },
-        "helloworld_food_sizes_space-2022": {
-        },
-        "helloworld_retro_backgrounds": {
-        },
-        "helloworld_retro_behaviors": {
-        },
-        "helloworld_retro_click": {
-        },
-        "helloworld_retro_costumes": {
-        },
-        "helloworld_retro_events": {
-        },
-        "helloworld_retro_location": {
-        },
-        "helloworld_retro_multi": {
-        },
         "helloworld_retro_say": {
           "hello-world-first-solution-retrocreature": "Til að láta skepnuna segja eitthvað er hægt að tengja kóðakubbana svona:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
-        },
-        "helloworld_retro_sizes": {
         },
         "iceage_click_hello": {
           "iceage_click_hello_a": "Bættum einum eða fleiri `leikmaður 1 segir` kubbum við `þegar smellt` atburðinn til að klára þessa þraut."
@@ -12546,18 +12324,6 @@
         "iceage_warn_ice_age_dani": {
           "iceage_warn_ice_age_a": "Þú þarft aðeins að bæta við tveimur kubbum til að koma þessari þraut í rétt horf. ",
           "iceage_warn_ice_age_b": "Bættu báðum nýju kubbunum neðan við `þegar keyrt` atburðinn til að láta þá gerast strax í upphafi forritsins."
-        },
-        "poetry_hoc_addSprites": {
-        },
-        "poetry_hoc_backgroundEffects": {
-        },
-        "poetry_hoc_events1": {
-        },
-        "poetry_hoc_sounds": {
-        },
-        "poetry_hoc_spriteBehaviors": {
-        },
-        "poetry_hoc_spriteSizes": {
         }
       }
     }

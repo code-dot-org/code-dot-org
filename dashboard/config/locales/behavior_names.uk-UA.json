@@ -1570,10 +1570,6 @@
           "swimming left and right": "рух рибки ліворуч та праворуч",
           "wandering": "бродіння"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "growing": "ріст",
           "jittering": "тремтіння",
@@ -3008,8 +3004,6 @@
           "spinning right": "обертання праворуч",
           "wandering": "бродіння",
           "wobbling": "хитання"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "ріст",

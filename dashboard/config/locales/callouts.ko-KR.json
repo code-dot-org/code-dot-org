@@ -20,92 +20,8 @@
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "이제 설계 모드에 있습니다."
         },
-        "Big Game Vars 1": {
-        },
-        "CSD U3 - conditionals - transition": {
-        },
-        "CSD U3 - conditionals - transition_2018": {
-        },
-        "CSD U3 - conditionals - transition_2019": {
-        },
-        "CSD U3 - conditionals - transition_2021": {
-        },
-        "CSD U3 - conditionals - transition_2022": {
-        },
-        "CSD U3 Boolean Predict": {
-        },
-        "CSD U3 Boolean Predict_2018": {
-        },
-        "CSD U3 Boolean Predict_2019": {
-        },
-        "CSD U3 Boolean Predict_2021": {
-        },
-        "CSD U3 Boolean Predict_2022": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2019": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
-        },
-        "CSD U3 Random add_2021": {
-        },
-        "CSD U3 Random add_2022": {
-        },
-        "CSD U3 Sprites anitab 1": {
-        },
-        "CSD U3 Sprites anitab 1_2018": {
-        },
-        "CSD U3 Sprites anitab 1_2019": {
-        },
-        "CSD U3 Sprites anitab 1_2021": {
-        },
-        "CSD U3 Sprites anitab 1_2022": {
-        },
-        "CSD U3 Sprites intro sprites": {
-        },
-        "CSD U3 Sprites intro sprites_2018": {
-        },
-        "CSD U3 Sprites intro sprites_2019": {
-        },
-        "CSD U3 Sprites intro sprites_2021": {
-        },
-        "CSD U3 Sprites intro sprites_2022": {
-        },
-        "CSD U3 Sprites text": {
-        },
-        "CSD U3 Sprites text_2018": {
-        },
-        "CSD U3 Sprites text_2019": {
-        },
-        "CSD U3 Sprites text_2021": {
-        },
-        "CSD U3 Sprites text_2022": {
-        },
-        "CSD U3 UP_ARROW": {
-        },
-        "CSD U3 UP_ARROW_2018": {
-        },
-        "CSD U3 UP_ARROW_2018_2019": {
-        },
-        "CSD U3 UP_ARROW_2021": {
-        },
-        "CSD U3 UP_ARROW_2022": {
-        },
         "CSD U3 Variables Predict Where X": {
           "CSD_U3_variables": "여기 번호를 변경하세요."
-        },
-        "CSD U3 Variables Predict Where XY": {
-        },
-        "CSD U3 Variables Predict Where XY_2018": {
-        },
-        "CSD U3 Variables Predict Where XY_2019": {
-        },
-        "CSD U3 Variables Predict Where XY_2021": {
-        },
-        "CSD U3 Variables Predict Where XY_2022": {
         },
         "CSD U3 Variables Predict Where X_2018": {
           "CSD_U3_variables": "여기 번호를 변경하세요."
@@ -118,184 +34,6 @@
         },
         "CSD U3 Variables Predict Where X_2022": {
           "CSD_U3_variables": "여기 번호를 변경하세요."
-        },
-        "CSD U3 abstraction accelerateX": {
-        },
-        "CSD U3 abstraction accelerateX_2018": {
-        },
-        "CSD U3 abstraction accelerateX_2019": {
-        },
-        "CSD U3 abstraction accelerateX_2021": {
-        },
-        "CSD U3 abstraction accelerateX_2022": {
-        },
-        "CSD U3 abstraction accelerateY": {
-        },
-        "CSD U3 abstraction accelerateY_2018": {
-        },
-        "CSD U3 abstraction accelerateY_2019": {
-        },
-        "CSD U3 abstraction accelerateY_2021": {
-        },
-        "CSD U3 abstraction accelerateY_2022": {
-        },
-        "CSD U3 abstraction jump": {
-        },
-        "CSD U3 abstraction jump_2018": {
-        },
-        "CSD U3 abstraction jump_2018_2019": {
-        },
-        "CSD U3 abstraction jump_2021": {
-        },
-        "CSD U3 abstraction jump_2022": {
-        },
-        "CSD U3 abstraction jumping": {
-        },
-        "CSD U3 abstraction jumping_2018": {
-        },
-        "CSD U3 abstraction jumping_2019": {
-        },
-        "CSD U3 abstraction jumping_2021": {
-        },
-        "CSD U3 abstraction jumping_2022": {
-        },
-        "CSD U3 abstraction looping": {
-        },
-        "CSD U3 abstraction looping_2018": {
-        },
-        "CSD U3 abstraction looping_2019": {
-        },
-        "CSD U3 abstraction looping_2021": {
-        },
-        "CSD U3 abstraction looping_2022": {
-        },
-        "CSD U3 abstraction rotation": {
-        },
-        "CSD U3 abstraction rotation control": {
-        },
-        "CSD U3 abstraction rotation control_2018": {
-        },
-        "CSD U3 abstraction rotation control_2019": {
-        },
-        "CSD U3 abstraction rotation control_2021": {
-        },
-        "CSD U3 abstraction rotation control_2022": {
-        },
-        "CSD U3 abstraction rotation_2018": {
-        },
-        "CSD U3 abstraction rotation_2019": {
-        },
-        "CSD U3 abstraction rotation_2021": {
-        },
-        "CSD U3 abstraction rotation_2022": {
-        },
-        "CSD U3 abstraction tumbleweed": {
-        },
-        "CSD U3 abstraction tumbleweed_2018": {
-        },
-        "CSD U3 abstraction tumbleweed_2019": {
-        },
-        "CSD U3 abstraction tumbleweed_2021": {
-        },
-        "CSD U3 abstraction tumbleweed_2022": {
-        },
-        "CSD U3 abstraction velocityX": {
-        },
-        "CSD U3 abstraction velocityX control": {
-        },
-        "CSD U3 abstraction velocityX control_2018": {
-        },
-        "CSD U3 abstraction velocityX control_2019": {
-        },
-        "CSD U3 abstraction velocityX control_2021": {
-        },
-        "CSD U3 abstraction velocityX control_2022": {
-        },
-        "CSD U3 abstraction velocityX if-statements": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2018": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2019": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2021": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2022": {
-        },
-        "CSD U3 abstraction velocityX_2018": {
-        },
-        "CSD U3 abstraction velocityX_2019": {
-        },
-        "CSD U3 abstraction velocityX_2021": {
-        },
-        "CSD U3 abstraction velocityX_2022": {
-        },
-        "CSD U3 abstraction velocityY": {
-        },
-        "CSD U3 abstraction velocityY control": {
-        },
-        "CSD U3 abstraction velocityY control_2018": {
-        },
-        "CSD U3 abstraction velocityY control_2019": {
-        },
-        "CSD U3 abstraction velocityY control_2021": {
-        },
-        "CSD U3 abstraction velocityY control_2022": {
-        },
-        "CSD U3 abstraction velocityY_2018": {
-        },
-        "CSD U3 abstraction velocityY_2019": {
-        },
-        "CSD U3 abstraction velocityY_2021": {
-        },
-        "CSD U3 abstraction velocityY_2022": {
-        },
-        "CSD U3 collisions isTouching intro": {
-        },
-        "CSD U3 collisions isTouching intro_2018": {
-        },
-        "CSD U3 collisions isTouching intro_2019": {
-        },
-        "CSD U3 collisions isTouching intro_2021": {
-        },
-        "CSD U3 collisions isTouching intro_2022": {
-        },
-        "CSD U3 collisions scoreboard": {
-        },
-        "CSD U3 collisions scoreboard_2018": {
-        },
-        "CSD U3 collisions scoreboard_2019": {
-        },
-        "CSD U3 collisions try blocks": {
-        },
-        "CSD U3 collisions try blocks_2018": {
-        },
-        "CSD U3 collisions try blocks_2019": {
-        },
-        "CSD U3 collisions try blocks_2021": {
-        },
-        "CSD U3 collisions try blocks_2022": {
-        },
-        "CSD U3 collisions types": {
-        },
-        "CSD U3 collisions types2_2021": {
-        },
-        "CSD U3 collisions types2_2022": {
-        },
-        "CSD U3 collisions types3_2021": {
-        },
-        "CSD U3 collisions types3_2022": {
-        },
-        "CSD U3 collisions types4_2021": {
-        },
-        "CSD U3 collisions types4_2022": {
-        },
-        "CSD U3 collisions types_2018": {
-        },
-        "CSD U3 collisions types_2019": {
-        },
-        "CSD U3 collisions types_2021": {
-        },
-        "CSD U3 collisions types_2022": {
         },
         "CSD U3 debug": {
           "CSD_U3_rect_c1": "여기 코드가 있습니다."
@@ -371,76 +109,6 @@
         },
         "CSD U3 fill_2022": {
           "CSD_U3_rect_c1": "여기 코드가 있습니다."
-        },
-        "CSD U3 game backgrounds": {
-        },
-        "CSD U3 game backgrounds_2018": {
-        },
-        "CSD U3 game backgrounds_2019": {
-        },
-        "CSD U3 game backgrounds_2021": {
-        },
-        "CSD U3 game backgrounds_2022": {
-        },
-        "CSD U3 game variables": {
-        },
-        "CSD U3 game variables_2018": {
-        },
-        "CSD U3 game variables_2019": {
-        },
-        "CSD U3 game variables_2021": {
-        },
-        "CSD U3 game variables_2022": {
-        },
-        "CSD U3 keydown conditional": {
-        },
-        "CSD U3 keydown conditional_2018": {
-        },
-        "CSD U3 keydown conditional_2018_2019": {
-        },
-        "CSD U3 keydown conditional_2021": {
-        },
-        "CSD U3 keydown conditional_2022": {
-        },
-        "CSD U3 platform background1": {
-        },
-        "CSD U3 platform background1_2018": {
-        },
-        "CSD U3 platform background1_2019": {
-        },
-        "CSD U3 platform background1_2021": {
-        },
-        "CSD U3 platform background1_2022": {
-        },
-        "CSD U3 platform platform1": {
-        },
-        "CSD U3 platform platform1_2018": {
-        },
-        "CSD U3 platform platform1_2019": {
-        },
-        "CSD U3 platform platform1_2021": {
-        },
-        "CSD U3 platform platform1_2022": {
-        },
-        "CSD U3 platform scoreboard": {
-        },
-        "CSD U3 platform scoreboard_2018": {
-        },
-        "CSD U3 platform scoreboard_2019": {
-        },
-        "CSD U3 platform scoreboard_2021": {
-        },
-        "CSD U3 platform scoreboard_2022": {
-        },
-        "CSD U3 platform variable1": {
-        },
-        "CSD U3 platform variable1_2018": {
-        },
-        "CSD U3 platform variable1_2019": {
-        },
-        "CSD U3 platform variable1_2021": {
-        },
-        "CSD U3 platform variable1_2022": {
         },
         "CSD U3 properties depth_2021": {
           "CSD_U3_rect_c1": "여기 코드가 있습니다."
@@ -527,121 +195,17 @@
         "CSD U3 shapes_2022": {
           "CSD_U3_rect_c1": "여기 코드가 있습니다."
         },
-        "CSD U6 - Accelerometer - PB_2222": {
-        },
-        "CSD U6 - Accelerometer - PC_2222": {
-        },
-        "CSD U6 - Accelerometer - SB2_2222": {
-        },
-        "CSD U6 - Color LEDs - CA_2222": {
-        },
-        "CSD U6 - Color LEDs - SB4_2222": {
-        },
-        "CSD U6 - Combine Inputs - A_2222": {
-        },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "CSD U6L9.7 - if-statement": "여기에 if 문을 추가하세요"
         },
-        "CSD U6 - Combine Inputs - SB1_2222": {
-        },
-        "CSD U6 - Functions - P2A_2222": {
-        },
-        "CSD U6 - Functions - P2C_2222": {
-        },
-        "CSD U6 - Functions - SB1_2222": {
-        },
-        "CSD U6 - Functions - SB2_2222": {
-        },
-        "CSD U6 - Functions - SB3_2222": {
-        },
-        "CSD U6 - Functions - SB4_2222": {
-        },
-        "CSD U6 - Functions - SB6_2222": {
-        },
-        "CSD U6 - Functions - SB7_2222": {
-        },
-        "CSD U6 - Functions - SB_2222": {
-        },
         "CSD U6 - If Variables - A_2222": {
           "U6L6.4 - If": "여기에 if 문을 추가하세요"
-        },
-        "CSD U6 - Music - A_2222": {
-        },
-        "CSD U6 - Music - SB3_2222": {
-        },
-        "CSD U6 - Sensors - PB_2222": {
-        },
-        "CSD U6 colorLeds intensity": {
-        },
-        "CSD U6 colorLeds intensity_2018": {
-        },
-        "CSD U6 colorLeds intensity_2019": {
-        },
-        "CSD U6 colorLeds intensity_2021": {
-        },
-        "CSD U6 getProperty input": {
-        },
-        "CSD U6 getProperty input_2018": {
-        },
-        "CSD U6 getProperty input_2019": {
-        },
-        "CSD U6 getProperty input_2021": {
-        },
-        "CSD U6 light show": {
-        },
-        "CSD U6 light show_2018": {
-        },
-        "CSD U6 light show_2019": {
-        },
-        "CSD U6 light show_2021": {
-        },
-        "CSD U6 tugowar variables 1": {
-        },
-        "CSD U6 tugowar variables 1_2018": {
-        },
-        "CSD U6 tugowar variables 1_2019": {
-        },
-        "CSD U6 tugowar variables 1_2021": {
-        },
-        "CSD U6 tugowar variables 2": {
-        },
-        "CSD U6 tugowar variables 2_2018": {
-        },
-        "CSD U6 tugowar variables 2_2019": {
-        },
-        "CSD U6 tugowar variables 2_2021": {
-        },
-        "CSD U6 tugowar variables 3": {
-        },
-        "CSD U6 tugowar variables 3_2018": {
-        },
-        "CSD U6 tugowar variables 3_2019": {
-        },
-        "CSD U6 tugowar variables 3_2021": {
-        },
-        "CSD games sidescroll background_2021": {
-        },
-        "CSD games sidescroll background_2022": {
-        },
-        "CSD games velocity bee_2021": {
-        },
-        "CSD games velocity bee_2022": {
         },
         "CSD web text explore_2021": {
           "CSD_U3_variables": "여기 번호를 변경하세요."
         },
         "CSD web text explore_2022": {
           "CSD_U3_variables": "여기 번호를 변경하세요."
-        },
-        "CSD web text size_2021": {
-        },
-        "CSD web text size_2022": {
-        },
-        "CSDU4 - Design Mode - 3": {
-        },
-        "Calc Circles of Eval .2": {
-        },
-        "Calc Vars 1": {
         },
         "Course 4 Artist 4": {
           "repeat_full_circle": "원을 만들기 위해서 좀비가 움직여야하는 횟수를 입력하세요."
@@ -651,8 +215,6 @@
         },
         "Course 4 Artist For Loops 4": {
           "place_counter_variable": "이 블럭의 안에 수를 세기 위한 카운터 블럭을 드래그 하세요."
-        },
-        "Course 4 Artist Functions challenge": {
         },
         "Course 4 Artist Vars 1": {
           "repeat_blocks": "\"반복\" 블럭의 안에 다른 블럭들을 넣어보세요."
@@ -666,10 +228,6 @@
         "Course 4 Artist Vars 6": {
           "degrees_per_side": "각각의 회전 각도를 얻어내기 위해, 면의 개수를 360으로 나누세요."
         },
-        "Course 4 Artist Vars 8": {
-        },
-        "Course 4 Bee 1": {
-        },
         "Course 4 Bee 3": {
           "if_else_bee": "\"만약(if)/그렇지 않으면(else)\" 블럭을 사용해서 꿀벌이 꽃에 꽃꿀이 있으면 집고, 아니면 꿀을 만들도록 해 보세요."
         },
@@ -679,8 +237,6 @@
         "Course 4 Maze 4": {
           "repeat": "루프(loop) 안에 블럭을 넣어 반복하도록 하세요."
         },
-        "Course 4 Play Lab Params 2": {
-        },
         "Course 4 Play Lab Params 3": {
           "edit_function": "함수를 수정하기 위해서 여기를 클릭하세요."
         },
@@ -689,12 +245,6 @@
         },
         "Course 4 Play Lab Vars 1": {
           "arrows_move_actor": "캐릭터를 움직이기 위해 방향키를 사용하세요."
-        },
-        "Course 4 Play Lab Vars 9": {
-        },
-        "Course 4 Playlab For Loops 4b": {
-        },
-        "Course 4 SCV 6": {
         },
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "여기에서 댄서 유형을 선택하세요!"
@@ -840,14 +390,6 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "“모든 오리” 블록은 여기에서 찾으세요"
         },
-        "Eval Booleans 2": {
-        },
-        "Eval Define Funcs 3": {
-        },
-        "Eval Define Funcs Test": {
-        },
-        "Eval Strings Images .2": {
-        },
         "Fish Tank 3-validated2022": {
           "spritelab_comment": "이 블록을 사용하여 코드 작동 방법에 관한 여러분 자신 또는 교사의 메모를 남기세요."
         },
@@ -899,8 +441,6 @@
         },
         "InspirationalArtwork_2018": {
           "InspirationalArtwork_1": "이 라벨 아래 '코멘트' 블록을 사용해 프로그램 안에 노트를 남겨 보세요!"
-        },
-        "Luigi's Pizza 1": {
         },
         "MC HOC 2016 Level 2-2": {
           "craft2_run_button_callout": "준비가 됐다면, '실행' 버튼을 눌러 프로그램을 실행해 보세요."
@@ -968,8 +508,6 @@
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "에이전트는 용암 위를 지나갈 수 있지만, 스티브와 알렉스는 그럴 수 없어요!"
         },
-        "NEW Course 4 Artist Functions 3": {
-        },
         "NEW Course 4 Artist Functions 7": {
           "edit_function": "함수를 수정하기 위해서 여기를 클릭하세요."
         },
@@ -979,8 +517,6 @@
         "NEW Course 4 Artist Params 10": {
           "create_function": "\"함수\" 메뉴를 열어 함수를 만들기 위해, 여기를 누르세요. 그 다음에 \"함수 만들기\" 버튼을 누르세요. "
         },
-        "NEW Course 4 Artist Params 2": {
-        },
         "NEW Course 4 Artist Params 9": {
           "add_and_drag_parameter": "만든 매개 변수의 이름을 여기에 작성하고, 추가하기를 누른 다음, 여러분이 만든 함수 정의 안에 드래그해 넣으세요.",
           "edit_add_parameter": "함수에 매개 변수를 추가하기 위해서 편집(edit)을 누르세요."
@@ -988,17 +524,11 @@
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "여기에 길이(length) 변수를 드래그해서 물음표 표시를 바꾸세요."
         },
-        "NEW Course 4 Bee For Loops 4": {
-        },
         "NEW Course 4 Bee For Loops 5": {
           "actions_category": "도구 상자가 새로운 모습으로 바뀌었습니다! 이제 \"실행\" 블럭들을 사용할 수 있습니다."
         },
-        "New Artist Project": {
-        },
         "New Frozen Project": {
           "snowflake_dropdown": "다른 모양의 눈송이를 만들기 위해서 사용해 보세요."
-        },
-        "New Play Lab Project": {
         },
         "New Sprite Lab Project": {
           "costumes_tab": "여기를 클릭하여 의상을 프로젝트에 추가하세요.",
@@ -1304,8 +834,6 @@
         },
         "courseA_collector_loops3_2021": {
           "gradek_adventurer_loops2_1": "이 숫자는 이 퍼즐에서 이러한 블록을 몇 개 사용할 수 있는지 알려줍니다.  "
-        },
-        "courseA_collector_preLoops1": {
         },
         "courseA_collector_preLoops2": {
           "courseA_collector_loops1_1": "툴박스에서 새 블록을 봤어요? 걱정하지 말아요. 나중에 그것들을 단계에서 어떻게 사용하는지 보여줄께요."
@@ -2527,10 +2055,6 @@
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "여기서 아래서 변수를 찾을 수 있습니다!"
         },
-        "courseF_collector_items_-2022-2": {
-        },
-        "courseF_collector_player_move_-2022-2": {
-        },
         "courseF_editable_card": {
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
@@ -2584,8 +2108,6 @@
         },
         "courseF_events_time_-2022-2": {
           "events_category": "여기를 클릭하여 이벤트 범주를 여세요."
-        },
-        "courseF_groups_size_-2022-2": {
         },
         "courseF_label_predict": {
           "variablesPredict": "이 지점 아래 코드를 자세히 보세요."
@@ -2989,26 +2511,6 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "새 블록!"
-        },
-        "iceage_hello1": {
-        },
-        "iceage_hello2": {
-        },
-        "iceage_move_events": {
-        },
-        "iceage_move_events_dani": {
-        },
-        "iceage_move_to_actor": {
-        },
-        "iceage_repeat": {
-        },
-        "iceage_sound_and_points": {
-        },
-        "iceage_sound_and_points_dani": {
-        },
-        "iceage_warn_ice_age": {
-        },
-        "iceage_warn_ice_age_dani": {
         },
         "ml-customize apps-choice3": {
           "CSD_AI_L10_predict": "여기 안에 if 문을 추가하세요"
