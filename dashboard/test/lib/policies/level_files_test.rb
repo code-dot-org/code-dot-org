@@ -60,7 +60,7 @@ module Policies
       regular_level = create(:level)
       assert Policies::LevelFiles.write_to_file?(regular_level)
 
-      dsl_defined_level = External.create_from_level_builder({}, {dsl_text: "name 'test writing to file'"})
+      dsl_defined_level = External.create(name: 'test writing to file')
       assert dsl_defined_level.is_a?(DSLDefined)
       refute Policies::LevelFiles.write_to_file?(dsl_defined_level)
 
