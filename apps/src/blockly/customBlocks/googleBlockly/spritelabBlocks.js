@@ -74,12 +74,19 @@ export const blocks = {
     }
 
     if (this.workspace.rendered) {
+      const parentBlockId = this.id;
       this.workspace.registerToolboxCategoryCallback(
         `flyout_${this.type}`,
         function (workspace) {
           let blocks = [];
           miniToolboxBlocks.forEach(blockType =>
-            blocks.push(Blockly.Xml.textToDom(`<block type="${blockType}"/>`))
+            blocks.push({
+              kind: 'block',
+              type: blockType,
+              extraState: {
+                parentBlockId: parentBlockId,
+              },
+            })
           );
           return blocks;
         }
