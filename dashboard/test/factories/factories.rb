@@ -1,4 +1,5 @@
 require 'cdo/activity_constants'
+require 'policies/child_account'
 
 FactoryBot.define do
   factory :course_offering do

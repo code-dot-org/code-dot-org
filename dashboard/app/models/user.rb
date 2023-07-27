@@ -76,6 +76,7 @@ require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
 require_dependency 'queries/school_info'
 require_dependency 'queries/script_activity'
+require 'policies/child_account'
 
 class User < ApplicationRecord
   include SerializedProperties
@@ -2682,21 +2683,6 @@ class User < ApplicationRecord
       where_child_account_policy_applies_to_us_state
   end
 
-  def self.where_child_account_policy_applies_to_us_state
-    # A list of state codes where the Child Account Policy should apply.
-    states = ['CO']
-    where("JSON_EXTRACT(properties, '$.us_state') IN (?)", states)
-  end
-
-  def self.where_child_account_does_not_have_parent_permission
-    where("JSON_EXTRACT(properties, '$.child_account_compliance_state') != ?",
-          Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
-    )
-  end
-
-  def self.where_child_account_past_expiration_date(expiration_date = 7.days.ago)
-    where("JSON_EXTRACT(properties, '$.child_account_compliance_lock_out') < ?", expiration_date)
-  end
   # Verifies that the serialized attribute "us_state" is a 2 character string
   # representing a US State or "??" which represents a "N/A" kind of response.
   private def validate_us_state

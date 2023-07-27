@@ -72,6 +72,18 @@ class ExpiredChildAccountPurgerTest < ActiveSupport::TestCase
     locked_account = create :locked_out_child
     u13_colorado_account = create :student, :U13, :in_colorado
     student_account = create :student
+
+    purger = ExpiredChildAccountPurger.new
+    purger.purge_expired_child_accounts!(skip_report: true)
+
+    expired_accounts.each {|user| assert_equal true, purged?(user.reload)}
+    assert_equal false, purged?(locked_account.reload)
+    assert_equal false, purged?(u13_colorado_account.reload)
+    assert_equal false, purged?(student_account.reload)
+  end
+
+  test 'expired child accounts are reported in metrics' do
+    expired_accounts = Array.new(3) {|_| create :locked_out_child, :expired}
     Cdo::Metrics.expects(:push).with(
       'ExpiredChildAccountPurger',
       includes_metrics(
@@ -85,11 +97,6 @@ class ExpiredChildAccountPurgerTest < ActiveSupport::TestCase
 
     purger = ExpiredChildAccountPurger.new
     purger.purge_expired_child_accounts!
-
-    expired_accounts.each {|user| assert_equal true, purged?(user.reload)}
-    assert_equal false, purged?(locked_account.reload)
-    assert_equal false, purged?(u13_colorado_account.reload)
-    assert_equal false, purged?(student_account.reload)
   end
 
   private

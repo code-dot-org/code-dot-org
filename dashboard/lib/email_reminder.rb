@@ -1,6 +1,7 @@
 require 'stringio'
 require 'cdo/aws/metrics'
 require 'cdo/chat_client'
+require 'policies/child_account'
 
 class EmailReminder
   include Rails.application.routes.url_helpers

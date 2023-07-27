@@ -2,6 +2,7 @@ require 'stringio'
 require 'cdo/aws/metrics'
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
+require 'queries/child_account'
 
 # Scans for child accounts which should be hard-deleted because Code.org hasn't
 # received permission from their parents to create the account.
@@ -43,12 +44,12 @@ class ExpiredChildAccountPurger
     reset
   end
 
-  def purge_expired_child_accounts!
+  def purge_expired_child_accounts!(skip_report: false)
     reset
     # Query for how many accounts would be purged
     # Fail if the count is too high.
-    accounts = expired_child_accounts
-    @num_accounts_to_be_purged = expired_child_accounts.size
+    accounts = Queries::ChildAccount.expired_accounts
+    @num_accounts_to_be_purged = accounts.size
     check_constraints accounts
 
     account_purger = AccountPurger.new dry_run: @dry_run, log: @log
@@ -66,7 +67,7 @@ class ExpiredChildAccountPurger
     yell exception.message
     raise
   ensure
-    report_results
+    report_results unless skip_report
   end
 
   private
@@ -97,10 +98,6 @@ class ExpiredChildAccountPurger
         "accounts to purge, which exceeds the configured limit of " \
         "#{@max_accounts_to_purge}. Abandoning run."
     end
-  end
-
-  def expired_child_accounts
-    User.expired_child_accounts
   end
 
   def report_results
