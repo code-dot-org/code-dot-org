@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-mappinglandmarks",
-    "serialized_at": "2023-07-12 23:39:13 UTC",
+    "serialized_at": "2023-07-25 22:17:35 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2011,6 +2011,28 @@
       }
     },
     {
+      "name": "CS Connections Landing Page",
+      "url": "https://code.org/educate/csc",
+      "key": "cs_connections_landing_page",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page"
+      }
+    },
+    {
+      "name": "CSC Extended Connections Book List",
+      "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview\t",
+      "key": "csc_extended_connections_book_list",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list"
+      }
+    },
+    {
       "name": "Helpful Hints",
       "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
       "key": "helpful_hints",
@@ -2021,6 +2043,17 @@
       },
       "seeding_key": {
         "resource.key": "helpful_hints"
+      }
+    },
+    {
+      "name": "Helpful Hints for teachers and learners\t",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\t",
+      "key": "helpful_hints_for_teachers_and_learners",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners"
       }
     },
     {
@@ -2073,6 +2106,37 @@
       },
       "seeding_key": {
         "resource.key": "local_landmarks_map_reflection_observation"
+      }
+    },
+    {
+      "name": "Resource List for All Lessons",
+      "url": "/s/csc-mappinglandmarks-2023/resources",
+      "key": "resource_list_for_all_lessons",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "resource_list_for_all_lessons"
+      }
+    },
+    {
+      "name": "Standards in Coding Interactive Maps",
+      "url": "/s/csc-mappinglandmarks-2023/standards\t",
+      "key": "standards_in_mapping_landmarks",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "standards_in_mapping_landmarks"
+      }
+    },
+    {
+      "name": "Vocabulary in Coding Interactive Maps",
+      "url": "/s/csc-mappinglandmarks-2023/vocab\t",
+      "key": "vocabulary_in_coding",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_in_coding"
       }
     }
   ],
@@ -2169,7 +2233,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "resource_list_for_all_lessons",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standards_in_mapping_landmarks",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary_in_coding",
+        "script.name": "csc-mappinglandmarks-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

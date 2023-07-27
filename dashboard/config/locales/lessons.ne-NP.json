@@ -2,113 +2,77 @@
   "ne-NP": {
     "data": {
       "lessons": {
-        "minecraft/Minecraft Hour of Code Designer": {
-          "name": "Minecraft Hour of Code Designer"
+        "csd2-2017/Lists": {
+          "name": "Lists"
         },
-        "flappy/Flappy Code": {
-          "name": "Flappy Code"
-        },
-        "hourofcode/Maze": {
-          "name": "Maze"
-        },
-        "frozen/Artist": {
-          "name": "Code with Anna and Elsa"
-        },
-        "iceage/Ice Age Play Lab": {
-          "name": "Ice Age Play Lab"
-        },
-        "artist/Artist": {
-          "name": "Artist"
-        },
-        "gumball/Gumball Play Lab": {
-          "name": "Gumball Play Lab"
-        },
-        "starwars/Hour of Code 2015": {
-          "name": "Star Wars: Building a Galaxy With Code (JavaScript)"
-        },
-        "mc/Hour of Code 2015": {
-          "name": "Minecraft Hour of Code"
-        },
-        "playlab/Play Lab": {
-          "name": "Play Lab"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "name": "Disney Infinity Play Lab"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hour of Code 2013"
-        },
-        "oceans/Oceans": {
-          "name": "महासागरका लागि A.I"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "Loops"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "घटनाहरु"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "Conditionals"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "Functions"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "Variables"
         },
-        "k5-onlinepd-2019/For Loops": {
-          "name": "For Loops"
+        "csd3-2017/Conditionals": {
+          "name": "Conditionals"
         },
-        "coursed-2022/Graph Paper Programming": {
-          "name": "Graph Paper Programming"
+        "csd3-2017/Functions": {
+          "name": "Functions"
         },
-        "coursed-2022/Relay Programming": {
-          "name": "Relay programming"
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Functions with Parameters"
         },
-        "coursed-2022/Conditionals with Cards": {
-          "name": "Conditionals with Cards"
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Real-life Algorithms: Plant a Seed"
         },
-        "coursef-2022/The Internet": {
-          "name": "The Internet"
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Real-life Algorithms: Plant a Seed"
         },
-        "coursee-2022/Songwriting": {
-          "name": "Songwriting"
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Real-life Algorithms: Paper Planes"
         },
-        "courseb-2022/Move It, Move It": {
-          "name": "Move It, Move It"
+        "coursed-2017/Nested Loops": {
+          "name": "Nested Loops"
         },
-        "courseb-2022/Getting Loopy": {
-          "name": "Getting Loopy"
+        "coursee-2017/Building a Foundation": {
+          "name": "Building a Foundation"
         },
-        "coursea-2022/Happy Maps": {
+        "coursee-2017/Nested Loops": {
+          "name": "Nested Loops"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Building a Foundation"
+        },
+        "express-2017/Introduction": {
+          "name": "Introduction"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Building a Foundation"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Nested Loops"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Real-life Algorithms: Plant a Seed"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Spelling Bee"
+        },
+        "csd2-2018/Lists": {
+          "name": "Lists"
+        },
+        "csd3-2018/Variables": {
+          "name": "Variables"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Conditionals"
+        },
+        "csd3-2018/Functions": {
+          "name": "Functions"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "Functions with Parameters"
+        },
+        "coursea-2018/Programming: Happy Maps": {
           "name": "Happy Maps"
         },
-        "coursec-2022/The Big Event": {
-          "name": "The Big Event"
-        },
-        "coursec-2022/Binary Bracelets": {
-          "name": "Binary Bracelets"
-        },
-        "csd3-2022/Variables": {
-          "name": "Variables"
-        },
-        "csd3-2022/Text": {
-          "name": "Text"
-        },
-        "csd3-2022/Conditionals": {
-          "name": "Conditionals"
-        },
-        "csd3-2022/Functions": {
-          "name": "Functions"
-        },
-        "csd6-2022/Functions": {
-          "name": "Functions"
+        "coursea-2018/Going Places Safely": {
+          "name": "Going Places Safely"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Move It, Move It"
@@ -116,11 +80,17 @@
         "courseb-2018/Your Digital Footprint": {
           "name": "Your Digital Footprint"
         },
-        "coursea-2018/Programming: Happy Maps": {
-          "name": "Happy Maps"
+        "coursec-2018/Building a Foundation": {
+          "name": "Building a Foundation"
         },
-        "coursea-2018/Going Places Safely": {
-          "name": "Going Places Safely"
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Getting Loopy"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "The Big Event"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Binary Bracelets"
         },
         "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "Graph Paper Programming"
@@ -136,6 +106,24 @@
         },
         "coursed-2018/Unplugged: Binary": {
           "name": "Binary Images"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "My Robotic Friends"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Building a Foundation"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Conditionals with Cards"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Songwriting"
+        },
+        "coursee-2018/Internet": {
+          "name": "The Internet"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Crowdsourcing"
         },
         "coursef-2018/Programming: My Robotic Friends": {
           "name": "My Robotic Friends"
@@ -188,36 +176,6 @@
         "express-2018/Crowdsourcing": {
           "name": "Crowdsourcing"
         },
-        "coursee-2018/Programming: My Robotic Friends": {
-          "name": "My Robotic Friends"
-        },
-        "coursee-2018/Building a Foundation": {
-          "name": "Building a Foundation"
-        },
-        "coursee-2018/Conditionals with Cards": {
-          "name": "Conditionals with Cards"
-        },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "Songwriting"
-        },
-        "coursee-2018/Internet": {
-          "name": "The Internet"
-        },
-        "coursee-2018/Crowdsourcing": {
-          "name": "Crowdsourcing"
-        },
-        "coursec-2018/Building a Foundation": {
-          "name": "Building a Foundation"
-        },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "Getting Loopy"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "The Big Event"
-        },
-        "coursec-2018/Binary Bracelets": {
-          "name": "Binary Bracelets"
-        },
         "pre-express-2018/Move It, Move It": {
           "name": "Move It, Move It"
         },
@@ -227,20 +185,20 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Spelling Bee"
         },
-        "csd3-2018/Variables": {
+        "csd2-2019/Lists": {
+          "name": "Lists"
+        },
+        "csd3-2019/Variables": {
           "name": "Variables"
         },
-        "csd3-2018/Conditionals": {
+        "csd3-2019/Conditionals": {
           "name": "Conditionals"
         },
-        "csd3-2018/Functions": {
+        "csd3-2019/Functions": {
           "name": "Functions"
         },
-        "csd6-2018/Functions with Parameters": {
+        "csd6-2019/Functions with Parameters": {
           "name": "Functions with Parameters"
-        },
-        "csd2-2018/Lists": {
-          "name": "Lists"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Going Places Safely"
@@ -257,6 +215,12 @@
         "courseb-2019/Loops: Getting Loopy": {
           "name": "Getting Loopy"
         },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Binary Bracelets"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "The Big Event"
+        },
         "coursed-2019/Algorithms: Graph Paper Programming": {
           "name": "Graph Paper Programming"
         },
@@ -272,6 +236,9 @@
         "coursed-2019/Digital Citizenship": {
           "name": "Digital Citizenship"
         },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Songwriting"
+        },
         "coursef-2019/Envelope Variables": {
           "name": "Envelope Variables"
         },
@@ -284,149 +251,209 @@
         "coursef-2019/Crowdsourcing": {
           "name": "Crowdsourcing"
         },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "Songwriting"
-        },
-        "coursec-2019/Binary Bracelets": {
-          "name": "Binary Bracelets"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "The Big Event"
-        },
         "pre-express-2019/Spelling Bee": {
           "name": "Spelling Bee"
         },
-        "csd3-2019/Variables": {
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Happy Maps"
+        },
+        "courseb-2020/Move It, Move It": {
+          "name": "Move It, Move It"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Getting Loopy"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Binary Bracelets"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "The Big Event"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Graph Paper Programming"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Relay programming"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Conditionals with Cards"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Binary Images"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Songwriting"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "Envelope Variables"
+        },
+        "coursef-2020/AI for Oceans": {
+          "name": "महासागरका लागि A.I"
+        },
+        "coursef-2020/Internet": {
+          "name": "The Internet"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "For Loop Fun"
+        },
+        "csd3-2021/Variables": {
           "name": "Variables"
         },
-        "csd3-2019/Conditionals": {
+        "csd3-2021/Text": {
+          "name": "Text"
+        },
+        "csd3-2021/Conditionals": {
           "name": "Conditionals"
         },
-        "csd3-2019/Functions": {
+        "csd3-2021/Functions": {
           "name": "Functions"
         },
-        "csd6-2019/Functions with Parameters": {
+        "csd6-2021/Functions with Parameters": {
           "name": "Functions with Parameters"
         },
-        "csd2-2019/Lists": {
-          "name": "Lists"
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Happy Maps"
         },
-        "coursef-2017/Building a Foundation": {
-          "name": "Building a Foundation"
+        "courseb-2021/Move It, Move It": {
+          "name": "Move It, Move It"
         },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Real-life Algorithms: Plant a Seed"
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Getting Loopy"
         },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Real-life Algorithms: Plant a Seed"
+        "coursec-2021/Events: The Big Event": {
+          "name": "The Big Event"
         },
-        "pre-express-2017/Spelling Bee": {
-          "name": "Spelling Bee"
+        "coursec-2021/Binary Bracelets": {
+          "name": "Binary Bracelets"
         },
-        "coursee-2017/Building a Foundation": {
-          "name": "Building a Foundation"
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Graph Paper Programming"
         },
-        "coursee-2017/Nested Loops": {
-          "name": "Nested Loops"
+        "coursed-2021/Relay Programming": {
+          "name": "Relay programming"
         },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "Real-life Algorithms: Paper Planes"
+        "coursed-2021/Conditionals with Cards": {
+          "name": "Conditionals with Cards"
         },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Real-life Algorithms: Plant a Seed"
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Songwriting"
         },
-        "coursed-2017/Nested Loops": {
-          "name": "Nested Loops"
+        "coursef-2021/For Loop Fun": {
+          "name": "For Loop Fun"
         },
-        "express-2017/Introduction": {
-          "name": "Introduction"
+        "coursef-2021/Internet": {
+          "name": "The Internet"
         },
-        "express-2017/Building a Foundation": {
-          "name": "Building a Foundation"
-        },
-        "express-2017/Nested Loops": {
-          "name": "Nested Loops"
-        },
-        "csd3-2017/Variables": {
+        "csd3-2022/Variables": {
           "name": "Variables"
         },
-        "csd3-2017/Conditionals": {
+        "csd3-2022/Text": {
+          "name": "Text"
+        },
+        "csd3-2022/Conditionals": {
           "name": "Conditionals"
         },
-        "csd3-2017/Functions": {
+        "csd3-2022/Functions": {
           "name": "Functions"
         },
-        "csd6-2017/Functions with Parameters_": {
-          "name": "Functions with Parameters"
+        "csd6-2022/Functions": {
+          "name": "Functions"
         },
-        "csd2-2017/Lists": {
-          "name": "Lists"
+        "coursea-2022/Happy Maps": {
+          "name": "Happy Maps"
         },
-        "course4/Unplugged: Tangrams": {
-          "name": "Unplugged: Tangrams"
+        "courseb-2022/Move It, Move It": {
+          "name": "Move It, Move It"
         },
-        "course4/Maze and Bee": {
-          "name": "Maze and Bee"
+        "courseb-2022/Getting Loopy": {
+          "name": "Getting Loopy"
         },
-        "course4/Artist": {
+        "coursec-2022/The Big Event": {
+          "name": "The Big Event"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binary Bracelets"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Graph Paper Programming"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Relay programming"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Conditionals with Cards"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Songwriting"
+        },
+        "coursef-2022/The Internet": {
+          "name": "The Internet"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
+        },
+        "artist/Artist": {
           "name": "Artist"
         },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "Unplugged: Envelope Variables"
+        "flappy/Flappy Code": {
+          "name": "Flappy Code"
         },
-        "course4/Unplugged: Madlibs": {
-          "name": "Unplugged: Madlibs"
+        "frozen/Artist": {
+          "name": "Code with Anna and Elsa"
         },
-        "course4/Artist: Variables": {
-          "name": "Artist: Variables"
+        "gumball/Gumball Play Lab": {
+          "name": "Gumball Play Lab"
         },
-        "course4/Play Lab: Variables": {
-          "name": "Play Lab: Variables"
+        "hourofcode/Maze": {
+          "name": "Maze"
         },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "Unplugged: For Loop Fun"
+        "iceage/Ice Age Play Lab": {
+          "name": "Ice Age Play Lab"
         },
-        "course4/Bee: For Loops": {
-          "name": "Bee: For Loops"
+        "infinity/Infinity": {
+          "name": "Disney Infinity Play Lab"
         },
-        "course4/Artist: For Loops": {
-          "name": "Artist: For Loops"
+        "mc/Hour of Code 2015": {
+          "name": "Minecraft Hour of Code"
         },
-        "course4/Play Lab: For Loops": {
-          "name": "Play Lab: For Loops"
+        "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Minecraft Hour of Code Designer"
         },
-        "course4/Artist: Functions": {
-          "name": "Artist: Functions"
+        "oceans/Oceans": {
+          "name": "महासागरका लागि A.I"
         },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "Unplugged: Songwriting with Parameters"
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Artist: Functions with Parameters"
+        "playlab/Play Lab": {
+          "name": "Play Lab"
         },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "Play Lab: Functions with Parameters"
+        "starwars/Hour of Code 2015": {
+          "name": "Star Wars: Building a Galaxy With Code (JavaScript)"
         },
-        "course4/Bee: Functions with Parameters": {
-          "name": "Bee: Functions with Parameters"
+        "allthethings/Jigsaw": {
+          "name": "Jigsaw"
         },
-        "course4/Unplugged: Binary": {
-          "name": "Unplugged: Binary"
+        "allthethings/Maze": {
+          "name": "Maze"
         },
-        "course4/Artist Binary": {
-          "name": "Artist Binary"
+        "allthethings/Artist": {
+          "name": "Artist"
         },
-        "course4/Super Challenge - Variables": {
-          "name": "Super Challenge - Variables"
+        "allthethings/Flappy": {
+          "name": "Flappy"
         },
-        "course4/Super Challenge - For Loops": {
-          "name": "Super Challenge - For Loops"
+        "allthethings/Bounce": {
+          "name": "Bounce"
         },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "Super Challenge - Functions and Parameters"
+        "allthethings/Studio": {
+          "name": "स्टुडियो"
         },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "Extreme Challenge - Comprehensive"
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Introduction to Computer Science"
@@ -487,6 +514,60 @@
         },
         "20-hour/Wrap-up": {
           "name": "Wrap-up"
+        },
+        "course1/Happy Maps": {
+          "name": "Happy Maps"
+        },
+        "course1/Move it, Move it": {
+          "name": "Move it, Move it"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Jigsaw: Learn to drag and drop"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Maze: Sequence"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Maze: Debugging"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Real-life Algorithms: Plant a Seed"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Bee: Sequence"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Artist: Sequence"
+        },
+        "course1/Building a Foundation": {
+          "name": "Building a Foundation"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Artist: Shapes"
+        },
+        "course1/Spelling Bee": {
+          "name": "Spelling Bee"
+        },
+        "course1/Getting Loopy": {
+          "name": "Getting Loopy"
+        },
+        "course1/Maze: Loops": {
+          "name": "Maze: Loops"
+        },
+        "course1/Bee: Loops": {
+          "name": "Bee: Loops"
+        },
+        "course1/The Big Event": {
+          "name": "The Big Event"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Play Lab: Create a Story"
+        },
+        "course1/Going Places Safely": {
+          "name": "Going Places Safely"
+        },
+        "course1/Artist: Loops": {
+          "name": "Artist: Loops"
         },
         "course2/Graph Paper Programming": {
           "name": "Graph Paper Programming"
@@ -608,173 +689,74 @@
         "course3/Artist: Patterns": {
           "name": "Artist: Patterns"
         },
-        "course1/Happy Maps": {
-          "name": "Happy Maps"
+        "course4/Unplugged: Tangrams": {
+          "name": "Unplugged: Tangrams"
         },
-        "course1/Move it, Move it": {
-          "name": "Move it, Move it"
+        "course4/Maze and Bee": {
+          "name": "Maze and Bee"
         },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "Jigsaw: Learn to drag and drop"
+        "course4/Artist": {
+          "name": "Artist"
         },
-        "course1/Maze: Sequence": {
-          "name": "Maze: Sequence"
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Unplugged: Envelope Variables"
         },
-        "course1/Maze: Debugging": {
-          "name": "Maze: Debugging"
+        "course4/Unplugged: Madlibs": {
+          "name": "Unplugged: Madlibs"
         },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "Real-life Algorithms: Plant a Seed"
+        "course4/Artist: Variables": {
+          "name": "Artist: Variables"
         },
-        "course1/Bee: Sequence": {
-          "name": "Bee: Sequence"
+        "course4/Play Lab: Variables": {
+          "name": "Play Lab: Variables"
         },
-        "course1/Artist: Sequence": {
-          "name": "Artist: Sequence"
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Unplugged: For Loop Fun"
         },
-        "course1/Building a Foundation": {
-          "name": "Building a Foundation"
+        "course4/Bee: For Loops": {
+          "name": "Bee: For Loops"
         },
-        "course1/Artist: Shapes": {
-          "name": "Artist: Shapes"
+        "course4/Artist: For Loops": {
+          "name": "Artist: For Loops"
         },
-        "course1/Spelling Bee": {
-          "name": "Spelling Bee"
+        "course4/Play Lab: For Loops": {
+          "name": "Play Lab: For Loops"
         },
-        "course1/Getting Loopy": {
-          "name": "Getting Loopy"
+        "course4/Artist: Functions": {
+          "name": "Artist: Functions"
         },
-        "course1/Maze: Loops": {
-          "name": "Maze: Loops"
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Unplugged: Songwriting with Parameters"
         },
-        "course1/Bee: Loops": {
-          "name": "Bee: Loops"
+        "course4/Artist: Functions with Parameters": {
+          "name": "Artist: Functions with Parameters"
         },
-        "course1/The Big Event": {
-          "name": "The Big Event"
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Play Lab: Functions with Parameters"
         },
-        "course1/Studio: Create a Story": {
-          "name": "Play Lab: Create a Story"
+        "course4/Bee: Functions with Parameters": {
+          "name": "Bee: Functions with Parameters"
         },
-        "course1/Going Places Safely": {
-          "name": "Going Places Safely"
+        "course4/Unplugged: Binary": {
+          "name": "Unplugged: Binary"
         },
-        "course1/Artist: Loops": {
-          "name": "Artist: Loops"
+        "course4/Artist Binary": {
+          "name": "Artist Binary"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Super Challenge - Variables"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Super Challenge - For Loops"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Super Challenge - Functions and Parameters"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Extreme Challenge - Comprehensive"
         },
         "jigsaw/Jigsaw": {
           "name": "Jigsaw"
-        },
-        "allthethings/Jigsaw": {
-          "name": "Jigsaw"
-        },
-        "allthethings/Maze": {
-          "name": "Maze"
-        },
-        "allthethings/Artist": {
-          "name": "Artist"
-        },
-        "allthethings/Flappy": {
-          "name": "Flappy"
-        },
-        "allthethings/Bounce": {
-          "name": "Bounce"
-        },
-        "allthethings/Studio": {
-          "name": "स्टुडियो"
-        },
-        "allthethings/Minecraft": {
-          "name": "Minecraft"
-        },
-        "coursef-2021/For Loop Fun": {
-          "name": "For Loop Fun"
-        },
-        "coursef-2021/Internet": {
-          "name": "The Internet"
-        },
-        "courseb-2021/Move It, Move It": {
-          "name": "Move It, Move It"
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "name": "Getting Loopy"
-        },
-        "coursea-2021/Programming: Happy Maps": {
-          "name": "Happy Maps"
-        },
-        "coursec-2021/Events: The Big Event": {
-          "name": "The Big Event"
-        },
-        "coursec-2021/Binary Bracelets": {
-          "name": "Binary Bracelets"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "Graph Paper Programming"
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "Relay programming"
-        },
-        "coursed-2021/Conditionals with Cards": {
-          "name": "Conditionals with Cards"
-        },
-        "coursee-2021/Functions: Songwriting": {
-          "name": "Songwriting"
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "Functions with Parameters"
-        },
-        "csd3-2021/Variables": {
-          "name": "Variables"
-        },
-        "csd3-2021/Text": {
-          "name": "Text"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "Conditionals"
-        },
-        "csd3-2021/Functions": {
-          "name": "Functions"
-        },
-        "courseb-2020/Move It, Move It": {
-          "name": "Move It, Move It"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
-          "name": "Getting Loopy"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "Graph Paper Programming"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "Relay programming"
-        },
-        "coursed-2020/Conditionals with Cards": {
-          "name": "Conditionals with Cards"
-        },
-        "coursed-2020/Unplugged: Binary": {
-          "name": "Binary Images"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "Binary Bracelets"
-        },
-        "coursec-2020/Events: The Big Event": {
-          "name": "The Big Event"
-        },
-        "coursee-2020/Functions: Songwriting": {
-          "name": "Songwriting"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "Happy Maps"
-        },
-        "coursef-2020/Envelope Variables": {
-          "name": "Envelope Variables"
-        },
-        "coursef-2020/AI for Oceans": {
-          "name": "महासागरका लागि A.I"
-        },
-        "coursef-2020/Internet": {
-          "name": "The Internet"
-        },
-        "coursef-2020/For Loop Fun": {
-          "name": "For Loop Fun"
         }
       }
     }

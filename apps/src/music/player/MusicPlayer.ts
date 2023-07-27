@@ -135,10 +135,14 @@ export default class MusicPlayer {
   /**
    * Start playback. Schedules all queued playback events for playback
    * and tells the {@link SamplePlayer} to start playing.
+   *
+   * @param startPosition to start playback from. Defaults to 1
+   * (beginning of song) if not specified.
    */
-  playSong(events: PlaybackEvent[]) {
+  playSong(events: PlaybackEvent[], startPosition = 1) {
     this.samplePlayer.startPlayback(
-      events.map(event => this.convertEventToSamples(event)).flat()
+      events.map(event => this.convertEventToSamples(event)).flat(),
+      this.convertPlayheadPositionToSeconds(startPosition)
     );
   }
 

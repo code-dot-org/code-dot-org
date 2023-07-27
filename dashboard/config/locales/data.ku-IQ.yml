@@ -1,63 +1,58 @@
 ---
 ku:
   data:
-    game:
-      name:
-        Unplug1: پێشەكیەک بۆ زانستی کۆمپیوتەر
-        Maze: مەتەڵە ڕێگا
-        Multi: بابەتی هەڵبژاردن
-        Unplug2: بیرکردنەوەی ژمارەیی
-        Unplug3: بەرنامەڕێژی پەڕەی هێڵکاری
-        Artist: هونەرمەندەکە
-        Unplug4: خوارزمیەکان
-        Artist2: هونەرمەندەکە 2
-        Unplug5: فرمانەکان
-        Farmer: جووتیارەكە
-        Unplug6: مەرجیەکان
-        Artist3: هونەرمەندەكە ٣
-        Unplug7: گۆرانی نووسین
-        Farmer2: جووتیارەكە 2
-        Unplug8: پوختە
-        Artist4: هونەرمەندەکە 4
-        Unplug9: بەرنامەڕێژی بە پێشبڕکێ
-        Farmer3: جووتیارەكە 3
-        Unplug10: ئینتەرنێت
-        Artist5: هونەرمەندەکە 5
-        Unplug11: پوختەی بابەت
-        MazeEC: مەتەڵە ڕێگا
-        Bounce: هەڵبەزینەوە
-        Flappy: چۆلەکە فڕیوەکە
-        Jigsaw: مەتەڵە وێنە
-        MazeStep: دۆخی مەتەڵە ڕێگا
-        Wordsearch: گەڕان لە ووشە
-        Webapp: تاقیگەی ئاپ
-        ArtistEC: هونەرمەندەکە
-        TextMatch: گونجانی دەق
-        Applab: تاقیگەی ئاپ
-        NetSim: هاوشێوەسازی ئینتەرنێت
-        Gamelab: تاقیگەی یاری
-    trophy:
-      name:
-        Bronze: بڕۆنز
-        Silver: زیو
-        Gold: زێڕ
     concept:
       description:
-        sequence: زنجیرە
+        function: فرمانەکان
         if: بلۆکی "ئەگەر"
         if_else: بلۆکی "ئەگەر نا"
+        loop_for: بلۆکی "بژمێر"
         loop_times: بلۆکی چەندجارە بوونەوە
         loop_until: بلۆکی "دووبارە بکەرەوە تا"
         loop_while: بلۆکی "کاتێ"
-        loop_for: بلۆکی "بژمێر"
-        function: فرمانەکان
         parameters: فەرمانی بە پێوەر
+        sequence: زنجیرە
+    game:
+      name:
+        Applab: تاقیگەی ئاپ
+        Artist: هونەرمەندەکە
+        Artist2: هونەرمەندەکە 2
+        Artist3: هونەرمەندەكە ٣
+        Artist4: هونەرمەندەکە 4
+        Artist5: هونەرمەندەکە 5
+        ArtistEC: هونەرمەندەکە
+        Bounce: هەڵبەزینەوە
+        Farmer: جووتیارەكە
+        Farmer2: جووتیارەكە 2
+        Farmer3: جووتیارەكە 3
+        Flappy: چۆلەکە فڕیوەکە
+        Gamelab: تاقیگەی یاری
+        Jigsaw: مەتەڵە وێنە
+        Maze: مەتەڵە ڕێگا
+        MazeEC: مەتەڵە ڕێگا
+        MazeStep: دۆخی مەتەڵە ڕێگا
+        Multi: بابەتی هەڵبژاردن
+        NetSim: هاوشێوەسازی ئینتەرنێت
+        TextMatch: گونجانی دەق
+        Unplug1: پێشەكیەک بۆ زانستی کۆمپیوتەر
+        Unplug10: ئینتەرنێت
+        Unplug11: پوختەی بابەت
+        Unplug2: بیرکردنەوەی ژمارەیی
+        Unplug3: بەرنامەڕێژی پەڕەی هێڵکاری
+        Unplug4: خوارزمیەکان
+        Unplug5: فرمانەکان
+        Unplug6: مەرجیەکان
+        Unplug7: گۆرانی نووسین
+        Unplug8: پوختە
+        Unplug9: بەرنامەڕێژی بە پێشبڕکێ
+        Webapp: تاقیگەی ئاپ
+        Wordsearch: گەڕان لە ووشە
     level:
       instructions:
+        maze_2_1: ئەم بەرازە پەڕەکانم ئازار دەدات. یارمەتیم بدە تا بیدۆزمەوە!
         maze_2_2: 'ئایا دەتوانی یارمەتیم بدەی تا بەرازە هارەکە بگرم؟ چەند بلۆکێکی
           "بۆ پێشەوە بڕۆ" دابنێ بەیەکەوە ئینجا "ئیشپێکردن" دابگرە تا یارمەتیم بدەی
           بگەمە شوێنی مەبەست. '
-        maze_2_1: ئەم بەرازە پەڕەکانم ئازار دەدات. یارمەتیم بدە تا بیدۆزمەوە!
         maze_2_2_5: ڕێگاکە بپشکنە و بەرەو بەرازە هارەکەم ببە. ئاگاداری مین بە ئەگینا
           پەڕەکان دەفڕن!
         maze_2_3: ڕێگام نیشان بدە بەرەو دڕندە سەوزەکە! (ئاگاداری مینەکان بە)
@@ -65,28 +60,33 @@ ku:
           ئەبم!
         maze_2_5: ڕێگایەک هەیە تا بگەم بە بەرازە هارەکە تەنیا بە بەکارهێنانی 2 بلۆک.
           ئایا دەزانی چیە؟
+    trophy:
+      name:
+        Bronze: بڕۆنز
+        Gold: زێڕ
+        Silver: زیو
     video:
       name:
-        function: فرمانەکان
-        parameters: فەرمانی بە پێوەر
+        C1_happy_maps_unplugged: نەخشەی دڵخۆش
+        C2_conditionals_with_cards: مەرجیەکان
+        C2_graph_paper: بەرنامەڕێژی پەڕەی هێڵکاری
+        C2_relay_programming: بەرنامەڕێژی بە پێشبڕکێ
+        C3_bounce: هەڵبەزینەوە
+        C3_computational_thinking: بیرکردنەوەی ژمارەیی
+        C4_conditionals: مەرجیەکان
+        C4_function_parameters: فەرمانی بە پێوەر
+        C4_loops_zombie: گرێکان
+        CSF_loops_AB: گرێکان
+        Unplug11: پوختەی بابەت
         Unplug2: بیرکردنەوەی ژمارەیی
         Unplug3: بەرنامەڕێژی پەڕەی هێڵکاری
         Unplug4: خوارزمیەکان
         Unplug5: فرمانەکان
         Unplug6: مەرجیەکان
         Unplug8: پوختە
-        Unplug11: پوختەی بابەت
-        C1_happy_maps_unplugged: نەخشەی دڵخۆش
-        C2_graph_paper: بەرنامەڕێژی پەڕەی هێڵکاری
-        C2_conditionals_with_cards: مەرجیەکان
-        C2_relay_programming: بەرنامەڕێژی بە پێشبڕکێ
-        C3_bounce: هەڵبەزینەوە
-        C3_computational_thinking: بیرکردنەوەی ژمارەیی
-        C4_loops_zombie: گرێکان
-        C4_function_parameters: فەرمانی بە پێوەر
-        C4_conditionals: مەرجیەکان
+        csd_applab_parameters: فەرمانی بە پێوەر
         csp_applab_functions_parameters: فەرمانی بە پێوەر
         csp_applab_loops: گرێکان
-        CSF_loops_AB: گرێکان
-        csd_applab_parameters: فەرمانی بە پێوەر
         csp_applab_parameters: فەرمانی بە پێوەر
+        function: فرمانەکان
+        parameters: فەرمانی بە پێوەر

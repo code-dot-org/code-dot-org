@@ -2,46 +2,6 @@
   "ca-ES": {
     "data": {
       "placeholder_texts": {
-        "CourseE_hoops": {
-          "498cd895eb5a102c5aeb977e2b928dee": "Gràcies!"
-        },
-        "courseE_Dogger_2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Has guanyat!"
-        },
-        "courseE_aboutme_3": {
-          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
-        },
-        "courseE_aboutme_3_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
-        },
-        "courseE_aboutme_4": {
-          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
-        },
-        "courseE_aboutme_4_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
-        },
-        "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "Hola món!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hola!"
-        },
-        "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Hola món!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hola!"
-        },
-        "courseF_playlab_variables2b": {
-          "48d6215903dff56238e52e8891380c8f": "blau",
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseF_playlab_variables5c": {
-          "bda9643ac6601722a28f238714274da4": "vermell",
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseF_project_1": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Has guanyat!",
-          "498cd895eb5a102c5aeb977e2b928dee": "Gràcies!"
-        },
         "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
           "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
@@ -58,623 +18,8 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
           "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
         },
-        "Find the Wizard": {
-          "0b895ef4c917e50663bc2a7327cbee3d": "M'has trobat!",
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "FoodFight": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "Guess The Number": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "NEW Course 4 Play Lab Params 11": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "OPD-K5-projects-2": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "OPD-K5-projects-3": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "OPD-K5-projects-4": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "OPD-K5-projects-5": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "course4_playlab_variables_challenge1": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC19_playLab_EOC1": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC19_playLab_EOC1_2020": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC19_playLab_EOC2": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC19_playLab_EOC2_2020": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC19_playLab_EOC3": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC19_playLab_EOC3_2020": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC19_playLab_EOC4": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC19_playLab_EOC4_2020": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC_PlayLab_eventsFP": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC_PlayLab_eventsFP_2018": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC_PlayLab_eventsFP_2019": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC_PlayLab_eventsFP_2020": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseD_playLab_condFP": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseE_playLab_scaffold1": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseE_playLab_scaffold2": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseE_playLab_scaffold3": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseE_playLab_scaffold4": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseF_playlab_variables1a": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseF_playlab_variables3b_josh": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseF_playlab_variables4b": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Quants anys tens?"
-        },
-        "courseF_playlab_variables4c_predictive1": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí",
-          "f6429fe0f1a76611670df7e1234af936": "Com et dius?"
-        },
-        "courseF_playlab_variables6c": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseF_playlab_variables7b": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseF_playlab_variables7c": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseF_playlab_variables8c": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseF_playlab_variables_challenge1": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "iceage_free_play": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC19_playLab_EOC1_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC19_playLab_EOC2_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC19_playLab_EOC3_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC19_playLab_EOC4_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC_PlayLab_eventsFP_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Has guanyat!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " segons",
-          "490082498449bd20ff0199737dfa4916": "Selecciona el tipus de joc:",
-          "41f2b2212de0105c2a942ebb4a44e449": "El gran joc de la Col·leccionista!"
-        },
-        "courseE_aboutme_3_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
-        },
-        "courseE_aboutme_4_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
-        },
-        "courseE_aboutme_5_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Hola món!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hola!"
-        },
-        "New Play Lab Project": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC19_playLab_EOC12022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC19_playLab_EOC22022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC19_playLab_EOC32022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC19_playLab_EOC42022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseC_PlayLab_eventsFP2022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
-        },
-        "courseE_aboutme_32022": {
-          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
-        },
-        "courseE_aboutme_42022": {
-          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
-        },
-        "courseE_aboutme_52022": {
-          "ed076287532e86365e841e92bfc50d8c": "Hola món!",
-          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hola!"
-        },
-        "courseF_apps_collector2022": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Has guanyat!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " segons",
-          "490082498449bd20ff0199737dfa4916": "Selecciona el tipus de joc:",
-          "41f2b2212de0105c2a942ebb4a44e449": "El gran joc de la Col·leccionista!"
-        },
-        "courseF_apps_collector_-2022-2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Has guanyat!",
-          "077449fb290b51b9d70c9f2f3d3213bc": " segons",
-          "490082498449bd20ff0199737dfa4916": "Selecciona el tipus de joc:",
-          "41f2b2212de0105c2a942ebb4a44e449": "El gran joc de la Col·leccionista!"
-        },
-        "coursee_helloworld_freeplay": {
-          "6cd3556deb0da54bca060b4c39479839": "Hola, món!"
-        },
-        "helloworld_animals_freeplay": {
-          "6cd3556deb0da54bca060b4c39479839": "Hola, món!"
-        },
-        "helloworld_emoji_freeplay": {
-          "6cd3556deb0da54bca060b4c39479839": "Hola, món!"
-        },
-        "helloworld_food_freeplay": {
-          "6cd3556deb0da54bca060b4c39479839": "Hola, món!"
-        },
-        "helloworld_retro_freeplay": {
-          "6cd3556deb0da54bca060b4c39479839": "Hola, món!"
-        },
-        "courseF_apps_card": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fa anys?",
-          "d1210f945885351b13feb9bbb868aeef": "Quants en fa?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_apps_card2022": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fa anys?",
-          "d1210f945885351b13feb9bbb868aeef": "Quants en fa?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_apps_card_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fa anys?",
-          "d1210f945885351b13feb9bbb868aeef": "Quants en fa?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_apps_madlib": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Jocs de festa",
-          "bf08dd3d1961874f13e77c936aad27e5": "Una història d'espai buits",
-          "514b8d5320196898a9ced3efe0d4c802": "Introdueix un adjectiu:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Introdueix un objecte:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Introdueix una part del cos:",
-          "e522ee28f39133b45497637539ff429b": "Introdueix un número:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " jocs.",
-          "5306eed2fd2c43fe033efd6016c0c38b": "potes per córrer!"
-        },
-        "courseF_apps_madlib2022": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Jocs de festa",
-          "bf08dd3d1961874f13e77c936aad27e5": "Una història d'espai buits",
-          "514b8d5320196898a9ced3efe0d4c802": "Introdueix un adjectiu:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Introdueix un objecte:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Introdueix una part del cos:",
-          "e522ee28f39133b45497637539ff429b": "Introdueix un número:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " jocs.",
-          "5306eed2fd2c43fe033efd6016c0c38b": "potes per córrer!"
-        },
-        "courseF_apps_madlib_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Jocs de festa",
-          "bf08dd3d1961874f13e77c936aad27e5": "Una història d'espai buits",
-          "514b8d5320196898a9ced3efe0d4c802": "Introdueix un adjectiu:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Introdueix un objecte:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Introdueix una part del cos:",
-          "e522ee28f39133b45497637539ff429b": "Introdueix un número:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " jocs.",
-          "5306eed2fd2c43fe033efd6016c0c38b": "potes per córrer!"
-        },
-        "courseF_editable_card": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fa anys?",
-          "d1210f945885351b13feb9bbb868aeef": "Quants en fa?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_editable_card_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fa anys?",
-          "d1210f945885351b13feb9bbb868aeef": "Quants en fa?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_editable_chatbot": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
-          "a72e7c5c68af0546e963e510297f5233": "Hola, em dic X-9! I tu, com et dius?",
-          "f0e5da70d264f312a1658d51c130b101": "Introdueix el teu nom:",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Quants anys tens?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Introdueix la teva edat:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " anys, també!",
-          "605f302ebc9f7fbacba60b15f551a633": "Quin és el teu color preferit?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Introdueix el teu color preferit:",
-          "ae096fbf24d913754b01a1601672bf62": " també!",
-          "1f258d88a70309efc1435ef5daa277a0": "Gràcies per xerrar amb mi!"
-        },
-        "courseF_editable_chatbot_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
-          "a72e7c5c68af0546e963e510297f5233": "Hola, em dic X-9! I tu, com et dius?",
-          "f0e5da70d264f312a1658d51c130b101": "Introdueix el teu nom:",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Quants anys tens?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Introdueix la teva edat:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " anys, també!",
-          "605f302ebc9f7fbacba60b15f551a633": "Quin és el teu color preferit?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Introdueix el teu color preferit:",
-          "1f258d88a70309efc1435ef5daa277a0": "Gràcies per xerrar amb mi!"
-        },
-        "courseF_editable_madlib": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Jocs de festa",
-          "bf08dd3d1961874f13e77c936aad27e5": "Una història d'espai buits",
-          "514b8d5320196898a9ced3efe0d4c802": "Introdueix un adjectiu:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Introdueix un objecte:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Introdueix una part del cos:",
-          "e522ee28f39133b45497637539ff429b": "Introdueix un número:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " jocs.",
-          "5306eed2fd2c43fe033efd6016c0c38b": "potes per córrer!"
-        },
-        "courseF_editable_madlib_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Jocs de festa",
-          "bf08dd3d1961874f13e77c936aad27e5": "Una història d'espai buits",
-          "514b8d5320196898a9ced3efe0d4c802": "Introdueix un adjectiu:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Introdueix un objecte:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Introdueix una part del cos:",
-          "e522ee28f39133b45497637539ff429b": "Introdueix un número:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " jocs.",
-          "5306eed2fd2c43fe033efd6016c0c38b": "potes per córrer!"
-        },
-        "courseF_text_answer": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_text_answer_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_text_choice_color": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_text_choice_color_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_text_choice_conversation": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_text_choice_conversation_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_text_choice_events": {
-          "c529a06c3f8518b63ff6dfac482b335c": "Posa nom a aquest planeta:",
-          "44506356d48394cd903b579df9de9117": ", terrícola!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_text_choice_events_-2022-2": {
-          "c529a06c3f8518b63ff6dfac482b335c": "Posa nom a aquest planeta:",
-          "44506356d48394cd903b579df9de9117": ", terrícola!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_text_choice_freeplay": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_text_choice_freeplay_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_text_choice_interview": {
-          "34088af1fb721900963462375b3bbe23": "el robot!",
-          "5bd698afd23bccde289bb0b4aa72a518": "Posa nom al robot."
-        },
-        "courseF_text_choice_interview_-2022-2": {
-          "34088af1fb721900963462375b3bbe23": "el robot!",
-          "5bd698afd23bccde289bb0b4aa72a518": "Posa nom al robot."
-        },
-        "courseF_text_choice_multiprompt": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fa anys?",
-          "d1210f945885351b13feb9bbb868aeef": "Quants en fa?"
-        },
-        "courseF_text_choice_multiprompt_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fa anys?",
-          "d1210f945885351b13feb9bbb868aeef": "Quants en fa?"
-        },
-        "courseF_text_choice_title": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_text_choice_title_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_text_concat": {
-          "f6429fe0f1a76611670df7e1234af936": "Com et dius?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_text_concat_-2022-2": {
-          "f6429fe0f1a76611670df7e1234af936": "Com et dius?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_text_prompts": {
-          "f6429fe0f1a76611670df7e1234af936": "Com et dius?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_text_prompts_-2022-2": {
-          "f6429fe0f1a76611670df7e1234af936": "Com et dius?",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_variables_card": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_variables_card_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_variables_card_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
-          "464a456e0747ec9b09fc9afc6fbd13ed": "què vols pel teu aniversari?"
-        },
-        "courseF_variables_card_finish_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
-          "464a456e0747ec9b09fc9afc6fbd13ed": "què vols pel teu aniversari?"
-        },
-        "courseF_variables_chatbot": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_variables_chatbot_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_variables_chatbot_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
-          "46463b2e9f71f2f15b7238f56f09ba30": "Fi",
-          "c757766b0a7e2017c79e1c94f60e44f7": "Gràcies per xerrar amb mi!"
-        },
-        "courseF_variables_chatbot_finish_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
-          "46463b2e9f71f2f15b7238f56f09ba30": "Fi",
-          "c757766b0a7e2017c79e1c94f60e44f7": "Gràcies per xerrar amb mi!"
-        },
-        "courseF_variables_madlib": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_variables_madlib_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
-        },
-        "courseF_variables_madlib_finish": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
-          "50d489a15105b987ec6d4410900c95dd": "Introdueix una acció:"
-        },
-        "courseF_variables_madlib_finish_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
-          "50d489a15105b987ec6d4410900c95dd": "Introdueix una acció:"
-        },
-        "courseF_variables_predict": {
-          "f6429fe0f1a76611670df7e1234af936": "Com et dius?"
-        },
-        "courseF_variables_predict_-2022-2": {
-          "f6429fe0f1a76611670df7e1234af936": "Com et dius?"
-        },
-        "OPD-K5-projects-6": {
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "OPD-K5-projects-7": {
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "course3_playLab_challenge1": {
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "courseC19_playLab_EOC5": {
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "courseC19_playLab_EOC52022": {
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "courseC19_playLab_EOC5_2020": {
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "courseC19_playLab_EOC5_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "courseC19_playLab_EOC6": {
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "courseC19_playLab_EOC62022": {
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "courseC19_playLab_EOC6_2020": {
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "courseC19_playLab_EOC6_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "courseC19_playLab_sample12022": {
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "courseC19_playLab_sample1_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "courseC19_playLab_sample22022": {
-          "83db90f8846d091d3532256816f105d9": "Aquesta és la Neila.",
-          "0192cdc04916ec27aa11738bb6e48d6e": "La Neila té la missió de protegir casa seva del robot galàctic.",
-          "df8312187449c70820d7c58229a6b17e": "El robot galàctic espanta totes les altres criatures.",
-          "c084e152431f9116b9fdb3f7d465f13d": "La Neila vol ajudar el robot galàctic a ser simpàtic.",
-          "b2f02bf648ce32c4362afe1578d41f70": "Ha funcionat! La Neila li ha ensenyat al robot galàctic el poder de ser amable.",
-          "2a28483f9f4f9ee44cec653a445d4c82": "Les altres criatures ja no li tenen por!",
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "courseC19_playLab_sample2_2021": {
-          "83db90f8846d091d3532256816f105d9": "Aquesta és la Neila.",
-          "0192cdc04916ec27aa11738bb6e48d6e": "La Neila té la missió de protegir casa seva del robot galàctic.",
-          "df8312187449c70820d7c58229a6b17e": "El robot galàctic espanta totes les altres criatures.",
-          "c084e152431f9116b9fdb3f7d465f13d": "La Neila vol ajudar el robot galàctic a ser simpàtic.",
-          "b2f02bf648ce32c4362afe1578d41f70": "Ha funcionat! La Neila li ha ensenyat al robot galàctic el poder de ser amable.",
-          "2a28483f9f4f9ee44cec653a445d4c82": "Les altres criatures ja no li tenen por!",
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "courseC_data wizard": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Un gos!",
-          "336ad881e37e713ba0325500a8fa1f00": " gossos!",
-          "27944770529dd15319a983bee8951560": "Un gat!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " gats!",
-          "1c64ef29c853587fbe94f69f05272b79": "Un ocell!",
-          "5b402e6ea05e847a076e03ad74420c45": " ocells!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Un drac!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " dracs!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Compta tots els animals!",
-          "f62038e77820419cd978f7b722da560a": "Quants n'apareixeran?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Compta les mascotes"
-        },
-        "courseC_data wizard2022": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Un gos!",
-          "336ad881e37e713ba0325500a8fa1f00": " gossos!",
-          "27944770529dd15319a983bee8951560": "Un gat!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " gats!",
-          "1c64ef29c853587fbe94f69f05272b79": "Un ocell!",
-          "5b402e6ea05e847a076e03ad74420c45": " ocells!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Un drac!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " dracs!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Compta tots els animals!",
-          "f62038e77820419cd978f7b722da560a": "Quants n'apareixeran?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Compta les mascotes"
-        },
-        "courseC_data wizard_2020": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Un gos!",
-          "336ad881e37e713ba0325500a8fa1f00": " gossos!",
-          "27944770529dd15319a983bee8951560": "Un gat!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " gats!",
-          "1c64ef29c853587fbe94f69f05272b79": "Un ocell!",
-          "5b402e6ea05e847a076e03ad74420c45": " ocells!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Un drac!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " dracs!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Compta tots els animals!",
-          "f62038e77820419cd978f7b722da560a": "Quants n'apareixeran?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Compta les mascotes"
-        },
-        "courseC_data wizard_2021": {
-          "d93dfc24c6ce3e53d8ee07416c743e60": "Un gos!",
-          "336ad881e37e713ba0325500a8fa1f00": " gossos!",
-          "27944770529dd15319a983bee8951560": "Un gat!",
-          "22f6f6821f4d6d0a08653935b466ac2f": " gats!",
-          "1c64ef29c853587fbe94f69f05272b79": "Un ocell!",
-          "5b402e6ea05e847a076e03ad74420c45": " ocells!",
-          "4b23c908b939eaf7918e07142b9e05e0": "Un drac!",
-          "7f945c111ba5ea6d7b1547601db6ba0e": " dracs!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Compta tots els animals!",
-          "f62038e77820419cd978f7b722da560a": "Quants n'apareixeran?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Compta les mascotes"
-        },
-        "courseE_playLab_challenge1": {
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "courseE_playLab_scaffold5": {
-          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
-          "3e11a2dc6edb909c47778bed75a81769": "Text aquí"
-        },
-        "courseE_aboutme_1": {
-          "b63151482630edd1589a9ac24d107c49": "Aquesta soc jo! La Rikki! M'agrada programar, passar l'estona amb la Thuy i els gelats!",
-          "810896b14fc6615f0c76628b9b6a727e": "Aquesta és la meva millor amiga, la Thuy! És molt bona esportista!",
-          "6f97975a0bda0c9219915161149cbb26": "Aquest és el meu ordinador. M'encanta fer-lo servir per programar!"
-        },
-        "courseE_aboutme_1_2020": {
-          "b63151482630edd1589a9ac24d107c49": "Aquesta soc jo! La Rikki! M'agrada programar, passar l'estona amb la Thuy i els gelats!",
-          "810896b14fc6615f0c76628b9b6a727e": "Aquesta és la meva millor amiga, la Thuy! És molt bona esportista!",
-          "6f97975a0bda0c9219915161149cbb26": "Aquest és el meu ordinador. M'encanta fer-lo servir per programar!"
-        },
-        "courseE_aboutme_1_2021": {
-          "b63151482630edd1589a9ac24d107c49": "Aquesta soc jo! La Rikki! M'agrada programar, passar l'estona amb el Thuy i els gelats!",
-          "810896b14fc6615f0c76628b9b6a727e": "Aquesta és la meva millor amiga, la Thuy! És molt bona esportista!",
-          "8e985f60f328934accd78e7649584840": "M'encanten els gelats!",
-          "31ba97bb501bb1f5b448221be09bad32": "Aquesta és la meva gosseta, la Lollipop! Li hauria d'ensenyar a programar!",
-          "6f97975a0bda0c9219915161149cbb26": "Aquest és el meu ordinador. M'encanta fer-lo servir per programar!"
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Gràcies!"
         },
         "CourseF_Project_SpriteLab_2021": {
           "6e41661ddc1edd50b00b7c607cdcec1a": "opció 1",
@@ -702,80 +47,735 @@
           "c3787b1ed128fdeec3ad638c8ba547d3": "opció 3"
         },
         "CourseF_Project_SpriteLab_examples_2021": {
-          "8e7d34ed67fe4ec0910cefee2f5059cd": "Piruetes aèries",
-          "78d989e01047ba7043a38650d695abaa": "Selecciona un jugador",
           "6e41661ddc1edd50b00b7c607cdcec1a": "opció 1",
+          "78d989e01047ba7043a38650d695abaa": "Selecciona un jugador",
           "7fec9998c3e5a11f435dc6f2f8e399db": "opció 2",
+          "8e7d34ed67fe4ec0910cefee2f5059cd": "Piruetes aèries",
           "c3787b1ed128fdeec3ad638c8ba547d3": "opció 3"
         },
+        "Find the Wizard": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "0b895ef4c917e50663bc2a7327cbee3d": "M'has trobat!",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "FoodFight": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "Guess The Number": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "OPD-K5-projects-2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "OPD-K5-projects-3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "OPD-K5-projects-4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "OPD-K5-projects-5": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "OPD-K5-projects-6": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa."
+        },
+        "OPD-K5-projects-7": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa."
+        },
+        "course3_playLab_challenge1": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa."
+        },
+        "course4_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC12022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC22022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC32022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC42022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC4_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC19_playLab_EOC5": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa."
+        },
+        "courseC19_playLab_EOC52022": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa."
+        },
+        "courseC19_playLab_EOC5_2020": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa."
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa."
+        },
+        "courseC19_playLab_EOC6": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa."
+        },
+        "courseC19_playLab_EOC62022": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa."
+        },
+        "courseC19_playLab_EOC6_2020": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa."
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa."
+        },
+        "courseC19_playLab_sample12022": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa."
+        },
+        "courseC19_playLab_sample1_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa."
+        },
+        "courseC19_playLab_sample22022": {
+          "0192cdc04916ec27aa11738bb6e48d6e": "La Neila té la missió de protegir casa seva del robot galàctic.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Les altres criatures ja no li tenen por!",
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
+          "83db90f8846d091d3532256816f105d9": "Aquesta és la Neila.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Ha funcionat! La Neila li ha ensenyat al robot galàctic el poder de ser amable.",
+          "c084e152431f9116b9fdb3f7d465f13d": "La Neila vol ajudar el robot galàctic a ser simpàtic.",
+          "df8312187449c70820d7c58229a6b17e": "El robot galàctic espanta totes les altres criatures."
+        },
+        "courseC19_playLab_sample2_2021": {
+          "0192cdc04916ec27aa11738bb6e48d6e": "La Neila té la missió de protegir casa seva del robot galàctic.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Les altres criatures ja no li tenen por!",
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa.",
+          "83db90f8846d091d3532256816f105d9": "Aquesta és la Neila.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Ha funcionat! La Neila li ha ensenyat al robot galàctic el poder de ser amable.",
+          "c084e152431f9116b9fdb3f7d465f13d": "La Neila vol ajudar el robot galàctic a ser simpàtic.",
+          "df8312187449c70820d7c58229a6b17e": "El robot galàctic espanta totes les altres criatures."
+        },
+        "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC_PlayLab_eventsFP2022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC_PlayLab_eventsFP_2018": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC_PlayLab_eventsFP_2019": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC_PlayLab_eventsFP_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseC_data wizard": {
+          "1c64ef29c853587fbe94f69f05272b79": "Un ocell!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " gats!",
+          "27944770529dd15319a983bee8951560": "Un gat!",
+          "336ad881e37e713ba0325500a8fa1f00": " gossos!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Un drac!",
+          "5b402e6ea05e847a076e03ad74420c45": " ocells!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Compta tots els animals!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " dracs!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Compta les mascotes",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Un gos!",
+          "f62038e77820419cd978f7b722da560a": "Quants n'apareixeran?"
+        },
+        "courseC_data wizard2022": {
+          "1c64ef29c853587fbe94f69f05272b79": "Un ocell!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " gats!",
+          "27944770529dd15319a983bee8951560": "Un gat!",
+          "336ad881e37e713ba0325500a8fa1f00": " gossos!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Un drac!",
+          "5b402e6ea05e847a076e03ad74420c45": " ocells!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Compta tots els animals!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " dracs!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Compta les mascotes",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Un gos!",
+          "f62038e77820419cd978f7b722da560a": "Quants n'apareixeran?"
+        },
+        "courseC_data wizard_2020": {
+          "1c64ef29c853587fbe94f69f05272b79": "Un ocell!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " gats!",
+          "27944770529dd15319a983bee8951560": "Un gat!",
+          "336ad881e37e713ba0325500a8fa1f00": " gossos!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Un drac!",
+          "5b402e6ea05e847a076e03ad74420c45": " ocells!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Compta tots els animals!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " dracs!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Compta les mascotes",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Un gos!",
+          "f62038e77820419cd978f7b722da560a": "Quants n'apareixeran?"
+        },
+        "courseC_data wizard_2021": {
+          "1c64ef29c853587fbe94f69f05272b79": "Un ocell!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " gats!",
+          "27944770529dd15319a983bee8951560": "Un gat!",
+          "336ad881e37e713ba0325500a8fa1f00": " gossos!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Un drac!",
+          "5b402e6ea05e847a076e03ad74420c45": " ocells!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Compta tots els animals!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " dracs!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Compta les mascotes",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Un gos!",
+          "f62038e77820419cd978f7b722da560a": "Quants n'apareixeran?"
+        },
+        "courseD_playLab_condFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Has guanyat!"
+        },
+        "courseE_aboutme_1": {
+          "6f97975a0bda0c9219915161149cbb26": "Aquest és el meu ordinador. M'encanta fer-lo servir per programar!",
+          "810896b14fc6615f0c76628b9b6a727e": "Aquesta és la meva millor amiga, la Thuy! És molt bona esportista!",
+          "b63151482630edd1589a9ac24d107c49": "Aquesta soc jo! La Rikki! M'agrada programar, passar l'estona amb la Thuy i els gelats!"
+        },
+        "courseE_aboutme_1_2020": {
+          "6f97975a0bda0c9219915161149cbb26": "Aquest és el meu ordinador. M'encanta fer-lo servir per programar!",
+          "810896b14fc6615f0c76628b9b6a727e": "Aquesta és la meva millor amiga, la Thuy! És molt bona esportista!",
+          "b63151482630edd1589a9ac24d107c49": "Aquesta soc jo! La Rikki! M'agrada programar, passar l'estona amb la Thuy i els gelats!"
+        },
+        "courseE_aboutme_1_2021": {
+          "31ba97bb501bb1f5b448221be09bad32": "Aquesta és la meva gosseta, la Lollipop! Li hauria d'ensenyar a programar!",
+          "6f97975a0bda0c9219915161149cbb26": "Aquest és el meu ordinador. M'encanta fer-lo servir per programar!",
+          "810896b14fc6615f0c76628b9b6a727e": "Aquesta és la meva millor amiga, la Thuy! És molt bona esportista!",
+          "8e985f60f328934accd78e7649584840": "M'encanten els gelats!",
+          "b63151482630edd1589a9ac24d107c49": "Aquesta soc jo! La Rikki! M'agrada programar, passar l'estona amb el Thuy i els gelats!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
+        },
+        "courseE_aboutme_32022": {
+          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
+        },
+        "courseE_aboutme_42022": {
+          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
+        },
+        "courseE_aboutme_5": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hola!",
+          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
+        },
+        "courseE_aboutme_52022": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hola!",
+          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
+        },
+        "courseE_aboutme_5_2020": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hola!",
+          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
+        },
+        "courseE_aboutme_5_2021": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hola!",
+          "ed076287532e86365e841e92bfc50d8c": "Hola món!"
+        },
+        "courseE_playLab_challenge1": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa."
+        },
+        "courseE_playLab_scaffold1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseE_playLab_scaffold2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseE_playLab_scaffold3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseE_playLab_scaffold4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseE_playLab_scaffold5": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text aquí",
+          "5cec903c4d41c49412a70a94d54999ee": "Pots escriure alguna cosa."
+        },
         "courseF_apps_aquarium": {
-          "f655df68ec33643278de7e69794e8d76": "Aquari virtual",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Què hi afegiràs?",
+          "0d3e73168beb875063ea0f0302fe32bd": "Quin peix?",
+          "78574118d153534fd0925a2f5ca25e79": "Quina cosa?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "altres",
           "83e4a96aed96436c621b9809e258b309": "peixos",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "criatura",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "altres",
-          "0d3e73168beb875063ea0f0302fe32bd": "Quin peix?",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Què hi afegiràs?",
           "caaf8264ca397dba2d35ef902bbbd953": "Quina criatura?",
-          "78574118d153534fd0925a2f5ca25e79": "Quina cosa?"
+          "f655df68ec33643278de7e69794e8d76": "Aquari virtual"
         },
         "courseF_apps_aquarium2022": {
-          "f655df68ec33643278de7e69794e8d76": "Aquari virtual",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Què hi afegiràs?",
+          "0d3e73168beb875063ea0f0302fe32bd": "Quin peix?",
+          "78574118d153534fd0925a2f5ca25e79": "Quina cosa?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "altres",
           "83e4a96aed96436c621b9809e258b309": "peixos",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "criatura",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "altres",
-          "0d3e73168beb875063ea0f0302fe32bd": "Quin peix?",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Què hi afegiràs?",
           "caaf8264ca397dba2d35ef902bbbd953": "Quina criatura?",
-          "78574118d153534fd0925a2f5ca25e79": "Quina cosa?"
+          "f655df68ec33643278de7e69794e8d76": "Aquari virtual"
         },
         "courseF_apps_aquarium_-2022-2": {
-          "f655df68ec33643278de7e69794e8d76": "Aquari virtual",
-          "a1a2a07348784279a1e7a6f46dc7e353": "Què hi afegiràs?",
+          "0d3e73168beb875063ea0f0302fe32bd": "Quin peix?",
+          "78574118d153534fd0925a2f5ca25e79": "Quina cosa?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "altres",
           "83e4a96aed96436c621b9809e258b309": "peixos",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "criatura",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "altres",
-          "0d3e73168beb875063ea0f0302fe32bd": "Quin peix?",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Què hi afegiràs?",
           "caaf8264ca397dba2d35ef902bbbd953": "Quina criatura?",
-          "78574118d153534fd0925a2f5ca25e79": "Quina cosa?"
+          "f655df68ec33643278de7e69794e8d76": "Aquari virtual"
+        },
+        "courseF_apps_card": {
+          "d1210f945885351b13feb9bbb868aeef": "Quants en fa?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fa anys?"
+        },
+        "courseF_apps_card2022": {
+          "d1210f945885351b13feb9bbb868aeef": "Quants en fa?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fa anys?"
+        },
+        "courseF_apps_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Quants en fa?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fa anys?"
         },
         "courseF_apps_chatbot": {
-          "a72e7c5c68af0546e963e510297f5233": "Hola, em dic X-9! I tu, com et dius?",
-          "f0e5da70d264f312a1658d51c130b101": "Introdueix el teu nom:",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Quants anys tens?",
           "05584ab56b744b51cd8c4a6e8b3a08ee": "Introdueix la teva edat:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " anys, també!",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Quants anys tens?",
+          "1f258d88a70309efc1435ef5daa277a0": "Gràcies per xerrar amb mi!",
           "605f302ebc9f7fbacba60b15f551a633": "Quin és el teu color preferit?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " anys, també!",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Introdueix el teu color preferit:",
+          "a72e7c5c68af0546e963e510297f5233": "Hola, em dic X-9! I tu, com et dius?",
           "ae096fbf24d913754b01a1601672bf62": " també!",
-          "1f258d88a70309efc1435ef5daa277a0": "Gràcies per xerrar amb mi!"
+          "f0e5da70d264f312a1658d51c130b101": "Introdueix el teu nom:"
         },
         "courseF_apps_chatbot2022": {
-          "a72e7c5c68af0546e963e510297f5233": "Hola, em dic X-9! I tu, com et dius?",
-          "f0e5da70d264f312a1658d51c130b101": "Introdueix el teu nom:",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Quants anys tens?",
           "05584ab56b744b51cd8c4a6e8b3a08ee": "Introdueix la teva edat:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " anys, també!",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Quants anys tens?",
+          "1f258d88a70309efc1435ef5daa277a0": "Gràcies per xerrar amb mi!",
           "605f302ebc9f7fbacba60b15f551a633": "Quin és el teu color preferit?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " anys, també!",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Introdueix el teu color preferit:",
-          "1f258d88a70309efc1435ef5daa277a0": "Gràcies per xerrar amb mi!"
+          "a72e7c5c68af0546e963e510297f5233": "Hola, em dic X-9! I tu, com et dius?",
+          "f0e5da70d264f312a1658d51c130b101": "Introdueix el teu nom:"
         },
         "courseF_apps_chatbot_-2022-2": {
-          "a72e7c5c68af0546e963e510297f5233": "Hola, em dic X-9! I tu, com et dius?",
-          "f0e5da70d264f312a1658d51c130b101": "Introdueix el teu nom:",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Quants anys tens?",
           "05584ab56b744b51cd8c4a6e8b3a08ee": "Introdueix la teva edat:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " anys, també!",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Quants anys tens?",
+          "1f258d88a70309efc1435ef5daa277a0": "Gràcies per xerrar amb mi!",
           "605f302ebc9f7fbacba60b15f551a633": "Quin és el teu color preferit?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " anys, també!",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Introdueix el teu color preferit:",
-          "1f258d88a70309efc1435ef5daa277a0": "Gràcies per xerrar amb mi!"
+          "a72e7c5c68af0546e963e510297f5233": "Hola, em dic X-9! I tu, com et dius?",
+          "f0e5da70d264f312a1658d51c130b101": "Introdueix el teu nom:"
+        },
+        "courseF_apps_collector": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " segons",
+          "41f2b2212de0105c2a942ebb4a44e449": "El gran joc de la Col·leccionista!",
+          "490082498449bd20ff0199737dfa4916": "Selecciona el tipus de joc:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Has guanyat!"
+        },
+        "courseF_apps_collector2022": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " segons",
+          "41f2b2212de0105c2a942ebb4a44e449": "El gran joc de la Col·leccionista!",
+          "490082498449bd20ff0199737dfa4916": "Selecciona el tipus de joc:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Has guanyat!"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " segons",
+          "41f2b2212de0105c2a942ebb4a44e449": "El gran joc de la Col·leccionista!",
+          "490082498449bd20ff0199737dfa4916": "Selecciona el tipus de joc:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Has guanyat!"
+        },
+        "courseF_apps_madlib": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Introdueix una part del cos:",
+          "514b8d5320196898a9ced3efe0d4c802": "Introdueix un adjectiu:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "potes per córrer!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " jocs.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Introdueix un objecte:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Una història d'espai buits",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
+          "e522ee28f39133b45497637539ff429b": "Introdueix un número:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Jocs de festa"
+        },
+        "courseF_apps_madlib2022": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Introdueix una part del cos:",
+          "514b8d5320196898a9ced3efe0d4c802": "Introdueix un adjectiu:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "potes per córrer!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " jocs.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Introdueix un objecte:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Una història d'espai buits",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
+          "e522ee28f39133b45497637539ff429b": "Introdueix un número:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Jocs de festa"
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Introdueix una part del cos:",
+          "514b8d5320196898a9ced3efe0d4c802": "Introdueix un adjectiu:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "potes per córrer!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " jocs.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Introdueix un objecte:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Una història d'espai buits",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
+          "e522ee28f39133b45497637539ff429b": "Introdueix un número:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Jocs de festa"
+        },
+        "courseF_editable_card": {
+          "d1210f945885351b13feb9bbb868aeef": "Quants en fa?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fa anys?"
+        },
+        "courseF_editable_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Quants en fa?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fa anys?"
+        },
+        "courseF_editable_chatbot": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Introdueix la teva edat:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Quants anys tens?",
+          "1f258d88a70309efc1435ef5daa277a0": "Gràcies per xerrar amb mi!",
+          "605f302ebc9f7fbacba60b15f551a633": "Quin és el teu color preferit?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " anys, també!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Introdueix el teu color preferit:",
+          "a72e7c5c68af0546e963e510297f5233": "Hola, em dic X-9! I tu, com et dius?",
+          "ae096fbf24d913754b01a1601672bf62": " també!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
+          "f0e5da70d264f312a1658d51c130b101": "Introdueix el teu nom:"
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Introdueix la teva edat:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Quants anys tens?",
+          "1f258d88a70309efc1435ef5daa277a0": "Gràcies per xerrar amb mi!",
+          "605f302ebc9f7fbacba60b15f551a633": "Quin és el teu color preferit?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " anys, també!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Introdueix el teu color preferit:",
+          "a72e7c5c68af0546e963e510297f5233": "Hola, em dic X-9! I tu, com et dius?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
+          "f0e5da70d264f312a1658d51c130b101": "Introdueix el teu nom:"
+        },
+        "courseF_editable_madlib": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Introdueix una part del cos:",
+          "514b8d5320196898a9ced3efe0d4c802": "Introdueix un adjectiu:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "potes per córrer!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " jocs.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Introdueix un objecte:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Una història d'espai buits",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
+          "e522ee28f39133b45497637539ff429b": "Introdueix un número:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Jocs de festa"
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Introdueix una part del cos:",
+          "514b8d5320196898a9ced3efe0d4c802": "Introdueix un adjectiu:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "potes per córrer!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " jocs.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Introdueix un objecte:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Una història d'espai buits",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
+          "e522ee28f39133b45497637539ff429b": "Introdueix un número:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Jocs de festa"
         },
         "courseF_label_predict": {
-          "f15045cb7e57652546d4a0b2c695356f": "Què et ve de gust menjar?",
-          "937dc37c06cc5d89a7096eb048b73590": " en marxa!"
+          "937dc37c06cc5d89a7096eb048b73590": " en marxa!",
+          "f15045cb7e57652546d4a0b2c695356f": "Què et ve de gust menjar?"
         },
         "courseF_label_predict_-2022-2": {
-          "f15045cb7e57652546d4a0b2c695356f": "Què et ve de gust menjar?",
-          "937dc37c06cc5d89a7096eb048b73590": " en marxa!"
+          "937dc37c06cc5d89a7096eb048b73590": " en marxa!",
+          "f15045cb7e57652546d4a0b2c695356f": "Què et ve de gust menjar?"
+        },
+        "courseF_playlab_variables1a": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseF_playlab_variables2b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí",
+          "48d6215903dff56238e52e8891380c8f": "blau"
+        },
+        "courseF_playlab_variables3b_josh": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseF_playlab_variables4b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Quants anys tens?",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseF_playlab_variables4c_predictive1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí",
+          "f6429fe0f1a76611670df7e1234af936": "Com et dius?"
+        },
+        "courseF_playlab_variables5c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí",
+          "bda9643ac6601722a28f238714274da4": "vermell"
+        },
+        "courseF_playlab_variables6c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseF_playlab_variables7b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseF_playlab_variables7c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseF_playlab_variables8c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseF_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
+        },
+        "courseF_project_1": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Gràcies!",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Has guanyat!"
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_text_answer_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_text_choice_color_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_text_choice_events": {
+          "44506356d48394cd903b579df9de9117": ", terrícola!",
+          "c529a06c3f8518b63ff6dfac482b335c": "Posa nom a aquest planeta:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_text_choice_events_-2022-2": {
+          "44506356d48394cd903b579df9de9117": ", terrícola!",
+          "c529a06c3f8518b63ff6dfac482b335c": "Posa nom a aquest planeta:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_text_choice_freeplay_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_text_choice_interview": {
+          "34088af1fb721900963462375b3bbe23": "el robot!",
+          "5bd698afd23bccde289bb0b4aa72a518": "Posa nom al robot."
+        },
+        "courseF_text_choice_interview_-2022-2": {
+          "34088af1fb721900963462375b3bbe23": "el robot!",
+          "5bd698afd23bccde289bb0b4aa72a518": "Posa nom al robot."
+        },
+        "courseF_text_choice_multiprompt": {
+          "d1210f945885351b13feb9bbb868aeef": "Quants en fa?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fa anys?"
+        },
+        "courseF_text_choice_multiprompt_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Quants en fa?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fa anys?"
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
+          "f6429fe0f1a76611670df7e1234af936": "Com et dius?"
+        },
+        "courseF_text_concat_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
+          "f6429fe0f1a76611670df7e1234af936": "Com et dius?"
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
+          "f6429fe0f1a76611670df7e1234af936": "Com et dius?"
+        },
+        "courseF_text_prompts_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta",
+          "f6429fe0f1a76611670df7e1234af936": "Com et dius?"
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_variables_card_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_variables_card_finish": {
+          "464a456e0747ec9b09fc9afc6fbd13ed": "què vols pel teu aniversari?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_variables_card_finish_-2022-2": {
+          "464a456e0747ec9b09fc9afc6fbd13ed": "què vols pel teu aniversari?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_variables_chatbot_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_variables_chatbot_finish": {
+          "46463b2e9f71f2f15b7238f56f09ba30": "Fi",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Gràcies per xerrar amb mi!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_variables_chatbot_finish_-2022-2": {
+          "46463b2e9f71f2f15b7238f56f09ba30": "Fi",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Gràcies per xerrar amb mi!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_variables_madlib_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_variables_madlib_finish": {
+          "50d489a15105b987ec6d4410900c95dd": "Introdueix una acció:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_variables_madlib_finish_-2022-2": {
+          "50d489a15105b987ec6d4410900c95dd": "Introdueix una acció:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la meva pregunta"
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "Com et dius?"
+        },
+        "courseF_variables_predict_-2022-2": {
+          "f6429fe0f1a76611670df7e1234af936": "Com et dius?"
+        },
+        "coursee_helloworld_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Hola, món!"
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Hola, món!"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Hola, món!"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Hola, món!"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Hola, món!"
+        },
+        "iceage_free_play": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "escriu el text aquí",
+          "30fcc1693fa8402931d13ac3a5f396fd": "escriu el títol aquí"
         }
       }
     }

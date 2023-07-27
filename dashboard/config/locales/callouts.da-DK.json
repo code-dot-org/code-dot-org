@@ -47,23 +47,69 @@
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "Her vælger du typen af danser."
         },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Her vælger du typen af danser."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Her vælger du typen af danser."
+        },
         "CourseD_Dance_2020_02": {
-          "dance_callout_11_a": "Føj denne blok til dit program.",
-          "arrow_buttons": "Tryk på piletasterne for at kontrollere din danser."
+          "arrow_buttons": "Tryk på piletasterne for at kontrollere din danser.",
+          "dance_callout_11_a": "Føj denne blok til dit program."
+        },
+        "CourseD_Dance_2020_022022": {
+          "arrow_buttons": "Tryk på piletasterne for at kontrollere din danser.",
+          "dance_callout_11_a": "Føj denne blok til dit program."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "arrow_buttons": "Tryk på piletasterne for at kontrollere din danser.",
+          "dance_callout_11_a": "Føj denne blok til dit program."
         },
         "CourseD_Dance_2020_04": {
+          "dance_callout_02": "Føj denne blok til dit program!"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Føj denne blok til dit program!"
+        },
+        "CourseD_Dance_2020_04_2021": {
           "dance_callout_02": "Føj denne blok til dit program!"
         },
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "Føj en ny begivenhed til dit program."
         },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Føj en ny begivenhed til dit program."
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Føj en ny begivenhed til dit program."
+        },
         "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Ny blok!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Ny blok!"
+        },
+        "CourseD_Dance_2020_06_2021": {
           "dance_party_11_5_groups": "Ny blok!"
         },
         "CourseD_Dance_2020_07": {
           "setprop_hint": "Ny blok!"
         },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Ny blok!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Ny blok!"
+        },
         "CourseD_Dance_2020_09": {
+          "new_block_3": "Ny blok!",
+          "new_block_4": "Ny blok!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Ny blok!",
+          "new_block_4": "Ny blok!"
+        },
+        "CourseD_Dance_2020_09_2021": {
           "new_block_3": "Ny blok!",
           "new_block_4": "Ny blok!"
         },
@@ -86,12 +132,23 @@
         "CourseD_Dance_Party_11_5": {
           "dance_party_11_5_groups": "Se her for \"alle ænder\"-blokke"
         },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Klik her for at udvide blokken.",
+          "pointerlocation": "Træk en emneblok her."
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "Klik her for at udvide blokken.",
+          "pointerlocation": "Træk en emneblok her."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Klik for at lave et nyt kostume"
+        },
         "Dance_2019_01": {
           "dance_callout_01": "Her vælger du typen af danser."
         },
         "Dance_2019_02": {
-          "dance_callout_11_a": "Føj denne blok til dit program.",
-          "arrow_buttons": "Tryk på piletasterne for at kontrollere din danser."
+          "arrow_buttons": "Tryk på piletasterne for at kontrollere din danser.",
+          "dance_callout_11_a": "Føj denne blok til dit program."
         },
         "Dance_2019_04": {
           "dance_callout_02": "Føj denne blok til dit program!"
@@ -131,10 +188,16 @@
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "Denne lille instruktion fortæller computeren, at den skal køre et STORT kodestykke med det samme navn i arbejdsområdet."
         },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "Denne lille instruktion fortæller computeren, at den skal køre et STORT kodestykke med det samme navn i arbejdsområdet."
+        },
         "Function intro Ryan_2019": {
           "Function_intro_Ryan_1": "Denne lille instruktion fortæller computeren, at den skal køre et STORT kodestykke med det samme navn i arbejdsområdet."
         },
         "Function intro Ryan_2020": {
+          "Function_intro_Ryan_1": "Denne lille instruktion fortæller computeren, at den skal køre et STORT kodestykke med det samme navn i arbejdsområdet."
+        },
+        "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "Denne lille instruktion fortæller computeren, at den skal køre et STORT kodestykke med det samme navn i arbejdsområdet."
         },
         "Infinity_move_collide": {
@@ -159,13 +222,22 @@
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_1": "Dette er et gentagelsesloop!  Træk det ind i arbejdsområdet, og fyld det med den kode, du vil køre igen og igen."
         },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "Dette er et gentagelsesloop!  Træk det ind i arbejdsområdet, og fyld det med den kode, du vil køre igen og igen."
+        },
         "MC_HOC_2017_03_Cole_2019": {
           "MC_HOC_2017_03_Cole_1": "Dette er et gentagelsesloop!  Træk det ind i arbejdsområdet, og fyld det med den kode, du vil køre igen og igen."
         },
         "MC_HOC_2017_03_Cole_2020": {
           "MC_HOC_2017_03_Cole_1": "Dette er et gentagelsesloop!  Træk det ind i arbejdsområdet, og fyld det med den kode, du vil køre igen og igen."
         },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Dette er et gentagelsesloop!  Træk det ind i arbejdsområdet, og fyld det med den kode, du vil køre igen og igen."
+        },
         "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Agenten kan svæve over vand, men spilleren kan ikke!"
+        },
+        "MC_HOC_2017_04_Cole2022": {
           "MC_HOC_2017_04_Cole_a": "Agenten kan svæve over vand, men spilleren kan ikke!"
         },
         "MC_HOC_2017_04_Cole_2019": {
@@ -174,7 +246,13 @@
         "MC_HOC_2017_04_Cole_2020": {
           "MC_HOC_2017_04_Cole_a": "Agenten kan svæve over vand, men spilleren kan ikke!"
         },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agenten kan svæve over vand, men spilleren kan ikke!"
+        },
         "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "Du kan ikke smide disse blokke væk, men du kan redigere dem!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
           "MC_HOC_2017_06_Cole_1": "Du kan ikke smide disse blokke væk, men du kan redigere dem!"
         },
         "MC_HOC_2017_06_Cole_2019": {
@@ -183,13 +261,22 @@
         "MC_HOC_2017_06_Cole_2020": {
           "MC_HOC_2017_06_Cole_1": "Du kan ikke smide disse blokke væk, men du kan redigere dem!"
         },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Du kan ikke smide disse blokke væk, men du kan redigere dem!"
+        },
         "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_1": "Agenten kan svæve over lava, men spilleren kan ikke!  "
+        },
+        "MC_HOC_2017_Ali2022": {
           "MC_HOC_2017_08_RY_1": "Agenten kan svæve over lava, men spilleren kan ikke!  "
         },
         "MC_HOC_2017_Ali_2019": {
           "MC_HOC_2017_08_RY_1": "Agenten kan svæve over lava, men spilleren kan ikke!  "
         },
         "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_1": "Agenten kan svæve over lava, men spilleren kan ikke!  "
+        },
+        "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "Agenten kan svæve over lava, men spilleren kan ikke!  "
         },
         "NEW Course 4 Artist Functions 7": {
@@ -202,8 +289,8 @@
           "create_function": "Klik her for at åbne \"Funktioner\", klik derefter på knappen \"Opret en funktion\"."
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Klik Redigér for at tilføje en parameter i din funktion",
-          "add_and_drag_parameter": "Angiv parameternavn hér, klik Tilføj, og træk den derefter ind i din funktionsdefinition"
+          "add_and_drag_parameter": "Angiv parameternavn hér, klik Tilføj, og træk den derefter ind i din funktionsdefinition",
+          "edit_add_parameter": "Klik Redigér for at tilføje en parameter i din funktion"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "Træk længdevariablen hertil for at erstatte spørgsmålstegnene"
@@ -217,13 +304,22 @@
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Vi har lagt nogle blokke her, som du kan komme i gang med"
         },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Vi har lagt nogle blokke her, som du kan komme i gang med"
+        },
         "Overworld Chop Trees_2019": {
           "craft_callout_preplaced": "Vi har lagt nogle blokke her, som du kan komme i gang med"
         },
         "Overworld Chop Trees_2020": {
           "craft_callout_preplaced": "Vi har lagt nogle blokke her, som du kan komme i gang med"
         },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Vi har lagt nogle blokke her, som du kan komme i gang med"
+        },
         "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Koden vil starte opførelsen af dit hus. Kan du fuldende den?"
+        },
+        "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "Koden vil starte opførelsen af dit hus. Kan du fuldende den?"
         },
         "Overworld House Frame Chosen_2019": {
@@ -232,7 +328,13 @@
         "Overworld House Frame Chosen_2020": {
           "craft_callout_preplaced_house": "Koden vil starte opførelsen af dit hus. Kan du fuldende den?"
         },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Koden vil starte opførelsen af dit hus. Kan du fuldende den?"
+        },
         "Overworld Move to Sheep": {
+          "craft_run_button_callout": "Tryk på \"Kør\" for at prøve dit program"
+        },
+        "Overworld Move to Sheep2022": {
           "craft_run_button_callout": "Tryk på \"Kør\" for at prøve dit program"
         },
         "Overworld Move to Sheep_2019": {
@@ -241,7 +343,13 @@
         "Overworld Move to Sheep_2020": {
           "craft_run_button_callout": "Tryk på \"Kør\" for at prøve dit program"
         },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Tryk på \"Kør\" for at prøve dit program"
+        },
         "Overworld Place Wall": {
+          "craft_inside_repeat": "Gentag handlinger ved at placere blokke herinde"
+        },
+        "Overworld Place Wall2022": {
           "craft_inside_repeat": "Gentag handlinger ved at placere blokke herinde"
         },
         "Overworld Place Wall_2019": {
@@ -250,7 +358,13 @@
         "Overworld Place Wall_2020": {
           "craft_inside_repeat": "Gentag handlinger ved at placere blokke herinde"
         },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Gentag handlinger ved at placere blokke herinde"
+        },
         "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Denne kode søger efter lava, kan du tilføje en \"ryk fremad\"-kommando?"
+        },
+        "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "Denne kode søger efter lava, kan du tilføje en \"ryk fremad\"-kommando?"
         },
         "Underground Avoiding Lava_2019": {
@@ -259,7 +373,13 @@
         "Underground Avoiding Lava_2020": {
           "craft_callout_moveforward": "Denne kode søger efter lava, kan du tilføje en \"ryk fremad\"-kommando?"
         },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Denne kode søger efter lava, kan du tilføje en \"ryk fremad\"-kommando?"
+        },
         "Underground Iron": {
+          "craft_what_is_iron": "Udvind jern!"
+        },
+        "Underground Iron2022": {
           "craft_what_is_iron": "Udvind jern!"
         },
         "Underground Iron_2019": {
@@ -268,7 +388,13 @@
         "Underground Iron_2020": {
           "craft_what_is_iron": "Udvind jern!"
         },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Udvind jern!"
+        },
         "courseA_artist_loops4": {
+          "courseA_artist_loops4_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
+        },
+        "courseA_artist_loops42022": {
           "courseA_artist_loops4_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
         },
         "courseA_artist_loops4_2018": {
@@ -280,10 +406,16 @@
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
         },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
+        },
         "courseA_collector_loops1": {
           "courseA_collector_loops1_1": "Kan du se nogle nye blokke i værktøjskassen? Vi skal nok vise senere hvordan du bruger dem."
         },
         "courseA_collector_loops3": {
+          "gradek_adventurer_loops2_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
+        },
+        "courseA_collector_loops32022": {
           "gradek_adventurer_loops2_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
         },
         "courseA_collector_loops3_2018": {
@@ -293,6 +425,9 @@
           "gradek_adventurer_loops2_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
         },
         "courseA_collector_loops3_2020": {
+          "gradek_adventurer_loops2_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
+        },
+        "courseA_collector_loops3_2021": {
           "gradek_adventurer_loops2_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
         },
         "courseA_collector_preLoops2": {
@@ -313,6 +448,9 @@
         "courseA_maze_seq1": {
           "courseA_maze_seq1_1": "Klik på TIP! hvis du har brug for hjælp!"
         },
+        "courseA_maze_seq12022": {
+          "courseA_maze_seq1_1": "Klik på TIP! hvis du har brug for hjælp!"
+        },
         "courseA_maze_seq1_2018": {
           "courseA_maze_seq1_1": "Klik på TIP! hvis du har brug for hjælp!"
         },
@@ -320,6 +458,9 @@
           "courseA_maze_seq1_1": "Klik på TIP! hvis du har brug for hjælp!"
         },
         "courseA_maze_seq1_2020": {
+          "courseA_maze_seq1_1": "Klik på TIP! hvis du har brug for hjælp!"
+        },
+        "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "Klik på TIP! hvis du har brug for hjælp!"
         },
         "courseA_maze_seq2": {
@@ -331,6 +472,9 @@
         "courseA_playLab_events4": {
           "courseA_playlab_events4_callout1": "Dette er en opfordring"
         },
+        "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "Dette er en opfordring"
+        },
         "courseA_playLab_events4_2018": {
           "courseA_playlab_events4_callout1": "Dette er en opfordring"
         },
@@ -340,7 +484,13 @@
         "courseA_playLab_events4_2020": {
           "courseA_playlab_events4_callout1": "Dette er en opfordring"
         },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Dette er en opfordring"
+        },
         "courseA_playLab_events5": {
+          "courseA_playLab_events5_1": "Klik her for at ændre på retningen."
+        },
+        "courseA_playLab_events52022": {
           "courseA_playLab_events5_1": "Klik her for at ændre på retningen."
         },
         "courseA_playLab_events5_2018": {
@@ -352,7 +502,13 @@
         "courseA_playLab_events5_2020": {
           "courseA_playLab_events5_1": "Klik her for at ændre på retningen."
         },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Klik her for at ændre på retningen."
+        },
         "courseA_playLab_events6": {
+          "courseA_playLab_events6_1": "Med denne kan du vælge en tilfældig lyd. Så ved du ikke hvad du får, før du hører lyden!"
+        },
+        "courseA_playLab_events62022": {
           "courseA_playLab_events6_1": "Med denne kan du vælge en tilfældig lyd. Så ved du ikke hvad du får, før du hører lyden!"
         },
         "courseA_playLab_events6_2018": {
@@ -364,10 +520,16 @@
         "courseA_playLab_events6_2020": {
           "courseA_playLab_events6_1": "Med denne kan du vælge en tilfældig lyd. Så ved du ikke hvad du får, før du hører lyden!"
         },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "Med denne kan du vælge en tilfældig lyd. Så ved du ikke hvad du får, før du hører lyden!"
+        },
         "courseB_collector_loops1": {
           "courseB_collector_loops1_1": "Kan du se nogle nye blokke i værktøjskassen? Vi skal nok vise senere hvordan du bruger dem."
         },
         "courseB_maze_seq1": {
+          "courseB_maze_seq1": "Klik på TIP! hvis du har brug for hjælp!"
+        },
+        "courseB_maze_seq12022": {
           "courseB_maze_seq1": "Klik på TIP! hvis du har brug for hjælp!"
         },
         "courseB_maze_seq1_2018": {
@@ -377,6 +539,9 @@
           "courseB_maze_seq1": "Klik på TIP! hvis du har brug for hjælp!"
         },
         "courseB_maze_seq1_2020": {
+          "courseB_maze_seq1": "Klik på TIP! hvis du har brug for hjælp!"
+        },
+        "courseB_maze_seq1_2021": {
           "courseB_maze_seq1": "Klik på TIP! hvis du har brug for hjælp!"
         },
         "courseB_maze_seq2": {
@@ -405,8 +570,8 @@
           "snowflake_dropdown": "Brug denne drop-down menu til at oprette forskellige snefnug!"
         },
         "frozen line": {
-          "run": "Tryk på \"Kør\" for at prøve dit program!",
-          "move_elsa_forward": "Træk i en \"flyt fremad\"-blok og fastgør den under \"når programmet kører\"-blokken for at få Elsa til at bevæge sig fremad"
+          "move_elsa_forward": "Træk i en \"flyt fremad\"-blok og fastgør den under \"når programmet kører\"-blokken for at få Elsa til at bevæge sig fremad",
+          "run": "Tryk på \"Kør\" for at prøve dit program!"
         },
         "frozen perpendicular": {
           "turn_elsa": "Brug \"drej\"-blokken for at få Elsa til at dreje. Tallet i drop-down bestemmer hvor mange grader Elsa drejer"
@@ -425,97 +590,6 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Brug drop-down menuen til at erstatte \"???\" med et tal"
-        },
-        "outbreak2": {
-          "minitoolbox": "Klik her for at udvide blokken.",
-          "pointerlocation": "Træk en emneblok her."
-        },
-        "outbreak7": {
-          "costumes_callout": "Klik for at lave et nyt kostume"
-        },
-        "CourseF_outbreak2": {
-          "minitoolbox": "Klik her for at udvide blokken.",
-          "pointerlocation": "Træk en emneblok her."
-        },
-        "CourseF_outbreak7": {
-          "costumes_callout": "Klik for at lave et nyt kostume"
-        },
-        "courseA_artist_loops4_2021": {
-          "courseA_artist_loops4_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
-        },
-        "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_1": "Klik på TIP! hvis du har brug for hjælp!"
-        },
-        "courseA_playLab_events4_2021": {
-          "courseA_playlab_events4_callout1": "Dette er en opfordring"
-        },
-        "courseA_playLab_events5_2021": {
-          "courseA_playLab_events5_1": "Klik her for at ændre på retningen."
-        },
-        "courseA_playLab_events6_2021": {
-          "courseA_playLab_events6_1": "Med denne kan du vælge en tilfældig lyd. Så ved du ikke hvad du får, før du hører lyden!"
-        },
-        "CourseD_Dance_2020_01_2021": {
-          "dance_callout_01": "Her vælger du typen af danser."
-        },
-        "CourseD_Dance_2020_02_2021": {
-          "dance_callout_11_a": "Føj denne blok til dit program.",
-          "arrow_buttons": "Tryk på piletasterne for at kontrollere din danser."
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "Føj denne blok til dit program!"
-        },
-        "CourseD_Dance_2020_05_2021": {
-          "dance_callout_05": "Føj en ny begivenhed til dit program."
-        },
-        "CourseD_Dance_2020_06_2021": {
-          "dance_party_11_5_groups": "Ny blok!"
-        },
-        "CourseD_Dance_2020_07_2021": {
-          "setprop_hint": "Ny blok!"
-        },
-        "CourseD_Dance_2020_09_2021": {
-          "new_block_3": "Ny blok!",
-          "new_block_4": "Ny blok!"
-        },
-        "Function intro Ryan_2021": {
-          "Function_intro_Ryan_1": "Denne lille instruktion fortæller computeren, at den skal køre et STORT kodestykke med det samme navn i arbejdsområdet."
-        },
-        "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "Dette er et gentagelsesloop!  Træk det ind i arbejdsområdet, og fyld det med den kode, du vil køre igen og igen."
-        },
-        "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "Agenten kan svæve over vand, men spilleren kan ikke!"
-        },
-        "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_1": "Du kan ikke smide disse blokke væk, men du kan redigere dem!"
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "MC_HOC_2017_08_RY_1": "Agenten kan svæve over lava, men spilleren kan ikke!  "
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "Vi har lagt nogle blokke her, som du kan komme i gang med"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Koden vil starte opførelsen af dit hus. Kan du fuldende den?"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Tryk på \"Kør\" for at prøve dit program"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "Gentag handlinger ved at placere blokke herinde"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "Denne kode søger efter lava, kan du tilføje en \"ryk fremad\"-kommando?"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "Udvind jern!"
-        },
-        "courseA_collector_loops3_2021": {
-          "gradek_adventurer_loops2_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
-        },
-        "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1": "Klik på TIP! hvis du har brug for hjælp!"
         },
         "helloworld_animals_costumes": {
           "hello_world_new": "Ny blok!"
@@ -539,11 +613,31 @@
         "helloworld_food_costumes": {
           "hello_world_new": "Ny blok!"
         },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Ny blok!"
+        },
         "helloworld_food_sizes": {
           "hello_world_new": "Ny blok!",
           "hello_world_new_block": "Ny blok!"
         },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Ny blok!",
+          "hello_world_new_block": "Ny blok!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Ny blok!",
+          "hello_world_new_block": "Ny blok!"
+        },
         "helloworld_food_sounds": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Ny blok!"
+        },
+        "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Ny blok!"
         },
         "helloworld_retro_costumes": {
@@ -555,6 +649,13 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Ny blok!"
+        },
+        "outbreak2": {
+          "minitoolbox": "Klik her for at udvide blokken.",
+          "pointerlocation": "Træk en emneblok her."
+        },
+        "outbreak7": {
+          "costumes_callout": "Klik for at lave et nyt kostume"
         },
         "poetry_hoc_addSprites": {
           "poetry_sprite": "Ny blok!"
@@ -569,117 +670,16 @@
           "poetry_new_block": "Ny blok!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Ny blok!",
-          "poetry_music": "Ny blok!"
+          "poetry_music": "Ny blok!",
+          "poetry_sound": "Ny blok!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Ny blok!",
           "poetry_sprite_stops": "Ny blok!"
         },
         "poetry_hoc_spriteSizes": {
-          "poetry_set_sprite": "Ny blok!",
-          "poetry_remove_sprite": "Ny blok!"
-        },
-        "CourseD_Dance_2020_012022": {
-          "dance_callout_01": "Her vælger du typen af danser."
-        },
-        "CourseD_Dance_2020_022022": {
-          "dance_callout_11_a": "Føj denne blok til dit program.",
-          "arrow_buttons": "Tryk på piletasterne for at kontrollere din danser."
-        },
-        "CourseD_Dance_2020_042022": {
-          "dance_callout_02": "Føj denne blok til dit program!"
-        },
-        "CourseD_Dance_2020_052022": {
-          "dance_callout_05": "Føj en ny begivenhed til dit program."
-        },
-        "CourseD_Dance_2020_062022": {
-          "dance_party_11_5_groups": "Ny blok!"
-        },
-        "CourseD_Dance_2020_072022": {
-          "setprop_hint": "Ny blok!"
-        },
-        "CourseD_Dance_2020_092022": {
-          "new_block_3": "Ny blok!",
-          "new_block_4": "Ny blok!"
-        },
-        "CourseF_outbreak2_-2022-2": {
-          "minitoolbox": "Klik her for at udvide blokken.",
-          "pointerlocation": "Træk en emneblok her."
-        },
-        "Function intro Ryan2022": {
-          "Function_intro_Ryan_1": "Denne lille instruktion fortæller computeren, at den skal køre et STORT kodestykke med det samme navn i arbejdsområdet."
-        },
-        "MC_HOC_2017_03_Cole2022": {
-          "MC_HOC_2017_03_Cole_1": "Dette er et gentagelsesloop!  Træk det ind i arbejdsområdet, og fyld det med den kode, du vil køre igen og igen."
-        },
-        "MC_HOC_2017_04_Cole2022": {
-          "MC_HOC_2017_04_Cole_a": "Agenten kan svæve over vand, men spilleren kan ikke!"
-        },
-        "MC_HOC_2017_06_Cole2022": {
-          "MC_HOC_2017_06_Cole_1": "Du kan ikke smide disse blokke væk, men du kan redigere dem!"
-        },
-        "MC_HOC_2017_Ali2022": {
-          "MC_HOC_2017_08_RY_1": "Agenten kan svæve over lava, men spilleren kan ikke!  "
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "Vi har lagt nogle blokke her, som du kan komme i gang med"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "Koden vil starte opførelsen af dit hus. Kan du fuldende den?"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Tryk på \"Kør\" for at prøve dit program"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "Gentag handlinger ved at placere blokke herinde"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "Denne kode søger efter lava, kan du tilføje en \"ryk fremad\"-kommando?"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "Udvind jern!"
-        },
-        "courseA_artist_loops42022": {
-          "courseA_artist_loops4_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
-        },
-        "courseA_collector_loops32022": {
-          "gradek_adventurer_loops2_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
-        },
-        "courseA_maze_seq12022": {
-          "courseA_maze_seq1_1": "Klik på TIP! hvis du har brug for hjælp!"
-        },
-        "courseA_playLab_events42022": {
-          "courseA_playlab_events4_callout1": "Dette er en opfordring"
-        },
-        "courseA_playLab_events52022": {
-          "courseA_playLab_events5_1": "Klik her for at ændre på retningen."
-        },
-        "courseA_playLab_events62022": {
-          "courseA_playLab_events6_1": "Med denne kan du vælge en tilfældig lyd. Så ved du ikke hvad du får, før du hører lyden!"
-        },
-        "courseB_maze_seq12022": {
-          "courseB_maze_seq1": "Klik på TIP! hvis du har brug for hjælp!"
-        },
-        "helloworld_food_costumes_soccer-2022": {
-          "hello_world_new": "Ny blok!"
-        },
-        "helloworld_food_costumes_space-2022": {
-          "hello_world_new": "Ny blok!"
-        },
-        "helloworld_food_sizes_soccer-2022": {
-          "hello_world_new": "Ny blok!",
-          "hello_world_new_block": "Ny blok!"
-        },
-        "helloworld_food_sizes_space-2022": {
-          "hello_world_new": "Ny blok!",
-          "hello_world_new_block": "Ny blok!"
-        },
-        "helloworld_food_sounds_soccer-2022": {
-          "hello_world_new": "Ny blok!"
-        },
-        "helloworld_food_sounds_space-2022": {
-          "hello_world_new": "Ny blok!"
+          "poetry_remove_sprite": "Ny blok!",
+          "poetry_set_sprite": "Ny blok!"
         }
       }
     }

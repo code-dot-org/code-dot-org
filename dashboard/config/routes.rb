@@ -41,6 +41,7 @@ Dashboard::Application.routes.draw do
     get "/musiclab", to: redirect("/projectbeats", status: 302)
     get "/projectbeats", to: "musiclab#index"
     get "/musiclab/menu", to: "musiclab#menu"
+    get "/musiclab/gallery", to: "musiclab#gallery"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
     resources :activity_hints, only: [:update]
@@ -333,6 +334,8 @@ Dashboard::Application.routes.draw do
         delete '/:filename', to: 'level_starter_assets#destroy'
       end
     end
+
+    resources :rubrics, only: [:edit, :new]
 
     resources :course_offerings, only: [:edit, :update], param: 'key' do
       collection do
@@ -1058,6 +1061,8 @@ Dashboard::Application.routes.draw do
     post '/browser_events/put_metric_data', to: 'browser_events#put_metric_data'
 
     get '/get_token', to: 'authenticity_token#get_token'
+
+    post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:

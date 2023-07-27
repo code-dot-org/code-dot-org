@@ -3,223 +3,29 @@ hr:
   data:
     script:
       name:
-        course1:
-          title: Tečaj 1
-          description: Golf 1 namijenjen je učenicima koji su tek naučili čitati da
-            stvaraju računalne programe koji će im pomoći naučiti surađivati s drugima,
-            razvijati sposobnost rješavanja problema i ustrajati kroz teške zadatke.
-            Do kraja ovog tečaja, učenici će stvoriti vlastitu igru ili priču koju
-            mogu podijeliti. Preporučuje se za uzrast do 1. razreda.
-          description_short: Tečaj 1 je predviđen za one koji su tek naučili čitati.
-          description_audience: Uzrast 4+ (nečitači)
-          student_description: Golf 1 namijenjen je učenicima koji su tek naučili
-            čitati da stvaraju računalne programe koji će im pomoći naučiti surađivati
-            s drugima, razvijati sposobnost rješavanja problema i ustrajati kroz teške
-            zadatke. Do kraja ovog tečaja, učenici će stvoriti vlastitu igru ili priču
-            koju mogu podijeliti. Preporučuje se za uzrast do 1. razreda.
-        course2:
-          title: Tečaj 2
-          description: Tečaj 2 je namijenjen učenicima koji znaju čitati, a nemaju
-            prethodnog iskustva u programiranju. U ovom tečaju učenici će praviti
-            programe koji rješavaju zadane probleme te razvijati interaktivne igre
-            i priče koje mogu dijeliti. Preporučuje se za uzrast 2.-5. razreda.
-          description_short: Tečaj 2 je napravljen za učenike koji znaju čitati.
-          description_audience: Dob 6+ (potrebno čitanje)
-          student_description: Tečaj 2 je namijenjen učenicima koji znaju čitati,
-            a nemaju prethodnog iskustva u programiranju. U ovom tečaju učenici će
-            praviti programe koji rješavaju zadane probleme te razvijati interaktivne
-            igre i priče koje mogu dijeliti. Preporučuje se za uzrast 2.-5. razreda.
-        course3:
-          title: Tečaj 3
-          description: Tečaj 3 je napravljen za učenike koji su završili Tečaj 2.
-            Učenici će dublje zaroniti u programerske teme koje su predstavljene u
-            prethodnim tečajevima i tražiti fleksibilna rješenja za složenije zadatke.
-            Do kraja ovog tečaja, učenici će napraviti interaktivne priče i igre koje
-            mogu podijeliti s drugima. Preporučeno za učenike 4. i 5. razreda.
-          description_short: Tečaj 3 slijedi nakon Tečaja 2.
-          description_audience: Godine 8-18
-          student_description: Tečaj 3 je napravljen za učenike koji su završili Tečaj
-            2. Učenici će dublje zaroniti u programerske teme koje su predstavljene
-            u prethodnim tečajevima i tražiti fleksibilna rješenja za složenije zadatke.
-            Do kraja ovog tečaja, učenici će napraviti interaktivne priče i igre koje
-            mogu podijeliti s drugima. Preporučeno za učenike 4. i 5. razreda.
-        playlab:
-          title: Laboratorij igara
-          description: Napravi priču ili igru pomoću Laboratorija igara!
-          description_short: Napravi priču ili igru pomoću Laboratorija igara!
-          student_description: Napravi priču ili igru pomoću Laboratorija igara!
-        artist:
-          title: Umjetnik
-          description: Nacrtaj cool slike i uzorke pomoću Umjetnika!
-          description_short: Nacrtaj cool slike i uzorke pomoću Umjetnika!
-          student_description: Nacrtaj cool slike i uzorke pomoću Umjetnika!
-        hourofcode:
-          title: Klasični labirint
-          description: Isprobaj osnove informatike s likovima kao što su Angry Birds,
-            Plants vs. Zombies i vjeverac Scrat iz Ledenog doba!
-          description_short: Isprobaj osnove računalstva s mnogim zanimljivim likovima!
-          student_description: Isprobaj osnove informatike s likovima kao što su Angry
-            Birds, Plants vs. Zombies i vjeverac Scrat iz Ledenog doba!
-        frozen:
-          title: Kodiraj s Annom i Elsom
-          description: Iskoristimo programiranje da bi se pridružili Anni i Elsi dok
-            istražuju čarobnu ljepotu leda. Kližući po ledu napravit ćeš pahuljice
-            i druge uzorke i tako stvoriti zimsku čaroliju koju možeš podijeliti sa
-            svojim prijateljima!
-          description_short: Hajdemo koristiti kodiranje da se pridružimo Anni i Elsi
-            dok istražuju čaroliju i ljepotu leda.
-          student_description: Iskoristimo programiranje da bi se pridružili Anni
-            i Elsi dok istražuju čarobnu ljepotu leda. Kližući po ledu napravit ćeš
-            pahuljice i druge uzorke i tako stvoriti zimsku čaroliju koju možeš podijeliti
-            sa svojim prijateljima!
-        course4:
-          title: Tečaj 4
-          description_short: Učenici koji kreću na Tečaj 4 trebali bi prije završiti
-            Tečajeve 2 i 3.
-          description_audience: Dob 10+ (nakon Tečaja 3)
-        Course4pre:
-          title: Preduvjeti za Tečaj 4
-          description: Kratko objašnjenje pojmova za učenike koji nisu prošli Tečajeve
-            2 i 3.
-          description_short: Kratko objašnjenje pojmova za učenike koji nisu prošli
-            Tečajeve 2 i 3.
-          student_description: Kratko objašnjenje pojmova za učenike koji nisu prošli
-            Tečajeve 2 i 3.
-        usability:
-          title: Testiranje upotrebljivosti
-          description: Izbor nivoa iz Tečaja 4 za testiranje upotrebljivosti.
-          student_description: Izbor nivoa iz Tečaja 4 za testiranje upotrebljivosti.
-        algebra:
-          title: Informatika u algebri
-          description: Nauči funkcionalno programiranje kroz algebru.
-          description_short: Nauči funkcionalno programiranje kroz algebru.
-          student_description: Nauči funkcionalno programiranje kroz algebru.
-        infinity:
-          title: Disney Infinity Laboratorij igara
-          description: Koristi Laboratorij igara za stvaranje priče ili igre s likovima
-            iz Disney Infinity.
-          description_short: Koristi Laboratorij igara za stvaranje priče ili igre
-            s likovima iz Disney Infinity.
-          student_description: Koristi Laboratorij igara za stvaranje priče ili igre
-            s likovima iz Disney Infinity.
-        netsim:
-          title: Internetski Simulator
         20-hour:
-          title: 20-satni ubrzani tečaj - Uvod u informatiku
           description: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja
             i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne
             škole, ali je zabavan za učenje bez obzira na dob polaznika.
+          description_audience: Dob 10+ (nakon Tečaja 3)
           description_short: Ovaj 20-satni tečaj obrađuje osnove informatike i koncepte
             programiranja kroz tečajeve 2-4.
-          description_audience: Dob 10+ (nakon Tečaja 3)
           student_description: Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja
             i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne
             škole, ali je zabavan za učenje bez obzira na dob polaznika.
-        edit-code:
-          title: Uredi kôd
-          description: Uredi kôd
-          description_short: Uredi kôd
-          student_description: Uredi kôd
-        events:
-          title: Događaji
-          description: Događaji
-          description_short: Događaji
-          student_description: Događaji
-        flappy:
-          title: Flappy kôd
-          description: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte
-            naš tutorijal izrade Flappy kôda!
-          description_short: Napravi vlastitu Flappy igricu za manje od 10 minuta!
-          student_description: Želite li napisati vlastitu igru u manje od 10 minuta?
-            Isprobajte naš tutorijal izrade Flappy kôda!
-        jigsaw:
-          title: Slagalica
-          description: Isprobaj naš tutorijal Slagalice.
-          description_short: Isprobaj naš tutorijal Slagalice.
-          student_description: Isprobaj naš tutorijal Slagalice.
-        step:
-          title: korak
-          description: Step tutorijal
-          description_short: Step tutorijal
-          student_description: Step tutorijal
-        Hour of Code:
-          title: Sat programiranja 2013
-          description: Isprobaj osnove informatike s likovima iz Angry Birds i Plants
-            vs. Zombies!
-          description_short: Isprobaj osnove računalstva s mnogim zanimljivim likovima!
-          student_description: Isprobaj osnove informatike s likovima iz Angry Birds
-            i Plants vs. Zombies!
-        algebraPD2a:
-          description: 'Faza 2 online: Mješoviti ljetni studij'
-          description_short: 'Faza 2 online: Mješoviti ljetni studij'
-          student_description: 'Faza 2 online: Mješoviti ljetni studij'
-        allthethings:
-          lessons:
-            lesson-49:
-              name: Glazba
-        algebraPD2b:
-          description: 'Faza 2 online: Mješoviti ljetni studij'
-          description_short: 'Faza 2 online: Mješoviti ljetni studij'
-          student_description: 'Faza 2 online: Mješoviti ljetni studij'
-        ECSPD2:
-          description: 'Faza 2 online: Mješoviti ljetni studij'
-          description_short: 'Faza 2 online: Mješoviti ljetni studij'
-          student_description: 'Faza 2 online: Mješoviti ljetni studij'
-        sciencePD2b:
-          description: 'Faza 2 online: Mješoviti ljetni studij'
-          description_short: 'Faza 2 online: Mješoviti ljetni studij'
-          student_description: 'Faza 2 online: Mješoviti ljetni studij'
-        sciencePD2b-iZone:
-          description: 'Faza 2 online: Mješoviti ljetni studij'
-          description_short: 'Faza 2 online: Mješoviti ljetni studij'
-          student_description: 'Faza 2 online: Mješoviti ljetni studij'
-        ECSPD2-iZone:
-          description: 'Faza 2 online: Mješoviti ljetni studij'
-          description_short: 'Faza 2 online: Mješoviti ljetni studij'
-          student_description: 'Faza 2 online: Mješoviti ljetni studij'
-        ECSPD2-NexTech:
-          description: 'Faza 2 online: Mješoviti ljetni studij'
-          description_short: 'Faza 2 online: Mješoviti ljetni studij'
-          student_description: 'Faza 2 online: Mješoviti ljetni studij'
-        asUnplugged:
-          description_audience: Dob 6-13
-        afterschool1:
-          description_audience: Dob 7-13
-        Special Fun:
-          description_audience: Dob 10+ (nakon Tečaja 3)
-        SpecialSeries:
-          description_audience: Dob 10+ (nakon Tečaja 3)
-        iceage:
-          title: Ice Age Play Lab
-          description: Izradi priču ili načini igru s Ice Age Play Lab!
-          description_short: Izradi priču ili načini igru s Ice Age Play Lab!
-          student_description: Izradi priču ili načini igru s Ice Age Play Lab!
-        gumball:
-          title: Gumball Play Lab
-          description: Izradi priču ili načini igru s Gumball Play Lab!
-          description_short: Izradi priču ili načini igru s Gumball Play Lab!
-          student_description: Izradi priču ili načini igru s Gumball Play Lab!
-        starwars:
-          description: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani
-            ratovi u galaksiji daleko, daleko odavde.
-          description_short: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani
-            ratovi u galaksiji daleko, daleko odavde.
-          student_description: Nauči programirati droide i kreiraj vlastitu igricu
-            Zvjezdani ratovi u galaksiji daleko, daleko odavde.
-        starwarsblocks:
-          description: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani
-            ratovi u galaksiji daleko, daleko odavde.
-          description_short: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani
-            ratovi u galaksiji daleko, daleko odavde.
-          student_description: Nauči programirati droide i kreiraj vlastitu igricu
-            Zvjezdani ratovi u galaksiji daleko, daleko odavde.
-        mc:
-          title: Minecraft Sat Kodiranja
-          description: Koristeći blokove koda, odvedi Stevea ili Alexa na avanturu
-            kroz ovaj svijet Minecrafta
-          description_short: Istraži Minecraft svijet pomoću koda
-          student_description: Koristeći blokove koda, odvedi Stevea ili Alexa na
-            avanturu kroz ovaj svijet Minecrafta
+          title: 20-satni ubrzani tečaj - Uvod u informatiku
+        2021drafting:
+          lesson_groups:
+            debugging:
+              display_name: Otklanjanje pogriješaka
+            introduction:
+              display_name: Uvod
+            lessonGroup-3:
+              display_name: Varijable
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Hour of Code
         AlgebraA:
           description: Nauči funkcionalno programiranje kroz algebru
           description_short: Nauči funkcionalno programiranje kroz algebru
@@ -230,167 +36,459 @@ hr:
           student_description: Nauči funkcionalno programiranje kroz algebru
         CSF_Secret_Sample:
           description_audience: Godine 8-18
-        cspunit1-support:
-          lesson_groups:
-            required:
-              display_name: Pregled
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            required:
-              display_name: Pregled
         CSF_Secret_Sample_Story:
           description_audience: Godine 8-18+
+        Course4pre:
+          description: Kratko objašnjenje pojmova za učenike koji nisu prošli Tečajeve
+            2 i 3.
+          description_short: Kratko objašnjenje pojmova za učenike koji nisu prošli
+            Tečajeve 2 i 3.
+          student_description: Kratko objašnjenje pojmova za učenike koji nisu prošli
+            Tečajeve 2 i 3.
+          title: Preduvjeti za Tečaj 4
+        ECSPD2:
+          description: 'Faza 2 online: Mješoviti ljetni studij'
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
+          student_description: 'Faza 2 online: Mješoviti ljetni studij'
+        ECSPD2-NexTech:
+          description: 'Faza 2 online: Mješoviti ljetni studij'
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
+          student_description: 'Faza 2 online: Mješoviti ljetni studij'
+        ECSPD2-iZone:
+          description: 'Faza 2 online: Mješoviti ljetni studij'
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
+          student_description: 'Faza 2 online: Mješoviti ljetni studij'
+        Hour of Code:
+          description: Isprobaj osnove informatike s likovima iz Angry Birds i Plants
+            vs. Zombies!
+          description_short: Isprobaj osnove računalstva s mnogim zanimljivim likovima!
+          student_description: Isprobaj osnove informatike s likovima iz Angry Birds
+            i Plants vs. Zombies!
+          title: Sat programiranja 2013
         MikeTest:
           description_audience: Godine 8-98
-        artistExemplar:
-          description_audience: Godine 8-18
-        teachercon:
-          lesson_groups:
-            required:
-              display_name: Pregled
-        gradeKinder:
-          description_audience: Godine 5-18
-        grade4:
-          description_audience: Dob 9-99
-        grade1:
-          description_audience: Godine 5-18
-        grade5:
-          description_audience: Dob 10-110
-        grade3:
-          description_audience: Godine 5-18
+        Special Fun:
+          description_audience: Dob 10+ (nakon Tečaja 3)
+        SpecialSeries:
+          description_audience: Dob 10+ (nakon Tečaja 3)
+        afterschool1:
+          description_audience: Dob 7-13
+        algebra:
+          description: Nauči funkcionalno programiranje kroz algebru.
+          description_short: Nauči funkcionalno programiranje kroz algebru.
+          student_description: Nauči funkcionalno programiranje kroz algebru.
+          title: Informatika u algebri
+        algebraPD2a:
+          description: 'Faza 2 online: Mješoviti ljetni studij'
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
+          student_description: 'Faza 2 online: Mješoviti ljetni studij'
+        algebraPD2b:
+          description: 'Faza 2 online: Mješoviti ljetni studij'
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
+          student_description: 'Faza 2 online: Mješoviti ljetni studij'
         alltheplcthings:
           lesson_groups:
             required:
               display_name: Pregled
-        grade2:
-          description_audience: Godine 5-18
-        csp-online-test:
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Glazba
+        andrea-test:
           lesson_groups:
             required:
               display_name: Pregled
-        csp1-support:
-          lesson_groups:
-            required:
-              display_name: Pregled
+        aquatic:
+          name: morska
+        artist:
+          description: Nacrtaj cool slike i uzorke pomoću Umjetnika!
+          description_short: Nacrtaj cool slike i uzorke pomoću Umjetnika!
+          student_description: Nacrtaj cool slike i uzorke pomoću Umjetnika!
+          title: Umjetnik
+        artistExemplar:
+          description_audience: Godine 8-18
+        asUnplugged:
+          description_audience: Dob 6-13
         basketball:
           name: košarkaška lopta
-        csp2-support:
-          lesson_groups:
-            required:
-              display_name: Pregled
         classic-hoc-impact-study:
           description_short: Isprobaj osnove računalstva s mnogim zanimljivim likovima!
-        hoc-impact-study:
-          description_short: Isprobaj osnove računalstva s mnogim zanimljivim likovima!
-        csp3-support:
+        course1:
+          description: Golf 1 namijenjen je učenicima koji su tek naučili čitati da
+            stvaraju računalne programe koji će im pomoći naučiti surađivati s drugima,
+            razvijati sposobnost rješavanja problema i ustrajati kroz teške zadatke.
+            Do kraja ovog tečaja, učenici će stvoriti vlastitu igru ili priču koju
+            mogu podijeliti. Preporučuje se za uzrast do 1. razreda.
+          description_audience: Uzrast 4+ (nečitači)
+          description_short: Tečaj 1 je predviđen za one koji su tek naučili čitati.
+          student_description: Golf 1 namijenjen je učenicima koji su tek naučili
+            čitati da stvaraju računalne programe koji će im pomoći naučiti surađivati
+            s drugima, razvijati sposobnost rješavanja problema i ustrajati kroz teške
+            zadatke. Do kraja ovog tečaja, učenici će stvoriti vlastitu igru ili priču
+            koju mogu podijeliti. Preporučuje se za uzrast do 1. razreda.
+          title: Tečaj 1
+        course2:
+          description: Tečaj 2 je namijenjen učenicima koji znaju čitati, a nemaju
+            prethodnog iskustva u programiranju. U ovom tečaju učenici će praviti
+            programe koji rješavaju zadane probleme te razvijati interaktivne igre
+            i priče koje mogu dijeliti. Preporučuje se za uzrast 2.-5. razreda.
+          description_audience: Dob 6+ (potrebno čitanje)
+          description_short: Tečaj 2 je napravljen za učenike koji znaju čitati.
+          student_description: Tečaj 2 je namijenjen učenicima koji znaju čitati,
+            a nemaju prethodnog iskustva u programiranju. U ovom tečaju učenici će
+            praviti programe koji rješavaju zadane probleme te razvijati interaktivne
+            igre i priče koje mogu dijeliti. Preporučuje se za uzrast 2.-5. razreda.
+          title: Tečaj 2
+        course3:
+          description: Tečaj 3 je napravljen za učenike koji su završili Tečaj 2.
+            Učenici će dublje zaroniti u programerske teme koje su predstavljene u
+            prethodnim tečajevima i tražiti fleksibilna rješenja za složenije zadatke.
+            Do kraja ovog tečaja, učenici će napraviti interaktivne priče i igre koje
+            mogu podijeliti s drugima. Preporučeno za učenike 4. i 5. razreda.
+          description_audience: Godine 8-18
+          description_short: Tečaj 3 slijedi nakon Tečaja 2.
+          student_description: Tečaj 3 je napravljen za učenike koji su završili Tečaj
+            2. Učenici će dublje zaroniti u programerske teme koje su predstavljene
+            u prethodnim tečajevima i tražiti fleksibilna rješenja za složenije zadatke.
+            Do kraja ovog tečaja, učenici će napraviti interaktivne priče i igre koje
+            mogu podijeliti s drugima. Preporučeno za učenike 4. i 5. razreda.
+          title: Tečaj 3
+        course4:
+          description_audience: Dob 10+ (nakon Tečaja 3)
+          description_short: Učenici koji kreću na Tečaj 4 trebali bi prije završiti
+            Tečajeve 2 i 3.
+          title: Tečaj 4
+        coursea-2019:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csp4-support:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        coursea-2020:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csp5-support:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        coursea-2021:
           lesson_groups:
-            required:
-              display_name: Pregled
-        cspnovice:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        coursea-2022:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csp1-dlp:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        coursea-2023:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csp2-dlp:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        courseb-2019:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csp3-dlp:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        courseb-2020:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csp4-dlp:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        courseb-2021:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csp5-dlp:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        courseb-2022:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csd1-dlp:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        courseb-2023:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csd6-dlp:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        coursec-2019:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csd5-dlp:
+            csf_binary:
+              display_name: Binarno
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        coursec-2020:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csd4-dlp:
+            csf_binary:
+              display_name: Binarno
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        coursec-2021:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csd3-dlp:
+            csf_binary:
+              display_name: Binarno
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        coursec-2022:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csd2-dlp:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        coursec-2023:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csd1-dlp-18:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        coursed-2019:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csd2-dlp-18:
+            csf_binary:
+              display_name: Binarno
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        coursed-2020:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csd3-dlp-18:
+            csf_binary:
+              display_name: Binarno
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        coursed-2021:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csd4-dlp-18:
+            csf_binary:
+              display_name: Binarno
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            lessonGroup-6:
+              display_name: Digitalno građanstvo
+        coursed-2022:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csd5-dlp-18:
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            lessonGroup-6:
+              display_name: Digitalno građanstvo
+        coursed-2023:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csd6-dlp-18:
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            lessonGroup-6:
+              display_name: Digitalno građanstvo
+        coursee-2019:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csp1-dlp-18:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Ugniježđene petlje
+            csf_sprites:
+              display_name: Likovi
+        coursee-2020:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csp2-dlp-18:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Ugniježđene petlje
+            csf_sprites:
+              display_name: Likovi
+        coursee-2021:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csp3-dlp-18:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Uvjeti
+            csf_sprites:
+              display_name: Likovi
+            ramp_up:
+              display_name: Ugniježđene petlje
+        coursee-2022:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csp4-dlp-18:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Uvjeti
+            csf_sprites:
+              display_name: Likovi
+            ramp_up:
+              display_name: Ugniježđene petlje
+        coursee-2023:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csp5-dlp-18:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Uvjeti
+            csf_sprites:
+              display_name: Likovi
+            ramp_up:
+              display_name: Ugniježđene petlje
+        coursef-2019:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csp-explore-dlp-18:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_for_loops:
+              display_name: Petlja brojača
+            csf_internet:
+              display_name: Internet
+            csf_sprites:
+              display_name: Likovi
+            csf_variables:
+              display_name: Varijable
+        coursef-2020:
           lesson_groups:
-            required:
-              display_name: Pregled
-        csp-create-dlp-18:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_for_loops:
+              display_name: Petlja brojača
+            csf_sprites:
+              display_name: Likovi
+            csf_variables:
+              display_name: Varijable
+        coursef-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_for_loops:
+              display_name: Petlja brojača
+            csf_variables:
+              display_name: Petlja brojača
+            lessonGroup-7:
+              display_name: Digitalno građanstvo
+            lessonGroup-8:
+              display_name: Varijable
+            lessonGroup-9:
+              display_name: ukloni
+            ramp_up:
+              display_name: Likovi
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalno građanstvo
+            lessonGroup-8:
+              display_name: Varijable
+            ramp_up:
+              display_name: Likovi
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalno građanstvo
+            lessonGroup-8:
+              display_name: Varijable
+            ramp_up:
+              display_name: Likovi
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-3:
+              display_name: Likovi
+            lessonGroup-4:
+              display_name: Varijable
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cjelina 1
+            lessonGroup-4:
+              display_name: Cjelina 2
+            lessonGroup-5:
+              display_name: Cjelina 3
+            lessonGroup-6:
+              display_name: Cjelina 4
+            lessonGroup-7:
+              display_name: Cjelina 5
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Petlje
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Varijable
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Petlja brojača
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Kakav je to zvuk?
+        csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Pregled
@@ -398,7 +496,85 @@ hr:
           lesson_groups:
             required:
               display_name: Pregled
-        csd-apprentice-18:
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csf-2021-pilot:
+          lesson_groups:
+            Sprites:
+              display_name: Likovi
+            lessonGroup-3:
+              display_name: Varijable
+            ramp_up:
+              display_name: Uvod
+            variables:
+              display_name: Varijable
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Likovi
+            lessonGroup-3:
+              display_name: Varijable
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp-explore-dlp-18:
           lesson_groups:
             required:
               display_name: Pregled
@@ -406,190 +582,182 @@ hr:
           lesson_groups:
             required:
               display_name: Pregled
-        csp-apprentice-18:
+        csp-online-test:
           lesson_groups:
             required:
               display_name: Pregled
-        fit-test:
+        csp1-dlp:
           lesson_groups:
             required:
               display_name: Pregled
-        aquatic:
-          name: morska
-        cspplayground:
+        csp1-dlp-18:
           lesson_groups:
-            csp_variables:
-              display_name: Varijable
-            csp_conditionals:
-              display_name: Uvjeti
-            csp_functions:
-              display_name: Funkcije
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: Varijable
-            csf_for_loops:
-              display_name: Petlja brojača
-            csf_internet:
-              display_name: Internet
-            csf_sprites:
-              display_name: Likovi
-            csf_digcit:
-              display_name: Digitalno građanstvo
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: Događaji
-            csf_loops:
-              display_name: Petlje
-            csf_conditionals:
-              display_name: Uvjeti
-            csf_binary:
-              display_name: Binarno
-            csf_digcit:
-              display_name: Digitalno građanstvo
-        coursee-2019:
-          lesson_groups:
-            csf_sprites:
-              display_name: Likovi
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_nested_loops:
-              display_name: Ugniježđene petlje
-            csf_functions:
-              display_name: Funkcije
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Petlje
-            csf_conditionals:
-              display_name: Uvjeti
-            csf_functions:
-              display_name: Funkcije
-            csf_variables:
-              display_name: Varijable
-            csf_for_loops:
-              display_name: Petlja brojača
-            csf_sprites:
-              display_name: Likovi
-        andrea-test:
-          lesson_groups:
-            required:
-              display_name: Pregled
-        coursec-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_binary:
-              display_name: Binarno
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        gamelab:
-          title: Game Lab
-        coursea-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        courseb-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
-              display_name: Varijable
-            csp_conditionals:
-              display_name: Uvjeti
-            csp_functions:
-              display_name: Funkcije
             required:
               display_name: Pregled
         csp1-pilot:
           lesson_groups:
             required:
               display_name: Pregled
-        time4csdemo:
-          lesson_groups:
-            csf_sprites:
-              display_name: Likovi
         csp1-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Varijable
             csp_conditionals:
               display_name: Uvjeti
             csp_functions:
               display_name: Funkcije
+            csp_variables:
+              display_name: Varijable
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Varijable
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: Pregled
         csp2-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Varijable
             csp_conditionals:
               display_name: Uvjeti
             csp_functions:
               display_name: Funkcije
+            csp_variables:
+              display_name: Varijable
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Varijable
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Varijable
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Varijable
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Varijable
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Varijable
+            required:
+              display_name: Pregled
         csp4-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Varijable
             csp_conditionals:
               display_name: Uvjeti
             csp_functions:
               display_name: Funkcije
-        csp5-pilot-staging:
+            csp_variables:
+              display_name: Varijable
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Varijable
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Liste
             csp_loops:
               display_name: Petlje
-        csp6-pilot-staging:
+        csp5-2021:
           lesson_groups:
-            csp_variables:
-              display_name: Varijable
-            csp_conditionals:
-              display_name: Uvjeti
-            csp_functions:
-              display_name: Funkcije
-        csp8-pilot-staging:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Petlje
+        csp5-2022:
           lesson_groups:
-            csp_variables:
-              display_name: Varijable
-            csp_conditionals:
-              display_name: Uvjeti
-            csp_functions:
-              display_name: Funkcije
-        csp9-pilot-staging:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Petlje
+        csp5-2023:
           lesson_groups:
-            csp_variables:
-              display_name: Varijable
-            csp_conditionals:
-              display_name: Uvjeti
-            csp_functions:
-              display_name: Funkcije
-        csp10-pilot-staging:
+            csp_loops:
+              display_name: Petlje
+        csp5-dlp:
           lesson_groups:
-            csp_variables:
-              display_name: Varijable
-            csp_conditionals:
-              display_name: Uvjeti
-            csp_functions:
-              display_name: Funkcije
+            required:
+              display_name: Pregled
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Pregled
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -598,29 +766,75 @@ hr:
               display_name: Petlje
             required:
               display_name: Pregled
-        fit2019-novice:
+        csp5-pilot-staging:
           lesson_groups:
-            required:
-              display_name: Pregled
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: Pregled
-        csp3-pilot:
-          lesson_groups:
-            required:
-              display_name: Pregled
-        csl-vn:
-          lesson_groups:
-            csf_loops:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
               display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        dlp19-csd-mod-fit:
+        csp5-support:
           lesson_groups:
             required:
               display_name: Pregled
-        dlp19-csp-mod-fit:
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmi
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Liste
+            lessonGroup-3:
+              display_name: Petlje
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Varijable
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Varijable
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Varijable
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Varijable
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        dlp19-csd-mod-fit:
           lesson_groups:
             required:
               display_name: Pregled
@@ -640,6 +854,10 @@ hr:
           lesson_groups:
             required:
               display_name: Pregled
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Pregled
         dlp19-csp-mod-w1:
           lesson_groups:
             required:
@@ -656,416 +874,377 @@ hr:
           lesson_groups:
             required:
               display_name: Pregled
-        csp2-pilot:
-          lesson_groups:
-            required:
-              display_name: Pregled
-        csp6-pilot:
-          lesson_groups:
-            required:
-              display_name: Pregled
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: Varijable
-            csp_conditionals:
-              display_name: Uvjeti
-            csp_functions:
-              display_name: Funkcije
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_conditionals:
-              display_name: Uvjeti
-            csf_nested_loops:
-              display_name: Ugniježđene petlje
-            csf_functions:
-              display_name: Funkcije
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Petlje
-            csf_conditionals:
-              display_name: Uvjeti
-            csf_events:
-              display_name: Događaji
-            csf_sprites:
-              display_name: Likovi
-            csf_digcit:
-              display_name: Digitalno građanstvo
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Petlje
-            csf_conditionals:
-              display_name: Uvjeti
-            csf_events:
-              display_name: Događaji
-            csf_sprites:
-              display_name: Likovi
-            csf_digcit:
-              display_name: Digitalno građanstvo
-        csp7-pilot:
-          lesson_groups:
-            required:
-              display_name: Pregled
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: Varijable
-            csp_conditionals:
-              display_name: Uvjeti
-            csp_functions:
-              display_name: Funkcije
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: Liste
-            csp_loops:
-              display_name: Petlje
-        coursea-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        courseb-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        coursec-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_binary:
-              display_name: Binarno
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: Događaji
-            csf_loops:
-              display_name: Petlje
-            csf_conditionals:
-              display_name: Uvjeti
-            csf_binary:
-              display_name: Binarno
-            csf_digcit:
-              display_name: Digitalno građanstvo
-        coursee-2020:
-          lesson_groups:
-            csf_sprites:
-              display_name: Likovi
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_nested_loops:
-              display_name: Ugniježđene petlje
-            csf_functions:
-              display_name: Funkcije
-        coursef-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_variables:
-              display_name: Varijable
-            csf_for_loops:
-              display_name: Petlja brojača
-            csf_sprites:
-              display_name: Likovi
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Petlje
-            csf_conditionals:
-              display_name: Uvjeti
-            csf_functions:
-              display_name: Funkcije
-            csf_variables:
-              display_name: Varijable
-            csf_for_loops:
-              display_name: Petlja brojača
-            csf_sprites:
-              display_name: Likovi
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        2021drafting:
-          lesson_groups:
-            introduction:
-              display_name: Uvod
-            lessonGroup-3:
-              display_name: Varijable
-            debugging:
-              display_name: Otklanjanje pogriješaka
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: Varijable
-            csp_conditionals:
-              display_name: Uvjeti
-            csp_functions:
-              display_name: Funkcije
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: Liste
-            csp_loops:
-              display_name: Petlje
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Algoritmi
-        coursea-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        courseb-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        coursec-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_binary:
-              display_name: Binarno
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: Događaji
-            csf_loops:
-              display_name: Petlje
-            csf_conditionals:
-              display_name: Uvjeti
-            csf_binary:
-              display_name: Binarno
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            lessonGroup-6:
-              display_name: Digitalno građanstvo
-        coursee-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Ugniježđene petlje
-            csf_sprites:
-              display_name: Likovi
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_nested_loops:
-              display_name: Uvjeti
-            csf_functions:
-              display_name: Funkcije
-        coursef-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Likovi
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_variables:
-              display_name: Petlja brojača
-            csf_for_loops:
-              display_name: Petlja brojača
-            lessonGroup-8:
-              display_name: Varijable
-            lessonGroup-9:
-              display_name: ukloni
-            lessonGroup-7:
-              display_name: Digitalno građanstvo
-        express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Petlje
-            csf_conditionals:
-              display_name: Uvjeti
-            csf_functions:
-              display_name: Funkcije
-            csf_variables:
-              display_name: Varijable
-            csf_for_loops:
-              display_name: Petlja brojača
-            csf_sprites:
-              display_name: Likovi
-            lessonGroup-9:
-              display_name: Događaji
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        csf-2021-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: Uvod
-            lessonGroup-3:
-              display_name: Varijable
-            Sprites:
-              display_name: Likovi
-            variables:
-              display_name: Varijable
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: Uvod
-            Introduction:
-              display_name: Uvod
-        csa-videos:
+        dlp21-csd:
           lesson_groups:
             lessonGroup-2:
-              display_name: Cjelina 1
-            lessonGroup-4:
-              display_name: Cjelina 2
-            lessonGroup-5:
-              display_name: Cjelina 3
-            lessonGroup-6:
-              display_name: Cjelina 4
-            lessonGroup-7:
-              display_name: Cjelina 5
+              description: provjera
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
               display_name: Nivo 1
             lessonGroup-3:
               display_name: Nivo 2
-        dlp21-csd:
+        edit-code:
+          description: Uredi kôd
+          description_short: Uredi kôd
+          student_description: Uredi kôd
+          title: Uredi kôd
+        events:
+          description: Događaji
+          description_short: Događaji
+          student_description: Događaji
+          title: Događaji
+        express-2019:
           lesson_groups:
-            lessonGroup-2:
-              description: provjera
-        spelling-bee:
-          title: Slovkanje
-        2022drafting:
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_for_loops:
+              display_name: Petlja brojača
+            csf_functions:
+              display_name: Funkcije
+            csf_loops:
+              display_name: Petlje
+            csf_sprites:
+              display_name: Likovi
+            csf_variables:
+              display_name: Varijable
+        express-2020:
           lesson_groups:
-            lessonGroup-8:
-              display_name: Hour of Code
-        csf-2022-pilot:
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_for_loops:
+              display_name: Petlja brojača
+            csf_functions:
+              display_name: Funkcije
+            csf_loops:
+              display_name: Petlje
+            csf_sprites:
+              display_name: Likovi
+            csf_variables:
+              display_name: Varijable
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_for_loops:
+              display_name: Petlja brojača
+            csf_functions:
+              display_name: Funkcije
+            csf_loops:
+              display_name: Petlje
+            csf_sprites:
+              display_name: Likovi
+            csf_variables:
+              display_name: Varijable
+            lessonGroup-9:
+              display_name: Događaji
+        express-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_for_loops:
+              display_name: Petlja brojača
+            csf_functions:
+              display_name: Funkcije
+            csf_loops:
+              display_name: Petlje
+            csf_sprites:
+              display_name: Likovi
+            csf_variables:
+              display_name: Varijable
+            lessonGroup-9:
+              display_name: Događaji
+        express-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_for_loops:
+              display_name: Petlja brojača
+            csf_functions:
+              display_name: Funkcije
+            csf_loops:
+              display_name: Petlje
+            csf_sprites:
+              display_name: Likovi
+            csf_variables:
+              display_name: Varijable
+            lessonGroup-9:
+              display_name: Događaji
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        flappy:
+          description: Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte
+            naš tutorijal izrade Flappy kôda!
+          description_short: Napravi vlastitu Flappy igricu za manje od 10 minuta!
+          student_description: Želite li napisati vlastitu igru u manje od 10 minuta?
+            Isprobajte naš tutorijal izrade Flappy kôda!
+          title: Flappy kôd
+        frozen:
+          description: Iskoristimo programiranje da bi se pridružili Anni i Elsi dok
+            istražuju čarobnu ljepotu leda. Kližući po ledu napravit ćeš pahuljice
+            i druge uzorke i tako stvoriti zimsku čaroliju koju možeš podijeliti sa
+            svojim prijateljima!
+          description_short: Hajdemo koristiti kodiranje da se pridružimo Anni i Elsi
+            dok istražuju čaroliju i ljepotu leda.
+          student_description: Iskoristimo programiranje da bi se pridružili Anni
+            i Elsi dok istražuju čarobnu ljepotu leda. Kližući po ledu napravit ćeš
+            pahuljice i druge uzorke i tako stvoriti zimsku čaroliju koju možeš podijeliti
+            sa svojim prijateljima!
+          title: Kodiraj s Annom i Elsom
+        gamelab:
+          title: Game Lab
+        grade1:
+          description_audience: Godine 5-18
+        grade2:
+          description_audience: Godine 5-18
+        grade3:
+          description_audience: Godine 5-18
+        grade4:
+          description_audience: Dob 9-99
+        grade5:
+          description_audience: Dob 10-110
+        gradeKinder:
+          description_audience: Godine 5-18
+        gumball:
+          description: Izradi priču ili načini igru s Gumball Play Lab!
+          description_short: Izradi priču ili načini igru s Gumball Play Lab!
+          student_description: Izradi priču ili načini igru s Gumball Play Lab!
+          title: Gumball Play Lab
+        hello-world-soccer-2022:
+          title: 'Pozdrav svijetu: Nogomet'
+        hello-world-space-2022:
+          title: 'Hello World: Prostor'
+        hoc-impact-study:
+          description_short: Isprobaj osnove računalstva s mnogim zanimljivim likovima!
+        hourofcode:
+          description: Isprobaj osnove informatike s likovima kao što su Angry Birds,
+            Plants vs. Zombies i vjeverac Scrat iz Ledenog doba!
+          description_short: Isprobaj osnove računalstva s mnogim zanimljivim likovima!
+          student_description: Isprobaj osnove informatike s likovima kao što su Angry
+            Birds, Plants vs. Zombies i vjeverac Scrat iz Ledenog doba!
+          title: Klasični labirint
+        iceage:
+          description: Izradi priču ili načini igru s Ice Age Play Lab!
+          description_short: Izradi priču ili načini igru s Ice Age Play Lab!
+          student_description: Izradi priču ili načini igru s Ice Age Play Lab!
+          title: Ice Age Play Lab
+        infinity:
+          description: Koristi Laboratorij igara za stvaranje priče ili igre s likovima
+            iz Disney Infinity.
+          description_short: Koristi Laboratorij igara za stvaranje priče ili igre
+            s likovima iz Disney Infinity.
+          student_description: Koristi Laboratorij igara za stvaranje priče ili igre
+            s likovima iz Disney Infinity.
+          title: Disney Infinity Laboratorij igara
+        jigsaw:
+          description: Isprobaj naš tutorijal Slagalice.
+          description_short: Isprobaj naš tutorijal Slagalice.
+          student_description: Isprobaj naš tutorijal Slagalice.
+          title: Slagalica
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: Uvod
+            k5_getting_started_1:
+              display_name: Uvod
+        mc:
+          description: Koristeći blokove koda, odvedi Stevea ili Alexa na avanturu
+            kroz ovaj svijet Minecrafta
+          description_short: Istraži Minecraft svijet pomoću koda
+          student_description: Koristeći blokove koda, odvedi Stevea ili Alexa na
+            avanturu kroz ovaj svijet Minecrafta
+          title: Minecraft Sat Kodiranja
+        netsim:
+          title: Internetski Simulator
+        nevada-standards-aligned-fifth-grade-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Likovi
             lessonGroup-3:
+              display_name: Uvjeti
+            lessonGroup-5:
               display_name: Varijable
-        coursea-2022:
+        nevada-standards-aligned-fifth-grade-2023-2023:
           lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        express-2022:
-          lesson_groups:
-            csf_sprites:
+            lessonGroup-2:
               display_name: Likovi
-            lessonGroup-9:
-              display_name: Događaji
-            csf_loops:
-              display_name: Petlje
-            csf_conditionals:
-              display_name: Uvjeti
-            csf_functions:
-              display_name: Funkcije
-            csf_variables:
-              display_name: Varijable
-            csf_for_loops:
-              display_name: Petlja brojača
-        csp4-2022:
+        nevada-standards-aligned-first-grade-2023:
           lesson_groups:
-            csp_variables:
-              display_name: Varijable
-            csp_conditionals:
-              display_name: Uvjeti
-            csp_functions:
-              display_name: Funkcije
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Liste
-            csp_loops:
-              display_name: Petlje
-        courseb-2022:
-          lesson_groups:
-            csf_digcit:
+            lessonGroup-2:
               display_name: Digitalno građanstvo
-            csf_loops:
+            lessonGroup-4:
               display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        coursec-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        coursed-2022:
-          lesson_groups:
             lessonGroup-6:
+              display_name: Događaji
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ugniježđene petlje
+            lessonGroup-4:
+              display_name: Funkcije
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-4:
+              display_name: Petlje
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-4:
+              display_name: Petlje
+            lessonGroup-5:
+              display_name: Događaji
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-6:
+              display_name: Petlje
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Uvod
+        playlab:
+          description: Napravi priču ili igru pomoću Laboratorija igara!
+          description_short: Napravi priču ili igru pomoću Laboratorija igara!
+          student_description: Napravi priču ili igru pomoću Laboratorija igara!
+          title: Laboratorij igara
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+        sciencePD2b:
+          description: 'Faza 2 online: Mješoviti ljetni studij'
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
+          student_description: 'Faza 2 online: Mješoviti ljetni studij'
+        sciencePD2b-iZone:
+          description: 'Faza 2 online: Mješoviti ljetni studij'
+          description_short: 'Faza 2 online: Mješoviti ljetni studij'
+          student_description: 'Faza 2 online: Mješoviti ljetni studij'
+        soccer:
+          description: Napravite nogometnu igru
+          description_short: Napravite nogometnu igru
+          name: nogomet
+          title: Kodirajte vlastitu nogometnu igru
+        spelling-bee:
+          title: Slovkanje
+        starwars:
+          description: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani
+            ratovi u galaksiji daleko, daleko odavde.
+          description_short: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani
+            ratovi u galaksiji daleko, daleko odavde.
+          student_description: Nauči programirati droide i kreiraj vlastitu igricu
+            Zvjezdani ratovi u galaksiji daleko, daleko odavde.
+        starwarsblocks:
+          description: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani
+            ratovi u galaksiji daleko, daleko odavde.
+          description_short: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani
+            ratovi u galaksiji daleko, daleko odavde.
+          student_description: Nauči programirati droide i kreiraj vlastitu igricu
+            Zvjezdani ratovi u galaksiji daleko, daleko odavde.
+        step:
+          description: Step tutorijal
+          description_short: Step tutorijal
+          student_description: Step tutorijal
+          title: korak
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno građanstvo
+            lessonGroup-4:
+              display_name: Petlje
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_digcit:
               display_name: Digitalno građanstvo
             csf_events:
               display_name: Događaji
             csf_loops:
               display_name: Petlje
-            csf_conditionals:
-              display_name: Uvjeti
-        coursee-2022:
-          lesson_groups:
             csf_sprites:
               display_name: Likovi
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Uvjeti
             csf_digcit:
               display_name: Digitalno građanstvo
-            ramp_up:
-              display_name: Ugniježđene petlje
             csf_functions:
               display_name: Funkcije
             csf_nested_loops:
+              display_name: Ugniježđene petlje
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_conditionals:
               display_name: Uvjeti
-        coursef-2022:
-          lesson_groups:
-            ramp_up:
-              display_name: Likovi
-            lessonGroup-7:
+            csf_digcit:
               display_name: Digitalno građanstvo
-            lessonGroup-8:
-              display_name: Varijable
-        pre-express-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Petlje
             csf_events:
               display_name: Događaji
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Digitalno građanstvo
-            ramp_up:
+            csf_loops:
+              display_name: Petlje
+            csf_sprites:
               display_name: Likovi
-            lessonGroup-8:
-              display_name: Varijable
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Likovi
+        usability:
+          description: Izbor nivoa iz Tečaja 4 za testiranje upotrebljivosti.
+          student_description: Izbor nivoa iz Tečaja 4 za testiranje upotrebljivosti.
+          title: Testiranje upotrebljivosti
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Uvod
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -1074,130 +1253,3 @@ hr:
           lessons:
             lesson-6:
               name: Modul 2 Asinkroni rad
-        soccer:
-          name: nogomet
-          title: Kodirajte vlastitu nogometnu igru
-          description_short: Napravite nogometnu igru
-          description: Napravite nogometnu igru
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: Petlje
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: Varijable
-        csa3-2023:
-          lessons:
-            lesson-3:
-              name: Petlja brojača
-        hello-world-space-2022:
-          title: 'Hello World: Prostor'
-        hello-world-soccer-2022:
-          title: 'Pozdrav svijetu: Nogomet'
-        csc-function-machines-pilot:
-          lessons:
-            lesson-1:
-              name: Kakav je to zvuk?
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: Varijable
-            csp_conditionals:
-              display_name: Uvjeti
-            csp_functions:
-              display_name: Funkcije
-        csp5-2023:
-          lesson_groups:
-            csp_loops:
-              display_name: Petlje
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Liste
-            lessonGroup-3:
-              display_name: Petlje
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        express-2023:
-          lesson_groups:
-            csf_sprites:
-              display_name: Likovi
-            lessonGroup-9:
-              display_name: Događaji
-            csf_loops:
-              display_name: Petlje
-            csf_conditionals:
-              display_name: Uvjeti
-            csf_functions:
-              display_name: Funkcije
-            csf_variables:
-              display_name: Varijable
-            csf_for_loops:
-              display_name: Petlja brojača
-        coursea-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        courseb-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        coursec-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_loops:
-              display_name: Petlje
-            csf_events:
-              display_name: Događaji
-        coursed-2023:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Digitalno građanstvo
-            csf_events:
-              display_name: Događaji
-            csf_loops:
-              display_name: Petlje
-            csf_conditionals:
-              display_name: Uvjeti
-        coursee-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno građanstvo
-            csf_sprites:
-              display_name: Likovi
-            ramp_up:
-              display_name: Ugniježđene petlje
-            csf_functions:
-              display_name: Funkcije
-            csf_nested_loops:
-              display_name: Uvjeti
-        pl-csd-summer-day1:
-          lessons:
-            lesson-3:
-              name: Uvod
-        virtual-pl-csd-summer-day1:
-          lessons:
-            lesson-1:
-              name: Uvod
-        coursef-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Digitalno građanstvo
-            lessonGroup-3:
-              display_name: Likovi
-            lessonGroup-4:
-              display_name: Varijable

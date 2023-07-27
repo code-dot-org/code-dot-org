@@ -8,17 +8,17 @@ sv:
         csp-2018:
           assignment_family_title: AP ® Computer Science principer
     resources:
-      curriculum/csd/2020:
-        name: Läroplan
-      curriculum/csd/2017:
-        name: Läroplan
-      all_code_5/csd/2022:
-        name: All kod
-      curriculum/csd/2019:
-        name: Läroplan
-      all_code_2/csd/2023:
-        name: All kod
       all_code/csd/2021:
         name: All kod
+      all_code_2/csd/2023:
+        name: All kod
+      all_code_5/csd/2022:
+        name: All kod
+      curriculum/csd/2017:
+        name: Läroplan
       curriculum/csd/2018:
+        name: Läroplan
+      curriculum/csd/2019:
+        name: Läroplan
+      curriculum/csd/2020:
         name: Läroplan

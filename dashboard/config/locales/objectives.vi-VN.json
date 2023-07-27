@@ -2,1400 +2,107 @@
   "vi-VN": {
     "data": {
       "objectives": {
-        "d48452ca-5cba-4bc4-b52c-424f10d43bab": {
-          "description": "Định nghĩa “lập trình” và “khoa học máy tính”."
-        },
-        "bdb824f7-9d5c-4465-b019-0294329fd999": {
-          "description": "Xác định các từ vựng chính về khoa học máy tính."
-        },
-        "69ffb469-2601-46aa-bc80-82043d8dcd1e": {
-          "description": "Xác định những nơi cần tiếp cận để tiếp tục học khoa học máy tính và lập trình."
-        },
-        "008a40f4-a5ee-42aa-862e-670f19129694": {
-          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
-        },
-        "a4ad4a3c-f2b2-4675-90e5-626ce70c2764": {
-          "description": "Xác định từ vựng chính của môn khoa học máy tính"
-        },
-        "343631be-830a-44f6-a249-a6aa96ea38f0": {
-          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
-        },
-        "c15d5aa7-bb01-41e2-90d5-5929d68628f3": {
-          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
-        },
-        "f149f330-032b-40db-a3db-62ff2a8c04fb": {
-          "description": "Xác định từ vựng chính của môn khoa học máy tính"
-        },
-        "e68fca49-de4c-4e93-85e3-05bcc2f9a779": {
-          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
-        },
-        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
-          "description": "Minh họa sự chuyển biến trong tâm trạng của bài thơ."
-        },
-        "6da037be-d0be-4f41-a1e5-10b24a247190": {
-          "description": "Biểu diễn ngôn ngữ nghĩa bóng và nghĩa đen trong một văn bản."
-        },
-        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
-          "description": "Phát triển các chương trình phản ứng với các sự kiện theo thời gian."
-        },
-        "6394fdc5-50c3-423e-8135-a64594824db3": {
-          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
-        },
-        "36208a0a-f319-4d09-ad20-46f8d68c0ff4": {
-          "description": "Xác định từ vựng chính của môn khoa học máy tính"
-        },
-        "bed6c56c-a270-4835-96f1-33d9d9ec78da": {
-          "description": "Liên hệ các khái niệm khoa học máy tính với thực tiễn"
-        },
-        "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
-          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
-        },
-        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
-          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
-        },
-        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
-          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
-        },
-        "3e5eebcd-2140-4152-8654-410468108ab6": {
-          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
-        },
-        "fcb92339-9036-46ec-b5ab-d8d252651e2d": {
-          "description": "Xác định từ vựng chính của môn khoa học máy tính"
-        },
-        "0a56ebd1-4df4-492c-b630-2a6b1f43e3c4": {
-          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
-        },
-        "e23f32e6-7d12-41e6-a601-bcf0825f0e30": {
-          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
-        },
-        "a5bebcad-7295-4ecd-af0d-4012f97de704": {
-          "description": "Xác định từ vựng chính của môn khoa học máy tính"
-        },
-        "303a2b74-af73-401c-8929-1fc1c5611f18": {
-          "description": "Liên hệ các khái niệm khoa học máy tính với thực tiễn"
-        },
-        "0de7aa41-13ea-4a30-a45d-701df2a562c8": {
-          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
-        },
-        "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa": {
-          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
-        },
-        "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e": {
-          "description": "Xác định từ vựng chính của môn khoa học máy tính"
-        },
-        "bc47cc48-f07f-4d2b-aa2d-86f952ab0da3": {
-          "description": "Liên hệ các khái niệm khoa học máy tính với thực tiễn"
-        },
-        "59992d8c-d194-4063-82fa-001a0b6482d9": {
-          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
-        },
-        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
-          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
-        },
-        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
-          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
-        },
-        "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
-          "description": "Tạo chương trình để hoàn thành một hình ảnh bằng cách sử dụng các bước theo trình tự."
-        },
-        "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
-          "description": "Chia các hình khối phức tạp thành các phần đơn giản."
-        },
-        "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
-          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
-        },
-        "db37b900-bbc1-46dc-a6c8-adc0ab833a8d": {
-          "description": "Xác định từ vựng chính của môn khoa học máy tính"
-        },
-        "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
-          "description": "Liên hệ các khái niệm khoa học máy tính với thực tiễn"
-        },
-        "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
-          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
-        },
-        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
-          "description": "Phát triển các chương trình phản hồi lại các sự kiện đã được lên lịch"
-        },
-        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
-          "description": "Phát triển các chương trình phản hồi lại thông tin đầu vào của người dùng"
-        },
-        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
-          "description": "Tạo hiệu ứng chuyển động nhảy múa bằng mã lệnh"
-        },
-        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
-          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
-        },
-        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
-          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
-        },
-        "586fecaa-52c0-4889-adaf-cc11a172d4a7": {
-          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
-        },
-        "e2745118-9d93-4e33-a607-c1927403c0c3": {
-          "description": "Xác định từ vựng chính của môn khoa học máy tính"
-        },
-        "19f72ae3-7b2b-4028-84e5-8e5e66fcf397": {
-          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
-        },
-        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
-          "description": "Giải thích lý do mã hóa là nhu cầu quan trọng đối với cuộc sống hàng ngày trên Internet."
-        },
-        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
-          "description": "Giải mã thông điệp được mã hóa bằng mật mã Caesar bằng tiện ích mật mã Caesar"
-        },
-        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
-          "description": "Giải mã thông điệp được mã hóa bằng mật mã thay thế ngẫu nhiên bằng cách sử dụng phương pháp Phân tích tần suất"
-        },
-        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
-          "description": "Giải thích các điểm yếu và lỗi bảo mật của mật mã thay thế"
-        },
-        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
-          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
-        },
-        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
-          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
-        },
-        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
-          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
-        },
-        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
-          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
-        },
-        "7a1a8e77-d400-47a9-ad84-819e2c9d88f1": {
-          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
-        },
-        "dca3e183-1119-471b-b510-a5b6f40f34b4": {
-          "description": "Xác định từ vựng chính của môn khoa học máy tính"
-        },
-        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
-          "description": "Liên hệ các khái niệm khoa học máy tính với thực tiễn"
-        },
-        "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
-          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
-        },
-        "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5": {
-          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
-        },
-        "74f6b7a3-df1b-4f98-9619-30b2c2118c14": {
-          "description": "Xác định từ vựng chính của môn khoa học máy tính"
-        },
-        "d1660224-18b1-4e70-b7fc-b0fce29c8cd6": {
-          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
-        },
-        "ef08539f-6652-4fb9-a0ec-781dfec114f8": {
-          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
-        },
-        "b1e4a88d-565b-4d95-a6d7-129869cff301": {
-          "description": "Xác định từ vựng chính của môn khoa học máy tính"
-        },
-        "4cc87f80-aa2a-4996-96bd-de31f9836620": {
-          "description": "Liên hệ các khái niệm khoa học máy tính với thực tiễn"
-        },
-        "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
-          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
-        },
-        "50b1fb31-4471-433d-a5f1-74e38886d49f": {
-          "description": "Tạo và chia sẻ ứng dụng của riêng mình trong App Lab bằng các tính năng như nút, văn bản, hình ảnh, âm thanh và màn hình."
-        },
-        "f7a3786d-0859-48d5-a4f9-827d6d681133": {
-          "description": "Tiếp tục xây dựng dự án hoàn chỉnh trong App Lab bằng các nguồn hỗ trợ được cung cấp trên trang code.org/applab."
-        },
-        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
-          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
-        },
-        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
-          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
-        },
-        "e475558e-d7ca-4fc3-950a-b09be116dafb": {
-          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
-        },
-        "6feb1920-3b43-4a49-ade4-e9c6ab5da092": {
-          "description": "Xác định từ vựng chính của môn khoa học máy tính"
-        },
-        "663f8e5f-9d35-425b-8d51-931fcef2c2d4": {
-          "description": "Liên hệ các khái niệm khoa học máy tính với thực tiễn"
-        },
-        "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
-          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
-        },
-        "d2d65101-b356-4092-8f88-59b387334dd9": {
-          "description": "Cộng tác với bạn cùng lớp để tìm giải pháp cho vấn đề nén văn bản bằng Tiện ích nén văn bản (lược đồ nén dữ liệu không giảm chất lượng)."
-        },
-        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
-          "description": "Giải thích lý do không thể hoặc “khó” xác định dung lượng nén tối ưu."
-        },
-        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
-          "description": "Giải thích một số yếu tố gây trở ngại cho quá trình nén."
-        },
-        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
-          "description": "Mô tả mục đích và lý do của phương pháp nén dữ liệu không giảm chất lượng."
-        },
-        "93e23857-027c-4711-9033-a41de9430672": {
-          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
-        },
-        "8e120010-1817-488a-8ca8-ce5198a0883d": {
-          "description": "Tạo một trò chơi tương tác bằng cách sử dụng trình xử lý trình tự và sự kiện."
-        },
-        "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
-          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
-        },
-        "559aa8ee-c19e-41b2-8820-8cf04cf72dad": {
-          "description": "Định nghĩa “lập trình” và “khoa học máy tính”."
-        },
-        "bd8e3dc4-47f2-41ac-8c7f-01126eb5e68a": {
-          "description": "Xác định các từ vựng chính về khoa học máy tính."
-        },
-        "0e2bbedd-f066-4dc1-b80c-291dac187c62": {
-          "description": "Xác định những nơi cần tiếp cận để tiếp tục học khoa học máy tính và lập trình."
-        },
-        "63be9575-1232-47a5-991c-8bd03ac7c949": {
-          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
-        },
-        "0b17cf0a-2614-40be-afbc-1045245d0a38": {
-          "description": "Xác định từ vựng chính của môn khoa học máy tính"
-        },
-        "b655e0ef-f98f-4db9-93f1-5d842b470c5d": {
-          "description": "Liên hệ các khái niệm khoa học máy tính với thực tiễn"
-        },
-        "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
-          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
-        },
-        "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
-          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
-        },
-        "73964b0e-cea1-43cf-a130-410017addf73": {
-          "description": "Tạo một trò chơi tương tác bằng cách sử dụng trình xử lý trình tự và sự kiện."
-        },
-        "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
-          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
-        },
-        "8b4629a9-0621-4442-9801-e3b61e4fbaf3": {
-          "description": "Định nghĩa “lập trình” và “khoa học máy tính”."
-        },
-        "16a00a1c-4559-4e9c-95e1-1cd1e542fe68": {
-          "description": "Xác định các từ vựng chính về khoa học máy tính."
-        },
-        "5e05fbeb-12c6-437c-b0c4-5e2057d3d975": {
-          "description": "Xác định những nơi cần tiếp cận để tiếp tục học khoa học máy tính và lập trình."
-        },
-        "83f493e8-9941-4154-b2f4-f34836741746": {
-          "description": "Định nghĩa “lập trình” và “khoa học máy tính”."
-        },
-        "58cd5fc3-375f-4840-a5ac-fdb527a38ebd": {
-          "description": "Xác định các từ vựng chính về khoa học máy tính."
-        },
-        "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3": {
-          "description": "Xác định những nơi cần tiếp cận để tiếp tục học khoa học máy tính và lập trình."
-        },
-        "f9486b57-7160-4b3b-b327-b311239d5d26": {
-          "description": "Phát triển các chương trình phản hồi lại các sự kiện đã được lên lịch"
-        },
-        "251fe027-d9b3-4384-99f6-53505275e4ce": {
-          "description": "Phát triển các chương trình phản hồi lại thông tin đầu vào của người dùng"
-        },
-        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
-          "description": "Tạo hiệu ứng chuyển động nhảy múa bằng mã lệnh"
-        },
-        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
-          "description": "Thảo luận về vai trò của trí tuệ nhân tạo trong cuộc sống."
-        },
-        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "Đào tạo và thử nghiệm mô hình máy học."
         },
-        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
           "description": "Lý do định kiến của con người đóng vai trò quan trọng trong máy học."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
-        },
-        "1033b638-05a5-40c2-8e29-1efe1b5f3451": {
-          "description": "Định nghĩa thuật ngữ “mật khẩu” và mô tả mục đích của mật khẩu."
-        },
-        "c14cd5a0-312f-491c-aa00-73b82dd8e628": {
-          "description": "Thực hành tạo mật khẩu mạnh và dễ nhớ."
-        },
-        "2d16e09e-308f-4fe5-b53a-bfd2a50ec736": {
-          "description": "Sắp xếp lại trình tự các bước dưới dạng một chương trình mã hóa"
-        },
-        "e2eb4dfd-1b5b-4a01-aceb-1b96c49cd254": {
-          "description": "Giải thích các hạn chế của vấn đề dịch từ ngôn ngữ con người sang ngôn ngữ máy"
-        },
-        "86d6703f-6086-48c6-820f-d9d972471655": {
-          "description": "Sắp xếp các lệnh di chuyển theo trình tự trong một chương trình."
-        },
-        "c141459a-a5b8-41ce-ada6-33b92afb0596": {
-          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi lớn nhất có thể lặp lại."
-        },
-        "f0a49033-5a23-4b2e-b570-69fd6d678f65": {
-          "description": "Sửa một chương trình hiện có để giải quyết lỗi."
-        },
-        "15927fdc-d944-4de3-89ca-f238d8014f55": {
-          "description": "Xác định ý tưởng sử dụng mã lệnh và biểu tượng."
-        },
-        "55ae003d-10f1-4364-ab38-3a3360491e38": {
-          "description": "Nhận biết các dấu hiệu của sự bực bội"
-        },
-        "d5c5bdd3-6ca6-48b2-ae3b-5aaf0c8dbb70": {
-          "description": "Xác minh kết quả công việc của đồng đội."
-        },
-        "0d2e39ca-970f-40e0-b26a-84bcecf9315d": {
-          "description": "Mô tả và tiến hành kế hoạch sửa lỗi chương trình."
-        },
-        "59c4efee-e0c3-4293-9609-a82db6698755": {
-          "description": "Đọc và hiểu mã lệnh đã cho."
-        },
-        "66a6e0e0-c56c-4148-9d57-ce509afa4fc6": {
-          "description": "Xác định lỗi và các vấn đề mà lỗi đó gây ra trong chương trình."
-        },
-        "a7fe08e4-1943-4bbc-a18a-e10bd0942173": {
-          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
-        },
-        "d2a9a010-d6c6-4ce1-9f70-cb5ceba6af8f": {
-          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
-        },
-        "df973a96-c08b-4f3f-9a11-c93434193cfe": {
-          "description": "Tạo một trò chơi tương tác bằng cách sử dụng trình xử lý trình tự và sự kiện."
-        },
-        "04cbf3cd-2cb7-451b-b4ed-1ccd70594cc5": {
-          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
-        },
-        "f47c401e-4a61-4f0e-a4d3-75f3bd9d8908": {
-          "description": "Tạo game chuyển động tương tác bằng cách sử dụng trình tự và sự kiện."
-        },
-        "4ed9cede-cc9a-409d-b433-781185b454b6": {
-          "description": "Tạo hiệu ứng chuyển động nhảy múa bằng mã lệnh"
-        },
-        "4fa04785-108a-4cea-831b-8078658ea413": {
-          "description": "Phát triển các chương trình phản hồi lại thông tin đầu vào của người dùng"
-        },
-        "7728246b-7582-4624-a2b1-229b998fc2ae": {
-          "description": "Phát triển các chương trình phản hồi lại các sự kiện đã được lên lịch"
-        },
-        "07bc7c07-d75a-45cc-9f98-74501813e5af": {
-          "description": "Thiết lập cấu trúc chương trình bằng cách sử dụng các cấu trúc lặp lại các nhóm mã lệnh"
-        },
-        "fcc0109d-8a25-4194-8a5c-69985bac106c": {
-          "description": "Cải thiện mã lệnh hiện có bằng cách tìm các nhóm lặp lại và chuyển chúng vào cấu trúc lặp"
-        },
-        "c2ec43ae-26ae-48df-8657-373765b01821": {
-          "description": "Phân biệt các lệnh cần lặp lại trong vòng lặp và các lệnh cần dùng riêng."
-        },
-        "f9dc8f2c-6f5a-4854-b0bb-296d0ca89233": {
-          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
-        },
-        "64421cd8-645b-40d1-b071-4f4238065252": {
-          "description": "Chia các nhiệm vụ phức tạp thành các phần nhỏ hơn có thể lặp lại."
-        },
-        "ddac6ae3-6abe-444e-af05-8a6b2a5eec65": {
-          "description": "Phát hiện ra các mẫu lặp lại lớn được tạo thành từ các mẫu lặp lại nhỏ hơn."
-        },
-        "f466b8aa-18bf-460d-9780-1abcb7f32589": {
-          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
-        },
-        "1368d16e-4e0d-4b76-8473-2765f5379362": {
-          "description": "Xác định xem lệnh điều kiện có được đáp ứng hay không dựa trên tiêu chí."
-        },
-        "744e09fe-1aaa-4253-95e2-7f1c8fc4e5dc": {
-          "description": "Xác định các trường hợp khi một số phần của chương trình nên chạy và khi nào chúng không nên chạy."
-        },
-        "ec9adec1-48c1-458e-bae1-37f2be6a863b": {
-          "description": "Duyệt qua một chương trình và dự đoán kết quả với một tập hợp dữ liệu đầu vào."
-        },
-        "3ca80839-1859-48e0-a010-de7ef526512d": {
-          "description": "Xác định xem lệnh điều kiện có được đáp ứng hay không dựa trên tiêu chí."
-        },
-        "c6a481f9-8493-4b50-876c-c16309ec4e50": {
-          "description": "Xác định các trường hợp khi một số phần của chương trình nên chạy và khi nào chúng không nên chạy."
-        },
-        "37326a7f-29b6-4ea6-9ed5-a08c2aa2dfd4": {
-          "description": "Giải bài tập bằng cách sử dụng kết hợp các chuỗi lặp lại và lệnh điều kiện."
-        },
-        "b7bbc7eb-a6d3-4820-9b4b-27b64ec0b0d4": {
-          "description": "Dịch câu điều kiện trong ngôn ngữ nói thành chương trình."
-        },
-        "a4808383-ef10-4135-9a5d-f695b62aeb36": {
-          "description": "Sử dụng vòng lặp while để tạo các chương trình có thể giải quyết các vấn đề với các giá trị chưa biết."
-        },
-        "d8494711-ae41-4ccd-8db3-04385d787ca3": {
-          "description": "Phân biệt giữa vòng lặp lặp lại một số lần cố định và vòng lặp lặp lại với điều kiện đúng."
-        },
-        "115e7f69-47a1-495a-bc11-8a9ed3270324": {
-          "description": "Xây dựng các chương trình với hiểu biết về nhiều chiến lược để triển khai lệnh điều kiện."
-        },
-        "7164456d-4573-432f-b255-a0596e702d96": {
-          "description": "Dịch câu điều kiện trong ngôn ngữ nói và vòng lặp thành chương trình."
-        },
-        "bbd1a283-a817-4fd2-9335-651b698f63d2": {
-          "description": "Vượt qua những trở ngại như hạn chế về thời gian hoặc lỗi."
-        },
-        "afa30921-d88a-4d96-a8d1-94de6acad10d": {
-          "description": "Hãy quyết định câu nói nào có thể nói trên mạng và câu nói nào là không được."
-        },
-        "14b788f7-6566-40f5-8b91-a8c86d6d3afa": {
-          "description": "Mô tả tầm quan trọng của người dùng trong quá trình thiết kế."
-        },
-        "6cea05e6-2733-4d09-be8f-1c02c646cb85": {
-          "description": "Xác định các nhân vật trong một chương trình máy tính đang chạy."
-        },
-        "3be6fc2a-7c73-4ff2-b8b6-10639f40e6ad": {
-          "description": "Tạo hình chuyển động bằng cách sử dụng nhân vật và hành vi."
-        },
-        "b5e9cc94-d3f5-4a4f-93db-bcadcac0be4b": {
-          "description": "Tạo các nhân vật mới và gán cho họ trang phục và hành vi."
-        },
-        "7b9c0f1d-efa4-4397-8334-d392bb962fb7": {
-          "description": "Phát triển các chương trình phản ứng với các sự kiện theo thời gian."
-        },
-        "8fac9b1a-450f-4d68-aa87-d7b8e1bbe873": {
-          "description": "Phát triển các chương trình phản ứng với dữ liệu đầu vào của người dùng."
-        },
-        "d13ed164-0cf7-4bb3-882a-69ed146aeb9f": {
-          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng các sự kiện."
-        },
-        "8b5814c2-524a-4871-ae01-bba3f6bce488": {
-          "description": "Lập trình giải pháp cho các vấn đề phát sinh khi thiết kế thú cưng ảo, chẳng hạn như cho ăn."
-        },
-        "cf3f971b-43c5-4cb5-beeb-d23c903e1752": {
-          "description": "Tạo một thú cưng ảo tương tác bằng cách sử dụng sự kiện, hành vi và hình ảnh tùy chỉnh."
-        },
-        "04ae0169-fb41-46fb-bc74-dc22c70707f7": {
-          "description": "Xác định mối quan hệ giữa cách định nghĩa, lưu trữ và truy xuất biến khi nhấn “Run” (chạy) trên một chương trình."
-        },
-        "cc733f62-1646-49dc-b2b4-8b47a7c36fca": {
-          "description": "Gọi biến nhiều lần trong một chương trình."
-        },
-        "d059371b-b3f0-40cb-915a-586645b2f109": {
-          "description": "Gán giá trị cho một biến"
-        },
-        "4d88e11e-77b5-4060-ab3d-2f2ae6cfa8ea": {
-          "description": "Dùng biến kết hợp với lời nhắc."
-        },
-        "b155264b-806c-417e-bd5f-2fd91b6093ec": {
-          "description": "Dùng biến để giữ các từ và cụm từ."
-        },
-        "5c6f9917-2c5e-442f-a402-14c15c8b1737": {
-          "description": "Tạo chương trình máy tính tương tác phản ứng với dữ liệu đầu vào của người dùng."
-        },
-        "72c8cd33-c097-48d6-9178-3b146fdc243a": {
-          "description": "Dùng biến để giữ các từ và cụm từ."
-        },
-        "ea8b6be7-f51c-420f-a295-ec02488a066f": {
-          "description": "Dùng biến kết hợp với lời nhắc."
-        },
-        "3606812b-a55f-4eb9-8a40-a9ca52df3726": {
-          "description": "Dự đoán và kiểm tra dự đoán bằng cách sửa các biến trong bản mô phỏng"
-        },
-        "7f41cf27-501d-4676-9ca7-9fcc15161d54": {
-          "description": "Vẽ biểu đồ hai đường thẳng để so sánh dữ liệu từ hai nguồn khác nhau"
-        },
-        "e29b6e4a-ed9b-4aba-81ab-c1ee2a7ada84": {
-          "description": "Sử dụng bản mô phỏng máy tính để thu thập dữ liệu về một mô hình"
-        },
-        "8a99a9c0-2079-4c7e-a39c-188f940fcfe2": {
-          "description": "Thảo luận về vai trò của trí tuệ nhân tạo trong cuộc sống."
-        },
-        "9ec60d3b-ddcc-479c-9e4d-220ff3d8a10a": {
-          "description": "Đào tạo và thử nghiệm mô hình máy học."
-        },
-        "ba631251-039e-4f7a-9320-158390f318c2": {
-          "description": "Lý do định kiến của con người đóng vai trò quan trọng trong máy học."
-        },
-        "422e8552-7c1c-4aba-a702-e627365b7bd6": {
-          "description": "Dịch các URL thành Địa chỉ IP."
-        },
-        "7a2c2a3b-c61d-4bb4-9720-c0b46a63a940": {
-          "description": "Tìm hiểu về mức độ phức tạp của quá trình gửi tin nhắn qua internet."
-        },
-        "30f2f515-c020-4631-9ffe-3d9ba8749eb2": {
-          "description": "Có thể giải thích ảnh hưởng do giới hạn của hệ thống đến thiết kế dự án."
-        },
-        "33a17071-53d7-4ba9-b041-af3fcb4fabaf": {
-          "description": "Soạn thảo và thực hiện các kế hoạch để giải quyết bất kỳ vấn đề nào trong mã lệnh."
-        },
-        "505fcab3-063d-4c18-9ce1-83077359307d": {
-          "description": "Trình bày rõ quy trình thiết kế và vai trò của quy trình này trong việc tạo nên dự án hoàn thiện cuối cùng."
-        },
-        "88fa834a-0717-4422-a6df-a6af49a1e928": {
-          "description": "Mô tả cách thỏa hiệp để giúp dự án đi đúng hướng và truyền cảm hứng sáng tạo."
-        },
-        "9183e5a7-1776-4ffb-a65b-730edea18bc3": {
-          "description": "Học cách lập kế hoạch trước cho công việc đang cần hoàn thành."
-        },
-        "0265cc40-2950-42f3-a457-7b967fa9c0d9": {
-          "description": "Giải thích sự khác biệt giữa thông tin cá nhân và riêng tư."
-        },
-        "16baead5-8507-4681-94b1-0314783a5418": {
-          "description": "Giải thích lý do chia sẻ thông tin riêng tư trên mạng có rủi ro."
-        },
-        "d4c584f8-36e7-471a-9b83-713ca5e4711a": {
-          "description": "Xác định lý do tại sao mọi người chia sẻ thông tin về bản thân trên mạng."
-        },
-        "6f3e5897-b529-4f7a-a41f-83c11f7f03c5": {
-          "description": "Tạo các nhân vật mới và gán cho họ trang phục và hành vi."
-        },
-        "bf11a11b-35be-4fdc-a266-9f192e141760": {
-          "description": "Định nghĩa “nhân vật” là một nhân vật hoặc đối tượng trên màn hình có thể di chuyển và thay đổi."
-        },
-        "0601569e-2f95-4d2f-a3a9-0aea3df102ed": {
-          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
-        },
-        "884d4f4c-abd4-493c-8029-cde7399519f4": {
-          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
-        },
-        "41232751-173e-4eaa-9bc4-bb5b65957d03": {
-          "description": "Hãy chọn thông tin về bản thân có thể chia sẻ trực tuyến."
-        },
-        "6a824aaa-b3b2-4c7f-b2f9-daed0835a2c5": {
-          "description": "Tạo chương trình máy tính tương tác thể hiện bản thân bằng văn bản và hình ảnh tùy chỉnh."
-        },
-        "62ffafea-c5f4-4942-b283-9462c41d52cd": {
-          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
-        },
-        "68b90262-3e0e-4c90-9888-21796cd30869": {
-          "description": "Phân biệt các lệnh cần lặp lại trong vòng lặp và các lệnh cần dùng riêng."
-        },
-        "3fac17b3-f27c-4f5c-98f1-a43e3e18d4e0": {
-          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
-        },
-        "81e6c614-6b5d-43db-8178-3adf983eb5b6": {
-          "description": "Chia các nhiệm vụ phức tạp thành các phần nhỏ hơn có thể lặp lại."
-        },
-        "e4a76fad-2750-4f3b-8138-0e0a932b5e2b": {
-          "description": "Kết hợp các hình khối đơn giản thành các thiết kế phức tạp với các vòng lặp lồng nhau."
-        },
-        "2cae95f3-a3dc-4541-8b5c-43d876d26ce3": {
-          "description": "Mô tả trường hợp cần vòng lặp, vòng lặp lồng nhau hoặc không cần vòng lặp."
-        },
-        "45801eec-c3af-4a73-afb8-988d55e7a469": {
-          "description": "Nhận ra sự khác biệt khi sử dụng vòng lặp và vòng lặp lồng nhau."
-        },
-        "feae5f14-f531-4db9-b746-9582df08da12": {
-          "description": "Chia nhỏ mã lệnh thành các chuỗi lặp lại lớn nhất bằng cách sử dụng cả vòng lặp và vòng lặp lồng nhau."
-        },
-        "020afd03-339c-4b70-af23-62f495f2088f": {
-          "description": "Xác định các phần của bài hát để đưa vào hàm."
-        },
-        "386901b7-db20-4705-90ee-391a42d76d3a": {
-          "description": "Mô tả cách hàm giúp chương trình dễ viết hơn."
-        },
-        "887412d7-6f80-42df-98b4-6ef39bb4f09c": {
-          "description": "Tìm các cụm từ lặp lại trong lời bài hát."
-        },
-        "50d6d0ce-0013-47e4-9f0b-ac6bca5d4a30": {
-          "description": "Sử dụng hàm xác định trước để hoàn thành các nhiệm vụ thường xuyên lặp lại."
-        },
-        "e3843037-6a2c-4561-9a5c-c27b4e84de71": {
-          "description": "Sử dụng hàm để đơn giản hóa các chương trình phức tạp."
-        },
-        "34743a30-9835-4b96-9933-c84ccd8a20b6": {
-          "description": "Nhận biết khi nào hàm có thể giúp đơn giản hóa chương trình."
-        },
-        "fa73c58f-368d-4e53-97eb-7de987b548c3": {
-          "description": "Phân loại và tổng quát mã thành các hàm hữu ích."
-        },
-        "818dc160-2ce6-4d7d-a358-208b9026debb": {
-          "description": "Xác định xem lệnh điều kiện có được đáp ứng hay không dựa trên tiêu chí."
-        },
-        "cb32fed2-db37-4e6c-9651-3b1f39fd4741": {
-          "description": "Xác định các trường hợp khi một số phần của chương trình nên chạy và khi nào chúng không nên chạy."
-        },
-        "1b6a66df-472f-49d6-acdf-13c2f6fdb263": {
-          "description": "Xác định xem lệnh điều kiện có được đáp ứng hay không dựa trên tiêu chí."
-        },
-        "80cf9584-e814-4880-8c83-119966ed7a89": {
-          "description": "Xác định các trường hợp khi một số phần của chương trình nên chạy và khi nào chúng không nên chạy."
-        },
-        "59e29159-7e29-48ce-95c7-8510877793e9": {
-          "description": "Nhận biết khi nào hàm có thể giúp đơn giản hóa chương trình."
-        },
-        "b92ee5de-79d3-4fd6-8bf6-e86e3dad779a": {
-          "description": "Sử dụng hàm xác định trước để hoàn thành các nhiệm vụ thường xuyên lặp lại."
-        },
-        "5fb6d430-a2bf-4d0b-b128-5592afc2d856": {
-          "description": "Cải thiện thiết kế ứng dụng hiện có bằng cách giải quyết nhu cầu trợ năng của người dùng."
-        },
-        "bb1f6fd9-3327-411d-b91e-d3b4e756fff3": {
-          "description": "Giải thích lý do trợ năng là một phần quan trọng trong thiết kế ứng dụng cho người dùng."
-        },
-        "fcecef31-84d0-4df2-80cd-f8641b06c24f": {
-          "description": "Mô tả tác động của ứng dụng dành cho thiết bị di động đối với thế giới hiện đại."
-        },
-        "2c0ee6b8-608a-47b6-9093-dbab81b92cbf": {
-          "description": "Hiểu các quyền của chính mình đối với các tài liệu mà mình tạo ra"
-        },
-        "a8686006-16c5-4b08-94d2-32430cd6d77f": {
-          "description": "Giải thích việc chia sẻ tài liệu có bản quyền có đạo đức so với việc chia sẻ không hợp đạo đức."
-        },
-        "0c9da891-a9a1-4747-a7da-dc2c76462eb4": {
-          "description": "Giải thích ảnh hưởng do giới hạn của hệ thống đến thiết kế dự án."
-        },
-        "5d3b2774-424f-487f-b119-05254b043b89": {
-          "description": "Mô tả cách thỏa hiệp để giúp dự án đi đúng hướng và truyền cảm hứng sáng tạo."
-        },
-        "78939802-f928-4ec5-89cb-3e2aef29d9ce": {
-          "description": "Trình bày rõ quy trình thiết kế và vai trò của quy trình này trong việc tạo nên dự án hoàn thiện cuối cùng."
-        },
-        "82992d38-7821-4608-92a1-bd4fd05d7226": {
-          "description": "Soạn thảo và thực hiện các kế hoạch để giải quyết bất kỳ vấn đề nào trong mã lệnh."
-        },
-        "d3dbfefc-34eb-4b0a-ab79-53a1ce3adfdc": {
-          "description": "Học cách lập kế hoạch trước cho công việc đang cần hoàn thành."
-        },
-        "4bf451c9-a1ce-4e40-95a6-10c911a081bf": {
-          "description": "Hiểu được rằng thông tin chia sẻ trực tuyến để lại dấu chân số hoặc “dấu vết”."
-        },
-        "7cc37ede-4e83-4881-9213-1746313de397": {
-          "description": "Khám phá thông tin nào CÓ THỂ chia sẻ trực tuyến."
-        },
-        "1fb2f469-060b-4caf-ab67-28747acc0f00": {
-          "description": "Dịch danh sách các bước thành một loạt hành động thực tế"
-        },
-        "8a9a5295-648e-47f2-baec-c5a360f2788a": {
-          "description": "Hãy xác định danh sách các bước (thuật toán) để đưa một người bạn từ vị trí xuất phát đến đích"
-        },
-        "ab239024-3c6d-4db1-8c7c-2572c316dc75": {
-          "description": "Xác định và sửa lỗi trong quá trình thực thi thuật toán"
-        },
-        "9c04f7e1-5859-4e61-9ae0-630df254a9aa": {
-          "description": "Làm mẫu các hành vi phù hợp trong phòng máy tính"
-        },
-        "c78930e6-cbb5-418c-8ca3-9124e79570cd": {
-          "description": "Thử nghiệm với các thao tác lập trình dựa trên khối tiêu chuẩn như: nhấp chuột, kéo và thả, v.v."
-        },
-        "0ad6ceff-faa1-40ea-a688-7ad92308dca3": {
-          "description": "Xây dựng chương trình bằng cách tổ chức lại các hành động theo trình tự."
-        },
-        "1c946e64-eafa-4a8f-8c2d-5829ab3acbf7": {
-          "description": "Xây dựng một chương trình máy tính từ một tập hợp các chỉ dẫn bằng văn bản."
-        },
-        "59718681-70e8-4b7f-91a7-e6b02e4ca98f": {
-          "description": "Chuyển hành động thành chuỗi lệnh."
-        },
-        "a278cf3e-4bf9-4d1c-b9d0-a73c2530e3d8": {
-          "description": "Chuyển hành động thành chuỗi lệnh."
-        },
-        "ae6f9158-191c-458c-9850-331faf94b567": {
-          "description": "Xác định và định vị lỗi trong chương trình."
-        },
-        "72900cbd-2ad8-4073-abde-f397a2832b5d": {
-          "description": "Chuyển chuỗi gồm nhiều hành động thành vòng lặp."
-        },
-        "76138142-0691-4645-8e78-5dbb1c19eab0": {
-          "description": "Chuyển chương trình hình ảnh thành điệu nhảy thực tế."
-        },
-        "ad9095b2-5de7-41af-89b9-aac0f2fd0726": {
-          "description": "Lặp lại các hành động do giáo viên thực hiện."
-        },
-        "2b7ac17e-7e3a-44b5-8c46-e28eec5af112": {
-          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi nhỏ nhất có thể lặp lại."
-        },
-        "4d6affaa-f8b0-4dbc-a436-4dccf8c57fc1": {
-          "description": "Sử dụng kết hợp các lệnh trình tự và lặp lại để đi đến cuối mê cung."
-        },
-        "be1a4163-770d-4fbd-85a1-4c18198d5c94": {
-          "description": "Tạo chương trình làm nhiệm vụ nhất định lặp lại một chuỗi lệnh."
-        },
-        "dbb376e1-41ba-4f5f-8125-30a2de24cead": {
-          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
-        },
-        "36786d0a-ce44-48d7-b557-a7e44c32c28d": {
-          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
-        },
-        "6baba9ab-130e-4a58-bf30-7cee60bacb18": {
-          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi nhỏ nhất có thể lặp lại."
-        },
-        "54ae27f7-71b5-41ce-a67a-61d15e520bc3": {
-          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
-        },
-        "5f8621d2-481c-487d-a2e1-90d7fd15b929": {
-          "description": "Tạo chương trình vẽ các hình khối phức tạp bằng cách lặp lại các chuỗi đơn giản."
-        },
-        "b85981bf-b2e5-49f6-bf08-348f8d16ba2b": {
-          "description": "Phân tách một hình khối thành dạng chuỗi lặp lại lớn nhất của hình đó."
-        },
-        "28c09bb0-c9f4-44ab-ba0a-8c9cdb24e5f0": {
-          "description": "Đề xuất công nghệ cho người khác dựa trên nhu cầu riêng của họ."
-        },
-        "9e78b33b-39a6-4524-89e4-a26fdba11cb5": {
-          "description": "Vận dụng sự đồng cảm và sáng tạo để thiết kế công nghệ cho người khác."
-        },
-        "f854671c-b4c0-4bd7-8dd6-bf0094cd1733": {
-          "description": "Liệt kê một số ví dụ khác nhau về các ứng dụng trên điện thoại thông minh."
-        },
-        "1275ac31-dcd9-49c5-92e2-68abd8aa9955": {
-          "description": "Lặp lại các lệnh do giáo viên đưa ra."
-        },
-        "4dbb2bcf-bd83-4c90-a077-6261a6b2607c": {
-          "description": "Thực hành phân biệt các hành động được xác định trước và các hành động theo hướng sự kiện."
-        },
-        "ef1a9273-ff0e-4134-8456-9762728bed55": {
-          "description": "Ghi nhận các hành động của giáo viên như là tín hiệu để bắt đầu các lệnh."
-        },
-        "2583489b-c21a-415d-bd1f-c0fa1eca9ef0": {
-          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
-        },
-        "2f9f9b26-d5f6-48ab-be27-98608a47b74d": {
-          "description": "Tạo câu chuyện hoạt hình, có tính tương tác bằng cách sử dụng trình tự và trình xử lý sự kiện."
-        },
-        "a64618b3-e151-46ce-9670-cada1927a2db": {
-          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
-        },
-        "0e1a61eb-eb48-4c3b-ab89-5b19ef6c6977": {
-          "description": "Áp dụng các khái niệm khoa học máy tính trong dự án mở."
-        },
-        "3aa63e80-f3d8-4043-811d-5b275f168499": {
-          "description": "Vượt qua những trở ngại như hạn chế về thời gian hoặc lỗi."
-        },
-        "7279e4aa-2ccc-49b2-b912-e4e4d680e15b": {
-          "description": "Xác định và định vị lỗi trong chương trình."
-        },
-        "a87240fd-cb47-49df-ae9e-d058ab3fcb26": {
-          "description": "Chuyển hành động thành chuỗi lệnh."
-        },
-        "1fd14cce-1e61-42c8-83d4-2252ec67f9e9": {
-          "description": "Suy nghĩ về quá trình sửa lỗi theo cách phù hợp với lứa tuổi."
-        },
-        "3e5024e3-0c8e-436c-b532-42749d6a5cf0": {
-          "description": "Dự đoán vị trí một chương trình sẽ bị lỗi."
-        },
-        "d219187c-ecad-4854-ba3e-b136b4511fcc": {
-          "description": "Sửa một chương trình hiện có để giải quyết lỗi."
-        },
-        "5c54f1b4-f582-4b2f-8db1-396336c44a7b": {
-          "description": "Biểu diễn một thuật toán như một chương trình máy tính."
-        },
-        "87bbc4aa-8c38-4428-8a5c-e6b86bc489f5": {
-          "description": "Sắp xếp các lệnh di chuyển theo trình tự trong một chương trình."
-        },
-        "ff07b623-686f-4193-91c9-c427b5d780ad": {
-          "description": "Phát triển kỹ năng giải quyết vấn đề và tư duy phản biện bằng cách ôn lại các phương pháp sửa lỗi."
-        },
-        "b06566c3-55fe-4cb6-9e55-f40814d47ad8": {
-          "description": "Tạo chương trình để hoàn thành một hình ảnh bằng cách sử dụng các bước theo trình tự."
-        },
-        "fbaccfd8-2a19-449c-a260-3e0e4b6f0cc6": {
-          "description": "Chia các hình khối phức tạp thành các phần đơn giản."
-        },
-        "09012264-2762-4a05-a5e5-f5b826fe16ad": {
-          "description": "Tạo các nhân vật mới và gán cho họ trang phục và hành vi."
-        },
-        "0e3791df-3c03-4b83-9943-d3b57110dea1": {
-          "description": "Định nghĩa “nhân vật” là một nhân vật hoặc đối tượng trên màn hình có thể di chuyển và thay đổi."
-        },
-        "0b712f3f-c5fb-4d8d-8247-23bfa13c0139": {
-          "description": "Tạo các nhân vật mới và gán cho họ trang phục và hành vi."
-        },
-        "7ecf2549-51ae-4bcd-bc3a-d4fc6059b7bc": {
-          "description": "Tạo hình chuyển động bằng cách sử dụng nhân vật và hành vi."
-        },
-        "7bb23f18-d99f-4ded-af08-d9e8eee2e1e5": {
-          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng các sự kiện."
-        },
-        "938b2178-a433-4324-ba73-b1b6f8e0c0be": {
-          "description": "Phát triển các chương trình phản ứng với các sự kiện theo thời gian."
-        },
-        "ae7debff-9532-4a44-9f44-50813f955edf": {
-          "description": "Phát triển các chương trình phản ứng với dữ liệu đầu vào của người dùng."
-        },
-        "afc3a3eb-84f3-462c-89e5-2b8d3cb1f879": {
-          "description": "Tạo thú cưng ảo tương tác bằng cách sử dụng sự kiện, hành vi, biến và hình ảnh tùy chỉnh."
-        },
-        "eb7e84c2-0694-4b77-90a0-747270409a09": {
-          "description": "Lập trình giải pháp cho các vấn đề phát sinh khi thiết kế thú cưng ảo, chẳng hạn như cho ăn hoặc theo dõi tâm trạng của chúng."
-        },
-        "9f0d4053-b0bb-4213-bb8a-b07433bb84cf": {
-          "description": "Phát triển các chương trình phản hồi lại các sự kiện đã được lên lịch"
-        },
-        "f4427747-3b3f-43ac-b124-2ed1856ab5be": {
-          "description": "Tạo hiệu ứng chuyển động nhảy múa bằng mã lệnh"
-        },
-        "f6a45c87-6f01-4df0-8020-0a9be77f0d10": {
-          "description": "Phát triển các chương trình phản hồi lại thông tin đầu vào của người dùng"
-        },
-        "1d64ca6b-c3c3-41c5-b923-280bf46dbdc9": {
-          "description": "Sử dụng kết hợp các lệnh trình tự và lặp lại để đi đến cuối mê cung."
-        },
-        "8a54dbc1-2cc5-4fbe-a69d-1fcdeb521415": {
-          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi lớn nhất có thể lặp lại."
-        },
-        "d1a8cfa4-2a01-4cd1-bf6b-7bdb85dfbba2": {
-          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
-        },
-        "19f2a21b-7cd6-49c1-b058-a71afadfbf0f": {
-          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
-        },
-        "bbb2787f-1faa-4193-93ec-e2e5ff8de139": {
-          "description": "Phân biệt các lệnh cần lặp lại trong vòng lặp và các lệnh cần dùng riêng."
-        },
-        "64f8b4e0-c197-41bc-9e3d-b957587027d9": {
-          "description": "Phát hiện ra các mẫu lặp lại lớn được tạo thành từ các mẫu lặp lại nhỏ hơn."
-        },
-        "a3d9c13d-e5d1-4c96-8605-b6c6968e446a": {
-          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
-        },
-        "f875fba7-8b45-4faa-b661-24d7eae983b5": {
-          "description": "Chia các nhiệm vụ phức tạp thành các phần nhỏ hơn có thể lặp lại."
-        },
-        "2dc48a33-af54-4ea5-b2a5-4b8c16018529": {
-          "description": "Nhận ra sự khác biệt khi sử dụng vòng lặp và vòng lặp lồng nhau."
-        },
-        "3eb2fbbc-383b-4293-94a9-df920d67ff2e": {
-          "description": "Mô tả trường hợp cần vòng lặp, vòng lặp lồng nhau hoặc không cần vòng lặp."
-        },
-        "7376c401-4ea5-4247-a739-1b3c8f3077c7": {
-          "description": "Chia nhỏ mã lệnh thành các chuỗi lặp lại lớn nhất bằng cách sử dụng cả vòng lặp và vòng lặp lồng nhau."
-        },
-        "5abe1116-ce82-4bce-8454-7537bdce12d4": {
-          "description": "Xác định xem lệnh điều kiện có được đáp ứng hay không dựa trên tiêu chí."
-        },
-        "b75b5c74-2020-4cba-abb7-9c1d2432c93f": {
-          "description": "Xác định các trường hợp khi một số phần của chương trình nên chạy và khi nào chúng không nên chạy."
-        },
-        "94a0640b-eaf9-4797-b448-601edefe53f7": {
-          "description": "Dịch câu điều kiện trong ngôn ngữ nói thành chương trình."
-        },
-        "da9556fa-6a34-4735-a0fe-4f61e5dfba88": {
-          "description": "Giải bài tập bằng cách sử dụng kết hợp các chuỗi lặp lại và lệnh điều kiện."
-        },
-        "9a923506-c553-4734-8675-3925b4205a40": {
-          "description": "Phân biệt giữa vòng lặp lặp lại một số lần cố định và vòng lặp lặp lại với điều kiện đúng."
-        },
-        "ef9064e8-a2fc-43a5-a847-0e504ffd7043": {
-          "description": "Sử dụng vòng lặp while để tạo các chương trình có thể giải quyết các vấn đề với các giá trị chưa biết."
-        },
-        "11cc6b71-35eb-4651-87ef-17cb48e8e93a": {
-          "description": "Xác định các trường hợp khi một số phần của chương trình nên chạy và khi nào chúng không nên chạy."
-        },
-        "979a7e2a-759e-4ffc-96b2-552fe5888fb9": {
-          "description": "Xác định xem lệnh điều kiện có được đáp ứng hay không dựa trên tiêu chí."
-        },
-        "580ad418-73dc-42d0-8934-42fe0a9af98a": {
-          "description": "Xây dựng các chương trình với hiểu biết về nhiều chiến lược để triển khai lệnh điều kiện."
-        },
-        "94e41188-94ca-4365-878b-408e000c2a1d": {
-          "description": "Dịch câu điều kiện trong ngôn ngữ nói và vòng lặp thành chương trình."
-        },
-        "24fd8517-7a14-4489-8d76-76ddf7b9a7fe": {
-          "description": "Ghép vòng lặp và câu điều kiện với nhau."
-        },
-        "57a8c756-ad85-4861-ae8d-a54d86c19d26": {
-          "description": "Lồng lệnh điều kiện để phân tích các điều kiện nhiều giá trị bằng cách sử dụng logic nếu, nếu không."
-        },
-        "6c8101ef-895e-43de-b0a5-cbfddc2ca79f": {
-          "description": "Sử dụng hàm để đơn giản hóa các chương trình phức tạp."
-        },
-        "90578a9d-1c23-4b7e-be6d-5c2d5c18ff7b": {
-          "description": "Sử dụng hàm xác định trước để hoàn thành các nhiệm vụ thường xuyên lặp lại."
-        },
-        "05e395d7-bc15-440b-a765-833fc2e05258": {
-          "description": "Nhận biết khi nào hàm có thể giúp đơn giản hóa chương trình."
-        },
-        "3ccd51c5-ad2c-4f0e-9a41-5816a40cc190": {
-          "description": "Sử dụng hàm xác định trước để hoàn thành các nhiệm vụ thường xuyên lặp lại."
-        },
-        "33ccfa77-2a9e-4500-ba9c-0ba82af10a78": {
-          "description": "Phân loại và tổng quát mã thành các hàm hữu ích."
-        },
-        "fdfbb07a-5a1c-459d-81ae-8b7c35da4ecc": {
-          "description": "Nhận biết khi nào hàm có thể giúp đơn giản hóa chương trình."
-        },
-        "7540f285-a55a-465e-87cd-ed3a930b9ea7": {
-          "description": "Dùng biến kết hợp với lời nhắc."
-        },
-        "fc585f17-d535-4c1d-aaba-65e878894373": {
-          "description": "Hành động dùng biến để giữ các từ và cụm từ."
-        },
-        "75953ae5-c4fa-40d3-85e1-deb508c32847": {
-          "description": "Gán giá trị cho các biến hiện có."
-        },
-        "ba1c8ef0-b9fa-4784-9951-6999428d1bbc": {
-          "description": "Sử dụng biến để thay đổi các giá trị bên trong vòng lặp."
-        },
-        "e17081b3-65af-4076-afc7-e8aa69da02f2": {
-          "description": "Sử dụng biến thay cho các giá trị lặp lại bên trong chương trình."
-        },
-        "4df8eb31-02ee-4e5d-ae28-368a29da7142": {
-          "description": "Kiểm tra mã lệnh để tìm những vị trí có thể thay thế biến cho các giá trị cụ thể."
-        },
-        "d800c885-0e72-4325-a176-68612c826131": {
-          "description": "Xác định vị trí có thể dùng biến để sửa số lượng trong thời gian chạy."
-        },
-        "61ae46d2-2f10-4073-935c-b46ab9fae340": {
-          "description": "Nhận biết khi nào sử dụng vòng lặp for và khi nào sử dụng các vòng lặp khác như vòng lặp repeat và while."
-        },
-        "ec3dab8e-cfb2-4b3a-9b33-dace79bba6c6": {
-          "description": "Xác định giá trị đầu, giá trị cuối và giá trị bước cho vòng lặp for."
-        },
-        "a75dc8b9-eebc-48cd-9495-289d69501b09": {
-          "description": "Sử dụng vòng lặp for để thay đổi vòng lặp nhiều lần với các giá trị khác nhau."
-        },
-        "d759d477-89f3-4ef8-b701-c4115a3258cd": {
-          "description": "Nhận biết khi nào sử dụng vòng lặp for và khi nào sử dụng các vòng lặp khác như vòng lặp repeat và while."
-        },
-        "546d4a38-5abb-402c-9e61-bef13a71001d": {
-          "description": "Vượt qua những trở ngại như hạn chế về thời gian hoặc lỗi."
-        },
-        "8d8fffd3-6411-4778-95f5-76953d066786": {
-          "description": "Hiểu những yêu cầu khi học sinh chuyển sang phòng máy tính."
-        },
-        "d62cb1ce-6c5d-4893-ba48-3f8a844f0670": {
-          "description": "Sử dụng thuật ngữ thích hợp khi đề cập đến chuột máy tính, bàn di chuột hoặc màn hình cảm ứng."
-        },
-        "1527c354-dff7-4d8c-94f7-8b55d5bc3099": {
-          "description": "Làm mẫu các hành vi phù hợp trong phòng máy tính"
-        },
-        "fc61a33c-e645-4600-b2d3-70bb8e46a938": {
-          "description": "Thử nghiệm với các thao tác lập trình dựa trên khối tiêu chuẩn như: nhấp chuột, kéo và thả, v.v."
-        },
-        "26c1a686-8627-439a-b7f9-3e42d80d4a6c": {
-          "description": "Xây dựng một chương trình máy tính từ một tập hợp các chỉ dẫn bằng văn bản"
-        },
-        "8f583ef0-bd0b-4e2c-81c3-11057794f7e2": {
-          "description": "Xây dựng chương trình bằng cách tổ chức lại các hành động theo trình tự"
-        },
-        "e20881b1-a3ad-4095-a434-6db807d457ed": {
-          "description": "Chuyển hành động thành chuỗi lệnh."
-        },
-        "6856ac6b-753c-4870-bfe4-d6ee553ff409": {
-          "description": "Sắp xếp các lệnh theo thứ tự logic."
-        },
-        "bbf10b3a-152d-472c-82b5-761d1be6e3b2": {
-          "description": "Nhận ra các vấn đề hoặc “lỗi” trong chương trình và lập kế hoạch để giải quyết các vấn đề đó."
-        },
-        "21d90a6a-f1ea-4d0b-ba17-f2e6a53cf78c": {
-          "description": "Xác định và định vị lỗi trong chương trình."
-        },
-        "d73df8bf-fcc2-4732-a4be-cab60f8b326d": {
-          "description": "Chuyển hành động thành chuỗi lệnh."
-        },
-        "26b58b7e-9af6-4979-8a63-8f69d7f308c8": {
-          "description": "Thiết lập cấu trúc chương trình bằng cách sử dụng các cấu trúc lặp lại các nhóm mã lệnh"
-        },
-        "65939b9f-ba0f-4834-8f54-24419c9391e5": {
-          "description": "Cải thiện mã lệnh hiện có bằng cách tìm các nhóm lặp lại và chuyển chúng vào cấu trúc lặp"
-        },
-        "3a06cce8-584a-431c-8cca-05ad9b0df32d": {
-          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
-        },
-        "d7a5432f-6854-483b-8a5b-fcb1844dd603": {
-          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi nhỏ nhất có thể lặp lại."
-        },
-        "356a5953-6822-4156-b54f-e5f2095156e1": {
-          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
-        },
-        "e8114e57-1426-4241-9cbb-dc57a3edadab": {
-          "description": "Phân tách một hình khối thành dạng chuỗi lặp lại lớn nhất của hình đó."
-        },
-        "fcdb6a79-7043-4f4d-b4fe-04beeb339fea": {
-          "description": "Tạo chương trình vẽ các hình khối phức tạp bằng cách lặp lại các chuỗi đơn giản."
-        },
-        "416213df-e386-420c-aafe-40e05d790f59": {
-          "description": "Tạo chương trình vẽ các hình khối phức tạp bằng cách lặp lại các chuỗi đơn giản."
-        },
-        "448fabd8-2154-4840-9807-b0b79bab8c96": {
-          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
-        },
-        "f2e5268e-cbce-4db0-abb3-e2b6a65684d8": {
-          "description": "Phân tách một hình khối thành dạng chuỗi lặp lại lớn nhất của hình đó."
-        },
-        "35be46ad-58dd-4072-97a4-09a55c75e329": {
-          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
-        },
-        "37987315-bfd5-46fd-9faa-9e480ef816b2": {
-          "description": "Tạo một câu chuyện có hình chuyển động tương tác bằng cách sử dụng trình quản lý sự kiện và trình tự."
-        },
-        "fb6ff331-603c-4310-83e8-77e3e606edfe": {
-          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
-        },
-        "0f40a956-c075-4b89-a139-101c2288896f": {
-          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
-        },
-        "11e630e5-0551-49c9-9894-2db312a9f1df": {
-          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
-        },
-        "d2669646-8580-4bb3-a6e0-54961b42a029": {
-          "description": "Tạo câu chuyện hoạt hình, có tính tương tác bằng cách sử dụng trình tự và trình xử lý sự kiện."
-        },
-        "086d6899-da60-486b-a9f7-89715397d81c": {
-          "description": "Giải thích các quy tắc để truy cập an toàn trên internet."
-        },
-        "6ec5d1a8-13d0-43ab-a269-dc1060d0f872": {
-          "description": "So sánh cách giữ an toàn trên mạng tương tự như cách giữ an toàn trong thế giới thực."
-        },
-        "dfa4ff01-8e4b-410d-93fb-2380f70f0042": {
+        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
           "description": "Khám phá công dụng của internet để đến những nơi xa xôi và học hỏi những điều mới."
         },
-        "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
+        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
+          "description": "So sánh cách giữ an toàn trên mạng tương tự như cách giữ an toàn trong thế giới thực."
+        },
+        "ba49206c-c099-4994-be57-1f8744273eaf": {
+          "description": "Giải thích các quy tắc để truy cập an toàn trên internet."
+        },
+        "9727a876-04d5-4ae0-a904-13cd594e2fac": {
           "description": "Hiểu những yêu cầu khi học sinh chuyển sang phòng máy tính."
         },
-        "d386bcb1-393c-46bc-8524-7380583d6ebb": {
+        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
           "description": "Sử dụng thuật ngữ thích hợp khi đề cập đến chuột máy tính, bàn di chuột hoặc màn hình cảm ứng."
         },
-        "42c68792-f472-4122-906c-67bef3edae73": {
+        "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
           "description": "Dịch thuật toán thành chương trình"
         },
-        "4d08a4a4-7475-4257-a955-62768629b65e": {
-          "description": "Xác định và giải quyết các lỗi hoặc sự cố trong các chỉ dẫn theo trình tự"
-        },
-        "f28907e3-caa2-4cfa-bd01-39282b5f5f8d": {
+        "95ef707d-603d-4106-955e-3138f0f16a5d": {
           "description": "Giải mã và chạy chương trình do người khác tạo"
         },
-        "25a06d14-94e5-41a1-b199-2d8ef7041b0f": {
-          "description": "Thử nghiệm với các thao tác lập trình dựa trên khối tiêu chuẩn như: nhấp chuột, kéo và thả, v.v."
-        },
-        "2e7e4324-ea3b-4e18-a61a-0e449579669a": {
-          "description": "Làm mẫu các hành vi phù hợp trong phòng máy tính"
-        },
-        "81b0eb83-7612-4f91-91d1-f6dd25afebb6": {
-          "description": "Xây dựng chương trình bằng cách tổ chức lại các hành động theo trình tự"
-        },
-        "d6d95ae8-01ab-408a-a17d-6c4813fe0991": {
-          "description": "Xây dựng một chương trình máy tính từ một tập hợp các chỉ dẫn bằng văn bản"
-        },
-        "f3ccc59a-2988-4ec2-994f-ae781e4e66d6": {
-          "description": "Chọn các phương pháp sửa lỗi thích hợp khi giải quyết vấn đề"
-        },
-        "8fda32cd-f173-4d41-9a5c-4bb91f282534": {
-          "description": "Nhận ra các vấn đề hoặc “lỗi” trong chương trình và lập kế hoạch để giải quyết các vấn đề đó."
-        },
-        "ad2e874f-6827-4cec-bd3e-4c12a0596df5": {
-          "description": "Sắp xếp các lệnh theo thứ tự logic."
-        },
-        "242ad249-b860-4727-9b98-01f0e2025d8d": {
-          "description": "Diễn giải một chương trình có các vòng lặp là một chuỗi nhiều hành động."
-        },
-        "616d06fa-de3a-4e8e-970b-1077be296a30": {
-          "description": "Xác định mã lệnh lặp lại và rút ngắn nhiều hành động thành một vòng lặp duy nhất."
-        },
-        "a28f100d-9129-44e2-ae89-93a0e4da1ef2": {
-          "description": "Cải thiện mã lệnh hiện có bằng cách tìm các nhóm lặp lại và chuyển chúng vào cấu trúc lặp"
-        },
-        "b55b43b6-9b0d-4703-be2e-9525b05c0a26": {
-          "description": "Thiết lập cấu trúc chương trình bằng cách sử dụng các cấu trúc lặp lại các nhóm mã lệnh"
-        },
-        "95c27888-7fcc-4606-8647-b8d7aca4841c": {
-          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi nhỏ nhất có thể lặp lại."
-        },
-        "afb9f46f-81f6-4f0a-a017-4e9c5fd5c7f6": {
-          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
-        },
-        "03eb830d-5a23-4897-b23b-067e5eb0180f": {
-          "description": "Phân tách một hình khối thành dạng chuỗi lặp lại lớn nhất của hình đó."
-        },
-        "408f218c-3c80-44f0-9a98-c6bd82fa4021": {
-          "description": "Tạo chương trình vẽ các hình khối phức tạp bằng cách lặp lại các chuỗi đơn giản."
-        },
-        "eb0c126b-1a28-4a64-81a8-84713ba12efb": {
-          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
-        },
-        "11ae4f6e-9a22-4fe7-b476-d0251076f65b": {
-          "description": "Thực hành phân biệt các hành động được xác định trước và các hành động theo hướng sự kiện."
-        },
-        "699d524a-9ba6-430d-8ab4-fdce1b832b6f": {
-          "description": "Ghi nhận các hành động của giáo viên như là tín hiệu để bắt đầu các lệnh."
-        },
-        "805cf72f-fb59-4003-b6b5-1879ced802b9": {
-          "description": "Lặp lại các lệnh do giáo viên đưa ra."
-        },
-        "946d56ae-8a81-476c-93ab-6d5eff1f9633": {
-          "description": "Tạo một câu chuyện có hình chuyển động tương tác bằng cách sử dụng trình quản lý sự kiện và trình tự."
-        },
-        "ab8e0f55-bcb7-4af5-813f-df7d9629e21f": {
-          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
-        },
-        "dddf548b-2b97-45fd-ad62-f4c633d3647d": {
-          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
-        },
-        "12be98ac-b495-4379-94d1-6cdd7395776a": {
-          "description": "Vượt qua những trở ngại như hạn chế về thời gian hoặc lỗi."
-        },
-        "6619f367-009a-49ca-9d78-582a2ff9ad5e": {
-          "description": "Áp dụng các khái niệm khoa học máy tính trong dự án mở."
-        },
-        "33b55b11-ca81-406f-be39-265e8f33d09d": {
-          "description": "Xác định các cách để trả lời ngôn từ tiêu cực trên mạng, sử dụng phương pháp S-T-O-P."
-        },
-        "ce3ba860-7753-4c2c-a161-64d59903674a": {
-          "description": "Hiểu hình thức của hành vi tiêu tực trên mạng và cảm xúc mà hành vi đó gây ra cho mọi người."
-        },
-        "87841dc9-5cfa-4c68-9c56-9ca76b2668f8": {
-          "description": "Chú ý đến độ chính xác khi viết chỉ dẫn"
-        },
-        "ce7a9596-845a-4d2f-b7ce-3e27b6faa99d": {
+        "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
           "description": "Xác định và giải quyết các lỗi hoặc sự cố trong các chỉ dẫn theo trình tự"
         },
-        "1e020282-115c-4c09-877d-5003b8eb49a6": {
-          "description": "Xác định và định vị lỗi trong chương trình."
+        "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
+          "description": "Làm mẫu các hành vi phù hợp trong phòng máy tính"
         },
-        "fd4b3a3e-1db9-4890-babf-f0def99a0792": {
-          "description": "Chuyển hành động thành chuỗi lệnh."
+        "6df3d067-06bb-4e95-856f-ef980543a15e": {
+          "description": "Thử nghiệm với các thao tác lập trình dựa trên khối tiêu chuẩn như: nhấp chuột, kéo và thả, v.v."
         },
-        "1f6fd95f-78cb-4839-8943-ef8bf1b589e9": {
-          "description": "Dự đoán vị trí một chương trình sẽ bị lỗi."
+        "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
+          "description": "Xây dựng chương trình bằng cách tổ chức lại các hành động theo trình tự"
         },
-        "b3dfe6ec-41ae-4e35-92b0-aa57386cbe5d": {
-          "description": "Sửa một chương trình hiện có để giải quyết lỗi."
+        "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
+          "description": "Xây dựng một chương trình máy tính từ một tập hợp các chỉ dẫn bằng văn bản"
         },
-        "feceda1c-bb8d-4811-9f23-0594de02a6ed": {
-          "description": "Suy nghĩ về quá trình sửa lỗi theo cách phù hợp với lứa tuổi."
+        "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
+          "description": "Chọn các phương pháp sửa lỗi thích hợp khi giải quyết vấn đề"
         },
-        "10c02df1-0f34-4c22-beef-7607c0b55c9a": {
-          "description": "Biểu diễn một thuật toán như một chương trình máy tính."
+        "199aed02-347c-4892-9e98-d7571ae64c9d": {
+          "description": "Sắp xếp các lệnh theo thứ tự logic."
         },
-        "704602b1-99ad-45e8-ac96-eba9ad885da8": {
-          "description": "Sắp xếp các lệnh di chuyển theo trình tự trong một chương trình."
+        "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
+          "description": "Nhận ra các vấn đề hoặc “lỗi” trong chương trình và lập kế hoạch để giải quyết các vấn đề đó."
         },
-        "a8bc7283-57bf-460e-8f1c-f4a26035ebfc": {
-          "description": "Phát triển kỹ năng giải quyết vấn đề và tư duy phản biện bằng cách ôn lại các phương pháp sửa lỗi."
+        "407c5a4d-9337-4218-92d5-018597e41e19": {
+          "description": "Xác định mã lệnh lặp lại và rút ngắn nhiều hành động thành một vòng lặp duy nhất."
         },
-        "30aa1d4a-8e6e-4b27-8a1a-5c5ea80d6b3f": {
-          "description": "Tạo chương trình để hoàn thành một hình ảnh bằng cách sử dụng các bước theo trình tự."
+        "4c30941d-1b93-4dd9-a4f2-bbf9c9ff297f": {
+          "description": "Diễn giải một chương trình có các vòng lặp là một chuỗi nhiều hành động."
         },
-        "e0ada5e4-a180-4691-9bd3-8b83763f9dd2": {
-          "description": "Chia các hình khối phức tạp thành các phần đơn giản."
+        "cb7cab91-20ca-495a-a429-621631cb0507": {
+          "description": "Thiết lập cấu trúc chương trình bằng cách sử dụng các cấu trúc lặp lại các nhóm mã lệnh"
         },
-        "81c36d87-10e0-4f7e-91f2-88b6065ab543": {
-          "description": "Xác định các mẫu lặp lại trong mã có thể thay thế bằng vòng lặp"
+        "381b89ab-336f-41cd-b755-78142a1f1f90": {
+          "description": "Cải thiện mã lệnh hiện có bằng cách tìm các nhóm lặp lại và chuyển chúng vào cấu trúc lặp"
         },
-        "d96017f7-e2b0-45e1-aa9f-12055fcee5fe": {
-          "description": "Viết chỉ dẫn sử dụng vòng lặp để lặp lại các mẫu"
-        },
-        "00417e59-53f6-4f10-9e17-ae69f9e5db7b": {
-          "description": "Sử dụng kết hợp các lệnh trình tự và lặp lại để đi đến cuối mê cung."
-        },
-        "b2de5b75-e224-4eee-aa3a-ab51792f3dea": {
-          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi lớn nhất có thể lặp lại."
-        },
-        "be258fd0-4790-440a-99ef-bb20ce2d3c8b": {
+        "632bd918-c124-4f4c-892e-980cdc07b3bf": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
         },
-        "2998b3d3-4953-4cbf-94f2-004630893e21": {
-          "description": "Sử dụng kết hợp các lệnh theo trình tự và lặp lại để di chuyển và thực hiện các hành động."
+        "ea6a44e1-0175-4ecc-a257-4489b703c063": {
+          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi nhỏ nhất có thể lặp lại."
         },
-        "35810652-e1be-48aa-923b-1148a5c1584e": {
-          "description": "Xác định thời điểm có thể sử dụng vòng lặp để đơn giản hóa một hành động lặp đi lặp lại."
+        "a49fa168-3cd7-4918-a60a-4c4031dd0116": {
+          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
         },
-        "5b7b74bc-4f78-4c98-b221-5233324b086e": {
-          "description": "Viết chương trình làm nhiệm vụ nhất định lặp lại một lệnh duy nhất."
+        "97a73553-b88a-4b23-9b9f-0ef644cfcb4c": {
+          "description": "Phân tách một hình khối thành dạng chuỗi lặp lại lớn nhất của hình đó."
         },
-        "cf1d581f-7554-4432-a92e-3e5f57f9144e": {
-          "description": "Phân biệt các lệnh cần lặp lại trong vòng lặp và các lệnh cần dùng riêng."
+        "66267233-8532-4f63-aea5-3a214dac119a": {
+          "description": "Tạo chương trình vẽ các hình khối phức tạp bằng cách lặp lại các chuỗi đơn giản."
         },
-        "dda209ff-ec81-4914-93c0-2716153efce4": {
-          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
-        },
-        "05615b7c-1833-4ca9-96a8-45812c1e8a4a": {
-          "description": "Thực hành phân biệt các hành động được xác định trước và các hành động theo hướng sự kiện."
-        },
-        "3070da76-01ca-461e-a251-7a0abd74ec8d": {
+        "134f184c-8865-44d2-8921-5740c749bcd5": {
           "description": "Lặp lại các lệnh do giáo viên đưa ra."
         },
-        "ec6ade74-43c3-41d9-a10e-5001a2630fba": {
-          "description": "Ghi nhận chuyển động của giáo viên như là tín hiệu để bắt đầu các lệnh."
+        "b7973aec-afbf-4f81-820c-daced7731b0f": {
+          "description": "Ghi nhận các hành động của giáo viên như là tín hiệu để bắt đầu các lệnh."
         },
-        "08847046-9784-46fb-996b-17a827cbea6f": {
-          "description": "Ghép các khối với trình xử lý sự kiện thích hợp."
+        "3ec1a741-277f-46fb-9ec1-e358f399dab4": {
+          "description": "Thực hành phân biệt các hành động được xác định trước và các hành động theo hướng sự kiện."
         },
-        "6f45e56c-85b7-4e48-86d4-3394e0e7048e": {
-          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
-        },
-        "c912e4f7-5734-44cc-8090-77fe751676f4": {
-          "description": "Làm game bằng cách sử dụng trình xử lý sự kiện."
-        },
-        "36275ea8-84ac-4220-87ca-53d1b5eaac43": {
+        "106c5668-bbc0-404b-8cb5-8ff2bd66eeef": {
           "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
         },
-        "7263be7c-5e96-4ce0-8f3a-04cd57918643": {
-          "description": "Tạo game chuyển động tương tác bằng cách sử dụng trình quản lý sự kiện và trình tự."
+        "b366b41e-9396-4c1b-9d35-164052448c1c": {
+          "description": "Tạo một câu chuyện có hình chuyển động tương tác bằng cách sử dụng trình quản lý sự kiện và trình tự."
         },
-        "93ff4ab3-b610-4f61-aa17-c5d1dc187ebf": {
-          "description": "Tạo biểu đồ hình cột và biểu đồ hình tròn để biểu diễn dữ liệu đơn giản."
+        "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
+          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
         },
-        "b1760cb7-8bc1-4f45-85a4-f8231785ab7e": {
-          "description": "So sánh giữa các hình ảnh trực quan của dữ liệu do những người khác thực hiện và sử dụng chúng để dự đoán."
+        "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
+          "description": "Áp dụng các khái niệm khoa học máy tính trong dự án mở."
         },
-        "e77eca08-1bf5-47df-a660-6c5ba38d4fec": {
-          "description": "Thu thập và ghi lại dữ liệu về số lượng các đối tượng thực tế hoặc các nhân vật trên màn hình"
-        },
-        "2579c049-c0cd-4fcc-ac9f-bdd6c561ef52": {
-          "description": "Giải mã hệ nhị phân trở lại thành chữ cái."
-        },
-        "9a7d25e3-3f39-45fb-b14d-56c90df8e06a": {
-          "description": "Mã hóa các chữ cái thành hệ nhị phân."
-        },
-        "bf86db48-ae33-49e8-a236-883b166a81bb": {
-          "description": "Liên hệ ý tưởng ghi các chữ cái trên giấy với ý tưởng lưu trữ thông tin trong máy tính."
-        },
-        "06e84ef1-68ef-4bce-adfe-fcd8c7e010c7": {
+        "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
           "description": "Vượt qua những trở ngại như hạn chế về thời gian hoặc lỗi."
-        },
-        "5feb276e-2e95-4bd6-87b8-7bb9075d0d0a": {
-          "description": "Sử dụng một thiết kế đã lên kế hoạch làm bản thiết kế khi sáng tạo."
-        },
-        "214e78cd-feb0-4235-a076-0fe81d14d95a": {
-          "description": "Đào tạo và thử nghiệm mô hình máy học."
-        },
-        "db7f5c46-7cbc-477f-a325-dac7168fd719": {
-          "description": "Lý do định kiến của con người đóng vai trò quan trọng trong máy học."
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Phát triển các chương trình phản ứng với các sự kiện theo thời gian."
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Minh họa sự chuyển biến trong tâm trạng của bài thơ."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Biểu diễn ngôn ngữ nghĩa bóng và nghĩa đen trong một văn bản."
-        },
-        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
-          "description": "Hiểu những yêu cầu khi học sinh chuyển sang phòng máy tính."
-        },
-        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
-          "description": "Sử dụng thuật ngữ thích hợp khi đề cập đến chuột máy tính, bàn di chuột hoặc màn hình cảm ứng."
-        },
-        "5b8eb232-7326-4c4d-8507-0c2da9642581": {
-          "description": "Mô tả tầm quan trọng của người dùng trong quá trình thiết kế."
-        },
-        "d67e0be9-d618-464a-9f80-4549d63a2e03": {
-          "description": "Xác định các nhân vật trong một chương trình máy tính đang chạy."
-        },
-        "b827b751-3ba7-4042-a8b4-8fed0ccceb21": {
-          "description": "Tạo các nhân vật mới và gán cho họ trang phục và hành vi."
-        },
-        "06a89cf1-1a4d-429a-9797-934770d0ed18": {
-          "description": "Tạo hình chuyển động bằng cách sử dụng nhân vật và hành vi."
-        },
-        "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
-          "description": "Phát triển các chương trình phản ứng với các sự kiện theo thời gian."
-        },
-        "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f": {
-          "description": "Phát triển các chương trình phản ứng với dữ liệu đầu vào của người dùng."
-        },
-        "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7": {
-          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng các sự kiện."
-        },
-        "c3951ab5-ed99-4234-9f90-d82cfca63b70": {
-          "description": "Tạo một thú cưng ảo tương tác bằng cách sử dụng sự kiện, hành vi và hình ảnh tùy chỉnh."
-        },
-        "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
-          "description": "Lập trình giải pháp cho các vấn đề phát sinh khi thiết kế thú cưng ảo, chẳng hạn như cho ăn."
-        },
-        "8cbf109a-b450-420b-973a-db9efd47f61f": {
-          "description": "Hãy quyết định câu nói nào có thể nói trên mạng và câu nói nào là không được."
-        },
-        "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
-          "description": "Gán giá trị cho một biến"
-        },
-        "41ddf297-8c92-42c1-8157-97ba0660483d": {
-          "description": "Gọi biến nhiều lần trong một chương trình."
-        },
-        "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
-          "description": "Xác định mối quan hệ giữa cách định nghĩa, lưu trữ và truy xuất biến khi nhấn “Run” (chạy) trên một chương trình."
-        },
-        "28d3cc79-4aea-431d-a445-745e75e747d8": {
-          "description": "Dùng biến để giữ các từ và cụm từ."
-        },
-        "66e1fe88-3957-437f-a065-66909844fcd1": {
-          "description": "Dùng biến kết hợp với lời nhắc."
-        },
-        "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
-          "description": "Dùng biến để giữ các từ và cụm từ."
-        },
-        "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
-          "description": "Dùng biến kết hợp với lời nhắc."
-        },
-        "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
-          "description": "Tạo chương trình máy tính tương tác phản ứng với dữ liệu đầu vào của người dùng."
-        },
-        "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
-          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
-        },
-        "5936ef50-add4-4fbb-a911-224d5c1e9fcc": {
-          "description": "Phân biệt các lệnh cần lặp lại trong vòng lặp và các lệnh cần dùng riêng."
-        },
-        "8cba8ac9-820e-48fd-b726-f7926ecf3348": {
-          "description": "Gán giá trị cho các biến hiện có."
-        },
-        "550ac608-922b-468f-a69d-08cc1f20799e": {
-          "description": "Sử dụng biến thay cho các giá trị lặp lại bên trong chương trình."
-        },
-        "ab00e2d4-a6f0-4bdf-80fd-3d1d63a4b80f": {
-          "description": "Sử dụng biến để thay đổi các giá trị bên trong vòng lặp."
-        },
-        "dd570e3f-8340-4838-8ba1-de856546f834": {
-          "description": "Chia các nhiệm vụ phức tạp thành các phần nhỏ hơn có thể lặp lại."
-        },
-        "12412b47-e83e-43a9-ad42-e98cba364913": {
-          "description": "Phát hiện ra các mẫu lặp lại lớn được tạo thành từ các mẫu lặp lại nhỏ hơn."
-        },
-        "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
-          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
-        },
-        "059b2997-3d05-4186-8450-066fceeb8c5b": {
-          "description": "Xác định vị trí có thể dùng biến để sửa số lượng trong thời gian chạy."
-        },
-        "9d4ac105-0b5b-4e05-9a32-af6177abfb6c": {
-          "description": "Kiểm tra mã lệnh để tìm những vị trí có thể thay thế biến cho các giá trị cụ thể."
-        },
-        "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
-          "description": "Xác định giá trị đầu, giá trị cuối và giá trị bước nhảy cho “vòng lặp for”."
-        },
-        "1e676bcd-e312-4827-88ce-d6befc87d61c": {
-          "description": "Minh họa các giá trị đếm đạt được mỗi lần đi qua “vòng lặp for” trong thời gian chạy."
-        },
-        "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
-          "description": "Xác định giá trị đầu, giá trị cuối và giá trị bước cho vòng lặp for."
-        },
-        "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
-          "description": "Nhận biết khi nào sử dụng vòng lặp for và khi nào sử dụng các vòng lặp khác như vòng lặp repeat và while."
-        },
-        "68c038c1-990a-4009-ad61-619ba6ea71af": {
-          "description": "Sử dụng vòng lặp for để thay đổi vòng lặp nhiều lần với các giá trị khác nhau."
-        },
-        "7ad09074-8899-4330-bb54-6a00c5164299": {
-          "description": "Nhận biết khi nào sử dụng vòng lặp for và khi nào sử dụng các vòng lặp khác như vòng lặp repeat và while."
-        },
-        "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
-          "description": "Sử dụng bản mô phỏng máy tính để thu thập dữ liệu về một mô hình"
-        },
-        "519c1444-230e-4182-a4eb-09414a7d09fb": {
-          "description": "Vẽ biểu đồ hai đường thẳng để so sánh dữ liệu từ hai nguồn khác nhau"
-        },
-        "16dabf47-0051-4143-834c-067bb8fb605c": {
-          "description": "Dự đoán và kiểm tra dự đoán bằng cách sửa các biến trong bản mô phỏng"
-        },
-        "f748f186-f152-468e-9f51-48bee23c44db": {
-          "description": "Thảo luận về vai trò của trí tuệ nhân tạo trong cuộc sống."
-        },
-        "82bb0282-0550-4779-9a86-a15fbb93215f": {
-          "description": "Đào tạo và thử nghiệm mô hình máy học."
-        },
-        "6638c886-891e-4d59-820a-227e37274e49": {
-          "description": "Lý do định kiến của con người đóng vai trò quan trọng trong máy học."
-        },
-        "03137644-b4a2-4c28-8a6a-9de5c407a8f1": {
-          "description": "Tìm hiểu về mức độ phức tạp của quá trình gửi tin nhắn qua internet."
-        },
-        "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
-          "description": "Dịch các URL thành Địa chỉ IP."
-        },
-        "12c53e25-70d7-4192-a97a-da08dd673338": {
-          "description": "Học cách lập kế hoạch trước cho công việc đang cần hoàn thành."
-        },
-        "b76f1811-9865-416d-bd06-601301120384": {
-          "description": "Có thể giải thích ảnh hưởng do giới hạn của hệ thống đến thiết kế dự án."
-        },
-        "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b": {
-          "description": "Mô tả cách thỏa hiệp để giúp dự án đi đúng hướng và truyền cảm hứng sáng tạo."
-        },
-        "ad877f06-ef7d-4a69-8217-1e593cfac32f": {
-          "description": "Soạn thảo và thực hiện các kế hoạch để giải quyết bất kỳ vấn đề nào trong mã lệnh."
-        },
-        "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
-          "description": "Trình bày rõ quy trình thiết kế và vai trò của quy trình này trong việc tạo nên dự án hoàn thiện cuối cùng."
         },
         "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
           "description": "Hiểu được rằng thông tin chia sẻ trực tuyến để lại dấu chân số hoặc “dấu vết”."
@@ -1500,102 +207,6 @@
           "description": "Áp dụng các khái niệm khoa học máy tính trong dự án mở."
         },
         "ae68c8b9-0188-48da-a066-b89a819b67e2": {
-          "description": "Vượt qua những trở ngại như hạn chế về thời gian hoặc lỗi."
-        },
-        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
-          "description": "Khám phá công dụng của internet để đến những nơi xa xôi và học hỏi những điều mới."
-        },
-        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
-          "description": "So sánh cách giữ an toàn trên mạng tương tự như cách giữ an toàn trong thế giới thực."
-        },
-        "ba49206c-c099-4994-be57-1f8744273eaf": {
-          "description": "Giải thích các quy tắc để truy cập an toàn trên internet."
-        },
-        "9727a876-04d5-4ae0-a904-13cd594e2fac": {
-          "description": "Hiểu những yêu cầu khi học sinh chuyển sang phòng máy tính."
-        },
-        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
-          "description": "Sử dụng thuật ngữ thích hợp khi đề cập đến chuột máy tính, bàn di chuột hoặc màn hình cảm ứng."
-        },
-        "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
-          "description": "Dịch thuật toán thành chương trình"
-        },
-        "95ef707d-603d-4106-955e-3138f0f16a5d": {
-          "description": "Giải mã và chạy chương trình do người khác tạo"
-        },
-        "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
-          "description": "Xác định và giải quyết các lỗi hoặc sự cố trong các chỉ dẫn theo trình tự"
-        },
-        "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
-          "description": "Làm mẫu các hành vi phù hợp trong phòng máy tính"
-        },
-        "6df3d067-06bb-4e95-856f-ef980543a15e": {
-          "description": "Thử nghiệm với các thao tác lập trình dựa trên khối tiêu chuẩn như: nhấp chuột, kéo và thả, v.v."
-        },
-        "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
-          "description": "Xây dựng chương trình bằng cách tổ chức lại các hành động theo trình tự"
-        },
-        "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
-          "description": "Xây dựng một chương trình máy tính từ một tập hợp các chỉ dẫn bằng văn bản"
-        },
-        "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
-          "description": "Chọn các phương pháp sửa lỗi thích hợp khi giải quyết vấn đề"
-        },
-        "199aed02-347c-4892-9e98-d7571ae64c9d": {
-          "description": "Sắp xếp các lệnh theo thứ tự logic."
-        },
-        "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
-          "description": "Nhận ra các vấn đề hoặc “lỗi” trong chương trình và lập kế hoạch để giải quyết các vấn đề đó."
-        },
-        "407c5a4d-9337-4218-92d5-018597e41e19": {
-          "description": "Xác định mã lệnh lặp lại và rút ngắn nhiều hành động thành một vòng lặp duy nhất."
-        },
-        "4c30941d-1b93-4dd9-a4f2-bbf9c9ff297f": {
-          "description": "Diễn giải một chương trình có các vòng lặp là một chuỗi nhiều hành động."
-        },
-        "cb7cab91-20ca-495a-a429-621631cb0507": {
-          "description": "Thiết lập cấu trúc chương trình bằng cách sử dụng các cấu trúc lặp lại các nhóm mã lệnh"
-        },
-        "381b89ab-336f-41cd-b755-78142a1f1f90": {
-          "description": "Cải thiện mã lệnh hiện có bằng cách tìm các nhóm lặp lại và chuyển chúng vào cấu trúc lặp"
-        },
-        "632bd918-c124-4f4c-892e-980cdc07b3bf": {
-          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
-        },
-        "ea6a44e1-0175-4ecc-a257-4489b703c063": {
-          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi nhỏ nhất có thể lặp lại."
-        },
-        "a49fa168-3cd7-4918-a60a-4c4031dd0116": {
-          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
-        },
-        "97a73553-b88a-4b23-9b9f-0ef644cfcb4c": {
-          "description": "Phân tách một hình khối thành dạng chuỗi lặp lại lớn nhất của hình đó."
-        },
-        "66267233-8532-4f63-aea5-3a214dac119a": {
-          "description": "Tạo chương trình vẽ các hình khối phức tạp bằng cách lặp lại các chuỗi đơn giản."
-        },
-        "134f184c-8865-44d2-8921-5740c749bcd5": {
-          "description": "Lặp lại các lệnh do giáo viên đưa ra."
-        },
-        "b7973aec-afbf-4f81-820c-daced7731b0f": {
-          "description": "Ghi nhận các hành động của giáo viên như là tín hiệu để bắt đầu các lệnh."
-        },
-        "3ec1a741-277f-46fb-9ec1-e358f399dab4": {
-          "description": "Thực hành phân biệt các hành động được xác định trước và các hành động theo hướng sự kiện."
-        },
-        "106c5668-bbc0-404b-8cb5-8ff2bd66eeef": {
-          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
-        },
-        "b366b41e-9396-4c1b-9d35-164052448c1c": {
-          "description": "Tạo một câu chuyện có hình chuyển động tương tác bằng cách sử dụng trình quản lý sự kiện và trình tự."
-        },
-        "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
-          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
-        },
-        "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
-          "description": "Áp dụng các khái niệm khoa học máy tính trong dự án mở."
-        },
-        "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
           "description": "Vượt qua những trở ngại như hạn chế về thời gian hoặc lỗi."
         },
         "1b4ddab6-f8a7-436e-929d-8ea87e41575f": {
@@ -1837,6 +448,270 @@
         },
         "92ad0a98-e2e5-4104-8a9f-1dee9409f300": {
           "description": "Vượt qua những trở ngại như hạn chế về thời gian hoặc lỗi."
+        },
+        "a937dee9-2cd3-4978-8f88-09f8af577395": {
+          "description": "bắt đầu liên hệ với phương pháp lập trình mới"
+        },
+        "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
+          "description": "Định nghĩa “nhân vật” là một nhân vật hoặc đối tượng trên màn hình có thể di chuyển và thay đổi."
+        },
+        "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
+          "description": "Tạo các nhân vật mới và gán cho họ trang phục và hành vi."
+        },
+        "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
+          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
+        },
+        "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
+          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật, hành vi và sự kiện."
+        },
+        "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
+          "description": "Xác định lý do tại sao mọi người chia sẻ thông tin về bản thân trên mạng."
+        },
+        "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
+          "description": "Giải thích sự khác biệt giữa thông tin cá nhân và riêng tư."
+        },
+        "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
+          "description": "Giải thích lý do chia sẻ thông tin riêng tư trên mạng có rủi ro."
+        },
+        "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
+          "description": "Hãy chọn thông tin về bản thân có thể chia sẻ trực tuyến."
+        },
+        "3ab2d965-5fe5-4a1e-b745-8118e6815776": {
+          "description": "Tạo chương trình máy tính tương tác thể hiện bản thân bằng văn bản và hình ảnh tùy chỉnh."
+        },
+        "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
+          "description": "Giải thích việc chia sẻ tài liệu có bản quyền có đạo đức so với việc chia sẻ không hợp đạo đức."
+        },
+        "0709575a-e9e6-4856-a4f4-02b290f86975": {
+          "description": "Hiểu các quyền của chính mình đối với các tài liệu mà mình tạo ra"
+        },
+        "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
+          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
+          "description": "Phân biệt các lệnh cần lặp lại trong vòng lặp và các lệnh cần dùng riêng."
+        },
+        "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8": {
+          "description": "Kết hợp các hình khối đơn giản thành các thiết kế phức tạp với các vòng lặp lồng nhau."
+        },
+        "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
+          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
+        },
+        "5b77c883-5479-4cfe-a31a-605957dd083d": {
+          "description": "Chia các nhiệm vụ phức tạp thành các phần nhỏ hơn có thể lặp lại."
+        },
+        "6174da85-eb3a-4c0e-925d-360b04604fdb": {
+          "description": "Mô tả trường hợp cần vòng lặp, vòng lặp lồng nhau hoặc không cần vòng lặp."
+        },
+        "90591bd7-cbd5-46c4-95dc-59e16e5a949c": {
+          "description": "Nhận ra sự khác biệt khi sử dụng vòng lặp và vòng lặp lồng nhau."
+        },
+        "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d": {
+          "description": "Chia nhỏ mã lệnh thành các chuỗi lặp lại lớn nhất bằng cách sử dụng cả vòng lặp và vòng lặp lồng nhau."
+        },
+        "e26d818e-81fd-43c6-8558-fc69835e693a": {
+          "description": "Tìm các cụm từ lặp lại trong lời bài hát."
+        },
+        "815c91bc-4848-43ba-a234-d1b184ab120b": {
+          "description": "Xác định các phần của bài hát để đưa vào hàm."
+        },
+        "77ee523c-1e51-4c99-beda-c0e53812a1e7": {
+          "description": "Mô tả cách hàm giúp chương trình dễ viết hơn."
+        },
+        "4a6b973a-63cc-4c8d-8e25-e10648ccaa20": {
+          "description": "Sử dụng hàm để đơn giản hóa các chương trình phức tạp."
+        },
+        "763f0ac3-d0b3-487a-b83d-151e2b3bee94": {
+          "description": "Sử dụng hàm xác định trước để hoàn thành các nhiệm vụ thường xuyên lặp lại."
+        },
+        "fbae45e8-1bd0-4b7d-9ae3-431c11cf0c56": {
+          "description": "Phân loại và tổng quát mã thành các hàm hữu ích."
+        },
+        "75ef4b25-6f64-4795-9a13-f0d27662040e": {
+          "description": "Nhận biết khi nào hàm có thể giúp đơn giản hóa chương trình."
+        },
+        "e23e9b8a-cb10-4ec2-ac46-516d6a538d91": {
+          "description": "Xác định các trường hợp khi một số phần của chương trình nên chạy và khi nào chúng không nên chạy."
+        },
+        "fa7e3e31-19dd-47cb-b3f3-fdf47765b870": {
+          "description": "Xác định xem lệnh điều kiện có được đáp ứng hay không dựa trên tiêu chí."
+        },
+        "9c7ff713-c208-4acf-9691-da7a4a152565": {
+          "description": "Xác định các trường hợp khi một số phần của chương trình nên chạy và khi nào chúng không nên chạy."
+        },
+        "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc": {
+          "description": "Xác định xem lệnh điều kiện có được đáp ứng hay không dựa trên tiêu chí."
+        },
+        "dc1b604a-9814-45f4-aed5-b76776ad818c": {
+          "description": "Nhận biết khi nào hàm có thể giúp đơn giản hóa chương trình."
+        },
+        "cff52f84-5090-495e-a37b-02cf8b666ad6": {
+          "description": "Sử dụng hàm xác định trước để hoàn thành các nhiệm vụ thường xuyên lặp lại."
+        },
+        "87094122-056f-4fa4-83b7-e3d6abb52e67": {
+          "description": "Mô tả tác động của ứng dụng dành cho thiết bị di động đối với thế giới hiện đại."
+        },
+        "b672db1b-ee05-44b3-9f82-73b1b1f94e1a": {
+          "description": "Giải thích lý do trợ năng là một phần quan trọng trong thiết kế ứng dụng cho người dùng."
+        },
+        "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe": {
+          "description": "Cải thiện thiết kế ứng dụng hiện có bằng cách giải quyết nhu cầu trợ năng của người dùng."
+        },
+        "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
+          "description": "Học cách lập kế hoạch trước cho công việc đang cần hoàn thành."
+        },
+        "63070ef2-2aab-4493-a65f-7516e7aadb98": {
+          "description": "Giải thích ảnh hưởng do giới hạn của hệ thống đến thiết kế dự án."
+        },
+        "45927b72-922a-4845-8b40-2458a92372f5": {
+          "description": "Mô tả cách thỏa hiệp để giúp dự án đi đúng hướng và truyền cảm hứng sáng tạo."
+        },
+        "db7d248b-f06c-475c-8413-f1ea08fae35b": {
+          "description": "Soạn thảo và thực hiện các kế hoạch để giải quyết bất kỳ vấn đề nào trong mã lệnh."
+        },
+        "2594052b-3b87-4d83-9038-56175058c1c2": {
+          "description": "Trình bày rõ quy trình thiết kế và vai trò của quy trình này trong việc tạo nên dự án hoàn thiện cuối cùng."
+        },
+        "5b8eb232-7326-4c4d-8507-0c2da9642581": {
+          "description": "Mô tả tầm quan trọng của người dùng trong quá trình thiết kế."
+        },
+        "d67e0be9-d618-464a-9f80-4549d63a2e03": {
+          "description": "Xác định các nhân vật trong một chương trình máy tính đang chạy."
+        },
+        "b827b751-3ba7-4042-a8b4-8fed0ccceb21": {
+          "description": "Tạo các nhân vật mới và gán cho họ trang phục và hành vi."
+        },
+        "06a89cf1-1a4d-429a-9797-934770d0ed18": {
+          "description": "Tạo hình chuyển động bằng cách sử dụng nhân vật và hành vi."
+        },
+        "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
+          "description": "Phát triển các chương trình phản ứng với các sự kiện theo thời gian."
+        },
+        "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f": {
+          "description": "Phát triển các chương trình phản ứng với dữ liệu đầu vào của người dùng."
+        },
+        "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7": {
+          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng các sự kiện."
+        },
+        "c3951ab5-ed99-4234-9f90-d82cfca63b70": {
+          "description": "Tạo một thú cưng ảo tương tác bằng cách sử dụng sự kiện, hành vi và hình ảnh tùy chỉnh."
+        },
+        "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
+          "description": "Lập trình giải pháp cho các vấn đề phát sinh khi thiết kế thú cưng ảo, chẳng hạn như cho ăn."
+        },
+        "8cbf109a-b450-420b-973a-db9efd47f61f": {
+          "description": "Hãy quyết định câu nói nào có thể nói trên mạng và câu nói nào là không được."
+        },
+        "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
+          "description": "Gán giá trị cho một biến"
+        },
+        "41ddf297-8c92-42c1-8157-97ba0660483d": {
+          "description": "Gọi biến nhiều lần trong một chương trình."
+        },
+        "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
+          "description": "Xác định mối quan hệ giữa cách định nghĩa, lưu trữ và truy xuất biến khi nhấn “Run” (chạy) trên một chương trình."
+        },
+        "28d3cc79-4aea-431d-a445-745e75e747d8": {
+          "description": "Dùng biến để giữ các từ và cụm từ."
+        },
+        "66e1fe88-3957-437f-a065-66909844fcd1": {
+          "description": "Dùng biến kết hợp với lời nhắc."
+        },
+        "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
+          "description": "Dùng biến để giữ các từ và cụm từ."
+        },
+        "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
+          "description": "Dùng biến kết hợp với lời nhắc."
+        },
+        "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
+          "description": "Tạo chương trình máy tính tương tác phản ứng với dữ liệu đầu vào của người dùng."
+        },
+        "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
+          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "5936ef50-add4-4fbb-a911-224d5c1e9fcc": {
+          "description": "Phân biệt các lệnh cần lặp lại trong vòng lặp và các lệnh cần dùng riêng."
+        },
+        "8cba8ac9-820e-48fd-b726-f7926ecf3348": {
+          "description": "Gán giá trị cho các biến hiện có."
+        },
+        "550ac608-922b-468f-a69d-08cc1f20799e": {
+          "description": "Sử dụng biến thay cho các giá trị lặp lại bên trong chương trình."
+        },
+        "ab00e2d4-a6f0-4bdf-80fd-3d1d63a4b80f": {
+          "description": "Sử dụng biến để thay đổi các giá trị bên trong vòng lặp."
+        },
+        "dd570e3f-8340-4838-8ba1-de856546f834": {
+          "description": "Chia các nhiệm vụ phức tạp thành các phần nhỏ hơn có thể lặp lại."
+        },
+        "12412b47-e83e-43a9-ad42-e98cba364913": {
+          "description": "Phát hiện ra các mẫu lặp lại lớn được tạo thành từ các mẫu lặp lại nhỏ hơn."
+        },
+        "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
+          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "059b2997-3d05-4186-8450-066fceeb8c5b": {
+          "description": "Xác định vị trí có thể dùng biến để sửa số lượng trong thời gian chạy."
+        },
+        "9d4ac105-0b5b-4e05-9a32-af6177abfb6c": {
+          "description": "Kiểm tra mã lệnh để tìm những vị trí có thể thay thế biến cho các giá trị cụ thể."
+        },
+        "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
+          "description": "Xác định giá trị đầu, giá trị cuối và giá trị bước nhảy cho “vòng lặp for”."
+        },
+        "1e676bcd-e312-4827-88ce-d6befc87d61c": {
+          "description": "Minh họa các giá trị đếm đạt được mỗi lần đi qua “vòng lặp for” trong thời gian chạy."
+        },
+        "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
+          "description": "Xác định giá trị đầu, giá trị cuối và giá trị bước cho vòng lặp for."
+        },
+        "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
+          "description": "Nhận biết khi nào sử dụng vòng lặp for và khi nào sử dụng các vòng lặp khác như vòng lặp repeat và while."
+        },
+        "68c038c1-990a-4009-ad61-619ba6ea71af": {
+          "description": "Sử dụng vòng lặp for để thay đổi vòng lặp nhiều lần với các giá trị khác nhau."
+        },
+        "7ad09074-8899-4330-bb54-6a00c5164299": {
+          "description": "Nhận biết khi nào sử dụng vòng lặp for và khi nào sử dụng các vòng lặp khác như vòng lặp repeat và while."
+        },
+        "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
+          "description": "Sử dụng bản mô phỏng máy tính để thu thập dữ liệu về một mô hình"
+        },
+        "519c1444-230e-4182-a4eb-09414a7d09fb": {
+          "description": "Vẽ biểu đồ hai đường thẳng để so sánh dữ liệu từ hai nguồn khác nhau"
+        },
+        "16dabf47-0051-4143-834c-067bb8fb605c": {
+          "description": "Dự đoán và kiểm tra dự đoán bằng cách sửa các biến trong bản mô phỏng"
+        },
+        "f748f186-f152-468e-9f51-48bee23c44db": {
+          "description": "Thảo luận về vai trò của trí tuệ nhân tạo trong cuộc sống."
+        },
+        "82bb0282-0550-4779-9a86-a15fbb93215f": {
+          "description": "Đào tạo và thử nghiệm mô hình máy học."
+        },
+        "6638c886-891e-4d59-820a-227e37274e49": {
+          "description": "Lý do định kiến của con người đóng vai trò quan trọng trong máy học."
+        },
+        "03137644-b4a2-4c28-8a6a-9de5c407a8f1": {
+          "description": "Tìm hiểu về mức độ phức tạp của quá trình gửi tin nhắn qua internet."
+        },
+        "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
+          "description": "Dịch các URL thành Địa chỉ IP."
+        },
+        "12c53e25-70d7-4192-a97a-da08dd673338": {
+          "description": "Học cách lập kế hoạch trước cho công việc đang cần hoàn thành."
+        },
+        "b76f1811-9865-416d-bd06-601301120384": {
+          "description": "Có thể giải thích ảnh hưởng do giới hạn của hệ thống đến thiết kế dự án."
+        },
+        "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b": {
+          "description": "Mô tả cách thỏa hiệp để giúp dự án đi đúng hướng và truyền cảm hứng sáng tạo."
+        },
+        "ad877f06-ef7d-4a69-8217-1e593cfac32f": {
+          "description": "Soạn thảo và thực hiện các kế hoạch để giải quyết bất kỳ vấn đề nào trong mã lệnh."
+        },
+        "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
+          "description": "Trình bày rõ quy trình thiết kế và vai trò của quy trình này trong việc tạo nên dự án hoàn thiện cuối cùng."
         },
         "8c021568-46ed-4243-a4d1-f2037138c01a": {
           "description": "Chuyển hành động thành chuỗi lệnh."
@@ -2108,134 +983,1259 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
         },
-        "a937dee9-2cd3-4978-8f88-09f8af577395": {
-          "description": "bắt đầu liên hệ với phương pháp lập trình mới"
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
         },
-        "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
-          "description": "Định nghĩa “nhân vật” là một nhân vật hoặc đối tượng trên màn hình có thể di chuyển và thay đổi."
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
         },
-        "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
-          "description": "Tạo các nhân vật mới và gán cho họ trang phục và hành vi."
-        },
-        "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
-          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
-        },
-        "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
-          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật, hành vi và sự kiện."
-        },
-        "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
-          "description": "Xác định lý do tại sao mọi người chia sẻ thông tin về bản thân trên mạng."
-        },
-        "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
-          "description": "Giải thích sự khác biệt giữa thông tin cá nhân và riêng tư."
-        },
-        "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
-          "description": "Giải thích lý do chia sẻ thông tin riêng tư trên mạng có rủi ro."
-        },
-        "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
-          "description": "Hãy chọn thông tin về bản thân có thể chia sẻ trực tuyến."
-        },
-        "3ab2d965-5fe5-4a1e-b745-8118e6815776": {
-          "description": "Tạo chương trình máy tính tương tác thể hiện bản thân bằng văn bản và hình ảnh tùy chỉnh."
-        },
-        "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
-          "description": "Giải thích việc chia sẻ tài liệu có bản quyền có đạo đức so với việc chia sẻ không hợp đạo đức."
-        },
-        "0709575a-e9e6-4856-a4f4-02b290f86975": {
-          "description": "Hiểu các quyền của chính mình đối với các tài liệu mà mình tạo ra"
-        },
-        "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
-          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
-        },
-        "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
-          "description": "Phân biệt các lệnh cần lặp lại trong vòng lặp và các lệnh cần dùng riêng."
-        },
-        "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8": {
-          "description": "Kết hợp các hình khối đơn giản thành các thiết kế phức tạp với các vòng lặp lồng nhau."
-        },
-        "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
-          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
-        },
-        "5b77c883-5479-4cfe-a31a-605957dd083d": {
-          "description": "Chia các nhiệm vụ phức tạp thành các phần nhỏ hơn có thể lặp lại."
-        },
-        "6174da85-eb3a-4c0e-925d-360b04604fdb": {
-          "description": "Mô tả trường hợp cần vòng lặp, vòng lặp lồng nhau hoặc không cần vòng lặp."
-        },
-        "90591bd7-cbd5-46c4-95dc-59e16e5a949c": {
-          "description": "Nhận ra sự khác biệt khi sử dụng vòng lặp và vòng lặp lồng nhau."
-        },
-        "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d": {
-          "description": "Chia nhỏ mã lệnh thành các chuỗi lặp lại lớn nhất bằng cách sử dụng cả vòng lặp và vòng lặp lồng nhau."
-        },
-        "e26d818e-81fd-43c6-8558-fc69835e693a": {
-          "description": "Tìm các cụm từ lặp lại trong lời bài hát."
-        },
-        "815c91bc-4848-43ba-a234-d1b184ab120b": {
-          "description": "Xác định các phần của bài hát để đưa vào hàm."
-        },
-        "77ee523c-1e51-4c99-beda-c0e53812a1e7": {
-          "description": "Mô tả cách hàm giúp chương trình dễ viết hơn."
-        },
-        "4a6b973a-63cc-4c8d-8e25-e10648ccaa20": {
-          "description": "Sử dụng hàm để đơn giản hóa các chương trình phức tạp."
-        },
-        "763f0ac3-d0b3-487a-b83d-151e2b3bee94": {
-          "description": "Sử dụng hàm xác định trước để hoàn thành các nhiệm vụ thường xuyên lặp lại."
-        },
-        "fbae45e8-1bd0-4b7d-9ae3-431c11cf0c56": {
-          "description": "Phân loại và tổng quát mã thành các hàm hữu ích."
-        },
-        "75ef4b25-6f64-4795-9a13-f0d27662040e": {
-          "description": "Nhận biết khi nào hàm có thể giúp đơn giản hóa chương trình."
-        },
-        "e23e9b8a-cb10-4ec2-ac46-516d6a538d91": {
-          "description": "Xác định các trường hợp khi một số phần của chương trình nên chạy và khi nào chúng không nên chạy."
-        },
-        "fa7e3e31-19dd-47cb-b3f3-fdf47765b870": {
-          "description": "Xác định xem lệnh điều kiện có được đáp ứng hay không dựa trên tiêu chí."
-        },
-        "9c7ff713-c208-4acf-9691-da7a4a152565": {
-          "description": "Xác định các trường hợp khi một số phần của chương trình nên chạy và khi nào chúng không nên chạy."
-        },
-        "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc": {
-          "description": "Xác định xem lệnh điều kiện có được đáp ứng hay không dựa trên tiêu chí."
-        },
-        "dc1b604a-9814-45f4-aed5-b76776ad818c": {
-          "description": "Nhận biết khi nào hàm có thể giúp đơn giản hóa chương trình."
-        },
-        "cff52f84-5090-495e-a37b-02cf8b666ad6": {
-          "description": "Sử dụng hàm xác định trước để hoàn thành các nhiệm vụ thường xuyên lặp lại."
-        },
-        "87094122-056f-4fa4-83b7-e3d6abb52e67": {
-          "description": "Mô tả tác động của ứng dụng dành cho thiết bị di động đối với thế giới hiện đại."
-        },
-        "b672db1b-ee05-44b3-9f82-73b1b1f94e1a": {
-          "description": "Giải thích lý do trợ năng là một phần quan trọng trong thiết kế ứng dụng cho người dùng."
-        },
-        "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe": {
-          "description": "Cải thiện thiết kế ứng dụng hiện có bằng cách giải quyết nhu cầu trợ năng của người dùng."
-        },
-        "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
-          "description": "Học cách lập kế hoạch trước cho công việc đang cần hoàn thành."
-        },
-        "63070ef2-2aab-4493-a65f-7516e7aadb98": {
-          "description": "Giải thích ảnh hưởng do giới hạn của hệ thống đến thiết kế dự án."
-        },
-        "45927b72-922a-4845-8b40-2458a92372f5": {
-          "description": "Mô tả cách thỏa hiệp để giúp dự án đi đúng hướng và truyền cảm hứng sáng tạo."
-        },
-        "db7d248b-f06c-475c-8413-f1ea08fae35b": {
-          "description": "Soạn thảo và thực hiện các kế hoạch để giải quyết bất kỳ vấn đề nào trong mã lệnh."
-        },
-        "2594052b-3b87-4d83-9038-56175058c1c2": {
-          "description": "Trình bày rõ quy trình thiết kế và vai trò của quy trình này trong việc tạo nên dự án hoàn thiện cuối cùng."
-        },
-        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+        "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Đào tạo và thử nghiệm mô hình máy học."
         },
-        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+        "db7f5c46-7cbc-477f-a325-dac7168fd719": {
           "description": "Lý do định kiến của con người đóng vai trò quan trọng trong máy học."
+        },
+        "086d6899-da60-486b-a9f7-89715397d81c": {
+          "description": "Giải thích các quy tắc để truy cập an toàn trên internet."
+        },
+        "6ec5d1a8-13d0-43ab-a269-dc1060d0f872": {
+          "description": "So sánh cách giữ an toàn trên mạng tương tự như cách giữ an toàn trong thế giới thực."
+        },
+        "dfa4ff01-8e4b-410d-93fb-2380f70f0042": {
+          "description": "Khám phá công dụng của internet để đến những nơi xa xôi và học hỏi những điều mới."
+        },
+        "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
+          "description": "Hiểu những yêu cầu khi học sinh chuyển sang phòng máy tính."
+        },
+        "d386bcb1-393c-46bc-8524-7380583d6ebb": {
+          "description": "Sử dụng thuật ngữ thích hợp khi đề cập đến chuột máy tính, bàn di chuột hoặc màn hình cảm ứng."
+        },
+        "42c68792-f472-4122-906c-67bef3edae73": {
+          "description": "Dịch thuật toán thành chương trình"
+        },
+        "4d08a4a4-7475-4257-a955-62768629b65e": {
+          "description": "Xác định và giải quyết các lỗi hoặc sự cố trong các chỉ dẫn theo trình tự"
+        },
+        "f28907e3-caa2-4cfa-bd01-39282b5f5f8d": {
+          "description": "Giải mã và chạy chương trình do người khác tạo"
+        },
+        "25a06d14-94e5-41a1-b199-2d8ef7041b0f": {
+          "description": "Thử nghiệm với các thao tác lập trình dựa trên khối tiêu chuẩn như: nhấp chuột, kéo và thả, v.v."
+        },
+        "2e7e4324-ea3b-4e18-a61a-0e449579669a": {
+          "description": "Làm mẫu các hành vi phù hợp trong phòng máy tính"
+        },
+        "81b0eb83-7612-4f91-91d1-f6dd25afebb6": {
+          "description": "Xây dựng chương trình bằng cách tổ chức lại các hành động theo trình tự"
+        },
+        "d6d95ae8-01ab-408a-a17d-6c4813fe0991": {
+          "description": "Xây dựng một chương trình máy tính từ một tập hợp các chỉ dẫn bằng văn bản"
+        },
+        "f3ccc59a-2988-4ec2-994f-ae781e4e66d6": {
+          "description": "Chọn các phương pháp sửa lỗi thích hợp khi giải quyết vấn đề"
+        },
+        "8fda32cd-f173-4d41-9a5c-4bb91f282534": {
+          "description": "Nhận ra các vấn đề hoặc “lỗi” trong chương trình và lập kế hoạch để giải quyết các vấn đề đó."
+        },
+        "ad2e874f-6827-4cec-bd3e-4c12a0596df5": {
+          "description": "Sắp xếp các lệnh theo thứ tự logic."
+        },
+        "242ad249-b860-4727-9b98-01f0e2025d8d": {
+          "description": "Diễn giải một chương trình có các vòng lặp là một chuỗi nhiều hành động."
+        },
+        "616d06fa-de3a-4e8e-970b-1077be296a30": {
+          "description": "Xác định mã lệnh lặp lại và rút ngắn nhiều hành động thành một vòng lặp duy nhất."
+        },
+        "a28f100d-9129-44e2-ae89-93a0e4da1ef2": {
+          "description": "Cải thiện mã lệnh hiện có bằng cách tìm các nhóm lặp lại và chuyển chúng vào cấu trúc lặp"
+        },
+        "b55b43b6-9b0d-4703-be2e-9525b05c0a26": {
+          "description": "Thiết lập cấu trúc chương trình bằng cách sử dụng các cấu trúc lặp lại các nhóm mã lệnh"
+        },
+        "95c27888-7fcc-4606-8647-b8d7aca4841c": {
+          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi nhỏ nhất có thể lặp lại."
+        },
+        "afb9f46f-81f6-4f0a-a017-4e9c5fd5c7f6": {
+          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "03eb830d-5a23-4897-b23b-067e5eb0180f": {
+          "description": "Phân tách một hình khối thành dạng chuỗi lặp lại lớn nhất của hình đó."
+        },
+        "408f218c-3c80-44f0-9a98-c6bd82fa4021": {
+          "description": "Tạo chương trình vẽ các hình khối phức tạp bằng cách lặp lại các chuỗi đơn giản."
+        },
+        "eb0c126b-1a28-4a64-81a8-84713ba12efb": {
+          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
+        },
+        "11ae4f6e-9a22-4fe7-b476-d0251076f65b": {
+          "description": "Thực hành phân biệt các hành động được xác định trước và các hành động theo hướng sự kiện."
+        },
+        "699d524a-9ba6-430d-8ab4-fdce1b832b6f": {
+          "description": "Ghi nhận các hành động của giáo viên như là tín hiệu để bắt đầu các lệnh."
+        },
+        "805cf72f-fb59-4003-b6b5-1879ced802b9": {
+          "description": "Lặp lại các lệnh do giáo viên đưa ra."
+        },
+        "946d56ae-8a81-476c-93ab-6d5eff1f9633": {
+          "description": "Tạo một câu chuyện có hình chuyển động tương tác bằng cách sử dụng trình quản lý sự kiện và trình tự."
+        },
+        "ab8e0f55-bcb7-4af5-813f-df7d9629e21f": {
+          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
+        },
+        "dddf548b-2b97-45fd-ad62-f4c633d3647d": {
+          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
+        },
+        "12be98ac-b495-4379-94d1-6cdd7395776a": {
+          "description": "Vượt qua những trở ngại như hạn chế về thời gian hoặc lỗi."
+        },
+        "6619f367-009a-49ca-9d78-582a2ff9ad5e": {
+          "description": "Áp dụng các khái niệm khoa học máy tính trong dự án mở."
+        },
+        "4bf451c9-a1ce-4e40-95a6-10c911a081bf": {
+          "description": "Hiểu được rằng thông tin chia sẻ trực tuyến để lại dấu chân số hoặc “dấu vết”."
+        },
+        "7cc37ede-4e83-4881-9213-1746313de397": {
+          "description": "Khám phá thông tin nào CÓ THỂ chia sẻ trực tuyến."
+        },
+        "1fb2f469-060b-4caf-ab67-28747acc0f00": {
+          "description": "Dịch danh sách các bước thành một loạt hành động thực tế"
+        },
+        "8a9a5295-648e-47f2-baec-c5a360f2788a": {
+          "description": "Hãy xác định danh sách các bước (thuật toán) để đưa một người bạn từ vị trí xuất phát đến đích"
+        },
+        "ab239024-3c6d-4db1-8c7c-2572c316dc75": {
+          "description": "Xác định và sửa lỗi trong quá trình thực thi thuật toán"
+        },
+        "9c04f7e1-5859-4e61-9ae0-630df254a9aa": {
+          "description": "Làm mẫu các hành vi phù hợp trong phòng máy tính"
+        },
+        "c78930e6-cbb5-418c-8ca3-9124e79570cd": {
+          "description": "Thử nghiệm với các thao tác lập trình dựa trên khối tiêu chuẩn như: nhấp chuột, kéo và thả, v.v."
+        },
+        "0ad6ceff-faa1-40ea-a688-7ad92308dca3": {
+          "description": "Xây dựng chương trình bằng cách tổ chức lại các hành động theo trình tự."
+        },
+        "1c946e64-eafa-4a8f-8c2d-5829ab3acbf7": {
+          "description": "Xây dựng một chương trình máy tính từ một tập hợp các chỉ dẫn bằng văn bản."
+        },
+        "59718681-70e8-4b7f-91a7-e6b02e4ca98f": {
+          "description": "Chuyển hành động thành chuỗi lệnh."
+        },
+        "a278cf3e-4bf9-4d1c-b9d0-a73c2530e3d8": {
+          "description": "Chuyển hành động thành chuỗi lệnh."
+        },
+        "ae6f9158-191c-458c-9850-331faf94b567": {
+          "description": "Xác định và định vị lỗi trong chương trình."
+        },
+        "72900cbd-2ad8-4073-abde-f397a2832b5d": {
+          "description": "Chuyển chuỗi gồm nhiều hành động thành vòng lặp."
+        },
+        "76138142-0691-4645-8e78-5dbb1c19eab0": {
+          "description": "Chuyển chương trình hình ảnh thành điệu nhảy thực tế."
+        },
+        "ad9095b2-5de7-41af-89b9-aac0f2fd0726": {
+          "description": "Lặp lại các hành động do giáo viên thực hiện."
+        },
+        "2b7ac17e-7e3a-44b5-8c46-e28eec5af112": {
+          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi nhỏ nhất có thể lặp lại."
+        },
+        "4d6affaa-f8b0-4dbc-a436-4dccf8c57fc1": {
+          "description": "Sử dụng kết hợp các lệnh trình tự và lặp lại để đi đến cuối mê cung."
+        },
+        "be1a4163-770d-4fbd-85a1-4c18198d5c94": {
+          "description": "Tạo chương trình làm nhiệm vụ nhất định lặp lại một chuỗi lệnh."
+        },
+        "dbb376e1-41ba-4f5f-8125-30a2de24cead": {
+          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "36786d0a-ce44-48d7-b557-a7e44c32c28d": {
+          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "6baba9ab-130e-4a58-bf30-7cee60bacb18": {
+          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi nhỏ nhất có thể lặp lại."
+        },
+        "54ae27f7-71b5-41ce-a67a-61d15e520bc3": {
+          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
+        },
+        "5f8621d2-481c-487d-a2e1-90d7fd15b929": {
+          "description": "Tạo chương trình vẽ các hình khối phức tạp bằng cách lặp lại các chuỗi đơn giản."
+        },
+        "b85981bf-b2e5-49f6-bf08-348f8d16ba2b": {
+          "description": "Phân tách một hình khối thành dạng chuỗi lặp lại lớn nhất của hình đó."
+        },
+        "28c09bb0-c9f4-44ab-ba0a-8c9cdb24e5f0": {
+          "description": "Đề xuất công nghệ cho người khác dựa trên nhu cầu riêng của họ."
+        },
+        "9e78b33b-39a6-4524-89e4-a26fdba11cb5": {
+          "description": "Vận dụng sự đồng cảm và sáng tạo để thiết kế công nghệ cho người khác."
+        },
+        "f854671c-b4c0-4bd7-8dd6-bf0094cd1733": {
+          "description": "Liệt kê một số ví dụ khác nhau về các ứng dụng trên điện thoại thông minh."
+        },
+        "1275ac31-dcd9-49c5-92e2-68abd8aa9955": {
+          "description": "Lặp lại các lệnh do giáo viên đưa ra."
+        },
+        "4dbb2bcf-bd83-4c90-a077-6261a6b2607c": {
+          "description": "Thực hành phân biệt các hành động được xác định trước và các hành động theo hướng sự kiện."
+        },
+        "ef1a9273-ff0e-4134-8456-9762728bed55": {
+          "description": "Ghi nhận các hành động của giáo viên như là tín hiệu để bắt đầu các lệnh."
+        },
+        "2583489b-c21a-415d-bd1f-c0fa1eca9ef0": {
+          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
+        },
+        "2f9f9b26-d5f6-48ab-be27-98608a47b74d": {
+          "description": "Tạo câu chuyện hoạt hình, có tính tương tác bằng cách sử dụng trình tự và trình xử lý sự kiện."
+        },
+        "a64618b3-e151-46ce-9670-cada1927a2db": {
+          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
+        },
+        "0e1a61eb-eb48-4c3b-ab89-5b19ef6c6977": {
+          "description": "Áp dụng các khái niệm khoa học máy tính trong dự án mở."
+        },
+        "3aa63e80-f3d8-4043-811d-5b275f168499": {
+          "description": "Vượt qua những trở ngại như hạn chế về thời gian hoặc lỗi."
+        },
+        "33b55b11-ca81-406f-be39-265e8f33d09d": {
+          "description": "Xác định các cách để trả lời ngôn từ tiêu cực trên mạng, sử dụng phương pháp S-T-O-P."
+        },
+        "ce3ba860-7753-4c2c-a161-64d59903674a": {
+          "description": "Hiểu hình thức của hành vi tiêu tực trên mạng và cảm xúc mà hành vi đó gây ra cho mọi người."
+        },
+        "87841dc9-5cfa-4c68-9c56-9ca76b2668f8": {
+          "description": "Chú ý đến độ chính xác khi viết chỉ dẫn"
+        },
+        "ce7a9596-845a-4d2f-b7ce-3e27b6faa99d": {
+          "description": "Xác định và giải quyết các lỗi hoặc sự cố trong các chỉ dẫn theo trình tự"
+        },
+        "1e020282-115c-4c09-877d-5003b8eb49a6": {
+          "description": "Xác định và định vị lỗi trong chương trình."
+        },
+        "fd4b3a3e-1db9-4890-babf-f0def99a0792": {
+          "description": "Chuyển hành động thành chuỗi lệnh."
+        },
+        "1f6fd95f-78cb-4839-8943-ef8bf1b589e9": {
+          "description": "Dự đoán vị trí một chương trình sẽ bị lỗi."
+        },
+        "b3dfe6ec-41ae-4e35-92b0-aa57386cbe5d": {
+          "description": "Sửa một chương trình hiện có để giải quyết lỗi."
+        },
+        "feceda1c-bb8d-4811-9f23-0594de02a6ed": {
+          "description": "Suy nghĩ về quá trình sửa lỗi theo cách phù hợp với lứa tuổi."
+        },
+        "10c02df1-0f34-4c22-beef-7607c0b55c9a": {
+          "description": "Biểu diễn một thuật toán như một chương trình máy tính."
+        },
+        "704602b1-99ad-45e8-ac96-eba9ad885da8": {
+          "description": "Sắp xếp các lệnh di chuyển theo trình tự trong một chương trình."
+        },
+        "a8bc7283-57bf-460e-8f1c-f4a26035ebfc": {
+          "description": "Phát triển kỹ năng giải quyết vấn đề và tư duy phản biện bằng cách ôn lại các phương pháp sửa lỗi."
+        },
+        "30aa1d4a-8e6e-4b27-8a1a-5c5ea80d6b3f": {
+          "description": "Tạo chương trình để hoàn thành một hình ảnh bằng cách sử dụng các bước theo trình tự."
+        },
+        "e0ada5e4-a180-4691-9bd3-8b83763f9dd2": {
+          "description": "Chia các hình khối phức tạp thành các phần đơn giản."
+        },
+        "81c36d87-10e0-4f7e-91f2-88b6065ab543": {
+          "description": "Xác định các mẫu lặp lại trong mã có thể thay thế bằng vòng lặp"
+        },
+        "d96017f7-e2b0-45e1-aa9f-12055fcee5fe": {
+          "description": "Viết chỉ dẫn sử dụng vòng lặp để lặp lại các mẫu"
+        },
+        "00417e59-53f6-4f10-9e17-ae69f9e5db7b": {
+          "description": "Sử dụng kết hợp các lệnh trình tự và lặp lại để đi đến cuối mê cung."
+        },
+        "b2de5b75-e224-4eee-aa3a-ab51792f3dea": {
+          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi lớn nhất có thể lặp lại."
+        },
+        "be258fd0-4790-440a-99ef-bb20ce2d3c8b": {
+          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "2998b3d3-4953-4cbf-94f2-004630893e21": {
+          "description": "Sử dụng kết hợp các lệnh theo trình tự và lặp lại để di chuyển và thực hiện các hành động."
+        },
+        "35810652-e1be-48aa-923b-1148a5c1584e": {
+          "description": "Xác định thời điểm có thể sử dụng vòng lặp để đơn giản hóa một hành động lặp đi lặp lại."
+        },
+        "5b7b74bc-4f78-4c98-b221-5233324b086e": {
+          "description": "Viết chương trình làm nhiệm vụ nhất định lặp lại một lệnh duy nhất."
+        },
+        "cf1d581f-7554-4432-a92e-3e5f57f9144e": {
+          "description": "Phân biệt các lệnh cần lặp lại trong vòng lặp và các lệnh cần dùng riêng."
+        },
+        "dda209ff-ec81-4914-93c0-2716153efce4": {
+          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "05615b7c-1833-4ca9-96a8-45812c1e8a4a": {
+          "description": "Thực hành phân biệt các hành động được xác định trước và các hành động theo hướng sự kiện."
+        },
+        "3070da76-01ca-461e-a251-7a0abd74ec8d": {
+          "description": "Lặp lại các lệnh do giáo viên đưa ra."
+        },
+        "ec6ade74-43c3-41d9-a10e-5001a2630fba": {
+          "description": "Ghi nhận chuyển động của giáo viên như là tín hiệu để bắt đầu các lệnh."
+        },
+        "08847046-9784-46fb-996b-17a827cbea6f": {
+          "description": "Ghép các khối với trình xử lý sự kiện thích hợp."
+        },
+        "6f45e56c-85b7-4e48-86d4-3394e0e7048e": {
+          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
+        },
+        "c912e4f7-5734-44cc-8090-77fe751676f4": {
+          "description": "Làm game bằng cách sử dụng trình xử lý sự kiện."
+        },
+        "36275ea8-84ac-4220-87ca-53d1b5eaac43": {
+          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
+        },
+        "7263be7c-5e96-4ce0-8f3a-04cd57918643": {
+          "description": "Tạo game chuyển động tương tác bằng cách sử dụng trình quản lý sự kiện và trình tự."
+        },
+        "93ff4ab3-b610-4f61-aa17-c5d1dc187ebf": {
+          "description": "Tạo biểu đồ hình cột và biểu đồ hình tròn để biểu diễn dữ liệu đơn giản."
+        },
+        "b1760cb7-8bc1-4f45-85a4-f8231785ab7e": {
+          "description": "So sánh giữa các hình ảnh trực quan của dữ liệu do những người khác thực hiện và sử dụng chúng để dự đoán."
+        },
+        "e77eca08-1bf5-47df-a660-6c5ba38d4fec": {
+          "description": "Thu thập và ghi lại dữ liệu về số lượng các đối tượng thực tế hoặc các nhân vật trên màn hình"
+        },
+        "2579c049-c0cd-4fcc-ac9f-bdd6c561ef52": {
+          "description": "Giải mã hệ nhị phân trở lại thành chữ cái."
+        },
+        "9a7d25e3-3f39-45fb-b14d-56c90df8e06a": {
+          "description": "Mã hóa các chữ cái thành hệ nhị phân."
+        },
+        "bf86db48-ae33-49e8-a236-883b166a81bb": {
+          "description": "Liên hệ ý tưởng ghi các chữ cái trên giấy với ý tưởng lưu trữ thông tin trong máy tính."
+        },
+        "06e84ef1-68ef-4bce-adfe-fcd8c7e010c7": {
+          "description": "Vượt qua những trở ngại như hạn chế về thời gian hoặc lỗi."
+        },
+        "5feb276e-2e95-4bd6-87b8-7bb9075d0d0a": {
+          "description": "Sử dụng một thiết kế đã lên kế hoạch làm bản thiết kế khi sáng tạo."
+        },
+        "1033b638-05a5-40c2-8e29-1efe1b5f3451": {
+          "description": "Định nghĩa thuật ngữ “mật khẩu” và mô tả mục đích của mật khẩu."
+        },
+        "c14cd5a0-312f-491c-aa00-73b82dd8e628": {
+          "description": "Thực hành tạo mật khẩu mạnh và dễ nhớ."
+        },
+        "2d16e09e-308f-4fe5-b53a-bfd2a50ec736": {
+          "description": "Sắp xếp lại trình tự các bước dưới dạng một chương trình mã hóa"
+        },
+        "e2eb4dfd-1b5b-4a01-aceb-1b96c49cd254": {
+          "description": "Giải thích các hạn chế của vấn đề dịch từ ngôn ngữ con người sang ngôn ngữ máy"
+        },
+        "86d6703f-6086-48c6-820f-d9d972471655": {
+          "description": "Sắp xếp các lệnh di chuyển theo trình tự trong một chương trình."
+        },
+        "c141459a-a5b8-41ce-ada6-33b92afb0596": {
+          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi lớn nhất có thể lặp lại."
+        },
+        "f0a49033-5a23-4b2e-b570-69fd6d678f65": {
+          "description": "Sửa một chương trình hiện có để giải quyết lỗi."
+        },
+        "15927fdc-d944-4de3-89ca-f238d8014f55": {
+          "description": "Xác định ý tưởng sử dụng mã lệnh và biểu tượng."
+        },
+        "55ae003d-10f1-4364-ab38-3a3360491e38": {
+          "description": "Nhận biết các dấu hiệu của sự bực bội"
+        },
+        "d5c5bdd3-6ca6-48b2-ae3b-5aaf0c8dbb70": {
+          "description": "Xác minh kết quả công việc của đồng đội."
+        },
+        "0d2e39ca-970f-40e0-b26a-84bcecf9315d": {
+          "description": "Mô tả và tiến hành kế hoạch sửa lỗi chương trình."
+        },
+        "59c4efee-e0c3-4293-9609-a82db6698755": {
+          "description": "Đọc và hiểu mã lệnh đã cho."
+        },
+        "66a6e0e0-c56c-4148-9d57-ce509afa4fc6": {
+          "description": "Xác định lỗi và các vấn đề mà lỗi đó gây ra trong chương trình."
+        },
+        "a7fe08e4-1943-4bbc-a18a-e10bd0942173": {
+          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
+        },
+        "d2a9a010-d6c6-4ce1-9f70-cb5ceba6af8f": {
+          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
+        },
+        "df973a96-c08b-4f3f-9a11-c93434193cfe": {
+          "description": "Tạo một trò chơi tương tác bằng cách sử dụng trình xử lý trình tự và sự kiện."
+        },
+        "04cbf3cd-2cb7-451b-b4ed-1ccd70594cc5": {
+          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
+        },
+        "f47c401e-4a61-4f0e-a4d3-75f3bd9d8908": {
+          "description": "Tạo game chuyển động tương tác bằng cách sử dụng trình tự và sự kiện."
+        },
+        "4ed9cede-cc9a-409d-b433-781185b454b6": {
+          "description": "Tạo hiệu ứng chuyển động nhảy múa bằng mã lệnh"
+        },
+        "4fa04785-108a-4cea-831b-8078658ea413": {
+          "description": "Phát triển các chương trình phản hồi lại thông tin đầu vào của người dùng"
+        },
+        "7728246b-7582-4624-a2b1-229b998fc2ae": {
+          "description": "Phát triển các chương trình phản hồi lại các sự kiện đã được lên lịch"
+        },
+        "07bc7c07-d75a-45cc-9f98-74501813e5af": {
+          "description": "Thiết lập cấu trúc chương trình bằng cách sử dụng các cấu trúc lặp lại các nhóm mã lệnh"
+        },
+        "fcc0109d-8a25-4194-8a5c-69985bac106c": {
+          "description": "Cải thiện mã lệnh hiện có bằng cách tìm các nhóm lặp lại và chuyển chúng vào cấu trúc lặp"
+        },
+        "c2ec43ae-26ae-48df-8657-373765b01821": {
+          "description": "Phân biệt các lệnh cần lặp lại trong vòng lặp và các lệnh cần dùng riêng."
+        },
+        "f9dc8f2c-6f5a-4854-b0bb-296d0ca89233": {
+          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "64421cd8-645b-40d1-b071-4f4238065252": {
+          "description": "Chia các nhiệm vụ phức tạp thành các phần nhỏ hơn có thể lặp lại."
+        },
+        "ddac6ae3-6abe-444e-af05-8a6b2a5eec65": {
+          "description": "Phát hiện ra các mẫu lặp lại lớn được tạo thành từ các mẫu lặp lại nhỏ hơn."
+        },
+        "f466b8aa-18bf-460d-9780-1abcb7f32589": {
+          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "1368d16e-4e0d-4b76-8473-2765f5379362": {
+          "description": "Xác định xem lệnh điều kiện có được đáp ứng hay không dựa trên tiêu chí."
+        },
+        "744e09fe-1aaa-4253-95e2-7f1c8fc4e5dc": {
+          "description": "Xác định các trường hợp khi một số phần của chương trình nên chạy và khi nào chúng không nên chạy."
+        },
+        "ec9adec1-48c1-458e-bae1-37f2be6a863b": {
+          "description": "Duyệt qua một chương trình và dự đoán kết quả với một tập hợp dữ liệu đầu vào."
+        },
+        "3ca80839-1859-48e0-a010-de7ef526512d": {
+          "description": "Xác định xem lệnh điều kiện có được đáp ứng hay không dựa trên tiêu chí."
+        },
+        "c6a481f9-8493-4b50-876c-c16309ec4e50": {
+          "description": "Xác định các trường hợp khi một số phần của chương trình nên chạy và khi nào chúng không nên chạy."
+        },
+        "37326a7f-29b6-4ea6-9ed5-a08c2aa2dfd4": {
+          "description": "Giải bài tập bằng cách sử dụng kết hợp các chuỗi lặp lại và lệnh điều kiện."
+        },
+        "b7bbc7eb-a6d3-4820-9b4b-27b64ec0b0d4": {
+          "description": "Dịch câu điều kiện trong ngôn ngữ nói thành chương trình."
+        },
+        "a4808383-ef10-4135-9a5d-f695b62aeb36": {
+          "description": "Sử dụng vòng lặp while để tạo các chương trình có thể giải quyết các vấn đề với các giá trị chưa biết."
+        },
+        "d8494711-ae41-4ccd-8db3-04385d787ca3": {
+          "description": "Phân biệt giữa vòng lặp lặp lại một số lần cố định và vòng lặp lặp lại với điều kiện đúng."
+        },
+        "115e7f69-47a1-495a-bc11-8a9ed3270324": {
+          "description": "Xây dựng các chương trình với hiểu biết về nhiều chiến lược để triển khai lệnh điều kiện."
+        },
+        "7164456d-4573-432f-b255-a0596e702d96": {
+          "description": "Dịch câu điều kiện trong ngôn ngữ nói và vòng lặp thành chương trình."
+        },
+        "bbd1a283-a817-4fd2-9335-651b698f63d2": {
+          "description": "Vượt qua những trở ngại như hạn chế về thời gian hoặc lỗi."
+        },
+        "0265cc40-2950-42f3-a457-7b967fa9c0d9": {
+          "description": "Giải thích sự khác biệt giữa thông tin cá nhân và riêng tư."
+        },
+        "16baead5-8507-4681-94b1-0314783a5418": {
+          "description": "Giải thích lý do chia sẻ thông tin riêng tư trên mạng có rủi ro."
+        },
+        "d4c584f8-36e7-471a-9b83-713ca5e4711a": {
+          "description": "Xác định lý do tại sao mọi người chia sẻ thông tin về bản thân trên mạng."
+        },
+        "6f3e5897-b529-4f7a-a41f-83c11f7f03c5": {
+          "description": "Tạo các nhân vật mới và gán cho họ trang phục và hành vi."
+        },
+        "bf11a11b-35be-4fdc-a266-9f192e141760": {
+          "description": "Định nghĩa “nhân vật” là một nhân vật hoặc đối tượng trên màn hình có thể di chuyển và thay đổi."
+        },
+        "0601569e-2f95-4d2f-a3a9-0aea3df102ed": {
+          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
+        },
+        "884d4f4c-abd4-493c-8029-cde7399519f4": {
+          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
+        },
+        "41232751-173e-4eaa-9bc4-bb5b65957d03": {
+          "description": "Hãy chọn thông tin về bản thân có thể chia sẻ trực tuyến."
+        },
+        "6a824aaa-b3b2-4c7f-b2f9-daed0835a2c5": {
+          "description": "Tạo chương trình máy tính tương tác thể hiện bản thân bằng văn bản và hình ảnh tùy chỉnh."
+        },
+        "62ffafea-c5f4-4942-b283-9462c41d52cd": {
+          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "68b90262-3e0e-4c90-9888-21796cd30869": {
+          "description": "Phân biệt các lệnh cần lặp lại trong vòng lặp và các lệnh cần dùng riêng."
+        },
+        "3fac17b3-f27c-4f5c-98f1-a43e3e18d4e0": {
+          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
+        },
+        "81e6c614-6b5d-43db-8178-3adf983eb5b6": {
+          "description": "Chia các nhiệm vụ phức tạp thành các phần nhỏ hơn có thể lặp lại."
+        },
+        "e4a76fad-2750-4f3b-8138-0e0a932b5e2b": {
+          "description": "Kết hợp các hình khối đơn giản thành các thiết kế phức tạp với các vòng lặp lồng nhau."
+        },
+        "2cae95f3-a3dc-4541-8b5c-43d876d26ce3": {
+          "description": "Mô tả trường hợp cần vòng lặp, vòng lặp lồng nhau hoặc không cần vòng lặp."
+        },
+        "45801eec-c3af-4a73-afb8-988d55e7a469": {
+          "description": "Nhận ra sự khác biệt khi sử dụng vòng lặp và vòng lặp lồng nhau."
+        },
+        "feae5f14-f531-4db9-b746-9582df08da12": {
+          "description": "Chia nhỏ mã lệnh thành các chuỗi lặp lại lớn nhất bằng cách sử dụng cả vòng lặp và vòng lặp lồng nhau."
+        },
+        "020afd03-339c-4b70-af23-62f495f2088f": {
+          "description": "Xác định các phần của bài hát để đưa vào hàm."
+        },
+        "386901b7-db20-4705-90ee-391a42d76d3a": {
+          "description": "Mô tả cách hàm giúp chương trình dễ viết hơn."
+        },
+        "887412d7-6f80-42df-98b4-6ef39bb4f09c": {
+          "description": "Tìm các cụm từ lặp lại trong lời bài hát."
+        },
+        "50d6d0ce-0013-47e4-9f0b-ac6bca5d4a30": {
+          "description": "Sử dụng hàm xác định trước để hoàn thành các nhiệm vụ thường xuyên lặp lại."
+        },
+        "e3843037-6a2c-4561-9a5c-c27b4e84de71": {
+          "description": "Sử dụng hàm để đơn giản hóa các chương trình phức tạp."
+        },
+        "34743a30-9835-4b96-9933-c84ccd8a20b6": {
+          "description": "Nhận biết khi nào hàm có thể giúp đơn giản hóa chương trình."
+        },
+        "fa73c58f-368d-4e53-97eb-7de987b548c3": {
+          "description": "Phân loại và tổng quát mã thành các hàm hữu ích."
+        },
+        "818dc160-2ce6-4d7d-a358-208b9026debb": {
+          "description": "Xác định xem lệnh điều kiện có được đáp ứng hay không dựa trên tiêu chí."
+        },
+        "cb32fed2-db37-4e6c-9651-3b1f39fd4741": {
+          "description": "Xác định các trường hợp khi một số phần của chương trình nên chạy và khi nào chúng không nên chạy."
+        },
+        "1b6a66df-472f-49d6-acdf-13c2f6fdb263": {
+          "description": "Xác định xem lệnh điều kiện có được đáp ứng hay không dựa trên tiêu chí."
+        },
+        "80cf9584-e814-4880-8c83-119966ed7a89": {
+          "description": "Xác định các trường hợp khi một số phần của chương trình nên chạy và khi nào chúng không nên chạy."
+        },
+        "59e29159-7e29-48ce-95c7-8510877793e9": {
+          "description": "Nhận biết khi nào hàm có thể giúp đơn giản hóa chương trình."
+        },
+        "b92ee5de-79d3-4fd6-8bf6-e86e3dad779a": {
+          "description": "Sử dụng hàm xác định trước để hoàn thành các nhiệm vụ thường xuyên lặp lại."
+        },
+        "5fb6d430-a2bf-4d0b-b128-5592afc2d856": {
+          "description": "Cải thiện thiết kế ứng dụng hiện có bằng cách giải quyết nhu cầu trợ năng của người dùng."
+        },
+        "bb1f6fd9-3327-411d-b91e-d3b4e756fff3": {
+          "description": "Giải thích lý do trợ năng là một phần quan trọng trong thiết kế ứng dụng cho người dùng."
+        },
+        "fcecef31-84d0-4df2-80cd-f8641b06c24f": {
+          "description": "Mô tả tác động của ứng dụng dành cho thiết bị di động đối với thế giới hiện đại."
+        },
+        "2c0ee6b8-608a-47b6-9093-dbab81b92cbf": {
+          "description": "Hiểu các quyền của chính mình đối với các tài liệu mà mình tạo ra"
+        },
+        "a8686006-16c5-4b08-94d2-32430cd6d77f": {
+          "description": "Giải thích việc chia sẻ tài liệu có bản quyền có đạo đức so với việc chia sẻ không hợp đạo đức."
+        },
+        "0c9da891-a9a1-4747-a7da-dc2c76462eb4": {
+          "description": "Giải thích ảnh hưởng do giới hạn của hệ thống đến thiết kế dự án."
+        },
+        "5d3b2774-424f-487f-b119-05254b043b89": {
+          "description": "Mô tả cách thỏa hiệp để giúp dự án đi đúng hướng và truyền cảm hứng sáng tạo."
+        },
+        "78939802-f928-4ec5-89cb-3e2aef29d9ce": {
+          "description": "Trình bày rõ quy trình thiết kế và vai trò của quy trình này trong việc tạo nên dự án hoàn thiện cuối cùng."
+        },
+        "82992d38-7821-4608-92a1-bd4fd05d7226": {
+          "description": "Soạn thảo và thực hiện các kế hoạch để giải quyết bất kỳ vấn đề nào trong mã lệnh."
+        },
+        "d3dbfefc-34eb-4b0a-ab79-53a1ce3adfdc": {
+          "description": "Học cách lập kế hoạch trước cho công việc đang cần hoàn thành."
+        },
+        "afa30921-d88a-4d96-a8d1-94de6acad10d": {
+          "description": "Hãy quyết định câu nói nào có thể nói trên mạng và câu nói nào là không được."
+        },
+        "14b788f7-6566-40f5-8b91-a8c86d6d3afa": {
+          "description": "Mô tả tầm quan trọng của người dùng trong quá trình thiết kế."
+        },
+        "6cea05e6-2733-4d09-be8f-1c02c646cb85": {
+          "description": "Xác định các nhân vật trong một chương trình máy tính đang chạy."
+        },
+        "3be6fc2a-7c73-4ff2-b8b6-10639f40e6ad": {
+          "description": "Tạo hình chuyển động bằng cách sử dụng nhân vật và hành vi."
+        },
+        "b5e9cc94-d3f5-4a4f-93db-bcadcac0be4b": {
+          "description": "Tạo các nhân vật mới và gán cho họ trang phục và hành vi."
+        },
+        "7b9c0f1d-efa4-4397-8334-d392bb962fb7": {
+          "description": "Phát triển các chương trình phản ứng với các sự kiện theo thời gian."
+        },
+        "8fac9b1a-450f-4d68-aa87-d7b8e1bbe873": {
+          "description": "Phát triển các chương trình phản ứng với dữ liệu đầu vào của người dùng."
+        },
+        "d13ed164-0cf7-4bb3-882a-69ed146aeb9f": {
+          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng các sự kiện."
+        },
+        "8b5814c2-524a-4871-ae01-bba3f6bce488": {
+          "description": "Lập trình giải pháp cho các vấn đề phát sinh khi thiết kế thú cưng ảo, chẳng hạn như cho ăn."
+        },
+        "cf3f971b-43c5-4cb5-beeb-d23c903e1752": {
+          "description": "Tạo một thú cưng ảo tương tác bằng cách sử dụng sự kiện, hành vi và hình ảnh tùy chỉnh."
+        },
+        "04ae0169-fb41-46fb-bc74-dc22c70707f7": {
+          "description": "Xác định mối quan hệ giữa cách định nghĩa, lưu trữ và truy xuất biến khi nhấn “Run” (chạy) trên một chương trình."
+        },
+        "cc733f62-1646-49dc-b2b4-8b47a7c36fca": {
+          "description": "Gọi biến nhiều lần trong một chương trình."
+        },
+        "d059371b-b3f0-40cb-915a-586645b2f109": {
+          "description": "Gán giá trị cho một biến"
+        },
+        "4d88e11e-77b5-4060-ab3d-2f2ae6cfa8ea": {
+          "description": "Dùng biến kết hợp với lời nhắc."
+        },
+        "b155264b-806c-417e-bd5f-2fd91b6093ec": {
+          "description": "Dùng biến để giữ các từ và cụm từ."
+        },
+        "5c6f9917-2c5e-442f-a402-14c15c8b1737": {
+          "description": "Tạo chương trình máy tính tương tác phản ứng với dữ liệu đầu vào của người dùng."
+        },
+        "72c8cd33-c097-48d6-9178-3b146fdc243a": {
+          "description": "Dùng biến để giữ các từ và cụm từ."
+        },
+        "ea8b6be7-f51c-420f-a295-ec02488a066f": {
+          "description": "Dùng biến kết hợp với lời nhắc."
+        },
+        "3606812b-a55f-4eb9-8a40-a9ca52df3726": {
+          "description": "Dự đoán và kiểm tra dự đoán bằng cách sửa các biến trong bản mô phỏng"
+        },
+        "7f41cf27-501d-4676-9ca7-9fcc15161d54": {
+          "description": "Vẽ biểu đồ hai đường thẳng để so sánh dữ liệu từ hai nguồn khác nhau"
+        },
+        "e29b6e4a-ed9b-4aba-81ab-c1ee2a7ada84": {
+          "description": "Sử dụng bản mô phỏng máy tính để thu thập dữ liệu về một mô hình"
+        },
+        "8a99a9c0-2079-4c7e-a39c-188f940fcfe2": {
+          "description": "Thảo luận về vai trò của trí tuệ nhân tạo trong cuộc sống."
+        },
+        "9ec60d3b-ddcc-479c-9e4d-220ff3d8a10a": {
+          "description": "Đào tạo và thử nghiệm mô hình máy học."
+        },
+        "ba631251-039e-4f7a-9320-158390f318c2": {
+          "description": "Lý do định kiến của con người đóng vai trò quan trọng trong máy học."
+        },
+        "422e8552-7c1c-4aba-a702-e627365b7bd6": {
+          "description": "Dịch các URL thành Địa chỉ IP."
+        },
+        "7a2c2a3b-c61d-4bb4-9720-c0b46a63a940": {
+          "description": "Tìm hiểu về mức độ phức tạp của quá trình gửi tin nhắn qua internet."
+        },
+        "30f2f515-c020-4631-9ffe-3d9ba8749eb2": {
+          "description": "Có thể giải thích ảnh hưởng do giới hạn của hệ thống đến thiết kế dự án."
+        },
+        "33a17071-53d7-4ba9-b041-af3fcb4fabaf": {
+          "description": "Soạn thảo và thực hiện các kế hoạch để giải quyết bất kỳ vấn đề nào trong mã lệnh."
+        },
+        "505fcab3-063d-4c18-9ce1-83077359307d": {
+          "description": "Trình bày rõ quy trình thiết kế và vai trò của quy trình này trong việc tạo nên dự án hoàn thiện cuối cùng."
+        },
+        "88fa834a-0717-4422-a6df-a6af49a1e928": {
+          "description": "Mô tả cách thỏa hiệp để giúp dự án đi đúng hướng và truyền cảm hứng sáng tạo."
+        },
+        "9183e5a7-1776-4ffb-a65b-730edea18bc3": {
+          "description": "Học cách lập kế hoạch trước cho công việc đang cần hoàn thành."
+        },
+        "7279e4aa-2ccc-49b2-b912-e4e4d680e15b": {
+          "description": "Xác định và định vị lỗi trong chương trình."
+        },
+        "a87240fd-cb47-49df-ae9e-d058ab3fcb26": {
+          "description": "Chuyển hành động thành chuỗi lệnh."
+        },
+        "1fd14cce-1e61-42c8-83d4-2252ec67f9e9": {
+          "description": "Suy nghĩ về quá trình sửa lỗi theo cách phù hợp với lứa tuổi."
+        },
+        "3e5024e3-0c8e-436c-b532-42749d6a5cf0": {
+          "description": "Dự đoán vị trí một chương trình sẽ bị lỗi."
+        },
+        "d219187c-ecad-4854-ba3e-b136b4511fcc": {
+          "description": "Sửa một chương trình hiện có để giải quyết lỗi."
+        },
+        "5c54f1b4-f582-4b2f-8db1-396336c44a7b": {
+          "description": "Biểu diễn một thuật toán như một chương trình máy tính."
+        },
+        "87bbc4aa-8c38-4428-8a5c-e6b86bc489f5": {
+          "description": "Sắp xếp các lệnh di chuyển theo trình tự trong một chương trình."
+        },
+        "ff07b623-686f-4193-91c9-c427b5d780ad": {
+          "description": "Phát triển kỹ năng giải quyết vấn đề và tư duy phản biện bằng cách ôn lại các phương pháp sửa lỗi."
+        },
+        "b06566c3-55fe-4cb6-9e55-f40814d47ad8": {
+          "description": "Tạo chương trình để hoàn thành một hình ảnh bằng cách sử dụng các bước theo trình tự."
+        },
+        "fbaccfd8-2a19-449c-a260-3e0e4b6f0cc6": {
+          "description": "Chia các hình khối phức tạp thành các phần đơn giản."
+        },
+        "09012264-2762-4a05-a5e5-f5b826fe16ad": {
+          "description": "Tạo các nhân vật mới và gán cho họ trang phục và hành vi."
+        },
+        "0e3791df-3c03-4b83-9943-d3b57110dea1": {
+          "description": "Định nghĩa “nhân vật” là một nhân vật hoặc đối tượng trên màn hình có thể di chuyển và thay đổi."
+        },
+        "0b712f3f-c5fb-4d8d-8247-23bfa13c0139": {
+          "description": "Tạo các nhân vật mới và gán cho họ trang phục và hành vi."
+        },
+        "7ecf2549-51ae-4bcd-bc3a-d4fc6059b7bc": {
+          "description": "Tạo hình chuyển động bằng cách sử dụng nhân vật và hành vi."
+        },
+        "7bb23f18-d99f-4ded-af08-d9e8eee2e1e5": {
+          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng các sự kiện."
+        },
+        "938b2178-a433-4324-ba73-b1b6f8e0c0be": {
+          "description": "Phát triển các chương trình phản ứng với các sự kiện theo thời gian."
+        },
+        "ae7debff-9532-4a44-9f44-50813f955edf": {
+          "description": "Phát triển các chương trình phản ứng với dữ liệu đầu vào của người dùng."
+        },
+        "afc3a3eb-84f3-462c-89e5-2b8d3cb1f879": {
+          "description": "Tạo thú cưng ảo tương tác bằng cách sử dụng sự kiện, hành vi, biến và hình ảnh tùy chỉnh."
+        },
+        "eb7e84c2-0694-4b77-90a0-747270409a09": {
+          "description": "Lập trình giải pháp cho các vấn đề phát sinh khi thiết kế thú cưng ảo, chẳng hạn như cho ăn hoặc theo dõi tâm trạng của chúng."
+        },
+        "9f0d4053-b0bb-4213-bb8a-b07433bb84cf": {
+          "description": "Phát triển các chương trình phản hồi lại các sự kiện đã được lên lịch"
+        },
+        "f4427747-3b3f-43ac-b124-2ed1856ab5be": {
+          "description": "Tạo hiệu ứng chuyển động nhảy múa bằng mã lệnh"
+        },
+        "f6a45c87-6f01-4df0-8020-0a9be77f0d10": {
+          "description": "Phát triển các chương trình phản hồi lại thông tin đầu vào của người dùng"
+        },
+        "1d64ca6b-c3c3-41c5-b923-280bf46dbdc9": {
+          "description": "Sử dụng kết hợp các lệnh trình tự và lặp lại để đi đến cuối mê cung."
+        },
+        "8a54dbc1-2cc5-4fbe-a69d-1fcdeb521415": {
+          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi lớn nhất có thể lặp lại."
+        },
+        "d1a8cfa4-2a01-4cd1-bf6b-7bdb85dfbba2": {
+          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "19f2a21b-7cd6-49c1-b058-a71afadfbf0f": {
+          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "bbb2787f-1faa-4193-93ec-e2e5ff8de139": {
+          "description": "Phân biệt các lệnh cần lặp lại trong vòng lặp và các lệnh cần dùng riêng."
+        },
+        "64f8b4e0-c197-41bc-9e3d-b957587027d9": {
+          "description": "Phát hiện ra các mẫu lặp lại lớn được tạo thành từ các mẫu lặp lại nhỏ hơn."
+        },
+        "a3d9c13d-e5d1-4c96-8605-b6c6968e446a": {
+          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "f875fba7-8b45-4faa-b661-24d7eae983b5": {
+          "description": "Chia các nhiệm vụ phức tạp thành các phần nhỏ hơn có thể lặp lại."
+        },
+        "2dc48a33-af54-4ea5-b2a5-4b8c16018529": {
+          "description": "Nhận ra sự khác biệt khi sử dụng vòng lặp và vòng lặp lồng nhau."
+        },
+        "3eb2fbbc-383b-4293-94a9-df920d67ff2e": {
+          "description": "Mô tả trường hợp cần vòng lặp, vòng lặp lồng nhau hoặc không cần vòng lặp."
+        },
+        "7376c401-4ea5-4247-a739-1b3c8f3077c7": {
+          "description": "Chia nhỏ mã lệnh thành các chuỗi lặp lại lớn nhất bằng cách sử dụng cả vòng lặp và vòng lặp lồng nhau."
+        },
+        "5abe1116-ce82-4bce-8454-7537bdce12d4": {
+          "description": "Xác định xem lệnh điều kiện có được đáp ứng hay không dựa trên tiêu chí."
+        },
+        "b75b5c74-2020-4cba-abb7-9c1d2432c93f": {
+          "description": "Xác định các trường hợp khi một số phần của chương trình nên chạy và khi nào chúng không nên chạy."
+        },
+        "94a0640b-eaf9-4797-b448-601edefe53f7": {
+          "description": "Dịch câu điều kiện trong ngôn ngữ nói thành chương trình."
+        },
+        "da9556fa-6a34-4735-a0fe-4f61e5dfba88": {
+          "description": "Giải bài tập bằng cách sử dụng kết hợp các chuỗi lặp lại và lệnh điều kiện."
+        },
+        "9a923506-c553-4734-8675-3925b4205a40": {
+          "description": "Phân biệt giữa vòng lặp lặp lại một số lần cố định và vòng lặp lặp lại với điều kiện đúng."
+        },
+        "ef9064e8-a2fc-43a5-a847-0e504ffd7043": {
+          "description": "Sử dụng vòng lặp while để tạo các chương trình có thể giải quyết các vấn đề với các giá trị chưa biết."
+        },
+        "11cc6b71-35eb-4651-87ef-17cb48e8e93a": {
+          "description": "Xác định các trường hợp khi một số phần của chương trình nên chạy và khi nào chúng không nên chạy."
+        },
+        "979a7e2a-759e-4ffc-96b2-552fe5888fb9": {
+          "description": "Xác định xem lệnh điều kiện có được đáp ứng hay không dựa trên tiêu chí."
+        },
+        "580ad418-73dc-42d0-8934-42fe0a9af98a": {
+          "description": "Xây dựng các chương trình với hiểu biết về nhiều chiến lược để triển khai lệnh điều kiện."
+        },
+        "94e41188-94ca-4365-878b-408e000c2a1d": {
+          "description": "Dịch câu điều kiện trong ngôn ngữ nói và vòng lặp thành chương trình."
+        },
+        "24fd8517-7a14-4489-8d76-76ddf7b9a7fe": {
+          "description": "Ghép vòng lặp và câu điều kiện với nhau."
+        },
+        "57a8c756-ad85-4861-ae8d-a54d86c19d26": {
+          "description": "Lồng lệnh điều kiện để phân tích các điều kiện nhiều giá trị bằng cách sử dụng logic nếu, nếu không."
+        },
+        "6c8101ef-895e-43de-b0a5-cbfddc2ca79f": {
+          "description": "Sử dụng hàm để đơn giản hóa các chương trình phức tạp."
+        },
+        "90578a9d-1c23-4b7e-be6d-5c2d5c18ff7b": {
+          "description": "Sử dụng hàm xác định trước để hoàn thành các nhiệm vụ thường xuyên lặp lại."
+        },
+        "05e395d7-bc15-440b-a765-833fc2e05258": {
+          "description": "Nhận biết khi nào hàm có thể giúp đơn giản hóa chương trình."
+        },
+        "3ccd51c5-ad2c-4f0e-9a41-5816a40cc190": {
+          "description": "Sử dụng hàm xác định trước để hoàn thành các nhiệm vụ thường xuyên lặp lại."
+        },
+        "33ccfa77-2a9e-4500-ba9c-0ba82af10a78": {
+          "description": "Phân loại và tổng quát mã thành các hàm hữu ích."
+        },
+        "fdfbb07a-5a1c-459d-81ae-8b7c35da4ecc": {
+          "description": "Nhận biết khi nào hàm có thể giúp đơn giản hóa chương trình."
+        },
+        "7540f285-a55a-465e-87cd-ed3a930b9ea7": {
+          "description": "Dùng biến kết hợp với lời nhắc."
+        },
+        "fc585f17-d535-4c1d-aaba-65e878894373": {
+          "description": "Hành động dùng biến để giữ các từ và cụm từ."
+        },
+        "75953ae5-c4fa-40d3-85e1-deb508c32847": {
+          "description": "Gán giá trị cho các biến hiện có."
+        },
+        "ba1c8ef0-b9fa-4784-9951-6999428d1bbc": {
+          "description": "Sử dụng biến để thay đổi các giá trị bên trong vòng lặp."
+        },
+        "e17081b3-65af-4076-afc7-e8aa69da02f2": {
+          "description": "Sử dụng biến thay cho các giá trị lặp lại bên trong chương trình."
+        },
+        "4df8eb31-02ee-4e5d-ae28-368a29da7142": {
+          "description": "Kiểm tra mã lệnh để tìm những vị trí có thể thay thế biến cho các giá trị cụ thể."
+        },
+        "d800c885-0e72-4325-a176-68612c826131": {
+          "description": "Xác định vị trí có thể dùng biến để sửa số lượng trong thời gian chạy."
+        },
+        "61ae46d2-2f10-4073-935c-b46ab9fae340": {
+          "description": "Nhận biết khi nào sử dụng vòng lặp for và khi nào sử dụng các vòng lặp khác như vòng lặp repeat và while."
+        },
+        "ec3dab8e-cfb2-4b3a-9b33-dace79bba6c6": {
+          "description": "Xác định giá trị đầu, giá trị cuối và giá trị bước cho vòng lặp for."
+        },
+        "a75dc8b9-eebc-48cd-9495-289d69501b09": {
+          "description": "Sử dụng vòng lặp for để thay đổi vòng lặp nhiều lần với các giá trị khác nhau."
+        },
+        "d759d477-89f3-4ef8-b701-c4115a3258cd": {
+          "description": "Nhận biết khi nào sử dụng vòng lặp for và khi nào sử dụng các vòng lặp khác như vòng lặp repeat và while."
+        },
+        "546d4a38-5abb-402c-9e61-bef13a71001d": {
+          "description": "Vượt qua những trở ngại như hạn chế về thời gian hoặc lỗi."
+        },
+        "8d8fffd3-6411-4778-95f5-76953d066786": {
+          "description": "Hiểu những yêu cầu khi học sinh chuyển sang phòng máy tính."
+        },
+        "d62cb1ce-6c5d-4893-ba48-3f8a844f0670": {
+          "description": "Sử dụng thuật ngữ thích hợp khi đề cập đến chuột máy tính, bàn di chuột hoặc màn hình cảm ứng."
+        },
+        "1527c354-dff7-4d8c-94f7-8b55d5bc3099": {
+          "description": "Làm mẫu các hành vi phù hợp trong phòng máy tính"
+        },
+        "fc61a33c-e645-4600-b2d3-70bb8e46a938": {
+          "description": "Thử nghiệm với các thao tác lập trình dựa trên khối tiêu chuẩn như: nhấp chuột, kéo và thả, v.v."
+        },
+        "26c1a686-8627-439a-b7f9-3e42d80d4a6c": {
+          "description": "Xây dựng một chương trình máy tính từ một tập hợp các chỉ dẫn bằng văn bản"
+        },
+        "8f583ef0-bd0b-4e2c-81c3-11057794f7e2": {
+          "description": "Xây dựng chương trình bằng cách tổ chức lại các hành động theo trình tự"
+        },
+        "e20881b1-a3ad-4095-a434-6db807d457ed": {
+          "description": "Chuyển hành động thành chuỗi lệnh."
+        },
+        "6856ac6b-753c-4870-bfe4-d6ee553ff409": {
+          "description": "Sắp xếp các lệnh theo thứ tự logic."
+        },
+        "bbf10b3a-152d-472c-82b5-761d1be6e3b2": {
+          "description": "Nhận ra các vấn đề hoặc “lỗi” trong chương trình và lập kế hoạch để giải quyết các vấn đề đó."
+        },
+        "21d90a6a-f1ea-4d0b-ba17-f2e6a53cf78c": {
+          "description": "Xác định và định vị lỗi trong chương trình."
+        },
+        "d73df8bf-fcc2-4732-a4be-cab60f8b326d": {
+          "description": "Chuyển hành động thành chuỗi lệnh."
+        },
+        "26b58b7e-9af6-4979-8a63-8f69d7f308c8": {
+          "description": "Thiết lập cấu trúc chương trình bằng cách sử dụng các cấu trúc lặp lại các nhóm mã lệnh"
+        },
+        "65939b9f-ba0f-4834-8f54-24419c9391e5": {
+          "description": "Cải thiện mã lệnh hiện có bằng cách tìm các nhóm lặp lại và chuyển chúng vào cấu trúc lặp"
+        },
+        "3a06cce8-584a-431c-8cca-05ad9b0df32d": {
+          "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "d7a5432f-6854-483b-8a5b-fcb1844dd603": {
+          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi nhỏ nhất có thể lặp lại."
+        },
+        "356a5953-6822-4156-b54f-e5f2095156e1": {
+          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
+        },
+        "e8114e57-1426-4241-9cbb-dc57a3edadab": {
+          "description": "Phân tách một hình khối thành dạng chuỗi lặp lại lớn nhất của hình đó."
+        },
+        "fcdb6a79-7043-4f4d-b4fe-04beeb339fea": {
+          "description": "Tạo chương trình vẽ các hình khối phức tạp bằng cách lặp lại các chuỗi đơn giản."
+        },
+        "416213df-e386-420c-aafe-40e05d790f59": {
+          "description": "Tạo chương trình vẽ các hình khối phức tạp bằng cách lặp lại các chuỗi đơn giản."
+        },
+        "448fabd8-2154-4840-9807-b0b79bab8c96": {
+          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
+        },
+        "f2e5268e-cbce-4db0-abb3-e2b6a65684d8": {
+          "description": "Phân tách một hình khối thành dạng chuỗi lặp lại lớn nhất của hình đó."
+        },
+        "35be46ad-58dd-4072-97a4-09a55c75e329": {
+          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
+        },
+        "37987315-bfd5-46fd-9faa-9e480ef816b2": {
+          "description": "Tạo một câu chuyện có hình chuyển động tương tác bằng cách sử dụng trình quản lý sự kiện và trình tự."
+        },
+        "fb6ff331-603c-4310-83e8-77e3e606edfe": {
+          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
+        },
+        "0f40a956-c075-4b89-a139-101c2288896f": {
+          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
+        },
+        "11e630e5-0551-49c9-9894-2db312a9f1df": {
+          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
+        },
+        "d2669646-8580-4bb3-a6e0-54961b42a029": {
+          "description": "Tạo câu chuyện hoạt hình, có tính tương tác bằng cách sử dụng trình tự và trình xử lý sự kiện."
+        },
+        "50b1fb31-4471-433d-a5f1-74e38886d49f": {
+          "description": "Tạo và chia sẻ ứng dụng của riêng mình trong App Lab bằng các tính năng như nút, văn bản, hình ảnh, âm thanh và màn hình."
+        },
+        "f7a3786d-0859-48d5-a4f9-827d6d681133": {
+          "description": "Tiếp tục xây dựng dự án hoàn chỉnh trong App Lab bằng các nguồn hỗ trợ được cung cấp trên trang code.org/applab."
+        },
+        "586fecaa-52c0-4889-adaf-cc11a172d4a7": {
+          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
+        },
+        "e2745118-9d93-4e33-a607-c1927403c0c3": {
+          "description": "Xác định từ vựng chính của môn khoa học máy tính"
+        },
+        "19f72ae3-7b2b-4028-84e5-8e5e66fcf397": {
+          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
+        },
+        "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
+          "description": "Tạo chương trình để hoàn thành một hình ảnh bằng cách sử dụng các bước theo trình tự."
+        },
+        "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
+          "description": "Chia các hình khối phức tạp thành các phần đơn giản."
+        },
+        "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
+          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
+        },
+        "73964b0e-cea1-43cf-a130-410017addf73": {
+          "description": "Tạo một trò chơi tương tác bằng cách sử dụng trình xử lý trình tự và sự kiện."
+        },
+        "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
+          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
+        },
+        "8b4629a9-0621-4442-9801-e3b61e4fbaf3": {
+          "description": "Định nghĩa “lập trình” và “khoa học máy tính”."
+        },
+        "16a00a1c-4559-4e9c-95e1-1cd1e542fe68": {
+          "description": "Xác định các từ vựng chính về khoa học máy tính."
+        },
+        "5e05fbeb-12c6-437c-b0c4-5e2057d3d975": {
+          "description": "Xác định những nơi cần tiếp cận để tiếp tục học khoa học máy tính và lập trình."
+        },
+        "f9486b57-7160-4b3b-b327-b311239d5d26": {
+          "description": "Phát triển các chương trình phản hồi lại các sự kiện đã được lên lịch"
+        },
+        "251fe027-d9b3-4384-99f6-53505275e4ce": {
+          "description": "Phát triển các chương trình phản hồi lại thông tin đầu vào của người dùng"
+        },
+        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
+          "description": "Tạo hiệu ứng chuyển động nhảy múa bằng mã lệnh"
+        },
+        "83f493e8-9941-4154-b2f4-f34836741746": {
+          "description": "Định nghĩa “lập trình” và “khoa học máy tính”."
+        },
+        "58cd5fc3-375f-4840-a5ac-fdb527a38ebd": {
+          "description": "Xác định các từ vựng chính về khoa học máy tính."
+        },
+        "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3": {
+          "description": "Xác định những nơi cần tiếp cận để tiếp tục học khoa học máy tính và lập trình."
+        },
+        "d48452ca-5cba-4bc4-b52c-424f10d43bab": {
+          "description": "Định nghĩa “lập trình” và “khoa học máy tính”."
+        },
+        "bdb824f7-9d5c-4465-b019-0294329fd999": {
+          "description": "Xác định các từ vựng chính về khoa học máy tính."
+        },
+        "69ffb469-2601-46aa-bc80-82043d8dcd1e": {
+          "description": "Xác định những nơi cần tiếp cận để tiếp tục học khoa học máy tính và lập trình."
+        },
+        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
+          "description": "Phát triển các chương trình phản hồi lại các sự kiện đã được lên lịch"
+        },
+        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
+          "description": "Phát triển các chương trình phản hồi lại thông tin đầu vào của người dùng"
+        },
+        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
+          "description": "Tạo hiệu ứng chuyển động nhảy múa bằng mã lệnh"
+        },
+        "6394fdc5-50c3-423e-8135-a64594824db3": {
+          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
+        },
+        "36208a0a-f319-4d09-ad20-46f8d68c0ff4": {
+          "description": "Xác định từ vựng chính của môn khoa học máy tính"
+        },
+        "bed6c56c-a270-4835-96f1-33d9d9ec78da": {
+          "description": "Liên hệ các khái niệm khoa học máy tính với thực tiễn"
+        },
+        "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
+          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
+        },
+        "e23f32e6-7d12-41e6-a601-bcf0825f0e30": {
+          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
+        },
+        "a5bebcad-7295-4ecd-af0d-4012f97de704": {
+          "description": "Xác định từ vựng chính của môn khoa học máy tính"
+        },
+        "303a2b74-af73-401c-8929-1fc1c5611f18": {
+          "description": "Liên hệ các khái niệm khoa học máy tính với thực tiễn"
+        },
+        "0de7aa41-13ea-4a30-a45d-701df2a562c8": {
+          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
+        },
+        "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
+          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
+        },
+        "db37b900-bbc1-46dc-a6c8-adc0ab833a8d": {
+          "description": "Xác định từ vựng chính của môn khoa học máy tính"
+        },
+        "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
+          "description": "Liên hệ các khái niệm khoa học máy tính với thực tiễn"
+        },
+        "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
+          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
+        },
+        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
+          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
+        },
+        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
+          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
+        },
+        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
+          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
+        },
+        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
+          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
+        },
+        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
+          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
+        },
+        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
+        },
+        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
+          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
+        },
+        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
+          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
+        },
+        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
+          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
+        },
+        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
+          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
+        },
+        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
+          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
+        },
+        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
+          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
+        },
+        "c15d5aa7-bb01-41e2-90d5-5929d68628f3": {
+          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
+        },
+        "f149f330-032b-40db-a3db-62ff2a8c04fb": {
+          "description": "Xác định từ vựng chính của môn khoa học máy tính"
+        },
+        "e68fca49-de4c-4e93-85e3-05bcc2f9a779": {
+          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
+        },
+        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
+          "description": "Giải thích lý do mã hóa là nhu cầu quan trọng đối với cuộc sống hàng ngày trên Internet."
+        },
+        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
+          "description": "Giải mã thông điệp được mã hóa bằng mật mã Caesar bằng tiện ích mật mã Caesar"
+        },
+        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
+          "description": "Giải mã thông điệp được mã hóa bằng mật mã thay thế ngẫu nhiên bằng cách sử dụng phương pháp Phân tích tần suất"
+        },
+        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
+          "description": "Giải thích các điểm yếu và lỗi bảo mật của mật mã thay thế"
+        },
+        "3e5eebcd-2140-4152-8654-410468108ab6": {
+          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
+        },
+        "fcb92339-9036-46ec-b5ab-d8d252651e2d": {
+          "description": "Xác định từ vựng chính của môn khoa học máy tính"
+        },
+        "0a56ebd1-4df4-492c-b630-2a6b1f43e3c4": {
+          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
+        },
+        "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa": {
+          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
+        },
+        "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e": {
+          "description": "Xác định từ vựng chính của môn khoa học máy tính"
+        },
+        "bc47cc48-f07f-4d2b-aa2d-86f952ab0da3": {
+          "description": "Liên hệ các khái niệm khoa học máy tính với thực tiễn"
+        },
+        "59992d8c-d194-4063-82fa-001a0b6482d9": {
+          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
+        },
+        "63be9575-1232-47a5-991c-8bd03ac7c949": {
+          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
+        },
+        "0b17cf0a-2614-40be-afbc-1045245d0a38": {
+          "description": "Xác định từ vựng chính của môn khoa học máy tính"
+        },
+        "b655e0ef-f98f-4db9-93f1-5d842b470c5d": {
+          "description": "Liên hệ các khái niệm khoa học máy tính với thực tiễn"
+        },
+        "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
+          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
+        },
+        "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5": {
+          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
+        },
+        "74f6b7a3-df1b-4f98-9619-30b2c2118c14": {
+          "description": "Xác định từ vựng chính của môn khoa học máy tính"
+        },
+        "d1660224-18b1-4e70-b7fc-b0fce29c8cd6": {
+          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
+        },
+        "008a40f4-a5ee-42aa-862e-670f19129694": {
+          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
+        },
+        "a4ad4a3c-f2b2-4675-90e5-626ce70c2764": {
+          "description": "Xác định từ vựng chính của môn khoa học máy tính"
+        },
+        "343631be-830a-44f6-a249-a6aa96ea38f0": {
+          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
+        },
+        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
+          "description": "Thảo luận về vai trò của trí tuệ nhân tạo trong cuộc sống."
+        },
+        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+          "description": "Đào tạo và thử nghiệm mô hình máy học."
+        },
+        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+          "description": "Lý do định kiến của con người đóng vai trò quan trọng trong máy học."
+        },
+        "ef08539f-6652-4fb9-a0ec-781dfec114f8": {
+          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
+        },
+        "b1e4a88d-565b-4d95-a6d7-129869cff301": {
+          "description": "Xác định từ vựng chính của môn khoa học máy tính"
+        },
+        "4cc87f80-aa2a-4996-96bd-de31f9836620": {
+          "description": "Liên hệ các khái niệm khoa học máy tính với thực tiễn"
+        },
+        "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
+          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
+        },
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Minh họa sự chuyển biến trong tâm trạng của bài thơ."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Biểu diễn ngôn ngữ nghĩa bóng và nghĩa đen trong một văn bản."
+        },
+        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
+          "description": "Phát triển các chương trình phản ứng với các sự kiện theo thời gian."
+        },
+        "93e23857-027c-4711-9033-a41de9430672": {
+          "description": "Xác định các hành động có liên quan đến sự kiện đầu vào."
+        },
+        "8e120010-1817-488a-8ca8-ce5198a0883d": {
+          "description": "Tạo một trò chơi tương tác bằng cách sử dụng trình xử lý trình tự và sự kiện."
+        },
+        "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
+          "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
+        },
+        "559aa8ee-c19e-41b2-8820-8cf04cf72dad": {
+          "description": "Định nghĩa “lập trình” và “khoa học máy tính”."
+        },
+        "bd8e3dc4-47f2-41ac-8c7f-01126eb5e68a": {
+          "description": "Xác định các từ vựng chính về khoa học máy tính."
+        },
+        "0e2bbedd-f066-4dc1-b80c-291dac187c62": {
+          "description": "Xác định những nơi cần tiếp cận để tiếp tục học khoa học máy tính và lập trình."
+        },
+        "7a1a8e77-d400-47a9-ad84-819e2c9d88f1": {
+          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
+        },
+        "dca3e183-1119-471b-b510-a5b6f40f34b4": {
+          "description": "Xác định từ vựng chính của môn khoa học máy tính"
+        },
+        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
+          "description": "Liên hệ các khái niệm khoa học máy tính với thực tiễn"
+        },
+        "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
+          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
+        },
+        "e475558e-d7ca-4fc3-950a-b09be116dafb": {
+          "description": "Định nghĩa “viết mã lệnh” và “khoa học máy tính”"
+        },
+        "6feb1920-3b43-4a49-ade4-e9c6ab5da092": {
+          "description": "Xác định từ vựng chính của môn khoa học máy tính"
+        },
+        "663f8e5f-9d35-425b-8d51-931fcef2c2d4": {
+          "description": "Liên hệ các khái niệm khoa học máy tính với thực tiễn"
+        },
+        "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
+          "description": "Xác định hướng đi để tiếp tục học môn khoa học máy tính và viết mã lệnh"
+        },
+        "d2d65101-b356-4092-8f88-59b387334dd9": {
+          "description": "Cộng tác với bạn cùng lớp để tìm giải pháp cho vấn đề nén văn bản bằng Tiện ích nén văn bản (lược đồ nén dữ liệu không giảm chất lượng)."
+        },
+        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
+          "description": "Giải thích lý do không thể hoặc “khó” xác định dung lượng nén tối ưu."
+        },
+        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
+          "description": "Giải thích một số yếu tố gây trở ngại cho quá trình nén."
+        },
+        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
+          "description": "Mô tả mục đích và lý do của phương pháp nén dữ liệu không giảm chất lượng."
+        },
+        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
+          "description": "Hiểu những yêu cầu khi học sinh chuyển sang phòng máy tính."
+        },
+        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
+          "description": "Sử dụng thuật ngữ thích hợp khi đề cập đến chuột máy tính, bàn di chuột hoặc màn hình cảm ứng."
+        },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": "Phát triển các chương trình phản ứng với các sự kiện theo thời gian."
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": "Minh họa sự chuyển biến trong tâm trạng của bài thơ."
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": "Biểu diễn ngôn ngữ nghĩa bóng và nghĩa đen trong một văn bản."
         }
       }
     }

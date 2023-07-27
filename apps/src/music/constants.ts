@@ -1,3 +1,5 @@
+export const baseAssetUrl = 'https://curriculum.code.org/media/musiclab/';
+
 export interface Trigger {
   id: string;
   dropdownLabel: string;
@@ -59,3 +61,6 @@ export const DEFAULT_CHORD_LENGTH = 1;
 
 export const LOCAL_STORAGE = 'local';
 export const REMOTE_STORAGE = 'remote';
+
+// Minimum number of measures in a song
+export const MIN_NUM_MEASURES = 30;

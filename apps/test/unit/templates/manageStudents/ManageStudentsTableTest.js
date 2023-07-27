@@ -7,6 +7,7 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import i18n from '@cdo/locale';
+import DCDO from '@cdo/apps/dcdo';
 import {expect} from '../../../util/deprecatedChai';
 import {shallow, mount} from 'enzyme';
 import ManageStudentsTable, {
@@ -16,6 +17,7 @@ import ManageStudentsTable, {
 import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
 import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
 import ManageStudentNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
+import ManageStudentFamilyNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsFamilyNameCell';
 import ManageStudentsGenderCell from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCell';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import manageStudents, {
@@ -133,6 +135,7 @@ describe('ManageStudentsTable', () => {
       location: '/v2/sections/101',
       name: 'My Section',
       login_type: SectionLoginType.picture,
+      participant_type: 'student',
       grade: '2',
       code: 'PMTKVH',
       lesson_extras: false,
@@ -278,6 +281,98 @@ describe('ManageStudentsTable', () => {
 
       // Expect the input box value to have changed
       expect(nameInput().prop('value')).to.equal(fakeStudent.name + 'z');
+    });
+
+    it('renders an editable family name field in student sections', async () => {
+      DCDO.reset();
+      DCDO.set('family-name-features', true);
+
+      const wrapper = mount(
+        <Provider store={getStore()}>
+          <ManageStudentsTable />
+        </Provider>
+      );
+      // Begin editing the student
+      // (Using redux directly to do this requires us to trigger a manual update)
+      getStore().dispatch(startEditingStudent(fakeStudent.id));
+      wrapper.update();
+
+      const manageStudentFamilyNameCell = () =>
+        wrapper
+          .find(ManageStudentFamilyNameCell)
+          .findWhere(w => w.prop('id') === fakeStudent.id)
+          .first();
+
+      // Check for a family name cell with expecting initial editing props
+      expect(manageStudentFamilyNameCell().exists()).to.be.true;
+      expect(manageStudentFamilyNameCell().prop('isEditing')).to.be.true;
+
+      // Find the family name input
+      const nameInput = () =>
+        manageStudentFamilyNameCell().find('input').first();
+      expect(nameInput().prop('value')).to.equal('');
+
+      // Simulate a family name change
+      nameInput().simulate('change', {target: {value: 'z'}});
+
+      // Expect the input box value to have changed
+      expect(nameInput().prop('value')).to.equal('z');
+
+      DCDO.reset();
+    });
+
+    it('does not render a family name field in PL sections', async () => {
+      DCDO.reset();
+      DCDO.set('family-name-features', true);
+
+      const plSection = {...fakeSection, participant_type: 'teacher'};
+      getStore().dispatch(setSections([plSection]));
+      const wrapper = mount(
+        <Provider store={getStore()}>
+          <ManageStudentsTable />
+        </Provider>
+      );
+      // Begin editing the student
+      // (Using redux directly to do this requires us to trigger a manual update)
+      getStore().dispatch(startEditingStudent(fakeStudent.id));
+      wrapper.update();
+
+      const manageStudentFamilyNameCell = () =>
+        wrapper
+          .find(ManageStudentFamilyNameCell)
+          .findWhere(w => w.prop('id') === fakeStudent.id)
+          .first();
+
+      // Check for a family name cell with expecting initial editing props
+      expect(manageStudentFamilyNameCell().exists()).to.be.false;
+
+      DCDO.reset();
+    });
+
+    it('does not render a family name field when flag is false', async () => {
+      DCDO.reset();
+      DCDO.set('family-name-features', false);
+
+      const wrapper = mount(
+        <Provider store={getStore()}>
+          <ManageStudentsTable />
+        </Provider>
+      );
+      // Begin editing the student
+      // (Using redux directly to do this requires us to trigger a manual update)
+      getStore().dispatch(startEditingStudent(fakeStudent.id));
+      wrapper.update();
+
+      const manageStudentFamilyNameCell = () =>
+        wrapper
+          .find(ManageStudentFamilyNameCell)
+          .findWhere(w => w.prop('id') === fakeStudent.id)
+          .first();
+
+      // Check for a family name cell with expecting initial editing props
+      expect(manageStudentFamilyNameCell().exists()).to.be.false;
+
+      DCDO.reset();
     });
 
     it('renders correctly if loginType is picture', () => {

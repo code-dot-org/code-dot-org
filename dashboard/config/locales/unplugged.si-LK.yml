@@ -2,8 +2,132 @@
 si:
   data:
     unplugged:
+      BigEvent:
+        title: විශාල සිදුවීම
+      BigEvent_2018:
+        title: විශාල සිදුවීම
+      BigEvent_2019:
+        title: විශාල සිදුවීම
+      BinaryBracelets:
+        title: ද්විමය වළලු
+      BinaryBracelets_2018:
+        title: ද්විමය වළලු
+      BinaryBracelets_2019:
+        title: ද්විමය වළලු
+      BinaryImages:
+        title: ද්විමය පින්තූර
+      BinaryImages_2018:
+        title: ද්විමය පින්තූර
+      BinaryImages_2019:
+        title: ද්විමය පින්තූර
+      Booleans:
+        desc: Booleans යනු හතරවන සහ මෙම පාඩම් මාලාවේදී අප ඉගෙනගන්නා අවසාන දත්ත වර්ගයයි.
+          Booleans යනු කුමක්ද, ඔවුන් අපිට ශ්‍රිතයන් ලිවීමේදී තාර්කිකව සිතීමට කෙසේ
+          උපකාරී වන්නේද යන්න මෙම ක්‍රියාකාරකමේ දී අපි ඉගෙනනනිමු
+        title: බූලීය සහ තාර්කික
+      BuildingAFoundation:
+        title: පදනමක් තැනීම
+      CollisionDetection:
+        title: ගැටීම අණාවරණය සහ පයිතගරස් ප්රමේයය
+      ComputationalThinking:
+        desc: සිසුන් උපදේශ නොමැති පරිගණක ක්‍රීඩා සෙල්ලම් කිරීම සදහා පරිඝනකමය සිතීම්
+          (decompose, pattern match, abstract, algorithm) ආශ්‍රයෙන් පියවර රැසක් භාවිතා
+          කරනු ලැබේ.
+        title: සංඛ්‍යාත්මක සිතීම
+      Conditionals:
+        title: කන්ඩිෂනලස්
+      ConditionalsPiecewiseFunctions:
+        title: කොන්දේසි සහිත සහ කොටස් වශයෙන් ඇති ක්‍රියාකාරකම්
+      Conditionals_2018:
+        title: කන්ඩිෂනලස්
+      Conditionals_2019:
+        title: කන්ඩිෂනලස්
+      Contracts:
+        desc: ක්‍රියාකාරකම් සාකච්ඡා කිරීමට හා තේරුම් ගැනීමට කොන්ත්‍රාත්තු මගපාදයි.
+          මෙම පාඩමේදී අපි බලන්නේ නව ක්‍රමලේඛන බෂාවක් හෝ ක්‍රියාකාරකමක් තේරුම් ගැනීමට
+          කොන්ත්‍රාත්තු කෙසේ අපිට උපකාරී වන්නේද යන්නයි.
+        title: ගිවිසුම්, වසම්, සහ පරාසය
+      Crowdsourcing:
+        title: Crowdsourcing වැඩසටහන
+      DesignRecipe:
+        title: නිර්මාණ වට්ටෝරුව
+      DiceRace:
+        title: 'තත්කාලීන ඇල්ගොරිතම: දාදු කැටය විහිදීම'
+      DigitalCitizenship:
+        title: ඩිජිටල් පුරවැසිකම
+      DigitalFootprint:
+        title: ඔබේ ඩිජිටල් පා සටහන
+      DigitalFootprint_2018:
+        title: ඔබේ ඩිජිටල් පා සටහන
+      DigitalFootprint_2019:
+        title: ඔබේ ඩිජිටල් පා සටහන
+      EnvelopeVariables:
+        title: ආවරණය කරන ලද විචල්‍ය
+      ForLoopFun:
+        desc: අපි දන්නවා ලූපයන් නැවත නැවත දේවල් කරන්න අපිට ඉඩලබාදෙනවා, නමුත් දැන්
+          අපි ඉගෙන ගන්න යන්නේ අමතර ගොඩනගපු ආකෘතියක් සමග ලූපයන් භාවිතා කරන ආකාරය.
+        title: For ලුපයේ සතුට
+      FunctionalSuncatchers:
+        title: කියාකාරී නිර්මානාත්මක විදුරු කැබැල්ල
+      GettingLoopy:
+        title: ඔල්මාද වීම
+      GettingLoopy_2018:
+        title: ඔල්මාද වීම
+      GettingLoopy_2019:
+        title: ඔල්මාද වීම
+      GoingPlacesSafely:
+        desc: අන්තර්ජාලය ඉතා බලගතු තැනකි නමුත් ඇතැම් විට එය අවදානම් සහිත තැනකි. අන්තර්ජාලහි
+          සැරිසරන අතර තුර සුරක්ෂිතව සිටින අයුරු ගුරුවරුන් හදුන්වාදෙයි.
+        title: තැන්වලට සුරක්ෂිතව යාම
+      GoingPlacesSafely_2018:
+        desc: අන්තර්ජාලය ඉතා බලගතු තැනකි නමුත් ඇතැම් විට එය අවදානම් සහිත තැනකි. අන්තර්ජාලහි
+          සැරිසරන අතර තුර සුරක්ෂිතව සිටින අයුරු ගුරුවරුන් හදුන්වාදෙයි.
+        title: තැන්වලට සුරක්ෂිතව යාම
+      GoingPlacesSafely_2019:
+        desc: අන්තර්ජාලය ඉතා බලගතු තැනකි නමුත් ඇතැම් විට එය අවදානම් සහිත තැනකි. අන්තර්ජාලහි
+          සැරිසරන අතර තුර සුරක්ෂිතව සිටින අයුරු ගුරුවරුන් හදුන්වාදෙයි.
+        title: තැන්වලට සුරක්ෂිතව යාම
+      GraphPaperProgramming:
+        title: ප්‍රස්තාර රටා වැඩසටහන්
+      GraphPaperProgramming_2018:
+        title: ප්‍රස්තාර රටා වැඩසටහන්
+      GraphPaperProgramming_2019:
+        title: ප්‍රස්තාර රටා වැඩසටහන්
+      Internet:
+        title: අන්තර්ජාලය
+      MadGlibs:
+        title: කුපිත වූ Glibs
+      MoveIt:
+        title: එය ගෙන යන්න, ගෙන යන්න
+      MoveItMoveIt_2018:
+        title: එය ගෙන යන්න, ගෙන යන්න
+      MoveItMoveIt_2019:
+        title: එය ගෙන යන්න, ගෙන යන්න
+      PaperPlanes:
+        title: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
+      PaperPlanes_2018:
+        title: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
+      PaperPlanes_2019:
+        title: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
+      PlantASeed:
+        title: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
+      PlantASeed_2018:
+        title: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
+      PlantASeed_2019:
+        title: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
+      RelayProgramming:
+        title: ප්‍රතිචාරණ ක්‍රමලේඛනය
+      RelayProgramming_2018:
+        title: ක්‍රමලේඛණය ප්‍රතිචාරණය
+      RelayProgramming_2018_2019:
+        title: ක්‍රමලේඛණය ප්‍රතිචාරණය
+      SongwritingParameters:
+        title: ගීත ලිවීම
+      SongwritingWithParameters:
+        title: පරාමිතීන් සමඟ ගීත ලිවීම
+      TangramAlgorithms:
+        title: Tangram ඇල්ගොරිතමය
       Unplug1:
-        title: පරිඝණක විද්‍යාව හැදින්වීම
         desc: මෙම පාඩම පරිගණක විද්‍යාවේ මූලික සංකල්ප හදුන්වාදෙන අතර පරිඝණක විද්‍යාඥයකුගේ
           කාර්ය්‍ය භාරය පැහැදිලි කරයි. එමගින් සිසුන්ට  පරිඝණක විද්‍යාඥකු ලෙස සිතා
           කටයුතු කිරීමට අවස්ථාවක් ලැබේ. මෙම ක්‍රියාකාරකම අවසානයේ, සෑම සිසුවෙකුටම තමුන්
@@ -12,9 +136,13 @@ si:
           ඉතා ප්‍රගතිගත අවස්තාවන් උදාකරගත හැකි වනු ඇත.
         pdfs:
         - එළිදැක්වුම1
+        title: පරිඝණක විද්‍යාව හැදින්වීම
         video: එළිදැක්වුම1
+      Unplug10:
+        title: අන්තර්ජාලය
+      Unplug11:
+        title: වෙළනවා
       Unplug2:
-        title: සංඛ්‍යාත්මක සිතීම
         desc: කඩදාසි හා මාකර් පෑන් වලට අමතරව කිසිවක් නැත, පියවර 4ක් භාවිතයෙන් ගැටළු
           නිරාකරණය කිරීමට සිසුන් ඉගෙන ගනීවි. කෙටි හැදින්වීමකින් පසුව අනෙක් ළමුන්ට
           නියමිත රාක්ෂයා (පෙර නාමාවලියෙන් තොර ගන්නා ලද රාක්ෂයා) ඇදීමට මාර්ගය නිර්මාණය
@@ -26,247 +154,119 @@ si:
           ඔබ අදිනා ලද රාක්ෂයා එම ඇල්ගොරිතමට අදාල කණ්ඩායම විසින් සොයා ගන්නා ලද රාක්ෂයාමද?
         pdfs:
         - එළිදැක්වුම2
+        title: සංඛ්‍යාත්මක සිතීම
         video: එළිදැක්වුම2
       Unplug3:
-        title: ප්‍රස්තාර රටා වැඩසටහන්
         pdfs:
         - එළිදැක්වුම3
+        title: ප්‍රස්තාර රටා වැඩසටහන්
         video: එළිදැක්වුම3
       Unplug4:
-        title: ඇල්ගොරිතම්
         pdfs:
         - එළිදැක්වුම4
+        title: ඇල්ගොරිතම්
         video: එළිදැක්වුම4
       Unplug5:
-        title: ශ්‍රිතයන්
         pdfs:
         - එළිදැක්වුම5
+        title: ශ්‍රිතයන්
         video: එළිදැක්වුම5
       Unplug6:
-        title: කොන්දේසි
         desc: මෙය පන්ති කාමර ක්‍රීඩාවක්.if-statements, loops සහ condition අවස්තා හඳුන්වාදීමෙන්
           අනතුර පෙර පුරුදු වැඩසටහන්, deck of cards  සහ luck of the draw වැනි දෑ පන්තිකාමරය
           තුලදීම පුරුදු විය හැකී.
         pdfs:
         - එළිදැක්වුම6
+        title: කොන්දේසි
         video: එළිදැක්වුම6
       Unplug7:
-        title: ගීත රචනය
         pdfs:
         - එළිදැක්වුම7
+        title: ගීත රචනය
         video: එළිදැක්වුම7
       Unplug8:
-        title: ඇබ්ස්ට්‍රැක්ෂන්
         pdfs:
         - එළිදැක්වුම8
+        title: ඇබ්ස්ට්‍රැක්ෂන්
       Unplug9:
         title: ක්‍රමලේඛණය ප්‍රතිචාරණය
-      Unplug10:
-        title: අන්තර්ජාලය
-      Unplug11:
-        title: වෙළනවා
       UnplugHappyMaps:
         title: සතුටු සිතියම්
-      MoveIt:
-        title: එය ගෙන යන්න, ගෙන යන්න
-      PlantASeed:
-        title: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
-      BuildingAFoundation:
-        title: පදනමක් තැනීම
-      GettingLoopy:
-        title: ඔල්මාද වීම
-      RelayProgramming:
-        title: ප්‍රතිචාරණ ක්‍රමලේඛනය
-      Conditionals:
-        title: කන්ඩිෂනලස්
-      BigEvent:
-        title: විශාල සිදුවීම
-      GoingPlacesSafely:
-        title: තැන්වලට සුරක්ෂිතව යාම
-        desc: අන්තර්ජාලය ඉතා බලගතු තැනකි නමුත් ඇතැම් විට එය අවදානම් සහිත තැනකි. අන්තර්ජාලහි
-          සැරිසරන අතර තුර සුරක්ෂිතව සිටින අයුරු ගුරුවරුන් හදුන්වාදෙයි.
-      GraphPaperProgramming:
-        title: ප්‍රස්තාර රටා වැඩසටහන්
-      PaperPlanes:
-        title: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
-      BinaryBracelets:
-        title: ද්විමය වළලු
-      DigitalFootprint:
-        title: ඔබේ ඩිජිටල් පා සටහන
-      ComputationalThinking:
-        title: සංඛ්‍යාත්මක සිතීම
-        desc: සිසුන් උපදේශ නොමැති පරිගණක ක්‍රීඩා සෙල්ලම් කිරීම සදහා පරිඝනකමය සිතීම්
-          (decompose, pattern match, abstract, algorithm) ආශ්‍රයෙන් පියවර රැසක් භාවිතා
-          කරනු ලැබේ.
-      FunctionalSuncatchers:
-        title: කියාකාරී නිර්මානාත්මක විදුරු කැබැල්ල
-      SongwritingParameters:
-        title: ගීත ලිවීම
-      DiceRace:
-        title: 'තත්කාලීන ඇල්ගොරිතම: දාදු කැටය විහිදීම'
-      Internet:
-        title: අන්තර්ජාලය
-      Crowdsourcing:
-        title: Crowdsourcing වැඩසටහන
-      DigitalCitizenship:
-        title: ඩිජිටල් පුරවැසිකම
-      TangramAlgorithms:
-        title: Tangram ඇල්ගොරිතමය
-      EnvelopeVariables:
-        title: ආවරණය කරන ලද විචල්‍ය
-      MadGlibs:
-        title: කුපිත වූ Glibs
-      ForLoopFun:
-        title: For ලුපයේ සතුට
-        desc: අපි දන්නවා ලූපයන් නැවත නැවත දේවල් කරන්න අපිට ඉඩලබාදෙනවා, නමුත් දැන්
-          අපි ඉගෙන ගන්න යන්නේ අමතර ගොඩනගපු ආකෘතියක් සමග ලූපයන් භාවිතා කරන ආකාරය.
-      SongwritingWithParameters:
-        title: පරාමිතීන් සමඟ ගීත ලිවීම
-      BinaryImages:
-        title: ද්විමය පින්තූර
+      UnplugHappyMaps_2018:
+        title: සතුටු සිතියම්
+      UnplugHappyMaps_2019:
+        title: සතුටු සිතියම්
       VideoGamesCoordinatePlanes:
         title: විඩීයෝ ක්‍රීඩා සහ ගුවන්යානා සම්බන්ධීකරණය
-      Contracts:
-        title: ගිවිසුම්, වසම්, සහ පරාසය
-        desc: ක්‍රියාකාරකම් සාකච්ඡා කිරීමට හා තේරුම් ගැනීමට කොන්ත්‍රාත්තු මගපාදයි.
-          මෙම පාඩමේදී අපි බලන්නේ නව ක්‍රමලේඛන බෂාවක් හෝ ක්‍රියාකාරකමක් තේරුම් ගැනීමට
-          කොන්ත්‍රාත්තු කෙසේ අපිට උපකාරී වන්නේද යන්නයි.
-      DesignRecipe:
-        title: නිර්මාණ වට්ටෝරුව
-      Booleans:
-        title: බූලීය සහ තාර්කික
-        desc: Booleans යනු හතරවන සහ මෙම පාඩම් මාලාවේදී අප ඉගෙනගන්නා අවසාන දත්ත වර්ගයයි.
-          Booleans යනු කුමක්ද, ඔවුන් අපිට ශ්‍රිතයන් ලිවීමේදී තාර්කිකව සිතීමට කෙසේ
-          උපකාරී වන්නේද යන්න මෙම ක්‍රියාකාරකමේ දී අපි ඉගෙනනනිමු
-      ConditionalsPiecewiseFunctions:
-        title: කොන්දේසි සහිත සහ කොටස් වශයෙන් ඇති ක්‍රියාකාරකම්
-      CollisionDetection:
-        title: ගැටීම අණාවරණය සහ පයිතගරස් ප්රමේයය
+      courseABC_unplugged_bigEvent:
+        title: විශාල සිදුවීම
+      courseAB_unplugged_plantASeed:
+        title: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
+      courseA_unplugged_goingPlacesSafely:
+        desc: අන්තර්ජාලය ඉතා බලගතු තැනකි නමුත් ඇතැම් විට එය අවදානම් සහිත තැනකි. අන්තර්ජාලහි
+          සැරිසරන අතර තුර සුරක්ෂිතව සිටින අයුරු ගුරුවරුන් හදුන්වාදෙයි.
+        title: තැන්වලට සුරක්ෂිතව යාම
+      courseA_unplugged_happyMaps:
+        title: සතුටු සිතියම්
       courseB_unplugged_MRF:
         title: අපේනුගත ක්‍රියාකාරකම
+      courseB_unplugged_MRF_2018:
+        title: මගේ රොබෝ මිතුරන්
+      courseB_unplugged_MRF_2019:
+        title: මගේ රොබෝ මිතුරන්
+      courseB_unplugged_digitalFootprint:
+        title: ඔබේ ඩිජිටල් පා සටහන
       courseB_unplugged_loopyMRF:
         title: අපේනුගත ක්‍රියාකාරකම
       courseC_Unplugged_ScreenOutTheMean:
         title: අපේනුගත ක්‍රියාකාරකම
-      courseD_unplugged_digitalCitizenship:
+      courseC_Unplugged_ScreenOutTheMean_2018:
         title: අපේනුගත ක්‍රියාකාරකම
-      courseF_unplugged_powerOfWords:
+      courseC_Unplugged_ScreenOutTheMean_2019:
         title: අපේනුගත ක්‍රියාකාරකම
-      courseAB_unplugged_plantASeed:
-        title: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
-      courseA_unplugged_happyMaps:
-        title: සතුටු සිතියම්
-      courseA_unplugged_goingPlacesSafely:
-        title: තැන්වලට සුරක්ෂිතව යාම
-        desc: අන්තර්ජාලය ඉතා බලගතු තැනකි නමුත් ඇතැම් විට එය අවදානම් සහිත තැනකි. අන්තර්ජාලහි
-          සැරිසරන අතර තුර සුරක්ෂිතව සිටින අයුරු ගුරුවරුන් හදුන්වාදෙයි.
-      courseABC_unplugged_bigEvent:
-        title: විශාල සිදුවීම
-      courseB_unplugged_digitalFootprint:
-        title: ඔබේ ඩිජිටල් පා සටහන
-      courseC_unplugged_buildingAFoundation:
-        title: පදනමක් තැනීම
-      courseC_unplugged_paperPlanes:
-        title: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
-      courseC_unplugged_gettingLoopy:
-        title: ඔල්මාද වීම
       courseC_unplugged_binaryBracelets:
         title: ද්විමය වළලු
+      courseC_unplugged_buildingAFoundation:
+        title: පදනමක් තැනීම
+      courseC_unplugged_gettingLoopy:
+        title: ඔල්මාද වීම
+      courseC_unplugged_paperPlanes:
+        title: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
+      courseD_unplugged_binaryImages:
+        title: ද්විමය පින්තූර
+      courseD_unplugged_conditionalsCards:
+        title: කාඩ්පත් සමඟ කොන්දේසික
+      courseD_unplugged_digitalCitizenship:
+        title: අපේනුගත ක්‍රියාකාරකම
+      courseD_unplugged_digitalCitizenship_2018:
+        title: අපේනුගත ක්‍රියාකාරකම
+      courseD_unplugged_digitalCitizenship_2019:
+        title: අපේනුගත ක්‍රියාකාරකම
       courseD_unplugged_graphPaperProgramming:
         title: ප්‍රස්තාර රටා වැඩසටහන්
       courseD_unplugged_relayProgramming:
         title: ක්‍රමලේඛණය ප්‍රතිචාරණය
-      courseD_unplugged_conditionalsCards:
-        title: කාඩ්පත් සමඟ කොන්දේසික
-      courseD_unplugged_binaryImages:
-        title: ද්විමය පින්තූර
-      courseE_unplugged_songwritingParameters:
-        title: පරාමිතීන් සමඟ ගීත ලිවීම
-      courseE_unplugged_internet:
-        title: අන්තර්ජාලය
       courseE_unplugged_crowdsourcing:
         title: Crowdsourcing වැඩසටහන
+      courseE_unplugged_internet:
+        title: අන්තර්ජාලය
       courseE_unplugged_songwriting:
         title: ගීත ලිවීම
-      courseF_unplugged_tangrams:
-        title: Tangram ඇල්ගොරිතමය
+      courseE_unplugged_songwritingParameters:
+        title: පරාමිතීන් සමඟ ගීත ලිවීම
       courseF_unplugged_envelopeVariables:
         title: ආවරණය කරන ලද විචල්‍ය
       courseF_unplugged_forLoopFun:
-        title: For ලුපයේ සතුට
         desc: අපි දන්නවා ලූපයන් නැවත නැවත දේවල් කරන්න අපිට ඉඩලබාදෙනවා, නමුත් දැන්
           අපි ඉගෙන ගන්න යන්නේ අමතර ගොඩනගපු ආකෘතියක් සමග ලූපයන් භාවිතා කරන ආකාරය.
+        title: For ලුපයේ සතුට
+      courseF_unplugged_powerOfWords:
+        title: අපේනුගත ක්‍රියාකාරකම
       courseF_unplugged_songwritingParameters:
         title: පරාමිතීන් සමඟ ගීත ලිවීම
-      courseB_unplugged_MRF_2018:
-        title: මගේ රොබෝ මිතුරන්
-      PlantASeed_2018:
-        title: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
-      UnplugHappyMaps_2018:
-        title: සතුටු සිතියම්
-      GoingPlacesSafely_2018:
-        title: තැන්වලට සුරක්ෂිතව යාම
-        desc: අන්තර්ජාලය ඉතා බලගතු තැනකි නමුත් ඇතැම් විට එය අවදානම් සහිත තැනකි. අන්තර්ජාලහි
-          සැරිසරන අතර තුර සුරක්ෂිතව සිටින අයුරු ගුරුවරුන් හදුන්වාදෙයි.
-      BigEvent_2018:
-        title: විශාල සිදුවීම
-      GraphPaperProgramming_2018:
-        title: ප්‍රස්තාර රටා වැඩසටහන්
-      courseD_unplugged_digitalCitizenship_2018:
-        title: අපේනුගත ක්‍රියාකාරකම
-      courseC_Unplugged_ScreenOutTheMean_2018:
-        title: අපේනුගත ක්‍රියාකාරකම
-      Conditionals_2018:
-        title: කන්ඩිෂනලස්
-      DigitalFootprint_2018:
-        title: ඔබේ ඩිජිටල් පා සටහන
-      BinaryImages_2018:
-        title: ද්විමය පින්තූර
-      PaperPlanes_2018:
-        title: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
-      GettingLoopy_2018:
-        title: ඔල්මාද වීම
-      BinaryBracelets_2018:
-        title: ද්විමය වළලු
-      MoveItMoveIt_2018:
-        title: එය ගෙන යන්න, ගෙන යන්න
-      RelayProgramming_2018:
-        title: ක්‍රමලේඛණය ප්‍රතිචාරණය
-      courseB_unplugged_MRF_2019:
-        title: මගේ රොබෝ මිතුරන්
-      Conditionals_2019:
-        title: කන්ඩිෂනලස්
-      GraphPaperProgramming_2019:
-        title: ප්‍රස්තාර රටා වැඩසටහන්
-      RelayProgramming_2018_2019:
-        title: ක්‍රමලේඛණය ප්‍රතිචාරණය
-      courseD_unplugged_digitalCitizenship_2019:
-        title: අපේනුගත ක්‍රියාකාරකම
-      BinaryImages_2019:
-        title: ද්විමය පින්තූර
-      GettingLoopy_2019:
-        title: ඔල්මාද වීම
-      courseC_Unplugged_ScreenOutTheMean_2019:
-        title: අපේනුගත ක්‍රියාකාරකම
-      BigEvent_2019:
-        title: විශාල සිදුවීම
-      BinaryBracelets_2019:
-        title: ද්විමය වළලු
-      PaperPlanes_2019:
-        title: 'තත්කාලීන ඇල්ගොරිතම: කඩදාසි තල'
-      PlantASeed_2019:
-        title: 'තත්කාලීන ඇල්ගොරිතම: බීජයක් පැල කරන්න'
-      UnplugHappyMaps_2019:
-        title: සතුටු සිතියම්
-      GoingPlacesSafely_2019:
-        title: තැන්වලට සුරක්ෂිතව යාම
-        desc: අන්තර්ජාලය ඉතා බලගතු තැනකි නමුත් ඇතැම් විට එය අවදානම් සහිත තැනකි. අන්තර්ජාලහි
-          සැරිසරන අතර තුර සුරක්ෂිතව සිටින අයුරු ගුරුවරුන් හදුන්වාදෙයි.
-      MoveItMoveIt_2019:
-        title: එය ගෙන යන්න, ගෙන යන්න
-      DigitalFootprint_2019:
-        title: ඔබේ ඩිජිටල් පා සටහන
-      timeforcs_demo_crowdsourcing:
-        title: Crowdsourcing වැඩසටහන
+      courseF_unplugged_tangrams:
+        title: Tangram ඇල්ගොරිතමය
       timeforcs_demo_conditionals:
         title: කන්ඩිෂනලස්
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing වැඩසටහන
