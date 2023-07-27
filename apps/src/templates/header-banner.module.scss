@@ -1,0 +1,56 @@
+@import "breakpoints";
+@import "typography";
+
+.banner {
+  // background-image is passed in via the `style` attribute
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+
+  figure {
+    @media screen and (min-width: $width-sm) {
+      width: 25%;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      display: none
+    }
+  }
+}
+
+.textWrapper {
+  @media screen and (min-width: $width-sm) {
+    width: 60%;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    width: 100%;
+  }
+
+  position: relative;
+  z-index: 1;
+
+  h1, p {
+    color: white;
+  }
+
+  p {
+    margin-bottom: 0;
+    color: white;
+  }
+}
+
+
+
