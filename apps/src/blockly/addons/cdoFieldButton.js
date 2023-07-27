@@ -5,7 +5,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    * This is a customized field which the user clicks to select an option from a customized picker,
    * for example, the location of a sprite from a grid or a sound file from a customized modal.
    * @param {Object} options - The options for constructing the class.
-   * @param options.value Optional. The initial value of the field.
+   * @param {*} options.value Optional. The initial value of the field.
    * @param {Function} [options.validator] Optional. A function that is called to validate changes to the field's value.
    * Takes in a value & returns a validated value, or null to abort a change
    * @param {Function} options.onClick Handles the field's editor.
