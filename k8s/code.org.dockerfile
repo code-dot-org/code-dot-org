@@ -187,11 +187,12 @@ FROM $CODE_ORG_STATIC as code.org-static
 FROM code.org-user-utils
 ################################################################################
 
-USER root
-RUN apt-get install -y \
-  mariadb-server && \
+RUN \
+  #
+  # We don't copy in .git (huge), and `bundle exec rake install` references it a couple places and fails without it
+  # so we create a blank one:
+  git init && \
   true
-USER ${USERNAME}
 
 COPY --from=code.org-static --link / ./
 
@@ -201,20 +202,12 @@ COPY --from=code.org-node_modules --link ${SRC}/apps/node_modules ./apps/node_mo
 # Copy in ~/.rbenv (built in parallel)
 COPY --from=code.org-rbenv --link ${HOME}/.rbenv ${HOME}/.rbenv
 
-COPY --chown=${USERNAME} aws.config ${HOME}/.aws/config
-
 COPY --chown=${USERNAME} --link ./ ./
 
 # These are only required for installing Apple Silicon hack workarounds from code.org-rbenv
 COPY --from=code.org-rbenv ${SRC}/.bundle ${SRC}/.bundle
 COPY --from=code.org-rbenv ${SRC}/Gemfile ${SRC}/Gemfile
 
-RUN \
-  #
-  # We don't copy in .git (huge), and `bundle exec rake install` references it a couple places and fails without it
-  # so we create a blank one:
-  git init && \
-  true
 
 SHELL [ "zsh", "-l", "-c" ]
 
