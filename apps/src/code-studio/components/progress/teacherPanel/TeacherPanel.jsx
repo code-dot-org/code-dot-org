@@ -243,7 +243,10 @@ class TeacherPanel extends React.Component {
               )}
             </div>
           )}
-          <SortByNameDropdown />
+          <SortByNameDropdown
+            sortByStyles={styles.sortBy}
+            selectStyles={styles.select}
+          />
           {viewAs === ViewType.Instructor && (students || []).length > 0 && (
             <StudentTable
               levelsWithProgress={levelsWithProgress}
@@ -294,6 +297,14 @@ const styles = {
   },
   teacherDashboardLink: {
     fontSize: 11,
+  },
+  sortBy: {
+    display: 'block',
+    textAlign: 'center',
+  },
+  select: {
+    width: 180,
+    margin: '0px 10px 5px',
   },
 };
 
