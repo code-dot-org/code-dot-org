@@ -12,6 +12,10 @@ i18n/locales
 dashboard/config/locales
 ##########################################################################
 
+# don't inject K8S related manifests so skaffold doesn't rebuild/sync
+skaffold.yaml
+k8s/code.org
+
 
 **/.git
 
