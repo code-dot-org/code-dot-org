@@ -507,7 +507,7 @@ class ActionController::TestCase
       if throttle
         Cdo::Throttle.stubs(:throttle).returns(true)
       else
-        Cdo::Throttle.stubs(:throttle).returns(false)
+        Cdo::Throttle.stub(:throttle).returns(false)
       end
 
       assert_queries queries do
