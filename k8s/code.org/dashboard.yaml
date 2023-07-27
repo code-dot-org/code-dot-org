@@ -29,34 +29,42 @@ spec:
         ports:
         - containerPort: 3000
         volumeMounts:
-        # FIXME: this should eventually be mounted from a secret
-        # but we have to figure out where/how/when to do aws-google auth
-        # to set it whenever it expires
-        - name: aws-google
-          mountPath: /home/code.org/.aws
+        - mountPath: /home/code.org/.aws
+          name: aws-google
           subPath: aws
-        - name: aws-google
-          mountPath: /home/code.org/.config/gcloud
+        - mountPath: "/home/code.org/.aws/config"
+          name: aws-config
+          subPath: aws-config
+        - mountPath: /home/code.org/.config/gcloud
+          name: aws-google
           subPath: gcloud
-        - name: dashboard
-          mountPath: /code-dot-org/locals.yml
+        - mountPath: /code-dot-org/locals.yml
+          name: dashboard
           subPath: locals.yml
-        # FIXME REMOVE: THIS IS FOR DEBUGGING PURPOSES
-        - name: aws-google
-          mountPath: /mnt/aws-google
-      initContainers:
-      # FIXME: we use this hack to avoid committing
-      # aws/config into git until we're DOUBLE PLUS /VERY/ SURE that the 
-      # Google Oauth2 "secret" inside aws/config, which our 
-      # AWS Account Access Doc (https://docs.google.com/document/d/1dDfEOhyyNYI2zIv4LI--ErJj6OVEJopFLqPxcI0RXOA/edit)
-      # say is "not secret", is really really truly is not secret.
-      - name: aws-config
-        image: busybox:1.28
-        command: ['sh', '-c', "cp /code-dot-org/aws.config /home/code.org/aws/config"]
+        # FIXME: THIS IS FOR DEBUGGING PURPOSES
+        - mountPath: /mnt/aws-google
+          name: aws-google
+          
+      # initContainers:
+      # # FIXME AWS CONFIG: we use this hack to avoid committing
+      # # aws/config into git until we're DOUBLE PLUS /VERY/ SURE that the 
+      # # Google Oauth2 "secret" inside aws/config, which our 
+      # # AWS Account Access Doc (https://docs.google.com/document/d/1dDfEOhyyNYI2zIv4LI--ErJj6OVEJopFLqPxcI0RXOA/edit)
+      # # say is "not secret", is really really truly is not secret.
+      # - name: aws-config
+      #   image: busybox:1.28
+      #   command: ['sh', '-c', "cp /code-dot-org/aws.config /home/code.org/aws/config"]
+      #   volumeMounts:
+      #     - mountPath: /mnt/aws-google
+      #       name: aws-google
+          
       volumes:
         - name: aws-google
           persistentVolumeClaim:
             claimName: aws-google
+        - name: aws-config
+          secret:
+            secretName: aws-config
         - name: dashboard
           configMap:
             name: dashboard
@@ -67,16 +75,17 @@ metadata:
   name: dashboard
 data:
   locals.yml: |
-    db_credential_admin: {"username":"code.org", "password":"FIXME_WITH_REAL_PASSWORD"}
-    db_admin_user: code.org
-    db_admin_password: FIXME_WITH_REAL_PASSWORD
-    db_credential_writer: {"username":"root", "password":"FIXME_WITH_REAL_PASSWORD"}
-    db_writer_user: code.org
-    db_writer_password: FIXME_WITH_REAL_PASSWORD
-    db_credential_reader: {"username":"root", "password":"FIXME_WITH_REAL_PASSWORD"}
-    db_reader_user: code.org
-    db_reader_password: FIXME_WITH_REAL_PASSWORD
-    db_writer: mysql://code.org@db/
+    # db_credential_admin: {"username":"code.org", "password":"FIXME_WITH_REAL_PASSWORD"}
+    # db_admin_user: code.org
+    # db_admin_password: FIXME_WITH_REAL_PASSWORD
+    # db_credential_writer: {"username":"root", "password":"FIXME_WITH_REAL_PASSWORD"}
+    # db_writer_user: code.org
+    # db_writer_password: FIXME_WITH_REAL_PASSWORD
+    # db_credential_reader: {"username":"root", "password":"FIXME_WITH_REAL_PASSWORD"}
+    # db_reader_user: code.org
+    # db_reader_password: FIXME_WITH_REAL_PASSWORD
+    # db_writer: mysql://code.org:FIXME_WITH_REAL_PASSWORD@db/
+    db_writer: 'mysql://root@db/'
 
     netsim_redis_groups:
     - master: redis://redis:6379
