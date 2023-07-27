@@ -61,8 +61,8 @@
           "create_function": "\"Функцияларды\" ашу үшін жылжымалы мәзірге шертіңіз, одан кейін \"Функция Құру\" батырмасына басыңыз."
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Функцияға параметрлер беру үшін басыңыз",
-          "add_and_drag_parameter": "Параметріңіздің атын жазып, қосу батырмасына басып, одан кейін жылжытып отырып функцияға қойыңыз"
+          "add_and_drag_parameter": "Параметріңіздің атын жазып, қосу батырмасына басып, одан кейін жылжытып отырып функцияға қойыңыз",
+          "edit_add_parameter": "Функцияға параметрлер беру үшін басыңыз"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "Сұрақ белгісін ұзындыққа ауыстыру үшін жылжытыңыз"
@@ -76,13 +76,22 @@
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Біз сен үшін осында бірнеше блок орнаттық"
         },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Біз сен үшін осында бірнеше блок орнаттық"
+        },
         "Overworld Chop Trees_2019": {
           "craft_callout_preplaced": "Біз сен үшін осында бірнеше блок орнаттық"
         },
         "Overworld Chop Trees_2020": {
           "craft_callout_preplaced": "Біз сен үшін осында бірнеше блок орнаттық"
         },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Біз сен үшін осында бірнеше блок орнаттық"
+        },
         "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Осы код сенің үйінді жаса бастайды. Оны аяқтай аласын ба?"
+        },
+        "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "Осы код сенің үйінді жаса бастайды. Оны аяқтай аласын ба?"
         },
         "Overworld House Frame Chosen_2019": {
@@ -91,7 +100,13 @@
         "Overworld House Frame Chosen_2020": {
           "craft_callout_preplaced_house": "Осы код сенің үйінді жаса бастайды. Оны аяқтай аласын ба?"
         },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Осы код сенің үйінді жаса бастайды. Оны аяқтай аласын ба?"
+        },
         "Overworld Move to Sheep": {
+          "craft_run_button_callout": "Бағдарламаңыздың жұмыс істеуін көру үшін \"Жіберу\" батырмасын басыңыз"
+        },
+        "Overworld Move to Sheep2022": {
           "craft_run_button_callout": "Бағдарламаңыздың жұмыс істеуін көру үшін \"Жіберу\" батырмасын басыңыз"
         },
         "Overworld Move to Sheep_2019": {
@@ -100,7 +115,13 @@
         "Overworld Move to Sheep_2020": {
           "craft_run_button_callout": "Бағдарламаңыздың жұмыс істеуін көру үшін \"Жіберу\" батырмасын басыңыз"
         },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Бағдарламаңыздың жұмыс істеуін көру үшін \"Жіберу\" батырмасын басыңыз"
+        },
         "Overworld Place Wall": {
+          "craft_inside_repeat": "Әрекеттері қайталау үшін блоктарды осында орнат"
+        },
+        "Overworld Place Wall2022": {
           "craft_inside_repeat": "Әрекеттері қайталау үшін блоктарды осында орнат"
         },
         "Overworld Place Wall_2019": {
@@ -109,7 +130,13 @@
         "Overworld Place Wall_2020": {
           "craft_inside_repeat": "Әрекеттері қайталау үшін блоктарды осында орнат"
         },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Әрекеттері қайталау үшін блоктарды осында орнат"
+        },
         "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Осы код лава бар жоқтығын тексереді, ілгері жылжу үшін код еңгіз?"
+        },
+        "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "Осы код лава бар жоқтығын тексереді, ілгері жылжу үшін код еңгіз?"
         },
         "Underground Avoiding Lava_2019": {
@@ -118,13 +145,22 @@
         "Underground Avoiding Lava_2020": {
           "craft_callout_moveforward": "Осы код лава бар жоқтығын тексереді, ілгері жылжу үшін код еңгіз?"
         },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Осы код лава бар жоқтығын тексереді, ілгері жылжу үшін код еңгіз?"
+        },
         "Underground Iron": {
+          "craft_what_is_iron": "Осы темірді өнде!"
+        },
+        "Underground Iron2022": {
           "craft_what_is_iron": "Осы темірді өнде!"
         },
         "Underground Iron_2019": {
           "craft_what_is_iron": "Осы темірді өнде!"
         },
         "Underground Iron_2020": {
+          "craft_what_is_iron": "Осы темірді өнде!"
+        },
+        "Underground Iron_2021": {
           "craft_what_is_iron": "Осы темірді өнде!"
         },
         "frozen circle function with parameter": {
@@ -166,42 +202,6 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Ашылмалы тізбекті пайдаланып \"???\" санға ауыстырыңыз"
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "Біз сен үшін осында бірнеше блок орнаттық"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Осы код сенің үйінді жаса бастайды. Оны аяқтай аласын ба?"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Бағдарламаңыздың жұмыс істеуін көру үшін \"Жіберу\" батырмасын басыңыз"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "Әрекеттері қайталау үшін блоктарды осында орнат"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "Осы код лава бар жоқтығын тексереді, ілгері жылжу үшін код еңгіз?"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "Осы темірді өнде!"
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "Біз сен үшін осында бірнеше блок орнаттық"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "Осы код сенің үйінді жаса бастайды. Оны аяқтай аласын ба?"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Бағдарламаңыздың жұмыс істеуін көру үшін \"Жіберу\" батырмасын басыңыз"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "Әрекеттері қайталау үшін блоктарды осында орнат"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "Осы код лава бар жоқтығын тексереді, ілгері жылжу үшін код еңгіз?"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "Осы темірді өнде!"
         }
       }
     }

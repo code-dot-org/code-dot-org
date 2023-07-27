@@ -44,28 +44,28 @@ zh-TW:
       send_paranoid_instructions: 如果您的帳號存在，您將在幾分鐘內收到一封說明如何解鎖的電子郵件。
       unlocked: 您的帳戶已成功解鎖，請登入以繼續。
   errors:
+    invitations:
+      edit:
+        header: 設置你的密碼
+        submit_button: 設置我的密碼
+      invitation_removed: 您的邀請已被移除。
+      invitation_token_invalid: 提供的邀請碼無效！
+      new:
+        header: 發送邀請
+        submit_button: 發送邀請
+      no_invitations_remaining: 無其他邀請
+      send_instructions: 邀請信件已發送至 %{email}。
+      updated: 你的密碼已設定成功，現在已是登入狀態了。
+    mailer:
+      invitation_instructions:
+        accept: 接受邀請
+        hello: Hello %{email}
+        ignore: 如果你不想接收這個邀請，請忽略這封信件。<br />在你點擊上方的連結並設定好密碼之前，你的帳戶將不會建立。
+        someone_invited_you: 有人邀請你到 %{url}，你可以透過下方連結接受邀請。
+        subject: 邀請說明
     messages:
       already_confirmed: 已經驗證，請登入
       confirmation_period_expired: 需要在 %{period} 內被驗證，請重新申請
       expired: 已失效，請重新申請
       not_found: 未找到
       not_locked: 未上鎖
-    invitations:
-      send_instructions: 邀請信件已發送至 %{email}。
-      invitation_token_invalid: 提供的邀請碼無效！
-      updated: 你的密碼已設定成功，現在已是登入狀態了。
-      no_invitations_remaining: 無其他邀請
-      invitation_removed: 您的邀請已被移除。
-      new:
-        header: 發送邀請
-        submit_button: 發送邀請
-      edit:
-        header: 設置你的密碼
-        submit_button: 設置我的密碼
-    mailer:
-      invitation_instructions:
-        subject: 邀請說明
-        hello: Hello %{email}
-        someone_invited_you: 有人邀請你到 %{url}，你可以透過下方連結接受邀請。
-        accept: 接受邀請
-        ignore: 如果你不想接收這個邀請，請忽略這封信件。<br />在你點擊上方的連結並設定好密碼之前，你的帳戶將不會建立。

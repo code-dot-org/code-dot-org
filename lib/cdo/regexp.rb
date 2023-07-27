@@ -38,6 +38,6 @@ module RegexpUtils
 
   def self.find_potential_phone_number(text)
     match = US_PHONE_NUMBER_REGEXP.match(text)
-    return match.nil? ? nil : match.to_s
+    return match&.to_s
   end
 end

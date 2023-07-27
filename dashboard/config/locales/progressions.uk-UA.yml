@@ -2,12 +2,37 @@
 uk:
   data:
     progressions:
+      '"If/Else" with the Bee': '"Якщо/Інакше" з Бджілкою'
       Accelerometer Events: Події акселерометра
+      Add Content and HTML: Додавання вмісту та HTML
+      Add Content and Structure to Your Page: Додавання вмісту та структури на свою
+        сторінку
+      Add Movement: Додавання руху
+      Add Sprites: Додавання спрайтів
+      Add Style: Додавання стилів
+      Add Style to Your Page: Додавання стилів на свою сторінку
+      Add Text: Додавання тексту
       Adding Images: Додавання зображень
+      Adding Pages: Додавання сторінок
       Adding Screens: Додавання екранів
       Alien Defender: Чужорідний захисник
       Analog Sensors: Аналогові датчики
       Animate Your Scene: Анімація вашої сцени
+      App Lab Intro - Video: Вступ до лабораторії додатків - відео
+      'App: Choose a Kid''s Movie': 'Застосунок: Виберіть дитяче кіно'
+      'App: Friend Finder': Помічник у пошуку друзів
+      'App: Guess the Number': 'Застосунок: Вгадай число'
+      'App: How Many Countries': 'Застосунок: Скільки країн'
+      'App: Improved Pet App': Покращений застосунок для вибору домашніх тварин
+      'App: Is It Your Birthday?': 'Застосунок: Це твій день народження?'
+      'App: My Famous Birthday': 'Застосунок: Мій відомий день народження'
+      'App: National Parks': 'Застосунок: Національні парки'
+      'App: Outfit Picker': Помічник з вибору одягу
+      'App: Pet Chooser': 'Застосунок: Вибір тваринки'
+      'App: Stamp Notebook': 'Застосунок: Штамповий блокнот'
+      'App: Story Creator': Помічник зі створення історій
+      'App: The Fastest Finger': 'Застосунок: Найшвидший палець'
+      'App: Where Should I Live?': 'Застосунок: Де я маю жити?'
       Artist Intro with JR Hildebrand: Художник Вступ з JR Хільдебранд
       Artist Intro with JR Hildebrande: Художник Вступ з JR Хільдебранде
       Artist Project: Проект Художника
@@ -19,10 +44,12 @@ uk:
       Bass, Mid, and Treble: Баси, середні та високі частоти
       Be a Super Digital Citizen: Стань суперцифровим громадянином
       Begin planning your project_2018: Починаємо планувати проєкт
+      Binary Bracelets - Unplugged Activity: Двійкові браслети - Безмашинна вправа
       Binary Numbers: Двійкові Числа
       Board Input and Output: Вхід і вивід дошки
       Boolean Comparison: Логічне порівняння
       Booleans and Comparison Operators: Булеві та оператори порівняння
+      Build a Platform Jumper: Створення гри "Стрибки платформою"
       Build a Screen: Створення екрана
       Building an App: Створення програми
       Buttons and Switch: Кнопки та перемикач
@@ -36,24 +63,39 @@ uk:
       Challenge Levels: Завдання рівнів
       'Challenge: Add More Inputs': 'Виклик: Додати більше входів'
       'Challenge: Checking for Multiple Conditions': 'Виклик: Перевірка кількох умов'
-      'Challenge: Draw an Image': 'Виклик: намалюйте зображення'
+      'Challenge: Draw an Image': 'Завдання: намалюй зображення'
       'Challenge: Extend Your Scene': 'Виклик: розширюйте свою сцену'
+      'Challenge: Lists': 'Виклик: списки'
       'Challenge: Making Sense of Sensors': 'Виклик: створення сенсорів'
+      'Challenge: RGB Colors': 'Виклик: кольори RGB'
+      'Challenge: Updating Variables': 'Завдання: оновлення змінних'
       Challenges: Проблемні питання
       Change: Змінити
       Changing Screens: Зміна екранів
+      Check Your Work: Перевірка своєї роботи
       Checking for a Winner: Перевірка переможця
       Circuits and Logic: Схеми та логіка
+      Code Prediction: Прогнозування коду
       Code Your Own Flappy Game: Код вашої власної гри flappy
-      Collector Game: Колектор ігри
+      Code Your Page: Закодуйте свою сторінку
+      Collector Game: Гра колекціонер
+      Collision Detection: Виявлення зіткнень
       Collisions: Зіткнення
       Collisions in Games: Зіткнення в Іграх
       Color LEDs: Кольорові LEDи
       Combining Projects: Об'єднання проектів
       'Conditionals: If Statements': 'Умовні умови: Якщо заяви'
+      Control Your Player: Керування гравцем
       Course E Artist Project: Курс E Виконавець проекту
+      'Course E: Play Lab Project': 'Курс E: Проєкт Ігрової Студії'
       Course F Artist Project: Курс F Виконавчий проект
+      'Course F: Artist Project': 'Курс F: Проєкт Художника'
+      'Course F: Artist Project - Revise': 'Курс F: Проєкт Художника - Перегляд'
+      'Course F: Play Lab Project': 'Курс F: Проєкт Ігрової Студії'
+      'Course F: Play Lab Project - Revise': 'Курс F: Проєкт Ігрової Студії - Перегляд'
       Create Your Own Animation: Створіть власну анімацію
+      Create Your Sprites: Створи свої спрайти
+      Create a Background: Створення тла
       Create a Story: Створити історію
       Create your project: Створити власний проєкт
       Creating Sprites: Створення Sprites
@@ -63,10 +105,13 @@ uk:
       Debugging: Налагодження
       Debugging with Watchers: Налагодження з спостерігачами
       Debugging with the Step Button: Налагодження за допомогою кнопки кроку
+      'Demo App: Interactive Card': 'Демо-застосунок: Інтерактивна листівка'
       Demo Apps: Демо додаток
       Design Mode: Режим проектування
       Designing for Accessibility: Проєктування для доступності
       Digital Sharing - Unplugged Activity: Цифровий обмін - Безмашинна вправа
+      Draw Your Background: Намалюй своє тло
+      Draw a Background: Малювання тла
       Drawing: Малювання
       Drawing Shapes: Малювання фігур
       Editing Images: Редагування зображень
@@ -75,11 +120,12 @@ uk:
       Events and Linking Screens: Події та зв'язування екранів
       Events and Properties: Події та властивості
       Example: Приклад
+      Example Animated Scene: Приклад анімованої сцени
       Example Projects: Приклади проєктів
       Example projects: Приклади проєктів
       Expanding Personal Website: Розширення особистого веб-сайту
       Expanding Your Website: Розширення вашого веб-сайту
-      Experiment with Web Lab: Експеримент з Web Lab
+      Experiment with Web Lab: Експерименти з Веб Лабораторією
       Exploration: Дослідження
       'Exploration: Adding Style': 'Дослідження: Додавання стилю'
       'Exploration: For Loops': 'Дослідження: цикли "повторити для кожного"'
@@ -87,7 +133,7 @@ uk:
       'Exploration: Sample Apps': 'Дослідження: Зразки застосунків'
       'Exploration: Sample Programs': 'Дослідження: Приклади програм'
       'Exploration: Sample Project': 'Дослідження: Приклади проєктів'
-      Explore HTML: Досліджуйте HTML
+      Explore HTML: Досліджуємо HTML
       Exploring more CSS: Вивчення більш CSS
       Extra: Додатково
       Finish a Screen: Завершення екрана
@@ -109,27 +155,33 @@ uk:
         по клітинках
       HTML Tags: HTML Теги
       Hardware and Software: Обладнання та програмне забезпечення
+      Headings: Заголовки
       Headings in HTML: Заголовки в HTML
       Hello World: Привіт, світе
       How to Create a Simple Function: Як створити просту функцію
-      How to Make a Sprite: Як зробити спрайт
+      How to Make a Sprite: Як створити спрайт
       Hyperlinks: Гіперпосилання
       Ice Age Loops: Ice Age Петлі
       Images and Sounds: Зображення та звуки
       Importing Screens: Імпортування екранів
       Improve Your Game: Поліпшити вашу гру
+      Incorporate Feedback: Включення зворотного зв'язку
       Input Examples: Приклади вводу
       Input with If-Else: Введення за допомогою if-Else
       Inspiration!: Натхнення!
       Interactive Card: Інтерактивна картка
       Intro to Design Mode: Введення в Режим дизайну
+      Intro to Flyer Game: Вступ до гри Літун
       Intro to For Loops: Вступ до циклів
+      Intro to Side Scrollers: Знайомство з сайд-скролером
       Intro to Sprites: Вступ до спрайтів
       Intro to Variables: Вступ до змінних
       Introducing Sprite Lab: Представляємо Спрайт Лабораторію
       Introduction to Arrays: Вступ до масивів
-      Introduction to Game Lab: Введення в Ігрову Лаб
+      Introduction to Game Lab: Знайомство з Ігровою Лабораторією
+      Introduction to Variables - Part 1: Вступ до змінних - Частина 1
       Iteration and Parameters: Ітерація та параметри
+      Keyboard Input: Введення з клавіатури
       LED Apps: LED додатки
       Layout Properties: Властивості макета
       Layout with CSS: Макет з CSS
@@ -140,7 +192,10 @@ uk:
       Light Show: Світлове шоу
       Lists: Списки
       Lists in HTML: Списки в HTML
+      Looping: Циклічність
       Loops with the Artist: Петлі з художником
+      Make Your Sprites: Створення спрайтів
+      Make an Interactive Card: Створення інтерактивної листівки
       Make it Interactive: Зробити це Інтерактивним
       Make it Your Own: Зробіть це своїм власним
       Making Scenes: Створення сцен
@@ -148,6 +203,7 @@ uk:
       Making Sounds: Створення звуків
       'Maze Intro: Programming with Blocks': 'Лабіринт вступу: програмування з блоками'
       Measures: Такти
+      'Minecraft: Hero''s Journey': 'Minecraft: Подорож героя'
       'Mini-Project: About Me': 'Міні-проект: Про мене'
       'Mini-Project: Alien Dance Moves': 'Міні-проект: Чужорідні танцювальні ходи'
       'Mini-Project: Alien Dance Party': 'Міні-проект: Інопланетна танцювальна вечірка'
@@ -157,13 +213,13 @@ uk:
       'Mini-Project: Royal Battle': 'Міні-проект: Королівська битва'
       'Mini-Project: Snowflake #1': 'Міні-проект: Сніжинка #1'
       'Mini-Project: Snowflake #2': 'Міні-проект: Сніжинка #2'
-      'Mini-Project: Sticker Art': 'Міні-проект: Дизайн наліпки'
+      'Mini-Project: Sticker Art': 'Міні-проєкт: Дизайн наліпки'
       'Mini-Project: Swimming Fish': 'Міні-проект: Плавання риби'
       'Mini-Project: Swimming Fish (continued)': 'Міні-проект: Плавання риби (продовження)'
       'Mini-Project: User Input Programs': 'Міні-проєкт: Програми з введенням даних
         користувачем'
       'Mini-Project: Virtual Pet': 'Міні-проект: Віртуальний вихованець'
-      'Mini-project: Chase Game': 'Міні-проект: Чейз гра'
+      'Mini-project: Chase Game': 'Міні-проект: гра "Квач"'
       'Mini-project: Flappy Game': 'Міні-проект: Flappy гра'
       'Mini-project: Interactive Poster': 'Міні-проект: Інтерактивний плакат'
       'Mini-project: Jorge the Dog': 'Міні-проект: Собака Хорхе'
@@ -179,26 +235,41 @@ uk:
       Movement with the Counter Pattern: Рух з лічильником візерунком
       Multiframe Animations: Багаторамкові анімації
       Musical Arrays: Музичні масиви
-      My Online Neighborhood: Моє Інтернет-сусідство
+      My Online Neighborhood: Мій інтернет-район
       New Shapes: Нові фігури
       Orientation: Орієнтація
       Overview: Огляд
       Pair Programming: Парне програмування
       Picturing Data: Структурування даних
+      Plan Your Project: Планування проєкту
+      Plan Your Scene: Планування своєї сцени
       Planning: Планування
+      Platform Jumper - Background and Variables: ' "Стрибки платформою" - Тло та
+        змінні'
+      Platform Jumper - Items: ' "Стрибки платформою" - Предмети'
+      Platform Jumper - Platforms: ' "Стрибки платформою" - Платформи'
+      Platform Jumper - Player: ' "Стрибки платформою" - Гравець'
+      Platform Jumper Review: ' "Стрибки платформою" - Перевірка'
+      Player Controls: Керування для гравця
       Playing with Notes: Відтворення з нотатками
+      Post-Course Survey Instructions: Інструкції з опитування після курсу
       Practice: Практика
+      Predict: Прогнозування
       Prediction: Прогнозування
       Programming with Rey and BB-8: Програмування з Рей та BB-8
       Programs that Repeat: Програми, які повторюються
       Project: Проєкт
-      Project - Background and Variables: Проект — тло та змінні
-      Project - Sprites and Interactions: Проект - Спрайти та взаємодії
+      Project - Background and Variables: Проєкт - тло та змінні
+      Project - Sprites and Interactions: Проєкт - Спрайти та взаємодії
+      Project Guide: План проєкту
       Project Work: Робота над проектом
       Properties: Властивості
       Prototype an Innovation: Створіть прототип інновації
+      Publishing Your Website: Публікація свого вебсайту
       Quarter Notes: Четвертні ноти
+      Quick Check: Швидка перевірка
       RGB Exploration: Дослідження RGB
+      Random Numbers: Випадкові числа
       Reading Sensors: Датчики читання
       Reflection: Рефлексія
       Relay Programming - Unplugged Activity: Естафетне програмування - Програмування
@@ -207,66 +278,129 @@ uk:
       Repeat Blocks with BB-8: Повторіть блоки з BB-8
       Repeat Blocks with the Artist: Повторіть блоки з виконавцем
       Review: Огляд
+      Review Your Animated Scene: Перевірка своєї анімованої сцени
+      Review Your Game: Перевірка гри
+      Review Your Page: Перевірка сторінки
+      Review Your Scene: Перевірка сцени
+      'Review: CSS': 'Повторення: CSS'
+      'Review: HTML': 'Повторення: HTML'
       Revise Sprite Lab Project: Переглянути проект Sprite Lab
       Run a simulation: Запустити симуляцію
+      Same Game: Приклад гри
       Sample Game: Приклад гри
+      Sample Games: Приклади ігор
+      Sample Personal Web Pages: Приклади персональних вебсторінок
+      Sample Personal Websites: Приклади персональних вебсторінок
+      Sample Platform Jumper Game: Приклад гри "Стрибки платформою"
       Sample Programs: Зразки програм
+      Sample Web Page: Приклад вебсторінки
+      Sample Website: Приклад вебсайту
+      Scoring & Scoreboard: Бали та табло
       Screen Design: Дизайн екрана
       Sensor Events: Сенсорні події
       Sensors to Colors: Датчики до кольорів
+      Set Up Sprites: Налаштування спрайтів
+      Shapes and Parameters: Фігури та параметри
       Share Your App: Поділіться своїм додатком
+      Share Your Pages: Обмін сторінками
+      Share Your Stylesheets: Обмін аркушами стилів
       Side Scroller: Прокрутка збоку
       Simple Circuits: Прості схеми
       Skill Building: Розвиток навичок
       Skill-Building: Розвиток навичок
       Sliders: Слайдери
+      Social Sleuth: Соціальний розшук
       Songwriting - Functions Unplugged Activity: Написання пісень - Функції з безмашинними
         вправами
       Speed it Up, Slow it Down: Пришвидшення та сповільнення
+      Sprite Interactions: Взаємодія спрайтів
       Sprite Lab Project: Проект Sprite Lab
+      Sprite Movement: Переміщення спрайтів
+      Sprite Properties: Властивості спрайтів
+      Sprite Scenes: Сцени спрайтів
       Star Chaser: Зірка Chaser
       Text Compression: Стиснення тексту
       The Animation Tab: Анімація
+      The Big Event - Unplugged Activity: Велика подія - Безмашинна вправа
       The Collector: Колекціонер
       The Counter Pattern: Лічильник шаблону
+      The Draw Loop: Цикл малювання
       The Harvester: Фермерка
       The Internet - Unplugged Activity: Інтернет - Безмашинна вправа
       The Power of Words - Unplugged Activity: Сила слова - Безмашинна вправа
+      Top Websites: Топ-сайти
       Tour of Design Mode: Тур по дизайну режиму
+      Upload Your Images: Завантаження зображень
       User Interface: Інтерфейс користувача
       Using HTML Tags: Використання тегів HTML
+      Using the Grid: Використання сітки
       Using the Repeat Block: Використання блоку повторів
       Variables: Змінні
       Velocity: Швидкість
       Video: Відео
+      Video - Encryption and Public Keys: Відео - Шифрування та публічні ключі
+      Video - Functions: Відео - Функції
+      Video - If Statements: Відео - Команди умови
+      Video - Introduction to Arrays: 'Відео: Вступ до масивів'
+      'Video - Maze Intro: Programming with Blocks': 'Відео: Вступ до Лабіринту -
+        програмування блоками'
+      Video - Parameters: Відео - Параметри
+      Video - The Counter Pattern: Відео - Закономірність лічильника
+      Video - Variables: Відео - Змінні
       'Video:  Debugging with the Step Button': 'Відео: Налагодження з кнопкою Крок'
       'Video:  Minecraft - The Agent': 'Відео: Майнкрафт - Агент'
+      'Video:  Text  and Prompts': 'Відео: Текст та питання'
       'Video: "If/Else"': 'Відео: «Якщо/Інакше»'
       'Video: Artist Intro with JR Hildebrand': 'Відео: Знайомство з Художником із
         JR Гільдебрандом'
       'Video: Artist Intro with JR Hildebrande': 'Відео: Знайомство з Художником із
         JR Гільдербрандом'
+      'Video: Booleans': 'Відео: Булеві значення'
       'Video: Code Your Own Flappy Game': 'Відео: Створюємо власну гру в Пурха'
+      'Video: Conditional Statements': 'Відео: Умовні конструкції'
       'Video: Conditionals: If Statements': 'Відео: Розгалуження: Команда умови'
       'Video: Conditionals: If and If/Else Statements': 'Відео: Розгалуження: Команда
         умови Якщо та Якщо/Інакше'
+      'Video: Dance Party Events': 'Відео: Події танцювальної вечірки'
+      'Video: Dance Party Measures': 'Відео: Такти танцювальної вечірки'
+      'Video: Dance Party Party On!': 'Відео: Танцювальна вечірка триває!'
+      'Video: Dance Party Properties': 'Відео: Властивості танцювальної вечірки'
+      'Video: Dance Party Warm Up': 'Відео: Розминка танцювальної вечірки'
       'Video: De-bugging with the Step Button': 'Відео: Налагодження з кнопкою Крок'
+      'Video: Debugging': 'Відео: Налагодження'
       'Video: Debugging with the Step Button': 'Відео: Налагодження з кнопкою Крок'
+      'Video: Drawing in Game Lab - Part 1': 'Відео: Малювання в Ігровій Лабораторії
+        - Частина 1'
+      'Video: Drawing in Game Lab - Part 2': 'Відео: Малювання в Ігровій Лабораторії
+        - Частина 2'
       'Video: Events': 'Відео: Події'
       'Video: For Loops': 'Відео: цикли "повторити для кожного"'
+      'Video: Functions': 'Відео: Функції'
       'Video: Happy Maps - Unplugged Activity': 'Відео: Веселі карти - Безмашинна
         вправа'
+      'Video: How Search Works': " Відео: Як працює пошук"
       'Video: How to Make a Sprite': 'Відео: Як створити спрайт'
+      'Video: IOSP Model': 'Відео: модель IOSP'
       'Video: Ice Age Loops': 'Відео: Цикли Льодовикового періоду'
+      'Video: If/Else Statements': Відео - Команди Якщо/Інакше
       'Video: Intro to CSS': 'Відео: Вступ до CSS'
+      'Video: Intro to CSS - Part 1': 'Відео: Вступ до CSS - Частина 1'
+      'Video: Intro to CSS - Part 2': 'Відео: Вступ до CSS - Частина 2'
       'Video: Intro to Web Lab - Part 1': |2-
 
-        Відео: Вступ до веб-лабораторії - частина 1
-      'Video: Intro to Web Lab - Part 2': 'Відео: Вступ до Web Lab - частина 2'
+        Відео: Вступ до Веб Лабораторії - частина 1
+      'Video: Intro to Web Lab - Part 2': 'Відео: Вступ до Веб Лабораторії - частина
+        2'
       'Video: Introducing Sprite Lab': 'Відео: Представляємо Спрайт Лабораторію'
       'Video: Introduction to Play Lab': 'Відео: Вступ до Ігрової студії'
+      'Video: Introduction to Sprites': 'Відео: Знайомство зі спрайтами'
+      'Video: Introduction to Variables': 'Відео: Знайомство зі змінними'
+      'Video: Introduction to the Draw Loop': 'Відео: Знайомство з циклом малювання'
       'Video: Loops in Artist': 'Відео: Цикли з Художником'
       'Video: Loops with the Artist': 'Відео: Цикли з Художником'
+      'Video: Managing Disagreement': 'Відео: Керування розбіжностями'
+      'Video: Maze Intro - Programming with Blocks': 'Відео: Вступ до Лабіринту -
+        програмування блоками'
       'Video: Maze Intro - Programming with Blocks ': 'Відео: Вступ до Лабіринту -
         програмування блоками '
       'Video: Maze Intro: Programming with Blocks': 'Відео: Вступ до Лабіринту - програмування
@@ -286,26 +420,43 @@ uk:
         подорож - Повторити до'
       'Video: Nested Loops': 'Відео: Вкладені цикли'
       'Video: Nested Loops with the Bee': 'Відео: Вкладені цикли з Бджілкою'
+      'Video: Outbreak Simulator: Events': 'Відео: Симулятор спалаху: Вступ'
+      'Video: Outbreak Simulator: Free Play': 'Відео: Симулятор спалаху: Вільна гра'
       'Video: Outbreak Simulator: Introduction': 'Відео: Симулятор спалаху: Вступ'
+      'Video: Outbreak Simulator: Thinking Like a Scientist': 'Відео: Симулятор спалаху:
+        мислимо як вчені'
+      'Video: Pair Programming': 'Відео: Парне програмування'
+      'Video: Pair Programming ': 'Відео: Парне програмування '
       'Video: Problem Solving Process': 'Відео: Процес вирішення проблем'
       'Video: Programming with Blocks': 'Відео: програмування з блоками'
       'Video: Programming with Rey and BB-8': 'Відео: Програмування з Рей та BB-8'
       'Video: Properties': 'Відео: Властивості'
+      'Video: Publishing Your Website': 'Відео: Публікація свого вебсайту'
+      'Video: Repeat Blocks': 'Відео: Блоки повторення'
       'Video: Repeat Blocks with BB-8': 'Відео: Блоки повторення з BB-8'
+      'Video: Repeat Blocks with the Artist': 'Відео: Блоки повторення з Художником'
       'Video: Repeat Until Blocks': 'Відео: Блоки "повторити до"'
       'Video: Repeat Until Statements': 'Відео: Команда "повторити до"'
+      'Video: Sprite Movement': 'Відео: Переміщення спрайтів'
       'Video: Sprites in Action': 'Відео: Спрайти в дії'
       'Video: Star Wars Project': 'Відео: Проект «Зоряні війни»'
-      'Video: Text and Prompts': 'Відео: Текст та текстові поля'
+      'Video: Teamwork': 'Відео: Командна робота'
+      'Video: Text and Prompts': 'Відео: Текст та питання'
+      'Video: The Animation Tab': 'Відео: вкладка Анімація'
       'Video: The Artist in Code Studio': 'Відео: Художник у Студії коду'
+      'Video: The Big Event - Unplugged Activity': 'Відео: Велика подія - Безмашинна
+        вправа'
       'Video: The Collector': 'Відео: Колекціонерка'
       'Video: The Harvester': 'Відео: Фермерка'
-      'Video: Unplugged Variables in Envelopes': 'Відео: Безмашинна вправа з порожніми
-        клітинками'
+      'Video: Training Data & Bias': 'Відео: Навчальні дані та упередженість'
+      'Video: Training Data and Bias': 'Відео: Навчальні дані та упередженість'
+      'Video: Unplugged Variables in Envelopes': 'Відео: Безмашинна вправа з конвертами'
       'Video: Using the Repeat Block': 'Відео: Використання блоку повторення'
       'Video: Variables in Artist': 'Відео: Використання змінних з Художником'
+      'Video: Velocity': 'Відео: Швидкість'
       'Video: Warm Up': 'Відео: Розминка'
       'Video: What Makes a Computer, a Computer?': 'Відео: Що робить комп''ютер комп''ютером?'
+      'Video: What is Machine Learning?': 'Відео: Що таке машинне навчання?'
       'Video: While Loops with the Farmer': 'Відео: Цикли "поки" з Фермеркою'
       'Video: Wrap-up': 'Відео: Завершення'
       Warm Up: Розминка
@@ -314,3 +465,4 @@ uk:
       Where'd They Go?: Куди вони поділися?
       Wrap-up: Підведення підсумків
       Your Personal Website: Ваш Власний Вебсайт
+      Your Team Project: Ваш командний проект

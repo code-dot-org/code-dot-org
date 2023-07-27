@@ -466,7 +466,7 @@
   dashboard_sections_table_secret: "نوع ورود"
   dashboard_sections_table_grade: "درجه"
   dashboard_sections_table_course: "دوره"
-  dashboard_sections_table_pairing_allowed: "برنامه نویسی دوتایی"
+  dashboard_sections_table_pairing_allowed: "برنامه نویسی اشتراکی"
   dashboard_sections_table_students: "دانش آموزان"
   dashboard_sections_table_code: "بخش کد"
   dashboard_sections_name: 'نام بخش'
@@ -509,7 +509,7 @@
   dashboard_course4: 'درس 4 (بتا): '
   dashboard_curriculum: "برنامه آموزشی"
   dashboard_curriculum_overview: "بررسی اجمالی برنامه کلاس پنجمی ها"
-  dashboard_overview: "بررسی اجمالی"
+  dashboard_overview: "مرور کلی"
   dashboard_sequence: "دنباله"
   dashboard_framework: "چارچوب کار"
   dashboard_standards: "استانداردها"

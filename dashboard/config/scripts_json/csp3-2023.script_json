@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-24 17:16:38 UTC",
+    "serialized_at": "2023-07-18 20:52:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -33,8 +33,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 3: Intro to App Design",
-        "description": "### Unit Philosophy and Pedagogy\n\n\n\n\n### Major Assessment and Projects\n\n\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-1: incorporating multiple perspectives through collaboration improves computing innovations as they are developed.\n* CRD-2: developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n* 1.1 Collaboration\n* 1.2 Program Function and Purpose\n* 1.3 Program Design and Development\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.a.i.\n* 3.a.ii.\n* 3.a.iii\n"
+        "display_name": "Unit 3: Intro to App Design"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit3_2020",
@@ -595,7 +594,7 @@
       "key": "ee78feeb-796b-4cfd-9d3c-5cc06fb22771",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student a copy of the [Unit 3 Journal](\thttps://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit?usp=share_link) or have students set up a new section in their CSP journals.",
+        "description": "**Distribute:** Give each student a copy of the Unit 3 Journal ([Digital](https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit?usp=share_link)/[Interactive Notebook](https://docs.google.com/presentation/d/1P8Iz5X_NiTUx8fBJGtKcQPQfGaR9O9ujIWBJp_H6WtQ/edit?usp=drive_link\t\n)) or have students set up this unit's section in their CSP journals.",
         "name": "Preview the Unit",
         "tips": [
           {
@@ -3875,24 +3874,24 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp3-2022/resources",
-      "key": "all_resources_2",
+      "url": "/s/csp3-2023/resources",
+      "key": "all_resources_14",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_2"
+        "resource.key": "all_resources_14"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp3-2022/standards",
-      "key": "all_standards_2",
+      "url": "/s/csp3-2023/standards",
+      "key": "all_standards_14",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_2"
+        "resource.key": "all_standards_14"
       }
     },
     {
@@ -3935,11 +3934,9 @@
     },
     {
       "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
       "key": "course_vocabulary",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
@@ -4117,7 +4114,7 @@
       }
     },
     {
-      "name": "Unit 3 Journal",
+      "name": "Unit 3 Digital Journal",
       "url": "https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit?usp=share_link",
       "key": "unit_3_journal",
       "properties": {
@@ -4126,6 +4123,30 @@
       },
       "seeding_key": {
         "resource.key": "unit_3_journal"
+      }
+    },
+    {
+      "name": "Unit 3 Journal - Example",
+      "url": "https://docs.google.com/presentation/d/1Jf3Z3mZWso9rpEhMPVb6ZhNTwXB12yL0XKEtfkdbtoQ/edit?usp=drive_link",
+      "key": "unit_3_journal_-_example",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_journal_-_example"
+      }
+    },
+    {
+      "name": "Unit 3 Interactive Notebook Journal",
+      "url": "https://docs.google.com/presentation/d/1P8Iz5X_NiTUx8fBJGtKcQPQfGaR9O9ujIWBJp_H6WtQ/edit?usp=drive_link",
+      "key": "unit_3_journal_-_interactive_notebook",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_journal_-_interactive_notebook"
       }
     }
   ],
@@ -4198,6 +4219,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Introduction to Apps",
+        "resource.key": "unit_3_journal_-_example"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Apps",
+        "resource.key": "unit_3_journal_-_interactive_notebook"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Introduction to Design Mode",
         "resource.key": "introduction_to_design_mode"
       }
@@ -4242,13 +4275,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_2",
+        "resource.key": "all_resources_14",
         "script.name": "csp3-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_2",
+        "resource.key": "all_standards_14",
         "script.name": "csp3-2023"
       }
     },

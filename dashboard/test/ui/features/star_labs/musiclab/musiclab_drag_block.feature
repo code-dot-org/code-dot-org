@@ -2,9 +2,9 @@
 
 Feature: Music Lab block can be dragged
 
-Scenario: Dragging play sound block
-  Given I am on "http://studio.code.org/s/allthethings/lessons/46/levels/2?show-video=false"
-  Then I wait until I am on "http://studio.code.org/s/allthethings/lessons/46/levels/2?show-video=false"
+Scenario Outline: Dragging play sound block
+  Given I am on "<url>"
+  Then I wait until I am on "<url>"
   And I rotate to landscape
 
   # Wait until we see the first category.
@@ -24,3 +24,8 @@ Scenario: Dragging play sound block
 
   # There should now be a music timeline entry.
   And element ".timeline-element" is visible
+
+Examples:
+  | url                                                       | test_name               |
+  | http://studio.code.org/s/allthethings/lessons/46/levels/4 | music lab script level  |
+  | http://studio.code.org/projectbeats?show-video=false      | music lab incubator     |

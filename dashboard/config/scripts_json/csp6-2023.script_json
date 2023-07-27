@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-03 15:04:11 UTC",
+    "serialized_at": "2023-07-18 20:54:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1039,8 +1039,25 @@
       }
     },
     {
-      "key": "c5179cab-9b3b-4e11-893f-c400984f97f2",
+      "key": "aa0882bc-baa7-44c0-8b40-b1e06bc9cd9d",
       "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student a copy of the Unit 6 Journal ([Digital](https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit?usp=drive_link)/[Interactive Notebook](https://docs.google.com/presentation/d/1tqcSleg0s5dO8VQw2mBq9HdWE5pbxFQ9EjG9T632oRY/edit?usp=drive_link)) or have students set up this unit's section in their CSP journals.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Journaling:** Journaling can take many different forms, but in general, it’s a tool for individual processing and reflection in a form that can be revisited as students develop their skills and understandings. The medium used for journaling can vary depending on classroom needs. \n\nFor more guidance and examples, check out the [**CSP Guide to Journaling**](https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/edit?usp=sharing)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "aa0882bc-baa7-44c0-8b40-b1e06bc9cd9d",
+        "lesson_activity.key": "d060c736-ed40-41c9-932a-29a9e374069d"
+      }
+    },
+    {
+      "key": "c5179cab-9b3b-4e11-893f-c400984f97f2",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Discuss:** *With a partner, brainstorm lists of information that you encounter on a daily basis. Why are lists useful?*",
         "name": "Preview Lists\r"
@@ -1052,7 +1069,7 @@
     },
     {
       "key": "2177d218-8739-4277-aff9-ac5b867b8bea",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "Have students discuss with a partner and then have a few students share out their responses.\n\n**Discussion Goal:** \n\n* Lists help us group together like information\n* We can go through a list item by item to check off things we have completed\n* Lists help us stay organized\n\n"
       },
@@ -5233,24 +5250,24 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp6-2022/resources",
-      "key": "all_resources_5",
+      "url": "/s/csp6-2023/resources",
+      "key": "all_resources_17",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_5"
+        "resource.key": "all_resources_17"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp6-2022/standards",
-      "key": "all_standards_5",
+      "url": "/s/csp6-2023/standards",
+      "key": "all_standards_17",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_5"
+        "resource.key": "all_standards_17"
       }
     },
     {
@@ -5267,11 +5284,9 @@
     },
     {
       "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
       "key": "course_vocabulary",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
@@ -5771,6 +5786,30 @@
       }
     },
     {
+      "name": "Unit 6 Journal (Digital)",
+      "url": "https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit?usp=drive_link",
+      "key": "unit_6_journal_digital_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_journal_digital_"
+      }
+    },
+    {
+      "name": "Unit 6 Journal (Interactive Notebook)",
+      "url": "https://docs.google.com/presentation/d/1tqcSleg0s5dO8VQw2mBq9HdWE5pbxFQ9EjG9T632oRY/edit?usp=drive_link",
+      "key": "unit_6_journal_interactive_notebook_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_journal_interactive_notebook_"
+      }
+    },
+    {
       "name": "Using Loops",
       "url": "https://youtu.be/G8hfAk4PfOM",
       "key": "using_loops",
@@ -5807,6 +5846,18 @@
       "seeding_key": {
         "lesson.key": "Lists Explore",
         "resource.key": "introduction_to_lists_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "resource.key": "unit_6_journal_digital_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "resource.key": "unit_6_journal_interactive_notebook_"
       }
     },
     {
@@ -6017,13 +6068,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_5",
+        "resource.key": "all_resources_17",
         "script.name": "csp6-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_5",
+        "resource.key": "all_standards_17",
         "script.name": "csp6-2023"
       }
     },
@@ -6048,6 +6099,18 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_6_journal_digital_",
+        "script.name": "csp6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_6_journal_interactive_notebook_",
         "script.name": "csp6-2023"
       }
     }

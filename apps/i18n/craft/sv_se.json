@@ -1,9 +1,9 @@
 {
   "absolute": "absolut",
+  "agentDiamondPathCongrats": "Grattis, du har hittat diamantvägen! Du har samlat {count, plural, one {1 diamond} other {# diamonds}} hittills!",
   "agentGenericFailureMessage": "Fortsätt koda! Kom ihåg att ta hjälp av agenten.",
   "agentTooFewBlocksFailureMessage": "Lägg till ett block i taget för att få agenten till rätt plats.",
   "at": "på",
-  "agentDiamondPathCongrats": "Grattis, du har hittat diamantvägen! Du har samlat {count, plural, one {1 diamond} other {# diamonds}} hittills!",
   "blockActionAdd": "lägg till",
   "blockActionAttack": "attackera",
   "blockActionClone": "klona block",

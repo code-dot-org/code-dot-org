@@ -5,15 +5,33 @@
         "CourseD_Dance_2020_01": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఒక డాన్సర్ స్క్రీన్ మీద కనిపించేలా చూడండి.\n\n-   ఈ లెవల్ 4 మెజర్స్ తరువాత ముగుస్తుంది.\\*\""
         },
+        "CourseD_Dance_2020_012022": {
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఒక డాన్సర్ స్క్రీన్ మీద కనిపించేలా చూడండి.\n\n-   ఈ లెవల్ 4 మెజర్స్ తరువాత ముగుస్తుంది.\\*\""
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఒక డాన్సర్ స్క్రీన్ మీద కనిపించేలా చూడండి.\n\n-   ఈ లెవల్ 4 మెజర్స్ తరువాత ముగుస్తుంది.\\*\""
+        },
         "CourseD_Dance_2020_04": {
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   4 మెజర్స్ తరువాత డాన్సర్ ఒక కొత్త మువ్‌కు మారవలసిన అవసరం ఉంది. \n\n-   ఈ లెవల్ 7 మెజర్స్ తరువాత ముగిస్తుంది.\\*\""
+        },
+        "CourseD_Dance_2020_042022": {
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   4 మెజర్స్ తరువాత డాన్సర్ ఒక కొత్త మువ్‌కు మారవలసిన అవసరం ఉంది. \n\n-   ఈ లెవల్ 7 మెజర్స్ తరువాత ముగిస్తుంది.\\*\""
+        },
+        "CourseD_Dance_2020_04_2021": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   4 మెజర్స్ తరువాత డాన్సర్ ఒక కొత్త మువ్‌కు మారవలసిన అవసరం ఉంది. \n\n-   ఈ లెవల్ 7 మెజర్స్ తరువాత ముగిస్తుంది.\\*\""
         },
         "CourseD_Dance_2020_05": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
         },
+        "CourseD_Dance_2020_052022": {
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
+        },
         "CourseD_Dance_Party_01": {
-          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఒక డాన్సర్ స్క్రీన్ మీద కనిపించేలా చూడండి.\n\n-   ఈ లెవల్ 4 మెజర్స్ తరువాత ముగుస్తుంది.\\*\"",
-          "challenges": "\"**ఐచ్ఛిక ఛాలెంజెలు**\n\n-   ప్లే చేయడానికి ఒక వేరే పాట ఎంచుకోండి.\n-   మీ డాన్సర్ పేరు మార్చండి.\"."
+          "challenges": "\"**ఐచ్ఛిక ఛాలెంజెలు**\n\n-   ప్లే చేయడానికి ఒక వేరే పాట ఎంచుకోండి.\n-   మీ డాన్సర్ పేరు మార్చండి.\".",
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఒక డాన్సర్ స్క్రీన్ మీద కనిపించేలా చూడండి.\n\n-   ఈ లెవల్ 4 మెజర్స్ తరువాత ముగుస్తుంది.\\*\""
         },
         "CourseD_Dance_Party_02": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   4 మెజర్స్ తరువాత డాన్సర్ ఒక కొత్త మువ్‌కు మారవలసిన అవసరం ఉంది. \n\n-   ఈ లెవల్ 7 మెజర్స్ తరువాత ముగిస్తుంది.\\*\""
@@ -22,16 +40,16 @@
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
         },
         "CourseD_Dance_Party_04": {
-          "validation": "**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   పాటలో ఏడవ మెజర్‌కు ముందు ఏదో సమయంలో బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ మారేలా మీరు చేయవలసిన అవసరం ఉంది.\n\n_ఈ లెవల్ 9 మెజర్స్ తరువాత ముగుస్తుంది._",
-          "challenges": "\"**ఐచ్ఛిక ఛాలెంజ్‌లు**\n\nపాట సమయంలో <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> ఈవెంట్ల క్రింద కొత్త బ్లాక్ కనెక్ట్ చేయడం ద్వారా విభిన్న పాయింట్లలో బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ మార్చండి.\"."
+          "challenges": "\"**ఐచ్ఛిక ఛాలెంజ్‌లు**\n\nపాట సమయంలో <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> ఈవెంట్ల క్రింద కొత్త బ్లాక్ కనెక్ట్ చేయడం ద్వారా విభిన్న పాయింట్లలో బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ మార్చండి.\".",
+          "validation": "**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   పాటలో ఏడవ మెజర్‌కు ముందు ఏదో సమయంలో బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ మారేలా మీరు చేయవలసిన అవసరం ఉంది.\n\n_ఈ లెవల్ 9 మెజర్స్ తరువాత ముగుస్తుంది._"
         },
         "CourseD_Dance_Party_06": {
-          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   మీకు కనీసం ఇద్దరు డాన్సర్లు అవసరం.\n\n_ఈ లెవల్ 5 మెజర్స్ తరువాత ముగుస్తుంది._\"",
-          "challenges": "\"**ఐచ్ఛిక ఛాలెంజ్‌లు**\n\n-   ఒక మూడవ, (లేదా మీరు కావాలనుకున్నంత మందిని!) డాన్సర్‌ను జోడించండి\n-   మీ డాన్సర్లు అందరూ పాటలో వివిధ పాయింట్లలో వివిధ మువ్స్ చేసేలా చేయండి. \"."
+          "challenges": "\"**ఐచ్ఛిక ఛాలెంజ్‌లు**\n\n-   ఒక మూడవ, (లేదా మీరు కావాలనుకున్నంత మందిని!) డాన్సర్‌ను జోడించండి\n-   మీ డాన్సర్లు అందరూ పాటలో వివిధ పాయింట్లలో వివిధ మువ్స్ చేసేలా చేయండి. \".",
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   మీకు కనీసం ఇద్దరు డాన్సర్లు అవసరం.\n\n_ఈ లెవల్ 5 మెజర్స్ తరువాత ముగుస్తుంది._\""
         },
         "CourseD_Dance_Party_08": {
-          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఇద్దరు డాన్సర్లకు 100 కంటే భిన్నమైన సైజు ఉండవలసిన అవసరం ఉంది.\n\n_ఈ లెవల్ 5 మెజర్స్ తరువాత ముగుస్తుంది._\"",
-          "challenges": "\"**ఐచ్ఛిక ఛాలెంజ్‌లు**\n\n-   ఇతర లక్షణాలు (వెడల్పు, ఎత్తు, రొటేషన్ మొదలైనవి) మార్చడం ద్వారా ప్రయోగం చేయండి\""
+          "challenges": "\"**ఐచ్ఛిక ఛాలెంజ్‌లు**\n\n-   ఇతర లక్షణాలు (వెడల్పు, ఎత్తు, రొటేషన్ మొదలైనవి) మార్చడం ద్వారా ప్రయోగం చేయండి\"",
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఇద్దరు డాన్సర్లకు 100 కంటే భిన్నమైన సైజు ఉండవలసిన అవసరం ఉంది.\n\n_ఈ లెవల్ 5 మెజర్స్ తరువాత ముగుస్తుంది._\""
         },
         "CourseD_Dance_Party_09": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను**\n\n-   కనీసం ఒక డాన్సర్ టింట్ మార్చండి.\n\n_ఈ లెవల్ 7 మెజర్స్ తరువాత ముగుస్తుంది._\""
@@ -58,8 +76,8 @@
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
         },
         "Dance_Party_01": {
-          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఒక డాన్సర్ స్క్రీన్ మీద కనిపించేలా చూడండి.\n\n-   ఈ లెవల్ 4 మెజర్స్ తరువాత ముగుస్తుంది.\\*\"",
-          "challenges": "\"**ఐచ్ఛిక ఛాలెంజెలు**\n\n-   ప్లే చేయడానికి ఒక వేరే పాట ఎంచుకోండి.\n-   మీ డాన్సర్ పేరు మార్చండి.\"."
+          "challenges": "\"**ఐచ్ఛిక ఛాలెంజెలు**\n\n-   ప్లే చేయడానికి ఒక వేరే పాట ఎంచుకోండి.\n-   మీ డాన్సర్ పేరు మార్చండి.\".",
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఒక డాన్సర్ స్క్రీన్ మీద కనిపించేలా చూడండి.\n\n-   ఈ లెవల్ 4 మెజర్స్ తరువాత ముగుస్తుంది.\\*\""
         },
         "Dance_Party_02": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   4 మెజర్స్ తరువాత డాన్సర్ ఒక కొత్త మువ్‌కు మారవలసిన అవసరం ఉంది. \n\n-   ఈ లెవల్ 7 మెజర్స్ తరువాత ముగిస్తుంది.\\*\""
@@ -68,16 +86,16 @@
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
         },
         "Dance_Party_04": {
-          "validation": "**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   పాటలో ఏడవ మెజర్‌కు ముందు ఏదో సమయంలో బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ మారేలా మీరు చేయవలసిన అవసరం ఉంది.\n\n_ఈ లెవల్ 9 మెజర్స్ తరువాత ముగుస్తుంది._",
-          "challenges": "\"**ఐచ్ఛిక ఛాలెంజ్‌లు**\n\nపాట సమయంలో <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> ఈవెంట్ల క్రింద కొత్త బ్లాక్ కనెక్ట్ చేయడం ద్వారా విభిన్న పాయింట్లలో బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ మార్చండి.\"."
+          "challenges": "\"**ఐచ్ఛిక ఛాలెంజ్‌లు**\n\nపాట సమయంలో <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> ఈవెంట్ల క్రింద కొత్త బ్లాక్ కనెక్ట్ చేయడం ద్వారా విభిన్న పాయింట్లలో బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ మార్చండి.\".",
+          "validation": "**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   పాటలో ఏడవ మెజర్‌కు ముందు ఏదో సమయంలో బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ మారేలా మీరు చేయవలసిన అవసరం ఉంది.\n\n_ఈ లెవల్ 9 మెజర్స్ తరువాత ముగుస్తుంది._"
         },
         "Dance_Party_06": {
-          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   మీకు కనీసం ఇద్దరు డాన్సర్లు అవసరం.\n\n_ఈ లెవల్ 5 మెజర్స్ తరువాత ముగుస్తుంది._\"",
-          "challenges": "\"**ఐచ్ఛిక ఛాలెంజ్‌లు**\n\n-   ఒక మూడవ, (లేదా మీరు కావాలనుకున్నంత మందిని!) డాన్సర్‌ను జోడించండి\n-   మీ డాన్సర్లు అందరూ పాటలో వివిధ పాయింట్లలో వివిధ మువ్స్ చేసేలా చేయండి. \"."
+          "challenges": "\"**ఐచ్ఛిక ఛాలెంజ్‌లు**\n\n-   ఒక మూడవ, (లేదా మీరు కావాలనుకున్నంత మందిని!) డాన్సర్‌ను జోడించండి\n-   మీ డాన్సర్లు అందరూ పాటలో వివిధ పాయింట్లలో వివిధ మువ్స్ చేసేలా చేయండి. \".",
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   మీకు కనీసం ఇద్దరు డాన్సర్లు అవసరం.\n\n_ఈ లెవల్ 5 మెజర్స్ తరువాత ముగుస్తుంది._\""
         },
         "Dance_Party_08": {
-          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఇద్దరు డాన్సర్లకు 100 కంటే భిన్నమైన సైజు ఉండవలసిన అవసరం ఉంది.\n\n_ఈ లెవల్ 5 మెజర్స్ తరువాత ముగుస్తుంది._\"",
-          "challenges": "\"**ఐచ్ఛిక ఛాలెంజ్‌లు**\n\n-   ఇతర లక్షణాలు (వెడల్పు, ఎత్తు, రొటేషన్ మొదలైనవి) మార్చడం ద్వారా ప్రయోగం చేయండి\""
+          "challenges": "\"**ఐచ్ఛిక ఛాలెంజ్‌లు**\n\n-   ఇతర లక్షణాలు (వెడల్పు, ఎత్తు, రొటేషన్ మొదలైనవి) మార్చడం ద్వారా ప్రయోగం చేయండి\"",
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఇద్దరు డాన్సర్లకు 100 కంటే భిన్నమైన సైజు ఉండవలసిన అవసరం ఉంది.\n\n_ఈ లెవల్ 5 మెజర్స్ తరువాత ముగుస్తుంది._\""
         },
         "Dance_Party_09": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను**\n\n-   కనీసం ఒక డాన్సర్ టింట్ మార్చండి.\n\n_ఈ లెవల్ 7 మెజర్స్ తరువాత ముగుస్తుంది._\""
@@ -94,11 +112,21 @@
         "Dance_Party_11b": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   మీరు నొక్కినప్పుడు రోబో ఒక డాన్స్ మువ్ చేసేలా ’వెన్ లెఫ్ట్ యారో ప్రెస్డ్’ బ్లాక్ ఉపయోగించండి.\n\n_ఈ లెవల్ 7 మెజర్స్ తరువాత ముగుస్తుంది._ \""
         },
+        "courseA_collector_loops32022": {
+          "courseA_collector_loops3_a": "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n loop!"
+        },
         "courseA_collector_loops3_2019": {
           "courseA_collector_loops3_a": "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n loop!"
         },
         "courseA_collector_loops3_2020": {
           "courseA_collector_loops3_a": "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n loop!"
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_a": "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n loop!"
+        },
+        "courseB_iceage_loops32022": {
+          "courseB_iceage_loops3_a": "Use this new block!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "To repeat code, drag out a `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>loop, then put the block you want inside of it."
         },
         "courseB_iceage_loops3_2019": {
           "courseB_iceage_loops3_a": "Use this new block!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
@@ -108,35 +136,7 @@
           "courseB_iceage_loops3_a": "Use this new block!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
           "courseB_iceage_loops3_b": "To repeat code, drag out a `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>loop, then put the block you want inside of it."
         },
-        "CourseD_Dance_2020_01_2021": {
-          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఒక డాన్సర్ స్క్రీన్ మీద కనిపించేలా చూడండి.\n\n-   ఈ లెవల్ 4 మెజర్స్ తరువాత ముగుస్తుంది.\\*\""
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   4 మెజర్స్ తరువాత డాన్సర్ ఒక కొత్త మువ్‌కు మారవలసిన అవసరం ఉంది. \n\n-   ఈ లెవల్ 7 మెజర్స్ తరువాత ముగిస్తుంది.\\*\""
-        },
-        "CourseD_Dance_2020_05_2021": {
-          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
-        },
-        "courseA_collector_loops3_2021": {
-          "courseA_collector_loops3_a": "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n loop!"
-        },
         "courseB_iceage_loops3_2021": {
-          "courseB_iceage_loops3_a": "Use this new block!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
-          "courseB_iceage_loops3_b": "To repeat code, drag out a `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>loop, then put the block you want inside of it."
-        },
-        "CourseD_Dance_2020_012022": {
-          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఒక డాన్సర్ స్క్రీన్ మీద కనిపించేలా చూడండి.\n\n-   ఈ లెవల్ 4 మెజర్స్ తరువాత ముగుస్తుంది.\\*\""
-        },
-        "CourseD_Dance_2020_042022": {
-          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   4 మెజర్స్ తరువాత డాన్సర్ ఒక కొత్త మువ్‌కు మారవలసిన అవసరం ఉంది. \n\n-   ఈ లెవల్ 7 మెజర్స్ తరువాత ముగిస్తుంది.\\*\""
-        },
-        "CourseD_Dance_2020_052022": {
-          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
-        },
-        "courseA_collector_loops32022": {
-          "courseA_collector_loops3_a": "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n loop!"
-        },
-        "courseB_iceage_loops32022": {
           "courseB_iceage_loops3_a": "Use this new block!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
           "courseB_iceage_loops3_b": "To repeat code, drag out a `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>loop, then put the block you want inside of it."
         },
@@ -172,8 +172,8 @@
           "hello-world-first-solution-bear": "ఎలుగుబంటి ఏదో చెప్పడానికి, ఈ వంటి కోడ్ బ్లాక్స్ కనెక్ట్:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_animals_sizes": {
-          "storyboard_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_emoji_backgrounds": {
           "hello_world_background": "మీరు `సెట్ నేపథ్య` బ్లాక్ను `క్లిక్ చేసినప్పుడు` ఈవెంట్ బ్లాక్ కింద `సెట్ బ్యాక్గ్రౌండ్` బ్లాక్ను కనెక్ట్ చేయడం ద్వారా నేపథ్యాన్ని మార్చవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_35_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_17_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -201,8 +201,8 @@
           "hello-world-first-solution-emoji": "ఎమోజి ఏదో చెప్పడానికి, కోడ్ యొక్క బ్లాక్లను ఇలా కనెక్ట్ చేయండి:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_emoji_sizes": {
-          "storyboard_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_17_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_33_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_33_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_17_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_backgrounds": {
           "hello_world_background": "మీరు `సెట్ నేపథ్య` బ్లాక్ను `క్లిక్ చేసినప్పుడు` ఈవెంట్ బ్లాక్ కింద `సెట్ బ్యాక్గ్రౌండ్` బ్లాక్ను కనెక్ట్ చేయడం ద్వారా నేపథ్యాన్ని మార్చవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -280,16 +280,16 @@
           "hello-world-first-solution-pizza": "స్ప్రైట్ ఏదో చెప్పడానికి, కోడ్ యొక్క బ్లాక్లను ఇలా కనెక్ట్ చేయండి:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_food_sizes": {
-          "storyboard_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_sizes_soccer-2022": {
-          "storyboard_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_sizes_space-2022": {
-          "storyboard_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
-          "storyboard_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+          "storyboard_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
+          "storyboard_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
         },
         "helloworld_retro_backgrounds": {
           "hello_world_background": "మీరు `సెట్ నేపథ్య` బ్లాక్ను `క్లిక్ చేసినప్పుడు` ఈవెంట్ బ్లాక్ కింద `సెట్ బ్యాక్గ్రౌండ్` బ్లాక్ను కనెక్ట్ చేయడం ద్వారా నేపథ్యాన్ని మార్చవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -317,8 +317,8 @@
           "hello-world-first-solution-retrocreature": "జీవి ఏదో చెప్పటానికి చేయడానికి, ఈ వంటి కోడ్ బ్లాక్స్ కనెక్ట్:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_retro_sizes": {
-          "hw_retro_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>",
-          "hw_retro_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "hw_retro_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
+          "hw_retro_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>"
         }
       }
     }

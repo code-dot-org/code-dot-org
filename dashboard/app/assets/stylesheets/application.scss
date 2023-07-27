@@ -829,6 +829,59 @@ $small-footer-standard-width: 400px;
   border-top: initial;
 }
 
+/* Custom styling for the locale & copyright buttons and the copyright flyout,
+ * for Music Lab.
+ */
+.music-black {
+  #page-small-footer {
+    user-select: none;
+
+    .small-footer-base {
+      margin-left: 10px;
+    }
+
+    .i18n-dropdown-container, .copyright-link {
+      height: 26px;
+      box-sizing: border-box;
+      border: solid 1px $neutral_dark40;
+    }
+
+    .copyright-button {
+      user-select: none;
+
+      .copyright-link {
+        width: 26px;
+      }
+    }
+
+    .i18n-dropdown-container, .globe-icon, #locale, .copyright-link {
+      background-color: initial;
+      color: $neutral_dark40;
+    }
+
+    #copyright-flyout {
+      border: solid 1px $neutral_dark40;
+      box-sizing: border-box;
+
+      h4, a:link {
+        color: $neutral_dark50;
+      }
+
+      img {
+        background-color: $neutral_light;
+        border-radius: 4px;
+        padding: 4px;
+        margin-bottom: 6px;
+      }
+    }
+
+    #copyright-flyout, #copyright-scroll-area {
+      background-color: $neutral_dark;
+      color: $neutral_light;
+    }
+  }
+}
+
 .header_separator {
   padding-left: 2px;
   margin-bottom: -18px;

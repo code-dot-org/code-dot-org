@@ -57,6 +57,26 @@ cs:
         email s pokyny, jak si odemknout svůj účet.
       unlocked: Tvůj účet byl úspěšně odemknut. Prosím, přihlaš se, aby jsi mohl pokračovat.
   errors:
+    invitations:
+      edit:
+        header: Nastav heslo
+        submit_button: Nastav heslo
+      invitation_removed: Tvé pozvání bylo odstraněno.
+      invitation_token_invalid: Zadaný kód pozvánky je neplatný!
+      new:
+        header: Zaslat pozvánku
+        submit_button: Poslat pozvánku
+      no_invitations_remaining: Nezbývá pozvání
+      send_instructions: 'Pozvání bylo zasláno na e-mail: %{email}.'
+      updated: Heslo bylo úspěšně nastaveno. Nyní jsi přihlášen.
+    mailer:
+      invitation_instructions:
+        accept: Přijmout pozvánku
+        hello: Ahoj %{email}
+        ignore: Když nechceš přijmout pozvání, ignoruje tento.<br />Tvůj účet se nevytvoří,
+          dokud nemáš přístup na výše uvedený odkaz a nenastavíš heslo.
+        someone_invited_you: Někdo tě zve na %{url}, můžeš to na níže uvedeném odkazu.
+        subject: Instrukce k pozvánce
     messages:
       already_confirmed: byl již aktivován, prosím, zkus se přihlásit
       confirmation_period_expired: musí být potvrzen do %{period}, požádej, prosím,
@@ -64,23 +84,3 @@ cs:
       expired: vypršela platnost, požádej o nový, prosím
       not_found: nenalezeno
       not_locked: nebyl uzamčen
-    invitations:
-      send_instructions: 'Pozvání bylo zasláno na e-mail: %{email}.'
-      invitation_token_invalid: Zadaný kód pozvánky je neplatný!
-      updated: Heslo bylo úspěšně nastaveno. Nyní jsi přihlášen.
-      no_invitations_remaining: Nezbývá pozvání
-      invitation_removed: Tvé pozvání bylo odstraněno.
-      new:
-        header: Zaslat pozvánku
-        submit_button: Poslat pozvánku
-      edit:
-        header: Nastav heslo
-        submit_button: Nastav heslo
-    mailer:
-      invitation_instructions:
-        subject: Instrukce k pozvánce
-        hello: Ahoj %{email}
-        someone_invited_you: Někdo tě zve na %{url}, můžeš to na níže uvedeném odkazu.
-        accept: Přijmout pozvánku
-        ignore: Když nechceš přijmout pozvání, ignoruje tento.<br />Tvůj účet se nevytvoří,
-          dokud nemáš přístup na výše uvedený odkaz a nenastavíš heslo.

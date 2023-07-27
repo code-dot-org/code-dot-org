@@ -7,9 +7,9 @@
   "blockly_toolboxCategoryLogic": "Logika",
   "blockly_toolboxCategoryMath": "Matematika",
   "blockly_toolboxCategoryVariables": "Varijable",
-  "share": "Podijeli",
-  "startOver": "Počni Ponovo",
+  "continue": "Nastavi",
   "panelHeaderInstructions": "Upute",
   "panelHeaderWorkspace": "Radni prostor: ",
-  "continue": "Nastavi"
+  "share": "Podijeli",
+  "startOver": "Počni Ponovo"
 }

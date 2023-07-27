@@ -61,6 +61,28 @@ pt:
       unlocked: A tua conta foi desbloqueada com sucesso. Por favor, Inscreve-te para
         continuar.
   errors:
+    invitations:
+      edit:
+        header: Define a tua palavra-passe
+        submit_button: Definir palavra-passe
+      invitation_removed: O teu convite foi removido.
+      invitation_token_invalid: O teu convite não é válido!
+      new:
+        header: Enviar convite
+        submit_button: Enviar um convite
+      no_invitations_remaining: Nenhum convite
+      send_instructions: Foi enviado um convite por e-mail para %{email}.
+      updated: A tua palavra-passe foi definida e iniciaste sessão com sucesso.
+    mailer:
+      invitation_instructions:
+        accept: Aceitar convite
+        hello: Olá, %{email}!
+        ignore: Se não pretenderes aceitar o convite, ignora este e-mail.<br />A tua
+          conta não será criada até que acedas à ligação deste e-mail e definas a
+          tua palavra-passe.
+        someone_invited_you: Alguém te convidou para o %{url}. Para aceitares o convite,
+          acede à seguinte ligação.
+        subject: Instruções de convite
     messages:
       already_confirmed: já foi confirmado, por favor, tenta entrar
       confirmation_period_expired: tem de ser confirmado dentro de %{period}. Por
@@ -68,25 +90,3 @@ pt:
       expired: caducou, por favor pede uma nova
       not_found: não encontrado
       not_locked: não foi bloqueado
-    invitations:
-      send_instructions: Foi enviado um convite por e-mail para %{email}.
-      invitation_token_invalid: O teu convite não é válido!
-      updated: A tua palavra-passe foi definida e iniciaste sessão com sucesso.
-      no_invitations_remaining: Nenhum convite
-      invitation_removed: O teu convite foi removido.
-      new:
-        header: Enviar convite
-        submit_button: Enviar um convite
-      edit:
-        header: Define a tua palavra-passe
-        submit_button: Definir palavra-passe
-    mailer:
-      invitation_instructions:
-        subject: Instruções de convite
-        hello: Olá, %{email}!
-        someone_invited_you: Alguém te convidou para o %{url}. Para aceitares o convite,
-          acede à seguinte ligação.
-        accept: Aceitar convite
-        ignore: Se não pretenderes aceitar o convite, ignora este e-mail.<br />A tua
-          conta não será criada até que acedas à ligação deste e-mail e definas a
-          tua palavra-passe.

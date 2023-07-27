@@ -1,15 +1,15 @@
 {
-  "selectDataset": "Válassza ki a használni kívánt adatkészletet.",
-  "uploadedDataset": "Most töltöttél fel egy adatkészletet.",
-  "selectedDataset": "Most választott ki egy adatkészletet.",
-  "dataDisplayLabel": "Válasszon egy oszlopot az előrejelzéshez.",
   "dataDisplayFeatures": "Válasszon egy vagy több oszlopot bemenetként az előrejelzés elkészítéséhez.",
-  "selectedFeatureNumerical": "Most választott ki egy numerikus funkciót.",
-  "selectedFeatureCategorical": "Most választott ki egy kategorikus funkciót.",
-  "trainModel": "A modelled kialakítás alatt.",
+  "dataDisplayLabel": "Válasszon egy oszlopot az előrejelzéshez.",
   "generateResults": "A modelled tesztelés alatt.",
+  "modelSummary": "Sikeresen kialakította mentette modelljét. Tekintse át a modell adatait, és kattintson a Befejezés gombra a képzett modell használatához az App Lab alkalmazásban.",
   "results": "Tekintsd át az eredményeket.",
   "resultsDetails": "Az eredmények részletei megjelennek.",
   "saveModel": "Mentse el a kialakított modellt az App Lab alkalmazáshoz.",
-  "modelSummary": "Sikeresen kialakította mentette modelljét. Tekintse át a modell adatait, és kattintson a Befejezés gombra a képzett modell használatához az App Lab alkalmazásban."
+  "selectDataset": "Válassza ki a használni kívánt adatkészletet.",
+  "selectedDataset": "Most választott ki egy adatkészletet.",
+  "selectedFeatureCategorical": "Most választott ki egy kategorikus funkciót.",
+  "selectedFeatureNumerical": "Most választott ki egy numerikus funkciót.",
+  "trainModel": "A modelled kialakítás alatt.",
+  "uploadedDataset": "Most töltöttél fel egy adatkészletet."
 }

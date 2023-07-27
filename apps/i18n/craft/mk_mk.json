@@ -1,8 +1,8 @@
 {
   "absolute": "апсолутно",
+  "agentDiamondPathCongrats": "Честитки, ја најдовте дијамантската патека! Сте собрани {count, plural, one {1 дијамант} other {# дијаманти}} досега!",
   "agentGenericFailureMessage": "Продолжи со кодирање! Не заборавај да го користиш Агентот за помош.",
   "agentTooFewBlocksFailureMessage": "Пробај да додадеш по еден блок наеднаш за да го доведеш Агенот на точното место.",
-  "agentDiamondPathCongrats": "Честитки, ја најдовте дијамантската патека! Сте собрани {count, plural, one {1 дијамант} other {# дијаманти}} досега!",
   "blockActionAttack": "напад",
   "blockActionClone": "клон блок",
   "blockActionCloneFiltered": "само клон",

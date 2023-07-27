@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 22:45:46 UTC",
+    "serialized_at": "2023-07-18 20:42:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -819,9 +819,15 @@
       "key": "3a7d61d5-f9d3-4847-8a8d-6023fc025082",
       "position": 1,
       "properties": {
-        "description": "#### Start the Simulation",
+        "description": "**Distribute:** Give each student a copy of the Unit 8 Journal ([Digital](https://docs.google.com/presentation/d/1AKE9PB1VXcS1YJdpeqp8Y35T_qd1zKGTHhcYCoesRAE/edit?usp=drive_link)/[Interactive Notebook](https://docs.google.com/presentation/d/1x30OlKk0pp0unqjlpKYu3Gb4K5XwcIANAJlGHvLD5MA/edit?usp=drive_link)) or have students set up this unit's section in their CSP journals.\n\n#### Start the Simulation",
         "duration": "5",
-        "name": "Warm Up"
+        "name": "Warm Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Journaling:** Journaling can take many different forms, but in general, it’s a tool for individual processing and reflection in a form that can be revisited as students develop their skills and understandings. The medium used for journaling can vary depending on classroom needs. \n\nFor more guidance and examples, check out the [**CSP Guide to Journaling**](https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/edit?usp=sharing)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3a7d61d5-f9d3-4847-8a8d-6023fc025082",
@@ -2559,6 +2565,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q1"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2581,6 +2590,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q2"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2603,6 +2615,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q3"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -3215,24 +3230,24 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp8-2022/resources",
-      "key": "all_resources_7",
+      "url": "/s/csp8-2023/resources",
+      "key": "all_resources_11",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_7"
+        "resource.key": "all_resources_11"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp8-2022/standards",
-      "key": "all_standards_7",
+      "url": "/s/csp8-2023/standards",
+      "key": "all_standards_11",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_7"
+        "resource.key": "all_standards_11"
       }
     },
     {
@@ -3287,11 +3302,9 @@
     },
     {
       "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
       "key": "course_vocabulary",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
@@ -3614,6 +3627,54 @@
       "seeding_key": {
         "resource.key": "the_internet_cybersecurity_and_crime"
       }
+    },
+    {
+      "name": "Unit 8 Journal (Digital)",
+      "url": "https://docs.google.com/presentation/d/1AKE9PB1VXcS1YJdpeqp8Y35T_qd1zKGTHhcYCoesRAE/edit?usp=drive_link",
+      "key": "unit_8_journal_digital__1",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_8_journal_digital__1"
+      }
+    },
+    {
+      "name": "Unit 8 Journal (Digital)",
+      "url": "https://docs.google.com/presentation/d/1AKE9PB1VXcS1YJdpeqp8Y35T_qd1zKGTHhcYCoesRAE/edit?usp=drive_link",
+      "key": "unit_8_journal_digital__2",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_8_journal_digital__2"
+      }
+    },
+    {
+      "name": "Unit 8 Journal (Interactive Notebook)",
+      "url": "https://docs.google.com/presentation/d/1x30OlKk0pp0unqjlpKYu3Gb4K5XwcIANAJlGHvLD5MA/edit?usp=drive_link",
+      "key": "unit_8_journal_interactive_notebook_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_8_journal_interactive_notebook_"
+      }
+    },
+    {
+      "name": "Unit 8 Journal (Interactive Notebook)",
+      "url": "https://docs.google.com/presentation/d/1x30OlKk0pp0unqjlpKYu3Gb4K5XwcIANAJlGHvLD5MA/edit?usp=drive_link",
+      "key": "unit_8_journal_interactive_notebook__1",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_8_journal_interactive_notebook__1"
+      }
     }
   ],
   "lessons_resources": [
@@ -3675,6 +3736,18 @@
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 1",
         "resource.key": "csp_unit_8_-_lesson_1_-_project_innovation_simulation_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Innovation Simulation Part 1",
+        "resource.key": "unit_8_journal_digital__2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Innovation Simulation Part 1",
+        "resource.key": "unit_8_journal_interactive_notebook__1"
       }
     },
     {
@@ -3819,13 +3892,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_7",
+        "resource.key": "all_resources_11",
         "script.name": "csp8-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_7",
+        "resource.key": "all_standards_11",
         "script.name": "csp8-2023"
       }
     },
@@ -3850,6 +3923,18 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp8-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_8_journal_digital__1",
+        "script.name": "csp8-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_8_journal_interactive_notebook_",
         "script.name": "csp8-2023"
       }
     }

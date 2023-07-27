@@ -85,46 +85,22 @@ sk:
         self-paced-pl-microbit-2023:
           title: Vyučujeme Aplikácie a hardvér (micro:bit)
     resources:
-      curriculum/csd/2020:
-        name: Osnovy
-      teacher_forum/csd/2020:
-        name: Fórum učiteľov
       curriculum/csd/2017:
         name: Osnovy
       teacher_forum_6/csd/2017:
         name: Fórum učiteľov
-      all_code_5/csd/2022:
-        name: Všetok kód
-      all_resources_7/csd/2022:
-        name: Všetky zdroje
-      all_standards_7/csd/2022:
-        name: Všetky normy
-      all_vocabulary_7/csd/2022:
-        name: Všetky pojmy
-      csd_curriculum_guide/csd/2022:
-        name: Sprievodca osnovami pre kurz Objavujeme informatiku
-      csd_guide_to_debugging/csd/2022:
-        name: 'Objavujeme informatiku: Sprievodca ladením'
-      csd_guide_to_differentiation/csd/2022:
-        name: 'Objavujeme informatiku: Sprievodca diferenciáciou'
-      csd_implementation_guide/csd/2022:
-        name: Implementačná príručka pre kurz Objavujeme informatiku
+      curriculum/csd/2018:
+        name: Osnovy
+      teacher_forum_6/csd/2018:
+        name: Fórum učiteľov
       curriculum/csd/2019:
         name: Osnovy
       teacher_forum/csd/2019:
         name: Fórum učiteľov
-      all_code_2/csd/2023:
-        name: Všetok kód
-      all_resources_2/csd/2023:
-        name: Všetky zdroje
-      all_standards_2/csd/2023:
-        name: Všetky normy
-      all_vocabulary_2/csd/2023:
-        name: Všetky pojmy
-      csd_guide_to_differentiation_1/csd/2023:
-        name: 'Objavujeme informatiku: Sprievodca diferenciáciou'
-      csd_implementation_guide_1/csd/2023:
-        name: Implementačná príručka pre kurz Objavujeme informatiku
+      curriculum/csd/2020:
+        name: Osnovy
+      teacher_forum/csd/2020:
+        name: Fórum učiteľov
       all_code/csd/2021:
         name: Všetok kód
       all_resources_1/csd/2021:
@@ -141,7 +117,31 @@ sk:
         name: 'Objavujeme informatiku: Sprievodca diferenciáciou'
       csd_implementation_guide/csd/2021:
         name: Implementačná príručka pre kurz Objavujeme informatiku
-      curriculum/csd/2018:
-        name: Osnovy
-      teacher_forum_6/csd/2018:
-        name: Fórum učiteľov
+      all_code_5/csd/2022:
+        name: Všetok kód
+      all_resources_7/csd/2022:
+        name: Všetky zdroje
+      all_standards_7/csd/2022:
+        name: Všetky normy
+      all_vocabulary_7/csd/2022:
+        name: Všetky pojmy
+      csd_curriculum_guide/csd/2022:
+        name: Sprievodca osnovami pre kurz Objavujeme informatiku
+      csd_guide_to_debugging/csd/2022:
+        name: 'Objavujeme informatiku: Sprievodca ladením'
+      csd_guide_to_differentiation/csd/2022:
+        name: 'Objavujeme informatiku: Sprievodca diferenciáciou'
+      csd_implementation_guide/csd/2022:
+        name: Implementačná príručka pre kurz Objavujeme informatiku
+      all_code_2/csd/2023:
+        name: Všetok kód
+      all_resources_2/csd/2023:
+        name: Všetky zdroje
+      all_standards_2/csd/2023:
+        name: Všetky normy
+      all_vocabulary_2/csd/2023:
+        name: Všetky pojmy
+      csd_guide_to_differentiation_1/csd/2023:
+        name: 'Objavujeme informatiku: Sprievodca diferenciáciou'
+      csd_implementation_guide_1/csd/2023:
+        name: Implementačná príručka pre kurz Objavujeme informatiku

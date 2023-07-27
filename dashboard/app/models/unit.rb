@@ -122,6 +122,7 @@ class Unit < ApplicationRecord
             :vocabularies,
             :programming_expressions,
             :objectives,
+            {rubric: {learning_goals: :learning_goal_evidence_levels}},
             :standards,
             :opportunity_standards
           ]
@@ -1248,7 +1249,7 @@ class Unit < ApplicationRecord
       end
     rescue => exception
       filepath_to_delete = Unit.script_json_filepath(new_name)
-      File.delete(filepath_to_delete) if File.exist?(filepath_to_delete)
+      FileUtils.rm_f(filepath_to_delete)
       raise exception, "Error: #{exception.message}"
     end
   end
@@ -1586,7 +1587,7 @@ class Unit < ApplicationRecord
   end
 
   def unit_without_lesson_plans?
-    lessons.select(&:has_lesson_plan).empty?
+    lessons.none?(&:has_lesson_plan)
   end
 
   def summarize_for_rollup(user = nil)

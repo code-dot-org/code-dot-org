@@ -29,10 +29,22 @@
         "CSD U3 Variables Predict Where XY_2019": {
           "grid": "Klikka siin võrgustiku näitamiseks."
         },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Klikka siin võrgustiku näitamiseks."
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "Klikka siin võrgustiku näitamiseks."
+        },
         "CSD U3 Variables Predict Where X_2018": {
           "CSD_U3_variables": "Muuda numbrit siin"
         },
         "CSD U3 Variables Predict Where X_2019": {
+          "CSD_U3_variables": "Muuda numbrit siin"
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Muuda numbrit siin"
+        },
+        "CSD U3 Variables Predict Where X_2022": {
           "CSD_U3_variables": "Muuda numbrit siin"
         },
         "CSD U3 debug": {
@@ -44,6 +56,54 @@
           "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
         },
         "CSD U3 debug_2019": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 drawing practice 3_2022": {
           "CSD_U3_rect_c1": "Siin on kood",
           "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
         },
@@ -59,6 +119,14 @@
           "CSD_U3_rect_c1": "Siin on kood",
           "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
         },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
         "CSD U3 fill": {
           "CSD_U3_rect_c1": "Siin on kood",
           "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
@@ -71,6 +139,30 @@
           "CSD_U3_rect_c1": "Siin on kood",
           "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
         },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
         "CSD U3 rect": {
           "CSD_U3_rect_c1": "Siin on kood",
           "CSD_U3_rect_c2": "Siin on nupp \"Käivita\"."
@@ -79,6 +171,12 @@
           "CSD_U3_rect_c1": "Siin on kood"
         },
         "CSD U3 rect_2019": {
+          "CSD_U3_rect_c1": "Siin on kood"
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Siin on kood"
+        },
+        "CSD U3 rect_2022": {
           "CSD_U3_rect_c1": "Siin on kood"
         },
         "CSD U3 sequence": {
@@ -93,6 +191,70 @@
           "CSD_U3_rect_c1": "Siin on kood",
           "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
         },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "Siin on kood",
+          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
+        },
         "CSD U6 tugowar variables 1": {
           "CSD_U6_startGame": "Määratle startGame siin"
         },
@@ -100,6 +262,9 @@
           "CSD_U6_startGame": "Määratle startGame siin"
         },
         "CSD U6 tugowar variables 1_2019": {
+          "CSD_U6_startGame": "Määratle startGame siin"
+        },
+        "CSD U6 tugowar variables 1_2021": {
           "CSD_U6_startGame": "Määratle startGame siin"
         },
         "CSD U6 tugowar variables 2": {
@@ -111,6 +276,9 @@
         "CSD U6 tugowar variables 2_2019": {
           "CSD_U6_movePlayer": "Määratle movePlayer() siin"
         },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Määratle movePlayer() siin"
+        },
         "CSD U6 tugowar variables 3": {
           "CSD_U6_checkWin": "Kontrollige, kas mängija on võitnud"
         },
@@ -119,6 +287,15 @@
         },
         "CSD U6 tugowar variables 3_2019": {
           "CSD_U6_checkWin": "Kontrollige, kas mängija on võitnud"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Kontrollige, kas mängija on võitnud"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Muuda numbrit siin"
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "Muuda numbrit siin"
         },
         "Course 4 Artist 4": {
           "repeat_full_circle": "Sisesta, mitu korda peab zombi liikuma, et teha üks täisring"
@@ -159,13 +336,39 @@
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "Lisa see plokk oma programmi!"
         },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Lisa see plokk oma programmi!"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Lisa see plokk oma programmi!"
+        },
         "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Uus plokk!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Uus plokk!"
+        },
+        "CourseD_Dance_2020_06_2021": {
           "dance_party_11_5_groups": "Uus plokk!"
         },
         "CourseD_Dance_2020_07": {
           "setprop_hint": "Uus plokk!"
         },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Uus plokk!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Uus plokk!"
+        },
         "CourseD_Dance_2020_09": {
+          "new_block_3": "Uus plokk!",
+          "new_block_4": "Uus plokk!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Uus plokk!",
+          "new_block_4": "Uus plokk!"
+        },
+        "CourseD_Dance_2020_09_2021": {
           "new_block_3": "Uus plokk!",
           "new_block_4": "Uus plokk!"
         },
@@ -184,6 +387,9 @@
         "CourseD_Dance_Party_11": {
           "dance_callout_11_a": "Uus plokk!",
           "dance_callout_11_b": "Uus plokk!"
+        },
+        "CourseD_Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Leia siit „kõik pardid” plokid"
         },
         "Dance_2019_04": {
           "dance_callout_02": "Lisa see plokk oma programmi!"
@@ -214,13 +420,22 @@
           "dance_callout_11_a": "Uus plokk!",
           "dance_callout_11_b": "Uus plokk!"
         },
+        "Dance_Party_11_5": {
+          "dance_party_11_5_groups": "Leia siit „kõik pardid” plokid"
+        },
         "Function intro Ryan": {
+          "Function_intro_Ryan_1": "See väike juhend ütleb arvutile, et käivita SUUR kogus koodi sama nimega, mis töölaual."
+        },
+        "Function intro Ryan2022": {
           "Function_intro_Ryan_1": "See väike juhend ütleb arvutile, et käivita SUUR kogus koodi sama nimega, mis töölaual."
         },
         "Function intro Ryan_2019": {
           "Function_intro_Ryan_1": "See väike juhend ütleb arvutile, et käivita SUUR kogus koodi sama nimega, mis töölaual."
         },
         "Function intro Ryan_2020": {
+          "Function_intro_Ryan_1": "See väike juhend ütleb arvutile, et käivita SUUR kogus koodi sama nimega, mis töölaual."
+        },
+        "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "See väike juhend ütleb arvutile, et käivita SUUR kogus koodi sama nimega, mis töölaual."
         },
         "Geometric Sun": {
@@ -251,13 +466,22 @@
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_1": "See on \"korrata\" tsükkel!  Klõpsake seda töölauale ja lisage kood, mida soovite korduvalt kasutada."
         },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "See on \"korrata\" tsükkel!  Klõpsake seda töölauale ja lisage kood, mida soovite korduvalt kasutada."
+        },
         "MC_HOC_2017_03_Cole_2019": {
           "MC_HOC_2017_03_Cole_1": "See on \"korrata\" tsükkel!  Klõpsake seda töölauale ja lisage kood, mida soovite korduvalt kasutada."
         },
         "MC_HOC_2017_03_Cole_2020": {
           "MC_HOC_2017_03_Cole_1": "See on \"korrata\" tsükkel!  Klõpsake seda töölauale ja lisage kood, mida soovite korduvalt kasutada."
         },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "See on \"korrata\" tsükkel!  Klõpsake seda töölauale ja lisage kood, mida soovite korduvalt kasutada."
+        },
         "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Agent saab hõljuda üle vee aga mängija ei saa!"
+        },
+        "MC_HOC_2017_04_Cole2022": {
           "MC_HOC_2017_04_Cole_a": "Agent saab hõljuda üle vee aga mängija ei saa!"
         },
         "MC_HOC_2017_04_Cole_2019": {
@@ -266,7 +490,13 @@
         "MC_HOC_2017_04_Cole_2020": {
           "MC_HOC_2017_04_Cole_a": "Agent saab hõljuda üle vee aga mängija ei saa!"
         },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent saab hõljuda üle vee aga mängija ei saa!"
+        },
         "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "Sa ei saa neid plokke ära visata aga sa saad neid muuta!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
           "MC_HOC_2017_06_Cole_1": "Sa ei saa neid plokke ära visata aga sa saad neid muuta!"
         },
         "MC_HOC_2017_06_Cole_2019": {
@@ -275,13 +505,22 @@
         "MC_HOC_2017_06_Cole_2020": {
           "MC_HOC_2017_06_Cole_1": "Sa ei saa neid plokke ära visata aga sa saad neid muuta!"
         },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Sa ei saa neid plokke ära visata aga sa saad neid muuta!"
+        },
         "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_1": "Agent saab hõljuda üle laava aga Steve ja Alex ei saa!  "
+        },
+        "MC_HOC_2017_Ali2022": {
           "MC_HOC_2017_08_RY_1": "Agent saab hõljuda üle laava aga Steve ja Alex ei saa!  "
         },
         "MC_HOC_2017_Ali_2019": {
           "MC_HOC_2017_08_RY_1": "Agent saab hõljuda üle laava aga Steve ja Alex ei saa!  "
         },
         "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_1": "Agent saab hõljuda üle laava aga Steve ja Alex ei saa!  "
+        },
+        "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "Agent saab hõljuda üle laava aga Steve ja Alex ei saa!  "
         },
         "NEW Course 4 Artist Functions 7": {
@@ -294,8 +533,8 @@
           "create_function": "Kliki siin, et avada hüpik „Funktsioonid“ ja kliki nupul „Loo funktsioon“."
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Kliki muutmisnupul, et lisada oma funktsiooni parameeter",
-          "add_and_drag_parameter": "Kirjuta siia oma parameetri nimi, kliki lisamisnupul ja lohista see oma funktsioonimääratlusse"
+          "add_and_drag_parameter": "Kirjuta siia oma parameetri nimi, kliki lisamisnupul ja lohista see oma funktsioonimääratlusse",
+          "edit_add_parameter": "Kliki muutmisnupul, et lisada oma funktsiooni parameeter"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "Küsimärkide asendamiseks lohista siia pikkusemuutuja"
@@ -309,13 +548,22 @@
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Panime sulle alustuseks siia mõned plokid"
         },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Panime sulle alustuseks siia mõned plokid"
+        },
         "Overworld Chop Trees_2019": {
           "craft_callout_preplaced": "Panime sulle alustuseks siia mõned plokid"
         },
         "Overworld Chop Trees_2020": {
           "craft_callout_preplaced": "Panime sulle alustuseks siia mõned plokid"
         },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Panime sulle alustuseks siia mõned plokid"
+        },
         "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Selle koodiga alustatakse majaehitust. Kas oskad selle lõpetada?"
+        },
+        "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "Selle koodiga alustatakse majaehitust. Kas oskad selle lõpetada?"
         },
         "Overworld House Frame Chosen_2019": {
@@ -324,19 +572,33 @@
         "Overworld House Frame Chosen_2020": {
           "craft_callout_preplaced_house": "Selle koodiga alustatakse majaehitust. Kas oskad selle lõpetada?"
         },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Selle koodiga alustatakse majaehitust. Kas oskad selle lõpetada?"
+        },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“",
-          "craft_drag_block_callout": "Lohistage plokki „liigu edasi” ja klõpsake see teise ploki alla"
+          "craft_drag_block_callout": "Lohistage plokki „liigu edasi” ja klõpsake see teise ploki alla",
+          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_drag_block_callout": "Lohistage plokki „liigu edasi” ja klõpsake see teise ploki alla",
+          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“",
-          "craft_drag_block_callout": "Lohistage plokki „liigu edasi” ja klõpsake see teise ploki alla"
+          "craft_drag_block_callout": "Lohistage plokki „liigu edasi” ja klõpsake see teise ploki alla",
+          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“",
-          "craft_drag_block_callout": "Lohistage plokki „liigu edasi” ja klõpsake see teise ploki alla"
+          "craft_drag_block_callout": "Lohistage plokki „liigu edasi” ja klõpsake see teise ploki alla",
+          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_drag_block_callout": "Lohistage plokki „liigu edasi” ja klõpsake see teise ploki alla",
+          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“"
         },
         "Overworld Place Wall": {
+          "craft_inside_repeat": "Tegevuste kordamiseks panne siia plokid"
+        },
+        "Overworld Place Wall2022": {
           "craft_inside_repeat": "Tegevuste kordamiseks panne siia plokid"
         },
         "Overworld Place Wall_2019": {
@@ -345,7 +607,13 @@
         "Overworld Place Wall_2020": {
           "craft_inside_repeat": "Tegevuste kordamiseks panne siia plokid"
         },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Tegevuste kordamiseks panne siia plokid"
+        },
         "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Selle koodiga otsitakse laavat. Kas oskad lisada käsu edasiliikumiseks?"
+        },
+        "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "Selle koodiga otsitakse laavat. Kas oskad lisada käsu edasiliikumiseks?"
         },
         "Underground Avoiding Lava_2019": {
@@ -354,7 +622,13 @@
         "Underground Avoiding Lava_2020": {
           "craft_callout_moveforward": "Selle koodiga otsitakse laavat. Kas oskad lisada käsu edasiliikumiseks?"
         },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Selle koodiga otsitakse laavat. Kas oskad lisada käsu edasiliikumiseks?"
+        },
         "Underground Iron": {
+          "craft_what_is_iron": "Kaevanda seda rauda!"
+        },
+        "Underground Iron2022": {
           "craft_what_is_iron": "Kaevanda seda rauda!"
         },
         "Underground Iron_2019": {
@@ -363,7 +637,13 @@
         "Underground Iron_2020": {
           "craft_what_is_iron": "Kaevanda seda rauda!"
         },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Kaevanda seda rauda!"
+        },
         "courseD_bee_conditionals2": {
+          "4_5_Bee_Conditionals_2_1": "Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima."
+        },
+        "courseD_bee_conditionals22022": {
           "4_5_Bee_Conditionals_2_1": "Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima."
         },
         "courseD_bee_conditionals2_2018": {
@@ -375,7 +655,13 @@
         "courseD_bee_conditionals2_2020": {
           "4_5_Bee_Conditionals_2_1": "Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima."
         },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima."
+        },
         "courseD_bee_conditionals2_copy": {
+          "4_5_Bee_Conditionals_2_1": "Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima."
+        },
+        "courseD_bee_conditionals2_dani": {
           "4_5_Bee_Conditionals_2_1": "Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima."
         },
         "frozen circle function with parameter": {
@@ -418,59 +704,6 @@
         "frozen square snowflake": {
           "replace_questions": "Kasuta rippmenüüd, et asendada „???“ numbriga"
         },
-        "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "Lisa see plokk oma programmi!"
-        },
-        "CourseD_Dance_2020_06_2021": {
-          "dance_party_11_5_groups": "Uus plokk!"
-        },
-        "CourseD_Dance_2020_07_2021": {
-          "setprop_hint": "Uus plokk!"
-        },
-        "CourseD_Dance_2020_09_2021": {
-          "new_block_3": "Uus plokk!",
-          "new_block_4": "Uus plokk!"
-        },
-        "Function intro Ryan_2021": {
-          "Function_intro_Ryan_1": "See väike juhend ütleb arvutile, et käivita SUUR kogus koodi sama nimega, mis töölaual."
-        },
-        "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "See on \"korrata\" tsükkel!  Klõpsake seda töölauale ja lisage kood, mida soovite korduvalt kasutada."
-        },
-        "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "Agent saab hõljuda üle vee aga mängija ei saa!"
-        },
-        "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_1": "Sa ei saa neid plokke ära visata aga sa saad neid muuta!"
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "MC_HOC_2017_08_RY_1": "Agent saab hõljuda üle laava aga Steve ja Alex ei saa!  "
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "Panime sulle alustuseks siia mõned plokid"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Selle koodiga alustatakse majaehitust. Kas oskad selle lõpetada?"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“",
-          "craft_drag_block_callout": "Lohistage plokki „liigu edasi” ja klõpsake see teise ploki alla"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "Tegevuste kordamiseks panne siia plokid"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "Selle koodiga otsitakse laavat. Kas oskad lisada käsu edasiliikumiseks?"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "Kaevanda seda rauda!"
-        },
-        "courseD_bee_conditionals2_2021": {
-          "4_5_Bee_Conditionals_2_1": "Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima."
-        },
-        "courseD_bee_conditionals2_dani": {
-          "4_5_Bee_Conditionals_2_1": "Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima."
-        },
         "helloworld_animals_costumes": {
           "hello_world_new": "Uus plokk!"
         },
@@ -493,11 +726,31 @@
         "helloworld_food_costumes": {
           "hello_world_new": "Uus plokk!"
         },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Uus plokk!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Uus plokk!"
+        },
         "helloworld_food_sizes": {
           "hello_world_new": "Uus plokk!",
           "hello_world_new_block": "Uus plokk!"
         },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Uus plokk!",
+          "hello_world_new_block": "Uus plokk!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Uus plokk!",
+          "hello_world_new_block": "Uus plokk!"
+        },
         "helloworld_food_sounds": {
+          "hello_world_new": "Uus plokk!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Uus plokk!"
+        },
+        "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Uus plokk!"
         },
         "helloworld_retro_costumes": {
@@ -523,269 +776,16 @@
           "poetry_new_block": "Uus plokk!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Uus plokk!",
-          "poetry_music": "Uus plokk!"
+          "poetry_music": "Uus plokk!",
+          "poetry_sound": "Uus plokk!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Uus plokk!",
           "poetry_sprite_stops": "Uus plokk!"
         },
         "poetry_hoc_spriteSizes": {
-          "poetry_set_sprite": "Uus plokk!",
-          "poetry_remove_sprite": "Uus plokk!"
-        },
-        "CSD U3 Variables Predict Where XY_2021": {
-          "grid": "Klikka siin võrgustiku näitamiseks."
-        },
-        "CSD U3 Variables Predict Where X_2021": {
-          "CSD_U3_variables": "Muuda numbrit siin"
-        },
-        "CSD U3 debug_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 drawing challenge 2_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 drawing challenge 3_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 drawing practice 1_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 drawing practice 2_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 drawing practice 3_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 ellipse_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 fill_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 properties depth_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 properties tint_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 rect_2021": {
-          "CSD_U3_rect_c1": "Siin on kood"
-        },
-        "CSD U3 sequence_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 shapes arc_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 shapes behind_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 shapes line_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 shapes missing_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 shapes polygon_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 shapes scene_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 shapes_2021": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U6 tugowar variables 1_2021": {
-          "CSD_U6_startGame": "Määratle startGame siin"
-        },
-        "CSD U6 tugowar variables 2_2021": {
-          "CSD_U6_movePlayer": "Määratle movePlayer() siin"
-        },
-        "CSD U6 tugowar variables 3_2021": {
-          "CSD_U6_checkWin": "Kontrollige, kas mängija on võitnud"
-        },
-        "CSD web text explore_2021": {
-          "CSD_U3_variables": "Muuda numbrit siin"
-        },
-        "CSD U3 Variables Predict Where XY_2022": {
-          "grid": "Klikka siin võrgustiku näitamiseks."
-        },
-        "CSD U3 Variables Predict Where X_2022": {
-          "CSD_U3_variables": "Muuda numbrit siin"
-        },
-        "CSD U3 debug_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 drawing challenge 2_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 drawing challenge 3_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 drawing practice 1_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 drawing practice 2_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 drawing practice 3_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 ellipse_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 fill_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 properties depth_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 properties tint_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 rect_2022": {
-          "CSD_U3_rect_c1": "Siin on kood"
-        },
-        "CSD U3 sequence_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 shapes arc_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 shapes behind_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 shapes line_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 shapes missing_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 shapes polygon_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 shapes scene_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD U3 shapes_2022": {
-          "CSD_U3_rect_c1": "Siin on kood",
-          "CSD_U3_rect_c2": "Lohistage see plokk koodi piirkonda."
-        },
-        "CSD web text explore_2022": {
-          "CSD_U3_variables": "Muuda numbrit siin"
-        },
-        "CourseD_Dance_2020_042022": {
-          "dance_callout_02": "Lisa see plokk oma programmi!"
-        },
-        "CourseD_Dance_2020_062022": {
-          "dance_party_11_5_groups": "Uus plokk!"
-        },
-        "CourseD_Dance_2020_072022": {
-          "setprop_hint": "Uus plokk!"
-        },
-        "CourseD_Dance_2020_092022": {
-          "new_block_3": "Uus plokk!",
-          "new_block_4": "Uus plokk!"
-        },
-        "Function intro Ryan2022": {
-          "Function_intro_Ryan_1": "See väike juhend ütleb arvutile, et käivita SUUR kogus koodi sama nimega, mis töölaual."
-        },
-        "MC_HOC_2017_03_Cole2022": {
-          "MC_HOC_2017_03_Cole_1": "See on \"korrata\" tsükkel!  Klõpsake seda töölauale ja lisage kood, mida soovite korduvalt kasutada."
-        },
-        "MC_HOC_2017_04_Cole2022": {
-          "MC_HOC_2017_04_Cole_a": "Agent saab hõljuda üle vee aga mängija ei saa!"
-        },
-        "MC_HOC_2017_06_Cole2022": {
-          "MC_HOC_2017_06_Cole_1": "Sa ei saa neid plokke ära visata aga sa saad neid muuta!"
-        },
-        "MC_HOC_2017_Ali2022": {
-          "MC_HOC_2017_08_RY_1": "Agent saab hõljuda üle laava aga Steve ja Alex ei saa!  "
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "Panime sulle alustuseks siia mõned plokid"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "Selle koodiga alustatakse majaehitust. Kas oskad selle lõpetada?"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“",
-          "craft_drag_block_callout": "Lohistage plokki „liigu edasi” ja klõpsake see teise ploki alla"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "Tegevuste kordamiseks panne siia plokid"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "Selle koodiga otsitakse laavat. Kas oskad lisada käsu edasiliikumiseks?"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "Kaevanda seda rauda!"
-        },
-        "courseD_bee_conditionals22022": {
-          "4_5_Bee_Conditionals_2_1": "Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima."
-        },
-        "helloworld_food_costumes_soccer-2022": {
-          "hello_world_new": "Uus plokk!"
-        },
-        "helloworld_food_costumes_space-2022": {
-          "hello_world_new": "Uus plokk!"
-        },
-        "helloworld_food_sizes_soccer-2022": {
-          "hello_world_new": "Uus plokk!",
-          "hello_world_new_block": "Uus plokk!"
-        },
-        "helloworld_food_sizes_space-2022": {
-          "hello_world_new": "Uus plokk!",
-          "hello_world_new_block": "Uus plokk!"
-        },
-        "helloworld_food_sounds_soccer-2022": {
-          "hello_world_new": "Uus plokk!"
-        },
-        "helloworld_food_sounds_space-2022": {
-          "hello_world_new": "Uus plokk!"
-        },
-        "CourseD_Dance_Party_11_5": {
-          "dance_party_11_5_groups": "Leia siit „kõik pardid” plokid"
-        },
-        "Dance_Party_11_5": {
-          "dance_party_11_5_groups": "Leia siit „kõik pardid” plokid"
+          "poetry_remove_sprite": "Uus plokk!",
+          "poetry_set_sprite": "Uus plokk!"
         }
       }
     }
