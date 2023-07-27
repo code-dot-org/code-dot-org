@@ -22,14 +22,26 @@ spec:
         # but we have to figure out where/how/when to do aws-google auth
         # to set it whenever it expires
         - name: aws-google
-          mountPath: /home/code.org/.aws/credentials
-          subPath: aws/credentials
+          mountPath: /home/code.org/.aws
+          subPath: aws
         - name: aws-google
-          mountPath: /home/code.org/.config/gcloud/application_default_credentials.json
-          subPath: gcloud/application_default_credentials.json
+          mountPath: /home/code.org/.config/gcloud
+          subPath: gcloud
         - name: dashboard
           mountPath: /code-dot-org/locals.yml
           subPath: locals.yml
+        # FIXME REMOVE: THIS IS FOR DEBUGGING PURPOSES
+        - name: aws-google
+          mountPath: /mnt/aws-google
+      initContainers:
+      # FIXME: we use this hack to avoid committing
+      # aws/config into git until we're DOUBLE PLUS /VERY/ SURE that the 
+      # Google Oauth2 "secret" inside aws/config, which our 
+      # AWS Account Access Doc (https://docs.google.com/document/d/1dDfEOhyyNYI2zIv4LI--ErJj6OVEJopFLqPxcI0RXOA/edit)
+      # say is "not secret", is really really truly is not secret.
+      - name: aws-config
+        image: busybox:1.28
+        command: ['sh', '-c', "cp /code-dot-org/aws.config /home/code.org/aws/config"]
       volumes:
         - name: aws-google
           persistentVolumeClaim:
