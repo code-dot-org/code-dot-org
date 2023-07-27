@@ -30,12 +30,12 @@ module I18n
       I18n::Resources::Dashboard::Standards.sync_in
       I18n::Resources::Dashboard::Docs.sync_in
       I18n::Resources::Apps::ExternalSources.sync_in
+      I18n::Resources::Dashboard::Courses.sync_in
+      I18n::Resources::Apps::Labs.sync_in
       puts "Copying source files"
       I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
-      localize_course_resources
       redact_level_content
-      redact_script_and_course_content
-      redact_labs_content
+      redact_script
       localize_markdown_content
       puts "Sync in completed successfully"
     rescue => exception
@@ -377,49 +377,6 @@ module I18n
       end
     end
 
-    # Merging dashboard/config/courses/*.course with courses.yml
-    # These files contain resources used by UnitGroup (used in the landing pages of full courses).
-    # https://studio.code.org/courses/csd-2021
-    # All other resources used in Unit come from scrip_json files (used in the landing pages for each Unit).
-    # https://studio.code.org/s/csd1-2021
-    def self.localize_course_resources
-      puts "Preparing course resources"
-
-      # Currently, csd is the only fully translatable course that has resources in this directory
-      translatable_courses = %w(csd)
-      resources = {}
-      Dir.glob(File.join('dashboard', 'config', 'courses', '*.course')).each do |file|
-        course_json = JSON.parse(File.read(file))
-        course_properties = course_json['properties']
-        next unless translatable_courses.include?(course_properties['family_name'])
-
-        course_resources = course_json['resources']
-        next if course_resources.empty?
-        course_resources.each do |resource|
-          # resoruce.rb uses Services::GloballyUniqueIdentifiers.build_resource_key to create resource keys as follow
-          # resource.key / resource.course_version.course_offering.key / resource.course_version.key
-          # resource_key is used to localize the resources.
-          resource_key = [resource['key'], course_properties['family_name'], course_properties['version_year']].join('/')
-          resources.store(resource_key, {'name' => resource['name'], 'url' => resource['url']})
-        end
-      end
-      courses_source = File.join(I18N_SOURCE_DIR, 'dashboard', 'courses.yml')
-      courses_yaml = YAML.load_file(courses_source)
-      courses_data = courses_yaml['en']['data']
-      # Merging resources if courses already contain resources
-      courses_data['resources'] ? courses_data['resources'].merge!(resources) : courses_data.store('resources', resources)
-      File.write(courses_source, I18nScriptUtils.to_crowdin_yaml(courses_yaml))
-    end
-
-    def self.localize_animation_library
-      spritelab_animation_source_file = "#{I18N_SOURCE_DIR}/animations/spritelab_animation_library.json"
-      FileUtils.mkdir_p(File.dirname(spritelab_animation_source_file))
-      File.open(spritelab_animation_source_file, "w") do |file|
-        animation_strings = ManifestBuilder.new({spritelab: true, quiet: true}).get_animation_strings
-        file.write(JSON.pretty_generate(animation_strings))
-      end
-    end
-
     def self.select_redactable(i18n_strings)
       redactable_content = %w(
         authored_hints
@@ -471,28 +428,11 @@ module I18n
       end
     end
 
-    # These files are synced in using the `bin/i18n-codeorg/in.sh` script.
-    def self.redact_labs_content
-      puts "Redacting *labs content"
-
-      # Only CSD labs are redacted, since other labs were already part of the i18n pipeline and redaction would edit
-      # strings existing in crowdin already
-      redactable_labs = %w(applab gamelab weblab)
-
-      redactable_labs.each do |lab_name|
-        source_path = File.join(I18N_SOURCE_DIR, "blockly-mooc", lab_name + ".json")
-        backup_path = source_path.sub("source", "original")
-        FileUtils.mkdir_p(File.dirname(backup_path))
-        FileUtils.cp(source_path, backup_path)
-        RedactRestoreUtils.redact(source_path, source_path, ['link'])
-      end
-    end
-
-    def self.redact_script_and_course_content
+    def self.redact_script
       plugins = %w(resourceLink vocabularyDefinition)
       fields = %w(description student_description description_student description_teacher)
 
-      %w(script course).each do |type|
+      %w(script).each do |type|
         puts "Redacting #{type} content"
         source = File.join(I18N_SOURCE_DIR, "dashboard/#{type}s.yml")
 

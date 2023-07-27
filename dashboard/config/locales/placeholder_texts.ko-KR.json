@@ -25,19 +25,9 @@
         "Course 4 Play Lab Params 10": {
           "46e888cc716ac8ec6fad01e85eb7c37c": "레벨: "
         },
-        "Course 4 Play Lab Vars 1": {
-        },
-        "Course 4 Play Lab Vars 2": {
-        },
-        "Course 4 Play Lab Vars 6": {
-        },
-        "Course 4 Play Lab Vars 7": {
-        },
         "Course 4 Playlab For Loop Freeplay": {
           "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
           "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
-        },
-        "Course 4 Playlab For Loops 6b": {
         },
         "Course E: Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
@@ -659,8 +649,6 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문",
           "e522ee28f39133b45497637539ff429b": "숫자 입력:",
           "f6175c6f0b0bcfff0256286315f0eb7b": "파티 게임"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "937dc37c06cc5d89a7096eb048b73590": "곧 나올거예요!",

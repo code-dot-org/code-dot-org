@@ -137,3 +137,11 @@ dv:
           lesson_groups:
             csf_events:
               display_name: އިވެންޓުތައް
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: އިވެންޓުތައް
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: އިވެންޓުތައް

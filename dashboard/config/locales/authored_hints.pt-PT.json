@@ -885,10 +885,6 @@
         "Dance_Party_extras_alternate_2019": {
           "alternate": "O bloco alternativo está na categoria \"Dançarinos\"."
         },
-        "Farmer for Authored Hint testing": {
-        },
-        "Farmer for TTS testing": {
-        },
         "Function intro Ryan": {
           "Function_intro_Ryan_a": "Você pode executar uma função muitas vezes dentro de seu programa! Tente executá-la duas vezes para resolver este enigma.",
           "Function_intro_Ryan_b": "Se você chamar as funções corretamente, este é o caminho que você vai viajar..."
@@ -5519,8 +5515,6 @@
         },
         "courseC_artist_loops7a": {
           "courseC_artist_loops7a_a": "Um círculo possui 360 graus. Multiplique os graus em sua volta pelo número de vezes que você a repete. Isso é igual a 360?\nVerifique as rotações sugeridas para ver que isto funciona!"
-        },
-        "courseC_artist_loops7a2022": {
         },
         "courseC_artist_loops7a_2018": {
           "courseC_artist_loops7a_a": "Um círculo possui 360 graus. Multiplique os graus em sua volta pelo número de vezes que você a repete. Isso é igual a 360?\nVerifique as rotações sugeridas para ver que isto funciona!"
@@ -11715,8 +11709,6 @@
         "courseF_artist_variablesFP": {
           "courseF_artist_variablesFP_a": "Experimente um destes três desenhos.\n![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 dicas.png>)"
         },
-        "courseF_artist_variablesFP2022": {
-        },
         "courseF_artist_variablesFP_2018": {
           "courseF_artist_variablesFP_a": "Experimente um destes três desenhos.\n![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 dicas.png>)"
         },
@@ -11725,8 +11717,6 @@
         },
         "courseF_artist_variablesFP_2020": {
           "courseF_artist_variablesFP_a": "Experimente um destes três desenhos.\n![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 dicas.png>)"
-        },
-        "courseF_artist_variablesFP_2021": {
         },
         "courseF_artist_variables_challenge1": {
           "courseF_artist_variables_challenge1_a": "Cada linha vertical tem um comprimento de `10`. Cada linha horizontal deve ter um comprimento de `comprimento`.",
@@ -12227,14 +12217,6 @@
         "courseF_bee_variables_3_2020": {
           "courseF_bee_variables_3_2019_1": "Para subtrair um da variável, você pode usar esse código no seu programa:\n<xml><block type=\"variables_set\" inline=\"false\">\n\n<title name=\"VAR\">coletar</title>\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">MENOS</title>\n<value name=\"A\">\n<block type=\"variables_get\">\n<title name=\"VAR\">coletar</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n</block>\n</value>\n</block></xml>"
         },
-        "courseF_bee_variables_3a2022": {
-        },
-        "courseF_bee_variables_3a_2021": {
-        },
-        "courseF_bee_variables_3aa2022": {
-        },
-        "courseF_bee_variables_3aa_2021": {
-        },
         "courseF_bee_variables_4_2019": {
           "courseF_bee_variables_4_2019_1": "Ao invés de subtrair 1 de `obter`, adicione 1 a cada vez. Qual deve ser o valor que a variável terá primeiro?"
         },
@@ -12246,32 +12228,6 @@
         },
         "courseF_bee_variables_4a_2021": {
           "courseF_bee_variables_4_2021_1": "Em vez de adicionar 1 à variável, adicione 2 a cada vez."
-        },
-        "courseF_clicker_finish_-2022-2": {
-        },
-        "courseF_clicker_score_-2022-2": {
-        },
-        "courseF_collector_freeplay_-2022-2": {
-        },
-        "courseF_collector_score_-2022-2": {
-        },
-        "courseF_events_choice_pufferfish": {
-        },
-        "courseF_events_choice_pufferfish_-2022-2": {
-        },
-        "courseF_events_key": {
-        },
-        "courseF_events_key_-2022-2": {
-        },
-        "courseF_groups_behaviors_-2022-2": {
-        },
-        "courseF_groups_costume_-2022-2": {
-        },
-        "courseF_groups_say_-2022-2": {
-        },
-        "courseF_groups_size_-2022-2": {
-        },
-        "courseF_groups_touch_-2022-2": {
         },
         "courseF_playlab_variables1a": {
           "courseF_playlab_variables1a_a": "Você vai querer substituir as palavras “O que devo gritar?” no bloco verde com \"Objetivo!”"
@@ -12317,19 +12273,11 @@
         "courseF_sprites_clouds_-2022-2": {
           "behavior_list": "Tente usar comportamentos como “mover-se para o leste e dar voltas”, “girar para a direita” e “vagar”."
         },
-        "courseF_text_choice_multiprompt": {
-        },
-        "courseF_text_choice_multiprompt_-2022-2": {
-        },
         "courseF_text_concat": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseF_text_concat_-2022-2": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "courseF_variables2_click_-2022-2": {
-        },
-        "courseF_variables2_set_-2022-2": {
         },
         "courseF_variables_card_finish": {
           "card_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt conectando um novo bloco de prompt com uma variável diferente ao seu primeiro evento `quando respondido`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">o que você quer para o seu aniversário?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">presente</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
@@ -12342,10 +12290,6 @@
         },
         "courseF_variables_chatbot_finish_-2022-2": {
           "chatbot_idea4": "Você pode sinalizar o final do seu programa com um bloco de tela de título.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n      <value name=\"TITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">O fim</title>\n        </block>\n      </value>\n      <value name=\"SUBTITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">Obrigado por conversar!</title>\n        </block>\n      </value>\n      </block></xml>"
-        },
-        "courseF_variables_madlib_finish": {
-        },
-        "courseF_variables_madlib_finish_-2022-2": {
         },
         "coursea_maze_ramp12022": {
           "courseC_maze_programming1_a": "Se o pássaro não estiver chegando ao porco, certifique-se de que ambos os blocos foram completamente conectados, e então clique em \"Executar\" de novo.",
@@ -12514,10 +12458,6 @@
         },
         "helloworld_food_say": {
           "hello-world-first-solution-pizza": "Para fazer a pizza falar, conecte os blocos de codigo desse jeito:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
-        },
-        "helloworld_food_say_soccer-2022": {
-        },
-        "helloworld_food_say_space-2022": {
         },
         "helloworld_food_sizes": {
           "storyboard_changePropBy": "Se quiser mudar o tamanho de uma fada repetidamente (com eventos), use este bloco: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",

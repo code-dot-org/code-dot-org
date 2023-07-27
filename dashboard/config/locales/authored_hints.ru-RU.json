@@ -851,10 +851,6 @@
         "Dance_Party_extras_alternate_2019": {
           "alternate": "Альтернативный блок находится в категории \"танцоры\"."
         },
-        "Farmer for Authored Hint testing": {
-        },
-        "Farmer for TTS testing": {
-        },
         "Function intro Ryan": {
           "Function_intro_Ryan_a": "Вы можете вызвать функцию в своей программе много раз!  Попробуйте дважды вызвать функцию, чтобы решить эту задачу.",
           "Function_intro_Ryan_b": "Если ты вызовешь функции правильно, вот путь, по которому ты пройдешь..."
@@ -1135,14 +1131,6 @@
         "NEW Course 4 Artist Functions 13": {
           "NEW_Course_4_Artist_Functions_13_c": "Какой код вам понадобится, чтобы сделать звезду, используя обычные линии вместо прямоугольников?"
         },
-        "NEW Course 4 Artist Functions 4": {
-        },
-        "NEW Course 4 Artist Functions 9": {
-        },
-        "NEW Course 4 Artist Params 11": {
-        },
-        "NEW Course 4 Artist Params 13": {
-        },
         "NEW Course 4 Artist Params 14": {
           "NEW_Course_4_Artist_Params_14_a": "Запусти программу несколько раз, чтобы сообразить, как функция работает с разными параметрами."
         },
@@ -1158,8 +1146,6 @@
         },
         "NEW Course 4 Bee For Loops 7": {
           "NEW_Course_4_Bee_For_Loops_7_a": "Попробуй проделать кое-какие расчеты с переменной «счетчик».\n\nЧто нужно сделать со счетчиком у каждого цветка, чтобы уравнять количество нектара, которое необходимо собрать?"
-        },
-        "NEW Course 4 Bee For Loops 8": {
         },
         "New Minecraft Hero Project": {
           "MC_HOC_2017_13_Cole_a": "Попробуй заставить Агента построить несколько мостов, чтобы Алекс или Стив могли ходить по краям карты."
@@ -1650,8 +1636,6 @@
           "courseA_playlab_events_challenge2_b": "Можно заставить робота гудеть.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_c": "Можно заставить сердитого монстра рычать.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
-        "course2_artist_nestedLoops_challenge1": {
-        },
         "course2_artist_nestedLoops_challenge2": {
           "courseD_artist_nestedLoops_challenge2_a": "Чтобы нарисовать правильный восьмиугольник, художник должен повернуть на 45 градусов 8 раз.",
           "courseD_artist_nestedLoops_challenge2_b": "Чтобы нарисовать квадрат, художник должен повернуть на 90 градусов 4 раз."
@@ -1699,8 +1683,6 @@
           "courseC_maze_programming_challenge2_a": "_Если отправишь меня назад, будь очень внимателен, выбирая направление поворота!_",
           "courseC_maze_programming_challenge2_b": "Кратчайший путь использует всего 5 блоков, но там используется блок \"повторить\"!"
         },
-        "course3_artist_functions_challenge1": {
-        },
         "course3_artist_functions_challenge2": {
           "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nЭтот блок \"прыгнуть в\" позволяет переместить зомби-художника в любое время в любую точку сетки. Он переместит его на определенное количество точек вправо и вниз. Точки всегда отсчитываются с верхнего левого угла, что означает, что неважно, где художник-зомби находится _до_ выполнения этой команды!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
@@ -1732,19 +1714,13 @@
         "course3_farmer_condLoops_challenge1": {
           "courseD_farmer_condLoops_challenge1_b": "В обычной ситуации ты просто «соберешь тыкву», когда окажешься около тыквы. Что еще тебе потребуется сделать, когда ты окажешься около тыквы?"
         },
-        "course3_farmer_condLoops_challenge2": {
-        },
         "course3_maze_debugging_challenge1": {
           "courseC_maze_debugging_challenge1_a": "Налево или направо? Решать тебе!",
           "courseC_maze_debugging_challenge1_b": "Скрат движется по прямоугольной траектории! Он должен поворачивать всякий раз одинаково!"
         },
-        "course3_maze_debugging_challenge2": {
-        },
         "course3_playLab_challenge1": {
           "courseE_playLab_challenge1_a": "Вот, например, что можно сделать, когда игрок выиграет игру:\n\n-   заставить динозаврика исчезнуть;\n-   остановить белок;\n-   заставить белок и рыцаря радоваться;\n-   изменить фон;\n-   заставить рыцаря поблагодарить игрока за помощь;\n-   заставить всех персонажей исчезнуть и показать сообщение \"Ты выиграл!\".",
           "courseE_playLab_challenge1_b": "Вот, например, что можно сделать, когда игрок проиграет игру:\n\n-   заставить рыцаря исчезнуть;\n-   заставить белок огорчиться;\n-   заставить динозаврика сказать что-нибудь;\n-   задать новый фон;\n-   заставить всех персонажей исчезнуть и показать сообщение \"Игра окончена\"."
-        },
-        "course4_artist_binary_challenge2": {
         },
         "course4_artist_concept_challenge2": {
           "courseE_artist_concept_challenge2_a": "Определив функцию, ты сможешь вызывать ее снова и снова – где и когда угодно!",
@@ -1775,8 +1751,6 @@
           "courseD_bee_nested_loops_challenge2_b": "Чтобы получить все 4 жемчужины, используй сначала цикл, чтобы уйти из центра. Поверни налево или направо, а затем используй вложенный цикл для перехода от первой груды сокровищ ко второй. Если повторить вложенный цикл достаточное количество раз, собиратель обойдет _всю_ пещеру!",
           "courseD_bee_nested_loops_challenge2_c": "В самой короткой программе, собирающей все сокровища, используются всего один блок «собрать» и два поворота.",
           "courseD_bee_nested_loops_challenge2_d": "**Решение:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "course4_harvester_nested_loops_challenge1": {
         },
         "course4_playlab_variables_challenge1": {
           "courseF_playlab_variables_challenge1_a": "Чтобы заставить актеров говорить, тебе потребуются дополнительные блоки из набора инструментов.\n\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n                      <value name=\"TEXT\">\n                  <block type=\"text\">\n                    <title name=\"TEXT\">Knock knock.</title>\n                  </block>\n                </value>\n      <value name=\"TIME\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n      </block></xml>"
@@ -12242,14 +12216,6 @@
         "courseF_bee_variables_4a_2021": {
           "courseF_bee_variables_4_2021_1": "Вместо добавления 1 к переменной добавляй каждый раз 2."
         },
-        "courseF_clicker_finish_-2022-2": {
-        },
-        "courseF_clicker_score_-2022-2": {
-        },
-        "courseF_collector_freeplay_-2022-2": {
-        },
-        "courseF_collector_score_-2022-2": {
-        },
         "courseF_events_choice_pufferfish": {
           "changeProp": "Тебе также понадобится этот блок:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
@@ -12261,16 +12227,6 @@
         },
         "courseF_events_key_-2022-2": {
           "changePropBlock": "Тебе также понадобится этот блок:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
-        },
-        "courseF_groups_behaviors_-2022-2": {
-        },
-        "courseF_groups_costume_-2022-2": {
-        },
-        "courseF_groups_say_-2022-2": {
-        },
-        "courseF_groups_size_-2022-2": {
-        },
-        "courseF_groups_touch_-2022-2": {
         },
         "courseF_playlab_variables1a": {
           "courseF_playlab_variables1a_a": "Тебе потребуется заменить слова «Что я должен кричать?» в зеленом блоке на «Гол!»."
@@ -12327,10 +12283,6 @@
         },
         "courseF_text_concat_-2022-2": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "courseF_variables2_click_-2022-2": {
-        },
-        "courseF_variables2_set_-2022-2": {
         },
         "courseF_variables_card_finish": {
           "card_idea1": "Ты можешь добавить второй (или третий, или четвертый) запрос на ввод, подключив новый блок запросов на ввод с другой переменной к своему первому событию `после предоставления ответа`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">что ты хочешь на день рождения?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">gift</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",

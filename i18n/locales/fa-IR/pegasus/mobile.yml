@@ -466,7 +466,7 @@
   dashboard_sections_table_secret: "نوع ورود"
   dashboard_sections_table_grade: "درجه"
   dashboard_sections_table_course: "دوره"
-  dashboard_sections_table_pairing_allowed: "برنامه نویسی دوتایی"
+  dashboard_sections_table_pairing_allowed: "برنامه نویسی اشتراکی"
   dashboard_sections_table_students: "دانش آموزان"
   dashboard_sections_table_code: "بخش کد"
   dashboard_sections_name: 'نام بخش'

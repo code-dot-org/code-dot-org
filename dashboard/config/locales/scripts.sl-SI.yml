@@ -1319,6 +1319,52 @@ sl:
           student_description: Sprogramiraj živali in druga Minecraft bitja v svoji
             lastni različici Minecrafta.
           title: Minecraft Ura za kodo Oblikovalec
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: liki
+            lessonGroup-3:
+              display_name: Pogoji
+            lessonGroup-5:
+              display_name: Spremenljivke
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: liki
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno državljanstvo
+            lessonGroup-4:
+              display_name: Zanke
+            lessonGroup-6:
+              display_name: Dogodki
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Gnezdenje zank
+            lessonGroup-4:
+              display_name: Funkcije
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno državljanstvo
+            lessonGroup-4:
+              display_name: Zanke
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno državljanstvo
+            lessonGroup-4:
+              display_name: Zanke
+            lessonGroup-5:
+              display_name: Dogodki
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno državljanstvo
+            lessonGroup-6:
+              display_name: Zanke
         new-express:
           lesson_groups:
             content:
@@ -1371,6 +1417,12 @@ sl:
               display_name: Vsebina
             required:
               display_name: Pregled
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno državljanstvo
+            lessonGroup-4:
+              display_name: Zanke
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:
