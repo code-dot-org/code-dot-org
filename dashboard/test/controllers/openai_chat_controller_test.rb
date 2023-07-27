@@ -26,6 +26,7 @@ class OpenaiChatControllerTest < ActionController::TestCase
   user: :ai_chat_access,
   method: :post,
   params: {messages: [{role: "user", content: "Say this is a test!"}]},
+  throttle: false,
   response: :success
 
   # With ai_chat_access, a throttled post request returns a too many requests
