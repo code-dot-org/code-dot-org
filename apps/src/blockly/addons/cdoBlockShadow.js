@@ -17,51 +17,56 @@ export const blockShadowingPairs = {
   },
 };
 
-export function getShadowedBlockImageUrl(block, checkWorkspaceId) {
+export function getShadowedBlockImageUrl(block, checkWorkspaceId, parentId) {
   const blockShadowData = blockShadowingPairs[block.type];
   if (!blockShadowData || !block.inputList || block.inputList.length === 0) {
     return '';
   }
-  const rootBlock = block.getRootBlock();
   let parent = undefined;
-  if (rootBlock.type === blockShadowData.parent) {
-    parent = rootBlock;
-  } else if (block.getRootBlock().type === block.type) {
-    // If the root block type is this block, this block is not connected
-    // to a root. It could either be out by itself, or it could be inside a
-    // mini toolbox. If it's in a mini toolbox, we want to shadow the image in the
-    // root block of the mini toolbox. Therefore, we search here for any mini toolbox
-    // parents that have this block in their workspace.
-    const potentialParents = Blockly.getMainWorkspace()
-      .getTopBlocks()
-      .filter(block => block.type === blockShadowData.parent);
-    potentialParents.forEach(potentialParent => {
-      if (
-        !potentialParent.inputList ||
-        potentialParent.inputList.length === 0
-      ) {
-        return;
-      }
-      // The parent needs to have a flyout_input.
-      const inputs = potentialParent.inputList.filter(
-        input => input.name === 'flyout_input'
-      );
-      if (inputs.length > 0) {
-        const flyoutWorkspace = inputs[0].fieldRow[0]?.flyout_?.workspace_;
-        // If the block id is in the flyout workspace, and if we are checking workspace
-        // id and the block's workspace id matches the flout workspace id,
-        // then we have found the parent.
+  if (parentId !== undefined) {
+    parent = Blockly.getMainWorkspace().getBlockById(parentId);
+  }
+  if (!parent) {
+    const rootBlock = block.getRootBlock();
+    if (rootBlock.type === blockShadowData.parent) {
+      parent = rootBlock;
+    } else if (block.getRootBlock().type === block.type) {
+      // If the root block type is this block, this block is not connected
+      // to a root. It could either be out by itself, or it could be inside a
+      // mini toolbox. If it's in a mini toolbox, we want to shadow the image in the
+      // root block of the mini toolbox. Therefore, we search here for any mini toolbox
+      // parents that have this block in their workspace.
+      const potentialParents = Blockly.getMainWorkspace()
+        .getTopBlocks()
+        .filter(block => block.type === blockShadowData.parent);
+      potentialParents.forEach(potentialParent => {
         if (
-          flyoutWorkspace &&
-          flyoutWorkspace
-            .getAllBlocks()
-            .filter(childBlock => block.id === childBlock.id).length > 0 &&
-          (!checkWorkspaceId || flyoutWorkspace.id === block.workspace.id)
+          !potentialParent.inputList ||
+          potentialParent.inputList.length === 0
         ) {
-          parent = potentialParent;
+          return;
         }
-      }
-    });
+        // The parent needs to have a flyout_input.
+        const inputs = potentialParent.inputList.filter(
+          input => input.name === 'flyout_input'
+        );
+        if (inputs.length > 0) {
+          const flyoutWorkspace = inputs[0].fieldRow[0]?.flyout_?.workspace_;
+          // If the block id is in the flyout workspace, and if we are checking workspace
+          // id and the block's workspace id matches the flout workspace id,
+          // then we have found the parent.
+          if (
+            flyoutWorkspace &&
+            flyoutWorkspace
+              .getAllBlocks()
+              .filter(childBlock => block.id === childBlock.id).length > 0 &&
+            (!checkWorkspaceId || flyoutWorkspace.id === block.workspace.id)
+          ) {
+            parent = potentialParent;
+          }
+        }
+      });
+    }
   }
   if (parent) {
     return getImageUrlFromParent(parent, blockShadowData.imageIndex);
@@ -72,8 +77,8 @@ export function getShadowedBlockImageUrl(block, checkWorkspaceId) {
   }
 }
 
-export function updateShadowedBlockImage(block) {
-  const url = getShadowedBlockImageUrl(block, true);
+export function updateShadowedBlockImage(block, checkWorkspaceId, parentId) {
+  const url = getShadowedBlockImageUrl(block, checkWorkspaceId, parentId);
   changeShadowedImage(url, block);
 }
 

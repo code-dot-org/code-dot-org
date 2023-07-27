@@ -1063,6 +1063,8 @@ exports.createJsWrapperBlockCreator = function (
           this.setPreviousStatement(true);
         }
 
+        Blockly.customBlocks.setUpBlockShadowing.bind(this)();
+
         // Boolean constant to store when we show mini-toolbox.
         // Use window.appOptions, not global appOptions, because the levelbuilder
         // block page doesn't have appOptions, but we *do* want to show the mini-toolbox
@@ -1078,8 +1080,6 @@ exports.createJsWrapperBlockCreator = function (
               miniToolboxBlocks
             );
         }
-
-        Blockly.customBlocks.setUpBlockShadowing.bind(this)();
 
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);
         this.setInputsInline(inline);
