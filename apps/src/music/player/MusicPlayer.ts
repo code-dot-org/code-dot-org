@@ -5,9 +5,9 @@ import {SoundEvent} from './interfaces/SoundEvent';
 import MusicLibrary, {SampleSequence, SoundFolder} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
-import {logWarning} from '../utils/MusicMetrics';
 import {getTranposedNote, Key} from '../utils/Notes';
 import {Effects} from './interfaces/Effects';
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
@@ -135,10 +135,14 @@ export default class MusicPlayer {
   /**
    * Start playback. Schedules all queued playback events for playback
    * and tells the {@link SamplePlayer} to start playing.
+   *
+   * @param startPosition to start playback from. Defaults to 1
+   * (beginning of song) if not specified.
    */
-  playSong(events: PlaybackEvent[]) {
+  playSong(events: PlaybackEvent[], startPosition = 1) {
     this.samplePlayer.startPlayback(
-      events.map(event => this.convertEventToSamples(event)).flat()
+      events.map(event => this.convertEventToSamples(event)).flat(),
+      this.convertPlayheadPositionToSeconds(startPosition)
     );
   }
 
@@ -194,7 +198,7 @@ export default class MusicPlayer {
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
     if (this.library === null) {
-      logWarning('Music Player not initialized');
+      Lab2MetricsReporter.logWarning('Music Player not initialized');
       return [];
     }
 
@@ -206,7 +210,7 @@ export default class MusicPlayer {
       const soundEvent = event as SoundEvent;
       const soundData = this.library.getSoundForId(soundEvent.id);
       if (!soundData) {
-        logWarning('No sound for ID: ' + soundEvent.id);
+        Lab2MetricsReporter.logWarning('No sound for ID: ' + soundEvent.id);
         return [];
       }
 
@@ -296,13 +300,15 @@ export default class MusicPlayer {
       this.library.getFolderForPath(instrument);
 
     if (folder === null) {
-      logWarning(`No instrument ${instrument}`);
+      Lab2MetricsReporter.logWarning(`No instrument ${instrument}`);
       return null;
     }
 
     const sound = folder.sounds.find(sound => sound.note === note) || null;
     if (sound === null) {
-      logWarning(`No sound for note value ${note} on instrument ${instrument}`);
+      Lab2MetricsReporter.logWarning(
+        `No sound for note value ${note} on instrument ${instrument}`
+      );
       return null;
     }
 

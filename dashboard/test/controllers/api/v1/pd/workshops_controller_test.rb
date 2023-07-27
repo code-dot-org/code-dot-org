@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
+class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
   include Pd::Application::RegionalPartnerTeacherconMapping
   freeze_time
 

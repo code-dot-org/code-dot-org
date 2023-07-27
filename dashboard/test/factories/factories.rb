@@ -156,6 +156,12 @@ FactoryBot.define do
           authorized_teacher.save
         end
       end
+      factory :ai_chat_access do
+        after(:create) do |ai_chat_access|
+          ai_chat_access.permission = UserPermission::AI_CHAT_ACCESS
+          ai_chat_access.save
+        end
+      end
       factory :facilitator do
         transient do
           course {nil}
@@ -1547,8 +1553,8 @@ FactoryBot.define do
     contact_name {"Contact Name"}
     contact_email {"contact@code.org"}
     group {1}
-    apps_open_date_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
-    apps_close_date_teacher {(Date.current + 3.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Time.zone.today - 2.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Time.zone.today + 3.days).strftime("%Y-%m-%d")}
     csd_cost {10}
     csp_cost {12}
     cost_scholarship_information {"Additional scholarship information will be here."}
@@ -1559,13 +1565,13 @@ FactoryBot.define do
           :summer_workshop,
           location_name: "Training building",
           location_address: "3 Smith Street",
-          sessions_from: (Date.current + 3.months)
+          sessions_from: (Time.zone.today + 3.months)
         )
       ]
     end
 
     trait :with_apps_priority_deadline_date do
-      apps_priority_deadline_date {(Date.current + 5.days).strftime("%Y-%m-%d")}
+      apps_priority_deadline_date {(Time.zone.today + 5.days).strftime("%Y-%m-%d")}
     end
   end
 
@@ -1757,5 +1763,23 @@ FactoryBot.define do
     trait :granted do
       user {create :young_student, :with_parent_permission}
     end
+  end
+
+  factory :rubric do
+    association :lesson
+    association :level
+  end
+
+  factory :learning_goal do
+    sequence(:key) {|n| "lg_#{n}"}
+    position {0}
+    learning_goal {"Test Learning Goal"}
+    ai_enabled {false}
+  end
+
+  factory :learning_goal_evidence_level do
+    association :learning_goal
+    understanding {0}
+    teacher_description {"Description for teacher"}
   end
 end

@@ -131,7 +131,7 @@ class Pd::Workshop < ApplicationRecord
   # Whether enrollment in this workshop requires an application
   def require_application?
     courses = [COURSE_CSP, COURSE_CSD, COURSE_CSA]
-    subjects = ACADEMIC_YEAR_SUBJECTS.concat([SUBJECT_SUMMER_WORKSHOP])
+    subjects = ACADEMIC_YEAR_SUBJECTS.push(SUBJECT_SUMMER_WORKSHOP)
     courses.include?(course) && subjects.include?(subject) &&
       regional_partner && regional_partner.link_to_partner_application.blank?
   end
@@ -560,7 +560,7 @@ class Pd::Workshop < ApplicationRecord
   # from other logic deciding whether a workshop should have exit surveys.
   def send_exit_surveys
     # FiT workshops should not send exit surveys
-    return if SUBJECT_FIT == subject || COURSE_FACILITATOR == course || COURSE_ADMIN_COUNSELOR == course
+    return if subject == SUBJECT_FIT || course == COURSE_FACILITATOR || course == COURSE_ADMIN_COUNSELOR
 
     resolve_enrolled_users
 

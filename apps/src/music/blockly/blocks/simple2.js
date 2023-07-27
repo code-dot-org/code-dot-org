@@ -1,7 +1,6 @@
 import {BlockTypes} from '../blockTypes';
 import {
   TRIGGER_FIELD,
-  DYNAMIC_TRIGGER_EXTENSION,
   FIELD_SOUNDS_NAME,
   FIELD_PATTERN_NAME,
   FIELD_REST_DURATION_NAME,
@@ -17,6 +16,7 @@ import {
   fieldPatternDefinition,
   fieldRestDurationDefinition,
   fieldChordDefinition,
+  fieldTriggerDefinition,
 } from '../fields';
 import {getCodeForSingleBlock} from '../blockUtils';
 import musicI18n from '../../locale';
@@ -98,10 +98,7 @@ export const triggeredAtSimple2 = {
     type: BlockTypes.TRIGGERED_AT_SIMPLE2,
     message0: musicI18n.blockly_blockTriggered({trigger: '%1', when: '%2'}),
     args0: [
-      {
-        type: 'input_dummy',
-        name: TRIGGER_FIELD,
-      },
+      fieldTriggerDefinition,
       {
         type: 'field_dropdown',
         name: FIELD_TRIGGER_START_NAME,
@@ -125,7 +122,6 @@ export const triggeredAtSimple2 = {
     nextStatement: null,
     style: 'event_blocks',
     tooltip: musicI18n.blockly_blockTriggeredTooltip(),
-    extensions: [DYNAMIC_TRIGGER_EXTENSION],
     helpUrl: DOCS_BASE_URL + 'trigger',
   },
   generator: block =>
@@ -151,7 +147,7 @@ export const playSoundAtCurrentLocationSimple2 = {
   generator: block =>
     `Sequencer.playSound("${block.getFieldValue(FIELD_SOUNDS_NAME)}", "${
       block.id
-    }");`,
+    }");\n`,
 };
 
 export const playPatternAtCurrentLocationSimple2 = {

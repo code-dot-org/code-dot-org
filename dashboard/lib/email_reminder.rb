@@ -125,8 +125,8 @@ class EmailReminder
   end
 
   def prefixed(message)
-    "*Parent Permission Email Reminders*" \
-    " <https://github.com/code-dot-org/code-dot-org/blob/production/dashboard/lib/email_reminder.rb|(source)>" \
+    "*Parent Permission Email Reminders* " \
+    "<https://github.com/code-dot-org/code-dot-org/blob/production/dashboard/lib/email_reminder.rb|(source)>" \
     "\n#{message}"
   end
 end
