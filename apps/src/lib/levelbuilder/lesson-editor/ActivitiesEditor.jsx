@@ -24,7 +24,6 @@ class ActivitiesEditor extends Component {
     //redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
     addActivity: PropTypes.func.isRequired,
-    // unitTitle: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -187,7 +186,6 @@ export const UnconnectedActivitiesEditor = ActivitiesEditor;
 export default connect(
   state => ({
     activities: state.activities,
-    // unitTitle: state.progress.unitTitle,
   }),
   {
     addActivity,
