@@ -11,6 +11,7 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import RelatedLessons from './RelatedLessons';
+import color from '@cdo/apps/util/color';
 import {
   relatedLessonShape,
   activityShape,
@@ -456,6 +457,14 @@ class LessonEditor extends Component {
             allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         </CollapsibleEditorSection>
+        <a
+          className="btn add-rubric"
+          style={styles.addRubric}
+          href="/rubrics/new"
+        >
+          <i style={styles.buttonText} className="fa fa-plus-circle" />
+          Add Rubric
+        </a>
 
         <SaveBar
           handleSave={this.handleSave}
@@ -497,6 +506,17 @@ const styles = {
     fontSize: 20,
     fontStyle: 'italic',
     padding: 10,
+  },
+  addRubric: {
+    fontSize: 14,
+    color: 'white',
+    background: color.cyan,
+    border: `1px solid ${color.cyan}`,
+    boxShadow: 'none',
+    margin: `5px 20px 0px`,
+  },
+  buttonText: {
+    marginRight: 7,
   },
 };
 
