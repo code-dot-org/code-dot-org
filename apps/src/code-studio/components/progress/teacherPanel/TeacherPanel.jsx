@@ -32,6 +32,7 @@ import {
   getStudentsForSection,
   queryLockStatus,
 } from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
+import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 
 class TeacherPanel extends React.Component {
   static propTypes = {
@@ -242,6 +243,7 @@ class TeacherPanel extends React.Component {
               )}
             </div>
           )}
+          <SortByNameDropdown />
           {viewAs === ViewType.Instructor && (students || []).length > 0 && (
             <StudentTable
               levelsWithProgress={levelsWithProgress}

@@ -1,6 +1,7 @@
-import {makeEnum} from '../utils';
+import {makeEnum, tryGetLocalStorage} from '../utils';
 import analyticsReport from '@cdo/apps/lib/util/AnalyticsReporter';
 
+const SORT_BY_FAMILY_NAME = 'sortByFamilyName';
 const SET_CURRENT_USER_NAME = 'currentUser/SET_CURRENT_USER_NAME';
 const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';
 const SET_USER_TYPE = 'currentUser/SET_USER_TYPE';
@@ -9,6 +10,7 @@ const SET_HAS_SEEN_STANDARDS_REPORT =
   'currentUser/SET_HAS_SEEN_STANDARDS_REPORT';
 const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
 const SET_MUTE_MUSIC = 'currentUser/SET_MUTE_MUSIC';
+const SET_SORT_BY_FAMILY_NAME = 'currentUser/SET_SORT_BY_FAMILY_NAME';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -45,6 +47,10 @@ export const setMuteMusic = isBackgroundMusicMuted => ({
   type: SET_MUTE_MUSIC,
   isBackgroundMusicMuted,
 });
+export const setSortByFamilyName = isSortedByFamilyName => ({
+  type: SET_SORT_BY_FAMILY_NAME,
+  isSortedByFamilyName,
+});
 
 const initialState = {
   userId: null,
@@ -54,6 +60,7 @@ const initialState = {
   signInState: SignInState.Unknown,
   hasSeenStandardsReportInfo: false,
   isBackgroundMusicMuted: false,
+  isSortedByFamilyName: tryGetLocalStorage(SORT_BY_FAMILY_NAME, false),
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true,
 };
@@ -98,6 +105,12 @@ export default function currentUser(state = initialState, action) {
       isBackgroundMusicMuted: action.isBackgroundMusicMuted,
     };
   }
+  if (action.type === SET_SORT_BY_FAMILY_NAME) {
+    return {
+      ...state,
+      isSortedByFamilyName: action.isSortedByFamilyName,
+    };
+  }
   if (action.type === SET_INITIAL_DATA) {
     const {id, username, user_type, mute_music, under_13} = action.serverUser;
     analyticsReport.setUserProperties(id, user_type, !!id);
@@ -107,6 +120,7 @@ export default function currentUser(state = initialState, action) {
       userName: username,
       userType: user_type,
       isBackgroundMusicMuted: mute_music,
+      isSortedByFamilyName: tryGetLocalStorage(SORT_BY_FAMILY_NAME, false),
       under13: under_13,
     };
   }

@@ -1,29 +1,38 @@
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import React from 'react';
 import Select from 'react-select';
 import i18n from '@cdo/locale';
+import * as utils from '@cdo/apps/utils';
+import {
+  setSortByFamilyName,
+  isSortedByFamilyName,
+} from '@cdo/apps/templates/currentUserRedux';
 
-export const NameSortColumns = [i18n.displayName, i18n.familyName];
+const SORT_BY_FAMILY_NAME = 'sortByFamilyName';
 
-function SortByNameDropdown({onChangeSort}) {
-  const [selectedSort, setSelectedSort] = useState(NameSortColumns[0]);
+function SortByNameDropdown() {
   return (
     <div>
       <Select
         id="familyNameSort"
-        value={selectedSort}
+        value={isSortedByFamilyName ? i18n.familyName() : i18n.displayName()}
         onChange={e => {
-          onChangeSort(e.value);
-          setSelectedSort(e.value);
+          setSortByFamilyName(e.value);
+          utils.trySetLocalStorage(SORT_BY_FAMILY_NAME, e.value);
         }}
-        placeholder="-"
         clearable={false}
-        options={NameSortColumns}
+        options={
+          ({value: true, label: i18n.FamilyName()},
+          {value: false, label: i18n.DisplayName()})
+        }
       />
     </div>
   );
 }
 
 SortByNameDropdown.propTypes = {
-  onChangeSort: PropTypes.func.isRequired,
+  setSortByFamilyName: PropTypes.func.isRequired,
+  isSortedByFamilyName: PropTypes.bool.isRequired,
 };
+
+export default SortByNameDropdown;
