@@ -17,3 +17,43 @@ spec:
         image: code.org
         ports:
         - containerPort: 3000
+        volumeMounts:
+        # FIXME: this should eventually be mounted from a secret
+        # but we have to figure out where/how/when to do aws-google auth
+        # to set it whenever it expires
+        - name: aws-google
+          mountPath: /home/code.org/.aws/credentials
+          subPath: aws/credentials
+        - name: aws-google
+          mountPath: /home/code.org/.config/gcloud/application_default_credentials.json
+          subPath: gcloud/application_default_credentials.json
+        - name: dashboard
+          mountPath: /code-dot-org/locals.yml
+          subPath: locals.yml
+      volumes:
+        - name: aws-google
+          persistentVolumeClaim:
+            claimName: aws-google
+        - name: dashboard
+          configMap:
+            name: dashboard
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dashboard
+data:
+  locals.yml: |
+    db_credential_admin: {"username":"code.org", "password":"FIXME_WITH_REAL_PASSWORD"}
+    db_admin_user: code.org
+    db_admin_password: FIXME_WITH_REAL_PASSWORD
+    db_credential_writer: {"username":"root", "password":"FIXME_WITH_REAL_PASSWORD"}
+    db_writer_user: code.org
+    db_writer_password: FIXME_WITH_REAL_PASSWORD
+    db_credential_reader: {"username":"root", "password":"FIXME_WITH_REAL_PASSWORD"}
+    db_reader_user: code.org
+    db_reader_password: FIXME_WITH_REAL_PASSWORD
+    db_writer: mysql://code.org@db/
+
+    netsim_redis_groups:
+    - master: redis://localhost:6379
