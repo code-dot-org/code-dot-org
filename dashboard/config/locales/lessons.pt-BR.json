@@ -2688,7 +2688,8 @@
           "name": "Um Battle Royal com eventos"
         },
         "csd1-2021/Intro to Problem Solving": {
-          "name": "Introdução a Resolução de problemas"
+          "name": "Introdução a Resolução de problemas",
+          "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original dos alunos e a conexão com as mudanças apropriadas para a próxima iteração do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” de seus projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do guia."
         },
         "csd1-2021/The Problem Solving Process": {
           "name": "O Processo de Resolução de Problemas"
@@ -2710,6 +2711,15 @@
         },
         "csd1-2021/Project - Propose an App": {
           "name": "Projeto - Propor um Aplicativo"
+        },
+        "csd1-2021/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original dos alunos e a conexão com as mudanças apropriadas para a próxima iteração do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” de seus projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do guia."
+        },
+        "csd1-2021/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original dos alunos e a conexão com as mudanças apropriadas para a próxima iteração do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” de seus projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do guia."
+        },
+        "csd1-2021/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original dos alunos e a conexão com as mudanças apropriadas para a próxima iteração do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” de seus projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do guia."
         },
         "csd2-2021/Exploring Web Pages": {
           "name": "Explorando páginas da Web"
@@ -3007,6 +3017,9 @@
         },
         "csd7-2021/Importing Models in App Lab": {
           "name": "Importando modelos no App Lab"
+        },
+        "csd7-2021/Similarity Models": {
+          "student_overview": "Zumbis invadiram sua cidade e você precisa usar dados para prever quais partes da cidade têm a menor quantidade de zumbis para você poder levar as pessoas à segurança."
         },
         "csd7-2021/Numerical Data in AI Lab": {
           "name": "Dados numéricos no AI Lab"
@@ -3936,8 +3949,9 @@
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Introdução à Resolução de Problemas",
-          "overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, os alunos trabalham em grupos para criar barcos de papel alumínio, que devem sustentar o maior número possível de moedas. Os grupos terão duas rodadas para desenvolver seus barcos, com o objetivo de tentar acondicionar mais moedas do que na primeira rodada. A estrutura da atividade prevê os diferentes passos envolvidos no processo de resolução de problemas, que serão mais profundamente explorados pelos alunos na lição seguinte. Ao final da lição, os alunos refletem sobre as experiências a partir da atividade e as relacionam aos tipos de resolução de problemas que enfrentarão ao longo do curso.\n\n**Versões alternativas dessa lição também estão disponíveis.** \n\n-   [Newspaper Table](/s/csd1-2022/lessons/9/)\n-   [Spaghetti Bridge](/s/csd1-2022/lessons/10/)\n-   [Paper Tower](/s/csd1-2022/lessons/11/)",
-          "preparation": "**Para cada equipe**\n\n-   2 folhas de papel alumínio, tamanho 12,5 x 12,5 cm\n-   1 pote plástico (tipo sorvete)\n-   Várias toalhas de papel ou pedaços de pano para serem colocados debaixo do pote\n-   15 moedas pequenas\n-   Uma cópia do guia de atividades\n\n**Para o professor**\n\n-   1 pote de plástico (tipo sorvete)\n-   50 moedas pequenas\n-   Toalhas de papel ou pedaços de pano extra\n-   Verificar o fórum do [\"Teacher's Lounge\"] para que os professores  autorizados encontrem estratégias ou recursos adicionais compartilhados por outros professores\n-   Caso você esteja dando aulas online, sugerimos verificar o nosso [\"Virtual Lessons Modifications\"]",
+          "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original dos alunos e a conexão com as mudanças apropriadas para a próxima iteração do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” de seus projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do guia.",
+          "overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, os alunos trabalham em grupos para criar barcos de papel alumínio, que devem sustentar o maior número possível de moedas. Os grupos terão duas rodadas para desenvolver seus barcos, com o objetivo de tentar acondicionar mais moedas do que na primeira rodada. A estrutura da atividade prevê os diferentes passos envolvidos no processo de resolução de problemas, que serão mais profundamente explorados pelos alunos na lição seguinte. Ao final da lição, os alunos refletem sobre as experiências a partir da atividade e as relacionam aos tipos de resolução de problemas que enfrentarão ao longo do curso.\n\n**Versões alternativas dessa lição também estão disponíveis.** \n\n-   [Mesa de Jornal](/s/csd1-2022/lessons/9/)\n-   [Ponte de Espaguete](/s/csd1-2022/lessons/10/)\n-   [Torre de Papel](/s/csd1-2022/lessons/11/)",
+          "preparation": "**Para cada equipe**\n\n-   2 folhas de papel alumínio, tamanho 12,5 x 12,5 cm\n-   1 pote plástico (tipo sorvete)\n-   Várias toalhas de papel ou pedaços de pano para serem colocados debaixo do pote\n-   15 moedas pequenas\n-   Uma cópia do guia de atividades\n\n**Para o professor**\n\n-   1 pote de plástico (tipo sorvete)\n-   50 moedas pequenas\n-   Toalhas de papel ou pedaços de pano extra\n-   Verificar o fórum da [\"Sala dos Professores\"] para que os professores  autorizados encontrem estratégias ou recursos adicionais compartilhados por outros professores\n-   Caso você esteja dando aulas online, sugerimos verificar o nosso [\"Modificações da Aula Virtual\"]",
           "purpose": "Esta lição é uma introdução divertida para a resolução de problemas criativa, colaborativa, e múltipla que os alunos utilizarão ao longo de toda a unidade e do curso. O problema dos barcos de papel alumínio poderia ser facilmente substituído por quaisquer outros problemas que exijam que os alunos definam metas, criem um plano, testem uma solução, avaliem os resultados e, a partir deles, continuem se aperfeiçoando. O fato de o problema escolhido ser \"não-computacional\" é intencional. A ciência computacional é uma disciplina relacionada à resolução de problemas, e afastar-se da ciência computacional tradicional, neste momento, ajuda a definir o caráter desta aula como sendo de resolução de problemas de forma mais genérica, à qual a ciência computacional se alia como uma nova \"ferramenta\" que ajuda a atacar determinados tipos de problemas.",
           "student_overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe?**\n\nVocê vai trabalhar em equipes para desenvolver e testar um barco de papel alumínio que carregue o maior número possível de moedinhas."
         },
@@ -3971,14 +3985,17 @@
         },
         "csd1-2022/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
           "name": "Introdução à Resolução de Problemas - Mesa de Jornal (Lição Extra 1)",
+          "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original dos alunos e a conexão com as mudanças apropriadas para a próxima iteração do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” de seus projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do guia.",
           "student_overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, você vai trabalhar em equipe para desenvolver, construir, testar e refletir sobre uma mesa feita de jornal que deverá sustentar o maior número possível de livros."
         },
         "csd1-2022/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
           "name": "Introdução à Resolução de Problemas - Ponte de Espaguete (Lição Extra 1)",
+          "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original dos alunos e a conexão com as mudanças apropriadas para a próxima iteração do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” de seus projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do guia.",
           "student_overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, você vai trabalhar em equipe para desenvolver, construir, testar e refletir sobre uma ponte de espaguete que deverá sustentar o maior número possível de livros."
         },
         "csd1-2022/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
           "name": "Introdução à Resolução de Problemas - Torre de Papel (Lição Extra 1)",
+          "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original dos alunos e a conexão com as mudanças apropriadas para a próxima iteração do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” de seus projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do guia.",
           "student_overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, você vai trabalhar em equipe para desenvolver, construir, testar e refletir sobre uma torre de papel que você tentará fazer ser a mais alta possível."
         },
         "csd1-2022/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
@@ -3990,49 +4007,98 @@
           "student_overview": "**Pergunta do Dia: Como podemos aplicar o processo de resolução de problemas a diferentes tipos de problemas?**\n\nNesta lição, você vai aplicar o processo de resolução de problemas a diferentes problemas, sendo que cada um ficará cada vez mais complexo!"
         },
         "csd2-2022/Exploring Web Pages": {
-          "name": "Explorando páginas da Web"
+          "name": "Explorando páginas da Web",
+          "overview": "\\*\\*Pergunta do dia: Por que as pessoas criam páginas da web? \\*\\*  \n\nTodos os sites têm um propósito, uma razão pela qual alguém o criou e outros o usam. Nesta lição, os alunos começarão a avaliar os propósitos a que um site pode servir, tanto para os usuários quanto para os seus criadores. Os alunos explorarão alguns exemplos de sites e discutirão o propósito a que eles servem para seus criadores. Em seguida, eles são convidados a refletir sobre os motivos pelos quais alguém pode querer criar sites.",
+          "preparation": "-   Imprima uma cópia do guia de atividades para cada aluno.\n-   Consulte o fórum [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) para professores verificados a fim de encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para aulas virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+          "purpose": "Esta unidade trata da World Wide Web, com foco na criação de sites para autoexpressão. Para que os alunos pensem por que eles podem querer criar um site, eles devem começar a compreender como e por que os sites são ferramentas úteis para usuários e criadores. A aula começa com sites populares, porque os alunos estão familiarizados com eles, mas aos poucos eles deverão focar em sites mais simples e que estejam dentro do escopo do que eles terão condições de criar neste curso.",
+          "student_overview": "\\*\\*Pergunta do dia: Por que as pessoas criam páginas da web? \\*\\*\n\nNesta lição, você explorará os vários propósitos a que se prestam as páginas da web aos seus usuários e criadores. "
         },
         "csd2-2022/Intro to HTML": {
-          "name": "Introdução a HTML"
+          "name": "Introdução a HTML",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos dizer ao computador _o que_ colocar na página da web e _como_ organizá-la? \\*\\*\n\nVocê verá uma página HTML no Web Lab e usará HTML para escrever sua primeira página da unidade."
         },
         "csd2-2022/Headings": {
-          "name": "Cabeçalhos"
+          "name": "Cabeçalhos",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos trabalhar juntos para resolver problemas nos nossos sites? \\*\\*\n\nNesta lição, você aprenderá sobre cabeçalhos HTML e sobre como usá-los para criar títulos de páginas e seções para páginas da web. "
+        },
+        "csd2-2022/Mini-Project: HTML Web Page": {
+          "name": "Mini-projeto: página da Web em HTML",
+          "student_overview": "\\*\\*Pergunta do Dia: Como posso usar HTML para expressar um valor pessoal? \\*\\*\n\nNesta lição, você criará uma página pessoal simples sobre um tópico de sua escolha. "
         },
         "csd2-2022/Digital Footprint": {
-          "name": "Pegada Digital"
+          "name": "Pegada Digital",
+          "student_overview": "\\*\\*Pergunta do dia: Como você pode garantir que suas informações privadas permanecerão privadas? \\*\\*\n\nNesta lição, você pensará nas informações pessoais que optou por compartilhar digitalmente em vários sites, aplicativos e mídias sociais. "
         },
         "csd2-2022/Styling Text with CSS": {
-          "name": "Estilo de texto com CSS"
+          "name": "Estilo de texto com CSS",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos mudar o estilo do texto em uma página da web? \\*\\*\n\nNesta lição, você aprenderá a usar CSS para estilizar os elementos HTML em sua página da web. "
+        },
+        "csd2-2022/Mini-Project: Your Personal Style": {
+          "name": "Mini-projeto: Seu Estilo Pessoal",
+          "student_overview": "\\*\\*Pergunta do Dia: Como você pode expressar seu estilo pessoal em uma página da web? \\*\\*\n\nNesta lição, você criará sua própria página web estilizada!"
         },
         "csd2-2022/Intellectual Property": {
-          "name": "Propriedade intelectual"
+          "name": "Propriedade intelectual",
+          "student_overview": "\\*\\*Pergunta do Dia: Que tipo de regras protegem os direitos de todos quando usamos o conteúdo uns dos outros? \\*\\*\n\nNesta lição, você explorará as várias licenças Creative Commons. "
+        },
+        "csd2-2022/Using Images": {
+          "name": "Usando imagens",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos adicionar imagens em nossos sites e, ao mesmo tempo, garantir que os direitos de todos estão sendo respeitados? \\*\\*\n\nNesta lição, você aprenderá como adicionar imagens às suas páginas da web, certificando-se de manter os direitos autorais e as licenças Creative Commons em mente. "
+        },
+        "csd2-2022/Websites for Expression": {
+          "name": "Sites para expressão",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos usar sites para nos expressarmos? \\*\\*\n\nNesta lição, você explorará e discutirá diferentes interesses e ideias que as pessoas podem expressar e compartilhar usando sites. "
         },
         "csd2-2022/Styling Elements with CSS": {
-          "name": "Estilizando elementos com CSS"
+          "name": "Estilizando elementos com CSS",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos estilizar as imagens e os layouts de nossas páginas? \\*\\*\n\nNesta lição, você aprenderá mais propriedades de estilo CSS, desta vez focando em elementos não textuais."
+        },
+        "csd2-2022/Your Web Page - Prepare": {
+          "name": "Sua Página da Web - Prepare-se",
+          "student_overview": "\\*\\*Pergunta do Dia: O que precisamos fazer como preparação para criarmos nossas páginas da web? \\*\\*\n\nNesta lição, você trabalhará na fase de “preparação” do processo de resolução de problemas para decidir quais elementos e estilos sua página da web terá. "
+        },
+        "csd2-2022/Project - Personal Web Page": {
+          "name": "Projeto - Página Pessoal da Web",
+          "student_overview": "\\*\\*Pergunta do Dia: Quais habilidades e práticas ajudam quando codificamos páginas da web? \\*\\*\n\nNesta lição, você trabalhará na criação das páginas da web que planejou nas aulas anteriores. "
+        },
+        "csd2-2022/Websites for a Purpose": {
+          "student_overview": "\\*\\*Pergunta do dia: Quais são os diferentes motivos pelos quais as pessoas criam sites? \\*\\*\n\nNesta lição, você explorará os diferentes motivos pelos quais as pessoas criam sites e os problemas que podem ser resolvidos com seu próprio site.  "
         },
         "csd2-2022/Team Problem Solving": {
-          "name": "Solução de problemas da equipe"
+          "name": "Resolução de Problemas em Equipe",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos trabalhar juntos para formar uma ótima equipe? \\*\\*\n\nVocê trabalhará em conjunto com uma equipe para debater possíveis recursos que gostaria que seus sites tivessem e discutir como você interagirá com sua equipe para ter sucesso. "
         },
         "csd2-2022/Sources and Research": {
-          "name": "Fontes e Pesquisa"
+          "name": "Fontes e Pesquisa",
+          "student_overview": "\\*\\*Pergunta do Dia: Como encontramos informações relevantes e confiáveis na Internet? \\*\\*\n\nNesta lição, você descobrirá como encontrar informações relevantes e confiáveis online!"
         },
         "csd2-2022/CSS Classes": {
-          "name": "Classes CSS"
+          "name": "Aulas de CSS",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos criar estilos diferentes para o mesmo tipo de elemento? \\*\\*\n\nVocê aprenderá sobre classes CSS nesta lição, o que lhe permitirá estilizar grupos de elementos de forma diferente de outros elementos do mesmo tipo. "
+        },
+        "csd2-2022/Planning a Multi-Page Site": {
+          "name": "Planejando um Site de Várias Páginas",
+          "student_overview": "\\*\\*Pergunta do Dia: Como planejamos uma página da web em equipe? \\*\\*\n\nVocê trabalhará em equipes hoje para planejar seus sites finais e decidir como o trabalho será distribuído entre vocês.  "
         },
         "csd2-2022/Linking Pages": {
-          "name": "Vinculando páginas"
+          "name": "Vinculando Páginas",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos combinar várias páginas da web diferentes em um site? \\*\\*\n\nNesta lição, você aprenderá a usar hiperlinks em uma página da web. "
         },
         "csd2-2022/Project - Website for a Purpose": {
-          "name": "Projeto - Site para uma finalidade"
+          "name": "Projeto - Site para uma Finalidade",
+          "student_overview": "\\*\\*Pergunta do Dia: Quais habilidades e práticas nos ajudarão a trabalhar juntos para que criemos um ótimo site? \\*\\*\n\nNesta lição, sua equipe finalmente codificará as páginas que você está planejando!"
         },
         "csd2-2022/Peer Review and Final Touches": {
-          "name": "Revisão por pares e retoques finais"
+          "name": "Revisão por pares e retoques finais",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos usar o feedback para melhorar nossos sites? \\*\\*\n\nNesta lição, você fornecerá e receberá feedback sobre seu site finalizado."
         },
         "csd2-2022/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa pós-curso da CS Discoveries"
         },
         "csd3-2022/Programming for Entertainment": {
           "name": "Programação para entretenimento",
+          "overview": "**Pergunta do Dia: Como a Ciência da Computação é usada para o entretenimento?**\n\nPede-se aos alunos que considerem os “problemas” do tédio e da autoexpressão e que reflitam sobre como abordam esses problemas em suas próprias vidas. A partir daí, os alunos explorarão como a ciência da computação em geral, e a programação especificamente, desempenham um papel em uma forma específica de entretenimento ou como um veículo para a autoexpressão.",
+          "preparation": "-   Revise os recursos de pesquisa vinculados no Code Studio\n-   Imprima uma cópia do guia de atividades para cada grupo de três alunos\n-   Verifique o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores verificados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, confira nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
           "student_overview": "Aluno\n**Pergunta do dia: Como a ciência da computação é usada no entretenimento?**\n\nNesta lição, você explorará como a Ciência da Computação e, especificamente, a programação, desempenham um papel no entretenimento ou como um veículo para a autoexpressão."
         },
         "csd3-2022/Plotting Shapes": {
@@ -4256,7 +4322,20 @@
           "student_overview": "Aprenda os conceitos básicos do aprendizado de máquina ajudando o AI Bot a reconhecer peixes para limpar o oceano"
         },
         "csd7-2022/Types of Machine Learning": {
-          "name": "Tipos de Aprendizado de Máquina"
+          "name": "Tipos de Aprendizado de Máquina",
+          "student_overview": "Aprenda dois tipos diferentes de aprendizado de máquina: aprendizado supervisionado e não supervisionado. Em seguida, compare como o aprendizado de máquina pode ser semelhante ou diferente ao modo como os humanos aprendem."
+        },
+        "csd7-2022/Innovations in AI": {
+          "name": "Inovações em IA",
+          "student_overview": "Pesquise diferentes exemplos de como a Inteligência Artificial está sendo usada para resolver problemas no mundo."
+        },
+        "csd7-2022/Patterns in Data": {
+          "name": "Padrões em dados",
+          "student_overview": "Explore três maneiras diferentes pelas quais os computadores podem fazer recomendações e a importância dos dados para tomar decisões precisas."
+        },
+        "csd7-2022/Classification Models": {
+          "name": "Modelos de classificação",
+          "student_overview": "Aprenda a criar um modelo de aprendizado de máquina ajudando um computador a classificar alimentos como frutas ou vegetais"
         },
         "csd7-2022/Introduction to AI Lab": {
           "name": "Introdução ao AI Lab"
@@ -4264,8 +4343,13 @@
         "csd7-2022/Importing Models in App Lab": {
           "name": "Importando modelos no App Lab"
         },
+        "csd7-2022/Numerical Models": {
+          "name": "Modelos Numéricos",
+          "student_overview": "Zumbis invadiram sua cidade e você precisa usar dados para prever quais partes da cidade têm a menor quantidade de zumbis para você poder levar as pessoas à segurança."
+        },
         "csd7-2022/Numerical Data in AI Lab": {
-          "name": "Dados numéricos no AI Lab"
+          "name": "Dados numéricos no AI Lab",
+          "student_overview": "Use o AI Lab e dados numéricos para fazer previsões sobre cenários do mundo real"
         },
         "csd7-2022/Mini-Project: Make a Machine Learning App": {
           "name": "Projeto: Crie um aplicativo de Aprendizado de Máquina"

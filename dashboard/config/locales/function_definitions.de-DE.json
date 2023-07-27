@@ -165,14 +165,6 @@
             "name": "zeichne eine Schneeflocke"
           }
         },
-        "2-3 Artist Loops 2": {
-          "draw 3 hexagons": {
-          },
-          "draw 4 hexagons": {
-          },
-          "draw 5 hexagons": {
-          }
-        },
         "2-3 Bee Functions 1": {
           "get 2 nectar": {
             "name": "sammle 2 Nektar"
@@ -623,10 +615,6 @@
               "counter": "Zähler",
               "dir": "dir"
             }
-          }
-        },
-        "Course 4 SCF 1b": {
-          "make honey up and over": {
           }
         },
         "Course 4 SCF 2": {
@@ -3075,7 +3063,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8_2018": {
@@ -3089,7 +3077,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8_2019": {
@@ -3103,7 +3091,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8_2020": {
@@ -3117,7 +3105,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8_2021": {
@@ -3131,7 +3119,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8a2022": {
@@ -3240,7 +3228,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8c_2018": {
@@ -3254,7 +3242,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8c_2019": {
@@ -3268,7 +3256,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8c_2020": {
@@ -3282,7 +3270,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions8c_2021": {
@@ -3296,7 +3284,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions9": {
@@ -3379,7 +3367,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functionsProj_2018": {
@@ -3396,7 +3384,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functionsProj_2019": {
@@ -3413,7 +3401,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functionsProj_2020": {
@@ -3430,7 +3418,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functionsProj_2021": {
@@ -3447,7 +3435,7 @@
             "name": "zeichne Quadrat"
           },
           "staggered squares": {
-            "name": "versetzte Quadrate\n"
+            "name": "versetzte Quadrate"
           }
         },
         "courseE_artist_functions_challenge1": {
@@ -3852,13 +3840,13 @@
         },
         "courseE_farmer_functions11_predict": {
           "check and pick": {
-            "name": "suchen und pflücken\n"
+            "name": "suchen und pflücken"
           },
           "find pumpkin": {
             "name": "finde Kürbis"
           },
           "wander path": {
-            "name": "Weg entlanggehen\n"
+            "name": "Weg entlanggehen"
           }
         },
         "courseE_farmer_functions11_predict2022": {

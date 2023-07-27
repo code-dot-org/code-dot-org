@@ -48,8 +48,6 @@
         "2-3 Artist Debugging 7": {
           "2-3_Artist_Debugging_7_a": "ماذا يحدث إذا جعلت الفنان يتحرك أو يقفز إلى الخلف بعد أن رسم الخط الأول؟"
         },
-        "2-3 Artist Debugging 8": {
-        },
         "2-3 Artist Debugging 9": {
           "2-3_Artist_Debugging_9_a": "يحتاج الفنان أن يستدير 60 درجة نحو اليسار قبل البدء بالرسم!",
           "2-3_Artist_Debugging_9_b": "ليس عليك إضافة قطعة أخرى للحصول على دورة كاملة، فقط أضف 60 درجة لكتلة \"استدر يسارا\" الموجودة هناك مسبقا!"
@@ -864,10 +862,6 @@
         "Dance_Party_extras_alternate_2019": {
           "alternate": "يوجد المربع البرمجي \"التنقل\" في فئة \"الراقصين\"."
         },
-        "Farmer for Authored Hint testing": {
-        },
-        "Farmer for TTS testing": {
-        },
         "Function intro Ryan": {
           "Function_intro_Ryan_a": "يمكنك استدعاء إحدى الوظائف عدّة مرات داخل برنامجك! وحاول استدعائها مرتين لحل هذا اللغز.",
           "Function_intro_Ryan_b": "إذا استدعيت الوظائف استدعاءً صحيحًا، فإن ذلك سيكون المسار الذي ستسلكه..."
@@ -1145,16 +1139,6 @@
         "MC_HOC_2017_FP20x20_2021": {
           "MC_HOC_2017_13_Cole_a": "حاول جعل الكائن يبني بعض مسارات السكك لكي تتمكن من استكشاف العالم!"
         },
-        "NEW Course 4 Artist Functions 13": {
-        },
-        "NEW Course 4 Artist Functions 4": {
-        },
-        "NEW Course 4 Artist Functions 9": {
-        },
-        "NEW Course 4 Artist Params 11": {
-        },
-        "NEW Course 4 Artist Params 13": {
-        },
         "NEW Course 4 Artist Params 14": {
           "NEW_Course_4_Artist_Params_14_a": "لا بأس من تشغيل البرنامج بضع مرات لمعرفة كيف تعمل الوظيفة مع المُعامِلات المختلفة."
         },
@@ -1169,8 +1153,6 @@
         },
         "NEW Course 4 Bee For Loops 7": {
           "NEW_Course_4_Bee_For_Loops_7_a": "جرب استخدام بعض الرياضيات مع المتغير \"عداد\"ما الذي يجب عليك فعله بالعداد في كل زهرة من أجل معادلة رحيق النحل الذي تحتاج لتجميعه؟"
-        },
-        "NEW Course 4 Bee For Loops 8": {
         },
         "New Minecraft Hero Project": {
           "MC_HOC_2017_13_Cole_a": "حاول أن تجعل العميل يبني بعض الجسور بحيث يستطيع ألكس أو ستيف المشي خارج حدود الخريطة."
@@ -1600,8 +1582,6 @@
           "courseA_artist_loops_challenge1_c": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
           "courseA_artist_loops_challenge1_d": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
-        "course1_artist_loops_challenge2": {
-        },
         "course1_artist_loops_challenge3": {
           "courseA_artist_loops_challenge2_a": "القطعة البرمجية مثل هذه:  <xml>  <block type=\"simple_move_up_left\"/></xml> سوف تتيح للفنان التحرك بشكل مائل!"
         },
@@ -1613,8 +1593,6 @@
         "course1_collector_loops_challenge1": {
           "courseA_collector_loops_challenge1_b": "لا تحتاج لاستخدام حلقة إذا كنت تقوم بشيء ما مرة واحدة فقط."
         },
-        "course1_collector_loops_challenge2": {
-        },
         "course1_collector_loops_challenge3": {
           "courseB_collector_loops_challenge1_c": "تحرك ناحية الشرق مرتين ما بين كل مسار\n\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>\n\nيمكنك فعل هذا بواسطة 14 قطعة برمجية. انقر على تلميح واحد إضافي لرؤية الحل.",
           "courseB_collector_loops_challenge1_d": "جرب هذا!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1624,8 +1602,6 @@
           "courseB_collector_loops_challenge2_b": "إذا قمت بتكرار هذا النمط، لن تستيطع لوريل ضرب الحائط في الجزء السفلي من هذا الكهف!\n\n<xml><block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block></xml>",
           "courseB_collector_loops_challenge2_c": "جرب استخدام حلقة \"التكرار\" لتجميع الكومة النهائية من الكنز!",
           "courseB_collector_loops_challenge2_d": "جرب هذا الحل!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">4</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_simplified_dropdown\">\n            <title name=\"TIMES\" config=\"3-10\">6</title>\n            <statement name=\"DO\">\n              <block type=\"collector_collect\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "course1_maze_debugging_challenge1": {
         },
         "course1_maze_debugging_challenge2": {
           "courseB_maze_seq_challenge2_a": "لستَ بحاجة إلى إضافة قطع برمجية أو  إزالتها لحل هذا اللغز."
@@ -1647,29 +1623,15 @@
           "courseA_playlab_events_challenge2_b": "\"يمكنك أن تجعل الرجل الآلي يصدر صوت الصفير.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>\"",
           "courseA_playlab_events_challenge2_c": "\"يمكنك أن تجعل الوحش الغضبان يزمجر.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>\""
         },
-        "course2_artist_nestedLoops_challenge1": {
-        },
         "course2_artist_nestedLoops_challenge2": {
           "courseD_artist_nestedLoops_challenge2_a": "لرسم شكلٍ ثماني الأضلاع، يجب إن يستدير الفنان 45 درجة 8 مرات.",
           "courseD_artist_nestedLoops_challenge2_b": "لرسم مربع، يجب إن يستدير الفنان 90 درجة 4 مرات."
         },
-        "course2_artist_prog_challenge1": {
-        },
-        "course2_artist_prog_challenge2": {
-        },
         "course2_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_b": "في هذا اللغز، لكل مساحة زهرة، خلية نحل، أو لا شيء. وهذا يعني أنك يمكن أن تكرر \"إذا/وإلا\" الشرطية في كل مربع."
         },
-        "course2_bee_conditionals_challenge2": {
-        },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_b": "استخدم حلقة \"التكرار\" لكي لا تنتهي القطع البرمجية \"اجمع\"!"
-        },
-        "course2_collector_prog_challenge1": {
-        },
-        "course2_collector_prog_challenge2": {
-        },
-        "course2_harvester_loops_challenge1": {
         },
         "course2_harvester_loops_challenge2": {
           "courseC_harvester_loops_challenge2_a": "إحدى الطرق لحل اللغز هو السير بمسار يشبه الخط المتعرج. وطريقة أخرى هو السير بمسار يشبه الحلزون! هناك العديد من الحلول لحل هذا اللغز. كن مثابراً!",
@@ -1677,12 +1639,8 @@
           "courseC_harvester_loops_challenge2_c": "هذا النمط المتعرج يمكن تكراره مرتين لحل اللغز باستخدام 20 قطعة برمجية\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
           "courseC_harvester_loops_challenge2_d": "النمط الحلزوني يمكن برمجته باستخدام 18 قطعة برمجية!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
         },
-        "course2_maze_loops_challenge1": {
-        },
         "course2_maze_programming_challenge2": {
           "courseC_maze_programming_challenge2_b": "الحل الأقصر سوف يستخدم 5 قطع فقط, لكنه يستخدم حلقة \"التكرار\" البرمجية!"
-        },
-        "course3_artist_functions_challenge1": {
         },
         "course3_artist_functions_challenge2": {
           "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nالقطعة البرمجية \"اقفز إلى\" تقوم بتحريك الفنان زومبي إلى أي بِكسِل في الشبكة، متى شئت. أنه يعمل بتحريكه عدد من بِكسِلات إلى اليمين وعدد من بِكسِلات إلى الأسفل. وتحسب هذه دائمَا من أعلى يسار الزاوية، الذي يعني أنه ليس من المهم أين يقع الفنان الزومبي _قبل_ تنفيذ الأمر.\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
@@ -1715,8 +1673,6 @@
         "course3_farmer_condLoops_challenge1": {
           "courseD_farmer_condLoops_challenge1_b": "في العادة، أنت كل ما عليك هو \"التقاط القرع\" إذا كنت في منطقة القرع. ما الذي تحتاجه لفعله غير ذلك إذا كنت في منطقة القرع؟"
         },
-        "course3_farmer_condLoops_challenge2": {
-        },
         "course3_maze_debugging_challenge1": {
           "courseC_maze_debugging_challenge1_a": "الانعطاف لليسار، أو لليمين؟ الأمر متروكاً لك!",
           "courseC_maze_debugging_challenge1_b": "مسار \"سكرات\" على شكل مستطيل! وهو يحتاج أن يلف بنفس الطريقة كل مرة!",
@@ -1729,8 +1685,6 @@
         "course3_playLab_challenge1": {
           "courseE_playLab_challenge1_a": "هنا بعض الأشياء التي يمكنك القيام بها عندما يفوز اللاعب باللعبة:\n\n-   اجعل الديناصور يختفي.\n-   أوقف السناجب.\n-   أدخل السعادة في قلوب السناجب والفارس.\n-   قم بإعداد خلفية جديدة.\n-   اجعل الفارس يشكر اللاعب على المساعدة.\n-   اجعل جميع الممثلين يختفون وانشر رسالة \"أنت فزت!\"",
           "courseE_playLab_challenge1_b": "هنا بعض الأشياء التي يمكنك القيام بها عندما يخسر اللاعب باللعبة:\n\n-   اجعل الفارس يختفي.\n-   أدخل الحزن في قلوب السناجب.\n-   اجعل الديناصور يقول شيئًا\n-   قم بإعداد خلفية جديدة.\n-   اجعل جميع الممثلين يختفون وانشر رسالة \"انتهت اللعبة!\""
-        },
-        "course4_artist_binary_challenge2": {
         },
         "course4_artist_concept_challenge2": {
           "courseE_artist_concept_challenge2_a": "بمجرد ما تقوم بتعريف وظيفة، يمكنك طلبها مرارًا وتكرارًا - متى ما تشاء واينما تشاء!",
@@ -1761,8 +1715,6 @@
           "courseD_bee_nested_loops_challenge2_b": "للحصول على كل المجوهرات البالغ عددها 4 قطع، استخدم أولاً الحلقة للتحرك إلى الأمام بعيداً عن المركز. استدر لليسار أو لليمين، ثم استخدم الحلقة المتداخلة للتحرك من الكومة الأولى الخاصة بالكنز إلى الثانية. في حالة تكرار الحلقة المتداخلة عدد مرات كافية، فسوف تتحرك الحصادة حول _الكهف_ بأكلمه!",
           "courseD_bee_nested_loops_challenge2_c": "أقصر برنامج يصل إلى كل الجواهر يستخدم قطعة \"تجميع\" واحدة ودوران مرتين.",
           "courseD_bee_nested_loops_challenge2_d": "**الحل:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "course4_harvester_nested_loops_challenge1": {
         },
         "course4_playlab_variables_challenge1": {
           "courseF_playlab_variables_challenge1_a": "سوف تحتاج إلى قطع برمجية إضافية من صندوق الأدوات لجعل المملثلين يتحدثون.\n\n<xml><block type=\"studio_saySpriteParamsTime\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n                      <value name=\"TEXT\">\n                  <block type=\"text\">\n                    <title name=\"TEXT\">Knock knock.</title>\n                  </block>\n                </value>\n      <value name=\"TIME\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n      </block></xml>"
@@ -2271,8 +2223,6 @@
           "courseA_collector_loops_challenge1_c": "توجد 6 جواهر في الجانب الأيمن من الكهف عندما تبدأ، لكنك تحتاج التحرك 5 مرات نحو الجنوب للحصول على الكنز. هل تعرف لماذا؟",
           "courseA_collector_loops_challenge1_d": "\"برنامج البدء لا يلتقط آخِر جوهرتين. حاول إضافة هذه الأوامر البرمجية في النهاية القصوى:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>\""
         },
-        "courseA_collector_loops_challenge2": {
-        },
         "courseA_collector_loops_challenge2kp": {
           "courseA_collector_loops_challenge2kp_a": "هل يمكنك استخدام حلقات لفك هذا اللغز؟",
           "courseA_collector_loops_challenge2kp_b": "جرّب هذا المسار للحصول على حل."
@@ -2296,12 +2246,6 @@
         "courseA_collector_loops_challenge2kp_2021": {
           "courseA_collector_loops_challenge2kp_a": "هل يمكنك استخدام حلقات لفك هذا اللغز؟",
           "courseA_collector_loops_challenge2kp_b": "جرّب هذا المسار للحصول على حل."
-        },
-        "courseA_collector_preLoops4": {
-        },
-        "courseA_collector_preLoops5": {
-        },
-        "courseA_collector_preLoops6": {
         },
         "courseA_collector_preLoops7": {
           "courseA_collector_loops2_b": "\"بعد الانتقال إلى المربع الذي يحتوي الكنز، استخدم هذا القطعة البرمجية لالتقاطه.\n\n<xml>  <block type=\"collector_collect\"/></xml>\""
@@ -5451,8 +5395,6 @@
         },
         "courseC_artist_loops7a": {
           "courseC_artist_loops7a_a": "الدائرة لها 360 درجة. اضرب عدد الدرجات في الدوران بعدد مرات التكرار. هل تساوي 360؟\nجرب الدوران المقترح لتتأكد من تحقيق الحل!"
-        },
-        "courseC_artist_loops7a2022": {
         },
         "courseC_artist_loops7a_2018": {
           "courseC_artist_loops7a_a": "الدائرة لها 360 درجة. اضرب عدد الدرجات في الدوران بعدد مرات التكرار. هل تساوي 360؟\nجرب الدوران المقترح لتتأكد من تحقيق الحل!"
@@ -12224,14 +12166,6 @@
         "courseF_bee_variables_4a_2021": {
           "courseF_bee_variables_4_2021_1": "بدلًا من إضافة ١ إلى المتغير، أضف ٢ في كل مرة بدلاً من ذلك."
         },
-        "courseF_clicker_finish_-2022-2": {
-        },
-        "courseF_clicker_score_-2022-2": {
-        },
-        "courseF_collector_freeplay_-2022-2": {
-        },
-        "courseF_collector_score_-2022-2": {
-        },
         "courseF_events_choice_pufferfish": {
           "changeProp": "سوف تحتاج إلى هذه القطع البرمجية:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
@@ -12243,16 +12177,6 @@
         },
         "courseF_events_key_-2022-2": {
           "changePropBlock": "سوف تحتاج إلى هذه القطع البرمجية:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
-        },
-        "courseF_groups_behaviors_-2022-2": {
-        },
-        "courseF_groups_costume_-2022-2": {
-        },
-        "courseF_groups_say_-2022-2": {
-        },
-        "courseF_groups_size_-2022-2": {
-        },
-        "courseF_groups_touch_-2022-2": {
         },
         "courseF_playlab_variables1a": {
           "courseF_playlab_variables1a_a": "أنت سترغب في استبدال الكلمات \"ما الذي يجب علي الصياح به؟\" في القطعة البرمجية الخضراء مع \"هدف\"!"
@@ -12309,10 +12233,6 @@
         },
         "courseF_text_concat_-2022-2": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "courseF_variables2_click_-2022-2": {
-        },
-        "courseF_variables2_set_-2022-2": {
         },
         "courseF_variables_card_finish": {
           "card_idea1": "يمكنك إضافة محفز ثانٍ (أو ثالث أو رابع) عن طريق توصيل قطع محفز جديدة بمتغير مختلف بحدثك الأول \"عند الإجابة\".\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">اسم</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">ماذا تريد لعيد ميلادك؟</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">هدية</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",

@@ -1577,10 +1577,6 @@
           "swimming left and right": "左右に泳がせる",
           "wandering": "あちこちに動かす"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "drive left": "左に 動かす",
           "drive right": "右に 動かす",
@@ -3031,8 +3027,6 @@
           "spinning right": "右に回す",
           "wandering": "あちこちに動かす",
           "wobbling": "ぐらぐらさせる"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "大きくする",

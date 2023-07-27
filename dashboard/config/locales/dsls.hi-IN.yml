@@ -428,19 +428,6 @@ hi-IN:
           ऐसा ब्रेस्लेट बनाएं, जो ऐसे सिस्टम में आपका नाम प्रदर्शित करता हो, जिसे कंप्यूटर समझ पाए!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
-      BinaryImages-Unplugged: {}
-      BinaryImages-Unplugged_2020: {}
-      Building a UI with Design Mode: {}
-      CSD - Getters and Setters: {}
-      CSD CSS project RGB_2021: {}
-      CSD CSS project RGB_2022: {}
-      CSD CSS project Review_2021: {}
-      CSD CSS project Review_2022: {}
-      CSD End of Unit Survey - Unit 1 - IntroMD_2022: {}
-      CSD Games Parameters challenge_2021: {}
-      CSD Games Parameters challenge_2022: {}
-      CSD Games Properties challenge_2021: {}
-      CSD Games Properties challenge_2022: {}
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -463,22 +450,10 @@ hi-IN:
         display_name: स्प्राइट्स की विशेषताएं
       CSD Games Properties practice_2022:
         display_name: स्प्राइट्स की विशेषताएं
-      CSD Games Sprites Challenges_2021: {}
-      CSD Games Sprites Challenges_2022: {}
-      CSD Games Sprites practice_2021: {}
-      CSD Games Sprites practice_2022: {}
-      CSD Games parameters practice_2021: {}
-      CSD Games parameters practice_2022: {}
-      CSD Games variables challenge_2021: {}
-      CSD Games variables challenge_2022: {}
       CSD Games variables practice_2021:
         display_name: वेरिएबल्स का अभ्यास
       CSD Games variables practice_2022:
         display_name: वेरिएबल्स का अभ्यास
-      CSD HTML project Lists_2021: {}
-      CSD HTML project Lists_2022: {}
-      CSD HTML project Review_2021: {}
-      CSD HTML project Review_2022: {}
       CSD Header Size MC:
         answers:
         - {}
@@ -509,13 +484,6 @@ hi-IN:
         - correct: true
         - {}
         - {}
-      CSD Interactive Animations and Games Post-Project Test: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2021: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2022: {}
-      CSD Physical Computing Post-Project Test: {}
-      CSD Physical Computing Post-Project Test_2021: {}
-      CSD Physical Computing Post-Project Test_2022: {}
-      CSD Student End of Unit Survey - Unit 1_2022: {}
       CSD U1 IOSP match:
         answers:
         - {}
@@ -549,11 +517,6 @@ hi-IN:
         - {}
         - text: स्टोरेज
         - text: प्रोसेसिंग
-      CSD U1 Lesson 5 Overview: {}
-      CSD U1 Lesson 6 Overview: {}
-      CSD U1 Lesson 7 Overview: {}
-      CSD U1 Lesson 8 Overview: {}
-      CSD U1 Lesson 9 Overview: {}
       CSD U1 Test:
         title: कंप्यूटर और प्रॉब्लम सॉल्विंग पोस्ट-प्रोजेक्ट टेस्ट
       CSD U1 Test PSP match:
@@ -644,8 +607,6 @@ hi-IN:
         title: कंप्यूटर और प्रॉब्लम सॉल्विंग पोस्ट-प्रोजेक्ट टेस्ट
       CSD U1 Test_2022:
         title: कंप्यूटर और प्रॉब्लम सॉल्विंग पोस्ट-प्रोजेक्ट टेस्ट
-      CSD U2 CSS challenge_pilot_2021: {}
-      CSD U2 CSS challenge_pilot_2022: {}
       CSD U2 CSS practice_pilot_2021:
         display_name: CSS के साथ स्टाइलिंग टेक्सट
       CSD U2 CSS practice_pilot_2022:
@@ -656,11 +617,6 @@ hi-IN:
         content1: यहां वर्णन करें
       CSD U2 Design Project_2018_2019:
         content1: यहां वर्णन करें
-      CSD U2 Expression Exemplars: {}
-      CSD U2 Expression Exemplars_2018: {}
-      CSD U2 Expression Exemplars_2018_2019: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2021: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2022: {}
       CSD U2 Image challenge_pilot_2021:
         display_name: चित्र शामिल करना
       CSD U2 Image challenge_pilot_2022:
@@ -671,7 +627,6 @@ hi-IN:
         display_name: चित्र शामिल करना
       CSD U2 L1 Overview:
         content1: यहां वर्णन करें
-      CSD U2 L12 Overview: {}
       CSD U2 L2 Overview:
         content1: यहां वर्णन करें
       CSD U2 L3 Overview:
@@ -682,19 +637,8 @@ hi-IN:
         content1: यहां वर्णन करें
       CSD U2 L6 Overview:
         content1: यहां वर्णन करें
-      CSD U2 L7 Overview: {}
       CSD U2 Lesson 6 Overview:
         content1: यहां वर्णन करें
-      CSD U2 Lesson 9 Overview: {}
-      CSD U2 PSP Programming: {}
-      CSD U2 PSP Programming_2018: {}
-      CSD U2 PSP Programming_2018_2019: {}
-      CSD U2 Sample CSS layout_2021: {}
-      CSD U2 Sample CSS layout_2022: {}
-      CSD U2 Sample CSS text_2021: {}
-      CSD U2 Sample CSS text_2022: {}
-      CSD U2 Sample classes_2021: {}
-      CSD U2 Sample classes_2022: {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -872,11 +816,6 @@ hi-IN:
         - correct: true
         - {}
         - {}
-      CSD U2 Top Websites: {}
-      CSD U2 Top Websites_2018: {}
-      CSD U2 Top Websites_2018_2019: {}
-      CSD U2 Top Websites_2018_2019_pilot_2021: {}
-      CSD U2 Top Websites_2018_2019_pilot_2022: {}
       CSD U2 expand project:
         content1: यहां वर्णन करें
       CSD U2 expand project_2018:
@@ -967,12 +906,6 @@ hi-IN:
         - text: छवि पता (इमेज एड्रेस) एक `src` विशेषता (एट्रिब्युट) के रूप में नहीं
             दिया गया है
         - text: फ़ाइल के नाम में एक रिक्त स्थान (स्पेस ) है
-      CSD U2 layout style challenge_pilot_2021: {}
-      CSD U2 layout style challenge_pilot_2022: {}
-      CSD U2 layout style practice_pilot_2021: {}
-      CSD U2 layout style practice_pilot_2022: {}
-      CSD U2 links challenge_2021: {}
-      CSD U2 links challenge_2022: {}
       CSD U2 lists match:
         answers:
         - {}
@@ -1022,8 +955,6 @@ hi-IN:
         content1: यहां वर्णन करें
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: यहां वर्णन करें
-      CSD U3 - Design a Game 1 - ExampleChoice_2022: {}
-      CSD U3 - Interactive Card - ExampleChoice_2022: {}
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1089,11 +1020,6 @@ hi-IN:
         - {}
         - {}
         - {}
-      CSD U3 AnimationsMulti STOP project guide: {}
-      CSD U3 AnimationsMulti STOP project guide_2018: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022: {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1152,9 +1078,6 @@ hi-IN:
           कोलिज़न ब्लॉक्स (`टकराना`, `स्थान बदलना`, `उछालना`, `bounceOff`) के साथ अभ्यास
           करने से पहले, एक स्प्राइट का , दूसरे स्प्राइट को , स्क्रीन के चारों ओर धकेलने
           के लिए सक्रिय करने हेतु `isTouching` का उपयोग करते हैं।
-      CSD U3 Defender SFLP: {}
-      CSD U3 Entertainment: {}
-      CSD U3 Entertainment_2018_2019: {}
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -1220,14 +1143,6 @@ hi-IN:
         - {}
         - {}
         - {}
-      CSD U3 Lesson Overview 1: {}
-      CSD U3 Lesson Overview 10: {}
-      CSD U3 Lesson Overview 11: {}
-      CSD U3 Lesson Overview 12: {}
-      CSD U3 Lesson Overview 13: {}
-      CSD U3 Lesson Overview 14: {}
-      CSD U3 Lesson Overview 2: {}
-      CSD U3 Lesson Overview 3: {}
       CSD U3 Lesson Overview 4:
         markdown: यह पाठ चौड़ाई और ऊंचाई को शामिल करने के लिए ड्राइंग कौशलों का विस्तार
           करता है और बेतरतीब (रैंडम) संख्या की उत्पत्ति की अवधारणा का परिचय देता है।
@@ -1243,13 +1158,6 @@ hi-IN:
           बहुत ही बुनियादी विवरण के साथ पाठ शुरू करती है। बाद में, कक्षा एक रैंडम  संख्या
           को सहेजने  के लिए वेरिएबल का उपयोग करती है, जिससे प्रोग्राम एक ही रैंडम
           संख्या को कई बार उपयोग कर सकते हैं।
-      CSD U3 Lesson Overview 6: {}
-      CSD U3 Lesson Overview 7: {}
-      CSD U3 Lesson Overview 8: {}
-      CSD U3 Lesson Overview 9: {}
-      CSD U3 Movement Challenges: {}
-      CSD U3 Project Build a Game SFLP: {}
-      CSD U3 SFLP Velocity: {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
@@ -1483,7 +1391,6 @@ hi-IN:
         - {}
         questions:
         - {}
-      CSD U3 Using the Game Design Process SLFP: {}
       CSD U3 combining rep:
         content1: यहां वर्णन करें
       CSD U3 combining rep_2018:
@@ -1534,8 +1441,6 @@ hi-IN:
         - {}
         - {}
         - {}
-      CSD U3 drawing challenges_2021: {}
-      CSD U3 drawing challenges_2022: {}
       CSD U3 drawing practice choice_2021:
         display_name: अभ्यास
       CSD U3 drawing practice choice_2022:
@@ -1705,22 +1610,6 @@ hi-IN:
         - correct: true
         questions:
         - {}
-      CSD U4L01 SFLP: {}
-      CSD U4L02 SFLP: {}
-      CSD U4L03 SFLP: {}
-      CSD U4L04 SFLP: {}
-      CSD U4L05 SFLP: {}
-      CSD U4L06 SFLP: {}
-      CSD U4L07 SFLP: {}
-      CSD U4L08 SFLP: {}
-      CSD U4L09 SFLP: {}
-      CSD U4L10 SFLP: {}
-      CSD U4L11 SFLP: {}
-      CSD U4L12 SFLP: {}
-      CSD U4L13 SFLP: {}
-      CSD U4L15 SFLP: {}
-      CSD U4L16 SFLP: {}
-      CSD U4L17 SFLP: {}
       CSD U5 Encryption 1:
         content1: यहां वर्णन करें
       CSD U5 Encryption 1_2018:
@@ -1753,7 +1642,6 @@ hi-IN:
         content1: यहां वर्णन करें
       CSD U5 student record_2018_2019:
         content1: यहां वर्णन करें
-      CSD U5 test: {}
       CSD U5 test clean multi:
         answers:
         - {}
@@ -1895,43 +1783,30 @@ hi-IN:
         - {}
         questions:
         - {}
-      CSD U5 test_2021: {}
-      CSD U5 test_2022: {}
       CSD U6 - Accelerometer - Chal_2222:
         display_name: चुनौती स्तर
-      CSD U6 - Accelerometer - Prac_2222: {}
       CSD U6 - Board Inputs - Chal_2222:
         display_name: चुनौती स्तर
-      CSD U6 - Board Inputs - Prac_2222: {}
       CSD U6 - Board Outputs - Chal_2222:
         display_name: चुनौती स्तर
-      CSD U6 - Board Outputs - Prac_2222: {}
       CSD U6 - Color LEDs - Chal_2222:
         display_name: चुनौती स्तर
-      CSD U6 - Color LEDs - Prac_2222: {}
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: चुनौती स्तर
-      CSD U6 - Combine Inputs - Prac_2222: {}
-      CSD U6 - Functions - Prac_2222: {}
       CSD U6 - If Variables - Chal_2222:
         display_name: चुनौती स्तर
       CSD U6 - Music - Chal_2222:
         display_name: चुनौती स्तर
       CSD U6 - Physical Input - Chal_2222:
         display_name: चुनौती स्तर
-      CSD U6 - Physical Input - Prac_2222: {}
       CSD U6 - Physical Output - Chal_2222:
         display_name: चुनौती स्तर
-      CSD U6 - Physical Output - Prac_2222: {}
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: चुनौती स्तर
-      CSD U6 - Screen Inputs - Prac_2222: {}
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: चुनौती स्तर
-      CSD U6 - Screen Outputs - Prac_2222: {}
       CSD U6 - Sensors - Chal_2222:
         display_name: चुनौती स्तर
-      CSD U6 - Sensors - Prac_2222: {}
       CSD U6 LED create intro:
         content1: यहां वर्णन करें
       CSD U6 LED create intro_2018:
@@ -1972,10 +1847,6 @@ hi-IN:
         - correct: true
         questions:
         - {}
-      CSD U6 circuit smart bike blinker build: {}
-      CSD U6 circuit smart bike blinker build_2018: {}
-      CSD U6 circuit smart bike blinker build_2018_2019: {}
-      CSD U6 circuit smart bike blinker build_2021: {}
       CSD U6 final intro:
         content1: यहां वर्णन करें
       CSD U6 final intro_2018:
@@ -1984,10 +1855,6 @@ hi-IN:
         content1: यहां वर्णन करें
       CSD U6 final intro_2021:
         content1: यहां वर्णन करें
-      CSD U6 game project stop: {}
-      CSD U6 game project stop_2018: {}
-      CSD U6 game project stop_2018_2019: {}
-      CSD U6 game project stop_2021: {}
       CSD U6 setProperty predict multi:
         answers:
         - {}
@@ -2159,115 +2026,40 @@ hi-IN:
         - {}
         questions:
         - {}
-      CSD U6 tugowar stop: {}
-      CSD U6 tugowar stop_2018: {}
-      CSD U6 tugowar stop_2018_2019: {}
-      CSD U6 tugowar stop_2021: {}
-      CSD User Centered Design Post-Project Test: {}
-      CSD User Centered Design Post-Project Test_2021: {}
-      CSD User Centered Design Post-Project Test_2022: {}
       CSD Web Development Post-Project Test:
         title: वेब डेवलपमेंट पोस्ट-प्रोजेक्ट टेस्ट
       CSD Web Development Post-Project Test_pilot_2021:
         title: वेब डेवलपमेंट पोस्ट-प्रोजेक्ट टेस्ट
       CSD Web Development Post-Project Test_pilot_2022:
         title: वेब डेवलपमेंट पोस्ट-प्रोजेक्ट टेस्ट
-      CSD Web Headings challenge_2021: {}
-      CSD Web Headings challenge_2022: {}
-      CSD Web Headings practice_2021: {}
-      CSD Web Headings practice_2022: {}
-      CSD Web Sample Pages_2021: {}
-      CSD Web Sample Pages_2022: {}
       CSD games cake challenge choice_2021:
         display_name: चुनौतियां
       CSD games cake challenge choice_2022:
         display_name: चुनौतियां
-      CSD games collisions challenge choice_2021: {}
-      CSD games collisions challenge choice_2022: {}
-      CSD games collisions practice choice_2021: {}
-      CSD games collisions practice choice_2022: {}
-      CSD games functions challenge choice_2021: {}
-      CSD games functions challenge choice_2022: {}
       CSD games functions practice choice_2021:
         display_name: फंक्शन्स का अभ्यास
       CSD games functions practice choice_2022:
         display_name: फंक्शन्स का अभ्यास
-      CSD games istouching challenge choice_2021: {}
-      CSD games istouching challenge choice_2022: {}
-      CSD games istouching practice choice_2021: {}
-      CSD games istouching practice choice_2022: {}
-      CSD games movement2 challenge choice_2021: {}
-      CSD games movement2 challenge choice_2022: {}
-      CSD games movement2 practice choice_2021: {}
-      CSD games movement2 practice choice_2022: {}
       CSD games platform challenge choice_2021:
         display_name: चुनौतियां
       CSD games platform challenge choice_2022:
         display_name: चुनौतियां
-      CSD games random challenge_2021: {}
-      CSD games random challenge_2022: {}
-      CSD games random practice_2021: {}
-      CSD games random practice_2022: {}
-      CSD games velocity challenge choice_2021: {}
-      CSD games velocity challenge choice_2022: {}
-      CSD games velocity practice choice_2021: {}
-      CSD games velocity practice choice_2022: {}
-      CSD web classes challenge_2021: {}
-      CSD web classes challenge_2022: {}
-      CSD web classes practice_2021: {}
-      CSD web classes practice_2022: {}
-      CSD web conditionals challenge choice_2021: {}
-      CSD web conditionals challenge choice_2022: {}
       CSD web conditionals practice choice_2021:
         display_name: सापेक्षों का अभ्यास
       CSD web conditionals practice choice_2022:
         display_name: सापेक्षों का अभ्यास
-      CSD web draw loop challenge choice_2021: {}
-      CSD web draw loop challenge choice_2022: {}
       CSD web draw loop practice choice_2021:
         display_name: अभ्यास
       CSD web draw loop practice choice_2022:
         display_name: अभ्यास
-      CSD web keyboard challenge choice_2021: {}
-      CSD web keyboard challenge choice_2022: {}
-      CSD web keyboard practice choice_2021: {}
-      CSD web keyboard practice choice_2022: {}
-      CSD web mouse challenge choice_2021: {}
-      CSD web mouse challenge choice_2022: {}
-      CSD web mouse practice choice_2021: {}
-      CSD web mouse practice choice_2022: {}
-      CSD web movement challenge choice_2021: {}
-      CSD web movement challenge choice_2022: {}
       CSD web movement practice choice_2021:
         display_name: अभ्यास
       CSD web movement practice choice_2022:
         display_name: अभ्यास
-      CSD web text challenge choice_2021: {}
-      CSD web text challenge choice_2022: {}
       CSD web text practice choice_2021:
         display_name: अभ्यास
       CSD web text practice choice_2022:
         display_name: अभ्यास
-      CSD-U5-SFLP ASCII and Binary Representation: {}
-      CSD-U5-SFLP Automating Data Decisions: {}
-      CSD-U5-SFLP Combining Representations: {}
-      CSD-U5-SFLP Create a Representation: {}
-      CSD-U5-SFLP Interpreting Data: {}
-      CSD-U5-SFLP Making Decisions with Data: {}
-      CSD-U5-SFLP Patterns and Representation: {}
-      CSD-U5-SFLP Problem Solving and Data: {}
-      CSD-U5-SFLP Problem Solving with Big Data: {}
-      CSD-U5-SFLP Representation Matters: {}
-      CSD-U5-SFLP Representing Images: {}
-      CSD-U5-SFLP Representing Numbers Part 1: {}
-      CSD-U5-SFLP Representing Numbers Part 2: {}
-      CSD-U5-SFLP Solve a Data Problem: {}
-      'CSD: getText vs getNumber': {}
-      'CSD: setProperty': {}
-      CSDU6 Innovation: {}
-      CSDU6 Innovation_2018: {}
-      CSDU6 Innovation_2018_2019: {}
-      CSDU6 Innovation_2021: {}
       CSP PD Example Question 1:
         answers:
         - {}
@@ -2280,7 +2072,6 @@ hi-IN:
         - {}
         questions:
         - {}
-      CSP pre-assessment survey: {}
       Choose 2 Test:
         answers:
         - correct: true
@@ -2289,7 +2080,6 @@ hi-IN:
         - {}
         questions:
         - {}
-      Choosing Good IDs: {}
       ConditionalsWithCards-Unplugged:
         markdown: |-
           # कार्डों के साथ सापेक्ष
@@ -2536,7 +2326,6 @@ hi-IN:
           और अधिक!\n\nआप अपने सिम्युलेशन मॉडल को अन्यों के साथ साझा भी कर सकते हैं,
           या एक वायरस के टाउन में आने पर अन्यों को तंदुरुस्त रखने के लिए हम क्या कर
           सकते हैं इस बारे में अपनी सोच का एक मैसेज साझा कर सकते हैं। \n"
-      Crowdsourcing-Unplugged: {}
       Dance_Party_extras_intro:
         markdown: |
           #डांस करते रहें!
@@ -2698,10 +2487,6 @@ hi-IN:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
-      Design a Screen for your App_2018: {}
-      Design a Screen for your App_2018_2019: {}
-      Design a Screen for your App_2021: {}
-      Design a Screen for your App_2022: {}
       DesigningForAccessibilityMarkdownLevel2022:
         markdown: |
           # सुलभता के लिए डिजाइनिंग
@@ -2742,8 +2527,6 @@ hi-IN:
           * ऐसे ऐप डिजाइन करना, जो विकलांगों के लिए सुलभ हों, उन ऐप्स को अन्य प्रत्येक व्यक्ति के लिए भी बेहतर बनाता है!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
-      DigitalCitizenship-Unplugged: {}
-      DigitalFootprint-Unplugged: {}
       DigitalSharing-Unplugged:
         markdown: |
           # डिजीटल शेयरिंग
@@ -2764,10 +2547,6 @@ hi-IN:
           # डिजीटल शेयरिंग
 
           इस पाठ में आप मालिकाना हक और कॉपीराइट का सम्मान करने की चुनौतियों और फायदों पर विचार करेंगे, विशेषकर डिजीटल वातावरणों में।
-      ECSPD1 computational thinker: {}
-      Embedded Video Test: {}
-      EnvelopeVariables-Unplugged: {}
-      EnvelopeVariables-Unplugged_2020: {}
       EnvelopeVariables-Unplugged_2021_2:
         markdown: |-
           # खाली स्थान कहानियां
@@ -2781,8 +2560,6 @@ hi-IN:
       Eval Contracts F:
         answers:
         - ''
-      Example App Types_2018: {}
-      Example App Types_2018_2019: {}
       ForLoopFun-Unplugged:
         markdown: |-
           # फॉर लूप फन
@@ -2810,7 +2587,6 @@ hi-IN:
       GettingLoopy-Unplugged_2021:
         markdown: "# लूपी होना\n\nयह पाठ डांस गतिविधि के द्वारा लूप्स की प्रोग्रामिंग
           अवधारणा का परिचय देता है। \n"
-      GoingPlacesSafely-unplugged: {}
       GraphPaperProgramming-Unplugged:
         markdown: "# ग्राफ पेपर प्रोग्रामिंग\n\nकलन विधियां लिखें, जिन्हें आपके सहपाठी
           तस्वीरें बनाने के लिए उपयोग कर पाएं। \n"
@@ -2823,8 +2599,6 @@ hi-IN:
       GraphPaperProgramming-Unplugged_2021:
         markdown: "# ग्राफ पेपर प्रोग्रामिंग\n\nकलन विधियां लिखें, जिन्हें आपके सहपाठी
           तस्वीरें बनाने के लिए उपयोग कर पाएं। \n"
-      HappyLoops-Unplugged: {}
-      HappyLoops-Unplugged_2020: {}
       HappyMaps-Unplugged:
         markdown: |
           # हैप्पी मैप्स
@@ -3494,7 +3268,6 @@ hi-IN:
           का उत्साह देखें, को अपने छात्रों का मार्गदर्शन करने के लिए रोज़ाना की पाठ
           योजनाओं, अनप्लग्ड गतिविधियों, जिन्हें आप बिना कंप्यूटर के कर सकते हैं और
           दूसरे अध्यापकों से जुड़ने के लिए फोरमों पर जाएं।"
-      OPD-K5 CS Courses_dani: {}
       OPD-K5 CS Tips:
         markdown: "# शुरूआत करना > इस ऑनलाइन कोर्स का संचालन करना\n\nयदि आप यहां तक
           पहुंच चुके हैं, तो बधाई हो! जब आप यह कोर्स पूरा करते हैं, तो आप CS के मूल
@@ -4726,7 +4499,6 @@ hi-IN:
           href=\"https://curriculum.code.org/csf-19/coursed/10/\" target=\"blank\"
           rel=\"noopener noreferrer\">![](https://images.code.org/d4959eca61f272b9416ff4e65a259bd2-image-1573080208870.43.14
           PM.png)</a>\n"
-      OPD-K5 Stage5Go_dani: {}
       OPD-K5 Stage5Review:
         markdown: "# सापेक्ष > विचार करें\n\nइस चरण में, हमने पड़ताल की कि सापेक्ष,
           प्रोग्रामर्स के कोड में तर्क शामिल करने में उनकी मदद कैसे करते हैं। अगले
@@ -5187,7 +4959,6 @@ hi-IN:
           मार्गदर्शन करने के लिए रोज़ाना की पाठ योजनाओं, अनप्लग्ड गतिविधियों, जिन्हें
           आप बिना कंप्यूटर के कर सकते हैं और दूसरे अध्यापकों से जुड़ने के लिए फोरमों
           पर जाएं।\n\n"
-      OPD-K5 Using CS_dani: {}
       OPD-K5 Vocabulary:
         markdown: |-
           # CS के मूल सिद्धांत > महत्वपूर्ण शब्दावली
@@ -6001,14 +5772,6 @@ hi-IN:
           इस संक्षिप्त चरण को पूरा करके, आप यह करेंगे:
 
           - यह समीक्षा करके कि कोर्स में आगे क्या है, कंप्यूटर साइंस की "बुनियादी बातों में निपुणता" की तैयारी करें
-      'Overview: Design Mode': {}
-      'Overview: If Statements': {}
-      'Overview: Images': {}
-      'Overview: onEvent': {}
-      'Overview: setPosition': {}
-      PDK5 Foundations F: {}
-      PDK5 Intro C: {}
-      PS U3 Assessment1 new: {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -6073,9 +5836,6 @@ hi-IN:
         - {}
         questions:
         - {}
-      PicturingData-Unplugged: {}
-      PicturingData-Unplugged_2020: {}
-      PowerOfWords-Unplugged: {}
       PowerOfWords-Unplugged2022_2022_pilot_-2022-2:
         markdown: |
           # शब्दों की ताकत
@@ -6091,11 +5851,8 @@ hi-IN:
           # शब्दों की ताकत
 
           ## जब इंटरनेट पर कोई घटिया या चोट पहुंचाने वाली भाषा का इस्तेमाल करता है तो आपको क्या करना चाहिए?
-      PowerfulPasswords-Unplugged: {}
       Prepare for your presentation:
         content1: यहां वर्णन करें
-      Prepare for your presentation_2018: {}
-      PrivatePersonalInformation-Unplugged: {}
       PrivatePersonalInformation-Unplugged2022:
         markdown: |
           # प्राइवेट और निजी जानकारी
@@ -6131,17 +5888,11 @@ hi-IN:
           # रिले प्रोग्रामिंग
 
           प्रोग्राम लिखने के लिए उन टीमों का इस्तेमाल करें और साथ में काम करें, जो तस्वीरें बनाती हों।
-      Responding to User Input: {}
-      Sample CSP Assessment: {}
-      ScreenOutTheMean-Unplugged: {}
-      SimonSays-Unplugged: {}
-      SimonSays-Unplugged_2020: {}
       SimonSays-Unplugged_2021:
         markdown: |-
           # कलन विधि का अनुसरण करें
 
           गेम खेलें और सोचें कि सही परिणाम प्राप्त करने के लिए कौन-सी कमांड्स की जरूरत है।
-      Social Sleuth_2018_2019: {}
       Songwriting-Unplugged:
         markdown: |-
           # गीत लिखना
@@ -6162,12 +5913,6 @@ hi-IN:
           # गीत लिखना
 
           छात्र फंक्शनों को परिभाषित करने और बोलने के बारे में सीखने के लिए गीत में कोरस की अवधारणा का उपयोग करते हैं।
-      Student End of Unit Survey - Intro+TeacherMD_csd2-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd3-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd4-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd5-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd6-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd7-2022: {}
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -6188,12 +5933,6 @@ hi-IN:
         - correct: true
         questions:
         - {}
-      Student End of Unit Survey_csd2-2022: {}
-      Student End of Unit Survey_csd3-2022: {}
-      Student End of Unit Survey_csd4-2022: {}
-      Student End of Unit Survey_csd5-2022: {}
-      Student End of Unit Survey_csd6-2022: {}
-      Student End of Unit Survey_csd7-2022: {}
       Submittable Multi:
         answers:
         - text: नीला
@@ -6250,15 +5989,6 @@ hi-IN:
           करने या बस वेब को ब्राउज करने जैसे कार्य करने में लोगों की मदद करते हैं।\n*
           दूसरों की जरूरतों को समझना और उन्हें ध्यान में रखते हुए ऐप डिजाइन करना प्रोग्रामर्स
           के लिए महत्वपूर्ण है!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
-      Unit 1 Lesson 1 Overview: {}
-      Unit 1 Lesson 2 Overview: {}
-      Unit 1 Lesson 3 Overview: {}
-      Unit 1 Lesson 4 Overview: {}
-      Unit 2 Lesson 10 Overview: {}
-      Unit 2 Lesson 16 Overview: {}
-      Unit 2 Lesson 7 Overview: {}
-      Unit 2 Lesson 8 Overview: {}
-      Video - The Future of Big Data: {}
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -6369,8 +6099,6 @@ hi-IN:
         - correct: true
         questions:
         - {}
-      aiml-ch1-pulse-survey_2021: {}
-      aiml-ch1-pulse-survey_2022: {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -6465,9 +6193,6 @@ hi-IN:
         - correct: true
         questions:
         - {}
-      aiml-intro-pulse-survey_2021: {}
-      aiml-intro-pulse-survey_2022: {}
-      aiml-pulse-check-survey-1-levelgroup Ch2_2021: {}
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
@@ -6523,8 +6248,6 @@ hi-IN:
         - correct: true
         questions:
         - {}
-      aiml-pulse-check-survey-preamble_2021: {}
-      allthethings_bubble_choice: {}
       allthethings_external_displayed_as_unplugged:
         content1: यहां वर्णन करें
       allthethings_external_not_displayed_as_unplugged:
@@ -7252,10 +6975,6 @@ hi-IN:
         description: आप अपना अंतिम प्रोजेक्ट शुरू करने वाले हैं। शुरू करने से पहले,
           उदाहरण प्रोजेक्ट्स को देखने में थोड़ा समय लगाएं।
         display_name: प्रोजेक्ट उदाहरण
-      courseD_external_binary1: {}
-      courseD_external_binary1_2018: {}
-      courseD_external_binary1_2018_2019: {}
-      courseD_external_binary1_2018_2019_2020: {}
       courseD_multi_artist_binary8_predict1:
         answers:
         - feedback: ग़लत.
@@ -8476,7 +8195,6 @@ hi-IN:
         questions:
         - text: यह कोड नए ब्लॉक का उपयोग करता है। आपके विचार में जब आप "चलाएं” को
             दबाते हैं तो क्या होगा?
-      courseD_project_exemplars_2020_2021: {}
       courseE_EOC2022:
         description: आप कोर्स E के अंत तक पहुंच चुके हैं! बनाने के लिए एक प्रोजेक्ट
           चुनें।
@@ -8760,8 +8478,6 @@ hi-IN:
           text: कलाकार बीच में छोटे अंतराल के साथ दो वर्ग बनाएगा।
         questions:
         - text: जब आप `चलाएं` को दबाते हैं तो क्या होगा?
-      courseE_project_exemplars_2019: {}
-      courseE_project_exemplars_2019_2020: {}
       courseE_swim_fish_behavior_predict12022:
         answers:
         - feedback: गलत। टम्बलवीड कलाबाजी खाना शुरू करेगा
@@ -8792,7 +8508,6 @@ hi-IN:
             के बाद क्या होगा?
       courseExpress_EOC_2020:
         display_name: कोर्स समाप्ति प्रोजेक्ट
-      courseExpress_project_exemplars_2019_2020: {}
       courseF_EOC_2020:
         description: आप कोर्स F के अंत तक पहुंच चुके हैं! बनाने के लिए एक प्रोजेक्ट
           चुनें।
@@ -8928,11 +8643,6 @@ hi-IN:
           को इसे बदले बिना अपने प्रोग्राम में कई बार उपयोग करते हैं।  </h3>\n<br/><hr/>\n<h3>श्रृंखला
           में अगले भाग में, आप वेरिएबल्स के साथ वह कोड लिखेंगे, जो प्रोग्राम के अंदर
           बदल *जाएगा*।</h3>\n\n"
-      courseF_external_variableConstant_2018: {}
-      courseF_external_variableConstant_2018_2019: {}
-      courseF_external_variableConstant_2018_2019_2020: {}
-      courseF_groups_freeplay_2022_pilot_-2022-2: {}
-      courseF_groups_practice_2022_pilot_-2022-2: {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
@@ -8988,28 +8698,6 @@ hi-IN:
         questions:
         - text: यह कोड जाना-पहचाना लगता है लेकिन इसे ध्यान से पढ़ें। यदि उपयोगकर्ता
             "पिज्जा" टाइप करता है तो क्या प्रिंट होगा?
-      courseF_markdown_algorithms_end: {}
-      courseF_markdown_algorithms_intro: {}
-      courseF_markdown_conditionals_end: {}
-      courseF_markdown_conditionals_intro: {}
-      courseF_markdown_debugging_end: {}
-      courseF_markdown_debugging_intro: {}
-      courseF_markdown_forloops_end: {}
-      courseF_markdown_forloops_end_2019: {}
-      courseF_markdown_forloops_end_2019_2020: {}
-      courseF_markdown_forloops_intro: {}
-      courseF_markdown_forloops_intro_2019: {}
-      courseF_markdown_forloops_intro_2019_2020: {}
-      courseF_markdown_loops_end: {}
-      courseF_markdown_loops_intro: {}
-      courseF_markdown_nestedloops_end: {}
-      courseF_markdown_nestedloops_intro: {}
-      courseF_markdown_variables_end: {}
-      courseF_markdown_variables_end_2019: {}
-      courseF_markdown_variables_end_2019_2020: {}
-      courseF_markdown_variables_intro: {}
-      courseF_markdown_variables_intro_2019: {}
-      courseF_markdown_variables_intro_2019_2020: {}
       courseF_multi_artist_for10_predict1:
         answers:
         - feedback: गलत। कलाकार `फॉर` लूप की पुनरावृत्तियों के बीच मुड़ता है।
@@ -9401,8 +9089,6 @@ hi-IN:
           उपयोगकर्ता जो भी टेक्सट दर्ज करता है, उसे `पूछें` ब्लॉक के अंत में दिखाए गए वेरिएबल में सुरक्षित किया जाता है। इस स्थिति में, यह वेरिएबल `नाम` होती है।
         questions:
         - text: यदि उपयोगकर्ता सुझाव में "अली" नाम डाल देता तो क्या होता?
-      courseF_project_exemplars_2019: {}
-      courseF_project_exemplars_2019_2020: {}
       courseF_sprites_freeplay:
         description: आप जो भी चाहते हैं, वह बनाने की आपकी बारी है! आप किस प्रकार का
           प्रोजेक्ट बनाएंगे?
@@ -9679,12 +9365,6 @@ hi-IN:
           text: कलाकार एक-दूसरे के ऊपर चार वर्ग बनाएगा।
         questions:
         - text: जब आप `चलाएं` बटन को दबाते हैं तो क्या होगा?
-      csd-post-survey-2017-implementation-student: {}
-      csd-post-survey-2017-implementation-teacher: {}
-      csd-post-survey-2017-implementation-teacher_2019: {}
-      csd-post-survey-2017-levelgroup: {}
-      csd-post-survey-2017-levelgroup-2018-2nd-semester: {}
-      csd-post-survey-2017-levelgroup_2018: {}
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -10215,11 +9895,6 @@ hi-IN:
         - correct: true
         questions:
         - {}
-      csd-post-survey-intro-2019: {}
-      csd-post-survey-levelgroup-2018: {}
-      csd-post-survey-levelgroup_2019: {}
-      csd-post-survey-markdown-with-link-to-survey_2021: {}
-      csd-post-survey-markdown-with-link-to-survey_2022: {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -10371,60 +10046,6 @@ hi-IN:
         content1: यहां वर्णन करें
       csd-post-survey-unit6-preamble:
         content1: यहां वर्णन करें
-      csd-pre-survey-2017-levelgroup: {}
-      csd-pre-survey-2017-levelgroup_2018: {}
-      csd-pre-survey-levelgroup_2019: {}
-      csd-pre-survey-levelgroup_21_22: {}
-      csd-pre-survey-levelgroup_21_22_2022: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2021: {}
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
@@ -12900,15 +12521,6 @@ hi-IN:
         - correct: true
         questions:
         - {}
-      csd-pulse-check-survey-preamble: {}
-      csd-pulse-check-survey-preamble_2018: {}
-      csd-pulse-check-survey-preamble_2018_2019: {}
-      csd-pulse-check-survey-preamble_2019: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2021: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2022: {}
-      csd-pulse-check-survey-preamble_2021: {}
-      csd-pulse-check-survey-preamble_2022: {}
-      csd-pulse-check-survey-preamble_2222: {}
       csf_be_a_super_digital_citizen:
         content1: यहां वर्णन करें
         markdown: |
@@ -13038,8 +12650,6 @@ hi-IN:
           # मेरा ऑनलाइन पड़ोस
 
           ## आप सुरक्षित रूप से ऑनलाइन स्थानों पर कैसे जाएं?
-      csp-post-survey-2017 preamble 1: {}
-      csp-post-survey-2017 preamble 1_2019: {}
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -13454,7 +13064,6 @@ hi-IN:
         - correct: true
         questions:
         - {}
-      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2018-topics-preamble:
         content1: यहां वर्णन करें
       csp-post-survey-2018-unit-feedback-preamble:
@@ -13483,30 +13092,6 @@ hi-IN:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017 preamble 1: {}
-      csp-pre-survey-2017 preamble 1_2018: {}
-      csp-pre-survey-2017 preamble 1_2021: {}
-      csp-pre-survey-2017 preamble 1_2022: {}
-      csp-pre-survey-2017 preamble 2 cs in general: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2021: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2022: {}
-      csp-pre-survey-2017 preamble 3 this class: {}
-      csp-pre-survey-2017 preamble 3 this class_2018: {}
-      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2021: {}
-      csp-pre-survey-2017 preamble 3 this class_2022: {}
-      csp-pre-survey-2017 preamble 4 the future: {}
-      csp-pre-survey-2017 preamble 4 the future_2018: {}
-      csp-pre-survey-2017 preamble 4 the future_2021: {}
-      csp-pre-survey-2017 preamble 4 the future_2022: {}
-      csp-pre-survey-2017 preamble 5 demographics: {}
-      csp-pre-survey-2017 preamble 5 demographics_2018: {}
-      csp-pre-survey-2017 preamble 5 demographics_2021: {}
-      csp-pre-survey-2017 preamble 5 demographics_2022: {}
       csp-pre-survey-2017-q1:
         answers:
         - correct: true
@@ -14258,8 +13843,6 @@ hi-IN:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017-q36-preamble: {}
-      csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pre-survey-2017-q37:
         answers:
         - correct: true
@@ -14760,7 +14343,6 @@ hi-IN:
         questions:
         - text: इस कोड को ध्यान से देखें। आपके विचार में जब प्रोग्राम चलेगा तो क्या
             होगा?
-      gradek1_activity_beNice: {}
       how-often-consider-alternative-approaches-2019:
         answers:
         - correct: true
@@ -14897,34 +14479,10 @@ hi-IN:
         display_name: अपनी ऐप को अनुकूलित करें
       ml-club app-choice parent_2022:
         display_name: अपनी ऐप को अनुकूलित करें
-      ml-customize apps-practice choice-2021: {}
-      ml-customize apps-practice choice_2022: {}
-      ml-good data-isaac data: {}
-      ml-good data-isaac data_2022: {}
-      ml-good data-kim data: {}
-      ml-good data-kim data_2022: {}
-      ml-good data-kim survey: {}
-      ml-good data-kim survey_2022: {}
       ml-intro app lab-book recommender 5-2021:
         display_name: अपनी ऐप को अनुकूलित करें
       ml-intro app lab-book recommender 5_2022:
         display_name: अपनी ऐप को अनुकूलित करें
-      ml-model card-medical-1-2021: {}
-      ml-model card-medical-1_2022: {}
-      ml-model card-medical-2-2021: {}
-      ml-model card-medical-2_2022: {}
-      ml-model card-medical-3-2021: {}
-      ml-model card-medical-3_2022: {}
-      ml-models in applab-choice parent: {}
-      ml-models in applab-choice parent_2022: {}
-      ml-models-shoe survey: {}
-      ml-models-shoe survey_2022: {}
-      ml-plan survey-copy form: {}
-      ml-plan survey-copy form_2022: {}
-      ml-use model card-pet model card-2021: {}
-      ml-use model card-pet model card_2022: {}
-      ml-use models applab-practice choice-2021: {}
-      ml-use models applab-practice choice_2022: {}
       naturally-better-at-cs:
         answers:
         - correct: true
@@ -15091,9 +14649,6 @@ hi-IN:
         - correct: true
         questions:
         - {}
-      pre-assessment survey heading1: {}
-      pre-assessment survey heading2: {}
-      pre-assessment survey heading3: {}
       pre-assessment survey q1:
         answers:
         - correct: true
@@ -15448,8 +15003,6 @@ hi-IN:
         - correct: true
         questions:
         - {}
-      sample external 1: {}
-      sample external 2: {}
       someone_else_encourage:
         answers:
         - correct: true

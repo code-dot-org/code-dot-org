@@ -111,10 +111,6 @@
             "name": "rajzolj O-t"
           }
         },
-        "2-3 Artist Functions 1": {
-          "draw ear stems": {
-          }
-        },
         "2-3 Artist Functions 10": {
           "big gear": {
             "name": "nagy fogaskerék"
@@ -141,15 +137,11 @@
         "2-3 Artist Functions 2": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "2-3 Artist Functions 4": {
@@ -160,14 +152,6 @@
         "2-3 Artist Functions 9": {
           "draw a snowflake": {
             "name": "rajzolj egy hópelyhet"
-          }
-        },
-        "2-3 Artist Loops 2": {
-          "draw 3 hexagons": {
-          },
-          "draw 4 hexagons": {
-          },
-          "draw 5 hexagons": {
           }
         },
         "2-3 Bee Functions 1": {
@@ -457,23 +441,17 @@
         },
         "Course 4 Bee Params 3": {
           "get 3 nectar": {
-            "name": "get 3 nectar",
-            "parameters": {
-            }
+            "name": "get 3 nectar"
           }
         },
         "Course 4 Bee Params 4": {
           "get 3 nectar": {
-            "name": "get 3 nectar",
-            "parameters": {
-            }
+            "name": "get 3 nectar"
           }
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "get 5 nectar",
-            "parameters": {
-            }
+            "name": "get 5 nectar"
           }
         },
         "Course 4 Bee Params 6": {
@@ -643,9 +621,7 @@
             "name": "rajzolj nyolcszöget"
           },
           "draw octagons": {
-            "name": "rajzolj nyolcszögeket",
-            "parameters": {
-            }
+            "name": "rajzolj nyolcszögeket"
           },
           "shift down": {
             "name": "váltás lefelé"
@@ -677,16 +653,8 @@
           }
         },
         "Course E: Frozen Project_examples2022": {
-          "LOGIC FLOWER": {
-          },
-          "LOGIC FLOWERS": {
-          },
-          "LOGIC FLOWERS2": {
-          },
           "draw a circle": {
-            "name": "kör rajzolása",
-            "parameters": {
-            }
+            "name": "kör rajzolása"
           },
           "draw a house": {
             "name": "rajzoljon egy házat",
@@ -725,21 +693,11 @@
             "parameters": {
               "length": "length"
             }
-          },
-          "small flower": {
           }
         },
         "Course E: Frozen Project_examples_2021": {
-          "LOGIC FLOWER": {
-          },
-          "LOGIC FLOWERS": {
-          },
-          "LOGIC FLOWERS2": {
-          },
           "draw a circle": {
-            "name": "kör rajzolása",
-            "parameters": {
-            }
+            "name": "kör rajzolása"
           },
           "draw a house": {
             "name": "rajzoljon egy házat",
@@ -778,8 +736,6 @@
             "parameters": {
               "length": "length"
             }
-          },
-          "small flower": {
           }
         },
         "Course E: Play Lab Project": {
@@ -789,9 +745,7 @@
         },
         "Course F: Artist Project_Flowers_examples_2021": {
           "draw a circle": {
-            "name": "kör rajzolása",
-            "parameters": {
-            }
+            "name": "kör rajzolása"
           },
           "draw a house": {
             "name": "rajzoljon egy házat",
@@ -834,9 +788,7 @@
         },
         "CourseD_EOC_artist": {
           "draw a circle": {
-            "name": "kör rajzolása",
-            "parameters": {
-            }
+            "name": "kör rajzolása"
           },
           "draw a house": {
             "name": "rajzoljon egy házat",
@@ -879,9 +831,7 @@
         },
         "CourseD_EOC_artist2022": {
           "draw a circle": {
-            "name": "kör rajzolása",
-            "parameters": {
-            }
+            "name": "kör rajzolása"
           },
           "draw a house": {
             "name": "rajzoljon egy házat",
@@ -924,9 +874,7 @@
         },
         "CourseD_EOC_artist_2021": {
           "draw a circle": {
-            "name": "kör rajzolása",
-            "parameters": {
-            }
+            "name": "kör rajzolása"
           },
           "draw a house": {
             "name": "rajzoljon egy házat",
@@ -969,9 +917,7 @@
         },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
-            "name": "kör rajzolása",
-            "parameters": {
-            }
+            "name": "kör rajzolása"
           },
           "draw a house": {
             "name": "rajzoljon egy házat",
@@ -1014,9 +960,7 @@
         },
         "CourseD_EOC_artist_example20212022": {
           "draw a circle": {
-            "name": "kör rajzolása",
-            "parameters": {
-            }
+            "name": "kör rajzolása"
           },
           "draw a house": {
             "name": "rajzoljon egy házat",
@@ -1057,21 +1001,7 @@
             }
           }
         },
-        "CourseF_app_computer": {
-          "reset game": {
-          }
-        },
-        "CourseF_app_computer2022": {
-          "reset game": {
-          }
-        },
-        "CourseF_app_computer_-2022-2": {
-          "reset game": {
-          }
-        },
         "Find the Wizard": {
-          "check guess": {
-          },
           "do something": {
             "name": "csinálj valamit"
           }
@@ -1176,12 +1106,6 @@
           },
           "window": {
             "name": "ablak"
-          }
-        },
-        "Guess The Number": {
-          "check guess": {
-            "parameters": {
-            }
           }
         },
         "InspirationalArtwork": {
@@ -1537,9 +1461,7 @@
         },
         "NEW Course 4 Artist Params 15": {
           "draw a circle": {
-            "name": "kör rajzolása",
-            "parameters": {
-            }
+            "name": "kör rajzolása"
           },
           "draw a house": {
             "name": "rajzoljon egy házat",
@@ -1696,9 +1618,7 @@
         },
         "New Artist Project": {
           "draw a circle": {
-            "name": "kör rajzolása",
-            "parameters": {
-            }
+            "name": "kör rajzolása"
           },
           "draw a house": {
             "name": "rajzoljon egy házat",
@@ -1918,9 +1838,7 @@
             "name": "csinálj valamit"
           },
           "draw a polygon": {
-            "name": "rajzolj sokszöget",
-            "parameters": {
-            }
+            "name": "rajzolj sokszöget"
           },
           "draw a square 20": {
             "description": "rajzolj egy 20 képpont hosszú oldalakból álló negyzetet",
@@ -2727,10 +2645,6 @@
             "name": "rajzolj szélkereket"
           }
         },
-        "courseE_artist_functions1": {
-          "draw ear stems": {
-          }
-        },
         "courseE_artist_functions10": {
           "do something": {
             "name": "csinálj valamit"
@@ -2797,68 +2711,44 @@
             "name": "rajzolj egy sor hatszöget"
           }
         },
-        "courseE_artist_functions1_copy": {
-          "draw ear stems": {
-          }
-        },
-        "courseE_artist_functions1_dani": {
-          "draw ear stems": {
-          }
-        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions22022": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2018": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2019": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2020": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2021": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_dani": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions32022": {
@@ -3476,57 +3366,41 @@
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict12022": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2018": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2019": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2020": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_dani": {
           "draw a square": {
             "name": "rajzoljon egy négyzetet"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict2": {
@@ -3775,8 +3649,6 @@
           },
           "find pumpkin": {
             "name": "keresd meg a sütőtököt"
-          },
-          "wander path": {
           }
         },
         "courseE_farmer_functions11_predict2022": {
@@ -4407,9 +4279,7 @@
         },
         "courseF_artist_fwp9": {
           "draw a circle": {
-            "name": "kör rajzolása",
-            "parameters": {
-            }
+            "name": "kör rajzolása"
           },
           "draw a house": {
             "name": "rajzoljon egy házat",
@@ -4462,9 +4332,7 @@
             "name": "csinálj valamit"
           },
           "draw a polygon": {
-            "name": "rajzolj sokszöget",
-            "parameters": {
-            }
+            "name": "rajzolj sokszöget"
           },
           "draw a square 20": {
             "description": "rajzolj egy 20 képpont hosszú oldalakból álló negyzetet",
@@ -4753,18 +4621,6 @@
         "courseF_bee_variables_5_2020": {
           "collect row": {
             "name": "gyűjtsd be a sort"
-          }
-        },
-        "courseF_bee_variables_6_2018": {
-          "collect stairs": {
-          }
-        },
-        "courseF_bee_variables_6_2019": {
-          "collect stairs": {
-          }
-        },
-        "courseF_bee_variables_6_2020": {
-          "collect stairs": {
           }
         },
         "courseF_bee_variables_7_2018": {

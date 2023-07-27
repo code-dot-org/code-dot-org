@@ -1142,3 +1142,64 @@ km:
             lessonGroup-6:
               display_name: ចុងបញ្ចប់នៃគម្រោង
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-4:
+              display_name: ប្រតិបត្តិដដែលៗ
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-4:
+              display_name: ប្រតិបត្តិដដែលៗ
+          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-4:
+              display_name: ប្រតិបត្តិដដែលៗ
+            lessonGroup-6:
+              display_name: ព្រឹត្តិការណ៍
+            lessonGroup-7:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-4:
+              display_name: ប្រតិបត្តិដដែលៗ
+            lessonGroup-5:
+              display_name: ព្រឹត្តិការណ៍
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-6:
+              display_name: ប្រតិបត្តិដដែលៗ
+            lessonGroup-8:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: អនុ​គមន៍
+            lessonGroup-6:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: អាង(Sprites)
+          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: អាង(Sprites)
+            lessonGroup-3:
+              display_name: លក្ខខណ្ឌ
+            lessonGroup-5:
+              display_name: អ​ថេរ
+            lessonGroup-7:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។

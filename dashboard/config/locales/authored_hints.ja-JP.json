@@ -321,18 +321,8 @@
         "Course 4 Artist Binary Free Play 2b": {
           "Course_4_Artist_Binary_Free_Play_2b_d": "**答え**\n\n<xml><block type=\"when_run\" deletable=\"false\" movable=\"false\"><next><block type=\"controls_for_counter\" inline=\"true\"><mutation counter=\"counter\"></mutation><value name=\"FROM\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><value name=\"TO\"><block type=\"math_number\"><title name=\"NUM\">8</title></block></value><value name=\"BY\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><statement name=\"DO\"><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MINUS</title><value name=\"A\"><block type=\"math_number\"><title name=\"NUM\">16</title></block></value><value name=\"B\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MULTIPLY</title><value name=\"A\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><value name=\"B\"><block type=\"math_number\"><title name=\"NUM\">2</title></block></value></block></value></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">0</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement></block></next></block></next></block></statement><next><block type=\"controls_for_counter\" inline=\"true\"><mutation counter=\"counter\"></mutation><value name=\"FROM\"><block type=\"math_number\"><title name=\"NUM\">8</title></block></value><value name=\"TO\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><value name=\"BY\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value><statement name=\"DO\"><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MINUS</title><value name=\"A\"><block type=\"math_number\"><title name=\"NUM\">16</title></block></value><value name=\"B\"><block type=\"math_arithmetic\" inline=\"true\"><title name=\"OP\">MULTIPLY</title><value name=\"A\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><value name=\"B\"><block type=\"math_number\"><title name=\"NUM\">2</title></block></value></block></value></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">0</title></block></value></block></statement><next><block type=\"controls_repeat_ext\" inline=\"true\"><value name=\"TIMES\"><block type=\"variables_get\"><title name=\"VAR\">counter</title></block></value><statement name=\"DO\"><block type=\"procedures_callnoreturn\" inline=\"true\"><mutation name=\"draw\"><arg name=\"binary\"></arg></mutation><value name=\"ARG0\"><block type=\"text\"><title name=\"TEXT\">1</title></block></value></block></statement></block></next></block></next></block></statement></block></next></block></next></block></xml>"
         },
-        "Course 4 Artist For Loops 11": {
-        },
-        "Course 4 Artist For Loops 11a": {
-        },
-        "Course 4 Artist For Loops 3": {
-        },
         "Course 4 Artist For Loops 4": {
           "Course_4_Artist_For_Loops_4_a": "**一番小さな数字はいくつ？\\\n一番大きな数字はいくつ？\\\nいくつずつ増やせばいい？**\n\nこれらの質問の答えを`まで`ブロックの3つの空らんに入れましょう。"
-        },
-        "Course 4 Artist For Loops Challenge": {
-        },
-        "Course 4 Artist For Loops inspire": {
         },
         "Course 4 Artist Functions Inspiration": {
           "Course_4_Artist_Functions_Inspiration_c": "**答え**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\" inline=\"true\">\n      <mutation counter=\"counter\"></mutation>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">14</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_random\"/>\n            </value>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"procedures_callnoreturn\">\n                  <mutation name=\"draw a square 20\"></mutation>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">20</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant\">\n                            <title name=\"DIR\">turnRight</title>\n                            <title name=\"VALUE\">3</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"draw_turn_by_constant\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <title name=\"VALUE\">100</title>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  </xml>"
@@ -360,20 +350,8 @@
         "Course 4 Artist Vars 8": {
           "Course_4_Artist_Vars_8_a": "てきとうな長さを辺の数で わり算すれば、辺の数が多くなるほど、辺の長さが短くなります。"
         },
-        "Course 4 Bee Params 7": {
-        },
-        "Course 4 Bee Params 8": {
-        },
-        "Course 4 Play Lab Params 2": {
-        },
         "Course 4 Play Lab Vars 2": {
           "Course_4_Play_Lab_Vars_2_a": "変数 `dog_speed` には、変数 `cat_speed` よりも大きな数字をセットしてください。"
-        },
-        "Course 4 Play Labs For Loops 2": {
-        },
-        "Course 4 Playlab For Loops 4b": {
-        },
-        "Course 4 Playlab For Loops 5b": {
         },
         "Course 4 SCF 1": {
           "Course_4_SCF_1_e": "**答え**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n          <mutation name=\"draw a line of hexagons\"></mutation>\n            <next>\n              <block type=\"procedures_callnoreturn\">\n              <mutation name=\"shift down/forward\"></mutation>\n                <next>\n                  <block type=\"procedures_callnoreturn\">\n                  <mutation name=\"draw a line of hexagons\"></mutation>\n                    <next>\n                      <block type=\"procedures_callnoreturn\">\n                      <mutation name=\"shift down/backward\"></mutation>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\">\n  <mutation></mutation>\n    <title name=\"NAME\">draw a hexagon</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">6</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"draw_move\" inline=\"true\">\n            <title name=\"DIR\">moveForward</title>\n            <value name=\"VALUE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">40</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"draw_turn\" inline=\"true\">\n                <title name=\"DIR\">turnRight</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">60</title>\n                  </block>\n                </value>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\">\n  <mutation></mutation>\n    <title name=\"NAME\">shift down/backward</title>\n    <statement name=\"STACK\">\n      <block type=\"draw_turn\" inline=\"true\">\n        <title name=\"DIR\">turnRight</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">60</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"jump\" inline=\"true\">\n            <title name=\"DIR\">jumpForward</title>\n            <value name=\"VALUE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">40</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"draw_turn\" inline=\"true\">\n                <title name=\"DIR\">turnLeft</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">60</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"jump\" inline=\"true\">\n                    <title name=\"DIR\">jumpBackward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">440</title>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\">\n  <mutation></mutation>\n    <title name=\"NAME\">draw a line of hexagons</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n          <mutation name=\"draw a hexagon\"></mutation>\n            <next>\n              <block type=\"jump\" inline=\"true\">\n                <title name=\"DIR\">jumpForward</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">120</title>\n                  </block>\n                </value>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\">\n  <mutation></mutation>\n    <title name=\"NAME\">shift down/forward</title>\n    <statement name=\"STACK\">\n      <block type=\"draw_turn\" inline=\"true\">\n        <title name=\"DIR\">turnRight</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">60</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"jump\" inline=\"true\">\n            <title name=\"DIR\">jumpForward</title>\n            <value name=\"VALUE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">40</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"draw_turn\" inline=\"true\">\n                <title name=\"DIR\">turnLeft</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">60</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"jump\" inline=\"true\">\n                    <title name=\"DIR\">jumpBackward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">320</title>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml>"
@@ -837,10 +815,6 @@
         "Dance_Party_extras_alternate_2019": {
           "alternate": "交互ブロックは「ダンサー」カテゴリーにあります。"
         },
-        "Farmer for Authored Hint testing": {
-        },
-        "Farmer for TTS testing": {
-        },
         "Function intro Ryan": {
           "Function_intro_Ryan_a": "関数はプログラム内で繰り返し呼び出すことができます!  関数を 2 回呼び出して、このパズルをクリアしましょう。",
           "Function_intro_Ryan_b": "関数を正しく呼び出すと、あなたはこの道を行くことになります..."
@@ -1122,18 +1096,8 @@
           "NEW_Course_4_Artist_Functions_13_a": "`draw a line of squares` 関数が、正方形を12コ書くように編集しましょう。",
           "NEW_Course_4_Artist_Functions_13_c": "星を書くには、144度で曲がってみて下さい。"
         },
-        "NEW Course 4 Artist Functions 4": {
-        },
-        "NEW Course 4 Artist Functions 9": {
-        },
-        "NEW Course 4 Artist Params 11": {
-        },
-        "NEW Course 4 Artist Params 13": {
-        },
         "NEW Course 4 Artist Params 14": {
           "NEW_Course_4_Artist_Params_14_a": "何回やっても、だいじょうぶ。いろいろとパラメータをかえて ためしてね。"
-        },
-        "NEW Course 4 Artist Params inspire": {
         },
         "NEW Course 4 Bee For Loops 10a": {
           "NEW_Course_4_Bee_For_Loops_10a_a": "花までの距離とミツの量の関係はわかるかな？",
@@ -1141,8 +1105,6 @@
         },
         "NEW Course 4 Bee For Loops 7": {
           "NEW_Course_4_Bee_For_Loops_7_a": "変数を使って計算しよう。\n\n花までの距離とミツの量の関係はどうなっているかな？"
-        },
-        "NEW Course 4 Bee For Loops 8": {
         },
         "New Minecraft Hero Project": {
           "MC_HOC_2017_13_Cole_a": "Agent に橋を作らせて、アレックス (スティーブ) がマップのはじを歩き回れるようにしましょう。"
@@ -1738,8 +1700,6 @@
           "courseE_playLab_challenge1_a": "勝った時にやること\n\n-   きょうりゅうをけす\n-   リスの動きを止める\n-   リス と きしを うれいし顔にする\n-   はいけいを変える\n-   きしに感謝のことばをしゃべらせる\n-   すべてのキャラをけして、タイトル画面で\"You Win!\" を出す",
           "courseE_playLab_challenge1_b": "負けた時にやること\n\n-   きしをけす\n-   リスをかなしい顔にする\n-   きょうりゅうに何か言わせる\n-   はいけいをかえる\n-   すべてのキャラをけして、タイトル画面で\"Game Over\" を出す"
         },
-        "course4_artist_binary_challenge2": {
-        },
         "course4_artist_concept_challenge2": {
           "courseE_artist_concept_challenge2_a": "いつでも どこでも 風車が かけるよう、関数をつくろう。",
           "courseE_artist_concept_challenge2_b": "次の風車をかく前に 下のコマンドを使ってキャンパスの他の場所に移動しよう。\n\n<xml>  <block type=\"jump_to\">\n    <title name=\"VALUE\">???</title>\n  </block></xml>"
@@ -2280,8 +2240,6 @@
           "courseA_collector_loops_challenge1_c": "どうくつの みぎがわには、6つ ほうせきが あるけど、5かい 南に うごけばいいよね。なぜだか わかる？",
           "courseA_collector_loops_challenge1_d": "さいしょの プログラムでは、さいごの 2つの ほうせきが とれません。いちばん うしろに このブロックを くわえて みて ください：\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
         },
-        "courseA_collector_loops_challenge2": {
-        },
         "courseA_collector_loops_challenge2kp": {
           "courseA_collector_loops_challenge2kp_a": "くりかえしを つかって パズルを クリア できるかな？",
           "courseA_collector_loops_challenge2kp_b": "この みちを ためしてみて。"
@@ -2305,12 +2263,6 @@
         "courseA_collector_loops_challenge2kp_2021": {
           "courseA_collector_loops_challenge2kp_a": "くりかえしを つかって パズルを クリア できるかな？",
           "courseA_collector_loops_challenge2kp_b": "この みちを ためしてみて。"
-        },
-        "courseA_collector_preLoops4": {
-        },
-        "courseA_collector_preLoops5": {
-        },
-        "courseA_collector_preLoops6": {
         },
         "courseA_collector_preLoops7": {
           "courseA_collector_loops2_b": "たからものの ところまで きたら、このブロックで たからものを ゲットします。\n\n<xml>  <block type=\"collector_collect\"/></xml>"
@@ -5459,8 +5411,6 @@
         },
         "courseC_artist_loops7a": {
           "courseC_artist_loops7a_a": "360をまがる角度でわったものが、くりかえしの回数です。\nくりかえしの回数は、あってるかな？"
-        },
-        "courseC_artist_loops7a2022": {
         },
         "courseC_artist_loops7a_2018": {
           "courseC_artist_loops7a_a": "360をまがる角度でわったものが、くりかえしの回数です。\nくりかえしの回数は、あってるかな？"
@@ -12232,14 +12182,6 @@
         "courseF_bee_variables_4a_2021": {
           "courseF_bee_variables_4_2021_1": "変数に1を足す代わりに、毎回、2を足しましょう。"
         },
-        "courseF_clicker_finish_-2022-2": {
-        },
-        "courseF_clicker_score_-2022-2": {
-        },
-        "courseF_collector_freeplay_-2022-2": {
-        },
-        "courseF_collector_score_-2022-2": {
-        },
         "courseF_events_choice_pufferfish": {
           "changeProp": "このブロックも使いましょう。\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
@@ -12251,16 +12193,6 @@
         },
         "courseF_events_key_-2022-2": {
           "changePropBlock": "このブロックも使いましょう。\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
-        },
-        "courseF_groups_behaviors_-2022-2": {
-        },
-        "courseF_groups_costume_-2022-2": {
-        },
-        "courseF_groups_say_-2022-2": {
-        },
-        "courseF_groups_size_-2022-2": {
-        },
-        "courseF_groups_touch_-2022-2": {
         },
         "courseF_playlab_variables1a": {
           "courseF_playlab_variables1a_a": "緑のブロックの“何を叫ぼう？”を“Goal!”に変更しよう。"
@@ -12317,10 +12249,6 @@
         },
         "courseF_text_concat_-2022-2": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "courseF_variables2_click_-2022-2": {
-        },
-        "courseF_variables2_set_-2022-2": {
         },
         "courseF_variables_card_finish": {
           "card_idea1": "別の変数の新しいプロンプトブロックを最初の「応答されたとき」のイベントにつなげると、2番目（または3番目や4番目）のプロンプトを追加できます。\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">名前</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">誕生日には何が欲しい？</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">ギフト</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",

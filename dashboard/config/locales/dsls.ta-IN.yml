@@ -428,19 +428,6 @@ ta-IN:
           கணினிகள் புரிந்துகொள்ளும் அமைப்பில் உங்கள் பெயரைக் குறிக்கும் ஒரு வளையலை உருவாக்கவும்!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
-      BinaryImages-Unplugged: {}
-      BinaryImages-Unplugged_2020: {}
-      Building a UI with Design Mode: {}
-      CSD - Getters and Setters: {}
-      CSD CSS project RGB_2021: {}
-      CSD CSS project RGB_2022: {}
-      CSD CSS project Review_2021: {}
-      CSD CSS project Review_2022: {}
-      CSD End of Unit Survey - Unit 1 - IntroMD_2022: {}
-      CSD Games Parameters challenge_2021: {}
-      CSD Games Parameters challenge_2022: {}
-      CSD Games Properties challenge_2021: {}
-      CSD Games Properties challenge_2022: {}
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -463,20 +450,6 @@ ta-IN:
         display_name: 'ஸ்பிரைட் பண்புகள் '
       CSD Games Properties practice_2022:
         display_name: 'ஸ்பிரைட் பண்புகள் '
-      CSD Games Sprites Challenges_2021: {}
-      CSD Games Sprites Challenges_2022: {}
-      CSD Games Sprites practice_2021: {}
-      CSD Games Sprites practice_2022: {}
-      CSD Games parameters practice_2021: {}
-      CSD Games parameters practice_2022: {}
-      CSD Games variables challenge_2021: {}
-      CSD Games variables challenge_2022: {}
-      CSD Games variables practice_2021: {}
-      CSD Games variables practice_2022: {}
-      CSD HTML project Lists_2021: {}
-      CSD HTML project Lists_2022: {}
-      CSD HTML project Review_2021: {}
-      CSD HTML project Review_2022: {}
       CSD Header Size MC:
         answers:
         - {}
@@ -507,13 +480,6 @@ ta-IN:
         - correct: true
         - {}
         - {}
-      CSD Interactive Animations and Games Post-Project Test: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2021: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2022: {}
-      CSD Physical Computing Post-Project Test: {}
-      CSD Physical Computing Post-Project Test_2021: {}
-      CSD Physical Computing Post-Project Test_2022: {}
-      CSD Student End of Unit Survey - Unit 1_2022: {}
       CSD U1 IOSP match:
         answers:
         - {}
@@ -618,7 +584,6 @@ ta-IN:
           * [பயன்பாடுகள் மற்றும் சிக்கல் தீர்க்கும்]
           (https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
           * [Apps and Problem Solving](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
-      CSD U1 Test: {}
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -703,23 +668,12 @@ ta-IN:
         - {}
         questions:
         - {}
-      CSD U1 Test_2021: {}
-      CSD U1 Test_2022: {}
-      CSD U2 CSS challenge_pilot_2021: {}
-      CSD U2 CSS challenge_pilot_2022: {}
-      CSD U2 CSS practice_pilot_2021: {}
-      CSD U2 CSS practice_pilot_2022: {}
       CSD U2 Design Project:
         content1: விவரம் இங்கே
       CSD U2 Design Project_2018:
         content1: விவரம் இங்கே
       CSD U2 Design Project_2018_2019:
         content1: விவரம் இங்கே
-      CSD U2 Expression Exemplars: {}
-      CSD U2 Expression Exemplars_2018: {}
-      CSD U2 Expression Exemplars_2018_2019: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2021: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2022: {}
       CSD U2 Image challenge_pilot_2021:
         display_name: படங்களைச் சேர்த்தல்
       CSD U2 Image challenge_pilot_2022:
@@ -744,7 +698,6 @@ ta-IN:
         teacher_markdown: |-
           * [வலைத்தளங்களின் நோக்கம்-முன்மாதிரி] (https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit) ([PDF] (https://docs.google.com/doct /1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export? Format = pdf) | [DOCX]
           (https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))
-      CSD U2 L12 Overview: {}
       CSD U2 L2 Overview:
         content1: விவரம் இங்கே
         markdown: |
@@ -872,15 +825,6 @@ ta-IN:
         teacher_markdown: |
           * [Personal Website](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/edit) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=doc))
           * [Personal Website](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/edit) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=doc))
-      CSD U2 PSP Programming: {}
-      CSD U2 PSP Programming_2018: {}
-      CSD U2 PSP Programming_2018_2019: {}
-      CSD U2 Sample CSS layout_2021: {}
-      CSD U2 Sample CSS layout_2022: {}
-      CSD U2 Sample CSS text_2021: {}
-      CSD U2 Sample CSS text_2022: {}
-      CSD U2 Sample classes_2021: {}
-      CSD U2 Sample classes_2022: {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -1070,10 +1014,6 @@ ta-IN:
           4. Amazon.com - அனைத்து வகையான பொருட்களுக்கும் ஆன்லைன் ஷாப்பிங் தளங்கள்
           4. Yahoo.com - ஒரு தேடுபொறி, மின்னஞ்சல் வழங்குநர் மற்றும் செய்தி ஆதாரம்
           5. Wikipedia.org - பயனர்களால் உருவாக்கப்பட்ட உள்ளடக்கத்துடன் ஒரு இலவச கலைக்களஞ்சியம்
-      CSD U2 Top Websites_2018: {}
-      CSD U2 Top Websites_2018_2019: {}
-      CSD U2 Top Websites_2018_2019_pilot_2021: {}
-      CSD U2 Top Websites_2018_2019_pilot_2022: {}
       CSD U2 expand project:
         content1: விவரம் இங்கே
       CSD U2 expand project_2018:
@@ -1119,12 +1059,6 @@ ta-IN:
         - {}
         - {}
         - {}
-      CSD U2 layout style challenge_pilot_2021: {}
-      CSD U2 layout style challenge_pilot_2022: {}
-      CSD U2 layout style practice_pilot_2021: {}
-      CSD U2 layout style practice_pilot_2022: {}
-      CSD U2 links challenge_2021: {}
-      CSD U2 links challenge_2022: {}
       CSD U2 lists match:
         answers:
         - {}
@@ -1174,8 +1108,6 @@ ta-IN:
         content1: விவரம் இங்கே
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: விவரம் இங்கே
-      CSD U3 - Design a Game 1 - ExampleChoice_2022: {}
-      CSD U3 - Interactive Card - ExampleChoice_2022: {}
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1241,11 +1173,6 @@ ta-IN:
         - {}
         - {}
         - {}
-      CSD U3 AnimationsMulti STOP project guide: {}
-      CSD U3 AnimationsMulti STOP project guide_2018: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022: {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1315,9 +1242,6 @@ ta-IN:
           * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
           * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
           * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
-      CSD U3 Defender SFLP: {}
-      CSD U3 Entertainment: {}
-      CSD U3 Entertainment_2018_2019: {}
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -1388,14 +1312,6 @@ ta-IN:
         - {}
         - {}
         - {}
-      CSD U3 Lesson Overview 1: {}
-      CSD U3 Lesson Overview 10: {}
-      CSD U3 Lesson Overview 11: {}
-      CSD U3 Lesson Overview 12: {}
-      CSD U3 Lesson Overview 13: {}
-      CSD U3 Lesson Overview 14: {}
-      CSD U3 Lesson Overview 2: {}
-      CSD U3 Lesson Overview 3: {}
       CSD U3 Lesson Overview 4:
         markdown: |
           # மேலோட்டம்
@@ -1428,13 +1344,6 @@ ta-IN:
           ## Resources
 
           * [Introduction to Variables](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
-      CSD U3 Lesson Overview 6: {}
-      CSD U3 Lesson Overview 7: {}
-      CSD U3 Lesson Overview 8: {}
-      CSD U3 Lesson Overview 9: {}
-      CSD U3 Movement Challenges: {}
-      CSD U3 Project Build a Game SFLP: {}
-      CSD U3 SFLP Velocity: {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
@@ -1667,7 +1576,6 @@ ta-IN:
         - {}
         questions:
         - {}
-      CSD U3 Using the Game Design Process SLFP: {}
       CSD U3 combining rep:
         content1: விவரம் இங்கே
       CSD U3 combining rep_2018:
@@ -1718,8 +1626,6 @@ ta-IN:
         - {}
         - {}
         - {}
-      CSD U3 drawing challenges_2021: {}
-      CSD U3 drawing challenges_2022: {}
       CSD U3 drawing practice choice_2021:
         display_name: பயிற்சி
       CSD U3 drawing practice choice_2022:
@@ -1889,22 +1795,6 @@ ta-IN:
         - correct: true
         questions:
         - {}
-      CSD U4L01 SFLP: {}
-      CSD U4L02 SFLP: {}
-      CSD U4L03 SFLP: {}
-      CSD U4L04 SFLP: {}
-      CSD U4L05 SFLP: {}
-      CSD U4L06 SFLP: {}
-      CSD U4L07 SFLP: {}
-      CSD U4L08 SFLP: {}
-      CSD U4L09 SFLP: {}
-      CSD U4L10 SFLP: {}
-      CSD U4L11 SFLP: {}
-      CSD U4L12 SFLP: {}
-      CSD U4L13 SFLP: {}
-      CSD U4L15 SFLP: {}
-      CSD U4L16 SFLP: {}
-      CSD U4L17 SFLP: {}
       CSD U5 Encryption 1:
         content1: விவரம் இங்கே
       CSD U5 Encryption 1_2018:
@@ -1937,7 +1827,6 @@ ta-IN:
         content1: விவரம் இங்கே
       CSD U5 student record_2018_2019:
         content1: விவரம் இங்கே
-      CSD U5 test: {}
       CSD U5 test clean multi:
         answers:
         - {}
@@ -2079,43 +1968,30 @@ ta-IN:
         - {}
         questions:
         - {}
-      CSD U5 test_2021: {}
-      CSD U5 test_2022: {}
       CSD U6 - Accelerometer - Chal_2222:
         display_name: சவால் நிலைகள்
-      CSD U6 - Accelerometer - Prac_2222: {}
       CSD U6 - Board Inputs - Chal_2222:
         display_name: சவால் நிலைகள்
-      CSD U6 - Board Inputs - Prac_2222: {}
       CSD U6 - Board Outputs - Chal_2222:
         display_name: சவால் நிலைகள்
-      CSD U6 - Board Outputs - Prac_2222: {}
       CSD U6 - Color LEDs - Chal_2222:
         display_name: சவால் நிலைகள்
-      CSD U6 - Color LEDs - Prac_2222: {}
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: சவால் நிலைகள்
-      CSD U6 - Combine Inputs - Prac_2222: {}
-      CSD U6 - Functions - Prac_2222: {}
       CSD U6 - If Variables - Chal_2222:
         display_name: சவால் நிலைகள்
       CSD U6 - Music - Chal_2222:
         display_name: சவால் நிலைகள்
       CSD U6 - Physical Input - Chal_2222:
         display_name: சவால் நிலைகள்
-      CSD U6 - Physical Input - Prac_2222: {}
       CSD U6 - Physical Output - Chal_2222:
         display_name: சவால் நிலைகள்
-      CSD U6 - Physical Output - Prac_2222: {}
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: சவால் நிலைகள்
-      CSD U6 - Screen Inputs - Prac_2222: {}
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: சவால் நிலைகள்
-      CSD U6 - Screen Outputs - Prac_2222: {}
       CSD U6 - Sensors - Chal_2222:
         display_name: சவால் நிலைகள்
-      CSD U6 - Sensors - Prac_2222: {}
       CSD U6 LED create intro:
         content1: விவரம் இங்கே
       CSD U6 LED create intro_2018:
@@ -2156,10 +2032,6 @@ ta-IN:
         - correct: true
         questions:
         - {}
-      CSD U6 circuit smart bike blinker build: {}
-      CSD U6 circuit smart bike blinker build_2018: {}
-      CSD U6 circuit smart bike blinker build_2018_2019: {}
-      CSD U6 circuit smart bike blinker build_2021: {}
       CSD U6 final intro:
         content1: விவரம் இங்கே
       CSD U6 final intro_2018:
@@ -2168,10 +2040,6 @@ ta-IN:
         content1: விவரம் இங்கே
       CSD U6 final intro_2021:
         content1: விவரம் இங்கே
-      CSD U6 game project stop: {}
-      CSD U6 game project stop_2018: {}
-      CSD U6 game project stop_2018_2019: {}
-      CSD U6 game project stop_2021: {}
       CSD U6 setProperty predict multi:
         answers:
         - {}
@@ -2343,108 +2211,26 @@ ta-IN:
         - {}
         questions:
         - {}
-      CSD U6 tugowar stop: {}
-      CSD U6 tugowar stop_2018: {}
-      CSD U6 tugowar stop_2018_2019: {}
-      CSD U6 tugowar stop_2021: {}
-      CSD User Centered Design Post-Project Test: {}
-      CSD User Centered Design Post-Project Test_2021: {}
-      CSD User Centered Design Post-Project Test_2022: {}
-      CSD Web Development Post-Project Test: {}
-      CSD Web Development Post-Project Test_pilot_2021: {}
-      CSD Web Development Post-Project Test_pilot_2022: {}
-      CSD Web Headings challenge_2021: {}
-      CSD Web Headings challenge_2022: {}
-      CSD Web Headings practice_2021: {}
-      CSD Web Headings practice_2022: {}
-      CSD Web Sample Pages_2021: {}
-      CSD Web Sample Pages_2022: {}
       CSD games cake challenge choice_2021:
         display_name: சவால்கள்
       CSD games cake challenge choice_2022:
         display_name: சவால்கள்
-      CSD games collisions challenge choice_2021: {}
-      CSD games collisions challenge choice_2022: {}
-      CSD games collisions practice choice_2021: {}
-      CSD games collisions practice choice_2022: {}
-      CSD games functions challenge choice_2021: {}
-      CSD games functions challenge choice_2022: {}
-      CSD games functions practice choice_2021: {}
-      CSD games functions practice choice_2022: {}
-      CSD games istouching challenge choice_2021: {}
-      CSD games istouching challenge choice_2022: {}
-      CSD games istouching practice choice_2021: {}
-      CSD games istouching practice choice_2022: {}
-      CSD games movement2 challenge choice_2021: {}
-      CSD games movement2 challenge choice_2022: {}
-      CSD games movement2 practice choice_2021: {}
-      CSD games movement2 practice choice_2022: {}
       CSD games platform challenge choice_2021:
         display_name: சவால்கள்
       CSD games platform challenge choice_2022:
         display_name: சவால்கள்
-      CSD games random challenge_2021: {}
-      CSD games random challenge_2022: {}
-      CSD games random practice_2021: {}
-      CSD games random practice_2022: {}
-      CSD games velocity challenge choice_2021: {}
-      CSD games velocity challenge choice_2022: {}
-      CSD games velocity practice choice_2021: {}
-      CSD games velocity practice choice_2022: {}
-      CSD web classes challenge_2021: {}
-      CSD web classes challenge_2022: {}
-      CSD web classes practice_2021: {}
-      CSD web classes practice_2022: {}
-      CSD web conditionals challenge choice_2021: {}
-      CSD web conditionals challenge choice_2022: {}
-      CSD web conditionals practice choice_2021: {}
-      CSD web conditionals practice choice_2022: {}
-      CSD web draw loop challenge choice_2021: {}
-      CSD web draw loop challenge choice_2022: {}
       CSD web draw loop practice choice_2021:
         display_name: பயிற்சி
       CSD web draw loop practice choice_2022:
         display_name: பயிற்சி
-      CSD web keyboard challenge choice_2021: {}
-      CSD web keyboard challenge choice_2022: {}
-      CSD web keyboard practice choice_2021: {}
-      CSD web keyboard practice choice_2022: {}
-      CSD web mouse challenge choice_2021: {}
-      CSD web mouse challenge choice_2022: {}
-      CSD web mouse practice choice_2021: {}
-      CSD web mouse practice choice_2022: {}
-      CSD web movement challenge choice_2021: {}
-      CSD web movement challenge choice_2022: {}
       CSD web movement practice choice_2021:
         display_name: பயிற்சி
       CSD web movement practice choice_2022:
         display_name: பயிற்சி
-      CSD web text challenge choice_2021: {}
-      CSD web text challenge choice_2022: {}
       CSD web text practice choice_2021:
         display_name: பயிற்சி
       CSD web text practice choice_2022:
         display_name: பயிற்சி
-      CSD-U5-SFLP ASCII and Binary Representation: {}
-      CSD-U5-SFLP Automating Data Decisions: {}
-      CSD-U5-SFLP Combining Representations: {}
-      CSD-U5-SFLP Create a Representation: {}
-      CSD-U5-SFLP Interpreting Data: {}
-      CSD-U5-SFLP Making Decisions with Data: {}
-      CSD-U5-SFLP Patterns and Representation: {}
-      CSD-U5-SFLP Problem Solving and Data: {}
-      CSD-U5-SFLP Problem Solving with Big Data: {}
-      CSD-U5-SFLP Representation Matters: {}
-      CSD-U5-SFLP Representing Images: {}
-      CSD-U5-SFLP Representing Numbers Part 1: {}
-      CSD-U5-SFLP Representing Numbers Part 2: {}
-      CSD-U5-SFLP Solve a Data Problem: {}
-      'CSD: getText vs getNumber': {}
-      'CSD: setProperty': {}
-      CSDU6 Innovation: {}
-      CSDU6 Innovation_2018: {}
-      CSDU6 Innovation_2018_2019: {}
-      CSDU6 Innovation_2021: {}
       CSP PD Example Question 1:
         answers:
         - {}
@@ -2457,7 +2243,6 @@ ta-IN:
         - {}
         questions:
         - {}
-      CSP pre-assessment survey: {}
       Choose 2 Test:
         answers:
         - correct: true
@@ -2466,7 +2251,6 @@ ta-IN:
         - {}
         questions:
         - {}
-      Choosing Good IDs: {}
       ConditionalsWithCards-Unplugged:
         markdown: "# கார்டுகளுடன் நிபந்தனைகள்\n\nஅட்டை விளையாட்டை விளையாடி, \"நான்
           சிவப்பு அட்டை எடுத்தால், எனக்கு ஒரு புள்ளி கிடைக்கும்\" மற்றும் \"நான் கருப்பு
@@ -2720,7 +2504,6 @@ ta-IN:
           * நிகழ்தகவு, நோய் எதிர்ப்பு சக்தி, தடுப்பூசிகள் மற்றும் பல!
 
           உங்கள் உருவகப்படுத்துதல் மாதிரியை மற்றவர்களுடன் பகிர்ந்து கொள்ளலாம் அல்லது ஒரு வைரஸ் நகரத்திற்கு வரும்போது மற்றவர்களை ஆரோக்கியமாக வைத்திருக்க நாங்கள் என்ன செய்ய முடியும் என்று நீங்கள் நினைக்கிறீர்கள் என்பது பற்றிய செய்தியைப் பகிரலாம்.
-      Crowdsourcing-Unplugged: {}
       Dance_Party_extras_intro:
         markdown: "# தொடர்ந்து நடனமாடுங்கள்! \n\nபகுதி 2-க்காக, நீங்கள் உங்களுக்குச்
           சொந்தமாகத் திட்டப்பணியை உருவாக்கப் போகிறீர்கள். இங்கே புதிர்கள் எதுவும்
@@ -2831,10 +2614,6 @@ ta-IN:
 
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
           </div>
-      Design a Screen for your App_2018: {}
-      Design a Screen for your App_2018_2019: {}
-      Design a Screen for your App_2021: {}
-      Design a Screen for your App_2022: {}
       DesigningForAccessibilityMarkdownLevel2022:
         markdown: |-
           # அணுகலுக்கான வடிவமைப்பு
@@ -2875,8 +2654,6 @@ ta-IN:
           * மாற்றுத்திறனாளிகளுக்கு அணுகக்கூடிய பயன்பாடுகளை வடிவமைப்பது, அந்த பயன்பாடுகளை மற்ற அனைவருக்கும் சிறந்ததாக்கும்!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
-      DigitalCitizenship-Unplugged: {}
-      DigitalFootprint-Unplugged: {}
       DigitalSharing-Unplugged:
         markdown: "\n# டிஜிட்டல் பகிர்வு\n\nஇந்தப் பாடத்தில், குறிப்பாக டிஜிட்டல்
           சூழலில், உரிமை மற்றும் பதிப்புரிமைக்கு மதிப்பளிப்பதில் உள்ள சவால்கள் மற்றும்
@@ -2893,10 +2670,6 @@ ta-IN:
         markdown: "\n# டிஜிட்டல் பகிர்வு\n\nஇந்தப் பாடத்தில், குறிப்பாக டிஜிட்டல்
           சூழலில், உரிமை மற்றும் பதிப்புரிமைக்கு மதிப்பளிப்பதில் உள்ள சவால்கள் மற்றும்
           நன்மைகளை நீங்கள் கருத்தில் கொள்வீர்கள்.  "
-      ECSPD1 computational thinker: {}
-      Embedded Video Test: {}
-      EnvelopeVariables-Unplugged: {}
-      EnvelopeVariables-Unplugged_2020: {}
       EnvelopeVariables-Unplugged_2021_2:
         markdown: "# வெற்று விண்வெளி கதைகள்\n\nஇந்தப் பாடத்தில், வெற்று இடக் கதைகளைப்
           பயன்படுத்தவும் எழுதவும் கற்றுக் கொள்வீர்கள். இது கணினி அறிவியலுடன் எவ்வாறு
@@ -2908,8 +2681,6 @@ ta-IN:
       Eval Contracts F:
         answers:
         - ''
-      Example App Types_2018: {}
-      Example App Types_2018_2019: {}
       ForLoopFun-Unplugged:
         markdown: "# லூப் வேடிக்கைக்காக\n\nசுழல்கள் மீண்டும் மீண்டும் விஷயங்களைச்
           செய்ய அனுமதிக்கின்றன என்பதை நாங்கள் அறிவோம், ஆனால் இப்போது கூடுதல் கட்டமைப்பைக்
@@ -2942,7 +2713,6 @@ ta-IN:
           # லூபி பெறுதல்
 
           இந்த பாடம் ஒரு நடன நடவடிக்கையின் மூலம் சுழல்களின் நிரலாக்க கருத்தை அறிமுகப்படுத்துகிறது.
-      GoingPlacesSafely-unplugged: {}
       GraphPaperProgramming-Unplugged:
         markdown: |-
           # வரைபட காகித நிரலாக்கம்
@@ -2963,8 +2733,6 @@ ta-IN:
           # வரைபட காகித நிரலாக்கம்
 
           படங்களை வரைய உங்கள் வகுப்பு தோழர்கள் பயன்படுத்தக்கூடிய அல்காரிதங்களை எழுதுங்கள்.
-      HappyLoops-Unplugged: {}
-      HappyLoops-Unplugged_2020: {}
       HappyMaps-Unplugged:
         markdown: |-
           # இனிய வரைபடங்கள்
@@ -3365,12 +3133,6 @@ ta-IN:
           * **E** என்பது ஆங்கிலத்தில் மிகவும் பொதுவாகப் பயன்படுத்தப்படும் எழுத்து என்பது உங்களுக்கு தெரியுமா?
           ###மீண்டும் கூடி விவாதிக்கவும்
           அதனுடன் சிறிது நேரம் விளையாடிய பின்பு, நீங்கள் யாரோ ஒருவருடன் இணைந்திருக்க வேண்டும் - கூட்டாளி, சிறிய குழு, ஒட்டு மொத்த வகுப்பு - நீங்கள் என்ன கண்டீர்கள் என்பதை விவாதிக்கவும், என்ன நடக்கிறது என்பதையும், அந்தக் கருவியை நீங்கள் பயன்படுத்தக்கூடிய பல்வேறு வழிகளையும் நீங்கள் அறிவீர்கள் என்பதை சரிபார்க்கவும்.
-      OPD-K5 About: {}
-      OPD-K5 About_copy: {}
-      OPD-K5 About_dani: {}
-      OPD-K5 Assessment: {}
-      OPD-K5 Assessment_copy: {}
-      OPD-K5 Assessment_dani: {}
       OPD-K5 CS Courses:
         markdown: |-
           # திட்டமிடல்> Code.org இல் தொடங்குதல்
@@ -3516,21 +3278,6 @@ ta-IN:
           ***
           ## படி 4: கற்பிக்கத் தொடங்குங்கள்!
           கணினி அறிவியல் கருத்துக்களை உங்கள் வகுப்பறைக்குள் கொண்டுவருவதற்கான ஒரு படிப்பினை மட்டுமே இது எடுக்கும். சி.எஸ்ஸிற்கான உங்கள் மாணவர்களின் ஆர்வத்தை நீங்கள் கண்டவுடன், உங்கள் மாணவர்களுக்கு வழிகாட்டும் தினசரி பாடம் திட்டங்கள், கணினி இல்லாமல் நீங்கள் செய்யக்கூடிய பிரிக்கப்படாத நடவடிக்கைகள் மற்றும் பிற ஆசிரியர்களுடன் இணைவதற்கான மன்றங்களுடன் மேலும் செல்லுங்கள்.
-      OPD-K5 CS Courses_dani: {}
-      OPD-K5 CS Tips: {}
-      OPD-K5 CS Tips_copy: {}
-      OPD-K5 CS Tips_dani: {}
-      OPD-K5 Celebrate: {}
-      OPD-K5 Celebrate_dani: {}
-      OPD-K5 Congrats: {}
-      OPD-K5 CongratsFinal: {}
-      OPD-K5 CongratsFinal_dani: {}
-      OPD-K5 Congrats_dani: {}
-      OPD-K5 Connect: {}
-      OPD-K5 Connect_copy: {}
-      OPD-K5 Connect_dani: {}
-      OPD-K5 Culture: {}
-      OPD-K5 Culture_dani: {}
       OPD-K5 Outline:
         markdown: |-
           # தொடங்குதல் > பாட அவுட்லைன்
@@ -3623,7 +3370,6 @@ ta-IN:
           - இந்தப் பாடத்திட்டத்தைப் பற்றிய உங்கள் கருத்துகளையும் கருத்துக்களையும் பகிர்ந்து கொள்ளுங்கள்
 
           > **குறிப்பு**: உங்கள் கற்றலைத் திட்டமிட உதவும் வகையில் பரிந்துரைக்கப்பட்ட நேரங்கள் மேலே வழங்கப்பட்டுள்ளன. உங்கள் முன் அறிவு, ஆர்வம் மற்றும் திறன் ஆகியவற்றைப் பொறுத்து, கொடுக்கப்பட்ட மேடையில் நீங்கள் அதிகமாகவோ அல்லது குறைவாகவோ நேரத்தைச் செலவிட விரும்பலாம் என்பதை நினைவில் கொள்ளவும். இந்த பாடநெறி முற்றிலும் சுய-வேகமானது என்பதை நினைவில் கொள்ளுங்கள்; நீங்கள் எப்பொழுதும் படிப்பை விட்டுவிட்டு திரும்பி வரலாம் அல்லது எந்த நேரத்திலும் எந்த நிலை அல்லது நிலையை மீண்டும் பார்க்கலாம்.
-      OPD-K5 Outline_copy: {}
       OPD-K5 Outline_dani:
         markdown: |-
           # தொடங்குதல் > பாட அவுட்லைன்
@@ -3716,75 +3462,14 @@ ta-IN:
           - இந்தப் பாடத்திட்டத்தைப் பற்றிய உங்கள் கருத்துகளையும் கருத்துக்களையும் பகிர்ந்து கொள்ளுங்கள்
 
           > **குறிப்பு**: உங்கள் கற்றலைத் திட்டமிட உதவும் வகையில் பரிந்துரைக்கப்பட்ட நேரங்கள் மேலே வழங்கப்பட்டுள்ளன. உங்கள் முன் அறிவு, ஆர்வம் மற்றும் திறன் ஆகியவற்றைப் பொறுத்து, கொடுக்கப்பட்ட மேடையில் நீங்கள் அதிகமாகவோ அல்லது குறைவாகவோ நேரத்தைச் செலவிட விரும்பலாம் என்பதை நினைவில் கொள்ளவும். இந்த பாடநெறி முற்றிலும் சுய-வேகமானது என்பதை நினைவில் கொள்ளுங்கள்; நீங்கள் எப்பொழுதும் படிப்பை விட்டுவிட்டு திரும்பி வரலாம் அல்லது எந்த நேரத்திலும் எந்த நிலை அல்லது நிலையை மீண்டும் பார்க்கலாம்.
-      OPD-K5 Pair: {}
-      OPD-K5 Pair_copy: {}
-      OPD-K5 Pair_dani: {}
-      OPD-K5 Participation: {}
-      OPD-K5 Participation_copy: {}
-      OPD-K5 Participation_dani: {}
-      OPD-K5 PostSurvey: {}
-      OPD-K5 PostSurvey_dani: {}
-      OPD-K5 PreSurvey: {}
-      OPD-K5 PreSurvey_dani: {}
-      OPD-K5 Puzzles: {}
-      OPD-K5 Puzzles_dani: {}
       OPD-K5 Reviewing Reflections:
         content1: விவரம் இங்கே
-      OPD-K5 Stage10Start: {}
-      OPD-K5 Stage10Start_copy: {}
-      OPD-K5 Stage10Start_dani: {}
-      OPD-K5 Stage1Go: {}
-      OPD-K5 Stage1Go_dani: {}
-      OPD-K5 Stage2Go: {}
-      OPD-K5 Stage2Go_copy: {}
-      OPD-K5 Stage2Go_dani: {}
-      OPD-K5 Stage2Overview: {}
-      OPD-K5 Stage2Overview_dani: {}
-      OPD-K5 Stage3Go: {}
-      OPD-K5 Stage3Go_dani: {}
-      OPD-K5 Stage3Start: {}
-      OPD-K5 Stage3Start_copy: {}
-      OPD-K5 Stage3Start_dani: {}
       OPD-K5 Stage3aGo:
         content1: விவரம் இங்கே
       OPD-K5 Stage3aGo_copy:
         content1: விவரம் இங்கே
       OPD-K5 Stage3aGo_dani:
         content1: விவரம் இங்கே
-      OPD-K5 Stage4Go: {}
-      OPD-K5 Stage4Go_copy: {}
-      OPD-K5 Stage4Go_dani: {}
-      OPD-K5 Stage4Review: {}
-      OPD-K5 Stage4Review_dani: {}
-      OPD-K5 Stage4Start: {}
-      OPD-K5 Stage4Start_copy: {}
-      OPD-K5 Stage4Start_dani: {}
-      OPD-K5 Stage5Go: {}
-      OPD-K5 Stage5Go_copy: {}
-      OPD-K5 Stage5Go_dani: {}
-      OPD-K5 Stage5Review: {}
-      OPD-K5 Stage5Review_dani: {}
-      OPD-K5 Stage5Start: {}
-      OPD-K5 Stage5Start_copy: {}
-      OPD-K5 Stage5Start_dani: {}
-      OPD-K5 Stage6Go: {}
-      OPD-K5 Stage6Go_copy: {}
-      OPD-K5 Stage6Go_dani: {}
-      OPD-K5 Stage6Review: {}
-      OPD-K5 Stage6Review_dani: {}
-      OPD-K5 Stage6Start: {}
-      OPD-K5 Stage6Start_copy: {}
-      OPD-K5 Stage6Start_dani: {}
-      OPD-K5 Stage7Go: {}
-      OPD-K5 Stage7Go_copy: {}
-      OPD-K5 Stage7Go_dani: {}
-      OPD-K5 Stage7Start: {}
-      OPD-K5 Stage7Start_copy: {}
-      OPD-K5 Stage7Start_dani: {}
-      OPD-K5 Stage8Go: {}
-      OPD-K5 Stage8Go_dani: {}
-      OPD-K5 Stage8Start: {}
-      OPD-K5 Stage8Start_dani: {}
       OPD-K5 Stage9Go:
         markdown: |
           # திட்டமிடல் > மதிப்பாய்வு
@@ -3854,24 +3539,6 @@ ta-IN:
           ஆசிரியர் டாஷ்போர்டின் ஸ்கிரீன்ஷாட் கீழே உள்ளது. அதைப் பார்க்க, உங்கள் Code.org ஆசிரியர் கணக்கில் உள்நுழைய வேண்டும் - நீங்கள் உள்நுழைந்ததும், Code.org இணையதளத்தில் நீங்கள் பார்க்கும் இயல்புநிலைத் திரையில் அது இருக்க வேண்டும். உங்களிடம் ஆசிரியர் கணக்கு இல்லையென்றால், நீங்கள் **[இங்கே பதிவு செய்யலாம்]
 
           ![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)
-      OPD-K5 Using CS: {}
-      OPD-K5 Using CS_dani: {}
-      OPD-K5 Vocabulary: {}
-      OPD-K5 Vocabulary_dani: {}
-      OPD-K5 Welcome 2: {}
-      OPD-K5 Welcome 2_copy: {}
-      OPD-K5 Welcome 2_dani: {}
-      OPD-K5 What is Mastery: {}
-      OPD-K5 What is Mastery_copy: {}
-      OPD-K5 What is Mastery_dani: {}
-      OPD-K5 Why teach CS: {}
-      OPD-K5 Why teach CS_copy: {}
-      OPD-K5 Why teach CS_dani: {}
-      OPD-K5 Younger Grades: {}
-      OPD-K5 Younger Grades_dani: {}
-      OPD-K5 Your Plan: {}
-      OPD-K5 Your Plan_copy: {}
-      OPD-K5 Your Plan_dani: {}
       OPD-K5 conditionals introduced:
         content1: விவரம் இங்கே
       OPD-K5 debugging:
@@ -3926,16 +3593,6 @@ ta-IN:
         content1: விவரம் இங்கே
       OPD-K5-projects-1:
         content1: விவரம் இங்கே
-      OPD-Stage3Start: {}
-      OPD-Stage3Start_dani: {}
-      'Overview: Design Mode': {}
-      'Overview: If Statements': {}
-      'Overview: Images': {}
-      'Overview: onEvent': {}
-      'Overview: setPosition': {}
-      PDK5 Foundations F: {}
-      PDK5 Intro C: {}
-      PS U3 Assessment1 new: {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -4000,9 +3657,6 @@ ta-IN:
         - {}
         questions:
         - {}
-      PicturingData-Unplugged: {}
-      PicturingData-Unplugged_2020: {}
-      PowerOfWords-Unplugged: {}
       PowerOfWords-Unplugged2022_2022_pilot_-2022-2:
         markdown: "# வார்த்தைகளின் சக்தி\n\n## யாராவது இணையத்தில் மோசமான அல்லது புண்படுத்தும்
           மொழியைப் பயன்படுத்தினால் நீங்கள் என்ன செய்ய வேண்டும்? "
@@ -4012,11 +3666,8 @@ ta-IN:
       PowerOfWords-Unplugged_2021:
         markdown: "# வார்த்தைகளின் சக்தி\n\n## யாராவது இணையத்தில் மோசமான அல்லது புண்படுத்தும்
           மொழியைப் பயன்படுத்தினால் நீங்கள் என்ன செய்ய வேண்டும்? "
-      PowerfulPasswords-Unplugged: {}
       Prepare for your presentation:
         content1: விவரம் இங்கே
-      Prepare for your presentation_2018: {}
-      PrivatePersonalInformation-Unplugged: {}
       PrivatePersonalInformation-Unplugged2022:
         markdown: |-
           # தனிப்பட்ட மற்றும் தனிப்பட்ட தகவல்
@@ -4052,17 +3703,11 @@ ta-IN:
           # ரிலே புரோகிராமிங்
 
           குழுக்களாகப் பிரிந்து படங்களை வரையும் நிரல்களை எழுத ஒன்றாக வேலை செய்யுங்கள்.
-      Responding to User Input: {}
-      Sample CSP Assessment: {}
-      ScreenOutTheMean-Unplugged: {}
-      SimonSays-Unplugged: {}
-      SimonSays-Unplugged_2020: {}
       SimonSays-Unplugged_2021:
         markdown: |-
           # அல்காரிதத்தைப் பின்பற்றவும்
 
           ஒரு விளையாட்டை விளையாடுங்கள் மற்றும் சரியான முடிவைப் பெற என்ன கட்டளைகள் தேவை என்பதைப் பற்றி சிந்தியுங்கள்.
-      Social Sleuth_2018_2019: {}
       Songwriting-Unplugged:
         markdown: |-
           #பாடல் எழுதுதல்
@@ -4083,12 +3728,6 @@ ta-IN:
           #பாடல் எழுதுதல்
 
           செயல்பாடுகளை வரையறுத்தல் மற்றும் அழைப்பது பற்றி அறிய பாடலில் கோரஸின் கருத்தைப் பயன்படுத்தவும்.
-      Student End of Unit Survey - Intro+TeacherMD_csd2-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd3-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd4-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd5-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd6-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd7-2022: {}
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -4109,12 +3748,6 @@ ta-IN:
         - correct: true
         questions:
         - {}
-      Student End of Unit Survey_csd2-2022: {}
-      Student End of Unit Survey_csd3-2022: {}
-      Student End of Unit Survey_csd4-2022: {}
-      Student End of Unit Survey_csd5-2022: {}
-      Student End of Unit Survey_csd6-2022: {}
-      Student End of Unit Survey_csd7-2022: {}
       Submittable Multi:
         answers:
         - text: நீலம்
@@ -4276,11 +3909,6 @@ ta-IN:
           கணினி என்றால் என்ன - முன்மாதிரி
           (https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing) - செயல்பாட்டு வழிகாட்டி ([PDF]
           (https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))
-      Unit 2 Lesson 10 Overview: {}
-      Unit 2 Lesson 16 Overview: {}
-      Unit 2 Lesson 7 Overview: {}
-      Unit 2 Lesson 8 Overview: {}
-      Video - The Future of Big Data: {}
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -4391,8 +4019,6 @@ ta-IN:
         - correct: true
         questions:
         - {}
-      aiml-ch1-pulse-survey_2021: {}
-      aiml-ch1-pulse-survey_2022: {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -4487,9 +4113,6 @@ ta-IN:
         - correct: true
         questions:
         - {}
-      aiml-intro-pulse-survey_2021: {}
-      aiml-intro-pulse-survey_2022: {}
-      aiml-pulse-check-survey-1-levelgroup Ch2_2021: {}
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
@@ -4545,8 +4168,6 @@ ta-IN:
         - correct: true
         questions:
         - {}
-      aiml-pulse-check-survey-preamble_2021: {}
-      allthethings_bubble_choice: {}
       allthethings_external_displayed_as_unplugged:
         content1: விவரம் இங்கே
       allthethings_external_not_displayed_as_unplugged:
@@ -5221,10 +4842,6 @@ ta-IN:
         description: நீங்கள் உங்கள் இறுதி திட்டத்தை தொடங்க உள்ளீர்கள். நீங்கள் தொடங்குவதற்கு
           முன், எடுத்துக்காட்டு திட்டங்களைப் பார்க்க சிறிது நேரம் செலவிடுங்கள்.
         display_name: திட்ட எடுத்துக்காட்டுகள்
-      courseD_external_binary1: {}
-      courseD_external_binary1_2018: {}
-      courseD_external_binary1_2018_2019: {}
-      courseD_external_binary1_2018_2019_2020: {}
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: அ
@@ -6638,8 +6255,6 @@ ta-IN:
           text: கலைஞர் இடையில் ஒரு சிறிய இடைவெளியுடன் இரண்டு சதுரங்களை வரைவார்.
         questions:
         - text: 'நீங்கள் "ரன்" அழுத்தினால் என்ன நடக்கும்? '
-      courseE_project_exemplars_2019: {}
-      courseE_project_exemplars_2019_2020: {}
       courseE_swim_fish_behavior_predict12022:
         answers:
         - feedback: 'தவறானது. டம்பல்வீட் உருள ஆரம்பிக்கும் '
@@ -6670,7 +6285,6 @@ ta-IN:
             செய்த பிறகு என்ன நடக்கும்? '
       courseExpress_EOC_2020:
         display_name: பாடநெறி திட்டத்தின் முடிவு
-      courseExpress_project_exemplars_2019_2020: {}
       courseF_EOC_2020:
         description: 'நீங்கள் F பாடத்தின் முடிவை அடைந்துவிட்டீர்கள்! உருவாக்க ஒரு
           திட்டத்தை தேர்வு செய்யவும். '
@@ -6802,12 +6416,6 @@ ta-IN:
           text: 'ஸ்ப்ரைட் முதலில் சுழன்று பின்னர் நகரும். '
         questions:
         - text: 'குறியீட்டைப் படித்து, பின்னர் கணிக்கவும். '
-      courseF_external_variableConstant: {}
-      courseF_external_variableConstant_2018: {}
-      courseF_external_variableConstant_2018_2019: {}
-      courseF_external_variableConstant_2018_2019_2020: {}
-      courseF_groups_freeplay_2022_pilot_-2022-2: {}
-      courseF_groups_practice_2022_pilot_-2022-2: {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
@@ -6861,28 +6469,6 @@ ta-IN:
         questions:
         - text: 'இந்தக் குறியீடு தெரிந்திருக்கலாம் ஆனால் கவனமாகப் படியுங்கள். பயனர்
             "பீட்சா" என தட்டச்சு செய்தால் என்ன அச்சிடப்படும்? '
-      courseF_markdown_algorithms_end: {}
-      courseF_markdown_algorithms_intro: {}
-      courseF_markdown_conditionals_end: {}
-      courseF_markdown_conditionals_intro: {}
-      courseF_markdown_debugging_end: {}
-      courseF_markdown_debugging_intro: {}
-      courseF_markdown_forloops_end: {}
-      courseF_markdown_forloops_end_2019: {}
-      courseF_markdown_forloops_end_2019_2020: {}
-      courseF_markdown_forloops_intro: {}
-      courseF_markdown_forloops_intro_2019: {}
-      courseF_markdown_forloops_intro_2019_2020: {}
-      courseF_markdown_loops_end: {}
-      courseF_markdown_loops_intro: {}
-      courseF_markdown_nestedloops_end: {}
-      courseF_markdown_nestedloops_intro: {}
-      courseF_markdown_variables_end: {}
-      courseF_markdown_variables_end_2019: {}
-      courseF_markdown_variables_end_2019_2020: {}
-      courseF_markdown_variables_intro: {}
-      courseF_markdown_variables_intro_2019: {}
-      courseF_markdown_variables_intro_2019_2020: {}
       courseF_multi_artist_for10_predict1:
         answers:
         - {}
@@ -7182,8 +6768,6 @@ ta-IN:
         - {}
         questions:
         - {}
-      courseF_project_exemplars_2019: {}
-      courseF_project_exemplars_2019_2020: {}
       courseF_sprites_freeplay:
         description: 'நீங்கள் விரும்பியதை உருவாக்குவது உங்கள் முறை! நீங்கள் என்ன மாதிரியான
           திட்டத்தை உருவாக்குவீர்கள்? '
@@ -7473,12 +7057,6 @@ ta-IN:
           text: கலைஞர் நான்கு சதுரங்களை ஒன்றன் மேல் ஒன்றாக வரைவார்.
         questions:
         - text: '"ரன்" பொத்தானை அழுத்தினால் என்ன நடக்கும்?'
-      csd-post-survey-2017-implementation-student: {}
-      csd-post-survey-2017-implementation-teacher: {}
-      csd-post-survey-2017-implementation-teacher_2019: {}
-      csd-post-survey-2017-levelgroup: {}
-      csd-post-survey-2017-levelgroup-2018-2nd-semester: {}
-      csd-post-survey-2017-levelgroup_2018: {}
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -8007,11 +7585,6 @@ ta-IN:
         - correct: true
         questions:
         - {}
-      csd-post-survey-intro-2019: {}
-      csd-post-survey-levelgroup-2018: {}
-      csd-post-survey-levelgroup_2019: {}
-      csd-post-survey-markdown-with-link-to-survey_2021: {}
-      csd-post-survey-markdown-with-link-to-survey_2022: {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -8173,55 +7746,6 @@ ta-IN:
         title: சிஎஸ் கண்டுபிடிப்புகள் மாணவர் முன் படிப்பு ஆய்வு
       csd-pre-survey-levelgroup_21_22_2022:
         title: சிஎஸ் கண்டுபிடிப்புகள் மாணவர் முன் படிப்பு ஆய்வு
-      csd-pulse-check-survey-1-levelgroup U1Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2021: {}
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
@@ -10697,15 +10221,6 @@ ta-IN:
         - correct: true
         questions:
         - {}
-      csd-pulse-check-survey-preamble: {}
-      csd-pulse-check-survey-preamble_2018: {}
-      csd-pulse-check-survey-preamble_2018_2019: {}
-      csd-pulse-check-survey-preamble_2019: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2021: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2022: {}
-      csd-pulse-check-survey-preamble_2021: {}
-      csd-pulse-check-survey-preamble_2022: {}
-      csd-pulse-check-survey-preamble_2222: {}
       csf_be_a_super_digital_citizen:
         content1: விவரம் இங்கே
         markdown: |-
@@ -10838,8 +10353,6 @@ ta-IN:
           # எனது ஆன்லைன் சுற்றுப்புறம்
 
           ## ஆன்லைனில் பாதுகாப்பாக இடங்களுக்குச் செல்வது எப்படி?
-      csp-post-survey-2017 preamble 1: {}
-      csp-post-survey-2017 preamble 1_2019: {}
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -11254,7 +10767,6 @@ ta-IN:
         - correct: true
         questions:
         - {}
-      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2018-topics-preamble:
         content1: விவரம் இங்கே
       csp-post-survey-2018-unit-feedback-preamble:
@@ -11283,30 +10795,6 @@ ta-IN:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017 preamble 1: {}
-      csp-pre-survey-2017 preamble 1_2018: {}
-      csp-pre-survey-2017 preamble 1_2021: {}
-      csp-pre-survey-2017 preamble 1_2022: {}
-      csp-pre-survey-2017 preamble 2 cs in general: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2021: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2022: {}
-      csp-pre-survey-2017 preamble 3 this class: {}
-      csp-pre-survey-2017 preamble 3 this class_2018: {}
-      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2021: {}
-      csp-pre-survey-2017 preamble 3 this class_2022: {}
-      csp-pre-survey-2017 preamble 4 the future: {}
-      csp-pre-survey-2017 preamble 4 the future_2018: {}
-      csp-pre-survey-2017 preamble 4 the future_2021: {}
-      csp-pre-survey-2017 preamble 4 the future_2022: {}
-      csp-pre-survey-2017 preamble 5 demographics: {}
-      csp-pre-survey-2017 preamble 5 demographics_2018: {}
-      csp-pre-survey-2017 preamble 5 demographics_2021: {}
-      csp-pre-survey-2017 preamble 5 demographics_2022: {}
       csp-pre-survey-2017-q1:
         answers:
         - correct: true
@@ -12058,8 +11546,6 @@ ta-IN:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017-q36-preamble: {}
-      csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pre-survey-2017-q37:
         answers:
         - correct: true
@@ -12551,7 +12037,6 @@ ta-IN:
         questions:
         - text: இந்த குறியீட்டை கவனமாக பாருங்கள். நிரல் இயங்கும்போது என்ன நடக்கும்
             என்று நீங்கள் நினைக்கிறீர்கள்?
-      gradek1_activity_beNice: {}
       how-often-consider-alternative-approaches-2019:
         answers:
         - correct: true
@@ -12688,34 +12173,10 @@ ta-IN:
         display_name: உங்கள் பயன்பாட்டைத் தனிப்பயனாக்குங்கள்
       ml-club app-choice parent_2022:
         display_name: உங்கள் பயன்பாட்டைத் தனிப்பயனாக்குங்கள்
-      ml-customize apps-practice choice-2021: {}
-      ml-customize apps-practice choice_2022: {}
-      ml-good data-isaac data: {}
-      ml-good data-isaac data_2022: {}
-      ml-good data-kim data: {}
-      ml-good data-kim data_2022: {}
-      ml-good data-kim survey: {}
-      ml-good data-kim survey_2022: {}
       ml-intro app lab-book recommender 5-2021:
         display_name: உங்கள் பயன்பாட்டைத் தனிப்பயனாக்குங்கள்
       ml-intro app lab-book recommender 5_2022:
         display_name: உங்கள் பயன்பாட்டைத் தனிப்பயனாக்குங்கள்
-      ml-model card-medical-1-2021: {}
-      ml-model card-medical-1_2022: {}
-      ml-model card-medical-2-2021: {}
-      ml-model card-medical-2_2022: {}
-      ml-model card-medical-3-2021: {}
-      ml-model card-medical-3_2022: {}
-      ml-models in applab-choice parent: {}
-      ml-models in applab-choice parent_2022: {}
-      ml-models-shoe survey: {}
-      ml-models-shoe survey_2022: {}
-      ml-plan survey-copy form: {}
-      ml-plan survey-copy form_2022: {}
-      ml-use model card-pet model card-2021: {}
-      ml-use model card-pet model card_2022: {}
-      ml-use models applab-practice choice-2021: {}
-      ml-use models applab-practice choice_2022: {}
       naturally-better-at-cs:
         answers:
         - correct: true
@@ -12884,9 +12345,6 @@ ta-IN:
         - correct: true
         questions:
         - {}
-      pre-assessment survey heading1: {}
-      pre-assessment survey heading2: {}
-      pre-assessment survey heading3: {}
       pre-assessment survey q1:
         answers:
         - correct: true
@@ -13241,8 +12699,6 @@ ta-IN:
         - correct: true
         questions:
         - {}
-      sample external 1: {}
-      sample external 2: {}
       someone_else_encourage:
         answers:
         - correct: true
