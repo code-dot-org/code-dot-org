@@ -5,6 +5,7 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import $ from 'jquery';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+
 import {
   CourseOfferingCategories,
   CourseOfferingHeaders,
@@ -24,7 +25,8 @@ import {
   translatedCourseOfferingDeviceCompatibilityLevels,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import ImageInput from './ImageInput';
-
+import Select from 'react-select';
+import 'react-select/dist/react-select.css';
 const translatedNoneOption = `(${i18n.none()})`;
 
 const useCourseOffering = initialCourseOffering => {
@@ -43,6 +45,7 @@ export default function CourseOfferingEditor(props) {
   const [error, setError] = useState(null);
   const [isSaving, setIsSaving] = useState(false);
   const [lastSaved, setLastSaved] = useState(null);
+  const [thumbnail, setThumbnail] = useState(null);
 
   const handleSave = (event, shouldCloseAfterSave) => {
     event.preventDefault();
@@ -113,6 +116,50 @@ export default function CourseOfferingEditor(props) {
     return deviceCompatibilities
       ? JSON.parse(deviceCompatibilities)[device]
       : translatedNoneOption;
+  };
+
+  const handleVideoSelection = e => {
+    if (e) {
+      const videoUrl = e.value !== 'None' ? e.value : null;
+      setThumbnail(e.thumbnail);
+      updateCourseOffering('video', videoUrl);
+    } else {
+      //Handles clear button
+      setThumbnail(null);
+      updateCourseOffering('video', null);
+    }
+  };
+
+  const noneOption = {
+    value: 'None',
+    label: (
+      <div style={styles.dropdownLabel}>
+        <div style={styles.label}>{translatedNoneOption}</div>
+      </div>
+    ),
+    name: 'None',
+    thumbnail: null,
+  };
+
+  const renderedOptions = [
+    noneOption,
+    ...props.videos.map(video => ({
+      value: video.youtube_url,
+      label: (
+        <div style={styles.dropdownLabel}>
+          <div style={styles.label}>{`${video.name} - ${video.locale}`}</div>
+        </div>
+      ),
+      name: `${video.name} - ${video.locale}`,
+      thumbnail: video.thumbnail,
+    })),
+  ];
+
+  //Filters the video options by name
+  const filterOption = (candidate, input) => {
+    return candidate.name === 'None'
+      ? true
+      : candidate.name.toLowerCase().includes(input.toLowerCase());
   };
 
   return (
@@ -282,6 +329,26 @@ export default function CourseOfferingEditor(props) {
         showPreview={true}
         helpTipText={'Image used to market the curriculum around the site.'}
       />
+      <label style={styles.videoContainer}>
+        Video
+        <HelpTip>
+          <p>
+            Search and select the corresponding video for the course offering.
+          </p>
+        </HelpTip>
+        <div style={{width: '75%'}}>
+          <Select
+            options={renderedOptions}
+            filterOption={filterOption}
+            value={
+              courseOffering.video === null ? 'None' : courseOffering.video
+            }
+            onChange={handleVideoSelection}
+            defaultValue={translatedNoneOption}
+          />
+        </div>
+        {thumbnail && <img src={thumbnail} style={styles.image} />}
+      </label>
       <label>
         CS Topic
         <HelpTip>
@@ -428,6 +495,7 @@ CourseOfferingEditor.propTypes = {
     description: PropTypes.string,
     professional_learning_program: PropTypes.string,
     self_paced_pl_course_offering_id: PropTypes.number,
+    video: PropTypes.string,
   }),
   selfPacedPLCourseOfferings: PropTypes.arrayOf(
     PropTypes.shape({
@@ -437,6 +505,15 @@ CourseOfferingEditor.propTypes = {
     })
   ),
   professionalLearningProgramPaths: PropTypes.objectOf(PropTypes.string),
+  videos: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+      youtube_url: PropTypes.string,
+      thumbnail: PropTypes.string,
+      locale: PropTypes.string,
+    })
+  ),
 };
 
 const styles = {
@@ -447,6 +524,23 @@ const styles = {
     width: '75%',
     height: '75px',
   },
+  dropdown: {
+    margin: '0 6px',
+  },
+  dropdownLabel: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingRight: '10px',
+    cursor: 'pointer',
+  },
+  image: {
+    width: 100,
+    marginLeft: 5,
+    borderStyle: 'solid',
+    borderWidth: 1,
+  },
   input: {
     width: '100%',
     boxSizing: 'border-box',
@@ -456,7 +550,11 @@ const styles = {
     borderRadius: 4,
     margin: 0,
   },
-  dropdown: {
-    margin: '0 6px',
+  label: {
+    paddingLeft: 4,
+  },
+  videoContainer: {
+    display: 'flex',
+    alignItems: 'center',
   },
 };

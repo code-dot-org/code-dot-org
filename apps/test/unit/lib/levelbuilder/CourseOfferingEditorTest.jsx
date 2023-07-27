@@ -35,6 +35,7 @@ describe('CourseOfferingEditor', () => {
         description: 'An introductory course into computer science.',
         professional_learning: 'code.org/apply',
         self_paced_pl_course_offering_id: 1,
+        video: 'https://www.youtube-nocookie.com/test_video',
       },
       selfPacedPLCourseOfferings: [
         {
@@ -57,6 +58,15 @@ describe('CourseOfferingEditor', () => {
         'K5 Workshops': 'code.org/professional-development-workshops',
         '6-12 Workshops': 'code.org/apply',
       },
+      video: [
+        {
+          id: 1,
+          name: 'test_video',
+          youtube_url: 'https://www.youtube-nocookie.com/test_video',
+          thumbnail: null,
+          locale: 'en-US',
+        },
+      ],
     };
   });
 

@@ -16,11 +16,14 @@ function showCourseOfferingEditor() {
     'professionalLearningProgramPaths'
   );
 
+  const videos = getScriptData('videos');
+
   ReactDOM.render(
     <CourseOfferingEditor
       initialCourseOffering={courseOfferingEditorData}
       selfPacedPLCourseOfferings={selfPacedPLCourseOfferings}
       professionalLearningProgramPaths={professionalLearningProgramPaths}
+      videos={videos}
     />,
     document.getElementById('course_offering_editor')
   );
