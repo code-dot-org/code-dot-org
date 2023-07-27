@@ -1,6 +1,12 @@
 # syntax=docker/dockerfile:1
 
+# Pull in the static assets and db seed layers
+# built from separate dockerfiles by skaffold
 ARG CODE_ORG_STATIC
+ARG CODE_ORG_DB_SEED
+
+FROM $CODE_ORG_STATIC as code.org-static
+FROM $CODE_ORG_DB_SEED as code.org-db-seed
 
 ################################################################################
 FROM ubuntu:22.04 as code.org-base
@@ -181,8 +187,6 @@ RUN \
   yarn install --frozen-lockfile --ignore-scripts && \
   true
 
-FROM $CODE_ORG_STATIC as code.org-static
-
 ################################################################################
 FROM code.org-user-utils
 ################################################################################
@@ -194,7 +198,11 @@ RUN \
   git init && \
   true
 
+# Link in large static assets built in a separate dockerfile
 COPY --from=code.org-static --link / ./
+
+# Link in levels and other db seed data built in a separate dockerfile
+COPY --from=code.org-db-seed --link / ./
 
 # Copy in apps/node_modules (built in parallel)
 COPY --from=code.org-node_modules --link ${SRC}/apps/node_modules ./apps/node_modules
