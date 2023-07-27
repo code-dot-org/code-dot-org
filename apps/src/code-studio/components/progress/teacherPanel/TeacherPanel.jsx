@@ -33,6 +33,7 @@ import {
   queryLockStatus,
 } from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
+import DCDO from '@cdo/apps/dcdo';
 
 class TeacherPanel extends React.Component {
   static propTypes = {
@@ -243,10 +244,12 @@ class TeacherPanel extends React.Component {
               )}
             </div>
           )}
-          <SortByNameDropdown
-            sortByStyles={styles.sortBy}
-            selectStyles={styles.select}
-          />
+          {!!DCDO.get('family-name-features', false) && (
+            <SortByNameDropdown
+              sortByStyles={styles.sortBy}
+              selectStyles={styles.select}
+            />
+          )}
           {viewAs === ViewType.Instructor && (students || []).length > 0 && (
             <StudentTable
               levelsWithProgress={levelsWithProgress}
