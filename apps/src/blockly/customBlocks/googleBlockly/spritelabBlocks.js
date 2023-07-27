@@ -5,6 +5,7 @@ import {
   blockShadowingPairs,
   updateShadowedBlockImage,
 } from '@cdo/apps/blockly/addons/cdoBlockShadow';
+import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 
 export const blocks = {
@@ -13,14 +14,15 @@ export const blocks = {
   initializeMiniToolbox() {
     // Function to toggle the flyout visibility
     const createFlyoutField = function (block) {
+      const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
       const flyoutField = new Blockly.FieldFlyout(_, {
-        flyoutKey: `flyout_${block.type}`,
+        flyoutKey: flyoutKey,
         sizingBehavior: 'fitContent',
         name: 'FLYOUT',
       });
       block
         .appendDummyInput('flyout_input')
-        .appendField(flyoutField, `flyout_${block.type}`);
+        .appendField(flyoutField, flyoutKey);
       return flyoutField;
     };
 
@@ -79,7 +81,7 @@ export const blocks = {
     if (this.workspace.rendered) {
       const parentBlockId = this.id;
       this.workspace.registerToolboxCategoryCallback(
-        `flyout_${this.type}`,
+        CdoFieldFlyout.getFlyoutId(this),
         function (workspace) {
           let blocks = [];
           miniToolboxBlocks.forEach(blockType =>
@@ -143,7 +145,9 @@ export const blocks = {
 
       this.loadExtraState = function (state) {
         this.parentBlockId = state['parentBlockId'];
-        updateShadowedBlockImage(this, true, this.parentBlockId);
+        if (this.parentBlockId) {
+          updateShadowedBlockImage(this, true, this.parentBlockId);
+        }
       };
 
       this.onchange = function (event) {

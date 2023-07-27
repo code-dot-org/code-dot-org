@@ -27,6 +27,10 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     return new CdoFieldFlyout(options.flyoutKey, options);
   }
 
+  static getFlyoutId(block) {
+    return `flyout_${block.type}_${block.id}`;
+  }
+
   EDITABLE = false;
   CURSOR = 'default';
 
@@ -131,7 +135,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
       this.flyout_.init(this.workspace_);
     }
     isVisible
-      ? this.flyout_.show(`flyout_${this.sourceBlock_.type}`)
+      ? this.flyout_.show(CdoFieldFlyout.getFlyoutId(this.sourceBlock_))
       : this.flyout_.hide();
     this.forceRerender();
   }
