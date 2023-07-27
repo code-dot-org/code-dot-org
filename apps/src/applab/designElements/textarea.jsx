@@ -37,6 +37,11 @@ class TextAreaProperties extends React.Component {
           isIdRow
         />
         <PropertyRow
+          desc={applabMsg.designElementProperty_text()}
+          initialValue={$(element).text()}
+          handleChange={this.props.handleChange.bind(this, 'text')}
+        />
+        <PropertyRow
           desc={applabMsg.designElementProperty_widthPx()}
           isNumber
           initialValue={parseInt(element.style.width, 10)}
