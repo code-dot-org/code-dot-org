@@ -1575,10 +1575,6 @@
           "swimming left and right": "nedar cap a l'esquerra i cap a la dreta",
           "wandering": "deambular"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "growing": "créixer",
           "jittering": "tremolar",
@@ -3027,8 +3023,6 @@
           "spinning right": "voltejar cap a la dreta",
           "wandering": "deambular",
           "wobbling": "balancejar"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "créixer",

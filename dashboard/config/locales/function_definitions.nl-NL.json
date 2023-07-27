@@ -7,17 +7,7 @@
             "name": "x"
           }
         },
-        "2-3 Artist 12": {
-          "details": {
-          },
-          "draw eyebrow": {
-          },
-          "draw pupil": {
-          }
-        },
         "2-3 Artist 3.4": {
-          "draw a car": {
-          },
           "draw a circle": {
             "name": "teken een cirkel"
           }
@@ -31,68 +21,14 @@
           }
         },
         "2-3 Artist Debugging 10": {
-          "draw R pad": {
-          },
-          "draw a button": {
-          },
           "draw a circle": {
             "name": "teken een cirkel"
-          },
-          "draw cord": {
           },
           "draw square": {
             "parameters": {
               "height": "hoogte",
               "width": "breedte"
             }
-          },
-          "jump to controller top left": {
-          },
-          "jump to middle": {
-          }
-        },
-        "2-3 Artist Debugging 5": {
-          "draw a head": {
-          },
-          "draw body and arms": {
-            "parameters": {
-            }
-          },
-          "draw left leg": {
-          },
-          "draw right leg": {
-          }
-        },
-        "2-3 Artist Debugging 6": {
-          "draw arms": {
-          },
-          "draw head": {
-          },
-          "draw left leg": {
-          },
-          "draw right leg": {
-          },
-          "draw sitting stick figure": {
-          },
-          "jump to neck": {
-          }
-        },
-        "2-3 Artist Debugging 7": {
-          "draw D": {
-          },
-          "draw E": {
-          },
-          "draw O": {
-          }
-        },
-        "2-3 Artist Functions 1": {
-          "draw ear stems": {
-          }
-        },
-        "2-3 Artist Functions 10": {
-          "big gear": {
-          },
-          "small gear": {
           }
         },
         "2-3 Artist Functions 11": {
@@ -113,15 +49,11 @@
         "2-3 Artist Functions 2": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "2-3 Artist Functions 4": {
@@ -132,54 +64,6 @@
         "2-3 Artist Functions 9": {
           "draw a snowflake": {
             "name": "teken een sneeuwvlok"
-          }
-        },
-        "2-3 Artist Loops 2": {
-          "draw 3 hexagons": {
-          },
-          "draw 4 hexagons": {
-          },
-          "draw 5 hexagons": {
-          }
-        },
-        "2-3 Bee Functions 1": {
-          "get 2 nectar": {
-          }
-        },
-        "2-3 Bee Functions 10": {
-          "collect purple nectar": {
-          }
-        },
-        "2-3 Bee Functions 2": {
-          "get 5": {
-          }
-        },
-        "2-3 Bee Functions 4": {
-          "move and get nectar": {
-          }
-        },
-        "2-3 Bee Functions 5": {
-          "move and get 4": {
-          }
-        },
-        "2-3 Bee Functions 6": {
-          "move and get 4": {
-          }
-        },
-        "2-3 Bee Functions 8": {
-          "get 7 nectar make 7 honey": {
-          }
-        },
-        "2-3 Bee Functions 9": {
-          "get 7 make 7": {
-          }
-        },
-        "2-3 Bee Functions Assessment 1": {
-          "get 7": {
-          }
-        },
-        "2-3 Bee Functions Assessment 2": {
-          "move and get 3": {
           }
         },
         "4-5 Artist 3": {
@@ -193,42 +77,8 @@
           }
         },
         "4-5 Artist 7": {
-          "draw a car": {
-          },
           "draw a circle": {
             "name": "teken een cirkel"
-          },
-          "draw triangle": {
-          }
-        },
-        "4-5 Artist 8": {
-          "draw circle": {
-          },
-          "draw goal": {
-          }
-        },
-        "4-5 Bee Conditionals 7": {
-          "check purple flower": {
-          }
-        },
-        "4-5 Bee Conditionals 8": {
-          "check flower make honey": {
-          }
-        },
-        "4-5 Bee Conditionals Assessment 1": {
-          "get nectar or make honey": {
-          }
-        },
-        "4-5 Bee Debugging 7": {
-          "make 3 honey": {
-          }
-        },
-        "4-5 Bee Debugging 8": {
-          "get 5 nectar": {
-          }
-        },
-        "4-5 Bee Debugging 9": {
-          "make all honey": {
           }
         },
         "Alien Defender": {
@@ -250,21 +100,11 @@
             }
           }
         },
-        "Choose Your Own Adventure": {
-          "starting path": {
-          },
-          "story": {
-          },
-          "witch ending": {
-          }
-        },
         "Course 4 Artist Binary 1": {
           "draw": {
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 2": {
@@ -272,8 +112,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 3": {
@@ -281,8 +119,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 4": {
@@ -290,8 +126,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 5": {
@@ -299,8 +133,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 6": {
@@ -308,8 +140,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary 7": {
@@ -317,8 +147,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary Free Play 2": {
@@ -326,8 +154,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary Free Play 2a": {
@@ -335,8 +161,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary Free Play 2b": {
@@ -344,64 +168,12 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "Course 4 Artist Binary pre1": {
           "draw": {
             "parameters": {
               "binary": "binaire"
-            }
-          },
-          "draw bit": {
-          }
-        },
-        "Course 4 Artist Functions Inspiration": {
-          "draw a square 20": {
-          }
-        },
-        "Course 4 Artist Functions challenge": {
-          "draw a line of squares": {
-          },
-          "draw a square 20": {
-          }
-        },
-        "Course 4 Bee Params 1": {
-          "get 3 nectar": {
-          }
-        },
-        "Course 4 Bee Params 2": {
-          "get 3 nectar": {
-          }
-        },
-        "Course 4 Bee Params 3": {
-          "get 3 nectar": {
-            "parameters": {
-            }
-          }
-        },
-        "Course 4 Bee Params 4": {
-          "get 3 nectar": {
-            "parameters": {
-            }
-          }
-        },
-        "Course 4 Bee Params 5": {
-          "get 5 nectar": {
-            "parameters": {
-            }
-          }
-        },
-        "Course 4 Bee Params 6": {
-          "get 5 nectar": {
-            "parameters": {
-            }
-          }
-        },
-        "Course 4 Bee Params 7": {
-          "get many nectar": {
-            "parameters": {
             }
           }
         },
@@ -418,8 +190,6 @@
           }
         },
         "Course 4 Play Lab Params 10": {
-          "level_up": {
-          },
           "score_points": {
             "parameters": {
               "points": "punten"
@@ -502,14 +272,6 @@
         "Course 4 SCF 1": {
           "draw a hexagon": {
             "name": "teken een zeskant"
-          },
-          "draw a line of hexagons": {
-          },
-          "draw a square 20": {
-          },
-          "shift down/backward": {
-          },
-          "shift down/forward": {
           }
         },
         "Course 4 SCF 1a": {
@@ -520,27 +282,9 @@
             }
           }
         },
-        "Course 4 SCF 1b": {
-          "make honey up and over": {
-          }
-        },
-        "Course 4 SCF 2": {
-          "draw a square 20": {
-          },
-          "draw an octagon": {
-          },
-          "draw octagons": {
-            "parameters": {
-            }
-          },
-          "shift down": {
-          }
-        },
         "Course 4 SCF 3": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a square 20": {
           },
           "draw an octagon": {
             "parameters": {
@@ -559,12 +303,6 @@
           }
         },
         "Course E: Frozen Project_examples2022": {
-          "LOGIC FLOWER": {
-          },
-          "LOGIC FLOWERS": {
-          },
-          "LOGIC FLOWERS2": {
-          },
           "draw a circle": {
             "description": "teken een cirkel met gegeven straal",
             "name": "teken een cirkel",
@@ -613,17 +351,9 @@
             "parameters": {
               "length": "lengte"
             }
-          },
-          "small flower": {
           }
         },
         "Course E: Frozen Project_examples_2021": {
-          "LOGIC FLOWER": {
-          },
-          "LOGIC FLOWERS": {
-          },
-          "LOGIC FLOWERS2": {
-          },
           "draw a circle": {
             "description": "teken een cirkel met gegeven straal",
             "name": "teken een cirkel",
@@ -672,8 +402,6 @@
             "parameters": {
               "length": "lengte"
             }
-          },
-          "small flower": {
           }
         },
         "Course E: Play Lab Project": {
@@ -981,28 +709,12 @@
             }
           }
         },
-        "CourseF_app_computer": {
-          "reset game": {
-          }
-        },
-        "CourseF_app_computer2022": {
-          "reset game": {
-          }
-        },
-        "CourseF_app_computer_-2022-2": {
-          "reset game": {
-          }
-        },
         "Find the Wizard": {
-          "check guess": {
-          },
           "do something": {
             "name": "do iets"
           }
         },
         "FoodFight": {
-          "level_up": {
-          },
           "score_points": {
             "parameters": {
               "points": "punten"
@@ -1038,54 +750,16 @@
           "diamond": {
             "name": "diamant"
           },
-          "draw a door": {
-          },
           "draw a house": {
             "name": "teken een huis"
-          },
-          "draw grass": {
-          },
-          "draw windows": {
-          },
-          "rectangle": {
-          },
-          "square": {
-          },
-          "sun": {
-          },
-          "triangle": {
-          },
-          "window": {
           }
         },
         "Geometric Sun_2018": {
           "diamond": {
             "name": "diamant"
           },
-          "draw a door": {
-          },
           "draw a house": {
             "name": "teken een huis"
-          },
-          "draw grass": {
-          },
-          "draw windows": {
-          },
-          "rectangle": {
-          },
-          "square": {
-          },
-          "sun": {
-          },
-          "triangle": {
-          },
-          "window": {
-          }
-        },
-        "Guess The Number": {
-          "check guess": {
-            "parameters": {
-            }
           }
         },
         "InspirationalArtwork": {
@@ -1118,8 +792,6 @@
             "parameters": {
               "size": "grootte"
             }
-          },
-          "n-sided shape": {
           }
         },
         "K-1 Artist2 3": {
@@ -1290,36 +962,6 @@
             "name": "functie 2"
           }
         },
-        "NEW Course 4 Artist Functions 11": {
-          "draw a line of  squares": {
-          },
-          "draw a line of squares": {
-          },
-          "draw a square 20": {
-          }
-        },
-        "NEW Course 4 Artist Functions 12": {
-          "draw a line of squares": {
-          },
-          "draw a square 20": {
-          }
-        },
-        "NEW Course 4 Artist Functions 13": {
-          "draw a line of squares": {
-          },
-          "draw a square 20": {
-          }
-        },
-        "NEW Course 4 Artist Functions 14": {
-          "draw a line of squares": {
-          },
-          "draw a square 20": {
-          },
-          "draw a square 40": {
-          },
-          "empty function": {
-          }
-        },
         "NEW Course 4 Artist Functions 3": {
           "draw a square": {
             "name": "teken een vierkant"
@@ -1349,8 +991,6 @@
           }
         },
         "NEW Course 4 Artist Params 1": {
-          "Draw a triangle": {
-          },
           "draw a square": {
             "name": "teken een vierkant"
           }
@@ -1644,22 +1284,6 @@
             }
           }
         },
-        "Robot Doodle": {
-          "25 pixel square": {
-          },
-          "draw eye": {
-          },
-          "draw head": {
-          }
-        },
-        "Robot Doodle_2018": {
-          "25 pixel square": {
-          },
-          "draw eye": {
-          },
-          "draw head": {
-          }
-        },
         "Standalone_Artist_7": {
           "draw a flower": {
             "name": "teken een bloem"
@@ -1688,55 +1312,21 @@
         "course3_artist_functions_challenge1": {
           "do something": {
             "name": "do iets"
-          },
-          "my design": {
           }
         },
         "course3_artist_functions_challenge2": {
           "do something": {
             "name": "do iets"
-          },
-          "my design": {
           }
         },
         "course3_bee_functions_challenge1": {
           "do something": {
             "name": "do iets"
-          },
-          "get 3 nectar or honey": {
           }
         },
         "course3_bee_functions_challenge2": {
           "do something": {
             "name": "do iets"
-          },
-          "move and collect": {
-          }
-        },
-        "course3_bee_functions_challenge3": {
-          "check nectar or honey": {
-          },
-          "row of nectar": {
-          },
-          "rowOfNectar": {
-          }
-        },
-        "course3_bee_functions_challenge4": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          },
-          "row of nectar": {
-          },
-          "rowOfNectar": {
-          }
-        },
-        "course3_playLab_challenge1": {
-          "keep playing": {
-          },
-          "lose game": {
-          },
-          "win game": {
           }
         },
         "course4_artist_binary_challenge1": {
@@ -1744,8 +1334,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "course4_artist_binary_challenge2": {
@@ -1753,19 +1341,11 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
-          }
-        },
-        "course4_artist_concept_challenge2": {
-          "draw pinwheel": {
           }
         },
         "course4_artist_functions_challenge2": {
           "do something": {
             "name": "do iets"
-          },
-          "my design": {
           }
         },
         "course4_artist_fwp_challenge1": {
@@ -1777,16 +1357,10 @@
               "sides": "zijden"
             }
           },
-          "draw a square 20": {
-          },
           "draw background": {
             "parameters": {
               "color": "kleur"
             }
-          }
-        },
-        "course4_bee_for_challenge1": {
-          "move and get nectar with counter": {
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -1839,8 +1413,6 @@
           }
         },
         "courseC_artist_prog3": {
-          "draw fire": {
-          },
           "draw flame": {
             "parameters": {
               "x": "x"
@@ -1855,8 +1427,6 @@
           }
         },
         "courseC_artist_prog3_2018": {
-          "draw fire": {
-          },
           "draw flame": {
             "parameters": {
               "x": "x"
@@ -1864,8 +1434,6 @@
           }
         },
         "courseC_artist_prog3_2019": {
-          "draw fire": {
-          },
           "draw flame": {
             "parameters": {
               "x": "x"
@@ -1873,8 +1441,6 @@
           }
         },
         "courseC_artist_prog3_2020": {
-          "draw fire": {
-          },
           "draw flame": {
             "parameters": {
               "x": "x"
@@ -1882,36 +1448,10 @@
           }
         },
         "courseC_artist_prog3_2021": {
-          "draw fire": {
-          },
           "draw flame": {
             "parameters": {
               "x": "x"
             }
-          }
-        },
-        "courseC_artist_prog4": {
-          "booster": {
-          }
-        },
-        "courseC_artist_prog42022": {
-          "booster": {
-          }
-        },
-        "courseC_artist_prog4_2018": {
-          "booster": {
-          }
-        },
-        "courseC_artist_prog4_2019": {
-          "booster": {
-          }
-        },
-        "courseC_artist_prog4_2020": {
-          "booster": {
-          }
-        },
-        "courseC_artist_prog4_2021": {
-          "booster": {
           }
         },
         "courseC_data wizard": {
@@ -1939,8 +1479,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary1_2018": {
@@ -1948,8 +1486,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary1_2019": {
@@ -1957,8 +1493,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary1_2020": {
@@ -1966,8 +1500,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary2": {
@@ -1975,8 +1507,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary2_2018": {
@@ -1984,8 +1514,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary2_2019": {
@@ -1993,8 +1521,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary2_2020": {
@@ -2002,8 +1528,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary3": {
@@ -2011,8 +1535,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary3_2018": {
@@ -2020,8 +1542,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary3_2019": {
@@ -2029,8 +1549,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary3_2020": {
@@ -2038,8 +1556,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary4": {
@@ -2047,8 +1563,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary4_2018": {
@@ -2056,8 +1570,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary4_2019": {
@@ -2065,8 +1577,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary4_2020": {
@@ -2074,8 +1584,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary5": {
@@ -2083,8 +1591,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary5_2018": {
@@ -2092,8 +1598,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary5_2019": {
@@ -2101,8 +1605,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary5_2020": {
@@ -2110,8 +1612,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary6": {
@@ -2119,8 +1619,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary6_2018": {
@@ -2128,8 +1626,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary6_2019": {
@@ -2137,8 +1633,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary6_2020": {
@@ -2146,8 +1640,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary7": {
@@ -2155,8 +1647,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary7_2018": {
@@ -2164,8 +1654,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary7_2019": {
@@ -2173,8 +1661,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary7_2020": {
@@ -2182,8 +1668,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8": {
@@ -2191,8 +1675,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_2018": {
@@ -2200,8 +1682,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_2019": {
@@ -2209,8 +1689,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_2020": {
@@ -2218,8 +1696,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1": {
@@ -2227,8 +1703,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1_2018": {
@@ -2236,8 +1710,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1_2019": {
@@ -2245,8 +1717,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary8_predict1_2020": {
@@ -2254,8 +1724,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binaryFP_2018": {
@@ -2263,8 +1731,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binaryFP_2019": {
@@ -2272,8 +1738,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binaryFP_2020": {
@@ -2281,8 +1745,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge1_2018": {
@@ -2290,8 +1752,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge1_2019": {
@@ -2299,8 +1759,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge1_2020": {
@@ -2308,8 +1766,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge2_2018": {
@@ -2317,8 +1773,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge2_2019": {
@@ -2326,8 +1780,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
           }
         },
         "courseD_artist_binary_challenge2_2020": {
@@ -2335,14 +1787,6 @@
             "parameters": {
               "binary": "binaire"
             }
-          },
-          "draw bit": {
-          }
-        },
-        "courseE_Dogger_2": {
-          "lose": {
-          },
-          "stop_everything": {
           }
         },
         "courseE_artist_concept1": {
@@ -2359,19 +1803,11 @@
           }
         },
         "courseE_artist_concept4": {
-          "draw a line of squares": {
-          },
-          "draw a plane of squares": {
-          },
           "draw a square": {
             "name": "teken een vierkant"
           }
         },
         "courseE_artist_concept4_2018": {
-          "draw a line of squares": {
-          },
-          "draw a plane of squares": {
-          },
           "draw a square": {
             "name": "teken een vierkant"
           }
@@ -2386,134 +1822,74 @@
             "name": "do iets"
           }
         },
-        "courseE_artist_concept_challenge2": {
-          "draw pinwheel": {
-          }
-        },
-        "courseE_artist_concept_challenge2_2018": {
-          "draw pinwheel": {
-          }
-        },
-        "courseE_artist_functions1": {
-          "draw ear stems": {
-          }
-        },
         "courseE_artist_functions10": {
           "do something": {
             "name": "do iets"
-          },
-          "draw hexagon": {
-          },
-          "draw line of hexagons": {
           }
         },
         "courseE_artist_functions102022": {
           "do something": {
             "name": "do iets"
-          },
-          "draw hexagon": {
-          },
-          "draw line of hexagons": {
           }
         },
         "courseE_artist_functions10_2018": {
           "do something": {
             "name": "do iets"
-          },
-          "draw hexagon": {
-          },
-          "draw line of hexagons": {
           }
         },
         "courseE_artist_functions10_2019": {
           "do something": {
             "name": "do iets"
-          },
-          "draw hexagon": {
-          },
-          "draw line of hexagons": {
           }
         },
         "courseE_artist_functions10_2020": {
           "do something": {
             "name": "do iets"
-          },
-          "draw hexagon": {
-          },
-          "draw line of hexagons": {
           }
         },
         "courseE_artist_functions10_2021": {
           "do something": {
             "name": "do iets"
-          },
-          "draw hexagon": {
-          },
-          "draw line of hexagons": {
-          }
-        },
-        "courseE_artist_functions1_copy": {
-          "draw ear stems": {
-          }
-        },
-        "courseE_artist_functions1_dani": {
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions22022": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2018": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2019": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2020": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_2021": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions2_dani": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions32022": {
@@ -2599,98 +1975,46 @@
         "courseE_artist_functions7": {
           "draw a house": {
             "name": "teken een huis"
-          },
-          "draw a window": {
-          }
-        },
-        "courseE_artist_functions72022": {
-          "draw a window": {
           }
         },
         "courseE_artist_functions7_2018": {
           "draw a house": {
             "name": "teken een huis"
-          },
-          "draw a window": {
-          }
-        },
-        "courseE_artist_functions7_2019": {
-          "draw a window": {
           }
         },
         "courseE_artist_functions7_2020": {
           "draw a house": {
             "name": "teken een huis"
-          },
-          "draw a window": {
-          }
-        },
-        "courseE_artist_functions7_2021": {
-          "draw a window": {
           }
         },
         "courseE_artist_functions8": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a line of squares": {
-          },
-          "draw square": {
           }
         },
         "courseE_artist_functions82022": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a line of squares": {
-          },
-          "draw square": {
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8_2018": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a line of squares": {
-          },
-          "draw square": {
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8_2019": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a line of squares": {
-          },
-          "draw square": {
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8_2020": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a line of squares": {
-          },
-          "draw square": {
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8_2021": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a line of squares": {
-          },
-          "draw square": {
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8a2022": {
@@ -2736,409 +2060,211 @@
         "courseE_artist_functions8b2022": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a line of squares": {
-          },
-          "draw square": {
           }
         },
         "courseE_artist_functions8b_2018": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a line of squares": {
-          },
-          "draw square": {
           }
         },
         "courseE_artist_functions8b_2019": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a line of squares": {
-          },
-          "draw square": {
           }
         },
         "courseE_artist_functions8b_2020": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a line of squares": {
-          },
-          "draw square": {
           }
         },
         "courseE_artist_functions8b_2021": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a line of squares": {
-          },
-          "draw square": {
           }
         },
         "courseE_artist_functions8c2022": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a line of squares": {
-          },
-          "draw square": {
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8c_2018": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a line of squares": {
-          },
-          "draw square": {
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8c_2019": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a line of squares": {
-          },
-          "draw square": {
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8c_2020": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a line of squares": {
-          },
-          "draw square": {
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions8c_2021": {
           "do something": {
             "name": "do iets"
-          },
-          "draw a line of squares": {
-          },
-          "draw square": {
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions9": {
           "do something": {
             "name": "do iets"
-          },
-          "draw line of triangles": {
-          },
-          "draw triangle": {
           }
         },
         "courseE_artist_functions92022": {
           "do something": {
             "name": "do iets"
-          },
-          "draw line of triangles": {
-          },
-          "draw triangle": {
           }
         },
         "courseE_artist_functions9_2018": {
           "do something": {
             "name": "do iets"
-          },
-          "draw line of triangles": {
-          },
-          "draw triangle": {
           }
         },
         "courseE_artist_functions9_2019": {
           "do something": {
             "name": "do iets"
-          },
-          "draw line of triangles": {
-          },
-          "draw triangle": {
           }
         },
         "courseE_artist_functions9_2020": {
           "do something": {
             "name": "do iets"
-          },
-          "draw line of triangles": {
-          },
-          "draw triangle": {
           }
         },
         "courseE_artist_functions9_2021": {
           "do something": {
             "name": "do iets"
-          },
-          "draw line of triangles": {
-          },
-          "draw triangle": {
-          }
-        },
-        "courseE_artist_functionsProj2022": {
-          "draw a line of squares": {
-          },
-          "draw hexagon": {
-          },
-          "draw line of hexagons": {
-          },
-          "draw square": {
-          },
-          "staggered squares": {
-          }
-        },
-        "courseE_artist_functionsProj_2018": {
-          "draw a line of squares": {
-          },
-          "draw hexagon": {
-          },
-          "draw line of hexagons": {
-          },
-          "draw square": {
-          },
-          "staggered squares": {
-          }
-        },
-        "courseE_artist_functionsProj_2019": {
-          "draw a line of squares": {
-          },
-          "draw hexagon": {
-          },
-          "draw line of hexagons": {
-          },
-          "draw square": {
-          },
-          "staggered squares": {
-          }
-        },
-        "courseE_artist_functionsProj_2020": {
-          "draw a line of squares": {
-          },
-          "draw hexagon": {
-          },
-          "draw line of hexagons": {
-          },
-          "draw square": {
-          },
-          "staggered squares": {
-          }
-        },
-        "courseE_artist_functionsProj_2021": {
-          "draw a line of squares": {
-          },
-          "draw hexagon": {
-          },
-          "draw line of hexagons": {
-          },
-          "draw square": {
-          },
-          "staggered squares": {
           }
         },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "do iets"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge12022": {
           "do something": {
             "name": "do iets"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge1_2018": {
           "do something": {
             "name": "do iets"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge1_2019": {
           "do something": {
             "name": "do iets"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge1_2020": {
           "do something": {
             "name": "do iets"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
             "name": "do iets"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge2": {
           "do something": {
             "name": "do iets"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge22022": {
           "do something": {
             "name": "do iets"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge2_2018": {
           "do something": {
             "name": "do iets"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge2_2019": {
           "do something": {
             "name": "do iets"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge2_2020": {
           "do something": {
             "name": "do iets"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
             "name": "do iets"
-          },
-          "my design": {
           }
         },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict12022": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2018": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2019": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2020": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict1_dani": {
           "draw a square": {
             "name": "teken een vierkant"
-          },
-          "draw ear stems": {
           }
         },
         "courseE_artist_functions_predict2": {
           "do something": {
             "name": "do iets"
-          },
-          "draw line of polygons": {
-          },
-          "draw polygon": {
           }
         },
         "courseE_artist_functions_predict22022": {
           "do something": {
             "name": "do iets"
-          },
-          "draw line of polygons": {
-          },
-          "draw polygon": {
           }
         },
         "courseE_artist_functions_predict2_2018": {
           "do something": {
             "name": "do iets"
-          },
-          "draw line of polygons": {
-          },
-          "draw polygon": {
           }
         },
         "courseE_artist_functions_predict2_2019": {
           "do something": {
             "name": "do iets"
-          },
-          "draw line of polygons": {
-          },
-          "draw polygon": {
           }
         },
         "courseE_artist_functions_predict2_2020": {
           "do something": {
             "name": "do iets"
-          },
-          "draw line of polygons": {
-          },
-          "draw polygon": {
           }
         },
         "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "do iets"
-          },
-          "draw line of polygons": {
-          },
-          "draw polygon": {
           }
         },
         "courseE_bee_concept4": {
@@ -3161,30 +2287,6 @@
             "name": "beweeg en maak honing"
           }
         },
-        "courseE_bee_functions2": {
-          "get 2 nectar": {
-          }
-        },
-        "courseE_bee_functions3": {
-          "get 5": {
-          }
-        },
-        "courseE_bee_functions4": {
-          "move and get nectar": {
-          }
-        },
-        "courseE_bee_functions5": {
-          "move and get 4": {
-          }
-        },
-        "courseE_bee_functions6": {
-          "get 7 nectar make 7 honey": {
-          }
-        },
-        "courseE_bee_functions7": {
-          "get 7 make 7": {
-          }
-        },
         "courseE_bee_functions8": {
           "collect all nectar": {
             "name": "verzamel alle nectar"
@@ -3198,15 +2300,11 @@
         "courseE_bee_functions_challenge1": {
           "do something": {
             "name": "do iets"
-          },
-          "get 3 nectar or honey": {
           }
         },
         "courseE_bee_functions_challenge2": {
           "do something": {
             "name": "do iets"
-          },
-          "move and collect": {
           }
         },
         "courseE_farmer_concept1": {
@@ -3217,67 +2315,11 @@
         "courseE_farmer_concept2": {
           "do something": {
             "name": "do iets"
-          },
-          "get pumpkin": {
-          }
-        },
-        "courseE_farmer_concept2_2018": {
-          "get pumpkin": {
           }
         },
         "courseE_farmer_concept3": {
           "do something": {
             "name": "do iets"
-          }
-        },
-        "courseE_farmer_functions10a12022": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions10a1_2018": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions10a1_2019": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions10a1_2020": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions10a1_2021": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
           }
         },
         "courseE_farmer_functions10b": {
@@ -3296,264 +2338,14 @@
             "name": "doorloop pad"
           }
         },
-        "courseE_farmer_functions11_predict2022": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "get produce": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions11_predict_2018": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "get produce": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions11_predict_2019": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "get produce": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions11_predict_2020": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "get produce": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions11_predict_2021": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "get produce": {
-          },
-          "pick along path": {
-          },
-          "pumpkin square": {
-          }
-        },
-        "courseE_farmer_functions132022": {
-          "check for corn": {
-          },
-          "corn rectangle": {
-          },
-          "lettuce stairs": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions13_2018": {
-          "check for corn": {
-          },
-          "corn rectangle": {
-          },
-          "lettuce stairs": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions13_2019": {
-          "check for corn": {
-          },
-          "corn rectangle": {
-          },
-          "lettuce stairs": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions13_2020": {
-          "check for corn": {
-          },
-          "corn rectangle": {
-          },
-          "lettuce stairs": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions13_2021": {
-          "check for corn": {
-          },
-          "corn rectangle": {
-          },
-          "lettuce stairs": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions1a2022": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions1a_2018": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions1a_2019": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions1a_2020": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions1a_2021": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions2b2022": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions2b_2018": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions2b_2019": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions2b_2020": {
-          "check square for corn": {
-          }
-        },
-        "courseE_farmer_functions2b_2021": {
-          "check square for corn": {
-          }
-        },
         "courseE_farmer_functions2ba": {
           "corn and pumpkin": {
             "name": "mais en pompoen"
           }
         },
-        "courseE_farmer_functions2ba2022": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
-        "courseE_farmer_functions2ba_2018": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
-        "courseE_farmer_functions2ba_2019": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
-        "courseE_farmer_functions2ba_2020": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
-        "courseE_farmer_functions2ba_2021": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
         "courseE_farmer_functions3c": {
           "corn and pumpkin": {
             "name": "mais en pompoen"
-          }
-        },
-        "courseE_farmer_functions3c12022": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions3c1_2018": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions3c1_2019": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions3c1_2020": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions3c1_2021": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          },
-          "pick along path": {
-          }
-        },
-        "courseE_farmer_functions3c2022": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
-        "courseE_farmer_functions3c_2018": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
-        "courseE_farmer_functions3c_2019": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
-        "courseE_farmer_functions3c_2020": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
-          }
-        },
-        "courseE_farmer_functions3c_2021": {
-          "check square for corn": {
-          },
-          "get all pumpkins": {
           }
         },
         "courseE_farmer_functions4b": {
@@ -3571,82 +2363,14 @@
             "name": "mais en pompoen"
           }
         },
-        "courseE_farmer_functions7a12022": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions7a1_2018": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions7a1_2019": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions7a1_2020": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions7a1_2021": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions8a12022": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions8a1_2018": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions8a1_2019": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions8a1_2020": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions8a1_2021": {
-          "garden square": {
-          }
-        },
         "courseE_farmer_functions8b": {
           "navigate": {
             "name": "navigeer"
           }
         },
-        "courseE_farmer_functions9a12022": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions9a1_2018": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions9a1_2019": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions9a1_2020": {
-          "garden square": {
-          }
-        },
-        "courseE_farmer_functions9a1_2021": {
-          "garden square": {
-          }
-        },
         "courseE_farmer_functions9b": {
           "navigate": {
             "name": "navigeer"
-          }
-        },
-        "courseE_playLab_challenge1": {
-          "keep playing": {
-          },
-          "lose game": {
-          },
-          "win game": {
           }
         },
         "courseE_playLab_scaffold1": {
@@ -3875,8 +2599,6 @@
               "sides": "zijden"
             }
           },
-          "draw a square 20": {
-          },
           "draw background": {
             "parameters": {
               "color": "kleur"
@@ -3887,109 +2609,15 @@
           "do something": {
             "name": "do iets"
           },
-          "draw a square 20": {
-          },
           "draw an octagon": {
             "parameters": {
               "length": "lengte"
             }
           }
         },
-        "courseF_bee_conditionals2": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          }
-        },
-        "courseF_bee_for_challenge1": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge12022": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge1_2018": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge1_2019": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge1_2020": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_for_challenge1_2021": {
-          "move and get nectar with counter": {
-          }
-        },
-        "courseF_bee_functions2": {
-          "get only nectar": {
-          }
-        },
-        "courseF_bee_functions3": {
-          "only make honey": {
-          }
-        },
-        "courseF_bee_functions3a": {
-          "check nectar or honey": {
-          }
-        },
-        "courseF_bee_functions4": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          }
-        },
-        "courseF_bee_functions5a": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          }
-        },
-        "courseF_bee_functions6": {
-          "get nectar make honey": {
-          }
-        },
-        "courseF_bee_functions7": {
-          "get nectar make honey": {
-          }
-        },
         "courseF_bee_functions8a": {
           "do something": {
             "name": "do iets"
-          },
-          "get nectar make honey": {
-          }
-        },
-        "courseF_bee_functionsPre7": {
-          "get nectar make honey": {
-          }
-        },
-        "courseF_bee_functions_challenge1": {
-          "check nectar or honey": {
-          },
-          "row of nectar": {
-          },
-          "rowOfNectar": {
-          }
-        },
-        "courseF_bee_functions_challenge2": {
-          "check nectar or honey": {
-          },
-          "move and check": {
-          },
-          "rowOfNectar": {
-          }
-        },
-        "courseF_bee_fwp2": {
-          "rowOfNectar": {
-          }
-        },
-        "courseF_bee_fwp3": {
-          "rowOfNectar": {
           }
         },
         "courseF_bee_fwp4": {
@@ -4048,78 +2676,6 @@
             }
           }
         },
-        "courseF_bee_variables_1_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_1_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_1_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_2_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_2_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_2_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_3_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_3_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_3_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_4_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_4_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_4_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_5_2018": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_5_2019": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_5_2020": {
-          "collect row": {
-          }
-        },
-        "courseF_bee_variables_6_2018": {
-          "collect stairs": {
-          }
-        },
-        "courseF_bee_variables_6_2019": {
-          "collect stairs": {
-          }
-        },
-        "courseF_bee_variables_6_2020": {
-          "collect stairs": {
-          }
-        },
         "courseF_bee_variables_7_2018": {
           "collect": {
             "name": "verzamel"
@@ -4138,22 +2694,16 @@
         "courseF_bee_variables_8_2018": {
           "collect": {
             "name": "verzamel"
-          },
-          "move and increment": {
           }
         },
         "courseF_bee_variables_8_2019": {
           "collect": {
             "name": "verzamel"
-          },
-          "move and increment": {
           }
         },
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "verzamel"
-          },
-          "move and increment": {
           }
         }
       }

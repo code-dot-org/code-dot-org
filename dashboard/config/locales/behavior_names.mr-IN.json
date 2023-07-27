@@ -1575,10 +1575,6 @@
           "swimming left and right": "डावीकडे आणि उजवीकडे पोहणे",
           "wandering": "भटकणे"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "growing": "आकार वाढवणे",
           "jittering": "थरथरणे",
@@ -3027,8 +3023,6 @@
           "spinning right": "उजवीकडे स्पिन होणे",
           "wandering": "भटकणे",
           "wobbling": "डगमगणे"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "आकार वाढवणे",

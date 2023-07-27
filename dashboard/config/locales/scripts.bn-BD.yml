@@ -875,6 +875,38 @@ bn:
           student_description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের
             নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন।
           title: মাইনক্র্যাফট এক ঘণ্টার কোড
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: শর্তযুক্ত
+            lessonGroup-5:
+              display_name: চলকগুলো
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চক্র
+            lessonGroup-6:
+              display_name: ঘটনাবলী
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: নেষ্টেড লুপ
+            lessonGroup-4:
+              display_name: ফাংশনগুলি
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চক্র
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চক্র
+            lessonGroup-5:
+              display_name: ঘটনাবলী
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: চক্র
         pl-csd-summer-day1:
           lessons:
             lesson-3:
@@ -938,6 +970,10 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চক্র
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:

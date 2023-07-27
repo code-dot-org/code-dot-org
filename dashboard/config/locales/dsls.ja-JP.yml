@@ -552,17 +552,6 @@ ja-JP:
           # バイナリー イメージ
 
           ２つの数字（0 と 1）だけで もようをかく方法を 伝えましょう。
-      Building a UI with Design Mode: {}
-      CSD - Getters and Setters: {}
-      CSD CSS project RGB_2021: {}
-      CSD CSS project RGB_2022: {}
-      CSD CSS project Review_2021: {}
-      CSD CSS project Review_2022: {}
-      CSD End of Unit Survey - Unit 1 - IntroMD_2022: {}
-      CSD Games Parameters challenge_2021: {}
-      CSD Games Parameters challenge_2022: {}
-      CSD Games Properties challenge_2021: {}
-      CSD Games Properties challenge_2022: {}
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -585,22 +574,10 @@ ja-JP:
         display_name: スプライトのプロパティ
       CSD Games Properties practice_2022:
         display_name: スプライトのプロパティ
-      CSD Games Sprites Challenges_2021: {}
-      CSD Games Sprites Challenges_2022: {}
-      CSD Games Sprites practice_2021: {}
-      CSD Games Sprites practice_2022: {}
-      CSD Games parameters practice_2021: {}
-      CSD Games parameters practice_2022: {}
-      CSD Games variables challenge_2021: {}
-      CSD Games variables challenge_2022: {}
       CSD Games variables practice_2021:
         display_name: 変数 練習
       CSD Games variables practice_2022:
         display_name: 変数 練習
-      CSD HTML project Lists_2021: {}
-      CSD HTML project Lists_2022: {}
-      CSD HTML project Review_2021: {}
-      CSD HTML project Review_2022: {}
       CSD Header Size MC:
         answers:
         - {}
@@ -631,13 +608,6 @@ ja-JP:
         - correct: true
         - {}
         - {}
-      CSD Interactive Animations and Games Post-Project Test: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2021: {}
-      CSD Interactive Animations and Games Post-Project Test_pilot_2022: {}
-      CSD Physical Computing Post-Project Test: {}
-      CSD Physical Computing Post-Project Test_2021: {}
-      CSD Physical Computing Post-Project Test_2022: {}
-      CSD Student End of Unit Survey - Unit 1_2022: {}
       CSD U1 IOSP match:
         answers:
         - {}
@@ -671,12 +641,6 @@ ja-JP:
         - {}
         - text: ストレージ
         - text: 処理
-      CSD U1 Lesson 5 Overview: {}
-      CSD U1 Lesson 6 Overview: {}
-      CSD U1 Lesson 7 Overview: {}
-      CSD U1 Lesson 8 Overview: {}
-      CSD U1 Lesson 9 Overview: {}
-      CSD U1 Test: {}
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -761,10 +725,6 @@ ja-JP:
         - {}
         questions:
         - {}
-      CSD U1 Test_2021: {}
-      CSD U1 Test_2022: {}
-      CSD U2 CSS challenge_pilot_2021: {}
-      CSD U2 CSS challenge_pilot_2022: {}
       CSD U2 CSS practice_pilot_2021:
         display_name: CSSを使用したテキストのスタイル設定
       CSD U2 CSS practice_pilot_2022:
@@ -775,11 +735,6 @@ ja-JP:
         content1: 説明
       CSD U2 Design Project_2018_2019:
         content1: 説明
-      CSD U2 Expression Exemplars: {}
-      CSD U2 Expression Exemplars_2018: {}
-      CSD U2 Expression Exemplars_2018_2019: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2021: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2022: {}
       CSD U2 Image challenge_pilot_2021:
         display_name: 画像の追加
       CSD U2 Image challenge_pilot_2022:
@@ -790,7 +745,6 @@ ja-JP:
         display_name: 画像の追加
       CSD U2 L1 Overview:
         content1: 説明
-      CSD U2 L12 Overview: {}
       CSD U2 L2 Overview:
         content1: 説明
       CSD U2 L3 Overview:
@@ -801,19 +755,8 @@ ja-JP:
         content1: 説明
       CSD U2 L6 Overview:
         content1: 説明
-      CSD U2 L7 Overview: {}
       CSD U2 Lesson 6 Overview:
         content1: 説明
-      CSD U2 Lesson 9 Overview: {}
-      CSD U2 PSP Programming: {}
-      CSD U2 PSP Programming_2018: {}
-      CSD U2 PSP Programming_2018_2019: {}
-      CSD U2 Sample CSS layout_2021: {}
-      CSD U2 Sample CSS layout_2022: {}
-      CSD U2 Sample CSS text_2021: {}
-      CSD U2 Sample CSS text_2022: {}
-      CSD U2 Sample classes_2021: {}
-      CSD U2 Sample classes_2022: {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -991,11 +934,6 @@ ja-JP:
         - correct: true
         - {}
         - {}
-      CSD U2 Top Websites: {}
-      CSD U2 Top Websites_2018: {}
-      CSD U2 Top Websites_2018_2019: {}
-      CSD U2 Top Websites_2018_2019_pilot_2021: {}
-      CSD U2 Top Websites_2018_2019_pilot_2022: {}
       CSD U2 expand project:
         content1: 説明
       CSD U2 expand project_2018:
@@ -1041,12 +979,6 @@ ja-JP:
         - {}
         - {}
         - {}
-      CSD U2 layout style challenge_pilot_2021: {}
-      CSD U2 layout style challenge_pilot_2022: {}
-      CSD U2 layout style practice_pilot_2021: {}
-      CSD U2 layout style practice_pilot_2022: {}
-      CSD U2 links challenge_2021: {}
-      CSD U2 links challenge_2022: {}
       CSD U2 lists match:
         answers:
         - {}
@@ -1096,8 +1028,6 @@ ja-JP:
         content1: 説明
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: 説明
-      CSD U3 - Design a Game 1 - ExampleChoice_2022: {}
-      CSD U3 - Interactive Card - ExampleChoice_2022: {}
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1163,11 +1093,6 @@ ja-JP:
         - {}
         - {}
         - {}
-      CSD U3 AnimationsMulti STOP project guide: {}
-      CSD U3 AnimationsMulti STOP project guide_2018: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022: {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1236,9 +1161,6 @@ ja-JP:
           * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
           * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
           * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
-      CSD U3 Defender SFLP: {}
-      CSD U3 Entertainment: {}
-      CSD U3 Entertainment_2018_2019: {}
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -1307,14 +1229,6 @@ ja-JP:
         - {}
         - {}
         - {}
-      CSD U3 Lesson Overview 1: {}
-      CSD U3 Lesson Overview 10: {}
-      CSD U3 Lesson Overview 11: {}
-      CSD U3 Lesson Overview 12: {}
-      CSD U3 Lesson Overview 13: {}
-      CSD U3 Lesson Overview 14: {}
-      CSD U3 Lesson Overview 2: {}
-      CSD U3 Lesson Overview 3: {}
       CSD U3 Lesson Overview 4:
         markdown: |-
           # 概要
@@ -1347,13 +1261,6 @@ ja-JP:
           ## リソース
 
           * [変数入門](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
-      CSD U3 Lesson Overview 6: {}
-      CSD U3 Lesson Overview 7: {}
-      CSD U3 Lesson Overview 8: {}
-      CSD U3 Lesson Overview 9: {}
-      CSD U3 Movement Challenges: {}
-      CSD U3 Project Build a Game SFLP: {}
-      CSD U3 SFLP Velocity: {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
@@ -1586,7 +1493,6 @@ ja-JP:
         - {}
         questions:
         - {}
-      CSD U3 Using the Game Design Process SLFP: {}
       CSD U3 combining rep:
         content1: 説明
       CSD U3 combining rep_2018:
@@ -1637,8 +1543,6 @@ ja-JP:
         - {}
         - {}
         - {}
-      CSD U3 drawing challenges_2021: {}
-      CSD U3 drawing challenges_2022: {}
       CSD U3 drawing practice choice_2021:
         display_name: 練習
       CSD U3 drawing practice choice_2022:
@@ -1808,22 +1712,6 @@ ja-JP:
         - correct: true
         questions:
         - {}
-      CSD U4L01 SFLP: {}
-      CSD U4L02 SFLP: {}
-      CSD U4L03 SFLP: {}
-      CSD U4L04 SFLP: {}
-      CSD U4L05 SFLP: {}
-      CSD U4L06 SFLP: {}
-      CSD U4L07 SFLP: {}
-      CSD U4L08 SFLP: {}
-      CSD U4L09 SFLP: {}
-      CSD U4L10 SFLP: {}
-      CSD U4L11 SFLP: {}
-      CSD U4L12 SFLP: {}
-      CSD U4L13 SFLP: {}
-      CSD U4L15 SFLP: {}
-      CSD U4L16 SFLP: {}
-      CSD U4L17 SFLP: {}
       CSD U5 Encryption 1:
         content1: 説明
       CSD U5 Encryption 1_2018:
@@ -1856,7 +1744,6 @@ ja-JP:
         content1: 説明
       CSD U5 student record_2018_2019:
         content1: 説明
-      CSD U5 test: {}
       CSD U5 test clean multi:
         answers:
         - {}
@@ -1998,43 +1885,30 @@ ja-JP:
         - {}
         questions:
         - {}
-      CSD U5 test_2021: {}
-      CSD U5 test_2022: {}
       CSD U6 - Accelerometer - Chal_2222:
         display_name: チャレンジレベル
-      CSD U6 - Accelerometer - Prac_2222: {}
       CSD U6 - Board Inputs - Chal_2222:
         display_name: チャレンジレベル
-      CSD U6 - Board Inputs - Prac_2222: {}
       CSD U6 - Board Outputs - Chal_2222:
         display_name: チャレンジレベル
-      CSD U6 - Board Outputs - Prac_2222: {}
       CSD U6 - Color LEDs - Chal_2222:
         display_name: チャレンジレベル
-      CSD U6 - Color LEDs - Prac_2222: {}
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: チャレンジレベル
-      CSD U6 - Combine Inputs - Prac_2222: {}
-      CSD U6 - Functions - Prac_2222: {}
       CSD U6 - If Variables - Chal_2222:
         display_name: チャレンジレベル
       CSD U6 - Music - Chal_2222:
         display_name: チャレンジレベル
       CSD U6 - Physical Input - Chal_2222:
         display_name: チャレンジレベル
-      CSD U6 - Physical Input - Prac_2222: {}
       CSD U6 - Physical Output - Chal_2222:
         display_name: チャレンジレベル
-      CSD U6 - Physical Output - Prac_2222: {}
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: チャレンジレベル
-      CSD U6 - Screen Inputs - Prac_2222: {}
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: チャレンジレベル
-      CSD U6 - Screen Outputs - Prac_2222: {}
       CSD U6 - Sensors - Chal_2222:
         display_name: チャレンジレベル
-      CSD U6 - Sensors - Prac_2222: {}
       CSD U6 LED create intro:
         content1: 説明
       CSD U6 LED create intro_2018:
@@ -2075,10 +1949,6 @@ ja-JP:
         - correct: true
         questions:
         - {}
-      CSD U6 circuit smart bike blinker build: {}
-      CSD U6 circuit smart bike blinker build_2018: {}
-      CSD U6 circuit smart bike blinker build_2018_2019: {}
-      CSD U6 circuit smart bike blinker build_2021: {}
       CSD U6 final intro:
         content1: 説明
       CSD U6 final intro_2018:
@@ -2087,10 +1957,6 @@ ja-JP:
         content1: 説明
       CSD U6 final intro_2021:
         content1: 説明
-      CSD U6 game project stop: {}
-      CSD U6 game project stop_2018: {}
-      CSD U6 game project stop_2018_2019: {}
-      CSD U6 game project stop_2021: {}
       CSD U6 setProperty predict multi:
         answers:
         - {}
@@ -2262,112 +2128,34 @@ ja-JP:
         - {}
         questions:
         - {}
-      CSD U6 tugowar stop: {}
-      CSD U6 tugowar stop_2018: {}
-      CSD U6 tugowar stop_2018_2019: {}
-      CSD U6 tugowar stop_2021: {}
-      CSD User Centered Design Post-Project Test: {}
-      CSD User Centered Design Post-Project Test_2021: {}
-      CSD User Centered Design Post-Project Test_2022: {}
-      CSD Web Development Post-Project Test: {}
-      CSD Web Development Post-Project Test_pilot_2021: {}
-      CSD Web Development Post-Project Test_pilot_2022: {}
-      CSD Web Headings challenge_2021: {}
-      CSD Web Headings challenge_2022: {}
-      CSD Web Headings practice_2021: {}
-      CSD Web Headings practice_2022: {}
-      CSD Web Sample Pages_2021: {}
-      CSD Web Sample Pages_2022: {}
       CSD games cake challenge choice_2021:
         display_name: チャレンジ
       CSD games cake challenge choice_2022:
         display_name: チャレンジ
-      CSD games collisions challenge choice_2021: {}
-      CSD games collisions challenge choice_2022: {}
-      CSD games collisions practice choice_2021: {}
-      CSD games collisions practice choice_2022: {}
-      CSD games functions challenge choice_2021: {}
-      CSD games functions challenge choice_2022: {}
       CSD games functions practice choice_2021:
         display_name: 関数 練習
       CSD games functions practice choice_2022:
         display_name: 関数 練習
-      CSD games istouching challenge choice_2021: {}
-      CSD games istouching challenge choice_2022: {}
-      CSD games istouching practice choice_2021: {}
-      CSD games istouching practice choice_2022: {}
-      CSD games movement2 challenge choice_2021: {}
-      CSD games movement2 challenge choice_2022: {}
-      CSD games movement2 practice choice_2021: {}
-      CSD games movement2 practice choice_2022: {}
       CSD games platform challenge choice_2021:
         display_name: チャレンジ
       CSD games platform challenge choice_2022:
         display_name: チャレンジ
-      CSD games random challenge_2021: {}
-      CSD games random challenge_2022: {}
-      CSD games random practice_2021: {}
-      CSD games random practice_2022: {}
-      CSD games velocity challenge choice_2021: {}
-      CSD games velocity challenge choice_2022: {}
-      CSD games velocity practice choice_2021: {}
-      CSD games velocity practice choice_2022: {}
-      CSD web classes challenge_2021: {}
-      CSD web classes challenge_2022: {}
-      CSD web classes practice_2021: {}
-      CSD web classes practice_2022: {}
-      CSD web conditionals challenge choice_2021: {}
-      CSD web conditionals challenge choice_2022: {}
       CSD web conditionals practice choice_2021:
         display_name: 条件文 練習
       CSD web conditionals practice choice_2022:
         display_name: 条件文 練習
-      CSD web draw loop challenge choice_2021: {}
-      CSD web draw loop challenge choice_2022: {}
       CSD web draw loop practice choice_2021:
         display_name: 練習
       CSD web draw loop practice choice_2022:
         display_name: 練習
-      CSD web keyboard challenge choice_2021: {}
-      CSD web keyboard challenge choice_2022: {}
-      CSD web keyboard practice choice_2021: {}
-      CSD web keyboard practice choice_2022: {}
-      CSD web mouse challenge choice_2021: {}
-      CSD web mouse challenge choice_2022: {}
-      CSD web mouse practice choice_2021: {}
-      CSD web mouse practice choice_2022: {}
-      CSD web movement challenge choice_2021: {}
-      CSD web movement challenge choice_2022: {}
       CSD web movement practice choice_2021:
         display_name: 練習
       CSD web movement practice choice_2022:
         display_name: 練習
-      CSD web text challenge choice_2021: {}
-      CSD web text challenge choice_2022: {}
       CSD web text practice choice_2021:
         display_name: 練習
       CSD web text practice choice_2022:
         display_name: 練習
-      CSD-U5-SFLP ASCII and Binary Representation: {}
-      CSD-U5-SFLP Automating Data Decisions: {}
-      CSD-U5-SFLP Combining Representations: {}
-      CSD-U5-SFLP Create a Representation: {}
-      CSD-U5-SFLP Interpreting Data: {}
-      CSD-U5-SFLP Making Decisions with Data: {}
-      CSD-U5-SFLP Patterns and Representation: {}
-      CSD-U5-SFLP Problem Solving and Data: {}
-      CSD-U5-SFLP Problem Solving with Big Data: {}
-      CSD-U5-SFLP Representation Matters: {}
-      CSD-U5-SFLP Representing Images: {}
-      CSD-U5-SFLP Representing Numbers Part 1: {}
-      CSD-U5-SFLP Representing Numbers Part 2: {}
-      CSD-U5-SFLP Solve a Data Problem: {}
-      'CSD: getText vs getNumber': {}
-      'CSD: setProperty': {}
-      CSDU6 Innovation: {}
-      CSDU6 Innovation_2018: {}
-      CSDU6 Innovation_2018_2019: {}
-      CSDU6 Innovation_2021: {}
       CSP PD Example Question 1:
         answers:
         - {}
@@ -2380,7 +2168,6 @@ ja-JP:
         - {}
         questions:
         - {}
-      CSP pre-assessment survey: {}
       Choose 2 Test:
         answers:
         - correct: true
@@ -2389,7 +2176,6 @@ ja-JP:
         - {}
         questions:
         - {}
-      Choosing Good IDs: {}
       ConditionalsWithCards-Unplugged:
         markdown: |
           # 条件判定について
@@ -2629,10 +2415,6 @@ ja-JP:
           src=\"\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"\"></a>\n\n</div>\n\n<div
           style=\"\"float: left; margin: 10px\"\">\n<a href=\"\"9\"\">\n<h2>\nスピードアップ、スローダウン\n</h2>\n\n<img
           src=\"\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"\"></a>\n\n</div>\"\n"
-      Design a Screen for your App_2018: {}
-      Design a Screen for your App_2018_2019: {}
-      Design a Screen for your App_2021: {}
-      Design a Screen for your App_2022: {}
       DesigningForAccessibilityMarkdownLevel2022:
         markdown: |
           # 使いやすさの設計
@@ -2703,8 +2485,6 @@ ja-JP:
           # 共有
 
           とくに インタネットを世界で 所有権と著作権を尊重することの課題と利点について学びます。
-      ECSPD1 computational thinker: {}
-      Embedded Video Test: {}
       EnvelopeVariables-Unplugged:
         markdown: |
           # 変数
@@ -2728,8 +2508,6 @@ ja-JP:
       Eval Contracts F:
         answers:
         - ''
-      Example App Types_2018: {}
-      Example App Types_2018_2019: {}
       ForLoopFun-Unplugged:
         markdown: |
           # くり返し
@@ -3335,7 +3113,6 @@ ja-JP:
           **<a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\"
           target=\"blank\" rel=\"noopener noreferrer\">このサポート記事</a>**にも手順が記載されています。\n\n***\n##ステップ3：コースをセクションに割り当てる\n教えるコースをクリックしてください。
           次に、「コースの割り当て」をクリックして、そのコースをセクションの1つに割り当てます。\n***\n##ステップ4：教え始めましょう！\n必要となるのは、コンピュータサイエンスの概念を教室に取り入れるための1つのレッスンです。生徒がコンピュータサイエンスに熱心に取り組むのを確認したら、毎日のレッスンプランで生徒を導き、コンピュータなしで行えるアンプラグドアクティビティに進み、フォーラムで他の先生たちとつながりましょう。"
-      OPD-K5 CS Courses_dani: {}
       OPD-K5 CS Tips:
         markdown: |+
           # はじめに > このオンラインコースのナビゲート
@@ -4717,7 +4494,6 @@ ja-JP:
           ***
           <a href="https://curriculum.code.org/csf-19/coursed/10/" target="blank" rel="noopener noreferrer">![](https://images.code.org/d4959eca61f272b9416ff4e65a259bd2-image-1573080208870.43.14 PM.png)</a>
 
-      OPD-K5 Stage5Go_dani: {}
       OPD-K5 Stage5Review:
         markdown: |-
           # 条件文 > リフレクション
@@ -5221,7 +4997,6 @@ ja-JP:
           \n##ステップ2：クラスルームセクションを設定する\n教室のセクションを設定して、生徒の進捗状況を確認したり、生徒のログインカードを印刷したり、アカウントを管理したり、コース終了時に持ち帰ることができる証明書を印刷したりします。
           [簡単なビデオを見る]（https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b）のリンクをクリックして、Code.orgの初めてのコンピュータサイエンスクラスの設定方法をご覧ください。このステップについて、[このサポート記事]（(https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section）にも手順があります。\n\n##ステップ3：コースをセクションに割り当てる\n教えるコースをクリックしてください。
           次に、「コースの割り当て」をクリックして、そのコースをセクションの1つに割り当てます。\n\n##ステップ4：教え始めましょう！\n必要となるのは、コンピュータサイエンスの概念を教室に取り入れるための1つのレッスンです。生徒がコンピュータサイエンスに熱心に取り組むのを確認したら、毎日のレッスンプランで生徒を導き、コンピュータなしで行えるアンプラグドアクティビティに進み、フォーラムで他の先生たちとつながりましょう。"
-      OPD-K5 Using CS_dani: {}
       OPD-K5 Vocabulary:
         markdown: |-
           # コンピュータサイエンス（CS）入門 > 主要なボキャブラリー
@@ -6142,7 +5917,6 @@ ja-JP:
           <hr>
 
           **さぁ挑戦しましょう**
-      'Overview: If Statements': {}
       'Overview: Images':
         markdown: "# 画像\n\n## ウェブにある画像のURLを入力します\n\n<img src=\"https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png\"
           style=\"width: 250px; float: right\">\n\n画像のURLを取得する方法はいくつかあります。 \n\n一般的な方法(右図)は、Webページで好きな画像を見つけて右クリック(またはCtrlキーを押しながらクリック)し、「画像アドレスをコピー」などのオプションを選択してから、
@@ -6181,10 +5955,6 @@ ja-JP:
           </div>
 
           ![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
-      'Overview: setPosition': {}
-      PDK5 Foundations F: {}
-      PDK5 Intro C: {}
-      PS U3 Assessment1 new: {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -6339,8 +6109,6 @@ ja-JP:
         markdown: |
           # リレー プログラミング
           チームに分かれて、みんなで もようを かくプログラムを作ります。
-      Responding to User Input: {}
-      Sample CSP Assessment: {}
       ScreenOutTheMean-Unplugged:
         markdown: |
           # いじめられたとき
@@ -6361,7 +6129,6 @@ ja-JP:
           # アルゴリズムに従う
 
           ゲームをして、正しい結果を出すのに必要なコマンドについて考えましょう。
-      Social Sleuth_2018_2019: {}
       Songwriting-Unplugged:
         markdown: |
           # 作曲
@@ -6382,12 +6149,6 @@ ja-JP:
           # 作曲
 
           歌のコーラスの例に、関数の定義と使い方について学ぼう。
-      Student End of Unit Survey - Intro+TeacherMD_csd2-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd3-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd4-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd5-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd6-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd7-2022: {}
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -6408,12 +6169,6 @@ ja-JP:
         - correct: true
         questions:
         - {}
-      Student End of Unit Survey_csd2-2022: {}
-      Student End of Unit Survey_csd3-2022: {}
-      Student End of Unit Survey_csd4-2022: {}
-      Student End of Unit Survey_csd5-2022: {}
-      Student End of Unit Survey_csd6-2022: {}
-      Student End of Unit Survey_csd7-2022: {}
       Submittable Multi:
         answers:
         - text: 青
@@ -6482,15 +6237,6 @@ ja-JP:
           * どのようなことをしたいのか、すべてのひとが つかいやすいのか かんがえることは、プログラマーにとって たいせつなことです！
 
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
-      Unit 1 Lesson 1 Overview: {}
-      Unit 1 Lesson 2 Overview: {}
-      Unit 1 Lesson 3 Overview: {}
-      Unit 1 Lesson 4 Overview: {}
-      Unit 2 Lesson 10 Overview: {}
-      Unit 2 Lesson 16 Overview: {}
-      Unit 2 Lesson 7 Overview: {}
-      Unit 2 Lesson 8 Overview: {}
-      Video - The Future of Big Data: {}
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -6601,8 +6347,6 @@ ja-JP:
         - correct: true
         questions:
         - {}
-      aiml-ch1-pulse-survey_2021: {}
-      aiml-ch1-pulse-survey_2022: {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -6697,9 +6441,6 @@ ja-JP:
         - correct: true
         questions:
         - {}
-      aiml-intro-pulse-survey_2021: {}
-      aiml-intro-pulse-survey_2022: {}
-      aiml-pulse-check-survey-1-levelgroup Ch2_2021: {}
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
@@ -6755,8 +6496,6 @@ ja-JP:
         - correct: true
         questions:
         - {}
-      aiml-pulse-check-survey-preamble_2021: {}
-      allthethings_bubble_choice: {}
       allthethings_external_displayed_as_unplugged:
         content1: 説明
       allthethings_external_not_displayed_as_unplugged:
@@ -7401,10 +7140,6 @@ ja-JP:
       courseD_EOC_examples_2021:
         description: これで、さいごのプロジェクトになります。始める前に、サンプルのプロジェクトを見てみましょう。
         display_name: サンプルのプロジェクト
-      courseD_external_binary1: {}
-      courseD_external_binary1_2018: {}
-      courseD_external_binary1_2018_2019: {}
-      courseD_external_binary1_2018_2019_2020: {}
       courseD_multi_artist_binary8_predict1:
         answers:
         - feedback: ふせいかい
@@ -8809,8 +8544,6 @@ ja-JP:
         markdown: "<h2>変数について</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>決まった値を入れておくための変数の学習は順調に進んでいます！
           \n決まった値を入れておくために変数を使うのであれば、値を入れるのは1回です。変数を使えば、\"実行\"して値を変えたくなった時、1か所変えるだけでプログラムの中で**同じ**値を使うことができます。</h3>\n<br/><hr/>\n<h3>次のパートでは、プログラムの中で値が*変わる*変数をプログラムしてみましょう。</h3>\n\n"
-      courseF_groups_freeplay_2022_pilot_-2022-2: {}
-      courseF_groups_practice_2022_pilot_-2022-2: {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
@@ -9736,13 +9469,8 @@ ja-JP:
           text: アーティストは、枠のなかに４つ四角形をかく。
         questions:
         - text: '"実行（じっこう）"をクリックしたら、どんな絵が かかれますか？'
-      csd-post-survey-2017-implementation-student: {}
-      csd-post-survey-2017-implementation-teacher: {}
-      csd-post-survey-2017-implementation-teacher_2019: {}
-      csd-post-survey-2017-levelgroup: {}
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
         title: CS発見期末アンケート
-      csd-post-survey-2017-levelgroup_2018: {}
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -10267,12 +9995,8 @@ ja-JP:
         - correct: true
         questions:
         - {}
-      csd-post-survey-intro-2019: {}
       csd-post-survey-levelgroup-2018:
         title: CS発見期末アンケート
-      csd-post-survey-levelgroup_2019: {}
-      csd-post-survey-markdown-with-link-to-survey_2021: {}
-      csd-post-survey-markdown-with-link-to-survey_2022: {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -10424,60 +10148,6 @@ ja-JP:
         content1: 説明
       csd-post-survey-unit6-preamble:
         content1: 説明
-      csd-pre-survey-2017-levelgroup: {}
-      csd-pre-survey-2017-levelgroup_2018: {}
-      csd-pre-survey-levelgroup_2019: {}
-      csd-pre-survey-levelgroup_21_22: {}
-      csd-pre-survey-levelgroup_21_22_2022: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U1Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U4Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch1_2022: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U5Ch2_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_2021: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019: {}
-      csd-pulse-check-survey-1-levelgroup U6Ch2_2021: {}
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
@@ -12953,15 +12623,6 @@ ja-JP:
         - correct: true
         questions:
         - {}
-      csd-pulse-check-survey-preamble: {}
-      csd-pulse-check-survey-preamble_2018: {}
-      csd-pulse-check-survey-preamble_2018_2019: {}
-      csd-pulse-check-survey-preamble_2019: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2021: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2022: {}
-      csd-pulse-check-survey-preamble_2021: {}
-      csd-pulse-check-survey-preamble_2022: {}
-      csd-pulse-check-survey-preamble_2222: {}
       csf_be_a_super_digital_citizen:
         content1: 説明
         markdown: |-
@@ -13091,8 +12752,6 @@ ja-JP:
           # ネットのご近所さん
 
           ## ネットで安全なおつきあいをするにはどうすれば良いでしょう？
-      csp-post-survey-2017 preamble 1: {}
-      csp-post-survey-2017 preamble 1_2019: {}
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -13507,7 +13166,6 @@ ja-JP:
         - correct: true
         questions:
         - {}
-      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2018-topics-preamble:
         content1: 説明
       csp-post-survey-2018-unit-feedback-preamble:
@@ -13536,30 +13194,6 @@ ja-JP:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017 preamble 1: {}
-      csp-pre-survey-2017 preamble 1_2018: {}
-      csp-pre-survey-2017 preamble 1_2021: {}
-      csp-pre-survey-2017 preamble 1_2022: {}
-      csp-pre-survey-2017 preamble 2 cs in general: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2021: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2022: {}
-      csp-pre-survey-2017 preamble 3 this class: {}
-      csp-pre-survey-2017 preamble 3 this class_2018: {}
-      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2021: {}
-      csp-pre-survey-2017 preamble 3 this class_2022: {}
-      csp-pre-survey-2017 preamble 4 the future: {}
-      csp-pre-survey-2017 preamble 4 the future_2018: {}
-      csp-pre-survey-2017 preamble 4 the future_2021: {}
-      csp-pre-survey-2017 preamble 4 the future_2022: {}
-      csp-pre-survey-2017 preamble 5 demographics: {}
-      csp-pre-survey-2017 preamble 5 demographics_2018: {}
-      csp-pre-survey-2017 preamble 5 demographics_2021: {}
-      csp-pre-survey-2017 preamble 5 demographics_2022: {}
       csp-pre-survey-2017-q1:
         answers:
         - correct: true
@@ -14311,8 +13945,6 @@ ja-JP:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017-q36-preamble: {}
-      csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pre-survey-2017-q37:
         answers:
         - correct: true
@@ -14889,34 +14521,10 @@ ja-JP:
         display_name: あなたのアプリをカスタマイズ
       ml-club app-choice parent_2022:
         display_name: あなたのアプリをカスタマイズ
-      ml-customize apps-practice choice-2021: {}
-      ml-customize apps-practice choice_2022: {}
-      ml-good data-isaac data: {}
-      ml-good data-isaac data_2022: {}
-      ml-good data-kim data: {}
-      ml-good data-kim data_2022: {}
-      ml-good data-kim survey: {}
-      ml-good data-kim survey_2022: {}
       ml-intro app lab-book recommender 5-2021:
         display_name: あなたのアプリをカスタマイズ
       ml-intro app lab-book recommender 5_2022:
         display_name: あなたのアプリをカスタマイズ
-      ml-model card-medical-1-2021: {}
-      ml-model card-medical-1_2022: {}
-      ml-model card-medical-2-2021: {}
-      ml-model card-medical-2_2022: {}
-      ml-model card-medical-3-2021: {}
-      ml-model card-medical-3_2022: {}
-      ml-models in applab-choice parent: {}
-      ml-models in applab-choice parent_2022: {}
-      ml-models-shoe survey: {}
-      ml-models-shoe survey_2022: {}
-      ml-plan survey-copy form: {}
-      ml-plan survey-copy form_2022: {}
-      ml-use model card-pet model card-2021: {}
-      ml-use model card-pet model card_2022: {}
-      ml-use models applab-practice choice-2021: {}
-      ml-use models applab-practice choice_2022: {}
       naturally-better-at-cs:
         answers:
         - correct: true
@@ -14973,9 +14581,6 @@ ja-JP:
         - correct: true
         questions:
         - {}
-      pre-assessment survey heading1: {}
-      pre-assessment survey heading2: {}
-      pre-assessment survey heading3: {}
       pre-assessment survey q1:
         answers:
         - correct: true
@@ -15332,8 +14937,6 @@ ja-JP:
         - correct: true
         questions:
         - {}
-      sample external 1: {}
-      sample external 2: {}
       someone_else_encourage:
         answers:
         - correct: true
