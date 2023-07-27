@@ -13,7 +13,6 @@ import TextAlignmentPropertyRow, {
   TEXT_ALIGNMENT_LEFT,
 } from './TextAlignmentPropertyRow';
 import BorderProperties from './BorderProperties';
-import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
 import themeValues, {CLASSIC_TEXT_AREA_PADDING} from '../themeValues';
@@ -29,13 +28,6 @@ class TextAreaProperties extends React.Component {
   render() {
     const element = this.props.element;
 
-    let escapedText = '';
-    if (element.parentElement.className === 'textArea') {
-      escapedText = utils.unescapeText(element.parentElement.innerHTML);
-    } else {
-      escapedText = utils.unescapeText(element.innerHTML);
-    }
-
     return (
       <div id="propertyRowContainer">
         <PropertyRow
@@ -43,12 +35,6 @@ class TextAreaProperties extends React.Component {
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
-        />
-        <PropertyRow
-          desc={applabMsg.designElementProperty_text()}
-          isMultiLine
-          initialValue={escapedText}
-          handleChange={this.props.handleChange.bind(this, 'text')}
         />
         <PropertyRow
           desc={applabMsg.designElementProperty_widthPx()}
@@ -226,25 +212,5 @@ export default {
         e.preventDefault();
       }
     });
-  },
-
-  onPropertyChange: function (element, name, value) {
-    switch (name) {
-      case 'value':
-        element.innerHTML = value;
-        break;
-      default:
-        return false;
-    }
-    return true;
-  },
-
-  readProperty: function (element, name) {
-    switch (name) {
-      case 'value':
-        return element.innerHTML;
-      default:
-        throw `unknown property name ${name}`;
-    }
   },
 };
