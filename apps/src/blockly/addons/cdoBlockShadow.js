@@ -20,18 +20,21 @@ export const blockShadowingPairs = {
 export function getShadowedBlockImageUrl(block, checkWorkspaceId) {
   const blockShadowData = blockShadowingPairs[block.type];
   if (!blockShadowData || !block.inputList || block.inputList.length === 0) {
-    return;
+    return '';
   }
   const rootBlock = block.getRootBlock();
   let parent = undefined;
   if (rootBlock.type === blockShadowData.parent) {
     parent = rootBlock;
   } else if (block.getRootBlock().type === block.type) {
-    // Look for all potential mini toolbox parents for block block
+    // If the root block type is this block, this block is not connected
+    // to a root. It could either be out by itself, or it could be inside a
+    // mini toolbox. If it's in a mini toolbox, we want to shadow the image in the
+    // root block of the mini toolbox. Therefore, we search here for any mini toolbox
+    // parents that have this block in their workspace.
     const potentialParents = Blockly.getMainWorkspace()
       .getTopBlocks()
       .filter(block => block.type === blockShadowData.parent);
-    // These parents need to have a flyout_input input.
     potentialParents.forEach(potentialParent => {
       if (
         !potentialParent.inputList ||
@@ -39,11 +42,15 @@ export function getShadowedBlockImageUrl(block, checkWorkspaceId) {
       ) {
         return;
       }
+      // The parent needs to have a flyout_input.
       const inputs = potentialParent.inputList.filter(
         input => input.name === 'flyout_input'
       );
       if (inputs.length > 0) {
         const flyoutWorkspace = inputs[0].fieldRow[0]?.flyout_?.workspace_;
+        // If the block id is in the flyout workspace, and if we are checking workspace
+        // id and the block's workspace id matches the flout workspace id,
+        // then we have found the parent.
         if (
           flyoutWorkspace &&
           flyoutWorkspace
@@ -59,7 +66,7 @@ export function getShadowedBlockImageUrl(block, checkWorkspaceId) {
   if (parent) {
     return getImageUrlFromParent(parent, blockShadowData.imageIndex);
   } else {
-    // The block is probably disconnected from the root or toolbox. Reset to
+    // The block is probably disconnected from any root or toolbox. Reset to
     // default text.
     return '';
   }
