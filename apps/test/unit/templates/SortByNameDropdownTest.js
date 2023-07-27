@@ -1,11 +1,18 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {mount} from 'enzyme';
 import {expect} from '../../util/reconfiguredChai';
+import {getStore} from '@cdo/apps/redux';
+import {Provider} from 'react-redux';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 
 describe('SortByNameDropdown', () => {
   it('renders dropdown', () => {
-    const wrapper = shallow(<SortByNameDropdown />);
+    const store = getStore();
+    const wrapper = mount(
+      <Provider store={store}>
+        <SortByNameDropdown />
+      </Provider>
+    );
     expect(wrapper.find('select').length).to.equal(1);
   });
 
