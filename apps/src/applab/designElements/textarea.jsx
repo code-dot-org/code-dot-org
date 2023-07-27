@@ -38,6 +38,7 @@ class TextAreaProperties extends React.Component {
         />
         <PropertyRow
           desc={applabMsg.designElementProperty_text()}
+          isMultiLine
           initialValue={$(element).text()}
           handleChange={this.props.handleChange.bind(this, 'text')}
         />
