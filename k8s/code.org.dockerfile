@@ -189,8 +189,8 @@ FROM code.org-user-utils
 
 RUN \
   #
-  # We don't copy in .git (huge), and `bundle exec rake install` references it a couple places and fails without it
-  # so we create a blank one:
+  # We don't copy in .git (huge), but `bundle exec rake install` references .git in 
+  # a couple places, like git hooks, and fails without it, create a blank .git for now
   git init && \
   true
 
