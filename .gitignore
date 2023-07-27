@@ -1,6 +1,6 @@
 # Documentation at https://git-scm.com/docs/gitignore.
 
-aws.config
+k8s/code.org/persistent/aws-config.yaml
 
 \#*#
 *.pid
