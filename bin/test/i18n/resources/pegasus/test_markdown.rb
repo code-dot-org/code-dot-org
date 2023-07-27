@@ -5,13 +5,13 @@ class I18n::Resources::Pegasus::MarkdownTest < Minitest::Test
   def test_sync_in
     exec_seq = sequence('execution')
 
-    Documents.stubs(new: stub(helpers: stub))
+    ::Documents.stubs(new: stub(helpers: stub))
 
     expected_sync_in_file_paths.each do |expected_original_file_path, expected_i18n_source_path|
       FileUtils.expects(:mkdir_p).with(File.dirname(expected_i18n_source_path)).in_sequence(exec_seq)
       FileUtils.expects(:cp).with(expected_original_file_path, expected_i18n_source_path).in_sequence(exec_seq)
 
-      Documents.new.helpers.expects(:parse_yaml_header).with(expected_i18n_source_path).returns(%w[expected_header expected_content expected_line]).in_sequence(exec_seq)
+      ::Documents.new.helpers.expects(:parse_yaml_header).with(expected_i18n_source_path).returns(%w[expected_header expected_content expected_line]).in_sequence(exec_seq)
 
       I18nScriptUtils.expects(:sanitize_header!).with('expected_header').in_sequence(exec_seq)
       I18nScriptUtils.expects(:write_markdown_with_header).with('expected_content', 'expected_header', expected_i18n_source_path).in_sequence(exec_seq)
