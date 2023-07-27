@@ -11,10 +11,11 @@ spec:
       targetPort: 3306
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: db
 spec:
+  serviceName: "db"
   replicas: 1
   selector:
     matchLabels:
@@ -28,9 +29,24 @@ spec:
       - name: db
         image: mariadb
         ports:
-        - containerPort: 3306 
+        - containerPort: 3306
         env:
         - name: MARIADB_ALLOW_EMPTY_ROOT_PASSWORD
           value: "1"
         # - name: MARIADB_ROOT_PASSWORD
         #   value: secret
+        - name: MARIADB_USER
+          value: code.org
+        - name: MARIADB_PASSWORD
+          value: FIXME_WITH_REAL_PASSWORD
+        volumeMounts:
+        - name: db-data
+          mountPath: /var/lib/mysql/
+  volumeClaimTemplates:
+  - metadata:
+      name: db-data
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 500M

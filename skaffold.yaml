@@ -50,10 +50,10 @@ manifests:
   - ./k8s/code.org/*.yaml
 
 portForward:
-- resourceType: deployment
+- resourceType: Deployment
   resourceName: dashboard
   port: 3000
-- resourceType: deployment
+- resourceType: StatefulSet
   resourceName: db
   port: 3306
 - resourceType: deployment
