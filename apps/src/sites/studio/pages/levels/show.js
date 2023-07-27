@@ -50,4 +50,12 @@ function initPage() {
       unversionedRedirectDialogMountPoint
     );
   }
+
+  const fabMountPoint = document.getElementById('fab-mount-point');
+  if (fabMountPoint) {
+    ReactDOM.render(
+      <RubricFloatingActionButton />,
+      document.getElementById('fab-mount-point')
+    );
+  }
 }
