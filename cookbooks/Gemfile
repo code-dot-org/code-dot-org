@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '3.0.5'
 
 gem 'berkshelf'
-gem 'chef', '17.6.18'
+gem 'chef', '~> 18.0'
 gem 'chefspec'
 gem 'kitchen-inspec'
 
