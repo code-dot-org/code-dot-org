@@ -95,8 +95,12 @@
     max-width: 500px;
   }
 
-  h1 {
+  p {
     color: $neutral_dark;
     margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-family: 'Gotham 7r', sans-serif;
+    line-height: 1.2em;
   }
 }
