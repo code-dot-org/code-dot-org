@@ -148,8 +148,13 @@ export const blocks = {
           (event.type === Blockly.Events.BLOCK_CHANGE &&
             event.blockId === this.id)
         ) {
-          // We only care about drag events if the event is on this block and
-          // it's the end of the drag. Otherwise, we can skip this event.
+          // We can skip the following events:
+          // Drag events that are either not on this block, or are on this block
+          // and are a start event.
+          // This block's create event, as we handle setting the image on block creation
+          // in src/p5lab/spritelab/blocks.
+          // This block's change event, as that means we just changed the image due to
+          // some other event.
           return;
         }
         if (
