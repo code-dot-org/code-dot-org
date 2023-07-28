@@ -13,17 +13,28 @@ export default class HeaderBanner extends React.Component {
     headingText: PropTypes.string,
     subHeadingText: PropTypes.string,
     description: PropTypes.string,
-    short: PropTypes.bool,
+    children: PropTypes.node,
     backgroundUrl: PropTypes.string.isRequired,
+    backgroundImageStyling: PropTypes.object,
     imageUrl: PropTypes.string,
+    imgStyling: PropTypes.object,
   };
 
   render() {
-    const {headingText, subHeadingText, description, backgroundUrl, imageUrl} =
-      this.props;
+    const {
+      headingText,
+      subHeadingText,
+      description,
+      children,
+      backgroundUrl,
+      backgroundImageStyling,
+      imageUrl,
+      imgStyling,
+    } = this.props;
 
     const backgroundImageStyle = {
       backgroundImage: `url(${backgroundUrl})`,
+      ...backgroundImageStyling,
     };
 
     return (
@@ -43,10 +54,11 @@ export default class HeaderBanner extends React.Component {
                 {description}
               </Typography>
             )}
+            {children}
           </div>
           {imageUrl && (
             <figure>
-              <img src={imageUrl} alt="" />
+              <img src={imageUrl} style={imgStyling} alt="" />
             </figure>
           )}
         </div>

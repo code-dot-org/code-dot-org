@@ -173,7 +173,6 @@ export const UnconnectedTeacherHomepage = ({
     <div>
       <HeaderBanner
         headingText={i18n.homepageHeading()}
-        short={true}
         backgroundUrl={backgroundUrl}
       />
       <div className={'container main'}>
