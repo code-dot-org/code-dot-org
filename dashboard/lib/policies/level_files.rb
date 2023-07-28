@@ -1,5 +1,12 @@
 module Policies
   module LevelFiles
+    # We organize new level files into a `levels` directory to keep them
+    # separate from scripts and further organize them by the associated Game if
+    # it has one, to avoid packing too many files into a single directory.
+    def self.default_level_file_path(level)
+      return Rails.root.join(*['config/scripts/levels', level.game&.name, "#{level.name}.level"].compact)
+    end
+
     # Find the file which defines the given level if it exists, or a path to
     # which such a file should be written if it doesn't.
     def self.level_file_path(level)
@@ -8,11 +15,8 @@ module Policies
       raise("Multiple .level files for '#{level.name}' found: #{level_paths}") if level_paths.many?
       return level_paths.first unless level_paths.empty?
 
-      # If we don't yet have a .level file, create a new one. We organize new level files
-      # into a `levels` directory to keep them separate from scripts and further organize
-      # them by the associated Game if it has one, to avoid packing too many files into a
-      # single directory.
-      return Rails.root.join(*['config/scripts/levels', level.game&.name, "#{level.name}.level"].compact)
+      # If we don't yet have a .level file, create a new one at the default path.
+      return Policies::LevelFiles.default_level_file_path(level)
     end
 
     # Return whether or not the given level should be serialized to the file
