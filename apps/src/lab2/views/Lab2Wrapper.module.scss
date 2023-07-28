@@ -93,7 +93,7 @@
   }
 
   .pageErrorContainer {
-    @extend %fullscreen-overlay;
+    @extend %full-container-overlay;
     animation: fadein 0.5s;
 
     .pageError {

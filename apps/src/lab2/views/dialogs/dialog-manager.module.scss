@@ -2,7 +2,7 @@
 @import '../common.scss';
 
 .dialogContainer {
-  @extend %fullscreen-overlay;
+  @extend %full-container-overlay;
 }
 
 %dialog {
