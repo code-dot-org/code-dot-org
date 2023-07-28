@@ -90,7 +90,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   },
 ]);
 
-// Respond to the click off a call block's edit button
+// Respond to the click of a call block's edit button
 export const editButtonHandler = function () {
   console.log('edit button clicked!');
 
