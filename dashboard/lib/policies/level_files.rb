@@ -4,7 +4,7 @@ module Policies
     # separate from scripts and further organize them by the associated Game if
     # it has one, to avoid packing too many files into a single directory.
     def self.default_level_file_path(level)
-      return Rails.root.join(*['config/scripts/levels', level.game&.name, "#{level.name}.level"].compact)
+      return Rails.root.join(*['config/scripts/levels', level.game&.app, "#{level.name}.level"].compact)
     end
 
     # Find the file which defines the given level if it exists, or a path to

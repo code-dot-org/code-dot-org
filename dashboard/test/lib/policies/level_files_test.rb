@@ -6,7 +6,7 @@ module Policies
       regular_level = create(:level)
       expected_file_path = Rails.root.join(
         'config/scripts/levels',
-        regular_level.game.name,
+        regular_level.game.app,
         "#{regular_level.name}.level"
       )
       refute(File.exist?(expected_file_path))
