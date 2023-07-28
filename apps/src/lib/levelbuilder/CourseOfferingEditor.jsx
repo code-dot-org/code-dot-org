@@ -28,6 +28,7 @@ import ImageInput from './ImageInput';
 import Select from 'react-select';
 import ReactDatePicker from 'react-datepicker';
 import moment from 'moment';
+import {DatePicker} from '../../../build/js/code-studio/pd/workshop_dashboard/components/date_picker';
 import 'react-select/dist/react-select.css';
 import 'react-datepicker/dist/react-datepicker.css';
 const translatedNoneOption = `(${i18n.none()})`;
@@ -474,13 +475,19 @@ export default function CourseOfferingEditor(props) {
         </select>
       </label>
       <label>
-        <div style={styles.datePickerContainer}>
-          <ReactDatePicker
-            selected={moment(courseOffering.published_date)}
-            onChange={handleDateChange}
-            style={styles.datePicker}
-          />
-        </div>
+        <h3>Published Date</h3>
+        <HelpTip>
+          <p>Select the Published Date of the course offering</p>
+        </HelpTip>
+
+        <ReactDatePicker
+          selected={moment(courseOffering.published_date)}
+          onChange={handleDateChange}
+        />
+        <DatePicker
+          date={moment(courseOffering.published_date)}
+          onChange={handleDateChange}
+        />
       </label>
       <SaveBar
         handleSave={handleSave}
@@ -535,12 +542,6 @@ CourseOfferingEditor.propTypes = {
 const styles = {
   checkbox: {
     margin: '0 0 0 7px',
-  },
-  datePicker: {
-    position: 'absolute',
-  },
-  datePickerContainer: {
-    position: 'relative',
   },
   descriptionInput: {
     width: '75%',
