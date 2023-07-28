@@ -20,6 +20,16 @@ class LearningGoal < ApplicationRecord
   belongs_to :rubric
   has_many :learning_goal_evidence_levels, dependent: :destroy
 
+  def summarize
+    {
+      key: key,
+      learningGoal: learning_goal,
+      aiEnabled: ai_enabled,
+      tips: tips,
+      evidenceLevels: learning_goal_evidence_levels.map(&:summarize)
+    }
+  end
+
   def seeding_key(seed_context)
     my_rubric = seed_context.rubrics.find {|r| r.id == rubric_id}
     my_key = {
