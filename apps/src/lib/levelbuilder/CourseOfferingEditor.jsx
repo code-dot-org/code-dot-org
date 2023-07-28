@@ -26,9 +26,8 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import ImageInput from './ImageInput';
 import Select from 'react-select';
-import ReactDatePicker from 'react-datepicker';
 import moment from 'moment';
-import {DatePicker} from '../../../build/js/code-studio/pd/workshop_dashboard/components/date_picker';
+import DatePicker from '../../code-studio/pd/workshop_dashboard/components/date_picker';
 import 'react-select/dist/react-select.css';
 import 'react-datepicker/dist/react-datepicker.css';
 const translatedNoneOption = `(${i18n.none()})`;
@@ -50,6 +49,9 @@ export default function CourseOfferingEditor(props) {
   const [isSaving, setIsSaving] = useState(false);
   const [lastSaved, setLastSaved] = useState(null);
   const [thumbnail, setThumbnail] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(
+    courseOffering.published_date ? moment(courseOffering.published_date) : null
+  );
 
   const handleSave = (event, shouldCloseAfterSave) => {
     event.preventDefault();
@@ -167,6 +169,7 @@ export default function CourseOfferingEditor(props) {
   };
 
   const handleDateChange = date => {
+    setSelectedDate(date);
     updateCourseOffering('published_date', date);
   };
 
@@ -337,7 +340,7 @@ export default function CourseOfferingEditor(props) {
         showPreview={true}
         helpTipText={'Image used to market the curriculum around the site.'}
       />
-      <label style={styles.videoContainer}>
+      <label style={styles.flexContainer}>
         Video
         <HelpTip>
           <p>
@@ -475,19 +478,13 @@ export default function CourseOfferingEditor(props) {
         </select>
       </label>
       <label>
-        <h3>Published Date</h3>
-        <HelpTip>
-          <p>Select the Published Date of the course offering</p>
-        </HelpTip>
-
-        <ReactDatePicker
-          selected={moment(courseOffering.published_date)}
-          onChange={handleDateChange}
-        />
-        <DatePicker
-          date={moment(courseOffering.published_date)}
-          onChange={handleDateChange}
-        />
+        <div style={styles.flexContainer}>
+          <h3>Published Date </h3>
+          <HelpTip>
+            <p>Select the Published Date of the course offering</p>
+          </HelpTip>
+        </div>
+        <DatePicker date={selectedDate} onChange={handleDateChange} />
       </label>
       <SaveBar
         handleSave={handleSave}
@@ -558,6 +555,10 @@ const styles = {
     paddingRight: '10px',
     cursor: 'pointer',
   },
+  flexContainer: {
+    display: 'flex',
+    alignItems: 'center',
+  },
   image: {
     width: 100,
     marginLeft: 5,
@@ -575,9 +576,5 @@ const styles = {
   },
   label: {
     paddingLeft: 4,
-  },
-  videoContainer: {
-    display: 'flex',
-    alignItems: 'center',
   },
 };
