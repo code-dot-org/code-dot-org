@@ -92,7 +92,7 @@ group :development, :test do
   gem 'brakeman'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
-  gem 'vcr', require: false
+  gem 'vcr', '~> 4.0', require: false
   # For unit testing.
   gem 'webmock', '~> 3.8', require: false
 
