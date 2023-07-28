@@ -2,6 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import getScriptData from '@cdo/apps/util/getScriptData';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
 import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/UnversionedScriptRedirectDialog';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
@@ -55,6 +56,10 @@ function initPage() {
 
   const rubricFabMountPoint = document.getElementById('rubric-fab-mount-point');
   if (rubricFabMountPoint && experiments.isEnabled('ai-rubrics')) {
-    ReactDOM.render(<RubricFloatingActionButton />, rubricFabMountPoint);
+    const rubricData = getScriptData('rubric');
+    ReactDOM.render(
+      <RubricFloatingActionButton rubricData={rubricData} />,
+      rubricFabMountPoint
+    );
   }
 }
