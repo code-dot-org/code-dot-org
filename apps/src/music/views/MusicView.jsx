@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
-import PanelContainer from './PanelContainer';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import Instructions from './Instructions';
 import Controls from './Controls';
 import Timeline from './Timeline';
@@ -604,6 +604,7 @@ class UnconnectedMusicView extends React.Component {
         <PanelContainer
           id="instructions-panel"
           headerText={musicI18n.panelHeaderInstructions()}
+          isHeadersShowing={this.props.isHeadersShowing}
         >
           <Instructions
             progressionStep={this.props.levelData}
@@ -632,6 +633,7 @@ class UnconnectedMusicView extends React.Component {
           <PanelContainer
             id="controls-panel"
             headerText={musicI18n.panelHeaderControls()}
+            isHeadersShowing={this.props.isHeadersShowing}
           >
             <Controls
               setPlaying={this.setPlaying}
@@ -651,6 +653,7 @@ class UnconnectedMusicView extends React.Component {
             id="timeline-panel"
             width="calc(100% - 220px)"
             headerText={musicI18n.panelHeaderTimeline()}
+            isHeadersShowing={this.props.isHeadersShowing}
           >
             <Timeline />
           </PanelContainer>
@@ -712,6 +715,7 @@ class UnconnectedMusicView extends React.Component {
               <PanelContainer
                 id="workspace-panel"
                 headerText={musicI18n.panelHeaderWorkspace()}
+                isHeadersShowing={this.props.isHeadersShowing}
                 rightHeaderContent={
                   <UndoRedoButtons
                     onClickUndo={this.undo}
