@@ -1,3 +1,6 @@
+require 'policies/child_account'
+require 'services/child_account'
+
 class PolicyComplianceController < ApplicationController
   before_action :authenticate_user!, except: [:child_account_consent]
 
@@ -85,7 +88,10 @@ class PolicyComplianceController < ApplicationController
     permission_request.save!
 
     # Update the User
-    current_user.update_child_account_compliance(Policies::ChildAccount::ComplianceState::REQUEST_SENT)
+    Services::ChildAccount.update_compliance(
+      current_user,
+      Policies::ChildAccount::ComplianceState::REQUEST_SENT
+    )
     current_user.save!
 
     # Send the request email

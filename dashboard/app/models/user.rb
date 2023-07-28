@@ -77,6 +77,7 @@ require 'sign_up_tracking'
 require_dependency 'queries/school_info'
 require_dependency 'queries/script_activity'
 require 'policies/child_account'
+require 'services/child_account'
 
 class User < ApplicationRecord
   include SerializedProperties
@@ -271,7 +272,9 @@ class User < ApplicationRecord
 
   validate :validate_us_state, on: :create
 
-  before_create :lock_out_child_account, unless: -> {Policies::ChildAccount.compliant?(self)}
+  before_create unless: -> {Policies::ChildAccount.compliant?(self)} do
+    Services::ChildAccount.lock_out(self)
+  end
 
   before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
     self.gender = Policies::Gender.normalize gender_teacher_input
@@ -2349,13 +2352,6 @@ class User < ApplicationRecord
     return true
   end
 
-  # Updates the child_account_compliance_state attribute to the given state.
-  # @param {String} new_state - A constant from Policies::ChildAccount::ComplianceState
-  def update_child_account_compliance(new_state)
-    self.child_account_compliance_state = new_state
-    self.child_account_compliance_state_last_updated = DateTime.now.new_offset(0)
-  end
-
   # When creating an account, we want to look for any channels that got created
   # for this user before they signed in, and if any of them are in our Applab HOC
   # course, we will create a UserScript entry so that they get a course card
@@ -2675,14 +2671,6 @@ class User < ApplicationRecord
       merge(US_STATE_DROPDOWN_OPTIONS)
   end
 
-  # Returns a query for all the accounts which have expired according to the
-  # our Child Account Policy.
-  def self.expired_child_accounts
-    where_child_account_past_expiration_date.
-      where_child_account_does_not_have_parent_permission.
-      where_child_account_policy_applies_to_us_state
-  end
-
   # Verifies that the serialized attribute "us_state" is a 2 character string
   # representing a US State or "??" which represents a "N/A" kind of response.
   private def validate_us_state
@@ -2699,13 +2687,5 @@ class User < ApplicationRecord
     unless User.us_state_dropdown_options.include?(us_state)
       errors.add(:us_state, :invalid)
     end
-  end
-
-  def lock_out_child_account
-    # Verify the account has not already started the lock out process.
-    return if child_account_compliance_state
-    # Set the child's account to be locked out
-    update_child_account_compliance(Policies::ChildAccount::ComplianceState::LOCKED_OUT)
-    self.child_account_compliance_lock_out = DateTime.now
   end
 end
