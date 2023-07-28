@@ -13,7 +13,7 @@ class I18nMetricsTest < Minitest::Test
   end
 
   def test_report_runtime
-    expect_metric(:Runtime, 1, [{name: 'dim1', value: 1}, {name: 'dim2', value: 2}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}])
-    I18n::Metrics.report_runtime([{name: 'dim1', value: 1}, {name: 'dim2', value: 2}]) {1}
+    expect_metric(:Runtime, 1, [{name: 'MethodName', value: 'method'}, {name: 'SyncComp', value: 'component'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}])
+    I18n::Metrics.report_runtime('method', 'component') {1}
   end
 end

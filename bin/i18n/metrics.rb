@@ -17,7 +17,7 @@ module I18n
       log_metric(
         :RuntimeTest,
         runtime,
-        [{name: "SyncStep", value: sync_comp}, {name: "MethodName", value: method_name}],
+        [{name: "SyncComp", value: sync_comp}, {name: "MethodName", value: method_name}],
         'Seconds'
       )
 
