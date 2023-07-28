@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2023-04-27T09:58:33.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -76,19 +81,15 @@
       "/courses/csd-2022/guides/shapes-and-parameters",
       "/courses/csd-2022/guides/problem-solving-process-programming"
     ],
+    "teacher_markdown": "Students use the code they’ve learned to create robot faces on the grid.\r\n\r\n<a href=\"https://docs.google.com/document/d/1jereSAhnM_DHRHJ7xmnhJl1cp9U6QiuNDbHnVaJHJA8/edit\" target=\"blank\" rel=\"noopener noreferrer\">Exemplar Activity Guide</a> \r\n",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ],
-    "teacher_markdown": "Students use the code they’ve learned to create robot faces on the grid.\r\n\r\n<a href=\"https://docs.google.com/document/d/1jereSAhnM_DHRHJ7xmnhJl1cp9U6QiuNDbHnVaJHJA8/edit\" target=\"blank\" rel=\"noopener noreferrer\">Exemplar Activity Guide</a> \r\n"
+    "start_blocks": "//Declare variables\r\nvar mouthWidth=randomNumber(75, 200);\r\nvar eyeColor=randomNumber(0, 255);\r\nvar bodyColor1=(50, 200);\r\nvar bodyColor2=(100, 255);\r\n\r\n//Create face shape components\r\nfill(rgb(bodyColor1, bodyColor2, bodyColor1));\r\nregularPolygon(125, 150, 6, 25);\r\nregularPolygon(275, 150, 6, 25);\r\nshape(25, 350, 200, 25, 375, 350);\r\n\r\n//Create eye circles\r\nfill(rgb(100, eyeColor, 200));\r\nellipse(200, 125, 50, 50);\r\nellipse(150, 200, 50, 50);\r\nellipse(250, 200, 50, 50);\r\n\r\n//Create pupils\r\nfill(\"black\");\r\narc(195, 130, 30, 20, 270, 360);\r\narc(145, 205, 30, 20, 270, 360);\r\narc(245, 205, 30, 20, 270, 360);\r\n\r\n//Create antennae\r\nnoFill();\r\nstrokeWeight(2);\r\narc(125, 100, 80, 80, 270, 360);\r\narc(275, 100, 80, 80, 180, 270);\r\n\r\n//Create nose\r\nline(200, 200, 200, 250);\r\n\r\n//Create mouth\r\nfill(\"black\");\r\nrect(100, 275, mouthWidth, 50);"
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2023-04-27T09:58:33.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-04-27T09:58:33.018+00:00\",\"changed\":[\"cloned from \\\"CSD U3 L7 mini project_2023\\\"\"],\"cloned_from\":\"CSD U3 L7 mini project_2023\"},{\"changed_at\":\"2023-04-27 10:01:03 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18579,\"changed_by_email\":\"jess+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-04-27T09:58:33.018+00:00\",\"changed\":[\"cloned from \\\"CSD U3 L7 mini project_2023\\\"\"],\"cloned_from\":\"CSD U3 L7 mini project_2023\"},{\"changed_at\":\"2023-04-27 10:01:03 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18579,\"changed_by_email\":\"jess+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-26 23:13:13 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-07-26 23:13:50 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
