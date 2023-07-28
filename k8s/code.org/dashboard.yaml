@@ -86,6 +86,14 @@ data:
     # db_reader_password: FIXME_WITH_REAL_PASSWORD
     # db_writer: mysql://code.org:FIXME_WITH_REAL_PASSWORD@db/
     db_writer: 'mysql://root@db/'
+    
+    db_cluster_id: db
+
+    # FOLLOW ON: Remove the above naming convention to the `db_endpoint_[type]` convention below.
+    db_endpoint_writer: db
+    db_endpoint_proxy_writer: db
+    db_endpoint_proxy_reader: db
+    db_endpoint_proxy_reporting: db
 
     netsim_redis_groups:
     - master: redis://redis:6379
