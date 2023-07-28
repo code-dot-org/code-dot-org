@@ -41,7 +41,9 @@ module Policies
         FileUtils.touch(level_file)
       end
 
-      assert_raises {Policies::LevelFiles.level_file_path(level_name)}
+      exception = assert_raises {Policies::LevelFiles.level_file_path(level_name)}
+      assert_includes(exception.message, "Multiple .level files for '#{level_name}' found:")
+      level_files.each {|level_file| assert_includes(exception.message, level_file)}
     ensure
       level_files.each {|level_file| FileUtils.rm_f(level_file)}
     end
