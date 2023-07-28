@@ -8,9 +8,9 @@ module I18n
   module Metrics
     I18N_METRICS_NAMESPACE = 'I18n'.freeze
 
-    # loggin to clodwach runtime of a yield block
-    # @param method_name [String] Name of the method reported
-    # @param sync_comp [String] Component of the sync where the method is used
+    # logging to CloudWatch the runtime of a yield block, typically a method.
+    # @param method_name [String] Name of the method logged to CloudWatch
+    # @param sync_comp [String] Component of the sync where the method is used. Options: in, up, down, out.
     def self.report_runtime(method_name, sync_comp)
       result = nil
       runtime = Benchmark.realtime {result = yield}
@@ -39,7 +39,7 @@ module I18n
     # @param metric_value [Object] A metric value
     # @param addtl_dimensions [Array<Hash>] additional dimensions
     # @option metric_units [String] Units of the value. Ex. Seconds, Kilobytes, etc.
-    # Fo more valid units see CloudWatch MetricDatum:
+    # For more valid units see CloudWatch MetricDatum:
     # https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html
     def self.log_metric(metric_name, metric_value, addtl_dimensions = [], metric_units='None')
       # add machine_id and environment dimensions to addtl_dimensions
