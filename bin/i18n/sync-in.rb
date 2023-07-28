@@ -13,16 +13,16 @@ require 'digest/md5'
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
-require_relative './sync/metrics'
+require_relative 'metrics'
 Dir[File.expand_path('../resources/**/*.rb', __FILE__)].sort.each {|file| require file}
 
 module I18n
   module SyncIn
     def self.perform
       puts "Sync in starting"
-      Services::I18n::CurriculumSyncUtils.sync_in
-      HocSyncUtils.sync_in
-      localize_level_and_project_content
+      I18n::Metrics.report_runtime('CurriculumSyncUtils', 'in') {Services::I18n::CurriculumSyncUtils.sync_in}
+      I18n::Metrics.report_runtime('HocSyncUtils', 'in') {HocSyncUtils.sync_in}
+      I18n::Metrics.report_runtime('localize_level_and_project_content', 'in') {localize_level_and_project_content}
       I18n::Resources::Dashboard::Blocks.sync_in
       I18n::Resources::Apps::Animations.sync_in
       I18n::Resources::Dashboard::SharedFunctions.sync_in
@@ -34,9 +34,9 @@ module I18n
       I18n::Resources::Apps::Labs.sync_in
       I18n::Resources::Pegasus::Markdown.sync_in
       puts "Copying source files"
-      I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
-      redact_level_content
-      redact_script
+      I18n::Metrics.report_runtime('in.sh', 'in') {I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"}
+      I18n::Metrics.report_runtime('redact_level_content', 'in') {redact_level_content}
+      I18n::Metrics.report_runtime('redact_script', 'in') {redact_script}
       puts "Sync in completed successfully"
     rescue => exception
       puts "Sync in failed from the error: #{exception}"

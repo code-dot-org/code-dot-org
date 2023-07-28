@@ -9,12 +9,17 @@ module I18n
     I18N_METRICS_NAMESPACE = 'I18n'.freeze
 
     # loggin to clodwach runtime of a yield block
-    # @param addtl_dimensions [Array<Hash>] additional dimensions
-    # addtl_dimension should include {name: "SyncStep", value: } and {name: "MethodName", value: }
-    def self.report_runtime(addtl_dimensions = [])
+    # @param method_name [String] Name of the method reported
+    # @param sync_comp [String] Component of the sync where the method is used
+    def self.report_runtime(method_name, sync_comp)
       result = nil
       runtime = Benchmark.realtime {result = yield}
-      log_metric(:RuntimeTest, runtime, addtl_dimensions, 'Seconds')
+      log_metric(
+        :RuntimeTest,
+        runtime,
+        [{name: "SyncStep", value: sync_comp}, {name: "MethodName", value: method_name}],
+        'Seconds'
+      )
 
       result
     end
