@@ -90,6 +90,7 @@ def main
     ABUSE_CONSTANTS
     ERROR_SEVERITY_LEVELS
     RESTRICTED_PUBLISH_PROJECT_TYPES
+    RUBRIC_UNDERSTANDING_LEVELS
   )
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
