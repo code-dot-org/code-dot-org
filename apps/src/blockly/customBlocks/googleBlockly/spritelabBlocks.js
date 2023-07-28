@@ -164,16 +164,12 @@ export const blocks = {
           imagePreview.setAllowImageChange(!event.isStart);
         }
         if (
-          (event.type === Blockly.Events.BLOCK_DRAG &&
-            (event.isStart || event.blockId !== this.id)) ||
           (event.type === Blockly.Events.BLOCK_CREATE &&
             event.blockId === this.id) ||
           (event.type === Blockly.Events.BLOCK_CHANGE &&
             event.blockId === this.id)
         ) {
           // We can skip the following events:
-          // Drag events that are either not on this block, or are on this block
-          // and are a start event.
           // This block's create event, as we handle setting the image on block creation
           // in src/p5lab/spritelab/blocks.
           // This block's change event, as that means we just changed the image due to

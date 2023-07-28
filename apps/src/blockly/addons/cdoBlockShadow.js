@@ -59,11 +59,14 @@ export function updateShadowedBlockImage(block, parentId) {
 }
 
 function getImageUrlFromParent(parentBlock, imageIndexOnParent) {
-  return parentBlock
-    .getChildren(true)
-    [
-      imageIndexOnParent
-    ]?.inputList[0]?.fieldRow[0]?.imageElement_?.getAttribute('xlink:href');
+  return (
+    parentBlock
+      .getChildren(true)
+      [
+        imageIndexOnParent
+      ]?.inputList[0]?.fieldRow[0]?.imageElement_?.getAttribute('xlink:href') ||
+    ''
+  );
 }
 
 function changeShadowedImage(imageUrl, childBlock) {
